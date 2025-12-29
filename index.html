@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuestLearn SRS - Final PoC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hidden { display: none; }
+        .card-inner { transition: transform 0.4s; }
+        .progress-bar-transition { transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+    </style>
+</head>
+<body class="bg-slate-900 text-white font-sans">
+
+    <div id="app" class="max-w-md mx-auto min-h-screen p-6 relative">
+        
+        <section id="screen-welcome" class="space-y-6 text-center pt-20">
+            <h1 class="text-4xl font-bold text-yellow-400">QuestLearn</h1>
+            <p class="text-slate-400 italic">"The language quest begins..."</p>
+            <input id="input-name" type="text" placeholder="Your Name" class="w-full p-4 rounded bg-slate-800 border border-slate-700 outline-none focus:border-blue-500">
+            <button id="btn-start" class="w-full bg-blue-600 p-4 rounded-xl font-bold hover:bg-blue-500 transition">Enter Kingdom</button>
+        </section>
+
+        <section id="screen-menu" class="hidden space-y-4">
+            <div class="flex justify-between items-center">
+                <h2 id="display-name" class="text-2xl font-bold"></h2>
+                <button id="btn-settings" class="text-2xl p-2">⚙️</button>
+            </div>
+            
+            <div class="flex justify-between items-center bg-slate-800 p-4 rounded-2xl shadow-lg border border-slate-700">
+                <div class="text-sm text-slate-400">Streak: <span id="display-streak" class="text-orange-400 font-bold text-lg">0</span> Days</div>
+                <div id="streak-emoji" class="text-xl">🔥</div>
+            </div>
+            
+            <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mt-6">Active Decks</h3>
+            <div class="grid gap-4">
+                <button id="btn-study-basics" class="p-5 bg-slate-800 rounded-2xl border-l-4 border-green-500 text-left hover:bg-slate-750 transition">
+                    <div class="font-bold text-xl">Welsh Basics</div>
+                    <div id="deck-status" class="text-sm text-slate-400 italic">Checking for due cards...</div>
+                </button>
+                
+                <div class="p-5 bg-slate-800/40 rounded-2xl border-l-4 border-slate-700 text-left opacity-60 flex justify-between items-center">
+                    <div>
+                        <div class="font-bold text-xl text-slate-500">Intermediate</div>
+                        <div class="text-xs text-blue-400">Unlock: £4.99</div>
+                    </div>
+                    <span class="text-xl">🔒</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="screen-study" class="hidden space-y-6">
+            <div class="flex flex-col space-y-2">
+                <div class="flex justify-between text-[10px] font-mono text-slate-500 uppercase">
+                    <span>Session Progress</span>
+                    <span id="session-count">0 / 0</span>
+                </div>
+                <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                    <div id="progress-bar-fill" class="bg-green-500 h-full progress-bar-transition" style="width: 0%"></div>
+                </div>
+                <div id="progress-breakdown" class="text-[10px] flex gap-2 justify-end opacity-70">
+                    </div>
+            </div>
+
+            <div id="card-container" class="h-80 w-full bg-slate-800 rounded-3xl flex flex-col items-center justify-center p-8 text-center shadow-2xl border border-slate-700 cursor-pointer active:scale-95 transition-transform">
+                <div id="card-front" class="space-y-4">
+                    <div id="text-target" class="text-3xl font-bold">...</div>
+                    <div class="text-blue-400 text-xs uppercase tracking-tighter animate-pulse">🔊 Auto-playing Audio</div>
+                </div>
+                <div id="card-back" class="hidden space-y-4 w-full">
+                    <div class="w-full border-t border-slate-700 my-4"></div>
+                    <div id="text-english" class="text-2xl text-slate-300 italic">...</div>
+                    <div class="text-slate-500 text-xs">🔊 Click to replay</div>
+                </div>
+            </div>
+
+            <div id="study-controls" class="hidden grid grid-cols-3 gap-3">
+                <button data-grade="again" class="bg-red-900/40 border border-red-500 p-4 rounded-xl text-[10px] font-bold">AGAIN<br><span class="opacity-50">Reset</span></button>
+                <button data-grade="good" class="bg-blue-900/40 border border-blue-500 p-4 rounded-xl text-[10px] font-bold">GOOD<br><span id="label-good" class="opacity-50">Next</span></button>
+                <button data-grade="easy" class="bg-green-900/40 border border-green-500 p-4 rounded-xl text-[10px] font-bold">EASY<br><span id="label-easy" class="opacity-50">Easy</span></button>
+            </div>
+        </section>
+
+        <section id="screen-settings" class="hidden space-y-6">
+            <div class="flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-blue-400">Settings</h2>
+                <button id="btn-back-menu" class="bg-slate-800 px-3 py-1 rounded text-sm">Close</button>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="bg-slate-800 p-4 rounded-xl border border-slate-700">
+                    <h3 class="font-bold mb-3 text-sm text-slate-400 uppercase">Your Progress</h3>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between"><span>Current streak</span><span id="stats-streak" class="text-orange-400 font-bold">0 days</span></div>
+                        <div class="flex justify-between"><span>Total study days</span><span id="stats-total" class="text-blue-400 font-bold">0 days</span></div>
+                        <div class="flex justify-between"><span>Cards learned</span><span id="stats-cards" class="text-green-400 font-bold">0</span></div>
+                    </div>
+                </div>
+
+                <div class="bg-red-900/10 border border-red-900 p-4 rounded-xl">
+                    <h3 class="font-bold text-red-500 mb-2">Danger Zone</h3>
+                    <button id="btn-reset-progress" class="w-full bg-red-600/20 text-red-500 border border-red-600 p-2 rounded text-xs font-bold hover:bg-red-600 hover:text-white transition">Reset All Data</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        /** STATE **/
+        let state = {
+            user: JSON.parse(localStorage.getItem('qs_user')) || { name: "", streak: 0, lastStudy: null, totalDays: 0 },
+            settings: JSON.parse(localStorage.getItem('qs_settings')) || { cardsPerSession: 20 },
+            deck: JSON.parse(localStorage.getItem('qs_deck')) || [
+                { id: 1, target: "Bore da", english: "Good morning", interval: 0, ease: 2.5, due: Date.now() },
+                { id: 2, target: "Sut wyt ti?", english: "How are you?", interval: 0, ease: 2.5, due: Date.now() },
+                { id: 3, target: "Diolch", english: "Thank you", interval: 0, ease: 2.5, due: Date.now() },
+                { id: 4, target: "Croeso", english: "Welcome", interval: 0, ease: 2.5, due: Date.now() }
+            ],
+            session: { queue: [], currentIndex: 0, isFlipped: false }
+        };
+
+        /** SRS LOGIC **/
+        const SRS = {
+            calculate: (card, grade) => {
+                if (grade === 'again') {
+                    card.interval = 0;
+                    card.ease = Math.max(1.3, card.ease - 0.2);
+                } else if (grade === 'good') {
+                    card.interval = card.interval === 0 ? 1 : Math.round(card.interval * card.ease);
+                } else if (grade === 'easy') {
+                    card.interval = card.interval === 0 ? 4 : Math.round(card.interval * card.ease * 1.3);
+                    card.ease += 0.15;
+                }
+                card.due = Date.now() + (card.interval * 24 * 60 * 60 * 1000);
+                return card;
+            }
+        };
+
+        const Streak = {
+            update() {
+                const today = new Date().toDateString();
+                const last = state.user.lastStudy;
+                if (last === today) return;
+
+                const yesterday = new Date(); yesterday.setDate(yesterday.getDate() - 1);
+                if (last === yesterday.toDateString()) { state.user.streak++; } 
+                else { state.user.streak = 1; }
+
+                state.user.lastStudy = today;
+                state.user.totalDays++;
+                localStorage.setItem('qs_user', JSON.stringify(state.user));
+            }
+        };
+
+        /** UI CONTROLLER **/
+        const UI = {
+            show(id) {
+                ['welcome', 'menu', 'study', 'settings'].forEach(s => document.getElementById(`screen-${s}`).classList.add('hidden'));
+                document.getElementById(`screen-${id}`).classList.remove('hidden');
+            },
+            renderMenu() {
+                document.getElementById('display-name').innerText = `Helo, ${state.user.name}!`;
+                document.getElementById('display-streak').innerText = state.user.streak;
+                const dueCount = state.deck.filter(c => c.due <= Date.now()).length;
+                document.getElementById('deck-status').innerText = `${dueCount} cards due for review`;
+                this.show('menu');
+            },
+            renderCard() {
+                const card = state.session.queue[state.session.currentIndex];
+                if (!card) {
+                    Streak.update();
+                    alert(`Goal Met! Streak: ${state.user.streak} days`);
+                    this.renderMenu();
+                    return;
+                }
+                state.session.isFlipped = false;
+                document.getElementById('text-target').innerText = card.target;
+                document.getElementById('text-english').innerText = card.english;
+                document.getElementById('card-back').classList.add('hidden');
+                document.getElementById('study-controls').classList.add('hidden');
+                
+                const progress = (state.session.currentIndex / state.session.queue.length) * 100;
+                document.getElementById('progress-bar-fill').style.width = `${progress}%`;
+                document.getElementById('session-count').innerText = `${state.session.currentIndex + 1}/${state.session.queue.length}`;
+                
+                // Progress stats breakdown
+                const stats = { new: 0, learn: 0, mature: 0 };
+                state.session.queue.forEach(c => {
+                    if (c.interval === 0) stats.new++;
+                    else if (c.interval < 21) stats.learn++;
+                    else stats.mature++;
+                });
+                document.getElementById('progress-breakdown').innerHTML = `
+                    <span class="text-blue-400">${stats.new} NEW</span>
+                    <span class="text-yellow-400">${stats.learn} LEARN</span>
+                    <span class="text-green-400">${stats.mature} MATURE</span>
+                `;
+            }
+        };
+
+        /** LISTENERS **/
+        document.getElementById('btn-start').addEventListener('click', () => {
+            const name = document.getElementById('input-name').value.trim();
+            if (!name) return;
+            state.user.name = name;
+            localStorage.setItem('qs_user', JSON.stringify(state.user));
+            UI.renderMenu();
+        });
+
+        document.getElementById('btn-study-basics').addEventListener('click', () => {
+            state.session.queue = state.deck.filter(c => c.due <= Date.now());
+            if (!state.session.queue.length) return alert("All cards done for now!");
+            state.session.currentIndex = 0;
+            UI.show('study');
+            UI.renderCard();
+        });
+
+        document.getElementById('card-container').addEventListener('click', () => {
+            if (state.session.isFlipped) return;
+            state.session.isFlipped = true;
+            document.getElementById('card-back').classList.remove('hidden');
+            document.getElementById('study-controls').classList.remove('hidden');
+        });
+
+        document.querySelectorAll('#study-controls button').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const grade = e.currentTarget.getAttribute('data-grade');
+                const card = state.session.queue[state.session.currentIndex];
+                const updated = SRS.calculate(card, grade);
+                const idx = state.deck.findIndex(c => c.id === card.id);
+                state.deck[idx] = updated;
+                localStorage.setItem('qs_deck', JSON.stringify(state.deck));
+                state.session.currentIndex++;
+                UI.renderCard();
+            });
+        });
+
+        document.getElementById('btn-settings').addEventListener('click', () => {
+            document.getElementById('stats-streak').innerText = `${state.user.streak} days`;
+            document.getElementById('stats-total').innerText = `${state.user.totalDays} days`;
+            document.getElementById('stats-cards').innerText = state.deck.filter(c => c.interval > 0).length;
+            UI.show('settings');
+        });
+
+        document.getElementById('btn-back-menu').addEventListener('click', () => UI.renderMenu());
+        document.getElementById('btn-reset-progress').addEventListener('click', () => {
+            if (confirm("Reset everything?")) { localStorage.clear(); location.reload(); }
+        });
+
+        // Initialize
+        if (state.user.name) UI.renderMenu();
+    </script>
+</body>
+</html>

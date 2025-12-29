@@ -1,93 +1,205 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spanish Quest</title>
+    <title>Language Quest</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .card-flip { perspective: 1000px; }
         .hidden { display: none; }
+        body { background-color: #0f172a; color: white; font-family: sans-serif; }
     </style>
 </head>
-<body class="bg-slate-900 text-white min-h-screen flex flex-col items-center p-4">
+<body class="p-6 max-w-md mx-auto min-h-screen flex flex-col justify-center">
 
-    <div class="w-full max-w-md bg-slate-800 rounded-full h-2.5 mb-6">
-        <div id="progress-bar-fill" class="bg-blue-500 h-2.5 rounded-full" style="width: 0%"></div>
-    </div>
+    <section id="screen-welcome" class="space-y-6 text-center">
+        <h1 class="text-4xl font-black italic tracking-tighter text-blue-500">QUEST.</h1>
+        <button onclick="UI.show('languages')" class="w-full p-4 bg-blue-600 rounded-2xl font-bold shadow-lg shadow-blue-900/20 active:scale-95 transition-all">
+            START TRAINING
+        </button>
+    </section>
 
-    <div id="flashcard" class="w-full max-w-md bg-slate-800 rounded-2xl p-8 min-h-[300px] flex flex-col items-center justify-center text-center shadow-2xl border border-slate-700 cursor-pointer mb-6">
-        <h2 id="text-target" class="text-3xl font-bold mb-4">Loading Deck...</h2>
-        <div id="card-back" class="hidden border-t border-slate-700 pt-4 w-full">
-            <p id="text-english" class="text-xl text-slate-300"></p>
+    <section id="screen-languages" class="hidden space-y-4">
+        <h2 class="text-xl font-bold text-slate-400">Choose Language</h2>
+        <div class="grid gap-3">
+            <button onclick="selectLanguage('Spanish', '🇪🇸')" class="p-6 bg-slate-800 rounded-3xl border-b-4 border-yellow-600 text-left active:translate-y-1 transition-all">
+                <span class="text-3xl mr-3">🇪🇸</span>
+                <span class="font-bold text-xl">Spanish</span>
+            </button>
+            <button class="p-6 bg-slate-800/50 rounded-3xl text-left opacity-50 cursor-not-allowed">
+                <span class="text-3xl mr-3">🇫🇷</span>
+                <span class="font-bold text-xl">French (Coming Soon)</span>
+            </button>
         </div>
-    </div>
+    </section>
 
-    <div id="study-controls" class="hidden w-full max-w-md grid grid-cols-2 gap-4">
-        <button onclick="handleAnswer(false)" class="bg-slate-700 hover:bg-slate-600 p-4 rounded-xl font-bold">Hard (Again)</button>
-        <button onclick="handleAnswer(true)" class="bg-blue-600 hover:bg-blue-500 p-4 rounded-xl font-bold">Easy (Next)</button>
-    </div>
+    <section id="screen-menu" class="hidden space-y-4">
+        <div class="flex justify-between items-center mb-6">
+            <div>
+                <h2 id="display-lang" class="text-blue-400 text-sm font-bold uppercase tracking-widest">SPANISH 🇪🇸</h2>
+                <h3 class="text-2xl font-bold italic">Select Curriculum</h3>
+            </div>
+            <button onclick="UI.show('settings')" class="text-2xl">⚙️</button>
+        </div>
+        <div class="grid gap-4">
+            <button onclick="showTopics('Base Curriculum')" class="p-6 bg-slate-800 rounded-3xl border-b-4 border-green-600 text-left active:translate-y-1">
+                <div class="font-bold text-xl text-green-400">Base Curriculum</div>
+                <div class="text-xs text-slate-400">6 levels of mastery</div>
+            </button>
+            <button onclick="showTopics('Targeted Study')" class="p-6 bg-slate-800 rounded-3xl border-b-4 border-blue-600 text-left active:translate-y-1">
+                <div class="font-bold text-xl text-blue-400">Targeted Study</div>
+                <div class="text-xs text-slate-400">Focused life themes</div>
+            </button>
+            <button onclick="showTopics('Vocabulary Sprints')" class="p-6 bg-slate-800 rounded-3xl border-b-4 border-purple-600 text-left active:translate-y-1">
+                <div class="font-bold text-xl text-purple-400">Vocabulary Sprints</div>
+                <div class="text-xs text-slate-400">Situational practice</div>
+            </button>
+        </div>
+    </section>
+
+    <section id="screen-topics" class="hidden space-y-4">
+        <div class="flex items-center gap-4">
+            <button onclick="UI.show('menu')" class="text-slate-400 text-2xl">←</button>
+            <h2 id="topic-title" class="text-xl font-bold">Select Level</h2>
+        </div>
+        <div id="topic-list" class="grid gap-3 pt-4"></div>
+    </section>
+
+    <section id="screen-study" class="hidden space-y-6">
+        <div class="w-full bg-slate-800 h-1 rounded-full overflow-hidden">
+            <div id="progress-bar-fill" class="bg-blue-500 h-full w-0 transition-all duration-500"></div>
+        </div>
+        <div id="flashcard" onclick="flipCard()" class="bg-slate-800 rounded-3xl p-10 min-h-[350px] flex flex-col items-center justify-center text-center shadow-2xl border border-slate-700 cursor-pointer active:scale-95 transition-transform">
+            <p id="text-target" class="text-3xl font-bold"></p>
+            <div id="card-back" class="hidden mt-6 pt-6 border-t border-slate-700 w-full">
+                <p id="text-english" class="text-xl text-slate-400"></p>
+            </div>
+        </div>
+        <div id="study-controls" class="hidden grid grid-cols-2 gap-4">
+            <button onclick="handleAnswer(false)" class="p-5 bg-slate-800 rounded-2xl font-bold text-red-400 border-b-4 border-red-900">AGAIN</button>
+            <button onclick="handleAnswer(true)" class="p-5 bg-blue-600 rounded-2xl font-bold border-b-4 border-blue-900">GOOD</button>
+        </div>
+    </section>
+
+    <section id="screen-settings" class="hidden space-y-6">
+        <div class="flex items-center gap-4">
+            <button onclick="UI.show('menu')" class="text-slate-400 text-2xl">←</button>
+            <h2 class="text-xl font-bold">Settings</h2>
+        </div>
+        <button onclick="resetData()" class="w-full p-4 bg-red-900/30 text-red-400 rounded-xl font-bold border border-red-900/50">RESET ALL DATA</button>
+    </section>
 
     <script>
+        /** STATE & DATA **/
         let state = {
             deck: [],
-            currentIndex: 0,
-            isFlipped: false
+            view: 'welcome',
+            session: { queue: [], currentIndex: 0, isFlipped: false }
         };
 
-        // 1. Load the deck.json file you just uploaded
-        async function init() {
+        const topicMap = {
+            "Base Curriculum": ["Beginner", "Beginner-Intermediate", "Intermediate", "Advanced-Intermediate", "Advanced", "Professional"],
+            "Targeted Study": ["Business", "Travel", "Family"],
+            "Vocabulary Sprints": ["Ordering at a restaurant", "Asking for directions", "Opening a bank account"]
+        };
+
+        /** INITIALIZATION **/
+        async function initApp() {
             try {
                 const response = await fetch('deck.json');
+                if (!response.ok) throw new Error();
                 state.deck = await response.json();
-                renderCard();
+                console.log(`Successfully loaded ${state.deck.length} cards.`);
             } catch (e) {
-                document.getElementById('text-target').innerText = "Error: deck.json not found";
+                console.error("Could not load deck.json. Check GitHub upload.");
             }
         }
 
-        // 2. Audio Player
-        function playSound(filename) {
-            if (!filename) return;
-            const audio = new Audio(`quest-audio/${filename}`);
-            audio.play().catch(err => console.log("Click the card to play audio"));
+        /** NAVIGATION **/
+        const UI = {
+            show: function(id) {
+                ['welcome', 'languages', 'menu', 'topics', 'study', 'settings'].forEach(s => {
+                    document.getElementById(`screen-${s}`).classList.add('hidden');
+                });
+                document.getElementById(`screen-${id}`).classList.remove('hidden');
+                state.view = id;
+            }
+        };
+
+        function selectLanguage(lang, emoji) {
+            UI.show('menu');
         }
 
-        // 3. Display Card
-        function renderCard() {
-            const card = state.deck[state.currentIndex];
-            if (!card) {
-                document.getElementById('text-target').innerText = "Session Complete!";
+        function showTopics(category) {
+            const list = document.getElementById('topic-list');
+            document.getElementById('topic-title').innerText = category;
+            list.innerHTML = "";
+
+            topicMap[category].forEach(topic => {
+                const btn = document.createElement('button');
+                btn.className = "p-4 bg-slate-800 rounded-2xl border-b-4 border-slate-900 text-left active:translate-y-1 transition-all";
+                btn.innerHTML = `<div class="font-bold text-slate-200">${topic}</div><div class="text-[10px] text-slate-500 uppercase tracking-widest mt-1">Quest Available</div>`;
+                btn.onclick = () => startSession(category, topic);
+                list.appendChild(btn);
+            });
+            UI.show('topics');
+        }
+
+        /** SESSION LOGIC **/
+        function startSession(category, topic) {
+            // Filters your 1,718 cards for the specific topic clicked
+            state.session.queue = state.deck.filter(c => c.category === category && c.topic === topic);
+            
+            if (state.session.queue.length === 0) {
+                alert("No cards found for this level yet!");
                 return;
             }
+            
+            state.session.currentIndex = 0;
+            UI.show('study');
+            renderCard();
+        }
 
-            state.isFlipped = false;
+        function renderCard() {
+            const card = state.session.queue[state.session.currentIndex];
+            state.session.isFlipped = false;
             document.getElementById('text-target').innerText = card.target;
             document.getElementById('text-english').innerText = card.english;
             document.getElementById('card-back').classList.add('hidden');
             document.getElementById('study-controls').classList.add('hidden');
             
-            playSound(card.audio);
+            // Audio Logic
+            if(card.audio) {
+                const audio = new Audio(`quest-audio/${card.audio}`);
+                audio.play().catch(() => console.log("Click to play"));
+            }
 
-            const progress = (state.currentIndex / state.deck.length) * 100;
+            const progress = (state.session.currentIndex / state.session.queue.length) * 100;
             document.getElementById('progress-bar-fill').style.width = `${progress}%`;
         }
 
-        // 4. Handle Flip/Click
-        document.getElementById('flashcard').addEventListener('click', () => {
-            if (!state.isFlipped) {
-                state.isFlipped = true;
-                document.getElementById('card-back').classList.remove('hidden');
-                document.getElementById('study-controls').classList.remove('hidden');
-            }
-        });
-
-        function handleAnswer(isCorrect) {
-            state.currentIndex++;
-            renderCard();
+        function flipCard() {
+            state.session.isFlipped = true;
+            document.getElementById('card-back').classList.remove('hidden');
+            document.getElementById('study-controls').classList.remove('hidden');
         }
 
-        init();
+        function handleAnswer(isCorrect) {
+            state.session.currentIndex++;
+            if (state.session.currentIndex >= state.session.queue.length) {
+                alert("Session complete!");
+                UI.show('menu');
+            } else {
+                renderCard();
+            }
+        }
+
+        function resetData() {
+            localStorage.clear();
+            location.reload();
+        }
+
+        initApp();
     </script>
 </body>
 </html>

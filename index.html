@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuestLearn SRS - Multi-Lang</title>
+    <title>QuestLearn SRS - Full Prototype</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .hidden { display: none; }
         .card-inner { transition: transform 0.4s; }
         .progress-bar-transition { transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-        .flag-btn { @apply w-20 h-20 rounded-full bg-slate-800 flex items-center justify-center text-4xl border-2 border-slate-700 hover:border-yellow-400 transition-all active:scale-90; }
+        .flag-btn { @apply w-20 h-20 rounded-full bg-slate-800 flex items-center justify-center text-4xl border-2 border-slate-700 hover:border-yellow-400 transition-all active:scale-90 shadow-lg; }
+        .topic-btn { @apply p-4 bg-slate-800 rounded-xl border border-slate-700 text-left hover:bg-slate-700 transition active:scale-95 flex justify-between items-center; }
     </style>
 </head>
 <body class="bg-slate-900 text-white font-sans">
@@ -17,65 +18,71 @@
     <div id="app" class="max-w-md mx-auto min-h-screen p-6 relative">
         
         <section id="screen-welcome" class="space-y-6 text-center pt-20">
-            <h1 class="text-4xl font-bold text-yellow-400">QuestLearn</h1>
-            <p class="text-slate-400 italic">"The language quest begins..."</p>
-            <input id="input-name" type="text" placeholder="Your Name" class="w-full p-4 rounded bg-slate-800 border border-slate-700 outline-none focus:border-blue-500">
-            <button id="btn-start" class="w-full bg-blue-600 p-4 rounded-xl font-bold hover:bg-blue-500 transition">Start Adventure</button>
+            <h1 class="text-4xl font-bold text-yellow-400 tracking-tight">QuestLearn</h1>
+            <p class="text-slate-400 italic">"Your language journey begins..."</p>
+            <input id="input-name" type="text" placeholder="Your Name" class="w-full p-4 rounded-xl bg-slate-800 border border-slate-700 outline-none focus:border-blue-500 text-center">
+            <button id="btn-start" class="w-full bg-blue-600 p-4 rounded-xl font-bold hover:bg-blue-500 transition shadow-lg">Start Quest</button>
         </section>
 
         <section id="screen-languages" class="hidden space-y-8 text-center pt-10">
-            <h2 class="text-2xl font-bold">Choose your Quest</h2>
+            <h2 class="text-2xl font-bold">Choose Your Language</h2>
             <div class="flex justify-center gap-6">
                 <button onclick="selectLanguage('Spanish', '🇪🇸')" class="flag-btn">🇪🇸</button>
                 <button onclick="selectLanguage('French', '🇫🇷')" class="flag-btn">🇫🇷</button>
                 <button onclick="selectLanguage('German', '🇩🇪')" class="flag-btn">🇩🇪</button>
             </div>
-            <p class="text-slate-500 text-sm">More languages coming soon...</p>
+            <p class="text-slate-500 text-xs uppercase tracking-widest">Select a realm to study</p>
         </section>
 
         <section id="screen-menu" class="hidden space-y-4">
-            <div class="flex justify-between items-center">
+            <div class="flex justify-between items-center mb-6">
                 <div>
-                    <h2 id="display-name" class="text-2xl font-bold"></h2>
-                    <p id="display-lang" class="text-blue-400 text-sm font-bold"></p>
+                    <h2 id="display-name" class="text-2xl font-bold italic text-yellow-500"></h2>
+                    <p id="display-lang" class="text-blue-400 text-sm font-bold uppercase tracking-tighter"></p>
                 </div>
-                <button id="btn-settings" class="text-2xl p-2">⚙️</button>
+                <button onclick="UI.show('settings')" class="text-2xl p-2 bg-slate-800 rounded-full">⚙️</button>
             </div>
             
             <div class="flex justify-between items-center bg-slate-800 p-4 rounded-2xl shadow-lg border border-slate-700">
-                <div class="text-sm text-slate-400">Streak: <span id="display-streak" class="text-orange-400 font-bold text-lg">0</span> Days</div>
+                <div class="text-sm text-slate-400 uppercase font-bold tracking-tight">Current Streak: <span id="display-streak" class="text-orange-400 text-lg">0</span></div>
                 <div class="text-xl">🔥</div>
             </div>
             
-            <h3 class="text-sm font-bold text-slate-500 uppercase tracking-widest mt-6">Learning Path</h3>
+            <h3 class="text-xs font-bold text-slate-500 uppercase tracking-widest mt-8 mb-2">Adventure Paths</h3>
             <div class="grid gap-4">
-                <button onclick="startSession('Base Curriculum')" class="p-5 bg-slate-800 rounded-2xl border-l-4 border-green-500 text-left hover:bg-slate-750 transition flex justify-between items-center">
-                    <div>
-                        <div class="font-bold text-lg">Base Curriculum</div>
-                        <div class="text-xs text-slate-400">The core journey</div>
-                    </div>
-                    <span id="badge-base" class="bg-green-900/50 text-green-400 text-[10px] px-2 py-1 rounded">0 Due</span>
+                <button onclick="showTopics('Base Curriculum')" class="p-6 bg-slate-800 rounded-3xl border-b-4 border-green-600 text-left active:translate-y-1 transition-all">
+                    <div class="font-bold text-xl text-green-400">Base Curriculum</div>
+                    <div class="text-xs text-slate-400">6 Mastery Levels (Beg - Pro)</div>
                 </button>
                 
-                <button onclick="startSession('Targeted Study')" class="p-5 bg-slate-800 rounded-2xl border-l-4 border-blue-500 text-left hover:bg-slate-750 transition">
-                    <div class="font-bold text-lg text-blue-100">Targeted Study</div>
-                    <div class="text-xs text-slate-400 italic">Focus on weak areas</div>
+                <button onclick="showTopics('Targeted Study')" class="p-6 bg-slate-800 rounded-3xl border-b-4 border-blue-600 text-left active:translate-y-1 transition-all">
+                    <div class="font-bold text-xl text-blue-400">Targeted Study</div>
+                    <div class="text-xs text-slate-400">Business, Travel, Family</div>
                 </button>
 
-                <button onclick="startSession('Vocabulary Sprints')" class="p-5 bg-slate-800 rounded-2xl border-l-4 border-purple-500 text-left hover:bg-slate-750 transition">
-                    <div class="font-bold text-lg text-purple-100">Vocabulary Sprints</div>
-                    <div class="text-xs text-slate-400 italic">Fast-paced repetition</div>
+                <button onclick="showTopics('Vocabulary Sprints')" class="p-6 bg-slate-800 rounded-3xl border-b-4 border-purple-600 text-left active:translate-y-1 transition-all">
+                    <div class="font-bold text-xl text-purple-400">Vocabulary Sprints</div>
+                    <div class="text-xs text-slate-400">Situational Phrases</div>
                 </button>
             </div>
+        </section>
+
+        <section id="screen-topics" class="hidden space-y-4">
+            <div class="flex items-center gap-4 mb-6">
+                <button onclick="UI.show('menu')" class="bg-slate-800 w-10 h-10 rounded-full flex items-center justify-center text-xl">←</button>
+                <h2 id="topic-title" class="text-xl font-bold">Select Level</h2>
+            </div>
+            <div id="topic-list" class="grid gap-3">
+                </div>
         </section>
 
         <section id="screen-study" class="hidden space-y-6">
             <div class="flex flex-col space-y-2">
                 <div class="flex justify-between text-[10px] font-mono text-slate-500 uppercase">
-                    <span id="session-title">Study</span>
+                    <span id="session-title">Quest</span>
                     <span id="session-count">0 / 0</span>
                 </div>
-                <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden flex">
+                <div class="w-full h-2 bg-slate-800 rounded-full overflow-hidden">
                     <div id="progress-bar-fill" class="bg-green-500 h-full progress-bar-transition" style="width: 0%"></div>
                 </div>
             </div>
@@ -110,13 +117,20 @@
     </div>
 
     <script>
-        /** STATE **/
+        /** DATA & CONFIG **/
+        const topicMap = {
+            "Base Curriculum": ["Beginner", "Beginner-Intermediate", "Intermediate", "Advanced-Intermediate", "Advanced", "Professional"],
+            "Targeted Study": ["Business", "Travel", "Family"],
+            "Vocabulary Sprints": ["Ordering at a restaurant", "Asking for directions", "Opening a bank account"]
+        };
+
         let state = {
             user: JSON.parse(localStorage.getItem('qs_user')) || { name: "", streak: 0, lastStudy: null, selectedLang: "", langEmoji: "" },
             deck: JSON.parse(localStorage.getItem('qs_deck')) || [
-                { id: 1, category: 'Base Curriculum', target: "Hola", english: "Hello", interval: 0, ease: 2.5, due: Date.now() },
-                { id: 2, category: 'Base Curriculum', target: "Gracias", english: "Thank you", interval: 0, ease: 2.5, due: Date.now() },
-                { id: 3, category: 'Vocabulary Sprints', target: "Perro", english: "Dog", interval: 0, ease: 2.5, due: Date.now() }
+                // Demo Data
+                { id: 1, category: 'Base Curriculum', topic: 'Beginner', target: "Hola", english: "Hello", interval: 0, ease: 2.5, due: Date.now() },
+                { id: 2, category: 'Targeted Study', topic: 'Travel', target: "Dónde está el hotel?", english: "Where is the hotel?", interval: 0, ease: 2.5, due: Date.now() },
+                { id: 3, category: 'Vocabulary Sprints', topic: 'Ordering at a restaurant', target: "La cuenta, por favor", english: "The bill, please", interval: 0, ease: 2.5, due: Date.now() }
             ],
             session: { queue: [], currentIndex: 0, isFlipped: false }
         };
@@ -129,14 +143,36 @@
             UI.renderMenu();
         }
 
-        function startSession(categoryName) {
-            state.session.queue = state.deck.filter(c => c.category === categoryName && c.due <= Date.now());
-            if (state.session.queue.length === 0) {
-                alert(`No cards due in ${categoryName}!`);
+        function showTopics(category) {
+            const list = document.getElementById('topic-list');
+            document.getElementById('topic-title').innerText = category;
+            list.innerHTML = "";
+
+            topicMap[category].forEach(topic => {
+                const count = state.deck.filter(c => c.category === category && c.topic === topic && c.due <= Date.now()).length;
+                const btn = document.createElement('button');
+                btn.className = "topic-btn";
+                btn.innerHTML = `
+                    <div>
+                        <div class="font-bold text-slate-200">${topic}</div>
+                        <div class="text-[9px] text-slate-500 uppercase tracking-widest mt-1">Available Quest</div>
+                    </div>
+                    <span class="bg-slate-900 px-2 py-1 rounded text-[10px] text-blue-400 font-mono">${count} Due</span>
+                `;
+                btn.onclick = () => startSession(category, topic);
+                list.appendChild(btn);
+            });
+            UI.show('topics');
+        }
+
+        function startSession(category, topic) {
+            state.session.queue = state.deck.filter(c => c.category === category && c.topic === topic && c.due <= Date.now());
+            if (!state.session.queue.length) {
+                alert("No cards due in this quest yet!");
                 return;
             }
             state.session.currentIndex = 0;
-            document.getElementById('session-title').innerText = categoryName;
+            document.getElementById('session-title').innerText = topic;
             UI.show('study');
             UI.renderCard();
         }
@@ -144,7 +180,7 @@
         /** UI CONTROLLER **/
         const UI = {
             show(id) {
-                ['welcome', 'languages', 'menu', 'study', 'settings'].forEach(s => {
+                ['welcome', 'languages', 'menu', 'topics', 'study', 'settings'].forEach(s => {
                     const el = document.getElementById(`screen-${s}`);
                     if(el) el.classList.add('hidden');
                 });
@@ -153,13 +189,8 @@
             renderMenu() {
                 if(!state.user.selectedLang) { this.show('languages'); return; }
                 document.getElementById('display-name').innerText = `Helo, ${state.user.name}!`;
-                document.getElementById('display-lang').innerText = `${state.user.langEmoji} ${state.user.selectedLang} Path`;
+                document.getElementById('display-lang').innerText = `${state.user.langEmoji} ${state.user.selectedLang} Realm`;
                 document.getElementById('display-streak').innerText = state.user.streak;
-                
-                // Update Badge
-                const dueCount = state.deck.filter(c => c.due <= Date.now() && c.category === 'Base Curriculum').length;
-                document.getElementById('badge-base').innerText = `${dueCount} Due`;
-                
                 this.show('menu');
             },
             renderCard() {
@@ -185,7 +216,7 @@
                     state.user.lastStudy = today;
                     localStorage.setItem('qs_user', JSON.stringify(state.user));
                 }
-                alert("Quest Session Complete!");
+                alert("Quest Complete! Data Saved.");
                 this.renderMenu();
             }
         };
@@ -211,10 +242,9 @@
                 const grade = e.currentTarget.getAttribute('data-grade');
                 const card = state.session.queue[state.session.currentIndex];
                 
-                // Simplified SRS
                 if (grade === 'again') { card.interval = 0; }
-                else if (grade === 'good') { card.interval = (card.interval || 1) * 2; }
-                else { card.interval = (card.interval || 1) * 4; }
+                else if (grade === 'good') { card.interval = Math.max(1, (card.interval || 1) * 2); }
+                else { card.interval = Math.max(4, (card.interval || 1) * 4); }
                 
                 card.due = Date.now() + (card.interval * 86400000);
                 localStorage.setItem('qs_deck', JSON.stringify(state.deck));
@@ -224,12 +254,11 @@
             });
         });
 
-        document.getElementById('btn-settings').addEventListener('click', () => UI.show('settings'));
         document.getElementById('btn-reset-progress').addEventListener('click', () => {
-            if (confirm("Reset everything?")) { localStorage.clear(); location.reload(); }
+            if (confirm("Erase all quest data?")) { localStorage.clear(); location.reload(); }
         });
 
-        // Init
+        // Init App
         if (state.user.name) UI.renderMenu();
     </script>
 </body>

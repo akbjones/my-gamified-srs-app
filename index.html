@@ -3,63 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QUEST // ARCHITECT</title>
+    <title>QUEST // SYSTEM ACCESS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         .hidden { display: none; }
         body { background-color: #f8fafc; color: #0f172a; font-family: 'JetBrains Mono', monospace; -webkit-font-smoothing: antialiased; }
         
-        /* --- TREE ARCHITECTURE --- */
-        .trunk-line { width: 2px; background: #cbd5e1; height: 32px; margin: 0 auto; position: relative; z-index: 0; }
-        
-        /* Main Protocol Blocks */
-        .proto-block { 
+        /* --- CONNECTIVITY --- */
+        .trunk-line { width: 2px; background: #cbd5e1; height: 24px; margin: 0 auto; z-index: 0; position: relative; }
+        .horizontal-bus { height: 2px; background: #cbd5e1; position: absolute; top: 50%; left: 0; right: 0; z-index: -1; }
+        .vertical-bus { width: 2px; background: #cbd5e1; position: absolute; top: 50%; bottom: -10px; z-index: -1; }
+
+        /* --- BLOCKS --- */
+        .module-block { 
             border: 2px solid #e2e8f0; 
             background: white; 
-            transition: all 0.2s ease-out; 
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); 
             position: relative; 
             z-index: 10;
-            text-align: left;
+            overflow: hidden;
         }
-        .proto-block.active { border-color: #3b82f6; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15); }
-        .proto-block.locked { opacity: 0.5; background: #f1f5f9; border-style: dashed; cursor: not-allowed; }
-        .proto-block:active { transform: scale(0.98); }
+        .module-block.active { border-color: #3b82f6; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1); }
+        .module-block.locked { opacity: 0.6; background: #f8fafc; border-color: #cbd5e1; cursor: not-allowed; }
+        .module-block:active { transform: scale(0.98); }
 
-        /* Spinoff Logic */
-        .spinoff-container { position: relative; padding-left: 24px; display: flex; flex-direction: column; gap: 8px; justify-content: center; }
-        
-        /* The Connector Line for Spinoffs */
-        .spinoff-connector {
+        /* Lock Icon */
+        .lock-icon {
             position: absolute;
-            left: 0;
-            top: 50%;
-            width: 24px;
-            height: 2px;
-            background: #cbd5e1;
-            transform: translateY(-50%);
+            top: 6px;
+            right: 8px;
+            font-size: 10px;
+            color: #94a3b8;
+            display: none; /* Hidden by default */
         }
-        
-        /* Vertical Bracket for multiple spinoffs */
-        .spinoff-bracket {
+        .module-block.locked .lock-icon { display: block; }
+
+        /* Progress Bar */
+        .progress-rail {
             position: absolute;
+            bottom: 0;
             left: 0;
-            top: 10px;
-            bottom: 10px;
-            width: 2px;
-            background: #cbd5e1;
+            right: 0;
+            height: 4px;
+            background: #f1f5f9;
+        }
+        .progress-fill {
+            height: 100%;
+            background: #3b82f6;
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+        .marker-70 {
+            position: absolute;
+            left: 70%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: #ef4444;
+            z-index: 20;
+            opacity: 0.5;
         }
 
-        .micro-node { 
+        /* Language Grid Slots */
+        .lang-slot {
+            border: 1px solid #e2e8f0;
+            padding: 12px;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+        }
+        .lang-slot.offline {
+            opacity: 0.4;
+            background: #f1f5f9;
+            border-style: dashed;
+        }
+
+        /* Side Branches */
+        .mini-trunk { display: flex; flex-direction: column; gap: 4px; align-items: center; }
+        .mini-block { 
             font-size: 8px; 
-            padding: 6px 10px; 
-            border: 1px dashed #94a3b8; 
+            padding: 6px; 
+            width: 100%; 
+            text-align: center;
+            border: 1px solid #cbd5e1; 
+            background: #fff;
             border-radius: 6px; 
-            background: #f8fafc; 
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .standalone-chip {
+            font-size: 8px;
+            padding: 6px 12px;
+            border: 1px dashed #94a3b8;
+            background: #f8fafc;
+            border-radius: 20px;
             color: #64748b;
             font-weight: bold;
             text-transform: uppercase;
             white-space: nowrap;
+            position: absolute;
         }
 
         /* UI Elements */
@@ -68,104 +113,180 @@
         #info-panel { background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(4px); }
     </style>
 </head>
-<body class="p-4 max-w-sm mx-auto min-h-screen pb-24">
+<body class="p-4 max-w-md mx-auto min-h-screen pb-32">
 
     <div id="info-panel" onclick="toggleInfo()" class="hidden fixed inset-0 z-50 flex items-center justify-center p-8 transition-opacity">
-        <div class="bg-white p-8 rounded-2xl text-[11px] leading-7 text-slate-600 shadow-2xl w-full border border-slate-100">
-            <h3 class="font-bold text-slate-900 border-b pb-3 mb-2 uppercase tracking-widest">SRS Protocol</h3>
+        <div class="bg-white p-8 rounded-2xl text-[11px] leading-7 text-slate-600 shadow-2xl w-full max-w-xs border border-slate-100">
+            <h3 class="font-bold text-slate-900 border-b pb-3 mb-2 uppercase tracking-widest">Logic Protocol</h3>
             <p><span class="text-red-500 font-bold">[1] AGAIN</span><br/>Reset. 1m queue.</p>
             <p><span class="text-orange-500 font-bold">[2] HARD</span><br/>Gap. 6m queue.</p>
-            <p><span class="text-emerald-600 font-bold">[3] GOOD</span><br/>Step 1 (10m) -> Grad.</p>
+            <p><span class="text-emerald-600 font-bold">[3] GOOD</span><br/>Step 1 (10m) -> Graduate.</p>
             <p><span class="text-blue-500 font-bold">[4] EASY</span><br/>Instant sync.</p>
             <div class="mt-4 pt-3 border-t text-center text-[9px] uppercase tracking-widest text-slate-400">Tap to close</div>
         </div>
     </div>
 
-    <section id="screen-languages" class="hidden space-y-8 pt-12 text-center">
-        <h1 class="text-[10px] tracking-[0.4em] text-slate-400 font-bold uppercase">System // Root</h1>
-        <button onclick="selectLanguage(state.activeCategory)" class="w-full py-12 proto-block rounded-[32px] border-blue-500 shadow-lg shadow-blue-500/5 text-center active">
-            <div class="text-[9px] text-blue-500 font-bold mb-2 uppercase tracking-widest">[ Signal_Found ]</div>
-            <div id="lang-node-label" class="text-2xl font-bold uppercase tracking-widest text-slate-900 italic">Scanning...</div>
+    <section id="screen-languages" class="hidden space-y-6 pt-8">
+        <header class="text-center mb-8">
+            <h1 class="text-[10px] tracking-[0.4em] text-slate-400 font-bold uppercase">System // Access</h1>
+            <h2 class="text-xl font-light tracking-tighter text-slate-900 uppercase italic mt-1">Select Protocol</h2>
+        </header>
+
+        <button onclick="selectLanguage(state.activeCategory)" class="w-full lang-slot border-blue-500 shadow-lg shadow-blue-500/10 active">
+            <div class="flex items-center gap-3">
+                <div class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
+                <div class="text-left">
+                    <div id="lang-node-label" class="text-sm font-bold uppercase text-slate-900">Scanning...</div>
+                    <div class="text-[9px] text-blue-500 font-bold uppercase tracking-widest">Clocked In</div>
+                </div>
+            </div>
+            <div class="text-[10px] font-mono text-slate-400">-></div>
         </button>
+
+        <div class="grid grid-cols-2 gap-3">
+            <div class="lang-slot offline"><span class="text-[9px] font-bold">French</span> <span>🔒</span></div>
+            <div class="lang-slot offline"><span class="text-[9px] font-bold">German</span> <span>🔒</span></div>
+            <div class="lang-slot offline"><span class="text-[9px] font-bold">Italian</span> <span>🔒</span></div>
+            <div class="lang-slot offline"><span class="text-[9px] font-bold">Russian</span> <span>🔒</span></div>
+            <div class="lang-slot offline"><span class="text-[9px] font-bold">Japanese</span> <span>🔒</span></div>
+            <div class="lang-slot offline"><span class="text-[9px] font-bold">Chinese</span> <span>🔒</span></div>
+            <div class="lang-slot offline"><span class="text-[9px] font-bold">Arabic</span> <span>🔒</span></div>
+            <div class="lang-slot offline"><span class="text-[9px] font-bold">Korean</span> <span>🔒</span></div>
+        </div>
+        
+        <div class="text-center pt-8 opacity-30 text-[9px] uppercase tracking-widest">
+            Capacity: 1/10 Nodes Active
+        </div>
     </section>
 
     <section id="screen-topics" class="hidden pt-4 space-y-6">
         <header class="flex items-center justify-between px-2">
-            <button onclick="UI.show('languages')" class="text-slate-400 text-[10px] font-bold uppercase tracking-widest hover:text-slate-900">← Disconnect</button>
-            <h2 class="text-[10px] font-bold text-slate-300 tracking-[0.3em] uppercase">Curriculum_Map</h2>
+            <button onclick="UI.show('languages')" class="text-slate-400 text-[10px] font-bold uppercase tracking-widest hover:text-slate-900">← Clock Out</button>
+            <h2 class="text-[10px] font-bold text-slate-300 tracking-[0.3em] uppercase">Map</h2>
         </header>
 
         <div class="flex flex-col items-center w-full px-1">
             
-            <div class="w-full relative">
-                <div class="absolute -left-3 top-2 bottom-2 border-l-2 border-slate-100"></div>
-                <div class="text-[8px] font-bold text-slate-300 uppercase tracking-widest mb-1 ml-2">Phase 01</div>
+            <div class="w-full max-w-[200px] relative">
+                <div class="text-[8px] font-bold text-slate-300 uppercase tracking-widest mb-1 text-center">Novice</div>
                 
-                <button onclick="selectTopic(state.activeTopic)" class="w-full p-5 proto-block rounded-2xl active">
-                    <span class="text-[10px] font-bold uppercase text-slate-900">Protocol: Genesis</span>
-                    <span id="prog-Beginner" class="status-pill bg-blue-50 text-blue-600">SYNCING</span>
+                <button onclick="selectTopic(state.activeTopic)" class="w-full p-4 module-block rounded-xl active mb-2 text-left pb-6">
+                    <div class="lock-icon">🔒</div>
+                    <span class="text-[10px] font-bold uppercase">Novice I</span>
+                    <span id="label-Novice" class="status-pill bg-blue-50 text-blue-600">--%</span>
+                    <div class="progress-rail"><div class="marker-70"></div><div id="bar-Novice" class="progress-fill"></div></div>
+                </button>
+                
+                <div class="trunk-line"></div>
+                
+                <button id="gate-Nov2" class="w-full p-4 module-block rounded-xl locked text-left pb-6">
+                    <div class="lock-icon">🔒</div>
+                    <span class="text-[10px] font-bold uppercase">Novice II</span>
+                    <div class="progress-rail"><div class="marker-70"></div><div class="progress-fill"></div></div>
                 </button>
             </div>
 
-            <div class="trunk-line"></div>
+            <div class="trunk-line h-8"></div>
 
-            <div class="w-full flex items-center">
-                <div class="flex-grow">
-                    <button id="gate-Intermediate" onclick="selectTopic('Intermediate')" class="w-full p-5 proto-block rounded-2xl locked">
-                        <span class="text-[10px] font-bold uppercase">Protocol: Nexus</span>
-                        <span class="status-pill bg-slate-100 text-slate-400">LOCKED</span>
+            <div class="w-full relative flex justify-center py-4">
+                <div class="horizontal-bus w-[80%]"></div>
+
+                <div class="standalone-chip" style="left: 0; top: 20%;">Restaurant</div>
+                
+                <div class="w-full max-w-[200px] relative z-10 bg-slate-50/0">
+                     <div class="text-[8px] font-bold text-slate-300 uppercase tracking-widest mb-1 text-center">Beginner</div>
+                    
+                    <button class="w-full p-4 module-block rounded-xl locked text-left pb-6">
+                        <div class="lock-icon">🔒</div>
+                        <span class="text-[10px] font-bold uppercase">Beginner I</span>
+                        <div class="progress-rail"><div class="marker-70"></div><div class="progress-fill"></div></div>
+                    </button>
+                    
+                    <div class="trunk-line"></div>
+                    
+                    <button class="w-full p-4 module-block rounded-xl locked text-left pb-6">
+                        <div class="lock-icon">🔒</div>
+                        <span class="text-[10px] font-bold uppercase">Beginner II</span>
+                        <div class="progress-rail"><div class="marker-70"></div><div class="progress-fill"></div></div>
                     </button>
                 </div>
                 
-                <div class="spinoff-container">
-                    <div class="spinoff-connector"></div> <div class="spinoff-bracket"></div>   <div class="flex flex-col gap-2">
-                        <div class="micro-node">Restaurant</div>
-                        <div class="micro-node">Hospital</div>
-                        <div class="micro-node">Hotel</div>
-                    </div>
-                </div>
+                <div class="standalone-chip" style="right: 0; top: 20%;">Hospital</div>
+                <div class="standalone-chip" style="right: 0; top: 60%;">Hotel</div>
             </div>
 
-            <div class="trunk-line"></div>
+            <div class="trunk-line h-8"></div>
 
-            <div class="w-full flex items-center">
-                <div class="flex-grow">
-                    <button id="gate-Advanced" onclick="selectTopic('Advanced')" class="w-full p-5 proto-block rounded-2xl locked">
-                        <span class="text-[10px] font-bold uppercase">Protocol: Synapse</span>
-                    </button>
+            <div class="w-full grid grid-cols-3 gap-2 relative">
+                <div class="horizontal-bus top-12 left-10 right-10"></div>
+                <div class="vertical-bus left-1/6 height-full"></div>
+
+                <div class="mini-trunk pt-8">
+                    <div class="text-[8px] font-bold text-slate-400 uppercase">Family</div>
+                    <div class="w-[1px] h-4 bg-slate-300"></div>
+                    <div class="mini-block locked">Basics</div>
                 </div>
-                
-                <div class="spinoff-container">
-                    <div class="spinoff-connector"></div>
-                    <div class="spinoff-bracket" style="top: 15px; bottom: 15px;"></div>
-                    
-                    <div class="flex flex-col gap-3">
-                        <div class="micro-node py-2 px-3">Family & Rel.</div>
-                        <div class="micro-node py-2 px-3">Travel Logic</div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="trunk-line"></div>
-
-            <div class="w-full">
-                <div class="text-[8px] font-bold text-slate-300 uppercase tracking-widest mb-1 text-center">Terminal Phase</div>
-                
-                <div class="grid grid-cols-3 gap-2 items-stretch">
-                    <div class="proto-block rounded-xl p-2 flex items-center justify-center locked">
-                        <span class="text-[8px] font-bold uppercase text-center text-slate-400">Literature</span>
-                    </div>
+                <div class="flex flex-col items-center relative z-10">
+                    <div class="text-[8px] font-bold text-slate-300 uppercase tracking-widest mb-1 text-center">Intermediate</div>
                     
-                    <button id="gate-Mastery" class="proto-block rounded-2xl p-4 border-emerald-500 locked flex flex-col items-center justify-center">
-                        <div class="text-[10px] font-bold uppercase text-emerald-600">Apex</div>
+                    <button class="w-full p-4 module-block rounded-xl locked text-left pb-6">
+                        <div class="lock-icon">🔒</div>
+                        <span class="text-[10px] font-bold uppercase">Intermed I</span>
+                        <div class="progress-rail"><div class="marker-70"></div><div class="progress-fill"></div></div>
                     </button>
                     
-                    <div class="proto-block rounded-xl p-2 flex items-center justify-center locked">
-                        <span class="text-[8px] font-bold uppercase text-center text-slate-400">Corporate</span>
-                    </div>
+                    <div class="trunk-line"></div>
+                    
+                    <button class="w-full p-4 module-block rounded-xl locked text-left pb-6">
+                        <div class="lock-icon">🔒</div>
+                        <span class="text-[10px] font-bold uppercase">Intermed II</span>
+                        <div class="progress-rail"><div class="marker-70"></div><div class="progress-fill"></div></div>
+                    </button>
+                </div>
+
+                <div class="mini-trunk pt-8">
+                    <div class="text-[8px] font-bold text-slate-400 uppercase">Travel</div>
+                    <div class="w-[1px] h-4 bg-slate-300"></div>
+                    <div class="mini-block locked">Airport</div>
                 </div>
             </div>
 
+            <div class="trunk-line h-8"></div>
+
+            <div class="w-full grid grid-cols-3 gap-2 relative">
+                <div class="horizontal-bus top-12 left-10 right-10"></div>
+
+                <div class="mini-trunk pt-8">
+                    <div class="text-[8px] font-bold text-slate-400 uppercase">Lit.</div>
+                    <div class="w-[1px] h-4 bg-slate-300"></div>
+                    <div class="mini-block locked">Prose</div>
+                </div>
+
+                <div class="flex flex-col items-center relative z-10">
+                    <div class="text-[8px] font-bold text-slate-300 uppercase tracking-widest mb-1 text-center">Advanced</div>
+                    
+                    <button class="w-full p-4 module-block rounded-xl locked text-left pb-6">
+                        <div class="lock-icon">🔒</div>
+                        <span class="text-[10px] font-bold uppercase">Advanced I</span>
+                        <div class="progress-rail"><div class="marker-70"></div><div class="progress-fill"></div></div>
+                    </button>
+                    
+                    <div class="trunk-line"></div>
+                    
+                    <button class="w-full p-4 module-block rounded-xl border-emerald-500 locked text-left pb-6">
+                        <div class="lock-icon">🔒</div>
+                        <span class="text-[10px] font-bold uppercase text-emerald-600">Advanced II</span>
+                        <div class="progress-rail"><div class="marker-70"></div><div class="progress-fill"></div></div>
+                    </button>
+                </div>
+
+                <div class="mini-trunk pt-8">
+                    <div class="text-[8px] font-bold text-slate-400 uppercase">Corp.</div>
+                    <div class="w-[1px] h-4 bg-slate-300"></div>
+                    <div class="mini-block locked">Email</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -262,10 +383,7 @@
             }
         });
 
-        function toggleInfo() { 
-            const el = document.getElementById('info-panel');
-            el.classList.toggle('hidden'); 
-        }
+        function toggleInfo() { document.getElementById('info-panel').classList.toggle('hidden'); }
 
         async function initApp() {
             try {
@@ -280,29 +398,33 @@
                 if(state.deck.length > 0) {
                     state.activeCategory = state.deck[0].category;
                     state.activeTopic = state.deck[0].topic; 
-                    document.getElementById('lang-node-label').innerText = state.activeCategory + '_Node';
+                    document.getElementById('lang-node-label').innerText = state.activeCategory;
                 }
                 UI.show('languages');
             } catch (e) { console.error("Data Sync Error"); }
         }
 
         function updateTreeProgress() {
-            // Check Progress on Genesis (Beginner)
+            // Calculate Novice I (Active)
             const currentDeck = state.deck.filter(c => c.topic === state.activeTopic);
             const mastered = currentDeck.filter(c => c.mastery === 2).length;
             const percent = currentDeck.length > 0 ? Math.round((mastered / currentDeck.length) * 100) : 0;
             
-            const label = document.getElementById('prog-Beginner');
-            if(label) label.innerText = `${percent}% SYNCED`;
+            // Update Bar
+            const bar = document.getElementById('bar-Novice');
+            if(bar) bar.style.width = percent + '%';
+            document.getElementById('label-Novice').innerText = percent + '%';
             
-            // Unlock Nexus (Intermediate) if > 70%
-            if(percent >= 70) document.getElementById('gate-Intermediate').classList.remove('locked');
+            // Unlock Next if > 70%
+            if(percent >= 70) {
+                document.getElementById('gate-Nov2').classList.remove('locked');
+            }
         }
 
         function selectLanguage(lang) { state.session.language = lang; UI.show('topics'); }
         
         function selectTopic(topic) { 
-            state.session.topic = state.activeTopic; // Maps to your JSON topic
+            state.session.topic = state.activeTopic; 
             document.getElementById('active-lang-display').innerText = state.activeCategory.toUpperCase();
             document.getElementById('active-topic-display').innerText = topic + '_';
             updateMenuStats();
@@ -323,7 +445,7 @@
             state.session.queue = [...learning, ...newCards].map(c => ({...c, step: c.step || 0}));
             state.session.currentIndex = 0;
             
-            if(state.session.queue.length === 0) return alert("Node Synced. No cards due.");
+            if(state.session.queue.length === 0) return alert("Module synced.");
             UI.show('study'); renderCard();
         }
 

@@ -13,8 +13,6 @@
         .card-inner { border: 1px solid #d1d5db; transition: all 0.3s ease; }
         .btn-active:active { transform: scale(0.96); }
         #info-panel { background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); }
-        
-        /* Tree Infrastructure */
         .tree-line-v { width: 2px; height: 30px; background: #cbd5e1; margin: 0 auto; position: relative; }
         .tree-line-branch { width: 30px; height: 2px; background: #cbd5e1; }
         .lock-shield { filter: grayscale(1); opacity: 0.4; pointer-events: none; cursor: not-allowed; }
@@ -26,8 +24,8 @@
     <div id="info-panel" onclick="toggleInfo()" class="hidden fixed inset-0 z-50 flex items-center justify-center p-8">
         <div class="bg-white p-8 rounded-3xl text-[13px] leading-relaxed space-y-5 text-slate-800 shadow-2xl">
             <h3 class="font-bold text-black border-b pb-3 uppercase tracking-widest text-[14px]">Logic protocol</h3>
-            <p><strong>[1] Again:</strong> Card reset. 1m queue.</p>
-            <p><strong>[2] Hard:</strong> Gap. 6m queue.</p>
+            <p><strong>[1] Again:</strong> Reset card. 1m queue.</p>
+            <p><strong>[2] Hard:</strong> Retention gap. 6m queue.</p>
             <p><strong>[3] Good:</strong> Mastery. Requires 2 Good inputs.</p>
             <p><strong>[4] Easy:</strong> Instant sync. Archived.</p>
             <div class="pt-2 text-blue-600 font-bold uppercase tracking-tighter">Tap to resume</div>
@@ -37,12 +35,12 @@
     <section id="screen-languages" class="hidden space-y-8 pt-10 text-center">
         <header class="space-y-1">
             <h1 class="text-[11px] tracking-[0.4em] text-blue-600 font-bold uppercase">Root // Connection</h1>
-            <h2 class="text-3xl font-light tracking-tighter text-slate-900 uppercase italic text-center">Spanish_</h2>
+            <h2 id="detected-lang-title" class="text-3xl font-light tracking-tighter text-slate-900 uppercase italic">Scanning_</h2>
         </header>
         <div class="space-y-4">
-            <button onclick="selectLanguage('Spanish')" class="w-full glass-slab p-8 rounded-[40px] btn-active border-2 border-blue-500/10">
+            <button onclick="selectLanguage(state.activeCategory)" class="w-full glass-slab p-8 rounded-[40px] btn-active border-2 border-blue-500/10">
                 <div class="text-[10px] text-blue-500 font-bold mb-1 mono tracking-widest">[ SIGNAL_STABLE ]</div>
-                <div class="text-xl font-bold uppercase tracking-widest text-slate-900">Spanish Node</div>
+                <div id="lang-node-label" class="text-xl font-bold uppercase tracking-widest text-slate-900 italic">Primary Node</div>
             </button>
             <div class="tree-line-v"></div>
             <div class="space-y-3 opacity-20 grayscale">
@@ -60,9 +58,9 @@
 
         <div class="flex flex-col items-center">
             <div class="w-full text-center">
-                <button onclick="selectTopic('Beginner')" class="w-full glass-slab p-5 rounded-2xl btn-active border-l-4 border-blue-500 text-center">
+                <button id="btn-Beginner" onclick="selectTopic('Beginner')" class="w-full glass-slab p-5 rounded-2xl btn-active border-l-4 border-blue-500 text-center">
                     <div class="text-xs font-bold uppercase">Phase 01: Beginner</div>
-                    <div id="prog-Beginner" class="status-tag bg-blue-100 text-blue-600 uppercase tracking-tighter">Syncing...</div>
+                    <div id="prog-Beginner" class="status-tag bg-blue-100 text-blue-600">0% SYNCED</div>
                 </button>
                 <div class="tree-line-v"></div>
                 <div class="flex items-center w-full justify-center">
@@ -76,7 +74,7 @@
             <div id="gate-Intermediate" class="w-full text-center">
                 <button onclick="selectTopic('Intermediate')" class="w-full glass-slab p-5 rounded-2xl btn-active border-l-4 border-slate-300">
                     <div class="text-xs font-bold uppercase">Phase 02: Intermediate</div>
-                    <div id="prog-Intermediate" class="status-tag bg-slate-200 text-slate-500 uppercase tracking-tighter">Locked_Signal</div>
+                    <div id="prog-Intermediate" class="status-tag bg-slate-200 text-slate-500">Locked_Signal</div>
                 </button>
             </div>
 
@@ -87,15 +85,12 @@
             <div class="grid grid-cols-2 gap-4 w-full">
                 <div class="flex flex-col items-center">
                     <div class="tree-line-v h-6"></div>
-                    <button id="btn-Advanced" onclick="selectTopic('Advanced')" class="w-full glass-slab p-4 rounded-2xl btn-active text-[10px] font-bold uppercase lock-shield">
-                        Advanced
-                    </button>
-                    <div id="prog-Advanced" class="text-[8px] mt-1 text-slate-400 font-bold">0% SYNC</div>
+                    <button id="btn-Advanced" onclick="selectTopic('Advanced')" class="w-full glass-slab p-4 rounded-2xl btn-active text-[10px] font-bold uppercase lock-shield">Advanced</button>
+                    <div id="prog-Advanced" class="text-[8px] mt-1 text-slate-400 font-bold uppercase">0% Sync</div>
                 </div>
                 <div class="space-y-2 pt-6 opacity-30">
                     <div class="glass-slab p-3 rounded-xl text-[8px] font-bold uppercase text-center border-dashed border border-slate-300">Corporate</div>
                     <div class="glass-slab p-3 rounded-xl text-[8px] font-bold uppercase text-center border-dashed border border-slate-300">Literature</div>
-                    <div class="glass-slab p-3 rounded-xl text-[8px] font-bold uppercase text-center border-dashed border border-slate-300">Family_Rel</div>
                 </div>
             </div>
         </div>
@@ -104,7 +99,7 @@
     <section id="screen-menu" class="hidden space-y-10 pt-10 text-center">
         <header class="flex justify-between items-start text-left">
             <div class="space-y-1">
-                <h1 id="active-lang-display" class="text-[11px] tracking-[0.4em] text-blue-600 font-bold uppercase">SPANISH</h1>
+                <h1 id="active-lang-display" class="text-[11px] tracking-[0.4em] text-blue-600 font-bold uppercase">SYNCED</h1>
                 <h2 id="active-topic-display" class="text-3xl font-light tracking-tighter text-slate-900 uppercase italic">_</h2>
             </div>
             <button onclick="UI.show('settings')" class="text-2xl p-2">⚙️</button>
@@ -162,7 +157,7 @@
 
     <section id="screen-success" class="hidden text-center space-y-12 py-16">
         <div class="text-5xl">✓</div>
-        <h2 class="text-3xl font-bold uppercase tracking-widest">Calibration_Success</h2>
+        <h2 class="text-3xl font-bold uppercase tracking-widest">Session_Complete</h2>
         <div class="space-y-4 px-4">
             <button onclick="addExtraCards()" class="w-full py-6 glass-slab rounded-[32px] text-[13px] font-bold uppercase tracking-widest btn-active">+10 Data Load</button>
             <button onclick="UI.show('menu')" class="w-full py-5 text-[12px] font-bold uppercase tracking-widest text-slate-400 underline underline-offset-8">Return to Menu</button>
@@ -176,16 +171,13 @@
 
     <script>
         let state = {
-            deck: [], view: 'languages', config: { newLimit: 20 },
+            deck: [], view: 'languages', activeCategory: '', config: { newLimit: 20 },
             session: { queue: [], currentIndex: 0, finishedCount: 0, isFlipped: false, language: '', topic: '' }
         };
 
         const UI = {
             show: (id) => {
-                ['languages', 'topics', 'menu', 'study', 'settings', 'success'].forEach(s => {
-                    const el = document.getElementById(`screen-${s}`);
-                    if(el) el.classList.add('hidden');
-                });
+                ['languages', 'topics', 'menu', 'study', 'settings', 'success'].forEach(s => document.getElementById(`screen-${s}`).classList.add('hidden'));
                 document.getElementById(`screen-${id}`).classList.remove('hidden');
                 state.view = id;
                 if(id === 'topics') updateTreeProgress();
@@ -201,13 +193,21 @@
                     ...card, id: card.target + card.english,
                     mastery: savedProgress[card.target + card.english] || 0
                 }));
+
+                // Auto-detect the first category found (likely Spanish or Base Curriculum)
+                if(state.deck.length > 0) {
+                    state.activeCategory = state.deck[0].category;
+                    document.getElementById('detected-lang-title').innerText = state.activeCategory + '_';
+                    document.getElementById('lang-node-label').innerText = state.activeCategory + ' Node';
+                }
+
                 UI.show('languages');
             } catch (e) { console.error("Sync error.", e); }
         }
 
         function selectLanguage(lang) {
             state.session.language = lang;
-            document.getElementById('active-lang-display').innerText = `${lang.toUpperCase()}`;
+            document.getElementById('active-lang-display').innerText = lang.toUpperCase();
             UI.show('topics');
         }
 
@@ -221,8 +221,8 @@
                 const percent = cards.length > 0 ? Math.round((mastered / cards.length) * 100) : 0;
                 
                 const label = document.getElementById(`prog-${lvl}`);
-                const btn = document.getElementById(`btn-${lvl}`); // For advanced button specifically
-                const wrapper = document.getElementById(`gate-${lvl}`); // For intermediate wrapper
+                const btn = document.getElementById(`btn-${lvl}`);
+                const gate = document.getElementById(`gate-${lvl}`);
                 
                 if (label) {
                     label.innerText = `${percent}% SYNCED`;
@@ -230,13 +230,11 @@
                     else label.className = "status-tag bg-slate-200 text-slate-500";
                 }
 
-                // Handle visual locking
-                let targetEl = wrapper || btn;
+                const targetEl = gate || btn;
                 if (targetEl) {
                     if (canUnlockNext) targetEl.classList.remove('lock-shield');
                     else targetEl.classList.add('lock-shield');
                 }
-                
                 canUnlockNext = (percent >= 70);
             });
         }
@@ -260,7 +258,7 @@
             let newCards = filtered.filter(c => c.mastery === 0).slice(0, state.config.newLimit);
             state.session.queue = [...learning, ...newCards].map(c => ({...c, step: 0, sessionType: c.mastery === 1 ? 'learning' : 'new'}));
             state.session.currentIndex = 0; state.session.finishedCount = 0;
-            if (state.session.queue.length === 0) return alert("System optimal.");
+            if (state.session.queue.length === 0) return alert("System state: Optimal.");
             UI.show('study'); updateStatusBar(); renderCard();
         }
 

@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QUEST // SYSTEM ACCESS</title>
+    <title>QUEST // DASHED NETWORK</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         .hidden { display: none; }
         body { background-color: #f8fafc; color: #0f172a; font-family: 'JetBrains Mono', monospace; -webkit-font-smoothing: antialiased; }
         
-        /* --- CONNECTIVITY --- */
-        .trunk-line { width: 2px; background: #cbd5e1; height: 24px; margin: 0 auto; z-index: 0; position: relative; }
-        .horizontal-bus { height: 2px; background: #cbd5e1; position: absolute; top: 50%; left: 0; right: 0; z-index: -1; }
-        .vertical-bus { width: 2px; background: #cbd5e1; position: absolute; top: 50%; bottom: -10px; z-index: -1; }
+        /* --- DASHED INFRASTRUCTURE --- */
+        .trunk-line { width: 0px; border-left: 2px dashed #cbd5e1; height: 32px; margin: 0 auto; z-index: 0; position: relative; }
+        
+        /* The horizontal connectors behind modules */
+        .horizontal-bus { 
+            height: 0px; 
+            border-top: 2px dashed #cbd5e1; 
+            position: absolute; 
+            top: 24px; /* Aligns with top of trunk blocks */
+            left: 0; 
+            right: 0; 
+            z-index: 0; 
+        }
 
         /* --- BLOCKS --- */
         .module-block { 
@@ -21,50 +30,73 @@
             background: white; 
             transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); 
             position: relative; 
-            z-index: 10;
-            overflow: hidden;
+            z-index: 20; /* Sits above lines */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
         .module-block.active { border-color: #3b82f6; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1); }
-        .module-block.locked { opacity: 0.6; background: #f8fafc; border-color: #cbd5e1; cursor: not-allowed; }
+        .module-block.locked { opacity: 0.7; background: #f8fafc; border-color: #cbd5e1; border-style: dashed; cursor: not-allowed; }
         .module-block:active { transform: scale(0.98); }
 
-        /* Lock Icon */
-        .lock-icon {
-            position: absolute;
-            top: 6px;
-            right: 8px;
-            font-size: 10px;
-            color: #94a3b8;
-            display: none; /* Hidden by default */
+        /* Side Stack Blocks */
+        .stack-container { display: flex; flex-direction: column; gap: 8px; align-items: center; width: 100%; position: relative; z-index: 10; }
+        .stack-block {
+            width: 100%;
+            padding: 8px;
+            font-size: 9px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: white;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            text-align: center;
+            color: #64748b;
         }
-        .module-block.locked .lock-icon { display: block; }
+        .stack-connector {
+            width: 0px; 
+            border-left: 2px dashed #cbd5e1; 
+            height: 8px; 
+        }
 
         /* Progress Bar */
         .progress-rail {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            width: 100%;
             height: 4px;
             background: #f1f5f9;
+            margin-top: 8px;
+            border-radius: 2px;
+            position: relative;
         }
         .progress-fill {
             height: 100%;
             background: #3b82f6;
             width: 0%;
-            transition: width 0.5s ease;
+            border-radius: 2px;
         }
         .marker-70 {
             position: absolute;
             left: 70%;
-            top: 0;
-            bottom: 0;
-            width: 1px;
+            top: -2px;
+            bottom: -2px;
+            width: 2px;
             background: #ef4444;
-            z-index: 20;
-            opacity: 0.5;
+            z-index: 30;
         }
 
+        /* UI Elements */
+        .glass-slab { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); border: 1px solid #ffffff; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+        .status-text { font-size: 8px; font-weight: bold; margin-top: 4px; color: #3b82f6; }
+        #info-panel { background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(4px); }
+        
+        .side-chip {
+            background: white; border: 1px dashed #94a3b8; padding: 6px 12px; border-radius: 20px;
+            font-size: 9px; font-weight: bold; color: #64748b; text-transform: uppercase;
+            position: absolute; z-index: 10;
+        }
+        
         /* Language Grid Slots */
         .lang-slot {
             border: 1px solid #e2e8f0;
@@ -75,63 +107,17 @@
             align-items: center;
             background: white;
         }
-        .lang-slot.offline {
-            opacity: 0.4;
-            background: #f1f5f9;
-            border-style: dashed;
-        }
+        .lang-slot.offline { opacity: 0.4; background: #f1f5f9; border-style: dashed; }
 
-        /* Side Branches */
-        .mini-trunk { display: flex; flex-direction: column; gap: 4px; align-items: center; }
-        .mini-block { 
-            font-size: 8px; 
-            padding: 6px; 
-            width: 100%; 
-            text-align: center;
-            border: 1px solid #cbd5e1; 
-            background: #fff;
-            border-radius: 6px; 
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        .standalone-chip {
-            font-size: 8px;
-            padding: 6px 12px;
-            border: 1px dashed #94a3b8;
-            background: #f8fafc;
-            border-radius: 20px;
-            color: #64748b;
-            font-weight: bold;
-            text-transform: uppercase;
-            white-space: nowrap;
-            position: absolute;
-        }
-
-        /* UI Elements */
-        .glass-slab { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); border: 1px solid #ffffff; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
-        .status-pill { font-size: 8px; padding: 2px 6px; border-radius: 4px; font-weight: bold; letter-spacing: 0.05em; float: right; }
-        #info-panel { background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(4px); }
     </style>
 </head>
 <body class="p-4 max-w-md mx-auto min-h-screen pb-32">
-
-    <div id="info-panel" onclick="toggleInfo()" class="hidden fixed inset-0 z-50 flex items-center justify-center p-8 transition-opacity">
-        <div class="bg-white p-8 rounded-2xl text-[11px] leading-7 text-slate-600 shadow-2xl w-full max-w-xs border border-slate-100">
-            <h3 class="font-bold text-slate-900 border-b pb-3 mb-2 uppercase tracking-widest">Logic Protocol</h3>
-            <p><span class="text-red-500 font-bold">[1] AGAIN</span><br/>Reset. 1m queue.</p>
-            <p><span class="text-orange-500 font-bold">[2] HARD</span><br/>Gap. 6m queue.</p>
-            <p><span class="text-emerald-600 font-bold">[3] GOOD</span><br/>Step 1 (10m) -> Graduate.</p>
-            <p><span class="text-blue-500 font-bold">[4] EASY</span><br/>Instant sync.</p>
-            <div class="mt-4 pt-3 border-t text-center text-[9px] uppercase tracking-widest text-slate-400">Tap to close</div>
-        </div>
-    </div>
 
     <section id="screen-languages" class="hidden space-y-6 pt-8">
         <header class="text-center mb-8">
             <h1 class="text-[10px] tracking-[0.4em] text-slate-400 font-bold uppercase">System // Access</h1>
             <h2 class="text-xl font-light tracking-tighter text-slate-900 uppercase italic mt-1">Select Protocol</h2>
         </header>
-
         <button onclick="selectLanguage(state.activeCategory)" class="w-full lang-slot border-blue-500 shadow-lg shadow-blue-500/10 active">
             <div class="flex items-center gap-3">
                 <div class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></div>
@@ -142,24 +128,15 @@
             </div>
             <div class="text-[10px] font-mono text-slate-400">-></div>
         </button>
-
         <div class="grid grid-cols-2 gap-3">
             <div class="lang-slot offline"><span class="text-[9px] font-bold">French</span> <span>🔒</span></div>
             <div class="lang-slot offline"><span class="text-[9px] font-bold">German</span> <span>🔒</span></div>
             <div class="lang-slot offline"><span class="text-[9px] font-bold">Italian</span> <span>🔒</span></div>
             <div class="lang-slot offline"><span class="text-[9px] font-bold">Russian</span> <span>🔒</span></div>
-            <div class="lang-slot offline"><span class="text-[9px] font-bold">Japanese</span> <span>🔒</span></div>
-            <div class="lang-slot offline"><span class="text-[9px] font-bold">Chinese</span> <span>🔒</span></div>
-            <div class="lang-slot offline"><span class="text-[9px] font-bold">Arabic</span> <span>🔒</span></div>
-            <div class="lang-slot offline"><span class="text-[9px] font-bold">Korean</span> <span>🔒</span></div>
-        </div>
-        
-        <div class="text-center pt-8 opacity-30 text-[9px] uppercase tracking-widest">
-            Capacity: 1/10 Nodes Active
         </div>
     </section>
 
-    <section id="screen-topics" class="hidden pt-4 space-y-6">
+    <section id="screen-topics" class="hidden pt-4 space-y-8">
         <header class="flex items-center justify-between px-2">
             <button onclick="UI.show('languages')" class="text-slate-400 text-[10px] font-bold uppercase tracking-widest hover:text-slate-900">← Clock Out</button>
             <h2 class="text-[10px] font-bold text-slate-300 tracking-[0.3em] uppercase">Map</h2>
@@ -167,124 +144,121 @@
 
         <div class="flex flex-col items-center w-full px-1">
             
-            <div class="w-full max-w-[200px] relative">
-                <div class="text-[8px] font-bold text-slate-300 uppercase tracking-widest mb-1 text-center">Novice</div>
-                
-                <button onclick="selectTopic(state.activeTopic)" class="w-full p-4 module-block rounded-xl active mb-2 text-left pb-6">
-                    <div class="lock-icon">🔒</div>
-                    <span class="text-[10px] font-bold uppercase">Novice I</span>
-                    <span id="label-Novice" class="status-pill bg-blue-50 text-blue-600">--%</span>
+            <div class="w-full max-w-[180px] relative">
+                <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-2 text-center">Novice</div>
+                <button onclick="selectTopic(state.activeTopic)" class="w-full p-4 module-block rounded-xl active">
+                    <span class="text-[11px] font-bold uppercase text-slate-900">Novice I</span>
                     <div class="progress-rail"><div class="marker-70"></div><div id="bar-Novice" class="progress-fill"></div></div>
+                    <span id="label-Novice" class="status-text">--%</span>
                 </button>
-                
                 <div class="trunk-line"></div>
-                
-                <button id="gate-Nov2" class="w-full p-4 module-block rounded-xl locked text-left pb-6">
-                    <div class="lock-icon">🔒</div>
-                    <span class="text-[10px] font-bold uppercase">Novice II</span>
-                    <div class="progress-rail"><div class="marker-70"></div><div class="progress-fill"></div></div>
+                <button class="w-full p-4 module-block rounded-xl locked">
+                    <span class="text-[11px] font-bold uppercase text-slate-500">Novice II</span>
+                    <div class="absolute top-2 right-2 text-[10px]">🔒</div>
                 </button>
             </div>
 
             <div class="trunk-line h-8"></div>
 
-            <div class="w-full relative flex justify-center py-4">
-                <div class="horizontal-bus w-[80%]"></div>
+            <div class="w-full relative flex justify-center py-2 h-[180px]"> <div class="absolute top-[45px] left-[10%] right-[10%] border-t-2 border-dashed border-slate-300 z-0"></div>
 
-                <div class="standalone-chip" style="left: 0; top: 20%;">Restaurant</div>
-                
-                <div class="w-full max-w-[200px] relative z-10 bg-slate-50/0">
-                     <div class="text-[8px] font-bold text-slate-300 uppercase tracking-widest mb-1 text-center">Beginner</div>
-                    
-                    <button class="w-full p-4 module-block rounded-xl locked text-left pb-6">
-                        <div class="lock-icon">🔒</div>
-                        <span class="text-[10px] font-bold uppercase">Beginner I</span>
-                        <div class="progress-rail"><div class="marker-70"></div><div class="progress-fill"></div></div>
+                <div class="side-chip" style="left: 0; top: 35px;">Restaurant</div>
+                <div class="side-chip" style="right: 0; top: 35px;">Hospital</div>
+                <div class="side-chip" style="right: 0; top: 80px;">Hotel</div>
+
+                <div class="w-full max-w-[180px] relative z-10 flex flex-col items-center">
+                    <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-2 text-center bg-f8fafc px-2">Beginner</div>
+                    <button class="w-full p-4 module-block rounded-xl locked">
+                        <span class="text-[11px] font-bold uppercase text-slate-500">Beginner I</span>
+                        <div class="absolute top-2 right-2 text-[10px]">🔒</div>
                     </button>
-                    
                     <div class="trunk-line"></div>
-                    
-                    <button class="w-full p-4 module-block rounded-xl locked text-left pb-6">
-                        <div class="lock-icon">🔒</div>
-                        <span class="text-[10px] font-bold uppercase">Beginner II</span>
-                        <div class="progress-rail"><div class="marker-70"></div><div class="progress-fill"></div></div>
+                    <button class="w-full p-4 module-block rounded-xl locked">
+                        <span class="text-[11px] font-bold uppercase text-slate-500">Beginner II</span>
+                        <div class="absolute top-2 right-2 text-[10px]">🔒</div>
                     </button>
-                </div>
-                
-                <div class="standalone-chip" style="right: 0; top: 20%;">Hospital</div>
-                <div class="standalone-chip" style="right: 0; top: 60%;">Hotel</div>
-            </div>
-
-            <div class="trunk-line h-8"></div>
-
-            <div class="w-full grid grid-cols-3 gap-2 relative">
-                <div class="horizontal-bus top-12 left-10 right-10"></div>
-                <div class="vertical-bus left-1/6 height-full"></div>
-
-                <div class="mini-trunk pt-8">
-                    <div class="text-[8px] font-bold text-slate-400 uppercase">Family</div>
-                    <div class="w-[1px] h-4 bg-slate-300"></div>
-                    <div class="mini-block locked">Basics</div>
-                </div>
-
-                <div class="flex flex-col items-center relative z-10">
-                    <div class="text-[8px] font-bold text-slate-300 uppercase tracking-widest mb-1 text-center">Intermediate</div>
-                    
-                    <button class="w-full p-4 module-block rounded-xl locked text-left pb-6">
-                        <div class="lock-icon">🔒</div>
-                        <span class="text-[10px] font-bold uppercase">Intermed I</span>
-                        <div class="progress-rail"><div class="marker-70"></div><div class="progress-fill"></div></div>
-                    </button>
-                    
-                    <div class="trunk-line"></div>
-                    
-                    <button class="w-full p-4 module-block rounded-xl locked text-left pb-6">
-                        <div class="lock-icon">🔒</div>
-                        <span class="text-[10px] font-bold uppercase">Intermed II</span>
-                        <div class="progress-rail"><div class="marker-70"></div><div class="progress-fill"></div></div>
-                    </button>
-                </div>
-
-                <div class="mini-trunk pt-8">
-                    <div class="text-[8px] font-bold text-slate-400 uppercase">Travel</div>
-                    <div class="w-[1px] h-4 bg-slate-300"></div>
-                    <div class="mini-block locked">Airport</div>
                 </div>
             </div>
 
             <div class="trunk-line h-8"></div>
 
             <div class="w-full grid grid-cols-3 gap-2 relative">
-                <div class="horizontal-bus top-12 left-10 right-10"></div>
-
-                <div class="mini-trunk pt-8">
-                    <div class="text-[8px] font-bold text-slate-400 uppercase">Lit.</div>
-                    <div class="w-[1px] h-4 bg-slate-300"></div>
-                    <div class="mini-block locked">Prose</div>
+                <div class="horizontal-bus top-[50px] left-[15%] right-[15%]"></div>
+                
+                <div class="stack-container pt-8">
+                    <div class="text-[8px] font-bold text-slate-400 uppercase bg-[#f8fafc] px-1 z-10">Family</div>
+                    <div class="trunk-line h-4"></div>
+                    <div class="stack-block">Block 1</div>
+                    <div class="stack-connector"></div>
+                    <div class="stack-block">Block 2</div>
+                    <div class="stack-connector"></div>
+                    <div class="stack-block">Block 3</div>
                 </div>
 
-                <div class="flex flex-col items-center relative z-10">
-                    <div class="text-[8px] font-bold text-slate-300 uppercase tracking-widest mb-1 text-center">Advanced</div>
-                    
-                    <button class="w-full p-4 module-block rounded-xl locked text-left pb-6">
-                        <div class="lock-icon">🔒</div>
-                        <span class="text-[10px] font-bold uppercase">Advanced I</span>
-                        <div class="progress-rail"><div class="marker-70"></div><div class="progress-fill"></div></div>
+                <div class="flex flex-col items-center relative z-20">
+                    <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-2 text-center bg-[#f8fafc] px-2">Intermediate</div>
+                    <button class="w-full p-4 module-block rounded-xl locked">
+                        <span class="text-[11px] font-bold uppercase text-slate-500">Intermediate I</span>
+                        <div class="absolute top-2 right-2 text-[10px]">🔒</div>
                     </button>
-                    
                     <div class="trunk-line"></div>
-                    
-                    <button class="w-full p-4 module-block rounded-xl border-emerald-500 locked text-left pb-6">
-                        <div class="lock-icon">🔒</div>
-                        <span class="text-[10px] font-bold uppercase text-emerald-600">Advanced II</span>
-                        <div class="progress-rail"><div class="marker-70"></div><div class="progress-fill"></div></div>
+                    <button class="w-full p-4 module-block rounded-xl locked">
+                        <span class="text-[11px] font-bold uppercase text-slate-500">Intermediate II</span>
+                        <div class="absolute top-2 right-2 text-[10px]">🔒</div>
                     </button>
                 </div>
 
-                <div class="mini-trunk pt-8">
-                    <div class="text-[8px] font-bold text-slate-400 uppercase">Corp.</div>
-                    <div class="w-[1px] h-4 bg-slate-300"></div>
-                    <div class="mini-block locked">Email</div>
+                <div class="stack-container pt-8">
+                    <div class="text-[8px] font-bold text-slate-400 uppercase bg-[#f8fafc] px-1 z-10">Travel</div>
+                    <div class="trunk-line h-4"></div>
+                    <div class="stack-block">Block 1</div>
+                    <div class="stack-connector"></div>
+                    <div class="stack-block">Block 2</div>
+                    <div class="stack-connector"></div>
+                    <div class="stack-block">Block 3</div>
+                </div>
+            </div>
+
+            <div class="trunk-line h-8"></div>
+
+            <div class="w-full grid grid-cols-3 gap-2 relative">
+                <div class="horizontal-bus top-[50px] left-[15%] right-[15%]"></div>
+
+                <div class="stack-container pt-8">
+                    <div class="text-[8px] font-bold text-slate-400 uppercase bg-[#f8fafc] px-1 z-10">Literature</div>
+                    <div class="trunk-line h-4"></div>
+                    <div class="stack-block">Block 1</div>
+                    <div class="stack-connector"></div>
+                    <div class="stack-block">Block 2</div>
+                    <div class="stack-connector"></div>
+                    <div class="stack-block">Block 3</div>
+                    <div class="stack-connector"></div>
+                    <div class="stack-block">Block 4</div>
+                </div>
+
+                <div class="flex flex-col items-center relative z-20">
+                    <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-2 text-center bg-[#f8fafc] px-2">Advanced</div>
+                    <button class="w-full p-4 module-block rounded-xl locked">
+                        <span class="text-[11px] font-bold uppercase text-slate-500">Advanced I</span>
+                        <div class="absolute top-2 right-2 text-[10px]">🔒</div>
+                    </button>
+                    <div class="trunk-line"></div>
+                    <button class="w-full p-4 module-block rounded-xl border-emerald-500 locked">
+                        <span class="text-[11px] font-bold uppercase text-emerald-600">Advanced II</span>
+                        <div class="absolute top-2 right-2 text-[10px]">🔒</div>
+                    </button>
+                </div>
+
+                <div class="stack-container pt-8">
+                    <div class="text-[8px] font-bold text-slate-400 uppercase bg-[#f8fafc] px-1 z-10">Corporate</div>
+                    <div class="trunk-line h-4"></div>
+                    <div class="stack-block">Block 1</div>
+                    <div class="stack-connector"></div>
+                    <div class="stack-block">Block 2</div>
+                    <div class="stack-connector"></div>
+                    <div class="stack-block">Block 3</div>
+                    <div class="stack-connector"></div>
+                    <div class="stack-block">Block 4</div>
                 </div>
             </div>
         </div>
@@ -296,9 +270,7 @@
                 <h1 id="active-lang-display" class="text-[10px] tracking-[0.4em] text-blue-500 font-bold uppercase">SPANISH</h1>
                 <h2 id="active-topic-display" class="text-3xl font-light tracking-tighter text-slate-900 uppercase italic">_</h2>
             </div>
-            <button onclick="UI.show('settings')" class="text-2xl opacity-20 hover:opacity-100 transition-opacity">⚙️</button>
         </header>
-
         <div class="grid grid-cols-2 gap-3">
             <div class="glass-slab p-5 rounded-3xl">
                 <div class="text-[9px] text-slate-400 mb-1 uppercase font-bold tracking-widest">Unseen</div>
@@ -309,7 +281,6 @@
                 <div id="stat-grad" class="text-3xl font-medium text-emerald-500">0</div>
             </div>
         </div>
-        
         <button onclick="startSession()" class="w-full py-6 bg-slate-900 text-white rounded-2xl text-[11px] tracking-[0.3em] font-bold uppercase shadow-xl hover:bg-slate-800 transition-colors">Initialize Session</button>
         <button onclick="UI.show('topics')" class="w-full py-4 text-[10px] text-slate-400 font-bold uppercase tracking-widest underline decoration-slate-200">Return to Map</button>
     </section>
@@ -318,43 +289,19 @@
         <nav class="flex justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em] px-1 text-slate-400">
             <button onclick="UI.show('menu')" class="hover:text-slate-900">[ Abort ]</button>
             <div id="progress-text" class="text-slate-900 font-mono">00 // 00</div>
-            <button onclick="toggleInfo()" class="w-6 h-6 rounded-full border border-slate-300 hover:bg-slate-900 hover:text-white transition-colors">?</button>
         </nav>
-
         <div id="flashcard" onclick="flipCard()" class="glass-slab rounded-[40px] min-h-[420px] flex flex-col items-center justify-center p-8 cursor-pointer border border-slate-100 shadow-sm hover:shadow-md transition-all">
             <p id="text-target" class="text-4xl font-bold tracking-tight text-slate-900 leading-tight"></p>
             <div id="card-back" class="hidden mt-10 pt-10 border-t border-slate-100 w-full">
                 <p id="text-english" class="text-2xl text-slate-600 font-medium"></p>
             </div>
         </div>
-
         <div id="study-controls" class="hidden grid grid-cols-4 gap-2">
-            <button onclick="handleAnswer('again')" class="flex flex-col items-center group">
-                <span class="text-[9px] text-slate-400 font-bold mb-1 uppercase tracking-tighter">1m</span>
-                <div class="w-full py-5 bg-white border border-slate-200 rounded-2xl text-[10px] font-bold uppercase text-red-500 hover:bg-red-50 transition-colors">Again</div>
-                <span class="text-[8px] text-slate-300 mt-1">[1]</span>
-            </button>
-            <button onclick="handleAnswer('hard')" class="flex flex-col items-center group">
-                <span class="text-[9px] text-slate-400 font-bold mb-1 uppercase tracking-tighter">6m</span>
-                <div class="w-full py-5 bg-white border border-slate-200 rounded-2xl text-[10px] font-bold uppercase text-orange-500 hover:bg-orange-50 transition-colors">Hard</div>
-                <span class="text-[8px] text-slate-300 mt-1">[2]</span>
-            </button>
-            <button onclick="handleAnswer('good')" class="flex flex-col items-center group">
-                <span id="label-good" class="text-[9px] text-slate-400 font-bold mb-1 uppercase tracking-tighter">10m</span>
-                <div class="w-full py-5 bg-white border border-slate-200 rounded-2xl text-[10px] font-bold uppercase text-emerald-600 hover:bg-emerald-50 transition-colors">Good</div>
-                <span class="text-[8px] text-slate-300 mt-1">[3]</span>
-            </button>
-            <button onclick="handleAnswer('easy')" class="flex flex-col items-center group">
-                <span class="text-[9px] text-slate-400 font-bold mb-1 uppercase tracking-tighter">4d</span>
-                <div class="w-full py-5 bg-white border border-slate-200 rounded-2xl text-[10px] font-bold uppercase text-blue-600 hover:bg-blue-50 transition-colors">Easy</div>
-                <span class="text-[8px] text-slate-300 mt-1">[4]</span>
-            </button>
+            <button onclick="handleAnswer('again')" class="py-5 bg-white border border-slate-200 rounded-2xl text-[10px] font-bold uppercase text-red-500 hover:bg-red-50">Again</button>
+            <button onclick="handleAnswer('hard')" class="py-5 bg-white border border-slate-200 rounded-2xl text-[10px] font-bold uppercase text-orange-500 hover:bg-orange-50">Hard</button>
+            <button onclick="handleAnswer('good')" class="py-5 bg-white border border-slate-200 rounded-2xl text-[10px] font-bold uppercase text-emerald-600 hover:bg-emerald-50">Good</button>
+            <button onclick="handleAnswer('easy')" class="py-5 bg-white border border-slate-200 rounded-2xl text-[10px] font-bold uppercase text-blue-600 hover:bg-blue-50">Easy</button>
         </div>
-    </section>
-    
-    <section id="screen-settings" class="hidden space-y-8 pt-10 px-4">
-        <button onclick="UI.show('menu')" class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">← Return</button>
-        <button onclick="resetData()" class="w-full py-5 border border-red-200 text-red-500 rounded-2xl text-[11px] font-bold uppercase tracking-widest hover:bg-red-50">Purge Data</button>
     </section>
 
     <script>
@@ -383,8 +330,6 @@
             }
         });
 
-        function toggleInfo() { document.getElementById('info-panel').classList.toggle('hidden'); }
-
         async function initApp() {
             try {
                 const response = await fetch('deck.json');
@@ -393,8 +338,6 @@
                     ...card, id: card.target + card.english,
                     mastery: JSON.parse(localStorage.getItem('quest_progress') || '{}')[card.target + card.english] || 0
                 }));
-
-                // Auto-detect Spanish
                 if(state.deck.length > 0) {
                     state.activeCategory = state.deck[0].category;
                     state.activeTopic = state.deck[0].topic; 
@@ -405,20 +348,13 @@
         }
 
         function updateTreeProgress() {
-            // Calculate Novice I (Active)
             const currentDeck = state.deck.filter(c => c.topic === state.activeTopic);
             const mastered = currentDeck.filter(c => c.mastery === 2).length;
             const percent = currentDeck.length > 0 ? Math.round((mastered / currentDeck.length) * 100) : 0;
             
-            // Update Bar
             const bar = document.getElementById('bar-Novice');
             if(bar) bar.style.width = percent + '%';
             document.getElementById('label-Novice').innerText = percent + '%';
-            
-            // Unlock Next if > 70%
-            if(percent >= 70) {
-                document.getElementById('gate-Nov2').classList.remove('locked');
-            }
         }
 
         function selectLanguage(lang) { state.session.language = lang; UI.show('topics'); }
@@ -444,8 +380,6 @@
             
             state.session.queue = [...learning, ...newCards].map(c => ({...c, step: c.step || 0}));
             state.session.currentIndex = 0;
-            
-            if(state.session.queue.length === 0) return alert("Module synced.");
             UI.show('study'); renderCard();
         }
 
@@ -456,7 +390,6 @@
             document.getElementById('text-english').innerText = card.english;
             document.getElementById('card-back').classList.add('hidden');
             document.getElementById('study-controls').classList.add('hidden');
-            document.getElementById('label-good').innerText = (card.step === 1) ? "1d" : "10m";
         }
 
         function flipCard() {
@@ -467,35 +400,18 @@
 
         function handleAnswer(rating) {
             const card = state.session.queue[state.session.currentIndex];
-            if (rating === 'again') {
-                card.step = 0; card.mastery = 1;
-                state.session.queue.push(card); 
-            } 
-            else if (rating === 'hard') {
-                state.session.queue.splice(state.session.currentIndex + 5, 0, card);
-            }
+            if (rating === 'again') { card.step = 0; card.mastery = 1; state.session.queue.push(card); } 
+            else if (rating === 'hard') { state.session.queue.splice(state.session.currentIndex + 5, 0, card); }
             else if (rating === 'good') {
-                if (card.step === 0) {
-                    card.step = 1; card.mastery = 1;
-                    state.session.queue.splice(state.session.currentIndex + 10, 0, card);
-                } else {
-                    card.mastery = 2;
-                    saveCardProgress(card.id, 2);
-                }
+                if (card.step === 0) { card.step = 1; card.mastery = 1; state.session.queue.splice(state.session.currentIndex + 10, 0, card); } 
+                else { card.mastery = 2; saveCardProgress(card.id, 2); }
             } 
-            else if (rating === 'easy') {
-                card.mastery = 2;
-                saveCardProgress(card.id, 2);
-            }
+            else if (rating === 'easy') { card.mastery = 2; saveCardProgress(card.id, 2); }
 
             if(card.mastery === 1) saveCardProgress(card.id, 1);
             state.session.currentIndex++;
-            if (state.session.currentIndex >= state.session.queue.length) {
-                updateMenuStats();
-                UI.show('menu');
-            } else {
-                renderCard();
-            }
+            if (state.session.currentIndex >= state.session.queue.length) { updateMenuStats(); UI.show('menu'); } 
+            else { renderCard(); }
         }
 
         function saveCardProgress(id, level) {
@@ -505,8 +421,6 @@
             const deckCard = state.deck.find(c => c.id === id);
             if (deckCard) deckCard.mastery = level;
         }
-
-        function resetData() { localStorage.removeItem('quest_progress'); location.reload(); }
 
         initApp();
     </script>

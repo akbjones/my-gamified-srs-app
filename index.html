@@ -15,33 +15,30 @@
     <section id="screen-menu" class="hidden space-y-4">
         <div class="flex justify-between items-center mb-6">
             <div>
-                <h2 class="text-blue-400 text-sm font-bold uppercase tracking-widest text-left">SPANISH 🇪🇸</h2>
+                <h2 class="text-blue-400 text-sm font-bold uppercase tracking-widest text-left">QUEST 🇪🇸</h2>
                 <h3 class="text-2xl font-bold italic">Training Grounds</h3>
             </div>
             <button onclick="UI.show('settings')" class="text-2xl">⚙️</button>
         </div>
         
-        <div class="bg-slate-800/50 p-4 rounded-2xl border border-slate-700 mb-6">
-            <div class="flex justify-between text-xs font-bold text-slate-400 mb-2">
-                <span>DAILY LIMITS</span>
-                <span onclick="UI.show('settings')" class="text-blue-500 cursor-pointer">EDIT</span>
-            </div>
-            <div class="flex gap-4">
-                <div class="text-blue-500">NEW: <span id="menu-new-limit">20</span></div>
-                <div class="text-green-500">MAX: <span id="menu-rev-limit">200</span></div>
+        <div class="bg-slate-800/50 p-4 rounded-2xl border border-slate-700 mb-6 text-center">
+            <div class="text-[10px] font-bold text-slate-500 uppercase mb-1">Today's Progress</div>
+            <div class="flex justify-around">
+                <div><div id="stat-new" class="text-blue-500 font-bold text-xl">0</div><div class="text-[8px] text-slate-400">NEW</div></div>
+                <div><div id="stat-grad" class="text-green-500 font-bold text-xl">0</div><div class="text-[8px] text-slate-400">MASTERED</div></div>
             </div>
         </div>
 
         <div class="grid gap-4">
-            <button onclick="showTopics('Base Curriculum')" class="p-6 bg-slate-800 rounded-3xl border-b-4 border-green-600 text-left active:translate-y-1">
-                <div class="font-bold text-xl text-green-400">Base Curriculum</div>
-                <div class="text-xs text-slate-400 italic">Master the fundamentals</div>
+            <button onclick="startSession('Base Curriculum', 'Beginner')" class="p-6 bg-blue-600 rounded-3xl border-b-4 border-blue-900 text-left active:translate-y-1 shadow-lg shadow-blue-900/40">
+                <div class="font-bold text-xl">START DAILY SESSION</div>
+                <div class="text-xs opacity-80 italic">20 new cards + reviews</div>
             </button>
         </div>
     </section>
 
     <section id="screen-study" class="hidden space-y-6">
-        <div class="flex justify-between items-center px-1">
+        <div class="flex justify-between items-center">
             <button onclick="UI.show('menu')" class="text-slate-500 text-xs font-bold uppercase">Exit</button>
             <div id="progress-text" class="text-[10px] text-slate-500 font-mono">0 / 0</div>
         </div>
@@ -54,22 +51,10 @@
         </div>
         
         <div id="study-controls" class="hidden grid grid-cols-4 gap-2">
-            <div class="flex flex-col gap-1 text-center">
-                <span class="text-[9px] text-slate-500 font-bold uppercase">1m</span>
-                <button onclick="handleAnswer('again')" class="py-4 bg-red-900/30 text-red-400 rounded-xl font-bold border border-red-900/50 text-[10px]">AGAIN</button>
-            </div>
-            <div class="flex flex-col gap-1 text-center">
-                <span class="text-[9px] text-slate-500 font-bold uppercase">6m</span>
-                <button onclick="handleAnswer('hard')" class="py-4 bg-orange-900/30 text-orange-400 rounded-xl font-bold border border-orange-900/50 text-[10px]">HARD</button>
-            </div>
-            <div class="flex flex-col gap-1 text-center">
-                <span id="label-good" class="text-[9px] text-slate-500 font-bold uppercase">10m</span>
-                <button onclick="handleAnswer('good')" class="py-4 bg-green-900/30 text-green-400 rounded-xl font-bold border border-green-900/50 text-[10px]">GOOD</button>
-            </div>
-            <div class="flex flex-col gap-1 text-center">
-                <span class="text-[9px] text-slate-500 font-bold uppercase">4d</span>
-                <button onclick="handleAnswer('easy')" class="py-4 bg-blue-900/30 text-blue-400 rounded-xl font-bold border border-blue-900/50 text-[10px]">EASY</button>
-            </div>
+            <div class="text-center"><span class="text-[9px] text-slate-500 font-bold uppercase">1m</span><button onclick="handleAnswer('again')" class="w-full py-4 bg-red-900/30 text-red-400 rounded-xl font-bold border border-red-900/50 text-[10px]">AGAIN</button></div>
+            <div class="text-center"><span class="text-[9px] text-slate-500 font-bold uppercase">6m</span><button onclick="handleAnswer('hard')" class="w-full py-4 bg-orange-900/30 text-orange-400 rounded-xl font-bold border border-orange-900/50 text-[10px]">HARD</button></div>
+            <div class="text-center"><span id="label-good" class="text-[9px] text-slate-500 font-bold uppercase">10m</span><button onclick="handleAnswer('good')" class="w-full py-4 bg-green-900/30 text-green-400 rounded-xl font-bold border border-green-900/50 text-[10px]">GOOD</button></div>
+            <div class="text-center"><span class="text-[9px] text-slate-500 font-bold uppercase">4d</span><button onclick="handleAnswer('easy')" class="w-full py-4 bg-blue-900/30 text-blue-400 rounded-xl font-bold border border-blue-900/50 text-[10px]">EASY</button></div>
         </div>
 
         <div class="flex justify-center gap-8 text-xs font-bold pt-4 border-t border-slate-800">
@@ -79,130 +64,77 @@
         </div>
     </section>
 
-    <section id="screen-settings" class="hidden space-y-6">
-        <div class="flex items-center gap-4">
-            <button onclick="UI.show('menu')" class="text-slate-400 text-2xl">←</button>
-            <h2 class="text-xl font-bold">Session Settings</h2>
-        </div>
-        
-        <div class="space-y-4 bg-slate-800 p-6 rounded-3xl">
-            <div>
-                <label class="text-xs font-bold text-slate-400 block mb-2">NEW CARDS PER DAY</label>
-                <input type="number" id="set-new-limit" value="20" class="w-full bg-slate-900 p-3 rounded-xl border border-slate-700 outline-none focus:border-blue-500">
-            </div>
-            <div>
-                <label class="text-xs font-bold text-slate-400 block mb-2">MAX REVIEWS PER DAY</label>
-                <input type="number" id="set-rev-limit" value="200" class="w-full bg-slate-900 p-3 rounded-xl border border-slate-700 outline-none focus:border-blue-500">
-            </div>
-            <button onclick="saveSettings()" class="w-full p-4 bg-blue-600 rounded-2xl font-bold">SAVE SETTINGS</button>
+    <section id="screen-success" class="hidden text-center space-y-6">
+        <div class="text-6xl">🏆</div>
+        <h2 class="text-3xl font-black italic uppercase">Goal Hit</h2>
+        <div class="space-y-3">
+            <button onclick="addExtraCards()" class="w-full p-4 bg-slate-800 rounded-2xl font-bold border border-slate-700">+10 NEW CARDS</button>
+            <button onclick="UI.show('menu')" class="w-full p-4 bg-blue-600 rounded-2xl font-bold">CLOSE</button>
         </div>
     </section>
 
-    <section id="screen-success" class="hidden text-center space-y-6">
-        <div class="text-6xl">🏆</div>
-        <h2 class="text-3xl font-black italic">QUEST COMPLETE</h2>
-        <p class="text-slate-400">Daily goal achieved!</p>
-        <div class="space-y-3">
-            <button onclick="addExtraCards()" class="w-full p-4 bg-slate-800 rounded-2xl font-bold border border-slate-700">+10 EXTRA CARDS</button>
-            <button onclick="UI.show('menu')" class="w-full p-4 bg-blue-600 rounded-2xl font-bold">FINISH FOR TODAY</button>
-        </div>
+    <section id="screen-settings" class="hidden space-y-6">
+        <button onclick="UI.show('menu')" class="text-slate-400 text-2xl">← Settings</button>
+        <button onclick="resetData()" class="w-full p-4 bg-red-900/30 text-red-400 rounded-xl font-bold border border-red-900/50">WIPE ALL PROGRESS</button>
     </section>
 
     <script>
         let state = {
             deck: [],
             view: 'menu',
-            config: { newLimit: 20, revLimit: 200 },
-            session: { queue: [], currentIndex: 0, isFlipped: false, finishedCount: 0, activeTopic: null, activeCategory: null }
+            config: { newLimit: 20 },
+            session: { queue: [], currentIndex: 0, finishedCount: 0 }
         };
-
-        const topicMap = { "Base Curriculum": ["Beginner", "Intermediate", "Advanced"] };
-
-        async function initApp() {
-            try {
-                const response = await fetch('deck.json');
-                state.deck = await response.json();
-                loadConfig();
-                UI.show('menu');
-            } catch (e) { console.error("Load failed."); }
-        }
 
         const UI = {
             show: function(id) {
-                ['menu', 'study', 'settings', 'success', 'topics'].forEach(s => {
-                    const el = document.getElementById(`screen-${s}`);
-                    if(el) el.classList.add('hidden');
-                });
+                ['menu', 'study', 'settings', 'success'].forEach(s => document.getElementById(`screen-${s}`).classList.add('hidden'));
                 document.getElementById(`screen-${id}`).classList.remove('hidden');
-                state.view = id;
             }
         };
 
-        function loadConfig() {
-            const saved = localStorage.getItem('quest_config');
-            if(saved) state.config = JSON.parse(saved);
-            document.getElementById('menu-new-limit').innerText = state.config.newLimit;
-            document.getElementById('menu-rev-limit').innerText = state.config.revLimit;
-            document.getElementById('set-new-limit').value = state.config.newLimit;
-            document.getElementById('set-rev-limit').value = state.config.revLimit;
-        }
+        async function initApp() {
+            const response = await fetch('deck.json');
+            const baseDeck = await response.json();
+            
+            // LOAD PROGRESS FROM LOCALSTORAGE
+            const savedProgress = JSON.parse(localStorage.getItem('quest_progress') || '{}');
+            
+            state.deck = baseDeck.map(card => ({
+                ...card,
+                id: card.target + card.english, // Unique ID
+                mastery: savedProgress[card.target + card.english] || 0 // 0 = New, 1 = Learning, 2 = Mastered
+            }));
 
-        function saveSettings() {
-            state.config.newLimit = parseInt(document.getElementById('set-new-limit').value);
-            state.config.revLimit = parseInt(document.getElementById('set-rev-limit').value);
-            localStorage.setItem('quest_config', JSON.stringify(state.config));
-            loadConfig();
+            updateMenuStats();
             UI.show('menu');
         }
 
-        function showTopics(category) {
-            // Logic to show sub-topics omitted for brevity, calls startSession
-            startSession(category, "Beginner");
+        function updateMenuStats() {
+            document.getElementById('stat-new').innerText = state.deck.filter(c => c.mastery === 0).length;
+            document.getElementById('stat-grad').innerText = state.deck.filter(c => c.mastery === 2).length;
         }
 
-        /** UPDATED START SESSION WITH LIMITS **/
-        function startSession(category, topic) {
-            state.session.activeCategory = category;
-            state.session.activeTopic = topic;
-
-            let filtered = state.deck.filter(c => c.category === category && c.topic === topic);
+        function startSession() {
+            // 1. Get cards currently in "Learning" phase (priority)
+            let learning = state.deck.filter(c => c.mastery === 1);
             
-            // Limit to New Card daily limit
-            let limited = filtered.slice(0, state.config.newLimit);
+            // 2. Get "New" cards up to the daily limit
+            let newCards = state.deck.filter(c => c.mastery === 0).slice(0, state.config.newLimit);
 
-            // Initialize: step 0 means brand new
-            state.session.queue = limited.map(c => ({...c, type: 'new', step: 0}));
+            state.session.queue = [...learning, ...newCards].map(c => ({...c, step: 0, sessionType: c.mastery === 1 ? 'learning' : 'new'}));
             state.session.currentIndex = 0;
             state.session.finishedCount = 0;
+
+            if (state.session.queue.length === 0) return alert("No cards left to study!");
             
             UI.show('study');
             updateStatusBar();
             renderCard();
-        }
-
-        function addExtraCards() {
-            let filtered = state.deck.filter(c => c.category === state.session.activeCategory && c.topic === state.session.activeTopic);
-            let nextSet = filtered.slice(state.session.queue.length, state.session.queue.length + 10);
-            
-            if(nextSet.length === 0) return alert("No more cards in this deck!");
-
-            state.session.queue = [...state.session.queue, ...nextSet.map(c => ({...c, type: 'new', step: 0}))];
-            UI.show('study');
-            updateStatusBar();
-            renderCard();
-        }
-
-        function updateStatusBar() {
-            const currentQueue = state.session.queue.slice(state.session.currentIndex);
-            document.getElementById('count-new').innerText = currentQueue.filter(c => c.type === 'new').length;
-            document.getElementById('count-learn').innerText = currentQueue.filter(c => c.type === 'learning').length;
-            document.getElementById('count-done').innerText = state.session.finishedCount;
-            document.getElementById('progress-text').innerText = `${state.session.finishedCount} / ${state.session.queue.length}`;
         }
 
         function renderCard() {
             const card = state.session.queue[state.session.currentIndex];
-            state.session.isFlipped = false;
             document.getElementById('text-target').innerText = card.target;
             document.getElementById('text-english').innerText = card.english;
             document.getElementById('card-back').classList.add('hidden');
@@ -211,43 +143,39 @@
         }
 
         function flipCard() {
-            state.session.isFlipped = true;
             document.getElementById('card-back').classList.remove('hidden');
             document.getElementById('study-controls').classList.remove('hidden');
         }
 
-        /** THE 2-STEP ALGORITHM **/
         function handleAnswer(rating) {
             const card = state.session.queue[state.session.currentIndex];
 
             if (rating === 'again') {
                 card.step = 0;
-                card.type = 'learning';
-                state.session.queue.push({...card}); // Back to the very end
-            } 
-            else if (rating === 'hard') {
-                // Insert 3-4 cards away
-                state.session.queue.splice(state.session.currentIndex + 4, 0, {...card, type: 'learning'});
-            } 
-            else if (rating === 'good') {
+                card.mastery = 1; // Set to learning in master deck
+                state.session.queue.push({...card});
+            } else if (rating === 'good') {
                 if (card.step === 0) {
-                    // First time "Good" -> Move to Step 1 and re-insert
                     card.step = 1;
-                    card.type = 'learning';
-                    const pos = Math.min(state.session.currentIndex + 6, state.session.queue.length);
-                    state.session.queue.splice(pos, 0, {...card});
+                    card.mastery = 1;
+                    state.session.queue.splice(state.session.currentIndex + 5, 0, {...card});
                 } else {
-                    // Second time "Good" -> Graduation
+                    card.mastery = 2; // Mastered!
                     state.session.finishedCount++;
+                    saveCardProgress(card.id, 2);
                 }
-            } 
-            else if (rating === 'easy') {
+            } else if (rating === 'easy') {
+                card.mastery = 2;
                 state.session.finishedCount++;
+                saveCardProgress(card.id, 2);
             }
 
+            // Sync learning state if not mastered yet
+            if (card.mastery === 1) saveCardProgress(card.id, 1);
+
             state.session.currentIndex++;
-            
             if (state.session.currentIndex >= state.session.queue.length) {
+                updateMenuStats();
                 UI.show('success');
             } else {
                 updateStatusBar();
@@ -255,6 +183,24 @@
             }
         }
 
+        function saveCardProgress(id, level) {
+            const progress = JSON.parse(localStorage.getItem('quest_progress') || '{}');
+            progress[id] = level;
+            localStorage.setItem('quest_progress', JSON.stringify(progress));
+            // Also update the local state.deck so the menu updates
+            const deckCard = state.deck.find(c => c.id === id);
+            if (deckCard) deckCard.mastery = level;
+        }
+
+        function updateStatusBar() {
+            const current = state.session.queue.slice(state.session.currentIndex);
+            document.getElementById('count-new').innerText = current.filter(c => c.sessionType === 'new').length;
+            document.getElementById('count-learn').innerText = current.filter(c => c.sessionType === 'learning' || c.step > 0).length;
+            document.getElementById('count-done').innerText = state.session.finishedCount;
+        }
+
+        function resetData() { localStorage.removeItem('quest_progress'); location.reload(); }
+        
         initApp();
     </script>
 </body>

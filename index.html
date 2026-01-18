@@ -9,131 +9,231 @@
     <style>
         .hidden { display: none; }
         body { background-color: #f8fafc; color: #0f172a; font-family: 'JetBrains Mono', monospace; -webkit-font-smoothing: antialiased; }
-        .node-connector { width: 2px; background: #cbd5e1; height: 32px; margin: 0 auto; }
-        .node-block { border: 2px solid #e2e8f0; background: white; transition: all 0.2s; position: relative; }
-        .node-block.active { border-color: #0ea5e9; background: white; }
-        .node-block.locked { opacity: 0.4; background: #f1f5f9; cursor: not-allowed; border-style: dashed; }
-        .side-quest { width: 130px; font-size: 10px; padding: 10px; border-style: dashed; border-width: 1px; }
-        .branch-line { width: 20px; height: 2px; background: #cbd5e1; align-self: center; }
-        .glass-slab { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(12px); border: 1px solid #ffffff; }
-        .status-pill { font-size: 8px; padding: 2px 6px; border-radius: 99px; font-weight: bold; }
-        .btn-active:active { transform: scale(0.97); }
+        
+        /* --- NEURAL MAP ARCHITECTURE --- */
+        .trunk-line { width: 2px; background: #cbd5e1; height: 24px; margin: 0 auto; }
+        
+        /* Main Nodes */
+        .node-block { 
+            border: 2px solid #e2e8f0; 
+            background: white; 
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); 
+            position: relative; 
+            z-index: 10;
+        }
+        .node-block.active { border-color: #0ea5e9; box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.1); }
+        .node-block.locked { opacity: 0.5; background: #f1f5f9; border-style: dashed; cursor: not-allowed; }
+        .node-block:active { transform: scale(0.98); }
+
+        /* Side Branches (The Circuit Traces) */
+        .branch-container { position: relative; }
+        .circuit-trace { 
+            position: absolute; 
+            left: 50%; 
+            top: 50%; 
+            height: 2px; 
+            background: #cbd5e1; 
+            z-index: 0;
+            transform: translateY(-50%);
+        }
+        .side-node { 
+            font-size: 9px; 
+            padding: 8px 12px; 
+            border: 1px dashed #cbd5e1; 
+            border-radius: 8px; 
+            background: #f8fafc; 
+            color: #64748b;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* UI Elements */
+        .glass-slab { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); border: 1px solid #ffffff; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+        .status-pill { font-size: 8px; padding: 2px 6px; border-radius: 4px; font-weight: bold; letter-spacing: 0.05em; }
+        #info-panel { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(4px); }
     </style>
 </head>
-<body class="p-6 max-w-sm mx-auto min-h-screen pb-24">
+<body class="p-4 max-w-sm mx-auto min-h-screen pb-24">
 
-    <section id="screen-languages" class="hidden space-y-8 pt-10 text-center">
-        <h1 class="text-[10px] tracking-[0.4em] text-blue-500 font-bold uppercase">System // Root</h1>
-        <button onclick="selectLanguage(state.activeCategory)" class="w-full p-10 node-block rounded-3xl btn-active border-2 border-blue-500">
-            <div class="text-[9px] text-blue-500 font-bold mb-1 uppercase">[ Signal_Detected ]</div>
-            <div id="lang-node-label" class="text-xl font-bold uppercase tracking-widest italic">Scanning...</div>
+    <div id="info-panel" onclick="toggleInfo()" class="hidden fixed inset-0 z-50 flex items-center justify-center p-8 transition-opacity">
+        <div class="bg-white p-8 rounded-2xl text-[11px] leading-7 text-slate-600 shadow-2xl w-full border border-slate-100">
+            <h3 class="font-bold text-slate-900 border-b pb-3 mb-2 uppercase tracking-widest">SRS Algorithm v2.1</h3>
+            <p><span class="text-red-500 font-bold">[1] AGAIN</span><br/>Reset retention. Re-queue (1m).</p>
+            <p><span class="text-orange-500 font-bold">[2] HARD</span><br/>Memory lapse. Re-queue (6m).</p>
+            <p><span class="text-emerald-600 font-bold">[3] GOOD</span><br/>Learning step. <br/>Step 1: 10m <span class="text-slate-300">→</span> Step 2: Graduate.</p>
+            <p><span class="text-blue-500 font-bold">[4] EASY</span><br/>Instant graduation.</p>
+            <div class="mt-4 pt-3 border-t text-center text-[9px] uppercase tracking-widest text-slate-400">Tap to close</div>
+        </div>
+    </div>
+
+    <section id="screen-languages" class="hidden space-y-8 pt-12 text-center">
+        <h1 class="text-[10px] tracking-[0.4em] text-slate-400 font-bold uppercase">System // Root</h1>
+        <button onclick="selectLanguage(state.activeCategory)" class="w-full py-12 node-block rounded-[32px] border-blue-500 shadow-lg shadow-blue-500/5">
+            <div class="text-[9px] text-blue-500 font-bold mb-2 uppercase tracking-widest">[ Signal_Found ]</div>
+            <div id="lang-node-label" class="text-2xl font-bold uppercase tracking-widest text-slate-900 italic">Scanning...</div>
         </button>
+        <div class="text-[9px] text-slate-300 uppercase tracking-widest mt-8">v.2.0.4 // Ready</div>
     </section>
 
-    <section id="screen-topics" class="hidden space-y-2 pt-4">
-        <header class="flex items-center justify-between mb-8">
-            <button onclick="UI.show('languages')" class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">← Root</button>
-            <h2 class="text-[10px] font-bold text-slate-400 tracking-[0.3em] uppercase">Neural_Map</h2>
+    <section id="screen-topics" class="hidden pt-4 space-y-6">
+        <header class="flex items-center justify-between px-2">
+            <button onclick="UI.show('languages')" class="text-slate-400 text-[10px] font-bold uppercase tracking-widest hover:text-slate-900">← Disconnect</button>
+            <h2 class="text-[10px] font-bold text-slate-300 tracking-[0.3em] uppercase">Neural_Map</h2>
         </header>
 
-        <div class="flex flex-col items-center">
-            <div class="w-full">
-                <button onclick="selectTopic(state.activeTopic)" class="w-full p-5 node-block rounded-2xl active btn-active">
-                    <div class="text-[10px] font-bold text-left uppercase">01 // Beginner Phase</div>
-                    <div id="prog-Beginner" class="status-pill bg-blue-100 text-blue-600 mt-2 inline-block">CALCULATING...</div>
+        <div class="flex flex-col items-center w-full px-2">
+            
+            <div class="w-full relative">
+                <div class="absolute -left-3 top-0 bottom-0 border-l-2 border-slate-100"></div>
+                <div class="text-[9px] font-bold text-slate-300 uppercase tracking-widest mb-2 ml-2">Phase 01</div>
+                
+                <button onclick="selectTopic(state.activeTopic)" class="w-full p-4 node-block rounded-xl active mb-2 text-left">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] font-bold uppercase">01 // Alpha Node</span>
+                        <span id="prog-Beginner" class="status-pill bg-blue-50 text-blue-600">SYNCING</span>
+                    </div>
                 </button>
-                <div class="node-connector"></div>
-                <button id="gate-Step2" class="w-full p-5 node-block rounded-2xl locked btn-active">
-                    <div class="text-[10px] font-bold text-left uppercase">02 // Beta Phase</div>
-                    <div class="status-pill bg-slate-200 text-slate-500 mt-2 inline-block">LOCKED</div>
+                
+                <div class="trunk-line"></div>
+                
+                <button id="gate-Step2" class="w-full p-4 node-block rounded-xl locked text-left">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[10px] font-bold uppercase">02 // Beta Node</span>
+                        <span class="status-pill bg-slate-100 text-slate-400">LOCKED</span>
+                    </div>
                 </button>
             </div>
 
-            <div class="node-connector"></div>
+            <div class="trunk-line h-8"></div>
 
-            <div class="w-full flex items-start gap-2">
-                <div class="flex-grow">
-                    <div class="w-full p-5 node-block rounded-2xl locked">03 // Int Alpha</div>
-                    <div class="node-connector"></div>
-                    <div class="w-full p-5 node-block rounded-2xl locked">04 // Int Beta</div>
-                </div>
-                <div class="flex flex-col pt-4 gap-4">
-                    <div class="flex items-center"><div class="branch-line"></div><div class="node-block side-quest rounded-xl text-slate-400 font-bold uppercase">Restaurant</div></div>
-                    <div class="flex items-center"><div class="branch-line"></div><div class="node-block side-quest rounded-xl text-slate-400 font-bold uppercase text-[8px]">Hospital</div></div>
-                </div>
-            </div>
+            <div class="w-full relative">
+                <div class="absolute -left-3 top-0 bottom-0 border-l-2 border-slate-100"></div>
+                <div class="text-[9px] font-bold text-slate-300 uppercase tracking-widest mb-2 ml-2">Phase 02</div>
 
-            <div class="node-connector"></div>
-
-            <div class="w-full flex items-start gap-2">
-                <div class="flex-grow">
-                    <div class="w-full p-5 node-block rounded-2xl locked">05 // Adv Alpha</div>
-                    <div class="node-connector"></div>
-                    <div class="w-full p-5 node-block rounded-2xl locked">06 // Adv Beta</div>
-                </div>
-                <div class="flex flex-col pt-4 gap-4">
-                    <div class="flex items-center">
-                        <div class="branch-line"></div>
-                        <div class="flex flex-col gap-1">
-                            <div class="node-block side-quest rounded-xl p-2 text-slate-400 font-bold uppercase">Family</div>
-                            <div class="w-px h-2 bg-slate-300 ml-4"></div>
-                            <div class="node-block side-quest rounded-xl p-2 text-slate-400 font-bold uppercase">Travel</div>
-                        </div>
+                <div class="flex w-full items-center gap-4">
+                    <div class="w-2/3 flex flex-col items-center">
+                        <button class="w-full p-4 node-block rounded-xl locked text-left"><span class="text-[10px] font-bold uppercase">03 // Int Alpha</span></button>
+                        <div class="trunk-line"></div>
+                        <button class="w-full p-4 node-block rounded-xl locked text-left"><span class="text-[10px] font-bold uppercase">04 // Int Beta</span></button>
+                    </div>
+                    
+                    <div class="w-1/3 flex flex-col gap-3 relative">
+                        <div class="absolute top-1/2 -left-4 w-4 h-[2px] bg-slate-200"></div>
+                        
+                        <div class="side-node text-center">Restaurant</div>
+                        <div class="side-node text-center">Hospital</div>
                     </div>
                 </div>
             </div>
 
-            <div class="node-connector"></div>
+            <div class="trunk-line h-8"></div>
 
-            <div class="w-full grid grid-cols-3 items-center gap-1">
-                <div class="node-block rounded-xl p-3 text-[8px] font-bold uppercase text-center locked">Literature</div>
-                <div class="w-full p-5 node-block rounded-2xl border-emerald-500 locked uppercase text-[9px] font-bold text-center">Final</div>
-                <div class="node-block rounded-xl p-3 text-[8px] font-bold uppercase text-center locked">Corporate</div>
+            <div class="w-full relative">
+                <div class="absolute -left-3 top-0 bottom-0 border-l-2 border-slate-100"></div>
+                <div class="text-[9px] font-bold text-slate-300 uppercase tracking-widest mb-2 ml-2">Phase 03</div>
+
+                <div class="flex w-full items-center gap-4">
+                    <div class="w-2/3 flex flex-col items-center">
+                        <button class="w-full p-4 node-block rounded-xl locked text-left"><span class="text-[10px] font-bold uppercase">05 // Adv Alpha</span></button>
+                        <div class="trunk-line"></div>
+                        <button class="w-full p-4 node-block rounded-xl locked text-left"><span class="text-[10px] font-bold uppercase">06 // Adv Beta</span></button>
+                    </div>
+                    
+                    <div class="w-1/3 flex flex-col gap-2 relative">
+                        <div class="absolute top-8 -left-4 w-4 h-[2px] bg-slate-200"></div>
+                        <div class="side-node text-center">Family</div>
+                        <div class="w-[1px] h-2 bg-slate-200 mx-auto"></div>
+                        <div class="side-node text-center">Travel</div>
+                    </div>
+                </div>
             </div>
+
+            <div class="trunk-line h-8"></div>
+
+            <div class="w-full grid grid-cols-3 gap-2 items-center">
+                <div class="side-node text-center locked">Literature</div>
+                <div class="flex flex-col items-center">
+                    <button class="w-full p-5 node-block rounded-2xl border-emerald-500 locked">
+                        <div class="text-[9px] font-bold uppercase text-center text-emerald-600">Mastery</div>
+                    </button>
+                </div>
+                <div class="side-node text-center locked">Corporate</div>
+            </div>
+
         </div>
     </section>
 
-    <section id="screen-menu" class="hidden space-y-10 pt-10">
-        <header class="text-left space-y-1">
-            <h1 id="active-lang-display" class="text-[10px] tracking-[0.4em] text-blue-600 font-bold uppercase text-left">MODULE</h1>
-            <h2 id="active-topic-display" class="text-3xl font-light tracking-tighter text-slate-900 uppercase italic text-left">_</h2>
-        </header>
-        <div class="grid grid-cols-2 gap-4">
-            <div class="glass-slab p-6 rounded-[32px] border border-slate-200">
-                <div class="text-[9px] text-slate-400 mb-1 uppercase font-bold tracking-widest text-left">Unseen</div>
-                <div id="stat-new" class="text-3xl font-medium text-left">0</div>
+    <section id="screen-menu" class="hidden space-y-8 pt-10">
+        <header class="flex justify-between items-start">
+            <div class="space-y-1">
+                <h1 id="active-lang-display" class="text-[10px] tracking-[0.4em] text-blue-500 font-bold uppercase">SPANISH</h1>
+                <h2 id="active-topic-display" class="text-3xl font-light tracking-tighter text-slate-900 uppercase italic">_</h2>
             </div>
-            <div class="glass-slab p-6 rounded-[32px] border border-emerald-100">
-                <div class="text-[9px] text-emerald-600 mb-1 uppercase font-bold tracking-widest text-left">Synced</div>
-                <div id="stat-grad" class="text-3xl font-medium text-emerald-600 text-left">0</div>
+            <button onclick="UI.show('settings')" class="text-2xl opacity-20 hover:opacity-100 transition-opacity">⚙️</button>
+        </header>
+
+        <div class="grid grid-cols-2 gap-3">
+            <div class="glass-slab p-5 rounded-3xl">
+                <div class="text-[9px] text-slate-400 mb-1 uppercase font-bold tracking-widest">Unseen</div>
+                <div id="stat-new" class="text-3xl font-medium text-slate-700">0</div>
+            </div>
+            <div class="glass-slab p-5 rounded-3xl">
+                <div class="text-[9px] text-emerald-600 mb-1 uppercase font-bold tracking-widest">Synced</div>
+                <div id="stat-grad" class="text-3xl font-medium text-emerald-500">0</div>
             </div>
         </div>
-        <button onclick="startSession()" class="w-full py-7 bg-black text-white rounded-full text-[12px] tracking-[0.4em] font-bold btn-active uppercase shadow-xl">Initialize_Calibration</button>
+        
+        <button onclick="startSession()" class="w-full py-6 bg-slate-900 text-white rounded-2xl text-[11px] tracking-[0.3em] font-bold uppercase shadow-xl hover:bg-slate-800 transition-colors">Initialize Session</button>
+        <button onclick="UI.show('topics')" class="w-full py-4 text-[10px] text-slate-400 font-bold uppercase tracking-widest underline decoration-slate-200">Return to Map</button>
     </section>
 
     <section id="screen-study" class="hidden flex-grow flex flex-col justify-between py-4 text-center">
         <nav class="flex justify-between items-center text-[10px] font-bold uppercase tracking-[0.2em] px-1 text-slate-400">
-            <button onclick="UI.show('menu')">[ Abort ]</button>
+            <button onclick="UI.show('menu')" class="hover:text-slate-900">[ Abort ]</button>
             <div id="progress-text" class="text-slate-900 font-mono">00 // 00</div>
+            <button onclick="toggleInfo()" class="w-6 h-6 rounded-full border border-slate-300 hover:bg-slate-900 hover:text-white transition-colors">?</button>
         </nav>
-        <div id="flashcard" onclick="flipCard()" class="glass-slab rounded-[48px] min-h-[440px] border-2 border-slate-200 flex flex-col items-center justify-center p-10 cursor-pointer">
+
+        <div id="flashcard" onclick="flipCard()" class="glass-slab rounded-[40px] min-h-[420px] flex flex-col items-center justify-center p-8 cursor-pointer border border-slate-100 shadow-sm hover:shadow-md transition-all">
             <p id="text-target" class="text-4xl font-bold tracking-tight text-slate-900 leading-tight"></p>
             <div id="card-back" class="hidden mt-10 pt-10 border-t border-slate-100 w-full">
-                <p id="text-english" class="text-2xl text-slate-700 font-medium"></p>
+                <p id="text-english" class="text-2xl text-slate-600 font-medium"></p>
             </div>
         </div>
+
         <div id="study-controls" class="hidden grid grid-cols-4 gap-2">
-            <button onclick="handleAnswer('again')" class="py-5 bg-white border border-slate-200 rounded-2xl text-[10px] font-bold uppercase text-red-500 btn-active">Again</button>
-            <button onclick="handleAnswer('hard')" class="py-5 bg-white border border-slate-200 rounded-2xl text-[10px] font-bold uppercase text-orange-500 btn-active">Hard</button>
-            <button onclick="handleAnswer('good')" class="py-5 bg-white border border-slate-200 rounded-2xl text-[10px] font-bold uppercase text-emerald-600 btn-active">Good</button>
-            <button onclick="handleAnswer('easy')" class="py-5 bg-white border border-slate-200 rounded-2xl text-[10px] font-bold uppercase text-blue-500 btn-active">Easy</button>
+            <button onclick="handleAnswer('again')" class="flex flex-col items-center group">
+                <span class="text-[9px] text-slate-400 font-bold mb-1 uppercase tracking-tighter">1m</span>
+                <div class="w-full py-5 bg-white border border-slate-200 rounded-2xl text-[10px] font-bold uppercase text-red-500 hover:bg-red-50 transition-colors">Again</div>
+                <span class="text-[8px] text-slate-300 mt-1">[1]</span>
+            </button>
+            <button onclick="handleAnswer('hard')" class="flex flex-col items-center group">
+                <span class="text-[9px] text-slate-400 font-bold mb-1 uppercase tracking-tighter">6m</span>
+                <div class="w-full py-5 bg-white border border-slate-200 rounded-2xl text-[10px] font-bold uppercase text-orange-500 hover:bg-orange-50 transition-colors">Hard</div>
+                <span class="text-[8px] text-slate-300 mt-1">[2]</span>
+            </button>
+            <button onclick="handleAnswer('good')" class="flex flex-col items-center group">
+                <span id="label-good" class="text-[9px] text-slate-400 font-bold mb-1 uppercase tracking-tighter">10m</span>
+                <div class="w-full py-5 bg-white border border-slate-200 rounded-2xl text-[10px] font-bold uppercase text-emerald-600 hover:bg-emerald-50 transition-colors">Good</div>
+                <span class="text-[8px] text-slate-300 mt-1">[3]</span>
+            </button>
+            <button onclick="handleAnswer('easy')" class="flex flex-col items-center group">
+                <span class="text-[9px] text-slate-400 font-bold mb-1 uppercase tracking-tighter">4d</span>
+                <div class="w-full py-5 bg-white border border-slate-200 rounded-2xl text-[10px] font-bold uppercase text-blue-600 hover:bg-blue-50 transition-colors">Easy</div>
+                <span class="text-[8px] text-slate-300 mt-1">[4]</span>
+            </button>
         </div>
+    </section>
+    
+    <section id="screen-settings" class="hidden space-y-8 pt-10 px-4">
+        <button onclick="UI.show('menu')" class="text-slate-400 text-[10px] font-bold uppercase tracking-widest">← Return</button>
+        <button onclick="resetData()" class="w-full py-5 border border-red-200 text-red-500 rounded-2xl text-[11px] font-bold uppercase tracking-widest hover:bg-red-50">Purge Data</button>
     </section>
 
     <script>
         let state = {
-            deck: [], view: 'languages', activeCategory: '', activeTopic: '', config: { newLimit: 20 },
-            session: { queue: [], currentIndex: 0, finishedCount: 0, isFlipped: false, language: '', topic: '' }
+            deck: [], view: 'languages', activeCategory: '', activeTopic: '', 
+            session: { queue: [], currentIndex: 0, finishedCount: 0, isFlipped: false }
         };
 
         const UI = {
@@ -145,6 +245,23 @@
             }
         };
 
+        // KEYBOARD SHORTCUTS
+        window.addEventListener('keydown', (e) => {
+            if (state.view !== 'study') return;
+            if (e.code === 'Space' && !state.session.isFlipped) { e.preventDefault(); flipCard(); }
+            if (state.session.isFlipped) {
+                if (e.key === '1') handleAnswer('again');
+                if (e.key === '2') handleAnswer('hard');
+                if (e.key === '3') handleAnswer('good');
+                if (e.key === '4') handleAnswer('easy');
+            }
+        });
+
+        function toggleInfo() { 
+            const el = document.getElementById('info-panel');
+            el.classList.toggle('hidden'); 
+        }
+
         async function initApp() {
             try {
                 const response = await fetch('deck.json');
@@ -154,17 +271,19 @@
                     mastery: JSON.parse(localStorage.getItem('quest_progress') || '{}')[card.target + card.english] || 0
                 }));
 
-                // Auto-detect Category (e.g. Spanish) and Topic (e.g. Beginner)
+                // Auto-detect Spanish (First Category found)
                 if(state.deck.length > 0) {
                     state.activeCategory = state.deck[0].category;
-                    state.activeTopic = state.deck[0].topic;
-                    document.getElementById('lang-node-label').innerText = state.activeCategory + ' Node';
+                    // Auto-map the first topic found (e.g. Beginner) to the Tree logic
+                    state.activeTopic = state.deck[0].topic; 
+                    document.getElementById('lang-node-label').innerText = state.activeCategory + '_Node';
                 }
                 UI.show('languages');
-            } catch (e) { console.error("Data connection failure."); }
+            } catch (e) { console.error("Data Sync Error"); }
         }
 
         function updateTreeProgress() {
+            // Logic to calculate progress for the active topic (Beginner)
             const currentDeck = state.deck.filter(c => c.topic === state.activeTopic);
             const mastered = currentDeck.filter(c => c.mastery === 2).length;
             const percent = currentDeck.length > 0 ? Math.round((mastered / currentDeck.length) * 100) : 0;
@@ -172,15 +291,23 @@
             const label = document.getElementById('prog-Beginner');
             if(label) label.innerText = `${percent}% SYNCED`;
             
-            // Logic to unlock next phase based on 70% threshold
+            // Unlock next node if > 70%
             if(percent >= 70) document.getElementById('gate-Step2').classList.remove('locked');
         }
 
-        function selectLanguage(lang) { state.session.language = lang; UI.show('topics'); }
+        function selectLanguage(lang) { 
+            state.session.language = lang; 
+            UI.show('topics'); 
+        }
+        
         function selectTopic(topic) { 
-            state.session.topic = topic; 
-            document.getElementById('active-lang-display').innerText = state.session.language.toUpperCase();
+            // Here we use state.activeTopic to ensure it links to your actual JSON topic
+            // regardless of what the button text says (Alpha Node etc)
+            state.session.topic = state.activeTopic; 
+            
+            document.getElementById('active-lang-display').innerText = state.activeCategory.toUpperCase();
             document.getElementById('active-topic-display').innerText = topic + '_';
+            
             updateMenuStats();
             UI.show('menu'); 
         }
@@ -195,8 +322,12 @@
             let filtered = state.deck.filter(c => c.topic === state.session.topic);
             let learning = filtered.filter(c => c.mastery === 1);
             let newCards = filtered.filter(c => c.mastery === 0).slice(0, 20);
-            state.session.queue = [...learning, ...newCards].map(c => ({...c, step: 0}));
-            state.session.currentIndex = 0; state.session.finishedCount = 0;
+            
+            // Initialize steps for SRS
+            state.session.queue = [...learning, ...newCards].map(c => ({...c, step: c.step || 0}));
+            state.session.currentIndex = 0;
+            
+            if(state.session.queue.length === 0) return alert("Node Synced. No cards due.");
             UI.show('study'); renderCard();
         }
 
@@ -207,6 +338,9 @@
             document.getElementById('text-english').innerText = card.english;
             document.getElementById('card-back').classList.add('hidden');
             document.getElementById('study-controls').classList.add('hidden');
+            
+            // Update Good Label based on step
+            document.getElementById('label-good').innerText = (card.step === 1) ? "1d" : "10m";
         }
 
         function flipCard() {
@@ -215,18 +349,62 @@
             document.getElementById('study-controls').classList.remove('hidden');
         }
 
+        /* --- SRS ALGORITHM v2.1 --- */
         function handleAnswer(rating) {
             const card = state.session.queue[state.session.currentIndex];
-            if (rating === 'good' || rating === 'easy') {
-                card.mastery = 2;
-                const progress = JSON.parse(localStorage.getItem('quest_progress') || '{}');
-                progress[card.id] = 2;
-                localStorage.setItem('quest_progress', JSON.stringify(progress));
+            
+            if (rating === 'again') {
+                card.step = 0; 
+                card.mastery = 1;
+                state.session.queue.push(card); // Re-queue at end
+            } 
+            else if (rating === 'hard') {
+                // Keep current step, push 5 cards back
+                state.session.queue.splice(state.session.currentIndex + 5, 0, card);
             }
+            else if (rating === 'good') {
+                if (card.step === 0) {
+                    card.step = 1; 
+                    card.mastery = 1;
+                    // Push 10 cards back (10m interval)
+                    state.session.queue.splice(state.session.currentIndex + 10, 0, card);
+                } else {
+                    // Graduate
+                    card.mastery = 2;
+                    saveCardProgress(card.id, 2);
+                }
+            } 
+            else if (rating === 'easy') {
+                card.mastery = 2;
+                saveCardProgress(card.id, 2);
+            }
+
+            // Save learning status if not graduated
+            if(card.mastery === 1) saveCardProgress(card.id, 1);
+
             state.session.currentIndex++;
-            if (state.session.currentIndex >= state.session.queue.length) UI.show('menu');
-            else renderCard();
+            
+            // Check if session done
+            if (state.session.currentIndex >= state.session.queue.length) {
+                // Go back to Menu instead of Success screen for flow
+                updateMenuStats();
+                UI.show('menu');
+            } else {
+                renderCard();
+            }
         }
+
+        function saveCardProgress(id, level) {
+            const progress = JSON.parse(localStorage.getItem('quest_progress') || '{}');
+            progress[id] = level;
+            localStorage.setItem('quest_progress', JSON.stringify(progress));
+            
+            // Update local deck state
+            const deckCard = state.deck.find(c => c.id === id);
+            if (deckCard) deckCard.mastery = level;
+        }
+
+        function resetData() { localStorage.removeItem('quest_progress'); location.reload(); }
 
         initApp();
     </script>

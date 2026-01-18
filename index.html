@@ -3,91 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Language Quest</title>
+    <title>QUEST // LAB</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <style>
         .hidden { display: none; }
-        body { background-color: #0f172a; color: white; font-family: sans-serif; }
+        body { 
+            background-color: #000000; 
+            color: #ffffff; 
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .mono { font-family: 'JetBrains Mono', monospace; }
+        .glass { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .btn-active:active { transform: scale(0.98); opacity: 0.8; }
+        .scanner-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #00f2ff, transparent);
+            animation: scan 3s linear infinite;
+        }
+        @keyframes scan {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(350px); }
+        }
     </style>
 </head>
-<body class="p-6 max-w-md mx-auto min-h-screen flex flex-col justify-center">
+<body class="p-8 max-w-sm mx-auto min-h-screen flex flex-col justify-between">
 
-    <section id="screen-menu" class="hidden space-y-4">
-        <div class="flex justify-between items-center mb-6">
-            <div>
-                <h2 class="text-blue-400 text-sm font-bold uppercase tracking-widest text-left">QUEST 🇪🇸</h2>
-                <h3 class="text-2xl font-bold italic">Training Grounds</h3>
-            </div>
-            <button onclick="UI.show('settings')" class="text-2xl">⚙️</button>
-        </div>
+    <section id="screen-menu" class="hidden space-y-12 pt-12">
+        <header class="space-y-1">
+            <h1 class="text-xs tracking-[0.4em] text-cyan-500 font-bold uppercase">Neural // Interface</h1>
+            <h2 class="text-3xl font-light tracking-tighter">Quest <span class="text-cyan-500">.</span></h2>
+        </header>
         
-        <div class="bg-slate-800/50 p-4 rounded-2xl border border-slate-700 mb-6 text-center">
-            <div class="text-[10px] font-bold text-slate-500 uppercase mb-1">Today's Progress</div>
-            <div class="flex justify-around">
-                <div><div id="stat-new" class="text-blue-500 font-bold text-xl">0</div><div class="text-[8px] text-slate-400">NEW</div></div>
-                <div><div id="stat-grad" class="text-green-500 font-bold text-xl">0</div><div class="text-[8px] text-slate-400">MASTERED</div></div>
+        <div class="space-y-8">
+            <div class="grid grid-cols-2 gap-4">
+                <div class="glass p-4 rounded-sm">
+                    <div class="text-[10px] text-slate-500 mono mb-1">UNSEEN_NODES</div>
+                    <div id="stat-new" class="text-2xl font-light">0</div>
+                </div>
+                <div class="glass p-4 rounded-sm">
+                    <div class="text-[10px] text-slate-500 mono mb-1">SYNCED_DATA</div>
+                    <div id="stat-grad" class="text-2xl font-light">0</div>
+                </div>
             </div>
-        </div>
 
-        <div class="grid gap-4">
-            <button onclick="startSession('Base Curriculum', 'Beginner')" class="p-6 bg-blue-600 rounded-3xl border-b-4 border-blue-900 text-left active:translate-y-1 shadow-lg shadow-blue-900/40">
-                <div class="font-bold text-xl">START DAILY SESSION</div>
-                <div class="text-xs opacity-80 italic">20 new cards + reviews</div>
+            <button onclick="startSession()" class="w-full py-6 glass rounded-full text-xs tracking-[0.3em] font-bold hover:bg-white hover:text-black transition-all btn-active uppercase">
+                Initialize Session
             </button>
         </div>
+
+        <footer class="pt-20">
+            <button onclick="UI.show('settings')" class="text-[10px] text-slate-600 mono tracking-widest uppercase hover:text-cyan-500 transition-colors">System Settings —></button>
+        </footer>
     </section>
 
-    <section id="screen-study" class="hidden space-y-6">
-        <div class="flex justify-between items-center">
-            <button onclick="UI.show('menu')" class="text-slate-500 text-xs font-bold uppercase">Exit</button>
-            <div id="progress-text" class="text-[10px] text-slate-500 font-mono">0 / 0</div>
-        </div>
+    <section id="screen-study" class="hidden flex-grow flex flex-col justify-between py-12">
+        <nav class="flex justify-between items-center mono text-[9px] text-slate-500 tracking-tighter">
+            <button onclick="UI.show('menu')" class="hover:text-white uppercase tracking-widest">[ Abort ]</button>
+            <div id="progress-text">00 // 00</div>
+        </nav>
 
-        <div id="flashcard" onclick="flipCard()" class="bg-slate-800 rounded-3xl p-10 min-h-[350px] flex flex-col items-center justify-center text-center shadow-2xl border border-slate-700 cursor-pointer active:scale-95 transition-transform">
-            <p id="text-target" class="text-3xl font-bold"></p>
-            <div id="card-back" class="hidden mt-6 pt-6 border-t border-slate-700 w-full">
-                <p id="text-english" class="text-xl text-slate-400"></p>
+        <div id="flashcard" onclick="flipCard()" class="relative overflow-hidden glass rounded-sm min-h-[400px] flex flex-col items-center justify-center p-8 cursor-pointer group">
+            <div class="scanner-line absolute top-0 left-0 w-full opacity-20"></div>
+            <p id="text-target" class="text-3xl font-light tracking-tight text-center leading-relaxed"></p>
+            <div id="card-back" class="hidden mt-12 pt-12 border-t border-white/10 w-full animate-pulse">
+                <p id="text-english" class="text-lg text-slate-400 font-light text-center uppercase tracking-widest"></p>
             </div>
         </div>
         
-        <div id="study-controls" class="hidden grid grid-cols-4 gap-2">
-            <div class="text-center"><span class="text-[9px] text-slate-500 font-bold uppercase">1m</span><button onclick="handleAnswer('again')" class="w-full py-4 bg-red-900/30 text-red-400 rounded-xl font-bold border border-red-900/50 text-[10px]">AGAIN</button></div>
-            <div class="text-center"><span class="text-[9px] text-slate-500 font-bold uppercase">6m</span><button onclick="handleAnswer('hard')" class="w-full py-4 bg-orange-900/30 text-orange-400 rounded-xl font-bold border border-orange-900/50 text-[10px]">HARD</button></div>
-            <div class="text-center"><span id="label-good" class="text-[9px] text-slate-500 font-bold uppercase">10m</span><button onclick="handleAnswer('good')" class="w-full py-4 bg-green-900/30 text-green-400 rounded-xl font-bold border border-green-900/50 text-[10px]">GOOD</button></div>
-            <div class="text-center"><span class="text-[9px] text-slate-500 font-bold uppercase">4d</span><button onclick="handleAnswer('easy')" class="w-full py-4 bg-blue-900/30 text-blue-400 rounded-xl font-bold border border-blue-900/50 text-[10px]">EASY</button></div>
+        <div id="study-controls" class="hidden grid grid-cols-4 gap-3">
+            <button onclick="handleAnswer('again')" class="group">
+                <div class="text-[8px] text-slate-500 mb-2 mono">1M</div>
+                <div class="h-12 flex items-center justify-center glass rounded-full group-hover:bg-red-500/20 group-hover:text-red-400 text-[10px] mono">AGN</div>
+            </button>
+            <button onclick="handleAnswer('hard')" class="group">
+                <div class="text-[8px] text-slate-500 mb-2 mono">6M</div>
+                <div class="h-12 flex items-center justify-center glass rounded-full group-hover:bg-orange-500/20 group-hover:text-orange-400 text-[10px] mono">HRD</div>
+            </button>
+            <button onclick="handleAnswer('good')" class="group">
+                <div id="label-good" class="text-[8px] text-slate-500 mb-2 mono">10M</div>
+                <div class="h-12 flex items-center justify-center glass rounded-full group-hover:bg-green-500/20 group-hover:text-green-400 text-[10px] mono">GUD</div>
+            </button>
+            <button onclick="handleAnswer('easy')" class="group">
+                <div class="text-[8px] text-slate-500 mb-2 mono">4D</div>
+                <div class="h-12 flex items-center justify-center glass rounded-full group-hover:bg-cyan-500/20 group-hover:text-cyan-400 text-[10px] mono">ESY</div>
+            </button>
         </div>
 
-        <div class="flex justify-center gap-8 text-xs font-bold pt-4 border-t border-slate-800">
-            <div class="flex flex-col items-center"><span id="count-new" class="text-blue-500 text-lg">0</span><span class="text-slate-500 text-[8px]">NEW</span></div>
-            <div class="flex flex-col items-center"><span id="count-learn" class="text-red-500 text-lg">0</span><span class="text-slate-500 text-[8px]">LEARN</span></div>
-            <div class="flex flex-col items-center"><span id="count-done" class="text-green-500 text-lg">0</span><span class="text-slate-500 text-[8px]">DONE</span></div>
+        <div class="flex justify-between items-end mono text-[8px] tracking-widest text-slate-500 uppercase">
+            <div>New: <span id="count-new" class="text-cyan-500">0</span></div>
+            <div>Learn: <span id="count-learn" class="text-white">0</span></div>
+            <div>Done: <span id="count-done" class="text-green-500">0</span></div>
         </div>
     </section>
 
-    <section id="screen-success" class="hidden text-center space-y-6">
-        <div class="text-6xl">🏆</div>
-        <h2 class="text-3xl font-black italic uppercase">Goal Hit</h2>
-        <div class="space-y-3">
-            <button onclick="addExtraCards()" class="w-full p-4 bg-slate-800 rounded-2xl font-bold border border-slate-700">+10 NEW CARDS</button>
-            <button onclick="UI.show('menu')" class="w-full p-4 bg-blue-600 rounded-2xl font-bold">CLOSE</button>
+    <section id="screen-success" class="hidden text-center space-y-12 py-20">
+        <div class="text-xs tracking-[0.5em] text-cyan-500 animate-pulse">OPTIMIZATION COMPLETE</div>
+        <h2 class="text-4xl font-light tracking-tighter">Calibration <br/> Successful</h2>
+        <div class="space-y-4">
+            <button onclick="addExtraCards()" class="w-full py-4 glass rounded-full text-[10px] tracking-widest uppercase hover:bg-white hover:text-black transition-all">Expand Load (+10)</button>
+            <button onclick="UI.show('menu')" class="w-full py-4 text-[10px] tracking-widest uppercase text-slate-500">Return to Nexus</button>
         </div>
     </section>
 
-    <section id="screen-settings" class="hidden space-y-6">
-        <button onclick="UI.show('menu')" class="text-slate-400 text-2xl">← Settings</button>
-        <button onclick="resetData()" class="w-full p-4 bg-red-900/30 text-red-400 rounded-xl font-bold border border-red-900/50">WIPE ALL PROGRESS</button>
+    <section id="screen-settings" class="hidden space-y-8 py-12">
+        <button onclick="UI.show('menu')" class="text-slate-500 text-[10px] mono uppercase tracking-widest"><— Return</button>
+        <h2 class="text-2xl font-light">System Config</h2>
+        <div class="space-y-4">
+            <button onclick="resetData()" class="w-full py-4 border border-red-900/30 text-red-500/50 rounded-full text-[10px] mono uppercase">Purge Local Memory</button>
+        </div>
     </section>
 
     <script>
         let state = {
             deck: [],
-            view: 'menu',
             config: { newLimit: 20 },
             session: { queue: [], currentIndex: 0, finishedCount: 0 }
         };
 
         const UI = {
-            show: function(id) {
+            show: (id) => {
                 ['menu', 'study', 'settings', 'success'].forEach(s => document.getElementById(`screen-${s}`).classList.add('hidden'));
                 document.getElementById(`screen-${id}`).classList.remove('hidden');
             }
@@ -96,14 +132,12 @@
         async function initApp() {
             const response = await fetch('deck.json');
             const baseDeck = await response.json();
-            
-            // LOAD PROGRESS FROM LOCALSTORAGE
             const savedProgress = JSON.parse(localStorage.getItem('quest_progress') || '{}');
             
             state.deck = baseDeck.map(card => ({
                 ...card,
-                id: card.target + card.english, // Unique ID
-                mastery: savedProgress[card.target + card.english] || 0 // 0 = New, 1 = Learning, 2 = Mastered
+                id: card.target + card.english,
+                mastery: savedProgress[card.target + card.english] || 0
             }));
 
             updateMenuStats();
@@ -116,17 +150,14 @@
         }
 
         function startSession() {
-            // 1. Get cards currently in "Learning" phase (priority)
             let learning = state.deck.filter(c => c.mastery === 1);
-            
-            // 2. Get "New" cards up to the daily limit
             let newCards = state.deck.filter(c => c.mastery === 0).slice(0, state.config.newLimit);
 
             state.session.queue = [...learning, ...newCards].map(c => ({...c, step: 0, sessionType: c.mastery === 1 ? 'learning' : 'new'}));
             state.session.currentIndex = 0;
             state.session.finishedCount = 0;
 
-            if (state.session.queue.length === 0) return alert("No cards left to study!");
+            if (state.session.queue.length === 0) return alert("All nodes calibrated.");
             
             UI.show('study');
             updateStatusBar();
@@ -139,7 +170,7 @@
             document.getElementById('text-english').innerText = card.english;
             document.getElementById('card-back').classList.add('hidden');
             document.getElementById('study-controls').classList.add('hidden');
-            document.getElementById('label-good').innerText = (card.step === 1) ? "1d" : "10m";
+            document.getElementById('label-good').innerText = (card.step === 1) ? "1D" : "10M";
         }
 
         function flipCard() {
@@ -151,35 +182,27 @@
             const card = state.session.queue[state.session.currentIndex];
 
             if (rating === 'again') {
-                card.step = 0;
-                card.mastery = 1; // Set to learning in master deck
+                card.step = 0; card.mastery = 1;
                 state.session.queue.push({...card});
             } else if (rating === 'good') {
                 if (card.step === 0) {
-                    card.step = 1;
-                    card.mastery = 1;
+                    card.step = 1; card.mastery = 1;
                     state.session.queue.splice(state.session.currentIndex + 5, 0, {...card});
                 } else {
-                    card.mastery = 2; // Mastered!
-                    state.session.finishedCount++;
+                    card.mastery = 2; state.session.finishedCount++;
                     saveCardProgress(card.id, 2);
                 }
             } else if (rating === 'easy') {
-                card.mastery = 2;
-                state.session.finishedCount++;
+                card.mastery = 2; state.session.finishedCount++;
                 saveCardProgress(card.id, 2);
             }
 
-            // Sync learning state if not mastered yet
             if (card.mastery === 1) saveCardProgress(card.id, 1);
-
             state.session.currentIndex++;
             if (state.session.currentIndex >= state.session.queue.length) {
-                updateMenuStats();
-                UI.show('success');
+                updateMenuStats(); UI.show('success');
             } else {
-                updateStatusBar();
-                renderCard();
+                updateStatusBar(); renderCard();
             }
         }
 
@@ -187,7 +210,6 @@
             const progress = JSON.parse(localStorage.getItem('quest_progress') || '{}');
             progress[id] = level;
             localStorage.setItem('quest_progress', JSON.stringify(progress));
-            // Also update the local state.deck so the menu updates
             const deckCard = state.deck.find(c => c.id === id);
             if (deckCard) deckCard.mastery = level;
         }
@@ -197,10 +219,16 @@
             document.getElementById('count-new').innerText = current.filter(c => c.sessionType === 'new').length;
             document.getElementById('count-learn').innerText = current.filter(c => c.sessionType === 'learning' || c.step > 0).length;
             document.getElementById('count-done').innerText = state.session.finishedCount;
+            document.getElementById('progress-text').innerText = `${String(state.session.finishedCount).padStart(2, '0')} // ${String(state.session.queue.length).padStart(2, '0')}`;
+        }
+
+        function addExtraCards() {
+            let nextSet = state.deck.filter(c => c.mastery === 0).slice(0, 10);
+            state.session.queue = [...state.session.queue, ...nextSet.map(c => ({...c, type: 'new', step: 0}))];
+            UI.show('study'); updateStatusBar(); renderCard();
         }
 
         function resetData() { localStorage.removeItem('quest_progress'); location.reload(); }
-        
         initApp();
     </script>
 </body>

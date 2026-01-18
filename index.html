@@ -75,9 +75,18 @@
                 <p id="text-english" class="text-xl text-slate-400"></p>
             </div>
         </div>
-        <div id="study-controls" class="hidden grid grid-cols-2 gap-4">
-            <button onclick="handleAnswer(false)" class="p-5 bg-slate-800 rounded-2xl font-bold text-red-400 border-b-4 border-red-900">AGAIN</button>
-            <button onclick="handleAnswer(true)" class="p-5 bg-blue-600 rounded-2xl font-bold border-b-4 border-blue-900">GOOD</button>
+        
+        <div id="study-controls" class="hidden grid grid-cols-4 gap-2">
+            <button onclick="handleAnswer('again')" class="py-4 bg-red-900/30 text-red-400 rounded-xl font-bold border border-red-900/50 text-[10px]">AGAIN</button>
+            <button onclick="handleAnswer('hard')" class="py-4 bg-orange-900/30 text-orange-400 rounded-xl font-bold border border-orange-900/50 text-[10px]">HARD</button>
+            <button onclick="handleAnswer('good')" class="py-4 bg-green-900/30 text-green-400 rounded-xl font-bold border border-green-900/50 text-[10px]">GOOD</button>
+            <button onclick="handleAnswer('easy')" class="py-4 bg-blue-900/30 text-blue-400 rounded-xl font-bold border border-blue-900/50 text-[10px]">EASY</button>
+        </div>
+
+        <div class="flex justify-center gap-8 text-xs font-bold pt-4 border-t border-slate-800">
+            <div class="text-blue-500">NEW: <span id="count-new">0</span></div>
+            <div class="text-red-500">LEARN: <span id="count-learn">0</span></div>
+            <div id="status-review" class="text-green-500">DONE: <span id="count-done">0</span></div>
         </div>
     </section>
 
@@ -90,11 +99,10 @@
     </section>
 
     <script>
-        /** STATE & DATA **/
         let state = {
             deck: [],
             view: 'welcome',
-            session: { queue: [], currentIndex: 0, isFlipped: false }
+            session: { queue: [], currentIndex: 0, isFlipped: false, finishedCount: 0 }
         };
 
         const topicMap = {
@@ -103,19 +111,16 @@
             "Vocabulary Sprints": ["Ordering at a restaurant", "Asking for directions", "Opening a bank account"]
         };
 
-        /** INITIALIZATION **/
         async function initApp() {
             try {
                 const response = await fetch('deck.json');
                 if (!response.ok) throw new Error();
                 state.deck = await response.json();
-                console.log(`Successfully loaded ${state.deck.length} cards.`);
             } catch (e) {
-                console.error("Could not load deck.json. Check GitHub upload.");
+                console.error("Could not load deck.json.");
             }
         }
 
-        /** NAVIGATION **/
         const UI = {
             show: function(id) {
                 ['welcome', 'languages', 'menu', 'topics', 'study', 'settings'].forEach(s => {
@@ -126,38 +131,52 @@
             }
         };
 
-        function selectLanguage(lang, emoji) {
-            UI.show('menu');
-        }
+        function selectLanguage(lang, emoji) { UI.show('menu'); }
 
         function showTopics(category) {
             const list = document.getElementById('topic-list');
             document.getElementById('topic-title').innerText = category;
             list.innerHTML = "";
-
             topicMap[category].forEach(topic => {
                 const btn = document.createElement('button');
                 btn.className = "p-4 bg-slate-800 rounded-2xl border-b-4 border-slate-900 text-left active:translate-y-1 transition-all";
-                btn.innerHTML = `<div class="font-bold text-slate-200">${topic}</div><div class="text-[10px] text-slate-500 uppercase tracking-widest mt-1">Quest Available</div>`;
+                btn.innerHTML = `<div class="font-bold text-slate-200">${topic}</div><div class="text-[10px] text-slate-500 tracking-widest mt-1">START QUEST</div>`;
                 btn.onclick = () => startSession(category, topic);
                 list.appendChild(btn);
             });
             UI.show('topics');
         }
 
-        /** SESSION LOGIC **/
+        /** UPDATED SESSION LOGIC **/
         function startSession(category, topic) {
-            // Filters your 1,718 cards for the specific topic clicked
-            state.session.queue = state.deck.filter(c => c.category === category && c.topic === topic);
-            
-            if (state.session.queue.length === 0) {
-                alert("No cards found for this level yet!");
-                return;
-            }
-            
+            const filtered = state.deck.filter(c => c.category === category && c.topic === topic);
+            if (filtered.length === 0) return alert("No cards found!");
+
+            // Initialize the session queue
+            state.session.queue = filtered.map(c => ({...c, type: 'new'}));
             state.session.currentIndex = 0;
+            state.session.finishedCount = 0;
+            
             UI.show('study');
+            updateStatusBar();
             renderCard();
+        }
+
+        function updateStatusBar() {
+            const total = state.session.queue.length;
+            const currentIdx = state.session.currentIndex;
+            
+            // New: Cards we haven't reached yet
+            const newCards = state.session.queue.slice(currentIdx).filter(c => c.type === 'new').length;
+            // Learning: Cards shoved to the back because of "Again" or "Hard"
+            const learnCards = state.session.queue.slice(currentIdx).filter(c => c.type === 'learning').length;
+            
+            document.getElementById('count-new').innerText = newCards;
+            document.getElementById('count-learn').innerText = learnCards;
+            document.getElementById('count-done').innerText = state.session.finishedCount;
+
+            const progress = (state.session.finishedCount / (state.session.finishedCount + newCards + learnCards)) * 100;
+            document.getElementById('progress-bar-fill').style.width = `${progress}%`;
         }
 
         function renderCard() {
@@ -168,14 +187,9 @@
             document.getElementById('card-back').classList.add('hidden');
             document.getElementById('study-controls').classList.add('hidden');
             
-            // Audio Logic
             if(card.audio) {
-                const audio = new Audio(`quest-audio/${card.audio}`);
-                audio.play().catch(() => console.log("Click to play"));
+                new Audio(`quest-audio/${card.audio}`).play().catch(() => {});
             }
-
-            const progress = (state.session.currentIndex / state.session.queue.length) * 100;
-            document.getElementById('progress-bar-fill').style.width = `${progress}%`;
         }
 
         function flipCard() {
@@ -184,21 +198,32 @@
             document.getElementById('study-controls').classList.remove('hidden');
         }
 
-        function handleAnswer(isCorrect) {
+        function handleAnswer(rating) {
+            const card = state.session.queue[state.session.currentIndex];
+
+            if (rating === 'again') {
+                // Add to the very end of the queue
+                state.session.queue.push({...card, type: 'learning'});
+            } else if (rating === 'hard') {
+                // Add it 3 positions ahead
+                state.session.queue.splice(state.session.currentIndex + 4, 0, {...card, type: 'learning'});
+            } else {
+                // Good or Easy moves it to "Finished"
+                state.session.finishedCount++;
+            }
+
             state.session.currentIndex++;
+            
             if (state.session.currentIndex >= state.session.queue.length) {
-                alert("Session complete!");
+                alert("Quest Complete!");
                 UI.show('menu');
             } else {
+                updateStatusBar();
                 renderCard();
             }
         }
 
-        function resetData() {
-            localStorage.clear();
-            location.reload();
-        }
-
+        function resetData() { localStorage.clear(); location.reload(); }
         initApp();
     </script>
 </body>

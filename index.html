@@ -39,12 +39,16 @@
         </div>
     </div>
 
-    <section id="screen-languages" class="hidden space-y-10 pt-10">
+    <section id="screen-languages" class="hidden space-y-8 pt-10">
         <header class="space-y-1">
             <h1 class="text-[11px] tracking-[0.4em] text-blue-600 font-bold uppercase">Select // Module</h1>
             <h2 class="text-3xl font-light tracking-tighter text-slate-900">Protocols_</h2>
         </header>
-        <div class="grid gap-4">
+        <div class="grid gap-3">
+            <button onclick="selectLanguage('Spanish', '🇪🇸')" class="glass-slab p-6 rounded-[32px] text-left flex items-center btn-active">
+                <span class="text-2xl mr-4">🇪🇸</span>
+                <span class="font-bold text-lg">Spanish</span>
+            </button>
             <button onclick="selectLanguage('Hindi', '🇮🇳')" class="glass-slab p-6 rounded-[32px] text-left flex items-center btn-active">
                 <span class="text-2xl mr-4">🇮🇳</span>
                 <span class="font-bold text-lg">Hindi</span>
@@ -71,8 +75,8 @@
     <section id="screen-menu" class="hidden space-y-10 pt-10">
         <header class="flex justify-between items-start">
             <div class="space-y-1">
-                <h1 id="active-lang-display" class="text-[11px] tracking-[0.4em] text-blue-600 font-bold uppercase">HINDI // 🇮🇳</h1>
-                <h2 id="active-topic-display" class="text-3xl font-light tracking-tighter text-slate-900 italic">Beginner_</h2>
+                <h1 id="active-lang-display" class="text-[11px] tracking-[0.4em] text-blue-600 font-bold uppercase">MODULE // 00</h1>
+                <h2 id="active-topic-display" class="text-3xl font-light tracking-tighter text-slate-900 italic">Target_</h2>
             </div>
             <button onclick="UI.show('settings')" class="text-2xl p-2">⚙️</button>
         </header>
@@ -89,7 +93,7 @@
                 </div>
             </div>
             <button onclick="startSession()" class="w-full py-7 bg-black text-white rounded-full text-[13px] tracking-[0.3em] font-bold btn-active shadow-xl uppercase">Initialize_Quest</button>
-            <button onclick="UI.show('languages')" class="w-full py-4 text-[10px] text-slate-400 font-bold uppercase tracking-widest text-center underline">Change Module</button>
+            <button onclick="UI.show('languages')" class="w-full py-4 text-[11px] text-slate-400 font-bold uppercase tracking-widest text-center underline">Switch Module</button>
         </div>
     </section>
 
@@ -103,7 +107,7 @@
         <div id="flashcard" onclick="flipCard()" class="glass-slab card-inner rounded-[48px] min-h-[440px] flex flex-col items-center justify-center p-10 cursor-pointer text-center">
             <p id="text-target" class="text-4xl font-bold tracking-tight text-slate-900 leading-tight"></p>
             <div id="card-back" class="hidden mt-10 pt-10 border-t border-slate-200 w-full">
-                <p id="text-english" class="text-2xl text-slate-700 font-medium leading-snug"></p>
+                <p id="text-english" class="text-2xl text-slate-700 font-medium"></p>
             </div>
         </div>
         
@@ -135,7 +139,7 @@
 
     <section id="screen-success" class="hidden text-center space-y-12 py-16">
         <div class="text-5xl">✓</div>
-        <h2 class="text-3xl font-bold uppercase tracking-widest text-slate-900">Goal Calibrated</h2>
+        <h2 class="text-3xl font-bold uppercase tracking-widest text-slate-900">Quest Complete</h2>
         <div class="space-y-4 px-4">
             <button onclick="addExtraCards()" class="w-full py-6 glass-slab rounded-[32px] text-[13px] font-bold uppercase tracking-widest btn-active">+10 Data Load</button>
             <button onclick="UI.show('menu')" class="w-full py-5 text-[12px] font-bold uppercase tracking-widest text-slate-400">Return to Menu</button>
@@ -143,7 +147,7 @@
     </section>
 
     <section id="screen-settings" class="hidden space-y-8 py-10">
-        <button onclick="UI.show('menu')" class="text-slate-500 text-xs font-bold uppercase tracking-widest">← Return</button>
+        <button onclick="UI.show('menu')" class="text-slate-400 text-xs font-bold uppercase tracking-widest">← Return</button>
         <h2 class="text-3xl font-light tracking-tight">System Configuration</h2>
         <button onclick="resetData()" class="w-full py-5 border border-red-200 text-red-500 rounded-3xl text-[12px] font-bold uppercase btn-active">Purge Local Memory</button>
     </section>
@@ -154,7 +158,9 @@
             session: { queue: [], currentIndex: 0, finishedCount: 0, isFlipped: false, language: '', topic: '' }
         };
 
+        // TOPIC MAP (Restored Spanish)
         const topicMap = {
+            "Spanish": ["Beginner", "Intermediate", "Advanced"],
             "Hindi": ["Beginner", "Intermediate", "Advanced"],
             "Russian": ["Beginner", "Intermediate", "Advanced"],
             "Italian": ["Beginner", "Intermediate", "Advanced"]
@@ -189,9 +195,11 @@
             document.getElementById('active-lang-display').innerText = `${lang.toUpperCase()} // ${emoji}`;
             const list = document.getElementById('topic-list');
             list.innerHTML = "";
-            topicMap[lang].forEach(t => {
+            
+            const topics = topicMap[lang] || ["Beginner"];
+            topics.forEach(t => {
                 const btn = document.createElement('button');
-                btn.className = "glass-slab p-6 rounded-[32px] text-left btn-active font-bold text-lg mb-2";
+                btn.className = "glass-slab p-6 rounded-[32px] text-left btn-active font-bold text-lg mb-2 w-full";
                 btn.innerText = t;
                 btn.onclick = () => selectTopic(t);
                 list.appendChild(btn);
@@ -218,7 +226,7 @@
             let newCards = filtered.filter(c => c.mastery === 0).slice(0, state.config.newLimit);
             state.session.queue = [...learning, ...newCards].map(c => ({...c, step: 0, sessionType: c.mastery === 1 ? 'learning' : 'new'}));
             state.session.currentIndex = 0; state.session.finishedCount = 0;
-            if (state.session.queue.length === 0) return alert("All Nodes Calibrated.");
+            if (state.session.queue.length === 0) return alert("Module Calibration complete.");
             UI.show('study'); updateStatusBar(); renderCard();
         }
 

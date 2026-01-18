@@ -39,11 +39,11 @@
         <div class="space-y-8">
             <div class="grid grid-cols-2 gap-4">
                 <div class="glass p-4 rounded-sm">
-                    <div class="text-[10px] text-slate-500 mono mb-1">UNSEEN_NODES</div>
+                    <div class="text-[10px] text-slate-500 mono mb-1 uppercase">Unseen_Nodes</div>
                     <div id="stat-new" class="text-2xl font-light">0</div>
                 </div>
                 <div class="glass p-4 rounded-sm">
-                    <div class="text-[10px] text-slate-500 mono mb-1">SYNCED_DATA</div>
+                    <div class="text-[10px] text-slate-500 mono mb-1 uppercase">Synced_Data</div>
                     <div id="stat-grad" class="text-2xl font-light">0</div>
                 </div>
             </div>
@@ -72,22 +72,22 @@
             </div>
         </div>
         
-        <div id="study-controls" class="hidden grid grid-cols-4 gap-3">
+        <div id="study-controls" class="hidden grid grid-cols-4 gap-2">
             <button onclick="handleAnswer('again')" class="group">
                 <div class="text-[8px] text-slate-500 mb-2 mono">1M</div>
-                <div class="h-12 flex items-center justify-center glass rounded-full group-hover:bg-red-500/20 group-hover:text-red-400 text-[10px] mono">AGN</div>
+                <div class="h-14 flex items-center justify-center glass rounded-xl group-hover:bg-red-500/20 group-hover:text-red-400 text-[9px] mono font-bold uppercase">Again</div>
             </button>
             <button onclick="handleAnswer('hard')" class="group">
                 <div class="text-[8px] text-slate-500 mb-2 mono">6M</div>
-                <div class="h-12 flex items-center justify-center glass rounded-full group-hover:bg-orange-500/20 group-hover:text-orange-400 text-[10px] mono">HRD</div>
+                <div class="h-14 flex items-center justify-center glass rounded-xl group-hover:bg-orange-500/20 group-hover:text-orange-400 text-[9px] mono font-bold uppercase">Hard</div>
             </button>
             <button onclick="handleAnswer('good')" class="group">
                 <div id="label-good" class="text-[8px] text-slate-500 mb-2 mono">10M</div>
-                <div class="h-12 flex items-center justify-center glass rounded-full group-hover:bg-green-500/20 group-hover:text-green-400 text-[10px] mono">GUD</div>
+                <div class="h-14 flex items-center justify-center glass rounded-xl group-hover:bg-green-500/20 group-hover:text-green-400 text-[9px] mono font-bold uppercase">Good</div>
             </button>
             <button onclick="handleAnswer('easy')" class="group">
                 <div class="text-[8px] text-slate-500 mb-2 mono">4D</div>
-                <div class="h-12 flex items-center justify-center glass rounded-full group-hover:bg-cyan-500/20 group-hover:text-cyan-400 text-[10px] mono">ESY</div>
+                <div class="h-14 flex items-center justify-center glass rounded-xl group-hover:bg-cyan-500/20 group-hover:text-cyan-400 text-[9px] mono font-bold uppercase">Easy</div>
             </button>
         </div>
 
@@ -124,24 +124,29 @@
 
         const UI = {
             show: (id) => {
-                ['menu', 'study', 'settings', 'success'].forEach(s => document.getElementById(`screen-${s}`).classList.add('hidden'));
+                ['menu', 'study', 'settings', 'success'].forEach(s => {
+                    const el = document.getElementById(`screen-${s}`);
+                    if(el) el.classList.add('hidden');
+                });
                 document.getElementById(`screen-${id}`).classList.remove('hidden');
             }
         };
 
         async function initApp() {
-            const response = await fetch('deck.json');
-            const baseDeck = await response.json();
-            const savedProgress = JSON.parse(localStorage.getItem('quest_progress') || '{}');
-            
-            state.deck = baseDeck.map(card => ({
-                ...card,
-                id: card.target + card.english,
-                mastery: savedProgress[card.target + card.english] || 0
-            }));
+            try {
+                const response = await fetch('deck.json');
+                const baseDeck = await response.json();
+                const savedProgress = JSON.parse(localStorage.getItem('quest_progress') || '{}');
+                
+                state.deck = baseDeck.map(card => ({
+                    ...card,
+                    id: card.target + card.english,
+                    mastery: savedProgress[card.target + card.english] || 0
+                }));
 
-            updateMenuStats();
-            UI.show('menu');
+                updateMenuStats();
+                UI.show('menu');
+            } catch (e) { console.error("Initialization error."); }
         }
 
         function updateMenuStats() {
@@ -157,7 +162,7 @@
             state.session.currentIndex = 0;
             state.session.finishedCount = 0;
 
-            if (state.session.queue.length === 0) return alert("All nodes calibrated.");
+            if (state.session.queue.length === 0) return alert("System state: Fully Calibrated.");
             
             UI.show('study');
             updateStatusBar();
@@ -224,7 +229,7 @@
 
         function addExtraCards() {
             let nextSet = state.deck.filter(c => c.mastery === 0).slice(0, 10);
-            state.session.queue = [...state.session.queue, ...nextSet.map(c => ({...c, type: 'new', step: 0}))];
+            state.session.queue = [...state.session.queue, ...nextSet.map(c => ({...c, type: 'new', step: 0, sessionType: 'new'}))];
             UI.show('study'); updateStatusBar(); renderCard();
         }
 

@@ -13,6 +13,12 @@
         .card-inner { border: 1px solid #d1d5db; transition: all 0.3s ease; }
         .btn-active:active { transform: scale(0.96); }
         #info-panel { background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); }
+        
+        /* Tree Infrastructure */
+        .tree-line-v { width: 2px; height: 30px; background: #cbd5e1; margin: 0 auto; position: relative; }
+        .tree-line-branch { width: 30px; height: 2px; background: #cbd5e1; }
+        .lock-shield { filter: grayscale(1); opacity: 0.4; pointer-events: none; cursor: not-allowed; }
+        .status-tag { font-size: 8px; font-weight: bold; padding: 2px 6px; border-radius: 4px; margin-top: 4px; display: inline-block; }
     </style>
 </head>
 <body class="p-6 max-w-sm mx-auto min-h-screen flex flex-col justify-between">
@@ -20,103 +26,134 @@
     <div id="info-panel" onclick="toggleInfo()" class="hidden fixed inset-0 z-50 flex items-center justify-center p-8">
         <div class="bg-white p-8 rounded-3xl text-[13px] leading-relaxed space-y-5 text-slate-800 shadow-2xl">
             <h3 class="font-bold text-black border-b pb-3 uppercase tracking-widest text-[14px]">Logic protocol</h3>
-            <p><strong>[1] Again:</strong> Card reset. Re-enters queue in 1m.</p>
-            <p><strong>[2] Hard:</strong> Retention gap. Re-enters queue in 6m.</p>
-            <p><strong>[3] Good:</strong> Mastery step. Requires 2 Good inputs.</p>
-            <p><strong>[4] Easy:</strong> Instant graduation. Archived.</p>
+            <p><strong>[1] Again:</strong> Card reset. 1m queue.</p>
+            <p><strong>[2] Hard:</strong> Gap. 6m queue.</p>
+            <p><strong>[3] Good:</strong> Mastery. Requires 2 Good inputs.</p>
+            <p><strong>[4] Easy:</strong> Instant sync. Archived.</p>
             <div class="pt-2 text-blue-600 font-bold uppercase tracking-tighter">Tap to resume</div>
         </div>
     </div>
 
-    <section id="screen-languages" class="hidden space-y-8 pt-10">
+    <section id="screen-languages" class="hidden space-y-8 pt-10 text-center">
         <header class="space-y-1">
-            <h1 class="text-[11px] tracking-[0.4em] text-blue-600 font-bold uppercase">Detecting // Modules</h1>
-            <h2 class="text-3xl font-light tracking-tighter text-slate-900 uppercase">Protocols_</h2>
+            <h1 class="text-[11px] tracking-[0.4em] text-blue-600 font-bold uppercase">Root // Connection</h1>
+            <h2 class="text-3xl font-light tracking-tighter text-slate-900 uppercase italic text-center">Spanish_</h2>
         </header>
-        <div id="language-list" class="grid gap-3">
-            </div>
-        
-        <div class="pt-6 space-y-2 opacity-30">
-            <div class="text-[10px] tracking-widest uppercase font-bold text-slate-400 px-2">Offline_Nodes</div>
-            <div class="glass-slab p-4 rounded-2xl text-[11px] uppercase tracking-widest flex justify-between items-center">
-                <span>French</span> <span>[Offline]</span>
-            </div>
-            <div class="glass-slab p-4 rounded-2xl text-[11px] uppercase tracking-widest flex justify-between items-center">
-                <span>German</span> <span>[Offline]</span>
-            </div>
-            <div class="glass-slab p-4 rounded-2xl text-[11px] uppercase tracking-widest flex justify-between items-center">
-                <span>Japanese</span> <span>[Offline]</span>
+        <div class="space-y-4">
+            <button onclick="selectLanguage('Spanish')" class="w-full glass-slab p-8 rounded-[40px] btn-active border-2 border-blue-500/10">
+                <div class="text-[10px] text-blue-500 font-bold mb-1 mono tracking-widest">[ SIGNAL_STABLE ]</div>
+                <div class="text-xl font-bold uppercase tracking-widest text-slate-900">Spanish Node</div>
+            </button>
+            <div class="tree-line-v"></div>
+            <div class="space-y-3 opacity-20 grayscale">
+                <div class="glass-slab py-4 rounded-full text-[10px] font-bold uppercase tracking-widest">Russian Node [Offline]</div>
+                <div class="glass-slab py-4 rounded-full text-[10px] font-bold uppercase tracking-widest">Italian Node [Offline]</div>
             </div>
         </div>
     </section>
 
-    <section id="screen-topics" class="hidden space-y-10 pt-10">
-        <header class="flex items-center gap-4">
+    <section id="screen-topics" class="hidden space-y-6 pt-10">
+        <header class="flex items-center gap-4 mb-4">
             <button onclick="UI.show('languages')" class="text-slate-400 text-2xl">←</button>
-            <h2 id="topic-title" class="text-2xl font-light tracking-tighter text-slate-900 uppercase">Select_Level</h2>
+            <h2 class="text-xl font-light tracking-tighter uppercase text-slate-900">Neural_Path</h2>
         </header>
-        <div id="topic-list" class="grid gap-3"></div>
+
+        <div class="flex flex-col items-center">
+            <div class="w-full text-center">
+                <button onclick="selectTopic('Beginner')" class="w-full glass-slab p-5 rounded-2xl btn-active border-l-4 border-blue-500 text-center">
+                    <div class="text-xs font-bold uppercase">Phase 01: Beginner</div>
+                    <div id="prog-Beginner" class="status-tag bg-blue-100 text-blue-600 uppercase tracking-tighter">Syncing...</div>
+                </button>
+                <div class="tree-line-v"></div>
+                <div class="flex items-center w-full justify-center">
+                    <div class="tree-line-branch"></div>
+                    <div class="glass-slab p-3 rounded-xl text-[9px] uppercase font-bold text-slate-400 border-dashed border-2 border-slate-300">Peripheral: Restaurant</div>
+                </div>
+            </div>
+            
+            <div class="tree-line-v"></div>
+
+            <div id="gate-Intermediate" class="w-full text-center">
+                <button onclick="selectTopic('Intermediate')" class="w-full glass-slab p-5 rounded-2xl btn-active border-l-4 border-slate-300">
+                    <div class="text-xs font-bold uppercase">Phase 02: Intermediate</div>
+                    <div id="prog-Intermediate" class="status-tag bg-slate-200 text-slate-500 uppercase tracking-tighter">Locked_Signal</div>
+                </button>
+            </div>
+
+            <div class="tree-line-v"></div>
+
+            <div class="text-[9px] text-slate-400 mono font-bold uppercase py-2 tracking-[0.3em] text-center w-full">Decision_Matrix</div>
+            
+            <div class="grid grid-cols-2 gap-4 w-full">
+                <div class="flex flex-col items-center">
+                    <div class="tree-line-v h-6"></div>
+                    <button id="btn-Advanced" onclick="selectTopic('Advanced')" class="w-full glass-slab p-4 rounded-2xl btn-active text-[10px] font-bold uppercase lock-shield">
+                        Advanced
+                    </button>
+                    <div id="prog-Advanced" class="text-[8px] mt-1 text-slate-400 font-bold">0% SYNC</div>
+                </div>
+                <div class="space-y-2 pt-6 opacity-30">
+                    <div class="glass-slab p-3 rounded-xl text-[8px] font-bold uppercase text-center border-dashed border border-slate-300">Corporate</div>
+                    <div class="glass-slab p-3 rounded-xl text-[8px] font-bold uppercase text-center border-dashed border border-slate-300">Literature</div>
+                    <div class="glass-slab p-3 rounded-xl text-[8px] font-bold uppercase text-center border-dashed border border-slate-300">Family_Rel</div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="screen-menu" class="hidden space-y-10 pt-10">
-        <header class="flex justify-between items-start">
+    <section id="screen-menu" class="hidden space-y-10 pt-10 text-center">
+        <header class="flex justify-between items-start text-left">
             <div class="space-y-1">
-                <h1 id="active-lang-display" class="text-[11px] tracking-[0.4em] text-blue-600 font-bold uppercase">MODULE</h1>
-                <h2 id="active-topic-display" class="text-3xl font-light tracking-tighter text-slate-900 uppercase italic">Target_</h2>
+                <h1 id="active-lang-display" class="text-[11px] tracking-[0.4em] text-blue-600 font-bold uppercase">SPANISH</h1>
+                <h2 id="active-topic-display" class="text-3xl font-light tracking-tighter text-slate-900 uppercase italic">_</h2>
             </div>
             <button onclick="UI.show('settings')" class="text-2xl p-2">⚙️</button>
         </header>
-        
-        <div class="space-y-6">
-            <div class="grid grid-cols-2 gap-4">
-                <div class="glass-slab p-6 rounded-[32px] border-b-2 border-slate-300">
-                    <div class="text-[10px] text-slate-500 mb-1 uppercase font-bold tracking-widest">Unseen</div>
-                    <div id="stat-new" class="text-3xl font-medium">0</div>
-                </div>
-                <div class="glass-slab p-6 rounded-[32px] border-b-2 border-slate-300">
-                    <div class="text-[10px] text-slate-500 mb-1 uppercase font-bold tracking-widest">Synced</div>
-                    <div id="stat-grad" class="text-3xl font-medium text-emerald-600">0</div>
-                </div>
+        <div class="grid grid-cols-2 gap-4">
+            <div class="glass-slab p-6 rounded-[32px] text-left">
+                <div class="text-[9px] text-slate-400 mb-1 uppercase font-bold tracking-widest">Unseen</div>
+                <div id="stat-new" class="text-3xl font-medium">0</div>
             </div>
-            <button onclick="startSession()" class="w-full py-7 bg-black text-white rounded-full text-[13px] tracking-[0.3em] font-bold btn-active shadow-xl uppercase">Initialize_Quest</button>
-            <button onclick="UI.show('languages')" class="w-full py-4 text-[11px] text-slate-400 font-bold uppercase tracking-widest text-center underline">Relink Module</button>
+            <div class="glass-slab p-6 rounded-[32px] text-left">
+                <div class="text-[9px] text-emerald-600 mb-1 uppercase font-bold tracking-widest">Synced</div>
+                <div id="stat-grad" class="text-3xl font-medium text-emerald-600">0</div>
+            </div>
         </div>
+        <button onclick="startSession()" class="w-full py-7 bg-black text-white rounded-full text-[13px] tracking-[0.3em] font-bold btn-active uppercase">Initialize_Session</button>
+        <button onclick="UI.show('topics')" class="w-full py-4 text-[11px] text-slate-400 font-bold uppercase tracking-widest text-center underline underline-offset-8">Return to Path</button>
     </section>
 
     <section id="screen-study" class="hidden flex-grow flex flex-col justify-between py-4 text-center">
         <nav class="flex justify-between items-center text-[11px] font-bold uppercase tracking-widest px-1">
-            <button onclick="UI.show('menu')" class="text-slate-400 hover:text-black">[ Exit ]</button>
-            <div id="progress-text" class="text-black font-medium">00 // 00</div>
-            <button onclick="toggleInfo()" class="w-8 h-8 rounded-full border border-slate-300 flex items-center justify-center hover:bg-black hover:text-white transition-all text-sm">?</button>
+            <button onclick="UI.show('menu')" class="text-slate-400">[ Exit ]</button>
+            <div id="progress-text">00 // 00</div>
+            <button onclick="toggleInfo()" class="w-8 h-8 rounded-full border border-slate-300 flex items-center justify-center text-sm hover:bg-black hover:text-white transition-all">?</button>
         </nav>
-
-        <div id="flashcard" onclick="flipCard()" class="glass-slab card-inner rounded-[48px] min-h-[440px] flex flex-col items-center justify-center p-10 cursor-pointer text-center">
+        <div id="flashcard" onclick="flipCard()" class="glass-slab card-inner rounded-[48px] min-h-[440px] flex flex-col items-center justify-center p-10 cursor-pointer">
             <p id="text-target" class="text-4xl font-bold tracking-tight text-slate-900 leading-tight"></p>
             <div id="card-back" class="hidden mt-10 pt-10 border-t border-slate-200 w-full">
                 <p id="text-english" class="text-2xl text-slate-700 font-medium"></p>
             </div>
         </div>
-        
         <div id="study-controls" class="hidden grid grid-cols-4 gap-2">
-            <button onclick="handleAnswer('again')" class="flex flex-col items-center group">
+            <button onclick="handleAnswer('again')" class="flex flex-col items-center">
                 <span class="text-[10px] text-slate-400 font-bold mb-1 uppercase tracking-tighter">1m</span>
-                <div class="w-full py-6 bg-white border border-slate-200 rounded-2xl text-[12px] font-bold uppercase text-red-500 btn-active shadow-sm group-hover:bg-red-50">Again</div>
+                <div class="w-full py-6 bg-white border border-slate-200 rounded-2xl text-[11px] font-bold uppercase text-red-500 btn-active">Again</div>
             </button>
-            <button onclick="handleAnswer('hard')" class="flex flex-col items-center group">
+            <button onclick="handleAnswer('hard')" class="flex flex-col items-center">
                 <span class="text-[10px] text-slate-400 font-bold mb-1 uppercase tracking-tighter">6m</span>
-                <div class="w-full py-6 bg-white border border-slate-200 rounded-2xl text-[12px] font-bold uppercase text-orange-500 btn-active shadow-sm group-hover:bg-orange-50">Hard</div>
+                <div class="w-full py-6 bg-white border border-slate-200 rounded-2xl text-[11px] font-bold uppercase text-orange-500 btn-active">Hard</div>
             </button>
-            <button onclick="handleAnswer('good')" class="flex flex-col items-center group">
+            <button onclick="handleAnswer('good')" class="flex flex-col items-center">
                 <span id="label-good" class="text-[10px] text-slate-400 font-bold mb-1 uppercase tracking-tighter">10m</span>
-                <div class="w-full py-6 bg-white border border-slate-200 rounded-2xl text-[12px] font-bold uppercase text-emerald-600 btn-active shadow-sm group-hover:bg-emerald-50">Good</div>
+                <div class="w-full py-6 bg-white border border-slate-200 rounded-2xl text-[11px] font-bold uppercase text-emerald-600 btn-active">Good</div>
             </button>
-            <button onclick="handleAnswer('easy')" class="flex flex-col items-center group">
+            <button onclick="handleAnswer('easy')" class="flex flex-col items-center">
                 <span class="text-[10px] text-slate-400 font-bold mb-1 uppercase tracking-tighter">4d</span>
-                <div class="w-full py-6 bg-white border border-slate-200 rounded-2xl text-[12px] font-bold uppercase text-blue-600 btn-active shadow-sm group-hover:bg-blue-50">Easy</div>
+                <div class="w-full py-6 bg-white border border-slate-200 rounded-2xl text-[11px] font-bold uppercase text-blue-600 btn-active">Easy</div>
             </button>
         </div>
-
-        <div class="flex justify-between items-center text-[11px] font-bold px-1 text-slate-500 uppercase">
+        <div class="flex justify-between items-center text-[10px] font-bold px-1 text-slate-400 uppercase tracking-widest">
             <div>New:<span id="count-new" class="text-blue-600 ml-1">0</span></div>
             <div>Learn:<span id="count-red" class="text-red-500 ml-1">0</span></div>
             <div>Done:<span id="count-done" class="text-emerald-600 ml-1">0</span></div>
@@ -125,17 +162,16 @@
 
     <section id="screen-success" class="hidden text-center space-y-12 py-16">
         <div class="text-5xl">✓</div>
-        <h2 class="text-3xl font-bold uppercase tracking-widest text-slate-900">Quest Complete</h2>
-        <div class="space-y-4 px-4 text-center">
+        <h2 class="text-3xl font-bold uppercase tracking-widest">Calibration_Success</h2>
+        <div class="space-y-4 px-4">
             <button onclick="addExtraCards()" class="w-full py-6 glass-slab rounded-[32px] text-[13px] font-bold uppercase tracking-widest btn-active">+10 Data Load</button>
-            <button onclick="UI.show('menu')" class="w-full py-5 text-[12px] font-bold uppercase tracking-widest text-slate-400">Nexus Return</button>
+            <button onclick="UI.show('menu')" class="w-full py-5 text-[12px] font-bold uppercase tracking-widest text-slate-400 underline underline-offset-8">Return to Menu</button>
         </div>
     </section>
 
     <section id="screen-settings" class="hidden space-y-8 py-10">
         <button onclick="UI.show('menu')" class="text-slate-400 text-xs font-bold uppercase tracking-widest">← Return</button>
-        <h2 class="text-3xl font-light tracking-tight uppercase">System_Config</h2>
-        <button onclick="resetData()" class="w-full py-5 border border-red-200 text-red-500 rounded-3xl text-[12px] font-bold uppercase btn-active">Purge Local Memory</button>
+        <button onclick="resetData()" class="w-full py-5 border border-red-200 text-red-500 rounded-3xl text-[12px] font-bold uppercase btn-active tracking-widest">Purge Local Memory</button>
     </section>
 
     <script>
@@ -152,6 +188,7 @@
                 });
                 document.getElementById(`screen-${id}`).classList.remove('hidden');
                 state.view = id;
+                if(id === 'topics') updateTreeProgress();
             }
         };
 
@@ -164,40 +201,44 @@
                     ...card, id: card.target + card.english,
                     mastery: savedProgress[card.target + card.english] || 0
                 }));
-
-                // BUILD ACTIVE LANGUAGE LIST
-                const languages = [...new Set(state.deck.map(c => c.category))];
-                const list = document.getElementById('language-list');
-                list.innerHTML = "";
-                
-                languages.forEach(lang => {
-                    const btn = document.createElement('button');
-                    btn.className = "glass-slab p-6 rounded-[32px] text-left flex justify-between items-center btn-active";
-                    btn.innerHTML = `<span class="font-bold text-lg uppercase tracking-wider">${lang}</span> <span class="text-[9px] text-blue-500 mono">[Active]</span>`;
-                    btn.onclick = () => selectLanguage(lang);
-                    list.appendChild(btn);
-                });
-
                 UI.show('languages');
-            } catch (e) { console.error("Sync error:", e); }
+            } catch (e) { console.error("Sync error.", e); }
         }
 
         function selectLanguage(lang) {
             state.session.language = lang;
-            document.getElementById('active-lang-display').innerText = `${lang.toUpperCase()} // MODULE`;
-            
-            const topics = [...new Set(state.deck.filter(c => c.category === lang).map(c => c.topic))];
-            const list = document.getElementById('topic-list');
-            list.innerHTML = "";
-            
-            topics.forEach(t => {
-                const btn = document.createElement('button');
-                btn.className = "glass-slab p-6 rounded-[32px] text-left btn-active font-bold text-lg mb-2 w-full uppercase tracking-tighter";
-                btn.innerText = t;
-                btn.onclick = () => selectTopic(t);
-                list.appendChild(btn);
-            });
+            document.getElementById('active-lang-display').innerText = `${lang.toUpperCase()}`;
             UI.show('topics');
+        }
+
+        function updateTreeProgress() {
+            const levels = ['Beginner', 'Intermediate', 'Advanced'];
+            let canUnlockNext = true;
+
+            levels.forEach((lvl, idx) => {
+                const cards = state.deck.filter(c => c.category === state.session.language && c.topic === lvl);
+                const mastered = cards.filter(c => c.mastery === 2).length;
+                const percent = cards.length > 0 ? Math.round((mastered / cards.length) * 100) : 0;
+                
+                const label = document.getElementById(`prog-${lvl}`);
+                const btn = document.getElementById(`btn-${lvl}`); // For advanced button specifically
+                const wrapper = document.getElementById(`gate-${lvl}`); // For intermediate wrapper
+                
+                if (label) {
+                    label.innerText = `${percent}% SYNCED`;
+                    if (percent >= 70) label.className = "status-tag bg-emerald-100 text-emerald-600";
+                    else label.className = "status-tag bg-slate-200 text-slate-500";
+                }
+
+                // Handle visual locking
+                let targetEl = wrapper || btn;
+                if (targetEl) {
+                    if (canUnlockNext) targetEl.classList.remove('lock-shield');
+                    else targetEl.classList.add('lock-shield');
+                }
+                
+                canUnlockNext = (percent >= 70);
+            });
         }
 
         function selectTopic(topic) {
@@ -219,7 +260,7 @@
             let newCards = filtered.filter(c => c.mastery === 0).slice(0, state.config.newLimit);
             state.session.queue = [...learning, ...newCards].map(c => ({...c, step: 0, sessionType: c.mastery === 1 ? 'learning' : 'new'}));
             state.session.currentIndex = 0; state.session.finishedCount = 0;
-            if (state.session.queue.length === 0) return alert("All Nodes calibrated.");
+            if (state.session.queue.length === 0) return alert("System optimal.");
             UI.show('study'); updateStatusBar(); renderCard();
         }
 

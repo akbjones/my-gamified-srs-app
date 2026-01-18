@@ -31,25 +31,38 @@
     <section id="screen-languages" class="hidden space-y-8 pt-10">
         <header class="space-y-1">
             <h1 class="text-[11px] tracking-[0.4em] text-blue-600 font-bold uppercase">Detecting // Modules</h1>
-            <h2 class="text-3xl font-light tracking-tighter text-slate-900">Protocols_</h2>
+            <h2 class="text-3xl font-light tracking-tighter text-slate-900 uppercase">Protocols_</h2>
         </header>
         <div id="language-list" class="grid gap-3">
             </div>
+        
+        <div class="pt-6 space-y-2 opacity-30">
+            <div class="text-[10px] tracking-widest uppercase font-bold text-slate-400 px-2">Offline_Nodes</div>
+            <div class="glass-slab p-4 rounded-2xl text-[11px] uppercase tracking-widest flex justify-between items-center">
+                <span>French</span> <span>[Offline]</span>
+            </div>
+            <div class="glass-slab p-4 rounded-2xl text-[11px] uppercase tracking-widest flex justify-between items-center">
+                <span>German</span> <span>[Offline]</span>
+            </div>
+            <div class="glass-slab p-4 rounded-2xl text-[11px] uppercase tracking-widest flex justify-between items-center">
+                <span>Japanese</span> <span>[Offline]</span>
+            </div>
+        </div>
     </section>
 
     <section id="screen-topics" class="hidden space-y-10 pt-10">
         <header class="flex items-center gap-4">
             <button onclick="UI.show('languages')" class="text-slate-400 text-2xl">←</button>
-            <h2 id="topic-title" class="text-2xl font-light tracking-tighter text-slate-900 italic">Select Level_</h2>
+            <h2 id="topic-title" class="text-2xl font-light tracking-tighter text-slate-900 uppercase">Select_Level</h2>
         </header>
         <div id="topic-list" class="grid gap-3"></div>
     </section>
 
-    <section id="screen-menu" class="hidden space-y-10 pt-10 text-left">
+    <section id="screen-menu" class="hidden space-y-10 pt-10">
         <header class="flex justify-between items-start">
             <div class="space-y-1">
                 <h1 id="active-lang-display" class="text-[11px] tracking-[0.4em] text-blue-600 font-bold uppercase">MODULE</h1>
-                <h2 id="active-topic-display" class="text-3xl font-light tracking-tighter text-slate-900 italic">Target_</h2>
+                <h2 id="active-topic-display" class="text-3xl font-light tracking-tighter text-slate-900 uppercase italic">Target_</h2>
             </div>
             <button onclick="UI.show('settings')" class="text-2xl p-2">⚙️</button>
         </header>
@@ -57,20 +70,20 @@
         <div class="space-y-6">
             <div class="grid grid-cols-2 gap-4">
                 <div class="glass-slab p-6 rounded-[32px] border-b-2 border-slate-300">
-                    <div class="text-[10px] text-slate-500 mb-1 uppercase font-bold tracking-widest text-left">Unseen</div>
-                    <div id="stat-new" class="text-3xl font-medium text-left">0</div>
+                    <div class="text-[10px] text-slate-500 mb-1 uppercase font-bold tracking-widest">Unseen</div>
+                    <div id="stat-new" class="text-3xl font-medium">0</div>
                 </div>
                 <div class="glass-slab p-6 rounded-[32px] border-b-2 border-slate-300">
-                    <div class="text-[10px] text-slate-500 mb-1 uppercase font-bold tracking-widest text-left">Synced</div>
-                    <div id="stat-grad" class="text-3xl font-medium text-emerald-600 text-left">0</div>
+                    <div class="text-[10px] text-slate-500 mb-1 uppercase font-bold tracking-widest">Synced</div>
+                    <div id="stat-grad" class="text-3xl font-medium text-emerald-600">0</div>
                 </div>
             </div>
             <button onclick="startSession()" class="w-full py-7 bg-black text-white rounded-full text-[13px] tracking-[0.3em] font-bold btn-active shadow-xl uppercase">Initialize_Quest</button>
-            <button onclick="UI.show('languages')" class="w-full py-4 text-[11px] text-slate-400 font-bold uppercase tracking-widest text-center underline">Switch Module</button>
+            <button onclick="UI.show('languages')" class="w-full py-4 text-[11px] text-slate-400 font-bold uppercase tracking-widest text-center underline">Relink Module</button>
         </div>
     </section>
 
-    <section id="screen-study" class="hidden flex-grow flex flex-col justify-between py-4">
+    <section id="screen-study" class="hidden flex-grow flex flex-col justify-between py-4 text-center">
         <nav class="flex justify-between items-center text-[11px] font-bold uppercase tracking-widest px-1">
             <button onclick="UI.show('menu')" class="text-slate-400 hover:text-black">[ Exit ]</button>
             <div id="progress-text" class="text-black font-medium">00 // 00</div>
@@ -112,16 +125,16 @@
 
     <section id="screen-success" class="hidden text-center space-y-12 py-16">
         <div class="text-5xl">✓</div>
-        <h2 class="text-3xl font-bold uppercase tracking-widest text-slate-900 text-center">Quest Complete</h2>
-        <div class="space-y-4 px-4">
+        <h2 class="text-3xl font-bold uppercase tracking-widest text-slate-900">Quest Complete</h2>
+        <div class="space-y-4 px-4 text-center">
             <button onclick="addExtraCards()" class="w-full py-6 glass-slab rounded-[32px] text-[13px] font-bold uppercase tracking-widest btn-active">+10 Data Load</button>
-            <button onclick="UI.show('menu')" class="w-full py-5 text-[12px] font-bold uppercase tracking-widest text-slate-400">Return to Menu</button>
+            <button onclick="UI.show('menu')" class="w-full py-5 text-[12px] font-bold uppercase tracking-widest text-slate-400">Nexus Return</button>
         </div>
     </section>
 
     <section id="screen-settings" class="hidden space-y-8 py-10">
         <button onclick="UI.show('menu')" class="text-slate-400 text-xs font-bold uppercase tracking-widest">← Return</button>
-        <h2 class="text-3xl font-light tracking-tight">System Configuration</h2>
+        <h2 class="text-3xl font-light tracking-tight uppercase">System_Config</h2>
         <button onclick="resetData()" class="w-full py-5 border border-red-200 text-red-500 rounded-3xl text-[12px] font-bold uppercase btn-active">Purge Local Memory</button>
     </section>
 
@@ -152,15 +165,15 @@
                     mastery: savedProgress[card.target + card.english] || 0
                 }));
 
-                // AUTO-DETECT LANGUAGES FROM JSON
+                // BUILD ACTIVE LANGUAGE LIST
                 const languages = [...new Set(state.deck.map(c => c.category))];
                 const list = document.getElementById('language-list');
                 list.innerHTML = "";
                 
                 languages.forEach(lang => {
                     const btn = document.createElement('button');
-                    btn.className = "glass-slab p-6 rounded-[32px] text-left flex items-center btn-active";
-                    btn.innerHTML = `<span class="font-bold text-lg">${lang}</span>`;
+                    btn.className = "glass-slab p-6 rounded-[32px] text-left flex justify-between items-center btn-active";
+                    btn.innerHTML = `<span class="font-bold text-lg uppercase tracking-wider">${lang}</span> <span class="text-[9px] text-blue-500 mono">[Active]</span>`;
                     btn.onclick = () => selectLanguage(lang);
                     list.appendChild(btn);
                 });
@@ -173,14 +186,13 @@
             state.session.language = lang;
             document.getElementById('active-lang-display').innerText = `${lang.toUpperCase()} // MODULE`;
             
-            // AUTO-DETECT TOPICS FOR THIS LANGUAGE
             const topics = [...new Set(state.deck.filter(c => c.category === lang).map(c => c.topic))];
             const list = document.getElementById('topic-list');
             list.innerHTML = "";
             
             topics.forEach(t => {
                 const btn = document.createElement('button');
-                btn.className = "glass-slab p-6 rounded-[32px] text-left btn-active font-bold text-lg mb-2 w-full";
+                btn.className = "glass-slab p-6 rounded-[32px] text-left btn-active font-bold text-lg mb-2 w-full uppercase tracking-tighter";
                 btn.innerText = t;
                 btn.onclick = () => selectTopic(t);
                 list.appendChild(btn);
@@ -207,7 +219,7 @@
             let newCards = filtered.filter(c => c.mastery === 0).slice(0, state.config.newLimit);
             state.session.queue = [...learning, ...newCards].map(c => ({...c, step: 0, sessionType: c.mastery === 1 ? 'learning' : 'new'}));
             state.session.currentIndex = 0; state.session.finishedCount = 0;
-            if (state.session.queue.length === 0) return alert("Module Calibration complete.");
+            if (state.session.queue.length === 0) return alert("All Nodes calibrated.");
             UI.show('study'); updateStatusBar(); renderCard();
         }
 

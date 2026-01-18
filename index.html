@@ -13,7 +13,7 @@
             color: #1a1a1a; 
             font-family: 'JetBrains Mono', monospace;
             -webkit-font-smoothing: antialiased;
-            font-size: 16px; /* Increased base font size */
+            font-size: 16px;
         }
         .glass-slab { 
             background: rgba(255, 255, 255, 0.9);
@@ -21,10 +21,7 @@
             border: 1px solid #ffffff;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04), inset 0 0 0 1px rgba(255,255,255,1);
         }
-        .card-inner {
-            border: 1px solid #d1d5db;
-            transition: all 0.3s ease;
-        }
+        .card-inner { border: 1px solid #d1d5db; transition: all 0.3s ease; }
         .btn-active:active { transform: scale(0.96); }
         #info-panel { background: rgba(0,0,0,0.8); backdrop-filter: blur(8px); }
     </style>
@@ -42,11 +39,40 @@
         </div>
     </div>
 
+    <section id="screen-languages" class="hidden space-y-10 pt-10">
+        <header class="space-y-1">
+            <h1 class="text-[11px] tracking-[0.4em] text-blue-600 font-bold uppercase">Select // Module</h1>
+            <h2 class="text-3xl font-light tracking-tighter text-slate-900">Protocols_</h2>
+        </header>
+        <div class="grid gap-4">
+            <button onclick="selectLanguage('Hindi', '🇮🇳')" class="glass-slab p-6 rounded-[32px] text-left flex items-center btn-active">
+                <span class="text-2xl mr-4">🇮🇳</span>
+                <span class="font-bold text-lg">Hindi</span>
+            </button>
+            <button onclick="selectLanguage('Russian', '🇷🇺')" class="glass-slab p-6 rounded-[32px] text-left flex items-center btn-active">
+                <span class="text-2xl mr-4">🇷🇺</span>
+                <span class="font-bold text-lg">Russian</span>
+            </button>
+            <button onclick="selectLanguage('Italian', '🇮🇹')" class="glass-slab p-6 rounded-[32px] text-left flex items-center btn-active">
+                <span class="text-2xl mr-4">🇮🇹</span>
+                <span class="font-bold text-lg">Italian</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="screen-topics" class="hidden space-y-10 pt-10">
+        <header class="flex items-center gap-4">
+            <button onclick="UI.show('languages')" class="text-slate-400 text-2xl">←</button>
+            <h2 id="topic-title" class="text-2xl font-light tracking-tighter">Select Level</h2>
+        </header>
+        <div id="topic-list" class="grid gap-3"></div>
+    </section>
+
     <section id="screen-menu" class="hidden space-y-10 pt-10">
         <header class="flex justify-between items-start">
             <div class="space-y-1">
-                <h1 class="text-[11px] tracking-[0.4em] text-blue-600 font-bold uppercase">System // 01</h1>
-                <h2 class="text-4xl font-light tracking-tighter">Quest<span class="animate-pulse text-blue-500">_</span></h2>
+                <h1 id="active-lang-display" class="text-[11px] tracking-[0.4em] text-blue-600 font-bold uppercase">HINDI // 🇮🇳</h1>
+                <h2 id="active-topic-display" class="text-3xl font-light tracking-tighter text-slate-900 italic">Beginner_</h2>
             </div>
             <button onclick="UI.show('settings')" class="text-2xl p-2">⚙️</button>
         </header>
@@ -62,10 +88,8 @@
                     <div id="stat-grad" class="text-3xl font-medium text-emerald-600">0</div>
                 </div>
             </div>
-
-            <button onclick="startSession()" class="w-full py-7 bg-black text-white rounded-full text-[13px] tracking-[0.3em] font-bold btn-active shadow-xl uppercase">
-                Initialize_Quest
-            </button>
+            <button onclick="startSession()" class="w-full py-7 bg-black text-white rounded-full text-[13px] tracking-[0.3em] font-bold btn-active shadow-xl uppercase">Initialize_Quest</button>
+            <button onclick="UI.show('languages')" class="w-full py-4 text-[10px] text-slate-400 font-bold uppercase tracking-widest text-center underline">Change Module</button>
         </div>
     </section>
 
@@ -77,9 +101,9 @@
         </nav>
 
         <div id="flashcard" onclick="flipCard()" class="glass-slab card-inner rounded-[48px] min-h-[440px] flex flex-col items-center justify-center p-10 cursor-pointer text-center">
-            <p id="text-target" class="text-4xl font-bold tracking-tight text-slate-900"></p>
+            <p id="text-target" class="text-4xl font-bold tracking-tight text-slate-900 leading-tight"></p>
             <div id="card-back" class="hidden mt-10 pt-10 border-t border-slate-200 w-full">
-                <p id="text-english" class="text-2xl text-slate-700 font-medium"></p>
+                <p id="text-english" class="text-2xl text-slate-700 font-medium leading-snug"></p>
             </div>
         </div>
         
@@ -111,7 +135,7 @@
 
     <section id="screen-success" class="hidden text-center space-y-12 py-16">
         <div class="text-5xl">✓</div>
-        <h2 class="text-3xl font-bold uppercase tracking-widest text-slate-900">Quest Complete</h2>
+        <h2 class="text-3xl font-bold uppercase tracking-widest text-slate-900">Goal Calibrated</h2>
         <div class="space-y-4 px-4">
             <button onclick="addExtraCards()" class="w-full py-6 glass-slab rounded-[32px] text-[13px] font-bold uppercase tracking-widest btn-active">+10 Data Load</button>
             <button onclick="UI.show('menu')" class="w-full py-5 text-[12px] font-bold uppercase tracking-widest text-slate-400">Return to Menu</button>
@@ -126,15 +150,19 @@
 
     <script>
         let state = {
-            deck: [],
-            view: 'menu',
-            config: { newLimit: 20 },
-            session: { queue: [], currentIndex: 0, finishedCount: 0, isFlipped: false }
+            deck: [], view: 'languages', config: { newLimit: 20 },
+            session: { queue: [], currentIndex: 0, finishedCount: 0, isFlipped: false, language: '', topic: '' }
+        };
+
+        const topicMap = {
+            "Hindi": ["Beginner", "Intermediate", "Advanced"],
+            "Russian": ["Beginner", "Intermediate", "Advanced"],
+            "Italian": ["Beginner", "Intermediate", "Advanced"]
         };
 
         const UI = {
             show: (id) => {
-                ['menu', 'study', 'settings', 'success'].forEach(s => {
+                ['languages', 'topics', 'menu', 'study', 'settings', 'success'].forEach(s => {
                     const el = document.getElementById(`screen-${s}`);
                     if(el) el.classList.add('hidden');
                 });
@@ -142,19 +170,6 @@
                 state.view = id;
             }
         };
-
-        window.addEventListener('keydown', (e) => {
-            if (state.view !== 'study') return;
-            if (e.code === 'Space' && !state.session.isFlipped) { e.preventDefault(); flipCard(); }
-            if (state.session.isFlipped) {
-                if (e.key === '1') handleAnswer('again');
-                if (e.key === '2') handleAnswer('hard');
-                if (e.key === '3') handleAnswer('good');
-                if (e.key === '4') handleAnswer('easy');
-            }
-        });
-
-        function toggleInfo() { document.getElementById('info-panel').classList.toggle('hidden'); }
 
         async function initApp() {
             try {
@@ -165,21 +180,45 @@
                     ...card, id: card.target + card.english,
                     mastery: savedProgress[card.target + card.english] || 0
                 }));
-                updateMenuStats(); UI.show('menu');
+                UI.show('languages');
             } catch (e) { console.error("Sync error."); }
         }
 
+        function selectLanguage(lang, emoji) {
+            state.session.language = lang;
+            document.getElementById('active-lang-display').innerText = `${lang.toUpperCase()} // ${emoji}`;
+            const list = document.getElementById('topic-list');
+            list.innerHTML = "";
+            topicMap[lang].forEach(t => {
+                const btn = document.createElement('button');
+                btn.className = "glass-slab p-6 rounded-[32px] text-left btn-active font-bold text-lg mb-2";
+                btn.innerText = t;
+                btn.onclick = () => selectTopic(t);
+                list.appendChild(btn);
+            });
+            UI.show('topics');
+        }
+
+        function selectTopic(topic) {
+            state.session.topic = topic;
+            document.getElementById('active-topic-display').innerText = `${topic}_`;
+            updateMenuStats();
+            UI.show('menu');
+        }
+
         function updateMenuStats() {
-            document.getElementById('stat-new').innerText = state.deck.filter(c => c.mastery === 0).length;
-            document.getElementById('stat-grad').innerText = state.deck.filter(c => c.mastery === 2).length;
+            const currentDeck = state.deck.filter(c => c.category === state.session.language && c.topic === state.session.topic);
+            document.getElementById('stat-new').innerText = currentDeck.filter(c => c.mastery === 0).length;
+            document.getElementById('stat-grad').innerText = currentDeck.filter(c => c.mastery === 2).length;
         }
 
         function startSession() {
-            let learning = state.deck.filter(c => c.mastery === 1);
-            let newCards = state.deck.filter(c => c.mastery === 0).slice(0, state.config.newLimit);
+            let filtered = state.deck.filter(c => c.category === state.session.language && c.topic === state.session.topic);
+            let learning = filtered.filter(c => c.mastery === 1);
+            let newCards = filtered.filter(c => c.mastery === 0).slice(0, state.config.newLimit);
             state.session.queue = [...learning, ...newCards].map(c => ({...c, step: 0, sessionType: c.mastery === 1 ? 'learning' : 'new'}));
             state.session.currentIndex = 0; state.session.finishedCount = 0;
-            if (state.session.queue.length === 0) return alert("System fully calibrated.");
+            if (state.session.queue.length === 0) return alert("All Nodes Calibrated.");
             UI.show('study'); updateStatusBar(); renderCard();
         }
 
@@ -241,12 +280,18 @@
             document.getElementById('progress-text').innerText = `${state.session.finishedCount} // ${state.session.queue.length}`;
         }
 
-        function addExtraCards() {
-            let nextSet = state.deck.filter(c => c.mastery === 0).slice(0, 10);
-            state.session.queue = [...state.session.queue, ...nextSet.map(c => ({...c, type: 'new', step: 0, sessionType: 'new'}))];
-            UI.show('study'); updateStatusBar(); renderCard();
-        }
+        window.addEventListener('keydown', (e) => {
+            if (state.view !== 'study') return;
+            if (e.code === 'Space' && !state.session.isFlipped) { e.preventDefault(); flipCard(); }
+            if (state.session.isFlipped) {
+                if (e.key === '1') handleAnswer('again');
+                if (e.key === '2') handleAnswer('hard');
+                if (e.key === '3') handleAnswer('good');
+                if (e.key === '4') handleAnswer('easy');
+            }
+        });
 
+        function toggleInfo() { document.getElementById('info-panel').classList.toggle('hidden'); }
         function resetData() { localStorage.removeItem('quest_progress'); location.reload(); }
         initApp();
     </script>

@@ -27,8 +27,8 @@
                 <span class="font-bold text-xl">Spanish</span>
             </button>
             <button class="p-6 bg-slate-800/50 rounded-3xl text-left opacity-50 cursor-not-allowed">
-                <span class="text-3xl mr-3">🇫🇷</span>
-                <span class="font-bold text-xl">French (Coming Soon)</span>
+                <span class="text-3xl mr-3">🇷🇺</span>
+                <span class="font-bold text-xl">Russian (Coming Soon)</span>
             </button>
         </div>
     </section>
@@ -50,10 +50,6 @@
                 <div class="font-bold text-xl text-blue-400">Targeted Study</div>
                 <div class="text-xs text-slate-400">Focused life themes</div>
             </button>
-            <button onclick="showTopics('Vocabulary Sprints')" class="p-6 bg-slate-800 rounded-3xl border-b-4 border-purple-600 text-left active:translate-y-1">
-                <div class="font-bold text-xl text-purple-400">Vocabulary Sprints</div>
-                <div class="text-xs text-slate-400">Situational practice</div>
-            </button>
         </div>
     </section>
 
@@ -69,6 +65,7 @@
         <div class="w-full bg-slate-800 h-1 rounded-full overflow-hidden">
             <div id="progress-bar-fill" class="bg-blue-500 h-full w-0 transition-all duration-500"></div>
         </div>
+
         <div id="flashcard" onclick="flipCard()" class="bg-slate-800 rounded-3xl p-10 min-h-[350px] flex flex-col items-center justify-center text-center shadow-2xl border border-slate-700 cursor-pointer active:scale-95 transition-transform">
             <p id="text-target" class="text-3xl font-bold"></p>
             <div id="card-back" class="hidden mt-6 pt-6 border-t border-slate-700 w-full">
@@ -77,16 +74,28 @@
         </div>
         
         <div id="study-controls" class="hidden grid grid-cols-4 gap-2">
-            <button onclick="handleAnswer('again')" class="py-4 bg-red-900/30 text-red-400 rounded-xl font-bold border border-red-900/50 text-[10px]">AGAIN</button>
-            <button onclick="handleAnswer('hard')" class="py-4 bg-orange-900/30 text-orange-400 rounded-xl font-bold border border-orange-900/50 text-[10px]">HARD</button>
-            <button onclick="handleAnswer('good')" class="py-4 bg-green-900/30 text-green-400 rounded-xl font-bold border border-green-900/50 text-[10px]">GOOD</button>
-            <button onclick="handleAnswer('easy')" class="py-4 bg-blue-900/30 text-blue-400 rounded-xl font-bold border border-blue-900/50 text-[10px]">EASY</button>
+            <div class="flex flex-col gap-1">
+                <span class="text-[9px] text-center text-slate-500 uppercase font-bold">1m</span>
+                <button onclick="handleAnswer('again')" class="py-4 bg-red-900/30 text-red-400 rounded-xl font-bold border border-red-900/50 text-[10px]">AGAIN</button>
+            </div>
+            <div class="flex flex-col gap-1">
+                <span class="text-[9px] text-center text-slate-500 uppercase font-bold">6m</span>
+                <button onclick="handleAnswer('hard')" class="py-4 bg-orange-900/30 text-orange-400 rounded-xl font-bold border border-orange-900/50 text-[10px]">HARD</button>
+            </div>
+            <div class="flex flex-col gap-1">
+                <span id="label-good" class="text-[9px] text-center text-slate-500 uppercase font-bold">10m</span>
+                <button onclick="handleAnswer('good')" class="py-4 bg-green-900/30 text-green-400 rounded-xl font-bold border border-green-900/50 text-[10px]">GOOD</button>
+            </div>
+            <div class="flex flex-col gap-1">
+                <span class="text-[9px] text-center text-slate-500 uppercase font-bold">4d</span>
+                <button onclick="handleAnswer('easy')" class="py-4 bg-blue-900/30 text-blue-400 rounded-xl font-bold border border-blue-900/50 text-[10px]">EASY</button>
+            </div>
         </div>
 
         <div class="flex justify-center gap-8 text-xs font-bold pt-4 border-t border-slate-800">
-            <div class="text-blue-500">NEW: <span id="count-new">0</span></div>
-            <div class="text-red-500">LEARN: <span id="count-learn">0</span></div>
-            <div id="status-review" class="text-green-500">DONE: <span id="count-done">0</span></div>
+            <div class="flex flex-col items-center"><span id="count-new" class="text-blue-500 text-lg">0</span><span class="text-slate-500 text-[10px]">NEW</span></div>
+            <div class="flex flex-col items-center"><span id="count-learn" class="text-red-500 text-lg">0</span><span class="text-slate-500 text-[10px]">LEARN</span></div>
+            <div class="flex flex-col items-center"><span id="count-done" class="text-green-500 text-lg">0</span><span class="text-slate-500 text-[10px]">DONE</span></div>
         </div>
     </section>
 
@@ -107,18 +116,14 @@
 
         const topicMap = {
             "Base Curriculum": ["Beginner", "Beginner-Intermediate", "Intermediate", "Advanced-Intermediate", "Advanced", "Professional"],
-            "Targeted Study": ["Business", "Travel", "Family"],
-            "Vocabulary Sprints": ["Ordering at a restaurant", "Asking for directions", "Opening a bank account"]
+            "Targeted Study": ["Business", "Travel", "Family"]
         };
 
         async function initApp() {
             try {
                 const response = await fetch('deck.json');
-                if (!response.ok) throw new Error();
                 state.deck = await response.json();
-            } catch (e) {
-                console.error("Could not load deck.json.");
-            }
+            } catch (e) { console.error("Load failed."); }
         }
 
         const UI = {
@@ -140,20 +145,20 @@
             topicMap[category].forEach(topic => {
                 const btn = document.createElement('button');
                 btn.className = "p-4 bg-slate-800 rounded-2xl border-b-4 border-slate-900 text-left active:translate-y-1 transition-all";
-                btn.innerHTML = `<div class="font-bold text-slate-200">${topic}</div><div class="text-[10px] text-slate-500 tracking-widest mt-1">START QUEST</div>`;
+                btn.innerHTML = `<div class="font-bold text-slate-200">${topic}</div><div class="text-[10px] text-slate-500 uppercase tracking-widest mt-1">Begin Quest</div>`;
                 btn.onclick = () => startSession(category, topic);
                 list.appendChild(btn);
             });
             UI.show('topics');
         }
 
-        /** UPDATED SESSION LOGIC **/
+        /** START SESSION **/
         function startSession(category, topic) {
             const filtered = state.deck.filter(c => c.category === category && c.topic === topic);
             if (filtered.length === 0) return alert("No cards found!");
 
-            // Initialize the session queue
-            state.session.queue = filtered.map(c => ({...c, type: 'new'}));
+            // type: 'new', 'learning' | step: 0 (new), 1 (seen once)
+            state.session.queue = filtered.map(c => ({...c, type: 'new', step: 0}));
             state.session.currentIndex = 0;
             state.session.finishedCount = 0;
             
@@ -163,19 +168,13 @@
         }
 
         function updateStatusBar() {
-            const total = state.session.queue.length;
-            const currentIdx = state.session.currentIndex;
-            
-            // New: Cards we haven't reached yet
-            const newCards = state.session.queue.slice(currentIdx).filter(c => c.type === 'new').length;
-            // Learning: Cards shoved to the back because of "Again" or "Hard"
-            const learnCards = state.session.queue.slice(currentIdx).filter(c => c.type === 'learning').length;
-            
-            document.getElementById('count-new').innerText = newCards;
-            document.getElementById('count-learn').innerText = learnCards;
+            const current = state.session.queue.slice(state.session.currentIndex);
+            document.getElementById('count-new').innerText = current.filter(c => c.type === 'new').length;
+            document.getElementById('count-learn').innerText = current.filter(c => c.type === 'learning').length;
             document.getElementById('count-done').innerText = state.session.finishedCount;
 
-            const progress = (state.session.finishedCount / (state.session.finishedCount + newCards + learnCards)) * 100;
+            const totalInitial = state.session.queue.length; // Approximate
+            const progress = (state.session.finishedCount / (state.session.finishedCount + current.length)) * 100;
             document.getElementById('progress-bar-fill').style.width = `${progress}%`;
         }
 
@@ -187,9 +186,10 @@
             document.getElementById('card-back').classList.add('hidden');
             document.getElementById('study-controls').classList.add('hidden');
             
-            if(card.audio) {
-                new Audio(`quest-audio/${card.audio}`).play().catch(() => {});
-            }
+            // Show "Grad" if card is on step 1
+            document.getElementById('label-good').innerText = (card.step === 1) ? "1d" : "10m";
+
+            if(card.audio) { new Audio(`quest-audio/${card.audio}`).play().catch(() => {}); }
         }
 
         function flipCard() {
@@ -198,24 +198,37 @@
             document.getElementById('study-controls').classList.remove('hidden');
         }
 
+        /** THE MASTER ALGORITHM **/
         function handleAnswer(rating) {
             const card = state.session.queue[state.session.currentIndex];
 
             if (rating === 'again') {
-                // Add to the very end of the queue
-                state.session.queue.push({...card, type: 'learning'});
-            } else if (rating === 'hard') {
-                // Add it 3 positions ahead
+                card.step = 0;
+                card.type = 'learning';
+                state.session.queue.push({...card});
+            } 
+            else if (rating === 'hard') {
                 state.session.queue.splice(state.session.currentIndex + 4, 0, {...card, type: 'learning'});
-            } else {
-                // Good or Easy moves it to "Finished"
+            } 
+            else if (rating === 'good') {
+                if (card.step === 0) {
+                    card.step = 1;
+                    card.type = 'learning';
+                    // Re-insert 8 cards away
+                    const pos = Math.min(state.session.currentIndex + 8, state.session.queue.length);
+                    state.session.queue.splice(pos, 0, {...card});
+                } else {
+                    state.session.finishedCount++;
+                }
+            } 
+            else if (rating === 'easy') {
                 state.session.finishedCount++;
             }
 
             state.session.currentIndex++;
             
             if (state.session.currentIndex >= state.session.queue.length) {
-                alert("Quest Complete!");
+                alert("Session Complete! All cards mastered.");
                 UI.show('menu');
             } else {
                 updateStatusBar();

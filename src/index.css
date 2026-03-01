@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* Dark brutalist base */
+body {
+  background-color: #0f172a;
+  color: #e2e8f0;
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes nav-flash {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
+.nav-flash {
+  animation: nav-flash 1.5s ease-in-out infinite;
+}
+
+/* TopicMap trunk lines */
+.trunk-line {
+  width: 6px;
+  background: #334155;
+}
+.trunk-line.active {
+  background: #e2e8f0;
+}
+
+/* TopicMap progress rail */
+.progress-rail {
+  width: 100%;
+  height: 8px;
+  background: #1e293b;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: #3b82f6;
+  transition: width 0.5s ease;
+}
+
+/* Module blocks */
+.module-block {
+  background: #1e293b;
+  border: 3px solid #334155;
+  transition: all 0.15s;
+}
+.module-block.active {
+  border-color: #e2e8f0;
+  box-shadow: 0 8px 0 #0f172a;
+  cursor: pointer;
+}
+.module-block.active:hover {
+  transform: translateY(4px);
+  box-shadow: 0 4px 0 #0f172a;
+}
+.module-block.active:active {
+  transform: translateY(8px);
+  box-shadow: none;
+}
+.module-block.locked {
+  opacity: 0.4;
+  border-color: #334155;
+  cursor: not-allowed;
+}
+
+/* Glass slab (study card) */
+.glass-slab {
+  background: #1e293b;
+}
+
+/* Grid viewport for TopicMap panning */
+.grid-viewport {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Button large style */
+.btn-large {
+  letter-spacing: 0.2em;
+}

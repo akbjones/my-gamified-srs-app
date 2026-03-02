@@ -1,95 +1,152 @@
 @import "tailwindcss";
 
-/* Dark brutalist base */
+/* === BASE === */
 body {
   background-color: #0f172a;
   color: #e2e8f0;
   font-family: 'JetBrains Mono', monospace;
   margin: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Animations */
+/* === ANIMATIONS === */
 @keyframes fade-in {
-  from { opacity: 0; transform: translateY(8px); }
+  from { opacity: 0; transform: translateY(6px); }
   to { opacity: 1; transform: translateY(0); }
 }
 @keyframes slide-up {
-  from { opacity: 0; transform: translateY(24px); }
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
-@keyframes nav-flash {
-  0%, 100% { opacity: 0.8; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.15); }
+@keyframes xp-pop {
+  0% { opacity: 1; transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.2); }
+  100% { opacity: 0; transform: translateY(-40px) scale(0.8); }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
+  50% { box-shadow: 0 0 20px 4px rgba(99, 102, 241, 0.3); }
 }
 
-.animate-fade-in {
-  animation: fade-in 0.3s ease-out;
-}
-.animate-slide-up {
-  animation: slide-up 0.3s ease-out;
-}
-.nav-flash {
-  animation: nav-flash 1.5s ease-in-out infinite;
-}
+.animate-fade-in { animation: fade-in 0.3s ease-out; }
+.animate-slide-up { animation: slide-up 0.3s ease-out; }
+.animate-xp-pop { animation: xp-pop 0.8s ease-out forwards; }
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
 
-/* TopicMap trunk lines */
+/* === TOPIC MAP === */
 .trunk-line {
-  width: 6px;
+  width: 4px;
   background: #334155;
-}
-.trunk-line.active {
-  background: #e2e8f0;
+  margin: 0 auto;
 }
 
-/* TopicMap progress rail */
 .progress-rail {
   width: 100%;
-  height: 8px;
-  background: #1e293b;
+  height: 6px;
+  background: #0f172a;
+  border-radius: 3px;
   overflow: hidden;
 }
 .progress-fill {
   height: 100%;
-  background: #3b82f6;
+  border-radius: 3px;
   transition: width 0.5s ease;
 }
 
-/* Module blocks */
+/* Module node blocks */
 .module-block {
   background: #1e293b;
-  border: 3px solid #334155;
-  transition: all 0.15s;
+  border: 2px solid #334155;
+  border-radius: 12px;
+  transition: all 0.15s ease;
 }
 .module-block.active {
-  border-color: #e2e8f0;
-  box-shadow: 0 8px 0 #0f172a;
+  border-color: #475569;
   cursor: pointer;
 }
 .module-block.active:hover {
-  transform: translateY(4px);
-  box-shadow: 0 4px 0 #0f172a;
+  border-color: #64748b;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 .module-block.active:active {
-  transform: translateY(8px);
+  transform: translateY(0);
   box-shadow: none;
 }
 .module-block.locked {
-  opacity: 0.4;
-  border-color: #334155;
+  opacity: 0.35;
+  border-color: #1e293b;
   cursor: not-allowed;
 }
 
-/* Glass slab (study card) */
-.glass-slab {
-  background: #1e293b;
+/* Study card */
+.study-card {
+  background: linear-gradient(145deg, #1e293b 0%, #172033 100%);
+  border: 2px solid #334155;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+.study-card:hover {
+  border-color: #475569;
 }
 
-/* Grid viewport for TopicMap panning */
+/* Grid viewport for TopicMap scrolling */
 .grid-viewport {
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-/* Button large style */
-.btn-large {
-  letter-spacing: 0.2em;
+/* === SHARED COMPONENTS === */
+.btn-primary {
+  background: #e2e8f0;
+  color: #0f172a;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 13px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+.btn-primary:hover { background: #f1f5f9; transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(1px); }
+.btn-primary:disabled {
+  background: #334155;
+  color: #64748b;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #64748b;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 11px;
+  border: none;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.btn-ghost:hover { color: #94a3b8; }
+
+/* Stat card */
+.stat-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* Badge pill */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }

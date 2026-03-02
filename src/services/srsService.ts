@@ -3,6 +3,14 @@ import { saveMasteryMap } from './storageService';
 
 const MINUTE = 60 * 1000;
 const DAY = 24 * 60 * 60 * 1000;
+const RETENTION_THRESHOLD = 21 * DAY; // 21 days = "retained"
+
+/** Retention: % of cards with interval >= 21 days (truly known) */
+export const getRetention = (cards: QuestCard[]): number => {
+  if (cards.length === 0) return 0;
+  const retained = cards.filter(c => (c.interval || 0) >= RETENTION_THRESHOLD).length;
+  return Math.round((retained / cards.length) * 100);
+};
 
 export const saveCardProgress = (card: QuestCard, masteryMap: MasteryMap): MasteryMap => {
   const newMap = {

@@ -10,6 +10,13 @@ interface StudySessionProps {
   topicCards: QuestCard[];
 }
 
+const GRADE_CONFIG = {
+  AGAIN: { color: 'text-red-400', bg: 'hover:bg-red-500/10 active:bg-red-500/20', border: 'border-red-500/20' },
+  HARD:  { color: 'text-orange-400', bg: 'hover:bg-orange-500/10 active:bg-orange-500/20', border: 'border-orange-500/20' },
+  GOOD:  { color: 'text-emerald-400', bg: 'hover:bg-emerald-500/10 active:bg-emerald-500/20', border: 'border-emerald-500/20' },
+  EASY:  { color: 'text-blue-400', bg: 'hover:bg-blue-500/10 active:bg-blue-500/20', border: 'border-blue-500/20' },
+} as const;
+
 const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort, topicCards = [] }) => {
   const [showInfo, setShowInfo] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
@@ -17,14 +24,16 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
 
   if (session.currentIndex >= session.queue.length) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[50vh] space-y-6 animate-fade-in">
-        <div className="text-4xl">✅</div>
-        <h2 className="text-2xl font-black text-slate-100 uppercase">Session Complete</h2>
-        <button
-          onClick={onAbort}
-          className="px-8 py-3 bg-slate-100 text-slate-900 font-bold"
-        >
-          Return
+      <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-6 animate-fade-in">
+        <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-2xl">
+          ✓
+        </div>
+        <div className="text-center">
+          <h2 className="text-2xl font-black text-slate-100 mb-2">Session Complete</h2>
+          <p className="text-sm text-slate-500">{session.finishedCount} cards reviewed</p>
+        </div>
+        <button onClick={onAbort} className="px-8 py-3 btn-primary rounded-xl">
+          Continue
         </button>
       </div>
     );
@@ -62,81 +71,86 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
       if (card.mastery === 1 && card.step === 0) return '10m';
       return '1d';
     }
-    return '4d'; // EASY
+    return '4d';
   };
 
   return (
     <>
+      {/* Info modal */}
       {showInfo && (
         <div
           onClick={() => setShowInfo(false)}
           className="fixed inset-0 z-50 flex items-center justify-center p-8 bg-slate-900/90 backdrop-blur-sm animate-fade-in"
         >
-          <div className="bg-slate-800 p-8 border-2 border-slate-600 text-sm leading-8 text-slate-300 w-full max-w-xs">
-            <h3 className="font-extrabold text-slate-100 border-b-2 border-slate-600 pb-4 mb-4 uppercase text-lg">
-              Logic Protocol
+          <div className="stat-card p-6 text-sm leading-8 text-slate-300 w-full max-w-xs">
+            <h3 className="font-black text-slate-100 border-b border-slate-700 pb-3 mb-4 text-base">
+              Grading Guide
             </h3>
-            <p><span className="text-red-500 font-black">[1] AGAIN</span><br />Fail step. Restart learn.</p>
-            <p><span className="text-orange-500 font-black">[2] HARD</span><br />Repeat step. No advance.</p>
-            <p><span className="text-emerald-500 font-black">[3] GOOD</span><br />Advance step (1m→10m→Grad).</p>
-            <p><span className="text-blue-500 font-black">[4] EASY</span><br />Instant graduation (4d).</p>
-            <div className="mt-6 pt-4 border-t-2 border-slate-700 text-center font-bold uppercase tracking-widest text-slate-500">
-              Tap to close
+            <p><span className="text-red-400 font-black">Again</span> — Didn't know it. Restart.</p>
+            <p><span className="text-orange-400 font-black">Hard</span> — Struggled. Repeat soon.</p>
+            <p><span className="text-emerald-400 font-black">Good</span> — Got it. Advance step.</p>
+            <p><span className="text-blue-400 font-black">Easy</span> — Too easy. Skip ahead.</p>
+            <div className="mt-5 pt-3 border-t border-slate-700 text-center text-xs text-slate-500 font-bold">
+              Tap anywhere to close
             </div>
           </div>
         </div>
       )}
 
-      <section className="flex-grow flex flex-col justify-between py-2 text-center h-[calc(100vh-2rem)]">
-        <nav className="flex flex-col gap-2 px-1">
+      <section className="flex flex-col justify-between py-2 text-center h-[calc(100vh-2rem)]">
+        {/* Top bar */}
+        <nav className="flex flex-col gap-2">
           <div className="flex justify-between items-center">
-            <button
-              onClick={onAbort}
-              className="text-[10px] font-black uppercase tracking-widest text-slate-500 hover:text-slate-300"
-            >
-              [ Abort ]
-            </button>
-            <div className="flex items-center gap-3 bg-slate-800 px-3 py-1 border border-slate-700">
-              <span className="text-blue-500 font-black text-xs">{countNew}</span>
-              <span className="text-red-500 font-black text-xs">{countLearn}</span>
-              <span className="text-emerald-500 font-black text-xs">{countReview}</span>
+            <button onClick={onAbort} className="btn-ghost text-[10px]">← Exit</button>
+
+            <div className="flex items-center gap-4 stat-card py-1.5 px-4">
+              <div className="text-center">
+                <div className="text-sm font-black text-slate-300">{countNew}</div>
+                <div className="text-[7px] font-bold text-slate-500 uppercase tracking-wider">new</div>
+              </div>
+              <div className="text-center">
+                <div className="text-sm font-black text-slate-300">{countLearn}</div>
+                <div className="text-[7px] font-bold text-slate-500 uppercase tracking-wider">learn</div>
+              </div>
+              <div className="text-center">
+                <div className="text-sm font-black text-slate-300">{countReview}</div>
+                <div className="text-[7px] font-bold text-slate-500 uppercase tracking-wider">review</div>
+              </div>
             </div>
+
             <button
               onClick={() => setShowInfo(true)}
-              className="w-6 h-6 border border-slate-600 font-black text-[10px] text-slate-500 hover:text-slate-300"
+              className="w-7 h-7 rounded-lg border border-slate-700 text-[10px] font-bold text-slate-500 hover:text-slate-300 hover:border-slate-500 transition-colors"
             >
               ?
             </button>
           </div>
 
-          <div className="w-full">
-            <div className="flex justify-between text-[8px] font-black text-slate-500 uppercase tracking-widest mb-1 px-1">
-              <span>Topic Mastery</span>
+          <div>
+            <div className="flex justify-between text-[8px] font-bold text-slate-500 uppercase tracking-widest mb-1 px-0.5">
+              <span>Progress</span>
               <span>{Math.round(topicProgress)}%</span>
             </div>
-            <div className="h-1.5 w-full bg-slate-800 overflow-hidden border border-slate-700">
-              <div
-                className="h-full bg-blue-500 transition-all duration-700"
-                style={{ width: `${topicProgress}%` }}
-              />
+            <div className="progress-rail">
+              <div className="progress-fill bg-blue-500" style={{ width: `${topicProgress}%` }} />
             </div>
           </div>
         </nav>
 
+        {/* Flashcard */}
         <div
           onClick={!isFlipped ? handleFlip : undefined}
-          className="glass-slab flex-1 min-h-[250px] flex flex-col items-center justify-center p-6 cursor-pointer border-2 border-slate-600 transition-all my-4 relative hover:border-slate-500"
-          style={{ boxShadow: '0 6px 0 #0f172a' }}
+          className="study-card flex-1 min-h-[250px] flex flex-col items-center justify-center p-6 cursor-pointer my-4 relative"
         >
           <button
             onClick={handlePlayAudio}
-            className={`absolute top-4 right-4 p-2 border-2 transition-all z-20
-              ${isPlaying
-                ? 'bg-blue-600 border-blue-600 text-white animate-pulse'
-                : 'border-slate-600 text-slate-500 hover:text-blue-500 hover:border-blue-500 bg-slate-800'
-              }`}
+            className={`absolute top-4 right-4 p-2 rounded-lg border transition-all z-20 ${
+              isPlaying
+                ? 'bg-blue-500/20 border-blue-500/50 text-blue-400 animate-pulse'
+                : 'border-slate-700 text-slate-500 hover:text-blue-400 hover:border-blue-500/50 bg-slate-800/50'
+            }`}
           >
-            <Volume2 size={20} />
+            <Volume2 size={18} />
           </button>
 
           <p className="text-xl md:text-2xl font-black tracking-tight text-slate-100 leading-tight max-w-sm mx-auto">
@@ -144,42 +158,38 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
           </p>
 
           {isFlipped ? (
-            <div className="mt-8 pt-8 border-t border-slate-700 w-full animate-fade-in">
-              <p className="text-base md:text-lg text-slate-400 font-black italic leading-tight">
+            <div className="mt-8 pt-8 border-t border-slate-700/50 w-full animate-fade-in">
+              <p className="text-base md:text-lg text-slate-400 font-bold italic leading-tight">
                 {card.english}
               </p>
             </div>
           ) : (
-            <div className="mt-8 text-[10px] text-slate-600 font-black uppercase tracking-[0.2em]">
+            <div className="mt-8 text-[10px] text-slate-600 font-bold uppercase tracking-widest">
               Tap to reveal
             </div>
           )}
         </div>
 
+        {/* Grading buttons */}
         {isFlipped && (
           <div className="grid grid-cols-4 gap-2 animate-slide-up pb-2">
             {(['AGAIN', 'HARD', 'GOOD', 'EASY'] as const).map(rating => {
-              const colors: Record<string, string> = {
-                AGAIN: 'text-red-500 hover:bg-red-500/10',
-                HARD: 'text-orange-500 hover:bg-orange-500/10',
-                GOOD: 'text-emerald-500 hover:bg-emerald-500/10',
-                EASY: 'text-blue-500 hover:bg-blue-500/10',
-              };
+              const cfg = GRADE_CONFIG[rating];
               return (
                 <button
                   key={rating}
                   onClick={() => submitAnswer(rating)}
-                  className={`py-4 bg-slate-800 border-2 border-slate-700 group active:translate-y-1 transition-all ${colors[rating]}`}
+                  className={`py-3.5 rounded-xl bg-slate-800/80 border ${cfg.border} ${cfg.bg} ${cfg.color} active:scale-95 transition-all`}
                 >
                   <div className="text-[10px] font-black uppercase">{rating}</div>
-                  <div className="text-[8px] text-slate-500 font-mono">{getIntervalHint(rating)}</div>
+                  <div className="text-[8px] text-slate-500 font-mono mt-0.5">{getIntervalHint(rating)}</div>
                 </button>
               );
             })}
           </div>
         )}
 
-        {!isFlipped && <div className="h-[60px]" />}
+        {!isFlipped && <div className="h-[56px]" />}
       </section>
     </>
   );

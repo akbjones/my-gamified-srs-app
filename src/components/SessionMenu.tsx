@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { QuestCard } from '../types';
+import { MAIN_PATH, isNodeUnlocked } from '../data/topicConfig';
 import { Settings2, Minus, Plus, X } from 'lucide-react';
 
 interface SessionMenuProps {
@@ -24,13 +25,23 @@ const SessionMenu: React.FC<SessionMenuProps> = ({
   const filtered = deck.filter(c => c.topic === topic);
   const now = Date.now();
 
-  const reviewsDue = filtered.filter(
+  // Reviews come from ALL unlocked nodes (unified deck)
+  const allUnlockedCards = deck.filter(c => {
+    const nodeIdx = MAIN_PATH.findIndex(n => n.id === c.topic);
+    return nodeIdx >= 0 && isNodeUnlocked(nodeIdx, deck);
+  });
+  const reviewsDue = allUnlockedCards.filter(
     c => c.mastery > 0 && (c.dueDate ? c.dueDate <= now : true)
   ).length;
 
+  // New cards only from this node
   const totalNewInTopic = filtered.filter(c => c.mastery === 0).length;
   const dailyLeft = Math.max(0, dailyNewLimit - dailyNewCount);
   const newAvailable = Math.min(totalNewInTopic, dailyLeft);
+
+  const totalCards = filtered.length;
+  const masteredCards = filtered.filter(c => c.mastery === 2).length;
+  const topicProgress = totalCards > 0 ? Math.round((masteredCards / totalCards) * 100) : 0;
 
   const adjustLimit = (delta: number) => {
     const next = Math.max(1, Math.min(50, dailyNewLimit + delta));
@@ -38,62 +49,58 @@ const SessionMenu: React.FC<SessionMenuProps> = ({
   };
 
   return (
-    <section className="space-y-8 pt-10 animate-fade-in">
+    <section className="space-y-6 pt-10 animate-fade-in">
+      {/* Header */}
       <header className="flex justify-between items-start">
-        <div className="space-y-1">
-          <h1 className="text-xs tracking-[0.2em] text-blue-500 font-extrabold uppercase">
-            {category}
-          </h1>
-          <h2 className="text-4xl font-black tracking-tighter text-slate-100 uppercase italic">
-            {topicName}_
-          </h2>
+        <div>
+          <div className="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">{category}</div>
+          <h2 className="text-3xl font-black tracking-tight text-slate-100">{topicName}</h2>
         </div>
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => setShowTools(prev => !prev)}
-            className={`p-2 border-2 transition-all ${
-              showTools
-                ? 'border-blue-500 text-blue-500 bg-blue-500/10'
-                : 'border-slate-700 text-slate-500 hover:text-slate-300 hover:border-slate-500'
-            }`}
-          >
-            <Settings2 size={18} />
-          </button>
-          <button
-            onClick={onSettings}
-            className="text-2xl text-slate-600 hover:text-slate-400 transition-colors"
-          >
-            ⚙️
-          </button>
-        </div>
+        <button
+          onClick={() => setShowTools(prev => !prev)}
+          className={`p-2.5 rounded-lg border transition-all ${
+            showTools
+              ? 'border-blue-500/50 text-blue-400 bg-blue-500/10'
+              : 'border-slate-700 text-slate-500 hover:text-slate-300 hover:border-slate-500'
+          }`}
+        >
+          <Settings2 size={18} />
+        </button>
       </header>
+
+      {/* Progress bar */}
+      <div>
+        <div className="flex justify-between text-[9px] font-bold uppercase text-slate-500 tracking-widest mb-1.5">
+          <span>Progress</span>
+          <span>{topicProgress}%</span>
+        </div>
+        <div className="progress-rail">
+          <div className="progress-fill bg-blue-500" style={{ width: `${topicProgress}%` }} />
+        </div>
+      </div>
 
       {/* Tools Panel */}
       {showTools && (
-        <div className="border-2 border-slate-700 bg-slate-800/80 p-5 animate-fade-in space-y-5">
+        <div className="stat-card animate-fade-in space-y-4">
           <div className="flex items-center justify-between">
-            <h3 className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
-              Custom Study
-            </h3>
-            <button onClick={() => setShowTools(false)} className="text-slate-600 hover:text-slate-400">
+            <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Custom Study</h3>
+            <button onClick={() => setShowTools(false)} className="text-slate-600 hover:text-slate-400 transition-colors">
               <X size={16} />
             </button>
           </div>
 
           <div>
-            <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3">
-              New Cards / Day
-            </div>
-            <div className="flex items-center gap-4">
+            <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3">New Cards / Day</div>
+            <div className="flex items-center gap-3">
               <button
                 onClick={() => adjustLimit(-5)}
-                className="w-10 h-10 border-2 border-slate-600 text-slate-400 flex items-center justify-center hover:border-slate-400 hover:text-slate-200 transition-all active:translate-y-0.5"
+                className="w-9 h-9 rounded-lg border border-slate-700 text-slate-400 flex items-center justify-center hover:border-slate-500 hover:text-slate-200 transition-all active:scale-95"
               >
-                <Minus size={16} />
+                <Minus size={14} />
               </button>
               <button
                 onClick={() => adjustLimit(-1)}
-                className="w-10 h-10 border-2 border-slate-600 text-slate-400 flex items-center justify-center hover:border-slate-400 hover:text-slate-200 transition-all active:translate-y-0.5 text-xs font-bold"
+                className="w-9 h-9 rounded-lg border border-slate-700 text-slate-400 flex items-center justify-center hover:border-slate-500 hover:text-slate-200 transition-all active:scale-95 text-xs font-bold"
               >
                 -1
               </button>
@@ -102,15 +109,15 @@ const SessionMenu: React.FC<SessionMenuProps> = ({
               </div>
               <button
                 onClick={() => adjustLimit(1)}
-                className="w-10 h-10 border-2 border-slate-600 text-slate-400 flex items-center justify-center hover:border-slate-400 hover:text-slate-200 transition-all active:translate-y-0.5 text-xs font-bold"
+                className="w-9 h-9 rounded-lg border border-slate-700 text-slate-400 flex items-center justify-center hover:border-slate-500 hover:text-slate-200 transition-all active:scale-95 text-xs font-bold"
               >
                 +1
               </button>
               <button
                 onClick={() => adjustLimit(5)}
-                className="w-10 h-10 border-2 border-slate-600 text-slate-400 flex items-center justify-center hover:border-slate-400 hover:text-slate-200 transition-all active:translate-y-0.5"
+                className="w-9 h-9 rounded-lg border border-slate-700 text-slate-400 flex items-center justify-center hover:border-slate-500 hover:text-slate-200 transition-all active:scale-95"
               >
-                <Plus size={16} />
+                <Plus size={14} />
               </button>
             </div>
             <div className="flex justify-between mt-2 text-[9px] text-slate-600 font-bold uppercase tracking-widest">
@@ -121,70 +128,53 @@ const SessionMenu: React.FC<SessionMenuProps> = ({
         </div>
       )}
 
-      <div className="grid grid-cols-2 gap-4">
-        <div
-          className={`p-6 border-2 transition-colors ${
-            reviewsDue > 0
-              ? 'border-orange-500/50 bg-orange-500/10'
-              : 'border-slate-700 bg-slate-800'
-          }`}
-        >
-          <div
-            className={`text-[10px] mb-1 uppercase font-bold tracking-widest ${
-              reviewsDue > 0 ? 'text-orange-500' : 'text-slate-500'
-            }`}
-          >
+      {/* Stats cards */}
+      <div className="grid grid-cols-2 gap-3">
+        <div className={`stat-card ${reviewsDue > 0 ? 'border-orange-500/30 bg-orange-500/5' : ''}`}>
+          <div className={`text-[10px] mb-1 uppercase font-bold tracking-widest ${
+            reviewsDue > 0 ? 'text-orange-400' : 'text-slate-500'
+          }`}>
             Due Reviews
           </div>
-          <div
-            className={`text-4xl font-black ${
-              reviewsDue > 0 ? 'text-orange-500' : 'text-slate-400'
-            }`}
-          >
+          <div className={`text-3xl font-black ${reviewsDue > 0 ? 'text-orange-400' : 'text-slate-400'}`}>
             {reviewsDue}
           </div>
         </div>
 
-        <div className="p-6 border-2 border-blue-500/30 bg-blue-500/10">
-          <div className="text-[10px] text-blue-500 mb-1 uppercase font-bold tracking-widest">
-            New / Limit
-          </div>
-          <div className="text-4xl font-black text-blue-500 flex items-baseline">
+        <div className="stat-card border-blue-500/30 bg-blue-500/5">
+          <div className="text-[10px] text-blue-400 mb-1 uppercase font-bold tracking-widest">New Today</div>
+          <div className="text-3xl font-black text-blue-400 flex items-baseline">
             {newAvailable}
-            <span className="text-sm text-blue-500/50 ml-2 font-bold">/ {dailyLeft}</span>
+            <span className="text-sm text-blue-400/40 ml-2 font-bold">/ {dailyLeft}</span>
           </div>
         </div>
       </div>
 
-      <div className="px-1">
-        <div className="flex justify-between text-[10px] font-bold uppercase text-slate-500 mb-2">
+      {/* Daily progress */}
+      <div>
+        <div className="flex justify-between text-[9px] font-bold uppercase text-slate-500 tracking-widest mb-1.5">
           <span>Daily Intake</span>
           <span>{dailyNewCount} / {dailyNewLimit}</span>
         </div>
-        <div className="h-3 w-full bg-slate-800 overflow-hidden border border-slate-700">
+        <div className="progress-rail">
           <div
-            className="h-full bg-slate-300 transition-all duration-500"
-            style={{ width: `${(dailyNewCount / dailyNewLimit) * 100}%` }}
+            className="progress-fill bg-slate-400"
+            style={{ width: `${Math.min(100, (dailyNewCount / dailyNewLimit) * 100)}%` }}
           />
         </div>
       </div>
 
+      {/* Actions */}
       <button
         onClick={onStart}
         disabled={reviewsDue === 0 && newAvailable === 0}
-        className="w-full py-6 bg-slate-100 disabled:bg-slate-700 disabled:text-slate-500 text-slate-900 text-sm tracking-[0.2em] font-bold uppercase transition-all btn-large hover:translate-y-1 disabled:hover:translate-y-0"
-        style={{
-          boxShadow: reviewsDue === 0 && newAvailable === 0 ? 'none' : '0 6px 0 #64748b',
-        }}
+        className="w-full py-4 btn-primary rounded-xl"
       >
-        {reviewsDue === 0 && newAvailable === 0 ? 'All Caught Up' : 'Initialize Session'}
+        {reviewsDue === 0 && newAvailable === 0 ? 'All Caught Up' : 'Start Session'}
       </button>
 
-      <button
-        onClick={onBack}
-        className="w-full py-4 text-xs text-slate-500 font-bold uppercase tracking-widest underline decoration-2 underline-offset-4 hover:text-slate-300"
-      >
-        Return to Map
+      <button onClick={onBack} className="w-full py-3 btn-ghost text-center">
+        ← Back to Map
       </button>
     </section>
   );

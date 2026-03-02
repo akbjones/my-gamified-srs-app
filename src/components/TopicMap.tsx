@@ -53,15 +53,15 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, onBack }) => {
           <span>Back</span>
         </button>
         <div className="text-center">
-          <h1 className="text-lg font-black uppercase tracking-tight">Spanish</h1>
+          <h1 className="text-lg font-black uppercase tracking-tight text-slate-800">Spanish</h1>
         </div>
         <div className="text-sm font-black text-blue-500">{getTotalProgress()}%</div>
       </header>
 
       {/* Linear path */}
-      <div className="relative pl-8">
-        {/* Trunk line */}
-        <div className="absolute left-[15px] top-0 bottom-0 w-[2px] bg-slate-800" />
+      <div className="relative" style={{ paddingLeft: '40px' }}>
+        {/* Trunk line — centered on the dots */}
+        <div className="absolute top-0 bottom-0 w-[2px] bg-slate-200" style={{ left: '15px' }} />
 
         {MAIN_PATH.map((node, idx) => {
           const unlocked = isNodeUnlocked(idx, cards);
@@ -81,14 +81,16 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, onBack }) => {
             <div key={node.id}>
               {/* Tier divider */}
               {showTierLabel && (
-                <div className="flex items-center gap-2 mb-3 -ml-8 mt-2">
-                  <div className="w-1.5 h-5 rounded-full" style={{ background: unlocked ? node.color : '#334155' }} />
-                  <span
-                    className="text-[10px] font-black uppercase tracking-widest"
-                    style={{ color: unlocked ? node.color : '#475569' }}
-                  >
-                    {node.tier}
-                  </span>
+                <div className="mb-4 mt-3" style={{ marginLeft: '-40px', paddingLeft: '32px' }}>
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-2 h-6 rounded-full" style={{ background: unlocked ? node.color : '#cbd5e1' }} />
+                    <span
+                      className="text-sm font-black uppercase tracking-widest"
+                      style={{ color: unlocked ? node.color : '#94a3b8' }}
+                    >
+                      {node.tier}
+                    </span>
+                  </div>
                 </div>
               )}
 
@@ -97,25 +99,25 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, onBack }) => {
                 ref={isCurrent ? activeRef : undefined}
                 className="relative mb-4"
               >
-                {/* Dot on trunk line */}
+                {/* Dot on trunk line — centered at left: 15px (center of 2px line) */}
                 <div
-                  className={`absolute -left-8 top-4 w-[12px] h-[12px] rounded-full border-2 z-10 ${
+                  className={`absolute w-[12px] h-[12px] rounded-full border-2 z-10 ${
                     isComplete
                       ? 'border-emerald-500 bg-emerald-500'
                       : isCurrent
                         ? 'border-blue-500 bg-blue-500 animate-pulse-glow'
                         : unlocked
-                          ? 'border-slate-500 bg-slate-800'
-                          : 'border-slate-700 bg-slate-900'
+                          ? 'border-slate-400 bg-white'
+                          : 'border-slate-300 bg-slate-100'
                   }`}
-                  style={{ left: '-21px' }}
+                  style={{ left: '-30px', top: '18px' }}
                 />
 
                 {/* Node card */}
                 <div
                   className={`w-full text-left rounded-xl p-4 transition-all relative ${
                     !unlocked
-                      ? 'bg-slate-800/20 border border-slate-800/50 opacity-35'
+                      ? 'bg-slate-50 border border-slate-200'
                       : isCurrent
                         ? 'stat-card border-blue-500/30'
                         : isComplete
@@ -132,17 +134,17 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, onBack }) => {
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      {!unlocked && <Lock size={14} className="text-slate-700" />}
+                      {!unlocked && <Lock size={14} className="text-slate-300" />}
                       {isComplete && <Check size={14} className="text-emerald-500" />}
                       <span className={`font-bold text-sm ${
-                        !unlocked ? 'text-slate-600' : 'text-slate-200'
+                        !unlocked ? 'text-slate-400' : 'text-slate-800'
                       }`}>
                         {node.name}
                       </span>
                     </div>
                     {unlocked && (
                       <span className={`text-xs font-bold ${
-                        isComplete ? 'text-emerald-500' : percent > 0 ? 'text-blue-400' : 'text-slate-600'
+                        isComplete ? 'text-emerald-500' : percent > 0 ? 'text-blue-500' : 'text-slate-400'
                       }`}>
                         {graduated}/{total}
                       </span>
@@ -168,11 +170,11 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, onBack }) => {
                     {sideBranches.map(sb => sb && (
                       <div
                         key={sb.id}
-                        className="flex items-center gap-2 py-2 px-3 rounded-lg bg-slate-800/30 border border-slate-800/50 opacity-50"
+                        className="flex items-center gap-2 py-2 px-3 rounded-lg bg-slate-50 border border-slate-200"
                       >
                         <span className="text-xs">{sb.icon}</span>
-                        <span className="text-[10px] font-bold text-slate-500">{sb.name}</span>
-                        <span className="text-[8px] font-bold text-slate-600 uppercase tracking-wider ml-auto">Soon</span>
+                        <span className="text-[10px] font-bold text-slate-400">{sb.name}</span>
+                        <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider ml-auto">Soon</span>
                       </div>
                     ))}
                   </div>

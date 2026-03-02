@@ -210,35 +210,30 @@ const App: React.FC = () => {
         <section className="animate-fade-in">
           {/* Header */}
           <header className="pt-10 pb-6">
-            <h1 className="text-5xl font-black italic tracking-tighter text-blue-500 text-center">LangLab.</h1>
+            <h1 className="text-5xl font-black italic tracking-tighter text-blue-500 text-center">LangLab</h1>
 
             <div className="flex justify-center gap-8 mt-5">
-              <button onClick={() => setView('GAMIFICATION')} className="flex items-center gap-2 text-slate-400 hover:text-slate-200 transition-colors">
+              <button onClick={() => setView('GAMIFICATION')} className="flex items-center gap-2 text-slate-500 hover:text-slate-700 transition-colors">
                 <span className="text-amber-500 text-sm">⚡</span>
-                <span className="text-xs font-bold">{userStats.streak}d streak</span>
+                <span className="text-xs font-bold">{userStats.streak}-day streak</span>
               </button>
-              <button onClick={() => setView('GAMIFICATION')} className="flex items-center gap-2 text-slate-400 hover:text-slate-200 transition-colors">
-                <span className="text-blue-400 text-sm">▲</span>
+              <button onClick={() => setView('GAMIFICATION')} className="flex items-center gap-2 text-slate-500 hover:text-slate-700 transition-colors">
+                <span className="text-blue-500 text-sm">▲</span>
                 <span className="text-xs font-bold">Level {userStats.level}</span>
               </button>
             </div>
           </header>
 
           {/* Language selection — Spanish */}
-          <div className="stat-card p-4 mb-3 border-blue-500/30">
+          <div className="stat-card p-4 mb-3 border-blue-500/20">
             <div className="flex items-center gap-3">
               <div
                 className="w-6 h-4 rounded-[3px] flex-shrink-0"
                 style={{ background: 'linear-gradient(to bottom, #c60b1e 30%, #ffc400 30%, #ffc400 70%, #c60b1e 70%)' }}
               />
-              <div className="text-lg font-black text-slate-100">Spanish</div>
+              <div className="text-lg font-black text-slate-800">Spanish</div>
             </div>
           </div>
-
-          {/* Change language */}
-          <button className="w-full text-center text-[10px] font-bold text-slate-500 tracking-widest mb-6 py-2.5 rounded-lg border border-dashed border-slate-700 hover:border-slate-500 hover:text-slate-300 transition-colors">
-            + Add Another Language
-          </button>
 
           {/* Current node indicator */}
           {currentNode && (() => {
@@ -252,14 +247,14 @@ const App: React.FC = () => {
                     <div className="text-[9px] font-bold uppercase tracking-widest mb-0.5" style={{ color: currentNode.color }}>
                       {currentNode.tier}
                     </div>
-                    <div className="text-sm font-black text-slate-200">{currentNode.name}</div>
+                    <div className="text-sm font-black">{currentNode.name}</div>
                   </div>
                   <button
                     onClick={() => setShowTools(prev => !prev)}
                     className={`p-2 rounded-lg border transition-all ${
                       showTools
                         ? 'border-blue-500/50 text-blue-400 bg-blue-500/10'
-                        : 'border-slate-700 text-slate-500 hover:text-slate-300'
+                        : 'border-slate-300 text-slate-400 hover:text-slate-600'
                     }`}
                   >
                     <Settings2 size={16} />
@@ -277,27 +272,27 @@ const App: React.FC = () => {
             <div className="stat-card animate-fade-in space-y-4 mb-3">
               <div className="flex items-center justify-between">
                 <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Settings</h3>
-                <button onClick={() => setShowTools(false)} className="text-slate-600 hover:text-slate-400 transition-colors">
+                <button onClick={() => setShowTools(false)} className="text-slate-400 hover:text-slate-600 transition-colors">
                   <X size={16} />
                 </button>
               </div>
 
               <div>
-                <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3">New Cards / Day</div>
+                <div className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">New Cards / Day</div>
                 <div className="flex items-center gap-3">
-                  <button onClick={() => adjustLimit(-5)} className="w-9 h-9 rounded-lg border border-slate-700 text-slate-400 flex items-center justify-center hover:border-slate-500 hover:text-slate-200 transition-all active:scale-95">
+                  <button onClick={() => adjustLimit(-5)} className="w-9 h-9 rounded-lg border border-slate-300 text-slate-400 flex items-center justify-center hover:border-slate-400 hover:text-slate-600 transition-all active:scale-95">
                     <Minus size={14} />
                   </button>
-                  <button onClick={() => adjustLimit(-1)} className="w-9 h-9 rounded-lg border border-slate-700 text-slate-400 flex items-center justify-center hover:border-slate-500 hover:text-slate-200 transition-all active:scale-95 text-xs font-bold">
+                  <button onClick={() => adjustLimit(-1)} className="w-9 h-9 rounded-lg border border-slate-300 text-slate-400 flex items-center justify-center hover:border-slate-400 hover:text-slate-600 transition-all active:scale-95 text-xs font-bold">
                     -1
                   </button>
                   <div className="flex-1 text-center">
-                    <div className="text-3xl font-black text-slate-100">{settings.dailyNewLimit}</div>
+                    <div className="text-3xl font-black">{settings.dailyNewLimit}</div>
                   </div>
-                  <button onClick={() => adjustLimit(1)} className="w-9 h-9 rounded-lg border border-slate-700 text-slate-400 flex items-center justify-center hover:border-slate-500 hover:text-slate-200 transition-all active:scale-95 text-xs font-bold">
+                  <button onClick={() => adjustLimit(1)} className="w-9 h-9 rounded-lg border border-slate-300 text-slate-400 flex items-center justify-center hover:border-slate-400 hover:text-slate-600 transition-all active:scale-95 text-xs font-bold">
                     +1
                   </button>
-                  <button onClick={() => adjustLimit(5)} className="w-9 h-9 rounded-lg border border-slate-700 text-slate-400 flex items-center justify-center hover:border-slate-500 hover:text-slate-200 transition-all active:scale-95">
+                  <button onClick={() => adjustLimit(5)} className="w-9 h-9 rounded-lg border border-slate-300 text-slate-400 flex items-center justify-center hover:border-slate-400 hover:text-slate-600 transition-all active:scale-95">
                     <Plus size={14} />
                   </button>
                 </div>
@@ -305,7 +300,7 @@ const App: React.FC = () => {
 
               <button
                 onClick={() => { resetAll(); window.location.reload(); }}
-                className="w-full py-3 rounded-lg border border-red-900/50 text-red-500 text-[10px] font-bold uppercase tracking-widest hover:bg-red-900/20 transition-colors"
+                className="w-full py-3 rounded-lg border border-red-300 text-red-500 text-[10px] font-bold uppercase tracking-widest hover:bg-red-50 transition-colors"
               >
                 Reset All Data
               </button>
@@ -314,13 +309,13 @@ const App: React.FC = () => {
 
           {/* Stats row */}
           <div className="grid grid-cols-2 gap-3 mb-4">
-            <div className={`stat-card text-center py-3 ${reviewsDue > 0 ? 'border-orange-500/30' : ''}`}>
-              <div className={`text-lg font-black ${reviewsDue > 0 ? 'text-orange-400' : 'text-slate-400'}`}>{reviewsDue}</div>
-              <div className="text-[8px] text-slate-500 font-bold uppercase tracking-widest">Due</div>
+            <div className={`stat-card text-center py-3 ${reviewsDue > 0 ? 'border-orange-400/40' : ''}`}>
+              <div className={`text-lg font-black ${reviewsDue > 0 ? 'text-orange-500' : 'text-slate-400'}`}>{reviewsDue}</div>
+              <div className="text-[8px] text-slate-400 font-bold uppercase tracking-widest">Due</div>
             </div>
-            <div className="stat-card text-center py-3 border-blue-500/30">
-              <div className="text-lg font-black text-blue-400">{newAvailable}</div>
-              <div className="text-[8px] text-slate-500 font-bold uppercase tracking-widest">New</div>
+            <div className="stat-card text-center py-3 border-blue-400/40">
+              <div className="text-lg font-black text-blue-500">{newAvailable}</div>
+              <div className="text-[8px] text-slate-400 font-bold uppercase tracking-widest">New</div>
             </div>
           </div>
 
@@ -336,18 +331,25 @@ const App: React.FC = () => {
           {/* Progress map link */}
           <button
             onClick={() => setView('TOPICS')}
-            className="w-full stat-card p-0 overflow-hidden text-left transition-all hover:border-slate-500 group cursor-pointer"
+            className="w-full stat-card p-0 overflow-hidden text-left transition-all hover:border-slate-400 group cursor-pointer mb-3"
           >
-            <div className="h-1 bg-slate-800">
+            <div className="h-1 bg-slate-200">
               <div className="h-full bg-blue-500 transition-all" style={{ width: `${getTotalProgress()}%` }} />
             </div>
             <div className="p-3.5 flex items-center justify-between">
-              <div className="flex items-center gap-2 text-[10px] text-slate-500 font-bold uppercase tracking-widest group-hover:text-slate-300 transition-colors">
+              <div className="flex items-center gap-2 text-[10px] text-slate-400 font-bold uppercase tracking-widest group-hover:text-slate-600 transition-colors">
                 <span>Progress Map</span>
                 <span className="transition-transform group-hover:translate-x-1">→</span>
               </div>
             </div>
           </button>
+
+          {/* Add language - subtle inline link */}
+          <div className="text-center">
+            <button className="text-[10px] font-bold text-slate-400 tracking-widest hover:text-slate-600 transition-colors">
+              + Add Language
+            </button>
+          </div>
         </section>
       )}
 

@@ -53,15 +53,15 @@ const SessionMenu: React.FC<SessionMenuProps> = ({
       {/* Header */}
       <header className="flex justify-between items-start">
         <div>
-          <div className="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">{category}</div>
-          <h2 className="text-3xl font-black tracking-tight text-slate-100">{topicName}</h2>
+          <div className="text-xs font-bold text-blue-500 uppercase tracking-widest mb-1">{category}</div>
+          <h2 className="text-3xl font-black tracking-tight text-slate-800">{topicName}</h2>
         </div>
         <button
           onClick={() => setShowTools(prev => !prev)}
           className={`p-2.5 rounded-lg border transition-all ${
             showTools
-              ? 'border-blue-500/50 text-blue-400 bg-blue-500/10'
-              : 'border-slate-700 text-slate-500 hover:text-slate-300 hover:border-slate-500'
+              ? 'border-blue-300 text-blue-500 bg-blue-50'
+              : 'border-slate-200 text-slate-400 hover:text-slate-600 hover:border-slate-300'
           }`}
         >
           <Settings2 size={18} />
@@ -70,7 +70,7 @@ const SessionMenu: React.FC<SessionMenuProps> = ({
 
       {/* Progress bar */}
       <div>
-        <div className="flex justify-between text-[9px] font-bold uppercase text-slate-500 tracking-widest mb-1.5">
+        <div className="flex justify-between text-[10px] font-bold uppercase text-slate-400 tracking-widest mb-1.5">
           <span>Progress</span>
           <span>{topicProgress}%</span>
         </div>
@@ -83,44 +83,44 @@ const SessionMenu: React.FC<SessionMenuProps> = ({
       {showTools && (
         <div className="stat-card animate-fade-in space-y-4">
           <div className="flex items-center justify-between">
-            <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Custom Study</h3>
-            <button onClick={() => setShowTools(false)} className="text-slate-600 hover:text-slate-400 transition-colors">
+            <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest">Custom Study</h3>
+            <button onClick={() => setShowTools(false)} className="text-slate-400 hover:text-slate-600 transition-colors">
               <X size={16} />
             </button>
           </div>
 
           <div>
-            <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3">New Cards / Day</div>
+            <div className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">New Cards / Day</div>
             <div className="flex items-center gap-3">
               <button
                 onClick={() => adjustLimit(-5)}
-                className="w-9 h-9 rounded-lg border border-slate-700 text-slate-400 flex items-center justify-center hover:border-slate-500 hover:text-slate-200 transition-all active:scale-95"
+                className="w-9 h-9 rounded-lg border border-slate-200 text-slate-400 flex items-center justify-center hover:border-slate-300 hover:text-slate-600 transition-all active:scale-95"
               >
                 <Minus size={14} />
               </button>
               <button
                 onClick={() => adjustLimit(-1)}
-                className="w-9 h-9 rounded-lg border border-slate-700 text-slate-400 flex items-center justify-center hover:border-slate-500 hover:text-slate-200 transition-all active:scale-95 text-xs font-bold"
+                className="w-9 h-9 rounded-lg border border-slate-200 text-slate-400 flex items-center justify-center hover:border-slate-300 hover:text-slate-600 transition-all active:scale-95 text-xs font-bold"
               >
                 -1
               </button>
               <div className="flex-1 text-center">
-                <div className="text-3xl font-black text-slate-100">{dailyNewLimit}</div>
+                <div className="text-3xl font-black text-slate-800">{dailyNewLimit}</div>
               </div>
               <button
                 onClick={() => adjustLimit(1)}
-                className="w-9 h-9 rounded-lg border border-slate-700 text-slate-400 flex items-center justify-center hover:border-slate-500 hover:text-slate-200 transition-all active:scale-95 text-xs font-bold"
+                className="w-9 h-9 rounded-lg border border-slate-200 text-slate-400 flex items-center justify-center hover:border-slate-300 hover:text-slate-600 transition-all active:scale-95 text-xs font-bold"
               >
                 +1
               </button>
               <button
                 onClick={() => adjustLimit(5)}
-                className="w-9 h-9 rounded-lg border border-slate-700 text-slate-400 flex items-center justify-center hover:border-slate-500 hover:text-slate-200 transition-all active:scale-95"
+                className="w-9 h-9 rounded-lg border border-slate-200 text-slate-400 flex items-center justify-center hover:border-slate-300 hover:text-slate-600 transition-all active:scale-95"
               >
                 <Plus size={14} />
               </button>
             </div>
-            <div className="flex justify-between mt-2 text-[9px] text-slate-600 font-bold uppercase tracking-widest">
+            <div className="flex justify-between mt-2 text-[10px] text-slate-400 font-bold uppercase tracking-widest">
               <span>Min: 1</span>
               <span>Max: 50</span>
             </div>
@@ -130,29 +130,29 @@ const SessionMenu: React.FC<SessionMenuProps> = ({
 
       {/* Stats cards */}
       <div className="grid grid-cols-2 gap-3">
-        <div className={`stat-card ${reviewsDue > 0 ? 'border-orange-500/30 bg-orange-500/5' : ''}`}>
-          <div className={`text-[10px] mb-1 uppercase font-bold tracking-widest ${
-            reviewsDue > 0 ? 'text-orange-400' : 'text-slate-500'
+        <div className={`stat-card ${reviewsDue > 0 ? 'border-orange-200 bg-orange-50' : ''}`}>
+          <div className={`text-xs mb-1 uppercase font-bold tracking-widest ${
+            reviewsDue > 0 ? 'text-orange-500' : 'text-slate-400'
           }`}>
             Due Reviews
           </div>
-          <div className={`text-3xl font-black ${reviewsDue > 0 ? 'text-orange-400' : 'text-slate-400'}`}>
+          <div className={`text-3xl font-black ${reviewsDue > 0 ? 'text-orange-500' : 'text-slate-400'}`}>
             {reviewsDue}
           </div>
         </div>
 
-        <div className="stat-card border-blue-500/30 bg-blue-500/5">
-          <div className="text-[10px] text-blue-400 mb-1 uppercase font-bold tracking-widest">New Today</div>
-          <div className="text-3xl font-black text-blue-400 flex items-baseline">
+        <div className="stat-card border-blue-200 bg-blue-50">
+          <div className="text-xs text-blue-500 mb-1 uppercase font-bold tracking-widest">New Today</div>
+          <div className="text-3xl font-black text-blue-500 flex items-baseline">
             {newAvailable}
-            <span className="text-sm text-blue-400/40 ml-2 font-bold">/ {dailyLeft}</span>
+            <span className="text-sm text-blue-300 ml-2 font-bold">/ {dailyLeft}</span>
           </div>
         </div>
       </div>
 
       {/* Daily progress */}
       <div>
-        <div className="flex justify-between text-[9px] font-bold uppercase text-slate-500 tracking-widest mb-1.5">
+        <div className="flex justify-between text-[10px] font-bold uppercase text-slate-400 tracking-widest mb-1.5">
           <span>Daily Intake</span>
           <span>{dailyNewCount} / {dailyNewLimit}</span>
         </div>

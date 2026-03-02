@@ -11,10 +11,10 @@ interface StudySessionProps {
 }
 
 const GRADE_CONFIG = {
-  AGAIN: { color: 'text-red-400', bg: 'hover:bg-red-500/10 active:bg-red-500/20', border: 'border-red-500/20' },
-  HARD:  { color: 'text-orange-400', bg: 'hover:bg-orange-500/10 active:bg-orange-500/20', border: 'border-orange-500/20' },
-  GOOD:  { color: 'text-emerald-400', bg: 'hover:bg-emerald-500/10 active:bg-emerald-500/20', border: 'border-emerald-500/20' },
-  EASY:  { color: 'text-blue-400', bg: 'hover:bg-blue-500/10 active:bg-blue-500/20', border: 'border-blue-500/20' },
+  AGAIN: { color: 'text-red-500', bg: 'hover:bg-red-50 active:bg-red-100', border: 'border-red-200' },
+  HARD:  { color: 'text-orange-500', bg: 'hover:bg-orange-50 active:bg-orange-100', border: 'border-orange-200' },
+  GOOD:  { color: 'text-emerald-600', bg: 'hover:bg-emerald-50 active:bg-emerald-100', border: 'border-emerald-200' },
+  EASY:  { color: 'text-blue-500', bg: 'hover:bg-blue-50 active:bg-blue-100', border: 'border-blue-200' },
 } as const;
 
 const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort, topicCards = [] }) => {
@@ -25,11 +25,11 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
   if (session.currentIndex >= session.queue.length) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-6 animate-fade-in">
-        <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-2xl">
+        <div className="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-2xl">
           ✓
         </div>
         <div className="text-center">
-          <h2 className="text-2xl font-black text-slate-100 mb-2">Session Complete</h2>
+          <h2 className="text-2xl font-black text-slate-800 mb-2">Session Complete</h2>
           <p className="text-sm text-slate-500">{session.finishedCount} cards reviewed</p>
         </div>
         <button onClick={onAbort} className="px-8 py-3 btn-primary rounded-xl">
@@ -80,17 +80,17 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
       {showInfo && (
         <div
           onClick={() => setShowInfo(false)}
-          className="fixed inset-0 z-50 flex items-center justify-center p-8 bg-slate-900/90 backdrop-blur-sm animate-fade-in"
+          className="fixed inset-0 z-50 flex items-center justify-center p-8 bg-black/40 backdrop-blur-sm animate-fade-in"
         >
-          <div className="stat-card p-6 text-sm leading-8 text-slate-300 w-full max-w-xs">
-            <h3 className="font-black text-slate-100 border-b border-slate-700 pb-3 mb-4 text-base">
+          <div className="stat-card p-6 text-sm leading-8 text-slate-600 w-full max-w-xs">
+            <h3 className="font-black text-slate-800 border-b border-slate-200 pb-3 mb-4 text-base">
               Grading Guide
             </h3>
-            <p><span className="text-red-400 font-black">Again</span> — Didn't know it. Restart.</p>
-            <p><span className="text-orange-400 font-black">Hard</span> — Struggled. Repeat soon.</p>
-            <p><span className="text-emerald-400 font-black">Good</span> — Got it. Advance step.</p>
-            <p><span className="text-blue-400 font-black">Easy</span> — Too easy. Skip ahead.</p>
-            <div className="mt-5 pt-3 border-t border-slate-700 text-center text-xs text-slate-500 font-bold">
+            <p><span className="text-red-500 font-black">Again</span> — Didn't know it. Restart.</p>
+            <p><span className="text-orange-500 font-black">Hard</span> — Struggled. Repeat soon.</p>
+            <p><span className="text-emerald-600 font-black">Good</span> — Got it. Advance step.</p>
+            <p><span className="text-blue-500 font-black">Easy</span> — Too easy. Skip ahead.</p>
+            <div className="mt-5 pt-3 border-t border-slate-200 text-center text-xs text-slate-400 font-bold">
               Tap anywhere to close
             </div>
           </div>
@@ -101,33 +101,33 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
         {/* Top bar */}
         <nav className="flex flex-col gap-2">
           <div className="flex justify-between items-center">
-            <button onClick={onAbort} className="btn-ghost text-[10px]">← Exit</button>
+            <button onClick={onAbort} className="btn-ghost text-xs">← Exit</button>
 
-            <div className="flex items-center gap-4 stat-card py-1.5 px-4">
+            <div className="flex items-center gap-5 stat-card py-2 px-5">
               <div className="text-center">
-                <div className="text-sm font-black text-slate-300">{countNew}</div>
-                <div className="text-[7px] font-bold text-slate-500 uppercase tracking-wider">new</div>
+                <div className="text-base font-black text-blue-500">{countNew}</div>
+                <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">new</div>
               </div>
               <div className="text-center">
-                <div className="text-sm font-black text-slate-300">{countLearn}</div>
-                <div className="text-[7px] font-bold text-slate-500 uppercase tracking-wider">learn</div>
+                <div className="text-base font-black text-orange-500">{countLearn}</div>
+                <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">learn</div>
               </div>
               <div className="text-center">
-                <div className="text-sm font-black text-slate-300">{countReview}</div>
-                <div className="text-[7px] font-bold text-slate-500 uppercase tracking-wider">review</div>
+                <div className="text-base font-black text-emerald-500">{countReview}</div>
+                <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">review</div>
               </div>
             </div>
 
             <button
               onClick={() => setShowInfo(true)}
-              className="w-7 h-7 rounded-lg border border-slate-700 text-[10px] font-bold text-slate-500 hover:text-slate-300 hover:border-slate-500 transition-colors"
+              className="w-8 h-8 rounded-lg border border-slate-200 text-xs font-bold text-slate-400 hover:text-slate-600 hover:border-slate-300 transition-colors"
             >
               ?
             </button>
           </div>
 
           <div>
-            <div className="flex justify-between text-[8px] font-bold text-slate-500 uppercase tracking-widest mb-1 px-0.5">
+            <div className="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1 px-0.5">
               <span>Progress</span>
               <span>{Math.round(topicProgress)}%</span>
             </div>
@@ -146,25 +146,25 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
             onClick={handlePlayAudio}
             className={`absolute top-4 right-4 p-2 rounded-lg border transition-all z-20 ${
               isPlaying
-                ? 'bg-blue-500/20 border-blue-500/50 text-blue-400 animate-pulse'
-                : 'border-slate-700 text-slate-500 hover:text-blue-400 hover:border-blue-500/50 bg-slate-800/50'
+                ? 'bg-blue-50 border-blue-300 text-blue-500 animate-pulse'
+                : 'border-slate-200 text-slate-400 hover:text-blue-500 hover:border-blue-300 bg-white'
             }`}
           >
             <Volume2 size={18} />
           </button>
 
-          <p className="text-xl md:text-2xl font-black tracking-tight text-slate-100 leading-tight max-w-sm mx-auto">
+          <p className="text-xl md:text-2xl font-black tracking-tight text-slate-800 leading-tight max-w-sm mx-auto">
             {card.target}
           </p>
 
           {isFlipped ? (
-            <div className="mt-8 pt-8 border-t border-slate-700/50 w-full animate-fade-in">
-              <p className="text-base md:text-lg text-slate-400 font-bold italic leading-tight">
+            <div className="mt-8 pt-8 border-t border-slate-200 w-full animate-fade-in">
+              <p className="text-base md:text-lg text-slate-500 font-bold italic leading-tight">
                 {card.english}
               </p>
             </div>
           ) : (
-            <div className="mt-8 text-[10px] text-slate-600 font-bold uppercase tracking-widest">
+            <div className="mt-8 text-xs text-slate-400 font-bold uppercase tracking-widest">
               Tap to reveal
             </div>
           )}
@@ -179,17 +179,17 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
                 <button
                   key={rating}
                   onClick={() => submitAnswer(rating)}
-                  className={`py-3.5 rounded-xl bg-slate-800/80 border ${cfg.border} ${cfg.bg} ${cfg.color} active:scale-95 transition-all`}
+                  className={`py-4 rounded-xl bg-white border ${cfg.border} ${cfg.bg} ${cfg.color} active:scale-95 transition-all`}
                 >
-                  <div className="text-[10px] font-black uppercase">{rating}</div>
-                  <div className="text-[8px] text-slate-500 font-mono mt-0.5">{getIntervalHint(rating)}</div>
+                  <div className="text-xs font-black uppercase">{rating}</div>
+                  <div className="text-[9px] text-slate-400 font-mono mt-0.5">{getIntervalHint(rating)}</div>
                 </button>
               );
             })}
           </div>
         )}
 
-        {!isFlipped && <div className="h-[56px]" />}
+        {!isFlipped && <div className="h-[60px]" />}
       </section>
     </>
   );

@@ -2,8 +2,8 @@
 
 /* === BASE === */
 body {
-  background-color: #0f172a;
-  color: #e2e8f0;
+  background-color: #f8fafc;
+  color: #1e293b;
   font-family: 'JetBrains Mono', monospace;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -24,8 +24,8 @@ body {
   100% { opacity: 0; transform: translateY(-40px) scale(0.8); }
 }
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
-  50% { box-shadow: 0 0 20px 4px rgba(99, 102, 241, 0.3); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+  50% { box-shadow: 0 0 16px 4px rgba(59, 130, 246, 0.25); }
 }
 
 .animate-fade-in { animation: fade-in 0.3s ease-out; }
@@ -36,14 +36,14 @@ body {
 /* === TOPIC MAP === */
 .trunk-line {
   width: 4px;
-  background: #334155;
+  background: #cbd5e1;
   margin: 0 auto;
 }
 
 .progress-rail {
   width: 100%;
   height: 6px;
-  background: #0f172a;
+  background: #e2e8f0;
   border-radius: 3px;
   overflow: hidden;
 }
@@ -55,39 +55,39 @@ body {
 
 /* Module node blocks */
 .module-block {
-  background: #1e293b;
-  border: 2px solid #334155;
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
   border-radius: 12px;
   transition: all 0.15s ease;
 }
 .module-block.active {
-  border-color: #475569;
+  border-color: #cbd5e1;
   cursor: pointer;
 }
 .module-block.active:hover {
-  border-color: #64748b;
+  border-color: #94a3b8;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 .module-block.active:active {
   transform: translateY(0);
   box-shadow: none;
 }
 .module-block.locked {
-  opacity: 0.35;
-  border-color: #1e293b;
+  opacity: 0.4;
+  border-color: #f1f5f9;
   cursor: not-allowed;
 }
 
 /* Study card */
 .study-card {
-  background: linear-gradient(145deg, #1e293b 0%, #172033 100%);
-  border: 2px solid #334155;
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
   border-radius: 16px;
   transition: all 0.2s ease;
 }
 .study-card:hover {
-  border-color: #475569;
+  border-color: #cbd5e1;
 }
 
 /* Grid viewport for TopicMap scrolling */
@@ -97,8 +97,8 @@ body {
 
 /* === SHARED COMPONENTS === */
 .btn-primary {
-  background: #e2e8f0;
-  color: #0f172a;
+  background: #1e293b;
+  color: #ffffff;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -108,11 +108,11 @@ body {
   transition: all 0.15s ease;
   cursor: pointer;
 }
-.btn-primary:hover { background: #f1f5f9; transform: translateY(-1px); }
+.btn-primary:hover { background: #0f172a; transform: translateY(-1px); }
 .btn-primary:active { transform: translateY(1px); }
 .btn-primary:disabled {
-  background: #334155;
-  color: #64748b;
+  background: #e2e8f0;
+  color: #94a3b8;
   cursor: not-allowed;
   transform: none;
 }
@@ -128,14 +128,15 @@ body {
   cursor: pointer;
   transition: color 0.15s;
 }
-.btn-ghost:hover { color: #94a3b8; }
+.btn-ghost:hover { color: #334155; }
 
 /* Stat card */
 .stat-card {
-  background: #1e293b;
-  border: 1px solid #334155;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 /* Badge pill */

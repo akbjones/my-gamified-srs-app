@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+/* === BASE === */
+body {
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === ANIMATIONS === */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes xp-pop {
+  0% { opacity: 1; transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.2); }
+  100% { opacity: 0; transform: translateY(-40px) scale(0.8); }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+  50% { box-shadow: 0 0 16px 4px rgba(59, 130, 246, 0.25); }
+}
+
+.animate-fade-in { animation: fade-in 0.3s ease-out; }
+.animate-slide-up { animation: slide-up 0.3s ease-out; }
+.animate-xp-pop { animation: xp-pop 0.8s ease-out forwards; }
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+
+/* === TOPIC MAP === */
+.trunk-line {
+  width: 4px;
+  background: #cbd5e1;
+  margin: 0 auto;
+}
+
+.progress-rail {
+  width: 100%;
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+/* Module node blocks */
+.module-block {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  transition: all 0.15s ease;
+}
+.module-block.active {
+  border-color: #cbd5e1;
+  cursor: pointer;
+}
+.module-block.active:hover {
+  border-color: #94a3b8;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.module-block.active:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+.module-block.locked {
+  opacity: 0.4;
+  border-color: #f1f5f9;
+  cursor: not-allowed;
+}
+
+/* Study card */
+.study-card {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+.study-card:hover {
+  border-color: #cbd5e1;
+}
+
+/* Grid viewport for TopicMap scrolling */
+.grid-viewport {
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* === SHARED COMPONENTS === */
+.btn-primary {
+  background: #1e293b;
+  color: #ffffff;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 13px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+.btn-primary:hover { background: #0f172a; transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(1px); }
+.btn-primary:disabled {
+  background: #e2e8f0;
+  color: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: #64748b;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 11px;
+  border: none;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.btn-ghost:hover { color: #334155; }
+
+/* Stat card */
+.stat-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* Badge pill */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

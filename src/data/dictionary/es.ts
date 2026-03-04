@@ -613,7 +613,6 @@ export const dictionary: Record<string, DictEntry> = {
   "mil": { en: "one thousand", ipa: "mil", pos: "n" },
   "millón": { en: "million", ipa: "mi.ˈʝon", pos: "n" },
   "primero": { en: "first", ipa: "pɾi.ˈme.ɾo", pos: "adj" },
-  "segundo": { en: "second", ipa: "se.ˈɣun.do", pos: "adj" },
   "tercero": { en: "third", ipa: "teɾ.ˈθe.ɾo", pos: "adj" },
   "último": { en: "last", ipa: "ˈul.ti.mo", pos: "adj" },
 
@@ -664,7 +663,6 @@ export const dictionary: Record<string, DictEntry> = {
   "seco": { en: "dry", ipa: "ˈse.ko", pos: "adj" },
   "mojado": { en: "wet", ipa: "mo.ˈxa.ðo", pos: "adj" },
   "tranquilo": { en: "calm / quiet", ipa: "tɾan.ˈki.lo", pos: "adj" },
-  "rápido": { en: "fast / quick", ipa: "ˈra.pi.ðo", pos: "adj" },
   "lento": { en: "slow", ipa: "ˈlen.to", pos: "adj" },
   "fuerte": { en: "strong", ipa: "ˈfweɾ.te", pos: "adj" },
   "débil": { en: "weak", ipa: "ˈde.βil", pos: "adj" },
@@ -675,7 +673,6 @@ export const dictionary: Record<string, DictEntry> = {
   "aburrido": { en: "boring / bored", ipa: "a.βu.ˈri.ðo", pos: "adj" },
   "simpático": { en: "nice / friendly", ipa: "sim.ˈpa.ti.ko", pos: "adj" },
   "amable": { en: "kind", ipa: "a.ˈma.βle", pos: "adj" },
-  "solo": { en: "alone / only", ipa: "ˈso.lo", pos: "adj" },
 
   // === COLORS ===
   "rojo": { en: "red", ipa: "ˈro.xo", pos: "adj" },
@@ -693,7 +690,6 @@ export const dictionary: Record<string, DictEntry> = {
   // === DIRECTIONS ===
   "norte": { en: "north", ipa: "ˈnoɾ.te", pos: "n" },
   "sur": { en: "south", ipa: "suɾ", pos: "n" },
-  "este": { en: "east", ipa: "ˈes.te", pos: "n" },
   "oeste": { en: "west", ipa: "o.ˈes.te", pos: "n" },
   "derecha": { en: "right", ipa: "de.ˈɾe.tʃa", pos: "n" },
   "izquierda": { en: "left", ipa: "iθ.ˈkjeɾ.ða", pos: "n" },
@@ -708,7 +704,6 @@ export const dictionary: Record<string, DictEntry> = {
   "perdón": { en: "sorry / excuse me", ipa: "peɾ.ˈðon", pos: "n" },
   "disculpa": { en: "excuse me / sorry", ipa: "dis.ˈkul.pa", pos: "n" },
   "bienvenido": { en: "welcome", ipa: "bjem.be.ˈni.ðo", pos: "adj" },
-  "salud": { en: "cheers / bless you", ipa: "sa.ˈluð", pos: "n" },
   "favor": { en: "favor", ipa: "fa.ˈβoɾ", pos: "n" },
   "señor": { en: "Mr. / sir", ipa: "se.ˈɲoɾ", pos: "n" },
   "señora": { en: "Mrs. / madam", ipa: "se.ˈɲo.ɾa", pos: "n" },

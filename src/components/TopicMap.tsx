@@ -53,7 +53,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, onBack }) => {
           <span>Back</span>
         </button>
         <div className="text-center">
-          <h1 className="text-lg font-black uppercase tracking-tight text-slate-800">Spanish</h1>
+          <h1 className="text-lg font-black uppercase tracking-tight text-[var(--text-primary)]">Spanish</h1>
         </div>
         <div className="text-sm font-black text-blue-500">{getTotalProgress()}%</div>
       </header>
@@ -61,7 +61,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, onBack }) => {
       {/* Linear path */}
       <div className="relative" style={{ paddingLeft: '40px' }}>
         {/* Trunk line — centered on the dots */}
-        <div className="absolute top-0 bottom-0 w-[2px] bg-slate-200" style={{ left: '15px' }} />
+        <div className="absolute top-0 bottom-0 w-[2px] bg-[var(--progress-bg)]" style={{ left: '15px' }} />
 
         {MAIN_PATH.map((node, idx) => {
           const unlocked = isNodeUnlocked(idx, cards);
@@ -83,10 +83,10 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, onBack }) => {
               {showTierLabel && (
                 <div className="mb-4 mt-3" style={{ marginLeft: '-40px', paddingLeft: '32px' }}>
                   <div className="flex items-center gap-2.5">
-                    <div className="w-2 h-6 rounded-full" style={{ background: unlocked ? node.color : '#cbd5e1' }} />
+                    <div className="w-2 h-6 rounded-full" style={{ background: unlocked ? node.color : 'var(--text-faint)' }} />
                     <span
                       className="text-sm font-black uppercase tracking-widest"
-                      style={{ color: unlocked ? node.color : '#94a3b8' }}
+                      style={{ color: unlocked ? node.color : 'var(--text-muted)' }}
                     >
                       {node.tier}
                     </span>
@@ -99,7 +99,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, onBack }) => {
                 ref={isCurrent ? activeRef : undefined}
                 className="relative mb-4"
               >
-                {/* Dot on trunk line — centered at left: 15px (center of 2px line) */}
+                {/* Dot on trunk line */}
                 <div
                   className={`absolute w-[12px] h-[12px] rounded-full border-2 z-10 ${
                     isComplete
@@ -107,8 +107,8 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, onBack }) => {
                       : isCurrent
                         ? 'border-blue-500 bg-blue-500 animate-pulse-glow'
                         : unlocked
-                          ? 'border-slate-400 bg-white'
-                          : 'border-slate-300 bg-slate-100'
+                          ? 'border-[var(--text-muted)] bg-[var(--bg-card)]'
+                          : 'border-[var(--text-faint)] bg-[var(--bg-inset)]'
                   }`}
                   style={{ left: '-30px', top: '18px' }}
                 />
@@ -117,7 +117,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, onBack }) => {
                 <div
                   className={`w-full text-left rounded-xl p-4 transition-all relative ${
                     !unlocked
-                      ? 'bg-slate-50 border border-slate-200'
+                      ? 'bg-[var(--bg-inset)] border border-[var(--border-color)]'
                       : isCurrent
                         ? 'stat-card border-blue-500/30'
                         : isComplete
@@ -134,17 +134,17 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, onBack }) => {
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
-                      {!unlocked && <Lock size={14} className="text-slate-300" />}
+                      {!unlocked && <Lock size={14} className="text-[var(--text-faint)]" />}
                       {isComplete && <Check size={14} className="text-emerald-500" />}
                       <span className={`font-bold text-sm ${
-                        !unlocked ? 'text-slate-400' : 'text-slate-800'
+                        !unlocked ? 'text-[var(--text-muted)]' : 'text-[var(--text-primary)]'
                       }`}>
                         {node.name}
                       </span>
                     </div>
                     {unlocked && (
                       <span className={`text-xs font-bold ${
-                        isComplete ? 'text-emerald-500' : percent > 0 ? 'text-blue-500' : 'text-slate-400'
+                        isComplete ? 'text-emerald-500' : percent > 0 ? 'text-blue-500' : 'text-[var(--text-muted)]'
                       }`}>
                         {graduated}/{total}
                       </span>
@@ -170,11 +170,11 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, onBack }) => {
                     {sideBranches.map(sb => sb && (
                       <div
                         key={sb.id}
-                        className="flex items-center gap-2 py-2 px-3 rounded-lg bg-slate-50 border border-slate-200"
+                        className="flex items-center gap-2 py-2 px-3 rounded-lg bg-[var(--bg-inset)] border border-[var(--border-color)]"
                       >
                         <span className="text-xs">{sb.icon}</span>
-                        <span className="text-[10px] font-bold text-slate-400">{sb.name}</span>
-                        <span className="text-[8px] font-bold text-slate-400 uppercase tracking-wider ml-auto">Soon</span>
+                        <span className="text-[10px] font-bold text-[var(--text-muted)]">{sb.name}</span>
+                        <span className="text-[8px] font-bold text-[var(--text-muted)] uppercase tracking-wider ml-auto">Soon</span>
                       </div>
                     ))}
                   </div>

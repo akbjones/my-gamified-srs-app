@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { QuestCard, SessionState } from '../types';
-import { Volume2, BookOpen } from 'lucide-react';
+import { Volume2, BookOpen, AlertTriangle } from 'lucide-react';
 import { playCardAudio, stopAudio } from '../services/audioService';
 import WordPopover from './WordPopover';
 
@@ -8,40 +8,66 @@ interface StudySessionProps {
   session: SessionState;
   onAnswer: (rating: 'AGAIN' | 'HARD' | 'GOOD' | 'EASY') => void;
   onAbort: () => void;
+  onStudyMore?: () => void;
+  hasMoreCards?: boolean;
   topicCards: QuestCard[];
 }
 
 const GRADE_CONFIG = {
-  AGAIN: { color: 'text-red-500', bg: 'hover:bg-red-50 active:bg-red-100', border: 'border-red-200' },
-  HARD:  { color: 'text-orange-500', bg: 'hover:bg-orange-50 active:bg-orange-100', border: 'border-orange-200' },
-  GOOD:  { color: 'text-emerald-600', bg: 'hover:bg-emerald-50 active:bg-emerald-100', border: 'border-emerald-200' },
-  EASY:  { color: 'text-blue-500', bg: 'hover:bg-blue-50 active:bg-blue-100', border: 'border-blue-200' },
+  AGAIN: { color: 'text-red-500', bg: 'hover:bg-red-500/10 active:bg-red-500/20', border: 'border-red-500/30' },
+  HARD:  { color: 'text-orange-500', bg: 'hover:bg-orange-500/10 active:bg-orange-500/20', border: 'border-orange-500/30' },
+  GOOD:  { color: 'text-emerald-500', bg: 'hover:bg-emerald-500/10 active:bg-emerald-500/20', border: 'border-emerald-500/30' },
+  EASY:  { color: 'text-blue-500', bg: 'hover:bg-blue-500/10 active:bg-blue-500/20', border: 'border-blue-500/30' },
 } as const;
 
-const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort, topicCards = [] }) => {
+const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort, onStudyMore, hasMoreCards, topicCards = [] }) => {
   const [showInfo, setShowInfo] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showGrammar, setShowGrammar] = useState(false);
 
-  if (session.currentIndex >= session.queue.length) {
+  const isComplete = session.currentIndex >= session.queue.length;
+  const card = isComplete ? null : session.queue[session.currentIndex];
+
+  // All hooks MUST be above any early return
+  const prevCardId = useRef<string | null>(null);
+  useEffect(() => {
+    if (card && card.id !== prevCardId.current) {
+      prevCardId.current = card.id;
+      playCardAudio(card.audio, card.target, session.language);
+    }
+  }, [card, session.language]);
+
+  if (isComplete) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-6 animate-fade-in">
-        <div className="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-2xl">
-          ✓
+        <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-2xl">
+          &#x2713;
         </div>
         <div className="text-center">
-          <h2 className="text-2xl font-black text-slate-800 mb-2">Session Complete</h2>
-          <p className="text-sm text-slate-500">{session.finishedCount} cards reviewed</p>
+          <h2 className="text-2xl font-black text-[var(--text-primary)] mb-2">Session Complete!</h2>
+          <p className="text-sm text-[var(--text-secondary)]">{session.finishedCount} cards reviewed</p>
         </div>
-        <button onClick={onAbort} className="px-8 py-3 btn-primary rounded-xl">
-          Continue
-        </button>
+        <div className="flex flex-col gap-3 w-full max-w-xs">
+          {hasMoreCards && onStudyMore && (
+            <button onClick={onStudyMore} className="px-8 py-3 btn-primary rounded-xl w-full">
+              Study More Cards
+            </button>
+          )}
+          <button
+            onClick={onAbort}
+            className={`px-8 py-3 rounded-xl w-full ${
+              hasMoreCards && onStudyMore
+                ? 'bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-secondary)] font-bold hover:bg-[var(--bg-card-hover)] active:bg-[var(--bg-inset)] transition-colors'
+                : 'btn-primary'
+            }`}
+          >
+            Back to Home
+          </button>
+        </div>
       </div>
     );
   }
-
-  const card = session.queue[session.currentIndex];
 
   const masteredCount = topicCards.filter(c => c.mastery === 2).length;
   const topicProgress = topicCards.length > 0 ? (masteredCount / topicCards.length) * 100 : 0;
@@ -51,21 +77,12 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
   const countLearn = remainingQueue.filter(c => c.mastery === 1).length;
   const countReview = remainingQueue.filter(c => c.mastery === 2).length;
 
-  // Auto-play Spanish TTS when a new card appears
-  const prevCardId = useRef<string | null>(null);
-  useEffect(() => {
-    if (card && card.id !== prevCardId.current) {
-      prevCardId.current = card.id;
-      playCardAudio(card.audio, card.target);
-    }
-  }, [card]);
-
   const handleFlip = () => setIsFlipped(true);
 
   const handlePlayAudio = (e: React.MouseEvent) => {
     e.stopPropagation();
     setIsPlaying(true);
-    playCardAudio(card.audio, card.target).finally(() => setIsPlaying(false));
+    playCardAudio(card!.audio, card!.target, session.language).finally(() => setIsPlaying(false));
   };
 
   const submitAnswer = (rating: 'AGAIN' | 'HARD' | 'GOOD' | 'EASY') => {
@@ -79,8 +96,8 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
     if (rating === 'AGAIN') return '1m';
     if (rating === 'HARD') return '6m';
     if (rating === 'GOOD') {
-      if (card.mastery === 0) return '10m';
-      if (card.mastery === 1 && card.step === 0) return '10m';
+      if (card!.mastery === 0) return '10m';
+      if (card!.mastery === 1 && card!.step === 0) return '10m';
       return '1d';
     }
     return '4d';
@@ -92,17 +109,17 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
       {showInfo && (
         <div
           onClick={() => setShowInfo(false)}
-          className="fixed inset-0 z-50 flex items-center justify-center p-8 bg-black/40 backdrop-blur-sm animate-fade-in"
+          className="fixed inset-0 z-50 flex items-center justify-center p-8 bg-[var(--overlay)] backdrop-blur-sm animate-fade-in"
         >
-          <div className="stat-card p-6 text-sm leading-8 text-slate-600 w-full max-w-xs">
-            <h3 className="font-black text-slate-800 border-b border-slate-200 pb-3 mb-4 text-base">
+          <div className="stat-card p-6 text-sm leading-8 text-[var(--text-secondary)] w-full max-w-xs">
+            <h3 className="font-black text-[var(--text-primary)] border-b border-[var(--border-color)] pb-3 mb-4 text-base">
               Grading Guide
             </h3>
-            <p><span className="text-red-500 font-black">Again</span> — Didn't know it. Restart.</p>
-            <p><span className="text-orange-500 font-black">Hard</span> — Struggled. Repeat soon.</p>
-            <p><span className="text-emerald-600 font-black">Good</span> — Got it. Advance step.</p>
-            <p><span className="text-blue-500 font-black">Easy</span> — Too easy. Skip ahead.</p>
-            <div className="mt-5 pt-3 border-t border-slate-200 text-center text-xs text-slate-400 font-bold">
+            <p><span className="text-red-500 font-black">Again</span> &mdash; Didn't know it. Restart.</p>
+            <p><span className="text-orange-500 font-black">Hard</span> &mdash; Struggled. Repeat soon.</p>
+            <p><span className="text-emerald-500 font-black">Good</span> &mdash; Got it. Advance step.</p>
+            <p><span className="text-blue-500 font-black">Easy</span> &mdash; Too easy. Skip ahead.</p>
+            <div className="mt-5 pt-3 border-t border-[var(--border-color)] text-center text-xs text-[var(--text-muted)] font-bold">
               Tap anywhere to close
             </div>
           </div>
@@ -113,33 +130,33 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
         {/* Top bar */}
         <nav className="flex flex-col gap-2">
           <div className="flex justify-between items-center">
-            <button onClick={onAbort} className="btn-ghost text-xs">← Exit</button>
+            <button onClick={onAbort} className="btn-ghost text-xs">&larr; Exit</button>
 
             <div className="flex items-center gap-5 stat-card py-2 px-5">
               <div className="text-center">
                 <div className="text-base font-black text-blue-500">{countNew}</div>
-                <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">new</div>
+                <div className="text-[9px] font-bold text-[var(--text-muted)] uppercase tracking-wider">new</div>
               </div>
               <div className="text-center">
                 <div className="text-base font-black text-orange-500">{countLearn}</div>
-                <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">learn</div>
+                <div className="text-[9px] font-bold text-[var(--text-muted)] uppercase tracking-wider">learn</div>
               </div>
               <div className="text-center">
                 <div className="text-base font-black text-emerald-500">{countReview}</div>
-                <div className="text-[9px] font-bold text-slate-400 uppercase tracking-wider">review</div>
+                <div className="text-[9px] font-bold text-[var(--text-muted)] uppercase tracking-wider">review</div>
               </div>
             </div>
 
             <button
               onClick={() => setShowInfo(true)}
-              className="w-8 h-8 rounded-lg border border-slate-200 text-xs font-bold text-slate-400 hover:text-slate-600 hover:border-slate-300 transition-colors"
+              className="w-8 h-8 rounded-lg border border-[var(--border-color)] text-xs font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)] hover:border-[var(--border-hover)] transition-colors"
             >
               ?
             </button>
           </div>
 
           <div>
-            <div className="flex justify-between text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1 px-0.5">
+            <div className="flex justify-between text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-widest mb-1 px-0.5">
               <span>Progress</span>
               <span>{Math.round(topicProgress)}%</span>
             </div>
@@ -155,17 +172,25 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
           className="study-card flex-1 min-h-[250px] flex flex-col items-center justify-center p-6 cursor-pointer my-4 relative overflow-hidden"
         >
           {/* Grammar toggle — top-left, only when flipped & card has grammar */}
-          {isFlipped && card.grammar && (
+          {isFlipped && card!.grammar && (
             <button
               onClick={(e) => { e.stopPropagation(); document.dispatchEvent(new MouseEvent('click', { bubbles: false })); setShowGrammar(!showGrammar); }}
               className={`absolute top-4 left-4 p-2 rounded-lg border transition-all z-20 ${
                 showGrammar
-                  ? 'bg-amber-50 border-amber-300 text-amber-500'
-                  : 'border-slate-200 text-slate-400 hover:text-amber-500 hover:border-amber-300 bg-white'
+                  ? 'bg-amber-500/10 border-amber-500/40 text-amber-500'
+                  : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-amber-500 hover:border-amber-500/40 bg-[var(--bg-card)]'
               }`}
             >
               <BookOpen size={18} />
             </button>
+          )}
+
+          {/* Leech indicator */}
+          {card!.isLeech && (
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1 bg-orange-500/10 border border-orange-500/40 rounded-lg px-2 py-1">
+              <AlertTriangle size={12} className="text-orange-500" />
+              <span className="text-[9px] font-bold uppercase tracking-wider text-orange-500">Leech</span>
+            </div>
           )}
 
           {/* Audio — top-right */}
@@ -173,42 +198,42 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
             onClick={handlePlayAudio}
             className={`absolute top-4 right-4 p-2 rounded-lg border transition-all z-20 ${
               isPlaying
-                ? 'bg-blue-50 border-blue-300 text-blue-500 animate-pulse'
-                : 'border-slate-200 text-slate-400 hover:text-blue-500 hover:border-blue-300 bg-white'
+                ? 'bg-blue-500/10 border-blue-500/40 text-blue-500 animate-pulse'
+                : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-blue-500 hover:border-blue-500/40 bg-[var(--bg-card)]'
             }`}
           >
             <Volume2 size={18} />
           </button>
 
           {/* Grammar overlay — covers the card content */}
-          {showGrammar && card.grammar && (
+          {showGrammar && card!.grammar && (
             <div
-              className="absolute inset-0 z-10 bg-amber-50/95 rounded-2xl flex flex-col items-center justify-center p-8 animate-fade-in cursor-default"
+              className="absolute inset-0 z-10 bg-amber-50/95 dark:bg-amber-900/30 rounded-2xl flex flex-col items-center justify-center p-8 animate-fade-in cursor-default"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center gap-1.5 mb-4">
                 <BookOpen size={14} className="text-amber-500" />
                 <span className="text-[10px] font-bold uppercase tracking-wider text-amber-500">Grammar Tip</span>
               </div>
-              <p className="text-sm md:text-base text-slate-700 leading-relaxed text-center max-w-xs">
-                {card.grammar}
+              <p className="text-sm md:text-base text-slate-700 dark:text-amber-100 leading-relaxed text-center max-w-xs">
+                {card!.grammar}
               </p>
             </div>
           )}
 
           <WordPopover
-            sentence={card.target}
-            className="text-xl md:text-2xl font-black tracking-tight text-slate-800 leading-tight max-w-sm mx-auto"
+            sentence={card!.target}
+            className="text-xl md:text-2xl font-black tracking-tight text-[var(--text-primary)] leading-tight max-w-sm mx-auto"
           />
 
           {isFlipped ? (
-            <div className="mt-8 pt-8 border-t border-slate-200 w-full animate-fade-in">
-              <p className="text-base md:text-lg text-slate-500 font-bold italic leading-tight">
-                {card.english}
+            <div className="mt-8 pt-8 border-t border-[var(--border-color)] w-full animate-fade-in">
+              <p className="text-base md:text-lg text-[var(--text-secondary)] font-bold italic leading-tight">
+                {card!.english}
               </p>
             </div>
           ) : (
-            <div className="mt-8 text-xs text-slate-400 font-bold uppercase tracking-widest">
+            <div className="mt-8 text-xs text-[var(--text-muted)] font-bold uppercase tracking-widest">
               Tap to reveal
             </div>
           )}
@@ -223,10 +248,10 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
                 <button
                   key={rating}
                   onClick={() => submitAnswer(rating)}
-                  className={`py-4 rounded-xl bg-white border ${cfg.border} ${cfg.bg} ${cfg.color} active:scale-95 transition-all`}
+                  className={`py-4 rounded-xl bg-[var(--bg-card)] border ${cfg.border} ${cfg.bg} ${cfg.color} active:scale-95 transition-all`}
                 >
                   <div className="text-xs font-black uppercase">{rating}</div>
-                  <div className="text-[9px] text-slate-400 font-mono mt-0.5">{getIntervalHint(rating)}</div>
+                  <div className="text-[9px] text-[var(--text-muted)] font-mono mt-0.5">{getIntervalHint(rating)}</div>
                 </button>
               );
             })}

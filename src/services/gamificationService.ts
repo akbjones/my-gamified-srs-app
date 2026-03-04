@@ -1,4 +1,4 @@
-import { UserStats, MasteryMap, Achievement, QuestCard } from '../types';
+import { UserStats, MasteryMap, Achievement, QuestCard, Language } from '../types';
 import { ACHIEVEMENTS } from '../data/achievements';
 import { loadUnlockedAchievements, saveUnlockedAchievements } from './storageService';
 
@@ -50,9 +50,10 @@ export const updateStreak = (stats: UserStats): UserStats => {
 export const checkAchievements = (
   stats: UserStats,
   masteryMap: MasteryMap,
-  deck: QuestCard[]
+  deck: QuestCard[],
+  lang: Language = 'spanish'
 ): Achievement[] => {
-  const unlocked = loadUnlockedAchievements();
+  const unlocked = loadUnlockedAchievements(lang);
   const newlyUnlocked: Achievement[] = [];
 
   for (const achievement of ACHIEVEMENTS) {
@@ -64,7 +65,7 @@ export const checkAchievements = (
   }
 
   if (newlyUnlocked.length > 0) {
-    saveUnlockedAchievements(unlocked);
+    saveUnlockedAchievements(unlocked, lang);
   }
 
   return newlyUnlocked;
@@ -73,9 +74,10 @@ export const checkAchievements = (
 export const getAchievementsWithStatus = (
   stats: UserStats,
   masteryMap: MasteryMap,
-  deck: QuestCard[]
+  deck: QuestCard[],
+  lang: Language = 'spanish'
 ): Achievement[] => {
-  const unlocked = loadUnlockedAchievements();
+  const unlocked = loadUnlockedAchievements(lang);
   return ACHIEVEMENTS.map(a => ({
     ...a,
     unlocked: unlocked.includes(a.id),

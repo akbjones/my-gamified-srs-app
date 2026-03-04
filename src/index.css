@@ -1,9 +1,60 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* === THEME TOKENS === */
+:root {
+  --bg-primary: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --bg-inset: #f1f5f9;
+  --border-color: #e2e8f0;
+  --border-hover: #cbd5e1;
+  --border-subtle: #f1f5f9;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --text-faint: #cbd5e1;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --overlay: rgba(0, 0, 0, 0.4);
+  --progress-bg: #e2e8f0;
+  --trunk-color: #cbd5e1;
+  --btn-primary-bg: #1e293b;
+  --btn-primary-bg-hover: #0f172a;
+  --btn-primary-text: #ffffff;
+  --btn-disabled-bg: #e2e8f0;
+  --btn-disabled-text: #94a3b8;
+}
+
+.dark {
+  --bg-primary: #0f172a;
+  --bg-card: #1e293b;
+  --bg-card-hover: #334155;
+  --bg-inset: #0f172a;
+  --border-color: #334155;
+  --border-hover: #475569;
+  --border-subtle: #1e293b;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-faint: #475569;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --overlay: rgba(0, 0, 0, 0.6);
+  --progress-bg: #334155;
+  --trunk-color: #475569;
+  --btn-primary-bg: #3b82f6;
+  --btn-primary-bg-hover: #2563eb;
+  --btn-primary-text: #ffffff;
+  --btn-disabled-bg: #334155;
+  --btn-disabled-text: #64748b;
+}
+
 /* === BASE === */
 body {
-  background-color: #f8fafc;
-  color: #1e293b;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   font-family: 'JetBrains Mono', monospace;
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -36,14 +87,14 @@ body {
 /* === TOPIC MAP === */
 .trunk-line {
   width: 4px;
-  background: #cbd5e1;
+  background: var(--trunk-color);
   margin: 0 auto;
 }
 
 .progress-rail {
   width: 100%;
   height: 6px;
-  background: #e2e8f0;
+  background: var(--progress-bg);
   border-radius: 3px;
   overflow: hidden;
 }
@@ -55,19 +106,19 @@ body {
 
 /* Module node blocks */
 .module-block {
-  background: #ffffff;
-  border: 2px solid #e2e8f0;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
   border-radius: 12px;
   transition: all 0.15s ease;
 }
 .module-block.active {
-  border-color: #cbd5e1;
+  border-color: var(--border-hover);
   cursor: pointer;
 }
 .module-block.active:hover {
-  border-color: #94a3b8;
+  border-color: var(--text-muted);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-lg);
 }
 .module-block.active:active {
   transform: translateY(0);
@@ -75,19 +126,19 @@ body {
 }
 .module-block.locked {
   opacity: 0.4;
-  border-color: #f1f5f9;
+  border-color: var(--border-subtle);
   cursor: not-allowed;
 }
 
 /* Study card */
 .study-card {
-  background: #ffffff;
-  border: 2px solid #e2e8f0;
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
   border-radius: 16px;
   transition: all 0.2s ease;
 }
 .study-card:hover {
-  border-color: #cbd5e1;
+  border-color: var(--border-hover);
 }
 
 /* Grid viewport for TopicMap scrolling */
@@ -97,8 +148,8 @@ body {
 
 /* === SHARED COMPONENTS === */
 .btn-primary {
-  background: #1e293b;
-  color: #ffffff;
+  background: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -108,18 +159,18 @@ body {
   transition: all 0.15s ease;
   cursor: pointer;
 }
-.btn-primary:hover { background: #0f172a; transform: translateY(-1px); }
+.btn-primary:hover { background: var(--btn-primary-bg-hover); transform: translateY(-1px); }
 .btn-primary:active { transform: translateY(1px); }
 .btn-primary:disabled {
-  background: #e2e8f0;
-  color: #94a3b8;
+  background: var(--btn-disabled-bg);
+  color: var(--btn-disabled-text);
   cursor: not-allowed;
   transform: none;
 }
 
 .btn-ghost {
   background: transparent;
-  color: #64748b;
+  color: var(--text-secondary);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -128,15 +179,15 @@ body {
   cursor: pointer;
   transition: color 0.15s;
 }
-.btn-ghost:hover { color: #334155; }
+.btn-ghost:hover { color: var(--text-primary); }
 
 /* Stat card */
 .stat-card {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 16px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow);
 }
 
 /* Badge pill */

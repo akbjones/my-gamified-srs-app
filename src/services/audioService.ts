@@ -1,3 +1,5 @@
+import { Language, LANGUAGE_CONFIG } from '../types';
+
 let currentAudio: HTMLAudioElement | null = null;
 
 export const stopAudio = (): void => {
@@ -10,7 +12,11 @@ export const stopAudio = (): void => {
   }
 };
 
-export const playCardAudio = async (audioFile: string, targetText: string): Promise<void> => {
+export const playCardAudio = async (
+  audioFile: string,
+  targetText: string,
+  lang: Language = 'spanish'
+): Promise<void> => {
   stopAudio();
 
   // Try MP3 first
@@ -28,7 +34,7 @@ export const playCardAudio = async (audioFile: string, targetText: string): Prom
   // SpeechSynthesis fallback
   if ('speechSynthesis' in window) {
     const utterance = new SpeechSynthesisUtterance(targetText);
-    utterance.lang = 'es-ES';
+    utterance.lang = LANGUAGE_CONFIG[lang].bcp47;
     utterance.rate = 0.9;
     window.speechSynthesis.speak(utterance);
   }

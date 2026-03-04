@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { lookupWord, DictEntry } from '../data/dictionary';
+import { lookupWord, DictEntry } from '../data/dictionary/es';
 
 interface WordPopoverProps {
   sentence: string;
@@ -74,8 +74,8 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, className = '' }) =
               onClick={(e) => handleWordClick(i, e)}
               className={`
                 transition-all duration-150 cursor-pointer rounded-sm px-[1px] -mx-[1px]
-                ${hasEntry ? 'hover:bg-blue-100 hover:text-blue-700' : ''}
-                ${isActive ? 'bg-blue-100 text-blue-700' : ''}
+                ${hasEntry ? 'hover:bg-blue-500/15 hover:text-blue-500' : ''}
+                ${isActive ? 'bg-blue-500/15 text-blue-500' : ''}
               `}
             >
               {token}
@@ -97,7 +97,7 @@ const Popover: React.FC<{ entry: DictEntry; position: 'above' | 'below' }> = ({ 
     <div
       className={`
         absolute z-50 left-1/2 -translate-x-1/2 w-52
-        bg-white border border-slate-200 rounded-xl shadow-lg shadow-slate-200/50
+        bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl shadow-lg
         p-3 animate-fade-in
         ${position === 'above' ? 'bottom-full mb-2' : 'top-full mt-2'}
       `}
@@ -107,7 +107,7 @@ const Popover: React.FC<{ entry: DictEntry; position: 'above' | 'below' }> = ({ 
       <div
         className={`
           absolute left-1/2 -translate-x-1/2 w-2.5 h-2.5
-          bg-white border-slate-200 rotate-45
+          bg-[var(--bg-card)] border-[var(--border-color)] rotate-45
           ${position === 'above'
             ? 'bottom-[-6px] border-r border-b'
             : 'top-[-6px] border-l border-t'
@@ -116,7 +116,7 @@ const Popover: React.FC<{ entry: DictEntry; position: 'above' | 'below' }> = ({ 
       />
 
       {/* Translation */}
-      <div className="text-sm font-bold text-slate-800 leading-snug">
+      <div className="text-sm font-bold text-[var(--text-primary)] leading-snug">
         {entry.en}
       </div>
 
@@ -128,7 +128,7 @@ const Popover: React.FC<{ entry: DictEntry; position: 'above' | 'below' }> = ({ 
       {/* Part of speech */}
       {entry.pos && (
         <div className="mt-1.5">
-          <span className="text-[9px] font-bold uppercase tracking-wider text-slate-400 bg-slate-50 px-1.5 py-0.5 rounded">
+          <span className="text-[9px] font-bold uppercase tracking-wider text-[var(--text-muted)] bg-[var(--bg-inset)] px-1.5 py-0.5 rounded">
             {POS_LABELS[entry.pos] || entry.pos}
           </span>
         </div>

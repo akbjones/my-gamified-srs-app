@@ -14,7 +14,7 @@ import type { StudySettings } from './services/storageService';
 import {
   awardXP, updateStreak, checkAchievements, getAchievementsWithStatus,
 } from './services/gamificationService';
-import { Settings2, Minus, Plus, X } from 'lucide-react';
+import { Settings2, Minus, Plus, X, Sun, Moon } from 'lucide-react';
 
 type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS';
 
@@ -155,14 +155,7 @@ const App: React.FC = () => {
   // Dark mode effect
   useEffect(() => {
     const root = document.documentElement;
-    if (settings.theme === 'dark') {
-      root.classList.add('dark');
-    } else if (settings.theme === 'system') {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      root.classList.toggle('dark', prefersDark);
-    } else {
-      root.classList.remove('dark');
-    }
+    root.classList.toggle('dark', settings.theme === 'dark');
   }, [settings.theme]);
 
   const handleStartSession = () => {
@@ -288,80 +281,27 @@ const App: React.FC = () => {
 
   const availableLanguages: Language[] = Object.keys(DECK_MAP) as Language[];
 
+  const toggleTheme = () => {
+    handleUpdateSettings({ ...settings, theme: settings.theme === 'dark' ? 'light' : 'dark' });
+  };
+
   return (
-    <div className="max-w-md mx-auto min-h-screen p-5 pb-20 font-mono">
+    <div className="max-w-md mx-auto min-h-screen p-5 pb-20">
       {view === 'HOME' && (
         <section className="animate-fade-in">
-          {/* Header */}
-          <header className="pt-10 pb-6">
-            <h1 className="text-5xl font-black italic tracking-tighter text-blue-500 text-center">LangLab</h1>
-
-            <div className="flex justify-center mt-5">
-              <button onClick={() => setView('GAMIFICATION')} className="flex items-center gap-2 text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors">
-                <span className="text-amber-500 text-sm">&#x26A1;</span>
-                <span className="text-xs font-bold">{userStats.streak}-day streak</span>
-              </button>
-            </div>
+          {/* Header row: title + theme toggle */}
+          <header className="pt-10 pb-8 flex items-center justify-between">
+            <h1 className="text-4xl font-black italic tracking-tighter text-blue-500">LangLab</h1>
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
+              title={settings.theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {settings.theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
           </header>
 
-          {/* Language selection */}
-          <div className="grid grid-cols-2 gap-2 mb-3">
-            {(['spanish', 'italian', 'french', 'german'] as Language[]).map(l => {
-              const cfg = LANGUAGE_CONFIG[l];
-              const isAvailable = availableLanguages.includes(l);
-              const isSelected = lang === l;
-              return (
-                <button
-                  key={l}
-                  onClick={() => isAvailable && handleLanguageChange(l)}
-                  disabled={!isAvailable}
-                  className={`stat-card p-3 text-left transition-all ${
-                    isSelected
-                      ? 'border-blue-500/40 !bg-blue-500/10'
-                      : isAvailable
-                        ? 'hover:border-[var(--border-hover)] cursor-pointer'
-                        : 'opacity-40 cursor-not-allowed'
-                  }`}
-                >
-                  <div className="flex items-center gap-2">
-                    <span className="text-lg">{cfg.flag}</span>
-                    <div>
-                      <div className={`text-sm font-black ${isSelected ? 'text-blue-500' : 'text-[var(--text-primary)]'}`}>
-                        {cfg.name}
-                      </div>
-                      {!isAvailable && (
-                        <div className="text-[8px] text-[var(--text-muted)] font-bold uppercase">Coming Soon</div>
-                      )}
-                    </div>
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Goal selection */}
-          <div className="flex gap-1.5 mb-3 overflow-x-auto">
-            {(['general', 'travel', 'work', 'family'] as LearningGoal[]).map(g => {
-              const cfg = GOAL_CONFIG[g];
-              const isSelected = goal === g;
-              return (
-                <button
-                  key={g}
-                  onClick={() => handleGoalChange(g)}
-                  className={`flex-1 py-2 px-2 rounded-lg text-center transition-all border ${
-                    isSelected
-                      ? 'border-blue-500/40 bg-blue-500/10 text-blue-500'
-                      : 'border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--border-hover)]'
-                  }`}
-                >
-                  <div className="text-sm">{cfg.icon}</div>
-                  <div className="text-[9px] font-bold uppercase tracking-wider">{cfg.name}</div>
-                </button>
-              );
-            })}
-          </div>
-
-          {/* Current node indicator */}
+          {/* Study section — the main action */}
           {currentNode && (() => {
             const nodeTotal = deck.filter(c => c.topic === currentNode.id).length;
             const nodeGraduated = deck.filter(c => c.topic === currentNode.id && c.mastery === 2).length;
@@ -370,20 +310,17 @@ const App: React.FC = () => {
               <div className="stat-card p-4 mb-3">
                 <div className="flex items-center justify-between mb-2.5">
                   <div>
-                    <div className="text-[9px] font-bold uppercase tracking-widest mb-0.5" style={{ color: currentNode.color }}>
+                    <div className="text-[9px] font-semibold uppercase tracking-widest mb-0.5" style={{ color: currentNode.color }}>
                       {currentNode.tier}
                     </div>
-                    <div className="text-sm font-black text-[var(--text-primary)]">{currentNode.name}</div>
+                    <div className="text-sm font-extrabold text-[var(--text-primary)]">{currentNode.name}</div>
                   </div>
                   <button
-                    onClick={() => setShowTools(prev => !prev)}
-                    className={`p-2 rounded-lg border transition-all ${
-                      showTools
-                        ? 'border-blue-500/50 text-blue-400 bg-blue-500/10'
-                        : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--text-secondary)]'
-                    }`}
+                    onClick={() => setView('GAMIFICATION')}
+                    className="flex items-center gap-1.5 text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
                   >
-                    <Settings2 size={16} />
+                    <span className="text-amber-500 text-xs">&#x26A1;</span>
+                    <span className="text-[10px] font-bold font-mono">{userStats.streak}d</span>
                   </button>
                 </div>
                 <div className="progress-rail">
@@ -393,90 +330,29 @@ const App: React.FC = () => {
             );
           })()}
 
-          {/* Tools Panel */}
-          {showTools && (
-            <div className="stat-card animate-fade-in space-y-4 mb-3">
-              <div className="flex items-center justify-between">
-                <h3 className="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-widest">Settings</h3>
-                <button onClick={() => setShowTools(false)} className="text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors">
-                  <X size={16} />
-                </button>
-              </div>
-
-              <div>
-                <div className="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-widest mb-3">New Cards / Day</div>
-                <div className="flex items-center gap-3">
-                  <button onClick={() => adjustLimit(-5)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95">
-                    <Minus size={14} />
-                  </button>
-                  <button onClick={() => adjustLimit(-1)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95 text-xs font-bold">
-                    -1
-                  </button>
-                  <div className="flex-1 text-center">
-                    <div className="text-3xl font-black text-[var(--text-primary)]">{settings.dailyNewLimit}</div>
-                  </div>
-                  <button onClick={() => adjustLimit(1)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95 text-xs font-bold">
-                    +1
-                  </button>
-                  <button onClick={() => adjustLimit(5)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95">
-                    <Plus size={14} />
-                  </button>
-                </div>
-              </div>
-
-              {/* Theme toggle */}
-              <div>
-                <div className="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-widest mb-3">Theme</div>
-                <div className="flex gap-2">
-                  {(['light', 'dark', 'system'] as const).map(theme => (
-                    <button
-                      key={theme}
-                      onClick={() => handleUpdateSettings({ ...settings, theme })}
-                      className={`flex-1 py-2 rounded-lg text-xs font-bold uppercase tracking-wider border transition-all ${
-                        settings.theme === theme
-                          ? 'border-blue-500/40 bg-blue-500/10 text-blue-500'
-                          : 'border-[var(--border-color)] text-[var(--text-muted)] hover:border-[var(--border-hover)]'
-                      }`}
-                    >
-                      {theme === 'light' ? '\u2600\uFE0F' : theme === 'dark' ? '\uD83C\uDF19' : '\uD83D\uDDA5\uFE0F'} {theme}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <button
-                onClick={() => { resetAll(); window.location.reload(); }}
-                className="w-full py-3 rounded-lg border border-red-500/30 text-red-500 text-[10px] font-bold uppercase tracking-widest hover:bg-red-500/10 transition-colors"
-              >
-                Reset All Data
-              </button>
-            </div>
-          )}
-
-          {/* Stats row */}
-          <div className="grid grid-cols-2 gap-3 mb-4">
+          {/* Stats + Study */}
+          <div className="grid grid-cols-2 gap-3 mb-3">
             <div className={`stat-card text-center py-3 ${reviewsDue > 0 ? 'border-orange-400/40' : ''}`}>
-              <div className={`text-lg font-black ${reviewsDue > 0 ? 'text-orange-500' : 'text-[var(--text-muted)]'}`}>{reviewsDue}</div>
-              <div className="text-[8px] text-[var(--text-muted)] font-bold uppercase tracking-widest">Due</div>
+              <div className={`text-lg font-extrabold font-mono ${reviewsDue > 0 ? 'text-orange-500' : 'text-[var(--text-muted)]'}`}>{reviewsDue}</div>
+              <div className="text-[8px] text-[var(--text-muted)] font-semibold uppercase tracking-widest">Due</div>
             </div>
             <div className="stat-card text-center py-3 border-blue-400/40">
-              <div className="text-lg font-black text-blue-500">{newAvailable}</div>
-              <div className="text-[8px] text-[var(--text-muted)] font-bold uppercase tracking-widest">New</div>
+              <div className="text-lg font-extrabold font-mono text-blue-500">{newAvailable}</div>
+              <div className="text-[8px] text-[var(--text-muted)] font-semibold uppercase tracking-widest">New</div>
             </div>
           </div>
 
-          {/* Study button */}
           <button
             onClick={handleStartSession}
             disabled={!hasCards}
-            className="w-full py-5 btn-primary rounded-xl text-base mb-4"
+            className="w-full py-5 btn-primary rounded-xl text-base mb-3"
           >
-            {!hasCards ? 'All Caught Up \u2713' : 'Study'}
+            {!hasCards ? 'All Caught Up' : 'Study'}
           </button>
 
           {/* Add more cards when caught up */}
           {!hasCards && (
-            <div className="flex items-center gap-2 mb-4 -mt-2">
+            <div className="flex items-center gap-2 mb-3 -mt-1">
               <button
                 onClick={() => setBonusCards(prev => Math.max(1, prev - 5))}
                 className="w-10 h-10 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-muted)] font-bold text-sm hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] active:scale-95 transition-all flex items-center justify-center"
@@ -503,18 +379,119 @@ const App: React.FC = () => {
           {/* Progress map link */}
           <button
             onClick={() => setView('TOPICS')}
-            className="w-full stat-card p-0 overflow-hidden text-left transition-all hover:border-[var(--border-hover)] group cursor-pointer mb-3"
+            className="w-full stat-card p-0 overflow-hidden text-left transition-all hover:border-[var(--border-hover)] group cursor-pointer mb-6"
           >
             <div className="h-1 bg-[var(--progress-bg)]">
               <div className="h-full bg-blue-500 transition-all" style={{ width: `${getTotalProgress()}%` }} />
             </div>
             <div className="p-3.5 flex items-center justify-between">
-              <div className="flex items-center gap-2 text-[10px] text-[var(--text-muted)] font-bold uppercase tracking-widest group-hover:text-[var(--text-secondary)] transition-colors">
+              <div className="flex items-center gap-2 text-[10px] text-[var(--text-muted)] font-semibold uppercase tracking-widest group-hover:text-[var(--text-secondary)] transition-colors">
                 <span>Progress Map</span>
                 <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
               </div>
             </div>
           </button>
+
+          {/* Language + Goal selection — less prominent, below the fold */}
+          <div className="space-y-3 mb-4">
+            <div className="flex gap-1.5">
+              {(['spanish', 'italian', 'french', 'german'] as Language[]).map(l => {
+                const cfg = LANGUAGE_CONFIG[l];
+                const isAvailable = availableLanguages.includes(l);
+                const isSelected = lang === l;
+                return (
+                  <button
+                    key={l}
+                    onClick={() => isAvailable && handleLanguageChange(l)}
+                    disabled={!isAvailable}
+                    className={`flex-1 py-2 rounded-lg text-center transition-all border ${
+                      isSelected
+                        ? 'border-blue-500/40 bg-blue-500/10 text-blue-500'
+                        : isAvailable
+                          ? 'border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--border-hover)]'
+                          : 'border-[var(--border-color)] text-[var(--text-faint)] cursor-not-allowed'
+                    }`}
+                  >
+                    <div className="text-[10px] font-bold uppercase tracking-wider">{cfg.name}</div>
+                  </button>
+                );
+              })}
+            </div>
+            <div className="flex gap-1.5">
+              {(['general', 'travel', 'work', 'family'] as LearningGoal[]).map(g => {
+                const cfg = GOAL_CONFIG[g];
+                const isSelected = goal === g;
+                return (
+                  <button
+                    key={g}
+                    onClick={() => handleGoalChange(g)}
+                    className={`flex-1 py-2 rounded-lg text-center transition-all border ${
+                      isSelected
+                        ? 'border-blue-500/40 bg-blue-500/10 text-blue-500'
+                        : 'border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--border-hover)]'
+                    }`}
+                  >
+                    <div className="text-[10px] font-bold uppercase tracking-wider">{cfg.name}</div>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Settings — gear icon expandable */}
+          <div className="flex justify-center">
+            <button
+              onClick={() => setShowTools(prev => !prev)}
+              className={`p-2 rounded-lg transition-all ${
+                showTools
+                  ? 'text-blue-400 bg-blue-500/10'
+                  : 'text-[var(--text-faint)] hover:text-[var(--text-muted)]'
+              }`}
+            >
+              <Settings2 size={16} />
+            </button>
+          </div>
+
+          {showTools && (
+            <div className="stat-card animate-fade-in space-y-4 mt-2 mb-3">
+              <div className="flex items-center justify-between">
+                <h3 className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">Settings</h3>
+                <button onClick={() => setShowTools(false)} className="text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors">
+                  <X size={14} />
+                </button>
+              </div>
+
+              <div>
+                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-3">New Cards / Day</div>
+                <div className="flex items-center gap-3">
+                  <button onClick={() => adjustLimit(-5)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95">
+                    <Minus size={14} />
+                  </button>
+                  <button onClick={() => adjustLimit(-1)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95 text-xs font-bold font-mono">
+                    -1
+                  </button>
+                  <div className="flex-1 text-center">
+                    <div className="text-3xl font-extrabold font-mono text-[var(--text-primary)]">{settings.dailyNewLimit}</div>
+                  </div>
+                  <button onClick={() => adjustLimit(1)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95 text-xs font-bold font-mono">
+                    +1
+                  </button>
+                  <button onClick={() => adjustLimit(5)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95">
+                    <Plus size={14} />
+                  </button>
+                </div>
+              </div>
+
+              <div className="pt-2 border-t border-[var(--border-color)]">
+                <button
+                  onClick={() => { resetAll(); window.location.reload(); }}
+                  className="text-[10px] text-[var(--text-faint)] hover:text-red-400 transition-colors"
+                >
+                  Reset all data
+                </button>
+              </div>
+            </div>
+          )}
         </section>
       )}
 
@@ -560,23 +537,6 @@ const App: React.FC = () => {
         />
       )}
 
-      {view === 'SETTINGS' && (
-        <section className="space-y-8 pt-10 px-4 animate-fade-in text-center">
-          <button
-            onClick={() => setView('HOME')}
-            className="text-[var(--text-secondary)] text-xs font-bold uppercase tracking-widest hover:text-[var(--text-muted)]"
-          >
-            &larr; Return
-          </button>
-          <h2 className="text-2xl font-black text-[var(--text-primary)] mb-2 uppercase">System</h2>
-          <button
-            onClick={() => { resetAll(); window.location.reload(); }}
-            className="w-full py-5 border-2 border-red-500/30 text-red-500 text-xs font-bold uppercase tracking-widest hover:bg-red-500/10 transition-colors"
-          >
-            Purge Data
-          </button>
-        </section>
-      )}
     </div>
   );
 };

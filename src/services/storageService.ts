@@ -86,7 +86,7 @@ export interface StudySettings {
   dailyNewLimit: number;
   selectedLanguage: Language;
   learningGoal: LearningGoal;
-  theme: 'light' | 'dark' | 'system';
+  theme: 'light' | 'dark';
 }
 
 const DEFAULT_SETTINGS: StudySettings = {

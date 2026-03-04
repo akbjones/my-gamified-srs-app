@@ -74,16 +74,16 @@ export interface SideBranch {
 }
 
 // Language configuration
-export const LANGUAGE_CONFIG: Record<Language, { name: string; flag: string; bcp47: string }> = {
-  spanish: { name: 'Spanish', flag: '🇪🇸', bcp47: 'es-ES' },
-  italian: { name: 'Italian', flag: '🇮🇹', bcp47: 'it-IT' },
-  german:  { name: 'German',  flag: '🇩🇪', bcp47: 'de-DE' },
-  french:  { name: 'French',  flag: '🇫🇷', bcp47: 'fr-FR' },
+export const LANGUAGE_CONFIG: Record<Language, { name: string; code: string; bcp47: string }> = {
+  spanish: { name: 'Spanish', code: 'ES', bcp47: 'es-ES' },
+  italian: { name: 'Italian', code: 'IT', bcp47: 'it-IT' },
+  german:  { name: 'German',  code: 'DE', bcp47: 'de-DE' },
+  french:  { name: 'French',  code: 'FR', bcp47: 'fr-FR' },
 };
 
-export const GOAL_CONFIG: Record<LearningGoal, { name: string; icon: string; description: string }> = {
-  general: { name: 'General', icon: '📚', description: 'Full curriculum' },
-  travel:  { name: 'Travel',  icon: '✈️', description: 'Airports, hotels, navigation' },
-  work:    { name: 'Work',    icon: '💼', description: 'Meetings, emails, professional' },
-  family:  { name: 'Family',  icon: '🏠', description: 'Relationships, home, emotions' },
+export const GOAL_CONFIG: Record<LearningGoal, { name: string; description: string }> = {
+  general: { name: 'General', description: 'Full curriculum' },
+  travel:  { name: 'Travel',  description: 'Airports, hotels, navigation' },
+  work:    { name: 'Work',    description: 'Meetings, emails, professional' },
+  family:  { name: 'Family',  description: 'Relationships, home, emotions' },
 };

@@ -36,6 +36,7 @@ const buildDeck = (raw: typeof rawDeck, masteryMap: MasteryMap): QuestCard[] => 
         category: node.tier,
         topic: node.id,
         audio: rawCard.audio,
+        grammar: (rawCard as any).grammar || undefined,
         mastery: (saved?.mastery as number) ?? 0,
         step: (saved?.step as number) ?? 0,
         dueDate: (saved?.dueDate as number) ?? undefined,

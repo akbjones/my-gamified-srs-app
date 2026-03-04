@@ -5,6 +5,7 @@ export interface QuestCard {
   category: string; // tier name for theming: "Novice", "Beginner", etc.
   topic: string;    // node ID: "node-01", "node-02", etc.
   audio: string;
+  grammar?: string; // optional grammar note shown on answer side
   mastery: number; // 0=New, 1=Learning, 2=Graduated
   step?: number;
   dueDate?: number;

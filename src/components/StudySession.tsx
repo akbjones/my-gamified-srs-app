@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { QuestCard, SessionState } from '../types';
-import { Volume2 } from 'lucide-react';
+import { Volume2, BookOpen } from 'lucide-react';
 import { playCardAudio, stopAudio } from '../services/audioService';
+import WordPopover from './WordPopover';
 
 interface StudySessionProps {
   session: SessionState;
@@ -21,6 +22,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
   const [showInfo, setShowInfo] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showGrammar, setShowGrammar] = useState(false);
 
   if (session.currentIndex >= session.queue.length) {
     return (
@@ -49,6 +51,15 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
   const countLearn = remainingQueue.filter(c => c.mastery === 1).length;
   const countReview = remainingQueue.filter(c => c.mastery === 2).length;
 
+  // Auto-play Spanish TTS when a new card appears
+  const prevCardId = useRef<string | null>(null);
+  useEffect(() => {
+    if (card && card.id !== prevCardId.current) {
+      prevCardId.current = card.id;
+      playCardAudio(card.audio, card.target);
+    }
+  }, [card]);
+
   const handleFlip = () => setIsFlipped(true);
 
   const handlePlayAudio = (e: React.MouseEvent) => {
@@ -60,6 +71,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
   const submitAnswer = (rating: 'AGAIN' | 'HARD' | 'GOOD' | 'EASY') => {
     stopAudio();
     setIsFlipped(false);
+    setShowGrammar(false);
     onAnswer(rating);
   };
 
@@ -140,8 +152,23 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
         {/* Flashcard */}
         <div
           onClick={!isFlipped ? handleFlip : undefined}
-          className="study-card flex-1 min-h-[250px] flex flex-col items-center justify-center p-6 cursor-pointer my-4 relative"
+          className="study-card flex-1 min-h-[250px] flex flex-col items-center justify-center p-6 cursor-pointer my-4 relative overflow-hidden"
         >
+          {/* Grammar toggle — top-left, only when flipped & card has grammar */}
+          {isFlipped && card.grammar && (
+            <button
+              onClick={(e) => { e.stopPropagation(); document.dispatchEvent(new MouseEvent('click', { bubbles: false })); setShowGrammar(!showGrammar); }}
+              className={`absolute top-4 left-4 p-2 rounded-lg border transition-all z-20 ${
+                showGrammar
+                  ? 'bg-amber-50 border-amber-300 text-amber-500'
+                  : 'border-slate-200 text-slate-400 hover:text-amber-500 hover:border-amber-300 bg-white'
+              }`}
+            >
+              <BookOpen size={18} />
+            </button>
+          )}
+
+          {/* Audio — top-right */}
           <button
             onClick={handlePlayAudio}
             className={`absolute top-4 right-4 p-2 rounded-lg border transition-all z-20 ${
@@ -153,9 +180,26 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
             <Volume2 size={18} />
           </button>
 
-          <p className="text-xl md:text-2xl font-black tracking-tight text-slate-800 leading-tight max-w-sm mx-auto">
-            {card.target}
-          </p>
+          {/* Grammar overlay — covers the card content */}
+          {showGrammar && card.grammar && (
+            <div
+              className="absolute inset-0 z-10 bg-amber-50/95 rounded-2xl flex flex-col items-center justify-center p-8 animate-fade-in cursor-default"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex items-center gap-1.5 mb-4">
+                <BookOpen size={14} className="text-amber-500" />
+                <span className="text-[10px] font-bold uppercase tracking-wider text-amber-500">Grammar Tip</span>
+              </div>
+              <p className="text-sm md:text-base text-slate-700 leading-relaxed text-center max-w-xs">
+                {card.grammar}
+              </p>
+            </div>
+          )}
+
+          <WordPopover
+            sentence={card.target}
+            className="text-xl md:text-2xl font-black tracking-tight text-slate-800 leading-tight max-w-sm mx-auto"
+          />
 
           {isFlipped ? (
             <div className="mt-8 pt-8 border-t border-slate-200 w-full animate-fade-in">

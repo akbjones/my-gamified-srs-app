@@ -40,7 +40,7 @@ const buildDeck = (
     ? sorted
     : sorted.filter((card: any) => {
         const tags: string[] = card.tags || [];
-        return tags.includes(goal) || tags.includes('general');
+        return tags.includes(goal);
       });
 
   // Dynamic node slicing: distribute cards evenly across 20 nodes
@@ -436,6 +436,11 @@ const App: React.FC = () => {
                 );
               })}
             </div>
+            <p className="text-[9px] text-[var(--text-faint)] text-center leading-relaxed">
+              {goal === 'general'
+                ? `All ${deck.length.toLocaleString()} cards — complete vocabulary`
+                : `${deck.length.toLocaleString()} cards — same grammar path, ${GOAL_CONFIG[goal].name.toLowerCase()}-focused sentences. Foundations shared, specializes at higher levels.`}
+            </p>
           </div>
 
           {/* Settings — gear icon expandable */}

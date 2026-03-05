@@ -286,7 +286,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto min-h-screen p-5 pb-20">
+    <div className={`max-w-md mx-auto min-h-screen ${view === 'STUDY' ? 'px-3 pt-1 pb-0' : 'p-5 pb-20'}`}>
       {view === 'HOME' && (
         <section className="animate-fade-in">
           {/* Header row: title + theme toggle */}

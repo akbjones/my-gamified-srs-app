@@ -126,7 +126,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
         </div>
       )}
 
-      <section className="flex flex-col justify-between py-2 text-center h-[calc(100vh-2rem)]">
+      <section className="flex flex-col justify-between py-2 text-center h-[calc(100dvh-0.5rem)]">
         {/* Top bar */}
         <nav className="flex flex-col gap-2">
           <div className="flex justify-between items-center">
@@ -169,7 +169,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
         {/* Flashcard */}
         <div
           onClick={!isFlipped ? handleFlip : undefined}
-          className="study-card flex-1 min-h-[250px] flex flex-col items-center justify-center p-6 cursor-pointer my-4 relative overflow-hidden"
+          className="study-card flex-1 min-h-0 flex flex-col items-center justify-center p-6 cursor-pointer my-3 relative overflow-hidden"
         >
           {/* Grammar toggle — top-left, only when flipped & card has grammar */}
           {isFlipped && card!.grammar && (

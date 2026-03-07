@@ -181,55 +181,55 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
         {/* Flashcard */}
         <div
           onClick={!isFlipped ? handleFlip : undefined}
-          className="study-card flex-1 min-h-0 flex flex-col items-center justify-center p-6 cursor-pointer my-3 relative overflow-hidden"
+          className="study-card flex-1 min-h-0 flex flex-col cursor-pointer my-3 relative overflow-hidden"
         >
-          {/* Grammar toggle — top-left, only when flipped & card has grammar */}
-          {isFlipped && card!.grammar && (
-            <button
-              onClick={(e) => { e.stopPropagation(); document.dispatchEvent(new MouseEvent('click', { bubbles: false })); setShowGrammar(!showGrammar); }}
-              className={`absolute top-4 left-4 p-2 rounded-lg border transition-all z-20 ${
-                showGrammar
-                  ? 'bg-amber-500/10 border-amber-500/40 text-amber-500'
-                  : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-amber-500 hover:border-amber-500/40 bg-[var(--bg-card)]'
-              }`}
-            >
-              <BookOpen size={18} />
-            </button>
-          )}
-
-          {/* Leech indicator */}
-          {card!.isLeech && (
-            <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1 bg-orange-500/10 border border-orange-500/40 rounded-lg px-2 py-1">
-              <AlertTriangle size={12} className="text-orange-500" />
-              <span className="text-[9px] font-bold uppercase tracking-wider text-orange-500">Leech</span>
+          {/* Toolbar row — in document flow, never overlaps text */}
+          <div className="flex items-center justify-between px-3 pt-2.5 pb-1 shrink-0 min-h-[36px]">
+            <div className="flex gap-1.5">
+              {isFlipped && card!.grammar && (
+                <button
+                  onClick={(e) => { e.stopPropagation(); document.dispatchEvent(new MouseEvent('click', { bubbles: false })); setShowGrammar(!showGrammar); }}
+                  className={`p-1.5 rounded-lg border transition-all ${
+                    showGrammar
+                      ? 'bg-amber-500/10 border-amber-500/40 text-amber-500'
+                      : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-amber-500 hover:border-amber-500/40 bg-[var(--bg-card)]'
+                  }`}
+                >
+                  <BookOpen size={16} />
+                </button>
+              )}
+              {card!.isLeech && (
+                <div className="flex items-center gap-1 bg-orange-500/10 border border-orange-500/40 rounded-lg px-2 py-1">
+                  <AlertTriangle size={12} className="text-orange-500" />
+                  <span className="text-[9px] font-bold uppercase tracking-wider text-orange-500">Leech</span>
+                </div>
+              )}
             </div>
-          )}
-
-          {/* Audio — top-right */}
-          <div className="absolute top-4 right-4 flex gap-1.5 z-20">
-            {isFlipped && (
+            <div className="flex gap-1.5">
+              {isFlipped && (
+                <button
+                  onClick={handleSlowReplay}
+                  className={`p-1.5 rounded-lg border transition-all ${
+                    isPlaying
+                      ? 'bg-blue-500/10 border-blue-500/40 text-blue-500'
+                      : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-blue-500 hover:border-blue-500/40 bg-[var(--bg-card)]'
+                  }`}
+                  title="Slow replay"
+                >
+                  <span className="text-[9px] font-bold font-mono w-[16px] h-[16px] flex items-center justify-center">.6x</span>
+                </button>
+              )}
               <button
-                onClick={handleSlowReplay}
-                className={`p-2 rounded-lg border transition-all ${
+                onClick={handlePlayAudio}
+                className={`p-1.5 rounded-lg border transition-all ${
                   isPlaying
-                    ? 'bg-blue-500/10 border-blue-500/40 text-blue-500'
+                    ? 'bg-blue-500/10 border-blue-500/40 text-blue-500 animate-pulse'
                     : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-blue-500 hover:border-blue-500/40 bg-[var(--bg-card)]'
                 }`}
-                title="Slow replay"
               >
-                <span className="text-[10px] font-bold font-mono leading-none block w-[18px] h-[18px] flex items-center justify-center">.6x</span>
+                <Volume2 size={16} />
               </button>
-            )}
-            <button
-              onClick={handlePlayAudio}
-              className={`p-2 rounded-lg border transition-all ${
-                isPlaying
-                  ? 'bg-blue-500/10 border-blue-500/40 text-blue-500 animate-pulse'
-                  : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-blue-500 hover:border-blue-500/40 bg-[var(--bg-card)]'
-              }`}
-            >
-              <Volume2 size={18} />
-            </button>
+            </div>
           </div>
 
           {/* Grammar overlay — covers the card content */}
@@ -248,22 +248,25 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
             </div>
           )}
 
-          <WordPopover
-            sentence={card!.target}
-            className="text-xl md:text-2xl font-black tracking-tight text-[var(--text-primary)] leading-tight max-w-sm mx-auto"
-          />
+          {/* Card content — centered in remaining space */}
+          <div className="flex-1 flex flex-col items-center justify-center px-6 pb-4 min-h-0">
+            <WordPopover
+              sentence={card!.target}
+              className="text-xl md:text-2xl font-black tracking-tight text-[var(--text-primary)] leading-tight max-w-sm mx-auto"
+            />
 
-          {isFlipped ? (
-            <div className="mt-8 pt-8 border-t border-[var(--border-color)] w-full animate-fade-in">
-              <p className="text-base md:text-lg text-[var(--text-secondary)] font-bold italic leading-tight">
-                {card!.english}
-              </p>
-            </div>
-          ) : (
-            <div className="mt-8 text-xs text-[var(--text-muted)] font-bold uppercase tracking-widest">
-              Tap to reveal
-            </div>
-          )}
+            {isFlipped ? (
+              <div className="mt-8 pt-8 border-t border-[var(--border-color)] w-full animate-fade-in">
+                <p className="text-base md:text-lg text-[var(--text-secondary)] font-bold italic leading-tight">
+                  {card!.english}
+                </p>
+              </div>
+            ) : (
+              <div className="mt-8 text-xs text-[var(--text-muted)] font-bold uppercase tracking-widest">
+                Tap to reveal
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Grading buttons */}

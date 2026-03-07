@@ -10,11 +10,11 @@ import {
   loadDailyStats, saveDailyStats, resetAll,
   loadSettings, saveSettings,
 } from './services/storageService';
-import type { StudySettings } from './services/storageService';
+import type { StudySettings, AudioSpeed } from './services/storageService';
 import {
   awardXP, updateStreak, checkAchievements, getAchievementsWithStatus,
 } from './services/gamificationService';
-import { Settings2, Minus, Plus, X, Sun, Moon } from 'lucide-react';
+import { Settings2, Minus, Plus, X, Sun, Moon, Volume2, VolumeX } from 'lucide-react';
 
 type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS';
 
@@ -487,6 +487,62 @@ const App: React.FC = () => {
                 </div>
               </div>
 
+              {/* Audio settings */}
+              <div className="pt-3 border-t border-[var(--border-color)] space-y-3">
+                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">Audio</div>
+
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-[var(--text-secondary)]">Auto-play</span>
+                  <button
+                    onClick={() => handleUpdateSettings({ ...settings, autoPlayAudio: !settings.autoPlayAudio })}
+                    className={`w-10 h-6 rounded-full transition-all relative ${
+                      settings.autoPlayAudio ? 'bg-blue-500' : 'bg-[var(--border-color)]'
+                    }`}
+                  >
+                    <div className={`absolute top-1 w-4 h-4 rounded-full bg-white shadow transition-all ${
+                      settings.autoPlayAudio ? 'left-5' : 'left-1'
+                    }`} />
+                  </button>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-[var(--text-secondary)]">Speed</span>
+                  <div className="flex gap-1">
+                    {([0.6, 0.8, 1.0] as AudioSpeed[]).map(s => (
+                      <button
+                        key={s}
+                        onClick={() => handleUpdateSettings({ ...settings, audioSpeed: s })}
+                        className={`px-2.5 py-1 rounded-md text-[10px] font-bold font-mono transition-all border ${
+                          settings.audioSpeed === s
+                            ? 'border-blue-500/40 bg-blue-500/10 text-blue-500'
+                            : 'border-[var(--border-color)] text-[var(--text-muted)] hover:border-[var(--border-hover)]'
+                        }`}
+                      >
+                        {s}x
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span className="text-xs text-[var(--text-secondary)]">Google TTS</span>
+                    {settings.googleTtsApiKey ? (
+                      <span className="text-[9px] font-bold text-emerald-500 uppercase tracking-wider">Active</span>
+                    ) : (
+                      <span className="text-[9px] font-bold text-[var(--text-faint)] uppercase tracking-wider">Browser TTS</span>
+                    )}
+                  </div>
+                  <input
+                    type="password"
+                    placeholder="API key (optional)"
+                    value={settings.googleTtsApiKey || ''}
+                    onChange={(e) => handleUpdateSettings({ ...settings, googleTtsApiKey: e.target.value || undefined })}
+                    className="w-full text-[11px] px-2.5 py-1.5 rounded-lg border border-[var(--border-color)] bg-[var(--bg-inset)] text-[var(--text-secondary)] placeholder:text-[var(--text-faint)] focus:outline-none focus:border-blue-500/40"
+                  />
+                </div>
+              </div>
+
               <div className="pt-2 border-t border-[var(--border-color)]">
                 <button
                   onClick={() => { resetAll(); window.location.reload(); }}
@@ -530,6 +586,9 @@ const App: React.FC = () => {
             return reviews.length > 0 || newCards.length > 0;
           })()}
           topicCards={deck.filter(c => c.topic === session.topic)}
+          autoPlayAudio={settings.autoPlayAudio}
+          audioSpeed={settings.audioSpeed}
+          googleTtsApiKey={settings.googleTtsApiKey}
         />
       )}
 

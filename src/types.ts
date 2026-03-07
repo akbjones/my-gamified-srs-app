@@ -75,7 +75,7 @@ export interface SideBranch {
 
 // Language configuration
 export const LANGUAGE_CONFIG: Record<Language, { name: string; code: string; bcp47: string }> = {
-  spanish: { name: 'Spanish', code: 'ES', bcp47: 'es-ES' },
+  spanish: { name: 'Spanish', code: 'ES', bcp47: 'es-MX' },
   italian: { name: 'Italian', code: 'IT', bcp47: 'it-IT' },
   german:  { name: 'German',  code: 'DE', bcp47: 'de-DE' },
   french:  { name: 'French',  code: 'FR', bcp47: 'fr-FR' },

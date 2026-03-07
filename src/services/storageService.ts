@@ -82,11 +82,16 @@ export const saveUnlockedAchievements = (ids: string[], lang: Language): void =>
 };
 
 // ─── Settings (global) ─────────────────────────────────────
+export type AudioSpeed = 0.6 | 0.8 | 1.0;
+
 export interface StudySettings {
   dailyNewLimit: number;
   selectedLanguage: Language;
   learningGoal: LearningGoal;
   theme: 'light' | 'dark';
+  autoPlayAudio: boolean;
+  audioSpeed: AudioSpeed;
+  googleTtsApiKey?: string; // optional — falls back to browser TTS if not set
 }
 
 const DEFAULT_SETTINGS: StudySettings = {
@@ -94,6 +99,8 @@ const DEFAULT_SETTINGS: StudySettings = {
   selectedLanguage: 'spanish',
   learningGoal: 'general',
   theme: 'light',
+  autoPlayAudio: true,
+  audioSpeed: 0.8,
 };
 
 export const loadSettings = (): StudySettings => {

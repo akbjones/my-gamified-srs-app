@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { QuestCard, SessionState } from '../types';
 import { Volume2, BookOpen, AlertTriangle } from 'lucide-react';
 import { playCardAudio, stopAudio } from '../services/audioService';
+import type { AudioSpeed } from '../services/storageService';
 import WordPopover from './WordPopover';
 
 interface StudySessionProps {
@@ -11,6 +12,9 @@ interface StudySessionProps {
   onStudyMore?: () => void;
   hasMoreCards?: boolean;
   topicCards: QuestCard[];
+  autoPlayAudio: boolean;
+  audioSpeed: AudioSpeed;
+  googleTtsApiKey?: string;
 }
 
 const GRADE_CONFIG = {
@@ -20,7 +24,7 @@ const GRADE_CONFIG = {
   EASY:  { color: 'text-blue-500', bg: 'hover:bg-blue-500/10 active:bg-blue-500/20', border: 'border-blue-500/30' },
 } as const;
 
-const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort, onStudyMore, hasMoreCards, topicCards = [] }) => {
+const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort, onStudyMore, hasMoreCards, topicCards = [], autoPlayAudio, audioSpeed, googleTtsApiKey }) => {
   const [showInfo, setShowInfo] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -34,9 +38,11 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
   useEffect(() => {
     if (card && card.id !== prevCardId.current) {
       prevCardId.current = card.id;
-      playCardAudio(card.audio, card.target, session.language);
+      if (autoPlayAudio) {
+        playCardAudio(card.audio, card.target, session.language, audioSpeed, googleTtsApiKey);
+      }
     }
-  }, [card, session.language]);
+  }, [card, session.language, autoPlayAudio, audioSpeed, googleTtsApiKey]);
 
   if (isComplete) {
     return (
@@ -82,7 +88,13 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
   const handlePlayAudio = (e: React.MouseEvent) => {
     e.stopPropagation();
     setIsPlaying(true);
-    playCardAudio(card!.audio, card!.target, session.language).finally(() => setIsPlaying(false));
+    playCardAudio(card!.audio, card!.target, session.language, audioSpeed, googleTtsApiKey).finally(() => setIsPlaying(false));
+  };
+
+  const handleSlowReplay = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setIsPlaying(true);
+    playCardAudio(card!.audio, card!.target, session.language, 0.6, googleTtsApiKey).finally(() => setIsPlaying(false));
   };
 
   const submitAnswer = (rating: 'AGAIN' | 'HARD' | 'GOOD' | 'EASY') => {
@@ -194,16 +206,31 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
           )}
 
           {/* Audio — top-right */}
-          <button
-            onClick={handlePlayAudio}
-            className={`absolute top-4 right-4 p-2 rounded-lg border transition-all z-20 ${
-              isPlaying
-                ? 'bg-blue-500/10 border-blue-500/40 text-blue-500 animate-pulse'
-                : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-blue-500 hover:border-blue-500/40 bg-[var(--bg-card)]'
-            }`}
-          >
-            <Volume2 size={18} />
-          </button>
+          <div className="absolute top-4 right-4 flex gap-1.5 z-20">
+            {isFlipped && (
+              <button
+                onClick={handleSlowReplay}
+                className={`p-2 rounded-lg border transition-all ${
+                  isPlaying
+                    ? 'bg-blue-500/10 border-blue-500/40 text-blue-500'
+                    : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-blue-500 hover:border-blue-500/40 bg-[var(--bg-card)]'
+                }`}
+                title="Slow replay"
+              >
+                <span className="text-[10px] font-bold font-mono leading-none block w-[18px] h-[18px] flex items-center justify-center">.6x</span>
+              </button>
+            )}
+            <button
+              onClick={handlePlayAudio}
+              className={`p-2 rounded-lg border transition-all ${
+                isPlaying
+                  ? 'bg-blue-500/10 border-blue-500/40 text-blue-500 animate-pulse'
+                  : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-blue-500 hover:border-blue-500/40 bg-[var(--bg-card)]'
+              }`}
+            >
+              <Volume2 size={18} />
+            </button>
+          </div>
 
           {/* Grammar overlay — covers the card content */}
           {showGrammar && card!.grammar && (

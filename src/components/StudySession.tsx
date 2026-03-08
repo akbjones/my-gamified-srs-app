@@ -168,7 +168,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
           </div>
 
           <div>
-            <div className="flex justify-between text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-widest mb-1 px-0.5">
+            <div className="flex justify-between text-[10px] font-bold text-[var(--text-secondary)] uppercase tracking-widest mb-1 px-0.5">
               <span>Progress</span>
               <span>{Math.round(topicProgress)}%</span>
             </div>
@@ -231,7 +231,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
           {/* Grammar overlay — tap anywhere to dismiss */}
           {showGrammar && card!.grammar && (
             <div
-              className="absolute inset-0 z-10 bg-amber-50/95 dark:bg-amber-900/30 rounded-2xl flex flex-col items-center justify-center p-8 animate-fade-in cursor-pointer"
+              className="absolute inset-0 z-10 bg-amber-50/95 dark:bg-[#1a1207]/95 rounded-2xl flex flex-col items-center justify-center p-8 animate-fade-in cursor-pointer"
               onClick={(e) => { e.stopPropagation(); setShowGrammar(false); }}
             >
               <div className="flex items-center gap-1.5 mb-4">

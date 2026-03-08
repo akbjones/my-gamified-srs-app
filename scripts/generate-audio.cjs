@@ -94,15 +94,51 @@ function callGoogleTTS(text) {
   });
 }
 
+// Rate limiter — token bucket, refills at `rate` tokens/sec
+class RateLimiter {
+  constructor(ratePerMinute) {
+    this.interval = 60000 / ratePerMinute; // ms between tokens
+    this.lastTime = 0;
+    this.queue = [];
+    this.running = false;
+  }
+
+  async acquire() {
+    return new Promise(resolve => {
+      this.queue.push(resolve);
+      this._process();
+    });
+  }
+
+  async _process() {
+    if (this.running) return;
+    this.running = true;
+    while (this.queue.length > 0) {
+      const now = Date.now();
+      const wait = Math.max(0, this.lastTime + this.interval - now);
+      if (wait > 0) await new Promise(r => setTimeout(r, wait));
+      this.lastTime = Date.now();
+      const resolve = this.queue.shift();
+      if (resolve) resolve();
+    }
+    this.running = false;
+  }
+}
+
+const rateLimiter = new RateLimiter(240); // stay well under 300 RPM quota
+
 // Retry with exponential backoff
-async function callWithRetry(text, retries = 3) {
+async function callWithRetry(text, retries = 4) {
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
+      await rateLimiter.acquire();
       return await callGoogleTTS(text);
     } catch (err) {
       if (attempt === retries) throw err;
-      const wait = Math.pow(2, attempt) * 1000 + Math.random() * 500;
-      console.warn(`  Retry ${attempt + 1} in ${Math.round(wait)}ms: ${err.message}`);
+      // Longer backoff for rate limit errors
+      const base = err.message.includes('429') ? 5000 : 1000;
+      const wait = Math.pow(2, attempt) * base + Math.random() * 1000;
+      if (attempt > 0) console.warn(`  Retry ${attempt + 1} in ${Math.round(wait / 1000)}s: ${err.message.slice(0, 80)}`);
       await new Promise(r => setTimeout(r, wait));
     }
   }

@@ -146,15 +146,15 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
 
             <div className="flex items-center gap-5 stat-card py-2 px-5">
               <div className="text-center">
-                <div className="text-base font-black text-blue-500">{countNew}</div>
+                <div className="text-base font-black text-sky-400">{countNew}</div>
                 <div className="text-[9px] font-bold text-[var(--text-muted)] uppercase tracking-wider">new</div>
               </div>
               <div className="text-center">
-                <div className="text-base font-black text-orange-500">{countLearn}</div>
+                <div className="text-base font-black text-rose-400">{countLearn}</div>
                 <div className="text-[9px] font-bold text-[var(--text-muted)] uppercase tracking-wider">learn</div>
               </div>
               <div className="text-center">
-                <div className="text-base font-black text-emerald-500">{countReview}</div>
+                <div className="text-base font-black text-teal-400">{countReview}</div>
                 <div className="text-[9px] font-bold text-[var(--text-muted)] uppercase tracking-wider">review</div>
               </div>
             </div>

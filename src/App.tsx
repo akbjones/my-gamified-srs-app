@@ -158,7 +158,7 @@ const App: React.FC = () => {
     root.classList.toggle('dark', settings.theme === 'dark');
   }, [settings.theme]);
 
-  const handleStartSession = () => {
+  const handleStartSession = (studyMore = false) => {
     const now = Date.now();
     const currentNode = getCurrentNode(deck);
 
@@ -173,11 +173,13 @@ const App: React.FC = () => {
     );
 
     // New cards: from the current frontier node, excluding suspended
+    // When "Study More" is clicked, always add at least 10 new cards
     const dailyLimitRemaining = settings.dailyNewLimit - dailyStats.newCardsCount;
+    const newLimit = studyMore ? Math.max(10, dailyLimitRemaining) : Math.max(0, dailyLimitRemaining);
     const nodeCards = deck.filter(c => c.topic === currentNode.id && !c.isSuspended);
     const newCards = nodeCards
       .filter(c => c.mastery === 0)
-      .slice(0, Math.max(0, dailyLimitRemaining));
+      .slice(0, newLimit);
 
     if (reviews.length === 0 && newCards.length === 0) return;
 
@@ -568,7 +570,7 @@ const App: React.FC = () => {
           session={session}
           onAnswer={handleAnswer}
           onAbort={() => setView('HOME')}
-          onStudyMore={handleStartSession}
+          onStudyMore={() => handleStartSession(true)}
           hasMoreCards={(() => {
             const now = Date.now();
             const currentNode = getCurrentNode(deck);

@@ -228,11 +228,11 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
             </button>
           </div>
 
-          {/* Grammar overlay */}
+          {/* Grammar overlay — tap anywhere to dismiss */}
           {showGrammar && card!.grammar && (
             <div
-              className="absolute inset-0 z-10 bg-amber-50/95 dark:bg-amber-900/30 rounded-2xl flex flex-col items-center justify-center p-8 animate-fade-in cursor-default"
-              onClick={(e) => e.stopPropagation()}
+              className="absolute inset-0 z-10 bg-amber-50/95 dark:bg-amber-900/30 rounded-2xl flex flex-col items-center justify-center p-8 animate-fade-in cursor-pointer"
+              onClick={(e) => { e.stopPropagation(); setShowGrammar(false); }}
             >
               <div className="flex items-center gap-1.5 mb-4">
                 <BookOpen size={14} className="text-amber-500" />

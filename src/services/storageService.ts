@@ -100,7 +100,7 @@ const DEFAULT_SETTINGS: StudySettings = {
   learningGoal: 'general',
   theme: 'light',
   autoPlayAudio: true,
-  audioSpeed: 0.8,
+  audioSpeed: 1.0,
 };
 
 export const loadSettings = (): StudySettings => {

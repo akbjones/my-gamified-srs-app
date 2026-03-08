@@ -184,7 +184,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
           className="study-card flex-1 min-h-0 flex flex-col cursor-pointer my-3 relative overflow-hidden"
         >
           {/* Toolbar row — in document flow, never overlaps text */}
-          <div className="flex items-center justify-between px-4 pt-3 pb-2 shrink-0 min-h-[44px]">
+          <div className="flex items-start justify-between px-4 pt-2 pb-4 shrink-0">
             <div className="flex gap-1.5">
               {isFlipped && card!.grammar && (
                 <button
@@ -248,27 +248,25 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
             </div>
           )}
 
-          {/* Card content — centered in remaining space */}
-          <div className="flex-1 flex flex-col items-center justify-center px-6 min-h-0">
+          {/* Card content — centered in remaining space, scrolls if needed */}
+          <div className="flex-1 flex flex-col items-center justify-center px-6 py-4 min-h-0 overflow-y-auto">
             <WordPopover
               sentence={card!.target}
-              className="text-xl md:text-2xl font-black tracking-tight text-[var(--text-primary)] leading-tight max-w-sm mx-auto"
+              className="text-lg md:text-xl font-black tracking-tight text-[var(--text-primary)] leading-snug max-w-sm mx-auto"
             />
 
             {isFlipped ? (
               <div className="mt-5 pt-5 border-t border-[var(--border-color)] w-full animate-fade-in">
-                <p className="text-base md:text-lg text-[var(--text-secondary)] font-bold italic leading-tight">
+                <p className="text-sm md:text-base text-[var(--text-secondary)] font-bold italic leading-relaxed">
                   {card!.english}
                 </p>
               </div>
             ) : (
-              <div className="mt-8 text-xs text-[var(--text-muted)] font-bold uppercase tracking-widest">
+              <div className="mt-6 text-xs text-[var(--text-muted)] font-bold uppercase tracking-widest">
                 Tap to reveal
               </div>
             )}
           </div>
-          {/* Bottom spacer — mirrors toolbar height so content centers evenly */}
-          <div className="shrink-0 h-[44px]" />
         </div>
 
         {/* Grading buttons */}

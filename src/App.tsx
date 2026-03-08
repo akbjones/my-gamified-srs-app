@@ -35,13 +35,11 @@ const buildDeck = (
 ): QuestCard[] => {
   const sorted = [...raw].sort((a: any, b: any) => a.id - b.id);
 
-  // Filter by goal tags
-  const filtered = goal === 'general'
-    ? sorted
-    : sorted.filter((card: any) => {
-        const tags: string[] = card.tags || [];
-        return tags.includes(goal);
-      });
+  // Filter by goal tags (all goals filter by their tag, including general)
+  const filtered = sorted.filter((card: any) => {
+    const tags: string[] = card.tags || [];
+    return tags.includes(goal);
+  });
 
   // Dynamic node slicing: distribute cards evenly across 20 nodes
   const perNode = Math.ceil(filtered.length / MAIN_PATH.length);
@@ -440,8 +438,8 @@ const App: React.FC = () => {
             </div>
             <p className="text-[9px] text-[var(--text-faint)] text-center leading-relaxed">
               {goal === 'general'
-                ? `All ${deck.length.toLocaleString()} cards — complete vocabulary`
-                : `${deck.length.toLocaleString()} cards — same grammar path, ${GOAL_CONFIG[goal].name.toLowerCase()}-focused sentences. Foundations shared, specializes at higher levels.`}
+                ? `${deck.length.toLocaleString()} cards — well-rounded vocabulary`
+                : `${deck.length.toLocaleString()} cards — ${GOAL_CONFIG[goal].name.toLowerCase()}-focused with shared foundations`}
             </p>
           </div>
 

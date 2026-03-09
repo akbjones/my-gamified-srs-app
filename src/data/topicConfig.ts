@@ -1,6 +1,6 @@
 import { PathNode, SideBranch } from '../types';
 
-// 20 grammar-progression nodes mapped to CEFR levels.
+// 26 grammar-progression nodes mapped to CEFR levels (A1→C2).
 // Node names are language-specific (these are for Spanish).
 // Cards are assigned to nodes dynamically in buildDeck() based on
 // the filtered deck size, NOT via hardcoded slices.
@@ -27,12 +27,22 @@ export const MAIN_PATH: PathNode[] = [
   { id: 'node-14', name: 'Future & perfect',         tier: 'B1',  color: '#f59e0b' },
   { id: 'node-15', name: 'Relative clauses',        tier: 'B1',  color: '#f59e0b' },
 
-  // Tier 4 — B2+ (nodes 16-20)
+  // Tier 4 — B2 (nodes 16-20)
   { id: 'node-16', name: 'Imperfect subjunctive',   tier: 'B2',  color: '#ef4444' },
   { id: 'node-17', name: 'Complex conditionals',    tier: 'B2',  color: '#ef4444' },
   { id: 'node-18', name: 'Passive & impersonal',    tier: 'B2',  color: '#ef4444' },
   { id: 'node-19', name: 'Advanced connectors',     tier: 'B2',  color: '#ef4444' },
   { id: 'node-20', name: 'Mixed advanced',          tier: 'B2',  color: '#ef4444' },
+
+  // Tier 5 — C1 (nodes 21-23)
+  { id: 'node-21', name: 'Subjunctive nuances',     tier: 'C1',  color: '#8b5cf6' },
+  { id: 'node-22', name: 'Verb phrases',              tier: 'C1',  color: '#8b5cf6' },
+  { id: 'node-23', name: 'Reported speech',          tier: 'C1',  color: '#8b5cf6' },
+
+  // Tier 6 — C2 (nodes 24-26)
+  { id: 'node-24', name: 'Register & style',         tier: 'C2',  color: '#6366f1' },
+  { id: 'node-25', name: 'Idiomatic fluency',        tier: 'C2',  color: '#6366f1' },
+  { id: 'node-26', name: 'Complex syntax',            tier: 'C2',  color: '#6366f1' },
 ];
 
 export const SIDE_BRANCHES: SideBranch[] = [

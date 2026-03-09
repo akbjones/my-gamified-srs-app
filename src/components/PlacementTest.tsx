@@ -181,7 +181,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
             </span>
           </div>
           <span className="text-[10px] font-mono text-[var(--text-muted)]">
-            {nodeIndex + 1}/20
+            {nodeIndex + 1}/{MAIN_PATH.length}
           </span>
         </div>
 
@@ -368,7 +368,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
                 Impressive!
               </h1>
               <p className="text-sm text-[var(--text-secondary)] mb-6">
-                You passed all 20 levels. All cards will be marked as known.
+                You passed all {MAIN_PATH.length} levels. All cards will be marked as known.
               </p>
             </>
           )}

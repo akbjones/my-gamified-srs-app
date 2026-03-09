@@ -26,7 +26,7 @@ function classify(card) {
 
   const scores = new Array(20).fill(0);
 
-  // ── Node 17: Si clauses (Conditionals II & III) ──
+  // ── Node 17: Si clauses (Complex conditionals) ──
   if (/\bsi\s+\w+(iera|ara|iese|ase)\b/.test(t)) scores[16] += 12;
   if (/\bsi\b/.test(t) && /\w+(aria|eria|iria)\b/.test(t)) scores[16] += 10;
   if (/si clause|conditional.*si|si.*conditional|condicional.*si/i.test(g)) scores[16] += 14;
@@ -56,7 +56,7 @@ function classify(card) {
   if (/conditional|condicional/.test(g) && !/si clause/.test(g)) scores[12] += 12;
   if (/\bme gustaria\b/.test(t)) scores[12] += 6;
 
-  // ── Node 14: Future & compound tenses ──
+  // ── Node 14: Future & perfect tenses ──
   if (/\w+(are|aras|ara|aremos|aran|ere|eras|era|eremos|eran|ire|iras|ira|iremos|iran)\b/.test(t) && !/\b(para|era|eras|eran|fuera|tuviera)\b/.test(t)) scores[13] += 5;
   if (/\b(sera|tendra|podra|hara|dira|vendra|sabra|pondra|saldra|habra|querra|valdra|ira)\b/.test(t)) scores[13] += 8;
   if (/\b(he|has|ha|hemos|han)\s+\w+(ado|ido|to|cho|so|sto|erto)\b/.test(t)) scores[13] += 9;
@@ -141,7 +141,7 @@ function classify(card) {
   // Short noun phrases emphasizing articles
   if (words <= 5 && /\b(el|la|los|las|un|una|unos|unas)\s+\w+\b/.test(t)) scores[3] += 3;
 
-  // ── Node 20: Mastery (idioms & advanced) ──
+  // ── Node 20: Mixed advanced (idioms & advanced) ──
   if (/idiom|idiomatic|modismo|expression|expresion|slang|colloquial|refran|dicho/.test(g)) scores[19] += 14;
   if (words >= 25) scores[19] += 3;
 
@@ -191,8 +191,8 @@ const nodeNames = [
   'Present tense', 'Ser vs estar', 'Common questions', 'Articles & gender',
   'Gustar & similar', 'Preterite', 'Imperfect', 'Reflexive verbs',
   'Por vs para', 'Object pronouns', 'Present subjunctive', 'Commands',
-  'Conditional', 'Future & compound', 'Relative clauses', 'Imperfect subjunctive',
-  'Conditionals II & III', 'Passive & impersonal', 'Advanced connectors', 'Mastery'
+  'Conditional', 'Future & perfect', 'Relative clauses', 'Imperfect subjunctive',
+  'Complex conditionals', 'Passive & impersonal', 'Advanced connectors', 'Mixed advanced'
 ];
 
 console.log('Node distribution (all cards):');

@@ -5,6 +5,7 @@ const masteryKey = (lang: Language) => `quest_mastery_${lang}`;
 const statsKey = (lang: Language) => `quest_stats_${lang}`;
 const dailyKey = (lang: Language) => `quest_daily_${lang}`;
 const achievementsKey = (lang: Language) => `quest_achievements_${lang}`;
+const placementKey = (lang: Language) => `quest_placement_${lang}`;
 
 // Global keys (shared across languages)
 const SETTINGS_KEY = 'quest_settings';
@@ -113,6 +114,19 @@ export const saveSettings = (settings: StudySettings): void => {
   localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
 };
 
+// ─── Placement ──────────────────────────────────────────────
+export const isPlacementComplete = (lang: Language): boolean => {
+  return localStorage.getItem(placementKey(lang)) === 'true';
+};
+
+export const setPlacementComplete = (lang: Language): void => {
+  localStorage.setItem(placementKey(lang), 'true');
+};
+
+export const resetPlacement = (lang: Language): void => {
+  localStorage.removeItem(placementKey(lang));
+};
+
 // ─── Reset ──────────────────────────────────────────────────
 export const resetAll = (): void => {
   // Clear all language-specific keys
@@ -122,6 +136,7 @@ export const resetAll = (): void => {
     localStorage.removeItem(statsKey(lang));
     localStorage.removeItem(dailyKey(lang));
     localStorage.removeItem(achievementsKey(lang));
+    localStorage.removeItem(placementKey(lang));
   }
   // Clear old non-namespaced keys too (for migration)
   localStorage.removeItem('quest_mastery');

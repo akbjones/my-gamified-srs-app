@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import TopicMap from './components/TopicMap';
 import StudySession from './components/StudySession';
 import GamificationHub from './components/GamificationHub';
+import PlacementTest from './components/PlacementTest';
 import { QuestCard, MasteryMap, SessionState, UserStats, DailyStats, Language, LearningGoal, LANGUAGE_CONFIG, GOAL_CONFIG } from './types';
 import { MAIN_PATH, isNodeUnlocked } from './data/topicConfig';
 import { handleAnswerLogic, saveCardProgress, getRetention, burySiblings } from './services/srsService';
@@ -9,6 +10,7 @@ import {
   migrateStorageKeys, loadMasteryMap, loadUserStats, saveUserStats,
   loadDailyStats, saveDailyStats, resetAll,
   loadSettings, saveSettings,
+  isPlacementComplete, setPlacementComplete, resetPlacement,
 } from './services/storageService';
 import type { StudySettings, AudioSpeed } from './services/storageService';
 import {
@@ -16,7 +18,7 @@ import {
 } from './services/gamificationService';
 import { Settings2, Minus, Plus, X, Sun, Moon, Volume2, VolumeX, Zap } from 'lucide-react';
 
-type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS';
+type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT';
 
 // Deck loaders — static imports for available languages
 // (dynamic import would be cleaner but static is simpler for Vite bundling)
@@ -295,7 +297,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className={`max-w-md mx-auto min-h-screen ${view === 'STUDY' ? 'px-3 pt-0 pb-0' : 'p-5 pb-20'}`}>
+    <div className={`max-w-md mx-auto min-h-screen ${view === 'STUDY' || view === 'PLACEMENT' ? 'px-0 pt-0 pb-0' : 'p-5 pb-20'}`}>
       {view === 'HOME' && (
         <section className="animate-fade-in">
           {/* Header row: title + theme toggle */}
@@ -338,6 +340,35 @@ const App: React.FC = () => {
               </div>
             );
           })()}
+
+          {/* Placement test CTA — shown once per language until completed */}
+          {!isPlacementComplete(lang) && (
+            <div className="stat-card p-4 mb-3 border-amber-500/30">
+              <p className="text-sm font-bold text-[var(--text-primary)] mb-1">
+                Already know some {LANGUAGE_CONFIG[lang].name}?
+              </p>
+              <p className="text-xs text-[var(--text-secondary)] leading-relaxed mb-3">
+                Take a 2-minute placement test to skip what you already know.
+              </p>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setView('PLACEMENT')}
+                  className="flex-1 py-2.5 btn-primary rounded-lg text-xs"
+                >
+                  Take Test
+                </button>
+                <button
+                  onClick={() => {
+                    setPlacementComplete(lang);
+                    setDeck(prev => [...prev]); // force re-render
+                  }}
+                  className="px-4 py-2.5 rounded-lg text-xs text-[var(--text-muted)] font-bold hover:text-[var(--text-secondary)] transition-colors"
+                >
+                  Skip
+                </button>
+              </div>
+            </div>
+          )}
 
           {/* Stats + Study */}
           <div className="grid grid-cols-2 gap-3 mb-3">
@@ -552,10 +583,21 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              <div className="pt-2 border-t border-[var(--border-color)]">
+              <div className="pt-2 border-t border-[var(--border-color)] space-y-2">
+                {isPlacementComplete(lang) && (
+                  <button
+                    onClick={() => {
+                      resetPlacement(lang);
+                      setDeck(prev => [...prev]); // force re-render
+                    }}
+                    className="block text-[10px] text-[var(--text-faint)] hover:text-amber-400 transition-colors"
+                  >
+                    Reset placement test
+                  </button>
+                )}
                 <button
                   onClick={() => { resetAll(); window.location.reload(); }}
-                  className="text-[10px] text-[var(--text-faint)] hover:text-red-400 transition-colors"
+                  className="block text-[10px] text-[var(--text-faint)] hover:text-red-400 transition-colors"
                 >
                   Reset all data
                 </button>
@@ -607,6 +649,24 @@ const App: React.FC = () => {
           achievements={getAchievementsWithStatus(userStats, masteryMap, deck, lang)}
           retention={getTotalRetention()}
           onBack={() => setView('HOME')}
+        />
+      )}
+
+      {view === 'PLACEMENT' && (
+        <PlacementTest
+          deck={deck}
+          lang={lang}
+          userStats={userStats}
+          masteryMap={masteryMap}
+          onComplete={(newMasteryMap, newUserStats) => {
+            setMasteryMap(newMasteryMap);
+            setUserStats(newUserStats);
+            setView('HOME');
+          }}
+          onSkip={() => {
+            setPlacementComplete(lang);
+            setView('HOME');
+          }}
         />
       )}
 

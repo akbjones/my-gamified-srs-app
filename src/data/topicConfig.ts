@@ -24,15 +24,15 @@ export const MAIN_PATH: PathNode[] = [
   { id: 'node-11', name: 'Present subjunctive',     tier: 'B1',  color: '#f59e0b' },
   { id: 'node-12', name: 'Commands',                tier: 'B1',  color: '#f59e0b' },
   { id: 'node-13', name: 'Conditional',             tier: 'B1',  color: '#f59e0b' },
-  { id: 'node-14', name: 'Future & compound',       tier: 'B1',  color: '#f59e0b' },
+  { id: 'node-14', name: 'Future & perfect',         tier: 'B1',  color: '#f59e0b' },
   { id: 'node-15', name: 'Relative clauses',        tier: 'B1',  color: '#f59e0b' },
 
   // Tier 4 — B2+ (nodes 16-20)
   { id: 'node-16', name: 'Imperfect subjunctive',   tier: 'B2',  color: '#ef4444' },
-  { id: 'node-17', name: 'Conditionals II & III',   tier: 'B2',  color: '#ef4444' },
+  { id: 'node-17', name: 'Complex conditionals',    tier: 'B2',  color: '#ef4444' },
   { id: 'node-18', name: 'Passive & impersonal',    tier: 'B2',  color: '#ef4444' },
   { id: 'node-19', name: 'Advanced connectors',     tier: 'B2',  color: '#ef4444' },
-  { id: 'node-20', name: 'Mastery',                 tier: 'B2',  color: '#ef4444' },
+  { id: 'node-20', name: 'Mixed advanced',          tier: 'B2',  color: '#ef4444' },
 ];
 
 export const SIDE_BRANCHES: SideBranch[] = [

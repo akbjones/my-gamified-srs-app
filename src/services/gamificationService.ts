@@ -37,6 +37,22 @@ export const awardXP = (
   };
 };
 
+export const awardBulkXP = (
+  cardCount: number,
+  stats: UserStats
+): UserStats => {
+  const xpGained = cardCount * XP_TABLE.GOOD; // 10 XP per fast-tracked card
+  const newXP = stats.xp + xpGained;
+  const newLevel = getLevel(newXP);
+  return {
+    ...stats,
+    xp: newXP,
+    level: newLevel,
+    totalReviews: stats.totalReviews + cardCount,
+    cardsLearned: stats.cardsLearned + cardCount,
+  };
+};
+
 export const updateStreak = (stats: UserStats): UserStats => {
   const today = new Date().toDateString();
   if (stats.lastStudyDate === today) return stats;

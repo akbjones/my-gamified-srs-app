@@ -41,17 +41,26 @@ const buildDeck = (
     return tags.includes(goal);
   });
 
-  // Dynamic node slicing: distribute cards evenly across 20 nodes
-  const perNode = Math.ceil(filtered.length / MAIN_PATH.length);
+  // Group cards by their grammarNode field (set by classify-grammar script)
+  // Falls back to positional slicing for cards without grammarNode
+  const nodeMap = new Map<string, typeof filtered>();
+  for (const node of MAIN_PATH) nodeMap.set(node.id, []);
+
+  for (const rawCard of filtered) {
+    const nodeId = rawCard.grammarNode || null;
+    if (nodeId && nodeMap.has(nodeId)) {
+      nodeMap.get(nodeId)!.push(rawCard);
+    } else {
+      // Fallback: assign to first node
+      nodeMap.get(MAIN_PATH[0].id)!.push(rawCard);
+    }
+  }
+
   const cards: QuestCard[] = [];
 
-  for (let i = 0; i < MAIN_PATH.length; i++) {
-    const node = MAIN_PATH[i];
-    const start = i * perNode;
-    const end = Math.min(start + perNode, filtered.length);
-    const slice = filtered.slice(start, end);
-
-    for (const rawCard of slice) {
+  for (const node of MAIN_PATH) {
+    const nodeCards = nodeMap.get(node.id) || [];
+    for (const rawCard of nodeCards) {
       const id = String(rawCard.id);
       const saved = masteryMap[id];
       cards.push({

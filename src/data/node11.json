@@ -1,0 +1,912 @@
+[
+    {
+        "id": 1001,
+        "target": "Me duele la cabeza.",
+        "english": "My head hurts.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0,
+        "grammar": "\"¿A qué hora sale el próximo tren?\" — \"salir\" for departures. \"¿A qué hora?\" = at what time? \"Próximo\" = next. Transport uses \"salir/llegar.\""
+    },
+    {
+        "id": 1002,
+        "target": "Tengo dolor de estómago.",
+        "english": "I have a stomachache.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1003,
+        "target": "Me rompí el brazo la semana pasada.",
+        "english": "I broke my arm last week.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1004,
+        "target": "Me duele mucho la espalda.",
+        "english": "My back hurts a lot.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1005,
+        "target": "Necesito ir al médico.",
+        "english": "I need to go to the doctor.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0,
+        "grammar": "\"Quisiera reservar una habitación doble\" — \"quisiera\" (imperfect subjunctive of querer) = I would like. More polite than \"quiero.\" Common for requests."
+    },
+    {
+        "id": 1006,
+        "target": "Creo que tengo fiebre.",
+        "english": "I think I have a fever.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1007,
+        "target": "Me duelen los pies después de caminar tanto.",
+        "english": "My feet hurt after walking so much.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1008,
+        "target": "Tengo una cita con el dentista mañana.",
+        "english": "I have an appointment with the dentist tomorrow.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1009,
+        "target": "Me lastimé la pierna jugando al fútbol.",
+        "english": "I hurt my leg playing soccer.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1010,
+        "target": "Tengo tos y me duele la garganta.",
+        "english": "I have a cough and my throat hurts.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0,
+        "grammar": "\"¿Está incluido el desayuno?\" — passive participle as adjective: \"incluido\" agrees with \"desayuno\" (masc). \"Estar\" + past participle for states resulting from actions."
+    },
+    {
+        "id": 1011,
+        "target": "El enfermero me tomó la temperatura.",
+        "english": "The nurse took my temperature.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1012,
+        "target": "Necesito tomar estas pastillas tres veces al día.",
+        "english": "I need to take these pills three times a day.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1013,
+        "target": "Me duelen los ojos de tanto leer.",
+        "english": "My eyes hurt from reading so much.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1014,
+        "target": "El doctor me revisó la boca y los dientes.",
+        "english": "The doctor examined my mouth and teeth.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1015,
+        "target": "Tienes que descansar si estás enfermo.",
+        "english": "You have to rest if you are sick.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0,
+        "grammar": "\"Nos alojamos en un hotel cerca de la playa\" — \"alojarse\" (reflexive) = to stay/lodge. \"Cerca de\" = near. Preterite or present depending on context."
+    },
+    {
+        "id": 1016,
+        "target": "Me corté la mano con un cuchillo.",
+        "english": "I cut my hand with a knife.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1017,
+        "target": "La medicina me ayudó a sentirme mejor.",
+        "english": "The medicine helped me feel better.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1018,
+        "target": "Me puse crema en la piel porque estaba seca.",
+        "english": "I put cream on my skin because it was dry.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1019,
+        "target": "Llamamos a una ambulancia porque era una emergencia.",
+        "english": "We called an ambulance because it was an emergency.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1020,
+        "target": "Me duele la oreja derecha desde ayer.",
+        "english": "My right ear has hurt since yesterday.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0,
+        "grammar": "\"¿Podría indicarme dónde está la salida?\" — \"podría\" (conditional) for polite requests. \"Indicarme\" — pronoun on infinitive. \"Dónde está\" = indirect question."
+    },
+    {
+        "id": 1021,
+        "target": "El médico me dijo que tengo la gripe.",
+        "english": "The doctor told me I have the flu.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1022,
+        "target": "Ella se rompió un hueso del pie.",
+        "english": "She broke a bone in her foot.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1023,
+        "target": "Tengo que hacerme un análisis de sangre.",
+        "english": "I have to get a blood test.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1024,
+        "target": "Me duele mucho la nariz por la alergia.",
+        "english": "My nose hurts a lot because of the allergy.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1025,
+        "target": "El hospital está a diez minutos de aquí.",
+        "english": "The hospital is ten minutes from here.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0,
+        "grammar": "\"El vuelo fue cancelado por mal tiempo\" — passive voice: ser + past participle + por. \"Fue cancelado\" = was cancelled. \"Por\" introduces the cause/agent."
+    },
+    {
+        "id": 1026,
+        "target": "La enfermera me puso una inyección en el brazo.",
+        "english": "The nurse gave me a shot in the arm.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1027,
+        "target": "Deberías lavarte las manos antes de comer.",
+        "english": "You should wash your hands before eating.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1028,
+        "target": "Me siento muy cansado y me duele todo el cuerpo.",
+        "english": "I feel very tired and my whole body hurts.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1029,
+        "target": "El corazón late más rápido cuando haces ejercicio.",
+        "english": "The heart beats faster when you exercise.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1030,
+        "target": "¿Puedes darme algo para el dolor de cabeza?",
+        "english": "Can you give me something for the headache?",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0,
+        "grammar": "\"Hay que facturar el equipaje antes de pasar al control\" — \"hay que\" (impersonal must) + infinitive. \"Antes de\" + infinitive = before doing."
+    },
+    {
+        "id": 1031,
+        "target": "El médico me escribió una receta para la medicina.",
+        "english": "The doctor wrote me a prescription for the medicine.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1032,
+        "target": "Me tropecé y me hice daño en la rodilla.",
+        "english": "I tripped and hurt my knee.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1033,
+        "target": "Es importante comer bien para mantenerse sano.",
+        "english": "It is important to eat well to stay healthy.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1034,
+        "target": "Me duele el estómago porque comí demasiado.",
+        "english": "My stomach hurts because I ate too much.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1035,
+        "target": "Ella tiene alergia al polen y le lloran los ojos.",
+        "english": "She is allergic to pollen and her eyes water.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0,
+        "grammar": "\"Se me ha perdido la maleta\" — \"perdérsele a alguien\" = to lose (accidentally). Like \"se me olvidó\" — the suitcase \"lost itself on me.\" Removes blame."
+    },
+    {
+        "id": 1036,
+        "target": "Tengo una consulta con el especialista la próxima semana.",
+        "english": "I have an appointment with the specialist next week.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1037,
+        "target": "La fiebre no me baja a pesar de tomar la medicina.",
+        "english": "The fever won't go down despite taking the medicine.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1038,
+        "target": "El dentista me dijo que tengo que sacarme un diente.",
+        "english": "The dentist told me I have to get a tooth pulled.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1039,
+        "target": "Me quemé la mano con la estufa mientras cocinaba.",
+        "english": "I burned my hand on the stove while cooking.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1040,
+        "target": "Hay que ponerse protector solar para proteger la piel.",
+        "english": "You need to put on sunscreen to protect your skin.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0,
+        "grammar": "\"Cuando llegamos al aeropuerto ya había salido el avión\" — pluperfect \"había salido\" for the earlier action. \"Cuando llegamos\" (preterite) + \"ya había\" (already had)."
+    },
+    {
+        "id": 1041,
+        "target": "No puedo respirar bien por la nariz.",
+        "english": "I can't breathe well through my nose.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1042,
+        "target": "El paciente necesita una operación de emergencia.",
+        "english": "The patient needs an emergency operation.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1043,
+        "target": "Me torcí el tobillo corriendo en el parque.",
+        "english": "I twisted my ankle running in the park.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1044,
+        "target": "Le duelen mucho las muelas y no puede dormir.",
+        "english": "His molars hurt a lot and he can't sleep.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1045,
+        "target": "La doctora me aconsejó que descansara durante una semana.",
+        "english": "The doctor advised me to rest for a week.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0,
+        "grammar": "\"¿Cuánto tarda el autobús en llegar al centro?\" — \"tardar en\" + infinitive = to take (time) to. \"¿Cuánto tarda?\" = How long does it take?"
+    },
+    {
+        "id": 1046,
+        "target": "Se me hinchó la pierna después de la picadura.",
+        "english": "My leg swelled up after the sting.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1047,
+        "target": "El cirujano operó al paciente del corazón.",
+        "english": "The surgeon operated on the patient's heart.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1048,
+        "target": "Tengo que tomarme la presión arterial todos los días.",
+        "english": "I have to check my blood pressure every day.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1049,
+        "target": "La herida en el brazo todavía no ha cicatrizado.",
+        "english": "The wound on my arm still hasn't healed.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1050,
+        "target": "Me recetaron un antibiótico para la infección de oído.",
+        "english": "They prescribed me an antibiotic for the ear infection.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1051,
+        "target": "El dolor de espalda me impide dormir por las noches.",
+        "english": "The back pain keeps me from sleeping at night.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1052,
+        "target": "Ella se desmayó en la calle y la llevaron al hospital.",
+        "english": "She fainted in the street and they took her to the hospital.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1053,
+        "target": "Tienes que tomarte estas pastillas en ayunas.",
+        "english": "You have to take these pills on an empty stomach.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1054,
+        "target": "El médico le pidió que sacara la lengua y dijera ah.",
+        "english": "The doctor asked him to stick out his tongue and say ah.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1055,
+        "target": "Le hicieron una radiografía para ver si tenía un hueso roto.",
+        "english": "They did an X-ray to see if he had a broken bone.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1056,
+        "target": "Es necesario que vayas al médico si la fiebre no baja.",
+        "english": "You need to go to the doctor if the fever doesn't go down.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1057,
+        "target": "Me duele el pecho cuando respiro profundamente.",
+        "english": "My chest hurts when I breathe deeply.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1058,
+        "target": "La alergia me produce estornudos y picazón en los ojos.",
+        "english": "The allergy gives me sneezing and itchy eyes.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1059,
+        "target": "El paciente fue trasladado en ambulancia a urgencias.",
+        "english": "The patient was transported by ambulance to the emergency room.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1060,
+        "target": "No deberías hacer ejercicio hasta que se te cure la lesión.",
+        "english": "You shouldn't exercise until your injury heals.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1061,
+        "target": "Me sacaron sangre para hacerme unos análisis.",
+        "english": "They drew my blood to run some tests.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1062,
+        "target": "El dolor era tan fuerte que no podía mover el cuello.",
+        "english": "The pain was so intense that I couldn't move my neck.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1063,
+        "target": "Le pusieron una escayola en la pierna rota.",
+        "english": "They put a cast on his broken leg.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1064,
+        "target": "La enfermera le cambió el vendaje de la herida.",
+        "english": "The nurse changed the bandage on his wound.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1065,
+        "target": "Es recomendable hacerse un chequeo médico una vez al año.",
+        "english": "It is recommended to get a medical checkup once a year.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1066,
+        "target": "Mi abuela toma medicinas para el corazón y la presión.",
+        "english": "My grandmother takes medicines for her heart and blood pressure.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1067,
+        "target": "Me mareé al levantarme demasiado rápido de la silla.",
+        "english": "I got dizzy from standing up too quickly from the chair.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1068,
+        "target": "Si te duele el hombro, deberías ponerte hielo.",
+        "english": "If your shoulder hurts, you should put ice on it.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1069,
+        "target": "La tos no me deja dormir bien por las noches.",
+        "english": "The cough doesn't let me sleep well at night.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1070,
+        "target": "Le diagnosticaron diabetes y ahora tiene que controlar el azúcar.",
+        "english": "They diagnosed him with diabetes and now he has to monitor his sugar.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1071,
+        "target": "Me hice un esguince en la muñeca al caerme.",
+        "english": "I sprained my wrist when I fell.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1072,
+        "target": "El médico me recomendó que hiciera ejercicio suave todos los días.",
+        "english": "The doctor recommended that I do light exercise every day.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1073,
+        "target": "Tiene los pulmones afectados por fumar durante muchos años.",
+        "english": "His lungs are affected from smoking for many years.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1074,
+        "target": "La vacuna contra la gripe se pone todos los otoños.",
+        "english": "The flu vaccine is given every fall.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1075,
+        "target": "Me duelen las articulaciones cuando cambia el clima.",
+        "english": "My joints hurt when the weather changes.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1076,
+        "target": "El especialista le mandó unas pruebas para descartar algo grave.",
+        "english": "The specialist ordered some tests to rule out anything serious.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1077,
+        "target": "Tuvo que quedarse ingresado en el hospital durante tres días.",
+        "english": "He had to stay admitted in the hospital for three days.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1078,
+        "target": "La fisioterapia me ha ayudado a recuperar la movilidad del hombro.",
+        "english": "Physical therapy has helped me recover the mobility in my shoulder.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1079,
+        "target": "No puedo tragar bien porque tengo la garganta muy inflamada.",
+        "english": "I can't swallow well because my throat is very swollen.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1080,
+        "target": "Le recetaron unas gotas para la infección en el ojo.",
+        "english": "They prescribed him some drops for the eye infection.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1081,
+        "target": "Es importante que te tomes toda la medicina aunque te sientas mejor.",
+        "english": "It is important that you take all the medicine even if you feel better.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1082,
+        "target": "El accidente le dejó una cicatriz en la frente.",
+        "english": "The accident left him a scar on his forehead.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1083,
+        "target": "Me duele el oído y creo que tengo una infección.",
+        "english": "My ear hurts and I think I have an infection.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1084,
+        "target": "La doctora me dijo que el dolor de estómago podría ser estrés.",
+        "english": "The doctor told me the stomachache could be stress.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1085,
+        "target": "Ella tiene que inyectarse insulina todos los días.",
+        "english": "She has to inject herself with insulin every day.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1086,
+        "target": "Le hicieron una resonancia magnética para examinar la columna vertebral.",
+        "english": "They did an MRI to examine his spine.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1087,
+        "target": "Es fundamental que sigas las indicaciones del médico al pie de la letra.",
+        "english": "It is essential that you follow the doctor's instructions to the letter.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1088,
+        "target": "Los síntomas incluyen mareos, náuseas y pérdida de apetito.",
+        "english": "The symptoms include dizziness, nausea, and loss of appetite.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1089,
+        "target": "El cirujano le explicó los riesgos de la operación antes de firmar.",
+        "english": "The surgeon explained the risks of the operation before he signed.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1090,
+        "target": "Me recomendaron que consultara con un especialista en traumatología.",
+        "english": "They recommended that I consult with a trauma specialist.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1091,
+        "target": "El tratamiento dura seis meses e incluye sesiones de rehabilitación.",
+        "english": "The treatment lasts six months and includes rehabilitation sessions.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1092,
+        "target": "Le detectaron una fractura en la muñeca que requiere cirugía.",
+        "english": "They detected a fracture in his wrist that requires surgery.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1093,
+        "target": "Después de la operación, el paciente deberá guardar reposo absoluto.",
+        "english": "After the operation, the patient must remain on complete bed rest.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1094,
+        "target": "La anestesia local adormecerá la zona para que no sientas dolor.",
+        "english": "The local anesthesia will numb the area so you don't feel pain.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1095,
+        "target": "Es posible que los efectos secundarios de la medicación te provoquen somnolencia.",
+        "english": "It is possible that the side effects of the medication may cause you drowsiness.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1096,
+        "target": "El cardiólogo le recomendó que redujera el consumo de sal y grasas.",
+        "english": "The cardiologist recommended that he reduce his salt and fat intake.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1097,
+        "target": "El diagnóstico reveló que la infección se había extendido a los pulmones.",
+        "english": "The diagnosis revealed that the infection had spread to the lungs.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1098,
+        "target": "Conviene que te vacunes antes de viajar a zonas tropicales.",
+        "english": "It is advisable that you get vaccinated before traveling to tropical areas.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1099,
+        "target": "El especialista le advirtió que sin tratamiento la enfermedad podría empeorar.",
+        "english": "The specialist warned him that without treatment the illness could worsen.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    },
+    {
+        "id": 1100,
+        "target": "Gracias a la intervención quirúrgica, el paciente se recuperó por completo en tres meses.",
+        "english": "Thanks to the surgical intervention, the patient recovered completely in three months.",
+        "audio": "",
+        "interval": 0,
+        "ease": 2.5,
+        "due": 0
+    }
+]

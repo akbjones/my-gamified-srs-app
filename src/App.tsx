@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import TopicMap from './components/TopicMap';
 import StudySession from './components/StudySession';
 import GamificationHub from './components/GamificationHub';
@@ -161,10 +161,10 @@ const App: React.FC = () => {
     }
   }, [masteryMap]);
 
-  // Dark mode effect
-  useEffect(() => {
-    const root = document.documentElement;
-    root.classList.toggle('dark', settings.theme === 'dark');
+  // Dark mode: useLayoutEffect runs synchronously before browser paint,
+  // preventing the flash that useEffect causes on initial load / restore.
+  useLayoutEffect(() => {
+    document.documentElement.classList.toggle('dark', settings.theme === 'dark');
   }, [settings.theme]);
 
   const handleStartSession = (studyMore = false) => {
@@ -293,23 +293,40 @@ const App: React.FC = () => {
   const availableLanguages: Language[] = Object.keys(DECK_MAP) as Language[];
 
   const toggleTheme = () => {
-    handleUpdateSettings({ ...settings, theme: settings.theme === 'dark' ? 'light' : 'dark' });
+    const newTheme = settings.theme === 'dark' ? 'light' : 'dark';
+    // Apply class IMMEDIATELY (before React re-render) to prevent flash
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    handleUpdateSettings({ ...settings, theme: newTheme });
   };
 
   return (
     <div className={`max-w-md mx-auto min-h-screen ${view === 'STUDY' || view === 'PLACEMENT' ? 'px-0 pt-0 pb-0' : 'p-5 pb-20'}`}>
       {view === 'HOME' && (
         <section className="animate-fade-in">
-          {/* Header row: title + theme toggle */}
+          {/* Header row: title + language + theme toggle */}
           <header className="pt-6 pb-5 flex items-center justify-between">
             <h1 className="text-4xl font-black italic tracking-tighter text-blue-500">LangLab</h1>
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
-              title={settings.theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-            >
-              {settings.theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-            </button>
+            <div className="flex items-center gap-1.5">
+              <button
+                onClick={() => {
+                  const langs: Language[] = ['spanish', 'italian', 'french', 'german'];
+                  const available = langs.filter(l => availableLanguages.includes(l));
+                  if (available.length <= 1) return;
+                  const idx = available.indexOf(lang);
+                  handleLanguageChange(available[(idx + 1) % available.length]);
+                }}
+                className="px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider border border-[var(--border-color)] text-[var(--text-muted)] hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all"
+              >
+                {LANGUAGE_CONFIG[lang].name}
+              </button>
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
+                title={settings.theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              >
+                {settings.theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+              </button>
+            </div>
           </header>
 
           {/* Study section — the main action */}
@@ -419,7 +436,7 @@ const App: React.FC = () => {
           {/* Progress map link */}
           <button
             onClick={() => setView('TOPICS')}
-            className="w-full stat-card p-0 overflow-hidden text-left transition-all hover:border-[var(--border-hover)] group cursor-pointer mb-6"
+            className="w-full stat-card p-0 overflow-hidden text-left transition-all hover:border-[var(--border-hover)] group cursor-pointer mb-4"
           >
             <div className="h-1 bg-[var(--progress-bg)]">
               <div className="h-full bg-blue-500 transition-all" style={{ width: `${getTotalProgress()}%` }} />
@@ -432,31 +449,8 @@ const App: React.FC = () => {
             </div>
           </button>
 
-          {/* Language + Goal selection — less prominent, below the fold */}
+          {/* Goal selection */}
           <div className="space-y-3 mb-4">
-            <div className="flex gap-1.5">
-              {(['spanish', 'italian', 'french', 'german'] as Language[]).map(l => {
-                const cfg = LANGUAGE_CONFIG[l];
-                const isAvailable = availableLanguages.includes(l);
-                const isSelected = lang === l;
-                return (
-                  <button
-                    key={l}
-                    onClick={() => isAvailable && handleLanguageChange(l)}
-                    disabled={!isAvailable}
-                    className={`flex-1 py-2 rounded-lg text-center transition-all border ${
-                      isSelected
-                        ? 'border-blue-500/40 bg-blue-500/10 text-blue-500'
-                        : isAvailable
-                          ? 'border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--border-hover)]'
-                          : 'border-[var(--border-color)] text-[var(--text-faint)] cursor-not-allowed'
-                    }`}
-                  >
-                    <div className="text-[11px] font-bold uppercase tracking-wider">{cfg.name}</div>
-                  </button>
-                );
-              })}
-            </div>
             <div className="flex gap-1.5">
               {(['general', 'travel', 'work', 'family'] as LearningGoal[]).map(g => {
                 const cfg = GOAL_CONFIG[g];

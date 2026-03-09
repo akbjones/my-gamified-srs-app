@@ -25,4 +25,10 @@ export const GRAMMAR_NUDGES: Record<string, string> = {
   'node-18': 'This sentence uses a passive or impersonal construction — "se" as a marker for general statements.',
   'node-19': 'This sentence uses advanced linking words — discourse markers that build complex arguments.',
   'node-20': 'This sentence combines multiple advanced grammar patterns — a hallmark of near-native fluency.',
+  'node-21': 'This sentence explores subjunctive nuances — mood contrasts like "no creo que", "como si", or "el hecho de que".',
+  'node-22': 'This sentence uses a verb phrase construction — combinations like "llevar + gerund", "acabar de + infinitive", or "ponerse a + infinitive".',
+  'node-23': 'This sentence uses reported speech (estilo indirecto) — conveying what someone said with tense shifting and reference changes.',
+  'node-24': 'This sentence uses formal or literary register — structures like the pretérito anterior, future of probability, or academic discourse markers.',
+  'node-25': 'This sentence uses idiomatic expressions — proverbs, fixed phrases, or colloquial constructions typical of native fluency.',
+  'node-26': 'This sentence uses complex syntactic structures — participial clauses, multiple subordination, or nominalization.',
 };

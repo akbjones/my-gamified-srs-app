@@ -1,0 +1,132 @@
+import { MasteryMap, UserStats, DailyStats, Language, LearningGoal } from '../types';
+
+// Per-language keys (namespaced)
+const masteryKey = (lang: Language) => `quest_mastery_${lang}`;
+const statsKey = (lang: Language) => `quest_stats_${lang}`;
+const dailyKey = (lang: Language) => `quest_daily_${lang}`;
+const achievementsKey = (lang: Language) => `quest_achievements_${lang}`;
+
+// Global keys (shared across languages)
+const SETTINGS_KEY = 'quest_settings';
+
+// ─── Migration ──────────────────────────────────────────────
+// One-time: move old non-namespaced keys to spanish-namespaced keys
+export const migrateStorageKeys = (): void => {
+  const oldKeys = [
+    ['quest_mastery', masteryKey('spanish')],
+    ['quest_stats', statsKey('spanish')],
+    ['quest_daily', dailyKey('spanish')],
+    ['quest_achievements', achievementsKey('spanish')],
+  ];
+  for (const [oldKey, newKey] of oldKeys) {
+    const old = localStorage.getItem(oldKey);
+    if (old && !localStorage.getItem(newKey)) {
+      localStorage.setItem(newKey, old);
+      localStorage.removeItem(oldKey);
+    }
+  }
+};
+
+// ─── Mastery ────────────────────────────────────────────────
+export const loadMasteryMap = (lang: Language): MasteryMap => {
+  const saved = localStorage.getItem(masteryKey(lang));
+  return saved ? JSON.parse(saved) : {};
+};
+
+export const saveMasteryMap = (map: MasteryMap, lang: Language): void => {
+  localStorage.setItem(masteryKey(lang), JSON.stringify(map));
+};
+
+// ─── User Stats ─────────────────────────────────────────────
+export const loadUserStats = (lang: Language): UserStats => {
+  const saved = localStorage.getItem(statsKey(lang));
+  if (saved) return JSON.parse(saved);
+  return {
+    xp: 0,
+    level: 1,
+    streak: 0,
+    totalReviews: 0,
+    cardsLearned: 0,
+    lastStudyDate: '',
+  };
+};
+
+export const saveUserStats = (stats: UserStats, lang: Language): void => {
+  localStorage.setItem(statsKey(lang), JSON.stringify(stats));
+};
+
+// ─── Daily Stats ────────────────────────────────────────────
+export const loadDailyStats = (lang: Language): DailyStats => {
+  const saved = localStorage.getItem(dailyKey(lang));
+  if (saved) {
+    const parsed: DailyStats = JSON.parse(saved);
+    if (parsed.date === new Date().toDateString()) {
+      return parsed;
+    }
+  }
+  return { date: new Date().toDateString(), newCardsCount: 0 };
+};
+
+export const saveDailyStats = (stats: DailyStats, lang: Language): void => {
+  localStorage.setItem(dailyKey(lang), JSON.stringify(stats));
+};
+
+// ─── Achievements ───────────────────────────────────────────
+export const loadUnlockedAchievements = (lang: Language): string[] => {
+  const saved = localStorage.getItem(achievementsKey(lang));
+  return saved ? JSON.parse(saved) : [];
+};
+
+export const saveUnlockedAchievements = (ids: string[], lang: Language): void => {
+  localStorage.setItem(achievementsKey(lang), JSON.stringify(ids));
+};
+
+// ─── Settings (global) ─────────────────────────────────────
+export type AudioSpeed = 0.6 | 0.8 | 1.0;
+
+export interface StudySettings {
+  dailyNewLimit: number;
+  selectedLanguage: Language;
+  learningGoal: LearningGoal;
+  theme: 'light' | 'dark';
+  autoPlayAudio: boolean;
+  audioSpeed: AudioSpeed;
+  googleTtsApiKey?: string; // optional — falls back to browser TTS if not set
+}
+
+const DEFAULT_SETTINGS: StudySettings = {
+  dailyNewLimit: 20,
+  selectedLanguage: 'spanish',
+  learningGoal: 'general',
+  theme: 'light',
+  autoPlayAudio: true,
+  audioSpeed: 1.0,
+};
+
+export const loadSettings = (): StudySettings => {
+  const saved = localStorage.getItem(SETTINGS_KEY);
+  if (saved) return { ...DEFAULT_SETTINGS, ...JSON.parse(saved) };
+  return DEFAULT_SETTINGS;
+};
+
+export const saveSettings = (settings: StudySettings): void => {
+  localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+};
+
+// ─── Reset ──────────────────────────────────────────────────
+export const resetAll = (): void => {
+  // Clear all language-specific keys
+  const langs: Language[] = ['spanish', 'italian', 'german', 'french'];
+  for (const lang of langs) {
+    localStorage.removeItem(masteryKey(lang));
+    localStorage.removeItem(statsKey(lang));
+    localStorage.removeItem(dailyKey(lang));
+    localStorage.removeItem(achievementsKey(lang));
+  }
+  // Clear old non-namespaced keys too (for migration)
+  localStorage.removeItem('quest_mastery');
+  localStorage.removeItem('quest_stats');
+  localStorage.removeItem('quest_daily');
+  localStorage.removeItem('quest_achievements');
+  localStorage.removeItem(SETTINGS_KEY);
+};

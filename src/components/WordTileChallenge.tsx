@@ -33,6 +33,11 @@ const WordTileChallenge: React.FC<WordTileChallengeProps> = ({
   const [checkResult, setCheckResult] = useState<TileCheckResult | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
+  // One-time hint for first tile challenge ever
+  const HINT_KEY = 'quest_tile_hint_seen';
+  const [showHint, setShowHint] = useState(() => !localStorage.getItem(HINT_KEY));
+  const dismissHint = () => { setShowHint(false); localStorage.setItem(HINT_KEY, 'true'); };
+
   const verdict = checkResult?.verdict ?? 'pending';
   const allPlaced = placedWords.length === correct.length;
   const isCorrectVerdict = verdict === 'exact' || verdict === 'close';
@@ -51,6 +56,7 @@ const WordTileChallenge: React.FC<WordTileChallengeProps> = ({
 
   const handleTapWord = (idx: number) => {
     if (checkResult || placedWords.length >= correct.length) return;
+    if (showHint) dismissHint();
     setPlacedWords(prev => [...prev, tiles[idx]]);
     setAvailableIndices(prev => {
       const next = new Set(prev);
@@ -123,6 +129,16 @@ const WordTileChallenge: React.FC<WordTileChallengeProps> = ({
           {correct.length} words
         </p>
       </div>
+
+      {/* First-time hint */}
+      {showHint && (
+        <button
+          onClick={dismissHint}
+          className="mb-2 w-full text-center text-[10px] text-blue-500 font-semibold py-1.5 rounded-lg bg-blue-500/8 border border-blue-500/20 animate-fade-in"
+        >
+          Tap the words below to build the sentence &middot; tap to dismiss
+        </button>
+      )}
 
       {/* Sentence build area */}
       <div className={`rounded-xl p-4 min-h-[56px] transition-all ${

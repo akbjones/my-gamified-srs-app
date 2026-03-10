@@ -55,10 +55,15 @@ const StreakFlame: React.FC<StreakFlameProps> = ({ streak, freezes, size = 'lg' 
 
       {/* Freeze indicators */}
       {isLg && freezes > 0 && (
-        <div className="flex gap-1 mt-2">
-          {Array.from({ length: freezes }).map((_, i) => (
-            <Snowflake key={i} size={12} className="text-cyan-400" />
-          ))}
+        <div className="flex flex-col items-center mt-2">
+          <div className="flex gap-1">
+            {Array.from({ length: freezes }).map((_, i) => (
+              <Snowflake key={i} size={12} className="text-cyan-400" />
+            ))}
+          </div>
+          <div className="text-[8px] text-cyan-500/60 font-bold mt-0.5">
+            {freezes} freeze{freezes > 1 ? 's' : ''}
+          </div>
         </div>
       )}
     </div>

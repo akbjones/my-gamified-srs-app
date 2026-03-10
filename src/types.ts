@@ -39,6 +39,10 @@ export interface UserStats {
   totalReviews: number;
   cardsLearned: number;
   lastStudyDate: string;
+  // Streak freeze system
+  streakFreezes: number;            // 0-3 banked
+  freezeEarnedAtStreak: number;     // streak when last freeze was earned
+  freezeUsedDates: string[];        // dates when freezes auto-consumed
 }
 
 export interface DailyStats {
@@ -71,6 +75,44 @@ export interface SideBranch {
   icon: string;
   cards: null; // placeholder for future
   unlocksAtNode: string;
+}
+
+// ── Gamification: Word Tile Challenges ────────────────────
+export interface ChallengeQuestion {
+  card: QuestCard;
+  correctWords: string[];    // target sentence split into words (correct order)
+  scrambledWords: string[];  // shuffled version for display
+}
+
+export type ChallengeMode = 'checkpoint' | 'boss';
+
+export interface ChallengeState {
+  mode: ChallengeMode;
+  questions: ChallengeQuestion[];
+  currentIndex: number;
+  answers: boolean[];          // true=correct, false=wrong
+  startTime: number;           // Date.now() at start
+  bossIndex?: number;          // which boss (0-21) for boss mode
+}
+
+export type BossRing = 'none' | 'bronze' | 'silver' | 'gold';
+
+export interface BossRecord {
+  bossIndex: number;
+  bestRing: BossRing;
+  completedAt: number;
+}
+
+// ── Gamification: Streak ──────────────────────────────────
+export type StreakTier = 'none' | 'small' | 'big' | 'blue' | 'lightning';
+
+// ── Gamification: Progress Tracking ───────────────────────
+export interface ProgressState {
+  cumulativeNewCards: number;     // total new cards ever introduced
+  lastCheckpointAt: number;      // cumulative count at last checkpoint
+  lastBossAt: number;            // cumulative count at last boss
+  bossRecords: BossRecord[];     // completed boss attempts
+  nextBossIndex: number;         // 0-21, next boss to face
 }
 
 // Language configuration

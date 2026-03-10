@@ -154,12 +154,12 @@ function classify(card) {
   if (/\b(es|son|soy|eres|somos)\b/.test(t) && /\b(esta|estan|estoy|estas|estamos)\b/.test(t)) scores[1] += 14;
   if (/\bser\b.*\bestar\b|\bestar\b.*\bser\b|ser vs|estar vs/.test(g)) scores[1] += 14;
   if (/\b(ser|estar)\b/.test(g) && /\b(temporary|permanent|location|state|characteristic|condition)\b/.test(g)) scores[1] += 10;
-  // Ser for identity/description
-  if (/\b(soy|eres|es|somos|son)\b/.test(t) && /\b(un|una|el|la|de|muy|bastante)\b/.test(t)) scores[1] += 4;
-  // Estar for states/location
-  if (/\b(estoy|estas|esta|estamos|estan)\b/.test(t) && /\b(bien|mal|contento|triste|cansado|enfermo|ocupado|listo|nervioso|preocupado|aqui|alli|ahi|cerca|lejos|en)\b/.test(t)) scores[1] += 5;
+  // Ser for identity/description — only short sentences
+  if (words <= 7 && /\b(soy|eres|es|somos|son)\b/.test(t) && /\b(un|una|el|la|de|muy|bastante)\b/.test(t)) scores[1] += 4;
+  // Estar for states/location — only short sentences
+  if (words <= 7 && /\b(estoy|estas|esta|estamos|estan)\b/.test(t) && /\b(bien|mal|contento|triste|cansado|enfermo|ocupado|listo|nervioso|preocupado|aqui|alli|ahi|cerca|lejos|en)\b/.test(t)) scores[1] += 5;
   // Short sentences with ser/estar as main verb
-  if (words <= 8 && /\b(es|son|soy|eres|somos|esta|estan|estoy|estas|estamos)\b/.test(t)) scores[1] += 3;
+  if (words <= 6 && /\b(es|son|soy|eres|somos|esta|estan|estoy|estas|estamos)\b/.test(t)) scores[1] += 3;
 
   // ── Node 5: Gustar & similar ──
   if (/\b(me|te|le|nos|les)\s+(gusta|gustan|encanta|encantan|interesa|interesan|importa|importan|molesta|molestan|fascina|fascinan|preocupa|preocupan|parece|parecen|duele|duelen|falta|faltan|sobra|sobran|apetece|apetecen|conviene|queda|quedan|cuesta|cuestan|sorprende|sorprenden|aburre|aburren)\b/.test(t)) scores[4] += 10;
@@ -319,9 +319,9 @@ function classify(card) {
 
   // ── Node 1: Present tense (genuinely present tense, not catchall) ──
   if (/present tense|presente|indicative|indicativo/.test(g) && !/subjunctive|subjuntivo/.test(g)) scores[0] += 10;
-  // Only boost present if no other node has meaningful score
+  // Only boost present if no other node has meaningful score AND sentence is short
   const maxOther = Math.max(...scores.slice(1));
-  if (maxOther < 5) {
+  if (maxOther < 5 && words <= 8) {
     if (/\b(soy|eres|es|somos|son|tengo|tienes|tiene|tenemos|tienen|hablo|hablas|habla|hablamos|hablan|como|comes|come|comemos|comen|vivo|vives|vive|vivimos|viven|trabajo|trabajas|trabaja|estudio|estudias|estudia|quiero|puedo|necesito|hay|voy|vas|va|vamos|van|hago|hace|digo|dice|pongo|salgo|conozco|conoce|leo|lees|lee|escribo|escribe|juego|juega|duermo|duerme|pienso|piensa|creo|cree|entiendo|entiende|llego|llega|tomo|toma|busco|busca|espero|paso|miro|mira)\b/.test(t)) {
       scores[0] += 4;
     }
@@ -341,36 +341,62 @@ function classify(card) {
  * Smarter fallback when no grammar pattern scored.
  * Spreads cards across nodes based on sentence features
  * instead of dumping everything to node-01.
+ *
+ * Key principle: node-01 should ONLY get very basic 1-3 word phrases.
+ * Everything else goes to a more specific node based on content clues.
  */
 function assignByFeatures(raw, r, t, words, isQuestion) {
   // Questions → node 3
   if (isQuestion) return 3;
 
-  // Very short (1-2 words) → node 1
+  // Very short (1-2 words) → node 1 (these are genuinely beginner)
   if (words <= 2) return 1;
 
   // Check for accented preterite we might have missed
   if (new RegExp(`[a-záéíóúüñ]{2,}ó(?![a-záéíóúüñ])`).test(r)) return 6;
 
+  // Ser/estar sentences (short) → node 2
+  if (/\b(es|son|soy|eres|somos|esta|estan|estoy|estas|estamos)\b/.test(t) && words <= 6) return 2;
+
   // Sentences with por/para → node 9
   if (/\b(por|para)\b/.test(t) && words >= 5) return 9;
+
+  // Reflexive pronouns → node 8
+  if (/\b(me|te|se|nos)\s+\w{3,}(o|as|a|amos|an)\b/.test(t) && words >= 4) return 8;
 
   // Sentences with "que" connecting clauses (relative) → node 15
   if (/\w+\s+que\s+\w+/.test(t) && words >= 8 && !isQuestion) return 15;
 
-  // Short with articles → node 4
-  if (words <= 5 && /\b(el|la|los|las|un|una)\b/.test(t)) return 4;
+  // Short with articles/demonstratives → node 4
+  if (words <= 5 && /\b(el|la|los|las|un|una|este|esta|ese|esa)\b/.test(t)) return 4;
 
-  // Short declarative (3-5 words) → node 2
-  if (words <= 5) return 2;
+  // Short declarative (3-5 words) → node 2 (basic description)
+  if (words <= 4) return 2;
 
-  // Medium → spread across mid-level nodes based on features
-  if (words <= 8) return 4;
-  if (words <= 12) return 10;
-  if (words <= 16) return 15;
-  if (words <= 20) return 18;
-  if (words <= 25) return 21; // C1 for long sentences
-  return 24; // C2 for very long sentences
+  // 5-6 words → node 4 (articles & gender / short descriptions)
+  if (words <= 6) return 4;
+
+  // 7-8 words → spread: object pronouns if lo/la/le present, else node-10
+  if (words <= 8) {
+    if (/\b(lo|la|los|las|le|les)\s+\w{3,}/.test(t)) return 10;
+    return 10;
+  }
+
+  // 9-11 words → node 14 (future & perfect — medium complexity)
+  if (words <= 11) return 14;
+
+  // 12-15 words → node 15 (relative clauses — complex sentences)
+  if (words <= 15) return 15;
+
+  // 16-18 words → node 18 (passive & impersonal)
+  if (words <= 18) return 18;
+
+  // 19-22 words → node 19 (advanced connectors)
+  if (words <= 22) return 19;
+
+  // 23+ words → C1/C2
+  if (words <= 25) return 22; // C1 verb phrases
+  return 24; // C2 register & style
 }
 
 // ─── Run ───────────────────────────────────────────────────────────────
@@ -383,6 +409,103 @@ for (const card of deck) {
   const node = classify(card);
   card.grammarNode = `node-${String(node).padStart(2, '0')}`;
   nodeCounts[node - 1]++;
+}
+
+// ─── Post-classification: Capacity-based overflow redistribution ──────
+// Some nodes (especially Preterite, Future) have strong grammar signals
+// that correctly classify many cards. But when a node is too large relative
+// to others, it creates a bad user experience (too many cards before progression).
+//
+// Solution: cap each node and redistribute overflow to the same-tier or
+// adjacent-tier node with the lowest count.
+
+// Soft caps: target max per node (total unique cards, not per goal)
+// Goal: no single node dominates — keep largest nodes under ~500
+const NODE_CAPS = [
+  /* 01 */ 470, /* 02 */ 470, /* 03 */ 470, /* 04 */ 470, /* 05 */ 300,
+  /* 06 */ 500, /* 07 */ 500, /* 08 */ 300, /* 09 */ 250, /* 10 */ 500,
+  /* 11 */ 430, /* 12 */ 300, /* 13 */ 300, /* 14 */ 500, /* 15 */ 400,
+  /* 16 */ 300, /* 17 */ 250, /* 18 */ 250, /* 19 */ 250, /* 20 */ 200,
+  /* 21 */ 100, /* 22 */ 150, /* 23 */ 100, /* 24 */ 100, /* 25 */ 100, /* 26 */ 100,
+];
+
+// Neighbours: same tier first, then adjacent tiers (broader redistribution)
+// For oversized A2 nodes, allow overflow into B1 to avoid bottleneck
+const NODE_NEIGHBOURS = [
+  /* 01 */ [1,2,3,4],            /* 02 */ [0,2,3,4],            /* 03 */ [0,1,3,4],            /* 04 */ [0,2,3,4],   /* 05 */ [0,3,7,8],
+  /* 06 */ [6,7,8,9,10,11,12],   /* 07 */ [5,8,9,6,10,11],      /* 08 */ [5,6,7,9],            /* 09 */ [5,7,8,6],   /* 10 */ [6,7,8,9,11,12,13],
+  /* 11 */ [12,13,14,10,15],     /* 12 */ [10,11,13,14],        /* 13 */ [10,11,12,14],        /* 14 */ [10,12,13,11,15], /* 15 */ [10,13,14,11],
+  /* 16 */ [17,18,19,14],        /* 17 */ [15,16,18,19],        /* 18 */ [15,16,17,19],        /* 19 */ [15,17,18,16], /* 20 */ [15,17,18,19],
+  /* 21 */ [22,20,19,23],        /* 22 */ [20,21,23,19],        /* 23 */ [20,21,22,19],
+  /* 24 */ [25,22,23,21],        /* 25 */ [23,24,22,21],        /* 26 */ [23,24,25,22],
+];
+
+// Run multiple passes so overflow cascades through tiers
+let totalRedistributed = 0;
+const MAX_PASSES = 5;
+
+for (let pass = 0; pass < MAX_PASSES; pass++) {
+  let passRedistributed = 0;
+
+  for (let nodeIdx = 0; nodeIdx < 26; nodeIdx++) {
+    const cap = NODE_CAPS[nodeIdx];
+    if (nodeCounts[nodeIdx] <= cap) continue;
+
+    const nodeId = `node-${String(nodeIdx + 1).padStart(2, '0')}`;
+    const nodeCards = deck.filter(c => c.grammarNode === nodeId);
+    const overflow = nodeCounts[nodeIdx] - cap;
+
+    // Sort by "weakest match" — cards without grammar tips, longest first
+    const candidates = nodeCards
+      .map(card => ({
+        card,
+        hasGrammar: !!card.grammar,
+        words: card.target.split(/\s+/).length,
+      }))
+      .sort((a, b) => {
+        if (a.hasGrammar !== b.hasGrammar) return a.hasGrammar ? 1 : -1;
+        return b.words - a.words;
+      });
+
+    let moved = 0;
+    for (const { card } of candidates) {
+      if (moved >= overflow) break;
+
+      // Find best neighbour (lowest count, under cap)
+      const neighbours = NODE_NEIGHBOURS[nodeIdx] || [];
+      let bestNeighbour = -1;
+      let bestCount = Infinity;
+      for (const n of neighbours) {
+        if (nodeCounts[n] < NODE_CAPS[n] && nodeCounts[n] < bestCount) {
+          bestCount = nodeCounts[n];
+          bestNeighbour = n;
+        }
+      }
+
+      if (bestNeighbour >= 0) {
+        const newNodeId = `node-${String(bestNeighbour + 1).padStart(2, '0')}`;
+        card.grammarNode = newNodeId;
+        nodeCounts[nodeIdx]--;
+        nodeCounts[bestNeighbour]++;
+        moved++;
+      }
+    }
+
+    if (moved > 0) {
+      passRedistributed += moved;
+      if (pass === 0) {
+        console.log(`  Redistributed ${moved} cards from ${nodeId} (was ${nodeCounts[nodeIdx] + moved}, now ${nodeCounts[nodeIdx]})`);
+      }
+    }
+  }
+
+  totalRedistributed += passRedistributed;
+  if (passRedistributed === 0) break; // no more moves possible
+  if (pass > 0) console.log(`  Pass ${pass + 1}: moved ${passRedistributed} more cards`);
+}
+
+if (totalRedistributed > 0) {
+  console.log(`Total redistributed: ${totalRedistributed}\n`);
 }
 
 const nodeNames = [

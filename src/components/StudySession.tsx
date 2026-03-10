@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { QuestCard, SessionState } from '../types';
-import { Volume2, BookOpen, AlertTriangle } from 'lucide-react';
+import { QuestCard, SessionState, Language, ChallengeMode } from '../types';
+import { Volume2, BookOpen, AlertTriangle, Swords, Zap } from 'lucide-react';
 import { playCardAudio, stopAudio } from '../services/audioService';
 import type { AudioSpeed } from '../services/storageService';
 import WordPopover from './WordPopover';
+import WordTileChallenge from './WordTileChallenge';
 
 interface StudySessionProps {
   session: SessionState;
@@ -15,6 +16,9 @@ interface StudySessionProps {
   autoPlayAudio: boolean;
   audioSpeed: AudioSpeed;
   googleTtsApiKey?: string;
+  tileCardIndices?: number[];
+  pendingChallenge?: ChallengeMode | null;
+  onStartChallenge?: () => void;
 }
 
 const GRADE_CONFIG = {
@@ -24,7 +28,7 @@ const GRADE_CONFIG = {
   EASY:  { color: 'text-blue-500', bg: 'hover:bg-blue-500/10 active:bg-blue-500/20', border: 'border-blue-500/30' },
 } as const;
 
-const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort, onStudyMore, hasMoreCards, topicCards = [], autoPlayAudio, audioSpeed, googleTtsApiKey }) => {
+const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort, onStudyMore, hasMoreCards, topicCards = [], autoPlayAudio, audioSpeed, googleTtsApiKey, tileCardIndices = [], pendingChallenge, onStartChallenge }) => {
   const [showInfo, setShowInfo] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -55,6 +59,22 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
           <p className="text-sm text-[var(--text-secondary)]">{session.finishedCount} cards reviewed</p>
         </div>
         <div className="flex flex-col gap-3 w-full max-w-xs">
+          {/* Challenge CTA — checkpoint or boss battle */}
+          {pendingChallenge && onStartChallenge && (
+            <button
+              onClick={onStartChallenge}
+              className={`px-8 py-4 rounded-xl w-full font-black uppercase tracking-wider text-sm transition-all active:scale-95 ${
+                pendingChallenge === 'boss'
+                  ? 'bg-red-500 text-white hover:bg-red-600 animate-pulse-glow'
+                  : 'bg-violet-500 text-white hover:bg-violet-600'
+              }`}
+            >
+              <div className="flex items-center justify-center gap-2">
+                {pendingChallenge === 'boss' ? <Swords size={16} /> : <Zap size={16} />}
+                {pendingChallenge === 'boss' ? 'Boss Battle!' : 'Quick Challenge!'}
+              </div>
+            </button>
+          )}
           {hasMoreCards && onStudyMore && (
             <button onClick={onStudyMore} className="px-8 py-3 btn-primary rounded-xl w-full">
               Study More Cards
@@ -63,7 +83,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
           <button
             onClick={onAbort}
             className={`px-8 py-3 rounded-xl w-full ${
-              hasMoreCards && onStudyMore
+              (hasMoreCards && onStudyMore) || pendingChallenge
                 ? 'bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-secondary)] font-bold hover:bg-[var(--bg-card-hover)] active:bg-[var(--bg-inset)] transition-colors'
                 : 'btn-primary'
             }`}
@@ -138,7 +158,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
         </div>
       )}
 
-      <section className="flex flex-col py-1 text-center h-dvh">
+      <section className="flex flex-col py-1 px-1 text-center h-dvh">
         {/* Top bar */}
         <nav className="flex flex-col gap-2">
           <div className="flex justify-between items-center">
@@ -172,7 +192,23 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
           </div>
         </nav>
 
-        {/* Flashcard */}
+        {/* Tile challenge or Flashcard */}
+        {tileCardIndices.includes(session.currentIndex) ? (
+          <div className="study-card flex-1 min-h-0 max-h-[52dvh] flex flex-col my-1.5 overflow-hidden">
+            <WordTileChallenge
+              card={card!}
+              siblingCards={topicCards}
+              onComplete={(correct) => {
+                stopAudio();
+                onAnswer(correct ? 'GOOD' : 'AGAIN');
+              }}
+              autoPlayAudio={autoPlayAudio}
+              audioSpeed={audioSpeed}
+              googleTtsApiKey={googleTtsApiKey}
+              language={session.language}
+            />
+          </div>
+        ) : (
         <div
           onClick={!isFlipped ? handleFlip : undefined}
           className="study-card flex-1 min-h-0 max-h-[52dvh] flex flex-col cursor-pointer my-1.5 relative"
@@ -252,7 +288,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
               ? 'text-sm md:text-base'
               : 'text-xs md:text-sm';
             return (
-              <div className="flex-1 flex flex-col items-center justify-center px-5 pb-4 min-h-0 overflow-y-auto">
+              <div className="flex-1 flex flex-col items-center justify-center px-3 sm:px-5 pb-4 min-h-0 overflow-y-auto">
                 <WordPopover
                   sentence={card!.target}
                   className={`${sizeClass} font-black tracking-tight text-[var(--text-primary)] leading-snug max-w-sm mx-auto`}
@@ -272,9 +308,10 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
             );
           })()}
         </div>
+        )}
 
-        {/* Grading buttons */}
-        {isFlipped && (
+        {/* Grading buttons — hidden for tile cards (they self-grade) */}
+        {isFlipped && !tileCardIndices.includes(session.currentIndex) && (
           <div className="grid grid-cols-4 gap-2 animate-slide-up pb-2 shrink-0">
             {(['AGAIN', 'HARD', 'GOOD', 'EASY'] as const).map(rating => {
               const cfg = GRADE_CONFIG[rating];
@@ -292,7 +329,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
           </div>
         )}
 
-        {!isFlipped && <div className="h-[60px] shrink-0" />}
+        {!isFlipped && !tileCardIndices.includes(session.currentIndex) && <div className="h-[60px] shrink-0" />}
       </section>
     </>
   );

@@ -55,15 +55,25 @@ function generateDuds(correctWords: string[], siblingCards: QuestCard[], count: 
   return fisherYatesShuffle(candidates).slice(0, count);
 }
 
+// Scale dud count with sentence length so longer sentences stay challenging.
+//   5-6 words → 2 duds (29-33% distractors)
+//   7-9 words → 3 duds (25-30% distractors)
+//  10-12 words → 4 duds (25-29% distractors)
+function dudCountForLength(wordCount: number): number {
+  if (wordCount >= 10) return 4;
+  if (wordCount >= 7) return 3;
+  return 2;
+}
+
 // Build the full tile set: normalized correct words + duds, all shuffled together.
 // siblingCards should be other cards from the same grammar node.
 export function buildTiles(
   sentence: string,
   siblingCards: QuestCard[],
-  dudCount: number = 2,
+  dudCountOverride?: number,
 ): { correct: string[]; tiles: string[] } {
   const correct = sentence.split(/\s+/).map(normalizeTileWord);
-  const duds = generateDuds(correct, siblingCards, dudCount);
+  const duds = generateDuds(correct, siblingCards, dudCountOverride ?? dudCountForLength(correct.length));
   const tiles = fisherYatesShuffle([...correct, ...duds]);
   return { correct, tiles };
 }

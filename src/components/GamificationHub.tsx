@@ -51,6 +51,13 @@ const GamificationHub: React.FC<GamificationHubProps> = ({ stats, achievements, 
         </div>
       </div>
 
+      {/* Freeze explanation — shown when user has any freezes */}
+      {(stats.streakFreezes ?? 0) > 0 && (
+        <p className="text-[10px] text-cyan-500/60 text-center -mt-3 mb-1 font-semibold">
+          Streak freezes protect your streak if you miss a day. Earn 1 every 7 days (max 3).
+        </p>
+      )}
+
       {/* Stats Row */}
       <div className="grid grid-cols-4 gap-2">
         <div className="stat-card text-center py-3 px-1">

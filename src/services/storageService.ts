@@ -1,4 +1,4 @@
-import { MasteryMap, UserStats, DailyStats, Language, LearningGoal } from '../types';
+import { MasteryMap, UserStats, DailyStats, Language, LearningGoal, ProgressState } from '../types';
 
 // Per-language keys (namespaced)
 const masteryKey = (lang: Language) => `quest_mastery_${lang}`;
@@ -6,6 +6,7 @@ const statsKey = (lang: Language) => `quest_stats_${lang}`;
 const dailyKey = (lang: Language) => `quest_daily_${lang}`;
 const achievementsKey = (lang: Language) => `quest_achievements_${lang}`;
 const placementKey = (lang: Language) => `quest_placement_${lang}`;
+const progressKey = (lang: Language) => `quest_progress_${lang}`;
 
 // Global keys (shared across languages)
 const SETTINGS_KEY = 'quest_settings';
@@ -41,7 +42,20 @@ export const saveMasteryMap = (map: MasteryMap, lang: Language): void => {
 // ─── User Stats ─────────────────────────────────────────────
 export const loadUserStats = (lang: Language): UserStats => {
   const saved = localStorage.getItem(statsKey(lang));
-  if (saved) return JSON.parse(saved);
+  if (saved) {
+    const parsed = JSON.parse(saved);
+    return {
+      xp: parsed.xp ?? 0,
+      level: parsed.level ?? 1,
+      streak: parsed.streak ?? 0,
+      totalReviews: parsed.totalReviews ?? 0,
+      cardsLearned: parsed.cardsLearned ?? 0,
+      lastStudyDate: parsed.lastStudyDate ?? '',
+      streakFreezes: parsed.streakFreezes ?? 0,
+      freezeEarnedAtStreak: parsed.freezeEarnedAtStreak ?? 0,
+      freezeUsedDates: parsed.freezeUsedDates ?? [],
+    };
+  }
   return {
     xp: 0,
     level: 1,
@@ -49,6 +63,9 @@ export const loadUserStats = (lang: Language): UserStats => {
     totalReviews: 0,
     cardsLearned: 0,
     lastStudyDate: '',
+    streakFreezes: 0,
+    freezeEarnedAtStreak: 0,
+    freezeUsedDates: [],
   };
 };
 
@@ -127,6 +144,23 @@ export const resetPlacement = (lang: Language): void => {
   localStorage.removeItem(placementKey(lang));
 };
 
+// ─── Progress State ─────────────────────────────────────────
+export const loadProgressState = (lang: Language): ProgressState => {
+  const saved = localStorage.getItem(progressKey(lang));
+  if (saved) return JSON.parse(saved);
+  return {
+    cumulativeNewCards: 0,
+    lastCheckpointAt: 0,
+    lastBossAt: 0,
+    bossRecords: [],
+    nextBossIndex: 0,
+  };
+};
+
+export const saveProgressState = (state: ProgressState, lang: Language): void => {
+  localStorage.setItem(progressKey(lang), JSON.stringify(state));
+};
+
 // ─── Reset ──────────────────────────────────────────────────
 export const resetAll = (): void => {
   // Clear all language-specific keys
@@ -137,6 +171,7 @@ export const resetAll = (): void => {
     localStorage.removeItem(dailyKey(lang));
     localStorage.removeItem(achievementsKey(lang));
     localStorage.removeItem(placementKey(lang));
+    localStorage.removeItem(progressKey(lang));
   }
   // Clear old non-namespaced keys too (for migration)
   localStorage.removeItem('quest_mastery');

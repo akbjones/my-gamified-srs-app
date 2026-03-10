@@ -3,7 +3,9 @@ import TopicMap from './components/TopicMap';
 import StudySession from './components/StudySession';
 import GamificationHub from './components/GamificationHub';
 import PlacementTest from './components/PlacementTest';
-import { QuestCard, MasteryMap, SessionState, UserStats, DailyStats, Language, LearningGoal, LANGUAGE_CONFIG, GOAL_CONFIG } from './types';
+import ChallengeScreen from './components/ChallengeScreen';
+import StreakFlame from './components/StreakFlame';
+import { QuestCard, MasteryMap, SessionState, UserStats, DailyStats, Language, LearningGoal, LANGUAGE_CONFIG, GOAL_CONFIG, ProgressState, ChallengeMode, ChallengeQuestion, BossRing } from './types';
 import { MAIN_PATH, isNodeUnlocked } from './data/topicConfig';
 import { handleAnswerLogic, saveCardProgress, getRetention, burySiblings } from './services/srsService';
 import {
@@ -11,14 +13,19 @@ import {
   loadDailyStats, saveDailyStats, resetAll,
   loadSettings, saveSettings,
   isPlacementComplete, setPlacementComplete, resetPlacement,
+  loadProgressState, saveProgressState,
 } from './services/storageService';
 import type { StudySettings, AudioSpeed } from './services/storageService';
 import {
   awardXP, updateStreak, checkAchievements, getAchievementsWithStatus,
+  awardChallengeXP,
 } from './services/gamificationService';
-import { Settings2, Minus, Plus, X, Sun, Moon, Volume2, VolumeX, Zap } from 'lucide-react';
+import {
+  selectTileCandidates, buildChallengeQuestions, shouldTriggerChallenge, isRingBetter, calculateBossRing,
+} from './services/challengeService';
+import { Settings2, Minus, Plus, X, Sun, Moon, Swords } from 'lucide-react';
 
-type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT';
+type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE';
 
 // Deck loaders — static imports for available languages
 // (dynamic import would be cleaner but static is simpler for Vite bundling)
@@ -62,6 +69,13 @@ const buildDeck = (
 
   for (const node of MAIN_PATH) {
     const nodeCards = nodeMap.get(node.id) || [];
+    // Sort cards within each node by word count (shortest first)
+    // so beginners get simple sentences before complex ones
+    nodeCards.sort((a: any, b: any) => {
+      const aWords = (a.target || '').split(/\s+/).length;
+      const bWords = (b.target || '').split(/\s+/).length;
+      return aWords - bWords || a.id - b.id; // tiebreak by id
+    });
     for (const rawCard of nodeCards) {
       const id = String(rawCard.id);
       const saved = masteryMap[id];
@@ -111,6 +125,10 @@ const App: React.FC = () => {
   });
   const [userStats, setUserStats] = useState<UserStats>(() => loadUserStats(settings.selectedLanguage));
   const [dailyStats, setDailyStats] = useState<DailyStats>(() => loadDailyStats(settings.selectedLanguage));
+  const [progressState, setProgressState] = useState<ProgressState>(() => loadProgressState(settings.selectedLanguage));
+  const [tileCardIndices, setTileCardIndices] = useState<number[]>([]);
+  const [pendingChallenge, setPendingChallenge] = useState<ChallengeMode | null>(null);
+  const [challengeQuestions, setChallengeQuestions] = useState<ChallengeQuestion[]>([]);
   const [showTools, setShowTools] = useState(false);
   const [bonusCards, setBonusCards] = useState(5);
   const [session, setSession] = useState<SessionState>({
@@ -135,6 +153,7 @@ const App: React.FC = () => {
     setDeck(buildDeck(rawDeck, map, goal));
     setUserStats(loadUserStats(lang));
     setDailyStats(loadDailyStats(lang));
+    setProgressState(loadProgressState(lang));
   }, [lang, goal]);
 
   // Re-merge deck when masteryMap changes
@@ -202,6 +221,11 @@ const App: React.FC = () => {
       [...reviews, ...newCards].map(c => ({ ...c, step: c.step || 0 }))
     );
 
+    // Select tile challenge cards (objectively graded)
+    const tiles = selectTileCandidates(queue);
+    setTileCardIndices(tiles);
+    setPendingChallenge(null);
+
     setSession({
       language: lang,
       topic: currentNode.id,
@@ -228,6 +252,16 @@ const App: React.FC = () => {
       const newDaily = { ...dailyStats, newCardsCount: dailyStats.newCardsCount + 1 };
       setDailyStats(newDaily);
       saveDailyStats(newDaily, lang);
+
+      // Track cumulative new cards for challenge triggers
+      const newCumulative = progressState.cumulativeNewCards + 1;
+      const trigger = shouldTriggerChallenge(progressState, newCumulative);
+      if (trigger) {
+        setPendingChallenge(trigger);
+      }
+      const newProgress = { ...progressState, cumulativeNewCards: newCumulative };
+      setProgressState(newProgress);
+      saveProgressState(newProgress, lang);
     }
 
     // XP and gamification
@@ -245,6 +279,66 @@ const App: React.FC = () => {
     checkAchievements(newStats, masteryMap, deck, lang);
 
     setSession(prev => ({ ...prev, ...updates }));
+  };
+
+  const handleStartChallenge = () => {
+    if (!pendingChallenge) return;
+    // Build questions from recently studied cards
+    const recentCards = deck.filter(c => c.mastery >= 1 && !c.isSuspended);
+    const count = pendingChallenge === 'boss' ? 8 : 4;
+    const questions = buildChallengeQuestions(recentCards, count);
+    if (questions.length < count) {
+      // Not enough eligible cards — skip this challenge
+      setPendingChallenge(null);
+      return;
+    }
+    setChallengeQuestions(questions);
+    setView('CHALLENGE');
+  };
+
+  const handleChallengeComplete = (results: boolean[], elapsedMs: number) => {
+    const correctCount = results.filter(Boolean).length;
+    const xpGained = awardChallengeXP(pendingChallenge || 'checkpoint', correctCount);
+    const newStats = { ...userStats, xp: userStats.xp + xpGained };
+    newStats.level = Math.floor(newStats.xp / 100) + 1;
+
+    // Update boss records
+    if (pendingChallenge === 'boss') {
+      const ring = calculateBossRing(correctCount, results.length, elapsedMs);
+      const bossIdx = progressState.nextBossIndex;
+      const newProgress = { ...progressState };
+
+      if (ring !== 'none') {
+        // Boss defeated
+        const existingRecord = newProgress.bossRecords.find(r => r.bossIndex === bossIdx);
+        if (existingRecord) {
+          if (isRingBetter(ring, existingRecord.bestRing)) {
+            existingRecord.bestRing = ring;
+          }
+        } else {
+          newProgress.bossRecords.push({
+            bossIndex: bossIdx,
+            bestRing: ring,
+            completedAt: Date.now(),
+          });
+        }
+        newProgress.nextBossIndex = Math.min(bossIdx + 1, 21);
+        newProgress.lastBossAt = newProgress.cumulativeNewCards;
+      }
+
+      setProgressState(newProgress);
+      saveProgressState(newProgress, lang);
+    } else {
+      // Checkpoint — just update lastCheckpointAt
+      const newProgress = { ...progressState, lastCheckpointAt: progressState.cumulativeNewCards };
+      setProgressState(newProgress);
+      saveProgressState(newProgress, lang);
+    }
+
+    setUserStats(newStats);
+    saveUserStats(newStats, lang);
+    setPendingChallenge(null);
+    setView('HOME');
   };
 
   const handleUpdateSettings = (newSettings: StudySettings) => {
@@ -300,7 +394,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className={`max-w-md mx-auto min-h-screen ${view === 'STUDY' || view === 'PLACEMENT' ? 'px-0 pt-0 pb-0' : 'p-5 pb-20'}`}>
+    <div className={`mx-auto min-h-screen ${view === 'STUDY' || view === 'PLACEMENT' || view === 'CHALLENGE' ? 'max-w-lg px-0 pt-0 pb-0' : 'max-w-md p-5 pb-20'}`}>
       {view === 'HOME' && (
         <section className="animate-fade-in">
           {/* Header row: title + language + theme toggle */}
@@ -329,34 +423,49 @@ const App: React.FC = () => {
             </div>
           </header>
 
-          {/* Study section — the main action */}
-          {currentNode && (() => {
-            const nodeTotal = deck.filter(c => c.topic === currentNode.id).length;
-            const nodeGraduated = deck.filter(c => c.topic === currentNode.id && c.mastery === 2).length;
-            const nodePercent = nodeTotal > 0 ? Math.round((nodeGraduated / nodeTotal) * 100) : 0;
-            return (
-              <div className="stat-card p-4 mb-3">
-                <div className="flex items-center justify-between mb-2.5">
-                  <div>
-                    <div className="text-[10px] font-semibold uppercase tracking-widest mb-0.5" style={{ color: currentNode.color }}>
-                      {currentNode.tier}
-                    </div>
-                    <div className="text-sm font-extrabold text-[var(--text-primary)]">{currentNode.name}</div>
-                  </div>
-                  <button
-                    onClick={() => setView('GAMIFICATION')}
-                    className="flex items-center gap-1.5 text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
-                  >
-                    <Zap size={12} className="text-amber-500 fill-amber-500" />
-                    <span className="text-[10px] font-bold font-mono">{userStats.streak}d</span>
-                  </button>
-                </div>
-                <div className="progress-rail">
-                  <div className="progress-fill" style={{ width: `${nodePercent}%`, background: currentNode.color }} />
-                </div>
+          {/* Streak flame + Boss progress */}
+          <button
+            onClick={() => setView('GAMIFICATION')}
+            className="stat-card p-4 mb-3 w-full text-left hover:border-[var(--border-hover)] active:scale-[0.99] transition-all cursor-pointer"
+          >
+            <div className="flex items-center justify-between">
+              {/* Streak flame */}
+              <div>
+                <StreakFlame streak={userStats.streak} freezes={userStats.streakFreezes ?? 0} size="lg" />
               </div>
-            );
-          })()}
+
+              {/* Boss progress */}
+              <div className="text-right">
+                {currentNode && (
+                  <div className="text-[10px] font-semibold uppercase tracking-widest mb-1" style={{ color: currentNode.color }}>
+                    {currentNode.tier} &middot; {currentNode.name}
+                  </div>
+                )}
+                <div className="text-sm font-extrabold text-[var(--text-primary)] mb-0.5">
+                  Boss {Math.min(progressState.nextBossIndex + 1, 22)} of 22
+                </div>
+                {(() => {
+                  const cardsToNextBoss = 150 - (progressState.cumulativeNewCards % 150);
+                  return (
+                    <div className="text-[10px] text-[var(--text-muted)] font-mono font-bold">
+                      Next boss in {cardsToNextBoss} cards
+                    </div>
+                  );
+                })()}
+              </div>
+            </div>
+
+            {/* Boss progress bar */}
+            <div className="progress-rail mt-3">
+              <div
+                className="progress-fill bg-red-500"
+                style={{ width: `${Math.min(((progressState.cumulativeNewCards % 150) / 150) * 100, 100)}%` }}
+              />
+            </div>
+            <div className="text-[9px] text-[var(--text-faint)] font-bold uppercase tracking-widest text-center mt-2">
+              Tap for stats &amp; boss trophies
+            </div>
+          </button>
 
           {/* Placement test CTA — shown once per language until completed */}
           {!isPlacementComplete(lang) && (
@@ -472,8 +581,8 @@ const App: React.FC = () => {
             </div>
             <p className="text-[10px] text-[var(--text-faint)] text-center leading-relaxed">
               {goal === 'general'
-                ? `${deck.length.toLocaleString()} cards — well-rounded vocabulary`
-                : `${deck.length.toLocaleString()} cards — ${GOAL_CONFIG[goal].name.toLowerCase()}-focused with shared foundations`}
+                ? 'Well-rounded vocabulary'
+                : `${GOAL_CONFIG[goal].description}`}
             </p>
           </div>
 
@@ -612,7 +721,7 @@ const App: React.FC = () => {
         <StudySession
           session={session}
           onAnswer={handleAnswer}
-          onAbort={() => setView('HOME')}
+          onAbort={() => { setPendingChallenge(null); setView('HOME'); }}
           onStudyMore={() => handleStartSession(true)}
           hasMoreCards={(() => {
             const now = Date.now();
@@ -634,6 +743,23 @@ const App: React.FC = () => {
           autoPlayAudio={settings.autoPlayAudio}
           audioSpeed={settings.audioSpeed}
           googleTtsApiKey={settings.googleTtsApiKey}
+          tileCardIndices={tileCardIndices}
+          pendingChallenge={pendingChallenge}
+          onStartChallenge={handleStartChallenge}
+        />
+      )}
+
+      {view === 'CHALLENGE' && (
+        <ChallengeScreen
+          mode={pendingChallenge || 'checkpoint'}
+          questions={challengeQuestions}
+          bossIndex={progressState.nextBossIndex}
+          onComplete={handleChallengeComplete}
+          onAbort={() => { setPendingChallenge(null); setView('HOME'); }}
+          language={lang}
+          autoPlayAudio={settings.autoPlayAudio}
+          audioSpeed={settings.audioSpeed}
+          googleTtsApiKey={settings.googleTtsApiKey}
         />
       )}
 
@@ -643,6 +769,8 @@ const App: React.FC = () => {
           achievements={getAchievementsWithStatus(userStats, masteryMap, deck, lang)}
           retention={getTotalRetention()}
           onBack={() => setView('HOME')}
+          bossRecords={progressState.bossRecords}
+          nextBossIndex={progressState.nextBossIndex}
         />
       )}
 

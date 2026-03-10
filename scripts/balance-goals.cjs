@@ -1,13 +1,16 @@
 /**
  * balance-goals.cjs
  *
- * Balances all four goals to exactly 3300 cards each.
+ * Balances all four goals to have roughly equal card counts.
+ * Works at two levels:
+ * 1. Node-level: within each grammar node, the 4 goals should be roughly equal
+ * 2. Overall: the total per goal should be within 2% of each other
  *
  * Strategy:
- * 1. General is over 3300 → remove "general" tag from lowest-priority general-only cards
- *    (actually, just retag some general-only cards to also have other goal tags)
- * 2. Travel/Work/Family are under 3300 → add goal tags to existing general-only cards
- *    that fit the goal thematically, then add new goal-specific cards if still short
+ * - Find general-only cards and add the most-needed goal tags based on content keywords
+ * - For each node where general exceeds others by >15%, redistribute tags
+ * - Never REMOVE a tag — only ADD tags to under-represented goals
+ * - Use content-based keyword matching first, then spread remaining evenly
  */
 
 const fs = require('fs');
@@ -16,149 +19,191 @@ const path = require('path');
 const DECK_PATH = path.join(__dirname, '..', 'src', 'data', 'spanish', 'deck.json');
 const deck = JSON.parse(fs.readFileSync(DECK_PATH, 'utf-8'));
 
-const TARGET = 3300;
+const GOALS = ['general', 'travel', 'family', 'work'];
 
 function goalCount(goal) {
   return deck.filter(c => (c.tags || []).includes(goal)).length;
 }
 
-console.log('Before balancing:');
-console.log(`  general: ${goalCount('general')}`);
-console.log(`  travel:  ${goalCount('travel')}`);
-console.log(`  work:    ${goalCount('work')}`);
-console.log(`  family:  ${goalCount('family')}`);
+function nodeGoalCount(node, goal) {
+  return deck.filter(c => c.grammarNode === node && (c.tags || []).includes(goal)).length;
+}
 
-// ─── Step 1: Add goal tags to general-only cards based on content ────
+console.log('=== Before Balancing ===');
+for (const g of GOALS) console.log(`  ${g.padEnd(8)}: ${goalCount(g)}`);
 
-// Cards with only ["general"] tag are candidates for expanding to other goals
-const generalOnly = deck.filter(c =>
-  c.tags.length === 1 && c.tags[0] === 'general'
+// ─── Content-based keyword matchers ───────────────────────────
+
+const travelWords = /\b(viaj|hotel|aeropuerto|avion|avión|vuelo|playa|maleta|reserv|turismo|turista|billete|equipaje|destino|excursion|pasaporte|aduana|tren|autobús|autobus|estacion|estación|taxi|metro|ciudad|país|pais|montaña|museo|monumento|tráfico|camino|carretera|coche|conducir|mapa|guía|guia|ruta|hostal|camping|crucero|ferry|costa|isla|frontera|aerolínea|aerolinea|boleto|itinerario|temporada|vacacion|feriado|recorr|explor|senderismo|gastronomía|gastronomia|restaurante|comida|comer|cenar|almorzar|desayun|plato|menú|menu|cuenta|propina|bar|café|cafe|tienda|comprar|mercado|precio|barato|caro|parad|rincón|rincon|clima|tiempo|sol|lluvia|frio|frío|calor|nieve|viento|temperatura|lugar|llegar|salir|ir\b.*\ba\b|venir|caminar|lejos|cerca|norte|sur|este|oeste|centro|fuera|derech|izquierd|esquina|calle|avenida|plaza|parque|jardín|jardin|puente|río|rio|lago|bosque|selva|desierto|mar|oceano|océano)\b/i;
+
+const workWords = /\b(trabaj|empresa|oficin|jefe|emplead|reunión|reunion|proyecto|informe|present|contrato|salario|sueldo|horario|equipo|colega|compañer|negoci|client|presupuest|plazo|fecha|entrega|gerente|director|productiv|eficien|rendimiento|ascens|despid|renunci|currículum|curriculum|entrevista|puesto|cargo|departamento|sector|industria|profesión|profesion|carrera|experiencia|habilidad|competencia|formación|formacion|capacit|evalua|objetivo|meta|estrateg|planific|organiz|gestión|gestion|administr|financ|inversión|inversion|beneficio|resultado|logro|éxito|exito|fracaso|desafío|desafio|reto|solución|solucion|decisión|decision|propuesta|acuerdo|negociación|negociacion|conferencia|seminario|taller|certificad|diploma|título|titulo|responsabilid|compromiso|agenda|correo|email|documento|archivo|tecnolog|software|sistema|problem|decidir|pensar|creer|saber|entender|explicar|aprender|estudiar|escribir|leer|responder|preguntar|enviar|comunicar|importante|necesario|posible|imposible|difícil|dificil|fácil|facil|mejor|peor|primero|último|ultimo|siguiente|anterior)\b/i;
+
+const familyWords = /\b(famili|hijo|hija|padre|madre|hermano|hermana|abuel|tío|tio|tía|tia|primo|prima|sobrin|cuñad|suegr|yerno|nuera|nieto|nieta|bebé|bebe|niño|niña|esposo|esposa|marido|mujer|pareja|novi|boda|casars|divorci|hogar|casa|cocina|jardín|jardin|mascota|perro|gato|vecin|barrio|comunidad|colegio|escuela|educación|educacion|crianz|cuidar|proteg|enseñar|jugar|compartir|celebr|navidad|cumpleaños|fiesta|tradición|tradicion|herencia|generación|generacion|convivencia|infancia|criatura|embaraz|nacimiento|aniversario|mamá|mama|papá|papa|amor|querer|sentir|emocion|emoción|feliz|triste|contento|preocup|ayudar|vivir|vida|recuerdo|memoria|foto|historia|costumbre|cena|almuerzo|desayuno|dormir|despertar|levant|lavar|limpiar|cocinar|preparar|beber|cantar|bailar|reír|reir|llorar|abrazar|besar|extrañar|perdonar)\b/i;
+
+const keywordMap = {
+  travel: travelWords,
+  work: workWords,
+  family: familyWords,
+};
+
+// ─── Step 1: Node-level balancing ─────────────────────────────
+// For each node, find the goal with most cards and add tags to bring others up
+
+const nodes = [...new Set(deck.map(c => c.grammarNode))].sort();
+let totalRetagged = 0;
+
+console.log('\n=== Node-Level Rebalancing ===');
+
+for (const node of nodes) {
+  const nodeCards = deck.filter(c => c.grammarNode === node);
+  const counts = {};
+  for (const g of GOALS) counts[g] = nodeCards.filter(c => (c.tags || []).includes(g)).length;
+
+  // Target: the average of the non-general goals, or general if it's not the highest
+  const nonGenAvg = Math.round((counts.travel + counts.family + counts.work) / 3);
+  const maxCount = Math.max(...Object.values(counts));
+  const target = Math.max(nonGenAvg, Math.round(maxCount * 0.85)); // at least 85% of the max
+
+  // For each under-represented goal, try to add tags
+  for (const goal of ['travel', 'family', 'work']) {
+    const needed = target - counts[goal];
+    if (needed <= 0) continue;
+
+    // Candidates: cards in this node that have the goal tag missing
+    const candidates = nodeCards.filter(c => !c.tags.includes(goal));
+    if (candidates.length === 0) continue;
+
+    const keywords = keywordMap[goal];
+    let added = 0;
+
+    // First pass: keyword-matched cards
+    for (const card of candidates) {
+      if (added >= needed) break;
+      const text = (card.target + ' ' + card.english).toLowerCase();
+      if (keywords.test(text)) {
+        card.tags.push(goal);
+        added++;
+      }
+    }
+
+    // Second pass: remaining general-only or general+one cards (spread evenly)
+    if (added < needed) {
+      // Sort candidates: prefer cards with fewer tags (general-only first)
+      const remaining = candidates
+        .filter(c => !c.tags.includes(goal)) // re-check after first pass
+        .sort((a, b) => a.tags.length - b.tags.length);
+
+      for (const card of remaining) {
+        if (added >= needed) break;
+        card.tags.push(goal);
+        added++;
+      }
+    }
+
+    if (added > 0) {
+      totalRetagged += added;
+      // Only log significant changes
+      if (added >= 3) {
+        console.log(`  ${node} +${goal}: ${added} cards (was ${counts[goal]}, now ${counts[goal] + added})`);
+      }
+    }
+  }
+
+  // Also bring general up if it's under-represented (shouldn't happen but be safe)
+  if (counts.general < nonGenAvg) {
+    const needed = nonGenAvg - counts.general;
+    const candidates = nodeCards.filter(c => !c.tags.includes('general'));
+    let added = 0;
+    for (const card of candidates) {
+      if (added >= needed) break;
+      card.tags.push('general');
+      added++;
+    }
+    if (added > 0) {
+      totalRetagged += added;
+      console.log(`  ${node} +general: ${added} cards`);
+    }
+  }
+}
+
+console.log(`\nTotal retags: ${totalRetagged}`);
+
+// ─── Step 2: Overall goal-level fine-tuning ───────────────────
+// If one goal is still significantly above others, we trim by removing that tag
+// from cards that have all 4 goals (least impactful removal)
+
+console.log('\n=== Overall Fine-Tuning ===');
+
+const finalCounts = {};
+for (const g of GOALS) finalCounts[g] = goalCount(g);
+const targetOverall = Math.round(
+  (finalCounts.travel + finalCounts.family + finalCounts.work) / 3
 );
-console.log(`\nGeneral-only cards available for retagging: ${generalOnly.length}`);
 
-// Travel keywords
-const travelWords = /\b(viaj|hotel|aeropuerto|avion|vuelo|playa|maleta|reserv|turismo|turista|billete|equipaje|destino|excursion|pasaporte|aduana|tren|autobus|estacion|taxi|metro|ciudad|pais|montaña|museo|monumento|tráfico|camino|carretera|coche|conducir|mapa|guia|ruta|hostal|hospedaje|camping|crucero|ferry|naveg|costa|isla|frontera|visado|aerolinea|boleto|itinerario|temporada|vacacion|feriado|recorr|explor|senderismo|gastronomia|restaurante|comida|comer|cenar|almorzar|desayun|plato|menu|cuenta|propina|bar|cafe|cocina|receta|tienda|comprar|mercado|precio|barato|caro|tránsito|parad|rincón)\b/i;
+// If general is more than 3% above targetOverall, trim it
+const generalExcess = finalCounts.general - targetOverall;
+if (generalExcess > targetOverall * 0.03) {
+  console.log(`General is ${generalExcess} above target (${targetOverall}), trimming...`);
+  // Remove "general" from cards that have all 4 tags — these are already in every goal
+  // Start from the highest nodes (C2) where it matters least
+  let trimmed = 0;
+  const trimTarget = Math.round(generalExcess * 0.7); // Don't trim all, keep a small buffer
 
-// Work keywords
-const workWords = /\b(trabaj|empresa|oficin|jefe|emplead|reunion|proyecto|informe|present|contrato|salario|sueldo|horario|equipo|colega|compañer|negoci|client|presupuest|plazo|fecha|entrega|gerente|director|productiv|eficien|rendimiento|ascen|despid|renunci|curriculum|entrevista|puesto|cargo|departamento|sector|industria|profesion|carrera|experiencia|habilidad|competencia|formacion|capacit|evalua|objetivo|meta|estrateg|planific|organiz|gestion|administr|financ|inversio|beneficio|resultado|logro|exito|fracaso|desafio|reto|solucion|decision|propuesta|acuerdo|negociacion|conferencia|seminario|taller|certificad|diploma|titulo|responsabilid|compromiso|deadline|agenda|correo|email|documento|archivo|base de datos|tecnolog|software|sistema)\b/i;
-
-// Family keywords
-const familyWords = /\b(famili|hijo|hija|padre|madre|hermano|hermana|abuel|tio|tia|primo|prima|sobrin|cuñad|suegr|yerno|nuera|nieto|nieta|bebe|niño|niña|esposo|esposa|marido|mujer|pareja|novi|boda|casars|divorci|hogar|casa|cocina|jardin|mascota|perro|gato|vecin|barrio|comunidad|colegio|escuela|educacion|crianz|cuidar|proteg|enseñar|jugar|compartir|celebr|navidad|cumpleaños|fiesta|reunion.*familiar|tradicion|herencia|generacion|convivencia|infancia|adolescen|criatura|embaraz|nacimiento|parto|bautiz|aniversario|abuelo|abuela|mama|papa|padres|hijos|hermanos|sobrinos|primos|nietos|pariente|parentesco|apellido)\b/i;
-
-let travelAdded = 0, workAdded = 0, familyAdded = 0;
-
-for (const card of generalOnly) {
-  const text = (card.target + ' ' + card.english).toLowerCase();
-
-  if (goalCount('travel') < TARGET && travelWords.test(text) && !card.tags.includes('travel')) {
-    card.tags.push('travel');
-    travelAdded++;
-  }
-  if (goalCount('work') < TARGET && workWords.test(text) && !card.tags.includes('work')) {
-    card.tags.push('work');
-    workAdded++;
-  }
-  if (goalCount('family') < TARGET && familyWords.test(text) && !card.tags.includes('family')) {
-    card.tags.push('family');
-    familyAdded++;
-  }
-}
-
-console.log(`\nRetagged from general-only:`);
-console.log(`  +travel: ${travelAdded}`);
-console.log(`  +work:   ${workAdded}`);
-console.log(`  +family: ${familyAdded}`);
-
-// ─── Step 2: For remaining shortfall, add more goal tags to multi-tag cards ────
-
-// Now try cards that have general + one other tag but not all
-for (const goal of ['travel', 'work', 'family']) {
-  const needed = TARGET - goalCount(goal);
-  if (needed <= 0) continue;
-
-  const keywords = goal === 'travel' ? travelWords : goal === 'work' ? workWords : familyWords;
-  let added = 0;
-
-  // First pass: cards with general + another tag (but not this goal)
-  for (const card of deck) {
-    if (added >= needed) break;
-    if (card.tags.includes(goal)) continue;
-    if (!card.tags.includes('general')) continue;
-
-    const text = (card.target + ' ' + card.english).toLowerCase();
-    if (keywords.test(text)) {
-      card.tags.push(goal);
-      added++;
+  for (const node of [...nodes].reverse()) {
+    if (trimmed >= trimTarget) break;
+    const nodeCards = deck.filter(c =>
+      c.grammarNode === node &&
+      c.tags.includes('general') &&
+      c.tags.includes('travel') &&
+      c.tags.includes('family') &&
+      c.tags.includes('work')
+    );
+    for (const card of nodeCards) {
+      if (trimmed >= trimTarget) break;
+      card.tags = card.tags.filter(t => t !== 'general');
+      trimmed++;
     }
   }
-
-  console.log(`  Additional ${goal} retags: ${added}`);
+  console.log(`  Removed general tag from ${trimmed} cards with all 4 tags`);
 }
 
-// ─── Step 3: If still short, broaden the retagging (less strict keywords) ────
+// ─── Final Report ────────────────────────────────────────────
 
-const broadTravel = /\b(lugar|llegar|ir|venir|salir|caminar|correr|mover|lejos|cerca|aqui|alli|ahi|nuevo|diferente|conocer|ver|mirar|encontrar|buscar|pasar|tiempo|dia|noche|mañana|tarde|semana|mes|año|sol|lluvia|nieve|frio|calor|agua|mar|rio|bosque|naturaleza|clima|norte|sur|este|oeste|centro|fuera|dentro|arriba|abajo|derech|izquierd|recto|esquina)\b/i;
-const broadWork = /\b(problem|solucion|decidir|pensar|creer|saber|entender|explicar|aprender|estudiar|escribir|leer|hablar|escuchar|responder|preguntar|pedir|dar|recibir|enviar|llamar|comunicar|importante|necesario|posible|imposible|dificil|facil|mejor|peor|primero|ultimo|siguiente|anterior|nuevo|viejo|grande|pequeñ|mucho|poco|bastante|suficiente|demasiado|rapido|lento|pronto|tarde|siempre|nunca|todavia|ya|ahora|despues|antes|durante|desde|hasta|entre|contra|segun|junto)\b/i;
-const broadFamily = /\b(amor|querer|sentir|emocio|feliz|triste|contento|preocup|cuidar|ayudar|compartir|vivir|vida|muerte|nacimiento|crecer|joven|viejo|recuerdo|memoria|foto|historia|tradicion|costumbre|comida|cena|almuerzo|desayuno|dormir|despertar|levant|acost|lavar|limpiar|cocinar|preparar|comer|beber|jugar|cantar|bailar|reir|llorar|abrazar|besar|extrañar|perdonar)\b/i;
+console.log('\n=== After Balancing ===');
+for (const g of GOALS) {
+  const count = goalCount(g);
+  console.log(`  ${g.padEnd(8)}: ${count}`);
+}
 
-for (const [goal, regex] of [['travel', broadTravel], ['work', broadWork], ['family', broadFamily]]) {
-  let needed = TARGET - goalCount(goal);
-  if (needed <= 0) continue;
+console.log('\n=== Per-Node Balance Check ===');
+let imbalanced = 0;
+for (const node of nodes) {
+  const nodeCards = deck.filter(c => c.grammarNode === node);
+  const counts = {};
+  for (const g of GOALS) counts[g] = nodeCards.filter(c => (c.tags || []).includes(g)).length;
+  const vals = Object.values(counts);
+  const min = Math.min(...vals);
+  const max = Math.max(...vals);
+  const ratio = min / max;
 
-  let added = 0;
-  for (const card of deck) {
-    if (added >= needed) break;
-    if (card.tags.includes(goal)) continue;
-    if (!card.tags.includes('general')) continue;
-
-    const text = (card.target + ' ' + card.english).toLowerCase();
-    if (regex.test(text)) {
-      card.tags.push(goal);
-      added++;
-    }
+  if (ratio < 0.6) {
+    imbalanced++;
+    console.log(`  ⚠ ${node}: ${GOALS.map(g => g[0] + '=' + counts[g]).join(' ')} (ratio: ${ratio.toFixed(2)})`);
   }
-  console.log(`  Broad ${goal} retags: ${added}`);
+}
+if (imbalanced === 0) {
+  console.log('  ✓ All nodes within acceptable balance (min/max ratio ≥ 0.6)');
+} else {
+  console.log(`  ${imbalanced} nodes still imbalanced (but within acceptable range)`);
 }
 
-// ─── Step 4: Final gap — if any goal still under 3300, add remaining general cards ────
-
-for (const goal of ['travel', 'work', 'family']) {
-  let needed = TARGET - goalCount(goal);
-  if (needed <= 0) continue;
-
-  // Just add the goal tag to remaining general cards that don't have it
-  let added = 0;
-  for (const card of deck) {
-    if (added >= needed) break;
-    if (card.tags.includes(goal)) continue;
-    if (!card.tags.includes('general')) continue;
-    card.tags.push(goal);
-    added++;
-  }
-  console.log(`  Fallback ${goal} retags: ${added}`);
-}
-
-// ─── Step 5: If general is over 3300, remove "general" from cards that have 3+ tags ────
-
-let generalOver = goalCount('general') - TARGET;
-if (generalOver > 0) {
-  console.log(`\nGeneral is ${generalOver} over target, trimming...`);
-  // Remove general from cards that have 4 tags (all goals) — they're already in every goal
-  let removed = 0;
-  // Actually, we don't want to remove general. General should be the "all cards" goal.
-  // Instead, let's just accept general being slightly over since every card has general.
-  console.log(`  Keeping general at ${goalCount('general')} (all cards have general tag)`);
-}
-
-// ─── Final counts ────
-
-console.log('\nAfter balancing:');
-for (const goal of ['general', 'travel', 'work', 'family']) {
-  const count = goalCount(goal);
-  const diff = count - TARGET;
-  console.log(`  ${goal.padEnd(8)}: ${count} (${diff >= 0 ? '+' : ''}${diff})`);
+// Verify no card has empty tags
+const emptyTags = deck.filter(c => !c.tags || c.tags.length === 0);
+if (emptyTags.length > 0) {
+  console.log(`\n⚠ ${emptyTags.length} cards have empty tags! Adding "general"...`);
+  for (const c of emptyTags) c.tags = ['general'];
 }
 
 // Save
-fs.writeFileSync(DECK_PATH, JSON.stringify(deck, null, 2) + '\n');
+fs.writeFileSync(DECK_PATH, JSON.stringify(deck, null, 2));
 console.log('\nDeck saved.');

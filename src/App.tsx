@@ -14,6 +14,7 @@ import {
   loadSettings, saveSettings,
   isPlacementComplete, setPlacementComplete, resetPlacement,
   loadProgressState, saveProgressState,
+  loadVocabMap, saveVocabMap,
 } from './services/storageService';
 import type { StudySettings, AudioSpeed } from './services/storageService';
 import {
@@ -23,9 +24,18 @@ import {
 import {
   selectTileCandidates, buildChallengeQuestions, shouldTriggerChallenge, isRingBetter, calculateBossRing,
 } from './services/challengeService';
-import { Settings2, Minus, Plus, X, Sun, Moon, Swords } from 'lucide-react';
+import { recordWordsFromCard } from './services/vocabService';
+import { lookupWord as lookupEs } from './data/dictionary/es';
+import { lookupWord as lookupIt } from './data/dictionary/it';
+import VocabList from './components/VocabList';
+import { Settings2, Minus, Plus, X, Sun, Moon, Swords, BookOpen } from 'lucide-react';
 
-type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE';
+const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
+  spanish: lookupEs,
+  italian: lookupIt,
+};
+
+type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB';
 
 // Deck loaders — static imports for available languages
 // (dynamic import would be cleaner but static is simpler for Vite bundling)
@@ -128,6 +138,7 @@ const App: React.FC = () => {
   const [userStats, setUserStats] = useState<UserStats>(() => loadUserStats(settings.selectedLanguage));
   const [dailyStats, setDailyStats] = useState<DailyStats>(() => loadDailyStats(settings.selectedLanguage));
   const [progressState, setProgressState] = useState<ProgressState>(() => loadProgressState(settings.selectedLanguage));
+  const [vocabMap, setVocabMap] = useState(() => loadVocabMap(settings.selectedLanguage));
   const [tileCardIndices, setTileCardIndices] = useState<number[]>([]);
   const [pendingChallenge, setPendingChallenge] = useState<ChallengeMode | null>(null);
   const [challengeQuestions, setChallengeQuestions] = useState<ChallengeQuestion[]>([]);
@@ -156,6 +167,7 @@ const App: React.FC = () => {
     setUserStats(loadUserStats(lang));
     setDailyStats(loadDailyStats(lang));
     setProgressState(loadProgressState(lang));
+    setVocabMap(loadVocabMap(lang));
   }, [lang, goal]);
 
   // Re-merge deck when masteryMap changes
@@ -279,6 +291,12 @@ const App: React.FC = () => {
     saveUserStats(newStats, lang);
 
     checkAchievements(newStats, masteryMap, deck, lang);
+
+    // Track vocabulary
+    const lookupFn = DICT_LOOKUP[lang] ?? (() => null);
+    const newVocab = recordWordsFromCard(currentCard.target, vocabMap, lookupFn, rating === 'AGAIN');
+    setVocabMap(newVocab);
+    saveVocabMap(newVocab, lang);
 
     setSession(prev => ({ ...prev, ...updates }));
   };
@@ -560,6 +578,22 @@ const App: React.FC = () => {
             </div>
           </button>
 
+          {/* Vocab list link */}
+          {Object.keys(vocabMap).length > 0 && (
+            <button
+              onClick={() => setView('VOCAB')}
+              className="w-full stat-card p-0 overflow-hidden text-left transition-all hover:border-[var(--border-hover)] group cursor-pointer mb-4"
+            >
+              <div className="p-3.5 flex items-center justify-between">
+                <div className="flex items-center gap-2 text-[10px] text-[var(--text-muted)] font-semibold uppercase tracking-widest group-hover:text-[var(--text-secondary)] transition-colors">
+                  <BookOpen size={14} />
+                  <span>My Words ({Object.keys(vocabMap).length})</span>
+                  <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
+                </div>
+              </div>
+            </button>
+          )}
+
           {/* Goal selection */}
           <div className="space-y-3 mb-4">
             <div className="flex gap-1.5">
@@ -775,6 +809,14 @@ const App: React.FC = () => {
           bossRecords={progressState.bossRecords}
           nextBossIndex={progressState.nextBossIndex}
           language={lang}
+        />
+      )}
+
+      {view === 'VOCAB' && (
+        <VocabList
+          vocabMap={vocabMap}
+          language={lang}
+          onBack={() => setView('HOME')}
         />
       )}
 

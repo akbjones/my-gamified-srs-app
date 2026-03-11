@@ -1,4 +1,4 @@
-import { MasteryMap, UserStats, DailyStats, Language, LearningGoal, ProgressState } from '../types';
+import { MasteryMap, UserStats, DailyStats, Language, LearningGoal, ProgressState, VocabMap } from '../types';
 
 // Per-language keys (namespaced)
 const masteryKey = (lang: Language) => `quest_mastery_${lang}`;
@@ -7,6 +7,7 @@ const dailyKey = (lang: Language) => `quest_daily_${lang}`;
 const achievementsKey = (lang: Language) => `quest_achievements_${lang}`;
 const placementKey = (lang: Language) => `quest_placement_${lang}`;
 const progressKey = (lang: Language) => `quest_progress_${lang}`;
+const vocabKey = (lang: Language) => `quest_vocab_${lang}`;
 
 // Global keys (shared across languages)
 const SETTINGS_KEY = 'quest_settings';
@@ -161,6 +162,16 @@ export const saveProgressState = (state: ProgressState, lang: Language): void =>
   localStorage.setItem(progressKey(lang), JSON.stringify(state));
 };
 
+// ─── Vocabulary ────────────────────────────────────────────
+export const loadVocabMap = (lang: Language): VocabMap => {
+  const saved = localStorage.getItem(vocabKey(lang));
+  return saved ? JSON.parse(saved) : {};
+};
+
+export const saveVocabMap = (map: VocabMap, lang: Language): void => {
+  localStorage.setItem(vocabKey(lang), JSON.stringify(map));
+};
+
 // ─── Reset ──────────────────────────────────────────────────
 export const resetAll = (): void => {
   // Clear all language-specific keys
@@ -172,6 +183,7 @@ export const resetAll = (): void => {
     localStorage.removeItem(achievementsKey(lang));
     localStorage.removeItem(placementKey(lang));
     localStorage.removeItem(progressKey(lang));
+    localStorage.removeItem(vocabKey(lang));
   }
   // Clear old non-namespaced keys too (for migration)
   localStorage.removeItem('quest_mastery');

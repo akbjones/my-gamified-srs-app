@@ -134,10 +134,19 @@ export const playCardAudio = async (
       const audio = new Audio(`/quest-audio/${audioFile}`);
       audio.playbackRate = speed === 1.0 ? 1 : speed === 0.8 ? 0.9 : 0.7;
       currentAudio = audio;
+      // Wait for the audio to be loadable before playing — otherwise a 404
+      // resolves play() but fires a media error silently, skipping TTS fallback.
+      await new Promise<void>((resolve, reject) => {
+        audio.oncanplaythrough = () => resolve();
+        audio.onerror = () => reject(new Error('Audio file not found'));
+        // Timeout: if nothing happens in 2s, fall through
+        setTimeout(() => reject(new Error('Audio load timeout')), 2000);
+      });
       await audio.play();
       return;
     } catch {
-      // Fall through
+      currentAudio = null;
+      // Fall through to TTS
     }
   }
 

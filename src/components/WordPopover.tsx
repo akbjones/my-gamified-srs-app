@@ -2,12 +2,33 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import ReactDOM from 'react-dom';
 import { lookupWord as lookupEs, DictEntry } from '../data/dictionary/es';
 import { lookupWord as lookupIt } from '../data/dictionary/it';
-import { Language } from '../types';
+import { conjugate as conjugateEs } from '../data/conjugation/es';
+import { conjugate as conjugateIt } from '../data/conjugation/it';
+import { Language, ConjugationTable } from '../types';
 
 // Dynamic lookup per language — gracefully returns null for languages without a dictionary
 const LOOKUP_FNS: Partial<Record<Language, (w: string) => DictEntry | null>> = {
   spanish: lookupEs,
   italian: lookupIt,
+};
+
+const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable | null>> = {
+  spanish: conjugateEs,
+  italian: conjugateIt,
+};
+
+const PERSON_LABELS: Record<string, string[]> = {
+  spanish: ['yo', 'tú', 'él', 'nosotros', 'vosotros', 'ellos'],
+  italian: ['io', 'tu', 'lui', 'noi', 'voi', 'loro'],
+};
+
+const TENSE_LABELS: Record<string, string> = {
+  present: 'Present',
+  preterite: 'Preterite',
+  imperfect: 'Imperfect',
+  future: 'Future',
+  conditional: 'Cond.',
+  subjunctive: 'Subj.',
 };
 
 interface WordPopoverProps {
@@ -103,45 +124,83 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
 
       {/* Portal popover — rendered at document body to escape overflow containers */}
       {activeEntry && popoverRect && (
-        <PopoverPortal entry={activeEntry} wordRect={popoverRect} />
+        <PopoverPortal entry={activeEntry} wordRect={popoverRect} language={language} />
       )}
     </div>
   );
 };
 
+/** Extract infinitive from dictionary translation like "to open (abrir)" or "to eat" */
+function extractInfinitive(translation: string, language: Language): string | null {
+  // Try parenthesized form first: "to open (abrir)"
+  const parenMatch = translation.match(/\(([^)]+)\)/);
+  if (parenMatch) return parenMatch[1].trim().toLowerCase();
+
+  // Try "to X" → map to target language infinitive by looking it up
+  // For now just return the "to X" part for the conjugation engine to try
+  const toMatch = translation.match(/^to\s+(\w+)/i);
+  if (toMatch) return null; // can't reverse-map easily
+
+  return null;
+}
+
 /** Fixed-position popover rendered via portal to escape overflow:hidden/auto parents */
-const PopoverPortal: React.FC<{ entry: DictEntry; wordRect: DOMRect }> = ({ entry, wordRect }) => {
+const PopoverPortal: React.FC<{ entry: DictEntry; wordRect: DOMRect; language: Language }> = ({ entry, wordRect, language }) => {
   const popoverRef = useRef<HTMLDivElement>(null);
   const [measured, setMeasured] = useState(false);
   const [finalPos, setFinalPos] = useState({ top: 0, left: 0 });
   const [position, setPosition] = useState<'above' | 'below'>('above');
+  const [showConj, setShowConj] = useState(false);
+  const [conjTense, setConjTense] = useState('present');
+
+  // Try to get conjugation table for verbs
+  const conjugation = useCallback((): ConjugationTable | null => {
+    if (entry.pos !== 'v') return null;
+    const conjugateFn = CONJUGATE_FNS[language];
+    if (!conjugateFn) return null;
+
+    // Try the infinitive from translation
+    const inf = extractInfinitive(entry.en, language);
+    if (inf) {
+      const result = conjugateFn(inf);
+      if (result) return result;
+    }
+
+    return null;
+  }, [entry, language]);
+
+  const conjTable = conjugation();
 
   useEffect(() => {
     if (!popoverRef.current) return;
-    const popH = popoverRef.current.offsetHeight;
-    const popW = popoverRef.current.offsetWidth;
-    const gap = 8;
+    const reposition = () => {
+      if (!popoverRef.current) return;
+      const popH = popoverRef.current.offsetHeight;
+      const popW = popoverRef.current.offsetWidth;
+      const gap = 8;
 
-    // Prefer above; fall below if not enough room
-    const goAbove = wordRect.top > popH + gap + 20;
-    setPosition(goAbove ? 'above' : 'below');
+      const goAbove = wordRect.top > popH + gap + 20;
+      setPosition(goAbove ? 'above' : 'below');
 
-    const top = goAbove
-      ? wordRect.top - popH - gap
-      : wordRect.bottom + gap;
+      const top = goAbove
+        ? wordRect.top - popH - gap
+        : wordRect.bottom + gap;
 
-    // Center horizontally on the word, clamped to viewport
-    let left = wordRect.left + wordRect.width / 2 - popW / 2;
-    left = Math.max(8, Math.min(left, window.innerWidth - popW - 8));
+      let left = wordRect.left + wordRect.width / 2 - popW / 2;
+      left = Math.max(8, Math.min(left, window.innerWidth - popW - 8));
 
-    setFinalPos({ top, left });
-    setMeasured(true);
-  }, [wordRect]);
+      setFinalPos({ top, left });
+      setMeasured(true);
+    };
+    reposition();
+  }, [wordRect, showConj, conjTense]);
+
+  const personLabels = PERSON_LABELS[language] || PERSON_LABELS.spanish;
 
   return ReactDOM.createPortal(
     <div
       ref={popoverRef}
-      className="fixed z-[9999] w-72 max-w-[90vw] bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl shadow-lg p-4 animate-fade-in"
+      className="fixed z-[9999] w-72 max-w-[90vw] max-h-[70vh] overflow-y-auto bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl shadow-lg p-4 animate-fade-in"
       style={{
         top: finalPos.top,
         left: finalPos.left,
@@ -178,6 +237,56 @@ const PopoverPortal: React.FC<{ entry: DictEntry; wordRect: DOMRect }> = ({ entr
           <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)] bg-[var(--bg-inset)] px-1.5 py-0.5 rounded">
             {POS_LABELS[entry.pos] || entry.pos}
           </span>
+        </div>
+      )}
+
+      {/* Conjugation toggle */}
+      {conjTable && (
+        <div className="mt-3 pt-3 border-t border-[var(--border-color)]">
+          <button
+            onClick={() => setShowConj(!showConj)}
+            className="text-[11px] font-bold text-blue-500 hover:text-blue-400 transition-colors uppercase tracking-wider"
+          >
+            {showConj ? 'Hide' : 'Show'} Conjugation
+            {conjTable.isReflexive && ' (reflexive)'}
+          </button>
+
+          {showConj && (
+            <div className="mt-2 animate-fade-in">
+              {/* Tense tabs */}
+              <div className="flex flex-wrap gap-1 mb-2">
+                {Object.keys(conjTable.tenses).map(tense => (
+                  <button
+                    key={tense}
+                    onClick={() => setConjTense(tense)}
+                    className={`px-2 py-1 rounded text-[9px] font-bold uppercase tracking-wider transition-all ${
+                      conjTense === tense
+                        ? 'bg-blue-500/15 text-blue-500'
+                        : 'text-[var(--text-muted)] hover:text-[var(--text-secondary)]'
+                    }`}
+                  >
+                    {TENSE_LABELS[tense] || tense}
+                  </button>
+                ))}
+              </div>
+
+              {/* Conjugation grid */}
+              {conjTable.tenses[conjTense] && (
+                <div className="space-y-1">
+                  {conjTable.tenses[conjTense].map((form, i) => (
+                    <div key={i} className="flex items-baseline gap-2">
+                      <span className="text-[10px] text-[var(--text-faint)] font-mono w-16 text-right shrink-0">
+                        {personLabels[i]}
+                      </span>
+                      <span className="text-xs text-[var(--text-primary)] font-semibold">
+                        {form}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
         </div>
       )}
     </div>,

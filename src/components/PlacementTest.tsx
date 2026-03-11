@@ -64,9 +64,9 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
 
   const fastTrackXP = fastTrackCount * 10;
 
-  // Auto-play audio when a new card appears
+  // Auto-play audio when a new question appears (not on reveal)
   useEffect(() => {
-    if ((phase === 'question' || phase === 'reveal') && currentCard && autoPlayAudio) {
+    if (phase === 'question' && currentCard && autoPlayAudio) {
       playCardAudio(currentCard.audio, currentCard.target, lang, audioSpeed, googleTtsApiKey);
     }
     return () => { stopAudio(); };
@@ -302,16 +302,16 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
         {/* Card with reveal */}
         <div className="flex-1 overflow-y-auto">
           <div className="study-card w-full p-6 mb-4">
-            <div className="flex items-start justify-between mb-3">
-              <p className="text-lg font-extrabold text-[var(--text-primary)] text-center leading-relaxed flex-1">
-                {currentCard.target}
-              </p>
+            <p className="text-lg font-extrabold text-[var(--text-primary)] text-center leading-relaxed mb-1">
+              {currentCard.target}
+            </p>
+            <div className="flex justify-center mb-3">
               <button
                 onClick={handlePlayAudio}
-                className="p-1.5 rounded-full hover:bg-[var(--bg-inset)] transition-colors shrink-0 ml-2"
+                className="p-1.5 rounded-full hover:bg-[var(--bg-inset)] transition-colors"
                 aria-label="Play audio"
               >
-                <Volume2 size={18} className={isPlaying ? 'text-blue-500 animate-pulse' : 'text-[var(--text-muted)]'} />
+                <Volume2 size={16} className={isPlaying ? 'text-blue-500 animate-pulse' : 'text-[var(--text-muted)]'} />
               </button>
             </div>
             <div className="h-px bg-[var(--border-color)] mb-3" />

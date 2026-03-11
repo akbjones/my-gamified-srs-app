@@ -793,6 +793,9 @@ const App: React.FC = () => {
             setPlacementComplete(lang);
             setView('HOME');
           }}
+          autoPlayAudio={settings.autoPlayAudio}
+          audioSpeed={settings.audioSpeed}
+          googleTtsApiKey={settings.googleTtsApiKey}
         />
       )}
 

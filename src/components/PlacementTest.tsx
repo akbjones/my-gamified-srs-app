@@ -234,9 +234,15 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   if (phase === 'question' && currentCard) {
     return (
       <div className="flex flex-col h-dvh px-5 py-4">
-        {/* Header: tier + node name */}
+        {/* Header: exit + tier + node name */}
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
+            <button
+              onClick={onSkip}
+              className="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-wider hover:text-[var(--text-secondary)] transition-colors mr-1"
+            >
+              &larr; Exit
+            </button>
             <span
               className="text-[10px] font-black uppercase tracking-wider"
               style={{ color: currentNode.color }}
@@ -312,6 +318,12 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
         {/* Header */}
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
+            <button
+              onClick={onSkip}
+              className="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-wider hover:text-[var(--text-secondary)] transition-colors mr-1"
+            >
+              &larr; Exit
+            </button>
             <span
               className="text-[10px] font-black uppercase tracking-wider"
               style={{ color: currentNode.color }}

@@ -3,5 +3,4 @@ dist
 .DS_Store
 
 # Generated TTS audio (regenerate with: GOOGLE_TTS_KEY=xxx node scripts/generate-audio.cjs)
-public/quest-audio/*.mp3
 scripts/failed-audio.json

@@ -1,9 +1,11 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { QuestCard, MasteryMap, UserStats, Language, LearningGoal, LANGUAGE_CONFIG } from '../types';
+import type { AudioSpeed } from '../services/storageService';
 import { MAIN_PATH, getNodeName } from '../data/topicConfig';
 import { getGrammarNudge } from '../data/grammarDescriptions';
 import { selectPlacementCards, applyPlacementResults, ConfidenceRating } from '../services/placementService';
-import { ChevronLeft, ArrowRight, Zap, BookOpen } from 'lucide-react';
+import { playCardAudio, stopAudio } from '../services/audioService';
+import { ChevronLeft, ArrowRight, Zap, BookOpen, Volume2 } from 'lucide-react';
 
 interface PlacementTestProps {
   deck: QuestCard[];
@@ -12,6 +14,9 @@ interface PlacementTestProps {
   masteryMap: MasteryMap;
   onComplete: (newMasteryMap: MasteryMap, newUserStats: UserStats) => void;
   onSkip: () => void;
+  autoPlayAudio: boolean;
+  audioSpeed: AudioSpeed;
+  googleTtsApiKey?: string;
 }
 
 type Phase = 'intro' | 'question' | 'reveal' | 'results';
@@ -23,6 +28,9 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   masteryMap,
   onComplete,
   onSkip,
+  autoPlayAudio,
+  audioSpeed,
+  googleTtsApiKey,
 }) => {
   const [phase, setPhase] = useState<Phase>('intro');
   const [nodeIndex, setNodeIndex] = useState(0);
@@ -31,6 +39,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   const [lastRating, setLastRating] = useState<ConfidenceRating | null>(null);
   const [ceilingNode, setCeilingNode] = useState<number | null>(null);
   const [showGrammarDetail, setShowGrammarDetail] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   // Pre-select 2 cards per node (35 nodes × 2 = 70 total cards)
   const placementCards = useMemo(() => selectPlacementCards(deck), [deck]);
@@ -54,6 +63,21 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   }, [ceilingNode, phase, deck]);
 
   const fastTrackXP = fastTrackCount * 10;
+
+  // Auto-play audio when a new card appears
+  useEffect(() => {
+    if ((phase === 'question' || phase === 'reveal') && currentCard && autoPlayAudio) {
+      playCardAudio(currentCard.audio, currentCard.target, lang, audioSpeed, googleTtsApiKey);
+    }
+    return () => { stopAudio(); };
+  }, [phase, nodeIndex, cardIndex]);
+
+  const handlePlayAudio = () => {
+    if (!currentCard || isPlaying) return;
+    setIsPlaying(true);
+    playCardAudio(currentCard.audio, currentCard.target, lang, audioSpeed, googleTtsApiKey)
+      .finally(() => setIsPlaying(false));
+  };
 
   function handleConfidence(rating: ConfidenceRating) {
     setLastRating(rating);
@@ -136,9 +160,9 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           </p>
           <div className="stat-card p-3.5 mb-6">
             <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-              <span className="font-bold text-[var(--text-primary)]">Pay attention to structure, not just words.</span>
-              {' '}Two people might know the vocabulary but only one notices the grammar
-              pattern. Think about <em>why</em> the sentence is built the way it is.
+              <span className="font-bold text-[var(--text-primary)]">Focus on grammar, not just vocabulary.</span>
+              {' '}Even if you recognize the words, consider whether you understand the
+              tense, structure, and why the sentence is built the way it is.
             </p>
           </div>
           <p className="text-[10px] text-[var(--text-muted)] uppercase tracking-wider font-semibold mb-8">
@@ -198,10 +222,17 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
 
         {/* Card */}
         <div className="flex-1 flex items-center justify-center">
-          <div className="study-card w-full max-h-[50dvh] flex items-center justify-center p-6">
-            <p className="text-lg font-extrabold text-[var(--text-primary)] text-center leading-relaxed">
+          <div className="study-card w-full max-h-[50dvh] flex flex-col items-center justify-center p-6">
+            <p className="text-lg font-extrabold text-[var(--text-primary)] text-center leading-relaxed mb-3">
               {currentCard.target}
             </p>
+            <button
+              onClick={handlePlayAudio}
+              className="p-2 rounded-full hover:bg-[var(--bg-inset)] transition-colors"
+              aria-label="Play audio"
+            >
+              <Volume2 size={20} className={isPlaying ? 'text-blue-500 animate-pulse' : 'text-[var(--text-muted)]'} />
+            </button>
           </div>
         </div>
 
@@ -271,9 +302,18 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
         {/* Card with reveal */}
         <div className="flex-1 overflow-y-auto">
           <div className="study-card w-full p-6 mb-4">
-            <p className="text-lg font-extrabold text-[var(--text-primary)] text-center leading-relaxed mb-3">
-              {currentCard.target}
-            </p>
+            <div className="flex items-start justify-between mb-3">
+              <p className="text-lg font-extrabold text-[var(--text-primary)] text-center leading-relaxed flex-1">
+                {currentCard.target}
+              </p>
+              <button
+                onClick={handlePlayAudio}
+                className="p-1.5 rounded-full hover:bg-[var(--bg-inset)] transition-colors shrink-0 ml-2"
+                aria-label="Play audio"
+              >
+                <Volume2 size={18} className={isPlaying ? 'text-blue-500 animate-pulse' : 'text-[var(--text-muted)]'} />
+              </button>
+            </div>
             <div className="h-px bg-[var(--border-color)] mb-3" />
             <p className="text-base text-[var(--text-secondary)] text-center italic leading-relaxed">
               {currentCard.english}

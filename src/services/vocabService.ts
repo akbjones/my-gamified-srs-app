@@ -81,10 +81,15 @@ export function recordWordsFromCard(
 
     const existing = updated[key];
     if (existing) {
+      // Refresh translation from dictionary if available (fixes stale cached translations)
+      const freshEntry = lookupFn(key);
+      const freshTranslation = freshEntry?.en && freshEntry.en !== 'see context' ? freshEntry.en : existing.translation;
       updated[key] = {
         ...existing,
         // Upgrade display form if we see a capitalized version (proper noun)
         word: display !== key && existing.word === key ? display : existing.word,
+        translation: freshTranslation,
+        pos: freshEntry?.pos || existing.pos,
         lastSeen: now,
         timesSeen: existing.timesSeen + 1,
         timesFailed: existing.timesFailed + (wasFailure ? 1 : 0),

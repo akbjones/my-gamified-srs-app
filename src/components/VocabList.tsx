@@ -65,14 +65,23 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
     return null;
   };
 
-  // Re-lookup translations for entries with stale/empty translations
+  // Always prefer fresh dictionary lookup over cached translations
   const getTranslation = (entry: VocabEntry): string => {
-    if (entry.translation && entry.translation !== 'see context') return entry.translation;
     if (lookupFn) {
       const fresh = lookupFn(entry.word);
       if (fresh?.en && fresh.en !== 'see context') return fresh.en;
     }
+    if (entry.translation && entry.translation !== 'see context') return entry.translation;
     return entry.translation;
+  };
+
+  // Prefer fresh POS from dictionary over stale cached value
+  const getPos = (entry: VocabEntry): string | undefined => {
+    if (lookupFn) {
+      const fresh = lookupFn(entry.word);
+      if (fresh?.pos) return fresh.pos;
+    }
+    return entry.pos;
   };
 
   const allEntries = useMemo(() => Object.values(vocabMap), [vocabMap]);
@@ -128,7 +137,8 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
 
   const renderEntry = (entry: VocabEntry) => {
     const isExpanded = expandedWord === entry.word;
-    const conjTable = isExpanded ? getConjugation(entry) : null;
+    const pos = getPos(entry);
+    const conjTable = isExpanded ? getConjugation({ ...entry, pos }) : null;
     const personLabels = PERSON_LABELS[language] || PERSON_LABELS.spanish;
 
     return (
@@ -145,9 +155,9 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
               <span className="text-sm font-bold text-[var(--text-primary)] truncate">
                 {entry.word}
               </span>
-              {entry.pos && (
-                <span className={`text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded ${POS_COLORS[entry.pos] || 'text-gray-500 bg-gray-500/10'}`}>
-                  {entry.pos}
+              {pos && (
+                <span className={`text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded ${POS_COLORS[pos] || 'text-gray-500 bg-gray-500/10'}`}>
+                  {pos}
                 </span>
               )}
             </div>
@@ -159,11 +169,19 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
                 </div>
               ) : null;
             })()}
+            {pos === 'v' && !isExpanded && (
+              <div className="text-[9px] text-emerald-500/60 font-semibold mt-0.5">
+                Tap to conjugate
+              </div>
+            )}
           </div>
           <div className="flex items-center gap-3 shrink-0 text-[10px] font-mono">
             <span className="text-[var(--text-muted)]">{entry.timesSeen}x</span>
             {entry.timesFailed > 0 && (
               <span className="text-red-500 font-bold">{entry.timesFailed}F</span>
+            )}
+            {pos === 'v' && (
+              <ChevronDown size={12} className={`text-emerald-500 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
             )}
           </div>
         </div>

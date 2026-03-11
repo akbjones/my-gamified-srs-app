@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { ChallengeMode, ChallengeQuestion, BossRing, Language } from '../types';
-import { Swords, Zap, Trophy, RotateCcw } from 'lucide-react';
+import { FlaskConical, Zap, Trophy, RotateCcw } from 'lucide-react';
 import { getBossForIndex } from '../data/bossArt';
 import { calculateBossRing } from '../services/challengeService';
 import WordTileChallenge from './WordTileChallenge';

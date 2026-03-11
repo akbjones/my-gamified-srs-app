@@ -49,7 +49,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
         <div className="text-center">
           <h1 className="text-lg font-black uppercase tracking-tight text-[var(--text-primary)]">{LANGUAGE_CONFIG[language].name}</h1>
         </div>
-        <div className="text-sm font-black text-blue-500">{getTotalProgress()}%</div>
+        <div className="text-sm font-black text-[var(--accent)]">{getTotalProgress()}%</div>
       </header>
 
       {/* Linear path */}
@@ -101,7 +101,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
                     isComplete
                       ? 'border-emerald-500 bg-emerald-500'
                       : isCurrent
-                        ? 'border-blue-500 bg-blue-500 animate-pulse-glow'
+                        ? 'border-[var(--accent)] bg-[var(--accent)] animate-pulse-glow'
                         : unlocked
                           ? 'border-[var(--text-muted)] bg-[var(--bg-card)]'
                           : 'border-[var(--text-faint)] bg-[var(--bg-inset)]'
@@ -115,7 +115,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
                     !unlocked
                       ? 'bg-[var(--bg-inset)] border border-[var(--border-color)]'
                       : isCurrent
-                        ? 'stat-card border-blue-500/30'
+                        ? 'stat-card border-[var(--accent)]/30'
                         : isComplete
                           ? 'stat-card border-emerald-500/20'
                           : 'stat-card'
@@ -133,7 +133,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
                     </div>
                     {unlocked && (
                       <span className={`text-xs font-bold ${
-                        isComplete ? 'text-emerald-500' : percent > 0 ? 'text-blue-500' : 'text-[var(--text-muted)]'
+                        isComplete ? 'text-emerald-500' : percent > 0 ? 'text-[var(--accent)]' : 'text-[var(--text-muted)]'
                       }`}>
                         {graduated}/{total}
                       </span>

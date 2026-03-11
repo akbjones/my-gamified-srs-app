@@ -129,3 +129,24 @@ export const GOAL_CONFIG: Record<LearningGoal, { name: string; description: stri
   work:    { name: 'Work',    description: 'Meetings, emails, professional' },
   family:  { name: 'Family',  description: 'Relationships, home, emotions' },
 };
+
+// ── Vocabulary Tracking ─────────────────────────────────────
+export interface VocabEntry {
+  word: string;
+  translation: string;
+  ipa: string;
+  pos?: string;
+  firstSeen: number;   // Date.now() when first encountered
+  lastSeen: number;    // Date.now() when last encountered
+  timesSeen: number;
+  timesFailed: number; // incremented when card rated AGAIN
+}
+
+export type VocabMap = Record<string, VocabEntry>; // keyed by lowercase word
+
+// ── Conjugation ─────────────────────────────────────────────
+export interface ConjugationTable {
+  infinitive: string;
+  isReflexive: boolean;
+  tenses: Record<string, string[]>; // tense name → [yo, tú, él, nosotros, vosotros, ellos]
+}

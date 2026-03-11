@@ -162,6 +162,7 @@ export function calculateBossRing(correctCount: number, total: number, elapsedMs
 // ── Challenge Triggers ──────────────────────────────────────
 const CHECKPOINT_INTERVAL = 50;
 const BOSS_INTERVAL = 150;
+export const TOTAL_BOSSES = 22;
 
 export function shouldTriggerChallenge(
   progress: ProgressState,
@@ -170,7 +171,7 @@ export function shouldTriggerChallenge(
   // Boss takes priority over checkpoint
   const bossTrigger = Math.floor(newCumulativeTotal / BOSS_INTERVAL);
   const lastBossTrigger = Math.floor(progress.cumulativeNewCards / BOSS_INTERVAL);
-  if (bossTrigger > lastBossTrigger && progress.nextBossIndex < 22) {
+  if (bossTrigger > lastBossTrigger && progress.nextBossIndex < TOTAL_BOSSES) {
     return 'boss';
   }
 

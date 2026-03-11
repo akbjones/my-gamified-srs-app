@@ -48,11 +48,7 @@ const WordTileChallenge: React.FC<WordTileChallengeProps> = ({
     setCheckResult(null);
   }, [card.id]);
 
-  useEffect(() => {
-    if (autoPlayAudio) {
-      playCardAudio(card.audio, card.target, language, audioSpeed, googleTtsApiKey);
-    }
-  }, [card.id]);
+  // NOTE: no auto-play on mount — hearing the sentence gives away the tile answer
 
   const handleTapWord = (idx: number) => {
     if (checkResult || placedWords.length >= correct.length) return;
@@ -114,16 +110,19 @@ const WordTileChallenge: React.FC<WordTileChallengeProps> = ({
           <p className="text-base font-bold italic text-[var(--text-secondary)] leading-relaxed">
             {card.english}
           </p>
-          <button
-            onClick={handlePlayAudio}
-            className={`p-1 rounded-md shrink-0 transition-colors ${
-              isPlaying
-                ? 'text-blue-500'
-                : 'text-[var(--text-faint)] hover:text-blue-500'
-            }`}
-          >
-            <Volume2 size={14} />
-          </button>
+          {/* Only show audio after answer is checked — hearing it before gives away the answer */}
+          {checkResult && (
+            <button
+              onClick={handlePlayAudio}
+              className={`p-1 rounded-md shrink-0 transition-colors ${
+                isPlaying
+                  ? 'text-[var(--accent)]'
+                  : 'text-[var(--text-faint)] hover:text-[var(--accent)]'
+              }`}
+            >
+              <Volume2 size={14} />
+            </button>
+          )}
         </div>
         <p className="text-[10px] text-[var(--text-faint)] font-bold uppercase tracking-widest">
           {correct.length} words
@@ -134,7 +133,7 @@ const WordTileChallenge: React.FC<WordTileChallengeProps> = ({
       {showHint && (
         <button
           onClick={dismissHint}
-          className="mb-2 w-full text-center text-[10px] text-blue-500 font-semibold py-1.5 rounded-lg bg-blue-500/8 border border-blue-500/20 animate-fade-in"
+          className="mb-2 w-full text-center text-[10px] text-[var(--accent)] font-semibold py-1.5 rounded-lg bg-[var(--accent)]/8 border border-[var(--accent)]/20 animate-fade-in"
         >
           Tap the words below to build the sentence &middot; tap to dismiss
         </button>
@@ -171,7 +170,7 @@ const WordTileChallenge: React.FC<WordTileChallengeProps> = ({
                       : 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400'
                     : verdict === 'wrong'
                     ? 'bg-red-500/15 text-red-600 dark:text-red-400'
-                    : 'bg-[var(--bg-card)] text-[var(--text-primary)] shadow-sm border border-[var(--border-color)] hover:border-blue-500/30'
+                    : 'bg-[var(--bg-card)] text-[var(--text-primary)] shadow-sm border border-[var(--border-color)] hover:border-[var(--accent)]/30'
                 }`}
               >
                 {word}

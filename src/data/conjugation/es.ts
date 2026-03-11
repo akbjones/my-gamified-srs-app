@@ -143,20 +143,21 @@ interface SpellingSpec {
   to: string;
 }
 
-function spellingChange(inf: string, spec: SpellingSpec): PartialTenses {
+function spellingChange(inf: string, spec: SpellingSpec, existingTenses?: Record<TenseKey, Forms>): PartialTenses {
   const s = stem(inf);
   const override: PartialTenses = {};
 
-  // Preterite yo
-  const pret = [...regular(inf, 'preterite')] as Forms;
-  const yoIdx = pret[0].lastIndexOf(spec.from, s.length);
+  // Preterite yo — apply spelling change on top of existing forms (to preserve stem changes)
+  const basePret = existingTenses ? [...existingTenses.preterite] as Forms : [...regular(inf, 'preterite')] as Forms;
+  const yoIdx = basePret[0].lastIndexOf(spec.from, s.length);
   if (yoIdx >= 0) {
-    pret[0] = pret[0].slice(0, yoIdx) + spec.to + pret[0].slice(yoIdx + spec.from.length);
+    basePret[0] = basePret[0].slice(0, yoIdx) + spec.to + basePret[0].slice(yoIdx + spec.from.length);
   }
-  override.preterite = pret;
+  override.preterite = basePret;
 
-  // Subjunctive: all forms
-  const subj = regular(inf, 'subjunctive').map(f => {
+  // Subjunctive: all forms — apply on top of existing (preserves stem changes like e→ie)
+  const baseSubj = existingTenses ? [...existingTenses.subjunctive] as Forms : regular(inf, 'subjunctive') as Forms;
+  const subj = (baseSubj as string[]).map(f => {
     const idx = f.lastIndexOf(spec.from, s.length);
     if (idx >= 0) return f.slice(0, idx) + spec.to + f.slice(idx + spec.from.length);
     return f;
@@ -427,9 +428,9 @@ export function conjugate(infinitive: string): ConjugationTable | null {
     tenses = merge(tenses, stemChange(baseInf, STEM_CHANGERS[baseInf]));
   }
 
-  // Apply spelling changes (if any)
+  // Apply spelling changes (if any) — pass existing tenses so stem changes are preserved
   if (SPELLING_CHANGERS[baseInf]) {
-    tenses = merge(tenses, spellingChange(baseInf, SPELLING_CHANGERS[baseInf]));
+    tenses = merge(tenses, spellingChange(baseInf, SPELLING_CHANGERS[baseInf], tenses));
   }
 
   // Apply full irregular overrides (highest priority)

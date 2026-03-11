@@ -26,7 +26,7 @@ const GRADE_CONFIG = {
   AGAIN: { color: 'text-red-500', bg: 'hover:bg-red-500/10 active:bg-red-500/20', border: 'border-red-500/30' },
   HARD:  { color: 'text-orange-500', bg: 'hover:bg-orange-500/10 active:bg-orange-500/20', border: 'border-orange-500/30' },
   GOOD:  { color: 'text-emerald-500', bg: 'hover:bg-emerald-500/10 active:bg-emerald-500/20', border: 'border-emerald-500/30' },
-  EASY:  { color: 'text-blue-500', bg: 'hover:bg-blue-500/10 active:bg-blue-500/20', border: 'border-blue-500/30' },
+  EASY:  { color: 'text-[var(--accent)]', bg: 'hover:bg-[var(--accent)]/10 active:bg-[var(--accent)]/20', border: 'border-[var(--accent)]/30' },
 } as const;
 
 const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAnswer, onAbort, onStudyMore, hasMoreCards, topicCards = [], autoPlayAudio, audioSpeed, googleTtsApiKey, tileCardIndices = [], pendingChallenge, onStartChallenge }) => {
@@ -151,7 +151,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             <p><span className="text-red-500 font-black">Again</span> &mdash; Didn't know it. Restart.</p>
             <p><span className="text-orange-500 font-black">Hard</span> &mdash; Struggled. Repeat soon.</p>
             <p><span className="text-emerald-500 font-black">Good</span> &mdash; Got it. Advance step.</p>
-            <p><span className="text-blue-500 font-black">Easy</span> &mdash; Too easy. Skip ahead.</p>
+            <p><span className="text-[var(--accent)] font-black">Easy</span> &mdash; Too easy. Skip ahead.</p>
             <div className="mt-5 pt-3 border-t border-[var(--border-color)] text-center text-xs text-[var(--text-muted)] font-bold">
               Tap anywhere to close
             </div>
@@ -159,7 +159,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
         </div>
       )}
 
-      <section className="flex flex-col pt-[max(0.25rem,env(safe-area-inset-top))] pb-[max(0.25rem,env(safe-area-inset-bottom))] px-1 text-center h-dvh">
+      <section className="flex flex-col pt-[max(0.25rem,env(safe-area-inset-top))] pb-[max(0.75rem,env(safe-area-inset-bottom))] px-1 text-center h-dvh">
         {/* Top bar */}
         <nav className="flex flex-col gap-2">
           <div className="flex justify-between items-center">
@@ -189,7 +189,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
           </div>
 
           <div className="progress-rail mt-1">
-            <div className="progress-fill bg-blue-500" style={{ width: `${topicProgress}%` }} />
+            <div className="progress-fill bg-[var(--accent)]" style={{ width: `${topicProgress}%` }} />
           </div>
         </nav>
 
@@ -212,53 +212,8 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
         ) : (
         <div
           onClick={!isFlipped ? handleFlip : undefined}
-          className="study-card flex-1 min-h-0 max-h-[52dvh] flex flex-col cursor-pointer my-1.5 relative"
+          className="study-card flex-1 min-h-0 flex flex-col cursor-pointer my-1.5 relative"
         >
-          {/* Toolbar — audio + grammar icons */}
-          <div className="flex items-center justify-end gap-1.5 px-3 pt-2 pb-1 shrink-0">
-            {isFlipped && card!.grammar && (
-              <button
-                onClick={(e) => { e.stopPropagation(); document.dispatchEvent(new MouseEvent('click', { bubbles: false })); setShowGrammar(!showGrammar); }}
-                className={`p-1.5 rounded-lg border transition-all mr-auto ${
-                  showGrammar
-                    ? 'bg-amber-500/10 border-amber-500/40 text-amber-500'
-                    : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-amber-500 hover:border-amber-500/40 bg-[var(--bg-card)]'
-                }`}
-              >
-                <BookOpen size={14} />
-              </button>
-            )}
-            {card!.isLeech && (
-              <div className="flex items-center gap-1 bg-orange-500/10 border border-orange-500/40 rounded-lg px-1.5 py-0.5 mr-auto">
-                <AlertTriangle size={10} className="text-orange-500" />
-                <span className="text-[10px] font-bold uppercase tracking-wider text-orange-500">Leech</span>
-              </div>
-            )}
-            {isFlipped && (
-              <button
-                onClick={handleSlowReplay}
-                className={`p-1 rounded-lg border transition-all ${
-                  isPlaying
-                    ? 'bg-blue-500/10 border-blue-500/40 text-blue-500'
-                    : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-blue-500 hover:border-blue-500/40 bg-[var(--bg-card)]'
-                }`}
-                title="Slow replay"
-              >
-                <span className="text-[8px] font-bold font-mono w-[14px] h-[14px] flex items-center justify-center">.6x</span>
-              </button>
-            )}
-            <button
-              onClick={handlePlayAudio}
-              className={`p-1 rounded-lg border transition-all ${
-                isPlaying
-                  ? 'bg-blue-500/10 border-blue-500/40 text-blue-500 animate-pulse'
-                  : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-blue-500 hover:border-blue-500/40 bg-[var(--bg-card)]'
-              }`}
-            >
-              <Volume2 size={14} />
-            </button>
-          </div>
-
           {/* Grammar overlay — tap anywhere to dismiss */}
           {showGrammar && card!.grammar && (
             <div
@@ -272,6 +227,16 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               <p className="text-sm md:text-base text-slate-700 dark:text-amber-100 leading-relaxed text-center max-w-xs">
                 {card!.grammar}
               </p>
+            </div>
+          )}
+
+          {/* Leech badge — top of card */}
+          {card!.isLeech && (
+            <div className="flex justify-center pt-2 shrink-0">
+              <div className="flex items-center gap-1 bg-orange-500/10 border border-orange-500/40 rounded-lg px-1.5 py-0.5">
+                <AlertTriangle size={10} className="text-orange-500" />
+                <span className="text-[10px] font-bold uppercase tracking-wider text-orange-500">Leech</span>
+              </div>
             </div>
           )}
 
@@ -289,7 +254,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               ? 'text-sm md:text-base'
               : 'text-xs md:text-sm';
             return (
-              <div className="flex-1 flex flex-col items-center justify-center px-3 sm:px-5 pb-4 min-h-0 overflow-y-auto">
+              <div className="flex-1 flex flex-col items-center justify-center px-3 sm:px-5 min-h-0 overflow-y-auto">
                 <WordPopover
                   sentence={card!.target}
                   language={session.language}
@@ -309,6 +274,46 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               </div>
             );
           })()}
+
+          {/* Toolbar — bottom of card, proper touch targets */}
+          <div className="flex items-center justify-center gap-3 px-4 py-2.5 shrink-0">
+            {isFlipped && card!.grammar && (
+              <button
+                onClick={(e) => { e.stopPropagation(); document.dispatchEvent(new MouseEvent('click', { bubbles: false })); setShowGrammar(!showGrammar); }}
+                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition-all border active:scale-95 ${
+                  showGrammar
+                    ? 'bg-[var(--accent)]/10 border-[var(--accent)]/40 text-[var(--accent)]'
+                    : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40'
+                }`}
+              >
+                <BookOpen size={13} />
+                <span>Grammar</span>
+              </button>
+            )}
+            {isFlipped && (
+              <button
+                onClick={handleSlowReplay}
+                className={`px-3.5 py-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition-all border active:scale-95 ${
+                  isPlaying
+                    ? 'bg-[var(--accent)]/10 border-[var(--accent)]/40 text-[var(--accent)]'
+                    : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40'
+                }`}
+              >
+                Slow
+              </button>
+            )}
+            <button
+              onClick={handlePlayAudio}
+              className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition-all border active:scale-95 ${
+                isPlaying
+                  ? 'bg-[var(--accent)]/10 border-[var(--accent)]/40 text-[var(--accent)] animate-pulse'
+                  : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40'
+              }`}
+            >
+              <Volume2 size={13} />
+              <span>Listen</span>
+            </button>
+          </div>
         </div>
         )}
 

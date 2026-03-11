@@ -459,6 +459,24 @@ const IRR: Record<string, PartialTenses> = {
   giungere: {
     preterite:   f('giunsi,giungesti,giunse,giungemmo,giungeste,giunsero'),
   },
+  correre: {
+    preterite:   f('corsi,corresti,corse,corremmo,correste,corsero'),
+  },
+  mettere: {
+    preterite:   f('misi,mettesti,mise,mettemmo,metteste,misero'),
+  },
+  rompere: {
+    preterite:   f('ruppi,rompesti,ruppe,rompemmo,rompeste,ruppero'),
+  },
+  muovere: {
+    preterite:   f('mossi,muovesti,mosse,muovemmo,muoveste,mossero'),
+  },
+  ridere: {
+    preterite:   f('risi,ridesti,rise,ridemmo,rideste,risero'),
+  },
+  perdere: {
+    preterite:   f('persi,perdesti,perse,perdemmo,perdeste,persero'),
+  },
 
   // ─── Spelling-pattern verbs (irregular overrides beyond auto-fix) ───
   cercare: {

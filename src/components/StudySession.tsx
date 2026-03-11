@@ -159,7 +159,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
         </div>
       )}
 
-      <section className="flex flex-col py-1 px-1 text-center h-dvh">
+      <section className="flex flex-col pt-[max(0.25rem,env(safe-area-inset-top))] pb-[max(0.25rem,env(safe-area-inset-bottom))] px-1 text-center h-dvh">
         {/* Top bar */}
         <nav className="flex flex-col gap-2">
           <div className="flex justify-between items-center">

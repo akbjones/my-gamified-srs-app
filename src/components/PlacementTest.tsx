@@ -185,7 +185,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
 
   if (phase === 'intro') {
     return (
-      <div className="flex flex-col h-dvh px-5 py-6">
+      <div className="flex flex-col h-dvh px-5 pt-[max(1.5rem,env(safe-area-inset-top))] pb-[max(1.5rem,env(safe-area-inset-bottom))]">
         <button
           onClick={onSkip}
           className="btn-ghost self-start text-[10px] font-bold uppercase tracking-wider mb-8"
@@ -233,7 +233,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
 
   if (phase === 'question' && currentCard) {
     return (
-      <div className="flex flex-col h-dvh px-5 py-4">
+      <div className="flex flex-col h-dvh px-5 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))]">
         {/* Header: exit + tier + node name */}
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
@@ -314,7 +314,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
 
   if (phase === 'reveal' && currentCard) {
     return (
-      <div className="flex flex-col h-dvh px-5 py-4">
+      <div className="flex flex-col h-dvh px-5 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))]">
         {/* Header */}
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
@@ -433,7 +433,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
     const lastPassedNode = passedNodes > 0 ? MAIN_PATH[passedNodes - 1] : null;
     const ceilingNodeObj = ceilingNode !== null ? MAIN_PATH[ceilingNode] : null;
     return (
-      <div className="flex flex-col h-dvh px-5 py-6">
+      <div className="flex flex-col h-dvh px-5 pt-[max(1.5rem,env(safe-area-inset-top))] pb-[max(1.5rem,env(safe-area-inset-bottom))]">
         <div className="flex-1 flex flex-col justify-center">
           {ceilingNode !== null && ceilingNode > 0 ? (
             <>

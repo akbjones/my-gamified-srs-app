@@ -439,7 +439,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className={`mx-auto min-h-screen ${view === 'STUDY' || view === 'PLACEMENT' || view === 'CHALLENGE' ? 'max-w-lg px-0 pt-0 pb-0' : 'max-w-md p-5 pb-20'}`}>
+    <div className={`mx-auto min-h-screen ${view === 'STUDY' || view === 'PLACEMENT' || view === 'CHALLENGE' ? 'max-w-lg px-0 pt-0 pb-0' : 'max-w-md px-5 pt-[max(1.25rem,env(safe-area-inset-top))] pb-20'}`}>
       {view === 'HOME' && (
         <section className="animate-fade-in">
           {/* Header row: title + language + theme toggle */}

@@ -1,7 +1,10 @@
 import React, { useState, useMemo } from 'react';
-import { VocabMap, VocabEntry, Language } from '../types';
+import { VocabMap, VocabEntry, Language, ConjugationTable } from '../types';
 import { isCommonWord } from '../services/vocabService';
 import { ChevronLeft, Search, Clock, AlertTriangle, ChevronDown } from 'lucide-react';
+import type { DictEntry } from '../data/dictionary/es';
+import { conjugate as conjugateEs } from '../data/conjugation/es';
+import { conjugate as conjugateIt } from '../data/conjugation/it';
 
 type SortMode = 'recent' | 'tricky';
 
@@ -9,12 +12,68 @@ interface VocabListProps {
   vocabMap: VocabMap;
   language: Language;
   onBack: () => void;
+  lookupFn?: (word: string) => DictEntry | null;
 }
 
-const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack }) => {
+const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable | null>> = {
+  spanish: conjugateEs,
+  italian: conjugateIt,
+};
+
+const PERSON_LABELS: Record<string, string[]> = {
+  spanish: ['yo', 'tú', 'él', 'nosotros', 'vosotros', 'ellos'],
+  italian: ['io', 'tu', 'lui', 'noi', 'voi', 'loro'],
+};
+
+const TENSE_LABELS: Record<string, string> = {
+  present: 'Present', preterite: 'Preterite', imperfect: 'Imperfect',
+  future: 'Future', conditional: 'Cond.', subjunctive: 'Subj.',
+};
+
+/** Extract infinitive from translation strings like "to hug (abbracciare)" */
+function extractInfinitive(translation: string): string | null {
+  const paren = translation.match(/\(([^)]+)\)/);
+  if (paren) return paren[1].trim().toLowerCase();
+  return null;
+}
+
+const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, lookupFn }) => {
   const [search, setSearch] = useState('');
   const [sortMode, setSortMode] = useState<SortMode>('recent');
   const [showCommon, setShowCommon] = useState(false);
+  const [expandedWord, setExpandedWord] = useState<string | null>(null);
+  const [conjTense, setConjTense] = useState('present');
+
+  // Try to get conjugation table for a vocab entry
+  const getConjugation = (entry: VocabEntry): ConjugationTable | null => {
+    if (entry.pos !== 'v') return null;
+    const conjugateFn = CONJUGATE_FNS[language];
+    if (!conjugateFn) return null;
+
+    // Try the word itself as an infinitive
+    const result = conjugateFn(entry.word);
+    if (result) return result;
+
+    // Try extracting infinitive from translation
+    const t = getTranslation(entry);
+    const inf = extractInfinitive(t);
+    if (inf) {
+      const r = conjugateFn(inf);
+      if (r) return r;
+    }
+
+    return null;
+  };
+
+  // Re-lookup translations for entries with stale/empty translations
+  const getTranslation = (entry: VocabEntry): string => {
+    if (entry.translation && entry.translation !== 'see context') return entry.translation;
+    if (lookupFn) {
+      const fresh = lookupFn(entry.word);
+      if (fresh?.en && fresh.en !== 'see context') return fresh.en;
+    }
+    return entry.translation;
+  };
 
   const allEntries = useMemo(() => Object.values(vocabMap), [vocabMap]);
 
@@ -67,36 +126,85 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack }) => 
     pron: 'text-cyan-500 bg-cyan-500/10',
   };
 
-  const renderEntry = (entry: VocabEntry) => (
-    <div
-      key={entry.word}
-      className="flex items-center gap-3 py-2.5 px-3 border-b border-[var(--border-color)] last:border-b-0"
-    >
-      <div className="flex-1 min-w-0">
-        <div className="flex items-center gap-2">
-          <span className="text-sm font-bold text-[var(--text-primary)] truncate">
-            {entry.word}
-          </span>
-          {entry.pos && (
-            <span className={`text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded ${POS_COLORS[entry.pos] || 'text-gray-500 bg-gray-500/10'}`}>
-              {entry.pos}
-            </span>
-          )}
+  const renderEntry = (entry: VocabEntry) => {
+    const isExpanded = expandedWord === entry.word;
+    const conjTable = isExpanded ? getConjugation(entry) : null;
+    const personLabels = PERSON_LABELS[language] || PERSON_LABELS.spanish;
+
+    return (
+      <div
+        key={entry.word}
+        className="border-b border-[var(--border-color)] last:border-b-0"
+      >
+        <div
+          className="flex items-center gap-3 py-2.5 px-3 cursor-pointer hover:bg-[var(--bg-inset)] transition-colors"
+          onClick={() => setExpandedWord(isExpanded ? null : entry.word)}
+        >
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-bold text-[var(--text-primary)] truncate">
+                {entry.word}
+              </span>
+              {entry.pos && (
+                <span className={`text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded ${POS_COLORS[entry.pos] || 'text-gray-500 bg-gray-500/10'}`}>
+                  {entry.pos}
+                </span>
+              )}
+            </div>
+            {(() => {
+              const t = getTranslation(entry);
+              return t && t !== 'see context' ? (
+                <div className="text-xs text-[var(--text-secondary)] truncate mt-0.5">
+                  {t}
+                </div>
+              ) : null;
+            })()}
+          </div>
+          <div className="flex items-center gap-3 shrink-0 text-[10px] font-mono">
+            <span className="text-[var(--text-muted)]">{entry.timesSeen}x</span>
+            {entry.timesFailed > 0 && (
+              <span className="text-red-500 font-bold">{entry.timesFailed}F</span>
+            )}
+          </div>
         </div>
-        {entry.translation && (
-          <div className="text-xs text-[var(--text-secondary)] truncate mt-0.5">
-            {entry.translation}
+
+        {/* Conjugation table (verbs only, when expanded) */}
+        {isExpanded && conjTable && (
+          <div className="px-3 pb-3 animate-fade-in">
+            <div className="flex flex-wrap gap-1 mb-2">
+              {Object.keys(conjTable.tenses).map(tense => (
+                <button
+                  key={tense}
+                  onClick={() => setConjTense(tense)}
+                  className={`px-2 py-1 rounded text-[9px] font-bold uppercase tracking-wider transition-all ${
+                    conjTense === tense
+                      ? 'bg-blue-500/15 text-blue-500'
+                      : 'text-[var(--text-muted)] hover:text-[var(--text-secondary)]'
+                  }`}
+                >
+                  {TENSE_LABELS[tense] || tense}
+                </button>
+              ))}
+            </div>
+            {conjTable.tenses[conjTense] && (
+              <div className="space-y-1">
+                {conjTable.tenses[conjTense].map((form, i) => (
+                  <div key={i} className="flex items-baseline gap-2">
+                    <span className="text-[10px] text-[var(--text-faint)] font-mono w-16 text-right shrink-0">
+                      {personLabels[i]}
+                    </span>
+                    <span className="text-xs text-[var(--text-primary)] font-semibold">
+                      {form}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         )}
       </div>
-      <div className="flex items-center gap-3 shrink-0 text-[10px] font-mono">
-        <span className="text-[var(--text-muted)]">{entry.timesSeen}x</span>
-        {entry.timesFailed > 0 && (
-          <span className="text-red-500 font-bold">{entry.timesFailed}F</span>
-        )}
-      </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <div className="animate-fade-in max-w-md mx-auto px-4 pt-4 pb-20">

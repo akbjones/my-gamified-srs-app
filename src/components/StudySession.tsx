@@ -9,6 +9,7 @@ import WordTileChallenge from './WordTileChallenge';
 interface StudySessionProps {
   session: SessionState;
   onAnswer: (rating: 'AGAIN' | 'HARD' | 'GOOD' | 'EASY') => void;
+  onUndoAnswer?: () => void;
   onAbort: () => void;
   onStudyMore?: () => void;
   hasMoreCards?: boolean;
@@ -28,7 +29,7 @@ const GRADE_CONFIG = {
   EASY:  { color: 'text-blue-500', bg: 'hover:bg-blue-500/10 active:bg-blue-500/20', border: 'border-blue-500/30' },
 } as const;
 
-const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort, onStudyMore, hasMoreCards, topicCards = [], autoPlayAudio, audioSpeed, googleTtsApiKey, tileCardIndices = [], pendingChallenge, onStartChallenge }) => {
+const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAnswer, onAbort, onStudyMore, hasMoreCards, topicCards = [], autoPlayAudio, audioSpeed, googleTtsApiKey, tileCardIndices = [], pendingChallenge, onStartChallenge }) => {
   const [showInfo, setShowInfo] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -313,20 +314,38 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
 
         {/* Grading buttons — hidden for tile cards (they self-grade) */}
         {isFlipped && !tileCardIndices.includes(session.currentIndex) && (
-          <div className="grid grid-cols-4 gap-2 animate-slide-up pb-2 shrink-0">
-            {(['AGAIN', 'HARD', 'GOOD', 'EASY'] as const).map(rating => {
-              const cfg = GRADE_CONFIG[rating];
-              return (
+          <div className="animate-slide-up pb-2 shrink-0">
+            <div className="grid grid-cols-4 gap-2">
+              {(['AGAIN', 'HARD', 'GOOD', 'EASY'] as const).map(rating => {
+                const cfg = GRADE_CONFIG[rating];
+                return (
+                  <button
+                    key={rating}
+                    onClick={() => submitAnswer(rating)}
+                    className={`py-4 rounded-xl bg-[var(--bg-card)] border ${cfg.border} ${cfg.bg} ${cfg.color} active:scale-95 transition-all`}
+                  >
+                    <div className="text-xs font-black uppercase">{rating}</div>
+                    <div className="text-[10px] text-[var(--text-muted)] font-mono mt-0.5">{getIntervalHint(rating)}</div>
+                  </button>
+                );
+              })}
+            </div>
+            <div className="flex gap-3 justify-center mt-1.5">
+              {onUndoAnswer && session.currentIndex > 0 && (
                 <button
-                  key={rating}
-                  onClick={() => submitAnswer(rating)}
-                  className={`py-4 rounded-xl bg-[var(--bg-card)] border ${cfg.border} ${cfg.bg} ${cfg.color} active:scale-95 transition-all`}
+                  onClick={() => { setIsFlipped(false); setShowGrammar(false); onUndoAnswer(); }}
+                  className="py-2 text-[10px] font-bold text-[var(--text-faint)] uppercase tracking-wider hover:text-[var(--text-muted)] transition-colors"
                 >
-                  <div className="text-xs font-black uppercase">{rating}</div>
-                  <div className="text-[10px] text-[var(--text-muted)] font-mono mt-0.5">{getIntervalHint(rating)}</div>
+                  &larr; Previous card
                 </button>
-              );
-            })}
+              )}
+              <button
+                onClick={() => { setIsFlipped(false); setShowGrammar(false); }}
+                className="py-2 text-[10px] font-bold text-[var(--text-faint)] uppercase tracking-wider hover:text-[var(--text-muted)] transition-colors"
+              >
+                Flip back
+              </button>
+            </div>
           </div>
         )}
 

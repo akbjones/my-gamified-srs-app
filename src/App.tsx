@@ -9,7 +9,7 @@ import { QuestCard, MasteryMap, SessionState, UserStats, DailyStats, Language, L
 import { MAIN_PATH, isNodeUnlocked, getNodeName } from './data/topicConfig';
 import { handleAnswerLogic, saveCardProgress, getRetention, burySiblings } from './services/srsService';
 import {
-  migrateStorageKeys, loadMasteryMap, loadUserStats, saveUserStats,
+  migrateStorageKeys, loadMasteryMap, saveMasteryMap, loadUserStats, saveUserStats,
   loadDailyStats, saveDailyStats, resetAll,
   loadSettings, saveSettings,
   isPlacementComplete, setPlacementComplete, resetPlacement,
@@ -144,6 +144,12 @@ const App: React.FC = () => {
   const [challengeQuestions, setChallengeQuestions] = useState<ChallengeQuestion[]>([]);
   const [showTools, setShowTools] = useState(false);
   const [bonusCards, setBonusCards] = useState(5);
+  // Undo stack for going back to previous cards
+  const [answerHistory, setAnswerHistory] = useState<Array<{
+    session: SessionState;
+    masteryMap: MasteryMap;
+    userStats: UserStats;
+  }>>([]);
   const [session, setSession] = useState<SessionState>({
     language: settings.selectedLanguage,
     topic: '',
@@ -249,10 +255,18 @@ const App: React.FC = () => {
       finishedCount: 0,
       newCardsSeen: 0,
     });
+    setAnswerHistory([]);
     setView('STUDY');
   };
 
   const handleAnswer = (rating: 'AGAIN' | 'HARD' | 'GOOD' | 'EASY') => {
+    // Save snapshot for undo (limit to 20 entries)
+    setAnswerHistory(prev => [...prev.slice(-19), {
+      session: { ...session },
+      masteryMap: { ...masteryMap },
+      userStats: { ...userStats },
+    }]);
+
     const currentCard = session.queue[session.currentIndex];
     const isNewCard = currentCard.mastery === 0;
 
@@ -299,6 +313,17 @@ const App: React.FC = () => {
     saveVocabMap(newVocab, lang);
 
     setSession(prev => ({ ...prev, ...updates }));
+  };
+
+  const handleUndoAnswer = () => {
+    if (answerHistory.length === 0) return;
+    const prev = answerHistory[answerHistory.length - 1];
+    setSession(prev.session);
+    setMasteryMap(prev.masteryMap);
+    saveMasteryMap(prev.masteryMap, lang);
+    setUserStats(prev.userStats);
+    saveUserStats(prev.userStats, lang);
+    setAnswerHistory(h => h.slice(0, -1));
   };
 
   const handleStartChallenge = () => {
@@ -419,7 +444,33 @@ const App: React.FC = () => {
         <section className="animate-fade-in">
           {/* Header row: title + language + theme toggle */}
           <header className="pt-6 pb-5 flex items-center justify-between">
-            <h1 className="text-4xl font-black italic tracking-tighter text-blue-500">LangLab</h1>
+            <div className="flex items-center gap-2.5">
+              {/* Atom icon */}
+              <svg viewBox="-2 -2 36 36" className="w-11 h-11 text-[var(--accent)]" fill="none" overflow="visible">
+                {/* Orbit paths (using <path> so animateMotion works) */}
+                <path id="orb1" d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="0.8" opacity="0.4" />
+                <g transform="rotate(60 16 16)">
+                  <path id="orb2" d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="0.8" opacity="0.4" />
+                </g>
+                <path d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="0.8" opacity="0.4" transform="rotate(120 16 16)" />
+                {/* Electrons orbiting along paths */}
+                <circle r="1.3" fill="currentColor">
+                  <animateMotion dur="3s" repeatCount="indefinite"><mpath href="#orb1" /></animateMotion>
+                </circle>
+                <g transform="rotate(60 16 16)">
+                  <circle r="1.3" fill="currentColor">
+                    <animateMotion dur="4s" repeatCount="indefinite"><mpath href="#orb2" /></animateMotion>
+                  </circle>
+                </g>
+                {/* Nucleus */}
+                <circle cx="16" cy="16" r="2.5" fill="currentColor">
+                  <animate attributeName="r" values="2.5;3;2.5" dur="2s" repeatCount="indefinite" />
+                </circle>
+              </svg>
+              <h1 className="text-2xl font-black tracking-[0.2em] uppercase text-[var(--accent)]" style={{ fontFamily: "'Orbitron', sans-serif" }}>
+                LANG<span className="text-[var(--text-primary)]">LAB</span>
+              </h1>
+            </div>
             <div className="flex items-center gap-1.5">
               <button
                 onClick={() => {
@@ -443,7 +494,7 @@ const App: React.FC = () => {
             </div>
           </header>
 
-          {/* Streak flame + Boss progress */}
+          {/* Streak + Experiment progress */}
           <button
             onClick={() => setView('GAMIFICATION')}
             className="stat-card p-4 mb-3 w-full text-left hover:border-[var(--border-hover)] active:scale-[0.99] transition-all cursor-pointer"
@@ -454,7 +505,7 @@ const App: React.FC = () => {
                 <StreakFlame streak={userStats.streak} freezes={userStats.streakFreezes ?? 0} size="lg" />
               </div>
 
-              {/* Boss progress */}
+              {/* Experiment progress */}
               <div className="text-right">
                 {currentNode && (
                   <div className="text-[10px] font-semibold uppercase tracking-widest mb-1" style={{ color: currentNode.color }}>
@@ -462,13 +513,13 @@ const App: React.FC = () => {
                   </div>
                 )}
                 <div className="text-sm font-extrabold text-[var(--text-primary)] mb-0.5">
-                  Boss {Math.min(progressState.nextBossIndex + 1, 22)} of 22
+                  Experiment {Math.min(progressState.nextBossIndex + 1, 22)} of 22
                 </div>
                 {(() => {
                   const cardsToNextBoss = 150 - (progressState.cumulativeNewCards % 150);
                   return (
                     <div className="text-[10px] text-[var(--text-muted)] font-mono font-bold">
-                      Next boss in {cardsToNextBoss} cards
+                      Next experiment in {cardsToNextBoss} cards
                     </div>
                   );
                 })()}
@@ -483,7 +534,7 @@ const App: React.FC = () => {
               />
             </div>
             <div className="text-[9px] text-[var(--text-faint)] font-bold uppercase tracking-widest text-center mt-2">
-              Tap for stats &amp; boss trophies
+              Tap for stats &amp; achievements
             </div>
           </button>
 
@@ -568,7 +619,7 @@ const App: React.FC = () => {
             className="w-full stat-card p-0 overflow-hidden text-left transition-all hover:border-[var(--border-hover)] group cursor-pointer mb-4"
           >
             <div className="h-1 bg-[var(--progress-bg)]">
-              <div className="h-full bg-blue-500 transition-all" style={{ width: `${getTotalProgress()}%` }} />
+              <div className="h-full bg-[var(--accent)] transition-all" style={{ width: `${getTotalProgress()}%` }} />
             </div>
             <div className="p-3.5 flex items-center justify-between">
               <div className="flex items-center gap-2 text-[10px] text-[var(--text-muted)] font-semibold uppercase tracking-widest group-hover:text-[var(--text-secondary)] transition-colors">
@@ -758,6 +809,7 @@ const App: React.FC = () => {
         <StudySession
           session={session}
           onAnswer={handleAnswer}
+          onUndoAnswer={handleUndoAnswer}
           onAbort={() => { setPendingChallenge(null); setView('HOME'); }}
           onStudyMore={() => handleStartSession(true)}
           hasMoreCards={(() => {
@@ -817,6 +869,7 @@ const App: React.FC = () => {
           vocabMap={vocabMap}
           language={lang}
           onBack={() => setView('HOME')}
+          lookupFn={DICT_LOOKUP[lang] ?? undefined}
         />
       )}
 
@@ -826,9 +879,15 @@ const App: React.FC = () => {
           lang={lang}
           userStats={userStats}
           masteryMap={masteryMap}
-          onComplete={(newMasteryMap, newUserStats) => {
+          onComplete={(newMasteryMap, newUserStats, fastTrackedCount) => {
             setMasteryMap(newMasteryMap);
             setUserStats(newUserStats);
+            // Bump cumulative new cards so bosses become available to fight
+            if (fastTrackedCount > 0) {
+              const newProgress = { ...progressState, cumulativeNewCards: progressState.cumulativeNewCards + fastTrackedCount };
+              setProgressState(newProgress);
+              saveProgressState(newProgress, lang);
+            }
             setView('HOME');
           }}
           onSkip={() => {

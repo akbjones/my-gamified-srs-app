@@ -1,18 +1,18 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { QuestCard, MasteryMap, UserStats, Language, LearningGoal, LANGUAGE_CONFIG } from '../types';
+import { QuestCard, MasteryMap, UserStats, Language, LANGUAGE_CONFIG } from '../types';
 import type { AudioSpeed } from '../services/storageService';
 import { MAIN_PATH, getNodeName } from '../data/topicConfig';
 import { getGrammarNudge } from '../data/grammarDescriptions';
 import { selectPlacementCards, applyPlacementResults, ConfidenceRating } from '../services/placementService';
 import { playCardAudio, stopAudio } from '../services/audioService';
-import { ChevronLeft, ArrowRight, Zap, BookOpen, Volume2 } from 'lucide-react';
+import { ChevronLeft, ArrowRight, BookOpen, Volume2 } from 'lucide-react';
 
 interface PlacementTestProps {
   deck: QuestCard[];
   lang: Language;
   userStats: UserStats;
   masteryMap: MasteryMap;
-  onComplete: (newMasteryMap: MasteryMap, newUserStats: UserStats) => void;
+  onComplete: (newMasteryMap: MasteryMap, newUserStats: UserStats, fastTrackedCount: number) => void;
   onSkip: () => void;
   autoPlayAudio: boolean;
   audioSpeed: AudioSpeed;
@@ -35,7 +35,8 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   const [phase, setPhase] = useState<Phase>('intro');
   const [nodeIndex, setNodeIndex] = useState(0);
   const [cardIndex, setCardIndex] = useState(0);
-  const [noIdeaCount, setNoIdeaCount] = useState(0);
+  // Per-node tracking: count of "mostly" and "no_idea" per node index
+  const [nodeScores, setNodeScores] = useState<Record<number, { mostly: number; noIdea: number }>>({});
   const [lastRating, setLastRating] = useState<ConfidenceRating | null>(null);
   const [ceilingNode, setCeilingNode] = useState<number | null>(null);
   const [showGrammarDetail, setShowGrammarDetail] = useState(false);
@@ -54,16 +55,6 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   const currentCard = placementCards[nodeIndex]?.[cardIndex];
   const nudge = currentNode ? getGrammarNudge(currentNode.id, lang) : '';
 
-  // Count cards that would be fast-tracked
-  const fastTrackCount = useMemo(() => {
-    if (ceilingNode === null && phase !== 'results') return 0;
-    const upTo = ceilingNode !== null ? ceilingNode : MAIN_PATH.length;
-    const nodeIds = new Set(MAIN_PATH.slice(0, upTo).map(n => n.id));
-    return deck.filter(c => nodeIds.has(c.topic) && c.mastery !== 2).length;
-  }, [ceilingNode, phase, deck]);
-
-  const fastTrackXP = fastTrackCount * 10;
-
   // Auto-play audio when a new question appears (not on reveal)
   useEffect(() => {
     if (phase === 'question' && currentCard && autoPlayAudio) {
@@ -79,20 +70,74 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
       .finally(() => setIsPlaying(false));
   };
 
+  // Strict placement scoring:
+  // - 1 "no idea" in a node → fail that node
+  // - 2 "mostly" in a single node → fail that node
+  // - 2 "mostly" across two adjacent nodes → fail the later node
+
   function handleConfidence(rating: ConfidenceRating) {
     setLastRating(rating);
     setShowGrammarDetail(false);
 
-    // Track "no idea" for this node
-    const newNoIdea = rating === 'no_idea' ? noIdeaCount + 1 : noIdeaCount;
-    setNoIdeaCount(newNoIdea);
+    // Update per-node score
+    setNodeScores(prev => {
+      const current = prev[nodeIndex] || { mostly: 0, noIdea: 0 };
+      return {
+        ...prev,
+        [nodeIndex]: {
+          mostly: current.mostly + (rating === 'mostly' ? 1 : 0),
+          noIdea: current.noIdea + (rating === 'no_idea' ? 1 : 0),
+        },
+      };
+    });
 
     setPhase('reveal');
+  }
+
+  function handleRerate() {
+    // Undo the last rating and go back to question
+    if (lastRating) {
+      setNodeScores(prev => {
+        const current = prev[nodeIndex] || { mostly: 0, noIdea: 0 };
+        return {
+          ...prev,
+          [nodeIndex]: {
+            mostly: current.mostly - (lastRating === 'mostly' ? 1 : 0),
+            noIdea: current.noIdea - (lastRating === 'no_idea' ? 1 : 0),
+          },
+        };
+      });
+    }
+    setLastRating(null);
+    setPhase('question');
+  }
+
+  /** Check if a node should be failed based on scores so far */
+  function shouldFailNode(ni: number, scores: Record<number, { mostly: number; noIdea: number }>): boolean {
+    const s = scores[ni] || { mostly: 0, noIdea: 0 };
+    // 1 "no idea" → instant fail
+    if (s.noIdea >= 1) return true;
+    // 2 "mostly" in same node → fail
+    if (s.mostly >= 2) return true;
+    // Adjacent spillover: 1 "mostly" in previous node + 1 "mostly" in this node → fail
+    if (ni > 0 && s.mostly >= 1) {
+      const prev = scores[ni - 1] || { mostly: 0, noIdea: 0 };
+      if (prev.mostly >= 1) return true;
+    }
+    return false;
   }
 
   function handleNext() {
     const nextCardIndex = cardIndex + 1;
     const nodeCards = placementCards[nodeIndex] || [];
+
+    // Check if a "no idea" was just given — fail immediately (don't wait for node to finish)
+    const currentNodeScore = nodeScores[nodeIndex] || { mostly: 0, noIdea: 0 };
+    if (currentNodeScore.noIdea >= 1) {
+      setCeilingNode(nodeIndex);
+      setPhase('results');
+      return;
+    }
 
     if (nextCardIndex < nodeCards.length) {
       // More cards in this node
@@ -102,9 +147,8 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
       return;
     }
 
-    // Finished all cards for this node — check stop condition
-    if (noIdeaCount >= 2) {
-      // Ceiling found
+    // Finished all cards for this node — check stop conditions
+    if (shouldFailNode(nodeIndex, nodeScores)) {
       setCeilingNode(nodeIndex);
       setPhase('results');
       return;
@@ -121,21 +165,20 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
 
     setNodeIndex(nextNode);
     setCardIndex(0);
-    setNoIdeaCount(0);
     setPhase('question');
     setLastRating(null);
   }
 
   function handleApply() {
     const results = { ceilingNodeIndex: ceilingNode };
-    const { newMasteryMap, newUserStats } = applyPlacementResults(
+    const { newMasteryMap, newUserStats, fastTrackedCount } = applyPlacementResults(
       results,
       deck,
       masteryMap,
       userStats,
       lang
     );
-    onComplete(newMasteryMap, newUserStats);
+    onComplete(newMasteryMap, newUserStats, fastTrackedCount);
   }
 
   // ── Intro screen ──────────────────────────────────────────
@@ -160,9 +203,9 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           </p>
           <div className="stat-card p-3.5 mb-6">
             <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-              <span className="font-bold text-[var(--text-primary)]">Focus on grammar, not just vocabulary.</span>
-              {' '}Even if you recognize the words, consider whether you understand the
-              tense, structure, and why the sentence is built the way it is.
+              <span className="font-bold text-[var(--text-primary)]">Be strict with yourself.</span>
+              {' '}Only mark "Know it" if you could reproduce the sentence from memory when prompted.
+              Focus on grammar and structure, not just vocabulary.
             </p>
           </div>
           <p className="text-[10px] text-[var(--text-muted)] uppercase tracking-wider font-semibold mb-8">
@@ -350,13 +393,21 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           )}
         </div>
 
-        {/* Next button */}
-        <button
-          onClick={handleNext}
-          className="w-full py-4 btn-primary rounded-xl text-sm flex items-center justify-center gap-2 shrink-0 mt-2 mb-2"
-        >
-          Next <ArrowRight size={16} />
-        </button>
+        {/* Bottom buttons */}
+        <div className="flex gap-2 shrink-0 mt-2 mb-2">
+          <button
+            onClick={handleRerate}
+            className="px-4 py-4 rounded-xl text-xs font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors border border-[var(--border-color)]"
+          >
+            <ChevronLeft size={14} className="inline -mt-0.5" /> Re-rate
+          </button>
+          <button
+            onClick={handleNext}
+            className="flex-1 py-4 btn-primary rounded-xl text-sm flex items-center justify-center gap-2"
+          >
+            Next <ArrowRight size={16} />
+          </button>
+        </div>
       </div>
     );
   }
@@ -367,8 +418,6 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
     const passedNodes = ceilingNode !== null ? ceilingNode : MAIN_PATH.length;
     const lastPassedNode = passedNodes > 0 ? MAIN_PATH[passedNodes - 1] : null;
     const ceilingNodeObj = ceilingNode !== null ? MAIN_PATH[ceilingNode] : null;
-    const levelsGained = Math.floor(fastTrackXP / 100);
-
     return (
       <div className="flex flex-col h-dvh px-5 py-6">
         <div className="flex-1 flex flex-col justify-center">
@@ -412,48 +461,15 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
               </p>
             </>
           )}
-
-          {/* Stats preview */}
-          {fastTrackCount > 0 && (
-            <div className="stat-card p-4 mb-4">
-              <div className="grid grid-cols-3 gap-3 text-center">
-                <div>
-                  <div className="text-lg font-black font-mono text-[var(--text-primary)]">
-                    {fastTrackCount.toLocaleString()}
-                  </div>
-                  <div className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-muted)]">
-                    Cards
-                  </div>
-                </div>
-                <div>
-                  <div className="text-lg font-black font-mono text-blue-500">
-                    {fastTrackXP.toLocaleString()}
-                  </div>
-                  <div className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-muted)]">
-                    XP
-                  </div>
-                </div>
-                <div>
-                  <div className="text-lg font-black font-mono text-amber-500 flex items-center justify-center gap-1">
-                    <Zap size={14} className="fill-amber-500" />
-                    {levelsGained}
-                  </div>
-                  <div className="text-[10px] font-semibold uppercase tracking-wider text-[var(--text-muted)]">
-                    Levels
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
 
         {/* Apply button */}
-        {fastTrackCount > 0 ? (
+        {ceilingNode !== 0 ? (
           <button
             onClick={handleApply}
             className="w-full py-4 btn-primary rounded-xl text-base mb-3"
           >
-            Apply & Start Learning
+            Start Learning
           </button>
         ) : (
           <button

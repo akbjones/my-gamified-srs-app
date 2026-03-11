@@ -1,7 +1,6 @@
 import { QuestCard, MasteryMap, UserStats, Language } from '../types';
 import { MAIN_PATH } from '../data/topicConfig';
 import { saveMasteryMap, saveUserStats, setPlacementComplete } from './storageService';
-import { awardBulkXP, checkAchievements } from './gamificationService';
 
 /**
  * Pick 2 representative cards per node for the placement test.
@@ -54,7 +53,8 @@ export interface PlacementResults {
 }
 
 /**
- * Apply placement results: graduate cards below ceiling, award XP, save everything.
+ * Apply placement results: graduate cards below ceiling, save everything.
+ * No XP awarded — placement just sets your starting point.
  * Returns updated masteryMap and userStats.
  */
 export function applyPlacementResults(
@@ -63,7 +63,7 @@ export function applyPlacementResults(
   masteryMap: MasteryMap,
   userStats: UserStats,
   lang: Language
-): { newMasteryMap: MasteryMap; newUserStats: UserStats } {
+): { newMasteryMap: MasteryMap; newUserStats: UserStats; fastTrackedCount: number } {
   const now = Date.now();
   const DAY = 24 * 60 * 60 * 1000;
 
@@ -98,18 +98,9 @@ export function applyPlacementResults(
     fastTrackedCount++;
   }
 
-  // Persist
+  // Persist mastery changes (no XP awarded for placement)
   saveMasteryMap(newMap, lang);
-
-  // Award XP
-  const newStats = awardBulkXP(fastTrackedCount, userStats);
-  saveUserStats(newStats, lang);
-
-  // Mark placement done
   setPlacementComplete(lang);
 
-  // Check achievements with new state
-  checkAchievements(newStats, newMap, deck, lang);
-
-  return { newMasteryMap: newMap, newUserStats: newStats };
+  return { newMasteryMap: newMap, newUserStats: userStats, fastTrackedCount };
 }

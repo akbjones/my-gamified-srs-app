@@ -11,8 +11,9 @@
  * Options:
  *   --resume        Skip cards that already have generated files
  *   --concurrency=N Number of parallel requests (default: 20)
- *   --voice=NAME    Google TTS voice name (default: es-US-Standard-A)
+ *   --voice=NAME    Google TTS voice name (default: per language)
  *   --speed=N       Speaking rate 0.25-4.0 (default: 0.95)
+ *   --lang=CODE     Language code: es, it, de, fr (default: es)
  *   --dry-run       Print what would be generated without calling API
  */
 
@@ -24,7 +25,7 @@ const https = require('https');
 const API_KEY = process.env.GOOGLE_TTS_KEY;
 if (!API_KEY) {
   console.error('Error: Set GOOGLE_TTS_KEY environment variable');
-  console.error('Usage: GOOGLE_TTS_KEY=your-key node scripts/generate-audio.cjs');
+  console.error('Usage: GOOGLE_TTS_KEY=your-key node scripts/generate-audio.cjs [--lang=it]');
   process.exit(1);
 }
 
@@ -32,16 +33,30 @@ const args = process.argv.slice(2);
 const resume = args.includes('--resume');
 const dryRun = args.includes('--dry-run');
 const concurrency = parseInt((args.find(a => a.startsWith('--concurrency=')) || '').split('=')[1]) || 20;
-const voiceName = (args.find(a => a.startsWith('--voice=')) || '').split('=')[1] || 'es-US-Standard-A';
 const speakingRate = parseFloat((args.find(a => a.startsWith('--speed=')) || '').split('=')[1]) || 0.95;
 
-const DECK_PATH = path.join(__dirname, '..', 'src', 'data', 'spanish', 'deck.json');
+// Language support — default to Spanish for backwards compatibility
+const lang = (args.find(a => a.startsWith('--lang=')) || '').split('=')[1] || 'es';
+const LANG_DEFAULTS = {
+  es: { voice: 'es-US-Standard-A', prefix: 'es', deckDir: 'spanish' },
+  it: { voice: 'it-IT-Standard-A', prefix: 'it', deckDir: 'italian' },
+  de: { voice: 'de-DE-Standard-A', prefix: 'de', deckDir: 'german' },
+  fr: { voice: 'fr-FR-Standard-A', prefix: 'fr', deckDir: 'french' },
+};
+const langConfig = LANG_DEFAULTS[lang];
+if (!langConfig) {
+  console.error(`Unknown language: ${lang}. Supported: ${Object.keys(LANG_DEFAULTS).join(', ')}`);
+  process.exit(1);
+}
+const voiceName = (args.find(a => a.startsWith('--voice=')) || '').split('=')[1] || langConfig.voice;
+
+const DECK_PATH = path.join(__dirname, '..', 'src', 'data', langConfig.deckDir, 'deck.json');
 const AUDIO_DIR = path.join(__dirname, '..', 'public', 'quest-audio');
 const TTS_URL = `https://texttospeech.googleapis.com/v1/text:synthesize?key=${API_KEY}`;
 
 // ── Helpers ─────────────────────────────────────────────────────
 function audioFilename(cardId) {
-  return `es-${cardId}.mp3`;
+  return `${langConfig.prefix}-${cardId}.mp3`;
 }
 
 function callGoogleTTS(text) {

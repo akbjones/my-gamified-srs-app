@@ -1,179 +1,130 @@
+import { Language } from '../types';
+
 export interface BossData {
-  name: string;       // Spanish name
+  name: string;        // localized boss name
   translation: string; // English translation
-  art: string;         // ASCII art
+  art: string;         // ASCII art (shared across languages)
 }
 
-export const BOSS_ART: BossData[] = [
-  {
-    name: 'El Ratón Astuto',
-    translation: 'The Cunning Mouse',
-    art: `    (\\___/)
+// ── Shared ASCII art for all 22 bosses ─────────────────────────
+const BOSS_ART_SHARED: string[] = [
+  /* 0 */ `    (\\___/)
     (='.'=)
     (")_(")~*`,
-  },
-  {
-    name: 'La Serpiente Sibilante',
-    translation: 'The Hissing Snake',
-    art: `       /^\\/^\\
+
+  /* 1 */ `       /^\\/^\\
       _|__|  o|
  \\/     /~   \\_/ \\
   \\____|__________/
          \\_______/
     ~sssSSSsss~`,
-  },
-  {
-    name: 'El Lobo Hambriento',
-    translation: 'The Hungry Wolf',
-    art: `     /\\    /\\
+
+  /* 2 */ `     /\\    /\\
     {  \\__/  }
     (  o  o  )
      > -==- <
     /        \\
    / GRRRRRR  \\`,
-  },
-  {
-    name: 'La Araña Tejedora',
-    translation: 'The Weaving Spider',
-    art: `    /\\  .-"-.  /\\
+
+  /* 3 */ `    /\\  .-"-.  /\\
    //\\\\/  ,  \\//\\\\
    |/\\| .-~~-. |/\\|
     (  @      @  )
      \\ \\      / /
       ^^ \\~~/ ^^`,
-  },
-  {
-    name: 'El Toro Furioso',
-    translation: 'The Furious Bull',
-    art: `    (__)  (__)
+
+  /* 4 */ `    (__)  (__)
     (oo)\\/(oo)
    __\\/  ~  \\/__
   / |  SNORT  | \\
  *  ||--------||  *
     ^^        ^^`,
-  },
-  {
-    name: 'El Cóndor Vigilante',
-    translation: 'The Watchful Condor',
-    art: `       .---.
+
+  /* 5 */ `       .---.
       / o o \\
      ( \\___/ )
     __/|   |\\__
    /   |^^^|   \\
   /~~~~|   |~~~~\\`,
-  },
-  {
-    name: 'El Jaguar Sigiloso',
-    translation: 'The Stealthy Jaguar',
-    art: `    /\\_/\\
+
+  /* 6 */ `    /\\_/\\
    ( o.o )
     > ^ <
    / | | \\
   (_/   \\_)
    *prowls*`,
-  },
-  {
-    name: 'El Kraken Dormido',
-    translation: 'The Sleeping Kraken',
-    art: `   ___/\\/\\/\\___
+
+  /* 7 */ `   ___/\\/\\/\\___
   /  (o)  (o)  \\
  {    ______    }
   \\  /~~~~~~\\  /
  ~~~||~~~~~~||~~~
     ||      ||`,
-  },
-  {
-    name: 'La Quimera Ardiente',
-    translation: 'The Burning Chimera',
-    art: `   )  ( )  (
+
+  /* 8 */ `   )  ( )  (
   (    Y    )
    )  |||  (
   ( \\|||||/ )
    )||||||||(
   (_/||||||\\_)
   *~FLAMES~*`,
-  },
-  {
-    name: 'El Dragón Gruñón',
-    translation: 'The Grumpy Dragon',
-    art: `      /\\_____/\\
+
+  /* 9 */ `      /\\_____/\\
      /  o   o  \\
     ( ==  ^  == )
      )         (
     (  \\|||||/  )
      \\ ROOAAR! /
       \\_______/`,
-  },
-  // ── Bosses 11-22 ────────────────────────────
-  {
-    name: 'La Medusa Petrificante',
-    translation: 'The Petrifying Medusa',
-    art: `    ~~ ~~~ ~~
+
+  /* 10 */ `    ~~ ~~~ ~~
     \\|/\\|/\\|/
      ( o _ o )
       \\ === /
      __/   \\__
     *ssstone!*`,
-  },
-  {
-    name: 'El Grifo Dorado',
-    translation: 'The Golden Griffin',
-    art: `      ,  ,
+
+  /* 11 */ `      ,  ,
      (\\  /)
       \\ \\/ /
      /|    |\\
     / | <> | \\
    /~~|    |~~\\
       \\____/`,
-  },
-  {
-    name: 'La Tortuga Ancestral',
-    translation: 'The Ancient Turtle',
-    art: `    ___-------___
+
+  /* 12 */ `    ___-------___
    /               \\
   /  .---.   .---.  \\
  |  ( o  )   ( o  ) |
   \\  '---' ^ '---' /
    \\_____===_____/
    *slow but wise*`,
-  },
-  {
-    name: 'El Cuervo de Sombras',
-    translation: 'The Shadow Raven',
-    art: `      ,,,
+
+  /* 13 */ `      ,,,
      (o o)
     /(   )\\
    /  )--(  \\
   /  / !! \\  \\
  /__/  !!  \\__\\
    *CAWWW!*`,
-  },
-  {
-    name: 'El Oso Polar',
-    translation: 'The Polar Bear',
-    art: `    (\\____/)
+
+  /* 14 */ `    (\\____/)
     / @  @ \\
    (  >wb<  )
     )       (
    (  GRRRR  )
     \\_______/
     *ROAR!!*`,
-  },
-  {
-    name: 'La Mantis Letal',
-    translation: 'The Lethal Mantis',
-    art: `   \\    /
+
+  /* 15 */ `   \\    /
     \\  /
    (O  O)
     |  |
    /|  |\\
   / |  | \\
     *snip*`,
-  },
-  {
-    name: 'El Tiburón Abismal',
-    translation: 'The Abyssal Shark',
-    art: `         |\\
+
+  /* 16 */ `         |\\
          | \\
     |\\   |  \\
     | \\  |   >--<
@@ -181,11 +132,8 @@ export const BOSS_ART: BossData[] = [
     | /  | \\___/
     |/   |
    *CHOMP!*`,
-  },
-  {
-    name: 'El Golem de Piedra',
-    translation: 'The Stone Golem',
-    art: `    [=====]
+
+  /* 17 */ `    [=====]
     |  .  .|
     | (__) |
    /|      |\\
@@ -193,32 +141,23 @@ export const BOSS_ART: BossData[] = [
     |  /\\  |
     |_/  \\_|
     *THUD!*`,
-  },
-  {
-    name: 'La Fénix Renacida',
-    translation: 'The Reborn Phoenix',
-    art: `     )  (  )
+
+  /* 18 */ `     )  (  )
     ( )  Y (  )
      ) \\||| ( )
     ( ~|||||~ )
      )||||||||(
      *BLAZES!*`,
-  },
-  {
-    name: 'El Minotauro Furioso',
-    translation: 'The Raging Minotaur',
-    art: `   |\\_____/|
+
+  /* 19 */ `   |\\_____/|
     (  o o  )
      ( _||_ )
     /|  ||  |\\
    / | \\||/ | \\
   *  |======|  *
      *CHARGE!*`,
-  },
-  {
-    name: 'La Hidra Inmortal',
-    translation: 'The Immortal Hydra',
-    art: `  o   o   o
+
+  /* 20 */ `  o   o   o
   |\\  |  /|
    \\ \\|/ /
     \\   /
@@ -226,11 +165,8 @@ export const BOSS_ART: BossData[] = [
     /   \\
    /     \\
   *3 HEADS!*`,
-  },
-  {
-    name: 'El Rey Serpiente',
-    translation: 'The Serpent King',
-    art: `     .vVVVv.
+
+  /* 21 */ `     .vVVVv.
     /  o  o  \\
    (  \\=====/  )
     \\  \\   /  /
@@ -238,9 +174,70 @@ export const BOSS_ART: BossData[] = [
       V     V
     *HISSSS!*
    **FINAL BOSS**`,
-  },
 ];
 
-export function getBossForIndex(bossIndex: number): BossData {
-  return BOSS_ART[Math.min(bossIndex, BOSS_ART.length - 1)];
+// ── Per-language boss names ────────────────────────────────────
+interface BossName { name: string; translation: string; }
+
+export const BOSS_NAMES: Record<string, BossName[]> = {
+  spanish: [
+    { name: 'El Ratón Astuto',          translation: 'The Cunning Mouse' },
+    { name: 'La Serpiente Sibilante',    translation: 'The Hissing Snake' },
+    { name: 'El Lobo Hambriento',        translation: 'The Hungry Wolf' },
+    { name: 'La Araña Tejedora',         translation: 'The Weaving Spider' },
+    { name: 'El Toro Furioso',           translation: 'The Furious Bull' },
+    { name: 'El Cóndor Vigilante',       translation: 'The Watchful Condor' },
+    { name: 'El Jaguar Sigiloso',        translation: 'The Stealthy Jaguar' },
+    { name: 'El Kraken Dormido',         translation: 'The Sleeping Kraken' },
+    { name: 'La Quimera Ardiente',       translation: 'The Burning Chimera' },
+    { name: 'El Dragón Gruñón',          translation: 'The Grumpy Dragon' },
+    { name: 'La Medusa Petrificante',    translation: 'The Petrifying Medusa' },
+    { name: 'El Grifo Dorado',           translation: 'The Golden Griffin' },
+    { name: 'La Tortuga Ancestral',      translation: 'The Ancient Turtle' },
+    { name: 'El Cuervo de Sombras',      translation: 'The Shadow Raven' },
+    { name: 'El Oso Polar',              translation: 'The Polar Bear' },
+    { name: 'La Mantis Letal',           translation: 'The Lethal Mantis' },
+    { name: 'El Tiburón Abismal',        translation: 'The Abyssal Shark' },
+    { name: 'El Golem de Piedra',        translation: 'The Stone Golem' },
+    { name: 'La Fénix Renacida',         translation: 'The Reborn Phoenix' },
+    { name: 'El Minotauro Furioso',      translation: 'The Raging Minotaur' },
+    { name: 'La Hidra Inmortal',         translation: 'The Immortal Hydra' },
+    { name: 'El Rey Serpiente',          translation: 'The Serpent King' },
+  ],
+  italian: [
+    { name: 'Il Topo Astuto',            translation: 'The Cunning Mouse' },
+    { name: 'Il Serpente Sibilante',     translation: 'The Hissing Snake' },
+    { name: 'Il Lupo Affamato',          translation: 'The Hungry Wolf' },
+    { name: 'Il Ragno Tessitore',        translation: 'The Weaving Spider' },
+    { name: 'Il Toro Furioso',           translation: 'The Furious Bull' },
+    { name: 'Il Condor Vigile',          translation: 'The Watchful Condor' },
+    { name: 'Il Giaguaro Furtivo',       translation: 'The Stealthy Jaguar' },
+    { name: 'Il Kraken Dormiente',       translation: 'The Sleeping Kraken' },
+    { name: 'La Chimera Ardente',        translation: 'The Burning Chimera' },
+    { name: 'Il Drago Scontroso',        translation: 'The Grumpy Dragon' },
+    { name: 'La Medusa Pietrificante',   translation: 'The Petrifying Medusa' },
+    { name: 'Il Grifone Dorato',         translation: 'The Golden Griffin' },
+    { name: 'La Tartaruga Ancestrale',   translation: 'The Ancient Turtle' },
+    { name: 'Il Corvo delle Ombre',      translation: 'The Shadow Raven' },
+    { name: "L'Orso Polare",             translation: 'The Polar Bear' },
+    { name: 'La Mantide Letale',         translation: 'The Lethal Mantis' },
+    { name: 'Lo Squalo Abissale',        translation: 'The Abyssal Shark' },
+    { name: 'Il Golem di Pietra',        translation: 'The Stone Golem' },
+    { name: 'La Fenice Rinata',          translation: 'The Reborn Phoenix' },
+    { name: 'Il Minotauro Furioso',      translation: 'The Raging Minotaur' },
+    { name: "L'Idra Immortale",          translation: 'The Immortal Hydra' },
+    { name: 'Il Re Serpente',            translation: 'The Serpent King' },
+  ],
+  // german / french: add when those languages get decks
+};
+
+// ── Public API ─────────────────────────────────────────────────
+export function getBossForIndex(bossIndex: number, lang: Language): BossData {
+  const idx = Math.min(bossIndex, BOSS_ART_SHARED.length - 1);
+  const names = (BOSS_NAMES[lang] ?? BOSS_NAMES.spanish)[idx];
+  return {
+    name: names.name,
+    translation: names.translation,
+    art: BOSS_ART_SHARED[idx],
+  };
 }

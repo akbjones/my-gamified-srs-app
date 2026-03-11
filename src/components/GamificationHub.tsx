@@ -1,5 +1,5 @@
 import React from 'react';
-import { Achievement, UserStats, BossRecord } from '../types';
+import { Achievement, UserStats, BossRecord, Language } from '../types';
 import { Lock, Unlock, Swords } from 'lucide-react';
 import { getXPProgress } from '../services/gamificationService';
 import { getBossForIndex } from '../data/bossArt';
@@ -12,6 +12,7 @@ interface GamificationHubProps {
   onBack: () => void;
   bossRecords: BossRecord[];
   nextBossIndex: number;
+  language: Language;
 }
 
 const RING_STYLES = {
@@ -23,7 +24,7 @@ const RING_STYLES = {
 
 const RING_EMOJI = { none: '', bronze: '🥉', silver: '🥈', gold: '👑' };
 
-const GamificationHub: React.FC<GamificationHubProps> = ({ stats, achievements, retention, onBack, bossRecords, nextBossIndex }) => {
+const GamificationHub: React.FC<GamificationHubProps> = ({ stats, achievements, retention, onBack, bossRecords, nextBossIndex, language }) => {
   const { current, needed, percent } = getXPProgress(stats.xp);
   const nextLevelXp = (stats.level) * 100;
 
@@ -87,7 +88,7 @@ const GamificationHub: React.FC<GamificationHubProps> = ({ stats, achievements, 
         <div className="grid grid-cols-5 gap-2">
           {Array.from({ length: 22 }).map((_, i) => {
             const record = bossRecords.find(r => r.bossIndex === i);
-            const boss = getBossForIndex(i);
+            const boss = getBossForIndex(i, language);
             const isNext = i === nextBossIndex;
             const isLocked = i > nextBossIndex;
             const ring = record?.bestRing || 'none';

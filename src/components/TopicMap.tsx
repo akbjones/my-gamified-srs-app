@@ -1,14 +1,15 @@
 import React, { useRef, useEffect } from 'react';
-import { QuestCard } from '../types';
-import { MAIN_PATH, isNodeUnlocked } from '../data/topicConfig';
+import { QuestCard, Language, LANGUAGE_CONFIG } from '../types';
+import { MAIN_PATH, isNodeUnlocked, getNodeName } from '../data/topicConfig';
 import { ChevronLeft, Lock, Check } from 'lucide-react';
 
 interface TopicMapProps {
   cards: QuestCard[];
+  language: Language;
   onBack: () => void;
 }
 
-const TopicMap: React.FC<TopicMapProps> = ({ cards, onBack }) => {
+const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
   const activeRef = useRef<HTMLDivElement>(null);
 
   const getNodeProgress = (nodeId: string) => {
@@ -46,7 +47,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, onBack }) => {
           <span>Back</span>
         </button>
         <div className="text-center">
-          <h1 className="text-lg font-black uppercase tracking-tight text-[var(--text-primary)]">Spanish</h1>
+          <h1 className="text-lg font-black uppercase tracking-tight text-[var(--text-primary)]">{LANGUAGE_CONFIG[language].name}</h1>
         </div>
         <div className="text-sm font-black text-blue-500">{getTotalProgress()}%</div>
       </header>
@@ -127,7 +128,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, onBack }) => {
                       <span className={`font-bold text-sm ${
                         !unlocked ? 'text-[var(--text-muted)]' : 'text-[var(--text-primary)]'
                       }`}>
-                        {node.name}
+                        {getNodeName(node.id, language)}
                       </span>
                     </div>
                     {unlocked && (

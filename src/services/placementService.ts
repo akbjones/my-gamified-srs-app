@@ -4,10 +4,13 @@ import { saveMasteryMap, saveUserStats, setPlacementComplete } from './storageSe
 import { awardBulkXP, checkAchievements } from './gamificationService';
 
 /**
- * Pick 3 representative cards per node for the placement test.
+ * Pick 2 representative cards per node for the placement test.
+ * With 35 nodes this gives 70 cards total (manageable test length).
  * Prefers cards with grammar field populated (better for the reveal phase).
  * Uses evenly-spaced index picking for diversity within each node.
  */
+const CARDS_PER_NODE = 2;
+
 export function selectPlacementCards(deck: QuestCard[]): QuestCard[][] {
   const result: QuestCard[][] = [];
 
@@ -27,11 +30,11 @@ export function selectPlacementCards(deck: QuestCard[]): QuestCard[][] {
     };
 
     const selected: QuestCard[] = [];
-    if (withGrammar.length >= 3) {
-      selected.push(...pickSpread(withGrammar, 3));
+    if (withGrammar.length >= CARDS_PER_NODE) {
+      selected.push(...pickSpread(withGrammar, CARDS_PER_NODE));
     } else {
       selected.push(...withGrammar);
-      const remaining = 3 - selected.length;
+      const remaining = CARDS_PER_NODE - selected.length;
       if (remaining > 0) {
         selected.push(...pickSpread(withoutGrammar, remaining));
       }

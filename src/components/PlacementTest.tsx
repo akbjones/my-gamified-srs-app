@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { QuestCard, MasteryMap, UserStats, Language, LearningGoal } from '../types';
-import { MAIN_PATH } from '../data/topicConfig';
-import { GRAMMAR_NUDGES } from '../data/grammarDescriptions';
+import { QuestCard, MasteryMap, UserStats, Language, LearningGoal, LANGUAGE_CONFIG } from '../types';
+import { MAIN_PATH, getNodeName } from '../data/topicConfig';
+import { getGrammarNudge } from '../data/grammarDescriptions';
 import { selectPlacementCards, applyPlacementResults, ConfidenceRating } from '../services/placementService';
 import { ChevronLeft, ArrowRight, Zap, BookOpen } from 'lucide-react';
 
@@ -32,7 +32,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   const [ceilingNode, setCeilingNode] = useState<number | null>(null);
   const [showGrammarDetail, setShowGrammarDetail] = useState(false);
 
-  // Pre-select 3 cards per node
+  // Pre-select 2 cards per node (35 nodes × 2 = 70 total cards)
   const placementCards = useMemo(() => selectPlacementCards(deck), [deck]);
 
   // Total cards across all nodes (for progress bar)
@@ -43,7 +43,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
 
   const currentNode = MAIN_PATH[nodeIndex];
   const currentCard = placementCards[nodeIndex]?.[cardIndex];
-  const nudge = currentNode ? GRAMMAR_NUDGES[currentNode.id] || '' : '';
+  const nudge = currentNode ? getGrammarNudge(currentNode.id, lang) : '';
 
   // Count cards that would be fast-tracked
   const fastTrackCount = useMemo(() => {
@@ -131,7 +131,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
             What do you already know?
           </h1>
           <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
-            We'll show you Spanish sentences from easy to advanced.
+            We'll show you {LANGUAGE_CONFIG[lang].name} sentences from easy to advanced.
             Rate how well you understand each one.
           </p>
           <div className="stat-card p-3.5 mb-6">
@@ -177,7 +177,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
               {currentNode.tier}
             </span>
             <span className="text-xs font-bold text-[var(--text-secondary)]">
-              {currentNode.name}
+              {getNodeName(currentNode.id, lang)}
             </span>
           </div>
           <span className="text-[10px] font-mono text-[var(--text-muted)]">
@@ -245,7 +245,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
               {currentNode.tier}
             </span>
             <span className="text-xs font-bold text-[var(--text-secondary)]">
-              {currentNode.name}
+              {getNodeName(currentNode.id, lang)}
             </span>
           </div>
           <span className={`text-[10px] font-black uppercase tracking-wider ${
@@ -345,10 +345,10 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
                 {lastPassedNode?.tier}
               </h1>
               <p className="text-sm text-[var(--text-secondary)] mb-6">
-                Comfortable through <span className="font-bold">{lastPassedNode?.name}</span>
+                Comfortable through <span className="font-bold">{lastPassedNode ? getNodeName(lastPassedNode.id, lang) : ''}</span>
               </p>
               <p className="text-xs text-[var(--text-muted)] mb-1">
-                Starting from: <span className="font-bold" style={{ color: ceilingNodeObj?.color }}>{ceilingNodeObj?.tier} — {ceilingNodeObj?.name}</span>
+                Starting from: <span className="font-bold" style={{ color: ceilingNodeObj?.color }}>{ceilingNodeObj?.tier} — {ceilingNodeObj ? getNodeName(ceilingNodeObj.id, lang) : ''}</span>
               </p>
             </>
           ) : ceilingNode === 0 ? (

@@ -1,8 +1,18 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { lookupWord, DictEntry } from '../data/dictionary/es';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
+import ReactDOM from 'react-dom';
+import { lookupWord as lookupEs, DictEntry } from '../data/dictionary/es';
+import { lookupWord as lookupIt } from '../data/dictionary/it';
+import { Language } from '../types';
+
+// Dynamic lookup per language — gracefully returns null for languages without a dictionary
+const LOOKUP_FNS: Partial<Record<Language, (w: string) => DictEntry | null>> = {
+  spanish: lookupEs,
+  italian: lookupIt,
+};
 
 interface WordPopoverProps {
   sentence: string;
+  language: Language;
   className?: string;
 }
 
@@ -17,11 +27,16 @@ const POS_LABELS: Record<string, string> = {
   pron: 'pron',
 };
 
-const WordPopover: React.FC<WordPopoverProps> = ({ sentence, className = '' }) => {
+const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className = '' }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const [popoverPos, setPopoverPos] = useState<'above' | 'below'>('above');
+  const [popoverRect, setPopoverRect] = useState<DOMRect | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const wordRefs = useRef<(HTMLSpanElement | null)[]>([]);
+
+  const lookup = useCallback(
+    (word: string) => (LOOKUP_FNS[language] ?? (() => null))(word),
+    [language],
+  );
 
   // Tokenize: split on spaces, keeping punctuation attached to words
   const tokens = sentence.split(/(\s+)/).filter(Boolean);
@@ -44,18 +59,20 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, className = '' }) =
     const token = tokens[index];
     if (!token || token.trim() === '') return;
 
-    const entry = lookupWord(token);
+    const entry = lookup(token);
     if (!entry) return;
 
-    // Determine if popover should go above or below
+    // Get the word element's viewport rect for portal positioning
     const wordEl = wordRefs.current[index];
     if (wordEl) {
-      const rect = wordEl.getBoundingClientRect();
-      setPopoverPos(rect.top > 200 ? 'above' : 'below');
+      setPopoverRect(wordEl.getBoundingClientRect());
     }
 
     setActiveIndex(activeIndex === index ? null : index);
   };
+
+  // Get the active entry for the portal popover
+  const activeEntry = activeIndex !== null ? lookup(tokens[activeIndex]) : null;
 
   return (
     <div ref={containerRef} className={`inline ${className}`}>
@@ -63,7 +80,7 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, className = '' }) =
         // Whitespace tokens
         if (token.trim() === '') return <span key={i}>{token}</span>;
 
-        const entry = lookupWord(token);
+        const entry = lookup(token);
         const isActive = activeIndex === i;
         const hasEntry = entry !== null;
 
@@ -80,27 +97,57 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, className = '' }) =
             >
               {token}
             </span>
-
-            {/* Popover */}
-            {isActive && entry && (
-              <Popover entry={entry} position={popoverPos} />
-            )}
           </span>
         );
       })}
+
+      {/* Portal popover — rendered at document body to escape overflow containers */}
+      {activeEntry && popoverRect && (
+        <PopoverPortal entry={activeEntry} wordRect={popoverRect} />
+      )}
     </div>
   );
 };
 
-const Popover: React.FC<{ entry: DictEntry; position: 'above' | 'below' }> = ({ entry, position }) => {
-  return (
+/** Fixed-position popover rendered via portal to escape overflow:hidden/auto parents */
+const PopoverPortal: React.FC<{ entry: DictEntry; wordRect: DOMRect }> = ({ entry, wordRect }) => {
+  const popoverRef = useRef<HTMLDivElement>(null);
+  const [measured, setMeasured] = useState(false);
+  const [finalPos, setFinalPos] = useState({ top: 0, left: 0 });
+  const [position, setPosition] = useState<'above' | 'below'>('above');
+
+  useEffect(() => {
+    if (!popoverRef.current) return;
+    const popH = popoverRef.current.offsetHeight;
+    const popW = popoverRef.current.offsetWidth;
+    const gap = 8;
+
+    // Prefer above; fall below if not enough room
+    const goAbove = wordRect.top > popH + gap + 20;
+    setPosition(goAbove ? 'above' : 'below');
+
+    const top = goAbove
+      ? wordRect.top - popH - gap
+      : wordRect.bottom + gap;
+
+    // Center horizontally on the word, clamped to viewport
+    let left = wordRect.left + wordRect.width / 2 - popW / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - popW - 8));
+
+    setFinalPos({ top, left });
+    setMeasured(true);
+  }, [wordRect]);
+
+  return ReactDOM.createPortal(
     <div
-      className={`
-        absolute z-50 left-1/2 -translate-x-1/2 w-52
-        bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl shadow-lg
-        p-3 animate-fade-in
-        ${position === 'above' ? 'bottom-full mb-2' : 'top-full mt-2'}
-      `}
+      ref={popoverRef}
+      className="fixed z-[9999] w-72 max-w-[90vw] bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl shadow-lg p-4 animate-fade-in"
+      style={{
+        top: finalPos.top,
+        left: finalPos.left,
+        opacity: measured ? 1 : 0,
+        pointerEvents: measured ? 'auto' : 'none',
+      }}
       onClick={(e) => e.stopPropagation()}
     >
       {/* Arrow */}
@@ -116,24 +163,25 @@ const Popover: React.FC<{ entry: DictEntry; position: 'above' | 'below' }> = ({ 
       />
 
       {/* Translation */}
-      <div className="text-sm font-bold text-[var(--text-primary)] leading-snug">
+      <div className="text-base font-bold text-[var(--text-primary)] leading-snug">
         {entry.en}
       </div>
 
       {/* IPA */}
-      <div className="text-xs text-blue-500 font-mono mt-1">
+      <div className="text-sm text-blue-500 font-mono mt-1.5">
         /{entry.ipa}/
       </div>
 
       {/* Part of speech */}
       {entry.pos && (
-        <div className="mt-1.5">
-          <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--text-muted)] bg-[var(--bg-inset)] px-1.5 py-0.5 rounded">
+        <div className="mt-2">
+          <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)] bg-[var(--bg-inset)] px-1.5 py-0.5 rounded">
             {POS_LABELS[entry.pos] || entry.pos}
           </span>
         </div>
       )}
-    </div>
+    </div>,
+    document.body
   );
 };
 

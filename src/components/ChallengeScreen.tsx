@@ -50,7 +50,7 @@ const ChallengeScreen: React.FC<ChallengeScreenProps> = ({
   const [answers, setAnswers] = useState<boolean[]>([]);
   const [startTime, setStartTime] = useState(0);
 
-  const boss = useMemo(() => getBossForIndex(bossIndex), [bossIndex]);
+  const boss = useMemo(() => getBossForIndex(bossIndex, language), [bossIndex, language]);
   const totalQuestions = questions.length;
   const correctCount = answers.filter(Boolean).length;
   const elapsedMs = startTime > 0 ? Date.now() - startTime : 0;

@@ -1,34 +1,117 @@
+import { Language } from '../types';
+
 /**
  * Node-level grammar nudges for the placement test.
  * Shown after revealing the English translation to prompt
  * the user to think about sentence structure, not just vocabulary.
+ *
+ * Per-language: each language gets nudges phrased for its own grammar.
+ * Falls back to a generic English description if no entry exists.
  */
 
-export const GRAMMAR_NUDGES: Record<string, string> = {
-  'node-01': 'This sentence uses the present tense — regular verb conjugation for everyday actions and states.',
-  'node-02': 'This sentence distinguishes "ser" (identity, traits) from "estar" (states, location, conditions).',
-  'node-03': 'This sentence uses Spanish question structures — notice the interrogative words and inverted punctuation.',
-  'node-04': 'This sentence demonstrates grammatical gender — nouns are masculine or feminine, and articles must agree.',
-  'node-05': 'This sentence uses a "reverse construction" verb like gustar — the thing liked is the subject, not the person.',
-  'node-06': 'This sentence uses the preterite tense — completed, one-time actions in the past.',
-  'node-07': 'This sentence uses the imperfect tense — ongoing, habitual, or background actions in the past.',
-  'node-08': 'This sentence uses a reflexive verb — the action is performed on oneself (me, te, se, nos).',
-  'node-09': 'This sentence distinguishes "por" (cause, exchange, duration) from "para" (purpose, destination, deadline).',
-  'node-10': 'This sentence uses direct or indirect object pronouns — notice how they are placed before the verb.',
-  'node-11': 'This sentence uses the subjunctive mood — triggered by wishes, doubts, emotions, or hypothetical situations.',
-  'node-12': 'This sentence uses the imperative form — giving instructions, orders, or polite requests.',
-  'node-13': 'This sentence uses the conditional tense — expressing what would happen, polite requests, or hypotheticals.',
-  'node-14': 'This sentence uses the future tense or a perfect tense (haber + participle) for completed or upcoming actions.',
-  'node-15': 'This sentence uses a relative clause — "que", "quien", "donde", or "cuyo" to connect clauses.',
-  'node-16': 'This sentence uses the imperfect subjunctive — hypothetical past scenarios, polite suggestions, or "if" clauses.',
-  'node-17': 'This sentence uses a complex conditional — "if X had happened, Y would have happened."',
-  'node-18': 'This sentence uses a passive or impersonal construction — "se" as a marker for general statements.',
-  'node-19': 'This sentence uses advanced linking words — discourse markers that build complex arguments.',
-  'node-20': 'This sentence combines multiple advanced grammar patterns — a hallmark of near-native fluency.',
-  'node-21': 'This sentence explores subjunctive nuances — mood contrasts like "no creo que", "como si", or "el hecho de que".',
-  'node-22': 'This sentence uses a verb phrase construction — combinations like "llevar + gerund", "acabar de + infinitive", or "ponerse a + infinitive".',
-  'node-23': 'This sentence uses reported speech (estilo indirecto) — conveying what someone said with tense shifting and reference changes.',
-  'node-24': 'This sentence uses formal or literary register — structures like the pretérito anterior, future of probability, or academic discourse markers.',
-  'node-25': 'This sentence uses idiomatic expressions — proverbs, fixed phrases, or colloquial constructions typical of native fluency.',
-  'node-26': 'This sentence uses complex syntactic structures — participial clauses, multiple subordination, or nominalization.',
+export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> = {
+  spanish: {
+    // ── A1 — Foundations ──────────────────────────────────────────
+    'node-01': 'This sentence uses regular present tense — notice the -ar, -er, -ir verb endings for everyday actions.',
+    'node-02': 'This sentence features an irregular present verb — stems change or forms are unique (soy, tengo, voy, hago, digo).',
+    'node-03': 'This sentence distinguishes "ser" (identity, traits, origin) from "estar" (states, location, conditions).',
+    'node-04': 'This sentence uses a question structure — notice the interrogative words (qué, cómo, dónde, cuándo) and inverted punctuation.',
+    'node-05': 'This sentence demonstrates grammatical gender — nouns are masculine or feminine, and articles/adjectives must agree.',
+    'node-06': 'This sentence uses a "reverse construction" verb like gustar — the thing liked is the subject, not the person.',
+    'node-07': 'This sentence uses descriptive language — adjectives, "hay" (there is/are), colors, sizes, and basic characterization.',
+    'node-08': 'This sentence uses a common expression — greetings, numbers, time, weather, or fixed everyday phrases.',
+
+    // ── A2 — Past & Pronouns ──────────────────────────────────────
+    'node-09': 'This sentence uses the preterite with regular verbs — completed, one-time past actions with standard -é/-aste/-ó endings.',
+    'node-10': 'This sentence uses an irregular preterite form — verbs with stem changes (tuvo, hizo, fue, dijo, puso) in the past.',
+    'node-11': 'This sentence uses the imperfect tense — habitual, ongoing, or background actions in the past (-aba/-ía endings).',
+    'node-12': 'This sentence contrasts preterite vs imperfect — deciding which past tense fits based on completion vs background.',
+    'node-13': 'This sentence uses a reflexive verb — the action is performed on oneself (me lavo, se despierta, nos sentamos).',
+    'node-14': 'This sentence distinguishes "por" (cause, exchange, duration) from "para" (purpose, destination, deadline).',
+    'node-15': 'This sentence uses object pronouns — direct (lo, la, los, las), indirect (le, les), or combined placement.',
+
+    // ── B1 — Moods & Complex Tenses ──────────────────────────────
+    'node-16': 'This sentence uses the present subjunctive — triggered by wishes, doubts, emotions, or hypothetical situations.',
+    'node-17': 'This sentence uses the imperative — giving commands, instructions, or polite requests (tú, usted, nosotros forms).',
+    'node-18': 'This sentence uses the conditional — expressing what would happen, polite requests, or hypothetical outcomes.',
+    'node-19': 'This sentence uses the simple future tense — upcoming actions, plans, or probability (hablaré, tendrá, iremos).',
+    'node-20': 'This sentence uses a relative clause — "que", "quien", "donde", or "cuyo" to connect and describe within clauses.',
+    'node-21': 'This sentence uses a compound tense — haber + participle for pluperfect, future perfect, or conditional perfect.',
+
+    // ── B2 — Advanced Grammar ─────────────────────────────────────
+    'node-22': 'This sentence uses the imperfect subjunctive — hypothetical past, wishes, or "si" clauses (-ara/-iera endings).',
+    'node-23': 'This sentence uses a complex conditional — "si hubiera…, habría…" (if X had happened, Y would have happened).',
+    'node-24': 'This sentence uses a passive or impersonal construction — "se" as a marker for general statements or passive voice.',
+    'node-25': 'This sentence uses advanced discourse connectors — sin embargo, no obstante, por lo tanto, a pesar de que, etc.',
+    'node-26': 'This sentence uses a verb phrase — llevar + gerund, acabar de + infinitive, ponerse a + infinitive, and similar.',
+    'node-27': 'This sentence uses reported speech (estilo indirecto) — conveying what someone said with tense and reference shifts.',
+
+    // ── C1 — Refinement ───────────────────────────────────────────
+    'node-28': 'This sentence explores subjunctive nuances — mood contrasts with "como si", "el hecho de que", or "no creo que".',
+    'node-29': 'This sentence uses formal or literary register — usted forms, passato remoto, academic markers, or elevated style.',
+    'node-30': 'This sentence uses an idiomatic expression — proverbs, fixed phrases, or colloquial constructions of native speakers.',
+    'node-31': 'This sentence uses complex syntax — participial clauses, multiple subordination, or nominalization patterns.',
+
+    // ── C2 — Mastery ──────────────────────────────────────────────
+    'node-32': 'This sentence uses literary tenses or narrative style — literary past, poetic register, or storytelling constructions.',
+    'node-33': 'This sentence uses academic or professional discourse — formal argumentation, technical register, structured reasoning.',
+    'node-34': 'This sentence reflects cultural fluency — culturally embedded expressions, regional variation, or proverb usage.',
+    'node-35': 'This sentence combines multiple advanced patterns — near-native complexity across grammar, register, and idiom.',
+  },
+  italian: {
+    // ── A1 — Foundations ──────────────────────────────────────────
+    'node-01': 'This sentence uses the presente indicativo — regular -are, -ere, -ire verb conjugation for everyday actions.',
+    'node-02': 'This sentence features an irregular present verb — unique forms like sono, ho, vado, faccio, dico, vengo.',
+    'node-03': 'This sentence distinguishes "essere" (identity, origin) from "stare" (states, conditions, progressive).',
+    'node-04': 'This sentence uses a question structure — interrogative words (che, come, dove, quando, perché) and word order.',
+    'node-05': 'This sentence demonstrates articles and gender — il/lo/la/i/gli/le agree with nouns in gender and number.',
+    'node-06': 'This sentence uses a "reverse construction" verb like piacere — the thing liked is the subject, not the person.',
+    'node-07': 'This sentence uses descriptive language — adjectives, "c\'è/ci sono" (there is/are), and basic characterization.',
+    'node-08': 'This sentence uses a common expression — greetings, numbers, time, weather, or fixed everyday phrases.',
+
+    // ── A2 — Past & Pronouns ──────────────────────────────────────
+    'node-09': 'This sentence uses the passato prossimo with regular verbs — avere/essere + regular past participles (-ato/-uto/-ito).',
+    'node-10': 'This sentence uses an irregular passato prossimo — irregular participles (fatto, detto, scritto) or essere-verbs.',
+    'node-11': 'This sentence uses the imperfetto — habitual, ongoing, or background actions in the past (-avo/-evo/-ivo endings).',
+    'node-12': 'This sentence contrasts passato prossimo vs imperfetto — choosing the right past tense for the context.',
+    'node-13': 'This sentence uses a reflexive verb — the action is performed on oneself (mi lavo, si sveglia, ci sediamo).',
+    'node-14': 'This sentence distinguishes "per" (purpose, duration, exchange) from "da" (origin, agent, since, at someone\'s place).',
+    'node-15': 'This sentence uses object pronouns — direct (lo, la, li, le), indirect (gli, le), combined, ne, and ci.',
+
+    // ── B1 — Moods & Complex Tenses ──────────────────────────────
+    'node-16': 'This sentence uses the congiuntivo presente — triggered by opinions, emotions, doubt, or necessity (che + subjunctive).',
+    'node-17': 'This sentence uses the imperativo — commands and requests. Negative tu-form uses "non" + infinitive.',
+    'node-18': 'This sentence uses the condizionale — expressing what would happen, polite requests, or hypothetical outcomes.',
+    'node-19': 'This sentence uses the futuro semplice — upcoming actions, plans, or conjecture/probability.',
+    'node-20': 'This sentence uses a relative clause — "che", "cui", "il quale", or "dove" to connect and describe.',
+    'node-21': 'This sentence uses a compound tense — avere/essere + participle for trapassato, futuro anteriore, or condizionale passato.',
+
+    // ── B2 — Advanced Grammar ─────────────────────────────────────
+    'node-22': 'This sentence uses the congiuntivo imperfetto — hypothetical past, wishes, or "se" clauses (-assi/-essi/-issi).',
+    'node-23': 'This sentence uses a complex periodo ipotetico — "se avessi…, avrei…" (if X had happened, Y would have happened).',
+    'node-24': 'This sentence uses a passive or impersonal construction — "si" impersonale or "venire" + past participle.',
+    'node-25': 'This sentence uses advanced discourse connectors — tuttavia, pertanto, nonostante, malgrado, purché, etc.',
+    'node-26': 'This sentence uses a verb phrase — stare per + infinitive, mettersi a, finire di, continuare a, and similar.',
+    'node-27': 'This sentence uses reported speech (discorso indiretto) — conveying what someone said with tense and reference shifts.',
+
+    // ── C1 — Refinement ───────────────────────────────────────────
+    'node-28': 'This sentence explores congiuntivo nuances — mood contrasts with "come se", "il fatto che", or "non credo che".',
+    'node-29': 'This sentence uses formal or literary register — Lei form, passato remoto, academic markers, or elevated style.',
+    'node-30': 'This sentence uses an idiomatic expression — proverbs, fixed phrases, or colloquial constructions of native speakers.',
+    'node-31': 'This sentence uses complex syntax — participial clauses, multiple subordination, or nominalization patterns.',
+
+    // ── C2 — Mastery ──────────────────────────────────────────────
+    'node-32': 'This sentence uses literary tenses or narrative style — passato remoto in prose, poetic register, or narrative forms.',
+    'node-33': 'This sentence uses academic or professional discourse — formal argumentation, technical register, structured reasoning.',
+    'node-34': 'This sentence reflects cultural fluency — culturally embedded expressions, regional variation, or proverb usage.',
+    'node-35': 'This sentence combines multiple advanced patterns — near-native complexity across grammar, register, and idiom.',
+  },
+  // german / french: add when those languages get decks
 };
+
+/** Get a grammar nudge for a node in the given language. Falls back to Spanish, then empty string. */
+export function getGrammarNudge(nodeId: string, lang: Language): string {
+  return GRAMMAR_NUDGES[lang]?.[nodeId]
+    ?? GRAMMAR_NUDGES.spanish?.[nodeId]
+    ?? '';
+}

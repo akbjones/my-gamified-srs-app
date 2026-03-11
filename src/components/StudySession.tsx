@@ -291,6 +291,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onAbort,
               <div className="flex-1 flex flex-col items-center justify-center px-3 sm:px-5 pb-4 min-h-0 overflow-y-auto">
                 <WordPopover
                   sentence={card!.target}
+                  language={session.language}
                   className={`${sizeClass} font-black tracking-tight text-[var(--text-primary)] leading-snug max-w-sm mx-auto`}
                 />
                 {isFlipped ? (

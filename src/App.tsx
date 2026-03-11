@@ -6,7 +6,7 @@ import PlacementTest from './components/PlacementTest';
 import ChallengeScreen from './components/ChallengeScreen';
 import StreakFlame from './components/StreakFlame';
 import { QuestCard, MasteryMap, SessionState, UserStats, DailyStats, Language, LearningGoal, LANGUAGE_CONFIG, GOAL_CONFIG, ProgressState, ChallengeMode, ChallengeQuestion, BossRing } from './types';
-import { MAIN_PATH, isNodeUnlocked } from './data/topicConfig';
+import { MAIN_PATH, isNodeUnlocked, getNodeName } from './data/topicConfig';
 import { handleAnswerLogic, saveCardProgress, getRetention, burySiblings } from './services/srsService';
 import {
   migrateStorageKeys, loadMasteryMap, loadUserStats, saveUserStats,
@@ -30,9 +30,11 @@ type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEME
 // Deck loaders — static imports for available languages
 // (dynamic import would be cleaner but static is simpler for Vite bundling)
 import rawSpanishDeck from './data/spanish/deck.json';
+import rawItalianDeck from './data/italian/deck.json';
 
 const DECK_MAP: Partial<Record<Language, any[]>> = {
   spanish: rawSpanishDeck,
+  italian: rawItalianDeck,
 };
 
 // Transform raw deck.json cards into QuestCards mapped to linear path nodes
@@ -438,7 +440,7 @@ const App: React.FC = () => {
               <div className="text-right">
                 {currentNode && (
                   <div className="text-[10px] font-semibold uppercase tracking-widest mb-1" style={{ color: currentNode.color }}>
-                    {currentNode.tier} &middot; {currentNode.name}
+                    {currentNode.tier} &middot; {getNodeName(currentNode.id, lang)}
                   </div>
                 )}
                 <div className="text-sm font-extrabold text-[var(--text-primary)] mb-0.5">
@@ -713,6 +715,7 @@ const App: React.FC = () => {
       {view === 'TOPICS' && (
         <TopicMap
           cards={deck}
+          language={lang}
           onBack={() => setView('HOME')}
         />
       )}
@@ -771,6 +774,7 @@ const App: React.FC = () => {
           onBack={() => setView('HOME')}
           bossRecords={progressState.bossRecords}
           nextBossIndex={progressState.nextBossIndex}
+          language={lang}
         />
       )}
 

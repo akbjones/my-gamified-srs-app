@@ -1,6 +1,6 @@
 import React from 'react';
 import { Achievement, UserStats, BossRecord, Language } from '../types';
-import { Lock, Unlock, Swords } from 'lucide-react';
+import { Lock, Unlock, FlaskConical } from 'lucide-react';
 import { getXPProgress } from '../services/gamificationService';
 import { getBossForIndex } from '../data/bossArt';
 import StreakFlame from './StreakFlame';
@@ -79,11 +79,11 @@ const GamificationHub: React.FC<GamificationHubProps> = ({ stats, achievements, 
         </div>
       </div>
 
-      {/* Boss Battle Trophy Room */}
+      {/* Experiments Trophy Room */}
       <div>
         <h2 className="text-sm font-black mb-3 text-[var(--text-secondary)] uppercase tracking-widest flex items-center gap-2">
-          <Swords size={14} />
-          Boss Battles
+          <FlaskConical size={14} />
+          Experiments
         </h2>
         <div className="grid grid-cols-5 gap-2">
           {Array.from({ length: 22 }).map((_, i) => {
@@ -111,7 +111,7 @@ const GamificationHub: React.FC<GamificationHubProps> = ({ stats, achievements, 
                   <Lock size={12} className="mx-auto mb-0.5 text-[var(--text-faint)]" />
                 )}
                 {isNext && !record && (
-                  <Swords size={12} className="mx-auto mb-0.5 text-red-500" />
+                  <FlaskConical size={12} className="mx-auto mb-0.5 text-red-500" />
                 )}
                 <div className={`text-[9px] font-bold font-mono ${
                   record ? 'text-[var(--text-primary)]' : 'text-[var(--text-faint)]'

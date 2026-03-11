@@ -28,7 +28,7 @@ import { recordWordsFromCard } from './services/vocabService';
 import { lookupWord as lookupEs } from './data/dictionary/es';
 import { lookupWord as lookupIt } from './data/dictionary/it';
 import VocabList from './components/VocabList';
-import { Settings2, Minus, Plus, X, Sun, Moon, Swords, BookOpen } from 'lucide-react';
+import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen } from 'lucide-react';
 
 const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
   spanish: lookupEs,
@@ -448,11 +448,11 @@ const App: React.FC = () => {
               {/* Atom icon */}
               <svg viewBox="-2 -2 36 36" className="w-11 h-11 text-[var(--accent)]" fill="none" overflow="visible">
                 {/* Orbit paths (using <path> so animateMotion works) */}
-                <path id="orb1" d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="0.8" opacity="0.4" />
+                <path id="orb1" d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="1.2" opacity="0.5" />
                 <g transform="rotate(60 16 16)">
-                  <path id="orb2" d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="0.8" opacity="0.4" />
+                  <path id="orb2" d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="1.2" opacity="0.5" />
                 </g>
-                <path d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="0.8" opacity="0.4" transform="rotate(120 16 16)" />
+                <path d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="1.2" opacity="0.5" transform="rotate(120 16 16)" />
                 {/* Electrons orbiting along paths */}
                 <circle r="1.3" fill="currentColor">
                   <animateMotion dur="3s" repeatCount="indefinite"><mpath href="#orb1" /></animateMotion>
@@ -512,29 +512,21 @@ const App: React.FC = () => {
                     {currentNode.tier} &middot; {getNodeName(currentNode.id, lang)}
                   </div>
                 )}
-                <div className="text-sm font-extrabold text-[var(--text-primary)] mb-0.5">
+                <div className="text-sm font-extrabold text-[var(--text-primary)]">
                   Experiment {Math.min(progressState.nextBossIndex + 1, 22)} of 22
                 </div>
-                {(() => {
-                  const cardsToNextBoss = 150 - (progressState.cumulativeNewCards % 150);
-                  return (
-                    <div className="text-[10px] text-[var(--text-muted)] font-mono font-bold">
-                      Next experiment in {cardsToNextBoss} cards
-                    </div>
-                  );
-                })()}
               </div>
             </div>
 
             {/* Boss progress bar */}
             <div className="progress-rail mt-3">
               <div
-                className="progress-fill bg-red-500"
+                className="progress-fill bg-[var(--accent)]"
                 style={{ width: `${Math.min(((progressState.cumulativeNewCards % 150) / 150) * 100, 100)}%` }}
               />
             </div>
             <div className="text-[9px] text-[var(--text-faint)] font-bold uppercase tracking-widest text-center mt-2">
-              Tap for stats &amp; achievements
+              Tap for stats
             </div>
           </button>
 
@@ -567,24 +559,31 @@ const App: React.FC = () => {
             </div>
           )}
 
-          {/* Stats + Study */}
-          <div className="grid grid-cols-2 gap-3 mb-3">
-            <div className={`stat-card text-center py-3 ${reviewsDue > 0 ? 'border-orange-400/40' : ''}`}>
-              <div className={`text-lg font-extrabold font-mono ${reviewsDue > 0 ? 'text-orange-500' : 'text-[var(--text-muted)]'}`}>{reviewsDue}</div>
-              <div className="text-[10px] text-[var(--text-muted)] font-semibold uppercase tracking-wider">Due</div>
-            </div>
-            <div className="stat-card text-center py-3 border-blue-400/40">
-              <div className="text-lg font-extrabold font-mono text-blue-500">{newAvailable}</div>
-              <div className="text-[10px] text-[var(--text-muted)] font-semibold uppercase tracking-wider">New</div>
-            </div>
-          </div>
-
+          {/* Study button with counts on the right */}
           <button
             onClick={() => handleStartSession()}
             disabled={!hasCards}
-            className="w-full py-5 btn-primary rounded-xl text-base mb-3"
+            className="w-full py-4 btn-primary rounded-xl text-base mb-3"
           >
-            {!hasCards ? 'All Caught Up' : 'Study'}
+            {!hasCards ? (
+              'All Caught Up'
+            ) : (
+              <div className="flex items-center justify-center gap-3">
+                <span className="font-extrabold text-base">Study</span>
+                <span className="text-white/40">·</span>
+                <div className="flex items-center gap-2 text-[11px] font-bold opacity-85">
+                  {reviewsDue > 0 && (
+                    <span>{reviewsDue} due</span>
+                  )}
+                  {reviewsDue > 0 && newAvailable > 0 && (
+                    <span className="text-white/40">+</span>
+                  )}
+                  {newAvailable > 0 && (
+                    <span>{newAvailable} new</span>
+                  )}
+                </div>
+              </div>
+            )}
           </button>
 
           {/* Add more cards when caught up */}
@@ -613,64 +612,33 @@ const App: React.FC = () => {
             </div>
           )}
 
-          {/* Progress map link */}
-          <button
-            onClick={() => setView('TOPICS')}
-            className="w-full stat-card p-0 overflow-hidden text-left transition-all hover:border-[var(--border-hover)] group cursor-pointer mb-4"
-          >
-            <div className="h-1 bg-[var(--progress-bg)]">
-              <div className="h-full bg-[var(--accent)] transition-all" style={{ width: `${getTotalProgress()}%` }} />
-            </div>
-            <div className="p-3.5 flex items-center justify-between">
-              <div className="flex items-center gap-2 text-[10px] text-[var(--text-muted)] font-semibold uppercase tracking-widest group-hover:text-[var(--text-secondary)] transition-colors">
-                <span>Progress Map</span>
-                <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
-              </div>
-            </div>
-          </button>
-
-          {/* Vocab list link */}
-          {Object.keys(vocabMap).length > 0 && (
+          {/* Progress map + Vocab list — side by side */}
+          <div className={`grid gap-3 mb-4 ${Object.keys(vocabMap).length > 0 ? 'grid-cols-2' : 'grid-cols-1'}`}>
             <button
-              onClick={() => setView('VOCAB')}
-              className="w-full stat-card p-0 overflow-hidden text-left transition-all hover:border-[var(--border-hover)] group cursor-pointer mb-4"
+              onClick={() => setView('TOPICS')}
+              className="stat-card p-0 overflow-hidden text-left transition-all hover:border-[var(--border-hover)] group cursor-pointer"
             >
-              <div className="p-3.5 flex items-center justify-between">
-                <div className="flex items-center gap-2 text-[10px] text-[var(--text-muted)] font-semibold uppercase tracking-widest group-hover:text-[var(--text-secondary)] transition-colors">
-                  <BookOpen size={14} />
-                  <span>My Words ({Object.keys(vocabMap).length})</span>
-                  <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
-                </div>
+              <div className="h-1 bg-[var(--progress-bg)]">
+                <div className="h-full bg-[var(--accent)] transition-all" style={{ width: `${getTotalProgress()}%` }} />
+              </div>
+              <div className="p-3 flex items-center gap-2 text-[10px] text-[var(--text-muted)] font-semibold uppercase tracking-widest group-hover:text-[var(--text-secondary)] transition-colors">
+                <span>Progress Map</span>
+                <span className="transition-transform group-hover:translate-x-0.5">&rarr;</span>
               </div>
             </button>
-          )}
-
-          {/* Goal selection */}
-          <div className="space-y-3 mb-4">
-            <div className="flex gap-1.5">
-              {(['general', 'travel', 'work', 'family'] as LearningGoal[]).map(g => {
-                const cfg = GOAL_CONFIG[g];
-                const isSelected = goal === g;
-                return (
-                  <button
-                    key={g}
-                    onClick={() => handleGoalChange(g)}
-                    className={`flex-1 py-2 rounded-lg text-center transition-all border ${
-                      isSelected
-                        ? 'border-blue-500/40 bg-blue-500/10 text-blue-500'
-                        : 'border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--border-hover)]'
-                    }`}
-                  >
-                    <div className="text-[11px] font-bold uppercase tracking-wider">{cfg.name}</div>
-                  </button>
-                );
-              })}
-            </div>
-            <p className="text-[10px] text-[var(--text-faint)] text-center leading-relaxed">
-              {goal === 'general'
-                ? 'Well-rounded vocabulary'
-                : `${GOAL_CONFIG[goal].description}`}
-            </p>
+            {Object.keys(vocabMap).length > 0 && (
+              <button
+                onClick={() => setView('VOCAB')}
+                className="stat-card p-0 overflow-hidden text-left transition-all hover:border-[var(--border-hover)] group cursor-pointer"
+              >
+                <div className="h-1 bg-[var(--progress-bg)]" />
+                <div className="p-3 flex items-center gap-2 text-[10px] text-[var(--text-muted)] font-semibold uppercase tracking-widest group-hover:text-[var(--text-secondary)] transition-colors">
+                  <BookOpen size={13} />
+                  <span>Words ({Object.keys(vocabMap).length})</span>
+                  <span className="transition-transform group-hover:translate-x-0.5">&rarr;</span>
+                </div>
+              </button>
+            )}
           </div>
 
           {/* Settings — gear icon expandable */}
@@ -694,6 +662,35 @@ const App: React.FC = () => {
                 <button onClick={() => setShowTools(false)} className="text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors">
                   <X size={14} />
                 </button>
+              </div>
+
+              {/* Topic / Goal */}
+              <div>
+                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-2">Topic Focus</div>
+                <div className="flex gap-1.5">
+                  {(['general', 'travel', 'work', 'family'] as LearningGoal[]).map(g => {
+                    const cfg = GOAL_CONFIG[g];
+                    const isSelected = goal === g;
+                    return (
+                      <button
+                        key={g}
+                        onClick={() => handleGoalChange(g)}
+                        className={`flex-1 py-1.5 rounded-lg text-center transition-all border ${
+                          isSelected
+                            ? 'border-[var(--accent)]/40 bg-[var(--accent)]/10 text-[var(--accent)]'
+                            : 'border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--border-hover)]'
+                        }`}
+                      >
+                        <div className="text-[10px] font-bold uppercase tracking-wider">{cfg.name}</div>
+                      </button>
+                    );
+                  })}
+                </div>
+                <p className="text-[9px] text-[var(--text-faint)] text-center mt-1.5">
+                  {goal === 'general'
+                    ? 'Well-rounded vocabulary'
+                    : `${GOAL_CONFIG[goal].description}`}
+                </p>
               </div>
 
               <div>

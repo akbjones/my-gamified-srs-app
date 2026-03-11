@@ -468,7 +468,7 @@ const App: React.FC = () => {
                 </circle>
               </svg>
               <h1 className="text-2xl font-black tracking-[0.2em] uppercase text-[var(--accent)]" style={{ fontFamily: "'Orbitron', sans-serif" }}>
-                LANG<span className="text-[var(--text-primary)]">LAB</span>
+                LANGLAB
               </h1>
             </div>
             <div className="flex items-center gap-1.5">

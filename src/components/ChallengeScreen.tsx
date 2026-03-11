@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { ChallengeMode, ChallengeQuestion, BossRing, Language } from '../types';
-import { FlaskConical, Zap, Trophy, RotateCcw } from 'lucide-react';
+import { Zap } from 'lucide-react';
 import { getBossForIndex } from '../data/bossArt';
 import { calculateBossRing } from '../services/challengeService';
 import WordTileChallenge from './WordTileChallenge';
@@ -34,6 +34,47 @@ const RING_LABELS: Record<BossRing, string> = {
   gold: 'Gold Ring',
 };
 
+// ── Simple test tube SVG ──────────────────────────────────────
+const TestTube: React.FC<{ color: string; size?: number; className?: string }> = ({
+  color,
+  size = 100,
+  className = '',
+}) => (
+  <svg
+    viewBox="0 0 80 160"
+    width={size * 0.5}
+    height={size}
+    className={`drop-shadow-lg ${className}`}
+    style={{ color: 'var(--text-muted)' }}
+  >
+    {/* Liquid fill */}
+    <path
+      d="M27 60 L27 110 Q27 138 40 138 Q53 138 53 110 L53 60"
+      fill={color}
+      opacity="0.65"
+    />
+    {/* Bubbles */}
+    <circle cx="35" cy="90" r="3" fill="white" opacity="0.4" />
+    <circle cx="45" cy="105" r="2" fill="white" opacity="0.3" />
+    <circle cx="37" cy="118" r="2.5" fill="white" opacity="0.35" />
+    {/* Tube outline */}
+    <path
+      d="M25 12 L25 110 Q25 140 40 140 Q55 140 55 110 L55 12"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+    />
+    {/* Rim */}
+    <line
+      x1="20" y1="12" x2="60" y2="12"
+      stroke="currentColor"
+      strokeWidth="3"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
 const ChallengeScreen: React.FC<ChallengeScreenProps> = ({
   mode,
   questions,
@@ -49,11 +90,13 @@ const ChallengeScreen: React.FC<ChallengeScreenProps> = ({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<boolean[]>([]);
   const [startTime, setStartTime] = useState(0);
+  const [finalElapsedMs, setFinalElapsedMs] = useState(0);
 
   const boss = useMemo(() => getBossForIndex(bossIndex, language), [bossIndex, language]);
   const totalQuestions = questions.length;
   const correctCount = answers.filter(Boolean).length;
-  const elapsedMs = startTime > 0 ? Date.now() - startTime : 0;
+  // Use frozen time on results screen so ring doesn't change between renders
+  const elapsedMs = phase === 'results' ? finalElapsedMs : (startTime > 0 ? Date.now() - startTime : 0);
   const ring = mode === 'boss' ? calculateBossRing(correctCount, totalQuestions, elapsedMs) : 'none' as BossRing;
   const bossDefeated = mode === 'boss' ? correctCount >= 6 : true;
   const bossHealth = Math.max(0, ((totalQuestions - correctCount) / totalQuestions) * 100);
@@ -68,7 +111,8 @@ const ChallengeScreen: React.FC<ChallengeScreenProps> = ({
     setAnswers(newAnswers);
 
     if (newAnswers.length >= totalQuestions) {
-      // All questions done
+      // All questions done — freeze elapsed time before transitioning
+      setFinalElapsedMs(Date.now() - startTime);
       setTimeout(() => setPhase('results'), 500);
     } else {
       setCurrentIndex(prev => prev + 1);
@@ -76,42 +120,40 @@ const ChallengeScreen: React.FC<ChallengeScreenProps> = ({
   };
 
   const handleFinish = () => {
-    onComplete(answers, Date.now() - startTime);
+    onComplete(answers, finalElapsedMs || Date.now() - startTime);
   };
 
   // ── Intro Phase ──────────────────────────────────────────
   if (phase === 'intro') {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen p-6 animate-fade-in">
+      <div className="flex flex-col items-center justify-center h-dvh px-6 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))] animate-fade-in">
         {mode === 'boss' ? (
           <>
-            <div className="text-[10px] font-bold uppercase tracking-widest text-red-500 mb-4">
+            <div className="text-[10px] font-bold uppercase tracking-widest text-red-500 mb-3">
               Boss Battle
             </div>
-            <pre className="text-[var(--text-primary)] text-xs leading-tight font-mono mb-4 animate-boss-appear text-center">
-              {boss.art}
-            </pre>
-            <h2 className="text-2xl font-black text-[var(--text-primary)] mb-1">{boss.name}</h2>
-            <p className="text-sm text-[var(--text-muted)] italic mb-6">{boss.translation}</p>
-            <p className="text-xs text-[var(--text-secondary)] mb-8 text-center">
-              Defeat the boss by arranging {totalQuestions} sentences correctly.
-              <br />Score 6/{totalQuestions} to win. 8/{totalQuestions} for silver. 8/{totalQuestions} under 90s for gold!
+            <TestTube color={boss.color} size={110} className="mb-3 animate-boss-appear" />
+            <h2 className="text-xl font-black text-[var(--text-primary)] mb-0.5">{boss.name}</h2>
+            <p className="text-sm text-[var(--text-muted)] italic mb-4">{boss.translation}</p>
+            <p className="text-xs text-[var(--text-secondary)] mb-6 text-center leading-relaxed">
+              Arrange {totalQuestions} sentences correctly.
+              <br />6+ to win &middot; Perfect = silver &middot; Perfect under 90s = gold
             </p>
           </>
         ) : (
           <>
-            <div className="w-16 h-16 rounded-2xl bg-violet-500/10 border border-violet-500/30 flex items-center justify-center mb-4">
-              <Zap size={28} className="text-violet-500" />
+            <div className="w-14 h-14 rounded-2xl bg-violet-500/10 border border-violet-500/30 flex items-center justify-center mb-3">
+              <Zap size={24} className="text-violet-500" />
             </div>
-            <h2 className="text-2xl font-black text-[var(--text-primary)] mb-2">Quick Challenge!</h2>
-            <p className="text-sm text-[var(--text-secondary)] mb-8 text-center">
+            <h2 className="text-xl font-black text-[var(--text-primary)] mb-1">Quick Challenge!</h2>
+            <p className="text-sm text-[var(--text-secondary)] mb-6 text-center">
               {totalQuestions} rapid-fire word puzzles from your recent cards.
             </p>
           </>
         )}
         <button
           onClick={handleStart}
-          className={`px-10 py-4 rounded-xl font-black uppercase tracking-wider text-sm transition-all active:scale-95 ${
+          className={`px-10 py-3.5 rounded-xl font-black uppercase tracking-wider text-sm transition-all active:scale-95 ${
             mode === 'boss'
               ? 'bg-red-500 text-white hover:bg-red-600'
               : 'bg-violet-500 text-white hover:bg-violet-600'
@@ -121,7 +163,7 @@ const ChallengeScreen: React.FC<ChallengeScreenProps> = ({
         </button>
         <button
           onClick={onAbort}
-          className="mt-4 text-xs text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors font-bold"
+          className="mt-3 text-xs text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors font-bold"
         >
           Skip for now
         </button>
@@ -133,9 +175,9 @@ const ChallengeScreen: React.FC<ChallengeScreenProps> = ({
   if (phase === 'fighting') {
     const currentQ = questions[currentIndex];
     return (
-      <section className="flex flex-col h-dvh">
+      <section className="flex flex-col h-dvh pt-[max(0.5rem,env(safe-area-inset-top))] pb-[max(0.25rem,env(safe-area-inset-bottom))]">
         {/* Top bar: progress + boss health */}
-        <div className="px-4 pt-2 pb-1">
+        <div className="px-4 pb-1">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-wider">
               {currentIndex + 1} / {totalQuestions}
@@ -191,34 +233,36 @@ const ChallengeScreen: React.FC<ChallengeScreenProps> = ({
 
   // ── Results Phase ────────────────────────────────────────
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6 animate-fade-in">
+    <div className="flex flex-col items-center justify-center h-dvh px-6 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))] animate-fade-in">
       {mode === 'boss' ? (
         <>
           {bossDefeated ? (
             <>
-              <div className="text-4xl mb-4 animate-ring-reveal">
+              <div className="text-4xl mb-3 animate-ring-reveal">
                 {ring === 'gold' ? '👑' : ring === 'silver' ? '🥈' : ring === 'bronze' ? '🥉' : '💀'}
               </div>
-              <h2 className="text-2xl font-black text-[var(--text-primary)] mb-1">
+              <TestTube color={boss.color} size={70} className="mb-3 opacity-60" />
+              <h2 className="text-xl font-black text-[var(--text-primary)] mb-0.5">
                 {boss.name} Defeated!
               </h2>
-              <p className={`text-sm font-bold mb-1 ${RING_COLORS[ring]}`}>
+              <p className={`text-sm font-bold mb-0.5 ${RING_COLORS[ring]}`}>
                 {RING_LABELS[ring]}
               </p>
-              <p className="text-xs text-[var(--text-muted)] mb-6">
+              <p className="text-xs text-[var(--text-muted)] mb-5">
                 {correctCount}/{totalQuestions} correct &middot; {Math.round(elapsedMs / 1000)}s
               </p>
             </>
           ) : (
             <>
-              <div className="text-4xl mb-4">💀</div>
-              <h2 className="text-2xl font-black text-[var(--text-primary)] mb-1">
+              <div className="text-4xl mb-3">💀</div>
+              <TestTube color={boss.color} size={70} className="mb-3 opacity-40 grayscale" />
+              <h2 className="text-xl font-black text-[var(--text-primary)] mb-0.5">
                 {boss.name} Wins...
               </h2>
-              <p className="text-sm text-[var(--text-muted)] mb-2">
+              <p className="text-sm text-[var(--text-muted)] mb-1">
                 {correctCount}/{totalQuestions} correct. Need 6 to win.
               </p>
-              <p className="text-xs text-[var(--text-secondary)] mb-6">
+              <p className="text-xs text-[var(--text-secondary)] mb-5">
                 Keep studying and try again!
               </p>
             </>
@@ -226,20 +270,20 @@ const ChallengeScreen: React.FC<ChallengeScreenProps> = ({
         </>
       ) : (
         <>
-          <div className="text-4xl mb-4">
+          <div className="text-4xl mb-3">
             {correctCount === totalQuestions ? '⚡' : correctCount >= 3 ? '✨' : '💪'}
           </div>
-          <h2 className="text-2xl font-black text-[var(--text-primary)] mb-1">
+          <h2 className="text-xl font-black text-[var(--text-primary)] mb-0.5">
             Challenge Complete!
           </h2>
-          <p className="text-sm text-[var(--text-muted)] mb-6">
+          <p className="text-sm text-[var(--text-muted)] mb-5">
             {correctCount}/{totalQuestions} correct
           </p>
         </>
       )}
 
       {/* Answer summary dots */}
-      <div className="flex gap-2 mb-8">
+      <div className="flex gap-2 mb-6">
         {answers.map((correct, i) => (
           <div
             key={i}
@@ -252,7 +296,7 @@ const ChallengeScreen: React.FC<ChallengeScreenProps> = ({
 
       <button
         onClick={handleFinish}
-        className="px-10 py-4 btn-primary rounded-xl"
+        className="px-10 py-3.5 btn-primary rounded-xl"
       >
         Continue
       </button>

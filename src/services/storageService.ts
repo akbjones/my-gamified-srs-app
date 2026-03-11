@@ -30,10 +30,15 @@ export const migrateStorageKeys = (): void => {
   }
 };
 
+// ─── Helpers ────────────────────────────────────────────────
+function safeParse<T>(json: string | null, fallback: T): T {
+  if (!json) return fallback;
+  try { return JSON.parse(json); } catch { return fallback; }
+}
+
 // ─── Mastery ────────────────────────────────────────────────
 export const loadMasteryMap = (lang: Language): MasteryMap => {
-  const saved = localStorage.getItem(masteryKey(lang));
-  return saved ? JSON.parse(saved) : {};
+  return safeParse(localStorage.getItem(masteryKey(lang)), {});
 };
 
 export const saveMasteryMap = (map: MasteryMap, lang: Language): void => {
@@ -41,10 +46,14 @@ export const saveMasteryMap = (map: MasteryMap, lang: Language): void => {
 };
 
 // ─── User Stats ─────────────────────────────────────────────
+const DEFAULT_USER_STATS: UserStats = {
+  xp: 0, level: 1, streak: 0, totalReviews: 0, cardsLearned: 0,
+  lastStudyDate: '', streakFreezes: 0, freezeEarnedAtStreak: 0, freezeUsedDates: [],
+};
+
 export const loadUserStats = (lang: Language): UserStats => {
-  const saved = localStorage.getItem(statsKey(lang));
-  if (saved) {
-    const parsed = JSON.parse(saved);
+  const parsed = safeParse<Partial<UserStats> | null>(localStorage.getItem(statsKey(lang)), null);
+  if (parsed) {
     return {
       xp: parsed.xp ?? 0,
       level: parsed.level ?? 1,
@@ -57,17 +66,7 @@ export const loadUserStats = (lang: Language): UserStats => {
       freezeUsedDates: parsed.freezeUsedDates ?? [],
     };
   }
-  return {
-    xp: 0,
-    level: 1,
-    streak: 0,
-    totalReviews: 0,
-    cardsLearned: 0,
-    lastStudyDate: '',
-    streakFreezes: 0,
-    freezeEarnedAtStreak: 0,
-    freezeUsedDates: [],
-  };
+  return { ...DEFAULT_USER_STATS };
 };
 
 export const saveUserStats = (stats: UserStats, lang: Language): void => {
@@ -76,12 +75,9 @@ export const saveUserStats = (stats: UserStats, lang: Language): void => {
 
 // ─── Daily Stats ────────────────────────────────────────────
 export const loadDailyStats = (lang: Language): DailyStats => {
-  const saved = localStorage.getItem(dailyKey(lang));
-  if (saved) {
-    const parsed: DailyStats = JSON.parse(saved);
-    if (parsed.date === new Date().toDateString()) {
-      return parsed;
-    }
+  const parsed = safeParse<DailyStats | null>(localStorage.getItem(dailyKey(lang)), null);
+  if (parsed && parsed.date === new Date().toDateString()) {
+    return parsed;
   }
   return { date: new Date().toDateString(), newCardsCount: 0 };
 };
@@ -92,8 +88,7 @@ export const saveDailyStats = (stats: DailyStats, lang: Language): void => {
 
 // ─── Achievements ───────────────────────────────────────────
 export const loadUnlockedAchievements = (lang: Language): string[] => {
-  const saved = localStorage.getItem(achievementsKey(lang));
-  return saved ? JSON.parse(saved) : [];
+  return safeParse(localStorage.getItem(achievementsKey(lang)), []);
 };
 
 export const saveUnlockedAchievements = (ids: string[], lang: Language): void => {
@@ -123,8 +118,8 @@ const DEFAULT_SETTINGS: StudySettings = {
 };
 
 export const loadSettings = (): StudySettings => {
-  const saved = localStorage.getItem(SETTINGS_KEY);
-  if (saved) return { ...DEFAULT_SETTINGS, ...JSON.parse(saved) };
+  const parsed = safeParse<Partial<StudySettings> | null>(localStorage.getItem(SETTINGS_KEY), null);
+  if (parsed) return { ...DEFAULT_SETTINGS, ...parsed };
   return DEFAULT_SETTINGS;
 };
 
@@ -146,16 +141,15 @@ export const resetPlacement = (lang: Language): void => {
 };
 
 // ─── Progress State ─────────────────────────────────────────
+const DEFAULT_PROGRESS: ProgressState = {
+  cumulativeNewCards: 0, lastCheckpointAt: 0, lastBossAt: 0,
+  bossRecords: [], nextBossIndex: 0,
+};
+
 export const loadProgressState = (lang: Language): ProgressState => {
-  const saved = localStorage.getItem(progressKey(lang));
-  if (saved) return JSON.parse(saved);
-  return {
-    cumulativeNewCards: 0,
-    lastCheckpointAt: 0,
-    lastBossAt: 0,
-    bossRecords: [],
-    nextBossIndex: 0,
-  };
+  const parsed = safeParse<Partial<ProgressState> | null>(localStorage.getItem(progressKey(lang)), null);
+  if (parsed) return { ...DEFAULT_PROGRESS, ...parsed };
+  return { ...DEFAULT_PROGRESS };
 };
 
 export const saveProgressState = (state: ProgressState, lang: Language): void => {
@@ -164,8 +158,7 @@ export const saveProgressState = (state: ProgressState, lang: Language): void =>
 
 // ─── Vocabulary ────────────────────────────────────────────
 export const loadVocabMap = (lang: Language): VocabMap => {
-  const saved = localStorage.getItem(vocabKey(lang));
-  return saved ? JSON.parse(saved) : {};
+  return safeParse(localStorage.getItem(vocabKey(lang)), {});
 };
 
 export const saveVocabMap = (map: VocabMap, lang: Language): void => {

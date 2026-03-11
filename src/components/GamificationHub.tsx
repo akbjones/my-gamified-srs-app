@@ -3,6 +3,7 @@ import { Achievement, UserStats, BossRecord, Language } from '../types';
 import { Lock, Unlock, FlaskConical } from 'lucide-react';
 import { getXPProgress } from '../services/gamificationService';
 import { getBossForIndex } from '../data/bossArt';
+import { TOTAL_BOSSES } from '../services/challengeService';
 import StreakFlame from './StreakFlame';
 
 interface GamificationHubProps {
@@ -86,7 +87,7 @@ const GamificationHub: React.FC<GamificationHubProps> = ({ stats, achievements, 
           Experiments
         </h2>
         <div className="grid grid-cols-5 gap-2">
-          {Array.from({ length: 22 }).map((_, i) => {
+          {Array.from({ length: TOTAL_BOSSES }).map((_, i) => {
             const record = bossRecords.find(r => r.bossIndex === i);
             const boss = getBossForIndex(i, language);
             const isNext = i === nextBossIndex;

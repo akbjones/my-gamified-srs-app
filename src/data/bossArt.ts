@@ -3,177 +3,33 @@ import { Language } from '../types';
 export interface BossData {
   name: string;        // localized boss name
   translation: string; // English translation
-  art: string;         // ASCII art (shared across languages)
+  color: string;       // hex color for the test tube liquid
 }
 
-// ── Shared ASCII art for all 22 bosses ─────────────────────────
-const BOSS_ART_SHARED: string[] = [
-  /* 0 */ `    (\\___/)
-    (='.'=)
-    (")_(")~*`,
-
-  /* 1 */ `       /^\\/^\\
-      _|__|  o|
- \\/     /~   \\_/ \\
-  \\____|__________/
-         \\_______/
-    ~sssSSSsss~`,
-
-  /* 2 */ `     /\\    /\\
-    {  \\__/  }
-    (  o  o  )
-     > -==- <
-    /        \\
-   / GRRRRRR  \\`,
-
-  /* 3 */ `    /\\  .-"-.  /\\
-   //\\\\/  ,  \\//\\\\
-   |/\\| .-~~-. |/\\|
-    (  @      @  )
-     \\ \\      / /
-      ^^ \\~~/ ^^`,
-
-  /* 4 */ `    (__)  (__)
-    (oo)\\/(oo)
-   __\\/  ~  \\/__
-  / |  SNORT  | \\
- *  ||--------||  *
-    ^^        ^^`,
-
-  /* 5 */ `       .---.
-      / o o \\
-     ( \\___/ )
-    __/|   |\\__
-   /   |^^^|   \\
-  /~~~~|   |~~~~\\`,
-
-  /* 6 */ `    /\\_/\\
-   ( o.o )
-    > ^ <
-   / | | \\
-  (_/   \\_)
-   *prowls*`,
-
-  /* 7 */ `   ___/\\/\\/\\___
-  /  (o)  (o)  \\
- {    ______    }
-  \\  /~~~~~~\\  /
- ~~~||~~~~~~||~~~
-    ||      ||`,
-
-  /* 8 */ `   )  ( )  (
-  (    Y    )
-   )  |||  (
-  ( \\|||||/ )
-   )||||||||(
-  (_/||||||\\_)
-  *~FLAMES~*`,
-
-  /* 9 */ `      /\\_____/\\
-     /  o   o  \\
-    ( ==  ^  == )
-     )         (
-    (  \\|||||/  )
-     \\ ROOAAR! /
-      \\_______/`,
-
-  /* 10 */ `    ~~ ~~~ ~~
-    \\|/\\|/\\|/
-     ( o _ o )
-      \\ === /
-     __/   \\__
-    *ssstone!*`,
-
-  /* 11 */ `      ,  ,
-     (\\  /)
-      \\ \\/ /
-     /|    |\\
-    / | <> | \\
-   /~~|    |~~\\
-      \\____/`,
-
-  /* 12 */ `    ___-------___
-   /               \\
-  /  .---.   .---.  \\
- |  ( o  )   ( o  ) |
-  \\  '---' ^ '---' /
-   \\_____===_____/
-   *slow but wise*`,
-
-  /* 13 */ `      ,,,
-     (o o)
-    /(   )\\
-   /  )--(  \\
-  /  / !! \\  \\
- /__/  !!  \\__\\
-   *CAWWW!*`,
-
-  /* 14 */ `    (\\____/)
-    / @  @ \\
-   (  >wb<  )
-    )       (
-   (  GRRRR  )
-    \\_______/
-    *ROAR!!*`,
-
-  /* 15 */ `   \\    /
-    \\  /
-   (O  O)
-    |  |
-   /|  |\\
-  / |  | \\
-    *snip*`,
-
-  /* 16 */ `         |\\
-         | \\
-    |\\   |  \\
-    | \\  |   >--<
-    |  >-+--'   )
-    | /  | \\___/
-    |/   |
-   *CHOMP!*`,
-
-  /* 17 */ `    [=====]
-    |  .  .|
-    | (__) |
-   /|      |\\
-  [=|      |=]
-    |  /\\  |
-    |_/  \\_|
-    *THUD!*`,
-
-  /* 18 */ `     )  (  )
-    ( )  Y (  )
-     ) \\||| ( )
-    ( ~|||||~ )
-     )||||||||(
-     *BLAZES!*`,
-
-  /* 19 */ `   |\\_____/|
-    (  o o  )
-     ( _||_ )
-    /|  ||  |\\
-   / | \\||/ | \\
-  *  |======|  *
-     *CHARGE!*`,
-
-  /* 20 */ `  o   o   o
-  |\\  |  /|
-   \\ \\|/ /
-    \\   /
-     | |
-    /   \\
-   /     \\
-  *3 HEADS!*`,
-
-  /* 21 */ `     .vVVVv.
-    /  o  o  \\
-   (  \\=====/  )
-    \\  \\   /  /
-     \\ /^^^\\  /
-      V     V
-    *HISSSS!*
-   **FINAL BOSS**`,
+// ── Test tube liquid colors for 22 bosses (progresses in intensity) ──
+const BOSS_COLORS: string[] = [
+  '#4ade80', // 0  green-400
+  '#34d399', // 1  emerald-400
+  '#2dd4bf', // 2  teal-400
+  '#22d3ee', // 3  cyan-400
+  '#38bdf8', // 4  sky-400
+  '#60a5fa', // 5  blue-400
+  '#818cf8', // 6  indigo-400
+  '#a78bfa', // 7  violet-400
+  '#c084fc', // 8  purple-400
+  '#e879f9', // 9  fuchsia-400
+  '#f472b6', // 10 pink-400
+  '#fb7185', // 11 rose-400
+  '#f97316', // 12 orange-500
+  '#eab308', // 13 yellow-500
+  '#ef4444', // 14 red-500
+  '#06b6d4', // 15 cyan-500
+  '#8b5cf6', // 16 violet-500
+  '#d946ef', // 17 fuchsia-500
+  '#f43f5e', // 18 rose-500
+  '#b91c1c', // 19 red-700
+  '#7c3aed', // 20 violet-600 (app accent)
+  '#dc2626', // 21 red-600 — final boss
 ];
 
 // ── Per-language boss names ────────────────────────────────────
@@ -233,11 +89,11 @@ export const BOSS_NAMES: Record<string, BossName[]> = {
 
 // ── Public API ─────────────────────────────────────────────────
 export function getBossForIndex(bossIndex: number, lang: Language): BossData {
-  const idx = Math.min(bossIndex, BOSS_ART_SHARED.length - 1);
+  const idx = Math.min(bossIndex, BOSS_COLORS.length - 1);
   const names = (BOSS_NAMES[lang] ?? BOSS_NAMES.spanish)[idx];
   return {
     name: names.name,
     translation: names.translation,
-    art: BOSS_ART_SHARED[idx],
+    color: BOSS_COLORS[idx],
   };
 }

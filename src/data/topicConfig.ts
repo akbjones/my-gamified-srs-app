@@ -156,10 +156,11 @@ export function getNodeName(nodeId: string, lang: Language): string {
 export const UNLOCK_THRESHOLD = 0.7;
 
 // Helper: check if a node is unlocked
-export const isNodeUnlocked = (nodeIndex: number, cards: { topic: string; mastery: number }[]): boolean => {
+// Suspended cards are excluded from the denominator so leeches don't block progression
+export const isNodeUnlocked = (nodeIndex: number, cards: { topic: string; mastery: number; isSuspended?: boolean }[]): boolean => {
   if (nodeIndex === 0) return true;
   const prevNode = MAIN_PATH[nodeIndex - 1];
-  const prevCards = cards.filter(c => c.topic === prevNode.id);
+  const prevCards = cards.filter(c => c.topic === prevNode.id && !c.isSuspended);
   if (prevCards.length === 0) return false;
   const graduated = prevCards.filter(c => c.mastery === 2).length;
   return (graduated / prevCards.length) >= UNLOCK_THRESHOLD;

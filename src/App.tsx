@@ -22,13 +22,13 @@ import {
   awardChallengeXP,
 } from './services/gamificationService';
 import {
-  selectTileCandidates, buildChallengeQuestions, shouldTriggerChallenge, isRingBetter, calculateBossRing,
+  selectTileCandidates, buildChallengeQuestions, shouldTriggerChallenge, isRingBetter, calculateBossRing, TOTAL_BOSSES,
 } from './services/challengeService';
 import { recordWordsFromCard } from './services/vocabService';
 import { lookupWord as lookupEs } from './data/dictionary/es';
 import { lookupWord as lookupIt } from './data/dictionary/it';
 import VocabList from './components/VocabList';
-import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen } from 'lucide-react';
+import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight } from 'lucide-react';
 
 const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
   spanish: lookupEs,
@@ -270,7 +270,7 @@ const App: React.FC = () => {
     const currentCard = session.queue[session.currentIndex];
     const isNewCard = currentCard.mastery === 0;
 
-    const updates = handleAnswerLogic(rating, currentCard, session, (card) => {
+    const { sessionUpdates: updates, updatedCard } = handleAnswerLogic(rating, currentCard, session, (card) => {
       const newMap = saveCardProgress(card, masteryMap, lang);
       setMasteryMap(newMap);
     });
@@ -295,8 +295,7 @@ const App: React.FC = () => {
     // XP and gamification
     const { stats: newStats, xpGained, leveledUp } = awardXP(rating, userStats);
 
-    // Count graduated cards
-    const updatedCard = updates.queue?.[updates.queue.length - 1] || currentCard;
+    // Count graduated cards (use the actual updated card, not queue lookup)
     if (updatedCard.mastery === 2 && currentCard.mastery < 2) {
       newStats.cardsLearned = newStats.cardsLearned + 1;
     }
@@ -494,18 +493,15 @@ const App: React.FC = () => {
             </div>
           </header>
 
-          {/* Streak + Experiment progress */}
-          <button
-            onClick={() => setView('GAMIFICATION')}
-            className="stat-card p-4 mb-3 w-full text-left hover:border-[var(--border-hover)] active:scale-[0.99] transition-all cursor-pointer"
-          >
+          {/* Combined stats + progress card */}
+          <div className="stat-card p-4 mb-3">
             <div className="flex items-center justify-between">
               {/* Streak flame */}
               <div>
                 <StreakFlame streak={userStats.streak} freezes={userStats.streakFreezes ?? 0} size="lg" />
               </div>
 
-              {/* Experiment progress */}
+              {/* Experiment + current topic */}
               <div className="text-right">
                 {currentNode && (
                   <div className="text-[10px] font-semibold uppercase tracking-widest mb-1 text-[var(--text-secondary)]">
@@ -513,7 +509,7 @@ const App: React.FC = () => {
                   </div>
                 )}
                 <div className="text-sm font-extrabold text-[var(--text-primary)]">
-                  Experiment {Math.min(progressState.nextBossIndex + 1, 22)} of 22
+                  Experiment {Math.min(progressState.nextBossIndex + 1, TOTAL_BOSSES)} of {TOTAL_BOSSES}
                 </div>
               </div>
             </div>
@@ -525,39 +521,80 @@ const App: React.FC = () => {
                 style={{ width: `${Math.min(((progressState.cumulativeNewCards % 150) / 150) * 100, 100)}%` }}
               />
             </div>
-            <div className="text-[9px] text-[var(--text-muted)] font-bold uppercase tracking-widest text-center mt-2">
-              Tap for stats
-            </div>
-          </button>
 
-          {/* Placement test CTA — shown once per language until completed */}
+            {/* Two navigation links */}
+            <div className="grid grid-cols-2 gap-2 mt-2.5">
+              <button
+                onClick={() => setView('GAMIFICATION')}
+                className="flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-widest text-[var(--accent)] border border-[var(--accent)]/30 bg-[var(--accent)]/5 hover:bg-[var(--accent)]/10 active:scale-95 transition-all"
+              >
+                <span>Stats</span>
+                <ChevronRight size={11} />
+              </button>
+              <button
+                onClick={() => setView('TOPICS')}
+                className="flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-widest text-[var(--accent)] border border-[var(--accent)]/30 bg-[var(--accent)]/5 hover:bg-[var(--accent)]/10 active:scale-95 transition-all"
+              >
+                <span>Map</span>
+                <span className="opacity-50">&middot;</span>
+                <span>{getTotalProgress()}%</span>
+                <ChevronRight size={11} />
+              </button>
+            </div>
+          </div>
+
+          {/* Placement test CTA — compact banner, shown until completed */}
           {!isPlacementComplete(lang) && (
-            <div className="stat-card p-4 mb-3 border-amber-500/30">
-              <p className="text-sm font-bold text-[var(--text-primary)] mb-1">
-                Already know some {LANGUAGE_CONFIG[lang].name}?
+            <div className="stat-card px-3 py-2.5 mb-3 border-amber-500/30 flex items-center gap-3">
+              <p className="flex-1 text-xs text-[var(--text-secondary)] leading-snug">
+                Know some {LANGUAGE_CONFIG[lang].name}? <span className="text-[var(--text-muted)]">Skip ahead with a 2-min test.</span>
               </p>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed mb-3">
-                Take a 2-minute placement test to skip what you already know.
-              </p>
-              <div className="flex gap-2">
-                <button
-                  onClick={() => setView('PLACEMENT')}
-                  className="flex-1 py-2.5 btn-primary rounded-lg text-xs"
-                >
-                  Take Test
-                </button>
-                <button
-                  onClick={() => {
-                    setPlacementComplete(lang);
-                    setDeck(prev => [...prev]); // force re-render
-                  }}
-                  className="px-4 py-2.5 rounded-lg text-xs text-[var(--text-muted)] font-bold hover:text-[var(--text-secondary)] transition-colors"
-                >
-                  Skip
-                </button>
-              </div>
+              <button
+                onClick={() => setView('PLACEMENT')}
+                className="shrink-0 px-3.5 py-1.5 btn-primary rounded-lg text-[10px]"
+              >
+                Test
+              </button>
+              <button
+                onClick={() => {
+                  setPlacementComplete(lang);
+                  setDeck(prev => [...prev]);
+                }}
+                className="shrink-0 text-[10px] text-[var(--text-muted)] font-bold hover:text-[var(--text-secondary)] transition-colors"
+              >
+                Skip
+              </button>
             </div>
           )}
+
+          {/* Category focus — prominent selector */}
+          <div className="mb-3">
+            <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-2">Vocab Focus</div>
+            <div className="grid grid-cols-4 gap-1.5">
+              {(['general', 'travel', 'work', 'family'] as LearningGoal[]).map(g => {
+                const cfg = GOAL_CONFIG[g];
+                const isSelected = goal === g;
+                const Icon = g === 'general' ? Globe : g === 'travel' ? Plane : g === 'work' ? Briefcase : Heart;
+                return (
+                  <button
+                    key={g}
+                    onClick={() => handleGoalChange(g)}
+                    className={`flex flex-col items-center gap-1 py-2.5 rounded-xl transition-all border ${
+                      isSelected
+                        ? 'border-[var(--accent)]/40 bg-[var(--accent)]/10 text-[var(--accent)]'
+                        : 'border-[var(--border-color)] text-[var(--text-muted)] hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)]'
+                    }`}
+                  >
+                    <Icon size={16} />
+                    <span className="text-[10px] font-bold uppercase tracking-wider">{cfg.name}</span>
+                  </button>
+                );
+              })}
+            </div>
+            <p className="text-[9px] text-[var(--text-faint)] text-center mt-1.5">
+              {goal === 'general' ? 'Well-rounded vocabulary' : GOAL_CONFIG[goal].description}
+            </p>
+          </div>
 
           {/* Study button with counts on the right */}
           <button
@@ -599,7 +636,7 @@ const App: React.FC = () => {
                 onClick={() => {
                   handleUpdateSettings({ ...settings, dailyNewLimit: settings.dailyNewLimit + bonusCards });
                 }}
-                className="flex-1 py-3 rounded-xl bg-[var(--bg-card)] border border-blue-500/30 text-blue-500 text-xs font-bold hover:bg-blue-500/10 active:bg-blue-500/20 transition-colors"
+                className="flex-1 py-3 rounded-xl bg-[var(--bg-card)] border border-[var(--accent)]/30 text-[var(--accent)] text-xs font-bold hover:bg-[var(--accent)]/10 active:bg-[var(--accent)]/20 transition-colors"
               >
                 + {bonusCards} More Cards
               </button>
@@ -612,34 +649,28 @@ const App: React.FC = () => {
             </div>
           )}
 
-          {/* Progress map + Vocab list — side by side */}
-          <div className={`grid gap-3 mb-4 ${Object.keys(vocabMap).length > 0 ? 'grid-cols-2' : 'grid-cols-1'}`}>
+          {/* Vocab list button */}
+          {Object.keys(vocabMap).length > 0 && (
             <button
-              onClick={() => setView('TOPICS')}
-              className="stat-card p-0 overflow-hidden text-left transition-all hover:border-[var(--border-hover)] group cursor-pointer"
+              onClick={() => setView('VOCAB')}
+              className="stat-card p-3.5 mb-3 w-full text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] group cursor-pointer"
             >
-              <div className="h-1 bg-[var(--progress-bg)]">
-                <div className="h-full bg-[var(--accent)] transition-all" style={{ width: `${getTotalProgress()}%` }} />
-              </div>
-              <div className="p-3 flex items-center gap-2 text-[10px] text-[var(--text-muted)] font-semibold uppercase tracking-widest group-hover:text-[var(--text-secondary)] transition-colors">
-                <span>Progress Map</span>
-                <span className="transition-transform group-hover:translate-x-0.5">&rarr;</span>
+              <div className="flex items-center gap-3">
+                <div className="shrink-0 w-10 h-10 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
+                  <BookOpen size={18} className="text-[var(--accent)]" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-0.5">
+                    Vocabulary
+                  </div>
+                  <div className="text-sm font-bold text-[var(--text-primary)]">
+                    {Object.keys(vocabMap).length} words seen
+                  </div>
+                </div>
+                <ChevronRight size={14} className="text-[var(--text-muted)] group-hover:text-[var(--text-secondary)] transition-all group-hover:translate-x-0.5" />
               </div>
             </button>
-            {Object.keys(vocabMap).length > 0 && (
-              <button
-                onClick={() => setView('VOCAB')}
-                className="stat-card p-0 overflow-hidden text-left transition-all hover:border-[var(--border-hover)] group cursor-pointer"
-              >
-                <div className="h-1 bg-[var(--progress-bg)]" />
-                <div className="p-3 flex items-center gap-2 text-[10px] text-[var(--text-muted)] font-semibold uppercase tracking-widest group-hover:text-[var(--text-secondary)] transition-colors">
-                  <BookOpen size={13} />
-                  <span>Words ({Object.keys(vocabMap).length})</span>
-                  <span className="transition-transform group-hover:translate-x-0.5">&rarr;</span>
-                </div>
-              </button>
-            )}
-          </div>
+          )}
 
           {/* Settings — gear icon expandable */}
           <div className="flex justify-center">
@@ -663,35 +694,6 @@ const App: React.FC = () => {
                 <button onClick={() => setShowTools(false)} className="text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors">
                   <X size={14} />
                 </button>
-              </div>
-
-              {/* Topic / Goal */}
-              <div>
-                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-2">Topic Focus</div>
-                <div className="flex gap-1.5">
-                  {(['general', 'travel', 'work', 'family'] as LearningGoal[]).map(g => {
-                    const cfg = GOAL_CONFIG[g];
-                    const isSelected = goal === g;
-                    return (
-                      <button
-                        key={g}
-                        onClick={() => handleGoalChange(g)}
-                        className={`flex-1 py-1.5 rounded-lg text-center transition-all border ${
-                          isSelected
-                            ? 'border-[var(--accent)]/40 bg-[var(--accent)]/10 text-[var(--accent)]'
-                            : 'border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--border-hover)]'
-                        }`}
-                      >
-                        <div className="text-[10px] font-bold uppercase tracking-wider">{cfg.name}</div>
-                      </button>
-                    );
-                  })}
-                </div>
-                <p className="text-[9px] text-[var(--text-faint)] text-center mt-1.5">
-                  {goal === 'general'
-                    ? 'Well-rounded vocabulary'
-                    : `${GOAL_CONFIG[goal].description}`}
-                </p>
               </div>
 
               <div>
@@ -724,7 +726,7 @@ const App: React.FC = () => {
                   <button
                     onClick={() => handleUpdateSettings({ ...settings, autoPlayAudio: !settings.autoPlayAudio })}
                     className={`w-10 h-6 rounded-full transition-all relative ${
-                      settings.autoPlayAudio ? 'bg-blue-500' : 'bg-[var(--border-color)]'
+                      settings.autoPlayAudio ? 'bg-[var(--accent)]' : 'bg-[var(--border-color)]'
                     }`}
                   >
                     <div className={`absolute top-1 w-4 h-4 rounded-full bg-white shadow transition-all ${
@@ -742,7 +744,7 @@ const App: React.FC = () => {
                         onClick={() => handleUpdateSettings({ ...settings, audioSpeed: s })}
                         className={`px-2.5 py-1 rounded-md text-[10px] font-bold font-mono transition-all border ${
                           settings.audioSpeed === s
-                            ? 'border-blue-500/40 bg-blue-500/10 text-blue-500'
+                            ? 'border-[var(--accent)]/40 bg-[var(--accent)]/10 text-[var(--accent)]'
                             : 'border-[var(--border-color)] text-[var(--text-muted)] hover:border-[var(--border-hover)]'
                         }`}
                       >
@@ -766,7 +768,7 @@ const App: React.FC = () => {
                     placeholder="API key (optional)"
                     value={settings.googleTtsApiKey || ''}
                     onChange={(e) => handleUpdateSettings({ ...settings, googleTtsApiKey: e.target.value || undefined })}
-                    className="w-full text-[11px] px-2.5 py-1.5 rounded-lg border border-[var(--border-color)] bg-[var(--bg-inset)] text-[var(--text-secondary)] placeholder:text-[var(--text-faint)] focus:outline-none focus:border-blue-500/40"
+                    className="w-full text-[11px] px-2.5 py-1.5 rounded-lg border border-[var(--border-color)] bg-[var(--bg-inset)] text-[var(--text-secondary)] placeholder:text-[var(--text-faint)] focus:outline-none focus:border-[var(--accent)]/40"
                   />
                 </div>
               </div>

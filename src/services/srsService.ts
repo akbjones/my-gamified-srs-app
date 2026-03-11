@@ -3,6 +3,7 @@ import { saveMasteryMap } from './storageService';
 
 const MINUTE = 60 * 1000;
 const DAY = 24 * 60 * 60 * 1000;
+const MAX_INTERVAL = 365 * DAY; // Cap at 1 year
 const RETENTION_THRESHOLD = 21 * DAY; // 21 days = "retained"
 const LEECH_THRESHOLD = 5; // AGAIN count to flag as leech
 
@@ -76,20 +77,27 @@ export const burySiblings = (queue: QuestCard[]): QuestCard[] => {
  * Mastery 1: Learning (Step 0: 1m, Step 1: 10m)
  * Mastery 2: Graduated (Review)
  */
+export interface AnswerResult {
+  sessionUpdates: Partial<SessionState>;
+  updatedCard: QuestCard;
+}
+
 export const handleAnswerLogic = (
   rating: 'AGAIN' | 'HARD' | 'GOOD' | 'EASY',
   currentCard: QuestCard,
   session: SessionState,
   saveProgress: (card: QuestCard) => void
-): Partial<SessionState> => {
+): AnswerResult => {
   const newQueue = [...session.queue];
   let { currentIndex, newCardsSeen } = session;
   const now = Date.now();
   const updatedCard = { ...currentCard };
 
   if (updatedCard.step === undefined) updatedCard.step = 0;
-  if (!updatedCard.interval) updatedCard.interval = 0;
-  if (!updatedCard.ease) updatedCard.ease = 2.5;
+  if (updatedCard.interval == null) updatedCard.interval = 0;
+  if (updatedCard.ease == null || updatedCard.ease === 0) updatedCard.ease = 2.5;
+
+  const wasNew = updatedCard.mastery === 0;
 
   if (rating === 'AGAIN') {
     // Leech detection: increment fail count
@@ -98,6 +106,7 @@ export const handleAnswerLogic = (
       updatedCard.isLeech = true;
     }
 
+    if (wasNew) newCardsSeen = (newCardsSeen || 0) + 1;
     updatedCard.mastery = 1;
     updatedCard.step = 0;
     updatedCard.interval = 1 * MINUTE;
@@ -107,11 +116,13 @@ export const handleAnswerLogic = (
     currentIndex++;
   } else if (rating === 'HARD') {
     if (updatedCard.mastery < 2) {
+      if (wasNew) newCardsSeen = (newCardsSeen || 0) + 1;
+      updatedCard.mastery = 1; // promote new → learning
       updatedCard.interval = 6 * MINUTE;
       updatedCard.dueDate = now + updatedCard.interval;
       newQueue.push(updatedCard);
     } else {
-      updatedCard.interval = Math.max(1 * DAY, (updatedCard.interval || 0) * 1.2);
+      updatedCard.interval = Math.min(MAX_INTERVAL, Math.max(1 * DAY, Math.round((updatedCard.interval || 0) * 1.2)));
       updatedCard.dueDate = now + updatedCard.interval;
       updatedCard.ease = Math.max(1.3, updatedCard.ease - 0.15);
     }
@@ -139,17 +150,22 @@ export const handleAnswerLogic = (
         updatedCard.dueDate = now + updatedCard.interval;
       }
     } else {
-      // Review
-      updatedCard.interval = (updatedCard.interval || 1 * DAY) * updatedCard.ease;
+      // Review — cap at MAX_INTERVAL
+      updatedCard.interval = Math.min(MAX_INTERVAL, Math.round((updatedCard.interval || 1 * DAY) * updatedCard.ease));
       updatedCard.dueDate = now + updatedCard.interval;
     }
     saveProgress(updatedCard);
     currentIndex++;
   } else if (rating === 'EASY') {
-    if (updatedCard.mastery === 0) newCardsSeen = (newCardsSeen || 0) + 1;
+    if (wasNew) newCardsSeen = (newCardsSeen || 0) + 1;
+    // For graduated cards: multiply interval by ease * 1.3 easy-bonus (don't regress to 4d)
+    if (updatedCard.mastery === 2) {
+      updatedCard.interval = Math.min(MAX_INTERVAL, Math.round((updatedCard.interval || 1 * DAY) * updatedCard.ease * 1.3));
+    } else {
+      updatedCard.interval = 4 * DAY;
+    }
     updatedCard.mastery = 2;
     updatedCard.step = 0;
-    updatedCard.interval = 4 * DAY;
     updatedCard.dueDate = now + updatedCard.interval;
     updatedCard.ease = updatedCard.ease + 0.15;
     saveProgress(updatedCard);
@@ -157,9 +173,12 @@ export const handleAnswerLogic = (
   }
 
   return {
-    queue: newQueue,
-    currentIndex,
-    isFlipped: false,
-    newCardsSeen,
+    sessionUpdates: {
+      queue: newQueue,
+      currentIndex,
+      isFlipped: false,
+      newCardsSeen,
+    },
+    updatedCard,
   };
 };

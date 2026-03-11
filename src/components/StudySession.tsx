@@ -330,26 +330,29 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                 );
               })}
             </div>
-            <div className="flex gap-3 justify-center mt-1.5">
-              {onUndoAnswer && session.currentIndex > 0 && (
-                <button
-                  onClick={() => { setIsFlipped(false); setShowGrammar(false); onUndoAnswer(); }}
-                  className="py-2 text-[10px] font-bold text-[var(--text-faint)] uppercase tracking-wider hover:text-[var(--text-muted)] transition-colors"
-                >
-                  &larr; Previous card
-                </button>
-              )}
+            <div className="flex justify-center mt-1.5">
               <button
                 onClick={() => { setIsFlipped(false); setShowGrammar(false); }}
-                className="py-2 text-[10px] font-bold text-[var(--text-faint)] uppercase tracking-wider hover:text-[var(--text-muted)] transition-colors"
+                className="py-2 px-4 text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider hover:text-[var(--text-secondary)] transition-colors"
               >
-                Flip back
+                &larr; Back
               </button>
             </div>
           </div>
         )}
 
-        {!isFlipped && !tileCardIndices.includes(session.currentIndex) && <div className="h-[60px] shrink-0" />}
+        {!isFlipped && !tileCardIndices.includes(session.currentIndex) && (
+          <div className="h-[60px] shrink-0 flex items-center justify-center">
+            {onUndoAnswer && session.currentIndex > 0 && (
+              <button
+                onClick={() => { setShowGrammar(false); onUndoAnswer(); }}
+                className="py-2 px-4 text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider hover:text-[var(--text-secondary)] transition-colors"
+              >
+                &larr; Back
+              </button>
+            )}
+          </div>
+        )}
       </section>
     </>
   );

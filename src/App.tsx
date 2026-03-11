@@ -508,7 +508,7 @@ const App: React.FC = () => {
               {/* Experiment progress */}
               <div className="text-right">
                 {currentNode && (
-                  <div className="text-[10px] font-semibold uppercase tracking-widest mb-1" style={{ color: currentNode.color }}>
+                  <div className="text-[10px] font-semibold uppercase tracking-widest mb-1 text-[var(--text-secondary)]">
                     {currentNode.tier} &middot; {getNodeName(currentNode.id, lang)}
                   </div>
                 )}
@@ -525,7 +525,7 @@ const App: React.FC = () => {
                 style={{ width: `${Math.min(((progressState.cumulativeNewCards % 150) / 150) * 100, 100)}%` }}
               />
             </div>
-            <div className="text-[9px] text-[var(--text-faint)] font-bold uppercase tracking-widest text-center mt-2">
+            <div className="text-[9px] text-[var(--text-muted)] font-bold uppercase tracking-widest text-center mt-2">
               Tap for stats
             </div>
           </button>
@@ -645,13 +645,14 @@ const App: React.FC = () => {
           <div className="flex justify-center">
             <button
               onClick={() => setShowTools(prev => !prev)}
-              className={`p-2 rounded-lg transition-all ${
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all text-[10px] font-semibold uppercase tracking-widest ${
                 showTools
-                  ? 'text-blue-400 bg-blue-500/10'
-                  : 'text-[var(--text-faint)] hover:text-[var(--text-muted)]'
+                  ? 'text-[var(--accent)] bg-[var(--accent)]/10'
+                  : 'text-[var(--text-muted)] hover:text-[var(--text-secondary)]'
               }`}
             >
-              <Settings2 size={16} />
+              <Settings2 size={13} />
+              <span>Settings</span>
             </button>
           </div>
 

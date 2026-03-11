@@ -71,18 +71,20 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
               {showTierLabel && (
                 <div className="relative mb-4 mt-6" style={{ marginLeft: '-40px' }}>
                   <div
-                    className="absolute w-3.5 h-3.5 rounded-full z-10"
+                    className={`absolute w-3.5 h-3.5 rounded-full z-10 ${
+                      unlocked ? 'bg-[var(--accent)]' : 'bg-[var(--text-faint)]'
+                    }`}
                     style={{
                       left: '9px',
                       top: '50%',
                       transform: 'translateY(-50%)',
-                      background: unlocked ? node.color : 'var(--text-faint)',
                     }}
                   />
                   <div style={{ paddingLeft: '40px' }}>
                     <span
-                      className="text-xs font-black uppercase tracking-widest"
-                      style={{ color: unlocked ? node.color : 'var(--text-muted)' }}
+                      className={`text-xs font-black uppercase tracking-widest ${
+                        unlocked ? 'text-[var(--accent)]' : 'text-[var(--text-muted)]'
+                      }`}
                     >
                       {node.tier}
                     </span>
@@ -101,7 +103,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
                     isComplete
                       ? 'border-emerald-500 bg-emerald-500'
                       : isCurrent
-                        ? 'border-[var(--accent)] bg-[var(--accent)] animate-pulse-glow'
+                        ? 'border-[var(--text-primary)] bg-[var(--text-primary)] animate-pulse-glow'
                         : unlocked
                           ? 'border-[var(--text-muted)] bg-[var(--bg-card)]'
                           : 'border-[var(--text-faint)] bg-[var(--bg-inset)]'
@@ -115,7 +117,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
                     !unlocked
                       ? 'bg-[var(--bg-inset)] border border-[var(--border-color)]'
                       : isCurrent
-                        ? 'stat-card border-[var(--accent)]/30'
+                        ? 'stat-card border-[var(--text-muted)]/30'
                         : isComplete
                           ? 'stat-card border-emerald-500/20'
                           : 'stat-card'
@@ -133,7 +135,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
                     </div>
                     {unlocked && (
                       <span className={`text-xs font-bold ${
-                        isComplete ? 'text-emerald-500' : percent > 0 ? 'text-[var(--accent)]' : 'text-[var(--text-muted)]'
+                        isComplete ? 'text-emerald-500' : percent > 0 ? 'text-[var(--text-primary)]' : 'text-[var(--text-muted)]'
                       }`}>
                         {graduated}/{total}
                       </span>
@@ -143,11 +145,8 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
                   {unlocked && (
                     <div className="progress-rail mt-2.5">
                       <div
-                        className="progress-fill"
-                        style={{
-                          width: `${percent}%`,
-                          background: isComplete ? '#22c55e' : node.color,
-                        }}
+                        className={`progress-fill ${isComplete ? 'bg-emerald-500' : 'bg-[var(--text-muted)]'}`}
+                        style={{ width: `${percent}%` }}
                       />
                     </div>
                   )}

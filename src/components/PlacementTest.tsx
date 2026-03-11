@@ -354,8 +354,8 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           />
         </div>
 
-        {/* Card with reveal */}
-        <div className="flex-1 overflow-y-auto">
+        {/* Card + translation centered */}
+        <div className="flex-1 flex flex-col justify-center overflow-y-auto">
           <div className="study-card w-full p-6 mb-4">
             <p className="text-lg font-extrabold text-[var(--text-primary)] text-center leading-relaxed mb-1">
               {currentCard.target}
@@ -375,15 +375,17 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
             </p>
           </div>
 
-          {/* Grammar nudge */}
-          <div className="rounded-xl bg-amber-500/5 border border-amber-500/20 p-3.5 mb-3">
-            <div className="flex items-start gap-2">
-              <BookOpen size={14} className="text-amber-500 mt-0.5 shrink-0" />
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-                {nudge}
-              </p>
+          {/* Grammar nudge — compact, below card */}
+          {nudge && (
+            <div className="rounded-xl bg-amber-500/5 border border-amber-500/20 p-3 mb-3">
+              <div className="flex items-start gap-2">
+                <BookOpen size={14} className="text-amber-500 mt-0.5 shrink-0" />
+                <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
+                  {nudge}
+                </p>
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Per-card grammar detail (if available) */}
           {currentCard.grammar && (
@@ -405,17 +407,17 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           )}
         </div>
 
-        {/* Bottom buttons */}
+        {/* Bottom buttons — right below content */}
         <div className="flex gap-2 shrink-0 mt-2 mb-2">
           <button
             onClick={handleRerate}
-            className="px-4 py-4 rounded-xl text-xs font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors border border-[var(--border-color)]"
+            className="px-4 py-3 rounded-xl text-xs font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors border border-[var(--border-color)]"
           >
             <ChevronLeft size={14} className="inline -mt-0.5" /> Re-rate
           </button>
           <button
             onClick={handleNext}
-            className="flex-1 py-4 btn-primary rounded-xl text-sm flex items-center justify-center gap-2"
+            className="flex-1 py-3 btn-primary rounded-xl text-sm flex items-center justify-center gap-2"
           >
             Next <ArrowRight size={16} />
           </button>

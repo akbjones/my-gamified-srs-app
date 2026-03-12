@@ -2,33 +2,43 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import ReactDOM from 'react-dom';
 import { lookupWord as lookupEs, DictEntry } from '../data/dictionary/es';
 import { lookupWord as lookupIt } from '../data/dictionary/it';
+import { lookupWord as lookupFr } from '../data/dictionary/fr';
 import { conjugate as conjugateEs } from '../data/conjugation/es';
 import { conjugate as conjugateIt } from '../data/conjugation/it';
+import { conjugate as conjugateFr } from '../data/conjugation/fr';
 import { Language, ConjugationTable } from '../types';
 
 // Dynamic lookup per language — gracefully returns null for languages without a dictionary
 const LOOKUP_FNS: Partial<Record<Language, (w: string) => DictEntry | null>> = {
   spanish: lookupEs,
   italian: lookupIt,
+  french: lookupFr,
 };
 
 const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable | null>> = {
   spanish: conjugateEs,
   italian: conjugateIt,
+  french: conjugateFr,
 };
 
 const PERSON_LABELS: Record<string, string[]> = {
   spanish: ['yo', 'tú', 'él', 'nosotros', 'vosotros', 'ellos'],
   italian: ['io', 'tu', 'lui', 'noi', 'voi', 'loro'],
+  french: ['je', 'tu', 'il', 'nous', 'vous', 'ils'],
 };
 
-const TENSE_LABELS: Record<string, string> = {
+const DEFAULT_TENSE_LABELS: Record<string, string> = {
   present: 'Present',
   preterite: 'Preterite',
   imperfect: 'Imperfect',
   future: 'Future',
   conditional: 'Cond.',
   subjunctive: 'Subj.',
+};
+
+const TENSE_LABELS_BY_LANG: Partial<Record<string, Record<string, string>>> = {
+  french: { ...DEFAULT_TENSE_LABELS, preterite: 'Passé C.' },
+  italian: { ...DEFAULT_TENSE_LABELS, preterite: 'Passato' },
 };
 
 interface WordPopoverProps {
@@ -265,7 +275,7 @@ const PopoverPortal: React.FC<{ entry: DictEntry; wordRect: DOMRect; language: L
                         : 'text-[var(--text-muted)] hover:text-[var(--text-secondary)]'
                     }`}
                   >
-                    {TENSE_LABELS[tense] || tense}
+                    {(TENSE_LABELS_BY_LANG[language] || DEFAULT_TENSE_LABELS)[tense] || tense}
                   </button>
                 ))}
               </div>

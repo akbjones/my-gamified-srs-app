@@ -58,6 +58,23 @@ const COMMON_WORDS: Record<string, Set<string>> = {
     'nostro', 'nostra', 'nostri', 'nostre', 'vostro', 'vostra', 'vostri', 'vostre',
     'col', 'dell', 'nell', 'sull', 'all', 'dall',
   ]),
+  french: new Set([
+    'le', 'la', 'les', 'un', 'une', 'des', 'du', 'de', 'au', 'aux',
+    'l', 'd', 'j', 'n', 's', 'c', 'm', 't', 'qu', // elision fragments
+    'à', 'en', 'dans', 'sur', 'sous', 'avec', 'sans', 'pour', 'par', 'vers', 'chez', 'entre',
+    'et', 'ou', 'mais', 'donc', 'car', 'ni', 'que', 'si', 'comme', 'quand', 'où', 'parce',
+    'je', 'tu', 'il', 'elle', 'on', 'nous', 'vous', 'ils', 'elles',
+    'me', 'te', 'se', 'lui', 'leur', 'y', 'en',
+    'mon', 'ma', 'mes', 'ton', 'ta', 'tes', 'son', 'sa', 'ses', 'notre', 'votre', 'nos', 'vos', 'leurs',
+    'ce', 'cet', 'cette', 'ces', 'cela', 'ceci', 'ça',
+    'est', 'sont', 'a', 'ont', 'être', 'avoir', 'fait', 'va', 'aller', 'faire',
+    'ai', 'as', 'avons', 'avez', 'suis', 'es', 'sommes', 'êtes',
+    'ne', 'pas', 'plus', 'jamais', 'rien', 'personne',
+    'oui', 'non', 'très', 'bien', 'aussi', 'ici', 'là',
+    'qui', 'dont', 'lequel', 'laquelle',
+    'tout', 'tous', 'toute', 'toutes', 'chaque', 'autre', 'autres', 'même', 'mêmes',
+    'deux', 'trois', 'un',
+  ]),
 };
 
 export function isCommonWord(word: string, lang: Language): boolean {

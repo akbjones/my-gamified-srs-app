@@ -160,7 +160,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
         </div>
       )}
 
-      <section className="flex flex-col pt-[max(0.25rem,env(safe-area-inset-top))] pb-[max(0.75rem,env(safe-area-inset-bottom))] px-1 text-center h-dvh">
+      <section className="flex flex-col pt-[max(0.25rem,env(safe-area-inset-top))] pb-[max(0.75rem,env(safe-area-inset-bottom))] px-3 text-center h-dvh">
         {/* Top bar */}
         <nav className="flex flex-col gap-1">
           <div className="flex justify-between items-center">
@@ -240,15 +240,15 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
           {(() => {
             const wordCount = card!.target.split(/\s+/).length;
             const sizeClass = wordCount <= 6
-              ? 'text-xl md:text-2xl'
+              ? 'text-2xl md:text-3xl'
               : wordCount <= 10
-              ? 'text-lg md:text-xl'
+              ? 'text-xl md:text-2xl'
               : wordCount <= 14
+              ? 'text-lg md:text-xl'
+              : 'text-base md:text-lg';
+            const engSizeClass = wordCount <= 10
               ? 'text-base md:text-lg'
               : 'text-sm md:text-base';
-            const engSizeClass = wordCount <= 10
-              ? 'text-sm md:text-base'
-              : 'text-xs md:text-sm';
             return (
               <div className="flex-1 flex flex-col items-center justify-center px-3 sm:px-5 min-h-0 overflow-y-auto">
                 <WordPopover
@@ -272,24 +272,24 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
           })()}
 
           {/* Toolbar — bottom of card, proper touch targets */}
-          <div className="flex items-center justify-center gap-3 px-4 py-2.5 shrink-0">
+          <div className="flex items-center justify-center gap-2.5 px-4 py-2.5 shrink-0">
             {isFlipped && card!.grammar && (
               <button
                 onClick={(e) => { e.stopPropagation(); document.dispatchEvent(new MouseEvent('click', { bubbles: false })); setShowGrammar(!showGrammar); }}
-                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition-all border active:scale-95 ${
+                className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border active:scale-95 ${
                   showGrammar
                     ? 'bg-[var(--accent)]/10 border-[var(--accent)]/40 text-[var(--accent)]'
                     : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40'
                 }`}
               >
-                <BookOpen size={13} />
+                <BookOpen size={14} />
                 <span>Grammar</span>
               </button>
             )}
             {isFlipped && (
               <button
                 onClick={handleSlowReplay}
-                className={`px-3.5 py-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition-all border active:scale-95 ${
+                className={`px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border active:scale-95 ${
                   isPlaying
                     ? 'bg-[var(--accent)]/10 border-[var(--accent)]/40 text-[var(--accent)]'
                     : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40'
@@ -300,13 +300,13 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             )}
             <button
               onClick={handlePlayAudio}
-              className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-[11px] font-bold uppercase tracking-wider transition-all border active:scale-95 ${
+              className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border active:scale-95 ${
                 isPlaying
                   ? 'bg-[var(--accent)]/10 border-[var(--accent)]/40 text-[var(--accent)] animate-pulse'
                   : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40'
               }`}
             >
-              <Volume2 size={13} />
+              <Volume2 size={14} />
               <span>Listen</span>
             </button>
           </div>
@@ -331,16 +331,16 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                 );
               })}
             </div>
-            <div className="flex justify-center mt-1.5 gap-4">
+            <div className="flex justify-center mt-2 gap-4">
               <button
                 onClick={() => { setIsFlipped(false); setShowGrammar(false); }}
-                className="py-2 px-4 text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider hover:text-[var(--text-secondary)] transition-colors"
+                className="py-2.5 px-5 text-sm font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
               >
                 &larr; Back
               </button>
               <button
                 onClick={() => setShowInfo(true)}
-                className="py-2 px-3 text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider hover:text-[var(--text-secondary)] transition-colors"
+                className="py-2.5 px-4 text-sm font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
               >
                 ?
               </button>
@@ -353,7 +353,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             {onUndoAnswer && session.currentIndex > 0 && (
               <button
                 onClick={() => { setShowGrammar(false); onUndoAnswer(); }}
-                className="py-2 px-4 text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider hover:text-[var(--text-secondary)] transition-colors"
+                className="py-2.5 px-5 text-sm font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
               >
                 &larr; Back
               </button>

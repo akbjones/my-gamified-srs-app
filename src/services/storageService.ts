@@ -47,7 +47,7 @@ export const saveMasteryMap = (map: MasteryMap, lang: Language): void => {
 
 // ─── User Stats ─────────────────────────────────────────────
 const DEFAULT_USER_STATS: UserStats = {
-  xp: 0, level: 1, streak: 0, totalReviews: 0, cardsLearned: 0,
+  streak: 0, totalReviews: 0, cardsLearned: 0,
   lastStudyDate: '', streakFreezes: 0, freezeEarnedAtStreak: 0, freezeUsedDates: [],
 };
 
@@ -55,8 +55,6 @@ export const loadUserStats = (lang: Language): UserStats => {
   const parsed = safeParse<Partial<UserStats> | null>(localStorage.getItem(statsKey(lang)), null);
   if (parsed) {
     return {
-      xp: parsed.xp ?? 0,
-      level: parsed.level ?? 1,
       streak: parsed.streak ?? 0,
       totalReviews: parsed.totalReviews ?? 0,
       cardsLearned: parsed.cardsLearned ?? 0,

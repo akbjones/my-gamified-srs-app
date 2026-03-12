@@ -82,6 +82,50 @@ export interface AnswerResult {
   updatedCard: QuestCard;
 }
 
+// ── Mini-loop reinsertion: instead of pushing to end, insert nearby ──
+const REINSERT_OFFSETS = {
+  AGAIN:         { min: 5, max: 8 },   // failed → see again soon
+  LEARNING_HARD: { min: 6, max: 10 },  // struggled → repeat fairly soon
+  LEARNING_GOOD: { min: 8, max: 12 },  // got it → reinforce a bit later
+};
+
+function getReinsertPosition(
+  currentIndex: number,
+  queueLength: number,
+  range: { min: number; max: number }
+): number {
+  const offset = range.min + Math.floor(Math.random() * (range.max - range.min + 1));
+  const targetPos = currentIndex + 1 + offset;
+  return Math.min(targetPos, queueLength); // clamp to end if queue is short
+}
+
+function reinsertCard(queue: QuestCard[], currentIndex: number, card: QuestCard, range: { min: number; max: number }) {
+  const pos = getReinsertPosition(currentIndex, queue.length, range);
+  queue.splice(pos, 0, card);
+}
+
+/** Interleave new cards among reviews (1 new every N reviews) */
+export function interleaveQueue(reviews: QuestCard[], newCards: QuestCard[]): QuestCard[] {
+  if (newCards.length === 0) return [...reviews];
+  if (reviews.length === 0) return [...newCards];
+
+  const ratio = Math.max(3, Math.min(5, Math.floor(reviews.length / newCards.length)));
+  const result: QuestCard[] = [];
+  let newIdx = 0;
+
+  for (let i = 0; i < reviews.length; i++) {
+    result.push(reviews[i]);
+    if ((i + 1) % ratio === 0 && newIdx < newCards.length) {
+      result.push(newCards[newIdx++]);
+    }
+  }
+  // Append any remaining new cards
+  while (newIdx < newCards.length) {
+    result.push(newCards[newIdx++]);
+  }
+  return result;
+}
+
 export const handleAnswerLogic = (
   rating: 'AGAIN' | 'HARD' | 'GOOD' | 'EASY',
   currentCard: QuestCard,
@@ -111,7 +155,7 @@ export const handleAnswerLogic = (
     updatedCard.step = 0;
     updatedCard.interval = 1 * MINUTE;
     updatedCard.dueDate = now + updatedCard.interval;
-    newQueue.push(updatedCard);
+    reinsertCard(newQueue, currentIndex, updatedCard, REINSERT_OFFSETS.AGAIN);
     saveProgress(updatedCard);
     currentIndex++;
   } else if (rating === 'HARD') {
@@ -120,7 +164,7 @@ export const handleAnswerLogic = (
       updatedCard.mastery = 1; // promote new → learning
       updatedCard.interval = 6 * MINUTE;
       updatedCard.dueDate = now + updatedCard.interval;
-      newQueue.push(updatedCard);
+      reinsertCard(newQueue, currentIndex, updatedCard, REINSERT_OFFSETS.LEARNING_HARD);
     } else {
       updatedCard.interval = Math.min(MAX_INTERVAL, Math.max(1 * DAY, Math.round((updatedCard.interval || 0) * 1.2)));
       updatedCard.dueDate = now + updatedCard.interval;
@@ -134,14 +178,14 @@ export const handleAnswerLogic = (
       updatedCard.step = 1;
       updatedCard.interval = 10 * MINUTE;
       updatedCard.dueDate = now + updatedCard.interval;
-      newQueue.push(updatedCard);
+      reinsertCard(newQueue, currentIndex, updatedCard, REINSERT_OFFSETS.LEARNING_GOOD);
       newCardsSeen = (newCardsSeen || 0) + 1;
     } else if (updatedCard.mastery === 1) {
       if (updatedCard.step === 0) {
         updatedCard.step = 1;
         updatedCard.interval = 10 * MINUTE;
         updatedCard.dueDate = now + updatedCard.interval;
-        newQueue.push(updatedCard);
+        reinsertCard(newQueue, currentIndex, updatedCard, REINSERT_OFFSETS.LEARNING_GOOD);
       } else {
         // Graduate
         updatedCard.mastery = 2;

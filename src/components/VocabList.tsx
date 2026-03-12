@@ -279,6 +279,11 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
           Tricky
         </button>
       </div>
+      {sortMode === 'tricky' && (
+        <p className="text-[10px] text-[var(--text-muted)] -mt-2 mb-3 leading-relaxed">
+          Sorted by most failed first — words you struggle with the most.
+        </p>
+      )}
 
       {/* Main word list */}
       {filteredMain.length === 0 && filteredCommon.length === 0 ? (

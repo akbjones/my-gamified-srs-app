@@ -1,7 +1,6 @@
 import React from 'react';
 import { Achievement, UserStats, BossRecord, Language } from '../types';
 import { Lock, Unlock, FlaskConical } from 'lucide-react';
-import { getXPProgress } from '../services/gamificationService';
 import { getBossForIndex } from '../data/bossArt';
 import { TOTAL_BOSSES } from '../services/challengeService';
 import StreakFlame from './StreakFlame';
@@ -26,29 +25,20 @@ const RING_STYLES = {
 const RING_EMOJI = { none: '', bronze: '🥉', silver: '🥈', gold: '👑' };
 
 const GamificationHub: React.FC<GamificationHubProps> = ({ stats, achievements, retention, onBack, bossRecords, nextBossIndex, language }) => {
-  const { current, needed, percent } = getXPProgress(stats.xp);
-  const nextLevelXp = (stats.level) * 100;
-
   return (
     <div className="max-w-md mx-auto space-y-6 animate-fade-in pb-12 pt-10">
       <button onClick={onBack} className="btn-ghost text-xs">&larr; Back</button>
 
       {/* Profile Header with Streak */}
-      <div className="stat-card p-6 border-indigo-500/30 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-48 h-48 bg-indigo-500/10 blur-3xl rounded-full -mr-12 -mt-12 pointer-events-none" />
+      <div className="stat-card p-6 border-[var(--accent)]/30 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-48 h-48 bg-[var(--accent)]/10 blur-3xl rounded-full -mr-12 -mt-12 pointer-events-none" />
         <div className="relative z-10 flex items-center gap-5">
           <StreakFlame streak={stats.streak} freezes={stats.streakFreezes ?? 0} size="lg" />
-          <div className="flex-1 min-w-0 space-y-2">
-            <h1 className="text-xl font-black text-[var(--text-primary)]">Level {stats.level}</h1>
-            <p className="text-indigo-500 text-sm font-bold">{stats.xp} XP</p>
-            <div>
-              <div className="progress-rail">
-                <div
-                  className="progress-fill bg-gradient-to-r from-indigo-500 to-purple-500"
-                  style={{ width: `${percent}%` }}
-                />
-              </div>
-            </div>
+          <div className="flex-1 min-w-0 space-y-1">
+            <h1 className="text-xl font-black text-[var(--text-primary)]">Your Progress</h1>
+            <p className="text-sm font-bold text-[var(--text-secondary)]">
+              {stats.totalReviews} reviews &middot; {stats.cardsLearned} learned
+            </p>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import type { DictEntry } from '../data/dictionary/es';
 import { conjugate as conjugateEs } from '../data/conjugation/es';
 import { conjugate as conjugateIt } from '../data/conjugation/it';
 import { conjugate as conjugateFr } from '../data/conjugation/fr';
+import { conjugate as conjugatePt } from '../data/conjugation/pt';
 
 type SortMode = 'recent' | 'tricky';
 
@@ -20,22 +21,19 @@ const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable 
   spanish: conjugateEs,
   italian: conjugateIt,
   french: conjugateFr,
+  portuguese: conjugatePt,
 };
 
 const PERSON_LABELS: Record<string, string[]> = {
   spanish: ['yo', 'tú', 'él', 'nosotros', 'vosotros', 'ellos'],
   italian: ['io', 'tu', 'lui', 'noi', 'voi', 'loro'],
   french: ['je', 'tu', 'il', 'nous', 'vous', 'ils'],
+  portuguese: ['eu', 'tu', 'ele', 'nós', 'vós', 'eles'],
 };
 
-const DEFAULT_TENSE_LABELS: Record<string, string> = {
+const TENSE_LABELS: Record<string, string> = {
   present: 'Present', preterite: 'Preterite', imperfect: 'Imperfect',
-  future: 'Future', conditional: 'Cond.', subjunctive: 'Subj.',
-};
-
-const TENSE_LABELS_BY_LANG: Partial<Record<string, Record<string, string>>> = {
-  french: { ...DEFAULT_TENSE_LABELS, preterite: 'Passé C.' },
-  italian: { ...DEFAULT_TENSE_LABELS, preterite: 'Passato' },
+  future: 'Future', conditional: 'Conditional', subjunctive: 'Subjunctive',
 };
 
 /** Extract infinitive from translation strings like "to hug (abbracciare)" */
@@ -208,7 +206,7 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
                       : 'text-[var(--text-muted)] hover:text-[var(--text-secondary)]'
                   }`}
                 >
-                  {(TENSE_LABELS_BY_LANG[language] || DEFAULT_TENSE_LABELS)[tense] || tense}
+                  {TENSE_LABELS[tense] || tense}
                 </button>
               ))}
             </div>

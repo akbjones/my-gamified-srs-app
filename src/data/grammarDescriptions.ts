@@ -154,7 +154,55 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-34': 'This sentence reflects cultural fluency — culturally embedded expressions, regional variation, or proverb usage.',
     'node-35': 'This sentence combines multiple advanced patterns — near-native complexity across grammar, register, and idiom.',
   },
-  // german / dutch / portuguese / swedish: add when those languages get decks
+  portuguese: {
+    // ── A1 — Foundations ──────────────────────────────────────────
+    'node-01': 'Regular -ar/-er/-ir verbs follow predictable patterns in the present tense.',
+    'node-02': 'Irregular present verbs have unique stems or endings (sou, tenho, vou, faço, digo).',
+    'node-03': '"Ser" expresses identity, origin, and traits; "estar" expresses states, location, and conditions.',
+    'node-04': 'Question words (o que, como, onde, quando, por que) form the basis of everyday questions.',
+    'node-05': 'Nouns are masculine or feminine; articles (o/a/os/as, um/uma) and adjectives must agree.',
+    'node-06': '"Gostar de" and similar verbs use an indirect construction — the person likes, not the thing.',
+    'node-07': 'Adjectives, "tem/há" (there is/are), colors, and sizes describe people and things.',
+    'node-08': 'Greetings, numbers, time, weather, and fixed everyday phrases used in daily life.',
+
+    // ── A2 — Past & Pronouns ──────────────────────────────────────
+    'node-09': 'Regular pretérito perfeito uses standard endings (-ei/-ou/-amos/-aram) for completed past actions.',
+    'node-10': 'Irregular pretérito perfeito has stem changes (fez, foi, teve, disse, pôs) in the past.',
+    'node-11': 'Pretérito imperfeito describes habitual, ongoing, or background actions in the past (-ava/-ia endings).',
+    'node-12': 'Choosing between perfeito (completed) and imperfeito (ongoing/habitual) depends on the context.',
+    'node-13': 'Reflexive verbs use "se" — the action is performed on oneself (me lavo, se levanta, nos sentamos).',
+    'node-14': '"Por" indicates cause, exchange, or duration; "para" indicates purpose, destination, or deadline.',
+    'node-15': 'Object pronouns (me, te, o/a, lhe, nos) replace direct and indirect objects in a sentence.',
+
+    // ── B1 — Moods & Complex Tenses ──────────────────────────────
+    'node-16': 'Present subjunctive is triggered by wishes, doubts, emotions, or hypothetical situations (que eu fale).',
+    'node-17': 'Imperative forms give commands and instructions — affirmative and negative forms differ.',
+    'node-18': 'Conditional expresses what would happen, polite requests, or hypothetical outcomes (-ia endings).',
+    'node-19': 'Future tense covers upcoming actions, plans, or probability (falarei, terá, iremos).',
+    'node-20': 'Relative clauses use "que", "quem", "onde", or "cujo" to connect and describe within clauses.',
+    'node-21': 'Compound tenses use ter + participle for pluperfect, future perfect, or conditional perfect.',
+
+    // ── B2 — Advanced Grammar ─────────────────────────────────────
+    'node-22': 'Imperfect subjunctive handles hypothetical past, wishes, or "se" clauses (-asse/-esse/-isse endings).',
+    'node-23': 'Complex conditionals use "se tivesse…, teria…" (if X had happened, Y would have happened).',
+    'node-24': 'Passive voice uses "ser + participle"; impersonal "se" marks general statements.',
+    'node-25': 'Advanced connectors include porém, contudo, portanto, apesar de, embora, no entanto.',
+    'node-26': 'Verb phrases combine verbs: acabar de + infinitive, estar a + infinitive, começar a + infinitive.',
+    'node-27': 'Reported speech (discurso indireto) conveys what someone said with tense and reference shifts.',
+
+    // ── C1 — Refinement ───────────────────────────────────────────
+    'node-28': 'Subjunctive nuances involve mood contrasts with "como se", "o facto de que", or "não creio que".',
+    'node-29': 'Formal register uses "o senhor/a senhora", elevated vocabulary, and academic markers.',
+    'node-30': 'Idiomatic expressions, proverbs, and colloquial constructions reflect native-speaker fluency.',
+    'node-31': 'Complex syntax includes participial clauses, multiple subordination, and nominalization.',
+
+    // ── C2 — Mastery ──────────────────────────────────────────────
+    'node-32': 'Literary tenses (pretérito mais-que-perfeito simples) and narrative style appear in formal writing.',
+    'node-33': 'Academic discourse uses formal argumentation, technical register, and structured reasoning.',
+    'node-34': 'Cultural fluency involves culturally embedded expressions, regional variation, and proverb usage.',
+    'node-35': 'Advanced mastery combines multiple patterns — near-native complexity across grammar, register, and idiom.',
+  },
+  // german / dutch / swedish: add when those languages get decks
 };
 
 /** Get a grammar nudge for a node in the given language. Falls back to Spanish, then empty string. */

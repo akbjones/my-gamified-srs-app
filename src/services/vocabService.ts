@@ -75,6 +75,30 @@ const COMMON_WORDS: Record<string, Set<string>> = {
     'tout', 'tous', 'toute', 'toutes', 'chaque', 'autre', 'autres', 'même', 'mêmes',
     'deux', 'trois', 'un',
   ]),
+  portuguese: new Set([
+    // Articles
+    'o', 'a', 'os', 'as', 'um', 'uma', 'uns', 'umas',
+    // Pronouns
+    'eu', 'tu', 'ele', 'ela', 'você', 'nós', 'vocês', 'eles', 'elas',
+    'me', 'te', 'se', 'nos', 'lhe', 'isso', 'isto', 'aquilo', 'quem', 'que',
+    // Prepositions
+    'de', 'em', 'a', 'para', 'por', 'com', 'sem', 'sobre', 'entre', 'até', 'desde',
+    // Contractions
+    'do', 'da', 'dos', 'das', 'no', 'na', 'nos', 'nas',
+    'ao', 'à', 'aos', 'às', 'pelo', 'pela', 'pelos', 'pelas',
+    // Conjunctions
+    'e', 'ou', 'mas', 'porque', 'quando', 'se', 'como', 'pois', 'nem', 'porém',
+    // Common verbs
+    'ser', 'estar', 'ter', 'ir', 'fazer', 'poder', 'dizer', 'dar', 'ver', 'saber', 'querer', 'haver',
+    // Common adverbs
+    'não', 'sim', 'muito', 'mais', 'também', 'já', 'ainda', 'sempre', 'nunca',
+    'bem', 'mal', 'aqui', 'ali', 'lá', 'onde', 'assim', 'depois', 'antes', 'agora',
+    'hoje', 'ontem', 'amanhã',
+    // Determiners
+    'este', 'esta', 'esse', 'essa', 'aquele', 'aquela',
+    'meu', 'minha', 'seu', 'sua', 'nosso', 'nossa',
+    'todo', 'toda', 'cada', 'outro', 'outra',
+  ]),
 };
 
 export function isCommonWord(word: string, lang: Language): boolean {

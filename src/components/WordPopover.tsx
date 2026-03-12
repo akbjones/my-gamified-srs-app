@@ -104,6 +104,7 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
 
   // Get the active entry for the portal popover
   const activeEntry = activeIndex !== null ? lookup(tokens[activeIndex]) : null;
+  const activeToken = activeIndex !== null ? tokens[activeIndex] : '';
 
   return (
     <div ref={containerRef} className={`inline ${className}`}>
@@ -134,28 +135,23 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
 
       {/* Portal popover — rendered at document body to escape overflow containers */}
       {activeEntry && popoverRect && (
-        <PopoverPortal entry={activeEntry} wordRect={popoverRect} language={language} />
+        <PopoverPortal entry={activeEntry} rawToken={activeToken} wordRect={popoverRect} language={language} />
       )}
     </div>
   );
 };
 
 /** Extract infinitive from dictionary translation like "to open (abrir)" or "to eat" */
-function extractInfinitive(translation: string, language: Language): string | null {
+function extractInfinitive(translation: string): string | null {
   // Try parenthesized form first: "to open (abrir)"
   const parenMatch = translation.match(/\(([^)]+)\)/);
   if (parenMatch) return parenMatch[1].trim().toLowerCase();
-
-  // Try "to X" → map to target language infinitive by looking it up
-  // For now just return the "to X" part for the conjugation engine to try
-  const toMatch = translation.match(/^to\s+(\w+)/i);
-  if (toMatch) return null; // can't reverse-map easily
 
   return null;
 }
 
 /** Fixed-position popover rendered via portal to escape overflow:hidden/auto parents */
-const PopoverPortal: React.FC<{ entry: DictEntry; wordRect: DOMRect; language: Language }> = ({ entry, wordRect, language }) => {
+const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DOMRect; language: Language }> = ({ entry, rawToken, wordRect, language }) => {
   const popoverRef = useRef<HTMLDivElement>(null);
   const [measured, setMeasured] = useState(false);
   const [finalPos, setFinalPos] = useState({ top: 0, left: 0 });
@@ -169,15 +165,44 @@ const PopoverPortal: React.FC<{ entry: DictEntry; wordRect: DOMRect; language: L
     const conjugateFn = CONJUGATE_FNS[language];
     if (!conjugateFn) return null;
 
-    // Try the infinitive from translation
-    const inf = extractInfinitive(entry.en, language);
+    // Try the raw token as-is (works when tapping an infinitive like "parler")
+    const clean = rawToken.toLowerCase().replace(/[.,!?;:""«»()]/g, '');
+    const direct = conjugateFn(clean);
+    if (direct) return direct;
+
+    // Try the infinitive from translation parenthetical: "to speak (parler)"
+    const inf = extractInfinitive(entry.en);
     if (inf) {
       const result = conjugateFn(inf);
       if (result) return result;
     }
 
+    // Try to reconstruct infinitive from the translation "to speak" pattern
+    // by looking for common infinitive endings in the entry key
+    const enTranslation = entry.en.toLowerCase();
+    if (enTranslation.startsWith('to ')) {
+      // For entries whose key IS the infinitive (e.g., "parler" -> { en: "to speak" })
+      // The lookupWord may have resolved a conjugated form to this entry
+      // Try common infinitive reconstructions from the conjugated form
+      for (const ending of ['er', 'ir', 're']) {
+        // Try the stem + ending: "parle" → "parl" + "er" = "parler"
+        const stems = [clean];
+        // Strip common conjugation suffixes
+        if (clean.endsWith('e') || clean.endsWith('s') || clean.endsWith('t')) stems.push(clean.slice(0, -1));
+        if (clean.endsWith('es') || clean.endsWith('ez') || clean.endsWith('nt') || clean.endsWith('ai') || clean.endsWith('as')) stems.push(clean.slice(0, -2));
+        if (clean.endsWith('ent') || clean.endsWith('ons') || clean.endsWith('ais') || clean.endsWith('ait')) stems.push(clean.slice(0, -3));
+        if (clean.endsWith('ions') || clean.endsWith('ient')) stems.push(clean.slice(0, -4));
+        for (const stem of stems) {
+          if (stem.length < 2) continue;
+          const candidate = stem + ending;
+          const r = conjugateFn(candidate);
+          if (r) return r;
+        }
+      }
+    }
+
     return null;
-  }, [entry, language]);
+  }, [entry, rawToken, language]);
 
   const conjTable = conjugation();
 

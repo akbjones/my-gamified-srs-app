@@ -160,11 +160,11 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
         </div>
       )}
 
-      <section className="flex flex-col pt-[max(0.25rem,env(safe-area-inset-top))] pb-[max(0.75rem,env(safe-area-inset-bottom))] px-3 text-center h-dvh">
+      <section className="flex flex-col pt-[max(0.25rem,env(safe-area-inset-top))] pb-[max(0.75rem,env(safe-area-inset-bottom))] px-4 text-center h-dvh">
         {/* Top bar */}
         <nav className="flex flex-col gap-1">
           <div className="flex justify-between items-center">
-            <button onClick={onAbort} className="btn-ghost text-xs">&larr; Exit</button>
+            <button onClick={onAbort} className="btn-ghost text-sm">&larr; Exit</button>
 
             <div className="flex items-center gap-5 stat-card py-2 px-5">
               <div className="text-center">

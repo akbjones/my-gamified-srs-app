@@ -17,7 +17,7 @@ interface StudySessionProps {
   autoPlayAudio: boolean;
   audioSpeed: AudioSpeed;
   googleTtsApiKey?: string;
-  tileCardIndices?: number[];
+  tileCardIds?: Set<string>;
   pendingChallenge?: ChallengeMode | null;
   onStartChallenge?: () => void;
 }
@@ -29,7 +29,7 @@ const GRADE_CONFIG = {
   EASY:  { color: 'text-[var(--accent)]', bg: 'hover:bg-[var(--accent)]/10 active:bg-[var(--accent)]/20', border: 'border-[var(--accent)]/30' },
 } as const;
 
-const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAnswer, onAbort, onStudyMore, hasMoreCards, topicCards = [], autoPlayAudio, audioSpeed, googleTtsApiKey, tileCardIndices = [], pendingChallenge, onStartChallenge }) => {
+const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAnswer, onAbort, onStudyMore, hasMoreCards, topicCards = [], autoPlayAudio, audioSpeed, googleTtsApiKey, tileCardIds = new Set(), pendingChallenge, onStartChallenge }) => {
   const [showInfo, setShowInfo] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -96,8 +96,9 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
     );
   }
 
-  const masteredCount = topicCards.filter(c => c.mastery === 2).length;
-  const topicProgress = topicCards.length > 0 ? (masteredCount / topicCards.length) * 100 : 0;
+  const sessionProgress = session.queue.length > 0
+    ? (session.currentIndex / session.queue.length) * 100
+    : 0;
 
   const remainingQueue = session.queue.slice(session.currentIndex);
   const countNew = remainingQueue.filter(c => c.mastery === 0).length;
@@ -161,41 +162,36 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
 
       <section className="flex flex-col pt-[max(0.25rem,env(safe-area-inset-top))] pb-[max(0.75rem,env(safe-area-inset-bottom))] px-1 text-center h-dvh">
         {/* Top bar */}
-        <nav className="flex flex-col gap-2">
+        <nav className="flex flex-col gap-1">
           <div className="flex justify-between items-center">
             <button onClick={onAbort} className="btn-ghost text-xs">&larr; Exit</button>
 
             <div className="flex items-center gap-5 stat-card py-2 px-5">
               <div className="text-center">
-                <div className="text-base font-black text-sky-400">{countNew}</div>
+                <div className="text-lg font-black text-sky-400">{countNew}</div>
                 <div className="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-wider">new</div>
               </div>
               <div className="text-center">
-                <div className="text-base font-black text-rose-400">{countLearn}</div>
+                <div className="text-lg font-black text-rose-400">{countLearn}</div>
                 <div className="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-wider">learn</div>
               </div>
               <div className="text-center">
-                <div className="text-base font-black text-teal-400">{countReview}</div>
+                <div className="text-lg font-black text-teal-400">{countReview}</div>
                 <div className="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-wider">review</div>
               </div>
             </div>
 
-            <button
-              onClick={() => setShowInfo(true)}
-              className="w-8 h-8 rounded-lg border border-[var(--border-color)] text-xs font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)] hover:border-[var(--border-hover)] transition-colors"
-            >
-              ?
-            </button>
+            <div className="w-12" /> {/* Spacer to center the card counts */}
           </div>
 
           <div className="progress-rail mt-1">
-            <div className="progress-fill bg-[var(--accent)]" style={{ width: `${topicProgress}%` }} />
+            <div className="progress-fill bg-[var(--accent)]" style={{ width: `${sessionProgress}%` }} />
           </div>
         </nav>
 
         {/* Tile challenge or Flashcard */}
-        {tileCardIndices.includes(session.currentIndex) ? (
-          <div className="study-card flex-1 min-h-0 max-h-[52dvh] flex flex-col my-1.5 overflow-hidden">
+        {tileCardIds.has(card!.id) ? (
+          <div className="study-card flex-1 min-h-0 flex flex-col my-1 overflow-hidden">
             <WordTileChallenge
               card={card!}
               siblingCards={topicCards}
@@ -212,7 +208,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
         ) : (
         <div
           onClick={!isFlipped ? handleFlip : undefined}
-          className="study-card flex-1 min-h-0 flex flex-col cursor-pointer my-1.5 relative"
+          className="study-card flex-1 min-h-0 flex flex-col cursor-pointer my-1 relative"
         >
           {/* Grammar overlay — tap anywhere to dismiss */}
           {showGrammar && card!.grammar && (
@@ -318,7 +314,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
         )}
 
         {/* Grading buttons — hidden for tile cards (they self-grade) */}
-        {isFlipped && !tileCardIndices.includes(session.currentIndex) && (
+        {isFlipped && !tileCardIds.has(card!.id) && (
           <div className="animate-slide-up pb-2 shrink-0">
             <div className="grid grid-cols-4 gap-2">
               {(['AGAIN', 'HARD', 'GOOD', 'EASY'] as const).map(rating => {
@@ -327,26 +323,32 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                   <button
                     key={rating}
                     onClick={() => submitAnswer(rating)}
-                    className={`py-4 rounded-xl bg-[var(--bg-card)] border ${cfg.border} ${cfg.bg} ${cfg.color} active:scale-95 transition-all`}
+                    className={`py-5 rounded-xl bg-[var(--bg-card)] border ${cfg.border} ${cfg.bg} ${cfg.color} active:scale-95 transition-all`}
                   >
-                    <div className="text-xs font-black uppercase">{rating}</div>
+                    <div className="text-sm font-black uppercase">{rating}</div>
                     <div className="text-[10px] text-[var(--text-muted)] font-mono mt-0.5">{getIntervalHint(rating)}</div>
                   </button>
                 );
               })}
             </div>
-            <div className="flex justify-center mt-1.5">
+            <div className="flex justify-center mt-1.5 gap-4">
               <button
                 onClick={() => { setIsFlipped(false); setShowGrammar(false); }}
                 className="py-2 px-4 text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider hover:text-[var(--text-secondary)] transition-colors"
               >
                 &larr; Back
               </button>
+              <button
+                onClick={() => setShowInfo(true)}
+                className="py-2 px-3 text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider hover:text-[var(--text-secondary)] transition-colors"
+              >
+                ?
+              </button>
             </div>
           </div>
         )}
 
-        {!isFlipped && !tileCardIndices.includes(session.currentIndex) && (
+        {!isFlipped && !tileCardIds.has(card!.id) && (
           <div className="h-[60px] shrink-0 flex items-center justify-center">
             {onUndoAnswer && session.currentIndex > 0 && (
               <button

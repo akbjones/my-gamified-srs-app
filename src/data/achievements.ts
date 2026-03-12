@@ -1,5 +1,7 @@
 import { Achievement, UserStats, MasteryMap, QuestCard } from '../types';
 
+const RETENTION_THRESHOLD = 21 * 24 * 60 * 60 * 1000; // 21 days
+
 export const ACHIEVEMENTS: Achievement[] = [
   {
     id: 'first-steps',
@@ -50,20 +52,25 @@ export const ACHIEVEMENTS: Achievement[] = [
     condition: (stats: UserStats) => stats.totalReviews >= 1000,
   },
   {
-    id: 'level-5',
+    id: 'first-experiment',
     title: 'Copper',
-    description: 'Reach level 5',
+    description: 'Win your first experiment (boss battle)',
     icon: 'Cu',
     unlocked: false,
-    condition: (stats: UserStats) => stats.level >= 5,
+    condition: (stats: UserStats) => stats.cardsLearned >= 50,
   },
   {
-    id: 'level-10',
+    id: 'recall-90',
     title: 'Silver',
-    description: 'Reach level 10',
+    description: 'Achieve 90%+ recall with 20+ graduated cards',
     icon: 'Ag',
     unlocked: false,
-    condition: (stats: UserStats) => stats.level >= 10,
+    condition: (_stats: UserStats, _masteryMap: MasteryMap, deck: QuestCard[]) => {
+      const graduated = deck.filter(c => c.mastery === 2);
+      if (graduated.length < 20) return false;
+      const retained = graduated.filter(c => (c.interval || 0) >= RETENTION_THRESHOLD).length;
+      return (retained / graduated.length) >= 0.9;
+    },
   },
   {
     id: 'cards-50',

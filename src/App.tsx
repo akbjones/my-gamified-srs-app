@@ -7,7 +7,7 @@ import ChallengeScreen from './components/ChallengeScreen';
 import StreakFlame from './components/StreakFlame';
 import { QuestCard, MasteryMap, SessionState, UserStats, DailyStats, Language, LearningGoal, LANGUAGE_CONFIG, GOAL_CONFIG, ProgressState, ChallengeMode, ChallengeQuestion, BossRing } from './types';
 import { MAIN_PATH, isNodeUnlocked, getNodeName } from './data/topicConfig';
-import { handleAnswerLogic, saveCardProgress, getRetention, burySiblings } from './services/srsService';
+import { handleAnswerLogic, saveCardProgress, getRetention, burySiblings, interleaveQueue } from './services/srsService';
 import {
   migrateStorageKeys, loadMasteryMap, saveMasteryMap, loadUserStats, saveUserStats,
   loadDailyStats, saveDailyStats, resetAll,
@@ -18,8 +18,7 @@ import {
 } from './services/storageService';
 import type { StudySettings, AudioSpeed } from './services/storageService';
 import {
-  awardXP, updateStreak, checkAchievements, getAchievementsWithStatus,
-  awardChallengeXP,
+  recordAnswer, updateStreak, checkAchievements, getAchievementsWithStatus,
 } from './services/gamificationService';
 import {
   selectTileCandidates, buildChallengeQuestions, shouldTriggerChallenge, isRingBetter, calculateBossRing, TOTAL_BOSSES,
@@ -139,11 +138,10 @@ const App: React.FC = () => {
   const [dailyStats, setDailyStats] = useState<DailyStats>(() => loadDailyStats(settings.selectedLanguage));
   const [progressState, setProgressState] = useState<ProgressState>(() => loadProgressState(settings.selectedLanguage));
   const [vocabMap, setVocabMap] = useState(() => loadVocabMap(settings.selectedLanguage));
-  const [tileCardIndices, setTileCardIndices] = useState<number[]>([]);
+  const [tileCardIds, setTileCardIds] = useState<Set<string>>(new Set());
   const [pendingChallenge, setPendingChallenge] = useState<ChallengeMode | null>(null);
   const [challengeQuestions, setChallengeQuestions] = useState<ChallengeQuestion[]>([]);
   const [showTools, setShowTools] = useState(false);
-  const [bonusCards, setBonusCards] = useState(5);
   // Undo stack for going back to previous cards
   const [answerHistory, setAnswerHistory] = useState<Array<{
     session: SessionState;
@@ -223,7 +221,9 @@ const App: React.FC = () => {
     // New cards: from the current frontier node, excluding suspended
     // When "Study More" is clicked, always add at least 10 new cards
     const dailyLimitRemaining = settings.dailyNewLimit - dailyStats.newCardsCount;
-    const newLimit = studyMore ? Math.max(10, dailyLimitRemaining) : Math.max(0, dailyLimitRemaining);
+    const baseNewLimit = studyMore ? Math.max(10, dailyLimitRemaining) : Math.max(0, dailyLimitRemaining);
+    // Cap new cards at 10 when no reviews exist (prevents flooding after focus switch)
+    const newLimit = reviews.length === 0 ? Math.min(baseNewLimit, 10) : baseNewLimit;
     const nodeCards = deck.filter(c => c.topic === currentNode.id && !c.isSuspended);
     const newCards = nodeCards
       .filter(c => c.mastery === 0)
@@ -236,14 +236,15 @@ const App: React.FC = () => {
     setUserStats(updatedStats);
     saveUserStats(updatedStats, lang);
 
-    // Apply sibling burying to the queue
+    // Interleave new cards among reviews, then bury siblings
+    const interleaved = interleaveQueue(reviews, newCards);
     const queue = burySiblings(
-      [...reviews, ...newCards].map(c => ({ ...c, step: c.step || 0 }))
+      interleaved.map(c => ({ ...c, step: c.step || 0 }))
     );
 
-    // Select tile challenge cards (objectively graded)
-    const tiles = selectTileCandidates(queue);
-    setTileCardIndices(tiles);
+    // Select tile challenge cards by ID (indices shift during mini-loops)
+    const tileIndices = selectTileCandidates(queue);
+    setTileCardIds(new Set(tileIndices.map(i => queue[i].id)));
     setPendingChallenge(null);
 
     setSession({
@@ -292,10 +293,8 @@ const App: React.FC = () => {
       saveProgressState(newProgress, lang);
     }
 
-    // XP and gamification
-    const { stats: newStats, xpGained, leveledUp } = awardXP(rating, userStats);
-
-    // Count graduated cards (use the actual updated card, not queue lookup)
+    // Track answer + count graduated cards
+    const newStats = recordAnswer(userStats);
     if (updatedCard.mastery === 2 && currentCard.mastery < 2) {
       newStats.cardsLearned = newStats.cardsLearned + 1;
     }
@@ -331,9 +330,10 @@ const App: React.FC = () => {
     const recentCards = deck.filter(c => c.mastery >= 1 && !c.isSuspended);
     const count = pendingChallenge === 'boss' ? 8 : 4;
     const questions = buildChallengeQuestions(recentCards, count);
-    if (questions.length < count) {
-      // Not enough eligible cards — skip this challenge
+    if (questions.length === 0) {
+      // Truly no eligible cards — go home
       setPendingChallenge(null);
+      setView('HOME');
       return;
     }
     setChallengeQuestions(questions);
@@ -342,9 +342,7 @@ const App: React.FC = () => {
 
   const handleChallengeComplete = (results: boolean[], elapsedMs: number) => {
     const correctCount = results.filter(Boolean).length;
-    const xpGained = awardChallengeXP(pendingChallenge || 'checkpoint', correctCount);
-    const newStats = { ...userStats, xp: userStats.xp + xpGained };
-    newStats.level = Math.floor(newStats.xp / 100) + 1;
+    const newStats = { ...userStats };
 
     // Update boss records
     if (pendingChallenge === 'boss') {
@@ -591,7 +589,7 @@ const App: React.FC = () => {
                 );
               })}
             </div>
-            <p className="text-[9px] text-[var(--text-faint)] text-center mt-1.5">
+            <p className="text-[11px] text-[var(--text-muted)] font-medium text-center mt-1.5">
               {goal === 'general' ? 'Well-rounded vocabulary' : GOAL_CONFIG[goal].description}
             </p>
           </div>
@@ -623,30 +621,14 @@ const App: React.FC = () => {
             )}
           </button>
 
-          {/* Add more cards when caught up */}
+          {/* Study more when caught up — starts a new session without changing daily limit */}
           {!hasCards && (
-            <div className="flex items-center gap-2 mb-3 -mt-1">
-              <button
-                onClick={() => setBonusCards(prev => Math.max(1, prev - 5))}
-                className="w-10 h-10 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-muted)] font-bold text-sm hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] active:scale-95 transition-all flex items-center justify-center"
-              >
-                &minus;
-              </button>
-              <button
-                onClick={() => {
-                  handleUpdateSettings({ ...settings, dailyNewLimit: settings.dailyNewLimit + bonusCards });
-                }}
-                className="flex-1 py-3 rounded-xl bg-[var(--bg-card)] border border-[var(--accent)]/30 text-[var(--accent)] text-xs font-bold hover:bg-[var(--accent)]/10 active:bg-[var(--accent)]/20 transition-colors"
-              >
-                + {bonusCards} More Cards
-              </button>
-              <button
-                onClick={() => setBonusCards(prev => Math.min(50, prev + 5))}
-                className="w-10 h-10 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-muted)] font-bold text-sm hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] active:scale-95 transition-all flex items-center justify-center"
-              >
-                +
-              </button>
-            </div>
+            <button
+              onClick={() => handleStartSession(true)}
+              className="w-full py-3 rounded-xl bg-[var(--bg-card)] border border-[var(--accent)]/30 text-[var(--accent)] text-sm font-bold hover:bg-[var(--accent)]/10 active:bg-[var(--accent)]/20 transition-colors mb-3 -mt-1"
+            >
+              Study More Cards
+            </button>
           )}
 
           {/* Vocab list button */}
@@ -832,7 +814,7 @@ const App: React.FC = () => {
           autoPlayAudio={settings.autoPlayAudio}
           audioSpeed={settings.audioSpeed}
           googleTtsApiKey={settings.googleTtsApiKey}
-          tileCardIndices={tileCardIndices}
+          tileCardIds={tileCardIds}
           pendingChallenge={pendingChallenge}
           onStartChallenge={handleStartChallenge}
         />

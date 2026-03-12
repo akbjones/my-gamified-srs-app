@@ -106,11 +106,19 @@ export function selectTileCandidates(queue: QuestCard[]): number[] {
 
 // ── Challenge Question Building ─────────────────────────────
 export function buildChallengeQuestions(cards: QuestCard[], count: number): ChallengeQuestion[] {
-  // Filter eligible cards (5-12 words)
-  const eligible = cards.filter(c => {
+  // Filter eligible cards (prefer 5-12 words, fallback to 3-14)
+  let eligible = cards.filter(c => {
     const wc = c.target.split(/\s+/).length;
     return wc >= 5 && wc <= 12;
   });
+
+  // Fallback: include shorter/longer sentences if not enough
+  if (eligible.length < count) {
+    eligible = cards.filter(c => {
+      const wc = c.target.split(/\s+/).length;
+      return wc >= 3 && wc <= 14;
+    });
+  }
 
   const shuffled = fisherYatesShuffle(eligible);
   const selected = shuffled.slice(0, count);

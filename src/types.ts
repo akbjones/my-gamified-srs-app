@@ -33,8 +33,6 @@ export interface SessionState {
 export type MasteryMap = Record<string, Partial<QuestCard>>;
 
 export interface UserStats {
-  xp: number;
-  level: number;
   streak: number;
   totalReviews: number;
   cardsLearned: number;

@@ -270,9 +270,11 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
       </div>
 
       {/* IPA */}
-      <div className="text-sm text-blue-500 font-mono mt-1.5">
-        /{entry.ipa}/
-      </div>
+      {entry.ipa && (
+        <div className="text-sm text-blue-500 font-mono mt-1.5">
+          /{entry.ipa}/
+        </div>
+      )}
 
       {/* Part of speech */}
       {entry.pos && (

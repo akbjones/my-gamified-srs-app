@@ -1,4 +1,4 @@
-export type Language = 'spanish' | 'italian' | 'german' | 'french' | 'portuguese';
+export type Language = 'spanish' | 'italian' | 'german' | 'french' | 'portuguese' | 'dutch';
 export type LearningGoal = 'general' | 'travel' | 'work' | 'family';
 
 export interface QuestCard {
@@ -120,6 +120,7 @@ export const LANGUAGE_CONFIG: Record<Language, { name: string; code: string; bcp
   german:  { name: 'German',  code: 'DE', bcp47: 'de-DE' },
   french:  { name: 'French',  code: 'FR', bcp47: 'fr-FR' },
   portuguese: { name: 'Portuguese', code: 'PT', bcp47: 'pt-BR' },
+  dutch: { name: 'Dutch', code: 'NL', bcp47: 'nl-NL' },
 };
 
 export const GOAL_CONFIG: Record<LearningGoal, { name: string; description: string }> = {

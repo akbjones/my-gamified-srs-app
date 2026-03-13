@@ -42,7 +42,8 @@ const LANG_DEFAULTS = {
   it: { voice: 'it-IT-Standard-A', prefix: 'it', deckDir: 'italian' },
   de: { voice: 'de-DE-Standard-A', prefix: 'de', deckDir: 'german' },
   fr: { voice: 'fr-FR-Standard-A', prefix: 'fr', deckDir: 'french' },
-  pt: { voice: 'pt-BR-Standard-A', prefix: 'pt', deckDir: 'portuguese' },
+  pt: { voice: 'pt-BR-Wavenet-A', prefix: 'pt', deckDir: 'portuguese' },
+  nl: { voice: 'nl-NL-Standard-A', prefix: 'nl', deckDir: 'dutch' },
 };
 const langConfig = LANG_DEFAULTS[lang];
 if (!langConfig) {

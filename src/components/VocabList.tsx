@@ -8,6 +8,7 @@ import { conjugate as conjugateIt } from '../data/conjugation/it';
 import { conjugate as conjugateFr } from '../data/conjugation/fr';
 import { conjugate as conjugatePt } from '../data/conjugation/pt';
 import { conjugate as conjugateDe } from '../data/conjugation/de';
+import { conjugate as conjugateNl } from '../data/conjugation/nl';
 
 type SortMode = 'recent' | 'tricky';
 
@@ -24,6 +25,7 @@ const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable 
   french: conjugateFr,
   portuguese: conjugatePt,
   german: conjugateDe,
+  dutch: conjugateNl,
 };
 
 const PERSON_LABELS: Record<string, string[]> = {
@@ -32,6 +34,7 @@ const PERSON_LABELS: Record<string, string[]> = {
   french: ['je', 'tu', 'il', 'nous', 'vous', 'ils'],
   portuguese: ['eu', 'tu', 'ele', 'nós', 'vós', 'eles'],
   german: ['ich', 'du', 'er/sie', 'wir', 'ihr', 'sie/Sie'],
+  dutch: ['ik', 'jij', 'hij/zij', 'wij', 'jullie', 'zij'],
 };
 
 const TENSE_LABELS: Record<string, string> = {

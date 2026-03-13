@@ -30,7 +30,8 @@ const GOOGLE_VOICE_MAP: Record<Language, { languageCode: string; name: string }>
   italian: { languageCode: 'it-IT', name: 'it-IT-Standard-A' },
   german:  { languageCode: 'de-DE', name: 'de-DE-Standard-A' },
   french:  { languageCode: 'fr-FR', name: 'fr-FR-Standard-A' },
-  portuguese: { languageCode: 'pt-BR', name: 'pt-BR-Standard-A' },
+  portuguese: { languageCode: 'pt-BR', name: 'pt-BR-Wavenet-A' },
+  dutch: { languageCode: 'nl-NL', name: 'nl-NL-Standard-A' },
 };
 
 // Speed maps to Google TTS speakingRate (0.25–4.0, 1.0 = normal)
@@ -133,7 +134,9 @@ export const playCardAudio = async (
   if (audioFile) {
     try {
       const audio = new Audio(`/quest-audio/${audioFile}`);
-      audio.playbackRate = speed === 1.0 ? 1 : speed === 0.8 ? 0.9 : 0.7;
+      // Pre-recorded files are generated at 0.95x speaking rate, so adjust
+      // playback rate to compensate (avoid double-slowdown)
+      audio.playbackRate = speed === 1.0 ? 1.05 : speed === 0.8 ? 1.0 : 0.8;
       currentAudio = audio;
       // Wait for the audio to be loadable before playing — otherwise a 404
       // resolves play() but fires a media error silently, skipping TTS fallback.

@@ -370,6 +370,17 @@ const TRANSLATIONS = {
   'acht': ['eight', 'det'], 'sieben': ['seven', 'det'],
 };
 
+// Merge extra translations (generated from missing words analysis)
+try {
+  const extra = require('/tmp/de-extra-translations.cjs');
+  for (const [word, val] of Object.entries(extra)) {
+    if (!TRANSLATIONS[word]) TRANSLATIONS[word] = val;
+  }
+  console.log('Merged', Object.keys(extra).length, 'extra translations');
+} catch (e) {
+  console.log('No extra translations file found, using base translations only');
+}
+
 // Build the file content
 let output = `import type { DictEntry } from './es';
 

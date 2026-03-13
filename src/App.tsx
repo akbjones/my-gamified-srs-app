@@ -29,6 +29,7 @@ import { lookupWord as lookupIt } from './data/dictionary/it';
 import { lookupWord as lookupFr } from './data/dictionary/fr';
 import { lookupWord as lookupPt } from './data/dictionary/pt';
 import { lookupWord as lookupDe } from './data/dictionary/de';
+import { lookupWord as lookupNl } from './data/dictionary/nl';
 import VocabList from './components/VocabList';
 import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight } from 'lucide-react';
 
@@ -38,6 +39,7 @@ const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
   french: lookupFr,
   portuguese: lookupPt,
   german: lookupDe,
+  dutch: lookupNl,
 };
 
 type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB';
@@ -49,6 +51,7 @@ import rawItalianDeck from './data/italian/deck.json';
 import rawFrenchDeck from './data/french/deck.json';
 import rawPortugueseDeck from './data/portuguese/deck.json';
 import rawGermanDeck from './data/german/deck.json';
+import rawDutchDeck from './data/dutch/deck.json';
 
 const DECK_MAP: Partial<Record<Language, any[]>> = {
   spanish: rawSpanishDeck,
@@ -56,6 +59,7 @@ const DECK_MAP: Partial<Record<Language, any[]>> = {
   french: rawFrenchDeck,
   portuguese: rawPortugueseDeck,
   german: rawGermanDeck,
+  dutch: rawDutchDeck,
 };
 
 // Transform raw deck.json cards into QuestCards mapped to linear path nodes
@@ -483,8 +487,7 @@ const App: React.FC = () => {
             <div className="flex items-center gap-1.5">
               <button
                 onClick={() => {
-                  const langs: Language[] = ['spanish', 'italian', 'french', 'german'];
-                  const available = langs.filter(l => availableLanguages.includes(l));
+                  const available = availableLanguages;
                   if (available.length <= 1) return;
                   const idx = available.indexOf(lang);
                   handleLanguageChange(available[(idx + 1) % available.length]);

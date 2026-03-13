@@ -32,7 +32,7 @@ const GOOGLE_VOICE_MAP: Record<Language, { languageCode: string; name: string }>
   french:  { languageCode: 'fr-FR', name: 'fr-FR-Wavenet-A' },
   portuguese: { languageCode: 'pt-BR', name: 'pt-BR-Wavenet-A' },
   dutch: { languageCode: 'nl-NL', name: 'nl-NL-Wavenet-A' },
-  swedish: { languageCode: 'sv-SE', name: 'sv-SE-Wavenet-A' },
+  swedish: { languageCode: 'sv-SE', name: 'sv-SE-Wavenet-D' },
 };
 
 // Speed maps to Google TTS speakingRate (0.25–4.0, 1.0 = normal)

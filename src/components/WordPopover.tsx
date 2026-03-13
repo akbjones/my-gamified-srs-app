@@ -206,7 +206,10 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
         stems.add(clean.slice(0, -i));
       }
       for (const stem of stems) {
-        for (const ending of ['ir', 'er', 're', 'ar', 'or', 'en', 'n']) {
+        // IMPORTANT: When adding a new language, add its infinitive endings here!
+        // Romance: -ir, -er, -re, -ar, -or  |  Germanic: -en, -n  |  Swedish: -a
+        // Turkish: -mek, -mak  |  Hindi: -ना (-nā)  |  Russian: -ть (-t')
+        for (const ending of ['ir', 'er', 're', 'ar', 'or', 'en', 'n', 'a', 'e']) {
           const candidate = stem + ending;
           const dictEntry = lookupFn(candidate);
           if (dictEntry?.pos === 'v') {

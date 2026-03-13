@@ -167,7 +167,54 @@ function checkDictCompleteness(lang) {
   }
 }
 
-// ─── Check 4: Conjugation smoke test ────────────────────────
+// ─── Check 4: Dictionary translation quality ─────────────────
+function checkTranslationQuality(lang) {
+  const dictPath = path.join(SRC, 'data', 'dictionary', `${lang.code}.ts`);
+  if (!fs.existsSync(dictPath)) {
+    return { pass: true, error: 'dictionary not found' };
+  }
+
+  const content = fs.readFileSync(dictPath, 'utf-8');
+
+  // Count self-translated entries (en value == key)
+  const entryPattern = /['"]([^'"]+)['"]\s*:\s*\{\s*en:\s*['"]([^'"]*)['"]/g;
+  let total = 0;
+  let selfTranslated = 0;
+  let match;
+  while ((match = entryPattern.exec(content)) !== null) {
+    total++;
+    const key = match[1].toLowerCase();
+    const en = match[2].toLowerCase();
+    if (key === en) selfTranslated++;
+  }
+
+  const selfPct = total > 0 ? Math.round((selfTranslated / total) * 100) : 0;
+
+  const issues = [];
+  if (selfPct > 40) issues.push(`${selfPct}% self-translated (${selfTranslated}/${total}) — target <40%`);
+
+  // Count entries with wrong POS for verb forms
+  const verbFormPattern = /['"]([^'"]+)['"]\s*:\s*\{\s*en:\s*['"]to\s/g;
+  let verbAsNoun = 0;
+  const verbContent = content;
+  let vm;
+  const verbNounPattern = /['"]([^'"]+)['"]\s*:\s*\{\s*en:\s*['"]to\s[^'"]*['"]\s*,\s*ipa:\s*['"][^'"]*['"]\s*,\s*pos:\s*['"]n['"]/g;
+  while ((vm = verbNounPattern.exec(verbContent)) !== null) {
+    verbAsNoun++;
+  }
+  if (verbAsNoun > 0) issues.push(`${verbAsNoun} entries with en="to ..." but pos='n' (should be 'v')`);
+
+  return {
+    pass: issues.length === 0,
+    total,
+    selfTranslated,
+    selfPct,
+    verbAsNoun,
+    issues,
+  };
+}
+
+// ─── Check 5: Conjugation smoke test ────────────────────────
 function checkConjugation(lang) {
   const conjPath = path.join(SRC, 'data', 'conjugation', `${lang.code}.ts`);
   if (!fs.existsSync(conjPath)) {
@@ -253,6 +300,19 @@ for (const lang of LANGUAGES) {
     if (comp.issues.length > 0) {
       comp.issues.forEach(i => console.log(`    ⚠ ${i}`));
       allPassed = false;
+    }
+  }
+
+  // Translation quality
+  const trans = checkTranslationQuality(lang);
+  if (trans.error) {
+    console.log(`  Translation: SKIP (${trans.error})`);
+  } else {
+    const status = trans.pass ? '\x1b[32mPASS\x1b[0m' : '\x1b[33mWARN\x1b[0m';
+    console.log(`  Translation: ${status} — ${trans.selfPct}% self-translated (${trans.selfTranslated}/${trans.total})`);
+    if (trans.issues.length > 0) {
+      trans.issues.forEach(i => console.log(`    ⚠ ${i}`));
+      // Don't fail the whole audit for translation quality, just warn
     }
   }
 

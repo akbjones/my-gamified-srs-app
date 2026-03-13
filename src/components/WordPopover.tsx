@@ -2,24 +2,39 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import ReactDOM from 'react-dom';
 import { lookupWord as lookupEs, DictEntry } from '../data/dictionary/es';
 import { lookupWord as lookupIt } from '../data/dictionary/it';
+import { lookupWord as lookupFr } from '../data/dictionary/fr';
+import { lookupWord as lookupPt } from '../data/dictionary/pt';
+import { lookupWord as lookupDe } from '../data/dictionary/de';
 import { conjugate as conjugateEs } from '../data/conjugation/es';
 import { conjugate as conjugateIt } from '../data/conjugation/it';
+import { conjugate as conjugateFr } from '../data/conjugation/fr';
+import { conjugate as conjugatePt } from '../data/conjugation/pt';
+import { conjugate as conjugateDe } from '../data/conjugation/de';
 import { Language, ConjugationTable } from '../types';
 
 // Dynamic lookup per language — gracefully returns null for languages without a dictionary
 const LOOKUP_FNS: Partial<Record<Language, (w: string) => DictEntry | null>> = {
   spanish: lookupEs,
   italian: lookupIt,
+  french: lookupFr,
+  portuguese: lookupPt,
+  german: lookupDe,
 };
 
 const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable | null>> = {
   spanish: conjugateEs,
   italian: conjugateIt,
+  french: conjugateFr,
+  portuguese: conjugatePt,
+  german: conjugateDe,
 };
 
 const PERSON_LABELS: Record<string, string[]> = {
   spanish: ['yo', 'tú', 'él', 'nosotros', 'vosotros', 'ellos'],
   italian: ['io', 'tu', 'lui', 'noi', 'voi', 'loro'],
+  french: ['je', 'tu', 'il', 'nous', 'vous', 'ils'],
+  portuguese: ['eu', 'tu', 'ele', 'nós', 'vós', 'eles'],
+  german: ['ich', 'du', 'er/sie', 'wir', 'ihr', 'sie/Sie'],
 };
 
 const TENSE_LABELS: Record<string, string> = {
@@ -27,8 +42,8 @@ const TENSE_LABELS: Record<string, string> = {
   preterite: 'Preterite',
   imperfect: 'Imperfect',
   future: 'Future',
-  conditional: 'Cond.',
-  subjunctive: 'Subj.',
+  conditional: 'Conditional',
+  subjunctive: 'Subjunctive',
 };
 
 interface WordPopoverProps {
@@ -94,6 +109,7 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
 
   // Get the active entry for the portal popover
   const activeEntry = activeIndex !== null ? lookup(tokens[activeIndex]) : null;
+  const activeToken = activeIndex !== null ? tokens[activeIndex] : '';
 
   return (
     <div ref={containerRef} className={`inline ${className}`}>
@@ -124,28 +140,23 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
 
       {/* Portal popover — rendered at document body to escape overflow containers */}
       {activeEntry && popoverRect && (
-        <PopoverPortal entry={activeEntry} wordRect={popoverRect} language={language} />
+        <PopoverPortal entry={activeEntry} rawToken={activeToken} wordRect={popoverRect} language={language} />
       )}
     </div>
   );
 };
 
 /** Extract infinitive from dictionary translation like "to open (abrir)" or "to eat" */
-function extractInfinitive(translation: string, language: Language): string | null {
+function extractInfinitive(translation: string): string | null {
   // Try parenthesized form first: "to open (abrir)"
   const parenMatch = translation.match(/\(([^)]+)\)/);
   if (parenMatch) return parenMatch[1].trim().toLowerCase();
-
-  // Try "to X" → map to target language infinitive by looking it up
-  // For now just return the "to X" part for the conjugation engine to try
-  const toMatch = translation.match(/^to\s+(\w+)/i);
-  if (toMatch) return null; // can't reverse-map easily
 
   return null;
 }
 
 /** Fixed-position popover rendered via portal to escape overflow:hidden/auto parents */
-const PopoverPortal: React.FC<{ entry: DictEntry; wordRect: DOMRect; language: Language }> = ({ entry, wordRect, language }) => {
+const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DOMRect; language: Language }> = ({ entry, rawToken, wordRect, language }) => {
   const popoverRef = useRef<HTMLDivElement>(null);
   const [measured, setMeasured] = useState(false);
   const [finalPos, setFinalPos] = useState({ top: 0, left: 0 });
@@ -159,15 +170,42 @@ const PopoverPortal: React.FC<{ entry: DictEntry; wordRect: DOMRect; language: L
     const conjugateFn = CONJUGATE_FNS[language];
     if (!conjugateFn) return null;
 
-    // Try the infinitive from translation
-    const inf = extractInfinitive(entry.en, language);
+    // Try the raw token as-is (works when tapping an infinitive like "parler")
+    const clean = rawToken.toLowerCase().replace(/[.,!?;:""«»()]/g, '');
+    const direct = conjugateFn(clean);
+    if (direct) return direct;
+
+    // Try the infinitive from translation parenthetical: "to speak (parler)"
+    const inf = extractInfinitive(entry.en);
     if (inf) {
       const result = conjugateFn(inf);
       if (result) return result;
     }
 
+    // Try to reconstruct infinitive from conjugated form
+    // Validate all candidates against dictionary to avoid fake verbs
+    // (e.g., "agissons" should find "agir", not create fake "agisser")
+    const lookupFn = LOOKUP_FNS[language];
+    if (lookupFn) {
+      // Generate candidate stems by progressively trimming from the end
+      const stems = new Set<string>();
+      for (let i = 1; i <= Math.min(clean.length - 2, 7); i++) {
+        stems.add(clean.slice(0, -i));
+      }
+      for (const stem of stems) {
+        for (const ending of ['ir', 'er', 're', 'ar', 'or']) {
+          const candidate = stem + ending;
+          const dictEntry = lookupFn(candidate);
+          if (dictEntry?.pos === 'v') {
+            const r = conjugateFn(candidate);
+            if (r) return r;
+          }
+        }
+      }
+    }
+
     return null;
-  }, [entry, language]);
+  }, [entry, rawToken, language]);
 
   const conjTable = conjugation();
 

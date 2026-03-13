@@ -30,6 +30,7 @@ const GOOGLE_VOICE_MAP: Record<Language, { languageCode: string; name: string }>
   italian: { languageCode: 'it-IT', name: 'it-IT-Standard-A' },
   german:  { languageCode: 'de-DE', name: 'de-DE-Standard-A' },
   french:  { languageCode: 'fr-FR', name: 'fr-FR-Standard-A' },
+  portuguese: { languageCode: 'pt-BR', name: 'pt-BR-Standard-A' },
 };
 
 // Speed maps to Google TTS speakingRate (0.25–4.0, 1.0 = normal)

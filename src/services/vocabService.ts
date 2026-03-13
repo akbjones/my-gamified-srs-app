@@ -58,6 +58,80 @@ const COMMON_WORDS: Record<string, Set<string>> = {
     'nostro', 'nostra', 'nostri', 'nostre', 'vostro', 'vostra', 'vostri', 'vostre',
     'col', 'dell', 'nell', 'sull', 'all', 'dall',
   ]),
+  french: new Set([
+    'le', 'la', 'les', 'un', 'une', 'des', 'du', 'de', 'au', 'aux',
+    'l', 'd', 'j', 'n', 's', 'c', 'm', 't', 'qu', // elision fragments
+    'à', 'en', 'dans', 'sur', 'sous', 'avec', 'sans', 'pour', 'par', 'vers', 'chez', 'entre',
+    'et', 'ou', 'mais', 'donc', 'car', 'ni', 'que', 'si', 'comme', 'quand', 'où', 'parce',
+    'je', 'tu', 'il', 'elle', 'on', 'nous', 'vous', 'ils', 'elles',
+    'me', 'te', 'se', 'lui', 'leur', 'y', 'en',
+    'mon', 'ma', 'mes', 'ton', 'ta', 'tes', 'son', 'sa', 'ses', 'notre', 'votre', 'nos', 'vos', 'leurs',
+    'ce', 'cet', 'cette', 'ces', 'cela', 'ceci', 'ça',
+    'est', 'sont', 'a', 'ont', 'être', 'avoir', 'fait', 'va', 'aller', 'faire',
+    'ai', 'as', 'avons', 'avez', 'suis', 'es', 'sommes', 'êtes',
+    'ne', 'pas', 'plus', 'jamais', 'rien', 'personne',
+    'oui', 'non', 'très', 'bien', 'aussi', 'ici', 'là',
+    'qui', 'dont', 'lequel', 'laquelle',
+    'tout', 'tous', 'toute', 'toutes', 'chaque', 'autre', 'autres', 'même', 'mêmes',
+    'deux', 'trois', 'un',
+  ]),
+  portuguese: new Set([
+    // Articles
+    'o', 'a', 'os', 'as', 'um', 'uma', 'uns', 'umas',
+    // Pronouns
+    'eu', 'tu', 'ele', 'ela', 'você', 'nós', 'vocês', 'eles', 'elas',
+    'me', 'te', 'se', 'nos', 'lhe', 'isso', 'isto', 'aquilo', 'quem', 'que',
+    // Prepositions
+    'de', 'em', 'a', 'para', 'por', 'com', 'sem', 'sobre', 'entre', 'até', 'desde',
+    // Contractions
+    'do', 'da', 'dos', 'das', 'no', 'na', 'nos', 'nas',
+    'ao', 'à', 'aos', 'às', 'pelo', 'pela', 'pelos', 'pelas',
+    // Conjunctions
+    'e', 'ou', 'mas', 'porque', 'quando', 'se', 'como', 'pois', 'nem', 'porém',
+    // Common verbs
+    'ser', 'estar', 'ter', 'ir', 'fazer', 'poder', 'dizer', 'dar', 'ver', 'saber', 'querer', 'haver',
+    // Common adverbs
+    'não', 'sim', 'muito', 'mais', 'também', 'já', 'ainda', 'sempre', 'nunca',
+    'bem', 'mal', 'aqui', 'ali', 'lá', 'onde', 'assim', 'depois', 'antes', 'agora',
+    'hoje', 'ontem', 'amanhã',
+    // Determiners
+    'este', 'esta', 'esse', 'essa', 'aquele', 'aquela',
+    'meu', 'minha', 'seu', 'sua', 'nosso', 'nossa',
+    'todo', 'toda', 'cada', 'outro', 'outra',
+  ]),
+  german: new Set([
+    // Articles
+    'der', 'die', 'das', 'den', 'dem', 'des', 'ein', 'eine', 'einen', 'einem', 'einer', 'eines',
+    // Pronouns
+    'ich', 'du', 'er', 'sie', 'es', 'wir', 'ihr', 'man',
+    'mich', 'dich', 'sich', 'uns', 'euch',
+    'mir', 'dir', 'ihm', 'ihr', 'uns', 'euch', 'ihnen',
+    'mein', 'meine', 'meinen', 'meinem', 'meiner', 'meines',
+    'dein', 'deine', 'deinen', 'deinem', 'deiner', 'deines',
+    'sein', 'seine', 'seinen', 'seinem', 'seiner', 'seines',
+    'unser', 'unsere', 'unseren', 'unserem', 'unserer', 'unseres',
+    'euer', 'eure', 'euren', 'eurem', 'eurer', 'eures',
+    // Prepositions
+    'in', 'im', 'an', 'am', 'auf', 'aus', 'bei', 'mit', 'nach', 'von', 'vom', 'zu', 'zum', 'zur',
+    'für', 'über', 'unter', 'vor', 'hinter', 'neben', 'zwischen', 'durch', 'gegen', 'ohne', 'um',
+    // Conjunctions
+    'und', 'oder', 'aber', 'denn', 'weil', 'dass', 'wenn', 'als', 'ob', 'sondern',
+    // Common verbs (conjugated)
+    'ist', 'sind', 'bin', 'bist', 'war', 'hat', 'haben', 'habe', 'hatte',
+    'wird', 'werden', 'kann', 'muss', 'soll', 'will', 'darf', 'mag',
+    // Adverbs & particles
+    'nicht', 'kein', 'keine', 'keinen', 'keinem', 'keiner',
+    'ja', 'nein', 'sehr', 'auch', 'noch', 'schon', 'nur', 'hier', 'da', 'dort',
+    'mehr', 'weniger', 'immer', 'nie', 'oft', 'gern', 'gerne',
+    'doch', 'mal', 'eben', 'halt', 'wohl',
+    // Demonstratives
+    'dieser', 'diese', 'dieses', 'diesen', 'diesem',
+    'jeder', 'jede', 'jedes', 'jeden', 'jedem',
+    // Numbers
+    'eins', 'zwei', 'drei',
+    // Question words
+    'was', 'wer', 'wo', 'wie', 'wann', 'warum', 'welch',
+  ]),
 };
 
 export function isCommonWord(word: string, lang: Language): boolean {

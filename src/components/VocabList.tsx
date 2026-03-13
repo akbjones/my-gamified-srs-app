@@ -5,6 +5,9 @@ import { ChevronLeft, Search, Clock, AlertTriangle, ChevronDown } from 'lucide-r
 import type { DictEntry } from '../data/dictionary/es';
 import { conjugate as conjugateEs } from '../data/conjugation/es';
 import { conjugate as conjugateIt } from '../data/conjugation/it';
+import { conjugate as conjugateFr } from '../data/conjugation/fr';
+import { conjugate as conjugatePt } from '../data/conjugation/pt';
+import { conjugate as conjugateDe } from '../data/conjugation/de';
 
 type SortMode = 'recent' | 'tricky';
 
@@ -18,16 +21,22 @@ interface VocabListProps {
 const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable | null>> = {
   spanish: conjugateEs,
   italian: conjugateIt,
+  french: conjugateFr,
+  portuguese: conjugatePt,
+  german: conjugateDe,
 };
 
 const PERSON_LABELS: Record<string, string[]> = {
   spanish: ['yo', 'tú', 'él', 'nosotros', 'vosotros', 'ellos'],
   italian: ['io', 'tu', 'lui', 'noi', 'voi', 'loro'],
+  french: ['je', 'tu', 'il', 'nous', 'vous', 'ils'],
+  portuguese: ['eu', 'tu', 'ele', 'nós', 'vós', 'eles'],
+  german: ['ich', 'du', 'er/sie', 'wir', 'ihr', 'sie/Sie'],
 };
 
 const TENSE_LABELS: Record<string, string> = {
   present: 'Present', preterite: 'Preterite', imperfect: 'Imperfect',
-  future: 'Future', conditional: 'Cond.', subjunctive: 'Subj.',
+  future: 'Future', conditional: 'Conditional', subjunctive: 'Subjunctive',
 };
 
 /** Extract infinitive from translation strings like "to hug (abbracciare)" */

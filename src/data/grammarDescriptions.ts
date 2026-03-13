@@ -106,7 +106,149 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-34': 'This sentence reflects cultural fluency — culturally embedded expressions, regional variation, or proverb usage.',
     'node-35': 'This sentence combines multiple advanced patterns — near-native complexity across grammar, register, and idiom.',
   },
-  // german / french: add when those languages get decks
+  french: {
+    // ── A1 — Foundations ──────────────────────────────────────────
+    'node-01': 'This sentence uses regular present tense — notice the -er, -ir, -re verb endings for everyday actions.',
+    'node-02': 'This sentence features an irregular present verb — unique stems or forms (suis, ai, vais, fais, dis, vois).',
+    'node-03': 'This sentence contrasts "être" (identity, origin, state) with "avoir" (possession, age, avoir-expressions like j\'ai faim).',
+    'node-04': 'This sentence uses a question structure — est-ce que, inversion, or interrogative words (qui, que, où, comment, pourquoi).',
+    'node-05': 'This sentence demonstrates articles and gender — le/la/les, un/une/des, du/de la (partitive), and adjective agreement.',
+    'node-06': 'This sentence uses a "reverse construction" verb like plaire — the thing liked is the subject, not the person (ça me plaît).',
+    'node-07': 'This sentence uses descriptive language — adjectives, "il y a" (there is/are), colors, sizes, and characterization.',
+    'node-08': 'This sentence uses a common expression — greetings, numbers, time, weather, or fixed everyday phrases.',
+
+    // ── A2 — Past & Pronouns ──────────────────────────────────────
+    'node-09': 'This sentence uses the passé composé with regular verbs — avoir/être + past participle (-é/-i/-u).',
+    'node-10': 'This sentence uses an irregular passé composé — irregular participles (fait, dit, vu, pris, mis) or être-verbs.',
+    'node-11': 'This sentence uses the imparfait — habitual, ongoing, or background actions in the past (-ais/-ait/-ions endings).',
+    'node-12': 'This sentence contrasts passé composé vs imparfait — choosing the right past tense based on completion vs background.',
+    'node-13': 'This sentence uses a reflexive verb — "se" + verb where the action is performed on oneself (se laver, se réveiller).',
+    'node-14': 'This sentence distinguishes "pour" (purpose, destination, in favor of) from "par" (means, agent, through, per).',
+    'node-15': 'This sentence uses object pronouns — direct (le, la, les), indirect (lui, leur), y, en, and pronoun placement.',
+
+    // ── B1 — Moods & Complex Tenses ──────────────────────────────
+    'node-16': 'This sentence uses the subjonctif présent — triggered by wishes, doubt, emotions, necessity (il faut que, je veux que).',
+    'node-17': 'This sentence uses the impératif — commands and requests. Negative uses "ne…pas" around the verb.',
+    'node-18': 'This sentence uses the conditionnel — expressing what would happen, polite requests, or hypothetical outcomes.',
+    'node-19': 'This sentence uses the futur simple — upcoming actions, plans, or predictions (je parlerai, il viendra, nous irons).',
+    'node-20': 'This sentence uses a relative clause — "qui", "que", "dont", "où", or "lequel" to connect and describe.',
+    'node-21': 'This sentence uses a compound tense — avoir/être + participle for plus-que-parfait, futur antérieur, or conditionnel passé.',
+
+    // ── B2 — Advanced Grammar ─────────────────────────────────────
+    'node-22': 'This sentence uses the subjonctif imparfait — literary past subjunctive or formal registers (-asse/-isse/-usse).',
+    'node-23': 'This sentence uses a complex conditional — "si j\'avais…, j\'aurais…" (if X had happened, Y would have happened).',
+    'node-24': 'This sentence uses a passive or impersonal construction — "on" as impersonal, "être" + past participle, or "il est" structures.',
+    'node-25': 'This sentence uses advanced discourse connectors — cependant, néanmoins, par conséquent, malgré, bien que, etc.',
+    'node-26': 'This sentence uses a verb phrase — venir de + infinitive, être en train de, se mettre à, finir par, and similar.',
+    'node-27': 'This sentence uses reported speech (discours indirect) — conveying what someone said with tense and reference shifts.',
+
+    // ── C1 — Refinement ───────────────────────────────────────────
+    'node-28': 'This sentence explores subjonctif nuances — mood contrasts with "comme si", "le fait que", or "je ne pense pas que".',
+    'node-29': 'This sentence uses formal or literary register — vous form, elevated vocabulary, academic markers, or written style.',
+    'node-30': 'This sentence uses an idiomatic expression — proverbs, fixed phrases, or colloquial constructions of native speakers.',
+    'node-31': 'This sentence uses complex syntax — participial clauses, multiple subordination, or nominalization patterns.',
+
+    // ── C2 — Mastery ──────────────────────────────────────────────
+    'node-32': 'This sentence uses the passé simple or literary tenses — literary narrative past, rarely used in speech.',
+    'node-33': 'This sentence uses academic or professional discourse — formal argumentation, technical register, structured reasoning.',
+    'node-34': 'This sentence reflects cultural fluency — culturally embedded expressions, regional variation, or proverb usage.',
+    'node-35': 'This sentence combines multiple advanced patterns — near-native complexity across grammar, register, and idiom.',
+  },
+  portuguese: {
+    // ── A1 — Foundations ──────────────────────────────────────────
+    'node-01': 'Regular -ar/-er/-ir verbs follow predictable patterns in the present tense.',
+    'node-02': 'Irregular present verbs have unique stems or endings (sou, tenho, vou, faço, digo).',
+    'node-03': '"Ser" expresses identity, origin, and traits; "estar" expresses states, location, and conditions.',
+    'node-04': 'Question words (o que, como, onde, quando, por que) form the basis of everyday questions.',
+    'node-05': 'Nouns are masculine or feminine; articles (o/a/os/as, um/uma) and adjectives must agree.',
+    'node-06': '"Gostar de" and similar verbs use an indirect construction — the person likes, not the thing.',
+    'node-07': 'Adjectives, "tem/há" (there is/are), colors, and sizes describe people and things.',
+    'node-08': 'Greetings, numbers, time, weather, and fixed everyday phrases used in daily life.',
+
+    // ── A2 — Past & Pronouns ──────────────────────────────────────
+    'node-09': 'Regular pretérito perfeito uses standard endings (-ei/-ou/-amos/-aram) for completed past actions.',
+    'node-10': 'Irregular pretérito perfeito has stem changes (fez, foi, teve, disse, pôs) in the past.',
+    'node-11': 'Pretérito imperfeito describes habitual, ongoing, or background actions in the past (-ava/-ia endings).',
+    'node-12': 'Choosing between perfeito (completed) and imperfeito (ongoing/habitual) depends on the context.',
+    'node-13': 'Reflexive verbs use "se" — the action is performed on oneself (me lavo, se levanta, nos sentamos).',
+    'node-14': '"Por" indicates cause, exchange, or duration; "para" indicates purpose, destination, or deadline.',
+    'node-15': 'Object pronouns (me, te, o/a, lhe, nos) replace direct and indirect objects in a sentence.',
+
+    // ── B1 — Moods & Complex Tenses ──────────────────────────────
+    'node-16': 'Present subjunctive is triggered by wishes, doubts, emotions, or hypothetical situations (que eu fale).',
+    'node-17': 'Imperative forms give commands and instructions — affirmative and negative forms differ.',
+    'node-18': 'Conditional expresses what would happen, polite requests, or hypothetical outcomes (-ia endings).',
+    'node-19': 'Future tense covers upcoming actions, plans, or probability (falarei, terá, iremos).',
+    'node-20': 'Relative clauses use "que", "quem", "onde", or "cujo" to connect and describe within clauses.',
+    'node-21': 'Compound tenses use ter + participle for pluperfect, future perfect, or conditional perfect.',
+
+    // ── B2 — Advanced Grammar ─────────────────────────────────────
+    'node-22': 'Imperfect subjunctive handles hypothetical past, wishes, or "se" clauses (-asse/-esse/-isse endings).',
+    'node-23': 'Complex conditionals use "se tivesse…, teria…" (if X had happened, Y would have happened).',
+    'node-24': 'Passive voice uses "ser + participle"; impersonal "se" marks general statements.',
+    'node-25': 'Advanced connectors include porém, contudo, portanto, apesar de, embora, no entanto.',
+    'node-26': 'Verb phrases combine verbs: acabar de + infinitive, estar a + infinitive, começar a + infinitive.',
+    'node-27': 'Reported speech (discurso indireto) conveys what someone said with tense and reference shifts.',
+
+    // ── C1 — Refinement ───────────────────────────────────────────
+    'node-28': 'Subjunctive nuances involve mood contrasts with "como se", "o facto de que", or "não creio que".',
+    'node-29': 'Formal register uses "o senhor/a senhora", elevated vocabulary, and academic markers.',
+    'node-30': 'Idiomatic expressions, proverbs, and colloquial constructions reflect native-speaker fluency.',
+    'node-31': 'Complex syntax includes participial clauses, multiple subordination, and nominalization.',
+
+    // ── C2 — Mastery ──────────────────────────────────────────────
+    'node-32': 'Literary tenses (pretérito mais-que-perfeito simples) and narrative style appear in formal writing.',
+    'node-33': 'Academic discourse uses formal argumentation, technical register, and structured reasoning.',
+    'node-34': 'Cultural fluency involves culturally embedded expressions, regional variation, and proverb usage.',
+    'node-35': 'Advanced mastery combines multiple patterns — near-native complexity across grammar, register, and idiom.',
+  },
+  german: {
+    // ── A1 — Foundations ──────────────────────────────────────────
+    'node-01': 'This sentence uses greetings or introductions — everyday phrases for meeting people and basic social interaction.',
+    'node-02': 'This sentence uses regular present tense — notice the verb endings: -e, -st, -t, -en for standard verbs.',
+    'node-03': 'This sentence contrasts "sein" (identity, traits, location) with "haben" (possession, age, expressions like "ich habe Hunger").',
+    'node-04': 'This sentence demonstrates grammatical gender — German nouns are der (masculine), die (feminine), or das (neuter), and articles must agree.',
+    'node-05': 'This sentence shows V2 word order — in German main clauses, the conjugated verb ALWAYS goes in second position.',
+    'node-06': 'This sentence uses the accusative case — direct objects and certain prepositions (für, durch, gegen, ohne, um) trigger accusative.',
+    'node-07': 'This sentence involves food, drink, or ordering — vocabulary and phrases used in restaurants, cafés, and shops.',
+    'node-08': 'This sentence uses a separable verb — the prefix detaches in main clauses: "aufmachen" → "Ich mache die Tür auf."',
+    'node-09': 'This sentence uses the Perfekt (present perfect) — haben/sein + past participle for completed past actions.',
+    'node-10': 'This sentence uses the dative case — indirect objects and prepositions like mit, bei, nach, aus, zu, von, seit trigger dative.',
+    'node-11': 'This sentence uses a modal verb — können, müssen, dürfen, sollen, wollen, or mögen. The main verb goes to the end as infinitive.',
+    'node-12': 'This sentence involves time expressions and daily routine — clock times, days, habits, and scheduling vocabulary.',
+    'node-13': 'This sentence uses negation — "nicht" negates verbs/adjectives/adverbs; "kein" negates nouns (replaces ein/eine).',
+    'node-14': 'This sentence uses a two-way preposition (in, an, auf, über, unter, vor, hinter, neben, zwischen) — accusative for motion, dative for location.',
+    'node-15': 'This sentence uses pronouns or reflexive verbs — personal pronouns change by case; reflexive verbs use sich/mich/dich.',
+
+    // ── A2 — Expanding Grammar ──────────────────────────────────
+    'node-16': 'This sentence uses comparatives or superlatives — mehr/weniger, -er ending, am -sten, or irregular forms (besser, am besten).',
+    'node-17': 'This sentence involves directions and transport — navigation, public transit, and movement vocabulary.',
+    'node-18': 'This sentence uses a subordinate clause — conjunctions like weil, dass, wenn, ob, als push the verb to the END of the clause.',
+    'node-19': 'This sentence uses the imperative — commands and requests in du, ihr, or Sie form.',
+    'node-20': 'This sentence uses adjective endings — adjectives before nouns get endings based on gender, case, and article type (strong/weak/mixed).',
+
+    // ── B1 — Intermediate ───────────────────────────────────────
+    'node-21': 'This sentence uses the genitive case — showing possession ("des Mannes", "der Frau") or with genitive prepositions (wegen, trotz, während).',
+    'node-22': 'This sentence uses a relative clause — "der/die/das" as relative pronouns, with the verb at the end of the clause.',
+    'node-23': 'This sentence uses the passive voice — "werden + past participle" where the subject receives the action.',
+    'node-24': 'This sentence uses Konjunktiv II — "würde + infinitive" or stem-changed forms (wäre, hätte, könnte) for hypotheticals and polite requests.',
+    'node-25': 'This sentence uses Konjunktiv I (indirect speech) — conveying what someone said: "Er sagt, er sei krank."',
+    'node-26': 'This sentence uses an infinitive construction — "um…zu" (in order to), "ohne…zu" (without), "statt…zu" (instead of).',
+    'node-27': 'This sentence uses advanced connectors — obwohl, trotzdem, allerdings, dennoch, außerdem, deshalb, and similar.',
+
+    // ── B2 — Advanced ───────────────────────────────────────────
+    'node-28': 'This sentence features noun compounds — German builds complex words by joining nouns: Handschuh (hand+shoe = glove).',
+    'node-29': 'This sentence uses an extended adjective construction — participial attributes before the noun create dense, literary phrases.',
+    'node-30': 'This sentence uses a double infinitive or complex verb chain — modal verbs in perfect tense keep infinitive form.',
+    'node-31': 'This sentence uses formal register — elevated vocabulary, complex structures, and professional or academic tone.',
+    'node-32': 'This sentence uses an idiomatic expression — proverbs, fixed phrases, or figurative constructions common among native speakers.',
+
+    // ── C1/C2 — Mastery ─────────────────────────────────────────
+    'node-33': 'This sentence uses advanced subjunctive — "als ob" + Konjunktiv II, complex hypotheticals, or literary subjunctive forms.',
+    'node-34': 'This sentence uses academic or professional German — formal argumentation, technical register, or structured discourse.',
+    'node-35': 'This sentence uses modal particles (doch, mal, ja, eben, halt, schon) — subtle words that add nuance and speaker attitude.',
+  },
+  // dutch / swedish: add when those languages get decks
 };
 
 /** Get a grammar nudge for a node in the given language. Falls back to Spanish, then empty string. */

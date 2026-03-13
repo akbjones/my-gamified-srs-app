@@ -198,7 +198,7 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
         stems.add(clean.slice(0, -i));
       }
       for (const stem of stems) {
-        for (const ending of ['ir', 'er', 're', 'ar', 'or']) {
+        for (const ending of ['ir', 'er', 're', 'ar', 'or', 'en', 'n']) {
           const candidate = stem + ending;
           const dictEntry = lookupFn(candidate);
           if (dictEntry?.pos === 'v') {

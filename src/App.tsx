@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
 import TopicMap from './components/TopicMap';
 import StudySession from './components/StudySession';
 import GamificationHub from './components/GamificationHub';
@@ -31,7 +31,7 @@ import { lookupWord as lookupPt } from './data/dictionary/pt';
 import { lookupWord as lookupDe } from './data/dictionary/de';
 import { lookupWord as lookupNl } from './data/dictionary/nl';
 import VocabList from './components/VocabList';
-import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight } from 'lucide-react';
+import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown } from 'lucide-react';
 
 const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
   spanish: lookupEs,
@@ -158,6 +158,9 @@ const App: React.FC = () => {
   const [pendingChallenge, setPendingChallenge] = useState<ChallengeMode | null>(null);
   const [challengeQuestions, setChallengeQuestions] = useState<ChallengeQuestion[]>([]);
   const [showTools, setShowTools] = useState(false);
+  const [showLangDropdown, setShowLangDropdown] = useState(false);
+  const [showLangPicker, setShowLangPicker] = useState(() => !localStorage.getItem('quest_first_launch_done'));
+  const langDropdownRef = useRef<HTMLDivElement>(null);
   // Undo stack for going back to previous cards
   const [answerHistory, setAnswerHistory] = useState<Array<{
     session: SessionState;
@@ -235,11 +238,12 @@ const App: React.FC = () => {
     );
 
     // New cards: from the current frontier node, excluding suspended
-    // When "Study More" is clicked, always add at least 10 new cards
+    // When "Study More" is clicked, use the session card limit setting
+    const sessionLimit = settings.sessionCardLimit || 10;
     const dailyLimitRemaining = settings.dailyNewLimit - dailyStats.newCardsCount;
-    const baseNewLimit = studyMore ? Math.max(10, dailyLimitRemaining) : Math.max(0, dailyLimitRemaining);
-    // Cap new cards at 10 when no reviews exist (prevents flooding after focus switch)
-    const newLimit = reviews.length === 0 ? Math.min(baseNewLimit, 10) : baseNewLimit;
+    const baseNewLimit = studyMore ? Math.max(sessionLimit, dailyLimitRemaining) : Math.max(0, dailyLimitRemaining);
+    // Cap new cards at session limit when no reviews exist (prevents flooding after focus switch)
+    const newLimit = reviews.length === 0 ? Math.min(baseNewLimit, sessionLimit) : baseNewLimit;
     const nodeCards = deck.filter(c => c.topic === currentNode.id && !c.isSuspended);
     const newCards = nodeCards
       .filter(c => c.mastery === 0)
@@ -417,6 +421,11 @@ const App: React.FC = () => {
     handleUpdateSettings({ ...settings, dailyNewLimit: next });
   };
 
+  const adjustSessionLimit = (delta: number) => {
+    const next = Math.max(5, Math.min(50, (settings.sessionCardLimit || 10) + delta));
+    handleUpdateSettings({ ...settings, sessionCardLimit: next });
+  };
+
   // Computed stats
   const getTotalProgress = () => {
     if (deck.length === 0) return 0;
@@ -444,6 +453,23 @@ const App: React.FC = () => {
 
   const availableLanguages: Language[] = Object.keys(DECK_MAP) as Language[];
 
+  const LANGUAGE_FLAGS: Partial<Record<Language, string>> = {
+    spanish: '\u{1F1F2}\u{1F1FD}', italian: '\u{1F1EE}\u{1F1F9}', french: '\u{1F1EB}\u{1F1F7}',
+    portuguese: '\u{1F1E7}\u{1F1F7}', german: '\u{1F1E9}\u{1F1EA}', dutch: '\u{1F1F3}\u{1F1F1}',
+  };
+
+  // Close language dropdown when clicking outside
+  useEffect(() => {
+    if (!showLangDropdown) return;
+    const handleClickOutside = (e: MouseEvent) => {
+      if (langDropdownRef.current && !langDropdownRef.current.contains(e.target as Node)) {
+        setShowLangDropdown(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [showLangDropdown]);
+
   const toggleTheme = () => {
     const newTheme = settings.theme === 'dark' ? 'light' : 'dark';
     // Apply class IMMEDIATELY (before React re-render) to prevent flash
@@ -453,6 +479,37 @@ const App: React.FC = () => {
 
   return (
     <div className={`mx-auto min-h-screen ${view === 'STUDY' || view === 'PLACEMENT' || view === 'CHALLENGE' ? 'max-w-lg px-0 pt-0 pb-0' : 'max-w-md px-5 pt-[max(1.25rem,env(safe-area-inset-top))] pb-20'}`}>
+      {/* First-time language selection overlay */}
+      {showLangPicker && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--bg-primary)]">
+          <div className="w-full max-w-sm px-6 animate-slide-up">
+            <div className="text-center mb-8">
+              <div className="text-5xl mb-4">
+                <Globe size={48} className="mx-auto text-[var(--accent)]" />
+              </div>
+              <h2 className="text-2xl font-black text-[var(--text-primary)] mb-2">Choose your language</h2>
+              <p className="text-sm text-[var(--text-muted)]">You can switch anytime from the header</p>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              {availableLanguages.map(l => (
+                  <button
+                    key={l}
+                    onClick={() => {
+                      handleLanguageChange(l);
+                      localStorage.setItem('quest_first_launch_done', 'true');
+                      setShowLangPicker(false);
+                    }}
+                    className="stat-card p-4 flex flex-col items-center gap-2 hover:border-[var(--accent)]/40 hover:bg-[var(--accent)]/5 transition-all active:scale-95"
+                  >
+                    <span className="text-3xl">{LANGUAGE_FLAGS[l] || ''}</span>
+                    <span className="text-sm font-bold text-[var(--text-primary)]">{LANGUAGE_CONFIG[l].name}</span>
+                  </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
       {view === 'HOME' && (
         <section className="animate-fade-in">
           {/* Header row: title + language + theme toggle */}
@@ -485,17 +542,38 @@ const App: React.FC = () => {
               </h1>
             </div>
             <div className="flex items-center gap-1.5">
-              <button
-                onClick={() => {
-                  const available = availableLanguages;
-                  if (available.length <= 1) return;
-                  const idx = available.indexOf(lang);
-                  handleLanguageChange(available[(idx + 1) % available.length]);
-                }}
-                className="px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider border border-[var(--border-color)] text-[var(--text-muted)] hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all"
-              >
-                {LANGUAGE_CONFIG[lang].name}
-              </button>
+              <div className="relative" ref={langDropdownRef}>
+                <button
+                  onClick={() => setShowLangDropdown(prev => !prev)}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold border border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--accent)]/40 hover:text-[var(--accent)] transition-all"
+                >
+                  <span className="text-base">{LANGUAGE_FLAGS[lang] || ''}</span>
+                  <span>{LANGUAGE_CONFIG[lang].name}</span>
+                  <ChevronDown size={12} className={`transition-transform ${showLangDropdown ? 'rotate-180' : ''}`} />
+                </button>
+                {showLangDropdown && (
+                  <div className="absolute right-0 top-full mt-1 w-48 stat-card p-1.5 z-40 animate-fade-in shadow-lg">
+                    {availableLanguages.map(l => (
+                      <button
+                        key={l}
+                        onClick={() => {
+                          handleLanguageChange(l);
+                          setShowLangDropdown(false);
+                        }}
+                        className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all ${
+                          l === lang
+                            ? 'bg-[var(--accent)]/10 text-[var(--accent)]'
+                            : 'text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)]'
+                        }`}
+                      >
+                        <span className="text-base">{LANGUAGE_FLAGS[l] || ''}</span>
+                        <span>{LANGUAGE_CONFIG[l].name}</span>
+                        {l === lang && <span className="ml-auto text-[10px] opacity-60">active</span>}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
               <button
                 onClick={toggleTheme}
                 className="p-2 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
@@ -709,6 +787,27 @@ const App: React.FC = () => {
                     +1
                   </button>
                   <button onClick={() => adjustLimit(5)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95">
+                    <Plus size={14} />
+                  </button>
+                </div>
+              </div>
+
+              <div className="pt-3 border-t border-[var(--border-color)]">
+                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-3">Cards per Session</div>
+                <div className="flex items-center gap-3">
+                  <button onClick={() => adjustSessionLimit(-5)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95">
+                    <Minus size={14} />
+                  </button>
+                  <button onClick={() => adjustSessionLimit(-1)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95 text-xs font-bold font-mono">
+                    -1
+                  </button>
+                  <div className="flex-1 text-center">
+                    <div className="text-3xl font-extrabold font-mono text-[var(--text-primary)]">{settings.sessionCardLimit || 10}</div>
+                  </div>
+                  <button onClick={() => adjustSessionLimit(1)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95 text-xs font-bold font-mono">
+                    +1
+                  </button>
+                  <button onClick={() => adjustSessionLimit(5)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95">
                     <Plus size={14} />
                   </button>
                 </div>

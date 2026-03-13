@@ -98,6 +98,7 @@ export type AudioSpeed = 0.6 | 0.8 | 1.0;
 
 export interface StudySettings {
   dailyNewLimit: number;
+  sessionCardLimit: number; // cards per "Study More" session (5–50)
   selectedLanguage: Language;
   learningGoal: LearningGoal;
   theme: 'light' | 'dark';
@@ -108,6 +109,7 @@ export interface StudySettings {
 
 const DEFAULT_SETTINGS: StudySettings = {
   dailyNewLimit: 20,
+  sessionCardLimit: 10,
   selectedLanguage: 'spanish',
   learningGoal: 'general',
   theme: 'light',

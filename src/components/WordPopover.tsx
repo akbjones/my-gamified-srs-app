@@ -6,12 +6,14 @@ import { lookupWord as lookupFr } from '../data/dictionary/fr';
 import { lookupWord as lookupPt } from '../data/dictionary/pt';
 import { lookupWord as lookupDe } from '../data/dictionary/de';
 import { lookupWord as lookupNl } from '../data/dictionary/nl';
+import { lookupWord as lookupSv } from '../data/dictionary/sv';
 import { conjugate as conjugateEs } from '../data/conjugation/es';
 import { conjugate as conjugateIt } from '../data/conjugation/it';
 import { conjugate as conjugateFr } from '../data/conjugation/fr';
 import { conjugate as conjugatePt } from '../data/conjugation/pt';
 import { conjugate as conjugateDe } from '../data/conjugation/de';
 import { conjugate as conjugateNl } from '../data/conjugation/nl';
+import { conjugate as conjugateSv } from '../data/conjugation/sv';
 import { Language, ConjugationTable } from '../types';
 
 // Dynamic lookup per language — gracefully returns null for languages without a dictionary
@@ -22,6 +24,7 @@ const LOOKUP_FNS: Partial<Record<Language, (w: string) => DictEntry | null>> = {
   portuguese: lookupPt,
   german: lookupDe,
   dutch: lookupNl,
+  swedish: lookupSv,
 };
 
 const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable | null>> = {
@@ -31,6 +34,7 @@ const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable 
   portuguese: conjugatePt,
   german: conjugateDe,
   dutch: conjugateNl,
+  swedish: conjugateSv,
 };
 
 const PERSON_LABELS: Record<string, string[]> = {
@@ -40,6 +44,7 @@ const PERSON_LABELS: Record<string, string[]> = {
   portuguese: ['eu', 'tu', 'ele', 'nós', 'vós', 'eles'],
   german: ['ich', 'du', 'er/sie', 'wir', 'ihr', 'sie/Sie'],
   dutch: ['ik', 'jij', 'hij/zij', 'wij', 'jullie', 'zij'],
+  swedish: ['jag', 'du', 'han/hon', 'vi', 'ni', 'de'],
 };
 
 const TENSE_LABELS: Record<string, string> = {
@@ -193,7 +198,10 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
     const lookupFn = LOOKUP_FNS[language];
     if (lookupFn) {
       // Generate candidate stems by progressively trimming from the end
+      // Include the full word as a stem — Germanic verbs like "ontmoet" need
+      // stem + "en" → "ontmoeten" to find the infinitive
       const stems = new Set<string>();
+      stems.add(clean);
       for (let i = 1; i <= Math.min(clean.length - 2, 7); i++) {
         stems.add(clean.slice(0, -i));
       }

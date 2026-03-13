@@ -26,12 +26,13 @@ export const stopAudio = (): void => {
 // Maps our Language type to Google Cloud TTS voice names
 // Using Standard voices (free tier friendly) — Latin American where available
 const GOOGLE_VOICE_MAP: Record<Language, { languageCode: string; name: string }> = {
-  spanish: { languageCode: 'es-US', name: 'es-US-Standard-A' },   // LatAm female
-  italian: { languageCode: 'it-IT', name: 'it-IT-Standard-A' },
-  german:  { languageCode: 'de-DE', name: 'de-DE-Standard-A' },
-  french:  { languageCode: 'fr-FR', name: 'fr-FR-Standard-A' },
+  spanish: { languageCode: 'es-US', name: 'es-US-Wavenet-A' },     // LatAm female
+  italian: { languageCode: 'it-IT', name: 'it-IT-Wavenet-A' },
+  german:  { languageCode: 'de-DE', name: 'de-DE-Wavenet-A' },
+  french:  { languageCode: 'fr-FR', name: 'fr-FR-Wavenet-A' },
   portuguese: { languageCode: 'pt-BR', name: 'pt-BR-Wavenet-A' },
-  dutch: { languageCode: 'nl-NL', name: 'nl-NL-Standard-A' },
+  dutch: { languageCode: 'nl-NL', name: 'nl-NL-Wavenet-A' },
+  swedish: { languageCode: 'sv-SE', name: 'sv-SE-Wavenet-A' },
 };
 
 // Speed maps to Google TTS speakingRate (0.25–4.0, 1.0 = normal)

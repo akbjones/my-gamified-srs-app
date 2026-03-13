@@ -163,6 +163,37 @@ const COMMON_WORDS: Record<string, Set<string>> = {
     // Question words
     'hoe', 'waarom', 'hoeveel',
   ]),
+  swedish: new Set([
+    // Articles & pronouns
+    'en', 'ett', 'den', 'det', 'de',
+    'jag', 'du', 'han', 'hon', 'vi', 'ni', 'de', 'man',
+    'mig', 'dig', 'honom', 'henne', 'oss', 'er', 'dem', 'sig',
+    'min', 'mitt', 'mina', 'din', 'ditt', 'dina', 'sin', 'sitt', 'sina',
+    'hans', 'hennes', 'vår', 'vårt', 'våra', 'er', 'ert', 'era', 'deras',
+    'denna', 'detta', 'dessa', 'den', 'det', 'de',
+    // Prepositions
+    'i', 'på', 'till', 'från', 'av', 'med', 'för', 'om', 'hos', 'vid',
+    'under', 'över', 'mellan', 'efter', 'före', 'utan', 'mot', 'genom', 'bland',
+    // Conjunctions
+    'och', 'eller', 'men', 'att', 'om', 'som', 'när', 'medan', 'för', 'så',
+    'eftersom', 'fast', 'fastän', 'trots',
+    // Common verbs
+    'är', 'var', 'vara', 'har', 'hade', 'ha', 'blir', 'blev', 'bli',
+    'ska', 'skulle', 'kan', 'kunde', 'vill', 'ville', 'måste', 'bör',
+    'gör', 'gjorde', 'går', 'gick', 'kommer', 'kom', 'får', 'fick',
+    'finns', 'ser', 'tar', 'ger', 'säger',
+    // Adverbs & particles
+    'inte', 'mycket', 'mer', 'mest', 'också', 'redan', 'bara', 'här', 'där',
+    'ja', 'nej', 'väl', 'ju', 'nog', 'så', 'nu', 'då', 'aldrig', 'alltid',
+    'ofta', 'ibland', 'ganska', 'lite', 'sedan', 'ännu',
+    // Determiners
+    'alla', 'varje', 'någon', 'något', 'några', 'ingen', 'inget', 'inga',
+    'annan', 'annat', 'andra', 'samma', 'egen', 'eget', 'egna',
+    // Numbers
+    'en', 'två', 'tre',
+    // Question words
+    'vad', 'vem', 'var', 'hur', 'vilken', 'vilket', 'vilka', 'varför',
+  ]),
 };
 
 export function isCommonWord(word: string, lang: Language): boolean {

@@ -168,7 +168,7 @@ export const saveVocabMap = (map: VocabMap, lang: Language): void => {
 // ─── Reset ──────────────────────────────────────────────────
 export const resetAll = (): void => {
   // Clear all language-specific keys
-  const langs: Language[] = ['spanish', 'italian', 'german', 'french'];
+  const langs: Language[] = ['spanish', 'italian', 'german', 'french', 'portuguese', 'dutch', 'swedish'];
   for (const lang of langs) {
     localStorage.removeItem(masteryKey(lang));
     localStorage.removeItem(statsKey(lang));

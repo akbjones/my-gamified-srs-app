@@ -30,6 +30,7 @@ import { lookupWord as lookupFr } from './data/dictionary/fr';
 import { lookupWord as lookupPt } from './data/dictionary/pt';
 import { lookupWord as lookupDe } from './data/dictionary/de';
 import { lookupWord as lookupNl } from './data/dictionary/nl';
+import { lookupWord as lookupSv } from './data/dictionary/sv';
 import VocabList from './components/VocabList';
 import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown } from 'lucide-react';
 
@@ -40,6 +41,7 @@ const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
   portuguese: lookupPt,
   german: lookupDe,
   dutch: lookupNl,
+  swedish: lookupSv,
 };
 
 type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB';
@@ -52,6 +54,7 @@ import rawFrenchDeck from './data/french/deck.json';
 import rawPortugueseDeck from './data/portuguese/deck.json';
 import rawGermanDeck from './data/german/deck.json';
 import rawDutchDeck from './data/dutch/deck.json';
+import rawSwedishDeck from './data/swedish/deck.json';
 
 const DECK_MAP: Partial<Record<Language, any[]>> = {
   spanish: rawSpanishDeck,
@@ -60,6 +63,7 @@ const DECK_MAP: Partial<Record<Language, any[]>> = {
   portuguese: rawPortugueseDeck,
   german: rawGermanDeck,
   dutch: rawDutchDeck,
+  swedish: rawSwedishDeck,
 };
 
 // Transform raw deck.json cards into QuestCards mapped to linear path nodes
@@ -456,6 +460,7 @@ const App: React.FC = () => {
   const LANGUAGE_FLAGS: Partial<Record<Language, string>> = {
     spanish: '\u{1F1F2}\u{1F1FD}', italian: '\u{1F1EE}\u{1F1F9}', french: '\u{1F1EB}\u{1F1F7}',
     portuguese: '\u{1F1E7}\u{1F1F7}', german: '\u{1F1E9}\u{1F1EA}', dutch: '\u{1F1F3}\u{1F1F1}',
+    swedish: '\u{1F1F8}\u{1F1EA}',
   };
 
   // Close language dropdown when clicking outside

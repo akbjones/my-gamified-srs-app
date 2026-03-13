@@ -132,6 +132,37 @@ const COMMON_WORDS: Record<string, Set<string>> = {
     // Question words
     'was', 'wer', 'wo', 'wie', 'wann', 'warum', 'welch',
   ]),
+  dutch: new Set([
+    // Articles
+    'de', 'het', 'een',
+    // Pronouns
+    'ik', 'jij', 'je', 'hij', 'zij', 'ze', 'het', 'wij', 'we', 'jullie', 'u',
+    'mij', 'me', 'jou', 'hem', 'haar', 'ons', 'hen', 'hun',
+    'mijn', 'jouw', 'zijn', 'haar', 'ons', 'onze', 'jullie', 'hun',
+    'dit', 'dat', 'deze', 'die', 'wat', 'wie', 'welk', 'welke',
+    // Prepositions
+    'in', 'op', 'aan', 'van', 'voor', 'met', 'naar', 'bij', 'uit', 'door',
+    'over', 'om', 'tot', 'tussen', 'onder', 'boven', 'achter', 'naast', 'zonder', 'tegen',
+    // Conjunctions
+    'en', 'of', 'maar', 'want', 'dus', 'dat', 'als', 'omdat', 'wanneer', 'waar',
+    'toen', 'terwijl', 'hoewel', 'zodat', 'tenzij',
+    // Common verbs
+    'is', 'ben', 'bent', 'zijn', 'was', 'waren', 'wordt', 'worden',
+    'heb', 'hebt', 'heeft', 'hebben', 'had', 'hadden',
+    'kan', 'kun', 'kunt', 'kunnen', 'mag', 'mogen', 'moet', 'moeten',
+    'wil', 'wilt', 'willen', 'zal', 'zult', 'zullen', 'zou', 'zouden',
+    'ga', 'gaat', 'gaan', 'doe', 'doet', 'doen', 'kom', 'komt', 'komen',
+    // Adverbs & particles
+    'niet', 'geen', 'wel', 'ook', 'nog', 'al', 'er', 'hier', 'daar',
+    'ja', 'nee', 'heel', 'erg', 'zeer', 'meer', 'minder', 'zo', 'nu',
+    'dan', 'toch', 'maar', 'even', 'altijd', 'nooit', 'vaak', 'soms',
+    // Demonstratives & determiners
+    'elk', 'elke', 'iedere', 'alle', 'beide', 'veel', 'weinig', 'andere', 'eigen',
+    // Numbers
+    'een', 'twee', 'drie',
+    // Question words
+    'hoe', 'waarom', 'hoeveel',
+  ]),
 };
 
 export function isCommonWord(word: string, lang: Language): boolean {

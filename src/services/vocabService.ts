@@ -99,6 +99,39 @@ const COMMON_WORDS: Record<string, Set<string>> = {
     'meu', 'minha', 'seu', 'sua', 'nosso', 'nossa',
     'todo', 'toda', 'cada', 'outro', 'outra',
   ]),
+  german: new Set([
+    // Articles
+    'der', 'die', 'das', 'den', 'dem', 'des', 'ein', 'eine', 'einen', 'einem', 'einer', 'eines',
+    // Pronouns
+    'ich', 'du', 'er', 'sie', 'es', 'wir', 'ihr', 'man',
+    'mich', 'dich', 'sich', 'uns', 'euch',
+    'mir', 'dir', 'ihm', 'ihr', 'uns', 'euch', 'ihnen',
+    'mein', 'meine', 'meinen', 'meinem', 'meiner', 'meines',
+    'dein', 'deine', 'deinen', 'deinem', 'deiner', 'deines',
+    'sein', 'seine', 'seinen', 'seinem', 'seiner', 'seines',
+    'unser', 'unsere', 'unseren', 'unserem', 'unserer', 'unseres',
+    'euer', 'eure', 'euren', 'eurem', 'eurer', 'eures',
+    // Prepositions
+    'in', 'im', 'an', 'am', 'auf', 'aus', 'bei', 'mit', 'nach', 'von', 'vom', 'zu', 'zum', 'zur',
+    'für', 'über', 'unter', 'vor', 'hinter', 'neben', 'zwischen', 'durch', 'gegen', 'ohne', 'um',
+    // Conjunctions
+    'und', 'oder', 'aber', 'denn', 'weil', 'dass', 'wenn', 'als', 'ob', 'sondern',
+    // Common verbs (conjugated)
+    'ist', 'sind', 'bin', 'bist', 'war', 'hat', 'haben', 'habe', 'hatte',
+    'wird', 'werden', 'kann', 'muss', 'soll', 'will', 'darf', 'mag',
+    // Adverbs & particles
+    'nicht', 'kein', 'keine', 'keinen', 'keinem', 'keiner',
+    'ja', 'nein', 'sehr', 'auch', 'noch', 'schon', 'nur', 'hier', 'da', 'dort',
+    'mehr', 'weniger', 'immer', 'nie', 'oft', 'gern', 'gerne',
+    'doch', 'mal', 'eben', 'halt', 'wohl',
+    // Demonstratives
+    'dieser', 'diese', 'dieses', 'diesen', 'diesem',
+    'jeder', 'jede', 'jedes', 'jeden', 'jedem',
+    // Numbers
+    'eins', 'zwei', 'drei',
+    // Question words
+    'was', 'wer', 'wo', 'wie', 'wann', 'warum', 'welch',
+  ]),
 };
 
 export function isCommonWord(word: string, lang: Language): boolean {

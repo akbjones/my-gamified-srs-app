@@ -4,10 +4,12 @@ import { lookupWord as lookupEs, DictEntry } from '../data/dictionary/es';
 import { lookupWord as lookupIt } from '../data/dictionary/it';
 import { lookupWord as lookupFr } from '../data/dictionary/fr';
 import { lookupWord as lookupPt } from '../data/dictionary/pt';
+import { lookupWord as lookupDe } from '../data/dictionary/de';
 import { conjugate as conjugateEs } from '../data/conjugation/es';
 import { conjugate as conjugateIt } from '../data/conjugation/it';
 import { conjugate as conjugateFr } from '../data/conjugation/fr';
 import { conjugate as conjugatePt } from '../data/conjugation/pt';
+import { conjugate as conjugateDe } from '../data/conjugation/de';
 import { Language, ConjugationTable } from '../types';
 
 // Dynamic lookup per language — gracefully returns null for languages without a dictionary
@@ -16,6 +18,7 @@ const LOOKUP_FNS: Partial<Record<Language, (w: string) => DictEntry | null>> = {
   italian: lookupIt,
   french: lookupFr,
   portuguese: lookupPt,
+  german: lookupDe,
 };
 
 const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable | null>> = {
@@ -23,6 +26,7 @@ const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable 
   italian: conjugateIt,
   french: conjugateFr,
   portuguese: conjugatePt,
+  german: conjugateDe,
 };
 
 const PERSON_LABELS: Record<string, string[]> = {
@@ -30,6 +34,7 @@ const PERSON_LABELS: Record<string, string[]> = {
   italian: ['io', 'tu', 'lui', 'noi', 'voi', 'loro'],
   french: ['je', 'tu', 'il', 'nous', 'vous', 'ils'],
   portuguese: ['eu', 'tu', 'ele', 'nós', 'vós', 'eles'],
+  german: ['ich', 'du', 'er/sie', 'wir', 'ihr', 'sie/Sie'],
 };
 
 const TENSE_LABELS: Record<string, string> = {

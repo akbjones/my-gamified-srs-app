@@ -202,7 +202,53 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-34': 'Cultural fluency involves culturally embedded expressions, regional variation, and proverb usage.',
     'node-35': 'Advanced mastery combines multiple patterns — near-native complexity across grammar, register, and idiom.',
   },
-  // german / dutch / swedish: add when those languages get decks
+  german: {
+    // ── A1 — Foundations ──────────────────────────────────────────
+    'node-01': 'This sentence uses greetings or introductions — everyday phrases for meeting people and basic social interaction.',
+    'node-02': 'This sentence uses regular present tense — notice the verb endings: -e, -st, -t, -en for standard verbs.',
+    'node-03': 'This sentence contrasts "sein" (identity, traits, location) with "haben" (possession, age, expressions like "ich habe Hunger").',
+    'node-04': 'This sentence demonstrates grammatical gender — German nouns are der (masculine), die (feminine), or das (neuter), and articles must agree.',
+    'node-05': 'This sentence shows V2 word order — in German main clauses, the conjugated verb ALWAYS goes in second position.',
+    'node-06': 'This sentence uses the accusative case — direct objects and certain prepositions (für, durch, gegen, ohne, um) trigger accusative.',
+    'node-07': 'This sentence involves food, drink, or ordering — vocabulary and phrases used in restaurants, cafés, and shops.',
+    'node-08': 'This sentence uses a separable verb — the prefix detaches in main clauses: "aufmachen" → "Ich mache die Tür auf."',
+    'node-09': 'This sentence uses the Perfekt (present perfect) — haben/sein + past participle for completed past actions.',
+    'node-10': 'This sentence uses the dative case — indirect objects and prepositions like mit, bei, nach, aus, zu, von, seit trigger dative.',
+    'node-11': 'This sentence uses a modal verb — können, müssen, dürfen, sollen, wollen, or mögen. The main verb goes to the end as infinitive.',
+    'node-12': 'This sentence involves time expressions and daily routine — clock times, days, habits, and scheduling vocabulary.',
+    'node-13': 'This sentence uses negation — "nicht" negates verbs/adjectives/adverbs; "kein" negates nouns (replaces ein/eine).',
+    'node-14': 'This sentence uses a two-way preposition (in, an, auf, über, unter, vor, hinter, neben, zwischen) — accusative for motion, dative for location.',
+    'node-15': 'This sentence uses pronouns or reflexive verbs — personal pronouns change by case; reflexive verbs use sich/mich/dich.',
+
+    // ── A2 — Expanding Grammar ──────────────────────────────────
+    'node-16': 'This sentence uses comparatives or superlatives — mehr/weniger, -er ending, am -sten, or irregular forms (besser, am besten).',
+    'node-17': 'This sentence involves directions and transport — navigation, public transit, and movement vocabulary.',
+    'node-18': 'This sentence uses a subordinate clause — conjunctions like weil, dass, wenn, ob, als push the verb to the END of the clause.',
+    'node-19': 'This sentence uses the imperative — commands and requests in du, ihr, or Sie form.',
+    'node-20': 'This sentence uses adjective endings — adjectives before nouns get endings based on gender, case, and article type (strong/weak/mixed).',
+
+    // ── B1 — Intermediate ───────────────────────────────────────
+    'node-21': 'This sentence uses the genitive case — showing possession ("des Mannes", "der Frau") or with genitive prepositions (wegen, trotz, während).',
+    'node-22': 'This sentence uses a relative clause — "der/die/das" as relative pronouns, with the verb at the end of the clause.',
+    'node-23': 'This sentence uses the passive voice — "werden + past participle" where the subject receives the action.',
+    'node-24': 'This sentence uses Konjunktiv II — "würde + infinitive" or stem-changed forms (wäre, hätte, könnte) for hypotheticals and polite requests.',
+    'node-25': 'This sentence uses Konjunktiv I (indirect speech) — conveying what someone said: "Er sagt, er sei krank."',
+    'node-26': 'This sentence uses an infinitive construction — "um…zu" (in order to), "ohne…zu" (without), "statt…zu" (instead of).',
+    'node-27': 'This sentence uses advanced connectors — obwohl, trotzdem, allerdings, dennoch, außerdem, deshalb, and similar.',
+
+    // ── B2 — Advanced ───────────────────────────────────────────
+    'node-28': 'This sentence features noun compounds — German builds complex words by joining nouns: Handschuh (hand+shoe = glove).',
+    'node-29': 'This sentence uses an extended adjective construction — participial attributes before the noun create dense, literary phrases.',
+    'node-30': 'This sentence uses a double infinitive or complex verb chain — modal verbs in perfect tense keep infinitive form.',
+    'node-31': 'This sentence uses formal register — elevated vocabulary, complex structures, and professional or academic tone.',
+    'node-32': 'This sentence uses an idiomatic expression — proverbs, fixed phrases, or figurative constructions common among native speakers.',
+
+    // ── C1/C2 — Mastery ─────────────────────────────────────────
+    'node-33': 'This sentence uses advanced subjunctive — "als ob" + Konjunktiv II, complex hypotheticals, or literary subjunctive forms.',
+    'node-34': 'This sentence uses academic or professional German — formal argumentation, technical register, or structured discourse.',
+    'node-35': 'This sentence uses modal particles (doch, mal, ja, eben, halt, schon) — subtle words that add nuance and speaker attitude.',
+  },
+  // dutch / swedish: add when those languages get decks
 };
 
 /** Get a grammar nudge for a node in the given language. Falls back to Spanish, then empty string. */

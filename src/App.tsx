@@ -28,6 +28,7 @@ import { lookupWord as lookupEs } from './data/dictionary/es';
 import { lookupWord as lookupIt } from './data/dictionary/it';
 import { lookupWord as lookupFr } from './data/dictionary/fr';
 import { lookupWord as lookupPt } from './data/dictionary/pt';
+import { lookupWord as lookupDe } from './data/dictionary/de';
 import VocabList from './components/VocabList';
 import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight } from 'lucide-react';
 
@@ -36,6 +37,7 @@ const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
   italian: lookupIt,
   french: lookupFr,
   portuguese: lookupPt,
+  german: lookupDe,
 };
 
 type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB';
@@ -46,12 +48,14 @@ import rawSpanishDeck from './data/spanish/deck.json';
 import rawItalianDeck from './data/italian/deck.json';
 import rawFrenchDeck from './data/french/deck.json';
 import rawPortugueseDeck from './data/portuguese/deck.json';
+import rawGermanDeck from './data/german/deck.json';
 
 const DECK_MAP: Partial<Record<Language, any[]>> = {
   spanish: rawSpanishDeck,
   italian: rawItalianDeck,
   french: rawFrenchDeck,
   portuguese: rawPortugueseDeck,
+  german: rawGermanDeck,
 };
 
 // Transform raw deck.json cards into QuestCards mapped to linear path nodes

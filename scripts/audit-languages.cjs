@@ -22,6 +22,7 @@ const LANGUAGES = [
   { code: 'de', name: 'German', deckDir: 'german' },
   { code: 'nl', name: 'Dutch', deckDir: 'dutch' },
   { code: 'sv', name: 'Swedish', deckDir: 'swedish' },
+  { code: 'cy', name: 'Welsh', deckDir: 'welsh' },
 ];
 
 // Common verbs to test conjugation per language
@@ -33,6 +34,7 @@ const CONJUGATION_TEST_VERBS = {
   de: ['machen', 'sprechen', 'sein', 'haben', 'werden', 'können', 'gehen', 'kommen', 'sehen', 'geben'],
   nl: ['maken', 'spreken', 'zijn', 'hebben', 'worden', 'kunnen', 'gaan', 'komen', 'zien', 'geven'],
   sv: ['tala', 'arbeta', 'vara', 'ha', 'göra', 'kunna', 'gå', 'komma', 'se', 'ge'],
+  cy: ['bod', 'mynd', 'dod', 'gwneud', 'cael', 'gallu', 'gwybod', 'gweld', 'dweud', 'rhoi'],
 };
 
 const results = [];

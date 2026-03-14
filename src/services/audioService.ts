@@ -33,6 +33,7 @@ const GOOGLE_VOICE_MAP: Record<Language, { languageCode: string; name: string }>
   portuguese: { languageCode: 'pt-BR', name: 'pt-BR-Wavenet-A' },
   dutch: { languageCode: 'nl-NL', name: 'nl-NL-Wavenet-A' },
   swedish: { languageCode: 'sv-SE', name: 'sv-SE-Wavenet-D' },
+  welsh: { languageCode: 'cy-GB', name: 'cy-GB-Standard-A' }, // no Wavenet for Welsh — browser TTS fallback
 };
 
 // Speed maps to Google TTS speakingRate (0.25–4.0, 1.0 = normal)

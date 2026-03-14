@@ -194,6 +194,34 @@ const COMMON_WORDS: Record<string, Set<string>> = {
     // Question words
     'vad', 'vem', 'var', 'hur', 'vilken', 'vilket', 'vilka', 'varför',
   ]),
+  welsh: new Set([
+    // Articles & particles
+    'y', 'yr', "'r", 'a', 'o', 'i', 'yn', 'ar', 'am', 'at', 'gan', 'gyda',
+    'heb', 'dan', 'dros', 'drwy', 'rhwng', 'ers', 'cyn', 'wedi', 'wrth',
+    // Pronouns
+    'fi', 'ti', 'fe', 'hi', 'ni', 'chi', 'nhw', 'e',
+    'fy', 'dy', 'ei', 'ein', 'eich', 'eu',
+    // Conjunctions
+    'a', 'ac', 'neu', 'ond', 'achos', 'oherwydd', 'os', 'pan', 'er', 'fel',
+    'bod', 'fod', 'mai', 'taw',
+    // Forms of bod (to be)
+    'dw', 'rwyt', 'mae', 'rydyn', 'rydych', 'maen',
+    'oedd', 'roedd', 'roeddwn', 'roeddet', 'roedden', 'roeddech',
+    'bydd', 'bydda', 'byddi', 'byddwn', 'byddwch', 'byddan',
+    'yw', 'ydy', 'oes', 'oedd',
+    // Common verbs
+    'mynd', 'dod', 'gwneud', 'cael', 'gallu', 'gwybod',
+    // Negation & adverbs
+    'ddim', 'dim', 'nid', 'nad', 'na',
+    'iawn', 'hefyd', 'yma', 'yna', 'nawr', 'heddiw', 'yfory', 'ddoe',
+    'byth', 'erioed', 'bob', 'pob', 'rhai',
+    // Determiners
+    'hon', 'hwn', 'hyn', 'hynny', 'un', 'ryw', 'rhyw',
+    // Question words
+    'beth', 'pwy', 'ble', 'sut', 'pryd', 'pam', 'faint', 'pa',
+    // Numbers
+    'un', 'dau', 'dwy', 'tri', 'tair', 'pedwar', 'pedair', 'pump', 'deg',
+  ]),
 };
 
 export function isCommonWord(word: string, lang: Language): boolean {

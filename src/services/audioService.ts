@@ -157,7 +157,8 @@ export const playCardAudio = async (
   }
 
   // 2. Try Google Cloud TTS if API key is set
-  if (googleApiKey) {
+  // Skip for Welsh — Google Cloud TTS does not support cy-GB
+  if (googleApiKey && lang !== 'welsh') {
     try {
       await playGoogleTts(targetText, lang, speed, googleApiKey);
       return;

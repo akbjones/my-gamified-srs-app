@@ -765,6 +765,7 @@ const dict: Record<string, DictEntry> = {
   'llawr': { en: 'floor', ipa: 'ɬaʊr', pos: 'n' },
   'lle': { en: 'place', ipa: 'ɬeː', pos: 'n' },
   'lleihau': { en: 'to reduce', ipa: 'ɬɛɪhaɪ', pos: 'v' },
+  'llen': { en: 'literature/curtain', ipa: 'ɬɛn', pos: 'n' },
   'llenyddiaeth': { en: 'literature', ipa: 'ɬɛnəðjaɪθ', pos: 'n' },
   'llestri': { en: 'dishes', ipa: 'ɬɛstrɪ', pos: 'n' },
   'lleuad': { en: 'moon', ipa: 'ɬɛɪad', pos: 'n' },
@@ -981,6 +982,7 @@ const dict: Record<string, DictEntry> = {
   'prynu': { en: 'to buy', ipa: 'prənɨ', pos: 'v' },
   'pum': { en: 'five (before noun)', ipa: 'pɨm', pos: 'n' },
   'pump': { en: 'five', ipa: 'pɨmp', pos: 'n' },
+  'pumed': { en: 'fifth', ipa: 'pɨmɛd', pos: 'adj' },
   'pwy': { en: 'who', ipa: 'pʊi', pos: 'pron' },
   'pwyll': { en: 'Pwyll (prince)', ipa: 'pʊɨɬ', pos: 'n' },
   'pwysig': { en: 'important', ipa: 'pʊɨsɪg', pos: 'adj' },
@@ -1031,6 +1033,7 @@ const dict: Record<string, DictEntry> = {
   'sgwrs': { en: 'conversation/chat', ipa: 'sgʊrs', pos: 'n' },
   'sgôr': { en: 'score', ipa: 'sgoːr', pos: 'n' },
   'shwmae': { en: 'how are you (South)', ipa: 'ʃʊmaɪ', pos: 'v' },
+  'sianel': { en: 'channel', ipa: 'ʃanɛl', pos: 'n' },
   'siarad': { en: 'to speak/talk', ipa: 'ʃarad', pos: 'v' },
   'siaradodd': { en: 'spoke (he/she)', ipa: 'ʃaradɔð', pos: 'v' },
   'siaradwch': { en: 'speak (imperative)', ipa: 'ʃaradʊx', pos: 'v' },
@@ -2576,7 +2579,7 @@ export function lookupWord(raw: string): DictEntry | null {
   ];
   // Simple: if starts with known preposition base, return that
   const prepBases: Record<string, string> = {
-    'arna': 'ar', 'arnat': 'ar', 'arno': 'ar', 'arni': 'ar', 'arnon': 'ar', 'arnoch': 'ar', 'arnyn': 'ar',
+    'arnaf': 'ar', 'arna': 'ar', 'arnat': 'ar', 'arno': 'ar', 'arni': 'ar', 'arnon': 'ar', 'arnoch': 'ar', 'arnyn': 'ar',
     'amdana': 'am', 'amdanat': 'am', 'amdano': 'am', 'amdani': 'am', 'amdanon': 'am', 'amdanoch': 'am', 'amdanyn': 'am',
     'wrtha': 'wrth', 'wrthat': 'wrth', 'wrtho': 'wrth', 'wrthi': 'wrth', 'wrthon': 'wrth', 'wrthoch': 'wrth', 'wrthyn': 'wrth',
     'ohona': 'o', 'ohoni': 'o', 'ohonon': 'o', 'ohonoch': 'o', 'ohonyn': 'o',

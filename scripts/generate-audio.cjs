@@ -45,7 +45,10 @@ const LANG_DEFAULTS = {
   pt: { voice: 'pt-BR-Wavenet-A', prefix: 'pt', deckDir: 'portuguese' },
   nl: { voice: 'nl-NL-Standard-A', prefix: 'nl', deckDir: 'dutch' },
   sv: { voice: 'sv-SE-Wavenet-D', prefix: 'sv', deckDir: 'swedish' },
-  // Welsh (cy) not supported by Google Cloud TTS — uses browser TTS fallback
+  cy: { voice: 'cy-GB-Standard-A', prefix: 'cy', deckDir: 'welsh' },
+  hi: { voice: 'hi-IN-Wavenet-A', prefix: 'hi', deckDir: 'hindi' },
+  tr: { voice: 'tr-TR-Wavenet-A', prefix: 'tr', deckDir: 'turkish' },
+  ru: { voice: 'ru-RU-Wavenet-A', prefix: 'ru', deckDir: 'russian' },
 };
 const langConfig = LANG_DEFAULTS[lang];
 if (!langConfig) {

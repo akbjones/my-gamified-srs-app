@@ -8,6 +8,9 @@ import { lookupWord as lookupDe } from '../data/dictionary/de';
 import { lookupWord as lookupNl } from '../data/dictionary/nl';
 import { lookupWord as lookupSv } from '../data/dictionary/sv';
 import { lookupWord as lookupCy } from '../data/dictionary/cy';
+import { lookupWord as lookupHi } from '../data/dictionary/hi';
+import { lookupWord as lookupTr } from '../data/dictionary/tr';
+import { lookupWord as lookupRu } from '../data/dictionary/ru';
 import { conjugate as conjugateEs } from '../data/conjugation/es';
 import { conjugate as conjugateIt } from '../data/conjugation/it';
 import { conjugate as conjugateFr } from '../data/conjugation/fr';
@@ -16,6 +19,9 @@ import { conjugate as conjugateDe } from '../data/conjugation/de';
 import { conjugate as conjugateNl } from '../data/conjugation/nl';
 import { conjugate as conjugateSv } from '../data/conjugation/sv';
 import { conjugate as conjugateCy } from '../data/conjugation/cy';
+import { conjugateHindi } from '../data/conjugation/hi';
+import { conjugate as conjugateTr } from '../data/conjugation/tr';
+import { conjugate as conjugateRu } from '../data/conjugation/ru';
 import { Language, ConjugationTable } from '../types';
 
 // Dynamic lookup per language — gracefully returns null for languages without a dictionary
@@ -28,6 +34,9 @@ const LOOKUP_FNS: Partial<Record<Language, (w: string) => DictEntry | null>> = {
   dutch: lookupNl,
   swedish: lookupSv,
   welsh: lookupCy,
+  hindi: lookupHi,
+  turkish: lookupTr,
+  russian: lookupRu,
 };
 
 const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable | null>> = {
@@ -39,6 +48,9 @@ const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable 
   dutch: conjugateNl,
   swedish: conjugateSv,
   welsh: conjugateCy,
+  hindi: conjugateHindi,
+  turkish: conjugateTr,
+  russian: conjugateRu,
 };
 
 const PERSON_LABELS: Record<string, string[]> = {
@@ -50,6 +62,9 @@ const PERSON_LABELS: Record<string, string[]> = {
   dutch: ['ik', 'jij', 'hij/zij', 'wij', 'jullie', 'zij'],
   swedish: ['jag', 'du', 'han/hon', 'vi', 'ni', 'de'],
   welsh: ['fi', 'ti', 'fe/hi', 'ni', 'chi', 'nhw'],
+  hindi: ['मैं', 'तू', 'वह/यह', 'हम', 'तुम', 'आप/वे'],
+  turkish: ['ben', 'sen', 'o', 'biz', 'siz', 'onlar'],
+  russian: ['я', 'ты', 'он/она', 'мы', 'вы', 'они'],
 };
 
 const TENSE_LABELS: Record<string, string> = {
@@ -214,7 +229,7 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
         // IMPORTANT: When adding a new language, add its infinitive endings here!
         // Romance: -ir, -er, -re, -ar, -or  |  Germanic: -en, -n  |  Swedish: -a
         // Turkish: -mek, -mak  |  Hindi: -ना (-nā)  |  Russian: -ть (-t')
-        for (const ending of ['ir', 'er', 're', 'ar', 'or', 'en', 'n', 'a', 'e']) {
+        for (const ending of ['ir', 'er', 're', 'ar', 'or', 'en', 'n', 'a', 'e', 'ना', 'mek', 'mak', 'ть', 'ти']) {
           const candidate = stem + ending;
           const dictEntry = lookupFn(candidate);
           if (dictEntry?.pos === 'v') {

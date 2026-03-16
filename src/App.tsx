@@ -32,6 +32,9 @@ import { lookupWord as lookupDe } from './data/dictionary/de';
 import { lookupWord as lookupNl } from './data/dictionary/nl';
 import { lookupWord as lookupSv } from './data/dictionary/sv';
 import { lookupWord as lookupCy } from './data/dictionary/cy';
+import { lookupWord as lookupHi } from './data/dictionary/hi';
+import { lookupWord as lookupTr } from './data/dictionary/tr';
+import { lookupWord as lookupRu } from './data/dictionary/ru';
 import VocabList from './components/VocabList';
 import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown } from 'lucide-react';
 
@@ -44,6 +47,9 @@ const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
   dutch: lookupNl,
   swedish: lookupSv,
   welsh: lookupCy,
+  hindi: lookupHi,
+  turkish: lookupTr,
+  russian: lookupRu,
 };
 
 type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB';
@@ -58,6 +64,9 @@ import rawGermanDeck from './data/german/deck.json';
 import rawDutchDeck from './data/dutch/deck.json';
 import rawSwedishDeck from './data/swedish/deck.json';
 import rawWelshDeck from './data/welsh/deck.json';
+import rawHindiDeck from './data/hindi/deck.json';
+import rawTurkishDeck from './data/turkish/deck.json';
+import rawRussianDeck from './data/russian/deck.json';
 
 const DECK_MAP: Partial<Record<Language, any[]>> = {
   spanish: rawSpanishDeck,
@@ -68,6 +77,9 @@ const DECK_MAP: Partial<Record<Language, any[]>> = {
   dutch: rawDutchDeck,
   swedish: rawSwedishDeck,
   welsh: rawWelshDeck,
+  hindi: rawHindiDeck,
+  turkish: rawTurkishDeck,
+  russian: rawRussianDeck,
 };
 
 // Transform raw deck.json cards into QuestCards mapped to linear path nodes
@@ -466,6 +478,9 @@ const App: React.FC = () => {
     portuguese: '\u{1F1E7}\u{1F1F7}', german: '\u{1F1E9}\u{1F1EA}', dutch: '\u{1F1F3}\u{1F1F1}',
     swedish: '\u{1F1F8}\u{1F1EA}',
     welsh: '\u{1F3F4}\u{E0067}\u{E0062}\u{E0077}\u{E006C}\u{E0073}\u{E007F}',
+    hindi: '\u{1F1EE}\u{1F1F3}',
+    turkish: '\u{1F1F9}\u{1F1F7}',
+    russian: '\u{1F1F7}\u{1F1FA}',
   };
 
   // Close language dropdown when clicking outside

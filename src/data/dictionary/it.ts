@@ -9,11 +9,50 @@ export interface DictEntry {
 
 // Lookup helper: strips punctuation, lowercases, tries base forms
 export function lookupWord(word: string): DictEntry | null {
-  const clean = word.toLowerCase().replace(/[.,!?;:\"\"""''()—–\-]/g, '').trim();
+  const clean = word.toLowerCase().replace(/[.,!?;:\"\"""\u2018\u2019()—–\-]/g, '').trim();
   if (!clean) return null;
 
   // Direct match
   if (dictionary[clean]) return dictionary[clean];
+
+  // Handle apostrophe elision (l'arte → arte, d'inverno → inverno, c'è → è)
+  if (clean.includes("'")) {
+    const parts = clean.split("'");
+    // Try the part after the apostrophe first (l'arte → arte)
+    const afterApo = parts.slice(1).join("'");
+    if (afterApo && dictionary[afterApo]) return dictionary[afterApo];
+    // Try the part before (c'è: c → che/ci, but usually after part resolves)
+    const beforeApo = parts[0];
+    if (beforeApo && dictionary[beforeApo]) return dictionary[beforeApo];
+    // Common elision prefixes — try reconstructing full forms
+    const elisionMap: Record<string, string[]> = {
+      'l': ['lo', 'la', 'il'],
+      'd': ['di', 'da'],
+      'c': ['ci', 'ce'],
+      'n': ['ne', 'non'],
+      'un': ['uno', 'una'],
+      'dell': ['dello', 'della', 'delle', 'degli', 'del'],
+      'nell': ['nello', 'nella', 'nelle', 'negli', 'nel'],
+      'all': ['allo', 'alla', 'alle', 'agli', 'al'],
+      'sull': ['sullo', 'sulla', 'sulle', 'sugli', 'sul'],
+      'quest': ['questo', 'questa'],
+      'quell': ['quello', 'quella'],
+      'com': ['come'],
+      'cos': ['cosa'],
+      'dov': ['dove'],
+      'tutt': ['tutto', 'tutta'],
+    };
+    if (beforeApo && elisionMap[beforeApo]) {
+      for (const full of elisionMap[beforeApo]) {
+        if (dictionary[full]) return dictionary[full];
+      }
+    }
+    // If after-apostrophe part needs verb resolution, recurse
+    if (afterApo) {
+      const resolved = lookupWord(afterApo);
+      if (resolved) return resolved;
+    }
+  }
 
   // Strip attached pronouns (Italian attaches pronouns to infinitives, gerunds, imperatives)
   const pronounSuffixes = ['glielo', 'gliela', 'glieli', 'gliele', 'gliene', 'melo', 'mela', 'meli', 'mele', 'mene', 'telo', 'tela', 'teli', 'tele', 'tene', 'selo', 'sela', 'seli', 'sele', 'sene', 'celo', 'cela', 'celi', 'cele', 'cene', 'velo', 'vela', 'veli', 'vele', 'vene', 'gli', 'mi', 'ti', 'ci', 'vi', 'si', 'lo', 'la', 'li', 'le', 'ne'];
@@ -54,6 +93,19 @@ export function lookupWord(word: string): DictEntry | null {
     { suffix: 'ava', replace: 'are' },
     { suffix: 'eva', replace: 'ere' },
     { suffix: 'iva', replace: 'ire' },
+    // Passato remoto (3rd person singular): parlò → parlare, capì → capire
+    { suffix: 'ò', replace: 'are' },
+    { suffix: 'ì', replace: 'ire' },
+    // Future tense: -erà/-erò (all conjugations use -er- stem)
+    { suffix: 'erà', replace: 'are' },
+    { suffix: 'erà', replace: 'ere' },
+    { suffix: 'erà', replace: 'ire' },
+    { suffix: 'erò', replace: 'are' },
+    { suffix: 'erò', replace: 'ere' },
+    { suffix: 'erò', replace: 'ire' },
+    // Irregular future: potrà → potere, verrà → venire (contracted stems)
+    { suffix: 'rà', replace: 'ere' },
+    { suffix: 'rà', replace: 'ire' },
   ];
 
   for (const { suffix, replace } of verbEndings) {
@@ -63,6 +115,9 @@ export function lookupWord(word: string): DictEntry | null {
     }
   }
 
+  // Nouns ending in accented vowel: carità → carità (already direct), or try -ità → -ità
+  // These are in the dictionary as-is, just need direct entries
+
   // Try removing plural -i / -e / -s
   if (clean.endsWith('i') && dictionary[clean.slice(0, -1) + 'o']) return dictionary[clean.slice(0, -1) + 'o'];
   if (clean.endsWith('i') && dictionary[clean.slice(0, -1) + 'e']) return dictionary[clean.slice(0, -1) + 'e'];
@@ -71,6 +126,10 @@ export function lookupWord(word: string): DictEntry | null {
   // Try removing gender suffix -a/-o
   if (clean.endsWith('a') && dictionary[clean.slice(0, -1) + 'o']) return dictionary[clean.slice(0, -1) + 'o'];
   if (clean.endsWith('o') && dictionary[clean.slice(0, -1) + 'a']) return dictionary[clean.slice(0, -1) + 'a'];
+
+  // Try stripping accent marks and lookup again (capirò → capiro, perché → perche)
+  const deaccented = clean.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  if (deaccented !== clean && dictionary[deaccented]) return dictionary[deaccented];
 
   return null;
 }
@@ -988,7 +1047,7 @@ export const dictionary: Record<string, DictEntry> = {
   "cantina": { en: "to sing (cantare)", ipa: "kantina", pos: "v" },
   "canzone": { en: "song", ipa: "kantsone", pos: "n" },
   "caotica": { en: "caotic", ipa: "kaotika", pos: "n" },
-  "capace": { en: "capable (capire)", ipa: "kapatʃe", pos: "v" },
+  "capace": { en: "capable", ipa: "kaˈpatʃe", pos: "adj" },
   "capacità": { en: "ability / capacity (capire)", ipa: "kapatʃitˈa", pos: "v" },
   "capelli": { en: "hair (capire)", ipa: "kapelːi", pos: "v" },
   "capirà": { en: "to understand (capire)", ipa: "kapirˈa", pos: "v" },
@@ -6430,4 +6489,224 @@ export const dictionary: Record<string, DictEntry> = {
   "zoo": { en: "zoo", ipa: "tsoo", pos: "n" },
   "zucchero": { en: "sugar", ipa: "tsukkero", pos: "n" },
   "zuppa": { en: "soup", ipa: "tsupːa", pos: "n" },
+  "carità": { en: "charity", ipa: "kariˈta", pos: "n" },
+  "disponibilità": { en: "availability", ipa: "disponiˈbilita", pos: "n" },
+  "lucidità": { en: "lucidity", ipa: "lutʃiˈdita", pos: "n" },
+  "serietà": { en: "seriousness", ipa: "serjeˈta", pos: "n" },
+  "né": { en: "neither/nor", ipa: "ne", pos: "conj" },
+  "low-cost": { en: "low-cost", ipa: "lɔwˈkɔst", pos: "adj" },
+  "lowcost": { en: "low-cost", ipa: "lɔwˈkɔst", pos: "adj" },
+  "part-time": { en: "part-time", ipa: "partˈtajm", pos: "adj" },
+  "parttime": { en: "part-time", ipa: "partˈtajm", pos: "adj" },
+  "wi-fi": { en: "Wi-Fi", ipa: "wajˈfaj", pos: "n" },
+  "wifi": { en: "Wi-Fi", ipa: "wajˈfaj", pos: "n" },
+  // ── Auto-expanded entries ──
+  cè: { en: 'theres', ipa: 'cè', pos: 'adv' },
+  lesame: { en: 'exam', ipa: 'lesame', pos: 'n' },
+  lautobus: { en: 'bus', ipa: 'lautobus', pos: 'n' },
+  lanno: { en: 'year', ipa: 'lanno', pos: 'n' },
+  lho: { en: 'when', ipa: 'lho', pos: 'adv' },
+  daccordo: { en: 'agreed', ipa: 'daccordo', pos: 'n' },
+  allestero: { en: 'abroad', ipa: 'allestero', pos: 'n' },
+  lacqua: { en: 'water', ipa: 'lacqua', pos: 'n' },
+  cera: { en: 'room', ipa: 'cera', pos: 'n' },
+  unora: { en: 'hour', ipa: 'unora', pos: 'n' },
+  lombrello: { en: 'umbrella', ipa: 'lombrello', pos: 'n' },
+  questanno: { en: 'year', ipa: 'questanno', pos: 'n' },
+  litaliano: { en: 'italian', ipa: 'litaliano', pos: 'n' },
+  lestate: { en: 'summer', ipa: 'lestate', pos: 'n' },
+  litalia: { en: 'italy', ipa: 'litalia', pos: 'n' },
+  dovè: { en: 'where', ipa: 'dovè', pos: 'n' },
+  lhotel: { en: 'hotel', ipa: 'lhotel', pos: 'n' },
+  linsegnante: { en: 'teacher', ipa: 'linsegnante', pos: 'n' },
+  lazienda: { en: 'company', ipa: 'lazienda', pos: 'n' },
+  lultima: { en: 'last', ipa: 'lultima', pos: 'n' },
+  destate: { en: 'summer', ipa: 'destate', pos: 'n' },
+  dellautobus: { en: 'bus', ipa: 'dellautobus', pos: 'n' },
+  dacqua: { en: 'water', ipa: 'dacqua', pos: 'n' },
+  lappartamento: { en: 'apartment', ipa: 'lappartamento', pos: 'n' },
+  laria: { en: 'air', ipa: 'laria', pos: 'n' },
+  lofferta: { en: 'offer', ipa: 'lofferta', pos: 'n' },
+  laereo: { en: 'plane', ipa: 'laereo', pos: 'n' },
+  lha: { en: 'made', ipa: 'lha', pos: 'adv' },
+  alluniversità: { en: 'university', ipa: 'alluniversità', pos: 'n' },
+  ventanni: { en: 'twenty', ipa: 'ventanni', pos: 'n' },
+  dimprovviso: { en: 'suddenly', ipa: 'dimprovviso', pos: 'n' },
+  unaltra: { en: 'another', ipa: 'unaltra', pos: 'n' },
+  lunico: { en: 'only', ipa: 'lunico', pos: 'n' },
+  lufficio: { en: 'office', ipa: 'lufficio', pos: 'n' },
+  questestate: { en: 'summer', ipa: 'questestate', pos: 'n' },
+  allalba: { en: 'dawn', ipa: 'allalba', pos: 'n' },
+  unesperienza: { en: 'experience', ipa: 'unesperienza', pos: 'n' },
+  lora: { en: 'cant', ipa: 'lora', pos: 'n' },
+  dinverno: { en: 'winter', ipa: 'dinverno', pos: 'n' },
+  coshai: { en: 'what', ipa: 'coshai', pos: 'n' },
+  luomo: { en: 'man', ipa: 'luomo', pos: 'n' },
+  lolio: { en: 'oil', ipa: 'lolio', pos: 'n' },
+  lautostrada: { en: 'highway', ipa: 'lautostrada', pos: 'n' },
+  linvito: { en: 'invitation', ipa: 'linvito', pos: 'n' },
+  lesercizio: { en: 'exercise', ipa: 'lesercizio', pos: 'n' },
+  lerba: { en: 'mows', ipa: 'lerba', pos: 'n' },
+  qualcosaltro: { en: 'else', ipa: 'qualcosaltro', pos: 'n' },
+  allesame: { en: 'exam', ipa: 'allesame', pos: 'n' },
+  allimprovviso: { en: 'suddenly', ipa: 'allimprovviso', pos: 'n' },
+  lhai: { en: 'you', ipa: 'lhai', pos: 'n' },
+  labbiamo: { en: 'lost', ipa: 'labbiamo', pos: 'n' },
+  lambiente: { en: 'environment', ipa: 'lambiente', pos: 'n' },
+  lalbergo: { en: 'hotel', ipa: 'lalbergo', pos: 'n' },
+  dallaspetto: { en: 'appearance', ipa: 'dallaspetto', pos: 'n' },
+  quellofferta: { en: 'doubt', ipa: 'quellofferta', pos: 'n' },
+  questora: { en: 'hour', ipa: 'questora', pos: 'n' },
+  levento: { en: 'event', ipa: 'levento', pos: 'n' },
+  lincidente: { en: 'accident', ipa: 'lincidente', pos: 'n' },
+  laveva: { en: 'replied', ipa: 'laveva', pos: 'n' },
+  lapertura: { en: 'after', ipa: 'lapertura', pos: 'n' },
+  allanno: { en: 'year', ipa: 'allanno', pos: 'n' },
+  limportante: { en: 'important', ipa: 'limportante', pos: 'n' },
+  dallinizio: { en: 'start', ipa: 'dallinizio', pos: 'n' },
+  dallessere: { en: 'far', ipa: 'dallessere', pos: 'n' },
+  lavrei: { en: 'never', ipa: 'lavrei', pos: 'n' },
+  ditalia: { en: 'capital', ipa: 'ditalia', pos: 'n' },
+  larte: { en: 'famous', ipa: 'larte', pos: 'n' },
+  comè: { en: 'how', ipa: 'comè', pos: 'n' },
+  lingresso: { en: 'need', ipa: 'lingresso', pos: 'n' },
+  allingresso: { en: 'pay', ipa: 'allingresso', pos: 'n' },
+  lalbero: { en: 'tree', ipa: 'lalbero', pos: 'n' },
+  unamica: { en: 'friend', ipa: 'unamica', pos: 'n' },
+  luovo: { en: 'egg', ipa: 'luovo', pos: 'n' },
+  luccello: { en: 'bird', ipa: 'luccello', pos: 'n' },
+  lisola: { en: 'island', ipa: 'lisola', pos: 'n' },
+  larticolo: { en: 'article', ipa: 'larticolo', pos: 'n' },
+  larmadio: { en: 'wardrobe', ipa: 'larmadio', pos: 'n' },
+  nellingresso: { en: 'hallway', ipa: 'nellingresso', pos: 'n' },
+  lospedale: { en: 'hospital', ipa: 'lospedale', pos: 'n' },
+  lambulanza: { en: 'ambulance', ipa: 'lambulanza', pos: 'n' },
+  allangolo: { en: 'corner', ipa: 'allangolo', pos: 'n' },
+  dallufficio: { en: 'comes', ipa: 'dallufficio', pos: 'n' },
+  unapplicazione: { en: 'downloads', ipa: 'unapplicazione', pos: 'n' },
+  laffitto: { en: 'pay', ipa: 'laffitto', pos: 'n' },
+  uninsalata: { en: 'eats', ipa: 'uninsalata', pos: 'n' },
+  dallautobus: { en: 'gets', ipa: 'dallautobus', pos: 'n' },
+  uningegnera: { en: 'engineer', ipa: 'uningegnera', pos: 'n' },
+  lobiettivo: { en: 'reached', ipa: 'lobiettivo', pos: 'n' },
+  dellappartamento: { en: 'apartment', ipa: 'dellappartamento', pos: 'n' },
+  lemail: { en: 'email', ipa: 'lemail', pos: 'n' },
+  laeroporto: { en: 'airport', ipa: 'laeroporto', pos: 'n' },
+  nellarmadio: { en: 'closet', ipa: 'nellarmadio', pos: 'n' },
+  lequilibrio: { en: 'lost', ipa: 'lequilibrio', pos: 'n' },
+  darancio: { en: 'orange', ipa: 'darancio', pos: 'n' },
+  lhanno: { en: 'found', ipa: 'lhanno', pos: 'n' },
+  lamico: { en: 'friend', ipa: 'lamico', pos: 'n' },
+  largomento: { en: 'topic', ipa: 'largomento', pos: 'n' },
+  linverno: { en: 'winter', ipa: 'linverno', pos: 'n' },
+  didentità: { en: 'bring', ipa: 'didentità', pos: 'n' },
+  leconomia: { en: 'economy', ipa: 'leconomia', pos: 'n' },
+  nellistruzione: { en: 'education', ipa: 'nellistruzione', pos: 'n' },
+  unemail: { en: 'email', ipa: 'unemail', pos: 'n' },
+  uneducazione: { en: 'child', ipa: 'uneducazione', pos: 'n' },
+  loculista: { en: 'eye', ipa: 'loculista', pos: 'n' },
+  dallautostrada: { en: 'exit', ipa: 'dallautostrada', pos: 'n' },
+  mezzora: { en: 'least', ipa: 'mezzora', pos: 'n' },
+  darte: { en: 'art', ipa: 'darte', pos: 'n' },
+  unofferta: { en: 'refuse', ipa: 'unofferta', pos: 'n' },
+  lidraulico: { en: 'call', ipa: 'lidraulico', pos: 'n' },
+  allaperto: { en: 'table', ipa: 'allaperto', pos: 'n' },
+  quarantanni: { en: 'about', ipa: 'quarantanni', pos: 'n' },
+  dellesame: { en: 'know', ipa: 'dellesame', pos: 'n' },
+  trentanni: { en: 'about', ipa: 'trentanni', pos: 'n' },
+  questinverno: { en: 'winter', ipa: 'questinverno', pos: 'n' },
+  lintelligenza: { en: 'artificial', ipa: 'lintelligenza', pos: 'n' },
+  delleconomia: { en: 'many', ipa: 'delleconomia', pos: 'n' },
+  lavevo: { en: 'hadnt', ipa: 'lavevo', pos: 'n' },
+  quellaudizione: { en: 'audition', ipa: 'quellaudizione', pos: 'n' },
+  lartista: { en: 'artist', ipa: 'lartista', pos: 'n' },
+  lunica: { en: 'shes', ipa: 'lunica', pos: 'n' },
+  lultimo: { en: 'last', ipa: 'lultimo', pos: 'n' },
+  lautunno: { en: 'autumn', ipa: 'lautunno', pos: 'n' },
+  lepoca: { en: 'era', ipa: 'lepoca', pos: 'n' },
+  latleta: { en: 'athlete', ipa: 'latleta', pos: 'n' },
+  sullargomento: { en: 'topic', ipa: 'sullargomento', pos: 'n' },
+  uninsegnante: { en: 'teacher', ipa: 'uninsegnante', pos: 'n' },
+  lidea: { en: 'idea', ipa: 'lidea', pos: 'n' },
+  dallalluvione: { en: 'flood', ipa: 'dallalluvione', pos: 'n' },
+  lattore: { en: 'actor', ipa: 'lattore', pos: 'n' },
+  lorologio: { en: 'forgotten', ipa: 'lorologio', pos: 'n' },
+  allalbergo: { en: 'hotel', ipa: 'allalbergo', pos: 'n' },
+  dellambasciata: { en: 'embassys', ipa: 'dellambasciata', pos: 'n' },
+  dellanno: { en: 'end', ipa: 'dellanno', pos: 'n' },
+  labbia: { en: 'think', ipa: 'labbia', pos: 'n' },
+  davventura: { en: 'adventure', ipa: 'davventura', pos: 'n' },
+  dellargomento: { en: 'everything', ipa: 'dellargomento', pos: 'n' },
+  dellaltezza: { en: 'afraid', ipa: 'dellaltezza', pos: 'n' },
+  dellarticolo: { en: 'article', ipa: 'dellarticolo', pos: 'n' },
+  quellerrore: { en: 'made', ipa: 'quellerrore', pos: 'n' },
+  linglese: { en: 'learned', ipa: 'linglese', pos: 'n' },
+  dellacqua: { en: 'theres', ipa: 'dellacqua', pos: 'n' },
+  lavvocato: { en: 'lawyer', ipa: 'lavvocato', pos: 'n' },
+  cinquantanni: { en: 'born', ipa: 'cinquantanni', pos: 'n' },
+  unitalia: { en: 'seen', ipa: 'unitalia', pos: 'n' },
+  lascensore: { en: 'elevator', ipa: 'lascensore', pos: 'n' },
+  lordine: { en: 'order', ipa: 'lordine', pos: 'n' },
+  allinterno: { en: 'smoke', ipa: 'allinterno', pos: 'n' },
+  dallaccento: { en: 'accent', ipa: 'dallaccento', pos: 'n' },
+  dellitalia: { en: 'symbol', ipa: 'dellitalia', pos: 'n' },
+  unaria: { en: 'air', ipa: 'unaria', pos: 'n' },
+  dellaccademia: { en: 'accademia', ipa: 'dellaccademia', pos: 'n' },
+  lopera: { en: 'opera', ipa: 'lopera', pos: 'n' },
+  dellospedale: { en: 'hospital', ipa: 'dellospedale', pos: 'n' },
+  unalternativa: { en: 'find', ipa: 'unalternativa', pos: 'n' },
+  unultima: { en: 'add', ipa: 'unultima', pos: 'n' },
+  dallaltro: { en: 'other', ipa: 'dallaltro', pos: 'n' },
+  laiuto: { en: 'you', ipa: 'laiuto', pos: 'n' },
+  allinizio: { en: 'enthusiastic', ipa: 'allinizio', pos: 'n' },
+  dellalbergo: { en: 'hotel', ipa: 'dellalbergo', pos: 'n' },
+  lerrore: { en: 'made', ipa: 'lerrore', pos: 'n' },
+  laccaduto: { en: 'about', ipa: 'laccaduto', pos: 'n' },
+  dellufficio: { en: 'office', ipa: 'dellufficio', pos: 'n' },
+  lagenzia: { en: 'agency', ipa: 'lagenzia', pos: 'n' },
+  limpiegato: { en: 'clerk', ipa: 'limpiegato', pos: 'n' },
+  allufficio: { en: 'office', ipa: 'allufficio', pos: 'n' },
+  partì: { en: 'left', ipa: 'partì', pos: 'n' },
+  cambiò: { en: 'decision', ipa: 'cambiò', pos: 'n' },
+  lesercito: { en: 'army', ipa: 'lesercito', pos: 'n' },
+  attraversò: { en: 'army', ipa: 'attraversò', pos: 'n' },
+  morì: { en: 'died', ipa: 'morì', pos: 'n' },
+  entrò: { en: 'when', ipa: 'entrò', pos: 'n' },
+  alzò: { en: 'stood', ipa: 'alzò', pos: 'n' },
+  guardò: { en: 'looked', ipa: 'guardò', pos: 'n' },
+  lassemblea: { en: 'assembly', ipa: 'lassemblea', pos: 'n' },
+  cominciò: { en: 'assembly', ipa: 'cominciò', pos: 'n' },
+  aprì: { en: 'window', ipa: 'aprì', pos: 'n' },
+  respirò: { en: 'shutters', ipa: 'respirò', pos: 'n' },
+  salutò: { en: 'grabbed', ipa: 'salutò', pos: 'n' },
+  danni: { en: 'about', ipa: 'danni', pos: 'n' },
+  lumore: { en: 'exercise', ipa: 'lumore', pos: 'n' },
+  limportanza: { en: 'worth', ipa: 'limportanza', pos: 'n' },
+  limpatto: { en: 'necessary', ipa: 'limpatto', pos: 'n' },
+  lorario: { en: 'disturb', ipa: 'lorario', pos: 'n' },
+  liscrizione: { en: 'deadline', ipa: 'liscrizione', pos: 'n' },
+  lonorevole: { en: 'honorable', ipa: 'lonorevole', pos: 'n' },
+  procederà: { en: 'proceed', ipa: 'procederà', pos: 'n' },
+  potrà: { en: 'appropriate', ipa: 'potrà', pos: 'n' },
+  lautore: { en: 'author', ipa: 'lautore', pos: 'n' },
+  lincudine: { en: 'hard', ipa: 'lincudine', pos: 'n' },
+  laspetti: { en: 'around', ipa: 'laspetti', pos: 'n' },
+  allappuntamento: { en: 'gave', ipa: 'allappuntamento', pos: 'n' },
+  lappetito: { en: 'appetite', ipa: 'lappetito', pos: 'n' },
+  labito: { en: 'clothes', ipa: 'labito', pos: 'n' },
+  nellacqua: { en: 'complete', ipa: 'nellacqua', pos: 'n' },
+  unemergenza: { en: 'emergency', ipa: 'unemergenza', pos: 'n' },
+  quandanche: { en: 'even', ipa: 'quandanche', pos: 'n' },
+  nellipotesi: { en: 'event', ipa: 'nellipotesi', pos: 'n' },
+  dallestero: { en: 'having', ipa: 'dallestero', pos: 'n' },
+  peggiorerà: { en: 'situation', ipa: 'peggiorerà', pos: 'n' },
+  lanima: { en: 'enriches', ipa: 'lanima', pos: 'n' },
+  laver: { en: 'having', ipa: 'laver', pos: 'n' },
+  capirò: { en: 'never', ipa: 'capirò', pos: 'n' },
+  linvestimento: { en: 'high', ipa: 'linvestimento', pos: 'n' },
+  deuropa: { en: 'country', ipa: 'deuropa', pos: 'n' },
+  dinfanzia: { en: 'childhood', ipa: 'dinfanzia', pos: 'n' },
+  allevento: { en: 'really', ipa: 'allevento', pos: 'n' },
+  lesperienza: { en: 'think', ipa: 'lesperienza', pos: 'n' },
+  fossanche: { en: 'even', ipa: 'fossanche', pos: 'n' },
 };

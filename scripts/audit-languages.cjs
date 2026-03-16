@@ -76,19 +76,69 @@ function checkDeck(lang) {
   const workPct = Math.round((work / total) * 100);
   const familyPct = Math.round((family / total) * 100);
 
+  // Unique words & vocabulary diversity
+  const allWords = new Set();
+  let totalWordCount = 0;
+  for (const card of deck) {
+    const tokens = card.target.toLowerCase()
+      .replace(/[.,!?;:"""\u2018\u2019()—–«»\d/\\¿¡…]/g, ' ')
+      .split(/\s+/)
+      .map(t => t.replace(/^['-]+|['-]+$/g, ''))
+      .filter(t => t.length > 0);
+    totalWordCount += tokens.length;
+    for (const t of tokens) allWords.add(t);
+  }
+  const uniqueWords = allWords.size;
+  const avgWordsPerSentence = (totalWordCount / total).toFixed(1);
+
+  // Node distribution
+  const nodeCounts = {};
+  for (const card of deck) {
+    const n = card.grammarNode;
+    nodeCounts[n] = (nodeCounts[n] || 0) + 1;
+  }
+  const nodeIds = Object.keys(nodeCounts).sort((a, b) => {
+    const na = parseInt(a.split('-')[1]);
+    const nb = parseInt(b.split('-')[1]);
+    return na - nb;
+  });
+  const minNode = Math.min(...Object.values(nodeCounts));
+  const maxNode = Math.max(...Object.values(nodeCounts));
+
+  // Check for duplicate sentences
+  const sentences = new Set();
+  let duplicates = 0;
+  for (const card of deck) {
+    const key = card.target.toLowerCase().trim();
+    if (sentences.has(key)) duplicates++;
+    sentences.add(key);
+  }
+
   const issues = [];
   if (total < 3800) issues.push(`Low card count: ${total} (target ~3930)`);
+  if (uniqueWords < 4000) issues.push(`Low unique words: ${uniqueWords} (target 4000+)`);
+  if (parseFloat(avgWordsPerSentence) < 5.5) issues.push(`Short sentences: avg ${avgWordsPerSentence} words (target 6.5+)`);
   if (grammarPct < 20) issues.push(`Low grammar tips: ${grammarPct}% (target 25-35%)`);
   if (grammarPct > 40) issues.push(`High grammar tips: ${grammarPct}% (target 25-35%)`);
   if (generalPct < 95) issues.push(`General tag coverage: ${generalPct}% (target 100%)`);
   if (travelPct < 35 || travelPct > 65) issues.push(`Travel tag: ${travelPct}% (target 40-60%)`);
   if (workPct < 35 || workPct > 65) issues.push(`Work tag: ${workPct}% (target 40-60%)`);
   if (familyPct < 35 || familyPct > 65) issues.push(`Family tag: ${familyPct}% (target 40-60%)`);
+  if (duplicates > 10) issues.push(`${duplicates} duplicate sentences`);
+  if (nodeIds.length < 35) issues.push(`Only ${nodeIds.length} nodes (target 35)`);
+  if (minNode < 50) issues.push(`Smallest node has only ${minNode} cards (target ~112)`);
+  if (maxNode > 250) issues.push(`Largest node has ${maxNode} cards (unbalanced)`);
 
   return {
     pass: issues.length === 0,
     total,
+    uniqueWords,
+    avgWordsPerSentence,
     grammarPct,
+    duplicates,
+    nodeCount: nodeIds.length,
+    minNode,
+    maxNode,
     tags: { general: generalPct, travel: travelPct, work: workPct, family: familyPct },
     issues,
   };
@@ -271,7 +321,8 @@ for (const lang of LANGUAGES) {
     console.log(`  Deck: SKIP (${deck.error})`);
   } else {
     const status = deck.pass ? '\x1b[32mPASS\x1b[0m' : '\x1b[31mFAIL\x1b[0m';
-    console.log(`  Deck: ${status} — ${deck.total} cards, ${deck.grammarPct}% grammar tips`);
+    console.log(`  Deck: ${status} — ${deck.total} cards, ${deck.uniqueWords} unique words, avg ${deck.avgWordsPerSentence} words/sentence`);
+    console.log(`    Grammar tips: ${deck.grammarPct}%, Duplicates: ${deck.duplicates}, Nodes: ${deck.nodeCount} (${deck.minNode}-${deck.maxNode} cards/node)`);
     console.log(`    Tags: general=${deck.tags.general}% travel=${deck.tags.travel}% work=${deck.tags.work}% family=${deck.tags.family}%`);
     if (deck.issues.length > 0) {
       deck.issues.forEach(i => console.log(`    ⚠ ${i}`));

@@ -11,6 +11,9 @@ import { conjugate as conjugateDe } from '../data/conjugation/de';
 import { conjugate as conjugateNl } from '../data/conjugation/nl';
 import { conjugate as conjugateSv } from '../data/conjugation/sv';
 import { conjugate as conjugateCy } from '../data/conjugation/cy';
+import { conjugateHindi } from '../data/conjugation/hi';
+import { conjugate as conjugateTr } from '../data/conjugation/tr';
+import { conjugate as conjugateRu } from '../data/conjugation/ru';
 
 type SortMode = 'recent' | 'tricky';
 
@@ -30,6 +33,9 @@ const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable 
   dutch: conjugateNl,
   swedish: conjugateSv,
   welsh: conjugateCy,
+  hindi: conjugateHindi,
+  turkish: conjugateTr,
+  russian: conjugateRu,
 };
 
 const PERSON_LABELS: Record<string, string[]> = {
@@ -41,6 +47,9 @@ const PERSON_LABELS: Record<string, string[]> = {
   dutch: ['ik', 'jij', 'hij/zij', 'wij', 'jullie', 'zij'],
   swedish: ['jag', 'du', 'han/hon', 'vi', 'ni', 'de'],
   welsh: ['fi', 'ti', 'fe/hi', 'ni', 'chi', 'nhw'],
+  hindi: ['मैं', 'तू', 'वह/यह', 'हम', 'तुम', 'आप/वे'],
+  turkish: ['ben', 'sen', 'o', 'biz', 'siz', 'onlar'],
+  russian: ['я', 'ты', 'он/она', 'мы', 'вы', 'они'],
 };
 
 const TENSE_LABELS: Record<string, string> = {

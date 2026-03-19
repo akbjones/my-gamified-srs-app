@@ -40,7 +40,7 @@ const lang = (args.find(a => a.startsWith('--lang=')) || '').split('=')[1] || 'e
 const LANG_DEFAULTS = {
   es: { voice: 'es-US-Standard-A', prefix: 'es', deckDir: 'spanish' },
   it: { voice: 'it-IT-Standard-A', prefix: 'it', deckDir: 'italian' },
-  de: { voice: 'de-DE-Standard-A', prefix: 'de', deckDir: 'german' },
+  de: { voice: 'de-DE-Wavenet-A', prefix: 'de', deckDir: 'german' },
   fr: { voice: 'fr-FR-Standard-A', prefix: 'fr', deckDir: 'french' },
   pt: { voice: 'pt-BR-Wavenet-A', prefix: 'pt', deckDir: 'portuguese' },
   nl: { voice: 'nl-NL-Standard-A', prefix: 'nl', deckDir: 'dutch' },

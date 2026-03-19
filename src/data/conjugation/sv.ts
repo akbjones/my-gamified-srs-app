@@ -308,12 +308,12 @@ function buildTable(
   // For now, simple check: finnas, hoppas, etc.
 
   const tenses: Record<string, string[]> = {
-    present: allPersons(present),
-    preterite: allPersons(past),
-    imperfect: allPersons(`${auxiliary} ${supine}`),
-    future: allPersons(`ska ${infinitive}`),
-    conditional: allPersons(`skulle ${infinitive}`),
-    subjunctive: allPersons(imperative === '-' ? '-' : imperative),
+    'Presens (Present)': allPersons(present),
+    'Preteritum (Past)': allPersons(past),
+    'Supinum (Supine)': allPersons(`${auxiliary} ${supine}`),
+    'Futurum (Future)': allPersons(`ska ${infinitive}`),
+    'Konditionalis (Conditional)': allPersons(`skulle ${infinitive}`),
+    'Imperativ (Imperative)': allPersons(imperative === '-' ? '-' : imperative),
   };
 
   return {

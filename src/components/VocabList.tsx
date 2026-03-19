@@ -52,6 +52,9 @@ const PERSON_LABELS: Record<string, string[]> = {
   russian: ['я', 'ты', 'он/она', 'мы', 'вы', 'они'],
 };
 
+// Fallback tense labels for legacy keys. Each conjugation engine now provides
+// its own localized labels (e.g. "Presente (Present)") as tense object keys,
+// so these only apply if a raw English key is encountered.
 const TENSE_LABELS: Record<string, string> = {
   present: 'Present', preterite: 'Preterite', imperfect: 'Imperfect',
   future: 'Future', conditional: 'Conditional', subjunctive: 'Subjunctive',

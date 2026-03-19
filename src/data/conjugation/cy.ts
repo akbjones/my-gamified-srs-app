@@ -1561,12 +1561,12 @@ function buildTable(
   imperative: Forms,
 ): ConjugationTable {
   const tenses: Record<string, string[]> = {
-    present,
-    imperfect,
-    preterite,
-    future,
-    conditional,
-    subjunctive: imperative,
+    'Presennol (Present)': [...present],
+    'Amherffaith (Imperfect)': [...imperfect],
+    'Gorffennol (Preterite)': [...preterite],
+    'Dyfodol (Future)': [...future],
+    'Amodol (Conditional)': [...conditional],
+    'Gorchmynnol (Imperative)': [...imperative],
   };
 
   return {

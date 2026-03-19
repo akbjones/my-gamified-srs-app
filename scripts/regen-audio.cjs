@@ -78,8 +78,9 @@ if (changed.length === 0) {
 // Delete old audio files for changed cards
 let deleted = 0;
 for (const c of changed) {
+  if (!c.audio || c.audio.trim() === '') continue; // skip cards with no audio
   const audioFile = path.join(audioDir, c.audio);
-  if (fs.existsSync(audioFile)) {
+  if (fs.existsSync(audioFile) && fs.statSync(audioFile).isFile()) {
     if (dryRun) {
       console.log(`  Would delete: ${c.audio}`);
     } else {

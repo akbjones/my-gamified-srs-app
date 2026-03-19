@@ -6539,4 +6539,109 @@ const dictionary: Record<string, DictEntry> = {
   'zalen': { en: 'halls', ipa: 'zɑlɛn', pos: 'n' },
   'ziekenhuismedewerker': { en: 'hospital employee', ipa: 'zikɛnhœysmɛdɛʋɛrkɛr', pos: 'n' },
   'zomerdagen': { en: 'summer days', ipa: 'zɔmɛrdɑɣɛn', pos: 'n' },
+  // ── Auto-generated entries (expand-dutch-dict.py) ────────────────
+  // A
+  'aantrekken': { en: 'your', ipa: 'aːntrɛkkən', pos: 'v' },
+  'aardige': { en: 'a', ipa: 'aːrdɪɣɛ', pos: 'n' },
+  'achteraan': { en: 'at', ipa: 'ɑxtɛraːn', pos: 'n' },
+  'allerbeste': { en: 'the', ipa: 'ɑllɛrbɛstɛ', pos: 'num' },
+  'alternatieven': { en: 'start', ipa: 'ɑltɛrnɑtivən', pos: 'v' },
+  'amsterdam-noord': { en: 'amsterdam', ipa: 'ɑmstɛrdɑm-noːrd', pos: 'n' },
+  'appeltje-eitje': { en: 'a', ipa: 'ɑppɛltjɛ-ɛitjɛ', pos: 'n' },
+  // B
+  'beantwoorden': { en: 'questions', ipa: 'bɛɑntʋoːrdən', pos: 'v' },
+  'bedje': { en: 'his', ipa: 'bɛdjɛ', pos: 'n' },
+  'beheersen': { en: 'well', ipa: 'bɛɦeːrsən', pos: 'v' },
+  'binnenkomen': { en: 'come', ipa: 'bɪnnɛŋkɔmən', pos: 'v' },
+  // C
+  'chef-kok': { en: 'chef, best', ipa: 'xɛf-kɔk', pos: 'n' },
+  'computer': { en: 'computer', ipa: 'kɔmpʏtɛr', pos: 'n' },
+  // D
+  'diepst': { en: 'depths', ipa: 'dipst', pos: 'n' },
+  'diepte-interviews': { en: 'in-depth', ipa: 'diptɛ-ɪntɛrviʋs', pos: 'n' },
+  // E
+  'efficiënter': { en: 'working', ipa: 'ɛffɪkɪëntɛr', pos: 'n' },
+  'eilanden': { en: 'islands, greek', ipa: 'ɛilɑndən', pos: 'v' },
+  'erger': { en: 'worse', ipa: 'ɛrɣɛr', pos: 'n' },
+  // F
+  // G
+  'gastvrij': { en: 'very', ipa: 'ɣɑstvrɛi', pos: 'n' },
+  'gepland': { en: 'ahead, birthday', ipa: 'ɣɛplɑnd', pos: 'n' },
+  'glaasje': { en: 'a', ipa: 'ɣlaːsjɛ', pos: 'n' },
+  'goedkopere': { en: 'a', ipa: 'ɣudkɔpɛrɛ', pos: 'n' },
+  'grammaticaregels': { en: 'difficult', ipa: 'ɣrɑmmɑtɪkɑrɛɣɛls', pos: 'n' },
+  'griekenland': { en: 'to', ipa: 'ɣrikɛnlɑnd', pos: 'n' },
+  'grootouders': { en: 'grandparents, their', ipa: 'ɣroːtɑudɛrs', pos: 'n' },
+  // H
+  'ham-kaas': { en: 'ham-cheese', ipa: 'ɦɑm-kaːs', pos: 'n' },
+  'harte': { en: 'welcome', ipa: 'ɦɑrtɛ', pos: 'n' },
+  'heten': { en: 'we', ipa: 'ɦɛtən', pos: 'v' },
+  'hoofdgerecht': { en: 'the', ipa: 'ɦoːfdɣɛrɛxt', pos: 'n' },
+  // I
+  'interessante': { en: 'interesting', ipa: 'ɪntɛrɛssɑntɛ', pos: 'n' },
+  'interessanter': { en: 'more', ipa: 'ɪntɛrɛssɑntɛr', pos: 'n' },
+  'intussen': { en: 'meanwhile', ipa: 'ɪntʏssən', pos: 'v' },
+  // J
+  // K
+  'klanten': { en: 'customers', ipa: 'klɑntən', pos: 'v' },
+  'kussens': { en: 'the', ipa: 'kʏssɛns', pos: 'n' },
+  // L
+  'lastigvallen': { en: 'bother', ipa: 'lɑstɪɣvɑllən', pos: 'v' },
+  'lekkere': { en: 'tasty', ipa: 'lɛkkɛrɛ', pos: 'n' },
+  'lessen': { en: 'lessons', ipa: 'lɛssən', pos: 'v' },
+  'lichte': { en: 'bright', ipa: 'lɪxtɛ', pos: 'n' },
+  'luchtje': { en: 'fishy', ipa: 'lʏxtjɛ', pos: 'n' },
+  // M
+  'meta-analyse': { en: 'meta-analysis', ipa: 'mɛtɑ-ɑnɑlisɛ', pos: 'n' },
+  // N
+  'naderende': { en: 'deadline', ipa: 'nɑdɛrɛndɛ', pos: 'n' },
+  'noorden': { en: 'north', ipa: 'noːrdən', pos: 'v' },
+  // O
+  'ontmoetten': { en: 'met', ipa: 'ɔntmuttən', pos: 'v' },
+  'ontspannend': { en: 'relaxing', ipa: 'ɔntspɑnnɛnd', pos: 'n' },
+  'orange': { en: 'tastes', ipa: 'ɔrɑŋɛ', pos: 'n' },
+  'oranjefeest': { en: 'orange', ipa: 'ɔrɑnjɛfeːst', pos: 'n' },
+  'ov-chipkaart': { en: 'ov-chipkaart, up', ipa: 'ɔv-xɪpkaːrt', pos: 'n' },
+  // P
+  'parken': { en: 'beautiful', ipa: 'pɑrkən', pos: 'v' },
+  'patienten': { en: 'patients', ipa: 'pɑtintən', pos: 'v' },
+  'pinda': { en: 'to', ipa: 'pɪndɑ', pos: 'n' },
+  'plaatje': { en: 'picture', ipa: 'plaːtjɛ', pos: 'n' },
+  // R
+  // S
+  'schilderde': { en: 'irony', ipa: 'sxɪldɛrdɛ', pos: 'n' },
+  'schooljaar': { en: 'school', ipa: 'sxoːljaːr', pos: 'n' },
+  'schoonmaken': { en: 'to clean', ipa: 'sxoːnmɑkən', pos: 'v' },
+  'schouder': { en: 'shoulder', ipa: 'sxɑudɛr', pos: 'n' },
+  'slaagden': { en: 'all', ipa: 'slaːɣdən', pos: 'v' },
+  'slaapkamerraam': { en: 'bedroom', ipa: 'slaːpkɑmɛrraːm', pos: 'n' },
+  'spoedgevallen': { en: 'the', ipa: 'spudɣɛvɑllən', pos: 'v' },
+  'sportiever': { en: 'more', ipa: 'spɔrtivɛr', pos: 'n' },
+  'sportschool': { en: 'work', ipa: 'spɔrtsxoːl', pos: 'n' },
+  'steigers': { en: 'months', ipa: 'stɛiɣɛrs', pos: 'n' },
+  'succesvol': { en: 'such', ipa: 'sʏkkɛsvɔl', pos: 'adj' },
+  // T
+  'terugbrengen': { en: 'tomorrow', ipa: 'tɛrʏɣbrɛŋən', pos: 'v' },
+  'thuisteam': { en: 'the', ipa: 'tœystɛɑm', pos: 'n' },
+  'toelatingsexamen': { en: 'difficult', ipa: 'tulɑtɪŋsɛksɑmən', pos: 'v' },
+  'toetsen': { en: 'to', ipa: 'tutsən', pos: 'v' },
+  'toonbank': { en: 'counter', ipa: 'toːnbɑŋk', pos: 'n' },
+  'treffende': { en: 'striking', ipa: 'trɛffɛndɛ', pos: 'n' },
+  // U
+  // V
+  'vanzelf': { en: 'eventually', ipa: 'vɑnzɛlf', pos: 'n' },
+  'verraden': { en: 'someone', ipa: 'vɛrrɑdən', pos: 'v' },
+  'vlakbij': { en: 'near', ipa: 'vlɑkbɛi', pos: 'n' },
+  'voordelen': { en: 'brought', ipa: 'voːrdɛlən', pos: 'v' },
+  // W
+  'werkten': { en: 'and', ipa: 'ʋɛrktən', pos: 'v' },
+  'wiskundeprobleem': { en: 'the', ipa: 'ʋɪskʏndɛprɔbleːm', pos: 'n' },
+  'woensdag': { en: 'Wednesday', ipa: 'ʋunsdɑɣ', pos: 'n' },
+  'woon-werkverkeer': { en: 'daily', ipa: 'ʋoːn-ʋɛrkvɛrkeːr', pos: 'n' },
+  // Z
+  'zevenentwintig': { en: 'on', ipa: 'zɛvɛnɛntʋɪntɪɣ', pos: 'adj' },
+  'zoete': { en: 'sweet', ipa: 'zutɛ', pos: 'n' },
+  'zuid-frankrijk': { en: 'every', ipa: 'zœyd-frɑŋkrɛik', pos: 'n' },
+  // É
+
 };

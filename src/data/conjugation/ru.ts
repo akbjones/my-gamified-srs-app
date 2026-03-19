@@ -327,23 +327,26 @@ export function conjugate(infinitive: string): ConjugationTable | null {
 }
 
 // ── Reverse lookup ──────────────────────────────────────────
-export function findInfinitive(form: string): string | null {
+/** Return all plausible infinitive candidates for a conjugated form */
+export function findInfinitiveCandidates(form: string): string[] {
+  const candidates: string[] = [];
+
   // Direct infinitive
   if (form.endsWith('ть') || form.endsWith('ти') || form.endsWith('чь') ||
       form.endsWith('ться') || form.endsWith('тись')) {
-    return form;
+    return [form];
   }
 
   // Check irregular forms
   for (const [inf, data] of Object.entries(IRREGULARS)) {
     if (data.present) {
       for (const f of data.present) {
-        if (f === form || f.split('/').includes(form)) return inf;
+        if (f === form || f.split('/').includes(form)) return [inf];
       }
     }
     if (data.past) {
       for (const f of data.past) {
-        if (f === form || f.split('/').includes(form)) return inf;
+        if (f === form || f.split('/').includes(form)) return [inf];
       }
     }
   }
@@ -355,32 +358,88 @@ export function findInfinitive(form: string): string | null {
     baseForm = form.endsWith('ся') ? form.slice(0, -2) : form.slice(0, -2);
     wasReflexive = true;
   }
+  const reflSuffix = wasReflexive ? 'ся' : '';
 
   // Try past tense: strip л/ла/ло/ли
   for (const suffix of ['ли', 'ло', 'ла', 'л']) {
     if (baseForm.endsWith(suffix)) {
       const stem = baseForm.slice(0, -suffix.length);
       if (stem.length >= 2) {
-        return stem + 'ть' + (wasReflexive ? 'ся' : '');
+        // Past tense stem = infinitive stem (usually). Try multiple endings:
+        candidates.push(stem + 'ть' + reflSuffix);     // читал → читать
+        candidates.push(stem + 'ать' + reflSuffix);     // писал → писать
+        candidates.push(stem + 'ить' + reflSuffix);     // ходил → ходить
+        candidates.push(stem + 'еть' + reflSuffix);     // сидел → сидеть
+        candidates.push(stem + 'ять' + reflSuffix);     // стоял → стоять
+        candidates.push(stem + 'ти' + reflSuffix);      // нёс → нести (rare)
+        return candidates;
       }
     }
   }
 
-  // Try present tense endings
-  const presentEndings = [
-    'ю', 'ешь', 'ет', 'ем', 'ете', 'ют',  // 1st conj
-    'у', 'ишь', 'ит', 'им', 'ите', 'ят', 'ат',  // 2nd conj
-  ];
-  for (const ending of presentEndings) {
+  // Try present tense endings — generate ALL possible infinitives per stem
+  // 1st conjugation endings (stem includes the thematic vowel)
+  const firstConjEndings = ['ю', 'ешь', 'ет', 'ем', 'ете', 'ют'];
+  // 2nd conjugation endings
+  const secondConjEndings = ['у', 'ишь', 'ит', 'им', 'ите', 'ят', 'ат'];
+
+  for (const ending of firstConjEndings) {
     if (baseForm.endsWith(ending)) {
       const stem = baseForm.slice(0, -ending.length);
       if (stem.length >= 2) {
-        return stem + 'ать' + (wasReflexive ? 'ся' : '');
+        // For 1st conj, stem typically ends in the thematic vowel (а, я, е, о)
+        // помогает → помога- → помогать (stem+ть), NOT помога+ать
+        candidates.push(stem + 'ть' + reflSuffix);      // помога → помогать
+        candidates.push(stem + 'ать' + reflSuffix);      // пис → писать (stem vowel dropped)
+        candidates.push(stem + 'ять' + reflSuffix);      // гуля → гулять
+        candidates.push(stem + 'еть' + reflSuffix);      // ум → уметь
+        candidates.push(stem + 'овать' + reflSuffix);     // рису → рисовать (-ую/-уешь verbs)
+        candidates.push(stem + 'евать' + reflSuffix);     // танц → танцевать
+        break;
       }
     }
   }
 
-  return null;
+  for (const ending of secondConjEndings) {
+    if (baseForm.endsWith(ending)) {
+      const stem = baseForm.slice(0, -ending.length);
+      if (stem.length >= 2) {
+        // For 2nd conj, stem doesn't include thematic vowel
+        // говорит → говор- → говорить
+        candidates.push(stem + 'ить' + reflSuffix);      // говор → говорить
+        candidates.push(stem + 'ать' + reflSuffix);       // крич → кричать (mixed)
+        candidates.push(stem + 'еть' + reflSuffix);       // вид → видеть
+        candidates.push(stem + 'ять' + reflSuffix);       // сто → стоять
+        candidates.push(stem + 'ть' + reflSuffix);        // fallback
+        break;
+      }
+    }
+  }
+
+  // Also try -овать/-евать verbs where -ую/-уешь present forms drop -ова-
+  // рисовать → рисую (stem рис + ую), not рисова + ю
+  if (baseForm.endsWith('ую') || baseForm.endsWith('уешь') || baseForm.endsWith('ует') ||
+      baseForm.endsWith('уем') || baseForm.endsWith('уете') || baseForm.endsWith('уют')) {
+    const ovEndings = ['ую', 'уешь', 'ует', 'уем', 'уете', 'уют'];
+    for (const e of ovEndings) {
+      if (baseForm.endsWith(e)) {
+        const stem = baseForm.slice(0, -e.length);
+        if (stem.length >= 1) {
+          candidates.push(stem + 'овать' + reflSuffix);
+          candidates.push(stem + 'евать' + reflSuffix);
+        }
+        break;
+      }
+    }
+  }
+
+  return candidates;
+}
+
+/** Legacy single-return wrapper (returns first candidate) */
+export function findInfinitive(form: string): string | null {
+  const candidates = findInfinitiveCandidates(form);
+  return candidates.length > 0 ? candidates[0] : null;
 }
 
 export default conjugate;

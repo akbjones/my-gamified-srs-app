@@ -1,5 +1,5 @@
 import type { DictEntry } from './es';
-import { findInfinitive } from '../conjugation/ru';
+import { findInfinitive, findInfinitiveCandidates } from '../conjugation/ru';
 
 // ── Russian Dictionary ────────────────────────────────────────
 // Keys are in Cyrillic (lowercase).
@@ -4158,9 +4158,16 @@ export function lookupWord(word: string): DictEntry | null {
   const withoutYo = clean.replace(/ё/g, 'е');
   if (withoutYo !== clean && dictionary[withoutYo]) return dictionary[withoutYo];
 
-  // Try verb form resolution via conjugation engine
-  const inf = findInfinitive(clean);
-  if (inf && dictionary[inf]) return dictionary[inf];
+  // Try verb form resolution via conjugation engine (all candidate infinitives)
+  const infCandidates = findInfinitiveCandidates(clean);
+  for (const inf of infCandidates) {
+    if (dictionary[inf]) return dictionary[inf];
+    // Also try ё/е variation on candidates
+    const infYo = inf.replace(/е/g, 'ё');
+    if (infYo !== inf && dictionary[infYo]) return dictionary[infYo];
+    const infNoYo = inf.replace(/ё/g, 'е');
+    if (infNoYo !== inf && dictionary[infNoYo]) return dictionary[infNoYo];
+  }
 
   // Try adjective ending stripping
   for (const { suffix, bases } of ADJ_ENDINGS) {

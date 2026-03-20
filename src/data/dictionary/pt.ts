@@ -777,6 +777,35 @@ export function lookupWord(raw: string): DictEntry | null {
     if (dictionary[cand2]) return dictionary[cand2];
   }
 
+  // Clitic-detached truncated infinitives: buscá → buscar, convencê → convencer, motivá → motivar, recebê → receber
+  const deacc = clean.replace(/á$/g, 'a').replace(/ê$/g, 'e').replace(/ô$/g, 'o').replace(/í$/g, 'i');
+  if (deacc !== clean) {
+    if (dictionary[deacc + 'r']) return dictionary[deacc + 'r'];
+    if (dictionary[deacc + 'ar']) return dictionary[deacc + 'ar'];
+    if (dictionary[deacc + 'er']) return dictionary[deacc + 'er'];
+    if (dictionary[deacc + 'ir']) return dictionary[deacc + 'ir'];
+  }
+
+  // Mesoclisis truncated stems: dir → dizer, far → fazer
+  const MESO_MAP: Record<string, string> = {
+    dir: 'dizer', far: 'fazer', tra: 'trazer', po: 'poder',
+  };
+  if (MESO_MAP[clean] && dictionary[MESO_MAP[clean]]) return dictionary[MESO_MAP[clean]];
+
+  // Truncated -mos before -nos: reservamo → reservar (reservamo-nos)
+  if (clean.endsWith('amo') && clean.length > 4) {
+    const cand = clean.slice(0, -3) + 'ar';
+    if (dictionary[cand]) return dictionary[cand];
+  }
+  if (clean.endsWith('emo') && clean.length > 4) {
+    const cand = clean.slice(0, -3) + 'er';
+    if (dictionary[cand]) return dictionary[cand];
+  }
+  if (clean.endsWith('imo') && clean.length > 4) {
+    const cand = clean.slice(0, -3) + 'ir';
+    if (dictionary[cand]) return dictionary[cand];
+  }
+
   return null;
 }
 
@@ -6142,4 +6171,12 @@ const dictionary: Record<string, DictEntry> = {
   torce: { en: 'roots for', ipa: 'ˈtoɾsi', pos: 'v' },
   torceu: { en: 'rooted for', ipa: 'ˈtoɾseu', pos: 'v' },
   torci: { en: 'I rooted for', ipa: 'ˈtoɾsi', pos: 'v' },
-  tornou: { en: 'became, made', ipa: 'ˈtoɾnou', pos: 'v' },};
+  tornou: { en: 'became, made', ipa: 'ˈtoɾnou', pos: 'v' },
+  // Clitic object pronouns (appear after hyphens)
+  la: { en: 'her, it (f)', ipa: 'la', pos: 'pron' },
+  lo: { en: 'him, it (m)', ipa: 'lu', pos: 'pron' },
+  los: { en: 'them (m)', ipa: 'lus', pos: 'pron' },
+  las: { en: 'them (f)', ipa: 'las', pos: 'pron' },
+  // Interjection
+  ei: { en: 'hey', ipa: 'ˈej', pos: 'interj' },
+};

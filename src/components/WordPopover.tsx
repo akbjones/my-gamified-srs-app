@@ -230,9 +230,19 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
       }
       for (const stem of stems) {
         // IMPORTANT: When adding a new language, add its infinitive endings here!
-        // Romance: -ir, -er, -re, -ar, -or  |  Germanic: -en, -n  |  Swedish: -a
-        // Turkish: -mek, -mak  |  Hindi: -ना (-nā)  |  Russian: -ть (-t')
-        for (const ending of ['ir', 'er', 're', 'ar', 'or', 'en', 'n', 'a', 'e', 'ना', 'mek', 'mak', 'ть', 'ти']) {
+        // Romance: -ir, -er, -re, -ar, -or  |  Germanic: -en, -ern, -eln, -n
+        // Swedish: -a, -e  |  Turkish: -mek, -mak  |  Hindi: -ना (-nā)
+        // Russian: -ать, -ять, -еть, -уть, -оть, -ыть, -ить, -ти, -чь, -ться, -тись
+        for (const ending of [
+          'ir', 'er', 're', 'ar', 'or',          // Romance
+          'en', 'ern', 'eln', 'n',                // Germanic (DE/NL)
+          'a', 'e',                                // Swedish
+          'mek', 'mak',                            // Turkish
+          'ना',                                     // Hindi
+          'ать', 'ять', 'еть', 'уть', 'оть',     // Russian (-ать/-ять/-еть/-уть/-оть)
+          'ыть', 'ить', 'ть', 'ти', 'чь',         // Russian (-ыть/-ить/-ть/-ти/-чь)
+          'ться', 'тись',                           // Russian reflexive
+        ]) {
           const candidate = stem + ending;
           const dictEntry = lookupFn(candidate);
           if (dictEntry?.pos === 'v') {

@@ -5844,4 +5844,7 @@ export const dictionary: Record<string, DictEntry> = {
   'permettez': { en: 'allow (permettre)', ipa: 'pɛʁmɛte', pos: 'v' },
   'talentueuse': { en: 'talented (feminine)', ipa: 'talɑ̃tɥøz', pos: 'adj' },
   'estimée': { en: 'esteemed / estimated (feminine)', ipa: 'ɛstime', pos: 'adj' },
+  // ── Auto-generated missing entries ──────────────────────
+  'doublure': { en: 'lining, understudy', ipa: 'dublyʁ', pos: 'n' },
+  'argentée': { en: 'silvery (f.)', ipa: 'aʁʒɑ̃te', pos: 'adj' },
 };

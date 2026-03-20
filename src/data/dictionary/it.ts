@@ -6904,4 +6904,7 @@ export const dictionary: Record<string, DictEntry> = {
   'boccone': { en: 'mouthful / bite', ipa: 'bokkone', pos: 'n' },
   "senz'": { en: "without (senza)", ipa: 'sɛnts', pos: 'prep' },
   'senz': { en: 'without (senza)', ipa: 'sɛnts', pos: 'prep' },
+  // ── Auto-generated missing entries ──────────────────────
+  'organizzando': { en: 'organizing (gerund)', ipa: 'orɡanidˈdzando', pos: 'v' },
+  'spiegarlo': { en: 'to explain it', ipa: 'spjeˈɡarlo', pos: 'v' },
 };

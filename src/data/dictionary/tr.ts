@@ -10035,6 +10035,18 @@ const dictionary: Record<string, DictEntry> = {
   'şimdiye': { en: 'recovered, now', ipa: 'ʃim.di.je', pos: 'n' },
   'şişesi': { en: 'always, carry', ipa: 'ʃi.ʃe.si', pos: 'n' },
   'şoförü': { en: 'bus, driver', ipa: 'ʃo.fø.ɾy', pos: 'n' },
+  // ── Auto-generated missing entries ──────────────────────
+  'daki': { en: 'at the, in the (locative suffix)', ipa: 'daki', pos: 'suff' },
+  'dır': { en: 'is (copula suffix)', ipa: 'dɯɾ', pos: 'suff' },
+  'deki': { en: 'at the, in the (locative suffix)', ipa: 'deki', pos: 'suff' },
+  'tir': { en: 'is (copula suffix)', ipa: 'tiɾ', pos: 'suff' },
+  'daydık': { en: 'we were (past progressive)', ipa: 'dajdɯk', pos: 'v' },
+  'olandır': { en: 'is the one who is', ipa: 'oɫandɯɾ', pos: 'v' },
+  'a': { en: 'to (dative suffix)', ipa: 'a', pos: 'suff' },
+  'e': { en: 'to (dative suffix)', ipa: 'e', pos: 'suff' },
+  'ta': { en: 'in, at (locative suffix)', ipa: 'ta', pos: 'suff' },
+  'te': { en: 'in, at (locative suffix)', ipa: 'te', pos: 'suff' },
+  'ı': { en: 'the, it (accusative suffix)', ipa: 'ɯ', pos: 'suff' },
 };
 
 // ── Turkish suffix stripping ──────────────────────────────────

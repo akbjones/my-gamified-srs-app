@@ -6249,6 +6249,8 @@ const dict: Record<string, DictEntry> = {
   'ddiogelu': { en: 'to protect (diogelu, soft mutation)', ipa: 'ðɪɔɡɛlɨ', pos: 'v' },
   'crynodau': { en: 'concentrations, summaries', ipa: 'krənɔdaɪ', pos: 'n' },
   'onglau': { en: 'angles', ipa: 'ɔŋlaɪ', pos: 'n' },
+  'm': { en: '(letter/abbreviation)', ipa: 'ɛm', pos: 'part' },
+  'x': { en: '(letter/variable)', ipa: 'ɛks', pos: 'part' },
 };
 
 

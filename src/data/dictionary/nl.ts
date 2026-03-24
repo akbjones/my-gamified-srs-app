@@ -6518,12 +6518,12 @@ const dictionary: Record<string, DictEntry> = {
   // ── Auto-generated entries (expand-dutch-dict.py) ────────────────
   // A
   'aantrekken': { en: 'your', ipa: 'aːntrɛkkən', pos: 'v' },
-  'aardige': { en: 'a', ipa: 'aːrdɪɣɛ', pos: 'n' },
+  'aardige': { en: 'nice, kind', ipa: 'aːrdɪɣɛ', pos: 'n' },
   'achteraan': { en: 'at', ipa: 'ɑxtɛraːn', pos: 'n' },
   'allerbeste': { en: 'the', ipa: 'ɑllɛrbɛstɛ', pos: 'num' },
   'alternatieven': { en: 'start', ipa: 'ɑltɛrnɑtivən', pos: 'v' },
   'amsterdam-noord': { en: 'amsterdam', ipa: 'ɑmstɛrdɑm-noːrd', pos: 'n' },
-  'appeltje-eitje': { en: 'a', ipa: 'ɑppɛltjɛ-ɛitjɛ', pos: 'n' },
+  'appeltje-eitje': { en: 'piece of cake, easy', ipa: 'ɑppɛltjɛ-ɛitjɛ', pos: 'n' },
   // B
   'beantwoorden': { en: 'questions', ipa: 'bɛɑntʋoːrdən', pos: 'v' },
   'bedje': { en: 'his', ipa: 'bɛdjɛ', pos: 'n' },
@@ -6543,11 +6543,11 @@ const dictionary: Record<string, DictEntry> = {
   // G
   'gastvrij': { en: 'very', ipa: 'ɣɑstvrɛi', pos: 'n' },
   'gepland': { en: 'ahead, birthday', ipa: 'ɣɛplɑnd', pos: 'n' },
-  'glaasje': { en: 'a', ipa: 'ɣlaːsjɛ', pos: 'n' },
-  'goedkopere': { en: 'a', ipa: 'ɣudkɔpɛrɛ', pos: 'n' },
+  'glaasje': { en: 'small glass, drink', ipa: 'ɣlaːsjɛ', pos: 'n' },
+  'goedkopere': { en: 'cheaper', ipa: 'ɣudkɔpɛrɛ', pos: 'n' },
   'grammaticaregels': { en: 'difficult', ipa: 'ɣrɑmmɑtɪkɑrɛɣɛls', pos: 'n' },
   'griekenland': { en: 'to', ipa: 'ɣrikɛnlɑnd', pos: 'n' },
-  'grootouders': { en: 'grandparents, their', ipa: 'ɣroːtɑudɛrs', pos: 'n' },
+  'grootouders': { en: 'grandparents', ipa: 'ɣroːtɑudɛrs', pos: 'n' },
   // H
   'ham-kaas': { en: 'ham-cheese', ipa: 'ɦɑm-kaːs', pos: 'n' },
   'harte': { en: 'welcome', ipa: 'ɦɑrtɛ', pos: 'n' },

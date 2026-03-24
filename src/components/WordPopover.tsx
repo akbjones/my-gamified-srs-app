@@ -94,6 +94,10 @@ const POS_LABELS: Record<string, string> = {
   conj: 'conj',
   det: 'det',
   pron: 'pron',
+  intj: 'intj',
+  num: 'num',
+  part: 'particle',
+  postp: 'postp',
 };
 
 const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className = '' }) => {
@@ -208,6 +212,12 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
     const direct = conjugateFn(clean);
     if (direct) return direct;
 
+    // Try the lemma field (base/infinitive form) — most reliable for inflected forms
+    if (entry.lemma) {
+      const result = conjugateFn(entry.lemma);
+      if (result) return result;
+    }
+
     // Try the infinitive from translation parenthetical: "to speak (parler)"
     const inf = extractInfinitive(entry.en);
     if (inf) {
@@ -312,6 +322,13 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
       <div className="text-base font-bold text-[var(--text-primary)] leading-snug">
         {entry.en}
       </div>
+
+      {/* Lemma (base form) — shown for inflected forms */}
+      {entry.lemma && (
+        <div className="text-sm text-[var(--text-muted)] mt-0.5">
+          → {entry.lemma}
+        </div>
+      )}
 
       {/* IPA */}
       {entry.ipa && (

@@ -3,7 +3,7 @@ import { findInfinitive } from '../conjugation/hi';
 
 // ── Hindi Dictionary ────────────────────────────────────────
 // Keys are in Devanagari script (lowercase not applicable for Hindi).
-// Each entry: { en: 'English translation', ipa: 'IPA pronunciation', pos: 'part of speech' }
+// Each entry: { en: 'English translation', ipa: '(en)ˈɛntɹi(hi)', pos: 'part of speech' }
 const dictionary: Record<string, DictEntry> = {
   // ── Common verbs (infinitives) ─────────────────────────────
   'होना': { en: 'to be', ipa: 'hoːnaː', pos: 'v' },
@@ -403,13 +403,13 @@ const dictionary: Record<string, DictEntry> = {
   'फ़ैसला': { en: 'decision', ipa: 'fɛːslaː', pos: 'n' },
 
   // ── Auto-generated entries (deck coverage) ────────────────
-  'H₂O': { en: 'water, formula', ipa: '//', pos: 'n' },
-  'actually': { en: 'actually, find', ipa: '//', pos: 'n' },
-  'contact': { en: 'go', ipa: '//', pos: 'n' },
-  'formally': { en: 'formally, given', ipa: '//', pos: 'n' },
-  'matter': { en: 'matter, related', ipa: '//', pos: 'n' },
-  'related': { en: 'matter, related', ipa: '//', pos: 'n' },
-  'resignation': { en: 'given, formally', ipa: '//', pos: 'n' },
+  'H₂O': { en: 'water, formula', ipa: '(en)ˈeɪtʃ(hi) dˈoː (en)ˈəʊ(hi)', pos: 'n' },
+  'actually': { en: 'actually, find', ipa: '(en)ˈaktʃuːəli(hi)', pos: 'n' },
+  'contact': { en: 'go', ipa: '(en)kˈɒntakt(hi)', pos: 'n' },
+  'formally': { en: 'formally, given', ipa: '(en)fˈɔːməli(hi)', pos: 'n' },
+  'matter': { en: 'matter, related', ipa: '(en)mˈatə(hi)', pos: 'n' },
+  'related': { en: 'matter, related', ipa: '(en)ɹɪlˈeɪtɪd(hi)', pos: 'n' },
+  'resignation': { en: 'given, formally', ipa: '(en)ɹˌɛzɪɡnˈeɪʃən(hi)', pos: 'n' },
   'अँगीठी': { en: 'sat', ipa: 'ə̃ɡiːʈʰiː', pos: 'n' },
   'अँगूठी': { en: 'ring, exchanged', ipa: 'ə̃ɡuːʈʰiː', pos: 'n' },
   'अँधेरा': { en: 'new, moon', ipa: 'ə̃dʰeːraː', pos: 'n' },

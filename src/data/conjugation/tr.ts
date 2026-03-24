@@ -130,19 +130,23 @@ const IRREGULARS: Record<string, IrregularData> = {
 // ── Conjugation functions ───────────────────────────────────
 
 function conjugatePresentCont(stem: string, _inf: string): Forms {
-  // Drop final vowel if present, add -yor + personal
+  // -yor suffix needs a vowel before it:
+  // - If stem ends in vowel, drop it (e.g. bekle → bekl + iyor)
+  // - If stem ends in consonant, insert buffer vowel via 4-way harmony
   let s = stem;
   if (endsWithVowel(s)) {
     s = s.slice(0, -1);
   }
-  // -yor is always yor (no harmony)
+  // Buffer vowel: ı/i/u/ü based on last vowel of stem
+  const buf = harmony4(s);
+  // -yor is always yor (no harmony on the suffix itself)
   return [
-    `${s}yorum`,
-    `${s}yorsun`,
-    `${s}yor`,
-    `${s}yoruz`,
-    `${s}yorsunuz`,
-    `${s}yorlar`,
+    `${s}${buf}yorum`,
+    `${s}${buf}yorsun`,
+    `${s}${buf}yor`,
+    `${s}${buf}yoruz`,
+    `${s}${buf}yorsunuz`,
+    `${s}${buf}yorlar`,
   ];
 }
 

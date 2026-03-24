@@ -176,9 +176,15 @@ const ChallengeScreen: React.FC<ChallengeScreenProps> = ({
     const currentQ = questions[currentIndex];
     return (
       <section className="flex flex-col h-dvh pt-[max(0.5rem,env(safe-area-inset-top))] pb-[max(0.25rem,env(safe-area-inset-bottom))]">
-        {/* Top bar: progress + boss health */}
+        {/* Top bar: exit + progress + boss health */}
         <div className="px-4 pb-1">
           <div className="flex items-center justify-between mb-2">
+            <button
+              onClick={onAbort}
+              className="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-wider hover:text-[var(--text-secondary)] transition-colors"
+            >
+              ← EXIT
+            </button>
             <span className="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-wider">
               {currentIndex + 1} / {totalQuestions}
             </span>

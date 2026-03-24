@@ -243,7 +243,7 @@ const App: React.FC = () => {
     document.documentElement.classList.toggle('dark', settings.theme === 'dark');
   }, [settings.theme]);
 
-  const handleStartSession = (studyMore = false) => {
+  const handleStartSession = (studyMore: boolean | number = false) => {
     const now = Date.now();
     const currentNode = getCurrentNode(deck);
 
@@ -261,7 +261,8 @@ const App: React.FC = () => {
     // When "Study More" is clicked, use the session card limit setting
     const sessionLimit = settings.sessionCardLimit || 10;
     const dailyLimitRemaining = settings.dailyNewLimit - dailyStats.newCardsCount;
-    const baseNewLimit = studyMore ? Math.max(sessionLimit, dailyLimitRemaining) : Math.max(0, dailyLimitRemaining);
+    const studyMoreCount = typeof studyMore === 'number' ? studyMore : (studyMore ? sessionLimit : 0);
+    const baseNewLimit = studyMore ? Math.max(studyMoreCount, dailyLimitRemaining) : Math.max(0, dailyLimitRemaining);
     // Cap new cards at session limit when no reviews exist (prevents flooding after focus switch)
     const newLimit = reviews.length === 0 ? Math.min(baseNewLimit, sessionLimit) : baseNewLimit;
     const nodeCards = deck.filter(c => c.topic === currentNode.id && !c.isSuspended);
@@ -739,14 +740,28 @@ const App: React.FC = () => {
             )}
           </button>
 
-          {/* Study more when caught up — starts a new session without changing daily limit */}
+          {/* Study more when caught up — starts a new session with configurable card count */}
           {!hasCards && (
-            <button
-              onClick={() => handleStartSession(true)}
-              className="w-full py-3 rounded-xl bg-[var(--bg-card)] border border-[var(--accent)]/30 text-[var(--accent)] text-sm font-bold hover:bg-[var(--accent)]/10 active:bg-[var(--accent)]/20 transition-colors mb-3 -mt-1"
-            >
-              Study More Cards
-            </button>
+            <div className="w-full flex items-center gap-2 mb-3 -mt-1">
+              <button
+                onClick={() => {
+                  const input = document.getElementById('study-more-count') as HTMLInputElement;
+                  const count = input ? parseInt(input.value) || 10 : 10;
+                  handleStartSession(count);
+                }}
+                className="flex-1 py-3 rounded-xl bg-[var(--bg-card)] border border-[var(--accent)]/30 text-[var(--accent)] text-sm font-bold hover:bg-[var(--accent)]/10 active:bg-[var(--accent)]/20 transition-colors"
+              >
+                Study More Cards
+              </button>
+              <input
+                id="study-more-count"
+                type="number"
+                defaultValue={10}
+                min={1}
+                max={100}
+                className="w-16 py-3 rounded-xl bg-[var(--bg-card)] border border-[var(--border)] text-center text-sm font-bold text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)]"
+              />
+            </div>
           )}
 
           {/* Vocab list button */}
@@ -932,7 +947,7 @@ const App: React.FC = () => {
           onAnswer={handleAnswer}
           onUndoAnswer={handleUndoAnswer}
           onAbort={() => { setPendingChallenge(null); setView('HOME'); }}
-          onStudyMore={() => handleStartSession(true)}
+          onStudyMore={(count: number) => handleStartSession(count)}
           hasMoreCards={(() => {
             const now = Date.now();
             const currentNode = getCurrentNode(deck);

@@ -18,6 +18,7 @@ export interface QuestCard {
   failCount?: number;    // number of AGAIN ratings (for leech detection)
   isLeech?: boolean;     // flagged when failCount >= 5
   isSuspended?: boolean; // user can suspend leeches
+  priority?: 1 | 2 | 3;  // 1=practical (show first), 2=useful, 3=specialized
 }
 
 export interface SessionState {

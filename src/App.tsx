@@ -116,9 +116,12 @@ const buildDeck = (
 
   for (const node of MAIN_PATH) {
     const nodeCards = nodeMap.get(node.id) || [];
-    // Sort cards within each node by word count (shortest first)
-    // so beginners get simple sentences before complex ones
+    // Sort cards within each node: priority first (practical before specialized),
+    // then by word count (shortest first) within each priority tier
     nodeCards.sort((a: any, b: any) => {
+      const pa = a.priority ?? 2;
+      const pb = b.priority ?? 2;
+      if (pa !== pb) return pa - pb;
       const aWords = (a.target || '').split(/\s+/).length;
       const bWords = (b.target || '').split(/\s+/).length;
       return aWords - bWords || a.id - b.id; // tiebreak by id
@@ -143,6 +146,7 @@ const buildDeck = (
         failCount: (saved?.failCount as number) ?? 0,
         isLeech: (saved?.isLeech as boolean) ?? false,
         isSuspended: (saved?.isSuspended as boolean) ?? false,
+        priority: rawCard.priority ?? 2,
       });
     }
   }

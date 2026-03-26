@@ -40,9 +40,11 @@ export default defineConfig({
         ],
       },
       workbox: {
+        // Import our custom notification handler into the generated SW
+        importScripts: ['sw-notifications.js'],
         // Only precache the app shell — NOT the 9000+ audio files
         globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
-        globIgnores: ['quest-audio/**'],
+        globIgnores: ['quest-audio/**', 'sw-notifications.js'],
         maximumFileSizeToCacheInBytes: 8 * 1024 * 1024, // 8 MB — bundle includes multi-language deck/dictionary data
         // Runtime cache audio files on demand
         runtimeCaching: [

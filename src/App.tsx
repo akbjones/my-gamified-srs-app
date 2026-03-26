@@ -36,7 +36,14 @@ import { lookupWord as lookupHi } from './data/dictionary/hi';
 import { lookupWord as lookupTr } from './data/dictionary/tr';
 import { lookupWord as lookupRu } from './data/dictionary/ru';
 import VocabList from './components/VocabList';
-import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown } from 'lucide-react';
+import Onboarding from './components/Onboarding';
+import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff } from 'lucide-react';
+import {
+  loadNotificationPrefs, saveNotificationPrefs, requestNotificationPermission,
+  isNotificationSupported, onSessionComplete, initNotifications,
+  shouldShowNotificationPrompt, dismissPrompt, cancelScheduledNotifications,
+  type NotificationPrefs,
+} from './services/notificationService';
 
 const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
   spanish: lookupEs,
@@ -199,6 +206,9 @@ const App: React.FC = () => {
   const [showTools, setShowTools] = useState(false);
   const [showLangDropdown, setShowLangDropdown] = useState(false);
   const [showLangPicker, setShowLangPicker] = useState(() => !localStorage.getItem('quest_first_launch_done'));
+  const [showOnboarding, setShowOnboarding] = useState(() => !localStorage.getItem('onboarding_complete'));
+  const [notifPrefs, setNotifPrefs] = useState<NotificationPrefs>(() => loadNotificationPrefs());
+  const [showNotifPrompt, setShowNotifPrompt] = useState(false);
   const langDropdownRef = useRef<HTMLDivElement>(null);
   // Undo stack for going back to previous cards
   const [answerHistory, setAnswerHistory] = useState<Array<{
@@ -261,6 +271,44 @@ const App: React.FC = () => {
   useLayoutEffect(() => {
     document.documentElement.classList.toggle('dark', settings.theme === 'dark');
   }, [settings.theme]);
+
+  // ─── Notifications: init on startup + gentle prompt check ──
+  useEffect(() => {
+    if (!isNotificationSupported()) return;
+    const dueCount = deck.filter(c => c.mastery > 0 && c.dueDate && c.dueDate <= Date.now()).length;
+    initNotifications(dueCount, userStats.streak);
+    // Check if we should show the gentle prompt
+    if (shouldShowNotificationPrompt()) {
+      setShowNotifPrompt(true);
+    }
+  }, [deck.length]); // re-run once deck is loaded
+
+  const handleToggleNotifications = async (enable: boolean) => {
+    if (enable) {
+      const granted = await requestNotificationPermission();
+      if (!granted) return; // user denied — don't enable
+      const newPrefs = { ...notifPrefs, enabled: true };
+      setNotifPrefs(newPrefs);
+      saveNotificationPrefs(newPrefs);
+      const dueCount = deck.filter(c => c.mastery > 0 && c.dueDate && c.dueDate <= Date.now()).length;
+      await initNotifications(dueCount, userStats.streak);
+    } else {
+      const newPrefs = { ...notifPrefs, enabled: false };
+      setNotifPrefs(newPrefs);
+      saveNotificationPrefs(newPrefs);
+      await cancelScheduledNotifications();
+    }
+  };
+
+  const handleChangeReminderTime = (time: string) => {
+    const newPrefs = { ...notifPrefs, reminderTime: time };
+    setNotifPrefs(newPrefs);
+    saveNotificationPrefs(newPrefs);
+    if (newPrefs.enabled) {
+      const dueCount = deck.filter(c => c.mastery > 0 && c.dueDate && c.dueDate <= Date.now()).length;
+      initNotifications(dueCount, userStats.streak);
+    }
+  };
 
   const handleStartSession = (studyMore: boolean | number = false) => {
     const now = Date.now();
@@ -524,8 +572,16 @@ const App: React.FC = () => {
 
   return (
     <div className={`mx-auto min-h-screen ${view === 'STUDY' || view === 'PLACEMENT' || view === 'CHALLENGE' ? 'max-w-lg px-0 pt-0 pb-0' : 'max-w-md px-5 pt-[max(1.25rem,env(safe-area-inset-top))] pb-20'}`}>
+      {/* First-time onboarding carousel */}
+      {showOnboarding && (
+        <Onboarding onComplete={() => {
+          localStorage.setItem('onboarding_complete', 'true');
+          setShowOnboarding(false);
+        }} />
+      )}
+
       {/* First-time language selection overlay */}
-      {showLangPicker && (
+      {showLangPicker && !showOnboarding && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--bg-primary)]">
           <div className="w-full max-w-sm px-6 animate-slide-up">
             <div className="text-center mb-8">
@@ -732,6 +788,37 @@ const App: React.FC = () => {
             </p>
           </div>
 
+          {/* Gentle notification prompt (after 3rd session) */}
+          {showNotifPrompt && (
+            <div className="w-full mb-3 p-3 rounded-xl border border-[var(--accent)]/20 bg-[var(--accent)]/5 flex items-center gap-3">
+              <Bell size={18} className="text-[var(--accent)] shrink-0" />
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-semibold text-[var(--text-primary)]">Enable study reminders?</p>
+                <p className="text-[10px] text-[var(--text-muted)] mt-0.5">Get a daily nudge so you never miss a review.</p>
+              </div>
+              <div className="flex gap-1.5 shrink-0">
+                <button
+                  onClick={async () => {
+                    setShowNotifPrompt(false);
+                    await handleToggleNotifications(true);
+                  }}
+                  className="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-[var(--accent)] text-white"
+                >
+                  Sure
+                </button>
+                <button
+                  onClick={() => {
+                    setShowNotifPrompt(false);
+                    dismissPrompt();
+                  }}
+                  className="px-2.5 py-1 rounded-lg text-[10px] font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)]"
+                >
+                  Later
+                </button>
+              </div>
+            </div>
+          )}
+
           {/* Study button with counts on the right */}
           <button
             onClick={() => handleStartSession()}
@@ -928,6 +1015,45 @@ const App: React.FC = () => {
                 </div>
               </div>
 
+              {/* Notification reminders */}
+              {isNotificationSupported() && (
+                <div className="pt-3 border-t border-[var(--border-color)] space-y-3">
+                  <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">Reminders</div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-[var(--text-secondary)] flex items-center gap-1.5">
+                      {notifPrefs.enabled ? <Bell size={12} /> : <BellOff size={12} />}
+                      Daily reminder
+                    </span>
+                    <button
+                      onClick={() => handleToggleNotifications(!notifPrefs.enabled)}
+                      className={`w-10 h-6 rounded-full transition-all relative ${
+                        notifPrefs.enabled ? 'bg-[var(--accent)]' : 'bg-[var(--border-color)]'
+                      }`}
+                    >
+                      <div className={`absolute top-1 w-4 h-4 rounded-full bg-white shadow transition-all ${
+                        notifPrefs.enabled ? 'left-5' : 'left-1'
+                      }`} />
+                    </button>
+                  </div>
+                  {notifPrefs.enabled && (
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-[var(--text-secondary)]">Remind at</span>
+                      <input
+                        type="time"
+                        value={notifPrefs.reminderTime}
+                        onChange={(e) => handleChangeReminderTime(e.target.value)}
+                        className="text-[11px] px-2 py-1 rounded-lg border border-[var(--border-color)] bg-[var(--bg-inset)] text-[var(--text-secondary)] focus:outline-none focus:border-[var(--accent)]/40"
+                      />
+                    </div>
+                  )}
+                  {notifPrefs.enabled && Notification.permission === 'denied' && (
+                    <p className="text-[10px] text-amber-500">
+                      Notifications are blocked. Please enable them in your browser settings.
+                    </p>
+                  )}
+                </div>
+              )}
+
               <div className="pt-2 border-t border-[var(--border-color)] space-y-2">
                 {isPlacementComplete(lang) && (
                   <button
@@ -965,7 +1091,13 @@ const App: React.FC = () => {
           session={session}
           onAnswer={handleAnswer}
           onUndoAnswer={handleUndoAnswer}
-          onAbort={() => { setPendingChallenge(null); setView('HOME'); }}
+          onAbort={() => {
+            setPendingChallenge(null);
+            setView('HOME');
+            // Schedule notification after session ends
+            const dueCount = deck.filter(c => c.mastery > 0 && c.dueDate && c.dueDate <= Date.now()).length;
+            onSessionComplete(dueCount, userStats.streak);
+          }}
           onStudyMore={(count: number) => handleStartSession(count)}
           hasMoreCards={(() => {
             const now = Date.now();

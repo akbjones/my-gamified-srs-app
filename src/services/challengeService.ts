@@ -80,16 +80,17 @@ export function buildTiles(
 
 // ── Tile Card Selection ─────────────────────────────────────
 export function selectTileCandidates(queue: QuestCard[]): number[] {
-  const now = Date.now();
-  const threeDaysMs = 3 * 24 * 60 * 60 * 1000;
+  const fourteenDaysMs = 14 * 24 * 60 * 60 * 1000;
 
+  // Only cards approaching retention (14+ day interval) are eligible
+  // This makes tiles a milestone challenge, not every review
   const candidates = queue
     .map((card, idx) => ({ card, idx }))
     .filter(({ card }) => {
       const wordCount = card.target.split(/\s+/).length;
       return (
-        card.mastery >= 1 &&
-        (card.interval || 0) > threeDaysMs &&
+        card.mastery >= 2 &&              // must be graduated (not still learning)
+        (card.interval || 0) >= fourteenDaysMs && // approaching retention (21d)
         wordCount >= 5 &&
         wordCount <= 12
       );
@@ -97,7 +98,8 @@ export function selectTileCandidates(queue: QuestCard[]): number[] {
 
   if (candidates.length === 0) return [];
 
-  const tileCount = Math.min(4, candidates.length);
+  // Cap at 2 tiles per session (~10-15% of reviews), spread evenly
+  const tileCount = Math.min(2, candidates.length);
   const step = candidates.length / tileCount;
   return Array.from({ length: tileCount }, (_, i) =>
     candidates[Math.floor(i * step)].idx

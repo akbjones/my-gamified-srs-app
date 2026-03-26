@@ -154,6 +154,21 @@ const buildDeck = (
   return cards;
 };
 
+// Language-specific challenge names (fun & thematic)
+const CHALLENGE_NAMES: Record<Language, string> = {
+  spanish: 'Misión (Mission)',
+  italian: 'Avventura (Adventure)',
+  french: 'Quête (Quest)',
+  portuguese: 'Jornada (Journey)',
+  german: 'Abenteuer (Adventure)',
+  dutch: 'Ontdekking (Discovery)',
+  swedish: 'Äventyr (Adventure)',
+  welsh: 'Antur (Adventure)',
+  hindi: 'अभियान (Expedition)',
+  turkish: 'Keşif (Discovery)',
+  russian: 'Испытание (Trial)',
+};
+
 // Find the current frontier node (first incomplete unlocked node)
 const getCurrentNode = (deck: QuestCard[]) => {
   for (let i = 0; i < MAIN_PATH.length; i++) {
@@ -630,7 +645,7 @@ const App: React.FC = () => {
                   </div>
                 )}
                 <div className="text-sm font-extrabold text-[var(--text-primary)]">
-                  Experiment {Math.min(progressState.nextBossIndex + 1, TOTAL_BOSSES)} of {TOTAL_BOSSES}
+                  {CHALLENGE_NAMES[lang] || 'Experiment'} {Math.min(progressState.nextBossIndex + 1, TOTAL_BOSSES)} of {TOTAL_BOSSES}
                 </div>
               </div>
             </div>

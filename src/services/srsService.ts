@@ -49,7 +49,11 @@ export const burySiblings = (queue: QuestCard[]): QuestCard[] => {
 
     const isSiblingOf = (a: QuestCard, b: QuestCard | undefined) => {
       if (!b) return false;
-      return Math.abs(Number(a.id) - Number(b.id)) <= 3;
+      // Extract numeric part from IDs like "hi-0001", "es-0123", or plain "123"
+      const numA = parseInt(a.id.replace(/[^0-9]/g, ''), 10);
+      const numB = parseInt(b.id.replace(/[^0-9]/g, ''), 10);
+      if (isNaN(numA) || isNaN(numB)) return false;
+      return Math.abs(numA - numB) <= 3;
     };
 
     if (isSiblingOf(candidate, last1) || isSiblingOf(candidate, last2)) {
@@ -155,6 +159,8 @@ export const handleAnswerLogic = (
     updatedCard.step = 0;
     updatedCard.interval = 1 * MINUTE;
     updatedCard.dueDate = now + updatedCard.interval;
+    // SM-2: reduce ease on failure (min 1.3)
+    updatedCard.ease = Math.max(1.3, updatedCard.ease - 0.20);
     reinsertCard(newQueue, currentIndex, updatedCard, REINSERT_OFFSETS.AGAIN);
     saveProgress(updatedCard);
     currentIndex++;

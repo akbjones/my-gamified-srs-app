@@ -57,7 +57,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     description: 'Win your first experiment (boss battle)',
     icon: 'Cu',
     unlocked: false,
-    condition: (stats: UserStats) => stats.cardsLearned >= 50,
+    condition: (stats: UserStats) => (stats as any).bossesDefeated >= 1 || stats.cardsLearned >= 150,
   },
   {
     id: 'recall-90',

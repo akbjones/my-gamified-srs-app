@@ -1,0 +1,2908 @@
+{
+  "generatedAt": "2026-03-24T19:37:34.055Z",
+  "topicCoverage": {
+    "matrix": {
+      "spanish": {
+        "GREETING": 10,
+        "FOOD_DRINK": 43,
+        "DIRECTIONS": 31,
+        "SHOPPING": 13,
+        "FAMILY": 50,
+        "TIME_NUMBERS": 80,
+        "DAILY_ROUTINE": 51,
+        "WEATHER": 12,
+        "HEALTH": 8,
+        "DESCRIPTION": 51,
+        "INTRODUCTION": 9,
+        "OTHER": 77
+      },
+      "italian": {
+        "GREETING": 3,
+        "FOOD_DRINK": 31,
+        "DIRECTIONS": 17,
+        "SHOPPING": 11,
+        "FAMILY": 7,
+        "TIME_NUMBERS": 50,
+        "DAILY_ROUTINE": 26,
+        "WEATHER": 11,
+        "HEALTH": 6,
+        "DESCRIPTION": 14,
+        "INTRODUCTION": 2,
+        "OTHER": 140
+      },
+      "french": {
+        "GREETING": 6,
+        "FOOD_DRINK": 34,
+        "DIRECTIONS": 14,
+        "SHOPPING": 9,
+        "FAMILY": 16,
+        "TIME_NUMBERS": 31,
+        "DAILY_ROUTINE": 27,
+        "WEATHER": 4,
+        "HEALTH": 6,
+        "DESCRIPTION": 19,
+        "INTRODUCTION": 4,
+        "OTHER": 149
+      },
+      "portuguese": {
+        "GREETING": 0,
+        "FOOD_DRINK": 49,
+        "DIRECTIONS": 24,
+        "SHOPPING": 19,
+        "FAMILY": 7,
+        "TIME_NUMBERS": 99,
+        "DAILY_ROUTINE": 47,
+        "WEATHER": 11,
+        "HEALTH": 13,
+        "DESCRIPTION": 23,
+        "INTRODUCTION": 6,
+        "OTHER": 79
+      },
+      "german": {
+        "GREETING": 13,
+        "FOOD_DRINK": 44,
+        "DIRECTIONS": 29,
+        "SHOPPING": 10,
+        "FAMILY": 32,
+        "TIME_NUMBERS": 122,
+        "DAILY_ROUTINE": 33,
+        "WEATHER": 10,
+        "HEALTH": 6,
+        "DESCRIPTION": 47,
+        "INTRODUCTION": 14,
+        "OTHER": 35
+      },
+      "dutch": {
+        "GREETING": 16,
+        "FOOD_DRINK": 56,
+        "DIRECTIONS": 26,
+        "SHOPPING": 14,
+        "FAMILY": 32,
+        "TIME_NUMBERS": 85,
+        "DAILY_ROUTINE": 37,
+        "WEATHER": 17,
+        "HEALTH": 10,
+        "DESCRIPTION": 34,
+        "INTRODUCTION": 10,
+        "OTHER": 54
+      },
+      "swedish": {
+        "GREETING": 3,
+        "FOOD_DRINK": 63,
+        "DIRECTIONS": 26,
+        "SHOPPING": 20,
+        "FAMILY": 23,
+        "TIME_NUMBERS": 111,
+        "DAILY_ROUTINE": 42,
+        "WEATHER": 7,
+        "HEALTH": 10,
+        "DESCRIPTION": 47,
+        "INTRODUCTION": 11,
+        "OTHER": 43
+      },
+      "welsh": {
+        "GREETING": 4,
+        "FOOD_DRINK": 35,
+        "DIRECTIONS": 20,
+        "SHOPPING": 9,
+        "FAMILY": 10,
+        "TIME_NUMBERS": 57,
+        "DAILY_ROUTINE": 28,
+        "WEATHER": 8,
+        "HEALTH": 10,
+        "DESCRIPTION": 14,
+        "INTRODUCTION": 3,
+        "OTHER": 56
+      },
+      "hindi": {
+        "GREETING": 8,
+        "FOOD_DRINK": 16,
+        "DIRECTIONS": 10,
+        "SHOPPING": 3,
+        "FAMILY": 27,
+        "TIME_NUMBERS": 30,
+        "DAILY_ROUTINE": 10,
+        "WEATHER": 5,
+        "HEALTH": 0,
+        "DESCRIPTION": 10,
+        "INTRODUCTION": 3,
+        "OTHER": 28
+      },
+      "turkish": {
+        "GREETING": 1,
+        "FOOD_DRINK": 18,
+        "DIRECTIONS": 5,
+        "SHOPPING": 10,
+        "FAMILY": 34,
+        "TIME_NUMBERS": 43,
+        "DAILY_ROUTINE": 29,
+        "WEATHER": 5,
+        "HEALTH": 5,
+        "DESCRIPTION": 16,
+        "INTRODUCTION": 1,
+        "OTHER": 33
+      },
+      "russian": {
+        "GREETING": 3,
+        "FOOD_DRINK": 16,
+        "DIRECTIONS": 9,
+        "SHOPPING": 5,
+        "FAMILY": 18,
+        "TIME_NUMBERS": 60,
+        "DAILY_ROUTINE": 47,
+        "WEATHER": 6,
+        "HEALTH": 12,
+        "DESCRIPTION": 7,
+        "INTRODUCTION": 13,
+        "OTHER": 25
+      }
+    },
+    "flags": [
+      {
+        "topic": "GREETING",
+        "language": "portuguese",
+        "count": 0,
+        "maxInOthers": 16
+      },
+      {
+        "topic": "HEALTH",
+        "language": "hindi",
+        "count": 0,
+        "maxInOthers": 13
+      }
+    ]
+  },
+  "cardCountBalance": {
+    "table": {
+      "node-01": {
+        "spanish": 319,
+        "italian": 286,
+        "french": 285,
+        "portuguese": 309,
+        "german": 251,
+        "dutch": 275,
+        "swedish": 269,
+        "welsh": 191,
+        "hindi": 112,
+        "turkish": 140,
+        "russian": 152
+      },
+      "node-02": {
+        "spanish": 115,
+        "italian": 114,
+        "french": 108,
+        "portuguese": 113,
+        "german": 147,
+        "dutch": 183,
+        "swedish": 117,
+        "welsh": 94,
+        "hindi": 89,
+        "turkish": 100,
+        "russian": 80
+      },
+      "node-03": {
+        "spanish": 129,
+        "italian": 109,
+        "french": 111,
+        "portuguese": 97,
+        "german": 153,
+        "dutch": 141,
+        "swedish": 128,
+        "welsh": 100,
+        "hindi": 80,
+        "turkish": 76,
+        "russian": 127
+      },
+      "node-04": {
+        "spanish": 105,
+        "italian": 108,
+        "french": 155,
+        "portuguese": 150,
+        "german": 144,
+        "dutch": 153,
+        "swedish": 139,
+        "welsh": 151,
+        "hindi": 125,
+        "turkish": 102,
+        "russian": 87
+      },
+      "node-05": {
+        "spanish": 108,
+        "italian": 147,
+        "french": 79,
+        "portuguese": 98,
+        "german": 105,
+        "dutch": 110,
+        "swedish": 127,
+        "welsh": 124,
+        "hindi": 98,
+        "turkish": 95,
+        "russian": 74
+      },
+      "node-06": {
+        "spanish": 90,
+        "italian": 73,
+        "french": 83,
+        "portuguese": 69,
+        "german": 103,
+        "dutch": 85,
+        "swedish": 84,
+        "welsh": 127,
+        "hindi": 73,
+        "turkish": 83,
+        "russian": 91
+      },
+      "node-07": {
+        "spanish": 148,
+        "italian": 122,
+        "french": 174,
+        "portuguese": 136,
+        "german": 106,
+        "dutch": 100,
+        "swedish": 124,
+        "welsh": 114,
+        "hindi": 77,
+        "turkish": 126,
+        "russian": 79
+      },
+      "node-08": {
+        "spanish": 156,
+        "italian": 164,
+        "french": 155,
+        "portuguese": 170,
+        "german": 171,
+        "dutch": 169,
+        "swedish": 132,
+        "welsh": 89,
+        "hindi": 105,
+        "turkish": 100,
+        "russian": 79
+      },
+      "node-09": {
+        "spanish": 137,
+        "italian": 201,
+        "french": 172,
+        "portuguese": 154,
+        "german": 192,
+        "dutch": 192,
+        "swedish": 158,
+        "welsh": 119,
+        "hindi": 123,
+        "turkish": 139,
+        "russian": 107
+      },
+      "node-10": {
+        "spanish": 142,
+        "italian": 130,
+        "french": 138,
+        "portuguese": 145,
+        "german": 165,
+        "dutch": 122,
+        "swedish": 138,
+        "welsh": 129,
+        "hindi": 121,
+        "turkish": 127,
+        "russian": 77
+      },
+      "node-11": {
+        "spanish": 117,
+        "italian": 111,
+        "french": 96,
+        "portuguese": 129,
+        "german": 91,
+        "dutch": 101,
+        "swedish": 137,
+        "welsh": 100,
+        "hindi": 126,
+        "turkish": 63,
+        "russian": 88
+      },
+      "node-12": {
+        "spanish": 106,
+        "italian": 73,
+        "french": 87,
+        "portuguese": 86,
+        "german": 82,
+        "dutch": 103,
+        "swedish": 91,
+        "welsh": 103,
+        "hindi": 59,
+        "turkish": 65,
+        "russian": 87
+      },
+      "node-13": {
+        "spanish": 93,
+        "italian": 112,
+        "french": 72,
+        "portuguese": 92,
+        "german": 101,
+        "dutch": 98,
+        "swedish": 122,
+        "welsh": 169,
+        "hindi": 67,
+        "turkish": 110,
+        "russian": 117
+      },
+      "node-14": {
+        "spanish": 130,
+        "italian": 128,
+        "french": 139,
+        "portuguese": 119,
+        "german": 137,
+        "dutch": 128,
+        "swedish": 130,
+        "welsh": 99,
+        "hindi": 99,
+        "turkish": 123,
+        "russian": 130
+      },
+      "node-15": {
+        "spanish": 191,
+        "italian": 206,
+        "french": 227,
+        "portuguese": 193,
+        "german": 192,
+        "dutch": 179,
+        "swedish": 156,
+        "welsh": 152,
+        "hindi": 167,
+        "turkish": 232,
+        "russian": 193
+      },
+      "node-16": {
+        "spanish": 138,
+        "italian": 109,
+        "french": 116,
+        "portuguese": 136,
+        "german": 146,
+        "dutch": 140,
+        "swedish": 149,
+        "welsh": 121,
+        "hindi": 159,
+        "turkish": 92,
+        "russian": 127
+      },
+      "node-17": {
+        "spanish": 96,
+        "italian": 119,
+        "french": 118,
+        "portuguese": 108,
+        "german": 108,
+        "dutch": 81,
+        "swedish": 176,
+        "welsh": 82,
+        "hindi": 74,
+        "turkish": 83,
+        "russian": 79
+      },
+      "node-18": {
+        "spanish": 126,
+        "italian": 118,
+        "french": 99,
+        "portuguese": 117,
+        "german": 116,
+        "dutch": 105,
+        "swedish": 148,
+        "welsh": 76,
+        "hindi": 67,
+        "turkish": 76,
+        "russian": 136
+      },
+      "node-19": {
+        "spanish": 118,
+        "italian": 139,
+        "french": 133,
+        "portuguese": 119,
+        "german": 113,
+        "dutch": 129,
+        "swedish": 90,
+        "welsh": 80,
+        "hindi": 153,
+        "turkish": 93,
+        "russian": 136
+      },
+      "node-20": {
+        "spanish": 105,
+        "italian": 119,
+        "french": 103,
+        "portuguese": 92,
+        "german": 96,
+        "dutch": 107,
+        "swedish": 135,
+        "welsh": 73,
+        "hindi": 77,
+        "turkish": 78,
+        "russian": 100
+      },
+      "node-21": {
+        "spanish": 128,
+        "italian": 122,
+        "french": 103,
+        "portuguese": 124,
+        "german": 113,
+        "dutch": 91,
+        "swedish": 105,
+        "welsh": 92,
+        "hindi": 88,
+        "turkish": 97,
+        "russian": 104
+      },
+      "node-22": {
+        "spanish": 80,
+        "italian": 84,
+        "french": 89,
+        "portuguese": 98,
+        "german": 84,
+        "dutch": 97,
+        "swedish": 84,
+        "welsh": 94,
+        "hindi": 91,
+        "turkish": 94,
+        "russian": 108
+      },
+      "node-23": {
+        "spanish": 101,
+        "italian": 97,
+        "french": 86,
+        "portuguese": 89,
+        "german": 93,
+        "dutch": 104,
+        "swedish": 94,
+        "welsh": 81,
+        "hindi": 75,
+        "turkish": 77,
+        "russian": 86
+      },
+      "node-24": {
+        "spanish": 84,
+        "italian": 92,
+        "french": 83,
+        "portuguese": 91,
+        "german": 72,
+        "dutch": 71,
+        "swedish": 97,
+        "welsh": 65,
+        "hindi": 96,
+        "turkish": 84,
+        "russian": 82
+      },
+      "node-25": {
+        "spanish": 119,
+        "italian": 107,
+        "french": 106,
+        "portuguese": 92,
+        "german": 110,
+        "dutch": 85,
+        "swedish": 78,
+        "welsh": 108,
+        "hindi": 84,
+        "turkish": 60,
+        "russian": 106
+      },
+      "node-26": {
+        "spanish": 95,
+        "italian": 99,
+        "french": 93,
+        "portuguese": 91,
+        "german": 85,
+        "dutch": 100,
+        "swedish": 87,
+        "welsh": 82,
+        "hindi": 59,
+        "turkish": 60,
+        "russian": 107
+      },
+      "node-27": {
+        "spanish": 81,
+        "italian": 86,
+        "french": 89,
+        "portuguese": 70,
+        "german": 79,
+        "dutch": 68,
+        "swedish": 78,
+        "welsh": 104,
+        "hindi": 69,
+        "turkish": 62,
+        "russian": 91
+      },
+      "node-28": {
+        "spanish": 86,
+        "italian": 76,
+        "french": 73,
+        "portuguese": 79,
+        "german": 91,
+        "dutch": 95,
+        "swedish": 64,
+        "welsh": 64,
+        "hindi": 64,
+        "turkish": 68,
+        "russian": 75
+      },
+      "node-29": {
+        "spanish": 80,
+        "italian": 101,
+        "french": 88,
+        "portuguese": 90,
+        "german": 81,
+        "dutch": 112,
+        "swedish": 80,
+        "welsh": 61,
+        "hindi": 78,
+        "turkish": 81,
+        "russian": 93
+      },
+      "node-30": {
+        "spanish": 90,
+        "italian": 92,
+        "french": 89,
+        "portuguese": 106,
+        "german": 78,
+        "dutch": 76,
+        "swedish": 73,
+        "welsh": 80,
+        "hindi": 68,
+        "turkish": 68,
+        "russian": 68
+      },
+      "node-31": {
+        "spanish": 87,
+        "italian": 70,
+        "french": 92,
+        "portuguese": 70,
+        "german": 75,
+        "dutch": 66,
+        "swedish": 71,
+        "welsh": 82,
+        "hindi": 48,
+        "turkish": 68,
+        "russian": 76
+      },
+      "node-32": {
+        "spanish": 70,
+        "italian": 67,
+        "french": 57,
+        "portuguese": 72,
+        "german": 73,
+        "dutch": 77,
+        "swedish": 65,
+        "welsh": 94,
+        "hindi": 72,
+        "turkish": 66,
+        "russian": 86
+      },
+      "node-33": {
+        "spanish": 66,
+        "italian": 69,
+        "french": 101,
+        "portuguese": 96,
+        "german": 73,
+        "dutch": 90,
+        "swedish": 95,
+        "welsh": 78,
+        "hindi": 72,
+        "turkish": 64,
+        "russian": 52
+      },
+      "node-34": {
+        "spanish": 67,
+        "italian": 50,
+        "french": 78,
+        "portuguese": 69,
+        "german": 70,
+        "dutch": 62,
+        "swedish": 71,
+        "welsh": 57,
+        "hindi": 74,
+        "turkish": 32,
+        "russian": 50
+      },
+      "node-35": {
+        "spanish": 32,
+        "italian": 45,
+        "french": 50,
+        "portuguese": 54,
+        "german": 37,
+        "dutch": 38,
+        "swedish": 39,
+        "welsh": 66,
+        "hindi": 77,
+        "turkish": 28,
+        "russian": 30
+      }
+    },
+    "flags": [
+      {
+        "node": "node-01",
+        "range": 207,
+        "min": 112,
+        "minLang": "hindi",
+        "max": 319,
+        "maxLang": "spanish"
+      },
+      {
+        "node": "node-02",
+        "range": 103,
+        "min": 80,
+        "minLang": "russian",
+        "max": 183,
+        "maxLang": "dutch"
+      },
+      {
+        "node": "node-13",
+        "range": 102,
+        "min": 67,
+        "minLang": "hindi",
+        "max": 169,
+        "maxLang": "welsh"
+      },
+      {
+        "node": "node-17",
+        "range": 102,
+        "min": 74,
+        "minLang": "hindi",
+        "max": 176,
+        "maxLang": "swedish"
+      }
+    ]
+  },
+  "vocabProgression": {
+    "results": {
+      "spanish": {
+        "node-01": {
+          "totalWords": 2045,
+          "basicWords": 1567,
+          "basicPct": 76.6
+        },
+        "node-02": {
+          "totalWords": 734,
+          "basicWords": 560,
+          "basicPct": 76.3
+        },
+        "node-03": {
+          "totalWords": 809,
+          "basicWords": 593,
+          "basicPct": 73.3
+        },
+        "node-04": {
+          "totalWords": 728,
+          "basicWords": 548,
+          "basicPct": 75.3
+        },
+        "node-05": {
+          "totalWords": 687,
+          "basicWords": 481,
+          "basicPct": 70
+        },
+        "node-06": {
+          "totalWords": 563,
+          "basicWords": 397,
+          "basicPct": 70.5
+        },
+        "node-07": {
+          "totalWords": 905,
+          "basicWords": 635,
+          "basicPct": 70.2
+        },
+        "node-08": {
+          "totalWords": 1059,
+          "basicWords": 757,
+          "basicPct": 71.5
+        },
+        "node-09": {
+          "totalWords": 1023,
+          "basicWords": 748,
+          "basicPct": 73.1
+        },
+        "node-10": {
+          "totalWords": 1152,
+          "basicWords": 834,
+          "basicPct": 72.4
+        },
+        "node-11": {
+          "totalWords": 1019,
+          "basicWords": 759,
+          "basicPct": 74.5
+        },
+        "node-12": {
+          "totalWords": 882,
+          "basicWords": 648,
+          "basicPct": 73.5
+        },
+        "node-13": {
+          "totalWords": 684,
+          "basicWords": 482,
+          "basicPct": 70.5
+        },
+        "node-14": {
+          "totalWords": 1002,
+          "basicWords": 699,
+          "basicPct": 69.8
+        },
+        "node-15": {
+          "totalWords": 1541,
+          "basicWords": 1047,
+          "basicPct": 67.9
+        },
+        "node-16": {
+          "totalWords": 1045,
+          "basicWords": 714,
+          "basicPct": 68.3
+        },
+        "node-17": {
+          "totalWords": 769,
+          "basicWords": 546,
+          "basicPct": 71
+        },
+        "node-18": {
+          "totalWords": 1070,
+          "basicWords": 743,
+          "basicPct": 69.4
+        },
+        "node-19": {
+          "totalWords": 1036,
+          "basicWords": 735,
+          "basicPct": 70.9
+        },
+        "node-20": {
+          "totalWords": 880,
+          "basicWords": 653,
+          "basicPct": 74.2
+        },
+        "node-21": {
+          "totalWords": 1118,
+          "basicWords": 802,
+          "basicPct": 71.7
+        },
+        "node-22": {
+          "totalWords": 737,
+          "basicWords": 545,
+          "basicPct": 73.9
+        },
+        "node-23": {
+          "totalWords": 949,
+          "basicWords": 703,
+          "basicPct": 74.1
+        },
+        "node-24": {
+          "totalWords": 744,
+          "basicWords": 518,
+          "basicPct": 69.6
+        },
+        "node-25": {
+          "totalWords": 1078,
+          "basicWords": 745,
+          "basicPct": 69.1
+        },
+        "node-26": {
+          "totalWords": 951,
+          "basicWords": 656,
+          "basicPct": 69
+        },
+        "node-27": {
+          "totalWords": 821,
+          "basicWords": 585,
+          "basicPct": 71.3
+        },
+        "node-28": {
+          "totalWords": 853,
+          "basicWords": 557,
+          "basicPct": 65.3
+        },
+        "node-29": {
+          "totalWords": 846,
+          "basicWords": 561,
+          "basicPct": 66.3
+        },
+        "node-30": {
+          "totalWords": 1021,
+          "basicWords": 681,
+          "basicPct": 66.7
+        },
+        "node-31": {
+          "totalWords": 938,
+          "basicWords": 597,
+          "basicPct": 63.6
+        },
+        "node-32": {
+          "totalWords": 737,
+          "basicWords": 461,
+          "basicPct": 62.6
+        },
+        "node-33": {
+          "totalWords": 681,
+          "basicWords": 453,
+          "basicPct": 66.5
+        },
+        "node-34": {
+          "totalWords": 711,
+          "basicWords": 467,
+          "basicPct": 65.7
+        },
+        "node-35": {
+          "totalWords": 362,
+          "basicWords": 266,
+          "basicPct": 73.5
+        }
+      },
+      "italian": {
+        "node-01": {
+          "totalWords": 1348,
+          "basicWords": 1022,
+          "basicPct": 75.8
+        },
+        "node-02": {
+          "totalWords": 576,
+          "basicWords": 435,
+          "basicPct": 75.5
+        },
+        "node-03": {
+          "totalWords": 568,
+          "basicWords": 414,
+          "basicPct": 72.9
+        },
+        "node-04": {
+          "totalWords": 567,
+          "basicWords": 411,
+          "basicPct": 72.5
+        },
+        "node-05": {
+          "totalWords": 740,
+          "basicWords": 451,
+          "basicPct": 60.9
+        },
+        "node-06": {
+          "totalWords": 388,
+          "basicWords": 261,
+          "basicPct": 67.3
+        },
+        "node-07": {
+          "totalWords": 619,
+          "basicWords": 440,
+          "basicPct": 71.1
+        },
+        "node-08": {
+          "totalWords": 782,
+          "basicWords": 560,
+          "basicPct": 71.6
+        },
+        "node-09": {
+          "totalWords": 1127,
+          "basicWords": 818,
+          "basicPct": 72.6
+        },
+        "node-10": {
+          "totalWords": 791,
+          "basicWords": 600,
+          "basicPct": 75.9
+        },
+        "node-11": {
+          "totalWords": 759,
+          "basicWords": 553,
+          "basicPct": 72.9
+        },
+        "node-12": {
+          "totalWords": 520,
+          "basicWords": 394,
+          "basicPct": 75.8
+        },
+        "node-13": {
+          "totalWords": 652,
+          "basicWords": 473,
+          "basicPct": 72.5
+        },
+        "node-14": {
+          "totalWords": 829,
+          "basicWords": 593,
+          "basicPct": 71.5
+        },
+        "node-15": {
+          "totalWords": 1329,
+          "basicWords": 909,
+          "basicPct": 68.4
+        },
+        "node-16": {
+          "totalWords": 825,
+          "basicWords": 537,
+          "basicPct": 65.1
+        },
+        "node-17": {
+          "totalWords": 920,
+          "basicWords": 636,
+          "basicPct": 69.1
+        },
+        "node-18": {
+          "totalWords": 1001,
+          "basicWords": 713,
+          "basicPct": 71.2
+        },
+        "node-19": {
+          "totalWords": 1228,
+          "basicWords": 860,
+          "basicPct": 70
+        },
+        "node-20": {
+          "totalWords": 1054,
+          "basicWords": 751,
+          "basicPct": 71.3
+        },
+        "node-21": {
+          "totalWords": 1148,
+          "basicWords": 827,
+          "basicPct": 72
+        },
+        "node-22": {
+          "totalWords": 756,
+          "basicWords": 528,
+          "basicPct": 69.8
+        },
+        "node-23": {
+          "totalWords": 878,
+          "basicWords": 613,
+          "basicPct": 69.8
+        },
+        "node-24": {
+          "totalWords": 789,
+          "basicWords": 515,
+          "basicPct": 65.3
+        },
+        "node-25": {
+          "totalWords": 991,
+          "basicWords": 686,
+          "basicPct": 69.2
+        },
+        "node-26": {
+          "totalWords": 1030,
+          "basicWords": 734,
+          "basicPct": 71.3
+        },
+        "node-27": {
+          "totalWords": 813,
+          "basicWords": 607,
+          "basicPct": 74.7
+        },
+        "node-28": {
+          "totalWords": 851,
+          "basicWords": 558,
+          "basicPct": 65.6
+        },
+        "node-29": {
+          "totalWords": 1099,
+          "basicWords": 708,
+          "basicPct": 64.4
+        },
+        "node-30": {
+          "totalWords": 1054,
+          "basicWords": 720,
+          "basicPct": 68.3
+        },
+        "node-31": {
+          "totalWords": 685,
+          "basicWords": 455,
+          "basicPct": 66.4
+        },
+        "node-32": {
+          "totalWords": 604,
+          "basicWords": 409,
+          "basicPct": 67.7
+        },
+        "node-33": {
+          "totalWords": 620,
+          "basicWords": 429,
+          "basicPct": 69.2
+        },
+        "node-34": {
+          "totalWords": 480,
+          "basicWords": 341,
+          "basicPct": 71
+        },
+        "node-35": {
+          "totalWords": 383,
+          "basicWords": 274,
+          "basicPct": 71.5
+        }
+      },
+      "french": {
+        "node-01": {
+          "totalWords": 1277,
+          "basicWords": 985,
+          "basicPct": 77.1
+        },
+        "node-02": {
+          "totalWords": 486,
+          "basicWords": 404,
+          "basicPct": 83.1
+        },
+        "node-03": {
+          "totalWords": 483,
+          "basicWords": 402,
+          "basicPct": 83.2
+        },
+        "node-04": {
+          "totalWords": 742,
+          "basicWords": 603,
+          "basicPct": 81.3
+        },
+        "node-05": {
+          "totalWords": 359,
+          "basicWords": 243,
+          "basicPct": 67.7
+        },
+        "node-06": {
+          "totalWords": 442,
+          "basicWords": 324,
+          "basicPct": 73.3
+        },
+        "node-07": {
+          "totalWords": 872,
+          "basicWords": 604,
+          "basicPct": 69.3
+        },
+        "node-08": {
+          "totalWords": 923,
+          "basicWords": 658,
+          "basicPct": 71.3
+        },
+        "node-09": {
+          "totalWords": 1117,
+          "basicWords": 819,
+          "basicPct": 73.3
+        },
+        "node-10": {
+          "totalWords": 1008,
+          "basicWords": 793,
+          "basicPct": 78.7
+        },
+        "node-11": {
+          "totalWords": 742,
+          "basicWords": 563,
+          "basicPct": 75.9
+        },
+        "node-12": {
+          "totalWords": 655,
+          "basicWords": 505,
+          "basicPct": 77.1
+        },
+        "node-13": {
+          "totalWords": 439,
+          "basicWords": 341,
+          "basicPct": 77.7
+        },
+        "node-14": {
+          "totalWords": 959,
+          "basicWords": 739,
+          "basicPct": 77.1
+        },
+        "node-15": {
+          "totalWords": 1477,
+          "basicWords": 1093,
+          "basicPct": 74
+        },
+        "node-16": {
+          "totalWords": 857,
+          "basicWords": 557,
+          "basicPct": 65
+        },
+        "node-17": {
+          "totalWords": 902,
+          "basicWords": 620,
+          "basicPct": 68.7
+        },
+        "node-18": {
+          "totalWords": 836,
+          "basicWords": 628,
+          "basicPct": 75.1
+        },
+        "node-19": {
+          "totalWords": 1141,
+          "basicWords": 793,
+          "basicPct": 69.5
+        },
+        "node-20": {
+          "totalWords": 910,
+          "basicWords": 623,
+          "basicPct": 68.5
+        },
+        "node-21": {
+          "totalWords": 891,
+          "basicWords": 654,
+          "basicPct": 73.4
+        },
+        "node-22": {
+          "totalWords": 753,
+          "basicWords": 545,
+          "basicPct": 72.4
+        },
+        "node-23": {
+          "totalWords": 776,
+          "basicWords": 553,
+          "basicPct": 71.3
+        },
+        "node-24": {
+          "totalWords": 616,
+          "basicWords": 418,
+          "basicPct": 67.9
+        },
+        "node-25": {
+          "totalWords": 798,
+          "basicWords": 539,
+          "basicPct": 67.5
+        },
+        "node-26": {
+          "totalWords": 668,
+          "basicWords": 470,
+          "basicPct": 70.4
+        },
+        "node-27": {
+          "totalWords": 700,
+          "basicWords": 491,
+          "basicPct": 70.1
+        },
+        "node-28": {
+          "totalWords": 530,
+          "basicWords": 320,
+          "basicPct": 60.4
+        },
+        "node-29": {
+          "totalWords": 638,
+          "basicWords": 415,
+          "basicPct": 65
+        },
+        "node-30": {
+          "totalWords": 568,
+          "basicWords": 388,
+          "basicPct": 68.3
+        },
+        "node-31": {
+          "totalWords": 709,
+          "basicWords": 481,
+          "basicPct": 67.8
+        },
+        "node-32": {
+          "totalWords": 474,
+          "basicWords": 289,
+          "basicPct": 61
+        },
+        "node-33": {
+          "totalWords": 750,
+          "basicWords": 433,
+          "basicPct": 57.7
+        },
+        "node-34": {
+          "totalWords": 503,
+          "basicWords": 332,
+          "basicPct": 66
+        },
+        "node-35": {
+          "totalWords": 348,
+          "basicWords": 210,
+          "basicPct": 60.3
+        }
+      },
+      "portuguese": {
+        "node-01": {
+          "totalWords": 1985,
+          "basicWords": 1454,
+          "basicPct": 73.2
+        },
+        "node-02": {
+          "totalWords": 612,
+          "basicWords": 428,
+          "basicPct": 69.9
+        },
+        "node-03": {
+          "totalWords": 564,
+          "basicWords": 388,
+          "basicPct": 68.8
+        },
+        "node-04": {
+          "totalWords": 833,
+          "basicWords": 631,
+          "basicPct": 75.8
+        },
+        "node-05": {
+          "totalWords": 579,
+          "basicWords": 392,
+          "basicPct": 67.7
+        },
+        "node-06": {
+          "totalWords": 395,
+          "basicWords": 284,
+          "basicPct": 71.9
+        },
+        "node-07": {
+          "totalWords": 788,
+          "basicWords": 514,
+          "basicPct": 65.2
+        },
+        "node-08": {
+          "totalWords": 979,
+          "basicWords": 697,
+          "basicPct": 71.2
+        },
+        "node-09": {
+          "totalWords": 1036,
+          "basicWords": 755,
+          "basicPct": 72.9
+        },
+        "node-10": {
+          "totalWords": 1064,
+          "basicWords": 818,
+          "basicPct": 76.9
+        },
+        "node-11": {
+          "totalWords": 1075,
+          "basicWords": 849,
+          "basicPct": 79
+        },
+        "node-12": {
+          "totalWords": 675,
+          "basicWords": 513,
+          "basicPct": 76
+        },
+        "node-13": {
+          "totalWords": 587,
+          "basicWords": 425,
+          "basicPct": 72.4
+        },
+        "node-14": {
+          "totalWords": 789,
+          "basicWords": 574,
+          "basicPct": 72.8
+        },
+        "node-15": {
+          "totalWords": 1277,
+          "basicWords": 885,
+          "basicPct": 69.3
+        },
+        "node-16": {
+          "totalWords": 933,
+          "basicWords": 619,
+          "basicPct": 66.3
+        },
+        "node-17": {
+          "totalWords": 799,
+          "basicWords": 603,
+          "basicPct": 75.5
+        },
+        "node-18": {
+          "totalWords": 945,
+          "basicWords": 693,
+          "basicPct": 73.3
+        },
+        "node-19": {
+          "totalWords": 960,
+          "basicWords": 665,
+          "basicPct": 69.3
+        },
+        "node-20": {
+          "totalWords": 717,
+          "basicWords": 514,
+          "basicPct": 71.7
+        },
+        "node-21": {
+          "totalWords": 1042,
+          "basicWords": 736,
+          "basicPct": 70.6
+        },
+        "node-22": {
+          "totalWords": 912,
+          "basicWords": 635,
+          "basicPct": 69.6
+        },
+        "node-23": {
+          "totalWords": 786,
+          "basicWords": 540,
+          "basicPct": 68.7
+        },
+        "node-24": {
+          "totalWords": 676,
+          "basicWords": 444,
+          "basicPct": 65.7
+        },
+        "node-25": {
+          "totalWords": 703,
+          "basicWords": 498,
+          "basicPct": 70.8
+        },
+        "node-26": {
+          "totalWords": 714,
+          "basicWords": 533,
+          "basicPct": 74.6
+        },
+        "node-27": {
+          "totalWords": 561,
+          "basicWords": 410,
+          "basicPct": 73.1
+        },
+        "node-28": {
+          "totalWords": 566,
+          "basicWords": 381,
+          "basicPct": 67.3
+        },
+        "node-29": {
+          "totalWords": 710,
+          "basicWords": 438,
+          "basicPct": 61.7
+        },
+        "node-30": {
+          "totalWords": 782,
+          "basicWords": 530,
+          "basicPct": 67.8
+        },
+        "node-31": {
+          "totalWords": 631,
+          "basicWords": 406,
+          "basicPct": 64.3
+        },
+        "node-32": {
+          "totalWords": 627,
+          "basicWords": 371,
+          "basicPct": 59.2
+        },
+        "node-33": {
+          "totalWords": 813,
+          "basicWords": 411,
+          "basicPct": 50.6
+        },
+        "node-34": {
+          "totalWords": 573,
+          "basicWords": 318,
+          "basicPct": 55.5
+        },
+        "node-35": {
+          "totalWords": 494,
+          "basicWords": 272,
+          "basicPct": 55.1
+        }
+      },
+      "german": {
+        "node-01": {
+          "totalWords": 2039,
+          "basicWords": 1490,
+          "basicPct": 73.1
+        },
+        "node-02": {
+          "totalWords": 1180,
+          "basicWords": 791,
+          "basicPct": 67
+        },
+        "node-03": {
+          "totalWords": 1183,
+          "basicWords": 765,
+          "basicPct": 64.7
+        },
+        "node-04": {
+          "totalWords": 1108,
+          "basicWords": 734,
+          "basicPct": 66.2
+        },
+        "node-05": {
+          "totalWords": 823,
+          "basicWords": 550,
+          "basicPct": 66.8
+        },
+        "node-06": {
+          "totalWords": 820,
+          "basicWords": 571,
+          "basicPct": 69.6
+        },
+        "node-07": {
+          "totalWords": 861,
+          "basicWords": 640,
+          "basicPct": 74.3
+        },
+        "node-08": {
+          "totalWords": 1280,
+          "basicWords": 867,
+          "basicPct": 67.7
+        },
+        "node-09": {
+          "totalWords": 1588,
+          "basicWords": 1050,
+          "basicPct": 66.1
+        },
+        "node-10": {
+          "totalWords": 1388,
+          "basicWords": 918,
+          "basicPct": 66.1
+        },
+        "node-11": {
+          "totalWords": 819,
+          "basicWords": 576,
+          "basicPct": 70.3
+        },
+        "node-12": {
+          "totalWords": 730,
+          "basicWords": 480,
+          "basicPct": 65.8
+        },
+        "node-13": {
+          "totalWords": 854,
+          "basicWords": 606,
+          "basicPct": 71
+        },
+        "node-14": {
+          "totalWords": 1135,
+          "basicWords": 790,
+          "basicPct": 69.6
+        },
+        "node-15": {
+          "totalWords": 1570,
+          "basicWords": 1022,
+          "basicPct": 65.1
+        },
+        "node-16": {
+          "totalWords": 1171,
+          "basicWords": 787,
+          "basicPct": 67.2
+        },
+        "node-17": {
+          "totalWords": 975,
+          "basicWords": 696,
+          "basicPct": 71.4
+        },
+        "node-18": {
+          "totalWords": 989,
+          "basicWords": 694,
+          "basicPct": 70.2
+        },
+        "node-19": {
+          "totalWords": 956,
+          "basicWords": 617,
+          "basicPct": 64.5
+        },
+        "node-20": {
+          "totalWords": 900,
+          "basicWords": 589,
+          "basicPct": 65.4
+        },
+        "node-21": {
+          "totalWords": 1085,
+          "basicWords": 695,
+          "basicPct": 64.1
+        },
+        "node-22": {
+          "totalWords": 844,
+          "basicWords": 566,
+          "basicPct": 67.1
+        },
+        "node-23": {
+          "totalWords": 901,
+          "basicWords": 610,
+          "basicPct": 67.7
+        },
+        "node-24": {
+          "totalWords": 730,
+          "basicWords": 506,
+          "basicPct": 69.3
+        },
+        "node-25": {
+          "totalWords": 1072,
+          "basicWords": 690,
+          "basicPct": 64.4
+        },
+        "node-26": {
+          "totalWords": 861,
+          "basicWords": 554,
+          "basicPct": 64.3
+        },
+        "node-27": {
+          "totalWords": 795,
+          "basicWords": 509,
+          "basicPct": 64
+        },
+        "node-28": {
+          "totalWords": 932,
+          "basicWords": 597,
+          "basicPct": 64.1
+        },
+        "node-29": {
+          "totalWords": 816,
+          "basicWords": 543,
+          "basicPct": 66.5
+        },
+        "node-30": {
+          "totalWords": 826,
+          "basicWords": 570,
+          "basicPct": 69
+        },
+        "node-31": {
+          "totalWords": 787,
+          "basicWords": 491,
+          "basicPct": 62.4
+        },
+        "node-32": {
+          "totalWords": 740,
+          "basicWords": 512,
+          "basicPct": 69.2
+        },
+        "node-33": {
+          "totalWords": 738,
+          "basicWords": 490,
+          "basicPct": 66.4
+        },
+        "node-34": {
+          "totalWords": 687,
+          "basicWords": 411,
+          "basicPct": 59.8
+        },
+        "node-35": {
+          "totalWords": 303,
+          "basicWords": 194,
+          "basicPct": 64
+        }
+      },
+      "dutch": {
+        "node-01": {
+          "totalWords": 2068,
+          "basicWords": 1467,
+          "basicPct": 70.9
+        },
+        "node-02": {
+          "totalWords": 1372,
+          "basicWords": 928,
+          "basicPct": 67.6
+        },
+        "node-03": {
+          "totalWords": 1068,
+          "basicWords": 757,
+          "basicPct": 70.9
+        },
+        "node-04": {
+          "totalWords": 1168,
+          "basicWords": 773,
+          "basicPct": 66.2
+        },
+        "node-05": {
+          "totalWords": 819,
+          "basicWords": 601,
+          "basicPct": 73.4
+        },
+        "node-06": {
+          "totalWords": 639,
+          "basicWords": 493,
+          "basicPct": 77.2
+        },
+        "node-07": {
+          "totalWords": 758,
+          "basicWords": 580,
+          "basicPct": 76.5
+        },
+        "node-08": {
+          "totalWords": 1251,
+          "basicWords": 908,
+          "basicPct": 72.6
+        },
+        "node-09": {
+          "totalWords": 1444,
+          "basicWords": 1065,
+          "basicPct": 73.8
+        },
+        "node-10": {
+          "totalWords": 964,
+          "basicWords": 709,
+          "basicPct": 73.5
+        },
+        "node-11": {
+          "totalWords": 815,
+          "basicWords": 579,
+          "basicPct": 71
+        },
+        "node-12": {
+          "totalWords": 873,
+          "basicWords": 610,
+          "basicPct": 69.9
+        },
+        "node-13": {
+          "totalWords": 791,
+          "basicWords": 546,
+          "basicPct": 69
+        },
+        "node-14": {
+          "totalWords": 1108,
+          "basicWords": 774,
+          "basicPct": 69.9
+        },
+        "node-15": {
+          "totalWords": 1460,
+          "basicWords": 992,
+          "basicPct": 67.9
+        },
+        "node-16": {
+          "totalWords": 1173,
+          "basicWords": 823,
+          "basicPct": 70.2
+        },
+        "node-17": {
+          "totalWords": 749,
+          "basicWords": 558,
+          "basicPct": 74.5
+        },
+        "node-18": {
+          "totalWords": 910,
+          "basicWords": 664,
+          "basicPct": 73
+        },
+        "node-19": {
+          "totalWords": 1095,
+          "basicWords": 773,
+          "basicPct": 70.6
+        },
+        "node-20": {
+          "totalWords": 988,
+          "basicWords": 705,
+          "basicPct": 71.4
+        },
+        "node-21": {
+          "totalWords": 858,
+          "basicWords": 604,
+          "basicPct": 70.4
+        },
+        "node-22": {
+          "totalWords": 826,
+          "basicWords": 551,
+          "basicPct": 66.7
+        },
+        "node-23": {
+          "totalWords": 963,
+          "basicWords": 675,
+          "basicPct": 70.1
+        },
+        "node-24": {
+          "totalWords": 663,
+          "basicWords": 480,
+          "basicPct": 72.4
+        },
+        "node-25": {
+          "totalWords": 803,
+          "basicWords": 549,
+          "basicPct": 68.4
+        },
+        "node-26": {
+          "totalWords": 873,
+          "basicWords": 588,
+          "basicPct": 67.4
+        },
+        "node-27": {
+          "totalWords": 609,
+          "basicWords": 436,
+          "basicPct": 71.6
+        },
+        "node-28": {
+          "totalWords": 835,
+          "basicWords": 547,
+          "basicPct": 65.5
+        },
+        "node-29": {
+          "totalWords": 1000,
+          "basicWords": 586,
+          "basicPct": 58.6
+        },
+        "node-30": {
+          "totalWords": 702,
+          "basicWords": 419,
+          "basicPct": 59.7
+        },
+        "node-31": {
+          "totalWords": 636,
+          "basicWords": 393,
+          "basicPct": 61.8
+        },
+        "node-32": {
+          "totalWords": 756,
+          "basicWords": 417,
+          "basicPct": 55.2
+        },
+        "node-33": {
+          "totalWords": 959,
+          "basicWords": 492,
+          "basicPct": 51.3
+        },
+        "node-34": {
+          "totalWords": 725,
+          "basicWords": 398,
+          "basicPct": 54.9
+        },
+        "node-35": {
+          "totalWords": 486,
+          "basicWords": 270,
+          "basicPct": 55.6
+        }
+      },
+      "swedish": {
+        "node-01": {
+          "totalWords": 2188,
+          "basicWords": 1676,
+          "basicPct": 76.6
+        },
+        "node-02": {
+          "totalWords": 931,
+          "basicWords": 688,
+          "basicPct": 73.9
+        },
+        "node-03": {
+          "totalWords": 1012,
+          "basicWords": 770,
+          "basicPct": 76.1
+        },
+        "node-04": {
+          "totalWords": 1094,
+          "basicWords": 768,
+          "basicPct": 70.2
+        },
+        "node-05": {
+          "totalWords": 981,
+          "basicWords": 728,
+          "basicPct": 74.2
+        },
+        "node-06": {
+          "totalWords": 640,
+          "basicWords": 482,
+          "basicPct": 75.3
+        },
+        "node-07": {
+          "totalWords": 998,
+          "basicWords": 729,
+          "basicPct": 73
+        },
+        "node-08": {
+          "totalWords": 929,
+          "basicWords": 673,
+          "basicPct": 72.4
+        },
+        "node-09": {
+          "totalWords": 1135,
+          "basicWords": 841,
+          "basicPct": 74.1
+        },
+        "node-10": {
+          "totalWords": 935,
+          "basicWords": 739,
+          "basicPct": 79
+        },
+        "node-11": {
+          "totalWords": 1024,
+          "basicWords": 763,
+          "basicPct": 74.5
+        },
+        "node-12": {
+          "totalWords": 623,
+          "basicWords": 451,
+          "basicPct": 72.4
+        },
+        "node-13": {
+          "totalWords": 959,
+          "basicWords": 695,
+          "basicPct": 72.5
+        },
+        "node-14": {
+          "totalWords": 1082,
+          "basicWords": 753,
+          "basicPct": 69.6
+        },
+        "node-15": {
+          "totalWords": 1364,
+          "basicWords": 963,
+          "basicPct": 70.6
+        },
+        "node-16": {
+          "totalWords": 1107,
+          "basicWords": 838,
+          "basicPct": 75.7
+        },
+        "node-17": {
+          "totalWords": 1305,
+          "basicWords": 927,
+          "basicPct": 71
+        },
+        "node-18": {
+          "totalWords": 1230,
+          "basicWords": 926,
+          "basicPct": 75.3
+        },
+        "node-19": {
+          "totalWords": 688,
+          "basicWords": 503,
+          "basicPct": 73.1
+        },
+        "node-20": {
+          "totalWords": 936,
+          "basicWords": 654,
+          "basicPct": 69.9
+        },
+        "node-21": {
+          "totalWords": 740,
+          "basicWords": 539,
+          "basicPct": 72.8
+        },
+        "node-22": {
+          "totalWords": 624,
+          "basicWords": 442,
+          "basicPct": 70.8
+        },
+        "node-23": {
+          "totalWords": 593,
+          "basicWords": 424,
+          "basicPct": 71.5
+        },
+        "node-24": {
+          "totalWords": 696,
+          "basicWords": 502,
+          "basicPct": 72.1
+        },
+        "node-25": {
+          "totalWords": 630,
+          "basicWords": 465,
+          "basicPct": 73.8
+        },
+        "node-26": {
+          "totalWords": 779,
+          "basicWords": 549,
+          "basicPct": 70.5
+        },
+        "node-27": {
+          "totalWords": 620,
+          "basicWords": 449,
+          "basicPct": 72.4
+        },
+        "node-28": {
+          "totalWords": 521,
+          "basicWords": 382,
+          "basicPct": 73.3
+        },
+        "node-29": {
+          "totalWords": 659,
+          "basicWords": 474,
+          "basicPct": 71.9
+        },
+        "node-30": {
+          "totalWords": 555,
+          "basicWords": 417,
+          "basicPct": 75.1
+        },
+        "node-31": {
+          "totalWords": 479,
+          "basicWords": 314,
+          "basicPct": 65.6
+        },
+        "node-32": {
+          "totalWords": 528,
+          "basicWords": 300,
+          "basicPct": 56.8
+        },
+        "node-33": {
+          "totalWords": 708,
+          "basicWords": 426,
+          "basicPct": 60.2
+        },
+        "node-34": {
+          "totalWords": 554,
+          "basicWords": 326,
+          "basicPct": 58.8
+        },
+        "node-35": {
+          "totalWords": 277,
+          "basicWords": 180,
+          "basicPct": 65
+        }
+      },
+      "welsh": {
+        "node-01": {
+          "totalWords": 1158,
+          "basicWords": 809,
+          "basicPct": 69.9
+        },
+        "node-02": {
+          "totalWords": 595,
+          "basicWords": 377,
+          "basicPct": 63.4
+        },
+        "node-03": {
+          "totalWords": 678,
+          "basicWords": 462,
+          "basicPct": 68.1
+        },
+        "node-04": {
+          "totalWords": 1121,
+          "basicWords": 718,
+          "basicPct": 64
+        },
+        "node-05": {
+          "totalWords": 871,
+          "basicWords": 561,
+          "basicPct": 64.4
+        },
+        "node-06": {
+          "totalWords": 802,
+          "basicWords": 524,
+          "basicPct": 65.3
+        },
+        "node-07": {
+          "totalWords": 738,
+          "basicWords": 466,
+          "basicPct": 63.1
+        },
+        "node-08": {
+          "totalWords": 713,
+          "basicWords": 442,
+          "basicPct": 62
+        },
+        "node-09": {
+          "totalWords": 935,
+          "basicWords": 681,
+          "basicPct": 72.8
+        },
+        "node-10": {
+          "totalWords": 926,
+          "basicWords": 657,
+          "basicPct": 71
+        },
+        "node-11": {
+          "totalWords": 725,
+          "basicWords": 517,
+          "basicPct": 71.3
+        },
+        "node-12": {
+          "totalWords": 714,
+          "basicWords": 461,
+          "basicPct": 64.6
+        },
+        "node-13": {
+          "totalWords": 1221,
+          "basicWords": 774,
+          "basicPct": 63.4
+        },
+        "node-14": {
+          "totalWords": 734,
+          "basicWords": 490,
+          "basicPct": 66.8
+        },
+        "node-15": {
+          "totalWords": 1128,
+          "basicWords": 692,
+          "basicPct": 61.3
+        },
+        "node-16": {
+          "totalWords": 783,
+          "basicWords": 389,
+          "basicPct": 49.7
+        },
+        "node-17": {
+          "totalWords": 582,
+          "basicWords": 332,
+          "basicPct": 57
+        },
+        "node-18": {
+          "totalWords": 526,
+          "basicWords": 267,
+          "basicPct": 50.8
+        },
+        "node-19": {
+          "totalWords": 544,
+          "basicWords": 318,
+          "basicPct": 58.5
+        },
+        "node-20": {
+          "totalWords": 490,
+          "basicWords": 247,
+          "basicPct": 50.4
+        },
+        "node-21": {
+          "totalWords": 639,
+          "basicWords": 357,
+          "basicPct": 55.9
+        },
+        "node-22": {
+          "totalWords": 753,
+          "basicWords": 528,
+          "basicPct": 70.1
+        },
+        "node-23": {
+          "totalWords": 655,
+          "basicWords": 444,
+          "basicPct": 67.8
+        },
+        "node-24": {
+          "totalWords": 484,
+          "basicWords": 342,
+          "basicPct": 70.7
+        },
+        "node-25": {
+          "totalWords": 802,
+          "basicWords": 545,
+          "basicPct": 68
+        },
+        "node-26": {
+          "totalWords": 589,
+          "basicWords": 369,
+          "basicPct": 62.6
+        },
+        "node-27": {
+          "totalWords": 709,
+          "basicWords": 418,
+          "basicPct": 59
+        },
+        "node-28": {
+          "totalWords": 458,
+          "basicWords": 254,
+          "basicPct": 55.5
+        },
+        "node-29": {
+          "totalWords": 410,
+          "basicWords": 220,
+          "basicPct": 53.7
+        },
+        "node-30": {
+          "totalWords": 613,
+          "basicWords": 372,
+          "basicPct": 60.7
+        },
+        "node-31": {
+          "totalWords": 632,
+          "basicWords": 364,
+          "basicPct": 57.6
+        },
+        "node-32": {
+          "totalWords": 665,
+          "basicWords": 366,
+          "basicPct": 55
+        },
+        "node-33": {
+          "totalWords": 595,
+          "basicWords": 332,
+          "basicPct": 55.8
+        },
+        "node-34": {
+          "totalWords": 412,
+          "basicWords": 242,
+          "basicPct": 58.7
+        },
+        "node-35": {
+          "totalWords": 471,
+          "basicWords": 260,
+          "basicPct": 55.2
+        }
+      },
+      "hindi": {
+        "node-01": {
+          "totalWords": 829,
+          "basicWords": 531,
+          "basicPct": 64.1
+        },
+        "node-02": {
+          "totalWords": 715,
+          "basicWords": 503,
+          "basicPct": 70.3
+        },
+        "node-03": {
+          "totalWords": 645,
+          "basicWords": 436,
+          "basicPct": 67.6
+        },
+        "node-04": {
+          "totalWords": 1004,
+          "basicWords": 684,
+          "basicPct": 68.1
+        },
+        "node-05": {
+          "totalWords": 773,
+          "basicWords": 486,
+          "basicPct": 62.9
+        },
+        "node-06": {
+          "totalWords": 626,
+          "basicWords": 407,
+          "basicPct": 65
+        },
+        "node-07": {
+          "totalWords": 654,
+          "basicWords": 481,
+          "basicPct": 73.5
+        },
+        "node-08": {
+          "totalWords": 723,
+          "basicWords": 457,
+          "basicPct": 63.2
+        },
+        "node-09": {
+          "totalWords": 888,
+          "basicWords": 523,
+          "basicPct": 58.9
+        },
+        "node-10": {
+          "totalWords": 886,
+          "basicWords": 554,
+          "basicPct": 62.5
+        },
+        "node-11": {
+          "totalWords": 893,
+          "basicWords": 594,
+          "basicPct": 66.5
+        },
+        "node-12": {
+          "totalWords": 461,
+          "basicWords": 330,
+          "basicPct": 71.6
+        },
+        "node-13": {
+          "totalWords": 512,
+          "basicWords": 313,
+          "basicPct": 61.1
+        },
+        "node-14": {
+          "totalWords": 796,
+          "basicWords": 492,
+          "basicPct": 61.8
+        },
+        "node-15": {
+          "totalWords": 1190,
+          "basicWords": 702,
+          "basicPct": 59
+        },
+        "node-16": {
+          "totalWords": 1435,
+          "basicWords": 952,
+          "basicPct": 66.3
+        },
+        "node-17": {
+          "totalWords": 598,
+          "basicWords": 399,
+          "basicPct": 66.7
+        },
+        "node-18": {
+          "totalWords": 540,
+          "basicWords": 326,
+          "basicPct": 60.4
+        },
+        "node-19": {
+          "totalWords": 1033,
+          "basicWords": 592,
+          "basicPct": 57.3
+        },
+        "node-20": {
+          "totalWords": 574,
+          "basicWords": 334,
+          "basicPct": 58.2
+        },
+        "node-21": {
+          "totalWords": 679,
+          "basicWords": 458,
+          "basicPct": 67.5
+        },
+        "node-22": {
+          "totalWords": 662,
+          "basicWords": 399,
+          "basicPct": 60.3
+        },
+        "node-23": {
+          "totalWords": 569,
+          "basicWords": 326,
+          "basicPct": 57.3
+        },
+        "node-24": {
+          "totalWords": 761,
+          "basicWords": 518,
+          "basicPct": 68.1
+        },
+        "node-25": {
+          "totalWords": 777,
+          "basicWords": 487,
+          "basicPct": 62.7
+        },
+        "node-26": {
+          "totalWords": 418,
+          "basicWords": 213,
+          "basicPct": 51
+        },
+        "node-27": {
+          "totalWords": 557,
+          "basicWords": 333,
+          "basicPct": 59.8
+        },
+        "node-28": {
+          "totalWords": 502,
+          "basicWords": 291,
+          "basicPct": 58
+        },
+        "node-29": {
+          "totalWords": 566,
+          "basicWords": 332,
+          "basicPct": 58.7
+        },
+        "node-30": {
+          "totalWords": 542,
+          "basicWords": 329,
+          "basicPct": 60.7
+        },
+        "node-31": {
+          "totalWords": 408,
+          "basicWords": 221,
+          "basicPct": 54.2
+        },
+        "node-32": {
+          "totalWords": 579,
+          "basicWords": 296,
+          "basicPct": 51.1
+        },
+        "node-33": {
+          "totalWords": 610,
+          "basicWords": 296,
+          "basicPct": 48.5
+        },
+        "node-34": {
+          "totalWords": 618,
+          "basicWords": 327,
+          "basicPct": 52.9
+        },
+        "node-35": {
+          "totalWords": 562,
+          "basicWords": 344,
+          "basicPct": 61.2
+        }
+      },
+      "turkish": {
+        "node-01": {
+          "totalWords": 1210,
+          "basicWords": 835,
+          "basicPct": 69
+        },
+        "node-02": {
+          "totalWords": 810,
+          "basicWords": 576,
+          "basicPct": 71.1
+        },
+        "node-03": {
+          "totalWords": 673,
+          "basicWords": 484,
+          "basicPct": 71.9
+        },
+        "node-04": {
+          "totalWords": 845,
+          "basicWords": 615,
+          "basicPct": 72.8
+        },
+        "node-05": {
+          "totalWords": 819,
+          "basicWords": 566,
+          "basicPct": 69.1
+        },
+        "node-06": {
+          "totalWords": 682,
+          "basicWords": 472,
+          "basicPct": 69.2
+        },
+        "node-07": {
+          "totalWords": 1046,
+          "basicWords": 725,
+          "basicPct": 69.3
+        },
+        "node-08": {
+          "totalWords": 839,
+          "basicWords": 548,
+          "basicPct": 65.3
+        },
+        "node-09": {
+          "totalWords": 1157,
+          "basicWords": 759,
+          "basicPct": 65.6
+        },
+        "node-10": {
+          "totalWords": 1102,
+          "basicWords": 679,
+          "basicPct": 61.6
+        },
+        "node-11": {
+          "totalWords": 469,
+          "basicWords": 292,
+          "basicPct": 62.3
+        },
+        "node-12": {
+          "totalWords": 619,
+          "basicWords": 432,
+          "basicPct": 69.8
+        },
+        "node-13": {
+          "totalWords": 911,
+          "basicWords": 597,
+          "basicPct": 65.5
+        },
+        "node-14": {
+          "totalWords": 1097,
+          "basicWords": 719,
+          "basicPct": 65.5
+        },
+        "node-15": {
+          "totalWords": 1931,
+          "basicWords": 1284,
+          "basicPct": 66.5
+        },
+        "node-16": {
+          "totalWords": 840,
+          "basicWords": 588,
+          "basicPct": 70
+        },
+        "node-17": {
+          "totalWords": 804,
+          "basicWords": 590,
+          "basicPct": 73.4
+        },
+        "node-18": {
+          "totalWords": 714,
+          "basicWords": 491,
+          "basicPct": 68.8
+        },
+        "node-19": {
+          "totalWords": 867,
+          "basicWords": 576,
+          "basicPct": 66.4
+        },
+        "node-20": {
+          "totalWords": 706,
+          "basicWords": 463,
+          "basicPct": 65.6
+        },
+        "node-21": {
+          "totalWords": 939,
+          "basicWords": 638,
+          "basicPct": 67.9
+        },
+        "node-22": {
+          "totalWords": 890,
+          "basicWords": 622,
+          "basicPct": 69.9
+        },
+        "node-23": {
+          "totalWords": 737,
+          "basicWords": 512,
+          "basicPct": 69.5
+        },
+        "node-24": {
+          "totalWords": 741,
+          "basicWords": 536,
+          "basicPct": 72.3
+        },
+        "node-25": {
+          "totalWords": 575,
+          "basicWords": 378,
+          "basicPct": 65.7
+        },
+        "node-26": {
+          "totalWords": 546,
+          "basicWords": 370,
+          "basicPct": 67.8
+        },
+        "node-27": {
+          "totalWords": 546,
+          "basicWords": 378,
+          "basicPct": 69.2
+        },
+        "node-28": {
+          "totalWords": 639,
+          "basicWords": 428,
+          "basicPct": 67
+        },
+        "node-29": {
+          "totalWords": 797,
+          "basicWords": 521,
+          "basicPct": 65.4
+        },
+        "node-30": {
+          "totalWords": 633,
+          "basicWords": 424,
+          "basicPct": 67
+        },
+        "node-31": {
+          "totalWords": 622,
+          "basicWords": 405,
+          "basicPct": 65.1
+        },
+        "node-32": {
+          "totalWords": 612,
+          "basicWords": 388,
+          "basicPct": 63.4
+        },
+        "node-33": {
+          "totalWords": 621,
+          "basicWords": 400,
+          "basicPct": 64.4
+        },
+        "node-34": {
+          "totalWords": 316,
+          "basicWords": 203,
+          "basicPct": 64.2
+        },
+        "node-35": {
+          "totalWords": 257,
+          "basicWords": 162,
+          "basicPct": 63
+        }
+      },
+      "russian": {
+        "node-01": {
+          "totalWords": 1000,
+          "basicWords": 760,
+          "basicPct": 76
+        },
+        "node-02": {
+          "totalWords": 524,
+          "basicWords": 369,
+          "basicPct": 70.4
+        },
+        "node-03": {
+          "totalWords": 862,
+          "basicWords": 600,
+          "basicPct": 69.6
+        },
+        "node-04": {
+          "totalWords": 620,
+          "basicWords": 404,
+          "basicPct": 65.2
+        },
+        "node-05": {
+          "totalWords": 546,
+          "basicWords": 381,
+          "basicPct": 69.8
+        },
+        "node-06": {
+          "totalWords": 657,
+          "basicWords": 488,
+          "basicPct": 74.3
+        },
+        "node-07": {
+          "totalWords": 576,
+          "basicWords": 431,
+          "basicPct": 74.8
+        },
+        "node-08": {
+          "totalWords": 546,
+          "basicWords": 393,
+          "basicPct": 72
+        },
+        "node-09": {
+          "totalWords": 813,
+          "basicWords": 580,
+          "basicPct": 71.3
+        },
+        "node-10": {
+          "totalWords": 560,
+          "basicWords": 422,
+          "basicPct": 75.4
+        },
+        "node-11": {
+          "totalWords": 623,
+          "basicWords": 469,
+          "basicPct": 75.3
+        },
+        "node-12": {
+          "totalWords": 597,
+          "basicWords": 417,
+          "basicPct": 69.8
+        },
+        "node-13": {
+          "totalWords": 841,
+          "basicWords": 631,
+          "basicPct": 75
+        },
+        "node-14": {
+          "totalWords": 940,
+          "basicWords": 684,
+          "basicPct": 72.8
+        },
+        "node-15": {
+          "totalWords": 1356,
+          "basicWords": 899,
+          "basicPct": 66.3
+        },
+        "node-16": {
+          "totalWords": 940,
+          "basicWords": 596,
+          "basicPct": 63.4
+        },
+        "node-17": {
+          "totalWords": 519,
+          "basicWords": 385,
+          "basicPct": 74.2
+        },
+        "node-18": {
+          "totalWords": 890,
+          "basicWords": 667,
+          "basicPct": 74.9
+        },
+        "node-19": {
+          "totalWords": 931,
+          "basicWords": 698,
+          "basicPct": 75
+        },
+        "node-20": {
+          "totalWords": 673,
+          "basicWords": 468,
+          "basicPct": 69.5
+        },
+        "node-21": {
+          "totalWords": 587,
+          "basicWords": 420,
+          "basicPct": 71.6
+        },
+        "node-22": {
+          "totalWords": 683,
+          "basicWords": 519,
+          "basicPct": 76
+        },
+        "node-23": {
+          "totalWords": 607,
+          "basicWords": 467,
+          "basicPct": 76.9
+        },
+        "node-24": {
+          "totalWords": 559,
+          "basicWords": 414,
+          "basicPct": 74.1
+        },
+        "node-25": {
+          "totalWords": 742,
+          "basicWords": 565,
+          "basicPct": 76.1
+        },
+        "node-26": {
+          "totalWords": 784,
+          "basicWords": 585,
+          "basicPct": 74.6
+        },
+        "node-27": {
+          "totalWords": 706,
+          "basicWords": 510,
+          "basicPct": 72.2
+        },
+        "node-28": {
+          "totalWords": 657,
+          "basicWords": 446,
+          "basicPct": 67.9
+        },
+        "node-29": {
+          "totalWords": 808,
+          "basicWords": 545,
+          "basicPct": 67.5
+        },
+        "node-30": {
+          "totalWords": 612,
+          "basicWords": 364,
+          "basicPct": 59.5
+        },
+        "node-31": {
+          "totalWords": 651,
+          "basicWords": 406,
+          "basicPct": 62.4
+        },
+        "node-32": {
+          "totalWords": 760,
+          "basicWords": 507,
+          "basicPct": 66.7
+        },
+        "node-33": {
+          "totalWords": 425,
+          "basicWords": 307,
+          "basicPct": 72.2
+        },
+        "node-34": {
+          "totalWords": 394,
+          "basicWords": 256,
+          "basicPct": 65
+        },
+        "node-35": {
+          "totalWords": 221,
+          "basicWords": 125,
+          "basicPct": 56.6
+        }
+      }
+    },
+    "flags": [
+      {
+        "language": "spanish",
+        "note": "Basic word % does not consistently decrease across nodes"
+      },
+      {
+        "language": "italian",
+        "note": "Basic word % does not consistently decrease across nodes"
+      },
+      {
+        "language": "french",
+        "note": "Basic word % does not consistently decrease across nodes"
+      },
+      {
+        "language": "portuguese",
+        "note": "Basic word % does not consistently decrease across nodes"
+      },
+      {
+        "language": "german",
+        "note": "Basic word % does not consistently decrease across nodes"
+      },
+      {
+        "language": "dutch",
+        "note": "Basic word % does not consistently decrease across nodes"
+      },
+      {
+        "language": "swedish",
+        "note": "Basic word % does not consistently decrease across nodes"
+      },
+      {
+        "language": "welsh",
+        "note": "Basic word % does not consistently decrease across nodes"
+      },
+      {
+        "language": "hindi",
+        "note": "Basic word % does not consistently decrease across nodes"
+      },
+      {
+        "language": "turkish",
+        "note": "Basic word % does not consistently decrease across nodes"
+      },
+      {
+        "language": "russian",
+        "note": "Basic word % does not consistently decrease across nodes"
+      }
+    ]
+  },
+  "grammarTipAlignment": {
+    "flags": [
+      {
+        "language": "spanish",
+        "issue": "advanced_grammar_in_node01",
+        "count": 3,
+        "examples": [
+          {
+            "id": "es-0174",
+            "tip": "Estar + gerund for progressive"
+          },
+          {
+            "id": "es-0275",
+            "tip": "Object pronouns go before conjugated verbs (\"Lo estoy buscando\") OR attach to th"
+          },
+          {
+            "id": "es-0305",
+            "tip": "'Volver' stem-changes o→ue: vuelvo, vuelves, vuelve. Past participle is irregula"
+          }
+        ]
+      },
+      {
+        "language": "spanish",
+        "issue": "grammar_tip_summary",
+        "node01_total_tips": 151,
+        "node01_basic_topic_tips": 22,
+        "node30plus_total_tips": 39,
+        "node30plus_advanced_tips": 7,
+        "node30plus_basic_only_tips": 7
+      },
+      {
+        "language": "italian",
+        "issue": "advanced_grammar_in_node01",
+        "count": 10,
+        "examples": [
+          {
+            "id": "it-0043",
+            "tip": "'Bisogna' + infinitive = one must/it's necessary to. Impersonal — no subject nee"
+          },
+          {
+            "id": "it-0134",
+            "tip": "The subjunctive is triggered by 'penso che' (I think that)."
+          },
+          {
+            "id": "it-0152",
+            "tip": "'Stare + gerund' for ongoing actions: 'Sto mangiando' = I'm eating right now. Mo"
+          }
+        ]
+      },
+      {
+        "language": "italian",
+        "issue": "grammar_tip_summary",
+        "node01_total_tips": 100,
+        "node01_basic_topic_tips": 40,
+        "node30plus_total_tips": 117,
+        "node30plus_advanced_tips": 88,
+        "node30plus_basic_only_tips": 3
+      },
+      {
+        "language": "french",
+        "issue": "advanced_grammar_in_node01",
+        "count": 1,
+        "examples": [
+          {
+            "id": "fr-0062",
+            "tip": "'Entendre' = to hear (passive). 'Écouter' = to listen (active). Like English hea"
+          }
+        ]
+      },
+      {
+        "language": "french",
+        "issue": "grammar_tip_summary",
+        "node01_total_tips": 100,
+        "node01_basic_topic_tips": 26,
+        "node30plus_total_tips": 257,
+        "node30plus_advanced_tips": 41,
+        "node30plus_basic_only_tips": 22
+      },
+      {
+        "language": "portuguese",
+        "issue": "advanced_grammar_in_node01",
+        "count": 2,
+        "examples": [
+          {
+            "id": "pt-0180",
+            "tip": "'Imprimir' has two past participle forms: 'imprimido' (regular) and 'impresso' ("
+          },
+          {
+            "id": "pt-0244",
+            "tip": "'Estar' + gerund emphasizes the temporary nature: 'estou morando' = I'm living ("
+          }
+        ]
+      },
+      {
+        "language": "portuguese",
+        "issue": "grammar_tip_summary",
+        "node01_total_tips": 177,
+        "node01_basic_topic_tips": 38,
+        "node30plus_total_tips": 370,
+        "node30plus_advanced_tips": 150,
+        "node30plus_basic_only_tips": 12
+      },
+      {
+        "language": "german",
+        "issue": "advanced_grammar_in_node01",
+        "count": 4,
+        "examples": [
+          {
+            "id": "de-0054",
+            "tip": "'Guten' is accusative masculine — greetings use accusative: 'Guten Tag' = '[I wi"
+          },
+          {
+            "id": "de-0056",
+            "tip": "'Guten' is accusative masculine — greetings use accusative: 'Guten Tag' = '[I wi"
+          },
+          {
+            "id": "de-0093",
+            "tip": "'Guten' is accusative masculine — greetings use accusative: 'Guten Tag' = '[I wi"
+          }
+        ]
+      },
+      {
+        "language": "german",
+        "issue": "grammar_tip_summary",
+        "node01_total_tips": 168,
+        "node01_basic_topic_tips": 81,
+        "node30plus_total_tips": 296,
+        "node30plus_advanced_tips": 60,
+        "node30plus_basic_only_tips": 7
+      },
+      {
+        "language": "dutch",
+        "issue": "advanced_grammar_in_node01",
+        "count": 6,
+        "examples": [
+          {
+            "id": "nl-0026",
+            "tip": "'Is' comes from 'zijn' — used for identity, location, and as a perfect tense aux"
+          },
+          {
+            "id": "nl-0240",
+            "tip": "'Is' comes from 'zijn' — used for identity, location, and as a perfect tense aux"
+          },
+          {
+            "id": "nl-0259",
+            "tip": "Dutch past: regular verbs use \"-te/-de\" (imperfect) or \"ge-...-t/-d\" (perfect)."
+          }
+        ]
+      },
+      {
+        "language": "dutch",
+        "issue": "grammar_tip_summary",
+        "node01_total_tips": 155,
+        "node01_basic_topic_tips": 25,
+        "node30plus_total_tips": 273,
+        "node30plus_advanced_tips": 85,
+        "node30plus_basic_only_tips": 10
+      },
+      {
+        "language": "swedish",
+        "issue": "advanced_grammar_in_node01",
+        "count": 3,
+        "examples": [
+          {
+            "id": "sv-0104",
+            "tip": "'Har' (have/has) — same form for all persons. Used for possession and as perfect"
+          },
+          {
+            "id": "sv-0216",
+            "tip": "'Vara' (be) vs 'ha' (have) — both are essential auxiliaries. 'Är' for states, 'h"
+          },
+          {
+            "id": "sv-0217",
+            "tip": "'Vara' (be) vs 'ha' (have) — both are essential auxiliaries. 'Är' for states, 'h"
+          }
+        ]
+      },
+      {
+        "language": "swedish",
+        "issue": "grammar_tip_summary",
+        "node01_total_tips": 174,
+        "node01_basic_topic_tips": 36,
+        "node30plus_total_tips": 106,
+        "node30plus_advanced_tips": 17,
+        "node30plus_basic_only_tips": 3
+      },
+      {
+        "language": "welsh",
+        "issue": "grammar_tip_summary",
+        "node01_total_tips": 67,
+        "node01_basic_topic_tips": 7,
+        "node30plus_total_tips": 164,
+        "node30plus_advanced_tips": 34,
+        "node30plus_basic_only_tips": 13
+      },
+      {
+        "language": "hindi",
+        "issue": "grammar_tip_summary",
+        "node01_total_tips": 40,
+        "node01_basic_topic_tips": 5,
+        "node30plus_total_tips": 151,
+        "node30plus_advanced_tips": 14,
+        "node30plus_basic_only_tips": 3
+      },
+      {
+        "language": "turkish",
+        "issue": "grammar_tip_summary",
+        "node01_total_tips": 40,
+        "node01_basic_topic_tips": 2,
+        "node30plus_total_tips": 87,
+        "node30plus_advanced_tips": 6,
+        "node30plus_basic_only_tips": 17
+      },
+      {
+        "language": "russian",
+        "issue": "advanced_grammar_in_node01",
+        "count": 3,
+        "examples": [
+          {
+            "id": "ru-0082",
+            "tip": "Present active participle: -ущий/-ющий (1st conj.), -ащий/-ящий (2nd conj.): чит"
+          },
+          {
+            "id": "ru-0093",
+            "tip": "Present active participle: -ущий/-ющий (1st conj.), -ащий/-ящий (2nd conj.): чит"
+          },
+          {
+            "id": "ru-0095",
+            "tip": "Будучи (being) is the gerund of быть: будучи студентом = being a student."
+          }
+        ]
+      },
+      {
+        "language": "russian",
+        "issue": "grammar_tip_summary",
+        "node01_total_tips": 55,
+        "node01_basic_topic_tips": 22,
+        "node30plus_total_tips": 136,
+        "node30plus_advanced_tips": 22,
+        "node30plus_basic_only_tips": 22
+      }
+    ]
+  }
+}

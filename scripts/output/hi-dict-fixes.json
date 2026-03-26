@@ -1,0 +1,5492 @@
+[
+  {
+    "word": "H₂O",
+    "current_en": "water, formula",
+    "fixed_en": "H₂O (water formula)",
+    "issue": "english-key: not a Hindi word"
+  },
+  {
+    "word": "actually",
+    "current_en": "actually, find",
+    "fixed_en": null,
+    "issue": "english-key: English word, not Hindi - remove"
+  },
+  {
+    "word": "contact",
+    "current_en": "go",
+    "fixed_en": null,
+    "issue": "english-key: English word, not Hindi - remove"
+  },
+  {
+    "word": "formally",
+    "current_en": "formally, given",
+    "fixed_en": null,
+    "issue": "english-key: English word, not Hindi - remove"
+  },
+  {
+    "word": "matter",
+    "current_en": "matter, related",
+    "fixed_en": null,
+    "issue": "english-key: English word, not Hindi - remove"
+  },
+  {
+    "word": "related",
+    "current_en": "matter, related",
+    "fixed_en": null,
+    "issue": "english-key: English word, not Hindi - remove"
+  },
+  {
+    "word": "resignation",
+    "current_en": "given, formally",
+    "fixed_en": null,
+    "issue": "english-key: English word, not Hindi - remove"
+  },
+  {
+    "word": "अँगीठी",
+    "current_en": "sat",
+    "fixed_en": "stove, fireplace",
+    "issue": "totally-wrong: \"sat\" is from sentence context"
+  },
+  {
+    "word": "अँगूठी",
+    "current_en": "ring, exchanged",
+    "fixed_en": "ring",
+    "issue": "context-bleed: \"exchanged\" from sentence \"exchanged rings\""
+  },
+  {
+    "word": "अँधेरा",
+    "current_en": "new, moon",
+    "fixed_en": "darkness",
+    "issue": "context-bleed: \"new, moon\" from \"new moon night\" sentence"
+  },
+  {
+    "word": "अंक",
+    "current_en": "history",
+    "fixed_en": "marks, score, digit",
+    "issue": "totally-wrong: \"history\" unrelated"
+  },
+  {
+    "word": "अंकित",
+    "current_en": "history, inscribed",
+    "fixed_en": "inscribed, engraved",
+    "issue": "context-bleed: \"history\" leaked from sentence"
+  },
+  {
+    "word": "अंकुर",
+    "current_en": "sowing, upon",
+    "fixed_en": "sprout, seedling",
+    "issue": "context-bleed: \"sowing, upon\" from sentence"
+  },
+  {
+    "word": "अंकों",
+    "current_en": "six, code",
+    "fixed_en": "digits, marks",
+    "issue": "context-bleed: \"six, code\" from \"six-digit code\" sentence"
+  },
+  {
+    "word": "अंग",
+    "current_en": "became, branches",
+    "fixed_en": "body part, limb",
+    "issue": "context-bleed: \"became, branches\" from sentence"
+  },
+  {
+    "word": "अंगवस्त्रम",
+    "current_en": "angavastram, placed",
+    "fixed_en": "angavastram (traditional shawl)",
+    "issue": "context-bleed: \"placed\" from sentence"
+  },
+  {
+    "word": "अंजीर",
+    "current_en": "figs, dried",
+    "fixed_en": "fig",
+    "issue": "context-bleed: \"dried\" from \"dried figs\" sentence"
+  },
+  {
+    "word": "अंततः",
+    "current_en": "finally, said",
+    "fixed_en": "finally, ultimately",
+    "issue": "context-bleed: \"said\" from sentence"
+  },
+  {
+    "word": "अंतर",
+    "current_en": "sapna, between",
+    "fixed_en": "difference, gap",
+    "issue": "context-bleed: \"sapna, between\" - \"sapna\" is Hindi name leaked"
+  },
+  {
+    "word": "अंतरिक्ष",
+    "current_en": "astronaut, stepped",
+    "fixed_en": "space, outer space",
+    "issue": "context-bleed: \"astronaut, stepped\" from sentence"
+  },
+  {
+    "word": "अंतर्राष्ट्रीय",
+    "current_en": "influenced, globalization",
+    "fixed_en": "international",
+    "issue": "context-bleed: \"influenced, globalization\" from sentence"
+  },
+  {
+    "word": "अंधकार",
+    "current_en": "darkness, lifted",
+    "fixed_en": "darkness",
+    "issue": "context-bleed: \"lifted\" from sentence"
+  },
+  {
+    "word": "अंधे",
+    "current_en": "blind, person",
+    "fixed_en": "blind (pl./obl.)",
+    "issue": "context-bleed: \"person\" from sentence"
+  },
+  {
+    "word": "अंधों",
+    "current_en": "case, one-eyed",
+    "fixed_en": "blind people (obl.)",
+    "issue": "context-bleed: \"case, one-eyed\" from proverb"
+  },
+  {
+    "word": "अंबेडकर",
+    "current_en": "fourteenth",
+    "fixed_en": "Ambedkar (proper name)",
+    "issue": "totally-wrong: \"fourteenth\" from date context"
+  },
+  {
+    "word": "अकड़न",
+    "current_en": "neck",
+    "fixed_en": "stiffness",
+    "issue": "context-bleed: \"neck\" from \"neck stiffness\" sentence"
+  },
+  {
+    "word": "अकाल",
+    "current_en": "sri, akal",
+    "fixed_en": "famine, drought",
+    "issue": "context-bleed: \"sri, akal\" from Sikh greeting"
+  },
+  {
+    "word": "अकेले",
+    "current_en": "alone, possible",
+    "fixed_en": "alone (adv.)",
+    "issue": "context-bleed: \"possible\" from sentence"
+  },
+  {
+    "word": "अक्षत",
+    "current_en": "letter (alphabet)",
+    "fixed_en": "unbroken rice grains (ritual)",
+    "issue": "wrong: conflated with अक्षर (letter)"
+  },
+  {
+    "word": "अखरोट",
+    "current_en": "walnut, branch",
+    "fixed_en": "walnut",
+    "issue": "context-bleed: \"branch\" from sentence"
+  },
+  {
+    "word": "अखाड़ा",
+    "current_en": "अखाड़ा",
+    "fixed_en": "wrestling arena, akhara",
+    "issue": "untranslated: definition is Hindi word"
+  },
+  {
+    "word": "अगरबत्ती",
+    "current_en": "to incense, to made",
+    "fixed_en": "incense stick",
+    "issue": "context-bleed: \"to incense, to made\" garbled"
+  },
+  {
+    "word": "अगला",
+    "current_en": "next, festival",
+    "fixed_en": "next (m.)",
+    "issue": "context-bleed: \"festival\" from sentence"
+  },
+  {
+    "word": "अगली",
+    "current_en": "next, better",
+    "fixed_en": "next (f.)",
+    "issue": "context-bleed: \"better\" from sentence"
+  },
+  {
+    "word": "अगले",
+    "current_en": "next, return",
+    "fixed_en": "next (pl./obl.)",
+    "issue": "context-bleed: \"return\" from sentence"
+  },
+  {
+    "word": "अजंता",
+    "current_en": "to mural, to painting",
+    "fixed_en": "Ajanta (caves)",
+    "issue": "context-bleed: \"to mural, to painting\" from sentence"
+  },
+  {
+    "word": "अजगर",
+    "current_en": "python, swallowed",
+    "fixed_en": "python (snake)",
+    "issue": "context-bleed: \"swallowed\" from sentence"
+  },
+  {
+    "word": "अटका",
+    "current_en": "didn",
+    "fixed_en": "stuck, jammed",
+    "issue": "garbled: \"didn\" from truncated \"didn't\""
+  },
+  {
+    "word": "अटारी",
+    "current_en": "flew, kites",
+    "fixed_en": "terrace, attic",
+    "issue": "context-bleed: \"flew, kites\" from sentence"
+  },
+  {
+    "word": "अट्ठाईस",
+    "current_en": "special, program",
+    "fixed_en": "twenty-eight",
+    "issue": "context-bleed: \"special, program\" from sentence"
+  },
+  {
+    "word": "अट्ठारह",
+    "current_en": "parents, anniversary",
+    "fixed_en": "eighteen",
+    "issue": "context-bleed: \"parents, anniversary\" from sentence"
+  },
+  {
+    "word": "अठारहवीं",
+    "current_en": "mughal, empire",
+    "fixed_en": "eighteenth",
+    "issue": "context-bleed: \"mughal, empire\" from sentence"
+  },
+  {
+    "word": "अड्डा",
+    "current_en": "twenty, kilometers",
+    "fixed_en": "stand, station, hangout",
+    "issue": "context-bleed: \"twenty, kilometers\" from sentence"
+  },
+  {
+    "word": "अड्डे",
+    "current_en": "checked",
+    "fixed_en": "stands, stations (pl.)",
+    "issue": "context-bleed: \"checked\" from sentence"
+  },
+  {
+    "word": "अत्यंत",
+    "current_en": "extremely, rich",
+    "fixed_en": "extremely, very much",
+    "issue": "context-bleed: \"rich\" from sentence"
+  },
+  {
+    "word": "अधजल",
+    "current_en": "half-filled, pot",
+    "fixed_en": "half-filled",
+    "issue": "context-bleed: \"pot\" from proverb"
+  },
+  {
+    "word": "अधिक",
+    "current_en": "right",
+    "fixed_en": "more, excess",
+    "issue": "totally-wrong: \"right\" is wrong meaning"
+  },
+  {
+    "word": "अधिकारी",
+    "current_en": "right",
+    "fixed_en": "official, officer",
+    "issue": "wrong: \"right\" is wrong - confused with अधिकार"
+  },
+  {
+    "word": "अधिग्रहण",
+    "current_en": "topic",
+    "fixed_en": "acquisition",
+    "issue": "totally-wrong: \"topic\" unrelated"
+  },
+  {
+    "word": "अध्ययन",
+    "current_en": "study, comparative",
+    "fixed_en": "study",
+    "issue": "context-bleed: \"comparative\" from sentence"
+  },
+  {
+    "word": "अनंत",
+    "current_en": "stars, twinkling",
+    "fixed_en": "infinite, endless",
+    "issue": "context-bleed: \"stars, twinkling\" from sentence"
+  },
+  {
+    "word": "अनिवार्य",
+    "current_en": "essential, writing",
+    "fixed_en": "compulsory, mandatory",
+    "issue": "context-bleed: \"essential, writing\" wrong"
+  },
+  {
+    "word": "अनीता",
+    "current_en": "to anita",
+    "fixed_en": "Anita (proper name)",
+    "issue": "garbled: \"to anita\" nonsensical"
+  },
+  {
+    "word": "अनुकूल",
+    "current_en": "experience",
+    "fixed_en": "favorable, suitable",
+    "issue": "totally-wrong: \"experience\" unrelated"
+  },
+  {
+    "word": "अनुभवी",
+    "current_en": "experienced, since",
+    "fixed_en": "experienced",
+    "issue": "context-bleed: \"since\" from sentence"
+  },
+  {
+    "word": "अनुमति",
+    "current_en": "permission, mr",
+    "fixed_en": "permission",
+    "issue": "context-bleed: \"mr\" from sentence"
+  },
+  {
+    "word": "अनुवाद",
+    "current_en": "maintaining, emerging",
+    "fixed_en": "translation",
+    "issue": "totally-wrong: \"maintaining, emerging\" unrelated"
+  },
+  {
+    "word": "अनुसंधान",
+    "current_en": "research, data",
+    "fixed_en": "research",
+    "issue": "context-bleed: \"data\" from sentence"
+  },
+  {
+    "word": "अनुसार",
+    "current_en": "according, concept",
+    "fixed_en": "according to",
+    "issue": "context-bleed: \"concept\" from sentence"
+  },
+  {
+    "word": "अनेक",
+    "current_en": "inscribed, history",
+    "fixed_en": "many, several",
+    "issue": "context-bleed: \"inscribed, history\" from sentence"
+  },
+  {
+    "word": "अनोखी",
+    "current_en": "among",
+    "fixed_en": "unique, extraordinary (f.)",
+    "issue": "totally-wrong: \"among\" unrelated"
+  },
+  {
+    "word": "अपनाई",
+    "current_en": "to adopted, to method",
+    "fixed_en": "adopted (f.)",
+    "issue": "context-bleed: \"to adopted, to method\" garbled"
+  },
+  {
+    "word": "अपनाया",
+    "current_en": "own (f.)",
+    "fixed_en": "adopted (m.)",
+    "issue": "wrong: \"own (f.)\" is wrong word"
+  },
+  {
+    "word": "अपनीअपनी",
+    "current_en": "own (f.)",
+    "fixed_en": "each one's own (f.)",
+    "issue": "wrong: should specify meaning"
+  },
+  {
+    "word": "अपमान",
+    "current_en": "ungrateful",
+    "fixed_en": "insult, disrespect",
+    "issue": "wrong: \"ungrateful\" is wrong meaning"
+  },
+  {
+    "word": "अपराध",
+    "current_en": "criminal",
+    "fixed_en": "crime",
+    "issue": "wrong: \"criminal\" is the person not the act"
+  },
+  {
+    "word": "अपराधी",
+    "current_en": "criminal, handcuffed",
+    "fixed_en": "criminal",
+    "issue": "context-bleed: \"handcuffed\" from sentence"
+  },
+  {
+    "word": "अपार्टमेंट",
+    "current_en": "city, view",
+    "fixed_en": "apartment",
+    "issue": "context-bleed: \"city, view\" from sentence"
+  },
+  {
+    "word": "अप्रैल",
+    "current_en": "fourteenth",
+    "fixed_en": "April",
+    "issue": "context-bleed: \"fourteenth\" from date"
+  },
+  {
+    "word": "अफ़ग़ानिस्तान",
+    "current_en": "played",
+    "fixed_en": "Afghanistan",
+    "issue": "totally-wrong: \"played\" unrelated"
+  },
+  {
+    "word": "अभिज्ञानशाकुंतलम",
+    "current_en": "abhigyan, shakuntalam",
+    "fixed_en": "Abhijnana Shakuntalam (play by Kalidasa)",
+    "issue": "context-bleed: split title"
+  },
+  {
+    "word": "अभिनय",
+    "current_en": "splendid, performance",
+    "fixed_en": "acting, performance",
+    "issue": "context-bleed: \"splendid\" from sentence"
+  },
+  {
+    "word": "अभिन्न",
+    "current_en": "ethics",
+    "fixed_en": "integral, inseparable",
+    "issue": "totally-wrong: \"ethics\" unrelated"
+  },
+  {
+    "word": "अभियंता",
+    "current_en": "to engineer, to prepared",
+    "fixed_en": "engineer",
+    "issue": "context-bleed: \"to prepared\" from sentence"
+  },
+  {
+    "word": "अभिलेखों",
+    "current_en": "knowledge",
+    "fixed_en": "records, archives (obl.)",
+    "issue": "wrong: \"knowledge\" is wrong"
+  },
+  {
+    "word": "अमर",
+    "current_en": "floral, tribute",
+    "fixed_en": "immortal",
+    "issue": "context-bleed: \"floral, tribute\" from sentence"
+  },
+  {
+    "word": "अमरूद",
+    "current_en": "guava, guavas",
+    "fixed_en": "guava",
+    "issue": "context-bleed: \"guavas\" redundant but minor"
+  },
+  {
+    "word": "अमल",
+    "current_en": "decision, acted",
+    "fixed_en": "action, implementation",
+    "issue": "context-bleed: \"decision, acted\" from sentence"
+  },
+  {
+    "word": "अमलतास",
+    "current_en": "golden, shower",
+    "fixed_en": "golden shower tree (Cassia fistula)",
+    "issue": "context-bleed: literal translation of name"
+  },
+  {
+    "word": "अमावस",
+    "current_en": "darkness, dark",
+    "fixed_en": "new moon night",
+    "issue": "context-bleed: \"darkness, dark\" from sentence"
+  },
+  {
+    "word": "अमृतसर",
+    "current_en": "amritsar, lives",
+    "fixed_en": "Amritsar",
+    "issue": "context-bleed: \"lives\" from sentence"
+  },
+  {
+    "word": "अयाल",
+    "current_en": "mane, horse",
+    "fixed_en": "mane",
+    "issue": "context-bleed: \"horse\" from sentence"
+  },
+  {
+    "word": "अरबों",
+    "current_en": "milky, stars",
+    "fixed_en": "billions",
+    "issue": "context-bleed: \"milky, stars\" from sentence"
+  },
+  {
+    "word": "अरुणोदय",
+    "current_en": "chirping, birds",
+    "fixed_en": "dawn, sunrise",
+    "issue": "context-bleed: \"chirping, birds\" from sentence"
+  },
+  {
+    "word": "अर्घ्य",
+    "current_en": "made",
+    "fixed_en": "offering (of water)",
+    "issue": "context-bleed: \"made\" from sentence"
+  },
+  {
+    "word": "अर्ज़",
+    "current_en": "greetings",
+    "fixed_en": "request, petition",
+    "issue": "wrong: \"greetings\" is wrong"
+  },
+  {
+    "word": "अर्थ",
+    "current_en": "micro",
+    "fixed_en": "meaning, economy",
+    "issue": "wrong: \"micro\" from \"micro-economics\""
+  },
+  {
+    "word": "अर्थव्यवस्था",
+    "current_en": "micro",
+    "fixed_en": "economy",
+    "issue": "wrong: \"micro\" from \"micro-economy\""
+  },
+  {
+    "word": "अलगोज़ा",
+    "current_en": "algoza, rajasthan",
+    "fixed_en": "algoza (double flute)",
+    "issue": "context-bleed: \"rajasthan\" from sentence"
+  },
+  {
+    "word": "अलमारी",
+    "current_en": "cupboard, clothes",
+    "fixed_en": "cupboard, wardrobe",
+    "issue": "context-bleed: \"clothes\" from sentence"
+  },
+  {
+    "word": "अलाव",
+    "current_en": "bonfire, around",
+    "fixed_en": "bonfire",
+    "issue": "context-bleed: \"around\" from sentence"
+  },
+  {
+    "word": "अलैकुम",
+    "current_en": "alaikum, assalaam",
+    "fixed_en": "alaikum (peace be upon you)",
+    "issue": "context-bleed: \"assalaam\" from greeting"
+  },
+  {
+    "word": "अवधारणा",
+    "current_en": "concept, entirely",
+    "fixed_en": "concept",
+    "issue": "context-bleed: \"entirely\" from sentence"
+  },
+  {
+    "word": "अवैध",
+    "current_en": "removed",
+    "fixed_en": "illegal, unlawful",
+    "issue": "totally-wrong: \"removed\" unrelated"
+  },
+  {
+    "word": "अव्वल",
+    "current_en": "impaired",
+    "fixed_en": "first, best",
+    "issue": "totally-wrong: \"impaired\" unrelated"
+  },
+  {
+    "word": "अशिष्ट",
+    "current_en": "voice",
+    "fixed_en": "rude, impolite",
+    "issue": "totally-wrong: \"voice\" unrelated"
+  },
+  {
+    "word": "अशुभ",
+    "current_en": "thirteen",
+    "fixed_en": "inauspicious",
+    "issue": "context-bleed: \"thirteen\" from sentence about unlucky 13"
+  },
+  {
+    "word": "असम",
+    "current_en": "assam, bihu",
+    "fixed_en": "Assam",
+    "issue": "context-bleed: \"bihu\" from sentence"
+  },
+  {
+    "word": "असल",
+    "current_en": "actually, matter",
+    "fixed_en": "real, actual",
+    "issue": "context-bleed: \"actually, matter\" from sentence"
+  },
+  {
+    "word": "असली",
+    "current_en": "tell",
+    "fixed_en": "real, genuine",
+    "issue": "totally-wrong: \"tell\" unrelated"
+  },
+  {
+    "word": "असहनीय",
+    "current_en": "summer",
+    "fixed_en": "unbearable",
+    "issue": "context-bleed: \"summer\" from \"unbearable summer\""
+  },
+  {
+    "word": "अस्सलाम",
+    "current_en": "assalaam, alaikum",
+    "fixed_en": "assalaam (greeting)",
+    "issue": "context-bleed: \"alaikum\" from greeting pair"
+  },
+  {
+    "word": "अहंकार",
+    "current_en": "staying, away",
+    "fixed_en": "ego, arrogance",
+    "issue": "context-bleed: \"staying, away\" from sentence"
+  },
+  {
+    "word": "अहम",
+    "current_en": "role, legislative",
+    "fixed_en": "important",
+    "issue": "context-bleed: \"role, legislative\" from sentence"
+  },
+  {
+    "word": "अहसास",
+    "current_en": "mistake, eyes",
+    "fixed_en": "feeling, realization",
+    "issue": "context-bleed: \"mistake, eyes\" from sentence"
+  },
+  {
+    "word": "अहिंसा",
+    "current_en": "after",
+    "fixed_en": "non-violence",
+    "issue": "totally-wrong: \"after\" unrelated"
+  },
+  {
+    "word": "आँकड़े",
+    "current_en": "data, collected",
+    "fixed_en": "data, statistics",
+    "issue": "context-bleed: \"collected\" from sentence"
+  },
+  {
+    "word": "आँकड़ों",
+    "current_en": "data, authenticity",
+    "fixed_en": "data, statistics (obl.)",
+    "issue": "context-bleed: \"authenticity\" from sentence"
+  },
+  {
+    "word": "आँखमिचौली",
+    "current_en": "eye",
+    "fixed_en": "hide and seek",
+    "issue": "context-bleed: \"eye\" is partial"
+  },
+  {
+    "word": "आँखें",
+    "current_en": "opened, eyes",
+    "fixed_en": "eyes",
+    "issue": "context-bleed: \"opened\" from \"opened eyes\""
+  },
+  {
+    "word": "आँखों",
+    "current_en": "parents, eyes",
+    "fixed_en": "eyes (obl.)",
+    "issue": "context-bleed: \"parents\" from sentence"
+  },
+  {
+    "word": "आँच",
+    "current_en": "flame, copper",
+    "fixed_en": "flame, heat",
+    "issue": "context-bleed: \"copper\" from sentence"
+  },
+  {
+    "word": "आँचल",
+    "current_en": "child",
+    "fixed_en": "edge of sari/shawl",
+    "issue": "wrong: \"child\" is wrong meaning"
+  },
+  {
+    "word": "आँवले",
+    "current_en": "gooseberry, preserve",
+    "fixed_en": "gooseberry (pl.)",
+    "issue": "context-bleed: \"preserve\" from sentence"
+  },
+  {
+    "word": "आँसू",
+    "current_en": "eyes, parents",
+    "fixed_en": "tears",
+    "issue": "context-bleed: \"eyes, parents\" from sentence"
+  },
+  {
+    "word": "आंटी",
+    "current_en": "uncle, aunty",
+    "fixed_en": "aunty",
+    "issue": "context-bleed: \"uncle\" from sentence"
+  },
+  {
+    "word": "आंदोलन",
+    "current_en": "identity",
+    "fixed_en": "movement, protest",
+    "issue": "totally-wrong: \"identity\" unrelated"
+  },
+  {
+    "word": "आंध्र",
+    "current_en": "celebrated, ugadi",
+    "fixed_en": "Andhra (Pradesh)",
+    "issue": "context-bleed: \"celebrated, ugadi\" from sentence"
+  },
+  {
+    "word": "आइए",
+    "current_en": "come, inside",
+    "fixed_en": "please come (formal)",
+    "issue": "context-bleed: \"inside\" from sentence"
+  },
+  {
+    "word": "आऊँगा",
+    "current_en": "to come, to definitely",
+    "fixed_en": "I will come (m.)",
+    "issue": "context-bleed: \"to definitely\" from sentence"
+  },
+  {
+    "word": "आकर",
+    "current_en": "look, come",
+    "fixed_en": "having come",
+    "issue": "context-bleed: \"look\" from sentence"
+  },
+  {
+    "word": "आकार",
+    "current_en": "wheel, shaped",
+    "fixed_en": "shape, form",
+    "issue": "context-bleed: \"wheel, shaped\" from sentence"
+  },
+  {
+    "word": "आकाश",
+    "current_en": "akash",
+    "fixed_en": "sky",
+    "issue": "wrong: \"akash\" is just transliteration, not translation"
+  },
+  {
+    "word": "आकाशगंगा",
+    "current_en": "to billions, to stars",
+    "fixed_en": "Milky Way galaxy",
+    "issue": "context-bleed: \"to billions, to stars\""
+  },
+  {
+    "word": "आख़िर",
+    "current_en": "finally, vikas",
+    "fixed_en": "finally, in the end",
+    "issue": "context-bleed: \"vikas\" from sentence"
+  },
+  {
+    "word": "आगमन",
+    "current_en": "crop",
+    "fixed_en": "arrival",
+    "issue": "totally-wrong: \"crop\" unrelated"
+  },
+  {
+    "word": "आगामी",
+    "current_en": "election",
+    "fixed_en": "upcoming, forthcoming",
+    "issue": "context-bleed: \"election\" from sentence"
+  },
+  {
+    "word": "आगे",
+    "current_en": "to before, to teacher",
+    "fixed_en": "ahead, forward",
+    "issue": "context-bleed: \"to before, to teacher\""
+  },
+  {
+    "word": "आजकल",
+    "current_en": "days, field",
+    "fixed_en": "nowadays",
+    "issue": "context-bleed: \"days, field\" from sentence"
+  },
+  {
+    "word": "आज़ाद",
+    "current_en": "today",
+    "fixed_en": "free, independent",
+    "issue": "wrong: \"today\" is translation of आज not आज़ाद"
+  },
+  {
+    "word": "आटे",
+    "current_en": "flour, mill",
+    "fixed_en": "flour (obl.)",
+    "issue": "context-bleed: \"mill\" from sentence"
+  },
+  {
+    "word": "आतीं",
+    "current_en": "comes (hab.m)",
+    "fixed_en": "come (f.pl. habitual)",
+    "issue": "wrong POS and definition"
+  },
+  {
+    "word": "आदत",
+    "current_en": "habit, good",
+    "fixed_en": "habit",
+    "issue": "context-bleed: \"good\" from sentence"
+  },
+  {
+    "word": "आदर",
+    "current_en": "elders",
+    "fixed_en": "respect",
+    "issue": "context-bleed: \"elders\" from sentence"
+  },
+  {
+    "word": "आदर्श",
+    "current_en": "village, declared",
+    "fixed_en": "ideal, model",
+    "issue": "context-bleed: \"village, declared\" from sentence"
+  },
+  {
+    "word": "आधार",
+    "current_en": "half",
+    "fixed_en": "basis, foundation",
+    "issue": "wrong: \"half\" is translation of आधा not आधार"
+  },
+  {
+    "word": "आधुनिक",
+    "current_en": "ethics",
+    "fixed_en": "modern",
+    "issue": "totally-wrong: \"ethics\" unrelated"
+  },
+  {
+    "word": "आनंद",
+    "current_en": "season",
+    "fixed_en": "joy, bliss",
+    "issue": "totally-wrong: \"season\" unrelated"
+  },
+  {
+    "word": "आपसे",
+    "current_en": "nice, meet",
+    "fixed_en": "from you (formal)",
+    "issue": "context-bleed: \"nice, meet\" from greeting"
+  },
+  {
+    "word": "आबादी",
+    "current_en": "village, population",
+    "fixed_en": "population",
+    "issue": "context-bleed: \"village\" from sentence"
+  },
+  {
+    "word": "आमंत्रित",
+    "current_en": "common, mango",
+    "fixed_en": "invited",
+    "issue": "wrong: \"common, mango\" is translation of आम"
+  },
+  {
+    "word": "आमदीद",
+    "current_en": "please, welcome",
+    "fixed_en": "welcome (Urdu)",
+    "issue": "context-bleed: \"please\" from sentence"
+  },
+  {
+    "word": "आयात",
+    "current_en": "balance, necessary",
+    "fixed_en": "import",
+    "issue": "context-bleed: \"balance, necessary\" from sentence"
+  },
+  {
+    "word": "आयु",
+    "current_en": "one",
+    "fixed_en": "age",
+    "issue": "wrong: \"one\" is unrelated"
+  },
+  {
+    "word": "आयुर्वेदिक",
+    "current_en": "bark",
+    "fixed_en": "Ayurvedic",
+    "issue": "totally-wrong: \"bark\" unrelated"
+  },
+  {
+    "word": "आयोजन",
+    "current_en": "organized, year",
+    "fixed_en": "organization, event",
+    "issue": "context-bleed: \"organized, year\" from sentence"
+  },
+  {
+    "word": "आरती",
+    "current_en": "to aarti",
+    "fixed_en": "aarti (Hindu prayer ritual)",
+    "issue": "garbled: \"to aarti\""
+  },
+  {
+    "word": "आरामदायक",
+    "current_en": "comfortable, bus",
+    "fixed_en": "comfortable",
+    "issue": "context-bleed: \"bus\" from sentence"
+  },
+  {
+    "word": "आरामदेह",
+    "current_en": "often",
+    "fixed_en": "comfortable, relaxing",
+    "issue": "totally-wrong: \"often\" unrelated"
+  },
+  {
+    "word": "आरी",
+    "current_en": "took, time",
+    "fixed_en": "saw (tool)",
+    "issue": "context-bleed: \"took, time\" from sentence"
+  },
+  {
+    "word": "आरोपी",
+    "current_en": "after",
+    "fixed_en": "accused (person)",
+    "issue": "totally-wrong: \"after\" unrelated"
+  },
+  {
+    "word": "आर्थिक",
+    "current_en": "balance, between",
+    "fixed_en": "economic, financial",
+    "issue": "context-bleed: \"balance, between\" from sentence"
+  },
+  {
+    "word": "आलसी",
+    "current_en": "people",
+    "fixed_en": "lazy",
+    "issue": "totally-wrong: \"people\" unrelated"
+  },
+  {
+    "word": "आलाप",
+    "current_en": "raga, begins",
+    "fixed_en": "musical prelude",
+    "issue": "context-bleed: \"raga, begins\" from sentence"
+  },
+  {
+    "word": "आलिंगन",
+    "current_en": "clouds",
+    "fixed_en": "embrace, hug",
+    "issue": "totally-wrong: \"clouds\" unrelated"
+  },
+  {
+    "word": "आलोचना",
+    "current_en": "to review",
+    "fixed_en": "criticism, review",
+    "issue": "OK but should be noun not verb"
+  },
+  {
+    "word": "आलोचनात्मक",
+    "current_en": "sources",
+    "fixed_en": "critical (analytical)",
+    "issue": "totally-wrong: \"sources\" unrelated"
+  },
+  {
+    "word": "आवश्यक",
+    "current_en": "essential, goals",
+    "fixed_en": "necessary, essential",
+    "issue": "context-bleed: \"goals\" from sentence"
+  },
+  {
+    "word": "आवास",
+    "current_en": "sound, voice",
+    "fixed_en": "residence, dwelling",
+    "issue": "wrong: \"sound, voice\" is for आवाज़ not आवास"
+  },
+  {
+    "word": "आविष्कार",
+    "current_en": "invention, new",
+    "fixed_en": "invention",
+    "issue": "context-bleed: \"new\" from sentence"
+  },
+  {
+    "word": "आवृत्ति",
+    "current_en": "measured",
+    "fixed_en": "frequency, edition",
+    "issue": "context-bleed: \"measured\" from sentence"
+  },
+  {
+    "word": "आवेदन",
+    "current_en": "application, submitted",
+    "fixed_en": "application",
+    "issue": "context-bleed: \"submitted\" from sentence"
+  },
+  {
+    "word": "आशा",
+    "current_en": "asha",
+    "fixed_en": "hope",
+    "issue": "wrong: \"asha\" is just transliteration"
+  },
+  {
+    "word": "आशीर्वाद",
+    "current_en": "blessings, feet",
+    "fixed_en": "blessing",
+    "issue": "context-bleed: \"feet\" from \"touched feet for blessing\""
+  },
+  {
+    "word": "आशीष",
+    "current_en": "ashish",
+    "fixed_en": "Ashish (name) / blessing",
+    "issue": "transliteration only"
+  },
+  {
+    "word": "आश्रम",
+    "current_en": "meditation, devotional",
+    "fixed_en": "ashram, hermitage",
+    "issue": "context-bleed: \"meditation, devotional\" from sentence"
+  },
+  {
+    "word": "आसपास",
+    "current_en": "villages",
+    "fixed_en": "nearby, around",
+    "issue": "context-bleed: \"villages\" from sentence"
+  },
+  {
+    "word": "आहुति",
+    "current_en": "fire, offered",
+    "fixed_en": "oblation, offering to fire",
+    "issue": "context-bleed: \"fire, offered\" from sentence"
+  },
+  {
+    "word": "इंतज़ाम",
+    "current_en": "to wait",
+    "fixed_en": "arrangement",
+    "issue": "wrong: \"to wait\" is for इंतज़ार not इंतज़ाम"
+  },
+  {
+    "word": "इकट्ठा",
+    "current_en": "gathers, harvested",
+    "fixed_en": "gathered, collected",
+    "issue": "context-bleed: \"harvested\" from sentence"
+  },
+  {
+    "word": "इक्कीसवीं",
+    "current_en": "technology",
+    "fixed_en": "twenty-first",
+    "issue": "context-bleed: \"technology\" from sentence"
+  },
+  {
+    "word": "इक्यावन",
+    "current_en": "took, renunciation",
+    "fixed_en": "fifty-one",
+    "issue": "context-bleed: \"took, renunciation\" from sentence"
+  },
+  {
+    "word": "इच्छा",
+    "current_en": "again",
+    "fixed_en": "wish, desire",
+    "issue": "totally-wrong: \"again\" unrelated"
+  },
+  {
+    "word": "इडली",
+    "current_en": "well",
+    "fixed_en": "idli (steamed rice cake)",
+    "issue": "totally-wrong: \"well\" unrelated"
+  },
+  {
+    "word": "इतना",
+    "current_en": "to never, to haven",
+    "fixed_en": "this much (m.)",
+    "issue": "context-bleed: \"to never, to haven\" garbled"
+  },
+  {
+    "word": "इतनी",
+    "current_en": "used, crowd",
+    "fixed_en": "this much (f.)",
+    "issue": "context-bleed: \"used, crowd\" from sentence"
+  },
+  {
+    "word": "इतने",
+    "current_en": "days",
+    "fixed_en": "this many",
+    "issue": "context-bleed: \"days\" from sentence"
+  },
+  {
+    "word": "इतवार",
+    "current_en": "tell",
+    "fixed_en": "Sunday",
+    "issue": "totally-wrong: \"tell\" unrelated"
+  },
+  {
+    "word": "इधर",
+    "current_en": "come, moment",
+    "fixed_en": "here, this way",
+    "issue": "context-bleed: \"come, moment\" from sentence"
+  },
+  {
+    "word": "इधरउधर",
+    "current_en": "come, moment",
+    "fixed_en": "here and there",
+    "issue": "context-bleed: \"come, moment\" from sentence"
+  },
+  {
+    "word": "इनकार",
+    "current_en": "woman",
+    "fixed_en": "refusal, denial",
+    "issue": "totally-wrong: \"woman\" unrelated"
+  },
+  {
+    "word": "इनाम",
+    "current_en": "rupees",
+    "fixed_en": "prize, reward",
+    "issue": "context-bleed: \"rupees\" from sentence"
+  },
+  {
+    "word": "इमारतें",
+    "current_en": "buildings, large",
+    "fixed_en": "buildings",
+    "issue": "context-bleed: \"large\" from sentence"
+  },
+  {
+    "word": "इर्दगिर्द",
+    "current_en": "इर्दगिर्द",
+    "fixed_en": "around, surrounding",
+    "issue": "untranslated"
+  },
+  {
+    "word": "इलाक़े",
+    "current_en": "treatment",
+    "fixed_en": "areas, regions",
+    "issue": "wrong: \"treatment\" is for इलाज not इलाक़े"
+  },
+  {
+    "word": "इलाक़ों",
+    "current_en": "treatment",
+    "fixed_en": "areas, regions (obl.)",
+    "issue": "wrong: \"treatment\" is for इलाज"
+  },
+  {
+    "word": "इलायची",
+    "current_en": "treatment",
+    "fixed_en": "cardamom",
+    "issue": "wrong: \"treatment\" is for इलाज not इलायची"
+  },
+  {
+    "word": "इल्म",
+    "current_en": "ilm, vigyan",
+    "fixed_en": "knowledge",
+    "issue": "context-bleed: \"vigyan\" from sentence"
+  },
+  {
+    "word": "इशारे",
+    "current_en": "mahout, walked",
+    "fixed_en": "gestures, signals",
+    "issue": "context-bleed: \"mahout, walked\" from sentence"
+  },
+  {
+    "word": "इस",
+    "current_en": "please, time",
+    "fixed_en": "this (obl.)",
+    "issue": "context-bleed: \"please, time\" from sentence"
+  },
+  {
+    "word": "इसके",
+    "current_en": "besides",
+    "fixed_en": "its, of this",
+    "issue": "wrong meaning"
+  },
+  {
+    "word": "इसी",
+    "current_en": "route",
+    "fixed_en": "this very",
+    "issue": "context-bleed: \"route\" from sentence"
+  },
+  {
+    "word": "इस्त्री",
+    "current_en": "put",
+    "fixed_en": "iron (for pressing clothes)",
+    "issue": "context-bleed: \"put\" from sentence"
+  },
+  {
+    "word": "इस्पात",
+    "current_en": "stronger",
+    "fixed_en": "steel",
+    "issue": "context-bleed: \"stronger\" from sentence"
+  },
+  {
+    "word": "ईंट",
+    "current_en": "stone, wall",
+    "fixed_en": "brick",
+    "issue": "context-bleed: \"stone, wall\" - brick not stone"
+  },
+  {
+    "word": "ईंटें",
+    "current_en": "bricks, baked",
+    "fixed_en": "bricks",
+    "issue": "context-bleed: \"baked\" from sentence"
+  },
+  {
+    "word": "ईंधन",
+    "current_en": "cow",
+    "fixed_en": "fuel",
+    "issue": "totally-wrong: \"cow\" from \"cow dung fuel\" context"
+  },
+  {
+    "word": "ईमानदार",
+    "current_en": "honest, son",
+    "fixed_en": "honest",
+    "issue": "context-bleed: \"son\" from sentence"
+  },
+  {
+    "word": "ईर्ष्या",
+    "current_en": "to mind, to anyone",
+    "fixed_en": "jealousy",
+    "issue": "context-bleed: \"to mind, to anyone\" from sentence"
+  },
+  {
+    "word": "ईश्वर",
+    "current_en": "god, called",
+    "fixed_en": "God",
+    "issue": "context-bleed: \"called\" from sentence"
+  },
+  {
+    "word": "उकेरा",
+    "current_en": "canvas",
+    "fixed_en": "carved, etched (m.)",
+    "issue": "context-bleed: \"canvas\" from sentence"
+  },
+  {
+    "word": "उकेरी",
+    "current_en": "pillar",
+    "fixed_en": "carved, etched (f.)",
+    "issue": "context-bleed: \"pillar\" from sentence"
+  },
+  {
+    "word": "उखड़",
+    "current_en": "storm, uprooted",
+    "fixed_en": "uprooted",
+    "issue": "context-bleed: \"storm\" from sentence"
+  },
+  {
+    "word": "उखाड़कर",
+    "current_en": "pulled, weeds",
+    "fixed_en": "having uprooted",
+    "issue": "context-bleed: \"pulled, weeds\" from sentence"
+  },
+  {
+    "word": "उगता",
+    "current_en": "to grows, to ponds",
+    "fixed_en": "grows, rises",
+    "issue": "context-bleed: \"ponds\" from sentence"
+  },
+  {
+    "word": "उछलकूद",
+    "current_en": "drank",
+    "fixed_en": "jumping around, frolicking",
+    "issue": "totally-wrong: \"drank\" unrelated"
+  },
+  {
+    "word": "उजला",
+    "current_en": "applied, lime",
+    "fixed_en": "bright, white",
+    "issue": "context-bleed: \"applied, lime\" from sentence"
+  },
+  {
+    "word": "उजाड़",
+    "current_en": "seashore",
+    "fixed_en": "deserted, desolate",
+    "issue": "totally-wrong: \"seashore\" unrelated"
+  },
+  {
+    "word": "उठ",
+    "current_en": "heavy, lift",
+    "fixed_en": "get up (stem)",
+    "issue": "context-bleed: \"heavy, lift\" from sentence"
+  },
+  {
+    "word": "उठकर",
+    "current_en": "water, first",
+    "fixed_en": "having gotten up",
+    "issue": "context-bleed: \"water, first\" from sentence"
+  },
+  {
+    "word": "उठता",
+    "current_en": "to six",
+    "fixed_en": "gets up (m. hab.)",
+    "issue": "totally-wrong: \"to six\" from \"six o'clock\""
+  },
+  {
+    "word": "उठते",
+    "current_en": "to six",
+    "fixed_en": "get up (pl. hab.)",
+    "issue": "totally-wrong: \"to six\" from time context"
+  },
+  {
+    "word": "उठाए",
+    "current_en": "government, time",
+    "fixed_en": "raised, lifted (pl.)",
+    "issue": "context-bleed: \"government, time\""
+  },
+  {
+    "word": "उठाओ",
+    "current_en": "tongs, roti",
+    "fixed_en": "pick up (imperative)",
+    "issue": "context-bleed: \"tongs, roti\""
+  },
+  {
+    "word": "उठाकर",
+    "current_en": "palanquin, lifting",
+    "fixed_en": "having picked up",
+    "issue": "context-bleed: \"palanquin, lifting\""
+  },
+  {
+    "word": "उठाने",
+    "current_en": "garbage, needed",
+    "fixed_en": "to pick up",
+    "issue": "context-bleed: \"garbage, needed\""
+  },
+  {
+    "word": "उड़ा",
+    "current_en": "away, flying",
+    "fixed_en": "flew, blown away",
+    "issue": "context-bleed: \"away, flying\""
+  },
+  {
+    "word": "उड़ाई",
+    "current_en": "to terrace",
+    "fixed_en": "flew, made fly (f.)",
+    "issue": "context-bleed: \"to terrace\""
+  },
+  {
+    "word": "उड़ाते",
+    "current_en": "to fly, to kites",
+    "fixed_en": "fly, make fly (pl.)",
+    "issue": "context-bleed: \"kites\" from sentence"
+  },
+  {
+    "word": "उड़ाने",
+    "current_en": "wind",
+    "fixed_en": "to fly, to make fly",
+    "issue": "totally-wrong: \"wind\""
+  },
+  {
+    "word": "उतना",
+    "current_en": "to plays, to confusion",
+    "fixed_en": "that much",
+    "issue": "context-bleed: \"to plays, to confusion\""
+  },
+  {
+    "word": "उतनी",
+    "current_en": "grip",
+    "fixed_en": "that much (f.)",
+    "issue": "totally-wrong: \"grip\""
+  },
+  {
+    "word": "उतारकर",
+    "current_en": "shoes, off",
+    "fixed_en": "having taken off",
+    "issue": "context-bleed: \"shoes, off\" from sentence"
+  },
+  {
+    "word": "उतारचढ़ाव",
+    "current_en": "to take off, to remove",
+    "fixed_en": "ups and downs, fluctuations",
+    "issue": "wrong: took parent word definition"
+  },
+  {
+    "word": "उत्कृष्ट",
+    "current_en": "answer",
+    "fixed_en": "excellent, outstanding",
+    "issue": "wrong: \"answer\" from उत्तर"
+  },
+  {
+    "word": "उत्तम",
+    "current_en": "excellent, health",
+    "fixed_en": "best, excellent",
+    "issue": "context-bleed: \"health\" from sentence"
+  },
+  {
+    "word": "उत्तीर्ण",
+    "current_en": "students, passed",
+    "fixed_en": "passed (exam)",
+    "issue": "context-bleed: \"students\" from sentence"
+  },
+  {
+    "word": "उत्पादन",
+    "current_en": "answer",
+    "fixed_en": "production",
+    "issue": "wrong: \"answer\" from उत्तर confusion"
+  },
+  {
+    "word": "उत्सव",
+    "current_en": "festival, celebrated",
+    "fixed_en": "festival",
+    "issue": "context-bleed: \"celebrated\" from sentence"
+  },
+  {
+    "word": "उत्साह",
+    "current_en": "enthusiastic, filled",
+    "fixed_en": "enthusiasm",
+    "issue": "context-bleed: \"filled\" from sentence"
+  },
+  {
+    "word": "उत्साहवर्धक",
+    "current_en": "answer",
+    "fixed_en": "encouraging, motivating",
+    "issue": "wrong: \"answer\" unrelated"
+  },
+  {
+    "word": "उत्साहवर्धन",
+    "current_en": "players, encouraged",
+    "fixed_en": "encouragement, motivation",
+    "issue": "context-bleed: \"players, encouraged\""
+  },
+  {
+    "word": "उदयपुर",
+    "current_en": "bigger, udaipur",
+    "fixed_en": "Udaipur",
+    "issue": "context-bleed: \"bigger\" from sentence"
+  },
+  {
+    "word": "उदाहरण",
+    "current_en": "sad",
+    "fixed_en": "example",
+    "issue": "wrong: \"sad\" is for उदास not उदाहरण"
+  },
+  {
+    "word": "उद्गम",
+    "current_en": "river",
+    "fixed_en": "origin, source",
+    "issue": "context-bleed: \"river\" from sentence"
+  },
+  {
+    "word": "उद्घाटन",
+    "current_en": "shop, new",
+    "fixed_en": "inauguration",
+    "issue": "context-bleed: \"shop, new\" from sentence"
+  },
+  {
+    "word": "उद्धृत",
+    "current_en": "bibliography",
+    "fixed_en": "quoted, cited",
+    "issue": "wrong: \"bibliography\" partial"
+  },
+  {
+    "word": "उद्यम",
+    "current_en": "micro",
+    "fixed_en": "enterprise, effort",
+    "issue": "wrong: \"micro\" from micro-enterprise"
+  },
+  {
+    "word": "उन",
+    "current_en": "days",
+    "fixed_en": "those (obl.)",
+    "issue": "context-bleed: \"days\" from sentence"
+  },
+  {
+    "word": "उनको",
+    "current_en": "their (m)",
+    "fixed_en": "to them",
+    "issue": "wrong: \"their (m)\" wrong form"
+  },
+  {
+    "word": "उनतीस",
+    "current_en": "february",
+    "fixed_en": "twenty-nine",
+    "issue": "context-bleed: \"february\" from date"
+  },
+  {
+    "word": "उन्यासी",
+    "current_en": "broke, record",
+    "fixed_en": "seventy-nine",
+    "issue": "context-bleed: \"broke, record\""
+  },
+  {
+    "word": "उन्होंने",
+    "current_en": "to them",
+    "fixed_en": "they (erg.)",
+    "issue": "wrong: \"to them\" is oblique not ergative"
+  },
+  {
+    "word": "उपजाऊ",
+    "current_en": "soil, fertile",
+    "fixed_en": "fertile",
+    "issue": "context-bleed: \"soil\" from sentence"
+  },
+  {
+    "word": "उपदेश",
+    "current_en": "karma",
+    "fixed_en": "sermon, teaching",
+    "issue": "wrong: \"karma\" from sentence context"
+  },
+  {
+    "word": "उपन्यास",
+    "current_en": "reading, novel",
+    "fixed_en": "novel",
+    "issue": "context-bleed: \"reading\" from sentence"
+  },
+  {
+    "word": "उपन्यासकार",
+    "current_en": "novelist, wrote",
+    "fixed_en": "novelist",
+    "issue": "context-bleed: \"wrote\" from sentence"
+  },
+  {
+    "word": "उपभोक्ता",
+    "current_en": "to study, to consumer",
+    "fixed_en": "consumer",
+    "issue": "context-bleed: \"to study, to consumer\""
+  },
+  {
+    "word": "उपमा",
+    "current_en": "metaphor",
+    "fixed_en": "simile, metaphor",
+    "issue": "wrong: specifically simile not metaphor"
+  },
+  {
+    "word": "उपयोग",
+    "current_en": "useful",
+    "fixed_en": "use, usage",
+    "issue": "wrong: \"useful\" is adj, this is a noun"
+  },
+  {
+    "word": "उपयोगी",
+    "current_en": "to useful, to day",
+    "fixed_en": "useful",
+    "issue": "context-bleed: \"to day\" from sentence"
+  },
+  {
+    "word": "उपलब्ध",
+    "current_en": "vegetarian",
+    "fixed_en": "available",
+    "issue": "totally-wrong: \"vegetarian\" unrelated"
+  },
+  {
+    "word": "उपले",
+    "current_en": "cow",
+    "fixed_en": "cow dung cakes (fuel)",
+    "issue": "context-bleed: \"cow\" from sentence"
+  },
+  {
+    "word": "उपवन",
+    "current_en": "fragrance, flowers",
+    "fixed_en": "garden, grove",
+    "issue": "context-bleed: \"fragrance, flowers\""
+  },
+  {
+    "word": "उपवास",
+    "current_en": "observed, devotion",
+    "fixed_en": "fast, fasting",
+    "issue": "context-bleed: \"observed, devotion\""
+  },
+  {
+    "word": "उपसंहार",
+    "current_en": "introduction",
+    "fixed_en": "conclusion, epilogue",
+    "issue": "wrong: \"introduction\" is opposite"
+  },
+  {
+    "word": "उपस्थित",
+    "current_en": "four",
+    "fixed_en": "present, in attendance",
+    "issue": "totally-wrong: \"four\""
+  },
+  {
+    "word": "उभरता",
+    "current_en": "to comparative, to field",
+    "fixed_en": "emerging, rising",
+    "issue": "context-bleed: \"to comparative, to field\""
+  },
+  {
+    "word": "उमड़",
+    "current_en": "vishwanath",
+    "fixed_en": "surging, overflowing",
+    "issue": "wrong: \"vishwanath\" is a name"
+  },
+  {
+    "word": "उम्रक़ैद",
+    "current_en": "age",
+    "fixed_en": "life imprisonment",
+    "issue": "partial: \"age\" is from उम्र not this compound"
+  },
+  {
+    "word": "उर्वरक",
+    "current_en": "adding, fertilizer",
+    "fixed_en": "fertilizer",
+    "issue": "context-bleed: \"adding\" from sentence"
+  },
+  {
+    "word": "उर्वशी",
+    "current_en": "urvashi, completing",
+    "fixed_en": "Urvashi (name)",
+    "issue": "context-bleed: \"completing\" from sentence"
+  },
+  {
+    "word": "उलझन",
+    "current_en": "confusion, increases",
+    "fixed_en": "confusion, dilemma",
+    "issue": "context-bleed: \"increases\" from sentence"
+  },
+  {
+    "word": "उल्कापिंड",
+    "current_en": "meteoroid, burns",
+    "fixed_en": "meteoroid, meteorite",
+    "issue": "context-bleed: \"burns\" from sentence"
+  },
+  {
+    "word": "उल्टा",
+    "current_en": "sleeps, bat",
+    "fixed_en": "upside down, reverse",
+    "issue": "context-bleed: \"sleeps, bat\" from sentence"
+  },
+  {
+    "word": "उल्टी",
+    "current_en": "wind",
+    "fixed_en": "vomiting, nausea",
+    "issue": "totally-wrong: \"wind\""
+  },
+  {
+    "word": "उषा",
+    "current_en": "rays, dawn",
+    "fixed_en": "dawn",
+    "issue": "context-bleed: \"rays\" from sentence"
+  },
+  {
+    "word": "उस",
+    "current_en": "reached, raining",
+    "fixed_en": "that (obl.)",
+    "issue": "context-bleed: \"reached, raining\""
+  },
+  {
+    "word": "उसने",
+    "current_en": "say, anything",
+    "fixed_en": "he/she (erg.)",
+    "issue": "context-bleed: \"say, anything\""
+  },
+  {
+    "word": "उससे",
+    "current_en": "sweet, less",
+    "fixed_en": "from him/her",
+    "issue": "context-bleed: \"sweet, less\""
+  },
+  {
+    "word": "उसी",
+    "current_en": "needs, grow",
+    "fixed_en": "that very",
+    "issue": "context-bleed: \"needs, grow\""
+  },
+  {
+    "word": "ऊँचा",
+    "current_en": "height",
+    "fixed_en": "high, tall (m.)",
+    "issue": "wrong POS: \"height\" is noun form"
+  },
+  {
+    "word": "ऊँचाइयों",
+    "current_en": "snow, kingdom",
+    "fixed_en": "heights (obl.)",
+    "issue": "context-bleed: \"snow, kingdom\""
+  },
+  {
+    "word": "ऊँचाई",
+    "current_en": "to height, to fifty",
+    "fixed_en": "height",
+    "issue": "context-bleed: \"to fifty\" from measurement"
+  },
+  {
+    "word": "ऊँचे",
+    "current_en": "high, during",
+    "fixed_en": "high (pl./obl.)",
+    "issue": "context-bleed: \"during\" from sentence"
+  },
+  {
+    "word": "ऊँटनी",
+    "current_en": "camel, milk",
+    "fixed_en": "female camel",
+    "issue": "context-bleed: \"milk\" from sentence"
+  },
+  {
+    "word": "ऊनी",
+    "current_en": "woolen, cold",
+    "fixed_en": "woolen",
+    "issue": "context-bleed: \"cold\" from sentence"
+  },
+  {
+    "word": "ऊसर",
+    "current_en": "land",
+    "fixed_en": "barren, wasteland",
+    "issue": "too generic: \"land\""
+  },
+  {
+    "word": "ऋतु",
+    "current_en": "season, spring",
+    "fixed_en": "season",
+    "issue": "context-bleed: \"spring\" from sentence"
+  },
+  {
+    "word": "ऋषि",
+    "current_en": "sage, performed",
+    "fixed_en": "sage, seer",
+    "issue": "context-bleed: \"performed\" from sentence"
+  },
+  {
+    "word": "एकता",
+    "current_en": "to unity, to national",
+    "fixed_en": "unity",
+    "issue": "context-bleed: \"to national\" from sentence"
+  },
+  {
+    "word": "एकत्र",
+    "current_en": "one",
+    "fixed_en": "gathered, collected",
+    "issue": "wrong: \"one\" is for एक"
+  },
+  {
+    "word": "एकदूसरे",
+    "current_en": "one",
+    "fixed_en": "each other",
+    "issue": "wrong: \"one\" is for एक"
+  },
+  {
+    "word": "एकाग्रता",
+    "current_en": "to important, to concentration",
+    "fixed_en": "concentration",
+    "issue": "context-bleed: \"to important\""
+  },
+  {
+    "word": "एक्सप्रेस",
+    "current_en": "express, coaches",
+    "fixed_en": "express (train)",
+    "issue": "context-bleed: \"coaches\" from sentence"
+  },
+  {
+    "word": "एक्सरे",
+    "current_en": "one",
+    "fixed_en": "X-ray",
+    "issue": "wrong: \"one\" from एक"
+  },
+  {
+    "word": "एड़ी",
+    "current_en": "walking, difficult",
+    "fixed_en": "heel",
+    "issue": "context-bleed: \"walking, difficult\""
+  },
+  {
+    "word": "एम्पियर",
+    "current_en": "measured",
+    "fixed_en": "ampere",
+    "issue": "context-bleed: \"measured\" from sentence"
+  },
+  {
+    "word": "एयरपोर्ट",
+    "current_en": "airport, distance",
+    "fixed_en": "airport",
+    "issue": "context-bleed: \"distance\" from sentence"
+  },
+  {
+    "word": "एलर्जी",
+    "current_en": "rashes, appeared",
+    "fixed_en": "allergy",
+    "issue": "context-bleed: \"rashes, appeared\""
+  },
+  {
+    "word": "एल्युमीनियम",
+    "current_en": "better",
+    "fixed_en": "aluminium",
+    "issue": "totally-wrong: \"better\""
+  },
+  {
+    "word": "एवं",
+    "current_en": "rich, extremely",
+    "fixed_en": "and (formal)",
+    "issue": "context-bleed: \"rich, extremely\""
+  },
+  {
+    "word": "ऐतिहासिक",
+    "current_en": "historical, city",
+    "fixed_en": "historical",
+    "issue": "context-bleed: \"city\" from sentence"
+  },
+  {
+    "word": "ऑक्सीजन",
+    "current_en": "ऑक्सीजन",
+    "fixed_en": "oxygen",
+    "issue": "untranslated: Hindi script in en field"
+  },
+  {
+    "word": "ऑनलाइन",
+    "current_en": "online, ticket",
+    "fixed_en": "online",
+    "issue": "context-bleed: \"ticket\" from sentence"
+  },
+  {
+    "word": "ऑफ़िस",
+    "current_en": "train",
+    "fixed_en": "office",
+    "issue": "totally-wrong: \"train\" unrelated"
+  },
+  {
+    "word": "ओखल",
+    "current_en": "rice, extracted",
+    "fixed_en": "mortar (grinding tool)",
+    "issue": "context-bleed: \"rice, extracted\""
+  },
+  {
+    "word": "ओखली",
+    "current_en": "grind, spice",
+    "fixed_en": "mortar, pestle",
+    "issue": "context-bleed: \"grind, spice\""
+  },
+  {
+    "word": "ओज़ोन",
+    "current_en": "depletion, ozone",
+    "fixed_en": "ozone",
+    "issue": "context-bleed: \"depletion\" from sentence"
+  },
+  {
+    "word": "ओडिशा",
+    "current_en": "tourist",
+    "fixed_en": "Odisha",
+    "issue": "context-bleed: \"tourist\" from sentence"
+  },
+  {
+    "word": "ओढ़कर",
+    "current_en": "wrapped, stories",
+    "fixed_en": "having wrapped/covered",
+    "issue": "context-bleed: \"stories\" from sentence"
+  },
+  {
+    "word": "ओढ़नी",
+    "current_en": "shawl, bandhej",
+    "fixed_en": "shawl, dupatta",
+    "issue": "context-bleed: \"bandhej\" from sentence"
+  },
+  {
+    "word": "ओणम",
+    "current_en": "onam, kerala",
+    "fixed_en": "Onam (Kerala festival)",
+    "issue": "context-bleed: \"kerala\" from sentence"
+  },
+  {
+    "word": "ओम्",
+    "current_en": "om, namah",
+    "fixed_en": "Om",
+    "issue": "context-bleed: \"namah\" from mantra"
+  },
+  {
+    "word": "ओले",
+    "current_en": "crop, devastated",
+    "fixed_en": "hailstones",
+    "issue": "context-bleed: \"crop, devastated\""
+  },
+  {
+    "word": "ओस",
+    "current_en": "dewdrops, grass",
+    "fixed_en": "dew",
+    "issue": "context-bleed: \"grass\" from sentence"
+  },
+  {
+    "word": "ओसारे",
+    "current_en": "drank, tea",
+    "fixed_en": "verandah, porch",
+    "issue": "context-bleed: \"drank, tea\""
+  },
+  {
+    "word": "ओहो",
+    "current_en": "oh, re",
+    "fixed_en": "oh, wow",
+    "issue": "context-bleed: \"re\" from exclamation"
+  },
+  {
+    "word": "औज़ार",
+    "current_en": "tools, iron",
+    "fixed_en": "tools",
+    "issue": "context-bleed: \"iron\" from sentence"
+  },
+  {
+    "word": "औषधीय",
+    "current_en": "medicinal, coriander",
+    "fixed_en": "medicinal",
+    "issue": "context-bleed: \"coriander\" from sentence"
+  },
+  {
+    "word": "कंकरीट",
+    "current_en": "roof",
+    "fixed_en": "concrete",
+    "issue": "context-bleed: \"roof\" from sentence"
+  },
+  {
+    "word": "कंचनजंगा",
+    "current_en": "to kanchenjunga, to india",
+    "fixed_en": "Kanchenjunga",
+    "issue": "context-bleed: \"to india\""
+  },
+  {
+    "word": "कंचे",
+    "current_en": "to kanchenjunga, to india",
+    "fixed_en": "marbles (game)",
+    "issue": "wrong: mixed with Kanchenjunga"
+  },
+  {
+    "word": "कंजूस",
+    "current_en": "miserly, merchant",
+    "fixed_en": "miser, miserly",
+    "issue": "context-bleed: \"merchant\" from sentence"
+  },
+  {
+    "word": "कंद",
+    "current_en": "sweet",
+    "fixed_en": "tuber, bulb",
+    "issue": "wrong: \"sweet\" from sweet potato context"
+  },
+  {
+    "word": "कंधे",
+    "current_en": "south",
+    "fixed_en": "shoulders",
+    "issue": "totally-wrong: \"south\""
+  },
+  {
+    "word": "कई",
+    "current_en": "to tasks",
+    "fixed_en": "several, many",
+    "issue": "context-bleed: \"to tasks\""
+  },
+  {
+    "word": "कचरा",
+    "current_en": "garbage, put",
+    "fixed_en": "garbage, trash",
+    "issue": "context-bleed: \"put\" from sentence"
+  },
+  {
+    "word": "कचरे",
+    "current_en": "garbage, sorted",
+    "fixed_en": "garbage (obl.)",
+    "issue": "context-bleed: \"sorted\" from sentence"
+  },
+  {
+    "word": "कचहरी",
+    "current_en": "case, hearing",
+    "fixed_en": "court, courthouse",
+    "issue": "context-bleed: \"case, hearing\""
+  },
+  {
+    "word": "कचालू",
+    "current_en": "colocasia, curry",
+    "fixed_en": "colocasia",
+    "issue": "context-bleed: \"curry\" from sentence"
+  },
+  {
+    "word": "कच्ची",
+    "current_en": "raw, mud",
+    "fixed_en": "raw, unripe (f.)",
+    "issue": "context-bleed: \"mud\" from sentence"
+  },
+  {
+    "word": "कच्चे",
+    "current_en": "raw, mangoes",
+    "fixed_en": "raw, unripe (pl.)",
+    "issue": "context-bleed: \"mangoes\" from sentence"
+  },
+  {
+    "word": "कछुआ",
+    "current_en": "tortoise, reached",
+    "fixed_en": "tortoise, turtle",
+    "issue": "context-bleed: \"reached\" from story"
+  },
+  {
+    "word": "कछुए",
+    "current_en": "runs",
+    "fixed_en": "tortoises (pl.)",
+    "issue": "totally-wrong: \"runs\""
+  },
+  {
+    "word": "कट",
+    "current_en": "ticket",
+    "fixed_en": "cut (stem)",
+    "issue": "wrong: \"ticket\" unrelated"
+  },
+  {
+    "word": "कटने",
+    "current_en": "after, electric",
+    "fixed_en": "to be cut",
+    "issue": "context-bleed: \"after, electric\""
+  },
+  {
+    "word": "कटाई",
+    "current_en": "to harvest, to threshing",
+    "fixed_en": "harvesting, cutting",
+    "issue": "context-bleed: \"to threshing\""
+  },
+  {
+    "word": "कटाव",
+    "current_en": "to harvest, to threshing",
+    "fixed_en": "erosion",
+    "issue": "wrong: \"harvest, threshing\" is for कटाई"
+  },
+  {
+    "word": "कटोरा",
+    "current_en": "brass, bowl",
+    "fixed_en": "bowl",
+    "issue": "context-bleed: \"brass\" from sentence"
+  },
+  {
+    "word": "कठपुतली",
+    "current_en": "puppeteer, show",
+    "fixed_en": "puppet",
+    "issue": "context-bleed: \"puppeteer, show\""
+  },
+  {
+    "word": "कठफोड़वा",
+    "current_en": "woodpecker, pecking",
+    "fixed_en": "woodpecker",
+    "issue": "context-bleed: \"pecking\" from sentence"
+  },
+  {
+    "word": "कठिनाइयाँ",
+    "current_en": "honest",
+    "fixed_en": "difficulties",
+    "issue": "totally-wrong: \"honest\""
+  },
+  {
+    "word": "कठिनाइयों",
+    "current_en": "generations",
+    "fixed_en": "difficulties (obl.)",
+    "issue": "totally-wrong: \"generations\""
+  },
+  {
+    "word": "कड़क",
+    "current_en": "enjoyable",
+    "fixed_en": "strong, crisp",
+    "issue": "wrong: \"enjoyable\" unrelated"
+  },
+  {
+    "word": "कड़छी",
+    "current_en": "serve, lentils",
+    "fixed_en": "ladle",
+    "issue": "context-bleed: \"serve, lentils\""
+  },
+  {
+    "word": "कड़वाहट",
+    "current_en": "applying, gourd",
+    "fixed_en": "bitterness",
+    "issue": "context-bleed: \"applying, gourd\""
+  },
+  {
+    "word": "कड़वी",
+    "current_en": "bitter, bark",
+    "fixed_en": "bitter (f.)",
+    "issue": "context-bleed: \"bark\" from sentence"
+  },
+  {
+    "word": "कड़ाही",
+    "current_en": "wok, frying",
+    "fixed_en": "wok, kadahi",
+    "issue": "context-bleed: \"frying\" from sentence"
+  },
+  {
+    "word": "कड़ी",
+    "current_en": "don, gets",
+    "fixed_en": "link, chain, strict",
+    "issue": "context-bleed: \"don, gets\""
+  },
+  {
+    "word": "कड़े",
+    "current_en": "data",
+    "fixed_en": "strict (pl.), bangles",
+    "issue": "totally-wrong: \"data\""
+  },
+  {
+    "word": "कढ़ी",
+    "current_en": "add, mixture",
+    "fixed_en": "kadhi (yogurt curry)",
+    "issue": "context-bleed: \"add, mixture\""
+  },
+  {
+    "word": "कत्थक",
+    "current_en": "ankle, bells",
+    "fixed_en": "Kathak (dance)",
+    "issue": "context-bleed: \"ankle, bells\""
+  },
+  {
+    "word": "कथक",
+    "current_en": "performing",
+    "fixed_en": "Kathak (dance form)",
+    "issue": "context-bleed: \"performing\""
+  },
+  {
+    "word": "कथा",
+    "current_en": "munshi",
+    "fixed_en": "story, narrative",
+    "issue": "wrong: \"munshi\" from name"
+  },
+  {
+    "word": "कनेक्शन",
+    "current_en": "water",
+    "fixed_en": "connection",
+    "issue": "totally-wrong: \"water\""
+  },
+  {
+    "word": "कनेर",
+    "current_en": "oleander, flower",
+    "fixed_en": "oleander",
+    "issue": "context-bleed: \"flower\" from sentence"
+  },
+  {
+    "word": "कपूर",
+    "current_en": "cup",
+    "fixed_en": "camphor",
+    "issue": "wrong: \"cup\" from कप"
+  },
+  {
+    "word": "कबड्डी",
+    "current_en": "kabaddi, grandfather",
+    "fixed_en": "kabaddi",
+    "issue": "context-bleed: \"grandfather\""
+  },
+  {
+    "word": "कबीर",
+    "current_en": "kabir, gave",
+    "fixed_en": "Kabir (poet)",
+    "issue": "context-bleed: \"gave\" from sentence"
+  },
+  {
+    "word": "कब्ज़ा",
+    "current_en": "when",
+    "fixed_en": "possession, control",
+    "issue": "wrong: \"when\" is for कब"
+  },
+  {
+    "word": "कमंडल",
+    "current_en": "sage, walked",
+    "fixed_en": "water vessel (ascetic)",
+    "issue": "context-bleed: \"sage, walked\""
+  },
+  {
+    "word": "कमर",
+    "current_en": "sitting, straight",
+    "fixed_en": "waist",
+    "issue": "context-bleed: \"sitting, straight\""
+  },
+  {
+    "word": "कमरख",
+    "current_en": "fruit, star",
+    "fixed_en": "star fruit",
+    "issue": "context-bleed: \"fruit, star\" - wrong order"
+  },
+  {
+    "word": "कमल",
+    "current_en": "kamal",
+    "fixed_en": "lotus",
+    "issue": "wrong: \"kamal\" is just transliteration"
+  },
+  {
+    "word": "कमला",
+    "current_en": "kamala",
+    "fixed_en": "Kamala (name)",
+    "issue": "just transliteration"
+  },
+  {
+    "word": "कमलिनी",
+    "current_en": "less",
+    "fixed_en": "lotus pond/lotus",
+    "issue": "wrong: \"less\" is for कम"
+  },
+  {
+    "word": "कमी",
+    "current_en": "less",
+    "fixed_en": "deficiency, lack",
+    "issue": "partial: \"less\" is for कम"
+  },
+  {
+    "word": "कर",
+    "current_en": "talking, door",
+    "fixed_en": "having done, tax",
+    "issue": "context-bleed: \"talking, door\""
+  },
+  {
+    "word": "करके",
+    "current_en": "cupboard, nice",
+    "fixed_en": "by doing",
+    "issue": "context-bleed: \"cupboard, nice\""
+  },
+  {
+    "word": "करतब",
+    "current_en": "does (hab.m)",
+    "fixed_en": "feat, stunt",
+    "issue": "wrong: conflated with करता"
+  },
+  {
+    "word": "करनी",
+    "current_en": "harder, sow",
+    "fixed_en": "actions, deeds",
+    "issue": "context-bleed: \"harder, sow\""
+  },
+  {
+    "word": "करने",
+    "current_en": "tasks",
+    "fixed_en": "to do (inf. obl.)",
+    "issue": "context-bleed: \"tasks\""
+  },
+  {
+    "word": "करवा",
+    "current_en": "karva, chauth",
+    "fixed_en": "Karva (as in Karva Chauth)",
+    "issue": "context-bleed: \"chauth\""
+  },
+  {
+    "word": "करवाए",
+    "current_en": "power, attorney",
+    "fixed_en": "got done (m.pl.)",
+    "issue": "context-bleed: \"power, attorney\""
+  },
+  {
+    "word": "करवाओ",
+    "current_en": "regularly, time",
+    "fixed_en": "get done (imperative)",
+    "issue": "context-bleed: \"regularly, time\""
+  },
+  {
+    "word": "करवानी",
+    "current_en": "checkup, months",
+    "fixed_en": "to get done (f.inf.)",
+    "issue": "context-bleed: \"checkup, months\""
+  },
+  {
+    "word": "करीने",
+    "current_en": "neatly, utensils",
+    "fixed_en": "neatly, methodically",
+    "issue": "context-bleed: \"utensils\""
+  },
+  {
+    "word": "करुणा",
+    "current_en": "करुणा",
+    "fixed_en": "compassion, mercy",
+    "issue": "untranslated: Hindi in en field"
+  },
+  {
+    "word": "करोगे",
+    "current_en": "to reward, to reap",
+    "fixed_en": "will do (m.familiar)",
+    "issue": "context-bleed: \"to reward, to reap\""
+  },
+  {
+    "word": "करोड़ों",
+    "current_en": "crores, bathe",
+    "fixed_en": "crores (tens of millions)",
+    "issue": "context-bleed: \"bathe\""
+  },
+  {
+    "word": "कर्कश",
+    "current_en": "speaking, harsh",
+    "fixed_en": "harsh, grating",
+    "issue": "context-bleed: \"speaking\" from sentence"
+  },
+  {
+    "word": "कर्ज़",
+    "current_en": "upon, going",
+    "fixed_en": "debt, loan",
+    "issue": "context-bleed: \"upon, going\""
+  },
+  {
+    "word": "कर्म",
+    "current_en": "duty, yoga",
+    "fixed_en": "karma, action",
+    "issue": "context-bleed: \"yoga\" from sentence"
+  },
+  {
+    "word": "कर्मचारी",
+    "current_en": "employee, best",
+    "fixed_en": "employee",
+    "issue": "context-bleed: \"best\" from sentence"
+  },
+  {
+    "word": "कलकल",
+    "current_en": "yesterday, tomorrow",
+    "fixed_en": "gurgling, babbling (of water)",
+    "issue": "wrong: \"yesterday, tomorrow\" is for कल"
+  },
+  {
+    "word": "कलछुल",
+    "current_en": "keep, stirring",
+    "fixed_en": "ladle",
+    "issue": "context-bleed: \"keep, stirring\""
+  },
+  {
+    "word": "कलरव",
+    "current_en": "yesterday, tomorrow",
+    "fixed_en": "chirping, warbling",
+    "issue": "wrong: \"yesterday, tomorrow\" is for कल"
+  },
+  {
+    "word": "कलाई",
+    "current_en": "yesterday, tomorrow",
+    "fixed_en": "wrist",
+    "issue": "wrong: \"yesterday, tomorrow\" is for कल"
+  },
+  {
+    "word": "कलाकृति",
+    "current_en": "yesterday, tomorrow",
+    "fixed_en": "artwork",
+    "issue": "wrong: \"yesterday, tomorrow\" is for कल"
+  },
+  {
+    "word": "कलारिपयट्टु",
+    "current_en": "kalaripayattu, kerala",
+    "fixed_en": "Kalaripayattu (martial art)",
+    "issue": "context-bleed: \"kerala\""
+  },
+  {
+    "word": "कलिंग",
+    "current_en": "yesterday, tomorrow",
+    "fixed_en": "Kalinga (historical region)",
+    "issue": "wrong: \"yesterday, tomorrow\" is for कल"
+  },
+  {
+    "word": "कल्पनाशक्ति",
+    "current_en": "increases, novels",
+    "fixed_en": "imagination",
+    "issue": "context-bleed: \"increases, novels\""
+  },
+  {
+    "word": "कल्याण",
+    "current_en": "yesterday, tomorrow",
+    "fixed_en": "welfare",
+    "issue": "wrong: \"yesterday, tomorrow\" is for कल"
+  },
+  {
+    "word": "कवच",
+    "current_en": "armor, helmet",
+    "fixed_en": "armor, shield",
+    "issue": "context-bleed: \"helmet\" from sentence"
+  },
+  {
+    "word": "कवि",
+    "current_en": "poem, poet",
+    "fixed_en": "poet",
+    "issue": "context-bleed: \"poem\" from sentence (poem=कविता)"
+  },
+  {
+    "word": "कश",
+    "current_en": "filling, after",
+    "fixed_en": "puff, drag",
+    "issue": "context-bleed: \"filling, after\""
+  },
+  {
+    "word": "कश्ती",
+    "current_en": "to boat, to paper",
+    "fixed_en": "boat",
+    "issue": "context-bleed: \"paper\" from \"paper boat\""
+  },
+  {
+    "word": "कश्मीरी",
+    "current_en": "kashmiri, kahwa",
+    "fixed_en": "Kashmiri",
+    "issue": "context-bleed: \"kahwa\" from sentence"
+  },
+  {
+    "word": "कसरत",
+    "current_en": "exercised",
+    "fixed_en": "exercise",
+    "issue": "minor: \"exercised\" is verb form not noun"
+  },
+  {
+    "word": "कसो",
+    "current_en": "sand, grip",
+    "fixed_en": "tighten (imperative)",
+    "issue": "context-bleed: \"sand, grip\""
+  },
+  {
+    "word": "कस्तूरी",
+    "current_en": "musk, deer",
+    "fixed_en": "musk",
+    "issue": "context-bleed: \"deer\" from \"musk deer\""
+  },
+  {
+    "word": "कह",
+    "current_en": "right, saying",
+    "fixed_en": "say (stem)",
+    "issue": "context-bleed: \"right, saying\""
+  },
+  {
+    "word": "कहकर",
+    "current_en": "grandchildren",
+    "fixed_en": "having said",
+    "issue": "context-bleed: \"grandchildren\""
+  },
+  {
+    "word": "कहती",
+    "current_en": "to says, to grandmother",
+    "fixed_en": "says (f. hab.)",
+    "issue": "context-bleed: \"grandmother\""
+  },
+  {
+    "word": "कहते",
+    "current_en": "to called, to say",
+    "fixed_en": "say (pl. hab.)",
+    "issue": "context-bleed: \"called\" OK but \"say\" better"
+  },
+  {
+    "word": "कहलाता",
+    "current_en": "to called, to bhabhi",
+    "fixed_en": "is called (m.)",
+    "issue": "context-bleed: \"bhabhi\""
+  },
+  {
+    "word": "कहलाती",
+    "current_en": "to called, to bhabhi",
+    "fixed_en": "is called (f.)",
+    "issue": "context-bleed: \"bhabhi\""
+  },
+  {
+    "word": "कहवा",
+    "current_en": "delicious",
+    "fixed_en": "kahwa (Kashmiri tea)",
+    "issue": "wrong: \"delicious\" from sentence"
+  },
+  {
+    "word": "कहावत",
+    "current_en": "said",
+    "fixed_en": "proverb, saying",
+    "issue": "partial: \"said\" is verb form"
+  },
+  {
+    "word": "कहीं",
+    "current_en": "find, peace",
+    "fixed_en": "somewhere",
+    "issue": "context-bleed: \"find, peace\""
+  },
+  {
+    "word": "कहे",
+    "current_en": "anything, saying",
+    "fixed_en": "said (subjunctive)",
+    "issue": "context-bleed: \"anything, saying\""
+  },
+  {
+    "word": "क़तार",
+    "current_en": "travelers",
+    "fixed_en": "queue, line",
+    "issue": "wrong: \"travelers\" from sentence"
+  },
+  {
+    "word": "क़दम",
+    "current_en": "steps, surface",
+    "fixed_en": "step, footstep",
+    "issue": "context-bleed: \"surface\" from sentence"
+  },
+  {
+    "word": "क़दर",
+    "current_en": "ignorant",
+    "fixed_en": "value, worth",
+    "issue": "wrong: \"ignorant\" unrelated"
+  },
+  {
+    "word": "क़रीब",
+    "current_en": "friend",
+    "fixed_en": "near, close",
+    "issue": "wrong: \"friend\" is for दोस्त"
+  },
+  {
+    "word": "क़रीबी",
+    "current_en": "friend",
+    "fixed_en": "close, nearby",
+    "issue": "wrong: \"friend\" is for दोस्त"
+  },
+  {
+    "word": "क़िला",
+    "current_en": "fort, lane",
+    "fixed_en": "fort",
+    "issue": "context-bleed: \"lane\" from sentence"
+  },
+  {
+    "word": "क़िले",
+    "current_en": "fort, red",
+    "fixed_en": "fort (obl./pl.)",
+    "issue": "context-bleed: \"red\" from \"Red Fort\""
+  },
+  {
+    "word": "क़िस्मत",
+    "current_en": "cat",
+    "fixed_en": "fate, destiny",
+    "issue": "totally-wrong: \"cat\" unrelated"
+  },
+  {
+    "word": "क़ीमती",
+    "current_en": "to considered, to precious",
+    "fixed_en": "precious, valuable",
+    "issue": "context-bleed: \"to considered\""
+  },
+  {
+    "word": "काज",
+    "current_en": "of (m.)",
+    "fixed_en": "work, task",
+    "issue": "wrong: \"of (m.)\" is for का"
+  },
+  {
+    "word": "काजल",
+    "current_en": "kohl, blacker",
+    "fixed_en": "kohl (eye liner)",
+    "issue": "context-bleed: \"blacker\""
+  },
+  {
+    "word": "काजू",
+    "current_en": "cashew, expensive",
+    "fixed_en": "cashew",
+    "issue": "context-bleed: \"expensive\""
+  },
+  {
+    "word": "काटकर",
+    "current_en": "of (m.)",
+    "fixed_en": "having cut",
+    "issue": "wrong: \"of (m.)\" is for का"
+  },
+  {
+    "word": "काटता",
+    "current_en": "to iron, to cuts",
+    "fixed_en": "cuts (m. hab.)",
+    "issue": "context-bleed: \"iron\""
+  },
+  {
+    "word": "काटते",
+    "current_en": "of (m.)",
+    "fixed_en": "cut (pl. hab.)",
+    "issue": "wrong: \"of (m.)\" is for का"
+  },
+  {
+    "word": "काटने",
+    "current_en": "cut, together",
+    "fixed_en": "to cut",
+    "issue": "context-bleed: \"together\""
+  },
+  {
+    "word": "काटे",
+    "current_en": "short, hair",
+    "fixed_en": "cut (pl./subjunctive)",
+    "issue": "context-bleed: \"short, hair\""
+  },
+  {
+    "word": "काटोगे",
+    "current_en": "to sow",
+    "fixed_en": "will cut (familiar)",
+    "issue": "wrong: \"to sow\" from proverb"
+  },
+  {
+    "word": "काठ",
+    "current_en": "children, loved",
+    "fixed_en": "wood, timber",
+    "issue": "context-bleed: \"children, loved\""
+  },
+  {
+    "word": "काढ़ा",
+    "current_en": "of (m.)",
+    "fixed_en": "decoction",
+    "issue": "wrong: \"of (m.)\" is for का"
+  },
+  {
+    "word": "कातती",
+    "current_en": "to spin, to used",
+    "fixed_en": "spins (f. hab.)",
+    "issue": "context-bleed: \"used\""
+  },
+  {
+    "word": "कातना",
+    "current_en": "to spinning, to wheel",
+    "fixed_en": "to spin",
+    "issue": "context-bleed: \"wheel\" from \"spinning wheel\""
+  },
+  {
+    "word": "कादंबरी",
+    "current_en": "composed, banabhatta",
+    "fixed_en": "Kadambari (literary work)",
+    "issue": "context-bleed: \"banabhatta\""
+  },
+  {
+    "word": "काना",
+    "current_en": "ear",
+    "fixed_en": "one-eyed",
+    "issue": "wrong: \"ear\" is for कान"
+  },
+  {
+    "word": "कानी",
+    "current_en": "one-eyed, cow",
+    "fixed_en": "one-eyed (f.)",
+    "issue": "context-bleed: \"cow\" from proverb"
+  },
+  {
+    "word": "कार",
+    "current_en": "of (m.)",
+    "fixed_en": "car",
+    "issue": "wrong: \"of (m.)\" is for का"
+  },
+  {
+    "word": "कारवाँ",
+    "current_en": "caravan, kept",
+    "fixed_en": "caravan",
+    "issue": "context-bleed: \"kept\" from sentence"
+  },
+  {
+    "word": "कारीगर",
+    "current_en": "craftsmen, making",
+    "fixed_en": "craftsman, artisan",
+    "issue": "context-bleed: \"making\""
+  },
+  {
+    "word": "कारीगरों",
+    "current_en": "of (m.)",
+    "fixed_en": "craftsmen (obl.)",
+    "issue": "wrong: \"of (m.)\" is for का"
+  },
+  {
+    "word": "कार्ड",
+    "current_en": "grain, distributed",
+    "fixed_en": "card",
+    "issue": "context-bleed: \"grain, distributed\""
+  },
+  {
+    "word": "कार्य",
+    "current_en": "flood, relief",
+    "fixed_en": "work, task",
+    "issue": "context-bleed: \"flood, relief\""
+  },
+  {
+    "word": "कार्यक्रम",
+    "current_en": "program, participated",
+    "fixed_en": "program, event",
+    "issue": "context-bleed: \"participated\""
+  },
+  {
+    "word": "कार्यान्वयन",
+    "current_en": "of (m.)",
+    "fixed_en": "implementation",
+    "issue": "wrong: \"of (m.)\" is for का"
+  },
+  {
+    "word": "कार्यालय",
+    "current_en": "of (m.)",
+    "fixed_en": "office",
+    "issue": "wrong: \"of (m.)\" is for का"
+  },
+  {
+    "word": "कार्रवाई",
+    "current_en": "of (m.)",
+    "fixed_en": "action, proceedings",
+    "issue": "wrong: \"of (m.)\" is for का"
+  },
+  {
+    "word": "काल",
+    "current_en": "since, famous",
+    "fixed_en": "time, era",
+    "issue": "context-bleed: \"since, famous\""
+  },
+  {
+    "word": "कालिदास",
+    "current_en": "of (m.)",
+    "fixed_en": "Kalidasa (poet)",
+    "issue": "wrong: \"of (m.)\" is for का"
+  },
+  {
+    "word": "काले",
+    "current_en": "dark, clouds",
+    "fixed_en": "black (pl.)",
+    "issue": "context-bleed: \"dark, clouds\""
+  },
+  {
+    "word": "काश",
+    "current_en": "wish, known",
+    "fixed_en": "wish, if only",
+    "issue": "context-bleed: \"known\" from sentence"
+  },
+  {
+    "word": "काशी",
+    "current_en": "crowd, surged",
+    "fixed_en": "Kashi (Varanasi)",
+    "issue": "context-bleed: \"crowd, surged\""
+  },
+  {
+    "word": "किचन",
+    "current_en": "cooking, food",
+    "fixed_en": "kitchen",
+    "issue": "context-bleed: \"cooking, food\""
+  },
+  {
+    "word": "किताबें",
+    "current_en": "books, old",
+    "fixed_en": "books",
+    "issue": "context-bleed: \"old\" from sentence"
+  },
+  {
+    "word": "किनारे",
+    "current_en": "roadside, river",
+    "fixed_en": "shore, edge, bank",
+    "issue": "context-bleed: \"roadside, river\""
+  },
+  {
+    "word": "किरण",
+    "current_en": "kiran",
+    "fixed_en": "ray, beam",
+    "issue": "wrong: \"kiran\" is just transliteration"
+  },
+  {
+    "word": "किरणें",
+    "current_en": "rays, light",
+    "fixed_en": "rays",
+    "issue": "context-bleed: \"light\" from sentence"
+  },
+  {
+    "word": "किरणों",
+    "current_en": "rays, dawn",
+    "fixed_en": "rays (obl.)",
+    "issue": "context-bleed: \"dawn\" from sentence"
+  },
+  {
+    "word": "किराने",
+    "current_en": "bought, rice",
+    "fixed_en": "grocery (obl.)",
+    "issue": "context-bleed: \"bought, rice\""
+  },
+  {
+    "word": "किलकारी",
+    "current_en": "that (conjunction)",
+    "fixed_en": "baby's laughter, giggle",
+    "issue": "wrong: \"that (conjunction)\" is for कि"
+  },
+  {
+    "word": "किला",
+    "current_en": "that (conjunction)",
+    "fixed_en": "fort",
+    "issue": "wrong: \"that (conjunction)\" is for कि"
+  },
+  {
+    "word": "किले",
+    "current_en": "fort, entire",
+    "fixed_en": "forts, fort (obl.)",
+    "issue": "context-bleed: \"entire\" from sentence"
+  },
+  {
+    "word": "किलेबंदी",
+    "current_en": "enemy, path",
+    "fixed_en": "fortification",
+    "issue": "context-bleed: \"enemy, path\""
+  },
+  {
+    "word": "किलो",
+    "current_en": "kilo, half",
+    "fixed_en": "kilo",
+    "issue": "context-bleed: \"half\" from sentence"
+  },
+  {
+    "word": "किवाड़",
+    "current_en": "open, door",
+    "fixed_en": "door panel, shutter",
+    "issue": "context-bleed: \"open\" from sentence"
+  },
+  {
+    "word": "किस",
+    "current_en": "that (conjunction)",
+    "fixed_en": "which (obl.)",
+    "issue": "wrong: \"that (conjunction)\" is for कि"
+  },
+  {
+    "word": "किसकी",
+    "current_en": "that (conjunction)",
+    "fixed_en": "whose (f.)",
+    "issue": "wrong: \"that (conjunction)\" is for कि"
+  },
+  {
+    "word": "किसी",
+    "current_en": "anyone, never",
+    "fixed_en": "someone, any",
+    "issue": "context-bleed: \"never\""
+  },
+  {
+    "word": "कीचड़",
+    "current_en": "mud, wallowed",
+    "fixed_en": "mud",
+    "issue": "context-bleed: \"wallowed\""
+  },
+  {
+    "word": "कीटनाशक",
+    "current_en": "spraying, pesticide",
+    "fixed_en": "pesticide",
+    "issue": "context-bleed: \"spraying\" from sentence"
+  },
+  {
+    "word": "कीड़ा",
+    "current_en": "of (f.)",
+    "fixed_en": "insect, worm",
+    "issue": "wrong: \"of (f.)\" is for की"
+  },
+  {
+    "word": "कीड़े",
+    "current_en": "make, silkworms",
+    "fixed_en": "insects, worms",
+    "issue": "context-bleed: \"make, silkworms\""
+  },
+  {
+    "word": "कीमत",
+    "current_en": "of (f.)",
+    "fixed_en": "price, value",
+    "issue": "wrong: \"of (f.)\" is for की"
+  },
+  {
+    "word": "कीर्तिमान",
+    "current_en": "of (f.)",
+    "fixed_en": "record (achievement)",
+    "issue": "wrong: \"of (f.)\" is for की"
+  },
+  {
+    "word": "कील",
+    "current_en": "picture, wall",
+    "fixed_en": "nail (metal)",
+    "issue": "context-bleed: \"picture, wall\""
+  },
+  {
+    "word": "कुंड",
+    "current_en": "future",
+    "fixed_en": "pool, tank",
+    "issue": "wrong: \"future\" unrelated"
+  },
+  {
+    "word": "कुंडली",
+    "current_en": "future",
+    "fixed_en": "horoscope",
+    "issue": "partial: \"future\" from horoscope context"
+  },
+  {
+    "word": "कुंडी",
+    "current_en": "neighbor",
+    "fixed_en": "latch, door bolt",
+    "issue": "wrong: \"neighbor\" from sentence"
+  },
+  {
+    "word": "कुंभ",
+    "current_en": "millions, devotees",
+    "fixed_en": "Kumbh (festival)",
+    "issue": "context-bleed: \"millions, devotees\""
+  },
+  {
+    "word": "कुतरकर",
+    "current_en": "ate, carrot",
+    "fixed_en": "having nibbled",
+    "issue": "context-bleed: \"ate, carrot\""
+  },
+  {
+    "word": "कुत्ते",
+    "current_en": "to dog, to bark",
+    "fixed_en": "dogs, dog (obl.)",
+    "issue": "context-bleed: \"to bark\""
+  },
+  {
+    "word": "कुदाल",
+    "current_en": "pit, dug",
+    "fixed_en": "spade, pickaxe",
+    "issue": "context-bleed: \"pit, dug\""
+  },
+  {
+    "word": "कुप्पी",
+    "current_en": "कुप्पी",
+    "fixed_en": "small bottle, lamp",
+    "issue": "untranslated"
+  },
+  {
+    "word": "कुरकुरी",
+    "current_en": "made, snack",
+    "fixed_en": "crispy",
+    "issue": "context-bleed: \"made, snack\""
+  },
+  {
+    "word": "कुलफ़ी",
+    "current_en": "throat, cooled",
+    "fixed_en": "kulfi (Indian ice cream)",
+    "issue": "context-bleed: \"throat, cooled\""
+  },
+  {
+    "word": "कुल्फ़ी",
+    "current_en": "vermicelli, kulfi",
+    "fixed_en": "kulfi (Indian ice cream)",
+    "issue": "context-bleed: \"vermicelli\" from falooda context"
+  },
+  {
+    "word": "कुल्फ़ीवाला",
+    "current_en": "seller, kulfi",
+    "fixed_en": "kulfi seller",
+    "issue": "context-bleed: reversed order"
+  },
+  {
+    "word": "कुल्हड़",
+    "current_en": "sipping, drink",
+    "fixed_en": "clay cup",
+    "issue": "context-bleed: \"sipping, drink\""
+  },
+  {
+    "word": "कुश्ती",
+    "current_en": "well",
+    "fixed_en": "wrestling",
+    "issue": "wrong: \"well\" is for कुशल"
+  },
+  {
+    "word": "कूक",
+    "current_en": "cuckoo, call",
+    "fixed_en": "coo, call (of bird)",
+    "issue": "context-bleed: \"cuckoo\" is the bird not the sound"
+  },
+  {
+    "word": "कूकर",
+    "current_en": "lentils, cook",
+    "fixed_en": "pressure cooker",
+    "issue": "context-bleed: \"lentils, cook\""
+  },
+  {
+    "word": "कूटकर",
+    "current_en": "rice",
+    "fixed_en": "having pounded",
+    "issue": "context-bleed: \"rice\" from sentence"
+  },
+  {
+    "word": "कूटनीति",
+    "current_en": "role",
+    "fixed_en": "diplomacy",
+    "issue": "wrong: \"role\" from sentence"
+  },
+  {
+    "word": "कूड़ा",
+    "current_en": "sent",
+    "fixed_en": "garbage, trash",
+    "issue": "totally-wrong: \"sent\""
+  },
+  {
+    "word": "कूड़ेदान",
+    "current_en": "put, garbage",
+    "fixed_en": "dustbin, trash can",
+    "issue": "context-bleed: \"put, garbage\""
+  },
+  {
+    "word": "कृतघ्न",
+    "current_en": "ungrateful, disciple",
+    "fixed_en": "ungrateful",
+    "issue": "context-bleed: \"disciple\""
+  },
+  {
+    "word": "कृति",
+    "current_en": "work, famous",
+    "fixed_en": "work, creation",
+    "issue": "context-bleed: \"famous\""
+  },
+  {
+    "word": "कृत्रिम",
+    "current_en": "walking, artificial",
+    "fixed_en": "artificial",
+    "issue": "context-bleed: \"walking\""
+  },
+  {
+    "word": "कृष्ण",
+    "current_en": "krishna, shri",
+    "fixed_en": "Krishna",
+    "issue": "context-bleed: \"shri\" from honorific"
+  },
+  {
+    "word": "केंचुआ",
+    "current_en": "earthworm, makes",
+    "fixed_en": "earthworm",
+    "issue": "context-bleed: \"makes\""
+  },
+  {
+    "word": "केंद्रीय",
+    "current_en": "central, interpretation",
+    "fixed_en": "central",
+    "issue": "context-bleed: \"interpretation\""
+  },
+  {
+    "word": "केक",
+    "current_en": "cake, liked",
+    "fixed_en": "cake",
+    "issue": "context-bleed: \"liked\" from sentence"
+  },
+  {
+    "word": "केतली",
+    "current_en": "of (obl./pl.)",
+    "fixed_en": "kettle",
+    "issue": "wrong: \"of (obl./pl.)\" is for के"
+  },
+  {
+    "word": "केदारनाथ",
+    "current_en": "of (obl./pl.)",
+    "fixed_en": "Kedarnath",
+    "issue": "wrong: \"of (obl./pl.)\" is for के"
+  },
+  {
+    "word": "केबल",
+    "current_en": "went, mountain",
+    "fixed_en": "cable",
+    "issue": "context-bleed: \"went, mountain\""
+  },
+  {
+    "word": "केसर",
+    "current_en": "saffron, drinking",
+    "fixed_en": "saffron",
+    "issue": "context-bleed: \"drinking\""
+  },
+  {
+    "word": "कैनवास",
+    "current_en": "canvas, depicted",
+    "fixed_en": "canvas",
+    "issue": "context-bleed: \"depicted\""
+  },
+  {
+    "word": "कैरम",
+    "current_en": "play, carrom",
+    "fixed_en": "carrom",
+    "issue": "context-bleed: \"play\" from sentence"
+  },
+  {
+    "word": "कोकिल",
+    "current_en": "branches, singing",
+    "fixed_en": "cuckoo (literary)",
+    "issue": "context-bleed: \"branches, singing\""
+  },
+  {
+    "word": "कोकून",
+    "current_en": "to, for",
+    "fixed_en": "cocoon",
+    "issue": "wrong: \"to, for\" is for को"
+  },
+  {
+    "word": "कोठरी",
+    "current_en": "old, stuff",
+    "fixed_en": "small room, storeroom",
+    "issue": "context-bleed: \"old, stuff\""
+  },
+  {
+    "word": "कोड",
+    "current_en": "code, pin",
+    "fixed_en": "code",
+    "issue": "context-bleed: \"pin\" from \"PIN code\""
+  },
+  {
+    "word": "कोने",
+    "current_en": "to, for",
+    "fixed_en": "corners",
+    "issue": "wrong: \"to, for\" is for को"
+  },
+  {
+    "word": "कोयले",
+    "current_en": "making, coal",
+    "fixed_en": "coal",
+    "issue": "context-bleed: \"making\""
+  },
+  {
+    "word": "कोल्हू",
+    "current_en": "oil, extracted",
+    "fixed_en": "oil press",
+    "issue": "context-bleed: \"oil, extracted\""
+  },
+  {
+    "word": "कोहनी",
+    "current_en": "swelling, came",
+    "fixed_en": "elbow",
+    "issue": "context-bleed: \"swelling, came\""
+  },
+  {
+    "word": "कोहरा",
+    "current_en": "descends, fog",
+    "fixed_en": "fog",
+    "issue": "context-bleed: \"descends\""
+  },
+  {
+    "word": "कौआ",
+    "current_en": "crow, caws",
+    "fixed_en": "crow",
+    "issue": "context-bleed: \"caws\""
+  },
+  {
+    "word": "कौए",
+    "current_en": "voice",
+    "fixed_en": "crows",
+    "issue": "wrong: \"voice\" unrelated"
+  },
+  {
+    "word": "कौवे",
+    "current_en": "crow, picked",
+    "fixed_en": "crow (obl.)",
+    "issue": "context-bleed: \"picked\""
+  },
+  {
+    "word": "कौशल",
+    "current_en": "agility",
+    "fixed_en": "skill",
+    "issue": "partial: \"agility\" is one type"
+  },
+  {
+    "word": "क्यारी",
+    "current_en": "what",
+    "fixed_en": "flower bed",
+    "issue": "wrong: \"what\" is for क्या"
+  },
+  {
+    "word": "क्रांति",
+    "current_en": "makar",
+    "fixed_en": "revolution",
+    "issue": "context-bleed: \"makar\" from \"makar sankranti\""
+  },
+  {
+    "word": "क्रिकेट",
+    "current_en": "cricket, day",
+    "fixed_en": "cricket",
+    "issue": "context-bleed: \"day\""
+  },
+  {
+    "word": "क्रेन",
+    "current_en": "load, lift",
+    "fixed_en": "crane",
+    "issue": "context-bleed: \"load, lift\""
+  },
+  {
+    "word": "क्रोध",
+    "current_en": "decision, taken",
+    "fixed_en": "anger, wrath",
+    "issue": "context-bleed: \"decision, taken\""
+  },
+  {
+    "word": "क्षरण",
+    "current_en": "matter",
+    "fixed_en": "erosion, decay",
+    "issue": "wrong: \"matter\" unrelated"
+  },
+  {
+    "word": "क्षितिज",
+    "current_en": "horizon, colored",
+    "fixed_en": "horizon",
+    "issue": "context-bleed: \"colored\""
+  },
+  {
+    "word": "क्षेत्रकार्य",
+    "current_en": "cultural",
+    "fixed_en": "fieldwork",
+    "issue": "wrong: \"cultural\" unrelated"
+  },
+  {
+    "word": "क्षेत्रफल",
+    "current_en": "multiply, length",
+    "fixed_en": "area (mathematical)",
+    "issue": "context-bleed: \"multiply, length\""
+  },
+  {
+    "word": "क्षेत्रों",
+    "current_en": "rural, areas",
+    "fixed_en": "areas, regions (obl.)",
+    "issue": "context-bleed: \"rural\""
+  },
+  {
+    "word": "खंडहर",
+    "current_en": "ruins, hampi",
+    "fixed_en": "ruins",
+    "issue": "context-bleed: \"hampi\""
+  },
+  {
+    "word": "खंडहरों",
+    "current_en": "department",
+    "fixed_en": "ruins (obl.)",
+    "issue": "wrong: \"department\" unrelated"
+  },
+  {
+    "word": "खंदक",
+    "current_en": "trench, dug",
+    "fixed_en": "trench, moat",
+    "issue": "context-bleed: \"dug\""
+  },
+  {
+    "word": "खंभात",
+    "current_en": "gulf, khambhat",
+    "fixed_en": "Khambhat (place)",
+    "issue": "context-bleed: \"gulf\""
+  },
+  {
+    "word": "खंभे",
+    "current_en": "electrician, climbed",
+    "fixed_en": "pillars, poles",
+    "issue": "context-bleed: \"electrician, climbed\""
+  },
+  {
+    "word": "खगोलशास्त्री",
+    "current_en": "astronomer, observed",
+    "fixed_en": "astronomer",
+    "issue": "context-bleed: \"observed\""
+  },
+  {
+    "word": "खजुराहो",
+    "current_en": "khajuraho, temples",
+    "fixed_en": "Khajuraho",
+    "issue": "context-bleed: \"temples\""
+  },
+  {
+    "word": "खजूर",
+    "current_en": "palm, date",
+    "fixed_en": "date (fruit)",
+    "issue": "context-bleed: \"palm\""
+  },
+  {
+    "word": "खटीक",
+    "current_en": "butcher, opened",
+    "fixed_en": "butcher",
+    "issue": "context-bleed: \"opened\""
+  },
+  {
+    "word": "खटोला",
+    "current_en": "child, put",
+    "fixed_en": "small cot, cradle",
+    "issue": "context-bleed: \"child, put\""
+  },
+  {
+    "word": "खड़ी",
+    "current_en": "large, buildings",
+    "fixed_en": "standing (f.)",
+    "issue": "context-bleed: \"large, buildings\""
+  },
+  {
+    "word": "खड़े",
+    "current_en": "queue, port",
+    "fixed_en": "standing (pl.)",
+    "issue": "context-bleed: \"queue, port\""
+  },
+  {
+    "word": "खदान",
+    "current_en": "panna",
+    "fixed_en": "mine (excavation)",
+    "issue": "wrong: \"panna\" from Panna mines"
+  },
+  {
+    "word": "खपरैल",
+    "current_en": "tiles, tile-roofed",
+    "fixed_en": "tiles, roof tiles",
+    "issue": "context-bleed: \"tile-roofed\""
+  },
+  {
+    "word": "खरपतवार",
+    "current_en": "weeds, pulled",
+    "fixed_en": "weeds",
+    "issue": "context-bleed: \"pulled\""
+  },
+  {
+    "word": "खराद",
+    "current_en": "wood, shaped",
+    "fixed_en": "lathe",
+    "issue": "context-bleed: \"wood, shaped\""
+  },
+  {
+    "word": "खलिहान",
+    "current_en": "harvesting, threshing",
+    "fixed_en": "threshing floor",
+    "issue": "context-bleed: \"harvesting\""
+  },
+  {
+    "word": "ख़च्चर",
+    "current_en": "mule, carries",
+    "fixed_en": "mule",
+    "issue": "context-bleed: \"carries\""
+  },
+  {
+    "word": "ख़ड़ा",
+    "current_en": "election, upcoming",
+    "fixed_en": "standing",
+    "issue": "context-bleed: \"election, upcoming\""
+  },
+  {
+    "word": "ख़तरा",
+    "current_en": "letter",
+    "fixed_en": "danger, risk",
+    "issue": "wrong: \"letter\" is for ख़त"
+  },
+  {
+    "word": "ख़तरे",
+    "current_en": "letter",
+    "fixed_en": "dangers (pl.)",
+    "issue": "wrong: \"letter\" is for ख़त"
+  },
+  {
+    "word": "ख़मीर",
+    "current_en": "dough, rises",
+    "fixed_en": "yeast, leaven",
+    "issue": "context-bleed: \"dough, rises\""
+  },
+  {
+    "word": "ख़याल",
+    "current_en": "care, take",
+    "fixed_en": "thought, care",
+    "issue": "context-bleed: \"take\" from \"take care\""
+  },
+  {
+    "word": "ख़राब",
+    "current_en": "stairs",
+    "fixed_en": "bad, broken",
+    "issue": "totally-wrong: \"stairs\""
+  },
+  {
+    "word": "ख़रीदकर",
+    "current_en": "dozen, books",
+    "fixed_en": "having bought",
+    "issue": "context-bleed: \"dozen, books\""
+  },
+  {
+    "word": "ख़रीदता",
+    "current_en": "to fresh",
+    "fixed_en": "buys (m. hab.)",
+    "issue": "context-bleed: \"fresh\""
+  },
+  {
+    "word": "ख़रीदा",
+    "current_en": "yesterday, market",
+    "fixed_en": "bought (m.)",
+    "issue": "context-bleed: \"yesterday, market\""
+  },
+  {
+    "word": "ख़रीदारी",
+    "current_en": "saturday",
+    "fixed_en": "shopping",
+    "issue": "totally-wrong: \"saturday\""
+  },
+  {
+    "word": "ख़रीदी",
+    "current_en": "market, fish",
+    "fixed_en": "bought (f.)",
+    "issue": "context-bleed: \"market, fish\""
+  },
+  {
+    "word": "ख़रीदे",
+    "current_en": "mother, flowers",
+    "fixed_en": "bought (pl.)",
+    "issue": "context-bleed: \"mother, flowers\""
+  },
+  {
+    "word": "ख़र्च",
+    "current_en": "single, spend",
+    "fixed_en": "expense, spending",
+    "issue": "context-bleed: \"single, spend\""
+  },
+  {
+    "word": "ख़ालसा",
+    "current_en": "clan",
+    "fixed_en": "Khalsa",
+    "issue": "wrong: \"clan\" is for ख़ानदान"
+  },
+  {
+    "word": "ख़ुदा",
+    "current_en": "goodbye, god",
+    "fixed_en": "God (Urdu)",
+    "issue": "context-bleed: \"goodbye\" from \"Khuda hafiz\""
+  },
+  {
+    "word": "ख़ुशमिज़ाज",
+    "current_en": "cheerful, girl",
+    "fixed_en": "cheerful, good-natured",
+    "issue": "context-bleed: \"girl\""
+  },
+  {
+    "word": "ख़ुशियाँ",
+    "current_en": "happy",
+    "fixed_en": "joys, happiness (pl.)",
+    "issue": "partial: \"happy\" is adj form"
+  },
+  {
+    "word": "ख़ूब",
+    "current_en": "fun, lot",
+    "fixed_en": "a lot, very well",
+    "issue": "context-bleed: \"fun, lot\""
+  },
+  {
+    "word": "ख़ैर",
+    "current_en": "anyway, done",
+    "fixed_en": "anyway, well",
+    "issue": "context-bleed: \"done\" from sentence"
+  },
+  {
+    "word": "ख़ैरख़बर",
+    "current_en": "anyway, done",
+    "fixed_en": "well-being, news",
+    "issue": "context-bleed: \"done\""
+  },
+  {
+    "word": "ख़ैरियत",
+    "current_en": "everything, well",
+    "fixed_en": "well-being, safety",
+    "issue": "context-bleed: \"everything\" from sentence"
+  },
+  {
+    "word": "खा",
+    "current_en": "food, furniture",
+    "fixed_en": "eat (stem)",
+    "issue": "context-bleed: \"food, furniture\""
+  },
+  {
+    "word": "खाई",
+    "current_en": "to carrot, to north",
+    "fixed_en": "ate (f.), trench",
+    "issue": "context-bleed: \"to carrot, to north\""
+  },
+  {
+    "word": "खाएँगे",
+    "current_en": "to restaurant",
+    "fixed_en": "will eat (m.pl.)",
+    "issue": "context-bleed: \"restaurant\""
+  },
+  {
+    "word": "खाकर",
+    "current_en": "dishes, washes",
+    "fixed_en": "having eaten",
+    "issue": "context-bleed: \"dishes, washes\""
+  },
+  {
+    "word": "खाड़ी",
+    "current_en": "khambhat, gulf",
+    "fixed_en": "bay, gulf",
+    "issue": "context-bleed: \"khambhat\" from sentence"
+  },
+  {
+    "word": "खाता",
+    "current_en": "to show",
+    "fixed_en": "eats (m. hab.), account",
+    "issue": "wrong: \"to show\""
+  },
+  {
+    "word": "खाते",
+    "current_en": "to eating, to while",
+    "fixed_en": "eat (pl. hab.)",
+    "issue": "context-bleed: \"while\" from sentence"
+  },
+  {
+    "word": "खाद",
+    "current_en": "green",
+    "fixed_en": "fertilizer, manure",
+    "issue": "wrong: \"green\" from \"green manure\""
+  },
+  {
+    "word": "खाद्य",
+    "current_en": "green",
+    "fixed_en": "edible, food",
+    "issue": "wrong: \"green\" from context"
+  },
+  {
+    "word": "खाने",
+    "current_en": "eating, after",
+    "fixed_en": "food, to eat",
+    "issue": "context-bleed: \"after\""
+  },
+  {
+    "word": "खाल",
+    "current_en": "skin, rhinoceros",
+    "fixed_en": "skin, hide",
+    "issue": "context-bleed: \"rhinoceros\""
+  },
+  {
+    "word": "खिचड़ी",
+    "current_en": "porridge, sago",
+    "fixed_en": "khichdi (rice-lentil dish)",
+    "issue": "context-bleed: \"porridge, sago\""
+  },
+  {
+    "word": "खिलता",
+    "current_en": "to night, to blooms",
+    "fixed_en": "blooms (m. hab.)",
+    "issue": "context-bleed: \"night\""
+  },
+  {
+    "word": "खिलते",
+    "current_en": "to bloom, to flowers",
+    "fixed_en": "bloom (pl. hab.)",
+    "issue": "context-bleed: \"flowers\" from sentence"
+  },
+  {
+    "word": "खिला",
+    "current_en": "player",
+    "fixed_en": "bloomed, open",
+    "issue": "wrong: \"player\" is for खिलाड़ी"
+  },
+  {
+    "word": "खिलाड़ियों",
+    "current_en": "players, encouraged",
+    "fixed_en": "players (obl.)",
+    "issue": "context-bleed: \"encouraged\""
+  },
+  {
+    "word": "खिलाड़ी",
+    "current_en": "best, player",
+    "fixed_en": "player",
+    "issue": "context-bleed: \"best\" from sentence"
+  },
+  {
+    "word": "खिलाया",
+    "current_en": "to everyone",
+    "fixed_en": "fed (m.)",
+    "issue": "context-bleed: \"everyone\""
+  },
+  {
+    "word": "खिले",
+    "current_en": "flowers, bloomed",
+    "fixed_en": "bloomed (pl.)",
+    "issue": "context-bleed: \"flowers\""
+  },
+  {
+    "word": "खिलौना",
+    "current_en": "to wooden, to toy",
+    "fixed_en": "toy",
+    "issue": "context-bleed: \"wooden\""
+  },
+  {
+    "word": "खिलौने",
+    "current_en": "playing",
+    "fixed_en": "toys",
+    "issue": "wrong: \"playing\" is action not object"
+  },
+  {
+    "word": "खीचड़ी",
+    "current_en": "khichdi, offering",
+    "fixed_en": "khichdi",
+    "issue": "context-bleed: \"offering\""
+  },
+  {
+    "word": "खीर",
+    "current_en": "cook, mother",
+    "fixed_en": "kheer (milk pudding)",
+    "issue": "context-bleed: \"cook, mother\""
+  },
+  {
+    "word": "खुदवाया",
+    "current_en": "to king",
+    "fixed_en": "got dug (m.)",
+    "issue": "context-bleed: \"king\""
+  },
+  {
+    "word": "खुदाई",
+    "current_en": "to mohenjo",
+    "fixed_en": "excavation",
+    "issue": "context-bleed: \"mohenjo\""
+  },
+  {
+    "word": "खुरदरी",
+    "current_en": "खुरदरी",
+    "fixed_en": "rough, coarse",
+    "issue": "untranslated"
+  },
+  {
+    "word": "खुल",
+    "current_en": "opened, eyes",
+    "fixed_en": "open (stem)",
+    "issue": "context-bleed: \"opened, eyes\""
+  },
+  {
+    "word": "खुलती",
+    "current_en": "to morning",
+    "fixed_en": "opens (f. hab.)",
+    "issue": "context-bleed: \"morning\""
+  },
+  {
+    "word": "खुली",
+    "current_en": "enjoyable, read",
+    "fixed_en": "open (f.)",
+    "issue": "context-bleed: \"enjoyable, read\""
+  },
+  {
+    "word": "खुले",
+    "current_en": "children, flying",
+    "fixed_en": "open (pl.)",
+    "issue": "context-bleed: \"children, flying\""
+  },
+  {
+    "word": "खुलेगा",
+    "current_en": "to month, to next",
+    "fixed_en": "will open (m.)",
+    "issue": "context-bleed: \"month, next\""
+  },
+  {
+    "word": "खूँटी",
+    "current_en": "hang, cap",
+    "fixed_en": "peg, hook",
+    "issue": "context-bleed: \"hang, cap\""
+  },
+  {
+    "word": "खूँटे",
+    "current_en": "untie, goat",
+    "fixed_en": "stake, peg",
+    "issue": "context-bleed: \"untie, goat\""
+  },
+  {
+    "word": "खेती",
+    "current_en": "to farming, to done",
+    "fixed_en": "farming, agriculture",
+    "issue": "context-bleed: \"done\""
+  },
+  {
+    "word": "खेते",
+    "current_en": "to rowing, to river",
+    "fixed_en": "rowing",
+    "issue": "context-bleed: \"river\""
+  },
+  {
+    "word": "खेलता",
+    "current_en": "to well, to day",
+    "fixed_en": "plays (m. hab.)",
+    "issue": "context-bleed: \"well, day\""
+  },
+  {
+    "word": "खेलती",
+    "current_en": "to school, to days",
+    "fixed_en": "plays (f. hab.)",
+    "issue": "context-bleed: \"school, days\""
+  },
+  {
+    "word": "खेला",
+    "current_en": "played, during",
+    "fixed_en": "played (m.)",
+    "issue": "context-bleed: \"during\""
+  },
+  {
+    "word": "खोखला",
+    "current_en": "hollows",
+    "fixed_en": "hollow",
+    "issue": "partial: \"hollows\" is plural/verb"
+  },
+  {
+    "word": "खोखो",
+    "current_en": "hollows",
+    "fixed_en": "Kho Kho (game)",
+    "issue": "wrong: \"hollows\" is for खोखला"
+  },
+  {
+    "word": "खोज",
+    "current_en": "sweet",
+    "fixed_en": "search, discovery",
+    "issue": "wrong: \"sweet\" unrelated"
+  },
+  {
+    "word": "खोजी",
+    "current_en": "material",
+    "fixed_en": "searcher, investigator",
+    "issue": "wrong: \"material\" unrelated"
+  },
+  {
+    "word": "खोदकर",
+    "current_en": "dug, spade",
+    "fixed_en": "having dug",
+    "issue": "context-bleed: \"spade\""
+  },
+  {
+    "word": "खोदा",
+    "current_en": "dug, mountain",
+    "fixed_en": "dug (m.)",
+    "issue": "context-bleed: \"mountain\""
+  },
+  {
+    "word": "खोदी",
+    "current_en": "canal, dug",
+    "fixed_en": "dug (f.)",
+    "issue": "context-bleed: \"canal\""
+  },
+  {
+    "word": "खोलकर",
+    "current_en": "everyone, helped",
+    "fixed_en": "having opened",
+    "issue": "context-bleed: \"everyone, helped\""
+  },
+  {
+    "word": "खोलने",
+    "current_en": "needed, card",
+    "fixed_en": "to open",
+    "issue": "context-bleed: \"needed, card\""
+  },
+  {
+    "word": "गंगा",
+    "current_en": "to ganga",
+    "fixed_en": "Ganga (river)",
+    "issue": "garbled: \"to ganga\""
+  },
+  {
+    "word": "गंगोत्री",
+    "current_en": "ganga, river",
+    "fixed_en": "Gangotri",
+    "issue": "context-bleed: \"river\""
+  },
+  {
+    "word": "गंजे",
+    "current_en": "bald, man",
+    "fixed_en": "bald (pl.)",
+    "issue": "context-bleed: \"man\""
+  },
+  {
+    "word": "गंदे",
+    "current_en": "dirty, water",
+    "fixed_en": "dirty (pl.)",
+    "issue": "context-bleed: \"water\""
+  },
+  {
+    "word": "गंभीरता",
+    "current_en": "to seriously",
+    "fixed_en": "seriousness",
+    "issue": "garbled: \"to seriously\""
+  },
+  {
+    "word": "गईं",
+    "current_en": "opened, eyes",
+    "fixed_en": "went (f.pl.)",
+    "issue": "context-bleed: \"opened, eyes\""
+  },
+  {
+    "word": "गगरी",
+    "current_en": "half",
+    "fixed_en": "earthen pot",
+    "issue": "wrong: \"half\" unrelated"
+  },
+  {
+    "word": "गजरा",
+    "current_en": "wearing, gajra",
+    "fixed_en": "flower garland (for hair)",
+    "issue": "context-bleed: \"wearing\""
+  },
+  {
+    "word": "गड्ढा",
+    "current_en": "spade",
+    "fixed_en": "pit, pothole",
+    "issue": "wrong: \"spade\" from digging context"
+  },
+  {
+    "word": "गड्ढे",
+    "current_en": "potholes, filled",
+    "fixed_en": "pits (pl.)",
+    "issue": "context-bleed: \"potholes, filled\""
+  },
+  {
+    "word": "गड्ढों",
+    "current_en": "road",
+    "fixed_en": "pits (obl.)",
+    "issue": "wrong: \"road\" from sentence"
+  },
+  {
+    "word": "गढ़ा",
+    "current_en": "brass, bowl",
+    "fixed_en": "carved, shaped",
+    "issue": "wrong: \"brass, bowl\" from sentence"
+  },
+  {
+    "word": "गढ़ी",
+    "current_en": "engraved, stone",
+    "fixed_en": "carved (f.)",
+    "issue": "context-bleed: \"engraved, stone\""
+  },
+  {
+    "word": "गणतंत्र",
+    "current_en": "day, tableaux",
+    "fixed_en": "republic",
+    "issue": "context-bleed: \"day, tableaux\""
+  },
+  {
+    "word": "गणेश",
+    "current_en": "ganesh, chaturthi",
+    "fixed_en": "Ganesh",
+    "issue": "context-bleed: \"chaturthi\""
+  },
+  {
+    "word": "गति",
+    "current_en": "megahertz",
+    "fixed_en": "speed, velocity",
+    "issue": "wrong: \"megahertz\" from measurement context"
+  },
+  {
+    "word": "गद्य",
+    "current_en": "pay, attention",
+    "fixed_en": "prose",
+    "issue": "context-bleed: \"pay, attention\""
+  },
+  {
+    "word": "गधा",
+    "current_en": "donkey, carry",
+    "fixed_en": "donkey",
+    "issue": "context-bleed: \"carry\""
+  },
+  {
+    "word": "गधे",
+    "current_en": "donkey, traveled",
+    "fixed_en": "donkeys",
+    "issue": "context-bleed: \"traveled\""
+  },
+  {
+    "word": "गन्ने",
+    "current_en": "drinking, sugarcane",
+    "fixed_en": "sugarcane",
+    "issue": "context-bleed: \"drinking\""
+  },
+  {
+    "word": "गपशप",
+    "current_en": "chatting, sitting",
+    "fixed_en": "chat, gossip",
+    "issue": "context-bleed: \"sitting\""
+  },
+  {
+    "word": "गमछे",
+    "current_en": "wiped, face",
+    "fixed_en": "towel (gamchha)",
+    "issue": "context-bleed: \"wiped, face\""
+  },
+  {
+    "word": "गरज",
+    "current_en": "stream",
+    "fixed_en": "thunder",
+    "issue": "wrong: \"stream\" unrelated"
+  },
+  {
+    "word": "गरजती",
+    "current_en": "to stream",
+    "fixed_en": "thunders (f.)",
+    "issue": "wrong: \"stream\" unrelated"
+  },
+  {
+    "word": "गरबा",
+    "current_en": "garba, played",
+    "fixed_en": "Garba (dance)",
+    "issue": "context-bleed: \"played\""
+  },
+  {
+    "word": "गर्जना",
+    "current_en": "heat, summer",
+    "fixed_en": "roar, thunder",
+    "issue": "wrong: \"heat, summer\" is for गर्मी"
+  },
+  {
+    "word": "गर्दन",
+    "current_en": "neck, massage",
+    "fixed_en": "neck",
+    "issue": "context-bleed: \"massage\""
+  },
+  {
+    "word": "गर्भगृह",
+    "current_en": "heat, summer",
+    "fixed_en": "sanctum sanctorum",
+    "issue": "wrong: \"heat, summer\" is for गर्मी"
+  },
+  {
+    "word": "गर्मियाँ",
+    "current_en": "summers, longer",
+    "fixed_en": "summers",
+    "issue": "context-bleed: \"longer\""
+  },
+  {
+    "word": "गर्मियों",
+    "current_en": "summers, used",
+    "fixed_en": "summers (obl.)",
+    "issue": "context-bleed: \"used\""
+  },
+  {
+    "word": "गल",
+    "current_en": "next",
+    "fixed_en": "melted, dissolved",
+    "issue": "wrong: \"next\" unrelated"
+  },
+  {
+    "word": "गलियों",
+    "current_en": "carriages",
+    "fixed_en": "lanes (obl.)",
+    "issue": "wrong: \"carriages\" unrelated"
+  },
+  {
+    "word": "गवाह",
+    "current_en": "witness, gave",
+    "fixed_en": "witness",
+    "issue": "context-bleed: \"gave\""
+  },
+  {
+    "word": "गवाही",
+    "current_en": "truthful",
+    "fixed_en": "testimony",
+    "issue": "wrong: \"truthful\" is adj not noun"
+  },
+  {
+    "word": "गहन",
+    "current_en": "deep, glowing",
+    "fixed_en": "deep, intense",
+    "issue": "context-bleed: \"glowing\""
+  },
+  {
+    "word": "गहनों",
+    "current_en": "diamond, ring",
+    "fixed_en": "jewelry (obl.)",
+    "issue": "context-bleed: \"diamond, ring\""
+  },
+  {
+    "word": "गहराई",
+    "current_en": "to depth, to thirty",
+    "fixed_en": "depth",
+    "issue": "context-bleed: \"thirty\" from measurement"
+  },
+  {
+    "word": "गहरे",
+    "current_en": "big, cold",
+    "fixed_en": "deep (pl.)",
+    "issue": "context-bleed: \"big, cold\""
+  },
+  {
+    "word": "ग़ज़ल",
+    "current_en": "pain, love",
+    "fixed_en": "ghazal (poetry form)",
+    "issue": "context-bleed: \"pain, love\""
+  },
+  {
+    "word": "ग़रीबों",
+    "current_en": "scheme",
+    "fixed_en": "poor people (obl.)",
+    "issue": "wrong: \"scheme\" from government scheme"
+  },
+  {
+    "word": "ग़लती",
+    "current_en": "to mistake, to realized",
+    "fixed_en": "mistake",
+    "issue": "context-bleed: \"realized\""
+  },
+  {
+    "word": "ग़ुस्से",
+    "current_en": "slammed, door",
+    "fixed_en": "anger (obl.)",
+    "issue": "context-bleed: \"slammed, door\""
+  },
+  {
+    "word": "गा",
+    "current_en": "to song, to time",
+    "fixed_en": "sing (stem)",
+    "issue": "context-bleed: \"song, time\""
+  },
+  {
+    "word": "गाँधीजी",
+    "current_en": "spinning, wheel",
+    "fixed_en": "Gandhiji",
+    "issue": "context-bleed: \"spinning, wheel\""
+  },
+  {
+    "word": "गाँवों",
+    "current_en": "villages, staff",
+    "fixed_en": "villages (obl.)",
+    "issue": "context-bleed: \"staff\""
+  },
+  {
+    "word": "गांधीजी",
+    "current_en": "identity",
+    "fixed_en": "Gandhiji",
+    "issue": "wrong: \"identity\""
+  },
+  {
+    "word": "गाई",
+    "current_en": "to engagement",
+    "fixed_en": "sang (f.)",
+    "issue": "wrong: \"engagement\""
+  },
+  {
+    "word": "गाए",
+    "current_en": "sung, songs",
+    "fixed_en": "sang (m.pl.)",
+    "issue": "context-bleed: \"songs\""
+  },
+  {
+    "word": "गाओ",
+    "current_en": "together, song",
+    "fixed_en": "sing (imperative)",
+    "issue": "context-bleed: \"together, song\""
+  },
+  {
+    "word": "गाकर",
+    "current_en": "sleep, put",
+    "fixed_en": "having sung",
+    "issue": "context-bleed: \"sleep, put\""
+  },
+  {
+    "word": "गागर",
+    "current_en": "गागर",
+    "fixed_en": "earthen pot",
+    "issue": "untranslated"
+  },
+  {
+    "word": "गाड़ा",
+    "current_en": "car, vehicle",
+    "fixed_en": "thick, dense",
+    "issue": "wrong: \"car, vehicle\" is for गाड़ी"
+  },
+  {
+    "word": "गाड़ियाँ",
+    "current_en": "cars, high",
+    "fixed_en": "vehicles, cars",
+    "issue": "context-bleed: \"high\""
+  },
+  {
+    "word": "गाढ़ा",
+    "current_en": "thicker, milk",
+    "fixed_en": "thick, concentrated",
+    "issue": "context-bleed: \"milk\""
+  },
+  {
+    "word": "गाती",
+    "current_en": "to well",
+    "fixed_en": "sings (f. hab.)",
+    "issue": "context-bleed: \"well\""
+  },
+  {
+    "word": "गाथा",
+    "current_en": "history",
+    "fixed_en": "saga, epic",
+    "issue": "wrong: \"history\" too generic"
+  },
+  {
+    "word": "गायभैंस",
+    "current_en": "cow",
+    "fixed_en": "cows and buffaloes",
+    "issue": "partial"
+  },
+  {
+    "word": "गाया",
+    "current_en": "to sang, to tune",
+    "fixed_en": "sang (m.)",
+    "issue": "context-bleed: \"tune\""
+  },
+  {
+    "word": "गायिका",
+    "current_en": "singer, sang",
+    "fixed_en": "female singer",
+    "issue": "context-bleed: \"sang\""
+  },
+  {
+    "word": "गारा",
+    "current_en": "mixed",
+    "fixed_en": "mortar (building material)",
+    "issue": "wrong: \"mixed\" is verb"
+  },
+  {
+    "word": "गिद्ध",
+    "current_en": "vultures, verge",
+    "fixed_en": "vulture",
+    "issue": "context-bleed: \"verge\""
+  },
+  {
+    "word": "गिनते",
+    "current_en": "to summers",
+    "fixed_en": "count (pl. hab.)",
+    "issue": "wrong: \"summers\""
+  },
+  {
+    "word": "गिना",
+    "current_en": "to among",
+    "fixed_en": "counted",
+    "issue": "wrong: \"among\""
+  },
+  {
+    "word": "गिर",
+    "current_en": "fell, down",
+    "fixed_en": "fall (stem)",
+    "issue": "context-bleed: \"down\""
+  },
+  {
+    "word": "गिरगिट",
+    "current_en": "chameleon, hides",
+    "fixed_en": "chameleon",
+    "issue": "context-bleed: \"hides\""
+  },
+  {
+    "word": "गिरने",
+    "current_en": "falling, occurred",
+    "fixed_en": "to fall",
+    "issue": "context-bleed: \"occurred\""
+  },
+  {
+    "word": "गिराए",
+    "current_en": "jump, without",
+    "fixed_en": "dropped, felled",
+    "issue": "context-bleed: \"jump, without\""
+  },
+  {
+    "word": "गिरिवर",
+    "current_en": "flag, fluttering",
+    "fixed_en": "mountain",
+    "issue": "context-bleed: \"flag, fluttering\""
+  },
+  {
+    "word": "गिलहरियों",
+    "current_en": "squirrels, gathered",
+    "fixed_en": "squirrels (obl.)",
+    "issue": "context-bleed: \"gathered\""
+  },
+  {
+    "word": "गिलहरी",
+    "current_en": "squirrel, hid",
+    "fixed_en": "squirrel",
+    "issue": "context-bleed: \"hid\""
+  },
+  {
+    "word": "गिल्लीडंडा",
+    "current_en": "glass",
+    "fixed_en": "Gilli-Danda (game)",
+    "issue": "wrong: \"glass\" is for गिलास"
+  },
+  {
+    "word": "गीता",
+    "current_en": "to geeta",
+    "fixed_en": "Geeta (name/Bhagavad Gita)",
+    "issue": "garbled: \"to geeta\""
+  },
+  {
+    "word": "गीली",
+    "current_en": "risk, slipping",
+    "fixed_en": "wet (f.)",
+    "issue": "context-bleed: \"risk, slipping\""
+  },
+  {
+    "word": "गीले",
+    "current_en": "wring, out",
+    "fixed_en": "wet (pl.)",
+    "issue": "context-bleed: \"wring, out\""
+  },
+  {
+    "word": "डंक",
+    "current_en": "sting, scorpion",
+    "fixed_en": "sting",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डंडा",
+    "current_en": "gilli",
+    "fixed_en": "stick, staff",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डंडी",
+    "current_en": "weighing, handheld",
+    "fixed_en": "small stick, scale beam",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डटकर",
+    "current_en": "warrior",
+    "fixed_en": "firmly, bravely",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डफ़ली",
+    "current_en": "डफ़ली",
+    "fixed_en": "tambourine",
+    "issue": "untranslated: Hindi in en field"
+  },
+  {
+    "word": "डमरू",
+    "current_en": "damru",
+    "fixed_en": "damru (small drum)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डाकघर",
+    "current_en": "post, letter",
+    "fixed_en": "post office",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डाकिया",
+    "current_en": "to postman, to distributes",
+    "fixed_en": "postman",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डाकिये",
+    "current_en": "postman, delivered",
+    "fixed_en": "postman (obl.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डाकुओं",
+    "current_en": "bandits, set",
+    "fixed_en": "bandits (obl.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डायरी",
+    "current_en": "diary, day",
+    "fixed_en": "diary",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डाल",
+    "current_en": "book",
+    "fixed_en": "branch, put (stem)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डालकर",
+    "current_en": "boatman",
+    "fixed_en": "having put",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डालना",
+    "current_en": "to garbage, to put",
+    "fixed_en": "to put, to add",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डालने",
+    "current_en": "adding, biryani",
+    "fixed_en": "to put",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डाली",
+    "current_en": "book, entire",
+    "fixed_en": "branch, put (f.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डिग्री",
+    "current_en": "temperature",
+    "fixed_en": "degree",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डिब्बों",
+    "current_en": "train",
+    "fixed_en": "compartments (obl.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डूब",
+    "current_en": "quarter",
+    "fixed_en": "drowning, sinking",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डूबता",
+    "current_en": "to quarter",
+    "fixed_en": "sinks (m. hab.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डूबा",
+    "current_en": "lost",
+    "fixed_en": "drowned, sunk",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डेढ़",
+    "current_en": "reach, one",
+    "fixed_en": "one and a half",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डेरा",
+    "current_en": "forest",
+    "fixed_en": "camp, tent",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डोंगी",
+    "current_en": "to people, to go",
+    "fixed_en": "canoe, dugout",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डोर",
+    "current_en": "cut",
+    "fixed_en": "string, thread",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डोली",
+    "current_en": "palanquin, carried",
+    "fixed_en": "palanquin, sedan chair",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "डोसा",
+    "current_en": "dosa, griddle",
+    "fixed_en": "dosa",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ड्योढ़ी",
+    "current_en": "crossed, gateway",
+    "fixed_en": "gateway, entrance",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ड्रम",
+    "current_en": "children, marching",
+    "fixed_en": "drum",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढक",
+    "current_en": "sky, covered",
+    "fixed_en": "cover (stem)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढकना",
+    "current_en": "to covering",
+    "fixed_en": "to cover",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढकी",
+    "current_en": "kept",
+    "fixed_en": "covered (f.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढके",
+    "current_en": "white, covered",
+    "fixed_en": "covered (pl.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढक्कन",
+    "current_en": "close, lid",
+    "fixed_en": "lid, cover",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढलते",
+    "current_en": "to evening",
+    "fixed_en": "declining, setting",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढलाई",
+    "current_en": "to roof",
+    "fixed_en": "casting, molding",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढलान",
+    "current_en": "truck",
+    "fixed_en": "slope, incline",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढह",
+    "current_en": "ढह",
+    "fixed_en": "collapse",
+    "issue": "untranslated: Hindi in en field"
+  },
+  {
+    "word": "ढाई",
+    "current_en": "to work, to two",
+    "fixed_en": "two and a half",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढाबे",
+    "current_en": "eatery, available",
+    "fixed_en": "roadside eatery",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढाल",
+    "current_en": "shield, sword",
+    "fixed_en": "shield",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढिबरी",
+    "current_en": "studied, dim",
+    "fixed_en": "small oil lamp",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढूँढ़ा",
+    "current_en": "hotel, looked",
+    "fixed_en": "searched (m.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढेरी",
+    "current_en": "grain",
+    "fixed_en": "pile, heap",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढोईं",
+    "current_en": "laborer",
+    "fixed_en": "carried (f.pl.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढोता",
+    "current_en": "to mountainous",
+    "fixed_en": "carries (m. hab.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढोते",
+    "current_en": "to started",
+    "fixed_en": "carry (pl. hab.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढोल",
+    "current_en": "wedding, procession",
+    "fixed_en": "drum (dhol)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढोलक",
+    "current_en": "sang, dholak",
+    "fixed_en": "dholak (drum)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढोलनगाड़े",
+    "current_en": "wedding, procession",
+    "fixed_en": "drums and music",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ढोलनगाड़ों",
+    "current_en": "wedding, procession",
+    "fixed_en": "drums and music (obl.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तंत्र",
+    "current_en": "day",
+    "fixed_en": "system, mechanism",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तंदूर",
+    "current_en": "made",
+    "fixed_en": "tandoor (clay oven)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तंदूरी",
+    "current_en": "made",
+    "fixed_en": "tandoori",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तकनीक",
+    "current_en": "technology, new",
+    "fixed_en": "technique, technology",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तकिए",
+    "current_en": "until, up to",
+    "fixed_en": "pillow (obl.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तकिये",
+    "current_en": "head, placing",
+    "fixed_en": "pillows",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तख़्त",
+    "current_en": "slept, laying",
+    "fixed_en": "wooden bed, throne",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तट",
+    "current_en": "scattered, seashore",
+    "fixed_en": "shore, coast",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तड़का",
+    "current_en": "cumin",
+    "fixed_en": "tempering (spices)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तड़के",
+    "current_en": "asafoetida",
+    "fixed_en": "tempering (obl.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तत्वों",
+    "current_en": "full, pod",
+    "fixed_en": "elements (obl.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तनख़्वाह",
+    "current_en": "month",
+    "fixed_en": "salary",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तनाव",
+    "current_en": "reduce, meditation",
+    "fixed_en": "stress, tension",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तने",
+    "current_en": "time",
+    "fixed_en": "trunks (tree)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तपस्या",
+    "current_en": "to penance",
+    "fixed_en": "penance, austerity",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तपोवन",
+    "current_en": "penance",
+    "fixed_en": "hermitage grove",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तबलची",
+    "current_en": "tabla, player",
+    "fixed_en": "tabla player",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तबले",
+    "current_en": "play, teen",
+    "fixed_en": "tabla (obl.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तबाह",
+    "current_en": "then",
+    "fixed_en": "destroyed, ruined",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तबाही",
+    "current_en": "havoc, fields",
+    "fixed_en": "destruction, havoc",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तबीयत",
+    "current_en": "health, brother",
+    "fixed_en": "health, disposition",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तभी",
+    "current_en": "got, news",
+    "fixed_en": "just then, at that moment",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तमग़ा",
+    "current_en": "competition",
+    "fixed_en": "medal",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तमाशा",
+    "current_en": "tamasha, maharashtra",
+    "fixed_en": "spectacle, tamasha",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तमिलनाडु",
+    "current_en": "harvest",
+    "fixed_en": "Tamil Nadu",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तरंगों",
+    "current_en": "measured",
+    "fixed_en": "waves (obl.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तरबूज़",
+    "current_en": "smaller",
+    "fixed_en": "watermelon",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तरल",
+    "current_en": "water",
+    "fixed_en": "liquid",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तराई",
+    "current_en": "to paddy, to grown",
+    "fixed_en": "Terai (plains)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तराज़ू",
+    "current_en": "shopkeeper",
+    "fixed_en": "weighing scale",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तराना",
+    "current_en": "to tarana, to classical",
+    "fixed_en": "tarana (musical form)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तराशकर",
+    "current_en": "elephant, stone",
+    "fixed_en": "having carved/sculpted",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तरुओं",
+    "current_en": "cuckoo, singing",
+    "fixed_en": "trees (obl.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तरुण",
+    "current_en": "tarun",
+    "fixed_en": "young man",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तर्कशास्त्र",
+    "current_en": "highest",
+    "fixed_en": "logic",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तल",
+    "current_en": "thin",
+    "fixed_en": "bottom, floor",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तलकर",
+    "current_en": "out",
+    "fixed_en": "having fried",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तलवारबाज़ी",
+    "current_en": "fencing, requires",
+    "fixed_en": "fencing, swordsmanship",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तले",
+    "current_en": "summer",
+    "fixed_en": "under, beneath",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तलो",
+    "current_en": "flame",
+    "fixed_en": "fry (imperative)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तवायफ़",
+    "current_en": "courtesan, presented",
+    "fixed_en": "courtesan",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तवे",
+    "current_en": "spread, griddle",
+    "fixed_en": "griddle, tawa",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तशरीफ़",
+    "current_en": "seated, please",
+    "fixed_en": "please (be seated)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तसले",
+    "current_en": "mortar, mixed",
+    "fixed_en": "mixing trough",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तह",
+    "current_en": "surface",
+    "fixed_en": "layer, fold",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताँत",
+    "current_en": "noose, placed",
+    "fixed_en": "thread, string",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताँबे",
+    "current_en": "copper, drinking",
+    "fixed_en": "copper",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तांगे",
+    "current_en": "to tonga, to old",
+    "fixed_en": "tonga (horse carriage)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तांबा",
+    "current_en": "copper, better",
+    "fixed_en": "copper",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तांबे",
+    "current_en": "cook, lentils",
+    "fixed_en": "copper (obl.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताई",
+    "current_en": "to twenty",
+    "fixed_en": "father's elder brother's wife",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताऊ",
+    "current_en": "uncle, used",
+    "fixed_en": "father's elder brother",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताऊजी",
+    "current_en": "father, elder",
+    "fixed_en": "father's elder brother (respectful)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताक",
+    "current_en": "so that",
+    "fixed_en": "niche, shelf",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताक़तवर",
+    "current_en": "strength, power",
+    "fixed_en": "powerful, strong",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताख",
+    "current_en": "statue, kept",
+    "fixed_en": "wall shelf, niche",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताजमहल",
+    "current_en": "taj, mahal",
+    "fixed_en": "Taj Mahal",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताज़गी",
+    "current_en": "fresh",
+    "fixed_en": "freshness",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताज़ी",
+    "current_en": "fresh, outside",
+    "fixed_en": "fresh (f.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताज़े",
+    "current_en": "fresh, coconut",
+    "fixed_en": "fresh (pl.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताड़",
+    "current_en": "toddy, mountain",
+    "fixed_en": "palm tree",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताड़ी",
+    "current_en": "palm, extracted",
+    "fixed_en": "toddy (palm wine)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तानकर",
+    "current_en": "decorated, marquee",
+    "fixed_en": "having stretched",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तानपूरे",
+    "current_en": "tanpura, note",
+    "fixed_en": "tanpura",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तानेबाने",
+    "current_en": "decorated, marquee",
+    "fixed_en": "warp and weft",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तार",
+    "current_en": "wire, stringed",
+    "fixed_en": "wire, string",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताराकार",
+    "current_en": "fruit, star",
+    "fixed_en": "star-shaped",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तारामंडल",
+    "current_en": "star",
+    "fixed_en": "constellation",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तारीख़",
+    "current_en": "today, date",
+    "fixed_en": "date",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तारीफ़",
+    "current_en": "praised, film",
+    "fixed_en": "praise, compliment",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताल",
+    "current_en": "tabla, coming",
+    "fixed_en": "rhythm, beat",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तालाब",
+    "current_en": "pond, lotus",
+    "fixed_en": "pond",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तालियाँ",
+    "current_en": "lock",
+    "fixed_en": "claps, applause",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताली",
+    "current_en": "lock",
+    "fixed_en": "clap",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "ताश",
+    "current_en": "cards, evening",
+    "fixed_en": "playing cards",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तितलियाँ",
+    "current_en": "fly",
+    "fixed_en": "butterflies",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तितली",
+    "current_en": "butterfly, flowers",
+    "fixed_en": "butterfly",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तिनका",
+    "current_en": "caught",
+    "fixed_en": "straw, twig",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तिब्बत",
+    "current_en": "yak",
+    "fixed_en": "Tibet",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तिरंगा",
+    "current_en": "to procession",
+    "fixed_en": "tricolor (Indian flag)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तिरानवे",
+    "current_en": "ninety-three, percent",
+    "fixed_en": "ninety-three",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तिराहे",
+    "current_en": "turn, right",
+    "fixed_en": "T-junction, three-way intersection",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तिलक",
+    "current_en": "applying, tilak",
+    "fixed_en": "tilak (forehead mark)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तिलहन",
+    "current_en": "cheaper",
+    "fixed_en": "oilseed",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तिहत्तर",
+    "current_en": "electricity, provided",
+    "fixed_en": "seventy-three",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तीनों",
+    "current_en": "three, navy",
+    "fixed_en": "all three",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तीरंदाज़",
+    "current_en": "archer, hit",
+    "fixed_en": "archer",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तीरंदाज़ी",
+    "current_en": "concentration, important",
+    "fixed_en": "archery",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तीरकमान",
+    "current_en": "arrow",
+    "fixed_en": "bow and arrow",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तीर्थ",
+    "current_en": "pilgrimage, place",
+    "fixed_en": "pilgrimage place",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तीर्थंकर",
+    "current_en": "tirthankaras, considered",
+    "fixed_en": "Tirthankar",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तीर्थयात्री",
+    "current_en": "pilgrim, bathed",
+    "fixed_en": "pilgrim",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तीसरे",
+    "current_en": "third, day",
+    "fixed_en": "third (obl.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तुमने",
+    "current_en": "done, worked",
+    "fixed_en": "you (erg.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तुलना",
+    "current_en": "to comparative",
+    "fixed_en": "comparison",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "तुलनात्मक",
+    "current_en": "comparative, study",
+    "fixed_en": "comparative",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "शुद्धता",
+    "current_en": "to checked",
+    "fixed_en": "purity, accuracy",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "वसूल",
+    "current_en": "farmers",
+    "fixed_en": "collect, recover",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "लू",
+    "current_en": "bear",
+    "fixed_en": "hot wind, heatstroke",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "लुभाता",
+    "current_en": "to lot",
+    "fixed_en": "attracts, entices",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "सुरक्षा",
+    "current_en": "crop",
+    "fixed_en": "security, safety",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "सूखने",
+    "current_en": "balcony",
+    "fixed_en": "to dry",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "सौम्य",
+    "current_en": "hundred",
+    "fixed_en": "gentle, mild",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "सौरमंडल",
+    "current_en": "hundred",
+    "fixed_en": "solar system",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "बनती",
+    "current_en": "to made",
+    "fixed_en": "is made (f.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "सुबहशाम",
+    "current_en": "morning",
+    "fixed_en": "morning and evening",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "सुबहसुबह",
+    "current_en": "morning",
+    "fixed_en": "early morning",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "लेख",
+    "current_en": "writer",
+    "fixed_en": "article, essay",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "भरते",
+    "current_en": "to water",
+    "fixed_en": "fill (pl. hab.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "लपेटकर",
+    "current_en": "top",
+    "fixed_en": "having wrapped",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "स्मारक",
+    "current_en": "mahal",
+    "fixed_en": "memorial, monument",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "मुंबई",
+    "current_en": "to mumbai",
+    "fixed_en": "Mumbai",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "सॉफ़्टवेयर",
+    "current_en": "america",
+    "fixed_en": "software",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "जनक",
+    "current_en": "munshi",
+    "fixed_en": "father, creator",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "मुक़ाबला",
+    "current_en": "warrior",
+    "fixed_en": "competition, match",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "पृष्ठभूमि",
+    "current_en": "discuss",
+    "fixed_en": "background",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "व्यस्त",
+    "current_en": "remain",
+    "fixed_en": "busy",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "खुलता",
+    "current_en": "open (m)",
+    "fixed_en": "opens (m.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "मानी",
+    "current_en": "considered",
+    "fixed_en": "accepted, believed",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "बजी",
+    "current_en": "played (instrument m)",
+    "fixed_en": "rang, played (f.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "बजाईं",
+    "current_en": "played (instrument m)",
+    "fixed_en": "played (f.pl.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "रहेगी",
+    "current_en": "will remain (f)",
+    "fixed_en": "will remain (f.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "पिएँगे",
+    "current_en": "will drink (pl.)",
+    "fixed_en": "will drink (m.pl.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "लदा",
+    "current_en": "gulmohar",
+    "fixed_en": "loaded",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "सीमा",
+    "current_en": "seema",
+    "fixed_en": "Seema (name) / boundary, limit",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "रेखा",
+    "current_en": "rekha",
+    "fixed_en": "Rekha (name) / line",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "सुषमा",
+    "current_en": "sushma",
+    "fixed_en": "Sushma (name)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "सुनीता",
+    "current_en": "to sunita",
+    "fixed_en": "Sunita (name)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "भरतमुनि",
+    "current_en": "written",
+    "fixed_en": "Bharat Muni (sage)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "सुचारू",
+    "current_en": "flow",
+    "fixed_en": "smooth, efficient",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "सुनाता",
+    "current_en": "heard",
+    "fixed_en": "narrates, tells (m.)",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "सूप",
+    "current_en": "hot",
+    "fixed_en": "winnow, soup",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "सुकूनदेह",
+    "current_en": "hot",
+    "fixed_en": "peaceful, comforting",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "लिपे",
+    "current_en": "cow",
+    "fixed_en": "plastered, coated",
+    "issue": "context-bleed"
+  },
+  {
+    "word": "काँपते",
+    "current_en": "of (m.)",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"of (m.)\" definition meant for का"
+  },
+  {
+    "word": "काँवकाँव",
+    "current_en": "of (m.)",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"of (m.)\" definition meant for का"
+  },
+  {
+    "word": "कूल्लूमनाली",
+    "current_en": "कूल्लूमनाली",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "घाघराचोली",
+    "current_en": "घाघराचोली",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "चिर्रचिर्र",
+    "current_en": "चिर्रचिर्र",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "ज़लज़ले",
+    "current_en": "ज़लज़ले",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "टेढ़ा",
+    "current_en": "टेढ़ा",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "दिग्दिगंत",
+    "current_en": "दिग्दिगंत",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "दुबलापतला",
+    "current_en": "दुबलापतला",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "नातीनातिन",
+    "current_en": "नातीनातिन",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "परंपराओं",
+    "current_en": "on, at",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"on, at\" definition meant for पर"
+  },
+  {
+    "word": "परत",
+    "current_en": "on, at",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"on, at\" definition meant for पर"
+  },
+  {
+    "word": "परतें",
+    "current_en": "on, at",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"on, at\" definition meant for पर"
+  },
+  {
+    "word": "परवाह",
+    "current_en": "on, at",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"on, at\" definition meant for पर"
+  },
+  {
+    "word": "परहेज़",
+    "current_en": "on, at",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"on, at\" definition meant for पर"
+  },
+  {
+    "word": "परांठे",
+    "current_en": "on, at",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"on, at\" definition meant for पर"
+  },
+  {
+    "word": "परिणाम",
+    "current_en": "on, at",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"on, at\" definition meant for पर"
+  },
+  {
+    "word": "परिणामों",
+    "current_en": "on, at",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"on, at\" definition meant for पर"
+  },
+  {
+    "word": "परिवर्तन",
+    "current_en": "on, at",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"on, at\" definition meant for पर"
+  },
+  {
+    "word": "परिश्रम",
+    "current_en": "on, at",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"on, at\" definition meant for पर"
+  },
+  {
+    "word": "परीक्षण",
+    "current_en": "on, at",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"on, at\" definition meant for पर"
+  },
+  {
+    "word": "परोसा",
+    "current_en": "on, at",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"on, at\" definition meant for पर"
+  },
+  {
+    "word": "पर्दे",
+    "current_en": "on, at",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"on, at\" definition meant for पर"
+  },
+  {
+    "word": "पर्यटकों",
+    "current_en": "on, at",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"on, at\" definition meant for पर"
+  },
+  {
+    "word": "पर्यटन",
+    "current_en": "on, at",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"on, at\" definition meant for पर"
+  },
+  {
+    "word": "पर्व",
+    "current_en": "on, at",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"on, at\" definition meant for पर"
+  },
+  {
+    "word": "पर्वतारोही",
+    "current_en": "on, at",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"on, at\" definition meant for पर"
+  },
+  {
+    "word": "पीहूपीहू",
+    "current_en": "पीहूपीहू",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "पोतेपोतियाँ",
+    "current_en": "पोतेपोतियाँ",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "फ़तेह",
+    "current_en": "फ़तेह",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "फिटनेस",
+    "current_en": "फिटनेस",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "मदारी",
+    "current_en": "मदारी",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "मल्लयुद्ध",
+    "current_en": "मल्लयुद्ध",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "रँगाईछपाई",
+    "current_en": "रँगाईछपाई",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "लाड़प्यार",
+    "current_en": "लाड़प्यार",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "वनस्पतियाँ",
+    "current_en": "वनस्पतियाँ",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "वनों",
+    "current_en": "वनों",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "सूफ़ी",
+    "current_en": "सूफ़ी",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "सेंक",
+    "current_en": "from, with, by",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"from, with, by\" definition meant for से"
+  },
+  {
+    "word": "सेंकती",
+    "current_en": "from, with, by",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"from, with, by\" definition meant for से"
+  },
+  {
+    "word": "सेंको",
+    "current_en": "from, with, by",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"from, with, by\" definition meant for से"
+  },
+  {
+    "word": "सेंधा",
+    "current_en": "from, with, by",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"from, with, by\" definition meant for से"
+  },
+  {
+    "word": "सेठ",
+    "current_en": "from, with, by",
+    "fixed_en": null,
+    "issue": "wrong: got postposition \"from, with, by\" definition meant for से"
+  },
+  {
+    "word": "इर्द",
+    "current_en": "around (in इर्द-गिर्द)",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "गिर्द",
+    "current_en": "around (in इर्द-गिर्द)",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "बूँदा",
+    "current_en": "drizzle (in बूँदा-बाँदी)",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "बाँदी",
+    "current_en": "drizzle (in बूँदा-बाँदी)",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "बट्टे",
+    "current_en": "bundles; divisor (in बट्टे खाता)",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  },
+  {
+    "word": "दिग्",
+    "current_en": "direction (prefix, as in दिगंत)",
+    "fixed_en": null,
+    "issue": "untranslated: en field contains Devanagari"
+  }
+]

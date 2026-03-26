@@ -1,0 +1,1616 @@
+{
+  "total": 3933,
+  "flagged": [
+    {
+      "id": "ru-0282",
+      "category": "MISMATCH",
+      "target": "Я люблю свою семью.",
+      "english": "I love their family.",
+      "reason": "свою = my (reflexive possessive), not 'their'. Should be 'I love my family.'"
+    },
+    {
+      "id": "ru-0284",
+      "category": "MISMATCH",
+      "target": "Она любит свою семью.",
+      "english": "She loves their family.",
+      "reason": "свою = her own (reflexive), not 'their'. Should be 'She loves her family.'"
+    },
+    {
+      "id": "ru-0285",
+      "category": "MISMATCH",
+      "target": "Мы любим свою семью.",
+      "english": "We love their family.",
+      "reason": "свою = our own (reflexive), not 'their'. Should be 'We love our family.'"
+    },
+    {
+      "id": "ru-0385",
+      "category": "AWKWARD",
+      "target": "Сильный стол стоит на углу.",
+      "english": "The strong table stands on the corner.",
+      "reason": "Сильный (strong) is not used for inanimate objects like tables. Should be крепкий/прочный."
+    },
+    {
+      "id": "ru-0386",
+      "category": "AWKWARD",
+      "target": "Сильное море выглядит прекрасно.",
+      "english": "The strong sea looks wonderful.",
+      "reason": "Сильный applied to sea is unnatural. Use бурное/мощное."
+    },
+    {
+      "id": "ru-0387",
+      "category": "AWKWARD",
+      "target": "Сильная машина едет быстро.",
+      "english": "The strong car drives fast.",
+      "reason": "Сильный for a car is unnatural. Use мощная."
+    },
+    {
+      "id": "ru-0389",
+      "category": "AWKWARD",
+      "target": "Умный стол стоит на углу.",
+      "english": "The smart table stands on the corner.",
+      "reason": "Tables cannot be smart. Nonsensical adjective+noun combo."
+    },
+    {
+      "id": "ru-0390",
+      "category": "AWKWARD",
+      "target": "Умное море выглядит прекрасно.",
+      "english": "The smart sea looks wonderful.",
+      "reason": "Sea cannot be smart. Nonsensical adjective+noun combo."
+    },
+    {
+      "id": "ru-0391",
+      "category": "AWKWARD",
+      "target": "Умная машина едет быстро.",
+      "english": "The smart car drives fast.",
+      "reason": "Borderline acceptable but awkward template output."
+    },
+    {
+      "id": "ru-0393",
+      "category": "AWKWARD",
+      "target": "Добрый стол стоит на углу.",
+      "english": "The kind table stands on the corner.",
+      "reason": "Tables cannot be kind. Nonsensical adjective+noun combo."
+    },
+    {
+      "id": "ru-0394",
+      "category": "AWKWARD",
+      "target": "Доброе море выглядит прекрасно.",
+      "english": "The kind sea looks wonderful.",
+      "reason": "Sea cannot be kind. Nonsensical adjective+noun combo."
+    },
+    {
+      "id": "ru-0395",
+      "category": "AWKWARD",
+      "target": "Добрая машина едет быстро.",
+      "english": "The kind car drives fast.",
+      "reason": "Cars cannot be kind. Nonsensical adjective+noun combo."
+    },
+    {
+      "id": "ru-0397",
+      "category": "AWKWARD",
+      "target": "Весёлый стол стоит на углу.",
+      "english": "The cheerful table stands on the corner.",
+      "reason": "Tables cannot be cheerful. Nonsensical adjective+noun combo."
+    },
+    {
+      "id": "ru-0398",
+      "category": "AWKWARD",
+      "target": "Весёлое море выглядит прекрасно.",
+      "english": "The cheerful sea looks wonderful.",
+      "reason": "Sea cannot be cheerful. Nonsensical adjective+noun combo."
+    },
+    {
+      "id": "ru-0399",
+      "category": "AWKWARD",
+      "target": "Весёлая машина едет быстро.",
+      "english": "The cheerful car drives fast.",
+      "reason": "Cars cannot be cheerful. Nonsensical adjective+noun combo."
+    },
+    {
+      "id": "ru-0401",
+      "category": "AWKWARD",
+      "target": "Молодой стол стоит на углу.",
+      "english": "The young table stands on the corner.",
+      "reason": "Tables cannot be young. Nonsensical adjective+noun combo."
+    },
+    {
+      "id": "ru-0402",
+      "category": "AWKWARD",
+      "target": "Молодое море выглядит прекрасно.",
+      "english": "The young sea looks wonderful.",
+      "reason": "Nonsensical adjective+noun combo."
+    },
+    {
+      "id": "ru-0405",
+      "category": "AWKWARD",
+      "target": "Старый стол стоит на углу.",
+      "english": "The old table stands on the corner.",
+      "reason": "Acceptable but repetitive template output - flagging cluster."
+    },
+    {
+      "id": "ru-0409",
+      "category": "AWKWARD",
+      "target": "Тихий стол стоит на углу.",
+      "english": "The quiet table stands on the corner.",
+      "reason": "Tables cannot be quiet in Russian (тихий = personality trait)."
+    },
+    {
+      "id": "ru-0410",
+      "category": "AWKWARD",
+      "target": "Тихое море выглядит прекрасно.",
+      "english": "The quiet sea looks wonderful.",
+      "reason": "Borderline - тихое море exists but forced template."
+    },
+    {
+      "id": "ru-0413",
+      "category": "AWKWARD",
+      "target": "Грустный стол стоит на углу.",
+      "english": "The sad table stands on the corner.",
+      "reason": "Tables cannot be sad. Nonsensical adjective+noun combo."
+    },
+    {
+      "id": "ru-0756",
+      "category": "AWKWARD",
+      "target": "Она приготовила ужин утром.",
+      "english": "She cooked dinner in the morning.",
+      "reason": "Cooking dinner in the morning is very unusual and unnatural."
+    },
+    {
+      "id": "ru-0777",
+      "category": "AWKWARD",
+      "target": "Она приготовила ужин утром.",
+      "english": "She cooked dinner in the morning.",
+      "reason": "Duplicate of ru-0756 pattern. Dinner in the morning is unnatural."
+    },
+    {
+      "id": "ru-0849",
+      "category": "AWKWARD",
+      "target": "Она читала часто задачу.",
+      "english": "She often read the problem.",
+      "reason": "Unnatural word order. Should be 'Она часто читала задачу'."
+    },
+    {
+      "id": "ru-0850",
+      "category": "AWKWARD",
+      "target": "Он читал часто задачу.",
+      "english": "He often read the problem.",
+      "reason": "Unnatural word order. Should be 'Он часто читал задачу'."
+    },
+    {
+      "id": "ru-0851",
+      "category": "AWKWARD",
+      "target": "Мы читали часто задачу.",
+      "english": "We often read the problem.",
+      "reason": "Unnatural word order. Should be 'Мы часто читали задачу'."
+    },
+    {
+      "id": "ru-0852",
+      "category": "AWKWARD",
+      "target": "Они читали часто задачу.",
+      "english": "They often read the problem.",
+      "reason": "Unnatural word order. Should be 'Они часто читали задачу'."
+    },
+    {
+      "id": "ru-0853",
+      "category": "AWKWARD",
+      "target": "Я читала часто задачу.",
+      "english": "I (f) often read the problem.",
+      "reason": "Unnatural word order. Should be 'Я часто читала задачу'."
+    },
+    {
+      "id": "ru-0854",
+      "category": "AWKWARD",
+      "target": "Я читал часто задачу.",
+      "english": "I (m) often read the problem.",
+      "reason": "Unnatural word order. Should be 'Я часто читал задачу'."
+    },
+    {
+      "id": "ru-0855",
+      "category": "AWKWARD",
+      "target": "Она писала часто письмо.",
+      "english": "She often wrote a letter.",
+      "reason": "Unnatural word order. Should be 'Она часто писала письмо'."
+    },
+    {
+      "id": "ru-0856",
+      "category": "AWKWARD",
+      "target": "Он писал часто письмо.",
+      "english": "He often wrote a letter.",
+      "reason": "Unnatural word order. Should be 'Он часто писал письмо'."
+    },
+    {
+      "id": "ru-0857",
+      "category": "AWKWARD",
+      "target": "Мы писали часто письмо.",
+      "english": "We often wrote a letter.",
+      "reason": "Unnatural word order. Should be 'Мы часто писали письмо'."
+    },
+    {
+      "id": "ru-0858",
+      "category": "AWKWARD",
+      "target": "Они писали часто письмо.",
+      "english": "They often wrote a letter.",
+      "reason": "Unnatural word order. Should be 'Они часто писали письмо'."
+    },
+    {
+      "id": "ru-0859",
+      "category": "AWKWARD",
+      "target": "Я писала часто письмо.",
+      "english": "I (f) often wrote a letter.",
+      "reason": "Unnatural word order. Should be 'Я часто писала письмо'."
+    },
+    {
+      "id": "ru-0860",
+      "category": "AWKWARD",
+      "target": "Я писал часто письмо.",
+      "english": "I (m) often wrote a letter.",
+      "reason": "Unnatural word order. Should be 'Я часто писал письмо'."
+    },
+    {
+      "id": "ru-0861",
+      "category": "AWKWARD",
+      "target": "Она смотрела часто фильм.",
+      "english": "She often watched a movie.",
+      "reason": "Unnatural word order. Should be 'Она часто смотрела фильм'."
+    },
+    {
+      "id": "ru-0862",
+      "category": "AWKWARD",
+      "target": "Он смотрел часто фильм.",
+      "english": "He often watched a movie.",
+      "reason": "Unnatural word order. Should be 'Он часто смотрел фильм'."
+    },
+    {
+      "id": "ru-0863",
+      "category": "AWKWARD",
+      "target": "Мы смотрели часто фильм.",
+      "english": "We often watched a movie.",
+      "reason": "Unnatural word order. Should be 'Мы часто смотрели фильм'."
+    },
+    {
+      "id": "ru-0864",
+      "category": "AWKWARD",
+      "target": "Они смотрели часто фильм.",
+      "english": "They often watched a movie.",
+      "reason": "Unnatural word order. Should be 'Они часто смотрели фильм'."
+    },
+    {
+      "id": "ru-0865",
+      "category": "AWKWARD",
+      "target": "Я смотрела часто фильм.",
+      "english": "I (f) often watched a movie.",
+      "reason": "Unnatural word order. Should be 'Я часто смотрела фильм'."
+    },
+    {
+      "id": "ru-0866",
+      "category": "AWKWARD",
+      "target": "Я смотрел часто фильм.",
+      "english": "I (m) often watched a movie.",
+      "reason": "Unnatural word order. Should be 'Я часто смотрел фильм'."
+    },
+    {
+      "id": "ru-0867",
+      "category": "GARBAGE",
+      "target": "Она готовила книгу.",
+      "english": "She cooked a book.",
+      "reason": "Cannot cook a book. Nonsensical verb+object combo."
+    },
+    {
+      "id": "ru-0868",
+      "category": "GARBAGE",
+      "target": "Он готовил книгу.",
+      "english": "He cooked a book.",
+      "reason": "Cannot cook a book."
+    },
+    {
+      "id": "ru-0869",
+      "category": "GARBAGE",
+      "target": "Мы готовили книгу.",
+      "english": "We cooked a book.",
+      "reason": "Cannot cook a book."
+    },
+    {
+      "id": "ru-0870",
+      "category": "GARBAGE",
+      "target": "Они готовили книгу.",
+      "english": "They cooked a book.",
+      "reason": "Cannot cook a book."
+    },
+    {
+      "id": "ru-0871",
+      "category": "GARBAGE",
+      "target": "Я готовила книгу.",
+      "english": "I (f) cooked a book.",
+      "reason": "Cannot cook a book."
+    },
+    {
+      "id": "ru-0872",
+      "category": "GARBAGE",
+      "target": "Я готовил книгу.",
+      "english": "I (m) cooked a book.",
+      "reason": "Cannot cook a book."
+    },
+    {
+      "id": "ru-0873",
+      "category": "GARBAGE",
+      "target": "Она учила дом.",
+      "english": "She learned a house.",
+      "reason": "Cannot learn a house. Nonsensical verb+object."
+    },
+    {
+      "id": "ru-0874",
+      "category": "GARBAGE",
+      "target": "Он учил дом.",
+      "english": "He learned a house.",
+      "reason": "Cannot learn a house."
+    },
+    {
+      "id": "ru-0875",
+      "category": "GARBAGE",
+      "target": "Она выучила дом.",
+      "english": "She learned a house.",
+      "reason": "Cannot learn a house."
+    },
+    {
+      "id": "ru-0876",
+      "category": "GARBAGE",
+      "target": "Он выучил дом.",
+      "english": "He learned a house.",
+      "reason": "Cannot learn a house."
+    },
+    {
+      "id": "ru-0877",
+      "category": "GARBAGE",
+      "target": "Мы выучили дом.",
+      "english": "We learned a house.",
+      "reason": "Cannot learn a house."
+    },
+    {
+      "id": "ru-0878",
+      "category": "GARBAGE",
+      "target": "Они выучили дом.",
+      "english": "They learned a house.",
+      "reason": "Cannot learn a house."
+    },
+    {
+      "id": "ru-0885",
+      "category": "GARBAGE",
+      "target": "Она открывала правило.",
+      "english": "She opened a rule.",
+      "reason": "Cannot open a rule. Nonsensical verb+object."
+    },
+    {
+      "id": "ru-0886",
+      "category": "GARBAGE",
+      "target": "Он открывал правило.",
+      "english": "He opened a rule.",
+      "reason": "Cannot open a rule."
+    },
+    {
+      "id": "ru-0887",
+      "category": "GARBAGE",
+      "target": "Мы открывали правило.",
+      "english": "We opened a rule.",
+      "reason": "Cannot open a rule."
+    },
+    {
+      "id": "ru-0888",
+      "category": "GARBAGE",
+      "target": "Они открывали правило.",
+      "english": "They opened a rule.",
+      "reason": "Cannot open a rule."
+    },
+    {
+      "id": "ru-0889",
+      "category": "GARBAGE",
+      "target": "Я открывала правило.",
+      "english": "I (f) opened a rule.",
+      "reason": "Cannot open a rule."
+    },
+    {
+      "id": "ru-0890",
+      "category": "GARBAGE",
+      "target": "Я открывал правило.",
+      "english": "I (m) opened a rule.",
+      "reason": "Cannot open a rule."
+    },
+    {
+      "id": "ru-0891",
+      "category": "GARBAGE",
+      "target": "Она закрывала письмо.",
+      "english": "She closed a letter.",
+      "reason": "Cannot close a letter. Nonsensical verb+object."
+    },
+    {
+      "id": "ru-0892",
+      "category": "GARBAGE",
+      "target": "Он закрывал письмо.",
+      "english": "He closed a letter.",
+      "reason": "Cannot close a letter."
+    },
+    {
+      "id": "ru-0893",
+      "category": "GARBAGE",
+      "target": "Мы закрывали письмо.",
+      "english": "We closed a letter.",
+      "reason": "Cannot close a letter."
+    },
+    {
+      "id": "ru-0894",
+      "category": "GARBAGE",
+      "target": "Они закрывали письмо.",
+      "english": "They closed a letter.",
+      "reason": "Cannot close a letter."
+    },
+    {
+      "id": "ru-0895",
+      "category": "GARBAGE",
+      "target": "Я закрывала письмо.",
+      "english": "I (f) closed a letter.",
+      "reason": "Cannot close a letter."
+    },
+    {
+      "id": "ru-0896",
+      "category": "GARBAGE",
+      "target": "Я закрывал письмо.",
+      "english": "I (m) closed a letter.",
+      "reason": "Cannot close a letter."
+    },
+    {
+      "id": "ru-0897",
+      "category": "GARBAGE",
+      "target": "Она решала книгу.",
+      "english": "She solved a book.",
+      "reason": "Cannot solve a book. Решать requires a problem/equation."
+    },
+    {
+      "id": "ru-0898",
+      "category": "GARBAGE",
+      "target": "Он решал книгу.",
+      "english": "He solved a book.",
+      "reason": "Cannot solve a book."
+    },
+    {
+      "id": "ru-0899",
+      "category": "GARBAGE",
+      "target": "Мы решали книгу.",
+      "english": "We solved a book.",
+      "reason": "Cannot solve a book."
+    },
+    {
+      "id": "ru-0900",
+      "category": "GARBAGE",
+      "target": "Они решали книгу.",
+      "english": "They solved a book.",
+      "reason": "Cannot solve a book."
+    },
+    {
+      "id": "ru-0901",
+      "category": "GARBAGE",
+      "target": "Я решала книгу.",
+      "english": "I (f) solved a book.",
+      "reason": "Cannot solve a book."
+    },
+    {
+      "id": "ru-0902",
+      "category": "GARBAGE",
+      "target": "Я решал книгу.",
+      "english": "I (m) solved a book.",
+      "reason": "Cannot solve a book."
+    },
+    {
+      "id": "ru-0903",
+      "category": "GARBAGE",
+      "target": "Она строила урок.",
+      "english": "She built a lesson.",
+      "reason": "Cannot build a lesson with строить. Nonsensical."
+    },
+    {
+      "id": "ru-0904",
+      "category": "GARBAGE",
+      "target": "Он строил урок.",
+      "english": "He built a lesson.",
+      "reason": "Cannot build a lesson."
+    },
+    {
+      "id": "ru-0905",
+      "category": "GARBAGE",
+      "target": "Мы строили урок.",
+      "english": "We built a lesson.",
+      "reason": "Cannot build a lesson."
+    },
+    {
+      "id": "ru-0906",
+      "category": "GARBAGE",
+      "target": "Они строили урок.",
+      "english": "They built a lesson.",
+      "reason": "Cannot build a lesson."
+    },
+    {
+      "id": "ru-0907",
+      "category": "GARBAGE",
+      "target": "Я строила урок.",
+      "english": "I (f) built a lesson.",
+      "reason": "Cannot build a lesson."
+    },
+    {
+      "id": "ru-0908",
+      "category": "GARBAGE",
+      "target": "Я строил урок.",
+      "english": "I (m) built a lesson.",
+      "reason": "Cannot build a lesson."
+    },
+    {
+      "id": "ru-0921",
+      "category": "GARBAGE",
+      "target": "Она отвечала письмо.",
+      "english": "She answered a letter.",
+      "reason": "Wrong case government. Must be 'отвечала на письмо' (requires preposition на)."
+    },
+    {
+      "id": "ru-0922",
+      "category": "GARBAGE",
+      "target": "Он отвечал письмо.",
+      "english": "He answered a letter.",
+      "reason": "Wrong case. Must be 'отвечал на письмо'."
+    },
+    {
+      "id": "ru-0923",
+      "category": "GARBAGE",
+      "target": "Мы отвечали письмо.",
+      "english": "We answered a letter.",
+      "reason": "Wrong case. Must be 'отвечали на письмо'."
+    },
+    {
+      "id": "ru-0924",
+      "category": "GARBAGE",
+      "target": "Они отвечали письмо.",
+      "english": "They answered a letter.",
+      "reason": "Wrong case. Must be 'отвечали на письмо'."
+    },
+    {
+      "id": "ru-0925",
+      "category": "GARBAGE",
+      "target": "Я отвечала письмо.",
+      "english": "I (f) answered a letter.",
+      "reason": "Wrong case. Must be 'отвечала на письмо'."
+    },
+    {
+      "id": "ru-0926",
+      "category": "GARBAGE",
+      "target": "Я отвечал письмо.",
+      "english": "I (m) answered a letter.",
+      "reason": "Wrong case. Must be 'отвечал на письмо'."
+    },
+    {
+      "id": "ru-0945",
+      "category": "GARBAGE",
+      "target": "Она забыла дом.",
+      "english": "She forgot a house.",
+      "reason": "Cannot forget a house. Nonsensical."
+    },
+    {
+      "id": "ru-0946",
+      "category": "GARBAGE",
+      "target": "Он забыл дом.",
+      "english": "He forgot a house.",
+      "reason": "Cannot forget a house."
+    },
+    {
+      "id": "ru-0947",
+      "category": "GARBAGE",
+      "target": "Мы забыли дом.",
+      "english": "We forgot a house.",
+      "reason": "Cannot forget a house."
+    },
+    {
+      "id": "ru-0948",
+      "category": "GARBAGE",
+      "target": "Они забыли дом.",
+      "english": "They forgot a house.",
+      "reason": "Cannot forget a house."
+    },
+    {
+      "id": "ru-0949",
+      "category": "GARBAGE",
+      "target": "Я забыла дом.",
+      "english": "I (f) forgot a house.",
+      "reason": "Cannot forget a house."
+    },
+    {
+      "id": "ru-0950",
+      "category": "GARBAGE",
+      "target": "Я забыл дом.",
+      "english": "I (m) forgot a house.",
+      "reason": "Cannot forget a house."
+    },
+    {
+      "id": "ru-0951",
+      "category": "GARBAGE",
+      "target": "Они помогали долго книгу.",
+      "english": "They helped a book for a long time.",
+      "reason": "Cannot help a book. помогать requires dative, not accusative."
+    },
+    {
+      "id": "ru-0994",
+      "category": "MISMATCH",
+      "target": "Она ездила в Москву.",
+      "english": "She go/driveing to Moscow.",
+      "reason": "Garbled English. Should be 'She drove/went to Moscow.'"
+    },
+    {
+      "id": "ru-0999",
+      "category": "MISMATCH",
+      "target": "Она бегала в парке.",
+      "english": "She runing in the park.",
+      "reason": "Misspelled English. Should be 'She ran in the park.'"
+    },
+    {
+      "id": "ru-1016",
+      "category": "MISMATCH",
+      "target": "Она плавала в бассейне.",
+      "english": "She swiming in the pool.",
+      "reason": "Misspelled English. Should be 'She swam in the pool.'"
+    },
+    {
+      "id": "ru-1031",
+      "category": "GARBAGE",
+      "target": "Он вёз в город.",
+      "english": "He go/drived to the city.",
+      "reason": "Везти requires a direct object (what is being transported). Also garbled English."
+    },
+    {
+      "id": "ru-1033",
+      "category": "GARBAGE",
+      "target": "Мы везли в город.",
+      "english": "We go/drived to the city.",
+      "reason": "Missing object for везти. Also garbled English."
+    },
+    {
+      "id": "ru-1034",
+      "category": "GARBAGE",
+      "target": "Они везли в город.",
+      "english": "They go/drived to the city.",
+      "reason": "Missing object for везти. Also garbled English."
+    },
+    {
+      "id": "ru-1039",
+      "category": "GARBAGE",
+      "target": "Он вёл в школу.",
+      "english": "He leaded to school.",
+      "reason": "Вести requires a direct object (whom is being led). Also garbled English."
+    },
+    {
+      "id": "ru-1040",
+      "category": "GARBAGE",
+      "target": "Она вела в школу.",
+      "english": "She leaded to school.",
+      "reason": "Missing object for вести. Also garbled English."
+    },
+    {
+      "id": "ru-1041",
+      "category": "GARBAGE",
+      "target": "Мы вели в школу.",
+      "english": "We leaded to school.",
+      "reason": "Missing object for вести. Also garbled English."
+    },
+    {
+      "id": "ru-1051",
+      "category": "MISMATCH",
+      "target": "Он возил в город.",
+      "english": "He go/drived to the city.",
+      "reason": "Missing object for возить. Garbled English."
+    },
+    {
+      "id": "ru-1052",
+      "category": "MISMATCH",
+      "target": "Она возила в город.",
+      "english": "She go/drived to the city.",
+      "reason": "Missing object for возить. Garbled English."
+    },
+    {
+      "id": "ru-1053",
+      "category": "MISMATCH",
+      "target": "Мы возили в город.",
+      "english": "We go/drived to the city.",
+      "reason": "Missing object for возить. Garbled English."
+    },
+    {
+      "id": "ru-1054",
+      "category": "MISMATCH",
+      "target": "Они возили в город.",
+      "english": "They go/drived to the city.",
+      "reason": "Missing object for возить. Garbled English."
+    },
+    {
+      "id": "ru-1055",
+      "category": "MISMATCH",
+      "target": "Он водил в школу.",
+      "english": "He leaded to school.",
+      "reason": "Missing object for водить. Garbled English."
+    },
+    {
+      "id": "ru-1056",
+      "category": "MISMATCH",
+      "target": "Она водила в школу.",
+      "english": "She leaded to school.",
+      "reason": "Missing object for водить. Garbled English."
+    },
+    {
+      "id": "ru-1057",
+      "category": "MISMATCH",
+      "target": "Мы водили в школу.",
+      "english": "We leaded to school.",
+      "reason": "Missing object for водить. Garbled English."
+    },
+    {
+      "id": "ru-1058",
+      "category": "MISMATCH",
+      "target": "Они водили в школу.",
+      "english": "They leaded to school.",
+      "reason": "Missing object for водить. Garbled English."
+    },
+    {
+      "id": "ru-1059",
+      "category": "MISMATCH",
+      "target": "Он носил в школу.",
+      "english": "He carryed to school.",
+      "reason": "Missing object for носить. Garbled English."
+    },
+    {
+      "id": "ru-1060",
+      "category": "MISMATCH",
+      "target": "Она носила в школу.",
+      "english": "She carryed to school.",
+      "reason": "Missing object for носить. Garbled English."
+    },
+    {
+      "id": "ru-1061",
+      "category": "MISMATCH",
+      "target": "Мы носили в школу.",
+      "english": "We carryed to school.",
+      "reason": "Missing object for носить. Garbled English."
+    },
+    {
+      "id": "ru-1062",
+      "category": "MISMATCH",
+      "target": "Они носили в школу.",
+      "english": "They carryed to school.",
+      "reason": "Missing object for носить. Garbled English."
+    },
+    {
+      "id": "ru-1063",
+      "category": "MISMATCH",
+      "target": "Он нёс в школу.",
+      "english": "He carryed to school.",
+      "reason": "Missing object for нести. Garbled English."
+    },
+    {
+      "id": "ru-1064",
+      "category": "MISMATCH",
+      "target": "Она несла в школу.",
+      "english": "She carryed to school.",
+      "reason": "Missing object for нести. Garbled English."
+    },
+    {
+      "id": "ru-1065",
+      "category": "MISMATCH",
+      "target": "Мы несли в школу.",
+      "english": "We carryed to school.",
+      "reason": "Missing object for нести. Garbled English."
+    },
+    {
+      "id": "ru-1066",
+      "category": "GARBAGE",
+      "target": "Он плавал в библиотеку.",
+      "english": "He swimed to the library.",
+      "reason": "Cannot swim to a library. Also garbled English."
+    },
+    {
+      "id": "ru-1067",
+      "category": "GARBAGE",
+      "target": "Она плавала в библиотеку.",
+      "english": "She swimed to the library.",
+      "reason": "Cannot swim to a library."
+    },
+    {
+      "id": "ru-1068",
+      "category": "GARBAGE",
+      "target": "Мы плавали в аэропорт.",
+      "english": "We swimed to the airport.",
+      "reason": "Cannot swim to an airport."
+    },
+    {
+      "id": "ru-1069",
+      "category": "GARBAGE",
+      "target": "Они плавали в библиотеку.",
+      "english": "They swimed to the library.",
+      "reason": "Cannot swim to a library."
+    },
+    {
+      "id": "ru-1070",
+      "category": "GARBAGE",
+      "target": "Он плавал в аэропорт.",
+      "english": "He swimed to the airport.",
+      "reason": "Cannot swim to an airport."
+    },
+    {
+      "id": "ru-1071",
+      "category": "GARBAGE",
+      "target": "Он носил в город.",
+      "english": "He carryed to the city.",
+      "reason": "Missing object for носить."
+    },
+    {
+      "id": "ru-1072",
+      "category": "GARBAGE",
+      "target": "Она носила в город.",
+      "english": "She carryed to the city.",
+      "reason": "Missing object for носить."
+    },
+    {
+      "id": "ru-1073",
+      "category": "GARBAGE",
+      "target": "Мы носили в город.",
+      "english": "We carryed to the city.",
+      "reason": "Missing object for носить."
+    },
+    {
+      "id": "ru-1074",
+      "category": "GARBAGE",
+      "target": "Они носили в город.",
+      "english": "They carryed to the city.",
+      "reason": "Missing object for носить."
+    },
+    {
+      "id": "ru-1075",
+      "category": "GARBAGE",
+      "target": "Он возил в школу.",
+      "english": "He go/drived to school.",
+      "reason": "Missing object for возить."
+    },
+    {
+      "id": "ru-1076",
+      "category": "GARBAGE",
+      "target": "Она возила в школу.",
+      "english": "She go/drived to school.",
+      "reason": "Missing object for возить."
+    },
+    {
+      "id": "ru-1077",
+      "category": "GARBAGE",
+      "target": "Мы возили в школу.",
+      "english": "We go/drived to school.",
+      "reason": "Missing object for возить."
+    },
+    {
+      "id": "ru-1078",
+      "category": "GARBAGE",
+      "target": "Они возили в школу.",
+      "english": "They go/drived to school.",
+      "reason": "Missing object for возить."
+    },
+    {
+      "id": "ru-1079",
+      "category": "GARBAGE",
+      "target": "Он водил в город.",
+      "english": "He leaded to the city.",
+      "reason": "Missing object for водить."
+    },
+    {
+      "id": "ru-1080",
+      "category": "GARBAGE",
+      "target": "Она водила в город.",
+      "english": "She leaded to the city.",
+      "reason": "Missing object for водить."
+    },
+    {
+      "id": "ru-1081",
+      "category": "GARBAGE",
+      "target": "Мы водили в город.",
+      "english": "We leaded to the city.",
+      "reason": "Missing object for водить."
+    },
+    {
+      "id": "ru-1082",
+      "category": "GARBAGE",
+      "target": "Они водили в город.",
+      "english": "They leaded to the city.",
+      "reason": "Missing object for водить."
+    },
+    {
+      "id": "ru-1083",
+      "category": "GARBAGE",
+      "target": "Он нёс в город.",
+      "english": "He carryed to the city.",
+      "reason": "Missing object for нести."
+    },
+    {
+      "id": "ru-1084",
+      "category": "GARBAGE",
+      "target": "Она несла в город.",
+      "english": "She carryed to the city.",
+      "reason": "Missing object for нести."
+    },
+    {
+      "id": "ru-1085",
+      "category": "GARBAGE",
+      "target": "Мы несли в город.",
+      "english": "We carryed to the city.",
+      "reason": "Missing object for нести."
+    },
+    {
+      "id": "ru-1289",
+      "category": "AWKWARD",
+      "target": "Она называется Анна.",
+      "english": "Her name is Anna.",
+      "reason": "Называется is for things, not people. Should be 'Её зовут Анна'."
+    },
+    {
+      "id": "ru-2905",
+      "category": "AWKWARD",
+      "target": "Девочка ездит на работу каждый день.",
+      "english": "The girl commutes to work every day.",
+      "reason": "A girl (девочка = young child) commuting to work daily is absurd."
+    },
+    {
+      "id": "ru-2971",
+      "category": "AWKWARD",
+      "target": "Ребёнок обычно ездит на работу.",
+      "english": "The child usually commutes to work.",
+      "reason": "Children don't commute to work."
+    },
+    {
+      "id": "ru-3093",
+      "category": "AWKWARD",
+      "target": "Ребёнок работает в офисе каждый день.",
+      "english": "The child works in the office every day.",
+      "reason": "Children don't work in offices."
+    },
+    {
+      "id": "ru-3101",
+      "category": "AWKWARD",
+      "target": "Девочка работает в офисе по выходным.",
+      "english": "The girl works in the office on weekends.",
+      "reason": "Young girls don't work in offices."
+    },
+    {
+      "id": "ru-3112",
+      "category": "GARBAGE",
+      "target": "Мама готовит обед после обеда.",
+      "english": "Mom cooks lunch after lunch.",
+      "reason": "Cooking lunch after lunch is contradictory/circular."
+    },
+    {
+      "id": "ru-3123",
+      "category": "AWKWARD",
+      "target": "Мальчик работает в офисе в понедельник.",
+      "english": "The boy works in the office on Monday.",
+      "reason": "Young boys don't work in offices."
+    },
+    {
+      "id": "ru-3177",
+      "category": "GARBAGE",
+      "target": "Врач бегает утром перед сном.",
+      "english": "The doctor runs in the morning before bed.",
+      "reason": "Running in the morning before bed is contradictory."
+    },
+    {
+      "id": "ru-3212",
+      "category": "AWKWARD",
+      "target": "Ребёнок ездит на работу завтра.",
+      "english": "The child commutes to work tomorrow.",
+      "reason": "Children don't commute to work."
+    },
+    {
+      "id": "ru-3242",
+      "category": "AWKWARD",
+      "target": "Мальчик работает в офисе сейчас.",
+      "english": "The boy works in the office now.",
+      "reason": "Young boys don't work in offices."
+    },
+    {
+      "id": "ru-3275",
+      "category": "AWKWARD",
+      "target": "Девочка ездит на работу в понедельник.",
+      "english": "The girl commutes to work on Monday.",
+      "reason": "Young girls don't commute to work."
+    },
+    {
+      "id": "ru-3276",
+      "category": "MISMATCH",
+      "target": "Повар читает книгу в парке вечером.",
+      "english": "The chef reads a book in the library in the evening.",
+      "reason": "Russian says 'в парке' (park), English says 'in the library'."
+    },
+    {
+      "id": "ru-3280",
+      "category": "GARBAGE",
+      "target": "Повар убирает квартиру в музее.",
+      "english": "The chef cleans the apartment in the museum.",
+      "reason": "Cannot clean an apartment inside a museum. Nonsensical location."
+    },
+    {
+      "id": "ru-3283",
+      "category": "GARBAGE",
+      "target": "Бабушка гуляет в парке в музее.",
+      "english": "Grandmother walks in the park in the museum.",
+      "reason": "Double incompatible locations: park inside museum."
+    },
+    {
+      "id": "ru-3284",
+      "category": "GARBAGE",
+      "target": "Фермер работает в офисе на вокзале.",
+      "english": "The farmer works in the office at the station.",
+      "reason": "Double incompatible locations: office at train station."
+    },
+    {
+      "id": "ru-3286",
+      "category": "MISMATCH",
+      "target": "Врач слушает музыку в парке после обеда.",
+      "english": "The doctor listens to music at the hospital after lunch.",
+      "reason": "Russian says 'в парке' (park), English says 'at the hospital'."
+    },
+    {
+      "id": "ru-3287",
+      "category": "GARBAGE",
+      "target": "Библиотекарь убирает квартиру в ресторане.",
+      "english": "The librarian cleans the apartment in the restaurant.",
+      "reason": "Cannot clean apartment in restaurant. Nonsensical."
+    },
+    {
+      "id": "ru-3296",
+      "category": "MISMATCH",
+      "target": "Журналист работал в офисе на работе на прошлой неделе.",
+      "english": "The journalist at worked in the office at work last week.",
+      "reason": "Garbled English 'at worked'. Also redundant 'в офисе на работе'."
+    },
+    {
+      "id": "ru-3324",
+      "category": "GARBAGE",
+      "target": "Бабушка гуляет в парке в библиотеке каждый день.",
+      "english": "Grandmother walks in the park in the library every day.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3334",
+      "category": "GARBAGE",
+      "target": "Писатель работает в офисе на рынке завтра.",
+      "english": "The writer works in the office at the market tomorrow.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3338",
+      "category": "GARBAGE",
+      "target": "Инженер гуляет в парке на вокзале вечером.",
+      "english": "The engineer walks in the park at the station in the evening.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3341",
+      "category": "GARBAGE",
+      "target": "Медсестра работает в офисе в парке по выходным.",
+      "english": "The nurse works in the office in the park on weekends.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3353",
+      "category": "GARBAGE",
+      "target": "Учитель плавает в бассейне на вокзале сейчас.",
+      "english": "The teacher swims in the pool at the station now.",
+      "reason": "Pool at train station is nonsensical."
+    },
+    {
+      "id": "ru-3362",
+      "category": "AWKWARD",
+      "target": "Студент редко рисует картину в театре.",
+      "english": "The student rarely paints a picture in the theater.",
+      "reason": "Painting pictures in a theater is bizarre."
+    },
+    {
+      "id": "ru-3370",
+      "category": "GARBAGE",
+      "target": "Архитектор покупает продукты в больнице перед сном.",
+      "english": "The architect buys groceries at the hospital before bed.",
+      "reason": "Cannot buy groceries at a hospital. Nonsensical."
+    },
+    {
+      "id": "ru-3372",
+      "category": "MISMATCH",
+      "target": "Дедушка плавает в бассейне скоро.",
+      "english": "Grandfather swims in the pool at the airport soon.",
+      "reason": "Russian has no mention of airport. English adds 'at the airport' that doesn't exist in target."
+    },
+    {
+      "id": "ru-3378",
+      "category": "GARBAGE",
+      "target": "Бабушка работает в офисе на рынке вечером.",
+      "english": "Grandmother works in the office at the market in the evening.",
+      "reason": "Double incompatible locations: office at market."
+    },
+    {
+      "id": "ru-3386",
+      "category": "GARBAGE",
+      "target": "Фермер стирает одежду в театре сейчас.",
+      "english": "The farmer does laundry in the theater now.",
+      "reason": "Cannot do laundry in a theater."
+    },
+    {
+      "id": "ru-3391",
+      "category": "GARBAGE",
+      "target": "Художник гуляет в парке в музее в понедельник.",
+      "english": "The artist walks in the park in the museum on Monday.",
+      "reason": "Double incompatible locations: park inside museum."
+    },
+    {
+      "id": "ru-3410",
+      "category": "GARBAGE",
+      "target": "Дедушка готовит обед в школе после обеда.",
+      "english": "Grandfather cooks lunch at school after lunch.",
+      "reason": "Cooking lunch after lunch is contradictory."
+    },
+    {
+      "id": "ru-3411",
+      "category": "GARBAGE",
+      "target": "Писатель бегает утром в музее вечером.",
+      "english": "The writer runs in the morning in the museum in the evening.",
+      "reason": "Contradictory times: morning and evening simultaneously."
+    },
+    {
+      "id": "ru-3413",
+      "category": "GARBAGE",
+      "target": "Журналист плавает в бассейне на вокзале сегодня утром.",
+      "english": "The journalist swims in the pool at the station this morning.",
+      "reason": "Pool at train station is nonsensical."
+    },
+    {
+      "id": "ru-3414",
+      "category": "AWKWARD",
+      "target": "Ребёнок ездит на работу каждый вечер.",
+      "english": "The child commutes to work every evening.",
+      "reason": "Children don't commute to work."
+    },
+    {
+      "id": "ru-3415",
+      "category": "MISMATCH",
+      "target": "Водитель бегал утром в парке на прошлой неделе.",
+      "english": "The driver ran in the morning in the library last week.",
+      "reason": "Russian says 'в парке' (park), English says 'in the library'."
+    },
+    {
+      "id": "ru-3417",
+      "category": "GARBAGE",
+      "target": "Бабушка бегает утром на работе вечером.",
+      "english": "Grandmother runs in the morning at work in the evening.",
+      "reason": "Contradictory times: morning and evening."
+    },
+    {
+      "id": "ru-3421",
+      "category": "GARBAGE",
+      "target": "Продавец работает в офисе на работе по выходным.",
+      "english": "The salesman works in the office at work on weekends.",
+      "reason": "Redundant 'в офисе на работе' (in office at work)."
+    },
+    {
+      "id": "ru-3431",
+      "category": "GARBAGE",
+      "target": "Полицейский всегда гуляет в парке в парке.",
+      "english": "The policeman always walks in the park in the park.",
+      "reason": "Duplicate location 'в парке в парке'."
+    },
+    {
+      "id": "ru-3443",
+      "category": "MISMATCH",
+      "target": "Директор бегает утром в парке по выходным.",
+      "english": "The director runs in the morning at the hospital on weekends.",
+      "reason": "Russian says 'в парке' (park), English says 'at the hospital'."
+    },
+    {
+      "id": "ru-3445",
+      "category": "GARBAGE",
+      "target": "Программист всегда убирает квартиру в музее.",
+      "english": "The programmer always cleans the apartment in the museum.",
+      "reason": "Cannot clean apartment in museum."
+    },
+    {
+      "id": "ru-3448",
+      "category": "GARBAGE",
+      "target": "Продавец иногда гуляет в парке в парке.",
+      "english": "The salesman sometimes walks in the park in the park.",
+      "reason": "Duplicate location 'в парке в парке'."
+    },
+    {
+      "id": "ru-3456",
+      "category": "GARBAGE",
+      "target": "Студент обычно гуляет в парке в магазине.",
+      "english": "The student usually walks in the park in the store.",
+      "reason": "Double incompatible locations: park inside store."
+    },
+    {
+      "id": "ru-3465",
+      "category": "GARBAGE",
+      "target": "Бабушка покупает продукты в ресторане вечером.",
+      "english": "Grandmother buys groceries in the restaurant in the evening.",
+      "reason": "Cannot buy groceries in a restaurant."
+    },
+    {
+      "id": "ru-3467",
+      "category": "GARBAGE",
+      "target": "Архитектор всегда работает в офисе в библиотеке.",
+      "english": "The architect always works in the office in the library.",
+      "reason": "Double incompatible locations: office in library."
+    },
+    {
+      "id": "ru-3472",
+      "category": "AWKWARD",
+      "target": "Мальчик ездит на работу в библиотеке завтра.",
+      "english": "The boy commutes to work in the library tomorrow.",
+      "reason": "Boys don't commute to work."
+    },
+    {
+      "id": "ru-3485",
+      "category": "GARBAGE",
+      "target": "Студент убирает квартиру в больнице вечером.",
+      "english": "The student cleans the apartment at the hospital in the evening.",
+      "reason": "Cannot clean apartment at hospital."
+    },
+    {
+      "id": "ru-3488",
+      "category": "GARBAGE",
+      "target": "Спортсмен бегает утром в музее перед сном.",
+      "english": "The athlete runs in the morning in the museum before bed.",
+      "reason": "Contradictory times (morning + before bed) and running in museum."
+    },
+    {
+      "id": "ru-3505",
+      "category": "GARBAGE",
+      "target": "Учитель работает в офисе на рынке перед сном.",
+      "english": "The teacher works in the office at the market before bed.",
+      "reason": "Double incompatible locations + working before bed."
+    },
+    {
+      "id": "ru-3527",
+      "category": "GARBAGE",
+      "target": "Журналист покупает продукты в библиотеке скоро.",
+      "english": "The journalist buys groceries in the library soon.",
+      "reason": "Cannot buy groceries in a library."
+    },
+    {
+      "id": "ru-3531",
+      "category": "GARBAGE",
+      "target": "Спортсмен работает в офисе в школе после обеда.",
+      "english": "The athlete works in the office at school after lunch.",
+      "reason": "Double incompatible locations: office at school."
+    },
+    {
+      "id": "ru-3535",
+      "category": "GARBAGE",
+      "target": "Музыкант работает в офисе на работе вечером.",
+      "english": "The musician works in the office at work in the evening.",
+      "reason": "Redundant 'в офисе на работе'."
+    },
+    {
+      "id": "ru-3537",
+      "category": "AWKWARD",
+      "target": "Мальчик ездит на работу в музее сейчас.",
+      "english": "The boy commutes to work in the museum now.",
+      "reason": "Boys don't commute to work."
+    },
+    {
+      "id": "ru-3540",
+      "category": "GARBAGE",
+      "target": "Брат гуляет в парке в ресторане в понедельник.",
+      "english": "Brother walks in the park in the restaurant on Monday.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3550",
+      "category": "GARBAGE",
+      "target": "Повар гуляет в парке в музее после обеда.",
+      "english": "The chef walks in the park in the museum after lunch.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3554",
+      "category": "GARBAGE",
+      "target": "Фермер гуляет в парке в библиотеке по выходным.",
+      "english": "The farmer walks in the park in the library on weekends.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3555",
+      "category": "GARBAGE",
+      "target": "Сосед работал в офисе в магазине на прошлой неделе.",
+      "english": "The neighbor worked in the office in the store last week.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3557",
+      "category": "GARBAGE",
+      "target": "Художник работает в офисе в парке сегодня утром.",
+      "english": "The artist works in the office in the park this morning.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3558",
+      "category": "GARBAGE",
+      "target": "Полицейский гуляет в парке в больнице в понедельник.",
+      "english": "The policeman walks in the park at the hospital on Monday.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3560",
+      "category": "AWKWARD",
+      "target": "Бабушка ездит на работу в ресторане сегодня утром.",
+      "english": "Grandmother commutes to work in the restaurant this morning.",
+      "reason": "Grandmother commuting to work at restaurant is bizarre."
+    },
+    {
+      "id": "ru-3565",
+      "category": "GARBAGE",
+      "target": "Директор гуляет в парке в больнице сейчас.",
+      "english": "The director walks in the park at the hospital now.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3569",
+      "category": "GARBAGE",
+      "target": "Фермер обычно стирает одежду в театре.",
+      "english": "The farmer usually does laundry in the theater.",
+      "reason": "Cannot do laundry in a theater."
+    },
+    {
+      "id": "ru-3574",
+      "category": "AWKWARD",
+      "target": "Ребёнок ездит на работу перед сном.",
+      "english": "The child commutes to work before bed.",
+      "reason": "Children don't commute to work, especially before bed."
+    },
+    {
+      "id": "ru-3594",
+      "category": "GARBAGE",
+      "target": "Студент обычно плавает в бассейне в театре.",
+      "english": "The student usually swims in the pool in the theater.",
+      "reason": "Pool inside theater is nonsensical."
+    },
+    {
+      "id": "ru-3596",
+      "category": "GARBAGE",
+      "target": "Инженер всегда гуляет в парке в ресторане.",
+      "english": "The engineer always walks in the park in the restaurant.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3604",
+      "category": "GARBAGE",
+      "target": "Девочка бегает утром в аэропорту вечером.",
+      "english": "The girl runs in the morning at the airport in the evening.",
+      "reason": "Contradictory times: morning and evening."
+    },
+    {
+      "id": "ru-3608",
+      "category": "GARBAGE",
+      "target": "Бабушка готовит обед в театре по выходным.",
+      "english": "Grandmother cooks lunch in the theater on weekends.",
+      "reason": "Cannot cook lunch in a theater."
+    },
+    {
+      "id": "ru-3613",
+      "category": "MISMATCH",
+      "target": "Студент всегда бегает утром в парке.",
+      "english": "The student always runs in the morning at the hospital.",
+      "reason": "Russian says 'в парке' (park), English says 'at the hospital'."
+    },
+    {
+      "id": "ru-3619",
+      "category": "GARBAGE",
+      "target": "Журналист работает в офисе в парке завтра.",
+      "english": "The journalist works in the office in the park tomorrow.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3648",
+      "category": "GARBAGE",
+      "target": "Продавец гуляет в парке в ресторане перед сном.",
+      "english": "The salesman walks in the park in the restaurant before bed.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3671",
+      "category": "GARBAGE",
+      "target": "Журналист всегда гуляет в парке на работе.",
+      "english": "The journalist always walks in the park at work.",
+      "reason": "Double incompatible locations: park at work."
+    },
+    {
+      "id": "ru-3695",
+      "category": "GARBAGE",
+      "target": "Врач всегда покупает продукты в библиотеке.",
+      "english": "The doctor always buys groceries in the library.",
+      "reason": "Cannot buy groceries in a library."
+    },
+    {
+      "id": "ru-3745",
+      "category": "MISMATCH",
+      "target": "Мальчик плавает в бассейне вечером.",
+      "english": "The boy swims in the pool at the airport every day.",
+      "reason": "Russian says 'вечером' (in the evening), English adds 'at the airport every day' not in target."
+    },
+    {
+      "id": "ru-3765",
+      "category": "GARBAGE",
+      "target": "Программист редко работает в офисе в магазине.",
+      "english": "The programmer rarely works in the office in the store.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3767",
+      "category": "GARBAGE",
+      "target": "Полицейский работает в офисе в горах завтра.",
+      "english": "The policeman works in the office in the mountains tomorrow.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3770",
+      "category": "GARBAGE",
+      "target": "Библиотекарь работает в офисе в парке сейчас.",
+      "english": "The librarian works in the office in the park now.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3771",
+      "category": "GARBAGE",
+      "target": "Учитель обычно работает в офисе в магазине.",
+      "english": "The teacher usually works in the office in the store.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3783",
+      "category": "GARBAGE",
+      "target": "Редко полицейский гуляет в парке в библиотеке.",
+      "english": "Rarely the policeman walks in the park in the library.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3784",
+      "category": "GARBAGE",
+      "target": "Всегда мама работает в офисе в музее.",
+      "english": "Always mom works in the office in the museum.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3799",
+      "category": "GARBAGE",
+      "target": "Сейчас продавец ездит на работу дома.",
+      "english": "Now the salesman commutes to work at home.",
+      "reason": "Commuting to work at home is contradictory."
+    },
+    {
+      "id": "ru-3826",
+      "category": "GARBAGE",
+      "target": "В понедельник ребёнок работает в офисе в ресторане.",
+      "english": "On monday the child works in the office in the restaurant.",
+      "reason": "Child working in office + double incompatible locations."
+    },
+    {
+      "id": "ru-3834",
+      "category": "AWKWARD",
+      "target": "После обеда мальчик работает в офисе в аэропорту.",
+      "english": "After lunch the boy works in the office at the airport.",
+      "reason": "Boy working in office + double locations."
+    },
+    {
+      "id": "ru-3840",
+      "category": "GARBAGE",
+      "target": "Сейчас продавец гуляет в парке на вокзале.",
+      "english": "Now the salesman walks in the park at the station.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3887",
+      "category": "GARBAGE",
+      "target": "Сегодня утром журналист работает в офисе на работе.",
+      "english": "This morning the journalist works in the office at work.",
+      "reason": "Redundant 'в офисе на работе'."
+    },
+    {
+      "id": "ru-3888",
+      "category": "GARBAGE",
+      "target": "Каждый день учитель плавает в бассейне на вокзале.",
+      "english": "Every day the teacher swims in the pool at the station.",
+      "reason": "Pool at train station is nonsensical."
+    },
+    {
+      "id": "ru-3891",
+      "category": "GARBAGE",
+      "target": "Вечером сестра работает в офисе в аэропорту.",
+      "english": "In the evening sister works in the office at the airport.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3897",
+      "category": "GARBAGE",
+      "target": "После обеда друг гуляет в парке в театре.",
+      "english": "After lunch the friend walks in the park in the theater.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3905",
+      "category": "MISMATCH",
+      "target": "По выходным студент бегает утром в парке.",
+      "english": "On weekends the student runs in the morning in the library.",
+      "reason": "Russian says 'в парке' (park), English says 'in the library'."
+    },
+    {
+      "id": "ru-3915",
+      "category": "GARBAGE",
+      "target": "Сейчас музыкант гуляет в парке на пляже.",
+      "english": "Now the musician walks in the park at the beach.",
+      "reason": "Double incompatible locations."
+    },
+    {
+      "id": "ru-3924",
+      "category": "MISMATCH",
+      "target": "Брат стирает одежду дома, а учитель покупает продукты.",
+      "english": "Brother does laundry at home, and the librarian walks at home.",
+      "reason": "Second clause: Russian says 'учитель покупает продукты' (teacher buys groceries), English says 'librarian walks'. Complete mismatch."
+    },
+    {
+      "id": "ru-3925",
+      "category": "MISMATCH",
+      "target": "Библиотекарь бегает утром дома, а друг слушает музыку.",
+      "english": "The librarian runs in the morning at home, and the child reads a book.",
+      "reason": "Second clause: Russian says 'друг слушает музыку' (friend listens to music), English says 'child reads a book'."
+    },
+    {
+      "id": "ru-3926",
+      "category": "MISMATCH",
+      "target": "Дедушка убирает квартиру дома, а студент плавает в бассейне.",
+      "english": "Grandfather cleans the apartment at home, and the programmer writes a letter.",
+      "reason": "Second clause: Russian says 'студент плавает в бассейне' (student swims in pool), English says 'programmer writes a letter'."
+    },
+    {
+      "id": "ru-3927",
+      "category": "MISMATCH",
+      "target": "Продавец ездит на работу в парке, а бабушка готовит обед.",
+      "english": "The salesman commutes to work in the park, and brother cleans the apartment.",
+      "reason": "Second clause: Russian says 'бабушка готовит обед' (grandmother cooks lunch), English says 'brother cleans the apartment'."
+    },
+    {
+      "id": "ru-3928",
+      "category": "MISMATCH",
+      "target": "Директор рисует картину в библиотеке, а полицейский бегает утром.",
+      "english": "The director paints a picture in the library, and the driver writes a letter.",
+      "reason": "Second clause: Russian says 'полицейский бегает утром' (policeman runs morning), English says 'driver writes a letter'."
+    },
+    {
+      "id": "ru-3929",
+      "category": "MISMATCH",
+      "target": "Медсестра убирает квартиру дома, а ребёнок танцует вальс.",
+      "english": "The nurse cleans the apartment at home, and the teacher does laundry.",
+      "reason": "Second clause: Russian says 'ребёнок танцует вальс' (child dances waltz), English says 'teacher does laundry'."
+    },
+    {
+      "id": "ru-3930",
+      "category": "MISMATCH",
+      "target": "Дедушка убирает квартиру дома, а брат моет посуду.",
+      "english": "Grandfather cleans the apartment at home, and dad cooks lunch.",
+      "reason": "Second clause: Russian says 'брат моет посуду' (brother washes dishes), English says 'dad cooks lunch'."
+    },
+    {
+      "id": "ru-3932",
+      "category": "MISMATCH",
+      "target": "Повар стирает одежду дома, а сосед работает в офисе.",
+      "english": "The chef does laundry at home, and sister buys groceries.",
+      "reason": "Second clause: Russian says 'сосед работает в офисе' (neighbor works in office), English says 'sister buys groceries'."
+    },
+    {
+      "id": "ru-3933",
+      "category": "MISMATCH",
+      "target": "Журналист готовит обед в театре, а медсестра стирает одежду.",
+      "english": "The journalist cooks lunch in the theater, and the boy paints a picture.",
+      "reason": "Second clause: Russian says 'медсестра стирает одежду' (nurse does laundry), English says 'boy paints a picture'. Also cooking in theater is nonsensical."
+    }
+  ],
+  "ok_count": 3703
+}

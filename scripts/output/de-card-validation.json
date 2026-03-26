@@ -1,0 +1,31 @@
+{
+  "total": 3933,
+  "flagged": [
+    {
+      "id": "de-2884",
+      "issue": "AWKWARD",
+      "reason": "Gender agreement error: 'deinem wohlverdienten Beförderung' should be 'deiner wohlverdienten Beförderung' — Beförderung is feminine (die Beförderung), so dative requires 'deiner', not 'deinem'."
+    },
+    {
+      "id": "de-3367",
+      "issue": "GARBAGE",
+      "reason": "Garbled idiom: 'Sie hat mir das Herz auf der Zunge liegen' is ungrammatical. The correct idiom is 'das Herz auf der Zunge tragen' (to wear one's heart on one's sleeve). The 'mir' and 'liegen' make this nonsensical."
+    },
+    {
+      "id": "de-3706",
+      "issue": "GARBAGE",
+      "reason": "Non-German character: 'Glasblåserin' contains Swedish 'å' instead of German 'ä'. Correct spelling is 'Glasbläserin'."
+    },
+    {
+      "id": "de-3804",
+      "issue": "MISMATCH",
+      "reason": "Profession-action mismatch: 'Der Optiker poliert den Diamanten' — an Optiker (optician) works with glasses/lenses, not diamonds. A Juwelier (jeweler) or Edelsteinschleifer polishes diamonds."
+    },
+    {
+      "id": "de-3806",
+      "issue": "AWKWARD",
+      "reason": "Gender agreement error: 'den antiken Kuckucksuhr' should be 'die antike Kuckucksuhr' — Kuckucksuhr is feminine (die Kuckucksuhr), so accusative requires 'die antike', not 'den antiken'."
+    }
+  ],
+  "ok_count": 3928
+}

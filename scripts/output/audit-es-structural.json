@@ -1,0 +1,1592 @@
+{
+  "metadata": {
+    "deck": "Spanish",
+    "totalCards": 3935,
+    "auditDate": "2026-03-25T11:53:34.854Z",
+    "nodesCount": 35
+  },
+  "priorityWeighting": {
+    "table": {
+      "node-01": {
+        "P1": 203,
+        "P2": 114,
+        "P3": 2,
+        "total": 319
+      },
+      "node-02": {
+        "P1": 79,
+        "P2": 34,
+        "P3": 2,
+        "total": 115
+      },
+      "node-03": {
+        "P1": 97,
+        "P2": 30,
+        "P3": 2,
+        "total": 129
+      },
+      "node-04": {
+        "P1": 68,
+        "P2": 35,
+        "P3": 2,
+        "total": 105
+      },
+      "node-05": {
+        "P1": 60,
+        "P2": 43,
+        "P3": 5,
+        "total": 108
+      },
+      "node-06": {
+        "P1": 57,
+        "P2": 29,
+        "P3": 4,
+        "total": 90
+      },
+      "node-07": {
+        "P1": 109,
+        "P2": 37,
+        "P3": 2,
+        "total": 148
+      },
+      "node-08": {
+        "P1": 96,
+        "P2": 55,
+        "P3": 5,
+        "total": 156
+      },
+      "node-09": {
+        "P1": 56,
+        "P2": 64,
+        "P3": 17,
+        "total": 137
+      },
+      "node-10": {
+        "P1": 62,
+        "P2": 47,
+        "P3": 33,
+        "total": 142
+      },
+      "node-11": {
+        "P1": 49,
+        "P2": 56,
+        "P3": 12,
+        "total": 117
+      },
+      "node-12": {
+        "P1": 50,
+        "P2": 53,
+        "P3": 3,
+        "total": 106
+      },
+      "node-13": {
+        "P1": 45,
+        "P2": 43,
+        "P3": 5,
+        "total": 93
+      },
+      "node-14": {
+        "P1": 54,
+        "P2": 65,
+        "P3": 11,
+        "total": 130
+      },
+      "node-15": {
+        "P1": 71,
+        "P2": 97,
+        "P3": 23,
+        "total": 191
+      },
+      "node-16": {
+        "P1": 72,
+        "P2": 49,
+        "P3": 17,
+        "total": 138
+      },
+      "node-17": {
+        "P1": 50,
+        "P2": 43,
+        "P3": 3,
+        "total": 96
+      },
+      "node-18": {
+        "P1": 45,
+        "P2": 63,
+        "P3": 18,
+        "total": 126
+      },
+      "node-19": {
+        "P1": 42,
+        "P2": 58,
+        "P3": 18,
+        "total": 118
+      },
+      "node-20": {
+        "P1": 42,
+        "P2": 50,
+        "P3": 13,
+        "total": 105
+      },
+      "node-21": {
+        "P1": 52,
+        "P2": 59,
+        "P3": 17,
+        "total": 128
+      },
+      "node-22": {
+        "P1": 32,
+        "P2": 35,
+        "P3": 13,
+        "total": 80
+      },
+      "node-23": {
+        "P1": 37,
+        "P2": 53,
+        "P3": 11,
+        "total": 101
+      },
+      "node-24": {
+        "P1": 21,
+        "P2": 44,
+        "P3": 19,
+        "total": 84
+      },
+      "node-25": {
+        "P1": 37,
+        "P2": 66,
+        "P3": 16,
+        "total": 119
+      },
+      "node-26": {
+        "P1": 33,
+        "P2": 51,
+        "P3": 11,
+        "total": 95
+      },
+      "node-27": {
+        "P1": 33,
+        "P2": 32,
+        "P3": 16,
+        "total": 81
+      },
+      "node-28": {
+        "P1": 18,
+        "P2": 41,
+        "P3": 27,
+        "total": 86
+      },
+      "node-29": {
+        "P1": 16,
+        "P2": 45,
+        "P3": 19,
+        "total": 80
+      },
+      "node-30": {
+        "P1": 21,
+        "P2": 48,
+        "P3": 21,
+        "total": 90
+      },
+      "node-31": {
+        "P1": 12,
+        "P2": 47,
+        "P3": 28,
+        "total": 87
+      },
+      "node-32": {
+        "P1": 8,
+        "P2": 37,
+        "P3": 25,
+        "total": 70
+      },
+      "node-33": {
+        "P1": 14,
+        "P2": 36,
+        "P3": 16,
+        "total": 66
+      },
+      "node-34": {
+        "P1": 5,
+        "P2": 36,
+        "P3": 26,
+        "total": 67
+      },
+      "node-35": {
+        "P1": 4,
+        "P2": 14,
+        "P3": 14,
+        "total": 32
+      }
+    },
+    "flags": []
+  },
+  "levelAppropriateness": {
+    "totalSampled": 625,
+    "misplaced": [],
+    "nodeSamples": {
+      "node-01": {
+        "total": 319,
+        "sampled": 47,
+        "issues": []
+      },
+      "node-02": {
+        "total": 115,
+        "sampled": 17,
+        "issues": []
+      },
+      "node-03": {
+        "total": 129,
+        "sampled": 19,
+        "issues": []
+      },
+      "node-04": {
+        "total": 105,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-05": {
+        "total": 108,
+        "sampled": 16,
+        "issues": []
+      },
+      "node-06": {
+        "total": 90,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-07": {
+        "total": 148,
+        "sampled": 22,
+        "issues": []
+      },
+      "node-08": {
+        "total": 156,
+        "sampled": 23,
+        "issues": []
+      },
+      "node-09": {
+        "total": 137,
+        "sampled": 20,
+        "issues": []
+      },
+      "node-10": {
+        "total": 142,
+        "sampled": 21,
+        "issues": []
+      },
+      "node-11": {
+        "total": 117,
+        "sampled": 17,
+        "issues": []
+      },
+      "node-12": {
+        "total": 106,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-13": {
+        "total": 93,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-14": {
+        "total": 130,
+        "sampled": 19,
+        "issues": []
+      },
+      "node-15": {
+        "total": 191,
+        "sampled": 28,
+        "issues": []
+      },
+      "node-16": {
+        "total": 138,
+        "sampled": 20,
+        "issues": []
+      },
+      "node-17": {
+        "total": 96,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-18": {
+        "total": 126,
+        "sampled": 18,
+        "issues": []
+      },
+      "node-19": {
+        "total": 118,
+        "sampled": 17,
+        "issues": []
+      },
+      "node-20": {
+        "total": 105,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-21": {
+        "total": 128,
+        "sampled": 19,
+        "issues": []
+      },
+      "node-22": {
+        "total": 80,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-23": {
+        "total": 101,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-24": {
+        "total": 84,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-25": {
+        "total": 119,
+        "sampled": 17,
+        "issues": []
+      },
+      "node-26": {
+        "total": 95,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-27": {
+        "total": 81,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-28": {
+        "total": 86,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-29": {
+        "total": 80,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-30": {
+        "total": 90,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-31": {
+        "total": 87,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-32": {
+        "total": 70,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-33": {
+        "total": 66,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-34": {
+        "total": 67,
+        "sampled": 15,
+        "issues": []
+      },
+      "node-35": {
+        "total": 32,
+        "sampled": 15,
+        "issues": []
+      }
+    }
+  },
+  "tagAccuracy": {
+    "travel": {
+      "totalTagged": 1576,
+      "sampled": 50,
+      "correct": 19,
+      "accuracy": "38.0%",
+      "mismatches": [
+        {
+          "id": "es-0001",
+          "english": "I'm running late."
+        },
+        {
+          "id": "es-0076",
+          "english": "Goodbye, see you tomorrow morning!"
+        },
+        {
+          "id": "es-0221",
+          "english": "I want to see the tourist attractions."
+        },
+        {
+          "id": "es-0637",
+          "english": "The sea is calm today, perfect for swimming."
+        },
+        {
+          "id": "es-0861",
+          "english": "It's not fair that you work so many hours."
+        },
+        {
+          "id": "es-0955",
+          "english": "He paid for dinner for everyone."
+        },
+        {
+          "id": "es-1014",
+          "english": "I try not to use my phone during meals, but I don't always manage to."
+        },
+        {
+          "id": "es-1090",
+          "english": "Dinner was prepared by my father."
+        },
+        {
+          "id": "es-1144",
+          "english": "I went to the market for my mother."
+        },
+        {
+          "id": "es-1197",
+          "english": "They gave me the night shift."
+        },
+        {
+          "id": "es-1266",
+          "english": "The photo was taken at my parents' wedding."
+        },
+        {
+          "id": "es-1323",
+          "english": "What time does the cathedral close?"
+        },
+        {
+          "id": "es-1407",
+          "english": "While I was drafting the contract, the phone rang."
+        },
+        {
+          "id": "es-1556",
+          "english": "My family has the tradition of having dinner together every Friday night."
+        },
+        {
+          "id": "es-1631",
+          "english": "Suddenly the dog ran out and crossed the street."
+        }
+      ]
+    },
+    "work": {
+      "totalTagged": 1161,
+      "sampled": 50,
+      "correct": 17,
+      "accuracy": "34.0%",
+      "mismatches": [
+        {
+          "id": "es-0006",
+          "english": "I need more practice."
+        },
+        {
+          "id": "es-0187",
+          "english": "I need to speak with the manager."
+        },
+        {
+          "id": "es-0244",
+          "english": "The teacher gives the class at nine."
+        },
+        {
+          "id": "es-0540",
+          "english": "What plans do you have for this summer?"
+        },
+        {
+          "id": "es-0710",
+          "english": "I reply to the day's emails."
+        },
+        {
+          "id": "es-0806",
+          "english": "My father-in-law is very generous."
+        },
+        {
+          "id": "es-0996",
+          "english": "Furthermore, I'd like to add one more important point."
+        },
+        {
+          "id": "es-1068",
+          "english": "She got the position she wanted."
+        },
+        {
+          "id": "es-1162",
+          "english": "While I was reading the newspaper, someone knocked on the door."
+        },
+        {
+          "id": "es-1309",
+          "english": "The negotiation was very difficult."
+        },
+        {
+          "id": "es-1376",
+          "english": "The way he solved the problem was brilliant."
+        },
+        {
+          "id": "es-1459",
+          "english": "I didn't believe it was possible."
+        },
+        {
+          "id": "es-1718",
+          "english": "I bought a gift for my mother."
+        },
+        {
+          "id": "es-1802",
+          "english": "She takes her children to school."
+        },
+        {
+          "id": "es-1867",
+          "english": "I bought a monthly transport pass to save money."
+        }
+      ]
+    },
+    "family": {
+      "totalTagged": 1295,
+      "sampled": 50,
+      "correct": 22,
+      "accuracy": "44.0%",
+      "mismatches": [
+        {
+          "id": "es-0169",
+          "english": "My grandmother can walk without help."
+        },
+        {
+          "id": "es-0219",
+          "english": "The woman I met speaks three languages."
+        },
+        {
+          "id": "es-0262",
+          "english": "I need to change the bathroom light bulb."
+        },
+        {
+          "id": "es-0330",
+          "english": "The bathroom is clean."
+        },
+        {
+          "id": "es-0487",
+          "english": "The hotel rooms are comfortable."
+        },
+        {
+          "id": "es-0569",
+          "english": "She is my friend."
+        },
+        {
+          "id": "es-0632",
+          "english": "What are you going to do this weekend?"
+        },
+        {
+          "id": "es-0781",
+          "english": "The room is comfortable."
+        },
+        {
+          "id": "es-0937",
+          "english": "She cooked a delicious dinner."
+        },
+        {
+          "id": "es-1085",
+          "english": "My grandmother visited us on Sunday."
+        },
+        {
+          "id": "es-1196",
+          "english": "I bought flowers for the anniversary."
+        },
+        {
+          "id": "es-1338",
+          "english": "I got nervous before the presentation."
+        },
+        {
+          "id": "es-1655",
+          "english": "When I was young, I used to work in a factory."
+        },
+        {
+          "id": "es-1725",
+          "english": "I wake up at six thirty every day."
+        },
+        {
+          "id": "es-1836",
+          "english": "I water the balcony plants every other day."
+        }
+      ]
+    },
+    "general": {
+      "totalTagged": 3935
+    }
+  },
+  "vocabularyCoverage": {
+    "numbers": {
+      "total": 20,
+      "found": 15,
+      "missing": [
+        "thirteen",
+        "fourteen",
+        "sixteen",
+        "seventeen",
+        "eighteen"
+      ],
+      "coverage": "75%"
+    },
+    "colors": {
+      "total": 8,
+      "found": 8,
+      "missing": [],
+      "coverage": "100%"
+    },
+    "directions": {
+      "total": 7,
+      "found": 7,
+      "missing": [],
+      "coverage": "100%"
+    },
+    "bodyParts": {
+      "total": 9,
+      "found": 8,
+      "missing": [
+        "stomach"
+      ],
+      "coverage": "89%"
+    },
+    "animals": {
+      "total": 6,
+      "found": 4,
+      "missing": [
+        "horse",
+        "cow"
+      ],
+      "coverage": "67%"
+    },
+    "family": {
+      "total": 10,
+      "found": 10,
+      "missing": [],
+      "coverage": "100%"
+    },
+    "days": {
+      "total": 7,
+      "found": 7,
+      "missing": [],
+      "coverage": "100%"
+    },
+    "months": {
+      "total": 12,
+      "found": 12,
+      "missing": [],
+      "coverage": "100%"
+    },
+    "foodDrink": {
+      "total": 10,
+      "found": 8,
+      "missing": [
+        "tea",
+        "egg"
+      ],
+      "coverage": "80%"
+    },
+    "basicPhrases": {
+      "total": 8,
+      "found": 8,
+      "missing": [],
+      "coverage": "100%"
+    }
+  },
+  "nodeTransitions": {
+    "nodeInfo": {
+      "node-01": {
+        "cardCount": 319,
+        "tipsCount": 151,
+        "tipsPercent": "47.3%",
+        "topConcepts": [
+          {
+            "concept": "irregular verbs",
+            "count": 29
+          },
+          {
+            "concept": "stem-changing verbs",
+            "count": 21
+          },
+          {
+            "concept": "infinitive usage",
+            "count": 11
+          }
+        ],
+        "avgWordCount": "6.4",
+        "sampleEnglish": [
+          "I'm running late.",
+          "My dog eats everything.",
+          "My cousin lives abroad.",
+          "Today is my birthday.",
+          "Weekends are for resting."
+        ]
+      },
+      "node-02": {
+        "cardCount": 115,
+        "tipsCount": 66,
+        "tipsPercent": "57.4%",
+        "topConcepts": [
+          {
+            "concept": "irregular verbs",
+            "count": 11
+          },
+          {
+            "concept": "stem-changing verbs",
+            "count": 9
+          },
+          {
+            "concept": "plurals",
+            "count": 6
+          }
+        ],
+        "avgWordCount": "6.4",
+        "sampleEnglish": [
+          "He overthinks things.",
+          "Dinner is ready.",
+          "I have a stomachache.",
+          "We are from Spain.",
+          "I miss my family."
+        ]
+      },
+      "node-03": {
+        "cardCount": 129,
+        "tipsCount": 66,
+        "tipsPercent": "51.2%",
+        "topConcepts": [
+          {
+            "concept": "questions",
+            "count": 10
+          },
+          {
+            "concept": "articles",
+            "count": 3
+          },
+          {
+            "concept": "plurals",
+            "count": 3
+          }
+        ],
+        "avgWordCount": "6.2",
+        "sampleEnglish": [
+          "He's quite shy.",
+          "She's very hardworking.",
+          "Is breakfast included?",
+          "I'm a little tired.",
+          "I'm tired of waiting."
+        ]
+      },
+      "node-04": {
+        "cardCount": 105,
+        "tipsCount": 44,
+        "tipsPercent": "41.9%",
+        "topConcepts": [
+          {
+            "concept": "plurals",
+            "count": 7
+          },
+          {
+            "concept": "gustar-type verbs",
+            "count": 7
+          },
+          {
+            "concept": "questions",
+            "count": 6
+          }
+        ],
+        "avgWordCount": "6.9",
+        "sampleEnglish": [
+          "A round-trip ticket.",
+          "Where are you from?",
+          "How was your day?",
+          "Why didn't you come?",
+          "What's your dog's name?"
+        ]
+      },
+      "node-05": {
+        "cardCount": 108,
+        "tipsCount": 51,
+        "tipsPercent": "47.2%",
+        "topConcepts": [
+          {
+            "concept": "plurals",
+            "count": 13
+          },
+          {
+            "concept": "preterite/past tense",
+            "count": 5
+          },
+          {
+            "concept": "stem-changing verbs",
+            "count": 4
+          }
+        ],
+        "avgWordCount": "6.4",
+        "sampleEnglish": [
+          "My head hurts.",
+          "My back hurts.",
+          "The day is cloudy.",
+          "The topic is complicated.",
+          "The poem is beautiful."
+        ]
+      },
+      "node-06": {
+        "cardCount": 90,
+        "tipsCount": 27,
+        "tipsPercent": "30.0%",
+        "topConcepts": [
+          {
+            "concept": "gustar-type verbs",
+            "count": 11
+          },
+          {
+            "concept": "plurals",
+            "count": 10
+          },
+          {
+            "concept": "preterite/past tense",
+            "count": 4
+          }
+        ],
+        "avgWordCount": "6.2",
+        "sampleEnglish": [
+          "Long movies bore me.",
+          "Architecture catches his attention.",
+          "The sofa is new.",
+          "The suitcase is big.",
+          "The room is comfortable."
+        ]
+      },
+      "node-07": {
+        "cardCount": 148,
+        "tipsCount": 23,
+        "tipsPercent": "15.5%",
+        "topConcepts": [
+          {
+            "concept": "preterite/past tense",
+            "count": 5
+          },
+          {
+            "concept": "reflexive verbs",
+            "count": 3
+          },
+          {
+            "concept": "present tense",
+            "count": 2
+          }
+        ],
+        "avgWordCount": "6.1",
+        "sampleEnglish": [
+          "No problem.",
+          "Email is important.",
+          "Roses are pink.",
+          "They are friends.",
+          "It's very close."
+        ]
+      },
+      "node-08": {
+        "cardCount": 156,
+        "tipsCount": 40,
+        "tipsPercent": "25.6%",
+        "topConcepts": [
+          {
+            "concept": "preterite/past tense",
+            "count": 13
+          },
+          {
+            "concept": "imperfect tense",
+            "count": 6
+          },
+          {
+            "concept": "reflexive verbs",
+            "count": 4
+          }
+        ],
+        "avgWordCount": "6.8",
+        "sampleEnglish": [
+          "She's pregnant.",
+          "She's single.",
+          "I'm from Mexico.",
+          "It's very important.",
+          "I'm learning Spanish."
+        ]
+      },
+      "node-09": {
+        "cardCount": 137,
+        "tipsCount": 18,
+        "tipsPercent": "13.1%",
+        "topConcepts": [
+          {
+            "concept": "preterite/past tense",
+            "count": 6
+          },
+          {
+            "concept": "irregular verbs",
+            "count": 5
+          },
+          {
+            "concept": "reflexive verbs",
+            "count": 3
+          }
+        ],
+        "avgWordCount": "7.5",
+        "sampleEnglish": [
+          "We passed through Madrid.",
+          "We moved last month.",
+          "She cut her hair.",
+          "We traveled by road.",
+          "Before, cellphones didn't exist."
+        ]
+      },
+      "node-10": {
+        "cardCount": 142,
+        "tipsCount": 19,
+        "tipsPercent": "13.4%",
+        "topConcepts": [
+          {
+            "concept": "preterite/past tense",
+            "count": 9
+          },
+          {
+            "concept": "imperfect tense",
+            "count": 5
+          },
+          {
+            "concept": "gerund/progressive",
+            "count": 2
+          }
+        ],
+        "avgWordCount": "8.1",
+        "sampleEnglish": [
+          "The cake was homemade.",
+          "The negotiation was very difficult.",
+          "The movie was very funny.",
+          "He had a car accident.",
+          "The law was approved unanimously."
+        ]
+      },
+      "node-11": {
+        "cardCount": 117,
+        "tipsCount": 26,
+        "tipsPercent": "22.2%",
+        "topConcepts": [
+          {
+            "concept": "imperfect tense",
+            "count": 12
+          },
+          {
+            "concept": "reflexive verbs",
+            "count": 5
+          },
+          {
+            "concept": "preterite/past tense",
+            "count": 4
+          }
+        ],
+        "avgWordCount": "8.7",
+        "sampleEnglish": [
+          "I always forget passwords.",
+          "My grandfather still works.",
+          "I told you yesterday.",
+          "I told him yesterday.",
+          "My coworkers were very kind."
+        ]
+      },
+      "node-12": {
+        "cardCount": 106,
+        "tipsCount": 62,
+        "tipsPercent": "58.5%",
+        "topConcepts": [
+          {
+            "concept": "subjunctive",
+            "count": 33
+          },
+          {
+            "concept": "reflexive verbs",
+            "count": 11
+          },
+          {
+            "concept": "imperfect tense",
+            "count": 5
+          }
+        ],
+        "avgWordCount": "8.3",
+        "sampleEnglish": [
+          "My name is Ana.",
+          "I like your friend.",
+          "They help each other.",
+          "He works in photography.",
+          "Thanks for your help."
+        ]
+      },
+      "node-13": {
+        "cardCount": 93,
+        "tipsCount": 44,
+        "tipsPercent": "47.3%",
+        "topConcepts": [
+          {
+            "concept": "reflexive verbs",
+            "count": 11
+          },
+          {
+            "concept": "pronouns",
+            "count": 10
+          },
+          {
+            "concept": "imperative/commands",
+            "count": 6
+          }
+        ],
+        "avgWordCount": "7.4",
+        "sampleEnglish": [
+          "What's your name?",
+          "We're leaving at eight.",
+          "We meet every Monday.",
+          "I'm staying home tonight.",
+          "We miss each other."
+        ]
+      },
+      "node-14": {
+        "cardCount": 130,
+        "tipsCount": 50,
+        "tipsPercent": "38.5%",
+        "topConcepts": [
+          {
+            "concept": "subjunctive",
+            "count": 29
+          },
+          {
+            "concept": "pronouns",
+            "count": 4
+          },
+          {
+            "concept": "infinitive usage",
+            "count": 4
+          }
+        ],
+        "avgWordCount": "7.7",
+        "sampleEnglish": [
+          "I exercise for health.",
+          "A recipe from grandmother.",
+          "The cathedral is very old.",
+          "I think it's this way.",
+          "This gift is for you."
+        ]
+      },
+      "node-15": {
+        "cardCount": 191,
+        "tipsCount": 92,
+        "tipsPercent": "48.2%",
+        "topConcepts": [
+          {
+            "concept": "subjunctive",
+            "count": 58
+          },
+          {
+            "concept": "imperative/commands",
+            "count": 11
+          },
+          {
+            "concept": "future tense",
+            "count": 10
+          }
+        ],
+        "avgWordCount": "8.0",
+        "sampleEnglish": [
+          "I like music.",
+          "Spring starts in March.",
+          "I can't believe it.",
+          "Please, have a seat.",
+          "Close the door, please."
+        ]
+      },
+      "node-16": {
+        "cardCount": 138,
+        "tipsCount": 87,
+        "tipsPercent": "63.0%",
+        "topConcepts": [
+          {
+            "concept": "subjunctive",
+            "count": 61
+          },
+          {
+            "concept": "imperative/commands",
+            "count": 25
+          },
+          {
+            "concept": "conditional",
+            "count": 9
+          }
+        ],
+        "avgWordCount": "7.6",
+        "sampleEnglish": [
+          "Come here, please.",
+          "I'm glad you came.",
+          "What is this for?",
+          "I hope you're well.",
+          "Don't speak so loud."
+        ]
+      },
+      "node-17": {
+        "cardCount": 96,
+        "tipsCount": 46,
+        "tipsPercent": "47.9%",
+        "topConcepts": [
+          {
+            "concept": "imperative/commands",
+            "count": 20
+          },
+          {
+            "concept": "conditional",
+            "count": 11
+          },
+          {
+            "concept": "irregular verbs",
+            "count": 11
+          }
+        ],
+        "avgWordCount": "8.0",
+        "sampleEnglish": [
+          "Don't tell me.",
+          "Go straight ahead.",
+          "Don't touch that.",
+          "Maria's brothers are twins.",
+          "Do your homework before playing."
+        ]
+      },
+      "node-18": {
+        "cardCount": 126,
+        "tipsCount": 43,
+        "tipsPercent": "34.1%",
+        "topConcepts": [
+          {
+            "concept": "future tense",
+            "count": 13
+          },
+          {
+            "concept": "conditional",
+            "count": 10
+          },
+          {
+            "concept": "irregular verbs",
+            "count": 10
+          }
+        ],
+        "avgWordCount": "8.5",
+        "sampleEnglish": [
+          "We met at the café.",
+          "I wouldn't trust that company.",
+          "He would say it's impossible.",
+          "She will live near work.",
+          "You should reduce your sugar intake."
+        ]
+      },
+      "node-19": {
+        "cardCount": 118,
+        "tipsCount": 40,
+        "tipsPercent": "33.9%",
+        "topConcepts": [
+          {
+            "concept": "future tense",
+            "count": 12
+          },
+          {
+            "concept": "conditional",
+            "count": 10
+          },
+          {
+            "concept": "subjunctive",
+            "count": 10
+          }
+        ],
+        "avgWordCount": "8.8",
+        "sampleEnglish": [
+          "Next month we'll move.",
+          "Who called this morning?",
+          "Let's ask for a raise.",
+          "I'll do whatever is necessary.",
+          "Let's walk through the park."
+        ]
+      },
+      "node-20": {
+        "cardCount": 105,
+        "tipsCount": 28,
+        "tipsPercent": "26.7%",
+        "topConcepts": [
+          {
+            "concept": "subjunctive",
+            "count": 4
+          },
+          {
+            "concept": "perfect tenses",
+            "count": 4
+          },
+          {
+            "concept": "imperfect tense",
+            "count": 3
+          }
+        ],
+        "avgWordCount": "8.4",
+        "sampleEnglish": [
+          "Whose coat is this?",
+          "I've eaten too much.",
+          "Have you told him yet?",
+          "The hotel was completely renovated.",
+          "The reasons he resigned aren't clear."
+        ]
+      },
+      "node-21": {
+        "cardCount": 128,
+        "tipsCount": 50,
+        "tipsPercent": "39.1%",
+        "topConcepts": [
+          {
+            "concept": "subjunctive",
+            "count": 23
+          },
+          {
+            "concept": "perfect tenses",
+            "count": 17
+          },
+          {
+            "concept": "imperfect tense",
+            "count": 16
+          }
+        ],
+        "avgWordCount": "8.7",
+        "sampleEnglish": [
+          "I was stood up.",
+          "Have you traveled abroad?",
+          "I've lost my keys again.",
+          "We've decided to move downtown.",
+          "I've already finished my homework."
+        ]
+      },
+      "node-22": {
+        "cardCount": 80,
+        "tipsCount": 24,
+        "tipsPercent": "30.0%",
+        "topConcepts": [
+          {
+            "concept": "subjunctive",
+            "count": 18
+          },
+          {
+            "concept": "conditional",
+            "count": 9
+          },
+          {
+            "concept": "imperfect tense",
+            "count": 8
+          }
+        ],
+        "avgWordCount": "9.2",
+        "sampleEnglish": [
+          "He needs to rest.",
+          "Whoever said that is wrong.",
+          "I'm sure he'll arrive on time.",
+          "The guests will arrive at eight.",
+          "Dinner was prepared by my sister-in-law."
+        ]
+      },
+      "node-23": {
+        "cardCount": 101,
+        "tipsCount": 46,
+        "tipsPercent": "45.5%",
+        "topConcepts": [
+          {
+            "concept": "conditional",
+            "count": 18
+          },
+          {
+            "concept": "imperfect tense",
+            "count": 9
+          },
+          {
+            "concept": "subjunctive",
+            "count": 8
+          }
+        ],
+        "avgWordCount": "9.4",
+        "sampleEnglish": [
+          "One must study more.",
+          "Spanish is spoken here.",
+          "Experienced waiters are needed.",
+          "Tickets can be bought online.",
+          "These shirts sell very well."
+        ]
+      },
+      "node-24": {
+        "cardCount": 84,
+        "tipsCount": 24,
+        "tipsPercent": "28.6%",
+        "topConcepts": [
+          {
+            "concept": "passive voice",
+            "count": 7
+          },
+          {
+            "concept": "infinitive usage",
+            "count": 4
+          },
+          {
+            "concept": "gerund/progressive",
+            "count": 3
+          }
+        ],
+        "avgWordCount": "8.9",
+        "sampleEnglish": [
+          "Anyway, thanks for trying.",
+          "Your mother just called.",
+          "They get along very well.",
+          "However, not everything was negative.",
+          "As time passes, things change."
+        ]
+      },
+      "node-25": {
+        "cardCount": 119,
+        "tipsCount": 45,
+        "tipsPercent": "37.8%",
+        "topConcepts": [
+          {
+            "concept": "gerund/progressive",
+            "count": 10
+          },
+          {
+            "concept": "infinitive usage",
+            "count": 8
+          },
+          {
+            "concept": "imperfect tense",
+            "count": 7
+          }
+        ],
+        "avgWordCount": "9.1",
+        "sampleEnglish": [
+          "Despite everything, she moved forward.",
+          "Therefore, the conclusion is evident.",
+          "Nevertheless, the results were positive.",
+          "However, the decision was difficult.",
+          "Nevertheless, the result was positive."
+        ]
+      },
+      "node-26": {
+        "cardCount": 95,
+        "tipsCount": 39,
+        "tipsPercent": "41.1%",
+        "topConcepts": [
+          {
+            "concept": "infinitive usage",
+            "count": 8
+          },
+          {
+            "concept": "gerund/progressive",
+            "count": 7
+          },
+          {
+            "concept": "subjunctive",
+            "count": 6
+          }
+        ],
+        "avgWordCount": "10.0",
+        "sampleEnglish": [
+          "I just arrived.",
+          "Stop talking and listen.",
+          "She suddenly started crying.",
+          "I just finished the report.",
+          "The baby just learned to walk."
+        ]
+      },
+      "node-27": {
+        "cardCount": 81,
+        "tipsCount": 20,
+        "tipsPercent": "24.7%",
+        "topConcepts": [
+          {
+            "concept": "imperfect tense",
+            "count": 5
+          },
+          {
+            "concept": "subjunctive",
+            "count": 5
+          },
+          {
+            "concept": "preterite/past tense",
+            "count": 4
+          }
+        ],
+        "avgWordCount": "10.1",
+        "sampleEnglish": [
+          "I regret not having gone.",
+          "Whatever happens, don't lose the passport.",
+          "They must have arrived by now.",
+          "The waiter recommended the fish to us.",
+          "He said he would come at eight."
+        ]
+      },
+      "node-28": {
+        "cardCount": 86,
+        "tipsCount": 27,
+        "tipsPercent": "31.4%",
+        "topConcepts": [
+          {
+            "concept": "subjunctive",
+            "count": 7
+          },
+          {
+            "concept": "infinitive usage",
+            "count": 2
+          },
+          {
+            "concept": "future tense",
+            "count": 1
+          }
+        ],
+        "avgWordCount": "9.9",
+        "sampleEnglish": [
+          "Whatever happens, count on me.",
+          "Knowledge doesn't take up space.",
+          "Better late than never, right?",
+          "I do laundry once a week.",
+          "I regret not having studied more."
+        ]
+      },
+      "node-29": {
+        "cardCount": 80,
+        "tipsCount": 27,
+        "tipsPercent": "33.8%",
+        "topConcepts": [
+          {
+            "concept": "subjunctive",
+            "count": 3
+          },
+          {
+            "concept": "preterite/past tense",
+            "count": 1
+          },
+          {
+            "concept": "ser vs estar",
+            "count": 1
+          }
+        ],
+        "avgWordCount": "10.6",
+        "sampleEnglish": [
+          "Better late than never.",
+          "It's late, let's go.",
+          "On weekends I get up late.",
+          "The language is difficult at first.",
+          "In other words, we're not ready."
+        ]
+      },
+      "node-30": {
+        "cardCount": 90,
+        "tipsCount": 14,
+        "tipsPercent": "15.6%",
+        "topConcepts": [
+          {
+            "concept": "reflexive verbs",
+            "count": 3
+          },
+          {
+            "concept": "ser vs estar",
+            "count": 1
+          },
+          {
+            "concept": "articles",
+            "count": 1
+          }
+        ],
+        "avgWordCount": "11.4",
+        "sampleEnglish": [
+          "I agree with you.",
+          "This is for tonight's dinner.",
+          "Since it's already late, we're leaving.",
+          "Rent is very expensive in this city.",
+          "My aunt makes the best chocolate cake."
+        ]
+      },
+      "node-31": {
+        "cardCount": 87,
+        "tipsCount": 14,
+        "tipsPercent": "16.1%",
+        "topConcepts": [
+          {
+            "concept": "preterite/past tense",
+            "count": 3
+          },
+          {
+            "concept": "comparatives",
+            "count": 2
+          },
+          {
+            "concept": "infinitive usage",
+            "count": 2
+          }
+        ],
+        "avgWordCount": "10.7",
+        "sampleEnglish": [
+          "The workload is higher in December.",
+          "Since we already finished, we can leave.",
+          "The sales department is the most efficient.",
+          "This software is the easiest to use.",
+          "I found a buy-one-get-one-free deal on T-shirts."
+        ]
+      },
+      "node-32": {
+        "cardCount": 70,
+        "tipsCount": 3,
+        "tipsPercent": "4.3%",
+        "topConcepts": [],
+        "avgWordCount": "10.5",
+        "sampleEnglish": [
+          "My grandmother turned eighty-seven last month.",
+          "Architecture tells the story of a people.",
+          "The doctor examined my mouth and teeth.",
+          "Rescue teams worked tirelessly during the floods.",
+          "I overlooked that detail in the contract."
+        ]
+      },
+      "node-33": {
+        "cardCount": 66,
+        "tipsCount": 2,
+        "tipsPercent": "3.0%",
+        "topConcepts": [],
+        "avgWordCount": "10.3",
+        "sampleEnglish": [
+          "Work-life balance is a fundamental right.",
+          "Parliament debated the tax reform all week.",
+          "She studied all night for the exam.",
+          "Bullfighting is a controversial tradition in Spain.",
+          "Unlike other tourists, we prefer local food."
+        ]
+      },
+      "node-34": {
+        "cardCount": 67,
+        "tipsCount": 2,
+        "tipsPercent": "3.0%",
+        "topConcepts": [
+          {
+            "concept": "negation",
+            "count": 2
+          }
+        ],
+        "avgWordCount": "10.6",
+        "sampleEnglish": [
+          "Responsible tourism involves respecting local customs.",
+          "Rivers polluted by industry affect aquatic ecosystems.",
+          "Mass surveillance by governments compromises individual freedoms.",
+          "Blockchain guarantees the transparency of digital transactions.",
+          "The match starts at nine thirty at night."
+        ]
+      },
+      "node-35": {
+        "cardCount": 32,
+        "tipsCount": 0,
+        "tipsPercent": "0.0%",
+        "topConcepts": [],
+        "avgWordCount": "11.3",
+        "sampleEnglish": [
+          "The cathedral is older than the castle.",
+          "It wouldn't have worked even if we had tried.",
+          "Unless we find funding, the project will be cancelled.",
+          "We would have arrived earlier if there hadn't been traffic.",
+          "If I hadn't trusted him, he wouldn't have deceived me."
+        ]
+      }
+    },
+    "progressionIssues": []
+  }
+}

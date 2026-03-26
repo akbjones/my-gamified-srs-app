@@ -1,0 +1,596 @@
+{
+  "total": 492,
+  "flagged": [
+    {
+      "id": "tr-1479",
+      "issue": "GARBAGE",
+      "reason": "Babaanne bankadan sabırla yaptı - nonsensical: grandmother patiently did/made from the bank. English says 'read' which doesn't match 'yaptı'"
+    },
+    {
+      "id": "tr-1480",
+      "issue": "GARBAGE",
+      "reason": "Şoför okuldan düzgünce tamir etti - nonsensical: driver repaired neatly from school. No object, semantically broken"
+    },
+    {
+      "id": "tr-1481",
+      "issue": "GARBAGE",
+      "reason": "Dedem kütüphaneden coşkuyla pişirdi - nonsensical: grandfather cooked enthusiastically from the library. English says 'said' but Turkish says 'pişirdi' (cooked)"
+    },
+    {
+      "id": "tr-1485",
+      "issue": "MISMATCH",
+      "reason": "Turkish 'geldi' (came) but English says 'started'. Grammar tip about -ebil suffix is irrelevant to this sentence"
+    },
+    {
+      "id": "tr-1486",
+      "issue": "GARBAGE",
+      "reason": "Kasap eczaneden zorla okudu - butcher read forcefully from the pharmacy. Nonsensical combination, English says 'said' but Turkish says 'okudu'"
+    },
+    {
+      "id": "tr-1489",
+      "issue": "GARBAGE",
+      "reason": "Berber marketten gönüllü olarak sattı - barber sold voluntarily from the market. English says 'sewed'. Both Turkish and English are nonsensical"
+    },
+    {
+      "id": "tr-1491",
+      "issue": "GARBAGE",
+      "reason": "Öğretmen restorandan hızlıca bitirdi - teacher finished quickly from the restaurant. English says 'repaired'. Semantically broken"
+    },
+    {
+      "id": "tr-1494",
+      "issue": "GARBAGE",
+      "reason": "Müzisyen müzeden üzüntüyle pişirdi - musician cooked sadly from the museum. English says 'repaired'. Complete nonsense"
+    },
+    {
+      "id": "tr-1495",
+      "issue": "GARBAGE",
+      "reason": "Ali okuldan mutlulukla pişirdi - Ali cooked happily from school. English says 'read'. Nonsensical"
+    },
+    {
+      "id": "tr-1496",
+      "issue": "GARBAGE",
+      "reason": "Öğrenciler marketten düzgünce bitirdi - students finished neatly from the market. English says 'found'. Nonsensical"
+    },
+    {
+      "id": "tr-1497",
+      "issue": "GARBAGE",
+      "reason": "Avukat istansyondan ciddiyet ile tamir etti - lawyer repaired seriously from the station. 'istansyon' is misspelled (should be 'istasyon'). English says 'wrote'. Nonsensical"
+    },
+    {
+      "id": "tr-1499",
+      "issue": "GARBAGE",
+      "reason": "Yazar sinemadan ciddiyet ile dikti - writer sewed seriously from the cinema. English says 'said'. Nonsensical"
+    },
+    {
+      "id": "tr-1501",
+      "issue": "MISMATCH",
+      "reason": "Turkish 'gitti' (went) but English says 'said'. Sentence is awkward but the mismatch is the main issue"
+    },
+    {
+      "id": "tr-1502",
+      "issue": "GARBAGE",
+      "reason": "Sen bahçeden neşeyle gördü - You saw cheerfully from the garden. Subject-verb agreement broken: 'sen' (you) with 'gördü' (3rd person). English says 'went'"
+    },
+    {
+      "id": "tr-1503",
+      "issue": "GARBAGE",
+      "reason": "Müzisyen marketten neşeyle başladı - musician started cheerfully from the market. English says 'cooked'. Nonsensical"
+    },
+    {
+      "id": "tr-1505",
+      "issue": "MISMATCH",
+      "reason": "Turkish 'geldi' (came) but English says 'found'"
+    },
+    {
+      "id": "tr-1506",
+      "issue": "GARBAGE",
+      "reason": "Arkadaşlar bankadan neşeyle yazdı - friends wrote cheerfully from the bank. English says 'sewed'. Nonsensical"
+    },
+    {
+      "id": "tr-1507",
+      "issue": "GARBAGE",
+      "reason": "Mehmet standyumdan hızlıca yazdı - 'standyum' is misspelled (stadyum). Mehmet wrote quickly from the stadium. English says 'bought'. Nonsensical"
+    },
+    {
+      "id": "tr-1508",
+      "issue": "GARBAGE",
+      "reason": "Çiftçi postanneden dikkatle başladı - 'postanneden' misspelled (postaneden). Farmer started carefully from the post office. English says 'came'. Nonsensical"
+    },
+    {
+      "id": "tr-1509",
+      "issue": "GARBAGE",
+      "reason": "O otenlden coşkuyla temizledi - 'otenlden' is not a Turkish word (probably 'otelden'). He/she cleaned enthusiastically from the hotel. English says 'wrote'. Nonsensical with typo"
+    },
+    {
+      "id": "tr-1511",
+      "issue": "GARBAGE",
+      "reason": "Çiftçi müzeden merakla yaptı - farmer made/did curiously from the museum. English says 'left'. Nonsensical"
+    },
+    {
+      "id": "tr-1512",
+      "issue": "GARBAGE",
+      "reason": "Dedem restorandan heyecanla tamir etti - grandfather repaired excitedly from the restaurant. English says 'cleaned'. Nonsensical"
+    },
+    {
+      "id": "tr-1516",
+      "issue": "GARBAGE",
+      "reason": "Çiftçi her sabah kirli eldiven göl kenarında pişirdi - farmer cooked dirty gloves by the lake every morning. English says 'left'. Nonsensical"
+    },
+    {
+      "id": "tr-1524",
+      "issue": "GARBAGE",
+      "reason": "Ali öğleden sonra zor eldiven bahçede aldı - Ali took hard gloves in the garden in the afternoon. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1527",
+      "issue": "GARBAGE",
+      "reason": "Diş hekimi her pazar ekşi kuş markette temizledi - dentist cleaned sour bird at the market every Sunday. English equally nonsensical. Word salad"
+    },
+    {
+      "id": "tr-1534",
+      "issue": "GARBAGE",
+      "reason": "Terzi öğleden sonra ucuz telefon konser salonunda boyadı - tailor painted cheap phone at the concert hall. English says 'said'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1541",
+      "issue": "GARBAGE",
+      "reason": "Hemşire öğleden sonra cesur ayakkabı spor salonunda pişirdi - nurse cooked brave shoes at the gym. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1550",
+      "issue": "GARBAGE",
+      "reason": "Ressam her gün akıllı kedi spor salonunda bitirdi - painter finished smart cat at the gym every day. English says 'cleaned'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1551",
+      "issue": "GARBAGE",
+      "reason": "Müdür hafta sonu kalın sebze yüzme havuzunda aldı - director took thick vegetables at the swimming pool. English says 'sewed'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1559",
+      "issue": "GARBAGE",
+      "reason": "Öğretmen sık sık meşgul kebap postanede söyledi - teacher said busy kebab at the post office often. English says 'cooked'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1569",
+      "issue": "GARBAGE",
+      "reason": "Yılan korkak kefir yemiş - snake ate cowardly kefir apparently. English is also garbage with untranslated Turkish words: 'kaplan ate the basit mandalina'"
+    },
+    {
+      "id": "tr-1570",
+      "issue": "GARBAGE",
+      "reason": "Hemşire öğleden sonra taze tren pazarda gördü - nurse saw fresh train at the market. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1572",
+      "issue": "GARBAGE",
+      "reason": "Ressam dün akşam kalın saat stadyumda tamir etti - painter repaired thick watch at the stadium last night. English says 'saw'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1579",
+      "issue": "GARBAGE",
+      "reason": "Çiftçi gün batımında pahalı aslan yüzme havuzunda bitirdi - farmer finished expensive lion at the swimming pool at sunset. English says 'collected'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1580",
+      "issue": "GARBAGE",
+      "reason": "Diş hekimi yakında boş tavşan pazarda topladı - dentist collected free rabbit at the market soon. English says 'left'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1581",
+      "issue": "GARBAGE",
+      "reason": "Öğrenciler öğleden sonra bayat radyo sinemada söyledi - students said stale radio at the cinema. English says 'started'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1596",
+      "issue": "GARBAGE",
+      "reason": "Moderatör pastane'ta dün sakinleşti - wrong locative suffix (pastane'ta should be pastanede). English has untranslated Turkish: 'astsubay' and 'yurt'. Complete mismatch"
+    },
+    {
+      "id": "tr-1598",
+      "issue": "GARBAGE",
+      "reason": "Diş hekimi yazın korkak araba hastanede buldu - dentist found cowardly car at hospital in summer. English says 'collected'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1606",
+      "issue": "GARBAGE",
+      "reason": "Babaanne her pazar cesur lale deniz kıyısında sattı - grandmother sold brave tulip on the coast every Sunday. English says 'read'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1614",
+      "issue": "GARBAGE",
+      "reason": "Diş hekimi yazın taze çorba tiyatroda sattı - dentist sold fresh soup at the theater in summer. English says 'made'. Nonsensical combination"
+    },
+    {
+      "id": "tr-1622",
+      "issue": "GARBAGE",
+      "reason": "Diş hekimi yazın zengin tren camide okudu - dentist read rich train at the mosque in summer. English says 'wrote'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1625",
+      "issue": "GARBAGE",
+      "reason": "Masör müze'da hiçbir zaman alıştı - wrong locative (müze'da should be müzede). 'masör got used to never at the museum' is nonsensical. English has untranslated Turkish: 'patron', 'han'"
+    },
+    {
+      "id": "tr-1626",
+      "issue": "GARBAGE",
+      "reason": "Fotoğrafçı her gün kalın radyo stadyumda tamir etti - photographer repaired thick radio at the stadium every day. English says 'collected'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1644",
+      "issue": "GARBAGE",
+      "reason": "Haham kaymakamlık'da nadiren alıştı - wrong locative suffix. English is fully garbled with untranslated Turkish: 'dedektif', 'spor salonu'. Complete garbage"
+    },
+    {
+      "id": "tr-1646",
+      "issue": "GARBAGE",
+      "reason": "Çiftçi tiyatro'de birer birer dinlendi - wrong locative (tiyatro'de should be tiyatroda). English is garbled with untranslated Turkish: 'amiral', 'bakkal'. Complete garbage"
+    },
+    {
+      "id": "tr-1652",
+      "issue": "GARBAGE",
+      "reason": "Diş hekimi her sabah yeni kedi otelde yazdı - dentist wrote new cat at the hotel every morning. English says 'left'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1661",
+      "issue": "GARBAGE",
+      "reason": "Fotoğrafçı her pazar ince atkı çarşıda boyadı - photographer painted thin scarf at the bazaar every Sunday. English says 'finished'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1662",
+      "issue": "AWKWARD",
+      "reason": "Cerrah ameliyat öncesinde titizlikle dezenfekte olarak sterilize edildi - says the surgeon was sterilized, which is unnatural. Should be about sterilizing the equipment, not the surgeon being sterilized"
+    },
+    {
+      "id": "tr-1667",
+      "issue": "GARBAGE",
+      "reason": "Komşular gün batımında acı kuş postanede geldi - neighbors came bitter bird at the post office at sunset. English says 'repaired'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1671",
+      "issue": "GARBAGE",
+      "reason": "Anneanne bazen geniş kravat evde geldi - grandmother came wide tie at home sometimes. English says 'saw'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1672",
+      "issue": "GARBAGE",
+      "reason": "Babam geçen yıl yalancı atkı konser salonunda buldu - father found dishonest scarf at the concert hall last year. English says 'cooked'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1678",
+      "issue": "GARBAGE",
+      "reason": "Garson akşamüstü sert ağaç göl kenarında pişirdi - waiter cooked hard tree by the lake. English says 'saw'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1687",
+      "issue": "GARBAGE",
+      "reason": "Arkeolog bu sabah uzun salata koyda tamir etti - archaeologist repaired long salad in the bay this morning. English says 'cooked'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1688",
+      "issue": "GARBAGE",
+      "reason": "Diş hekimi gelecek ay zor taksi konser salonunda geldi - dentist came hard taxi at the concert hall next month. Past tense with 'gelecek ay' (next month). English says 'repaired'. Nonsensical"
+    },
+    {
+      "id": "tr-1690",
+      "issue": "GARBAGE",
+      "reason": "Anneanne hafta içi gürültülü gül plajda söyledi - grandmother said noisy rose at the beach on weekdays. English says 'went'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1714",
+      "issue": "GARBAGE",
+      "reason": "Sıradan rektör fırın komşuluğunda duruyor - the sentence is barely comprehensible. English is fully garbled with untranslated Turkish: 'verimli kanguru', 'valilik'. Complete garbage"
+    },
+    {
+      "id": "tr-1728",
+      "issue": "AWKWARD",
+      "reason": "yakında Müdür spor salonunda heyecanla yürüyor - lowercase start, awkward sentence. English 'soon The director walks surprisingly' is also odd. Mismatch between 'heyecanla' (excitedly) and 'surprisingly'"
+    },
+    {
+      "id": "tr-1736",
+      "issue": "GARBAGE",
+      "reason": "şafakta Kardeşim postanede hayranlıkla ağlıyor - lowercase start. 'My sibling cries admiringly at the post office at dawn'. English says 'carefully'. Bizarre and unnatural"
+    },
+    {
+      "id": "tr-1740",
+      "issue": "GARBAGE",
+      "reason": "bu sabah Arkadaşlar stadyumda usulca dinliyor - lowercase start, subject-verb agreement issue (Arkadaşlar dinliyor instead of dinliyorlar). English says 'listens sadly' - wrong conjugation too. Mismatch between 'usulca' and 'sadly'"
+    },
+    {
+      "id": "tr-1750",
+      "issue": "GARBAGE",
+      "reason": "Arkadaşlar akıllı ödev konuşuyor - friends speaks smart homework. Missing accusative case, semantically broken. English equally broken"
+    },
+    {
+      "id": "tr-1753",
+      "issue": "GARBAGE",
+      "reason": "yakında Biz stadyumda mutlulukla koşuyoruz - lowercase start. Mismatch: Turkish 'mutlulukla' (happily) but English says 'quietly'"
+    },
+    {
+      "id": "tr-1754",
+      "issue": "GARBAGE",
+      "reason": "Çocuklar pazarda anahtar dans ediyor - children dance a key at the market. Nonsensical. English also broken 'dances a key'"
+    },
+    {
+      "id": "tr-1759",
+      "issue": "GARBAGE",
+      "reason": "Sen gönüllü olarak izliyor - subject-verb mismatch: 'sen' (you) with 'izliyor' (3rd person). Should be 'izliyorsun'. English also wrong: 'You watches'"
+    },
+    {
+      "id": "tr-1760",
+      "issue": "GARBAGE",
+      "reason": "Annem alışveriş merkezinde şemsiye konuşuyor - mother speaks umbrella at the shopping mall. Nonsensical. English equally broken"
+    },
+    {
+      "id": "tr-1761",
+      "issue": "GARBAGE",
+      "reason": "Ali ağır bilgisayar dans ediyor - Ali dances heavy a computer. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1763",
+      "issue": "GARBAGE",
+      "reason": "Veteriner onları hastane'ta sergiledi - wrong locative (hastane'ta should be hastanede). English is garbled with untranslated Turkish: 'itfaiyeci', 'valilik'. Complete garbage"
+    },
+    {
+      "id": "tr-1765",
+      "issue": "AWKWARD",
+      "reason": "bayramda Terzi sokakta sessizce oturuyor - lowercase start. English contradicts: 'sessizce' (quietly) but English says 'forcefully'"
+    },
+    {
+      "id": "tr-1768",
+      "issue": "GARBAGE",
+      "reason": "Heykeltıraş seni pansiyon'te teşhis koydu - wrong locative (pansiyon'te should be pansiyonda). English garbled with untranslated Turkish: 'general', 'restoran'. Subject changed from sculptor to general"
+    },
+    {
+      "id": "tr-1772",
+      "issue": "AWKWARD",
+      "reason": "hafta sonu Veteriner göl kenarında üzüntüyle izliyor - lowercase start. Content is bizarre: vet watches sadly by the lake on weekends"
+    },
+    {
+      "id": "tr-1781",
+      "issue": "GARBAGE",
+      "reason": "Komşular zor balık dans ediyor - neighbors dance hard a fish. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1787",
+      "issue": "GARBAGE",
+      "reason": "Onlar fakir rapor pişiriyorlar - they cook poor a report. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1791",
+      "issue": "GARBAGE",
+      "reason": "Öğretmen istasyonda kebap konuşuyor - teacher speaks kebab at the station. Nonsensical"
+    },
+    {
+      "id": "tr-1797",
+      "issue": "GARBAGE",
+      "reason": "Onlar evde televizyon dans ediyorlar - they dance a television at home. Nonsensical"
+    },
+    {
+      "id": "tr-1798",
+      "issue": "GARBAGE",
+      "reason": "Onlar akıllı lale pişiriyorlar - they cook smart a tulip. Nonsensical"
+    },
+    {
+      "id": "tr-1799",
+      "issue": "GARBAGE",
+      "reason": "her pazar Annem havaalanında isteksizce koşuyor - lowercase start. Mother runs reluctantly at the airport every Sunday. English says 'forcefully' not 'reluctantly'. Bizarre content"
+    },
+    {
+      "id": "tr-1801",
+      "issue": "GARBAGE",
+      "reason": "birazdan Çiftçi manav yavaşça bekliyor - lowercase start. Farmer waits slowly at the greengrocer soon. English says 'admiringly'. Mismatch and bizarre"
+    },
+    {
+      "id": "tr-1802",
+      "issue": "GARBAGE",
+      "reason": "Kaptan kalın saat fotoğraf çekiyor - captain takes photos thick a watch. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1805",
+      "issue": "GARBAGE",
+      "reason": "bazen Eczacı parkta ciddiyet ile pişiriyor - lowercase start. Pharmacist cooks seriously in the park sometimes. English says 'enthusiastically'. Bizarre content"
+    },
+    {
+      "id": "tr-1806",
+      "issue": "AWKWARD",
+      "reason": "sabahleyin Onlar eczanede dikkatle konuşuyorlar - lowercase start. English says 'reluctantly' but Turkish says 'dikkatle' (carefully). Mismatch"
+    },
+    {
+      "id": "tr-1809",
+      "issue": "GARBAGE",
+      "reason": "Onlar ormanda saat fotoğraf çekiyorlar - they take photos a watch in the forest. Nonsensical: 'saat' (watch/clock) randomly inserted"
+    },
+    {
+      "id": "tr-1810",
+      "issue": "AWKWARD",
+      "reason": "sık sık Babam tiyatroda üzüntüyle fotoğraf çekiyor - lowercase start. Father takes photos sadly at the theater often. English says 'gently'. Bizarre content"
+    },
+    {
+      "id": "tr-1818",
+      "issue": "GARBAGE",
+      "reason": "Barmen beni opera'de araştırdı - wrong locative (opera'de should be operada). English garbled with untranslated Turkish: 'itfaiyeci', 'restoran'. Subject changed from barman to firefighter"
+    },
+    {
+      "id": "tr-1821",
+      "issue": "AWKWARD",
+      "reason": "gece Balıkçı kilisede şaşkınlıkla satıyor - lowercase start. Fisherman sells surprisingly at the church at night. English says 'hastily'. Bizarre content"
+    },
+    {
+      "id": "tr-1824",
+      "issue": "GARBAGE",
+      "reason": "Dedem dar çanta tercüme ediyor - grandfather translates narrow a bag. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1825",
+      "issue": "AWKWARD",
+      "reason": "hafta içi Kaptan pazarda mutlulukla yürüyor - lowercase start. English says 'nicely' but Turkish says 'mutlulukla' (happily). Mismatch"
+    },
+    {
+      "id": "tr-1827",
+      "issue": "GARBAGE",
+      "reason": "gelecek hafta Siz kütüphanede şaşkınlıkla koşuyor - lowercase start. Subject-verb mismatch: 'Siz' (you formal) with 'koşuyor' (3rd person singular). English also broken: 'runs admiringly'"
+    },
+    {
+      "id": "tr-1829",
+      "issue": "AWKWARD",
+      "reason": "hafta sonu Babam istasyonda dikkatsizce gülüyor - lowercase start. Father laughs carelessly at the station on weekends. English says 'hastily'. Bizarre content"
+    },
+    {
+      "id": "tr-1835",
+      "issue": "AWKWARD",
+      "reason": "dün akşam Garson postanede isteksizce bakıyor - lowercase start. Present tense with 'dün akşam' (last night). English says 'nicely' but Turkish says 'isteksizce' (reluctantly). Tense mismatch"
+    },
+    {
+      "id": "tr-1842",
+      "issue": "GARBAGE",
+      "reason": "Şoför yüzme havuzunda şapka dinliyor - driver listens to a hat at the swimming pool. Nonsensical"
+    },
+    {
+      "id": "tr-1846",
+      "issue": "GARBAGE",
+      "reason": "yarın Annem mutfakta merakla ağlıyor - lowercase start. Mother cries curiously in the kitchen tomorrow. Present tense with 'yarın' (tomorrow). English says 'enthusiastically'. Bizarre and broken"
+    },
+    {
+      "id": "tr-1849",
+      "issue": "GARBAGE",
+      "reason": "Onlar dün çarşıda bakıyorlar - present continuous with 'dün' (yesterday). Tense conflict. English also uses present with 'yesterday'"
+    },
+    {
+      "id": "tr-1856",
+      "issue": "GARBAGE",
+      "reason": "Diş hekimi tiyatroda çorba fotoğraf çekiyor - dentist takes photos soup at the theater. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1860",
+      "issue": "AWKWARD",
+      "reason": "şimdi Kaptan bankada öfkeyle yürüyor - lowercase start. Captain walks angrily at the bank now. English says 'seriously' but Turkish says 'öfkeyle' (angrily). Mismatch"
+    },
+    {
+      "id": "tr-1869",
+      "issue": "AWKWARD",
+      "reason": "hafta sonu Babam müzede isteksizce yürüyor - lowercase start. Father walks reluctantly in the museum on weekends. English says 'quietly'. Mismatch"
+    },
+    {
+      "id": "tr-1877",
+      "issue": "GARBAGE",
+      "reason": "yazın Sen çarşıda ciddiyet ile pişiriyor - lowercase start. Subject-verb mismatch: 'Sen' (you) with 'pişiriyor' (3rd person). 'You cooks seriously at the bazaar in summer'. English says 'quickly'. Broken"
+    },
+    {
+      "id": "tr-1879",
+      "issue": "AWKWARD",
+      "reason": "bu sabah Öğretmen stadyumda sessizce izliyor - lowercase start. English says 'cheerfully' but Turkish says 'sessizce' (quietly). Clear mismatch"
+    },
+    {
+      "id": "tr-1887",
+      "issue": "GARBAGE",
+      "reason": "Yazar mutlu bilgisayar tercüme ediyor - writer translates happy computer. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1889",
+      "issue": "AWKWARD",
+      "reason": "gün batımında Hemşire otelde sabırla bekliyor - lowercase start. English says 'happily' but Turkish says 'sabırla' (patiently). Mismatch"
+    },
+    {
+      "id": "tr-1891",
+      "issue": "MISMATCH",
+      "reason": "Turkish 'merakla' (curiously) but English says 'reluctantly'"
+    },
+    {
+      "id": "tr-1895",
+      "issue": "GARBAGE",
+      "reason": "Ressam beni kaymakamlık'te tasarladı - wrong locative. English garbled with untranslated Turkish: 'denizci', 'hastane'. Subject changed from painter to sailor"
+    },
+    {
+      "id": "tr-1896",
+      "issue": "AWKWARD",
+      "reason": "bayramda Garson stadyumda mutlulukla oturuyor - lowercase start. Waiter sits happily at the stadium during the holiday. English says 'slowly'. Mismatch"
+    },
+    {
+      "id": "tr-1897",
+      "issue": "AWKWARD",
+      "reason": "akşamüstü Gazeteci pazarda mutlulukla alıyor - lowercase start. English says 'excitedly' but Turkish says 'mutlulukla' (happily). Minor mismatch but bizarre content"
+    },
+    {
+      "id": "tr-1901",
+      "issue": "GARBAGE",
+      "reason": "Heykeltıraş onu konsolosluk'de değerlendirdi - wrong locative. English garbled with untranslated Turkish: 'imam', 'konser salonu'. Subject changed from sculptor to imam"
+    },
+    {
+      "id": "tr-1902",
+      "issue": "GARBAGE",
+      "reason": "Heykeltıraş sizi anaokulu'de tahliye etti - wrong locative. Sculptor evacuated you at the kindergarten. English garbled: 'ebe', 'kale'. Complete garbage"
+    },
+    {
+      "id": "tr-1904",
+      "issue": "AWKWARD",
+      "reason": "sabahleyin Dedem konser salonunda güzelce gülüyor - lowercase start. English says 'reluctantly' but Turkish says 'güzelce' (nicely/beautifully). Mismatch"
+    },
+    {
+      "id": "tr-1907",
+      "issue": "GARBAGE",
+      "reason": "Fotoğrafçı stadyumda tablet tercüme ediyor - photographer translates a tablet at the stadium. Nonsensical combination"
+    },
+    {
+      "id": "tr-1908",
+      "issue": "AWKWARD",
+      "reason": "bu sabah Anneanne alışveriş merkezinde dikkatle gülüyor - lowercase start. Grandmother laughs carefully at the shopping mall this morning. English says 'quietly'. Bizarre content"
+    },
+    {
+      "id": "tr-1909",
+      "issue": "AWKWARD",
+      "reason": "hafta sonu Kaptan postanede yavaşça dinliyor - lowercase start. English says 'reluctantly' but Turkish says 'yavaşça' (slowly). Mismatch"
+    },
+    {
+      "id": "tr-1913",
+      "issue": "GARBAGE",
+      "reason": "Komisyoncu seni üniversite'da editledi - wrong locative. 'editledi' is not a standard Turkish word. English garbled: 'biyolog', 'spor salonu'. Complete garbage"
+    },
+    {
+      "id": "tr-1914",
+      "issue": "GARBAGE",
+      "reason": "Zeynep hızlı ödev tercüme ediyor - Zeynep translates fast homework. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1915",
+      "issue": "AWKWARD",
+      "reason": "hafta sonu Doktor stadyumda üzüntüyle bakıyor - lowercase start. English says 'gently' but Turkish says 'üzüntüyle' (sadly). Mismatch"
+    },
+    {
+      "id": "tr-1922",
+      "issue": "AWKWARD",
+      "reason": "bu sabah Kasap köprüde coşkuyla tamir ediyor - lowercase start. Butcher repairs enthusiastically on the bridge this morning. English says 'seriously'. Bizarre and mismatch"
+    },
+    {
+      "id": "tr-1923",
+      "issue": "GARBAGE",
+      "reason": "Turistler yarın küçük mantar spor salonunda gördü - tourists saw small mushrooms at the gym tomorrow. Past tense with 'yarın' (tomorrow). Nonsensical word salad"
+    },
+    {
+      "id": "tr-1944",
+      "issue": "GARBAGE",
+      "reason": "Çocuklar şafakta soğuk kravat yüzme havuzunda buldu - children found cold tie at the swimming pool at dawn. English says 'painted'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1947",
+      "issue": "GARBAGE",
+      "reason": "İstiyorum ki kaymakamlık daha kolay olsun - I want the district governorate to be easier. English garbled: 'pastane to be more kaygan'. Untranslated Turkish words in English"
+    },
+    {
+      "id": "tr-1955",
+      "issue": "GARBAGE",
+      "reason": "Kaptan sabahleyin dürüst gemi konser salonunda yaptı - captain made/did honest ship at the concert hall in the morning. English says 'started'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1961",
+      "issue": "GARBAGE",
+      "reason": "Umarım senarist sade bezelye bulur - I hope the screenwriter finds plain peas. English garbled with untranslated Turkish: 'sosyolog', 'minik dirsek'. Complete garbage"
+    },
+    {
+      "id": "tr-1967",
+      "issue": "GARBAGE",
+      "reason": "Yazar gün batımında nazik bilgisayar kasapta yaptı - writer made/did kind computer at the butcher shop at sunset. English says 'started'. Nonsensical word salad"
+    }
+  ],
+  "ok_count": 374
+}

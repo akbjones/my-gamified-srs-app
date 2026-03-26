@@ -1,0 +1,2396 @@
+{
+  "summary": {
+    "totalAudited": 2000,
+    "cardsWithIssues": 158,
+    "dictCoverageGaps": 0,
+    "grammarTipIssues": 151,
+    "englishQualityIssues": 4,
+    "duplicateTargets": 0,
+    "duplicateEnglish": 0,
+    "vocabIssues": 0,
+    "frenchQualityIssues": 4,
+    "audioMissing": 0,
+    "topMissingWords": []
+  },
+  "issues": [
+    {
+      "id": "fr-0024",
+      "target": "Ils disent non.",
+      "english": "They say no.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0027",
+      "target": "Je bois de l'eau.",
+      "english": "I drink water.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0030",
+      "target": "Je comprends le français.",
+      "english": "I understand French.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0033",
+      "target": "Je conduis prudemment.",
+      "english": "I drive carefully.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0046",
+      "target": "Je reste à la maison.",
+      "english": "I stay at home.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0069",
+      "target": "Tu expliques la leçon.",
+      "english": "You explain the lesson.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0140",
+      "target": "Tu interromps la conversation.",
+      "english": "You interrupt the conversation.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0143",
+      "target": "Je peux vous aider ?",
+      "english": "Can I help you?",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0146",
+      "target": "Je veux un café.",
+      "english": "I want a coffee.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0149",
+      "target": "Je prends le train.",
+      "english": "I take the train.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0150",
+      "target": "Je connais cette chanson.",
+      "english": "I know this song.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0152",
+      "target": "Je lis le journal.",
+      "english": "I read the newspaper.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0155",
+      "target": "Nous lisons les nouvelles.",
+      "english": "We read the news.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0160",
+      "target": "Je pars demain matin.",
+      "english": "I leave tomorrow morning.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0161",
+      "target": "Je tiens le parapluie.",
+      "english": "I hold the umbrella.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0165",
+      "target": "Je vis à Marseille.",
+      "english": "I live in Marseille.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0170",
+      "target": "Vous avez des enfants ?",
+      "english": "Do you have children?",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0182",
+      "target": "Tu attends le bus.",
+      "english": "You wait for the bus.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0201",
+      "target": "Je danse avec ma sœur.",
+      "english": "I dance with my sister.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0212",
+      "target": "Elles révisent pour l'examen.",
+      "english": "They review for the exam.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0217",
+      "target": "Je sais nager.",
+      "english": "I know how to swim.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0221",
+      "target": "Elles veulent apprendre le français.",
+      "english": "They want to learn French.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0222",
+      "target": "Je dois travailler demain.",
+      "english": "I have to work tomorrow.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0257",
+      "target": "Il croit tout ce qu'on lui dit.",
+      "english": "He believes everything he is told.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0258",
+      "target": "Je dors huit heures par nuit.",
+      "english": "I sleep eight hours a night.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0273",
+      "target": "Je rends les livres à la bibliothèque.",
+      "english": "I return the books to the library.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0280",
+      "target": "Bonjour à tous, comment allez-vous aujourd'hui?",
+      "english": "Good morning everyone, how are you today?",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0282",
+      "target": "Merci beaucoup pour votre aide précieuse.",
+      "english": "Thank you very much for your precious help.",
+      "grammarNode": "node-01",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0286",
+      "target": "Ils font la fête.",
+      "english": "They party.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0291",
+      "target": "Je fais du sport.",
+      "english": "I do sports.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0294",
+      "target": "Nous venons de finir.",
+      "english": "We just finished.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0295",
+      "target": "Je crois que oui.",
+      "english": "I think so.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0297",
+      "target": "Elle offre des fleurs.",
+      "english": "She gives flowers.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0311",
+      "target": "Je suis étudiant.",
+      "english": "I am a student.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0316",
+      "target": "Je dis la vérité.",
+      "english": "I tell the truth.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0318",
+      "target": "Je vois le problème.",
+      "english": "I see the problem.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0322",
+      "target": "Je viens de Lyon.",
+      "english": "I come from Lyon.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0327",
+      "target": "Tu mets la table.",
+      "english": "You set the table.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0329",
+      "target": "Je sors ce soir.",
+      "english": "I go out tonight.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0330",
+      "target": "Tu conduis trop vite.",
+      "english": "You drive too fast.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0333",
+      "target": "Il prend une douche.",
+      "english": "He takes a shower.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0336",
+      "target": "Il est professeur.",
+      "english": "He is a teacher.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0345",
+      "target": "Je vais au cinéma.",
+      "english": "I go to the cinema.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0350",
+      "target": "Je mets mon manteau.",
+      "english": "I put on my coat.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0354",
+      "target": "Je cours dans le parc.",
+      "english": "I run in the park.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0355",
+      "target": "Je suis la leçon attentivement.",
+      "english": "I follow the lesson attentively.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0362",
+      "target": "Elle a un bon travail.",
+      "english": "She has a good job.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0363",
+      "target": "Vous êtes invités à dîner.",
+      "english": "You are invited for dinner.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0377",
+      "target": "Elle sort du bureau à cinq heures.",
+      "english": "She leaves the office at five.",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0382",
+      "target": "Qu'est-ce que tu veux boire ?",
+      "english": "What do you want to drink?",
+      "grammarNode": "node-02",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0409",
+      "target": "Tu es courageux.",
+      "english": "You are brave.",
+      "grammarNode": "node-03",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0460",
+      "target": "Ils sont en réunion.",
+      "english": "They are in a meeting.",
+      "grammarNode": "node-03",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0461",
+      "target": "Tu es prêt à partir ?",
+      "english": "Are you ready to leave?",
+      "grammarNode": "node-03",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0499",
+      "target": "Une vieille dame lit le journal.",
+      "english": "An old lady reads the newspaper.",
+      "grammarNode": "node-03",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0513",
+      "target": "Il y a du vent aujourd'hui.",
+      "english": "It's windy today.",
+      "grammarNode": "node-04",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0517",
+      "target": "Est-ce que tu viens ce soir ?",
+      "english": "Are you coming tonight?",
+      "grammarNode": "node-04",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0522",
+      "target": "Qu'est-ce que ça veut dire ?",
+      "english": "What does that mean?",
+      "grammarNode": "node-04",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0578",
+      "target": "Il lui faut un médecin.",
+      "english": "He/She needs a doctor.",
+      "grammarNode": "node-04",
+      "hasGrammarTip": false,
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "awkward_phrasing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0580",
+      "target": "Il vous faut une réservation.",
+      "english": "You need a reservation.",
+      "grammarNode": "node-04",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0581",
+      "target": "Parlez plus lentement, s'il vous plaît.",
+      "english": "Speak more slowly, please.",
+      "grammarNode": "node-04",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0585",
+      "target": "Combien de temps ça prend ?",
+      "english": "How long does it take?",
+      "grammarNode": "node-04",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0593",
+      "target": "Comment tu fais ?",
+      "english": "How do you do it?",
+      "grammarNode": "node-04",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0608",
+      "target": "Le bureau du directeur est grand.",
+      "english": "The director's office is big.",
+      "grammarNode": "node-04",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0621",
+      "target": "Il lui reste une chance.",
+      "english": "He/She has one chance left.",
+      "grammarNode": "node-04",
+      "hasGrammarTip": false,
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "awkward_phrasing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0625",
+      "target": "Comment tu vas au travail ?",
+      "english": "How do you get to work?",
+      "grammarNode": "node-04",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0627",
+      "target": "Avec qui tu sors ?",
+      "english": "Who are you going out with?",
+      "grammarNode": "node-04",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0654",
+      "target": "Viens ici, j'ai besoin de ton aide maintenant.",
+      "english": "Come here, I need your help now.",
+      "grammarNode": "node-04",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0658",
+      "target": "Désormais les cours commenceront à huit heures.",
+      "english": "From now on, classes will start at eight o'clock.",
+      "grammarNode": "node-04",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0677",
+      "target": "La porte est rouge.",
+      "english": "The door is red.",
+      "grammarNode": "node-05",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0696",
+      "target": "Ses enfants lui manquent.",
+      "english": "He/She misses his/her children.",
+      "grammarNode": "node-05",
+      "hasGrammarTip": false,
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "awkward_phrasing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0739",
+      "target": "La France lui plaît.",
+      "english": "He/She likes France.",
+      "grammarNode": "node-06",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "awkward_phrasing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0747",
+      "target": "Il est une heure.",
+      "english": "It's one o'clock.",
+      "grammarNode": "node-06",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0761",
+      "target": "Cette rue est bruyante.",
+      "english": "This street is noisy.",
+      "grammarNode": "node-06",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0763",
+      "target": "La pièce est sombre.",
+      "english": "The room is dark.",
+      "grammarNode": "node-06",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0768",
+      "target": "Mon professeur est sévère.",
+      "english": "My teacher is strict.",
+      "grammarNode": "node-06",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0774",
+      "target": "Au revoir, à bientôt.",
+      "english": "Goodbye, see you soon.",
+      "grammarNode": "node-06",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0780",
+      "target": "Cette ville me plaît énormément.",
+      "english": "I really love this city.",
+      "grammarNode": "node-06",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0813",
+      "target": "Tellement de monde est venu à la fête hier.",
+      "english": "So many people came to the party yesterday.",
+      "grammarNode": "node-06",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0816",
+      "target": "Aussitôt dit, aussitôt fait, le problème est réglé.",
+      "english": "No sooner said than done, the problem is solved.",
+      "grammarNode": "node-06",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0824",
+      "target": "Pas de problème.",
+      "english": "No problem.",
+      "grammarNode": "node-07",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0842",
+      "target": "Il est trois heures et demie.",
+      "english": "It's three thirty.",
+      "grammarNode": "node-07",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0871",
+      "target": "Les murs sont jaunes.",
+      "english": "The walls are yellow.",
+      "grammarNode": "node-07",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0878",
+      "target": "Le lit est dur.",
+      "english": "The bed is hard.",
+      "grammarNode": "node-07",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0879",
+      "target": "Le canapé est mou.",
+      "english": "The couch is soft.",
+      "grammarNode": "node-07",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0884",
+      "target": "Cette sauce est fade.",
+      "english": "This sauce is bland.",
+      "grammarNode": "node-07",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0897",
+      "target": "Le dessert est léger.",
+      "english": "The dessert is light.",
+      "grammarNode": "node-07",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0905",
+      "target": "C'est la première fois.",
+      "english": "It's the first time.",
+      "grammarNode": "node-07",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0908",
+      "target": "C'est à droite.",
+      "english": "It's on the right.",
+      "grammarNode": "node-07",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0910",
+      "target": "J'ai téléphone à ma grand-mère.",
+      "english": "I called my grandmother.",
+      "grammarNode": "node-07",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-0988",
+      "target": "Elle cuisinait toujours un bon repas le dimanche.",
+      "english": "She always cooked a good meal on Sundays.",
+      "grammarNode": "node-07",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1001",
+      "target": "Nous sommes le quinze mars.",
+      "english": "It's March fifteenth.",
+      "grammarNode": "node-08",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1004",
+      "target": "On y va ?",
+      "english": "Shall we go?",
+      "grammarNode": "node-08",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern",
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1025",
+      "target": "Malheureusement, je ne peux pas venir ce soir.",
+      "english": "Unfortunately, I can't come tonight.",
+      "grammarNode": "node-08",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1059",
+      "target": "Elle a dit bonjour à tout le monde.",
+      "english": "She said hello to everyone.",
+      "grammarNode": "node-08",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1062",
+      "target": "Vraiment, je ne m'attendais pas à ce résultat.",
+      "english": "Really, I didn't expect this result.",
+      "grammarNode": "node-08",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1107",
+      "target": "J'ai partagé mon déjeuner avec un collegue.",
+      "english": "I shared my lunch with a colleague.",
+      "grammarNode": "node-08",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "french_quality",
+          "issues": [
+            "spelling_error:collegue→collègue"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1128",
+      "target": "Autrement nous devrons annuler le voyage prévu.",
+      "english": "Otherwise we'll have to cancel the planned trip.",
+      "grammarNode": "node-08",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1130",
+      "target": "Partout dans la ville on entendait de la musique.",
+      "english": "Everywhere in the city you could hear music.",
+      "grammarNode": "node-08",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1136",
+      "target": "Tu as fait les courses au supermarché ?",
+      "english": "Did you do the shopping at the supermarket?",
+      "grammarNode": "node-08",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1138",
+      "target": "Elle a dit à son fils de ranger sa chambre.",
+      "english": "She told her son to tidy his room.",
+      "grammarNode": "node-08",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1144",
+      "target": "Ça m'est égal.",
+      "english": "I don't mind. / It's all the same to me.",
+      "grammarNode": "node-08",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1148",
+      "target": "Ils dinaient au restaurant quand la lumière s'est eteinte.",
+      "english": "They were having dinner at the restaurant when the light went out.",
+      "grammarNode": "node-08",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1152",
+      "target": "Elle a dansé toute la nuit.",
+      "english": "She danced all night.",
+      "grammarNode": "node-09",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1161",
+      "target": "Nous avons nagé dans la piscine.",
+      "english": "We swam in the pool.",
+      "grammarNode": "node-09",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1162",
+      "target": "Il est tombé dans l'escalier.",
+      "english": "He fell on the stairs.",
+      "grammarNode": "node-09",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1169",
+      "target": "J'ai appuyé sur le mauvais bouton.",
+      "english": "I pressed the wrong button.",
+      "grammarNode": "node-09",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1186",
+      "target": "Elles ont dit toute la vérité.",
+      "english": "They told the whole truth.",
+      "grammarNode": "node-09",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1205",
+      "target": "J'ai poussé la porté et je suis entré.",
+      "english": "I pushed the door and entered.",
+      "grammarNode": "node-09",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1222",
+      "target": "Elles ont vu le dernier film de ce réalisateur.",
+      "english": "They saw this director's latest film.",
+      "grammarNode": "node-09",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1234",
+      "target": "Tu as bu le sirop contre la toux ?",
+      "english": "Did you drink the cough syrup?",
+      "grammarNode": "node-09",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1266",
+      "target": "J'ai pesé les ingredients pour la recette.",
+      "english": "I weighed the ingredients for the recipe.",
+      "grammarNode": "node-09",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1270",
+      "target": "J'ai bu un jus d'orange au petit déjeuner.",
+      "english": "I drank an orange juice at breakfast.",
+      "grammarNode": "node-09",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1273",
+      "target": "Tu as fait ton lit ce matin ?",
+      "english": "Did you make your bed this morning?",
+      "grammarNode": "node-09",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1275",
+      "target": "Tu as mis du sucre dans ton café ?",
+      "english": "Did you put sugar in your coffee?",
+      "grammarNode": "node-09",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1276",
+      "target": "J'ai fait la queue pendant une heure.",
+      "english": "I waited in line for an hour.",
+      "grammarNode": "node-09",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1283",
+      "target": "Il ressemblait beaucoup à son père.",
+      "english": "He looked a lot like his father.",
+      "grammarNode": "node-09",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1299",
+      "target": "Il neigeait dehors et nous restions au chaud.",
+      "english": "It was snowing outside and we stayed warm.",
+      "grammarNode": "node-09",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1324",
+      "target": "Il a pris sa retraite l'année dernière.",
+      "english": "He retired last year.",
+      "grammarNode": "node-10",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1327",
+      "target": "Nous avons vu un beau coucher de soleil.",
+      "english": "We saw a beautiful sunset.",
+      "grammarNode": "node-10",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1342",
+      "target": "Tu as eu le temps de finir ?",
+      "english": "Did you have time to finish?",
+      "grammarNode": "node-10",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1362",
+      "target": "Je croyais qu'il était médecin.",
+      "english": "I thought he was a doctor.",
+      "grammarNode": "node-10",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1365",
+      "target": "Elle suivait des cours de yoga le mardi.",
+      "english": "She took yoga classes on Tuesdays.",
+      "grammarNode": "node-10",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1372",
+      "target": "J'ai eu un problème avec ma voiture.",
+      "english": "I had a problem with my car.",
+      "grammarNode": "node-10",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1376",
+      "target": "J'ai écrit un poeme pour ma femme.",
+      "english": "I wrote a poem for my wife.",
+      "grammarNode": "node-10",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        },
+        {
+          "type": "french_quality",
+          "issues": [
+            "accent_error:poeme→poème"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1379",
+      "target": "J'ai fait une erreur dans le rapport.",
+      "english": "I made a mistake in the report.",
+      "grammarNode": "node-10",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1398",
+      "target": "Il buvait toujours son café sans sucre.",
+      "english": "He always drank his coffee without sugar.",
+      "grammarNode": "node-10",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1416",
+      "target": "Je faisais du vélo tous les matins.",
+      "english": "I used to ride my bike every morning.",
+      "grammarNode": "node-10",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1455",
+      "target": "Je prenais ma douche quand quelqu'un a frappe à la porté.",
+      "english": "I was taking a shower when someone knocked on the door.",
+      "grammarNode": "node-10",
+      "hasGrammarTip": false,
+      "issues": [
+        {
+          "type": "french_quality",
+          "issues": [
+            "accent_error:frappe→frappé"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1461",
+      "target": "Nous adorions les vacances d'été.",
+      "english": "We loved summer vacation.",
+      "grammarNode": "node-11",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1511",
+      "target": "Elle gardait toujours un bonbon dans sa poche.",
+      "english": "She always kept a candy in her pocket.",
+      "grammarNode": "node-11",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1540",
+      "target": "Il portait des lunettes depuis l'âge de cinq ans.",
+      "english": "He had been wearing glasses since the age of five.",
+      "grammarNode": "node-11",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1543",
+      "target": "Nous jouions a cache-cache dans le parc.",
+      "english": "We used to play hide and seek in the park.",
+      "grammarNode": "node-11",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1548",
+      "target": "Elle travaillait à son bureau quand son collegue a frappe.",
+      "english": "She was working at her desk when her colleague knocked.",
+      "grammarNode": "node-11",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "french_quality",
+          "issues": [
+            "accent_error:frappe→frappé",
+            "spelling_error:collegue→collègue"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1564",
+      "target": "Nous nous sommes excusés pour le malentendu.",
+      "english": "We apologized for the misunderstanding.",
+      "grammarNode": "node-12",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1573",
+      "target": "Il se plaint toujours du temps.",
+      "english": "He always complains about the weather.",
+      "grammarNode": "node-12",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1583",
+      "target": "Il s'intéressé à l'art contemporain.",
+      "english": "He is interested in contemporary art.",
+      "grammarNode": "node-12",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1590",
+      "target": "Je me suis couche tard hier soir.",
+      "english": "I went to bed late last night.",
+      "grammarNode": "node-12",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1602",
+      "target": "Il est important que nous buvions assez d'eau.",
+      "english": "It's important that we drink enough water.",
+      "grammarNode": "node-12",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1617",
+      "target": "Nous cherchons quelqu'un qui sache parler chinois.",
+      "english": "We're looking for someone who can speak Chinese.",
+      "grammarNode": "node-12",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1627",
+      "target": "Nous cherchons un hôtel qui ait une piscine.",
+      "english": "We're looking for a hotel that has a pool.",
+      "grammarNode": "node-12",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1653",
+      "target": "Nous nous sommes rencontres à l'université.",
+      "english": "We met at the university.",
+      "grammarNode": "node-13",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1662",
+      "target": "Nous y allons demain matin.",
+      "english": "We're going there tomorrow morning.",
+      "grammarNode": "node-13",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1672",
+      "target": "Nous nous sommes assis au premier rang.",
+      "english": "We sat in the front row.",
+      "grammarNode": "node-13",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1685",
+      "target": "Je ne la connais pas très bien.",
+      "english": "I don't know her very well.",
+      "grammarNode": "node-13",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1699",
+      "target": "Nous sommes passés par un petit chemin de campagne.",
+      "english": "We went along a small country path.",
+      "grammarNode": "node-13",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1723",
+      "target": "Je te rappelle ce soir.",
+      "english": "I'll call you back tonight.",
+      "grammarNode": "node-14",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1730",
+      "target": "Je le fais chaque matin.",
+      "english": "I do it every morning.",
+      "grammarNode": "node-14",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1768",
+      "target": "Je lui en ai acheté un.",
+      "english": "I bought him/her one of them.",
+      "grammarNode": "node-14",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1796",
+      "target": "Nous la voyons souvent au marché.",
+      "english": "We often see her at the market.",
+      "grammarNode": "node-14",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1813",
+      "target": "J'en ai trois dans mon sac.",
+      "english": "I have three of them in my bag.",
+      "grammarNode": "node-14",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1819",
+      "target": "Je veux que vous lisiez ce document attentivement.",
+      "english": "I want you to read this document carefully.",
+      "grammarNode": "node-14",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1889",
+      "target": "Elle y va chaque été.",
+      "english": "She goes there every summer.",
+      "grammarNode": "node-15",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern",
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1904",
+      "target": "Il y réfléchit encore.",
+      "english": "He's still thinking about it.",
+      "grammarNode": "node-15",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1908",
+      "target": "Je te le jure.",
+      "english": "I swear it to you.",
+      "grammarNode": "node-15",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1916",
+      "target": "Elle ne nous y a pas vus.",
+      "english": "She didn't see us there.",
+      "grammarNode": "node-15",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1943",
+      "target": "Ils y tiennent beaucoup.",
+      "english": "They care about it a lot.",
+      "grammarNode": "node-15",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1965",
+      "target": "Elle veut que nous apprenions le français.",
+      "english": "She wants us to learn French.",
+      "grammarNode": "node-15",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_conjugation_pattern"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fr-1991",
+      "target": "Elle y travaillé depuis cinq ans.",
+      "english": "She has worked there for five years.",
+      "grammarNode": "node-15",
+      "hasGrammarTip": true,
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "grammar_tip_misaligned"
+          ]
+        }
+      ]
+    }
+  ]
+}

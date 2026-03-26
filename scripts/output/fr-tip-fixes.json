@@ -1,0 +1,782 @@
+[
+  {
+    "id": "fr-0005",
+    "current_tip": "'Préparer' (to prepare) follows the standard -er pattern. The stem 'prépar-' stays the same for all forms.",
+    "fixed_tip": "'Adorer' = to love/adore. Stronger than 'aimer'. With general nouns, use the article: 'adorent le chocolat'.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0006",
+    "current_tip": "'Aider' (to help) is a regular -er verb. When followed by a verb, use 'à': aider quelqu'un à faire quelque chose.",
+    "fixed_tip": "'Détester' = to hate. With abstract nouns, French requires the article: 'il déteste le bruit' (he hates noise).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0007",
+    "current_tip": "'Acheter' gets an accent grave in stressed forms: j'achète, tu achètes, il achète. The 'nous' and 'vous' forms keep no accent: achetons.",
+    "fixed_tip": "'Nous' form of -er verbs: drop -er, add -ons. 'Préparons le petit déjeuner' = we prepare breakfast.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0013",
+    "current_tip": "'Passer' has many meanings: to spend (time), to pass, to take (an exam). Context determines the meaning.",
+    "fixed_tip": "'Porter' means both 'to carry' and 'to wear': context determines. 'Portent des lunettes' = they wear glasses.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0054",
+    "current_tip": "'Gagner' means both 'to win' and 'to earn'. Context tells you which: gagner un match (win), gagner de l'argent (earn).",
+    "fixed_tip": "'Inviter' is regular -er. 'Des amis' uses partitive 'des' = some. French requires this where English omits 'some'.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0059",
+    "current_tip": "'Rentrer' means to come/go back home. It implies returning to a familiar place, unlike 'retourner' which is more general.",
+    "fixed_tip": "'Obéir à' = to obey. Regular -ir verb with -iss- in plural. Requires 'à': 'il obéit à ses parents'.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0078",
+    "current_tip": "'Arriver' means 'to arrive' but can also mean 'to happen': il m'arrive de... (it happens that I...).",
+    "fixed_tip": "'Entrer dans' = to enter. Requires 'dans': 'vous entrez dans le magasin'. Uses 'être' in passé composé.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0086",
+    "current_tip": "'Tomber' (to fall) uses 'être' as its auxiliary in the passé composé: je suis tombé, not *j'ai tombé.",
+    "fixed_tip": "'Garer' = to park. 'Garer la voiture' = to park the car. Reflexive 'se garer' = to park/find parking.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0091",
+    "current_tip": "'Porter' means both 'to carry' and 'to wear'. Context makes it clear: porter un sac (carry) vs porter une robe (wear).",
+    "fixed_tip": "'Toucher' = to touch. Regular -er verb. 'Le mur' = the wall.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0112",
+    "current_tip": "'Envoyer' is irregular in the future: j'enverrai (not *j'envoierai). One of the few -er verbs with an irregular future stem.",
+    "fixed_tip": "'Partager' = to share/split. Keeps 'e' before -ons: 'nous partageons'. 'L'addition' = the bill.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0144",
+    "current_tip": "'Devoir' expresses obligation: 'je dois partir' = I must leave. It also means 'to owe'.",
+    "fixed_tip": "'Pouvoir' + infinitive = can/able to. 'Tu peux venir?' = Can you come? Informal question via intonation.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0181",
+    "current_tip": "'Appeler' doubles the 'l' in stressed forms: j'appelle, tu appelles. But nous appelons keeps single 'l'.",
+    "fixed_tip": "'Remplir' = to fill out. Regular -ir with -iss-: 'nous remplissons'. Same pattern as 'finir'.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0186",
+    "current_tip": "'Montrer' (to show) takes a direct object. 'Montrer quelque chose à quelqu'un' = to show something to someone.",
+    "fixed_tip": "'Nager' = to swim. Like 'partager', keeps 'e' before -ons: 'nous nageons'. 'Dans la piscine' = in the pool.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0192",
+    "current_tip": "'Laisser' + infinitive means 'to let someone do something': laisse-moi parler = let me speak.",
+    "fixed_tip": "'Réfléchir à' = to think about. Regular -ir with -iss-. Requires 'à': 'je réfléchis à la question'.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0203",
+    "current_tip": "'Poser une question' = to ask a question. French 'poses' the question rather than 'asking' it.",
+    "fixed_tip": "'Bavarder' = to chat. Regular -er. 'Au café' = at the café ('au' = à+le contraction).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0205",
+    "current_tip": "'Présenter' is used reflexively to introduce oneself: 'je me présente' = I introduce myself.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0215",
+    "current_tip": "'Avoir besoin de' = to need. French 'has need of' something rather than 'needing' it directly.",
+    "fixed_tip": "'Aller à' = to go to. 'Au' = à+le: 'vous allez au marché' = you go to the market.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0221",
+    "current_tip": "'Savoir' = to know facts/how to. 'Connaître' = to know/be familiar with people or places.",
+    "fixed_tip": "'Vouloir' + infinitive = to want to. Irregular: je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0242",
+    "current_tip": "'Puis-je' is the inverted form of 'je peux' (formal). Use 'puis-je' instead of 'peux-je' in questions.",
+    "fixed_tip": "'Bienvenue dans' = welcome to. 'Notre' = our (invariable). 'Nouveau' before masculine noun = new.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0243",
+    "current_tip": "'Qui' = Who. 'Qui est-ce ?' = Who is it? 'Qui est-ce qui' = Who (as subject). 'Qui est-ce que' = Who/whom (as object).",
+    "fixed_tip": "'D'accord' = OK/agreed. Common in conversation. 'Disponible' = available.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0257",
+    "current_tip": "'Avoir peur de' = to be afraid of. French 'has fear of' something.",
+    "fixed_tip": "'Croire' = to believe. Irregular: je crois, tu crois, il croit, nous croyons, ils croient.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0273",
+    "current_tip": "'Donner' takes a direct object (the thing) and an indirect object with 'à' (the person): donner un cadeau à quelqu'un.",
+    "fixed_tip": "'Rendre' = to return/give back. Regular -re: je rends, tu rends, il rend. 'À la bibliothèque' = to the library.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0274",
+    "current_tip": "'Penser à' means to think about something/someone. 'Penser de' means to have an opinion about.",
+    "fixed_tip": "'Coller' = to glue/stick. Regular -er. 'Dans l'album' = in the album.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0283",
+    "current_tip": "'Comment' (how) is used for manner: 'comment ça marche ?' = how does it work?",
+    "fixed_tip": "'Excusez-moi' (formal) / 'excuse-moi' (informal). Hyphen links verb and pronoun in imperative.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0286",
+    "current_tip": "'Aller' + infinitive forms the near future: 'je vais manger' = I'm going to eat. Very common in speech.",
+    "fixed_tip": "'Faire' = to do/make. Irregular: je fais, il fait, nous faisons, ils font. Used in many fixed expressions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0327",
+    "current_tip": "'Avoir' + age in French: 'j'ai vingt ans' (I have twenty years), not *je suis vingt ans.",
+    "fixed_tip": "'Mettre' = to put/set. Irregular: je mets, tu mets, il met. 'Mettre la table' = to set the table.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0330",
+    "current_tip": "'Avoir envie de' = to feel like/want. More casual than 'vouloir'.",
+    "fixed_tip": "'Conduire' = to drive. Irregular: je conduis, tu conduis, il conduit. 'Trop vite' = too fast.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0377",
+    "current_tip": "'Faire attention' = to be careful/pay attention. French 'makes attention' rather than 'paying' it.",
+    "fixed_tip": "'Sortir' = to go out/leave. Irregular -ir: je sors, il sort. 'Du' = de+le: 'sort du bureau' = leaves the office.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0390",
+    "current_tip": "'À quelle heure' = at what time. Always use 'à' before 'quelle heure'.",
+    "fixed_tip": "'Avoir' in inversion: 'avez-vous des enfants?' Formal question form. 'Des' = some (partitive).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0460",
+    "current_tip": "'Avoir l'air' + adjective = to look/seem: 'tu as l'air fatigué'. The adjective usually agrees with the subject.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0468",
+    "current_tip": "'Qui' (who) as subject doesn't need 'est-ce que': 'Qui parle ?' is already a complete question.",
+    "fixed_tip": "'Arriver' uses 'être' in passé composé: 'je suis arrivé(e)'. 'En retard' = late. Regular -er in present.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0517",
+    "current_tip": "'Venir' is an irregular -ir verb: je viens, tu viens, il vient. Note the -ien- stem change.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0578",
+    "current_tip": "'Intéresser' also works backwards like plaire: 'ce sujet m'intéresse' = this subject interests me.",
+    "fixed_tip": "",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0621",
+    "current_tip": "'Sembler' works like plaire: 'il me semble que...' = it seems to me that...",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0625",
+    "current_tip": "'Pourquoi' (why) questions can use est-ce que or inversion: 'Pourquoi est-ce que tu pars ?' or 'Pourquoi pars-tu ?'",
+    "fixed_tip": "'Aller à' = to go to. 'Au' = à+le: 'vous allez au marché' = you go to the market.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0642",
+    "current_tip": "'Plaire' in passé composé: 'ça m'a plu' (past participle 'plu'). Don't confuse with 'plu' from 'pleuvoir' (rain).",
+    "fixed_tip": "Three question forms: intonation ('Tu viens?'), 'est-ce que', or inversion ('Viens-tu?').",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0654",
+    "current_tip": "'De rien' = You're welcome (casual). 'Je vous en prie' = You're welcome (formal). 'Il n'y a pas de quoi' = Don't mention it.",
+    "fixed_tip": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0677",
+    "current_tip": "After expressions of quantity, use 'de' alone: 'beaucoup de', 'un peu de', 'assez de'. No article.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0747",
+    "current_tip": "Time: 'Il est + number + heure(s)'. Il est une heure (1:00), il est deux heures (2:00). Use 'midi' for noon, 'minuit' for midnight.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0752",
+    "current_tip": "'Falloir' (il faut) is impersonal — only used with 'il'. It expresses necessity: 'il me faut' = I need.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0761",
+    "current_tip": "Colors usually go AFTER the noun: 'une robe rouge', 'un chat noir'. They agree in gender and number.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0768",
+    "current_tip": "'Même' before noun = same: 'la même chose'. After noun = itself: 'le jour même' (that very day).",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0774",
+    "current_tip": "'À bientôt' = see you soon. Other options: 'à demain' (see you tomorrow), 'à plus tard' (see you later).",
+    "fixed_tip": "'Au' = à+le, 'aux' = à+les. Mandatory contractions. 'À la' and 'à l'' don't contract.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0779",
+    "current_tip": "'Ça' is informal for 'cela' (that/it). Very common in spoken French: 'ça va', 'ça me plaît'.",
+    "fixed_tip": "Three question forms: intonation ('Tu viens?'), 'est-ce que', or inversion ('Viens-tu?').",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0780",
+    "current_tip": "'Énormément' is a strong adverb meaning 'enormously/immensely'. Stronger than 'beaucoup' (a lot).",
+    "fixed_tip": "The imparfait describes ongoing, habitual, or background past actions. Formed from the 'nous' present stem + -ais, -ais, -ait, -ions, -iez, -aient.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0795",
+    "current_tip": "'Pouvoir' → 'pu'. Very common: 'j'ai pu' = I was able to/I could.",
+    "fixed_tip": "'Au' = à+le, 'aux' = à+les. Mandatory contractions. 'À la' and 'à l'' don't contract.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0815",
+    "current_tip": "'Boire' → 'bu'. Short irregular participle. All the -oire verbs are irregular: croire/cru.",
+    "fixed_tip": "Three question forms: intonation ('Tu viens?'), 'est-ce que', or inversion ('Viens-tu?').",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0842",
+    "current_tip": "Half past: 'et demie'. Quarter past: 'et quart'. Quarter to: 'moins le quart'. Il est trois heures et demie = 3:30.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0871",
+    "current_tip": "'Premier/première' goes BEFORE the noun: 'le premier jour'. Ordinal numbers are always placed before.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0878",
+    "current_tip": "'Tout/toute/tous/toutes' + article + noun: 'toute la journée' (all day), 'tous les jours' (every day).",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0879",
+    "current_tip": "'Mou' (m.) → 'molle' (f.) = soft. Before masculine vowel: 'mol'. Irregular: mou/mol/molle/mous/molles.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0884",
+    "current_tip": "'Propre' before noun = own: 'ma propre maison'. After noun = clean: 'une maison propre'.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-0897",
+    "current_tip": "'Léger' (m.) → 'légère' (f.) = light. Like 'fier/fière', the accent direction changes.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-0962",
+    "current_tip": "'Bon appétit !' is said before eating. Common expressions with 'bon': bon voyage, bonne chance, bonne journée, bonne nuit.",
+    "fixed_tip": "'Arriver' uses 'être' in passé composé: 'je suis arrivé(e)'. 'En retard' = late. Regular -er in present.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-1004",
+    "current_tip": "'On y va ?' = Shall we go? / Let's go? 'Y' replaces a place: J'y vais = I'm going (there). Very common in speech.",
+    "fixed_tip": "'Aller' is irregular: je vais, tu vas, il va, nous allons, vous allez, ils vont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-1062",
+    "current_tip": "'Tant pis' = too bad / oh well. 'Tant mieux' = so much the better / great. Common idiomatic pair.",
+    "fixed_tip": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-1073",
+    "current_tip": "'Parler avec' = to talk with. Also: 'parler à' = to speak to, 'parler de' = to talk about.",
+    "fixed_tip": "Three question forms: intonation ('Tu viens?'), 'est-ce que', or inversion ('Viens-tu?').",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-1092",
+    "current_tip": "'Prendre' → 'pris'. 'Des photos' as direct object doesn't trigger agreement (no preceding direct object).",
+    "fixed_tip": "'Au' = à+le, 'aux' = à+les. Mandatory contractions. 'À la' and 'à l'' don't contract.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-1098",
+    "current_tip": "'Santé !' or 'À votre santé !' = Cheers! (when toasting). Literally 'To your health!'",
+    "fixed_tip": "",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-1103",
+    "current_tip": "'Encore' vs 'pas encore': 'j'ai encore faim' (I'm still hungry) vs 'je n'ai pas encore mangé' (I haven't eaten yet).",
+    "fixed_tip": "Three question forms: intonation ('Tu viens?'), 'est-ce que', or inversion ('Viens-tu?').",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-1121",
+    "current_tip": "'Voir' = to see, 'regarder' = to watch/look at. 'J'ai vu un accident' (I saw), 'J'ai regardé un film' (I watched).",
+    "fixed_tip": "'L'' replaces 'le/la' before vowels or silent 'h': 'l'hôtel', 'l'aéroport'. Mandatory elision.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-1125",
+    "current_tip": "'Tant pis' = too bad/never mind. Its opposite is 'tant mieux' = so much the better.",
+    "fixed_tip": "The imparfait describes ongoing, habitual, or background past actions. Formed from the 'nous' present stem + -ais, -ais, -ait, -ions, -iez, -aient.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-1144",
+    "current_tip": "'Ça m'est égal' = I don't mind. Common idiomatic expression. Literally 'That is equal to me.'",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-1224",
+    "current_tip": "'Prendre' covers take, have (food/drink), and catch: 'J'ai pris le bus' (I took the bus), 'J'ai pris un café' (I had a coffee).",
+    "fixed_tip": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-1228",
+    "current_tip": "'Mettre' has many uses: mettre la table (set the table), mettre du temps (take time), se mettre à (start doing).",
+    "fixed_tip": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-1269",
+    "current_tip": "'Mettre' means both 'to put' and 'to put on (clothes)': 'J'ai mis mon manteau' = I put on my coat.",
+    "fixed_tip": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-1273",
+    "current_tip": "'Suivre' → 'suivi'. Regular -i ending despite the irregular verb.",
+    "fixed_tip": "'Faire' = to do/make. Irregular: je fais, il fait, nous faisons, ils font. Used in many fixed expressions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-1276",
+    "current_tip": "'Tenir' → 'tenu'. Same pattern as venir/venu. Both are common irregular verbs.",
+    "fixed_tip": "'Faire' = to do/make. Irregular: je fais, il fait, nous faisons, ils font. Used in many fixed expressions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-1379",
+    "current_tip": "'Mourir' → 'mort'. Uses 'être': 'il est mort'. Also used as adjective: 'une langue morte'.",
+    "fixed_tip": "'Faire' = to do/make. Irregular: je fais, il fait, nous faisons, ils font. Used in many fixed expressions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-1387",
+    "current_tip": "'Écrire' → 'écrit': 'Elle a écrit une lettre.' Note the accent: 'é' at the start. Writing-related vocab: écrire, lire, dire.",
+    "fixed_tip": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-1411",
+    "current_tip": "'Comprendre' follows the same pattern as 'prendre': 'J'ai compris' = I understood. Very useful in conversation.",
+    "fixed_tip": "Three question forms: intonation ('Tu viens?'), 'est-ce que', or inversion ('Viens-tu?').",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-1672",
+    "current_tip": "'Se' changes to 's'' before vowels: 's'habiller', 's'endormir', 's'amuser'.",
+    "fixed_tip": "'Au' = à+le, 'aux' = à+les. Mandatory contractions. 'À la' and 'à l'' don't contract.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-1682",
+    "current_tip": "'Par' for means of transport: 'par avion' (by plane), 'par le train' (by train).",
+    "fixed_tip": "",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-1699",
+    "current_tip": "'Pour' expressing duration: 'pour deux semaines' = for two weeks (intended duration).",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-1730",
+    "current_tip": "In passé composé, direct object pronouns cause past participle agreement.",
+    "fixed_tip": "'Faire' = to do/make. Irregular: je fais, il fait, nous faisons, ils font. Used in many fixed expressions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-1792",
+    "current_tip": "In passé composé, direct object pronouns cause past participle agreement.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-1796",
+    "current_tip": "In passé composé, pronouns go before 'avoir/être': 'je l'ai vu' (I saw him/it), not *'j'ai le vu'.",
+    "fixed_tip": "'Au' = à+le, 'aux' = à+les. Mandatory contractions. 'À la' and 'à l'' don't contract.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-1819",
+    "current_tip": "'Faire' in subjunctive: que je fasse. Many common verbs have irregular subjunctive forms.",
+    "fixed_tip": "'Vouloir' + infinitive = to want to. Irregular: je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-1889",
+    "current_tip": "'Y' replaces 'à + place': 'elle y va' = she goes there. Also replaces 'à + thing' with some verbs.",
+    "fixed_tip": "'Aller' is irregular: je vais, tu vas, il va, nous allons, vous allez, ils vont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-1897",
+    "current_tip": "'En' replaces 'de + noun': 'j'en veux' (I want some). Also for quantities: 'j'en ai trois'.",
+    "fixed_tip": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-1908",
+    "current_tip": "In passé composé, direct object pronouns cause past participle agreement.",
+    "fixed_tip": "Reflexive verbs use 'se' + verb: 'se laver' (to wash oneself). The pronoun changes: je me, tu te, il se, nous nous, vous vous.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-1965",
+    "current_tip": "'Apprendre' in subjunctive: 'que nous apprenions'. Note the -ions ending for nous-form subjunctive.",
+    "fixed_tip": "'Vouloir' + infinitive = to want to. Irregular: je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-2038",
+    "current_tip": "'Savoir' in subjunctive: 'que je sache'. Used in 'pas que je sache' = not that I know of.",
+    "fixed_tip": "'Que' after verbs of emotion/doubt/will triggers the subjonctif: 'je veux que tu viennes' (I want you to come).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-2053",
+    "current_tip": "French often softens commands with 's'il te plaît' (informal) or 's'il vous plaît' (formal). A bare imperative can sound harsh.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-2086",
+    "current_tip": "'Pouvoir' in subjunctive: 'que vous puissiez'. Very irregular but very common subjunctive form.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-2137",
+    "current_tip": "Reflexive imperative: \"Dépêche-toi\" (tu), \"Dépêchons-nous\" (nous), \"Dépêchez-vous\" (vous).",
+    "fixed_tip": "'Aller' is irregular: je vais, tu vas, il va, nous allons, vous allez, ils vont.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-2161",
+    "current_tip": "Positive reflexive imperative: verb + -toi. Lave-toi (not te lave).",
+    "fixed_tip": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-2201",
+    "current_tip": "'Veuillez' (please) is a formal imperative of 'vouloir'. Used in official/business contexts.",
+    "fixed_tip": "'Aller' is irregular: je vais, tu vas, il va, nous allons, vous allez, ils vont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-2237",
+    "current_tip": "'Sois' (be) and 'aie' (have) are irregular tu-form imperatives. 'Soyons/soyez' and 'ayons/ayez' for nous/vous.",
+    "fixed_tip": "'Aller' is irregular: je vais, tu vas, il va, nous allons, vous allez, ils vont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-2285",
+    "current_tip": "'Lorsque' (when) behaves like 'quand': followed by futur simple in French when future meaning.",
+    "fixed_tip": "'Aller' is irregular: je vais, tu vas, il va, nous allons, vous allez, ils vont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-2464",
+    "current_tip": "'Courir' doubles the -r- in future: 'je courrai' (I will run). Same for mourir: 'je mourrai'.",
+    "fixed_tip": "'Aller' is irregular: je vais, tu vas, il va, nous allons, vous allez, ils vont.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-2488",
+    "current_tip": "'Aussitôt que' + futur: 'aussitôt qu'il partira' = as soon as he leaves. Future required in French.",
+    "fixed_tip": "'Aller' is irregular: je vais, tu vas, il va, nous allons, vous allez, ils vont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-2688",
+    "current_tip": "'Après que' + indicative (officially): 'après qu'il a fini'. Though subjunctive is common in speech.",
+    "fixed_tip": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-2762",
+    "current_tip": "'Eût' — imperfect subjunctive of avoir. Very literary: 'bien qu'il eût raison' = although he was right.",
+    "fixed_tip": "'Que' after verbs of emotion/doubt/will triggers the subjonctif: 'je veux que tu viennes' (I want you to come).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-2898",
+    "current_tip": "'Sauf si' = except if/unless: 'sauf s'il pleut' = unless it rains. Followed by indicative.",
+    "fixed_tip": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-2920",
+    "current_tip": "'Quand bien même' + conditionnel = even if: literary and emphatic alternative to 'même si'.",
+    "fixed_tip": "",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-2940",
+    "current_tip": "'Il s'agit de' = it's about/it concerns. Always impersonal — never 'je m'agis' or 'elle s'agit'.",
+    "fixed_tip": "'Être à' for location: 'ils sont à l'aéroport' = they are at the airport.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-2945",
+    "current_tip": "Cependant: formal 'however', used at the beginning of a clause.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-2979",
+    "current_tip": "'Se faire' + infinitive for passive experience: 'il s'est fait voler' = he got robbed.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3018",
+    "current_tip": "Aussi + inversion: formal 'therefore' at start of sentence.",
+    "fixed_tip": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-3024",
+    "current_tip": "'Pouvoir' + infinitive for ability/permission: 'je peux partir ?' = may I leave?",
+    "fixed_tip": "'Nouveau/nouvelle' (new) precedes the noun: 'nouveau restaurant'. Masc. before vowel: 'nouvel ami'.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-3030",
+    "current_tip": "Quoi que + subjunctive: 'whatever'. Not to be confused with quoique.",
+    "fixed_tip": "'Arriver' uses 'être' in passé composé: 'je suis arrivé(e)'. 'En retard' = late. Regular -er in present.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-3045",
+    "current_tip": "Soutenu: 'ci-joint' = 'enclosed', 'susmentionné' = 'aforementioned'.",
+    "fixed_tip": "",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3050",
+    "current_tip": "'Pourtant' = yet/however. Informal concession, common in speech: 'j'ai étudié, pourtant j'ai échoué'.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3069",
+    "current_tip": "'Ce matin' → 'ce matin-là' in reported speech. Adding '-là' indicates past reference.",
+    "fixed_tip": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3089",
+    "current_tip": "'Grâce à' = thanks to (positive cause). 'À cause de' for negative cause.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3134",
+    "current_tip": "'Devoir' + infinitive expresses obligation or probability: 'il doit pleuvoir' = it must be raining.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-3142",
+    "current_tip": "'Aller' + infinitive for planned future: 'ils vont se marier' = they're going to get married.",
+    "fixed_tip": "'Aller' is irregular: je vais, tu vas, il va, nous allons, vous allez, ils vont.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-3155",
+    "current_tip": "'Finir de/par' + infinitive: 'finir de manger' (finish eating), 'finir par accepter' (end up accepting).",
+    "fixed_tip": "Reflexive verbs use 'se' + verb: 'se laver' (to wash oneself). The pronoun changes: je me, tu te, il se, nous nous, vous vous.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3200",
+    "current_tip": "Time markers shift: 'l'été dernier' → 'l'été précédent', 'hier' → 'la veille', 'demain' → 'le lendemain'.",
+    "fixed_tip": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3210",
+    "current_tip": "Imperatives become 'de + infinitive': 'Pars !' → 'Il m'a dit de partir.'",
+    "fixed_tip": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3365",
+    "current_tip": "'Jusqu'à ce que' + subjunctive: 'until' always takes subjunctive in French.",
+    "fixed_tip": "'Que' after verbs of emotion/doubt/will triggers the subjonctif: 'je veux que tu viennes' (I want you to come).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3385",
+    "current_tip": "Familier: 'mec' = 'guy', 'super sympa' = 'really nice'.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3418",
+    "current_tip": "'Mettre de l'eau dans son vin' = 'to moderate one's position'.",
+    "fixed_tip": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3425",
+    "current_tip": "With 'être' verbs, plus-que-parfait agrees: 'elle était partie' (she had left). Agreement like passé composé.",
+    "fixed_tip": "The futur simple (will): infinitive + endings (-ai, -as, -a, -ons, -ez, -ont). Some verbs have irregular stems.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-3455",
+    "current_tip": "'Tu vois' / 'tu sais' = you see/you know. Common fillers in informal speech.",
+    "fixed_tip": "",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3465",
+    "current_tip": "'Avoir la chair de poule' = 'to have goosebumps'. Literal: 'hen skin'.",
+    "fixed_tip": "",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3483",
+    "current_tip": "'Il pleut des cordes' = 'it's pouring'. Literal: 'it's raining ropes'.",
+    "fixed_tip": "'Des' = some (partitive plural). French requires it where English uses no article: 'des enfants' = children.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3520",
+    "current_tip": "'Faire' in passé simple: je fis, il fit, nous fîmes, ils firent.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-3531",
+    "current_tip": "'Ce n'est que...que': restrictive structure 'only...'.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3534",
+    "current_tip": "'C'est le bouquet' = ironic expression for 'that's the limit'.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3556",
+    "current_tip": "Inversion after direct speech: 'dit-il', 'répondit-elle'. Standard in French narratives.",
+    "fixed_tip": "The imparfait describes ongoing, habitual, or background past actions. Formed from the 'nous' present stem + -ais, -ais, -ait, -ions, -iez, -aient.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3638",
+    "current_tip": "'Venir' in passé simple: je vins, il vint, nous vînmes, ils vinrent. Very irregular.",
+    "fixed_tip": "'Des' = some (partitive plural). French requires it where English uses no article: 'des enfants' = children.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-3692",
+    "current_tip": "'Avoir' in passé simple: j'eus, tu eus, il eut, nous eûmes, vous eûtes, ils eurent.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "fr-3712",
+    "current_tip": "'Pas de fumée sans feu' — word-for-word equivalent of 'where there's smoke, there's fire'.",
+    "fixed_tip": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3758",
+    "current_tip": "'Compte tenu de' = given/considering. Formal alternative to 'étant donné'.",
+    "fixed_tip": "Reflexive verbs use 'se' + verb: 'se laver' (to wash oneself). The pronoun changes: je me, tu te, il se, nous nous, vous vous.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3833",
+    "current_tip": "'Il n'y a pas lieu de': formal 'there is no reason to'.",
+    "fixed_tip": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3852",
+    "current_tip": "French proverbs often use 'qui' (he who): 'Qui dort dîne' = He who sleeps, dines (sleep replaces dinner).",
+    "fixed_tip": "'Faire' = to do/make. Irregular: je fais, il fait, nous faisons, ils font. Used in many fixed expressions.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3857",
+    "current_tip": "'Soit dit en passant' = by the way/incidentally. Formal equivalent of 'au fait' or 'à propos'.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "fr-3891",
+    "current_tip": "'Il s'en est suivi': literary impersonal 'there followed'.",
+    "fixed_tip": "'Être' (to be): je suis, tu es, il est, nous sommes, vous êtes, ils sont.",
+    "issue": "irrelevant"
+  }
+]

@@ -1,0 +1,4016 @@
+[
+  {
+    "id": "ru-0005",
+    "current_tip": "Irregular хотеть mixes conjugations: хочу, хочешь, хочет, хотим, хотите, хотят.",
+    "fixed_tip": "Свой means 'one's own' and refers back to the subject: Я люблю свою семью (I love my family).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0007",
+    "current_tip": "Жить ('to live') is first conjugation: живу, живёшь, живёт, живём, живёте, живут.",
+    "fixed_tip": "По-русски means 'in Russian' — the prefix по- with a language adjective describes how someone speaks: говорить по-русски.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0008",
+    "current_tip": "Stress shifts are common in conjugation: писа́ть → пишу́, пи́шешь (stress moves).",
+    "fixed_tip": "Хорошо is an adverb meaning 'well.' Russian adverbs don't change form — they modify the verb directly.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0012",
+    "current_tip": "Russian questions often use intonation rather than word order changes.",
+    "fixed_tip": "Бегать is a multidirectional verb of motion meaning 'to run regularly.' Каждое утро (every morning) signals habitual action.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0017",
+    "current_tip": "Кто ('who') takes singular verb forms even with plural meaning.",
+    "fixed_tip": "Который час? means 'What time is it?' — который (which) agrees in gender with час (hour, masculine).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0026",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "Смотреть is a second conjugation verb: смотрю, смотришь, смотрит. The third-person form смотрит is used here with мама.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0028",
+    "current_tip": "Present tense verbs change endings based on person and number.",
+    "fixed_tip": "Готовить (to cook) is second conjugation: готовлю, готовишь, готовит. Note the consonant mutation л→вл in the first person.",
+    "issue": "repetitive"
+  },
+  {
+    "id": "ru-0029",
+    "current_tip": "Present tense verbs change endings based on person and number.",
+    "fixed_tip": "Сейчас (now/right now) indicates an action happening at this moment, requiring present tense.",
+    "issue": "repetitive"
+  },
+  {
+    "id": "ru-0030",
+    "current_tip": "Какой agrees in gender/number/case with the noun it modifies.",
+    "fixed_tip": "Ближайшая is the superlative of близкий (near) — it agrees with аптека (feminine). Находится is a reflexive verb meaning 'is located.'",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0031",
+    "current_tip": "Есть ('to eat') is irregular: ем, ешь, ест, едим, едите, едят.",
+    "fixed_tip": "Знать (to know facts) takes accusative: русский язык. Compare with уметь (to know how) which takes infinitive.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0032",
+    "current_tip": "Не is the main negation particle, placed before the verb: Я не знаю.",
+    "fixed_tip": "У + genitive + нет + genitive expresses 'not having': У бабушки нет телефона. Нет requires genitive case.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0033",
+    "current_tip": "Russian has three genders: masculine, feminine, and neuter — learn gender with every noun.",
+    "fixed_tip": "О + prepositional means 'about': думать о семье. Своей is the prepositional feminine form of свой, agreeing with семья.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0034",
+    "current_tip": "Или means 'or': Чай или кофе?",
+    "fixed_tip": "А is a contrast conjunction meaning 'but/while': он работает, а она учится. It shows contrast without contradiction, unlike но (but).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0035",
+    "current_tip": "Но means 'but' for contradiction: Он хочет, но не может.",
+    "fixed_tip": "Что here means 'that' introducing a subordinate clause: Я знаю, что ты можешь. A comma always precedes что.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0036",
+    "current_tip": "Или means 'or': Чай или кофе?",
+    "fixed_tip": "Пока means 'while' for simultaneous actions: Пока он спит, она работает. Both clauses use present tense.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0040",
+    "current_tip": "Neuter nouns end in -о or -е: окно (window), море (sea).",
+    "fixed_tip": "Холодную погоду is accusative feminine — adjective + noun both change form as the direct object of любить.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0046",
+    "current_tip": "Между + instrumental = 'between': между домом и школой.",
+    "fixed_tip": "Левой рукой uses instrumental case to express 'with/by means of': she writes with (her) left hand.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0049",
+    "current_tip": "Second conjugation (-и-): говорить → говорю, говоришь, говорит, говорим, говорите, говорят.",
+    "fixed_tip": "Встаёт is from вставать (to get up/rise). Рано (early) and летом (in summer, instrumental) set the time context.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0050",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "Учить means 'to study/learn' or 'to teach' depending on context. Here учитель учит = the teacher teaches.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0051",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "Писать (to write) has a consonant mutation: пис- becomes пиш- in conjugation: пишу, пишешь, пишет.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0053",
+    "current_tip": "Present tense verbs change endings based on person and number.",
+    "fixed_tip": "Помогать (to help) takes dative: помогает другу (helps a friend). Друг→другу is the dative form.",
+    "issue": "repetitive"
+  },
+  {
+    "id": "ru-0058",
+    "current_tip": "Stem changes are common: писать → пишу (с→ш), просить → прошу (с→ш).",
+    "fixed_tip": "Каждый вечер (every evening) signals habitual action, requiring imperfective читаю. The accusative книгу marks the direct object.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0063",
+    "current_tip": "Second conjugation verbs end in -ить: говорить → говорю, говоришь, говорит.",
+    "fixed_tip": "Исполнилось + dative expresses age events: Ему исполнилось сорок лет = He turned forty. Note dative ему + past neuter исполнилось.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0067",
+    "current_tip": "Irregular хотеть mixes conjugations: хочу, хочешь, хочет, хотим, хотите, хотят.",
+    "fixed_tip": "Читать is first conjugation: читаю, читаешь, читает. Here она читает — third person singular with the -ет ending.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0081",
+    "current_tip": "Russian word order is flexible but SVO is neutral; changing order shifts emphasis.",
+    "fixed_tip": "Другу is dative of друг — with писать, the dative marks the recipient: пишет письмо другу (writes a letter to a friend).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0086",
+    "current_tip": "Present active participle: -ущий/-ющий (1st conj.), -ащий/-ящий (2nd conj.): читающий (reading).",
+    "fixed_tip": "Прочитанная is a past passive participle from прочитать: книга, которая была прочитана = a book that was read. It agrees with книга (fem.).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0087",
+    "current_tip": "Полтора means 'one and a half' and takes genitive singular.",
+    "fixed_tip": "Минус + number for negative temperatures: минус пятнадцать градусов. Numbers 5+ take genitive plural: градусов.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0091",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "Меньше is the comparative of мало (little): есть меньше сахара = eat less sugar. Genitive сахара follows the comparative.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0093",
+    "current_tip": "Future of быть: буду, будешь, будет, будем, будете, будут.",
+    "fixed_tip": "Зачем means 'what for/why (purpose)': Зачем ты купил? Столько + genitive means 'so much': столько хлеба.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0095",
+    "current_tip": "Я (I), ты (you informal), он/она/оно (he/she/it), мы (we), вы (you formal/plural), они (they).",
+    "fixed_tip": "В офисе uses prepositional case after в for location. Каждый день (every day) is accusative — time expressions often use accusative.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0097",
+    "current_tip": "First conjugation (-е-): читать → читаю, читаешь, читает, читаем, читаете, читают.",
+    "fixed_tip": "Играть в + accusative for games/sports: играет в парке. По выходным (on weekends) uses dative plural with по.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0098",
+    "current_tip": "The verb 'to be' (быть) is omitted in present tense: Я студент (I [am] a student).",
+    "fixed_tip": "По выходным means 'on weekends' — по + dative plural expresses recurring time: по вечерам (in the evenings), по утрам (in the mornings).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0106",
+    "current_tip": "Second conjugation (-и-): говорить → говорю, говоришь, говорит, говорим, говорите, говорят.",
+    "fixed_tip": "Для + genitive means 'for': для всей семьи. Всей is genitive feminine of весь (all/whole), agreeing with семья.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0108",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "Ездить is a multidirectional verb of motion (by vehicle) for habitual trips: ездит на работу = commutes to work regularly.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0115",
+    "current_tip": "Ли is a question particle placed after the key word: Знаете ли вы?",
+    "fixed_tip": "Зачем + dative means 'why do you need': Зачем тебе столько денег? Столько + genitive (денег) means 'so much/many.'",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0116",
+    "current_tip": "Меня зовут literally means 'they call me'—the standard way to give your name.",
+    "fixed_tip": "Позвольте (allow me) + infinitive is a formal way to introduce: Позвольте представить вам = Allow me to introduce to you. Вам is dative.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0118",
+    "current_tip": "Или means 'or': Чай или кофе?",
+    "fixed_tip": "И means 'and' connecting two actions: работает и учится. Одновременно (simultaneously) is an adverb that doesn't change form.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0126",
+    "current_tip": "The second conjugation endings are: -ю/-у, -ишь, -ит, -им, -ите, -ят/-ат.",
+    "fixed_tip": "За + instrumental means 'for/to gather': ходить за грибами = to go mushroom picking. This is a common Russian leisure activity.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0129",
+    "current_tip": "Будучи (being) is the gerund of быть: будучи студентом = being a student.",
+    "fixed_tip": "Ожидая is an imperfective gerund from ожидать (to wait). Gerunds describe simultaneous actions: while waiting for the bus, I read.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0132",
+    "current_tip": "Stem changes are common: писать → пишу (с→ш), просить → прошу (с→ш).",
+    "fixed_tip": "Врачом uses instrumental case after работать to express profession: она работает врачом = she works as a doctor.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0133",
+    "current_tip": "Перед + instrumental = 'in front of': перед домом = 'in front of the house'.",
+    "fixed_tip": "Программистом is instrumental — Russian uses instrumental case after работать for professions: он работает программистом.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0134",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "Из + genitive means 'from/out of': из приюта = from the shelter. Взять (to take) is perfective — they want to take (complete action).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0135",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "В центре uses prepositional case for location. Снять квартиру means 'to rent an apartment' — a common collocation.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0137",
+    "current_tip": "Какой agrees in gender/number/case with the noun it modifies.",
+    "fixed_tip": "Не подскажете is a polite negative question form: 'Could you tell me?' Using не in questions makes requests more polite in Russian.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0143",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "Ближе is the comparative of близко (near): ближе к дому = closer to home. К + dative means 'toward.'",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0144",
+    "current_tip": "Нет replaces есть in negative: У меня нет книги (I don't have a book) — genitive required.",
+    "fixed_tip": "С днём рождения! = Happy birthday! С + instrumental is used for congratulations: с Новым годом (Happy New Year).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0145",
+    "current_tip": "Russian uses не before the verb for simple negation.",
+    "fixed_tip": "Ли is a question particle used in indirect questions: есть ли тут рядом аптека = whether there is a pharmacy nearby.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0146",
+    "current_tip": "Меня зовут literally means 'they call me'—the standard way to give your name.",
+    "fixed_tip": "After работы (genitive) = after work. Идём is first person plural of идти — used for 'we are going' to a specific place.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0148",
+    "current_tip": "Verbs ending in -жать, -чать, -шать, -щать follow first conjugation despite the -ать ending.",
+    "fixed_tip": "Четырнадцать стульев: numbers 5+ take genitive plural. Стул has an irregular plural: стулья, genitive plural стульев.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0163",
+    "current_tip": "Жить ('to live') is first conjugation: живу, живёшь, живёт, живём, живёте, живут.",
+    "fixed_tip": "Петь (to sing) has irregular conjugation: пою, поёшь, поёт, поём, поёте, поют. Красиво (beautifully) is an adverb.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0165",
+    "current_tip": "Где = 'where (at)', куда = 'where (to)', откуда = 'where (from)'.",
+    "fixed_tip": "Неужели is an emphatic question particle expressing surprise: 'Is it really true that...?' Уже means 'already.'",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0172",
+    "current_tip": "Present tense verbs change endings based on person and number.",
+    "fixed_tip": "Играть в + accusative for games: играет в шахматы (plays chess). В шахматы is always plural in Russian.",
+    "issue": "repetitive"
+  },
+  {
+    "id": "ru-0176",
+    "current_tip": "Some verbs mix conjugations — these must be memorized: хотеть (я хочу, ты хочешь, они хотят).",
+    "fixed_tip": "Убирать (to clean/tidy) is imperfective — обычно (usually) signals habitual action requiring imperfective aspect.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0180",
+    "current_tip": "After нет, genitive is required: Нет воды = 'There is no water'.",
+    "fixed_tip": "Шесть часов работы: after 5+, genitive plural. Часов is genitive plural of час. Утомляют is 3rd person plural — the subject часы triggers plural agreement.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0182",
+    "current_tip": "Russian uses не before the verb for simple negation.",
+    "fixed_tip": "Помогать + dative: помогает другу (helps a friend). Обычно signals habitual action, requiring imperfective помогает.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0183",
+    "current_tip": "Russian uses не before the verb for simple negation.",
+    "fixed_tip": "Можно ли = 'is it possible to' — можно is an impersonal word, and ли makes it a polite question.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0185",
+    "current_tip": "Present tense verbs change endings based on person and number.",
+    "fixed_tip": "Ездить is multidirectional 'to go by transport regularly.' Обычно (usually) pairs with the habitual meaning of ездить.",
+    "issue": "repetitive"
+  },
+  {
+    "id": "ru-0191",
+    "current_tip": "Present tense verbs change endings based on person and number.",
+    "fixed_tip": "Мыл is past tense masculine of мыть (to wash). На прошлой неделе (last week) signals past tense.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0192",
+    "current_tip": "Есть ('to eat') is irregular: ем, ешь, ест, едим, едите, едят.",
+    "fixed_tip": "Друг друга means 'each other' — it's a reciprocal pronoun. Без слов = 'without words' uses genitive after без.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0193",
+    "current_tip": "Feminine nouns end in -а, -я, or -ь: книга (book), песня (song), ночь (night).",
+    "fixed_tip": "Не буду + infinitive is the negative imperfective future: I will not eat. Кашу is accusative of каша.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0197",
+    "current_tip": "Russian questions often use intonation rather than word order changes.",
+    "fixed_tip": "Мыть посуду means 'to wash dishes' — a common collocation. Вечером (in the evening) uses instrumental case for time of day.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0199",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "Скоро (soon) suggests future action, but Russian can use present tense for planned future events.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0204",
+    "current_tip": "Gender affects adjective endings: новый дом (m.), новая книга (f.), новое окно (n.).",
+    "fixed_tip": "В понедельник (on Monday) uses accusative after в for days of the week. Картину is accusative feminine — the direct object of рисует.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0205",
+    "current_tip": "Есть ('to eat') is irregular: ем, ешь, ест, едим, едите, едят.",
+    "fixed_tip": "В офисе uses prepositional after в for location. Каждый день (every day) is an accusative time expression for habitual actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0207",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "Ездил is past tense of ездить (multidirectional by vehicle). На прошлой неделе (last week) requires past tense.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0209",
+    "current_tip": "The accusative case marks the direct object of a verb.",
+    "fixed_tip": "After обеда (after lunch) uses genitive after после. Готовить обед = to cook lunch — обед is accusative as the direct object.",
+    "issue": "repetitive"
+  },
+  {
+    "id": "ru-0214",
+    "current_tip": "Numbers 2-4 take genitive singular: два стола, три книги.",
+    "fixed_tip": "Позади + genitive means 'behind': позади школы. Спортивная площадка is a compound noun meaning 'sports ground.'",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0219",
+    "current_tip": "Russian nouns have three genders: masculine, feminine, and neuter.",
+    "fixed_tip": "Иногда (sometimes) indicates occasional action, requiring imperfective aspect: иногда читает (sometimes reads).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0224",
+    "current_tip": "First conjugation (-е-): читать → читаю, читаешь, читает, читаем, читаете, читают.",
+    "fixed_tip": "Сдавать экзамены means 'to take exams.' В конце + genitive means 'at the end of': в конце семестра.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0225",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "Расшивать means 'to embroider.' Цветочным орнаментом uses instrumental to show the pattern used — 'with a floral ornament.'",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0227",
+    "current_tip": "The dative case indicates the indirect object or recipient.",
+    "fixed_tip": "Бегать is multidirectional running (regularly/habitually). Часто (often) pairs with the habitual meaning. Утром = in the morning (instrumental).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0228",
+    "current_tip": "The dative case indicates the indirect object or recipient.",
+    "fixed_tip": "В парке is prepositional case after в for location. Сейчас (now) marks the present moment — the action is happening right now.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0229",
+    "current_tip": "The dative case indicates the indirect object or recipient.",
+    "fixed_tip": "В понедельник uses accusative for 'on Monday.' В ресторане uses prepositional for 'in the restaurant' — same preposition в, different cases.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0230",
+    "current_tip": "Russian uses 24-hour time in formal contexts: 14:00 = два часа дня.",
+    "fixed_tip": "Отливать means 'to cast/mold.' Различных форм и размеров uses genitive plural after a quantity word — 'of various shapes and sizes.'",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0231",
+    "current_tip": "Russian nouns have three genders: masculine, feminine, and neuter.",
+    "fixed_tip": "Бегала is past feminine of бегать — the -а ending indicates the feminine subject мама. На прошлой неделе signals past tense.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0232",
+    "current_tip": "Есть ('to eat') is irregular: ем, ешь, ест, едим, едите, едят.",
+    "fixed_tip": "Ждёт + genitive for people: ждёт хозяина (waits for the owner). У двери = by the door. Каждый вечер signals habitual action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0241",
+    "current_tip": "Russian uses не before the verb for simple negation.",
+    "fixed_tip": "Можно + infinitive = 'is it possible to.' Расплатиться картой = to pay by card. Instrumental картой expresses the means of payment.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0242",
+    "current_tip": "Где = 'where (at)', куда = 'where (to)', откуда = 'where (from)'.",
+    "fixed_tip": "Когда means 'when' for time questions. Вернёшься is perfective future of вернуться — the perfective form directly becomes future tense.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0245",
+    "current_tip": "Feminine nouns typically end in -а/-я: книга, земля, мама.",
+    "fixed_tip": "Купил is past perfective of купить — a completed one-time purchase. Новую машину is accusative feminine (adjective + noun both change).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0246",
+    "current_tip": "Feminine adjectives: -ая/-яя: новая, синяя.",
+    "fixed_tip": "Тихое is neuter nominative agreeing with здание (neuter). Прекрасно is a short-form adjective/adverb meaning 'beautifully/wonderful.'",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0247",
+    "current_tip": "Russian uses не before the verb for simple negation.",
+    "fixed_tip": "Всегда (always) signals habitual action requiring imperfective: покупает (buys regularly). Продукты = groceries (always plural).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0248",
+    "current_tip": "Russian uses не before the verb for simple negation.",
+    "fixed_tip": "Петь (to sing) has a vowel change in conjugation: поёт (3rd person). Песню is accusative of песня — the direct object.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0250",
+    "current_tip": "Russian uses не before the verb for simple negation.",
+    "fixed_tip": "Каждое утро means 'every morning.' Каждый/каждая/каждое agrees in gender with the noun: утро is neuter, so каждое.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0251",
+    "current_tip": "Russian uses не before the verb for simple negation.",
+    "fixed_tip": "Завтра (tomorrow) signals future, but Russian can use present imperfective for scheduled future actions: моет посуду завтра.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0261",
+    "current_tip": "Numbers 5+ take genitive plural: пять столов, шесть книг.",
+    "fixed_tip": "Нет + genitive expresses absence: нет свободного времени = there is no free time. Both adjective and noun are in genitive.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0266",
+    "current_tip": "Collective numerals двое, трое, четверо are used with male persons and pluralia tantum nouns.",
+    "fixed_tip": "Плюс (plus), минус (minus), равно (equals) are used in math. Один, два, три, четыре, пять are basic cardinal numbers.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0268",
+    "current_tip": "Где = 'where (at)', куда = 'where (to)', откуда = 'where (from)'.",
+    "fixed_tip": "Сколько времени + verb = 'how much time does it take.' Сколько + genitive (времени) asks about quantity.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0269",
+    "current_tip": "У меня есть... (I have...) literally means 'by me there is': У меня есть книга.",
+    "fixed_tip": "Редко (rarely) is a frequency adverb. Танцевать вальс = to dance a waltz — вальс is accusative as the direct object.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0271",
+    "current_tip": "Russian uses не before the verb for simple negation.",
+    "fixed_tip": "Обычно (usually) signals habitual action requiring imperfective aspect. Убирать квартиру = to clean the apartment.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0275",
+    "current_tip": "Russian questions often use intonation rather than word order changes.",
+    "fixed_tip": "Ездить на работу means 'to commute to work.' Обычно (usually) pairs with the multidirectional ездить for regular trips.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0279",
+    "current_tip": "Russian uses не before the verb for simple negation.",
+    "fixed_tip": "Рисовать картину means 'to paint a picture.' Каждый день signals habitual action requiring imperfective рисует.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0280",
+    "current_tip": "Some -ь nouns are masculine (день, словарь), others feminine (ночь, тетрадь) — memorize them.",
+    "fixed_tip": "После обеда means 'after lunch' — после + genitive. Мыть посуду = to wash dishes, a common daily activity collocation.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0286",
+    "current_tip": "Нет + genitive means 'there is no': Нет времени = 'There is no time'.",
+    "fixed_tip": "Не работает means 'doesn't work/is closed.' По праздникам = on holidays — по + dative plural for recurring events.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0291",
+    "current_tip": "Ни... ни = 'neither... nor': Ни ты, ни я не знаем.",
+    "fixed_tip": "Незачем means 'there's no reason to' — не + за + чем fused together. Ходить here means 'to go' in the general/habitual sense.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0294",
+    "current_tip": "Где = 'where (at)', куда = 'where (to)', откуда = 'where (from)'.",
+    "fixed_tip": "Чей means 'whose' and agrees in gender with the noun: чей зонтик (masculine). На столе = on the table (prepositional).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0296",
+    "current_tip": "Russian questions often use intonation rather than word order changes.",
+    "fixed_tip": "По выходным means 'on weekends' — по + dative plural for recurring events. Танцевать вальс = to dance a waltz.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0298",
+    "current_tip": "Russian questions often use intonation rather than word order changes.",
+    "fixed_tip": "Перед сном means 'before bed' — перед + instrumental. Сон→сном is instrumental of сон (sleep/dream).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0304",
+    "current_tip": "Superlative: самый + adjective: самый большой = 'the biggest'.",
+    "fixed_tip": "Серьёзный is a masculine nominative adjective agreeing with разговор. Вчера вечером = yesterday evening, a common time phrase.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0309",
+    "current_tip": "Feminine adjectives: -ая/-яя: новая, синяя.",
+    "fixed_tip": "Самый вкусный is the superlative: the most delicious. Самый agrees with пирог (masculine). Печёт is from печь (to bake).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0314",
+    "current_tip": "This 1/2-4/5+ pattern repeats: 21 uses singular, 22-24 use gen.sing., 25-30 use gen.plural.",
+    "fixed_tip": "Наш (our) agrees with учитель (masculine). Понятно is an adverb meaning 'clearly' — Russian adverbs don't change form.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0316",
+    "current_tip": "Perfective future uses the perfective verb directly: прочитаю.",
+    "fixed_tip": "Будете читать is imperfective future (буду + infinitive): you will be reading. Сегодня вечером = this evening.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0321",
+    "current_tip": "Russian nouns have three genders: masculine, feminine, and neuter.",
+    "fixed_tip": "Ребёнок is an irregular noun — its plural is дети. Ездил is past tense of multidirectional ездить, indicating a past habitual or round trip.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0323",
+    "current_tip": "Russian uses не before the verb for simple negation.",
+    "fixed_tip": "Не подскажете (couldn't you tell) is a polite negative question. Using не in questions paradoxically makes them more polite in Russian.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0327",
+    "current_tip": "Полтора means 'one and a half' and takes genitive singular.",
+    "fixed_tip": "Двести рублей: двести (200) takes genitive plural рублей. Сколько это стоит? = How much does this cost?",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0331",
+    "current_tip": "Не- prefix creates opposites: большой → небольшой (big → not big).",
+    "fixed_tip": "Не разрешили + infinitive = 'didn't allow to.' Без + genitive: без билета = without a ticket.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0340",
+    "current_tip": "Пожалуйста means both 'please' and 'you're welcome' depending on context.",
+    "fixed_tip": "Добрый день = Good afternoon (formal greeting). Могу я = Can I — using я after могу is a polite way to offer help.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0342",
+    "current_tip": "Feminine nouns typically end in -а/-я: книга, земля, мама.",
+    "fixed_tip": "Построили is past plural perfective — 'they built.' За полгода = within half a year — за + accusative for duration of completion.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0345",
+    "current_tip": "Russian nouns have three genders: masculine, feminine, and neuter.",
+    "fixed_tip": "На вокзале = at the train station (prepositional). Редко (rarely) is a frequency adverb modifying the habitual verb танцует.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0346",
+    "current_tip": "Russian nouns have three genders: masculine, feminine, and neuter.",
+    "fixed_tip": "Гулять по + dative means 'to stroll along': по набережной (along the embankment). Вечером uses instrumental for time of day.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0350",
+    "current_tip": "Adjectives must agree with nouns in gender, number, and case.",
+    "fixed_tip": "В магазине is prepositional for location. Скоро (soon) indicates near future — Russian can use present tense for planned events.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0357",
+    "current_tip": "The accusative case marks the direct object of a verb.",
+    "fixed_tip": "Читала is past feminine (agreeing with девочка). На прошлой неделе signals past tense. В театре is prepositional for location.",
+    "issue": "repetitive"
+  },
+  {
+    "id": "ru-0361",
+    "current_tip": "Masculine adjectives: -ый/-ий/-ой: новый, синий, большой.",
+    "fixed_tip": "Домашнее задание = homework (neuter). Было трудным uses instrumental after быть in past tense: 'was difficult.'",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0363",
+    "current_tip": "Russian uses не before the verb for simple negation.",
+    "fixed_tip": "Обычно (usually) signals habitual action. Петь (to sing) conjugates irregularly: пою, поёшь, поёт.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0368",
+    "current_tip": "Завтра (tomorrow) often signals future tense in Russian.",
+    "fixed_tip": "Будет читать is imperfective future (буду + infinitive) — used for ongoing or habitual future actions: she will be reading.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0371",
+    "current_tip": "Нет + genitive means 'there is no': Нет времени = 'There is no time'.",
+    "fixed_tip": "Не смогли is past plural perfective of смочь (to be able). Решить задачу = to solve a problem (perfective — the solving failed).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0375",
+    "current_tip": "Professions ending in consonant are masculine even for women: Она — хороший врач.",
+    "fixed_tip": "Часто (often) signals habitual action requiring imperfective: поёт (sings). Песню is accusative, the direct object of петь.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0377",
+    "current_tip": "Russian uses не before the verb for simple negation.",
+    "fixed_tip": "Иногда (sometimes) is a frequency adverb. Повар (cook) is masculine; even female cooks use this form.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0378",
+    "current_tip": "Russian uses не before the verb for simple negation.",
+    "fixed_tip": "Можно + dative + infinitive = 'may I/is it okay to': Можно вам задать вопрос? The dative вам marks the addressee.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0389",
+    "current_tip": "Russians often use patronymics (отчество) in formal greetings.",
+    "fixed_tip": "Здравствуйте is a formal greeting. Ваши дела (your matters) uses the formal/plural possessive ваши — matching the formal вы register.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0390",
+    "current_tip": "Masculine nouns end in consonant or -ь: стол (table), день (day).",
+    "fixed_tip": "Никогда не были = never have been. Никогда requires double negation with не — both are mandatory in Russian.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0399",
+    "current_tip": "Папа ('dad') and дедушка ('grandpa') end in -а but are masculine.",
+    "fixed_tip": "Свежее is neuter nominative agreeing with яблоко. В корзине = in the basket (prepositional). Лежит means 'is lying/located.'",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0401",
+    "current_tip": "Feminine adjectives: -ая/-яя: новая, синяя.",
+    "fixed_tip": "Добрый is a masculine nominative adjective agreeing with город. Стоит на углу = stands on the corner — на + prepositional for location.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0402",
+    "current_tip": "Neuter adjectives: -ое/-ее: новое, синее.",
+    "fixed_tip": "Весёлый is masculine nominative agreeing with парк. Russian adjectives must match noun gender: весёлый парк, весёлая песня, весёлое утро.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0407",
+    "current_tip": "After 1, use nominative singular: один стол (one table).",
+    "fixed_tip": "Несколько раз means 'several times.' Несколько + genitive plural: несколько раз. Объяснять is imperfective — repeated explanation.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0408",
+    "current_tip": "Не is the main negation particle, placed before the verb: Я не знаю.",
+    "fixed_tip": "Не трогай is a negative imperative (informal). Без + genitive: без разрешения = without permission. Чужие = someone else's (plural).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0410",
+    "current_tip": "Foreign loanwords get gender by ending: метро is neuter (-о), кофе is masculine (exception).",
+    "fixed_tip": "Писал is past masculine of писать, agreeing with библиотекарь (masculine). На прошлой неделе indicates past tense.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0412",
+    "current_tip": "На + accusative = direction (onto/to): Он едет на работу.",
+    "fixed_tip": "Классическую музыку is accusative feminine — both adjective and noun change. Слушать takes accusative for what you listen to.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0414",
+    "current_tip": "The accusative case marks the direct object of a verb.",
+    "fixed_tip": "Ездить на работу = to commute to work. На + accusative for direction: на работу. Каждый вечер = every evening.",
+    "issue": "repetitive"
+  },
+  {
+    "id": "ru-0417",
+    "current_tip": "Accusative marks the direct object: Я читаю книгу (I am reading a book).",
+    "fixed_tip": "Ни...ни means 'neither...nor': Ни ты, ни я. Double negation is required: не знаем pairs with ни...ни.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0418",
+    "current_tip": "Collective numerals двое, трое, четверо are used with male persons and pluralia tantum nouns.",
+    "fixed_tip": "Пятая is an ordinal number (fifth) agreeing with глава (feminine). Ordinals decline like adjectives: пятая глава, пятой главы.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0419",
+    "current_tip": "Feminine nouns typically end in -а/-я: книга, земля, мама.",
+    "fixed_tip": "С + genitive means 'from': с моря = from the sea. Дуть (to blow) is first conjugation: дует (blows).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0426",
+    "current_tip": "Russian uses не before the verb for simple negation.",
+    "fixed_tip": "Плавать is multidirectional swimming — used for habitual activity: плавал в бассейне = used to swim in the pool.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0428",
+    "current_tip": "Russians often use patronymics (отчество) in formal greetings.",
+    "fixed_tip": "Записан is a short passive participle: is written down. В этой тетради = in this notebook (prepositional). Мой номер = my number.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0430",
+    "current_tip": "Accusative marks the direct object: Я читаю книгу (книга→книгу).",
+    "fixed_tip": "Объяснять + accusative (тему) + dative (ученикам): to explain the topic to the students. Dative marks the recipients.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0432",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "Иногда (sometimes) signals occasional action requiring imperfective. На вокзале = at the station (prepositional after на).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0435",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "Сегодня утром = this morning. В магазине is prepositional for location. Книгу is accusative — the direct object of читает.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0436",
+    "current_tip": "Collective numerals двое, трое, четверо are used with male persons and pluralia tantum nouns.",
+    "fixed_tip": "Три раза в неделю = three times a week. Ходить в спортзал = to go to the gym (habitual). В + accusative for direction.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0440",
+    "current_tip": "The dative case indicates the indirect object or recipient.",
+    "fixed_tip": "На рынке = at the market (prepositional for location). После обеда = after lunch (после + genitive).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0449",
+    "current_tip": "В + accusative for days: в понедельник (on Monday). В + prepositional for months: в январе (in January).",
+    "fixed_tip": "Часто (often) at the start shifts emphasis to frequency. Дома means 'at home' — it's a special locative form, not regular prepositional.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0455",
+    "current_tip": "The accusative case marks the direct object of a verb.",
+    "fixed_tip": "Давайте + perfective = 'let's' for a specific occasion: Давайте выпьем! За + accusative in toasts: за здоровье = to your health!",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0457",
+    "current_tip": "After 5-20, use genitive plural: пять столов (five tables), десять книг (ten books).",
+    "fixed_tip": "Иногда (sometimes) signals occasional habitual action. Убирать квартиру = to clean the apartment (imperfective for repeated action).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0462",
+    "current_tip": "The dative case indicates the indirect object or recipient.",
+    "fixed_tip": "Обычно (usually) signals habitual action. Дома is a locative adverb meaning 'at home' — it doesn't decline like a regular noun.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0468",
+    "current_tip": "Masculine animate nouns change in accusative: вижу брата (not *брат).",
+    "fixed_tip": "На автобусе = by bus — на + prepositional for means of transport. На работу = to work — на + accusative for direction.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0469",
+    "current_tip": "На + accusative = direction (onto/to): Он едет на работу.",
+    "fixed_tip": "Свой refers back to the subject: он любит свою жену = he loves his (own) wife. Use свой, not его, when the possessor is the subject.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0471",
+    "current_tip": "The accusative case marks the direct object of a verb.",
+    "fixed_tip": "Ездил is past of multidirectional ездить — a completed round trip or habitual past. На прошлой неделе = last week.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0482",
+    "current_tip": "Superlative: самый + adjective: самый большой = 'the biggest'.",
+    "fixed_tip": "Старые друзья = old friends (plural nominative). После + genitive: после долгой разлуки = after a long separation.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0484",
+    "current_tip": "The accusative case marks the direct object of a verb.",
+    "fixed_tip": "Береги is an informal imperative of беречь (to take care of). Себя is the reflexive pronoun 'yourself' — it has no nominative form.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0487",
+    "current_tip": "Neuter nouns don't change in accusative: Я вижу окно.",
+    "fixed_tip": "Вести машину means 'to drive a car.' Вести is unidirectional — driving in one direction right now. Через + accusative = across.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0488",
+    "current_tip": "The dative case indicates the indirect object or recipient.",
+    "fixed_tip": "Часто (often) signals habitual action. Покупать продукты = to buy groceries — a common imperfective collocation for regular shopping.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0489",
+    "current_tip": "The dative case indicates the indirect object or recipient.",
+    "fixed_tip": "Всегда (always) indicates permanent habitual action. Убирать квартиру = to clean the apartment.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0491",
+    "current_tip": "Superlative: самый + adjective: самый большой = 'the biggest'.",
+    "fixed_tip": "Уже два часа = already for two hours. Идти for rain: дождь идёт literally means 'rain goes' — the standard way to say it's raining.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0493",
+    "current_tip": "Some verbs have irregular past stems: идти → шёл/шла, мочь → мог/могла.",
+    "fixed_tip": "Помогать + dative: помогает другу = helps a friend. Сейчас (now) marks present continuous action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0494",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "На вокзале = at the train station (prepositional after на). Помогать requires dative: помогает другу.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0497",
+    "current_tip": "Prefix до- means 'reaching': доходить = to reach on foot, доехать = to reach by vehicle.",
+    "fixed_tip": "Отъехать means 'to drive away from.' Prefix от- means 'away from': от города = from the city. На сто километров = by 100 km.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0498",
+    "current_tip": "На + accusative for direction: на работу (to work). На + prepositional for location: на работе (at work).",
+    "fixed_tip": "За собой means 'behind/after yourself.' Когда будете уходить = when you leave — будете + imperfective for future action.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0503",
+    "current_tip": "Masculine animate nouns change in accusative: вижу брата (not *брат).",
+    "fixed_tip": "Вокруг + genitive means 'around': вокруг дома = around the house. Каменную стену is accusative feminine (direct object of строим).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0505",
+    "current_tip": "The dative case indicates the indirect object or recipient.",
+    "fixed_tip": "Обычно (usually) signals habitual action. В горах = in the mountains — горы has an irregular prepositional plural горах.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0506",
+    "current_tip": "The dative case indicates the indirect object or recipient.",
+    "fixed_tip": "Слушать + accusative: слушает музыку. Редко (rarely) is a frequency adverb. В магазине = in the store (prepositional).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0508",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "Помогать + dative: помогает другу = helps a friend. В ресторане = in the restaurant (prepositional after в).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0511",
+    "current_tip": "The dative case indicates the indirect object or recipient.",
+    "fixed_tip": "Ездить на работу = to commute to work. Обычно signals habitual action with the multidirectional verb ездить.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0513",
+    "current_tip": "Russian past tense is simple: drop -ть, add -л (m.), -ла (f.), -ло (n.), -ли (pl.).",
+    "fixed_tip": "По выходным = on weekends (по + dative plural). На вокзале = at the station (prepositional). Готовит обед = cooks lunch.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0516",
+    "current_tip": "The accusative case marks the direct object of a verb.",
+    "fixed_tip": "На вечеринке = at the party (prepositional). После обеда = after lunch. Танцевать вальс takes accusative for the dance.",
+    "issue": "repetitive"
+  },
+  {
+    "id": "ru-0517",
+    "current_tip": "The accusative case marks the direct object of a verb.",
+    "fixed_tip": "В аэропорту is an irregular prepositional: аэропорт takes -у instead of regular -е. Some masculine nouns have this locative form.",
+    "issue": "repetitive"
+  },
+  {
+    "id": "ru-0519",
+    "current_tip": "Stem changes are common: писать → пишу (с→ш), просить → прошу (с→ш).",
+    "fixed_tip": "Уже третий день подряд = already the third day in a row. Идти for weather: дождь идёт = it's raining.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0520",
+    "current_tip": "Как дела is casual; Как поживаете is more formal.",
+    "fixed_tip": "Простите за + accusative = 'sorry for': простите за опоздание. Из-за + genitive = 'because of': из-за пробки (because of traffic).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0521",
+    "current_tip": "The accusative case marks the direct object of a verb.",
+    "fixed_tip": "Поздравлять с + instrumental = 'to congratulate on': поздравляю с повышением. С + instrumental for occasions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0523",
+    "current_tip": "Stem changes are common: писать → пишу (с→ш), просить → прошу (с→ш).",
+    "fixed_tip": "Учить + accusative = to learn/study: учит новые слова. Новые слова is accusative plural — both adjective and noun change.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0532",
+    "current_tip": "Masculine adjective endings: -ый/-ий (nom.), -ого/-его (gen.), -ому/-ему (dat.).",
+    "fixed_tip": "Доброе is neuter adjective agreeing with окно. This is a stylistic expression — normally добрый modifies people, not objects.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0539",
+    "current_tip": "The -ат/-ят ending in third person plural marks second conjugation: они говорят.",
+    "fixed_tip": "Стало плохо + dative = 'became ill/bad for someone': бабушке стало плохо. Impersonal + dative is common for states.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0540",
+    "current_tip": "Masculine inanimate nouns stay the same: вижу стол (not *стола).",
+    "fixed_tip": "Длинное письмо: длинное is neuter accusative agreeing with письмо. Neuter accusative = nominative for inanimate nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0546",
+    "current_tip": "Prefix у- means 'away': уходить = to leave on foot, уехать = to leave by vehicle.",
+    "fixed_tip": "Переехать means 'to move (residence).' Prefix пере- means 'across/change': переехали в новую квартиру = moved to a new apartment.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0555",
+    "current_tip": "Short-form adjectives exist: красивый → красив, красива, красиво, красивы.",
+    "fixed_tip": "Маленький is masculine nominative agreeing with стол. На углу = on the corner — угол has special prepositional form углу.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0560",
+    "current_tip": "Masculine animate nouns change in accusative: вижу брата (not *брат).",
+    "fixed_tip": "На всякий случай means 'just in case' — a fixed phrase. Зонтик is masculine inanimate, so accusative = nominative.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0561",
+    "current_tip": "The accusative case marks the direct object of a verb.",
+    "fixed_tip": "Перед сном = before bed — перед + instrumental. Дома means 'at home' — a special locative adverb form.",
+    "issue": "repetitive"
+  },
+  {
+    "id": "ru-0563",
+    "current_tip": "Будьте добры (be so kind) is a very polite way to start a request.",
+    "fixed_tip": "Организовать is a perfective verb — организовали = they organized (completed action). Для + genitive: для друзей = for friends.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0564",
+    "current_tip": "The dative case indicates the indirect object or recipient.",
+    "fixed_tip": "Пять лет назад = five years ago. Назад means 'ago' and follows the time expression. В Москву = to Moscow (accusative for direction).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0572",
+    "current_tip": "Neuter adjectives: -ое/-ее: новое, синее.",
+    "fixed_tip": "Старая is feminine nominative agreeing with улица. Очень важна — важна is a short-form feminine adjective used as predicate.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0575",
+    "current_tip": "Adjective soft stems end in -ний: последний, зимний, домашний.",
+    "fixed_tip": "Красивая is feminine nominative agreeing with семья. Для + genitive: для меня = for me.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0576",
+    "current_tip": "Plural adjectives: -ые/-ие for all genders: новые, синие.",
+    "fixed_tip": "Умная is feminine nominative agreeing with книга. Важна is a short-form adjective (feminine) used as predicate: the book is important.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0581",
+    "current_tip": "Feminine -а/-я → -у/-ю: мама→маму, земля→землю.",
+    "fixed_tip": "Старого друга is accusative masculine animate — both adjective and noun change form. Animate masculine accusative = genitive.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0583",
+    "current_tip": "Stress patterns differ: говори́ть → говорю́, говори́шь vs люби́ть → люблю́, лю́бишь.",
+    "fixed_tip": "Потеряла is past feminine perfective of потерять — completed action. Вчера (yesterday) signals past tense. В автобусе = on the bus.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0585",
+    "current_tip": "The accusative case marks the direct object of a verb.",
+    "fixed_tip": "На работе = at work (prepositional for location). По выходным = on weekends (по + dative plural for recurring events).",
+    "issue": "repetitive"
+  },
+  {
+    "id": "ru-0591",
+    "current_tip": "The dative case indicates the indirect object or recipient.",
+    "fixed_tip": "Ходили кататься = went to ride/skate. На каток = to the ice rink (на + accusative for direction). Кататься means 'to ride/skate.'",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0592",
+    "current_tip": "Пожалуйста means both 'please' and 'you're welcome' depending on context.",
+    "fixed_tip": "Привет is an informal greeting. Как твои дела = how are things (informal ты form). На новом месте работы = at the new workplace.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0603",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "В школе = at school (prepositional for location). После обеда = after lunch (после + genitive). Книгу is accusative — direct object.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0604",
+    "current_tip": "Verbs in -ти have irregular past: нести → нёс, вести → вёл, расти → рос.",
+    "fixed_tip": "Читала is past feminine imperfective (matching мама). В больнице = in the hospital (prepositional). На прошлой неделе = last week.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0608",
+    "current_tip": "Меня зовут literally means 'they call me'—the standard way to give your name.",
+    "fixed_tip": "Здравствуйте is formal 'hello.' Рады + infinitive = 'glad to': мы рады приветствовать вас = we are glad to welcome you.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0609",
+    "current_tip": "The dative case indicates the indirect object or recipient.",
+    "fixed_tip": "Ездить на теплоходе = to travel by steamship. По + dative for route: по Волге = along the Volga. Прошлым летом = last summer (instrumental).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0610",
+    "current_tip": "Adding -те to imperatives makes them polite: скажи → скажите.",
+    "fixed_tip": "Большое спасибо = many thanks. За + accusative: за вашу помощь = for your help. This is the standard gratitude formula.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0617",
+    "current_tip": "Пожалуйста means both 'please' and 'you're welcome' depending on context.",
+    "fixed_tip": "Пока is an informal goodbye meaning 'bye.' На следующей неделе = next week (prepositional). Увидимся = we'll see each other.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0619",
+    "current_tip": "До свидания literally means 'until meeting'—a formal goodbye.",
+    "fixed_tip": "Не могли бы вы is an extremely polite request form: 'Could you possibly.' Бы adds conditionality for extra politeness.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0623",
+    "current_tip": "Prefix у- means 'away': уходить = to leave on foot, уехать = to leave by vehicle.",
+    "fixed_tip": "Прибыть means 'to arrive' (perfective). Prefix при- indicates arrival. На станцию = to the station (на + accusative for direction).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0625",
+    "current_tip": "Short adjectives (рад, готов, должен) only appear in predicate: Я рад (I am glad).",
+    "fixed_tip": "Мечтать о + prepositional = to dream about: мечтает о красивом доме. О + prepositional means 'about.'",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0626",
+    "current_tip": "Пожалуйста means both 'please' and 'you're welcome' depending on context.",
+    "fixed_tip": "Рад + infinitive = 'glad to': рад тебя видеть = glad to see you. Рад is a short-form adjective (masculine). Тебя is accusative of ты.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0633",
+    "current_tip": "Здравствуйте is formal hello; Привет is casual hi — choosing wrong signals social awkwardness.",
+    "fixed_tip": "Идти в школу = to go to school (unidirectional, one-way trip now). Каждое утро shows this is habitual, but идти emphasizes each single trip.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0642",
+    "current_tip": "Ладно means 'okay/alright' in casual speech: Ладно, пойдём (Alright, let's go).",
+    "fixed_tip": "Положить is perfective of класть (to put). Положил книгу на стол — perfective indicates a completed action. На стол = onto the table (accusative).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0646",
+    "current_tip": "The л-form is one of the simplest parts of Russian grammar — enjoy it!",
+    "fixed_tip": "Отнести means 'to carry away.' Prefix от- = away from. Книги is accusative plural. В библиотеку = to the library (accusative for direction).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0654",
+    "current_tip": "Уметь means 'to know how to' (skill): Я умею плавать (I know how to swim).",
+    "fixed_tip": "В понедельник = on Monday (accusative after в for days). Дома = at home. Готовить обед = to cook lunch (imperfective).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0655",
+    "current_tip": "Спасибо (thanks) comes from 'спаси Бог' (God save you).",
+    "fixed_tip": "Плавать is multidirectional swimming — used for habitual activity. В бассейне = in the pool (prepositional). На прошлой неделе = last week.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0660",
+    "current_tip": "Numbers 5+ take genitive plural: пять столов, шесть книг.",
+    "fixed_tip": "Около + genitive means 'near': около магазина = near the store. Красная машина = red car — adjective agrees in gender with машина (fem.).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0664",
+    "current_tip": "Short-form adjectives exist: красивый → красив, красива, красиво, красивы.",
+    "fixed_tip": "Добрая is feminine agreeing with улица. Для + genitive: для меня = for me. Важна is short-form feminine predicate adjective.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0668",
+    "current_tip": "Здравствуйте is formal hello; Привет is casual hi — choosing wrong signals social awkwardness.",
+    "fixed_tip": "Тёплое одеяло: тёплое is neuter accusative agreeing with одеяло. Из шкафа = from the wardrobe (из + genitive).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0674",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "В театре = in the theater (prepositional). Скоро (soon) with present tense indicates planned near-future action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0681",
+    "current_tip": "Past tense does NOT change by person — only gender and number matter.",
+    "fixed_tip": "Обычно (usually) signals habitual action. В больнице = in the hospital (prepositional for location after в).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0682",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "Всегда (always) signals permanent habitual action. В театре = in the theater (prepositional). Пишет письмо = writes a letter.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0688",
+    "current_tip": "Russians often use patronymics (отчество) in formal greetings.",
+    "fixed_tip": "Очень приятно = very pleased (to meet you). Я много о вас слышал = I've heard a lot about you. О + prepositional: о вас.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0693",
+    "current_tip": "Prefix вы- means 'out of': выходить = to exit, выехать = to drive out.",
+    "fixed_tip": "Пришёл is past perfective of прийти (to come/arrive). Prefix при- means arrival. Домой = homeward (directional adverb).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0701",
+    "current_tip": "Adding -те to imperatives makes them polite: скажи → скажите.",
+    "fixed_tip": "Привет is an informal greeting. Как дела? = How are things? — the standard casual follow-up after a greeting.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0705",
+    "current_tip": "Prefix за- means 'to stop by': заходить = to drop in, заехать = to drive by.",
+    "fixed_tip": "Из + genitive = 'from/out of': из школы = from school. Пришли is past plural perfective of прийти — the children arrived home.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0716",
+    "current_tip": "Пожалуйста means both 'please' and 'you're welcome' depending on context.",
+    "fixed_tip": "Не волнуйся is a negative imperative: don't worry. Всё будет хорошо = everything will be fine — a common reassurance phrase.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0725",
+    "current_tip": "Prefix пере- means 'across': переходить = to cross on foot, переехать = to move/cross by vehicle.",
+    "fixed_tip": "Подъехать means 'to drive up to.' Prefix подъ- (under/up to) shows approaching. К остановке = to the stop (к + dative).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0730",
+    "current_tip": "Adding -те to imperatives makes them polite: скажи → скажите.",
+    "fixed_tip": "Рад + infinitive = 'glad to': рад познакомиться = glad to meet you. Наконец лично = finally in person.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0739",
+    "current_tip": "Извините (excuse me, formal) vs Извини (casual) — choose based on ты/вы relationship.",
+    "fixed_tip": "Как сказать means 'how to say.' По-русски = in Russian — the prefix по- with language adjective describes how to express something.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0753",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "В школе = at school (prepositional for location). Завтра (tomorrow) with present tense suggests planned future action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0768",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "Смотрел is past masculine imperfective of смотреть. В парке = in the park (prepositional). На прошлой неделе = last week.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0773",
+    "current_tip": "Prefix при- means 'arrival': приходить = to arrive on foot, приехать = to arrive by vehicle.",
+    "fixed_tip": "Обойти means 'to go around/walk all around.' Prefix об- means 'around': мы обошли весь парк = we walked around the entire park.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0775",
+    "current_tip": "Prefix при- means 'arrival': приходить = to arrive on foot, приехать = to arrive by vehicle.",
+    "fixed_tip": "Подойти means 'to approach on foot.' Prefix под- means 'up to/toward': подошёл к окну = he walked up to the window.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0776",
+    "current_tip": "Prefix в- means 'into': входить = to enter, въехать = to drive in.",
+    "fixed_tip": "Приплыть means 'to swim/sail to arrive.' Prefix при- means arrival: лодка приплыла к острову = the boat arrived at the island.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0781",
+    "current_tip": "Мочь in past tense: мог, могла, могли — note the stem vowel change.",
+    "fixed_tip": "Приготовила is past feminine perfective — she finished cooking. Утром = in the morning (instrumental case for time of day).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0797",
+    "current_tip": "Past tense does NOT change by person — only gender and number matter.",
+    "fixed_tip": "Подплыть means 'to swim up to.' Prefix под- = toward: лодка подплыла к берегу = the boat swam up to the shore.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0801",
+    "current_tip": "Ни...ни means 'neither...nor': Ни один, ни другой (Neither one nor the other).",
+    "fixed_tip": "Пила is past feminine of пить (to drink), agreeing with сестра. Вечером = in the evening (instrumental for time of day).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0810",
+    "current_tip": "Some -еть verbs are second conjugation: видеть → вижу, смотреть → смотрю.",
+    "fixed_tip": "Тихий is a masculine adjective with soft stem ending in -ий. На углу = on the corner — угол has special prepositional form углу.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0818",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "Всегда (always) signals permanent habitual action. Готовить обед = to cook lunch (imperfective for regular activity).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0821",
+    "current_tip": "Если бы + past tense = 'if' in unreal conditions: Если бы я знал...",
+    "fixed_tip": "Если бы + past tense creates unreal conditionals. Here если бы я знал = if I had known — бы + past tense expresses hypothetical past.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0829",
+    "current_tip": "Some -еть verbs are second conjugation: видеть → вижу, смотреть → смотрю.",
+    "fixed_tip": "Нравиться + dative: коту нравится = the cat likes. The experiencer (кот) goes in dative. Спать is the infinitive complement.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0839",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "Дома means 'at home' — a special locative adverb. После обеда = after lunch (после + genitive).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0840",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "Всегда (always) signals habitual action. В библиотеке = in the library (prepositional). Покупает продукты = buys groceries.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0844",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "Играть в + accusative for games: играет в шахматы = plays chess. Иногда (sometimes) signals occasional habitual action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0845",
+    "current_tip": "Past tense of быть: был/была/было/были is used as an auxiliary and standalone.",
+    "fixed_tip": "Слишком много + genitive = too much: слишком много чеснока. Положила is past feminine perfective of положить (to put).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0847",
+    "current_tip": "Перед + instrumental = 'in front of': перед домом = 'in front of the house'.",
+    "fixed_tip": "С + instrumental = 'with': чай с лимоном и мёдом = tea with lemon and honey. Полезен is short-form masculine: useful/healthy.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0856",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "Иногда (sometimes) signals occasional action. В офисе = in the office (prepositional). Дома = at home (locative adverb).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0857",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "Часто (often) signals habitual action. В горах = in the mountains — горы has irregular prepositional plural горах.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0860",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "Полчаса means 'half an hour.' Перед + instrumental: перед сном = before sleep/bed. Обычно signals habitual action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0866",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "На рынке = at the market (prepositional for location). На прошлой неделе = last week. Танцевал is past masculine imperfective.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0867",
+    "current_tip": "After нет, genitive is required: Нет воды = 'There is no water'.",
+    "fixed_tip": "Покрыт is short passive participle of покрыть (to cover). Зелёной травой uses instrumental — covered WITH green grass.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0886",
+    "current_tip": "Нужно/надо (need to) is impersonal: Мне нужно идти (I need to go) — dative + нужно.",
+    "fixed_tip": "Заниматься + instrumental = 'to do/practice': заниматься йогой. The reflexive verb requires instrumental for the activity.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0887",
+    "current_tip": "Между + instrumental = 'between': между домом и школой.",
+    "fixed_tip": "Познакомиться с + instrumental = 'to meet/get acquainted with': с интересным человеком. С + instrumental for companionship/acquaintance.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0889",
+    "current_tip": "Consonant mutations in first person: любить → люблю (б→бл), ходить → хожу (д→ж).",
+    "fixed_tip": "Обычно signals habitual action with imperfective смотрит. Библиотекарь is masculine regardless of the person's gender.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0892",
+    "current_tip": "Some reflexive verbs are reciprocal: встречаться (to meet each other), целоваться (to kiss each other).",
+    "fixed_tip": "Стараться + infinitive = to try to: стараюсь не опаздывать. The -ся ending makes this reflexive. Не + infinitive = not to.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0896",
+    "current_tip": "С + instrumental = 'with': кофе с молоком = 'coffee with milk'.",
+    "fixed_tip": "С + instrumental describes manner: с лёгким акцентом = with a light accent. Говорить с акцентом is a common expression.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-0898",
+    "current_tip": "Нравиться is reflexive in Russian but not in English: Мне нравится = I like.",
+    "fixed_tip": "Присматривать за + instrumental = 'to look after': за младшим братом. За + instrumental for caretaking/watching over.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0906",
+    "current_tip": "Между + instrumental = 'between': между домом и школой.",
+    "fixed_tip": "Довольна + instrumental = satisfied with: довольна своей работой. Short-form adjective + instrumental expresses satisfaction.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0910",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "Плавать is multidirectional swimming for habitual action. В бассейне = in the pool (prepositional). Иногда = sometimes.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0911",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "Дома = at home (locative adverb). Сейчас = now, marking present continuous action. Смотрит фильм = watches a film.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0913",
+    "current_tip": "При + prepositional = 'in the presence of/during': при свидетелях.",
+    "fixed_tip": "Пианино is an indeclinable neuter noun (foreign loanword). Старое agrees in neuter. В комнате = in the room (prepositional).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0916",
+    "current_tip": "Между + instrumental = 'between': между домом и школой.",
+    "fixed_tip": "Гулять с + instrumental = 'to walk with': с собакой = with the dog. Каждый вечер = every evening signals habitual action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0921",
+    "current_tip": "Instrumental marks the instrument/means: писать ручкой = 'write with a pen'.",
+    "fixed_tip": "Под + instrumental = 'under': под деревом = under the tree. Стоит means 'stands' for objects. Старая скамейка = old bench (fem.).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0923",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "Редко (rarely) signals infrequent habitual action. Дома = at home. Петь песню = to sing a song (песню is accusative).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0926",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "Плавать в бассейне = to swim in the pool. Сегодня утром = this morning — a common time expression.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0927",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "Иногда (sometimes) signals occasional action. В музее = in the museum (prepositional). Учить язык = to study a language.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0933",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "Заходить в + accusative = to drop by/stop at: заходить в магазин. Prefix за- means 'stopping by.' После работы = after work.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0934",
+    "current_tip": "Между + instrumental = 'between': между домом и школой.",
+    "fixed_tip": "Перед + instrumental = 'in front of': перед домом = in front of the house. Растёт = grows. Старый дуб = old oak.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0938",
+    "current_tip": "Хотеть (to want) mixes conjugations: хочу, хочешь, хочет, хотим, хотите, хотят.",
+    "fixed_tip": "Между + instrumental = 'between': между работой и домом = between work and home. Ехать полчаса = half an hour to drive.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0949",
+    "current_tip": "Приходится means 'to have to' (involuntarily): Мне приходится работать (I have to work, no choice).",
+    "fixed_tip": "Перед + instrumental = 'in front of': площадь перед театром = the square in front of the theater. Очень красивая = very beautiful.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0953",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "Гулял is past masculine imperfective — habitual past action. В парке = in the park (prepositional). На прошлой неделе = last week.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0960",
+    "current_tip": "Feminine: -ой/-ей: рука→рукой, земля→землёй.",
+    "fixed_tip": "С маслом = with butter — с + instrumental. Вкуснее is comparative of вкусный: tastier. Каша с маслом is a classic Russian comfort food.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0962",
+    "current_tip": "Нравиться is reflexive in Russian but not in English: Мне нравится = I like.",
+    "fixed_tip": "Соревноваться с + instrumental = to compete with: с братом. The -ся ending marks this as a reciprocal/reflexive action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0964",
+    "current_tip": "Double negatives are REQUIRED in Russian: Никто не пришёл (Nobody didn't come = Nobody came).",
+    "fixed_tip": "Вчера (yesterday) signals past tense. Слушал is past masculine imperfective of слушать — he was listening to music.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0966",
+    "current_tip": "Нести in the past: нёс, несла, несли — the stem changes.",
+    "fixed_tip": "Недавно means 'recently.' Купили is past plural perfective — friends (they) bought bread. Perfective marks a completed purchase.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0970",
+    "current_tip": "Такой...как means 'as...as': Такой же красивый, как... (As beautiful as...).",
+    "fixed_tip": "Решил is past masculine perfective of решить (to solve/decide). Вчера (yesterday) signals completed past action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0975",
+    "current_tip": "Нравиться is reflexive in Russian but not in English: Мне нравится = I like.",
+    "fixed_tip": "Гордиться + instrumental = to be proud of: гордится своими детьми. Своими refers back to the subject она.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0981",
+    "current_tip": "Нет means 'no' and also 'there is not': Нет времени (There is no time) — requires genitive.",
+    "fixed_tip": "Утром = in the morning (instrumental for time of day). Купили is past plural perfective — мы купили = we bought (completed).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0983",
+    "current_tip": "Можно (it is possible/allowed) vs Нельзя (it is not possible/forbidden) are impersonal.",
+    "fixed_tip": "Пользоваться + instrumental = to use: компьютером. Reflexive verbs ending in -ся often take instrumental for the object used.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0984",
+    "current_tip": "Instrumental marks the instrument/means: писать ручкой = 'write with a pen'.",
+    "fixed_tip": "Над + instrumental = 'above/over': над морем = over the sea. Белые птицы = white birds (plural nominative).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0986",
+    "current_tip": "Reflexive verbs add -ся (after consonants) or -сь (after vowels): мыться (to wash oneself).",
+    "fixed_tip": "Написал is past perfective of написать — he wrote (completed). О + prepositional: о войне = about war. Книгу is accusative.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0989",
+    "current_tip": "Стоит means 'it's worth': Стоит попробовать (It's worth trying).",
+    "fixed_tip": "Покрыта is short feminine passive participle of покрыть. Мокрыми листьями = with wet leaves — instrumental for what covers.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0996",
+    "current_tip": "Мочь (can) conjugates: могу, можешь, может, можем, можете, могут.",
+    "fixed_tip": "Редко (rarely) signals infrequent action. Дома = at home. Мыть посуду = to wash dishes (imperfective for habitual action).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-0998",
+    "current_tip": "Одеваться (to dress oneself), учиться (to study), встречаться (to meet each other).",
+    "fixed_tip": "Редко (rarely) signals infrequent action. Дома = at home. Покупать продукты = to buy groceries (imperfective habitual).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1001",
+    "current_tip": "Следует means 'one should' (formal): Следует отметить (It should be noted).",
+    "fixed_tip": "За город means 'outside the city/to the countryside.' На машине = by car (на + prepositional for transport).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1004",
+    "current_tip": "Нести in the past: нёс, несла, несли — the stem changes.",
+    "fixed_tip": "Вечером = in the evening (instrumental for time). Слушали is past plural — дети слушали. Plural past always ends in -ли.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1008",
+    "current_tip": "Нравиться is reflexive in Russian but not in English: Мне нравится = I like.",
+    "fixed_tip": "Привыкать к + dative = to get used to: к новому городу. К + dative is used with verbs of adaptation and movement toward.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1011",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "Редко (rarely) signals infrequent action. В библиотеке = in the library (prepositional). Пишет письмо = writes a letter.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1014",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "Обычно (usually) signals habitual action. В парке = in the park (prepositional). Смотрит фильм = watches a film.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1021",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "Мыла is past feminine imperfective (agreeing with девочка). Дома = at home. На прошлой неделе = last week.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1022",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "Играть в + accusative for games: в шахматы. В библиотеке = in the library (prepositional). Обычно = usually.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1023",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "Стирать одежду means 'to do laundry.' Стирал is past masculine imperfective. На прошлой неделе = last week.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1024",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "На работе = at work (prepositional for location). По выходным = on weekends (по + dative plural for recurring events).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1026",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "Редко (rarely) signals infrequent action. Гулять в парке = to walk in the park. Дома here seems contradictory — likely a data issue.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1027",
+    "current_tip": "The instrumental case shows the means or tool used for an action.",
+    "fixed_tip": "Редко signals infrequent action. В библиотеке = in the library. Учить язык = to study a language (imperfective).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1030",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "Редко (rarely) signals infrequent action. В магазине = in the store. Петь песню = to sing a song (песню is accusative).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1035",
+    "current_tip": "Perfective verbs focus on the completed result of an action.",
+    "fixed_tip": "Бегать is imperfective multidirectional — for habitual running. Утром = in the morning (instrumental). В магазине = in the store.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1039",
+    "current_tip": "Perfective verbs focus on the completed result of an action.",
+    "fixed_tip": "Рисовал is past imperfective — the drawing was in progress or habitual. На прошлой неделе = last week. В ресторане = in the restaurant.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1045",
+    "current_tip": "Perfective future uses the perfective verb directly: прочитаю.",
+    "fixed_tip": "Будет готовить is imperfective future (буду + infinitive): he will be cooking. This implies an ongoing future activity.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1048",
+    "current_tip": "Reflexive verbs add -ся/-сь: учиться → учусь, учишься, учится.",
+    "fixed_tip": "Думать о + prepositional = to think about: о будущем. Будущее (future) is a neuter noun, prepositional form будущем.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1050",
+    "current_tip": "Нравиться is reflexive in Russian but not in English: Мне нравится = I like.",
+    "fixed_tip": "Готовиться к + dative = to prepare for: к отъезду. The -ся suffix makes this reflexive: 'to prepare oneself.'",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1059",
+    "current_tip": "Perfective future uses the perfective verb directly: прочитаю.",
+    "fixed_tip": "Позвоню is perfective future of позвонить — I will call (completed action). Perfective verbs in present-form conjugation express future.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-1062",
+    "current_tip": "Many reflexive verbs describe daily routines: умываться, одеваться, причёсываться.",
+    "fixed_tip": "Соглашаться с + instrumental = to agree with: с этим планом. The -ся ending here does not indicate a daily routine.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1066",
+    "current_tip": "Many reflexive verbs describe daily routines: умываться, одеваться, причёсываться.",
+    "fixed_tip": "Бояться + genitive = to be afraid of: темноты (of darkness). Бояться is always reflexive — it has no non-reflexive form.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1068",
+    "current_tip": "Many reflexive verbs describe daily routines: умываться, одеваться, причёсываться.",
+    "fixed_tip": "Встречаться is a reciprocal reflexive verb: they met each other. Каждый день = every day signals habitual past action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1069",
+    "current_tip": "Some reflexive verbs are reciprocal: встречаться (to meet each other), целоваться (to kiss each other).",
+    "fixed_tip": "Обещаться means 'to promise' (colloquial reflexive form of обещать). Прийти вовремя = to come on time (perfective infinitive).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-1072",
+    "current_tip": "Нести in the past: нёс, несла, несли — the stem changes.",
+    "fixed_tip": "Недавно = recently. Слушал is past masculine imperfective of слушать. Past masculine ends in -л (no extra ending).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1073",
+    "current_tip": "Plural past tense always ends in -ли regardless of gender.",
+    "fixed_tip": "Открыл is past masculine perfective of открыть — completed action. Недавно (recently) pairs well with perfective past.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1076",
+    "current_tip": "Reflexive verbs add -ся/-сь: учиться → учусь, учишься, учится.",
+    "fixed_tip": "Печь (to bake) is irregular: пеку, печёшь, печёт. С + instrumental: с яблоками = with apples. Пирог = pie/cake.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1078",
+    "current_tip": "Нравиться is reflexive in Russian but not in English: Мне нравится = I like.",
+    "fixed_tip": "Ложиться спать means 'to go to bed.' Ложиться is reflexive — it means 'to lay oneself down.' В десять = at ten.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1082",
+    "current_tip": "Past tense in Russian changes by gender: он читал, она читала, оно читало.",
+    "fixed_tip": "Они открыли is past plural — все plural subjects use -ли ending regardless of gender. На прошлой неделе = last week.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1083",
+    "current_tip": "Нравиться is reflexive in Russian but not in English: Мне нравится = I like.",
+    "fixed_tip": "Знакомиться с + instrumental = to get acquainted with: с соседями. This is a reciprocal reflexive — mutual introduction.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1084",
+    "current_tip": "Some verbs have irregular past stems: идти → шёл, шла, шли.",
+    "fixed_tip": "Работал is regular past masculine of работать. Вечером = in the evening (instrumental). Дома = at home.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1097",
+    "current_tip": "Не is the standard negation, placed before the verb: Я не знаю (I don't know).",
+    "fixed_tip": "Закрыл is past masculine perfective of закрыть (to close). На прошлой неделе = last week. Окно is neuter accusative.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1098",
+    "current_tip": "На + prepositional = location 'on/at': на столе, на работе.",
+    "fixed_tip": "В лесу uses the special prepositional form -у (instead of -е) for лес. Some masculine nouns take stressed -у: в лесу, в саду, на полу.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1100",
+    "current_tip": "Some verbs have irregular past stems: идти → шёл, шла, шли.",
+    "fixed_tip": "Написала is past feminine perfective of написать — she wrote/finished writing. Вечером = in the evening (instrumental).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1106",
+    "current_tip": "Accusative after в/на means motion TOWARD: иду в школу (going to school).",
+    "fixed_tip": "Обычно (usually) signals habitual action. Помогать + dative: помогает другу. На работе = at work (prepositional for location, not motion).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1111",
+    "current_tip": "Verbs of motion distinguish between going on foot and by transport.",
+    "fixed_tip": "Помогать + dative: помогает другу = helps a friend. Сегодня утром = this morning. На работе = at work (prepositional).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1113",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "Часто (often) signals habitual action. В музее = in the museum (prepositional). Убирать квартиру = to clean the apartment.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1118",
+    "current_tip": "Reflexive verbs end in -ся or -сь: умываться, одеваться.",
+    "fixed_tip": "Благодарность наполнила — abstract noun as subject with perfective past verb. После + genitive: после поступка = after the deed.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1119",
+    "current_tip": "При + prepositional = 'in the presence of/during': при свидетелях.",
+    "fixed_tip": "В магазине = in the store (prepositional). Большой выбор товаров = a big selection of goods — genitive plural after выбор.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1123",
+    "current_tip": "Verbs of motion distinguish between going on foot and by transport.",
+    "fixed_tip": "В понедельник = on Monday (accusative for days). Помогать + dative: помогает другу. В больнице = in the hospital.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1125",
+    "current_tip": "Russian idioms often don't translate literally — learn them as fixed phrases.",
+    "fixed_tip": "Сесть в лужу = to sit in a puddle, meaning 'to embarrass oneself.' На собеседовании = at the interview (prepositional).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-1128",
+    "current_tip": "Some reflexive verbs are reciprocal: встречаться (to meet each other), целоваться (to kiss each other).",
+    "fixed_tip": "Попасть в + accusative = to hit: попала в центр мишени. С + genitive: с максимальной дистанции = from maximum distance.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1134",
+    "current_tip": "Нравиться takes dative: Мне нравится музыка (I like music, lit. 'to me music is pleasing').",
+    "fixed_tip": "Помочь + dative: помог мне = he helped me. Мне is dative of я. Вчера (yesterday) signals past perfective помог.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1135",
+    "current_tip": "Буду conjugates: буду, будешь, будет, будем, будете, будут.",
+    "fixed_tip": "Открою is perfective future of открыть — I will open (completed action). Perfective verbs conjugated in present form express future.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1143",
+    "current_tip": "Imperfective focuses on the process; perfective on the result.",
+    "fixed_tip": "Получил is past perfective of получить — a completed reception. Вчера (yesterday) + perfective = specific completed past event.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-1150",
+    "current_tip": "Готовить (impf.) vs приготовить (pf.) — cooking vs having cooked.",
+    "fixed_tip": "Закончил is past perfective of закончить — I finished (completed). Рано (early) + сегодня (today) = early today.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1157",
+    "current_tip": "The perfective future looks like present tense but has future meaning.",
+    "fixed_tip": "Будут писать is imperfective future (будут + infinitive) — they will be writing. Used for ongoing or habitual future action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1163",
+    "current_tip": "Common irregular comparatives: хороший → лучше, плохой → хуже, большой → больше.",
+    "fixed_tip": "Показывать + dative: показывала фотографии друзьям = showed photos to friends. Всем is dative plural of все (everyone).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1166",
+    "current_tip": "Some verbs have irregular past stems: идти → шёл, шла, шли.",
+    "fixed_tip": "Смотрели is past plural of смотреть (regular). На прошлой неделе = last week. Они signals plural past (-ли ending).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1171",
+    "current_tip": "Imperfective describes ongoing or repeated actions: Я читал каждый день.",
+    "fixed_tip": "Приготовили is past plural perfective of приготовить — they prepared (completed). Утром = in the morning (instrumental).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1173",
+    "current_tip": "Чем means 'than': Он старше, чем я (He is older than me).",
+    "fixed_tip": "Открыли is past plural perfective — they opened (completed). Утром = in the morning. Правило = a rule (neuter noun).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1182",
+    "current_tip": "Perfective verbs focus on the completed result of an action.",
+    "fixed_tip": "Сейчас (now) + imperfective моет = right now washing. Present imperfective for ongoing current action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1183",
+    "current_tip": "Feminine dative: -е/-и: сестра→сестре, мать→матери.",
+    "fixed_tip": "Ей нужно + infinitive = she needs to. Нужно is impersonal, dative ей marks who needs. Купить is perfective infinitive.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-1194",
+    "current_tip": "Perfective verbs focus on the completed result of an action.",
+    "fixed_tip": "Сегодня утром = this morning. Стирать одежду = to do laundry (imperfective for current/habitual action). Дома = at home.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1195",
+    "current_tip": "через + accusative = 'in/after (time)': через час (in an hour).",
+    "fixed_tip": "Завтра (tomorrow) + present tense for scheduled events: бабушка смотрит фильм завтра. В школе = at school (prepositional).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1197",
+    "current_tip": "Никогда не (never), ничего не (nothing), нигде не (nowhere) — always pair with не.",
+    "fixed_tip": "На прошлой неделе = last week. Гуляла is past feminine imperfective (agreeing with мама). В парке = in the park.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1205",
+    "current_tip": "Imperfective describes ongoing or repeated actions: Я читал каждый день.",
+    "fixed_tip": "Открывал is past imperfective — repeated action. Каждое утро (every morning) confirms habitual past: I used to open the window.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-1212",
+    "current_tip": "Perfective verbs focus on the completed result of an action.",
+    "fixed_tip": "Сейчас (now) + imperfective ездит = right now commuting. Present imperfective for current habitual action. Дома seems contradictory.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1217",
+    "current_tip": "The past tense is formed by replacing -ть with -л for masculine subjects.",
+    "fixed_tip": "Студенты гуляли = students walked (past plural -ли). На прошлой неделе = last week. В парке = in the park.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1225",
+    "current_tip": "Genitive can replace чем: Он старше меня (He is older than me — same meaning).",
+    "fixed_tip": "После обеда = after lunch (после + genitive). Дома = at home. Рисовать картину = to paint a picture (imperfective).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1227",
+    "current_tip": "Perfective verbs focus on the completed result of an action.",
+    "fixed_tip": "Скоро (soon) indicates near-future action. Помогать + dative: помогает другу. В аэропорту uses irregular prepositional -у.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1228",
+    "current_tip": "Perfective verbs focus on the completed result of an action.",
+    "fixed_tip": "Завтра (tomorrow) with present tense for scheduled events. Помогать + dative: помогает другу. В театре = in the theater.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1229",
+    "current_tip": "Perfective verbs focus on the completed result of an action.",
+    "fixed_tip": "Перед сном = before sleep (перед + instrumental). В магазине = in the store. Учить язык = to study a language.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1231",
+    "current_tip": "Perfective verbs focus on the completed result of an action.",
+    "fixed_tip": "В понедельник = on Monday (в + accusative for days). В студии = in the studio (prepositional). Рисует is imperfective present.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1232",
+    "current_tip": "Verbs of motion distinguish between going on foot and by transport.",
+    "fixed_tip": "Сегодня утром = this morning. Читает книгу = reads a book (imperfective present for current action). На работе = at work.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1236",
+    "current_tip": "The future tense uses буду + infinitive for imperfective verbs.",
+    "fixed_tip": "По выходным = on weekends (по + dative plural). Петь песню = to sing a song. В магазине = in the store.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1240",
+    "current_tip": "Verbs of motion distinguish between going on foot and by transport.",
+    "fixed_tip": "По выходным = on weekends (по + dative plural). Читать книгу = to read a book. На рынке = at the market.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1241",
+    "current_tip": "Verbs of motion distinguish between going on foot and by transport.",
+    "fixed_tip": "Сегодня утром = this morning. Писать письмо = to write a letter. В парке = in the park (prepositional).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1243",
+    "current_tip": "Perfective verbs focus on the completed result of an action.",
+    "fixed_tip": "Вечером = in the evening (instrumental for time). Танцевать вальс = to dance a waltz (imperfective present). На вечеринке = at the party.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1246",
+    "current_tip": "Буду conjugates: буду, будешь, будет, будем, будете, будут.",
+    "fixed_tip": "Закончат is perfective future of закончить — they will finish (completed). Perfective verbs conjugated directly form the future tense.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1249",
+    "current_tip": "Imperfective future uses буду + infinitive: буду читать.",
+    "fixed_tip": "Вернётся is perfective future reflexive of вернуться — she will return. Скоро (soon) + perfective future = imminent completed action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1259",
+    "current_tip": "Perfective future uses the perfective verb directly: прочитаю.",
+    "fixed_tip": "Буду слушать is imperfective future (буду + infinitive): I will be listening. Used for ongoing or habitual future actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1264",
+    "current_tip": "Perfective future uses the perfective verb directly: прочитаю.",
+    "fixed_tip": "Будешь слушать is imperfective future (будешь + infinitive): you will be listening. Будешь = second person of буду.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1275",
+    "current_tip": "Perfective describes completed, one-time actions: Я прочитал книгу.",
+    "fixed_tip": "Открывал is past imperfective — opened repeatedly. Редко (rarely) confirms habitual past action: you rarely used to open.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1299",
+    "current_tip": "Verbs of motion distinguish between going on foot and by transport.",
+    "fixed_tip": "Завтра (tomorrow) + present tense for scheduled future. Мыть посуду = to wash dishes. Дома = at home.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1302",
+    "current_tip": "Покупать (impf.) vs купить (pf.) — buying regularly vs bought once.",
+    "fixed_tip": "Ответили is past plural perfective of ответить — they answered (completed). Утром = in the morning.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1316",
+    "current_tip": "Verbs of motion distinguish between going on foot and by transport.",
+    "fixed_tip": "Часто (often) signals habitual action. Покупать продукты = to buy groceries. В магазине = in the store (prepositional).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1322",
+    "current_tip": "Чем means 'than': Он старше, чем я (He is older than me).",
+    "fixed_tip": "Решали is past imperfective — they were solving for a long time. Долго (for a long time) pairs with imperfective aspect.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1331",
+    "current_tip": "Comparatives add -ее/-ей: красивее (more beautiful), интереснее (more interesting).",
+    "fixed_tip": "Сегодня утром = this morning. Бегать = to run (multidirectional, habitual). В парке = in the park (prepositional).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1333",
+    "current_tip": "Superlatives use самый + adjective: самый красивый (the most beautiful).",
+    "fixed_tip": "Иногда (sometimes) signals occasional action. Учить язык = to study a language. В аэропорту uses irregular prepositional -у.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1335",
+    "current_tip": "Verbs of motion distinguish between going on foot and by transport.",
+    "fixed_tip": "Обычно (usually) signals habitual action. Покупать продукты = to buy groceries. В больнице = in the hospital.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1336",
+    "current_tip": "Verbs of motion distinguish between going on foot and by transport.",
+    "fixed_tip": "После обеда = after lunch (после + genitive). Плавать = to swim (multidirectional, habitual). В бассейне = in the pool.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1338",
+    "current_tip": "Perfective verbs focus on the completed result of an action.",
+    "fixed_tip": "Завтра (tomorrow) + present tense for planned future. Играть в шахматы = to play chess. В музее = in the museum.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1346",
+    "current_tip": "Verbs of motion distinguish between going on foot and by transport.",
+    "fixed_tip": "Часто (often) signals habitual action. Петь песню = to sing a song. В ресторане = in the restaurant (prepositional).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1351",
+    "current_tip": "Prepositional after в/на means location AT: в школе (at school).",
+    "fixed_tip": "Сегодня утром = this morning. Слушать музыку = to listen to music. В школе = at school (prepositional for location).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-1355",
+    "current_tip": "Perfective verbs focus on the completed result of an action.",
+    "fixed_tip": "Вечером = in the evening (instrumental for time). На работе = at work (prepositional for location). Поёт is imperfective present.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1356",
+    "current_tip": "Perfective verbs focus on the completed result of an action.",
+    "fixed_tip": "В понедельник = on Monday (accusative for days). На вокзале = at the station. Убирать квартиру = to clean (imperfective).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1357",
+    "current_tip": "Perfective verbs focus on the completed result of an action.",
+    "fixed_tip": "По выходным = on weekends (по + dative plural). В парке = in the park. Рисует is imperfective present.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1360",
+    "current_tip": "Вести means leading someone (one direction); водить means leading regularly.",
+    "fixed_tip": "Установить means 'to install.' Новую систему is accusative feminine — both adjective and noun change as direct object. В подвале = in the basement.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1364",
+    "current_tip": "Perfective verbs focus on the completed result of an action.",
+    "fixed_tip": "На прошлой неделе = last week. Пел is past masculine imperfective of петь — singing was in progress. На вокзале = at the station.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1385",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "Завтра (tomorrow) with present tense for planned future. Мыть посуду = to wash dishes (imperfective for habitual).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-1386",
+    "current_tip": "Present tense verbs change endings based on person and number.",
+    "fixed_tip": "Обычно (usually) signals habitual action. Танцевать вальс = to dance a waltz. Бабушка + третье лицо: танцует.",
+    "issue": "repetitive"
+  },
+  {
+    "id": "ru-1387",
+    "current_tip": "Russian questions often use intonation rather than word order changes.",
+    "fixed_tip": "Всегда (always) signals permanent habitual action with imperfective: всегда готовит обед = always cooks lunch.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-1394",
+    "current_tip": "Не такой...как means 'not as...as': Не такой большой, как (Not as big as).",
+    "fixed_tip": "Построил is past masculine perfective — completed building. Сразу means 'immediately/right away.'",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1400",
+    "current_tip": "Гораздо/намного mean 'much' in comparisons: гораздо лучше (much better).",
+    "fixed_tip": "Получала is past imperfective — she used to receive (repeatedly). Часто (often) signals habitual past action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1401",
+    "current_tip": "Perfective describes completed, one-time actions: Я прочитал книгу.",
+    "fixed_tip": "Получал is past imperfective — I used to receive (repeatedly). Иногда (sometimes) signals occasional past action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1405",
+    "current_tip": "Many perfective verbs are formed by adding a prefix: писать → написать.",
+    "fixed_tip": "Отвечали is past imperfective plural — we used to answer. Обычно (usually) confirms habitual past action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1409",
+    "current_tip": "Genitive can replace чем: Он старше меня (He is older than me — same meaning).",
+    "fixed_tip": "Показывали is past imperfective plural — we used to show. Обычно (usually) signals habitual past action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1412",
+    "current_tip": "Superlatives use самый + adjective: самый красивый (the most beautiful).",
+    "fixed_tip": "Терял is past masculine imperfective — you used to lose (repeatedly). Редко (rarely) signals infrequent past habitual action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1414",
+    "current_tip": "Покупать (impf.) vs купить (pf.) — buying regularly vs bought once.",
+    "fixed_tip": "Потерял is past masculine perfective — he lost (completed, one-time). Сразу (immediately) pairs with perfective for instant completion.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1415",
+    "current_tip": "Comparatives add -ее/-ей: красивее (more beautiful), интереснее (more interesting).",
+    "fixed_tip": "Находил is past masculine imperfective — I used to find (repeatedly). Иногда (sometimes) signals occasional past action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1418",
+    "current_tip": "Imperfective describes ongoing or repeated actions: Я читал каждый день.",
+    "fixed_tip": "Нашёл is past masculine perfective of найти — he found (completed). Сразу (immediately) emphasizes instant result.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1422",
+    "current_tip": "Учить (impf.) vs выучить (pf.) — studying vs having learned.",
+    "fixed_tip": "Забывала is past feminine imperfective — she used to forget (repeatedly). Часто (often) signals habitual past action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1424",
+    "current_tip": "This в + acc. vs в + prep. distinction is fundamental: в город (to the city) vs в городе (in the city).",
+    "fixed_tip": "Водить машину = to drive a car (habitual/skill). Водить is multidirectional — driving in general. Хорошо = well.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1426",
+    "current_tip": "Prefix за- means 'to stop by': заходить = to drop in, заехать = to drive by.",
+    "fixed_tip": "Уйти от + genitive = to leave from: ушла от подруги. Prefix у- means 'away.' От marks the person/place left behind.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1427",
+    "current_tip": "Russian questions often use intonation rather than word order changes.",
+    "fixed_tip": "После обеда = after lunch (после + genitive). Готовить обед = to cook lunch (imperfective for habitual action).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-1428",
+    "current_tip": "Покупать (impf.) vs купить (pf.) — buying regularly vs bought once.",
+    "fixed_tip": "Писал is past imperfective — he was writing all day. Весь день (all day) signals extended duration, pairing with imperfective.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1430",
+    "current_tip": "Почему = 'why (cause)', зачем = 'why (purpose)/what for'.",
+    "fixed_tip": "Знаете ли вы — ли is a question particle making this a formal question: 'Do you know?' Этого человека uses animate accusative = genitive.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1435",
+    "current_tip": "Почему = 'why (cause)', зачем = 'why (purpose)/what for'.",
+    "fixed_tip": "Какая agrees with погода (feminine): Какая сегодня погода? = What is the weather like today? Какой/какая/какое/какие for gender.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1438",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "Скоро (soon) indicates near-future action. Рисовать картину = to paint a picture (imperfective).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-1444",
+    "current_tip": "Russian uses не before the verb for simple negation.",
+    "fixed_tip": "Сейчас (now) marks present continuous. Танцевать вальс = to dance a waltz (imperfective present action).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1447",
+    "current_tip": "Кто ('who') takes singular verb forms even with plural meaning.",
+    "fixed_tip": "Почему means 'why' (asking for the cause): Почему здесь так холодно? Так means 'so' intensifying the adjective холодно.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1449",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "Всегда (always) signals permanent habitual action. Помогать + dative: помогает другу = helps a friend.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-1451",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "По выходным = on weekends (по + dative plural). Мыть посуду = to wash dishes (imperfective for habitual).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-1452",
+    "current_tip": "Present tense verbs change endings based on person and number.",
+    "fixed_tip": "Сегодня утром = this morning. Мыть посуду = to wash dishes. Моет is third person singular of мыть.",
+    "issue": "repetitive"
+  },
+  {
+    "id": "ru-1455",
+    "current_tip": "Common irregular comparatives: хороший → лучше, плохой → хуже, большой → больше.",
+    "fixed_tip": "Объяснял is past imperfective — he was explaining all day. Весь день (all day) signals extended duration with imperfective.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1456",
+    "current_tip": "Adjective short forms exist for some adjectives: красивый → красив, готовый → готов.",
+    "fixed_tip": "Отвечал is past imperfective — he was answering all day. Весь день signals extended duration with imperfective.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1457",
+    "current_tip": "Покупать (impf.) vs купить (pf.) — buying regularly vs bought once.",
+    "fixed_tip": "Находил is past imperfective — he was finding all day. Весь день signals extended duration with imperfective.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1458",
+    "current_tip": "Perfective describes completed, one-time actions: Я прочитал книгу.",
+    "fixed_tip": "Забывал is past imperfective — he kept forgetting. Весь день (all day) signals extended/repeated duration with imperfective.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1463",
+    "current_tip": "Ехать (by vehicle) vs идти (on foot) — choose based on mode of transport.",
+    "fixed_tip": "Плавать is multidirectional swimming — for habitual or general swimming. Часто (often) confirms habitual action.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1470",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "На прошлой неделе = last week. Готовил is past masculine imperfective of готовить — cooking as a past habitual action.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-1471",
+    "current_tip": "Present tense verbs change endings based on person and number.",
+    "fixed_tip": "Рисовала is past feminine imperfective (agreeing with бабушка). На прошлой неделе = last week.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1472",
+    "current_tip": "Russian uses не before the verb for simple negation.",
+    "fixed_tip": "На прошлой неделе = last week. Готовил is past masculine imperfective. Фермер (farmer) is masculine.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1487",
+    "current_tip": "Verbs of motion distinguish between going on foot and by transport.",
+    "fixed_tip": "Редко (rarely) signals infrequent habitual action. Плавать = to swim (multidirectional, habitual). В бассейне = in the pool.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1493",
+    "current_tip": "First conjugation verbs end in -ать/-ять/-еть: читать → читаю, читаешь, читает.",
+    "fixed_tip": "Рисовал is past masculine imperfective of рисовать — drawing in progress or habitual. На прошлой неделе = last week.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1494",
+    "current_tip": "Present tense verbs change endings based on person and number.",
+    "fixed_tip": "Смотрел is past masculine of смотреть — he watched (past tense, not present). На прошлой неделе = last week.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1499",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "Вечером = in the evening (instrumental for time of day). Танцевать вальс = to dance a waltz.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-1509",
+    "current_tip": "Хотя means 'although': Хотя он устал, он продолжал работать.",
+    "fixed_tip": "Чем...тем = the more...the more: Чем больше учишь, тем больше знаешь. This paired construction uses comparatives in both clauses.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1513",
+    "current_tip": "Везти means transporting (one direction); возить means transporting regularly.",
+    "fixed_tip": "Бегать is multidirectional running for habitual action. Весь день (all day) shows duration. Во дворе = in the yard.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1514",
+    "current_tip": "Verbs of motion distinguish between going on foot and by transport.",
+    "fixed_tip": "Часто (often) signals habitual action. Покупать продукты = to buy groceries. В музее = in the museum.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1525",
+    "current_tip": "Verbs of motion distinguish between going on foot and by transport.",
+    "fixed_tip": "Редко (rarely) signals infrequent action. Смотреть фильм = to watch a film. В больнице = in the hospital.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1528",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "Обычно (usually) signals habitual action. Читать книгу = to read a book. В больнице = in the hospital (prepositional).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1535",
+    "current_tip": "Perfective verbs focus on the completed result of an action.",
+    "fixed_tip": "В понедельник = on Monday (accusative for days). Играть в шахматы = to play chess. В библиотеке = in the library.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1540",
+    "current_tip": "The dative case indicates the indirect object or recipient.",
+    "fixed_tip": "На вокзале = at the station (prepositional for location). После обеда = after lunch. Читать книгу = to read a book.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1542",
+    "current_tip": "Лететь is a single flight; летать means flying regularly or in general.",
+    "fixed_tip": "Починить means 'to repair' (perfective). Тонкими инструментами uses instrumental plural — with fine tools. Часовщик = watchmaker.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1553",
+    "current_tip": "Хотя means 'although': Хотя он устал, он продолжал работать.",
+    "fixed_tip": "Сколько бы...ни = no matter how much: Сколько бы он ни работал. Бы + ни creates a concessive clause meaning 'however much.'",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1554",
+    "current_tip": "First conjugation verbs end in -ать/-ять/-еть: читать → читаю, читаешь, читает.",
+    "fixed_tip": "В понедельник = on Monday (accusative for days). Ездить = to commute (multidirectional habitual). На пляже = at the beach.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1558",
+    "current_tip": "Verbs of motion distinguish between going on foot and by transport.",
+    "fixed_tip": "На прошлой неделе = last week. Пел is past masculine imperfective of петь (to sing). В горах = in the mountains.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1559",
+    "current_tip": "Плыть is swimming in one direction; плавать is swimming in general.",
+    "fixed_tip": "Остававшееся open describes the equation: 'that had remained open.' Participle agrees with уравнение (neuter). Десятилетиями = for decades (instrumental).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1575",
+    "current_tip": "Лететь is a single flight; летать means flying regularly or in general.",
+    "fixed_tip": "Возить is multidirectional transporting — used for regular transport. Часто (often) signals habitual: she often transported home.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1579",
+    "current_tip": "Везти means transporting (one direction); возить means transporting regularly.",
+    "fixed_tip": "Бежать is unidirectional running (one direction right now): он бежал на работу = he was running to work.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1580",
+    "current_tip": "Плыть is swimming in one direction; плавать is swimming in general.",
+    "fixed_tip": "Вести is unidirectional leading/driving — вела = past feminine: I was driving (to work, one direction).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1582",
+    "current_tip": "Accusative after в/на means motion TOWARD: иду в школу (going to school).",
+    "fixed_tip": "Летать is multidirectional flying — for habitual or back-and-forth flights. Над + instrumental: над озером = over the lake.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1583",
+    "current_tip": "Почему = 'why (cause)', зачем = 'why (purpose)/what for'.",
+    "fixed_tip": "Где means 'where (location)': Где мы встречаемся? = Where are we meeting? Завтра (tomorrow) makes this a future plan.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1593",
+    "current_tip": "Нести means carrying on foot (one direction); носить means carrying regularly.",
+    "fixed_tip": "Везти is unidirectional transporting (one direction): она везла на рынок = she was transporting to the market.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1603",
+    "current_tip": "через + accusative = 'in/after (time)': через час (in an hour).",
+    "fixed_tip": "Летать is multidirectional flying for habitual action. Часто (often) confirms habitual: он часто летал = he often flew.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1609",
+    "current_tip": "Плыть is swimming in one direction; плавать is swimming in general.",
+    "fixed_tip": "Возить is multidirectional transporting — habitual. Часто (often) + в библиотеку = she regularly transported to the library.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1610",
+    "current_tip": "Лететь is a single flight; летать means flying regularly or in general.",
+    "fixed_tip": "Водить is multidirectional leading — habitual. Часто + в кино = she often took/led (someone) to the cinema.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1612",
+    "current_tip": "Dative is used with мне, тебе, ему, ей, нам, вам, им for personal pronouns.",
+    "fixed_tip": "Почему means 'why' asking for the cause: Почему ты опоздал? На работу = to work (на + accusative for direction).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1617",
+    "current_tip": "Prefix за- means 'to stop by': заходить = to drop in, заехать = to drive by.",
+    "fixed_tip": "Отвезти means 'to take by vehicle' (perfective). Prefix от- = away. Отвёз нас на вокзал = he took us to the station.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1619",
+    "current_tip": "Prepositional after в/на means location AT: в школе (at school).",
+    "fixed_tip": "Ездить на метро = to commute by metro. На + prepositional for transport. Ездить is multidirectional for habitual commuting.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1628",
+    "current_tip": "Ехать (by vehicle) vs идти (on foot) — choose based on mode of transport.",
+    "fixed_tip": "Ездить is multidirectional by vehicle for habitual trips. Часто + ездил = he often went. В библиотеку = to the library (accusative).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-1629",
+    "current_tip": "Везти means transporting (one direction); возить means transporting regularly.",
+    "fixed_tip": "Бегать is multidirectional running for habitual action. Часто + бегал = he often ran. В кино = to the cinema (accusative).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1633",
+    "current_tip": "Russian uses 24-hour time in formal contexts: 14:00 = два часа дня.",
+    "fixed_tip": "Шестьсот граммов: numbers 5+ take genitive plural. Сыра is genitive singular — genitive for measuring amounts.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1637",
+    "current_tip": "Вести means leading someone (one direction); водить means leading regularly.",
+    "fixed_tip": "Подбрасывать means 'to toss up.' Шесть мячей — after 5+, genitive plural. Одновременно = simultaneously.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1644",
+    "current_tip": "Почему = 'why (cause)', зачем = 'why (purpose)/what for'.",
+    "fixed_tip": "Далеко ли = 'is it far?' Ли is a question particle. Отсюда = from here. До + genitive: до центра = to the center.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1646",
+    "current_tip": "Лететь is a single flight; летать means flying regularly or in general.",
+    "fixed_tip": "Разработать means 'to develop' (perfective). Алгоритм is a masculine loanword. Для + genitive: для распознавания = for recognition.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1652",
+    "current_tip": "Везти means transporting (one direction); возить means transporting regularly.",
+    "fixed_tip": "Летать is multidirectional flying for habitual action. Часто + летал = he often flew. К + dative: к бабушке = to grandmother's.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1662",
+    "current_tip": "Verbs of motion distinguish between going on foot and by transport.",
+    "fixed_tip": "Всегда (always) signals permanent habitual action. Убирать квартиру = to clean the apartment. На пляже = at the beach.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1663",
+    "current_tip": "Нести means carrying on foot (one direction); носить means carrying regularly.",
+    "fixed_tip": "Собирать means 'to gather/harvest.' В солнечном сентябре = in sunny September (prepositional). Виноградарь = grape grower.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1666",
+    "current_tip": "Бежать is unidirectional running; бегать is running back and forth or habitually.",
+    "fixed_tip": "Исследовать means 'to explore/investigate.' Затонувший = sunken (past active participle). На морском дне = on the sea bed.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1672",
+    "current_tip": "Accusative for time duration: Я жил там неделю (I lived there for a week).",
+    "fixed_tip": "С + instrumental: с морковью и сельдереем = with carrot and celery. Питателен is short masculine adjective: nutritious.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1673",
+    "current_tip": "Плыть is swimming in one direction; плавать is swimming in general.",
+    "fixed_tip": "На гриле = grilled (on the grill). С + instrumental: с соусом голландез = with hollandaise sauce. Деликатес = delicacy.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1675",
+    "current_tip": "Accusative after некоторые verbs of emotion: Мне жаль маму (I feel sorry for mom).",
+    "fixed_tip": "По выходным = on weekends (по + dative plural). Убирать квартиру = to clean the apartment. На пляже = at the beach.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1678",
+    "current_tip": "Вести means leading someone (one direction); водить means leading regularly.",
+    "fixed_tip": "Ловко means 'deftly/skillfully' — an adverb. Ловить рыбу = to catch fish. В + prepositional: в горном ручье = in the mountain stream.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1682",
+    "current_tip": "Везти means transporting (one direction); возить means transporting regularly.",
+    "fixed_tip": "Простираться means 'to stretch/extend.' На сотни километров = for hundreds of kilometers. К северу = to the north.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1684",
+    "current_tip": "С + instrumental = 'with' (accompaniment): с другом (with a friend), с молоком (with milk).",
+    "fixed_tip": "Одиночество (loneliness) is an abstract noun subject. Тяготить means 'to burden.' Без + genitive: без друзей = without friends.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-1695",
+    "current_tip": "Negative imperative: не + imperfective imperative: Не кури! Don't smoke!",
+    "fixed_tip": "Запиши is a perfective imperative (informal) of записать — write down (a specific completed action). Мой новый номер = my new number.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1704",
+    "current_tip": "Instrumental is used after быть in past/future: Он был врачом (He was a doctor).",
+    "fixed_tip": "Ссориться is a reciprocal reflexive — they quarrel with each other. Из-за + genitive: из-за ерунды = over nonsense.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1717",
+    "current_tip": "Если бы + past tense = 'if' in unreal conditions: Если бы я знал...",
+    "fixed_tip": "Хотел бы + infinitive is a polite conditional: 'I would like to.' Бы + past tense creates the conditional mood.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1718",
+    "current_tip": "Хотел бы is a polite way to say 'I would like': Я хотел бы заказать...",
+    "fixed_tip": "Бы + past tense forms the conditional: он бы написал = he would write. Книгу is accusative — the direct object.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1719",
+    "current_tip": "К + dative = 'toward/to': идти к врачу = 'to go to the doctor'.",
+    "fixed_tip": "Везти/везёт has a second meaning: 'to be lucky.' Мне везёт = I'm lucky. На + prepositional: на экзаменах = on exams.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1721",
+    "current_tip": "Perfective imperative = one-time specific: Прочитай эту книгу! (Read this book [to completion]!).",
+    "fixed_tip": "Бы + past perfective = conditional for a completed hypothetical: Я бы прочитал = I would read (through to the end).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1725",
+    "current_tip": "Dative expresses age: Мне двадцать лет = 'I am twenty years old'.",
+    "fixed_tip": "Туристам is dative plural — the recipients who were shown. Показать + dative = to show to: показали туристам все достопримечательности.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1732",
+    "current_tip": "Куда (where to) replaces в который: город, куда я еду (the city I'm going to).",
+    "fixed_tip": "Не холоднее вчера = not colder than yesterday. Comparative + genitive replaces чем: вчера (genitive form implied) = than yesterday.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1738",
+    "current_tip": "Хотел бы is a polite way to say 'I would like': Я хотел бы заказать...",
+    "fixed_tip": "Если бы + past tense = unreal condition: Если бы я только знал тогда = If only I had known then. Только adds regret.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1746",
+    "current_tip": "Если бы + past tense = 'if' in unreal conditions: Если бы я знал...",
+    "fixed_tip": "Хотел бы + infinitive = would like to: Он бы хотел стать врачом. Стать + instrumental: стать врачом = to become a doctor.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1747",
+    "current_tip": "Из + genitive = origin: Я из России (I am from Russia).",
+    "fixed_tip": "Запишите is a formal plural imperative of записать. В тетрадь = into the notebook (в + accusative for direction/destination).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1754",
+    "current_tip": "Compound comparative: более + adjective: более интересный (more interesting).",
+    "fixed_tip": "Дороже is the comparative of дорогой (expensive). Того is genitive demonstrative — genitive replaces чем for comparison.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1762",
+    "current_tip": "Feminine dative: -е/-и: сестра→сестре, мать→матери.",
+    "fixed_tip": "По + dative for route: по этой дороге = along this road. Добраться до + genitive = to get to: до озера = to the lake.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1786",
+    "current_tip": "Instrumental with перед means 'in front of': перед школой (in front of the school).",
+    "fixed_tip": "Где + мой = Where is my...? Мой agrees with телефон (masculine). This is a simple question using intonation, not word order change.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1803",
+    "current_tip": "Если бы + past tense = 'if' in unreal conditions: Если бы я знал...",
+    "fixed_tip": "Бы + past tense = conditional: Я бы предпочёл = I would prefer. Предпочесть is perfective — completed hypothetical preference.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1804",
+    "current_tip": "Если бы + past tense = 'if' in unreal conditions: Если бы я знал...",
+    "fixed_tip": "Обязательно means 'certainly/definitely.' Мы бы помогли = we would help. Бы + past plural -ли for 'мы' subject.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1809",
+    "current_tip": "Хотел бы is a polite way to say 'I would like': Я хотел бы заказать...",
+    "fixed_tip": "Мог бы = could/would be able: Я бы мог приехать завтра. Мочь in conditional expresses hypothetical ability.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1810",
+    "current_tip": "Хотел бы is a polite way to say 'I would like': Я хотел бы заказать...",
+    "fixed_tip": "Могла бы = she could/would be able: Она бы могла помочь нам. Past feminine могла + бы for feminine subject conditional.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1821",
+    "current_tip": "Если бы + past tense = 'if' in unreal conditions: Если бы я знал...",
+    "fixed_tip": "Бы + past tense = conditional: Он бы нарисовал картину = He would draw a picture. Perfective conditional for a completed hypothetical.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1848",
+    "current_tip": "Imperative for -ить verbs: drop -ишь, add -и (singular) / -ите (formal): Говори! Говорите!",
+    "fixed_tip": "Бы + past tense = conditional: Она бы вернулась в детство. Вернуться = to return (reflexive). This expresses a wish/fantasy.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1850",
+    "current_tip": "Если бы + past tense = 'if' in unreal conditions: Если бы я знал...",
+    "fixed_tip": "Бы + past tense = conditional: Они бы переехали. Переехать = to move (residence). В другой город = to another city.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1876",
+    "current_tip": "О + prepositional means 'about': о работе (about work), о России (about Russia).",
+    "fixed_tip": "Купите is a formal plural imperative of купить (perfective). По дороге домой = on the way home (по + dative for route).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1892",
+    "current_tip": "Negative imperative: не + imperfective imperative: Не кури! Don't smoke!",
+    "fixed_tip": "Говори громче is an affirmative imperative + comparative: speak louder. Говори is informal imperative of говорить.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1903",
+    "current_tip": "Давай/давайте + infinitive for 'let's': Давай пойдём! Let's go!",
+    "fixed_tip": "Не опаздывай is a negative imperative with imperfective: don't be late (habitually). Не + imperfective for ongoing prohibitions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1904",
+    "current_tip": "Imperfective imperative = repeated/general: Читай каждый день! (Read every day!).",
+    "fixed_tip": "Если бы не + noun = if not for: Если бы не дождь = if it weren't for the rain. Conditional for unreal situations.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1925",
+    "current_tip": "Хотел бы is a polite way to say 'I would like': Я хотел бы заказать...",
+    "fixed_tip": "Была бы = she would be. Бы + past feminine of быть. Счастлива is short-form feminine adjective: happy.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1927",
+    "current_tip": "Хотел бы is a polite way to say 'I would like': Я хотел бы заказать...",
+    "fixed_tip": "С удовольствием = with pleasure. Бы + past perfective: Я бы пришёл = I would come. This expresses willing acceptance.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1928",
+    "current_tip": "Если бы + past tense = 'if' in unreal conditions: Если бы я знал...",
+    "fixed_tip": "Могли бы = they could/would be able. Поехать вместе = to go together. This suggests a possibility, not a contrary-to-fact condition.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1929",
+    "current_tip": "Если бы + past tense = 'if' in unreal conditions: Если бы я знал...",
+    "fixed_tip": "Должна была бы = she should have. Предупредить (to warn) is perfective infinitive. Compound conditional with obligation.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1931",
+    "current_tip": "Imperative for other verbs: drop -ешь, add -й/-и: Читай! Читайте! Пиши! Пишите!",
+    "fixed_tip": "Бы + past perfective: Он бы попробовал ещё раз = He would try again. Conditional expressing willingness.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1932",
+    "current_tip": "Хотел бы is a polite way to say 'I would like': Я хотел бы заказать...",
+    "fixed_tip": "Без сомнения = without doubt. Бы + past perfective: Я бы поехал = I would go. Expressing confident hypothetical decision.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1941",
+    "current_tip": "Imperative for -ить verbs: drop -ишь, add -и (singular) / -ите (formal): Говори! Говорите!",
+    "fixed_tip": "Бы + past perfective: Я бы посадил дерево = I would plant a tree. Conditional expressing a wish or hypothetical plan.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1947",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "Моя бабушка: моя agrees with бабушка (feminine). Делать пельмени = to make dumplings. Замечательные = wonderful (plural adj.).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1955",
+    "current_tip": "Third person wishes use пусть: Пусть она придёт (Let her come).",
+    "fixed_tip": "Бы + past perfective: Я бы пошёл в кино = I would go to the cinema. В кино = to the cinema (в + accusative for direction).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1968",
+    "current_tip": "Если бы + past tense = 'if' in unreal conditions: Если бы я знал...",
+    "fixed_tip": "Куда бы + conditional = 'where would': Куда бы вы поехали? Hypothetical question about a travel preference.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1980",
+    "current_tip": "Numbers 2-4 take genitive singular: два стола, три книги.",
+    "fixed_tip": "Жители этого района: жители = residents (plural). Жаловаться на + accusative = to complain about: на шум.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-1981",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "Передай is an informal perfective imperative: pass (to me). Мне is dative — the recipient. Пожалуйста adds politeness.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2004",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "Дома = at home. После обеда = after lunch (после + genitive). Мыть посуду = to wash dishes (imperfective).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2009",
+    "current_tip": "Давай/давайте + infinitive for 'let's': Давай пойдём! Let's go!",
+    "fixed_tip": "Приготовь is perfective imperative (informal): cook/prepare (one specific meal). Пока = while — for simultaneous actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2011",
+    "current_tip": "Superlative with самый: самый большой (the biggest), самая красивая (the most beautiful).",
+    "fixed_tip": "Такой же...как = 'the same as/just as': такой же большой, как тот. This compares equality, not superlative degree.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2024",
+    "current_tip": "О + prepositional means 'about': о работе (about work), о России (about Russia).",
+    "fixed_tip": "Напишите is formal plural imperative of написать (perfective). Своё имя и фамилию = your name and surname (accusative).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2031",
+    "current_tip": "After нет, genitive is required: Нет воды = 'There is no water'.",
+    "fixed_tip": "На стене = on the wall (prepositional for location). Висит means 'is hanging.' Карта мира = map of the world (мира is genitive of мир).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2033",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "В библиотеке = in the library. После обеда = after lunch. Танцевать вальс = to dance a waltz (imperfective).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2040",
+    "current_tip": "Masculine/neuter genitive: -а/-я: стол→стола, море→моря.",
+    "fixed_tip": "Из + genitive: из соседней комнаты = from the neighboring room. Звук гитары = sound of the guitar (genitive for possession).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-2047",
+    "current_tip": "Masculine genitive: -а/-я (стола, учителя). Feminine: -ы/-и (книги, земли).",
+    "fixed_tip": "Запомни is perfective imperative (informal): memorize/remember (this specific rule). Это правило = this rule (accusative neuter).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2049",
+    "current_tip": "Negative imperative: не + imperfective imperative: Не кури! Don't smoke!",
+    "fixed_tip": "Проверь is perfective imperative (informal): check (one specific thing). Домашнюю работу = homework (accusative feminine).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2053",
+    "current_tip": "Наш/наша/наше/наши change like мой: наш дом, наша школа, наше дело, наши дети.",
+    "fixed_tip": "Ваш agrees with билет (masculine): ваш билет = your ticket. Пожалуйста here means 'please' in a polite request.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2062",
+    "current_tip": "Superlative with самый: самый большой (the biggest), самая красивая (the most beautiful).",
+    "fixed_tip": "Гораздо intensifies comparatives: гораздо интереснее = much more interesting. It has no equivalent in simple comparative form.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2067",
+    "current_tip": "Superlative with самый: самый большой (the biggest), самая красивая (the most beautiful).",
+    "fixed_tip": "Стал + comparative = became more: стал сильнее. Стать + comparative expresses change. После тренировок = after training (genitive plural).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2072",
+    "current_tip": "Compound comparative: более + adjective: более интересный (more interesting).",
+    "fixed_tip": "Ценнее is comparative of ценный (valuable). Золота is genitive — genitive replaces чем: ценнее золота = more valuable than gold.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2079",
+    "current_tip": "Всего/всех for superlative: Он лучше всех = He is the best of all.",
+    "fixed_tip": "Более + adjective = compound comparative: более опытный = more experienced. Used when simple -ее comparative doesn't exist.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2083",
+    "current_tip": "Superlative with самый: самый большой (the biggest), самая красивая (the most beautiful).",
+    "fixed_tip": "Ничуть не + comparative = not at all (worse): ничуть не хуже. Ничуть is an emphatic negation particle.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2089",
+    "current_tip": "Superlative with самый: самый большой (the biggest), самая красивая (the most beautiful).",
+    "fixed_tip": "Лучше is irregular comparative of хороший. Меня is genitive — genitive replaces чем: лучше меня = better than me.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2090",
+    "current_tip": "Compound comparative: более + adjective: более интересный (more interesting).",
+    "fixed_tip": "Самый быстрый is superlative: the fastest. Самый + adjective. В стране = in the country (prepositional for location).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2092",
+    "current_tip": "Чем introduces comparison: Он старше, чем я = He is older than me.",
+    "fixed_tip": "Самое новое: самое is neuter superlative agreeing with здание (neuter). На улице = on the street (prepositional).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2101",
+    "current_tip": "Всего/всех for superlative: Он лучше всех = He is the best of all.",
+    "fixed_tip": "Лучше is irregular comparative of хороший. Того is genitive demonstrative — genitive replaces чем: лучше того = better than that one.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2108",
+    "current_tip": "Superlative with самый: самый большой (the biggest), самая красивая (the most beautiful).",
+    "fixed_tip": "Самое вкусное: самое is neuter superlative agreeing with блюдо (neuter). В меню = in the menu (indeclinable loanword).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-2112",
+    "current_tip": "Superlative with самый: самый большой (the biggest), самая красивая (the most beautiful).",
+    "fixed_tip": "Такой же + adjective + как = the same as: такой же высокий, как брат. This expresses equality of comparison, not superlative.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2113",
+    "current_tip": "Давай/давайте + infinitive for 'let's': Давай пойдём! Let's go!",
+    "fixed_tip": "Расскажи is perfective imperative (informal): tell (a specific story). О + prepositional: о своём путешествии = about your trip.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2115",
+    "current_tip": "Чем introduces comparison: Он старше, чем я = He is older than me.",
+    "fixed_tip": "Самый большой = the biggest (superlative). В России = in Russia (prepositional). Москва is in apposition — a clarifying noun.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2118",
+    "current_tip": "Compound comparative: более + adjective: более интересный (more interesting).",
+    "fixed_tip": "Немного + comparative = 'a little (more)': немного моложе = a little younger. Сестры is genitive — genitive replaces чем.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2121",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "Всегда (always) signals habitual action. Петь песню = to sing a song. В школе = in the school (prepositional).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2124",
+    "current_tip": "Пожалуйста makes imperatives polite: Скажите, пожалуйста... Please tell me...",
+    "fixed_tip": "Давайте + perfective: давайте поговорим = let's talk (specific occasion). О + prepositional: о планах = about plans.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2129",
+    "current_tip": "The genitive case shows possession or absence of something.",
+    "fixed_tip": "Всегда (always) signals habitual action. Убирать квартиру = to clean the apartment. В музее = in the museum.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2130",
+    "current_tip": "Кто is used for people: Тот, кто знает = The one who knows.",
+    "fixed_tip": "Которую is accusative feminine of который, agreeing with книга and functioning as direct object: книгу, которую я читаю.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2135",
+    "current_tip": "Наш/наша/наше/наши change like мой: наш дом, наша школа, наше дело, наши дети.",
+    "fixed_tip": "Ваша is feminine possessive agreeing with очередь (feminine): ваша очередь = your turn. Отвечать на + accusative = to answer.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2136",
+    "current_tip": "Пожалуйста makes imperatives polite: Скажите, пожалуйста... Please tell me...",
+    "fixed_tip": "Не спеши is negative imperative (imperfective): don't rush. Хорошенько means 'thoroughly/properly' (colloquial diminutive adverb).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2140",
+    "current_tip": "Пожалуйста makes imperatives polite: Скажите, пожалуйста... Please tell me...",
+    "fixed_tip": "Реши is perfective imperative (informal): solve (this specific problem). До + genitive: до конца урока = by the end of the lesson.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2147",
+    "current_tip": "Ваш/ваша/ваше/ваши follow the same pattern as наш.",
+    "fixed_tip": "Покажи is perfective imperative (informal): show. Свой agrees with билет (masculine): свой билет = your (own) ticket.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2148",
+    "current_tip": "Superlative with самый: самый большой (the biggest), самая красивая (the most beautiful).",
+    "fixed_tip": "Короче is comparative of короткий (short): shorter. This is a simple comparative, not a superlative.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2149",
+    "current_tip": "Superlative with самый: самый большой (the biggest), самая красивая (the most beautiful).",
+    "fixed_tip": "Длиннее is comparative of длинный (long): longer. This is a simple comparative formed with -ее suffix.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2154",
+    "current_tip": "Whose = genitive of который: Человек, которого мы видели (The person whom we saw).",
+    "fixed_tip": "Зеленее is comparative of зелёный (green): greener. Simple comparatives can describe colors: more green.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2155",
+    "current_tip": "Superlative with самый: самый большой (the biggest), самая красивая (the most beautiful).",
+    "fixed_tip": "Ниже is comparative of низкий (low): lower. Some comparatives have irregular stems: низкий → ниже (not *низее).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2158",
+    "current_tip": "Его (his), её (her), их (their) do NOT change form regardless of the noun's gender or case.",
+    "fixed_tip": "Мои is plural possessive of мой: мои друзья = my friends. Это мои друзья is a simple identification sentence.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2160",
+    "current_tip": "Свой means 'one's own' and refers back to the subject: Я люблю свою маму.",
+    "fixed_tip": "Её is the possessive 'her': её платье = her dress. Её doesn't change form — it stays её regardless of the noun's case.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2163",
+    "current_tip": "Instrumental of time: утром (in the morning), вечером (in the evening).",
+    "fixed_tip": "Их is the possessive 'their': их машина = their car. Сломалась (broke down) is a reflexive perfective past feminine.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2166",
+    "current_tip": "Его (his), её (her), их (their) do NOT change form regardless of the noun's gender or case.",
+    "fixed_tip": "Чей agrees with ребёнок (masculine): Чей ребёнок плачет? = Whose child is crying? Чей/чья/чьё/чьи decline by gender.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2168",
+    "current_tip": "Его (his), её (her), их (their) do NOT change form regardless of the noun's gender or case.",
+    "fixed_tip": "Свой refers back to the subject: Я взял свою книгу = I took my (own) book. Use свой, not мой, when possessor = subject.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2173",
+    "current_tip": "Ваш/ваша/ваше/ваши follow the same pattern as наш.",
+    "fixed_tip": "Моему is dative masculine of мой: моему другу = to my friend. Нравиться + dative: моему другу нравится музыка.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2174",
+    "current_tip": "Наш/наша/наше/наши change like мой: наш дом, наша школа, наше дело, наши дети.",
+    "fixed_tip": "Своей is dative feminine of свой: помогает своей маме. Свой refers back to the subject она — her own mom.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2176",
+    "current_tip": "Superlative with самый: самый большой (the biggest), самая красивая (the most beautiful).",
+    "fixed_tip": "Увереннее is comparative of уверенный: more confident. Стать + comparative = to become more: стала увереннее в себе.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2179",
+    "current_tip": "Чем introduces comparison: Он старше, чем я = He is older than me.",
+    "fixed_tip": "Длиннее is comparative of длинный. Становиться + comparative = to become: дни становятся длиннее = days become longer.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2181",
+    "current_tip": "Superlative with самый: самый большой (the biggest), самая красивая (the most beautiful).",
+    "fixed_tip": "Наиболее is a formal superlative prefix meaning 'most': наиболее подготовлен = the most prepared. Used in formal/written Russian.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2182",
+    "current_tip": "Compound comparative: более + adjective: более интересный (more interesting).",
+    "fixed_tip": "Наименее is the opposite of наиболее: 'least.' Наименее опытная = the least experienced. Formal superlative construction.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2183",
+    "current_tip": "Compound comparative: более + adjective: более интересный (more interesting).",
+    "fixed_tip": "Быстрее is simple comparative of быстро (quickly): faster. Меня is genitive — replaces чем: быстрее меня = faster than me.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2186",
+    "current_tip": "Superlative with самый: самый большой (the biggest), самая красивая (the most beautiful).",
+    "fixed_tip": "Более эффективный is a compound comparative: more effective. Более + adjective is used when -ее comparative doesn't exist or sounds awkward.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2187",
+    "current_tip": "Всего/всех for superlative: Он лучше всех = He is the best of all.",
+    "fixed_tip": "Счастливее is comparative of счастливый: happier. Чем раньше = than before — comparing to a previous state.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2188",
+    "current_tip": "Compound comparative: более + adjective: более интересный (more interesting).",
+    "fixed_tip": "Всё + comparative = 'more and more': всё быстрее = faster and faster. Всё intensifies progressive change.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2197",
+    "current_tip": "Ваш/ваша/ваше/ваши follow the same pattern as наш.",
+    "fixed_tip": "У моей сестры: моей is genitive feminine of мой. У + genitive + есть = possession: my sister has a cat.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2202",
+    "current_tip": "Compound comparative: более + adjective: более интересный (more interesting).",
+    "fixed_tip": "Лучше всех = best of all — superlative with genitive plural всех. Танцует лучше всех = dances better than everyone.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2204",
+    "current_tip": "Some comparatives are irregular: хороший → лучше, плохой → хуже, большой → больше.",
+    "fixed_tip": "Теплее is regular comparative of тёплый: warmer. Чем обычно = than usual — comparing to the norm.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2206",
+    "current_tip": "Compound comparative: более + adjective: более интересный (more interesting).",
+    "fixed_tip": "Громче is comparative of громкий: louder. Чем нужно = than necessary — comparing to what's needed/appropriate.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2207",
+    "current_tip": "Чем introduces comparison: Он старше, чем я = He is older than me.",
+    "fixed_tip": "Наиболее + adjective = formal superlative: наиболее важный = the most important. Used in formal/written Russian.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2214",
+    "current_tip": "Чем introduces comparison: Он старше, чем я = He is older than me.",
+    "fixed_tip": "Более внимательный = more attentive (compound comparative). Чем раньше = than before — comparing to a past state.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-2217",
+    "current_tip": "Мой/моя/моё/мои change by gender and case: мой дом, моя книга, моё окно, мои друзья.",
+    "fixed_tip": "Своих is prepositional/genitive plural of свой. Заботиться о + prepositional: о своих детях = about her (own) children.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2229",
+    "current_tip": "Который always triggers a comma before it: Человек, который пришёл (The person who came).",
+    "fixed_tip": "Тоньше is comparative of тонкий: thinner. Чем казалось = than it seemed — comparing to perception. Стена is feminine nominative.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2230",
+    "current_tip": "Где (where) replaces в котором: город, где я живу (the city where I live).",
+    "fixed_tip": "Сложнее is comparative of сложный: more difficult. Чем я думал = than I thought — comparing reality to expectation.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2233",
+    "current_tip": "Мой/моя/моё/мои change by gender and case: мой дом, моя книга, моё окно, мои друзья.",
+    "fixed_tip": "Около + genitive: около нашего дома = near our house. Нашего is genitive masculine of наш, agreeing with дом.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2235",
+    "current_tip": "Кто is used for people: Тот, кто знает = The one who knows.",
+    "fixed_tip": "Которой is dative feminine of который: женщине, которой я помог = the woman whom I helped. Case depends on role in subordinate clause.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2238",
+    "current_tip": "Кто is used for people: Тот, кто знает = The one who knows.",
+    "fixed_tip": "На котором is prepositional of который: поезд, на котором мы ехали = the train on which we rode. Preposition + который.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2240",
+    "current_tip": "Compound comparative: более + adjective: более интересный (more interesting).",
+    "fixed_tip": "Худший is a special superlative of плохой (bad). Unlike самый плохой, худший is a single-word form: the worst.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2242",
+    "current_tip": "Compound comparative: более + adjective: более интересный (more interesting).",
+    "fixed_tip": "Тише...дальше: this proverb uses comparatives in a correlative pair. Тише = more quietly, дальше = further. A folk wisdom structure.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2255",
+    "current_tip": "Наш/наша/наше/наши change like мой: наш дом, наша школа, наше дело, наши дети.",
+    "fixed_tip": "Помни is imperative of помнить (to remember). О + prepositional: о своих обещаниях = about your promises. Своих agrees with обещаниях.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2256",
+    "current_tip": "Мой/моя/моё/мои change by gender and case: мой дом, моя книга, моё окно, мои друзья.",
+    "fixed_tip": "Следить за + instrumental = to watch/monitor: за своим здоровьем = your health. Свой refers back to the implied subject (ты).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2265",
+    "current_tip": "Instrumental with над means 'above/over': над столом (above the table).",
+    "fixed_tip": "Чей это зонт? = Whose umbrella is this? Чей agrees with зонт (masculine). Это is a demonstrative: this.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2269",
+    "current_tip": "Его (his), её (her), их (their) do NOT change form regardless of the noun's gender or case.",
+    "fixed_tip": "Чьё is neuter of чей, agreeing with решение (neuter): Чьё это решение? = Whose decision is this?",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2272",
+    "current_tip": "Мой/моя/моё/мои change by gender and case: мой дом, моя книга, моё окно, мои друзья.",
+    "fixed_tip": "Свои is plural of свой: she found her (own) keys. Свой refers back to the subject она — distinguishing 'own' from someone else's.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2277",
+    "current_tip": "Его (his), её (her), их (their) do NOT change form regardless of the noun's gender or case.",
+    "fixed_tip": "Его работа = his work. Его doesn't change: его работа, его работы, его работе — always его regardless of the noun's case.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-2281",
+    "current_tip": "Свой means 'one's own' and refers back to the subject: Я люблю свою маму.",
+    "fixed_tip": "Мой agrees with цвет (masculine): мой любимый цвет. Синий is a color adjective used as a noun: blue (one).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2282",
+    "current_tip": "Его (his), её (her), их (their) do NOT change form regardless of the noun's gender or case.",
+    "fixed_tip": "Мои is plural possessive: мои любимые цветы = my favorite flowers. Розы is the plural of роза.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2288",
+    "current_tip": "Но means 'but' for contradiction: Он хочет, но не может.",
+    "fixed_tip": "Вместо того чтобы = 'instead of' + infinitive: instead of resting, he worked. Чтобы here means 'in order to.'",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2289",
+    "current_tip": "Завтра (tomorrow), скоро (soon), через (in/after) naturally pair with future tense.",
+    "fixed_tip": "А here means 'but/yet': Я звонил, а никто не ответил. А shows contrast or unexpected result, softer than но.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2291",
+    "current_tip": "Ваш/ваша/ваше/ваши follow the same pattern as наш.",
+    "fixed_tip": "Гордиться + instrumental: своими достижениями = with one's achievements. Свой refers back to subject я.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2292",
+    "current_tip": "Наш/наша/наше/наши change like мой: наш дом, наша школа, наше дело, наши дети.",
+    "fixed_tip": "Довольна + instrumental: своей работой = with one's work. Short-form adjective + instrumental for satisfaction. Свой refers to subject она.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2302",
+    "current_tip": "Где can replace в котором for locations: город, где я живу = the city where I live.",
+    "fixed_tip": "После которого: после + genitive of который. The case is determined by the preposition после, not the main clause.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2306",
+    "current_tip": "Наш/наша/наше/наши change like мой: наш дом, наша школа, наше дело, наши дети.",
+    "fixed_tip": "Его is possessive 'his': его квартира = his apartment. На пятом этаже = on the fifth floor (prepositional with ordinal).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2308",
+    "current_tip": "Его (his), её (her), их (their) do NOT change form regardless of the noun's gender or case.",
+    "fixed_tip": "Чья agrees with машина (feminine): Чья машина? = Whose car? У подъезда = by the entrance (у + genitive).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2309",
+    "current_tip": "Instrumental with под means 'under': под столом (under the table).",
+    "fixed_tip": "Его работа = his work. Занимать + accusative: занимает много времени = takes a lot of time. Много + genitive.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2318",
+    "current_tip": "Кто is used for people: Тот, кто знает = The one who knows.",
+    "fixed_tip": "К которому: к + dative of который. Врач, к которому я хожу = the doctor I go to. Preposition determines the case.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2323",
+    "current_tip": "Хотя means 'although': Хотя он устал, он продолжал работать.",
+    "fixed_tip": "Потому что means 'because': Я проснулся, потому что было шумно. Потому что introduces the reason/cause clause.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2328",
+    "current_tip": "Где can replace в котором for locations: город, где я живу = the city where I live.",
+    "fixed_tip": "Который сдал: который is masculine nominative — it's the subject of the subordinate clause. Сдал экзамен = passed the exam.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2330",
+    "current_tip": "Но means 'but' for contradiction: Он хочет, но не может.",
+    "fixed_tip": "Чтобы + infinitive = 'in order to': торопились, чтобы не опоздать. Не + infinitive = not to (be late).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2336",
+    "current_tip": "Где can replace в котором for locations: город, где я живу = the city where I live.",
+    "fixed_tip": "Около которого: около + genitive of который. The preposition determines the case: около которого мы жили = near which we lived.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2340",
+    "current_tip": "Что can mean 'that/which' for things: Всё, что я знаю = Everything that I know.",
+    "fixed_tip": "Которая is feminine nominative agreeing with история: историю, которая меня удивила = a story that surprised me.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2349",
+    "current_tip": "Что can mean 'that/which' for things: Всё, что я знаю = Everything that I know.",
+    "fixed_tip": "Которая is feminine nominative of который: картина, которая висит = the painting that hangs. Gender matches картина.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2356",
+    "current_tip": "Который changes by gender, number, and case: который (m), которая (f), которое (n), которые (pl).",
+    "fixed_tip": "Чей replaces которого for possession: человек, чей дом горит = the person whose house is burning. Чей declines by gender of the possessed.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2357",
+    "current_tip": "Везти means transporting (one direction); возить means transporting regularly.",
+    "fixed_tip": "Окутать means 'to envelop.' Густо = thickly (adverb). Ранним утром = in the early morning (instrumental for time).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2360",
+    "current_tip": "О + prepositional means 'about': о работе (about work), о России (about Russia).",
+    "fixed_tip": "С утра до вечера = from morning to evening. С + genitive = from, до + genitive = to/until. Common time frame expression.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2363",
+    "current_tip": "Что can mean 'that/which' for things: Всё, что я знаю = Everything that I know.",
+    "fixed_tip": "Тот, кто = the one who: Тот, кто ищет, всегда находит. Кто is for people. This is a proverb: he who seeks always finds.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2365",
+    "current_tip": "Кто is used for people: Тот, кто знает = The one who knows.",
+    "fixed_tip": "Всему, что слышишь: что here means 'what/that which.' Не верь = don't believe (imperative). Всему is dative of всё.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2367",
+    "current_tip": "О + prepositional means 'about': о работе (about work), о России (about Russia).",
+    "fixed_tip": "С + instrumental = 'with': чай с молоком = tea with milk. С молоком expresses accompaniment/ingredient.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2369",
+    "current_tip": "Кто is used for people: Тот, кто знает = The one who knows.",
+    "fixed_tip": "То, что = 'that which/what': Я помню то, что ты сказал. Что refers to things/statements. То is a demonstrative pronoun.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2370",
+    "current_tip": "Но means 'but' for contradiction: Он хочет, но не может.",
+    "fixed_tip": "Прежде чем = 'before': Он ушёл, прежде чем мы приехали. A temporal subordinate conjunction requiring a comma.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2376",
+    "current_tip": "Хотя means 'although': Хотя он устал, он продолжал работать.",
+    "fixed_tip": "Пока не = 'until': Мы ушли, пока не стемнело. Пока + не + perfective means 'before it happened/until.'",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2379",
+    "current_tip": "Чтобы means 'in order to' and requires past tense: Я учусь, чтобы знать.",
+    "fixed_tip": "Раз = 'since/given that' (colloquial): Раз ты здесь, помоги мне. A conversational causal conjunction.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2382",
+    "current_tip": "Где can replace в котором for locations: город, где я живу = the city where I live.",
+    "fixed_tip": "На которую: на + accusative of который. Гора, на которую мы поднялись = the mountain we climbed. Direction requires accusative.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2388",
+    "current_tip": "Где can replace в котором for locations: город, где я живу = the city where I live.",
+    "fixed_tip": "Которую is accusative feminine: песня, которую она поёт = the song she sings. Accusative because it's the direct object of поёт.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2394",
+    "current_tip": "Где can replace в котором for locations: город, где я живу = the city where I live.",
+    "fixed_tip": "Тем, что = 'with what/that which': довольна тем, что получила. Что refers to the thing received. Тем is instrumental.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2403",
+    "current_tip": "Кто is used for people: Тот, кто знает = The one who knows.",
+    "fixed_tip": "Когда replaces в который for time: день, когда мы познакомились = the day when we met. Когда is simpler than в который день.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2405",
+    "current_tip": "Кто is used for people: Тот, кто знает = The one who knows.",
+    "fixed_tip": "Мимо которого: мимо + genitive of который. Мимо means 'past': дом, мимо которого мы проходим = the house we walk past.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2412",
+    "current_tip": "Хотя means 'although': Хотя он устал, он продолжал работать.",
+    "fixed_tip": "Как...так и = 'both...and': как дети, так и взрослые. A paired conjunction for inclusive enumeration.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2419",
+    "current_tip": "Кто is used for people: Тот, кто знает = The one who knows.",
+    "fixed_tip": "Которого is genitive masculine: момент, которого мы ждали. Ждать + genitive = to wait for. Case depends on the subordinate verb.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2423",
+    "current_tip": "Где can replace в котором for locations: город, где я живу = the city where I live.",
+    "fixed_tip": "Над которым: над + instrumental of который. Проект, над которым мы работаем = the project we're working on.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2456",
+    "current_tip": "Или means 'or': Чай или кофе?",
+    "fixed_tip": "И means 'and' connecting sequential actions: Он пришёл и сел = He came and sat down. Two perfective verbs in sequence.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2458",
+    "current_tip": "На + accusative for direction: на работу (to work). На + prepositional for location: на работе (at work).",
+    "fixed_tip": "Около + genitive means 'near/about': около парка = near the park. Живём is first person plural of жить.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2460",
+    "current_tip": "В + accusative for direction: в школу (to school). В + prepositional for location: в школе (at school).",
+    "fixed_tip": "Через + accusative = 'in (time from now)' or 'through': через час = in an hour. Here it means 'after one hour.'",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2461",
+    "current_tip": "Поэтому means 'therefore': Было поздно, поэтому мы ушли (It was late, so we left).",
+    "fixed_tip": "К + dative for time: к вечеру = by evening. Стало + short adjective: стало прохладно = it became cool (impersonal).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2462",
+    "current_tip": "Летать/лететь (to fly), плавать/плыть (to swim) follow the same unidirectional/multidirectional pattern.",
+    "fixed_tip": "Час назад = an hour ago. Назад means 'ago' and always follows the time expression. Ушёл is perfective past of уйти.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2464",
+    "current_tip": "Perfective future: conjugated perfective verb: Я сделаю (I will do/finish).",
+    "fixed_tip": "То...то = 'now...now/sometimes...sometimes': то смеётся, то плачет. Alternating actions described with this paired conjunction.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2468",
+    "current_tip": "Чтобы means 'in order to' and requires past tense: Я учусь, чтобы знать.",
+    "fixed_tip": "Что бы ни = 'whatever/no matter what': Что бы ни случилось. Бы + ни creates a concessive clause. Note: что бы (two words) differs from чтобы.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2472",
+    "current_tip": "Во сколько? = At what time? В два часа = At two o'clock.",
+    "fixed_tip": "Позавчера means 'the day before yesterday.' Шёл дождь = it was raining — идти/шёл for rain in past tense.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2477",
+    "current_tip": "О + prepositional means 'about': о работе (about work), о России (about Russia).",
+    "fixed_tip": "Через + accusative = 'across/through': через дорогу = across the road. Находится = is located (reflexive).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2479",
+    "current_tip": "Если (if) + future describes real conditions: Если будет дождь, я останусь дома.",
+    "fixed_tip": "О + prepositional: о нашем будущем = about our future. Нашем is prepositional masculine of наш, agreeing with будущем.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2480",
+    "current_tip": "Потому что means 'because': Я опоздал, потому что была пробка.",
+    "fixed_tip": "Когда + future = 'when' for future events: Когда я приду, мы поговорим. Russian uses perfective future after когда.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2481",
+    "current_tip": "Собираться (to intend) + infinitive: Я собираюсь поехать (I'm planning to go).",
+    "fixed_tip": "Reported speech uses что: Он сказал, что будет ждать = He said that he would wait. Russian doesn't shift tenses in reported speech.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2484",
+    "current_tip": "Но means 'but' for contradiction: Он хочет, но не может.",
+    "fixed_tip": "Или...или = 'either...or': Или ты, или я должен пойти. A paired conjunction for exclusive alternatives.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2485",
+    "current_tip": "Но means 'but' for contradiction: Он хочет, но не может.",
+    "fixed_tip": "Хотя means 'although': Она улыбалась, хотя ей было грустно. Introduces a concessive clause — despite being sad, she smiled.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2486",
+    "current_tip": "Но means 'but' for contradiction: Он хочет, но не может.",
+    "fixed_tip": "А here shows unexpected contrast: Мы пришли, а его не было. А is softer than но — it notes the situation rather than contradicting.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2489",
+    "current_tip": "Во сколько? = At what time? В два часа = At two o'clock.",
+    "fixed_tip": "На этот раз = 'this time' — a fixed expression. Не опоздал = didn't be late (perfective negative past).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2493",
+    "current_tip": "Чтобы means 'in order to' and requires past tense: Я учусь, чтобы знать.",
+    "fixed_tip": "Когда + future = 'when' for future time: когда закончу работу. Russian uses perfective future in когда clauses, not present.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2496",
+    "current_tip": "К + dative means 'toward/to someone': к врачу (to the doctor), к другу (to a friend's place).",
+    "fixed_tip": "Со стола = from the table. С/со + genitive for 'from (a surface)': взял ключи со стола. Со is used before ст- clusters.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2499",
+    "current_tip": "Или means 'or': Чай или кофе?",
+    "fixed_tip": "Надеяться, что = to hope that: мы надеемся, что всё будет хорошо. Что introduces the content clause after verbs of thinking/hoping.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2500",
+    "current_tip": "Хотя means 'although': Хотя он устал, он продолжал работать.",
+    "fixed_tip": "Если + future = real condition: Если ты придёшь, я буду рад. Unlike если бы (unreal), plain если describes real possibilities.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2501",
+    "current_tip": "И means 'and': Я и ты = You and I. А means 'and/but' for contrast: Я врач, а он учитель.",
+    "fixed_tip": "Пусть + 3rd person = concessive 'let/even if': Пусть идёт дождь = Let it rain. Всё равно = anyway/regardless.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2508",
+    "current_tip": "Из means 'from/out of': из дома (from the house), из России (from Russia).",
+    "fixed_tip": "В центре + genitive = in the center of: в центре города. Много + genitive plural: много магазинов = many stores.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2510",
+    "current_tip": "Но means 'but' for contradiction: Он хочет, но не может.",
+    "fixed_tip": "Как только = 'as soon as': Как только он придёт, мы начнём. A temporal conjunction for immediate sequence of events.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2511",
+    "current_tip": "Потому что means 'because': Я опоздал, потому что была пробка.",
+    "fixed_tip": "Если только не = 'unless': мы пойдём, если только не будет грозы. Conditional with exception.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2515",
+    "current_tip": "Prefixed motion verbs add direction: в- means into, вы- means out of.",
+    "fixed_tip": "Скоро (soon) + present tense for near-future planned events. Слушать музыку = to listen to music. В магазине = in the store.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2532",
+    "current_tip": "Во сколько? = At what time? В два часа = At two o'clock.",
+    "fixed_tip": "Редко (rarely) + inverted word order: Редко он опаздывает. Placing the adverb first emphasizes infrequency.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2539",
+    "current_tip": "Хотя means 'although': Хотя было трудно, он справился (Although it was hard, he managed).",
+    "fixed_tip": "Думать о + prepositional = to think about: думаю о работе. О + prepositional for the topic of thought.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2542",
+    "current_tip": "Из means 'from/out of': из дома (from the house), из России (from Russia).",
+    "fixed_tip": "Через + accusative = 'through/across': прошли через парк. Пройти is perfective of проходить — we walked through.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2545",
+    "current_tip": "В + accusative for direction: в школу (to school). В + prepositional for location: в школе (at school).",
+    "fixed_tip": "Напротив + genitive = 'opposite/across from': напротив меня. Сидит = is sitting (position verb).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2558",
+    "current_tip": "На + accusative for direction: на работу (to work). На + prepositional for location: на работе (at work).",
+    "fixed_tip": "У + genitive = 'at/near': у входа = at the entrance. Ждёт = is waiting (imperfective for ongoing action).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2559",
+    "current_tip": "К + dative means 'toward/to someone': к врачу (to the doctor), к другу (to a friend's place).",
+    "fixed_tip": "По + dative for route: по дороге = along the road. Поехать is perfective — we will go (by vehicle).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2562",
+    "current_tip": "О + prepositional means 'about': о работе (about work), о России (about Russia).",
+    "fixed_tip": "Под + accusative = motion under: закатился под кровать = rolled under the bed. Compare: под кроватью (under the bed, location).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2583",
+    "current_tip": "На + accusative for direction: на работу (to work). На + prepositional for location: на работе (at work).",
+    "fixed_tip": "Вдоль + genitive = 'along': вдоль реки = along the river. Тропинка = footpath (feminine noun).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2587",
+    "current_tip": "В + accusative for direction: в школу (to school). В + prepositional for location: в школе (at school).",
+    "fixed_tip": "Из-за + genitive = 'from behind': выглянула из-за угла = peeked out from behind the corner. Compound preposition.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2605",
+    "current_tip": "На + accusative for direction: на работу (to work). На + prepositional for location: на работе (at work).",
+    "fixed_tip": "Из-под + genitive = 'from under': из-под кровати = from under the bed. A compound preposition for extraction from beneath.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2613",
+    "current_tip": "В + accusative for direction: в школу (to school). В + prepositional for location: в школе (at school).",
+    "fixed_tip": "В конце + genitive = 'at the end of': в конце улицы. Стоит means 'stands' for buildings. Церковь = church (feminine).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2617",
+    "current_tip": "Во сколько? = At what time? В два часа = At two o'clock.",
+    "fixed_tip": "Отразить атаку = to parry/deflect an attack. С + instrumental: с великолепной точностью = with magnificent precision.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2624",
+    "current_tip": "До свидания literally means 'until meeting'—a formal goodbye.",
+    "fixed_tip": "Доброе утро = Good morning (formal greeting). Хотите = do you want (formal/plural). Чашку чая = a cup of tea (genitive after чашку).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2640",
+    "current_tip": "Prefix до- means 'reaching': доходить = to reach on foot, доехать = to reach by vehicle.",
+    "fixed_tip": "Улететь means 'to fly away.' Prefix у- = departure. На юг = to the south (на + accusative for direction).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2665",
+    "current_tip": "Verbs of motion distinguish 'going on foot' (идти) from 'going by vehicle' (ехать).",
+    "fixed_tip": "В четверг = on Thursday (в + accusative for days of the week). У меня экзамен = I have an exam (у + genitive for possession).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2667",
+    "current_tip": "Во сколько? = At what time? В два часа = At two o'clock.",
+    "fixed_tip": "Однажды means 'once/one day' for past narrative. Поехали is past perfective plural — we went (by vehicle).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2700",
+    "current_tip": "В + accusative for days: в понедельник (on Monday). В + prepositional for months: в январе (in January).",
+    "fixed_tip": "В следующем году = next year (prepositional for 'in what year'). Поедем is perfective future — we will go (a planned trip).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-2702",
+    "current_tip": "Во сколько? = At what time? В два часа = At two o'clock.",
+    "fixed_tip": "Давно = 'for a long time' or 'long ago.' Не видел + genitive: не видел его = haven't seen him. Genitive after negated perception verbs.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2704",
+    "current_tip": "Prefixed motion verbs add direction: в- means into, вы- means out of.",
+    "fixed_tip": "Скоро (soon) + present tense for planned near-future. На работе = at work (prepositional for location).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2747",
+    "current_tip": "Как рыба в воде (like a fish in water) means to be in one's element, completely comfortable.",
+    "fixed_tip": "Невидимая is a negative adjective prefix не- + видимый (visible). Рука рынка = hand of the market — genitive for possession.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2757",
+    "current_tip": "In Russian, informal greetings use ты (you), while formal ones use вы.",
+    "fixed_tip": "Спасибо за + accusative = 'thank you for': за вкусный ужин. Standard gratitude expression.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2802",
+    "current_tip": "До свидания literally means 'until meeting'—a formal goodbye.",
+    "fixed_tip": "Сколько вам лет? = How old are you? Лет is genitive plural of год. Если не секрет = if it's not a secret (polite qualifier).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2815",
+    "current_tip": "Как дела is casual; Как поживаете is more formal.",
+    "fixed_tip": "Извините за + accusative = 'sorry for': за опоздание = for being late. Были пробки = there were traffic jams.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2820",
+    "current_tip": "Водить за нос (to lead by the nose) means to trick or mislead someone repeatedly.",
+    "fixed_tip": "Спящий is a present active participle: sleeping. На диване = on the couch. Participles function as adjectives: спящий кот = the sleeping cat.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2834",
+    "current_tip": "Будучи (being) is the gerund of быть: будучи студентом = being a student.",
+    "fixed_tip": "Встретившись is a perfective gerund of встретиться: having met. Friends embraced upon meeting. -вшись ending for reflexive perfective gerunds.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2843",
+    "current_tip": "Imperfective gerund: stem + -а/-я: читая (while reading), говоря (while speaking).",
+    "fixed_tip": "Сфотографировав is a perfective gerund: having photographed. -ав ending marks completed prior action. Пошли дальше = went further.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2850",
+    "current_tip": "Embedded questions: Я не знаю, где он живёт. Russian keeps the comma before the question word.",
+    "fixed_tip": "Были подписаны is past passive: were signed. Обеими сторонами = by both parties — instrumental for the agent in passive.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2865",
+    "current_tip": "In Russian, informal greetings use ты (you), while formal ones use вы.",
+    "fixed_tip": "Бегала is past feminine imperfective (agreeing with медсестра). Утром = in the morning. На прошлой неделе = last week.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2870",
+    "current_tip": "До свидания literally means 'until meeting'—a formal goodbye.",
+    "fixed_tip": "Уже полгода = already half a year. Учить русский язык = to study Russian. Present tense with уже for ongoing duration.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2875",
+    "current_tip": "Short form passive participles: прочитан, написана, сделано, открыты.",
+    "fixed_tip": "Идущий is a present active participle of идти: walking/going. По улице = along the street. Participial phrase identifies the person.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2885",
+    "current_tip": "Был + short participle for past passive: Письмо было написано = The letter was written.",
+    "fixed_tip": "Обсуждаться = to be discussed (-ся passive). В течение + genitive: в течение двух часов = for two hours. На собрании = at the meeting.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2887",
+    "current_tip": "Animal idioms are common: как рыба в воде (like a fish in water = completely at ease).",
+    "fixed_tip": "Каша заварилась = 'the porridge brewed' — idiom meaning trouble started. На работе = at work. Нервничать = to be nervous.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2889",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "Строится is passive -ся form: is being built. Уже третий месяц = already for the third month. Подряд = in a row.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2896",
+    "current_tip": "Вешать лапшу на уши (to hang noodles on ears) means to deceive someone.",
+    "fixed_tip": "Потерянные ключи: потерянный is a past passive participle of потерять (to lose). Нашлись = were found (reflexive passive).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2915",
+    "current_tip": "In Russian, informal greetings use ты (you), while formal ones use вы.",
+    "fixed_tip": "Скоро (soon) + present tense for near-future action. Мыть посуду = to wash dishes (imperfective for habitual).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2920",
+    "current_tip": "In Russian, informal greetings use ты (you), while formal ones use вы.",
+    "fixed_tip": "Всегда (always) signals permanent habitual action. Слушать музыку = to listen to music (imperfective present).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2939",
+    "current_tip": "In Russian, informal greetings use ты (you), while formal ones use вы.",
+    "fixed_tip": "На прошлой неделе = last week. Слушал is past masculine imperfective of слушать — was listening/used to listen.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-2977",
+    "current_tip": "Russian numbers change form depending on the noun they modify.",
+    "fixed_tip": "Проводиться = to be held (passive -ся). Каждую среду = every Wednesday (accusative for recurring days). В десять утра = at 10 AM.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3012",
+    "current_tip": "Russian uses commas before all subordinate clauses — this is a strict rule, not optional.",
+    "fixed_tip": "Разделить на = to divide by: десять разделить на два. Математические operations: плюс (plus), минус (minus), разделить на (divided by).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3018",
+    "current_tip": "Ordinal numbers agree in gender: первый (m), первая (f), первое (n).",
+    "fixed_tip": "Десять яблок: after 5+, genitive plural. Яблоко → яблок (genitive plural). На тарелке = on the plate (prepositional).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3032",
+    "current_tip": "Полтора (1.5) takes genitive singular: полтора часа = one and a half hours.",
+    "fixed_tip": "Триста шестьдесят пять дней: compound numbers. В году = in a year. Дней is genitive plural after 5+ number ending.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3050",
+    "current_tip": "Food idioms: каша в голове (porridge in the head = confused thinking).",
+    "fixed_tip": "Вешать лапшу на уши = to hang noodles on ears, meaning to deceive. Я знаю всю правду = I know the whole truth.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3065",
+    "current_tip": "Ordinal numbers agree in gender: первый (m), первая (f), первое (n).",
+    "fixed_tip": "Двенадцать роз: after 5+, genitive plural. Роза → роз (genitive plural). В хрустальную вазу = into a crystal vase (accusative for direction).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3074",
+    "current_tip": "Compound numbers: двадцать один (21) takes nominative, двадцать два (22) takes genitive singular.",
+    "fixed_tip": "Каждый второй день = every other day. Второй is an ordinal number meaning 'second.' Бегает = runs (habitual).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3078",
+    "current_tip": "Полтора (1.5) takes genitive singular: полтора часа = one and a half hours.",
+    "fixed_tip": "Миллионы + genitive plural: миллионы звёзд = millions of stars. На небе = in the sky (prepositional after на).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3080",
+    "current_tip": "Ordinal numbers agree in gender: первый (m), первая (f), первое (n).",
+    "fixed_tip": "Минус десять градусов: negative temperatures use минус + cardinal number. Градусов is genitive plural after 5+.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3081",
+    "current_tip": "Полтора (1.5) takes genitive singular: полтора часа = one and a half hours.",
+    "fixed_tip": "На третьем этаже: ordinal + prepositional for floor location. Третьем agrees with этаже (masculine prepositional).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3084",
+    "current_tip": "Animal idioms are common: как рыба в воде (like a fish in water = completely at ease).",
+    "fixed_tip": "Водить за нос = to lead by the nose, meaning to deceive. This idiom uses the motion verb водить in a figurative sense.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3085",
+    "current_tip": "After 1: nominative singular (один дом). After 2-4: genitive singular (два дома). After 5+: genitive plural (пять домов).",
+    "fixed_tip": "Шестой is an ordinal number: sixth. Самый сложный = the most difficult (superlative). Ordinal + superlative describe the lesson.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3089",
+    "current_tip": "Food idioms: каша в голове (porridge in the head = confused thinking).",
+    "fixed_tip": "Вилами по воде писано = written on water with a pitchfork, meaning something unreliable/uncertain. A Russian proverb.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3097",
+    "current_tip": "Animal idioms are common: как рыба в воде (like a fish in water = completely at ease).",
+    "fixed_tip": "Считать ворон = to count crows, meaning to daydream/be idle. Весь день = all day. Вместо того чтобы = instead of.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3103",
+    "current_tip": "Many Russian idioms involve body parts: ни рукой ни ногой (neither hand nor foot = not at all).",
+    "fixed_tip": "Яблоко от яблони недалеко падает = The apple doesn't fall far from the tree. A proverb about children resembling parents.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3133",
+    "current_tip": "Food idioms: каша в голове (porridge in the head = confused thinking).",
+    "fixed_tip": "На вкус и цвет товарищей нет = there's no accounting for taste. Literally: for taste and color there are no comrades.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3151",
+    "current_tip": "Food idioms: каша в голове (porridge in the head = confused thinking).",
+    "fixed_tip": "Семь пятниц на неделе = seven Fridays in a week — describes someone who constantly changes their mind.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3155",
+    "current_tip": "Many Russian idioms involve body parts: ни рукой ни ногой (neither hand nor foot = not at all).",
+    "fixed_tip": "С глаз долой — из сердца вон = out of sight, out of mind. Uses body parts: глаза (eyes) and сердце (heart).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-3161",
+    "current_tip": "Many Russian idioms involve body parts: ни рукой ни ногой (neither hand nor foot = not at all).",
+    "fixed_tip": "Что посеешь, то и пожнёшь = what you sow, you will reap. A proverb about consequences of one's actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3169",
+    "current_tip": "Food idioms: каша в голове (porridge in the head = confused thinking).",
+    "fixed_tip": "Спустить на тормозах = to let it slide/overlook. An idiom from railway terminology used for ignoring problems.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3176",
+    "current_tip": "Food idioms: каша в голове (porridge in the head = confused thinking).",
+    "fixed_tip": "Анализировать means 'to analyze.' Классовые различия = class differences. В современном обществе = in modern society (prepositional).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3178",
+    "current_tip": "Embedded questions: Я не знаю, где он живёт. Russian keeps the comma before the question word.",
+    "fixed_tip": "Или...или = 'either...or': Или мы идём, или остаёмся. Paired conjunction for mutually exclusive choices.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3180",
+    "current_tip": "Embedded questions: Я не знаю, где он живёт. Russian keeps the comma before the question word.",
+    "fixed_tip": "Потому что = 'because': не успели, потому что опоздали. This is a causal clause, not an embedded question.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3184",
+    "current_tip": "Embedded questions: Я не знаю, где он живёт. Russian keeps the comma before the question word.",
+    "fixed_tip": "В то время как = 'while/whereas' for simultaneous or contrasting actions. A formal temporal conjunction.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3188",
+    "current_tip": "Food idioms: каша в голове (porridge in the head = confused thinking).",
+    "fixed_tip": "Исследовать means 'to study/investigate.' Горные породы = rock formations. На берегу реки = on the riverbank (genitive after берег).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3195",
+    "current_tip": "Many Russian idioms involve body parts: ни рукой ни ногой (neither hand nor foot = not at all).",
+    "fixed_tip": "На все руки мастер = jack of all trades. Literally 'a master with all hands.' Uses руки (hands) to mean skills.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "ru-3209",
+    "current_tip": "Food idioms: каша в голове (porridge in the head = confused thinking).",
+    "fixed_tip": "Ломать голову = to rack one's brains. A body-part idiom: literally 'to break one's head' over a problem.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3211",
+    "current_tip": "Food idioms: каша в голове (porridge in the head = confused thinking).",
+    "fixed_tip": "Выносить сор из избы = to carry rubbish out of the house, meaning to air dirty laundry in public.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3221",
+    "current_tip": "Animal idioms are common: как рыба в воде (like a fish in water = completely at ease).",
+    "fixed_tip": "Из огня да в полымя = from the fire into the flame, meaning from bad to worse. A proverb about worsening situations.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3269",
+    "current_tip": "Embedded questions: Я не знаю, где он живёт. Russian keeps the comma before the question word.",
+    "fixed_tip": "Не только...но и = 'not only...but also': не только учится, но и занимается спортом. Paired conjunction for adding emphasis.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "ru-3272",
+    "current_tip": "Embedded questions: Я не знаю, где он живёт. Russian keeps the comma before the question word.",
+    "fixed_tip": "Nested clauses: что, хотя устал, готов. Russian uses commas to separate each subordinate clause, even when embedded within another.",
+    "issue": "mismatch"
+  }
+]

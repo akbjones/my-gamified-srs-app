@@ -98,12 +98,25 @@ export function selectTileCandidates(queue: QuestCard[]): number[] {
 
   if (candidates.length === 0) return [];
 
-  // Cap at 2 tiles per session (~10-15% of reviews), spread evenly
+  // Prefer shorter cards for tiles, especially in early nodes (01-10)
+  // This makes early challenges achievable and later ones more demanding
+  candidates.sort((a, b) => {
+    const nodeA = parseInt((a.card as any).grammarNode?.replace('node-', '') || '99');
+    const nodeB = parseInt((b.card as any).grammarNode?.replace('node-', '') || '99');
+    const wordsA = a.card.target.split(/\s+/).length;
+    const wordsB = b.card.target.split(/\s+/).length;
+    // Early nodes (01-10): strongly prefer shorter cards
+    if (nodeA <= 10 && nodeB <= 10) return wordsA - wordsB;
+    // Mixed: early node cards first
+    if (nodeA <= 10) return -1;
+    if (nodeB <= 10) return 1;
+    // Later nodes: still prefer shorter but less aggressively
+    return wordsA - wordsB;
+  });
+
+  // Cap at 2 tiles per session, pick from the shortest candidates
   const tileCount = Math.min(2, candidates.length);
-  const step = candidates.length / tileCount;
-  return Array.from({ length: tileCount }, (_, i) =>
-    candidates[Math.floor(i * step)].idx
-  );
+  return candidates.slice(0, tileCount).map(c => c.idx);
 }
 
 // ── Challenge Question Building ─────────────────────────────

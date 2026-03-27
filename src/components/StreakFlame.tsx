@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { StreakTier } from '../types';
 import { getStreakTier } from '../services/gamificationService';
 import { Zap, Flame, Snowflake } from 'lucide-react';
@@ -22,20 +22,8 @@ const StreakFlame: React.FC<StreakFlameProps> = ({ streak, freezes, size = 'lg' 
   const config = TIER_CONFIG[tier];
   const isLg = size === 'lg';
 
-  // Detect streak increase and trigger pulse
-  const prevStreak = useRef(streak);
-  const [pulsing, setPulsing] = useState(false);
-  useEffect(() => {
-    if (streak > prevStreak.current) {
-      setPulsing(true);
-      const timer = setTimeout(() => setPulsing(false), 500);
-      return () => clearTimeout(timer);
-    }
-    prevStreak.current = streak;
-  }, [streak]);
-
   return (
-    <div className={`flex flex-col items-center ${pulsing ? 'animate-streak-pulse' : ''}`}>
+    <div className="flex flex-col items-center">
       {/* Flame / icon */}
       <div className={`flex items-center justify-center ${config.glowClass}`}>
         {tier === 'lightning' ? (

@@ -247,7 +247,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
         ) : (
         <div
           onClick={!isFlipped ? handleFlip : undefined}
-          className="study-card card-flip-container flex-1 min-h-0 cursor-pointer my-1 relative"
+          className="study-card flex-1 min-h-0 flex flex-col cursor-pointer my-1 relative"
         >
           {/* Grammar overlay — tap anywhere to dismiss */}
           {showGrammar && card!.grammar && (
@@ -265,132 +265,89 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             </div>
           )}
 
-          <div className={`card-flip-inner ${isFlipped ? 'flipped' : ''}`}>
-            {/* ── Front face: target sentence only ── */}
-            <div className="card-flip-front flex flex-col">
-              {/* Leech badge */}
-              {card!.isLeech && (
-                <div className="flex justify-center pt-2 shrink-0">
-                  <div className="flex items-center gap-1 bg-orange-500/10 border border-orange-500/40 rounded-lg px-1.5 py-0.5">
-                    <AlertTriangle size={10} className="text-orange-500" />
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-orange-500">Leech</span>
-                  </div>
-                </div>
-              )}
-              {(() => {
-                const wordCount = card!.target.split(/\s+/).length;
-                const sizeClass = wordCount <= 6
-                  ? 'text-2xl md:text-3xl'
-                  : wordCount <= 10
-                  ? 'text-xl md:text-2xl'
-                  : wordCount <= 14
-                  ? 'text-lg md:text-xl'
-                  : 'text-base md:text-lg';
-                return (
-                  <div className="flex-1 flex flex-col items-center justify-center px-3 sm:px-5 min-h-0">
-                    <WordPopover
-                      sentence={card!.target}
-                      language={session.language}
-                      className={`${sizeClass} font-black tracking-tight text-[var(--text-primary)] leading-snug max-w-sm mx-auto`}
-                    />
-                    <div className="mt-6 text-xs text-[var(--text-muted)] font-bold uppercase tracking-widest">
-                      Tap to reveal
-                    </div>
-                  </div>
-                );
-              })()}
-              {/* Audio button on front */}
-              <div className="flex items-center justify-center gap-2.5 px-4 py-2.5 shrink-0">
-                <button
-                  onClick={handlePlayAudio}
-                  className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border active:scale-95 ${
-                    isPlaying
-                      ? 'bg-[var(--accent)]/10 border-[var(--accent)]/40 text-[var(--accent)] animate-pulse'
-                      : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40'
-                  }`}
-                >
-                  <Volume2 size={14} />
-                  <span>Listen</span>
-                </button>
+          {/* Leech badge — top of card */}
+          {card!.isLeech && (
+            <div className="flex justify-center pt-2 shrink-0">
+              <div className="flex items-center gap-1 bg-orange-500/10 border border-orange-500/40 rounded-lg px-1.5 py-0.5">
+                <AlertTriangle size={10} className="text-orange-500" />
+                <span className="text-[10px] font-bold uppercase tracking-wider text-orange-500">Leech</span>
               </div>
             </div>
+          )}
 
-            {/* ── Back face: revealed with English ── */}
-            <div className="card-flip-back flex flex-col">
-              {/* Leech badge */}
-              {card!.isLeech && (
-                <div className="flex justify-center pt-2 shrink-0">
-                  <div className="flex items-center gap-1 bg-orange-500/10 border border-orange-500/40 rounded-lg px-1.5 py-0.5">
-                    <AlertTriangle size={10} className="text-orange-500" />
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-orange-500">Leech</span>
+          {/* Card content — dynamic font size based on sentence length */}
+          {(() => {
+            const wordCount = card!.target.split(/\s+/).length;
+            const sizeClass = wordCount <= 6
+              ? 'text-2xl md:text-3xl'
+              : wordCount <= 10
+              ? 'text-xl md:text-2xl'
+              : wordCount <= 14
+              ? 'text-lg md:text-xl'
+              : 'text-base md:text-lg';
+            const engSizeClass = wordCount <= 10
+              ? 'text-base md:text-lg'
+              : 'text-sm md:text-base';
+            return (
+              <div className="flex-1 flex flex-col items-center justify-center px-3 sm:px-5 min-h-0 overflow-y-auto">
+                <WordPopover
+                  sentence={card!.target}
+                  language={session.language}
+                  className={`${sizeClass} font-black tracking-tight text-[var(--text-primary)] leading-snug max-w-sm mx-auto`}
+                />
+                {isFlipped ? (
+                  <div className="mt-4 pt-4 border-t border-[var(--border-color)] w-full animate-fade-in">
+                    <p className={`${engSizeClass} text-[var(--text-secondary)] font-bold italic leading-relaxed`}>
+                      {card!.english}
+                    </p>
                   </div>
-                </div>
-              )}
-              {(() => {
-                const wordCount = card!.target.split(/\s+/).length;
-                const sizeClass = wordCount <= 6
-                  ? 'text-2xl md:text-3xl'
-                  : wordCount <= 10
-                  ? 'text-xl md:text-2xl'
-                  : wordCount <= 14
-                  ? 'text-lg md:text-xl'
-                  : 'text-base md:text-lg';
-                const engSizeClass = wordCount <= 10
-                  ? 'text-base md:text-lg'
-                  : 'text-sm md:text-base';
-                return (
-                  <div className="flex-1 flex flex-col items-center justify-center px-3 sm:px-5 min-h-0 overflow-y-auto">
-                    <WordPopover
-                      sentence={card!.target}
-                      language={session.language}
-                      className={`${sizeClass} font-black tracking-tight text-[var(--text-primary)] leading-snug max-w-sm mx-auto`}
-                    />
-                    <div className="mt-4 pt-4 border-t border-[var(--border-color)] w-full">
-                      <p className={`${engSizeClass} text-[var(--text-secondary)] font-bold italic leading-relaxed`}>
-                        {card!.english}
-                      </p>
-                    </div>
+                ) : (
+                  <div className="mt-6 text-xs text-[var(--text-muted)] font-bold uppercase tracking-widest">
+                    Tap to reveal
                   </div>
-                );
-              })()}
-              {/* Toolbar on back */}
-              <div className="flex items-center justify-center gap-2.5 px-4 py-2.5 shrink-0">
-                {card!.grammar && (
-                  <button
-                    onClick={(e) => { e.stopPropagation(); document.dispatchEvent(new MouseEvent('click', { bubbles: false })); setShowGrammar(!showGrammar); }}
-                    className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border active:scale-95 ${
-                      showGrammar
-                        ? 'bg-[var(--accent)]/10 border-[var(--accent)]/40 text-[var(--accent)]'
-                        : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40'
-                    }`}
-                  >
-                    <BookOpen size={14} />
-                    <span>Grammar</span>
-                  </button>
                 )}
-                <button
-                  onClick={handleSlowReplay}
-                  className={`px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border active:scale-95 ${
-                    isPlaying
-                      ? 'bg-[var(--accent)]/10 border-[var(--accent)]/40 text-[var(--accent)]'
-                      : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40'
-                  }`}
-                >
-                  Slow
-                </button>
-                <button
-                  onClick={handlePlayAudio}
-                  className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border active:scale-95 ${
-                    isPlaying
-                      ? 'bg-[var(--accent)]/10 border-[var(--accent)]/40 text-[var(--accent)] animate-pulse'
-                      : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40'
-                  }`}
-                >
-                  <Volume2 size={14} />
-                  <span>Listen</span>
-                </button>
               </div>
-            </div>
+            );
+          })()}
+
+          {/* Toolbar — bottom of card, proper touch targets */}
+          <div className="flex items-center justify-center gap-2.5 px-4 py-2.5 shrink-0">
+            {isFlipped && card!.grammar && (
+              <button
+                onClick={(e) => { e.stopPropagation(); document.dispatchEvent(new MouseEvent('click', { bubbles: false })); setShowGrammar(!showGrammar); }}
+                className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border active:scale-95 ${
+                  showGrammar
+                    ? 'bg-[var(--accent)]/10 border-[var(--accent)]/40 text-[var(--accent)]'
+                    : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40'
+                }`}
+              >
+                <BookOpen size={14} />
+                <span>Grammar</span>
+              </button>
+            )}
+            {isFlipped && (
+              <button
+                onClick={handleSlowReplay}
+                className={`px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border active:scale-95 ${
+                  isPlaying
+                    ? 'bg-[var(--accent)]/10 border-[var(--accent)]/40 text-[var(--accent)]'
+                    : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40'
+                }`}
+              >
+                Slow
+              </button>
+            )}
+            <button
+              onClick={handlePlayAudio}
+              className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border active:scale-95 ${
+                isPlaying
+                  ? 'bg-[var(--accent)]/10 border-[var(--accent)]/40 text-[var(--accent)] animate-pulse'
+                  : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40'
+              }`}
+            >
+              <Volume2 size={14} />
+              <span>Listen</span>
+            </button>
           </div>
         </div>
         )}

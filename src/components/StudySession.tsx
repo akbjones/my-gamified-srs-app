@@ -121,6 +121,31 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
 
   const handleFlip = () => setIsFlipped(true);
 
+  // Keyboard shortcuts: 1=Again, 2=Hard, 3=Good, 4=Easy, Space=flip
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+      if (!card) return;
+
+      if (!isFlipped && (e.key === ' ' || e.key === 'Enter')) {
+        e.preventDefault();
+        setIsFlipped(true);
+        return;
+      }
+
+      if (isFlipped && !tileCardIds.has(card.id)) {
+        const ratings = { '1': 'AGAIN', '2': 'HARD', '3': 'GOOD', '4': 'EASY' } as const;
+        const rating = ratings[e.key as keyof typeof ratings];
+        if (rating) {
+          e.preventDefault();
+          submitAnswer(rating);
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [card, isFlipped, tileCardIds]);
+
   const handlePlayAudio = (e: React.MouseEvent) => {
     e.stopPropagation();
     setIsPlaying(true);

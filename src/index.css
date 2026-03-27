@@ -13,8 +13,8 @@
   --border-subtle: #f1f5f9;
   --text-primary: #1e293b;
   --text-secondary: #64748b;
-  --text-muted: #94a3b8;
-  --text-faint: #cbd5e1;
+  --text-muted: #6B7280;
+  --text-faint: #9CA3AF;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
   --overlay: rgba(0, 0, 0, 0.4);
@@ -25,7 +25,7 @@
   --btn-primary-bg-hover: #6d28d9;
   --btn-primary-text: #ffffff;
   --btn-disabled-bg: #e2e8f0;
-  --btn-disabled-text: #94a3b8;
+  --btn-disabled-text: #6B7280;
 }
 
 .dark {
@@ -38,8 +38,8 @@
   --border-subtle: #334155;
   --text-primary: #f1f5f9;
   --text-secondary: #cbd5e1;
-  --text-muted: #94a3b8;
-  --text-faint: #64748b;
+  --text-muted: #9CA3AF;
+  --text-faint: #6B7280;
   --shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
   --overlay: rgba(0, 0, 0, 0.6);
@@ -50,7 +50,7 @@
   --btn-primary-bg-hover: #6d28d9;
   --btn-primary-text: #ffffff;
   --btn-disabled-bg: #334155;
-  --btn-disabled-text: #64748b;
+  --btn-disabled-text: #9CA3AF;
 }
 
 /* Smooth theme transitions for ALL elements */
@@ -120,6 +120,51 @@ body {
 .animate-boss-appear { animation: boss-appear 0.6s ease-out; }
 .animate-ring-reveal { animation: ring-reveal 0.6s ease-out; }
 .animate-flame { animation: flame-flicker 1.5s ease-in-out infinite; }
+
+/* === CARD FLIP === */
+.card-flip-container {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+.card-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 400ms ease-out;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.card-flip-inner.flipped {
+  transform: rotateY(180deg);
+}
+.card-flip-front,
+.card-flip-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.card-flip-back {
+  transform: rotateY(180deg);
+}
+
+/* === CONFETTI === */
+@keyframes confetti-fall {
+  0% { transform: translateY(0) rotate(0deg) scale(1); opacity: 1; }
+  100% { transform: translateY(calc(100vh)) rotate(720deg) scale(0.3); opacity: 0; }
+}
+
+/* === STREAK PULSE === */
+@keyframes streak-pulse {
+  0% { transform: scale(1); }
+  30% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+.animate-streak-pulse {
+  animation: streak-pulse 500ms ease-out;
+}
 
 /* === TOPIC MAP === */
 .trunk-line {

@@ -37,7 +37,9 @@ import { lookupWord as lookupTr } from './data/dictionary/tr';
 import { lookupWord as lookupRu } from './data/dictionary/ru';
 import VocabList from './components/VocabList';
 import Onboarding from './components/Onboarding';
-import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff } from 'lucide-react';
+import BottomNav from './components/BottomNav';
+import type { Tab } from './components/BottomNav';
+import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff, Home, Map as MapIcon, BarChart3 } from 'lucide-react';
 import {
   loadNotificationPrefs, saveNotificationPrefs, requestNotificationPermission,
   isNotificationSupported, onSessionComplete, initNotifications,
@@ -190,6 +192,7 @@ const getCurrentNode = (deck: QuestCard[]) => {
 
 const App: React.FC = () => {
   const [view, setView] = useState<View>('HOME');
+  const [activeTab, setActiveTab] = useState<Tab>('home');
   const [deck, setDeck] = useState<QuestCard[]>([]);
   const [masteryMap, setMasteryMap] = useState<MasteryMap>({});
   const [settings, setSettings] = useState<StudySettings>(() => {
@@ -441,7 +444,7 @@ const App: React.FC = () => {
     if (questions.length === 0) {
       // Truly no eligible cards — go home
       setPendingChallenge(null);
-      setView('HOME');
+      setView('HOME'); setActiveTab('home');
       return;
     }
     setChallengeQuestions(questions);
@@ -488,7 +491,7 @@ const App: React.FC = () => {
     setUserStats(newStats);
     saveUserStats(newStats, lang);
     setPendingChallenge(null);
-    setView('HOME');
+    setView('HOME'); setActiveTab('home');
   };
 
   const handleUpdateSettings = (newSettings: StudySettings) => {
@@ -570,8 +573,174 @@ const App: React.FC = () => {
     handleUpdateSettings({ ...settings, theme: newTheme });
   };
 
+  const handleTabChange = (tab: Tab) => {
+    setActiveTab(tab);
+    if (tab === 'home') setView('HOME');
+    else if (tab === 'study') handleStartSession();
+    else if (tab === 'map') setView('TOPICS');
+    else if (tab === 'stats') setView('GAMIFICATION');
+  };
+
+  // Keep activeTab in sync when view changes from other sources (e.g. back buttons)
+  const effectiveTab: Tab =
+    view === 'HOME' || view === 'SETTINGS' || view === 'VOCAB' ? 'home'
+    : view === 'TOPICS' ? 'map'
+    : view === 'GAMIFICATION' ? 'stats'
+    : view === 'STUDY' ? 'study'
+    : 'home';
+
+  // Whether to show navigation chrome (tab bar / sidebar)
+  const showNav = view !== 'STUDY' && view !== 'CHALLENGE' && view !== 'PLACEMENT' && !showOnboarding && !showLangPicker;
+
   return (
-    <div className={`mx-auto min-h-screen ${view === 'STUDY' || view === 'PLACEMENT' || view === 'CHALLENGE' ? 'max-w-lg px-0 pt-0 pb-0' : 'max-w-md px-5 pt-[max(1.25rem,env(safe-area-inset-top))] pb-20'}`}>
+    <div className={`min-h-screen ${showNav ? 'lg:flex lg:max-w-6xl lg:mx-auto' : ''}`}>
+      {/* ── Desktop sidebar (>=1024px) ── */}
+      {showNav && (
+        <aside className="hidden lg:flex lg:flex-col lg:w-[300px] lg:shrink-0 lg:h-screen lg:sticky lg:top-0 lg:border-r lg:border-[var(--border-color)] lg:bg-[var(--bg-card)] lg:overflow-y-auto">
+          <div className="px-5 pt-6 pb-4 flex-1">
+            {/* Logo */}
+            <div className="flex items-center gap-2.5 mb-6">
+              <svg viewBox="-2 -2 36 36" className="w-9 h-9 text-[var(--accent)]" fill="none" overflow="visible">
+                <path id="orb1d" d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="1.2" opacity="0.5" />
+                <g transform="rotate(60 16 16)">
+                  <path id="orb2d" d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="1.2" opacity="0.5" />
+                </g>
+                <path d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="1.2" opacity="0.5" transform="rotate(16 16 16)" />
+                <circle r="1.3" fill="currentColor">
+                  <animateMotion dur="3s" repeatCount="indefinite"><mpath href="#orb1d" /></animateMotion>
+                </circle>
+                <g transform="rotate(60 16 16)">
+                  <circle r="1.3" fill="currentColor">
+                    <animateMotion dur="4s" repeatCount="indefinite"><mpath href="#orb2d" /></animateMotion>
+                  </circle>
+                </g>
+                <circle cx="16" cy="16" r="2.5" fill="currentColor">
+                  <animate attributeName="r" values="2.5;3;2.5" dur="2s" repeatCount="indefinite" />
+                </circle>
+              </svg>
+              <h1 className="text-lg font-black tracking-[0.2em] uppercase text-[var(--accent)]" style={{ fontFamily: "'Orbitron', sans-serif" }}>
+                LANGLAB
+              </h1>
+            </div>
+
+            {/* Sidebar nav tabs */}
+            <nav className="space-y-1 mb-6">
+              {([
+                { id: 'home' as Tab, label: 'Home', icon: Home },
+                { id: 'study' as Tab, label: 'Study', icon: BookOpen },
+                { id: 'map' as Tab, label: 'Map', icon: MapIcon },
+                { id: 'stats' as Tab, label: 'Stats', icon: BarChart3 },
+              ]).map(({ id, label, icon: Icon }) => (
+                <button
+                  key={id}
+                  onClick={() => handleTabChange(id)}
+                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-semibold transition-all ${
+                    effectiveTab === id
+                      ? 'bg-[var(--accent)]/10 text-[var(--accent)]'
+                      : 'text-[var(--text-muted)] hover:bg-[var(--bg-card-hover)] hover:text-[var(--text-secondary)]'
+                  }`}
+                >
+                  <Icon size={18} />
+                  <span>{label}</span>
+                </button>
+              ))}
+            </nav>
+
+            {/* Language picker */}
+            <div className="mb-4">
+              <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-2">Language</div>
+              <div className="relative" ref={langDropdownRef}>
+                <button
+                  onClick={() => setShowLangDropdown(prev => !prev)}
+                  className="w-full flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-bold border border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--accent)]/40 hover:text-[var(--accent)] transition-all"
+                >
+                  <span className="text-lg">{LANGUAGE_FLAGS[lang] || ''}</span>
+                  <span className="flex-1 text-left">{LANGUAGE_CONFIG[lang].name}</span>
+                  <ChevronDown size={14} className={`transition-transform ${showLangDropdown ? 'rotate-180' : ''}`} />
+                </button>
+                {showLangDropdown && (
+                  <div className="absolute left-0 right-0 top-full mt-1 stat-card p-1.5 z-40 animate-fade-in shadow-lg">
+                    {availableLanguages.map(l => (
+                      <button
+                        key={l}
+                        onClick={() => { handleLanguageChange(l); setShowLangDropdown(false); }}
+                        className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all ${
+                          l === lang ? 'bg-[var(--accent)]/10 text-[var(--accent)]' : 'text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)]'
+                        }`}
+                      >
+                        <span className="text-base">{LANGUAGE_FLAGS[l] || ''}</span>
+                        <span>{LANGUAGE_CONFIG[l].name}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* Streak */}
+            <div className="mb-4">
+              <StreakFlame streak={userStats.streak} freezes={userStats.streakFreezes ?? 0} size="lg" />
+            </div>
+
+            {/* Vocab Focus tags */}
+            <div className="mb-4">
+              <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-2">Vocab Focus</div>
+              <div className="grid grid-cols-2 gap-1.5">
+                {(['general', 'travel', 'work', 'family'] as LearningGoal[]).map(g => {
+                  const cfg = GOAL_CONFIG[g];
+                  const isSelected = goal === g;
+                  const Icon = g === 'general' ? Globe : g === 'travel' ? Plane : g === 'work' ? Briefcase : Heart;
+                  return (
+                    <button
+                      key={g}
+                      onClick={() => handleGoalChange(g)}
+                      className={`flex items-center gap-1.5 px-2.5 py-2 rounded-lg transition-all border text-xs font-bold ${
+                        isSelected
+                          ? 'border-[var(--accent)]/40 bg-[var(--accent)]/10 text-[var(--accent)]'
+                          : 'border-[var(--border-color)] text-[var(--text-muted)] hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)]'
+                      }`}
+                    >
+                      <Icon size={14} />
+                      <span>{cfg.name}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Study button */}
+            <button
+              onClick={() => handleStartSession()}
+              disabled={!hasCards}
+              className="w-full py-3 btn-primary rounded-xl text-sm mb-4"
+            >
+              {!hasCards ? 'All Caught Up' : (
+                <div className="flex items-center justify-center gap-2">
+                  <span className="font-extrabold">Study</span>
+                  <span className="text-white/40">&middot;</span>
+                  <div className="flex items-center gap-1.5 text-[11px] font-bold opacity-85">
+                    {reviewsDue > 0 && <span>{reviewsDue} due</span>}
+                    {reviewsDue > 0 && newAvailable > 0 && <span className="text-white/40">+</span>}
+                    {newAvailable > 0 && <span>{newAvailable} new</span>}
+                  </div>
+                </div>
+              )}
+            </button>
+
+            {/* Theme toggle */}
+            <button
+              onClick={toggleTheme}
+              className="flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-semibold text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
+            >
+              {settings.theme === 'dark' ? <Sun size={14} /> : <Moon size={14} />}
+              <span>{settings.theme === 'dark' ? 'Light mode' : 'Dark mode'}</span>
+            </button>
+          </div>
+        </aside>
+      )}
+
+      {/* ── Main content area ── */}
+      <div className={`flex-1 min-w-0 ${view === 'STUDY' || view === 'PLACEMENT' || view === 'CHALLENGE' ? 'max-w-lg mx-auto px-0 pt-0 pb-0' : `max-w-md mx-auto px-5 pt-[max(1.25rem,env(safe-area-inset-top))] ${showNav ? 'pb-24 lg:pb-8 lg:max-w-2xl' : 'pb-20'}`}`}>
       {/* First-time onboarding carousel */}
       {showOnboarding && (
         <Onboarding onComplete={() => {
@@ -1082,7 +1251,7 @@ const App: React.FC = () => {
         <TopicMap
           cards={deck}
           language={lang}
-          onBack={() => setView('HOME')}
+          onBack={() => { setView('HOME'); setActiveTab('home'); }}
         />
       )}
 
@@ -1094,6 +1263,7 @@ const App: React.FC = () => {
           onAbort={() => {
             setPendingChallenge(null);
             setView('HOME');
+            setActiveTab('home');
             // Schedule notification after session ends
             const dueCount = deck.filter(c => c.mastery > 0 && c.dueDate && c.dueDate <= Date.now()).length;
             onSessionComplete(dueCount, userStats.streak);
@@ -1131,7 +1301,7 @@ const App: React.FC = () => {
           questions={challengeQuestions}
           bossIndex={progressState.nextBossIndex}
           onComplete={handleChallengeComplete}
-          onAbort={() => { setPendingChallenge(null); setView('HOME'); }}
+          onAbort={() => { setPendingChallenge(null); setView('HOME'); setActiveTab('home'); }}
           language={lang}
           autoPlayAudio={settings.autoPlayAudio}
           audioSpeed={settings.audioSpeed}
@@ -1144,7 +1314,7 @@ const App: React.FC = () => {
           stats={userStats}
           achievements={getAchievementsWithStatus(userStats, masteryMap, deck, lang)}
           retention={getTotalRetention()}
-          onBack={() => setView('HOME')}
+          onBack={() => { setView('HOME'); setActiveTab('home'); }}
           bossRecords={progressState.bossRecords}
           nextBossIndex={progressState.nextBossIndex}
           language={lang}
@@ -1155,7 +1325,7 @@ const App: React.FC = () => {
         <VocabList
           vocabMap={vocabMap}
           language={lang}
-          onBack={() => setView('HOME')}
+          onBack={() => { setView('HOME'); setActiveTab('home'); }}
           lookupFn={DICT_LOOKUP[lang] ?? undefined}
         />
       )}
@@ -1187,6 +1357,12 @@ const App: React.FC = () => {
         />
       )}
 
+      </div>{/* end main content area */}
+
+      {/* ── Bottom tab bar (mobile only) ── */}
+      {showNav && (
+        <BottomNav activeTab={effectiveTab} onTabChange={handleTabChange} />
+      )}
     </div>
   );
 };

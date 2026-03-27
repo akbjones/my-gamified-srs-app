@@ -4,6 +4,7 @@ import { Zap } from 'lucide-react';
 import { getBossForIndex } from '../data/bossArt';
 import { calculateBossRing } from '../services/challengeService';
 import WordTileChallenge from './WordTileChallenge';
+import Confetti from './Confetti';
 import type { AudioSpeed } from '../services/storageService';
 
 interface ChallengeScreenProps {
@@ -240,6 +241,9 @@ const ChallengeScreen: React.FC<ChallengeScreenProps> = ({
   // ── Results Phase ────────────────────────────────────────
   return (
     <div className="flex flex-col items-center justify-center h-dvh px-6 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))] animate-fade-in">
+      {/* Confetti burst on boss defeat */}
+      {mode === 'boss' && bossDefeated && <Confetti />}
+
       {mode === 'boss' ? (
         <>
           {bossDefeated ? (

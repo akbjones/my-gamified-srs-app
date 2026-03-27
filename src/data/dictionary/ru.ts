@@ -575,7 +575,7 @@ const dictionary: Record<string, DictEntry> = {
   'лучше': { en: 'better', ipa: 'ˈlutʂʂɨ', pos: 'adv' },
   'хуже': { en: 'worse', ipa: 'ˈxuʐɨ', pos: 'adv' },
   'далеко': { en: 'far', ipa: 'dɐlʲɪˈko', pos: 'adv' },
-  'близко': { en: 'near, close', ipa: 'ˈblʲiskə', pos: 'adv' },
+  'близко': { en: 'near', ipa: 'ˈblʲiskə', pos: 'adv' },
   'наверху': { en: 'above, upstairs', ipa: 'nəvʲɪrˈxu', pos: 'adv' },
   'внизу': { en: 'below, downstairs', ipa: 'vnʲɪˈzu', pos: 'adv' },
   'направо': { en: 'to the right', ipa: 'nɐˈpravə', pos: 'adv' },

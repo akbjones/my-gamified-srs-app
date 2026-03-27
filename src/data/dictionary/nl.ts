@@ -1015,7 +1015,7 @@ const dictionary: Record<string, DictEntry> = {
   'bakken': { en: 'to bake', ipa: 'bɑkkən', pos: 'v' },
   'bakker': { en: 'baker', ipa: 'bɑkkər', pos: 'n' },
   'bank': { en: 'couch, bank', ipa: 'bɑŋk', pos: 'n' },
-  'bar': { en: 'bar, after', ipa: 'bɑr', pos: 'n' },
+  'bar': { en: 'bar', ipa: 'bɑr', pos: 'n' },
   'bed': { en: 'company', ipa: 'bət', pos: 'n' },
   'bedanken': { en: 'to thank', ipa: 'beːdɑŋkən', pos: 'v' },
   'bedankt': { en: 'thank you', ipa: 'beːdɑŋkt', pos: 'interj' },
@@ -6639,14 +6639,14 @@ const dictionary: Record<string, DictEntry> = {
   'beheersen': { en: 'well', ipa: 'bɛɦeːrsən', pos: 'v' },
   'binnenkomen': { en: 'come', ipa: 'bɪnnɛŋkɔmən', pos: 'v' },
   // C
-  'chef-kok': { en: 'chef, best', ipa: 'xɛf-kɔk', pos: 'n' },
+  'chef-kok': { en: 'chef', ipa: 'xɛf-kɔk', pos: 'n' },
   'computer': { en: 'computer', ipa: 'kɔmpʏtɛr', pos: 'n' },
   // D
   'diepst': { en: 'depths', ipa: 'dˈipst', pos: 'n' },
   'diepte-interviews': { en: 'in-depth', ipa: 'diptɛ-ɪntɛrviʋs', pos: 'n' },
   // E
   'efficiënter': { en: 'working', ipa: 'ɛffɪkɪëntɛr', pos: 'n' },
-  'eilanden': { en: 'islands, greek', ipa: 'ɛilɑndən', pos: 'v' },
+  'eilanden': { en: 'islands', ipa: 'ɛilɑndən', pos: 'v' },
   'erger': { en: 'worse', ipa: 'ɛrɣɛr', pos: 'n' },
   // F
   // G

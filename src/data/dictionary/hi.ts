@@ -2806,7 +2806,6 @@ const dictionary: Record<string, DictEntry> = {
   'पोंछकर': { en: 'to conjunctive form of पोंछना', ipa: 'poːntʃʰəkər', pos: 'v' },
   'पोछा': { en: 'mop', ipa: 'poːtʃʰaː', pos: 'n' },
   'पोंछे': { en: 'child', ipa: 'poːntʃʰeː', pos: 'n' },
-  'पोतियाँ': { en: 'female equivalent of पोता : son\'s daughter, paternal gran...', ipa: 'poːtɪjaːn', pos: 'n', lemma: 'पोती' },
   'पोते': { en: 'direct plural', ipa: 'poːteː', pos: 'n' },
   'पोतेपोतियाँ': { en: '?', ipa: 'poːteːpoːtɪjaː̃', pos: 'n' },
   'पोलो': { en: 'polo, considered', ipa: 'poːloː', pos: 'n' },
@@ -4995,6 +4994,7 @@ const dictionary: Record<string, DictEntry> = {
   'होशियार': { en: 'clever, smart', ipa: 'hoːʃɪjaːr', pos: 'n' },
   'हौदे': { en: 'king, went', ipa: 'hɔːdeː', pos: 'n' },
 };
+
 
 
 

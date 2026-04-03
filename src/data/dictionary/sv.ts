@@ -5423,6 +5423,7 @@ const dictionary: Record<string, DictEntry> = {
 
 
 
+
 // ── Helper: resolve without compounds ─────────────────────────
 function resolveSimpleSV(w: string): DictEntry | null {
   if (dictionary[w]) return dictionary[w];

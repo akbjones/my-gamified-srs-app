@@ -7966,6 +7966,7 @@ const DICT: Record<string, DictEntry> = {
 
 
 
+
 // ── Reverse regular verb forms ───────────────────────────────
 function reverseVerb(word: string): string | null {
   // Check irregular map first

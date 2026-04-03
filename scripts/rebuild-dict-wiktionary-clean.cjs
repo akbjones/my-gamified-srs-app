@@ -50,7 +50,7 @@ const FORM_OF_PATTERNS = [
   /^alternative (?:form|spelling) of\b/i,
   /^(?:first|second|third)[/-](?:first|second|third)?[- ]?person\b/i,
   /^(?:nominative|genitive|dative|accusative|ablative|locative|instrumental|vocative|partitive)\b/i,
-  /^(?:definite|indefinite)\s+(?:accusative|nominative|genitive|dative|singular|plural|form)/i,
+  /^(?:definite|indefinite)\s+(?:accusative|nominative|genitive|dative|singular|plural|neuter|masculine|feminine|common|form)/i,
   /^(?:singular|plural)\s+(?:present|past|definite|indefinite|imperative|subjunctive|indicative|conditional)/i,
   /^(?:present|past|future)\s+(?:tense|participle|indicative|subjunctive)/i,
   /^(?:masculine|feminine|neuter)\s+(?:singular|plural|nominative|form)/i,
@@ -78,6 +78,31 @@ const FORM_OF_PATTERNS = [
   /^(?:definite|indefinite) (?:form|accusative|nominative) of\b/i,
   /^(?:supine|passive|causative) (?:of|form)\b/i,
   /^(?:construct state|absolute state) of\b/i,
+  // German adjective declension descriptions
+  /^(?:strong|weak|mixed)[/\s](?:strong|weak|mixed)?\s*(?:nominative|genitive|dative|accusative)/i,
+  /^(?:strong|weak|mixed)\s+(?:nominative|genitive|dative|accusative)/i,
+  // Generic "X of Y" for form-of that slipped through
+  /^(?:elative|superlative|comparative|positive)\s+(?:degree\s+)?of\b/i,
+  // "to for there to be" type verbose Wiktionary definitions for form-of verbs
+  /^(?:second|third|first)[- ]person\b/i,
+  // Swedish/Dutch form-of patterns: "passive infinitive of X", "dependent-clause past indicative"
+  /^(?:passive|active)\s+(?:infinitive|participle|supine|form)\s+of\b/i,
+  /^singular\s+(?:dependent-clause|independent-clause)\b/i,
+  /^plural\s+(?:dependent-clause|independent-clause)\b/i,
+  /^(?:dependent-clause|independent-clause)\b/i,
+  // "infinitive of X"
+  /^infinitive of\b/i,
+  // Spanish combined forms: "infinitive of X combined with Y"
+  /^(?:infinitive|gerund|imperative)\s+of\s+\w+\s+combined\b/i,
+  // Dutch/generic: "masculine/feminine singular attributive", "plural attributive" etc.
+  /^(?:masculine|feminine|neuter|common)[/\s](?:masculine|feminine|neuter|common)?\s*(?:singular|plural)\s+(?:attributive|predicative)\b/i,
+  /^(?:singular|plural)\s+(?:attributive|predicative)\b/i,
+  // "present passive of X", "present active of X"
+  /^(?:present|past|perfect)\s+(?:passive|active|participle)\s+of\b/i,
+  // "direct masculine singular perfective participle"
+  /^direct\s+(?:masculine|feminine|neuter|oblique)\b/i,
+  // "direct plural of X"
+  /^direct\s+(?:singular|plural)\s+of\b/i,
 ];
 
 // Patterns to extract the base word from form-of glosses
@@ -96,8 +121,19 @@ const BASE_WORD_PATTERNS = [
   /(?:abstract noun|action noun) (?:of|from)\s+(.+?)(?:[,;:]|\s*$)/i,
   /clipping of\s+(.+?)(?:[,;:]|\s*$)/i,
   /abbreviation of\s+(.+?)(?:[,;:]|\s*$)/i,
-  /(?:definite|indefinite) (?:form|accusative|nominative) of\s+(.+?)(?:[,;:]|\s*$)/i,
+  /(?:definite|indefinite)\s+(?:\w+\s+)*?of\s+(.+?)(?:[,;:]|\s*$)/i,
   /(?:supine|passive|causative) (?:of|form)\s+(.+?)(?:[,;:]|\s*$)/i,
+  // German adjective declension: "strong/mixed nominative ... of X"
+  /(?:strong|weak|mixed)[/\s].*?\bof\s+(.+?)(?:[,;:]|\s*$)/i,
+  // Generic "X degree of Y"
+  /(?:elative|superlative|comparative|positive)\s+(?:degree\s+)?of\s+(.+?)(?:[,;:]|\s*$)/i,
+  // "passive infinitive of X", "infinitive of X"
+  /(?:passive|active)\s+(?:infinitive|participle|supine|form)\s+of\s+(.+?)(?:[,;:]|\s*$)/i,
+  /infinitive of\s+(.+?)(?:[,;:]|\s*$)/i,
+  // "present passive of X", "past active of X"
+  /(?:present|past|perfect)\s+(?:passive|active|participle)\s+of\s+(.+?)(?:[,;:]|\s*$)/i,
+  // "direct plural of X", "direct singular of X"
+  /direct\s+(?:singular|plural)\s+of\s+(.+?)(?:[,;:]|\s*$)/i,
 ];
 
 /**
@@ -119,13 +155,40 @@ function extractBaseWord(gloss) {
 }
 
 /**
- * Format a gloss into a concise English definition (max 40 chars, "to X" for verbs).
+ * Clean raw Wiktionary gloss text: strip HTML, wiki markup, bracket annotations, grammar notes.
+ */
+function cleanGloss(raw) {
+  let s = raw;
+  // Strip HTML tags
+  s = s.replace(/<[^>]+>/g, '');
+  // Strip wiki markup: [[word|display]] → display, [[word]] → word
+  s = s.replace(/\[\[([^\]|]+)\|([^\]]+)\]\]/g, '$2');
+  s = s.replace(/\[\[([^\]]+)\]\]/g, '$1');
+  // Strip {{...}} templates
+  s = s.replace(/\{\{[^}]*\}\}/g, '');
+  // Strip square-bracket annotations like [with dative], [formal], [+ accusative]
+  s = s.replace(/\s*\[[^\]]*\]\s*/g, ' ');
+  // Strip parenthetical grammar notes: (archaic), (dated), (colloquial), (transitive), etc.
+  s = s.replace(/\s*\((?:archaic|dated|colloquial|informal|formal|literary|poetic|rare|obsolete|dialectal|regional|vulgar|slang|figurative|literally|by extension|by metonymy|transitive|intransitive|reflexive|impersonal|uncountable|countable|pejorative|derogatory|euphemistic|humorous|ironic|diminutive|augmentative|familiar|elevated|biblical|historical|neologism|nonstandard|proscribed|offensive|ethnic slur|\+ ?\w+)[^)]*\)\s*/gi, ' ');
+  // Strip remaining parentheticals that are purely grammatical labels
+  s = s.replace(/\s*\([^)]*\)\s*/g, ' ');
+  // Fix stray closing parens with no matching open
+  s = s.replace(/^\s*\)\s*/, '');
+  s = s.replace(/\s*\)\s*$/, '');
+  // Strip trailing POS labels that leak from Wiktionary structure
+  s = s.replace(/\s+(?:pronoun|noun|verb|adjective|adverb|preposition|conjunction|determiner|interjection|numeral|particle|postposition|prefix|suffix|phrase|proverb|letter)\s*$/i, '');
+  // Strip leading POS labels too
+  s = s.replace(/^(?:pronoun|noun|verb|adjective|adverb|preposition|conjunction|determiner|interjection|numeral|particle|postposition|prefix|suffix|phrase|proverb|letter)\s+/i, '');
+  // Fix double spaces, leading/trailing
+  s = s.replace(/\s+/g, ' ').trim();
+  return s;
+}
+
+/**
+ * Format a gloss into a concise English definition (max 60 chars, "to X" for verbs).
  */
 function formatGloss(gloss, pos) {
-  let en = gloss
-    .replace(/\s*\([^)]*\)\s*/g, ' ')  // strip parentheticals
-    .replace(/\s+/g, ' ')
-    .trim();
+  let en = cleanGloss(gloss);
 
   // Take first sense if separated by semicolons
   if (en.includes(';')) en = en.split(/;\s*/)[0].trim();
@@ -144,8 +207,14 @@ function formatGloss(gloss, pos) {
     en = 'to ' + en;
   }
 
-  // Truncate to 40 chars
-  if (en.length > 40) en = en.substring(0, 37) + '...';
+  // Strip leading "to for " artifacts from verbose Wiktionary defs
+  en = en.replace(/^to for\b/, 'to');
+
+  // Clean up trailing/leading whitespace again after all transforms
+  en = en.trim();
+
+  // Truncate to 60 chars
+  if (en.length > 60) en = en.substring(0, 57) + '...';
 
   return en;
 }
@@ -236,10 +305,13 @@ async function processKaikkiStream(langCode) {
           for (const gloss of sense.glosses) {
             if (!gloss || gloss.length < 2) continue;
 
+            // Clean the gloss first so form-of patterns match reliably
+            const cleaned = cleanGloss(gloss);
+
             // Try to extract base word from form-of glosses
-            if (isFormOfGloss(gloss)) {
+            if (isFormOfGloss(cleaned)) {
               if (!baseWord) {
-                const extracted = extractBaseWord(gloss);
+                const extracted = extractBaseWord(cleaned);
                 if (extracted) baseWord = extracted;
               }
               continue;
@@ -247,7 +319,7 @@ async function processKaikkiStream(langCode) {
 
             // This is a real definition — take it
             if (!firstGloss) {
-              firstGloss = gloss;
+              firstGloss = cleaned;
             }
             break; // We only want the FIRST non-grammatical gloss
           }
@@ -278,21 +350,42 @@ async function processKaikkiStream(langCode) {
     console.log(`  Direct definitions: ${definitions.size} | Form-of refs: ${formRefs.size}`);
 
     // Resolve form-of entries: look up the base word's definition
+    // Also inherit POS from base word when the form's POS is wrong/generic
     let resolved = 0;
     for (const [word, ref] of formRefs) {
       if (definitions.has(word)) continue; // Already has a direct definition
       if (definitions.has(ref.baseWord)) {
         const baseDef = definitions.get(ref.baseWord);
+        // Inherit POS from base word — form-of entries often get wrong POS
+        // (e.g., conjugated verb forms tagged as 'n')
+        const resolvedPos = (baseDef.pos && baseDef.pos !== '?') ? baseDef.pos : (ref.pos !== '?' ? ref.pos : baseDef.pos);
         definitions.set(word, {
           en: baseDef.en,
           ipa: ref.ipa !== '?' ? ref.ipa : baseDef.ipa,
-          pos: ref.pos !== '?' ? ref.pos : baseDef.pos,
+          pos: resolvedPos,
           lemma: ref.baseWord,
         });
         resolved++;
       }
     }
     console.log(`  Form-of resolved: ${resolved}`);
+
+    // Second pass: fix POS for entries that already had definitions but wrong POS
+    // If an entry has a lemma pointing to a base word, inherit the base's POS
+    let posFixed = 0;
+    for (const [word, entry] of definitions) {
+      if (entry.lemma && definitions.has(entry.lemma)) {
+        const baseDef = definitions.get(entry.lemma);
+        if (baseDef.pos && baseDef.pos !== '?' && entry.pos !== baseDef.pos) {
+          // Only fix clearly wrong POS (e.g., 'n' for a verb form)
+          if (entry.pos === 'n' || entry.pos === '?') {
+            entry.pos = baseDef.pos;
+            posFixed++;
+          }
+        }
+      }
+    }
+    if (posFixed > 0) console.log(`  POS fixes from base word: ${posFixed}`);
 
     return definitions;
 
@@ -535,6 +628,24 @@ async function rebuildLang(langCode) {
   fs.writeFileSync(dictPath, newContent, 'utf8');
   console.log(`  Written to ${dictPath}`);
 
+  // 6. Report: count truncated definitions and sample entries
+  let truncatedCount = 0;
+  const sampleEntries = [];
+  let sampleIdx = 0;
+  const mergedArr = [...merged.entries()];
+  const step = Math.max(1, Math.floor(mergedArr.length / 10));
+  for (let i = 0; i < mergedArr.length; i++) {
+    const [w, e] = mergedArr[i];
+    if (e.en.endsWith('...')) truncatedCount++;
+    if (sampleIdx < 10 && i % step === 0) {
+      sampleEntries.push(`    ${w}: "${e.en}" [${e.pos}]`);
+      sampleIdx++;
+    }
+  }
+  console.log(`  Truncated definitions (ending "..."): ${truncatedCount} / ${merged.size}`);
+  console.log(`  Sample entries:`);
+  for (const s of sampleEntries) console.log(s);
+
   return {
     lang: langCode,
     name: info.name,
@@ -542,6 +653,7 @@ async function rebuildLang(langCode) {
     wiktSourced,
     keptFromCurrent,
     ipaUpdates,
+    truncatedCount,
   };
 }
 
@@ -574,19 +686,20 @@ async function main() {
     console.log(`\n${'='.repeat(70)}`);
     console.log('  SUMMARY');
     console.log(`${'='.repeat(70)}`);
-    console.log('  Lang  | Total   | Wikt-sourced | Kept-current | IPA updates');
-    console.log('  ------|---------|--------------|--------------|------------');
+    console.log('  Lang  | Total   | Wikt-sourced | Kept-current | IPA updates | Truncated');
+    console.log('  ------|---------|--------------|--------------|-------------|----------');
     for (const r of results) {
-      console.log(`  ${r.lang.padEnd(5)} | ${String(r.total).padStart(7)} | ${String(r.wiktSourced).padStart(12)} | ${String(r.keptFromCurrent).padStart(12)} | ${String(r.ipaUpdates).padStart(11)}`);
+      console.log(`  ${r.lang.padEnd(5)} | ${String(r.total).padStart(7)} | ${String(r.wiktSourced).padStart(12)} | ${String(r.keptFromCurrent).padStart(12)} | ${String(r.ipaUpdates).padStart(11)} | ${String(r.truncatedCount || 0).padStart(9)}`);
     }
     const totals = results.reduce((acc, r) => ({
       total: acc.total + r.total,
       wiktSourced: acc.wiktSourced + r.wiktSourced,
       keptFromCurrent: acc.keptFromCurrent + r.keptFromCurrent,
       ipaUpdates: acc.ipaUpdates + r.ipaUpdates,
-    }), { total: 0, wiktSourced: 0, keptFromCurrent: 0, ipaUpdates: 0 });
-    console.log('  ------|---------|--------------|--------------|------------');
-    console.log(`  TOTAL | ${String(totals.total).padStart(7)} | ${String(totals.wiktSourced).padStart(12)} | ${String(totals.keptFromCurrent).padStart(12)} | ${String(totals.ipaUpdates).padStart(11)}`);
+      truncatedCount: acc.truncatedCount + (r.truncatedCount || 0),
+    }), { total: 0, wiktSourced: 0, keptFromCurrent: 0, ipaUpdates: 0, truncatedCount: 0 });
+    console.log('  ------|---------|--------------|--------------|-------------|----------');
+    console.log(`  TOTAL | ${String(totals.total).padStart(7)} | ${String(totals.wiktSourced).padStart(12)} | ${String(totals.keptFromCurrent).padStart(12)} | ${String(totals.ipaUpdates).padStart(11)} | ${String(totals.truncatedCount).padStart(9)}`);
   }
 }
 

@@ -9426,6 +9426,7 @@ const dictionary: Record<string, DictEntry> = {
 
 
 
+
 // ── Turkish suffix stripping ──────────────────────────────────
 // Turkish is agglutinative; words carry many suffixes for case, plural, possessive, etc.
 // We try stripping common suffixes from longest to shortest.

@@ -5253,6 +5253,7 @@ const dictionary: Record<string, DictEntry> = {
 
 
 
+
 // ── Word form resolution ─────────────────────────────────────
 // Russian has extensive morphology: nouns decline in 6 cases, adjectives agree
 // in gender/number/case, and verbs conjugate.

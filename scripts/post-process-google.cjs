@@ -121,6 +121,7 @@ class PostProcessStats {
       function_word_def: 0,
       duplicate: 0,
       length_capped: 0,
+      stripped_false_to: 0,
       source_chars: 0,
       too_long: 0,
     };

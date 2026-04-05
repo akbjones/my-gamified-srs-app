@@ -81,6 +81,62 @@ const KNOWN_NOUNS = new Set([
   'mouth', 'shoulder', 'neck', 'back', 'stomach', 'chest',
 ]);
 
+const NOT_VERB_WORDS = new Set([
+    'together','morning','evening','afternoon','night','today','tomorrow','yesterday',
+    'always','never','often','sometimes','usually','here','there','now','then',
+    'very','much','more','less','also','too','just','only','still','already',
+    'quickly','slowly','carefully','loudly','quietly','suddenly','immediately',
+    'forward','backward','inside','outside','nearby','home','away','back',
+    'above','below','between','behind','beside','around','across','along',
+    'early','late','fast','hard','well','badly','enough','really','quite',
+    'perhaps','maybe','definitely','certainly','probably','unfortunately',
+    'approximately','completely','absolutely','exactly','especially','particularly',
+    'separately','directly','properly','seriously','honestly','meanwhile',
+    'otherwise','instead','however','therefore','moreover','apart','everywhere',
+    'daily','weekly','monthly','yearly','regularly','occasionally','finally',
+  ]);
+
+const KNOWN_ENGLISH_VERBS = new Set([
+    'be','have','do','say','go','get','make','know','think','take','see','come',
+    'want','look','use','find','give','tell','work','call','try','ask','need',
+    'feel','become','leave','put','mean','keep','let','begin','seem','help',
+    'show','hear','play','run','move','live','believe','bring','happen','write',
+    'provide','sit','stand','lose','pay','meet','include','continue','set',
+    'learn','change','lead','understand','watch','follow','stop','create',
+    'speak','read','allow','add','spend','grow','open','walk','win','offer',
+    'remember','love','consider','appear','buy','wait','serve','die','send',
+    'expect','build','stay','fall','cut','reach','kill','remain','suggest',
+    'raise','pass','sell','require','report','decide','pull','develop',
+    'eat','drink','cook','wash','clean','drive','ride','fly','swim','dance',
+    'sing','fight','sleep','wake','wear','carry','hold','throw','catch',
+    'break','fix','repair','teach','study','practice','train','travel',
+    'visit','return','arrive','start','finish','complete','prepare','plan',
+    'choose','pick','collect','gather','share','divide','join','connect',
+    'compare','measure','count','check','test','prove','improve','increase',
+    'decrease','reduce','solve','achieve','succeed','fail','accept','refuse',
+    'agree','disagree','support','oppose','protect','save','waste','borrow',
+    'lend','earn','invest','produce','deliver','order','arrange','organize',
+    'manage','control','operate','maintain','replace','remove','destroy',
+    'store','paint','draw','design','record','publish','translate','discuss',
+    'argue','complain','apologize','forgive','praise','blame','search',
+    'discover','invent','explore','investigate','observe','analyze','predict',
+    'announce','declare','confirm','deny','admit','reveal','explain','describe',
+    'define','identify','recognize','distinguish','combine','mix','pour',
+    'fill','empty','lift','push','pull','stretch','twist','bend','turn',
+    'roll','shake','swing','spin','slide','climb','jump','float','sink',
+    'flow','spray','spread','attach','stick','tie','cover','expose','dig',
+    'bury','plant','harvest','feed','breed','hunt','bite','scratch','boil',
+    'fry','bake','roast','grill','steam','melt','freeze','dry','soak',
+    'scrub','polish','crush','grind','chew','swallow','cough','breathe',
+    'whisper','shout','scream','cry','laugh','smile','frown','nod','wave',
+    'point','grab','drop','kick','punch','hug','kiss','smell','taste',
+    'touch','rub','press','click','type','scroll','tap','drag','edit',
+    'delete','copy','print','scan','upload','download','install','update',
+    'shut','lock','unlock','sign','register','cancel','celebrate','worship',
+    'pray','fulfill','respect','honor','decorate','distribute','donate',
+    'migrate','settle','conquer','rule','govern','elect','protest','reform',
+  ]);
+
 // ─── Devanagari / Arabic / CJK / Cyrillic ranges for source char detection ─
 
 const NON_LATIN_RANGES = [
@@ -122,8 +178,12 @@ class PostProcessStats {
       duplicate: 0,
       length_capped: 0,
       stripped_false_to: 0,
+      stripped_false_to_v2: 0,
       source_chars: 0,
       too_long: 0,
+      self_referencing: 0,
+      mixed_case_cleanup: 0,
+      proper_noun_was_verb: 0,
     };
     this.flagged = new Set();
     this.translationCounts = new Map(); // track duplicates
@@ -251,16 +311,20 @@ function postProcess(raw, pos, sourceWord, stats) {
     stats.hit('stripped_article', sourceWord);
   }
 
-  // ── Rule 4: Lowercase first letter ──
-  if (text.length > 0 && text[0] !== text[0].toLowerCase()) {
-    // Don't lowercase proper nouns (very simple heuristic: single capitalized word that looks like a name)
-    // Only keep capitalization for explicit proper nouns (person/place names)
-    // Google Translate capitalizes all single-word responses, so we aggressively lowercase
-    const isProperNoun = false; // We always lowercase; proper nouns can be handled manually
-    if (!isProperNoun) {
-      text = text[0].toLowerCase() + text.slice(1);
-      stats.hit('lowercased', sourceWord);
+  // ── Rule 4: Normalize case ──
+  // Fix mixed case like "tO DO" → "to do", then lowercase first letter
+  // Step 1: Fix any word with mixed case (lowercase after first char has uppercase)
+  text = text.replace(/\b\w+\b/g, (word) => {
+    // If word has mixed case like "tO" or "dO" or "DO", normalize
+    if (/[a-z][A-Z]/.test(word) || /^[A-Z]{2,}$/.test(word)) {
+      return word.toLowerCase();
     }
+    return word;
+  });
+  // Step 2: Lowercase first letter (Google capitalizes all single-word responses)
+  if (text.length > 0 && text[0] !== text[0].toLowerCase()) {
+    text = text[0].toLowerCase() + text.slice(1);
+    stats.hit('lowercased', sourceWord);
   }
 
   // ── Rule 6: Strip leading pronouns ──
@@ -279,35 +343,58 @@ function postProcess(raw, pos, sourceWord, stats) {
 
   // ── Rule 8: Lemmatize verbs ──
   // ── Rule 8a: Proper noun detection ──
-  // If Google returned a single word that looks like a proper noun (city, name, festival)
-  // AND it matches the source word transliterated, capitalize it and skip verb processing
+  // Only treat as proper noun if the translation looks like a transliteration
+  // (output chars very similar to source chars) AND source uses non-Latin script.
+  // Google capitalises ALL single-word translations, so we can't use capitalisation alone.
   const singleWord = text.replace(/^to\s+/, '').trim();
-  if (singleWord.length >= 3 && /^[a-z]+$/i.test(singleWord)) {
-    const rawTrimmed = raw.trim();
-    if (rawTrimmed.charAt(0) === rawTrimmed.charAt(0).toUpperCase() && rawTrimmed === singleWord.charAt(0).toUpperCase() + singleWord.slice(1)) {
-      text = singleWord.charAt(0).toUpperCase() + singleWord.slice(1);
-      flagReasons.push('proper_noun');
-      return { text, flagged: flagReasons.length > 0, flagReasons };
+  if (singleWord.length >= 3 && sourceWord) {
+    const srcHasNonLatin = NON_LATIN_RANGES.some(r => r.test(sourceWord));
+    const outputIsLatinOnly = /^[a-zA-Z]+$/.test(singleWord);
+    // If source is non-Latin and output is just Latin letters that look like transliteration
+    if (srcHasNonLatin && outputIsLatinOnly) {
+      // Check if it's NOT a common English word (proper nouns aren't common words)
+      const lower = singleWord.toLowerCase();
+      // Also check via lemmatizer — if lemmatize changes it, it's a known English word form
+      const verbLemma = lemmatize(lower, 'v');
+      const nounLemma = lemmatize(lower, 'n');
+      const isKnownForm = verbLemma !== lower || nounLemma !== lower;
+      // Extra common English words that aren't in the specific lists above
+      const COMMON_ENGLISH = new Set([
+        'season','fresh','old','new','big','small','hot','cold','warm','cool',
+        'long','short','tall','wide','narrow','deep','high','low','heavy','light',
+        'fast','slow','clean','dirty','dry','wet','hard','soft','sweet','sour',
+        'bitter','salty','rich','poor','cheap','expensive','free','busy','empty',
+        'full','open','closed','dark','bright','loud','quiet','safe','dangerous',
+        'happy','sad','angry','tired','hungry','thirsty','sick','healthy','ready',
+        'beautiful','ugly','strong','weak','young','thin','thick','flat','round',
+        'sharp','smooth','rough','tight','loose','straight','wrong','right',
+        'certain','possible','impossible','necessary','important','different',
+        'similar','same','other','another','next','last','first','second','third',
+        'whole','half','double','single','main','real','true','false','local',
+        'foreign','public','private','general','special','common','rare','normal',
+        'strange','simple','complex','easy','difficult','basic','traditional',
+        'modern','ancient','famous','popular','favorite','perfect','wonderful',
+        'terrible','amazing','interesting','boring','useful','useless','natural',
+        'official','social','political','economic','cultural','religious','military',
+        'medical','legal','technical','digital','electric','nuclear','solar',
+        'gold','silver','iron','steel','wooden','plastic','cotton','silk','leather',
+        'medical','dental','mental','physical','emotional','spiritual','musical',
+        'seasonal','annual','daily','weekly','monthly','national','international',
+      ]);
+      const isCommonWord = FUNCTION_WORDS.has(lower) || KNOWN_NOUNS.has(lower) || KNOWN_ENGLISH_VERBS.has(lower) || NOT_VERB_WORDS.has(lower) || isKnownForm || lower.length <= 4 || COMMON_ENGLISH.has(lower);
+      if (!isCommonWord) {
+        // It's a transliterated proper noun — capitalize and return
+        text = singleWord.charAt(0).toUpperCase() + singleWord.slice(1).toLowerCase();
+        flagReasons.push('proper_noun');
+        return { text, flagged: flagReasons.length > 0, flagReasons };
+      }
     }
   }
 
 
   // ── Rule 8b: Non-verb word detection ──
   // If Google returned a word that's clearly not a verb, don't add 'to '
-  const NOT_VERB_WORDS = new Set([
-    'together','morning','evening','afternoon','night','today','tomorrow','yesterday',
-    'always','never','often','sometimes','usually','here','there','now','then',
-    'very','much','more','less','also','too','just','only','still','already',
-    'quickly','slowly','carefully','loudly','quietly','suddenly','immediately',
-    'forward','backward','inside','outside','nearby','home','away','back',
-    'above','below','between','behind','beside','around','across','along',
-    'early','late','fast','hard','well','badly','enough','really','quite',
-    'perhaps','maybe','definitely','certainly','probably','unfortunately',
-    'approximately','completely','absolutely','exactly','especially','particularly',
-    'separately','directly','properly','seriously','honestly','meanwhile',
-    'otherwise','instead','however','therefore','moreover','apart','everywhere',
-    'daily','weekly','monthly','yearly','regularly','occasionally','finally',
-  ]);
+
   const googleWord = text.replace(/^to\s+/, '').trim().toLowerCase();
   if (NOT_VERB_WORDS.has(googleWord)) {
     text = text.replace(/^to\s+/, '');
@@ -317,46 +404,7 @@ function postProcess(raw, pos, sourceWord, stats) {
   // ── Rule 8c: Determine verb/noun from ENGLISH output, not source POS ──
   // Instead of trusting the unreliable POS field, check if Google's English
   // output IS a verb form by looking it up in the English verb table.
-  const KNOWN_ENGLISH_VERBS = new Set([
-    'be','have','do','say','go','get','make','know','think','take','see','come',
-    'want','look','use','find','give','tell','work','call','try','ask','need',
-    'feel','become','leave','put','mean','keep','let','begin','seem','help',
-    'show','hear','play','run','move','live','believe','bring','happen','write',
-    'provide','sit','stand','lose','pay','meet','include','continue','set',
-    'learn','change','lead','understand','watch','follow','stop','create',
-    'speak','read','allow','add','spend','grow','open','walk','win','offer',
-    'remember','love','consider','appear','buy','wait','serve','die','send',
-    'expect','build','stay','fall','cut','reach','kill','remain','suggest',
-    'raise','pass','sell','require','report','decide','pull','develop',
-    'eat','drink','cook','wash','clean','drive','ride','fly','swim','dance',
-    'sing','fight','sleep','wake','wear','carry','hold','throw','catch',
-    'break','fix','repair','teach','study','practice','train','travel',
-    'visit','return','arrive','start','finish','complete','prepare','plan',
-    'choose','pick','collect','gather','share','divide','join','connect',
-    'compare','measure','count','check','test','prove','improve','increase',
-    'decrease','reduce','solve','achieve','succeed','fail','accept','refuse',
-    'agree','disagree','support','oppose','protect','save','waste','borrow',
-    'lend','earn','invest','produce','deliver','order','arrange','organize',
-    'manage','control','operate','maintain','replace','remove','destroy',
-    'store','paint','draw','design','record','publish','translate','discuss',
-    'argue','complain','apologize','forgive','praise','blame','search',
-    'discover','invent','explore','investigate','observe','analyze','predict',
-    'announce','declare','confirm','deny','admit','reveal','explain','describe',
-    'define','identify','recognize','distinguish','combine','mix','pour',
-    'fill','empty','lift','push','pull','stretch','twist','bend','turn',
-    'roll','shake','swing','spin','slide','climb','jump','float','sink',
-    'flow','spray','spread','attach','stick','tie','cover','expose','dig',
-    'bury','plant','harvest','feed','breed','hunt','bite','scratch','boil',
-    'fry','bake','roast','grill','steam','melt','freeze','dry','soak',
-    'scrub','polish','crush','grind','chew','swallow','cough','breathe',
-    'whisper','shout','scream','cry','laugh','smile','frown','nod','wave',
-    'point','grab','drop','kick','punch','hug','kiss','smell','taste',
-    'touch','rub','press','click','type','scroll','tap','drag','edit',
-    'delete','copy','print','scan','upload','download','install','update',
-    'shut','lock','unlock','sign','register','cancel','celebrate','worship',
-    'pray','fulfill','respect','honor','decorate','distribute','donate',
-    'migrate','settle','conquer','rule','govern','elect','protest','reform',
-  ]);
+
 
   const cleanText = text.replace(/^to\s+/, '').trim().toLowerCase();
   const firstWord = cleanText.split(/\s+/)[0];
@@ -479,6 +527,24 @@ function postProcess(raw, pos, sourceWord, stats) {
       }
     }
     stats.hit('too_long', sourceWord);
+  }
+
+  // ── Rule 17: Self-referencing detection ──
+  // If the translation equals the source word (Google couldn't translate it),
+  // flag it. For Latin-script languages this catches cognates that need review.
+  if (sourceWord && text.toLowerCase().replace(/[^a-zà-ÿ]/g, '') === sourceWord.toLowerCase().replace(/[^a-zà-ÿ]/g, '') && text.length > 2) {
+    stats.hit('self_referencing', sourceWord);
+    stats.flag(sourceWord, 'self_referencing');
+    flagReasons.push('self_referencing');
+    // Keep the text (it might be a valid cognate like "taxi", "hotel")
+    // but flag it for review
+  }
+
+  // ── Rule 18: Mixed case cleanup ──
+  // Final check: if text still has weird case patterns, normalize
+  if (/[a-z][A-Z]/.test(text)) {
+    text = text.toLowerCase();
+    stats.hit('mixed_case_cleanup', sourceWord);
   }
 
   // Final cleanup

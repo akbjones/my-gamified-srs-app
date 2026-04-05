@@ -282,13 +282,35 @@ function postProcess(raw, pos, sourceWord, stats) {
   // AND it matches the source word transliterated, capitalize it and skip verb processing
   const singleWord = text.replace(/^to\s+/, '').trim();
   if (singleWord.length >= 3 && /^[a-z]+$/i.test(singleWord)) {
-    // Check if Google just transliterated it (returned similar to source)
-    // or if it's a known proper noun pattern (capitalized in Google's raw output)
-    if (rawGoogle && rawGoogle.charAt(0) === rawGoogle.charAt(0).toUpperCase() && rawGoogle === singleWord.charAt(0).toUpperCase() + singleWord.slice(1)) {
+    const rawTrimmed = raw.trim();
+    if (rawTrimmed.charAt(0) === rawTrimmed.charAt(0).toUpperCase() && rawTrimmed === singleWord.charAt(0).toUpperCase() + singleWord.slice(1)) {
       text = singleWord.charAt(0).toUpperCase() + singleWord.slice(1);
-      if (pos === 'v') stats.hit('proper_noun_was_verb', sourceWord);
-      return { text, flags: stats.getFlags() };
+      flagReasons.push('proper_noun');
+      return { text, flagged: flagReasons.length > 0, flagReasons };
     }
+  }
+
+
+  // ── Rule 8b: Non-verb word detection ──
+  // If Google returned a word that's clearly not a verb, don't add 'to '
+  const NOT_VERB_WORDS = new Set([
+    'together','morning','evening','afternoon','night','today','tomorrow','yesterday',
+    'always','never','often','sometimes','usually','here','there','now','then',
+    'very','much','more','less','also','too','just','only','still','already',
+    'quickly','slowly','carefully','loudly','quietly','suddenly','immediately',
+    'forward','backward','inside','outside','nearby','home','away','back',
+    'above','below','between','behind','beside','around','across','along',
+    'early','late','fast','hard','well','badly','enough','really','quite',
+    'perhaps','maybe','definitely','certainly','probably','unfortunately',
+    'approximately','completely','absolutely','exactly','especially','particularly',
+    'separately','directly','properly','seriously','honestly','meanwhile',
+    'otherwise','instead','however','therefore','moreover','apart','everywhere',
+    'daily','weekly','monthly','yearly','regularly','occasionally','finally',
+  ]);
+  const googleWord = text.replace(/^to\s+/, '').trim().toLowerCase();
+  if (NOT_VERB_WORDS.has(googleWord)) {
+    text = text.replace(/^to\s+/, '');
+    stats.hit('stripped_false_to', sourceWord);
   }
 
   if (pos === 'v') {

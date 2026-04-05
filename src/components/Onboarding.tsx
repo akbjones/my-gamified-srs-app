@@ -2,27 +2,22 @@ import React, { useState, useRef, useCallback, useEffect } from 'react';
 
 const SLIDES = [
   {
-    icon: '🌍',
-    title: 'Welcome to LangLab!',
-    description: 'Learn 11 languages through immersion. Real sentences, real context — from day one.',
+    title: 'Welcome to LangLab',
+    description: 'Learn 11 languages through immersion. Real sentences, real context.',
   },
   {
-    icon: '🧠',
     title: 'Spaced Repetition',
     description: 'Flashcards appear at the perfect time to help you remember. The more you practice, the smarter your schedule gets.',
   },
   {
-    icon: '👆',
     title: 'Tap Any Word',
     description: 'Tap any word in a sentence to see its definition, pronunciation, and grammar — instant context when you need it.',
   },
   {
-    icon: '⭐',
     title: 'Rate Your Knowledge',
     description: 'After each card, rate how well you knew it: Again, Hard, Good, or Easy. This personalizes your review schedule.',
   },
   {
-    icon: '🚀',
     title: 'Ready to Start?',
     description: 'Pick your language and begin your journey. You can switch languages anytime!',
   },
@@ -120,7 +115,6 @@ const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
               className="flex flex-col items-center justify-center px-8 text-center"
               style={{ width: `${100 / SLIDES.length}%` }}
             >
-              <div className="text-6xl mb-6 animate-slide-up">{slide.icon}</div>
               <h2 className="text-2xl font-black text-[var(--text-primary)] mb-3">{slide.title}</h2>
               <p className="text-base text-[var(--text-muted)] max-w-xs leading-relaxed">{slide.description}</p>
             </div>

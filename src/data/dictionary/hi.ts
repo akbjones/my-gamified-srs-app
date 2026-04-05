@@ -4831,7 +4831,7 @@ const dictionary: Record<string, DictEntry> = {
   'सोता': { en: 'sleep', ipa: 'soːtaː', pos: 'v', lemma: 'सोना' },
   'सोते': { en: 'sleep', ipa: 'soːteː', pos: 'v', lemma: 'सोना' },
   'सोना': { en: 'sleep', ipa: 'soːnaː', pos: 'v' },
-  'सोने': { en: 'gold', ipa: 'soːneː', pos: 'n' },
+  'सोने': { en: 'to sleep; gold', ipa: 'soːneː', pos: 'n' },
   'सोफ़े': { en: 'sofa', ipa: 'soːpʰəeː', pos: 'n' },
   'सोमवार': { en: 'monday', ipa: 'soːmvaːr', pos: 'n' },
   'सोल': { en: 'soul', ipa: 'soːl', pos: 'n' },

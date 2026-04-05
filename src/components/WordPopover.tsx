@@ -434,7 +434,9 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
                   {conjTable.tenses[conjTense].map((form, i) => (
                     <div key={i} className="flex items-baseline gap-2">
                       <span className="text-[10px] text-[var(--text-faint)] font-mono w-16 text-right shrink-0">
-                        {personLabels[i]}
+                        {language === 'french' && i === 0 && /^[aeéèêëiîïoôuûùüyh]/i.test(form)
+                          ? "j'"
+                          : personLabels[i]}
                       </span>
                       <span className="text-xs text-[var(--text-primary)] font-semibold">
                         {form}

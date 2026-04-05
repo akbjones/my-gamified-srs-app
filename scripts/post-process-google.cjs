@@ -277,6 +277,20 @@ function postProcess(raw, pos, sourceWord, stats) {
   }
 
   // ── Rule 8: Lemmatize verbs ──
+  // ── Rule 8a: Proper noun detection ──
+  // If Google returned a single word that looks like a proper noun (city, name, festival)
+  // AND it matches the source word transliterated, capitalize it and skip verb processing
+  const singleWord = text.replace(/^to\s+/, '').trim();
+  if (singleWord.length >= 3 && /^[a-z]+$/i.test(singleWord)) {
+    // Check if Google just transliterated it (returned similar to source)
+    // or if it's a known proper noun pattern (capitalized in Google's raw output)
+    if (rawGoogle && rawGoogle.charAt(0) === rawGoogle.charAt(0).toUpperCase() && rawGoogle === singleWord.charAt(0).toUpperCase() + singleWord.slice(1)) {
+      text = singleWord.charAt(0).toUpperCase() + singleWord.slice(1);
+      if (pos === 'v') stats.hit('proper_noun_was_verb', sourceWord);
+      return { text, flags: stats.getFlags() };
+    }
+  }
+
   if (pos === 'v') {
     // Remove "to " prefix if already present
     let verbText = text.replace(/^to\s+/, '');

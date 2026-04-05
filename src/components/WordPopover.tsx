@@ -249,7 +249,9 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
 
   // Try to get conjugation table for verbs
   const conjugation = useCallback((): ConjugationTable | null => {
-    if (entry.pos !== 'v') return null;
+    // Show conjugation if POS is verb OR if definition contains verb meaning ("to X")
+    const hasVerbMeaning = entry.en?.includes('to ') || entry.pos === 'v';
+    if (!hasVerbMeaning) return null;
     const conjugateFn = CONJUGATE_FNS[language];
     if (!conjugateFn) return null;
 

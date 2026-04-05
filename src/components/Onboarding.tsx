@@ -68,7 +68,8 @@ const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
     if (!isDragging.current) return;
     deltaXRef.current = e.touches[0].clientX - startXRef.current;
     if (trackRef.current) {
-      const offset = -(current * 100) + (deltaXRef.current / window.innerWidth) * 100;
+      const slideWidth = 100 / SLIDES.length;
+      const offset = -(current * slideWidth) + (deltaXRef.current / window.innerWidth) * slideWidth;
       trackRef.current.style.transition = 'none';
       trackRef.current.style.transform = `translateX(${offset}%)`;
     }
@@ -82,7 +83,7 @@ const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
     // Snap back
     if (trackRef.current) {
       trackRef.current.style.transition = 'transform 0.3s ease';
-      trackRef.current.style.transform = `translateX(-${current * 100}%)`;
+      trackRef.current.style.transform = `translateX(-${current * (100 / SLIDES.length)}%)`;
     }
   };
 
@@ -90,7 +91,7 @@ const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
   useEffect(() => {
     if (trackRef.current) {
       trackRef.current.style.transition = 'transform 0.3s ease';
-      trackRef.current.style.transform = `translateX(-${current * 100}%)`;
+      trackRef.current.style.transform = `translateX(-${current * (100 / SLIDES.length)}%)`;
     }
   }, [current]);
 
@@ -111,7 +112,7 @@ const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
         <div
           ref={trackRef}
           className="flex h-full"
-          style={{ width: `${SLIDES.length * 100}%`, transform: `translateX(-${current * 100}%)`, transition: 'transform 0.3s ease' }}
+          style={{ width: `${SLIDES.length * 100}%`, transform: `translateX(-${current * (100 / SLIDES.length)}%)`, transition: 'transform 0.3s ease' }}
         >
           {SLIDES.map((slide, i) => (
             <div

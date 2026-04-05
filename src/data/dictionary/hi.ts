@@ -3241,7 +3241,7 @@ const dictionary: Record<string, DictEntry> = {
   'बीचोबीच': { en: 'in the middle', ipa: 'biːtʃoːbiːtʃ', pos: 'n' },
   'बीज': { en: 'seed', ipa: 'biːdʒ', pos: 'n' },
   'बीजगणित': { en: 'algebra', ipa: 'biːdʒəɡəɳɪt', pos: 'adj' },
-  'बीता': { en: 'to past', ipa: 'biːtaː', pos: 'v' },
+  'बीता': { en: 'to pas', ipa: 'biːtaː', pos: 'v' },
   'बीमा': { en: 'insurance', ipa: 'biːmaː', pos: 'n' },
   'बीमार': { en: 'sick', ipa: 'biːmaːr', pos: 'adj' },
   'बीस': { en: 'twenty', ipa: 'biːs', pos: 'num' },

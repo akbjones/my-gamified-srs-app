@@ -314,8 +314,56 @@ function postProcess(raw, pos, sourceWord, stats) {
     stats.hit('stripped_false_to', sourceWord);
   }
 
-  if (pos === 'v') {
-    // Remove "to " prefix if already present
+  // ── Rule 8c: Determine verb/noun from ENGLISH output, not source POS ──
+  // Instead of trusting the unreliable POS field, check if Google's English
+  // output IS a verb form by looking it up in the English verb table.
+  const KNOWN_ENGLISH_VERBS = new Set([
+    'be','have','do','say','go','get','make','know','think','take','see','come',
+    'want','look','use','find','give','tell','work','call','try','ask','need',
+    'feel','become','leave','put','mean','keep','let','begin','seem','help',
+    'show','hear','play','run','move','live','believe','bring','happen','write',
+    'provide','sit','stand','lose','pay','meet','include','continue','set',
+    'learn','change','lead','understand','watch','follow','stop','create',
+    'speak','read','allow','add','spend','grow','open','walk','win','offer',
+    'remember','love','consider','appear','buy','wait','serve','die','send',
+    'expect','build','stay','fall','cut','reach','kill','remain','suggest',
+    'raise','pass','sell','require','report','decide','pull','develop',
+    'eat','drink','cook','wash','clean','drive','ride','fly','swim','dance',
+    'sing','fight','sleep','wake','wear','carry','hold','throw','catch',
+    'break','fix','repair','teach','study','practice','train','travel',
+    'visit','return','arrive','start','finish','complete','prepare','plan',
+    'choose','pick','collect','gather','share','divide','join','connect',
+    'compare','measure','count','check','test','prove','improve','increase',
+    'decrease','reduce','solve','achieve','succeed','fail','accept','refuse',
+    'agree','disagree','support','oppose','protect','save','waste','borrow',
+    'lend','earn','invest','produce','deliver','order','arrange','organize',
+    'manage','control','operate','maintain','replace','remove','destroy',
+    'store','paint','draw','design','record','publish','translate','discuss',
+    'argue','complain','apologize','forgive','praise','blame','search',
+    'discover','invent','explore','investigate','observe','analyze','predict',
+    'announce','declare','confirm','deny','admit','reveal','explain','describe',
+    'define','identify','recognize','distinguish','combine','mix','pour',
+    'fill','empty','lift','push','pull','stretch','twist','bend','turn',
+    'roll','shake','swing','spin','slide','climb','jump','float','sink',
+    'flow','spray','spread','attach','stick','tie','cover','expose','dig',
+    'bury','plant','harvest','feed','breed','hunt','bite','scratch','boil',
+    'fry','bake','roast','grill','steam','melt','freeze','dry','soak',
+    'scrub','polish','crush','grind','chew','swallow','cough','breathe',
+    'whisper','shout','scream','cry','laugh','smile','frown','nod','wave',
+    'point','grab','drop','kick','punch','hug','kiss','smell','taste',
+    'touch','rub','press','click','type','scroll','tap','drag','edit',
+    'delete','copy','print','scan','upload','download','install','update',
+    'shut','lock','unlock','sign','register','cancel','celebrate','worship',
+    'pray','fulfill','respect','honor','decorate','distribute','donate',
+    'migrate','settle','conquer','rule','govern','elect','protest','reform',
+  ]);
+
+  const cleanText = text.replace(/^to\s+/, '').trim().toLowerCase();
+  const firstWord = cleanText.split(/\s+/)[0];
+  const isEnglishVerb = KNOWN_ENGLISH_VERBS.has(firstWord) || KNOWN_ENGLISH_VERBS.has(lemmatize(firstWord, 'v'));
+
+  if (isEnglishVerb && !NOT_VERB_WORDS.has(cleanText)) {
+    // It IS a verb — lemmatize and add "to "
     let verbText = text.replace(/^to\s+/, '');
     const words = verbText.split(/\s+/);
     if (words.length <= 3) {
@@ -327,10 +375,14 @@ function postProcess(raw, pos, sourceWord, stats) {
       verbText = words.join(' ');
     }
     text = 'to ' + verbText;
+  } else if (text.startsWith('to ') && !isEnglishVerb) {
+    // Has "to " but English output is NOT a verb — strip it
+    text = text.replace(/^to\s+/, '');
+    stats.hit('stripped_false_to_v2', sourceWord);
   }
 
   // ── Rule 9: Lemmatize nouns ──
-  if (pos === 'n') {
+  if (!isEnglishVerb) {
     const words = text.split(/\s+/);
     // Singularize the last content word (the head noun)
     const lastIdx = words.length - 1;

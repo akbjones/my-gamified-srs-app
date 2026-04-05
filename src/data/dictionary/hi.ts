@@ -739,6 +739,7 @@ const dictionary: Record<string, DictEntry> = {
   'किसानों': { en: 'farmer', ipa: 'kɪsaːnoːn', pos: 'n' },
   'किसी': { en: 'any', ipa: 'kɪsiː', pos: 'n' },
   'क़िस्मत': { en: 'luck', ipa: 'kəɪsmət', pos: 'n' },
+  'का': { en: 'of (m.)', ipa: 'kaː', pos: 'postp' },
   'की': { en: 'of (f.)', ipa: 'kiː', pos: 'postp' },
   'कीचड़': { en: 'mud', ipa: 'kiːtʃəɖə', pos: 'n' },
   'कीजिए': { en: 'to do', ipa: 'kiːdʒɪeː', pos: 'v', lemma: 'करना' },

@@ -18,6 +18,10 @@ const SLIDES = [
     description: 'After each card, rate how well you knew it: Again, Hard, Good, or Easy. This personalizes your review schedule.',
   },
   {
+    title: 'Choose Your Focus',
+    description: 'Focus your vocabulary on what matters to you — travel, work, or family. Or study general vocabulary across all topics.',
+  },
+  {
     title: 'Ready to Start?',
     description: 'Pick your language and begin your journey. You can switch languages anytime!',
   },

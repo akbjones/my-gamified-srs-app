@@ -79,6 +79,86 @@ const KNOWN_NOUNS = new Set([
   'king', 'queen', 'god', 'heart', 'blood', 'bone', 'skin',
   'hair', 'tooth', 'foot', 'arm', 'leg', 'finger', 'nose', 'ear',
   'mouth', 'shoulder', 'neck', 'back', 'stomach', 'chest',
+  // Expanded set — nouns often mistaken as verbs
+  'fly', 'finance', 'iron', 'steel', 'buddy', 'designer', 'coach', 'jersey', 'embargo', 'wifi',
+  'building', 'reward', 'engineer', 'teacher', 'doctor', 'lawyer',
+  'nurse', 'driver', 'singer', 'dancer', 'writer', 'player', 'leader',
+  'worker', 'farmer', 'painter', 'soldier', 'officer', 'manager',
+  'director', 'professor', 'musician', 'artist', 'architect', 'pilot',
+  'actor', 'student', 'trainer', 'baker', 'butcher', 'carpenter',
+  'dentist', 'plumber', 'mechanic', 'tailor', 'barber', 'sailor',
+  'photographer', 'journalist', 'scientist', 'programmer', 'accountant',
+  'neighbor', 'stranger', 'passenger', 'customer', 'visitor', 'guest',
+  'partner', 'husband', 'wife', 'parent', 'daughter', 'son', 'baby',
+  'uncle', 'aunt', 'cousin', 'grandfather', 'grandmother', 'nephew',
+  'niece', 'boyfriend', 'girlfriend', 'boss', 'colleague', 'employee',
+  'owner', 'citizen', 'resident', 'immigrant', 'refugee', 'volunteer',
+  'hero', 'victim', 'witness', 'suspect', 'patient', 'prisoner',
+  'ceiling', 'fence', 'roof', 'stair', 'stairs', 'basement', 'balcony',
+  'corridor', 'hallway', 'apartment', 'bedroom', 'bathroom', 'garage',
+  'factory', 'warehouse', 'restaurant', 'cinema', 'museum', 'library',
+  'stadium', 'theater', 'palace', 'castle', 'tower', 'monument',
+  'airport', 'harbor', 'highway', 'tunnel', 'track', 'path', 'trail',
+  'beach', 'valley', 'hill', 'cliff', 'desert', 'jungle', 'swamp',
+  'lake', 'ocean', 'sea', 'coast', 'shore', 'bay', 'cave', 'volcano',
+  'sunset', 'sunrise', 'storm', 'thunder', 'lightning', 'frost', 'ice',
+  'dust', 'mud', 'sand', 'soil', 'wood', 'metal', 'glass', 'rubber',
+  'plastic', 'leather', 'cotton', 'silk', 'wool', 'fabric', 'steel',
+  'copper', 'aluminum', 'cement', 'concrete', 'brick', 'marble',
+  'diamond', 'crystal', 'pearl', 'ivory', 'coral', 'amber',
+  'computer', 'laptop', 'screen', 'keyboard', 'mouse', 'printer',
+  'camera', 'television', 'radio', 'speaker', 'microphone', 'battery',
+  'engine', 'machine', 'device', 'robot', 'satellite', 'rocket',
+  'bicycle', 'motorcycle', 'helicopter', 'submarine', 'vehicle',
+  'wheel', 'mirror', 'clock', 'lamp', 'candle', 'blanket', 'pillow',
+  'carpet', 'curtain', 'towel', 'basket', 'bucket', 'bottle', 'jar',
+  'pot', 'pan', 'oven', 'fridge', 'microwave', 'blender', 'toaster',
+  'breakfast', 'lunch', 'dinner', 'snack', 'dessert', 'soup', 'salad',
+  'sauce', 'cheese', 'chocolate', 'candy', 'cake', 'cookie', 'pie',
+  'juice', 'wine', 'beer', 'soda', 'cocktail', 'whiskey', 'vodka',
+  'shirt', 'jacket', 'coat', 'sweater', 'vest', 'tie', 'scarf',
+  'glove', 'belt', 'pocket', 'collar', 'sleeve', 'button', 'zipper',
+  'boot', 'sandal', 'slipper', 'sock', 'uniform', 'costume', 'mask',
+  'wallet', 'purse', 'suitcase', 'backpack', 'umbrella', 'cane',
+  'adventure', 'journey', 'trip', 'vacation', 'holiday', 'festival',
+  'ceremony', 'wedding', 'funeral', 'birthday', 'anniversary', 'party',
+  'concert', 'performance', 'competition', 'race', 'championship',
+  'victory', 'defeat', 'score', 'prize', 'medal', 'trophy', 'gift',
+  'surprise', 'secret', 'mystery', 'puzzle', 'joke', 'trick', 'magic',
+  'recipe', 'ingredient', 'flavor', 'aroma', 'texture', 'temperature',
+  'weight', 'height', 'length', 'width', 'depth', 'speed', 'distance',
+  'size', 'shape', 'color', 'pattern', 'style', 'fashion', 'trend',
+  'symbol', 'signal', 'sign', 'label', 'brand', 'logo', 'title',
+  'headline', 'article', 'paragraph', 'sentence', 'phrase', 'quote',
+  'poem', 'novel', 'chapter', 'page', 'cover', 'version', 'edition',
+  'copy', 'draft', 'outline', 'summary', 'review', 'report', 'survey',
+  'budget', 'profit', 'loss', 'tax', 'debt', 'loan', 'wage', 'salary',
+  'income', 'expense', 'investment', 'insurance', 'pension', 'receipt',
+  'invoice', 'contract', 'agreement', 'guarantee', 'warranty', 'permit',
+  'license', 'passport', 'visa', 'ticket', 'coupon', 'voucher',
+  'reason', 'schedule', 'page', 'room', 'bathroom', 'server', 'egg',
+  'basis', 'foundation', 'structure', 'frame', 'border', 'limit',
+  'surface', 'bottom', 'top', 'side', 'corner', 'edge', 'center',
+  'middle', 'end', 'front', 'entrance', 'exit', 'passage', 'gap',
+  'hole', 'space', 'area', 'zone', 'region', 'district', 'quarter',
+  'neighborhood', 'suburb', 'countryside', 'landscape', 'scenery',
+  'horizon', 'atmosphere', 'climate', 'environment', 'nature',
+  'universe', 'galaxy', 'planet', 'continent', 'surface', 'bottom',
+  'floor', 'brand', 'mark', 'service', 'position', 'gift', 'present',
+  'window', 'nail', 'price', 'cost', 'weight', 'stall', 'tomato',
+  'vegetable', 'onion', 'garlic', 'pepper', 'potato', 'carrot',
+  'lettuce', 'spinach', 'mushroom', 'corn', 'bean', 'pea', 'grape',
+  'orange', 'lemon', 'lime', 'peach', 'cherry', 'strawberry',
+  'blueberry', 'raspberry', 'pineapple', 'mango', 'coconut',
+  'watermelon', 'avocado', 'cucumber', 'pumpkin', 'zucchini',
+  'attachment', 'document', 'folder', 'file', 'message', 'email',
+  'comment', 'post', 'link', 'website', 'application', 'program',
+  'balance', 'shift', 'store', 'promise', 'form', 'salary', 'factory',
+  'tool', 'pride', 'step', 'march', 'interview', 'entrance', 'exit',
+  'secret', 'service', 'dwelling', 'sunset', 'sunrise', 'afternoon',
+  'formula', 'formulary', 'equilibrium', 'turn', 'stock', 'supply',
+  'demand', 'trade', 'profit', 'loss', 'rate', 'charge', 'fee',
+  'discount', 'refund', 'deposit', 'withdrawal', 'transfer', 'payment',
 ]);
 
 const NOT_VERB_WORDS = new Set([
@@ -95,6 +175,57 @@ const NOT_VERB_WORDS = new Set([
     'otherwise','instead','however','therefore','moreover','apart','everywhere',
     'daily','weekly','monthly','yearly','regularly','occasionally','finally',
   ]);
+
+// Known English adjectives — prevent "to full", "to dear" etc.
+const KNOWN_ADJECTIVES = new Set([
+  'full','empty','dear','wanted','closed','broken','frozen','lost',
+  'born','tired','bored','excited','scared','worried','confused','surprised',
+  'married','divorced','retired','pregnant','drunk','sober','naked','blind',
+  'deaf','dumb','mute','lame','mad','crazy','wild','tame','calm','fierce',
+  'gentle','rough','smooth','sharp','dull','bright','dim','clear','dark',
+  'light','heavy','thick','thin','wide','narrow','deep','shallow','flat',
+  'round','square','straight','crooked','curved','bent','twisted','tight',
+  'loose','firm','soft','hard','wet','dry','hot','cold','warm','cool',
+  'fresh','stale','raw','ripe','rotten','sweet','sour','bitter','salty',
+  'spicy','bland','tasty','delicious','disgusting','ugly','pretty',
+  'beautiful','handsome','cute','lovely','gorgeous','plain','fancy',
+  'elegant','cheap','expensive','free','busy','idle','lazy','active',
+  'passive','slow','quick','fast','rapid','sudden','gradual','steady',
+  'stable','unstable','safe','dangerous','risky','secure','insecure',
+  'rich','poor','wealthy','humble','proud','modest','shy','bold',
+  'brave','cowardly','afraid','fearless','anxious','nervous','confident',
+  'certain','uncertain','sure','unsure','obvious','subtle','visible',
+  'invisible','apparent','hidden','secret','public','private','personal',
+  'social','local','foreign','domestic','urban','rural','ancient',
+  'modern','new','old','young','elderly','mature','immature','adult',
+  'juvenile','senior','junior','main','minor','major','tiny','huge',
+  'enormous','massive','vast','slim','fat','skinny','lean','muscular',
+  'fit','healthy','sick','ill','weak','strong','powerful','mighty',
+  'guilty','innocent','fair','unfair','just','unjust','legal','illegal',
+  'valid','invalid','true','false','real','fake','genuine','artificial',
+  'natural','synthetic','organic','toxic','poisonous','harmless',
+  'covered','exposed','mixed','fixed','attached','detached','connected',
+  'gone','registered','creative','narrow','last','wide','next','deep',
+  'near','far','close','late','early','past','recent','current','former',
+  'present','future','average','common','rare','familiar','separate',
+  'various','multiple','additional','extra','brief','entire','complete',
+  'whole','necessary','essential','critical','obvious','relative','basic',
+  'complex','simple','original','independent','individual','available',
+  'traditional','revolutionary','gentle','amable','kind','transferred',
+  'stalled','revolutionized','transformed','organized','specialized',
+  'limited','approved','certified','qualified','experienced','advanced',
+  'improved','increased','reduced','established','determined','dedicated',
+  'interested','worried','amazed','astonished','delighted','disappointed',
+  'embarrassed','fascinated','frustrated','horrified','impressed',
+  'inspired','motivated','overwhelmed','puzzled','relaxed','relieved',
+  'satisfied','shocked','stunned','terrified','thrilled','touched',
+  'secondary','primary','tertiary','final','initial','annual',
+  'several','charming','dwelling','andean','alpine','coastal',
+  'suburban','metropolitan','continental','domestic','foreign',
+  'financed','received','inscribed','registered',
+  'retired','surfed','stalled','formed','balanced','shifted',
+  'stored','promised','just','mere','sole','main','chief','prime',
+]);
 
 const KNOWN_ENGLISH_VERBS = new Set([
     'be','have','do','say','go','get','make','know','think','take','see','come',
@@ -135,6 +266,49 @@ const KNOWN_ENGLISH_VERBS = new Set([
     'shut','lock','unlock','sign','register','cancel','celebrate','worship',
     'pray','fulfill','respect','honor','decorate','distribute','donate',
     'migrate','settle','conquer','rule','govern','elect','protest','reform',
+    // Expanded set 2 — addresses remaining missing_to_on_verb failures
+    'talk','listen','erode','comb','chat','coach','iron','fan','reward',
+    'budget','channel','comfort','commission','compound','conflict','contest',
+    'contrast','counsel','counter','credit','cycle','debate','default',
+    'demand','detail','discount','draft','drill','echo','engineer','envy',
+    'estimate','excuse','experiment','factor','fashion','favor','feature',
+    'figure','file','film','focus','forecast','fork','fuel','function',
+    'gesture','glance','glimpse','gossip','grace','guarantee','guess','guide',
+    'hammer','handle','harm','harvest','head','heap','hint','hook','host',
+    'humor','hurdle','image','impact','import','influence','interest','issue',
+    'journey','judge','label','lack','land','last','layer','lecture','level',
+    'license','limit','link','list','load','loan','lobby','log','lower',
+    'lumber','market','mask','master','match','matter','measure','mentor',
+    'merit','mirror','model','monitor','motion','mount','murder','murmur',
+    'nail','name','note','notice','nurse','object','outline','pace','package',
+    'paddle','page','pair','panel','parade','pardon','parent','park','part',
+    'partner','pattern','peel','phrase','picture','pile','pilot','pin',
+    'pioneer','pitch','place','pledge','plot','plug','pocket','point',
+    'portion','position','post','power','premiere','pressure','price',
+    'pride','process','profile','profit','program','progress','project',
+    'promise','prompt','proof','question','queue','quote','race','rain',
+    'rally','range','rank','rate','ration','reason','reference','refund',
+    'reign','relay','release','remedy','rent','research','resort','result',
+    'review','rifle','ring','rival','roam','rocket','romance','root','rope',
+    'route','ruin','sacrifice','saddle','sail','sample','sanction','scale',
+    'scar','scope','score','screen','seal','season','section','seed',
+    'sentence','sequence','shade','shadow','shame','shape','shelter','shift',
+    'ship','shop','shoulder','shovel','shower','sidestep','sight','signal',
+    'silence','skin','slave','slice','slow','smile','smoke','snack',
+    'snap','snow','socket','soldier','sound','source','space','spark',
+    'spell','spiral','splash','split','sponsor','spot','spray','stage',
+    'stake','star','station','steam','steer','stem','step','stock',
+    'storm','strain','strap','stream','stress','structure','stuff','stump',
+    'subject','summit','supply','surface','surprise','survey','suspect',
+    'sway','swear','sweep','swell','switch','table','tackle','tag','tail',
+    'target','tax','team','tender','term','thread','thunder','ticket',
+    'tide','timber','time','title','toast','tool','top','total','tour',
+    'tower','trace','track','trade','trail','treasure','trend','trick',
+    'trigger','trim','triumph','trouble','trumpet','trust','tunnel','tutor',
+    'unite','update','upgrade','urge','vacuum','value','venture','version',
+    'view','voice','volunteer','voyage','wage','wager','wander','warehouse',
+    'warrant','weather','welcome','whistle','witness','wonder','worship',
+    'wound','wreck','wrestle','yield','zone','zoom',
     // Expanded set — addresses missing_to_on_verb failures
     'accept','achieve','acquire','adapt','adjust','admire','advise','afford',
     'announce','apologize','appreciate','approach','approve','assemble','assist',
@@ -197,6 +371,66 @@ const KNOWN_ENGLISH_VERBS = new Set([
     'retrieve','reveal','reverse','revise','revolve','reward','ring','ripen',
     'risk','rival','roam','rotate','rub','rush','sacrifice','sample',
     'satisfy','scatter','schedule','scratch','scream','secure','seize',
+    // Expanded set 3 — more missing verbs
+    'nest','hope','comment','avoid','score','narrow','register','schedule',
+    'reason','page','mark','bath','bathe','serve','egg','room','base',
+    'receive','enjoy','regret','retire','surf','dwell','stall','form',
+    'fulfill','complete','achieve','maintain','obtain','contain','retain',
+    'sustain','restrain','explain','complain','remain','entertain',
+    'appreciate','celebrate','communicate','concentrate','demonstrate',
+    'educate','eliminate','estimate','evaluate','examine','generate',
+    'illustrate','investigate','negotiate','participate','recognize',
+    'worry','expect','announce','apply','approach','argue','assume',
+    'attempt','attend','beg','belong','bless','bloom','boast','bore',
+    'breathe','burden','capture','carve','claim','clarify','collapse',
+    'command','commit','communicate','compete','compose','concern',
+    'conclude','confront','connect','consent','construct','consult',
+    'consume','contain','contribute','convince','cooperate','correct',
+    'correspond','counsel','dare','deceive','declare','decline','defend',
+    'define','delay','demand','demonstrate','deny','depend','depict',
+    'derive','describe','deserve','desire','detect','determine','differ',
+    'disappear','disappoint','discharge','discover','disguise','dismiss',
+    'display','distinguish','distract','disturb','dominate','drift',
+    'drown','dump','educate','elect','eliminate','embrace','emerge',
+    'emit','emphasize','employ','enable','encounter','enforce','engage',
+    'enhance','ensure','entertain','equip','erase','escape','evaluate',
+    'evolve','examine','exceed','excite','exclude','execute','exhibit',
+    'expand','experiment','exploit','export','extend','extract',
+    'facilitate','fancy','feature','finance','flash','fold','force',
+    'forecast','formulate','found','frame','frighten','function',
+    'furnish','gain','generate','gesture','glow','grasp','greet',
+    'guarantee','guard','handle','harm','hasten','heal','hesitate',
+    'highlight','hire','host','hurry','ignore','illustrate','imagine',
+    'implement','impose','impress','incorporate','indicate','induce',
+    'influence','inform','inherit','initiate','inject','innovate',
+    'inquire','insert','inspect','inspire','integrate','intend',
+    'interact','interfere','interpret','interrupt','intervene','introduce',
+    'invade','involve','isolate','justify','label','lack','launch',
+    'lean','lecture','lend','level','license','limit','link','list',
+    'load','locate','log','lower','manufacture','mention','merge',
+    'minimize','mislead','moderate','modify','motivate','mount',
+    'multiply','murder','murmur','navigate','neglect','negotiate',
+    'nominate','normalize','note','notify','nourish','object','obligate',
+    'observe','obtain','occupy','offend','offset','omit','oppose',
+    'opt','orient','originate','outline','overcome','overlook','overtake',
+    'overwhelm','owe','own','participate','pause','penetrate','perceive',
+    'perform','permit','persist','persuade','photograph','pioneer',
+    'pitch','pledge','plunge','polish','ponder','portray','pose',
+    'possess','postpone','predict','prefer','prescribe','preserve',
+    'preside','presume','pretend','prevail','prevent','proceed','proclaim',
+    'profit','prohibit','promote','pronounce','propose','prosecute',
+    'prosper','provoke','purchase','pursue','qualify','quote','race',
+    'rain','rally','range','rank','rate','react','realize','rebel',
+    'recall','reckon','recommend','reconcile','recover','recruit',
+    'recycle','redirect','refer','reflect','refuse','regain','regard',
+    'regulate','reinforce','reject','relate','relax','release','relieve',
+    'rely','remark','remedy','remind','render','renew','renovate',
+    'rent','repeat','replace','report','represent','reproduce','request',
+    'rescue','resemble','reserve','reside','resign','resist','resolve',
+    'resort','restore','restrict','retain','retreat','retrieve','reveal',
+    'reverse','revise','revolve','reward','ring','ripen','risk','rival',
+    'roam','rotate','rub','rush','sacrifice','sample','satisfy','scatter',
+    'seal','secure','seize',
     'select','sense','separate','serve','settle','sew','shed','shelter',
     'shift','shine','shock','shout','shrink','signal','simplify','simulate',
     'sink','situate','skip','slam','slap','slip','smash','snap','socialize',
@@ -531,16 +765,57 @@ function postProcess(raw, pos, sourceWord, stats) {
     stats.hit('stripped_false_to', sourceWord);
   }
 
-  // ── Rule 8c: Determine verb/noun from ENGLISH output, not source POS ──
-  // Instead of trusting the unreliable POS field, check if Google's English
-  // output IS a verb form by looking it up in the English verb table.
+  // ── Rule 8b2: Strip auxiliary verbs for verb entries ──
+  // "will open" → "open", "would have" → "have", "will have" → "have"
+  // Also handles "will do/make" → "do/make"
+  // Then the main verb detection will add "to "
+  {
+    const auxMatch = text.match(/^(will|would|shall|should|could|might|must)\s+(.+)$/i);
+    if (auxMatch) {
+      text = auxMatch[2];
+      stats.hit('stripped_pronoun', sourceWord); // reuse counter
+    }
+  }
 
+  // ── Rule 8b3: Strip parenthetical annotations ──
+  // "gave (subj.)" → "gave", "were (subj.)" → "were"
+  {
+    const parenMatch = text.match(/^(.+?)\s*\(.*\)\s*$/);
+    if (parenMatch && parenMatch[1].trim().length > 1) {
+      text = parenMatch[1].trim();
+    }
+  }
+
+  // ── Rule 8b4: Handle slash-separated alternatives ──
+  // "do/make" → take first: "do"
+  {
+    const slashMatch = text.match(/^([^\/]+)\/(.+)$/);
+    if (slashMatch && slashMatch[1].trim().length > 1) {
+      text = slashMatch[1].trim();
+    }
+  }
+
+  // ── Rule 8c: Determine verb/noun from ENGLISH output, using source POS as tiebreaker ──
+  // Check if Google's English output IS a verb form.
+  // When ambiguous (word is both noun and verb), respect source POS.
 
   const cleanText = text.replace(/^to\s+/, '').trim().toLowerCase();
   const firstWord = cleanText.split(/\s+/)[0];
-  const isEnglishVerb = KNOWN_ENGLISH_VERBS.has(firstWord) || KNOWN_ENGLISH_VERBS.has(lemmatize(firstWord, 'v'));
+  const verbLemmaWord = lemmatize(firstWord, 'v');
+  const isEnglishVerb = KNOWN_ENGLISH_VERBS.has(firstWord) || KNOWN_ENGLISH_VERBS.has(verbLemmaWord);
+  const isAlsoNoun = KNOWN_NOUNS.has(firstWord) || KNOWN_NOUNS.has(lemmatize(firstWord, 'n'));
+  const isAdjective = KNOWN_ADJECTIVES.has(firstWord) || KNOWN_ADJECTIVES.has(lemmatize(firstWord, 'v'));
 
-  if (isEnglishVerb && !NOT_VERB_WORDS.has(cleanText)) {
+  // Determine effective treatment: verb wins unless:
+  //  - source POS says noun AND English is also a known noun
+  //  - the English word is a known adjective (don't add "to full", "to covered")
+  //  - source POS is adj/adv (never add "to" to adjectives/adverbs)
+  const treatAsVerb = isEnglishVerb && !NOT_VERB_WORDS.has(cleanText) &&
+    !isAdjective &&
+    !(pos === 'n' && isAlsoNoun) &&
+    !(pos === 'adj' || pos === 'adv');
+
+  if (treatAsVerb) {
     // It IS a verb — lemmatize and add "to "
     let verbText = text.replace(/^to\s+/, '');
     const words = verbText.split(/\s+/);
@@ -553,14 +828,14 @@ function postProcess(raw, pos, sourceWord, stats) {
       verbText = words.join(' ');
     }
     text = 'to ' + verbText;
-  } else if (text.startsWith('to ') && !isEnglishVerb) {
-    // Has "to " but English output is NOT a verb — strip it
+  } else if (text.startsWith('to ') && !treatAsVerb) {
+    // Has "to " but should not be treated as verb — strip it
     text = text.replace(/^to\s+/, '');
     stats.hit('stripped_false_to_v2', sourceWord);
   }
 
   // ── Rule 9: Lemmatize nouns ──
-  if (!isEnglishVerb) {
+  if (!treatAsVerb) {
     const words = text.split(/\s+/);
     // Singularize the last content word (the head noun)
     const lastIdx = words.length - 1;
@@ -594,11 +869,18 @@ function postProcess(raw, pos, sourceWord, stats) {
 
   // ── Rule 11: Wrong POS detection ──
   if (pos === 'v') {
-    // If output (minus "to ") is a known noun
     const verbCore = text.replace(/^to\s+/, '').toLowerCase();
-    if (KNOWN_NOUNS.has(verbCore) && verbCore.length > 3) {
+    const verbCoreFirst = verbCore.split(/\s+/)[0];
+    const isVerbCore = KNOWN_ENGLISH_VERBS.has(verbCoreFirst) || KNOWN_ENGLISH_VERBS.has(lemmatize(verbCoreFirst, 'v'));
+    // Flag wrong_pos if:
+    //  a) English output is a known noun/adjective/adverb, OR
+    //  b) POS=v but the English output is NOT a known verb (pipeline didn't add "to")
+    if ((KNOWN_NOUNS.has(verbCore) && verbCore.length > 3) ||
+        KNOWN_ADJECTIVES.has(verbCore) ||
+        NOT_VERB_WORDS.has(verbCore) ||
+        (!text.startsWith('to ') && !isVerbCore && verbCore.length > 2)) {
       stats.hit('wrong_pos', sourceWord);
-      stats.flag(sourceWord, 'wrong_pos:verb_but_noun');
+      stats.flag(sourceWord, 'wrong_pos:verb_but_not_verb');
       flagReasons.push('wrong_pos');
     }
   }
@@ -661,13 +943,67 @@ function postProcess(raw, pos, sourceWord, stats) {
 
   // ── Rule 17: Self-referencing detection ──
   // If the translation equals the source word (Google couldn't translate it),
-  // flag it. For Latin-script languages this catches cognates that need review.
+  // flag it UNLESS it's a known international/cognate word.
   if (sourceWord && text.toLowerCase().replace(/[^a-zà-ÿ]/g, '') === sourceWord.toLowerCase().replace(/[^a-zà-ÿ]/g, '') && text.length > 2) {
-    stats.hit('self_referencing', sourceWord);
-    stats.flag(sourceWord, 'self_referencing');
-    flagReasons.push('self_referencing');
-    // Keep the text (it might be a valid cognate like "taxi", "hotel")
-    // but flag it for review
+    // Known international words that are the same in English — NOT self-referencing errors
+    const KNOWN_COGNATES = new Set([
+      'taxi', 'hotel', 'wifi', 'radio', 'piano', 'sofa', 'yoga', 'safari',
+      'embargo', 'jersey', 'chocolate', 'banana', 'guitar', 'plaza', 'fiesta',
+      'mosquito', 'tornado', 'volcano', 'canyon', 'cafeteria', 'patio', 'rodeo',
+      'siesta', 'sombrero', 'taco', 'tortilla', 'burrito', 'salsa', 'pueblo',
+      'machete', 'marina', 'cargo', 'guerrilla', 'vigilante', 'desperado',
+      'incognito', 'renegade', 'stampede', 'lasso', 'poncho', 'llama',
+      'internet', 'blog', 'email', 'software', 'online', 'digital', 'video',
+      'audio', 'metro', 'bus', 'gas', 'bar', 'club', 'pub', 'café', 'menu',
+      'buffet', 'chef', 'gourmet', 'restaurant', 'pizza', 'pasta', 'kebab',
+      'champagne', 'vodka', 'whisky', 'cognac', 'rum', 'gin', 'tequila',
+      'opera', 'ballet', 'drama', 'comedy', 'musical', 'festival', 'carnival',
+      'tennis', 'golf', 'basketball', 'football', 'volleyball', 'marathon',
+      'karate', 'judo', 'kung fu', 'ski', 'surf', 'rugby', 'hockey',
+      'robot', 'laser', 'radar', 'satellite', 'astronaut', 'cosmos',
+      'algebra', 'algorithm', 'zero', 'algebra', 'safari', 'atlas',
+      'museum', 'stadium', 'hospital', 'pharmacy', 'doctor', 'virus',
+      'bacteria', 'microbe', 'vitamin', 'protein', 'insulin', 'vaccine',
+      'agenda', 'propaganda', 'amnesia', 'anorexia', 'phobia', 'trauma',
+      'panorama', 'drama', 'dilemma', 'enigma', 'stigma', 'diploma',
+      'favor', 'color', 'terror', 'error', 'horror', 'tumor', 'humor',
+      'motor', 'sector', 'factor', 'vector', 'reactor', 'detector',
+      'sensor', 'mentor', 'tutor', 'pastor', 'inventor', 'conductor',
+      'inspector', 'instructor', 'constructor', 'destructor',
+      'central', 'general', 'federal', 'lateral', 'mineral', 'animal',
+      'criminal', 'original', 'final', 'total', 'brutal', 'vital',
+      'formal', 'normal', 'natural', 'cultural', 'social', 'legal',
+      'moral', 'mental', 'dental', 'brutal', 'fatal', 'rural',
+      'ideal', 'real', 'visual', 'manual', 'actual', 'virtual',
+      // More international words and proper nouns
+      'ferry', 'extra', 'idea', 'argentina', 'barcelona', 'terminal',
+      'director', 'conductor', 'professor', 'doctor', 'actor', 'mentor',
+      'sensor', 'receptor', 'inspector', 'instructor', 'reactor',
+      'festival', 'hospital', 'animal', 'mineral', 'criminal',
+      'diagonal', 'original', 'traditional', 'regional', 'colonial',
+      'tropical', 'industrial', 'commercial', 'cultural', 'personal',
+      'principal', 'capital', 'pedal', 'medal', 'spiral', 'rival',
+      'canal', 'coral', 'crystal', 'sandal', 'metal', 'petal',
+      'continental', 'accidental', 'fundamental', 'monumental',
+      'sentimental', 'experimental', 'elemental', 'ornamental',
+      'incidental', 'horizontal', 'vertical', 'oriental',
+      'color', 'favor', 'error', 'horror', 'terror', 'humor',
+      'motor', 'sector', 'factor', 'vector', 'tumor', 'vigor',
+      'paella', 'salsa', 'tango', 'mambo', 'samba', 'rumba',
+      'fiesta', 'siesta', 'vista', 'pasta', 'pizza', 'latte',
+      'souvenir', 'croissant', 'baguette', 'elite', 'facade',
+      'debut', 'detour', 'entrepreneur', 'plateau', 'boutique',
+      'whatsapp', 'facebook', 'twitter', 'instagram', 'uber',
+      'capoeira', 'pikachu', 'karaoke', 'manga', 'anime', 'emoji',
+      'sushi', 'tofu', 'wasabi', 'sake', 'tsunami', 'kimono',
+    ]);
+    const normalized = text.toLowerCase().replace(/[^a-z]/g, '');
+    if (!KNOWN_COGNATES.has(normalized) && !KNOWN_COGNATES.has(text.toLowerCase())) {
+      stats.hit('self_referencing', sourceWord);
+      stats.flag(sourceWord, 'self_referencing');
+      flagReasons.push('self_referencing');
+    }
+    // Keep the text regardless — it's the correct translation for cognates
   }
 
   // ── Rule 18: Mixed case cleanup ──

@@ -591,6 +591,9 @@ function lemmatizeVerb(word) {
 
   // -ed removal
   if (w.endsWith('ed') && w.length > 3) {
+    // Words ending in -eed are base forms, not -ed suffixed (need, feed, seed, weed, bleed, breed, speed, deed)
+    if (w.endsWith('eed')) return w;
+
     const stem = w.slice(0, -2);
 
     // -ied → -y: carried → carry

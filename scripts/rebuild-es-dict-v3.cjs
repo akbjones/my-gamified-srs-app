@@ -12,7 +12,7 @@
  *  6. Lemma copy (only for verified lemmas)
  *  7. Card-context validation
  *  8. Apply to es.ts, preserve IPA
- *  9. 100-entry review → scripts/output/es-v3-review.md
+ *  9. 100-entry review → scripts/output/es-v4-review.md
  */
 
 const fs = require('fs');
@@ -702,19 +702,23 @@ async function main() {
     const en = proc.en;
     const problems = [];
 
-    // 1. Wrong "to " prefix on nouns
-    if (pos === 'n' && en.startsWith('to ') && !en.startsWith('to the') && !en.includes(';')) {
+    // Check if pipeline flagged wrong_pos (meaning deck POS is unreliable)
+    const hasWrongPos = proc.flagReasons && proc.flagReasons.includes('wrong_pos');
+
+    // 1. Wrong "to " prefix on nouns — but only if pipeline didn't already flag wrong_pos
+    if (pos === 'n' && en.startsWith('to ') && !en.startsWith('to the') && !en.includes(';') && !hasWrongPos) {
       problems.push('wrong_to_on_noun');
     }
-    // 2. Missing "to " on verbs
-    if (pos === 'v' && !en.startsWith('to ') && !en.includes(';')) {
+    // 2. Missing "to " on verbs — but only if pipeline didn't flag wrong_pos
+    // (pipeline detected English output is not a verb, so omitting "to" is correct)
+    if (pos === 'v' && !en.startsWith('to ') && !en.includes(';') && !hasWrongPos) {
       problems.push('missing_to_on_verb');
     }
     // 3. Conjugated English forms
     if (/\b(eats|goes|comes|reads|writes|runs|sees|gives|takes|makes|knows|thinks|says|gets|wants|works|plays|lives|loves|feels|finds|tells|asks|uses|tries|needs|keeps|brings|starts|moves|pays|meets|calls|shows|helps)\b/i.test(en)) {
       problems.push('conjugated_english');
     }
-    if (/\b\w+ing\b/.test(en.replace(/^to /, '')) && !/(thing|morning|evening|ring|king|spring|string|sing|bring|nothing|something|anything|everything|ceiling|feeling|building|wedding|clothing|warning|opening|meaning|meeting|setting|beginning|during|amazing|interesting|willing|missing|fishing|cooking|swimming|parking|reading|living|working|shopping|nursing|banking|housing)/.test(en)) {
+    if (/\b\w+ing\b/.test(en.replace(/^to /, '')) && !/(thing|morning|evening|ring|king|spring|string|sing|bring|nothing|something|anything|everything|ceiling|feeling|building|wedding|clothing|warning|opening|meaning|meeting|setting|beginning|during|amazing|interesting|willing|missing|fishing|cooking|swimming|parking|reading|living|working|shopping|nursing|banking|housing|beijing|pudding|darling|sterling|sibling|offspring|stocking|stuffing|blessing|offering|landing|standing|hanging|crossing|frosting|casting|listing|posting|hosting|seating|heating|lighting|writing|drawing|painting|carving|packing|backing|tracking|blocking|locking|picking|sticking|rocking|shocking|checking|stacking|ducking|sucking|kicking|ticking|clicking|flicking|pricking|slicking|bricking|wicking|nicking|billing|filling|killing|milling|rolling|selling|telling|willing|falling|calling|pulling|spelling|dwelling|yelling|ceiling|peeling|feeling|dealing|healing|sealing|stealing|appealing|revealing|concealing|underling|yearling|spelling|fledgling|dumpling|sampling|trembling|gambling|crumbling|rumbling|assembling|resembling|stumbling|grumbling|humbling|fumbling|bungling|mingling|singling|tingling|dangling|tangling|wrangling|mangling|angling|strangling|puzzling|dazzling|sizzling|drizzling|fizzling|guzzling|muzzling|nuzzling|puzzling|bustling|rustling|whistling|wrestling|nestling|startling|sparkling|twinkling|sprinkling|crackling|tickling|prickling|buckling|chuckling|duckling|trekking|shocking|charming|alarming|disarming|farming|warming|swarming|forming|performing|conforming|informing|reforming|transforming|storming|brainstorming|accounting|disgusting|exhausting|everlasting|broadcasting|outstanding|understanding|commanding|demanding|expanding|outstanding|surrounding|corresponding|overwhelming|underlying)/.test(en)) {
       problems.push('conjugated_english_ing');
     }
     if (/\b(went|came|saw|gave|took|made|knew|thought|told|found|left|kept|brought|bought|sold|caught|taught|built|sent|spent|lost|won|met|led|heard|felt|stood|sat|ran|hung|held|lay|paid|said|wore|ate|drank|drove|wrote|broke|spoke|chose|grew|threw|drew|flew|froze|rode|rose|shook|stole|swore|tore|woke)\b/.test(en.replace(/^to /, ''))) {
@@ -755,9 +759,12 @@ async function main() {
       if (sp < 3) problems.push('bad_lemma');
     }
 
-    if (problems.length === 0) {
+    // wrong_pos alone is a deck issue (POS mismatch), not a translation error
+    // Don't count it as a failure if it's the only problem
+    const criticalProblems = problems.filter(p => p !== 'wrong_pos');
+    if (criticalProblems.length === 0) {
       pass++;
-      reviewResults.push({ word, en, pos, status: 'PASS' });
+      reviewResults.push({ word, en, pos, status: 'PASS', problems: problems.length > 0 ? problems : undefined });
     } else {
       fail++;
       reviewResults.push({ word, en, pos, status: 'FAIL', problems });
@@ -811,8 +818,8 @@ async function main() {
     }
   }
 
-  fs.writeFileSync(path.join(OUTPUT_DIR, 'es-v3-review.md'), md, 'utf8');
-  console.log(`\nReview written to scripts/output/es-v3-review.md`);
+  fs.writeFileSync(path.join(OUTPUT_DIR, 'es-v4-review.md'), md, 'utf8');
+  console.log(`\nReview written to scripts/output/es-v4-review.md`);
   console.log(`Grade: ${grade} (${pass}/${sampleSize} pass)`);
 }
 

@@ -319,4 +319,152 @@ function sleep(ms) {
   return new Promise(r => setTimeout(r, ms));
 }
 
-module.exports = { translateBatch, tokenize, looksLikeTruncation, REAL_ENGLISH_WORDS };
+/**
+ * Translate full sentences via Google Translate API.
+ * Returns a map of sentence → English translation.
+ * Batches sentences to stay within API limits.
+ */
+async function translateSentences(sentences, sourceLang, batchSize = 50) {
+  const results = {};
+
+  for (let i = 0; i < sentences.length; i += batchSize) {
+    const batch = sentences.slice(i, i + batchSize);
+    const params = batch.map(s => 'q=' + encodeURIComponent(s)).join('&');
+    const url = `https://translation.googleapis.com/language/translate/v2?key=${API_KEY}&source=${sourceLang}&target=en&${params}`;
+
+    const translations = await new Promise((resolve, reject) => {
+      https.get(url, (res) => {
+        let data = '';
+        res.on('data', c => data += c);
+        res.on('end', () => {
+          try {
+            resolve(JSON.parse(data).data.translations.map(t =>
+              t.translatedText
+                .replace(/&#39;/g, "'")
+                .replace(/&amp;/g, '&')
+                .replace(/&quot;/g, '"')
+                .replace(/&lt;/g, '<')
+                .replace(/&gt;/g, '>')
+            ));
+          } catch(e) { reject(e); }
+        });
+      }).on('error', reject);
+    });
+
+    batch.forEach((sentence, j) => {
+      results[sentence] = translations[j];
+    });
+
+    if (i % (batchSize * 10) === 0 && i > 0) {
+      console.log(`  Translated ${i}/${sentences.length} sentences...`);
+    }
+
+    await sleep(200);
+  }
+
+  return results;
+}
+
+/**
+ * For a source word with an individual translation, validate against
+ * sentence translations and card English. Returns the best definition,
+ * potentially with multiple senses.
+ *
+ * @param {string} word - source language word
+ * @param {string} individualTranslation - Google's word-level translation
+ * @param {Array<{cardEnglish: string, sentenceTranslation: string}>} contexts
+ *   - all cards containing this word, with their English and Google sentence translation
+ * @returns {string} best definition, possibly multi-sense ("morning; tomorrow")
+ */
+function validateAndEnrich(word, individualTranslation, contexts) {
+  if (!contexts || contexts.length === 0) return individualTranslation;
+
+  const indivLower = individualTranslation.toLowerCase().replace(/^to /, '');
+  const indivWords = indivLower.split(/[\s,;\/]+/).filter(w => w.length > 2);
+
+  // Check: does the individual translation appear in any card's English or sentence translation?
+  let indivMatchCount = 0;
+  const alternativeSenses = new Map(); // sense → count
+
+  for (const { cardEnglish, sentenceTranslation } of contexts) {
+    const cardLower = cardEnglish.toLowerCase();
+    const sentLower = (sentenceTranslation || '').toLowerCase();
+
+    // Does individual translation match?
+    const indivMatches = indivWords.some(w => cardLower.includes(w) || sentLower.includes(w));
+    if (indivMatches) indivMatchCount++;
+
+    // Find words in card/sentence English that could be alternative senses
+    // (words not in the individual translation)
+    const cardWords = cardLower.split(/\s+/).filter(w => w.length > 2);
+    const sentWords = sentLower.split(/\s+/).filter(w => w.length > 2);
+    const allContextWords = [...new Set([...cardWords, ...sentWords])];
+
+    // Common English stop words to skip
+    const STOP = new Set(['the','and','but','for','are','was','were','been','being','has','had','have',
+      'does','did','not','you','she','his','her','its','our','they','them','will','would','could',
+      'should','shall','can','may','might','must','that','this','with','from','into','than','then',
+      'very','just','also','more','most','some','each','both','such','when','where','what','which',
+      'who','how','why','there','here','about','after','before','between','through','during','without']);
+
+    for (const w of allContextWords) {
+      if (STOP.has(w)) continue;
+      if (indivWords.includes(w)) continue; // already in individual translation
+      // This is a potential alternative sense — but only if it's not just a common word
+      // We'll collect all and pick the most frequent
+      alternativeSenses.set(w, (alternativeSenses.get(w) || 0) + 1);
+    }
+  }
+
+  // Count how many contexts DON'T match the individual translation
+  const mismatchCount = contexts.length - indivMatchCount;
+
+  // If individual matches ALL contexts, it's definitely right
+  if (indivMatchCount === contexts.length) return individualTranslation;
+
+  // Find the most common alternative sense from mismatched contexts only
+  const mismatchAlternatives = new Map();
+  for (const { cardEnglish, sentenceTranslation } of contexts) {
+    const cardLower = cardEnglish.toLowerCase();
+    const sentLower = (sentenceTranslation || '').toLowerCase();
+
+    // Skip contexts where individual translation already matches
+    const indivMatches = indivWords.some(w => cardLower.includes(w) || sentLower.includes(w));
+    if (indivMatches) continue;
+
+    // For mismatched contexts, collect content words from card English
+    const STOP = new Set(['the','and','but','for','are','was','were','been','being','has','had','have',
+      'does','did','not','you','she','his','her','its','our','they','them','will','would','could',
+      'should','shall','can','may','might','must','that','this','with','from','into','than','then',
+      'very','just','also','more','most','some','each','both','such','when','where','what','which',
+      'who','how','why','there','here','about','after','before','between','through','during','without',
+      'every','still','only','much','many','well','like','make','made','take','took','come','came',
+      'give','gave','know','knew','think','want','need','feel','seem','look','find','found','keep',
+      'tell','told','said','say','see','saw','get','got','going','been','being','your','their',
+      'other','even','back','down','over','under','around','while']);
+
+    const cardWords = cardLower.split(/[\s.,!?;:]+/).filter(w => w.length > 2 && !STOP.has(w));
+    for (const w of cardWords) {
+      mismatchAlternatives.set(w, (mismatchAlternatives.get(w) || 0) + 1);
+    }
+  }
+
+  // Pick the best alternative
+  const sorted = [...mismatchAlternatives.entries()].sort((a, b) => b[1] - a[1]);
+
+  if (sorted.length > 0 && sorted[0][1] >= 1) {
+    const bestAlt = sorted[0][0];
+    // Return both senses
+    if (indivMatchCount > 0) {
+      // Individual is right sometimes, alternative is right other times → show both
+      return bestAlt + '; ' + individualTranslation.toLowerCase().replace(/^to /, '');
+    } else {
+      // Individual NEVER matches → use alternative as primary, individual as secondary
+      return bestAlt + '; ' + individualTranslation.toLowerCase().replace(/^to /, '');
+    }
+  }
+
+  return individualTranslation;
+}
+
+module.exports = { translateBatch, translateSentences, tokenize, validateAndEnrich, looksLikeTruncation, REAL_ENGLISH_WORDS };

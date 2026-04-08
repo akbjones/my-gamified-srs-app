@@ -1,0 +1,20 @@
+{
+  "language": "hi",
+  "total_entries": 4743,
+  "total_checked": 500,
+  "passed": 499,
+  "failed": 1,
+  "pass_rate": "99.8%",
+  "grade": "A",
+  "failures_by_type": {
+    "not_english": 1
+  },
+  "failure_examples": [
+    {
+      "word": "गुप्तचर",
+      "en": "spy",
+      "pos": "n",
+      "issues": "not_english"
+    }
+  ]
+}

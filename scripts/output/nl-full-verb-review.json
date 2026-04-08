@@ -1,0 +1,4939 @@
+{
+  "stats": {
+    "toOnNonVerb": 0,
+    "verbFormIssues": 2,
+    "missingTo": 1,
+    "garbageSemi": 101,
+    "wrongMeaning": 125,
+    "backslash": 0,
+    "truncated": 0,
+    "wrongPos": 100,
+    "wrongLemma": 1,
+    "total": 362
+  },
+  "fixes": [
+    {
+      "key": "a10",
+      "old": {
+        "en": "a10",
+        "pos": "n"
+      },
+      "new": {
+        "en": "A10 motorway",
+        "pos": "n"
+      },
+      "issue": "ok",
+      "note": "ok"
+    },
+    {
+      "key": "a2",
+      "old": {
+        "en": "to drive; a2",
+        "pos": "v"
+      },
+      "new": {
+        "en": "A2 motorway",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "proper noun"
+    },
+    {
+      "key": "aalsmeer",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "Aalsmeer",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "place name not ?"
+    },
+    {
+      "key": "aanbesteding",
+      "old": {
+        "en": "to tender",
+        "pos": "v"
+      },
+      "new": {
+        "en": "tender, public tender",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "aanbod",
+      "old": {
+        "en": "to offer",
+        "pos": "v"
+      },
+      "new": {
+        "en": "offer",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "aanbreekt",
+      "old": {
+        "en": "spring",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "to dawn, to break",
+        "pos": "v",
+        "lemma": "aanbreken"
+      },
+      "issue": "wrong-pos",
+      "note": "not adj"
+    },
+    {
+      "key": "aandacht",
+      "old": {
+        "en": "attention",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "attention",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "aandachtig",
+      "old": {
+        "en": "to read; attentive",
+        "pos": "v"
+      },
+      "new": {
+        "en": "attentive",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos",
+      "note": "adj not verb"
+    },
+    {
+      "key": "aangekomen",
+      "old": {
+        "en": "to train; arrived",
+        "pos": "v"
+      },
+      "new": {
+        "en": "arrived",
+        "pos": "adj",
+        "lemma": "aankomen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"to train; arrived\""
+    },
+    {
+      "key": "aangelegd",
+      "old": {
+        "en": "soon; install",
+        "pos": "n",
+        "lemma": "aanleggen"
+      },
+      "new": {
+        "en": "installed, constructed",
+        "pos": "v",
+        "lemma": "aanleggen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"soon\""
+    },
+    {
+      "key": "aangenaam",
+      "old": {
+        "en": "nice meet",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "pleasant, nice",
+        "pos": "adj"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"nice meet\""
+    },
+    {
+      "key": "aangenamer",
+      "old": {
+        "en": "nice meet",
+        "pos": "n",
+        "lemma": "aangenaam"
+      },
+      "new": {
+        "en": "more pleasant",
+        "pos": "adj",
+        "lemma": "aangenaam"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"nice meet\""
+    },
+    {
+      "key": "aangenomen",
+      "old": {
+        "en": "law; accepted",
+        "pos": "n"
+      },
+      "new": {
+        "en": "accepted, assumed",
+        "pos": "adj"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"law\""
+    },
+    {
+      "key": "aangepast",
+      "old": {
+        "en": "amended",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "adapted, adjusted",
+        "pos": "adj"
+      },
+      "issue": "wrong-meaning",
+      "note": "adj not verb"
+    },
+    {
+      "key": "aangericht",
+      "old": {
+        "en": "to caused",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to cause",
+        "pos": "v",
+        "lemma": "aanrichten"
+      },
+      "issue": "wrong-meaning",
+      "note": "\"to caused\" past tense"
+    },
+    {
+      "key": "aangetast",
+      "old": {
+        "en": "to affected",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to affect",
+        "pos": "v",
+        "lemma": "aantasten"
+      },
+      "issue": "wrong-meaning",
+      "note": "\"to affected\" past tense"
+    },
+    {
+      "key": "aangewezen",
+      "old": {
+        "en": "to designated",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to designate",
+        "pos": "v",
+        "lemma": "aanwijzen"
+      },
+      "issue": "wrong-meaning",
+      "note": "\"to designated\" past tense"
+    },
+    {
+      "key": "aangezien",
+      "old": {
+        "en": "sobriety; since",
+        "pos": "conj"
+      },
+      "new": {
+        "en": "since, because",
+        "pos": "conj"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"sobriety\""
+    },
+    {
+      "key": "aangifte",
+      "old": {
+        "en": "neighbor; declaration",
+        "pos": "n"
+      },
+      "new": {
+        "en": "declaration, report",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"neighbor\""
+    },
+    {
+      "key": "aanhoorden",
+      "old": {
+        "en": "tale; heard",
+        "pos": "n"
+      },
+      "new": {
+        "en": "listened to",
+        "pos": "v",
+        "lemma": "aanhoren"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"tale\""
+    },
+    {
+      "key": "aanleggen",
+      "old": {
+        "en": "soon; install",
+        "pos": "n"
+      },
+      "new": {
+        "en": "to install, to construct",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"soon\""
+    },
+    {
+      "key": "aanleiding",
+      "old": {
+        "en": "to following; cause",
+        "pos": "v"
+      },
+      "new": {
+        "en": "cause, reason",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "aanpak",
+      "old": {
+        "en": "to approach",
+        "pos": "v"
+      },
+      "new": {
+        "en": "approach",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "aanschouwd",
+      "old": {
+        "en": "to behold, see",
+        "pos": "v"
+      },
+      "new": {
+        "en": "beheld, witnessed",
+        "pos": "v",
+        "lemma": "aanschouwen"
+      },
+      "issue": "wrong-meaning",
+      "note": "missing infinitive \"to\""
+    },
+    {
+      "key": "aansluiting",
+      "old": {
+        "en": "to following; connection",
+        "pos": "v"
+      },
+      "new": {
+        "en": "connection",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "aanstaande",
+      "old": {
+        "en": "to means; expectant",
+        "pos": "v"
+      },
+      "new": {
+        "en": "upcoming, expectant",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos",
+      "note": "adj not verb"
+    },
+    {
+      "key": "aanstaat",
+      "old": {
+        "en": "to vacuum; is on",
+        "pos": "v"
+      },
+      "new": {
+        "en": "is on, pleases",
+        "pos": "v",
+        "lemma": "aanstaan"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"vacuum\""
+    },
+    {
+      "key": "aantrekken",
+      "old": {
+        "en": "bed; attract",
+        "pos": "n"
+      },
+      "new": {
+        "en": "to attract, to put on",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"bed\""
+    },
+    {
+      "key": "aanvaardt",
+      "old": {
+        "en": "to accept",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to accept",
+        "pos": "v",
+        "lemma": "aanvaarden"
+      },
+      "issue": "ok",
+      "note": "ok"
+    },
+    {
+      "key": "aanvoelt",
+      "old": {
+        "en": "to feel",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to feel, to sense",
+        "pos": "v",
+        "lemma": "aanvoelen"
+      },
+      "issue": "ok",
+      "note": "ok"
+    },
+    {
+      "key": "aanwezig",
+      "old": {
+        "en": "present",
+        "pos": "n"
+      },
+      "new": {
+        "en": "present",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos",
+      "note": "adj not noun"
+    },
+    {
+      "key": "aanwezigen",
+      "old": {
+        "en": "chairman; attendee",
+        "pos": "n"
+      },
+      "new": {
+        "en": "attendees",
+        "pos": "n",
+        "lemma": "aanwezige"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"chairman\""
+    },
+    {
+      "key": "aanwijzingen",
+      "old": {
+        "en": "to instruction",
+        "pos": "v"
+      },
+      "new": {
+        "en": "instructions, directions",
+        "pos": "n",
+        "lemma": "aanwijzing"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "aanzien",
+      "old": {
+        "en": "tolerance; respect",
+        "pos": "n"
+      },
+      "new": {
+        "en": "prestige, respect",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"tolerance\""
+    },
+    {
+      "key": "aap",
+      "old": {
+        "en": "now; monkey",
+        "pos": "n"
+      },
+      "new": {
+        "en": "monkey",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"now\""
+    },
+    {
+      "key": "aardappelballetjes",
+      "old": {
+        "en": "potato ball",
+        "pos": "n"
+      },
+      "new": {
+        "en": "potato balls",
+        "pos": "n"
+      },
+      "issue": "ok",
+      "note": "ok"
+    },
+    {
+      "key": "aardbeien",
+      "old": {
+        "en": "strawberry",
+        "pos": "n"
+      },
+      "new": {
+        "en": "strawberries",
+        "pos": "n",
+        "lemma": "aardbei"
+      },
+      "issue": "ok",
+      "note": "ok"
+    },
+    {
+      "key": "aarde",
+      "old": {
+        "en": "soil; earth",
+        "pos": "n"
+      },
+      "new": {
+        "en": "earth, soil",
+        "pos": "n"
+      },
+      "issue": "ok",
+      "note": "ok"
+    },
+    {
+      "key": "aardige",
+      "old": {
+        "en": "nice",
+        "pos": "n",
+        "lemma": "aardig"
+      },
+      "new": {
+        "en": "nice",
+        "pos": "adj",
+        "lemma": "aardig"
+      },
+      "issue": "ok",
+      "note": "ok"
+    },
+    {
+      "key": "abstractieniveau",
+      "old": {
+        "en": "to level of abstraction",
+        "pos": "v"
+      },
+      "new": {
+        "en": "level of abstraction",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "accenten",
+      "old": {
+        "en": "to accent",
+        "pos": "v"
+      },
+      "new": {
+        "en": "accents",
+        "pos": "n",
+        "lemma": "accent"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "acht",
+      "old": {
+        "en": "to train; eight",
+        "pos": "v"
+      },
+      "new": {
+        "en": "eight",
+        "pos": "num"
+      },
+      "issue": "wrong-pos",
+      "note": "number not verb"
+    },
+    {
+      "key": "achteraan",
+      "old": {
+        "en": "at the back",
+        "pos": "n"
+      },
+      "new": {
+        "en": "at the back",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adv not noun"
+    },
+    {
+      "key": "achteraf",
+      "old": {
+        "en": "afterward",
+        "pos": "n"
+      },
+      "new": {
+        "en": "afterward",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adv not noun"
+    },
+    {
+      "key": "achternaam",
+      "old": {
+        "en": "last; surname",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "surname, last name",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "noun not adj"
+    },
+    {
+      "key": "achthonderdvijftig",
+      "old": {
+        "en": "eight hundred",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "eight hundred and fifty",
+        "pos": "num"
+      },
+      "issue": "wrong-meaning",
+      "note": "incomplete"
+    },
+    {
+      "key": "achttiende",
+      "old": {
+        "en": "eighteenth",
+        "pos": "n"
+      },
+      "new": {
+        "en": "eighteenth",
+        "pos": "num"
+      },
+      "issue": "wrong-pos",
+      "note": "num not noun"
+    },
+    {
+      "key": "adellijke",
+      "old": {
+        "en": "noble",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "noble",
+        "pos": "adj",
+        "lemma": "adellijk"
+      },
+      "issue": "ok",
+      "note": "ok"
+    },
+    {
+      "key": "adem",
+      "old": {
+        "en": "to matter; breath",
+        "pos": "v"
+      },
+      "new": {
+        "en": "breath",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "adviezen",
+      "old": {
+        "en": "to advice",
+        "pos": "v",
+        "lemma": "advies"
+      },
+      "new": {
+        "en": "advice, tips",
+        "pos": "n",
+        "lemma": "advies"
+      },
+      "issue": "wrong-pos",
+      "note": "noun plural"
+    },
+    {
+      "key": "afdelingen",
+      "old": {
+        "en": "to department",
+        "pos": "v",
+        "lemma": "afdeling"
+      },
+      "new": {
+        "en": "departments",
+        "pos": "n",
+        "lemma": "afdeling"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "afdwong",
+      "old": {
+        "en": "to resigned; enforced",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to enforce",
+        "pos": "v",
+        "lemma": "afdwingen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"resigned\""
+    },
+    {
+      "key": "afgegeven",
+      "old": {
+        "en": "to delivered; issued",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to deliver, to issue",
+        "pos": "v",
+        "lemma": "afgeven"
+      },
+      "issue": "wrong-meaning",
+      "note": "\"to delivered\" past tense"
+    },
+    {
+      "key": "afgelopen",
+      "old": {
+        "en": "to changed; last",
+        "pos": "v"
+      },
+      "new": {
+        "en": "past, last",
+        "pos": "adj"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"changed\""
+    },
+    {
+      "key": "afgenomen",
+      "old": {
+        "en": "survey; decreased",
+        "pos": "v"
+      },
+      "new": {
+        "en": "decreased, taken",
+        "pos": "v",
+        "lemma": "afnemen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"survey\""
+    },
+    {
+      "key": "afgerond",
+      "old": {
+        "en": "to complete",
+        "pos": "v",
+        "lemma": "afronden"
+      },
+      "new": {
+        "en": "to complete, to round off",
+        "pos": "v",
+        "lemma": "afronden"
+      },
+      "issue": "ok",
+      "note": "ok"
+    },
+    {
+      "key": "afgestemd",
+      "old": {
+        "en": "academic; tuned",
+        "pos": "n"
+      },
+      "new": {
+        "en": "tuned, coordinated",
+        "pos": "adj"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"academic\""
+    },
+    {
+      "key": "afgezien",
+      "old": {
+        "en": "apart from",
+        "pos": "n"
+      },
+      "new": {
+        "en": "apart from",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adv not noun"
+    },
+    {
+      "key": "afkeer",
+      "old": {
+        "en": "aversion",
+        "pos": "n"
+      },
+      "new": {
+        "en": "aversion, dislike",
+        "pos": "n"
+      },
+      "issue": "ok",
+      "note": "ok"
+    },
+    {
+      "key": "afkijken",
+      "old": {
+        "en": "although; copy",
+        "pos": "n"
+      },
+      "new": {
+        "en": "to copy, to cheat",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"although\""
+    },
+    {
+      "key": "afkoelen",
+      "old": {
+        "en": "to off, cool down",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to cool down",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"to off\""
+    },
+    {
+      "key": "afkomst",
+      "old": {
+        "en": "proud; origin",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "origin, descent",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"proud\""
+    },
+    {
+      "key": "afloop",
+      "old": {
+        "en": "to match; outcome",
+        "pos": "v"
+      },
+      "new": {
+        "en": "outcome, end",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "aflopen",
+      "old": {
+        "en": "end",
+        "pos": "n"
+      },
+      "new": {
+        "en": "to end, to expire",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"end\" — needs \"to \""
+    },
+    {
+      "key": "afrondt",
+      "old": {
+        "en": "to says; round",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to round off, to complete",
+        "pos": "v",
+        "lemma": "afronden"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"says\""
+    },
+    {
+      "key": "afspraken",
+      "old": {
+        "en": "to arrangement, agreement",
+        "pos": "v",
+        "lemma": "afspraak"
+      },
+      "new": {
+        "en": "appointments, agreements",
+        "pos": "n",
+        "lemma": "afspraak"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "afstandsbediening",
+      "old": {
+        "en": "remote control",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "remote control",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "afval",
+      "old": {
+        "en": "to throws; waste",
+        "pos": "v"
+      },
+      "new": {
+        "en": "waste, garbage",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "afvalverwerkingsbedrijf",
+      "old": {
+        "en": "to waste processing",
+        "pos": "v"
+      },
+      "new": {
+        "en": "waste processing plant",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "afwachting",
+      "old": {
+        "en": "to wait",
+        "pos": "v"
+      },
+      "new": {
+        "en": "anticipation, waiting",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "akkoord",
+      "old": {
+        "en": "to agree",
+        "pos": "v"
+      },
+      "new": {
+        "en": "agreement, okay",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun/adj not verb"
+    },
+    {
+      "key": "allemaal",
+      "old": {
+        "en": "everyone; all",
+        "pos": "n"
+      },
+      "new": {
+        "en": "all, everyone",
+        "pos": "pron"
+      },
+      "issue": "wrong-pos",
+      "note": "pron not noun"
+    },
+    {
+      "key": "allen",
+      "old": {
+        "en": "to all",
+        "pos": "v"
+      },
+      "new": {
+        "en": "all",
+        "pos": "pron"
+      },
+      "issue": "wrong-pos",
+      "note": "pron not verb"
+    },
+    {
+      "key": "allengs",
+      "old": {
+        "en": "gradually",
+        "pos": "n"
+      },
+      "new": {
+        "en": "gradually",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adv not noun"
+    },
+    {
+      "key": "allerbeste",
+      "old": {
+        "en": "very best",
+        "pos": "num"
+      },
+      "new": {
+        "en": "very best",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos",
+      "note": "adj not num"
+    },
+    {
+      "key": "allergootste",
+      "old": {
+        "en": "biggest; largest",
+        "pos": "n"
+      },
+      "new": {
+        "en": "very biggest",
+        "pos": "adj"
+      },
+      "issue": "wrong-meaning",
+      "note": "likely typo for allergrootste"
+    },
+    {
+      "key": "allerminst",
+      "old": {
+        "en": "not at all",
+        "pos": "n"
+      },
+      "new": {
+        "en": "not at all",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adv not noun"
+    },
+    {
+      "key": "alom",
+      "old": {
+        "en": "everywhere",
+        "pos": "n"
+      },
+      "new": {
+        "en": "everywhere",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adv not noun"
+    },
+    {
+      "key": "alpen",
+      "old": {
+        "en": "to alp",
+        "pos": "v"
+      },
+      "new": {
+        "en": "Alps",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "proper noun not verb"
+    },
+    {
+      "key": "alsnog",
+      "old": {
+        "en": "after all",
+        "pos": "n"
+      },
+      "new": {
+        "en": "after all, still",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adv not noun"
+    },
+    {
+      "key": "alsof",
+      "old": {
+        "en": "to pretends; as if",
+        "pos": "v"
+      },
+      "new": {
+        "en": "as if",
+        "pos": "conj"
+      },
+      "issue": "wrong-pos",
+      "note": "conj not verb"
+    },
+    {
+      "key": "alternatieven",
+      "old": {
+        "en": "to alternatif",
+        "pos": "v"
+      },
+      "new": {
+        "en": "alternatives",
+        "pos": "n",
+        "lemma": "alternatief"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "althans",
+      "old": {
+        "en": "at least",
+        "pos": "n"
+      },
+      "new": {
+        "en": "at least",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adv not noun"
+    },
+    {
+      "key": "alzo",
+      "old": {
+        "en": "so, consequently",
+        "pos": "n"
+      },
+      "new": {
+        "en": "so, consequently",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adv not noun"
+    },
+    {
+      "key": "ambitieus",
+      "old": {
+        "en": "ambitious",
+        "pos": "n"
+      },
+      "new": {
+        "en": "ambitious",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos",
+      "note": "adj not noun"
+    },
+    {
+      "key": "ambtenaar",
+      "old": {
+        "en": "official",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "civil servant",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "amper",
+      "old": {
+        "en": "barely",
+        "pos": "n"
+      },
+      "new": {
+        "en": "barely",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adv not noun"
+    },
+    {
+      "key": "amuseren",
+      "old": {
+        "en": "wonderful; amuse",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "to amuse",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"wonderful\""
+    },
+    {
+      "key": "analyseert",
+      "old": {
+        "en": "to analyz",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to analyze",
+        "pos": "v",
+        "lemma": "analyseren"
+      },
+      "issue": "wrong-meaning",
+      "note": "truncated \"analyz\""
+    },
+    {
+      "key": "anderhalf",
+      "old": {
+        "en": "one and a half",
+        "pos": "n"
+      },
+      "new": {
+        "en": "one and a half",
+        "pos": "num"
+      },
+      "issue": "wrong-pos",
+      "note": "num not noun"
+    },
+    {
+      "key": "anderhalve",
+      "old": {
+        "en": "one and a half",
+        "pos": "n",
+        "lemma": "anderhalf"
+      },
+      "new": {
+        "en": "one and a half",
+        "pos": "num",
+        "lemma": "anderhalf"
+      },
+      "issue": "wrong-pos",
+      "note": "num not noun"
+    },
+    {
+      "key": "andermans",
+      "old": {
+        "en": "doesn't; someone else'",
+        "pos": "n"
+      },
+      "new": {
+        "en": "someone else's",
+        "pos": "pron"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"doesn't\""
+    },
+    {
+      "key": "annuleerde",
+      "old": {
+        "en": "to cancel",
+        "pos": "v",
+        "lemma": "annuleerden"
+      },
+      "new": {
+        "en": "to cancel",
+        "pos": "v",
+        "lemma": "annuleren"
+      },
+      "issue": "wrong-lemma",
+      "note": "wrong lemma annuleerden"
+    },
+    {
+      "key": "antwerpen",
+      "old": {
+        "en": "to antwerp",
+        "pos": "v"
+      },
+      "new": {
+        "en": "Antwerp",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "proper noun not verb"
+    },
+    {
+      "key": "antwoordde",
+      "old": {
+        "en": "replied; answered",
+        "pos": "n",
+        "lemma": "antwoorden"
+      },
+      "new": {
+        "en": "answered",
+        "pos": "v",
+        "lemma": "antwoorden"
+      },
+      "issue": "wrong-pos",
+      "note": "verb not noun"
+    },
+    {
+      "key": "app",
+      "old": {
+        "en": "app",
+        "pos": "adv"
+      },
+      "new": {
+        "en": "app",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adv"
+    },
+    {
+      "key": "appel",
+      "old": {
+        "en": "to bite; apple",
+        "pos": "v"
+      },
+      "new": {
+        "en": "apple",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "appelbomen",
+      "old": {
+        "en": "to apple tree",
+        "pos": "v"
+      },
+      "new": {
+        "en": "apple trees",
+        "pos": "n",
+        "lemma": "appelboom"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "appels",
+      "old": {
+        "en": "to bite; apple",
+        "pos": "v",
+        "lemma": "appel"
+      },
+      "new": {
+        "en": "apples",
+        "pos": "n",
+        "lemma": "appel"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "appeltje",
+      "old": {
+        "en": "to bite; apple",
+        "pos": "v",
+        "lemma": "appel"
+      },
+      "new": {
+        "en": "little apple",
+        "pos": "n",
+        "lemma": "appel"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "appeltje-eitje",
+      "old": {
+        "en": "a",
+        "pos": "n"
+      },
+      "new": {
+        "en": "piece of cake",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "truncated \"a\""
+    },
+    {
+      "key": "appeltjeeitje",
+      "old": {
+        "en": "piece",
+        "pos": "n"
+      },
+      "new": {
+        "en": "piece of cake",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "truncated \"piece\""
+    },
+    {
+      "key": "arbeidsomstandigheden",
+      "old": {
+        "en": "to work conditions",
+        "pos": "v"
+      },
+      "new": {
+        "en": "working conditions",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "arbeidsvoorwaarden",
+      "old": {
+        "en": "to employment condition",
+        "pos": "v"
+      },
+      "new": {
+        "en": "employment conditions",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "automaat",
+      "old": {
+        "en": "top; automatic",
+        "pos": "n"
+      },
+      "new": {
+        "en": "automatic",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"top\""
+    },
+    {
+      "key": "bakker",
+      "old": {
+        "en": "good; baker",
+        "pos": "n"
+      },
+      "new": {
+        "en": "baker",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"good\""
+    },
+    {
+      "key": "band",
+      "old": {
+        "en": "good; band",
+        "pos": "n"
+      },
+      "new": {
+        "en": "band",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"good\""
+    },
+    {
+      "key": "bedekt",
+      "old": {
+        "en": "snow; covered",
+        "pos": "v"
+      },
+      "new": {
+        "en": "covered",
+        "pos": "adj"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"snow; covered\""
+    },
+    {
+      "key": "beethoven",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "Beethoven",
+        "pos": "n"
+      },
+      "issue": "truncated",
+      "note": "proper name"
+    },
+    {
+      "key": "begin",
+      "old": {
+        "en": "to beginning; start",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to begin, to start",
+        "pos": "v",
+        "lemma": "beginnen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"beginning\""
+    },
+    {
+      "key": "behandeling",
+      "old": {
+        "en": "to taken; treatment",
+        "pos": "v"
+      },
+      "new": {
+        "en": "treatment",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "bekeken",
+      "old": {
+        "en": "review; look at",
+        "pos": "v",
+        "lemma": "bekijken"
+      },
+      "new": {
+        "en": "to review, to look at",
+        "pos": "v",
+        "lemma": "bekijken"
+      },
+      "issue": "ok",
+      "note": "ok"
+    },
+    {
+      "key": "bekommert",
+      "old": {
+        "en": "to takes; concern",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to worry, to concern oneself",
+        "pos": "v",
+        "lemma": "bekommeren"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"takes\""
+    },
+    {
+      "key": "bemoeit",
+      "old": {
+        "en": "doesn't; interfere",
+        "pos": "n"
+      },
+      "new": {
+        "en": "interfere",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "benadering",
+      "old": {
+        "en": "to approach; approximation",
+        "pos": "v"
+      },
+      "new": {
+        "en": "approach, approximation",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "benaderingen",
+      "old": {
+        "en": "to approach; approximation",
+        "pos": "v",
+        "lemma": "benadering"
+      },
+      "new": {
+        "en": "approaches",
+        "pos": "n",
+        "lemma": "benadering"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "berg",
+      "old": {
+        "en": "dear; mountain",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "mountain",
+        "pos": "adj"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"dear\""
+    },
+    {
+      "key": "beroep",
+      "old": {
+        "en": "doesn't; profession",
+        "pos": "n"
+      },
+      "new": {
+        "en": "profession",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "berustte",
+      "old": {
+        "en": "to resigned; rested",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to rest, to resign oneself",
+        "pos": "v",
+        "lemma": "berusten"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"resigned\""
+    },
+    {
+      "key": "beslist",
+      "old": {
+        "en": "to left; specifically",
+        "pos": "v"
+      },
+      "new": {
+        "en": "definitely, certainly",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adv not verb"
+    },
+    {
+      "key": "betreft",
+      "old": {
+        "en": "to planning; re",
+        "pos": "v",
+        "lemma": "betreffen"
+      },
+      "new": {
+        "en": "to concern, regarding",
+        "pos": "v",
+        "lemma": "betreffen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"planning\""
+    },
+    {
+      "key": "betrekken",
+      "old": {
+        "en": "next; involve",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "involve",
+        "pos": "adj"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"next\""
+    },
+    {
+      "key": "bevinding",
+      "old": {
+        "en": "to finding, discovery",
+        "pos": "v"
+      },
+      "new": {
+        "en": "finding, discovery",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "bewaard",
+      "old": {
+        "en": "to kept; preserved",
+        "pos": "v",
+        "lemma": "bewaren"
+      },
+      "new": {
+        "en": "preserved, kept",
+        "pos": "adj",
+        "lemma": "bewaren"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"kept\""
+    },
+    {
+      "key": "bezorgd",
+      "old": {
+        "en": "to delivered; worried",
+        "pos": "v"
+      },
+      "new": {
+        "en": "worried",
+        "pos": "adj"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"delivered\""
+    },
+    {
+      "key": "bezwaar",
+      "old": {
+        "en": "didn't; objection",
+        "pos": "n"
+      },
+      "new": {
+        "en": "objection",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"didn't\""
+    },
+    {
+      "key": "bijten",
+      "old": {
+        "en": "to bite; biting",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to bite",
+        "pos": "v"
+      },
+      "issue": "ok",
+      "note": "ok"
+    },
+    {
+      "key": "bleef",
+      "old": {
+        "en": "to makes; stay",
+        "pos": "v",
+        "lemma": "blijven"
+      },
+      "new": {
+        "en": "to stay, to remain",
+        "pos": "v",
+        "lemma": "blijven"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"makes\""
+    },
+    {
+      "key": "bleek",
+      "old": {
+        "en": "yet; pale",
+        "pos": "n"
+      },
+      "new": {
+        "en": "pale",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"yet\""
+    },
+    {
+      "key": "bleken",
+      "old": {
+        "en": "to turned out to be",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to turn out, to appear",
+        "pos": "v",
+        "lemma": "blijken"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"turned\""
+    },
+    {
+      "key": "bleven",
+      "old": {
+        "en": "to makes; stay",
+        "pos": "v",
+        "lemma": "blijven"
+      },
+      "new": {
+        "en": "to stay, to remain",
+        "pos": "v",
+        "lemma": "blijven"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"makes\""
+    },
+    {
+      "key": "blijft",
+      "old": {
+        "en": "to makes; stay",
+        "pos": "v",
+        "lemma": "blijven"
+      },
+      "new": {
+        "en": "to stay, to remain",
+        "pos": "v",
+        "lemma": "blijven"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"makes\""
+    },
+    {
+      "key": "blijven",
+      "old": {
+        "en": "to makes; stay",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to stay, to remain",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"makes\""
+    },
+    {
+      "key": "boersma",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "Boersma",
+        "pos": "n"
+      },
+      "issue": "truncated",
+      "note": "surname"
+    },
+    {
+      "key": "bonen",
+      "old": {
+        "en": "to goes; bean",
+        "pos": "v"
+      },
+      "new": {
+        "en": "beans",
+        "pos": "n",
+        "lemma": "boon"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "bot",
+      "old": {
+        "en": "to gets; bone",
+        "pos": "v"
+      },
+      "new": {
+        "en": "bone",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "noun: bone"
+    },
+    {
+      "key": "buurman",
+      "old": {
+        "en": "neighbor; neighbour",
+        "pos": "n"
+      },
+      "new": {
+        "en": "neighbour",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"neighbor\""
+    },
+    {
+      "key": "cbs",
+      "old": {
+        "en": "cb",
+        "pos": "adv"
+      },
+      "new": {
+        "en": "CBS (Statistics Netherlands)",
+        "pos": "n"
+      },
+      "issue": "truncated",
+      "note": "abbreviation"
+    },
+    {
+      "key": "coffeeshops",
+      "old": {
+        "en": "tolerance; coffeeshop",
+        "pos": "n"
+      },
+      "new": {
+        "en": "coffeeshop",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"tolerance\""
+    },
+    {
+      "key": "controle",
+      "old": {
+        "en": "to went; control",
+        "pos": "v"
+      },
+      "new": {
+        "en": "control, inspection",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "dataset",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "dataset",
+        "pos": "n"
+      },
+      "issue": "truncated",
+      "note": "needs value"
+    },
+    {
+      "key": "des",
+      "old": {
+        "en": "all; of",
+        "pos": "det"
+      },
+      "new": {
+        "en": "of",
+        "pos": "det"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"all\""
+    },
+    {
+      "key": "deur",
+      "old": {
+        "en": "to gets; door",
+        "pos": "v"
+      },
+      "new": {
+        "en": "door",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "noun: door"
+    },
+    {
+      "key": "deuren",
+      "old": {
+        "en": "to gets; door",
+        "pos": "v",
+        "lemma": "deur"
+      },
+      "new": {
+        "en": "doors",
+        "pos": "n",
+        "lemma": "deur"
+      },
+      "issue": "wrong-meaning",
+      "note": "noun: doors"
+    },
+    {
+      "key": "dien",
+      "old": {
+        "en": "?",
+        "pos": "pron"
+      },
+      "new": {
+        "en": "that; serve",
+        "pos": "pron"
+      },
+      "issue": "truncated",
+      "note": "demonstrative"
+    },
+    {
+      "key": "diverse",
+      "old": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "various, diverse",
+        "pos": "adj"
+      },
+      "issue": "truncated",
+      "note": "adj"
+    },
+    {
+      "key": "doch",
+      "old": {
+        "en": "yet; but",
+        "pos": "n"
+      },
+      "new": {
+        "en": "but",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"yet\""
+    },
+    {
+      "key": "doekjes",
+      "old": {
+        "en": "doesn't; wipe",
+        "pos": "n"
+      },
+      "new": {
+        "en": "wipe",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "doorgelezen",
+      "old": {
+        "en": "to read through",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to read through",
+        "pos": "v",
+        "lemma": "doorlezen"
+      },
+      "issue": "ok",
+      "note": "ok"
+    },
+    {
+      "key": "draai",
+      "old": {
+        "en": "turn; play",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to turn, to play",
+        "pos": "v",
+        "lemma": "draaien"
+      },
+      "issue": "missing-to",
+      "note": "missing \"to \""
+    },
+    {
+      "key": "durfde",
+      "old": {
+        "en": "didn't; dared",
+        "pos": "n",
+        "lemma": "durven"
+      },
+      "new": {
+        "en": "dared",
+        "pos": "n",
+        "lemma": "durven"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"didn't\""
+    },
+    {
+      "key": "echo",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "echo",
+        "pos": "n"
+      },
+      "issue": "truncated",
+      "note": "noun"
+    },
+    {
+      "key": "ellebogen",
+      "old": {
+        "en": "he's; elbow",
+        "pos": "n"
+      },
+      "new": {
+        "en": "elbow",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"he's\""
+    },
+    {
+      "key": "ernaar",
+      "old": {
+        "en": "forward; after it",
+        "pos": "n"
+      },
+      "new": {
+        "en": "after it",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"forward\""
+    },
+    {
+      "key": "ervandoor",
+      "old": {
+        "en": "i'm; run away",
+        "pos": "n"
+      },
+      "new": {
+        "en": "run away",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"i'm\""
+    },
+    {
+      "key": "fijn",
+      "old": {
+        "en": "nice; fine",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "fine",
+        "pos": "adj"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"nice\""
+    },
+    {
+      "key": "fijne",
+      "old": {
+        "en": "nice; fine",
+        "pos": "adj",
+        "lemma": "fijn"
+      },
+      "new": {
+        "en": "fine",
+        "pos": "adj",
+        "lemma": "fijn"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"nice\""
+    },
+    {
+      "key": "financiering",
+      "old": {
+        "en": "to financing, funding",
+        "pos": "v"
+      },
+      "new": {
+        "en": "financing, funding",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "gang",
+      "old": {
+        "en": "all; hallway",
+        "pos": "n"
+      },
+      "new": {
+        "en": "hallway",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"all\""
+    },
+    {
+      "key": "gangen",
+      "old": {
+        "en": "all; hallway",
+        "pos": "n",
+        "lemma": "gang"
+      },
+      "new": {
+        "en": "hallway",
+        "pos": "n",
+        "lemma": "gang"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"all\""
+    },
+    {
+      "key": "geaccepteerd",
+      "old": {
+        "en": "to accept",
+        "pos": "v",
+        "lemma": "accepteren"
+      },
+      "new": {
+        "en": "accepted",
+        "pos": "adj"
+      },
+      "issue": "wrong-meaning",
+      "note": "adj not verb"
+    },
+    {
+      "key": "gearresteerd",
+      "old": {
+        "en": "to arrested",
+        "pos": "v"
+      },
+      "new": {
+        "en": "arrested",
+        "pos": "adj",
+        "lemma": "arresteren"
+      },
+      "issue": "wrong-meaning",
+      "note": "past participle adj"
+    },
+    {
+      "key": "gebeten",
+      "old": {
+        "en": "to bite; biting",
+        "pos": "v",
+        "lemma": "bijten"
+      },
+      "new": {
+        "en": "bitten",
+        "pos": "adj",
+        "lemma": "bijten"
+      },
+      "issue": "wrong-meaning",
+      "note": "past part → adj"
+    },
+    {
+      "key": "gekomen",
+      "old": {
+        "en": "late; come",
+        "pos": "adj",
+        "lemma": "komen"
+      },
+      "new": {
+        "en": "come",
+        "pos": "adj",
+        "lemma": "komen"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"late\""
+    },
+    {
+      "key": "genoegen",
+      "old": {
+        "en": "i'm; pleasure",
+        "pos": "n"
+      },
+      "new": {
+        "en": "pleasure",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"i'm\""
+    },
+    {
+      "key": "gepland",
+      "old": {
+        "en": "to planning; plan",
+        "pos": "v",
+        "lemma": "plannen"
+      },
+      "new": {
+        "en": "planned",
+        "pos": "adj",
+        "lemma": "plannen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"planning\""
+    },
+    {
+      "key": "geschreven",
+      "old": {
+        "en": "sign; write",
+        "pos": "v",
+        "lemma": "schrijven"
+      },
+      "new": {
+        "en": "written",
+        "pos": "adj",
+        "lemma": "schrijven"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "gespeeld",
+      "old": {
+        "en": "to read; play",
+        "pos": "v",
+        "lemma": "spelen"
+      },
+      "new": {
+        "en": "played",
+        "pos": "adj",
+        "lemma": "spelen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"read\""
+    },
+    {
+      "key": "gestolen",
+      "old": {
+        "en": "to stolen",
+        "pos": "v"
+      },
+      "new": {
+        "en": "stolen",
+        "pos": "adj",
+        "lemma": "stelen"
+      },
+      "issue": "wrong-meaning",
+      "note": "past participle adj"
+    },
+    {
+      "key": "gevallen",
+      "old": {
+        "en": "to fell; fallen",
+        "pos": "v"
+      },
+      "new": {
+        "en": "fallen; cases",
+        "pos": "n",
+        "lemma": "geval"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"fell\""
+    },
+    {
+      "key": "gevonden",
+      "old": {
+        "en": "doesn't; find",
+        "pos": "n",
+        "lemma": "vinden"
+      },
+      "new": {
+        "en": "find",
+        "pos": "n",
+        "lemma": "vinden"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "gewijzigd",
+      "old": {
+        "en": "to changed; altered",
+        "pos": "v"
+      },
+      "new": {
+        "en": "modified, changed",
+        "pos": "adj"
+      },
+      "issue": "wrong-meaning",
+      "note": "\"changed\" as adj"
+    },
+    {
+      "key": "gewild",
+      "old": {
+        "en": "to wanted, desired",
+        "pos": "v",
+        "lemma": "willen"
+      },
+      "new": {
+        "en": "wanted, desired",
+        "pos": "adj",
+        "lemma": "willen"
+      },
+      "issue": "wrong-meaning",
+      "note": "past participle adj"
+    },
+    {
+      "key": "gewoonlijk",
+      "old": {
+        "en": "spring; usually",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "usually",
+        "pos": "adj"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"spring\""
+    },
+    {
+      "key": "hand",
+      "old": {
+        "en": "to pretends; hand",
+        "pos": "v"
+      },
+      "new": {
+        "en": "hand",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "noun not verb"
+    },
+    {
+      "key": "handen",
+      "old": {
+        "en": "to pretends; hand",
+        "pos": "v",
+        "lemma": "hand"
+      },
+      "new": {
+        "en": "hands",
+        "pos": "n",
+        "lemma": "hand"
+      },
+      "issue": "wrong-meaning",
+      "note": "noun not verb"
+    },
+    {
+      "key": "handje",
+      "old": {
+        "en": "to pretends; hand",
+        "pos": "v",
+        "lemma": "hand"
+      },
+      "new": {
+        "en": "little hand",
+        "pos": "n",
+        "lemma": "hand"
+      },
+      "issue": "wrong-meaning",
+      "note": "noun not verb"
+    },
+    {
+      "key": "hapje",
+      "old": {
+        "en": "to bite; snack",
+        "pos": "v"
+      },
+      "new": {
+        "en": "snack, bite",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "noun not verb"
+    },
+    {
+      "key": "haringseizoen",
+      "old": {
+        "en": "to herring season",
+        "pos": "v"
+      },
+      "new": {
+        "en": "herring season",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "hart",
+      "old": {
+        "en": "doesn't; heart",
+        "pos": "n"
+      },
+      "new": {
+        "en": "heart",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "harte",
+      "old": {
+        "en": "doesn't; heart",
+        "pos": "n",
+        "lemma": "hart"
+      },
+      "new": {
+        "en": "heart",
+        "pos": "n",
+        "lemma": "hart"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "hartje",
+      "old": {
+        "en": "doesn't; heart",
+        "pos": "n",
+        "lemma": "hart"
+      },
+      "new": {
+        "en": "heart",
+        "pos": "n",
+        "lemma": "hart"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "hè",
+      "old": {
+        "en": "nice; hey",
+        "pos": "interj"
+      },
+      "new": {
+        "en": "hey",
+        "pos": "interj"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"nice\""
+    },
+    {
+      "key": "heen",
+      "old": {
+        "en": "to bite; to",
+        "pos": "v"
+      },
+      "new": {
+        "en": "away, there",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adv not verb"
+    },
+    {
+      "key": "heer",
+      "old": {
+        "en": "dear; gentleman",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "gentleman",
+        "pos": "adj"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"dear\""
+    },
+    {
+      "key": "heft",
+      "old": {
+        "en": "to taken; heap",
+        "pos": "v"
+      },
+      "new": {
+        "en": "handle, hilt",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"taken; heap\""
+    },
+    {
+      "key": "helemaal",
+      "old": {
+        "en": "all; absolutely",
+        "pos": "adv"
+      },
+      "new": {
+        "en": "absolutely",
+        "pos": "adv"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"all\""
+    },
+    {
+      "key": "herhaling",
+      "old": {
+        "en": "to takes; repetition",
+        "pos": "v"
+      },
+      "new": {
+        "en": "repetition, repeat",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "hetgeen",
+      "old": {
+        "en": "touched; which",
+        "pos": "v"
+      },
+      "new": {
+        "en": "which, what",
+        "pos": "pron"
+      },
+      "issue": "wrong-pos",
+      "note": "pron not verb"
+    },
+    {
+      "key": "hevig",
+      "old": {
+        "en": "to started; severe",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to star; severe",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "auto: \"to started\" → \"to star\""
+    },
+    {
+      "key": "hevige",
+      "old": {
+        "en": "to started; severe",
+        "pos": "v",
+        "lemma": "hevig"
+      },
+      "new": {
+        "en": "to star; severe",
+        "pos": "v",
+        "lemma": "hevig"
+      },
+      "issue": "bad-verb-form",
+      "note": "auto: \"to started\" → \"to star\""
+    },
+    {
+      "key": "ingeschreven",
+      "old": {
+        "en": "sign; enrol",
+        "pos": "v",
+        "lemma": "inschrijven"
+      },
+      "new": {
+        "en": "registered",
+        "pos": "adj",
+        "lemma": "inschrijven"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "inmiddels",
+      "old": {
+        "en": "now; meanwhile",
+        "pos": "adv"
+      },
+      "new": {
+        "en": "meanwhile",
+        "pos": "adv"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"now\""
+    },
+    {
+      "key": "inschrijven",
+      "old": {
+        "en": "sign; enrol",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to register, to enroll",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "inspant",
+      "old": {
+        "en": "to makes; exert",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to exert, to make effort",
+        "pos": "v",
+        "lemma": "inspannen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"makes\""
+    },
+    {
+      "key": "inzetten",
+      "old": {
+        "en": "to wants; stake",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to deploy, to use",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"wants; stake\""
+    },
+    {
+      "key": "kaas",
+      "old": {
+        "en": "doesn't; cheese",
+        "pos": "n"
+      },
+      "new": {
+        "en": "cheese",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "kazen",
+      "old": {
+        "en": "doesn't; cheese",
+        "pos": "n",
+        "lemma": "kaas"
+      },
+      "new": {
+        "en": "cheese",
+        "pos": "n",
+        "lemma": "kaas"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "kende",
+      "old": {
+        "en": "doesn't; know",
+        "pos": "n",
+        "lemma": "kennen"
+      },
+      "new": {
+        "en": "know",
+        "pos": "n",
+        "lemma": "kennen"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "kennen",
+      "old": {
+        "en": "doesn't; know",
+        "pos": "n"
+      },
+      "new": {
+        "en": "know",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "kennis",
+      "old": {
+        "en": "nice; knowledge",
+        "pos": "n"
+      },
+      "new": {
+        "en": "knowledge",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"nice\""
+    },
+    {
+      "key": "kent",
+      "old": {
+        "en": "doesn't; know",
+        "pos": "n",
+        "lemma": "kennen"
+      },
+      "new": {
+        "en": "know",
+        "pos": "n",
+        "lemma": "kennen"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "klopt",
+      "old": {
+        "en": "to feeling; correct",
+        "pos": "v",
+        "lemma": "kloppen"
+      },
+      "new": {
+        "en": "to knock; is correct",
+        "pos": "v",
+        "lemma": "kloppen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"feeling\""
+    },
+    {
+      "key": "koe",
+      "old": {
+        "en": "to takes; cow",
+        "pos": "v"
+      },
+      "new": {
+        "en": "cow",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "koeien",
+      "old": {
+        "en": "to takes; cow",
+        "pos": "v",
+        "lemma": "koe"
+      },
+      "new": {
+        "en": "cows",
+        "pos": "n",
+        "lemma": "koe"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "kom",
+      "old": {
+        "en": "late; come",
+        "pos": "adj",
+        "lemma": "komen"
+      },
+      "new": {
+        "en": "come",
+        "pos": "adj",
+        "lemma": "komen"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"late\""
+    },
+    {
+      "key": "komen",
+      "old": {
+        "en": "late; come",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "come",
+        "pos": "adj"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"late\""
+    },
+    {
+      "key": "komend",
+      "old": {
+        "en": "late; come",
+        "pos": "adj",
+        "lemma": "komen"
+      },
+      "new": {
+        "en": "come",
+        "pos": "adj",
+        "lemma": "komen"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"late\""
+    },
+    {
+      "key": "komende",
+      "old": {
+        "en": "late; come",
+        "pos": "adj",
+        "lemma": "komend"
+      },
+      "new": {
+        "en": "come",
+        "pos": "adj",
+        "lemma": "komend"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"late\""
+    },
+    {
+      "key": "komt",
+      "old": {
+        "en": "late; come",
+        "pos": "adj",
+        "lemma": "komen"
+      },
+      "new": {
+        "en": "come",
+        "pos": "adj",
+        "lemma": "komen"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"late\""
+    },
+    {
+      "key": "kwam",
+      "old": {
+        "en": "late; come",
+        "pos": "adj",
+        "lemma": "komen"
+      },
+      "new": {
+        "en": "come",
+        "pos": "adj",
+        "lemma": "komen"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"late\""
+    },
+    {
+      "key": "kwamen",
+      "old": {
+        "en": "late; come",
+        "pos": "adj",
+        "lemma": "komen"
+      },
+      "new": {
+        "en": "come",
+        "pos": "adj",
+        "lemma": "komen"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"late\""
+    },
+    {
+      "key": "kwestie",
+      "old": {
+        "en": "to matter; issue",
+        "pos": "v"
+      },
+      "new": {
+        "en": "issue, matter",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "noun not verb"
+    },
+    {
+      "key": "laag",
+      "old": {
+        "en": "turn; low",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "low",
+        "pos": "adj"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"turn\""
+    },
+    {
+      "key": "lactose",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "lactose",
+        "pos": "n"
+      },
+      "issue": "truncated",
+      "note": "noun"
+    },
+    {
+      "key": "leiding",
+      "old": {
+        "en": "to approach; pipe",
+        "pos": "v"
+      },
+      "new": {
+        "en": "leadership, management",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "noun not verb"
+    },
+    {
+      "key": "links",
+      "old": {
+        "en": "to left",
+        "pos": "v"
+      },
+      "new": {
+        "en": "left, on the left",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos",
+      "note": "adj not verb"
+    },
+    {
+      "key": "loopafstand",
+      "old": {
+        "en": "to walking distance",
+        "pos": "v"
+      },
+      "new": {
+        "en": "walking distance",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "maas",
+      "old": {
+        "en": "to takes; mesh",
+        "pos": "v"
+      },
+      "new": {
+        "en": "mesh; Meuse",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "men",
+      "old": {
+        "en": "to matter; man",
+        "pos": "v"
+      },
+      "new": {
+        "en": "one, people",
+        "pos": "pron"
+      },
+      "issue": "wrong-pos",
+      "note": "pron not verb"
+    },
+    {
+      "key": "minuten",
+      "old": {
+        "en": "it's; minute",
+        "pos": "n"
+      },
+      "new": {
+        "en": "minute",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"it's\""
+    },
+    {
+      "key": "moed",
+      "old": {
+        "en": "doesn't; courage",
+        "pos": "n"
+      },
+      "new": {
+        "en": "courage",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "moordkuil",
+      "old": {
+        "en": "doesn't; murder pit",
+        "pos": "n"
+      },
+      "new": {
+        "en": "murder pit",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "mouw",
+      "old": {
+        "en": "now; sleeve",
+        "pos": "n"
+      },
+      "new": {
+        "en": "sleeve",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"now\""
+    },
+    {
+      "key": "multivariate",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "multivariate",
+        "pos": "adj"
+      },
+      "issue": "truncated",
+      "note": "adj"
+    },
+    {
+      "key": "muren",
+      "old": {
+        "en": "to sent; wall",
+        "pos": "v",
+        "lemma": "muur"
+      },
+      "new": {
+        "en": "walls",
+        "pos": "n",
+        "lemma": "muur"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"sent\""
+    },
+    {
+      "key": "muur",
+      "old": {
+        "en": "to sent; wall",
+        "pos": "v"
+      },
+      "new": {
+        "en": "wall",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"sent\""
+    },
+    {
+      "key": "nadere",
+      "old": {
+        "en": "to approach",
+        "pos": "v",
+        "lemma": "naderen"
+      },
+      "new": {
+        "en": "further, closer",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos",
+      "note": "adj not verb"
+    },
+    {
+      "key": "naderende",
+      "old": {
+        "en": "to approache",
+        "pos": "v"
+      },
+      "new": {
+        "en": "approaching",
+        "pos": "adj",
+        "lemma": "naderend"
+      },
+      "issue": "wrong-meaning",
+      "note": "\"to approache\" typo"
+    },
+    {
+      "key": "neerkomt",
+      "old": {
+        "en": "to comes down to",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to come down to",
+        "pos": "v",
+        "lemma": "neerkomen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"comes\""
+    },
+    {
+      "key": "nochtans",
+      "old": {
+        "en": "yet; however",
+        "pos": "n"
+      },
+      "new": {
+        "en": "however",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"yet\""
+    },
+    {
+      "key": "nodigen",
+      "old": {
+        "en": "we're; invite",
+        "pos": "n"
+      },
+      "new": {
+        "en": "invite",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"we're\""
+    },
+    {
+      "key": "noorderzon",
+      "old": {
+        "en": "to left; northern sun",
+        "pos": "v"
+      },
+      "new": {
+        "en": "northern sun",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"left\""
+    },
+    {
+      "key": "nul",
+      "old": {
+        "en": "to turned; zero",
+        "pos": "v"
+      },
+      "new": {
+        "en": "zero",
+        "pos": "num"
+      },
+      "issue": "wrong-pos",
+      "note": "num not verb"
+    },
+    {
+      "key": "ondergaat",
+      "old": {
+        "en": "soon; undergo",
+        "pos": "n"
+      },
+      "new": {
+        "en": "undergo",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"soon\""
+    },
+    {
+      "key": "ondernemen",
+      "old": {
+        "en": "all; undertake",
+        "pos": "n"
+      },
+      "new": {
+        "en": "undertake",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"all\""
+    },
+    {
+      "key": "onlosmakelijk",
+      "old": {
+        "en": "to matter; inseparable",
+        "pos": "v"
+      },
+      "new": {
+        "en": "inseparable, inextricable",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos",
+      "note": "adj not verb"
+    },
+    {
+      "key": "ontmoet",
+      "old": {
+        "en": "to met; meet",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to meet",
+        "pos": "v",
+        "lemma": "ontmoeten"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"met\""
+    },
+    {
+      "key": "onvoldoende",
+      "old": {
+        "en": "academic; fail",
+        "pos": "n"
+      },
+      "new": {
+        "en": "fail",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"academic\""
+    },
+    {
+      "key": "oordeelde",
+      "old": {
+        "en": "to judging; judgement",
+        "pos": "v",
+        "lemma": "oordelen"
+      },
+      "new": {
+        "en": "to judge",
+        "pos": "v",
+        "lemma": "oordelen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"judging\""
+    },
+    {
+      "key": "oordelen",
+      "old": {
+        "en": "to judging; judgement",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to judge",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"judging\""
+    },
+    {
+      "key": "opende",
+      "old": {
+        "en": "to opened",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to open",
+        "pos": "v",
+        "lemma": "openen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"opened\""
+    },
+    {
+      "key": "opgemerkt",
+      "old": {
+        "en": "didn't; noticed",
+        "pos": "n"
+      },
+      "new": {
+        "en": "noticed",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"didn't\""
+    },
+    {
+      "key": "opkomt",
+      "old": {
+        "en": "soon; arise",
+        "pos": "n"
+      },
+      "new": {
+        "en": "arise",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"soon\""
+    },
+    {
+      "key": "opladen",
+      "old": {
+        "en": "top; upload",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to charge, to upload",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"top; upload\""
+    },
+    {
+      "key": "ovchipkaart",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "OV-chipkaart (travel card)",
+        "pos": "n"
+      },
+      "issue": "truncated",
+      "note": "noun"
+    },
+    {
+      "key": "overal",
+      "old": {
+        "en": "all; everywhere",
+        "pos": "adv"
+      },
+      "new": {
+        "en": "everywhere",
+        "pos": "adv"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"all\""
+    },
+    {
+      "key": "paadje",
+      "old": {
+        "en": "out; path",
+        "pos": "n",
+        "lemma": "pad"
+      },
+      "new": {
+        "en": "path",
+        "pos": "n",
+        "lemma": "pad"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"out\""
+    },
+    {
+      "key": "pad",
+      "old": {
+        "en": "out; path",
+        "pos": "n"
+      },
+      "new": {
+        "en": "path",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"out\""
+    },
+    {
+      "key": "paden",
+      "old": {
+        "en": "out; path",
+        "pos": "n",
+        "lemma": "pad"
+      },
+      "new": {
+        "en": "path",
+        "pos": "n",
+        "lemma": "pad"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"out\""
+    },
+    {
+      "key": "padje",
+      "old": {
+        "en": "out; path",
+        "pos": "n",
+        "lemma": "pad"
+      },
+      "new": {
+        "en": "path",
+        "pos": "n",
+        "lemma": "pad"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"out\""
+    },
+    {
+      "key": "parkandride",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "park and ride",
+        "pos": "n"
+      },
+      "issue": "truncated",
+      "note": "noun"
+    },
+    {
+      "key": "pijpenstelen",
+      "old": {
+        "en": "it's; pipe stem",
+        "pos": "n"
+      },
+      "new": {
+        "en": "pipe stem",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"it's\""
+    },
+    {
+      "key": "plannen",
+      "old": {
+        "en": "to planning; plan",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to plan; plans",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"planning\""
+    },
+    {
+      "key": "poetsen",
+      "old": {
+        "en": "bed; polish",
+        "pos": "n"
+      },
+      "new": {
+        "en": "polish",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"bed\""
+    },
+    {
+      "key": "porties",
+      "old": {
+        "en": "to serving, helping",
+        "pos": "v",
+        "lemma": "portie"
+      },
+      "new": {
+        "en": "servings, portions",
+        "pos": "n",
+        "lemma": "portie"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "raap",
+      "old": {
+        "en": "yet; turnip",
+        "pos": "n"
+      },
+      "new": {
+        "en": "turnip",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"yet\""
+    },
+    {
+      "key": "realiseerde",
+      "old": {
+        "en": "to train; realized",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to realize",
+        "pos": "v",
+        "lemma": "realiseren"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"train\""
+    },
+    {
+      "key": "recht",
+      "old": {
+        "en": "yet; right",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "right",
+        "pos": "adj"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"yet\""
+    },
+    {
+      "key": "rekest",
+      "old": {
+        "en": "to turned; petition",
+        "pos": "v"
+      },
+      "new": {
+        "en": "petition",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "relevant",
+      "old": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "relevant",
+        "pos": "adj"
+      },
+      "issue": "truncated",
+      "note": "adj"
+    },
+    {
+      "key": "rondje",
+      "old": {
+        "en": "we're; round",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "round",
+        "pos": "adj"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"we're\""
+    },
+    {
+      "key": "rozen",
+      "old": {
+        "en": "to rose",
+        "pos": "v",
+        "lemma": "roos"
+      },
+      "new": {
+        "en": "roses",
+        "pos": "n",
+        "lemma": "roos"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "samenwerking",
+      "old": {
+        "en": "forward; cooperation",
+        "pos": "n"
+      },
+      "new": {
+        "en": "cooperation",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"forward\""
+    },
+    {
+      "key": "schrap",
+      "old": {
+        "en": "to bracing oneself, tense",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to brace, to tense",
+        "pos": "v",
+        "lemma": "schrappen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "schreef",
+      "old": {
+        "en": "sign; write",
+        "pos": "v",
+        "lemma": "schrijven"
+      },
+      "new": {
+        "en": "to write",
+        "pos": "v",
+        "lemma": "schrijven"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "schrijf",
+      "old": {
+        "en": "sign; write",
+        "pos": "v",
+        "lemma": "schrijven"
+      },
+      "new": {
+        "en": "to write",
+        "pos": "v",
+        "lemma": "schrijven"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "schrijft",
+      "old": {
+        "en": "sign; write",
+        "pos": "v",
+        "lemma": "schrijven"
+      },
+      "new": {
+        "en": "to write",
+        "pos": "v",
+        "lemma": "schrijven"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "schrijven",
+      "old": {
+        "en": "sign; write",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to write",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"sign; write\""
+    },
+    {
+      "key": "schuld",
+      "old": {
+        "en": "it's; debt",
+        "pos": "n"
+      },
+      "new": {
+        "en": "debt",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"it's\""
+    },
+    {
+      "key": "slaan",
+      "old": {
+        "en": "turn; strike",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to strike, to hit",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"turn; strike\""
+    },
+    {
+      "key": "slaat",
+      "old": {
+        "en": "turn; strike",
+        "pos": "v",
+        "lemma": "slaan"
+      },
+      "new": {
+        "en": "to strike, to hit",
+        "pos": "v",
+        "lemma": "slaan"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "sloeg",
+      "old": {
+        "en": "turn; strike",
+        "pos": "v",
+        "lemma": "slaan"
+      },
+      "new": {
+        "en": "to strike, to hit",
+        "pos": "v",
+        "lemma": "slaan"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "sneeuwde",
+      "old": {
+        "en": "snow; snowing",
+        "pos": "n",
+        "lemma": "sneeuwen"
+      },
+      "new": {
+        "en": "snowing",
+        "pos": "n",
+        "lemma": "sneeuwen"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"snow\""
+    },
+    {
+      "key": "sneeuwen",
+      "old": {
+        "en": "snow; snowing",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to snow",
+        "pos": "v"
+      },
+      "issue": "ok",
+      "note": "verb ok"
+    },
+    {
+      "key": "sorry",
+      "old": {
+        "en": "?",
+        "pos": "interj"
+      },
+      "new": {
+        "en": "sorry",
+        "pos": "interj"
+      },
+      "issue": "truncated",
+      "note": "interjection"
+    },
+    {
+      "key": "speelde",
+      "old": {
+        "en": "to read; play",
+        "pos": "v",
+        "lemma": "spelen"
+      },
+      "new": {
+        "en": "to play",
+        "pos": "v",
+        "lemma": "spelen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "speelden",
+      "old": {
+        "en": "to read; play",
+        "pos": "v",
+        "lemma": "spelen"
+      },
+      "new": {
+        "en": "to play",
+        "pos": "v",
+        "lemma": "spelen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "speelt",
+      "old": {
+        "en": "to read; play",
+        "pos": "v",
+        "lemma": "spelen"
+      },
+      "new": {
+        "en": "to play",
+        "pos": "v",
+        "lemma": "spelen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "spek",
+      "old": {
+        "en": "to goes; bacon",
+        "pos": "v"
+      },
+      "new": {
+        "en": "bacon",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "spelen",
+      "old": {
+        "en": "to read; play",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to play",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"read; play\""
+    },
+    {
+      "key": "spijt",
+      "old": {
+        "en": "i'm; regret",
+        "pos": "n"
+      },
+      "new": {
+        "en": "regret",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"i'm\""
+    },
+    {
+      "key": "spoor",
+      "old": {
+        "en": "to train; track",
+        "pos": "v"
+      },
+      "new": {
+        "en": "track, trace",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "sporten",
+      "old": {
+        "en": "to exercising; play sport",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to exercise, to play sport",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"exercising\""
+    },
+    {
+      "key": "springt",
+      "old": {
+        "en": "soon; jump",
+        "pos": "n"
+      },
+      "new": {
+        "en": "jump",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"soon\""
+    },
+    {
+      "key": "steel",
+      "old": {
+        "en": "doesn't; steel",
+        "pos": "n"
+      },
+      "new": {
+        "en": "steel",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "stelt",
+      "old": {
+        "en": "to makes; stilt",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to propose, to set",
+        "pos": "v",
+        "lemma": "stellen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"makes; stilt\""
+    },
+    {
+      "key": "stofzuiger",
+      "old": {
+        "en": "to vacuum cleaner",
+        "pos": "v"
+      },
+      "new": {
+        "en": "vacuum cleaner",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "stofzuigt",
+      "old": {
+        "en": "to vacuum",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to vacuum",
+        "pos": "v",
+        "lemma": "stofzuigen"
+      },
+      "issue": "ok",
+      "note": "ok"
+    },
+    {
+      "key": "stort",
+      "old": {
+        "en": "to throws; dump",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to throw, to dump",
+        "pos": "v",
+        "lemma": "storten"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "tang",
+      "old": {
+        "en": "doesn't; plier",
+        "pos": "n"
+      },
+      "new": {
+        "en": "plier",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "tegengestelde",
+      "old": {
+        "en": "academic; opposite",
+        "pos": "n"
+      },
+      "new": {
+        "en": "opposite",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"academic\""
+    },
+    {
+      "key": "thans",
+      "old": {
+        "en": "now; currently",
+        "pos": "adv"
+      },
+      "new": {
+        "en": "currently",
+        "pos": "adv"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"now\""
+    },
+    {
+      "key": "thuiskomst",
+      "old": {
+        "en": "good; homecoming",
+        "pos": "n"
+      },
+      "new": {
+        "en": "homecoming",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"good\""
+    },
+    {
+      "key": "tijd",
+      "old": {
+        "en": "now; time",
+        "pos": "n"
+      },
+      "new": {
+        "en": "time",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"now\""
+    },
+    {
+      "key": "toe",
+      "old": {
+        "en": "now; too",
+        "pos": "adv"
+      },
+      "new": {
+        "en": "too",
+        "pos": "adv"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"now\""
+    },
+    {
+      "key": "trainen",
+      "old": {
+        "en": "to train; training",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to train",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "traint",
+      "old": {
+        "en": "to train; training",
+        "pos": "v",
+        "lemma": "trainen"
+      },
+      "new": {
+        "en": "to train",
+        "pos": "v",
+        "lemma": "trainen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "trein",
+      "old": {
+        "en": "to train",
+        "pos": "v"
+      },
+      "new": {
+        "en": "train",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "treinen",
+      "old": {
+        "en": "to train",
+        "pos": "v"
+      },
+      "new": {
+        "en": "trains",
+        "pos": "n",
+        "lemma": "trein"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "treinkaartje",
+      "old": {
+        "en": "to train ticket",
+        "pos": "v"
+      },
+      "new": {
+        "en": "train ticket",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "uitgerekend",
+      "old": {
+        "en": "all; calculated",
+        "pos": "n"
+      },
+      "new": {
+        "en": "calculated",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"all\""
+    },
+    {
+      "key": "uitsmijter",
+      "old": {
+        "en": "to eats; bouncer",
+        "pos": "v"
+      },
+      "new": {
+        "en": "bouncer; fried egg sandwich",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "vangen",
+      "old": {
+        "en": "all; catch",
+        "pos": "n"
+      },
+      "new": {
+        "en": "catch",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"all\""
+    },
+    {
+      "key": "vangt",
+      "old": {
+        "en": "all; catch",
+        "pos": "n",
+        "lemma": "vangen"
+      },
+      "new": {
+        "en": "catch",
+        "pos": "n",
+        "lemma": "vangen"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"all\""
+    },
+    {
+      "key": "vannacht",
+      "old": {
+        "en": "last; tonight",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "tonight",
+        "pos": "adj"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"last\""
+    },
+    {
+      "key": "varken",
+      "old": {
+        "en": "doesn't; pig",
+        "pos": "n"
+      },
+      "new": {
+        "en": "pig",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "vaststaat",
+      "old": {
+        "en": "now; is established",
+        "pos": "n"
+      },
+      "new": {
+        "en": "is established",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"now\""
+    },
+    {
+      "key": "verboden",
+      "old": {
+        "en": "to forbidden, prohibited",
+        "pos": "v"
+      },
+      "new": {
+        "en": "forbidden, prohibited",
+        "pos": "adj",
+        "lemma": "verbieden"
+      },
+      "issue": "wrong-meaning",
+      "note": "adj not verb"
+    },
+    {
+      "key": "verbonden",
+      "old": {
+        "en": "to matter; connected",
+        "pos": "v"
+      },
+      "new": {
+        "en": "connected",
+        "pos": "adj"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"matter; connected\""
+    },
+    {
+      "key": "verheug",
+      "old": {
+        "en": "forward; rejoice",
+        "pos": "v",
+        "lemma": "verheugen"
+      },
+      "new": {
+        "en": "to look forward to",
+        "pos": "v",
+        "lemma": "verheugen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "verheugen",
+      "old": {
+        "en": "forward; rejoice",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to look forward to, to rejoice",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"forward\""
+    },
+    {
+      "key": "verscheen",
+      "old": {
+        "en": "to appeared",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to appear",
+        "pos": "v",
+        "lemma": "verschijnen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"appeared\""
+    },
+    {
+      "key": "vertrekken",
+      "old": {
+        "en": "to train; leave",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to depart, to leave",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"train\""
+    },
+    {
+      "key": "vertrekt",
+      "old": {
+        "en": "to train; leave",
+        "pos": "v",
+        "lemma": "vertrekken"
+      },
+      "new": {
+        "en": "to depart, to leave",
+        "pos": "v",
+        "lemma": "vertrekken"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "vertrok",
+      "old": {
+        "en": "to train; leave",
+        "pos": "v",
+        "lemma": "vertrekken"
+      },
+      "new": {
+        "en": "to depart, to leave",
+        "pos": "v",
+        "lemma": "vertrekken"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "vertrokken",
+      "old": {
+        "en": "to train; leave",
+        "pos": "v",
+        "lemma": "vertrekken"
+      },
+      "new": {
+        "en": "departed, left",
+        "pos": "adj",
+        "lemma": "vertrekken"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled"
+    },
+    {
+      "key": "vervolgens",
+      "old": {
+        "en": "next; then",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "then",
+        "pos": "adj"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"next\""
+    },
+    {
+      "key": "vind",
+      "old": {
+        "en": "doesn't; find",
+        "pos": "n",
+        "lemma": "vinden"
+      },
+      "new": {
+        "en": "find",
+        "pos": "n",
+        "lemma": "vinden"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "vinden",
+      "old": {
+        "en": "doesn't; find",
+        "pos": "n"
+      },
+      "new": {
+        "en": "find",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "vindt",
+      "old": {
+        "en": "doesn't; find",
+        "pos": "n",
+        "lemma": "vinden"
+      },
+      "new": {
+        "en": "find",
+        "pos": "n",
+        "lemma": "vinden"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "ving",
+      "old": {
+        "en": "all; catch",
+        "pos": "n",
+        "lemma": "vangen"
+      },
+      "new": {
+        "en": "catch",
+        "pos": "n",
+        "lemma": "vangen"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"all\""
+    },
+    {
+      "key": "vond",
+      "old": {
+        "en": "doesn't; find",
+        "pos": "n",
+        "lemma": "vinden"
+      },
+      "new": {
+        "en": "find",
+        "pos": "n",
+        "lemma": "vinden"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "vonden",
+      "old": {
+        "en": "doesn't; find",
+        "pos": "n",
+        "lemma": "vinden"
+      },
+      "new": {
+        "en": "find",
+        "pos": "n",
+        "lemma": "vinden"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "voorlas",
+      "old": {
+        "en": "to read aloud",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to read aloud",
+        "pos": "v",
+        "lemma": "voorlezen"
+      },
+      "issue": "ok",
+      "note": "ok"
+    },
+    {
+      "key": "voorleesavonden",
+      "old": {
+        "en": "to read evenings",
+        "pos": "v"
+      },
+      "new": {
+        "en": "reading evenings",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "vorige",
+      "old": {
+        "en": "last; previous",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "previous",
+        "pos": "adj"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"last\""
+    },
+    {
+      "key": "vork",
+      "old": {
+        "en": "doesn't; fork",
+        "pos": "n"
+      },
+      "new": {
+        "en": "fork",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "vries",
+      "old": {
+        "en": "last; freeze",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to freeze",
+        "pos": "v",
+        "lemma": "vriezen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"last; freeze\""
+    },
+    {
+      "key": "vriest",
+      "old": {
+        "en": "to freezing; freez",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to freeze",
+        "pos": "v",
+        "lemma": "vriezen"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"freezing\""
+    },
+    {
+      "key": "vroeg",
+      "old": {
+        "en": "early",
+        "pos": "v"
+      },
+      "new": {
+        "en": "early",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos",
+      "note": "adj: early, not a verb"
+    },
+    {
+      "key": "vroege",
+      "old": {
+        "en": "early",
+        "pos": "v",
+        "lemma": "vroeg"
+      },
+      "new": {
+        "en": "early",
+        "pos": "adj",
+        "lemma": "vroeg"
+      },
+      "issue": "wrong-pos",
+      "note": "adj not verb"
+    },
+    {
+      "key": "warmpjes",
+      "old": {
+        "en": "to sitting; nice",
+        "pos": "v"
+      },
+      "new": {
+        "en": "warmly, comfortably",
+        "pos": "adv"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"sitting\""
+    },
+    {
+      "key": "warmte",
+      "old": {
+        "en": "spring; heat",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "heat",
+        "pos": "adj"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"spring\""
+    },
+    {
+      "key": "wateren",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "waters",
+        "pos": "n",
+        "lemma": "water"
+      },
+      "issue": "truncated",
+      "note": "noun"
+    },
+    {
+      "key": "wedstrijd",
+      "old": {
+        "en": "to participating; match",
+        "pos": "v"
+      },
+      "new": {
+        "en": "match, competition",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "weerwil",
+      "old": {
+        "en": "all; resistance",
+        "pos": "n"
+      },
+      "new": {
+        "en": "resistance",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"all\""
+    },
+    {
+      "key": "wijs",
+      "old": {
+        "en": "doesn't; show",
+        "pos": "n"
+      },
+      "new": {
+        "en": "show",
+        "pos": "n"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"doesn't\""
+    },
+    {
+      "key": "woningen",
+      "old": {
+        "en": "dwelling; home",
+        "pos": "v",
+        "lemma": "woning"
+      },
+      "new": {
+        "en": "dwellings, homes",
+        "pos": "n",
+        "lemma": "woning"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "zette",
+      "old": {
+        "en": "place; make",
+        "pos": "v",
+        "lemma": "zetten"
+      },
+      "new": {
+        "en": "to set, to put",
+        "pos": "v",
+        "lemma": "zetten"
+      },
+      "issue": "ok",
+      "note": "ok already has \"place; make\""
+    },
+    {
+      "key": "zetten",
+      "old": {
+        "en": "place; make",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to set, to put",
+        "pos": "v"
+      },
+      "issue": "ok",
+      "note": "ok"
+    },
+    {
+      "key": "zin",
+      "old": {
+        "en": "to cooking; sentence",
+        "pos": "v"
+      },
+      "new": {
+        "en": "sentence; desire",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "zocht",
+      "old": {
+        "en": "new; search",
+        "pos": "adj",
+        "lemma": "zoeken"
+      },
+      "new": {
+        "en": "search",
+        "pos": "adj",
+        "lemma": "zoeken"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"new\""
+    },
+    {
+      "key": "zoek",
+      "old": {
+        "en": "to looking; search",
+        "pos": "v"
+      },
+      "new": {
+        "en": "lost, missing",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos",
+      "note": "adj not verb"
+    },
+    {
+      "key": "zoeken",
+      "old": {
+        "en": "new; search",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "search",
+        "pos": "adj"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"new\""
+    },
+    {
+      "key": "zoekt",
+      "old": {
+        "en": "new; search",
+        "pos": "adj",
+        "lemma": "zoeken"
+      },
+      "new": {
+        "en": "search",
+        "pos": "adj",
+        "lemma": "zoeken"
+      },
+      "issue": "garbage-semicolon",
+      "note": "auto: dropped garbage first \"new\""
+    },
+    {
+      "key": "zoveel",
+      "old": {
+        "en": "so much",
+        "pos": "n"
+      },
+      "new": {
+        "en": "so much",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adv not noun"
+    },
+    {
+      "key": "zover",
+      "old": {
+        "en": "as far",
+        "pos": "n"
+      },
+      "new": {
+        "en": "as far",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adv not noun"
+    },
+    {
+      "key": "zuid-frankrijk",
+      "old": {
+        "en": "every",
+        "pos": "n"
+      },
+      "new": {
+        "en": "southern France",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"every\""
+    },
+    {
+      "key": "zuiden",
+      "old": {
+        "en": "to south",
+        "pos": "v"
+      },
+      "new": {
+        "en": "south",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "zuidfrankrijk",
+      "old": {
+        "en": "france",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "southern France",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"france\""
+    },
+    {
+      "key": "zure",
+      "old": {
+        "en": "to bite; sour",
+        "pos": "v"
+      },
+      "new": {
+        "en": "sour",
+        "pos": "adj",
+        "lemma": "zuur"
+      },
+      "issue": "wrong-meaning",
+      "note": "garbled \"to bite; sour\""
+    },
+    {
+      "key": "zwaarste",
+      "old": {
+        "en": "hardest; heaviest",
+        "pos": "n"
+      },
+      "new": {
+        "en": "heaviest",
+        "pos": "adj",
+        "lemma": "zwaar"
+      },
+      "issue": "wrong-pos",
+      "note": "adj not noun"
+    },
+    {
+      "key": "zwart",
+      "old": {
+        "en": "black",
+        "pos": "n"
+      },
+      "new": {
+        "en": "black",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos",
+      "note": "adj not noun"
+    },
+    {
+      "key": "zweefde",
+      "old": {
+        "en": "to floated",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to float",
+        "pos": "v",
+        "lemma": "zweven"
+      },
+      "issue": "wrong-meaning",
+      "note": "\"to floated\" past tense"
+    },
+    {
+      "key": "zweeg",
+      "old": {
+        "en": "to silent",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to be silent",
+        "pos": "v",
+        "lemma": "zwijgen"
+      },
+      "issue": "wrong-meaning",
+      "note": "\"to silent\" not a verb form"
+    },
+    {
+      "key": "zwembad",
+      "old": {
+        "en": "to swim pool",
+        "pos": "v"
+      },
+      "new": {
+        "en": "swimming pool",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "zwemles",
+      "old": {
+        "en": "to swim lesson",
+        "pos": "v"
+      },
+      "new": {
+        "en": "swimming lesson",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "zwemmen",
+      "old": {
+        "en": "to swim; swimming",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to swim",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "OK but garbled semicolons"
+    },
+    {
+      "key": "zwemt",
+      "old": {
+        "en": "to swim; swimming",
+        "pos": "v",
+        "lemma": "zwemmen"
+      },
+      "new": {
+        "en": "to swim",
+        "pos": "v",
+        "lemma": "zwemmen"
+      },
+      "issue": "wrong-meaning",
+      "note": "OK"
+    },
+    {
+      "key": "zwemvaardigheden",
+      "old": {
+        "en": "to swim skills",
+        "pos": "v"
+      },
+      "new": {
+        "en": "swimming skills",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "zwom",
+      "old": {
+        "en": "to swim; swimming",
+        "pos": "v",
+        "lemma": "zwemmen"
+      },
+      "new": {
+        "en": "to swim",
+        "pos": "v",
+        "lemma": "zwemmen"
+      },
+      "issue": "wrong-meaning",
+      "note": "OK"
+    }
+  ]
+}

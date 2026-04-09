@@ -1,0 +1,384 @@
+{
+  "language": "it",
+  "total_entries": 6757,
+  "total_checked": 200,
+  "passed": 174,
+  "failed": 26,
+  "pass_rate": "87%",
+  "grade": "B",
+  "failures_by_type": {
+    "semantic_fail": 17,
+    "to_prefix": 9
+  },
+  "failure_examples": [
+    {
+      "word": "vivevo",
+      "en": "to live",
+      "pos": "v",
+      "google": "I lived",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "live"
+        ],
+        "gtWords": [
+          "li"
+        ],
+        "gt": "I lived"
+      }
+    },
+    {
+      "word": "offerta",
+      "en": "offer",
+      "pos": "v",
+      "google": "offer",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "suono",
+      "en": "to play",
+      "pos": "v",
+      "google": "sound",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "play"
+        ],
+        "gtWords": [
+          "sound"
+        ],
+        "gt": "sound"
+      }
+    },
+    {
+      "word": "rinunceresti",
+      "en": "to renounce",
+      "pos": "v",
+      "google": "you would give up",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "renounce"
+        ],
+        "gtWords": [
+          "give"
+        ],
+        "gt": "you would give up"
+      }
+    },
+    {
+      "word": "valigia",
+      "en": "to be worth",
+      "pos": "v",
+      "google": "suitcase",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "worth"
+        ],
+        "gtWords": [
+          "suitcase"
+        ],
+        "gt": "suitcase"
+      }
+    },
+    {
+      "word": "trasferissi",
+      "en": "to transfer",
+      "pos": "v",
+      "google": "I moved",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "transfer"
+        ],
+        "gtWords": [
+          "mo"
+        ],
+        "gt": "I moved"
+      }
+    },
+    {
+      "word": "unico",
+      "en": "to unite",
+      "pos": "v",
+      "google": "unique",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "unite"
+        ],
+        "gtWords": [
+          "unique"
+        ],
+        "gt": "unique"
+      }
+    },
+    {
+      "word": "esiti",
+      "en": "to hesitate",
+      "pos": "v",
+      "google": "results",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "hesitate"
+        ],
+        "gtWords": [
+          "result"
+        ],
+        "gt": "results"
+      }
+    },
+    {
+      "word": "continuo",
+      "en": "to continue",
+      "pos": "v",
+      "google": "continuous",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "continue"
+        ],
+        "gtWords": [
+          "continuou"
+        ],
+        "gt": "continuous"
+      }
+    },
+    {
+      "word": "preterite",
+      "en": "preterite",
+      "pos": "v",
+      "google": "preterite",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "fondi",
+      "en": "fund",
+      "pos": "v",
+      "google": "funds",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "morbido",
+      "en": "to die",
+      "pos": "v",
+      "google": "soft",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "die"
+        ],
+        "gtWords": [
+          "soft"
+        ],
+        "gt": "soft"
+      }
+    },
+    {
+      "word": "tappa",
+      "en": "stage",
+      "pos": "v",
+      "google": "stage",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "narra",
+      "en": "narra",
+      "pos": "v",
+      "google": "narra",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "ferie",
+      "en": "to hurt",
+      "pos": "v",
+      "google": "holidays",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "hurt"
+        ],
+        "gtWords": [
+          "holiday"
+        ],
+        "gt": "holidays"
+      }
+    },
+    {
+      "word": "lotteria",
+      "en": "to fight",
+      "pos": "v",
+      "google": "lottery",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "fight"
+        ],
+        "gtWords": [
+          "lottery"
+        ],
+        "gt": "lottery"
+      }
+    },
+    {
+      "word": "dacci",
+      "en": "give us",
+      "pos": "v",
+      "google": "give us",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "tal",
+      "en": "such",
+      "pos": "v",
+      "google": "such",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "finanziario",
+      "en": "to finance",
+      "pos": "v",
+      "google": "financial",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "finance"
+        ],
+        "gtWords": [
+          "financial"
+        ],
+        "gt": "financial"
+      }
+    },
+    {
+      "word": "tagli",
+      "en": "cuts",
+      "pos": "v",
+      "google": "cuts",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "gliela",
+      "en": "give it to him",
+      "pos": "v",
+      "google": "give it to him",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "vendita",
+      "en": "to sell",
+      "pos": "v",
+      "google": "sale",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "sell"
+        ],
+        "gtWords": [
+          "sale"
+        ],
+        "gt": "sale"
+      }
+    },
+    {
+      "word": "terrà",
+      "en": "to hold",
+      "pos": "v",
+      "google": "Earth",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "hold"
+        ],
+        "gtWords": [
+          "earth"
+        ],
+        "gt": "Earth"
+      }
+    },
+    {
+      "word": "collaborazione",
+      "en": "to collaborate",
+      "pos": "v",
+      "google": "collaboration",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "collaborate"
+        ],
+        "gtWords": [
+          "collaboration"
+        ],
+        "gt": "collaboration"
+      }
+    },
+    {
+      "word": "abitano",
+      "en": "to inhabit",
+      "pos": "v",
+      "google": "they live",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "inhabit"
+        ],
+        "gtWords": [
+          "live"
+        ],
+        "gt": "they live"
+      }
+    },
+    {
+      "word": "leggi",
+      "en": "to light",
+      "pos": "v",
+      "google": "laws",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "light"
+        ],
+        "gtWords": [
+          "law"
+        ],
+        "gt": "laws"
+      }
+    }
+  ]
+}

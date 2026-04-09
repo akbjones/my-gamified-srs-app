@@ -1,0 +1,183 @@
+{
+  "language": "de",
+  "total_entries": 7887,
+  "total_checked": 200,
+  "passed": 184,
+  "failed": 16,
+  "pass_rate": "92%",
+  "grade": "B",
+  "failures_by_type": {
+    "to_prefix": 11,
+    "semantic_fail": 5,
+    "to_noun": 1
+  },
+  "failure_examples": [
+    {
+      "word": "vorbei",
+      "en": "over",
+      "pos": "v",
+      "google": "over",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "verzeihe",
+      "en": "to pardon",
+      "pos": "v",
+      "google": "forgive",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "pardon"
+        ],
+        "gtWords": [
+          "forgive"
+        ],
+        "gt": "forgive"
+      }
+    },
+    {
+      "word": "legte",
+      "en": "to place",
+      "pos": "v",
+      "google": "lay",
+      "issues": "to_noun, semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "place"
+        ],
+        "gtWords": [
+          "lie"
+        ],
+        "gt": "lay"
+      }
+    },
+    {
+      "word": "schaufenster",
+      "en": "shop window",
+      "pos": "v",
+      "google": "shop window",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "bezug",
+      "en": "relation",
+      "pos": "v",
+      "google": "relation",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "konstrukte",
+      "en": "constructs",
+      "pos": "v",
+      "google": "constructs",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "schiebt",
+      "en": "pushes",
+      "pos": "v",
+      "google": "pushes",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "gehängt",
+      "en": "to hang",
+      "pos": "v",
+      "google": "hung",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "hang"
+        ],
+        "gtWords": [
+          "hung"
+        ],
+        "gt": "hung"
+      }
+    },
+    {
+      "word": "geirrt",
+      "en": "to err",
+      "pos": "v",
+      "google": "mistake",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "err"
+        ],
+        "gtWords": [
+          "mistake"
+        ],
+        "gt": "mistake"
+      }
+    },
+    {
+      "word": "pastParticiple",
+      "en": "past participle",
+      "pos": "v",
+      "google": "past participle",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "schlafe",
+      "en": "to sleep",
+      "pos": "v",
+      "google": "temple",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "sleep"
+        ],
+        "gtWords": [
+          "temple"
+        ],
+        "gt": "temple"
+      }
+    },
+    {
+      "word": "beendet",
+      "en": "finished",
+      "pos": "v",
+      "google": "finished",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "öffnungszeit",
+      "en": "opening hours",
+      "pos": "v",
+      "google": "opening hours",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "zielscheibe",
+      "en": "target",
+      "pos": "v",
+      "google": "target",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "sicht",
+      "en": "view",
+      "pos": "v",
+      "google": "view",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "enthielt",
+      "en": "contained",
+      "pos": "v",
+      "google": "contained",
+      "issues": "to_prefix"
+    }
+  ]
+}

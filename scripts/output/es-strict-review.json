@@ -1,0 +1,483 @@
+{
+  "language": "es",
+  "total_entries": 4782,
+  "total_checked": 200,
+  "passed": 163,
+  "failed": 37,
+  "pass_rate": "81.5%",
+  "grade": "C",
+  "failures_by_type": {
+    "semantic_fail": 19,
+    "to_prefix": 18
+  },
+  "failure_examples": [
+    {
+      "word": "cuentan",
+      "en": "to count",
+      "pos": "v",
+      "google": "they say",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "count"
+        ],
+        "gtWords": [
+          "say"
+        ],
+        "gt": "they say"
+      }
+    },
+    {
+      "word": "mudó",
+      "en": "to move",
+      "pos": "v",
+      "google": "dumb",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "move"
+        ],
+        "gtWords": [
+          "dumb"
+        ],
+        "gt": "dumb"
+      }
+    },
+    {
+      "word": "odio",
+      "en": "hate",
+      "pos": "v",
+      "google": "hate",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "queden",
+      "en": "to meet",
+      "pos": "v",
+      "google": "remain",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "meet"
+        ],
+        "gtWords": [
+          "remain"
+        ],
+        "gt": "remain"
+      }
+    },
+    {
+      "word": "renuncia",
+      "en": "to give up",
+      "pos": "v",
+      "google": "resignation",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "give"
+        ],
+        "gtWords": [
+          "resignation"
+        ],
+        "gt": "resignation"
+      }
+    },
+    {
+      "word": "hace",
+      "en": "to do/make",
+      "pos": "v",
+      "google": "does",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "make"
+        ],
+        "gtWords": [
+          "do"
+        ],
+        "gt": "does"
+      }
+    },
+    {
+      "word": "parque",
+      "en": "to stall",
+      "pos": "v",
+      "google": "park",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "stall"
+        ],
+        "gtWords": [
+          "park"
+        ],
+        "gt": "park"
+      }
+    },
+    {
+      "word": "domingos",
+      "en": "to master",
+      "pos": "v",
+      "google": "Sundays",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "master"
+        ],
+        "gtWords": [
+          "sunday"
+        ],
+        "gt": "Sundays"
+      }
+    },
+    {
+      "word": "partido",
+      "en": "to start",
+      "pos": "v",
+      "google": "game",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "start"
+        ],
+        "gtWords": [
+          "game"
+        ],
+        "gt": "game"
+      }
+    },
+    {
+      "word": "cancelemos",
+      "en": "let\\\\",
+      "pos": "n",
+      "google": "Let's cancel",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "let\\\\"
+        ],
+        "gtWords": [
+          "cancel"
+        ],
+        "gt": "Let's cancel"
+      }
+    },
+    {
+      "word": "prestaste",
+      "en": "to lend",
+      "pos": "v",
+      "google": "you lent",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "lend"
+        ],
+        "gtWords": [
+          "lent"
+        ],
+        "gt": "you lent"
+      }
+    },
+    {
+      "word": "supermercado",
+      "en": "supermarket",
+      "pos": "v",
+      "google": "supermarket",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "levantarme",
+      "en": "get up",
+      "pos": "v",
+      "google": "get up",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "mar",
+      "en": "sea",
+      "pos": "v",
+      "google": "sea",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "control",
+      "en": "to count",
+      "pos": "v",
+      "google": "control",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "count"
+        ],
+        "gtWords": [
+          "control"
+        ],
+        "gt": "control"
+      }
+    },
+    {
+      "word": "bien",
+      "en": "well",
+      "pos": "adv",
+      "google": "good",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "well"
+        ],
+        "gtWords": [
+          "good"
+        ],
+        "gt": "good"
+      }
+    },
+    {
+      "word": "enriquecedor",
+      "en": "enriching",
+      "pos": "v",
+      "google": "enriching",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "nivel",
+      "en": "level",
+      "pos": "v",
+      "google": "level",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "salí",
+      "en": "to go out",
+      "pos": "v",
+      "google": "I left",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "go"
+        ],
+        "gtWords": [
+          "leave"
+        ],
+        "gt": "I left"
+      }
+    },
+    {
+      "word": "jugamos",
+      "en": "let\\\\",
+      "pos": "n",
+      "google": "let's play",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "let\\\\"
+        ],
+        "gtWords": [
+          "play"
+        ],
+        "gt": "let's play"
+      }
+    },
+    {
+      "word": "hubieras",
+      "en": "you would have",
+      "pos": "v",
+      "google": "you would have",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "riesgo",
+      "en": "risk",
+      "pos": "v",
+      "google": "risk",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "tuviera",
+      "en": "had",
+      "pos": "v",
+      "google": "had",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "alegró",
+      "en": "glad",
+      "pos": "v",
+      "google": "glad",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "ocupa",
+      "en": "occupies",
+      "pos": "v",
+      "google": "occupies",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "descendido",
+      "en": "descended",
+      "pos": "v",
+      "google": "descended",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "par",
+      "en": "pair",
+      "pos": "v",
+      "google": "pair",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "sacó",
+      "en": "to take out",
+      "pos": "v",
+      "google": "sack",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "take"
+        ],
+        "gtWords": [
+          "sack"
+        ],
+        "gt": "sack"
+      }
+    },
+    {
+      "word": "cuento",
+      "en": "tale",
+      "pos": "v",
+      "google": "tale",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "pintura",
+      "en": "paint",
+      "pos": "v",
+      "google": "paint",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "perdamos",
+      "en": "let\\\\",
+      "pos": "n",
+      "google": "let's lose",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "let\\\\"
+        ],
+        "gtWords": [
+          "lose"
+        ],
+        "gt": "let's lose"
+      }
+    },
+    {
+      "word": "preterite",
+      "en": "preterite",
+      "pos": "v",
+      "google": "preterite",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "humor",
+      "en": "humor",
+      "pos": "v",
+      "google": "humor",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "uso",
+      "en": "to wear",
+      "pos": "v",
+      "google": "use",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "wear"
+        ],
+        "gtWords": [
+          "use"
+        ],
+        "gt": "use"
+      }
+    },
+    {
+      "word": "creía",
+      "en": "to create",
+      "pos": "v",
+      "google": "I believed",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "create"
+        ],
+        "gtWords": [
+          "belie"
+        ],
+        "gt": "I believed"
+      }
+    },
+    {
+      "word": "quisiera",
+      "en": "i\\\\",
+      "pos": "n",
+      "google": "I'd like",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "i\\\\"
+        ],
+        "gtWords": [
+          "like"
+        ],
+        "gt": "I'd like"
+      }
+    },
+    {
+      "word": "permanece",
+      "en": "remains",
+      "pos": "v",
+      "google": "remains",
+      "issues": "to_prefix"
+    }
+  ]
+}

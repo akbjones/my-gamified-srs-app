@@ -1,0 +1,338 @@
+{
+  "language": "fr",
+  "total_entries": 5529,
+  "total_checked": 200,
+  "passed": 173,
+  "failed": 27,
+  "pass_rate": "86.5%",
+  "grade": "B",
+  "failures_by_type": {
+    "semantic_fail": 12,
+    "to_prefix": 14,
+    "to_capitalized": 1
+  },
+  "failure_examples": [
+    {
+      "word": "déménagions",
+      "en": "to relocate",
+      "pos": "v",
+      "google": "moving",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "relocate"
+        ],
+        "gtWords": [
+          "mo"
+        ],
+        "gt": "moving"
+      }
+    },
+    {
+      "word": "souligné",
+      "en": "to emphasize",
+      "pos": "v",
+      "google": "underlines",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "emphasize"
+        ],
+        "gtWords": [
+          "underline"
+        ],
+        "gt": "underlines"
+      }
+    },
+    {
+      "word": "appel",
+      "en": "call",
+      "pos": "v",
+      "google": "call",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "connaissezvous",
+      "en": "do you know",
+      "pos": "v",
+      "google": "do you know",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "restât",
+      "en": "to stay",
+      "pos": "v",
+      "google": "rest",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "stay"
+        ],
+        "gtWords": [
+          "rest"
+        ],
+        "gt": "rest"
+      }
+    },
+    {
+      "word": "saison",
+      "en": "season",
+      "pos": "v",
+      "google": "season",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "regretté",
+      "en": "to regret",
+      "pos": "v",
+      "google": "missed",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "regret"
+        ],
+        "gtWords": [
+          "mis"
+        ],
+        "gt": "missed"
+      }
+    },
+    {
+      "word": "déclenchée",
+      "en": "to release",
+      "pos": "v",
+      "google": "triggered",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "release"
+        ],
+        "gtWords": [
+          "trigge"
+        ],
+        "gt": "triggered"
+      }
+    },
+    {
+      "word": "résultat",
+      "en": "result",
+      "pos": "v",
+      "google": "result",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "suivant",
+      "en": "following",
+      "pos": "v",
+      "google": "following",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "léquipe",
+      "en": "the team",
+      "pos": "v",
+      "google": "the team",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "modèle",
+      "en": "model",
+      "pos": "v",
+      "google": "model",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "font",
+      "en": "to DO",
+      "pos": "v",
+      "google": "make",
+      "issues": "to_capitalized"
+    },
+    {
+      "word": "ressemblait",
+      "en": "to look like",
+      "pos": "v",
+      "google": "resembled",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "look",
+          "like"
+        ],
+        "gtWords": [
+          "resemb"
+        ],
+        "gt": "resembled"
+      }
+    },
+    {
+      "word": "jhabitais",
+      "en": "to live",
+      "pos": "v",
+      "google": "I lived",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "live"
+        ],
+        "gtWords": [
+          "li"
+        ],
+        "gt": "I lived"
+      }
+    },
+    {
+      "word": "discipline",
+      "en": "discipline",
+      "pos": "v",
+      "google": "discipline",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "prévenu",
+      "en": "accused",
+      "pos": "v",
+      "google": "accused",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "lhonneur",
+      "en": "honor",
+      "pos": "v",
+      "google": "honor",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "portait",
+      "en": "to carry",
+      "pos": "v",
+      "google": "portrait",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "carry"
+        ],
+        "gtWords": [
+          "portrait"
+        ],
+        "gt": "portrait"
+      }
+    },
+    {
+      "word": "conditional",
+      "en": "conditional",
+      "pos": "v",
+      "google": "conditional",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "cantine",
+      "en": "canteen",
+      "pos": "v",
+      "google": "canteen",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "restent",
+      "en": "to stay",
+      "pos": "v",
+      "google": "remain",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "stay"
+        ],
+        "gtWords": [
+          "remain"
+        ],
+        "gt": "remain"
+      }
+    },
+    {
+      "word": "cas",
+      "en": "case",
+      "pos": "v",
+      "google": "case",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "parles",
+      "en": "to talk",
+      "pos": "v",
+      "google": "speak",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "talk"
+        ],
+        "gtWords": [
+          "speak"
+        ],
+        "gt": "speak"
+      }
+    },
+    {
+      "word": "plairait",
+      "en": "to please",
+      "pos": "v",
+      "google": "would like",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "please"
+        ],
+        "gtWords": [
+          "like"
+        ],
+        "gt": "would like"
+      }
+    },
+    {
+      "word": "restes",
+      "en": "to stay",
+      "pos": "v",
+      "google": "remains",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "stay"
+        ],
+        "gtWords": [
+          "remain"
+        ],
+        "gt": "remains"
+      }
+    },
+    {
+      "word": "venezvous",
+      "en": "come",
+      "pos": "v",
+      "google": "come",
+      "issues": "to_prefix"
+    }
+  ]
+}

@@ -52,9 +52,9 @@ export const ACHIEVEMENTS: Achievement[] = [
     condition: (stats: UserStats) => stats.totalReviews >= 1000,
   },
   {
-    id: 'first-experiment',
+    id: 'first-checkpoint',
     title: 'Copper',
-    description: 'Win your first experiment (boss battle)',
+    description: 'Complete your first checkpoint',
     icon: 'Cu',
     unlocked: false,
     condition: (stats: UserStats) => (stats as any).bossesDefeated >= 1 || stats.cardsLearned >= 150,

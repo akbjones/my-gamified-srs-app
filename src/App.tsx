@@ -161,19 +161,19 @@ const buildDeck = (
   return cards;
 };
 
-// Language-specific challenge names (fun & thematic)
+// Language-specific level names
 const CHALLENGE_NAMES: Record<Language, string> = {
-  spanish: 'Misión (Mission)',
-  italian: 'Avventura (Adventure)',
-  french: 'Quête (Quest)',
-  portuguese: 'Jornada (Journey)',
-  german: 'Abenteuer (Adventure)',
-  dutch: 'Ontdekking (Discovery)',
-  swedish: 'Äventyr (Adventure)',
-  welsh: 'Antur (Adventure)',
-  hindi: 'अभियान (Expedition)',
-  turkish: 'Keşif (Discovery)',
-  russian: 'Испытание (Trial)',
+  spanish: 'Level',
+  italian: 'Level',
+  french: 'Level',
+  portuguese: 'Level',
+  german: 'Level',
+  dutch: 'Level',
+  swedish: 'Level',
+  welsh: 'Level',
+  hindi: 'Level',
+  turkish: 'Level',
+  russian: 'Level',
 };
 
 // Find the current frontier node (first incomplete unlocked node)
@@ -693,7 +693,7 @@ const App: React.FC = () => {
                 <StreakFlame streak={userStats.streak} freezes={userStats.streakFreezes ?? 0} size="lg" />
               </div>
 
-              {/* Experiment + current topic */}
+              {/* Level + current topic */}
               <div className="text-right">
                 {currentNode && (
                   <div className="text-[10px] font-semibold uppercase tracking-widest mb-1 text-[var(--text-secondary)]">
@@ -701,12 +701,12 @@ const App: React.FC = () => {
                   </div>
                 )}
                 <div className="text-sm font-extrabold text-[var(--text-primary)]">
-                  {CHALLENGE_NAMES[lang] || 'Experiment'} {Math.min(progressState.nextBossIndex + 1, TOTAL_BOSSES)} of {TOTAL_BOSSES}
+                  {CHALLENGE_NAMES[lang] || 'Level'} {Math.min(progressState.nextBossIndex + 1, TOTAL_BOSSES)} of {TOTAL_BOSSES}
                 </div>
               </div>
             </div>
 
-            {/* Boss progress bar */}
+            {/* Checkpoint progress bar */}
             <div className="progress-rail mt-3">
               <div
                 className="progress-fill bg-[var(--accent)]"

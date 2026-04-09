@@ -4186,7 +4186,7 @@ export const dictionary: Record<string, DictEntry> = {
   'projets': { en: 'to project', ipa: 'pʁɔ.ʒɛ', pos: 'v', lemma: 'projet' },
   'prolongement': { en: 'to research, extension', ipa: 'pʁɔ.lɔ̃ʒ.mɑ̃', pos: 'v' },
   'prolonger': { en: 'to extend', ipa: 'pʁɔ.lɔ̃.ʒe', pos: 'v' },
-  'promenade': { en: 'walk, stroll; walk', ipa: 'pʁɔm.nad', pos: 'n' },
+  'promenade': { en: 'ride', ipa: 'pʁɔm.nad', pos: 'n' },
   'promenaient': { en: 'to take a walk', ipa: 'pʁɔm.nɛ', pos: 'v', lemma: 'promener' },
   'promenais': { en: 'to take a walk', ipa: 'pʁɔm.nɛ', pos: 'v', lemma: 'promener' },
   'promene': { en: 'to take a walk', ipa: 'pʁɔ.mɛn', pos: 'v', lemma: 'promener' },

@@ -2,102 +2,48 @@
   "language": "hi",
   "total_entries": 4781,
   "total_checked": 200,
-  "passed": 195,
-  "failed": 5,
-  "pass_rate": "97.5%",
+  "passed": 198,
+  "failed": 2,
+  "pass_rate": "99%",
   "grade": "A",
   "failures_by_type": {
-    "semantic_fail": 5
+    "semantic_fail": 2
   },
   "failure_examples": [
     {
-      "word": "बताए",
-      "en": "to narrate",
+      "word": "रही",
+      "en": "to stay",
       "pos": "v",
-      "google": "tell",
+      "google": "doing",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "narrate"
+          "stay"
         ],
         "gtWords": [
-          "tell"
+          "do"
         ],
-        "gt": "tell"
+        "gt": "doing"
       }
     },
     {
-      "word": "कह",
-      "en": "to tell",
+      "word": "पड़ा",
+      "en": "to fall",
       "pos": "v",
-      "google": "Say",
+      "google": "had",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "tell"
+          "fall"
         ],
         "gtWords": [
-          "say"
+          "have"
         ],
-        "gt": "Say"
-      }
-    },
-    {
-      "word": "चले",
-      "en": "to walking",
-      "pos": "v",
-      "google": "let's go",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "wal"
-        ],
-        "gtWords": [
-          "go"
-        ],
-        "gt": "let's go"
-      }
-    },
-    {
-      "word": "दिखेंगे",
-      "en": "to appearance",
-      "pos": "v",
-      "google": "will be seen",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "appearance"
-        ],
-        "gtWords": [
-          "see"
-        ],
-        "gt": "will be seen"
-      }
-    },
-    {
-      "word": "चलाओ",
-      "en": "to drive",
-      "pos": "v",
-      "google": "Run it",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "drive"
-        ],
-        "gtWords": [
-          "run"
-        ],
-        "gt": "Run it"
+        "gt": "had"
       }
     }
   ]

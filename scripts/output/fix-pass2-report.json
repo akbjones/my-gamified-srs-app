@@ -1,0 +1,189 @@
+{
+  "es": {
+    "pos_fixes": 340,
+    "corrupt_fixes": 41,
+    "total": 381,
+    "applied": 381,
+    "examples": [
+      "abarca: pos_fix: GT=\"covers\" matches our=\"covers\"",
+      "aburrieron: pos_fix: GT=\"bored\" matches our=\"bored\"",
+      "aconseja: pos_fix: GT=\"advises\" matches our=\"advises\"",
+      "aconsejó: pos_fix: GT=\"advised\" matches our=\"advised\"",
+      "acordé: pos_fix: GT=\"chord\" matches our=\"chord\"",
+      "acostumbró: pos_fix: GT=\"accustomed\" matches our=\"accustomed\"",
+      "admirado: pos_fix: GT=\"admired\" matches our=\"admired\"",
+      "advirtiera: pos_fix: GT=\"warned\" matches our=\"warned\"",
+      "advirtió: pos_fix: GT=\"warned\" matches our=\"warned\"",
+      "afecta: pos_fix: GT=\"affects\" matches our=\"affects\""
+    ]
+  },
+  "it": {
+    "pos_fixes": 192,
+    "corrupt_fixes": 21,
+    "total": 213,
+    "applied": 213,
+    "examples": [
+      "all: pos_fix: GT=\"all\" matches our=\"all\"",
+      "analizzati: pos_fix: GT=\"analyzed\" matches our=\"analyzed\"",
+      "appunti: pos_fix: GT=\"notes\" matches our=\"notes\"",
+      "arricchisca: pos_fix: GT=\"enrich\" matches our=\"enrich\"",
+      "arricchisce: pos_fix: GT=\"enriches\" matches our=\"enriches\"",
+      "auspica: pos_fix: GT=\"hopes\" matches our=\"hopes\"",
+      "avvisarci: pos_fix: GT=\"notify us\" matches our=\"notify us\"",
+      "bancone: pos_fix: GT=\"counter\" matches our=\"counter\"",
+      "bassi: pos_fix: GT=\"bass\" matches our=\"bass\"",
+      "basso: pos_fix: GT=\"Bass\" matches our=\"bass\""
+    ]
+  },
+  "fr": {
+    "pos_fixes": 165,
+    "corrupt_fixes": 0,
+    "total": 165,
+    "applied": 165,
+    "examples": [
+      "achevé: pos_fix: GT=\"finished\" matches our=\"finished\"",
+      "affluent: pos_fix: GT=\"tributary\" matches our=\"tributary\"",
+      "annexe: pos_fix: GT=\"annex\" matches our=\"annex\"",
+      "anniversaire: pos_fix: GT=\"birthday\" matches our=\"birthday\"",
+      "appert: pos_fix: GT=\"appert\" matches our=\"appert\"",
+      "arbre: pos_fix: GT=\"TREE\" matches our=\"tree\"",
+      "arbres: both_fix: was=\"tree\" GT=\"trees\"",
+      "arrêtée: pos_fix: GT=\"stopped\" matches our=\"stopped\"",
+      "averti: pos_fix: GT=\"warned\" matches our=\"warned\"",
+      "bande: pos_fix: GT=\"band\" matches our=\"band\""
+    ]
+  },
+  "pt": {
+    "pos_fixes": 152,
+    "corrupt_fixes": 3,
+    "total": 155,
+    "applied": 155,
+    "examples": [
+      "á: pos_fix: GT=\"the\" matches our=\"the\"",
+      "abaixa: pos_fix: GT=\"lower\" matches our=\"lower\"",
+      "achados: pos_fix: GT=\"findings\" matches our=\"findings\"",
+      "adiada: pos_fix: GT=\"postponed\" matches our=\"postponed\"",
+      "adotados: pos_fix: GT=\"adopted\" matches our=\"adopted\"",
+      "alagadas: pos_fix: GT=\"flooded\" matches our=\"flooded\"",
+      "analisados: pos_fix: GT=\"analyzed\" matches our=\"analyzed\"",
+      "atualizados: pos_fix: GT=\"updated\" matches our=\"updated\"",
+      "avaliados: pos_fix: GT=\"evaluated\" matches our=\"evaluated\"",
+      "bloqueada: pos_fix: GT=\"blocked\" matches our=\"blocked\""
+    ]
+  },
+  "de": {
+    "pos_fixes": 355,
+    "corrupt_fixes": 2,
+    "total": 357,
+    "applied": 357,
+    "examples": [
+      "abgetippt: pos_fix: GT=\"typed out\" matches our=\"typed out\"",
+      "abläuft: pos_fix: GT=\"expires\" matches our=\"expires\"",
+      "abschickte: pos_fix: GT=\"sent\" matches our=\"sent\"",
+      "adoptiert: pos_fix: GT=\"adopted\" matches our=\"adopted\"",
+      "anbrennt: pos_fix: GT=\"burns\" matches our=\"burns\"",
+      "angemerkt: pos_fix: GT=\"noted\" matches our=\"noted\"",
+      "angeschaut: pos_fix: GT=\"looked at\" matches our=\"looked at\"",
+      "angewandt: pos_fix: GT=\"applied\" matches our=\"applied\"",
+      "anhand: pos_fix: GT=\"based\" matches our=\"based\"",
+      "antrag: pos_fix: GT=\"application\" matches our=\"application\""
+    ]
+  },
+  "nl": {
+    "pos_fixes": 405,
+    "corrupt_fixes": 2,
+    "total": 407,
+    "applied": 407,
+    "examples": [
+      "aanbelde: pos_fix: GT=\"rang the doorbell\" matches our=\"rang the doorbell\"",
+      "aangevuld: pos_fix: GT=\"supplemented\" matches our=\"supplemented\"",
+      "aanhoorden: both_fix: was=\"listened to\" GT=\"heard\"",
+      "aankomt: pos_fix: GT=\"arrives\" matches our=\"arrives\"",
+      "aarzelt: pos_fix: GT=\"hesitates\" matches our=\"hesitates\"",
+      "achten: pos_fix: GT=\"eight\" matches our=\"eight\"",
+      "ademde: pos_fix: GT=\"breathed\" matches our=\"breathed\"",
+      "afgevinkt: pos_fix: GT=\"checked off\" matches our=\"checked off\"",
+      "auxiliary: pos_fix: GT=\"auxiliary\" matches our=\"auxiliary\"",
+      "bad: pos_fix: GT=\"bath\" matches our=\"bath\""
+    ]
+  },
+  "sv": {
+    "pos_fixes": 21,
+    "corrupt_fixes": 0,
+    "total": 21,
+    "applied": 21,
+    "examples": [
+      "blomman: both_fix: was=\"flower\" GT=\"the flower\"",
+      "blommar: both_fix: was=\"flower\" GT=\"blooms\"",
+      "blommor: both_fix: was=\"flower\" GT=\"flowers\"",
+      "gatan: pos_fix: GT=\"street\" matches our=\"street\"",
+      "gator: both_fix: was=\"street\" GT=\"streets\"",
+      "hälsan: pos_fix: GT=\"health\" matches our=\"health\"",
+      "jackan: both_fix: was=\"jacket\" GT=\"the jacket\"",
+      "klockan: both_fix: was=\"past; the clock\" GT=\"the clock\"",
+      "klockor: both_fix: was=\"church; watch\" GT=\"watches\"",
+      "kvinnan: both_fix: was=\"woman\" GT=\"the woman\""
+    ]
+  },
+  "cy": {
+    "pos_fixes": 1,
+    "corrupt_fixes": 0,
+    "total": 1,
+    "applied": 1,
+    "examples": [
+      "medd: pos_fix: GT=\"says\" matches our=\"says\""
+    ]
+  },
+  "hi": {
+    "pos_fixes": 7,
+    "corrupt_fixes": 1,
+    "total": 8,
+    "applied": 8,
+    "examples": [
+      "चाहिए: both_fix: was=\"should/need\" GT=\"Needed\"",
+      "बिछौना: pos_fix: GT=\"bed\" matches our=\"bed\"",
+      "continuousStem: pos_fix: GT=\"continuousStem\" matches our=\"continuousStem\"",
+      "futureStem: pos_fix: GT=\"futureStem\" matches our=\"futureStem\"",
+      "isTransitive: pos_fix: GT=\"isTransitive\" matches our=\"isTransitive\"",
+      "pastForms: pos_fix: GT=\"Past Forms\" matches our=\"past Forms\"",
+      "presentStem: pos_fix: GT=\"presentStem\" matches our=\"presentStem\"",
+      "चले: corrupt_fix: was=\"let\\\" GT=\"let's go\""
+    ]
+  },
+  "tr": {
+    "pos_fixes": 465,
+    "corrupt_fixes": 17,
+    "total": 482,
+    "applied": 482,
+    "examples": [
+      "aç: pos_fix: GT=\"hungry\" matches our=\"hungry\"",
+      "açılan: pos_fix: GT=\"opened\" matches our=\"opened\"",
+      "açılıyor: pos_fix: GT=\"opens\" matches our=\"opens\"",
+      "açılmış: pos_fix: GT=\"opened\" matches our=\"opened\"",
+      "affetti: pos_fix: GT=\"forgave\" matches our=\"forgave\"",
+      "akar: pos_fix: GT=\"mite\" matches our=\"mite\"",
+      "al: pos_fix: GT=\"al\" matches our=\"al\"",
+      "alanlarını: pos_fix: GT=\"their areas\" matches our=\"their areas\"",
+      "anlamlı: pos_fix: GT=\"significant\" matches our=\"significant\"",
+      "antipati: pos_fix: GT=\"antipathy\" matches our=\"antipathy\""
+    ]
+  },
+  "ru": {
+    "pos_fixes": 459,
+    "corrupt_fixes": 38,
+    "total": 497,
+    "applied": 497,
+    "examples": [
+      "вдохновляет: pos_fix: GT=\"inspires\" matches our=\"inspires\"",
+      "вернул: pos_fix: GT=\"returned\" matches our=\"returned\"",
+      "вкусно: pos_fix: GT=\"tasty\" matches our=\"tasty\"",
+      "возразила: pos_fix: GT=\"objected\" matches our=\"objected\"",
+      "вопросы: pos_fix: GT=\"questions\" matches our=\"questions\"",
+      "впускает: pos_fix: GT=\"lets in\" matches our=\"lets in\"",
+      "времени: pos_fix: GT=\"time\" matches our=\"time\"",
+      "вспомнил: pos_fix: GT=\"remembered\" matches our=\"remembered\"",
+      "встречались: pos_fix: GT=\"met\" matches our=\"met\"",
+      "выбежали: pos_fix: GT=\"ran out\" matches our=\"ran out\""
+    ]
+  }
+}

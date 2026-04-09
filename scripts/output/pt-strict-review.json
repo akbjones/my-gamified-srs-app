@@ -2,280 +2,38 @@
   "language": "pt",
   "total_entries": 5501,
   "total_checked": 200,
-  "passed": 176,
-  "failed": 24,
-  "pass_rate": "88%",
-  "grade": "B",
+  "passed": 193,
+  "failed": 7,
+  "pass_rate": "96.5%",
+  "grade": "A",
   "failures_by_type": {
-    "semantic_fail": 21,
-    "to_prefix": 4
+    "semantic_fail": 6,
+    "to_past_tense": 1
   },
   "failure_examples": [
     {
-      "word": "assistido",
-      "en": "to attend",
+      "word": "tiraria",
+      "en": "to throw",
       "pos": "v",
-      "google": "assisted",
+      "google": "I would take",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "attend"
+          "throw"
         ],
         "gtWords": [
-          "assis"
-        ],
-        "gt": "assisted"
-      }
-    },
-    {
-      "word": "existe",
-      "en": "to exist",
-      "pos": "v",
-      "google": "there is",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "exist"
-        ],
-        "gtWords": [
-          "there"
-        ],
-        "gt": "there is"
-      }
-    },
-    {
-      "word": "amando",
-      "en": "to love",
-      "pos": "v",
-      "google": "loving",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "love"
-        ],
-        "gtWords": [
-          "lo"
-        ],
-        "gt": "loving"
-      }
-    },
-    {
-      "word": "levanta",
-      "en": "to raise",
-      "pos": "v",
-      "google": "stand up",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "raise"
-        ],
-        "gtWords": [
-          "stand"
-        ],
-        "gt": "stand up"
-      }
-    },
-    {
-      "word": "acabaram",
-      "en": "to finish",
-      "pos": "v",
-      "google": "they are over",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "finish"
-        ],
-        "gtWords": [
-          "be"
-        ],
-        "gt": "they are over"
-      }
-    },
-    {
-      "word": "pega",
-      "en": "to take",
-      "pos": "v",
-      "google": "handle",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
           "take"
         ],
-        "gtWords": [
-          "handle"
-        ],
-        "gt": "handle"
+        "gt": "I would take"
       }
     },
     {
-      "word": "consertaria",
-      "en": "to repair",
-      "pos": "v",
-      "google": "fix",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "repair"
-        ],
-        "gtWords": [
-          "fix"
-        ],
-        "gt": "fix"
-      }
-    },
-    {
-      "word": "tomava",
-      "en": "to take",
-      "pos": "v",
-      "google": "drank",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "take"
-        ],
-        "gtWords": [
-          "drink"
-        ],
-        "gt": "drank"
-      }
-    },
-    {
-      "word": "tocava",
-      "en": "to touch",
-      "pos": "v",
-      "google": "played",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "touch"
-        ],
-        "gtWords": [
-          "pla"
-        ],
-        "gt": "played"
-      }
-    },
-    {
-      "word": "voltariam",
-      "en": "to go back",
-      "pos": "v",
-      "google": "would return",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "go",
-          "back"
-        ],
-        "gtWords": [
-          "return"
-        ],
-        "gt": "would return"
-      }
-    },
-    {
-      "word": "falando",
-      "en": "to speak",
-      "pos": "v",
-      "google": "talking",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "speak"
-        ],
-        "gtWords": [
-          "tal"
-        ],
-        "gt": "talking"
-      }
-    },
-    {
-      "word": "imperfect",
-      "en": "imperfect",
-      "pos": "v",
-      "google": "imperfect",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "prova",
-      "en": "to test",
-      "pos": "v",
-      "google": "proof",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "test"
-        ],
-        "gtWords": [
-          "proof"
-        ],
-        "gt": "proof"
-      }
-    },
-    {
-      "word": "tocou",
-      "en": "to touch",
-      "pos": "v",
-      "google": "played",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "touch"
-        ],
-        "gtWords": [
-          "pla"
-        ],
-        "gt": "played"
-      }
-    },
-    {
-      "word": "viu",
-      "en": "to vier",
-      "pos": "v",
-      "google": "it saw",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "vier"
-        ],
-        "gtWords": [
-          "see"
-        ],
-        "gt": "it saw"
-      }
-    },
-    {
-      "word": "guardada",
+      "word": "guardamos",
       "en": "to save",
       "pos": "v",
-      "google": "stored",
+      "google": "we keep",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
@@ -284,132 +42,89 @@
           "save"
         ],
         "gtWords": [
-          "sto"
+          "keep"
         ],
-        "gt": "stored"
+        "gt": "we keep"
       }
     },
     {
-      "word": "reservamo",
-      "en": "book",
+      "word": "mando",
+      "en": "to send",
       "pos": "v",
-      "google": "we reserve",
-      "issues": "to_prefix, semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "book"
-        ],
-        "gtWords": [
-          "reserve"
-        ],
-        "gt": "we reserve"
-      }
-    },
-    {
-      "word": "retrata",
-      "en": "to portray",
-      "pos": "v",
-      "google": "depicts",
+      "google": "I command",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "portray"
+          "send"
         ],
         "gtWords": [
-          "depict"
+          "command"
         ],
-        "gt": "depicts"
+        "gt": "I command"
       }
     },
     {
-      "word": "alertou",
-      "en": "to alert",
+      "word": "digo",
+      "en": "to say",
       "pos": "v",
-      "google": "warned",
+      "google": "I mean",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "alert"
+          "say"
         ],
         "gtWords": [
-          "war"
+          "mean"
         ],
-        "gt": "warned"
+        "gt": "I mean"
       }
     },
     {
-      "word": "aos",
-      "en": "to the",
-      "pos": "prep",
-      "google": "to the",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "pedisse",
-      "en": "to ask",
+      "word": "guardei",
+      "en": "to save",
       "pos": "v",
-      "google": "asked",
+      "google": "I kept",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "ask"
+          "save"
         ],
         "gtWords": [
-          "as"
+          "keep"
         ],
-        "gt": "asked"
+        "gt": "I kept"
       }
     },
     {
-      "word": "respondi",
-      "en": "to respond",
-      "pos": "v",
-      "google": "I replied",
+      "word": "acompanho",
+      "en": "i\\",
+      "pos": "n",
+      "google": "I'm following",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "respond"
+          "i\\"
         ],
         "gtWords": [
-          "repl"
+          "follow"
         ],
-        "gt": "I replied"
+        "gt": "I'm following"
       }
     },
     {
-      "word": "bate",
-      "en": "to knock",
+      "word": "custa",
+      "en": "to cost",
       "pos": "v",
-      "google": "hit",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "knock"
-        ],
-        "gtWords": [
-          "hit"
-        ],
-        "gt": "hit"
-      }
-    },
-    {
-      "word": "jogador",
-      "en": "player",
-      "pos": "v",
-      "google": "player",
-      "issues": "to_prefix"
+      "google": "costs",
+      "issues": "to_past_tense"
     }
   ]
 }

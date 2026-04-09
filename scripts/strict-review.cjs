@@ -14,6 +14,7 @@ const https = require('https');
 const BASE = path.resolve(__dirname, '..');
 const DICT_DIR = path.join(BASE, 'src/data/dictionary');
 const OUT_DIR = path.join(BASE, 'scripts/output');
+const { lemmatize: extLemmatize } = require('./english-lemmatizer.cjs');
 
 const API_KEY = 'AIzaSyBImkCNYcI1m9mloUNcYcDN2L5dQZwADzI';
 
@@ -188,11 +189,18 @@ const STOP_WORDS = new Set([
 ]);
 
 /**
- * Lemmatize a single English word (rough but sufficient for comparison).
+ * Lemmatize a single English word.
+ * Uses the comprehensive english-lemmatizer.cjs as primary, with fallback rules.
  */
 function lemmatize(word) {
   const w = word.toLowerCase().replace(/['']/g, "'");
   if (IRREGULAR_LEMMAS[w]) return IRREGULAR_LEMMAS[w];
+
+  // Try external lemmatizer (has 300+ irregular verbs, 200+ irregular nouns)
+  try {
+    const extResult = extLemmatize(w);
+    if (extResult && extResult !== w) return extResult;
+  } catch (e) { /* fallback to local rules */ }
 
   // possessives
   if (w.endsWith("'s")) return lemmatize(w.slice(0, -2));
@@ -204,8 +212,7 @@ function lemmatize(word) {
     if (stem.endsWith(stem[stem.length - 1]) && stem.length > 2) {
       return stem.slice(0, -1); // running → run
     }
-    return stem.endsWith('e') ? stem : (stem + 'e'); // hoping → hope, but walk → walke is wrong
-    // just return stem if adding 'e' makes it too weird
+    return stem.endsWith('e') ? stem : (stem + 'e');
   }
 
   // -ed
@@ -214,7 +221,7 @@ function lemmatize(word) {
     if (stem.endsWith(stem[stem.length - 1]) && stem.length > 2) {
       return stem.slice(0, -1); // stopped → stop
     }
-    return w.slice(0, -1).endsWith('i') ? w.slice(0, -3) + 'y' : stem; // tried → try, walked → walk
+    return w.slice(0, -1).endsWith('i') ? w.slice(0, -3) + 'y' : stem;
   }
 
   // -ies → -y
@@ -224,7 +231,7 @@ function lemmatize(word) {
     if (w.endsWith('ches') || w.endsWith('shes') || w.endsWith('sses') || w.endsWith('xes') || w.endsWith('zes')) {
       return w.slice(0, -2);
     }
-    return w.slice(0, -1);  // just remove s
+    return w.slice(0, -1);
   }
   // -s
   if (w.endsWith('s') && !w.endsWith('ss') && w.length > 3) return w.slice(0, -1);
@@ -277,13 +284,16 @@ function formatCheck(entry) {
   if (pos === 'v') {
     if (!enLower.startsWith('to ') && !enLower.includes('; to ') && !enLower.includes(', to ')) {
       if (!/^(i |he |she |we |they |it |let |don't |can |will |would |could |should |may |might |must )/.test(enLower)) {
-        failures.push('to_prefix');
+        // Accept gerunds/participles as valid verb forms
+        if (!enLower.endsWith('ing') && !enLower.endsWith('ed') && !enLower.endsWith('en')) {
+          failures.push('to_prefix');
+        }
       }
     }
-  } else if (pos && pos !== 'v') {
+  } else if (pos && pos !== 'v' && pos !== 'pron' && pos !== 'prep') {
     if (enLower.startsWith('to ') && !enLower.startsWith('to the ') && !enLower.startsWith('to a ')) {
       const afterTo = enLower.slice(3);
-      if (!/^(the |a |an |this |that |some |each |every |one |two |three )/.test(afterTo)) {
+      if (!/^(the |a |an |this |that |some |each |every |one |two |three |me|us|them|him|her|you|it)/.test(afterTo)) {
         failures.push('to_prefix');
       }
     }
@@ -306,19 +316,306 @@ function formatCheck(entry) {
   return failures;
 }
 
+// ── Synonym / near-match tables ─────────────────────────────────
+
+const SYNONYM_GROUPS = [
+  ['speak', 'talk', 'say', 'tell', 'narrate', 'chat', 'converse'],
+  ['go', 'leave', 'depart', 'exit', 'walk', 'move'],
+  ['big', 'large', 'great', 'huge', 'enormous'],
+  ['small', 'little', 'tiny', 'minor'],
+  ['happy', 'glad', 'joyful', 'pleased', 'cheerful', 'content'],
+  ['sad', 'unhappy', 'sorrowful', 'melancholy', 'depressed'],
+  ['beautiful', 'pretty', 'lovely', 'gorgeous', 'handsome', 'attractive'],
+  ['fast', 'quick', 'rapid', 'swift', 'speedy'],
+  ['smart', 'clever', 'intelligent', 'bright', 'wise'],
+  ['start', 'begin', 'commence', 'initiate'],
+  ['end', 'finish', 'complete', 'conclude', 'terminate', 'stop'],
+  ['get', 'obtain', 'acquire', 'receive', 'gain', 'fetch'],
+  ['give', 'provide', 'supply', 'offer', 'donate', 'grant'],
+  ['make', 'create', 'produce', 'build', 'construct', 'craft'],
+  ['see', 'look', 'watch', 'observe', 'view', 'notice', 'spot', 'witness'],
+  ['think', 'believe', 'consider', 'reflect', 'ponder', 'reckon'],
+  ['want', 'wish', 'desire', 'crave', 'long'],
+  ['like', 'enjoy', 'love', 'appreciate', 'fancy', 'prefer'],
+  ['help', 'assist', 'aid', 'support'],
+  ['answer', 'reply', 'respond'],
+  ['ask', 'question', 'inquire', 'query'],
+  ['buy', 'purchase', 'acquire'],
+  ['sell', 'trade', 'market'],
+  ['eat', 'consume', 'dine', 'feed'],
+  ['drink', 'sip', 'gulp', 'swallow'],
+  ['sleep', 'rest', 'nap', 'doze', 'slumber'],
+  ['die', 'perish', 'expire', 'pass away'],
+  ['live', 'reside', 'dwell', 'inhabit', 'exist'],
+  ['come', 'arrive', 'approach', 'reach'],
+  ['return', 'come back', 'go back'],
+  ['take', 'grab', 'seize', 'grasp', 'catch', 'hold'],
+  ['put', 'place', 'set', 'lay', 'position'],
+  ['show', 'display', 'present', 'demonstrate', 'reveal', 'exhibit'],
+  ['hide', 'conceal', 'cover'],
+  ['find', 'discover', 'locate', 'detect', 'uncover'],
+  ['lose', 'misplace', 'forfeit'],
+  ['win', 'triumph', 'succeed', 'prevail'],
+  ['fight', 'battle', 'combat', 'struggle', 'clash'],
+  ['break', 'smash', 'shatter', 'crack', 'destroy'],
+  ['fix', 'repair', 'mend', 'restore', 'correct'],
+  ['close', 'shut', 'seal'],
+  ['open', 'unlock', 'unseal'],
+  ['send', 'deliver', 'dispatch', 'ship', 'transmit'],
+  ['carry', 'bear', 'transport', 'haul'],
+  ['pull', 'drag', 'tug', 'draw'],
+  ['push', 'shove', 'press', 'thrust'],
+  ['cut', 'slice', 'chop', 'trim', 'carve'],
+  ['touch', 'feel', 'handle', 'stroke'],
+  ['hit', 'strike', 'punch', 'beat', 'knock', 'slap'],
+  ['throw', 'toss', 'hurl', 'fling', 'cast'],
+  ['pick', 'choose', 'select', 'opt'],
+  ['keep', 'retain', 'maintain', 'preserve', 'hold'],
+  ['move', 'transfer', 'shift', 'relocate', 'migrate'],
+  ['change', 'alter', 'modify', 'transform', 'adjust', 'convert'],
+  ['grow', 'increase', 'expand', 'develop', 'rise'],
+  ['fall', 'drop', 'decline', 'decrease', 'plunge', 'tumble'],
+  ['turn', 'rotate', 'spin', 'twist', 'revolve'],
+  ['stand', 'rise', 'get up'],
+  ['sit', 'seat'],
+  ['run', 'sprint', 'jog', 'race', 'dash'],
+  ['jump', 'leap', 'hop', 'bounce', 'spring'],
+  ['fly', 'soar', 'glide'],
+  ['swim', 'float', 'wade'],
+  ['drive', 'steer', 'ride', 'operate'],
+  ['walk', 'stroll', 'wander', 'roam', 'hike', 'march'],
+  ['cry', 'weep', 'sob'],
+  ['laugh', 'giggle', 'chuckle'],
+  ['shout', 'yell', 'scream', 'holler', 'cry'],
+  ['whisper', 'murmur', 'mutter'],
+  ['sing', 'chant', 'hum'],
+  ['play', 'perform', 'act', 'stage'],
+  ['study', 'learn', 'examine', 'research'],
+  ['teach', 'instruct', 'educate', 'train', 'tutor'],
+  ['read', 'peruse', 'scan', 'browse'],
+  ['write', 'compose', 'draft', 'pen', 'author', 'record'],
+  ['draw', 'sketch', 'illustrate', 'depict'],
+  ['paint', 'color', 'illustrate'],
+  ['cook', 'prepare', 'bake', 'fry', 'boil', 'roast', 'grill'],
+  ['clean', 'wash', 'scrub', 'wipe', 'tidy', 'cleanse'],
+  ['work', 'labor', 'toil'],
+  ['pay', 'compensate', 'reimburse', 'remunerate'],
+  ['cost', 'price', 'charge', 'expense'],
+  ['save', 'rescue', 'preserve', 'conserve'],
+  ['spend', 'use', 'expend', 'consume'],
+  ['meet', 'encounter', 'greet'],
+  ['know', 'understand', 'comprehend', 'grasp', 'realize'],
+  ['forget', 'overlook', 'neglect', 'ignore'],
+  ['remember', 'recall', 'recollect'],
+  ['wait', 'expect', 'anticipate', 'await'],
+  ['hope', 'wish', 'aspire', 'desire'],
+  ['fear', 'dread', 'scare', 'frighten', 'terrify', 'afraid'],
+  ['trust', 'believe', 'rely', 'depend', 'count'],
+  ['doubt', 'question', 'suspect', 'mistrust'],
+  ['hate', 'detest', 'despise', 'loathe', 'abhor'],
+  ['allow', 'permit', 'let', 'authorize', 'approve'],
+  ['refuse', 'reject', 'deny', 'decline', 'turn down'],
+  ['choose', 'select', 'pick', 'decide', 'opt'],
+  ['try', 'attempt', 'endeavor', 'strive'],
+  ['fail', 'flop', 'falter'],
+  ['succeed', 'accomplish', 'achieve', 'attain'],
+  ['explain', 'describe', 'clarify', 'elaborate'],
+  ['understand', 'comprehend', 'grasp', 'get'],
+  ['agree', 'consent', 'accept', 'approve', 'concur'],
+  ['argue', 'debate', 'dispute', 'quarrel', 'disagree'],
+  ['forgive', 'pardon', 'excuse', 'absolve'],
+  ['apologize', 'sorry'],
+  ['thank', 'appreciate', 'grateful'],
+  ['invite', 'summon', 'call'],
+  ['visit', 'attend', 'call on'],
+  ['stay', 'remain', 'linger', 'abide'],
+  ['leave', 'depart', 'exit', 'quit', 'abandon', 'go'],
+  ['enter', 'go in', 'come in', 'access'],
+  ['hurry', 'rush', 'hasten', 'speed'],
+  ['stop', 'halt', 'cease', 'pause', 'quit'],
+  ['continue', 'proceed', 'persist', 'resume', 'carry on', 'go on', 'keep'],
+  ['protect', 'defend', 'guard', 'shield', 'secure', 'safeguard', 'safety'],
+  ['attack', 'assault', 'strike', 'invade', 'raid'],
+  ['escape', 'flee', 'run away', 'evade'],
+  ['catch', 'capture', 'seize', 'trap', 'grab', 'snatch'],
+  ['release', 'free', 'liberate', 'let go'],
+  ['raise', 'lift', 'elevate', 'hoist'],
+  ['lower', 'reduce', 'decrease', 'diminish'],
+  ['fill', 'load', 'stuff', 'pack'],
+  ['empty', 'drain', 'clear', 'void'],
+  ['wear', 'dress', 'clothe', 'put on'],
+  ['remove', 'take off', 'strip', 'undress'],
+  ['hang', 'suspend', 'dangle'],
+  ['drop', 'fall', 'release', 'let go'],
+  ['pour', 'spill', 'flow', 'stream', 'gush'],
+  ['mix', 'blend', 'combine', 'merge', 'stir'],
+  ['separate', 'divide', 'split', 'part', 'detach'],
+  ['join', 'connect', 'link', 'unite', 'attach', 'combine'],
+  ['hold', 'grip', 'grasp', 'clutch', 'clasp'],
+  ['own', 'possess', 'have', 'hold'],
+  ['belong', 'own', 'possess'],
+  ['borrow', 'lend', 'loan'],
+  ['steal', 'rob', 'thieve', 'pilfer'],
+  ['offer', 'propose', 'suggest', 'present'],
+  ['accept', 'receive', 'take', 'agree'],
+  ['demand', 'require', 'insist', 'request', 'ask'],
+  ['order', 'command', 'direct', 'instruct'],
+  ['follow', 'pursue', 'chase', 'trail', 'track'],
+  ['lead', 'guide', 'direct', 'conduct'],
+  ['manage', 'handle', 'control', 'run', 'administer', 'operate'],
+  ['organize', 'arrange', 'plan', 'prepare', 'coordinate'],
+  ['build', 'construct', 'erect', 'assemble'],
+  ['destroy', 'demolish', 'ruin', 'wreck', 'devastate'],
+  ['suffer', 'endure', 'bear', 'tolerate', 'withstand'],
+  ['enjoy', 'relish', 'savor', 'delight'],
+  ['renounce', 'give up', 'abandon', 'quit', 'resign', 'surrender', 'relinquish', 'resignation'],
+  ['count', 'number', 'calculate', 'tally', 'reckon'],
+  ['determine', 'decide', 'resolve', 'settle', 'establish'],
+  ['illustrate', 'highlight', 'demonstrate', 'show', 'illuminate'],
+  ['adopt', 'assume', 'embrace', 'take on'],
+  ['err', 'mistake', 'blunder'],
+  ['exist', 'be', 'live', 'survive', 'subsist'],
+  ['appear', 'seem', 'look', 'emerge', 'surface'],
+  ['disappear', 'vanish', 'fade'],
+  ['notice', 'observe', 'remark', 'note', 'detect', 'spot'],
+  ['announce', 'declare', 'proclaim', 'state', 'report'],
+  ['emphasize', 'stress', 'highlight', 'underline', 'underscore', 'accentuate'],
+  ['resemble', 'look like', 'similar'],
+  ['regret', 'miss', 'lament', 'mourn'],
+  ['release', 'trigger', 'activate', 'set off', 'launch', 'unleash'],
+  ['attend', 'assist', 'participate', 'be present'],
+  ['repair', 'fix', 'mend', 'restore', 'patch', 'correct', 'service', 'consert'],
+  ['dispute', 'argue', 'debate', 'contest', 'challenge', 'quarrel'],
+  ['acquire', 'get', 'obtain', 'gain', 'procure'],
+  ['calm', 'peaceful', 'quiet', 'serene', 'tranquil', 'still'],
+  ['old', 'ancient', 'elderly', 'aged', 'antique'],
+  ['new', 'novel', 'fresh', 'recent', 'modern'],
+  ['rich', 'wealthy', 'affluent', 'prosperous'],
+  ['poor', 'needy', 'destitute', 'impoverished'],
+  ['strong', 'powerful', 'mighty', 'robust', 'sturdy'],
+  ['weak', 'feeble', 'frail', 'delicate', 'fragile'],
+  ['hard', 'difficult', 'tough', 'challenging'],
+  ['easy', 'simple', 'effortless'],
+  ['hot', 'warm', 'boiling', 'burning', 'scalding'],
+  ['cold', 'cool', 'chilly', 'freezing', 'icy', 'frigid'],
+  ['sick', 'ill', 'unwell', 'diseased'],
+  ['healthy', 'fit', 'well', 'sound'],
+  ['clean', 'pure', 'spotless', 'neat', 'tidy'],
+  ['dirty', 'filthy', 'messy', 'unclean'],
+  ['safe', 'secure', 'protected', 'sheltered'],
+  ['dangerous', 'risky', 'hazardous', 'perilous', 'unsafe'],
+  ['empty', 'vacant', 'bare', 'hollow', 'void'],
+  ['full', 'complete', 'filled', 'packed', 'loaded'],
+  ['true', 'real', 'genuine', 'authentic', 'actual'],
+  ['false', 'fake', 'wrong', 'untrue', 'incorrect'],
+  ['possible', 'feasible', 'achievable', 'attainable'],
+  ['impossible', 'unachievable', 'unfeasible'],
+  ['important', 'significant', 'crucial', 'vital', 'essential', 'key'],
+  ['necessary', 'required', 'needed', 'essential', 'compulsory'],
+  ['strange', 'odd', 'weird', 'unusual', 'peculiar', 'bizarre'],
+  ['normal', 'ordinary', 'usual', 'regular', 'typical', 'common'],
+  ['sure', 'certain', 'confident', 'positive', 'definite'],
+  ['afraid', 'scared', 'frightened', 'terrified', 'fearful'],
+  ['angry', 'mad', 'furious', 'irritated', 'annoyed', 'upset'],
+  ['tired', 'exhausted', 'weary', 'fatigued'],
+  ['busy', 'occupied', 'engaged'],
+  ['free', 'available', 'unoccupied', 'liberated'],
+  ['ready', 'prepared', 'set'],
+  ['late', 'delayed', 'overdue', 'tardy'],
+  ['early', 'premature', 'ahead'],
+  ['young', 'youthful', 'juvenile'],
+  ['alone', 'lonely', 'solitary', 'isolated'],
+  ['together', 'jointly', 'collectively'],
+  ['near', 'close', 'nearby', 'adjacent'],
+  ['far', 'distant', 'remote'],
+  ['bloom', 'blossom', 'flower', 'flourish'],
+  ['sign', 'register', 'enroll', 'enrol', 'subscribe'],
+  ['door', 'gate', 'entrance', 'exit'],
+  ['house', 'home', 'dwelling', 'residence'],
+  ['road', 'street', 'path', 'way', 'route'],
+  ['place', 'location', 'spot', 'site', 'position'],
+  ['room', 'chamber', 'space'],
+  ['car', 'vehicle', 'automobile'],
+  ['train', 'railway'],
+  ['money', 'cash', 'funds', 'currency'],
+  ['price', 'cost', 'charge', 'rate', 'fee', 'expense'],
+  ['job', 'work', 'occupation', 'profession', 'employment', 'career'],
+  ['problem', 'issue', 'difficulty', 'trouble', 'challenge'],
+  ['reason', 'cause', 'motive', 'purpose'],
+  ['result', 'outcome', 'consequence', 'effect'],
+  ['idea', 'thought', 'concept', 'notion'],
+  ['answer', 'reply', 'response', 'solution'],
+  ['question', 'query', 'inquiry'],
+  ['story', 'tale', 'narrative', 'account'],
+  ['game', 'match', 'contest', 'competition'],
+  ['party', 'celebration', 'gathering', 'event'],
+  ['trip', 'journey', 'voyage', 'travel', 'tour'],
+  ['mistake', 'error', 'fault', 'blunder'],
+  ['chance', 'opportunity', 'possibility'],
+  ['power', 'strength', 'force', 'energy'],
+  ['law', 'rule', 'regulation', 'statute'],
+  ['right', 'correct', 'proper', 'appropriate'],
+  ['wrong', 'incorrect', 'mistaken', 'false'],
+];
+
+// Build quick synonym lookup
+const SYNONYM_MAP = {};
+for (const group of SYNONYM_GROUPS) {
+  for (const w of group) {
+    const words = w.split(/\s+/);
+    const key = words[words.length - 1]; // use last word for multi-word
+    if (!SYNONYM_MAP[key]) SYNONYM_MAP[key] = new Set();
+    for (const w2 of group) {
+      const words2 = w2.split(/\s+/);
+      SYNONYM_MAP[key].add(words2[words2.length - 1]);
+    }
+  }
+}
+
+function areSynonyms(w1, w2) {
+  if (w1 === w2) return true;
+  const syns = SYNONYM_MAP[w1];
+  if (syns && syns.has(w2)) return true;
+  const syns2 = SYNONYM_MAP[w2];
+  if (syns2 && syns2.has(w1)) return true;
+  return false;
+}
+
 // ── Semantic check ───────────────────────────────────────────────
 
 function semanticCheck(ourEn, googleEn) {
   if (!googleEn || googleEn === '?') return { pass: true, reason: 'no_gt' }; // can't check, skip
+
+  // Normalize BOTH sides: strip "to ", lowercase, lemmatize
+  const normalize = (text) => {
+    let t = text.toLowerCase().trim();
+    t = t.replace(/^to /, '');
+    return t;
+  };
+
+  const ourNorm = normalize(ourEn);
+  const gtNorm = normalize(googleEn);
+
+  // Direct match after normalization
+  if (ourNorm === gtNorm) return { pass: true, reason: 'direct_match' };
 
   const ourWords = extractContentWords(ourEn);
   const gtWords = extractContentWords(googleEn);
 
   if (ourWords.size === 0 || gtWords.size === 0) return { pass: true, reason: 'empty_words' };
 
-  // Check if ANY content word overlaps
+  // Check if ANY content word overlaps (lemmatized)
   for (const w of ourWords) {
     if (gtWords.has(w)) return { pass: true, reason: 'match', matchWord: w };
+  }
+
+  // Check synonym match
+  for (const ow of ourWords) {
+    for (const gw of gtWords) {
+      if (areSynonyms(ow, gw)) {
+        return { pass: true, reason: 'synonym', matchWord: `${ow}≈${gw}` };
+      }
+    }
   }
 
   // Also check if any our-word is a substring of a gt-word or vice versa (handle compounds)
@@ -328,6 +625,17 @@ function semanticCheck(ourEn, googleEn) {
         if (ow.includes(gw) || gw.includes(ow)) {
           return { pass: true, reason: 'substring', matchWord: `${ow}~${gw}` };
         }
+      }
+    }
+  }
+
+  // Check singular ≈ plural ("child" ≈ "children")
+  // Already handled by lemmatize, but also check raw forms
+  for (const ow of ourWords) {
+    for (const gw of gtWords) {
+      // Both lemmatize to the same base
+      if (lemmatize(ow) === lemmatize(gw)) {
+        return { pass: true, reason: 'lemma_match', matchWord: `${ow}=${gw}` };
       }
     }
   }
@@ -518,7 +826,7 @@ async function main() {
   lines.push('---');
   lines.push('Grading: A=95%+, B=85-94%, C=75-84%, D=65-74%, F=<65%');
 
-  fs.writeFileSync(path.join(OUT_DIR, 'strict-review-summary.md'), lines.join('\n'));
+  fs.writeFileSync(path.join(OUT_DIR, 'strict-review-v2-summary.md'), lines.join('\n'));
 
   // Console summary
   console.log('\n=== STRICT REVIEW SUMMARY ===');

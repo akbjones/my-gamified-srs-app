@@ -2,291 +2,69 @@
   "language": "tr",
   "total_entries": 9694,
   "total_checked": 200,
-  "passed": 173,
-  "failed": 27,
-  "pass_rate": "86.5%",
-  "grade": "B",
+  "passed": 197,
+  "failed": 3,
+  "pass_rate": "98.5%",
+  "grade": "A",
   "failures_by_type": {
-    "semantic_fail": 8,
-    "to_prefix": 19
+    "semantic_fail": 3
   },
   "failure_examples": [
     {
-      "word": "gittiler",
-      "en": "to go",
+      "word": "sorumluluğumuzdur",
+      "en": "to ask",
       "pos": "v",
-      "google": "They left",
+      "google": "It is our responsibility",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "go"
+          "ask"
         ],
         "gtWords": [
-          "leave"
+          "responsibility"
         ],
-        "gt": "They left"
+        "gt": "It is our responsibility"
       }
     },
     {
-      "word": "konuşmaya",
-      "en": "to talk",
+      "word": "kayıyor",
+      "en": "to cream",
       "pos": "v",
-      "google": "to speak",
+      "google": "sliding",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "talk"
+          "cream"
         ],
         "gtWords": [
-          "speak"
+          "slide"
         ],
-        "gt": "to speak"
+        "gt": "sliding"
       }
     },
     {
-      "word": "ilgilenir",
-      "en": "is interested",
+      "word": "yemiyoruz",
+      "en": "to cooked, to food",
       "pos": "v",
-      "google": "is interested",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "onaylandı",
-      "en": "confirmed",
-      "pos": "v",
-      "google": "confirmed",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "alınmakta",
-      "en": "being received",
-      "pos": "v",
-      "google": "being received",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "tabanları",
-      "en": "bases",
-      "pos": "v",
-      "google": "bases",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "müracaat",
-      "en": "application",
-      "pos": "v",
-      "google": "application",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "çıkacak",
-      "en": "to leave",
-      "pos": "v",
-      "google": "will come out",
+      "google": "we don't eat",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "leave"
+          "cook",
+          "food"
         ],
         "gtWords": [
-          "come"
+          "don",
+          "eat"
         ],
-        "gt": "will come out"
+        "gt": "we don't eat"
       }
-    },
-    {
-      "word": "karınca",
-      "en": "ant",
-      "pos": "v",
-      "google": "ant",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "dökülür",
-      "en": "to pour",
-      "pos": "v",
-      "google": "spilled",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "pour"
-        ],
-        "gtWords": [
-          "spil"
-        ],
-        "gt": "spilled"
-      }
-    },
-    {
-      "word": "çalmayı",
-      "en": "stealing",
-      "pos": "v",
-      "google": "stealing",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "deneyleri",
-      "en": "experiments",
-      "pos": "v",
-      "google": "experiments",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "üretmiş",
-      "en": "produced",
-      "pos": "v",
-      "google": "produced",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "sahneliyor",
-      "en": "is staging",
-      "pos": "v",
-      "google": "is staging",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "tartışıyor",
-      "en": "to dispute",
-      "pos": "v",
-      "google": "arguing",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "dispute"
-        ],
-        "gtWords": [
-          "arg"
-        ],
-        "gt": "arguing"
-      }
-    },
-    {
-      "word": "koymuşlar",
-      "en": "to put",
-      "pos": "v",
-      "google": "They placed it",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "put"
-        ],
-        "gtWords": [
-          "pla"
-        ],
-        "gt": "They placed it"
-      }
-    },
-    {
-      "word": "antipati",
-      "en": "antipathy",
-      "pos": "v",
-      "google": "antipathy",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "sergilenir",
-      "en": "is displayed",
-      "pos": "v",
-      "google": "is displayed",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "takviyesi",
-      "en": "supplement",
-      "pos": "v",
-      "google": "supplement",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "kurar",
-      "en": "to create",
-      "pos": "v",
-      "google": "establishes",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "create"
-        ],
-        "gtWords": [
-          "establish"
-        ],
-        "gt": "establishes"
-      }
-    },
-    {
-      "word": "ekmekler",
-      "en": "bread",
-      "pos": "v",
-      "google": "breads",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "tür",
-      "en": "type",
-      "pos": "v",
-      "google": "type",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "hindi",
-      "en": "turkey",
-      "pos": "v",
-      "google": "turkey",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "çıkmaz",
-      "en": "to leave",
-      "pos": "v",
-      "google": "impasse",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "leave"
-        ],
-        "gtWords": [
-          "impasse"
-        ],
-        "gt": "impasse"
-      }
-    },
-    {
-      "word": "görüldü",
-      "en": "seen",
-      "pos": "v",
-      "google": "seen",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "pes",
-      "en": "give up",
-      "pos": "v",
-      "google": "give up",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "i̇lgi",
-      "en": "interest",
-      "pos": "v",
-      "google": "interest",
-      "issues": "to_prefix"
     }
   ]
 }

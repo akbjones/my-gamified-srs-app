@@ -2,203 +2,27 @@
   "language": "sv",
   "total_entries": 5335,
   "total_checked": 200,
-  "passed": 189,
-  "failed": 11,
-  "pass_rate": "94.5%",
-  "grade": "B",
+  "passed": 198,
+  "failed": 2,
+  "pass_rate": "99%",
+  "grade": "A",
   "failures_by_type": {
-    "to_noun": 1,
-    "semantic_fail": 10,
-    "to_past_tense": 3
+    "to_copula": 2
   },
   "failure_examples": [
     {
-      "word": "vattnet",
-      "en": "to water",
+      "word": "skrevs",
+      "en": "to was written",
       "pos": "v",
-      "google": "the water",
-      "issues": "to_noun"
+      "google": "was written",
+      "issues": "to_copula"
     },
     {
-      "word": "bestämmer",
-      "en": "to determine",
+      "word": "följdes",
+      "en": "to was followed",
       "pos": "v",
-      "google": "decides",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "determine"
-        ],
-        "gtWords": [
-          "decide"
-        ],
-        "gt": "decides"
-      }
-    },
-    {
-      "word": "betade",
-      "en": "to bite",
-      "pos": "v",
-      "google": "grazed",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "bite"
-        ],
-        "gtWords": [
-          "gra"
-        ],
-        "gt": "grazed"
-      }
-    },
-    {
-      "word": "agerade",
-      "en": "to act",
-      "pos": "v",
-      "google": "acted",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "act"
-        ],
-        "gtWords": [
-          "ac"
-        ],
-        "gt": "acted"
-      }
-    },
-    {
-      "word": "studier",
-      "en": "to said",
-      "pos": "v",
-      "google": "studies",
-      "issues": "to_past_tense, semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "say"
-        ],
-        "gtWords": [
-          "study"
-        ],
-        "gt": "studies"
-      }
-    },
-    {
-      "word": "bredde",
-      "en": "to wide",
-      "pos": "v",
-      "google": "width",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "wide"
-        ],
-        "gtWords": [
-          "width"
-        ],
-        "gt": "width"
-      }
-    },
-    {
-      "word": "antar",
-      "en": "to adopt",
-      "pos": "v",
-      "google": "assume",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "adopt"
-        ],
-        "gtWords": [
-          "assume"
-        ],
-        "gt": "assume"
-      }
-    },
-    {
-      "word": "snöade",
-      "en": "to said",
-      "pos": "v",
-      "google": "snowed",
-      "issues": "to_past_tense, semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "say"
-        ],
-        "gtWords": [
-          "sno"
-        ],
-        "gt": "snowed"
-      }
-    },
-    {
-      "word": "belyser",
-      "en": "to illustrate",
-      "pos": "v",
-      "google": "highlights",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "illustrate"
-        ],
-        "gtWords": [
-          "highlight"
-        ],
-        "gt": "highlights"
-      }
-    },
-    {
-      "word": "sköter",
-      "en": "to said",
-      "pos": "v",
-      "google": "takes care of",
-      "issues": "to_past_tense, semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "say"
-        ],
-        "gtWords": [
-          "take",
-          "care"
-        ],
-        "gt": "takes care of"
-      }
-    },
-    {
-      "word": "bäras",
-      "en": "to wear",
-      "pos": "v",
-      "google": "waft",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "wear"
-        ],
-        "gtWords": [
-          "waft"
-        ],
-        "gt": "waft"
-      }
+      "google": "was followed",
+      "issues": "to_copula"
     }
   ]
 }

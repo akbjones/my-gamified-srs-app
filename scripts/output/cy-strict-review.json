@@ -2,75 +2,20 @@
   "language": "cy",
   "total_entries": 6115,
   "total_checked": 200,
-  "passed": 196,
-  "failed": 4,
-  "pass_rate": "98%",
+  "passed": 199,
+  "failed": 1,
+  "pass_rate": "99.5%",
   "grade": "A",
   "failures_by_type": {
-    "to_copula": 1,
-    "semantic_fail": 3
+    "to_copula": 1
   },
   "failure_examples": [
     {
-      "word": "comisiynwyd",
-      "en": "to was commissioned",
+      "word": "cynhaliwyd",
+      "en": "to was held",
       "pos": "v",
-      "google": "was commissioned",
+      "google": "was held",
       "issues": "to_copula"
-    },
-    {
-      "word": "trodd",
-      "en": "to try",
-      "pos": "v",
-      "google": "he turned",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "try"
-        ],
-        "gtWords": [
-          "tur"
-        ],
-        "gt": "he turned"
-      }
-    },
-    {
-      "word": "est",
-      "en": "to go",
-      "pos": "v",
-      "google": "ext",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "go"
-        ],
-        "gtWords": [
-          "ext"
-        ],
-        "gt": "ext"
-      }
-    },
-    {
-      "word": "diogelwch",
-      "en": "to protect",
-      "pos": "v",
-      "google": "safety",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "protect"
-        ],
-        "gtWords": [
-          "safety"
-        ],
-        "gt": "safety"
-      }
     }
   ]
 }

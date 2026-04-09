@@ -2,318 +2,88 @@
   "language": "ru",
   "total_entries": 4783,
   "total_checked": 200,
-  "passed": 166,
-  "failed": 34,
-  "pass_rate": "83%",
-  "grade": "C",
+  "passed": 196,
+  "failed": 4,
+  "pass_rate": "98%",
+  "grade": "A",
   "failures_by_type": {
-    "semantic_fail": 6,
-    "to_prefix": 28
+    "semantic_fail": 4
   },
   "failure_examples": [
     {
-      "word": "знакомимся",
-      "en": "to meet",
-      "pos": "v",
-      "google": "let's get acquainted",
+      "word": "успеешь",
+      "en": "you\\",
+      "pos": "n",
+      "google": "you'll make it",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "meet"
+          "you\\"
         ],
         "gtWords": [
-          "acquain"
+          "ll",
+          "make"
         ],
-        "gt": "let's get acquainted"
+        "gt": "you'll make it"
       }
     },
     {
-      "word": "отказались",
-      "en": "refused",
-      "pos": "v",
-      "google": "refused",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "вышел",
-      "en": "to go out",
-      "pos": "v",
-      "google": "came out",
+      "word": "умываюсь",
+      "en": "i\\",
+      "pos": "n",
+      "google": "I'm washing my face",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "go"
+          "i\\"
         ],
         "gtWords": [
+          "wash",
+          "face"
+        ],
+        "gt": "I'm washing my face"
+      }
+    },
+    {
+      "word": "учишь",
+      "en": "to study",
+      "pos": "v",
+      "google": "you teach",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "study"
+        ],
+        "gtWords": [
+          "teach"
+        ],
+        "gt": "you teach"
+      }
+    },
+    {
+      "word": "придёшь",
+      "en": "you\\",
+      "pos": "n",
+      "google": "you'll come",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "you\\"
+        ],
+        "gtWords": [
+          "ll",
           "come"
         ],
-        "gt": "came out"
+        "gt": "you'll come"
       }
-    },
-    {
-      "word": "переведите",
-      "en": "translate",
-      "pos": "v",
-      "google": "translate",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "переведи",
-      "en": "translate",
-      "pos": "v",
-      "google": "translate",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "сломалась",
-      "en": "broke down",
-      "pos": "v",
-      "google": "broke down",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "переехали",
-      "en": "moved",
-      "pos": "v",
-      "google": "moved",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "кровать",
-      "en": "bed",
-      "pos": "v",
-      "google": "bed",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "поставлен",
-      "en": "delivered",
-      "pos": "v",
-      "google": "delivered",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "остывает",
-      "en": "is cooling down",
-      "pos": "v",
-      "google": "is cooling down",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "звонил",
-      "en": "called",
-      "pos": "v",
-      "google": "called",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "просьба",
-      "en": "request",
-      "pos": "v",
-      "google": "request",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "достигнута",
-      "en": "achieved",
-      "pos": "v",
-      "google": "achieved",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "сбежал",
-      "en": "ran away",
-      "pos": "v",
-      "google": "ran away",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "ездит",
-      "en": "drives",
-      "pos": "v",
-      "google": "drives",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "сдавайся",
-      "en": "give up",
-      "pos": "v",
-      "google": "give up",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "сломанный",
-      "en": "broken",
-      "pos": "v",
-      "google": "broken",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "сор",
-      "en": "rubbish",
-      "pos": "v",
-      "google": "rubbish",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "находит",
-      "en": "finds",
-      "pos": "v",
-      "google": "finds",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "мыл",
-      "en": "to wash",
-      "pos": "v",
-      "google": "soaps",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "wash"
-        ],
-        "gtWords": [
-          "soap"
-        ],
-        "gt": "soaps"
-      }
-    },
-    {
-      "word": "задерживается",
-      "en": "to linger",
-      "pos": "v",
-      "google": "is delayed",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "linger"
-        ],
-        "gtWords": [
-          "dela"
-        ],
-        "gt": "is delayed"
-      }
-    },
-    {
-      "word": "перенёс",
-      "en": "to postpone",
-      "pos": "v",
-      "google": "transferred",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "postpone"
-        ],
-        "gtWords": [
-          "transfer"
-        ],
-        "gt": "transferred"
-      }
-    },
-    {
-      "word": "понимаю",
-      "en": "understand",
-      "pos": "v",
-      "google": "Understand",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "шумели",
-      "en": "were making noise",
-      "pos": "v",
-      "google": "were making noise",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "откройте",
-      "en": "open",
-      "pos": "v",
-      "google": "open",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "извинись",
-      "en": "apologize",
-      "pos": "v",
-      "google": "apologize",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "испекла",
-      "en": "baked",
-      "pos": "v",
-      "google": "baked",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "команде",
-      "en": "team",
-      "pos": "v",
-      "google": "team",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "вынесли",
-      "en": "carried out",
-      "pos": "v",
-      "google": "carried out",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "зная",
-      "en": "knowing",
-      "pos": "v",
-      "google": "knowing",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "есть",
-      "en": "to be/to eat",
-      "pos": "v",
-      "google": "There is",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "eat"
-        ],
-        "gtWords": [
-          "there"
-        ],
-        "gt": "There is"
-      }
-    },
-    {
-      "word": "написали",
-      "en": "wrote",
-      "pos": "v",
-      "google": "wrote",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "обращается",
-      "en": "appeals",
-      "pos": "v",
-      "google": "appeals",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "предпочитаете",
-      "en": "do you prefer",
-      "pos": "v",
-      "google": "do you prefer",
-      "issues": "to_prefix"
     }
   ]
 }

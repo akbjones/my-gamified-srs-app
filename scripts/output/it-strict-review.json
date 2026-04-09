@@ -2,383 +2,166 @@
   "language": "it",
   "total_entries": 6757,
   "total_checked": 200,
-  "passed": 174,
-  "failed": 26,
-  "pass_rate": "87%",
-  "grade": "B",
+  "passed": 191,
+  "failed": 9,
+  "pass_rate": "95.5%",
+  "grade": "A",
   "failures_by_type": {
-    "semantic_fail": 17,
-    "to_prefix": 9
+    "semantic_fail": 8,
+    "to_past_tense": 1
   },
   "failure_examples": [
     {
-      "word": "vivevo",
-      "en": "to live",
+      "word": "avvisassi",
+      "en": "to advise",
       "pos": "v",
-      "google": "I lived",
+      "google": "I warned you",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "live"
+          "advise"
         ],
         "gtWords": [
-          "li"
+          "warn"
         ],
-        "gt": "I lived"
+        "gt": "I warned you"
       }
     },
     {
-      "word": "offerta",
-      "en": "offer",
+      "word": "intende",
+      "en": "to understand",
       "pos": "v",
-      "google": "offer",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "suono",
-      "en": "to play",
-      "pos": "v",
-      "google": "sound",
+      "google": "he means",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "play"
+          "understand"
         ],
         "gtWords": [
-          "sound"
+          "mean"
         ],
-        "gt": "sound"
+        "gt": "he means"
       }
     },
     {
-      "word": "rinunceresti",
-      "en": "to renounce",
+      "word": "formazione",
+      "en": "to form",
       "pos": "v",
-      "google": "you would give up",
+      "google": "training",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "renounce"
+          "form"
         ],
         "gtWords": [
-          "give"
+          "traine"
         ],
-        "gt": "you would give up"
+        "gt": "training"
       }
     },
     {
-      "word": "valigia",
-      "en": "to be worth",
+      "word": "sediamo",
+      "en": "to let\\",
       "pos": "v",
-      "google": "suitcase",
+      "google": "let's sit down",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "worth"
+          "let\\"
         ],
         "gtWords": [
-          "suitcase"
+          "sit"
         ],
-        "gt": "suitcase"
+        "gt": "let's sit down"
       }
     },
     {
-      "word": "trasferissi",
-      "en": "to transfer",
+      "word": "divertiti",
+      "en": "to entertain",
       "pos": "v",
-      "google": "I moved",
+      "google": "have fun",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "transfer"
+          "entertain"
         ],
         "gtWords": [
-          "mo"
+          "fun"
         ],
-        "gt": "I moved"
+        "gt": "have fun"
       }
     },
     {
-      "word": "unico",
-      "en": "to unite",
+      "word": "occorre",
+      "en": "to take",
       "pos": "v",
-      "google": "unique",
+      "google": "it is necessary",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "unite"
+          "take"
         ],
         "gtWords": [
-          "unique"
+          "necessary"
         ],
-        "gt": "unique"
+        "gt": "it is necessary"
       }
     },
     {
-      "word": "esiti",
-      "en": "to hesitate",
+      "word": "divertiresti",
+      "en": "to entertain",
       "pos": "v",
-      "google": "results",
+      "google": "you would have fun",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "hesitate"
+          "entertain"
         ],
         "gtWords": [
-          "result"
+          "fun"
         ],
-        "gt": "results"
+        "gt": "you would have fun"
       }
     },
     {
-      "word": "continuo",
-      "en": "to continue",
-      "pos": "v",
-      "google": "continuous",
+      "word": "tornerò",
+      "en": "i\\",
+      "pos": "n",
+      "google": "I'll be back",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "continue"
+          "i\\"
         ],
         "gtWords": [
-          "continuou"
+          "ll",
+          "back"
         ],
-        "gt": "continuous"
+        "gt": "I'll be back"
       }
     },
     {
-      "word": "preterite",
-      "en": "preterite",
+      "word": "costerebbe",
+      "en": "to cost",
       "pos": "v",
-      "google": "preterite",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "fondi",
-      "en": "fund",
-      "pos": "v",
-      "google": "funds",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "morbido",
-      "en": "to die",
-      "pos": "v",
-      "google": "soft",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "die"
-        ],
-        "gtWords": [
-          "soft"
-        ],
-        "gt": "soft"
-      }
-    },
-    {
-      "word": "tappa",
-      "en": "stage",
-      "pos": "v",
-      "google": "stage",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "narra",
-      "en": "narra",
-      "pos": "v",
-      "google": "narra",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "ferie",
-      "en": "to hurt",
-      "pos": "v",
-      "google": "holidays",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "hurt"
-        ],
-        "gtWords": [
-          "holiday"
-        ],
-        "gt": "holidays"
-      }
-    },
-    {
-      "word": "lotteria",
-      "en": "to fight",
-      "pos": "v",
-      "google": "lottery",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "fight"
-        ],
-        "gtWords": [
-          "lottery"
-        ],
-        "gt": "lottery"
-      }
-    },
-    {
-      "word": "dacci",
-      "en": "give us",
-      "pos": "v",
-      "google": "give us",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "tal",
-      "en": "such",
-      "pos": "v",
-      "google": "such",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "finanziario",
-      "en": "to finance",
-      "pos": "v",
-      "google": "financial",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "finance"
-        ],
-        "gtWords": [
-          "financial"
-        ],
-        "gt": "financial"
-      }
-    },
-    {
-      "word": "tagli",
-      "en": "cuts",
-      "pos": "v",
-      "google": "cuts",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "gliela",
-      "en": "give it to him",
-      "pos": "v",
-      "google": "give it to him",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "vendita",
-      "en": "to sell",
-      "pos": "v",
-      "google": "sale",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "sell"
-        ],
-        "gtWords": [
-          "sale"
-        ],
-        "gt": "sale"
-      }
-    },
-    {
-      "word": "terrà",
-      "en": "to hold",
-      "pos": "v",
-      "google": "Earth",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "hold"
-        ],
-        "gtWords": [
-          "earth"
-        ],
-        "gt": "Earth"
-      }
-    },
-    {
-      "word": "collaborazione",
-      "en": "to collaborate",
-      "pos": "v",
-      "google": "collaboration",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "collaborate"
-        ],
-        "gtWords": [
-          "collaboration"
-        ],
-        "gt": "collaboration"
-      }
-    },
-    {
-      "word": "abitano",
-      "en": "to inhabit",
-      "pos": "v",
-      "google": "they live",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "inhabit"
-        ],
-        "gtWords": [
-          "live"
-        ],
-        "gt": "they live"
-      }
-    },
-    {
-      "word": "leggi",
-      "en": "to light",
-      "pos": "v",
-      "google": "laws",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "light"
-        ],
-        "gtWords": [
-          "law"
-        ],
-        "gt": "laws"
-      }
+      "google": "it would cost",
+      "issues": "to_past_tense"
     }
   ]
 }

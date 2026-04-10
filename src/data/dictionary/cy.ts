@@ -4488,7 +4488,7 @@ const dict: Record<string, DictEntry> = {
   'ohono': { en: 'of it', ipa: 'ɔhɔnɔ', pos: 'prep' },
   'ohonyn': { en: 'of', ipa: 'ɔˈhɔnɨn', pos: 'n', lemma: 'o' },
   'oi': { en: 'to feel; oh', ipa: '', pos: 'v' },
-  'ôl': { en: 'to back', ipa: 'oːl', pos: 'v' },
+  'ôl': { en: 'back, trace', ipa: 'oːl', pos: 'n' },
   'olaf': { en: 'last', ipa: 'ˈɔlav', pos: 'adj' },
   'olchi': { en: 'to wash', ipa: 'ˈɔlχɪ', pos: 'v', lemma: 'golchi' },
   'olchir': { en: 'to washed', ipa: '', pos: 'v' },

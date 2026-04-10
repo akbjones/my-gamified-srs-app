@@ -4060,7 +4060,7 @@ const dict: Record<string, DictEntry> = {
   'maddau': { en: 'to forgive', ipa: 'ˈmaðaɪ', pos: 'v' },
   'maddeuodd': { en: 'to forgive', ipa: 'maðɛɪɔð', pos: 'v' },
   'maddeuwch': { en: 'to forgive me', ipa: 'maˈðɛɪʊx', pos: 'v' },
-  'mae': { en: 'there is', ipa: 'maɪ', pos: 'n', lemma: 'bod' },
+  'mae': { en: 'to be (is/are)', ipa: 'maɪ', pos: 'v', lemma: 'bod' },
   'maen': { en: 'stone', ipa: 'maɪn', pos: 'n' },
   'maer': { en: 'mayor', ipa: 'maɪr', pos: 'n' },
   'maes': { en: 'field', ipa: 'maɪs', pos: 'n' },

@@ -1249,7 +1249,7 @@ const dictionary: Record<string, DictEntry> = {
   'चलानी': { en: 'to drive', ipa: 'tʃəlaːniː', pos: 'v', lemma: 'चलाना' },
   'चलिए': { en: 'let go', ipa: '', pos: 'n' },
   'चली': { en: 'went', ipa: 'tʃəliː', pos: 'n', lemma: 'चलना' },
-  'चले': { en: 'to let\'s go's go's go', ipa: 'tʃəleː', pos: 'v', lemma: 'चलना' },
+  'चले': { en: 'to walk', ipa: 'tʃəleː', pos: 'v', lemma: 'चलना' },
   'चलें': { en: 'let', ipa: '', pos: 'n' },
   'चलेंगे': { en: 'to walking', ipa: 'tʃəleːnɡeː', pos: 'v', lemma: 'चलना' },
   'चलो': { en: 'let us go', ipa: '', pos: 'n' },

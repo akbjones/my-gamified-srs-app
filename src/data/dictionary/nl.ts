@@ -5744,7 +5744,7 @@ const dictionary: Record<string, DictEntry> = {
   'urenlang': { en: 'for hours', ipa: 'ˈyː.rə(n).lɑŋ', pos: 'n' },
   'urgenter': { en: 'more urgent', ipa: 'ɵrɣˈɛntər', pos: 'n' },
   'utrecht': { en: 'utrecht', ipa: 'ˈy.trɛxt', pos: 'n' },
-  'uur': { en: 'o\'clock'clock', ipa: '', pos: 'n' },
+  'uur': { en: 'o\'clock', ipa: '', pos: 'n' },
   'uurtje': { en: 'hour', ipa: '', pos: 'n' },
   'uurtjes': { en: 'hours', ipa: '', pos: 'n' },
   'uw': { en: 'your (formal)', ipa: 'ˈyʊ', pos: 'det' },

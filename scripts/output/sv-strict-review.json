@@ -1,0 +1,28 @@
+{
+  "language": "sv",
+  "total_entries": 5335,
+  "total_checked": 200,
+  "passed": 198,
+  "failed": 2,
+  "pass_rate": "99%",
+  "grade": "A",
+  "failures_by_type": {
+    "to_copula": 2
+  },
+  "failure_examples": [
+    {
+      "word": "skrevs",
+      "en": "to was written",
+      "pos": "v",
+      "google": "was written",
+      "issues": "to_copula"
+    },
+    {
+      "word": "följdes",
+      "en": "to was followed",
+      "pos": "v",
+      "google": "was followed",
+      "issues": "to_copula"
+    }
+  ]
+}

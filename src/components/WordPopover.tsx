@@ -6,12 +6,22 @@ import { lookupWord as lookupFr } from '../data/dictionary/fr';
 import { lookupWord as lookupPt } from '../data/dictionary/pt';
 import { lookupWord as lookupDe } from '../data/dictionary/de';
 import { lookupWord as lookupNl } from '../data/dictionary/nl';
+import { lookupWord as lookupSv } from '../data/dictionary/sv';
+import { lookupWord as lookupCy } from '../data/dictionary/cy';
+import { lookupWord as lookupHi } from '../data/dictionary/hi';
+import { lookupWord as lookupTr } from '../data/dictionary/tr';
+import { lookupWord as lookupRu } from '../data/dictionary/ru';
 import { conjugate as conjugateEs } from '../data/conjugation/es';
 import { conjugate as conjugateIt } from '../data/conjugation/it';
 import { conjugate as conjugateFr } from '../data/conjugation/fr';
 import { conjugate as conjugatePt } from '../data/conjugation/pt';
 import { conjugate as conjugateDe } from '../data/conjugation/de';
 import { conjugate as conjugateNl } from '../data/conjugation/nl';
+import { conjugate as conjugateSv } from '../data/conjugation/sv';
+import { conjugate as conjugateCy } from '../data/conjugation/cy';
+import { conjugateHindi } from '../data/conjugation/hi';
+import { conjugate as conjugateTr } from '../data/conjugation/tr';
+import { conjugate as conjugateRu } from '../data/conjugation/ru';
 import { Language, ConjugationTable } from '../types';
 
 // Dynamic lookup per language — gracefully returns null for languages without a dictionary
@@ -22,6 +32,11 @@ const LOOKUP_FNS: Partial<Record<Language, (w: string) => DictEntry | null>> = {
   portuguese: lookupPt,
   german: lookupDe,
   dutch: lookupNl,
+  swedish: lookupSv,
+  welsh: lookupCy,
+  hindi: lookupHi,
+  turkish: lookupTr,
+  russian: lookupRu,
 };
 
 const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable | null>> = {
@@ -31,6 +46,11 @@ const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable 
   portuguese: conjugatePt,
   german: conjugateDe,
   dutch: conjugateNl,
+  swedish: conjugateSv,
+  welsh: conjugateCy,
+  hindi: conjugateHindi,
+  turkish: conjugateTr,
+  russian: conjugateRu,
 };
 
 const PERSON_LABELS: Record<string, string[]> = {
@@ -40,8 +60,16 @@ const PERSON_LABELS: Record<string, string[]> = {
   portuguese: ['eu', 'tu', 'ele', 'nós', 'vós', 'eles'],
   german: ['ich', 'du', 'er/sie', 'wir', 'ihr', 'sie/Sie'],
   dutch: ['ik', 'jij', 'hij/zij', 'wij', 'jullie', 'zij'],
+  swedish: ['jag', 'du', 'han/hon', 'vi', 'ni', 'de'],
+  welsh: ['fi', 'ti', 'fe/hi', 'ni', 'chi', 'nhw'],
+  hindi: ['मैं', 'तू', 'वह/यह', 'हम', 'तुम', 'आप/वे'],
+  turkish: ['ben', 'sen', 'o', 'biz', 'siz', 'onlar'],
+  russian: ['я', 'ты', 'он/она', 'мы', 'вы', 'они'],
 };
 
+// Fallback tense labels for legacy keys. Each conjugation engine now provides
+// its own localized labels (e.g. "Presente (Present)") as tense object keys,
+// so these only apply if a raw English key is encountered.
 const TENSE_LABELS: Record<string, string> = {
   present: 'Present',
   preterite: 'Preterite',
@@ -66,7 +94,40 @@ const POS_LABELS: Record<string, string> = {
   conj: 'conj',
   det: 'det',
   pron: 'pron',
+  intj: 'intj',
+  num: 'num',
+  part: 'particle',
+  postp: 'postp',
 };
+
+/** Sanitize/validate a definition before displaying it.
+ *  Falls back to lemma definition when the inflected form's entry is a grammar description. */
+function sanitizeDefinition(en: string, lemmaEn?: string): string | null {
+  // If definition looks like a grammar description, try lemma instead
+  const GRAMMAR_PATTERNS = /^(strong|weak|mixed|nominative|accusative|genitive|dative|oblique|vocative|masculine|feminine|neuter|singular|plural|inflection|form|participle|imperfect|preterite|subjunctive|imperative|conditional|gerund|superlative|comparative|diminutive|augmentative)/i;
+
+  if (GRAMMAR_PATTERNS.test(en)) {
+    return lemmaEn || null; // Fall back to lemma's definition
+  }
+
+  // Strip wiki markup artifacts
+  let cleaned = en
+    .replace(/\[.*?\]/g, '') // Remove [with dative] etc
+    .replace(/\((?:archaic|dated|colloquial|formal|informal|literary|rare|obsolete|regional|dialectal|vulgar|slang|figurative|literally|by extension|derogatory|humorous|euphemistic|pejorative)(?:,?\s*(?:archaic|dated|colloquial|formal|informal|literary|rare|obsolete|regional|dialectal|vulgar|slang|figurative|literally|by extension|derogatory|humorous|euphemistic|pejorative))*\)/gi, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  // If it ends with "..." and is very short, it's truncated garbage
+  if (cleaned.endsWith('...') && cleaned.length < 15) return lemmaEn || null;
+
+  // Strip trailing "..."
+  if (cleaned.endsWith('...')) cleaned = cleaned.replace(/\.\.\.+$/, '').trim();
+
+  // If empty after cleaning, use lemma
+  if (!cleaned || cleaned.length < 2) return lemmaEn || null;
+
+  return cleaned;
+}
 
 const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className = '' }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -162,6 +223,23 @@ function extractInfinitive(translation: string): string | null {
 
 /** Fixed-position popover rendered via portal to escape overflow:hidden/auto parents */
 const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DOMRect; language: Language }> = ({ entry, rawToken, wordRect, language }) => {
+  // Lemma-first lookup: if entry has a lemma, look it up for display
+  const lemmaEntry = React.useMemo(() => {
+    if (!entry.lemma) return null;
+    const lookupFn = LOOKUP_FNS[language];
+    if (!lookupFn) return null;
+    return lookupFn(entry.lemma);
+  }, [entry.lemma, language]);
+
+  // Determine the display definition: prefer lemma's definition, sanitized
+  const displayDefinition = React.useMemo(() => {
+    const lemmaEn = lemmaEntry?.en;
+    const sanitized = sanitizeDefinition(entry.en, lemmaEn);
+    return sanitized || entry.en; // Ultimate fallback: show original
+  }, [entry.en, lemmaEntry]);
+
+  // Display IPA: prefer lemma's IPA for inflected forms
+  const displayIpa = (lemmaEntry?.ipa) || entry.ipa;
   const popoverRef = useRef<HTMLDivElement>(null);
   const [measured, setMeasured] = useState(false);
   const [finalPos, setFinalPos] = useState({ top: 0, left: 0 });
@@ -171,7 +249,9 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
 
   // Try to get conjugation table for verbs
   const conjugation = useCallback((): ConjugationTable | null => {
-    if (entry.pos !== 'v') return null;
+    // Show conjugation if POS is verb OR if definition contains verb meaning ("to X")
+    const hasVerbMeaning = entry.en?.includes('to ') || entry.pos === 'v';
+    if (!hasVerbMeaning) return null;
     const conjugateFn = CONJUGATE_FNS[language];
     if (!conjugateFn) return null;
 
@@ -179,6 +259,12 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
     const clean = rawToken.toLowerCase().replace(/[.,!?;:""«»()]/g, '');
     const direct = conjugateFn(clean);
     if (direct) return direct;
+
+    // Try the lemma field (base/infinitive form) — most reliable for inflected forms
+    if (entry.lemma) {
+      const result = conjugateFn(entry.lemma);
+      if (result) return result;
+    }
 
     // Try the infinitive from translation parenthetical: "to speak (parler)"
     const inf = extractInfinitive(entry.en);
@@ -193,12 +279,28 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
     const lookupFn = LOOKUP_FNS[language];
     if (lookupFn) {
       // Generate candidate stems by progressively trimming from the end
+      // Include the full word as a stem — Germanic verbs like "ontmoet" need
+      // stem + "en" → "ontmoeten" to find the infinitive
       const stems = new Set<string>();
+      stems.add(clean);
       for (let i = 1; i <= Math.min(clean.length - 2, 7); i++) {
         stems.add(clean.slice(0, -i));
       }
       for (const stem of stems) {
-        for (const ending of ['ir', 'er', 're', 'ar', 'or']) {
+        // IMPORTANT: When adding a new language, add its infinitive endings here!
+        // Romance: -ir, -er, -re, -ar, -or  |  Germanic: -en, -ern, -eln, -n
+        // Swedish: -a, -e  |  Turkish: -mek, -mak  |  Hindi: -ना (-nā)
+        // Russian: -ать, -ять, -еть, -уть, -оть, -ыть, -ить, -ти, -чь, -ться, -тись
+        for (const ending of [
+          'ir', 'er', 're', 'ar', 'or',          // Romance
+          'en', 'ern', 'eln', 'n',                // Germanic (DE/NL)
+          'a', 'e',                                // Swedish
+          'mek', 'mak',                            // Turkish
+          'ना',                                     // Hindi
+          'ать', 'ять', 'еть', 'уть', 'оть',     // Russian (-ать/-ять/-еть/-уть/-оть)
+          'ыть', 'ить', 'ть', 'ти', 'чь',         // Russian (-ыть/-ить/-ть/-ти/-чь)
+          'ться', 'тись',                           // Russian reflexive
+        ]) {
           const candidate = stem + ending;
           const dictEntry = lookupFn(candidate);
           if (dictEntry?.pos === 'v') {
@@ -264,15 +366,26 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
         `}
       />
 
-      {/* Translation */}
+      {/* Translation — uses lemma definition when available and sanitized */}
       <div className="text-base font-bold text-[var(--text-primary)] leading-snug">
-        {entry.en}
+        {displayDefinition}
+        {/* Show lemma word in parentheses when we're using its definition */}
+        {entry.lemma && lemmaEntry && (
+          <span className="font-normal text-[var(--text-muted)]"> ({entry.lemma})</span>
+        )}
       </div>
 
-      {/* IPA */}
-      {entry.ipa && (
+      {/* Lemma (base form) — shown for inflected forms without a lemma entry */}
+      {entry.lemma && !lemmaEntry && (
+        <div className="text-sm text-[var(--text-muted)] mt-0.5">
+          → {entry.lemma}
+        </div>
+      )}
+
+      {/* IPA — prefers lemma IPA for inflected forms */}
+      {displayIpa && (
         <div className="text-sm text-blue-500 font-mono mt-1.5">
-          /{entry.ipa}/
+          /{displayIpa}/
         </div>
       )}
 
@@ -321,7 +434,9 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
                   {conjTable.tenses[conjTense].map((form, i) => (
                     <div key={i} className="flex items-baseline gap-2">
                       <span className="text-[10px] text-[var(--text-faint)] font-mono w-16 text-right shrink-0">
-                        {personLabels[i]}
+                        {language === 'french' && i === 0 && /^[aeéèêëiîïoôuûùüyh]/i.test(form)
+                          ? "j'"
+                          : personLabels[i]}
                       </span>
                       <span className="text-xs text-[var(--text-primary)] font-semibold">
                         {form}

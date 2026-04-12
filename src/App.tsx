@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
 import TopicMap from './components/TopicMap';
 import StudySession from './components/StudySession';
 import GamificationHub from './components/GamificationHub';
@@ -30,8 +30,20 @@ import { lookupWord as lookupFr } from './data/dictionary/fr';
 import { lookupWord as lookupPt } from './data/dictionary/pt';
 import { lookupWord as lookupDe } from './data/dictionary/de';
 import { lookupWord as lookupNl } from './data/dictionary/nl';
+import { lookupWord as lookupSv } from './data/dictionary/sv';
+import { lookupWord as lookupCy } from './data/dictionary/cy';
+import { lookupWord as lookupHi } from './data/dictionary/hi';
+import { lookupWord as lookupTr } from './data/dictionary/tr';
+import { lookupWord as lookupRu } from './data/dictionary/ru';
 import VocabList from './components/VocabList';
-import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight } from 'lucide-react';
+import Onboarding from './components/Onboarding';
+import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff } from 'lucide-react';
+import {
+  loadNotificationPrefs, saveNotificationPrefs, requestNotificationPermission,
+  isNotificationSupported, onSessionComplete, initNotifications,
+  shouldShowNotificationPrompt, dismissPrompt, cancelScheduledNotifications,
+  type NotificationPrefs,
+} from './services/notificationService';
 
 const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
   spanish: lookupEs,
@@ -40,6 +52,11 @@ const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
   portuguese: lookupPt,
   german: lookupDe,
   dutch: lookupNl,
+  swedish: lookupSv,
+  welsh: lookupCy,
+  hindi: lookupHi,
+  turkish: lookupTr,
+  russian: lookupRu,
 };
 
 type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB';
@@ -52,6 +69,11 @@ import rawFrenchDeck from './data/french/deck.json';
 import rawPortugueseDeck from './data/portuguese/deck.json';
 import rawGermanDeck from './data/german/deck.json';
 import rawDutchDeck from './data/dutch/deck.json';
+import rawSwedishDeck from './data/swedish/deck.json';
+import rawWelshDeck from './data/welsh/deck.json';
+import rawHindiDeck from './data/hindi/deck.json';
+import rawTurkishDeck from './data/turkish/deck.json';
+import rawRussianDeck from './data/russian/deck.json';
 
 const DECK_MAP: Partial<Record<Language, any[]>> = {
   spanish: rawSpanishDeck,
@@ -60,6 +82,11 @@ const DECK_MAP: Partial<Record<Language, any[]>> = {
   portuguese: rawPortugueseDeck,
   german: rawGermanDeck,
   dutch: rawDutchDeck,
+  swedish: rawSwedishDeck,
+  welsh: rawWelshDeck,
+  hindi: rawHindiDeck,
+  turkish: rawTurkishDeck,
+  russian: rawRussianDeck,
 };
 
 // Transform raw deck.json cards into QuestCards mapped to linear path nodes
@@ -96,9 +123,12 @@ const buildDeck = (
 
   for (const node of MAIN_PATH) {
     const nodeCards = nodeMap.get(node.id) || [];
-    // Sort cards within each node by word count (shortest first)
-    // so beginners get simple sentences before complex ones
+    // Sort cards within each node: priority first (practical before specialized),
+    // then by word count (shortest first) within each priority tier
     nodeCards.sort((a: any, b: any) => {
+      const pa = a.priority ?? 2;
+      const pb = b.priority ?? 2;
+      if (pa !== pb) return pa - pb;
       const aWords = (a.target || '').split(/\s+/).length;
       const bWords = (b.target || '').split(/\s+/).length;
       return aWords - bWords || a.id - b.id; // tiebreak by id
@@ -123,11 +153,27 @@ const buildDeck = (
         failCount: (saved?.failCount as number) ?? 0,
         isLeech: (saved?.isLeech as boolean) ?? false,
         isSuspended: (saved?.isSuspended as boolean) ?? false,
+        priority: rawCard.priority ?? 2,
       });
     }
   }
 
   return cards;
+};
+
+// Language-specific level names
+const CHALLENGE_NAMES: Record<Language, string> = {
+  spanish: 'Level',
+  italian: 'Level',
+  french: 'Level',
+  portuguese: 'Level',
+  german: 'Level',
+  dutch: 'Level',
+  swedish: 'Level',
+  welsh: 'Level',
+  hindi: 'Level',
+  turkish: 'Level',
+  russian: 'Level',
 };
 
 // Find the current frontier node (first incomplete unlocked node)
@@ -158,6 +204,12 @@ const App: React.FC = () => {
   const [pendingChallenge, setPendingChallenge] = useState<ChallengeMode | null>(null);
   const [challengeQuestions, setChallengeQuestions] = useState<ChallengeQuestion[]>([]);
   const [showTools, setShowTools] = useState(false);
+  const [showLangDropdown, setShowLangDropdown] = useState(false);
+  const [showLangPicker, setShowLangPicker] = useState(() => !localStorage.getItem('quest_first_launch_done'));
+  const [showOnboarding, setShowOnboarding] = useState(() => !localStorage.getItem('onboarding_complete'));
+  const [notifPrefs, setNotifPrefs] = useState<NotificationPrefs>(() => loadNotificationPrefs());
+  const [showNotifPrompt, setShowNotifPrompt] = useState(false);
+  const langDropdownRef = useRef<HTMLDivElement>(null);
   // Undo stack for going back to previous cards
   const [answerHistory, setAnswerHistory] = useState<Array<{
     session: SessionState;
@@ -220,7 +272,45 @@ const App: React.FC = () => {
     document.documentElement.classList.toggle('dark', settings.theme === 'dark');
   }, [settings.theme]);
 
-  const handleStartSession = (studyMore = false) => {
+  // ─── Notifications: init on startup + gentle prompt check ──
+  useEffect(() => {
+    if (!isNotificationSupported()) return;
+    const dueCount = deck.filter(c => c.mastery > 0 && c.dueDate && c.dueDate <= Date.now()).length;
+    initNotifications(dueCount, userStats.streak);
+    // Check if we should show the gentle prompt
+    if (shouldShowNotificationPrompt()) {
+      setShowNotifPrompt(true);
+    }
+  }, [deck.length]); // re-run once deck is loaded
+
+  const handleToggleNotifications = async (enable: boolean) => {
+    if (enable) {
+      const granted = await requestNotificationPermission();
+      if (!granted) return; // user denied — don't enable
+      const newPrefs = { ...notifPrefs, enabled: true };
+      setNotifPrefs(newPrefs);
+      saveNotificationPrefs(newPrefs);
+      const dueCount = deck.filter(c => c.mastery > 0 && c.dueDate && c.dueDate <= Date.now()).length;
+      await initNotifications(dueCount, userStats.streak);
+    } else {
+      const newPrefs = { ...notifPrefs, enabled: false };
+      setNotifPrefs(newPrefs);
+      saveNotificationPrefs(newPrefs);
+      await cancelScheduledNotifications();
+    }
+  };
+
+  const handleChangeReminderTime = (time: string) => {
+    const newPrefs = { ...notifPrefs, reminderTime: time };
+    setNotifPrefs(newPrefs);
+    saveNotificationPrefs(newPrefs);
+    if (newPrefs.enabled) {
+      const dueCount = deck.filter(c => c.mastery > 0 && c.dueDate && c.dueDate <= Date.now()).length;
+      initNotifications(dueCount, userStats.streak);
+    }
+  };
+
+  const handleStartSession = (studyMore: boolean | number = false) => {
     const now = Date.now();
     const currentNode = getCurrentNode(deck);
 
@@ -235,11 +325,13 @@ const App: React.FC = () => {
     );
 
     // New cards: from the current frontier node, excluding suspended
-    // When "Study More" is clicked, always add at least 10 new cards
+    // When "Study More" is clicked, use the session card limit setting
+    const sessionLimit = settings.sessionCardLimit || 10;
     const dailyLimitRemaining = settings.dailyNewLimit - dailyStats.newCardsCount;
-    const baseNewLimit = studyMore ? Math.max(10, dailyLimitRemaining) : Math.max(0, dailyLimitRemaining);
-    // Cap new cards at 10 when no reviews exist (prevents flooding after focus switch)
-    const newLimit = reviews.length === 0 ? Math.min(baseNewLimit, 10) : baseNewLimit;
+    const studyMoreCount = typeof studyMore === 'number' ? studyMore : (studyMore ? sessionLimit : 0);
+    const baseNewLimit = studyMore ? Math.max(studyMoreCount, dailyLimitRemaining) : Math.max(0, dailyLimitRemaining);
+    // Cap new cards at session limit when no reviews exist (prevents flooding after focus switch)
+    const newLimit = reviews.length === 0 ? Math.min(baseNewLimit, sessionLimit) : baseNewLimit;
     const nodeCards = deck.filter(c => c.topic === currentNode.id && !c.isSuspended);
     const newCards = nodeCards
       .filter(c => c.mastery === 0)
@@ -417,6 +509,11 @@ const App: React.FC = () => {
     handleUpdateSettings({ ...settings, dailyNewLimit: next });
   };
 
+  const adjustSessionLimit = (delta: number) => {
+    const next = Math.max(5, Math.min(50, (settings.sessionCardLimit || 10) + delta));
+    handleUpdateSettings({ ...settings, sessionCardLimit: next });
+  };
+
   // Computed stats
   const getTotalProgress = () => {
     if (deck.length === 0) return 0;
@@ -444,6 +541,28 @@ const App: React.FC = () => {
 
   const availableLanguages: Language[] = Object.keys(DECK_MAP) as Language[];
 
+  const LANGUAGE_FLAGS: Partial<Record<Language, string>> = {
+    spanish: '\u{1F1F2}\u{1F1FD}', italian: '\u{1F1EE}\u{1F1F9}', french: '\u{1F1EB}\u{1F1F7}',
+    portuguese: '\u{1F1E7}\u{1F1F7}', german: '\u{1F1E9}\u{1F1EA}', dutch: '\u{1F1F3}\u{1F1F1}',
+    swedish: '\u{1F1F8}\u{1F1EA}',
+    welsh: '\u{1F3F4}\u{E0067}\u{E0062}\u{E0077}\u{E006C}\u{E0073}\u{E007F}',
+    hindi: '\u{1F1EE}\u{1F1F3}',
+    turkish: '\u{1F1F9}\u{1F1F7}',
+    russian: '\u{1F1F7}\u{1F1FA}',
+  };
+
+  // Close language dropdown when clicking outside
+  useEffect(() => {
+    if (!showLangDropdown) return;
+    const handleClickOutside = (e: MouseEvent) => {
+      if (langDropdownRef.current && !langDropdownRef.current.contains(e.target as Node)) {
+        setShowLangDropdown(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [showLangDropdown]);
+
   const toggleTheme = () => {
     const newTheme = settings.theme === 'dark' ? 'light' : 'dark';
     // Apply class IMMEDIATELY (before React re-render) to prevent flash
@@ -453,6 +572,45 @@ const App: React.FC = () => {
 
   return (
     <div className={`mx-auto min-h-screen ${view === 'STUDY' || view === 'PLACEMENT' || view === 'CHALLENGE' ? 'max-w-lg px-0 pt-0 pb-0' : 'max-w-md px-5 pt-[max(1.25rem,env(safe-area-inset-top))] pb-20'}`}>
+      {/* First-time onboarding carousel */}
+      {showOnboarding && (
+        <Onboarding onComplete={() => {
+          localStorage.setItem('onboarding_complete', 'true');
+          setShowOnboarding(false);
+        }} />
+      )}
+
+      {/* First-time language selection overlay */}
+      {showLangPicker && !showOnboarding && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[var(--bg-primary)]">
+          <div className="w-full max-w-sm px-6 animate-slide-up">
+            <div className="text-center mb-8">
+              <div className="text-5xl mb-4">
+                <Globe size={48} className="mx-auto text-[var(--accent)]" />
+              </div>
+              <h2 className="text-2xl font-black text-[var(--text-primary)] mb-2">Choose your language</h2>
+              <p className="text-sm text-[var(--text-muted)]">You can switch anytime from the header</p>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              {availableLanguages.map(l => (
+                  <button
+                    key={l}
+                    onClick={() => {
+                      handleLanguageChange(l);
+                      localStorage.setItem('quest_first_launch_done', 'true');
+                      setShowLangPicker(false);
+                    }}
+                    className="stat-card p-4 flex flex-col items-center gap-2 hover:border-[var(--accent)]/40 hover:bg-[var(--accent)]/5 transition-all active:scale-95"
+                  >
+                    <span className="text-3xl">{LANGUAGE_FLAGS[l] || ''}</span>
+                    <span className="text-sm font-bold text-[var(--text-primary)]">{LANGUAGE_CONFIG[l].name}</span>
+                  </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
       {view === 'HOME' && (
         <section className="animate-fade-in">
           {/* Header row: title + language + theme toggle */}
@@ -485,17 +643,38 @@ const App: React.FC = () => {
               </h1>
             </div>
             <div className="flex items-center gap-1.5">
-              <button
-                onClick={() => {
-                  const available = availableLanguages;
-                  if (available.length <= 1) return;
-                  const idx = available.indexOf(lang);
-                  handleLanguageChange(available[(idx + 1) % available.length]);
-                }}
-                className="px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider border border-[var(--border-color)] text-[var(--text-muted)] hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all"
-              >
-                {LANGUAGE_CONFIG[lang].name}
-              </button>
+              <div className="relative" ref={langDropdownRef}>
+                <button
+                  onClick={() => setShowLangDropdown(prev => !prev)}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold border border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--accent)]/40 hover:text-[var(--accent)] transition-all"
+                >
+                  <span className="text-base">{LANGUAGE_FLAGS[lang] || ''}</span>
+                  <span>{LANGUAGE_CONFIG[lang].name}</span>
+                  <ChevronDown size={12} className={`transition-transform ${showLangDropdown ? 'rotate-180' : ''}`} />
+                </button>
+                {showLangDropdown && (
+                  <div className="absolute right-0 top-full mt-1 w-48 stat-card p-1.5 z-40 animate-fade-in shadow-lg">
+                    {availableLanguages.map(l => (
+                      <button
+                        key={l}
+                        onClick={() => {
+                          handleLanguageChange(l);
+                          setShowLangDropdown(false);
+                        }}
+                        className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all ${
+                          l === lang
+                            ? 'bg-[var(--accent)]/10 text-[var(--accent)]'
+                            : 'text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)]'
+                        }`}
+                      >
+                        <span className="text-base">{LANGUAGE_FLAGS[l] || ''}</span>
+                        <span>{LANGUAGE_CONFIG[l].name}</span>
+                        {l === lang && <span className="ml-auto text-[10px] opacity-60">active</span>}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
               <button
                 onClick={toggleTheme}
                 className="p-2 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
@@ -514,7 +693,7 @@ const App: React.FC = () => {
                 <StreakFlame streak={userStats.streak} freezes={userStats.streakFreezes ?? 0} size="lg" />
               </div>
 
-              {/* Experiment + current topic */}
+              {/* Level + current topic */}
               <div className="text-right">
                 {currentNode && (
                   <div className="text-[10px] font-semibold uppercase tracking-widest mb-1 text-[var(--text-secondary)]">
@@ -522,12 +701,12 @@ const App: React.FC = () => {
                   </div>
                 )}
                 <div className="text-sm font-extrabold text-[var(--text-primary)]">
-                  Experiment {Math.min(progressState.nextBossIndex + 1, TOTAL_BOSSES)} of {TOTAL_BOSSES}
+                  {CHALLENGE_NAMES[lang] || 'Level'} {Math.min(progressState.nextBossIndex + 1, TOTAL_BOSSES)} of {TOTAL_BOSSES}
                 </div>
               </div>
             </div>
 
-            {/* Boss progress bar */}
+            {/* Checkpoint progress bar */}
             <div className="progress-rail mt-3">
               <div
                 className="progress-fill bg-[var(--accent)]"
@@ -609,6 +788,37 @@ const App: React.FC = () => {
             </p>
           </div>
 
+          {/* Gentle notification prompt (after 3rd session) */}
+          {showNotifPrompt && (
+            <div className="w-full mb-3 p-3 rounded-xl border border-[var(--accent)]/20 bg-[var(--accent)]/5 flex items-center gap-3">
+              <Bell size={18} className="text-[var(--accent)] shrink-0" />
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-semibold text-[var(--text-primary)]">Enable study reminders?</p>
+                <p className="text-[10px] text-[var(--text-muted)] mt-0.5">Get a daily nudge so you never miss a review.</p>
+              </div>
+              <div className="flex gap-1.5 shrink-0">
+                <button
+                  onClick={async () => {
+                    setShowNotifPrompt(false);
+                    await handleToggleNotifications(true);
+                  }}
+                  className="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-[var(--accent)] text-white"
+                >
+                  Sure
+                </button>
+                <button
+                  onClick={() => {
+                    setShowNotifPrompt(false);
+                    dismissPrompt();
+                  }}
+                  className="px-2.5 py-1 rounded-lg text-[10px] font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)]"
+                >
+                  Later
+                </button>
+              </div>
+            </div>
+          )}
+
           {/* Study button with counts on the right */}
           <button
             onClick={() => handleStartSession()}
@@ -636,14 +846,28 @@ const App: React.FC = () => {
             )}
           </button>
 
-          {/* Study more when caught up — starts a new session without changing daily limit */}
+          {/* Study more when caught up — starts a new session with configurable card count */}
           {!hasCards && (
-            <button
-              onClick={() => handleStartSession(true)}
-              className="w-full py-3 rounded-xl bg-[var(--bg-card)] border border-[var(--accent)]/30 text-[var(--accent)] text-sm font-bold hover:bg-[var(--accent)]/10 active:bg-[var(--accent)]/20 transition-colors mb-3 -mt-1"
-            >
-              Study More Cards
-            </button>
+            <div className="w-full flex items-center gap-2 mb-3 -mt-1">
+              <button
+                onClick={() => {
+                  const input = document.getElementById('study-more-count') as HTMLInputElement;
+                  const count = input ? parseInt(input.value) || 10 : 10;
+                  handleStartSession(count);
+                }}
+                className="flex-1 py-3 rounded-xl bg-[var(--bg-card)] border border-[var(--accent)]/30 text-[var(--accent)] text-sm font-bold hover:bg-[var(--accent)]/10 active:bg-[var(--accent)]/20 transition-colors"
+              >
+                Study More Cards
+              </button>
+              <input
+                id="study-more-count"
+                type="number"
+                defaultValue={10}
+                min={1}
+                max={100}
+                className="w-16 py-3 rounded-xl bg-[var(--bg-card)] border border-[var(--border)] text-center text-sm font-bold text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)]"
+              />
+            </div>
           )}
 
           {/* Vocab list button */}
@@ -714,6 +938,27 @@ const App: React.FC = () => {
                 </div>
               </div>
 
+              <div className="pt-3 border-t border-[var(--border-color)]">
+                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-3">Cards per Session</div>
+                <div className="flex items-center gap-3">
+                  <button onClick={() => adjustSessionLimit(-5)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95">
+                    <Minus size={14} />
+                  </button>
+                  <button onClick={() => adjustSessionLimit(-1)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95 text-xs font-bold font-mono">
+                    -1
+                  </button>
+                  <div className="flex-1 text-center">
+                    <div className="text-3xl font-extrabold font-mono text-[var(--text-primary)]">{settings.sessionCardLimit || 10}</div>
+                  </div>
+                  <button onClick={() => adjustSessionLimit(1)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95 text-xs font-bold font-mono">
+                    +1
+                  </button>
+                  <button onClick={() => adjustSessionLimit(5)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95">
+                    <Plus size={14} />
+                  </button>
+                </div>
+              </div>
+
               {/* Audio settings */}
               <div className="pt-3 border-t border-[var(--border-color)] space-y-3">
                 <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">Audio</div>
@@ -770,6 +1015,45 @@ const App: React.FC = () => {
                 </div>
               </div>
 
+              {/* Notification reminders */}
+              {isNotificationSupported() && (
+                <div className="pt-3 border-t border-[var(--border-color)] space-y-3">
+                  <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">Reminders</div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-[var(--text-secondary)] flex items-center gap-1.5">
+                      {notifPrefs.enabled ? <Bell size={12} /> : <BellOff size={12} />}
+                      Daily reminder
+                    </span>
+                    <button
+                      onClick={() => handleToggleNotifications(!notifPrefs.enabled)}
+                      className={`w-10 h-6 rounded-full transition-all relative ${
+                        notifPrefs.enabled ? 'bg-[var(--accent)]' : 'bg-[var(--border-color)]'
+                      }`}
+                    >
+                      <div className={`absolute top-1 w-4 h-4 rounded-full bg-white shadow transition-all ${
+                        notifPrefs.enabled ? 'left-5' : 'left-1'
+                      }`} />
+                    </button>
+                  </div>
+                  {notifPrefs.enabled && (
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-[var(--text-secondary)]">Remind at</span>
+                      <input
+                        type="time"
+                        value={notifPrefs.reminderTime}
+                        onChange={(e) => handleChangeReminderTime(e.target.value)}
+                        className="text-[11px] px-2 py-1 rounded-lg border border-[var(--border-color)] bg-[var(--bg-inset)] text-[var(--text-secondary)] focus:outline-none focus:border-[var(--accent)]/40"
+                      />
+                    </div>
+                  )}
+                  {notifPrefs.enabled && Notification.permission === 'denied' && (
+                    <p className="text-[10px] text-amber-500">
+                      Notifications are blocked. Please enable them in your browser settings.
+                    </p>
+                  )}
+                </div>
+              )}
+
               <div className="pt-2 border-t border-[var(--border-color)] space-y-2">
                 {isPlacementComplete(lang) && (
                   <button
@@ -807,8 +1091,14 @@ const App: React.FC = () => {
           session={session}
           onAnswer={handleAnswer}
           onUndoAnswer={handleUndoAnswer}
-          onAbort={() => { setPendingChallenge(null); setView('HOME'); }}
-          onStudyMore={() => handleStartSession(true)}
+          onAbort={() => {
+            setPendingChallenge(null);
+            setView('HOME');
+            // Schedule notification after session ends
+            const dueCount = deck.filter(c => c.mastery > 0 && c.dueDate && c.dueDate <= Date.now()).length;
+            onSessionComplete(dueCount, userStats.streak);
+          }}
+          onStudyMore={(count: number) => handleStartSession(count)}
           hasMoreCards={(() => {
             const now = Date.now();
             const currentNode = getCurrentNode(deck);

@@ -1,0 +1,453 @@
+{
+  "summary": {
+    "totalCards": 1931,
+    "cardsWithIssues": 29,
+    "byType": {
+      "vocab_contradictory": 6,
+      "eng_undertranslated": 11,
+      "grammar_boring": 6,
+      "vocab_too_short": 4,
+      "near_duplicate": 2
+    },
+    "nearDuplicates": 1,
+    "overusedTips": [],
+    "topMissingDictWords": []
+  },
+  "issues": [
+    {
+      "id": "sv-2004",
+      "target": "De fick plats på tåget ibland till slut.",
+      "english": "They got seats on the train sometimes in the end.",
+      "grammarNode": "node-15",
+      "grammar": null,
+      "audio": "sv-sv-1111.mp3",
+      "issues": [
+        {
+          "type": "vocab_contradictory",
+          "detail": "Contradictory adverbs: \"De fick plats på tåget ibland till slut.\"",
+          "severity": "high"
+        }
+      ]
+    },
+    {
+      "id": "sv-2006",
+      "target": "Akta dig för is sedan länge just nu!",
+      "english": "Watch out for ice for a long time right now!",
+      "grammarNode": "node-15",
+      "grammar": null,
+      "audio": "sv-sv-2402.mp3",
+      "issues": [
+        {
+          "type": "vocab_contradictory",
+          "detail": "Contradictory adverbs: \"Akta dig för is sedan länge just nu!\"",
+          "severity": "high"
+        }
+      ]
+    },
+    {
+      "id": "sv-2202",
+      "target": "Slappna av, innan det blir för sent att ändra sig!!",
+      "english": "Relax.",
+      "grammarNode": "node-17",
+      "grammar": null,
+      "audio": "sv-sv-2361.mp3",
+      "issues": [
+        {
+          "type": "eng_undertranslated",
+          "detail": "1 EN words vs 10 SV words",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "id": "sv-2203",
+      "target": "Njut, innan det blir för sent att ändra sig!!",
+      "english": "Enjoy.",
+      "grammarNode": "node-17",
+      "grammar": null,
+      "audio": "sv-sv-2413.mp3",
+      "issues": [
+        {
+          "type": "eng_undertranslated",
+          "detail": "1 EN words vs 9 SV words",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "id": "sv-2204",
+      "target": "Våga, innan det blir för sent att ändra sig!!",
+      "english": "Dare.",
+      "grammarNode": "node-17",
+      "grammar": null,
+      "audio": "sv-sv-2419.mp3",
+      "issues": [
+        {
+          "type": "eng_undertranslated",
+          "detail": "1 EN words vs 9 SV words",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "id": "sv-2205",
+      "target": "Försök igen, innan det blir för sent att ändra sig!!",
+      "english": "Try again.",
+      "grammarNode": "node-17",
+      "grammar": null,
+      "audio": "sv-sv-2356.mp3",
+      "issues": [
+        {
+          "type": "eng_undertranslated",
+          "detail": "2 EN words vs 10 SV words",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "id": "sv-2206",
+      "target": "Ha kul, innan det blir för sent att ändra sig!!",
+      "english": "Have fun.",
+      "grammarNode": "node-17",
+      "grammar": null,
+      "audio": "sv-sv-2363.mp3",
+      "issues": [
+        {
+          "type": "eng_undertranslated",
+          "detail": "2 EN words vs 10 SV words",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "id": "sv-2207",
+      "target": "Läs högt, innan det blir för sent att ändra sig!!",
+      "english": "Read aloud.",
+      "grammarNode": "node-17",
+      "grammar": null,
+      "audio": "sv-sv-2383.mp3",
+      "issues": [
+        {
+          "type": "eng_undertranslated",
+          "detail": "2 EN words vs 10 SV words",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "id": "sv-2208",
+      "target": "Stanna här, innan det blir för sent att ändra sig!!",
+      "english": "Stop here.",
+      "grammarNode": "node-17",
+      "grammar": null,
+      "audio": "sv-sv-2398.mp3",
+      "issues": [
+        {
+          "type": "eng_undertranslated",
+          "detail": "2 EN words vs 10 SV words",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "id": "sv-2209",
+      "target": "Sväng här, innan det blir för sent att ändra sig!!",
+      "english": "Turn here.",
+      "grammarNode": "node-17",
+      "grammar": null,
+      "audio": "sv-sv-2400.mp3",
+      "issues": [
+        {
+          "type": "eng_undertranslated",
+          "detail": "2 EN words vs 10 SV words",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "id": "sv-2210",
+      "target": "Kliv på, innan det blir för sent att ändra sig!!",
+      "english": "Get on.",
+      "grammarNode": "node-17",
+      "grammar": null,
+      "audio": "sv-sv-2404.mp3",
+      "issues": [
+        {
+          "type": "eng_undertranslated",
+          "detail": "2 EN words vs 10 SV words",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "id": "sv-2211",
+      "target": "Kom igen, innan det blir för sent att ändra sig!!",
+      "english": "Come on.",
+      "grammarNode": "node-17",
+      "grammar": null,
+      "audio": "sv-sv-2417.mp3",
+      "issues": [
+        {
+          "type": "eng_undertranslated",
+          "detail": "2 EN words vs 10 SV words",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "id": "sv-2212",
+      "target": "Var modig, innan det blir för sent att ändra sig!!",
+      "english": "Be brave.",
+      "grammarNode": "node-17",
+      "grammar": null,
+      "audio": "sv-sv-2422.mp3",
+      "issues": [
+        {
+          "type": "eng_undertranslated",
+          "detail": "2 EN words vs 10 SV words",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "id": "sv-2321",
+      "target": "Lyckligtvis hittade vi vägen ibland till slut.",
+      "english": "Fortunately we found the way sometimes in the end.",
+      "grammarNode": "node-17",
+      "grammar": null,
+      "audio": "sv-sv-0594.mp3",
+      "issues": [
+        {
+          "type": "vocab_contradictory",
+          "detail": "Contradictory adverbs: \"Lyckligtvis hittade vi vägen ibland till slut.\"",
+          "severity": "high"
+        }
+      ]
+    },
+    {
+      "id": "sv-2378",
+      "target": "Välkommen till Sverige!",
+      "english": "Welcome to Sweden!",
+      "grammarNode": "node-18",
+      "grammar": "Swedish present tense is simple: one form for all persons. Just add -r to the verb stem.",
+      "audio": "sv-sv-0148.mp3",
+      "issues": [
+        {
+          "type": "grammar_boring",
+          "detail": "Mechanical tip: \"Swedish present tense is simple: one form for all persons. Just add -r to the ve\"",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "id": "sv-2383",
+      "target": "Tack så mycket!",
+      "english": "Thank you very much!",
+      "grammarNode": "node-18",
+      "grammar": "Swedish present tense is simple: one form for all persons. Just add -r to the verb stem.",
+      "audio": "sv-sv-0151.mp3",
+      "issues": [
+        {
+          "type": "grammar_boring",
+          "detail": "Mechanical tip: \"Swedish present tense is simple: one form for all persons. Just add -r to the ve\"",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "id": "sv-2439",
+      "target": "God jul och gott nytt år dit!",
+      "english": "Merry Christmas and happy new year there!",
+      "grammarNode": "node-18",
+      "grammar": "Swedish present tense is simple: one form for all persons. Just add -r to the verb stem.",
+      "audio": "sv-sv-0103.mp3",
+      "issues": [
+        {
+          "type": "grammar_boring",
+          "detail": "Mechanical tip: \"Swedish present tense is simple: one form for all persons. Just add -r to the ve\"",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "id": "sv-2632",
+      "target": "Golvet våttorkas.",
+      "english": "The floor is mopped.",
+      "grammarNode": "node-20",
+      "grammar": null,
+      "audio": "sv-sv-2736.mp3",
+      "issues": [
+        {
+          "type": "vocab_too_short",
+          "detail": "Only 2 words",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "id": "sv-2652",
+      "target": "Kläderna tvättades igår.",
+      "english": "The clothes were washed yesterday.",
+      "grammarNode": "node-20",
+      "grammar": "Swedish present tense is simple: one form for all persons. Just add -r to the verb stem.",
+      "audio": "sv-sv-2703.mp3",
+      "issues": [
+        {
+          "type": "grammar_boring",
+          "detail": "Mechanical tip: \"Swedish present tense is simple: one form for all persons. Just add -r to the ve\"",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "id": "sv-2856",
+      "target": "Gräsmattan klipps.",
+      "english": "The lawn is mowed.",
+      "grammarNode": "node-22",
+      "grammar": null,
+      "audio": "sv-sv-2731.mp3",
+      "issues": [
+        {
+          "type": "vocab_too_short",
+          "detail": "Only 2 words",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "id": "sv-2857",
+      "target": "Sängen bäddas.",
+      "english": "The bed is made.",
+      "grammarNode": "node-22",
+      "grammar": null,
+      "audio": "sv-sv-2737.mp3",
+      "issues": [
+        {
+          "type": "vocab_too_short",
+          "detail": "Only 2 words",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "id": "sv-2865",
+      "target": "Gatan repareras.",
+      "english": "The street is being repaired.",
+      "grammarNode": "node-22",
+      "grammar": "\"Just nu\" = right now. S-passive for ongoing actions: \"repareras\" = is being repaired.",
+      "audio": "sv-sv-2701.mp3",
+      "issues": [
+        {
+          "type": "vocab_too_short",
+          "detail": "Only 2 words",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "id": "sv-2924",
+      "target": "De andas tungt efter löpningen ibland till slut.",
+      "english": "They breathe heavily after the run sometimes in the end.",
+      "grammarNode": "node-22",
+      "grammar": "\"Andas\" is deponent — always has -s but is active in meaning (to breathe).",
+      "audio": "sv-sv-2788.mp3",
+      "issues": [
+        {
+          "type": "vocab_contradictory",
+          "detail": "Contradictory adverbs: \"De andas tungt efter löpningen ibland till slut.\"",
+          "severity": "high"
+        }
+      ]
+    },
+    {
+      "id": "sv-2993",
+      "target": "I den mån det är möjligt hjälper vi.",
+      "english": "Insofar as it's possible, we'll help.",
+      "grammarNode": "node-23",
+      "grammar": null,
+      "audio": "sv-sv-2999.mp3",
+      "issues": [
+        {
+          "type": "near_duplicate",
+          "detail": "89% similar to sv-3860",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "id": "sv-3005",
+      "target": "Jag misslyckades med baket ibland till slut.",
+      "english": "I failed at baking sometimes in the end.",
+      "grammarNode": "node-23",
+      "grammar": null,
+      "audio": "sv-sv-2858.mp3",
+      "issues": [
+        {
+          "type": "vocab_contradictory",
+          "detail": "Contradictory adverbs: \"Jag misslyckades med baket ibland till slut.\"",
+          "severity": "high"
+        }
+      ]
+    },
+    {
+      "id": "sv-3020",
+      "target": "Vi ska åka på semester till Spanien nästa månad.",
+      "english": "We are going on vacation to Spain next month.",
+      "grammarNode": "node-23",
+      "grammar": "Swedish present tense: all persons share the same verb form ending in -r.",
+      "audio": "sv-sv-0071.mp3",
+      "issues": [
+        {
+          "type": "grammar_boring",
+          "detail": "Mechanical tip: \"Swedish present tense: all persons share the same verb form ending in -r.\"",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "id": "sv-3262",
+      "target": "Snälla, ta med dig en varm jacka för det är kallt.",
+      "english": "Please, bring a warm jacket because it is cold.",
+      "grammarNode": "node-26",
+      "grammar": "Swedish particle verbs: the particle (upp, ut, in, av, på) often completely changes the verb's meaning.",
+      "audio": "sv-sv-0162.mp3",
+      "issues": [
+        {
+          "type": "grammar_boring",
+          "detail": "Mechanical tip: \"Swedish particle verbs: the particle (upp, ut, in, av, på) often completely chan\"",
+          "severity": "low"
+        }
+      ]
+    },
+    {
+      "id": "sv-3860",
+      "target": "I den mån det är möjligt hjälper vi till.",
+      "english": "To the extent possible we help out.",
+      "grammarNode": "node-34",
+      "grammar": null,
+      "audio": "sv-sv-3880.mp3",
+      "issues": [
+        {
+          "type": "near_duplicate",
+          "detail": "89% similar to sv-2993",
+          "severity": "medium"
+        }
+      ]
+    },
+    {
+      "id": "sv-3884",
+      "target": "Kräftskivan hålls i augusti ibland till slut.",
+      "english": "The crayfish party is held in August sometimes in the end.",
+      "grammarNode": "node-34",
+      "grammar": "Paper hats, singing snapsvisor, and eating crayfish under paper lanterns.",
+      "audio": "sv-sv-3780.mp3",
+      "issues": [
+        {
+          "type": "vocab_contradictory",
+          "detail": "Contradictory adverbs: \"Kräftskivan hålls i augusti ibland till slut.\"",
+          "severity": "high"
+        }
+      ]
+    }
+  ]
+}

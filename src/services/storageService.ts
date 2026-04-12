@@ -98,6 +98,7 @@ export type AudioSpeed = 0.6 | 0.8 | 1.0;
 
 export interface StudySettings {
   dailyNewLimit: number;
+  sessionCardLimit: number; // cards per "Study More" session (5–50)
   selectedLanguage: Language;
   learningGoal: LearningGoal;
   theme: 'light' | 'dark';
@@ -108,6 +109,7 @@ export interface StudySettings {
 
 const DEFAULT_SETTINGS: StudySettings = {
   dailyNewLimit: 20,
+  sessionCardLimit: 10,
   selectedLanguage: 'spanish',
   learningGoal: 'general',
   theme: 'light',
@@ -166,7 +168,7 @@ export const saveVocabMap = (map: VocabMap, lang: Language): void => {
 // ─── Reset ──────────────────────────────────────────────────
 export const resetAll = (): void => {
   // Clear all language-specific keys
-  const langs: Language[] = ['spanish', 'italian', 'german', 'french'];
+  const langs: Language[] = ['spanish', 'italian', 'german', 'french', 'portuguese', 'dutch', 'swedish', 'welsh'];
   for (const lang of langs) {
     localStorage.removeItem(masteryKey(lang));
     localStorage.removeItem(statsKey(lang));

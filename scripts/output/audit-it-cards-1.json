@@ -1,0 +1,311 @@
+{
+  "summary": {
+    "totalCardsAudited": 1945,
+    "totalCardsWithIssues": 12,
+    "percentClean": "99.4%",
+    "issueBreakdown": {
+      "dictionaryCoverage": 12,
+      "grammarMismatch": 0,
+      "grammarConjugationPattern": 0,
+      "englishQuality": 0,
+      "duplicates": 0,
+      "vocabularyIssues": 0,
+      "audioMissing": 0
+    },
+    "issuesByNode": {
+      "node-27": 4,
+      "node-28": 4,
+      "node-29": 3,
+      "node-31": 1
+    },
+    "batches": {
+      "batch4": {
+        "cards": 500,
+        "idRange": "it-2001 - it-2500"
+      },
+      "batch5": {
+        "cards": 500,
+        "idRange": "it-2501 - it-3000"
+      },
+      "batch6": {
+        "cards": 500,
+        "idRange": "it-3001 - it-3500"
+      },
+      "batch7": {
+        "cards": 445,
+        "idRange": "it-3501 - it-3945"
+      }
+    }
+  },
+  "topMissingDictionaryWords": [
+    {
+      "word": "entrò",
+      "count": 1
+    },
+    {
+      "word": "alzò",
+      "count": 1
+    },
+    {
+      "word": "guardò",
+      "count": 1
+    },
+    {
+      "word": "cominciò",
+      "count": 1
+    },
+    {
+      "word": "salutò",
+      "count": 1
+    },
+    {
+      "word": "aprì",
+      "count": 1
+    },
+    {
+      "word": "respirò",
+      "count": 1
+    },
+    {
+      "word": "partì",
+      "count": 1
+    },
+    {
+      "word": "cambiò",
+      "count": 1
+    },
+    {
+      "word": "procederà",
+      "count": 1
+    },
+    {
+      "word": "morì",
+      "count": 1
+    },
+    {
+      "word": "attraversò",
+      "count": 1
+    },
+    {
+      "word": "potrà",
+      "count": 1
+    },
+    {
+      "word": "capirò",
+      "count": 1
+    },
+    {
+      "word": "peggiorerà",
+      "count": 1
+    }
+  ],
+  "cardsWithIssues": [
+    {
+      "id": "it-3351",
+      "grammarNode": "node-27",
+      "target": "Quando entrò nella stanza, vide che tutto era cambiato.",
+      "english": "When he entered the room, he saw that everything had changed.",
+      "audio": "it-3393.mp3",
+      "grammar": null,
+      "issues": [
+        {
+          "type": "dict_missing",
+          "words": [
+            "entrò"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "it-3356",
+      "grammarNode": "node-27",
+      "target": "Si alzò in piedi, guardò l'assemblea e cominciò a parlare.",
+      "english": "He stood up, looked at the assembly, and began to speak.",
+      "audio": "it-3394.mp3",
+      "grammar": "Narrative chains use passato remoto for sequential actions in formal writing.",
+      "issues": [
+        {
+          "type": "dict_missing",
+          "words": [
+            "alzò",
+            "guardò",
+            "cominciò"
+          ],
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": "it-3362",
+      "grammarNode": "node-27",
+      "target": "Prese il cappotto, salutò tutti e uscì senza dire una parola.",
+      "english": "He grabbed his coat, greeted everyone, and left without saying a word.",
+      "audio": "it-3396.mp3",
+      "grammar": null,
+      "issues": [
+        {
+          "type": "dict_missing",
+          "words": [
+            "salutò"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "it-3367",
+      "grammarNode": "node-27",
+      "target": "Andò alla finestra, aprì le imposte e respirò l'aria fresca.",
+      "english": "She went to the window, opened the shutters, and breathed the fresh air.",
+      "audio": "it-3395.mp3",
+      "grammar": null,
+      "issues": [
+        {
+          "type": "dict_missing",
+          "words": [
+            "aprì",
+            "respirò"
+          ],
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "it-3407",
+      "grammarNode": "node-28",
+      "target": "Partì all'alba e non fece mai più ritorno a casa.",
+      "english": "He left at dawn and never came back home again.",
+      "audio": "it-3386.mp3",
+      "grammar": "Irregular forms: partire → parti, fare → fece.",
+      "issues": [
+        {
+          "type": "dict_missing",
+          "words": [
+            "partì"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "it-3423",
+      "grammarNode": "node-28",
+      "target": "Presero una decisione difficile che cambiò il corso degli eventi.",
+      "english": "They made a difficult decision that changed the course of events.",
+      "audio": "it-3388.mp3",
+      "grammar": null,
+      "issues": [
+        {
+          "type": "dict_missing",
+          "words": [
+            "cambiò"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "it-3428",
+      "grammarNode": "node-28",
+      "target": "L'onorevole ha dichiarato che si procederà con le riforme annunciate.",
+      "english": "The Honorable Member declared that they would proceed with the announced reforms.",
+      "audio": "it-3436.mp3",
+      "grammar": null,
+      "issues": [
+        {
+          "type": "dict_missing",
+          "words": [
+            "procederà"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "it-3436",
+      "grammarNode": "node-28",
+      "target": "Morì in solitudine, lontano dalla terra che aveva tanto amato.",
+      "english": "He died in solitude, far from the land he had loved so much.",
+      "audio": "it-3392.mp3",
+      "grammar": null,
+      "issues": [
+        {
+          "type": "dict_missing",
+          "words": [
+            "morì"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "it-3508",
+      "grammarNode": "node-29",
+      "target": "L'esercito attraversò il fiume durante la notte senza essere scoperto.",
+      "english": "The army crossed the river during the night without being discovered.",
+      "audio": "it-3391.mp3",
+      "grammar": null,
+      "issues": [
+        {
+          "type": "dict_missing",
+          "words": [
+            "attraversò"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "it-3520",
+      "grammarNode": "node-29",
+      "target": "Qualora lo ritenesse opportuno, potrà contattarci in qualsiasi momento.",
+      "english": "Should you deem it appropriate, you may contact us at any time.",
+      "audio": "it-3443.mp3",
+      "grammar": "\"Qualora\" (should/if) is formal and takes subjunctive.",
+      "issues": [
+        {
+          "type": "dict_missing",
+          "words": [
+            "potrà"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "it-3522",
+      "grammarNode": "node-29",
+      "target": "Queste cose, non le capirò mai per quanto ci provi.",
+      "english": "These things, I'll never understand them no matter how hard I try.",
+      "audio": "it-3604.mp3",
+      "grammar": null,
+      "issues": [
+        {
+          "type": "dict_missing",
+          "words": [
+            "capirò"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "it-3710",
+      "grammarNode": "node-31",
+      "target": "È evidente che, a meno che non si intervenga, la situazione peggiorerà.",
+      "english": "It is evident that, unless action is taken, the situation will worsen.",
+      "audio": "it-3585.mp3",
+      "grammar": null,
+      "issues": [
+        {
+          "type": "dict_missing",
+          "words": [
+            "peggiorerà"
+          ],
+          "count": 1
+        }
+      ]
+    }
+  ]
+}

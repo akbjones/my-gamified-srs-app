@@ -1,0 +1,158 @@
+{
+  "language": "es",
+  "total_entries": 4782,
+  "total_checked": 200,
+  "passed": 192,
+  "failed": 8,
+  "pass_rate": "96%",
+  "grade": "A",
+  "failures_by_type": {
+    "semantic_fail": 8
+  },
+  "failure_examples": [
+    {
+      "word": "mantengamos",
+      "en": "to let\\",
+      "pos": "v",
+      "google": "Let's keep",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "let\\"
+        ],
+        "gtWords": [
+          "keep"
+        ],
+        "gt": "Let's keep"
+      }
+    },
+    {
+      "word": "más",
+      "en": "more",
+      "pos": "adv",
+      "google": "further",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "more"
+        ],
+        "gtWords": [
+          "further"
+        ],
+        "gt": "further"
+      }
+    },
+    {
+      "word": "probamos",
+      "en": "to prove",
+      "pos": "v",
+      "google": "we tried",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "prove"
+        ],
+        "gtWords": [
+          "try"
+        ],
+        "gt": "we tried"
+      }
+    },
+    {
+      "word": "subieron",
+      "en": "to increase",
+      "pos": "v",
+      "google": "they went up",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "increase"
+        ],
+        "gtWords": [
+          "go"
+        ],
+        "gt": "they went up"
+      }
+    },
+    {
+      "word": "bajé",
+      "en": "to lower",
+      "pos": "v",
+      "google": "I went down",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "lower"
+        ],
+        "gtWords": [
+          "go"
+        ],
+        "gt": "I went down"
+      }
+    },
+    {
+      "word": "busqué",
+      "en": "to look for",
+      "pos": "v",
+      "google": "I searched",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "look"
+        ],
+        "gtWords": [
+          "search"
+        ],
+        "gt": "I searched"
+      }
+    },
+    {
+      "word": "programáramos",
+      "en": "to program",
+      "pos": "v",
+      "google": "we would schedule",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "program"
+        ],
+        "gtWords": [
+          "schedule"
+        ],
+        "gt": "we would schedule"
+      }
+    },
+    {
+      "word": "terminemos",
+      "en": "to let\\",
+      "pos": "v",
+      "google": "Let's finish.",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "let\\"
+        ],
+        "gtWords": [
+          "finish"
+        ],
+        "gt": "Let's finish."
+      }
+    }
+  ]
+}

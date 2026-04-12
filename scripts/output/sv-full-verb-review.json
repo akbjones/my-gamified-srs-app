@@ -1,0 +1,7283 @@
+{
+  "stats": {
+    "wrongPos": 234,
+    "wrongMeaning": 61,
+    "garbageSemi": 12,
+    "verbFormIssues": 208,
+    "missingTo": 0,
+    "toOnNonVerb": 1,
+    "truncated": 14,
+    "backslash": 0,
+    "wrongLemma": 8,
+    "total": 538
+  },
+  "fixes": [
+    {
+      "key": "1200talet",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "the 1200s",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "not \"?\""
+    },
+    {
+      "key": "1800talet",
+      "old": {
+        "en": "enacted",
+        "pos": "n"
+      },
+      "new": {
+        "en": "the 1800s",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "period of time, not enacted"
+    },
+    {
+      "key": "1900talets",
+      "old": {
+        "en": "peoples",
+        "pos": "n"
+      },
+      "new": {
+        "en": "the 1900s",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "period of time"
+    },
+    {
+      "key": "absolut",
+      "old": {
+        "en": "absolutely",
+        "pos": "n"
+      },
+      "new": {
+        "en": "absolutely",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adverb not noun"
+    },
+    {
+      "key": "accepterade",
+      "old": {
+        "en": "to ?",
+        "pos": "v",
+        "lemma": "acceptera"
+      },
+      "new": {
+        "en": "accepted",
+        "pos": "v",
+        "lemma": "acceptera"
+      },
+      "issue": "garbled",
+      "note": "was \"to ?\""
+    },
+    {
+      "key": "adresserat",
+      "old": {
+        "en": "to addressed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "addressed",
+        "pos": "v"
+      },
+      "issue": "garbage-semi",
+      "note": "\"to addressed\" wrong"
+    },
+    {
+      "key": "affärer",
+      "old": {
+        "en": "business",
+        "pos": "adj",
+        "lemma": "affär"
+      },
+      "new": {
+        "en": "shops; businesses",
+        "pos": "n",
+        "lemma": "affär"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "akuta",
+      "old": {
+        "en": "report; emergency",
+        "pos": "n"
+      },
+      "new": {
+        "en": "acute; emergency",
+        "pos": "adj"
+      },
+      "issue": "garbage-semi",
+      "note": "not \"report\""
+    },
+    {
+      "key": "aldrig",
+      "old": {
+        "en": "never",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "never",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adverb not adj"
+    },
+    {
+      "key": "all",
+      "old": {
+        "en": "reason; all",
+        "pos": "n"
+      },
+      "new": {
+        "en": "all",
+        "pos": "pron"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"reason\""
+    },
+    {
+      "key": "alldeles",
+      "old": {
+        "en": "out; right",
+        "pos": "n"
+      },
+      "new": {
+        "en": "completely; exactly",
+        "pos": "adv"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "adverb"
+    },
+    {
+      "key": "allemansrätten",
+      "old": {
+        "en": "public right",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "right of public access",
+        "pos": "n"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "allihopa",
+      "old": {
+        "en": "everyone; all of them",
+        "pos": "n"
+      },
+      "new": {
+        "en": "everyone",
+        "pos": "pron"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "pronoun"
+    },
+    {
+      "key": "allmänhet",
+      "old": {
+        "en": "general; public",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "public; generality",
+        "pos": "n"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "allmänt",
+      "old": {
+        "en": "generally",
+        "pos": "n"
+      },
+      "new": {
+        "en": "generally",
+        "pos": "adv"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "adverb"
+    },
+    {
+      "key": "allteftersom",
+      "old": {
+        "en": "winter; as and when",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "as; depending on",
+        "pos": "conj"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"winter\""
+    },
+    {
+      "key": "allvarligt",
+      "old": {
+        "en": "problem; seriously",
+        "pos": "n"
+      },
+      "new": {
+        "en": "seriously",
+        "pos": "adv"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "adverb not noun"
+    },
+    {
+      "key": "alternativ",
+      "old": {
+        "en": "vegan; alternative",
+        "pos": "n"
+      },
+      "new": {
+        "en": "alternative",
+        "pos": "n"
+      },
+      "issue": "garbage-semi",
+      "note": "not \"vegan\""
+    },
+    {
+      "key": "alternativet",
+      "old": {
+        "en": "vegan; alternative",
+        "pos": "n",
+        "lemma": "alternativ"
+      },
+      "new": {
+        "en": "the alternative",
+        "pos": "n",
+        "lemma": "alternativ"
+      },
+      "issue": "garbage-semi",
+      "note": "not \"vegan\""
+    },
+    {
+      "key": "an",
+      "old": {
+        "en": "task; on",
+        "pos": "n"
+      },
+      "new": {
+        "en": "on",
+        "pos": "adv"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"task\""
+    },
+    {
+      "key": "anförtrodde",
+      "old": {
+        "en": "to entrusted",
+        "pos": "v"
+      },
+      "new": {
+        "en": "entrusted",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to entrusted\""
+    },
+    {
+      "key": "angreppssättet",
+      "old": {
+        "en": "to approach",
+        "pos": "v"
+      },
+      "new": {
+        "en": "the approach",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "angående",
+      "old": {
+        "en": "regarding; concerning",
+        "pos": "n"
+      },
+      "new": {
+        "en": "regarding; concerning",
+        "pos": "prep"
+      },
+      "issue": "wrong-pos",
+      "note": "preposition"
+    },
+    {
+      "key": "ankommer",
+      "old": {
+        "en": "to falls; arriving",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to arrive",
+        "pos": "v"
+      },
+      "issue": "garbage-semi",
+      "note": "not \"falls\""
+    },
+    {
+      "key": "anlitade",
+      "old": {
+        "en": "to recommended; hired",
+        "pos": "v"
+      },
+      "new": {
+        "en": "hired",
+        "pos": "v"
+      },
+      "issue": "garbage-semi",
+      "note": "not \"recommended\""
+    },
+    {
+      "key": "anlända",
+      "old": {
+        "en": "to ?",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to arrive",
+        "pos": "v"
+      },
+      "issue": "garbled",
+      "note": "was \"to ?\""
+    },
+    {
+      "key": "anländer",
+      "old": {
+        "en": "to arrive; arrif",
+        "pos": "v",
+        "lemma": "anlända"
+      },
+      "new": {
+        "en": "to arrive",
+        "pos": "v",
+        "lemma": "anlända"
+      },
+      "issue": "truncated",
+      "note": "\"arrif\" truncated"
+    },
+    {
+      "key": "anmäla",
+      "old": {
+        "en": "course; report",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "to report; sign up",
+        "pos": "v"
+      },
+      "issue": "wrong-pos",
+      "note": "verb not adj"
+    },
+    {
+      "key": "anmälde",
+      "old": {
+        "en": "course; reported",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "reported; signed up",
+        "pos": "v",
+        "lemma": "anmäla"
+      },
+      "issue": "wrong-pos",
+      "note": "verb not adj"
+    },
+    {
+      "key": "anmäler",
+      "old": {
+        "en": "course; report",
+        "pos": "adj",
+        "lemma": "anmäla"
+      },
+      "new": {
+        "en": "to report; sign up",
+        "pos": "v",
+        "lemma": "anmäla"
+      },
+      "issue": "wrong-pos",
+      "note": "verb not adj"
+    },
+    {
+      "key": "anmärkningsvärt",
+      "old": {
+        "en": "remarkable",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "remarkably",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adverb"
+    },
+    {
+      "key": "anser",
+      "old": {
+        "en": "to consider; consider",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to consider",
+        "pos": "v"
+      },
+      "issue": "garbage-semi",
+      "note": "remove duplicate"
+    },
+    {
+      "key": "anses",
+      "old": {
+        "en": "to considered",
+        "pos": "v"
+      },
+      "new": {
+        "en": "is considered",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to considered\""
+    },
+    {
+      "key": "ansträngningar",
+      "old": {
+        "en": "effort",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "efforts",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "ansåg",
+      "old": {
+        "en": "to considered",
+        "pos": "v"
+      },
+      "new": {
+        "en": "considered",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to considered\""
+    },
+    {
+      "key": "antagligen",
+      "old": {
+        "en": "probably",
+        "pos": "n"
+      },
+      "new": {
+        "en": "probably",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adverb not noun"
+    },
+    {
+      "key": "antagna",
+      "old": {
+        "en": "adopted",
+        "pos": "n"
+      },
+      "new": {
+        "en": "adopted; admitted",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos",
+      "note": "adjective not noun"
+    },
+    {
+      "key": "anteckningar",
+      "old": {
+        "en": "to note",
+        "pos": "v"
+      },
+      "new": {
+        "en": "notes",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "antingen",
+      "old": {
+        "en": "either",
+        "pos": "n"
+      },
+      "new": {
+        "en": "either",
+        "pos": "conj"
+      },
+      "issue": "wrong-pos",
+      "note": "conjunction"
+    },
+    {
+      "key": "antogs",
+      "old": {
+        "en": "to be adopted",
+        "pos": "v"
+      },
+      "new": {
+        "en": "was adopted",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning",
+      "note": "passive form"
+    },
+    {
+      "key": "använda",
+      "old": {
+        "en": "dentist; use",
+        "pos": "n"
+      },
+      "new": {
+        "en": "to use",
+        "pos": "v"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"dentist\""
+    },
+    {
+      "key": "använder",
+      "old": {
+        "en": "dentist; use",
+        "pos": "n",
+        "lemma": "använda"
+      },
+      "new": {
+        "en": "to use",
+        "pos": "v",
+        "lemma": "använda"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"dentist\""
+    },
+    {
+      "key": "användes",
+      "old": {
+        "en": "past passive indicative of använda",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "was used",
+        "pos": "v",
+        "lemma": "använda"
+      },
+      "issue": "wrong-pos",
+      "note": "verb not adj, description not translation"
+    },
+    {
+      "key": "används",
+      "old": {
+        "en": "dentist; use",
+        "pos": "n",
+        "lemma": "använda"
+      },
+      "new": {
+        "en": "to be used",
+        "pos": "v",
+        "lemma": "använda"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"dentist\""
+    },
+    {
+      "key": "arbetslivet",
+      "old": {
+        "en": "to working life, work life",
+        "pos": "v"
+      },
+      "new": {
+        "en": "working life",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "arbetsvillkoren",
+      "old": {
+        "en": "to working condition, work environment",
+        "pos": "v"
+      },
+      "new": {
+        "en": "working conditions",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "arga",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "angry",
+        "pos": "adj"
+      },
+      "issue": "garbled+pos",
+      "note": "was \"?\""
+    },
+    {
+      "key": "artist",
+      "old": {
+        "en": "an artist –",
+        "pos": "n"
+      },
+      "new": {
+        "en": "artist",
+        "pos": "n"
+      },
+      "issue": "truncated",
+      "note": "\"an artist –\" has trailing dash"
+    },
+    {
+      "key": "artisterna",
+      "old": {
+        "en": "an artist –",
+        "pos": "n",
+        "lemma": "artist"
+      },
+      "new": {
+        "en": "artists",
+        "pos": "n",
+        "lemma": "artist"
+      },
+      "issue": "truncated",
+      "note": "\"an artist –\" has trailing dash"
+    },
+    {
+      "key": "avdelning",
+      "old": {
+        "en": "to section",
+        "pos": "v"
+      },
+      "new": {
+        "en": "department; section",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "avdelningar",
+      "old": {
+        "en": "to section",
+        "pos": "v",
+        "lemma": "avdelning"
+      },
+      "new": {
+        "en": "departments; sections",
+        "pos": "n",
+        "lemma": "avdelning"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "avdelningarna",
+      "old": {
+        "en": "to section",
+        "pos": "v",
+        "lemma": "avdelning"
+      },
+      "new": {
+        "en": "departments; sections",
+        "pos": "n",
+        "lemma": "avdelning"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "avgjord",
+      "old": {
+        "en": "to decide",
+        "pos": "v"
+      },
+      "new": {
+        "en": "decided",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to decide\" on past form"
+    },
+    {
+      "key": "avseende",
+      "old": {
+        "en": "to regard; respect",
+        "pos": "v"
+      },
+      "new": {
+        "en": "regard; respect",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "avslagna",
+      "old": {
+        "en": "to reject",
+        "pos": "v"
+      },
+      "new": {
+        "en": "rejected",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to reject\" on past form"
+    },
+    {
+      "key": "avslappnande",
+      "old": {
+        "en": "relaxing",
+        "pos": "n"
+      },
+      "new": {
+        "en": "relaxing",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos",
+      "note": "adjective"
+    },
+    {
+      "key": "avslöjade",
+      "old": {
+        "en": "to revealed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "revealed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to revealed\""
+    },
+    {
+      "key": "avvikelser",
+      "old": {
+        "en": "to anomaly",
+        "pos": "v"
+      },
+      "new": {
+        "en": "deviations; anomalies",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "avvägningsfråga",
+      "old": {
+        "en": "it's; balancing issue",
+        "pos": "n"
+      },
+      "new": {
+        "en": "balancing issue",
+        "pos": "n"
+      },
+      "issue": "garbage-semi",
+      "note": "not \"it's\""
+    },
+    {
+      "key": "axlar",
+      "old": {
+        "en": "to shoulder",
+        "pos": "v"
+      },
+      "new": {
+        "en": "shoulders",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "bad",
+      "old": {
+        "en": "bath",
+        "pos": "v"
+      },
+      "new": {
+        "en": "bath",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "bakgrund",
+      "old": {
+        "en": "light; background",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "background",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "bakning",
+      "old": {
+        "en": "to bake",
+        "pos": "v"
+      },
+      "new": {
+        "en": "baking",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "ballader",
+      "old": {
+        "en": "to ballad",
+        "pos": "v"
+      },
+      "new": {
+        "en": "ballads",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "bar",
+      "old": {
+        "en": "to carried; bar",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to carried; bar",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to carried\" is bad form"
+    },
+    {
+      "key": "bara",
+      "old": {
+        "en": "just, only",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "just; only",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adverb not adj"
+    },
+    {
+      "key": "bearbetats",
+      "old": {
+        "en": "to processed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "processed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to processed\""
+    },
+    {
+      "key": "bedöms",
+      "old": {
+        "en": "to assessed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "is assessed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to assessed\""
+    },
+    {
+      "key": "befintliga",
+      "old": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "existing",
+        "pos": "adj"
+      },
+      "issue": "garbled",
+      "note": "was \"?\""
+    },
+    {
+      "key": "befordrad",
+      "old": {
+        "en": "to promoted",
+        "pos": "v"
+      },
+      "new": {
+        "en": "promoted",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to promoted\""
+    },
+    {
+      "key": "begrundade",
+      "old": {
+        "en": "to pondered",
+        "pos": "v"
+      },
+      "new": {
+        "en": "pondered",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to pondered\""
+    },
+    {
+      "key": "begränsningar",
+      "old": {
+        "en": "to limitation",
+        "pos": "v"
+      },
+      "new": {
+        "en": "limitations",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "behandlade",
+      "old": {
+        "en": "to treated",
+        "pos": "v"
+      },
+      "new": {
+        "en": "treated",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to treated\""
+    },
+    {
+      "key": "behandlades",
+      "old": {
+        "en": "to treated",
+        "pos": "v",
+        "lemma": "behandlade"
+      },
+      "new": {
+        "en": "was treated",
+        "pos": "v",
+        "lemma": "behandlade"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to treated\""
+    },
+    {
+      "key": "behovet",
+      "old": {
+        "en": "to need",
+        "pos": "v"
+      },
+      "new": {
+        "en": "the need",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "behöva",
+      "old": {
+        "en": "tired; need",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "to need",
+        "pos": "v"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"tired\", verb not adj"
+    },
+    {
+      "key": "behövde",
+      "old": {
+        "en": "tired; need",
+        "pos": "adj",
+        "lemma": "behöva"
+      },
+      "new": {
+        "en": "to need",
+        "pos": "v",
+        "lemma": "behöva"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"tired\""
+    },
+    {
+      "key": "behöver",
+      "old": {
+        "en": "tired; need",
+        "pos": "adj",
+        "lemma": "behöva"
+      },
+      "new": {
+        "en": "to need",
+        "pos": "v",
+        "lemma": "behöva"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"tired\""
+    },
+    {
+      "key": "behövs",
+      "old": {
+        "en": "tired; need",
+        "pos": "adj",
+        "lemma": "behöva"
+      },
+      "new": {
+        "en": "to be needed",
+        "pos": "v",
+        "lemma": "behöva"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"tired\""
+    },
+    {
+      "key": "behövt",
+      "old": {
+        "en": "tired; need",
+        "pos": "adj",
+        "lemma": "behöva"
+      },
+      "new": {
+        "en": "to need",
+        "pos": "v",
+        "lemma": "behöva"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"tired\""
+    },
+    {
+      "key": "bekräftad",
+      "old": {
+        "en": "to confirm",
+        "pos": "v"
+      },
+      "new": {
+        "en": "confirmed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to confirm\" on past"
+    },
+    {
+      "key": "bella",
+      "old": {
+        "en": "to gotten; beautiful",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to gotten; beautiful",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to gotten\" is bad form"
+    },
+    {
+      "key": "belägna",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "situated; located",
+        "pos": "adj"
+      },
+      "issue": "garbled+pos",
+      "note": "was \"?\""
+    },
+    {
+      "key": "belönad",
+      "old": {
+        "en": "to rewarded, compensated",
+        "pos": "v"
+      },
+      "new": {
+        "en": "rewarded",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to rewarded\""
+    },
+    {
+      "key": "ben",
+      "old": {
+        "en": "to stand; bone",
+        "pos": "v"
+      },
+      "new": {
+        "en": "leg; bone",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "beräknades",
+      "old": {
+        "en": "past passive indicative of beräkna",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "was calculated",
+        "pos": "v"
+      },
+      "issue": "wrong-pos",
+      "note": "description not translation"
+    },
+    {
+      "key": "berättelser",
+      "old": {
+        "en": "to tell",
+        "pos": "v",
+        "lemma": "berätta"
+      },
+      "new": {
+        "en": "stories",
+        "pos": "n",
+        "lemma": "berättelse"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "berörde",
+      "old": {
+        "en": "to touched",
+        "pos": "v"
+      },
+      "new": {
+        "en": "touched; concerned",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to touched\""
+    },
+    {
+      "key": "beseglat",
+      "old": {
+        "en": "to sealed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "sealed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to sealed\""
+    },
+    {
+      "key": "besked",
+      "old": {
+        "en": "shortly; information",
+        "pos": "n"
+      },
+      "new": {
+        "en": "information; message",
+        "pos": "n"
+      },
+      "issue": "garbage-semi",
+      "note": "not \"shortly\""
+    },
+    {
+      "key": "beskedet",
+      "old": {
+        "en": "shortly; information",
+        "pos": "n",
+        "lemma": "besked"
+      },
+      "new": {
+        "en": "the information",
+        "pos": "n",
+        "lemma": "besked"
+      },
+      "issue": "garbage-semi",
+      "note": "not \"shortly\""
+    },
+    {
+      "key": "besluten",
+      "old": {
+        "en": "decision",
+        "pos": "n"
+      },
+      "new": {
+        "en": "decision; determined",
+        "pos": "n"
+      },
+      "issue": "wrong-lemma",
+      "note": "self-lemma, base form"
+    },
+    {
+      "key": "beslutet",
+      "old": {
+        "en": "decision",
+        "pos": "n",
+        "lemma": "besluten"
+      },
+      "new": {
+        "en": "the decision",
+        "pos": "n",
+        "lemma": "beslut"
+      },
+      "issue": "wrong-lemma",
+      "note": "beslut not besluten"
+    },
+    {
+      "key": "bestämt",
+      "old": {
+        "en": "to decided; certainly",
+        "pos": "v"
+      },
+      "new": {
+        "en": "definitely; decided",
+        "pos": "adv"
+      },
+      "issue": "bad-verb-form+pos",
+      "note": "\"to decided\""
+    },
+    {
+      "key": "besväret",
+      "old": {
+        "en": "to trouble",
+        "pos": "v"
+      },
+      "new": {
+        "en": "the trouble",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "bet",
+      "old": {
+        "en": "to bit; bite",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to bit; bite",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to bit\" is bad form"
+    },
+    {
+      "key": "betade",
+      "old": {
+        "en": "to bit; bite",
+        "pos": "v",
+        "lemma": "bet"
+      },
+      "new": {
+        "en": "to bit; bite",
+        "pos": "v",
+        "lemma": "bet"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to bit\" is bad form"
+    },
+    {
+      "key": "betalningar",
+      "old": {
+        "en": "to pay",
+        "pos": "v",
+        "lemma": "betala"
+      },
+      "new": {
+        "en": "payments",
+        "pos": "n",
+        "lemma": "betala"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "betydelse",
+      "old": {
+        "en": "to meaning, sense",
+        "pos": "v"
+      },
+      "new": {
+        "en": "meaning; significance",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "betyder",
+      "old": {
+        "en": "to mean",
+        "pos": "v",
+        "lemma": "bet"
+      },
+      "new": {
+        "en": "to mean",
+        "pos": "v",
+        "lemma": "betyda"
+      },
+      "issue": "wrong-lemma",
+      "note": "betyda not bet"
+    },
+    {
+      "key": "bevaras",
+      "old": {
+        "en": "to preserved",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to be preserved",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to preserved\""
+    },
+    {
+      "key": "bevis",
+      "old": {
+        "en": "evidence",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "evidence",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "bidrag",
+      "old": {
+        "en": "melodifestivalen; contribution",
+        "pos": "n"
+      },
+      "new": {
+        "en": "contribution",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning",
+      "note": "not melodifestivalen"
+    },
+    {
+      "key": "bifogas",
+      "old": {
+        "en": "to attached",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to be attached",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to attached\""
+    },
+    {
+      "key": "bil",
+      "old": {
+        "en": "to drives; car",
+        "pos": "v"
+      },
+      "new": {
+        "en": "car",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "bilar",
+      "old": {
+        "en": "to drives; car",
+        "pos": "v",
+        "lemma": "bil"
+      },
+      "new": {
+        "en": "cars",
+        "pos": "n",
+        "lemma": "bil"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "bilarna",
+      "old": {
+        "en": "to drives; car",
+        "pos": "v",
+        "lemma": "bil"
+      },
+      "new": {
+        "en": "the cars",
+        "pos": "n",
+        "lemma": "bil"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "bildanalys",
+      "old": {
+        "en": "to image analysis",
+        "pos": "v"
+      },
+      "new": {
+        "en": "image analysis",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "bilen",
+      "old": {
+        "en": "to drives; car",
+        "pos": "v",
+        "lemma": "bil"
+      },
+      "new": {
+        "en": "the car",
+        "pos": "n",
+        "lemma": "bil"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "biljetter",
+      "old": {
+        "en": "to ticket",
+        "pos": "v",
+        "lemma": "biljett"
+      },
+      "new": {
+        "en": "tickets",
+        "pos": "n",
+        "lemma": "biljett"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "bitar",
+      "old": {
+        "en": "to a piece",
+        "pos": "v",
+        "lemma": "bit"
+      },
+      "new": {
+        "en": "pieces",
+        "pos": "n",
+        "lemma": "bit"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "biter",
+      "old": {
+        "en": "grits; bite",
+        "pos": "n"
+      },
+      "new": {
+        "en": "bites",
+        "pos": "v",
+        "lemma": "bita"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"grits\""
+    },
+    {
+      "key": "bjuda",
+      "old": {
+        "en": "please; invite",
+        "pos": "n"
+      },
+      "new": {
+        "en": "to invite; treat",
+        "pos": "v"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"please\""
+    },
+    {
+      "key": "bjuds",
+      "old": {
+        "en": "please; invite",
+        "pos": "n",
+        "lemma": "bjuda"
+      },
+      "new": {
+        "en": "is offered",
+        "pos": "v",
+        "lemma": "bjuda"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"please\""
+    },
+    {
+      "key": "bjöd",
+      "old": {
+        "en": "please; invite",
+        "pos": "n",
+        "lemma": "bjuda"
+      },
+      "new": {
+        "en": "invited; offered",
+        "pos": "v",
+        "lemma": "bjuda"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"please\""
+    },
+    {
+      "key": "blad",
+      "old": {
+        "en": "to leaves; leaf",
+        "pos": "v"
+      },
+      "new": {
+        "en": "leaf",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "bladet",
+      "old": {
+        "en": "to leaves; leaf",
+        "pos": "v",
+        "lemma": "blad"
+      },
+      "new": {
+        "en": "the leaf",
+        "pos": "n",
+        "lemma": "blad"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "blickar",
+      "old": {
+        "en": "to become; be",
+        "pos": "v",
+        "lemma": "bli"
+      },
+      "new": {
+        "en": "looks; gazes",
+        "pos": "n"
+      },
+      "issue": "wrong-lemma+pos",
+      "note": "noun not verb, not bli"
+    },
+    {
+      "key": "blickarna",
+      "old": {
+        "en": "to look",
+        "pos": "v",
+        "lemma": "blick"
+      },
+      "new": {
+        "en": "the looks; glances",
+        "pos": "n",
+        "lemma": "blick"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "blåser",
+      "old": {
+        "en": "way; blowing",
+        "pos": "n"
+      },
+      "new": {
+        "en": "blows",
+        "pos": "v",
+        "lemma": "blåsa"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"way\""
+    },
+    {
+      "key": "blåste",
+      "old": {
+        "en": "windy; blew",
+        "pos": "n"
+      },
+      "new": {
+        "en": "blew",
+        "pos": "v",
+        "lemma": "blåsa"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"windy\""
+    },
+    {
+      "key": "boka",
+      "old": {
+        "en": "book",
+        "pos": "n"
+      },
+      "new": {
+        "en": "to book; reserve",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning+pos",
+      "note": "verb not noun"
+    },
+    {
+      "key": "bokade",
+      "old": {
+        "en": "book",
+        "pos": "n",
+        "lemma": "boka"
+      },
+      "new": {
+        "en": "to book",
+        "pos": "v",
+        "lemma": "boka"
+      },
+      "issue": "wrong-meaning+pos",
+      "note": "verb not noun"
+    },
+    {
+      "key": "bokades",
+      "old": {
+        "en": "book",
+        "pos": "n",
+        "lemma": "bokade"
+      },
+      "new": {
+        "en": "was booked",
+        "pos": "v",
+        "lemma": "boka"
+      },
+      "issue": "wrong-meaning+pos",
+      "note": "verb not noun"
+    },
+    {
+      "key": "bokar",
+      "old": {
+        "en": "book",
+        "pos": "n",
+        "lemma": "boka"
+      },
+      "new": {
+        "en": "to book",
+        "pos": "v",
+        "lemma": "boka"
+      },
+      "issue": "wrong-meaning+pos",
+      "note": "verb not noun"
+    },
+    {
+      "key": "bokas",
+      "old": {
+        "en": "book",
+        "pos": "n",
+        "lemma": "boka"
+      },
+      "new": {
+        "en": "to be booked",
+        "pos": "v",
+        "lemma": "boka"
+      },
+      "issue": "wrong-meaning+pos",
+      "note": "verb not noun"
+    },
+    {
+      "key": "bollar",
+      "old": {
+        "en": "to ball",
+        "pos": "v",
+        "lemma": "boll"
+      },
+      "new": {
+        "en": "balls",
+        "pos": "n",
+        "lemma": "boll"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "borde",
+      "old": {
+        "en": "to live; stay",
+        "pos": "v",
+        "lemma": "bo"
+      },
+      "new": {
+        "en": "should; ought to",
+        "pos": "v",
+        "lemma": "böra"
+      },
+      "issue": "wrong-lemma",
+      "note": "böra not bo"
+    },
+    {
+      "key": "bort",
+      "old": {
+        "en": "to live; stay",
+        "pos": "v",
+        "lemma": "bo"
+      },
+      "new": {
+        "en": "away",
+        "pos": "adv"
+      },
+      "issue": "wrong-lemma+pos",
+      "note": "adverb, not verb form of bo"
+    },
+    {
+      "key": "breddades",
+      "old": {
+        "en": "to widened",
+        "pos": "v"
+      },
+      "new": {
+        "en": "widened",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to widened\""
+    },
+    {
+      "key": "brinnande",
+      "old": {
+        "en": "to burne",
+        "pos": "v",
+        "lemma": "brinna"
+      },
+      "new": {
+        "en": "burning",
+        "pos": "v",
+        "lemma": "brinna"
+      },
+      "issue": "truncated",
+      "note": "\"to burne\" truncated"
+    },
+    {
+      "key": "brinner",
+      "old": {
+        "en": "glassworks; burning",
+        "pos": "n"
+      },
+      "new": {
+        "en": "burns; is burning",
+        "pos": "v",
+        "lemma": "brinna"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"glassworks\""
+    },
+    {
+      "key": "brist",
+      "old": {
+        "en": "to lack",
+        "pos": "v"
+      },
+      "new": {
+        "en": "lack; shortage",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "brottades",
+      "old": {
+        "en": "past passive indicative of brotta",
+        "pos": "adj",
+        "lemma": "brottas"
+      },
+      "new": {
+        "en": "wrestled",
+        "pos": "v",
+        "lemma": "brottas"
+      },
+      "issue": "wrong-pos",
+      "note": "description not translation"
+    },
+    {
+      "key": "brunnit",
+      "old": {
+        "en": "to burnt",
+        "pos": "v",
+        "lemma": "brinna"
+      },
+      "new": {
+        "en": "burned",
+        "pos": "v",
+        "lemma": "brinna"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to burnt\""
+    },
+    {
+      "key": "bryggs",
+      "old": {
+        "en": "to brewed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "is brewed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to brewed\""
+    },
+    {
+      "key": "bränt",
+      "old": {
+        "en": "to burned",
+        "pos": "v"
+      },
+      "new": {
+        "en": "burned",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to burned\""
+    },
+    {
+      "key": "bröst",
+      "old": {
+        "en": "to feeling; breast",
+        "pos": "v"
+      },
+      "new": {
+        "en": "chest; breast",
+        "pos": "n"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"feeling\", noun not verb"
+    },
+    {
+      "key": "bullar",
+      "old": {
+        "en": "to bun",
+        "pos": "v"
+      },
+      "new": {
+        "en": "buns",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "bundit",
+      "old": {
+        "en": "to tied",
+        "pos": "v"
+      },
+      "new": {
+        "en": "tied",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to tied\""
+    },
+    {
+      "key": "busshållplats",
+      "old": {
+        "en": "to bus stop",
+        "pos": "v"
+      },
+      "new": {
+        "en": "bus stop",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "byggd",
+      "old": {
+        "en": "to built",
+        "pos": "v"
+      },
+      "new": {
+        "en": "built",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to built\""
+    },
+    {
+      "key": "byggt",
+      "old": {
+        "en": "to built",
+        "pos": "v",
+        "lemma": "byggd"
+      },
+      "new": {
+        "en": "built",
+        "pos": "v",
+        "lemma": "bygga"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to built\""
+    },
+    {
+      "key": "bärgar",
+      "old": {
+        "en": "to salvage a",
+        "pos": "v",
+        "lemma": "bära"
+      },
+      "new": {
+        "en": "to salvage",
+        "pos": "v",
+        "lemma": "bärga"
+      },
+      "issue": "wrong-lemma",
+      "note": "bärga not bära"
+    },
+    {
+      "key": "chans",
+      "old": {
+        "en": "chance",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "chance",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "charkuterier",
+      "old": {
+        "en": "to charcuterie",
+        "pos": "v"
+      },
+      "new": {
+        "en": "charcuterie",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "cider",
+      "old": {
+        "en": "to cider",
+        "pos": "v"
+      },
+      "new": {
+        "en": "cider",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "cykel",
+      "old": {
+        "en": "to cycle",
+        "pos": "v"
+      },
+      "new": {
+        "en": "bicycle",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "cykeln",
+      "old": {
+        "en": "to cycle",
+        "pos": "v",
+        "lemma": "cykel"
+      },
+      "new": {
+        "en": "the bicycle",
+        "pos": "n",
+        "lemma": "cykel"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "cykelvägar",
+      "old": {
+        "en": "to cycle paths",
+        "pos": "v"
+      },
+      "new": {
+        "en": "cycle paths",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "cykla",
+      "old": {
+        "en": "barking; ride",
+        "pos": "n"
+      },
+      "new": {
+        "en": "to cycle; ride a bike",
+        "pos": "v"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"barking\""
+    },
+    {
+      "key": "cyklade",
+      "old": {
+        "en": "barking; ride",
+        "pos": "n",
+        "lemma": "cykla"
+      },
+      "new": {
+        "en": "to cycle",
+        "pos": "v",
+        "lemma": "cykla"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"barking\""
+    },
+    {
+      "key": "cyklar",
+      "old": {
+        "en": "barking; ride",
+        "pos": "n",
+        "lemma": "cykla"
+      },
+      "new": {
+        "en": "to cycle",
+        "pos": "v",
+        "lemma": "cykla"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"barking\""
+    },
+    {
+      "key": "cyklat",
+      "old": {
+        "en": "barking; ride",
+        "pos": "n",
+        "lemma": "cykla"
+      },
+      "new": {
+        "en": "to cycle",
+        "pos": "v",
+        "lemma": "cykla"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"barking\""
+    },
+    {
+      "key": "dagis",
+      "old": {
+        "en": "to drops; kindergarten",
+        "pos": "v"
+      },
+      "new": {
+        "en": "kindergarten",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "dagligen",
+      "old": {
+        "en": "daily",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "daily",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adverb not adj"
+    },
+    {
+      "key": "dammsugare",
+      "old": {
+        "en": "to vacuum cleaner",
+        "pos": "v"
+      },
+      "new": {
+        "en": "vacuum cleaner",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "dansföreställning",
+      "old": {
+        "en": "to dance performance",
+        "pos": "v"
+      },
+      "new": {
+        "en": "dance performance",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "dansskola",
+      "old": {
+        "en": "to dance school",
+        "pos": "v"
+      },
+      "new": {
+        "en": "dance school",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "debatten",
+      "old": {
+        "en": "to debate",
+        "pos": "v"
+      },
+      "new": {
+        "en": "the debate",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "december",
+      "old": {
+        "en": "to december",
+        "pos": "v"
+      },
+      "new": {
+        "en": "December",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "month not verb"
+    },
+    {
+      "key": "dekorerad",
+      "old": {
+        "en": "to decorated",
+        "pos": "v"
+      },
+      "new": {
+        "en": "decorated",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to decorated\""
+    },
+    {
+      "key": "delikatesser",
+      "old": {
+        "en": "to tried; delicatessen",
+        "pos": "v"
+      },
+      "new": {
+        "en": "delicacies",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "deltog",
+      "old": {
+        "en": "the Greek letter Δ, δ",
+        "pos": "n"
+      },
+      "new": {
+        "en": "participated",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning+pos",
+      "note": "not Greek letter"
+    },
+    {
+      "key": "demonstrationer",
+      "old": {
+        "en": "to a demonstration",
+        "pos": "v"
+      },
+      "new": {
+        "en": "demonstrations",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "design",
+      "old": {
+        "en": "to design",
+        "pos": "v"
+      },
+      "new": {
+        "en": "design",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "dig",
+      "old": {
+        "en": "you (obj.)",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "you (obj.)",
+        "pos": "pron"
+      },
+      "issue": "wrong-pos",
+      "note": "pronoun not adj"
+    },
+    {
+      "key": "dimhöljda",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "fog-shrouded",
+        "pos": "adj"
+      },
+      "issue": "garbled+pos",
+      "note": "was \"?\""
+    },
+    {
+      "key": "direktflyg",
+      "old": {
+        "en": "to direct flight",
+        "pos": "v"
+      },
+      "new": {
+        "en": "direct flight",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "disken",
+      "old": {
+        "en": "to counter",
+        "pos": "v"
+      },
+      "new": {
+        "en": "the counter",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "diskutera",
+      "old": {
+        "en": "to discus",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to discuss",
+        "pos": "v"
+      },
+      "issue": "truncated",
+      "note": "\"discus\" truncated"
+    },
+    {
+      "key": "diskuterade",
+      "old": {
+        "en": "to discus",
+        "pos": "v",
+        "lemma": "diskutera"
+      },
+      "new": {
+        "en": "to discuss",
+        "pos": "v",
+        "lemma": "diskutera"
+      },
+      "issue": "truncated",
+      "note": "\"discus\" truncated"
+    },
+    {
+      "key": "diskuterades",
+      "old": {
+        "en": "past passive indicative of diskutera",
+        "pos": "adj",
+        "lemma": "diskuterade"
+      },
+      "new": {
+        "en": "to be discussed",
+        "pos": "v",
+        "lemma": "diskutera"
+      },
+      "issue": "truncated+pos",
+      "note": "was \"past passive...\" description"
+    },
+    {
+      "key": "diskuterar",
+      "old": {
+        "en": "to discus",
+        "pos": "v",
+        "lemma": "diskutera"
+      },
+      "new": {
+        "en": "to discuss",
+        "pos": "v",
+        "lemma": "diskutera"
+      },
+      "issue": "truncated",
+      "note": "\"discus\" truncated"
+    },
+    {
+      "key": "diskuterat",
+      "old": {
+        "en": "to discus",
+        "pos": "v",
+        "lemma": "diskutera"
+      },
+      "new": {
+        "en": "to discuss",
+        "pos": "v",
+        "lemma": "diskutera"
+      },
+      "issue": "truncated",
+      "note": "\"discus\" truncated"
+    },
+    {
+      "key": "dokumenterade",
+      "old": {
+        "en": "to documented",
+        "pos": "v"
+      },
+      "new": {
+        "en": "documented",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to documented\""
+    },
+    {
+      "key": "dra",
+      "old": {
+        "en": "tar; drag",
+        "pos": "n"
+      },
+      "new": {
+        "en": "to pull; draw",
+        "pos": "v"
+      },
+      "issue": "wrong-meaning+pos",
+      "note": "verb not noun"
+    },
+    {
+      "key": "drack",
+      "old": {
+        "en": "tar; drag",
+        "pos": "n",
+        "lemma": "dra"
+      },
+      "new": {
+        "en": "to drink",
+        "pos": "v",
+        "lemma": "dricka"
+      },
+      "issue": "wrong-meaning+pos+lemma",
+      "note": "not dra"
+    },
+    {
+      "key": "drag",
+      "old": {
+        "en": "to feature, trait",
+        "pos": "v"
+      },
+      "new": {
+        "en": "trait; feature",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "dragit",
+      "old": {
+        "en": "tar; drag",
+        "pos": "n",
+        "lemma": "dra"
+      },
+      "new": {
+        "en": "to pull; draw",
+        "pos": "v",
+        "lemma": "dra"
+      },
+      "issue": "wrong-meaning+pos",
+      "note": "verb not noun"
+    },
+    {
+      "key": "drar",
+      "old": {
+        "en": "tar; drag",
+        "pos": "n",
+        "lemma": "dra"
+      },
+      "new": {
+        "en": "to pull; draw",
+        "pos": "v",
+        "lemma": "dra"
+      },
+      "issue": "wrong-meaning+pos",
+      "note": "verb not noun"
+    },
+    {
+      "key": "dras",
+      "old": {
+        "en": "tar; drag",
+        "pos": "n",
+        "lemma": "dra"
+      },
+      "new": {
+        "en": "to be pulled",
+        "pos": "v",
+        "lemma": "dra"
+      },
+      "issue": "wrong-meaning+pos",
+      "note": "verb not noun"
+    },
+    {
+      "key": "drev",
+      "old": {
+        "en": "tar; drag",
+        "pos": "n",
+        "lemma": "dra"
+      },
+      "new": {
+        "en": "drove; pushed",
+        "pos": "v",
+        "lemma": "driva"
+      },
+      "issue": "wrong-meaning+pos+lemma",
+      "note": "not dra"
+    },
+    {
+      "key": "dricker",
+      "old": {
+        "en": "tar; drag",
+        "pos": "n",
+        "lemma": "dra"
+      },
+      "new": {
+        "en": "to drink",
+        "pos": "v",
+        "lemma": "dricka"
+      },
+      "issue": "wrong-meaning+pos+lemma",
+      "note": "not dra"
+    },
+    {
+      "key": "dricksen",
+      "old": {
+        "en": "to tip",
+        "pos": "v"
+      },
+      "new": {
+        "en": "the tip",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "driven",
+      "old": {
+        "en": "to driven, operated",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to driven, operated",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to driven\" is bad form"
+    },
+    {
+      "key": "driver",
+      "old": {
+        "en": "tar; drag",
+        "pos": "n",
+        "lemma": "dra"
+      },
+      "new": {
+        "en": "to drive; run",
+        "pos": "v",
+        "lemma": "driva"
+      },
+      "issue": "wrong-meaning+pos+lemma",
+      "note": "not dra"
+    },
+    {
+      "key": "drog",
+      "old": {
+        "en": "tar; drag",
+        "pos": "n",
+        "lemma": "dra"
+      },
+      "new": {
+        "en": "to pull; draw",
+        "pos": "v",
+        "lemma": "dra"
+      },
+      "issue": "wrong-meaning+pos",
+      "note": "verb not noun"
+    },
+    {
+      "key": "droppen",
+      "old": {
+        "en": "to drop",
+        "pos": "v"
+      },
+      "new": {
+        "en": "the drop",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "druckit",
+      "old": {
+        "en": "tar; drag",
+        "pos": "n",
+        "lemma": "dra"
+      },
+      "new": {
+        "en": "to drink",
+        "pos": "v",
+        "lemma": "dricka"
+      },
+      "issue": "wrong-meaning+pos+lemma",
+      "note": "not dra"
+    },
+    {
+      "key": "dröja",
+      "old": {
+        "en": "it's; linger",
+        "pos": "n"
+      },
+      "new": {
+        "en": "to take time; linger",
+        "pos": "v"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"it's\""
+    },
+    {
+      "key": "drömmer",
+      "old": {
+        "en": "tar; drag",
+        "pos": "n",
+        "lemma": "dra"
+      },
+      "new": {
+        "en": "to dream",
+        "pos": "v",
+        "lemma": "drömma"
+      },
+      "issue": "wrong-meaning+pos+lemma",
+      "note": "not dra"
+    },
+    {
+      "key": "dukade",
+      "old": {
+        "en": "to set the table",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to set the table",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to set\" is bad form"
+    },
+    {
+      "key": "dusch",
+      "old": {
+        "en": "to shower",
+        "pos": "v"
+      },
+      "new": {
+        "en": "shower",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "duschar",
+      "old": {
+        "en": "to shower",
+        "pos": "v",
+        "lemma": "dusch"
+      },
+      "new": {
+        "en": "showers",
+        "pos": "n",
+        "lemma": "dusch"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "duschen",
+      "old": {
+        "en": "to shower",
+        "pos": "v",
+        "lemma": "dusch"
+      },
+      "new": {
+        "en": "the shower",
+        "pos": "n",
+        "lemma": "dusch"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "dussin",
+      "old": {
+        "en": "A dozen .",
+        "pos": "n"
+      },
+      "new": {
+        "en": "a dozen",
+        "pos": "n"
+      },
+      "issue": "truncated",
+      "note": "had trailing period"
+    },
+    {
+      "key": "dvok",
+      "old": {
+        "en": "to idled, lingered",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to idled, lingered",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to idled\" is bad form"
+    },
+    {
+      "key": "dygnet",
+      "old": {
+        "en": "glassworks; day",
+        "pos": "n"
+      },
+      "new": {
+        "en": "the 24h period",
+        "pos": "n"
+      },
+      "issue": "garbage-semi",
+      "note": "not \"glassworks\""
+    },
+    {
+      "key": "dödar",
+      "old": {
+        "en": "to dead",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to kill",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to dead\" wrong"
+    },
+    {
+      "key": "döps",
+      "old": {
+        "en": "to baptized",
+        "pos": "v"
+      },
+      "new": {
+        "en": "is baptized",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to baptized\""
+    },
+    {
+      "key": "döpt",
+      "old": {
+        "en": "to gotten; baptized",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to gotten; baptized",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to gotten\" is bad form"
+    },
+    {
+      "key": "effekt",
+      "old": {
+        "en": "effect",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "effect",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "efter",
+      "old": {
+        "en": "to after",
+        "pos": "v"
+      },
+      "new": {
+        "en": "after",
+        "pos": "prep"
+      },
+      "issue": "wrong-pos+to",
+      "note": "preposition not verb"
+    },
+    {
+      "key": "egen",
+      "old": {
+        "en": "to fix; own",
+        "pos": "v"
+      },
+      "new": {
+        "en": "own",
+        "pos": "adj"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"to fix\""
+    },
+    {
+      "key": "eget",
+      "old": {
+        "en": "to own",
+        "pos": "v"
+      },
+      "new": {
+        "en": "own (neuter)",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos",
+      "note": "adjective not verb"
+    },
+    {
+      "key": "egna",
+      "old": {
+        "en": "to own",
+        "pos": "v"
+      },
+      "new": {
+        "en": "own (plural)",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos",
+      "note": "adjective not verb"
+    },
+    {
+      "key": "ekologisk",
+      "old": {
+        "en": "to buy; ecological",
+        "pos": "v"
+      },
+      "new": {
+        "en": "ecological; organic",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos+garbage",
+      "note": "not \"to buy\""
+    },
+    {
+      "key": "ekonomi",
+      "old": {
+        "en": "to study; economy",
+        "pos": "v"
+      },
+      "new": {
+        "en": "economy",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "ekonomin",
+      "old": {
+        "en": "to study; economy",
+        "pos": "v",
+        "lemma": "ekonomi"
+      },
+      "new": {
+        "en": "the economy",
+        "pos": "n",
+        "lemma": "ekonomi"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "elbil",
+      "old": {
+        "en": "electric car",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "electric car",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "elbilar",
+      "old": {
+        "en": "electric car",
+        "pos": "adj",
+        "lemma": "elbil"
+      },
+      "new": {
+        "en": "electric cars",
+        "pos": "n",
+        "lemma": "elbil"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "elcykeln",
+      "old": {
+        "en": "electric bike",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "the electric bike",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "eller",
+      "old": {
+        "en": "to or",
+        "pos": "v"
+      },
+      "new": {
+        "en": "or",
+        "pos": "conj"
+      },
+      "issue": "wrong-pos+to",
+      "note": "conjunction not verb"
+    },
+    {
+      "key": "elsparkcykel",
+      "old": {
+        "en": "electric scooter",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "electric scooter",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "emotsedda",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "anticipated",
+        "pos": "adj"
+      },
+      "issue": "garbled+pos",
+      "note": "was \"?\""
+    },
+    {
+      "key": "enades",
+      "old": {
+        "en": "to agreed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "agreed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to agreed\""
+    },
+    {
+      "key": "energilinjer",
+      "old": {
+        "en": "to energy line",
+        "pos": "v"
+      },
+      "new": {
+        "en": "energy lines",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "engagerat",
+      "old": {
+        "en": "to promoted; committed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to promoted; committed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to promoted\" is bad form"
+    },
+    {
+      "key": "england",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "England",
+        "pos": "n"
+      },
+      "issue": "garbled",
+      "note": "was \"?\""
+    },
+    {
+      "key": "enklaste",
+      "old": {
+        "en": "to chose; simplest",
+        "pos": "v"
+      },
+      "new": {
+        "en": "simplest",
+        "pos": "adj"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"to chose\""
+    },
+    {
+      "key": "enkäter",
+      "old": {
+        "en": "to poll, survey",
+        "pos": "v"
+      },
+      "new": {
+        "en": "surveys",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "enligt",
+      "old": {
+        "en": "opinion; according to",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "according to",
+        "pos": "prep"
+      },
+      "issue": "wrong-pos",
+      "note": "preposition not adj"
+    },
+    {
+      "key": "erbjudande",
+      "old": {
+        "en": "to offer",
+        "pos": "v"
+      },
+      "new": {
+        "en": "offer",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "erfarenhet",
+      "old": {
+        "en": "to experience",
+        "pos": "v"
+      },
+      "new": {
+        "en": "experience",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "etsats",
+      "old": {
+        "en": "to etched",
+        "pos": "v"
+      },
+      "new": {
+        "en": "etched",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to etched\""
+    },
+    {
+      "key": "eviga",
+      "old": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "eternal",
+        "pos": "adj"
+      },
+      "issue": "garbled",
+      "note": "was \"?\""
+    },
+    {
+      "key": "examen",
+      "old": {
+        "en": "to graduated; degree",
+        "pos": "v"
+      },
+      "new": {
+        "en": "degree; exam",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "expanderar",
+      "old": {
+        "en": "to expande",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to expand",
+        "pos": "v"
+      },
+      "issue": "truncated",
+      "note": "\"expande\" truncated"
+    },
+    {
+      "key": "express",
+      "old": {
+        "en": "expres",
+        "pos": "n"
+      },
+      "new": {
+        "en": "express",
+        "pos": "n"
+      },
+      "issue": "truncated",
+      "note": "\"expres\" truncated"
+    },
+    {
+      "key": "faktor",
+      "old": {
+        "en": "to factor",
+        "pos": "v"
+      },
+      "new": {
+        "en": "factor",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "faktorer",
+      "old": {
+        "en": "to factor",
+        "pos": "v",
+        "lemma": "faktor"
+      },
+      "new": {
+        "en": "factors",
+        "pos": "n",
+        "lemma": "faktor"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "fallet",
+      "old": {
+        "en": "to fallen",
+        "pos": "v"
+      },
+      "new": {
+        "en": "the case",
+        "pos": "n",
+        "lemma": "fall"
+      },
+      "issue": "bad-verb-form+pos",
+      "note": "\"to fallen\" — its a noun"
+    },
+    {
+      "key": "falsifieras",
+      "old": {
+        "en": "to falsified",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to be falsified",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to falsified\""
+    },
+    {
+      "key": "fanns",
+      "old": {
+        "en": "to wondered; existed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to wondered; existed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to wondered\" is bad form"
+    },
+    {
+      "key": "fara",
+      "old": {
+        "en": "to danger",
+        "pos": "v"
+      },
+      "new": {
+        "en": "danger",
+        "pos": "n"
+      },
+      "issue": "wrong-meaning+pos",
+      "note": "noun meaning danger"
+    },
+    {
+      "key": "farit",
+      "old": {
+        "en": "to danger",
+        "pos": "v",
+        "lemma": "fara"
+      },
+      "new": {
+        "en": "traveled",
+        "pos": "v",
+        "lemma": "fara"
+      },
+      "issue": "wrong-meaning",
+      "note": "verb to travel, past participle"
+    },
+    {
+      "key": "fasta",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "fixed; firm",
+        "pos": "adj"
+      },
+      "issue": "garbled",
+      "note": "was \"?\""
+    },
+    {
+      "key": "fattats",
+      "old": {
+        "en": "to ?",
+        "pos": "v",
+        "lemma": "fatta"
+      },
+      "new": {
+        "en": "to ?",
+        "pos": "v",
+        "lemma": "fatta"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "favorit",
+      "old": {
+        "en": "favorite",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "favorite",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "favoritstol",
+      "old": {
+        "en": "favorite chair",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "favorite chair",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "feber",
+      "old": {
+        "en": "to fever",
+        "pos": "v"
+      },
+      "new": {
+        "en": "fever",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "felaktigt",
+      "old": {
+        "en": "to consider; incorrectly",
+        "pos": "v"
+      },
+      "new": {
+        "en": "incorrectly",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos+garbage",
+      "note": "not \"to consider\""
+    },
+    {
+      "key": "festmåltider",
+      "old": {
+        "en": "to sing; banquet",
+        "pos": "v"
+      },
+      "new": {
+        "en": "feast; banquets",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "fick",
+      "old": {
+        "en": "to introduce; get",
+        "pos": "v",
+        "lemma": "få"
+      },
+      "new": {
+        "en": "got; received",
+        "pos": "v",
+        "lemma": "få"
+      },
+      "issue": "garbage-semi",
+      "note": "not \"introduce\""
+    },
+    {
+      "key": "fikat",
+      "old": {
+        "en": "to having coffee, tea",
+        "pos": "v",
+        "lemma": "fika"
+      },
+      "new": {
+        "en": "to having coffee, tea",
+        "pos": "v",
+        "lemma": "fika"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to having\" is bad form"
+    },
+    {
+      "key": "finnas",
+      "old": {
+        "en": "room; be",
+        "pos": "n"
+      },
+      "new": {
+        "en": "to exist; be",
+        "pos": "v"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"room\""
+    },
+    {
+      "key": "finns",
+      "old": {
+        "en": "room; be",
+        "pos": "n",
+        "lemma": "finnas"
+      },
+      "new": {
+        "en": "exists; there is",
+        "pos": "v",
+        "lemma": "finnas"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"room\""
+    },
+    {
+      "key": "fint",
+      "old": {
+        "en": "fine",
+        "pos": "v"
+      },
+      "new": {
+        "en": "fine; nice",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos",
+      "note": "adjective not verb"
+    },
+    {
+      "key": "fiska",
+      "old": {
+        "en": "fish",
+        "pos": "n"
+      },
+      "new": {
+        "en": "to fish",
+        "pos": "v"
+      },
+      "issue": "wrong-pos",
+      "note": "verb not noun"
+    },
+    {
+      "key": "fiskar",
+      "old": {
+        "en": "to a fish",
+        "pos": "v",
+        "lemma": "fiska"
+      },
+      "new": {
+        "en": "to fish",
+        "pos": "v",
+        "lemma": "fiska"
+      },
+      "issue": "wrong-pos+garbage",
+      "note": "not \"a fish\" verb"
+    },
+    {
+      "key": "fixar",
+      "old": {
+        "en": "fixed, inflexible",
+        "pos": "adj",
+        "lemma": "fixa"
+      },
+      "new": {
+        "en": "to fix",
+        "pos": "v",
+        "lemma": "fixa"
+      },
+      "issue": "wrong-pos",
+      "note": "verb not adj"
+    },
+    {
+      "key": "fjädrar",
+      "old": {
+        "en": "to a feather",
+        "pos": "v",
+        "lemma": "fjäder"
+      },
+      "new": {
+        "en": "feathers",
+        "pos": "n",
+        "lemma": "fjäder"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "fjärilar",
+      "old": {
+        "en": "to butterfly",
+        "pos": "v",
+        "lemma": "fjäril"
+      },
+      "new": {
+        "en": "butterflies",
+        "pos": "n",
+        "lemma": "fjäril"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "fjärilsarter",
+      "old": {
+        "en": "to butterfly specy",
+        "pos": "v"
+      },
+      "new": {
+        "en": "butterfly species",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to+truncated",
+      "note": "noun not verb"
+    },
+    {
+      "key": "flaggdagar",
+      "old": {
+        "en": "to flag day",
+        "pos": "v"
+      },
+      "new": {
+        "en": "flag days",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "flygplats",
+      "old": {
+        "en": "airport",
+        "pos": "n",
+        "lemma": "flyga"
+      },
+      "new": {
+        "en": "airport",
+        "pos": "n"
+      },
+      "issue": "wrong-lemma",
+      "note": "no lemma needed"
+    },
+    {
+      "key": "flygpriset",
+      "old": {
+        "en": "to searched; airfare",
+        "pos": "v"
+      },
+      "new": {
+        "en": "the airfare",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "flytande",
+      "old": {
+        "en": "to speak; liquid",
+        "pos": "v"
+      },
+      "new": {
+        "en": "fluent; liquid",
+        "pos": "adj"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"to speak\""
+    },
+    {
+      "key": "flytta",
+      "old": {
+        "en": "to moving; move",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to moving; move",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to moving\" is bad form"
+    },
+    {
+      "key": "flyttade",
+      "old": {
+        "en": "to moving; move",
+        "pos": "v",
+        "lemma": "flytta"
+      },
+      "new": {
+        "en": "to moving; move",
+        "pos": "v",
+        "lemma": "flytta"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to moving\" is bad form"
+    },
+    {
+      "key": "flyttar",
+      "old": {
+        "en": "to moving; move",
+        "pos": "v",
+        "lemma": "flytta"
+      },
+      "new": {
+        "en": "to moving; move",
+        "pos": "v",
+        "lemma": "flytta"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to moving\" is bad form"
+    },
+    {
+      "key": "flyttas",
+      "old": {
+        "en": "to moving; move",
+        "pos": "v",
+        "lemma": "flytta"
+      },
+      "new": {
+        "en": "to moving; move",
+        "pos": "v",
+        "lemma": "flytta"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to moving\" is bad form"
+    },
+    {
+      "key": "flyttat",
+      "old": {
+        "en": "to moving; move",
+        "pos": "v",
+        "lemma": "flytta"
+      },
+      "new": {
+        "en": "to moving; move",
+        "pos": "v",
+        "lemma": "flytta"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to moving\" is bad form"
+    },
+    {
+      "key": "fläcken",
+      "old": {
+        "en": "to stain",
+        "pos": "v"
+      },
+      "new": {
+        "en": "the stain",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "formulerade",
+      "old": {
+        "en": "to ?",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to ?",
+        "pos": "v"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "fortsatte",
+      "old": {
+        "en": "to continued",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to continued",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to continued\" is bad form"
+    },
+    {
+      "key": "fotograferat",
+      "old": {
+        "en": "to photographed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to photographed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to photographed\" is bad form"
+    },
+    {
+      "key": "framförda",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "?",
+        "pos": "n"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "framkom",
+      "old": {
+        "en": "to turned; emerged",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to turned; emerged",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to turned\" is bad form"
+    },
+    {
+      "key": "framtagna",
+      "old": {
+        "en": "to produced; developed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to produced; developed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to produced\" is bad form"
+    },
+    {
+      "key": "förbipasserande",
+      "old": {
+        "en": "to passing; passerby",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to passing; passerby",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to passing\" is bad form"
+    },
+    {
+      "key": "förbättrats",
+      "old": {
+        "en": "to improved",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to improved",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to improved\" is bad form"
+    },
+    {
+      "key": "förfallna",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "?",
+        "pos": "n"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "förkyld",
+      "old": {
+        "en": "to having a cold",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to having a cold",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to having\" is bad form"
+    },
+    {
+      "key": "förlorade",
+      "old": {
+        "en": "to lost",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to lost",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to lost\" is bad form"
+    },
+    {
+      "key": "förlorat",
+      "old": {
+        "en": "to lost",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to lost",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to lost\" is bad form"
+    },
+    {
+      "key": "förnyad",
+      "old": {
+        "en": "to renewed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to renewed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to renewed\" is bad form"
+    },
+    {
+      "key": "försenat",
+      "old": {
+        "en": "to delayed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to delayed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to delayed\" is bad form"
+    },
+    {
+      "key": "förstod",
+      "old": {
+        "en": "to known; understand",
+        "pos": "v",
+        "lemma": "förstå"
+      },
+      "new": {
+        "en": "to known; understand",
+        "pos": "v",
+        "lemma": "förstå"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to known\" is bad form"
+    },
+    {
+      "key": "förstå",
+      "old": {
+        "en": "to known; understand",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to known; understand",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to known\" is bad form"
+    },
+    {
+      "key": "förstår",
+      "old": {
+        "en": "to known; understand",
+        "pos": "v",
+        "lemma": "förstå"
+      },
+      "new": {
+        "en": "to known; understand",
+        "pos": "v",
+        "lemma": "förstå"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to known\" is bad form"
+    },
+    {
+      "key": "förstått",
+      "old": {
+        "en": "to known; understand",
+        "pos": "v",
+        "lemma": "förstå"
+      },
+      "new": {
+        "en": "to known; understand",
+        "pos": "v",
+        "lemma": "förstå"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to known\" is bad form"
+    },
+    {
+      "key": "försummade",
+      "old": {
+        "en": "to ?",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to ?",
+        "pos": "v"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "förutsåg",
+      "old": {
+        "en": "to predicted; anticipated",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to predicted; anticipated",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to predicted\" is bad form"
+    },
+    {
+      "key": "förvirrade",
+      "old": {
+        "en": "to confused",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to confused",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to confused\" is bad form"
+    },
+    {
+      "key": "förvirras",
+      "old": {
+        "en": "to confused",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to confused",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to confused\" is bad form"
+    },
+    {
+      "key": "förvånade",
+      "old": {
+        "en": "to surprised",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to surprised",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to surprised\" is bad form"
+    },
+    {
+      "key": "förväntat",
+      "old": {
+        "en": "to expected",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to expected",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to expected\" is bad form"
+    },
+    {
+      "key": "förändringen",
+      "old": {
+        "en": "to change",
+        "pos": "v",
+        "lemma": "förändring"
+      },
+      "new": {
+        "en": "change",
+        "pos": "n",
+        "lemma": "förändring"
+      },
+      "issue": "definite-noun-as-verb",
+      "note": "auto: definite form of a noun wrongly tagged as verb"
+    },
+    {
+      "key": "genomförd",
+      "old": {
+        "en": "to implemented; completed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to implemented; completed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to implemented\" is bad form"
+    },
+    {
+      "key": "genomförda",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "?",
+        "pos": "n"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "gifter",
+      "old": {
+        "en": "to getting; poison",
+        "pos": "v",
+        "lemma": "gift"
+      },
+      "new": {
+        "en": "to getting; poison",
+        "pos": "v",
+        "lemma": "gift"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to getting\" is bad form"
+    },
+    {
+      "key": "gjordes",
+      "old": {
+        "en": "past passive indicative of göra",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "past passive indicative of göra",
+        "pos": "v"
+      },
+      "issue": "description-not-translation",
+      "note": "auto: grammatical description instead of translation"
+    },
+    {
+      "key": "gratulerade",
+      "old": {
+        "en": "to congratulated",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to congratulated",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to congratulated\" is bad form"
+    },
+    {
+      "key": "grundade",
+      "old": {
+        "en": "to found",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to found",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to found\" is bad form"
+    },
+    {
+      "key": "grundades",
+      "old": {
+        "en": "to found",
+        "pos": "v",
+        "lemma": "grundade"
+      },
+      "new": {
+        "en": "to found",
+        "pos": "v",
+        "lemma": "grundade"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to found\" is bad form"
+    },
+    {
+      "key": "gulnade",
+      "old": {
+        "en": "to ?",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to ?",
+        "pos": "v"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "gungade",
+      "old": {
+        "en": "to rocked",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to rocked",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to rocked\" is bad form"
+    },
+    {
+      "key": "halva",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "?",
+        "pos": "n"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "hel",
+      "old": {
+        "en": "to planning; whole",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to planning; whole",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to planning\" is bad form"
+    },
+    {
+      "key": "hindrade",
+      "old": {
+        "en": "to stopped; hindered",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to stopped; hindered",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to stopped\" is bad form"
+    },
+    {
+      "key": "hissas",
+      "old": {
+        "en": "to hoisted",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to hoisted",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to hoisted\" is bad form"
+    },
+    {
+      "key": "hobby",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "?",
+        "pos": "n"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "håll",
+      "old": {
+        "en": "to left; hold",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to left; hold",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to left\" is bad form"
+    },
+    {
+      "key": "hålls",
+      "old": {
+        "en": "to left; hold",
+        "pos": "v",
+        "lemma": "håll"
+      },
+      "new": {
+        "en": "to left; hold",
+        "pos": "v",
+        "lemma": "håll"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to left\" is bad form"
+    },
+    {
+      "key": "härdar",
+      "old": {
+        "en": "to stove, heater",
+        "pos": "v",
+        "lemma": "ha"
+      },
+      "new": {
+        "en": "to harden",
+        "pos": "v"
+      },
+      "issue": "wrong-lemma+meaning",
+      "note": "not ha, not \"stove\""
+    },
+    {
+      "key": "hästar",
+      "old": {
+        "en": "coffee; have",
+        "pos": "n",
+        "lemma": "ha"
+      },
+      "new": {
+        "en": "horses",
+        "pos": "n",
+        "lemma": "häst"
+      },
+      "issue": "wrong-lemma+meaning+pos",
+      "note": "not ha, not \"coffee\""
+    },
+    {
+      "key": "höger",
+      "old": {
+        "en": "coffee; have",
+        "pos": "n",
+        "lemma": "ha"
+      },
+      "new": {
+        "en": "right (direction)",
+        "pos": "n"
+      },
+      "issue": "wrong-lemma+meaning",
+      "note": "not ha"
+    },
+    {
+      "key": "höll",
+      "old": {
+        "en": "coffee; have",
+        "pos": "n",
+        "lemma": "ha"
+      },
+      "new": {
+        "en": "held",
+        "pos": "v",
+        "lemma": "hålla"
+      },
+      "issue": "wrong-lemma+meaning+pos",
+      "note": "not ha"
+    },
+    {
+      "key": "hörbar",
+      "old": {
+        "en": "to hear",
+        "pos": "v",
+        "lemma": "höra"
+      },
+      "new": {
+        "en": "audible",
+        "pos": "adj",
+        "lemma": "höra"
+      },
+      "issue": "wrong-pos",
+      "note": "adjective not verb"
+    },
+    {
+      "key": "hörde",
+      "old": {
+        "en": "didn't; heard",
+        "pos": "n"
+      },
+      "new": {
+        "en": "heard",
+        "pos": "v",
+        "lemma": "höra"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"didn't\""
+    },
+    {
+      "key": "höst",
+      "old": {
+        "en": "to fall; autumn",
+        "pos": "v"
+      },
+      "new": {
+        "en": "autumn",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "hösten",
+      "old": {
+        "en": "to fall; autumn",
+        "pos": "v",
+        "lemma": "höst"
+      },
+      "new": {
+        "en": "the autumn",
+        "pos": "n",
+        "lemma": "höst"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "i",
+      "old": {
+        "en": "to used to signify",
+        "pos": "v"
+      },
+      "new": {
+        "en": "in",
+        "pos": "prep"
+      },
+      "issue": "wrong-pos+to",
+      "note": "preposition not verb"
+    },
+    {
+      "key": "ibland",
+      "old": {
+        "en": "sometime",
+        "pos": "n"
+      },
+      "new": {
+        "en": "sometimes",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos",
+      "note": "adverb"
+    },
+    {
+      "key": "idé",
+      "old": {
+        "en": "to point; idea",
+        "pos": "v"
+      },
+      "new": {
+        "en": "idea",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "ideal",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "ideal",
+        "pos": "n"
+      },
+      "issue": "garbled",
+      "note": "was \"?\""
+    },
+    {
+      "key": "idén",
+      "old": {
+        "en": "to point; idea",
+        "pos": "v",
+        "lemma": "idé"
+      },
+      "new": {
+        "en": "the idea",
+        "pos": "n",
+        "lemma": "idé"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "ifred",
+      "old": {
+        "en": "to left; in peace",
+        "pos": "v"
+      },
+      "new": {
+        "en": "in peace",
+        "pos": "adv"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"left\""
+    },
+    {
+      "key": "igenom",
+      "old": {
+        "en": "to lecture; through",
+        "pos": "v"
+      },
+      "new": {
+        "en": "through",
+        "pos": "prep"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"lecture\""
+    },
+    {
+      "key": "igång",
+      "old": {
+        "en": "to start; running",
+        "pos": "v"
+      },
+      "new": {
+        "en": "going; started",
+        "pos": "adv"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"to start\""
+    },
+    {
+      "key": "ihop",
+      "old": {
+        "en": "money; together",
+        "pos": "n"
+      },
+      "new": {
+        "en": "together",
+        "pos": "adv"
+      },
+      "issue": "garbage-semi+pos",
+      "note": "not \"money\""
+    },
+    {
+      "key": "implikationer",
+      "old": {
+        "en": "to implication",
+        "pos": "v"
+      },
+      "new": {
+        "en": "implications",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "in",
+      "old": {
+        "en": "to moved; in",
+        "pos": "v"
+      },
+      "new": {
+        "en": "in",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos+to",
+      "note": "adverb not verb"
+    },
+    {
+      "key": "inbjuden",
+      "old": {
+        "en": "to invited",
+        "pos": "v"
+      },
+      "new": {
+        "en": "invited",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to invited\""
+    },
+    {
+      "key": "inflytande",
+      "old": {
+        "en": "to influence",
+        "pos": "v"
+      },
+      "new": {
+        "en": "influence",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "information",
+      "old": {
+        "en": "information",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "information",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "informationen",
+      "old": {
+        "en": "information",
+        "pos": "adj",
+        "lemma": "information"
+      },
+      "new": {
+        "en": "the information",
+        "pos": "n",
+        "lemma": "information"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "inför",
+      "old": {
+        "en": "to prepared; before",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to prepared; before",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to prepared\" is bad form"
+    },
+    {
+      "key": "inspirerade",
+      "old": {
+        "en": "to inspired",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to inspired",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to inspired\" is bad form"
+    },
+    {
+      "key": "installerade",
+      "old": {
+        "en": "to installed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to installed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to installed\" is bad form"
+    },
+    {
+      "key": "inställt",
+      "old": {
+        "en": "to canceled",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to canceled",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to canceled\" is bad form"
+    },
+    {
+      "key": "intresserad",
+      "old": {
+        "en": "to interested",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to interested",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to interested\" is bad form"
+    },
+    {
+      "key": "intresseras",
+      "old": {
+        "en": "to interested",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to interested",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to interested\" is bad form"
+    },
+    {
+      "key": "ivriga",
+      "old": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "jublade",
+      "old": {
+        "en": "to cheered",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to cheered",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to cheered\" is bad form"
+    },
+    {
+      "key": "jämförelse",
+      "old": {
+        "en": "to compared; comparison",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to compared; comparison",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to compared\" is bad form"
+    },
+    {
+      "key": "jämställda",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "?",
+        "pos": "n"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "jättebra",
+      "old": {
+        "en": "to lived; great",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to lived; great",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to lived\" is bad form"
+    },
+    {
+      "key": "jätteglada",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "?",
+        "pos": "n"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "kantad",
+      "old": {
+        "en": "to walked; bordered",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to walked; bordered",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to walked\" is bad form"
+    },
+    {
+      "key": "karolinska",
+      "old": {
+        "en": "to studied; carolinian",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to studied; carolinian",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to studied\" is bad form"
+    },
+    {
+      "key": "kassan",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "?",
+        "pos": "n"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "katalogiserade",
+      "old": {
+        "en": "to catalogued",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to catalogued",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to catalogued\" is bad form"
+    },
+    {
+      "key": "klart",
+      "old": {
+        "en": "to finished; clear",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to finished; clear",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to finished\" is bad form"
+    },
+    {
+      "key": "knarrade",
+      "old": {
+        "en": "to creaked",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to creaked",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to creaked\" is bad form"
+    },
+    {
+      "key": "komplicerat",
+      "old": {
+        "en": "to complicated",
+        "pos": "v",
+        "lemma": "komplicerad"
+      },
+      "new": {
+        "en": "to complicated",
+        "pos": "v",
+        "lemma": "komplicerad"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to complicated\" is bad form"
+    },
+    {
+      "key": "korsade",
+      "old": {
+        "en": "to crossed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to crossed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to crossed\" is bad form"
+    },
+    {
+      "key": "kryddade",
+      "old": {
+        "en": "to seasoned",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to seasoned",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to seasoned\" is bad form"
+    },
+    {
+      "key": "kutade",
+      "old": {
+        "en": "to passing; cut",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to passing; cut",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to passing\" is bad form"
+    },
+    {
+      "key": "kände",
+      "old": {
+        "en": "to smelled; felt",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to smelled; felt",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to smelled\" is bad form"
+    },
+    {
+      "key": "kärleksfullt",
+      "old": {
+        "en": "to loving, affectionate",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to loving, affectionate",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to loving\" is bad form"
+    },
+    {
+      "key": "kö",
+      "old": {
+        "en": "to standing; queue",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to standing; queue",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to standing\" is bad form"
+    },
+    {
+      "key": "kön",
+      "old": {
+        "en": "to stood; sex",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to stood; sex",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to stood\" is bad form"
+    },
+    {
+      "key": "london",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "?",
+        "pos": "n"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "lotto",
+      "old": {
+        "en": "to won; lotto",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to won; lotto",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to won\" is bad form"
+    },
+    {
+      "key": "lutade",
+      "old": {
+        "en": "to leaned; tilted",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to leaned; tilted",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to leaned\" is bad form"
+    },
+    {
+      "key": "lärde",
+      "old": {
+        "en": "to taught; learned",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to taught; learned",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to taught\" is bad form"
+    },
+    {
+      "key": "lärdom",
+      "old": {
+        "en": "to learning, lesson",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to learning, lesson",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to learning\" is bad form"
+    },
+    {
+      "key": "lästes",
+      "old": {
+        "en": "past passive indicative of läsa",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "past passive indicative of läsa",
+        "pos": "v"
+      },
+      "issue": "description-not-translation",
+      "note": "auto: grammatical description instead of translation"
+    },
+    {
+      "key": "lät",
+      "old": {
+        "en": "to known; sounded",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to known; sounded",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to known\" is bad form"
+    },
+    {
+      "key": "markerat",
+      "old": {
+        "en": "to marked",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to marked",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to marked\" is bad form"
+    },
+    {
+      "key": "meddelade",
+      "old": {
+        "en": "to announced",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to announced",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to announced\" is bad form"
+    },
+    {
+      "key": "meddelande",
+      "old": {
+        "en": "to written; message",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to written; message",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to written\" is bad form"
+    },
+    {
+      "key": "meddelanden",
+      "old": {
+        "en": "to written; message",
+        "pos": "v",
+        "lemma": "meddelande"
+      },
+      "new": {
+        "en": "to written; message",
+        "pos": "v",
+        "lemma": "meddelande"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to written\" is bad form"
+    },
+    {
+      "key": "meddelat",
+      "old": {
+        "en": "to announced",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to announced",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to announced\" is bad form"
+    },
+    {
+      "key": "mejslade",
+      "old": {
+        "en": "to chiseled",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to chiseled",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to chiseled\" is bad form"
+    },
+    {
+      "key": "mening",
+      "old": {
+        "en": "to meaning; sense",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to meaning; sense",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to meaning\" is bad form"
+    },
+    {
+      "key": "meningen",
+      "old": {
+        "en": "to meaning; sense",
+        "pos": "v",
+        "lemma": "mening"
+      },
+      "new": {
+        "en": "to meaning; sense",
+        "pos": "v",
+        "lemma": "mening"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to meaning\" is bad form"
+    },
+    {
+      "key": "motiveras",
+      "old": {
+        "en": "to motivated",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to motivated",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to motivated\" is bad form"
+    },
+    {
+      "key": "motstridiga",
+      "old": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "mottogs",
+      "old": {
+        "en": "to received",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to received",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to received\" is bad form"
+    },
+    {
+      "key": "mumlade",
+      "old": {
+        "en": "to mumbled",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to mumbled",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to mumbled\" is bad form"
+    },
+    {
+      "key": "märke",
+      "old": {
+        "en": "to noticed; make",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to noticed; make",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to noticed\" is bad form"
+    },
+    {
+      "key": "mättes",
+      "old": {
+        "en": "past passive indicative of mäta",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "past passive indicative of mäta",
+        "pos": "v"
+      },
+      "issue": "description-not-translation",
+      "note": "auto: grammatical description instead of translation"
+    },
+    {
+      "key": "ner",
+      "old": {
+        "en": "to puts; down",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to puts; down",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to puts\" is bad form"
+    },
+    {
+      "key": "nit",
+      "old": {
+        "en": "to invested; rivet",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to invested; rivet",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to invested\" is bad form"
+    },
+    {
+      "key": "november",
+      "old": {
+        "en": "to ?",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to ?",
+        "pos": "v"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "nyhet",
+      "old": {
+        "en": "to surprising; novelty",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to surprising; novelty",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to surprising\" is bad form"
+    },
+    {
+      "key": "nyheten",
+      "old": {
+        "en": "to surprising; novelty",
+        "pos": "v",
+        "lemma": "nyhet"
+      },
+      "new": {
+        "en": "to surprising; novelty",
+        "pos": "v",
+        "lemma": "nyhet"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to surprising\" is bad form"
+    },
+    {
+      "key": "nyheterna",
+      "old": {
+        "en": "to surprising; novelty",
+        "pos": "v",
+        "lemma": "nyhet"
+      },
+      "new": {
+        "en": "to surprising; novelty",
+        "pos": "v",
+        "lemma": "nyhet"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to surprising\" is bad form"
+    },
+    {
+      "key": "oförändrade",
+      "old": {
+        "en": "to unchanged",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to unchanged",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to unchanged\" is bad form"
+    },
+    {
+      "key": "omfattade",
+      "old": {
+        "en": "to ?",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to ?",
+        "pos": "v"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "omprövas",
+      "old": {
+        "en": "to reconsidered",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to reconsidered",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to reconsidered\" is bad form"
+    },
+    {
+      "key": "organiserad",
+      "old": {
+        "en": "to organized",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to organized",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to organized\" is bad form"
+    },
+    {
+      "key": "orsakat",
+      "old": {
+        "en": "to caused",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to caused",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to caused\" is bad form"
+    },
+    {
+      "key": "oslo",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "?",
+        "pos": "n"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "oväntade",
+      "old": {
+        "en": "to ?",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to ?",
+        "pos": "v"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "parerade",
+      "old": {
+        "en": "to parried",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to parried",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to parried\" is bad form"
+    },
+    {
+      "key": "parkeringsplats",
+      "old": {
+        "en": "to parking lot",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to parking lot",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to parking\" is bad form"
+    },
+    {
+      "key": "pausa",
+      "old": {
+        "en": "to watched; pause",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to watched; pause",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to watched\" is bad form"
+    },
+    {
+      "key": "pensionerad",
+      "old": {
+        "en": "to retired",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to retired",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to retired\" is bad form"
+    },
+    {
+      "key": "poäng",
+      "old": {
+        "en": "to point",
+        "pos": "v"
+      },
+      "new": {
+        "en": "point; score",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "praktik",
+      "old": {
+        "en": "to practice, actual operation",
+        "pos": "v"
+      },
+      "new": {
+        "en": "practice",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "praktiken",
+      "old": {
+        "en": "to practice",
+        "pos": "v",
+        "lemma": "praktik"
+      },
+      "new": {
+        "en": "the practice",
+        "pos": "n",
+        "lemma": "praktik"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "praktiska",
+      "old": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "practical",
+        "pos": "adj"
+      },
+      "issue": "garbled",
+      "note": "was \"?\""
+    },
+    {
+      "key": "press",
+      "old": {
+        "en": "pres",
+        "pos": "n"
+      },
+      "new": {
+        "en": "press",
+        "pos": "n"
+      },
+      "issue": "truncated",
+      "note": "\"pres\" truncated"
+    },
+    {
+      "key": "pressblad",
+      "old": {
+        "en": "to press release",
+        "pos": "v"
+      },
+      "new": {
+        "en": "press release",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "principer",
+      "old": {
+        "en": "to principle",
+        "pos": "v",
+        "lemma": "princip"
+      },
+      "new": {
+        "en": "principles",
+        "pos": "n",
+        "lemma": "princip"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "process",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "process",
+        "pos": "n"
+      },
+      "issue": "garbled",
+      "note": "was \"?\""
+    },
+    {
+      "key": "prognosen",
+      "old": {
+        "en": "to forecast",
+        "pos": "v"
+      },
+      "new": {
+        "en": "the forecast",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "prognoserna",
+      "old": {
+        "en": "to forecast",
+        "pos": "v"
+      },
+      "new": {
+        "en": "the forecasts",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "projekt",
+      "old": {
+        "en": "to project",
+        "pos": "v"
+      },
+      "new": {
+        "en": "project",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "projektet",
+      "old": {
+        "en": "to project",
+        "pos": "v",
+        "lemma": "projekt"
+      },
+      "new": {
+        "en": "the project",
+        "pos": "n",
+        "lemma": "projekt"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "promenad",
+      "old": {
+        "en": "to walk",
+        "pos": "v"
+      },
+      "new": {
+        "en": "walk; stroll",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "promenaden",
+      "old": {
+        "en": "to walk",
+        "pos": "v",
+        "lemma": "promenad"
+      },
+      "new": {
+        "en": "the walk",
+        "pos": "n",
+        "lemma": "promenad"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "prov",
+      "old": {
+        "en": "sample",
+        "pos": "v"
+      },
+      "new": {
+        "en": "test; sample",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "provet",
+      "old": {
+        "en": "sample",
+        "pos": "v",
+        "lemma": "prov"
+      },
+      "new": {
+        "en": "the test",
+        "pos": "n",
+        "lemma": "prov"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "publiken",
+      "old": {
+        "en": "audience",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "the audience",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "påskkärringar",
+      "old": {
+        "en": "to easter egg",
+        "pos": "v"
+      },
+      "new": {
+        "en": "Easter witches",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "påskris",
+      "old": {
+        "en": "bundled twigs ris),",
+        "pos": "n"
+      },
+      "new": {
+        "en": "Easter twigs",
+        "pos": "n"
+      },
+      "issue": "truncated",
+      "note": "garbled translation"
+    },
+    {
+      "key": "påstod",
+      "old": {
+        "en": "to claimed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "claimed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to claimed\""
+    },
+    {
+      "key": "påverkades",
+      "old": {
+        "en": "past passive indicative of påverka",
+        "pos": "adj",
+        "lemma": "påverka"
+      },
+      "new": {
+        "en": "was affected",
+        "pos": "v",
+        "lemma": "påverka"
+      },
+      "issue": "wrong-pos",
+      "note": "description not translation"
+    },
+    {
+      "key": "radio",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "radio",
+        "pos": "n"
+      },
+      "issue": "garbled",
+      "note": "was \"?\""
+    },
+    {
+      "key": "rakar",
+      "old": {
+        "en": "to shaf",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to shave",
+        "pos": "v"
+      },
+      "issue": "truncated",
+      "note": "\"shaf\" truncated"
+    },
+    {
+      "key": "rastplats",
+      "old": {
+        "en": "to rest area",
+        "pos": "v"
+      },
+      "new": {
+        "en": "rest area",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "receptionist",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "receptionist",
+        "pos": "n"
+      },
+      "issue": "garbled",
+      "note": "was \"?\""
+    },
+    {
+      "key": "reform",
+      "old": {
+        "en": "to reform",
+        "pos": "v"
+      },
+      "new": {
+        "en": "reform",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "reformerna",
+      "old": {
+        "en": "to reform",
+        "pos": "v",
+        "lemma": "reform"
+      },
+      "new": {
+        "en": "the reforms",
+        "pos": "n",
+        "lemma": "reform"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "regler",
+      "old": {
+        "en": "to rule",
+        "pos": "v"
+      },
+      "new": {
+        "en": "rules",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "reglerna",
+      "old": {
+        "en": "to rule",
+        "pos": "v"
+      },
+      "new": {
+        "en": "the rules",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "rektorn",
+      "old": {
+        "en": "principal",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "the principal",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "ren",
+      "old": {
+        "en": "to clean",
+        "pos": "v"
+      },
+      "new": {
+        "en": "clean; reindeer",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos+to",
+      "note": "adjective not verb"
+    },
+    {
+      "key": "rena",
+      "old": {
+        "en": "to clean",
+        "pos": "v"
+      },
+      "new": {
+        "en": "clean; pure",
+        "pos": "adj"
+      },
+      "issue": "wrong-pos+to",
+      "note": "adjective not verb"
+    },
+    {
+      "key": "renovera",
+      "old": {
+        "en": "to finished; renovate",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to finished; renovate",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to finished\" is bad form"
+    },
+    {
+      "key": "renoverade",
+      "old": {
+        "en": "to finished; renovate",
+        "pos": "v",
+        "lemma": "renovera"
+      },
+      "new": {
+        "en": "to finished; renovate",
+        "pos": "v",
+        "lemma": "renovera"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to finished\" is bad form"
+    },
+    {
+      "key": "renoverar",
+      "old": {
+        "en": "to finished; renovate",
+        "pos": "v",
+        "lemma": "renovera"
+      },
+      "new": {
+        "en": "to finished; renovate",
+        "pos": "v",
+        "lemma": "renovera"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to finished\" is bad form"
+    },
+    {
+      "key": "renoverat",
+      "old": {
+        "en": "to finished; renovate",
+        "pos": "v",
+        "lemma": "renovera"
+      },
+      "new": {
+        "en": "to finished; renovate",
+        "pos": "v",
+        "lemma": "renovera"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to finished\" is bad form"
+    },
+    {
+      "key": "rensat",
+      "old": {
+        "en": "to cleared",
+        "pos": "v"
+      },
+      "new": {
+        "en": "cleared",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to cleared\""
+    },
+    {
+      "key": "rent",
+      "old": {
+        "en": "to clean; purely",
+        "pos": "v"
+      },
+      "new": {
+        "en": "clean; purely",
+        "pos": "adv"
+      },
+      "issue": "wrong-pos+to",
+      "note": "adverb not verb"
+    },
+    {
+      "key": "reparerade",
+      "old": {
+        "en": "to repaired",
+        "pos": "v"
+      },
+      "new": {
+        "en": "repaired",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to repaired\""
+    },
+    {
+      "key": "reparerades",
+      "old": {
+        "en": "to repaired",
+        "pos": "v",
+        "lemma": "reparerade"
+      },
+      "new": {
+        "en": "was repaired",
+        "pos": "v",
+        "lemma": "reparera"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to repaired\""
+    },
+    {
+      "key": "repareras",
+      "old": {
+        "en": "to repaired",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to be repaired",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form",
+      "note": "\"to repaired\""
+    },
+    {
+      "key": "resa",
+      "old": {
+        "en": "to travel; trip",
+        "pos": "v"
+      },
+      "new": {
+        "en": "trip; journey",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun: trip/journey"
+    },
+    {
+      "key": "resan",
+      "old": {
+        "en": "to travel; trip",
+        "pos": "v",
+        "lemma": "resa"
+      },
+      "new": {
+        "en": "the trip",
+        "pos": "n",
+        "lemma": "resa"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "resekostnader",
+      "old": {
+        "en": "to travel expenses",
+        "pos": "v"
+      },
+      "new": {
+        "en": "travel expenses",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "resor",
+      "old": {
+        "en": "to travel; trip",
+        "pos": "v",
+        "lemma": "resa"
+      },
+      "new": {
+        "en": "trips",
+        "pos": "n",
+        "lemma": "resa"
+      },
+      "issue": "wrong-pos",
+      "note": "noun plural"
+    },
+    {
+      "key": "respekt",
+      "old": {
+        "en": "to respect",
+        "pos": "v"
+      },
+      "new": {
+        "en": "respect",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "rest",
+      "old": {
+        "en": "to traveled; residual",
+        "pos": "v"
+      },
+      "new": {
+        "en": "remainder; residue",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "resten",
+      "old": {
+        "en": "to traveled; residual",
+        "pos": "v",
+        "lemma": "rest"
+      },
+      "new": {
+        "en": "the rest; remainder",
+        "pos": "n",
+        "lemma": "rest"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "resterna",
+      "old": {
+        "en": "to traveled; residual",
+        "pos": "v",
+        "lemma": "rest"
+      },
+      "new": {
+        "en": "the remains",
+        "pos": "n",
+        "lemma": "rest"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "resultat",
+      "old": {
+        "en": "to result",
+        "pos": "v"
+      },
+      "new": {
+        "en": "result",
+        "pos": "n"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "resultaten",
+      "old": {
+        "en": "to result",
+        "pos": "v",
+        "lemma": "resultat"
+      },
+      "new": {
+        "en": "the results",
+        "pos": "n",
+        "lemma": "resultat"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "resultatet",
+      "old": {
+        "en": "to result",
+        "pos": "v",
+        "lemma": "resultat"
+      },
+      "new": {
+        "en": "the result",
+        "pos": "n",
+        "lemma": "resultat"
+      },
+      "issue": "wrong-pos+to",
+      "note": "noun not verb"
+    },
+    {
+      "key": "resurser",
+      "old": {
+        "en": "resource",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "resources",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not adj"
+    },
+    {
+      "key": "rivas",
+      "old": {
+        "en": "to demolished",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to demolished",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to demolished\" is bad form"
+    },
+    {
+      "key": "roas",
+      "old": {
+        "en": "to amused",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to amused",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to amused\" is bad form"
+    },
+    {
+      "key": "rosenknoppade",
+      "old": {
+        "en": "to rose-budded",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to rose-budded",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to rose-budded\" is bad form"
+    },
+    {
+      "key": "ryktas",
+      "old": {
+        "en": "to rumored",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to rumored",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to rumored\" is bad form"
+    },
+    {
+      "key": "rådde",
+      "old": {
+        "en": "to advised; prevailed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to advised; prevailed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to advised\" is bad form"
+    },
+    {
+      "key": "rätt",
+      "old": {
+        "en": "to met; right",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to met; right",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to met\" is bad form"
+    },
+    {
+      "key": "rätten",
+      "old": {
+        "en": "to met; right",
+        "pos": "v",
+        "lemma": "rätt"
+      },
+      "new": {
+        "en": "to met; right",
+        "pos": "v",
+        "lemma": "rätt"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to met\" is bad form"
+    },
+    {
+      "key": "rätter",
+      "old": {
+        "en": "to cooked; dish",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to cooked; dish",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to cooked\" is bad form"
+    },
+    {
+      "key": "sades",
+      "old": {
+        "en": "past passive indicative of säga",
+        "pos": "adj",
+        "lemma": "sa"
+      },
+      "new": {
+        "en": "past passive indicative of säga",
+        "pos": "v",
+        "lemma": "sa"
+      },
+      "issue": "description-not-translation",
+      "note": "auto: grammatical description instead of translation"
+    },
+    {
+      "key": "samlat",
+      "old": {
+        "en": "to collected",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to collected",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to collected\" is bad form"
+    },
+    {
+      "key": "sattes",
+      "old": {
+        "en": "past passive indicative of sätta",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "past passive indicative of sätta",
+        "pos": "v"
+      },
+      "issue": "description-not-translation",
+      "note": "auto: grammatical description instead of translation"
+    },
+    {
+      "key": "setet",
+      "old": {
+        "en": "to set",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to set",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to set\" is bad form"
+    },
+    {
+      "key": "skiljdes",
+      "old": {
+        "en": "to parted; divorced",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to parted; divorced",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to parted\" is bad form"
+    },
+    {
+      "key": "skjuta",
+      "old": {
+        "en": "to decided; shoot",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to decided; shoot",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to decided\" is bad form"
+    },
+    {
+      "key": "skjuter",
+      "old": {
+        "en": "to decided; shoot",
+        "pos": "v",
+        "lemma": "skjuta"
+      },
+      "new": {
+        "en": "to decided; shoot",
+        "pos": "v",
+        "lemma": "skjuta"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to decided\" is bad form"
+    },
+    {
+      "key": "skrapade",
+      "old": {
+        "en": "to scraped",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to scraped",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to scraped\" is bad form"
+    },
+    {
+      "key": "skrek",
+      "old": {
+        "en": "to screamed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to screamed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to screamed\" is bad form"
+    },
+    {
+      "key": "skriftligt",
+      "old": {
+        "en": "to written; in writing",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to written; in writing",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to written\" is bad form"
+    },
+    {
+      "key": "skriven",
+      "old": {
+        "en": "to written, signed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to written, signed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to written\" is bad form"
+    },
+    {
+      "key": "skämdes",
+      "old": {
+        "en": "past passive indicative of skämma",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "past passive indicative of skämma",
+        "pos": "v"
+      },
+      "issue": "description-not-translation",
+      "note": "auto: grammatical description instead of translation"
+    },
+    {
+      "key": "sköt",
+      "old": {
+        "en": "to postponed; shot",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to postponed; shot",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to postponed\" is bad form"
+    },
+    {
+      "key": "smakade",
+      "old": {
+        "en": "to tasted",
+        "pos": "v",
+        "lemma": "smaka"
+      },
+      "new": {
+        "en": "to tasted",
+        "pos": "v",
+        "lemma": "smaka"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to tasted\" is bad form"
+    },
+    {
+      "key": "smakat",
+      "old": {
+        "en": "to tasted",
+        "pos": "v",
+        "lemma": "smaka"
+      },
+      "new": {
+        "en": "to tasted",
+        "pos": "v",
+        "lemma": "smaka"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to tasted\" is bad form"
+    },
+    {
+      "key": "sol",
+      "old": {
+        "en": "to hoped; solar",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to hoped; solar",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to hoped\" is bad form"
+    },
+    {
+      "key": "solen",
+      "old": {
+        "en": "to hoped; solar",
+        "pos": "v",
+        "lemma": "sol"
+      },
+      "new": {
+        "en": "to hoped; solar",
+        "pos": "v",
+        "lemma": "sol"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to hoped\" is bad form"
+    },
+    {
+      "key": "speglade",
+      "old": {
+        "en": "to mirrored",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to mirrored",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to mirrored\" is bad form"
+    },
+    {
+      "key": "spss",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "?",
+        "pos": "n"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "stammen",
+      "old": {
+        "en": "to leaned; tribe",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to leaned; tribe",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to leaned\" is bad form"
+    },
+    {
+      "key": "stanna",
+      "old": {
+        "en": "to stopping; stay",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to stopping; stay",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to stopping\" is bad form"
+    },
+    {
+      "key": "stannade",
+      "old": {
+        "en": "to stopping; stay",
+        "pos": "v",
+        "lemma": "stanna"
+      },
+      "new": {
+        "en": "to stopping; stay",
+        "pos": "v",
+        "lemma": "stanna"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to stopping\" is bad form"
+    },
+    {
+      "key": "stannar",
+      "old": {
+        "en": "to stopping; stay",
+        "pos": "v",
+        "lemma": "stanna"
+      },
+      "new": {
+        "en": "to stopping; stay",
+        "pos": "v",
+        "lemma": "stanna"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to stopping\" is bad form"
+    },
+    {
+      "key": "stannat",
+      "old": {
+        "en": "to stopping; stay",
+        "pos": "v",
+        "lemma": "stanna"
+      },
+      "new": {
+        "en": "to stopping; stay",
+        "pos": "v",
+        "lemma": "stanna"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to stopping\" is bad form"
+    },
+    {
+      "key": "statistiska",
+      "old": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "statligt",
+      "old": {
+        "en": "to owned by or",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to owned by or",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to owned\" is bad form"
+    },
+    {
+      "key": "stiftades",
+      "old": {
+        "en": "past passive indicative of stifta",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "past passive indicative of stifta",
+        "pos": "v"
+      },
+      "issue": "description-not-translation",
+      "note": "auto: grammatical description instead of translation"
+    },
+    {
+      "key": "strukit",
+      "old": {
+        "en": "to washed; deleted",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to washed; deleted",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to washed\" is bad form"
+    },
+    {
+      "key": "strömmar",
+      "old": {
+        "en": "to having strong currents , \"currenty\"",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to having strong currents , \"currenty\"",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to having\" is bad form"
+    },
+    {
+      "key": "stuga",
+      "old": {
+        "en": "cabin; cottage",
+        "pos": "n"
+      },
+      "new": {
+        "en": "cottage; cabin",
+        "pos": "n"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "stugan",
+      "old": {
+        "en": "cabin; cottage",
+        "pos": "n",
+        "lemma": "stuga"
+      },
+      "new": {
+        "en": "the cottage",
+        "pos": "n",
+        "lemma": "stuga"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "stugorna",
+      "old": {
+        "en": "a cottage, a cabin house",
+        "pos": "n",
+        "lemma": "stuga"
+      },
+      "new": {
+        "en": "the cottages",
+        "pos": "n",
+        "lemma": "stuga"
+      },
+      "issue": "wrong-pos",
+      "note": "noun not verb"
+    },
+    {
+      "key": "stund",
+      "old": {
+        "en": "to enjoyed; while",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to enjoyed; while",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to enjoyed\" is bad form"
+    },
+    {
+      "key": "stunden",
+      "old": {
+        "en": "to enjoyed; while",
+        "pos": "v",
+        "lemma": "stund"
+      },
+      "new": {
+        "en": "to enjoyed; while",
+        "pos": "v",
+        "lemma": "stund"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to enjoyed\" is bad form"
+    },
+    {
+      "key": "svala",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "?",
+        "pos": "n"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "svalde",
+      "old": {
+        "en": "to swallowed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to swallowed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to swallowed\" is bad form"
+    },
+    {
+      "key": "sysslar",
+      "old": {
+        "en": "to something one does",
+        "pos": "v",
+        "lemma": "sa"
+      },
+      "new": {
+        "en": "to something one does",
+        "pos": "v",
+        "lemma": "sa"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to something\" is bad form"
+    },
+    {
+      "key": "systematiska",
+      "old": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "sänktes",
+      "old": {
+        "en": "past passive indicative of sänka",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "past passive indicative of sänka",
+        "pos": "v"
+      },
+      "issue": "description-not-translation",
+      "note": "auto: grammatical description instead of translation"
+    },
+    {
+      "key": "tacksamma",
+      "old": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "tappat",
+      "old": {
+        "en": "to lost",
+        "pos": "v",
+        "lemma": "tappa"
+      },
+      "new": {
+        "en": "to lost",
+        "pos": "v",
+        "lemma": "tappa"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to lost\" is bad form"
+    },
+    {
+      "key": "text",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "?",
+        "pos": "n"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "tillagas",
+      "old": {
+        "en": "to prepared; cooked",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to prepared; cooked",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to prepared\" is bad form"
+    },
+    {
+      "key": "tillkommer",
+      "old": {
+        "en": "to added",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to added",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to added\" is bad form"
+    },
+    {
+      "key": "tillämpades",
+      "old": {
+        "en": "past passive indicative of tillämpa",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "past passive indicative of tillämpa",
+        "pos": "v"
+      },
+      "issue": "description-not-translation",
+      "note": "auto: grammatical description instead of translation"
+    },
+    {
+      "key": "tillät",
+      "old": {
+        "en": "to allowed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to allowed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to allowed\" is bad form"
+    },
+    {
+      "key": "tork",
+      "old": {
+        "en": "to washed; dryer",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to washed; dryer",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to washed\" is bad form"
+    },
+    {
+      "key": "träna",
+      "old": {
+        "en": "to exercising; train",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to exercising; train",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to exercising\" is bad form"
+    },
+    {
+      "key": "tränar",
+      "old": {
+        "en": "to exercising; train",
+        "pos": "v",
+        "lemma": "träna"
+      },
+      "new": {
+        "en": "to exercising; train",
+        "pos": "v",
+        "lemma": "träna"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to exercising\" is bad form"
+    },
+    {
+      "key": "tränat",
+      "old": {
+        "en": "to exercising; train",
+        "pos": "v",
+        "lemma": "träna"
+      },
+      "new": {
+        "en": "to exercising; train",
+        "pos": "v",
+        "lemma": "träna"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to exercising\" is bad form"
+    },
+    {
+      "key": "tyngde",
+      "old": {
+        "en": "to weighed; weight",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to weighed; weight",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to weighed\" is bad form"
+    },
+    {
+      "key": "underhöll",
+      "old": {
+        "en": "to entertained",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to entertained",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to entertained\" is bad form"
+    },
+    {
+      "key": "understrykas",
+      "old": {
+        "en": "to emphasized; underlined",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to emphasized; underlined",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to emphasized\" is bad form"
+    },
+    {
+      "key": "undersökta",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "?",
+        "pos": "n"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "ungefär",
+      "old": {
+        "en": "to moved; approximately",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to moved; approximately",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to moved\" is bad form"
+    },
+    {
+      "key": "unikt",
+      "old": {
+        "en": "to makes; uniquely",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to makes; uniquely",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to makes\" is bad form"
+    },
+    {
+      "key": "uppenbara",
+      "old": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "uppför",
+      "old": {
+        "en": "to climbed; up",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to climbed; up",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to climbed\" is bad form"
+    },
+    {
+      "key": "uppmanade",
+      "old": {
+        "en": "to urged",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to urged",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to urged\" is bad form"
+    },
+    {
+      "key": "uppmuntrade",
+      "old": {
+        "en": "to ?",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to ?",
+        "pos": "v"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "uppvisade",
+      "old": {
+        "en": "to ?",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to ?",
+        "pos": "v"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "ur",
+      "old": {
+        "en": "to ran; from",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to ran; from",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to ran\" is bad form"
+    },
+    {
+      "key": "utförd",
+      "old": {
+        "en": "to performed, executed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to performed, executed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to performed\" is bad form"
+    },
+    {
+      "key": "utgångspunkt",
+      "old": {
+        "en": "to based; starting point",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to based; starting point",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to based\" is bad form"
+    },
+    {
+      "key": "utifrån",
+      "old": {
+        "en": "to based; from outside",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to based; from outside",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to based\" is bad form"
+    },
+    {
+      "key": "utlovade",
+      "old": {
+        "en": "to promised",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to promised",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to promised\" is bad form"
+    },
+    {
+      "key": "utvalda",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "?",
+        "pos": "n"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "utvecklade",
+      "old": {
+        "en": "to developed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to developed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to developed\" is bad form"
+    },
+    {
+      "key": "utvecklades",
+      "old": {
+        "en": "past passive indicative of utveckla",
+        "pos": "adj",
+        "lemma": "utvecklade"
+      },
+      "new": {
+        "en": "past passive indicative of utveckla",
+        "pos": "v",
+        "lemma": "utvecklade"
+      },
+      "issue": "description-not-translation",
+      "note": "auto: grammatical description instead of translation"
+    },
+    {
+      "key": "utvecklats",
+      "old": {
+        "en": "to developed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to developed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to developed\" is bad form"
+    },
+    {
+      "key": "utvärderades",
+      "old": {
+        "en": "past passive indicative of utvärdera",
+        "pos": "adj",
+        "lemma": "utvärdera"
+      },
+      "new": {
+        "en": "past passive indicative of utvärdera",
+        "pos": "v",
+        "lemma": "utvärdera"
+      },
+      "issue": "description-not-translation",
+      "note": "auto: grammatical description instead of translation"
+    },
+    {
+      "key": "vaccinerade",
+      "old": {
+        "en": "to vaccinated",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to vaccinated",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to vaccinated\" is bad form"
+    },
+    {
+      "key": "var",
+      "old": {
+        "en": "to was, were",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to was, were",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to was\" is bad form"
+    },
+    {
+      "key": "vattnade",
+      "old": {
+        "en": "to watered",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to watered",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to watered\" is bad form"
+    },
+    {
+      "key": "velat",
+      "old": {
+        "en": "to wanted",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to wanted",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to wanted\" is bad form"
+    },
+    {
+      "key": "vetenskapliga",
+      "old": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "new": {
+        "en": "?",
+        "pos": "adj"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "virvlade",
+      "old": {
+        "en": "to swirled",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to swirled",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to swirled\" is bad form"
+    },
+    {
+      "key": "åstadkommit",
+      "old": {
+        "en": "to accomplished",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to accomplished",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to accomplished\" is bad form"
+    },
+    {
+      "key": "ägda",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "?",
+        "pos": "n"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "ärvdes",
+      "old": {
+        "en": "to inherited",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to inherited",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to inherited\" is bad form"
+    },
+    {
+      "key": "ödmjuka",
+      "old": {
+        "en": "?",
+        "pos": "n"
+      },
+      "new": {
+        "en": "?",
+        "pos": "n"
+      },
+      "issue": "question-mark",
+      "note": "auto: missing translation"
+    },
+    {
+      "key": "överenskoms",
+      "old": {
+        "en": "to agreed",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to agreed",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to agreed\" is bad form"
+    },
+    {
+      "key": "överraskade",
+      "old": {
+        "en": "to surprised",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to surprised",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to surprised\" is bad form"
+    },
+    {
+      "key": "överraskande",
+      "old": {
+        "en": "to surprising; surprisingly",
+        "pos": "v"
+      },
+      "new": {
+        "en": "to surprising; surprisingly",
+        "pos": "v"
+      },
+      "issue": "bad-verb-form-auto",
+      "note": "auto: \"to surprising\" is bad form"
+    }
+  ]
+}

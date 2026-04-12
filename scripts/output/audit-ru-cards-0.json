@@ -1,0 +1,190 @@
+{
+  "summary": {
+    "totalCards": 3360,
+    "batches": 7,
+    "batchSizes": [
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      360
+    ],
+    "cardsWithIssues": 7,
+    "cleanCards": 3353,
+    "dictionaryCoverage": {
+      "totalEntries": 5339,
+      "coverage": "100% (all non-stop Cyrillic tokens found in dictionary)"
+    },
+    "audioCoverage": {
+      "totalAudioFiles": 3933,
+      "missingAudio": 0,
+      "coverage": "100%"
+    },
+    "grammarTips": {
+      "cardsWithTips": 1200,
+      "percentage": "35.7%",
+      "conjugationTableTips": 0,
+      "boringPatternTips": 5
+    },
+    "duplicates": {
+      "exactDuplicateTargets": 0,
+      "exactDuplicateEnglish": 0,
+      "nearDuplicateEnglish": 1,
+      "nearDuplicateTargets": 0
+    },
+    "englishQuality": {
+      "lowercaseStarts": 0,
+      "doubleSpaces": 0,
+      "trailingSpaces": 0,
+      "missingEndPunctuation": 1,
+      "cyrillicInEnglish": 0
+    },
+    "tagDistribution": {
+      "general": 3360,
+      "work": 849,
+      "family": 1356,
+      "travel": 1585
+    },
+    "grammarNodeDistribution": {
+      "node-01": 152,
+      "node-02": 80,
+      "node-03": 127,
+      "node-04": 87,
+      "node-05": 74,
+      "node-06": 91,
+      "node-07": 79,
+      "node-08": 79,
+      "node-09": 107,
+      "node-10": 77,
+      "node-11": 88,
+      "node-12": 87,
+      "node-13": 117,
+      "node-14": 130,
+      "node-15": 193,
+      "node-16": 127,
+      "node-17": 79,
+      "node-18": 136,
+      "node-19": 136,
+      "node-20": 100,
+      "node-21": 104,
+      "node-22": 108,
+      "node-23": 86,
+      "node-24": 82,
+      "node-25": 106,
+      "node-26": 107,
+      "node-27": 91,
+      "node-28": 75,
+      "node-29": 93,
+      "node-30": 68,
+      "node-31": 76,
+      "node-32": 86,
+      "node-33": 52,
+      "node-34": 50,
+      "node-35": 30
+    },
+    "priorityDistribution": {
+      "1": 1698,
+      "2": 1352,
+      "3": 310
+    },
+    "issueBreakdown": {
+      "duplicate_english": 1,
+      "grammar_tip_misaligned": 1,
+      "english_quality": 1,
+      "grammar_tip_quality": 5
+    }
+  },
+  "cards": [
+    {
+      "id": "ru-3216",
+      "target": "Очень рад познакомиться, я много о вас слышал!",
+      "english": "Very nice to meet you, I've heard a lot about you!",
+      "grammarNode": "node-32",
+      "issues": [
+        {
+          "type": "duplicate_english",
+          "detail": "Same English as ru-0688 (node-07). Different Russian targets (приятно vs рад познакомиться) but identical English translation.",
+          "duplicateOf": "ru-0688"
+        },
+        {
+          "type": "grammar_tip_misaligned",
+          "detail": "Tip discusses passive participles in academic writing, unrelated to this informal greeting card."
+        }
+      ]
+    },
+    {
+      "id": "ru-3245",
+      "target": "С лёгким паром!",
+      "english": "With easy steam! (said after someone's bath)",
+      "grammarNode": "node-33",
+      "issues": [
+        {
+          "type": "english_quality",
+          "detail": "English has parenthetical explanation but uses literal translation rather than cultural equivalent. Consider: \"Enjoy your bath!\" or \"Hope you enjoyed your bath! (lit. With easy steam!)\""
+        }
+      ]
+    },
+    {
+      "id": "ru-0721",
+      "target": "Он смотрит новости каждый вечер.",
+      "english": "He watches the news every evening.",
+      "grammarNode": "node-08",
+      "issues": [
+        {
+          "type": "grammar_tip_quality",
+          "detail": "Tip is a memorization instruction rather than contextual usage guidance: \"Memorize the 11 exception verbs in -ать/-еть that follow second conjugation.\""
+        }
+      ]
+    },
+    {
+      "id": "ru-0750",
+      "target": "Водитель обычно готовит обед в музее.",
+      "english": "The driver usually cooks lunch in the museum.",
+      "grammarNode": "node-08",
+      "issues": [
+        {
+          "type": "grammar_tip_quality",
+          "detail": "Tip is a memorization instruction rather than contextual usage guidance: \"Many common verbs are second conjugation: говорить, любить, видеть, смотреть.\""
+        }
+      ]
+    },
+    {
+      "id": "ru-1059",
+      "target": "Я позвоню тебе завтра.",
+      "english": "I will call you tomorrow.",
+      "grammarNode": "node-12",
+      "issues": [
+        {
+          "type": "grammar_tip_quality",
+          "detail": "Tip explains perfective future mechanics rather than providing contextual usage guidance. Pattern: \"X is perfective future of Y — ...\""
+        }
+      ]
+    },
+    {
+      "id": "ru-1135",
+      "target": "Я открою окно.",
+      "english": "I will open the window.",
+      "grammarNode": "node-13",
+      "issues": [
+        {
+          "type": "grammar_tip_quality",
+          "detail": "Tip explains perfective future mechanics rather than providing contextual usage guidance. Pattern: \"X is perfective future of Y — ...\""
+        }
+      ]
+    },
+    {
+      "id": "ru-1246",
+      "target": "Они закончат работу.",
+      "english": "They will finish work.",
+      "grammarNode": "node-14",
+      "issues": [
+        {
+          "type": "grammar_tip_quality",
+          "detail": "Tip explains perfective future mechanics rather than providing contextual usage guidance. Pattern: \"X is perfective future of Y — ...\""
+        }
+      ]
+    }
+  ]
+}

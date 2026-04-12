@@ -1,0 +1,76 @@
+{
+  "language": "tr",
+  "total_entries": 9688,
+  "total_checked": 500,
+  "passed": 490,
+  "failed": 10,
+  "pass_rate": "98.0%",
+  "grade": "A",
+  "failures_by_type": {
+    "to_prefix": 1,
+    "self_ref": 8,
+    "not_english": 1
+  },
+  "failure_examples": [
+    {
+      "word": "kalıp",
+      "en": "last; pattern",
+      "pos": "v",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "galata",
+      "en": "galata",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "sudan",
+      "en": "sudan",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "trabzonye",
+      "en": "trabzonye",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "gaziantep",
+      "en": "gaziantep",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "kurusu",
+      "en": "dry",
+      "pos": "adj",
+      "issues": "not_english"
+    },
+    {
+      "word": "pamukkale",
+      "en": "pamukkale",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "te",
+      "en": "te",
+      "pos": "suff",
+      "issues": "self_ref"
+    },
+    {
+      "word": "tundra",
+      "en": "tundra",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "post",
+      "en": "post",
+      "pos": "n",
+      "issues": "self_ref"
+    }
+  ]
+}

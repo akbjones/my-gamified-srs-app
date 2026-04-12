@@ -1,0 +1,304 @@
+{
+  "audit": "Swedish cards audit (batches 0-3)",
+  "date": "2026-03-25",
+  "summary": {
+    "totalCards": 2000,
+    "dictCoverageIssues": 14,
+    "grammarTipIssues": 5,
+    "englishQualityIssues": 0,
+    "duplicateIssues": 0,
+    "vocabIssues": 2,
+    "audioMissing": 0,
+    "cardsWithIssues": 21
+  },
+  "issuesByType": {
+    "dict_coverage": 14,
+    "grammar_issues": 5,
+    "english_issues": 0,
+    "duplicates": 0,
+    "vocab_issues": 2,
+    "audio_issues": 0
+  },
+  "cards": [
+    {
+      "id": "sv-0109",
+      "target": "Varsågod och sitt ner, kan jag bjuda dig på något?",
+      "english": "Please sit down, can I offer you something?",
+      "grammarNode": "node-01",
+      "issues": [
+        {
+          "type": "dict_coverage",
+          "words": [
+            "varsågod"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sv-0127",
+      "target": "Jag vill tacka dig för att du hjälpte mig igår.",
+      "english": "I want to thank you for helping me yesterday.",
+      "grammarNode": "node-01",
+      "issues": [
+        {
+          "type": "grammar_generic",
+          "tip": "Swedish has two genders: \"en\" (common) and \"ett\" (neuter)."
+        }
+      ]
+    },
+    {
+      "id": "sv-0135",
+      "target": "Han tvättar kläder två gånger i veckan hemma hos sig.",
+      "english": "He does laundry twice a week at his home.",
+      "grammarNode": "node-01",
+      "issues": [
+        {
+          "type": "dict_coverage",
+          "words": [
+            "hos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sv-0165",
+      "target": "Vi brukar äta frukost tillsammans varje morgon hemma hos oss.",
+      "english": "We usually eat breakfast together every morning at our home.",
+      "grammarNode": "node-01",
+      "issues": [
+        {
+          "type": "dict_coverage",
+          "words": [
+            "hos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sv-0347",
+      "target": "Vi har tre hundar och en katt hemma hos oss.",
+      "english": "We have three dogs and a cat at our home.",
+      "grammarNode": "node-02",
+      "issues": [
+        {
+          "type": "dict_coverage",
+          "words": [
+            "hos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sv-0360",
+      "target": "God morgon, hur mår du idag på detta fina väder?",
+      "english": "Good morning, how are you today on this nice weather?",
+      "grammarNode": "node-02",
+      "issues": [
+        {
+          "type": "grammar_generic",
+          "tip": "Swedish has two genders: \"en\" (common) and \"ett\" (neuter)."
+        }
+      ]
+    },
+    {
+      "id": "sv-0363",
+      "target": "Har ni en barnmeny på kvällen nog?",
+      "english": "Do you have a children's menu in the evening probably?",
+      "grammarNode": "node-02",
+      "issues": [
+        {
+          "type": "dict_coverage",
+          "words": [
+            "barnmeny"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sv-0455",
+      "target": "Välkommen tillbaka, vi har förberett allt inför ditt besök.",
+      "english": "Welcome back, we have prepared everything for your visit.",
+      "grammarNode": "node-03",
+      "issues": [
+        {
+          "type": "grammar_generic",
+          "tip": "Swedish has two genders: \"en\" (common) and \"ett\" (neuter)."
+        }
+      ]
+    },
+    {
+      "id": "sv-0494",
+      "target": "Ett stort akvarium står i väntrummet hos vår tandläkare.",
+      "english": "A large aquarium stands in the waiting room at our dentist.",
+      "grammarNode": "node-03",
+      "issues": [
+        {
+          "type": "dict_coverage",
+          "words": [
+            "hos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sv-0618",
+      "target": "Vi hade en fantastisk semester i fjällen förra året.",
+      "english": "We had a fantastic vacation in the mountains last year.",
+      "grammarNode": "node-04",
+      "issues": [
+        {
+          "type": "grammar_generic",
+          "tip": "Swedish has two genders: \"en\" (common) and \"ett\" (neuter)."
+        }
+      ]
+    },
+    {
+      "id": "sv-0635",
+      "target": "Hemma hos oss firar vi alltid jul med hela familjen.",
+      "english": "At our home we always celebrate Christmas with the whole family.",
+      "grammarNode": "node-04",
+      "issues": [
+        {
+          "type": "dict_coverage",
+          "words": [
+            "hos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sv-0638",
+      "target": "I nattens stillhet hördes bara ugglans rop.",
+      "english": "In the stillness of night, only the owl's call was heard.",
+      "grammarNode": "node-04",
+      "issues": [
+        {
+          "type": "dict_coverage",
+          "words": [
+            "ugglans"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sv-0705",
+      "target": "Hemma hos oss firar vi alltid jul.",
+      "english": "At our home we always celebrate Christmas.",
+      "grammarNode": "node-05",
+      "issues": [
+        {
+          "type": "dict_coverage",
+          "words": [
+            "hos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sv-0738",
+      "target": "Sommarnattens ljus vägrade ge vika för mörkret.",
+      "english": "The summer night's light refused to yield to darkness.",
+      "grammarNode": "node-05",
+      "issues": [
+        {
+          "type": "dict_coverage",
+          "words": [
+            "sommarnattens"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sv-0813",
+      "target": "Hur länge har du bott här redan?",
+      "english": "How long have you lived here already?",
+      "grammarNode": "node-06",
+      "issues": [
+        {
+          "type": "grammar_generic",
+          "tip": "Swedish has two genders: \"en\" (common) and \"ett\" (neuter)."
+        }
+      ]
+    },
+    {
+      "id": "sv-0830",
+      "target": "Mars är vårens början hemma hos oss.",
+      "english": "March is the beginning of spring at our home.",
+      "grammarNode": "node-06",
+      "issues": [
+        {
+          "type": "dict_coverage",
+          "words": [
+            "hos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sv-0919",
+      "target": "Skit samma, vi gör det på vårt sätt istället.",
+      "english": "Whatever, we will do it our way instead.",
+      "grammarNode": "node-07",
+      "issues": [
+        {
+          "type": "vocab_inappropriate",
+          "target": "Skit samma, vi gör det på vårt sätt istället."
+        }
+      ]
+    },
+    {
+      "id": "sv-0977",
+      "target": "Vad roligt att du kommer på middag hos oss ikväll!",
+      "english": "How fun that you are coming to dinner at our place tonight!",
+      "grammarNode": "node-07",
+      "issues": [
+        {
+          "type": "dict_coverage",
+          "words": [
+            "hos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sv-1041",
+      "target": "Det var som fan efter jobbet egentligen!",
+      "english": "That was unbelievable after work actually!",
+      "grammarNode": "node-08",
+      "issues": [
+        {
+          "type": "vocab_inappropriate",
+          "target": "Det var som fan efter jobbet egentligen!"
+        }
+      ]
+    },
+    {
+      "id": "sv-1407",
+      "target": "Vi vill gärna bjuda er på middag hemma hos oss.",
+      "english": "We would really like to invite you to dinner at our home.",
+      "grammarNode": "node-10",
+      "issues": [
+        {
+          "type": "dict_coverage",
+          "words": [
+            "hos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sv-1685",
+      "target": "Jag är hemma hos min syster.",
+      "english": "I am at my sister's place.",
+      "grammarNode": "node-13",
+      "issues": [
+        {
+          "type": "dict_coverage",
+          "words": [
+            "hos"
+          ]
+        }
+      ]
+    }
+  ]
+}

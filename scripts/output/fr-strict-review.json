@@ -1,0 +1,76 @@
+{
+  "language": "fr",
+  "total_entries": 5529,
+  "total_checked": 200,
+  "passed": 196,
+  "failed": 4,
+  "pass_rate": "98%",
+  "grade": "A",
+  "failures_by_type": {
+    "to_past_tense": 1,
+    "semantic_fail": 3
+  },
+  "failure_examples": [
+    {
+      "word": "coûte",
+      "en": "to cost",
+      "pos": "v",
+      "google": "costs",
+      "issues": "to_past_tense"
+    },
+    {
+      "word": "voudriez",
+      "en": "to want",
+      "pos": "v",
+      "google": "would you like",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "want"
+        ],
+        "gtWords": [
+          "like"
+        ],
+        "gt": "would you like"
+      }
+    },
+    {
+      "word": "reviendrai",
+      "en": "to goodbye",
+      "pos": "v",
+      "google": "will return",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "goodbye"
+        ],
+        "gtWords": [
+          "return"
+        ],
+        "gt": "will return"
+      }
+    },
+    {
+      "word": "dinaient",
+      "en": "dined",
+      "pos": "n",
+      "google": "dinner",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "dine"
+        ],
+        "gtWords": [
+          "dinner"
+        ],
+        "gt": "dinner"
+      }
+    }
+  ]
+}

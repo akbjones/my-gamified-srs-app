@@ -163,6 +163,156 @@ const COMMON_WORDS: Record<string, Set<string>> = {
     // Question words
     'hoe', 'waarom', 'hoeveel',
   ]),
+  swedish: new Set([
+    // Articles & pronouns
+    'en', 'ett', 'den', 'det', 'de',
+    'jag', 'du', 'han', 'hon', 'vi', 'ni', 'de', 'man',
+    'mig', 'dig', 'honom', 'henne', 'oss', 'er', 'dem', 'sig',
+    'min', 'mitt', 'mina', 'din', 'ditt', 'dina', 'sin', 'sitt', 'sina',
+    'hans', 'hennes', 'vår', 'vårt', 'våra', 'er', 'ert', 'era', 'deras',
+    'denna', 'detta', 'dessa', 'den', 'det', 'de',
+    // Prepositions
+    'i', 'på', 'till', 'från', 'av', 'med', 'för', 'om', 'hos', 'vid',
+    'under', 'över', 'mellan', 'efter', 'före', 'utan', 'mot', 'genom', 'bland',
+    // Conjunctions
+    'och', 'eller', 'men', 'att', 'om', 'som', 'när', 'medan', 'för', 'så',
+    'eftersom', 'fast', 'fastän', 'trots',
+    // Common verbs
+    'är', 'var', 'vara', 'har', 'hade', 'ha', 'blir', 'blev', 'bli',
+    'ska', 'skulle', 'kan', 'kunde', 'vill', 'ville', 'måste', 'bör',
+    'gör', 'gjorde', 'går', 'gick', 'kommer', 'kom', 'får', 'fick',
+    'finns', 'ser', 'tar', 'ger', 'säger',
+    // Adverbs & particles
+    'inte', 'mycket', 'mer', 'mest', 'också', 'redan', 'bara', 'här', 'där',
+    'ja', 'nej', 'väl', 'ju', 'nog', 'så', 'nu', 'då', 'aldrig', 'alltid',
+    'ofta', 'ibland', 'ganska', 'lite', 'sedan', 'ännu',
+    // Determiners
+    'alla', 'varje', 'någon', 'något', 'några', 'ingen', 'inget', 'inga',
+    'annan', 'annat', 'andra', 'samma', 'egen', 'eget', 'egna',
+    // Numbers
+    'en', 'två', 'tre',
+    // Question words
+    'vad', 'vem', 'var', 'hur', 'vilken', 'vilket', 'vilka', 'varför',
+  ]),
+  welsh: new Set([
+    // Articles & particles
+    'y', 'yr', "'r", 'a', 'o', 'i', 'yn', 'ar', 'am', 'at', 'gan', 'gyda',
+    'heb', 'dan', 'dros', 'drwy', 'rhwng', 'ers', 'cyn', 'wedi', 'wrth',
+    // Pronouns
+    'fi', 'ti', 'fe', 'hi', 'ni', 'chi', 'nhw', 'e',
+    'fy', 'dy', 'ei', 'ein', 'eich', 'eu',
+    // Conjunctions
+    'a', 'ac', 'neu', 'ond', 'achos', 'oherwydd', 'os', 'pan', 'er', 'fel',
+    'bod', 'fod', 'mai', 'taw',
+    // Forms of bod (to be)
+    'dw', 'rwyt', 'mae', 'rydyn', 'rydych', 'maen',
+    'oedd', 'roedd', 'roeddwn', 'roeddet', 'roedden', 'roeddech',
+    'bydd', 'bydda', 'byddi', 'byddwn', 'byddwch', 'byddan',
+    'yw', 'ydy', 'oes', 'oedd',
+    // Common verbs
+    'mynd', 'dod', 'gwneud', 'cael', 'gallu', 'gwybod',
+    // Negation & adverbs
+    'ddim', 'dim', 'nid', 'nad', 'na',
+    'iawn', 'hefyd', 'yma', 'yna', 'nawr', 'heddiw', 'yfory', 'ddoe',
+    'byth', 'erioed', 'bob', 'pob', 'rhai',
+    // Determiners
+    'hon', 'hwn', 'hyn', 'hynny', 'un', 'ryw', 'rhyw',
+    // Question words
+    'beth', 'pwy', 'ble', 'sut', 'pryd', 'pam', 'faint', 'pa',
+    // Numbers
+    'un', 'dau', 'dwy', 'tri', 'tair', 'pedwar', 'pedair', 'pump', 'deg',
+  ]),
+  hindi: new Set([
+    // Pronouns
+    'मैं', 'तू', 'तुम', 'आप', 'वह', 'यह', 'हम', 'वे', 'ये',
+    'मुझे', 'मुझको', 'तुझे', 'तुम्हें', 'आपको', 'उसे', 'इसे', 'हमें', 'उन्हें', 'इन्हें',
+    'मेरा', 'मेरी', 'मेरे', 'तेरा', 'तेरी', 'तेरे',
+    'तुम्हारा', 'तुम्हारी', 'तुम्हारे', 'आपका', 'आपकी', 'आपके',
+    'उसका', 'उसकी', 'उसके', 'इसका', 'इसकी', 'इसके',
+    'हमारा', 'हमारी', 'हमारे', 'उनका', 'उनकी', 'उनके',
+    // Postpositions
+    'में', 'पर', 'को', 'से', 'का', 'की', 'के', 'ने', 'तक', 'द्वारा',
+    'के लिए', 'की तरफ', 'के बारे', 'के साथ', 'के बाद', 'के पहले',
+    // Conjunctions
+    'और', 'या', 'लेकिन', 'मगर', 'कि', 'क्योंकि', 'जब', 'अगर', 'तो',
+    'पर', 'परंतु', 'इसलिए', 'ताकि', 'जैसे', 'हालाँकि',
+    // Common verbs (forms of होना, करना)
+    'है', 'हैं', 'हूँ', 'हो', 'था', 'थी', 'थे', 'थीं',
+    'होना', 'करना', 'जाना', 'आना', 'देना', 'लेना',
+    'करता', 'करती', 'करते', 'किया', 'की', 'किए',
+    'हुआ', 'हुई', 'हुए', 'गया', 'गई', 'गए',
+    // Negation & adverbs
+    'नहीं', 'न', 'मत', 'हाँ', 'जी',
+    'बहुत', 'बस', 'भी', 'ही', 'तो', 'सब', 'कुछ', 'कभी', 'अभी',
+    'यहाँ', 'वहाँ', 'कहाँ', 'आज', 'कल', 'अब', 'फिर',
+    // Demonstratives
+    'यह', 'वह', 'ये', 'वे', 'इस', 'उस', 'इन', 'उन',
+    // Question words
+    'क्या', 'कौन', 'कहाँ', 'कब', 'कैसे', 'क्यों', 'कितना', 'कितनी', 'कितने', 'कौनसा',
+    // Numbers
+    'एक', 'दो', 'तीन',
+    // Common other
+    'वाला', 'वाली', 'वाले', 'सा', 'सी', 'से',
+  ]),
+  turkish: new Set([
+    // Articles/determiners (Turkish has no articles, but common determiners)
+    'bir', 'bu', 'şu', 'o', 'her', 'bazı', 'birkaç', 'hiç', 'bütün', 'tüm',
+    // Pronouns
+    'ben', 'sen', 'o', 'biz', 'siz', 'onlar',
+    'beni', 'seni', 'onu', 'bizi', 'sizi', 'onları',
+    'bana', 'sana', 'ona', 'bize', 'size', 'onlara',
+    'benim', 'senin', 'onun', 'bizim', 'sizin', 'onların',
+    'bende', 'sende', 'onda', 'bizde', 'sizde', 'onlarda',
+    'benden', 'senden', 'ondan', 'bizden', 'sizden', 'onlardan',
+    'kendi', 'kendim', 'kendin', 'kendisi',
+    // Postpositions
+    'için', 'ile', 'gibi', 'kadar', 'göre', 'doğru', 'karşı',
+    // Conjunctions
+    've', 'veya', 'ya', 'ama', 'fakat', 'ancak', 'çünkü', 'ki', 'de', 'da',
+    'ne', 'hem', 'eğer', 'ise', 'oysa', 'yoksa', 'bile',
+    // Common verbs (conjugated)
+    'var', 'yok', 'olan', 'olur', 'oluyor', 'oldu', 'olacak',
+    'olan', 'yapan', 'eden', 'gelen', 'giden', 'alan', 'veren',
+    // Adverbs & particles
+    'değil', 'mi', 'mı', 'mu', 'mü', 'hayır', 'evet',
+    'çok', 'az', 'en', 'daha', 'pek', 'hiç', 'bile',
+    'şimdi', 'sonra', 'önce', 'hep', 'hâlâ', 'artık', 'henüz',
+    'burada', 'orada', 'şurada', 'nerede', 'nasıl', 'ne', 'neden', 'niçin',
+    // Question words
+    'kim', 'ne', 'nerede', 'nasıl', 'neden', 'kaç', 'hangi',
+    // Numbers
+    'bir', 'iki', 'üç',
+  ]),
+  russian: new Set([
+    // Pronouns
+    'я', 'ты', 'он', 'она', 'оно', 'мы', 'вы', 'они',
+    'меня', 'тебя', 'его', 'её', 'нас', 'вас', 'их',
+    'мне', 'тебе', 'ему', 'ей', 'нам', 'вам', 'им',
+    'мной', 'тобой', 'ним', 'ней', 'нами', 'вами', 'ними',
+    'мой', 'моя', 'моё', 'мои', 'твой', 'твоя', 'твоё', 'твои',
+    'его', 'её', 'наш', 'наша', 'наше', 'наши', 'ваш', 'ваша', 'ваше', 'ваши', 'их',
+    'этот', 'эта', 'это', 'эти', 'тот', 'та', 'то', 'те',
+    'кто', 'что', 'какой', 'какая', 'какое', 'какие', 'который', 'которая', 'которое', 'которые',
+    'весь', 'вся', 'всё', 'все', 'сам', 'сама', 'само', 'сами', 'свой', 'своя', 'своё', 'свои',
+    // Prepositions
+    'в', 'на', 'с', 'из', 'к', 'о', 'об', 'за', 'от', 'до', 'по', 'при', 'без', 'через',
+    'для', 'у', 'над', 'под', 'между', 'перед', 'после', 'вместе',
+    // Conjunctions
+    'и', 'а', 'но', 'или', 'что', 'чтобы', 'когда', 'если', 'потому', 'хотя',
+    'так', 'как', 'где', 'куда', 'откуда', 'почему', 'зачем',
+    // Common verbs
+    'быть', 'есть', 'было', 'будет', 'нет', 'можно', 'нельзя', 'надо', 'нужно',
+    'знать', 'хотеть', 'мочь', 'делать', 'говорить', 'идти', 'дать', 'стать',
+    // Adverbs & particles
+    'не', 'ни', 'да', 'нет', 'очень', 'тоже', 'также', 'ещё', 'уже', 'только',
+    'здесь', 'тут', 'там', 'сюда', 'туда', 'сейчас', 'тогда', 'потом',
+    'всегда', 'никогда', 'часто', 'иногда', 'редко', 'вообще',
+    'хорошо', 'плохо', 'много', 'мало', 'больше', 'меньше',
+    // Numbers
+    'один', 'два', 'три',
+    // Particles
+    'бы', 'ли', 'же', 'ведь', 'вот', 'вон',
+  ]),
 };
 
 export function isCommonWord(word: string, lang: Language): boolean {

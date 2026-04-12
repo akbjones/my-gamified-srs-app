@@ -1,0 +1,130 @@
+{
+  "summary": {
+    "totalCards": 2000,
+    "cardsWithIssues": 7,
+    "byType": {
+      "missing_audio": 0,
+      "dict_gap": 0,
+      "duplicate_target": 1,
+      "duplicate_english": 1,
+      "english_quality": 0,
+      "target_quality": 0,
+      "grammar_tip": 5,
+      "vocab_too_advanced": 0,
+      "question_mismatch": 0,
+      "grammar_tip_mismatch": 0
+    },
+    "topMissingWords": [],
+    "issueRate": "0.4%",
+    "dictionarySize": 6541,
+    "audioFileCount": 3946
+  },
+  "cards": [
+    {
+      "id": "it-0029",
+      "node": "node-01",
+      "target": "Lui apre la porta.",
+      "english": "He opens the door.",
+      "grammar": "-ire verb: 'aprire' (to open). Third person: apre.",
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "details": [
+            "bare_pattern"
+          ],
+          "tip": "-ire verb: 'aprire' (to open). Third person: apre."
+        }
+      ]
+    },
+    {
+      "id": "it-0317",
+      "node": "node-02",
+      "target": "Spero che tu stia bene.",
+      "english": "I hope you're well.",
+      "grammar": "Spero che triggers the subjunctive: stia instead of stai.",
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "details": [
+            "too_advanced_for_node"
+          ],
+          "tip": "Spero che triggers the subjunctive: stia instead of stai."
+        }
+      ]
+    },
+    {
+      "id": "it-0373",
+      "node": "node-02",
+      "target": "È possibile che piova stasera.",
+      "english": "It's possible it will rain tonight.",
+      "grammar": "\"È possibile che\" + subjunctive: piova from piovere.",
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "details": [
+            "too_advanced_for_node"
+          ],
+          "tip": "\"È possibile che\" + subjunctive: piova from piovere."
+        }
+      ]
+    },
+    {
+      "id": "it-0387",
+      "node": "node-02",
+      "target": "Benché piova, usciamo lo stesso.",
+      "english": "Although it's raining, we go out anyway.",
+      "grammar": "'Benché' requires the subjunctive.",
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "details": [
+            "too_advanced_for_node"
+          ],
+          "tip": "'Benché' requires the subjunctive."
+        }
+      ]
+    },
+    {
+      "id": "it-0391",
+      "node": "node-02",
+      "target": "Il veterinario ha vaccinato il cucciolo contro la rabbia.",
+      "english": "The veterinarian vaccinated the puppy against rabies.",
+      "grammar": "Impersonal expressions like 'è importante che' require subjunctive.",
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "details": [
+            "too_advanced_for_node",
+            "tip_content_mismatch"
+          ],
+          "tip": "Impersonal expressions like 'è importante che' require subjunctive."
+        }
+      ]
+    },
+    {
+      "id": "it-1652",
+      "node": "node-13",
+      "target": "Parli più lentamente, per favore.",
+      "english": "Please speak more slowly.",
+      "grammar": "Formal imperative uses the third person subjunctive form.",
+      "issues": [
+        {
+          "type": "duplicate_english",
+          "otherCard": "it-0541"
+        }
+      ]
+    },
+    {
+      "id": "it-1816",
+      "node": "node-14",
+      "target": "Chi tardi arriva male alloggia.",
+      "english": "He who arrives late finds poor lodgings.",
+      "issues": [
+        {
+          "type": "duplicate_target",
+          "otherCard": "it-1798"
+        }
+      ]
+    }
+  ]
+}

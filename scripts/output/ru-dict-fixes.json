@@ -1,0 +1,476 @@
+[
+  {
+    "word": "болен",
+    "current_en": "didn't",
+    "fixed_en": "sick, ill",
+    "issue": "contraction fragment from 'didn't feel well' context"
+  },
+  {
+    "word": "вегетарианец",
+    "current_en": "don't",
+    "fixed_en": "vegetarian",
+    "issue": "contraction fragment from 'don't eat meat' context"
+  },
+  {
+    "word": "везёт",
+    "current_en": "i'm",
+    "fixed_en": "is lucky, carries",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "верь",
+    "current_en": "don't",
+    "fixed_en": "believe (imperative)",
+    "issue": "contraction fragment from 'don't believe' context"
+  },
+  {
+    "word": "волноваться",
+    "current_en": "shouldn't",
+    "fixed_en": "to worry",
+    "issue": "contraction fragment from 'shouldn't worry' context"
+  },
+  {
+    "word": "волнуйся",
+    "current_en": "don't",
+    "fixed_en": "worry (imperative)",
+    "issue": "contraction fragment from 'don't worry' context"
+  },
+  {
+    "word": "волнуйтесь",
+    "current_en": "don't",
+    "fixed_en": "worry (formal imperative)",
+    "issue": "contraction fragment from 'don't worry' context"
+  },
+  {
+    "word": "времена",
+    "current_en": "neighbors'",
+    "fixed_en": "times, epochs",
+    "issue": "possessive leaked from adjacent word in sentence"
+  },
+  {
+    "word": "всему",
+    "current_en": "don't",
+    "fixed_en": "to everything (dative)",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "встретимся",
+    "current_en": "let's",
+    "fixed_en": "let's meet, we'll meet",
+    "issue": "contraction fragment - definition is just 'let's' without the verb"
+  },
+  {
+    "word": "высота",
+    "current_en": "mountain's",
+    "fixed_en": "height, altitude",
+    "issue": "possessive leaked from adjacent word in sentence"
+  },
+  {
+    "word": "говори",
+    "current_en": "don't",
+    "fixed_en": "speak (imperative)",
+    "issue": "contraction fragment from 'don't speak' context"
+  },
+  {
+    "word": "давайте",
+    "current_en": "let's",
+    "fixed_en": "let's, let us",
+    "issue": "too abbreviated - should include 'let us' as full meaning"
+  },
+  {
+    "word": "дозвониться",
+    "current_en": "couldn't",
+    "fixed_en": "to get through (phone)",
+    "issue": "contraction fragment from 'couldn't get through' context"
+  },
+  {
+    "word": "ем",
+    "current_en": "don't",
+    "fixed_en": "I eat",
+    "issue": "contraction fragment from 'don't eat' context"
+  },
+  {
+    "word": "жаль",
+    "current_en": "i'm",
+    "fixed_en": "pity, it's a pity",
+    "issue": "contraction fragment from 'I'm sorry' context"
+  },
+  {
+    "word": "жарко",
+    "current_en": "i'm",
+    "fixed_en": "hot (weather), it's hot",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "жду",
+    "current_en": "i've",
+    "fixed_en": "I wait, I'm waiting",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "забудь",
+    "current_en": "don't",
+    "fixed_en": "forget (imperative)",
+    "issue": "contraction fragment from 'don't forget' context"
+  },
+  {
+    "word": "забудьте",
+    "current_en": "don't",
+    "fixed_en": "forget (formal imperative)",
+    "issue": "contraction fragment from 'don't forget' context"
+  },
+  {
+    "word": "закончим",
+    "current_en": "let's",
+    "fixed_en": "let's finish, we'll finish",
+    "issue": "contraction fragment - missing the verb meaning"
+  },
+  {
+    "word": "каравай",
+    "current_en": "don't",
+    "fixed_en": "round loaf (traditional bread)",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "кормят",
+    "current_en": "wolf's",
+    "fixed_en": "they feed",
+    "issue": "possessive leaked from adjacent word (likely from proverb)"
+  },
+  {
+    "word": "кричи",
+    "current_en": "don't",
+    "fixed_en": "shout (imperative)",
+    "issue": "contraction fragment from 'don't shout' context"
+  },
+  {
+    "word": "кричите",
+    "current_en": "don't",
+    "fixed_en": "shout (formal imperative)",
+    "issue": "contraction fragment from 'don't shout' context"
+  },
+  {
+    "word": "мог",
+    "current_en": "couldn't",
+    "fixed_en": "could, was able to",
+    "issue": "contraction fragment from 'couldn't' context"
+  },
+  {
+    "word": "моего",
+    "current_en": "brother's",
+    "fixed_en": "my (genitive masculine)",
+    "issue": "possessive leaked from adjacent word in sentence"
+  },
+  {
+    "word": "население",
+    "current_en": "moscow's",
+    "fixed_en": "population",
+    "issue": "possessive leaked from adjacent word in sentence"
+  },
+  {
+    "word": "негде",
+    "current_en": "there's",
+    "fixed_en": "nowhere (to)",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "нелегко",
+    "current_en": "it's",
+    "fixed_en": "not easy, difficult",
+    "issue": "contraction fragment from 'it's not easy' context"
+  },
+  {
+    "word": "нигде",
+    "current_en": "can't",
+    "fixed_en": "nowhere",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "них",
+    "current_en": "don't",
+    "fixed_en": "them (prepositional)",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "ноги",
+    "current_en": "wolf's",
+    "fixed_en": "legs, feet",
+    "issue": "possessive leaked from adjacent word (likely from proverb)"
+  },
+  {
+    "word": "ноша",
+    "current_en": "one's",
+    "fixed_en": "burden, load",
+    "issue": "possessive leaked from adjacent word in sentence"
+  },
+  {
+    "word": "обсудим",
+    "current_en": "let's",
+    "fixed_en": "let's discuss, we'll discuss",
+    "issue": "contraction fragment - missing the verb meaning"
+  },
+  {
+    "word": "оделся",
+    "current_en": "wouldn't",
+    "fixed_en": "got dressed",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "опаздывай",
+    "current_en": "don't",
+    "fixed_en": "be late (imperative)",
+    "issue": "contraction fragment from 'don't be late' context"
+  },
+  {
+    "word": "опаздывайте",
+    "current_en": "don't",
+    "fixed_en": "be late (formal imperative)",
+    "issue": "contraction fragment from 'don't be late' context"
+  },
+  {
+    "word": "откладывай",
+    "current_en": "don't",
+    "fixed_en": "postpone (imperative)",
+    "issue": "contraction fragment from 'don't postpone' context"
+  },
+  {
+    "word": "очередь",
+    "current_en": "it's",
+    "fixed_en": "queue, turn",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "парься",
+    "current_en": "don't",
+    "fixed_en": "worry, fret (imperative, colloquial)",
+    "issue": "contraction fragment from 'don't worry' context"
+  },
+  {
+    "word": "пережить",
+    "current_en": "neighbors'",
+    "fixed_en": "to survive, to endure",
+    "issue": "possessive leaked from adjacent word in sentence"
+  },
+  {
+    "word": "планы",
+    "current_en": "i'm",
+    "fixed_en": "plans",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "поболтаем",
+    "current_en": "let's",
+    "fixed_en": "let's chat",
+    "issue": "contraction fragment - missing the verb meaning"
+  },
+  {
+    "word": "погулять",
+    "current_en": "there's",
+    "fixed_en": "to take a walk",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "поедем",
+    "current_en": "let's",
+    "fixed_en": "let's go (by transport)",
+    "issue": "contraction fragment - missing the verb meaning"
+  },
+  {
+    "word": "познакомимся",
+    "current_en": "let's",
+    "fixed_en": "let's get acquainted",
+    "issue": "contraction fragment - missing the verb meaning"
+  },
+  {
+    "word": "помогло",
+    "current_en": "neighbors'",
+    "fixed_en": "helped (neuter past)",
+    "issue": "possessive leaked from adjacent word in sentence"
+  },
+  {
+    "word": "попробуем",
+    "current_en": "let's",
+    "fixed_en": "let's try",
+    "issue": "contraction fragment - missing the verb meaning"
+  },
+  {
+    "word": "пора",
+    "current_en": "it's",
+    "fixed_en": "it's time",
+    "issue": "contraction fragment - missing key word 'time'"
+  },
+  {
+    "word": "простудился",
+    "current_en": "wouldn't",
+    "fixed_en": "caught a cold",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "разве",
+    "current_en": "didn't",
+    "fixed_en": "really?, is it true that",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "разевай",
+    "current_en": "don't",
+    "fixed_en": "gape, open wide (imperative)",
+    "issue": "contraction fragment from 'don't gape' context"
+  },
+  {
+    "word": "разрешили",
+    "current_en": "weren't",
+    "fixed_en": "allowed, permitted (past pl)",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "рвётся",
+    "current_en": "it's",
+    "fixed_en": "tears, rips; strives",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "решением",
+    "current_en": "don't",
+    "fixed_en": "decision (instrumental)",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "сдавайся",
+    "current_en": "don't",
+    "fixed_en": "give up (imperative)",
+    "issue": "contraction fragment from 'don't give up' context"
+  },
+  {
+    "word": "сдавайтесь",
+    "current_en": "don't",
+    "fixed_en": "give up (formal imperative)",
+    "issue": "contraction fragment from 'don't give up' context"
+  },
+  {
+    "word": "слышишь",
+    "current_en": "don't",
+    "fixed_en": "you hear",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "смогли",
+    "current_en": "couldn't",
+    "fixed_en": "managed, were able to",
+    "issue": "contraction fragment from 'couldn't' context"
+  },
+  {
+    "word": "собираюсь",
+    "current_en": "i'm",
+    "fixed_en": "I'm going to, I intend",
+    "issue": "contraction fragment - missing main meaning"
+  },
+  {
+    "word": "сочувствие",
+    "current_en": "neighbors'",
+    "fixed_en": "sympathy, compassion",
+    "issue": "possessive leaked from adjacent word in sentence"
+  },
+  {
+    "word": "спеши",
+    "current_en": "don't",
+    "fixed_en": "hurry (imperative)",
+    "issue": "contraction fragment from 'don't hurry' context"
+  },
+  {
+    "word": "спится",
+    "current_en": "can't",
+    "fixed_en": "can sleep (impersonal)",
+    "issue": "contraction fragment from 'can't sleep' context"
+  },
+  {
+    "word": "спокойно",
+    "current_en": "it's",
+    "fixed_en": "calmly, it's calm",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "стесняйся",
+    "current_en": "don't",
+    "fixed_en": "be shy (imperative)",
+    "issue": "contraction fragment from 'don't be shy' context"
+  },
+  {
+    "word": "стесняйтесь",
+    "current_en": "don't",
+    "fixed_en": "be shy (formal imperative)",
+    "issue": "contraction fragment from 'don't be shy' context"
+  },
+  {
+    "word": "терпения",
+    "current_en": "doctor's",
+    "fixed_en": "patience (genitive)",
+    "issue": "possessive leaked from adjacent word in sentence"
+  },
+  {
+    "word": "торопитесь",
+    "current_en": "don't",
+    "fixed_en": "hurry (formal imperative)",
+    "issue": "contraction fragment from 'don't hurry' context"
+  },
+  {
+    "word": "требует",
+    "current_en": "doctor's",
+    "fixed_en": "requires, demands",
+    "issue": "possessive leaked from adjacent word in sentence"
+  },
+  {
+    "word": "трогай",
+    "current_en": "don't",
+    "fixed_en": "touch (imperative)",
+    "issue": "contraction fragment from 'don't touch' context"
+  },
+  {
+    "word": "трудные",
+    "current_en": "neighbors'",
+    "fixed_en": "difficult (plural)",
+    "issue": "possessive leaked from adjacent word in sentence"
+  },
+  {
+    "word": "тянет",
+    "current_en": "one's",
+    "fixed_en": "pulls, draws; is attracted",
+    "issue": "possessive leaked from adjacent word in sentence"
+  },
+  {
+    "word": "удалось",
+    "current_en": "couldn't",
+    "fixed_en": "succeeded, managed",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "уезжаешь",
+    "current_en": "i'm",
+    "fixed_en": "you are leaving (by transport)",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "умеет",
+    "current_en": "can't",
+    "fixed_en": "knows how to, is able to",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "успел",
+    "current_en": "didn't",
+    "fixed_en": "managed in time, succeeded",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "чужие",
+    "current_en": "don't",
+    "fixed_en": "strangers, others'",
+    "issue": "contraction fragment from sentence context"
+  },
+  {
+    "word": "чужой",
+    "current_en": "don't",
+    "fixed_en": "someone else's, foreign",
+    "issue": "contraction fragment from sentence context"
+  }
+]

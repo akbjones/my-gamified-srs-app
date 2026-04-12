@@ -1,0 +1,3824 @@
+[
+  {
+    "id": "cy-0003",
+    "current_tip": "\"Llaeth\" (milk) is used in \"paned o de a llaeth\" — a cup of tea with milk.",
+    "fixed_tip": "\"Dw i'n bwyta\" = I'm eating — present continuous uses \"bod\" + \"yn\" + verb-noun.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0005",
+    "current_tip": "\"Blasus\" (tasty) mutates to \"flasus\" after \"yn\": \"Mae'n flasus\".",
+    "fixed_tip": "\"Dw i'n hoffi\" = I like — \"hoffi\" is a verb-noun following the particle \"yn\" (shortened to 'n).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0014",
+    "current_tip": "\"Mae'r\" is the contraction of \"Mae y\" (the is...) — used before definite nouns.",
+    "fixed_tip": "\"Mae hi'n\" can mean both 'she is' and 'it is' (for weather, time, etc.).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0016",
+    "current_tip": "\"Mor\" + adjective = \"as/so\": \"mor dal â\" = as tall as.",
+    "fixed_tip": "\"Mae e'n\" (South) / \"Mae o'n\" (North) = He is — regional variants of the same construction.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0022",
+    "current_tip": "\"Galwch ambiwlans!\" = Call an ambulance! — imperative of \"galw\".",
+    "fixed_tip": "\"Dw i'n gweld\" = I see — \"gweld\" doesn't mutate after \"yn\" because it starts with 'gw'.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0028",
+    "current_tip": "\"Mae pen tost gyda fi\" = I have a headache (a sore head is with me).",
+    "fixed_tip": "\"Dw i'n hoffi\" = I like — \"hoffi\" is a verb-noun following the particle \"yn\" (shortened to 'n).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0030",
+    "current_tip": "\"Annwyd\" (cold/illness) — \"Mae annwyd arna i\" = I have a cold (a cold is on me).",
+    "fixed_tip": "\"Dw i'n hoffi\" = I like — \"hoffi\" is a verb-noun following the particle \"yn\" (shortened to 'n).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0056",
+    "current_tip": "\"Pris\" (price) — \"Beth yw'r pris?\" = What's the price?",
+    "fixed_tip": "\"Dw i'n\" is the spoken form of \"Rydw i'n\" (I am...) — the most common sentence pattern in Welsh.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0058",
+    "current_tip": "\"Galwch ambiwlans!\" = Call an ambulance! — imperative of \"galw\".",
+    "fixed_tip": "\"Dw i'n mynd\" = I'm going — \"mynd\" (to go) is one of the most common irregular verbs.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0064",
+    "current_tip": "\"Darllen\" (to read) — note the double 'l': it's \"ll\" = /ɬ/ sound.",
+    "fixed_tip": "\"Dw i'n\" is the spoken form of \"Rydw i'n\" (I am...) — the most common sentence pattern in Welsh.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0065",
+    "current_tip": "\"Prifysgol\" (university) — from \"prif\" (chief) + \"ysgol\" (school).",
+    "fixed_tip": "\"Dw i'n gweithio\" = I'm working — the \"yn\" particle links \"bod\" to the verb-noun.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0091",
+    "current_tip": "\"Galwch ambiwlans!\" = Call an ambulance! — imperative of \"galw\".",
+    "fixed_tip": "\"Dw i'n cymryd\" = I'm taking — verb-nouns follow \"yn\" without mutation if they start with c.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0093",
+    "current_tip": "\"Gradd\" (degree) — \"gradd mewn Cymraeg\" = a degree in Welsh.",
+    "fixed_tip": "\"Dw i'n mynd\" = I'm going — \"mynd\" (to go) is one of the most common irregular verbs.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0096",
+    "current_tip": "\"Gradd\" (degree) — \"gradd mewn Cymraeg\" = a degree in Welsh.",
+    "fixed_tip": "\"Dw i'n\" is the spoken form of \"Rydw i'n\" (I am...) — the most common sentence pattern in Welsh.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0098",
+    "current_tip": "\"Tystiolaeth\" (evidence) — important in academic Welsh.",
+    "fixed_tip": "\"Dw i'n gweithio\" = I'm working — the \"yn\" particle links \"bod\" to the verb-noun.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0111",
+    "current_tip": "\"Fy\" (my) triggers nasal mutation: \"fy nhad\" (my father), \"fy mam\" (my mother).",
+    "fixed_tip": "\"Oes\" is the question form of \"Mae\" for existence/possession. Answer: \"Oes\" (yes) or \"Nac oes\" (no).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0128",
+    "current_tip": "\"Mae pen tost gyda fi\" = I have a headache (a sore head is with me).",
+    "fixed_tip": "\"Dw i'n mynd\" = I'm going — \"mynd\" (to go) is one of the most common irregular verbs.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0129",
+    "current_tip": "\"Meddyg\" mutates to \"feddyg\" after \"y\": \"y feddygfa\" = the surgery.",
+    "fixed_tip": "\"Dw i'n\" is the spoken form of \"Rydw i'n\" (I am...) — the most common sentence pattern in Welsh.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0146",
+    "current_tip": "\"Yn gywir\" = yours sincerely/faithfully.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0152",
+    "current_tip": "\"Eisiau\" (want/need) is a noun, not a verb — \"Mae eisiau bwyd arna i\" = want is on me.",
+    "fixed_tip": "Welsh has no verb 'to have' — possession uses \"Mae...gan/gyda\" (there is...with).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0160",
+    "current_tip": "\"Annwyd\" (cold/illness) — \"Mae annwyd arna i\" = I have a cold (a cold is on me).",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0168",
+    "current_tip": "Family words mutate after \"fy\": tad→nhad, mam→mam (m doesn't change visibly), brawd→mrawd.",
+    "fixed_tip": "\"Oes\" is the question form of \"Mae\" for existence/possession. Answer: \"Oes\" (yes) or \"Nac oes\" (no).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0178",
+    "current_tip": "T.H. Parry-Williams and Waldo Williams are major 20th-century Welsh poets.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-0185",
+    "current_tip": "\"Llaeth\" (milk) is used in \"paned o de a llaeth\" — a cup of tea with milk.",
+    "fixed_tip": "\"Beth\" (what) — Welsh question words come first, followed by the verb.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0195",
+    "current_tip": "\"Swyddfa\" (office) — \"yn y swyddfa\" = in the office.",
+    "fixed_tip": "\"Mae e'n\" (South) / \"Mae o'n\" (North) = He is — regional variants of the same construction.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0204",
+    "current_tip": "\"Marchnad\" (market) — many Welsh towns have weekly markets.",
+    "fixed_tip": "\"Ydych chi\" is the formal/plural question form of \"bod\": Are you...?",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0244",
+    "current_tip": "\"Punt\" (pound) mutates after numbers: \"pum punt\" (five pounds).",
+    "fixed_tip": "\"Beth\" (what) — Welsh question words come first, followed by the verb.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0246",
+    "current_tip": "\"Yn gywir\" = yours sincerely/faithfully.",
+    "fixed_tip": "\"Paid â\" (singular) / \"Peidiwch â\" (plural/formal) = Don't — Welsh negative imperative.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0255",
+    "current_tip": "\"Prifysgol\" (university) — from \"prif\" (chief) + \"ysgol\" (school).",
+    "fixed_tip": "\"Beth\" (what) — Welsh question words come first, followed by the verb.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0268",
+    "current_tip": "\"Blasus\" (tasty) mutates to \"flasus\" after \"yn\": \"Mae'n flasus\".",
+    "fixed_tip": "\"Oes\" is the question form of \"Mae\" for existence/possession. Answer: \"Oes\" (yes) or \"Nac oes\" (no).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0283",
+    "current_tip": "\"Er mwyn\" = \"in order to\" — takes a verbal noun.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0288",
+    "current_tip": "\"Punt\" (pound) mutates after numbers: \"pum punt\" (five pounds).",
+    "fixed_tip": "\"Ydych chi\" is the formal/plural question form of \"bod\": Are you...?",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0298",
+    "current_tip": "Family words mutate after \"fy\": tad→nhad, mam→mam (m doesn't change visibly), brawd→mrawd.",
+    "fixed_tip": "\"Beth\" (what) — Welsh question words come first, followed by the verb.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0322",
+    "current_tip": "\"Noson lawen\" is a traditional Welsh entertainment evening.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0359",
+    "current_tip": "\"Gallu\" (can/able) conjugates like a regular verb with \"bod\": \"Dw i'n gallu\".",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0361",
+    "current_tip": "Aspirate mutation only affects c, p, t → ch, ph, th.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0367",
+    "current_tip": "\"Arholiad\" (exam) — \"sefyll arholiad\" = to sit an exam.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0376",
+    "current_tip": "Welsh uses a vigesimal (base-20) system traditionally: 'deugain' (40) = two twenties.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0380",
+    "current_tip": "\"Cennin Pedr\" (daffodils) and \"cennin\" (leeks) are Welsh national symbols.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-0382",
+    "current_tip": "\"Pe baswn i'n...\" = \"If I were...\" — hypothetical conditional.",
+    "fixed_tip": "\"Faint\" (how much/many) is followed by \"o\" + noun when counting.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0403",
+    "current_tip": "Family words mutate after \"fy\": tad→nhad, mam→mam (m doesn't change visibly), brawd→mrawd.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0410",
+    "current_tip": "\"Mwy\" means \"more/bigger\" — \"mwy diddorol\" = more interesting.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0413",
+    "current_tip": "Conditional forms: baswn i, baset ti, basai fe/hi, basen ni, basech chi, basen nhw.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0419",
+    "current_tip": "\"Cennin Pedr\" (daffodils) and \"cennin\" (leeks) are Welsh national symbols.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-0421",
+    "current_tip": "\"Mae'r\" is the contraction of \"Mae y\" (the is...) — used before definite nouns.",
+    "fixed_tip": "\"Mae e'n\" (South) / \"Mae o'n\" (North) = He is — regional variants of the same construction.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0424",
+    "current_tip": "\"Ddoe\" (yesterday) triggers soft mutation on the following verb in some dialects.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0426",
+    "current_tip": "The imperfect uses \"roedd-\" forms of \"bod\": roeddwn i, roeddet ti, roedd e/hi, roedden ni/nhw.",
+    "fixed_tip": "\"O'r gloch\" (of the bell) = o'clock — Welsh timekeeping mirrors English structure.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0440",
+    "current_tip": "For irregular verbs, memorize the stem changes: mynd→es, dod→des, gwneud→gwnes, cael→ces.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0448",
+    "current_tip": "\"Amserlen\" (timetable) = \"amser\" (time) + \"llen\" (sheet).",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0466",
+    "current_tip": "\"Eisiau\" (want/need) is a noun, not a verb — \"Mae eisiau bwyd arna i\" = want is on me.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0484",
+    "current_tip": "Welsh has a vigesimal (base-20) counting system: \"ugain\" (20), \"deugain\" (40), \"trigain\" (60).",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0493",
+    "current_tip": "\"Eisiau\" (want/need) is a noun, not a verb — \"Mae eisiau bwyd arna i\" = want is on me.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0500",
+    "current_tip": "\"Yn gywir\" = yours sincerely/faithfully.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0519",
+    "current_tip": "\"Punt\" (pound) mutates after numbers: \"pum punt\" (five pounds).",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0526",
+    "current_tip": "\"Nid\" negates focus: \"Nid fi wnaeth\" = It wasn't me who did it.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0535",
+    "current_tip": "The Mabinogi are medieval Welsh prose tales — foundational to Welsh literature.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-0542",
+    "current_tip": "\"Roedd hi'n bwrw glaw\" = \"It was raining\" — \"bwrw glaw\" literally means \"throwing rain\".",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0543",
+    "current_tip": "\"Hedfan\" (to fly) — \"Mae'r awyren yn hedfan\" = the plane is flying.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0568",
+    "current_tip": "\"Fy\" (my) triggers nasal mutation: \"fy nhad\" (my father), \"fy mam\" (my mother).",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0572",
+    "current_tip": "Family words mutate after \"fy\": tad→nhad, mam→mam (m doesn't change visibly), brawd→mrawd.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0579",
+    "current_tip": "\"Dau/dwy\" means two — use \"dau\" with masculine and \"dwy\" with feminine nouns.",
+    "fixed_tip": "\"Wedi\" + verb-noun = have done — Welsh perfect tense: \"Dw i wedi bwyta\" = I have eaten.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0589",
+    "current_tip": "\"Gallu\" (can/able) conjugates like a regular verb with \"bod\": \"Dw i'n gallu\".",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0590",
+    "current_tip": "\"Eisiau\" (want/need) is a noun, not a verb — \"Mae eisiau bwyd arna i\" = want is on me.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0591",
+    "current_tip": "\"Bwrw glaw\" means \"raining\" — literally \"throwing rain\".",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0592",
+    "current_tip": "\"Eira\" (snow) — in Welsh, you can say \"Mae hi'n bwrw eira\" for \"it's snowing\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0593",
+    "current_tip": "\"Pris\" (price) — \"Beth yw'r pris?\" = What's the price?",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0599",
+    "current_tip": "Welsh uses \"pen-blwydd\" (head of year) for birthday — \"Pen-blwydd hapus!\"",
+    "fixed_tip": "\"Dw i'n\" is the spoken form of \"Rydw i'n\" (I am...) — the most common sentence pattern in Welsh.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0606",
+    "current_tip": "For irregular verbs, memorize the stem changes: mynd→es, dod→des, gwneud→gwnes, cael→ces.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0607",
+    "current_tip": "For irregular verbs, memorize the stem changes: mynd→es, dod→des, gwneud→gwnes, cael→ces.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0612",
+    "current_tip": "\"Marchnad\" (market) — many Welsh towns have weekly markets.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0614",
+    "current_tip": "\"Marchnad\" (market) — many Welsh towns have weekly markets.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0621",
+    "current_tip": "After \"dy\" (your informal): \"dy gar\" (your car) ← \"car\". All consonants soften.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0635",
+    "current_tip": "For irregular verbs, memorize the stem changes: mynd→es, dod→des, gwneud→gwnes, cael→ces.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0637",
+    "current_tip": "\"Rhad\" means \"cheap\" and \"drud\" means \"expensive\".",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0643",
+    "current_tip": "Welsh seasons: gwanwyn (spring), haf (summer), hydref (autumn), gaeaf (winter).",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0645",
+    "current_tip": "\"Yn gywir\" = yours sincerely/faithfully.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0646",
+    "current_tip": "\"Cennin Pedr\" (daffodils) and \"cennin\" (leeks) are Welsh national symbols.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-0654",
+    "current_tip": "\"Eisiau\" (want/need) is a noun, not a verb — \"Mae eisiau bwyd arna i\" = want is on me.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0655",
+    "current_tip": "\"Eira\" (snow) — in Welsh, you can say \"Mae hi'n bwrw eira\" for \"it's snowing\".",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0665",
+    "current_tip": "\"Faint\" means \"how much/many\" and is followed by \"o\" when counting nouns.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0667",
+    "current_tip": "Welsh has a vigesimal (base-20) counting system: \"ugain\" (20), \"deugain\" (40), \"trigain\" (60).",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0681",
+    "current_tip": "\"Dau/dwy\" means two — use \"dau\" with masculine and \"dwy\" with feminine nouns.",
+    "fixed_tip": "\"Wedi\" + verb-noun = have done — Welsh perfect tense: \"Dw i wedi bwyta\" = I have eaten.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0684",
+    "current_tip": "For irregular verbs, memorize the stem changes: mynd→es, dod→des, gwneud→gwnes, cael→ces.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0685",
+    "current_tip": "For irregular verbs, memorize the stem changes: mynd→es, dod→des, gwneud→gwnes, cael→ces.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0687",
+    "current_tip": "Welsh has a vigesimal (base-20) counting system: \"ugain\" (20), \"deugain\" (40), \"trigain\" (60).",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0690",
+    "current_tip": "\"Dau/dwy\" means two — use \"dau\" with masculine and \"dwy\" with feminine nouns.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0706",
+    "current_tip": "Welsh uses \"pen-blwydd\" (head of year) for birthday — \"Pen-blwydd hapus!\"",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0710",
+    "current_tip": "Welsh preterite has specific inflected endings: -ais i, -aist ti, -odd e/hi, -on ni, -och chi, -on nhw.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0739",
+    "current_tip": "For irregular verbs, memorize the stem changes: mynd→es, dod→des, gwneud→gwnes, cael→ces.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0742",
+    "current_tip": "The imperfect uses \"roedd-\" forms of \"bod\": roeddwn i, roeddet ti, roedd e/hi, roedden ni/nhw.",
+    "fixed_tip": "\"Ei\" (his/her) triggers different mutations: \"ei\" (his) = soft mutation, \"ei\" (her) = aspirate mutation.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0744",
+    "current_tip": "\"Eira\" (snow) — in Welsh, you can say \"Mae hi'n bwrw eira\" for \"it's snowing\".",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0745",
+    "current_tip": "\"Talu\" (to pay) — \"Ga i dalu?\" = May I pay? Note soft mutation after \"Ga i\".",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0748",
+    "current_tip": "Welsh has a vigesimal (base-20) counting system: \"ugain\" (20), \"deugain\" (40), \"trigain\" (60).",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0752",
+    "current_tip": "Welsh has a vigesimal (base-20) counting system: \"ugain\" (20), \"deugain\" (40), \"trigain\" (60).",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0774",
+    "current_tip": "\"Rhaid\" means \"must/necessity\" — \"Rhaid i fi\" = I must (necessity is to me).",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0777",
+    "current_tip": "\"Nid\" negates focus: \"Nid fi wnaeth\" = It wasn't me who did it.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0778",
+    "current_tip": "\"Nid\" negates focus: \"Nid fi wnaeth\" = It wasn't me who did it.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0784",
+    "current_tip": "\"Eisiau\" (want/need) is a noun, not a verb — \"Mae eisiau bwyd arna i\" = want is on me.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0788",
+    "current_tip": "Welsh has a vigesimal (base-20) counting system: \"ugain\" (20), \"deugain\" (40), \"trigain\" (60).",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0792",
+    "current_tip": "\"Dau/dwy\" means two — use \"dau\" with masculine and \"dwy\" with feminine nouns.",
+    "fixed_tip": "\"Wedi\" + verb-noun = have done — Welsh perfect tense: \"Dw i wedi bwyta\" = I have eaten.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0797",
+    "current_tip": "\"Rhad\" means \"cheap\" and \"drud\" means \"expensive\".",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0798",
+    "current_tip": "After \"dy\" (your informal): \"dy gar\" (your car) ← \"car\". All consonants soften.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0805",
+    "current_tip": "\"Dau/dwy\" means two — use \"dau\" with masculine and \"dwy\" with feminine nouns.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0809",
+    "current_tip": "\"Dau/dwy\" means two — use \"dau\" with masculine and \"dwy\" with feminine nouns.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0811",
+    "current_tip": "Welsh has a vigesimal (base-20) counting system: \"ugain\" (20), \"deugain\" (40), \"trigain\" (60).",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0818",
+    "current_tip": "\"Dau/dwy\" means two — use \"dau\" with masculine and \"dwy\" with feminine nouns.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0825",
+    "current_tip": "The Mabinogi has four branches: Pwyll, Branwen, Manawydan, Math.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-0829",
+    "current_tip": "\"Wrthi'n\" = \"busy/in the middle of\": \"Mae hi wrthi'n coginio\" = She's busy cooking.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0844",
+    "current_tip": "\"Cofion gorau\" = best regards.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0849",
+    "current_tip": "\"Cymru am byth\" = Wales forever — a common expression.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0850",
+    "current_tip": "\"Llawn-amser\" (full-time) vs \"rhan-amser\" (part-time).",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0859",
+    "current_tip": "\"Agos\" (near/close) — \"Pa mor agos?\" means \"How close?\"",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0860",
+    "current_tip": "\"Dadansoddi\" (to analyze) — from \"dad-\" (un-) + \"ansoddi\" (condition).",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0864",
+    "current_tip": "\"Galwch ambiwlans!\" = Call an ambulance! — imperative of \"galw\".",
+    "fixed_tip": "\"Wedi\" + verb-noun = have done — Welsh perfect tense: \"Dw i wedi bwyta\" = I have eaten.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0865",
+    "current_tip": "\"Basai fe'n hapus\" = \"He would be happy\".",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0868",
+    "current_tip": "\"Dau/dwy\" means two — use \"dau\" with masculine and \"dwy\" with feminine nouns.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0870",
+    "current_tip": "Negative relative: \"nad\" (who/that...not): \"Y dyn nad yw'n gweithio\".",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0871",
+    "current_tip": "\"Nid\" negates focus: \"Nid fi wnaeth\" = It wasn't me who did it.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0892",
+    "current_tip": "\"Dyma/dyna\" + noun creates demonstrative focus: \"Dyma'r ateb\" = Here's the answer.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0896",
+    "current_tip": "Welsh uses \"pen-blwydd\" (head of year) for birthday — \"Pen-blwydd hapus!\"",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0898",
+    "current_tip": "\"Dyma/dyna\" + noun creates demonstrative focus: \"Dyma'r ateb\" = Here's the answer.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0902",
+    "current_tip": "T.H. Parry-Williams and Waldo Williams are major 20th-century Welsh poets.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-0908",
+    "current_tip": "T.H. Parry-Williams and Waldo Williams are major 20th-century Welsh poets.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-0914",
+    "current_tip": "\"Cywydd\" is a Welsh verse form using seven-syllable couplets.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-0917",
+    "current_tip": "\"Cywydd\" is a Welsh verse form using seven-syllable couplets.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-0919",
+    "current_tip": "\"Cymru am byth\" = Wales forever — a common expression.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0921",
+    "current_tip": "\"Cymru am byth\" = Wales forever — a common expression.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0929",
+    "current_tip": "\"Rhaid\" means \"must/necessity\" — \"Rhaid i fi\" = I must (necessity is to me).",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0937",
+    "current_tip": "The Mabinogi has four branches: Pwyll, Branwen, Manawydan, Math.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-0939",
+    "current_tip": "\"Cymru am byth\" = Wales forever — a common expression.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0945",
+    "current_tip": "\"Gallu\" (can/able) conjugates like a regular verb with \"bod\": \"Dw i'n gallu\".",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0948",
+    "current_tip": "\"Cywydd\" is a Welsh verse form using seven-syllable couplets.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-0955",
+    "current_tip": "\"Cyhoeddi\" (to publish) — \"cyhoeddwyd y canlyniadau\" = the results were published.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-0984",
+    "current_tip": "\"Iaith\" (language) — \"Mae'r Gymraeg yn iaith fyw\" = Welsh is a living language.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1000",
+    "current_tip": "\"Eisiau\" (want/need) is a noun, not a verb — \"Mae eisiau bwyd arna i\" = want is on me.",
+    "fixed_tip": "\"Ga i\" (May I) comes from \"cael\" — it triggers soft mutation on the following verb-noun.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1003",
+    "current_tip": "Welsh preterite has specific inflected endings: -ais i, -aist ti, -odd e/hi, -on ni, -och chi, -on nhw.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1012",
+    "current_tip": "\"Rhaid\" means \"must/necessity\" — \"Rhaid i fi\" = I must (necessity is to me).",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1015",
+    "current_tip": "\"Arfer\" = \"used to\": \"Ro'n i'n arfer byw yma\" = I used to live here.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1016",
+    "current_tip": "\"Er mwyn\" = \"in order to\" — takes a verbal noun.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1022",
+    "current_tip": "\"Darllen\" (to read) — note the double 'l': it's \"ll\" = /ɬ/ sound.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1030",
+    "current_tip": "\"Amserlen\" (timetable) = \"amser\" (time) + \"llen\" (sheet).",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1043",
+    "current_tip": "\"Gwnes i\" + verbal noun is a common way to express past actions: \"Gwnes i fwyta\" = I ate.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1048",
+    "current_tip": "Negative relative: \"nad\" (who/that...not): \"Y dyn nad yw'n gweithio\".",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1049",
+    "current_tip": "\"A\" is used for non-present tense: \"Y dyn a ddaeth\" = The man who came.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1053",
+    "current_tip": "\"Dyma/dyna\" + noun creates demonstrative focus: \"Dyma'r ateb\" = Here's the answer.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1066",
+    "current_tip": "\"Roedd hi'n bwrw glaw\" = \"It was raining\" — \"bwrw glaw\" literally means \"throwing rain\".",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1082",
+    "current_tip": "\"Eisiau\" (want/need) is a noun, not a verb — \"Mae eisiau bwyd arna i\" = want is on me.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1084",
+    "current_tip": "\"Arfer\" = \"used to\": \"Ro'n i'n arfer byw yma\" = I used to live here.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1086",
+    "current_tip": "\"Wrthi'n\" = \"busy/in the middle of\": \"Mae hi wrthi'n coginio\" = She's busy cooking.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1087",
+    "current_tip": "\"Arfer\" = \"used to\": \"Ro'n i'n arfer byw yma\" = I used to live here.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1096",
+    "current_tip": "\"Mae pen tost gyda fi\" = I have a headache (a sore head is with me).",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1100",
+    "current_tip": "\"Annwyd\" (cold/illness) — \"Mae annwyd arna i\" = I have a cold (a cold is on me).",
+    "fixed_tip": "\"Rhaid\" (must/necessity) — Welsh expresses obligation as \"necessity is to me\": \"Rhaid i fi\".",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1106",
+    "current_tip": "\"Arfer\" = \"used to\": \"Ro'n i'n arfer byw yma\" = I used to live here.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1119",
+    "current_tip": "\"Cafodd\" + noun + \"ei\" + verbal noun = passive construction.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1122",
+    "current_tip": "\"Rhaid\" means \"must/necessity\" — \"Rhaid i fi\" = I must (necessity is to me).",
+    "fixed_tip": "\"Dw i'n\" is the spoken form of \"Rydw i'n\" (I am...) — the most common sentence pattern in Welsh.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1125",
+    "current_tip": "\"Llawn-amser\" (full-time) vs \"rhan-amser\" (part-time).",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1128",
+    "current_tip": "\"Wedi'i\" = \"has been\": \"Mae'r llyfr wedi'i ysgrifennu\" = The book has been written.",
+    "fixed_tip": "\"Ei\" (his/her) triggers different mutations: \"ei\" (his) = soft mutation, \"ei\" (her) = aspirate mutation.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1132",
+    "current_tip": "Irregular comparatives: da→gwell→gorau, drwg→gwaeth→gwaethaf, mawr→mwy→mwyaf.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1144",
+    "current_tip": "\"Swyddfa\" (office) — \"yn y swyddfa\" = in the office.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1150",
+    "current_tip": "\"Cofion gorau\" = best regards.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1152",
+    "current_tip": "Welsh preterite has specific inflected endings: -ais i, -aist ti, -odd e/hi, -on ni, -och chi, -on nhw.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1153",
+    "current_tip": "\"Iaith\" (language) — \"Mae'r Gymraeg yn iaith fyw\" = Welsh is a living language.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1161",
+    "current_tip": "\"Gallu\" (can/able) conjugates like a regular verb with \"bod\": \"Dw i'n gallu\".",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1163",
+    "current_tip": "\"Rhaid\" means \"must/necessity\" — \"Rhaid i fi\" = I must (necessity is to me).",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1167",
+    "current_tip": "\"Mor\" + adjective = \"as/so\": \"mor dal â\" = as tall as.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1168",
+    "current_tip": "\"Tystiolaeth\" (evidence) — important in academic Welsh.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1177",
+    "current_tip": "\"Llawn-amser\" (full-time) vs \"rhan-amser\" (part-time).",
+    "fixed_tip": "\"Rhaid\" (must/necessity) — Welsh expresses obligation as \"necessity is to me\": \"Rhaid i fi\".",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1181",
+    "current_tip": "\"Llawn-amser\" (full-time) vs \"rhan-amser\" (part-time).",
+    "fixed_tip": "\"Mae hi'n\" can mean both 'she is' and 'it is' (for weather, time, etc.).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1184",
+    "current_tip": "\"Cyflog\" (salary) — from \"cyf-\" (together) + \"log\" (reward).",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1187",
+    "current_tip": "Negative relative: \"nad\" (who/that...not): \"Y dyn nad yw'n gweithio\".",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1190",
+    "current_tip": "\"Englyn\" is a strict-metre verse form with complex rules.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-1192",
+    "current_tip": "\"Amserlen\" (timetable) = \"amser\" (time) + \"llen\" (sheet).",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1194",
+    "current_tip": "The imperfect of 'bod' sets the scene: 'Roedd hi'n bwrw glaw' = It was raining.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1196",
+    "current_tip": "\"Rhaid\" means \"must/necessity\" — \"Rhaid i fi\" = I must (necessity is to me).",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1197",
+    "current_tip": "\"Eisiau\" (want/need) is a noun, not a verb — \"Mae eisiau bwyd arna i\" = want is on me.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1200",
+    "current_tip": "\"Arfer\" = \"used to\": \"Ro'n i'n arfer byw yma\" = I used to live here.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1205",
+    "current_tip": "\"Mor\" + adjective = \"as/so\": \"mor dal â\" = as tall as.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1210",
+    "current_tip": "Welsh uses \"pen-blwydd\" (head of year) for birthday — \"Pen-blwydd hapus!\"",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1211",
+    "current_tip": "The imperfect uses \"roedd-\" forms of \"bod\": roeddwn i, roeddet ti, roedd e/hi, roedden ni/nhw.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1217",
+    "current_tip": "\"Wrthi'n\" = \"busy/in the middle of\": \"Mae hi wrthi'n coginio\" = She's busy cooking.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1225",
+    "current_tip": "\"Faint\" means \"how much/many\" and is followed by \"o\" when counting nouns.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1249",
+    "current_tip": "\"Tywydd\" (weather) — \"Sut mae'r tywydd?\" = How is the weather?",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1251",
+    "current_tip": "\"Pe baswn i'n...\" = \"If I were...\" — hypothetical conditional.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1258",
+    "current_tip": "\"Llaeth\" (milk) is used in \"paned o de a llaeth\" — a cup of tea with milk.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1275",
+    "current_tip": "\"Llawn-amser\" (full-time) vs \"rhan-amser\" (part-time).",
+    "fixed_tip": "\"Rhaid\" (must/necessity) — Welsh expresses obligation as \"necessity is to me\": \"Rhaid i fi\".",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1286",
+    "current_tip": "\"Annwyl Syr/Madam\" = Dear Sir/Madam — formal letter opening.",
+    "fixed_tip": "\"Ei\" (his/her) triggers different mutations: \"ei\" (his) = soft mutation, \"ei\" (her) = aspirate mutation.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1295",
+    "current_tip": "Family words mutate after \"fy\": tad→nhad, mam→mam (m doesn't change visibly), brawd→mrawd.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1306",
+    "current_tip": "\"Cyflog\" (salary) — from \"cyf-\" (together) + \"log\" (reward).",
+    "fixed_tip": "\"Rhaid\" (must/necessity) — Welsh expresses obligation as \"necessity is to me\": \"Rhaid i fi\".",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1307",
+    "current_tip": "\"Swyddfa\" (office) — \"yn y swyddfa\" = in the office.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1316",
+    "current_tip": "The impersonal \"-wyd\" ending: \"Penderfynwyd\" = It was decided.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1317",
+    "current_tip": "After \"dy\" (your informal): \"dy gar\" (your car) ← \"car\". All consonants soften.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1331",
+    "current_tip": "\"Cyflog\" (salary) — from \"cyf-\" (together) + \"log\" (reward).",
+    "fixed_tip": "\"Rhaid\" (must/necessity) — Welsh expresses obligation as \"necessity is to me\": \"Rhaid i fi\".",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1332",
+    "current_tip": "Pluperfect: \"Roeddwn i wedi...\" = \"I had...\" — imperfect of bod + wedi + verbnoun.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1342",
+    "current_tip": "\"Annwyl Syr/Madam\" = Dear Sir/Madam — formal letter opening.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1346",
+    "current_tip": "\"Llawn-amser\" (full-time) vs \"rhan-amser\" (part-time).",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1350",
+    "current_tip": "Irregular comparatives: da→gwell→gorau, drwg→gwaeth→gwaethaf, mawr→mwy→mwyaf.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1352",
+    "current_tip": "\"Iaith\" (language) — \"Mae'r Gymraeg yn iaith fyw\" = Welsh is a living language.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1356",
+    "current_tip": "\"Ddoe\" (yesterday) triggers soft mutation on the following verb in some dialects.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1360",
+    "current_tip": "\"Noson lawen\" is a traditional Welsh entertainment evening.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1377",
+    "current_tip": "\"A\" is used for non-present tense: \"Y dyn a ddaeth\" = The man who came.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1379",
+    "current_tip": "\"Dal ati\" = keep going/carry on.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1380",
+    "current_tip": "\"Englyn\" is a strict-metre verse form with complex rules.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-1385",
+    "current_tip": "\"Faint\" means \"how much/many\" and is followed by \"o\" when counting nouns.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1388",
+    "current_tip": "\"Ar bwys\" means \"near/beside\" — literally \"on the weight of\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1401",
+    "current_tip": "\"Prifysgol\" (university) — from \"prif\" (chief) + \"ysgol\" (school).",
+    "fixed_tip": "\"Dw i'n\" is the spoken form of \"Rydw i'n\" (I am...) — the most common sentence pattern in Welsh.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1404",
+    "current_tip": "\"Yn gywir\" = yours sincerely/faithfully.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1409",
+    "current_tip": "\"A fyddech chi mor garedig â...?\" = Would you be so kind as to...?",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1414",
+    "current_tip": "Welsh uses \"pen-blwydd\" (head of year) for birthday — \"Pen-blwydd hapus!\"",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1415",
+    "current_tip": "\"Agos\" (near/close) — \"Pa mor agos?\" means \"How close?\"",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1434",
+    "current_tip": "Future with \"bod\": bydda i, byddi di, bydd e/hi, byddwn ni, byddwch chi, byddan nhw.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1446",
+    "current_tip": "\"Punt\" (pound) mutates after numbers: \"pum punt\" (five pounds).",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1452",
+    "current_tip": "\"Annwyl Syr/Madam\" = Dear Sir/Madam — formal letter opening.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1454",
+    "current_tip": "\"Bwrw glaw\" means \"raining\" — literally \"throwing rain\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1459",
+    "current_tip": "\"A fyddech chi mor garedig â...?\" = Would you be so kind as to...?",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1463",
+    "current_tip": "\"Cyflog\" (salary) — from \"cyf-\" (together) + \"log\" (reward).",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1470",
+    "current_tip": "\"Mwy\" means \"more/bigger\" — \"mwy diddorol\" = more interesting.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1477",
+    "current_tip": "\"Ar bwys\" means \"near/beside\" — literally \"on the weight of\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1478",
+    "current_tip": "Welsh preterite has specific inflected endings: -ais i, -aist ti, -odd e/hi, -on ni, -och chi, -on nhw.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1486",
+    "current_tip": "\"A fyddech chi mor garedig â...?\" = Would you be so kind as to...?",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1489",
+    "current_tip": "\"Bwrw glaw\" means \"raining\" — literally \"throwing rain\".",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1504",
+    "current_tip": "Welsh has a vigesimal (base-20) counting system: \"ugain\" (20), \"deugain\" (40), \"trigain\" (60).",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1506",
+    "current_tip": "Family words mutate after \"fy\": tad→nhad, mam→mam (m doesn't change visibly), brawd→mrawd.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1508",
+    "current_tip": "\"Agos\" (near/close) — \"Pa mor agos?\" means \"How close?\"",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1510",
+    "current_tip": "\"Gwnes i\" + verbal noun is a common way to express past actions: \"Gwnes i fwyta\" = I ate.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1511",
+    "current_tip": "\"Gwnes i\" + verbal noun is a common way to express past actions: \"Gwnes i fwyta\" = I ate.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1513",
+    "current_tip": "\"Roedd hi'n bwrw glaw\" = \"It was raining\" — \"bwrw glaw\" literally means \"throwing rain\".",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1514",
+    "current_tip": "\"Roedd hi'n bwrw glaw\" = \"It was raining\" — \"bwrw glaw\" literally means \"throwing rain\".",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1516",
+    "current_tip": "\"Roedd hi'n bwrw glaw\" = \"It was raining\" — \"bwrw glaw\" literally means \"throwing rain\".",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1519",
+    "current_tip": "\"Bwrw glaw\" means \"raining\" — literally \"throwing rain\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1521",
+    "current_tip": "\"Galwch ambiwlans!\" = Call an ambulance! — imperative of \"galw\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1545",
+    "current_tip": "\"Ar fin\" = \"about to\": \"Mae e ar fin gadael\" = He's about to leave.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1559",
+    "current_tip": "\"Roedd hi'n bwrw glaw\" = \"It was raining\" — \"bwrw glaw\" literally means \"throwing rain\".",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1572",
+    "current_tip": "\"Yn\" (in) before place names can trigger nasal mutation: \"yng Nghymru\", \"ym Mangor\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1589",
+    "current_tip": "Aspirate mutation only affects c, p, t → ch, ph, th.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1591",
+    "current_tip": "\"Nid\" negates focus: \"Nid fi wnaeth\" = It wasn't me who did it.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1592",
+    "current_tip": "\"Yn gywir\" = yours sincerely/faithfully.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1597",
+    "current_tip": "\"Galwch ambiwlans!\" = Call an ambulance! — imperative of \"galw\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1611",
+    "current_tip": "\"Hen ddigon\" = quite enough (old enough).",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1613",
+    "current_tip": "\"Mor\" + adjective = \"as/so\": \"mor dal â\" = as tall as.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1614",
+    "current_tip": "\"Cyflog\" (salary) — from \"cyf-\" (together) + \"log\" (reward).",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1618",
+    "current_tip": "\"Ddoe\" (yesterday) triggers soft mutation on the following verb in some dialects.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1619",
+    "current_tip": "\"Talu\" (to pay) — \"Ga i dalu?\" = May I pay? Note soft mutation after \"Ga i\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1626",
+    "current_tip": "After \"dy\" (your informal): \"dy gar\" (your car) ← \"car\". All consonants soften.",
+    "fixed_tip": "\"Mae hi'n\" can mean both 'she is' and 'it is' (for weather, time, etc.).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1640",
+    "current_tip": "Welsh seasons: gwanwyn (spring), haf (summer), hydref (autumn), gaeaf (winter).",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1642",
+    "current_tip": "\"Basai fe'n hapus\" = \"He would be happy\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1644",
+    "current_tip": "The impersonal \"-wyd\" ending: \"Penderfynwyd\" = It was decided.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1646",
+    "current_tip": "Irregular comparatives: da→gwell→gorau, drwg→gwaeth→gwaethaf, mawr→mwy→mwyaf.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1665",
+    "current_tip": "The imperfect uses \"roedd-\" forms of \"bod\": roeddwn i, roeddet ti, roedd e/hi, roedden ni/nhw.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1669",
+    "current_tip": "\"Roedd hi'n bwrw glaw\" = \"It was raining\" — \"bwrw glaw\" literally means \"throwing rain\".",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1677",
+    "current_tip": "After \"dy\" (your informal): \"dy gar\" (your car) ← \"car\". All consonants soften.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1703",
+    "current_tip": "Conditional forms: baswn i, baset ti, basai fe/hi, basen ni, basech chi, basen nhw.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1706",
+    "current_tip": "\"Nid\" negates focus: \"Nid fi wnaeth\" = It wasn't me who did it.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1707",
+    "current_tip": "\"Mae pen tost gyda fi\" = I have a headache (a sore head is with me).",
+    "fixed_tip": "\"Dw i'n mynd\" = I'm going — \"mynd\" (to go) is one of the most common irregular verbs.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1709",
+    "current_tip": "Impersonal passive: \"-ir\" ending: \"Siaredir Cymraeg yma\" = Welsh is spoken here.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1718",
+    "current_tip": "Irregular comparatives: da→gwell→gorau, drwg→gwaeth→gwaethaf, mawr→mwy→mwyaf.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1723",
+    "current_tip": "\"Cyhoeddi\" (to publish) — \"cyhoeddwyd y canlyniadau\" = the results were published.",
+    "fixed_tip": "\"Dw i'n\" is the spoken form of \"Rydw i'n\" (I am...) — the most common sentence pattern in Welsh.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1725",
+    "current_tip": "\"Mor\" + adjective = \"as/so\": \"mor dal â\" = as tall as.",
+    "fixed_tip": "\"Mae e'n\" (South) / \"Mae o'n\" (North) = He is — regional variants of the same construction.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1728",
+    "current_tip": "After \"dy\" (your informal): \"dy gar\" (your car) ← \"car\". All consonants soften.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1740",
+    "current_tip": "\"Gyferbyn â\" means \"opposite\" — note the soft mutation on \"cyferbyn\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1741",
+    "current_tip": "\"Ddoe\" (yesterday) triggers soft mutation on the following verb in some dialects.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1744",
+    "current_tip": "\"Talu\" (to pay) — \"Ga i dalu?\" = May I pay? Note soft mutation after \"Ga i\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1748",
+    "current_tip": "\"Noson lawen\" is a traditional Welsh entertainment evening.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1753",
+    "current_tip": "\"Agos\" (near/close) — \"Pa mor agos?\" means \"How close?\"",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1759",
+    "current_tip": "\"Mor\" + adjective = \"as/so\": \"mor dal â\" = as tall as.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1780",
+    "current_tip": "The Eisteddfod is Wales's biggest cultural festival — held annually since 1176.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-1781",
+    "current_tip": "\"Mae pen tost gyda fi\" = I have a headache (a sore head is with me).",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1787",
+    "current_tip": "\"Sy/sydd\" is the relative form of \"bod\" (present): \"Y dyn sy'n siarad\" = The man who speaks.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1790",
+    "current_tip": "\"Arholiad\" (exam) — \"sefyll arholiad\" = to sit an exam.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1797",
+    "current_tip": "After \"dy\" (your informal): \"dy gar\" (your car) ← \"car\". All consonants soften.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1801",
+    "current_tip": "\"Fy\" (my) triggers nasal mutation: car→fy nghar, tad→fy nhad, pen→fy mhen.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1807",
+    "current_tip": "\"Yn\" (in) before place names can trigger nasal mutation: \"yng Nghymru\", \"ym Mangor\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1808",
+    "current_tip": "\"Fy\" (my) triggers nasal mutation: car→fy nghar, tad→fy nhad, pen→fy mhen.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1827",
+    "current_tip": "\"Basai fe'n hapus\" = \"He would be happy\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1833",
+    "current_tip": "\"Talu\" (to pay) — \"Ga i dalu?\" = May I pay? Note soft mutation after \"Ga i\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1839",
+    "current_tip": "Negative relative: \"nad\" (who/that...not): \"Y dyn nad yw'n gweithio\".",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1854",
+    "current_tip": "Irregular comparatives: da→gwell→gorau, drwg→gwaeth→gwaethaf, mawr→mwy→mwyaf.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1855",
+    "current_tip": "\"Tystiolaeth\" (evidence) — important in academic Welsh.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1859",
+    "current_tip": "\"Er mwyn\" = \"in order to\" — takes a verbal noun.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1865",
+    "current_tip": "\"Ddoe\" (yesterday) triggers soft mutation on the following verb in some dialects.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1866",
+    "current_tip": "\"Ddoe\" (yesterday) triggers soft mutation on the following verb in some dialects.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1880",
+    "current_tip": "Welsh seasons: gwanwyn (spring), haf (summer), hydref (autumn), gaeaf (winter).",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1881",
+    "current_tip": "\"Marchnad\" (market) — many Welsh towns have weekly markets.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1884",
+    "current_tip": "\"Basai fe'n hapus\" = \"He would be happy\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1892",
+    "current_tip": "\"Blasus\" (tasty) mutates to \"flasus\" after \"yn\": \"Mae'n flasus\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1897",
+    "current_tip": "\"Ddoe\" (yesterday) triggers soft mutation on the following verb in some dialects.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1898",
+    "current_tip": "For irregular verbs, memorize the stem changes: mynd→es, dod→des, gwneud→gwnes, cael→ces.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1902",
+    "current_tip": "Welsh seasons: gwanwyn (spring), haf (summer), hydref (autumn), gaeaf (winter).",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1903",
+    "current_tip": "\"Talu\" (to pay) — \"Ga i dalu?\" = May I pay? Note soft mutation after \"Ga i\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1916",
+    "current_tip": "\"Noson lawen\" is a traditional Welsh entertainment evening.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1918",
+    "current_tip": "The Eisteddfod is Wales's biggest cultural festival — held annually since 1176.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-1921",
+    "current_tip": "\"Galwch ambiwlans!\" = Call an ambulance! — imperative of \"galw\".",
+    "fixed_tip": "\"Wedi\" + verb-noun = have done — Welsh perfect tense: \"Dw i wedi bwyta\" = I have eaten.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1922",
+    "current_tip": "\"Fy\" (my) triggers nasal mutation: car→fy nghar, tad→fy nhad, pen→fy mhen.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1931",
+    "current_tip": "\"Llaeth\" (milk) is used in \"paned o de a llaeth\" — a cup of tea with milk.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1932",
+    "current_tip": "\"Gyferbyn â\" means \"opposite\" — note the soft mutation on \"cyferbyn\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1933",
+    "current_tip": "\"Gwnes i\" + verbal noun is a common way to express past actions: \"Gwnes i fwyta\" = I ate.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1935",
+    "current_tip": "\"Eira\" (snow) — in Welsh, you can say \"Mae hi'n bwrw eira\" for \"it's snowing\".",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1946",
+    "current_tip": "\"Basai fe'n hapus\" = \"He would be happy\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1948",
+    "current_tip": "Conditional forms: baswn i, baset ti, basai fe/hi, basen ni, basech chi, basen nhw.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1950",
+    "current_tip": "\"Dal ati\" = keep going/carry on.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1955",
+    "current_tip": "After \"dy\" (your informal): \"dy gar\" (your car) ← \"car\". All consonants soften.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1958",
+    "current_tip": "\"Annwyl Syr/Madam\" = Dear Sir/Madam — formal letter opening.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1959",
+    "current_tip": "\"Gyferbyn â\" means \"opposite\" — note the soft mutation on \"cyferbyn\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1960",
+    "current_tip": "\"Ddoe\" (yesterday) triggers soft mutation on the following verb in some dialects.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1962",
+    "current_tip": "\"Talu\" (to pay) — \"Ga i dalu?\" = May I pay? Note soft mutation after \"Ga i\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1963",
+    "current_tip": "\"Pris\" (price) — \"Beth yw'r pris?\" = What's the price?",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1970",
+    "current_tip": "\"Gyferbyn â\" means \"opposite\" — note the soft mutation on \"cyferbyn\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1973",
+    "current_tip": "Irregular comparatives: da→gwell→gorau, drwg→gwaeth→gwaethaf, mawr→mwy→mwyaf.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1975",
+    "current_tip": "\"Mae pen tost gyda fi\" = I have a headache (a sore head is with me).",
+    "fixed_tip": "\"Wedi\" + verb-noun = have done — Welsh perfect tense: \"Dw i wedi bwyta\" = I have eaten.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1982",
+    "current_tip": "The Mabinogi are medieval Welsh prose tales — foundational to Welsh literature.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-1990",
+    "current_tip": "Family words mutate after \"fy\": tad→nhad, mam→mam (m doesn't change visibly), brawd→mrawd.",
+    "fixed_tip": "Welsh has no verb 'to have' — possession uses \"Mae...gan/gyda\" (there is...with).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1992",
+    "current_tip": "\"Dal ati\" = keep going/carry on.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1997",
+    "current_tip": "For irregular verbs, memorize the stem changes: mynd→es, dod→des, gwneud→gwnes, cael→ces.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2003",
+    "current_tip": "\"Fy\" (my) triggers nasal mutation: \"fy nhad\" (my father), \"fy mam\" (my mother).",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2005",
+    "current_tip": "\"Yn\" (in) before place names can trigger nasal mutation: \"yng Nghymru\", \"ym Mangor\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2006",
+    "current_tip": "\"Yn\" (in) before place names can trigger nasal mutation: \"yng Nghymru\", \"ym Mangor\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2007",
+    "current_tip": "\"Fy\" (my) triggers nasal mutation: car→fy nghar, tad→fy nhad, pen→fy mhen.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2020",
+    "current_tip": "\"Cennin Pedr\" (daffodils) and \"cennin\" (leeks) are Welsh national symbols.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-2023",
+    "current_tip": "\"Iaith\" (language) — \"Mae'r Gymraeg yn iaith fyw\" = Welsh is a living language.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2034",
+    "current_tip": "\"Ar bigau'r drain\" = on tenterhooks (on the thorns' prickles).",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2036",
+    "current_tip": "\"Punt\" (pound) mutates after numbers: \"pum punt\" (five pounds).",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2041",
+    "current_tip": "\"A fydd e'n...?\" = \"Will he be...?\" — question form.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2051",
+    "current_tip": "\"Annwyl Syr/Madam\" = Dear Sir/Madam — formal letter opening.",
+    "fixed_tip": "\"Paid â\" (singular) / \"Peidiwch â\" (plural/formal) = Don't — Welsh negative imperative.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2061",
+    "current_tip": "\"Methodoleg\" (methodology) — borrowed from English/Latin.",
+    "fixed_tip": "\"Rhaid\" (must/necessity) — Welsh expresses obligation as \"necessity is to me\": \"Rhaid i fi\".",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2065",
+    "current_tip": "\"Fy\" (my) triggers nasal mutation: car→fy nghar, tad→fy nhad, pen→fy mhen.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2067",
+    "current_tip": "\"Tywydd\" (weather) — \"Sut mae'r tywydd?\" = How is the weather?",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2069",
+    "current_tip": "\"A fydd e'n...?\" = \"Will he be...?\" — question form.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2078",
+    "current_tip": "\"Methodoleg\" (methodology) — borrowed from English/Latin.",
+    "fixed_tip": "\"Dw i'n\" is the spoken form of \"Rydw i'n\" (I am...) — the most common sentence pattern in Welsh.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2087",
+    "current_tip": "\"Basai fe'n hapus\" = \"He would be happy\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2093",
+    "current_tip": "\"Cennin Pedr\" (daffodils) and \"cennin\" (leeks) are Welsh national symbols.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-2102",
+    "current_tip": "Aspirate mutation only affects c, p, t → ch, ph, th.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2103",
+    "current_tip": "Future with \"bod\": bydda i, byddi di, bydd e/hi, byddwn ni, byddwch chi, byddan nhw.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2107",
+    "current_tip": "\"A fydd e'n...?\" = \"Will he be...?\" — question form.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2108",
+    "current_tip": "Future with \"bod\": bydda i, byddi di, bydd e/hi, byddwn ni, byddwch chi, byddan nhw.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2114",
+    "current_tip": "\"Hen ddigon\" = quite enough (old enough).",
+    "fixed_tip": "\"Ei\" (his/her) triggers different mutations: \"ei\" (his) = soft mutation, \"ei\" (her) = aspirate mutation.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2118",
+    "current_tip": "\"Yn gywir\" = yours sincerely/faithfully.",
+    "fixed_tip": "\"Paid â\" (singular) / \"Peidiwch â\" (plural/formal) = Don't — Welsh negative imperative.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2121",
+    "current_tip": "\"Ar bwys\" means \"near/beside\" — literally \"on the weight of\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2123",
+    "current_tip": "\"A fydd e'n...?\" = \"Will he be...?\" — question form.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2131",
+    "current_tip": "\"Dydd Gŵyl Dewi\" (March 1st) is St David's Day — Wales's national day.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-2133",
+    "current_tip": "\"Ar fin\" = \"about to\": \"Mae e ar fin gadael\" = He's about to leave.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2137",
+    "current_tip": "\"Cywydd\" is a Welsh verse form using seven-syllable couplets.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-2146",
+    "current_tip": "\"Fy\" (my) triggers nasal mutation: \"fy nhad\" (my father), \"fy mam\" (my mother).",
+    "fixed_tip": "Welsh has no verb 'to have' — possession uses \"Mae...gan/gyda\" (there is...with).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2148",
+    "current_tip": "\"Rhad\" means \"cheap\" and \"drud\" means \"expensive\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2149",
+    "current_tip": "\"Galwch ambiwlans!\" = Call an ambulance! — imperative of \"galw\".",
+    "fixed_tip": "Welsh has no verb 'to have' — possession uses \"Mae...gan/gyda\" (there is...with).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2152",
+    "current_tip": "\"Dŵr dan bont\" = water under the bridge.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2160",
+    "current_tip": "\"A fyddech chi mor garedig â...?\" = Would you be so kind as to...?",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2165",
+    "current_tip": "\"Roedd hi'n bwrw glaw\" = \"It was raining\" — \"bwrw glaw\" literally means \"throwing rain\".",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2174",
+    "current_tip": "\"Marchnad\" (market) — many Welsh towns have weekly markets.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2186",
+    "current_tip": "\"Basai fe'n hapus\" = \"He would be happy\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2188",
+    "current_tip": "\"Hen ddigon\" = quite enough (old enough).",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2192",
+    "current_tip": "\"Basai fe'n hapus\" = \"He would be happy\".",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2200",
+    "current_tip": "\"Noson lawen\" is a traditional Welsh entertainment evening.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2209",
+    "current_tip": "\"Prifysgol\" (university) — from \"prif\" (chief) + \"ysgol\" (school).",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2220",
+    "current_tip": "\"Darllen\" (to read) — note the double 'l': it's \"ll\" = /ɬ/ sound.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2221",
+    "current_tip": "\"Ar fin\" = \"about to\": \"Mae e ar fin gadael\" = He's about to leave.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2222",
+    "current_tip": "\"Meddyg\" mutates to \"feddyg\" after \"y\": \"y feddygfa\" = the surgery.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2243",
+    "current_tip": "\"Roedd hi'n bwrw glaw\" = \"It was raining\" — \"bwrw glaw\" literally means \"throwing rain\".",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2252",
+    "current_tip": "The Eisteddfod is Wales's biggest cultural festival — held annually since 1176.",
+    "fixed_tip": "",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-2256",
+    "current_tip": "\"Mae pen tost gyda fi\" = I have a headache (a sore head is with me).",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2262",
+    "current_tip": "\"Methodoleg\" (methodology) — borrowed from English/Latin.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2273",
+    "current_tip": "\"Mwy\" means \"more/bigger\" — \"mwy diddorol\" = more interesting.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2290",
+    "current_tip": "\"Darllen\" (to read) — note the double 'l': it's \"ll\" = /ɬ/ sound.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2294",
+    "current_tip": "\"Tywydd\" (weather) — \"Sut mae'r tywydd?\" = How is the weather?",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2297",
+    "current_tip": "\"Yn gywir\" = yours sincerely/faithfully.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2341",
+    "current_tip": "\"Mwy\" means \"more/bigger\" — \"mwy diddorol\" = more interesting.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2343",
+    "current_tip": "\"Ar bigau'r drain\" = on tenterhooks (on the thorns' prickles).",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2352",
+    "current_tip": "\"Arholiad\" (exam) — \"sefyll arholiad\" = to sit an exam.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2354",
+    "current_tip": "\"Meddyg\" mutates to \"feddyg\" after \"y\": \"y feddygfa\" = the surgery.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2372",
+    "current_tip": "\"Arholiad\" (exam) — \"sefyll arholiad\" = to sit an exam.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2378",
+    "current_tip": "\"Englyn\" is a strict-metre verse form with complex rules.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-2379",
+    "current_tip": "\"A\" is used for non-present tense: \"Y dyn a ddaeth\" = The man who came.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2383",
+    "current_tip": "\"Ar fin\" = \"about to\": \"Mae e ar fin gadael\" = He's about to leave.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2389",
+    "current_tip": "\"A\" is used for non-present tense: \"Y dyn a ddaeth\" = The man who came.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2395",
+    "current_tip": "\"A\" is used for non-present tense: \"Y dyn a ddaeth\" = The man who came.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2400",
+    "current_tip": "\"Englyn\" is a strict-metre verse form with complex rules.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-2403",
+    "current_tip": "\"Gradd\" (degree) — \"gradd mewn Cymraeg\" = a degree in Welsh.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2407",
+    "current_tip": "\"Blasus\" (tasty) mutates to \"flasus\" after \"yn\": \"Mae'n flasus\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2412",
+    "current_tip": "\"Cyhoeddi\" (to publish) — \"cyhoeddwyd y canlyniadau\" = the results were published.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2413",
+    "current_tip": "\"Ymchwil\" (research) — \"gwneud ymchwil\" = to do research.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2424",
+    "current_tip": "\"Prifysgol\" (university) — from \"prif\" (chief) + \"ysgol\" (school).",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2425",
+    "current_tip": "\"Prifysgol\" (university) — from \"prif\" (chief) + \"ysgol\" (school).",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2432",
+    "current_tip": "Negative relative: \"nad\" (who/that...not): \"Y dyn nad yw'n gweithio\".",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2435",
+    "current_tip": "\"Cyhoeddi\" (to publish) — \"cyhoeddwyd y canlyniadau\" = the results were published.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2446",
+    "current_tip": "\"Arholiad\" (exam) — \"sefyll arholiad\" = to sit an exam.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2454",
+    "current_tip": "\"Darllen\" (to read) — note the double 'l': it's \"ll\" = /ɬ/ sound.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2455",
+    "current_tip": "\"Arholiad\" (exam) — \"sefyll arholiad\" = to sit an exam.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2462",
+    "current_tip": "\"Wrthi'n\" = \"busy/in the middle of\": \"Mae hi wrthi'n coginio\" = She's busy cooking.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2473",
+    "current_tip": "\"Arfer\" = \"used to\": \"Ro'n i'n arfer byw yma\" = I used to live here.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2474",
+    "current_tip": "\"Cywydd\" is a Welsh verse form using seven-syllable couplets.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-2475",
+    "current_tip": "\"Gyferbyn â\" means \"opposite\" — note the soft mutation on \"cyferbyn\".",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2477",
+    "current_tip": "\"Dydd Gŵyl Dewi\" (March 1st) is St David's Day — Wales's national day.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-2481",
+    "current_tip": "\"Tywydd\" (weather) — \"Sut mae'r tywydd?\" = How is the weather?",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2484",
+    "current_tip": "\"Pe baswn i'n...\" = \"If I were...\" — hypothetical conditional.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2488",
+    "current_tip": "\"Gradd\" (degree) — \"gradd mewn Cymraeg\" = a degree in Welsh.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2503",
+    "current_tip": "\"Gradd\" (degree) — \"gradd mewn Cymraeg\" = a degree in Welsh.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2507",
+    "current_tip": "\"Yn gywir\" = yours sincerely/faithfully.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2510",
+    "current_tip": "\"Pe baswn i'n...\" = \"If I were...\" — hypothetical conditional.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2515",
+    "current_tip": "\"Cyn\" (before) and \"ar ôl\" (after) can take verbal nouns.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2527",
+    "current_tip": "\"Arholiad\" (exam) — \"sefyll arholiad\" = to sit an exam.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2534",
+    "current_tip": "\"Er mwyn\" = \"in order to\" — takes a verbal noun.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2554",
+    "current_tip": "\"Ar fin\" = \"about to\": \"Mae e ar fin gadael\" = He's about to leave.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2569",
+    "current_tip": "\"Tywydd\" (weather) — \"Sut mae'r tywydd?\" = How is the weather?",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2573",
+    "current_tip": "\"Pe baswn i'n...\" = \"If I were...\" — hypothetical conditional.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2575",
+    "current_tip": "\"Cymru am byth\" = Wales forever — a common expression.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2577",
+    "current_tip": "\"Sy/sydd\" is the relative form of \"bod\" (present): \"Y dyn sy'n siarad\" = The man who speaks.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2582",
+    "current_tip": "\"Tywydd\" (weather) — \"Sut mae'r tywydd?\" = How is the weather?",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2586",
+    "current_tip": "\"Achos\" and \"oherwydd\" both mean \"because\" — \"achos\" is more colloquial.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2592",
+    "current_tip": "\"Talu\" (to pay) — \"Ga i dalu?\" = May I pay? Note soft mutation after \"Ga i\".",
+    "fixed_tip": "\"Wedi\" + verb-noun = have done — Welsh perfect tense: \"Dw i wedi bwyta\" = I have eaten.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2594",
+    "current_tip": "\"Pe baswn i'n...\" = \"If I were...\" — hypothetical conditional.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2598",
+    "current_tip": "\"Mwy\" means \"more/bigger\" — \"mwy diddorol\" = more interesting.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2600",
+    "current_tip": "After \"dy\" (your informal): \"dy gar\" (your car) ← \"car\". All consonants soften.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2611",
+    "current_tip": "\"A\" is used for non-present tense: \"Y dyn a ddaeth\" = The man who came.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2617",
+    "current_tip": "\"A\" is used for non-present tense: \"Y dyn a ddaeth\" = The man who came.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2623",
+    "current_tip": "Conditional forms: baswn i, baset ti, basai fe/hi, basen ni, basech chi, basen nhw.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2624",
+    "current_tip": "\"Ar fin\" = \"about to\": \"Mae e ar fin gadael\" = He's about to leave.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2626",
+    "current_tip": "\"Rhad\" means \"cheap\" and \"drud\" means \"expensive\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2633",
+    "current_tip": "\"Punt\" (pound) mutates after numbers: \"pum punt\" (five pounds).",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2634",
+    "current_tip": "\"Tywydd\" (weather) — \"Sut mae'r tywydd?\" = How is the weather?",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2637",
+    "current_tip": "\"Eira\" (snow) — in Welsh, you can say \"Mae hi'n bwrw eira\" for \"it's snowing\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2640",
+    "current_tip": "\"Dyma/dyna\" + noun creates demonstrative focus: \"Dyma'r ateb\" = Here's the answer.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2642",
+    "current_tip": "Conditional forms: baswn i, baset ti, basai fe/hi, basen ni, basech chi, basen nhw.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2662",
+    "current_tip": "\"Achos\" and \"oherwydd\" both mean \"because\" — \"achos\" is more colloquial.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2666",
+    "current_tip": "\"Achos\" and \"oherwydd\" both mean \"because\" — \"achos\" is more colloquial.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2677",
+    "current_tip": "\"Cyn\" (before) and \"ar ôl\" (after) can take verbal nouns.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2679",
+    "current_tip": "\"Er mwyn\" = \"in order to\" — takes a verbal noun.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2682",
+    "current_tip": "\"Cyn\" (before) and \"ar ôl\" (after) can take verbal nouns.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2686",
+    "current_tip": "\"Pris\" (price) — \"Beth yw'r pris?\" = What's the price?",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2692",
+    "current_tip": "Aspirate mutation only affects c, p, t → ch, ph, th.",
+    "fixed_tip": "\"Wedi\" + verb-noun = have done — Welsh perfect tense: \"Dw i wedi bwyta\" = I have eaten.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2697",
+    "current_tip": "After \"dy\" (your informal): \"dy gar\" (your car) ← \"car\". All consonants soften.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2699",
+    "current_tip": "Negative relative: \"nad\" (who/that...not): \"Y dyn nad yw'n gweithio\".",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2709",
+    "current_tip": "Pluperfect: \"Roeddwn i wedi...\" = \"I had...\" — imperfect of bod + wedi + verbnoun.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2710",
+    "current_tip": "\"Annwyl Syr/Madam\" = Dear Sir/Madam — formal letter opening.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2716",
+    "current_tip": "Pluperfect: \"Roeddwn i wedi...\" = \"I had...\" — imperfect of bod + wedi + verbnoun.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2724",
+    "current_tip": "\"Achos\" and \"oherwydd\" both mean \"because\" — \"achos\" is more colloquial.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2726",
+    "current_tip": "\"Cyn\" (before) and \"ar ôl\" (after) can take verbal nouns.",
+    "fixed_tip": "\"Roedd\" is the imperfect (was/were) form of \"bod\" — used for past states and ongoing past actions.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2727",
+    "current_tip": "\"Iaith\" (language) — \"Mae'r Gymraeg yn iaith fyw\" = Welsh is a living language.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2732",
+    "current_tip": "Pluperfect: \"Roeddwn i wedi...\" = \"I had...\" — imperfect of bod + wedi + verbnoun.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2736",
+    "current_tip": "\"Bwrw glaw\" means \"raining\" — literally \"throwing rain\".",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2738",
+    "current_tip": "\"Talu\" (to pay) — \"Ga i dalu?\" = May I pay? Note soft mutation after \"Ga i\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2742",
+    "current_tip": "\"Agos\" (near/close) — \"Pa mor agos?\" means \"How close?\"",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2748",
+    "current_tip": "Welsh seasons: gwanwyn (spring), haf (summer), hydref (autumn), gaeaf (winter).",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2752",
+    "current_tip": "\"Hedfan\" (to fly) — \"Mae'r awyren yn hedfan\" = the plane is flying.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2759",
+    "current_tip": "\"Cofion gorau\" = best regards.",
+    "fixed_tip": "\"Wedi\" + verb-noun = have done — Welsh perfect tense: \"Dw i wedi bwyta\" = I have eaten.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2776",
+    "current_tip": "\"Yn\" (in) before place names can trigger nasal mutation: \"yng Nghymru\", \"ym Mangor\".",
+    "fixed_tip": "\"Wedi\" + verb-noun = have done — Welsh perfect tense: \"Dw i wedi bwyta\" = I have eaten.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2779",
+    "current_tip": "\"Faint\" means \"how much/many\" and is followed by \"o\" when counting nouns.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2780",
+    "current_tip": "\"Blasus\" (tasty) mutates to \"flasus\" after \"yn\": \"Mae'n flasus\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2782",
+    "current_tip": "\"Tywydd\" (weather) — \"Sut mae'r tywydd?\" = How is the weather?",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2787",
+    "current_tip": "\"Rhad\" means \"cheap\" and \"drud\" means \"expensive\".",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2788",
+    "current_tip": "\"Rhad\" means \"cheap\" and \"drud\" means \"expensive\".",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2789",
+    "current_tip": "\"Wrthi'n\" = \"busy/in the middle of\": \"Mae hi wrthi'n coginio\" = She's busy cooking.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2792",
+    "current_tip": "\"Annwyd\" (cold/illness) — \"Mae annwyd arna i\" = I have a cold (a cold is on me).",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2820",
+    "current_tip": "\"Dŵr dan bont\" = water under the bridge.",
+    "fixed_tip": "\"Wedi\" + verb-noun = have done — Welsh perfect tense: \"Dw i wedi bwyta\" = I have eaten.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2823",
+    "current_tip": "\"Galwch ambiwlans!\" = Call an ambulance! — imperative of \"galw\".",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2831",
+    "current_tip": "\"Wrthi'n\" = \"busy/in the middle of\": \"Mae hi wrthi'n coginio\" = She's busy cooking.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2837",
+    "current_tip": "Future with \"bod\": bydda i, byddi di, bydd e/hi, byddwn ni, byddwch chi, byddan nhw.",
+    "fixed_tip": "\"Wedi\" + verb-noun = have done — Welsh perfect tense: \"Dw i wedi bwyta\" = I have eaten.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2851",
+    "current_tip": "Nasal mutation: c→ngh, p→mh, t→nh, g→ng, b→m, d→n.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2858",
+    "current_tip": "\"Ar bwys\" means \"near/beside\" — literally \"on the weight of\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2861",
+    "current_tip": "\"Dal ati\" = keep going/carry on.",
+    "fixed_tip": "\"Oes\" is the question form of \"Mae\" for existence/possession. Answer: \"Oes\" (yes) or \"Nac oes\" (no).",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2867",
+    "current_tip": "\"Rhaid\" means \"must/necessity\" — \"Rhaid i fi\" = I must (necessity is to me).",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2871",
+    "current_tip": "Nasal mutation: c→ngh, p→mh, t→nh, g→ng, b→m, d→n.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2873",
+    "current_tip": "\"A fydd e'n...?\" = \"Will he be...?\" — question form.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2875",
+    "current_tip": "\"Dydd Gŵyl Dewi\" (March 1st) is St David's Day — Wales's national day.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-2881",
+    "current_tip": "\"Punt\" (pound) mutates after numbers: \"pum punt\" (five pounds).",
+    "fixed_tip": "\"Ga i\" (May I) comes from \"cael\" — it triggers soft mutation on the following verb-noun.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2889",
+    "current_tip": "\"Yn\" (in) before place names can trigger nasal mutation: \"yng Nghymru\", \"ym Mangor\".",
+    "fixed_tip": "\"Wedi\" + verb-noun = have done — Welsh perfect tense: \"Dw i wedi bwyta\" = I have eaten.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2891",
+    "current_tip": "Aspirate mutation only affects c, p, t → ch, ph, th.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2904",
+    "current_tip": "\"Wedi'i\" = \"has been\": \"Mae'r llyfr wedi'i ysgrifennu\" = The book has been written.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2905",
+    "current_tip": "\"Wedi'i\" = \"has been\": \"Mae'r llyfr wedi'i ysgrifennu\" = The book has been written.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2907",
+    "current_tip": "\"Arholiad\" (exam) — \"sefyll arholiad\" = to sit an exam.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2912",
+    "current_tip": "\"A\" is used for non-present tense: \"Y dyn a ddaeth\" = The man who came.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2913",
+    "current_tip": "\"Ar fin\" = \"about to\": \"Mae e ar fin gadael\" = He's about to leave.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2920",
+    "current_tip": "\"Tywydd\" (weather) — \"Sut mae'r tywydd?\" = How is the weather?",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2921",
+    "current_tip": "\"Meddyg\" mutates to \"feddyg\" after \"y\": \"y feddygfa\" = the surgery.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2923",
+    "current_tip": "\"Ar bwys\" means \"near/beside\" — literally \"on the weight of\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2929",
+    "current_tip": "\"Dal ati\" = keep going/carry on.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2935",
+    "current_tip": "\"Dŵr dan bont\" = water under the bridge.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2940",
+    "current_tip": "\"Mor\" + adjective = \"as/so\": \"mor dal â\" = as tall as.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2942",
+    "current_tip": "\"Gwnes i\" + verbal noun is a common way to express past actions: \"Gwnes i fwyta\" = I ate.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2943",
+    "current_tip": "The imperfect uses \"roedd-\" forms of \"bod\": roeddwn i, roeddet ti, roedd e/hi, roedden ni/nhw.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2944",
+    "current_tip": "Pluperfect: \"Roeddwn i wedi...\" = \"I had...\" — imperfect of bod + wedi + verbnoun.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2955",
+    "current_tip": "\"A fydd e'n...?\" = \"Will he be...?\" — question form.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2969",
+    "current_tip": "\"Annwyl Syr/Madam\" = Dear Sir/Madam — formal letter opening.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2980",
+    "current_tip": "\"Methodoleg\" (methodology) — borrowed from English/Latin.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2983",
+    "current_tip": "Impersonal passive: \"-ir\" ending: \"Siaredir Cymraeg yma\" = Welsh is spoken here.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-2989",
+    "current_tip": "\"Agos\" (near/close) — \"Pa mor agos?\" means \"How close?\"",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3001",
+    "current_tip": "\"Cofion gorau\" = best regards.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3006",
+    "current_tip": "\"Mae pen tost gyda fi\" = I have a headache (a sore head is with me).",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3007",
+    "current_tip": "\"A\" is used for non-present tense: \"Y dyn a ddaeth\" = The man who came.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3008",
+    "current_tip": "Future with \"bod\": bydda i, byddi di, bydd e/hi, byddwn ni, byddwch chi, byddan nhw.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3009",
+    "current_tip": "Future with \"bod\": bydda i, byddi di, bydd e/hi, byddwn ni, byddwch chi, byddan nhw.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3018",
+    "current_tip": "\"Englyn\" is a strict-metre verse form with complex rules.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3021",
+    "current_tip": "Future with \"bod\": bydda i, byddi di, bydd e/hi, byddwn ni, byddwch chi, byddan nhw.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3024",
+    "current_tip": "\"Wedi'i\" = \"has been\": \"Mae'r llyfr wedi'i ysgrifennu\" = The book has been written.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3032",
+    "current_tip": "\"Annwyl Syr/Madam\" = Dear Sir/Madam — formal letter opening.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3039",
+    "current_tip": "The imperfect uses \"roedd-\" forms of \"bod\": roeddwn i, roeddet ti, roedd e/hi, roedden ni/nhw.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3041",
+    "current_tip": "Future with \"bod\": bydda i, byddi di, bydd e/hi, byddwn ni, byddwch chi, byddan nhw.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3049",
+    "current_tip": "\"Bwrw glaw\" means \"raining\" — literally \"throwing rain\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3051",
+    "current_tip": "Future with \"bod\": bydda i, byddi di, bydd e/hi, byddwn ni, byddwch chi, byddan nhw.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3061",
+    "current_tip": "Aspirate mutation only affects c, p, t → ch, ph, th.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3069",
+    "current_tip": "\"Meddyg\" mutates to \"feddyg\" after \"y\": \"y feddygfa\" = the surgery.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3075",
+    "current_tip": "The imperfect uses \"roedd-\" forms of \"bod\": roeddwn i, roeddet ti, roedd e/hi, roedden ni/nhw.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3076",
+    "current_tip": "\"Gallu\" (can/able) conjugates like a regular verb with \"bod\": \"Dw i'n gallu\".",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3083",
+    "current_tip": "\"Cymru am byth\" = Wales forever — a common expression.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3088",
+    "current_tip": "Impersonal passive: \"-ir\" ending: \"Siaredir Cymraeg yma\" = Welsh is spoken here.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3091",
+    "current_tip": "\"Sy/sydd\" is the relative form of \"bod\" (present): \"Y dyn sy'n siarad\" = The man who speaks.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3100",
+    "current_tip": "\"Nid\" negates focus: \"Nid fi wnaeth\" = It wasn't me who did it.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3120",
+    "current_tip": "\"Achos\" and \"oherwydd\" both mean \"because\" — \"achos\" is more colloquial.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3122",
+    "current_tip": "\"Cyhoeddi\" (to publish) — \"cyhoeddwyd y canlyniadau\" = the results were published.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3124",
+    "current_tip": "\"Dyma/dyna\" + noun creates demonstrative focus: \"Dyma'r ateb\" = Here's the answer.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3134",
+    "current_tip": "\"Cafodd\" + noun + \"ei\" + verbal noun = passive construction.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3137",
+    "current_tip": "\"Er mwyn\" = \"in order to\" — takes a verbal noun.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3141",
+    "current_tip": "T.H. Parry-Williams and Waldo Williams are major 20th-century Welsh poets.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3148",
+    "current_tip": "\"Cafodd\" + noun + \"ei\" + verbal noun = passive construction.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3149",
+    "current_tip": "Impersonal passive: \"-ir\" ending: \"Siaredir Cymraeg yma\" = Welsh is spoken here.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3153",
+    "current_tip": "\"Mwy\" means \"more/bigger\" — \"mwy diddorol\" = more interesting.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3155",
+    "current_tip": "\"Galwch ambiwlans!\" = Call an ambulance! — imperative of \"galw\".",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3156",
+    "current_tip": "\"Mwy\" means \"more/bigger\" — \"mwy diddorol\" = more interesting.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3158",
+    "current_tip": "\"Cofion gorau\" = best regards.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3168",
+    "current_tip": "\"Cafodd\" + noun + \"ei\" + verbal noun = passive construction.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3173",
+    "current_tip": "\"Roedd hi'n bwrw glaw\" = \"It was raining\" — \"bwrw glaw\" literally means \"throwing rain\".",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3174",
+    "current_tip": "The impersonal \"-wyd\" ending: \"Penderfynwyd\" = It was decided.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3182",
+    "current_tip": "Family words mutate after \"fy\": tad→nhad, mam→mam (m doesn't change visibly), brawd→mrawd.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3185",
+    "current_tip": "\"Tywydd\" (weather) — \"Sut mae'r tywydd?\" = How is the weather?",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3186",
+    "current_tip": "\"Cennin Pedr\" (daffodils) and \"cennin\" (leeks) are Welsh national symbols.",
+    "fixed_tip": "",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3187",
+    "current_tip": "The Mabinogi has four branches: Pwyll, Branwen, Manawydan, Math.",
+    "fixed_tip": "\"Mae hi'n\" can mean both 'she is' and 'it is' (for weather, time, etc.).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3193",
+    "current_tip": "\"A\" is used for non-present tense: \"Y dyn a ddaeth\" = The man who came.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3199",
+    "current_tip": "\"Methodoleg\" (methodology) — borrowed from English/Latin.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3201",
+    "current_tip": "\"Cyn\" (before) and \"ar ôl\" (after) can take verbal nouns.",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3204",
+    "current_tip": "\"Wedi'i\" = \"has been\": \"Mae'r llyfr wedi'i ysgrifennu\" = The book has been written.",
+    "fixed_tip": "\"Ei\" (his/her) triggers different mutations: \"ei\" (his) = soft mutation, \"ei\" (her) = aspirate mutation.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3206",
+    "current_tip": "\"Cymru am byth\" = Wales forever — a common expression.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3207",
+    "current_tip": "The impersonal \"-wyd\" ending: \"Penderfynwyd\" = It was decided.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3212",
+    "current_tip": "\"Iaith\" (language) — \"Mae'r Gymraeg yn iaith fyw\" = Welsh is a living language.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3223",
+    "current_tip": "The imperfect uses \"roedd-\" forms of \"bod\": roeddwn i, roeddet ti, roedd e/hi, roedden ni/nhw.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3229",
+    "current_tip": "The Eisteddfod is Wales's biggest cultural festival — held annually since 1176.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3230",
+    "current_tip": "\"Achos\" and \"oherwydd\" both mean \"because\" — \"achos\" is more colloquial.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3231",
+    "current_tip": "\"Cafodd\" + noun + \"ei\" + verbal noun = passive construction.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3235",
+    "current_tip": "\"Wedi'i\" = \"has been\": \"Mae'r llyfr wedi'i ysgrifennu\" = The book has been written.",
+    "fixed_tip": "\"Ei\" (his/her) triggers different mutations: \"ei\" (his) = soft mutation, \"ei\" (her) = aspirate mutation.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3241",
+    "current_tip": "\"Gwnes i\" + verbal noun is a common way to express past actions: \"Gwnes i fwyta\" = I ate.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3251",
+    "current_tip": "\"Tywydd\" (weather) — \"Sut mae'r tywydd?\" = How is the weather?",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3258",
+    "current_tip": "\"Dydd Gŵyl Dewi\" (March 1st) is St David's Day — Wales's national day.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3259",
+    "current_tip": "\"Cafodd\" + noun + \"ei\" + verbal noun = passive construction.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3260",
+    "current_tip": "\"Cafodd\" + noun + \"ei\" + verbal noun = passive construction.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3270",
+    "current_tip": "\"Methodoleg\" (methodology) — borrowed from English/Latin.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3276",
+    "current_tip": "\"Pris\" (price) — \"Beth yw'r pris?\" = What's the price?",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3279",
+    "current_tip": "\"Hedfan\" (to fly) — \"Mae'r awyren yn hedfan\" = the plane is flying.",
+    "fixed_tip": "\"Ei\" (his/her) triggers different mutations: \"ei\" (his) = soft mutation, \"ei\" (her) = aspirate mutation.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3290",
+    "current_tip": "Conditional forms: baswn i, baset ti, basai fe/hi, basen ni, basech chi, basen nhw.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3293",
+    "current_tip": "\"Tystiolaeth\" (evidence) — important in academic Welsh.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3298",
+    "current_tip": "Impersonal passive: \"-ir\" ending: \"Siaredir Cymraeg yma\" = Welsh is spoken here.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3300",
+    "current_tip": "\"Iaith\" (language) — \"Mae'r Gymraeg yn iaith fyw\" = Welsh is a living language.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3302",
+    "current_tip": "\"Tystiolaeth\" (evidence) — important in academic Welsh.",
+    "fixed_tip": "\"Dw i'n\" is the spoken form of \"Rydw i'n\" (I am...) — the most common sentence pattern in Welsh.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3305",
+    "current_tip": "\"Ar bigau'r drain\" = on tenterhooks (on the thorns' prickles).",
+    "fixed_tip": "\"Ei\" (his/her) triggers different mutations: \"ei\" (his) = soft mutation, \"ei\" (her) = aspirate mutation.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3306",
+    "current_tip": "\"Cafodd\" + noun + \"ei\" + verbal noun = passive construction.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3314",
+    "current_tip": "\"Mor\" + adjective = \"as/so\": \"mor dal â\" = as tall as.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3318",
+    "current_tip": "Impersonal passive: \"-ir\" ending: \"Siaredir Cymraeg yma\" = Welsh is spoken here.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3322",
+    "current_tip": "\"Blasus\" (tasty) mutates to \"flasus\" after \"yn\": \"Mae'n flasus\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3323",
+    "current_tip": "The Mabinogi are medieval Welsh prose tales — foundational to Welsh literature.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3324",
+    "current_tip": "The Mabinogi are medieval Welsh prose tales — foundational to Welsh literature.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3332",
+    "current_tip": "\"Amserlen\" (timetable) = \"amser\" (time) + \"llen\" (sheet).",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3340",
+    "current_tip": "\"Dadansoddi\" (to analyze) — from \"dad-\" (un-) + \"ansoddi\" (condition).",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3342",
+    "current_tip": "\"Englyn\" is a strict-metre verse form with complex rules.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3343",
+    "current_tip": "\"Cywydd\" is a Welsh verse form using seven-syllable couplets.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3346",
+    "current_tip": "\"Punt\" (pound) mutates after numbers: \"pum punt\" (five pounds).",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3350",
+    "current_tip": "\"Swyddfa\" (office) — \"yn y swyddfa\" = in the office.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3363",
+    "current_tip": "\"Amserlen\" (timetable) = \"amser\" (time) + \"llen\" (sheet).",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3371",
+    "current_tip": "Negative relative: \"nad\" (who/that...not): \"Y dyn nad yw'n gweithio\".",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3372",
+    "current_tip": "\"Arfer\" = \"used to\": \"Ro'n i'n arfer byw yma\" = I used to live here.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3374",
+    "current_tip": "\"Dadansoddi\" (to analyze) — from \"dad-\" (un-) + \"ansoddi\" (condition).",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3375",
+    "current_tip": "T.H. Parry-Williams and Waldo Williams are major 20th-century Welsh poets.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3383",
+    "current_tip": "\"Faint\" means \"how much/many\" and is followed by \"o\" when counting nouns.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3386",
+    "current_tip": "\"Blasus\" (tasty) mutates to \"flasus\" after \"yn\": \"Mae'n flasus\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3398",
+    "current_tip": "\"Ymchwil\" (research) — \"gwneud ymchwil\" = to do research.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3401",
+    "current_tip": "The Eisteddfod is Wales's biggest cultural festival — held annually since 1176.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3402",
+    "current_tip": "The Eisteddfod is Wales's biggest cultural festival — held annually since 1176.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3406",
+    "current_tip": "T.H. Parry-Williams and Waldo Williams are major 20th-century Welsh poets.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3413",
+    "current_tip": "The impersonal \"-wyd\" ending: \"Penderfynwyd\" = It was decided.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3414",
+    "current_tip": "\"Ymchwil\" (research) — \"gwneud ymchwil\" = to do research.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3415",
+    "current_tip": "\"Fy\" (my) triggers nasal mutation: \"fy nhad\" (my father), \"fy mam\" (my mother).",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3417",
+    "current_tip": "The Eisteddfod is the annual Welsh cultural festival celebrating poetry, music, and literature.",
+    "fixed_tip": "",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3424",
+    "current_tip": "\"Sy/sydd\" is the relative form of \"bod\" (present): \"Y dyn sy'n siarad\" = The man who speaks.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3432",
+    "current_tip": "Welsh seasons: gwanwyn (spring), haf (summer), hydref (autumn), gaeaf (winter).",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3433",
+    "current_tip": "\"Wrthi'n\" = \"busy/in the middle of\": \"Mae hi wrthi'n coginio\" = She's busy cooking.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3435",
+    "current_tip": "\"Englyn\" is a strict-metre verse form with complex rules.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3446",
+    "current_tip": "T.H. Parry-Williams and Waldo Williams are major 20th-century Welsh poets.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3447",
+    "current_tip": "\"Englyn\" is a strict-metre verse form with complex rules.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3455",
+    "current_tip": "\"Annwyd\" (cold/illness) — \"Mae annwyd arna i\" = I have a cold (a cold is on me).",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3458",
+    "current_tip": "\"Dydd Gŵyl Dewi\" (March 1st) is St David's Day — Wales's national day.",
+    "fixed_tip": "\"Mae\" is the present tense third-person form of \"bod\" (to be) — the cornerstone of Welsh sentences.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3459",
+    "current_tip": "\"Dydd Gŵyl Dewi\" (March 1st) is St David's Day — Wales's national day.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "cy-3470",
+    "current_tip": "\"Llawn-amser\" (full-time) vs \"rhan-amser\" (part-time).",
+    "fixed_tip": "The particle \"yn\" (shortened to 'n after vowels) links \"bod\" to adjectives or verb-nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3473",
+    "current_tip": "\"Basai fe'n hapus\" = \"He would be happy\".",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3474",
+    "current_tip": "\"Ymchwil\" (research) — \"gwneud ymchwil\" = to do research.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3475",
+    "current_tip": "\"Ymchwil\" (research) — \"gwneud ymchwil\" = to do research.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3482",
+    "current_tip": "\"Annwyd\" (cold/illness) — \"Mae annwyd arna i\" = I have a cold (a cold is on me).",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3486",
+    "current_tip": "\"Noson lawen\" is a traditional Welsh entertainment evening.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3488",
+    "current_tip": "\"Ymchwil\" (research) — \"gwneud ymchwil\" = to do research.",
+    "fixed_tip": "\"Mae'r\" contracts \"Mae\" + \"y/yr\" (the): used before definite nouns.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3493",
+    "current_tip": "\"Wrthi'n\" = \"busy/in the middle of\": \"Mae hi wrthi'n coginio\" = She's busy cooking.",
+    "fixed_tip": "\"Bydd\" is the future form of \"bod\" — \"Bydda i'n\" = I will be.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-3499",
+    "current_tip": "Impersonal passive: \"-ir\" ending: \"Siaredir Cymraeg yma\" = Welsh is spoken here.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "cy-1178",
+    "current_tip": "Welsh job titles often end in \"-wr\" (masc) or \"-wraig\" (fem): athro/athrawes.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2545",
+    "current_tip": "\"Prifysgol\" (university) — from \"prif\" (chief) + \"ysgol\" (school).",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2668",
+    "current_tip": "\"Er bod...\" = \"although...\" — takes a clause with \"bod\".",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2672",
+    "current_tip": "\"Er bod...\" = \"although...\" — takes a clause with \"bod\".",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2678",
+    "current_tip": "\"Er bod...\" = \"although...\" — takes a clause with \"bod\".",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-3269",
+    "current_tip": "\"Er bod...\" = \"although...\" — takes a clause with \"bod\".",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-0737",
+    "current_tip": "Welsh has no word for \"have\" — you say \"Mae gen i\" (there is with me).",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-0826",
+    "current_tip": "Welsh has no word for \"have\" — you say \"Mae gen i\" (there is with me).",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-1398",
+    "current_tip": "Welsh has no word for \"have\" — you say \"Mae gen i\" (there is with me).",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-3254",
+    "current_tip": "Some imperatives are irregular: \"cer/dos\" (go!), \"tyrd/dere\" (come!).",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2022",
+    "current_tip": "\"Y Gymraeg\" (the Welsh language) — note the soft mutation after \"y\" feminine.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-1724",
+    "current_tip": "Time uses \"o'r gloch\" (of the bell) like English \"o'clock\".",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2472",
+    "current_tip": "\"I'r\" is a contraction of \"i\" (to) + \"y/yr\" (the): \"i'r dde\" = to the right.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-1795",
+    "current_tip": "Adjectives soften after feminine nouns: \"merch dal\" ← \"tal\", \"cath ddu\" ← \"du\".",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2150",
+    "current_tip": "Adjectives soften after feminine nouns: \"merch dal\" ← \"tal\", \"cath ddu\" ← \"du\".",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2714",
+    "current_tip": "Adjectives soften after feminine nouns: \"merch dal\" ← \"tal\", \"cath ddu\" ← \"du\".",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2329",
+    "current_tip": "Feminine adjectives take soft mutation: \"merch dal\" (tall girl) from \"tal\".",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2330",
+    "current_tip": "Feminine adjectives take soft mutation: \"merch dal\" (tall girl) from \"tal\".",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2416",
+    "current_tip": "Feminine adjectives take soft mutation: \"merch dal\" (tall girl) from \"tal\".",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2438",
+    "current_tip": "Feminine adjectives take soft mutation: \"merch dal\" (tall girl) from \"tal\".",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2519",
+    "current_tip": "Feminine adjectives take soft mutation: \"merch dal\" (tall girl) from \"tal\".",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2522",
+    "current_tip": "Feminine adjectives take soft mutation: \"merch dal\" (tall girl) from \"tal\".",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2524",
+    "current_tip": "Feminine adjectives take soft mutation: \"merch dal\" (tall girl) from \"tal\".",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2502",
+    "current_tip": "\"Arholiad\" (exam) — \"sefyll arholiad\" = to sit an exam.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-1453",
+    "current_tip": "The imperfect describes ongoing states and actions in the past, like \"was doing\".",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2487",
+    "current_tip": "Welsh has two genders: masculine and feminine. \"Y\" is used for \"the\" before both.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2520",
+    "current_tip": "Welsh has two genders: masculine and feminine. \"Y\" is used for \"the\" before both.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2567",
+    "current_tip": "\"Faswn i ddim yn...\" = \"I wouldn't...\" — negative conditional.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2568",
+    "current_tip": "\"Faswn i ddim yn...\" = \"I wouldn't...\" — negative conditional.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-3216",
+    "current_tip": "\"Faswn i ddim yn...\" = \"I wouldn't...\" — negative conditional.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2404",
+    "current_tip": "\"Fydda i ddim...\" = \"I won't be...\" — negative future.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2796",
+    "current_tip": "\"Fydda i ddim...\" = \"I won't be...\" — negative future.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2658",
+    "current_tip": "Welsh uses fronting for emphasis: \"Coffi dw i eisiau\" = It's COFFEE I want.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-3364",
+    "current_tip": "Welsh uses fronting for emphasis: \"Coffi dw i eisiau\" = It's COFFEE I want.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2397",
+    "current_tip": "\"Fi sy'n...\" = \"It's me who...\" — cleft structure for emphasis.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2558",
+    "current_tip": "\"Fi sy'n...\" = \"It's me who...\" — cleft structure for emphasis.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2625",
+    "current_tip": "\"Fi sy'n...\" = \"It's me who...\" — cleft structure for emphasis.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2882",
+    "current_tip": "\"Fi sy'n...\" = \"It's me who...\" — cleft structure for emphasis.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-3321",
+    "current_tip": "\"Iaith\" (language) — \"Mae'r Gymraeg yn iaith fyw\" = Welsh is a living language.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-2836",
+    "current_tip": "\"Bydda i'n...\" = \"I will be doing...\" — periphrastic future.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-3097",
+    "current_tip": "\"Bydda i'n...\" = \"I will be doing...\" — periphrastic future.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-3131",
+    "current_tip": "\"Bydda i'n...\" = \"I will be doing...\" — periphrastic future.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  },
+  {
+    "id": "cy-3056",
+    "current_tip": "Nasal mutation: c→ngh, p→mh, t→nh, g→ng, b→m, d→n.",
+    "fixed_tip": "",
+    "issue": "repetitive"
+  }
+]

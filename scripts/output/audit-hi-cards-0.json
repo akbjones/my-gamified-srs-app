@@ -1,0 +1,684 @@
+{
+  "summary": {
+    "totalCards": 3166,
+    "cardsWithIssues": 34,
+    "dictCoverageMissing": 0,
+    "grammarTipIssues": 9,
+    "englishQualityIssues": 25,
+    "duplicateTargets": 0,
+    "duplicateEnglish": 0,
+    "duplicateIds": 0,
+    "vocabIssues": 0,
+    "audioMissing": 0,
+    "duplicateGrammarTips": 21,
+    "topMissingWords": [],
+    "duplicateGrammarTipsList": [
+      {
+        "tip": "में = in/inside: कमरे में (in the room), शहर में (in the city).",
+        "count": 4,
+        "sampleIds": [
+          "hi-0030",
+          "hi-0284",
+          "hi-0306",
+          "hi-0566"
+        ]
+      },
+      {
+        "tip": "हूँ is the first-person singular present form of होना: मैं जाता हूँ (i go).",
+        "count": 4,
+        "sampleIds": [
+          "hi-0099",
+          "hi-0121",
+          "hi-0141",
+          "hi-0482"
+        ]
+      },
+      {
+        "tip": "बड़े/छोटे = elder/younger: बड़े भाई (elder brother), छोटी बहन (younger sister).",
+        "count": 4,
+        "sampleIds": [
+          "hi-0299",
+          "hi-0321",
+          "hi-1115",
+          "hi-1438"
+        ]
+      },
+      {
+        "tip": "hindi has specific in-law terms: साली (wife's sister), जीजा (elder sister's husb...",
+        "count": 4,
+        "sampleIds": [
+          "hi-1447",
+          "hi-1478",
+          "hi-2298",
+          "hi-2299"
+        ]
+      },
+      {
+        "tip": "खिलाना = to feed someone: माँ बच्चे को खिलाती है (mother feeds the child).",
+        "count": 3,
+        "sampleIds": [
+          "hi-0002",
+          "hi-0033",
+          "hi-1480"
+        ]
+      },
+      {
+        "tip": "परिचय = introduction (m.).",
+        "count": 3,
+        "sampleIds": [
+          "hi-0049",
+          "hi-0148",
+          "hi-0519"
+        ]
+      },
+      {
+        "tip": "चाचा = father's younger brother, ताऊ = father's elder brother. very specific ter...",
+        "count": 3,
+        "sampleIds": [
+          "hi-0054",
+          "hi-0550",
+          "hi-2276"
+        ]
+      },
+      {
+        "tip": "मेहनत = hard work (f.).",
+        "count": 3,
+        "sampleIds": [
+          "hi-0060",
+          "hi-0084",
+          "hi-0111"
+        ]
+      },
+      {
+        "tip": "negation: insert नहीं before verb: मैं नहीं जाता (i don't go).",
+        "count": 3,
+        "sampleIds": [
+          "hi-0103",
+          "hi-0594",
+          "hi-1719"
+        ]
+      },
+      {
+        "tip": "पर = on/at: मेज़ पर (on table), स्टेशन पर (at station).",
+        "count": 3,
+        "sampleIds": [
+          "hi-0244",
+          "hi-0282",
+          "hi-1206"
+        ]
+      },
+      {
+        "tip": "hindi kinship terms reflect precise relationships: मौसी (maternal aunt), बहनोई (...",
+        "count": 3,
+        "sampleIds": [
+          "hi-0287",
+          "hi-0567",
+          "hi-2191"
+        ]
+      },
+      {
+        "tip": "masculine nouns in -ा change to -े in oblique: लड़का → लड़के को.",
+        "count": 3,
+        "sampleIds": [
+          "hi-0302",
+          "hi-0358",
+          "hi-0393"
+        ]
+      },
+      {
+        "tip": "से = from/by/with: दिल्ली से (from delhi), बस से (by bus).",
+        "count": 3,
+        "sampleIds": [
+          "hi-0311",
+          "hi-0590",
+          "hi-1704"
+        ]
+      },
+      {
+        "tip": "days: सोमवार, मंगलवार, बुधवार, गुरुवार, शुक्रवार, शनिवार, रविवार.",
+        "count": 3,
+        "sampleIds": [
+          "hi-0367",
+          "hi-0437",
+          "hi-0444"
+        ]
+      },
+      {
+        "tip": "आधा = half: आधा घंटा (half hour). डेढ़ = one and a half.",
+        "count": 3,
+        "sampleIds": [
+          "hi-0372",
+          "hi-0505",
+          "hi-0775"
+        ]
+      },
+      {
+        "tip": "hindi numbers 1-10: एक, दो, तीन, चार, पाँच, छह, सात, आठ, नौ, दस.",
+        "count": 3,
+        "sampleIds": [
+          "hi-0408",
+          "hi-0461",
+          "hi-2371"
+        ]
+      },
+      {
+        "tip": "रिश्तेदार = relatives. रिश्ता = relationship/bond/marriage proposal.",
+        "count": 3,
+        "sampleIds": [
+          "hi-0494",
+          "hi-1475",
+          "hi-1496"
+        ]
+      },
+      {
+        "tip": "दिशा = direction (f.).",
+        "count": 3,
+        "sampleIds": [
+          "hi-0546",
+          "hi-1203",
+          "hi-1204"
+        ]
+      },
+      {
+        "tip": "ज़्यादा = more/too much: ज़्यादा मिर्च मत डालिए (don't add too much chili).",
+        "count": 3,
+        "sampleIds": [
+          "hi-1410",
+          "hi-1493",
+          "hi-1517"
+        ]
+      },
+      {
+        "tip": "ज़रा = just/a little (softening a command).",
+        "count": 3,
+        "sampleIds": [
+          "hi-1873",
+          "hi-1874",
+          "hi-1875"
+        ]
+      }
+    ]
+  },
+  "cards": [
+    {
+      "id": "hi-0364",
+      "target": "एक दर्जन केले ख़रीदकर ला दो।",
+      "english": "Buy and bring a dozen bananas.",
+      "grammarNode": "node-05",
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "Grammar tip too short"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-0765",
+      "target": "प्रिया ने तीन भाषाओं में भाषण दिया।",
+      "english": "PrRiya gave a speech in three languages.",
+      "grammarNode": "node-09",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-0964",
+      "target": "प्रिया तीन भाषाएँ बोल सकती है।",
+      "english": "PrRiya can speak three languages.",
+      "grammarNode": "node-11",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-1093",
+      "target": "प्रिया हर दिन अपनी डायरी में लिखता है।",
+      "english": "PrRiya writes in his diary every day.",
+      "grammarNode": "node-12",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error",
+            "PrRiya (female name) with masculine pronoun \"his\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-1131",
+      "target": "प्रिया कभी-कभी बिना वजह चिंता करती है।",
+      "english": "PrRiya sometimes worries without reason.",
+      "grammarNode": "node-13",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-1161",
+      "target": "न प्रिया आया, न कोई संदेश भेजा।",
+      "english": "Neither did PrRiya come, nor sent any message.",
+      "grammarNode": "node-13",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-1310",
+      "target": "नींबू संतरे से खट्टा होता है।",
+      "english": "Lemon is sourer than orange.",
+      "grammarNode": "node-15",
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "Grammar tip too short"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-1325",
+      "target": "हीरा काँच से ज़्यादा कठोर होता है।",
+      "english": "Diamond is harder than glass.",
+      "grammarNode": "node-15",
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "Grammar tip too short"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-1327",
+      "target": "शहद चीनी से ज़्यादा मीठा होता है।",
+      "english": "Honey is sweeter than sugar.",
+      "grammarNode": "node-15",
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "Grammar tip too short"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-1346",
+      "target": "प्रिया अपनी बहन से लंबी है।",
+      "english": "PrRiya is taller than her sister.",
+      "grammarNode": "node-15",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-1391",
+      "target": "सोना चाँदी से दुर्लभ धातु है।",
+      "english": "Gold is a rarer metal than silver.",
+      "grammarNode": "node-15",
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "Grammar tip too short"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-1414",
+      "target": "प्रिया भोपाल का सबसे लंबा आदमी है।",
+      "english": "PrRiya is the tallest man in Bhopal.",
+      "grammarNode": "node-15",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-1568",
+      "target": "प्रिया छोटी थी तब बहुत शरारती थी।",
+      "english": "PrRiya was very naughty when she was young.",
+      "grammarNode": "node-16",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-1683",
+      "target": "अनिल ने सुनीता के लिए फूल ख़रीदे।",
+      "english": "Anil bought flowers for Sunita.",
+      "grammarNode": "node-17",
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "Grammar tip too short"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-1731",
+      "target": "बस स्टॉप के पास एक चाय की दुकान है।",
+      "english": "There is a tea shop near the bus stop.",
+      "grammarNode": "node-17",
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "Grammar tip too short"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-1836",
+      "target": "प्रिया, दरवाज़ा बंद कर दो।",
+      "english": "PrRiya, close the door.",
+      "grammarNode": "node-19",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-1911",
+      "target": "प्रिया, मत चिंता करो, सब ठीक हो जाएगा।",
+      "english": "PrRiya, don't worry, everything will be alright.",
+      "grammarNode": "node-19",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-2103",
+      "target": "जो फ़िल्म प्रिया ने सुझाई, वह बहुत अच्छी थी।",
+      "english": "The film that PrRiya suggested was very good.",
+      "grammarNode": "node-21",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-2129",
+      "target": "जिसकी प्रिया बात कर रहा था, वह यही लड़का है।",
+      "english": "The one PrRiya was talking about is this very boy.",
+      "grammarNode": "node-21",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-2156",
+      "target": "यह किताब प्रिया द्वारा लिखी गई थी।",
+      "english": "This book was written by PrRiya.",
+      "grammarNode": "node-22",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-2205",
+      "target": "पोलो राजाओं का शाही खेल माना जाता था।",
+      "english": "Polo was considered the royal sport of kings.",
+      "grammarNode": "node-22",
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "Grammar tip too short"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-2246",
+      "target": "प्रिया ने मुझे एक सुंदर तोहफ़ा दिया।",
+      "english": "PrRiya gave me a beautiful gift.",
+      "grammarNode": "node-23",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-2323",
+      "target": "प्रिया इस बार ज़रूर पास होगा।",
+      "english": "PrRiya will definitely pass this time.",
+      "grammarNode": "node-24",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-2421",
+      "target": "सड़कें चौड़ी की गईं और बिजली लगाई गई।",
+      "english": "Roads were widened and electricity was installed.",
+      "grammarNode": "node-25",
+      "issues": [
+        {
+          "type": "grammar_tip",
+          "issues": [
+            "Grammar tip too short"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-2474",
+      "target": "प्रिया ने सबको बुलाया ताकि मिलकर फ़ैसला किया जा सके।",
+      "english": "PrRiya called everyone so that a decision could be made together.",
+      "grammarNode": "node-25",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-2489",
+      "target": "प्रिया हमेशा दूसरों की मदद करती है।",
+      "english": "PrRiya always helps others.",
+      "grammarNode": "node-26",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-2574",
+      "target": "प्रिया ने सोचा कि शायद बारिश हो जाएगी।",
+      "english": "PrRiya thought that perhaps it would rain.",
+      "grammarNode": "node-27",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-2613",
+      "target": "प्रिया ने कहा कि अगर मौसम ठीक रहे तो वह ज़रूर आएगा।",
+      "english": "PrRiya said that if the weather is fine, he will definitely come.",
+      "grammarNode": "node-27",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-2631",
+      "target": "प्रिया ने अपने गुरु के आगे सिर झुकाया।",
+      "english": "PrRiya bowed his head before his teacher.",
+      "grammarNode": "node-28",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error",
+            "PrRiya (female name) with masculine pronoun \"his\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-2638",
+      "target": "प्रिया ने इस काम में अपना लोहा मनवा लिया।",
+      "english": "PrRiya established his superiority in this work.",
+      "grammarNode": "node-28",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error",
+            "PrRiya (female name) with masculine pronoun \"his\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-2641",
+      "target": "प्रिया ने इस मुश्किल वक़्त में साहस का परिचय दिया।",
+      "english": "PrRiya showed courage in this difficult time.",
+      "grammarNode": "node-28",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-2689",
+      "target": "सुन प्रिया, एक बात बता।",
+      "english": "Listen PrRiya, tell me one thing.",
+      "grammarNode": "node-29",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-2805",
+      "target": "प्रिया ने अपने जीवन का एक महत्वपूर्ण फ़ैसला लिया।",
+      "english": "PrRiya made an important decision of his life.",
+      "grammarNode": "node-30",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error",
+            "PrRiya (female name) with masculine pronoun \"his\""
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hi-3056",
+      "target": "प्रिया ने जुगाड़ से टूटी हुई मशीन ठीक कर दी।",
+      "english": "PrRiya fixed the broken machine through creative improvisation.",
+      "grammarNode": "node-34",
+      "issues": [
+        {
+          "type": "english_quality",
+          "issues": [
+            "PrName formatting error"
+          ]
+        }
+      ]
+    }
+  ]
+}

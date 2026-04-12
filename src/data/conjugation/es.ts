@@ -11,6 +11,16 @@ type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional'
 type PartialTenses = Partial<Record<TenseKey, Forms>>;
 
 const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive'];
+
+const TENSE_LABELS: Record<TenseKey, string> = {
+  present: 'Presente (Present)',
+  preterite: 'Pretérito (Preterite)',
+  imperfect: 'Imperfecto (Imperfect)',
+  future: 'Futuro (Future)',
+  conditional: 'Condicional (Conditional)',
+  subjunctive: 'Subjuntivo (Subjunctive)',
+};
+
 const REFLEXIVE_PRONOUNS: Forms = ['me', 'te', 'se', 'nos', 'os', 'se'];
 
 // ── Regular endings ──────────────────────────────────────────
@@ -445,9 +455,15 @@ export function conjugate(infinitive: string): ConjugationTable | null {
     }
   }
 
+  // Remap tense keys to localized labels
+  const labeledTenses: Record<string, string[]> = {};
+  for (const t of TENSES) {
+    labeledTenses[TENSE_LABELS[t]] = [...tenses[t]];
+  }
+
   return {
     infinitive: inf,
     isReflexive,
-    tenses: tenses as Record<string, string[]>,
+    tenses: labeledTenses,
   };
 }

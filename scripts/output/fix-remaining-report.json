@@ -1,0 +1,880 @@
+{
+  "es": {
+    "to_fixes": 296,
+    "semantic_fixes": 25,
+    "infinitive_fixes": 0,
+    "total": 321,
+    "applied": 311,
+    "examples": [
+      {
+        "key": "mudó",
+        "field": "en",
+        "oldVal": "to move",
+        "newVal": "dumb",
+        "reason": "semantic_fix_noun",
+        "google": "dumb"
+      },
+      {
+        "key": "mudó",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "queden",
+        "field": "en",
+        "oldVal": "to meet",
+        "newVal": "remain",
+        "reason": "semantic_fix_noun",
+        "google": "remain"
+      },
+      {
+        "key": "queden",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "renuncia",
+        "field": "en",
+        "oldVal": "to give up",
+        "newVal": "resignation",
+        "reason": "semantic_fix_noun",
+        "google": "resignation"
+      },
+      {
+        "key": "renuncia",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "hace",
+        "field": "en",
+        "oldVal": "to do/make",
+        "newVal": "does",
+        "reason": "semantic_fix_noun",
+        "google": "does"
+      },
+      {
+        "key": "hace",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "parque",
+        "field": "en",
+        "oldVal": "to stall",
+        "newVal": "park",
+        "reason": "semantic_fix_noun",
+        "google": "park"
+      },
+      {
+        "key": "parque",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      }
+    ]
+  },
+  "it": {
+    "to_fixes": 157,
+    "semantic_fixes": 26,
+    "infinitive_fixes": 0,
+    "total": 183,
+    "applied": 170,
+    "examples": [
+      {
+        "key": "suono",
+        "field": "en",
+        "oldVal": "to play",
+        "newVal": "sound",
+        "reason": "semantic_fix_noun",
+        "google": "sound"
+      },
+      {
+        "key": "suono",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "valigia",
+        "field": "en",
+        "oldVal": "to be worth",
+        "newVal": "suitcase",
+        "reason": "semantic_fix_noun",
+        "google": "suitcase"
+      },
+      {
+        "key": "valigia",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "unico",
+        "field": "en",
+        "oldVal": "to unite",
+        "newVal": "unique",
+        "reason": "semantic_fix_noun",
+        "google": "unique"
+      },
+      {
+        "key": "unico",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "esiti",
+        "field": "en",
+        "oldVal": "to hesitate",
+        "newVal": "results",
+        "reason": "semantic_fix_noun",
+        "google": "results"
+      },
+      {
+        "key": "esiti",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "continuo",
+        "field": "en",
+        "oldVal": "to continue",
+        "newVal": "continuous",
+        "reason": "semantic_fix_noun",
+        "google": "continuous"
+      },
+      {
+        "key": "continuo",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      }
+    ]
+  },
+  "fr": {
+    "to_fixes": 108,
+    "semantic_fixes": 20,
+    "infinitive_fixes": 0,
+    "total": 128,
+    "applied": 118,
+    "examples": [
+      {
+        "key": "déménagions",
+        "field": "en",
+        "oldVal": "to relocate",
+        "newVal": "moving",
+        "reason": "semantic_fix_noun",
+        "google": "moving"
+      },
+      {
+        "key": "déménagions",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "souligné",
+        "field": "en",
+        "oldVal": "to emphasize",
+        "newVal": "underlines",
+        "reason": "semantic_fix_noun",
+        "google": "underlines"
+      },
+      {
+        "key": "souligné",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "restât",
+        "field": "en",
+        "oldVal": "to stay",
+        "newVal": "rest",
+        "reason": "semantic_fix_noun",
+        "google": "rest"
+      },
+      {
+        "key": "restât",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "regretté",
+        "field": "en",
+        "oldVal": "to regret",
+        "newVal": "missed",
+        "reason": "semantic_fix_noun",
+        "google": "missed"
+      },
+      {
+        "key": "regretté",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "déclenchée",
+        "field": "en",
+        "oldVal": "to release",
+        "newVal": "triggered",
+        "reason": "semantic_fix_noun",
+        "google": "triggered"
+      },
+      {
+        "key": "déclenchée",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      }
+    ]
+  },
+  "pt": {
+    "to_fixes": 61,
+    "semantic_fixes": 32,
+    "infinitive_fixes": 0,
+    "total": 93,
+    "applied": 77,
+    "examples": [
+      {
+        "key": "assistido",
+        "field": "en",
+        "oldVal": "to attend",
+        "newVal": "assisted",
+        "reason": "semantic_fix_noun",
+        "google": "assisted"
+      },
+      {
+        "key": "assistido",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "existe",
+        "field": "en",
+        "oldVal": "to exist",
+        "newVal": "there is",
+        "reason": "semantic_fix_noun",
+        "google": "there is"
+      },
+      {
+        "key": "existe",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "amando",
+        "field": "en",
+        "oldVal": "to love",
+        "newVal": "loving",
+        "reason": "semantic_fix_noun",
+        "google": "loving"
+      },
+      {
+        "key": "amando",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "levanta",
+        "field": "en",
+        "oldVal": "to raise",
+        "newVal": "stand up",
+        "reason": "semantic_fix_noun",
+        "google": "stand up"
+      },
+      {
+        "key": "levanta",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "pega",
+        "field": "en",
+        "oldVal": "to take",
+        "newVal": "handle",
+        "reason": "semantic_fix_noun",
+        "google": "handle"
+      },
+      {
+        "key": "pega",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      }
+    ]
+  },
+  "de": {
+    "to_fixes": 139,
+    "semantic_fixes": 10,
+    "infinitive_fixes": 0,
+    "total": 149,
+    "applied": 144,
+    "examples": [
+      {
+        "key": "verzeihe",
+        "field": "en",
+        "oldVal": "to pardon",
+        "newVal": "forgive",
+        "reason": "semantic_fix_noun",
+        "google": "forgive"
+      },
+      {
+        "key": "verzeihe",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "legte",
+        "field": "en",
+        "oldVal": "to place",
+        "newVal": "lay",
+        "reason": "semantic_fix_noun",
+        "google": "lay"
+      },
+      {
+        "key": "legte",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "gehängt",
+        "field": "en",
+        "oldVal": "to hang",
+        "newVal": "hung",
+        "reason": "semantic_fix_noun",
+        "google": "hung"
+      },
+      {
+        "key": "gehängt",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "geirrt",
+        "field": "en",
+        "oldVal": "to err",
+        "newVal": "mistake",
+        "reason": "semantic_fix_noun",
+        "google": "mistake"
+      },
+      {
+        "key": "geirrt",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "schlafe",
+        "field": "en",
+        "oldVal": "to sleep",
+        "newVal": "temple",
+        "reason": "semantic_fix_noun",
+        "google": "temple"
+      },
+      {
+        "key": "schlafe",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      }
+    ]
+  },
+  "nl": {
+    "to_fixes": 98,
+    "semantic_fixes": 22,
+    "infinitive_fixes": 0,
+    "total": 120,
+    "applied": 109,
+    "examples": [
+      {
+        "key": "bedoelt",
+        "field": "en",
+        "oldVal": "to leg",
+        "newVal": "means",
+        "reason": "semantic_fix_noun",
+        "google": "means"
+      },
+      {
+        "key": "bedoelt",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "pak",
+        "field": "en",
+        "oldVal": "to tackle",
+        "newVal": "pack",
+        "reason": "semantic_fix_noun",
+        "google": "pack"
+      },
+      {
+        "key": "pak",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "ruime",
+        "field": "en",
+        "oldVal": "to clear",
+        "newVal": "spacious",
+        "reason": "semantic_fix_noun",
+        "google": "spacious"
+      },
+      {
+        "key": "ruime",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "opgemerkt",
+        "field": "en",
+        "oldVal": "to remark",
+        "newVal": "noticed",
+        "reason": "semantic_fix_noun",
+        "google": "noticed"
+      },
+      {
+        "key": "opgemerkt",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "name",
+        "field": "en",
+        "oldVal": "to take",
+        "newVal": "name",
+        "reason": "semantic_fix_noun",
+        "google": "name"
+      },
+      {
+        "key": "name",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      }
+    ]
+  },
+  "sv": {
+    "to_fixes": 2,
+    "semantic_fixes": 20,
+    "infinitive_fixes": 2,
+    "total": 24,
+    "applied": 13,
+    "examples": [
+      {
+        "key": "bestämmer",
+        "field": "en",
+        "oldVal": "to determine",
+        "newVal": "decides",
+        "reason": "semantic_fix_noun",
+        "google": "decides"
+      },
+      {
+        "key": "bestämmer",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "betade",
+        "field": "en",
+        "oldVal": "to bite",
+        "newVal": "grazed",
+        "reason": "semantic_fix_noun",
+        "google": "grazed"
+      },
+      {
+        "key": "betade",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "agerade",
+        "field": "en",
+        "oldVal": "to act",
+        "newVal": "acted",
+        "reason": "semantic_fix_noun",
+        "google": "acted"
+      },
+      {
+        "key": "agerade",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "studier",
+        "field": "en",
+        "oldVal": "to said",
+        "newVal": "studies",
+        "reason": "semantic_fix_noun",
+        "google": "studies"
+      },
+      {
+        "key": "studier",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "bredde",
+        "field": "en",
+        "oldVal": "to wide",
+        "newVal": "width",
+        "reason": "semantic_fix_noun",
+        "google": "width"
+      },
+      {
+        "key": "bredde",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      }
+    ]
+  },
+  "cy": {
+    "to_fixes": 0,
+    "semantic_fixes": 4,
+    "infinitive_fixes": 0,
+    "total": 4,
+    "applied": 2,
+    "examples": [
+      {
+        "key": "est",
+        "field": "en",
+        "oldVal": "to go",
+        "newVal": "ext",
+        "reason": "semantic_fix_noun",
+        "google": "ext"
+      },
+      {
+        "key": "est",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "diogelwch",
+        "field": "en",
+        "oldVal": "to protect",
+        "newVal": "safety",
+        "reason": "semantic_fix_noun",
+        "google": "safety"
+      },
+      {
+        "key": "diogelwch",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      }
+    ]
+  },
+  "hi": {
+    "to_fixes": 1,
+    "semantic_fixes": 8,
+    "infinitive_fixes": 14,
+    "total": 23,
+    "applied": 12,
+    "examples": [
+      {
+        "key": "बताए",
+        "field": "en",
+        "oldVal": "to narrate",
+        "newVal": "tell",
+        "reason": "semantic_fix_noun",
+        "google": "tell"
+      },
+      {
+        "key": "बताए",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "कह",
+        "field": "en",
+        "oldVal": "to tell",
+        "newVal": "say",
+        "reason": "semantic_fix_noun",
+        "google": "Say"
+      },
+      {
+        "key": "कह",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "चले",
+        "field": "en",
+        "oldVal": "to walking",
+        "newVal": "let's go",
+        "reason": "semantic_fix_noun",
+        "google": "let's go"
+      },
+      {
+        "key": "चले",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "चलाओ",
+        "field": "en",
+        "oldVal": "to drive",
+        "newVal": "run it",
+        "reason": "semantic_fix_noun",
+        "google": "Run it"
+      },
+      {
+        "key": "चलाओ",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "अपना",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "false_infinitive_list"
+      },
+      {
+        "key": "अपना",
+        "field": "en",
+        "oldVal": "to own",
+        "newVal": "own",
+        "reason": "false_infinitive_strip_to"
+      }
+    ]
+  },
+  "tr": {
+    "to_fixes": 822,
+    "semantic_fixes": 9,
+    "infinitive_fixes": 2,
+    "total": 833,
+    "applied": 829,
+    "examples": [
+      {
+        "key": "konuşmaya",
+        "field": "en",
+        "oldVal": "to talk",
+        "newVal": "to speak",
+        "reason": "semantic_replace",
+        "google": "to speak"
+      },
+      {
+        "key": "dökülür",
+        "field": "en",
+        "oldVal": "to pour",
+        "newVal": "spilled",
+        "reason": "semantic_fix_noun",
+        "google": "spilled"
+      },
+      {
+        "key": "dökülür",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "tartışıyor",
+        "field": "en",
+        "oldVal": "to dispute",
+        "newVal": "arguing",
+        "reason": "semantic_fix_noun",
+        "google": "arguing"
+      },
+      {
+        "key": "tartışıyor",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "kurar",
+        "field": "en",
+        "oldVal": "to create",
+        "newVal": "establishes",
+        "reason": "semantic_fix_noun",
+        "google": "establishes"
+      },
+      {
+        "key": "kurar",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "çıkmaz",
+        "field": "en",
+        "oldVal": "to leave",
+        "newVal": "impasse",
+        "reason": "semantic_fix_noun",
+        "google": "impasse"
+      },
+      {
+        "key": "çıkmaz",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "karınca",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "false_infinitive_list"
+      }
+    ]
+  },
+  "ru": {
+    "to_fixes": 253,
+    "semantic_fixes": 10,
+    "infinitive_fixes": 0,
+    "total": 263,
+    "applied": 258,
+    "examples": [
+      {
+        "key": "знакомимся",
+        "field": "en",
+        "oldVal": "to meet",
+        "newVal": "let's get acquainted",
+        "reason": "semantic_fix_noun",
+        "google": "let's get acquainted"
+      },
+      {
+        "key": "знакомимся",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "вышел",
+        "field": "en",
+        "oldVal": "to go out",
+        "newVal": "came out",
+        "reason": "semantic_fix_noun",
+        "google": "came out"
+      },
+      {
+        "key": "вышел",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "мыл",
+        "field": "en",
+        "oldVal": "to wash",
+        "newVal": "soaps",
+        "reason": "semantic_fix_noun",
+        "google": "soaps"
+      },
+      {
+        "key": "мыл",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "перенёс",
+        "field": "en",
+        "oldVal": "to postpone",
+        "newVal": "transferred",
+        "reason": "semantic_fix_noun",
+        "google": "transferred"
+      },
+      {
+        "key": "перенёс",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      },
+      {
+        "key": "есть",
+        "field": "en",
+        "oldVal": "to be/to eat",
+        "newVal": "there is",
+        "reason": "semantic_fix_noun",
+        "google": "There is"
+      },
+      {
+        "key": "есть",
+        "field": "pos",
+        "oldVal": "v",
+        "newVal": "n",
+        "reason": "semantic_fix_pos"
+      }
+    ]
+  }
+}

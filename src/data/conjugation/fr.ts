@@ -10,6 +10,15 @@ type Forms = [string, string, string, string, string, string]; // je, tu, il, no
 type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive';
 type PartialTenses = Partial<Record<TenseKey, Forms>>;
 const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive'];
+
+const TENSE_LABELS: Record<TenseKey, string> = {
+  present: 'Présent (Present)',
+  preterite: 'Passé Simple (Preterite)',
+  imperfect: 'Imparfait (Imperfect)',
+  future: 'Futur (Future)',
+  conditional: 'Conditionnel (Conditional)',
+  subjunctive: 'Subjonctif (Subjunctive)',
+};
 const REFLEXIVE_PRONOUNS: Forms = ['me', 'te', 'se', 'nous', 'vous', 'se'];
 
 // ── Helpers ─────────────────────────────────────────────────
@@ -713,14 +722,15 @@ export function conjugate(infinitive: string): ConjugationTable | null {
   // Replace passé simple with passé composé (more useful for learners)
   const passeCompose = buildPasseCompose(inf, isReflexive);
 
-  // Build final tenses record
+  // Build final tenses record with localized labels
   const finalTenses: Record<string, string[]> = {};
   for (const t of TENSES) {
+    const label = TENSE_LABELS[t];
     if (t === 'preterite') {
       // Show passé composé instead of passé simple
       if (isReflexive) {
         // Add reflexive pronoun before auxiliary: "me suis lavé", "t'es lavé"
-        finalTenses[t] = passeCompose.map((form, i) => {
+        finalTenses[label] = passeCompose.map((form, i) => {
           const pron = REFLEXIVE_PRONOUNS[i];
           // Elide: me/te/se → m'/t'/s' before vowel (suis, es, est, etc.)
           if (/^[aeéèêiîoôuûhyœæ]/.test(form) && (pron === 'me' || pron === 'te' || pron === 'se')) {
@@ -729,10 +739,10 @@ export function conjugate(infinitive: string): ConjugationTable | null {
           return pron + ' ' + form;
         });
       } else {
-        finalTenses[t] = [...passeCompose];
+        finalTenses[label] = [...passeCompose];
       }
     } else if (isReflexive) {
-      finalTenses[t] = tenses[t].map((form, i) => {
+      finalTenses[label] = tenses[t].map((form, i) => {
         if (form === '-') return '-';
         const pron = REFLEXIVE_PRONOUNS[i];
         // Elide before vowel: me → m', te → t', se → s'
@@ -742,7 +752,7 @@ export function conjugate(infinitive: string): ConjugationTable | null {
         return pron + ' ' + form;
       });
     } else {
-      finalTenses[t] = [...tenses[t]];
+      finalTenses[label] = [...tenses[t]];
     }
   }
 

@@ -1,0 +1,536 @@
+[
+  {
+    "id": "it-0002",
+    "current_tip": "The preposition 'di' contracts with articles: di + il = del, di + la = della, di + i = dei. Very common in everyday speech.",
+    "fixed_tip": "Italian usually drops subject pronouns: 'mangio la pasta' is more natural than 'io mangio'. Use 'io' only for emphasis or contrast.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-0004",
+    "current_tip": "'Quanto' in exclamations: 'Quanto è bella!' = How beautiful she is! Agrees with the noun in questions.",
+    "fixed_tip": "'Guardare' = to watch/look at. No preposition needed: 'guarda la televisione'. Regular -are verb.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-0005",
+    "current_tip": "Use 'molto' as adverb (invariable): 'Parla molto' (speaks a lot). As adjective it agrees: 'molti amici' (many friends).",
+    "fixed_tip": "'-Are' verbs with 'tu': cucinare → cucini. The -i ending is the same for all three verb types with 'tu'.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-0006",
+    "current_tip": "'Anche' (also/too) goes before the verb or word it modifies: 'Anch'io parlo' = I speak too.",
+    "fixed_tip": "The 'noi' form always ends in -iamo: prepariamo, corriamo, partiamo. This is consistent across all verb types.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-0007",
+    "current_tip": "'Proprio' emphasizes ownership: 'la propria casa' = one's own house. Stronger than possessive adjectives.",
+    "fixed_tip": "'Con + noun' forms adverbial phrases: 'con attenzione' (carefully), 'con calma' (calmly). Alternative to -mente adverbs.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0009",
+    "current_tip": "'Ecco' = here is/there is (presenting something): 'Ecco la chiave!' = Here's the key! Different from 'c'è' (existence).",
+    "fixed_tip": "'Abitare' = to live (somewhere). 'In centro' = downtown/in the center. 'In' without article before general areas.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0011",
+    "current_tip": "Italian uses articles with possessives: 'il mio libro' (my book). Exception: family members in singular: 'mia madre'.",
+    "fixed_tip": "'Amare' = to love (stronger than 'piacere'). 'La musica' uses the article — Italian uses definite articles with abstract nouns.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0013",
+    "current_tip": "'Anche' (also/too) goes before the verb or word it modifies: 'Anch'io parlo' = I speak too.",
+    "fixed_tip": "'Giocare a' + sport: 'gioco a tennis'. Use 'a' before sports. 'Giocare' has a soft g before -o: 'gioco'.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-0027",
+    "current_tip": "Italian present tense covers both 'I speak' and 'I am speaking'. No separate continuous form like English.",
+    "fixed_tip": "'A' before cities: 'abitano a Roma'. Use 'in' before countries: 'in Italia'. The preposition depends on city vs. country.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0031",
+    "current_tip": "The 'voi' form doubles as formal plural AND informal plural. 'Lei' is formal singular only.",
+    "fixed_tip": "'In' before countries: 'vive in Italia'. Use 'a' before cities. No article needed with 'in' + country name.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0033",
+    "current_tip": "Italian time: 'Sono le tre' (It's 3:00). Hours are feminine plural. Exception: 'È l'una' (It's 1:00) — singular.",
+    "fixed_tip": "'Ascoltare' = to listen to. The 'to' is built in: 'ascolta la musica'. No preposition needed.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0036",
+    "current_tip": "Use 'a' before cities and 'in' before countries: 'Vivo a Roma' but 'Vivo in Italia'.",
+    "fixed_tip": "'A casa' = at home / homeward. 'Tornare a casa' = to go back home. No article needed with 'casa' in this set phrase.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0043",
+    "current_tip": "'Piacere' works like 'to please': 'Mi piace la pizza' = Pizza pleases me (= I like pizza).",
+    "fixed_tip": "'Ricevere' is a regular -ere verb: ricevo, ricevi, riceve. The -ere conjugation: -o, -i, -e, -iamo, -ete, -ono.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-0064",
+    "current_tip": "In everyday Italian, 'noi' forms are often replaced by 'si' + 3rd person: 'si mangia bene' = we eat well.",
+    "fixed_tip": "'Credere in' = to believe in. 'Credere a' = to believe someone. The preposition changes the meaning.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0112",
+    "current_tip": "'Sapere' is knowing facts; 'conoscere' is knowing people or places. Both translate as 'to know'.",
+    "fixed_tip": "'Bere' (to drink) is irregular: bevo, bevi, beve, beviamo, bevete, bevono. One of the most common irregular verbs.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-0133",
+    "current_tip": "'Fare' (to do/make) covers both: 'Faccio colazione' (I have breakfast), 'Faccio sport' (I do sports).",
+    "fixed_tip": "'Arrivare' is regular -are but uses 'essere' in passato prossimo: 'è arrivato/a'. Here in present tense.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0135",
+    "current_tip": "Preposition 'a' + city, 'in' + country: 'Vado a Roma' but 'Vado in Italia'. No article needed with 'in'.",
+    "fixed_tip": "'In fretta' = in a hurry / quickly. Common set phrase with 'in'.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0153",
+    "current_tip": "'Stare + gerund' for ongoing actions: 'Sto mangiando' = I'm eating right now. More specific than present tense.",
+    "fixed_tip": "'Camminare al parco' = to walk to the park. 'Al' = a+il (contraction). All -are 'noi' forms: -iamo.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0154",
+    "current_tip": "In everyday Italian, 'noi' forms are often replaced by 'si' + 3rd person: 'si mangia bene' = we eat well.",
+    "fixed_tip": "'Leggere' = to read. Irregular -ere verb: leggo, leggi, legge, leggiamo, leggete, leggono. Double 'g' throughout.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0156",
+    "current_tip": "In Italian, 'lo' replaces 'il' before s+consonant, z, gn, ps: 'lo studente', 'lo zaino', 'lo gnocco'.",
+    "fixed_tip": "'Mangiare' keeps the -i- before -a: 'mangia' (he eats). But drops it before -i: 'mangi' (you eat).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0157",
+    "current_tip": "'Sapere' = to know facts. 'Conoscere' = to know/be familiar with people and places. Different verbs for different knowing!",
+    "fixed_tip": "'Vivere' = to live. Regular -ere: vivo, vivi, vive. 'In periferia' = in the suburbs.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-0158",
+    "current_tip": "The pronoun 'ci' can mean 'there' or 'about it': 'Ci penso' = I think about it. 'Ci vado' = I go there.",
+    "fixed_tip": "'Correre' = to run. Irregular past participle: 'corso'. 'Al parco' = to/at the park.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0184",
+    "current_tip": "Italian uses articles with possessives: 'il mio libro' (my book). Exception: family members in singular: 'mia madre'.",
+    "fixed_tip": "'Lungo' as preposition means 'along': 'cammino lungo il fiume' = I walk along the river.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0186",
+    "current_tip": "The partitive article (del, della, dei, delle) means 'some': 'Voglio del pane' = I want some bread.",
+    "fixed_tip": "'Vicino a' = near/close to: 'abitiamo vicino al parco'. Note 'a+il' contracts to 'al'. Opposite: 'lontano da'.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0187",
+    "current_tip": "'Ogni' (every) is always singular: 'ogni giorno' (every day), never 'ogni giorni'.",
+    "fixed_tip": "'In' + indefinite article for workplaces: 'lavoro in un ristorante'. 'In' doesn't contract with indefinite articles.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0188",
+    "current_tip": "Use 'molto' as adverb (invariable): 'Parla molto' (speaks a lot). As adjective it agrees: 'molti amici' (many friends).",
+    "fixed_tip": "'Verso' means 'toward': 'cammina verso la piazza' = walks toward the square. Indicates direction.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-0191",
+    "current_tip": "Italian present tense covers both 'I speak' and 'I am speaking'. No separate continuous form like English.",
+    "fixed_tip": "'In' + indefinite article for workplaces: 'lavoro in un ristorante'. 'In' doesn't contract with indefinite articles.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0224",
+    "current_tip": "The partitive article (del, della, dei, delle) means 'some': 'Voglio del pane' = I want some bread.",
+    "fixed_tip": "'Molto' as adverb is invariable: 'lavoro molto' (I work a lot). As adjective it agrees: 'molte persone' (many people).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0236",
+    "current_tip": "The pronoun 'ci' can mean 'there' or 'about it': 'Ci penso' = I think about it. 'Ci vado' = I go there.",
+    "fixed_tip": "Reflexive verbs use 'si' for third person: 'si prepara' = she gets (herself) ready. Full pattern: mi, ti, si, ci, vi, si.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0238",
+    "current_tip": "'Piacere' works like 'to please': 'Mi piace la pizza' = Pizza pleases me (= I like pizza).",
+    "fixed_tip": "'In' contracts with articles: in+il=nel, in+la=nella. 'Nel giardino' = in the garden. Mandatory with definite articles.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-0256",
+    "current_tip": "'C'è' (there is) and 'ci sono' (there are) — 'ci' = there, contracted with 'è' for singular.",
+    "fixed_tip": "'In' + indefinite article for workplaces: 'lavoro in un ristorante'. 'In' doesn't contract with indefinite articles.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-0257",
+    "current_tip": "In Italian, 'lo' replaces 'il' before s+consonant, z, gn, ps: 'lo studente', 'lo zaino', 'lo gnocco'.",
+    "fixed_tip": "'Ogni' (every/each) is always singular: 'ogni cinque minuti' = every five minutes. Never changes form.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0271",
+    "current_tip": "'Ogni' (every) is always singular: 'ogni giorno' (every day), never 'ogni giorni'.",
+    "fixed_tip": "Definite article with days/times for habits: 'il lunedì lavoro' = on Mondays I work. No article = one specific day.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0275",
+    "current_tip": "'C'è' (there is) and 'ci sono' (there are) — 'ci' = there, contracted with 'è' for singular.",
+    "fixed_tip": "'Passare le vacanze' = to spend holidays. 'Al mare' = at the seaside. 'Al' = a+il (contraction).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0474",
+    "current_tip": "'Stare per + infinitive' means 'about to': 'Sto per uscire' = I'm about to leave.",
+    "fixed_tip": "'Essere' for permanent facts: 'Roma è la capitale d'Italia'. 'D'Italia' = di + Italia (elision before vowel).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0497",
+    "current_tip": "'Essere' describes permanent states: 'Sono italiano' (I'm Italian). 'Stare' is for temporary ones or feelings.",
+    "fixed_tip": "Passato prossimo: avere/essere + past participle. -are→-ato, -ere→-uto, -ire→-ito.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-0528",
+    "current_tip": "Words ending in -zione are always feminine: 'la stazione', 'la situazione', 'la nazione'.",
+    "fixed_tip": "'Gli' is the masculine plural article before vowels and s+consonant/z: 'gli amici', 'gli studenti'. Otherwise use 'i'.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0541",
+    "current_tip": "'Figurati' (informal) or 'Si figuri' (formal) means 'don't mention it' — a very common way to say 'you're welcome'.",
+    "fixed_tip": "'Per favore' (please) and 'per piacere' are interchangeable. 'Per favore' is slightly more common.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0599",
+    "current_tip": "'In bocca al lupo' (into the wolf's mouth) means 'good luck' — reply with 'Crepi!' (may it die!).",
+    "fixed_tip": "",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0823",
+    "current_tip": "Italian greetings vary by formality: \"Ciao\" (informal, hello/bye), \"Buongiorno\" (formal, until afternoon), \"Arrivederci\" (formal goodbye). Formal = Lei, informal = tu.",
+    "fixed_tip": "'C'è' (there is) and 'ci sono' (there are). 'Ci' = there. Essential existential construction.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0893",
+    "current_tip": "In spoken Italian, 'ho capito' (I understood/got it) is used like 'OK' or 'I see' in conversation.",
+    "fixed_tip": "Passato prossimo: auxiliary 'avere' + past participle (-ato, -uto, -ito). Most transitive verbs use 'avere'.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0894",
+    "current_tip": "'Già' (already) goes between the auxiliary and participle: 'Ho già mangiato' = I've already eaten.",
+    "fixed_tip": "Passato prossimo: auxiliary 'avere' + past participle (-ato, -uto, -ito). Most transitive verbs use 'avere'.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0905",
+    "current_tip": "Italian greetings vary by formality: \"Ciao\" (informal, hello/bye), \"Buongiorno\" (formal, until afternoon), \"Arrivederci\" (formal goodbye). Formal = Lei, informal = tu.",
+    "fixed_tip": "'In' contracts with articles: in+il=nel, in+la=nella. 'Nel giardino' = in the garden. Mandatory with definite articles.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0908",
+    "current_tip": "Common irregular participles: 'fatto' (fare), 'detto' (dire), 'visto' (vedere), 'preso' (prendere), 'messo' (mettere).",
+    "fixed_tip": "Passato prossimo: avere/essere + past participle. -are→-ato, -ere→-uto, -ire→-ito.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-0951",
+    "current_tip": "Italian greetings vary by formality: \"Ciao\" (informal, hello/bye), \"Buongiorno\" (formal, until afternoon), \"Arrivederci\" (formal goodbye). Formal = Lei, informal = tu.",
+    "fixed_tip": "'Molto' as adverb is invariable: 'lavoro molto' (I work a lot). As adjective it agrees: 'molte persone' (many people).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-1006",
+    "current_tip": "With 'essere', the past participle agrees: 'Lei è andata' (she went) vs 'Lui è andato' (he went).",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-1007",
+    "current_tip": "'Cosa è successo?' = What happened? 'Succedere' uses 'essere': 'È successo qualcosa' = Something happened.",
+    "fixed_tip": "Passato prossimo: avere/essere + past participle. -are→-ato, -ere→-uto, -ire→-ito.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-1053",
+    "current_tip": "With 'essere', the participle agrees: 'Lei è andata' (she went), 'Loro sono andati' (they went). Like an adjective.",
+    "fixed_tip": "Passato prossimo: avere/essere + past participle. -are→-ato, -ere→-uto, -ire→-ito.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-1054",
+    "current_tip": "'Andare' uses 'essere': 'Sono andato al cinema' (I went to the cinema). Remember: motion verbs = essere.",
+    "fixed_tip": "Passato prossimo: avere/essere + past participle. -are→-ato, -ere→-uto, -ire→-ito.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-1103",
+    "current_tip": "Italian greetings vary by formality: \"Ciao\" (informal, hello/bye), \"Buongiorno\" (formal, until afternoon), \"Arrivederci\" (formal goodbye). Formal = Lei, informal = tu.",
+    "fixed_tip": "'Ci' can mean 'there', 'us', 'each other', or 'about it': 'ci penso' = I think about it. Context determines meaning.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-1126",
+    "current_tip": "With 'avere', the participle normally doesn't change: 'Ho visto' for everyone. Exception: with preceding direct object pronouns.",
+    "fixed_tip": "Passato prossimo: auxiliary 'avere' + past participle (-ato, -uto, -ito). Most transitive verbs use 'avere'.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-1143",
+    "current_tip": "With 'avere' and a preceding 'la/le' pronoun, the participle agrees: 'L'ho vista' = I saw her. 'Le ho comprate' = I bought them (f.).",
+    "fixed_tip": "Passato prossimo: auxiliary 'avere' + past participle (-ato, -uto, -ito). Most transitive verbs use 'avere'.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-1144",
+    "current_tip": "'Quanto tempo è passato!' = How much time has passed! 'Passare' uses 'essere' when intransitive (time passing).",
+    "fixed_tip": "Passato prossimo: auxiliary 'avere' + past participle (-ato, -uto, -ito). Most transitive verbs use 'avere'.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-1145",
+    "current_tip": "Most verbs use 'avere' as helper: 'Ho mangiato' (I ate). Verbs of motion/change use 'essere': 'Sono andato' (I went).",
+    "fixed_tip": "'A' contracts with articles: al (a+il), alla (a+la), ai (a+i), alle (a+le). Mandatory with definite articles.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-1152",
+    "current_tip": "'Essere nato' (to be born) uses 'essere': 'Sono nato a Roma' = I was born in Rome. Always with essere.",
+    "fixed_tip": "Passato prossimo: auxiliary 'avere' + past participle (-ato, -uto, -ito). Most transitive verbs use 'avere'.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-1167",
+    "current_tip": "Telephone: 'Ho chiamato' = I called. 'Mi ha chiamato' = He/she called me. Object pronouns go before 'avere'.",
+    "fixed_tip": "Passato prossimo: auxiliary 'avere' + past participle (-ato, -uto, -ito). Most transitive verbs use 'avere'.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-1182",
+    "current_tip": "'Appena' (just) also goes between auxiliary and participle: 'Sono appena arrivato' = I just arrived.",
+    "fixed_tip": "Passato prossimo: auxiliary 'avere' + past participle (-ato, -uto, -ito). Most transitive verbs use 'avere'.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-1214",
+    "current_tip": "The imperfetto of 'essere' (ero, eri, era...) is one of the most common: 'Ero stanco' = I was tired.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-1224",
+    "current_tip": "'Stare' uses 'essere': 'Sono stato bene' = I was well / I've been well. Common in 'Come stai?' conversations.",
+    "fixed_tip": "Passato prossimo: auxiliary 'avere' + past participle (-ato, -uto, -ito). Most transitive verbs use 'avere'.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-1235",
+    "current_tip": "Formal imperative with reflexive verb.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-1288",
+    "current_tip": "Formal imperative (Lei): uses subjunctive forms. -are → -i, -ere/-ire → -a. \"Scusi\" (excuse me), \"Prego, si accomodi\" (please, sit down).",
+    "fixed_tip": "Passato prossimo: auxiliary 'avere' + past participle (-ato, -uto, -ito). Most transitive verbs use 'avere'.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-1563",
+    "current_tip": "'Sapere' changes meaning by tense: 'sapevo' = I knew (background), 'ho saputo' = I found out (event).",
+    "fixed_tip": "'Lui' = he (subject). The verb ending (-a for third person -are, -e for -ere/-ire) already shows the person.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-1569",
+    "current_tip": "Reflexive infinitive (-arsi, -ersi, -irsi): \"Devo alzarmi\" — the pronoun attaches to the infinitive end.",
+    "fixed_tip": "Italian object pronouns go before the verb: 'lo vedo' (I see him/it), 'gli parlo' (I talk to him). They attach to infinitives: 'vederlo'.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-1576",
+    "current_tip": "Reflexive infinitive (-arsi, -ersi, -irsi): \"Devo alzarmi\" — the pronoun attaches to the infinitive end.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-1653",
+    "current_tip": "Negative 'tu' imperative uses 'non + infinitive': 'Non parlare!' = Don't speak!",
+    "fixed_tip": "'Per favore' (please) and 'per piacere' are interchangeable. 'Per favore' is slightly more common.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-1784",
+    "current_tip": "Preposition \"di\" contracts with articles: di+il=del, di+lo=dello, di+la=della, di+i=dei, di+gli=degli, di+le=delle.",
+    "fixed_tip": "Italian object pronouns go before the verb: 'lo vedo' (I see him/it), 'gli parlo' (I talk to him). They attach to infinitives: 'vederlo'.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-1886",
+    "current_tip": "Reflexive imperative: pronoun attaches to the end.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-2183",
+    "current_tip": "'Dovrebbe' = should. 'Dovresti mangiare di più' = You should eat more. Gentler than 'Devi' (you must).",
+    "fixed_tip": "Singular family members drop the article with possessives: 'mia madre' (not 'la mia madre'). Plural keeps it: 'i miei fratelli'.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-2261",
+    "current_tip": "Use conditional for polite requests: 'Vorrei un caffè' = I would like a coffee — much softer than 'Voglio'.",
+    "fixed_tip": "'Ci' can mean 'there', 'us', 'each other', or 'about it': 'ci penso' = I think about it. Context determines meaning.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-2269",
+    "current_tip": "'Dovrei' (I should) is softer than 'Devo' (I must): 'Dovrei studiare di più' = I should study more.",
+    "fixed_tip": "The conditional (condizionale) expresses wishes, polite requests, or hypotheticals. Formed from the future stem + imperfect endings.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-2302",
+    "current_tip": "'Sarebbe bello' = It would be nice. 'Sarebbe meglio' = It would be better. Very common in discussion.",
+    "fixed_tip": "Reflexive pronouns (mi, ti, si, ci, vi) indicate the action reflects back on the subject. Many Italian verbs are reflexive that aren't in English.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-2338",
+    "current_tip": "'Mi piacerebbe' = I would like (lit. 'it would please me'). More polite than 'Voglio' for expressing wishes.",
+    "fixed_tip": "'Lei' = she (or formal 'you'). Context determines which meaning. The verb form is the same for both.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-2413",
+    "current_tip": "'Potrebbe' = could/would be able to. Essential for polite Italian: 'Potrebbe aiutarmi?' = Could you help me?",
+    "fixed_tip": "'Vicino a' = near/close to: 'abitiamo vicino al parco'. Note 'a+il' contracts to 'al'. Opposite: 'lontano da'.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-2564",
+    "current_tip": "'Appena' (just) with trapassato: 'Ero appena arrivato' = I had just arrived.",
+    "fixed_tip": "'Che' connects clauses. After verbs of emotion, opinion, or doubt, it introduces the subjunctive (congiuntivo).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-2572",
+    "current_tip": "'Venire' replaces 'essere' in passive for more dynamic actions: 'Viene letto' = It gets read.",
+    "fixed_tip": "Italian object pronouns go before the verb: 'lo vedo' (I see him/it), 'gli parlo' (I talk to him). They attach to infinitives: 'vederlo'.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-2592",
+    "current_tip": "'Magari' + imperfect subjunctive expresses strong wishes: 'Magari fossi ricco!' = If only I were rich!",
+    "fixed_tip": "",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-2693",
+    "current_tip": "The trapassato prossimo (past perfect) describes a past before another past: 'Avevo già mangiato quando è arrivato'.",
+    "fixed_tip": "'In' contracts with articles: in+il=nel, in+la=nella. 'Nel giardino' = in the garden. Mandatory with definite articles.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-3027",
+    "current_tip": "Si impersonale: si + verb (3rd singular) — 'one says', 'people say'.",
+    "fixed_tip": "Reflexive pronouns (mi, ti, si, ci, vi) indicate the action reflects back on the subject. Many Italian verbs are reflexive that aren't in English.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-3048",
+    "current_tip": "After 'prima che' (before), always use subjunctive: 'Prima che piova' = Before it rains.",
+    "fixed_tip": "Italian object pronouns go before the verb: 'lo vedo' (I see him/it), 'gli parlo' (I talk to him). They attach to infinitives: 'vederlo'.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-3074",
+    "current_tip": "\"Riuscire a\" differs from \"potere\": it implies effort and eventual success.",
+    "fixed_tip": "'A' contracts with articles: al (a+il), alla (a+la), ai (a+i), alle (a+le). Mandatory with definite articles.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-3084",
+    "current_tip": "'Nonostante' (despite) triggers subjunctive: 'Nonostante piova, esco' = Despite it raining, I'm going out.",
+    "fixed_tip": "",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-3088",
+    "current_tip": "'Pur' + gerund means 'even though': 'Pur essendo stanco, ha continuato' = Even though he was tired, he continued.",
+    "fixed_tip": "'Che' connects clauses. After verbs of emotion, opinion, or doubt, it introduces the subjunctive (congiuntivo).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-3200",
+    "current_tip": "'Andare' + past participle: necessity.",
+    "fixed_tip": "",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-3398",
+    "current_tip": "'Avere voglia di' means 'to feel like': 'Ho voglia di un gelato' = I feel like having an ice cream.",
+    "fixed_tip": "",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-3452",
+    "current_tip": "In formal writing, avoid contractions and use full forms: 'non è' instead of colloquial clipping.",
+    "fixed_tip": "Reflexive pronouns (mi, ti, si, ci, vi) indicate the action reflects back on the subject. Many Italian verbs are reflexive that aren't in English.",
+    "issue": "mismatch"
+  },
+  {
+    "id": "it-3480",
+    "current_tip": "'Lei' (formal you) takes third-person verbs: 'Lei parla bene' = You speak well (formal).",
+    "fixed_tip": "Italian uses articles with possessives: 'il mio libro', 'la mia casa'. Only singular family members are exceptions.",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-3526",
+    "current_tip": "'Non vedo l'ora' literally means 'I can't see the hour' — it means 'I can't wait': 'Non vedo l'ora di partire!'.",
+    "fixed_tip": "",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-3664",
+    "current_tip": "'Pertanto' and 'dunque' are formal connectors meaning 'therefore' — more elegant than 'quindi' in academic writing.",
+    "fixed_tip": "'Che' connects clauses. After verbs of emotion, opinion, or doubt, it introduces the subjunctive (congiuntivo).",
+    "issue": "irrelevant"
+  },
+  {
+    "id": "it-3766",
+    "current_tip": "'Egli/ella' are literary subject pronouns — spoken Italian uses 'lui/lei' instead.",
+    "fixed_tip": "'Che' connects clauses. After verbs of emotion, opinion, or doubt, it introduces the subjunctive (congiuntivo).",
+    "issue": "irrelevant"
+  }
+]

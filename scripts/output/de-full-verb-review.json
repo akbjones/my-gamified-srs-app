@@ -1,0 +1,6774 @@
+[
+  {
+    "key": "18",
+    "issueType": "other-fix",
+    "note": "number, not a verb",
+    "old": {
+      "en": "to 18",
+      "pos": "v"
+    },
+    "new": {
+      "en": "18",
+      "pos": "num"
+    }
+  },
+  {
+    "key": "ab",
+    "issueType": "other-fix",
+    "note": "\"ab\" is a preposition/particle",
+    "old": {
+      "en": "to train; away",
+      "pos": "v"
+    },
+    "new": {
+      "en": "from; off; away",
+      "pos": "prep"
+    }
+  },
+  {
+    "key": "abends",
+    "issueType": "other-fix",
+    "note": "adverb, not noun",
+    "old": {
+      "en": "at evening",
+      "pos": "n"
+    },
+    "new": {
+      "en": "in the evening",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "abfallentsorgungsbetrieb",
+    "issueType": "to-on-non-verb",
+    "note": "noun, had \"to \" prefix",
+    "old": {
+      "en": "to waste disposal company",
+      "pos": "v"
+    },
+    "new": {
+      "en": "waste disposal company",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "abfragen",
+    "issueType": "other-fix",
+    "note": "verb, not noun; was \"computer; query\"",
+    "old": {
+      "en": "computer; query",
+      "pos": "n"
+    },
+    "new": {
+      "en": "to query; to test",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "abgefahren",
+    "issueType": "other-fix",
+    "note": "adj/participle, was garbled",
+    "old": {
+      "en": "to takes; crazy",
+      "pos": "v"
+    },
+    "new": {
+      "en": "crazy; cool; departed",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "abreist",
+    "issueType": "context-bleed",
+    "note": "context bleed \"leave; depart\" → depart",
+    "old": {
+      "en": "to leave; depart",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to depart",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "ach",
+    "issueType": "backslash-garbled",
+    "note": "garbled backslash → correct interjection",
+    "old": {
+      "en": "that\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "oh; alas",
+      "pos": "interj"
+    }
+  },
+  {
+    "key": "ähnelt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"resembles\" 3rd person → infinitive",
+    "old": {
+      "en": "to resembles; similar",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "to resemble",
+      "pos": "v",
+      "lemma": "ähneln"
+    }
+  },
+  {
+    "key": "akzeptiert",
+    "issueType": "to-past-tense",
+    "note": "\"to accepted\" → accepted",
+    "old": {
+      "en": "to accepted",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "accepted",
+      "pos": "v",
+      "lemma": "akzeptieren"
+    }
+  },
+  {
+    "key": "allerhöchsten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"rents; most exalted\" → highest",
+    "old": {
+      "en": "to rents; most exalted",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "highest; utmost",
+      "pos": "adj",
+      "lemma": "hoch"
+    }
+  },
+  {
+    "key": "älteren",
+    "issueType": "context-bleed",
+    "note": "context bleed \"helped; older\"",
+    "old": {
+      "en": "to helped; older",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "older; elderly",
+      "pos": "adj",
+      "lemma": "alt"
+    }
+  },
+  {
+    "key": "andere",
+    "issueType": "context-bleed",
+    "note": "context bleed \"explain; other\" → other",
+    "old": {
+      "en": "to explain; other",
+      "pos": "v"
+    },
+    "new": {
+      "en": "other; different",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "änderung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to change\" on -ung noun → change",
+    "old": {
+      "en": "to change",
+      "pos": "v"
+    },
+    "new": {
+      "en": "change; amendment",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "angelegenheit",
+    "issueType": "to-on-non-verb",
+    "note": "\"to matter\" on -heit noun → matter",
+    "old": {
+      "en": "to matter",
+      "pos": "v"
+    },
+    "new": {
+      "en": "matter; affair",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "angelegt",
+    "issueType": "to-past-tense",
+    "note": "\"to created\" → created",
+    "old": {
+      "en": "to created",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "created; designed",
+      "pos": "v",
+      "lemma": "anlegen"
+    }
+  },
+  {
+    "key": "angemeldet",
+    "issueType": "context-bleed",
+    "note": "context bleed \"signed; logged in\"",
+    "old": {
+      "en": "to signed; logged in",
+      "pos": "v"
+    },
+    "new": {
+      "en": "registered; logged in",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "angepasst",
+    "issueType": "to-past-tense",
+    "note": "\"to adjusted\" → adjusted",
+    "old": {
+      "en": "to adjusted",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "adjusted; adapted",
+      "pos": "v",
+      "lemma": "anpassen"
+    }
+  },
+  {
+    "key": "anlehnung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to reference\" on -ung noun",
+    "old": {
+      "en": "to reference",
+      "pos": "v"
+    },
+    "new": {
+      "en": "reference; in keeping with",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "anschaffen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"space; acquire\" → acquire",
+    "old": {
+      "en": "space; acquire",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to acquire; to purchase",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "antiken",
+    "issueType": "context-bleed",
+    "note": "context bleed \"repairs; ancient\" → antique",
+    "old": {
+      "en": "to repairs; ancient",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "ancient; antique",
+      "pos": "adj",
+      "lemma": "antik"
+    }
+  },
+  {
+    "key": "antreten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"explained; compete\"",
+    "old": {
+      "en": "to explained; compete",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to compete; to start",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "anvertraut",
+    "issueType": "to-past-tense",
+    "note": "\"to entrusted\" → entrusted",
+    "old": {
+      "en": "to entrusted",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "entrusted",
+      "pos": "v",
+      "lemma": "anvertrauen"
+    }
+  },
+  {
+    "key": "anzug",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"men\\\\\" → suit",
+    "old": {
+      "en": "men\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "suit",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "apfelkuchen",
+    "issueType": "to-on-non-verb",
+    "note": "\"to apple pie\" on noun → apple pie",
+    "old": {
+      "en": "to apple pie",
+      "pos": "v"
+    },
+    "new": {
+      "en": "apple pie",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "arm",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"you\\\\\" → poor/arm",
+    "old": {
+      "en": "you\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "poor; arm",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "art",
+    "issueType": "wrong-meaning",
+    "note": "German Art = type/kind, not art",
+    "old": {
+      "en": "way; art",
+      "pos": "n"
+    },
+    "new": {
+      "en": "type; kind; manner",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "artikel",
+    "issueType": "context-bleed",
+    "note": "context bleed \"order; article\" → article",
+    "old": {
+      "en": "to order; article",
+      "pos": "v"
+    },
+    "new": {
+      "en": "article",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "aufarbeiten",
+    "issueType": "truncated",
+    "note": "truncated \"proces\" → process",
+    "old": {
+      "en": "to proces",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to process; to work through",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "aufgebunden",
+    "issueType": "context-bleed",
+    "note": "context bleed \"pulled; tied up\"",
+    "old": {
+      "en": "to pulled; tied up",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "untied; pulled (someone's leg)",
+      "pos": "v",
+      "lemma": "aufbinden"
+    }
+  },
+  {
+    "key": "aufgegeben",
+    "issueType": "context-bleed",
+    "note": "context bleed \"position; abandoned\"",
+    "old": {
+      "en": "position; abandoned",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "given up; abandoned",
+      "pos": "v",
+      "lemma": "aufgeben"
+    }
+  },
+  {
+    "key": "aufgehört",
+    "issueType": "context-bleed",
+    "note": "context bleed \"rain; stopped\"",
+    "old": {
+      "en": "rain; stopped",
+      "pos": "v"
+    },
+    "new": {
+      "en": "stopped",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "aufsuchen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"place; visit\"",
+    "old": {
+      "en": "place; visit",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to visit; to seek out",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "augenzeugen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"to eyewitness\" → eyewitnesses",
+    "old": {
+      "en": "to eyewitness",
+      "pos": "v"
+    },
+    "new": {
+      "en": "eyewitnesses",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "ausbildung",
+    "issueType": "context-bleed",
+    "note": "context bleed \"open; education\" + wrong POS",
+    "old": {
+      "en": "to open; education",
+      "pos": "v"
+    },
+    "new": {
+      "en": "education; training",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "ausführlichen",
+    "issueType": "truncated",
+    "note": "truncated \"detaile\" → detailed",
+    "old": {
+      "en": "to detaile",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "detailed",
+      "pos": "adj",
+      "lemma": "ausführlich"
+    }
+  },
+  {
+    "key": "ausgefallen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"result; failed\"",
+    "old": {
+      "en": "to result; failed",
+      "pos": "v"
+    },
+    "new": {
+      "en": "failed; unusual; canceled",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "ausgefüllten",
+    "issueType": "to-past-tense",
+    "note": "\"to completed\" → completed",
+    "old": {
+      "en": "to completed",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "filled out; completed",
+      "pos": "adj",
+      "lemma": "ausgefüllt"
+    }
+  },
+  {
+    "key": "ausgelaugt",
+    "issueType": "to-past-tense",
+    "note": "\"to exhausted\" → exhausted",
+    "old": {
+      "en": "to exhausted",
+      "pos": "v"
+    },
+    "new": {
+      "en": "exhausted; drained",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "ausgeschildert",
+    "issueType": "to-past-tense",
+    "note": "\"to signposted\" → signposted",
+    "old": {
+      "en": "to signposted",
+      "pos": "v"
+    },
+    "new": {
+      "en": "signposted",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "ausgetauscht",
+    "issueType": "context-bleed",
+    "note": "context bleed \"replaced; exchanged\"",
+    "old": {
+      "en": "to replaced; exchanged",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "exchanged; replaced",
+      "pos": "v",
+      "lemma": "austauschen"
+    }
+  },
+  {
+    "key": "ausrichten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"supposed; align\"",
+    "old": {
+      "en": "to supposed; align",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to align; to convey",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "aussehen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"resembles; look\" → to look/appearance",
+    "old": {
+      "en": "to resembles; look",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to look; appearance",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "aussieht",
+    "issueType": "context-bleed",
+    "note": "context bleed \"resembles; look\"",
+    "old": {
+      "en": "to resembles; look",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to look",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "auszeichnung",
+    "issueType": "context-bleed",
+    "note": "context bleed \"passed; award\"",
+    "old": {
+      "en": "to passed; award",
+      "pos": "v"
+    },
+    "new": {
+      "en": "award; distinction",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "auszugehen",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"doesn\\\\\" → to go out",
+    "old": {
+      "en": "doesn\\",
+      "pos": "n",
+      "lemma": null
+    },
+    "new": {
+      "en": "to go out",
+      "pos": "v",
+      "lemma": "ausgehen"
+    }
+  },
+  {
+    "key": "autobahn",
+    "issueType": "context-bleed",
+    "note": "context bleed \"driving; highway\"",
+    "old": {
+      "en": "to driving; highway",
+      "pos": "v"
+    },
+    "new": {
+      "en": "highway; motorway",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "autobiographischen",
+    "issueType": "to-past-tense",
+    "note": "\"to autobiographical\" → adj",
+    "old": {
+      "en": "to autobiographical",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "autobiographical",
+      "pos": "adj",
+      "lemma": "autobiographisch"
+    }
+  },
+  {
+    "key": "bank",
+    "issueType": "context-bleed",
+    "note": "context bleed \"sits; bank\" + wrong POS",
+    "old": {
+      "en": "to sits; bank",
+      "pos": "v"
+    },
+    "new": {
+      "en": "bank; bench",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "bären",
+    "issueType": "context-bleed",
+    "note": "context bleed \"pulled; bear\"",
+    "old": {
+      "en": "to pulled; bear",
+      "pos": "v"
+    },
+    "new": {
+      "en": "bears (animals)",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "bayerischen",
+    "issueType": "to-past-tense",
+    "note": "\"to bavarian\" → Bavarian",
+    "old": {
+      "en": "to bavarian",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "Bavarian",
+      "pos": "adj",
+      "lemma": "bayerisch"
+    }
+  },
+  {
+    "key": "bearbeitete",
+    "issueType": "context-bleed",
+    "note": "context bleed \"worked; edited\"",
+    "old": {
+      "en": "to worked; edited",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "edited; processed",
+      "pos": "v",
+      "lemma": "bearbeiten"
+    }
+  },
+  {
+    "key": "beaufsichtigt",
+    "issueType": "to-past-tense",
+    "note": "\"to supervised\" → supervised",
+    "old": {
+      "en": "to supervised",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "supervised",
+      "pos": "v",
+      "lemma": "beaufsichtigen"
+    }
+  },
+  {
+    "key": "bedenken",
+    "issueType": "context-bleed",
+    "note": "context bleed \"concerns; consider\"",
+    "old": {
+      "en": "to concerns; consider",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to consider; concerns",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "bedeutung",
+    "issueType": "context-bleed",
+    "note": "context bleed \"explain; meaning\"",
+    "old": {
+      "en": "to explain; meaning",
+      "pos": "v"
+    },
+    "new": {
+      "en": "meaning; significance",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "bedürfnisse",
+    "issueType": "to-on-non-verb",
+    "note": "\"to need\" on noun → needs",
+    "old": {
+      "en": "to need",
+      "pos": "v"
+    },
+    "new": {
+      "en": "needs; requirements",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "beeindrucken",
+    "issueType": "truncated",
+    "note": "truncated \"impres\" → impress",
+    "old": {
+      "en": "to impres",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to impress",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "beeindruckt",
+    "issueType": "truncated",
+    "note": "truncated \"impres\" → impressed",
+    "old": {
+      "en": "to impres",
+      "pos": "v"
+    },
+    "new": {
+      "en": "impressed",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "befassen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"time; deal\"",
+    "old": {
+      "en": "time; deal",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to deal with; to concern oneself",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "befragt",
+    "issueType": "to-past-tense",
+    "note": "\"to interviewed\" → interviewed",
+    "old": {
+      "en": "to interviewed",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "interviewed; questioned",
+      "pos": "v",
+      "lemma": "befragen"
+    }
+  },
+  {
+    "key": "begleitete",
+    "issueType": "to-past-tense",
+    "note": "\"to accompanied\" → accompanied",
+    "old": {
+      "en": "to accompanied",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "accompanied",
+      "pos": "v",
+      "lemma": "begleiten"
+    }
+  },
+  {
+    "key": "begutachten",
+    "issueType": "truncated",
+    "note": "truncated \"asses\" → assess",
+    "old": {
+      "en": "to asses",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to assess; to evaluate",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "bekannt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"results; known\"",
+    "old": {
+      "en": "to results; known",
+      "pos": "v"
+    },
+    "new": {
+      "en": "known; famous",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "bekommen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"tickets; receive\"",
+    "old": {
+      "en": "to tickets; receive",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to receive; to get",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "bekommt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"tickets; receive\"",
+    "old": {
+      "en": "to tickets; receive",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to receive; to get",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "belastete",
+    "issueType": "to-past-tense",
+    "note": "\"to burdened\" → burdened",
+    "old": {
+      "en": "to burdened",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "burdened; strained",
+      "pos": "v",
+      "lemma": "belasten"
+    }
+  },
+  {
+    "key": "benotet",
+    "issueType": "to-past-tense",
+    "note": "\"to graded\" → graded",
+    "old": {
+      "en": "to graded",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "graded",
+      "pos": "v",
+      "lemma": "benoten"
+    }
+  },
+  {
+    "key": "berqueren",
+    "issueType": "truncated",
+    "note": "truncated \"cros\" → cross (likely überqueren)",
+    "old": {
+      "en": "to cros",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to cross",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "berreicht",
+    "issueType": "to-past-tense",
+    "note": "\"to reported\" garbled → reached",
+    "old": {
+      "en": "to reported",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "reached",
+      "pos": "v",
+      "lemma": "erreichen"
+    }
+  },
+  {
+    "key": "bersteigt",
+    "issueType": "to-past-tense",
+    "note": "\"to exceed\" → exceeds (likely übersteigt)",
+    "old": {
+      "en": "to exceed",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "exceeds",
+      "pos": "v",
+      "lemma": "übersteigen"
+    }
+  },
+  {
+    "key": "berücksichtigen",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"that\\\\\" → to consider",
+    "old": {
+      "en": "that\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "to consider; to take into account",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "berücksichtigt",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"that\\\\\" → considered",
+    "old": {
+      "en": "that\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "considered; taken into account",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "berücksichtigung",
+    "issueType": "context-bleed",
+    "note": "context bleed + -ung noun",
+    "old": {
+      "en": "to taking; consideration",
+      "pos": "v"
+    },
+    "new": {
+      "en": "consideration",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "beruhigt",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"mother\\\\\" → calmed",
+    "old": {
+      "en": "mother\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "calmed; reassured",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "berwacht",
+    "issueType": "to-past-tense",
+    "note": "\"to guarded\" → monitored (likely überwacht)",
+    "old": {
+      "en": "to guarded",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "guarded; monitored",
+      "pos": "v",
+      "lemma": "überwachen"
+    }
+  },
+  {
+    "key": "besagt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"report; say\" → aforementioned",
+    "old": {
+      "en": "report; say",
+      "pos": "n"
+    },
+    "new": {
+      "en": "aforementioned; said",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "beschissen",
+    "issueType": "to-past-tense",
+    "note": "\"to shitty\" → adj, not verb",
+    "old": {
+      "en": "shitty",
+      "pos": "v"
+    },
+    "new": {
+      "en": "shitty; lousy",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "besitzt",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"doesn\\\\\" → to possess",
+    "old": {
+      "en": "doesn\\",
+      "pos": "n",
+      "lemma": null
+    },
+    "new": {
+      "en": "to own; to possess",
+      "pos": "v",
+      "lemma": "besitzen"
+    }
+  },
+  {
+    "key": "besprechen",
+    "issueType": "truncated",
+    "note": "truncated \"discus\" → discuss",
+    "old": {
+      "en": "to discus",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to discuss",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "besprechung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to meet\" on -ung noun",
+    "old": {
+      "en": "to meet",
+      "pos": "v"
+    },
+    "new": {
+      "en": "meeting; discussion",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "besprechungsraum",
+    "issueType": "to-past-tense",
+    "note": "\"to meet room\" → meeting room",
+    "old": {
+      "en": "to meet room",
+      "pos": "v"
+    },
+    "new": {
+      "en": "meeting room",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "besprochen",
+    "issueType": "truncated",
+    "note": "truncated \"discus\" → discussed",
+    "old": {
+      "en": "to discus",
+      "pos": "v"
+    },
+    "new": {
+      "en": "discussed",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "bestellung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to order\" on -ung noun",
+    "old": {
+      "en": "to order",
+      "pos": "v"
+    },
+    "new": {
+      "en": "order; reservation",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "bestickte",
+    "issueType": "to-past-tense",
+    "note": "\"to embroidered\" → embroidered",
+    "old": {
+      "en": "to embroidered",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "embroidered",
+      "pos": "adj",
+      "lemma": "bestickt"
+    }
+  },
+  {
+    "key": "beteiligt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"participates; involved\"",
+    "old": {
+      "en": "to participates; involved",
+      "pos": "v"
+    },
+    "new": {
+      "en": "involved; participating",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "beteiligten",
+    "issueType": "to-past-tense",
+    "note": "\"to involved\" → involved/participants",
+    "old": {
+      "en": "to involved",
+      "pos": "v"
+    },
+    "new": {
+      "en": "involved; participants",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "betrachten",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"that\\\\\" → to consider",
+    "old": {
+      "en": "that\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "to consider; to view",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "bevorzugt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"prefers; preferred\"",
+    "old": {
+      "en": "to prefers; preferred",
+      "pos": "v"
+    },
+    "new": {
+      "en": "preferred",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "bewältigen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"time; get over\"",
+    "old": {
+      "en": "time; get over",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to cope with; to manage",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "bewegung",
+    "issueType": "context-bleed",
+    "note": "context bleed \"exercise; movement\" → noun",
+    "old": {
+      "en": "to exercise; movement",
+      "pos": "v"
+    },
+    "new": {
+      "en": "movement; exercise",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "bewertung",
+    "issueType": "context-bleed",
+    "note": "context bleed \"achieved; evaluation\"",
+    "old": {
+      "en": "to achieved; evaluation",
+      "pos": "v"
+    },
+    "new": {
+      "en": "evaluation; assessment; rating",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "bewilligt",
+    "issueType": "to-past-tense",
+    "note": "\"to approved\" → approved",
+    "old": {
+      "en": "to approved",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "approved; granted",
+      "pos": "v",
+      "lemma": "bewilligen"
+    }
+  },
+  {
+    "key": "beworben",
+    "issueType": "context-bleed",
+    "note": "context bleed \"applied; advertised\"",
+    "old": {
+      "en": "to applied; advertised",
+      "pos": "v"
+    },
+    "new": {
+      "en": "applied (for)",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "bewundert",
+    "issueType": "context-bleed",
+    "note": "context bleed \"admires; admired\"",
+    "old": {
+      "en": "to admires; admired",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "admired",
+      "pos": "v",
+      "lemma": "bewundern"
+    }
+  },
+  {
+    "key": "biegen",
+    "issueType": "missing-to",
+    "note": "missing \"to \" on infinitive verb",
+    "old": {
+      "en": "turn; bend",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to turn; to bend",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "bier",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"that\\\\\" → beer",
+    "old": {
+      "en": "that\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "beer",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "bilderkennung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to image recognition\" → noun",
+    "old": {
+      "en": "to image recognition",
+      "pos": "v"
+    },
+    "new": {
+      "en": "image recognition",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "bindfäden",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"it\\\\\" → strings",
+    "old": {
+      "en": "it\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "strings (raining cats and dogs)",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "biologische",
+    "issueType": "context-bleed",
+    "note": "context bleed \"buys; biological\"",
+    "old": {
+      "en": "to buys; biological",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "biological; organic",
+      "pos": "adj",
+      "lemma": "biologisch"
+    }
+  },
+  {
+    "key": "bitte",
+    "issueType": "backslash-garbled",
+    "note": "garbled backslash in second part",
+    "old": {
+      "en": "please; you\\",
+      "pos": "interj"
+    },
+    "new": {
+      "en": "please; you are welcome",
+      "pos": "interj"
+    }
+  },
+  {
+    "key": "blatt",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"doesn\\\\\" → leaf/sheet/page",
+    "old": {
+      "en": "doesn\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "leaf; sheet; page",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "blätter",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"doesn\\\\\" → leaves/pages",
+    "old": {
+      "en": "doesn\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "leaves; pages",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "blick",
+    "issueType": "context-bleed",
+    "note": "context bleed \"takes; view\"",
+    "old": {
+      "en": "to takes; view",
+      "pos": "v"
+    },
+    "new": {
+      "en": "view; glance; look",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "bloß",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"don\\\\\" → just/merely",
+    "old": {
+      "en": "don\\",
+      "pos": "adv"
+    },
+    "new": {
+      "en": "just; merely",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "bock",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"don\\\\\" → desire/buck",
+    "old": {
+      "en": "don\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "desire; buck",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "braten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"smelled; fry\"",
+    "old": {
+      "en": "to smelled; fry",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to fry; to roast",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "bratkartoffeln",
+    "issueType": "to-on-non-verb",
+    "note": "\"to fried potato\" on noun → fried potatoes",
+    "old": {
+      "en": "to fried potato",
+      "pos": "v"
+    },
+    "new": {
+      "en": "fried potatoes",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "bräuchten",
+    "issueType": "to-past-tense",
+    "note": "\"to need\" → would need",
+    "old": {
+      "en": "to need",
+      "pos": "v"
+    },
+    "new": {
+      "en": "would need",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "dank",
+    "issueType": "other-fix",
+    "note": "preposition",
+    "old": {
+      "en": "thank; thanks to",
+      "pos": "prep"
+    },
+    "new": {
+      "en": "thanks to",
+      "pos": "prep"
+    }
+  },
+  {
+    "key": "darum",
+    "issueType": "context-bleed",
+    "note": "context bleed \"requested; therefore\"",
+    "old": {
+      "en": "to requested; therefore",
+      "pos": "v"
+    },
+    "new": {
+      "en": "therefore; that's why",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "dazu",
+    "issueType": "context-bleed",
+    "note": "context bleed \"drink; in addition\"",
+    "old": {
+      "en": "to drink; in addition",
+      "pos": "v"
+    },
+    "new": {
+      "en": "in addition; to that",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "defekte",
+    "issueType": "context-bleed",
+    "note": "context bleed \"complains; defective\"",
+    "old": {
+      "en": "to complains; defective",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "defective; faulty",
+      "pos": "adj",
+      "lemma": "defekt"
+    }
+  },
+  {
+    "key": "denkmalgeschützt",
+    "issueType": "to-past-tense",
+    "note": "\"to listed building\" → heritage-protected",
+    "old": {
+      "en": "to listed building",
+      "pos": "v"
+    },
+    "new": {
+      "en": "listed; heritage-protected",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "detaillierten",
+    "issueType": "truncated",
+    "note": "truncated \"detaile\" → detailed",
+    "old": {
+      "en": "to detaile",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "detailed",
+      "pos": "adj",
+      "lemma": "detailliert"
+    }
+  },
+  {
+    "key": "deuten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"results; interpret\"",
+    "old": {
+      "en": "to results; interpret",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to interpret; to point",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "deutschlands",
+    "issueType": "backslash-garbled",
+    "note": "garbled → of Germany",
+    "old": {
+      "en": "germany; germany\\",
+      "pos": "n",
+      "lemma": null
+    },
+    "new": {
+      "en": "of Germany",
+      "pos": "n",
+      "lemma": "deutschland"
+    }
+  },
+  {
+    "key": "dicke",
+    "issueType": "context-bleed",
+    "note": "context bleed \"wears; thickness\"",
+    "old": {
+      "en": "to wears; thickness",
+      "pos": "v"
+    },
+    "new": {
+      "en": "thickness; fat",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "dient",
+    "issueType": "context-bleed",
+    "note": "context bleed \"served; serf\"",
+    "old": {
+      "en": "to served; serf",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "to serve",
+      "pos": "v",
+      "lemma": "dienen"
+    }
+  },
+  {
+    "key": "diskussionsbedarf",
+    "issueType": "to-on-non-verb",
+    "note": "\"to need for discussion\" → noun",
+    "old": {
+      "en": "to need for discussion",
+      "pos": "v"
+    },
+    "new": {
+      "en": "need for discussion",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "diskutieren",
+    "issueType": "truncated",
+    "note": "truncated \"discus\" → discuss",
+    "old": {
+      "en": "to discus",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to discuss",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "diskutiert",
+    "issueType": "truncated",
+    "note": "truncated \"discus\" → discussed",
+    "old": {
+      "en": "to discus",
+      "pos": "v"
+    },
+    "new": {
+      "en": "discussed",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "diskutierte",
+    "issueType": "to-past-tense",
+    "note": "\"to discussed\" → discussed",
+    "old": {
+      "en": "to discussed",
+      "pos": "v"
+    },
+    "new": {
+      "en": "discussed",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "dokumentiert",
+    "issueType": "to-past-tense",
+    "note": "\"to documented\" → documented",
+    "old": {
+      "en": "to documented",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "documented",
+      "pos": "v",
+      "lemma": "dokumentieren"
+    }
+  },
+  {
+    "key": "dokumentierte",
+    "issueType": "to-past-tense",
+    "note": "\"to documented\" → documented",
+    "old": {
+      "en": "to documented",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "documented",
+      "pos": "v",
+      "lemma": "dokumentieren"
+    }
+  },
+  {
+    "key": "dran",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"that\\\\\" → on it",
+    "old": {
+      "en": "that\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "on it; attached",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "dunkelheit",
+    "issueType": "context-bleed",
+    "note": "context bleed \"forbids; darkness\"",
+    "old": {
+      "en": "to forbids; darkness",
+      "pos": "v"
+    },
+    "new": {
+      "en": "darkness",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "durchgeführt",
+    "issueType": "to-past-tense",
+    "note": "\"to carried out\" → carried out",
+    "old": {
+      "en": "to carried out",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "carried out; conducted",
+      "pos": "v",
+      "lemma": "durchführen"
+    }
+  },
+  {
+    "key": "durchgeführte",
+    "issueType": "context-bleed",
+    "note": "context bleed \"study; carried out\"",
+    "old": {
+      "en": "to study; carried out",
+      "pos": "v",
+      "lemma": "durchgeführt"
+    },
+    "new": {
+      "en": "carried out; conducted",
+      "pos": "v",
+      "lemma": "durchführen"
+    }
+  },
+  {
+    "key": "egal",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"don\\\\\" → indifferent",
+    "old": {
+      "en": "don\\",
+      "pos": "adj"
+    },
+    "new": {
+      "en": "indifferent; no matter",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "ehrenamtlich",
+    "issueType": "context-bleed",
+    "note": "context bleed \"volunteers; voluntarily\"",
+    "old": {
+      "en": "to volunteers; voluntarily",
+      "pos": "v"
+    },
+    "new": {
+      "en": "voluntary; honorary",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "ei",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"that\\\\\" → egg",
+    "old": {
+      "en": "that\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "egg",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "eier",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"that\\\\\" → eggs",
+    "old": {
+      "en": "that\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "eggs",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "eigenen",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"he\\\\\" → own",
+    "old": {
+      "en": "he\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "own",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "einbruch",
+    "issueType": "context-bleed",
+    "note": "context bleed \"forbids; burglary\"",
+    "old": {
+      "en": "to forbids; burglary",
+      "pos": "v"
+    },
+    "new": {
+      "en": "burglary; break-in",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "eingeführten",
+    "issueType": "to-past-tense",
+    "note": "\"to introduced\" → introduced",
+    "old": {
+      "en": "to introduced",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "introduced; imported",
+      "pos": "adj",
+      "lemma": "eingeführt"
+    }
+  },
+  {
+    "key": "eingehalten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"supposed; retain\" → kept",
+    "old": {
+      "en": "to supposed; retain",
+      "pos": "v"
+    },
+    "new": {
+      "en": "kept; maintained",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "eingeklemmt",
+    "issueType": "to-past-tense",
+    "note": "\"to trapped\" → trapped",
+    "old": {
+      "en": "to trapped",
+      "pos": "v"
+    },
+    "new": {
+      "en": "trapped; jammed",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "eingeladen",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"didn\\\\\" → invited",
+    "old": {
+      "en": "didn\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "invited",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "eingelebt",
+    "issueType": "to-past-tense",
+    "note": "\"to settled in\" → settled in",
+    "old": {
+      "en": "to settled in",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "settled in",
+      "pos": "v",
+      "lemma": "einleben"
+    }
+  },
+  {
+    "key": "eingepackt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"wrapped; packed\"",
+    "old": {
+      "en": "to wrapped; packed",
+      "pos": "v"
+    },
+    "new": {
+      "en": "packed; wrapped",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "eingeschränkt",
+    "issueType": "to-past-tense",
+    "note": "\"to restricted\" → restricted",
+    "old": {
+      "en": "to restricted",
+      "pos": "v"
+    },
+    "new": {
+      "en": "restricted; limited",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "eingesehen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"realized; viewed\"",
+    "old": {
+      "en": "to realized; viewed",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "realized; viewed",
+      "pos": "v",
+      "lemma": "einsehen"
+    }
+  },
+  {
+    "key": "eingestuft",
+    "issueType": "to-past-tense",
+    "note": "\"to classified\" → classified",
+    "old": {
+      "en": "to classified",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "classified; rated",
+      "pos": "v",
+      "lemma": "einstufen"
+    }
+  },
+  {
+    "key": "eingetreten",
+    "issueType": "to-past-tense",
+    "note": "\"to entered\" → entered",
+    "old": {
+      "en": "to entered",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "entered; occurred",
+      "pos": "v",
+      "lemma": "eintreten"
+    }
+  },
+  {
+    "key": "eingetroffenen",
+    "issueType": "to-past-tense",
+    "note": "\"to arrived\" → arrived",
+    "old": {
+      "en": "to arrived",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "arrived",
+      "pos": "adj",
+      "lemma": "eingetroffen"
+    }
+  },
+  {
+    "key": "einhalten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"supposed; retain\" → to keep",
+    "old": {
+      "en": "to supposed; retain",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to keep; to comply with",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "eintauschen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"wants; exchange\"",
+    "old": {
+      "en": "to wants; exchange",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to exchange; to trade",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "einverstanden",
+    "issueType": "context-bleed",
+    "note": "context bleed \"survey; agreed\"",
+    "old": {
+      "en": "survey; agreed",
+      "pos": "v"
+    },
+    "new": {
+      "en": "agreed; in agreement",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "einwohnermeldeamt",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"residents\\\\\" → correct",
+    "old": {
+      "en": "residents\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "residents registration office",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "einzige",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"haven\\\\\" → only/sole",
+    "old": {
+      "en": "haven\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "only; sole",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "empfangen",
+    "issueType": "to-past-tense",
+    "note": "\"to received\" → to receive",
+    "old": {
+      "en": "to received",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to receive; received",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "engagiert",
+    "issueType": "context-bleed",
+    "note": "context bleed \"volunteers; committed\"",
+    "old": {
+      "en": "to volunteers; committed",
+      "pos": "v"
+    },
+    "new": {
+      "en": "committed; dedicated",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "entdeckte",
+    "issueType": "to-past-tense",
+    "note": "\"to discovered\" → discovered",
+    "old": {
+      "en": "to discovered",
+      "pos": "v"
+    },
+    "new": {
+      "en": "discovered",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "entdeckten",
+    "issueType": "to-past-tense",
+    "note": "\"to discovered\" → discovered",
+    "old": {
+      "en": "to discovered",
+      "pos": "v"
+    },
+    "new": {
+      "en": "discovered",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "entschlossen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"decided; determined\"",
+    "old": {
+      "en": "to decided; determined",
+      "pos": "v"
+    },
+    "new": {
+      "en": "determined; decided",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "entschuldigung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to excuse me, sorry\" → noun",
+    "old": {
+      "en": "to excuse me, sorry",
+      "pos": "v"
+    },
+    "new": {
+      "en": "sorry; excuse me; apology",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "entwickelte",
+    "issueType": "to-past-tense",
+    "note": "\"to developed\" → developed",
+    "old": {
+      "en": "to developed",
+      "pos": "v"
+    },
+    "new": {
+      "en": "developed",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "entworfene",
+    "issueType": "to-past-tense",
+    "note": "\"to designed\" → designed",
+    "old": {
+      "en": "to designed",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "designed",
+      "pos": "adj",
+      "lemma": "entworfen"
+    }
+  },
+  {
+    "key": "erbschaft",
+    "issueType": "context-bleed",
+    "note": "context bleed \"argues; heritage\"",
+    "old": {
+      "en": "to argues; heritage",
+      "pos": "v"
+    },
+    "new": {
+      "en": "inheritance; heritage",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "erfahrung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to experience\" on -ung noun",
+    "old": {
+      "en": "to experience",
+      "pos": "v"
+    },
+    "new": {
+      "en": "experience",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "ergänzt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"supplements; added\"",
+    "old": {
+      "en": "to supplements; added",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "supplemented; added",
+      "pos": "v",
+      "lemma": "ergänzen"
+    }
+  },
+  {
+    "key": "ergebnis",
+    "issueType": "context-bleed",
+    "note": "context bleed \"study; result\"",
+    "old": {
+      "en": "to study; result",
+      "pos": "v"
+    },
+    "new": {
+      "en": "result; outcome",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "ergebnisse",
+    "issueType": "context-bleed",
+    "note": "context bleed \"study; result\"",
+    "old": {
+      "en": "to study; result",
+      "pos": "v"
+    },
+    "new": {
+      "en": "results; outcomes",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "erhöhung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to increase\" on -ung noun",
+    "old": {
+      "en": "to increase",
+      "pos": "v"
+    },
+    "new": {
+      "en": "increase; raise",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "erklärt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"explains; explained\"",
+    "old": {
+      "en": "to explains; explained",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "explained; declared",
+      "pos": "v",
+      "lemma": "erklären"
+    }
+  },
+  {
+    "key": "erlebnis",
+    "issueType": "to-on-non-verb",
+    "note": "\"to experience\" on -nis noun",
+    "old": {
+      "en": "to experience",
+      "pos": "v"
+    },
+    "new": {
+      "en": "experience; event",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "erlitten",
+    "issueType": "to-past-tense",
+    "note": "\"to suffered\" → suffered",
+    "old": {
+      "en": "to suffered",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "suffered; sustained",
+      "pos": "v",
+      "lemma": "erleiden"
+    }
+  },
+  {
+    "key": "eröffnung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to open\" on -ung noun",
+    "old": {
+      "en": "to open",
+      "pos": "v"
+    },
+    "new": {
+      "en": "opening; inauguration",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "erörtern",
+    "issueType": "truncated",
+    "note": "truncated \"discus\" → discuss",
+    "old": {
+      "en": "to discus",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to discuss; to debate",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "erst",
+    "issueType": "context-bleed",
+    "note": "context bleed \"arrived; first\" → first/only",
+    "old": {
+      "en": "to arrived; first",
+      "pos": "v"
+    },
+    "new": {
+      "en": "first; only; not until",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "erstellen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"supposed; create\" → to create",
+    "old": {
+      "en": "to supposed; create",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to create; to produce",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "erster",
+    "issueType": "context-bleed",
+    "note": "context bleed \"needs; first\"",
+    "old": {
+      "en": "to needs; first",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "first",
+      "pos": "adj",
+      "lemma": "erst"
+    }
+  },
+  {
+    "key": "erwähnt",
+    "issueType": "to-past-tense",
+    "note": "\"to mentioned\" → mentioned",
+    "old": {
+      "en": "to mentioned",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "mentioned",
+      "pos": "v",
+      "lemma": "erwähnen"
+    }
+  },
+  {
+    "key": "evakuierte",
+    "issueType": "to-past-tense",
+    "note": "\"to evacuated\" → evacuated",
+    "old": {
+      "en": "to evacuated",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "evacuated",
+      "pos": "v",
+      "lemma": "evakuieren"
+    }
+  },
+  {
+    "key": "experiment",
+    "issueType": "to-on-non-verb",
+    "note": "\"to experiment\" on noun",
+    "old": {
+      "en": "to experiment",
+      "pos": "v"
+    },
+    "new": {
+      "en": "experiment",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "fangen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"start; catch\"",
+    "old": {
+      "en": "to start; catch",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to catch",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "fängt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"start; catch\"",
+    "old": {
+      "en": "to start; catch",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to catch",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "fass",
+    "issueType": "context-bleed",
+    "note": "context bleed \"orders; barrel\"",
+    "old": {
+      "en": "to orders; barrel",
+      "pos": "v"
+    },
+    "new": {
+      "en": "barrel; keg",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "fehlen",
+    "issueType": "truncated",
+    "note": "truncated \"mis\" → miss/lack",
+    "old": {
+      "en": "to mis",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to miss; to be missing; to lack",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "feierabend",
+    "issueType": "context-bleed",
+    "note": "context bleed \"work; quitting time\"",
+    "old": {
+      "en": "work; quitting time",
+      "pos": "n"
+    },
+    "new": {
+      "en": "quitting time; end of work",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "fernsehen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"watches; tv\"",
+    "old": {
+      "en": "to watches; tv",
+      "pos": "v"
+    },
+    "new": {
+      "en": "television; to watch TV",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "fertig",
+    "issueType": "to-past-tense",
+    "note": "\"to finished; complete\" → finished/ready",
+    "old": {
+      "en": "to finished; complete",
+      "pos": "v"
+    },
+    "new": {
+      "en": "finished; ready; done",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "fertigprodukte",
+    "issueType": "to-past-tense",
+    "note": "\"to finished product\" → finished products",
+    "old": {
+      "en": "to finished product",
+      "pos": "v"
+    },
+    "new": {
+      "en": "finished products",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "festzuhalten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"noted; be held\"",
+    "old": {
+      "en": "to noted; be held",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to hold on to; to note",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "ffnete",
+    "issueType": "to-past-tense",
+    "note": "\"to opened\" garbled → opened",
+    "old": {
+      "en": "to opened",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "opened (likely öffnete)",
+      "pos": "v",
+      "lemma": "öffnen"
+    }
+  },
+  {
+    "key": "finanzierung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to finance\" on -ung noun",
+    "old": {
+      "en": "to finance",
+      "pos": "v"
+    },
+    "new": {
+      "en": "financing; funding",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "fing",
+    "issueType": "context-bleed",
+    "note": "context bleed \"start; catch\"",
+    "old": {
+      "en": "to start; catch",
+      "pos": "v"
+    },
+    "new": {
+      "en": "caught",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "flugzeug",
+    "issueType": "context-bleed",
+    "note": "context bleed \"train; airplane\"",
+    "old": {
+      "en": "to train; airplane",
+      "pos": "v"
+    },
+    "new": {
+      "en": "airplane",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "flüssigsten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"speaks; liquid\" → fluent",
+    "old": {
+      "en": "to speaks; liquid",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "most fluid; most fluent",
+      "pos": "adj",
+      "lemma": "flüssig"
+    }
+  },
+  {
+    "key": "forschung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to research\" on -ung noun",
+    "old": {
+      "en": "to research",
+      "pos": "v"
+    },
+    "new": {
+      "en": "research",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "forschungsgemeinschaft",
+    "issueType": "to-on-non-verb",
+    "note": "\"to research community\" → noun",
+    "old": {
+      "en": "to research community",
+      "pos": "v"
+    },
+    "new": {
+      "en": "research community",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "freien",
+    "issueType": "context-bleed",
+    "note": "context bleed \"place; free\"",
+    "old": {
+      "en": "place; free",
+      "pos": "adj",
+      "lemma": null
+    },
+    "new": {
+      "en": "free; open",
+      "pos": "adj",
+      "lemma": "frei"
+    }
+  },
+  {
+    "key": "freigesprochen",
+    "issueType": "to-past-tense",
+    "note": "\"to acquitted\" → acquitted",
+    "old": {
+      "en": "to acquitted",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "acquitted",
+      "pos": "v",
+      "lemma": "freisprechen"
+    }
+  },
+  {
+    "key": "freitags",
+    "issueType": "context-bleed",
+    "note": "context bleed \"takes; friday\"",
+    "old": {
+      "en": "to takes; friday",
+      "pos": "v"
+    },
+    "new": {
+      "en": "on Fridays",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "freiwilligen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"volunteers; voluntary\"",
+    "old": {
+      "en": "to volunteers; voluntary",
+      "pos": "v"
+    },
+    "new": {
+      "en": "volunteers; voluntary",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "fremd",
+    "issueType": "context-bleed",
+    "note": "context bleed \"feels; foreign\"",
+    "old": {
+      "en": "to feels; foreign",
+      "pos": "v"
+    },
+    "new": {
+      "en": "foreign; strange; unfamiliar",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "fressen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"gives; eat\"",
+    "old": {
+      "en": "to gives; eat",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to eat (animals); to devour",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "freu",
+    "issueType": "context-bleed",
+    "note": "context bleed \"forward; be happy\"",
+    "old": {
+      "en": "forward; be happy",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to be happy",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "freue",
+    "issueType": "context-bleed",
+    "note": "context bleed \"forward; be happy\"",
+    "old": {
+      "en": "forward; be happy",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to be happy",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "freuen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"forward; be happy\"",
+    "old": {
+      "en": "forward; be happy",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to be happy; to look forward to",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "freut",
+    "issueType": "context-bleed",
+    "note": "context bleed \"forward; be happy\"",
+    "old": {
+      "en": "forward; be happy",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to be happy; to please",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "friedensplatz",
+    "issueType": "context-bleed",
+    "note": "context bleed \"change; peace square\"",
+    "old": {
+      "en": "to change; peace square",
+      "pos": "v"
+    },
+    "new": {
+      "en": "peace square",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "frisst",
+    "issueType": "context-bleed",
+    "note": "context bleed \"gives; eat\"",
+    "old": {
+      "en": "to gives; eat",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to eat (animals); to devour",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "froh",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"child\\\\\" → happy/glad",
+    "old": {
+      "en": "child\\",
+      "pos": "adj"
+    },
+    "new": {
+      "en": "happy; glad",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "frohe",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"child\\\\\" → happy/merry",
+    "old": {
+      "en": "child\\",
+      "pos": "adj"
+    },
+    "new": {
+      "en": "happy; merry",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "früher",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"don\\\\\" → earlier/formerly",
+    "old": {
+      "en": "don\\",
+      "pos": "adv"
+    },
+    "new": {
+      "en": "earlier; formerly",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "führerschein",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"driver\\\\\" → driving license",
+    "old": {
+      "en": "driver\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "driving license",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "führerscheinprüfung",
+    "issueType": "to-past-tense",
+    "note": "\"to drive test\" → driving test",
+    "old": {
+      "en": "to drive test",
+      "pos": "v"
+    },
+    "new": {
+      "en": "driving test",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "führung",
+    "issueType": "context-bleed",
+    "note": "context bleed \"requested; guide\"",
+    "old": {
+      "en": "to requested; guide",
+      "pos": "v"
+    },
+    "new": {
+      "en": "tour; leadership; guidance",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "fünfzehn",
+    "issueType": "context-bleed",
+    "note": "context bleed \"picks; fifteen\"",
+    "old": {
+      "en": "to picks; fifteen",
+      "pos": "v"
+    },
+    "new": {
+      "en": "fifteen",
+      "pos": "num"
+    }
+  },
+  {
+    "key": "furchtbar",
+    "issueType": "context-bleed",
+    "note": "context bleed \"gets; terrible\"",
+    "old": {
+      "en": "to gets; terrible",
+      "pos": "v"
+    },
+    "new": {
+      "en": "terrible; dreadful",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "fuß",
+    "issueType": "context-bleed",
+    "note": "context bleed \"walked; foot\"",
+    "old": {
+      "en": "to walked; foot",
+      "pos": "v"
+    },
+    "new": {
+      "en": "foot",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "füße",
+    "issueType": "context-bleed",
+    "note": "context bleed \"walked; foot\"",
+    "old": {
+      "en": "to walked; foot",
+      "pos": "v"
+    },
+    "new": {
+      "en": "feet",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "futter",
+    "issueType": "to-on-non-verb",
+    "note": "\"to feed\" on noun → animal feed",
+    "old": {
+      "en": "to feed",
+      "pos": "v"
+    },
+    "new": {
+      "en": "animal feed; lining",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "gar",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"don\\\\\" → at all",
+    "old": {
+      "en": "don\\",
+      "pos": "adv"
+    },
+    "new": {
+      "en": "at all; even",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "geantwortet",
+    "issueType": "to-past-tense",
+    "note": "\"to replied\" → replied",
+    "old": {
+      "en": "to replied",
+      "pos": "v"
+    },
+    "new": {
+      "en": "replied; answered",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "gebäck",
+    "issueType": "context-bleed",
+    "note": "context bleed \"ordered; pastry\"",
+    "old": {
+      "en": "to ordered; pastry",
+      "pos": "v"
+    },
+    "new": {
+      "en": "pastry; baked goods",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "gebucht",
+    "issueType": "to-past-tense",
+    "note": "\"to booked\" → booked",
+    "old": {
+      "en": "to booked",
+      "pos": "v"
+    },
+    "new": {
+      "en": "booked",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "gefahren",
+    "issueType": "other-fix",
+    "note": "\"to traveled; driven\"",
+    "old": {
+      "en": "to traveled; driven",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "driven; traveled",
+      "pos": "v",
+      "lemma": "fahren"
+    }
+  },
+  {
+    "key": "gefallene",
+    "issueType": "context-bleed",
+    "note": "context bleed \"leaves; fallen\"",
+    "old": {
+      "en": "to leaves; fallen",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "fallen",
+      "pos": "adj",
+      "lemma": "gefallen"
+    }
+  },
+  {
+    "key": "gefreut",
+    "issueType": "context-bleed",
+    "note": "context bleed \"forward; be happy\"",
+    "old": {
+      "en": "forward; be happy",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to be happy",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "gefunden",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"didn\\\\\" → found",
+    "old": {
+      "en": "didn\\",
+      "pos": "n",
+      "lemma": null
+    },
+    "new": {
+      "en": "found",
+      "pos": "v",
+      "lemma": "finden"
+    }
+  },
+  {
+    "key": "gehorcht",
+    "issueType": "context-bleed",
+    "note": "context bleed \"obeys; obeyed\"",
+    "old": {
+      "en": "to obeys; obeyed",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "obeyed",
+      "pos": "v",
+      "lemma": "gehorchen"
+    }
+  },
+  {
+    "key": "gelaufen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"walk; run\"",
+    "old": {
+      "en": "to walk; run",
+      "pos": "v"
+    },
+    "new": {
+      "en": "run; walked",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "gelbe",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"that\\\\\" → yellow",
+    "old": {
+      "en": "that\\",
+      "pos": "adj"
+    },
+    "new": {
+      "en": "yellow",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "gelegene",
+    "issueType": "to-past-tense",
+    "note": "\"to located\" → located",
+    "old": {
+      "en": "to located",
+      "pos": "v"
+    },
+    "new": {
+      "en": "located; situated",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "gelernt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"studied; learned\"",
+    "old": {
+      "en": "to studied; learned",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "learned; studied",
+      "pos": "v",
+      "lemma": "lernen"
+    }
+  },
+  {
+    "key": "genannten",
+    "issueType": "to-past-tense",
+    "note": "\"to mentioned\" → mentioned",
+    "old": {
+      "en": "to mentioned",
+      "pos": "v"
+    },
+    "new": {
+      "en": "mentioned; named",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "genehmigt",
+    "issueType": "to-past-tense",
+    "note": "\"to approved\" → approved",
+    "old": {
+      "en": "to approved",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "approved; authorized",
+      "pos": "v",
+      "lemma": "genehmigen"
+    }
+  },
+  {
+    "key": "gepressten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"drinks; pressed\"",
+    "old": {
+      "en": "to drinks; pressed",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "pressed; squeezed",
+      "pos": "adj",
+      "lemma": "gepresst"
+    }
+  },
+  {
+    "key": "geräuchertem",
+    "issueType": "to-past-tense",
+    "note": "\"to smoked\" → smoked",
+    "old": {
+      "en": "to smoked",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "smoked (food)",
+      "pos": "adj",
+      "lemma": "geräuchert"
+    }
+  },
+  {
+    "key": "geruch",
+    "issueType": "context-bleed",
+    "note": "context bleed \"smell; odor\"",
+    "old": {
+      "en": "to smell; odor",
+      "pos": "v"
+    },
+    "new": {
+      "en": "smell; odor",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "geschäftsordnung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to rule of procedure\" → noun",
+    "old": {
+      "en": "to rule of procedure",
+      "pos": "v"
+    },
+    "new": {
+      "en": "rules of procedure",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "geschätzt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"appreciated; estimated\"",
+    "old": {
+      "en": "to appreciated; estimated",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "estimated; appreciated",
+      "pos": "v",
+      "lemma": "schätzen"
+    }
+  },
+  {
+    "key": "geschätzte",
+    "issueType": "context-bleed",
+    "note": "context bleed \"appreciated; estimated\"",
+    "old": {
+      "en": "to appreciated; estimated",
+      "pos": "v"
+    },
+    "new": {
+      "en": "estimated; appreciated",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "geschehen",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"you\\\\\" → to happen",
+    "old": {
+      "en": "you\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "to happen; to occur",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "gestreut",
+    "issueType": "to-past-tense",
+    "note": "\"to scattered\" → scattered",
+    "old": {
+      "en": "to scattered",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "scattered; sprinkled",
+      "pos": "v",
+      "lemma": "streuen"
+    }
+  },
+  {
+    "key": "gesunken",
+    "issueType": "context-bleed",
+    "note": "context bleed \"report; sun\" garbled → sunk",
+    "old": {
+      "en": "report; sun",
+      "pos": "n",
+      "lemma": null
+    },
+    "new": {
+      "en": "sunk; declined",
+      "pos": "v",
+      "lemma": "sinken"
+    }
+  },
+  {
+    "key": "geträumt",
+    "issueType": "to-past-tense",
+    "note": "\"to dreamed\" → dreamed",
+    "old": {
+      "en": "to dreamed",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "dreamed",
+      "pos": "v",
+      "lemma": "träumen"
+    }
+  },
+  {
+    "key": "gewünschten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"requested; desired\"",
+    "old": {
+      "en": "to requested; desired",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "desired; requested",
+      "pos": "adj",
+      "lemma": "gewünscht"
+    }
+  },
+  {
+    "key": "gezahlt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"report; pay\"",
+    "old": {
+      "en": "report; pay",
+      "pos": "v"
+    },
+    "new": {
+      "en": "paid",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "gezwungen",
+    "issueType": "to-past-tense",
+    "note": "\"to forced\" → forced",
+    "old": {
+      "en": "to forced",
+      "pos": "v"
+    },
+    "new": {
+      "en": "forced; compelled",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "gießen",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"don\\\\\" → to water/pour",
+    "old": {
+      "en": "don\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "to water; to pour",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "gießt",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"don\\\\\" → waters/pours",
+    "old": {
+      "en": "don\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "to water; to pour",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "glaubt",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"doesn\\\\\" → to believe",
+    "old": {
+      "en": "doesn\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "to believe",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "gleis",
+    "issueType": "context-bleed",
+    "note": "context bleed \"train; track\"",
+    "old": {
+      "en": "to train; track",
+      "pos": "v"
+    },
+    "new": {
+      "en": "platform; track",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "goss",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"don\\\\\" → poured",
+    "old": {
+      "en": "don\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "poured",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "gravierte",
+    "issueType": "to-past-tense",
+    "note": "\"to engraved\" → engraved",
+    "old": {
+      "en": "to engraved",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "engraved",
+      "pos": "v",
+      "lemma": "gravieren"
+    }
+  },
+  {
+    "key": "großvaters",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"grandfather\\\\\" → of grandfather",
+    "old": {
+      "en": "grandfather\\",
+      "pos": "n",
+      "lemma": null
+    },
+    "new": {
+      "en": "of grandfather",
+      "pos": "n",
+      "lemma": "großvater"
+    }
+  },
+  {
+    "key": "handlungsbedarf",
+    "issueType": "to-on-non-verb",
+    "note": "\"to need for action\" → noun",
+    "old": {
+      "en": "to need for action",
+      "pos": "v"
+    },
+    "new": {
+      "en": "need for action",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "handwerkerrechnung",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"craftsman\\\\\" → craftsman invoice",
+    "old": {
+      "en": "craftsman\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "craftsman invoice",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "heilung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to cure\" on -ung noun",
+    "old": {
+      "en": "to cure",
+      "pos": "v"
+    },
+    "new": {
+      "en": "cure; healing",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "heiratsantrag",
+    "issueType": "context-bleed",
+    "note": "context bleed \"proposed; marriage proposal\"",
+    "old": {
+      "en": "to proposed; marriage proposal",
+      "pos": "v"
+    },
+    "new": {
+      "en": "marriage proposal",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "helles",
+    "issueType": "context-bleed",
+    "note": "context bleed \"orders; bright\"",
+    "old": {
+      "en": "to orders; bright",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "bright; light; pale (beer)",
+      "pos": "adj",
+      "lemma": "hell"
+    }
+  },
+  {
+    "key": "her",
+    "issueType": "context-bleed",
+    "note": "context bleed \"produced; her\" → here/ago",
+    "old": {
+      "en": "to produced; her",
+      "pos": "v"
+    },
+    "new": {
+      "en": "here; this way; ago",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "heraus",
+    "issueType": "context-bleed",
+    "note": "context bleed \"goes; out of here\"",
+    "old": {
+      "en": "to goes; out of here",
+      "pos": "v"
+    },
+    "new": {
+      "en": "out; out of",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "herausforderung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to challenge\" on -ung noun",
+    "old": {
+      "en": "to challenge",
+      "pos": "v"
+    },
+    "new": {
+      "en": "challenge",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "hin",
+    "issueType": "context-bleed",
+    "note": "context bleed \"sit; there\"",
+    "old": {
+      "en": "to sit; there",
+      "pos": "v"
+    },
+    "new": {
+      "en": "there; towards",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "hineinruft",
+    "issueType": "context-bleed",
+    "note": "context bleed \"goes; shouts inside\"",
+    "old": {
+      "en": "to goes; shouts inside",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "to call in; to shout inside",
+      "pos": "v",
+      "lemma": "hineinrufen"
+    }
+  },
+  {
+    "key": "hinterher",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"don\\\\\" → afterwards",
+    "old": {
+      "en": "don\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "afterwards; behind",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "hoch",
+    "issueType": "context-bleed",
+    "note": "context bleed \"rolls; high\"",
+    "old": {
+      "en": "to rolls; high",
+      "pos": "v"
+    },
+    "new": {
+      "en": "high; tall",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "höchste",
+    "issueType": "context-bleed",
+    "note": "context bleed \"rolls; high\"",
+    "old": {
+      "en": "to rolls; high",
+      "pos": "v"
+    },
+    "new": {
+      "en": "highest",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "höchsten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"rolls; high\"",
+    "old": {
+      "en": "to rolls; high",
+      "pos": "v"
+    },
+    "new": {
+      "en": "highest",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "hoffnung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to hope\" on -ung noun",
+    "old": {
+      "en": "to hope",
+      "pos": "v"
+    },
+    "new": {
+      "en": "hope",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "hohen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"rolls; high\"",
+    "old": {
+      "en": "to rolls; high",
+      "pos": "v"
+    },
+    "new": {
+      "en": "high; tall",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "höher",
+    "issueType": "context-bleed",
+    "note": "context bleed \"rolls; high\"",
+    "old": {
+      "en": "to rolls; high",
+      "pos": "v"
+    },
+    "new": {
+      "en": "higher",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "hole",
+    "issueType": "context-bleed",
+    "note": "context bleed \"pick; fetch\"",
+    "old": {
+      "en": "to pick; fetch",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to fetch; to get",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "holen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"pick; fetch\"",
+    "old": {
+      "en": "to pick; fetch",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to fetch; to get",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "holt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"pick; fetch\"",
+    "old": {
+      "en": "to pick; fetch",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to fetch; to get",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "hort",
+    "issueType": "other-fix",
+    "note": "garbled \"ho\" → after-school care",
+    "old": {
+      "en": "ho",
+      "pos": "n"
+    },
+    "new": {
+      "en": "after-school care; hoard",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "inbegriffen",
+    "issueType": "to-past-tense",
+    "note": "\"to included\" → included",
+    "old": {
+      "en": "to included",
+      "pos": "v"
+    },
+    "new": {
+      "en": "included",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "insgesamt",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"wasn\\\\\" → altogether",
+    "old": {
+      "en": "wasn\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "altogether; in total",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "intensiviert",
+    "issueType": "to-past-tense",
+    "note": "\"to intensified\" → intensified",
+    "old": {
+      "en": "to intensified",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "intensified",
+      "pos": "v",
+      "lemma": "intensivieren"
+    }
+  },
+  {
+    "key": "irgendetwas",
+    "issueType": "context-bleed",
+    "note": "context bleed \"seems; anything\"",
+    "old": {
+      "en": "to seems; anything",
+      "pos": "v"
+    },
+    "new": {
+      "en": "something; anything",
+      "pos": "pron"
+    }
+  },
+  {
+    "key": "kaffee",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"that\\\\\" → coffee",
+    "old": {
+      "en": "that\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "coffee",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "kaffees",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"that\\\\\" → coffees",
+    "old": {
+      "en": "that\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "coffees",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "kamen",
+    "issueType": "other-fix",
+    "note": "\"to arrived; came\"",
+    "old": {
+      "en": "to arrived; came",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "came",
+      "pos": "v",
+      "lemma": "kommen"
+    }
+  },
+  {
+    "key": "karten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"tickets; card\"",
+    "old": {
+      "en": "to tickets; card",
+      "pos": "v"
+    },
+    "new": {
+      "en": "cards; tickets; maps",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "kasse",
+    "issueType": "context-bleed",
+    "note": "context bleed \"stands; checkout\"",
+    "old": {
+      "en": "to stands; checkout",
+      "pos": "v"
+    },
+    "new": {
+      "en": "checkout; cash register",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "katalogisierte",
+    "issueType": "to-past-tense",
+    "note": "\"to cataloged\" → cataloged",
+    "old": {
+      "en": "to cataloged",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "cataloged",
+      "pos": "v",
+      "lemma": "katalogisieren"
+    }
+  },
+  {
+    "key": "keineswegs",
+    "issueType": "context-bleed",
+    "note": "context bleed \"result; not at all\"",
+    "old": {
+      "en": "to result; not at all",
+      "pos": "v"
+    },
+    "new": {
+      "en": "by no means; not at all",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "kette",
+    "issueType": "context-bleed",
+    "note": "context bleed \"gives; chain\"",
+    "old": {
+      "en": "to gives; chain",
+      "pos": "v"
+    },
+    "new": {
+      "en": "chain; necklace",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "kinderzimmer",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"children\\\\\" → children's room",
+    "old": {
+      "en": "children\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "children's room",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "kleidung",
+    "issueType": "context-bleed",
+    "note": "context bleed \"changes; clothing\"",
+    "old": {
+      "en": "to changes; clothing",
+      "pos": "v"
+    },
+    "new": {
+      "en": "clothing; clothes",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "knapp",
+    "issueType": "context-bleed",
+    "note": "context bleed \"passed; meager\"",
+    "old": {
+      "en": "to passed; meager",
+      "pos": "v"
+    },
+    "new": {
+      "en": "scarce; tight; narrow",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "komplizierten",
+    "issueType": "to-past-tense",
+    "note": "\"to complicated\" → complicated",
+    "old": {
+      "en": "to complicated",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "complicated; complex",
+      "pos": "adj",
+      "lemma": "kompliziert"
+    }
+  },
+  {
+    "key": "kopf",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"doesn\\\\\" → head",
+    "old": {
+      "en": "doesn\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "head",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "korrigiert",
+    "issueType": "context-bleed",
+    "note": "context bleed \"corrects; corrected\"",
+    "old": {
+      "en": "to corrects; corrected",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "corrected",
+      "pos": "v",
+      "lemma": "korrigieren"
+    }
+  },
+  {
+    "key": "kuhhaut",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"it\\\\\" → cowhide",
+    "old": {
+      "en": "it\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "cowhide (idiom: unbelievable)",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "lager",
+    "issueType": "wrong-meaning",
+    "note": "German Lager = warehouse/camp",
+    "old": {
+      "en": "storage",
+      "pos": "n"
+    },
+    "new": {
+      "en": "warehouse; camp; stock",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "längst",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"that\\\\\" → long since",
+    "old": {
+      "en": "that\\",
+      "pos": "adj"
+    },
+    "new": {
+      "en": "long since; long ago",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "latein",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"i\\\\\" → Latin",
+    "old": {
+      "en": "i\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "Latin",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "laufe",
+    "issueType": "context-bleed",
+    "note": "context bleed \"walk; run\"",
+    "old": {
+      "en": "to walk; run",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to run; to walk",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "laufen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"walk; run\"",
+    "old": {
+      "en": "to walk; run",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to run; to walk",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "läuft",
+    "issueType": "context-bleed",
+    "note": "context bleed \"walk; run\"",
+    "old": {
+      "en": "to walk; run",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to run; to walk",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "leid",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"i\\\\\" → sorry/suffering",
+    "old": {
+      "en": "i\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "sorry; suffering",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "lernen",
+    "issueType": "missing-to",
+    "note": "missing \"to \" on infinitive verb",
+    "old": {
+      "en": "learn",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to learn",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "letzten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"prices; last\"",
+    "old": {
+      "en": "to prices; last",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "last; latest",
+      "pos": "adj",
+      "lemma": "letzt"
+    }
+  },
+  {
+    "key": "leuchten",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"daughter\\\\\" → to shine",
+    "old": {
+      "en": "daughter\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "to shine; to glow",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "leuchtet",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"daughter\\\\\" → shines",
+    "old": {
+      "en": "daughter\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "to shine; to glow",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "leuchtete",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"daughter\\\\\" → shone",
+    "old": {
+      "en": "daughter\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "shone; glowed",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "lieb",
+    "issueType": "context-bleed",
+    "note": "context bleed \"loves; dear\"",
+    "old": {
+      "en": "to loves; dear",
+      "pos": "v"
+    },
+    "new": {
+      "en": "dear; sweet; kind",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "lockt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"attracts; entice\"",
+    "old": {
+      "en": "to attracts; entice",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "to attract; to lure",
+      "pos": "v",
+      "lemma": "locken"
+    }
+  },
+  {
+    "key": "los",
+    "issueType": "context-bleed",
+    "note": "context bleed \"leave; go\"",
+    "old": {
+      "en": "to leave; go",
+      "pos": "v"
+    },
+    "new": {
+      "en": "go; off; loose",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "losfahren",
+    "issueType": "context-bleed",
+    "note": "context bleed \"leave; start\"",
+    "old": {
+      "en": "to leave; start",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to depart; to set off",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "losgefahren",
+    "issueType": "context-bleed",
+    "note": "context bleed \"leave; start\"",
+    "old": {
+      "en": "to leave; start",
+      "pos": "v"
+    },
+    "new": {
+      "en": "departed; set off",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "losgeht",
+    "issueType": "context-bleed",
+    "note": "context bleed \"takes; and go\"",
+    "old": {
+      "en": "to takes; and go",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "to start; to begin",
+      "pos": "v",
+      "lemma": "losgehen"
+    }
+  },
+  {
+    "key": "luft",
+    "issueType": "context-bleed",
+    "note": "context bleed \"takes; air\"",
+    "old": {
+      "en": "to takes; air",
+      "pos": "v"
+    },
+    "new": {
+      "en": "air",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "mannschaft",
+    "issueType": "to-on-non-verb",
+    "note": "\"to team\" on -schaft noun",
+    "old": {
+      "en": "to team",
+      "pos": "v"
+    },
+    "new": {
+      "en": "team",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "meißelte",
+    "issueType": "to-past-tense",
+    "note": "\"to chiseled\" → chiseled",
+    "old": {
+      "en": "to chiseled",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "chiseled",
+      "pos": "v",
+      "lemma": "meißeln"
+    }
+  },
+  {
+    "key": "mitte",
+    "issueType": "context-bleed",
+    "note": "context bleed \"opens; center\"",
+    "old": {
+      "en": "to opens; center",
+      "pos": "v"
+    },
+    "new": {
+      "en": "center; middle",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "montags",
+    "issueType": "context-bleed",
+    "note": "context bleed \"takes; monday\"",
+    "old": {
+      "en": "to takes; monday",
+      "pos": "v"
+    },
+    "new": {
+      "en": "on Mondays",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "müdigkeit",
+    "issueType": "context-bleed",
+    "note": "context bleed \"went; fatigue\"",
+    "old": {
+      "en": "to went; fatigue",
+      "pos": "v"
+    },
+    "new": {
+      "en": "fatigue; tiredness",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "mülltrennung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to waste separation\" → noun",
+    "old": {
+      "en": "to waste separation",
+      "pos": "v"
+    },
+    "new": {
+      "en": "waste separation; recycling",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "muss",
+    "issueType": "other-fix",
+    "note": "fixed translation",
+    "old": {
+      "en": "to must",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "must (I/he/she must)",
+      "pos": "v",
+      "lemma": "müssen"
+    }
+  },
+  {
+    "key": "muttertag",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"mother\\\\\" → Mother's Day",
+    "old": {
+      "en": "mother\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "Mother's Day",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "nachbarhauses",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"neighbor\\\\\" → of neighboring house",
+    "old": {
+      "en": "neighbor\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "of the neighboring house",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "nachzügler",
+    "issueType": "context-bleed",
+    "note": "context bleed \"time; straggler\"",
+    "old": {
+      "en": "time; straggler",
+      "pos": "n"
+    },
+    "new": {
+      "en": "latecomer; straggler",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "namen",
+    "issueType": "to-on-non-verb",
+    "note": "\"to name; name\" → noun (Namen = names)",
+    "old": {
+      "en": "name; name",
+      "pos": "v"
+    },
+    "new": {
+      "en": "name; names",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "nderung",
+    "issueType": "to-past-tense",
+    "note": "\"to change\" garbled → change",
+    "old": {
+      "en": "to change",
+      "pos": "v"
+    },
+    "new": {
+      "en": "change (likely Änderung)",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "neben",
+    "issueType": "other-fix",
+    "note": "preposition, was tagged adj",
+    "old": {
+      "en": "next to, beside",
+      "pos": "adj"
+    },
+    "new": {
+      "en": "next to; beside",
+      "pos": "prep"
+    }
+  },
+  {
+    "key": "nerven",
+    "issueType": "context-bleed",
+    "note": "context bleed \"gets; annoy\"",
+    "old": {
+      "en": "to gets; annoy",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to annoy; nerves",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "nervt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"gets; annoy\"",
+    "old": {
+      "en": "to gets; annoy",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to annoy",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "not",
+    "issueType": "context-bleed",
+    "note": "context bleed \"makes; not\" → need/distress",
+    "old": {
+      "en": "to makes; not",
+      "pos": "v"
+    },
+    "new": {
+      "en": "need; distress; emergency",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "note",
+    "issueType": "wrong-meaning",
+    "note": "German Note = grade/mark",
+    "old": {
+      "en": "grade; note",
+      "pos": "n"
+    },
+    "new": {
+      "en": "grade; mark; note",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "notfall",
+    "issueType": "context-bleed",
+    "note": "context bleed \"tries; emergency\"",
+    "old": {
+      "en": "to tries; emergency",
+      "pos": "v"
+    },
+    "new": {
+      "en": "emergency",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "notwendigkeit",
+    "issueType": "to-on-non-verb",
+    "note": "\"to need\" on noun → necessity",
+    "old": {
+      "en": "to need",
+      "pos": "v"
+    },
+    "new": {
+      "en": "necessity; need",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "nun",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"that\\\\\" → now/well",
+    "old": {
+      "en": "that\\",
+      "pos": "adv"
+    },
+    "new": {
+      "en": "now; well",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "nützt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"benefits; useful\"",
+    "old": {
+      "en": "to benefits; useful",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "to be useful; to benefit",
+      "pos": "v",
+      "lemma": "nützen"
+    }
+  },
+  {
+    "key": "oasen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"to oasis\" → oases",
+    "old": {
+      "en": "to oasis",
+      "pos": "v"
+    },
+    "new": {
+      "en": "oases",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "obdachlosen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"to homeless\" → homeless people",
+    "old": {
+      "en": "to homeless",
+      "pos": "v"
+    },
+    "new": {
+      "en": "homeless people",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "opas",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"grandpa\\\\\" → grandpa's",
+    "old": {
+      "en": "grandpa\\",
+      "pos": "n",
+      "lemma": null
+    },
+    "new": {
+      "en": "grandpa's; grandpas",
+      "pos": "n",
+      "lemma": "opa"
+    }
+  },
+  {
+    "key": "optimierte",
+    "issueType": "to-past-tense",
+    "note": "\"to optimized\" → optimized",
+    "old": {
+      "en": "to optimized",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "optimized",
+      "pos": "v",
+      "lemma": "optimieren"
+    }
+  },
+  {
+    "key": "parierte",
+    "issueType": "to-past-tense",
+    "note": "\"to parried\" → parried",
+    "old": {
+      "en": "to parried",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "parried",
+      "pos": "v",
+      "lemma": "parieren"
+    }
+  },
+  {
+    "key": "passe",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"sister\\\\\" → to fit",
+    "old": {
+      "en": "sister\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "to fit; to suit",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "passiert",
+    "issueType": "context-bleed",
+    "note": "context bleed \"call; happened\"",
+    "old": {
+      "en": "to call; happened",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "to happen; happened",
+      "pos": "v",
+      "lemma": "passieren"
+    }
+  },
+  {
+    "key": "passt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"adjusts; fit\"",
+    "old": {
+      "en": "to adjusts; fit",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to fit; to suit",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "peil",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"don\\\\\" → to gauge",
+    "old": {
+      "en": "don\\",
+      "pos": "n",
+      "lemma": null
+    },
+    "new": {
+      "en": "to gauge (ich peil das nicht)",
+      "pos": "v",
+      "lemma": "peilen"
+    }
+  },
+  {
+    "key": "penn",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"i\\\\\" → to sleep",
+    "old": {
+      "en": "i\\",
+      "pos": "n",
+      "lemma": null
+    },
+    "new": {
+      "en": "to sleep (colloquial)",
+      "pos": "v",
+      "lemma": "pennen"
+    }
+  },
+  {
+    "key": "planung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to plan\" on -ung noun",
+    "old": {
+      "en": "to plan",
+      "pos": "v"
+    },
+    "new": {
+      "en": "planning",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "platt",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"i\\\\\" → flat/stunned",
+    "old": {
+      "en": "i\\",
+      "pos": "adj"
+    },
+    "new": {
+      "en": "flat; stunned",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "portion",
+    "issueType": "to-on-non-verb",
+    "note": "\"to portion\" → noun",
+    "old": {
+      "en": "to portion",
+      "pos": "v"
+    },
+    "new": {
+      "en": "portion; serving",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "projektmanagement",
+    "issueType": "to-on-non-verb",
+    "note": "\"to project management\" → noun",
+    "old": {
+      "en": "to project management",
+      "pos": "v"
+    },
+    "new": {
+      "en": "project management",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "prost",
+    "issueType": "context-bleed",
+    "note": "context bleed \"to cheers\" → cheers!",
+    "old": {
+      "en": "to cheers",
+      "pos": "v"
+    },
+    "new": {
+      "en": "cheers!",
+      "pos": "interj"
+    }
+  },
+  {
+    "key": "punkt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"start; point\"",
+    "old": {
+      "en": "to start; point",
+      "pos": "v"
+    },
+    "new": {
+      "en": "point; dot; period",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "punkte",
+    "issueType": "context-bleed",
+    "note": "context bleed \"start; point\"",
+    "old": {
+      "en": "to start; point",
+      "pos": "v"
+    },
+    "new": {
+      "en": "points",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "quatsch",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"don\\\\\" → nonsense",
+    "old": {
+      "en": "don\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "nonsense; rubbish",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "rasenmäher",
+    "issueType": "context-bleed",
+    "note": "context bleed \"lends; mowing machine\"",
+    "old": {
+      "en": "to lends; mowing machine",
+      "pos": "v"
+    },
+    "new": {
+      "en": "lawn mower",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "rechtzeitig",
+    "issueType": "context-bleed",
+    "note": "context bleed \"time; punctual\"",
+    "old": {
+      "en": "time; punctual",
+      "pos": "adv"
+    },
+    "new": {
+      "en": "on time; punctual",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "regeln",
+    "issueType": "context-bleed",
+    "note": "context bleed \"rules; regulate\"",
+    "old": {
+      "en": "to rules; regulate",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to regulate; rules",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "reich",
+    "issueType": "context-bleed",
+    "note": "context bleed \"collects; rich\"",
+    "old": {
+      "en": "to collects; rich",
+      "pos": "v"
+    },
+    "new": {
+      "en": "rich; wealthy",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "reiseversicherung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to travel insurance\" → noun",
+    "old": {
+      "en": "to travel insurance",
+      "pos": "v"
+    },
+    "new": {
+      "en": "travel insurance",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "rettungsaktion",
+    "issueType": "to-on-non-verb",
+    "note": "\"to rescue operation\" → noun",
+    "old": {
+      "en": "to rescue operation",
+      "pos": "v"
+    },
+    "new": {
+      "en": "rescue operation",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "rock",
+    "issueType": "wrong-meaning",
+    "note": "German Rock = skirt",
+    "old": {
+      "en": "to wears; rock",
+      "pos": "v"
+    },
+    "new": {
+      "en": "skirt",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "rückmeldung",
+    "issueType": "context-bleed",
+    "note": "context bleed \"appreciate; return message\"",
+    "old": {
+      "en": "to appreciate; return message",
+      "pos": "v"
+    },
+    "new": {
+      "en": "feedback; response",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "rum",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"don\\\\\" → around",
+    "old": {
+      "en": "don\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "around (colloquial)",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "sache",
+    "issueType": "context-bleed",
+    "note": "context bleed \"point; matter\"",
+    "old": {
+      "en": "to point; matter",
+      "pos": "v"
+    },
+    "new": {
+      "en": "thing; matter",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "sachen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"point; matter\"",
+    "old": {
+      "en": "to point; matter",
+      "pos": "v"
+    },
+    "new": {
+      "en": "things; matters",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "sachverhalt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"explain; fact\"",
+    "old": {
+      "en": "to explain; fact",
+      "pos": "v"
+    },
+    "new": {
+      "en": "facts; circumstances",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "sängers",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"singer\\\\\" → of the singer",
+    "old": {
+      "en": "singer\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "of the singer",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "schallt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"goes; echo\"",
+    "old": {
+      "en": "to goes; echo",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "to echo; to resound",
+      "pos": "v",
+      "lemma": "schallen"
+    }
+  },
+  {
+    "key": "schalten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"turn; switch\" → to switch",
+    "old": {
+      "en": "turn; switch",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to switch; to shift",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "schämt",
+    "issueType": "to-past-tense",
+    "note": "\"to ashamed\" → ashamed",
+    "old": {
+      "en": "to ashamed",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "ashamed",
+      "pos": "v",
+      "lemma": "schämen"
+    }
+  },
+  {
+    "key": "schärfte",
+    "issueType": "to-past-tense",
+    "note": "\"to sharpened\" → sharpened",
+    "old": {
+      "en": "to sharpened",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "sharpened",
+      "pos": "v",
+      "lemma": "schärfen"
+    }
+  },
+  {
+    "key": "schätze",
+    "issueType": "truncated",
+    "note": "truncated \"gues\" → guess",
+    "old": {
+      "en": "to gues",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "to guess; to estimate",
+      "pos": "v",
+      "lemma": "schätzen"
+    }
+  },
+  {
+    "key": "scheint",
+    "issueType": "context-bleed",
+    "note": "context bleed \"seems; appear\"",
+    "old": {
+      "en": "to seems; appear",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to seem; to shine",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "scheiterten",
+    "issueType": "to-past-tense",
+    "note": "\"to failed\" → failed",
+    "old": {
+      "en": "to failed",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "failed",
+      "pos": "v",
+      "lemma": "scheitern"
+    }
+  },
+  {
+    "key": "schicht",
+    "issueType": "context-bleed",
+    "note": "context bleed \"starts; layer\"",
+    "old": {
+      "en": "to starts; layer",
+      "pos": "v"
+    },
+    "new": {
+      "en": "layer; shift (work)",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "schließe",
+    "issueType": "context-bleed",
+    "note": "context bleed \"work; close\"",
+    "old": {
+      "en": "work; close",
+      "pos": "n",
+      "lemma": null
+    },
+    "new": {
+      "en": "to close",
+      "pos": "v",
+      "lemma": "schließen"
+    }
+  },
+  {
+    "key": "schmacht",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"let\\\\\" → longing",
+    "old": {
+      "en": "let\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "longing; craving",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "schnall",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"can\\\\\" → to get",
+    "old": {
+      "en": "can\\",
+      "pos": "n",
+      "lemma": null
+    },
+    "new": {
+      "en": "to get; to understand (colloquial)",
+      "pos": "v",
+      "lemma": "schnallen"
+    }
+  },
+  {
+    "key": "schnapp",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"i\\\\\" → to snap/grab",
+    "old": {
+      "en": "i\\",
+      "pos": "n",
+      "lemma": null
+    },
+    "new": {
+      "en": "to snap; to grab",
+      "pos": "v",
+      "lemma": "schnappen"
+    }
+  },
+  {
+    "key": "schnee",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"that\\\\\" → snow",
+    "old": {
+      "en": "that\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "snow",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "see",
+    "issueType": "wrong-meaning",
+    "note": "German See = lake/sea",
+    "old": {
+      "en": "lighthouse; lake",
+      "pos": "n"
+    },
+    "new": {
+      "en": "lake; sea",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "sehenswürdigkeiten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"sights; sightseeing\"",
+    "old": {
+      "en": "to sights; sightseeing attraction",
+      "pos": "v"
+    },
+    "new": {
+      "en": "sights; tourist attractions",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "seid",
+    "issueType": "context-bleed",
+    "note": "context bleed \"reported; be\"",
+    "old": {
+      "en": "to reported; be",
+      "pos": "v",
+      "lemma": "seien"
+    },
+    "new": {
+      "en": "are (you, plural)",
+      "pos": "v",
+      "lemma": "sein"
+    }
+  },
+  {
+    "key": "seltensten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"rains; rarest\"",
+    "old": {
+      "en": "to rains; rarest",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "rarest",
+      "pos": "adj",
+      "lemma": "selten"
+    }
+  },
+  {
+    "key": "servus",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"how\\\\\" → hello/goodbye",
+    "old": {
+      "en": "how\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "hello; goodbye (South German)",
+      "pos": "interj"
+    }
+  },
+  {
+    "key": "silvester",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"new Year\\\\\" → New Year's Eve",
+    "old": {
+      "en": "new Year\\",
+      "pos": "adj"
+    },
+    "new": {
+      "en": "New Year's Eve",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "sinkt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"expected; sink\"",
+    "old": {
+      "en": "to expected; sink",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "to sink; to decline",
+      "pos": "v",
+      "lemma": "sinken"
+    }
+  },
+  {
+    "key": "sitzen",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"we\\\\\" → to sit",
+    "old": {
+      "en": "we\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "to sit",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "sitzt",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"we\\\\\" → sits",
+    "old": {
+      "en": "we\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "to sit",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "sitzung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to meet\" on -ung noun",
+    "old": {
+      "en": "to meet",
+      "pos": "v"
+    },
+    "new": {
+      "en": "meeting; session",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "sofort",
+    "issueType": "context-bleed",
+    "note": "context bleed \"supposed; immediately\"",
+    "old": {
+      "en": "to supposed; immediately",
+      "pos": "v"
+    },
+    "new": {
+      "en": "immediately; at once",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "sortiment",
+    "issueType": "to-on-non-verb",
+    "note": "\"to range\" → noun",
+    "old": {
+      "en": "to range",
+      "pos": "v"
+    },
+    "new": {
+      "en": "range; assortment",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "spanisch",
+    "issueType": "context-bleed",
+    "note": "context bleed \"seems; spanish\"",
+    "old": {
+      "en": "to seems; spanish",
+      "pos": "v"
+    },
+    "new": {
+      "en": "Spanish",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "spazieren",
+    "issueType": "context-bleed",
+    "note": "context bleed \"walk; stroll\"",
+    "old": {
+      "en": "to walk; stroll",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to walk; to stroll",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "spaziergang",
+    "issueType": "context-bleed",
+    "note": "context bleed \"walk; stroll\"",
+    "old": {
+      "en": "to walk; stroll",
+      "pos": "v"
+    },
+    "new": {
+      "en": "walk; stroll",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "sprechen",
+    "issueType": "missing-to",
+    "note": "missing \"to \" on infinitive verb",
+    "old": {
+      "en": "speak",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to speak",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "stamme",
+    "issueType": "context-bleed",
+    "note": "context bleed \"thinks; origin\"",
+    "old": {
+      "en": "to thinks; origin",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "to come from; to originate",
+      "pos": "v",
+      "lemma": "stammen"
+    }
+  },
+  {
+    "key": "stammt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"comes; origin\"",
+    "old": {
+      "en": "to comes; origin",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "to come from; to originate",
+      "pos": "v",
+      "lemma": "stammen"
+    }
+  },
+  {
+    "key": "stammtisch",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"regulars\\\\\" → regulars' table",
+    "old": {
+      "en": "regulars\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "regulars' table",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "stelle",
+    "issueType": "context-bleed",
+    "note": "context bleed \"place; position\"",
+    "old": {
+      "en": "place; position",
+      "pos": "n"
+    },
+    "new": {
+      "en": "position; place; job",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "still",
+    "issueType": "wrong-meaning",
+    "note": "German still = quiet, was tagged noun",
+    "old": {
+      "en": "still",
+      "pos": "n"
+    },
+    "new": {
+      "en": "quiet; still",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "stimmt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"seems; true\"",
+    "old": {
+      "en": "to seems; true",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "to be right; that's correct",
+      "pos": "v",
+      "lemma": "stimmen"
+    }
+  },
+  {
+    "key": "stolz",
+    "issueType": "context-bleed",
+    "note": "context bleed \"serves; proud\"",
+    "old": {
+      "en": "to serves; proud",
+      "pos": "v"
+    },
+    "new": {
+      "en": "proud",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "storniert",
+    "issueType": "to-past-tense",
+    "note": "\"to canceled\" → canceled",
+    "old": {
+      "en": "to canceled",
+      "pos": "v"
+    },
+    "new": {
+      "en": "canceled",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "streiten",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"that\\\\\" → to argue",
+    "old": {
+      "en": "that\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "to argue; to quarrel",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "streitet",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"that\\\\\" → argues",
+    "old": {
+      "en": "that\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "to argue; to quarrel",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "strukturierter",
+    "issueType": "to-past-tense",
+    "note": "\"to structured\" → structured",
+    "old": {
+      "en": "to structured",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "more structured",
+      "pos": "adj",
+      "lemma": "strukturiert"
+    }
+  },
+  {
+    "key": "täglich",
+    "issueType": "context-bleed",
+    "note": "context bleed \"loads; daily\"",
+    "old": {
+      "en": "to loads; daily",
+      "pos": "v"
+    },
+    "new": {
+      "en": "daily",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "tägliche",
+    "issueType": "context-bleed",
+    "note": "context bleed \"loads; daily\"",
+    "old": {
+      "en": "to loads; daily",
+      "pos": "v"
+    },
+    "new": {
+      "en": "daily",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "tägliches",
+    "issueType": "context-bleed",
+    "note": "context bleed \"loads; daily\"",
+    "old": {
+      "en": "to loads; daily",
+      "pos": "v"
+    },
+    "new": {
+      "en": "daily",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "tanzaufführung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to dance performance\" → noun",
+    "old": {
+      "en": "to dance performance",
+      "pos": "v"
+    },
+    "new": {
+      "en": "dance performance",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "technische",
+    "issueType": "context-bleed",
+    "note": "context bleed \"compared; technical\"",
+    "old": {
+      "en": "to compared; technical",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "technical",
+      "pos": "adj",
+      "lemma": "technisch"
+    }
+  },
+  {
+    "key": "teilen",
+    "issueType": "missing-to",
+    "note": "missing \"to \" on infinitive verb",
+    "old": {
+      "en": "split",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to split; to share",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "tickets",
+    "issueType": "context-bleed",
+    "note": "context bleed \"price; ticket\"",
+    "old": {
+      "en": "price; ticket",
+      "pos": "n"
+    },
+    "new": {
+      "en": "tickets",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "tobte",
+    "issueType": "to-past-tense",
+    "note": "\"to raged\" → raged",
+    "old": {
+      "en": "to raged",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "raged; rampaged",
+      "pos": "v",
+      "lemma": "toben"
+    }
+  },
+  {
+    "key": "ton",
+    "issueType": "context-bleed",
+    "note": "context bleed \"calls; clay\"",
+    "old": {
+      "en": "to calls; clay",
+      "pos": "v"
+    },
+    "new": {
+      "en": "clay; tone; sound",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "töpferscheibe",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"potter\\\\\" → potter's wheel",
+    "old": {
+      "en": "potter\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "potter's wheel",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "trainiert",
+    "issueType": "context-bleed",
+    "note": "context bleed \"trains; trained\"",
+    "old": {
+      "en": "to trains; trained",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "to train; trained",
+      "pos": "v",
+      "lemma": "trainieren"
+    }
+  },
+  {
+    "key": "treten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"measures; step\"",
+    "old": {
+      "en": "to measures; step",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to step; to kick",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "überquerte",
+    "issueType": "to-past-tense",
+    "note": "\"to crossed\" → crossed",
+    "old": {
+      "en": "to crossed",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "crossed",
+      "pos": "v",
+      "lemma": "überqueren"
+    }
+  },
+  {
+    "key": "übung",
+    "issueType": "context-bleed",
+    "note": "context bleed \"practice; exercise\" → noun",
+    "old": {
+      "en": "to practice; exercise",
+      "pos": "v"
+    },
+    "new": {
+      "en": "exercise; practice",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "umgebaut",
+    "issueType": "context-bleed",
+    "note": "context bleed \"converted; rebuilt\"",
+    "old": {
+      "en": "to converted; rebuilt",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "converted; rebuilt",
+      "pos": "v",
+      "lemma": "umbauen"
+    }
+  },
+  {
+    "key": "umgezogen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"room; move\"",
+    "old": {
+      "en": "room; move",
+      "pos": "v"
+    },
+    "new": {
+      "en": "moved (house)",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "ums",
+    "issueType": "context-bleed",
+    "note": "context bleed \"comes; about\"",
+    "old": {
+      "en": "to comes; about",
+      "pos": "v"
+    },
+    "new": {
+      "en": "about the (um + das)",
+      "pos": "prep"
+    }
+  },
+  {
+    "key": "umziehen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"room; move\"",
+    "old": {
+      "en": "room; move",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to move (house); to change clothes",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "unmöglich",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"you\\\\\" → impossible",
+    "old": {
+      "en": "you\\",
+      "pos": "adj"
+    },
+    "new": {
+      "en": "impossible",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "unnötig",
+    "issueType": "context-bleed",
+    "note": "context bleed \"parents; unnecessary\"",
+    "old": {
+      "en": "to parents; unnecessary",
+      "pos": "v"
+    },
+    "new": {
+      "en": "unnecessary",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "unnötige",
+    "issueType": "context-bleed",
+    "note": "context bleed \"parents; unnecessary\"",
+    "old": {
+      "en": "to parents; unnecessary",
+      "pos": "v"
+    },
+    "new": {
+      "en": "unnecessary",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "unruhigen",
+    "issueType": "truncated",
+    "note": "truncated \"restles\" → restless",
+    "old": {
+      "en": "to restles",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "restless; uneasy",
+      "pos": "adj",
+      "lemma": "unruhig"
+    }
+  },
+  {
+    "key": "unterstützung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to support\" on -ung noun",
+    "old": {
+      "en": "to support",
+      "pos": "v"
+    },
+    "new": {
+      "en": "support; assistance",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "untersucht",
+    "issueType": "context-bleed",
+    "note": "context bleed \"examines; examined\"",
+    "old": {
+      "en": "to examines; examined",
+      "pos": "v"
+    },
+    "new": {
+      "en": "examined; investigated",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "urteil",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"doesn\\\\\" → judgment",
+    "old": {
+      "en": "doesn\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "judgment; verdict",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "validierter",
+    "issueType": "to-past-tense",
+    "note": "\"to validated\" → validated",
+    "old": {
+      "en": "to validated",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "validated",
+      "pos": "adj",
+      "lemma": "validiert"
+    }
+  },
+  {
+    "key": "veraltete",
+    "issueType": "to-past-tense",
+    "note": "\"to outdated\" → outdated",
+    "old": {
+      "en": "to outdated",
+      "pos": "v"
+    },
+    "new": {
+      "en": "outdated; obsolete",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "verarbeitete",
+    "issueType": "to-past-tense",
+    "note": "\"to processed\" → processed",
+    "old": {
+      "en": "to processed",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "processed",
+      "pos": "v",
+      "lemma": "verarbeiten"
+    }
+  },
+  {
+    "key": "verbessert",
+    "issueType": "context-bleed",
+    "note": "context bleed \"improves; improved\"",
+    "old": {
+      "en": "to improves; improved",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "improved",
+      "pos": "v",
+      "lemma": "verbessern"
+    }
+  },
+  {
+    "key": "verbietet",
+    "issueType": "context-bleed",
+    "note": "context bleed \"forbids; prohibit\"",
+    "old": {
+      "en": "to forbids; prohibit",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to forbid; to prohibit",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "verbindlich",
+    "issueType": "context-bleed",
+    "note": "context bleed \"pointed; binding\"",
+    "old": {
+      "en": "to pointed; binding",
+      "pos": "v"
+    },
+    "new": {
+      "en": "binding; obligatory",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "verblasste",
+    "issueType": "to-past-tense",
+    "note": "\"to faded\" → faded",
+    "old": {
+      "en": "to faded",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "faded",
+      "pos": "v",
+      "lemma": "verblassen"
+    }
+  },
+  {
+    "key": "verboten",
+    "issueType": "context-bleed",
+    "note": "context bleed \"parents; forbidden\"",
+    "old": {
+      "en": "to parents; forbidden",
+      "pos": "v"
+    },
+    "new": {
+      "en": "forbidden; prohibited",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "verbraucht",
+    "issueType": "to-past-tense",
+    "note": "\"to consumed\" → consumed",
+    "old": {
+      "en": "to consumed",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "consumed; used up",
+      "pos": "v",
+      "lemma": "verbrauchen"
+    }
+  },
+  {
+    "key": "verdoppelt",
+    "issueType": "to-past-tense",
+    "note": "\"to doubled\" → doubled",
+    "old": {
+      "en": "to doubled",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "doubled",
+      "pos": "v",
+      "lemma": "verdoppeln"
+    }
+  },
+  {
+    "key": "verdorrten",
+    "issueType": "to-past-tense",
+    "note": "\"to withered\" → withered",
+    "old": {
+      "en": "to withered",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "withered",
+      "pos": "adj",
+      "lemma": "verdorrt"
+    }
+  },
+  {
+    "key": "verfügt",
+    "issueType": "to-past-tense",
+    "note": "garbled \"ha\" → to have/possess",
+    "old": {
+      "en": "ha",
+      "pos": "n",
+      "lemma": null
+    },
+    "new": {
+      "en": "to have; to possess",
+      "pos": "v",
+      "lemma": "verfügen"
+    }
+  },
+  {
+    "key": "vergleich",
+    "issueType": "context-bleed",
+    "note": "context bleed \"compared; comparison\"",
+    "old": {
+      "en": "to compared; comparison",
+      "pos": "v"
+    },
+    "new": {
+      "en": "comparison",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "verhaftet",
+    "issueType": "to-past-tense",
+    "note": "\"to arrested\" → arrested",
+    "old": {
+      "en": "to arrested",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "arrested",
+      "pos": "v",
+      "lemma": "verhaften"
+    }
+  },
+  {
+    "key": "verhältnis",
+    "issueType": "context-bleed",
+    "note": "context bleed \"decide; relationship\"",
+    "old": {
+      "en": "to decide; relationship",
+      "pos": "v"
+    },
+    "new": {
+      "en": "relationship; ratio",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "verkauft",
+    "issueType": "context-bleed",
+    "note": "context bleed \"sells; sold\"",
+    "old": {
+      "en": "to sells; sold",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "sold",
+      "pos": "v",
+      "lemma": "verkaufen"
+    }
+  },
+  {
+    "key": "verkürzt",
+    "issueType": "to-past-tense",
+    "note": "\"to shortened\" → shortened",
+    "old": {
+      "en": "to shortened",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "shortened",
+      "pos": "v",
+      "lemma": "verkürzen"
+    }
+  },
+  {
+    "key": "verlängertes",
+    "issueType": "to-past-tense",
+    "note": "\"to extended\" → extended",
+    "old": {
+      "en": "to extended",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "extended",
+      "pos": "adj",
+      "lemma": "verlängert"
+    }
+  },
+  {
+    "key": "verlaufen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"reported; get lost\"",
+    "old": {
+      "en": "to reported; get lost",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to get lost; to run",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "verläuft",
+    "issueType": "context-bleed",
+    "note": "context bleed \"reported; get lost\"",
+    "old": {
+      "en": "to reported; get lost",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to run; to proceed",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "verliefen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"reported; get lost\"",
+    "old": {
+      "en": "to reported; get lost",
+      "pos": "v"
+    },
+    "new": {
+      "en": "proceeded; ran",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "verloren",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"didn\\\\\" → lost",
+    "old": {
+      "en": "didn\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "lost",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "vermissen",
+    "issueType": "truncated",
+    "note": "truncated \"mis\" → miss",
+    "old": {
+      "en": "to mis",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to miss (someone)",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "vermutung",
+    "issueType": "context-bleed",
+    "note": "context bleed \"study; supposition\"",
+    "old": {
+      "en": "to study; supposition",
+      "pos": "v"
+    },
+    "new": {
+      "en": "supposition; guess",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "vernachlässigt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"worked; neglected\"",
+    "old": {
+      "en": "to worked; neglected",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "neglected",
+      "pos": "v",
+      "lemma": "vernachlässigen"
+    }
+  },
+  {
+    "key": "vernünftiges",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"didn\\\\\" → reasonable",
+    "old": {
+      "en": "didn\\",
+      "pos": "n",
+      "lemma": null
+    },
+    "new": {
+      "en": "something reasonable",
+      "pos": "adj",
+      "lemma": "vernünftig"
+    }
+  },
+  {
+    "key": "verpasste",
+    "issueType": "truncated",
+    "note": "truncated \"mis\" → missed",
+    "old": {
+      "en": "to mis",
+      "pos": "v"
+    },
+    "new": {
+      "en": "missed",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "verpflichtet",
+    "issueType": "to-past-tense",
+    "note": "\"to obligated\" → obligated",
+    "old": {
+      "en": "to obligated",
+      "pos": "v"
+    },
+    "new": {
+      "en": "obligated; committed",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "verschlechtert",
+    "issueType": "to-past-tense",
+    "note": "\"to worsened\" → worsened",
+    "old": {
+      "en": "to worsened",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "worsened; deteriorated",
+      "pos": "v",
+      "lemma": "verschlechtern"
+    }
+  },
+  {
+    "key": "verschlüsselten",
+    "issueType": "to-past-tense",
+    "note": "\"to encrypted\" → encrypted",
+    "old": {
+      "en": "to encrypted",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "encrypted",
+      "pos": "adj",
+      "lemma": "verschlüsselt"
+    }
+  },
+  {
+    "key": "verschoben",
+    "issueType": "context-bleed",
+    "note": "context bleed \"postponed; delay\"",
+    "old": {
+      "en": "to postponed; delay",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "postponed; shifted",
+      "pos": "v",
+      "lemma": "verschieben"
+    }
+  },
+  {
+    "key": "verschont",
+    "issueType": "to-past-tense",
+    "note": "\"to spared\" → spared",
+    "old": {
+      "en": "to spared",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "spared",
+      "pos": "v",
+      "lemma": "verschonen"
+    }
+  },
+  {
+    "key": "verspätung",
+    "issueType": "context-bleed",
+    "note": "context bleed \"train; lateness\"",
+    "old": {
+      "en": "to train; lateness",
+      "pos": "v"
+    },
+    "new": {
+      "en": "delay; lateness",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "verspätungen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"train; lateness\"",
+    "old": {
+      "en": "to train; lateness",
+      "pos": "v"
+    },
+    "new": {
+      "en": "delays",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "verständlich",
+    "issueType": "context-bleed",
+    "note": "context bleed \"explains; understandable\"",
+    "old": {
+      "en": "to explains; understandable",
+      "pos": "v"
+    },
+    "new": {
+      "en": "understandable; comprehensible",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "verständnis",
+    "issueType": "to-on-non-verb",
+    "note": "\"to understand\" on -nis noun",
+    "old": {
+      "en": "to understand",
+      "pos": "v"
+    },
+    "new": {
+      "en": "understanding",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "verstaucht",
+    "issueType": "to-past-tense",
+    "note": "\"to sprained\" → sprained",
+    "old": {
+      "en": "to sprained",
+      "pos": "v"
+    },
+    "new": {
+      "en": "sprained",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "verstorbenen",
+    "issueType": "to-past-tense",
+    "note": "\"to deceased\" → deceased",
+    "old": {
+      "en": "to deceased",
+      "pos": "v"
+    },
+    "new": {
+      "en": "deceased",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "verteilt",
+    "issueType": "to-past-tense",
+    "note": "\"to distributed\" → distributed",
+    "old": {
+      "en": "to distributed",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "distributed",
+      "pos": "v",
+      "lemma": "verteilen"
+    }
+  },
+  {
+    "key": "vertraut",
+    "issueType": "context-bleed",
+    "note": "context bleed \"trusts; trusted\"",
+    "old": {
+      "en": "to trusts; trusted",
+      "pos": "v"
+    },
+    "new": {
+      "en": "trusted; familiar",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "verursacht",
+    "issueType": "to-past-tense",
+    "note": "\"to caused\" → caused",
+    "old": {
+      "en": "to caused",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "caused",
+      "pos": "v",
+      "lemma": "verursachen"
+    }
+  },
+  {
+    "key": "verwendet",
+    "issueType": "to-past-tense",
+    "note": "\"to used\" → used",
+    "old": {
+      "en": "to used",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "used",
+      "pos": "v",
+      "lemma": "verwenden"
+    }
+  },
+  {
+    "key": "verwendung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to use\" on -ung noun",
+    "old": {
+      "en": "to use",
+      "pos": "v"
+    },
+    "new": {
+      "en": "use; usage",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "verzichtet",
+    "issueType": "context-bleed",
+    "note": "context bleed \"saves; waived\"",
+    "old": {
+      "en": "to saves; waived",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to do without; to waive",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "verzögerte",
+    "issueType": "to-past-tense",
+    "note": "\"to delayed\" → delayed",
+    "old": {
+      "en": "to delayed",
+      "pos": "v"
+    },
+    "new": {
+      "en": "delayed",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "vom",
+    "issueType": "context-bleed",
+    "note": "context bleed \"orders; from the\" + wrong POS",
+    "old": {
+      "en": "to orders; from the",
+      "pos": "v"
+    },
+    "new": {
+      "en": "from the (von + dem)",
+      "pos": "prep"
+    }
+  },
+  {
+    "key": "voraussichtlich",
+    "issueType": "to-past-tense",
+    "note": "\"to expected\" → presumably",
+    "old": {
+      "en": "to expected",
+      "pos": "v"
+    },
+    "new": {
+      "en": "expected; presumably",
+      "pos": "adv"
+    }
+  },
+  {
+    "key": "vorgestellt",
+    "issueType": "context-bleed",
+    "note": "context bleed \"introduced; presented\"",
+    "old": {
+      "en": "to introduced; presented",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "introduced; presented",
+      "pos": "v",
+      "lemma": "vorstellen"
+    }
+  },
+  {
+    "key": "vorlesung",
+    "issueType": "to-on-non-verb",
+    "note": "\"to lecture\" on -ung noun",
+    "old": {
+      "en": "to lecture",
+      "pos": "v"
+    },
+    "new": {
+      "en": "lecture",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "vorliegenden",
+    "issueType": "context-bleed",
+    "note": "context bleed \"based; present\"",
+    "old": {
+      "en": "to based; present",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "present; available",
+      "pos": "adj",
+      "lemma": "vorliegend"
+    }
+  },
+  {
+    "key": "vorstellen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"supposed; introduce\"",
+    "old": {
+      "en": "to supposed; introduce",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to introduce; to imagine",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "wald",
+    "issueType": "context-bleed",
+    "note": "context bleed \"goes; forest\"",
+    "old": {
+      "en": "to goes; forest",
+      "pos": "v"
+    },
+    "new": {
+      "en": "forest; woods",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "waldes",
+    "issueType": "context-bleed",
+    "note": "context bleed \"goes; forest\"",
+    "old": {
+      "en": "to goes; forest",
+      "pos": "v"
+    },
+    "new": {
+      "en": "of the forest",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "wasserhahn",
+    "issueType": "context-bleed",
+    "note": "context bleed \"repair; tap\"",
+    "old": {
+      "en": "to repair; tap",
+      "pos": "v"
+    },
+    "new": {
+      "en": "tap; faucet",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "weiß",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"doesn\\\\\" → white/know",
+    "old": {
+      "en": "doesn\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "white; to know",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "weißem",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"doesn\\\\\" → white",
+    "old": {
+      "en": "doesn\\",
+      "pos": "adj"
+    },
+    "new": {
+      "en": "white",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "weißes",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"doesn\\\\\" → white",
+    "old": {
+      "en": "doesn\\",
+      "pos": "adj"
+    },
+    "new": {
+      "en": "white",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "weit",
+    "issueType": "context-bleed",
+    "note": "context bleed \"open; far\"",
+    "old": {
+      "en": "to open; far",
+      "pos": "v"
+    },
+    "new": {
+      "en": "far; wide",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "weitem",
+    "issueType": "context-bleed",
+    "note": "context bleed \"open; far\"",
+    "old": {
+      "en": "to open; far",
+      "pos": "v"
+    },
+    "new": {
+      "en": "far; wide",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "weiterbildung",
+    "issueType": "context-bleed",
+    "note": "context bleed \"plan; continuing education\"",
+    "old": {
+      "en": "to plan; continuing education",
+      "pos": "v"
+    },
+    "new": {
+      "en": "continuing education",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "widerspruch",
+    "issueType": "context-bleed",
+    "note": "context bleed \"obeys; contradiction\"",
+    "old": {
+      "en": "to obeys; contradiction",
+      "pos": "v"
+    },
+    "new": {
+      "en": "contradiction; objection",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "will",
+    "issueType": "other-fix",
+    "note": "verb form of wollen",
+    "old": {
+      "en": "to want to",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to want (I/he/she want(s))",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "wirft",
+    "issueType": "context-bleed",
+    "note": "context bleed \"takes; throw\"",
+    "old": {
+      "en": "to takes; throw",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to throw",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "wirtschaft",
+    "issueType": "context-bleed",
+    "note": "context bleed \"appears; business\"",
+    "old": {
+      "en": "to appears; business",
+      "pos": "v"
+    },
+    "new": {
+      "en": "economy; business; pub",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "wohngemeinschaft",
+    "issueType": "to-on-non-verb",
+    "note": "\"to shared apartment\" → noun",
+    "old": {
+      "en": "to shared apartment",
+      "pos": "v"
+    },
+    "new": {
+      "en": "shared apartment; flat share",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "wundere",
+    "issueType": "backslash-garbled",
+    "note": "garbled \"i\\\\\" → to wonder",
+    "old": {
+      "en": "i\\",
+      "pos": "n"
+    },
+    "new": {
+      "en": "to wonder",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "zahlen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"report; pay\"",
+    "old": {
+      "en": "report; pay",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to pay",
+      "pos": "v"
+    }
+  },
+  {
+    "key": "zerstörte",
+    "issueType": "to-past-tense",
+    "note": "\"to destroyed\" → destroyed",
+    "old": {
+      "en": "to destroyed",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "destroyed",
+      "pos": "v",
+      "lemma": "zerstören"
+    }
+  },
+  {
+    "key": "zufrieden",
+    "issueType": "to-past-tense",
+    "note": "\"to satisfied\" → satisfied",
+    "old": {
+      "en": "to satisfied",
+      "pos": "v"
+    },
+    "new": {
+      "en": "satisfied; content",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "zug",
+    "issueType": "context-bleed",
+    "note": "context bleed \"train; pull\" + wrong POS",
+    "old": {
+      "en": "to train; pull; move; pull",
+      "pos": "v"
+    },
+    "new": {
+      "en": "train; pull; move",
+      "pos": "n"
+    }
+  },
+  {
+    "key": "zur",
+    "issueType": "context-bleed",
+    "note": "context bleed \"work; to\" + wrong POS",
+    "old": {
+      "en": "work; to",
+      "pos": "v"
+    },
+    "new": {
+      "en": "to the (contraction: zu + der)",
+      "pos": "prep"
+    }
+  },
+  {
+    "key": "zurückgekommen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"work; returned\"",
+    "old": {
+      "en": "work; returned",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "returned; come back",
+      "pos": "v",
+      "lemma": "zurückkommen"
+    }
+  },
+  {
+    "key": "zurückgesandt",
+    "issueType": "to-past-tense",
+    "note": "\"to returned\" → sent back",
+    "old": {
+      "en": "to returned",
+      "pos": "v",
+      "lemma": null
+    },
+    "new": {
+      "en": "sent back; returned",
+      "pos": "v",
+      "lemma": "zurücksenden"
+    }
+  },
+  {
+    "key": "zurückgezogen",
+    "issueType": "context-bleed",
+    "note": "context bleed \"smelled; withdrawn\"",
+    "old": {
+      "en": "to smelled; withdrawn",
+      "pos": "v"
+    },
+    "new": {
+      "en": "withdrawn; reclusive",
+      "pos": "adj"
+    }
+  },
+  {
+    "key": "zusammenhang",
+    "issueType": "context-bleed",
+    "note": "context bleed \"results; connection\"",
+    "old": {
+      "en": "to results; connection",
+      "pos": "v"
+    },
+    "new": {
+      "en": "connection; context",
+      "pos": "n"
+    }
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "language": "ru",
+  "total_entries": 4760,
+  "total_checked": 500,
+  "passed": 496,
+  "failed": 4,
+  "pass_rate": "99.2%",
+  "grade": "A",
+  "failures_by_type": {
+    "to_prefix": 4
+  },
+  "failure_examples": [
+    {
+      "word": "доехала",
+      "en": "work; arrived",
+      "pos": "v",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "ходили",
+      "en": "reason; walk",
+      "pos": "v",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "зовут",
+      "en": "name; they call",
+      "pos": "v",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "кататься",
+      "en": "last; ride",
+      "pos": "v",
+      "issues": "to_prefix"
+    }
+  ]
+}

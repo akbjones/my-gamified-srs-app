@@ -70,7 +70,7 @@ const GamificationHub: React.FC<GamificationHubProps> = ({ stats, achievements, 
         </div>
       </div>
 
-      {/* Experiments Trophy Room */}
+      {/* Checkpoints */}
       <div>
         <h2 className="text-sm font-black mb-3 text-[var(--text-secondary)] uppercase tracking-widest flex items-center gap-2">
           <FlaskConical size={14} />

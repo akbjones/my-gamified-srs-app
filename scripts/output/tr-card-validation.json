@@ -1,0 +1,4178 @@
+{
+  "total": 3933,
+  "flagged_count": 833,
+  "ok_count": 3100,
+  "issue_counts": {
+    "GARBAGE": 656,
+    "AWKWARD": 88,
+    "MISMATCH": 79,
+    "MIXED": 10
+  },
+  "flagged": [
+    {
+      "id": "tr-0044",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Turistler kışın bayat tablet sokakta tamir etti' - random words strung together, English translation equally nonsensical"
+    },
+    {
+      "id": "tr-0050",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Antropolog her gün kaygan kompresör editler' - made-up verb usage, English has Turkish words mixed in"
+    },
+    {
+      "id": "tr-0053",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kardeşim kışın küçük makale deniz kıyısında topladı' - random noun inserted as object makes no sense"
+    },
+    {
+      "id": "tr-0056",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Dedem sabahleyin bayat papatya alışveriş merkezinde pişirdi' - cooked a stale daisy at the mall"
+    },
+    {
+      "id": "tr-0058",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Veteriner geçen hafta üzgün tavşan postanede geldi' - random words, vet came sad rabbit at post office"
+    },
+    {
+      "id": "tr-0063",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ali dün aptal atkı ormanda tamir etti' - repaired a foolish scarf in the forest"
+    },
+    {
+      "id": "tr-0070",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Diş hekimi bazen sert çiçek yüzme havuzunda bıraktı' - dentist left hard flower at pool"
+    },
+    {
+      "id": "tr-0075",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Diş hekimi bu akşam pahalı motosiklet göl kenarında pişirdi' - dentist cooked expensive motorcycle by lake"
+    },
+    {
+      "id": "tr-0085",
+      "issue": "AWKWARD",
+      "reason": "Typo: 'kahvealtı' should be 'kahvaltı' (breakfast)"
+    },
+    {
+      "id": "tr-0106",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Balıkçı öğleden sonra kolay taksi dağda geldi' - fisherman came easy taxi on mountain"
+    },
+    {
+      "id": "tr-0119",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Mehmet genellikle aptal köpek alışveriş merkezinde gördü' - random adjective+noun combination, bad grammar"
+    },
+    {
+      "id": "tr-0123",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Bıldırcın pürüzlü greyfurt ölçer' - quail measures rough grapefruit. English also has Turkish words mixed in"
+    },
+    {
+      "id": "tr-0126",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Pilot gün batımında kalın tren meydanda yaptı' - pilot made thick train in square at sunset"
+    },
+    {
+      "id": "tr-0130",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Çiftçi akşamüstü taze makale göl kenarında tamir etti' - farmer repaired fresh article by lake"
+    },
+    {
+      "id": "tr-0145",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Hemşire her gün pürüzsüz dart kaydeder' - nurse records smooth dart. English also has Turkish words"
+    },
+    {
+      "id": "tr-0154",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Terzi şafakta çirkin lale spor salonunda boyadı' - tailor painted ugly tulip at gym at dawn"
+    },
+    {
+      "id": "tr-0155",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Diş hekimi dün akşam gürültülü dolma restoranda pişirdi' - dentist cooked noisy stuffed grape leaves at restaurant"
+    },
+    {
+      "id": "tr-0158",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Komşular gün batımında ağır kurabiye dağda yazdı' - neighbors wrote heavy cookies on mountain at sunset"
+    },
+    {
+      "id": "tr-0166",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Aşçı yazın zor köpek spor salonunda yaptı' - chef made hard dog at gym in summer"
+    },
+    {
+      "id": "tr-0168",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Iç çamaşırı pişmiş ve zor görünür' - underwear looks cooked and hard. English also has Turkish words mixed in"
+    },
+    {
+      "id": "tr-0189",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Babaanne hafta içi acı tavşan deniz kıyısında dikti' - grandmother sewed bitter rabbit on coast on weekdays"
+    },
+    {
+      "id": "tr-0194",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'İtfaiyeci genellikle portakal kalkar' - firefighter usually gets up orange"
+    },
+    {
+      "id": "tr-0195",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'Ben şu anda rapor anlıyorum' - I understand a report right now. Unnatural phrasing"
+    },
+    {
+      "id": "tr-0199",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'Siz bu aralar şiir seviyorsunuz' - You love a poem these days. Unnatural object usage"
+    },
+    {
+      "id": "tr-0200",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Sen bugünlerde şiir uyuyorsun' - You sleep a poem nowadays. 'uyumak' is intransitive, cannot take 'şiir' as object"
+    },
+    {
+      "id": "tr-0204",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'Onlar plajda hikaye öğreniyorlar' - They learn a story at the beach. Unnatural combination"
+    },
+    {
+      "id": "tr-0205",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Biz hastanede makale içiyoruz' - We drink an article at the hospital"
+    },
+    {
+      "id": "tr-0212",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'Onlar sık sık kitap yapıyorlar' - They do/make a book often. Unnatural verb-object pairing"
+    },
+    {
+      "id": "tr-0216",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Garson her sabah pasaport içer' - The waiter drinks the passport every morning"
+    },
+    {
+      "id": "tr-0219",
+      "issue": "AWKWARD",
+      "reason": "Incomplete/odd: 'Ben nadiren plajda yapıyorum' - I do/make at the beach rarely. Missing object for 'yapmak'"
+    },
+    {
+      "id": "tr-0220",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ben bugünlerde şiir gülüyorum' - I laugh a poem nowadays. 'gülmek' is intransitive"
+    },
+    {
+      "id": "tr-0221",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'Biz her gün ödev konuşuyoruz' - We speak homework every day. Missing postposition"
+    },
+    {
+      "id": "tr-0226",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Onlar mutfakta ödev gidiyorlar' - They go homework in the kitchen. 'gitmek' cannot take 'ödev' as object"
+    },
+    {
+      "id": "tr-0229",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ben şimdi dergi oturuyorum' - I sit a magazine now. 'oturmak' is intransitive"
+    },
+    {
+      "id": "tr-0240",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Siz sık sık roman içiyorsunuz' - You drink a novel often"
+    },
+    {
+      "id": "tr-0241",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Sen plajda roman oturuyorsun' - You sit a novel at the beach. 'oturmak' is intransitive"
+    },
+    {
+      "id": "tr-0244",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Biz mutfakta roman yapıyoruz' - We make a novel in the kitchen"
+    },
+    {
+      "id": "tr-0254",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Siz nadiren şiir bekliyorsunuz' - You wait a poem rarely. 'beklemek' doesn't naturally take 'şiir'"
+    },
+    {
+      "id": "tr-0255",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Siz kütüphanede gazete düşünüyorsunuz' - You think a newspaper in the library. Missing postposition 'hakkında'"
+    },
+    {
+      "id": "tr-0260",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'Ben her zaman makale anlıyorum' - I understand an article always. Unnatural phrasing"
+    },
+    {
+      "id": "tr-0261",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Mühendis genellikle sandalye koşar' - The engineer runs the chair usually"
+    },
+    {
+      "id": "tr-0267",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'Ben şu anda rapor seviyorum' - I love a report right now"
+    },
+    {
+      "id": "tr-0271",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Biz şu anda roman içiyoruz' - We drink a novel right now"
+    },
+    {
+      "id": "tr-0274",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Sen bu aralar şiir içiyorsun' - You drink a poem these days"
+    },
+    {
+      "id": "tr-0278",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'Onlar nadiren kütüphanede seviyorlar' - They love in the library rarely. Missing object"
+    },
+    {
+      "id": "tr-0281",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'Ben havaalanında rapor düşünüyorum' - I think a report at the airport. Missing postposition"
+    },
+    {
+      "id": "tr-0285",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'Onlar bu aralar şiir seviyorlar' - They love a poem these days"
+    },
+    {
+      "id": "tr-0297",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'Biz her zaman havaalanında gidiyoruz' - We always go at the airport. Locative case wrong, should be ablative"
+    },
+    {
+      "id": "tr-0302",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Yazar bazen bilgisayar koşar' - The writer runs the computer sometimes"
+    },
+    {
+      "id": "tr-0317",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'Biz şimdi okulda seviyoruz' - We love at school now. Missing object"
+    },
+    {
+      "id": "tr-0322",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Aşçı bazen elma içer' - The cook drinks the apple sometimes"
+    },
+    {
+      "id": "tr-0325",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Biz bu aralar şiir ağlıyoruz' - We cry a poem these days. 'ağlamak' is intransitive"
+    },
+    {
+      "id": "tr-0330",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'Onlar sık sık otelde gidiyorlar' - They go at the hotel often. Wrong case suffix"
+    },
+    {
+      "id": "tr-0335",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'Siz bazen ödev seviyorsunuz' - You love homework sometimes"
+    },
+    {
+      "id": "tr-0340",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'O bugünlerde gazete anlıyor' - He/She understands a newspaper nowadays"
+    },
+    {
+      "id": "tr-0355",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'İtfaiyeci dün su öğretti' - The firefighter taught the water yesterday"
+    },
+    {
+      "id": "tr-0360",
+      "issue": "AWKWARD",
+      "reason": "Typo in Turkish: 'otenlden' should be 'otelden'"
+    },
+    {
+      "id": "tr-0381",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Gazeteci dün şapka içti' - The journalist drank the hat yesterday"
+    },
+    {
+      "id": "tr-0386",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'Hemşire dün kitap temizledi' - The nurse cleaned the book yesterday. Unlikely but not impossible"
+    },
+    {
+      "id": "tr-0393",
+      "issue": "AWKWARD",
+      "reason": "Typo in Turkish: 'hastanneden' should be 'hastaneden'"
+    },
+    {
+      "id": "tr-0218",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'Biz şu anda rapor çalışıyoruz' - We work a report right now. Should be 'rapor üzerinde çalışıyoruz'"
+    },
+    {
+      "id": "tr-0262",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'Sen bugünlerde rapor çalışıyorsun' - You work a report nowadays. Missing postposition"
+    },
+    {
+      "id": "tr-0290",
+      "issue": "AWKWARD",
+      "reason": "Semantically odd: 'O parkta mektup öğreniyor' - He/She learns a letter in the park. Unnatural combination"
+    },
+    {
+      "id": "tr-0495",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'buz kürling' (ice curling) asking 'which is more bereketli (fertile)?' is gibberish. English is also garbage with untranslated Turkish words 'tayt' and 'verimsiz'"
+    },
+    {
+      "id": "tr-0494",
+      "issue": "AWKWARD",
+      "reason": "Wrong case: 'bahçede gideceksin' uses locative -de with gitmek (go), should be 'bahçeye' (dative). You go TO a garden, not IN a garden"
+    },
+    {
+      "id": "tr-0500",
+      "issue": "AWKWARD",
+      "reason": "Incomplete/meaningless: 'hastanede alacak' (will buy at the hospital) has no object. What will they buy at a hospital? Very unnatural"
+    },
+    {
+      "id": "tr-0501",
+      "issue": "AWKWARD",
+      "reason": "Wrong case: 'hastanede gidecek' uses locative with gitmek, should be 'hastaneye gidecek'"
+    },
+    {
+      "id": "tr-0509",
+      "issue": "AWKWARD",
+      "reason": "Wrong case: 'restoranda gelecekler' uses locative with gelmek, should be 'restorana gelecekler'"
+    },
+    {
+      "id": "tr-0512",
+      "issue": "AWKWARD",
+      "reason": "Wrong case: 'otelde gideceğim' uses locative with gitmek, should be 'otele gideceğim'"
+    },
+    {
+      "id": "tr-0519",
+      "issue": "AWKWARD",
+      "reason": "'kısa bir araba' (a short car) is a very strange collocation. Cars are not described as 'kısa' (short) in Turkish"
+    },
+    {
+      "id": "tr-0524",
+      "issue": "AWKWARD",
+      "reason": "Wrong case: 'kütüphanede gideceğiz' uses locative with gitmek, should be 'kütüphaneye gideceğiz'"
+    },
+    {
+      "id": "tr-0532",
+      "issue": "AWKWARD",
+      "reason": "Wrong case: 'plajda geleceğim' uses locative with gelmek, should be 'plaja geleceğim'"
+    },
+    {
+      "id": "tr-0533",
+      "issue": "AWKWARD",
+      "reason": "Incomplete: 'kütüphanede yapacaksın' (you will do in the library) — 'yapmak' needs an object, what will you do?"
+    },
+    {
+      "id": "tr-0536",
+      "issue": "AWKWARD",
+      "reason": "Incomplete: 'müzede yapacağım' (I will do in the museum) — missing object for yapmak"
+    },
+    {
+      "id": "tr-0539",
+      "issue": "AWKWARD",
+      "reason": "Incomplete: 'kütüphanede yapacaklar' (they will do in the library) — missing object for yapmak"
+    },
+    {
+      "id": "tr-0546",
+      "issue": "AWKWARD",
+      "reason": "Wrong case: 'bahçede geleceğim' uses locative with gelmek, should be 'bahçeye geleceğim'"
+    },
+    {
+      "id": "tr-0550",
+      "issue": "AWKWARD",
+      "reason": "Incomplete: 'havaalanında yapacaksın' — missing object for yapmak"
+    },
+    {
+      "id": "tr-0558",
+      "issue": "AWKWARD",
+      "reason": "Wrong case: 'mutfakta gideceksiniz' uses locative with gitmek, should be 'mutfağa gideceksiniz'. Also semantically strange to go TO a kitchen 'in the future'"
+    },
+    {
+      "id": "tr-0560",
+      "issue": "AWKWARD",
+      "reason": "Wrong case: 'kütüphanede geleceğiz' uses locative with gelmek, should be 'kütüphaneye geleceğiz'"
+    },
+    {
+      "id": "tr-0561",
+      "issue": "AWKWARD",
+      "reason": "Wrong case: 'restoranda geleceksin' uses locative with gelmek, should be 'restorana geleceksin'"
+    },
+    {
+      "id": "tr-0563",
+      "issue": "AWKWARD",
+      "reason": "Incomplete: 'otelde yapacağız' — missing object for yapmak"
+    },
+    {
+      "id": "tr-0576",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Siz gitmeyecek' should be 'Siz gitmeyeceksiniz' — missing person suffix for 2nd person formal"
+    },
+    {
+      "id": "tr-0577",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'ağ' (net) and 'şapka' (hat), English says 'kanyon' and 'ksifon' — completely different words, English also contains nonsense word 'ksifon'"
+    },
+    {
+      "id": "tr-0580",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Siz anlamayacak' should be 'Siz anlamayacaksınız' — missing person suffix"
+    },
+    {
+      "id": "tr-0581",
+      "issue": "AWKWARD",
+      "reason": "Wrong case: 'plajda gitmiyor' uses locative with gitmek, should be 'plaja gitmiyor'"
+    },
+    {
+      "id": "tr-0585",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Sen okumuyor' should be 'Sen okumuyorsun' — missing person suffix"
+    },
+    {
+      "id": "tr-0599",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Biz okumadı' should be 'Biz okumadık' — 3rd person suffix used for 1st person plural"
+    },
+    {
+      "id": "tr-0600",
+      "issue": "AWKWARD",
+      "reason": "Incomplete: 'kütüphanede yapmayacak' — missing object for yapmak"
+    },
+    {
+      "id": "tr-0603",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Sen bilmedi' should be 'Sen bilmedin' — 3rd person suffix used for 2nd person"
+    },
+    {
+      "id": "tr-0610",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish: 'Basit yazılım valilik sonunda bulunur' (Simple software is found at the end of the governorship). English is also garbage with untranslated Turkish 'parlak radyo' and 'otel'"
+    },
+    {
+      "id": "tr-0615",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Ben istemedi' should be 'Ben istemedim' — 3rd person suffix used for 1st person. Also semantically incomplete"
+    },
+    {
+      "id": "tr-0621",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'yarımada' (peninsula) and 'balta' (axe), English says 'merdiven' (staircase) and 'antilop' (antelope) — completely different words"
+    },
+    {
+      "id": "tr-0624",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Siz konuşmayacak' should be 'Siz konuşmayacaksınız'"
+    },
+    {
+      "id": "tr-0627",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'dere' (stream) and 'bordo' (burgundy), English says 'hologram' and 'jeoloji' — completely different words"
+    },
+    {
+      "id": "tr-0628",
+      "issue": "AWKWARD",
+      "reason": "Incomplete: 'restoranda yapmıyor' — missing object for yapmak"
+    },
+    {
+      "id": "tr-0639",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'boza' (fermented drink) and 'kanepe' (sofa), English says 'basketbol' and 'otomasyon' — completely different words"
+    },
+    {
+      "id": "tr-0641",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Sen gitmeyecek' should be 'Sen gitmeyeceksin'"
+    },
+    {
+      "id": "tr-0646",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Siz anlamayacak' should be 'Siz anlamayacaksınız'"
+    },
+    {
+      "id": "tr-0647",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'veritabanı' (database) and 'bent' (dam/embankment), English says 'matkap' (drill) and 'kobay' (guinea pig) — completely different words"
+    },
+    {
+      "id": "tr-0649",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'ceylan' (gazelle) and 'robot', English says 'polo' and 'limon' (lemon) — completely different words"
+    },
+    {
+      "id": "tr-0652",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Siz gitmiyor' should be 'Siz gitmiyorsunuz'"
+    },
+    {
+      "id": "tr-0655",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Sen çalışmıyor' should be 'Sen çalışmıyorsun'"
+    },
+    {
+      "id": "tr-0656",
+      "issue": "AWKWARD",
+      "reason": "Incomplete: 'kütüphanede yapmıyor' — missing object for yapmak"
+    },
+    {
+      "id": "tr-0657",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Sen bilmedi' should be 'Sen bilmedin'"
+    },
+    {
+      "id": "tr-0662",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Biz yapmayacak' should be 'Biz yapmayacağız'"
+    },
+    {
+      "id": "tr-0665",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Ben istemeyecek' should be 'Ben istemeyeceğim'"
+    },
+    {
+      "id": "tr-0668",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Ben çalışmıyor' should be 'Ben çalışmıyorum'"
+    },
+    {
+      "id": "tr-0676",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Ben anlamadı' should be 'Ben anlamadım'"
+    },
+    {
+      "id": "tr-0679",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Biz gelmiyor' should be 'Biz gelmiyoruz'. Also wrong case: 'mutfakta' should be 'mutfağa' with gelmek"
+    },
+    {
+      "id": "tr-0683",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Ben istemeyecek' should be 'Ben istemeyeceğim'"
+    },
+    {
+      "id": "tr-0686",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish: 'Yumuşak falez kafe yakınında bulunur' (Soft cliff is found near cafe). English is also garbage: 'olgun bezginlik is found near the pazar'"
+    },
+    {
+      "id": "tr-0690",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Onlar istemeyecek' should be 'Onlar istemeyecekler'"
+    },
+    {
+      "id": "tr-0696",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Siz istemedi' should be 'Siz istemediniz'"
+    },
+    {
+      "id": "tr-0700",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'brokoli' (broccoli) and 'drone', English says 'armonika' (harmonica) and 'kalorifer' (radiator) — completely different words"
+    },
+    {
+      "id": "tr-0701",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Biz gelmeyecek' should be 'Biz gelmeyeceğiz'"
+    },
+    {
+      "id": "tr-0703",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Sen anlamadı' should be 'Sen anlamadın'"
+    },
+    {
+      "id": "tr-0704",
+      "issue": "GARBAGE",
+      "reason": "Wrong conjugation: 'Onlar sevmedi' should be 'Onlar sevmediler' (or sevmedi is acceptable in spoken Turkish but awkward here)"
+    },
+    {
+      "id": "tr-0719",
+      "issue": "AWKWARD",
+      "reason": "Incomplete/unnatural: 'bazen istiyor musun?' (do you want sometimes?) — missing object, no context, lowercase start"
+    },
+    {
+      "id": "tr-0720",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'satranç' (chess), English says 'binicilik' (horse riding) — completely different activities"
+    },
+    {
+      "id": "tr-0726",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'leylek' (stork), English says 'karaca' (roe deer) — different animals"
+    },
+    {
+      "id": "tr-0734",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'gergedan' (rhinoceros), English says 'iguana' — different animals"
+    },
+    {
+      "id": "tr-0736",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'matematikçi' (mathematician) and 'şehir planlaması' (city planning), English says 'dedektif' (detective) and 'ekonomi' (economics) — completely different"
+    },
+    {
+      "id": "tr-0739",
+      "issue": "AWKWARD",
+      "reason": "Incomplete/unnatural: 'sık sık biliyor musunuz?' (do you know often?) — semantically bizarre, lowercase start"
+    },
+    {
+      "id": "tr-0742",
+      "issue": "AWKWARD",
+      "reason": "Unnatural: 'sık sık anlıyor mu?' (does he/she understand often?) — semantically odd, lowercase start"
+    },
+    {
+      "id": "tr-0743",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'vaşak' (lynx), English says 'leopar' (leopard) — different animals"
+    },
+    {
+      "id": "tr-0751",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'sülün' (pheasant), English says 'kanarya' (canary) — different animals"
+    },
+    {
+      "id": "tr-0759",
+      "issue": "AWKWARD",
+      "reason": "Unnatural: 'her zaman biliyor musun?' (do you always know?) — semantically odd, lowercase start"
+    },
+    {
+      "id": "tr-0761",
+      "issue": "AWKWARD",
+      "reason": "Unnatural: 'kütüphanede biliyor musun?' (do you know in the library?) — semantically bizarre, lowercase start"
+    },
+    {
+      "id": "tr-0764",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'boks' (boxing), English says 'halter' (weightlifting) — different sports"
+    },
+    {
+      "id": "tr-0765",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'voleybol' (volleyball), English says 'aikido' — different sports"
+    },
+    {
+      "id": "tr-0771",
+      "issue": "AWKWARD",
+      "reason": "Bizarre sentence: 'pharmacist dances voluntarily at home at sunset' — technically grammatical but extremely unnatural, lowercase start, English mistranslates 'gönüllü olarak' as 'curiously'"
+    },
+    {
+      "id": "tr-0773",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Başkan yüzme havuzunda otobüs fotoğraf çekiyor' — 'otobüs' (bus) randomly inserted, no grammatical connection"
+    },
+    {
+      "id": "tr-0774",
+      "issue": "AWKWARD",
+      "reason": "Bizarre sentence: 'pharmacist takes photos carelessly at the bank in the morning' — very unnatural, lowercase start, English mistranslates 'dikkatsizce' as 'surprisingly'"
+    },
+    {
+      "id": "tr-0775",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Turistler stadyumda üzüntüyle satıyor' — tourists sadly selling at stadium, no object. English is also wrong: 'sells carefully' vs Turkish 'üzüntüyle' (sadly). Lowercase start"
+    },
+    {
+      "id": "tr-0782",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Fatma kirli uçak tercüme ediyor' (Fatma translates dirty airplane) — no grammatical connection between adjective, noun, and verb"
+    },
+    {
+      "id": "tr-0788",
+      "issue": "AWKWARD",
+      "reason": "'Biz öfkeyle koşuyoruz' (we run angrily) — technically grammatical but extremely bizarre for a language learning card"
+    },
+    {
+      "id": "tr-0791",
+      "issue": "AWKWARD",
+      "reason": "Bizarre: 'baker sells reluctantly in the bay in winter' — very unnatural combination, English mistranslates 'isteksizce' as 'admiringly', lowercase start"
+    },
+    {
+      "id": "tr-0796",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Biz güzel motosiklet ağlıyoruz' (we cry beautiful motorcycle) — completely ungrammatical"
+    },
+    {
+      "id": "tr-0803",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Öğretmen ekşi bisiklet bakıyor' (the teacher looks sour bicycle) — completely ungrammatical"
+    },
+    {
+      "id": "tr-0806",
+      "issue": "AWKWARD",
+      "reason": "Bizarre: 'my mother takes photos quietly at the cinema at night' — unnatural, English mistranslates 'usulca' as 'surprisingly', lowercase start"
+    },
+    {
+      "id": "tr-0809",
+      "issue": "AWKWARD",
+      "reason": "Bizarre: 'friends laugh with seriousness on the street' — contradictory, English mistranslates 'ciddiyet ile' as 'voluntarily', lowercase start"
+    },
+    {
+      "id": "tr-0811",
+      "issue": "AWKWARD",
+      "reason": "English mistranslation: Turkish says 'sabırla' (patiently), English says 'quickly' — opposite meanings"
+    },
+    {
+      "id": "tr-0822",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Fırıncı göl kenarında anahtar temizliyor' (the baker cleans a key by the lake) — grammatical but absurd"
+    },
+    {
+      "id": "tr-0828",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Siz çirkin atkı fotoğraf çekiyor' (you take photo ugly scarf) — completely ungrammatical, wrong conjugation too"
+    },
+    {
+      "id": "tr-0829",
+      "issue": "AWKWARD",
+      "reason": "Bizarre: 'pilot speaks voluntarily at the bakery every morning', English mistranslates 'gönüllü olarak' as 'reluctantly', lowercase start"
+    },
+    {
+      "id": "tr-0830",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Balıkçı alışveriş merkezinde şiir bakıyor' (fisherman looks poem at mall) — no grammatical connection"
+    },
+    {
+      "id": "tr-0835",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Diş hekimi gürültülü ceket yürüyor' (the dentist walks noisy jacket) — completely ungrammatical"
+    },
+    {
+      "id": "tr-0848",
+      "issue": "AWKWARD",
+      "reason": "Bizarre: 'director buys quietly at hospital last night' — odd combination, English mistranslates 'usulca' as 'enthusiastically', lowercase start, tense mismatch (present continuous for past time)"
+    },
+    {
+      "id": "tr-0849",
+      "issue": "AWKWARD",
+      "reason": "English mistranslation: 'şaşkınlıkla' means 'with astonishment', not 'carelessly'. Also lowercase start"
+    },
+    {
+      "id": "tr-0852",
+      "issue": "AWKWARD",
+      "reason": "Bizarre: 'captain cries with enthusiasm at stadium' — contradictory emotions, lowercase start"
+    },
+    {
+      "id": "tr-0855",
+      "issue": "AWKWARD",
+      "reason": "English mistranslation: 'aceleyle' means 'hurriedly', not 'surprisingly'. Also lowercase start"
+    },
+    {
+      "id": "tr-0859",
+      "issue": "AWKWARD",
+      "reason": "Bizarre: 'driver walks eagerly at the greengrocer this morning', lowercase start"
+    },
+    {
+      "id": "tr-0864",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Diş hekimi ödevi spor salonunda söyledi' (dentist said the homework at the gym) — makes no sense"
+    },
+    {
+      "id": "tr-0868",
+      "issue": "GARBAGE",
+      "reason": "Misspelled accusative: 'kitapi' should be 'kitabı'. Also nonsensical: lawyer cleaned book on mountain"
+    },
+    {
+      "id": "tr-0872",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Fotoğrafçı makaleyi bankada pişirdi' (photographer cooked article at bank) — absurd"
+    },
+    {
+      "id": "tr-0876",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Zeynep mektupi ofiste pişirdi' (Zeynep cooked the letter at office). Also misspelled: 'mektupi' should be 'mektubu'"
+    },
+    {
+      "id": "tr-0878",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Biz mektupi konser salonunda boyadı' (we painted the letter at concert hall). Wrong conjugation: 'boyadı' should be 'boyadık'. Misspelled: 'mektupi' → 'mektubu'"
+    },
+    {
+      "id": "tr-0880",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'nane' (mint) and 'nar' (pomegranate), English says 'kaymak' (cream) and 'incir' (fig) — different foods"
+    },
+    {
+      "id": "tr-0881",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Psikolog çorbaı konser salonunda tamir etti' (psychologist repaired soup at concert hall). Misspelled: 'çorbaı' → 'çorbayı'"
+    },
+    {
+      "id": "tr-0882",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'uçurum' (cliff) and 'coğrafya' (geography), English says 'badminton' and 'kimya' (chemistry) — completely different"
+    },
+    {
+      "id": "tr-0884",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Çocuklar ödevi göl kenarında söyledi' (children said homework by lake) — absurd"
+    },
+    {
+      "id": "tr-0892",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'basınç' (pressure) and 'havalimanı' (airport), English says 'tayfun' (typhoon) and 'valilik' (governorship). Also misspelled: 'havalimanı'ya' should be 'havalimanına'"
+    },
+    {
+      "id": "tr-0897",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'tencere' (pot) and 'gazetecilik' (journalism), English says 'yapay zeka' (AI) and 'arkeoloji' (archaeology)"
+    },
+    {
+      "id": "tr-0898",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'bellek' (memory) and 'reklamcılık' (advertising), English says 'sehpa' (coffee table) and 'hukuk' (law)"
+    },
+    {
+      "id": "tr-0899",
+      "issue": "GARBAGE",
+      "reason": "Misspelled accusative: 'yemeki' should be 'yemeği'. Also nonsensical: farmer collected food at gym"
+    },
+    {
+      "id": "tr-0904",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Bu lacivert sayesinde genetik öğrenmek kolaylaştı' (thanks to this navy blue, learning genetics became easier). English also garbage with untranslated words"
+    },
+    {
+      "id": "tr-0905",
+      "issue": "GARBAGE",
+      "reason": "Misspelled: 'dolmaı' should be 'dolmayı'. Also nonsensical: grandmother found stuffed grape leaves on bridge"
+    },
+    {
+      "id": "tr-0908",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'yoğurt' (yogurt) and 'vişne' (sour cherry), English says 'bezelye' (pea) and 'levrek' (sea bass) — different foods"
+    },
+    {
+      "id": "tr-0915",
+      "issue": "GARBAGE",
+      "reason": "Misspelled accusative: 'romani' should be 'romanı'"
+    },
+    {
+      "id": "tr-0917",
+      "issue": "GARBAGE",
+      "reason": "Misspelled: 'böreki' should be 'böreği'. Also nonsensical: pharmacist said the pastry at hotel"
+    },
+    {
+      "id": "tr-0920",
+      "issue": "GARBAGE",
+      "reason": "Misspelled: 'böreki' should be 'böreği'"
+    },
+    {
+      "id": "tr-0924",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Turistler pastaı konser salonunda gitti' (tourists went the cake at concert hall). Misspelled: 'pastaı' → 'pastayı'. Also 'gitmek' doesn't take accusative objects"
+    },
+    {
+      "id": "tr-0927",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Fırıncı dergiyi tiyatroda boyadı' (baker painted magazine at theater) — absurd"
+    },
+    {
+      "id": "tr-0929",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Berber pilavi spor salonunda söyledi' (barber said the rice at gym) — absurd"
+    },
+    {
+      "id": "tr-0931",
+      "issue": "GARBAGE",
+      "reason": "Misspelled: 'romani' should be 'romanı'"
+    },
+    {
+      "id": "tr-0932",
+      "issue": "GARBAGE",
+      "reason": "Misspelled: 'kebapi' should be 'kebabı'. Also odd: writer bought kebab at pharmacy"
+    },
+    {
+      "id": "tr-0935",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Arkadaşlar pilavi yüzme havuzunda söyledi' (friends said rice at swimming pool). Also wrong conjugation: should be 'söylediler'"
+    },
+    {
+      "id": "tr-0941",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Aşçı pilavi spor salonunda başladı' (chef started rice at gym) — absurd location"
+    },
+    {
+      "id": "tr-0942",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kaptan rapori pazarda tamir etti' (captain repaired report at market). Misspelled: 'rapori' → 'raporu'"
+    },
+    {
+      "id": "tr-0947",
+      "issue": "GARBAGE",
+      "reason": "Misspelled: 'mektupi' should be 'mektubu'"
+    },
+    {
+      "id": "tr-0948",
+      "issue": "GARBAGE",
+      "reason": "Misspelled: 'baklavaı' should be 'baklavayı'"
+    },
+    {
+      "id": "tr-0957",
+      "issue": "GARBAGE",
+      "reason": "Misspelled: 'kebapi' should be 'kebabı'. Also nonsensical: vet sold kebab at theater"
+    },
+    {
+      "id": "tr-0959",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Pilot makaleyi istasyonda tamir etti' (pilot repaired article at station) — absurd"
+    },
+    {
+      "id": "tr-0964",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Gazeteci baklavaı pazarda boyadı' (journalist painted baklava at market). Misspelled: 'baklavaı' → 'baklavayı'"
+    },
+    {
+      "id": "tr-0967",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Biz baklavaı göl kenarında geldi' (we came the baklava by lake). Wrong conjugation: 'geldi' should be 'geldik'. 'gelmek' doesn't take accusative. Misspelled: 'baklavaı'"
+    },
+    {
+      "id": "tr-0970",
+      "issue": "GARBAGE",
+      "reason": "Misspelled: 'böreki' should be 'böreği'"
+    },
+    {
+      "id": "tr-0971",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'kavun' (melon) and 'böğürtlen' (blackberry), English says 'nohut' (chickpea) and 'nane' (mint) — different foods"
+    },
+    {
+      "id": "tr-0973",
+      "issue": "GARBAGE",
+      "reason": "Misspelled: 'dolmaı' should be 'dolmayı'. Also odd: Mehmet started stuffed grape leaves at pharmacy"
+    },
+    {
+      "id": "tr-0980",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Başkan hikayeyi göl kenarında temizledi' (president cleaned story by lake) — absurd"
+    },
+    {
+      "id": "tr-0981",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Mühendis pastaı bankada yazdı' (engineer wrote cake at bank). Misspelled: 'pastaı' → 'pastayı'"
+    },
+    {
+      "id": "tr-0982",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Arkeolog şiiri dağda geldi' (archaeologist came poem on mountain). 'gelmek' doesn't take accusative objects"
+    },
+    {
+      "id": "tr-0984",
+      "issue": "GARBAGE",
+      "reason": "Misspelled: 'kebapi' should be 'kebabı'"
+    },
+    {
+      "id": "tr-0985",
+      "issue": "AWKWARD",
+      "reason": "A lawyer writing a newspaper at a theater is bizarre and nonsensical semantically"
+    },
+    {
+      "id": "tr-0987",
+      "issue": "GARBAGE",
+      "reason": "'kebapi' is not a valid Turkish word (should be 'kebabı'); 'came the kebab at the mosque' is nonsensical in both languages"
+    },
+    {
+      "id": "tr-0988",
+      "issue": "GARBAGE",
+      "reason": "'yemeki' is not valid Turkish (should be 'yemeği'); 'said the food at the gym' is nonsensical"
+    },
+    {
+      "id": "tr-0990",
+      "issue": "GARBAGE",
+      "reason": "'pastaı' is not valid Turkish (should be 'pastayı'); 'painted the cake at the mosque' is absurd"
+    },
+    {
+      "id": "tr-0993",
+      "issue": "GARBAGE",
+      "reason": "'baklavaı' is not valid Turkish (should be 'baklavayı'); 'sewed the baklava at the hospital' is nonsensical"
+    },
+    {
+      "id": "tr-0994",
+      "issue": "GARBAGE",
+      "reason": "'romani' is not valid Turkish accusative (should be 'romanı'); 'captain sewed the novel on the street' is nonsensical"
+    },
+    {
+      "id": "tr-0996",
+      "issue": "GARBAGE",
+      "reason": "'kebapi' is not valid Turkish; 'sewed the kebab at the shopping mall' is nonsensical"
+    },
+    {
+      "id": "tr-0998",
+      "issue": "GARBAGE",
+      "reason": "'şiiri' accusative form is ok but 'painted the poem at the pharmacy' is completely nonsensical"
+    },
+    {
+      "id": "tr-0999",
+      "issue": "GARBAGE",
+      "reason": "'böreki' is not valid Turkish (should be 'böreği'); 'farmer repaired the pastry at the swimming pool' is nonsensical"
+    },
+    {
+      "id": "tr-1000",
+      "issue": "GARBAGE",
+      "reason": "'mektupi' is not valid Turkish (should be 'mektubu'); 'sold the letter in the garden' is bizarre"
+    },
+    {
+      "id": "tr-1002",
+      "issue": "GARBAGE",
+      "reason": "'kitapi' is not valid Turkish (should be 'kitabı'); sentence structure is broken"
+    },
+    {
+      "id": "tr-1006",
+      "issue": "GARBAGE",
+      "reason": "'dolmaı' is not valid Turkish (should be 'dolmayı'); 'nurse came the stuffed grape leaves at the pharmacy' is nonsensical"
+    },
+    {
+      "id": "tr-1007",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'köşk' (mansion) but English says 'restoran'; Turkish says 'lodos' (south wind) but English says 'sis' (fog); also 'köşk'ya' has wrong apostrophe usage"
+    },
+    {
+      "id": "tr-1011",
+      "issue": "GARBAGE",
+      "reason": "'çorbaı' is not valid Turkish (should be 'çorbayı'); 'dentist bought the soup at the swimming pool' is absurd"
+    },
+    {
+      "id": "tr-1013",
+      "issue": "GARBAGE",
+      "reason": "'romani' is not valid Turkish accusative; though the English is less absurd, the Turkish form is broken"
+    },
+    {
+      "id": "tr-1015",
+      "issue": "GARBAGE",
+      "reason": "'bahçee' is not valid Turkish (should be 'bahçeye'); 'neighbors left to the garden at sunset' with 'aldı' (bought/took) doesn't match English 'left'"
+    },
+    {
+      "id": "tr-1017",
+      "issue": "GARBAGE",
+      "reason": "'bankaa' is not valid Turkish (should be 'bankaya'); 'pilot started to the bank often' with 'sattı' (sold) is nonsensical; Turkish and English don't match"
+    },
+    {
+      "id": "tr-1023",
+      "issue": "GARBAGE",
+      "reason": "Completely nonsensical: 'istasyon'ta ekşi finans monte etti' mixes random words; English is also garbage with untranslated Turkish words"
+    },
+    {
+      "id": "tr-1030",
+      "issue": "GARBAGE",
+      "reason": "Completely nonsensical: 'pansiyon'da aromalı takımada onardı' is random words; English is also garbage with untranslated Turkish"
+    },
+    {
+      "id": "tr-1041",
+      "issue": "GARBAGE",
+      "reason": "'bankaa' is invalid Turkish; 'psychologist made to the bank at sunset' with 'bitirdi' (finished) is nonsensical"
+    },
+    {
+      "id": "tr-1051",
+      "issue": "GARBAGE",
+      "reason": "'bankaa' is invalid Turkish; Turkish says 'tamir etti' (repaired) but English says 'painted'; completely nonsensical"
+    },
+    {
+      "id": "tr-1060",
+      "issue": "GARBAGE",
+      "reason": "'bahçee' is invalid Turkish (should be 'bahçeye'); 'pharmacist went to the garden in winter' with 'bıraktı' (left/dropped) doesn't match English"
+    },
+    {
+      "id": "tr-1068",
+      "issue": "GARBAGE",
+      "reason": "'hasanee' is not a valid Turkish word (seems like garbled 'hastaneye'); 'pilot read to the hospital every morning' is nonsensical"
+    },
+    {
+      "id": "tr-1081",
+      "issue": "GARBAGE",
+      "reason": "'dentist made to the beach every Sunday' with 'boyadı' (painted) is nonsensical; both Turkish and English are broken"
+    },
+    {
+      "id": "tr-1120",
+      "issue": "GARBAGE",
+      "reason": "Classic garbage: 'postane'de pahalı bendir tercüme etti' is random words; English has untranslated Turkish ('basit nane', 'hastane')"
+    },
+    {
+      "id": "tr-1125",
+      "issue": "GARBAGE",
+      "reason": "'bankaa' is invalid; 'Fatma sold to the bank on weekdays' with 'topladı' (collected) is nonsensical"
+    },
+    {
+      "id": "tr-1132",
+      "issue": "GARBAGE",
+      "reason": "'sadyuma' is not valid Turkish (garbled 'stadyuma'); 'dentist cleaned to the stadium this evening' with 'yaptı' (did/made) is nonsensical"
+    },
+    {
+      "id": "tr-1137",
+      "issue": "GARBAGE",
+      "reason": "'parka okudu' means 'read to the park' which is nonsensical; English 'photographer said to the park' confirms it's broken"
+    },
+    {
+      "id": "tr-1146",
+      "issue": "GARBAGE",
+      "reason": "'hasanee' is garbled; 'painter wrote to the hospital next month' is nonsensical; tense mismatch (gelecek ay + yazdı)"
+    },
+    {
+      "id": "tr-1150",
+      "issue": "GARBAGE",
+      "reason": "Completely nonsensical: 'baharatlı yönetim besledi' (spicy management fed); English is also garbage with untranslated Turkish"
+    },
+    {
+      "id": "tr-1157",
+      "issue": "GARBAGE",
+      "reason": "Completely nonsensical: 'atılgan bellek geliştirdi' (aggressive memory developed); English is also garbage with untranslated Turkish words"
+    },
+    {
+      "id": "tr-1158",
+      "issue": "GARBAGE",
+      "reason": "'bankaa' is invalid; 'dentist painted to the bank in the morning' with 'topladı' (collected) is nonsensical"
+    },
+    {
+      "id": "tr-1163",
+      "issue": "GARBAGE",
+      "reason": "'Ben bu akşam restorana tamir etti' - 'I repaired to the restaurant this evening' is nonsensical; subject-verb disagreement (ben...etti)"
+    },
+    {
+      "id": "tr-1165",
+      "issue": "GARBAGE",
+      "reason": "'pharmacist started to the restaurant in a moment' with 'bıraktı' (left/dropped) is nonsensical"
+    },
+    {
+      "id": "tr-1173",
+      "issue": "GARBAGE",
+      "reason": "Completely nonsensical: 'valilik'da yenilikçi buz pateni yayımladı'; English is also garbage with untranslated Turkish"
+    },
+    {
+      "id": "tr-1176",
+      "issue": "GARBAGE",
+      "reason": "'ofise yazdı' means 'wrote to the office' which is nonsensical; English says 'came to the office' which doesn't match Turkish verb"
+    },
+    {
+      "id": "tr-1181",
+      "issue": "GARBAGE",
+      "reason": "'sadyuma' is garbled Turkish; 'writer bought to the stadium' is nonsensical"
+    },
+    {
+      "id": "tr-1185",
+      "issue": "GARBAGE",
+      "reason": "Completely nonsensical: 'mala ile genetik monte etti' (assembled genetics with a trowel); English is also garbage with untranslated Turkish"
+    },
+    {
+      "id": "tr-1190",
+      "issue": "GARBAGE",
+      "reason": "'parka okudu' (read to the park) is nonsensical; English 'pharmacist said to the park on weekends' confirms"
+    },
+    {
+      "id": "tr-1191",
+      "issue": "GARBAGE",
+      "reason": "'hasanee' is garbled Turkish; 'vet cleaned to the hospital' with 'boyadı' (painted) is nonsensical"
+    },
+    {
+      "id": "tr-1193",
+      "issue": "GARBAGE",
+      "reason": "'ofise boyadı' means 'painted to the office' which is nonsensical"
+    },
+    {
+      "id": "tr-1196",
+      "issue": "GARBAGE",
+      "reason": "'restorana yazdı' means 'wrote to the restaurant' which is nonsensical"
+    },
+    {
+      "id": "tr-1200",
+      "issue": "GARBAGE",
+      "reason": "'hasanee' is garbled; 'photographer bought to the hospital on weekdays' with 'aldı' is nonsensical"
+    },
+    {
+      "id": "tr-1202",
+      "issue": "GARBAGE",
+      "reason": "'havaalanına boyadı' means 'painted to the airport' which is nonsensical"
+    },
+    {
+      "id": "tr-1207",
+      "issue": "GARBAGE",
+      "reason": "'plaja sattı' means 'sold to the beach'; English says 'sewed to the beach' - both nonsensical"
+    },
+    {
+      "id": "tr-1294",
+      "issue": "GARBAGE",
+      "reason": "'kirli sebze tamir etti' means 'repaired dirty vegetables' - completely nonsensical"
+    },
+    {
+      "id": "tr-1363",
+      "issue": "GARBAGE",
+      "reason": "'parktan yavaşça pişirdi' means 'cooked slowly from the park' - nonsensical"
+    },
+    {
+      "id": "tr-1364",
+      "issue": "GARBAGE",
+      "reason": "'istansyondan' is misspelled (should be 'istasyondan'); 'Hasan read reluctantly from the station' is nonsensical"
+    },
+    {
+      "id": "tr-1365",
+      "issue": "GARBAGE",
+      "reason": "'eczaneden güzelce buldu' means 'found nicely from the pharmacy' - nonsensical; English says 'collected' which also doesn't help"
+    },
+    {
+      "id": "tr-1366",
+      "issue": "GARBAGE",
+      "reason": "'bankadan hayranlıkla bitirdi' means 'finished admiringly from the bank' - nonsensical; English says 'repaired admiringly' - also nonsensical"
+    },
+    {
+      "id": "tr-1368",
+      "issue": "GARBAGE",
+      "reason": "'bankadan öfkeyle başladı' means 'started angrily from the bank' - nonsensical; English says 'found angrily' which doesn't match"
+    },
+    {
+      "id": "tr-1370",
+      "issue": "GARBAGE",
+      "reason": "'parktan gönüllü olarak okudu' means 'read voluntarily from the park' - nonsensical; English says 'repaired' which doesn't match"
+    },
+    {
+      "id": "tr-1371",
+      "issue": "GARBAGE",
+      "reason": "'standyumdan' is misspelled; 'cleaned sadly from the stadium' is nonsensical"
+    },
+    {
+      "id": "tr-1372",
+      "issue": "GARBAGE",
+      "reason": "'standyumdan sessizce aldı' means 'took quietly from the stadium' - English says 'wrote quietly' which doesn't match; both nonsensical"
+    },
+    {
+      "id": "tr-1374",
+      "issue": "GARBAGE",
+      "reason": "'eczaneden sabırla tamir etti' - 'repaired patiently from the pharmacy'; English says 'came patiently' - neither makes sense"
+    },
+    {
+      "id": "tr-1376",
+      "issue": "GARBAGE",
+      "reason": "'istansyondan' misspelled; 'öfkeyle gördü' means 'saw angrily' but English says 'sewed angrily' - nonsensical in both"
+    },
+    {
+      "id": "tr-1378",
+      "issue": "GARBAGE",
+      "reason": "'müzeden şaşkınlıkla buldu' means 'found surprisingly from the museum'; English says 'started surprisingly' - nonsensical"
+    },
+    {
+      "id": "tr-1379",
+      "issue": "GARBAGE",
+      "reason": "'eczaneden heyecanla gördü' means 'saw excitedly from the pharmacy'; English says 'found excitedly' - both are random word combos"
+    },
+    {
+      "id": "tr-1380",
+      "issue": "GARBAGE",
+      "reason": "'ofisten dikkatsizce bıraktı' means 'left/dropped carelessly from the office'; English says 'started carelessly' - mismatch and nonsensical"
+    },
+    {
+      "id": "tr-1381",
+      "issue": "GARBAGE",
+      "reason": "'evden öfkeyle tamir etti' means 'repaired angrily from home'; English says 'left angrily' - mismatch and nonsensical"
+    },
+    {
+      "id": "tr-1382",
+      "issue": "GARBAGE",
+      "reason": "'plajdan sabırla buldu' means 'found patiently from the beach'; English says 'wrote patiently' - nonsensical"
+    },
+    {
+      "id": "tr-1383",
+      "issue": "GARBAGE",
+      "reason": "'restorandan gönüllü olarak temizledi' means 'cleaned voluntarily from the restaurant'; English says 'collected voluntarily' - nonsensical"
+    },
+    {
+      "id": "tr-1384",
+      "issue": "GARBAGE",
+      "reason": "'otenlden' is garbled Turkish (should be 'otelden'); 'mutlulukla yaptı' (did happily) - English says 'finished happily' - nonsensical"
+    },
+    {
+      "id": "tr-1385",
+      "issue": "GARBAGE",
+      "reason": "'kütüphaneden ciddiyet ile temizledi' means 'cleaned seriously from the library'; English says 'found seriously' - nonsensical"
+    },
+    {
+      "id": "tr-1386",
+      "issue": "GARBAGE",
+      "reason": "'postanneden' is misspelled (should be 'postaneden'); 'zorla pişirdi' means 'cooked forcefully' - English says 'went forcefully' - nonsensical"
+    },
+    {
+      "id": "tr-1387",
+      "issue": "GARBAGE",
+      "reason": "'bahçeden düzgünce yaptı' means 'did neatly from the garden'; English says 'repaired neatly' - nonsensical"
+    },
+    {
+      "id": "tr-1388",
+      "issue": "GARBAGE",
+      "reason": "'postanneden' misspelled; 'dikkatle okudu' means 'read carefully' but English says 'sold carefully' - mismatch and random"
+    },
+    {
+      "id": "tr-1390",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb disagreement: 'Ben...gördü' (I...he saw); 'bankadan gönüllü olarak gördü' is nonsensical"
+    },
+    {
+      "id": "tr-1392",
+      "issue": "GARBAGE",
+      "reason": "'istansyondan' misspelled; 'güzelce bitirdi' means 'finished nicely' but English says 'started nicely' - nonsensical"
+    },
+    {
+      "id": "tr-1393",
+      "issue": "GARBAGE",
+      "reason": "'sinemadan üzüntüyle dikti' means 'sewed sadly from the cinema'; English says 'started sadly' - nonsensical"
+    },
+    {
+      "id": "tr-1395",
+      "issue": "GARBAGE",
+      "reason": "'mutfaktan coşkuyla bıraktı' means 'left/dropped enthusiastically from the kitchen'; English says 'sold enthusiastically' - nonsensical"
+    },
+    {
+      "id": "tr-1396",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb disagreement: 'Biz...gitti' (We...he/she went); 'müzeden isteksizce gitti' is nonsensical; English says 'found reluctantly'"
+    },
+    {
+      "id": "tr-1397",
+      "issue": "GARBAGE",
+      "reason": "'standyumdan' misspelled; 'düzgünce boyadı' means 'painted neatly' but English says 'sewed neatly' - nonsensical"
+    },
+    {
+      "id": "tr-1398",
+      "issue": "GARBAGE",
+      "reason": "'otenlden' garbled; 'aceleyle başladı' means 'started hastily' but English says 'collected hastily' - nonsensical"
+    },
+    {
+      "id": "tr-1401",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb disagreement: 'Siz...aldı' (You formal...he took); 'kütüphaneden üzüntüyle aldı' is nonsensical; English says 'cooked sadly'"
+    },
+    {
+      "id": "tr-1404",
+      "issue": "GARBAGE",
+      "reason": "'istansyondan' misspelled; 'öfkeyle bıraktı' means 'dropped/left angrily' but English says 'cleaned angrily' - nonsensical"
+    },
+    {
+      "id": "tr-1405",
+      "issue": "GARBAGE",
+      "reason": "'mutfaktan neşeyle boyadı' means 'painted cheerfully from the kitchen'; English says 'found cheerfully' - nonsensical"
+    },
+    {
+      "id": "tr-1406",
+      "issue": "GARBAGE",
+      "reason": "Completely nonsensical: 'tatlı koala besteliyordu' (was composing sweet koala); English is also garbage with untranslated Turkish"
+    },
+    {
+      "id": "tr-1407",
+      "issue": "GARBAGE",
+      "reason": "'hastanneden' misspelled; 'düzgünce dikti' means 'sewed neatly' but English says 'bought neatly' - nonsensical"
+    },
+    {
+      "id": "tr-1408",
+      "issue": "GARBAGE",
+      "reason": "'sinemadan sessizce tamir etti' means 'repaired quietly from the cinema'; English says 'sold quietly' - nonsensical"
+    },
+    {
+      "id": "tr-1409",
+      "issue": "GARBAGE",
+      "reason": "'hastanneden' misspelled; 'hayranlıkla bıraktı' means 'dropped admiringly'; English says 'saw admiringly' - nonsensical"
+    },
+    {
+      "id": "tr-1410",
+      "issue": "GARBAGE",
+      "reason": "'ofisten öfkeyle topladı' means 'collected angrily from the office'; English says 'left angrily' - mismatch"
+    },
+    {
+      "id": "tr-1411",
+      "issue": "GARBAGE",
+      "reason": "'kütüphaneden sessizce başladı' means 'started quietly from the library'; English says 'sewed quietly' - nonsensical"
+    },
+    {
+      "id": "tr-1412",
+      "issue": "GARBAGE",
+      "reason": "'sinemadan coşkuyla topladı' means 'collected enthusiastically from the cinema'; English says 'sold enthusiastically' - nonsensical"
+    },
+    {
+      "id": "tr-1413",
+      "issue": "GARBAGE",
+      "reason": "'istansyondan' misspelled; 'şevkle buldu' means 'found enthusiastically'; English says 'read enthusiastically' - nonsensical"
+    },
+    {
+      "id": "tr-1414",
+      "issue": "GARBAGE",
+      "reason": "'evden güzelce gitti' means 'went nicely from home'; English says 'found nicely' - mismatch and random"
+    },
+    {
+      "id": "tr-1415",
+      "issue": "GARBAGE",
+      "reason": "'eczaneden aceleyle bitirdi' means 'finished hastily from the pharmacy'; English says 'said hastily' - nonsensical"
+    },
+    {
+      "id": "tr-1416",
+      "issue": "GARBAGE",
+      "reason": "'hastanneden' misspelled; 'dikkatle gitti' means 'went carefully'; English says 'wrote carefully' - nonsensical"
+    },
+    {
+      "id": "tr-1417",
+      "issue": "GARBAGE",
+      "reason": "'otenlden' garbled; 'sabırla gitti' means 'went patiently'; English says 'came patiently' - reverse direction mismatch"
+    },
+    {
+      "id": "tr-1418",
+      "issue": "GARBAGE",
+      "reason": "'müzeden zorla aldı' means 'took by force from the museum'; English says 'collected forcefully' - random word combo"
+    },
+    {
+      "id": "tr-1420",
+      "issue": "GARBAGE",
+      "reason": "'standyumdan' misspelled; 'isteksizce başladı' means 'started reluctantly'; English says 'went reluctantly' - nonsensical"
+    },
+    {
+      "id": "tr-1421",
+      "issue": "GARBAGE",
+      "reason": "'müzeden şaşkınlıkla başladı' means 'started surprisingly from the museum'; English says 'cooked surprisingly' - nonsensical"
+    },
+    {
+      "id": "tr-1422",
+      "issue": "GARBAGE",
+      "reason": "'postanneden' misspelled; 'öfkeyle başladı' means 'started angrily'; English says 'cooked angrily' - nonsensical"
+    },
+    {
+      "id": "tr-1424",
+      "issue": "GARBAGE",
+      "reason": "'bahçeden heyecanla aldı' means 'took excitedly from the garden'; English says 'went excitedly' - nonsensical"
+    },
+    {
+      "id": "tr-1425",
+      "issue": "GARBAGE",
+      "reason": "'istansyondan' misspelled; 'merakla bıraktı' means 'dropped/left curiously'; English says 'came curiously' - nonsensical"
+    },
+    {
+      "id": "tr-1428",
+      "issue": "GARBAGE",
+      "reason": "'ofisten düzgünce gördü' means 'saw neatly from the office'; English says 'came neatly' - nonsensical"
+    },
+    {
+      "id": "tr-1429",
+      "issue": "GARBAGE",
+      "reason": "'bankadan merakla yaptı' means 'did curiously from the bank'; English says 'cooked curiously' - nonsensical"
+    },
+    {
+      "id": "tr-1430",
+      "issue": "GARBAGE",
+      "reason": "'hastanneden' misspelled; 'sessizce buldu' means 'found quietly'; English says 'said quietly' - nonsensical"
+    },
+    {
+      "id": "tr-1431",
+      "issue": "GARBAGE",
+      "reason": "'restorandan hızlıca buldu' means 'found quickly from the restaurant'; English says 'said quickly' - nonsensical"
+    },
+    {
+      "id": "tr-1433",
+      "issue": "GARBAGE",
+      "reason": "'sinemadan düzgünce tamir etti' means 'repaired neatly from the cinema'; English says 'collected neatly' - nonsensical"
+    },
+    {
+      "id": "tr-1435",
+      "issue": "GARBAGE",
+      "reason": "'eczaneden sabırla temizledi' means 'cleaned patiently from the pharmacy'; English says 'saw patiently' - nonsensical"
+    },
+    {
+      "id": "tr-1436",
+      "issue": "GARBAGE",
+      "reason": "'restorandan ciddiyet ile buldu' means 'found seriously from the restaurant'; English says 'left seriously' - nonsensical"
+    },
+    {
+      "id": "tr-1437",
+      "issue": "GARBAGE",
+      "reason": "'marketten ciddiyet ile temizledi' means 'cleaned seriously from the market'; English says 'wrote seriously' - nonsensical"
+    },
+    {
+      "id": "tr-1438",
+      "issue": "GARBAGE",
+      "reason": "'mutfaktan öfkeyle yazdı' means 'wrote angrily from the kitchen'; English says 'repaired angrily' - nonsensical"
+    },
+    {
+      "id": "tr-1439",
+      "issue": "GARBAGE",
+      "reason": "'parktan neşeyle yazdı' means 'wrote cheerfully from the park'; English says 'read cheerfully' - nonsensical"
+    },
+    {
+      "id": "tr-1440",
+      "issue": "GARBAGE",
+      "reason": "'parktan dikkatsizce söyledi' means 'said carelessly from the park'; English says 'wrote carelessly' - nonsensical"
+    },
+    {
+      "id": "tr-1442",
+      "issue": "GARBAGE",
+      "reason": "'sinemadan gönüllü olarak temizledi' means 'cleaned voluntarily from the cinema'; English says 'cooked voluntarily' - nonsensical"
+    },
+    {
+      "id": "tr-1445",
+      "issue": "GARBAGE",
+      "reason": "'restorandan dikkatle gördü' means 'saw carefully from the restaurant'; English says 'bought carefully' - nonsensical"
+    },
+    {
+      "id": "tr-1446",
+      "issue": "GARBAGE",
+      "reason": "'otenlden' garbled; 'sabırla pişirdi' means 'cooked patiently'; English says 'started patiently' - nonsensical"
+    },
+    {
+      "id": "tr-1450",
+      "issue": "GARBAGE",
+      "reason": "'plajdan isteksizce aldı' means 'took reluctantly from the beach'; English says 'cooked reluctantly' - nonsensical"
+    },
+    {
+      "id": "tr-1451",
+      "issue": "GARBAGE",
+      "reason": "'istansyondan' misspelled; 'zorla dikti' means 'sewed forcefully'; English says 'cooked forcefully' - nonsensical"
+    },
+    {
+      "id": "tr-1455",
+      "issue": "GARBAGE",
+      "reason": "'evden zorla bitirdi' means 'finished forcefully from home'; English says 'painted forcefully' - nonsensical"
+    },
+    {
+      "id": "tr-1458",
+      "issue": "GARBAGE",
+      "reason": "'postanneden' misspelled; 'dikkatle yaptı' means 'did carefully'; English says 'repaired carefully' - nonsensical"
+    },
+    {
+      "id": "tr-1459",
+      "issue": "GARBAGE",
+      "reason": "'bahçeden neşeyle söyledi' means 'said cheerfully from the garden'; English says 'collected cheerfully' - nonsensical"
+    },
+    {
+      "id": "tr-1460",
+      "issue": "GARBAGE",
+      "reason": "Completely nonsensical: 'ufacık bıçak muayene ediyordu' (was examining a tiny knife); English is also garbage with untranslated Turkish"
+    },
+    {
+      "id": "tr-1462",
+      "issue": "GARBAGE",
+      "reason": "'ofisten aceleyle okudu' means 'read hastily from the office'; English says 'started hastily' - nonsensical"
+    },
+    {
+      "id": "tr-1463",
+      "issue": "GARBAGE",
+      "reason": "'postanneden' misspelled; 'ciddiyet ile boyadı' means 'painted seriously'; English says 'saw seriously' - nonsensical"
+    },
+    {
+      "id": "tr-1464",
+      "issue": "GARBAGE",
+      "reason": "'sinemadan mutlulukla sattı' means 'sold happily from the cinema'; English says 'cooked happily' - nonsensical"
+    },
+    {
+      "id": "tr-1466",
+      "issue": "GARBAGE",
+      "reason": "'otenlden' garbled; subject-verb disagreement 'Sen...bıraktı'; 'hayranlıkla bıraktı' means 'dropped admiringly'; English says 'sewed admiringly' - nonsensical"
+    },
+    {
+      "id": "tr-1467",
+      "issue": "GARBAGE",
+      "reason": "'sinemadan ciddiyet ile tamir etti' means 'repaired seriously from the cinema'; English says 'painted seriously' - nonsensical"
+    },
+    {
+      "id": "tr-1468",
+      "issue": "GARBAGE",
+      "reason": "'kütüphaneden heyecanla bıraktı' means 'dropped excitedly from the library'; English says 'sold excitedly' - nonsensical"
+    },
+    {
+      "id": "tr-1469",
+      "issue": "GARBAGE",
+      "reason": "'hastanneden' misspelled; subject-verb disagreement 'Sen...bıraktı'; English says 'repaired admiringly' - nonsensical"
+    },
+    {
+      "id": "tr-1470",
+      "issue": "GARBAGE",
+      "reason": "'bahçeden güzelce pişirdi' means 'cooked nicely from the garden'; English says 'left nicely' - nonsensical"
+    },
+    {
+      "id": "tr-1472",
+      "issue": "GARBAGE",
+      "reason": "'ofisten dikkatsizce sattı' means 'sold carelessly from the office'; English says 'started carelessly' - nonsensical"
+    },
+    {
+      "id": "tr-1473",
+      "issue": "GARBAGE",
+      "reason": "'okuldan yavaşça bitirdi' means 'finished slowly from school'; English says 'bought slowly' - nonsensical"
+    },
+    {
+      "id": "tr-1474",
+      "issue": "GARBAGE",
+      "reason": "'standyumdan' misspelled; 'dikkatle dikti' means 'sewed carefully'; English says 'cooked carefully' - nonsensical"
+    },
+    {
+      "id": "tr-1476",
+      "issue": "GARBAGE",
+      "reason": "'ofisten dikkatsizce söyledi' means 'said carelessly from the office'; English says 'bought carelessly' - nonsensical"
+    },
+    {
+      "id": "tr-1479",
+      "issue": "GARBAGE",
+      "reason": "Babaanne bankadan sabırla yaptı - nonsensical: grandmother patiently did/made from the bank. English says 'read' which doesn't match 'yaptı'"
+    },
+    {
+      "id": "tr-1480",
+      "issue": "GARBAGE",
+      "reason": "Şoför okuldan düzgünce tamir etti - nonsensical: driver repaired neatly from school. No object, semantically broken"
+    },
+    {
+      "id": "tr-1481",
+      "issue": "GARBAGE",
+      "reason": "Dedem kütüphaneden coşkuyla pişirdi - nonsensical: grandfather cooked enthusiastically from the library. English says 'said' but Turkish says 'pişirdi' (cooked)"
+    },
+    {
+      "id": "tr-1485",
+      "issue": "MISMATCH",
+      "reason": "Turkish 'geldi' (came) but English says 'started'. Grammar tip about -ebil suffix is irrelevant to this sentence"
+    },
+    {
+      "id": "tr-1486",
+      "issue": "GARBAGE",
+      "reason": "Kasap eczaneden zorla okudu - butcher read forcefully from the pharmacy. Nonsensical combination, English says 'said' but Turkish says 'okudu'"
+    },
+    {
+      "id": "tr-1489",
+      "issue": "GARBAGE",
+      "reason": "Berber marketten gönüllü olarak sattı - barber sold voluntarily from the market. English says 'sewed'. Both Turkish and English are nonsensical"
+    },
+    {
+      "id": "tr-1491",
+      "issue": "GARBAGE",
+      "reason": "Öğretmen restorandan hızlıca bitirdi - teacher finished quickly from the restaurant. English says 'repaired'. Semantically broken"
+    },
+    {
+      "id": "tr-1494",
+      "issue": "GARBAGE",
+      "reason": "Müzisyen müzeden üzüntüyle pişirdi - musician cooked sadly from the museum. English says 'repaired'. Complete nonsense"
+    },
+    {
+      "id": "tr-1495",
+      "issue": "GARBAGE",
+      "reason": "Ali okuldan mutlulukla pişirdi - Ali cooked happily from school. English says 'read'. Nonsensical"
+    },
+    {
+      "id": "tr-1496",
+      "issue": "GARBAGE",
+      "reason": "Öğrenciler marketten düzgünce bitirdi - students finished neatly from the market. English says 'found'. Nonsensical"
+    },
+    {
+      "id": "tr-1497",
+      "issue": "GARBAGE",
+      "reason": "Avukat istansyondan ciddiyet ile tamir etti - lawyer repaired seriously from the station. 'istansyon' is misspelled (should be 'istasyon'). English says 'wrote'. Nonsensical"
+    },
+    {
+      "id": "tr-1499",
+      "issue": "GARBAGE",
+      "reason": "Yazar sinemadan ciddiyet ile dikti - writer sewed seriously from the cinema. English says 'said'. Nonsensical"
+    },
+    {
+      "id": "tr-1501",
+      "issue": "MISMATCH",
+      "reason": "Turkish 'gitti' (went) but English says 'said'. Sentence is awkward but the mismatch is the main issue"
+    },
+    {
+      "id": "tr-1502",
+      "issue": "GARBAGE",
+      "reason": "Sen bahçeden neşeyle gördü - You saw cheerfully from the garden. Subject-verb agreement broken: 'sen' (you) with 'gördü' (3rd person). English says 'went'"
+    },
+    {
+      "id": "tr-1503",
+      "issue": "GARBAGE",
+      "reason": "Müzisyen marketten neşeyle başladı - musician started cheerfully from the market. English says 'cooked'. Nonsensical"
+    },
+    {
+      "id": "tr-1505",
+      "issue": "MISMATCH",
+      "reason": "Turkish 'geldi' (came) but English says 'found'"
+    },
+    {
+      "id": "tr-1506",
+      "issue": "GARBAGE",
+      "reason": "Arkadaşlar bankadan neşeyle yazdı - friends wrote cheerfully from the bank. English says 'sewed'. Nonsensical"
+    },
+    {
+      "id": "tr-1507",
+      "issue": "GARBAGE",
+      "reason": "Mehmet standyumdan hızlıca yazdı - 'standyum' is misspelled (stadyum). Mehmet wrote quickly from the stadium. English says 'bought'. Nonsensical"
+    },
+    {
+      "id": "tr-1508",
+      "issue": "GARBAGE",
+      "reason": "Çiftçi postanneden dikkatle başladı - 'postanneden' misspelled (postaneden). Farmer started carefully from the post office. English says 'came'. Nonsensical"
+    },
+    {
+      "id": "tr-1509",
+      "issue": "GARBAGE",
+      "reason": "O otenlden coşkuyla temizledi - 'otenlden' is not a Turkish word (probably 'otelden'). He/she cleaned enthusiastically from the hotel. English says 'wrote'. Nonsensical with typo"
+    },
+    {
+      "id": "tr-1511",
+      "issue": "GARBAGE",
+      "reason": "Çiftçi müzeden merakla yaptı - farmer made/did curiously from the museum. English says 'left'. Nonsensical"
+    },
+    {
+      "id": "tr-1512",
+      "issue": "GARBAGE",
+      "reason": "Dedem restorandan heyecanla tamir etti - grandfather repaired excitedly from the restaurant. English says 'cleaned'. Nonsensical"
+    },
+    {
+      "id": "tr-1516",
+      "issue": "GARBAGE",
+      "reason": "Çiftçi her sabah kirli eldiven göl kenarında pişirdi - farmer cooked dirty gloves by the lake every morning. English says 'left'. Nonsensical"
+    },
+    {
+      "id": "tr-1524",
+      "issue": "GARBAGE",
+      "reason": "Ali öğleden sonra zor eldiven bahçede aldı - Ali took hard gloves in the garden in the afternoon. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1527",
+      "issue": "GARBAGE",
+      "reason": "Diş hekimi her pazar ekşi kuş markette temizledi - dentist cleaned sour bird at the market every Sunday. English equally nonsensical. Word salad"
+    },
+    {
+      "id": "tr-1534",
+      "issue": "GARBAGE",
+      "reason": "Terzi öğleden sonra ucuz telefon konser salonunda boyadı - tailor painted cheap phone at the concert hall. English says 'said'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1541",
+      "issue": "GARBAGE",
+      "reason": "Hemşire öğleden sonra cesur ayakkabı spor salonunda pişirdi - nurse cooked brave shoes at the gym. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1550",
+      "issue": "GARBAGE",
+      "reason": "Ressam her gün akıllı kedi spor salonunda bitirdi - painter finished smart cat at the gym every day. English says 'cleaned'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1551",
+      "issue": "GARBAGE",
+      "reason": "Müdür hafta sonu kalın sebze yüzme havuzunda aldı - director took thick vegetables at the swimming pool. English says 'sewed'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1559",
+      "issue": "GARBAGE",
+      "reason": "Öğretmen sık sık meşgul kebap postanede söyledi - teacher said busy kebab at the post office often. English says 'cooked'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1569",
+      "issue": "GARBAGE",
+      "reason": "Yılan korkak kefir yemiş - snake ate cowardly kefir apparently. English is also garbage with untranslated Turkish words: 'kaplan ate the basit mandalina'"
+    },
+    {
+      "id": "tr-1570",
+      "issue": "GARBAGE",
+      "reason": "Hemşire öğleden sonra taze tren pazarda gördü - nurse saw fresh train at the market. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1572",
+      "issue": "GARBAGE",
+      "reason": "Ressam dün akşam kalın saat stadyumda tamir etti - painter repaired thick watch at the stadium last night. English says 'saw'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1579",
+      "issue": "GARBAGE",
+      "reason": "Çiftçi gün batımında pahalı aslan yüzme havuzunda bitirdi - farmer finished expensive lion at the swimming pool at sunset. English says 'collected'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1580",
+      "issue": "GARBAGE",
+      "reason": "Diş hekimi yakında boş tavşan pazarda topladı - dentist collected free rabbit at the market soon. English says 'left'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1581",
+      "issue": "GARBAGE",
+      "reason": "Öğrenciler öğleden sonra bayat radyo sinemada söyledi - students said stale radio at the cinema. English says 'started'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1596",
+      "issue": "GARBAGE",
+      "reason": "Moderatör pastane'ta dün sakinleşti - wrong locative suffix (pastane'ta should be pastanede). English has untranslated Turkish: 'astsubay' and 'yurt'. Complete mismatch"
+    },
+    {
+      "id": "tr-1598",
+      "issue": "GARBAGE",
+      "reason": "Diş hekimi yazın korkak araba hastanede buldu - dentist found cowardly car at hospital in summer. English says 'collected'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1606",
+      "issue": "GARBAGE",
+      "reason": "Babaanne her pazar cesur lale deniz kıyısında sattı - grandmother sold brave tulip on the coast every Sunday. English says 'read'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1614",
+      "issue": "GARBAGE",
+      "reason": "Diş hekimi yazın taze çorba tiyatroda sattı - dentist sold fresh soup at the theater in summer. English says 'made'. Nonsensical combination"
+    },
+    {
+      "id": "tr-1622",
+      "issue": "GARBAGE",
+      "reason": "Diş hekimi yazın zengin tren camide okudu - dentist read rich train at the mosque in summer. English says 'wrote'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1625",
+      "issue": "GARBAGE",
+      "reason": "Masör müze'da hiçbir zaman alıştı - wrong locative (müze'da should be müzede). 'masör got used to never at the museum' is nonsensical. English has untranslated Turkish: 'patron', 'han'"
+    },
+    {
+      "id": "tr-1626",
+      "issue": "GARBAGE",
+      "reason": "Fotoğrafçı her gün kalın radyo stadyumda tamir etti - photographer repaired thick radio at the stadium every day. English says 'collected'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1644",
+      "issue": "GARBAGE",
+      "reason": "Haham kaymakamlık'da nadiren alıştı - wrong locative suffix. English is fully garbled with untranslated Turkish: 'dedektif', 'spor salonu'. Complete garbage"
+    },
+    {
+      "id": "tr-1646",
+      "issue": "GARBAGE",
+      "reason": "Çiftçi tiyatro'de birer birer dinlendi - wrong locative (tiyatro'de should be tiyatroda). English is garbled with untranslated Turkish: 'amiral', 'bakkal'. Complete garbage"
+    },
+    {
+      "id": "tr-1652",
+      "issue": "GARBAGE",
+      "reason": "Diş hekimi her sabah yeni kedi otelde yazdı - dentist wrote new cat at the hotel every morning. English says 'left'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1661",
+      "issue": "GARBAGE",
+      "reason": "Fotoğrafçı her pazar ince atkı çarşıda boyadı - photographer painted thin scarf at the bazaar every Sunday. English says 'finished'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1662",
+      "issue": "AWKWARD",
+      "reason": "Cerrah ameliyat öncesinde titizlikle dezenfekte olarak sterilize edildi - says the surgeon was sterilized, which is unnatural. Should be about sterilizing the equipment, not the surgeon being sterilized"
+    },
+    {
+      "id": "tr-1667",
+      "issue": "GARBAGE",
+      "reason": "Komşular gün batımında acı kuş postanede geldi - neighbors came bitter bird at the post office at sunset. English says 'repaired'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1671",
+      "issue": "GARBAGE",
+      "reason": "Anneanne bazen geniş kravat evde geldi - grandmother came wide tie at home sometimes. English says 'saw'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1672",
+      "issue": "GARBAGE",
+      "reason": "Babam geçen yıl yalancı atkı konser salonunda buldu - father found dishonest scarf at the concert hall last year. English says 'cooked'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1678",
+      "issue": "GARBAGE",
+      "reason": "Garson akşamüstü sert ağaç göl kenarında pişirdi - waiter cooked hard tree by the lake. English says 'saw'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1687",
+      "issue": "GARBAGE",
+      "reason": "Arkeolog bu sabah uzun salata koyda tamir etti - archaeologist repaired long salad in the bay this morning. English says 'cooked'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1688",
+      "issue": "GARBAGE",
+      "reason": "Diş hekimi gelecek ay zor taksi konser salonunda geldi - dentist came hard taxi at the concert hall next month. Past tense with 'gelecek ay' (next month). English says 'repaired'. Nonsensical"
+    },
+    {
+      "id": "tr-1690",
+      "issue": "GARBAGE",
+      "reason": "Anneanne hafta içi gürültülü gül plajda söyledi - grandmother said noisy rose at the beach on weekdays. English says 'went'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1714",
+      "issue": "GARBAGE",
+      "reason": "Sıradan rektör fırın komşuluğunda duruyor - the sentence is barely comprehensible. English is fully garbled with untranslated Turkish: 'verimli kanguru', 'valilik'. Complete garbage"
+    },
+    {
+      "id": "tr-1728",
+      "issue": "AWKWARD",
+      "reason": "yakında Müdür spor salonunda heyecanla yürüyor - lowercase start, awkward sentence. English 'soon The director walks surprisingly' is also odd. Mismatch between 'heyecanla' (excitedly) and 'surprisingly'"
+    },
+    {
+      "id": "tr-1736",
+      "issue": "GARBAGE",
+      "reason": "şafakta Kardeşim postanede hayranlıkla ağlıyor - lowercase start. 'My sibling cries admiringly at the post office at dawn'. English says 'carefully'. Bizarre and unnatural"
+    },
+    {
+      "id": "tr-1740",
+      "issue": "GARBAGE",
+      "reason": "bu sabah Arkadaşlar stadyumda usulca dinliyor - lowercase start, subject-verb agreement issue (Arkadaşlar dinliyor instead of dinliyorlar). English says 'listens sadly' - wrong conjugation too. Mismatch between 'usulca' and 'sadly'"
+    },
+    {
+      "id": "tr-1750",
+      "issue": "GARBAGE",
+      "reason": "Arkadaşlar akıllı ödev konuşuyor - friends speaks smart homework. Missing accusative case, semantically broken. English equally broken"
+    },
+    {
+      "id": "tr-1753",
+      "issue": "GARBAGE",
+      "reason": "yakında Biz stadyumda mutlulukla koşuyoruz - lowercase start. Mismatch: Turkish 'mutlulukla' (happily) but English says 'quietly'"
+    },
+    {
+      "id": "tr-1754",
+      "issue": "GARBAGE",
+      "reason": "Çocuklar pazarda anahtar dans ediyor - children dance a key at the market. Nonsensical. English also broken 'dances a key'"
+    },
+    {
+      "id": "tr-1759",
+      "issue": "GARBAGE",
+      "reason": "Sen gönüllü olarak izliyor - subject-verb mismatch: 'sen' (you) with 'izliyor' (3rd person). Should be 'izliyorsun'. English also wrong: 'You watches'"
+    },
+    {
+      "id": "tr-1760",
+      "issue": "GARBAGE",
+      "reason": "Annem alışveriş merkezinde şemsiye konuşuyor - mother speaks umbrella at the shopping mall. Nonsensical. English equally broken"
+    },
+    {
+      "id": "tr-1761",
+      "issue": "GARBAGE",
+      "reason": "Ali ağır bilgisayar dans ediyor - Ali dances heavy a computer. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1763",
+      "issue": "GARBAGE",
+      "reason": "Veteriner onları hastane'ta sergiledi - wrong locative (hastane'ta should be hastanede). English is garbled with untranslated Turkish: 'itfaiyeci', 'valilik'. Complete garbage"
+    },
+    {
+      "id": "tr-1765",
+      "issue": "AWKWARD",
+      "reason": "bayramda Terzi sokakta sessizce oturuyor - lowercase start. English contradicts: 'sessizce' (quietly) but English says 'forcefully'"
+    },
+    {
+      "id": "tr-1768",
+      "issue": "GARBAGE",
+      "reason": "Heykeltıraş seni pansiyon'te teşhis koydu - wrong locative (pansiyon'te should be pansiyonda). English garbled with untranslated Turkish: 'general', 'restoran'. Subject changed from sculptor to general"
+    },
+    {
+      "id": "tr-1772",
+      "issue": "AWKWARD",
+      "reason": "hafta sonu Veteriner göl kenarında üzüntüyle izliyor - lowercase start. Content is bizarre: vet watches sadly by the lake on weekends"
+    },
+    {
+      "id": "tr-1781",
+      "issue": "GARBAGE",
+      "reason": "Komşular zor balık dans ediyor - neighbors dance hard a fish. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1787",
+      "issue": "GARBAGE",
+      "reason": "Onlar fakir rapor pişiriyorlar - they cook poor a report. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1791",
+      "issue": "GARBAGE",
+      "reason": "Öğretmen istasyonda kebap konuşuyor - teacher speaks kebab at the station. Nonsensical"
+    },
+    {
+      "id": "tr-1797",
+      "issue": "GARBAGE",
+      "reason": "Onlar evde televizyon dans ediyorlar - they dance a television at home. Nonsensical"
+    },
+    {
+      "id": "tr-1798",
+      "issue": "GARBAGE",
+      "reason": "Onlar akıllı lale pişiriyorlar - they cook smart a tulip. Nonsensical"
+    },
+    {
+      "id": "tr-1799",
+      "issue": "GARBAGE",
+      "reason": "her pazar Annem havaalanında isteksizce koşuyor - lowercase start. Mother runs reluctantly at the airport every Sunday. English says 'forcefully' not 'reluctantly'. Bizarre content"
+    },
+    {
+      "id": "tr-1801",
+      "issue": "GARBAGE",
+      "reason": "birazdan Çiftçi manav yavaşça bekliyor - lowercase start. Farmer waits slowly at the greengrocer soon. English says 'admiringly'. Mismatch and bizarre"
+    },
+    {
+      "id": "tr-1802",
+      "issue": "GARBAGE",
+      "reason": "Kaptan kalın saat fotoğraf çekiyor - captain takes photos thick a watch. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1805",
+      "issue": "GARBAGE",
+      "reason": "bazen Eczacı parkta ciddiyet ile pişiriyor - lowercase start. Pharmacist cooks seriously in the park sometimes. English says 'enthusiastically'. Bizarre content"
+    },
+    {
+      "id": "tr-1806",
+      "issue": "AWKWARD",
+      "reason": "sabahleyin Onlar eczanede dikkatle konuşuyorlar - lowercase start. English says 'reluctantly' but Turkish says 'dikkatle' (carefully). Mismatch"
+    },
+    {
+      "id": "tr-1809",
+      "issue": "GARBAGE",
+      "reason": "Onlar ormanda saat fotoğraf çekiyorlar - they take photos a watch in the forest. Nonsensical: 'saat' (watch/clock) randomly inserted"
+    },
+    {
+      "id": "tr-1810",
+      "issue": "AWKWARD",
+      "reason": "sık sık Babam tiyatroda üzüntüyle fotoğraf çekiyor - lowercase start. Father takes photos sadly at the theater often. English says 'gently'. Bizarre content"
+    },
+    {
+      "id": "tr-1818",
+      "issue": "GARBAGE",
+      "reason": "Barmen beni opera'de araştırdı - wrong locative (opera'de should be operada). English garbled with untranslated Turkish: 'itfaiyeci', 'restoran'. Subject changed from barman to firefighter"
+    },
+    {
+      "id": "tr-1821",
+      "issue": "AWKWARD",
+      "reason": "gece Balıkçı kilisede şaşkınlıkla satıyor - lowercase start. Fisherman sells surprisingly at the church at night. English says 'hastily'. Bizarre content"
+    },
+    {
+      "id": "tr-1824",
+      "issue": "GARBAGE",
+      "reason": "Dedem dar çanta tercüme ediyor - grandfather translates narrow a bag. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1825",
+      "issue": "AWKWARD",
+      "reason": "hafta içi Kaptan pazarda mutlulukla yürüyor - lowercase start. English says 'nicely' but Turkish says 'mutlulukla' (happily). Mismatch"
+    },
+    {
+      "id": "tr-1827",
+      "issue": "GARBAGE",
+      "reason": "gelecek hafta Siz kütüphanede şaşkınlıkla koşuyor - lowercase start. Subject-verb mismatch: 'Siz' (you formal) with 'koşuyor' (3rd person singular). English also broken: 'runs admiringly'"
+    },
+    {
+      "id": "tr-1829",
+      "issue": "AWKWARD",
+      "reason": "hafta sonu Babam istasyonda dikkatsizce gülüyor - lowercase start. Father laughs carelessly at the station on weekends. English says 'hastily'. Bizarre content"
+    },
+    {
+      "id": "tr-1835",
+      "issue": "AWKWARD",
+      "reason": "dün akşam Garson postanede isteksizce bakıyor - lowercase start. Present tense with 'dün akşam' (last night). English says 'nicely' but Turkish says 'isteksizce' (reluctantly). Tense mismatch"
+    },
+    {
+      "id": "tr-1842",
+      "issue": "GARBAGE",
+      "reason": "Şoför yüzme havuzunda şapka dinliyor - driver listens to a hat at the swimming pool. Nonsensical"
+    },
+    {
+      "id": "tr-1846",
+      "issue": "GARBAGE",
+      "reason": "yarın Annem mutfakta merakla ağlıyor - lowercase start. Mother cries curiously in the kitchen tomorrow. Present tense with 'yarın' (tomorrow). English says 'enthusiastically'. Bizarre and broken"
+    },
+    {
+      "id": "tr-1849",
+      "issue": "GARBAGE",
+      "reason": "Onlar dün çarşıda bakıyorlar - present continuous with 'dün' (yesterday). Tense conflict. English also uses present with 'yesterday'"
+    },
+    {
+      "id": "tr-1856",
+      "issue": "GARBAGE",
+      "reason": "Diş hekimi tiyatroda çorba fotoğraf çekiyor - dentist takes photos soup at the theater. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1860",
+      "issue": "AWKWARD",
+      "reason": "şimdi Kaptan bankada öfkeyle yürüyor - lowercase start. Captain walks angrily at the bank now. English says 'seriously' but Turkish says 'öfkeyle' (angrily). Mismatch"
+    },
+    {
+      "id": "tr-1869",
+      "issue": "AWKWARD",
+      "reason": "hafta sonu Babam müzede isteksizce yürüyor - lowercase start. Father walks reluctantly in the museum on weekends. English says 'quietly'. Mismatch"
+    },
+    {
+      "id": "tr-1877",
+      "issue": "GARBAGE",
+      "reason": "yazın Sen çarşıda ciddiyet ile pişiriyor - lowercase start. Subject-verb mismatch: 'Sen' (you) with 'pişiriyor' (3rd person). 'You cooks seriously at the bazaar in summer'. English says 'quickly'. Broken"
+    },
+    {
+      "id": "tr-1879",
+      "issue": "AWKWARD",
+      "reason": "bu sabah Öğretmen stadyumda sessizce izliyor - lowercase start. English says 'cheerfully' but Turkish says 'sessizce' (quietly). Clear mismatch"
+    },
+    {
+      "id": "tr-1887",
+      "issue": "GARBAGE",
+      "reason": "Yazar mutlu bilgisayar tercüme ediyor - writer translates happy computer. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1889",
+      "issue": "AWKWARD",
+      "reason": "gün batımında Hemşire otelde sabırla bekliyor - lowercase start. English says 'happily' but Turkish says 'sabırla' (patiently). Mismatch"
+    },
+    {
+      "id": "tr-1891",
+      "issue": "MISMATCH",
+      "reason": "Turkish 'merakla' (curiously) but English says 'reluctantly'"
+    },
+    {
+      "id": "tr-1895",
+      "issue": "GARBAGE",
+      "reason": "Ressam beni kaymakamlık'te tasarladı - wrong locative. English garbled with untranslated Turkish: 'denizci', 'hastane'. Subject changed from painter to sailor"
+    },
+    {
+      "id": "tr-1896",
+      "issue": "AWKWARD",
+      "reason": "bayramda Garson stadyumda mutlulukla oturuyor - lowercase start. Waiter sits happily at the stadium during the holiday. English says 'slowly'. Mismatch"
+    },
+    {
+      "id": "tr-1897",
+      "issue": "AWKWARD",
+      "reason": "akşamüstü Gazeteci pazarda mutlulukla alıyor - lowercase start. English says 'excitedly' but Turkish says 'mutlulukla' (happily). Minor mismatch but bizarre content"
+    },
+    {
+      "id": "tr-1901",
+      "issue": "GARBAGE",
+      "reason": "Heykeltıraş onu konsolosluk'de değerlendirdi - wrong locative. English garbled with untranslated Turkish: 'imam', 'konser salonu'. Subject changed from sculptor to imam"
+    },
+    {
+      "id": "tr-1902",
+      "issue": "GARBAGE",
+      "reason": "Heykeltıraş sizi anaokulu'de tahliye etti - wrong locative. Sculptor evacuated you at the kindergarten. English garbled: 'ebe', 'kale'. Complete garbage"
+    },
+    {
+      "id": "tr-1904",
+      "issue": "AWKWARD",
+      "reason": "sabahleyin Dedem konser salonunda güzelce gülüyor - lowercase start. English says 'reluctantly' but Turkish says 'güzelce' (nicely/beautifully). Mismatch"
+    },
+    {
+      "id": "tr-1907",
+      "issue": "GARBAGE",
+      "reason": "Fotoğrafçı stadyumda tablet tercüme ediyor - photographer translates a tablet at the stadium. Nonsensical combination"
+    },
+    {
+      "id": "tr-1908",
+      "issue": "AWKWARD",
+      "reason": "bu sabah Anneanne alışveriş merkezinde dikkatle gülüyor - lowercase start. Grandmother laughs carefully at the shopping mall this morning. English says 'quietly'. Bizarre content"
+    },
+    {
+      "id": "tr-1909",
+      "issue": "AWKWARD",
+      "reason": "hafta sonu Kaptan postanede yavaşça dinliyor - lowercase start. English says 'reluctantly' but Turkish says 'yavaşça' (slowly). Mismatch"
+    },
+    {
+      "id": "tr-1913",
+      "issue": "GARBAGE",
+      "reason": "Komisyoncu seni üniversite'da editledi - wrong locative. 'editledi' is not a standard Turkish word. English garbled: 'biyolog', 'spor salonu'. Complete garbage"
+    },
+    {
+      "id": "tr-1914",
+      "issue": "GARBAGE",
+      "reason": "Zeynep hızlı ödev tercüme ediyor - Zeynep translates fast homework. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1915",
+      "issue": "AWKWARD",
+      "reason": "hafta sonu Doktor stadyumda üzüntüyle bakıyor - lowercase start. English says 'gently' but Turkish says 'üzüntüyle' (sadly). Mismatch"
+    },
+    {
+      "id": "tr-1922",
+      "issue": "AWKWARD",
+      "reason": "bu sabah Kasap köprüde coşkuyla tamir ediyor - lowercase start. Butcher repairs enthusiastically on the bridge this morning. English says 'seriously'. Bizarre and mismatch"
+    },
+    {
+      "id": "tr-1923",
+      "issue": "GARBAGE",
+      "reason": "Turistler yarın küçük mantar spor salonunda gördü - tourists saw small mushrooms at the gym tomorrow. Past tense with 'yarın' (tomorrow). Nonsensical word salad"
+    },
+    {
+      "id": "tr-1944",
+      "issue": "GARBAGE",
+      "reason": "Çocuklar şafakta soğuk kravat yüzme havuzunda buldu - children found cold tie at the swimming pool at dawn. English says 'painted'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1947",
+      "issue": "GARBAGE",
+      "reason": "İstiyorum ki kaymakamlık daha kolay olsun - I want the district governorate to be easier. English garbled: 'pastane to be more kaygan'. Untranslated Turkish words in English"
+    },
+    {
+      "id": "tr-1955",
+      "issue": "GARBAGE",
+      "reason": "Kaptan sabahleyin dürüst gemi konser salonunda yaptı - captain made/did honest ship at the concert hall in the morning. English says 'started'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1961",
+      "issue": "GARBAGE",
+      "reason": "Umarım senarist sade bezelye bulur - I hope the screenwriter finds plain peas. English garbled with untranslated Turkish: 'sosyolog', 'minik dirsek'. Complete garbage"
+    },
+    {
+      "id": "tr-1967",
+      "issue": "GARBAGE",
+      "reason": "Yazar gün batımında nazik bilgisayar kasapta yaptı - writer made/did kind computer at the butcher shop at sunset. English says 'started'. Nonsensical word salad"
+    },
+    {
+      "id": "tr-1980",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Berber sik sik temiz televizyon bankada yazdi' - random words strung together (barber wrote clean television at bank)"
+    },
+    {
+      "id": "tr-1990",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'O her gun buyuk aslan alisveris merkezinde buldu' - found big lion at shopping mall every day"
+    },
+    {
+      "id": "tr-1992",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kardesi hafta ici soguk kebap otelde tamir etti' - sibling repaired cold kebab at hotel on weekdays"
+    },
+    {
+      "id": "tr-1997",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Siz bu aksam agir pilav yuzme havuzunda gitti' - formal you went heavy rice at the swimming pool"
+    },
+    {
+      "id": "tr-2009",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Muzisyen bayramda yavas tavsan firinda tamir etti' - musician repaired slow rabbit at bakery during holiday"
+    },
+    {
+      "id": "tr-2017",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Mudur safakta soguk kebap deniz kiyisinda topladi' - director collected cold kebab on coast at dawn"
+    },
+    {
+      "id": "tr-2025",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'stadyum daha sert olsun' (stadium be harder) but English has untranslated Turkish words: 'spor salonu' and 'zor'"
+    },
+    {
+      "id": "tr-2045",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish 'elektrikci minik esofman bulur' and English has untranslated Turkish: 'sosyolog finds tuzlu timsah'"
+    },
+    {
+      "id": "tr-2051",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Fatma hafta ici ucuz hikaye otelde tamir etti' - Fatma repaired cheap story at hotel on weekdays"
+    },
+    {
+      "id": "tr-2055",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Arkeolog gun batiminda tatli anahtar okulda gordu' - archaeologist saw sweet key at school at sunset"
+    },
+    {
+      "id": "tr-2061",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Garson gecen yil ince taksi deniz kiyisinda aldi' - waiter collected thin taxi on coast last year"
+    },
+    {
+      "id": "tr-2079",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Dis hekimi bu sabah ucuz kus kilisede temizledi' - dentist cleaned cheap bird at church this morning"
+    },
+    {
+      "id": "tr-2080",
+      "issue": "GARBAGE",
+      "reason": "Target contains corrupted text: 'para bozdurhttps' - URL fragment leaked into Turkish sentence"
+    },
+    {
+      "id": "tr-2084",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kardesim gecen yil gurultulu gazete yuzme havuzunda temizledi' - sibling cleaned noisy newspaper at swimming pool"
+    },
+    {
+      "id": "tr-2091",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ciftci bu sabah ucuz cicek deniz kiyisinda birakti' - farmer left cheap flower on coast, English says 'started'"
+    },
+    {
+      "id": "tr-2094",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Yazar gecen hafta tuzlu gemi yuzme havuzunda basladi' - writer started salty ship at swimming pool"
+    },
+    {
+      "id": "tr-2095",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'cami daha diplomatik olsun' (mosque be more diplomatic) but English has untranslated Turkish: 'pansiyon' and 'kaygan'"
+    },
+    {
+      "id": "tr-2105",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'havalimani daha taze olsun' (airport be fresher) but English has untranslated Turkish: 'konser salonu' and 'berrak'"
+    },
+    {
+      "id": "tr-2106",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Baskan gelecek ay kucuk cicek deniz kiyisinda yazdi' - president wrote small flower on coast next month"
+    },
+    {
+      "id": "tr-2109",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Arkeolog bu sabah sicak semsiye kasapta yazdi' - archaeologist wrote hot umbrella at butcher shop"
+    },
+    {
+      "id": "tr-2111",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Pilot gecen yil akilli bitki manav tamir etti' - pilot repaired smart plant at greengrocer"
+    },
+    {
+      "id": "tr-2112",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Muhendis her pazar aptal kitap alisveris merkezinde bitirdi' - engineer finished foolish book at shopping mall"
+    },
+    {
+      "id": "tr-2119",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Annem her pazar tuzlu aslan postanede aldi' - mother got salty lion at post office every Sunday"
+    },
+    {
+      "id": "tr-2121",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Arkeolog her sabah mesgul gomlek postanede boyadi' - archaeologist painted busy shirt at post office"
+    },
+    {
+      "id": "tr-2126",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Sakin verimsiz denizanasi dokunma' (don't touch inefficient jellyfish) and English has untranslated Turkish 'minik bukalemun'"
+    },
+    {
+      "id": "tr-2144",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Dis hekimi dun aksam uzun telefon parkta dikti' - dentist planted long phone in park last night"
+    },
+    {
+      "id": "tr-2149",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ali dun uzun tren yuzme havuzunda tamir etti' - Ali repaired long train at swimming pool yesterday"
+    },
+    {
+      "id": "tr-2153",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Annem gecen hafta tuzlu mektup alisveris merkezinde boyadi' - mother painted salty letter at shopping mall"
+    },
+    {
+      "id": "tr-2155",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Turistler gecen yil zor otobus kasapta birakti' - tourists left hard bus at butcher shop"
+    },
+    {
+      "id": "tr-2162",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Babam ogleden sonra pahali kedi manav dikti' - father planted expensive cat at greengrocer"
+    },
+    {
+      "id": "tr-2164",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Firinci bu aksam durust aslan koyda pisirdi' - baker cooked honest lion in bay this evening"
+    },
+    {
+      "id": "tr-2170",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ogrenciler ogleden sonra eski borek koprude gitti' - students went old pastry on bridge"
+    },
+    {
+      "id": "tr-2172",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Dis hekimi ogleden sonra kolay kurabiye tiyatroda temizledi' - dentist cleaned easy cookies at theater"
+    },
+    {
+      "id": "tr-2178",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Avukat bu sabah aci anahtar dagda birakti' - lawyer left bitter key on mountain"
+    },
+    {
+      "id": "tr-2180",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb disagreement: 'Ben bugün bulaşık yıkadı' - first person 'Ben' with third person verb ending '-dı'"
+    },
+    {
+      "id": "tr-2197",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Sakin degerli golf dokunma' (don't touch valuable golf) and English has untranslated Turkish 'nemli ayva'"
+    },
+    {
+      "id": "tr-2200",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Biz simdi mutlu tablet deniz kiyisinda gitti' - we went happy tablet on coast now"
+    },
+    {
+      "id": "tr-2202",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Arkeolog her sabah soguk kus stadyumda boyadi' - archaeologist painted cold bird at stadium"
+    },
+    {
+      "id": "tr-2214",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish mixing abstract and concrete nouns; English has untranslated Turkish: 'penguen', 'berrak', 'paramedik'"
+    },
+    {
+      "id": "tr-2221",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Turistler birazdan yumusak kamera camide tamir etti' - tourists repaired soft camera at mosque"
+    },
+    {
+      "id": "tr-2223",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Babaanne gun batiminda mesgul aslan hastanede pisirdi' - grandmother cooked busy lion at hospital"
+    },
+    {
+      "id": "tr-2229",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kasap ogleden sonra uzun mantar okulda birakti' - butcher left long mushrooms at school"
+    },
+    {
+      "id": "tr-2231",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'ruzgar/tiyatro' but English has untranslated Turkish 'bulut' and 'pansiyon'; also apostrophe error 'tiyatro'ya'"
+    },
+    {
+      "id": "tr-2233",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish: 'maraton', 'taze', 'avukat'"
+    },
+    {
+      "id": "tr-2234",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Dis hekimi bayramda yalanci gemi camide tamir etti' - dentist repaired dishonest ship at mosque"
+    },
+    {
+      "id": "tr-2236",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb disagreement: 'Biz bu sabah gazete okudu sonra kahve icti' - plural 'biz' with 3rd person singular '-du/-ti'"
+    },
+    {
+      "id": "tr-2237",
+      "issue": "GARBAGE",
+      "reason": "Typo in Turkish: 'parmaığımı' should be 'parmağımı' - corrupted character"
+    },
+    {
+      "id": "tr-2239",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Avukat hafta ici korkak motosiklet firinda yapti' - lawyer made cowardly motorcycle at bakery"
+    },
+    {
+      "id": "tr-2240",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'O yazin yavas canta deniz kiyisinda bitirdi' - he finished slow bag on coast in summer"
+    },
+    {
+      "id": "tr-2244",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Anneanne gecen hafta pahali semsiye alisveris merkezinde gordu' - English says 'came expensive an umbrella'"
+    },
+    {
+      "id": "tr-2248",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Fatma her pazar ince dolma carsida buldu' - random adjective-noun combo; English says 'went thin stuffed grape leaves'"
+    },
+    {
+      "id": "tr-2255",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Babam gun batiminda sert dolma mutfakta soyledi' - father said hard stuffed grape leaves in kitchen at sunset"
+    },
+    {
+      "id": "tr-2262",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Terzi gun batiminda cesur kamera muzede gordu' - tailor saw brave camera in museum"
+    },
+    {
+      "id": "tr-2270",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Fatma her sabah pahali tohum gol kenarinda temizledi' - Fatma cleaned expensive seeds by lake"
+    },
+    {
+      "id": "tr-2285",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Muzisyen ogleden sonra yalanci hikaye koyda pisirdi' - musician cooked dishonest story in bay"
+    },
+    {
+      "id": "tr-2290",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb disagreement: 'Ben bazen alisveris listesi hazirladi ve eve dondu' - 'ben' with 3rd person '-di'"
+    },
+    {
+      "id": "tr-2294",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ressam gelecek hafta eski kartal gol kenarinda topladi' - painter collected old eagle by lake next week; also tense mismatch"
+    },
+    {
+      "id": "tr-2300",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'gok gurultusu/tatil koyu' but English has untranslated Turkish 'sis' and 'otel'; also grammar error 'tatil koyu'ya'"
+    },
+    {
+      "id": "tr-2301",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Dis hekimi simdi cirkin otobus havaalaninda dikti' - dentist planted ugly bus at airport now"
+    },
+    {
+      "id": "tr-2309",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Garson ogleden sonra yalanci tramvay manav soyledi' - waiter said dishonest tram at greengrocer"
+    },
+    {
+      "id": "tr-2318",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Asci sik sik bayat papatya meydanda boyadi' - chef painted stale daisy in square often"
+    },
+    {
+      "id": "tr-2324",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Komsular bu aksam bos bilgisayar koprude gordu' - neighbors saw free/empty computer on bridge"
+    },
+    {
+      "id": "tr-2328",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Gazeteci gun batiminda dar kamera deniz kiyisinda pisirdi' - journalist cooked narrow camera on coast"
+    },
+    {
+      "id": "tr-2336",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish with grammar error 'belediye'da'; English has untranslated Turkish: 'nemli tavuk eti', 'kale'"
+    },
+    {
+      "id": "tr-2337",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kasap gecen hafta yalanci tohum deniz kiyisinda yapti' - butcher made dishonest seeds on coast"
+    },
+    {
+      "id": "tr-2339",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Fatma her pazar kucuk dolma evde boyadi' - Fatma painted small stuffed grape leaves at home"
+    },
+    {
+      "id": "tr-2340",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish with grammar error 'otel'de'; English has untranslated Turkish: 'gevrek kirpi', 'pazar'"
+    },
+    {
+      "id": "tr-2345",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb disagreement: 'Ben dun alisveris yapti sonra disari cikti' - 'ben' with 3rd person '-ti'"
+    },
+    {
+      "id": "tr-2361",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ogretmen her pazar taze kravat spor salonunda bitirdi' - teacher finished fresh tie at gym every Sunday"
+    },
+    {
+      "id": "tr-2369",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Cocuklar yarin kirli kebap gol kenarinda tamir etti' - children repaired dirty kebab by lake tomorrow; also tense conflict"
+    },
+    {
+      "id": "tr-2370",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Armator kurek ile sunucu uretecek'; English has untranslated Turkish: 'astsubay', 'fasulye', 'matkap'"
+    },
+    {
+      "id": "tr-2374",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Mudur simdi kucuk canta meydanda tamir etti' - director repaired small bag in square now"
+    },
+    {
+      "id": "tr-2380",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Muzisyen aksamustu pahali canta konser salonunda tamir etti' - musician repaired expensive bag at concert hall"
+    },
+    {
+      "id": "tr-2388",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Dis hekimi sik sik ucuz araba postanede temizledi' - dentist cleaned cheap car at post office often"
+    },
+    {
+      "id": "tr-2398",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Baskan gun batiminda eksi kebap dagda geldi' - president came sour kebab on mountain at sunset"
+    },
+    {
+      "id": "tr-2402",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Hasan gun batiminda yumusak mektup yuzme havuzunda yazdi' - Hasan wrote soft letter at swimming pool at sunset"
+    },
+    {
+      "id": "tr-2405",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish with grammar error 'piknik alani'ta'; English has untranslated Turkish: 'antik orkide', 'belediye'"
+    },
+    {
+      "id": "tr-2416",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ali gece mutlu mantar alisveris merkezinde soyledi' - Ali said happy mushrooms at shopping mall at night"
+    },
+    {
+      "id": "tr-2417",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Asci ogleden sonra hizli yemek tiyatroda basladi' - chef started fast food at theater"
+    },
+    {
+      "id": "tr-2419",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kasap aksamustu taze rapor yuzme havuzunda pisirdi' - butcher cooked fresh report at swimming pool"
+    },
+    {
+      "id": "tr-2422",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Arkadaslar bu sabah fakir otobus konser salonunda temizledi' - friends cleaned poor bus at concert hall"
+    },
+    {
+      "id": "tr-2436",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ogrenciler yazin durust dergi alisveris merkezinde aldi' - students took honest magazine at shopping mall in summer"
+    },
+    {
+      "id": "tr-2453",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Fotografci bu sabah hafif semsiye gol kenarinda okudu' - photographer read light umbrella by lake"
+    },
+    {
+      "id": "tr-2463",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Mehmet sik sik temiz corba meydanda gitti' - random words strung together, not a real Turkish sentence"
+    },
+    {
+      "id": "tr-2464",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Balikci sabahleyin tatli gazete firinda tamir etti' - fisherman repaired sweet newspaper at bakery makes no sense"
+    },
+    {
+      "id": "tr-2471",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Anneanne ogleden sonra yumusak baklava alisveris merkezinde tamir etti' - grandmother repaired soft baklava at mall"
+    },
+    {
+      "id": "tr-2477",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb mismatch: 'Ben akshamleyin temizlik yapti' - Ben (I) requires yaptim, not yapti (3rd person)"
+    },
+    {
+      "id": "tr-2479",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Anneanne gun batiminda kucuk dolma deniz kiyisinda aldi' - random word salad"
+    },
+    {
+      "id": "tr-2480",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ressam sik sik korkak pantolon kilisede gitti' - painter went cowardly pants at church"
+    },
+    {
+      "id": "tr-2484",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Avukat ogleden sonra bayat motosiklet carsida buldu' - random adjective+noun combination makes no sense"
+    },
+    {
+      "id": "tr-2494",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Komsular yazin korkak agac spor salonunda yazdi' - neighbors wrote cowardly tree at gym"
+    },
+    {
+      "id": "tr-2500",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Babaanne gun batiminda yalanci semsiye pazarda yapti' - grandmother made dishonest umbrella at market"
+    },
+    {
+      "id": "tr-2501",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Dis hekimi sik sik bos canta spor salonunda buldu' - dentist found empty bag at gym; English says 'read free a bag'"
+    },
+    {
+      "id": "tr-2508",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Asci bu sabah hafif gemi alisveris merkezinde aldi' - chef took light ship at shopping mall"
+    },
+    {
+      "id": "tr-2514",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Anneanne her gun taze meyve konser salonunda geldi' - grandmother came fresh fruit at concert hall"
+    },
+    {
+      "id": "tr-2515",
+      "issue": "GARBAGE",
+      "reason": "Completely nonsensical Turkish and English has untranslated Turkish words: 'hentbol', 'antik', 'okul'"
+    },
+    {
+      "id": "tr-2523",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ali bayramda kirli sapka yuzme havuzunda boyadi' - Ali painted dirty hat at swimming pool"
+    },
+    {
+      "id": "tr-2524",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Mehmet gun batiminda ince papatya parkta gitti' - Mehmet went thin daisy in park"
+    },
+    {
+      "id": "tr-2530",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb mismatch: 'Biz hafta sonu resim cizdi' - Biz (we) requires cizdik, not cizdi (3rd person)"
+    },
+    {
+      "id": "tr-2539",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb mismatch: 'Ben genellikle camasir yikadi' - Ben (I) requires yikadim, not yikadi"
+    },
+    {
+      "id": "tr-2543",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb mismatch: 'Biz ogleden sonra temizlik yapti' - Biz (we) requires yaptik, not yapti"
+    },
+    {
+      "id": "tr-2551",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb mismatch: 'Biz her zaman fotograf cekti' - Biz (we) requires cektik, not cekti"
+    },
+    {
+      "id": "tr-2552",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Berber simdi cirkin kartal konser salonunda yazdi' - barber wrote ugly eagle at concert hall"
+    },
+    {
+      "id": "tr-2571",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish with wrong apostrophe usage: 'Bahce'daki banjo uzun suredir uretilmis' - banjo in garden has been produced?"
+    },
+    {
+      "id": "tr-2576",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Gazeteci dun aksam gurultulu kartal spor salonunda topladi' - journalist collected noisy eagle at gym"
+    },
+    {
+      "id": "tr-2580",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Muhendis bu sabah yalanci aslan kutuphanede topladi' - engineer collected dishonest lion in library"
+    },
+    {
+      "id": "tr-2581",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Sen hafta sonu mesgul pilav gol kenarinda boyadi' - you painted busy rice by lake"
+    },
+    {
+      "id": "tr-2587",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kardesim hafta sonu hafif kamera meydanda geldi' - sibling came light camera in square"
+    },
+    {
+      "id": "tr-2592",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb mismatch: 'Biz genellikle resim cizdi' - Biz requires cizdik"
+    },
+    {
+      "id": "tr-2598",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ogretmen bu aksam dar gemi gol kenarinda tamir etti' - teacher repaired narrow ship by lake"
+    },
+    {
+      "id": "tr-2611",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish and English: 'Besteci genis fume uretmis' / 'The astsubay has discovered the nemli timpani' - complete gibberish in both languages"
+    },
+    {
+      "id": "tr-2617",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Dis hekimi bayramda sert salata carsida birakti' - dentist left hard salad at bazaar"
+    },
+    {
+      "id": "tr-2621",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Firinci gelecek hafta bos kamera sokakta tamir etti' - baker repaired free camera on street next week (also tense contradiction)"
+    },
+    {
+      "id": "tr-2623",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Avukat hafta sonu uzgun dolma spor salonunda basladi' - lawyer started sad stuffed grape leaves at gym"
+    },
+    {
+      "id": "tr-2624",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb mismatch: 'Biz bazen sarki soyledi' - Biz requires soyledik"
+    },
+    {
+      "id": "tr-2630",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kasap hafta ici bos lale firinda pisirdi' - butcher cooked empty tulip at bakery"
+    },
+    {
+      "id": "tr-2640",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Fotografci bu aksam dar corba konser salonunda boyadi' - photographer painted narrow soup at concert hall"
+    },
+    {
+      "id": "tr-2647",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kasap her pazar kolay radyo konser salonunda satti' - butcher sold easy radio at concert hall"
+    },
+    {
+      "id": "tr-2652",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical + subject-verb mismatch: 'Ben gecen yil aci balik deniz kiyisinda gordu' - Ben requires gordum; bitter fish makes no sense"
+    },
+    {
+      "id": "tr-2657",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Eczaci hafta ici soguk tekne yuzme havuzunda temizledi' - pharmacist cleaned cold boat at swimming pool"
+    },
+    {
+      "id": "tr-2659",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb mismatch: 'Ben bu sabah sarki soyledi' - Ben requires soyledim"
+    },
+    {
+      "id": "tr-2663",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Zeynep hafta sonu hizli atki yuzme havuzunda dikti' - Zeynep sewed fast scarf at swimming pool"
+    },
+    {
+      "id": "tr-2664",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb mismatch: 'Ben gecen hafta alisveris listesi hazirladi' - Ben requires hazirladim"
+    },
+    {
+      "id": "tr-2666",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb mismatch: 'Ben ogleden sonra spor yapti' - Ben requires yaptim"
+    },
+    {
+      "id": "tr-2680",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Avukat her sabah sert telefon gol kenarinda tamir etti' - lawyer repaired hard phone by lake"
+    },
+    {
+      "id": "tr-2682",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Baskan gecen hafta ince kartal eczanede tamir etti' - president repaired thin eagle at pharmacy"
+    },
+    {
+      "id": "tr-2684",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kaptan yarin bilgisayar yazacak' - captain will write computer"
+    },
+    {
+      "id": "tr-2686",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ressam ogleden sonra nazik gemi spor salonunda temizledi' - painter cleaned kind ship at gym"
+    },
+    {
+      "id": "tr-2688",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Gazeteci safakta tuzlu gomlek spor salonunda okudu' - journalist read salty shirt at gym"
+    },
+    {
+      "id": "tr-2689",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Asci safakta zengin kitap alisveris merkezinde okudu' - chef read rich book at shopping mall"
+    },
+    {
+      "id": "tr-2695",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Sofor yarin mektup uyuyacak' - driver will sleep the letter"
+    },
+    {
+      "id": "tr-2697",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Hasan hafta ici uzun otobus dagda gitti' - Hasan went long bus on mountain"
+    },
+    {
+      "id": "tr-2699",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ogrenciler her pazar ucuz baklava sokakta pisirdi' - students cooked cheap baklava on street; English says 'found'"
+    },
+    {
+      "id": "tr-2701",
+      "issue": "MISMATCH",
+      "reason": "English has untranslated Turkish: 'sel', 'kervansaray'; Turkish says iskele (pier) but English says kervansaray"
+    },
+    {
+      "id": "tr-2705",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kiz yarin sut oturacak' - girl will sit the milk"
+    },
+    {
+      "id": "tr-2707",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Eczaci yazin mesgul gomlek gol kenarinda gitti' - pharmacist went busy shirt by lake"
+    },
+    {
+      "id": "tr-2709",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Bahcivan yarin dergi oturacak' - gardener will sit the magazine"
+    },
+    {
+      "id": "tr-2710",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ali yarin zengin makale gol kenarinda gitti' - Ali went rich article by lake tomorrow (also tense contradiction with gitti=past)"
+    },
+    {
+      "id": "tr-2712",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish and English: 'Keske dansci islak bellek alsaydi' / 'I wish the patron had made the basit baraj' - gibberish in both"
+    },
+    {
+      "id": "tr-2718",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Fotografci her sabah taze aslan tiyatroda tamir etti' - photographer repaired fresh lion at theater"
+    },
+    {
+      "id": "tr-2719",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Arkeolog genellikle pahali tekne alisveris merkezinde okudu' - archaeologist read expensive boat at shopping mall"
+    },
+    {
+      "id": "tr-2720",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Sofor bu sabah uzgun ayakkabi alisveris merkezinde gordu' - driver saw sad shoes at mall"
+    },
+    {
+      "id": "tr-2726",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb mismatch: 'Ben her zaman alisveris listesi hazirladi' - Ben requires hazirladim"
+    },
+    {
+      "id": "tr-2730",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical + subject-verb mismatch: 'Ben hafta sonu zor aslan okulda topladi' - I collected hard lion at school"
+    },
+    {
+      "id": "tr-2738",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'kar firtinasi' (snowstorm) and 'pastane' (bakery) but English says 'bulut' (cloud) and 'okul' (school) - untranslated mismatched Turkish words in English"
+    },
+    {
+      "id": "tr-2742",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Asci ogleden sonra bos kus firinda boyadi' - chef painted empty bird at bakery"
+    },
+    {
+      "id": "tr-2755",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Baskan dun aksam sert eldiven bankada gordu' - president saw hard gloves at bank"
+    },
+    {
+      "id": "tr-2761",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Berber gelecek hafta aptal salata alisveris merkezinde tamir etti' - barber repaired foolish salad at mall (also tense contradiction)"
+    },
+    {
+      "id": "tr-2765",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Veteriner gun batiminda kirli kebap kasapta geldi' - vet came dirty kebab at butcher"
+    },
+    {
+      "id": "tr-2772",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'poyraz' (north wind) and 'pastane' but English says 'lodos' (south wind) and 'bakkal' - mismatched Turkish words in English"
+    },
+    {
+      "id": "tr-2778",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Hemsire ogleden sonra korkak dergi koyda aldi' - nurse took cowardly magazine in bay"
+    },
+    {
+      "id": "tr-2781",
+      "issue": "AWKWARD",
+      "reason": "Spelling error: 'okuseydim' should be 'okuseydim' or more properly 'okusaydim'"
+    },
+    {
+      "id": "tr-2783",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Babaanne her pazar kucuk gul carsida temizledi' - grandmother cleaned small rose at bazaar"
+    },
+    {
+      "id": "tr-2785",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Baskan gun batiminda zengin semsiye ormanda gordu' - president saw rich umbrella in forest"
+    },
+    {
+      "id": "tr-2801",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Psikolog sik sik gurultulu gul plajda tamir etti' - psychologist repaired noisy rose at beach"
+    },
+    {
+      "id": "tr-2810",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Hemsire hafta ici durust eldiven konser salonunda satti' - nurse sold honest gloves at concert hall"
+    },
+    {
+      "id": "tr-2814",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Doktor genellikle temiz elbise spor salonunda tamir etti' - doctor repaired clean dress at gym"
+    },
+    {
+      "id": "tr-2823",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Firinci gecen hafta sicak salata dagda okudu' - baker read hot salad on mountain"
+    },
+    {
+      "id": "tr-2833",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb mismatch: 'Biz aksamleyin film izledi' - Biz requires izledik"
+    },
+    {
+      "id": "tr-2846",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb mismatch: 'Biz dun temizlik yapti' - Biz requires yaptik"
+    },
+    {
+      "id": "tr-2850",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish, English has untranslated Turkish: 'komisyoncu', 'antik lacivert', 'sevecenlik'"
+    },
+    {
+      "id": "tr-2858",
+      "issue": "MISMATCH",
+      "reason": "Turkish and English completely diverge: Turkish talks about fine arts/statistician, English has untranslated Turkish: 'tiyatro', 'rutubetli', 'hakim'"
+    },
+    {
+      "id": "tr-2862",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb mismatch: 'Ben hafta sonu bulasik yikadi' - Ben requires yikadim"
+    },
+    {
+      "id": "tr-2863",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb mismatch: 'Biz gecen hafta yemek pisirdi' - Biz requires pisirdik"
+    },
+    {
+      "id": "tr-2871",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ressam sik sik cesur mantar koprude bitirdi' - painter finished brave mushrooms on bridge"
+    },
+    {
+      "id": "tr-2877",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Baskan hafta ici yalanci aslan ormanda geldi' - president came dishonest lion in forest"
+    },
+    {
+      "id": "tr-2878",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Fatma gun batiminda taze makale gol kenarinda okudu' - English says 'came fresh an article'"
+    },
+    {
+      "id": "tr-2884",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical + subject-verb mismatch: 'Siz her pazar akilli pilav yuzme havuzunda topladi' - you collected smart rice at swimming pool; Siz requires topladi(niz)"
+    },
+    {
+      "id": "tr-2894",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Bu yavruagzi dun aksamdan beri tedavi edildi' / English has untranslated Turkish 'lokma'"
+    },
+    {
+      "id": "tr-2897",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Bu park sonbaharda uretildi' (this park was produced in autumn) / English says 'This mide was designed last week' - gibberish"
+    },
+    {
+      "id": "tr-2903",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kutuphanede seffaf tabure korunur' / English has untranslated Turkish: 'postane', 'rutubetli valilik'"
+    },
+    {
+      "id": "tr-2907",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Bu lale her ay bestelendi' (this tulip was composed every month) / English says 'This iguana was designed'"
+    },
+    {
+      "id": "tr-2910",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Bu samyeli yarin sabah duzeltildi' (this south wind was fixed tomorrow morning - tense contradiction) / English says 'This teras was designed'"
+    },
+    {
+      "id": "tr-2916",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Bu astronot su anda tasindi' (this astronaut was moved right now) / English says 'This tsunami was designed'"
+    },
+    {
+      "id": "tr-2919",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Bu kurek gecen yaz temizlendi' (this oar was cleaned last summer) / English says 'This kaynak was designed last week'"
+    },
+    {
+      "id": "tr-2920",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Babam gecen yil kirli taksi firinda tamir etti' - my father repaired dirty taxi at bakery"
+    },
+    {
+      "id": "tr-2922",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Bu ayak bilegi onceki ay sentezlendi' (this ankle was synthesized last month) / English says 'This orkide was designed'"
+    },
+    {
+      "id": "tr-2931",
+      "issue": "GARBAGE",
+      "reason": "Subject-verb mismatch: 'Biz bugun spor yapti' - Biz requires yaptik"
+    },
+    {
+      "id": "tr-2934",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Bu bodrum dun aksamdan beri sergilendi' (this basement was exhibited since last night) / English says 'This hamam was produced'"
+    },
+    {
+      "id": "tr-2936",
+      "issue": "GARBAGE",
+      "reason": "Completely nonsensical: 'Bayat hologram kalede kontrol edildi' / English: 'The nadide boyun was examined at the postane' - gibberish in both languages"
+    },
+    {
+      "id": "tr-2938",
+      "issue": "GARBAGE",
+      "reason": "Completely nonsensical: 'Sert hortum otelde cizildi' / English: 'The kaygan mandolin was examined at the bakkal' - gibberish in both languages"
+    },
+    {
+      "id": "tr-2940",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Dis hekimi safakta zengin at firinda okudu' - dentist read rich horse at bakery"
+    },
+    {
+      "id": "tr-2944",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Muhendis gecen hafta soguk bisiklet yuzme havuzunda gitti' - engineer went cold bicycle at swimming pool"
+    },
+    {
+      "id": "tr-2478",
+      "issue": "AWKWARD",
+      "reason": "Sentence is grammatical but the causal link is bizarre: mom washed dishes 'because the weather was nice' - unnatural reasoning"
+    },
+    {
+      "id": "tr-2604",
+      "issue": "AWKWARD",
+      "reason": "Incorrect apostrophe: 'kalorifer'e' should be 'kalorifere' - kalorifer is not a proper noun"
+    },
+    {
+      "id": "tr-2958",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The dentist sewed salty cookies at the church next month' - random words strung together, no coherent meaning in Turkish or English"
+    },
+    {
+      "id": "tr-2959",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Hasan said rich a motorcycle in the forest last year' - incoherent in both languages"
+    },
+    {
+      "id": "tr-2960",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Bu sincap pazarlandı' (This squirrel was marketed) but English says 'This maden was discovered yesterday' - completely different subjects and verbs, English has untranslated Turkish word"
+    },
+    {
+      "id": "tr-2961",
+      "issue": "MIXED",
+      "reason": "English translation contains untranslated Turkish words: 'very rahat eldiven' instead of 'very comfortable glove'"
+    },
+    {
+      "id": "tr-2963",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The barber finished big vegetables at the concert hall this morning' - random words, no coherent meaning"
+    },
+    {
+      "id": "tr-2979",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'picnic area was damp, the hairdresser continued working' but English says 'the opera was modern, the muhabir continued' - different subjects and locations, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-2980",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'hotel was traditional, the consultant continued' but English says 'hamam was berrak, the muhabir continued' - mismatched subjects, English has untranslated Turkish words"
+    },
+    {
+      "id": "tr-2986",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The captain made easy a plant at the swimming pool last year' - incoherent word salad"
+    },
+    {
+      "id": "tr-2990",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The psychologist started sour vegetables at the bakery' - random words, no meaning"
+    },
+    {
+      "id": "tr-2994",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'My grandfather painted sad a watch at the swimming pool now' - incoherent in both languages"
+    },
+    {
+      "id": "tr-2998",
+      "issue": "MIXED",
+      "reason": "English has untranslated Turkish: 'First I prepared the mercimek' instead of 'lentils'"
+    },
+    {
+      "id": "tr-2999",
+      "issue": "MISMATCH",
+      "reason": "Turkish mentions 'veritabanı' (database) and 'kavun' (melon) but English mentions 'edebiyat', 'uygulama', 'nadide', 'psikolog' - completely different content, English full of untranslated Turkish"
+    },
+    {
+      "id": "tr-3008",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The president saw new an article at the shopping mall next month' - tense conflict and incoherent meaning"
+    },
+    {
+      "id": "tr-3012",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The friends sold long a fish at the concert hall on weekdays' - random words strung together"
+    },
+    {
+      "id": "tr-3014",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The writer sewed salty soup in the forest last night' - incoherent word salad"
+    },
+    {
+      "id": "tr-3022",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The neighbors left rude a jacket in the forest on weekdays' - random words, adjective used as if describing person not object"
+    },
+    {
+      "id": "tr-3023",
+      "issue": "MIXED",
+      "reason": "English has untranslated Turkish: 'First I prepared the patates' instead of 'potatoes'"
+    },
+    {
+      "id": "tr-3028",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The chef finished foolish a horse at the shopping mall last week' - completely incoherent"
+    },
+    {
+      "id": "tr-3032",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The pharmacist collected brave a flower at the concert hall' - random word combination"
+    },
+    {
+      "id": "tr-3033",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The tailor cleaned cowardly a dress at the concert hall every morning' - incoherent"
+    },
+    {
+      "id": "tr-3035",
+      "issue": "MISMATCH",
+      "reason": "Turkish mentions 'çip' (chip) and 'kuvaför' (hairdresser) but English mentions 'bavul', 'leylak', 'minik', 'amiral' - completely different content with untranslated Turkish"
+    },
+    {
+      "id": "tr-3037",
+      "issue": "MIXED",
+      "reason": "English has untranslated Turkish: 'First I prepared the nohut' instead of 'chickpeas'"
+    },
+    {
+      "id": "tr-3041",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'My father collected big a book at the mosque in the afternoon' - incoherent sentence"
+    },
+    {
+      "id": "tr-3042",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The director bought heavy a bus at the gym every Sunday' - completely absurd"
+    },
+    {
+      "id": "tr-3055",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The president bought rich an article at the swimming pool sometimes' - incoherent"
+    },
+    {
+      "id": "tr-3057",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The dentist saw expensive soup in the square in summer' - random word combination"
+    },
+    {
+      "id": "tr-3067",
+      "issue": "MIXED",
+      "reason": "English has untranslated Turkish: 'First I prepared the lahana' instead of 'cabbage'"
+    },
+    {
+      "id": "tr-3070",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The fisherman said foolish a report at the concert hall this morning' - incoherent"
+    },
+    {
+      "id": "tr-3074",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'They left expensive pastry on the coast next week' - tense conflict and incoherent meaning"
+    },
+    {
+      "id": "tr-3082",
+      "issue": "MISMATCH",
+      "reason": "Turkish 'Kaptan opak işletme üretmeye karar verdi' (The captain decided to produce opaque business) doesn't match English 'The pilot was busy designing the zor kazma' - different subjects, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3084",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Mehmet cleaned busy a tablet at the swimming pool every Sunday' - random word salad"
+    },
+    {
+      "id": "tr-3086",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The vet finished slow a report by the lake every morning' - incoherent"
+    },
+    {
+      "id": "tr-3092",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Yusufçuk hurma yemeye çalıştı' (The dragonfly tried to eat dates) but English says 'The pelikan tried to eat the pancar' - different animal and food, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3094",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The director saw hard pants at the stadium at dawn' - incoherent word combination"
+    },
+    {
+      "id": "tr-3098",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The lawyer collected honest a plant on the coast on weekdays' - random word salad"
+    },
+    {
+      "id": "tr-3100",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'They said hard shoes at the shopping mall in the late afternoon' - incoherent"
+    },
+    {
+      "id": "tr-3102",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Jaguar ayran bulmaya çabaladı' (The jaguar struggled to find ayran) but English says 'The timsah struggled to find the leblebi' - different animal and object, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3106",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'You (formal) sold slow stuffed grape leaves in the kitchen this evening' - incoherent"
+    },
+    {
+      "id": "tr-3112",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Kelebek kereviz aramaya koyuldu' (The butterfly set out to find celery) but English says 'The fok tried to eat the levrek' - completely different animals and foods, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3113",
+      "issue": "MIXED",
+      "reason": "English has untranslated Turkish: 'very rahat kazak' instead of 'very comfortable sweater'"
+    },
+    {
+      "id": "tr-3116",
+      "issue": "MISMATCH",
+      "reason": "Turkish mentions 'Denizci mütevazı fosforlu' but English mentions 'oyuncu', 'rutubetli pantolon' - completely different content with untranslated Turkish"
+    },
+    {
+      "id": "tr-3119",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Şef gazetecilik yapmaya başladı' (The chef started doing journalism) but English says 'The senarist gave up making the kameraman' - different subjects and actions, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3125",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The musician finished sad a report at the bank on weekdays' - random word salad"
+    },
+    {
+      "id": "tr-3129",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Orangutan bezelye aramaya koyuldu' (The orangutan set out to find peas) but English says 'The koala tried to eat the levrek' - different animals and foods, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3131",
+      "issue": "MISMATCH",
+      "reason": "Turkish mentions 'Meteorolog tutucu keski üretmeye karar verdi' but English mentions 'biyolog', 'minik panda' - completely different content with untranslated Turkish"
+    },
+    {
+      "id": "tr-3132",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Kasap sunucu etmeye devam etti' but English says 'The avukat gave up making the bakkal' - different subjects, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3138",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The students read kind cookies at the beach on weekdays' - random word combination"
+    },
+    {
+      "id": "tr-3139",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The children sold busy a computer in the park on weekends' - incoherent"
+    },
+    {
+      "id": "tr-3140",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Biyolog eşofman yapmaktan vazgeçti' (The biologist gave up making tracksuits) but English says 'The sosyolog managed to finish the polo' - different subjects and actions, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3144",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Yengeç kuşkonmaz yemeye çalıştı' (The crab tried to eat asparagus) but English says 'The yarasa struggled to find the hurma' - different animals and foods, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3146",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Doğan mürdüm eriği yemeye çalıştı' (The falcon tried to eat damson plums) but English says 'The jaguar tried to eat the bamya' - different animals and foods, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3161",
+      "issue": "MIXED",
+      "reason": "English has untranslated Turkish: 'there would be hortum' instead of 'tornado/waterspout'"
+    },
+    {
+      "id": "tr-3162",
+      "issue": "MISMATCH",
+      "reason": "Turkish mentions 'Yönetmen arp bitmek üzere' (The director said the harp was about to be finished) but English says 'The sosyolog stated that the mengene was completed' - different subjects and objects, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3163",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Tesisatçı bodrum tamamlandığını belirtti' (The plumber stated the basement was completed) but English says 'The mimar stated that the kriket was ready' - different subjects and objects, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3164",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Rahip felsefe hazır olduğunu belirtti' (The priest stated philosophy was ready) but English says 'The ebe stated that the kimyon was completed' - different subjects and objects, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3172",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The director found dishonest a tulip in the park every Sunday' - incoherent word salad"
+    },
+    {
+      "id": "tr-3174",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The journalist bought noisy a plane on the coast on weekends' - random word combination"
+    },
+    {
+      "id": "tr-3176",
+      "issue": "MISMATCH",
+      "reason": "Turkish mentions 'Tüccar antrasit' (The merchant anthracite) but English mentions 'sosyolog', 'bencillik' - completely different content with untranslated Turkish"
+    },
+    {
+      "id": "tr-3182",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The tailor sold cowardly a taxi at the concert hall in summer' - random word salad"
+    },
+    {
+      "id": "tr-3183",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The pharmacist started long a scarf at the mosque often' - incoherent"
+    },
+    {
+      "id": "tr-3184",
+      "issue": "MIXED",
+      "reason": "English has untranslated Turkish: 'there would be pus' - 'bora' means 'snowstorm/blizzard', not 'pus'"
+    },
+    {
+      "id": "tr-3185",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The barber found big a parrot at the stadium at sunset' - random word combination"
+    },
+    {
+      "id": "tr-3194",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Hasan collected dishonest a novel at the beach on weekdays' - incoherent"
+    },
+    {
+      "id": "tr-3195",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Mimar han'ya gideceğini bildirdi' (The architect announced going to the inn) but English says 'The dedektif announced going to the hastane' - different subject and destination, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3196",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The children went rude a shirt at the shopping mall every Sunday' - incoherent word salad"
+    },
+    {
+      "id": "tr-3217",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The writer bought smart a bus on the coast in the morning' - random word combination"
+    },
+    {
+      "id": "tr-3220",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The doctor came wide a scarf at the market every Sunday' - incoherent"
+    },
+    {
+      "id": "tr-3221",
+      "issue": "MIXED",
+      "reason": "English has untranslated Turkish: 'First I prepared the biber' instead of 'pepper'"
+    },
+    {
+      "id": "tr-3225",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The vet read narrow a dog at the swimming pool every morning' - random word salad"
+    },
+    {
+      "id": "tr-3226",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The lawyer sold small a rabbit by the lake soon' - incoherent"
+    },
+    {
+      "id": "tr-3231",
+      "issue": "MISMATCH",
+      "reason": "Turkish mentions 'Şef fakir nesnelerin interneti bulduğunu söyledi' but English says 'The cerrah said they found the olgun ense' - completely different content, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3238",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'tsunami olacağını' (there would be a tsunami) but English says 'there would be ayaz' (frost) - different weather events, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3241",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The lawyer read clean a dress at the gym at night' - random word combination"
+    },
+    {
+      "id": "tr-3243",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The butcher left expensive mushrooms at the concert hall in summer' - incoherent"
+    },
+    {
+      "id": "tr-3247",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'My father left quiet an eagle at the concert hall in winter' - random word salad"
+    },
+    {
+      "id": "tr-3249",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'My father wrote quiet a car at the concert hall this morning' - incoherent"
+    },
+    {
+      "id": "tr-3250",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The waiter said poor a motorcycle at the shopping mall' - random word combination"
+    },
+    {
+      "id": "tr-3253",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The farmer cleaned quiet a bus at the shopping mall yesterday' - incoherent"
+    },
+    {
+      "id": "tr-3256",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The journalist found bitter mushrooms at the gym at night' - Turkish uses 'yaptı' (made) not 'found'"
+    },
+    {
+      "id": "tr-3258",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'My grandfather made rude a hat at home this morning' - random word combination"
+    },
+    {
+      "id": "tr-3261",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'My sibling went rich a dress at the shopping mall next week' - tense conflict and incoherent"
+    },
+    {
+      "id": "tr-3267",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Zeynep made new a bird on the coast next week' - tense conflict and incoherent"
+    },
+    {
+      "id": "tr-3273",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Mümkün olsa modern plaj edinirdim' (If possible, I would acquire a modern beach) but English says 'I would buy a serin lokma' - different objects, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3274",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The writer painted noisy a bag by the lake last night' - random word salad"
+    },
+    {
+      "id": "tr-3283",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Patron hemşire bulsun diye bekledik' (We waited for the boss to find a nurse) but English says 'We waited for the dedektif to make the kunduz' - different content, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3284",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Dansçı tıp bulsun diye bekledik' (We waited for the dancer to find medicine) but English says 'We waited for the astsubay to find the karpuz' - different content, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3286",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The farmer found honest shoes at the market every Sunday' - random personality adjective applied to shoes"
+    },
+    {
+      "id": "tr-3288",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'You (formal) left sour a tie at home at sunset' - incoherent word combination"
+    },
+    {
+      "id": "tr-3292",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The children said kind a computer at the office last year' - random word salad"
+    },
+    {
+      "id": "tr-3294",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The captain made smart a lion at home every morning' - incoherent"
+    },
+    {
+      "id": "tr-3295",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Fırıncı kar fırtınası bulsun diye bekledik' (We waited for the baker to find a snowstorm) but English says 'We waited for the patron to see the huzur' - different content, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3300",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Fatma painted narrow a train on the coast tomorrow' - tense conflict and incoherent"
+    },
+    {
+      "id": "tr-3303",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Fizyoterapist hayal kırıklığı görsün diye bekledik' (We waited for the physiotherapist to see disappointment) but English says 'We waited for the mimar to see the spor salonu' - different content, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3310",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'Astronot gelincik görsün diye bekledik' (We waited for the astronaut to see a poppy) but English says 'We waited for the komisyoncu to make the tarih' - different content, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3311",
+      "issue": "MIXED",
+      "reason": "English has untranslated Turkish: 'very ucuz pantolon' instead of 'very cheap pants'"
+    },
+    {
+      "id": "tr-3313",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The director went sour a tie at the greengrocer last year' - incoherent word salad"
+    },
+    {
+      "id": "tr-3315",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'dar toplardamar korumamız gerekir' (we must protect the narrow vein) but English says 'we must protect the verimli gelinlik' - different objects, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3316",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The pharmacist left stale baklava at the concert hall' - Turkish says 'topladı' (collected) not 'left'"
+    },
+    {
+      "id": "tr-3320",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'kısır tarçın alırdım' (I would buy barren cinnamon) but English says 'I would buy a kolay trombon' - different objects, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3321",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The journalist bought clean a rabbit at the post office on weekends' - random word salad"
+    },
+    {
+      "id": "tr-3325",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The journalist cleaned long a rabbit at the restaurant at sunset' - incoherent"
+    },
+    {
+      "id": "tr-3328",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'My grandmother started noisy food on the coast now' - random word combination"
+    },
+    {
+      "id": "tr-3342",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'My grandfather sold foolish a computer at the market every Sunday' - incoherent word salad"
+    },
+    {
+      "id": "tr-3344",
+      "issue": "MISMATCH",
+      "reason": "Turkish mentions 'Kasap'daki prodüktör' (the producer at the butcher) but English mentions 'diplomat at the tiyatro' - completely different subjects and locations, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3346",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The chef wrote hard a boat in the kitchen in the afternoon' - incoherent"
+    },
+    {
+      "id": "tr-3348",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The tourists left fast a rose at the bakery on weekdays' - random word salad"
+    },
+    {
+      "id": "tr-3352",
+      "issue": "MISMATCH",
+      "reason": "Turkish mentions 'Havalimanı'daki çip' (the chip at the airport) but English mentions 'kertenkele at the stadyum' - different content, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3354",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The butcher came short salad at the swimming pool yesterday' - incoherent"
+    },
+    {
+      "id": "tr-3355",
+      "issue": "MISMATCH",
+      "reason": "Turkish mentions 'Mahkeme'daki don' (the frost at the court) but English mentions 'konsolos at the tiyatro' - different content, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3356",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: Turkish sentence is grammatically broken - 'ağır mantar göl kenarında geldi' makes no sense"
+    },
+    {
+      "id": "tr-3358",
+      "issue": "MISMATCH",
+      "reason": "Turkish mentions 'Istasyon'daki komisyoncu' (the broker at the station) but English mentions 'klima at the mahkeme' - different content, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3359",
+      "issue": "MISMATCH",
+      "reason": "Turkish mentions 'Iskele'daki kervansaray' (the caravanserai at the pier) but English mentions 'bilek at the konser salonu' - different content, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3369",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Mehmet painted happy a lion at the mosque on weekends' - random word combination"
+    },
+    {
+      "id": "tr-3382",
+      "issue": "MISMATCH",
+      "reason": "Turkish mentions 'Bahçe'daki cerrah' (the surgeon at the garden) but English mentions 'tuba at the medrese' - different content, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3389",
+      "issue": "MISMATCH",
+      "reason": "Turkish mentions 'Havra'daki altın' (the gold at the synagogue) but English mentions 'koltuk at the pazar' - different content, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3391",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The photographer sold sweet soup at the swimming pool in the late afternoon' - incoherent"
+    },
+    {
+      "id": "tr-3395",
+      "issue": "AWKWARD",
+      "reason": "Uses archaic Ottoman Turkish 'Devletlû efendim' - extremely formal/historical register inappropriate for language learners"
+    },
+    {
+      "id": "tr-3400",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'güven ile teşekkür ederiz' (we thank you with confidence) but English says 'with tedirginlik' (with anxiety) - opposite meanings, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3403",
+      "issue": "MISMATCH",
+      "reason": "Turkish mentions 'Pansiyon'daki teknisyen' (the technician at the pension) but English mentions 'limon at the park' - different content, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3407",
+      "issue": "MISMATCH",
+      "reason": "Turkish says 'ihanet ile teşekkür ederiz' (we thank you with betrayal) which is nonsensical, and English says 'with sempati' - both are absurd but also mismatched"
+    },
+    {
+      "id": "tr-3411",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The children sewed clean a tablet on the coast on weekends' - random word salad"
+    },
+    {
+      "id": "tr-3422",
+      "issue": "MISMATCH",
+      "reason": "Turkish mentions 'Spor salonu'daki salıncak' (the swing at the gym) but English mentions 'eklem at the konsolosluk' - different content, English has untranslated Turkish"
+    },
+    {
+      "id": "tr-3429",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The waiter found rich a tram in the library in the afternoon' - random word combination"
+    },
+    {
+      "id": "tr-3430",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The baker said busy a bus at the concert hall usually' - incoherent word salad"
+    },
+    {
+      "id": "tr-3431",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'The dentist cleaned noisy a dog at the theater last week' - random word combination"
+    },
+    {
+      "id": "tr-3435",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'My sibling sewed dishonest a plant at the gym now' - incoherent"
+    },
+    {
+      "id": "tr-3446",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Başkan geçen yıl yalancı tohum göl kenarında okudu' - random words strung together, English equally nonsensical"
+    },
+    {
+      "id": "tr-3452",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish and English both gibberish; English has untranslated Turkish words (kum, sedir). Animal mismatch (timsah vs bizon)"
+    },
+    {
+      "id": "tr-3455",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Arkadaşlar öğleden sonra ağır börek dağda söyledi' - friends sang/said heavy pastry on mountain makes no sense"
+    },
+    {
+      "id": "tr-3458",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (sedir) and animal mismatch (tavşan=rabbit vs iguana)"
+    },
+    {
+      "id": "tr-3459",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (kanarya, plaj) and animal mismatch (gorilla vs kanarya)"
+    },
+    {
+      "id": "tr-3466",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (kanarya, maden) and animal mismatch (yaban domuzu vs kanarya)"
+    },
+    {
+      "id": "tr-3469",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Yazar gece sert papağan konser salonunda yazdı' - writer wrote hard parrot at concert hall at night"
+    },
+    {
+      "id": "tr-3471",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (kunduz, buzul) and animal mismatch"
+    },
+    {
+      "id": "tr-3473",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (kaplan, resif) and animal mismatch (muhabbet kuşu vs kaplan)"
+    },
+    {
+      "id": "tr-3474",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (toprak) and animal mismatch (çita vs hamster)"
+    },
+    {
+      "id": "tr-3475",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Aşçı yazın tuzlu çanta göl kenarında tamir etti' - chef repaired salty bag by lake in summer"
+    },
+    {
+      "id": "tr-3477",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Arkadaşlar hafta sonu uzun ağaç kilisede tamir etti' - friends repaired long tree at church on weekends"
+    },
+    {
+      "id": "tr-3481",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Aşçı dün geniş ağaç deniz kıyısında bıraktı' - chef left wide tree on coast yesterday"
+    },
+    {
+      "id": "tr-3486",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Zeynep her pazar aptal otobüs alışveriş merkezinde dikti' - Zeynep sewed foolish bus at shopping mall"
+    },
+    {
+      "id": "tr-3490",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Berber dün akşam mutlu elbise yüzme havuzunda başladı' - barber started happy dress at swimming pool"
+    },
+    {
+      "id": "tr-3493",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (peygamber devesi, defne) and animal mismatch"
+    },
+    {
+      "id": "tr-3497",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (gergedan, kanyon) and animal mismatch (martı vs gergedan)"
+    },
+    {
+      "id": "tr-3499",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (kristal) and animal mismatch (fok vs gorilla)"
+    },
+    {
+      "id": "tr-3501",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Diş hekimi bu sabah acı televizyon eczanede pişirdi' - dentist cooked bitter television at pharmacy"
+    },
+    {
+      "id": "tr-3506",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Mühendis hafta içi hızlı anahtar sokakta buldu' - verb/adj mismatch, English equally broken"
+    },
+    {
+      "id": "tr-3507",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Hasan akşamüstü korkak kravat kasapta okudu' - Hasan read cowardly tie at butcher shop"
+    },
+    {
+      "id": "tr-3508",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Anneanne geçen hafta yalancı gemi deniz kıyısında sattı' - grandmother sold dishonest ship on coast"
+    },
+    {
+      "id": "tr-3517",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (kaynak) and animal mismatch (su aygırı vs gorilla)"
+    },
+    {
+      "id": "tr-3518",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ressam öğleden sonra sessiz pilav yüzme havuzunda yaptı' - painter made quiet rice at swimming pool"
+    },
+    {
+      "id": "tr-3522",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ali öğleden sonra sert tekne çarşıda pişirdi' - Ali cooked hard boat at bazaar"
+    },
+    {
+      "id": "tr-3533",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kardeşim geçen yıl eski hikaye çarşıda tamir etti' - sibling repaired old story at bazaar"
+    },
+    {
+      "id": "tr-3553",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish and English; English has untranslated Turkish words (sosyolog, nemli, belediye, biyoloji)"
+    },
+    {
+      "id": "tr-3558",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (protokol, zooloji, zor)"
+    },
+    {
+      "id": "tr-3560",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Çocuklar bu sabah pahalı pilav yüzme havuzunda boyadı' - children painted expensive rice at swimming pool"
+    },
+    {
+      "id": "tr-3562",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kardeşim gün batımında zor rapor otelde tamir etti' - sibling repaired hard report at hotel"
+    },
+    {
+      "id": "tr-3566",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Annem hafta içi yavaş televizyon müzede bıraktı' - mother left slow television in museum"
+    },
+    {
+      "id": "tr-3592",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Fotoğrafçı öğleden sonra zor gemi alışveriş merkezinde dikti' - photographer sewed hard ship at shopping mall"
+    },
+    {
+      "id": "tr-3594",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kardeşim gün batımında hafif televizyon müzede sattı' - sibling sold light television in museum"
+    },
+    {
+      "id": "tr-3601",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kasap akşamüstü akıllı tekne deniz kıyısında sattı' - butcher sold smart boat on coast"
+    },
+    {
+      "id": "tr-3604",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Fotoğrafçı her sabah ekşi uçak yüzme havuzunda topladı' - photographer collected sour plane at swimming pool"
+    },
+    {
+      "id": "tr-3612",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Psikolog öğleden sonra çirkin şiir köprüde yaptı' - psychologist made ugly poem on bridge"
+    },
+    {
+      "id": "tr-3614",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Ali hafta sonu hafif taksi spor salonunda gördü' - Ali saw light taxi at gym"
+    },
+    {
+      "id": "tr-3621",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Öğrenciler bu akşam temiz çiçek postanede okudu' - students read clean flower at post office"
+    },
+    {
+      "id": "tr-3625",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (biyolog, dalma, omurga). Subject/activity mismatch"
+    },
+    {
+      "id": "tr-3626",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kaptan öğleden sonra acı taksi manav dikti' - captain sewed bitter taxi at greengrocer"
+    },
+    {
+      "id": "tr-3630",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (patron, badminton, omuz). Subject/sport mismatch"
+    },
+    {
+      "id": "tr-3664",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Balıkçı genellikle tatlı dolma sokakta tamir etti' - fisherman repaired sweet stuffed grape leaves on street"
+    },
+    {
+      "id": "tr-3669",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Öğrenciler geçen hafta hafif araba spor salonunda temizledi' - students cleaned light car at gym"
+    },
+    {
+      "id": "tr-3674",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Hemşire her sabah aptal salata deniz kıyısında bıraktı' - nurse left foolish salad on coast"
+    },
+    {
+      "id": "tr-3686",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Hasan bu sabah dürüst lale köprüde yazdı' - Hasan wrote honest tulip on bridge"
+    },
+    {
+      "id": "tr-3697",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Fatma bu sabah gürültülü çiçek bankada tamir etti' - Fatma repaired noisy flower at bank"
+    },
+    {
+      "id": "tr-3702",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (yel, sunucu, gecelik)"
+    },
+    {
+      "id": "tr-3705",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Komşular dün akşam kirli bitki alışveriş merkezinde boyadı' - neighbors painted dirty plant at shopping mall"
+    },
+    {
+      "id": "tr-3708",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Diş hekimi her sabah çirkin kuş meydanda aldı' - dentist took ugly bird in square"
+    },
+    {
+      "id": "tr-3709",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Şoför öğleden sonra akıllı köpek havaalanında bıraktı' - driver left smart dog at airport"
+    },
+    {
+      "id": "tr-3716",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Biz öğleden sonra tuzlu gömlek kasapta boyadı' - we painted salty shirt at butcher shop"
+    },
+    {
+      "id": "tr-3728",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Arkeolog geçen yıl ince börek konser salonunda pişirdi' - archaeologist cooked thin pastry at concert hall"
+    },
+    {
+      "id": "tr-3752",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Zeynep gelecek hafta kolay tekne spor salonunda dikti' - Zeynep sewed easy boat at gym, also past tense for next week"
+    },
+    {
+      "id": "tr-3762",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Sen geçen ay ince pasta göl kenarında dikti' - you sewed thin cake by lake last month"
+    },
+    {
+      "id": "tr-3765",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish and English; English has untranslated Turkish words (astsubay, bavul, sosyolog, sinema)"
+    },
+    {
+      "id": "tr-3766",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kardeşim hafta sonu üzgün balık kilisede okudu' - sibling read sad fish at church"
+    },
+    {
+      "id": "tr-3767",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Hasan bu sabah kalın mektup yüzme havuzunda dikti' - Hasan sewed thick letter at swimming pool"
+    },
+    {
+      "id": "tr-3769",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Sen genellikle zor gül deniz kıyısında bitirdi' - you cleaned hard rose on coast"
+    },
+    {
+      "id": "tr-3778",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Onlar gece büyük atkı deniz kıyısında temizledi' - they cleaned big scarf on coast at night"
+    },
+    {
+      "id": "tr-3779",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Mehmet öğleden sonra tatlı sebze yüzme havuzunda yaptı' - Mehmet made sweet vegetable at swimming pool"
+    },
+    {
+      "id": "tr-3780",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Zeynep öğleden sonra zor kamera ormanda gördü' - Zeynep saw hard camera in forest"
+    },
+    {
+      "id": "tr-3784",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Mühendis gün batımında yavaş hikaye havaalanında tamir etti' - engineer repaired slow story at airport"
+    },
+    {
+      "id": "tr-3797",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Diş hekimi hafta sonu ağır tohum istasyonda topladı' - dentist collected heavy seeds at station"
+    },
+    {
+      "id": "tr-3802",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Siz gelecek hafta pahalı kurabiye yüzme havuzunda yazdı' - you wrote expensive cookies at swimming pool next week"
+    },
+    {
+      "id": "tr-3809",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (barmen, dolap, cetvel). Subject mismatch (balıkçı vs barmen)"
+    },
+    {
+      "id": "tr-3817",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Zeynep dün akşam kalın tablet yüzme havuzunda sattı' - Zeynep sold thick tablet at swimming pool"
+    },
+    {
+      "id": "tr-3826",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Babaanne öğleden sonra kolay kamera eczanede gitti' - grandmother went easy camera at pharmacy"
+    },
+    {
+      "id": "tr-3844",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (parlak, bodrum, okul)"
+    },
+    {
+      "id": "tr-3851",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Psikolog her gün gürültülü roman yüzme havuzunda tamir etti' - psychologist repaired noisy novel at swimming pool"
+    },
+    {
+      "id": "tr-3853",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (pelikan, kimyon, resif)"
+    },
+    {
+      "id": "tr-3860",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Arkeolog kışın kaba tekne spor salonunda boyadı' - archaeologist painted rude boat at gym"
+    },
+    {
+      "id": "tr-3861",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Arkeolog dün akşam çirkin şapka markette boyadı' - archaeologist painted ugly hat at market"
+    },
+    {
+      "id": "tr-3865",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (bukalemun, ayran, fosil)"
+    },
+    {
+      "id": "tr-3873",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (kanarya, fasulye, demir)"
+    },
+    {
+      "id": "tr-3874",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Garson her pazar güzel börek kasapta tamir etti' - waiter repaired beautiful pastry at butcher shop"
+    },
+    {
+      "id": "tr-3877",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Onlar dün akşam nazik balık alışveriş merkezinde topladı' - they collected kind fish at shopping mall"
+    },
+    {
+      "id": "tr-3879",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Gazeteci sık sık sıcak gazete göl kenarında başladı' - journalist started hot newspaper by lake"
+    },
+    {
+      "id": "tr-3881",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Gazeteci gün batımında sert kedi deniz kıyısında topladı' - journalist collected hard cat on coast"
+    },
+    {
+      "id": "tr-3882",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical Turkish; English has untranslated Turkish words (amiral, opak, kekik, somon). Subject mismatch (berber vs amiral)"
+    },
+    {
+      "id": "tr-3884",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Mühendis her pazar sessiz bilgisayar pazarda gitti' - engineer went quiet computer at market"
+    },
+    {
+      "id": "tr-3904",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Garson öğleden sonra yalancı tablet kilisede gördü' - waiter saw dishonest tablet at church"
+    },
+    {
+      "id": "tr-3906",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Terzi sabahleyin fakir bitki spor salonunda dikti' - tailor sewed poor plant at gym"
+    },
+    {
+      "id": "tr-3915",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Doktor her pazar zor salata bankada sattı' - doctor sold hard salad at bank"
+    },
+    {
+      "id": "tr-3923",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kardeşim gelecek hafta yavaş roman dağda tamir etti' - sibling repaired slow novel on mountain next week, also tense mismatch"
+    },
+    {
+      "id": "tr-3924",
+      "issue": "GARBAGE",
+      "reason": "Nonsensical: 'Kardeşim sık sık pahalı gül pazarda okudu' - sibling read expensive rose at market"
+    }
+  ]
+}

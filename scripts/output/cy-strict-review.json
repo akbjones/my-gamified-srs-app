@@ -1,0 +1,21 @@
+{
+  "language": "cy",
+  "total_entries": 6115,
+  "total_checked": 200,
+  "passed": 199,
+  "failed": 1,
+  "pass_rate": "99.5%",
+  "grade": "A",
+  "failures_by_type": {
+    "to_copula": 1
+  },
+  "failure_examples": [
+    {
+      "word": "cynhaliwyd",
+      "en": "to was held",
+      "pos": "v",
+      "google": "was held",
+      "issues": "to_copula"
+    }
+  ]
+}

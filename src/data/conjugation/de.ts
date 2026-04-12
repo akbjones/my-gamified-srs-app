@@ -21,6 +21,15 @@ type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional'
 
 const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive'];
 
+const TENSE_LABELS: Record<TenseKey, string> = {
+  present: 'Präsens (Present)',
+  preterite: 'Präteritum (Past)',
+  imperfect: 'Perfekt (Perfect)',
+  future: 'Futur I (Future)',
+  conditional: 'Konjunktiv II (Conditional)',
+  subjunctive: 'Konjunktiv I (Subjunctive)',
+};
+
 // ── Helpers ─────────────────────────────────────────────────
 const f = (s: string): Forms => s.split(',') as unknown as Forms;
 // ── Separable prefixes ──────────────────────────────────────
@@ -979,7 +988,7 @@ export function conjugate(infinitive: string): ConjugationTable | null {
       }) as Forms;
     }
 
-    finalTenses[t] = [...forms];
+    finalTenses[TENSE_LABELS[t]] = [...forms];
   }
 
   return {

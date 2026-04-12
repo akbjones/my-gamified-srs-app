@@ -1,0 +1,127 @@
+{
+  "audit": "French batches 4-7 card-by-card audit",
+  "date": "2026-03-25",
+  "batchRange": "batches 4-7 (cards fr-2001 to fr-3927)",
+  "totalCards": 1927,
+  "uniqueWords": 3520,
+  "dictCoveragePercent": "100.0%",
+  "missingFromDict": [],
+  "summary": {
+    "totalCards": 1927,
+    "cardsWithIssues": 7,
+    "dictCoverage": 0,
+    "grammarTipConjugationPattern": 7,
+    "englishQuality": 0,
+    "duplicateTarget": 0,
+    "duplicateEnglish": 0,
+    "vocabInappropriate": 0,
+    "audioMissing": 0,
+    "missingPriority": 0,
+    "missingTags": 0,
+    "grammarNodeMisalignment": 0
+  },
+  "issueBreakdown": {
+    "dictCoverage": "0 cards have words not found in dictionary",
+    "grammarTipConjugationPattern": "7 grammar tips list conjugation endings without contextual insight",
+    "englishQuality": "0 cards have English quality issues",
+    "duplicateTarget": "0 duplicate French sentences (incl. cross-batch with batches 0-3)",
+    "duplicateEnglish": "0 duplicate English translations (incl. cross-batch)",
+    "vocabInappropriate": "0 cards with vocabulary issues",
+    "audioMissing": "0 cards missing audio files",
+    "missingPriority": "0 cards missing priority field",
+    "missingTags": "0 cards missing tags"
+  },
+  "issueCards": [
+    {
+      "id": "fr-2176",
+      "grammarNode": "node-16",
+      "target": "J'aimerais apprendre à jouer du piano.",
+      "english": "I would like to learn to play the piano.",
+      "grammar": "Conditional formation: infinitive + imparfait endings (-ais, -ais, -ait, -ions, -iez, -aient).",
+      "issues": [
+        {
+          "type": "grammar_tip_conjugation_pattern",
+          "tip": "Conditional formation: infinitive + imparfait endings (-ais, -ais, -ait, -ions, -iez, -aient)."
+        }
+      ]
+    },
+    {
+      "id": "fr-2280",
+      "grammarNode": "node-17",
+      "target": "Si je savais la réponse, je te la dirais.",
+      "english": "If I knew the answer, I would tell you.",
+      "grammar": "\"Dirais\" (conditional of dire): future stem \"dir-\" + imperfect endings (-ais, -ais, -ait, -ions, -iez, -aient).",
+      "issues": [
+        {
+          "type": "grammar_tip_conjugation_pattern",
+          "tip": "\"Dirais\" (conditional of dire): future stem \"dir-\" + imperfect endings (-ais, -ais, -ait, -ions, -iez, -aient)."
+        }
+      ]
+    },
+    {
+      "id": "fr-2336",
+      "grammarNode": "node-18",
+      "target": "Le spectacle commencera à vingt heures.",
+      "english": "The show will start at eight o'clock.",
+      "grammar": "'Commencera' — futur simple formation: infinitive + -ai, -as, -a, -ons, -ez, -ont.",
+      "issues": [
+        {
+          "type": "grammar_tip_conjugation_pattern",
+          "tip": "'Commencera' — futur simple formation: infinitive + -ai, -as, -a, -ons, -ez, -ont."
+        }
+      ]
+    },
+    {
+      "id": "fr-3425",
+      "grammarNode": "node-29",
+      "target": "Quand j'aurai envoyé ce message, nous pourrons partir.",
+      "english": "When I've sent this message, we can leave.",
+      "grammar": "The futur simple (will): infinitive + endings (-ai, -as, -a, -ons, -ez, -ont). Some verbs have irregular stems.",
+      "issues": [
+        {
+          "type": "grammar_tip_conjugation_pattern",
+          "tip": "The futur simple (will): infinitive + endings (-ai, -as, -a, -ons, -ez, -ont). Some verbs have irregular stems."
+        }
+      ]
+    },
+    {
+      "id": "fr-3542",
+      "grammarNode": "node-30",
+      "target": "Après qu'il eut parlé, un murmure parcourut la salle.",
+      "english": "After he had spoken, a murmur ran through the room.",
+      "grammar": "-ir/-re verbs in passé simple: -is, -is, -it, -îmes, -îtes, -irent. Same circumflex pattern.",
+      "issues": [
+        {
+          "type": "grammar_tip_conjugation_pattern",
+          "tip": "-ir/-re verbs in passé simple: -is, -is, -it, -îmes, -îtes, -irent. Same circumflex pattern."
+        }
+      ]
+    },
+    {
+      "id": "fr-3632",
+      "grammarNode": "node-31",
+      "target": "Le roi convoqua ses ministres et leur fit part de sa décision.",
+      "english": "The king summoned his ministers and informed them of his decision.",
+      "grammar": "'Convoqua' — passé simple of convoquer (-er verbs: -ai, -as, -a, -âmes, -âtes, -èrent).",
+      "issues": [
+        {
+          "type": "grammar_tip_conjugation_pattern",
+          "tip": "'Convoqua' — passé simple of convoquer (-er verbs: -ai, -as, -a, -âmes, -âtes, -èrent)."
+        }
+      ]
+    },
+    {
+      "id": "fr-3683",
+      "grammarNode": "node-32",
+      "target": "Quand il eut rassemblé ses forces, il reprit la route.",
+      "english": "When he had gathered his strength, he set off again.",
+      "grammar": "-oir verbs in passé simple: -us, -us, -ut, -ûmes, -ûtes, -urent. Third conjugation pattern.",
+      "issues": [
+        {
+          "type": "grammar_tip_conjugation_pattern",
+          "tip": "-oir verbs in passé simple: -us, -us, -ut, -ûmes, -ûtes, -urent. Third conjugation pattern."
+        }
+      ]
+    }
+  ]
+}

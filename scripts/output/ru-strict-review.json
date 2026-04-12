@@ -1,0 +1,89 @@
+{
+  "language": "ru",
+  "total_entries": 4783,
+  "total_checked": 200,
+  "passed": 196,
+  "failed": 4,
+  "pass_rate": "98%",
+  "grade": "A",
+  "failures_by_type": {
+    "semantic_fail": 4
+  },
+  "failure_examples": [
+    {
+      "word": "успеешь",
+      "en": "you\\",
+      "pos": "n",
+      "google": "you'll make it",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "you\\"
+        ],
+        "gtWords": [
+          "ll",
+          "make"
+        ],
+        "gt": "you'll make it"
+      }
+    },
+    {
+      "word": "умываюсь",
+      "en": "i\\",
+      "pos": "n",
+      "google": "I'm washing my face",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "i\\"
+        ],
+        "gtWords": [
+          "wash",
+          "face"
+        ],
+        "gt": "I'm washing my face"
+      }
+    },
+    {
+      "word": "учишь",
+      "en": "to study",
+      "pos": "v",
+      "google": "you teach",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "study"
+        ],
+        "gtWords": [
+          "teach"
+        ],
+        "gt": "you teach"
+      }
+    },
+    {
+      "word": "придёшь",
+      "en": "you\\",
+      "pos": "n",
+      "google": "you'll come",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "you\\"
+        ],
+        "gtWords": [
+          "ll",
+          "come"
+        ],
+        "gt": "you'll come"
+      }
+    }
+  ]
+}

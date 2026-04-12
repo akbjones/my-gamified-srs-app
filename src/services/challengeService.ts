@@ -80,16 +80,17 @@ export function buildTiles(
 
 // ── Tile Card Selection ─────────────────────────────────────
 export function selectTileCandidates(queue: QuestCard[]): number[] {
-  const now = Date.now();
-  const threeDaysMs = 3 * 24 * 60 * 60 * 1000;
+  const fourteenDaysMs = 14 * 24 * 60 * 60 * 1000;
 
+  // Only cards approaching retention (14+ day interval) are eligible
+  // This makes tiles a milestone challenge, not every review
   const candidates = queue
     .map((card, idx) => ({ card, idx }))
     .filter(({ card }) => {
       const wordCount = card.target.split(/\s+/).length;
       return (
-        card.mastery >= 1 &&
-        (card.interval || 0) > threeDaysMs &&
+        card.mastery >= 2 &&              // must be graduated (not still learning)
+        (card.interval || 0) >= fourteenDaysMs && // approaching retention (21d)
         wordCount >= 5 &&
         wordCount <= 12
       );
@@ -97,11 +98,25 @@ export function selectTileCandidates(queue: QuestCard[]): number[] {
 
   if (candidates.length === 0) return [];
 
-  const tileCount = Math.min(4, candidates.length);
-  const step = candidates.length / tileCount;
-  return Array.from({ length: tileCount }, (_, i) =>
-    candidates[Math.floor(i * step)].idx
-  );
+  // Prefer shorter cards for tiles, especially in early nodes (01-10)
+  // This makes early challenges achievable and later ones more demanding
+  candidates.sort((a, b) => {
+    const nodeA = parseInt((a.card as any).grammarNode?.replace('node-', '') || '99');
+    const nodeB = parseInt((b.card as any).grammarNode?.replace('node-', '') || '99');
+    const wordsA = a.card.target.split(/\s+/).length;
+    const wordsB = b.card.target.split(/\s+/).length;
+    // Early nodes (01-10): strongly prefer shorter cards
+    if (nodeA <= 10 && nodeB <= 10) return wordsA - wordsB;
+    // Mixed: early node cards first
+    if (nodeA <= 10) return -1;
+    if (nodeB <= 10) return 1;
+    // Later nodes: still prefer shorter but less aggressively
+    return wordsA - wordsB;
+  });
+
+  // Cap at 2 tiles per session, pick from the shortest candidates
+  const tileCount = Math.min(2, candidates.length);
+  return candidates.slice(0, tileCount).map(c => c.idx);
 }
 
 // ── Challenge Question Building ─────────────────────────────

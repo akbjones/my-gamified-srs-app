@@ -1,4 +1,4 @@
-export type Language = 'spanish' | 'italian' | 'german' | 'french' | 'portuguese' | 'dutch';
+export type Language = 'spanish' | 'italian' | 'german' | 'french' | 'portuguese' | 'dutch' | 'swedish' | 'welsh' | 'hindi' | 'turkish' | 'russian';
 export type LearningGoal = 'general' | 'travel' | 'work' | 'family';
 
 export interface QuestCard {
@@ -18,6 +18,7 @@ export interface QuestCard {
   failCount?: number;    // number of AGAIN ratings (for leech detection)
   isLeech?: boolean;     // flagged when failCount >= 5
   isSuspended?: boolean; // user can suspend leeches
+  priority?: 1 | 2 | 3;  // 1=practical (show first), 2=useful, 3=specialized
 }
 
 export interface SessionState {
@@ -121,6 +122,11 @@ export const LANGUAGE_CONFIG: Record<Language, { name: string; code: string; bcp
   french:  { name: 'French',  code: 'FR', bcp47: 'fr-FR' },
   portuguese: { name: 'Portuguese', code: 'PT', bcp47: 'pt-BR' },
   dutch: { name: 'Dutch', code: 'NL', bcp47: 'nl-NL' },
+  swedish: { name: 'Swedish', code: 'SV', bcp47: 'sv-SE' },
+  welsh: { name: 'Welsh', code: 'CY', bcp47: 'cy-GB' },
+  hindi: { name: 'Hindi', code: 'HI', bcp47: 'hi-IN' },
+  turkish: { name: 'Turkish', code: 'TR', bcp47: 'tr-TR' },
+  russian: { name: 'Russian', code: 'RU', bcp47: 'ru-RU' },
 };
 
 export const GOAL_CONFIG: Record<LearningGoal, { name: string; description: string }> = {

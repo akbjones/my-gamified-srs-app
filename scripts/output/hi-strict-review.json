@@ -1,0 +1,50 @@
+{
+  "language": "hi",
+  "total_entries": 4781,
+  "total_checked": 200,
+  "passed": 198,
+  "failed": 2,
+  "pass_rate": "99%",
+  "grade": "A",
+  "failures_by_type": {
+    "semantic_fail": 2
+  },
+  "failure_examples": [
+    {
+      "word": "रही",
+      "en": "to stay",
+      "pos": "v",
+      "google": "doing",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "stay"
+        ],
+        "gtWords": [
+          "do"
+        ],
+        "gt": "doing"
+      }
+    },
+    {
+      "word": "पड़ा",
+      "en": "to fall",
+      "pos": "v",
+      "google": "had",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "fall"
+        ],
+        "gtWords": [
+          "have"
+        ],
+        "gt": "had"
+      }
+    }
+  ]
+}

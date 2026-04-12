@@ -1,0 +1,167 @@
+{
+  "language": "it",
+  "total_entries": 6757,
+  "total_checked": 200,
+  "passed": 191,
+  "failed": 9,
+  "pass_rate": "95.5%",
+  "grade": "A",
+  "failures_by_type": {
+    "semantic_fail": 8,
+    "to_past_tense": 1
+  },
+  "failure_examples": [
+    {
+      "word": "avvisassi",
+      "en": "to advise",
+      "pos": "v",
+      "google": "I warned you",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "advise"
+        ],
+        "gtWords": [
+          "warn"
+        ],
+        "gt": "I warned you"
+      }
+    },
+    {
+      "word": "intende",
+      "en": "to understand",
+      "pos": "v",
+      "google": "he means",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "understand"
+        ],
+        "gtWords": [
+          "mean"
+        ],
+        "gt": "he means"
+      }
+    },
+    {
+      "word": "formazione",
+      "en": "to form",
+      "pos": "v",
+      "google": "training",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "form"
+        ],
+        "gtWords": [
+          "traine"
+        ],
+        "gt": "training"
+      }
+    },
+    {
+      "word": "sediamo",
+      "en": "to let\\",
+      "pos": "v",
+      "google": "let's sit down",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "let\\"
+        ],
+        "gtWords": [
+          "sit"
+        ],
+        "gt": "let's sit down"
+      }
+    },
+    {
+      "word": "divertiti",
+      "en": "to entertain",
+      "pos": "v",
+      "google": "have fun",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "entertain"
+        ],
+        "gtWords": [
+          "fun"
+        ],
+        "gt": "have fun"
+      }
+    },
+    {
+      "word": "occorre",
+      "en": "to take",
+      "pos": "v",
+      "google": "it is necessary",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "take"
+        ],
+        "gtWords": [
+          "necessary"
+        ],
+        "gt": "it is necessary"
+      }
+    },
+    {
+      "word": "divertiresti",
+      "en": "to entertain",
+      "pos": "v",
+      "google": "you would have fun",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "entertain"
+        ],
+        "gtWords": [
+          "fun"
+        ],
+        "gt": "you would have fun"
+      }
+    },
+    {
+      "word": "tornerò",
+      "en": "i\\",
+      "pos": "n",
+      "google": "I'll be back",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "i\\"
+        ],
+        "gtWords": [
+          "ll",
+          "back"
+        ],
+        "gt": "I'll be back"
+      }
+    },
+    {
+      "word": "costerebbe",
+      "en": "to cost",
+      "pos": "v",
+      "google": "it would cost",
+      "issues": "to_past_tense"
+    }
+  ]
+}

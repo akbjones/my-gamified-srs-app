@@ -21,6 +21,15 @@ type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional'
 
 const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive'];
 
+const TENSE_LABELS: Record<TenseKey, string> = {
+  present: 'Presens (Present)',
+  preterite: 'Verleden Tijd (Past)',
+  imperfect: 'Perfectum (Perfect)',
+  future: 'Toekomende Tijd (Future)',
+  conditional: 'Voorwaardelijk (Conditional)',
+  subjunctive: 'Gebiedende Wijs (Imperative)',
+};
+
 // ── Helpers ─────────────────────────────────────────────────
 const f = (s: string): Forms => s.split(',') as unknown as Forms;
 
@@ -823,10 +832,16 @@ export function conjugate(infinitive: string): ConjugationTable | null {
     const baseTenses = conjugateBase(inf, isInseparable);
     if (!baseTenses) return null;
 
+    // Remap tense keys to localized labels
+    const labeledTenses: Record<string, string[]> = {};
+    for (const t of TENSES) {
+      labeledTenses[TENSE_LABELS[t]] = [...baseTenses[t]];
+    }
+
     return {
       infinitive: raw,
       isReflexive: false,
-      tenses: baseTenses,
+      tenses: labeledTenses,
     };
   }
 
@@ -918,7 +933,7 @@ export function conjugate(infinitive: string): ConjugationTable | null {
       }
     }
 
-    finalTenses[t] = [...forms];
+    finalTenses[TENSE_LABELS[t]] = [...forms];
   }
 
   return {

@@ -1,0 +1,222 @@
+{
+  "audit": "Portuguese batches 0-3 card-by-card audit",
+  "date": "2026-03-25T11:58:52.299Z",
+  "summary": {
+    "totalCards": 2000,
+    "cardsWithIssues": 0,
+    "dictCoverageIssues": 0,
+    "grammarTipIssues": 0,
+    "englishQualityIssues": 0,
+    "duplicateTarget": 0,
+    "duplicateEnglish": 0,
+    "vocabIssues": 0,
+    "audioMissing": 0,
+    "missingEndPunctuation": 0,
+    "duplicateGrammarTips": 18,
+    "byCategory": {},
+    "cleanCards": 2000,
+    "cleanPct": "100.0%"
+  },
+  "topUncoveredWords": [],
+  "overusedGrammarTips": [
+    {
+      "tip": "many common portuguese verbs are irregular in the 'eu' form — these are the most...",
+      "count": 18,
+      "sampleIds": [
+        "pt-0001",
+        "pt-0009",
+        "pt-0026",
+        "pt-0104",
+        "pt-0253"
+      ]
+    },
+    {
+      "tip": "portuguese has three verb groups: -ar, -er, -ir. regular -ar verbs are the most ...",
+      "count": 17,
+      "sampleIds": [
+        "pt-0023",
+        "pt-0045",
+        "pt-0061",
+        "pt-0093",
+        "pt-0096"
+      ]
+    },
+    {
+      "tip": "'ser' expresses identity, origin, and permanent characteristics — think of quali...",
+      "count": 14,
+      "sampleIds": [
+        "pt-0140",
+        "pt-0292",
+        "pt-0303",
+        "pt-0404",
+        "pt-0408"
+      ]
+    },
+    {
+      "tip": "'de + o/a/os/as' always contracts to 'do/da/dos/das' — these contractions are ma...",
+      "count": 11,
+      "sampleIds": [
+        "pt-0512",
+        "pt-0832",
+        "pt-0836",
+        "pt-0837",
+        "pt-0932"
+      ]
+    },
+    {
+      "tip": "preterite narrates events (what happened); imperfect paints the scene (what was ...",
+      "count": 12,
+      "sampleIds": [
+        "pt-0958",
+        "pt-1141",
+        "pt-1438",
+        "pt-1513",
+        "pt-1538"
+      ]
+    },
+    {
+      "tip": "regular -er/-ir verbs in the imperfect: -ia, -ia, -íamos, -iam — same pattern fo...",
+      "count": 11,
+      "sampleIds": [
+        "pt-1135",
+        "pt-1205",
+        "pt-1254",
+        "pt-1266",
+        "pt-1310"
+      ]
+    },
+    {
+      "tip": "'se' can mark reciprocity with plural subjects: 'eles se abraçaram' (they hugged...",
+      "count": 11,
+      "sampleIds": [
+        "pt-1206",
+        "pt-1207",
+        "pt-1408",
+        "pt-1448",
+        "pt-1457"
+      ]
+    },
+    {
+      "tip": "reflexive 'se' signals the subject acts on themselves: 'lavar-se' (wash oneself)...",
+      "count": 11,
+      "sampleIds": [
+        "pt-1239",
+        "pt-1262",
+        "pt-1273",
+        "pt-1324",
+        "pt-1358"
+      ]
+    },
+    {
+      "tip": "some verbs are only used reflexively: 'arrepender-se' (to regret), 'queixar-se' ...",
+      "count": 11,
+      "sampleIds": [
+        "pt-1296",
+        "pt-1321",
+        "pt-1365",
+        "pt-1404",
+        "pt-1451"
+      ]
+    },
+    {
+      "tip": "absolute superlatives add '-íssimo': 'rápido' → 'rapidíssimo' (extremely fast). ...",
+      "count": 11,
+      "sampleIds": [
+        "pt-1455",
+        "pt-1680",
+        "pt-1763",
+        "pt-1794",
+        "pt-1795"
+      ]
+    },
+    {
+      "tip": "superlatives use 'o/a mais' + adjective: 'a mais bonita' (the most beautiful). a...",
+      "count": 12,
+      "sampleIds": [
+        "pt-1550",
+        "pt-1703",
+        "pt-1720",
+        "pt-1782",
+        "pt-1787"
+      ]
+    },
+    {
+      "tip": "'seja' is the subjunctive of 'ser' — one of the most common subjunctive forms yo...",
+      "count": 12,
+      "sampleIds": [
+        "pt-1594",
+        "pt-1622",
+        "pt-1798",
+        "pt-1806",
+        "pt-1836"
+      ]
+    },
+    {
+      "tip": "use 'mais' + adjective + 'do que' for comparisons: 'mais alto do que' (taller th...",
+      "count": 13,
+      "sampleIds": [
+        "pt-1681",
+        "pt-1691",
+        "pt-1750",
+        "pt-1755",
+        "pt-1781"
+      ]
+    },
+    {
+      "tip": "in informal brazilian portuguese, 'que' often replaces 'do que' in comparisons: ...",
+      "count": 12,
+      "sampleIds": [
+        "pt-1707",
+        "pt-1712",
+        "pt-1737",
+        "pt-1760",
+        "pt-1905"
+      ]
+    },
+    {
+      "tip": "double comparatives like 'mais melhor' are considered incorrect — 'melhor' alrea...",
+      "count": 12,
+      "sampleIds": [
+        "pt-1710",
+        "pt-1732",
+        "pt-1788",
+        "pt-1789",
+        "pt-1815"
+      ]
+    },
+    {
+      "tip": "for equality, use 'tão...como' (as...as): 'ela é tão inteligente como ele'. this...",
+      "count": 12,
+      "sampleIds": [
+        "pt-1719",
+        "pt-1727",
+        "pt-1775",
+        "pt-1811",
+        "pt-1831"
+      ]
+    },
+    {
+      "tip": "'menos' works just like 'mais' for downward comparisons: 'menos caro do que' (le...",
+      "count": 11,
+      "sampleIds": [
+        "pt-1729",
+        "pt-1797",
+        "pt-1814",
+        "pt-1817",
+        "pt-1819"
+      ]
+    },
+    {
+      "tip": "when comparing actions rather than qualities, use 'mais do que' with verbs: 'ele...",
+      "count": 11,
+      "sampleIds": [
+        "pt-1773",
+        "pt-1784",
+        "pt-1786",
+        "pt-1796",
+        "pt-1818"
+      ]
+    }
+  ],
+  "cardIssues": []
+}

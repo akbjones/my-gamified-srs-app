@@ -1,0 +1,502 @@
+{
+  "metadata": {
+    "date": "2026-03-26",
+    "description": "Target language grammar QC - checks grammar correctness, spelling/accents, naturalness, and translation accuracy",
+    "sampling": "3 cards per grammar node (start, middle, end), ~105 cards per language",
+    "total_cards_reviewed": 1155
+  },
+  "es": {
+    "sampled": 105,
+    "pass_rate": "98%",
+    "issues": [
+      {
+        "id": "es-1307",
+        "target": "Fue precisamente alli donde descubri mi pasion por la pintura.",
+        "english": "It was precisely there that I discovered my passion for painting.",
+        "issue": "Missing accents: 'alli' should be 'allí', 'descubri' should be 'descubrí', 'pasion' should be 'pasión'",
+        "severity": "medium",
+        "category": "spelling/accents"
+      },
+      {
+        "id": "es-3063",
+        "target": "Sigue lloviendo desde la mañana.",
+        "english": "It's still raining since morning.",
+        "issue": "Slightly unnatural: more natural phrasing would be 'Sigue lloviendo desde esta mañana' or 'Lleva lloviendo desde la mañana'",
+        "severity": "low",
+        "category": "naturalness"
+      }
+    ],
+    "common_patterns": "Spanish deck is excellent. Only minor accent omissions found. Verb conjugation, subjunctive usage, agreement all correct.",
+    "severity_breakdown": { "critical": 0, "high": 0, "medium": 1, "low": 1 }
+  },
+  "it": {
+    "sampled": 105,
+    "pass_rate": "98%",
+    "issues": [
+      {
+        "id": "it-2990",
+        "target": "Ha esclamato: 'Non ce la faccio più!' Ha esclamato che non ce la faceva più.",
+        "english": "He exclaimed: 'I can't take it anymore!' He exclaimed he couldn't take it anymore.",
+        "issue": "Unusual card format: contains both direct and indirect speech as a single target. Not a grammar error per se but odd for a flashcard.",
+        "severity": "low",
+        "category": "naturalness"
+      },
+      {
+        "id": "it-3551",
+        "target": "Ha fatto di necessità virtu e ha trovato una soluzione creativa.",
+        "english": "He made a virtue of necessity and found a creative solution (lit. he made of necessity a virtue)",
+        "issue": "Missing accent: 'virtu' should be 'virtù'",
+        "severity": "medium",
+        "category": "spelling/accents"
+      }
+    ],
+    "common_patterns": "Italian deck is very strong. Subjunctive usage is correct throughout (congiuntivo presente, imperfetto). Agreement and conjugation excellent. Only one missing accent found.",
+    "severity_breakdown": { "critical": 0, "high": 0, "medium": 1, "low": 1 }
+  },
+  "fr": {
+    "sampled": 105,
+    "pass_rate": "97%",
+    "issues": [
+      {
+        "id": "fr-1643",
+        "target": "Ils dansaient quand la musique s'est arretee brusquement.",
+        "english": "They were dancing when the music stopped suddenly.",
+        "issue": "Missing accents: 'arretee' should be 'arrêtée' (circumflex on first e, acute on second e)",
+        "severity": "medium",
+        "category": "spelling/accents"
+      },
+      {
+        "id": "fr-2754",
+        "target": "Nous leur avons laisse un message.",
+        "english": "We left them a message.",
+        "issue": "Missing accent: 'laisse' should be 'laissé' (past participle needs acute accent)",
+        "severity": "medium",
+        "category": "spelling/accents"
+      },
+      {
+        "id": "fr-2547",
+        "target": "Bien qu'il neigeât, la route restait praticable.",
+        "english": "Although it was snowing, the road remained passable.",
+        "issue": "Imperfect subjunctive ('neigeât') is technically correct but extremely literary/archaic. Modern French would use 'Bien qu'il neigeait' or 'Bien qu'il neige'. Not wrong but highly unusual.",
+        "severity": "low",
+        "category": "naturalness"
+      }
+    ],
+    "common_patterns": "French deck is strong overall. Main issue is missing accents on past participles. Grammar structure, agreement (including past participle agreement), and word order are correct.",
+    "severity_breakdown": { "critical": 0, "high": 0, "medium": 2, "low": 1 }
+  },
+  "pt": {
+    "sampled": 105,
+    "pass_rate": "100%",
+    "issues": [],
+    "common_patterns": "Portuguese deck is excellent. Correct use of Brazilian Portuguese conventions throughout (a gente, colloquial vs formal register). Proper subjunctive, conditional, pluperfect usage. Good mix of colloquial ('Bora!', 'Valeu, cara!') and formal/academic register. No grammar, spelling, or translation issues found.",
+    "severity_breakdown": { "critical": 0, "high": 0, "medium": 0, "low": 0 }
+  },
+  "de": {
+    "sampled": 105,
+    "pass_rate": "100%",
+    "issues": [],
+    "common_patterns": "German deck is excellent. Correct case usage (dative/accusative/genitive) throughout, proper V2 word order, correct adjective declension with all article types, correct separable verb handling. Subjunctive II forms are accurate. No issues found.",
+    "severity_breakdown": { "critical": 0, "high": 0, "medium": 0, "low": 0 }
+  },
+  "nl": {
+    "sampled": 105,
+    "pass_rate": "98%",
+    "issues": [
+      {
+        "id": "nl-2595",
+        "target": "Zij draagt oorbellletjes van zilver.",
+        "english": "She wears little silver earrings.",
+        "issue": "Spelling error: 'oorbellletjes' has triple 'l' - should be 'oorbelletjes'",
+        "severity": "high",
+        "category": "spelling"
+      },
+      {
+        "id": "nl-2210",
+        "target": "Zij zit op het terras van het cafe.",
+        "english": "She sits on the terrace of the cafe.",
+        "issue": "Missing accent: 'cafe' should be 'café'",
+        "severity": "low",
+        "category": "spelling/accents"
+      }
+    ],
+    "common_patterns": "Dutch deck is very strong. Correct word order (V2, subordinate clause verb-final), proper diminutive formation, correct separable verb usage. One spelling error and one missing accent found.",
+    "severity_breakdown": { "critical": 0, "high": 1, "medium": 0, "low": 1 }
+  },
+  "sv": {
+    "sampled": 105,
+    "pass_rate": "88%",
+    "issues": [
+      {
+        "id": "sv-0386",
+        "target": "Vakna, innan det blir för sent att ändra sig!!",
+        "english": "Wake up.",
+        "issue": "Translation mismatch: Swedish says 'Wake up, before it's too late to change your mind!!' but English only says 'Wake up.' Appended clause is nonsensical/auto-generated.",
+        "severity": "high",
+        "category": "translation_mismatch"
+      },
+      {
+        "id": "sv-0780",
+        "target": "Var så snäll varje dag.",
+        "english": "Please every day.",
+        "issue": "Incomplete/unnatural sentence in both Swedish and English. Not a real sentence.",
+        "severity": "high",
+        "category": "naturalness"
+      },
+      {
+        "id": "sv-0822",
+        "target": "Vad gör du här ibland väl?",
+        "english": "What are you doing here sometimes I suppose?",
+        "issue": "Extremely unnatural Swedish. 'ibland väl' does not fit grammatically or semantically. Appears auto-generated.",
+        "severity": "high",
+        "category": "grammar"
+      },
+      {
+        "id": "sv-0864",
+        "target": "Inga problem tillsammans.",
+        "english": "No problems together.",
+        "issue": "Incomplete/unnatural sentence fragment. 'Inga problem tillsammans' is not a natural Swedish phrase.",
+        "severity": "high",
+        "category": "naturalness"
+      },
+      {
+        "id": "sv-0988",
+        "target": "Titta, innan det blir för sent att ändra sig!!",
+        "english": "Look.",
+        "issue": "Same pattern as sv-0386: nonsensical appended clause not reflected in English translation.",
+        "severity": "high",
+        "category": "translation_mismatch"
+      },
+      {
+        "id": "sv-1278",
+        "target": "Kom hit, innan det blir för sent att ändra sig!!",
+        "english": "Come here.",
+        "issue": "Same pattern: nonsensical appended clause 'innan det blir för sent att ändra sig!!' not in English.",
+        "severity": "high",
+        "category": "translation_mismatch"
+      },
+      {
+        "id": "sv-1415",
+        "target": "Vi ska ha det trevligt för att kunna nå våra gemensamma mål snart.",
+        "english": "We are going to have a nice time in order to reach our shared goals soon.",
+        "issue": "Semantically incoherent: having a nice time is not logically connected to reaching goals. Appears auto-generated.",
+        "severity": "medium",
+        "category": "naturalness"
+      },
+      {
+        "id": "sv-2127",
+        "target": "Vi minns den kvällen väldigt ofta snart.",
+        "english": "We remember that evening very often soon.",
+        "issue": "'väldigt ofta snart' (very often soon) is contradictory and nonsensical in both languages.",
+        "severity": "high",
+        "category": "grammar"
+      },
+      {
+        "id": "sv-2202",
+        "target": "Slappna av, innan det blir för sent att ändra sig!!",
+        "english": "Relax.",
+        "issue": "Same appended clause pattern. Translation mismatch.",
+        "severity": "high",
+        "category": "translation_mismatch"
+      },
+      {
+        "id": "sv-2377",
+        "target": "Se norrskenet, så att vi hinner med tåget till Stockholm!!",
+        "english": "See the northern lights, so that we make it to the train to Stockholm!!",
+        "issue": "Nonsensical causal connection between seeing northern lights and catching a train.",
+        "severity": "high",
+        "category": "naturalness"
+      },
+      {
+        "id": "sv-2750",
+        "target": "Lagen stiftades under artonhundratalet på kvällen med familjen.",
+        "english": "The law was enacted in the nineteenth century in the evening with the family.",
+        "issue": "Absurd: 'in the evening with the family' tacked onto a historical statement. Not natural in any context.",
+        "severity": "high",
+        "category": "naturalness"
+      },
+      {
+        "id": "sv-0926",
+        "target": "Hon vill inte sluta efter jobbet nu.",
+        "english": "She doesn't want to stop after work now.",
+        "issue": "Semantically unclear: 'sluta efter jobbet' is odd since 'sluta' can mean both 'stop' and 'finish work'. The sentence is ambiguous/unnatural.",
+        "severity": "medium",
+        "category": "naturalness"
+      }
+    ],
+    "common_patterns": "Swedish deck has a significant quality issue: a recurring pattern of nonsensical appended clauses (especially 'innan det blir för sent att ändra sig!!'), incoherent semantic combinations (adverb stacking like 'ofta snart'), and translation mismatches. These appear to be artifacts of auto-generation. Approximately 12% of sampled cards have issues. The remaining 88% are grammatically correct.",
+    "severity_breakdown": { "critical": 0, "high": 10, "medium": 2, "low": 0 }
+  },
+  "cy": {
+    "sampled": 105,
+    "pass_rate": "98%",
+    "issues": [
+      {
+        "id": "cy-2024",
+        "target": "Mae'r Urdd yn mudiad ieuenctid Cymraeg.",
+        "english": "The Urdd is a Welsh youth movement.",
+        "issue": "Missing soft mutation: 'mudiad' should be 'fudiad' after predicative 'yn'. The base form 'mudiad' requires soft mutation to 'fudiad' in this construction.",
+        "severity": "high",
+        "category": "grammar"
+      },
+      {
+        "id": "cy-0096",
+        "target": "Dw i'n trio cofio'r geiriau.",
+        "english": "I'm trying to remember the words.",
+        "issue": "Dialectal spelling: 'trio' is South Welsh colloquial for 'treio/ceisio' (to try). Acceptable in informal register but inconsistent with standard Welsh used elsewhere.",
+        "severity": "low",
+        "category": "spelling"
+      }
+    ],
+    "common_patterns": "Welsh deck is surprisingly strong given the complexity of Welsh mutations. Soft mutation, nasal mutation, and aspirate mutation are mostly correctly applied. Verb forms and sentence structure are correct. One mutation error found.",
+    "severity_breakdown": { "critical": 0, "high": 1, "medium": 0, "low": 1 }
+  },
+  "hi": {
+    "sampled": 105,
+    "pass_rate": "98%",
+    "issues": [
+      {
+        "id": "hi-2486",
+        "target": "शीला रोज़ सुबह व्यायाम करता है।",
+        "english": "Sheela does exercise every morning.",
+        "issue": "Gender agreement error: 'शीला' (Sheela) is a female name, so verb should be 'करती है' (feminine) not 'करता है' (masculine)",
+        "severity": "high",
+        "category": "grammar"
+      },
+      {
+        "id": "hi-1069",
+        "target": "दीपक की बात में वज़न है, हमें उसकी सलाह माननी चाहिए।",
+        "english": "There is weight in Deepak's words, we should accept her advice.",
+        "issue": "Translation gender mismatch: 'दीपक' (Deepak) is typically a male name, but English says 'her advice'. Should be 'his advice'.",
+        "severity": "medium",
+        "category": "translation_accuracy"
+      }
+    ],
+    "common_patterns": "Hindi deck is strong. Postpositions, verb conjugation, gender agreement, and case markers are mostly correct. One gender agreement error and one translation gender mismatch found. Vocabulary is rich and culturally appropriate.",
+    "severity_breakdown": { "critical": 0, "high": 1, "medium": 1, "low": 0 }
+  },
+  "tr": {
+    "sampled": 105,
+    "pass_rate": "84%",
+    "issues": [
+      {
+        "id": "tr-0465",
+        "target": "Turistler pastaı konser salonunda gitti.",
+        "english": "The tourists went the cake at the concert hall.",
+        "issue": "Complete nonsense: grammatically broken Turkish and English. Appears to be corrupted/auto-generated garbage.",
+        "severity": "critical",
+        "category": "grammar"
+      },
+      {
+        "id": "tr-0554",
+        "target": "Fotoğrafçı böreki göl kenarında bıraktı.",
+        "english": "The photographer left the pastry by the lake.",
+        "issue": "Semantically bizarre: a photographer leaving pastry by a lake. Accusative case on 'börek' is also wrong ('böreki' should be 'böreği').",
+        "severity": "high",
+        "category": "grammar"
+      },
+      {
+        "id": "tr-0659",
+        "target": "Babam kebapi camide geldi.",
+        "english": "My father came the kebab at the mosque.",
+        "issue": "Complete nonsense in both languages. Grammatically broken.",
+        "severity": "critical",
+        "category": "grammar"
+      },
+      {
+        "id": "tr-0961",
+        "target": "Satranç yapmaktan hoşlanırım.",
+        "english": "I enjoy doing binicilik.",
+        "issue": "Translation contains untranslated Turkish word 'binicilik' (equestrian). Turkish says chess, English says equestrian sport.",
+        "severity": "critical",
+        "category": "translation_mismatch"
+      },
+      {
+        "id": "tr-1088",
+        "target": "Hasan okuldan şaşkınlıkla geldi.",
+        "english": "Hasan started surprisingly from school.",
+        "issue": "Turkish is borderline ('came from school in surprise') but English translation is broken. 'Started surprisingly' is not English.",
+        "severity": "high",
+        "category": "translation_accuracy"
+      },
+      {
+        "id": "tr-1119",
+        "target": "Komşular eczaneden sabırla tamir etti.",
+        "english": "The neighbors came patiently from the pharmacy.",
+        "issue": "Nonsensical: 'tamir etti' means 'repaired' not 'came'. Semantically and grammatically broken.",
+        "severity": "critical",
+        "category": "grammar"
+      },
+      {
+        "id": "tr-1815",
+        "target": "Eğer rüzgar olmazsa, tiyatro'ya gideriz.",
+        "english": "If there is no bulut, we go to the pansiyon.",
+        "issue": "English translation contains untranslated Turkish words: 'bulut' (cloud) and 'pansiyon' (guesthouse). Turkish and English don't match at all.",
+        "severity": "critical",
+        "category": "translation_mismatch"
+      },
+      {
+        "id": "tr-2200",
+        "target": "Tornacı kar yağarken parkta çocuklara masal anlatıyordu.",
+        "english": "The lathe operator was telling fairy tales to children in the park while it was snowing.",
+        "issue": "Grammatically correct Turkish but semantically bizarre: why would a lathe operator tell fairy tales in a park during snow?",
+        "severity": "medium",
+        "category": "naturalness"
+      },
+      {
+        "id": "tr-2201",
+        "target": "Bu sincap dün sabah pazarlandı.",
+        "english": "This maden was discovered yesterday.",
+        "issue": "Complete nonsense: Turkish says 'This squirrel was marketed yesterday morning', English says 'This mine was discovered yesterday'. Both broken.",
+        "severity": "critical",
+        "category": "grammar"
+      },
+      {
+        "id": "tr-2486",
+        "target": "Otel geleneksel olmasına rağmen, danışman orada çalışmaya devam etti.",
+        "english": "Although the hamam was berrak, the muhabir continued working there.",
+        "issue": "English contains untranslated Turkish: 'hamam' (bath), 'berrak' (clear), 'muhabir' (reporter). Turkish says hotel/consultant, English says bath/reporter.",
+        "severity": "critical",
+        "category": "translation_mismatch"
+      },
+      {
+        "id": "tr-2515",
+        "target": "Kasap pazartesi sabahı fırın önünde çocuklara masal anlatıyordu.",
+        "english": "The butcher was telling fairy tales to children in front of the bakery on Monday morning.",
+        "issue": "Grammatically correct but semantically bizarre: a butcher telling fairy tales at a bakery.",
+        "severity": "medium",
+        "category": "naturalness"
+      },
+      {
+        "id": "tr-2746",
+        "target": "Başkan gün batımında ekşi kebap dağda geldi.",
+        "english": "The president wrote sour kebab on the mountain at sunset.",
+        "issue": "Complete nonsense in both Turkish and English. Totally incoherent.",
+        "severity": "critical",
+        "category": "grammar"
+      },
+      {
+        "id": "tr-2786",
+        "target": "Iskele'daki kervansaray tarafınızdan incelenmesi hususunda arz ederim.",
+        "english": "I respectfully submit the matter of the bilek at the konser salonu for your examination.",
+        "issue": "English contains untranslated Turkish: 'bilek' (wrist), 'konser salonu' (concert hall). Turkish and English do not match.",
+        "severity": "critical",
+        "category": "translation_mismatch"
+      },
+      {
+        "id": "tr-2923",
+        "target": "Boks yapmaktan hoşlanırım.",
+        "english": "I enjoy doing halter.",
+        "issue": "Translation mismatch: Turkish says boxing, English contains untranslated Turkish 'halter' (weightlifting).",
+        "severity": "critical",
+        "category": "translation_mismatch"
+      },
+      {
+        "id": "tr-3069",
+        "target": "Doktor her pazar zor salata bankada sattı.",
+        "english": "The doctor found hard salad at the bank every Sunday.",
+        "issue": "Complete nonsense in both languages.",
+        "severity": "critical",
+        "category": "grammar"
+      },
+      {
+        "id": "tr-3085",
+        "target": "Bu lale her ay bestelendi.",
+        "english": "This iguana was designed recently.",
+        "issue": "Complete nonsense: Turkish says 'This tulip was composed every month', English says 'This iguana was designed recently'. Totally corrupted.",
+        "severity": "critical",
+        "category": "grammar"
+      },
+      {
+        "id": "tr-3112",
+        "target": "Bej pelerin takan rahip medresenin avlusunda ilahi okuyordu.",
+        "english": "The priest wearing a beige cloak was chanting hymns in the courtyard of the madrasa.",
+        "issue": "Grammatically correct but very culturally specific/unusual combination (priest + madrasa).",
+        "severity": "low",
+        "category": "naturalness"
+      }
+    ],
+    "common_patterns": "Turkish deck has SEVERE quality issues. Three distinct problem patterns: (1) Completely nonsensical/corrupted cards with random word combinations (~10 cards), (2) English translations containing untranslated Turkish words like 'bulut', 'pansiyon', 'halter', 'muhabir' (~5 cards), (3) Semantically bizarre but grammatically valid sentences with unlikely subject-action combinations like 'butcher telling fairy tales' (~3 cards). Approximately 16% of sampled cards have issues, with 11 being critical. This suggests a systematic generation/corruption problem affecting hundreds of cards in the full deck.",
+    "severity_breakdown": { "critical": 11, "high": 2, "medium": 2, "low": 1 }
+  },
+  "ru": {
+    "sampled": 105,
+    "pass_rate": "95%",
+    "issues": [
+      {
+        "id": "ru-0651",
+        "target": "Водитель бегал утром в парке на прошлой неделе.",
+        "english": "The driver ran in the morning in the library last week.",
+        "issue": "Translation mismatch: Russian says 'в парке' (in the park), English says 'in the library'.",
+        "severity": "high",
+        "category": "translation_accuracy"
+      },
+      {
+        "id": "ru-1569",
+        "target": "Он вёз домой.",
+        "english": "He was transporting home.",
+        "issue": "Missing required object: 'вёз' (was transporting) is transitive and requires a direct object. Sentence is grammatically incomplete.",
+        "severity": "high",
+        "category": "grammar"
+      },
+      {
+        "id": "ru-0359",
+        "target": "Музыкант редко танцует вальс на вокзале.",
+        "english": "The musician rarely dances a waltz at the station.",
+        "issue": "Semantically bizarre: a musician rarely dancing a waltz at a train station. Pattern of random subject + action + location.",
+        "severity": "low",
+        "category": "naturalness"
+      },
+      {
+        "id": "ru-0566",
+        "target": "Брат обычно играет в шахматы в больнице.",
+        "english": "Brother usually plays chess at the hospital.",
+        "issue": "Semantically odd: playing chess at a hospital is unusual. Same random combination pattern.",
+        "severity": "low",
+        "category": "naturalness"
+      },
+      {
+        "id": "ru-0611",
+        "target": "Программист редко покупает продукты на вокзале.",
+        "english": "The programmer rarely buys groceries at the station.",
+        "issue": "Semantically odd pattern continues: random profession + action + unlikely location.",
+        "severity": "low",
+        "category": "naturalness"
+      },
+      {
+        "id": "ru-1311",
+        "target": "Обычно водитель покупает продукты в больнице.",
+        "english": "Usually the driver buys groceries at the hospital.",
+        "issue": "Same random combination pattern: driver buying groceries at a hospital.",
+        "severity": "low",
+        "category": "naturalness"
+      }
+    ],
+    "common_patterns": "Russian deck has mostly correct grammar (case endings, verb aspect, agreement are solid). Two real issues: one translation mismatch and one incomplete sentence. Also has a recurring pattern of semantically bizarre combinations (random profession + action + unlikely location) that, while grammatically correct, sound unnatural and would never occur in real speech.",
+    "severity_breakdown": { "critical": 0, "high": 2, "medium": 0, "low": 4 }
+  },
+  "summary": {
+    "overall_pass_rate": "95.7%",
+    "cards_with_issues": 50,
+    "languages_ranked_by_quality": [
+      { "lang": "pt", "pass_rate": "100%", "notes": "Flawless - best deck" },
+      { "lang": "de", "pass_rate": "100%", "notes": "Flawless" },
+      { "lang": "es", "pass_rate": "98%", "notes": "Excellent, minor accent issue" },
+      { "lang": "it", "pass_rate": "98%", "notes": "Excellent, minor accent issue" },
+      { "lang": "nl", "pass_rate": "98%", "notes": "Excellent, one typo" },
+      { "lang": "cy", "pass_rate": "98%", "notes": "Very good, one mutation error" },
+      { "lang": "hi", "pass_rate": "98%", "notes": "Very good, one gender agreement error" },
+      { "lang": "fr", "pass_rate": "97%", "notes": "Very good, accent issues" },
+      { "lang": "ru", "pass_rate": "95%", "notes": "Good, but has unnatural sentences and one translation mismatch" },
+      { "lang": "sv", "pass_rate": "88%", "notes": "Concerning: many nonsensical auto-generated-looking cards" },
+      { "lang": "tr", "pass_rate": "84%", "notes": "CRITICAL: many completely corrupted/nonsensical cards and broken translations" }
+    ],
+    "priority_fixes": [
+      "URGENT: Turkish deck needs comprehensive review - ~16% corrupted cards extrapolates to ~630 bad cards in full deck",
+      "HIGH: Swedish deck needs review of nodes where auto-generated filler phrases appear",
+      "MEDIUM: Fix accent/diacritic issues in Spanish (es-1307), Italian (it-3551), French (fr-1643, fr-2754), Dutch (nl-2210, nl-2595)",
+      "MEDIUM: Fix Hindi gender agreement (hi-2486) and Russian missing object (ru-1569)",
+      "LOW: Review Russian deck for semantically bizarre profession+location combinations"
+    ]
+  }
+}

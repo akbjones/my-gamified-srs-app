@@ -11,7 +11,7 @@ interface StudySessionProps {
   onAnswer: (rating: 'AGAIN' | 'HARD' | 'GOOD' | 'EASY') => void;
   onUndoAnswer?: () => void;
   onAbort: () => void;
-  onStudyMore?: () => void;
+  onStudyMore?: (count: number) => void;
   hasMoreCards?: boolean;
   topicCards: QuestCard[];
   autoPlayAudio: boolean;
@@ -34,6 +34,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   const [isFlipped, setIsFlipped] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showGrammar, setShowGrammar] = useState(false);
+  const [studyMoreCount, setStudyMoreCount] = useState(10);
 
   const isComplete = session.currentIndex >= session.queue.length;
   const card = isComplete ? null : session.queue[session.currentIndex];
@@ -77,9 +78,22 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             </button>
           )}
           {hasMoreCards && onStudyMore && (
-            <button onClick={onStudyMore} className="px-8 py-3 btn-primary rounded-xl w-full">
-              Study More Cards
-            </button>
+            <div className="flex items-center gap-2 w-full">
+              <button onClick={() => onStudyMore(studyMoreCount)} className="px-6 py-3 btn-primary rounded-xl flex-1 text-sm font-bold">
+                Study More
+              </button>
+              <input
+                type="number"
+                min={1}
+                max={100}
+                value={studyMoreCount}
+                onChange={e => {
+                  const v = parseInt(e.target.value, 10);
+                  if (!isNaN(v) && v >= 1 && v <= 100) setStudyMoreCount(v);
+                }}
+                className="w-16 h-12 rounded-xl text-center text-sm font-bold bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-primary)] focus:border-[var(--accent)] focus:outline-none"
+              />
+            </div>
           )}
           <button
             onClick={onAbort}
@@ -106,6 +120,31 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   const countReview = remainingQueue.filter(c => c.mastery === 2).length;
 
   const handleFlip = () => setIsFlipped(true);
+
+  // Keyboard shortcuts: 1=Again, 2=Hard, 3=Good, 4=Easy, Space=flip
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+      if (!card) return;
+
+      if (!isFlipped && (e.key === ' ' || e.key === 'Enter')) {
+        e.preventDefault();
+        setIsFlipped(true);
+        return;
+      }
+
+      if (isFlipped && !tileCardIds.has(card.id)) {
+        const ratings = { '1': 'AGAIN', '2': 'HARD', '3': 'GOOD', '4': 'EASY' } as const;
+        const rating = ratings[e.key as keyof typeof ratings];
+        if (rating) {
+          e.preventDefault();
+          submitAnswer(rating);
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [card, isFlipped, tileCardIds]);
 
   const handlePlayAudio = (e: React.MouseEvent) => {
     e.stopPropagation();

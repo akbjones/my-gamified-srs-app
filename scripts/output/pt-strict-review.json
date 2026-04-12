@@ -1,0 +1,130 @@
+{
+  "language": "pt",
+  "total_entries": 5501,
+  "total_checked": 200,
+  "passed": 193,
+  "failed": 7,
+  "pass_rate": "96.5%",
+  "grade": "A",
+  "failures_by_type": {
+    "semantic_fail": 6,
+    "to_past_tense": 1
+  },
+  "failure_examples": [
+    {
+      "word": "tiraria",
+      "en": "to throw",
+      "pos": "v",
+      "google": "I would take",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "throw"
+        ],
+        "gtWords": [
+          "take"
+        ],
+        "gt": "I would take"
+      }
+    },
+    {
+      "word": "guardamos",
+      "en": "to save",
+      "pos": "v",
+      "google": "we keep",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "save"
+        ],
+        "gtWords": [
+          "keep"
+        ],
+        "gt": "we keep"
+      }
+    },
+    {
+      "word": "mando",
+      "en": "to send",
+      "pos": "v",
+      "google": "I command",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "send"
+        ],
+        "gtWords": [
+          "command"
+        ],
+        "gt": "I command"
+      }
+    },
+    {
+      "word": "digo",
+      "en": "to say",
+      "pos": "v",
+      "google": "I mean",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "say"
+        ],
+        "gtWords": [
+          "mean"
+        ],
+        "gt": "I mean"
+      }
+    },
+    {
+      "word": "guardei",
+      "en": "to save",
+      "pos": "v",
+      "google": "I kept",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "save"
+        ],
+        "gtWords": [
+          "keep"
+        ],
+        "gt": "I kept"
+      }
+    },
+    {
+      "word": "acompanho",
+      "en": "i\\",
+      "pos": "n",
+      "google": "I'm following",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "i\\"
+        ],
+        "gtWords": [
+          "follow"
+        ],
+        "gt": "I'm following"
+      }
+    },
+    {
+      "word": "custa",
+      "en": "to cost",
+      "pos": "v",
+      "google": "costs",
+      "issues": "to_past_tense"
+    }
+  ]
+}

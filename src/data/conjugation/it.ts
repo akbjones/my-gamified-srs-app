@@ -10,6 +10,15 @@ type Forms = [string, string, string, string, string, string]; // io, tu, lui, n
 type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive';
 type PartialTenses = Partial<Record<TenseKey, Forms>>;
 const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive'];
+
+const TENSE_LABELS: Record<TenseKey, string> = {
+  present: 'Presente (Present)',
+  preterite: 'Passato Remoto (Preterite)',
+  imperfect: 'Imperfetto (Imperfect)',
+  future: 'Futuro (Future)',
+  conditional: 'Condizionale (Conditional)',
+  subjunctive: 'Congiuntivo (Subjunctive)',
+};
 const REFLEXIVE_PRONOUNS: Forms = ['mi', 'ti', 'si', 'ci', 'vi', 'si'];
 
 // ── Helpers ─────────────────────────────────────────────────
@@ -514,15 +523,16 @@ export function conjugate(infinitive: string): ConjugationTable | null {
   const overrides = IRR[inf];
   const tenses = overrides ? merge(regular, overrides) : regular;
 
-  // Build final tenses record (with reflexive pronouns if needed)
+  // Build final tenses record (with reflexive pronouns and localized labels)
   const finalTenses: Record<string, string[]> = {};
   for (const t of TENSES) {
+    const label = TENSE_LABELS[t];
     if (isReflexive) {
-      finalTenses[t] = tenses[t].map(
+      finalTenses[label] = tenses[t].map(
         (form, i) => REFLEXIVE_PRONOUNS[i] + ' ' + form
       );
     } else {
-      finalTenses[t] = [...tenses[t]];
+      finalTenses[label] = [...tenses[t]];
     }
   }
 

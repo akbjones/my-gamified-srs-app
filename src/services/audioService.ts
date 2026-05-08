@@ -3,6 +3,9 @@ import type { AudioSpeed } from './storageService';
 
 let currentAudio: HTMLAudioElement | null = null;
 let currentAbort: AbortController | null = null;
+// Monotonic token used to bail out of stale playCardAudio calls when a newer
+// one supersedes them (rapid card changes, Listen-mid-autoplay).
+let playToken = 0;
 
 // In-memory cache for Google TTS audio blobs (avoids re-fetching)
 const ttsCache = new Map<string, string>(); // key → objectURL
@@ -135,26 +138,56 @@ export const playCardAudio = async (
 ): Promise<void> => {
   stopAudio();
 
-  // 1. Try pre-recorded MP3 first
+  // 1. Try pre-recorded MP3 first.
+  //
+  // We fetch the file as a blob and create an object URL, then hand that to
+  // the Audio element. Going via blob avoids two failure modes that plagued
+  // the previous direct-`/quest-audio/...` approach:
+  //   1. Range-request stalls — some environments (PWA via service worker,
+  //      certain mobile browsers) never fire `canplaythrough` for small MP3s
+  //      because the buffered-estimate heuristic gets confused and the
+  //      Audio element parks in `networkState=2 readyState=0` indefinitely.
+  //   2. Silent autoplay fallthrough — when the load stalled, we used to
+  //      time out and fall through to browser TTS, which on systems without
+  //      a matching voice is just silence.
   if (audioFile) {
+    const url = `/quest-audio/${audioFile}`;
+    let objectUrl: string | null = null;
+    // Each call gets a token; if a newer call comes in (rapid card changes,
+    // user clicks Listen mid-autoplay), the older call's `currentAudio !==
+    // audio` check will skip play() and the rejection-from-pause noise.
+    const myToken = ++playToken;
     try {
-      const audio = new Audio(`/quest-audio/${audioFile}`);
+      const resp = await fetch(url);
+      if (!resp.ok) throw new Error(`fetch ${resp.status} for ${audioFile}`);
+      const blob = await resp.blob();
+      // If a newer playCardAudio call has superseded this one, bail quietly.
+      if (myToken !== playToken) return;
+      objectUrl = URL.createObjectURL(blob);
+      const audio = new Audio(objectUrl);
       // Pre-recorded files are generated at 0.95x speaking rate, so adjust
       // playback rate to compensate (avoid double-slowdown)
       audio.playbackRate = speed === 1.0 ? 1.05 : speed === 0.8 ? 1.0 : 0.8;
       currentAudio = audio;
-      // Wait for the audio to be loadable before playing — otherwise a 404
-      // resolves play() but fires a media error silently, skipping TTS fallback.
-      await new Promise<void>((resolve, reject) => {
-        audio.oncanplaythrough = () => resolve();
-        audio.onerror = () => reject(new Error('Audio file not found'));
-        // Timeout: if nothing happens in 2s, fall through
-        setTimeout(() => reject(new Error('Audio load timeout')), 2000);
-      });
+      audio.addEventListener('ended', () => {
+        if (objectUrl) URL.revokeObjectURL(objectUrl);
+      }, { once: true });
       await audio.play();
       return;
-    } catch {
+    } catch (err) {
+      if (objectUrl) URL.revokeObjectURL(objectUrl);
+      // If we got superseded, don't clobber the current audio or fall through.
+      if (myToken !== playToken) return;
       currentAudio = null;
+      const msg = (err as Error).message ?? String(err);
+      // Race: stopAudio() was called while play() was still pending. Common
+      // when the user clicks Listen during autoplay or rapidly switches cards.
+      // The newer call is already handling playback; nothing to do.
+      if (msg.includes('interrupted by a call to pause')) return;
+      // Surface real failures so they're visible in DevTools instead of
+      // silently degrading to browser TTS (which on systems without a
+      // matching voice is just silence).
+      console.warn('[audioService] pre-recorded audio failed, falling through to TTS:', msg);
       // Fall through to TTS
     }
   }

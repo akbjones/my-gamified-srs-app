@@ -98,11 +98,14 @@ const POS_LABELS: Record<string, string> = {
   num: 'num',
   part: 'particle',
   postp: 'postp',
+  name: 'name',
 };
 
 /** Sanitize/validate a definition before displaying it.
  *  Falls back to lemma definition when the inflected form's entry is a grammar description. */
 function sanitizeDefinition(en: string, lemmaEn?: string): string | null {
+  if (!en) return lemmaEn || null;
+
   // If definition looks like a grammar description, try lemma instead
   const GRAMMAR_PATTERNS = /^(strong|weak|mixed|nominative|accusative|genitive|dative|oblique|vocative|masculine|feminine|neuter|singular|plural|inflection|form|participle|imperfect|preterite|subjunctive|imperative|conditional|gerund|superlative|comparative|diminutive|augmentative)/i;
 
@@ -213,7 +216,8 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
 };
 
 /** Extract infinitive from dictionary translation like "to open (abrir)" or "to eat" */
-function extractInfinitive(translation: string): string | null {
+function extractInfinitive(translation: string | null | undefined): string | null {
+  if (!translation) return null;
   // Try parenthesized form first: "to open (abrir)"
   const parenMatch = translation.match(/\(([^)]+)\)/);
   if (parenMatch) return parenMatch[1].trim().toLowerCase();
@@ -233,9 +237,14 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
 
   // Determine the display definition: prefer lemma's definition, sanitized
   const displayDefinition = React.useMemo(() => {
-    const lemmaEn = lemmaEntry?.en;
-    const sanitized = sanitizeDefinition(entry.en, lemmaEn);
-    return sanitized || entry.en; // Ultimate fallback: show original
+    try {
+      const lemmaEn = lemmaEntry?.en;
+      const sanitized = sanitizeDefinition(entry.en, lemmaEn);
+      return sanitized || entry.en || 'unknown';
+    } catch (e) {
+      console.error('Definition error for', entry, e);
+      return entry.en || 'unknown';
+    }
   }, [entry.en, lemmaEntry]);
 
   // Display IPA: prefer lemma's IPA for inflected forms
@@ -314,7 +323,8 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
     return null;
   }, [entry, rawToken, language]);
 
-  const conjTable = conjugation();
+  let conjTable: ConjugationTable | null = null;
+  try { conjTable = conjugation(); } catch (e) { console.error('Conjugation error for', rawToken, ':', e); }
 
   useEffect(() => {
     if (!popoverRef.current) return;
@@ -369,14 +379,10 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
       {/* Translation — uses lemma definition when available and sanitized */}
       <div className="text-base font-bold text-[var(--text-primary)] leading-snug">
         {displayDefinition}
-        {/* Show lemma word in parentheses when we're using its definition */}
-        {entry.lemma && lemmaEntry && (
-          <span className="font-normal text-[var(--text-muted)]"> ({entry.lemma})</span>
-        )}
       </div>
 
-      {/* Lemma (base form) — shown for inflected forms without a lemma entry */}
-      {entry.lemma && !lemmaEntry && (
+      {/* Lemma (base form) — always shown with arrow format for consistency */}
+      {entry.lemma && (
         <div className="text-sm text-[var(--text-muted)] mt-0.5">
           → {entry.lemma}
         </div>
@@ -397,6 +403,56 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
           </span>
         </div>
       )}
+
+      {/* Flag this word as wrong */}
+      <div className="mt-3 pt-3 border-t border-[var(--border-color)]">
+        <button
+          onClick={async () => {
+            const btn = document.activeElement as HTMLElement;
+            const originalText = '⚑ Flag as wrong';
+            if (btn) btn.textContent = '⏳ Sending...';
+
+            const flagEntry = {
+              language,
+              word: rawToken,
+              currentTranslation: entry.en || '',
+              currentPos: entry.pos || '',
+              timestamp: Date.now(),
+            };
+
+            // Save locally too (backup)
+            const flags = JSON.parse(localStorage.getItem('quest_flagged_words') || '[]');
+            if (!flags.find((f: any) => f.language === language && f.word === rawToken)) {
+              flags.push(flagEntry);
+              localStorage.setItem('quest_flagged_words', JSON.stringify(flags));
+            }
+
+            // POST to Netlify Forms
+            try {
+              const formData = new URLSearchParams();
+              formData.append('form-name', 'word-flag');
+              formData.append('language', language);
+              formData.append('word', rawToken);
+              formData.append('currentTranslation', entry.en || '');
+              formData.append('currentPos', entry.pos || '');
+              formData.append('sentence', '');
+              formData.append('suggestion', '');
+              await fetch('/', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: formData.toString(),
+              });
+              if (btn) btn.textContent = '✓ Sent. Thanks!';
+            } catch (e) {
+              if (btn) btn.textContent = '✓ Saved locally';
+            }
+            setTimeout(() => { if (btn) btn.textContent = originalText; }, 2000);
+          }}
+          className="text-[10px] font-medium text-[var(--text-muted)] hover:text-orange-500 transition-colors"
+        >
+          ⚑ Flag as wrong
+        </button>
+      </div>
 
       {/* Conjugation toggle */}
       {conjTable && (
@@ -454,4 +510,35 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
   );
 };
 
-export default WordPopover;
+// Error boundary to prevent WordPopover crashes from taking down the whole app
+class WordPopoverErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean; error: Error | null }
+> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+  componentDidCatch(error: Error, info: React.ErrorInfo) {
+    console.error('WordPopover crashed:', error.message, info.componentStack);
+  }
+  render() {
+    if (this.state.hasError) {
+      // Reset on next render cycle so user can try clicking another word
+      setTimeout(() => this.setState({ hasError: false, error: null }), 2000);
+      return this.props.children; // Still render the sentence, just without the popover
+    }
+    return this.props.children;
+  }
+}
+
+const SafeWordPopover: React.FC<React.ComponentProps<typeof WordPopover>> = (props) => (
+  <WordPopoverErrorBoundary>
+    <WordPopover {...props} />
+  </WordPopoverErrorBoundary>
+);
+
+export default SafeWordPopover;

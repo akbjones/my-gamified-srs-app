@@ -4,6 +4,10 @@ import tailwindcss from '@tailwindcss/vite';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
+  preview: {
+    // Allow tunneling services so we can share the preview build externally.
+    allowedHosts: ['.trycloudflare.com', '.ngrok.io', 'langlab-srs.netlify.app', 'localhost'],
+  },
   plugins: [
     react(),
     tailwindcss(),
@@ -45,7 +49,7 @@ export default defineConfig({
         // Only precache the app shell — NOT the 9000+ audio files
         globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
         globIgnores: ['quest-audio/**', 'sw-notifications.js'],
-        maximumFileSizeToCacheInBytes: 8 * 1024 * 1024, // 8 MB — bundle includes multi-language deck/dictionary data
+        maximumFileSizeToCacheInBytes: 20 * 1024 * 1024, // 20 MB — bundle includes 11 language deck/dictionary/conjugation data
         // Runtime cache audio files on demand
         runtimeCaching: [
           {

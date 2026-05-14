@@ -209,7 +209,13 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
 
       {/* Portal popover — rendered at document body to escape overflow containers */}
       {activeEntry && popoverRect && (
-        <PopoverPortal entry={activeEntry} rawToken={activeToken} wordRect={popoverRect} language={language} />
+        <PopoverPortal
+          entry={activeEntry}
+          rawToken={activeToken}
+          wordRect={popoverRect}
+          language={language}
+          onDismiss={() => setActiveIndex(null)}
+        />
       )}
     </div>
   );
@@ -226,7 +232,13 @@ function extractInfinitive(translation: string | null | undefined): string | nul
 }
 
 /** Fixed-position popover rendered via portal to escape overflow:hidden/auto parents */
-const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DOMRect; language: Language }> = ({ entry, rawToken, wordRect, language }) => {
+const PopoverPortal: React.FC<{
+  entry: DictEntry;
+  rawToken: string;
+  wordRect: DOMRect;
+  language: Language;
+  onDismiss: () => void;
+}> = ({ entry, rawToken, wordRect, language, onDismiss }) => {
   // Lemma-first lookup: if entry has a lemma, look it up for display
   const lemmaEntry = React.useMemo(() => {
     if (!entry.lemma) return null;
@@ -353,17 +365,30 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
   const personLabels = PERSON_LABELS[language] || PERSON_LABELS.spanish;
 
   return ReactDOM.createPortal(
-    <div
-      ref={popoverRef}
-      className="fixed z-[9999] w-72 max-w-[90vw] max-h-[70vh] overflow-y-auto bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl shadow-lg p-4 animate-fade-in"
-      style={{
-        top: finalPos.top,
-        left: finalPos.left,
-        opacity: measured ? 1 : 0,
-        pointerEvents: measured ? 'auto' : 'none',
-      }}
-      onClick={(e) => e.stopPropagation()}
-    >
+    <>
+      {/* Transparent backdrop: click anywhere on the screen to dismiss the
+          popover (including the conjugation table inside it). Sits below
+          the popover but above everything else. Uses onMouseDown so it
+          fires before any underlying click/tap can register on app UI. */}
+      <div
+        className="fixed inset-0 z-[9998]"
+        style={{ background: 'transparent' }}
+        onMouseDown={onDismiss}
+        onTouchStart={onDismiss}
+      />
+      <div
+        ref={popoverRef}
+        className="fixed z-[9999] w-72 max-w-[90vw] max-h-[70vh] overflow-y-auto bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl shadow-lg p-4 animate-fade-in"
+        style={{
+          top: finalPos.top,
+          left: finalPos.left,
+          opacity: measured ? 1 : 0,
+          pointerEvents: measured ? 'auto' : 'none',
+        }}
+        onClick={(e) => e.stopPropagation()}
+        onMouseDown={(e) => e.stopPropagation()}
+        onTouchStart={(e) => e.stopPropagation()}
+      >
       {/* Arrow */}
       <div
         className={`
@@ -505,7 +530,8 @@ const PopoverPortal: React.FC<{ entry: DictEntry; rawToken: string; wordRect: DO
           )}
         </div>
       )}
-    </div>,
+      </div>
+    </>,
     document.body
   );
 };

@@ -151,7 +151,11 @@ export const playCardAudio = async (
   //      time out and fall through to browser TTS, which on systems without
   //      a matching voice is just silence.
   if (audioFile) {
-    const url = `/quest-audio/${audioFile}`;
+    // VITE_AUDIO_BASE_URL: set at build time when audio is hosted elsewhere
+    // (e.g. Cloudflare R2). Falls back to relative `/quest-audio` for local dev
+    // where files are served from public/quest-audio.
+    const AUDIO_BASE = (import.meta.env.VITE_AUDIO_BASE_URL || '/quest-audio').replace(/\/$/, '');
+    const url = `${AUDIO_BASE}/${audioFile}`;
     let objectUrl: string | null = null;
     // Each call gets a token; if a newer call comes in (rapid card changes,
     // user clicks Listen mid-autoplay), the older call's `currentAudio !==

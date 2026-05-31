@@ -337,7 +337,7 @@ async function main() {
     const entry = { en: newEntry.en, ipa: oldEntry?.ipa || '', pos: newEntry.pos || oldEntry?.pos || '' };
     if (newEntry._dropLemma) { /* bad lemma dropped */ }
     else if (newEntry.lemma) entry.lemma = newEntry.lemma;
-    else if (oldEntry?.lemma) entry.lemma = oldEntry.lemma;
+    else if (oldEntry?.lemma && !FUNCTION_WORDS[word]) entry.lemma = oldEntry.lemma;
     finalDict[word] = entry;
   }
 

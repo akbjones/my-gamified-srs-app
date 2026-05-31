@@ -1,0 +1,712 @@
+{"id": "nl-0091", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; better: 'The children are no longer hungry' or 'The children don't have hunger anymore'"}
+{"id": "nl-0098", "severity": "medium", "issue": "UNNATURAL", "note": "'lived to be one hundred two' is awkward; better: 'lived to be one hundred and two' or 'lived until he was one hundred two'"}
+{"id": "nl-0103", "severity": "low", "issue": "UNNATURAL", "note": "'I missed you today' is slightly odd in context; better: 'I've missed you today' or 'I missed you'"}
+{"id": "nl-0113", "severity": "low", "issue": "UNNATURAL", "note": "'for the workday' is slightly awkward; more natural: 'for work' or 'before work'"}
+{"id": "nl-0053", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Dutch time expression 'tien over half vier' = 10 minutes past 3:30 = 3:40, not 'twenty to four' (3:40)"}
+{"id": "nl-0053", "fix": {"k": "tien over half vier", "en": "it is ten minutes past three-thirty; twenty minutes to four", "pos": "phrase"}}
+{"id": "nl-0056", "severity": "medium", "issue": "UNNATURAL", "note": "'I feel like having' is acceptable but 'I want' or 'I fancy' is more direct for Dutch 'trek in'"}
+{"id": "nl-0068", "severity": "medium", "issue": "UNNATURAL", "note": "Present perfect 'have had' is unnatural for ongoing pain; 'have had pain' or 'I've had back pain' would be better. Dutch present perfect here suggests current state."}
+{"id": "nl-0069", "severity": "low", "issue": "UNNATURAL", "note": "English 'cooks' sounds abrupt; 'is cooking' better matches Dutch present progressive sense of ondertussen."}
+{"id": "nl-0070", "severity": "low", "issue": "UNNATURAL", "note": "'Follow a course' is awkward English; 'take a photography course' is more natural."}
+{"id": "nl-0084", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "'Bank' in Dutch typically means sofa/couch, not bench. 'The cat sleeps on the sofa' is more accurate to Dutch meaning."}
+{"id": "nl-0001", "severity": "medium", "issue": "UNNATURAL", "note": "Dutch 'Aangenaam kennis te maken' is more naturally 'Pleased to meet you' or 'It's a pleasure to meet you'; 'Nice to meet you' works but is less formal and less idiomatic for this Dutch phrase"}
+{"id": "nl-0004", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Ik kom uit Nederland' can mean 'I am from the Netherlands' (origin) or 'I come from the Netherlands' (arrival); 'I am from' is the more common primary sense"}
+{"id": "nl-0013", "severity": "medium", "issue": "UNNATURAL", "note": "'Tot gauw, we bellen nog!' should be 'See you soon, we'll call each other!' or 'See you soon, we'll be in touch!'; 'we'll call' alone is ambiguous about direction"}
+{"id": "nl-0019", "severity": "medium", "issue": "UNNATURAL", "note": "Dutch 'Ik heb honger en dorst' uses 'I have' construction; English 'I am hungry and thirsty' is natural, but the translation obscures that Dutch uses possessive construction, which is fine—however, the note suggests slight register mismatch in that 'I have hunger and thirst' would be more literal"}
+{"id": "nl-0030", "severity": "low", "issue": "UNNATURAL", "note": "'The sun shines beautifully today' is awkward; more natural: 'The sun is shining beautifully today' or 'It's a beautiful sunny day today'"}
+{"id": "nl-0162", "severity": "medium", "issue": "MISSING_NUANCE", "note": "uitsmijter is a specific Dutch sandwich/dish; translation should clarify or define it"}
+{"id": "nl-0162", "fix": {"k": "uitsmijter", "en": "uitsmijter (Dutch sandwich with eggs, ham, and cheese); open-faced sandwich with eggs", "pos": "n"}}
+{"id": "nl-0185", "severity": "medium", "issue": "UNNATURAL", "note": "\"My name is Pieter\" is awkward; should be \"I am Pieter\" or \"My name's Pieter\""}
+{"id": "nl-0186", "severity": "low", "issue": "UNNATURAL", "note": "\"Excuse me, I am looking for\" is slightly formal; more natural as \"Excuse me, I'm looking for\""}
+{"id": "nl-0189", "severity": "medium", "issue": "UNNATURAL", "note": "\"three beers\" should be \"three glasses of beer\" to parallel \"five glasses of wine\""}
+{"id": "nl-0195", "severity": "medium", "issue": "WRONG_REGISTER", "note": "\"check\" is too informal/colloquial; should be \"consult\" or \"look up\""}
+{"id": "nl-0204", "severity": "low", "issue": "UNNATURAL", "note": "\"Close to the station there is\" is awkward; should be \"Near the station there is\" or \"There is a good bakery close to the station\""}
+{"id": "nl-0123", "severity": "low", "issue": "UNNATURAL", "note": "to his work is awkward; 'to work' is more natural"}
+{"id": "nl-0128", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "doet er ... over = takes (time); 'She takes an average of thirty-five minutes' is incomplete—over what?"}
+{"id": "nl-0129", "severity": "low", "issue": "UNNATURAL", "note": "'medium done' is awkward; 'cooked medium' or 'medium-rare' is more natural"}
+{"id": "nl-0130", "severity": "low", "issue": "UNNATURAL", "note": "for its canals is awkward; 'for her canals' mirrors Dutch politeness but 'for its canals' sounds stilted in English"}
+{"id": "nl-0141", "severity": "low", "issue": "UNNATURAL", "note": "card nl-0141 duplicates nl-0122 semantically (same activity, location shifted); 'She likes reading books in the park' vs 'She likes reading books in the garden'"}
+{"id": "nl-0142", "severity": "low", "issue": "UNNATURAL", "note": "half past nine is technically correct but 'nine-thirty' is more idiomatic in English; 'half ten' in Dutch is 21:30, not 21:00"}
+{"id": "nl-0144", "severity": "medium", "issue": "UNNATURAL", "note": "'tastes excellent this morning' is awkward; 'tastes excellent' or 'tasted excellent this morning' is more natural"}
+{"id": "nl-0249", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Dutch 'tien voor half drie' = 2:20 PM (20 minutes before 2:30), not 2:20 PM as stated. Translation says 'twenty past two' which is 2:20, but source means 2:20 PM which happens to align, yet the phrasing 'ten to two thirty' is clearer. Actually: 'tien voor half drie' = 14:20 (2:20 PM). Translation is correct but awkwardly phrased; should be 'at twenty minutes past two' or 'at ten to half three'."}
+{"id": "nl-0216", "severity": "medium", "issue": "UNNATURAL", "note": "Should be 'the first time I have visited' or 'the first time that I visit' is awkward in English"}
+{"id": "nl-0218", "severity": "medium", "issue": "UNNATURAL", "note": "'I prefer to drink my coffee black' is more natural; current phrasing is word-for-word but stilted"}
+{"id": "nl-0222", "severity": "low", "issue": "MISSING_NUANCE", "note": "hutspot is a specific Dutch comfort food; 'hotchpotch' is archaic/British; 'stew' or 'hutspot (Dutch stew)' better"}
+{"id": "nl-0230", "severity": "low", "issue": "MISSING_NUANCE", "note": "tosti is specifically a toasted sandwich pressed in a machine; 'toasted sandwich' alone misses the specific cooking method"}
+{"id": "nl-0373", "severity": "medium", "issue": "UNNATURAL", "note": "awkward temporal phrasing; better: 'The concert is sold out for next month' → 'The concert is sold out next month' or 'in advance for next month'"}
+{"id": "nl-0383", "severity": "low", "issue": "UNNATURAL", "note": "'in all of the Netherlands' is awkward; prefer 'throughout the Netherlands' or 'across the Netherlands'"}
+{"id": "nl-0341", "severity": "medium", "issue": "UNNATURAL", "note": "Time expression awkward; should be 'at 4:25 PM' or 'at 16:25' without 'twenty-five'"}
+{"id": "nl-0342", "severity": "medium", "issue": "UNNATURAL", "note": "'rings on the desk' is awkward; should be 'rings at the desk' or 'goes off on the desk'"}
+{"id": "nl-0346", "severity": "low", "issue": "UNNATURAL", "note": "'stick a stamp on' is less natural than 'put a stamp on' or 'affix a stamp to'"}
+{"id": "nl-0356", "severity": "medium", "issue": "UNNATURAL", "note": "'feeds the ducks' could be better as 'feeds ducks' (generic action) since no definite article in Dutch context"}
+{"id": "nl-0306", "severity": "low", "issue": "UNNATURAL", "note": "in the church is awkward; use 'in church' or 'at church'"}
+{"id": "nl-0309", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "zenuwachtig voor = nervous about/for; 'for' is acceptable but 'about' is more natural"}
+{"id": "nl-0315", "severity": "low", "issue": "UNNATURAL", "note": "'how nice' is stiff; better as 'how nice it is' or 'it's so nice'"}
+{"id": "nl-0316", "severity": "medium", "issue": "UNNATURAL", "note": "'the hard work' is incorrect; should be 'hard work' or 'working hard' — Dutch 'harde werken' is gerund, not a noun phrase"}
+{"id": "nl-0319", "severity": "low", "issue": "UNNATURAL", "note": "'swimming pool' is redundant; say 'the pool' or 'the swimming pool' but not both concepts"}
+{"id": "nl-0280", "severity": "medium", "issue": "UNNATURAL", "note": "English uses gerund 'dancing' but standard translation should be 'She likes to dance to music' or 'She likes dancing to music' — the preposition 'to' before 'music' is awkward; better: 'She likes to dance to music' or 'She likes dancing with music'"}
+{"id": "nl-0281", "severity": "medium", "issue": "UNNATURAL", "note": "Contradicts nl-0279 thematically; also 'always forget' vs 'never forget' — logical inconsistency in learning deck, though translation itself is correct"}
+{"id": "nl-0287", "severity": "low", "issue": "UNNATURAL", "note": "English phrasing is stiff; more natural: 'Good evening, what a lovely evening' or 'Good evening, isn't it a beautiful evening'"}
+{"id": "nl-0290", "severity": "medium", "issue": "UNNATURAL", "note": "'ask at the counter' is vague; Dutch suggests asking staff/clerk; better: 'I ask the clerk at the counter' or 'I ask about it at the counter'"}
+{"id": "nl-0391", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "nagerecht = dessert/after-dinner course, not 'the dessert' as if already mentioned; 'dessert' alone is more natural"}
+{"id": "nl-0407", "severity": "medium", "issue": "UNNATURAL", "note": "'The heating is set too high' reads awkwardly; better 'The heat is too high' or 'The heating is too high'"}
+{"id": "nl-0409", "severity": "low", "issue": "UNNATURAL", "note": "'repeat that one more time more slowly' uses 'more slowly' awkwardly; better 'repeat that more slowly' or 'say that again more slowly'"}
+{"id": "nl-0412", "severity": "low", "issue": "MISSING_NUANCE", "note": "oliebollen is untranslated; Dutch treat/pastry. Consider whether target audience recognizes this or needs definition"}
+{"id": "nl-0415", "severity": "low", "issue": "UNNATURAL", "note": "'you arrive at a large square' is slightly stiff; 'you'll come to a large square' or 'there is a large square' more natural"}
+{"id": "nl-0452", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; 'The shrimps were freshly caught this morning' should be 'The shrimp was freshly caught this morning' (shrimp typically mass noun in English)"}
+{"id": "nl-0454", "severity": "low", "issue": "UNNATURAL", "note": "missing comma or conjunction; should be 'With the help of technology, students learn faster'"}
+{"id": "nl-0457", "severity": "low", "issue": "MISSING_NUANCE", "note": "'bedankt' is typically used as greeting/closing; 'Thank you for the visit' sounds formal; 'Thanks for coming' or 'Thank you for visiting' more natural"}
+{"id": "nl-0467", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'lies on' suggests position but Dutch 'ligt' is neutral; better: 'The book is on the table' or 'The book lies on the table' if emphasizing resting position"}
+{"id": "nl-0470", "severity": "low", "issue": "UNNATURAL", "note": "present tense 'I go' sounds archaic; should be 'Today I'm going to the market' or 'Today I will go to the market'"}
+{"id": "nl-0477", "severity": "low", "issue": "UNNATURAL", "note": "'it is nice weather' is grammatically awkward; should be 'it's nice weather' or 'the weather is nice today'"}
+{"id": "nl-0484", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Dutch 'allergisch voor' requires 'allergic to', not 'for'. The preposition is wrong in the English."}
+{"id": "nl-0484", "fix": {"k": "voor", "en": "to", "pos": "prep"}}
+{"id": "nl-0485", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'Gezellig' is broader than 'cozy'—it means convivial, pleasant, enjoyable company. Direct 'cozy' is incomplete."}
+{"id": "nl-0490", "severity": "low", "issue": "UNNATURAL", "note": "Word order is awkward. 'A strong coffee I drink every morning' is overly formal. Standard: 'I drink a strong coffee every morning' or 'Every morning I drink a strong coffee.'"}
+{"id": "nl-0501", "severity": "low", "issue": "UNNATURAL", "note": "'The newspaper lies on the doormat' uses 'lies' (reclines), but context suggests 'is lying' or 'is'. 'Liegt' here means 'is positioned', not the verb 'to lie down'."}
+{"id": "nl-0514", "severity": "low", "issue": "UNNATURAL", "note": "English 'each other' is redundant; simpler as 'We met at a conference'"}
+{"id": "nl-0531", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'ijs' here means ice cream, not ice; 'tastes of' should be 'tastes like'"}
+{"id": "nl-0532", "severity": "low", "issue": "UNNATURAL", "note": "Awkward phrasing; better as 'After the traffic light, turn right'"}
+{"id": "nl-0538", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward run-on; better as 'The street is one-way; you have to go around' or 'is a one-way street'"}
+{"id": "nl-0612", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "half negen = half past eight is incorrect; it means 8:30 but Dutch 'half negen' is 'half to nine' (8:30). Better: 'The school begins at half past eight' or 'at 8:30'—current phrasing creates confusion about time convention."}
+{"id": "nl-0616", "severity": "low", "issue": "UNNATURAL", "note": "Missing auxiliary 'have': should be 'I have read a beautiful book yesterday' for past perfect consistency, though simple past is acceptable in English."}
+{"id": "nl-0624", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing. Better: 'I don't have trouble with anything' or 'I have no complaints' or 'Nothing bothers me.'"}
+{"id": "nl-0545", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Dutch 'het waait hard' = 'it blows hard' or 'there is a strong wind', not 'it is windy' (which is static)"}
+{"id": "nl-0545", "fix": {"k": "het waait hard", "en": "it blows hard; the wind blows hard", "pos": "phrase"}}
+{"id": "nl-0546", "severity": "medium", "issue": "UNNATURAL", "note": "Missing 'held' or 'takes place'; 'is every Saturday' is awkward English"}
+{"id": "nl-0546", "fix": {"k": "is", "en": "is held; takes place", "pos": "v"}}
+{"id": "nl-0552", "severity": "low", "issue": "UNNATURAL", "note": "More naturally 'is two kilometers away' rather than 'in two kilometers'"}
+{"id": "nl-0563", "severity": "medium", "issue": "UNNATURAL", "note": "'Occupy ourselves with' is overly formal/archaic; 'We are busy painting' or 'We occupy ourselves with painting' is better, but current phrasing is stilted"}
+{"id": "nl-0566", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Full flavor' is acceptable but 'rich flavor' or 'full-bodied flavor' captures Dutch 'volle smaak' more idiomatically"}
+{"id": "nl-0566", "fix": {"k": "volle smaak", "en": "full flavor; rich flavor", "pos": "phrase"}}
+{"id": "nl-0572", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Perfect present tense in Dutch requires present perfect in English: 'It has been a long time since we have seen each other' or 'saw' is acceptable but 'have seen' is more natural"}
+{"id": "nl-0575", "severity": "low", "issue": "UNNATURAL", "note": "'at my work' is awkward; should be 'at work'"}
+{"id": "nl-0579", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'busy' describes crowds/people; for traffic describe as 'heavy' or 'congested'"}
+{"id": "nl-0582", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'He has butter on his head and doesn't dare say anything' is literal but misses the idiomatic meaning. This is a Dutch figure of speech meaning someone is guilty/has done wrong but says nothing. Translation should capture the idiom or be flagged as requiring cultural context"}
+{"id": "nl-0586", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "'Half past two' is imprecise for 'half drie' in Dutch, which means 2:30 (halfway to three). However, 'half three' in British English equals 2:30, but American English interprets it as 3:30. 'At 2:30' or 'At half past two' is clearer"}
+{"id": "nl-0421", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "half zeven = half past six is incorrect; half zeven = 6:30 in Dutch (half means 'half way to'), but English translation should be 'half past six' which is 6:30—actually correct. However, Dutch 'half zeven' = 6:30, not 'half past six' in standard English phrasing. The issue is the translation is backwards: Dutch counts down, so 'half zeven' = 6:30 but expressed as 'half to seven' in English. Translation should be 'half past six' but this is imprecise."}
+{"id": "nl-0421", "severity": "medium", "issue": "UNNATURAL", "note": "'sets the alarm' should be 'sets her alarm' or 'sets an alarm' for natural English"}
+{"id": "nl-0424", "severity": "medium", "issue": "UNNATURAL", "note": "'opens on the hour' is awkward; should be 'opens every hour' or 'opens on the hour for passage'"}
+{"id": "nl-0426", "severity": "medium", "issue": "UNNATURAL", "note": "'let them know' is fine but 'we'll be late' should specify 'we're going to be late' or 'we will arrive late'"}
+{"id": "nl-0431", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing 'where the nearest bus stop is located please'; should be 'where the nearest bus stop is, please?' or 'can you tell me where the nearest bus stop is?'"}
+{"id": "nl-0432", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'has a knack for' misses that 'een handje van hebben' also means 'has a habit of'; translation is acceptable but 'has a habit of' is more common"}
+{"id": "nl-0433", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'van de kaart zijn' means 'to be out of touch' or 'to be disoriented', not 'exhausted'"}
+{"id": "nl-0439", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'smells' is ambiguous (active vs. passive); 'ruikt aan' = 'smells at/sniffs' (actively); translation misses this distinction"}
+{"id": "nl-0440", "severity": "medium", "issue": "UNNATURAL", "note": "'plays violin' should be 'plays the violin' for natural English"}
+{"id": "nl-0449", "severity": "medium", "issue": "UNNATURAL", "note": "'sharpens his knives' should be 'sharpens his knives' (acceptable) but 'slijpen' in this context could also mean 'polish/grind'; translation is acceptable but context matters"}
+{"id": "nl-0644", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward in English; should be 'The police regularly check the traffic' or 'Regularly, the police check the traffic'"}
+{"id": "nl-0645", "severity": "medium", "issue": "UNNATURAL", "note": "Adverb placement awkward; should be 'The train slowly enters the station' or 'The train enters the station slowly'"}
+{"id": "nl-0657", "severity": "low", "issue": "UNNATURAL", "note": "Minor tense mismatch; 'we are moving' more natural than 'we move' for future near-term action"}
+{"id": "nl-0698", "severity": "medium", "issue": "UNNATURAL", "note": "\"eat cookies with it\" is awkward; should be \"eat cookies while watching\" or \"snack on cookies\""}
+{"id": "nl-0705", "severity": "medium", "issue": "UNNATURAL", "note": "\"Well in time\" is awkward phrasing; should be \"We arrived at the airport well ahead of time\" or \"in good time\""}
+{"id": "nl-0712", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"molen\" can mean windmill or mill; context suggests windmill but both are valid"}
+{"id": "nl-0664", "severity": "medium", "issue": "UNNATURAL", "note": "Subject-verb inversion awkward in English; should be 'He probably won't come to the office tomorrow'"}
+{"id": "nl-0666", "severity": "low", "issue": "UNNATURAL", "note": "'Over the years his collection of paintings grows' is static; 'has grown' or 'grows' with better aspect would be more natural"}
+{"id": "nl-0667", "severity": "low", "issue": "UNNATURAL", "note": "'We are going grocery shopping together early tomorrow' — word order should be 'We are going to go grocery shopping early together tomorrow' or similar"}
+{"id": "nl-0674", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'spa rood' is a specific brand (red/sparkling mineral water), not generic 'sparkling water'"}
+{"id": "nl-0686", "severity": "low", "issue": "UNNATURAL", "note": "'choose their own business' is ambiguous; should clarify 'choose to start their own business' or 'choose self-employment'"}
+{"id": "nl-0756", "severity": "medium", "issue": "UNNATURAL", "note": "Phrasing is awkward; Dutch 'Leuk je te leren kennen' is more naturally rendered as 'Nice to meet you' or 'Pleased to make your acquaintance'"}
+{"id": "nl-0763", "severity": "medium", "issue": "UNNATURAL", "note": "'The long story takes two hours' is awkward; better: 'The long story lasts two hours' or 'Reading the long story takes two hours'"}
+{"id": "nl-0770", "severity": "low", "issue": "WRONG_REGISTER", "note": "'you must be quiet' sounds prescriptive; more natural: 'you have to be quiet' or 'you need to be quiet'"}
+{"id": "nl-0779", "severity": "low", "issue": "UNNATURAL", "note": "'We came home late from work yesterday' is slightly awkward word order; better: 'We came home late from work yesterday' or 'Yesterday we came home late from work'"}
+{"id": "nl-0726", "severity": "medium", "issue": "UNNATURAL", "note": "Dutch 'de deuren openmaken' is better rendered as 'opens its doors' not 'opens ... the doors'; phrasing is awkward"}
+{"id": "nl-0727", "severity": "low", "issue": "MISSING_NUANCE", "note": "'de andere dieren' typically means other dogs/pets in context, not literally all other animals; translation misses this register"}
+{"id": "nl-0743", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'rijdt' means 'drives' or 'travels', not 'sails'; 'sails' is specific to water vessels with sails"}
+{"id": "nl-0748", "severity": "low", "issue": "UNNATURAL", "note": "more natural as 'The zebra crossings are well-lit in the dark' or 'well-illuminated'; 'well lit' is slightly awkward phrasing"}
+{"id": "nl-0781", "severity": "medium", "issue": "UNNATURAL", "note": "More natural: 'The food got cold while we were talking' or 'while we talked'"}
+{"id": "nl-0790", "severity": "low", "issue": "UNNATURAL", "note": "'would rather stay home' is correct but 'prefer to stay home' is more natural"}
+{"id": "nl-0797", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'white snow' is redundant; Dutch 'witte sneeuw' can mean newly fallen snow but English typically just says 'snow covers'; or if emphasis needed, 'The snow covers the entire roof' (sneeuw is inherently white)"}
+{"id": "nl-0809", "severity": "low", "issue": "UNNATURAL", "note": "'Every now and then' is slightly formal; 'Now and then we go out to eat' reads more naturally"}
+{"id": "nl-0810", "severity": "medium", "issue": "UNNATURAL", "note": "'Between activities' is awkward; better: 'Between tasks she reads a chapter' or 'In between she reads a chapter'"}
+{"id": "nl-0811", "severity": "medium", "issue": "UNNATURAL", "note": "\"Since my youth I have loved reading\" is awkward; better: \"Ever since my youth I have loved reading\" or \"Since I was young I have loved reading\""}
+{"id": "nl-0816", "severity": "medium", "issue": "UNNATURAL", "note": "\"Taking turns\" as opening is clunky; better: \"The pupils read a paragraph aloud in turn\" or \"The pupils take turns reading a paragraph aloud\""}
+{"id": "nl-0825", "severity": "low", "issue": "UNNATURAL", "note": "\"in the blue sky\" is slightly awkward; more natural: \"across the blue sky\" or \"shone brightly against the blue sky\""}
+{"id": "nl-0826", "severity": "low", "issue": "UNNATURAL", "note": "\"you'll find a cozy little cafe\" mixes tenses awkwardly; better: \"you can find a cozy little cafe\" or \"there is a cozy little cafe\""}
+{"id": "nl-0837", "severity": "medium", "issue": "UNNATURAL", "note": "\"What luck that we could still get tickets\" is stilted; better: \"What luck that we were still able to get tickets\" or \"It was lucky we could still get tickets\""}
+{"id": "nl-0877", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"een handje helpen\" means to help (lend a hand), not literally \"give you a hand\"; should be \"Can I give you a hand?\" or \"Can I help you?\""}
+{"id": "nl-0894", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"voorstellen\" with \"aan\" means to introduce someone TO someone; \"stel de vergadering voor\" doesn't align—should be \"I introduce the new team member to the meeting\" or more naturally \"I introduce the new team member to the team\" if context differs"}
+{"id": "nl-0899", "severity": "low", "issue": "UNNATURAL", "note": "\"smells very tasty\" is awkward; bread smells good/appealing, not tasty (taste ≠ smell). Better: \"smells very good\" or \"smells delicious\""}
+{"id": "nl-0904", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Even buurten\" does not mean \"Just popping in to say hi\". Likely \"Hoe is het hier?\" alone, or the Dutch phrase is unclear/colloquial."}
+{"id": "nl-0915", "severity": "medium", "issue": "UNNATURAL", "note": "\"did you reserve?\" should be \"did you make a reservation?\" or \"have you reserved a table?\""}
+{"id": "nl-0927", "severity": "medium", "issue": "UNNATURAL", "note": "\"I'll introduce myself\" is future; Dutch \"stel me voor\" is present tense. Should be \"I introduce myself\" or \"I'm introducing myself\"."}
+{"id": "nl-0930", "severity": "low", "issue": "UNNATURAL", "note": "\"tidies up her room neatly\" is slightly redundant (tidy already implies neat). Better: \"she tidies up her room after playing\" or \"she cleans up her room\"."}
+{"id": "nl-0842", "severity": "medium", "issue": "UNNATURAL", "note": "or what's the deal? sounds colloquial; better: 'or how about it?' or 'or shall we?'"}
+{"id": "nl-0844", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Dutch 'Mag ik een glas water voor mijn dochter vragen?' means 'May I ask for a glass of water for my daughter?' but idiomatic English is 'May I get a glass of water for my daughter?' The phrase 'vragen' (ask for) is implicit in the request itself, not a separate action of asking"}
+{"id": "nl-0847", "severity": "low", "issue": "UNNATURAL", "note": "'stands' is archaic/poetic; better: 'is located' or 'sits'"}
+{"id": "nl-0849", "severity": "low", "issue": "UNNATURAL", "note": "'watched' is correct but 'a very interesting documentary' reads awkwardly; better: 'a very interesting documentary' or 'quite an interesting documentary'"}
+{"id": "nl-0855", "severity": "low", "issue": "UNNATURAL", "note": "'As expected the temperatures rise' is future-tense action; should be 'are expected to rise' for proper English construction"}
+{"id": "nl-0857", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Dutch text has spelling error 'wachtten' (should be 'wachtten' or 'wachten'); but more critically: 'waited' is past tense and correct, translation is sound—however flag the source typo"}
+{"id": "nl-0859", "severity": "low", "issue": "UNNATURAL", "note": "'In spite of' is correct but slightly formal; 'Despite' is more natural modern English"}
+{"id": "nl-0862", "severity": "low", "issue": "UNNATURAL", "note": "More natural: 'Where are you from?' rather than 'Where do you come from?'"}
+{"id": "nl-0867", "severity": "low", "issue": "UNNATURAL", "note": "Idiomatic English: 'How is your health?' is awkward; better: 'How are you feeling?' or 'How have you been?'"}
+{"id": "nl-0933", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward: 'in the paper bin away' should be 'away in the paper bin' or restructured"}
+{"id": "nl-0936", "severity": "low", "issue": "UNNATURAL", "note": "'stands at the end' is slightly formal; 'is located' or 'is' more natural in English"}
+{"id": "nl-0944", "severity": "low", "issue": "UNNATURAL", "note": "Same as nl-0936: 'stands at the end' less natural than 'is (located) at the end'"}
+{"id": "nl-0946", "severity": "low", "issue": "UNNATURAL", "note": "'you are not allowed to smoke' is passive; 'you cannot/may not smoke' more natural"}
+{"id": "nl-0948", "severity": "low", "issue": "UNNATURAL", "note": "Missing word: should be 'Unfortunately I cannot come tomorrow' (comma optional but current phrasing acceptable)"}
+{"id": "nl-0955", "severity": "medium", "issue": "UNNATURAL", "note": "Word order: should be 'I would like a cup of coffee' (native speakers don't say 'Gladly I want...')"}
+{"id": "nl-0971", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Dutch 'om de paar minuten' means 'every few minutes', not 'every few minutes' as stated—actually the translation is correct but awkwardly phrased; should be 'take off every few minutes' not the inverted structure"}
+{"id": "nl-0973", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'gebeld met haar verjaardag' is not standard; should be 'gebeld voor haar verjaardag' (called to wish her happy birthday) or just 'gebeld op haar verjaardag' (called on her birthday)—'called my mother for her birthday' misses the Dutch nuance"}
+{"id": "nl-0976", "severity": "low", "issue": "UNNATURAL", "note": "'watches the children as they walk away' is acceptable but 'watches after the children' or 'watches the children leave' more naturally captures 'kijkt na'"}
+{"id": "nl-0981", "severity": "medium", "issue": "UNNATURAL", "note": "Word order: 'throws the trash away in the right bin' is awkward; should be 'throws the trash in the right bin' (the 'away' is redundant with 'in the bin')"}
+{"id": "nl-0991", "severity": "medium", "issue": "UNNATURAL", "note": "'Fortunately it is nice weather today' is awkward; prefer 'Fortunately the weather is nice today' or 'It's fortunately nice weather today'"}
+{"id": "nl-0992", "severity": "low", "issue": "UNNATURAL", "note": "'quickly go' word order is awkward; prefer 'go quickly' or 'quickly have to go'"}
+{"id": "nl-1002", "severity": "low", "issue": "UNNATURAL", "note": "'In the past I lived' is stiff; prefer 'I used to live' or 'I lived in the past'"}
+{"id": "nl-1006", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'tonight' is incorrect; 'vanavond' means 'this evening', not necessarily at night. Should be 'this evening'"}
+{"id": "nl-1015", "severity": "medium", "issue": "UNNATURAL", "note": "'continues again' is redundant; prefer 'resumes' or 'continues' alone"}
+{"id": "nl-1051", "severity": "medium", "issue": "UNNATURAL", "note": "Word order 'Probably he will' is awkward; should be 'He will probably come by tomorrow' or 'Probably he will come by tomorrow' needs better flow"}
+{"id": "nl-1057", "severity": "low", "issue": "UNNATURAL", "note": "'In an hour the movie starts' — natural English would be 'The movie starts in an hour'"}
+{"id": "nl-1059", "severity": "low", "issue": "UNNATURAL", "note": "Inverted structure 'Only on Tuesday does he teach' is grammatically correct but overly formal; 'He only teaches on Tuesday' is more natural"}
+{"id": "nl-1064", "severity": "low", "issue": "UNNATURAL", "note": "'There stands my brother's bicycle' is archaic/poetic; 'My brother's bicycle is over there' or 'My brother's bicycle stands there' is natural"}
+{"id": "nl-1067", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Ik laat de hond in de tuin' means 'I let the dog (go) into/in the garden', not simply 'leave'; should be 'I let the dog into the garden' or 'I put the dog in the garden'"}
+{"id": "nl-1071", "severity": "low", "issue": "UNNATURAL", "note": "'The teacher reads them a little story' — 'a little story' for 'verhaaltje' is slightly off; 'a short story' or 'a story' is more natural"}
+{"id": "nl-1021", "severity": "medium", "issue": "UNNATURAL", "note": "fell/covers mixes tenses awkwardly; 'has fallen and covers' or 'fell and covered' more natural"}
+{"id": "nl-1024", "severity": "low", "issue": "UNNATURAL", "note": "'In the winter' → 'In winter' (article typically omitted with seasons)"}
+{"id": "nl-1025", "severity": "low", "issue": "MISSING_NUANCE", "note": "appeltaart is typically 'apple tart' not 'apple pie'; tart is more accurate"}
+{"id": "nl-1032", "severity": "medium", "issue": "UNNATURAL", "note": "'move the table a bit to the left' more natural than 'move...up'; 'op' here means 'along/over' not directional"}
+{"id": "nl-1037", "severity": "low", "issue": "UNNATURAL", "note": "'three more stops by bus' or 'go three more stops on the bus' smoother"}
+{"id": "nl-1040", "severity": "low", "issue": "UNNATURAL", "note": "'load the car with suitcases' more natural than 'load the car full with'; 'vol' means full state, not process"}
+{"id": "nl-1042", "severity": "low", "issue": "UNNATURAL", "note": "word order awkward; 'may play outside with their friends only after dinner' or restructure"}
+{"id": "nl-1050", "severity": "low", "issue": "UNNATURAL", "note": "'Here my best friend lives' or 'My best friend lives here' more natural than inverted V2"}
+{"id": "nl-1121", "severity": "medium", "issue": "UNNATURAL", "note": "gives his opinion to the group is awkward; 'shares his opinion with' or 'expresses his opinion to' would be more natural"}
+{"id": "nl-1127", "severity": "low", "issue": "UNNATURAL", "note": "Outside the children play is inverted; 'The children play outside' or 'Outside, the children play' reads better"}
+{"id": "nl-1128", "severity": "low", "issue": "UNNATURAL", "note": "Moreover the food here is very tasty needs comma after Moreover for clarity"}
+{"id": "nl-1135", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "geef mijn jas aan de kapstok means 'hang my coat on the rack', not 'put'"}
+{"id": "nl-1137", "severity": "low", "issue": "UNNATURAL", "note": "'the cafe' should be 'the café' (accent) or evaluate if casual English 'cafe' fits register"}
+{"id": "nl-1081", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Missing 'the' before 'whole evening' — should be 'We listened to music the whole evening' or 'We listened to music all evening long'"}
+{"id": "nl-1085", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward word order; should be 'I travel to my work by train' or 'I go to work by train'"}
+{"id": "nl-1086", "severity": "low", "issue": "UNNATURAL", "note": "Slightly awkward; more natural: 'After class the students go home'"}
+{"id": "nl-1087", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Present tense in Dutch but future in English; should be 'I'm taking you to my favorite restaurant' to match the Dutch present tense"}
+{"id": "nl-1088", "severity": "low", "issue": "UNNATURAL", "note": "'Took the dog along' is awkward; clearer: 'He took the dog to the park' or 'He brought the dog to the park'"}
+{"id": "nl-1090", "severity": "low", "issue": "UNNATURAL", "note": "Word order awkward; more natural: 'The children play in the park every day'"}
+{"id": "nl-1091", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Present tense in Dutch but future in English; should be 'We tell them as soon as we know'"}
+{"id": "nl-1093", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Present tense in Dutch but future in English; should be 'After dinner we watch a movie' or 'After eating we watch a movie'"}
+{"id": "nl-1101", "severity": "low", "issue": "UNNATURAL", "note": "'When it is cloudy' is awkward; more natural: 'when it's cloudy'"}
+{"id": "nl-1106", "severity": "low", "issue": "UNNATURAL", "note": "'We eat at my parents'' is awkward; more natural: 'We're eating at my parents' place' or 'We're eating at my parents' house'"}
+{"id": "nl-1108", "severity": "high", "issue": "UNNATURAL", "note": "Word order unnatural; should be 'Indeed, it is a beautiful book' or 'It is indeed a beautiful book'"}
+{"id": "nl-1176", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "bosvruchten = berries, not 'forest fruits'"}
+{"id": "nl-1176", "fix": {"k": "bosvruchten", "en": "berries", "pos": "n"}}
+{"id": "nl-1187", "severity": "medium", "issue": "UNNATURAL", "note": "'fine tricks' is awkward; should be 'finer points' or 'ins and outs'"}
+{"id": "nl-1187", "fix": {"k": "fijne kneepjes", "en": "the ins and outs", "pos": "phrase"}}
+{"id": "nl-1193", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; 'doesn't need to have finished' or 'doesn't have to finish'"}
+{"id": "nl-1197", "severity": "low", "issue": "UNNATURAL", "note": "'when it is dry' is slightly awkward; 'when it's dry weather' or 'on dry days' more natural"}
+{"id": "nl-1150", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "overgenomen means 'took over' or 'adopted' (the practice), not simply 'adopted the recipe'—implies she now uses it herself"}
+{"id": "nl-1151", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "uitgelopen means 'completed' or 'finished' a marathon, not 'finished in' (time)—the English suggests she stopped at that time"}
+{"id": "nl-1154", "severity": "low", "issue": "UNNATURAL", "note": "'prescribes medicine' is correct but 'writes medicine' (direct translation of 'schrijft medicijnen voor') is more natural in Dutch context; English phrasing is acceptable"}
+{"id": "nl-1157", "severity": "low", "issue": "UNNATURAL", "note": "The phrasing 'sails back and forth' is natural, but 'vaart heen en weer' more commonly suggests a ferry route—'travels back and forth' might be clearer"}
+{"id": "nl-1167", "severity": "low", "issue": "UNNATURAL", "note": "'With pleasure' is formal; Dutch 'Met plezier' is less stilted—'I'd be happy to help you' is more natural English"}
+{"id": "nl-1202", "severity": "medium", "issue": "UNNATURAL", "note": "Use 'was looking for' instead of 'looking for' to match Dutch past continuous action"}
+{"id": "nl-1206", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'after hours' suggests time duration; should be 'after lasting for hours' or 'after several hours'"}
+{"id": "nl-1210", "severity": "medium", "issue": "UNNATURAL", "note": "Redundant 'shut'; should be 'He slams the door' or 'He closes the door with a bang'"}
+{"id": "nl-1215", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; should be 'Did you have a nice weekend?' or 'Did you have a good weekend?'"}
+{"id": "nl-1216", "severity": "low", "issue": "WRONG_REGISTER", "note": "'Pleased to meet you' sounds formal/archaic; more natural is 'Nice to meet you' or 'Pleased to meet you' for formal context, but consistency check needed"}
+{"id": "nl-1219", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Dutch says 'holidays begin'; English 'begin' is plural but 'the summer holidays' is treated as plural noun. Should be 'Soon summer holidays begin' or 'Soon the summer holidays will begin'"}
+{"id": "nl-1221", "severity": "medium", "issue": "UNNATURAL", "note": "Fronted adverb sounds awkward; more natural: 'He always forgets his umbrella' (standard word order)"}
+{"id": "nl-1229", "severity": "low", "issue": "MISSING_NUANCE", "note": "'got through' implies barely managing; Dutch 'doorstaan' = to handle well; better: 'She handled the job interview well' or 'She did well in the job interview'"}
+{"id": "nl-1232", "severity": "medium", "issue": "UNNATURAL", "note": "Word order should be 'I quickly write the phone number down' or 'I write down the phone number quickly'"}
+{"id": "nl-1234", "severity": "low", "issue": "UNNATURAL", "note": "Awkward past tense; natural English is 'The birds have flown south' or 'The birds flew to the south'"}
+{"id": "nl-1239", "severity": "low", "issue": "UNNATURAL", "note": "Missing comma or slight rephrasing: 'Just like you, I love music' is more natural"}
+{"id": "nl-1240", "severity": "low", "issue": "UNNATURAL", "note": "'Thank you' reads abruptly; better as 'I'm doing well, thank you' or add punctuation awareness"}
+{"id": "nl-1246", "severity": "low", "issue": "CARD_DUPLICATE", "note": "Identical to nl-1247 except for 'haar vriend' vs 'mijn vriend'"}
+{"id": "nl-1247", "severity": "low", "issue": "CARD_DUPLICATE", "note": "Identical to nl-1246 except for 'mijn vriend' vs 'haar vriend'"}
+{"id": "nl-1249", "severity": "low", "issue": "CARD_DUPLICATE", "note": "Nearly identical to nl-1246/nl-1247; substitutes 'letter' for 'message'"}
+{"id": "nl-1253", "severity": "low", "issue": "UNNATURAL", "note": "'Everywhere in the city' is slightly awkward; better as 'All over the city' or 'Throughout the city'"}
+{"id": "nl-1257", "severity": "medium", "issue": "UNNATURAL", "note": "'call the neighbors after dinner' needs 'up'; better 'We call up the neighbors' or 'We phone the neighbors after dinner'"}
+{"id": "nl-1263", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "opsturen means to send/mail; 'op' is part of verb, not a separate direction. Should be 'I'll send the package to him tomorrow' without 'up'."}
+{"id": "nl-1272", "severity": "medium", "issue": "UNNATURAL", "note": "'gives us homework for the weekend' is awkward; natural English is 'assigns us homework for the weekend' or 'gives us homework to do over the weekend'."}
+{"id": "nl-1282", "severity": "medium", "issue": "UNNATURAL", "note": "'I prefer to go by train instead of flying' is slightly unnatural for this Dutch structure; better: 'I would rather go by train than fly' or 'I prefer to travel by train rather than fly'."}
+{"id": "nl-1286", "severity": "medium", "issue": "UNNATURAL", "note": "'Precisely for that reason' is stiff; more natural: 'That's exactly why it's important' or 'That's precisely why it matters'."}
+{"id": "nl-1324", "severity": "medium", "issue": "UNNATURAL", "note": "negative sense should be 'You must not tell' rather than 'may not'—Dutch 'mag niet' = 'must not' in this context"}
+{"id": "nl-1334", "severity": "low", "issue": "UNNATURAL", "note": "'offered my apologies' is awkward; 'apologized to' more natural"}
+{"id": "nl-1349", "severity": "low", "issue": "UNNATURAL", "note": "'receives us warmly' is more natural word order than 'warmly receives us'"}
+{"id": "nl-1292", "severity": "medium", "issue": "UNNATURAL", "note": "Present perfect 'have found' is awkward; 'found' is more natural in English narrative"}
+{"id": "nl-1293", "severity": "medium", "issue": "UNNATURAL", "note": "'would rather' suggests hypothetical; Dutch 'wil liever' expresses current preference, better as 'I'd rather stay home' or 'I prefer to stay home'"}
+{"id": "nl-1294", "severity": "medium", "issue": "UNNATURAL", "note": "'we are going outside anyway' is redundant; 'Desondanks' already means 'nevertheless', so 'anyway' is surplus"}
+{"id": "nl-1302", "severity": "low", "issue": "UNNATURAL", "note": "'would like to' is polite but stiff; 'We'd like' or 'We would like' is more natural register"}
+{"id": "nl-1305", "severity": "low", "issue": "UNNATURAL", "note": "'In the meantime I wait' is present tense but sounds static; 'I'm waiting' better captures ongoing state"}
+{"id": "nl-1313", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'vangt aan' is 'starts/begins'; English should be 'begins' not 'starts' for consistency with the verb form, or better: 'The meeting begins at two o'clock'"}
+{"id": "nl-1317", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'doorgerend' is past participle of 'doorrennen' (to run through); translation 'ran through' is correct but phrasing 'ran all through' would be clearer"}
+{"id": "nl-1351", "severity": "medium", "issue": "UNNATURAL", "note": "would like to register is correct but 'enroll in' is more natural than 'register for' in this context"}
+{"id": "nl-1351", "fix": {"k": "aanmelden", "en": "to enroll; to register", "pos": "v"}}
+{"id": "nl-1355", "severity": "medium", "issue": "UNNATURAL", "note": "'are going to' is future continuous; 'will go' or 'are going' more natural for stated plan"}
+{"id": "nl-1363", "severity": "medium", "issue": "UNNATURAL", "note": "'follow a training' is awkward; should be 'to undertake a training' or 'to do a training course'"}
+{"id": "nl-1364", "severity": "low", "issue": "UNNATURAL", "note": "'sailed across the lake by boat' is redundant; 'sailed across the lake' is sufficient"}
+{"id": "nl-1365", "severity": "low", "issue": "MISSING_NUANCE", "note": "'sleutelen' often implies working on mechanics with some struggle; 'tinkered' captures this but 'worked on' is also valid"}
+{"id": "nl-1378", "severity": "medium", "issue": "UNNATURAL", "note": "'may not do' with 'according to the doctor' is awkward; better: 'is not allowed to do heavy work by doctor's orders' or 'cannot do heavy work according to the doctor'"}
+{"id": "nl-1452", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; 'be more economical with' is stilted. Better: 'We must use energy more carefully' or 'We must be more sparing with energy.'"}
+{"id": "nl-1457", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'It is my pleasure' is overly formal for Dutch context; 'I'm pleased to meet you' is more natural."}
+{"id": "nl-1465", "severity": "low", "issue": "UNNATURAL", "note": "Word order feels reversed. More natural: 'He tells us a funny story' or 'He tells a funny story to us' (latter acceptable but former better)."}
+{"id": "nl-1467", "severity": "low", "issue": "UNNATURAL", "note": "'We wash our face' should be 'We wash our faces' (plural, since 'we' implies multiple people)."}
+{"id": "nl-1412", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "plural 'jas' → should be 'coats' not 'coat'"}
+{"id": "nl-1412", "fix": {"k": "jas", "en": "coat; jacket", "pos": "n"}}
+{"id": "nl-1421", "severity": "medium", "issue": "UNNATURAL", "note": "'at the rice table' is awkward; 'rijsttafel' is a specific Indonesian meal service, should translate as 'We eat Indonesian food (rijsttafel) tonight' or similar"}
+{"id": "nl-1421", "fix": {"k": "rijsttafeltje", "en": "rijsttafel; Indonesian rice table meal", "pos": "n"}}
+{"id": "nl-1422", "severity": "low", "issue": "UNNATURAL", "note": "'little park' is diminutive but sounds awkward; 'small park' or 'park' more natural"}
+{"id": "nl-1432", "severity": "low", "issue": "UNNATURAL", "note": "'chocolate milk' is odd phrasing; Dutch 'warme chocomel' is typically 'hot chocolate' in English"}
+{"id": "nl-1432", "fix": {"k": "chocomel", "en": "hot chocolate; chocolate milk", "pos": "n"}}
+{"id": "nl-1436", "severity": "medium", "issue": "UNNATURAL", "note": "awkward word order; should be 'I'm not allowed by the landlord to keep pets' or 'The landlord won't allow me to keep pets'"}
+{"id": "nl-1383", "severity": "medium", "issue": "UNNATURAL", "note": "stamppot is a specific dish; 'mashed pot' is vague. Better: 'The stamppot with smoked sausage' or define stamppot"}
+{"id": "nl-1384", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Dutch idiom 'kan zijn geluk niet op' means 'is overjoyed/ecstatic', not literal 'cannot express his luck'. Current translation misses the mark."}
+{"id": "nl-1387", "severity": "medium", "issue": "UNNATURAL", "note": "'arms himself against' is literal/awkward. Better: 'He wraps himself against' or 'He protects himself from'"}
+{"id": "nl-1388", "severity": "low", "issue": "UNNATURAL", "note": "'went to stand in the line' is wordy. Better: 'She joined the line at the cash register' or 'got in line'"}
+{"id": "nl-1396", "severity": "low", "issue": "UNNATURAL", "note": "'increasingly better' is awkward phrasing. Better: 'speaks Dutch increasingly well' or 'speaks better and better Dutch'"}
+{"id": "nl-1403", "severity": "low", "issue": "UNNATURAL", "note": "'have bloomed beautifully' is slightly awkward. Better: 'bloomed beautifully in spring' (remove 'have'/'are')"}
+{"id": "nl-1408", "severity": "low", "issue": "UNNATURAL", "note": "'comes back again tomorrow' uses present tense awkwardly. Better: 'He'll come back tomorrow' or 'He is coming back tomorrow'"}
+{"id": "nl-1409", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Dutch 'Het gaat prima, en met jou?' is more naturally 'I'm doing fine, how about you?' or 'Things are going well, and with you?' Current rendering is incomplete/unclear as answer."}
+{"id": "nl-1541", "severity": "medium", "issue": "UNNATURAL", "note": "five minutes' walk is awkward; prefer 'five minutes away on foot' or 'a five-minute walk'"}
+{"id": "nl-1557", "severity": "low", "issue": "UNNATURAL", "note": "'since my fifth year of life' is overly literal; 'since I was five' is more natural"}
+{"id": "nl-1560", "severity": "medium", "issue": "UNNATURAL", "note": "'insists on preparing' misses the emphatic sense; better 'absolutely insists on preparing' or 'wants to prepare the food himself no matter what'"}
+{"id": "nl-1474", "severity": "medium", "issue": "UNNATURAL", "note": "Should be 'work for us' or 'work at our company', not 'work with us'"}
+{"id": "nl-1479", "severity": "medium", "issue": "UNNATURAL", "note": "'rides with her bicycle' is awkward; should be 'rides her bicycle' or 'cycles'"}
+{"id": "nl-1490", "severity": "medium", "issue": "UNNATURAL", "note": "'sets his navigation to' is odd phrasing; should be 'sets his GPS for' or 'navigates to'"}
+{"id": "nl-1491", "severity": "low", "issue": "WRONG_REGISTER", "note": "'family doctor' is somewhat dated/formal; 'general practitioner' or 'GP' is more standard"}
+{"id": "nl-1499", "severity": "medium", "issue": "UNNATURAL", "note": "'may not complain' is awkward for permission; should be 'shouldn't complain' or 'mustn't complain' for obligation"}
+{"id": "nl-1561", "severity": "medium", "issue": "UNNATURAL", "note": "\"may count myself lucky\" is awkward; prefer \"can count myself lucky\" or \"am fortunate\""}
+{"id": "nl-1567", "severity": "medium", "issue": "UNNATURAL", "note": "\"makes herself scarce\" is idiomatic but the Dutch uses \"uit de voeten\" which better means \"makes a quick getaway\" or \"leaves hastily\""}
+{"id": "nl-1575", "severity": "low", "issue": "UNNATURAL", "note": "\"hangs the laundry outside\" is correct but Dutch idiom emphasizes the hanging action; phrasing is acceptable"}
+{"id": "nl-1588", "severity": "low", "issue": "UNNATURAL", "note": "\"no toilet nearby here\" is redundant (\"nearby\" + \"here\"); use \"There is no toilet nearby\" or \"There are no toilets in the area\""}
+{"id": "nl-1503", "severity": "medium", "issue": "UNNATURAL", "note": "\"further on the left side\" is awkward; should be \"further down on the left\" or \"further ahead on the left side\""}
+{"id": "nl-1516", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"hetzij...hetzij\" means \"whether...or\" but the translation omits the second element; should be \"Whether because of the rain or because of the cold, many spectators withdrew.\""}
+{"id": "nl-1517", "severity": "medium", "issue": "UNNATURAL", "note": "\"mistakes the name of\" is awkward; more natural: \"She often gets her new colleague's name wrong at the office.\""}
+{"id": "nl-1523", "severity": "low", "issue": "UNNATURAL", "note": "\"a kiss on his cheek\" is slightly formal/stiff; more natural: \"She gives him a kiss on the cheek.\""}
+{"id": "nl-1524", "severity": "medium", "issue": "UNNATURAL", "note": "\"compliments her on\" is awkward with \"with\"; should be \"compliments her on the excellent work\" (already in translation, but awkward phrasing in Dutch-to-English bridge suggests \"compliments her with\" may reflect source)"}
+{"id": "nl-1622", "severity": "low", "issue": "UNNATURAL", "note": "\"taxi\" needs article: should be \"the taxi\""}
+{"id": "nl-1625", "severity": "medium", "issue": "UNNATURAL", "note": "\"smoking\" is ambiguous; should be \"being smoked\" or \"curing\" to clarify the sausage is the object being smoked, not actively smoking"}
+{"id": "nl-1634", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "\"pinbetalingen\" (PIN payments/card payments) is too specific; Dutch typically means debit/credit card payments generically, not specifically PIN"}
+{"id": "nl-1641", "severity": "low", "issue": "UNNATURAL", "note": "\"comes late to his work\" should be \"arrives late for work\" or \"arrives late at work\""}
+{"id": "nl-1643", "severity": "low", "issue": "UNNATURAL", "note": "\"drive by car\" is redundant; should be simply \"drive\" or \"go by car\""}
+{"id": "nl-1646", "severity": "low", "issue": "UNNATURAL", "note": "\"cycle here on the sidewalk\" should be \"cycle on the sidewalk here\" (word order)"}
+{"id": "nl-1658", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; 'We don't overexert ourselves' or 'We take it easy' would be more natural"}
+{"id": "nl-1659", "severity": "low", "issue": "UNNATURAL", "note": "'We head to' or 'We go to' is more idiomatic than 'make our way to'"}
+{"id": "nl-1661", "severity": "low", "issue": "UNNATURAL", "note": "'on time for the start' is slightly stiff; 'in time for the beginning' or 'for when the movie started' flows better"}
+{"id": "nl-1666", "severity": "low", "issue": "UNNATURAL", "note": "'working on' is correct but 'He has been working on an important report behind his computer all afternoon' reads more naturally"}
+{"id": "nl-1595", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Dutch has 'de weg aanwijzen' (point out the way) but 'aanwijzen aan' means 'to assign to' or 'to point out to'. The English translation is awkward and slightly incorrect in meaning."}
+{"id": "nl-1599", "severity": "medium", "issue": "UNNATURAL", "note": "English 'operates tomorrow' is awkward; should be 'will perform surgery' or 'will operate tomorrow' sounds better as 'will be performing surgery'."}
+{"id": "nl-1606", "severity": "medium", "issue": "UNNATURAL", "note": "English word order is awkward. Better: 'I remember well the moment when everything changed' or 'I remember the moment when everything changed well'."}
+{"id": "nl-1618", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Not the intention' is slightly awkward English for the Dutch idiom. Better: 'It's not intended that you come so late' or 'You're not supposed to come so late'."}
+{"id": "nl-1620", "severity": "medium", "issue": "UNNATURAL", "note": "English 'prepare themselves for' can be simplified. Better: 'The students thoroughly prepare for the difficult university entrance exam' (reflexive pronoun is redundant in English)."}
+{"id": "nl-1757", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "belangijkste is a typo in source; translation should be 'The most important meeting is tomorrow morning at nine o'clock' (missing time marker)"}
+{"id": "nl-1768", "severity": "medium", "issue": "UNNATURAL", "note": "'walks the stairs' is awkward; should be 'walks up the stairs' or 'takes the stairs'"}
+{"id": "nl-1681", "severity": "low", "issue": "UNNATURAL", "note": "awkward phrasing; 'more outside than now' is clunky"}
+{"id": "nl-1683", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'zich van de wijs brengen' means to disconcert/throw off balance, not 'confuse'"}
+{"id": "nl-1686", "severity": "low", "issue": "UNNATURAL", "note": "should be 'I won't settle for' or 'I'm not satisfied with'"}
+{"id": "nl-1691", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'zich laten kennen' in negative context means 'let herself be stopped/deterred', not 'known'"}
+{"id": "nl-1693", "severity": "low", "issue": "UNNATURAL", "note": "inversion for emphasis in Dutch; 'An interesting book I am reading' sounds awkward in English"}
+{"id": "nl-1694", "severity": "low", "issue": "UNNATURAL", "note": "should be 'as a side dish for' or 'to go with the curry', not 'with the curry'"}
+{"id": "nl-1697", "severity": "low", "issue": "UNNATURAL", "note": "should be 'still remembers' not 'remembers...well'"}
+{"id": "nl-1704", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'negentiendrieënzestig' is 1963, not 'nineteen sixty-three' (that's 1963 differently phrased; no error actually)"}
+{"id": "nl-1707", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'zich in de kaart kijken laten' means 'let someone see one's cards/reveal one's hand'; phrasing is backwards"}
+{"id": "nl-1709", "severity": "low", "issue": "UNNATURAL", "note": "awkward reflexive; 'We settled ourselves' or 'We curled up' is more natural"}
+{"id": "nl-1849", "severity": "medium", "issue": "UNNATURAL", "note": "\"fell quietly\" is awkward; \"fell softly\" or \"drifted\" would be more natural for snow"}
+{"id": "nl-1849", "fix": {"k": "stil", "en": "softly; gently; silently", "pos": "adv"}}
+{"id": "nl-1712", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "huurauto means rental car; 'a rental car' is redundant/tautological. Should be 'We rent a car at the airport for vacation.'"}
+{"id": "nl-1718", "severity": "medium", "issue": "UNNATURAL", "note": "English 'couldn't wish for better' is conditional past; Dutch uses present tense for habitual/general statement. Better: 'She can't wish for better colleagues.' or 'She could ask for no better colleagues.'"}
+{"id": "nl-1722", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "zich een ongeluk buitelen is a Dutch idiom meaning to tumble/play recklessly, not literally 'tumbles around crazily'. Better: 'She tumbles about playfully on the playground.' or 'She plays recklessly on the playground.'"}
+{"id": "nl-1724", "severity": "medium", "issue": "UNNATURAL", "note": "'Profiles himself as' is awkward. Better: 'He positions himself as an expert' or 'He establishes himself as an expert in his field.'"}
+{"id": "nl-1727", "severity": "medium", "issue": "UNNATURAL", "note": "'Wet-shaves' is awkward compound. Better: 'He shaves with shaving foam and a razor.' or 'He shaves wet with shaving foam and a razor.'"}
+{"id": "nl-1731", "severity": "low", "issue": "UNNATURAL", "note": "'The bells rang at twelve o'clock in the afternoon' is slightly redundant (noon already specifies afternoon). Better: 'The bells rang at noon.' or 'The bells rang at twelve o'clock.'"}
+{"id": "nl-1733", "severity": "low", "issue": "UNNATURAL", "note": "'worries' should be 'are worried' or 'worry'. Better: 'In particular the younger generation is worried about the climate.' or 'worries about.'"}
+{"id": "nl-1738", "severity": "low", "issue": "UNNATURAL", "note": "'have a nice day today' is slightly redundant (today already implicit in good morning). Better: 'Good morning, have a nice day!' or 'Good morning, hope you have a nice day!'"}
+{"id": "nl-1805", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "bank = bench/sofa, not couch; context suggests she's sitting on a bench in public or at home on a sofa, but 'couch' is specific furniture"}
+{"id": "nl-1816", "severity": "medium", "issue": "UNNATURAL", "note": "'on-ramp towards' is awkward; should be 'toward the highway on-ramp in the direction of' or 'to the on-ramp heading toward'"}
+{"id": "nl-1823", "severity": "low", "issue": "UNNATURAL", "note": "'to the class' is awkward English; should be 'to her class' or simply 'to the class' without emphasis"}
+{"id": "nl-1826", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "vermeiden = to avoid, not to entertain; Dutch sentence makes no sense. Should check source—likely meant 'vermaken' (to amuse/entertain)"}
+{"id": "nl-1830", "severity": "medium", "issue": "UNNATURAL", "note": "'with balsamic' is incomplete; should be 'with balsamic vinegar' or restructure as 'in olive oil and balsamic vinegar'"}
+{"id": "nl-1826", "fix": {"k": "vermeiden", "en": "to avoid", "pos": "v"}}
+{"id": "nl-1899", "severity": "medium", "issue": "UNNATURAL", "note": "toward work (destination) requires 'towards' not 'to'; better: 'He cycles against the wind towards his work.'"}
+{"id": "nl-1911", "severity": "medium", "issue": "UNNATURAL", "note": "incomplete clause; should be 'The strongest coffee you'll find is at this barista' or 'The strongest coffee is found at this barista.'"}
+{"id": "nl-1867", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "half acht = half past seven is incorrect; half acht means 7:30 (half before 8), not 7:30 phrased as 'half past seven'"}
+{"id": "nl-1868", "severity": "low", "issue": "UNNATURAL", "note": "'travel two hours every day to my work' is awkward; better as 'travel two hours to work every day' or 'spend two hours traveling to work each day'"}
+{"id": "nl-1872", "severity": "low", "issue": "UNNATURAL", "note": "'when it is too warm' is technically correct but 'when the room is too warm' is more natural"}
+{"id": "nl-1876", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'for the restaurant' misses the meaning; 'voor' here means 'in front of' not 'for'"}
+{"id": "nl-1879", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'The colorful market is every Saturday' is ungrammatical; should be 'The colorful market is held every Saturday' or 'happens every Saturday'"}
+{"id": "nl-1880", "severity": "low", "issue": "UNNATURAL", "note": "'The train drives through the tunnel' is slightly awkward; 'travels through' or 'goes through' is more natural for trains"}
+{"id": "nl-1883", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'introduce ourselves to the group' changes the meaning; 'elkaar voorstellen' means 'introduce each other/ourselves to one another', not to the group"}
+{"id": "nl-1771", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Dutch says 'even harder' (nog moeilijker), English says 'even harder' which is correct, but the structure 'the previous one we took last month' is awkward—should be 'the previous one from last month' or 'that we did last month'"}
+{"id": "nl-1772", "severity": "medium", "issue": "UNNATURAL", "note": "'take at least two more hours before' is awkward; should be 'take at least two more hours until' or 'be at least two more hours'"}
+{"id": "nl-1773", "severity": "low", "issue": "UNNATURAL", "note": "'A warm welcome' is slightly stiff; more natural: 'Welcome to our department' or 'You are warmly welcome'"}
+{"id": "nl-1779", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'half past seven' is wrong; 'half acht' in Dutch means 7:30 (half way to 8), not 7:30—this is correct, but phrasing should clarify: 'at half seven' or 'at 7:30'"}
+{"id": "nl-1785", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Dutch 'groter' means 'bigger/taller', English 'taller' is correct, but comparing to 'older brother' suggests age, not height—likely context mismatch or the Dutch may have intended 'taller' specifically"}
+{"id": "nl-1792", "severity": "medium", "issue": "UNNATURAL", "note": "'go past the supermarket after work' suggests passing by; Dutch 'langs gaan' means 'to stop by/visit', so should be 'I stop by the supermarket after work'"}
+{"id": "nl-1795", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'allergootste' appears to be a typo or non-word in Dutch; likely meant 'grootste' (biggest). Cannot properly audit without correct source"}
+{"id": "nl-1799", "severity": "low", "issue": "UNNATURAL", "note": "'wear a tie to my work' should be 'wear a tie to work' (without 'my')"}
+{"id": "nl-1921", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "sloot = ditch/canal but 'bank' is questionable for sloot; 'oever' = bank/shore but sloot typically has 'oevers' (banks). Translation acceptable but 'bank of the canal' more natural"}
+{"id": "nl-1931", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'naar het picknick' is Dutch error (should be 'naar de picknick'), but English 'to the picnic' is correct; however, 'a basket of fresh fruit' misses 'with' nuance—'mand met' = 'basket with'"}
+{"id": "nl-1946", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'De kleiner steden' is ungrammatical Dutch (should be 'De kleinere steden'); but accepting the source, 'smaller' is correct. However, the Dutch sentence itself is malformed."}
+{"id": "nl-1951", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Dutch 'zesenzeventig' = 76, not 76; English says 'seventy-six' which is correct numerically, but the Dutch number 'zesenzeventig' actually means 76. This appears correct on review—no issue."}
+{"id": "nl-1952", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing 'The brightest colors you find' is awkward; should be 'You find the brightest colors' or 'The brightest colors are found'"}
+{"id": "nl-1959", "severity": "low", "issue": "UNNATURAL", "note": "'were lying...the whole time' is slightly stiff; more natural as 'had been lying the whole time' or 'were there the whole time'"}
+{"id": "nl-1965", "severity": "low", "issue": "UNNATURAL", "note": "'lives near the school' works, but Dutch 'vlakbij' suggests 'very near' or 'close by'—'lives very close to the school' is more precise"}
+{"id": "nl-1968", "severity": "medium", "issue": "UNNATURAL", "note": "'Just now I read' is awkward word order; should be 'I just read' or 'I just now read'"}
+{"id": "nl-1992", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "opleiding = training/study program, not 'education' (which is onderwijs). Should be 'to start a new training course' or 'to begin a new program of study'"}
+{"id": "nl-1992", "fix": {"k": "opleiding", "en": "training course; educational program", "pos": "n"}}
+{"id": "nl-1996", "severity": "low", "issue": "UNNATURAL", "note": "'wears a red dress to the party' is acceptable but 'wears a red dress to the party' should be 'wears a red dress to the party' — actually acceptable. On reconsideration: 'draagt naar' typically means 'wears to' as destination but could be clearer as 'She's wearing a red dress to the party'"}
+{"id": "nl-2057", "severity": "low", "issue": "UNNATURAL", "note": "Awkward phrasing; better: 'We take the bus to the center' or 'We go to the center by bus' (current word order is stilted)"}
+{"id": "nl-2060", "severity": "medium", "issue": "UNNATURAL", "note": "Dutch word order (V2) preserved unnaturally in English; should be 'You get a sharper image with this camera'"}
+{"id": "nl-2062", "severity": "medium", "issue": "UNNATURAL", "note": "Dutch object-first order preserved unnaturally; should be 'She sings a cheerful song in the car'"}
+{"id": "nl-2014", "severity": "medium", "issue": "UNNATURAL", "note": "English 'of the street' is awkward; 'around the corner' is the natural idiom without 'of'"}
+{"id": "nl-2025", "severity": "low", "issue": "UNNATURAL", "note": "'I originally come from' is slightly awkward; 'I'm originally from' is more natural"}
+{"id": "nl-2027", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'smokes' suggests active smoking; better 'gives off smoke' or 'is smoking'"}
+{"id": "nl-2028", "severity": "low", "issue": "MISSING_NUANCE", "note": "'sharp' is one sense but 'aged' or 'mature' may be the primary meaning; 'scherpe kaas' typically refers to the aging level"}
+{"id": "nl-2033", "severity": "low", "issue": "UNNATURAL", "note": "'drives on the highway' is acceptable but 'drives along the highway' is more idiomatic"}
+{"id": "nl-2102", "severity": "medium", "issue": "UNNATURAL", "note": "\"from our street\" is awkward; should be \"from our street\" or better \"on our street\". Dutch 'om de hoek van' typically means 'around the corner of' a location, so 'on our street' fits better."}
+{"id": "nl-2103", "severity": "low", "issue": "UNNATURAL", "note": "\"the most famous building of the city\" is grammatically correct but slightly stiff; 'in the city' is more natural in English."}
+{"id": "nl-2108", "severity": "medium", "issue": "UNNATURAL", "note": "\"Barely had he opened the door when\" is correct but archaic/formal inversion. More natural: 'He had barely opened the door when' or 'Hardly had he opened the door before'."}
+{"id": "nl-2117", "severity": "low", "issue": "WRONG_REGISTER", "note": "\"pupil\" is British/formal; \"student\" is more standard in American English and more common for this context."}
+{"id": "nl-2131", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; 'liked to dance' better as 'enjoyed dancing' or 'loved to dance'"}
+{"id": "nl-2132", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "rain cannot literally be 'warmer' than other rain; likely means 'feels warmer' or context is lost"}
+{"id": "nl-2137", "severity": "medium", "issue": "UNNATURAL", "note": "'most fun excursion' is awkward; 'the most fun excursion was' or 'the best excursion' flows better"}
+{"id": "nl-2151", "severity": "medium", "issue": "UNNATURAL", "note": "'is still being sent' is awkward; 'will be sent' or 'is being sent' clearer"}
+{"id": "nl-2153", "severity": "medium", "issue": "UNNATURAL", "note": "'recommends today's daily special' is redundant; 'the waiter recommends the daily special today' or 'the daily special' alone"}
+{"id": "nl-2156", "severity": "low", "issue": "MISSING_NUANCE", "note": "'snoepjes' typically means 'sweets/candy', not 'little sweets'; consider 'candy' or 'sweets'"}
+{"id": "nl-2165", "severity": "medium", "issue": "UNNATURAL", "note": "\"until next time\" is awkward; \"see you next time\" or \"until we meet again\" more idiomatic"}
+{"id": "nl-2167", "severity": "low", "issue": "UNNATURAL", "note": "\"turn out like that\" slightly awkward; \"turn out that way\" more natural"}
+{"id": "nl-2172", "severity": "medium", "issue": "UNNATURAL", "note": "\"Except on Friday\" at sentence start is stilted; better: \"The museum is open every day except Friday\""}
+{"id": "nl-2174", "severity": "low", "issue": "UNNATURAL", "note": "\"only eat when\" should be \"don't eat until\" or \"wait to eat until\"; current phrasing suggests eating once only"}
+{"id": "nl-2178", "severity": "low", "issue": "UNNATURAL", "note": "\"sees her friends little\" is awkward; better: \"doesn't see her friends much\" or \"rarely sees her friends\""}
+{"id": "nl-2179", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"the bridge is open\" suggests bridge is operational; Dutch \"open\" here means raised/open for boat traffic; better: \"because the bridge is raised\""}
+{"id": "nl-2185", "severity": "low", "issue": "UNNATURAL", "note": "\"Only tomorrow will the results come\" inverted syntax is awkward; better: \"The results will only come tomorrow\""}
+{"id": "nl-2186", "severity": "low", "issue": "UNNATURAL", "note": "\"it was fun\" misses the Dutch sense of \"gezellig\" (cozy/convivial); better: \"it was lovely\" or \"it was delightful\""}
+{"id": "nl-2212", "severity": "medium", "issue": "UNNATURAL", "note": "every small little station — 'little' is redundant after 'small'; should be 'every small station'"}
+{"id": "nl-2218", "severity": "low", "issue": "UNNATURAL", "note": "'for his work' is slightly stiff; more natural: 'for work'"}
+{"id": "nl-2222", "severity": "low", "issue": "UNNATURAL", "note": "phrasing awkward; 'cycles across the bridge' or 'cycles over the bridge on his way to work' more natural"}
+{"id": "nl-2226", "severity": "low", "issue": "UNNATURAL", "note": "'the baker around the corner' slightly awkward; 'the baker on the corner' or 'to the corner bakery' better"}
+{"id": "nl-2231", "severity": "low", "issue": "UNNATURAL", "note": "word order awkward; 'We always eat fries with mayonnaise on Friday' better"}
+{"id": "nl-2244", "severity": "low", "issue": "UNNATURAL", "note": "'on the window' unclear; 'on the windowsill' or 'in the window' clearer"}
+{"id": "nl-2246", "severity": "medium", "issue": "UNNATURAL", "note": "'that we would try' suggests future-in-past; 'that we try' or 'that we should try' better reflects the suggestion"}
+{"id": "nl-2072", "severity": "medium", "issue": "UNNATURAL", "note": "English should be 'Eat your plate clean' or 'Finish your plate'—'Eat everything on your plate' is awkward phrasing for the idiomatic Dutch command"}
+{"id": "nl-2073", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Opladen' means 'to charge' or 'to load'; 'top up' is not standard for this context. Should be 'charge' or 'load'"}
+{"id": "nl-2078", "severity": "low", "issue": "UNNATURAL", "note": "'Flickered softly' is slightly odd; 'glowed softly' or 'flickered gently' would be more natural"}
+{"id": "nl-2081", "severity": "medium", "issue": "UNNATURAL", "note": "'Stands in front of' is awkward; should be 'He stands before the mirror' or 'in front of the mirror'"}
+{"id": "nl-2082", "severity": "medium", "issue": "UNNATURAL", "note": "Word order is unnatural; should be 'She learned to ride a bicycle on her third birthday, quickly' or restructure. 'Quickly' placed here is awkward"}
+{"id": "nl-2083", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'De gebeten hond' is an idiom meaning 'the one blamed/made a scapegoat'; 'scapegoat' is correct but English phrasing 'He is the scapegoat' should be 'He became the scapegoat' or 'He's the one to blame'"}
+{"id": "nl-2086", "severity": "low", "issue": "UNNATURAL", "note": "'Taught at' is correct but 'I gave lessons at' or 'I taught at' would be more natural phrasing; current is acceptable but slightly stiff"}
+{"id": "nl-2093", "severity": "medium", "issue": "UNNATURAL", "note": "'Because of the nervousness' is unnatural; should be 'because of nervousness' or 'due to his anxiety/nervousness'"}
+{"id": "nl-2095", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'From the wall' is incorrect; 'uit de muur' refers to Dutch vending machines that dispense kroquetten. Should be 'I'll have a kroket from the vending machine' or 'I'll grab a kroket from the wall dispenser'"}
+{"id": "nl-2097", "severity": "medium", "issue": "UNNATURAL", "note": "'The book is in the cabinet' — 'kast' can mean 'cabinet' or 'closet' but in context usually means 'bookcase' or 'cupboard'. 'in the case' or 'on the shelf' might be clearer"}
+{"id": "nl-2100", "severity": "low", "issue": "UNNATURAL", "note": "Tense mismatch: 'reminded him that they had' uses past tense but Dutch 'morgen' (tomorrow) suggests future. Should be 'She reminded him that they had an appointment the next day' or 'the following day'"}
+{"id": "nl-2252", "severity": "medium", "issue": "UNNATURAL", "note": "should be 'will rain' not 'is going to rain' in this context"}
+{"id": "nl-2255", "severity": "low", "issue": "MISSING_NUANCE", "note": "'for dinner' is interpretation; 'for the meal' more literal"}
+{"id": "nl-2263", "severity": "medium", "issue": "UNNATURAL", "note": "'enjoy ourselves excellently' is awkward; better: 'always have an excellent time' or 'always have a great time'"}
+{"id": "nl-2265", "severity": "low", "issue": "UNNATURAL", "note": "'with a slice of lemon by it' is awkward; better: 'with a slice of lemon in it'"}
+{"id": "nl-2271", "severity": "low", "issue": "UNNATURAL", "note": "'fell across the land' is acceptable but 'stretched across the land' more natural for 'vielen over'"}
+{"id": "nl-2281", "severity": "low", "issue": "UNNATURAL", "note": "Better: 'It's nice that you're here today' or 'I'm glad you're here today'"}
+{"id": "nl-2290", "severity": "low", "issue": "UNNATURAL", "note": "'a little card game' is awkward; 'spelletje' here means 'a game of' (casual diminutive). Better: 'We play a game of cards on Sunday afternoon'"}
+{"id": "nl-2293", "severity": "low", "issue": "UNNATURAL", "note": "'go play' is too casual; better: 'before you go to play' or 'before you play'"}
+{"id": "nl-2304", "severity": "low", "issue": "UNNATURAL", "note": "'in case you forget' is acceptable but less natural than 'in case you forget it' given context"}
+{"id": "nl-2306", "severity": "low", "issue": "UNNATURAL", "note": "'Since we have lived here' is awkward word order; better: 'Since we've lived here' or 'Since living here'"}
+{"id": "nl-2311", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "noodweer = thunderstorm/severe storm, not 'severe weather'"}
+{"id": "nl-2311", "fix": {"k": "noodweer", "en": "thunderstorm; severe storm", "pos": "n"}}
+{"id": "nl-2316", "severity": "low", "issue": "UNNATURAL", "note": "'made a trip' is stilted; 'took a trip' or 'travelled to' is more natural"}
+{"id": "nl-2319", "severity": "low", "issue": "UNNATURAL", "note": "'we leave' should be 'we're leaving' for future context (morgen vroeg)"}
+{"id": "nl-2322", "severity": "low", "issue": "UNNATURAL", "note": "'we go for a walk' shifts to simple present; 'we will go for a walk' fits the sequence better"}
+{"id": "nl-2330", "severity": "low", "issue": "UNNATURAL", "note": "'do it well' is slightly awkward; 'do it correctly' or 'do it right' is more natural"}
+{"id": "nl-2341", "severity": "medium", "issue": "UNNATURAL", "note": "phrase order awkward; prefer 'honest sharing is the basis' or restructure"}
+{"id": "nl-2342", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "present tense 'works' doesn't match Dutch perfect + present; should be 'has been working' or 'works now'"}
+{"id": "nl-2346", "severity": "medium", "issue": "UNNATURAL", "note": "'go play outside' is awkward; prefer 'go outside to play'"}
+{"id": "nl-2349", "severity": "medium", "issue": "UNNATURAL", "note": "present 'we go' conflicts with future 'next year'; should be 'we will go'"}
+{"id": "nl-2357", "severity": "medium", "issue": "UNNATURAL", "note": "'tastes like the coziness' is odd; prefer 'tastes of' or 'evokes the coziness'"}
+{"id": "nl-2361", "severity": "low", "issue": "UNNATURAL", "note": "'Nice that you could come' is stiff; more natural as 'It's nice you could come' or 'Glad you could make it'"}
+{"id": "nl-2365", "severity": "low", "issue": "UNNATURAL", "note": "'Nice that you're here' slightly formal; 'It's nice that you're here' more natural"}
+{"id": "nl-2406", "severity": "medium", "issue": "UNNATURAL", "note": "Redundant diminutive translation: 'small little portrait' is awkward; 'portretje' is already diminutive, translate as 'a small portrait' or 'a little portrait'"}
+{"id": "nl-2407", "severity": "medium", "issue": "UNNATURAL", "note": "Redundant diminutive translation: 'little breads and little pastries' is awkward; 'broodjes' and 'gebakjes' are already diminutives"}
+{"id": "nl-2420", "severity": "medium", "issue": "UNNATURAL", "note": "Unnecessary diminutive rendering: 'little bracelets' misrepresents 'armbandjes' as small/cute rather than standard small bracelets"}
+{"id": "nl-2421", "severity": "medium", "issue": "UNNATURAL", "note": "Diminutive overuse: 'tasje' should be 'a bag' or 'a small bag', not 'a little bag'"}
+{"id": "nl-2423", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'vriendinnetje' means 'girlfriend' (romantic), not 'little girlfriend'; diminutive doesn't imply romantic relationship is miniature"}
+{"id": "nl-2424", "severity": "medium", "issue": "UNNATURAL", "note": "Excessive diminutive rendering: 'little bite' and 'little restaurant' are awkward; 'restaurantje' is informally intimate, not necessarily 'little'"}
+{"id": "nl-2425", "severity": "medium", "issue": "UNNATURAL", "note": "Excessive diminutive rendering: translate as 'The child sleeps peacefully in the cradle', not multiple 'little' markers"}
+{"id": "nl-2430", "severity": "low", "issue": "MISSING_NUANCE", "note": "'op slot zetten' emphasizes locking (securing with a lock), not just placement; 'in front of' misses that it's locked there"}
+{"id": "nl-2374", "severity": "low", "issue": "MISSING_NUANCE", "note": "briefje diminutive suggests informality; 'note' is neutral. Consider 'little note' or 'short note'"}
+{"id": "nl-2375", "severity": "low", "issue": "MISSING_NUANCE", "note": "pilletje is diminutive (small pill); translation loses this sense of size/affection"}
+{"id": "nl-2376", "severity": "low", "issue": "MISSING_NUANCE", "note": "winkeltje diminutive; 'little shop' better captures the diminutive than plain 'shop'"}
+{"id": "nl-2381", "severity": "low", "issue": "MISSING_NUANCE", "note": "berichtje is diminutive (little message); 'sweet message' captures tone but not the diminutive form"}
+{"id": "nl-2384", "severity": "low", "issue": "MISSING_NUANCE", "note": "haventje is diminutive; 'little harbor' better than plain 'harbor'"}
+{"id": "nl-2386", "severity": "medium", "issue": "UNNATURAL", "note": "'Practice for fifteen minutes every day' reverses the Dutch order awkwardly; should be 'Practice every day for fifteen minutes' or 'Practice for a quarter hour daily'"}
+{"id": "nl-2393", "severity": "medium", "issue": "UNNATURAL", "note": "'small little house' is redundant (both klein and the diminutive huisje); should be 'small house' or 'little house', not both"}
+{"id": "nl-2396", "severity": "medium", "issue": "UNNATURAL", "note": "'wears a small flower' is awkward; 'has a small flower' or 'is wearing a flower' more natural. Also bloemetje diminutive suggests 'little flower'"}
+{"id": "nl-2400", "severity": "low", "issue": "UNNATURAL", "note": "'small house with a little garden' — huisje and tuintje are both diminutives; consider 'small house with a garden' or pick one diminutive to emphasize"}
+{"id": "nl-2462", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "English says 'can only hold' but Dutch says 'can only [fit] one person at a time' — the bridge's capacity isn't stated, only its narrowness"}
+{"id": "nl-2463", "severity": "medium", "issue": "UNNATURAL", "note": "English passive 'was betrayed' is awkward; more natural as 'was revealed' or active 'someone betrayed the secret'"}
+{"id": "nl-2464", "severity": "low", "issue": "UNNATURAL", "note": "Repetitive diminutives ('little sticker' on 'little notebook') reads oddly in English; Dutch diminutives don't require both translated"}
+{"id": "nl-2468", "severity": "low", "issue": "UNNATURAL", "note": "'Drive at walking speed' is literal but unusual phrasing; 'at a crawl' or 'slowly' is more natural English"}
+{"id": "nl-2483", "severity": "medium", "issue": "UNNATURAL", "note": "Referent 'its' is awkward; Dutch uses generic 'zijn' but English 'his' is more natural for a child of unspecified gender"}
+{"id": "nl-2487", "severity": "low", "issue": "UNNATURAL", "note": "'because it's windy' omits subject; Dutch 'want het waait hard' = 'because it's blowing hard'; suggests strong wind, not just generic windiness"}
+{"id": "nl-2435", "severity": "medium", "issue": "UNNATURAL", "note": "\"little ticket\" is awkward; \"kaartje\" here means \"ticket\" not \"small ticket\""}
+{"id": "nl-2435", "fix": {"k": "kaartje", "en": "ticket", "pos": "n"}}
+{"id": "nl-2437", "severity": "medium", "issue": "UNNATURAL", "note": "\"little glasses\" is awkward; \"glaasje\" is a standard glass, not diminutive in this context"}
+{"id": "nl-2437", "fix": {"k": "glaasje", "en": "glass", "pos": "n"}}
+{"id": "nl-2439", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"rim\" is acceptable but \"brim\" is more natural for liquids"}
+{"id": "nl-2442", "severity": "low", "issue": "UNNATURAL", "note": "\"for a moment with lifting\" is clunky; \"help me lift\" is more natural"}
+{"id": "nl-2457", "severity": "medium", "issue": "UNNATURAL", "note": "\"for coziness\" is awkward; \"gezelligheid\" implies social comfort/conviviality, better as \"for company\" or \"to make it nice\""}
+{"id": "nl-2458", "severity": "low", "issue": "UNNATURAL", "note": "\"little child\" from \"kindje\" is slightly diminutive-heavy; \"child\" or \"baby\" is more natural"}
+{"id": "nl-2460", "severity": "low", "issue": "MISSING_NUANCE", "note": "Dutch present tense here suggests near-certain future; \"will complete\" captures this but \"completes\" (near future) also fits"}
+{"id": "nl-2545", "severity": "medium", "issue": "UNNATURAL", "note": "awkward 'little' repetition; 'a little piece of paper into a little airplane' is redundant"}
+{"id": "nl-2545", "fix": {"k": "vouwtje", "en": "to fold", "pos": "v"}}
+{"id": "nl-2493", "severity": "medium", "issue": "UNNATURAL", "note": "\"takes a little sip\" is awkward; \"drinks a little sip\" or \"takes a small sip\" more natural"}
+{"id": "nl-2499", "severity": "medium", "issue": "UNNATURAL", "note": "\"gotten used to\" is awkward phrasing; \"grown accustomed to\" or \"become used to\" more natural"}
+{"id": "nl-2503", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Lach eens\" = \"laugh\" or \"have a laugh\", not \"smile\" (which is \"glimlach\")"}
+{"id": "nl-2504", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"om het hele uur\" = \"every full hour\" or \"on the hour\", not \"every hour\"; suggests specific timing"}
+{"id": "nl-2505", "severity": "medium", "issue": "UNNATURAL", "note": "\"Walk the dog in the park\" omits \"out\"; more natural as \"take the dog out for a walk in the park\" or \"walk the dog out in the park\""}
+{"id": "nl-2514", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "diminutives \"zonnetje\" and \"wolkjes\" should not be rendered literally as \"little sun\" and \"little clouds\"; these are poetic/whimsical and should be \"sun\" and \"clouds\" or \"clouds\" with acknowledgment of tone"}
+{"id": "nl-2520", "severity": "low", "issue": "UNNATURAL", "note": "\"Keep your mouth shut\" is somewhat harsh; \"be quiet\" or \"keep quiet\" more common in standard English"}
+{"id": "nl-2581", "severity": "low", "issue": "UNNATURAL", "note": "Word order: 'we saw in the cinema yesterday' → 'we saw yesterday in the cinema' flows better"}
+{"id": "nl-2585", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'de prijs' is the prize, not 'the prize' (determined). Should be 'The price was determined' or context indicates 'prize' is incorrect."}
+{"id": "nl-2593", "severity": "low", "issue": "UNNATURAL", "note": "Typo in Dutch: 'serveerrt' should be 'serveert'"}
+{"id": "nl-2596", "severity": "medium", "issue": "UNNATURAL", "note": "'little girl' and 'little dress' is redundant. Better: 'The girl wears a red little dress' or 'The little girl wears a red dress'"}
+{"id": "nl-2598", "severity": "medium", "issue": "UNNATURAL", "note": "'runs a little round' is awkward. Better: 'runs a lap' or 'runs a loop'"}
+{"id": "nl-2599", "severity": "low", "issue": "UNNATURAL", "note": "'against the sun' is awkward. Better: 'to shield from the sun' or 'as protection from the sun'"}
+{"id": "nl-2605", "severity": "low", "issue": "UNNATURAL", "note": "'a little song' for generic music on radio is odd. Better: 'a song' without diminutive emphasis"}
+{"id": "nl-2552", "severity": "medium", "issue": "UNNATURAL", "note": "Passive voice sounds awkward; better: 'We maintain the garden every week' or 'The garden is maintained by us every week' could be clearer with active voice preference in English."}
+{"id": "nl-2553", "severity": "low", "issue": "UNNATURAL", "note": "'tells a fairy tale to her grandchild' — more natural: 'tells her grandchild a fairy tale'"}
+{"id": "nl-2557", "severity": "low", "issue": "UNNATURAL", "note": "'the little baby' — diminutive 'babytje' is colloquial; 'the baby' or 'baby' is more standard"}
+{"id": "nl-2558", "severity": "low", "issue": "UNNATURAL", "note": "'a small flat' — diminutive 'flatje' is colloquial; 'a flat' is more standard"}
+{"id": "nl-2559", "severity": "low", "issue": "UNNATURAL", "note": "Double diminutive ('little bird', 'little nest') feels over-translated; consider 'The bird builds a nest in the bush'"}
+{"id": "nl-2566", "severity": "low", "issue": "UNNATURAL", "note": "'Report to' is formal; more natural: 'Check in at the reception' or 'Go to the reception'"}
+{"id": "nl-2568", "severity": "medium", "issue": "UNNATURAL", "note": "'cannot avoid the fact that' is clunky; better: 'cannot deny that she needs help' or 'cannot get around needing help'"}
+{"id": "nl-2570", "severity": "low", "issue": "UNNATURAL", "note": "'take a little nap' — diminutive 'dutje' is idiomatic but 'take a nap' is sufficient in English"}
+{"id": "nl-2574", "severity": "low", "issue": "UNNATURAL", "note": "Double diminutive ('little ice cream', 'little bench') over-translated; consider 'We eat ice cream on a bench by the pond'"}
+{"id": "nl-2577", "severity": "low", "issue": "UNNATURAL", "note": "'The little sun' — diminutive 'zonnetje' is colloquial; 'The sun' or 'It' is more natural"}
+{"id": "nl-2612", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward word order; should be 'The lesson I learned today I will never forget' or 'I will never forget the lesson I learned today'"}
+{"id": "nl-2614", "severity": "medium", "issue": "UNNATURAL", "note": "Overuse of diminutive 'little' sounds childish; 'The small dog plays with a ball in the small park' is more natural"}
+{"id": "nl-2618", "severity": "low", "issue": "UNNATURAL", "note": "'I would like to know more' is slightly awkward; 'I would like to learn more' or 'I would very much like to know more' is more natural"}
+{"id": "nl-2623", "severity": "low", "issue": "UNNATURAL", "note": "'has a little chat' is slightly informal for the given Dutch construction; 'has a chat' or 'chats with' would be more standard"}
+{"id": "nl-2624", "severity": "low", "issue": "UNNATURAL", "note": "Diminutive 'little flowers' weakens the sentence; 'The flowers in the vase are beautiful' is more natural"}
+{"id": "nl-2634", "severity": "low", "issue": "UNNATURAL", "note": "Excessive diminutives; 'He keeps his coins in a jar' is clearer"}
+{"id": "nl-2635", "severity": "low", "issue": "UNNATURAL", "note": "Excessive diminutives; 'He rolls a cigarette on the bench' is more natural"}
+{"id": "nl-2636", "severity": "low", "issue": "UNNATURAL", "note": "Excessive diminutives; 'He puts a coin in the jar' is more natural"}
+{"id": "nl-2638", "severity": "low", "issue": "UNNATURAL", "note": "'deeply moved' word order; 'moved everyone deeply' or 'deeply affected everyone' is more natural"}
+{"id": "nl-2639", "severity": "low", "issue": "UNNATURAL", "note": "'received enthusiastically' is slightly awkward; 'was received with enthusiasm' or 'was enthusiastically received' is more natural"}
+{"id": "nl-2645", "severity": "low", "issue": "UNNATURAL", "note": "\"cycles through the little tunnel\" is awkward; \"cycles through the tunnel\" is more natural"}
+{"id": "nl-2647", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "windseltje is a small bandage/plaster, not specifically a wrapping; 'plaster' or 'bandage' fits better than 'bandage wrapped'"}
+{"id": "nl-2649", "severity": "low", "issue": "UNNATURAL", "note": "\"on a little blanket\" is too diminutive; Dutch uses diminutive freely but English translation should be more natural: \"on a blanket\""}
+{"id": "nl-2650", "severity": "low", "issue": "UNNATURAL", "note": "\"on a little scooter\" is overly diminutive; \"on a scooter\" is more natural in English"}
+{"id": "nl-2653", "severity": "low", "issue": "UNNATURAL", "note": "\"little bridge\" diminutizes unnecessarily; \"bridge\" is more natural in English"}
+{"id": "nl-2654", "severity": "low", "issue": "UNNATURAL", "note": "repeated diminutives \"little square\" and \"little fountain\" are awkward; English needs fewer diminutives: \"The square in the village has a fountain\""}
+{"id": "nl-2655", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"are the neighbors'\" is grammatically incorrect; should be \"are from the neighbors\" or \"belong to the neighbors\""}
+{"id": "nl-2661", "severity": "low", "issue": "UNNATURAL", "note": "\"narrow little path\" is redundant; choose either \"narrow path\" or \"little path\", not both"}
+{"id": "nl-2703", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Dutch 'Er valt niets meer aan te doen' means 'There's nothing more that can be done' (without the 'about it' implication). The translation adds an unwarranted prepositional phrase."}
+{"id": "nl-2708", "severity": "low", "issue": "UNNATURAL", "note": "'Children play on the lawn' uses simple present, but Dutch 'Er spelen kinderen' with 'er' structure suggests ongoing/present action. Better: 'There are children playing on the lawn.'"}
+{"id": "nl-2717", "severity": "low", "issue": "UNNATURAL", "note": "'There is light burning in the room' is awkward English. More natural: 'There is light on in the room' or 'A light is on in the room.'"}
+{"id": "nl-2672", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "ree is a small deer (roe deer), not generic 'deer'"}
+{"id": "nl-2672", "fix": {"k": "ree", "en": "roe deer", "pos": "n"}}
+{"id": "nl-2675", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing 'asked the question to' is awkward; should be 'posed the question to' or restructure"}
+{"id": "nl-2680", "severity": "low", "issue": "UNNATURAL", "note": "'moving the wardrobe' is slightly awkward; 'moving the cabinet' or 'moving the cupboard' more natural"}
+{"id": "nl-2682", "severity": "low", "issue": "UNNATURAL", "note": "'makes a little tower' is slightly less natural; 'builds a little tower' preferred"}
+{"id": "nl-2689", "severity": "low", "issue": "UNNATURAL", "note": "'little silver ring' reads oddly; 'small silver ring' more natural"}
+{"id": "nl-2695", "severity": "medium", "issue": "UNNATURAL", "note": "'that lies in the harbor' is awkward; 'that is in the harbor' or 'that is docked in the harbor' preferred"}
+{"id": "nl-2700", "severity": "low", "issue": "UNNATURAL", "note": "missing comma after introductory clause for clarity: 'Everything he told about Dutch culture was...'"}
+{"id": "nl-2762", "severity": "low", "issue": "UNNATURAL", "note": "awkward word order; 'are there actually' should be 'are actually there'"}
+{"id": "nl-2765", "severity": "medium", "issue": "UNNATURAL", "note": "'a lot of cycling is done' is overly formal; 'people cycle a lot' is more natural"}
+{"id": "nl-2769", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Dutch 'horloge' is neuter (het horloge); English should be 'a beautiful watch' not 'a beautiful watch' — but the real issue is subject-verb agreement in Dutch: 'is een mooie horloge' should be 'is een mooi horloge' (gender mismatch in source, but English reflects the error)"}
+{"id": "nl-2785", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'The people for whom the concert was' is ungrammatical; should be 'The people for whom the concert was organized/intended' or 'The people the concert was for'"}
+{"id": "nl-2732", "severity": "medium", "issue": "UNNATURAL", "note": "'followed' is awkward; 'pursued' or 'undertook' better fits Dutch 'volgde' in educational context"}
+{"id": "nl-2735", "severity": "low", "issue": "UNNATURAL", "note": "'renewed' is technically correct but 'repaired' or 'replaced' more natural for damaged roofs"}
+{"id": "nl-2739", "severity": "low", "issue": "UNNATURAL", "note": "'approaches its completion' is stiff; 'is approaching completion' flows better"}
+{"id": "nl-2744", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Dutch 'geen idee van hebben' means 'have no idea about'; English drops the 'about' making it unclear what he lacks knowledge of"}
+{"id": "nl-2748", "severity": "low", "issue": "UNNATURAL", "note": "'in which' is formal/stilted; 'that' or 'how' would be more natural"}
+{"id": "nl-2749", "severity": "medium", "issue": "UNNATURAL", "note": "'along which we cycled ran past' is awkwardly phrased; should be 'we cycled along ran past the windmills' or restructure"}
+{"id": "nl-2752", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'profijt van' means 'to benefit from' or 'to gain advantage from'; English should be 'He benefits from the fact that he speaks three languages' or 'His knowledge of three languages is advantageous'"}
+{"id": "nl-2758", "severity": "low", "issue": "UNNATURAL", "note": "'in nineteen fifty' should be 'in nineteen fifty' (correct) but 'thousand nine hundred fifty' is non-standard; native speakers say 'nineteen fifty'"}
+{"id": "nl-2830", "severity": "medium", "issue": "UNNATURAL", "note": "A little boat floats on the calm water is awkward; 'A small boat is floating on the calm water' or 'Small boats float on calm water' would be more natural"}
+{"id": "nl-2842", "severity": "medium", "issue": "UNNATURAL", "note": "'have been salted' is awkward; 'have been treated with salt' or 'have been gritted' would be more natural"}
+{"id": "nl-2847", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "'play equipment' is singular but should be plural 'playground equipment' or 'play equipment items'"}
+{"id": "nl-2791", "severity": "medium", "issue": "UNNATURAL", "note": "English idiom is 'if the shoe fits, wear it' (not 'wears'); awkward phrasing"}
+{"id": "nl-2805", "severity": "low", "issue": "UNNATURAL", "note": "'our book' is slightly awkward; more natural as 'our books' (plural implied by context) or 'the book'"}
+{"id": "nl-2809", "severity": "medium", "issue": "UNNATURAL", "note": "'passes on it' is non-standard; clearer as 'she sees to it that' or 'she makes sure that'"}
+{"id": "nl-2815", "severity": "low", "issue": "UNNATURAL", "note": "'stand along' is awkward English; prefer 'line the boulevard' or 'are situated along'"}
+{"id": "nl-2816", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Dutch says 'there was loud applause' but English 'there was loud applause' misses the verb; should be 'there was loud applause' or 'people applauded loudly' — actually the translation matches but reads awkwardly; 'there was loud applause' is correct"}
+{"id": "nl-2854", "severity": "medium", "issue": "UNNATURAL", "note": "hard work is being done on is awkward; 'hard work is underway on' or 'intensive efforts are underway on' would be more natural"}
+{"id": "nl-2857", "severity": "medium", "issue": "UNNATURAL", "note": "conditional phrasing is slightly off; 'If tomorrow's weather were nice' or 'If it were nice weather tomorrow' flows better"}
+{"id": "nl-2870", "severity": "medium", "issue": "UNNATURAL", "note": "'was held peacefully' is passive; more natural: 'took place peacefully' or 'was conducted peacefully'"}
+{"id": "nl-2886", "severity": "medium", "issue": "UNNATURAL", "note": "Smoke rises up from the chimney is redundant; 'rises' already implies upward motion. Use 'Smoke rises from the chimney'."}
+{"id": "nl-2891", "severity": "medium", "issue": "UNNATURAL", "note": "'Are you ready for it?' is awkward without antecedent. Standard phrasing is 'Are you ready?' or 'Are you up for it?'"}
+{"id": "nl-2904", "severity": "medium", "issue": "UNNATURAL", "note": "'read stories when he was a child' is unclear tense/context. Should be 'read him stories as a child' (him being the implied object during childhood)."}
+{"id": "nl-2910", "severity": "low", "issue": "UNNATURAL", "note": "'spends a lot of time making' is awkward; better as 'spends a lot of time on making' or 'spends a lot of time to make'."}
+{"id": "nl-2912", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; should be 'haven't figured out yet' or 'still can't decide'"}
+{"id": "nl-2918", "severity": "medium", "issue": "UNNATURAL", "note": "'suggest we continue' is slightly unnatural; better: 'I suggest to continue' or 'I propose we continue'"}
+{"id": "nl-2926", "severity": "medium", "issue": "UNNATURAL", "note": "'follow a nursing training' is awkward; better: 'to pursue nursing training' or 'to train as a nurse'"}
+{"id": "nl-2929", "severity": "medium", "issue": "UNNATURAL", "note": "'will take an expected three years' is awkward; better: 'is expected to take three years'"}
+{"id": "nl-2931", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'half past six' is wrong; 'half zeven' means 'half past six' in Dutch (6:30 in standard interpretation), but in some regions means 6:30 AM. More critically, 'half zeven' typically means 6:30, not the literal 'half past six' — this needs clarification or regional context."}
+{"id": "nl-2934", "severity": "medium", "issue": "UNNATURAL", "note": "'In this way' is overly formal/clunky; better: 'This way the company saves' or 'As a result, the company saves'"}
+{"id": "nl-2943", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward; should be 'learned to speak the new language increasingly better' or 'gradually learned to speak the new language better'"}
+{"id": "nl-2950", "severity": "medium", "issue": "UNNATURAL", "note": "'hasn't figured out yet' is awkward; 'hasn't figured out how the device works yet' is more natural"}
+{"id": "nl-2960", "severity": "medium", "issue": "UNNATURAL", "note": "'you can better look' is awkward; should be 'you'd better look' or 'you can look'"}
+{"id": "nl-2964", "severity": "medium", "issue": "UNNATURAL", "note": "'would like to go fishing sometime' misses the conditional; should be 'would find it fun to go fishing sometime' or 'would enjoy going fishing sometime'"}
+{"id": "nl-2968", "severity": "medium", "issue": "UNNATURAL", "note": "'Temeer daar' is formal/archaic; 'All the more so because' reads stiffly; 'Especially since' is more natural"}
+{"id": "nl-2972", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing with 'until'; more natural: 'Consequently, the project was postponed by three months pending budget approval'"}
+{"id": "nl-2973", "severity": "low", "issue": "UNNATURAL", "note": "'There is particularly little rain' is slightly awkward; 'There has been particularly little rain' or 'Particularly little rain has fallen' is more natural"}
+{"id": "nl-2974", "severity": "low", "issue": "UNNATURAL", "note": "'He didn't object to it' is correct but slightly stiff; 'He had no objection to it' matches Dutch structure more closely"}
+{"id": "nl-2983", "severity": "low", "issue": "UNNATURAL", "note": "'by the window' is redundant after 'windowsill'; should be just 'on the windowsill'"}
+{"id": "nl-2992", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'someday' is redundant with 'always dreamed of'; the Dutch suggests an established long-held dream without the 'someday' qualifier"}
+{"id": "nl-3000", "severity": "low", "issue": "UNNATURAL", "note": "'on the weekend' should be 'on weekends' or 'during the weekend' for more natural English"}
+{"id": "nl-3094", "severity": "medium", "issue": "UNNATURAL", "note": "\"ashamedly\" is awkward; \"shamefacedly\" or \"in shame\" more natural"}
+{"id": "nl-3096", "severity": "medium", "issue": "UNNATURAL", "note": "\"receive word\" is archaic; \"you will hear from us\" or \"you will receive notice\" more natural"}
+{"id": "nl-3113", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Just as little as his colleague, he agreed\" reverses meaning; should be \"he disagreed\" or \"he did not agree\""}
+{"id": "nl-3114", "severity": "medium", "issue": "UNNATURAL", "note": "\"indicates that he would like\" is awkward; \"indicates he would like\" or \"says he would like\" more natural"}
+{"id": "nl-3067", "severity": "medium", "issue": "UNNATURAL", "note": "\"prepare ourselves to\" is awkward; should be \"prepare to\" or \"get ready to\""}
+{"id": "nl-3072", "severity": "medium", "issue": "UNNATURAL", "note": "\"I send you the report\" is stiff; natural English uses present progressive or future: \"I'm sending\" or \"I will send\""}
+{"id": "nl-3074", "severity": "medium", "issue": "UNNATURAL", "note": "\"have less stress\" is unnatural; should be \"have less stress\" → \"reduce stress\" or \"be under less stress\""}
+{"id": "nl-3081", "severity": "low", "issue": "UNNATURAL", "note": "\"refuses to work overtime\" is correct but \"refuses overtime\" would be more natural in some contexts"}
+{"id": "nl-3090", "severity": "low", "issue": "UNNATURAL", "note": "\"Unless it stops raining, we cancel\" lacks article; more natural: \"Unless it stops raining, we will cancel\"; also present tense awkward here"}
+{"id": "nl-3035", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; 'We would love to visit you' or 'We would be delighted to visit you' is more natural than 'find it fantastic to visit'"}
+{"id": "nl-3038", "severity": "low", "issue": "UNNATURAL", "note": "'think back fondly on' is slightly awkward; 'remember fondly' or 'look back fondly on' is more idiomatic"}
+{"id": "nl-3041", "severity": "low", "issue": "UNNATURAL", "note": "'as soon as it becomes spring' is awkward; 'as soon as spring comes' or 'as soon as spring arrives' is more natural"}
+{"id": "nl-3046", "severity": "low", "issue": "UNNATURAL", "note": "Slightly awkward; 'I would love to live on an island' works but 'I would find it lovely to live' is less natural"}
+{"id": "nl-3051", "severity": "low", "issue": "UNNATURAL", "note": "'without doubt immediately' is redundant and awkward; 'without hesitation' or just 'immediately' would be better"}
+{"id": "nl-3053", "severity": "low", "issue": "UNNATURAL", "note": "'as planned was' is grammatically awkward; should be 'as had been planned' or simply 'as planned'"}
+{"id": "nl-3059", "severity": "low", "issue": "UNNATURAL", "note": "'if you filled in' uses wrong tense; should be 'if you would fill in' or 'if you could fill in' for a polite conditional"}
+{"id": "nl-3002", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing awkward; 'find it nice if you came by' is stilted. Better: 'would like it if you came by' or 'would be happy if you came by'"}
+{"id": "nl-3005", "severity": "medium", "issue": "UNNATURAL", "note": "'would wish that' is archaic/formal for this context. Better: 'wishes she had' or 'would like to have'"}
+{"id": "nl-3010", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'left without a trace, without saying goodbye' conflates two meanings. 'Gaat met de noorderzon vertrokken' = 'left suddenly/without notice' (idiom). Current translation confuses this with the second clause."}
+{"id": "nl-3012", "severity": "medium", "issue": "UNNATURAL", "note": "Double clause structure awkward in English. Better: 'Especially because it was her first job, she was nervous' or 'All the more so because...'"}
+{"id": "nl-3013", "severity": "medium", "issue": "UNNATURAL", "note": "Clumsy word order. Better: 'I will never forget what you did for me' (remove the 'what' separation) or acknowledge the Dutch syntax is inverted here."}
+{"id": "nl-3015", "severity": "low", "issue": "MISSING_NUANCE", "note": "'berichtje' is diminutive (little message/text); translation 'a little message' is acceptable but 'text' or 'message' alone works fine in English."}
+{"id": "nl-3016", "severity": "low", "issue": "UNNATURAL", "note": "'take the bike' is slightly awkward; 'ride our bikes' or 'cycle' is more natural."}
+{"id": "nl-3017", "severity": "low", "issue": "UNNATURAL", "note": "'still go' is a bit stiff; 'go to' alone is cleaner, or 'I'm too tired to go to my colleague's party today.'"}
+{"id": "nl-3021", "severity": "low", "issue": "UNNATURAL", "note": "'Simply put' is good, but 'have' sounds awkward after it. Better: 'Quite simply, we need more resources.'"}
+{"id": "nl-3185", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'handy' is informal; 'useful' or 'convenient' is more appropriate"}
+{"id": "nl-3188", "severity": "medium", "issue": "UNNATURAL", "note": "'improve her pronunciation' is grammatically correct but the Dutch 'verbeteren' typically means 'to improve'; phrasing is slightly stiff"}
+{"id": "nl-3195", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "sentence structure breaks; 'gaan er met de pet naar gooien' means to do something carelessly/sloppily, but English translation is incomplete/unclear. Should be 'We're going to do a sloppy job doesn't help anyone' or rephrase entirely"}
+{"id": "nl-3202", "severity": "low", "issue": "UNNATURAL", "note": "'It takes long' is grammatically awkward; should be 'It takes a long time' or 'It takes long'"}
+{"id": "nl-3121", "severity": "medium", "issue": "UNNATURAL", "note": "\"by itself\" is awkward; better: \"will eventually become better\" or \"will naturally improve\""}
+{"id": "nl-3121", "fix": {"k": "vanzelf", "en": "automatically; naturally", "pos": "adv"}}
+{"id": "nl-3126", "severity": "low", "issue": "UNNATURAL", "note": "missing article \"the\" before budget for natural English flow"}
+{"id": "nl-3130", "severity": "low", "issue": "UNNATURAL", "note": "missing article \"the\" before plan for natural English flow"}
+{"id": "nl-3132", "severity": "medium", "issue": "UNNATURAL", "note": "\"Seen this way\" is awkward; better: \"From this perspective\" or \"Viewed this way\""}
+{"id": "nl-3137", "severity": "low", "issue": "UNNATURAL", "note": "\"request you to study\" is formal but awkward; better: \"ask you to study\" or \"request that you study\""}
+{"id": "nl-3138", "severity": "low", "issue": "UNNATURAL", "note": "\"take the trouble\" is uncommon phrasing; better: \"make the effort\" or \"go to the trouble\""}
+{"id": "nl-3140", "severity": "low", "issue": "UNNATURAL", "note": "missing article \"the\" before agenda for natural English flow"}
+{"id": "nl-3142", "severity": "low", "issue": "UNNATURAL", "note": "missing article \"the\" before product for natural English flow"}
+{"id": "nl-3144", "severity": "low", "issue": "UNNATURAL", "note": "\"request you to fill\" is awkward; better: \"ask you to fill\" or \"request that you fill\""}
+{"id": "nl-3211", "severity": "low", "issue": "UNNATURAL", "note": "English translation is slightly redundant: 'to stay and not to leave' could be more natural as 'to stay' alone, or 'to stay and not go' to match the Dutch more idiomatically"}
+{"id": "nl-3218", "severity": "low", "issue": "UNNATURAL", "note": "'doesn't go well' is awkward; 'goes down poorly' or 'is not well received' would be more natural"}
+{"id": "nl-3223", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Proverb should be 'East west, home best' not 'East west, home's best'. Also Dutch proverb more accurately 'Oost west, thuis best' = 'East west, home is best'"}
+{"id": "nl-3236", "severity": "low", "issue": "UNNATURAL", "note": "'mentioned casually' would be more natural than 'casually mentioned'; also 'vermeldde' is misspelled in source (should be 'vermeldde' which is correct, but translation could say 'mentioned in passing'"}
+{"id": "nl-3240", "severity": "low", "issue": "UNNATURAL", "note": "'It is of importance' is archaic/stilted; better: 'It is important' or 'It matters'"}
+{"id": "nl-3151", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "de hand in eigen boezem steken = to examine one's own conscience, not just 'look at ourselves first'"}
+{"id": "nl-3151", "fix": {"k": "de hand in eigen boezem steken", "en": "to examine one's own conscience; to look inward", "pos": "phrase"}}
+{"id": "nl-3154", "severity": "medium", "issue": "UNNATURAL", "note": "should be 'from one surprise to the next' or 'from one astonishment to another' for better English flow"}
+{"id": "nl-3158", "severity": "low", "issue": "UNNATURAL", "note": "'He answered that he was busy at his work' is slightly awkward; more natural: 'busy with his work' or 'busy at work'"}
+{"id": "nl-3161", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'geen kaas van gegeten' is an idiom meaning 'has no clue about it' or 'doesn't understand anything about it'; current translation loses the idiomatic sense"}
+{"id": "nl-3161", "fix": {"k": "geen kaas van gegeten", "en": "to have no idea; to not have a clue", "pos": "phrase"}}
+{"id": "nl-3162", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'de aap uit de mouw' more precisely means 'the cat is out of the bag' or 'the truth is revealed'; 'the truth comes out' is acceptable but less idiomatic"}
+{"id": "nl-3167", "severity": "low", "issue": "UNNATURAL", "note": "should be 'to complain about it' not 'to complain about it' — the 'erover' is already implicit in English 'complain about'"}
+{"id": "nl-3172", "severity": "low", "issue": "UNNATURAL", "note": "awkward phrasing; better: 'The heavy suitcase is difficult to lift' without 'to' after 'difficult', or 'The heavy suitcase is hard to lift'"}
+{"id": "nl-3177", "severity": "low", "issue": "UNNATURAL", "note": "'He learns to listen better to others' is awkward; better: 'He is learning to listen better to others' or 'He learns to listen to others more carefully'"}
+{"id": "nl-3249", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Door de zure appel heen bijten' means 'to bite the bullet' or 'to accept something unpleasant', but the English says 'bite the bullet now, otherwise it will only get worse' which distorts the meaning—the phrase is about accepting an inevitable bad decision/outcome, not preventing worse outcomes"}
+{"id": "nl-3256", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Het nakijken hebben' means 'to be left holding the bag; to be the loser' but English 'left out because everything is already decided' misses this idiomatic sense entirely"}
+{"id": "nl-3262", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Mosterd na de maaltijd' literally 'mustard after the meal' idiomatically means 'too little too late' but the explanation 'it's already over' is imprecise—the phrase emphasizes lateness/uselessness of an action, not just finality"}
+{"id": "nl-3264", "severity": "low", "issue": "UNNATURAL", "note": "English phrasing 'She makes a mountain out of a molehill, the problem isn't that big at all' is redundant—the idiom already conveys exaggeration, so restating it weakens flow"}
+{"id": "nl-3269", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Grapjas' is a noun meaning 'joker; funny person' used as a direct address, but English 'Joker, you always make everyone laugh!' reads as generic—should be 'you joker' or similar vocative"}
+{"id": "nl-3274", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Dutch phrase 'voor het karretje spannen' means 'to be used; to be taken advantage of' — the translation adds 'someone else's purpose' which isn't in the original"}
+{"id": "nl-3274", "fix": {"k": "voor het karretje spannen", "en": "to be used; to be taken advantage of", "pos": "phrase"}}
+{"id": "nl-3278", "severity": "medium", "issue": "UNNATURAL", "note": "'She objected that' is awkward; 'She objected; the plan was too ambitious' or 'She objected that the plan was too ambitious' would be more natural English"}
+{"id": "nl-3280", "severity": "low", "issue": "MISSING_NUANCE", "note": "'all thumbs' is idiomatic but 'two left feet' (from 'twee linkerhanden') is the closer idiom; 'all thumbs' more commonly refers to clumsiness with hands in general"}
+{"id": "nl-3283", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'voor spek en bonen' means 'for nothing; without getting anything in return' — translation says 'She goes to the meeting for nothing' which could mean either she attends without reason or without compensation; context suggests the latter but the phrasing is unclear"}
+{"id": "nl-3287", "severity": "low", "issue": "UNNATURAL", "note": "'with his arms crossed' is idiomatic English but 'hands over each other' is too literal; should be 'with his hands folded' or 'with his arms folded'"}
+{"id": "nl-3331", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Dutch sentence means 'He watches the cat out of the tree before deciding' — literal meaning, not the idiomatic sense offered"}
+{"id": "nl-3335", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Boter op haar hoofd hebben' is an idiom meaning 'to be guilty of the same thing' or 'have a guilty conscience'; translation should reflect this, not literal 'butter on her head'"}
+{"id": "nl-3350", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Een tang op een varken' idiom means something fits poorly or is incompatible; current translation is vague and doesn't capture the specific sense"}
+{"id": "nl-3356", "severity": "medium", "issue": "UNNATURAL", "note": "'It is raining cats and dogs' is idiomatic English but Dutch 'regent pijpestelen' (rains pipe stems) is a different idiom; translation should preserve 'raining pipe stems' or clarify the Dutch idiom differently"}
+{"id": "nl-3305", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Dutch idiom 'kat op het spek binden' means to tempt fate/put temptation in the way, but the card translates it as the English idiom. Should be 'to put temptation in the way' or 'to tempt fate' with clearer connection to the literal image."}
+{"id": "nl-3310", "severity": "low", "issue": "UNNATURAL", "note": "'managed to convince' is natural but 'He managed to get it done to convince everyone' would better capture the Dutch structure; minor awkwardness."}
+{"id": "nl-3327", "severity": "medium", "issue": "UNNATURAL", "note": "'speechless with surprise' is acceptable but more naturally 'he is lost for words in surprise' or 'he stands speechless with amazement'; the literal 'mouth full of teeth' nuance is lost."}
+{"id": "nl-3328", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Dutch 'gaat hem niet in de koude kleren zitten' literally means won't sit well/coldly with him; the translation 'won't sit well with him' is correct but misses the idiomatic sense. Should clarify it means 'he won't take it well' or 'it will upset him'."}
+{"id": "nl-3394", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"knoop doorhakken\" means \"to make a decisive decision\" or \"to cut the Gordian knot\", not \"bite the bullet\". The idiom refers to cutting through indecision, not persevering through difficulty."}
+{"id": "nl-3397", "severity": "medium", "issue": "UNNATURAL", "note": "\"steekt haar licht op bij\" means \"learns from\" or \"seeks light/guidance from\", not just \"seeks advice from\". Should be \"She gets guidance from an expert\" or \"She learns from an expert\"."}
+{"id": "nl-3398", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"broertje dood aan\" is an idiom meaning \"has absolutely no interest in\" or \"couldn't care less about\", not \"hates\". The register is also casual/colloquial."}
+{"id": "nl-3404", "severity": "medium", "issue": "UNNATURAL", "note": "\"kat in het nauw\" (cornered cat) is an idiom for being in a tight spot. The translation is overly literal; should be \"He is backed into a corner and makes desperate moves\" or similar."}
+{"id": "nl-3405", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"koe bij de horens\" should be \"cow by the horns\", not \"bull\". While both express seizing the problem directly, the Dutch idiom specifically uses \"koe\" (cow)."}
+{"id": "nl-3437", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"by the skin of our teeth\" is incorrect; the idiom means a narrow escape or close call, but refers to 'your' escape (singular), not 'our' (plural)"}
+{"id": "nl-3447", "severity": "medium", "issue": "UNNATURAL", "note": "word order awkward; should be 'Beyond the forest lies a small hidden lake' or 'a small lake hidden away'"}
+{"id": "nl-3448", "severity": "medium", "issue": "UNNATURAL", "note": "phrasing is clunky; 'you receive... attached' is passive construction; better: 'please find the revised document attached' or 'herewith you will find'"}
+{"id": "nl-3449", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"the specialiteit\" is grammatically wrong English; should be either 'the specialty' or 'speciality' (not both); also context suggests 'specialty' is intended"}
+{"id": "nl-3451", "severity": "medium", "issue": "UNNATURAL", "note": "Inversion awkward in English; should be 'Nobody knows when exactly the results will be announced.'"}
+{"id": "nl-3455", "severity": "medium", "issue": "UNNATURAL", "note": "'low-traffic' is not standard English; use 'car-free' or 'low-emission'"}
+{"id": "nl-3459", "severity": "medium", "issue": "UNNATURAL", "note": "'commuter traffic' is typically used as uncountable; 'is busiest' works but 'peak commuter traffic' or 'rush-hour traffic' is more natural"}
+{"id": "nl-3472", "severity": "medium", "issue": "UNNATURAL", "note": "'Say' as discourse marker is archaic/dialectal; 'Hey' or 'Have you heard...' without it is more natural"}
+{"id": "nl-3475", "severity": "medium", "issue": "UNNATURAL", "note": "'Not without reason' is formal/archaic; 'for a reason' or 'with good reason' is more natural"}
+{"id": "nl-3479", "severity": "medium", "issue": "UNNATURAL", "note": "'For your information, I inform you' is redundant; use 'For your information, the project has been completed' or 'I am pleased to inform you'"}
+{"id": "nl-3489", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "halftwee is 1:30 (one-thirty), not one-thirty; however the real issue is the direction 'to Barcelona' should be 'for Barcelona' to match the Dutch preposition 'naar'"}
+{"id": "nl-3501", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "negentienvijftig is 1959, not 'nineteen fifty-five' (which would be 1955)"}
+{"id": "nl-3510", "severity": "low", "issue": "UNNATURAL", "note": "'to respond' is correct, but 'before the deadline' is slightly awkward; 'by the deadline' is more natural in English"}
+{"id": "nl-3515", "severity": "medium", "issue": "UNNATURAL", "note": "\"In no respect does this situation resemble\" is awkwardly inverted; more natural: \"In no way does this situation resemble\" or \"This situation doesn't resemble the previous one in any respect.\""}
+{"id": "nl-3525", "severity": "low", "issue": "UNNATURAL", "note": "\"Right across from us\" is slightly stiff; more natural: \"Directly across from us\" or \"Sitting right across from us.\""}
+{"id": "nl-3533", "severity": "low", "issue": "UNNATURAL", "note": "\"stood before a decision\" is archaic/formal; more natural: \"faced a decision\" or \"was confronted with a decision.\""}
+{"id": "nl-3535", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Het wegenwerkzaamheden\" is ungrammatical Dutch (should be \"De wegenwerkzaamheden\"), but the bigger issue: English \"The roadworks\" uses plural; should be \"Roadworks\" or \"The road works.\" However, the actual error is the Dutch noun is plural but article is singular—this makes the Dutch card itself defective."}
+{"id": "nl-3542", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "achterbuurman = back neighbor or rear neighbor; 'rear neighbor' is awkward English; should be 'back neighbor'"}
+{"id": "nl-3567", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Evenmin als' means 'no more than' or 'just as little as', not 'just like'; translation reverses the meaning. Should be 'No more than his colleagues had he expected the news' or 'Like his colleagues, he too had not expected the news'"}
+{"id": "nl-3562", "severity": "low", "issue": "UNNATURAL", "note": "bitterballen is left untranslated; acceptable but could add gloss. Current phrasing is awkward—'the bitterballen at the Friday afternoon drinks' reads oddly; better: 'The bitterballs at the Friday afternoon gathering are an office tradition'"}
+{"id": "nl-3361", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Dutch 'watervervuiling' is uncountable; 'Het watervervuiling' is grammatically incorrect in Dutch itself, but the English should reflect singular 'water pollution' not 'Water pollution' (capitalization) or needs context adjustment"}
+{"id": "nl-3363", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'vangt bot' means 'fails' or 'strikes out,' not 'gets turned down by'; awkward phrasing. Better: 'He strikes out with the management on his request' or 'His request is rejected by management'"}
+{"id": "nl-3365", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'niet over een nacht ijs gaan' means 'not to rush into' or 'not to take lightly,' but the English 'We don't take this decision lightly' is slightly weak. Better: 'We're not rushing into this decision'"}
+{"id": "nl-3367", "severity": "medium", "issue": "UNNATURAL", "note": "'Zij houdt de boot af' means 'she avoids/dodges/stalls'; 'stalls' is acceptable but 'evades' or 'keeps dodging' may be clearer"}
+{"id": "nl-3374", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'al zo lang als de weg naar Kralingen' is an idiom meaning 'for ages/forever'; current translation 'for ages' is correct but 'We have been on the road' misses the idiom entirely. Should be: 'We've been going for ages' or 'We've been at it for ages'"}
+{"id": "nl-3379", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'zet de puntjes op de i' is the Dutch equivalent of 'cross the t's and dot the i's,' but English reverses this as 'dot the i's and cross the t's.' Current version inverts it; should be: 'She crosses the t's and dots the i's'"}
+{"id": "nl-3382", "severity": "medium", "issue": "UNNATURAL", "note": "'Hij heeft het achter de ellebogen' means he's clever/smart/cunning, not specifically 'sly.' Better: 'He's clever/sharp, just watch what he does'"}
+{"id": "nl-3384", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Met de neus in de boter vallen' means 'to land in butter' = 'to be lucky/land on one's feet.' Current translation 'He landed on his feet' is correct, but awkward phrasing with 'when' clause. Better phrasing acceptable."}
+{"id": "nl-3385", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'maakt van zijn hart geen moordkuil' literally 'doesn't make a murder pit of his heart' = 'speaks his mind freely' or 'wears his heart on his sleeve.' Current 'doesn't hide his true feelings' is close but misses the openness/candor nuance. Better: 'He speaks his mind freely' or 'He wears his heart on his sleeve'"}
+{"id": "nl-3390", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'is de dans ontsprongen' means 'escaped the dance' = 'got away with it' or 'dodged the bullet.' Current 'escaped unscathed' is too mild. Better: 'He got away with it despite all accusations' or 'He dodged the bullet'"}
+{"id": "nl-3642", "severity": "medium", "issue": "UNNATURAL", "note": "Repetitive 'warmer and warmer' awkward; better: 'it became increasingly warm' or 'it grew warmer'"}
+{"id": "nl-3655", "severity": "low", "issue": "UNNATURAL", "note": "'tangible as a wall' slightly awkward; more natural: 'tangible like a wall' or 'palpable as a wall'"}
+{"id": "nl-3660", "severity": "low", "issue": "UNNATURAL", "note": "'moved...through' is indirect; clearer: 'moved many readers with its subtle description' or 'touched many readers by means of'"}
+{"id": "nl-3663", "severity": "low", "issue": "UNNATURAL", "note": "of centuries of history is awkward; 'of centuries' or 'of ages' more natural"}
+{"id": "nl-3681", "severity": "medium", "issue": "UNNATURAL", "note": "word order 'Everywhere prevailed' is inverted and stiff; 'An atmosphere of expectation and uncertainty prevailed everywhere' more natural"}
+{"id": "nl-3688", "severity": "low", "issue": "UNNATURAL", "note": "'fate that had been destined for him' is redundant; 'the fate destined for him' or 'the fate that awaited him' better"}
+{"id": "nl-3574", "severity": "low", "issue": "MISSING_NUANCE", "note": "couplet can mean verse/stanza but also 'couple' in modern Dutch; context suggests verses/stanzas of national anthem"}
+{"id": "nl-3576", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "weemoed is melancholy/sadness, not just nostalgia; nostalgia can be positive, weemoed carries sadness"}
+{"id": "nl-3580", "severity": "low", "issue": "UNNATURAL", "note": "'birthday person' is awkward; better: 'the birthday celebrant' or 'birthday boy/girl'"}
+{"id": "nl-3581", "severity": "low", "issue": "UNNATURAL", "note": "phrasing is stilted; better: 'A Dutch person says at least three times when leaving goodbye' or similar flow"}
+{"id": "nl-3591", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "overzien means to survey/see clearly, not to overlook (which implies ignoring); 'survey' or 'see' better"}
+{"id": "nl-3595", "severity": "low", "issue": "UNNATURAL", "note": "'are not negotiable' is passive; Dutch vallen niet te onderhandelen emphasizes impossibility; better: 'cannot be negotiated'"}
+{"id": "nl-3596", "severity": "low", "issue": "UNNATURAL", "note": "'unknown places' is vague; oorden is archaic/poetic for regions/lands; 'unknown lands' better fits tone"}
+{"id": "nl-3768", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "gourmetten means to have a fondue/raclette meal; 'gourmet' as verb is not idiomatic English"}
+{"id": "nl-3768", "fix": {"k": "gourmetten", "en": "to have fondue; to have a raclette meal", "pos": "v"}}
+{"id": "nl-3602", "severity": "medium", "issue": "UNNATURAL", "note": "\"Vooraleer\" is archaic/rare Dutch; \"before he left\" is correct but phrasing feels stilted for modern context"}
+{"id": "nl-3603", "severity": "low", "issue": "UNNATURAL", "note": "\"The breaking of dawn\" is technically correct but \"daybreak\" or \"dawn\" would be more natural"}
+{"id": "nl-3609", "severity": "low", "issue": "UNNATURAL", "note": "\"fell silent\" is correct but slightly archaic; \"became silent\" or \"went silent\" more common"}
+{"id": "nl-3619", "severity": "medium", "issue": "UNNATURAL", "note": "\"touched him deep in his soul\" is awkward; should be \"touched his soul deeply\" or \"moved him deeply\""}
+{"id": "nl-3624", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"avondrood\" specifically means the red glow at sunset/sunrise, not generic sunset; \"sunset glow\" or \"red sky\" more precise"}
+{"id": "nl-3625", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"turned out to be strongly correlated\" is better than \"turned out to be strongly correlated\"; but \"correlated\" alone may miss the Dutch \"samen hangen\" which emphasizes togetherness/dependence"}
+{"id": "nl-3628", "severity": "low", "issue": "UNNATURAL", "note": "\"In the depths of\" is correct but \"crochten\" (plural of croft/nook) suggests hidden niches rather than literal depths; \"in the hidden corners of\" better"}
+{"id": "nl-3630", "severity": "medium", "issue": "UNNATURAL", "note": "\"Temeer daar\" is archaic conjunction; phrasing awkward. Better: \"All the more so because he already had experience, he was immediately hired\" or restructure entirely"}
+{"id": "nl-3722", "severity": "medium", "issue": "UNNATURAL", "note": "\"gave way to the darkness\" is awkward; prefer \"gave way to darkness\" (darkness is uncountable here)"}
+{"id": "nl-3730", "severity": "low", "issue": "UNNATURAL", "note": "\"arose\" is awkward for melody; prefer \"rang out\" or \"sounded\""}
+{"id": "nl-3737", "severity": "medium", "issue": "UNNATURAL", "note": "\"The flame of hope... flickered in the hearts of the population\" is overly poetic/archaic; prefer more natural phrasing"}
+{"id": "nl-3739", "severity": "low", "issue": "UNNATURAL", "note": "\"indefinite melancholy\" is awkward; prefer \"vague melancholy\" or \"nameless melancholy\""}
+{"id": "nl-3747", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"nul komma achtenzestig\" = 0.68, but translation says \"zero point sixty-eight\" which is 0.68 only if read as individual digits; standard English for 0.68 is \"zero point six eight\" or \"point six eight\""}
+{"id": "nl-3698", "severity": "medium", "issue": "UNNATURAL", "note": "Dutch 'boterham met kaas' is a sandwich, not 'bread with cheese'"}
+{"id": "nl-3698", "fix": {"k": "boterham", "en": "sandwich", "pos": "n"}}
+{"id": "nl-3704", "severity": "low", "issue": "UNNATURAL", "note": "'passers-by' is archaic; modern English uses 'passersby'"}
+{"id": "nl-3709", "severity": "low", "issue": "UNNATURAL", "note": "'fell silent' is slightly awkward; 'grew silent' or 'quieted' more natural"}
+{"id": "nl-3715", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Source uses English 'not done' instead of Dutch phrase; should translate the actual Dutch intent"}
+{"id": "nl-3718", "severity": "medium", "issue": "UNNATURAL", "note": "'fruit pie' is clearer; 'vlaai' is a specific Limburgian pastry but 'fruit pie' captures meaning better than just 'fruit pie'"}
+{"id": "nl-3719", "severity": "low", "issue": "UNNATURAL", "note": "'sounded the chiming' is awkward word order; 'the chiming of church bells sounded' or 'church bells chimed' more natural"}
+{"id": "nl-3795", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "maaiveldprobleem is a Dutch cultural concept (leveling effect); 'mowing-field problem' is nonsensical. Should be 'leveling effect' or 'tall poppy syndrome'"}
+{"id": "nl-3795", "fix": {"k": "maaiveldprobleem", "en": "leveling effect; tall poppy syndrome", "pos": "n"}}
+{"id": "nl-3804", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "nuchterheid means 'sobriety' or 'no-nonsense directness', not 'sobriety' in the sense of abstinence. English translation obscures the actual meaning in context."}
+{"id": "nl-3788", "severity": "medium", "issue": "UNNATURAL", "note": "'blows' is archaic/poetic for wind. Should be 'it rains or is windy' or 'the wind is blowing'"}
+{"id": "nl-3813", "severity": "medium", "issue": "UNNATURAL", "note": "trekschuit as 'tow barge' is technically correct but archaic phrasing; 'towboat' or 'canal barge' more natural in English"}
+{"id": "nl-3823", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "iedereen draagt een lied is nonsensical; should be 'sings a song' or 'knows a song', not 'carries'"}
+{"id": "nl-3836", "severity": "low", "issue": "UNNATURAL", "note": "'nineteen hundred' is awkward; use 'since 1900' or 'since the nineteen hundreds'"}
+{"id": "nl-3838", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "'orange bitter' is unclear; should specify 'orange liqueur' or 'orange-flavored liqueur' (oranjebitter is a specific drink type)"}
+{"id": "nl-3875", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; 'wakes...at five' should be 'wakes...up at five o'clock' or similar"}
+{"id": "nl-3876", "severity": "low", "issue": "UNNATURAL", "note": "'Epiphany is celebrated' is grammatically correct but 'The Epiphany is celebrated' would be more natural for this context"}
+{"id": "nl-3883", "severity": "low", "issue": "UNNATURAL", "note": "'However beautiful' is awkward; should be 'However beautiful...as the flower bulb fields look' or 'Beautiful as the flower bulb fields are'"}
+{"id": "nl-3886", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Confiturenmaker' is rare; more commonly 'jam maker' or 'preserves maker', but note that 'confiturenmaker' specifically refers to someone who makes jams/preserves professionally"}
+{"id": "nl-3889", "severity": "medium", "issue": "UNNATURAL", "note": "'bluntly' is serviceable but 'straight to the point' or 'frankly' captures 'recht voor zijn raap' better; also 'yet' vs 'nevertheless' register shift"}
+{"id": "nl-3897", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'wintercomforteten' is a compound; 'comfort food' is correct but the full phrase 'winter comfort food' is more accurate than just 'ultimate winter comfort food'"}
+{"id": "nl-3934", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "English 'Bye' is too formal/standard for 'Doei', which is casual Dutch slang. Should be 'Bye!' or 'See ya!' to match register."}
+{"id": "nl-3935", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'Alstublieft' alone as a standalone utterance is formal/polite request marker, but 'Please' without context feels incomplete. Context-dependent: if standalone, 'If you please' or 'Please (formal)' needed; if part of sentence, different."}
+{"id": "nl-3907", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; should be 'informed [them] that' or restructure"}
+{"id": "nl-3920", "severity": "medium", "issue": "UNNATURAL", "note": "'wouldn't even think of' is colloquial; better: 'wouldn't dream of' or 'had no intention of'"}
+{"id": "nl-3922", "severity": "medium", "issue": "UNNATURAL", "note": "'Let it be clear' is stiff; natural English: 'Make no mistake' or 'It must be clear'"}
+{"id": "nl-3927", "severity": "low", "issue": "UNNATURAL", "note": "'trade spirit still haunts' is awkward; better: 'trading spirit still echoes through' or 'still lives on in'"}
+{"id": "nl-3841", "severity": "medium", "issue": "UNNATURAL", "note": "'ready to serve' should be 'ready to be served' or 'ready for serving'"}
+{"id": "nl-3842", "severity": "medium", "issue": "UNNATURAL", "note": "'Dutch Flag Day' is awkward; should be 'the Dutch flag day' or 'Flag Day (Dutch)'"}
+{"id": "nl-3845", "severity": "medium", "issue": "UNNATURAL", "note": "'comes around' personifies a box unnaturally; better: 'comes by' or 'collection happens'"}
+{"id": "nl-3851", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Dutch 'verjaardagskalender' is 'birthday calendar' not 'birthday kalendr' (typo in source, but translation should reflect correct term)"}
+{"id": "nl-3857", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Reverses the meaning: should be 'In the west they eat patat, in the south they say friet' (patat is western, friet is southern)"}
+{"id": "nl-3858", "severity": "low", "issue": "UNNATURAL", "note": "'reminds us' is correct but 'the poffertjes stall' reads awkwardly; 'poffertjes stand' is more natural"}
+{"id": "nl-3864", "severity": "medium", "issue": "UNNATURAL", "note": "'It is to be hoped' is archaic/formal; more natural: 'It is hoped that' or 'We hope that'"}
+{"id": "nl-3870", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'The nickname Holland' is odd phrasing; should be 'The name Holland' or 'Holland as a name/nickname'; 'geuzennaam' means 'pet name' not necessarily 'nickname'"}

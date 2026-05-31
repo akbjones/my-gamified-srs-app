@@ -1,0 +1,890 @@
+{"id": "sv-0093", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ställer väckarklockan means 'sets the alarm clock' (for time), not a physical location action; the sentence is nonsensical—she wouldn't set an alarm clock in a park"}
+{"id": "sv-0119", "severity": "medium", "issue": "UNNATURAL", "note": "'since the autumn' is awkward; should be 'since autumn' or 'since last autumn'"}
+{"id": "sv-0043", "severity": "medium", "issue": "UNNATURAL", "note": "present tense 'väntar' suggests habitual action, but English 'I'll wait' suggests future. Should be 'I wait for five minutes' or 'I am waiting for five minutes' for present continuous."}
+{"id": "sv-0048", "severity": "low", "issue": "UNNATURAL", "note": "'We have fika' is slightly awkward; more natural is 'We have fika at three' or 'We take fika at three'. Current phrasing reads oddly but is not wrong."}
+{"id": "sv-0054", "severity": "low", "issue": "UNNATURAL", "note": "'I do laundry' is acceptable but 'I wash clothes' better matches 'tvättar kläder'. Current phrasing uses colloquial 'do laundry' vs literal translation."}
+{"id": "sv-0057", "severity": "medium", "issue": "UNNATURAL", "note": "'every fifteen minutes' but Swedish says 'var femtonde minut' (every fifteenth minute). Should be 'every fifteen minutes' which is correct, but phrasing could clarify: 'The bus comes every fifteen minutes' is fine."}
+{"id": "sv-0072", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "halv åtta = half eight = 7:30, not 7:30 as written; translation is correct but unclear. Actually, 'halv åtta' means 7:30 (half hour before 8), so translation should be 'at half past seven' not 'at half past seven' — the translation is correct."}
+{"id": "sv-0074", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "halv ett = 12:30, but 'half past twelve' is also 12:30. However, 'halv ett' literally means 'half one' (30 minutes before 1 PM). Translation should be 'at half past twelve' which is correct."}
+{"id": "sv-0078", "severity": "low", "issue": "UNNATURAL", "note": "'goes to yoga' is acceptable but 'does yoga' or 'goes to a yoga class' would be more natural in English; minor stylistic preference"}
+{"id": "sv-0082", "severity": "low", "issue": "UNNATURAL", "note": "'has good food' is grammatically correct but slightly awkward; 'serves good food' would be more natural for a food service context"}
+{"id": "sv-0004", "severity": "medium", "issue": "UNNATURAL", "note": "English says 'My name is Erik' but Swedish structure is 'I am called Erik' — better rendering would be 'I am called Erik' or 'My name is Erik' (acceptable but less literal)"}
+{"id": "sv-0016", "severity": "low", "issue": "UNNATURAL", "note": "'I'd rather drink tea' uses contraction; more natural standard form: 'I would rather drink tea'"}
+{"id": "sv-0025", "severity": "low", "issue": "MISSING_NUANCE", "note": "'handla mat' can mean 'to buy food/groceries' — current translation 'to buy groceries' is acceptable but 'to buy food' is equally valid and more literal"}
+{"id": "sv-0122", "severity": "medium", "issue": "UNNATURAL", "note": "Missing comma after 'Besides' — should be 'Besides, the food' or rephrase as 'Moreover, the food'"}
+{"id": "sv-0125", "severity": "low", "issue": "UNNATURAL", "note": "Awkward word order; more natural: 'The children play football in the yard every afternoon' or 'Out in the yard, the children play football every afternoon'"}
+{"id": "sv-0128", "severity": "low", "issue": "UNNATURAL", "note": "'every Friday evening' is slightly awkward; better: 'every Friday night' or 'Friday evenings'"}
+{"id": "sv-0144", "severity": "low", "issue": "UNNATURAL", "note": "'follow a cooking show' is slightly awkward; better: 'watch a cooking show'"}
+{"id": "sv-0146", "severity": "low", "issue": "UNNATURAL", "note": "'mean with that question' is unnatural; better: 'mean by that question'"}
+{"id": "sv-0156", "severity": "medium", "issue": "UNNATURAL", "note": "mot varandra is redundant with spelar schack; 'They play chess every Sunday after dinner' is more natural"}
+{"id": "sv-0169", "severity": "low", "issue": "UNNATURAL", "note": "'in the afternoon' is awkward after 'every Saturday'; 'every Saturday afternoon' reads more naturally"}
+{"id": "sv-0176", "severity": "medium", "issue": "UNNATURAL", "note": "English translation omits 'Varsågod' (Please/Go ahead); more complete: 'Please, sit down. Can I offer you something?'"}
+{"id": "sv-0270", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; should be 'Autumn starts in September' or 'September is when autumn begins'"}
+{"id": "sv-0270", "fix": {"k": "börjar", "en": "to start; to begin", "pos": "v"}}
+{"id": "sv-0181", "severity": "medium", "issue": "UNNATURAL", "note": "\"here to us\" is awkward; should be \"here\" or \"to us\" alone"}
+{"id": "sv-0185", "severity": "medium", "issue": "UNNATURAL", "note": "\"does laundry at his home\" is awkward; should be \"washes clothes at home\" or \"does laundry at home\""}
+{"id": "sv-0193", "severity": "low", "issue": "UNNATURAL", "note": "\"at our home\" is slightly formal/redundant; \"at home\" is more natural"}
+{"id": "sv-0202", "severity": "low", "issue": "UNNATURAL", "note": "\"go and lay ourselves\" is awkward phrasing; should be \"go to bed\" (already in sentence but phrasing is stilted)"}
+{"id": "sv-0215", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward: 'every morning early' should be 'early every morning' or 'every early morning'"}
+{"id": "sv-0217", "severity": "medium", "issue": "UNNATURAL", "note": "Redundant 'here' appears twice; 'Welcome, we have prepared a room for you' is more natural"}
+{"id": "sv-0223", "severity": "medium", "issue": "UNNATURAL", "note": "'It is time for us to go home now I think' is grammatically awkward; should be 'I think it's time we go home' or similar"}
+{"id": "sv-0234", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward: 'always fall asleep early' at end is displaced; should be 'I wake up with the sun and always fall asleep early in the evening'"}
+{"id": "sv-0239", "severity": "medium", "issue": "UNNATURAL", "note": "'on a cold evening' more natural than 'a cold evening' as predicate; article placement is slightly off"}
+{"id": "sv-0271", "severity": "low", "issue": "UNNATURAL", "note": "Swedish 'åka spårvagn' is more naturally 'take the tram' but 'ride the tram' is equally common and slightly more natural in modern English"}
+{"id": "sv-0288", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Jag går och lägger mig' means 'I go and lie down' or 'I go to bed'; the literal structure is 'go and lay myself', not just 'go to bed'"}
+{"id": "sv-0290", "severity": "low", "issue": "UNNATURAL", "note": "More natural without explicit 'ourselves': 'We prepare for winter' is standard; the reflexive is implicit in English"}
+{"id": "sv-0345", "severity": "medium", "issue": "UNNATURAL", "note": "word order awkward; 'nuförtiden egentligen' should be 'nuförtiden' or 'egentligen' not both; 'How are things with you and your family these days?' flows better"}
+{"id": "sv-0348", "severity": "medium", "issue": "UNNATURAL", "note": "'where the station is from here' is awkward phrasing; should be 'where the station is from here' → 'where the station is from here' or better 'how to get to the station from here'"}
+{"id": "sv-0406", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "klockan två = at two o'clock, not 'at two' (which is ambiguous without context)"}
+{"id": "sv-0408", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "klockan tio = at ten o'clock, not 'at ten'"}
+{"id": "sv-0411", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "klockan sju = at seven o'clock, not 'at seven'"}
+{"id": "sv-0412", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "en kvart = a quarter (of an hour), not literally 'a quarter' without context; should be 'It takes a quarter of an hour' or 'It takes fifteen minutes'"}
+{"id": "sv-0301", "severity": "high", "issue": "UNNATURAL", "note": "English phrasing 'right now probably' is awkward; Swedish 'just nu nog' suggests hesitant timing, better: 'Shouldn't we wait just now?' or 'Shouldn't we wait a bit longer?'"}
+{"id": "sv-0302", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Translation omits 'ibland' (sometimes) and 'faktiskt' (actually/in fact), which soften the statement; should be 'I enjoy walking outside in the rain sometimes, actually.'"}
+{"id": "sv-0308", "severity": "medium", "issue": "UNNATURAL", "note": "'tyst avdelning' is more naturally 'the quiet car' or 'the silent zone' in English transit contexts"}
+{"id": "sv-0319", "severity": "medium", "issue": "UNNATURAL", "note": "'a test that comes' is awkward English; should be 'She is studying for an upcoming test' or 'She is studying for a test that's coming up'"}
+{"id": "sv-0325", "severity": "high", "issue": "UNNATURAL", "note": "English phrasing 'in the evening probably' is unnatural; 'nog' suggests polite query; better: 'Do you have a children's menu in the evening?' or 'Do you have children's portions available in the evening?'"}
+{"id": "sv-0326", "severity": "high", "issue": "UNNATURAL", "note": "'I suppose' at sentence end is awkward; Swedish 'väl' signals polite uncertainty; better: 'Do you have a vegan option available right now?'"}
+{"id": "sv-0327", "severity": "high", "issue": "UNNATURAL", "note": "'from here right now I suppose' is awkward; 'just nu väl' is redundant/unclear; better: 'Are there bike paths around here?' or 'Are there bike paths available?'"}
+{"id": "sv-0362", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"andra länder utomlands\" is redundant in Swedish; English translation should not repeat this. Better: \"I have many friends who live abroad.\""}
+{"id": "sv-0364", "severity": "medium", "issue": "UNNATURAL", "note": "\"how are you today on this nice weather?\" is awkward English. Should be \"How are you doing this fine weather?\" or \"How do you like this nice weather?\""}
+{"id": "sv-0365", "severity": "medium", "issue": "UNNATURAL", "note": "\"this fine day today\" is redundant. Better: \"Good morning everyone, how are you this fine day?\""}
+{"id": "sv-0372", "severity": "low", "issue": "UNNATURAL", "note": "\"quick fox\" is less natural than \"clever fox\" or \"nimble fox\" for the context of jumping. However, \"quick\" is a valid translation of \"snabb.\""}
+{"id": "sv-0374", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"its\" for a child typically uses \"his/her\" in natural English. The Swedish \"sin\" applies, but English usage would say \"his\" or \"her\" based on context."}
+{"id": "sv-0387", "severity": "low", "issue": "UNNATURAL", "note": "\"Wait a moment\" adds \"a moment\" not present in Swedish. Better: \"Wait a little\" or simply \"Wait.\""}
+{"id": "sv-0388", "severity": "low", "issue": "UNNATURAL", "note": "\"neighbours\" (British spelling) vs \"neighbors\" (American). Both valid; note regional preference."}
+{"id": "sv-0424", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Fragment without verb; English needs 'is' or similar copula to match Swedish structure"}
+{"id": "sv-0426", "severity": "medium", "issue": "UNNATURAL", "note": "'off' is vague; 'to have time off' or 'to be free' better captures 'vara ledig'"}
+{"id": "sv-0428", "severity": "low", "issue": "UNNATURAL", "note": "'I'll have' implies future decision; 'I'm having' or 'I take' more natural for 'tar en macka'"}
+{"id": "sv-0429", "severity": "low", "issue": "UNNATURAL", "note": "Awkward word order; should be 'On one hand I understand you' or 'I understand you on one hand'"}
+{"id": "sv-0443", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Yet' placement is confusing; 'No one has complained in the park yet' or restructure needed"}
+{"id": "sv-0444", "severity": "high", "issue": "UNNATURAL", "note": "'now' at end is contradictory with 'during the week'; likely 'must be locked during the week going forward' or time phrase misplaced"}
+{"id": "sv-0448", "severity": "medium", "issue": "UNNATURAL", "note": "'It therefore follows that' is stiff; 'This therefore means' or 'Hence' more natural"}
+{"id": "sv-0512", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; 'they have gotten a puppy they have named' should be 'they have gotten a puppy and named it' or 'they got a puppy which they named'"}
+{"id": "sv-0520", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'En bit av kakan' means 'a piece of cake' not 'a piece of the cake'; the Swedish has no definite article here"}
+{"id": "sv-0521", "severity": "low", "issue": "UNNATURAL", "note": "'It will probably rain tomorrow' is acceptable but 'It will probably rain tomorrow' or 'It'll probably rain tomorrow' is more natural; 'It will probably rain tomorrow' is more formal/literary"}
+{"id": "sv-0533", "severity": "low", "issue": "UNNATURAL", "note": "'I'll have a café latte' should be 'I'll have a café latte' or more naturally 'I'll take a caffè latte'; 'café latte' capitalization is inconsistent"}
+{"id": "sv-0534", "severity": "medium", "issue": "UNNATURAL", "note": "'With pleasure I'll help you' is awkward word order; better as 'I'll gladly help you' or 'With pleasure, I'll help you'"}
+{"id": "sv-0485", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "knutar means 'knots', not 'corners' — likely architectural detail unclear"}
+{"id": "sv-0485", "fix": {"k": "knutar", "en": "knots", "pos": "n"}}
+{"id": "sv-0488", "severity": "low", "issue": "UNNATURAL", "note": "läsa in this context means 'to study' (a subject/program), not generic studying — 'start studying' is slightly loose"}
+{"id": "sv-0501", "severity": "low", "issue": "UNNATURAL", "note": "plural subject (pillow and blanket) with singular 'is' — should be 'are'"}
+{"id": "sv-0507", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "styckade means 'to butcher; to cut up' — 'carved' suggests careful culinary work, not the raw butchering sense"}
+{"id": "sv-0507", "fix": {"k": "styckade", "en": "to butcher; to cut up", "pos": "v"}}
+{"id": "sv-0451", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "omtyckt is passive form; 'liked' is correct but 'well-liked' needs 'mycket omtyckt' = 'very much liked' or 'well liked'—phrasing is acceptable but 'well liked' typically doesn't require 'very'"}
+{"id": "sv-0462", "severity": "medium", "issue": "UNNATURAL", "note": "word order awkward; should be 'loses its leaves slowly every autumn' or 'slowly loses its leaves every autumn'—current placement of 'slowly' at end is stilted"}
+{"id": "sv-0466", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish doesn't match English; 'Tack detsamma, när jag hörde...' doesn't mean 'Thanks, same to you, when...'. Should be something like 'Thanks, I said the same when I heard the good news today' or this is a garbled sentence"}
+{"id": "sv-0469", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Akta dig' means 'watch out/be careful' (warning), not 'I understand'. Translation completely misrepresents the Swedish meaning"}
+{"id": "sv-0477", "severity": "low", "issue": "UNNATURAL", "note": "'white corners' is unclear; should be 'white trim' or 'white shutters' (knutar typically refers to knots or decorative corners, but 'white corners' is imprecise)"}
+{"id": "sv-0548", "severity": "medium", "issue": "UNNATURAL", "note": "awkward adverbial placement; 'efter jobbet också' (after work too) doesn't fit naturally with 'homemade'"}
+{"id": "sv-0549", "severity": "high", "issue": "UNNATURAL", "note": "contradictory time markers 'nästa vecka snart' (next week soon) create nonsensical meaning"}
+{"id": "sv-0555", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'inte utan att' is an idiomatic negation meaning 'not without' (i.e., definitely did); should be 'I was not a little surprised' or 'I was quite surprised', not the literal rendering"}
+{"id": "sv-0556", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'dyra' appears to be a typo/misspelling; if 'dyr' (expensive) was intended, the translation works, but 'dyra' is not standard Swedish"}
+{"id": "sv-0568", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Swedish idiom 'en nagel i ögat' literally 'a nail in the eye' but the English 'thorn in one's side' is the correct idiomatic equivalent; translation captures meaning but misses the literal image"}
+{"id": "sv-0641", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence has temporal contradiction: 'förra veckan' (last week) conflicts with present tense 'leker' (play). English translation doesn't capture this inconsistency."}
+{"id": "sv-0642", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'gärna' means 'gladly/preferably' but should be part of the question structure 'would you like'; 'på kvällen' (in the evening) is awkward in context. English translation is unnatural."}
+{"id": "sv-0643", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Ambiguous modifier: 'med familjen' (with the family) placement suggests family harvested or was present, not just the winemaker alone. English translation obscures this."}
+{"id": "sv-0653", "severity": "medium", "issue": "UNNATURAL", "note": "'Daily she walks' is awkward English word order. Should be 'She walks daily' or 'She takes a daily walk.'"}
+{"id": "sv-0654", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Sick' can mean ill or unwell; 'sjuk' in Swedish typically means ill/unwell. Translation is acceptable but 'ill' might be more precise in formal context."}
+{"id": "sv-0605", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Detsamma\" means \"the same\" or \"likewise\", not \"Same to you\" in this context. The sentence doesn't make sense with that translation."}
+{"id": "sv-0610", "severity": "low", "issue": "UNNATURAL", "note": "\"outside the coastal village\" is awkward; \"off the coast of the coastal village\" or \"near the coastal village\" reads better."}
+{"id": "sv-0613", "severity": "low", "issue": "UNNATURAL", "note": "\"a single time\" is slightly stiff; \"once\" or \"a single time\" either works, but \"not once\" flows better."}
+{"id": "sv-0619", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Missing article: should be \"on a warm summer day\" not \"a warm summer day\" (lacks preposition). The Swedish \"en varm sommardag\" does need the article/preposition in English."}
+{"id": "sv-0624", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Det var nära ögat\" is an idiom meaning \"it was a near thing\" or \"it was close\", not \"it was a close call that\". The translation conflates the meaning."}
+{"id": "sv-0628", "severity": "low", "issue": "UNNATURAL", "note": "\"as this one\" is awkward for Swedish \"den här\"; better as \"as this\" or \"like this one\"."}
+{"id": "sv-0630", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Det är en annan femma\" is an idiomatic expression meaning \"that's a different kettle of fish\" or \"that's something else entirely\", not \"that's a different matter entirely\". \"Femma\" refers to a five-krona coin but the phrase is idiomatic."}
+{"id": "sv-0663", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "frös = froze (past tense of to freeze); should be 'I was freezing all evening' or 'I felt cold all evening', not 'I was cold'"}
+{"id": "sv-0663", "fix": {"k": "frös", "en": "to freeze", "pos": "v"}}
+{"id": "sv-0665", "severity": "low", "issue": "UNNATURAL", "note": "word order awkward; 'Probably it will rain' → 'It will probably rain' more natural"}
+{"id": "sv-0672", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "incomplete sentence; 'Om du har fler frågor' is a conditional clause without main clause - should be 'If you have more questions, ...' or needs continuation"}
+{"id": "sv-0682", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "klockan är fem i halv tre = 'it is five minutes to half three' = 2:25, not 'twenty-five past two' (which is 2:25 but phrased differently); the Swedish literally means 'five to 2:30'"}
+{"id": "sv-0687", "severity": "low", "issue": "UNNATURAL", "note": "word order; 'In Stockholm live many people too' is inverted for poetic effect; 'Many people live in Stockholm too' is more natural English"}
+{"id": "sv-0688", "severity": "low", "issue": "UNNATURAL", "note": "'puts time into it here' — 'here' feels out of place; 'spends time on this' or 'invests time in it' more natural"}
+{"id": "sv-0571", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is grammatically malformed; 'nog' (enough/probably) doesn't fit context. English translation also nonsensical. Unclear what original intent was."}
+{"id": "sv-0572", "severity": "medium", "issue": "UNNATURAL", "note": "English 'the center' is vague; Swedish 'centrum' typically means 'city center/downtown'. Better: 'The butter is in the fridge downtown' or 'in the city center'."}
+{"id": "sv-0573", "severity": "medium", "issue": "UNNATURAL", "note": "Eating a starter salad 'in the park' is odd contextually but grammatically acceptable. Acceptable as-is if intentional."}
+{"id": "sv-0576", "severity": "medium", "issue": "UNNATURAL", "note": "'change the clock' is archaic English; modern: 'set the clock' or 'turn the clock forward/back'. If DST context intended, clarify."}
+{"id": "sv-0577", "severity": "high", "issue": "UNNATURAL", "note": "Word order 'Home we went early' is poetic inversion; natural English: 'We went home early on the weekend.' The extra 'here' is unexplained."}
+{"id": "sv-0579", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is malformed ('idag hela tiden nog'). English translation nonsensical. Likely should be 'How are you today?' without extra adverbs."}
+{"id": "sv-0580", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish adverbs stack unnaturally ('idag ibland redan'). Unclear what is meant. English follows but both are awkward."}
+{"id": "sv-0590", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Where is the library at the office every morning?' is nonsensical—location doesn't change with time. Source or target sentence malformed."}
+{"id": "sv-0591", "severity": "medium", "issue": "UNNATURAL", "note": "Store location doesn't change ('all the time'). Better: 'Why is the store closed all day?' or 'Why is it closed?'"}
+{"id": "sv-0600", "severity": "medium", "issue": "UNNATURAL", "note": "English 'Not bad, when I heard...' has awkward comma splice. Better: 'Not bad when I heard the good news today!' or 'Not bad—I heard good news today!'"}
+{"id": "sv-0770", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is nonsensical; 'hela tiden' (all the time) doesn't fit context. English translation doesn't match source."}
+{"id": "sv-0771", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is incoherent; 'Det verkar bra hela tiden med vänner' doesn't form a logical meaning. English translation doesn't match source."}
+{"id": "sv-0774", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is nonsensical; 'Snart kommer sommaren under sommaren till slut' is contradictory and grammatically confused. English translation doesn't match source."}
+{"id": "sv-0691", "severity": "medium", "issue": "UNNATURAL", "note": "'probably' at sentence end is awkward; 'nog' is filler particle, better as 'What lovely weather we're having today!'"}
+{"id": "sv-0700", "severity": "medium", "issue": "UNNATURAL", "note": "Missing main verb—sentence fragment in both languages. Should be 'The hot dog comes with bread and mustard' or similar."}
+{"id": "sv-0709", "severity": "medium", "issue": "UNNATURAL", "note": "'all the time too' is confusing; 'hela tiden' = 'straight/continuously', better as 'Continue straight past the church.'"}
+{"id": "sv-0710", "severity": "medium", "issue": "UNNATURAL", "note": "'We rejoice at' is archaic/formal; 'glädjas åt' = 'to enjoy; to be pleased about', better as 'We're pleased with the success in the kitchen.'"}
+{"id": "sv-0716", "severity": "medium", "issue": "UNNATURAL", "note": "'really' placement is awkward; better as 'During the summer we really do swim in the lake' or 'we actually swim in the lake.'"}
+{"id": "sv-0718", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Source is nonsensical Swedish; 'väldigt ofta nog' (very often probably) doesn't match standard payment question. Likely corrupted input."}
+{"id": "sv-0719", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Source is awkward/unclear; 'sedan länge gärna' is unnatural. Likely intended 'Vill du följa med?' (Do you want to come along?). Corrupted input."}
+{"id": "sv-0722", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish present tense 'dog' means 'died' but context requires simple past; 'just nu' means 'right now' but sentence needs past tense. Should be 'They were dying of laughter with friends' or similar past context."}
+{"id": "sv-0722", "severity": "high", "issue": "UNNATURAL", "note": "'died of laughter right now' is contradictory—dying suggests ongoing but 'right now' suggests present moment. Swedish idiom 'dog av skratt' = idiomatic past."}
+{"id": "sv-0723", "severity": "medium", "issue": "UNNATURAL", "note": "'Her feet were cold right now' is awkward. Better: 'Her feet were cold right then' or 'Her feet got cold at work' or 'She had cold feet at work.'"}
+{"id": "sv-0726", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'a secret with the family' is unnatural English. Better: 'a secret among the family' or 'a family secret.'"}
+{"id": "sv-0727", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish 'Vad vacker hon var' = 'How beautiful she was' but English exclamation 'How beautiful she was at the station every morning!' is odd. Likely means emphasis on singular moment or habitual beauty. Check if 'varje morgon' modifies the sentence or if it's a separate clause."}
+{"id": "sv-0737", "severity": "medium", "issue": "UNNATURAL", "note": "'the bus there' is awkward. Better: 'the bus' or 'that bus' (Swedish 'dit' = direction). Consider 'Hurry up so we don't miss the bus!'"}
+{"id": "sv-0742", "severity": "medium", "issue": "UNNATURAL", "note": "'told the news' is awkward. Better: 'told me the news' or 'shared the news with me.'"}
+{"id": "sv-0743", "severity": "low", "issue": "UNNATURAL", "note": "'So he said' is stilted. More natural: 'That's what he said' or 'He said so.'"}
+{"id": "sv-0745", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'remodeled' suggests cosmetic changes; Swedish 'byggt om' = 'rebuilt/renovated' more thoroughly. Better: 'completely renovated' or 'rebuilt.'"}
+{"id": "sv-0781", "severity": "medium", "issue": "UNNATURAL", "note": "We'll talk later is idiomatic but 'hörs' literally means 'we'll be heard' - more precisely 'we'll hear from each other' or 'talk soon'"}
+{"id": "sv-0788", "severity": "medium", "issue": "UNNATURAL", "note": "'Home delivery pizza' is awkward; 'hemmapizza' means pizza for eating at home, better as 'We'll order pizza to go' or 'We'll have pizza delivered'"}
+{"id": "sv-0800", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'mejlen' is 'the emails' (plural), not 'the email' (singular); also 'kollar' is present tense 'check', not 'I check' implies habit - should be 'I check my emails at the office'"}
+{"id": "sv-0801", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Nonsensical Swedish source; incomplete clause structure - impossible to translate meaningfully"}
+{"id": "sv-0802", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Grammatically malformed Swedish; 'Det gick snabbt efter jobbet nu' doesn't form coherent meaning - mixing past tense with unclear adverbial structure"}
+{"id": "sv-0804", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Word order broken; 'alltid' (always) at end is unnatural Swedish; unclear meaning - 'Who has the key during the week always?' is not valid English either"}
+{"id": "sv-0805", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Grammatically broken; 'varje dag väl' (every day I suppose) doesn't fit logically with 'When does the movie start'; nonsensical combination"}
+{"id": "sv-0807", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Incomplete sentence structure in Swedish source; 'tillsammans i skolan på jobbet' (together at school at work) lacks verb and coherent meaning"}
+{"id": "sv-0808", "severity": "medium", "issue": "UNNATURAL", "note": "'Why aren't you coming all the time already?' is awkward; 'redan' at end creates unnatural emphasis - should be 'Why don't you come all the time?'"}
+{"id": "sv-0809", "severity": "medium", "issue": "UNNATURAL", "note": "'How is it going next week after work?' mixes present continuous with future time; more natural as 'How will it go next week after work?'"}
+{"id": "sv-0811", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; 'after work in the end' is unclear. Likely means 'What do you recommend to do after work?' or 'What do you recommend after work is done?'"}
+{"id": "sv-0820", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Missing context; 'rullar in' typically means 'rolls in' to a platform/station. English should specify 'into the station' or similar, or the Swedish is incomplete."}
+{"id": "sv-0822", "severity": "medium", "issue": "UNNATURAL", "note": "'Soured milk' is technically correct but 'filmjölk' is a specific Swedish cultured dairy product; 'Swedish sour milk' or just 'filmjölk' would be clearer."}
+{"id": "sv-0827", "severity": "high", "issue": "UNNATURAL", "note": "Translation is incoherent. 'Lagom bra tillsammans för alla verkligen' doesn't parse naturally in English; possibly 'Just right together for everyone really' or context is missing."}
+{"id": "sv-0830", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'gärna' in this context doesn't mean 'gladly'; likely 'Det lät ju bra på kvällen' = 'That sounded good in the evening' but 'gärna' at the end is awkward/incomplete thought."}
+{"id": "sv-0831", "severity": "medium", "issue": "UNNATURAL", "note": "Adding 'I suppose' for 'väl' is acceptable but clunky; 'Have you been to Sweden before?' is more natural, or 'you have, haven't you?' for tag-question effect."}
+{"id": "sv-0832", "severity": "high", "issue": "UNNATURAL", "note": "Entire sentence is incoherent in English. Context and meaning unclear; appears to be a random collection of Swedish phrases."}
+{"id": "sv-0842", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Missing conjunction between clauses; should be 'I don't want to disturb; I understand how you feel.' or similar"}
+{"id": "sv-0846", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward; 'drifted slowly past' needs clarification of what 'the sun' refers to—likely means 'past in front of the sun'"}
+{"id": "sv-0848", "severity": "low", "issue": "UNNATURAL", "note": "'What a shame' is more natural English than 'What shame'"}
+{"id": "sv-0853", "severity": "medium", "issue": "UNNATURAL", "note": "Missing conjunction; should be 'Can you remind me about the meeting tomorrow morning, please?' or 'if you would'"}
+{"id": "sv-0859", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Filmjölk' is a specific Swedish dairy product (fermented milk); 'soured milk' is acceptable but 'cultured milk' or 'filmjölk' (untranslated) may be more accurate"}
+{"id": "sv-0868", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'That was all for' is incomplete/ungrammatical; likely means 'That was all' or needs context"}
+{"id": "sv-0962", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing awkward; 'did not catch it' should be 'missed it' or 'didn't make it'"}
+{"id": "sv-0967", "severity": "medium", "issue": "UNNATURAL", "note": "'I know that really' is awkward; should be 'I know that deep down' or 'I realize that'"}
+{"id": "sv-0968", "severity": "low", "issue": "UNNATURAL", "note": "'How fun that' is slightly awkward; 'How nice that' or 'How wonderful that' flows better"}
+{"id": "sv-0977", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is incoherent/incomplete; cannot be reliably translated as given"}
+{"id": "sv-0980", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Jag tror det nästa vecka med vänner' is grammatically incomplete in Swedish; unclear what is meant"}
+{"id": "sv-0981", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is incoherent; 'Hej, en fråga bara på kvällen nästa år' does not form a complete, sensible clause"}
+{"id": "sv-0986", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Jag längtar' means 'I long' or 'I yearn', not 'I long to go'; translation adds content not in original"}
+{"id": "sv-0903", "severity": "high", "issue": "UNNATURAL", "note": "awkward phrasing: 'sometimes at work' doesn't fit context; likely 'ibland' shouldn't be there or sentence structure is confused"}
+{"id": "sv-0904", "severity": "medium", "issue": "UNNATURAL", "note": "'told about their trip' is slightly stiff; more natural: 'told [us] about their trip' or 'told of their trip'"}
+{"id": "sv-0906", "severity": "medium", "issue": "UNNATURAL", "note": "'I am completely busy' is awkward; better: 'I have my hands full with work' or 'I'm swamped with work'"}
+{"id": "sv-0908", "severity": "medium", "issue": "UNNATURAL", "note": "fragment without verb; should be 'Mashed potatoes with meatballs' or as recipe instruction; current form treats it as a standalone noun phrase when context suggests it's incomplete"}
+{"id": "sv-0914", "severity": "medium", "issue": "MISSING_NUANCE", "note": "proverb meaning 'things should be done properly/correctly'; translation misses this—should be 'Things should be done properly' or 'A thing worth doing is worth doing right'"}
+{"id": "sv-0922", "severity": "high", "issue": "UNNATURAL", "note": "'It doesn't matter sometimes with friends' is nonsensical; 'ibland' seems erroneous or sentence is malformed"}
+{"id": "sv-0923", "severity": "medium", "issue": "UNNATURAL", "note": "'in the evening during summer' is redundant/awkward; better: 'in the evening one summer' or 'in the evenings during summer'"}
+{"id": "sv-0930", "severity": "low", "issue": "WRONG_REGISTER", "note": "'Skit samma' is very crude slang; translation 'Whatever' captures tone but misses vulgarity; consider 'Screw it' or 'To hell with it'"}
+{"id": "sv-0875", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"varsin fika\" means each person gets their own fika; \"We'll each have a fika\" is awkward—should be \"We each have our own fika\" or \"We each have a fika.\""}
+{"id": "sv-0882", "severity": "low", "issue": "UNNATURAL", "note": "\"smell nice\" is correct but \"smell good\" is more natural in English; \"doftar gott\" = smell good"}
+{"id": "sv-0886", "severity": "medium", "issue": "UNNATURAL", "note": "\"I'll have vegetables with the main course\" suggests vegetables are separate; better: \"I'll have vegetables as my main course\" or \"I'll have vegetables for the main course\""}
+{"id": "sv-0888", "severity": "high", "issue": "UNNATURAL", "note": "\"See you there every day probably!\" is awkward and unclear. \"nog\" here means \"I suppose/I guess.\" Better: \"I suppose I'll see you there every day!\" or \"See you there every day, I guess!\""}
+{"id": "sv-0893", "severity": "medium", "issue": "UNNATURAL", "note": "\"I thanked for the help\" is grammatically incomplete. Should be \"I thanked (someone) for the help\" or \"I gave thanks for the help.\""}
+{"id": "sv-0897", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"sluta\" means \"to stop\" or \"to quit/finish.\" In context \"Hon vill inte sluta efter jobbet\" likely means \"She doesn't want to finish/stop after work\" but the English suggests she wants to continue working, not stop. Clarification needed: does she refuse to stop working, or refuse to end something after work?"}
+{"id": "sv-0898", "severity": "medium", "issue": "UNNATURAL", "note": "\"call back in the evening now\" has awkward \"now\" at end. Better: \"She must call back in the evening.\" The \"nu\" here is colloquial filler and may not need literal translation."}
+{"id": "sv-0899", "severity": "medium", "issue": "UNNATURAL", "note": "\"visit Norrland in the evening\" is odd—visiting a region \"in the evening\" is vague. Likely means \"We want to visit Norrland this evening\" or context is missing."}
+{"id": "sv-0900", "severity": "high", "issue": "UNNATURAL", "note": "\"catch the train during the summer now\" is contradictory (during summer vs. now) and awkward. Likely means \"We must catch the train this summer\" without the \"now.\" The \"nu\" is colloquial filler."}
+{"id": "sv-0931", "severity": "low", "issue": "UNNATURAL", "note": "shared present is more natural than joint present"}
+{"id": "sv-0931", "fix": {"k": "gemensam", "en": "shared; joint; common", "pos": "adj"}}
+{"id": "sv-0933", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Passa dig means 'take care; watch out' not 'be careful' – the English suggests caution about behavior, but Swedish means be well/take care of yourself"}
+{"id": "sv-0935", "severity": "medium", "issue": "UNNATURAL", "note": "How sad to hear is awkward; better: It's sad to hear; Sorry to hear would be more natural"}
+{"id": "sv-0937", "severity": "low", "issue": "UNNATURAL", "note": "no danger is stilted; better: no problem; don't worry"}
+{"id": "sv-0938", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "lika gärna means 'might as well; may as well' but 'with the decision' is awkward phrasing – should be 'about the decision' or restructure"}
+{"id": "sv-0943", "severity": "low", "issue": "UNNATURAL", "note": "from top to bottom is idiomatic but 'from top to toe' is the Swedish saying (från topp till tå) – English should match this idiom"}
+{"id": "sv-0944", "severity": "low", "issue": "UNNATURAL", "note": "find the parking is awkward; better: find parking; find a parking spot"}
+{"id": "sv-0945", "severity": "low", "issue": "UNNATURAL", "note": "in good time is archaic; better: in good time; ahead of time; early enough"}
+{"id": "sv-0950", "severity": "low", "issue": "UNNATURAL", "note": "I am serious is grammatically correct but 'I'm being serious; I mean it' more natural"}
+{"id": "sv-0952", "severity": "low", "issue": "UNNATURAL", "note": "It is a shame is stiff; better: It's a shame; It's too bad; That's unfortunate"}
+{"id": "sv-0955", "severity": "high", "issue": "UNNATURAL", "note": "finished late every day before is unclear – before what? Should be 'used to start work early and finish late every day' or 'previously started early and finished late'"}
+{"id": "sv-0957", "severity": "low", "issue": "UNNATURAL", "note": "told about her childhood is awkward; better: told me about; told of; recounted"}
+{"id": "sv-0960", "severity": "medium", "issue": "UNNATURAL", "note": "What bad luck is unnatural phrasing; better: What bad luck; How unfortunate; It's too bad"}
+{"id": "sv-0993", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Räkorna is plural; 'the shrimp' is ambiguous. Should be 'The shrimp are fresh' or 'The shrimp is fresh' depending on countability intent, but 'are' is correct for plural räkor"}
+{"id": "sv-0998", "severity": "medium", "issue": "UNNATURAL", "note": "'The crosswalk is ahead' is odd; better 'The pedestrian crossing is ahead' or 'The crosswalk is up ahead'"}
+{"id": "sv-1009", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Det var inte meningen' means 'That was not the intention' or 'It wasn't meant to be'; 'I didn't mean to' changes the subject and agent. Should be 'That wasn't the intention' or 'It wasn't meant'"}
+{"id": "sv-1013", "severity": "medium", "issue": "UNNATURAL", "note": "'left her alone' is awkward; more natural: 'we left her in peace' or 'we let her be'"}
+{"id": "sv-1015", "severity": "low", "issue": "UNNATURAL", "note": "'It remains to be seen' is grammatically correct but formal/stiff. More natural: 'We'll have to wait and see' or 'That remains to be seen'"}
+{"id": "sv-1019", "severity": "medium", "issue": "UNNATURAL", "note": "'withdrew early' is awkward; 'drog oss tillbaka' more naturally means 'we pulled back' or 'we retreated'; 'We left early' or 'We withdrew early' both work but context suggests 'We pulled back/retreated early'"}
+{"id": "sv-1030", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "affären means 'the store/shop', not logical in context of swimming in sea; likely error in source sentence"}
+{"id": "sv-1031", "severity": "medium", "issue": "UNNATURAL", "note": "English reads as fragment; should be 'It's not possible to complain during the week' or 'You can't complain during the week'"}
+{"id": "sv-1033", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Det var på tiden' means 'it was about time', not 'it was about time' with the time period; awkward phrasing in source; 'after work actually' doesn't fit idiom"}
+{"id": "sv-1034", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Vad var det jag sa' = 'What was it (that) I said'; English translation adds 'you' not in original"}
+{"id": "sv-1036", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'på kvällen snart' is contradictory (evening vs soon); grammatically awkward in Swedish source; likely error"}
+{"id": "sv-1043", "severity": "low", "issue": "UNNATURAL", "note": "more natural as 'She does yoga' or 'She practices yoga'; 'She yogas' is informal/non-standard"}
+{"id": "sv-1046", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'naturell' typically means 'natural'; 'plain' works for yogurt but misses primary sense of 'natural'"}
+{"id": "sv-1083", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "läxan till is idiomatic; 'done the homework for' is incomplete/ungrammatical"}
+{"id": "sv-1084", "severity": "medium", "issue": "UNNATURAL", "note": "'woke up already at five' should be 'woke up already at five' or 'had already woken up at five'"}
+{"id": "sv-1088", "severity": "low", "issue": "UNNATURAL", "note": "'went home at midnight afterwards' is redundant; 'sedan' + 'at midnight' creates awkward flow"}
+{"id": "sv-1096", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Source sentence structure is garbled/ungrammatical in Swedish; translation unclear and awkward"}
+{"id": "sv-1107", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'ibland' means 'sometimes', not compatible with past tense 'bought'; should be 'last year' only or 'occasionally'"}
+{"id": "sv-1108", "severity": "medium", "issue": "UNNATURAL", "note": "'postponed the meeting on the weekend during summer' is unclear; timing contradicts itself"}
+{"id": "sv-1109", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'hela tiden' means 'all the time/constantly'; 'sent a postcard all the time with friends' is nonsensical"}
+{"id": "sv-1053", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "brer = to spread; 'make sandwiches' suggests cooking/assembling, but brer is specifically spreading (butter, jam, etc.)"}
+{"id": "sv-1054", "severity": "high", "issue": "UNNATURAL", "note": "'Stop that during the week gladly!' is awkward; 'gärna' as sentence-final adverb means 'please' or expresses preference, should be 'Please stop that during the week' or similar"}
+{"id": "sv-1056", "severity": "high", "issue": "UNNATURAL", "note": "Word order is Swedish-calqued; 'That sounds strange on the weekend really' should be 'That really sounds strange on the weekend'"}
+{"id": "sv-1057", "severity": "high", "issue": "UNNATURAL", "note": "Swedish word order retained; should be 'That was really tasty during the summer!' or 'Actually, that was tasty during the summer!'"}
+{"id": "sv-1059", "severity": "high", "issue": "UNNATURAL", "note": "'She stopped me during the summer now' has awkward temporal logic (summer + now); likely means 'She prevented me' or temporal markers are unclear"}
+{"id": "sv-1060", "severity": "high", "issue": "UNNATURAL", "note": "'That was unbelievable after work actually!' word order is Swedish-calqued; should be 'That was actually unbelievable after work!' or similar"}
+{"id": "sv-1062", "severity": "medium", "issue": "UNNATURAL", "note": "'it's true for a long time' is awkward; 'siden länge' typically means 'for a long time' (ongoing), but context suggests 'it's been true for ages' or 'that's been true for a long time'"}
+{"id": "sv-1066", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'sedan länge nästa år' is contradictory and unclear; 'sedan länge' = for a long time (past), 'nästa år' = next year (future); these conflict temporally"}
+{"id": "sv-1073", "severity": "low", "issue": "UNNATURAL", "note": "'all the long evening' is awkward phrasing; should be 'all evening long' or 'the whole evening'"}
+{"id": "sv-1115", "severity": "medium", "issue": "UNNATURAL", "note": "shone nicely → shone; 'nicely' is awkward with 'shone'"}
+{"id": "sv-1116", "severity": "low", "issue": "UNNATURAL", "note": "word order; 'Unfortunately we lost' → 'We unfortunately lost' more natural"}
+{"id": "sv-1135", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'pulled the door' incomplete; 'drog i dörren' = 'pulled on/at the door' or 'pulled the door open'"}
+{"id": "sv-1136", "severity": "medium", "issue": "UNNATURAL", "note": "'tied the boat' → 'tied up the boat' or 'moored the boat'; 'band fast' implies securing with a rope"}
+{"id": "sv-1144", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "vandrade means to hike/walk outdoors, not in an indoor library"}
+{"id": "sv-1149", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "sentence is incomplete; 'var' requires complement (var glad, var där, etc.)"}
+{"id": "sv-1157", "severity": "medium", "issue": "UNNATURAL", "note": "should be 'a strange sound' not 'a strange ljud' (ljud is Swedish word left untranslated)"}
+{"id": "sv-1163", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'You may not' is permissive; Swedish 'får inte' means 'must not' or 'are not allowed to'"}
+{"id": "sv-1165", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'may not' suggests permission; should be 'cannot' or 'am not able to' (medical/dietary restriction context)"}
+{"id": "sv-1167", "severity": "low", "issue": "UNNATURAL", "note": "'are starting' is present continuous; 'ska börja' = 'will start' or 'are going to start'"}
+{"id": "sv-1170", "severity": "medium", "issue": "UNNATURAL", "note": "'made me happy with' is awkward; better 'delighted me with' or 'made me happy by telling me'"}
+{"id": "sv-1238", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"jobbar kväll\" means \"work evenings/night shift\", not \"work evening\"; should be \"they work evenings\" or \"they're working the night shift\""}
+{"id": "sv-1246", "severity": "low", "issue": "UNNATURAL", "note": "\"reached a decision\" is slightly awkward; more natural: \"finally came to a decision\" or \"finally made a decision\""}
+{"id": "sv-1258", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"i affären\" means \"in the store\", not \"in the business/affair\"; translation context is completely wrong - should be \"in the paper/report\" or \"in the article\""}
+{"id": "sv-1174", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Senast igår means 'at the latest yesterday' or 'no later than yesterday', not 'just yesterday'. The English suggests recency/emphasis, but Swedish means a deadline."}
+{"id": "sv-1182", "severity": "high", "issue": "UNNATURAL", "note": "Nextweek is temporally odd in 'give me the salt next week'. Either the Swedish or English is nonsensical in context."}
+{"id": "sv-1183", "severity": "high", "issue": "UNNATURAL", "note": "'Can I have the bill, please every day?' is incoherent. Either Swedish is malformed or English mistranslates varje dag."}
+{"id": "sv-1184", "severity": "high", "issue": "UNNATURAL", "note": "'Can you open the window during the week always?' is awkwardly phrased and temporally confusing. Under veckan alltid doesn't naturally pair."}
+{"id": "sv-1194", "severity": "medium", "issue": "UNNATURAL", "note": "Typo or spacing issue in 'provsmakadefika' — should be two words. Also 'tasted local cheeses' is correct, but the source text appears corrupted."}
+{"id": "sv-1199", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Besvärade typically means 'inconvenienced' or 'troubled', not 'bothered' in the sense of 'harassed/pestered'. More precisely: to trouble; to inconvenience."}
+{"id": "sv-1205", "severity": "medium", "issue": "UNNATURAL", "note": "word order awkward; 'really' at end is stilted—better: 'I really miss you (plural) in the morning'"}
+{"id": "sv-1207", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'ibland nog' does not mean 'sometimes probably'; 'nog' here means 'won't you' (softening)—better: 'Can you teach me Swedish sometime?'"}
+{"id": "sv-1211", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "temporal clash: 'hela tiden nästa år' (all the time next year) is contradictory; likely 'throughout that time' or 'the whole time' is intended, with 'nästa år' misplaced"}
+{"id": "sv-1213", "severity": "medium", "issue": "UNNATURAL", "note": "'convinced me on the weekend with the family' is awkward; 'med familjen' (with the family) should attach to a different clause or this needs restructuring"}
+{"id": "sv-1214", "severity": "medium", "issue": "UNNATURAL", "note": "'disturb in the evening really' has awkward word order; 'really' at end is stilted"}
+{"id": "sv-1217", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'väl' here is a discourse marker meaning 'right' or 'presumably', not 'I suppose'; better: 'Can you (plural) see me in the morning?'"}
+{"id": "sv-1226", "severity": "low", "issue": "MISSING_NUANCE", "note": "'stops the sun from shining in' is correct but 'blocks the sun from coming in' is more natural English"}
+{"id": "sv-1264", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ibland (sometimes) contradicts waiting until rain stopped; should be 'once' or remove temporal modifier"}
+{"id": "sv-1265", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "varje dag (every day) illogical with 'soon'; suggests habitual action not supported by Swedish"}
+{"id": "sv-1267", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "sedan länge förra året is contradictory; cannot move in 2015 and have been there 'for a long time last year'"}
+{"id": "sv-1270", "severity": "medium", "issue": "UNNATURAL", "note": "'hung them to dry' is awkward; more natural: 'hung them on a clothesline' or 'hung them up to dry'"}
+{"id": "sv-1289", "severity": "medium", "issue": "MISSING_NUANCE", "note": "oroade can mean 'worried' or 'troubled'; second sense (made uneasy) is common and omitted"}
+{"id": "sv-1294", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing is awkward; 'exhausted me' or 'wore me down' more natural"}
+{"id": "sv-1304", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'You' is more direct than 'One'; 'man' is generic/impersonal but English 'You must' better captures the sense"}
+{"id": "sv-1308", "severity": "low", "issue": "MISSING_NUANCE", "note": "'present' is generic; context suggests 'a gift' might be clearer, though both work"}
+{"id": "sv-1311", "severity": "medium", "issue": "UNNATURAL", "note": "'She promised me that she would come' more natural; 'promised me to come' awkward in English"}
+{"id": "sv-1313", "severity": "low", "issue": "UNNATURAL", "note": "'invited me to dinner' more standard than 'invited me for dinner'"}
+{"id": "sv-1314", "severity": "low", "issue": "WRONG_REGISTER", "note": "'I want an ice cream' slightly formal; 'I'd like' or 'I want ice cream' more natural"}
+{"id": "sv-1319", "severity": "low", "issue": "UNNATURAL", "note": "'catch the train' idiomatic but 'make the train' also common; context-dependent"}
+{"id": "sv-1358", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ibland gärna doesn't mean 'sometimes gladly' — should be 'Can I see the menu sometimes?' or 'May I see the menu?' The phrase is awkward in Swedish too."}
+{"id": "sv-1358", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing 'sometimes gladly' is grammatically odd; 'ibland gärna' in Swedish is also unusual construction"}
+{"id": "sv-1367", "severity": "medium", "issue": "UNNATURAL", "note": "'sweets from here' is awkward; 'Swedish sweets' or 'Swedish treats' alone better captures 'svenska godsaker härifrån'"}
+{"id": "sv-1378", "severity": "low", "issue": "UNNATURAL", "note": "'thank for the help' should be 'thank him for the help' — missing direct object marker makes it sound incomplete"}
+{"id": "sv-1427", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; should be 'We should see each other more often'"}
+{"id": "sv-1436", "severity": "medium", "issue": "UNNATURAL", "note": "incomplete comparison; should be 'It's not as cold (as before/as it was)'"}
+{"id": "sv-1322", "severity": "medium", "issue": "MISSING_NUANCE", "note": "vägen can mean 'the way/route' but more commonly 'the road'; 'about the way' is awkward—'about the road' or 'for directions' more natural"}
+{"id": "sv-1324", "severity": "medium", "issue": "UNNATURAL", "note": "'is going to start the new job' is awkward; better 'will start the new job' or 'is starting her new job'"}
+{"id": "sv-1326", "severity": "high", "issue": "UNNATURAL", "note": "'rest sometimes here' has stray 'here' that doesn't match Swedish; should be 'You should rest sometimes' (ibland här is odd phrasing)"}
+{"id": "sv-1328", "severity": "high", "issue": "UNNATURAL", "note": "'can't sleep sometimes too' is awkward; Swedish suggests habitual inability—better 'sometimes can't sleep' or 'has trouble sleeping sometimes'"}
+{"id": "sv-1329", "severity": "medium", "issue": "UNNATURAL", "note": "'never want to forget' reverses the negation; should be 'I want never to forget' or better 'I never want to forget this' (actually acceptable but awkward placement)"}
+{"id": "sv-1331", "severity": "high", "issue": "UNNATURAL", "note": "'miss him in the morning really' has misplaced adverb; better 'I really miss him in the morning' or 'I miss him so much in the morning'"}
+{"id": "sv-1336", "severity": "high", "issue": "UNNATURAL", "note": "'call her after work here' has stray 'here'; should be 'I should call her after work'"}
+{"id": "sv-1338", "severity": "high", "issue": "UNNATURAL", "note": "'followed him to the door sometimes here' is nonsensical; better 'I followed him to the door' (ibland här doesn't fit logically)"}
+{"id": "sv-1340", "severity": "medium", "issue": "UNNATURAL", "note": "'May I sit here in the evening already?' is awkward; better 'May I sit here already this evening?' or context-dependent rephrasing"}
+{"id": "sv-1342", "severity": "medium", "issue": "UNNATURAL", "note": "'gave us hope every day in the end' is contradictory; 'in the end' conflicts with 'every day'—likely should be 'finally gave us hope' or 'gave us hope every day'"}
+{"id": "sv-1382", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "om en kvart = in a quarter (hour), not 'in fifteen minutes' (though both ~15 min, om en kvart is more precise)"}
+{"id": "sv-1385", "severity": "low", "issue": "UNNATURAL", "note": "'would really like to invite you' is slightly formal; 'would like to invite you' is cleaner"}
+{"id": "sv-1392", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'fika' is a Swedish coffee/tea break tradition, should be translated as 'coffee break' or left as 'fika' with explanation; plain 'fika' in English may not convey the cultural meaning"}
+{"id": "sv-1403", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'övertalade...i centrum' most naturally means 'persuaded her to go to the center' or context-dependent, but 'in the center' is awkward without object clarification"}
+{"id": "sv-1407", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'sedan länge nästa år' doesn't parse grammatically in Swedish; likely malformed source or mistranslated temporal phrase"}
+{"id": "sv-1408", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'ibland förra året' = 'sometimes last year', but paired with 'bought a kitchen' sounds odd; likely should be 'last year' without 'sometimes'"}
+{"id": "sv-1409", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'sedan länge' = 'for a long time' but doesn't fit temporally with 'should exercise'; awkward construction suggesting source error"}
+{"id": "sv-1410", "severity": "medium", "issue": "UNNATURAL", "note": "word order should be 'by October fifteenth at the latest' or 'no later than October fifteenth'"}
+{"id": "sv-1443", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "försöka mitt bästa is not standard Swedish; should be 'göra mitt bästa' (to do my best)"}
+{"id": "sv-1447", "severity": "medium", "issue": "UNNATURAL", "note": "word order awkward; natural English is 'We see no solution anywhere' or 'We don't see a solution anywhere'"}
+{"id": "sv-1457", "severity": "high", "issue": "UNNATURAL", "note": "imperative + 'ofta' (often) doesn't make sense; likely should be 'Sätt dig ner på morgonen ofta' → 'Sit down often in the morning' (reorder for clarity)"}
+{"id": "sv-1461", "severity": "medium", "issue": "UNNATURAL", "note": "'I suppose' is awkward rendering of väl; better: 'Can I walk there?'"}
+{"id": "sv-1462", "severity": "medium", "issue": "UNNATURAL", "note": "'In and of itself' is literal but unnatural; 'In a way, you're right' or 'You're right, I suppose' more natural"}
+{"id": "sv-1467", "severity": "medium", "issue": "UNNATURAL", "note": "'this weekend soon' is redundant/awkward; should be 'They're going to visit us this weekend' or 'soon'"}
+{"id": "sv-1470", "severity": "high", "issue": "UNNATURAL", "note": "entire sentence is incoherent; 'for a long time always' doesn't parse; likely should clarify original intent"}
+{"id": "sv-1507", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish 'också' means 'too/as well', but English 'too' at end suggests addition. Should be 'either': 'I can't find my keys either.'"}
+{"id": "sv-1520", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing. Better: 'A walk in the forest is the most calming thing I know' or 'the calmest thing I do.'"}
+{"id": "sv-1526", "severity": "medium", "issue": "UNNATURAL", "note": "Missing temporal connector. Should be: 'On a warm summer day, we sat outdoors...' or 'One warm summer day...'"}
+{"id": "sv-1575", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward in English; 'I don't understand it either' flows better than 'Neither do I understand it'"}
+{"id": "sv-1577", "severity": "low", "issue": "UNNATURAL", "note": "'We prepare for the day' is more natural; reflexive 'ourselves' is redundant in English"}
+{"id": "sv-1588", "severity": "medium", "issue": "UNNATURAL", "note": "'They sat down at the table' is standard; 'slog sig ner' (literally 'hit themselves down') is idiomatic Swedish but 'sat down' is the correct translation, not 'sat themselves down'"}
+{"id": "sv-1476", "severity": "medium", "issue": "UNNATURAL", "note": "\"joint trip together\" is redundant; \"joint\" already implies togetherness. Should be either \"a joint trip\" or \"a trip together\""}
+{"id": "sv-1478", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"since last month\" suggests ongoing duration; Swedish \"sedan förra månaden\" means \"for [the duration of] last month\" or \"starting last month\". Better: \"has been for sale since last month\" or \"has been on the market for the past month\""}
+{"id": "sv-1489", "severity": "medium", "issue": "UNNATURAL", "note": "\"after having listened\" is vague and awkward. The Swedish doesn't clearly indicate what triggered the desire. Consider: \"He wants to learn to play guitar after listening to it\" or check if original intent differs"}
+{"id": "sv-1492", "severity": "low", "issue": "UNNATURAL", "note": "\"goes and lays himself down\" is overly literal. More natural: \"goes to bed\" (already present but phrasing \"goes and lays\" is awkward)"}
+{"id": "sv-1494", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"källsortera\" means to sort recyclables/waste by type, not specifically \"sort your recycling\". Better: \"You must separate waste by type\" or \"You must sort your waste\". The verb is more technical than the translation suggests"}
+{"id": "sv-1498", "severity": "low", "issue": "UNNATURAL", "note": "\"would gladly like to stay\" is awkward phrasing. Better: \"She'd like to stay\" or \"She'd be happy to stay\". The \"would gladly\" construction is stilted"}
+{"id": "sv-1499", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"passa tiden\" literally means to mind/watch the time or be mindful of time constraints, but doesn't mean \"keep track of\". Better: \"You must watch the time\" or \"You must be mindful of the time\""}
+{"id": "sv-1539", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish phrase is nonsensical; 'nästa vecka till slut' doesn't parse as written. If intended as 'berörde mig djupt' alone, should be 'She touched me deeply' without temporal confusion."}
+{"id": "sv-1540", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish is incoherent; 'diskar efter maten sedan länge nästa år' mixes tenses and logic impossibly. If 'Jag diskar efter maten' intended, translation should be 'I do the dishes after the meal' only."}
+{"id": "sv-1549", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'Det ordnar sig' commonly means 'it will sort itself out' or 'things will work themselves out'; future sense is important but optional 'will' weakens immediacy."}
+{"id": "sv-1552", "severity": "low", "issue": "UNNATURAL", "note": "Colloquially acceptable but 'It will work out' or 'It will resolve itself' reads more naturally than 'work itself out' in English."}
+{"id": "sv-1596", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Fragment missing main verb; Swedish lacks finite verb (incomplete sentence structure)"}
+{"id": "sv-1597", "severity": "medium", "issue": "UNNATURAL", "note": "'together' at end is awkward; Swedish 'ihop' is better rendered as part of verb phrase 'travel together' or omitted"}
+{"id": "sv-1601", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'fika' is a Swedish cultural concept (coffee/tea break with pastry); 'have coffee' misses this specific meaning"}
+{"id": "sv-1605", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'tror på dig' means 'believe in you' but context is nonsensical; likely error in original sentence or translation incompleteness"}
+{"id": "sv-1609", "severity": "low", "issue": "UNNATURAL", "note": "'cozy up' is slightly informal; 'sit cozily' or 'get cozy' more natural in English"}
+{"id": "sv-1625", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "till slut means 'finally' or 'in the end', not 'in the end' as final action; 'at last' or 'finally' would be more natural here"}
+{"id": "sv-1625", "fix": {"k": "till slut", "en": "finally; at last; in the end", "pos": "phrase"}}
+{"id": "sv-1637", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "bokträ is not standard; likely 'bokträ' (beech wood) but 'över bokträ' is unusual phrasing—should verify if 'över bål av bokträ' (over beech wood fire) intended"}
+{"id": "sv-1644", "severity": "low", "issue": "UNNATURAL", "note": "ICA is a store name; 'We shop at ICA' is acceptable but 'We shop at the ICA' or 'We go shopping at ICA' reads more naturally in English"}
+{"id": "sv-1651", "severity": "medium", "issue": "UNNATURAL", "note": "springer typically means to run/jog for exercise; in a store context, 'I'm running' is awkward phrasing"}
+{"id": "sv-1658", "severity": "low", "issue": "UNNATURAL", "note": "'you see' is functional but 'one sees' captures the impersonal construction more naturally"}
+{"id": "sv-1671", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "spelar...roll means 'matters'; 'doesn't really matter' is correct, but 'doesn't play such a big role' is more literal—English phrasing is acceptable but dictionary should clarify"}
+{"id": "sv-1675", "severity": "medium", "issue": "UNNATURAL", "note": "'Surely you can stay a bit longer' is stiff; 'Surely you can stay a little longer' or 'You could certainly stay a bit longer' flows better"}
+{"id": "sv-1680", "severity": "low", "issue": "UNNATURAL", "note": "'We close at eighteen right now too' is grammatically awkward; 'We're closing at six in the evening right now as well' or 'We close at 6 p.m. these days as well' is clearer"}
+{"id": "sv-1681", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence has contradictory temporal markers (tomorrow, next week, now); English doesn't capture this incoherence"}
+{"id": "sv-1683", "severity": "medium", "issue": "UNNATURAL", "note": "Should be 'I come home from work in the evening' or better 'I get home from work in the evening'—'come home from work' is slightly stiff"}
+{"id": "sv-1685", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'tjock' primarily means 'thick' (physical property) but in context of books usually means 'long' or 'voluminous'; 'thick book' is colloquial but 'long book' is clearer"}
+{"id": "sv-1686", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Förr eller senare' (sooner or later) contradicts 'snart' (soon); English translation doesn't flag this redundancy/conflict"}
+{"id": "sv-1689", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish has contradictory temporal markers 'just nu' (right now) and 'snart' (soon); English doesn't reflect incoherence"}
+{"id": "sv-1692", "severity": "low", "issue": "UNNATURAL", "note": "Word order 'Probably it will snow' is slightly stiff; 'It will probably snow' is more natural"}
+{"id": "sv-1693", "severity": "medium", "issue": "UNNATURAL", "note": "'We're leaving on Saturday during the summer' is awkward—Saturday is not during summer in temporal sense; likely means 'We're going away on a Saturday in summer'"}
+{"id": "sv-1702", "severity": "medium", "issue": "UNNATURAL", "note": "Ending with 'really' is colloquial/emphatic but sounds forced; 'really' adds nothing to the meaning here"}
+{"id": "sv-1707", "severity": "medium", "issue": "UNNATURAL", "note": "'The Lucia procession is seen' is passive and awkward; 'You can see the Lucia procession' or 'The Lucia procession takes place' is more natural"}
+{"id": "sv-1708", "severity": "medium", "issue": "UNNATURAL", "note": "Word order 'In front of the school the bus stops' is inverted and stiff; 'The bus stops in front of the school' is standard"}
+{"id": "sv-1717", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is incomplete/ungrammatical; missing verb. 'väldigt ofta' means 'very often' but there's no main verb. Translation doesn't match the source."}
+{"id": "sv-1723", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'pack' is awkward; should be 'are packing' to match Swedish present continuous sense."}
+{"id": "sv-1727", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish is ungrammatical/incomplete. 'En mugg med te i helgen till slut' doesn't form a coherent sentence. Translation is nonsensical."}
+{"id": "sv-1729", "severity": "medium", "issue": "UNNATURAL", "note": "'for a long time' is awkward; should be 'has lived in Gothenburg for a long time' to capture 'sedan länge' properly."}
+{"id": "sv-1731", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Temporal contradiction: 'A little later' conflicts with 'last year'. Swedish likely has tense/time reference issue; translation doesn't resolve the problem."}
+{"id": "sv-1734", "severity": "low", "issue": "MISSING_NUANCE", "note": "'plats' can mean seat/place or position; 'table' is reasonable but 'seat' might be more precise in restaurant context."}
+{"id": "sv-1772", "severity": "medium", "issue": "UNNATURAL", "note": "present tense 'sits' is awkward; Swedish habitual present often better as 'is sitting'"}
+{"id": "sv-1775", "severity": "low", "issue": "UNNATURAL", "note": "'wait outside' is slightly awkward; 'am waiting outside' more natural"}
+{"id": "sv-1779", "severity": "low", "issue": "UNNATURAL", "note": "English 'are going' suggests immediate future; Swedish present tense is more neutral"}
+{"id": "sv-1791", "severity": "medium", "issue": "UNNATURAL", "note": "'has finished reading the book' is more natural than 'has read the book finished'; Swedish particle verb needs clearer rendering"}
+{"id": "sv-1792", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'frusit' means 'to be cold' or 'to freeze'; 'I have been cold all day' is correct but 'I have frozen all day' misses the stative sense. Translation is acceptable but note ambiguity."}
+{"id": "sv-1795", "severity": "medium", "issue": "UNNATURAL", "note": "word order 'always!' at end is awkward English; should be 'Always wait for me after work!' or 'Wait for me after work, always!'"}
+{"id": "sv-1796", "severity": "low", "issue": "UNNATURAL", "note": "'sometimes too' at end is slightly awkward; 'also sometimes' or 'sometimes also' more natural"}
+{"id": "sv-1742", "severity": "medium", "issue": "UNNATURAL", "note": "'Wetter weather' is awkward; 'more wet weather' or 'wetter conditions' is more natural"}
+{"id": "sv-1743", "severity": "medium", "issue": "UNNATURAL", "note": "'The weakest tea' suggests poor quality; 'The mildest/lightest tea' better captures Swedish 'svagaste' in beverage context"}
+{"id": "sv-1752", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English sentence is incomplete ('than' with no comparison). Swedish is also incomplete/malformed; likely missing object"}
+{"id": "sv-1753", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English is incoherent nonsense; Swedish sentence appears malformed or context is missing entirely"}
+{"id": "sv-1756", "severity": "medium", "issue": "UNNATURAL", "note": "'Kinder children' is awkward; 'Kinder' sounds like a proper noun. Use 'Nicer children' or 'More good-natured children'"}
+{"id": "sv-1755", "severity": "low", "issue": "MISSING_NUANCE", "note": "'tastiest restaurant' is odd (restaurants aren't tasted); likely means 'best restaurant' or 'restaurant with the best food'"}
+{"id": "sv-1831", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; 'cried with joy at work on the weekend' flows better"}
+{"id": "sv-1834", "severity": "medium", "issue": "UNNATURAL", "note": "'the one in 2010' is slightly awkward; 'was in 2010' or 'occurred in 2010' is more natural"}
+{"id": "sv-1839", "severity": "low", "issue": "UNNATURAL", "note": "'took her degree' is British/formal; 'graduated' or 'received her degree' is more natural in American English"}
+{"id": "sv-1859", "severity": "low", "issue": "UNNATURAL", "note": "'reading list' is standard but 'before the semester' is slightly awkward; 'before the term started' is more natural"}
+{"id": "sv-1810", "severity": "medium", "issue": "UNNATURAL", "note": "Swedish 'lovade oss att fixa' should translate as 'promised us that he would fix' not 'promised us to fix'; the infinitive construction is awkward in English here"}
+{"id": "sv-1812", "severity": "medium", "issue": "UNNATURAL", "note": "'written a diary' is awkward; should be 'kept a diary' or 'kept a diary' for the colloquial sense"}
+{"id": "sv-1818", "severity": "low", "issue": "UNNATURAL", "note": "simple present 'I stand' is awkward for a single moment; should be 'I am standing' or specify habitual action"}
+{"id": "sv-1827", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'alltid...nu' is contradictory; 'alltid' means always/ever, conflicting with 'now'; likely should be 'I have always loved' without 'now' or remove 'always'"}
+{"id": "sv-1830", "severity": "low", "issue": "UNNATURAL", "note": "'clapped its hands' uses 'its' for a child; should be 'her/his hands' or 'their hands' depending on context, or use generic singular 'their'"}
+{"id": "sv-1900", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "brunnit = burned/burnt (past participle of brinna, to burn); 'I have burnt the food' is correct but awkward phrasing — should be 'I have burned the food' or 'I burned the food'"}
+{"id": "sv-1920", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'nog' at end does not mean 'probably' in this context; 'just nu nog' is unclear/ungrammatical Swedish; likely should be 'Fyll på glaset genast!' (Refill the glass right now!)"}
+{"id": "sv-1920", "severity": "high", "issue": "UNNATURAL", "note": "English translation 'Refill the glass right now probably!' is ungrammatical; missing exclamation mark placement and 'probably' doesn't fit imperative mood"}
+{"id": "sv-1861", "severity": "medium", "issue": "MISSING_NUANCE", "note": "pigg means alert/perky but also 'awake' or 'wide awake'; 'alert' is incomplete"}
+{"id": "sv-1872", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Prinskorv is a specific Swedish sausage (usually pork in pastry), not generic 'small sausages'"}
+{"id": "sv-1875", "severity": "medium", "issue": "UNNATURAL", "note": "stained glass windows is idiomatic but 'glasfönster' is literally 'glass windows'; 'stained glass' assumes decorative intent not stated in Swedish"}
+{"id": "sv-1881", "severity": "medium", "issue": "UNNATURAL", "note": "'The finest thing about' is clunky; 'det finaste med' more naturally = 'what's finest about' or 'the best thing about'"}
+{"id": "sv-1887", "severity": "low", "issue": "MISSING_NUANCE", "note": "Swedish mil ≠ English miles; should clarify 'forty kilometers' or note the unit difference"}
+{"id": "sv-1970", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish present tense 'uppskattade' is past tense (appreciated), not present; also temporal mismatch with 'väldigt ofta nu' (very often now)"}
+{"id": "sv-1973", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward; 'almost' should precede or modify the clause naturally, not dangle at end"}
+{"id": "sv-1975", "severity": "low", "issue": "UNNATURAL", "note": "'on a thin paper' is slightly awkward; should be 'on thin paper' (uncountable usage)"}
+{"id": "sv-1977", "severity": "high", "issue": "UNNATURAL", "note": "Present perfect tense 'vi hyrer ofta nu' mixes present habitual with present perfect; should be 'We rent/We have been renting' depending on intended meaning"}
+{"id": "sv-1978", "severity": "high", "issue": "UNNATURAL", "note": "Phrase 'for everyone!' is nonsensical in imperative context; likely idiomatic Swedish expression not captured; needs clarification of original meaning"}
+{"id": "sv-1981", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ibland means 'sometimes'; should be 'during' or 'over' with next year"}
+{"id": "sv-1981", "fix": {"k": "ibland", "en": "sometimes; during", "pos": "adv"}}
+{"id": "sv-1982", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ibland means 'sometimes'; context requires 'eventually' or 'in the end'"}
+{"id": "sv-1982", "fix": {"k": "ibland", "en": "sometimes; eventually", "pos": "adv"}}
+{"id": "sv-1986", "severity": "medium", "issue": "UNNATURAL", "note": "'wet day' is awkward; 'rainy' or 'damp' more natural for weather"}
+{"id": "sv-1993", "severity": "medium", "issue": "UNNATURAL", "note": "'stands out' is better than 'always is visible'; Swedish syns means to be visible/stand out"}
+{"id": "sv-1999", "severity": "low", "issue": "UNNATURAL", "note": "'around ten o'clock approximately' is redundant; choose one hedge"}
+{"id": "sv-2002", "severity": "low", "issue": "UNNATURAL", "note": "'changed my mind then' awkward; 'but changed my mind' or 'but then changed my mind' better"}
+{"id": "sv-2006", "severity": "low", "issue": "UNNATURAL", "note": "'the twentieth of July factually' is awkward; 'actually was' or remove 'factually'"}
+{"id": "sv-1922", "severity": "high", "issue": "UNNATURAL", "note": "Temporal phrase 'i morgonen nu' (in the morning now) is contradictory and awkward; likely should be just 'nu' or rephrase entirely"}
+{"id": "sv-1925", "severity": "medium", "issue": "UNNATURAL", "note": "'remember...really' is awkward; better as 'I still remember that evening so clearly' or 'vividly'"}
+{"id": "sv-1926", "severity": "high", "issue": "UNNATURAL", "note": "Temporal clash: 'next week right now' is nonsensical; should choose one temporal frame"}
+{"id": "sv-1927", "severity": "high", "issue": "UNNATURAL", "note": "Temporal clash: 'next week now' is contradictory; should be one or the other"}
+{"id": "sv-1931", "severity": "high", "issue": "UNNATURAL", "note": "Temporal phrase 'på morgonen nu' is contradictory; should be 'i morgon' (tomorrow) or just 'nu'"}
+{"id": "sv-1932", "severity": "medium", "issue": "UNNATURAL", "note": "'Already at six o'clock I woke up sometimes too' is grammatically awkward; better as 'Sometimes I even woke up as early as six o'clock'"}
+{"id": "sv-1937", "severity": "high", "issue": "UNNATURAL", "note": "Temporal phrase 'for a long time right now' is nonsensical; should be 'for icy conditions' or 'beware ice now'"}
+{"id": "sv-1946", "severity": "low", "issue": "UNNATURAL", "note": "'planned the wedding for several months' may imply duration of planning; clearer as 'have been planning the wedding for several months'"}
+{"id": "sv-2044", "severity": "medium", "issue": "UNNATURAL", "note": "'arranged' implies deliberate artistic placement; 'put' or 'placed' is more natural for Swedish 'ställde'"}
+{"id": "sv-2048", "severity": "medium", "issue": "UNNATURAL", "note": "'a little' is incomplete; should be 'a little bit' or 'somewhat' to match Swedish 'lite grann'"}
+{"id": "sv-2049", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Swedish uses definite form 'armen' (the arm); English typically uses possessive 'his arm' for body parts, though literal translation is acceptable"}
+{"id": "sv-2060", "severity": "low", "issue": "UNNATURAL", "note": "'at three' is idiomatic but 'at three o'clock' better matches the specificity of Swedish 'klockan tre'"}
+{"id": "sv-2017", "severity": "medium", "issue": "UNNATURAL", "note": "\"cinnamon bun\" should be plural \"cinnamon buns\" (kanelbulle is typically served as multiple items)"}
+{"id": "sv-2020", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"the new album\" should be \"the new album\" but Swedish uses singular \"albumet\"; however the phrase \"I have listened to\" with singular album is acceptable in English, though awkward. Better: \"I have listened to the new album at least ten times\" is correct but \"I have heard the new album...\" is more natural for repeated listening"}
+{"id": "sv-2028", "severity": "low", "issue": "UNNATURAL", "note": "\"now almost nobody carries cash\" - better as \"now hardly anyone carries cash\" or \"now almost nobody carries cash\" is acceptable but \"few people carry cash\" flows better"}
+{"id": "sv-2030", "severity": "medium", "issue": "UNNATURAL", "note": "\"We helped each other carry during the entire long and exciting vacation trip\" is awkward. Should be \"We helped each other carry things throughout the entire long and exciting vacation\" or simply \"We helped each other carry throughout our long and exciting vacation\""}
+{"id": "sv-2035", "severity": "low", "issue": "WRONG_REGISTER", "note": "\"deaconess\" is archaic/formal religious term; modern English prefers \"deacon\" or \"deaconess\" is acceptable but \"female deacon\" is more contemporary"}
+{"id": "sv-2037", "severity": "low", "issue": "UNNATURAL", "note": "\"stretch of coast has\" - better as \"stretch of the coast has\" or \"section of coast has\" flows more naturally"}
+{"id": "sv-2101", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Sentence is grammatically broken in Swedish and English translation doesn't match. 'ibland redan' (sometimes already) contradicts, and overall structure is unclear."}
+{"id": "sv-2105", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'handla med familjen' means 'to shop/trade with the family', not 'shop with'. Should be 'do shopping' or 'go shopping with'."}
+{"id": "sv-2112", "severity": "medium", "issue": "UNNATURAL", "note": "'just recently' is redundant phrasing. Swedish uses 'nyss' or 'nyligen', not both. Choose one: 'I have just moved' or 'I have recently moved'."}
+{"id": "sv-2118", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'sedan förra året' means 'since last year' (point in time), not 'for' (duration). Should be 'has lived...since last year' or 'has been living...for a year'."}
+{"id": "sv-2119", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Missing relative pronoun. Should be 'The house is as big as the one we saw' or 'The house is big, like the one we saw in the old shop yesterday'."}
+{"id": "sv-2126", "severity": "medium", "issue": "UNNATURAL", "note": "'We have been lying on the beach' is not in the Swedish source. Translation adds context not present. Should be simply 'We have lain' or 'We have laid down'."}
+{"id": "sv-2127", "severity": "low", "issue": "UNNATURAL", "note": "Incomplete English. Should be 'He has slept long' or 'He has been sleeping for a long time' to match Swedish sense."}
+{"id": "sv-2161", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence fragment is unclear/incomplete; 'till slut' (in the end/at last) doesn't fit context of 'morning laughter'"}
+{"id": "sv-2166", "severity": "medium", "issue": "UNNATURAL", "note": "'queue at the platform' is awkward; should be 'stand in line at the platform' or 'wait on the platform'"}
+{"id": "sv-2174", "severity": "medium", "issue": "UNNATURAL", "note": "'the unchanged landscape still looked exactly the same' is redundant; 'oförändrade' already means unchanged, making 'still looked exactly the same' repetitive"}
+{"id": "sv-2179", "severity": "low", "issue": "MISSING_NUANCE", "note": "'gärna' conveys willingness/gladness; 'would like' is adequate but 'would be happy to' captures nuance better"}
+{"id": "sv-2186", "severity": "medium", "issue": "UNNATURAL", "note": "'We have been harmed' is overly formal/archaic; 'We fared badly' or 'We did poorly' is more natural for 'Vi har farit illa'"}
+{"id": "sv-2075", "severity": "medium", "issue": "UNNATURAL", "note": "Missing 'long' in translation; should be 'He has been sitting here for a long time' or 'He has been sitting here a long time'"}
+{"id": "sv-2076", "severity": "medium", "issue": "UNNATURAL", "note": "Should be 'She has tied up the boat' or 'She has tied the boat up'"}
+{"id": "sv-2082", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Berätta om' means 'tell (me) if', not imperative alone; should be 'Tell me if you need help'"}
+{"id": "sv-2083", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Nere till höger' means 'down on the right' or 'down to the right'; awkward phrasing. Likely means 'The platform is down and to the right' or 'lower on the right'"}
+{"id": "sv-2086", "severity": "medium", "issue": "UNNATURAL", "note": "Should be 'It's good that you told me' — missing the object 'me' in Swedish 'du berättade' context"}
+{"id": "sv-2087", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Sentence is incoherent in Swedish and translation doesn't match; 'Tack så jättemycket varje dag egentligen!' doesn't make logical sense. Likely malformed source."}
+{"id": "sv-2089", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Ibland här' is awkward Swedish; 'ibland' means 'sometimes' but placement is odd. Likely should be 'There are about a hundred seats here sometimes' or source is malformed."}
+{"id": "sv-2094", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish 'Man aldrig vet' is grammatically incomplete/unnatural; should be 'Man vet aldrig' (You never know). Translation partially correct but source sentence is malformed."}
+{"id": "sv-2095", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish is incoherent; 'förra veckan verkligen' (last week really) doesn't fit with 'vill bara säga' (just want to say). Source appears malformed."}
+{"id": "sv-2096", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Vi ber er notera väldigt ofta här' is awkward; 'notera' + 'väldigt ofta' unclear. Translation doesn't capture the meaning clearly."}
+{"id": "sv-2099", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Vi tog andra platsen på kvällen verkligen' is awkward/unclear; 'second place in the evening really' doesn't make logical sense. Source appears malformed."}
+{"id": "sv-2134", "severity": "medium", "issue": "UNNATURAL", "note": "English should be 'We drive on the motorway northward' or 'northbound'; 'the motorway' suggests a specific one without article in Swedish original"}
+{"id": "sv-2140", "severity": "low", "issue": "UNNATURAL", "note": "'The research to date' is awkward; better: 'Research to date' or 'The research so far'"}
+{"id": "sv-2152", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Nonsensical in English. Swedish likely means 'Do you have lactose-free [milk/products] available in summer?' Context needed; phrasing suggests product availability question"}
+{"id": "sv-2156", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Knyta ihop säcken' is idiomatic (wind things up, wrap things up). Translation 'tie things together' is literal, not idiomatic. Should be 'I wrap things up sometimes with the family' or similar"}
+{"id": "sv-2159", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Tense mismatch: 'has gotten' (present perfect) contradicts 'next year' (future). Swedish 'blivit bättre nästa år' is also contradictory; likely should be 'will have gotten better' or past tense with 'last year'"}
+{"id": "sv-2160", "severity": "medium", "issue": "UNNATURAL", "note": "'told the story with the family' is unclear. Likely means 'told the family the story' or 'told a story about the family'"}
+{"id": "sv-2192", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Temporal contradiction: 'just nu' (right now) + 'förra året' (last year) are mutually exclusive; Swedish likely means 'Ha en bra helg!' (Have a good weekend!)"}
+{"id": "sv-2193", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Temporal contradiction: 'väldigt ofta' (very often) + 'förra året' (last year) mismatch; also 'hälla av' means to pour off/drain, not a recurring habitual action"}
+{"id": "sv-2196", "severity": "medium", "issue": "UNNATURAL", "note": "Imperative 'Njut' should be 'to enjoy' not 'Enjoy' (missing context or register shift)"}
+{"id": "sv-2198", "severity": "medium", "issue": "UNNATURAL", "note": "'Go for it' is colloquial; 'Satsa' is imperative meaning 'to bet; to go for it' — more naturally 'Bet on it' or 'Take the chance'"}
+{"id": "sv-2212", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Rondellen kommer snart' means 'The roundabout is coming up soon' (in direction of travel), not 'coming soon' as event"}
+{"id": "sv-2282", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Missing unit; should be 'eighty kilometers per hour' or similar context"}
+{"id": "sv-2286", "severity": "medium", "issue": "UNNATURAL", "note": "'had improved' is awkward; 'had been improved' or 'improved' fits better"}
+{"id": "sv-2299", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish source is incoherent/malformed; 'sedan länge snart' contradicts itself"}
+{"id": "sv-2301", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'wasn't right' is ambiguous; should be 'admitted he was wrong' or 'admitted he didn't have the right'"}
+{"id": "sv-2303", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish source incomplete/incoherent; translation cannot be evaluated"}
+{"id": "sv-2308", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish source malformed; 'imponeras av... ibland nästa år' is grammatically broken"}
+{"id": "sv-2252", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ibland means 'sometimes', not 'in the end'; Swedish says 'sometimes in the end' which is awkward; likely should be 'Finally we found the way'"}
+{"id": "sv-2253", "severity": "medium", "issue": "UNNATURAL", "note": "verkligen (really) at end is awkward placement in English; should be 'We really hope that the weather will be nice' or omit"}
+{"id": "sv-2259", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "varje morgon (every morning) contradicts imperative singular context; sentence structure suggests habitual command which is unnatural; should be 'Please sit in the garden' or 'sit in the garden every morning'"}
+{"id": "sv-2261", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "svenska är inkohärent; 'Det gjorde hon verkligen sedan länge på jobbet' doesn't parse clearly; English translation incomplete/incoherent"}
+{"id": "sv-2263", "severity": "medium", "issue": "UNNATURAL", "note": "habitual command 'every morning' with imperative is unnatural in English; should be 'Learn new words at our place every morning' or present tense"}
+{"id": "sv-2266", "severity": "medium", "issue": "UNNATURAL", "note": "Swedish 'sedan ni flyttade' is 'since you moved'; 'from here' is redundant with 'away'"}
+{"id": "sv-2277", "severity": "medium", "issue": "UNNATURAL", "note": "Se framåt more naturally means 'to look ahead' or 'to look forward' (not 'Look forward' as imperative alone)"}
+{"id": "sv-2221", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Missing 'var snäll' (please/be kind); translation omits the politeness marker"}
+{"id": "sv-2226", "severity": "medium", "issue": "UNNATURAL", "note": "Word order is awkward in English; should be 'We must solve this problem' or 'This problem we must solve' needs better context"}
+{"id": "sv-2230", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'går till jobbet' means 'go to work' not specifically 'walk to work'"}
+{"id": "sv-2231", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Sentence is nonsensical in Swedish; 'Vi får se hela tiden snart' doesn't parse naturally"}
+{"id": "sv-2234", "severity": "low", "issue": "UNNATURAL", "note": "Should be 'She told where she had lived' or 'She told us where she had lived'; missing indirect object sounds awkward"}
+{"id": "sv-2235", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is grammatically incoherent; temporal references conflict"}
+{"id": "sv-2236", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is grammatically incoherent; adverb placement makes it nonsensical"}
+{"id": "sv-2237", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is grammatically incoherent; temporal references conflict with imperative"}
+{"id": "sv-2239", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is grammatically incoherent; 'snart' (soon) doesn't fit with imperative"}
+{"id": "sv-2240", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is grammatically incoherent; 'snart' contradicts 'ska ha bestämt sig'"}
+{"id": "sv-2241", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is grammatically incoherent; 'förra veckan' (last week) contradicts present tense 'promenerar'"}
+{"id": "sv-2249", "severity": "low", "issue": "UNNATURAL", "note": "Should be 'Eat as much as you want every day!' sounds slightly awkward; 'Eat all you want every day' is more natural"}
+{"id": "sv-2314", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish text has typo 'began' instead of 'började'; translation is correct for the intended meaning but the source card itself contains an error"}
+{"id": "sv-2318", "severity": "medium", "issue": "MISSING_NUANCE", "note": "English 'got' is colloquial; 'have gotten' or 'have taken' better captures Swedish 'har fått' in context of job acquisition"}
+{"id": "sv-2325", "severity": "low", "issue": "UNNATURAL", "note": "'during the whole lesson' is slightly awkward; 'throughout the entire lesson' or 'during the whole class' flows better"}
+{"id": "sv-2326", "severity": "low", "issue": "UNNATURAL", "note": "'eat the food' is redundant; 'before you eat' is more natural"}
+{"id": "sv-2327", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'taught myself' implies active self-instruction; 'lärt mig' can mean learned through exposure; 'learned Swedish by listening' would be more accurate"}
+{"id": "sv-2331", "severity": "low", "issue": "UNNATURAL", "note": "'enjoy it excellently' is awkward phrasing; 'am doing excellently' or 'like it very much' is more natural"}
+{"id": "sv-2339", "severity": "low", "issue": "UNNATURAL", "note": "'switch to the local transit' could be clearer; 'switch to public transit' or 'take the local bus/train' is more idiomatic"}
+{"id": "sv-2409", "severity": "medium", "issue": "UNNATURAL", "note": "'make it soon' is awkward; should be 'we'll make it in time' or 'we'll arrive soon'"}
+{"id": "sv-2413", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "förra veckan (last week) contradicts imperative 'Try'; should be 'Try the Swedish food this week!' or instruction doesn't reference past time"}
+{"id": "sv-2413", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "väl particle mishandled; should drop 'I suppose' entirely"}
+{"id": "sv-2415", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "på morgonen (in the morning) and efter jobbet (after work) are contradictory; likely one time reference intended"}
+{"id": "sv-2422", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "hemma hos oss (at our home) contradicts 'yourself' implication; awkward phrasing or missing context"}
+{"id": "sv-2377", "severity": "medium", "issue": "UNNATURAL", "note": "\"Please sit down\" should be \"Be kind and sit down\" or \"Please be kind and sit down\" — the Swedish literally says \"Be kind and sit down\""}
+{"id": "sv-2386", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Fragment missing main verb; should be \"The popular restaurant on the corner is...\" or \"There's a popular restaurant on the corner\""}
+{"id": "sv-2388", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Gå över bron i affären\" is nonsensical (walk over a bridge in a store); likely error in source sentence or translation context unclear"}
+{"id": "sv-2389", "severity": "medium", "issue": "UNNATURAL", "note": "\"Help yourself every day already!\" is awkward; \"redan\" (already) placement and overall phrasing unnatural in English context"}
+{"id": "sv-2394", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward; should be \"We sat until the sun went down\" or \"Until the sun went down, we sat\""}
+{"id": "sv-2395", "severity": "high", "issue": "UNNATURAL", "note": "Nonsensical; \"Practice makes perfect in the evening probably!\" mangles the idiom; unclear what source intends"}
+{"id": "sv-2396", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; \"Park over there in the morning too!\" is odd without context; likely strained translation"}
+{"id": "sv-2397", "severity": "high", "issue": "UNNATURAL", "note": "Incoherent; \"Choose a seat very often at home!\" doesn't make natural sense; translation appears forced or source corrupted"}
+{"id": "sv-2399", "severity": "medium", "issue": "UNNATURAL", "note": "\"väl\" as \"I suppose\" is colloquial tag; awkward at sentence end; should be \"Clean your room during the week, will you?\" or similar"}
+{"id": "sv-2400", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"sedan länge\" (for a long time) doesn't fit context; should be \"Go to Skansen later today\" or similar; translation mishandles temporal phrase"}
+{"id": "sv-2433", "severity": "high", "issue": "UNNATURAL", "note": "redundant 'early in the early morning' — should be 'early in the morning' or 'early in the morning'"}
+{"id": "sv-2443", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'Wash your hands' implies polite imperative, but Swedish 'Tvätta händerna' is bare imperative — should be 'to wash one's hands' or just 'Wash hands'"}
+{"id": "sv-2444", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'Brush your teeth' implies polite imperative, but Swedish 'Borsta tänderna' is bare imperative — should be 'to brush one's teeth' or 'Brush teeth'"}
+{"id": "sv-2445", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'Go to bed' is less precise; 'Lägg dig' is more 'to lie down' — consider 'Lie down'"}
+{"id": "sv-2455", "severity": "medium", "issue": "UNNATURAL", "note": "missing comma or conjunction — should be 'Regardless of the outcome, I'm satisfied' or 'Regardless of the outcome, I am satisfied'"}
+{"id": "sv-2459", "severity": "high", "issue": "UNNATURAL", "note": "incomplete sentence — English needs predicate; Swedish 'Det stora intresset för friluftsliv' requires completion like 'There is great interest in outdoor life' or 'The great interest in outdoor life is evident'"}
+{"id": "sv-2341", "severity": "medium", "issue": "UNNATURAL", "note": "English incomplete; Swedish verb 'utgörs av' (is composed of) needs object. Card breaks mid-clause."}
+{"id": "sv-2342", "severity": "medium", "issue": "UNNATURAL", "note": "'byter om' means to change clothes, but English 'changes' is vague. Should be 'He changes clothes after the workout.'"}
+{"id": "sv-2348", "severity": "low", "issue": "UNNATURAL", "note": "'polished... to perfect shape' is awkward. 'polished the diamond into a perfect shape' or 'to perfection' more natural."}
+{"id": "sv-2352", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Sentence structure broken. 'planerade aktiviteterna väldigt ofta' doesn't mean 'planned activities very often'; unclear intent. Possibly 'They planned the activities very frequently last year' or temporal mismatch."}
+{"id": "sv-2353", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'väldigt ofta' (very often) + 'till slut' (in the end) creates logical tension. Likely mistranslation or malformed source."}
+{"id": "sv-2354", "severity": "medium", "issue": "UNNATURAL", "note": "Imperative 'Ha lite tålamod' is odd phrasing; English equivalent unclear. Context needed."}
+{"id": "sv-2356", "severity": "high", "issue": "UNNATURAL", "note": "'permits really' is ungrammatical English. Should be 'It depends on whether the weather actually permits it' or 'allows it.'"}
+{"id": "sv-2358", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Res dig upp på kvällen med familjen' doesn't match 'Stand up in the evening with the family.' Likely means 'Go out in the evening' or context-dependent imperative."}
+{"id": "sv-2361", "severity": "medium", "issue": "UNNATURAL", "note": "'Eat up the food next week in the end' is awkward. Likely 'Finish eating the food by next week' intended."}
+{"id": "sv-2368", "severity": "low", "issue": "UNNATURAL", "note": "'nineteen fifties' should be 'the nineteen fifties' or 'the 1950s' for natural English."}
+{"id": "sv-2369", "severity": "low", "issue": "UNNATURAL", "note": "'My children and I' reverses Swedish word order naturally, but 'We and my children' would better mirror 'Jag och mina barn.' Minor stylistic preference; acceptable as-is."}
+{"id": "sv-2467", "severity": "high", "issue": "UNNATURAL", "note": "word order and phrasing awkward; 'Var dig själv på kvällen egentligen!' is nonsensical (why 'in the evening' with 'actually'?)"}
+{"id": "sv-2468", "severity": "high", "issue": "UNNATURAL", "note": "temporal/locational modifiers misplaced; 'in the morning at home' is awkward—should be 'Don't throw litter on the ground' or similar"}
+{"id": "sv-2472", "severity": "high", "issue": "UNNATURAL", "note": "'Håll i dig väldigt ofta' is idiomatic (hold on/keep going); English rendering 'Hold on very often in Sweden!' doesn't convey meaning"}
+{"id": "sv-2474", "severity": "medium", "issue": "UNNATURAL", "note": "'dit' (there) appended without context—'Merry Christmas and happy new year there!' is odd; likely should be 'to you' or omitted"}
+{"id": "sv-2476", "severity": "high", "issue": "UNNATURAL", "note": "'Prova den här rätten på morgonen väl!' doesn't coherently mean 'Try this dish in the morning I suppose!'—'väl' (well/I suppose) + morning modifier awkward"}
+{"id": "sv-2478", "severity": "medium", "issue": "UNNATURAL", "note": "'just nu' (right now) with past tense 'were made' is contradictory; should be 'just now' or remove temporal marker"}
+{"id": "sv-2479", "severity": "medium", "issue": "UNNATURAL", "note": "'varje dag nu' (every day now) is awkward with present perfect; suggest 'have been considered throughout' or remove 'every day'"}
+{"id": "sv-2485", "severity": "low", "issue": "UNNATURAL", "note": "'till slut' (in the end) is slightly redundant after 'decided'; 'finally' would be more natural than 'in the end'"}
+{"id": "sv-2488", "severity": "low", "issue": "UNNATURAL", "note": "'got seats' should be 'got places' or 'got spots'; minor but 'seats on the last train' is better as 'space on the last train'"}
+{"id": "sv-2490", "severity": "medium", "issue": "UNNATURAL", "note": "'several times a day regularly' is redundant/awkward; 'regularly several times a day' or 'several times daily' is clearer"}
+{"id": "sv-2499", "severity": "medium", "issue": "UNNATURAL", "note": "'take the easy part then' is awkward; should be 'then do the easier tasks' or similar"}
+{"id": "sv-2501", "severity": "medium", "issue": "UNNATURAL", "note": "'in a good way' is vague; better: 'properly' or 'constructively'"}
+{"id": "sv-2502", "severity": "medium", "issue": "UNNATURAL", "note": "'behave like adults fast we want' reads awkwardly; 'even though' is correct but phrasing is stiff"}
+{"id": "sv-2506", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'concerns whether' is incomplete; should be 'concerns whether [something]' or rephrased entirely"}
+{"id": "sv-2509", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Take off the shoes in the morning soon!' makes no sense; context suggests a garbled or nonsensical instruction"}
+{"id": "sv-2514", "severity": "medium", "issue": "UNNATURAL", "note": "'Tell me what happened in the evening last year!' is odd phrasing; 'what happened one evening last year' or 'that evening last year' would be clearer"}
+{"id": "sv-2515", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'The mountain is visible far away on the weekend with the family' is incoherent; 'with the family' doesn't connect logically"}
+{"id": "sv-2516", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Entire sentence is incoherent; 'with the family' appended nonsensically; original Swedish also appears malformed"}
+{"id": "sv-2529", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English adds 'the' before 'city'; Swedish structure suggests subject-verb inversion issue or missing word."}
+{"id": "sv-2533", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Förra veckan' (last week) and 'alltid' (always) are contradictory and don't align with imperative sense."}
+{"id": "sv-2535", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Förra veckan alltid' (last week always) is nonsensical; English translation doesn't match awkward Swedish."}
+{"id": "sv-2536", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Under veckan alltid' (during the week always) is awkward; adverbial modifiers appear misplaced."}
+{"id": "sv-2540", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Sedan länge alltid' (for a long time always) is contradictory; English doesn't capture Swedish awkwardness accurately."}
+{"id": "sv-2541", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Hela tiden väl' (all the time I suppose) is poorly translated; structure suggests imperative with dubious modifiers."}
+{"id": "sv-2542", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Sedan länge väl' is nonsensical; English doesn't capture Swedish incoherence."}
+{"id": "sv-2545", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Under sommaren väl' (during summer I suppose) mismatch; 'väl' doesn't mean 'I suppose' in imperative context."}
+{"id": "sv-2547", "severity": "medium", "issue": "UNNATURAL", "note": "'After work' on the weekend is illogical; temporal modifiers conflict."}
+{"id": "sv-2549", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Hela tiden på jobbet' (all the time at work) is contradictory with imperative action."}
+{"id": "sv-2550", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'I helgen efter jobbet' (on weekend after work) is temporally incoherent."}
+{"id": "sv-2551", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'now' contradicts past event; should be 'They met for the first time in Lund' or use 'They first met in Lund'"}
+{"id": "sv-2556", "severity": "low", "issue": "UNNATURAL", "note": "'gotten' is dialectal American; 'has gotten' → 'has received' or 'now has'"}
+{"id": "sv-2562", "severity": "medium", "issue": "UNNATURAL", "note": "'Go straight ahead in the kitchen' is awkward; likely means 'Go straight into the kitchen' or 'Go all the way into the kitchen'"}
+{"id": "sv-2564", "severity": "medium", "issue": "UNNATURAL", "note": "Fragment missing main clause verb; should be 'The book that changed my life (was special)' or use as dependent clause context"}
+{"id": "sv-2567", "severity": "high", "issue": "UNNATURAL", "note": "'every day actually' is incoherent; 'Åk till Dalarna varje dag' means 'Go to Dalarna every day' but 'egentligen' (actually/really) doesn't fit; unclear intended meaning"}
+{"id": "sv-2571", "severity": "high", "issue": "UNNATURAL", "note": "'Listen to me gladly' is awkward English; should be 'Please listen to me during the week' or 'Listen to me during the week, will you'"}
+{"id": "sv-2572", "severity": "high", "issue": "UNNATURAL", "note": "'Calm down for a long time actually' makes no sense; 'sedan länge' (for a long time) contradicts momentary action; likely malformed source"}
+{"id": "sv-2574", "severity": "medium", "issue": "UNNATURAL", "note": "Fragment with no main verb; should be 'The narrow streets in the Old Town (are charming)' or provide context"}
+{"id": "sv-2577", "severity": "high", "issue": "UNNATURAL", "note": "'Believe in yourself sometimes in Sweden' is nonsensical; 'ibland i Sverige' (sometimes in Sweden) is geographically absurd; likely error in source"}
+{"id": "sv-2578", "severity": "high", "issue": "UNNATURAL", "note": "'Keep calm during the summer on weekends' is redundant and awkward; 'på helgerna' (on weekends) conflicts with 'under sommaren' (during summer); unclear intent"}
+{"id": "sv-2579", "severity": "low", "issue": "UNNATURAL", "note": "'it'll be wrong' is informal contraction; formal version 'it will be wrong'"}
+{"id": "sv-2582", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is contradictory (finally succeeded right now in the end) and doesn't translate naturally; awkward phrasing in English reflects poor source"}
+{"id": "sv-2584", "severity": "medium", "issue": "UNNATURAL", "note": "'tastes best really' is awkward; should be 'tastes best' or 'really tastes best'"}
+{"id": "sv-2593", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "mytomspunna means 'mythical' or 'legendary', not 'legendary' as a caption-style translation; context suggests 'mythical northern lights' is more accurate"}
+{"id": "sv-2600", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "tense mismatch: present tense 'play' contradicts past time reference 'last week'; should be 'played' or remove temporal reference"}
+{"id": "sv-2601", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "imperative + contradictory temporal reference (don't go last year) is illogical; Swedish likely means something different"}
+{"id": "sv-2603", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "historical fact (Nobel established prize in 1895) cannot happen 'next week'; temporal reference is factually impossible"}
+{"id": "sv-2605", "severity": "medium", "issue": "UNNATURAL", "note": "'share the kitchen amicably right now with friends' is awkward; 'share the kitchen with friends right now' is more natural"}
+{"id": "sv-2606", "severity": "medium", "issue": "UNNATURAL", "note": "'at the square celebrate on the weekend with the family' has awkward word order; should be 'celebrate at the square on the weekend with the family'"}
+{"id": "sv-2609", "severity": "low", "issue": "WRONG_REGISTER", "note": "'Autumn is colorful' is generic; 'Fall is colorful' or 'Autumn is full of color' fits Swedish tone better"}
+{"id": "sv-2612", "severity": "medium", "issue": "UNNATURAL", "note": "Fragment without main verb; should be complete sentence context"}
+{"id": "sv-2616", "severity": "medium", "issue": "UNNATURAL", "note": "Fragment; needs verb or context to be a complete sentence"}
+{"id": "sv-2621", "severity": "medium", "issue": "UNNATURAL", "note": "Fragment without main verb; incomplete sentence"}
+{"id": "sv-2622", "severity": "low", "issue": "MISSING_NUANCE", "note": "'igenom' can also mean 'over' or 'through with'; 'go through' is correct but 'review' might be more natural"}
+{"id": "sv-2627", "severity": "low", "issue": "UNNATURAL", "note": "'följs åt' more idiomatically means 'go together' or 'travel together'; 'walk together' is narrower"}
+{"id": "sv-2628", "severity": "medium", "issue": "UNNATURAL", "note": "Fragment; needs main clause to be grammatically complete"}
+{"id": "sv-2629", "severity": "medium", "issue": "UNNATURAL", "note": "Fragment; relative clause without main clause context"}
+{"id": "sv-2632", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'fick blod på tand' is an idiom meaning 'developed a taste for it' or 'got a taste of blood'; translation captures meaning but idiom note valuable"}
+{"id": "sv-2637", "severity": "low", "issue": "MISSING_NUANCE", "note": "'ta en fika' is specifically a Swedish coffee/tea break tradition; 'have fika' or 'take fika' both work but cultural context matters"}
+{"id": "sv-2640", "severity": "low", "issue": "UNNATURAL", "note": "'he suggested' more naturally renders 'han föreslog' but 'he suggested' is acceptable; minor word order naturalness"}
+{"id": "sv-2641", "severity": "medium", "issue": "WRONG_REGISTER", "note": "\"she\" is archaic/formal; modern English uses \"her\""}
+{"id": "sv-2649", "severity": "high", "issue": "UNNATURAL", "note": "\"tomorrow now\" is redundant/contradictory; remove one"}
+{"id": "sv-2650", "severity": "high", "issue": "UNNATURAL", "note": "\"tonight sometimes now\" is incoherent; \"sometimes\" and \"now\" conflict with fixed time"}
+{"id": "sv-2651", "severity": "medium", "issue": "UNNATURAL", "note": "\"also\" appended awkwardly; likely should be context-integrated or removed"}
+{"id": "sv-2652", "severity": "high", "issue": "UNNATURAL", "note": "sentence fragment; \"really\" dangling. Likely: \"The famous museum in the middle of town is really [something]\""}
+{"id": "sv-2654", "severity": "medium", "issue": "UNNATURAL", "note": "incomplete; \"since a long time back\" is awkward. Consider: \"for a long time\""}
+{"id": "sv-2660", "severity": "medium", "issue": "UNNATURAL", "note": "\"important in the end\" is odd; likely should be \"important after all\" or context removed"}
+{"id": "sv-2661", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"dammsugare\" is noun (vacuum cleaner), not verb. Should be \"dammsöger\" or \"vacuumed\"; English needs verb form"}
+{"id": "sv-2669", "severity": "high", "issue": "UNNATURAL", "note": "sentence fragment; missing predicate. Needs \"is\" or other verb"}
+{"id": "sv-2675", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is grammatically broken; 'blåser tillsammans till slut' doesn't mean 'blowing together in the end'"}
+{"id": "sv-2678", "severity": "medium", "issue": "UNNATURAL", "note": "English needs article or verb: 'He who waits...' should be completed or 'The one who waits for something good'"}
+{"id": "sv-2688", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'typical for' is awkward; 'typical of' is standard"}
+{"id": "sv-2689", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish flag is blue and yellow, but common knowledge is blue and gold; the Swedish flag is actually blue and yellow, so this is correct but the phrasing 'is blue and yellow' should be verified against actual flag colors (it is blue and yellow)"}
+{"id": "sv-2694", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is incomplete/grammatically broken; 'ibland också' at end makes no sense. Missing verb or main clause."}
+{"id": "sv-2696", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is grammatically incoherent; 'ibland förra året' (sometimes last year) doesn't fit. Sentence structure is broken."}
+{"id": "sv-2698", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is grammatically broken and nonsensical; 'hela tiden med vänner' (all the time with friends) doesn't logically follow 'connects the islands'"}
+{"id": "sv-2797", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "åttatiden means 'eight o'clock' or 'around eight', not 'about eight' as a temporal modifier"}
+{"id": "sv-2797", "fix": {"k": "vid åttatiden", "en": "at eight o'clock", "pos": "phrase"}}
+{"id": "sv-2800", "severity": "high", "issue": "UNNATURAL", "note": "'is hit by a cold' is not idiomatic English; Swedish drabbas av = 'to catch; to get (a cold)'"}
+{"id": "sv-2800", "fix": {"k": "drabbas av", "en": "to catch; to get", "pos": "v"}}
+{"id": "sv-2810", "severity": "low", "issue": "UNNATURAL", "note": "'in a thousand copies' is awkward; more natural as 'in a thousand copies' → 'in an edition of a thousand' or 'in a thousand-copy edition', but translation itself acceptable"}
+{"id": "sv-2815", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "sentence is incomplete in Swedish (no main verb); should be translated with a main clause or marked as fragment"}
+{"id": "sv-2732", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish present tense 'ger sig inte' (doesn't give in) with 'förra veckan' (last week) is temporally incoherent; English translation also awkward"}
+{"id": "sv-2733", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish structure ungrammatical; 'Ingenting som oroar mig ibland nästa år' mixes relative clause oddly; English preserves but doesn't clarify the Swedish error"}
+{"id": "sv-2736", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'under veckan' means 'during the week', not compatible with 'månaden är snart slut' (month almost over); temporal logic breaks"}
+{"id": "sv-2738", "severity": "medium", "issue": "UNNATURAL", "note": "English lacks main verb; should be 'The dance that you dance around the pole with friends' or similar complete clause"}
+{"id": "sv-2739", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Conditional 'skulle vilja' (would like) with past 'förra året' (last year) is temporally contradictory; English preserves the error"}
+{"id": "sv-2740", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'anlitade' is past tense, but 'Det rekommenderades att vi anlitade' should be 'It was recommended that we hire' (infinitive); English uses 'hire' correctly but Swedish past tense is wrong"}
+{"id": "sv-2751", "severity": "low", "issue": "UNNATURAL", "note": "English 'we discussed' is acceptable but less complete than Swedish relative clause; minor phrasing difference"}
+{"id": "sv-2757", "severity": "low", "issue": "UNNATURAL", "note": "'He who' is archaic; 'Whoever asks gets an answer' would be more natural modern English, though not wrong"}
+{"id": "sv-2707", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English says 'my daily routine' but Swedish says 'min dagliga rutin' with subject 'hon' (she) — perspective mismatch"}
+{"id": "sv-2710", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish 'tillsammans' means 'together' but makes no sense here; likely error in source sentence"}
+{"id": "sv-2715", "severity": "medium", "issue": "UNNATURAL", "note": "Intransitive verb 'extends' needs object or completion; 'stretches for miles' or 'stretches on' more natural"}
+{"id": "sv-2716", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Fragment with no main clause; incomplete sentence in both languages"}
+{"id": "sv-2718", "severity": "medium", "issue": "UNNATURAL", "note": "Noun phrase without verb; needs context like 'are in Skåne' or 'exist in Skåne'"}
+{"id": "sv-2719", "severity": "medium", "issue": "UNNATURAL", "note": "Bare noun phrase; needs verb like 'is the calm life' or 'represents the calm life'"}
+{"id": "sv-2720", "severity": "medium", "issue": "UNNATURAL", "note": "Bare noun phrase without main verb"}
+{"id": "sv-2722", "severity": "medium", "issue": "UNNATURAL", "note": "Context unclear: 'vacation month in the park' is odd; likely means 'vacation month for the park' or 'of the park'"}
+{"id": "sv-2723", "severity": "medium", "issue": "UNNATURAL", "note": "Bare noun phrase; needs verb context"}
+{"id": "sv-2727", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Fragment 'The written words all the time too' is not a complete clause and doesn't match Swedish grammar"}
+{"id": "sv-2728", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Fragment 'The short winter sun during the week too' lacks verb; not a complete sentence"}
+{"id": "sv-2730", "severity": "medium", "issue": "UNNATURAL", "note": "'the family has owned' is ambiguous; 'that the family has owned' clarifies but 'which the family has owned' more natural in English"}
+{"id": "sv-2761", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "under två år means 'for two years' (duration), not 'over two years'"}
+{"id": "sv-2761", "fix": {"k": "under", "en": "for; during", "pos": "prep"}}
+{"id": "sv-2769", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "parkerar is present tense 'parks', but English uses 'parking' (participle); should be 'The car that parks there' or use participle form"}
+{"id": "sv-2774", "severity": "high", "issue": "UNNATURAL", "note": "word order is scrambled; should be 'We sometimes really hope for good weather' or similar natural order"}
+{"id": "sv-2778", "severity": "high", "issue": "UNNATURAL", "note": "word order is awkward; 'very often also' at end is unnatural; should be 'The door opens at eight very often' or restructure"}
+{"id": "sv-2780", "severity": "high", "issue": "UNNATURAL", "note": "'for a long time too' is awkward; Swedish 'sedan länge också' suggests ongoing pattern; better: 'have been picked up at four for a long time now'"}
+{"id": "sv-2782", "severity": "medium", "issue": "UNNATURAL", "note": "'In so far as' is archaic/stilted; modern English 'As long as' or 'To the extent that' is more natural"}
+{"id": "sv-2784", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "sentence is incomplete in English; Swedish lacks main verb (ellipsis), but English translation needs one: 'The recipe I got from her in the end was good' or similar"}
+{"id": "sv-2788", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'recernerades' appears to be misspelling of 'recenserades' (reviewed); translation matches intent but source is misspelled"}
+{"id": "sv-2825", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "i morse = this morning; i helgen = during/over the weekend; 'in the morning on the weekend' is incoherent"}
+{"id": "sv-2826", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "på morgonen snort = impossible time markers together; snart = soon (future), but past tense context makes this nonsensical"}
+{"id": "sv-2833", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "incomplete sentence in both languages; 'shaped the future' needs completion (e.g., 'has shaped')"}
+{"id": "sv-2836", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "incomplete English; missing main verb (e.g., 'lies off the coast' or 'that lies off the coast')"}
+{"id": "sv-2837", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "incomplete English; needs main verb (e.g., 'are visible' or 'The mountains that are visible')"}
+{"id": "sv-2838", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "incomplete English; missing main verb (e.g., 'is typical of midsummer')"}
+{"id": "sv-2841", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "också = also/too; 'early during the week too' is awkward; likely source error (conflicting time markers)"}
+{"id": "sv-2842", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "också = also/too; 'during the week too' is redundant/odd phrasing; likely source error"}
+{"id": "sv-2844", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "till slut = in the end/eventually; incomplete sentence in both languages; 'in the end' dangles without conclusion"}
+{"id": "sv-2854", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish middle voice 'intresseras' means 'to be interested' but requires preposition 'i' not 'av'; should be 'I am interested in history'"}
+{"id": "sv-2857", "severity": "medium", "issue": "UNNATURAL", "note": "'in rain' is awkward; 'in the rain' is more natural English"}
+{"id": "sv-2858", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish 'oroas av' means 'to be worried/troubled by' but English 'worried by' is unnatural; should be 'I am worried about the news'"}
+{"id": "sv-2860", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'liknas vid' means 'to be compared to' or 'resembles'; translation is borderline but 'She is said to resemble' or 'She resembles' is more accurate than 'She resembles'"}
+{"id": "sv-2868", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is fragmentary and incoherent; missing verb makes translation nonsensical"}
+{"id": "sv-2870", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence word order is scrambled/ungrammatical; 'really' placement breaks meaning"}
+{"id": "sv-2871", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish has contradictory temporal adverbials ('i januari nästa vecka') making sentence ungrammatical; translation cannot be accurate"}
+{"id": "sv-2872", "severity": "medium", "issue": "UNNATURAL", "note": "'at our home' is awkward placement; should be 'at our place' or remove; temporal mixing unclear"}
+{"id": "sv-2873", "severity": "medium", "issue": "UNNATURAL", "note": "Temporal adverbials 'under veckan snart' contradict each other; awkward phrasing in both languages"}
+{"id": "sv-2883", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense passive suggests habitual action; 'is being mowed' more natural for ongoing action"}
+{"id": "sv-2887", "severity": "low", "issue": "UNNATURAL", "note": "'was received with joy' is awkward; 'was received joyfully' or 'was greeted with joy' more natural"}
+{"id": "sv-2888", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "besväras = to be troubled/plagued; 'are troubled by' or 'are plagued by' more accurate than 'are bothered by'"}
+{"id": "sv-2892", "severity": "low", "issue": "UNNATURAL", "note": "'in the church' is awkward; 'in church' (without article) more natural"}
+{"id": "sv-2894", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'andades ut av lättnad' = breathed a sigh of relief, not literally 'breathed out with relief'"}
+{"id": "sv-2897", "severity": "medium", "issue": "UNNATURAL", "note": "'tries not to be ashamed' is grammatically odd; should be 'tries not to feel ashamed' or 'tries to overcome shame'"}
+{"id": "sv-2902", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'delades lika i köket' doesn't make sense; profit division in kitchen is nonsensical. Likely error in source text"}
+{"id": "sv-2903", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Tense mismatch: 'andas djupt' (present) + 'förra veckan' (last week, past) contradictory. Should be 'breathed deeply last week too'"}
+{"id": "sv-2905", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Incomplete sentence structure; missing verb. 'The intended location in the evening now' is not a complete clause"}
+{"id": "sv-2907", "severity": "medium", "issue": "UNNATURAL", "note": "'really' at end is awkward placement; 'The annual report was truly presented at the meeting after work' or remove 'really'"}
+{"id": "sv-2908", "severity": "medium", "issue": "UNNATURAL", "note": "'after work in the end' is a strange modifier for price rises; unclear meaning"}
+{"id": "sv-2909", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Contradictory: 'with the neighbor...with friends' is illogical. Source text appears malformed"}
+{"id": "sv-2910", "severity": "medium", "issue": "UNNATURAL", "note": "'sometimes in the end' is awkward; 'sometimes' and 'in the end' conflict temporally"}
+{"id": "sv-2911", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English ends mid-phrase; 'ganska' means 'quite/fairly' but needs complement. Likely 'we meet fairly often' or similar."}
+{"id": "sv-2925", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English incomplete; Swedish passive voice 'baseras på' requires object. Should be 'is based on [something]'."}
+{"id": "sv-2926", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English incomplete; 'avses med' means 'is meant/intended by' but phrase cuts off. Needs object."}
+{"id": "sv-2927", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English nonsensical word order; Swedish source appears corrupted or mistranslated. 'The coming days right now in the end' is incoherent."}
+{"id": "sv-2928", "severity": "medium", "issue": "UNNATURAL", "note": "English awkward; 'on the weekend during summer' conflicts temporally. Should be 'on the weekend' OR 'during summer', not both."}
+{"id": "sv-2929", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English nonsensical; 'for a long time next year' is contradictory. Swedish likely means 'help starting next year' or similar."}
+{"id": "sv-2930", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'levande legend' is 'living legend' but Astrid Lindgren died 2002; should be 'remains a legendary figure' or 'is a legendary author'."}
+{"id": "sv-2932", "severity": "medium", "issue": "UNNATURAL", "note": "'Jag känns pigg' mixes reflexive construction; standard is 'Jag känner mig pigg' (I feel perky/energetic). Current phrasing is awkward."}
+{"id": "sv-2933", "severity": "medium", "issue": "UNNATURAL", "note": "'Jag mindes plötsligt' is incomplete; 'mindes' requires object. Should be 'I suddenly remembered [something]'."}
+{"id": "sv-2935", "severity": "medium", "issue": "UNNATURAL", "note": "'De närmas varandra' uses non-standard reflexive form. Standard is 'De närmar sig varandra' (They approach each other)."}
+{"id": "sv-2941", "severity": "medium", "issue": "UNNATURAL", "note": "\"I long for summer\" is correct but awkward phrasing; \"I miss summer\" or \"I long for the summer\" more natural"}
+{"id": "sv-2943", "severity": "medium", "issue": "UNNATURAL", "note": "\"hoped for sun\" is awkward; \"hoped for sunshine\" or \"hoped for sunny weather\" more natural"}
+{"id": "sv-2961", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"verkas\" means \"to seem\"; sentence should be \"It seems that that's correct\" not \"It seems like that's correct\""}
+{"id": "sv-2967", "severity": "high", "issue": "UNNATURAL", "note": "Swedish sentence is grammatically malformed/incoherent; \"Jag hoppas innerligt sedan länge verkligen\" does not form a coherent sentence"}
+{"id": "sv-2961", "fix": {"k": "verkas", "en": "to seem", "pos": "v"}}
+{"id": "sv-3037", "severity": "low", "issue": "WRONG_REGISTER", "note": "'The summer' adds definite article not in Swedish; 'Summer will be nice' more natural"}
+{"id": "sv-3058", "severity": "medium", "issue": "UNNATURAL", "note": "'I'd be happy if you could' is incomplete/unclear; should be 'I would have been happy if you could have' or 'I would be happy if you could'"}
+{"id": "sv-2971", "severity": "medium", "issue": "UNNATURAL", "note": "English 'during the week soon' is awkward; should be 'during the week' or 'in the coming week'"}
+{"id": "sv-2976", "severity": "medium", "issue": "UNNATURAL", "note": "Temporal mismatch: 'either today or tomorrow during summer' suggests a single summer day, but Swedish 'under sommaren' means within the summer season overall; awkward phrasing"}
+{"id": "sv-2978", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish 'sedan länge på jobbet' means 'for a long time at work' (how long they worked there), not a marriage duration; 'We got married in June and worked for a long time at the job' or similar needed"}
+{"id": "sv-2980", "severity": "low", "issue": "UNNATURAL", "note": "English 'The children playing in the schoolyard' uses present participle, but more natural as 'The children who were playing' or 'The children that played'"}
+{"id": "sv-2983", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Vi vågas inte hoppa' means 'We dare not jump' or 'We don't dare jump'; English 'We don't dare to jump' is acceptable but 'We don't dare jump' is more natural"}
+{"id": "sv-2984", "severity": "low", "issue": "UNNATURAL", "note": "'Succeed with the task' is slightly awkward; better: 'We succeed at the task' or 'We manage the task'"}
+{"id": "sv-2990", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Halv fem' is 4:30 (half before five in Swedish time-telling), not 'half past four' (4:30 in English); they are the same time but the explanation differs by system—English says 'half past four' for 4:30"}
+{"id": "sv-2998", "severity": "medium", "issue": "UNNATURAL", "note": "'They felt that something was missing' is awkward for 'fattades'; better: 'They felt something was lacking' or 'They felt they were missing something'"}
+{"id": "sv-3004", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "förundras is present tense but 'last week' requires past; also 'marvels at' doesn't capture the reflexive sense well"}
+{"id": "sv-3006", "severity": "high", "issue": "UNNATURAL", "note": "English phrasing awkward; 'misslyckades med baket ibland till slut' is contradictory (failed sometimes vs. in the end) and unnatural"}
+{"id": "sv-3008", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'samtals' is not a valid Swedish verb form; likely meant 'samtalar' (converse) or 'talar' (talk/speak)"}
+{"id": "sv-3017", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'kände henne med familjen' doesn't mean 'knew her with the family'; likely means 'knew her through/via the family' or context is unclear"}
+{"id": "sv-3018", "severity": "medium", "issue": "UNNATURAL", "note": "'till slut' (in the end) contradicts 'nästa vecka' (next week); temporal mismatch makes sentence nonsensical"}
+{"id": "sv-3021", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'tillade' means 'to add (ingredient)' not 'to add (that)'; should be 'tillägga' or context suggests 'meddelade' (informed) or 'förklarade' (explained)"}
+{"id": "sv-3022", "severity": "medium", "issue": "UNNATURAL", "note": "'övades på musiken' is awkward; 'övade (på) musiken' or 'tränade' would be more natural for 'practiced'"}
+{"id": "sv-3023", "severity": "low", "issue": "MISSING_NUANCE", "note": "'lina' is 'rope' or 'cord'; 'wire' suggests 'tråd' or 'metallina'; context determines if mistranslation or acceptable variant"}
+{"id": "sv-3098", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "sentence is incomplete/fragmented; unclear what the task involves or what the actual activity is"}
+{"id": "sv-3100", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing 'on the weekend soon' — should be 'this weekend' or 'next weekend'"}
+{"id": "sv-3106", "severity": "medium", "issue": "UNNATURAL", "note": "'succeeded in the evening in the end' is awkward; 'in the evening' and 'in the end' clash — likely means 'eventually succeeded' or 'succeeded by evening'"}
+{"id": "sv-3110", "severity": "low", "issue": "MISSING_NUANCE", "note": "'took it calmly' misses the idiom 'ta det med ro' (to take it in stride; to handle composedly) — 'took it in stride' is more natural"}
+{"id": "sv-3117", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'I andra hand' means 'as a second option/alternatively', not 'secondly' in sequence; should be 'Alternatively' or 'As a second option'"}
+{"id": "sv-3064", "severity": "medium", "issue": "UNNATURAL", "note": "nästa år snart is redundant/contradictory; either 'next year' or 'soon' but not both"}
+{"id": "sv-3065", "severity": "low", "issue": "UNNATURAL", "note": "'also' at end is awkward; Swedish 'också' here functions more as 'as well' mid-sentence"}
+{"id": "sv-3071", "severity": "medium", "issue": "UNNATURAL", "note": "'in the end' weakens modal sense; 'till slut' here means 'after all' or 'eventually', better as 'He might end up coming Friday'"}
+{"id": "sv-3072", "severity": "medium", "issue": "UNNATURAL", "note": "'in the end' is awkward; 'till slut' here is filler, omit or use 'eventually'"}
+{"id": "sv-3076", "severity": "low", "issue": "MISSING_NUANCE", "note": "Swedish says 'historia om' (story about), English adds 'told us' which isn't explicit; minor but worth noting"}
+{"id": "sv-3078", "severity": "low", "issue": "MISSING_NUANCE", "note": "'så het' can mean 'so hot/trendy/popular'; 'popular' is correct but 'trendy' or 'hot' captures slang better"}
+{"id": "sv-3084", "severity": "medium", "issue": "UNNATURAL", "note": "'Alltnog' is archaic/rare literary Swedish; standard modern equivalent 'i vilket fall' or 'hur som helst' better; 'Anyhow' is acceptable but marked as non-standard"}
+{"id": "sv-3086", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Sentence fragment lacks verb/context; 'in the store' unclear—what is the full clause? Cannot verify accuracy"}
+{"id": "sv-3086", "severity": "high", "issue": "UNNATURAL", "note": "Not a complete sentence; missing main verb or context"}
+{"id": "sv-3126", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Swedish uses singular 'passet' (the passport) but English says 'the passport' as if specific; more naturally 'They have lost their passport' or 'They have lost a passport'"}
+{"id": "sv-3139", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is a noun phrase fragment with no verb; English translation adds a verb that doesn't exist. This is grammatically incomplete in Swedish."}
+{"id": "sv-3143", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Najs' is slang/colloquial for 'nice'; the exclamation doesn't logically connect to the clause about speaking with strangers. The sentence structure suggests missing context or is malformed."}
+{"id": "sv-3144", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Same issue as sv-3143: 'Hej allihopa' (Hi everyone) followed by an unrelated when-clause about speaking with strangers. The connection is unclear or the sentence is incomplete."}
+{"id": "sv-3147", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Fyll i' can mean 'fill in' or 'fill out'; translation assumes 'form' but Swedish says 'lappen' (the note/slip). 'Fill out' would be more natural for the context."}
+{"id": "sv-3149", "severity": "medium", "issue": "UNNATURAL", "note": "'Namely' is an archaic/formal connector in English; 'Actually' or 'The thing is' would be more natural for Swedish 'Nämligen'."}
+{"id": "sv-3186", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish fragment lacks main verb; English adds 'were' making it a complete sentence not supported by source"}
+{"id": "sv-3189", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish fragment is incomplete/ungrammatical; English translation completes it artificially"}
+{"id": "sv-3190", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish is nonsensical/incomplete fragment; English translation 'Pregnant woman for everyone last year' doesn't match any coherent Swedish meaning"}
+{"id": "sv-3195", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish fragment lacks main verb and complete structure; English adds meaning not in source"}
+{"id": "sv-3196", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish is incoherent fragment; translation invents meaning"}
+{"id": "sv-3202", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'blåsväder' = stormy weather; 'to be in hot water' is correct idiom but source is 'to end up in stormy weather' (different phrasing)"}
+{"id": "sv-3203", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish fragment lacks main verb; English adds 'was' creating complete sentence not in source"}
+{"id": "sv-3219", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "English adds 'us' not in Swedish; should be 'She told that she had gotten the job' or 'She said she had gotten the job'"}
+{"id": "sv-3222", "severity": "medium", "issue": "UNNATURAL", "note": "'didn't understand in the end' is awkward; likely means 'didn't understand at all' or 'finally didn't understand'"}
+{"id": "sv-3227", "severity": "low", "issue": "MISSING_NUANCE", "note": "'familjesituation' is vague; 'family situation' acceptable but 'family matter' or 'family issue' more natural"}
+{"id": "sv-3232", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "This is a noun phrase fragment, not a complete sentence; missing verb/context"}
+{"id": "sv-3234", "severity": "low", "issue": "UNNATURAL", "note": "'one's own two feet' is redundant; idiom is 'to stand on one's own feet'"}
+{"id": "sv-3238", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Sentence fragment without main verb; unclear what 'det befriande regnet...också' means in context"}
+{"id": "sv-3240", "severity": "low", "issue": "UNNATURAL", "note": "'The book tells that' is awkward; should be 'The book says that' or 'The book states that'"}
+{"id": "sv-3151", "severity": "medium", "issue": "UNNATURAL", "note": "\"Just the same\" is awkward; \"Nevertheless\" or \"Still\" fits the Swedish \"Lika fullt\" better"}
+{"id": "sv-3156", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"klar\" means \"ready\" but in booking context \"confirmed\" is mistranslation; should be \"the booking was confirmed\" or \"...complete\""}
+{"id": "sv-3159", "severity": "low", "issue": "UNNATURAL", "note": "\"told that\" is grammatically incomplete in English; should be \"told us that\" or \"said that\""}
+{"id": "sv-3160", "severity": "low", "issue": "UNNATURAL", "note": "\"made it known\" is formal; \"let it be known\" is more natural, or simply \"indicated they were dissatisfied\""}
+{"id": "sv-3164", "severity": "high", "issue": "UNNATURAL", "note": "\"are added during the summer in the end\" is incoherent; should be \"will be added for the summer\" or similar"}
+{"id": "sv-3170", "severity": "high", "issue": "UNNATURAL", "note": "\"succeeded all the time in the end\" is contradictory and awkward; likely should be \"we kept succeeding\" or \"we managed it in the end\""}
+{"id": "sv-3171", "severity": "low", "issue": "UNNATURAL", "note": "\"treat you to a lunch today maybe\" has weak word order; \"Can I maybe take you to lunch today?\" is more natural"}
+{"id": "sv-3173", "severity": "low", "issue": "UNNATURAL", "note": "\"have nice dreams tonight\" is odd after \"Good night\"; typically \"have sweet dreams\" or just omit"}
+{"id": "sv-3175", "severity": "low", "issue": "UNNATURAL", "note": "\"a renewed energy\" should be \"renewed energy\" (no article) or \"a renewal of energy\""}
+{"id": "sv-3176", "severity": "medium", "issue": "UNNATURAL", "note": "\"came flooding back\" is interpretation; Swedish text says \"came back\"; translation adds connotation not in original"}
+{"id": "sv-3178", "severity": "low", "issue": "UNNATURAL", "note": "\"happily told that\" awkward; should be \"happily told us that\" or \"told us happily that\""}
+{"id": "sv-3179", "severity": "low", "issue": "UNNATURAL", "note": "\"before the schedule\" should be \"ahead of schedule\" (already in translation, but phrasing is slightly off)—actually acceptable as is"}
+{"id": "sv-3276", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is incoherent/nonsensical; English translation doesn't match grammatical structure"}
+{"id": "sv-3278", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence fragment lacks main verb; English adds 'was' not supported by source"}
+{"id": "sv-3285", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'gick på en nit' means 'failed/went bust', not 'was unsuccessful' — idiomatic meaning lost"}
+{"id": "sv-3286", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'satte vi tummen mitt i ögat' is idiomatic (humiliated/outsmarted), not literally 'defeated completely'"}
+{"id": "sv-3288", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Ingen ko på isen' is an idiom meaning 'no problem/nothing to worry about', not literally 'no cow on the ice'"}
+{"id": "sv-3298", "severity": "low", "issue": "UNNATURAL", "note": "English 'after work' is awkward here; Swedish context suggests 'Sorry I'm late from work!' or just 'Sorry I'm late!'"}
+{"id": "sv-3305", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "till slut = eventually/in the end; 'in the end' here sounds like final outcome, not temporal sequence"}
+{"id": "sv-3307", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "förra året = last year (past), but 'would wait' is future conditional; tense mismatch"}
+{"id": "sv-3308", "severity": "high", "issue": "UNNATURAL", "note": "Swedish idiom 'låta gräset växa under fötterna' = idle/procrastinate; 'with friends' breaks the idiom and adds nonsensical element"}
+{"id": "sv-3311", "severity": "medium", "issue": "UNNATURAL", "note": "'for disturbing' is awkward; should be 'for interrupting' or 'Excuse me, but...'"}
+{"id": "sv-3314", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'sticka ut hakan' literally 'stick out chin' means to defy/assert oneself; 'stick one's neck out' is different (take a risk)"}
+{"id": "sv-3316", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'komma på grön kvist' = be in a good position/prosper; 'get back on one's feet' is recovery from hardship, different sense"}
+{"id": "sv-3322", "severity": "medium", "issue": "UNNATURAL", "note": "'took the spoon in a beautiful hand' is unclear; 'got down to business graciously' doesn't match idiom sense"}
+{"id": "sv-3323", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "sentence fragment; 'för alla under sommaren' incomplete; cannot assess without full context"}
+{"id": "sv-3324", "severity": "medium", "issue": "UNNATURAL", "note": "'tar everyone with the same brush' is awkward phrasing; standard is 'lump everyone together' or 'paint with the same brush'"}
+{"id": "sv-3327", "severity": "low", "issue": "UNNATURAL", "note": "'The email informed that' is stiff; 'informed us that' or 'stated that' more natural"}
+{"id": "sv-3339", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Läggande korten på bordet = to come clean or be honest; the English translation 'put our cards on the table sometimes with the family' misses this idiomatic meaning and 'sometimes with the family' doesn't match the Swedish sense"}
+{"id": "sv-3340", "severity": "medium", "issue": "UNNATURAL", "note": "'held in the end' is awkward; Swedish 'till slut' means 'in the end; finally' but context suggests 'to be held eventually' or clarification needed"}
+{"id": "sv-3343", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'gick åt skogen' is an idiom meaning 'went to pieces; fell apart', not literally 'went badly wrong'; translation misses the metaphorical sense"}
+{"id": "sv-3345", "severity": "medium", "issue": "UNNATURAL", "note": "'had green thumbs' is wrong English idiom; correct form is 'had a green thumb' (singular) or 'had green fingers' (British plural)"}
+{"id": "sv-3351", "severity": "medium", "issue": "UNNATURAL", "note": "'sighed that' is awkward; more natural: 'sighed [comma] saying that' or 'sighed, saying it was hopeless'"}
+{"id": "sv-3353", "severity": "medium", "issue": "UNNATURAL", "note": "'informed that' omits required indirect object; should be 'informed [us/them/us all] that' or restructure as 'informed us of the cancellation'"}
+{"id": "sv-3358", "severity": "medium", "issue": "UNNATURAL", "note": "'I announce' is awkward; more natural: 'I am announcing' or 'I hereby announce'"}
+{"id": "sv-3359", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Sentence is incoherent in Swedish; 'Att kasta in handduken på morgonen snart' doesn't form a grammatical statement; unclear source intent"}
+{"id": "sv-3360", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is incoherent or context-dependent; 'Det faller på sin egen orimlighet med vänner' doesn't yield clear meaning; 'self-evidently absurd with friends' is unclear"}
+{"id": "sv-3242", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is a noun phrase fragment with no verb; English adds a complete predicate that isn't in source"}
+{"id": "sv-3245", "severity": "medium", "issue": "UNNATURAL", "note": "\"now\" is redundant with idiom already expressing present struggle; 'hand to mouth' is standard form"}
+{"id": "sv-3248", "severity": "medium", "issue": "UNNATURAL", "note": "\"to not see\" should be \"not to see\" (infinitive negation)"}
+{"id": "sv-3249", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is a noun phrase fragment; English adds verb and complete clause not in source"}
+{"id": "sv-3252", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"under all kritik\" means \"beneath all criticism\" (unacceptably poor), not just \"criticism\" as a measure"}
+{"id": "sv-3255", "severity": "low", "issue": "UNNATURAL", "note": "\"to brighten up the space\" is implied; \"to brighten up\" alone is sufficient"}
+{"id": "sv-3270", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Incomplete Swedish fragment with no verb; English would need context to complete"}
+{"id": "sv-3362", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "att lägga sig platt = to back down; 'capitulate' is too strong and 'all the time in the end' is awkward phrasing"}
+{"id": "sv-3363", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "lägga ner stridsbilen = to lay down the fighting vehicle (literal); doesn't mean 'gave up the fight' in this context; likely means parked/stored the vehicle"}
+{"id": "sv-3364", "severity": "low", "issue": "WRONG_REGISTER", "note": "'most kindly' is archaic; 'very kindly' or 'very much' is more natural"}
+{"id": "sv-3368", "severity": "medium", "issue": "UNNATURAL", "note": "'to keep cool under pressure' is an interpretation; more literally 'to have ice in stomach'; standard meaning is 'to stay calm/composed' or 'to be composed'"}
+{"id": "sv-3372", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'to have clean flour in the bag' literally; idiom means 'to have nothing to hide' or 'to be honest/innocent,' not exactly 'clean conscience'"}
+{"id": "sv-3374", "severity": "medium", "issue": "UNNATURAL", "note": "'Så här års' is dialectal/non-standard Swedish; should be 'vid den här tiden på året' or 'så här året'; translation is awkward; better 'At this time of year it's beautiful'"}
+{"id": "sv-3378", "severity": "low", "issue": "UNNATURAL", "note": "literal translation omitted; while 'the last straw' is correct idiom, full phrase 'It was the straw that broke the camel's back' would be more complete"}
+{"id": "sv-3384", "severity": "low", "issue": "UNNATURAL", "note": "'to keep a sharp eye on' is slightly awkward; better 'to keep a keen eye on' or 'to watch closely'"}
+{"id": "sv-3388", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'gick bet på' is dialectal; means 'failed at' but more naturally 'flunked' or 'didn't succeed at'"}
+{"id": "sv-3489", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Morgonstund har guld i mund' translates to 'The morning hour has gold in its mouth' (Swedish proverb), not 'The early bird catches the worm' (different proverb)"}
+{"id": "sv-3501", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Sentence is nonsensical in Swedish; 'kunskapslucka på morgonen snart' does not mean 'knowledge gap in the morning soon'. Likely a malformed or corrupted sentence."}
+{"id": "sv-3502", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Hon pekar ut felet hela tiden med familjen' more naturally means 'She points out the mistake to the family all the time' or 'She is constantly criticizing the family', not 'She points out the error all the time with the family'"}
+{"id": "sv-3391", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish means 'to be out cycling', not an idiom about wrong trees"}
+{"id": "sv-3398", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; 'also' and 'right now' create confusion with 'notwithstanding'"}
+{"id": "sv-3401", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish is fragmented greeting + question about 'best after work in evening?'; unclear meaning and structure"}
+{"id": "sv-3402", "severity": "medium", "issue": "UNNATURAL", "note": "'during the week too' is awkward; should be 'for this week' or similar"}
+{"id": "sv-3403", "severity": "medium", "issue": "UNNATURAL", "note": "'really' at end is unnatural; should be 'I wish to convey my deepest thanks'"}
+{"id": "sv-3404", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish doesn't match English; context unclear ('reminder on weekend with friends')"}
+{"id": "sv-3406", "severity": "medium", "issue": "UNNATURAL", "note": "'for a long time here' is awkward; should be 'I've been itching to...' or 'My fingers have been itching'"}
+{"id": "sv-3407", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Temporal contradiction: 'next week now' impossible; 'morgondaggen' means morning dew, not 'morning dew' with future timing"}
+{"id": "sv-3408", "severity": "medium", "issue": "UNNATURAL", "note": "'burned by that before' should be 'burned by that soup before' or 'gotten burned by that'"}
+{"id": "sv-3416", "severity": "medium", "issue": "UNNATURAL", "note": "'break up early' is unclear; should be 'leave early' or 'finish early'"}
+{"id": "sv-3418", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'probably' is wrong; 'nog' = 'enough'; should be 'Do you have enough time every day?'"}
+{"id": "sv-3420", "severity": "low", "issue": "UNNATURAL", "note": "'last week too' feels forced; 'also' here is unnecessary"}
+{"id": "sv-3456", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Next year is illogical for a weekend greeting; likely means 'have a pleasant weekend' without temporal modifier"}
+{"id": "sv-3459", "severity": "medium", "issue": "UNNATURAL", "note": "'Take care and look after yourself' is redundant; Swedish 'ha det så bra' = 'take care' or 'goodbye', not both"}
+{"id": "sv-3464", "severity": "medium", "issue": "UNNATURAL", "note": "Missing subject/modal clarity; 'Should you have further questions' reads incomplete; likely 'Should you have any further questions, please...'"}
+{"id": "sv-3472", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Here comes the report in the weekend soon' is incoherent; likely 'Here's the report coming this weekend' or 'Here comes the weekend report soon'"}
+{"id": "sv-3475", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'We await your reply last week too' contradicts tense; Swedish 'emotser' (archaic) + 'förra veckan' (last week) grammatically broken; likely means 'We await your reply soon' or dates are wrong"}
+{"id": "sv-3475", "severity": "high", "issue": "UNNATURAL", "note": "Word 'emotser' is obsolete/non-standard; standard is 'förväntar' or 'avvaktar'"}
+{"id": "sv-3478", "severity": "medium", "issue": "UNNATURAL", "note": "'In the middle of all the guests she stood now' has awkward word order; should be 'She now stood in the middle of all the guests'"}
+{"id": "sv-3480", "severity": "medium", "issue": "UNNATURAL", "note": "'Lets loose in the evening in the end' has redundant/unclear temporal markers; likely 'Eventually lets loose in the evening' or 'Finally lets loose at night'"}
+{"id": "sv-3421", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "vore = would be (conditional); 'i affären' = in the store, but context suggests 'in business/affairs' – translation misses the idiomatic sense"}
+{"id": "sv-3421", "fix": {"k": "i affären", "en": "in business; in the matter", "pos": "phrase"}}
+{"id": "sv-3423", "severity": "high", "issue": "UNNATURAL", "note": "English phrasing is awkward; 'during the week already' doesn't match Swedish idiom. Should be 'that was kind of you during the week' or similar"}
+{"id": "sv-3425", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Att visa var skåpet ska stå' means 'to show where the cupboard should stand,' not 'to show who's boss'"}
+{"id": "sv-3428", "severity": "medium", "issue": "UNNATURAL", "note": "'in the morning in the end' is redundant/awkward phrasing; should be 'finally got the job this morning' or 'got the job after all'"}
+{"id": "sv-3429", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Incomplete sentence in Swedish; English translation adds meaning not present. Card appears malformed"}
+{"id": "sv-3435", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English ends mid-clause 'if.' – sentence is incomplete/malformed"}
+{"id": "sv-3436", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'soft' is slang; 'cool/easy' captures one sense but not the other. Needs consistency or better equivalent"}
+{"id": "sv-3436", "fix": {"k": "soft", "en": "cool; smooth; easy", "pos": "adj"}}
+{"id": "sv-3443", "severity": "medium", "issue": "UNNATURAL", "note": "'ask to get back to you' is awkward; Swedish 'återkomma' = 'to come back to; to return to.' Better: 'ask to come back to this' or 'ask to return to the matter'"}
+{"id": "sv-3445", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Ha det bra sedan länge nog' is ungrammatical Swedish; translation 'Take care for a long time probably' is nonsensical. Card appears corrupt"}
+{"id": "sv-3448", "severity": "medium", "issue": "UNNATURAL", "note": "'probably' at end is awkward for Swedish 'nog'; should be 'shall we go out and eat, shall we?' or 'go out to eat, then?'"}
+{"id": "sv-3560", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'just nu' means 'right now' (present), but Spotify was founded in 2006—anachronistic. Should be 'one summer' or context-appropriate past time."}
+{"id": "sv-3561", "severity": "medium", "issue": "UNNATURAL", "note": "'in the morning in the end' is redundant/awkward. 'in the end' (till slut) typically conveys 'eventually/finally', not temporal location. Better: 'the project was eventually completed by morning' or 'was completed that morning'."}
+{"id": "sv-3566", "severity": "low", "issue": "UNNATURAL", "note": "'Sing she really can' is archaic/poetic inversion. More natural modern English: 'She can really sing' or 'As for singing, she really can.'"}
+{"id": "sv-3529", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ibland = sometimes; here = här. English 'sometimes here' doesn't match Swedish 'ibland här' which should be 'here' or 'at times'. Likely 'We don't give up sometimes.' or error in source."}
+{"id": "sv-3532", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish word order is scrambled/ungrammatical. 'Ut sprang katten på morgonen snart' is malformed. Should be 'Katten sprang ut på morgonen' (The cat ran out in the morning) or similar."}
+{"id": "sv-3533", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'förra veckan' = last week (past time reference). Present-tense 'withdraws' doesn't match. Should be 'withdrew' or sentence needs restructuring."}
+{"id": "sv-3534", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish 'Vem som än frågar' = whoever asks (conditional/concessive). 'Säg inget verkligen' = tell nothing really. English phrasing 'Whoever asks, say nothing really' is awkward. Should be 'Whoever asks, tell them nothing.' or 'No matter who asks, say nothing.'"}
+{"id": "sv-3536", "severity": "medium", "issue": "UNNATURAL", "note": "'How beautiful it was in the morning already!' is grammatically stiff. More natural: 'How beautiful it was in the morning!' or 'It was so beautiful in the morning!'"}
+{"id": "sv-3540", "severity": "medium", "issue": "UNNATURAL", "note": "'meet again' is slightly awkward for 'ses igen'. More idiomatic: 'see each other again' or 'be together again'."}
+{"id": "sv-3571", "severity": "medium", "issue": "UNNATURAL", "note": "\"as if he forgot\" should be \"as if he had forgotten\" (past perfect in counterfactual context)"}
+{"id": "sv-3575", "severity": "medium", "issue": "UNNATURAL", "note": "inverted word order sounds archaic; more natural: \"I haven't lived in Stockholm either\""}
+{"id": "sv-3578", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"nästa år\" is next year, but context suggests habitual action; temporal marker creates absurdity (turning off light next year after work)"}
+{"id": "sv-3579", "severity": "high", "issue": "UNNATURAL", "note": "inverted V2 order is extremely awkward in English; \"The bird flew away during the week with the family\" is more natural, or clarify if \"with the family\" modifies the bird or the flight"}
+{"id": "sv-3581", "severity": "medium", "issue": "UNNATURAL", "note": "\"agrees with you all the time during summer\" is odd; either habitual (\"agrees with you always\") or continuous during season needs clearer phrasing"}
+{"id": "sv-3592", "severity": "low", "issue": "UNNATURAL", "note": "inverted object-verb order is awkward; \"I have never met her\" is more natural English"}
+{"id": "sv-3596", "severity": "medium", "issue": "UNNATURAL", "note": "fronted negative inversion; more natural: \"It couldn't have been any different\""}
+{"id": "sv-3597", "severity": "medium", "issue": "UNNATURAL", "note": "\"Wherever we go, nature follows\" is imprecise; likely should be \"Wherever we go, nature is there\" or \"follows us\""}
+{"id": "sv-3599", "severity": "low", "issue": "UNNATURAL", "note": "fronted prepositional phrase is archaic; \"I have a present for you\" is more natural"}
+{"id": "sv-3669", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing: 'sometimes here' is redundant and unclear; should be 'However, there are sometimes exceptions' or 'However, there are exceptions'"}
+{"id": "sv-3677", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Tense mismatch: Swedish present 'trivs' contradicts 'last week' (past); should be 'We enjoyed it here last week too' or use present tense without temporal marker"}
+{"id": "sv-3682", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward passive construction; more natural: 'Every step on the creaking staircase made a sound' or 'resounded'"}
+{"id": "sv-3687", "severity": "high", "issue": "UNNATURAL", "note": "Clumsy word order and 'really' at end is unnatural; should be 'The passing wood pigeon really cooed through the fog' or 'cooed steadily through the fog'"}
+{"id": "sv-3690", "severity": "medium", "issue": "UNNATURAL", "note": "'in the end' feels forced; more natural: 'cast long shadows' or 'cast long shadows at last'"}
+{"id": "sv-3602", "severity": "medium", "issue": "UNNATURAL", "note": "Inverted word order is awkward in English; should be 'In Sweden ten million people live' or better 'Ten million people live in Sweden'"}
+{"id": "sv-3604", "severity": "medium", "issue": "UNNATURAL", "note": "'Beautiful as the day was' is archaic/poetic phrasing; more natural: 'Beautiful as the day was, we went out' or 'Because it was a beautiful day, we went out'"}
+{"id": "sv-3606", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'redan' means 'already', not temporal 'already' — should be 'What a day it was in the weekend!' or 'What a day we had on the weekend!'"}
+{"id": "sv-3608", "severity": "medium", "issue": "UNNATURAL", "note": "'for the walk' is awkward; should be 'for our walk' or 'for a walk'"}
+{"id": "sv-3611", "severity": "high", "issue": "UNNATURAL", "note": "Translation is garbled; Swedish means 'I can't be bothered to run' or 'I don't feel like running'"}
+{"id": "sv-3613", "severity": "low", "issue": "UNNATURAL", "note": "'simply have luck' is awkward; better: 'simply have good luck' or 'are simply lucky'"}
+{"id": "sv-3617", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'syns' (reflexive of 'se') means 'can be seen', not 'I'm not visible'; should be 'I cannot be seen in the dark'"}
+{"id": "sv-3625", "severity": "medium", "issue": "UNNATURAL", "note": "'climbed up the tall skyscraper' is odd—window cleaners use equipment; better: 'climbed up the tall skyscraper' or 'scaled the tall skyscraper'"}
+{"id": "sv-3627", "severity": "medium", "issue": "UNNATURAL", "note": "'mist-shrouded' is poetic/literary; more natural: 'mist-covered valley' or 'misty valley'"}
+{"id": "sv-3629", "severity": "medium", "issue": "UNNATURAL", "note": "'is in every Swedish household' is awkward; better: 'can be found in every Swedish household' or 'is common in every Swedish household'"}
+{"id": "sv-3630", "severity": "high", "issue": "UNNATURAL", "note": "'cannot be excluded right now too' is confusing; 'right now' conflicts with conditional sense; better: 'It cannot be ruled out' or 'It is still possible'"}
+{"id": "sv-3631", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"just nu\" means \"right now\" but conflicts with past tense and \"förra året\"/summer context; should be omitted or reworked"}
+{"id": "sv-3632", "severity": "medium", "issue": "UNNATURAL", "note": "\"you find lakes\" is awkward; should be \"one finds lakes\" or \"there are lakes\""}
+{"id": "sv-3633", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"förra året\" means \"last year\" but majestically rising mountains last year is nonsensical; likely poetic/rhetorical use not captured"}
+{"id": "sv-3635", "severity": "medium", "issue": "UNNATURAL", "note": "\"worn on\" is awkward; should be \"worn at\" or \"worn away at\""}
+{"id": "sv-3636", "severity": "medium", "issue": "UNNATURAL", "note": "\"hug at the farewell\" is clumsy; should be \"exchange hugs at the farewell\" or \"hug goodbye\""}
+{"id": "sv-3645", "severity": "medium", "issue": "UNNATURAL", "note": "\"a storm was hidden\" is passive-awkward; should be \"a storm lay hidden\" or \"concealed a storm\""}
+{"id": "sv-3648", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"förra veckan också\" (last week too) contradicts the present-perfect context; temporal placement unclear"}
+{"id": "sv-3650", "severity": "medium", "issue": "UNNATURAL", "note": "\"felt so strong\" is awkward for \"känts\"; should be \"been felt so strongly\" or \"seemed so strong\""}
+{"id": "sv-3651", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"in the morning next year\" contradicts \"continued\"; temporal markers are incoherent"}
+{"id": "sv-3657", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"ödemarken\" can mean wasteland/desolate land; \"wilderness\" is one sense but \"desolate landscape\" more literal"}
+{"id": "sv-3691", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish text is nonsensical; 'samförstånd på morgonen' (consensus in the morning) doesn't match any coherent meaning. Likely corrupted source."}
+{"id": "sv-3696", "severity": "medium", "issue": "UNNATURAL", "note": "English 'struck twelve' is acceptable but 'slog tolv' more naturally translates to 'rang twelve' or 'chimed twelve'."}
+{"id": "sv-3698", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Final clause 'in the library' makes no sense in context of statistical significance. Appears to be corrupted or mismatched source text."}
+{"id": "sv-3709", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Final phrase 'with friends' is incongruous with 'contextual factors' in academic context. Likely corrupted or mistranslated."}
+{"id": "sv-3710", "severity": "medium", "issue": "UNNATURAL", "note": "'that weighed heavy' is awkward; prefer 'that weighed on him' or 'that weighed heavily'."}
+{"id": "sv-3715", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Final phrase 'on the weekend with the family' is incongruent with 'implications for future research'. Appears corrupted."}
+{"id": "sv-3719", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "'It was a close call' is colloquial interpretation. Swedish idiom 'nära ögat' literally means 'near the eye' but typically means 'narrow escape' or 'close shave'."}
+{"id": "sv-3785", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "husmanskost means 'home cooking' (the cuisine itself), not 'home cooking' as activity. Should be 'Swedish home-cooked fare' or 'Swedish comfort food'"}
+{"id": "sv-3786", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "sentence is incomplete in Swedish; 'genom' (through) has no object. English translation also incomplete."}
+{"id": "sv-3792", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "sentence fragment in Swedish with no verb; incomplete/nonsensical"}
+{"id": "sv-3794", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "sentence is grammatically broken; 'tyder på att i biblioteket' makes no sense. Missing main clause."}
+{"id": "sv-3806", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "factual contradiction: Nobel Prize is awarded December 10th, which is in winter, not summer"}
+{"id": "sv-3721", "severity": "medium", "issue": "UNNATURAL", "note": "'has soon turned' is awkward; 'will soon turn' or 'is about to turn' better fits Swedish future sense"}
+{"id": "sv-3728", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "conditional + past time marker is illogical; should be 'Could you have helped me last week?' or context suggests present 'Could you help me next week?'"}
+{"id": "sv-3731", "severity": "medium", "issue": "UNNATURAL", "note": "'One thing leads to another' is idiomatic but the Swedish 'Det ena ger det andra' is more literal; translation acceptable but note the colloquial idiom"}
+{"id": "sv-3734", "severity": "medium", "issue": "UNNATURAL", "note": "Swedish sentence is incomplete ('synliggör' without object); translation mirrors this incompleteness—likely needs 'makes visible what' or similar completion"}
+{"id": "sv-3735", "severity": "medium", "issue": "UNNATURAL", "note": "sentence fragment in both languages; should complete thought 'It should be emphasized that [something]'"}
+{"id": "sv-3742", "severity": "medium", "issue": "UNNATURAL", "note": "sentence fragment; should complete 'The variation can be explained by [something]'"}
+{"id": "sv-3746", "severity": "low", "issue": "UNNATURAL", "note": "'would have been desirable if' is grammatically correct but formal; consider 'it would be preferable if' or 'ideally'"}
+{"id": "sv-3750", "severity": "low", "issue": "UNNATURAL", "note": "sentence fragment; likely needs completion 'Against the background of these results [we conclude/observe/etc.]'"}
+{"id": "sv-3817", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish 'leks av' is passive form but means 'are played with/are the subject of play by'; translation awkwardly inverts agency"}
+{"id": "sv-3823", "severity": "medium", "issue": "UNNATURAL", "note": "literal translation loses the idiomatic proverb structure; should better capture 'those who wait for something good never wait too long'"}
+{"id": "sv-3835", "severity": "low", "issue": "UNNATURAL", "note": "'the last of April' is awkward; 'April 30th' or 'the 30th of April' more natural"}
+{"id": "sv-3840", "severity": "low", "issue": "UNNATURAL", "note": "'with good will' reads archaic; 'with goodwill' or 'with the right attitude' more idiomatic"}
+{"id": "sv-3759", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Sentence is incomplete in Swedish (missing object/purpose), making translation unclear. 'tar sin utgångspunkt i' means 'takes its starting point in/from' but needs completion."}
+{"id": "sv-3764", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Context mismatch: 'metodologiska utmaningar' (methodological challenges) in a park makes no sense. Likely a data error or the Swedish sentence is malformed."}
+{"id": "sv-3767", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "BVC (barnhälsovård) is child health centers/clinics, not a general organization that would operate in libraries. 'i biblioteket' seems misplaced."}
+{"id": "sv-3768", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Sentence incomplete in both languages. 'om att bo' (of living) needs an object or destination. Should be 'om att bo i...' (of living in...)."}
+{"id": "sv-3773", "severity": "medium", "issue": "UNNATURAL", "note": "'conducted next week here' is awkward placement. Temporal/locational modifiers should be reordered for naturalness."}
+{"id": "sv-3775", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish sentence is incoherent: 'betonar hela tiden nästa år' (emphasizes all the time next year) mixes temporal references illogically. Translation cannot be accurate of a malformed source."}
+{"id": "sv-3776", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Swedish is incoherent: 'kompletterades förra veckan till slut' (was supplemented last week in the end) is temporally contradictory. Cannot produce accurate translation."}
+{"id": "sv-3779", "severity": "medium", "issue": "UNNATURAL", "note": "'have coffee' is idiomatic but 'fika' is a Swedish cultural concept (coffee break with pastry). Should be 'have fika' or 'have a fika break' to preserve nuance."}
+{"id": "sv-3841", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward word order; should be 'So to speak, we've reached halfway' or 'We've, so to speak, reached halfway'"}
+{"id": "sv-3842", "severity": "medium", "issue": "UNNATURAL", "note": "Phrase 'at our home' is awkward; 'in our home' or 'among us' more natural"}
+{"id": "sv-3843", "severity": "high", "issue": "UNNATURAL", "note": "Adverb placement wrong; 'really' should be at start or integrated differently. Consider 'The movie was actually shown in the cinema in the morning' or restructure entirely"}
+{"id": "sv-3845", "severity": "medium", "issue": "UNNATURAL", "note": "Prepositional phrase attachment unclear; does 'with friends' modify 'weekend' or 'ashamed'? Needs clarification like 'She's ashamed of the mistake she made with friends over the weekend'"}
+{"id": "sv-3850", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Offentlighetsprincipen' often means 'the freedom of information principle' or 'public disclosure principle'; 'principle of public access' is acceptable but less common in English"}
+{"id": "sv-3862", "severity": "low", "issue": "UNNATURAL", "note": "'Falu red paint' is redundant since Falu rödfärg is the color itself; better as 'The house was painted Falu red' or 'in Falu red'"}
+{"id": "sv-3878", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ibland till slut means 'sometimes at the end' but doesn't match 'in August sometimes in the end'; should be 'in August, sometimes extending into September' or similar"}
+{"id": "sv-3880", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "sedan länge under sommaren means 'for a long time during summer' but the context suggests a habitual meeting, not duration; should be 'We've been meeting at the station for a long time during the summer' or 'We regularly meet at the station during summer'"}
+{"id": "sv-3886", "severity": "medium", "issue": "UNNATURAL", "note": "'To be sure she has a point' is awkward; should be 'To be sure, she has a point' (comma placement) or 'Admittedly, she has a point'"}
+{"id": "sv-3888", "severity": "high", "issue": "UNNATURAL", "note": "'The thing is namely that' is ungrammatical; should be 'The thing is that' or 'Namely, that is the case'"}
+{"id": "sv-3889", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'With all respect' sounds archaic/formal; more natural modern English is 'With all due respect' or 'I mean no disrespect, but'"}
+{"id": "sv-3891", "severity": "medium", "issue": "UNNATURAL", "note": "'From here it can only get better too' is awkward with 'too'; should be 'From here things can only get better' or omit 'too'"}
+{"id": "sv-3898", "severity": "medium", "issue": "UNNATURAL", "note": "'So much more borde we appreciate it' has inverted word order that sounds archaic; should be 'All the more reason we should appreciate it' or 'We should appreciate it all the more'"}
+{"id": "sv-3902", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Present tense 'pyntas' conflicts with past time 'last week'; should be 'was decorated' or sentence needs present tense 'also decorates'"}
+{"id": "sv-3903", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'undviks' is present tense but English uses past 'avoided'; should be 'I am avoided' or context requires past"}
+{"id": "sv-3911", "severity": "medium", "issue": "UNNATURAL", "note": "'has a well-preserved medieval town' is awkward; better: 'has a well-preserved medieval town center' or 'Visby is a well-preserved medieval town'"}
+{"id": "sv-3915", "severity": "medium", "issue": "UNNATURAL", "note": "'That skilled we should be' is grammatically inverted; better: 'We should be that skilled' or 'We ought to be that competent'"}
+{"id": "sv-3918", "severity": "low", "issue": "UNNATURAL", "note": "'meant seriousness' is slightly awkward; 'was serious' is more natural but both acceptable"}
+{"id": "sv-3923", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Tack' means 'thank you'; 'please' is wrong (that would be 'tack själv' or 'var så snäll')"}
+{"id": "sv-3924", "severity": "medium", "issue": "UNNATURAL", "note": "'You're welcome / Here you go' is two distinct meanings; 'varsågod' primarily means 'here you are' or 'please go ahead'; 'you're welcome' is secondary"}

@@ -1,0 +1,675 @@
+{"id": "pt-0031", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Estou com saudade = missing someone/longing for; 'I miss' is incomplete without context. Better: 'I miss my friends' or 'I long for my friends'."}
+{"id": "pt-0052", "severity": "medium", "issue": "UNNATURAL", "note": "'She's too lazy to cook' is awkward. Better phrasing: 'She doesn't feel like cooking' or 'She's reluctant to cook'. Portuguese 'ter preguiça de' = to not feel like doing something."}
+{"id": "pt-0055", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'He's missed on the team' is ungrammatical English. Should be: 'He is missed on the team' or 'The team misses him'. 'Fazer falta' = to be missed."}
+{"id": "pt-0057", "severity": "low", "issue": "UNNATURAL", "note": "'Very nice to meet you' is grammatically acceptable but awkward. More natural: 'It's very nice to meet you' or 'I'm very pleased to meet you'."}
+{"id": "pt-0062", "severity": "medium", "issue": "MISSING_NUANCE", "note": "gostar de can mean 'to like' or 'to enjoy'; 'enjoy' would be more natural here"}
+{"id": "pt-0062", "fix": {"k": "gostar de", "en": "to like; to enjoy", "pos": "v"}}
+{"id": "pt-0074", "severity": "medium", "issue": "UNNATURAL", "note": "Bill 'came wrong' is awkward English; should be 'was wrong' or 'had an error'"}
+{"id": "pt-0076", "severity": "low", "issue": "UNNATURAL", "note": "'how's everything going' is colloquial; 'how are things' is more literal match for como vão as coisas"}
+{"id": "pt-0082", "severity": "medium", "issue": "UNNATURAL", "note": "'We feel like eating' is correct but 'We're in the mood to eat' or 'We want to eat pizza' is more natural"}
+{"id": "pt-0084", "severity": "low", "issue": "MISSING_NUANCE", "note": "saber nadar can be 'to know how to swim' or simply 'to swim'; second form is cleaner"}
+{"id": "pt-0084", "fix": {"k": "saber", "en": "to know; to know how to", "pos": "v"}}
+{"id": "pt-0095", "severity": "medium", "issue": "UNNATURAL", "note": "Present progressive 'I'm looking' more natural than simple present for ongoing search"}
+{"id": "pt-0097", "severity": "low", "issue": "UNNATURAL", "note": "'Do you order food by delivery?' reads more naturally as 'Do you order food for delivery?' — already correct in English"}
+{"id": "pt-0108", "severity": "low", "issue": "UNNATURAL", "note": "'arrive at work' is standard; 'get to work' is acceptable but less formal"}
+{"id": "pt-0120", "severity": "low", "issue": "UNNATURAL", "note": "'through the app' is acceptable but 'via the app' or 'on the app' more idiomatic"}
+{"id": "pt-0143", "severity": "medium", "issue": "UNNATURAL", "note": "\"Where's there\" is awkward; should be \"Where is there\" or \"Where can I find\""}
+{"id": "pt-0146", "severity": "low", "issue": "UNNATURAL", "note": "\"play loud music\" is acceptable but \"put on loud music\" is more natural for \"coloca música alta\""}
+{"id": "pt-0004", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Não tem de quê' literally means 'there's nothing to thank for' but is not the standard response to 'obrigado'; should be 'de nada' or 'tudo bem'"}
+{"id": "pt-0008", "severity": "low", "issue": "UNNATURAL", "note": "'I'm very sleepy' is acceptable but 'I'm very tired' or 'I'm very drowsy' would be more natural"}
+{"id": "pt-0013", "severity": "low", "issue": "WRONG_REGISTER", "note": "'Oi, tudo bom?' is quite casual; translation should reflect this with 'Hey, what's up?' or 'Hi, what's good?'"}
+{"id": "pt-0015", "severity": "low", "issue": "UNNATURAL", "note": "'really well' is colloquial for 'very well'; prefer consistency with pt-0014"}
+{"id": "pt-0022", "severity": "low", "issue": "UNNATURAL", "note": "'rest well' is awkward; should be 'sleep well' or 'rest up well'"}
+{"id": "pt-0028", "severity": "low", "issue": "UNNATURAL", "note": "Expected 'Where is the nearest station?' with 'is' rather than colloquial 'where's'"}
+{"id": "pt-0029", "severity": "medium", "issue": "UNNATURAL", "note": "'Ô de casa' is a traditional call; 'Hello there!' or 'Anybody home?' captures the social register better than 'Hello! Is anyone home?'"}
+{"id": "pt-0030", "severity": "low", "issue": "UNNATURAL", "note": "'exercises' as a verb is awkward; should be 'He exercises every morning' or 'He works out every morning'"}
+{"id": "pt-0188", "severity": "medium", "issue": "UNNATURAL", "note": "\"Are you taking part in Thursday's meeting?\" is awkward; prefer \"Are you attending Thursday's meeting?\" or \"Will you be at Thursday's meeting?\""}
+{"id": "pt-0199", "severity": "medium", "issue": "UNNATURAL", "note": "\"Do you speak Portuguese at the office?\" is misleading—\"conversar\" means to chat/converse, not just speak; better: \"Do you chat in Portuguese at the office?\""}
+{"id": "pt-0151", "severity": "medium", "issue": "UNNATURAL", "note": "'part of' is awkward; 'participates in' or 'is part of' would be more natural"}
+{"id": "pt-0151", "fix": {"k": "participar de", "en": "to participate in; to take part in", "pos": "v"}}
+{"id": "pt-0164", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'trocar mensagens' means to exchange messages, not specifically to text"}
+{"id": "pt-0164", "fix": {"k": "trocar mensagens", "en": "to exchange messages; to message", "pos": "phrase"}}
+{"id": "pt-0174", "severity": "low", "issue": "UNNATURAL", "note": "'feirinha' diminutive suggests charm/familiarity; 'little fair' is acceptable but 'craft fair' or 'market stall' more common in English"}
+{"id": "pt-0174", "fix": {"k": "feirinha", "en": "small fair; craft fair; market stall", "pos": "n"}}
+{"id": "pt-0241", "severity": "medium", "issue": "UNNATURAL", "note": "'gets a haircut' is natural; 'he cuts his hair' would be more literal but less idiomatic for the reflexive meaning"}
+{"id": "pt-0246", "severity": "low", "issue": "MISSING_NUANCE", "note": "'conhecer' can mean to visit/get to know a place, but 'visit' is more common in this context"}
+{"id": "pt-0257", "severity": "low", "issue": "MISSING_NUANCE", "note": "'mudar de apartamento' is more specifically 'to move to a different apartment' or 'to change apartments'; 'move' alone is less precise"}
+{"id": "pt-0211", "severity": "low", "issue": "UNNATURAL", "note": "downtown is colloquial; 'the downtown area' or 'downtown' alone works, but 'near downtown' is slightly awkward in this context—'near the center' would be more precise"}
+{"id": "pt-0216", "severity": "low", "issue": "MISSING_NUANCE", "note": "'uses her phone' is correct but 'o celular' without possessive is typical Portuguese; 'the phone' is more literal and also acceptable, no real error"}
+{"id": "pt-0219", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'gather' misses the sense of 'collecting/gathering up'—better as 'I collect the dirty clothes' or 'I gather up the dirty clothes to wash'"}
+{"id": "pt-0222", "severity": "medium", "issue": "UNNATURAL", "note": "'junto dinheiro' = 'I save money' (accumulate), not literally 'gather'—translation is correct but context demands 'save' not 'gather'"}
+{"id": "pt-0230", "severity": "low", "issue": "UNNATURAL", "note": "'order a little coffee' reads awkwardly; 'order a small coffee' or just 'have a small coffee' is more natural; 'cafezinho' is diminutive but 'a small/short coffee' captures it better"}
+{"id": "pt-0231", "severity": "low", "issue": "UNNATURAL", "note": "'while we can' is correct but 'while it lasts' better captures 'enquanto dá' (as long as it lasts/is available)"}
+{"id": "pt-0334", "severity": "medium", "issue": "UNNATURAL", "note": "She laughs a lot is awkward; better 'She's very cheerful' or 'She laughs easily'"}
+{"id": "pt-0343", "severity": "low", "issue": "MISSING_NUANCE", "note": "medo de avião typically means fear of airplanes, not fear of flying specifically"}
+{"id": "pt-0359", "severity": "medium", "issue": "UNNATURAL", "note": "'My birthday is in March' is correct but 'Eu faço aniversário' literally means 'I have my birthday'—English should match natural phrasing or note the idiom"}
+{"id": "pt-0302", "severity": "medium", "issue": "UNNATURAL", "note": "\"picks up his daughter\" is colloquial; more natural as \"picks up the daughter\" or \"fetches the daughter\""}
+{"id": "pt-0305", "severity": "low", "issue": "UNNATURAL", "note": "\"take the stairs\" is acceptable but \"climb the stairs\" more idiomatic for subir escadas"}
+{"id": "pt-0306", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"mês que vem\" = \"next month\", but \"um curso novo\" (a new course) structure is awkward; should be \"He's going to start a new course next month\" is correct English but Portuguese suggests \"He's going to start a course next month\" more naturally"}
+{"id": "pt-0328", "severity": "medium", "issue": "UNNATURAL", "note": "\"My back hurts\" is valid but \"estou com dor\" idiomatically means \"I have a pain/ache\"; prefer \"I have back pain\" or \"I have a pain in my back\""}
+{"id": "pt-0271", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "Fruit (plural) not fruit; should be 'fruits'"}
+{"id": "pt-0271", "fix": {"k": "frutas", "en": "fruits", "pos": "n"}}
+{"id": "pt-0272", "severity": "medium", "issue": "UNNATURAL", "note": "Present perfect 'I've been living' is correct but 'I live in Brazil for three years' also acceptable in English depending on context; translation is acceptable but slightly stiff"}
+{"id": "pt-0274", "severity": "low", "issue": "UNNATURAL", "note": "'We make plans to go out' is slightly awkward; more natural would be 'We plan to go out' or 'We arrange to go out'"}
+{"id": "pt-0275", "severity": "low", "issue": "UNNATURAL", "note": "'answer emails' is fine but 'respond to emails' is more natural"}
+{"id": "pt-0275", "fix": {"k": "respondo", "en": "to respond to; to answer", "pos": "v"}}
+{"id": "pt-0276", "severity": "low", "issue": "WRONG_REGISTER", "note": "'as me' is informal; 'as I do' is more standard"}
+{"id": "pt-0282", "severity": "low", "issue": "UNNATURAL", "note": "'he won't go to work today' - better as 'he's not going to work today' since context is present sickness"}
+{"id": "pt-0291", "severity": "low", "issue": "UNNATURAL", "note": "'put on sunscreen' is better than 'pass sunscreen'; 'passo' here means 'apply'"}
+{"id": "pt-0291", "fix": {"k": "passo", "en": "to apply; to put on", "pos": "v"}}
+{"id": "pt-0295", "severity": "medium", "issue": "UNNATURAL", "note": "'can you heat it up' assumes imperative; more natural to parse as 'can you warm it up' (warming vs heating distinction)"}
+{"id": "pt-0372", "severity": "medium", "issue": "UNNATURAL", "note": "\"Where's there a pharmacy\" is awkward; should be \"Where is there a pharmacy\" or \"Is there a pharmacy nearby\""}
+{"id": "pt-0382", "severity": "medium", "issue": "UNNATURAL", "note": "\"How does the situation stand\" is stiff; more natural: \"How is the situation now\" or \"What's the situation\""}
+{"id": "pt-0388", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"churrasco\" is a grilled meat barbecue, not just any barbecue; \"Brazilian barbecue\" or \"grilled meat\" captures the specific meaning better"}
+{"id": "pt-0427", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Caipirinha is a drink, not necessarily THE most famous; article 'the' overstates"}
+{"id": "pt-0442", "severity": "medium", "issue": "UNNATURAL", "note": "'What's there to eat?' is awkward; better: 'What is there to eat?' or 'What's available to eat?'"}
+{"id": "pt-0449", "severity": "low", "issue": "UNNATURAL", "note": "'Today's news is worrying' treats 'notícias' (plural) as singular; better: 'Today's news are worrying' or 'The news today is worrying'"}
+{"id": "pt-0392", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'pegar' can mean to pick up, but also 'to catch/get' - translation misses potential ambiguity in context"}
+{"id": "pt-0401", "severity": "low", "issue": "UNNATURAL", "note": "'She takes an Uber' is acceptable but 'vai de Uber' more literally means 'goes by Uber'; slightly different emphasis"}
+{"id": "pt-0407", "severity": "low", "issue": "UNNATURAL", "note": "'it needs washing' is awkward; better: 'needs to be washed' or 'needs a wash'"}
+{"id": "pt-0417", "severity": "low", "issue": "UNNATURAL", "note": "'get to the bus station' is slightly informal; 'reach' or 'get to' both work but 'arrive at' more natural"}
+{"id": "pt-0452", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "animado para = looking forward to; 'excited about' misses the anticipatory sense"}
+{"id": "pt-0452", "fix": {"k": "animado para", "en": "looking forward to; excited about", "pos": "phrase"}}
+{"id": "pt-0456", "severity": "medium", "issue": "UNNATURAL", "note": "'confused by' is awkward; 'confused about' is more natural"}
+{"id": "pt-0456", "fix": {"k": "confuso com", "en": "confused about; confused by", "pos": "phrase"}}
+{"id": "pt-0458", "severity": "low", "issue": "UNNATURAL", "note": "'The rent price went up' is redundant; 'The rent went up' is more natural"}
+{"id": "pt-0459", "severity": "medium", "issue": "UNNATURAL", "note": "'The month's money ran out' is awkward; 'I ran out of money this month' is more natural English"}
+{"id": "pt-0472", "severity": "low", "issue": "UNNATURAL", "note": "'Why is everything so expensive?' is more idiomatic than 'Why are things so expensive?'"}
+{"id": "pt-0491", "severity": "medium", "issue": "UNNATURAL", "note": "\"Where's a good café around here?\" is awkward; better: \"Where can I find a good café around here?\" or \"Is there a good café around here?\""}
+{"id": "pt-0496", "severity": "medium", "issue": "UNNATURAL", "note": "\"How do I get to the airport?\" is acceptable but more natural: \"How do I get to the airport?\" matches; however \"Como chego no aeroporto?\" is colloquial (\"no\" instead of \"ao\"). Translation is correct but note the informal Portuguese."}
+{"id": "pt-0508", "severity": "low", "issue": "UNNATURAL", "note": "\"A cup of tea does me good\" is grammatically correct but stiff; more natural: \"A cup of tea is good for me\" or \"Tea does me good.\""}
+{"id": "pt-0515", "severity": "low", "issue": "MISSING_NUANCE", "note": "Portuguese 'frutas' (plural) translates more naturally as 'fruit' (uncountable) or 'fruits' (countable); English 'fruit' is singular, which is acceptable but 'fruits' would be more precise match"}
+{"id": "pt-0518", "severity": "low", "issue": "MISSING_NUANCE", "note": "'quadro' can mean painting, picture, or frame; 'painting' assumes artistic intent; 'picture' is more neutral"}
+{"id": "pt-0530", "severity": "medium", "issue": "UNNATURAL", "note": "'Onde é a saída?' more naturally translates to 'Where is the exit?' rather than 'Where's the exit?' (colloquial); the full form is more literal"}
+{"id": "pt-0530", "fix": {"k": "Onde é a saída?", "en": "Where is the exit?", "pos": "phrase"}}
+{"id": "pt-0555", "severity": "medium", "issue": "UNNATURAL", "note": "\"Where's there an ATM?\" is grammatically awkward; should be \"Where is there an ATM?\" or \"Where can I find an ATM?\""}
+{"id": "pt-0555", "fix": {"k": "Onde tem um caixa eletrônico?", "en": "Where is there an ATM?", "pos": "phrase"}}
+{"id": "pt-0612", "severity": "medium", "issue": "UNNATURAL", "note": "\"Why is the line so long?\" would be more natural; \"Why does the line have so much?\" is awkward"}
+{"id": "pt-0625", "severity": "low", "issue": "UNNATURAL", "note": "\"The evening is pleasant for walking\" is grammatically correct but \"It's a pleasant evening for walking\" would be more natural"}
+{"id": "pt-0571", "severity": "medium", "issue": "UNNATURAL", "note": "Should be 'The sidewalk of the street is broken' or more naturally 'The street's sidewalk is broken'; 'calçada da rua' is redundant phrasing"}
+{"id": "pt-0579", "severity": "low", "issue": "UNNATURAL", "note": "Awkward phrasing; better: 'Could you please repeat that?' or 'Please repeat that?'"}
+{"id": "pt-0584", "severity": "low", "issue": "UNNATURAL", "note": "More naturally: 'What is written there?' or 'What does it say there?' (current is slightly stiff)"}
+{"id": "pt-0586", "severity": "low", "issue": "UNNATURAL", "note": "Better: 'It's a beautiful day today' or 'Today is a beautiful day'; 'The day is beautiful' is awkward"}
+{"id": "pt-0591", "severity": "medium", "issue": "UNNATURAL", "note": "Grammatical error in English; should be 'Where is there cell service here?' or better 'Where is there cell reception here?' (redundant phrasing with 'here')"}
+{"id": "pt-0596", "severity": "low", "issue": "UNNATURAL", "note": "More natural: 'The street noise bothers me' is acceptable but 'Street noise bothers me' flows better"}
+{"id": "pt-0633", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "toda segunda means 'every second' or 'every other'; should be 'every Monday' requires 'toda segunda-feira'"}
+{"id": "pt-0650", "severity": "medium", "issue": "UNNATURAL", "note": "article 'a' before 'spoonful' sounds awkward; should be 'A spoonful of sugar in the coffee' or 'One spoonful of sugar in the coffee'"}
+{"id": "pt-0651", "severity": "low", "issue": "MISSING_NUANCE", "note": "deixei can mean 'left' or 'let'; context implies unintentional leaving (forgot), not purposeful action"}
+{"id": "pt-0677", "severity": "medium", "issue": "UNNATURAL", "note": "homemade food is more natural than home cooking"}
+{"id": "pt-0687", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "diretor primarily means director/principal; headmaster in UK context, but principal is acceptable for schools"}
+{"id": "pt-0690", "severity": "low", "issue": "UNNATURAL", "note": "café mais forte more naturally 'stronger coffee' as a comparison, but 'the coffee stronger' would be clearer—current phrasing slightly awkward"}
+{"id": "pt-0693", "severity": "medium", "issue": "UNNATURAL", "note": "Adverb placement awkward; should be 'Ela precisa urgentemente de férias' or 'Ela urgentemente precisa de férias'"}
+{"id": "pt-0697", "severity": "low", "issue": "UNNATURAL", "note": "'The garden flowers' is slightly awkward; 'The flowers in the garden' or 'The flowers of the garden' more natural"}
+{"id": "pt-0712", "severity": "low", "issue": "UNNATURAL", "note": "'My daughter's backpack' is correct but 'the backpack of my daughter' is more literal; both acceptable"}
+{"id": "pt-0727", "severity": "medium", "issue": "UNNATURAL", "note": "\"ice-cold\" is overly emphatic; \"gelado\" typically means \"cold\" or \"chilled\", not intensified \"ice-cold\""}
+{"id": "pt-0731", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"educado\" primarily means \"well-mannered\" or \"well-behaved\"; \"polite\" captures only one aspect"}
+{"id": "pt-0732", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"simpático\" means \"nice; likeable; friendly\"; should reflect the social warmth aspect"}
+{"id": "pt-0741", "severity": "low", "issue": "UNNATURAL", "note": "\"by Friday\" is acceptable but \"until Friday\" or \"by the end of Friday\" may better match \"até sexta\""}
+{"id": "pt-0760", "severity": "high", "issue": "UNNATURAL", "note": "'less bad' is grammatically incorrect English; should be 'not as bad' or 'better'"}
+{"id": "pt-0776", "severity": "medium", "issue": "UNNATURAL", "note": "'We'll talk later' uses future, but Portuguese 'a gente se fala depois' is more habitual/colloquial; 'We talk later' or 'Talk to you later' more natural"}
+{"id": "pt-0790", "severity": "medium", "issue": "UNNATURAL", "note": "\"I'm needing\" is awkward in English; \"I need\" or \"I could use\" would be natural"}
+{"id": "pt-0791", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Tá ligado?\" is colloquial slang meaning \"You get me?\" or \"You following me?\", not \"You know what I mean?\""}
+{"id": "pt-0792", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"sertanejo\" is a specific Brazilian music genre; translation should specify it or add context"}
+{"id": "pt-0803", "severity": "low", "issue": "UNNATURAL", "note": "\"Send news\" is awkward; more naturally \"Keep in touch\" or \"Let me know how it goes\""}
+{"id": "pt-0806", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "\"Que saco\" is more harshly \"What a pain\" or \"That sucks\"; \"How annoying\" is too mild"}
+{"id": "pt-0814", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Pois não?\" is a polite/formal response phrase meaning \"Yes, of course?\" or \"At your service?\" not \"Yes?\" The translation should convey the courteous, rhetorical nature."}
+{"id": "pt-0818", "severity": "low", "issue": "UNNATURAL", "note": "\"I like showering in the rain\" is awkward phrasing; \"I like taking a shower in the rain\" or \"I like standing in the rain\" would be more natural."}
+{"id": "pt-0823", "severity": "low", "issue": "UNNATURAL", "note": "English uses \"I saw her\" (objective pronoun correct), but the card reflects Brazilian informal grammar \"Eu vi ela\" which is prescriptively non-standard. Translation is acceptable but could note the register."}
+{"id": "pt-0838", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Nada a ver\" is an idiomatic expression meaning \"That has nothing to do with it\" or \"That's irrelevant\"; \"That's not right\" misses the actual meaning of irrelevance."}
+{"id": "pt-0841", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'man' is too informal/slang; 'cara' is colloquial but 'buddy' or 'dude' better captures the tone"}
+{"id": "pt-0845", "severity": "low", "issue": "UNNATURAL", "note": "'Enjoy your meal' is more natural than 'Enjoy your meal!' alone—phrasing is acceptable but slightly stiff"}
+{"id": "pt-0846", "severity": "low", "issue": "UNNATURAL", "note": "'Take care, okay?' is slightly awkward; 'Take care, alright?' flows better"}
+{"id": "pt-0850", "severity": "low", "issue": "UNNATURAL", "note": "'it's so hot' is correct but 'wow, it's hot!' is more natural English"}
+{"id": "pt-0857", "severity": "low", "issue": "MISSING_NUANCE", "note": "'thin and athletic' misses that 'magra' can mean slender/slim in an attractive sense, not just thin"}
+{"id": "pt-0862", "severity": "medium", "issue": "UNNATURAL", "note": "'fished all afternoon' should be 'went fishing all afternoon' or 'fished for the whole afternoon'"}
+{"id": "pt-0864", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'What else is new, huh!' doesn't match 'Que novidade'; should be 'What a surprise!' or 'How surprising!'"}
+{"id": "pt-0867", "severity": "low", "issue": "UNNATURAL", "note": "'No worries, it was nothing' is stiff; 'Don't worry, it was nothing' or 'No problem, it was nothing' is more natural"}
+{"id": "pt-0879", "severity": "medium", "issue": "UNNATURAL", "note": "\"in a rush\" is awkward; better: \"I'm busy today\" or \"I'm swamped today\""}
+{"id": "pt-0890", "severity": "medium", "issue": "UNNATURAL", "note": "\"I feel like eating\" is stilted; better: \"I'm in the mood to eat\" or \"I want to eat\""}
+{"id": "pt-0894", "severity": "medium", "issue": "MISSING_NUANCE", "note": "primary sense is disbelief/skepticism (\"Are you serious?\"), not \"No way!\" as primary translation"}
+{"id": "pt-0895", "severity": "medium", "issue": "UNNATURAL", "note": "\"Done deal!\" and \"Let's do it!\" are quite different meanings; needs clarification or better single rendering"}
+{"id": "pt-0897", "severity": "low", "issue": "UNNATURAL", "note": "\"I'm all good\" is informal; \"I'm fine\" or \"Everything's good\" reads more naturally"}
+{"id": "pt-0899", "severity": "low", "issue": "UNNATURAL", "note": "\"Sei lá\" is more colloquial; better as \"I don't know, I have no idea\" without the comma structure"}
+{"id": "pt-0912", "severity": "medium", "issue": "UNNATURAL", "note": "English 'getting worse and worse' suggests continuous deterioration; Portuguese 'cada vez pior' is more naturally rendered as 'worse and worse' or 'getting progressively worse', but 'getting worse and worse' with repeated 'worse' is slightly awkward"}
+{"id": "pt-0915", "severity": "low", "issue": "MISSING_NUANCE", "note": "'ficou brava' can also mean 'became angry' or 'turned angry'; 'got angry' is acceptable but 'became angry' captures the state change better"}
+{"id": "pt-0926", "severity": "medium", "issue": "UNNATURAL", "note": "'curtas e grossas' is a Portuguese idiom meaning 'curt/rude' (literally 'short and thick'); the English translation 'short and rude' misses the idiomatic meaning—should be 'curt' or note the idiom"}
+{"id": "pt-0926", "fix": {"k": "grossas", "en": "curt; rude", "pos": "adj"}}
+{"id": "pt-0931", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "quentes means hot/warm; English says warm but Portuguese specifically says hot. Should be 'hot and pleasant' or note the distinction."}
+{"id": "pt-0934", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Cai fora!' is more literally 'Fall out!' / 'Drop out!' – the translation captures colloquial sense but misses the raw directness."}
+{"id": "pt-0953", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'gordo' is offensive/blunt for 'heavy' in English. Standard translation would be 'fat' or 'overweight', not softened to 'heavy'."}
+{"id": "pt-0954", "severity": "low", "issue": "UNNATURAL", "note": "'longest-serving' is awkward; more natural English: 'He's the most senior employee in the company' or 'He's been with the company the longest.'"}
+{"id": "pt-0955", "severity": "low", "issue": "UNNATURAL", "note": "'all afternoon' is slightly awkward phrasing; more natural: 'We swam in the river the whole afternoon' or 'all afternoon long.'"}
+{"id": "pt-0971", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "café (coffee) ≠ café (establishment); should be 'The best coffee in the city is on this street' or 'The best café in the city is on this street'"}
+{"id": "pt-0974", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Bora' is colloquial contraction of 'vamos embora'; 'Let's go!' works but 'Come on!' or 'Let's get going!' captures casual tone better"}
+{"id": "pt-0976", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Massa' literally 'dough/mass'; colloquial slang meaning varies by region; 'That's awesome!' is reasonable but 'That's cool!' or 'That rocks!' are also valid interpretations"}
+{"id": "pt-0984", "severity": "low", "issue": "UNNATURAL", "note": "'Tô morrendo de fome' is hyperbolic idiom; 'I'm starving!' is standard but 'I'm dying of hunger!' more literally mirrors Portuguese structure"}
+{"id": "pt-0985", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Sério mesmo?' = 'Really?'; 'For real?' is redundant/unnecessary addition; suggest just 'Really?'"}
+{"id": "pt-1058", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "agradecer por requires a recipient; 'I thanked them' assumes unexpressed object"}
+{"id": "pt-1063", "severity": "low", "issue": "UNNATURAL", "note": "'Don't worry' is imperative; Portuguese is conditional/indicative"}
+{"id": "pt-1064", "severity": "low", "issue": "UNNATURAL", "note": "'Come in' shifts to imperative; Portuguese 'Pode entrar' is permission/ability"}
+{"id": "pt-1075", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'combinar' means to arrange/coordinate, not just 'make plans'; missing specificity"}
+{"id": "pt-1021", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Saúde! is said by others TO the sneezer, not by the sneezer. Should be 'Health!' (polite response to sneeze)"}
+{"id": "pt-1022", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Saudade is untranslatable longing/yearning, not just 'miss'. Current translation misses the emotional depth"}
+{"id": "pt-1025", "severity": "low", "issue": "UNNATURAL", "note": "'Huh? What do you mean?' is somewhat forced; 'Huh? How so?' or 'What do you mean?' flows better"}
+{"id": "pt-1030", "severity": "low", "issue": "UNNATURAL", "note": "'I'm on it' is slightly informal; 'I got it' or 'I'm handling it' may be more natural"}
+{"id": "pt-1039", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Gente boa' literally 'good people/folk' — should be 'You're really a good person' or 'You're really good people'"}
+{"id": "pt-1049", "severity": "low", "issue": "UNNATURAL", "note": "'Changed jobs' is correct but 'mês passado' = 'last month'; phrasing is slightly awkward as written"}
+{"id": "pt-0992", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Fica pra próxima\" means \"see you next time\" or \"until next time\", not \"maybe next time\". The expression implies a definite postponement, not uncertainty."}
+{"id": "pt-0992", "fix": {"k": "Fica pra próxima", "en": "See you next time; Until next time", "pos": "phrase"}}
+{"id": "pt-1001", "severity": "low", "issue": "UNNATURAL", "note": "\"Out of the question\" is acceptable but \"Not a chance!\" or \"No way!\" captures the casual Brazilian register better."}
+{"id": "pt-1011", "severity": "low", "issue": "UNNATURAL", "note": "\"Que nada\" is more colloquial than \"Nah\"; \"Nonsense, it was easy\" or \"Come on, it was easy\" better preserves the dismissive tone."}
+{"id": "pt-1017", "severity": "low", "issue": "UNNATURAL", "note": "\"Não esquenta a cabeça\" literally means \"don't heat your head\"; \"Don't stress about it\" or \"Don't worry your head about it\" is more natural."}
+{"id": "pt-1017", "fix": {"k": "esquentar a cabeça", "en": "to worry; to stress", "pos": "v"}}
+{"id": "pt-1086", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing 'We're in this together! / That's us!' doesn't naturally capture the colloquial affirmation of 'É nóis!' Consider: 'That's what I'm talking about!' or similar affirmation"}
+{"id": "pt-1087", "severity": "low", "issue": "UNNATURAL", "note": "Multiple translations offered but 'Off you go!' is less idiomatic for this slang phrase; 'Go for it!' alone is clearer"}
+{"id": "pt-1090", "severity": "low", "issue": "MISSING_NUANCE", "note": "'show' can mean concert, but in Portuguese 'show' typically refers to a musical performance; 'concert' is acceptable but 'show' in English music context may imply rock/pop specifically"}
+{"id": "pt-1171", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "pulou means 'skipped/jumped over', not 'celebrated'. Should be 'We skipped Carnival in Rio' or use celebrar for 'celebrated'"}
+{"id": "pt-1192", "severity": "medium", "issue": "UNNATURAL", "note": "'cutting onion' is awkward; should be 'while cutting an onion' or 'cutting onions'"}
+{"id": "pt-1195", "severity": "medium", "issue": "UNNATURAL", "note": "'on loan' is awkward construction; better as 'borrowed my computer' or 'used my computer as a loan'"}
+{"id": "pt-1112", "severity": "medium", "issue": "UNNATURAL", "note": "English 'rested the whole day' is awkward; 'rested all day' is more natural"}
+{"id": "pt-1113", "severity": "low", "issue": "UNNATURAL", "note": "'act like you're at home' is stiff; 'make yourself at home' is idiomatic"}
+{"id": "pt-1114", "severity": "low", "issue": "UNNATURAL", "note": "'I thought I'd lost it' should be 'I thought I had lost it' or more naturally 'I thought I'd lost it' — acceptable as is, but minor register mismatch"}
+{"id": "pt-1123", "severity": "low", "issue": "MISSING_NUANCE", "note": "English drops 'all' before 'her friends'; 'all her friends' emphasizes completeness, Portuguese 'todos os amigos' is more emphatic"}
+{"id": "pt-1128", "severity": "low", "issue": "UNNATURAL", "note": "'I did everything I could to not be late' — better as 'to avoid being late' or 'not to be late'"}
+{"id": "pt-1140", "severity": "low", "issue": "UNNATURAL", "note": "'Pega leve' is imperative/informal; 'Go easy on him' matches tone, but 'Take it easy on him' is more natural colloquially"}
+{"id": "pt-1146", "severity": "medium", "issue": "UNNATURAL", "note": "English 'slammed' implies violence; Portuguese 'fechou com força' is more neutral (closed forcefully). Consider 'closed the door hard' or 'shut the door firmly'"}
+{"id": "pt-1149", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Fez uma surpresa' means 'prepared/arranged a surprise', not 'surprised'. English should be 'He prepared a surprise for his girlfriend'"}
+{"id": "pt-1162", "severity": "low", "issue": "UNNATURAL", "note": "'Did you tell your parents?' is awkward for context; more natural as 'Did you tell your parents about it?' but Portuguese allows ellipsis. Minor register shift"}
+{"id": "pt-1164", "severity": "low", "issue": "MISSING_NUANCE", "note": "'curtir' has informal/slang register; 'really enjoyed' masks this casual tone. Consider 'We really liked the beach' or 'had a great time at'"}
+{"id": "pt-1168", "severity": "low", "issue": "UNNATURAL", "note": "'dyed her hair blonde' is standard but 'painted her hair blonde' is oddly literal. Suggest 'dyed her hair blonde' remains best"}
+{"id": "pt-1211", "severity": "medium", "issue": "UNNATURAL", "note": "\"asked a local for directions\" is awkward; more natural: \"asked a resident for directions\" or \"asked someone for directions\""}
+{"id": "pt-1214", "severity": "medium", "issue": "UNNATURAL", "note": "\"became friends with\" is more idiomatic than the source; source says \"made friendship with\" which is literal but stiff"}
+{"id": "pt-1216", "severity": "medium", "issue": "UNNATURAL", "note": "\"got lucky with the weather\" works but Portuguese idiom \"deu sorte com o tempo\" is more naturally \"we were lucky with the weather\" or \"the weather was kind to us\""}
+{"id": "pt-1217", "severity": "low", "issue": "UNNATURAL", "note": "\"gave everyone a tight hug\" is slightly awkward word order; \"gave a tight hug to everyone\" or \"hugged everyone tightly\" flows better"}
+{"id": "pt-1261", "severity": "low", "issue": "UNNATURAL", "note": "\"take a look\" is slightly informal for plural 'vocês'; more natural as \"Did you all take a look\" or \"Did you have a look\""}
+{"id": "pt-1268", "severity": "low", "issue": "UNNATURAL", "note": "\"took a long walk\" is acceptable but \"went for a long walk\" more natural in English"}
+{"id": "pt-1281", "severity": "low", "issue": "UNNATURAL", "note": "\"passed sunscreen\" is awkward; should be \"applied sunscreen\" or \"put on sunscreen\""}
+{"id": "pt-1289", "severity": "low", "issue": "UNNATURAL", "note": "\"wrote down the address on a piece of paper\" is redundant; more natural as \"wrote down the address on paper\" or \"jotted down the address\""}
+{"id": "pt-1233", "severity": "low", "issue": "UNNATURAL", "note": "Should be 'We came by taxi' not 'came by taxi' — missing article or use 'in a taxi'"}
+{"id": "pt-1234", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Ela fez de tudo' means 'She did everything' literally, but the phrase 'fez de tudo para' means 'She did all she could to' or 'She went out of her way to'; current translation misses the effort/sacrifice nuance"}
+{"id": "pt-1237", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Ela deu certo' means 'She worked out' or 'She was successful/things went well for her', not 'did well at' — the verb is reflexive 'dar certo' (to succeed), not 'dar bem em'"}
+{"id": "pt-1239", "severity": "low", "issue": "UNNATURAL", "note": "Better: 'We knew all the neighbors' (simpler) or 'We used to know all the neighbors' captures the imperfect better, but 'used to' is acceptable"}
+{"id": "pt-1252", "severity": "medium", "issue": "UNNATURAL", "note": "'Combinou de se encontrar' = 'We arranged to meet' or 'We decided to meet'; 'agreed to meet' is grammatically stiff. Better: 'We planned to meet'"}
+{"id": "pt-1257", "severity": "low", "issue": "UNNATURAL", "note": "Better: 'Did you cook or eat out?' (drop 'use to' — the Portuguese imperfect is clear enough without forcing it)"}
+{"id": "pt-1321", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"didn't understand any\" should be \"didn't understand anything\" — mais natural e preciso"}
+{"id": "pt-1328", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"were wise in\" distorts meaning; \"foram felizes\" = \"were happy about\" or \"were right to make\""}
+{"id": "pt-1350", "severity": "low", "issue": "UNNATURAL", "note": "\"put everything back\" not stated in Portuguese; literal is \"put everything in place\""}
+{"id": "pt-1298", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "pôr a culpa em = to blame; 'He blamed me' is correct but misses the literal sense. Better: 'He put the blame on me' captures the idiom more precisely."}
+{"id": "pt-1303", "severity": "medium", "issue": "UNNATURAL", "note": "'We laughed all night' is acceptable but 'demos risada' is colloquial. More natural: 'We laughed the whole night through' or 'We laughed all night long.'"}
+{"id": "pt-1308", "severity": "low", "issue": "MISSING_NUANCE", "note": "'besteira' can mean a foolish thing/blunder; 'huge mistake' is close but 'besteira enorme' emphasizes the foolishness more than error. Consider: 'I did something really foolish/stupid.'"}
+{"id": "pt-1312", "severity": "low", "issue": "UNNATURAL", "note": "'since childhood' is idiomatic English, but 'desde criança' is more naturally 'from childhood' or 'since he was a child.' Minor register issue."}
+{"id": "pt-1319", "severity": "low", "issue": "UNNATURAL", "note": "'gave aulas' = taught; 'She taught for ten years' is correct but 'gave classes' is more literal. Both acceptable; current phrasing is natural."}
+{"id": "pt-1362", "severity": "low", "issue": "UNNATURAL", "note": "'by surprise' reads awkwardly; 'as a surprise' or 'unexpectedly' more natural"}
+{"id": "pt-1368", "severity": "low", "issue": "UNNATURAL", "note": "'find a spot' is colloquial; 'find a seat' or 'find a table' more standard"}
+{"id": "pt-1370", "severity": "low", "issue": "UNNATURAL", "note": "'gave my best' is slightly awkward; 'did my best' more idiomatic"}
+{"id": "pt-1378", "severity": "low", "issue": "UNNATURAL", "note": "'eating calmly' misses register; 'eating peacefully' or 'eating quietly' more natural for context"}
+{"id": "pt-1381", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "voltar means 'to return/come back', but context suggests 'He said he'll come back' should be 'He said he'll return' or simply 'He said he'd come back'. The translation 'come back' is acceptable but 'return' is more precise for voltar."}
+{"id": "pt-1382", "severity": "low", "issue": "UNNATURAL", "note": "While grammatically correct, 'the sunrise' (nascer do sol) is more naturally translated as 'the sunrise' but 'watch the sunrise' or 'see the sunrise' works equally; current phrasing is acceptable."}
+{"id": "pt-1389", "severity": "low", "issue": "UNNATURAL", "note": "'She used to eat ice cream' is acceptable but 'She used to have ice cream' is more natural for tomar sorvete in casual Portuguese."}
+{"id": "pt-1398", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'She played piano since the age of five' suggests a completed action, but tocava (imperfect) indicates habitual past. Should be 'She had been playing piano since she was five' or 'She used to play piano starting from age five' to capture the ongoing habituality."}
+{"id": "pt-1404", "severity": "low", "issue": "UNNATURAL", "note": "Second clause 'didn't rest' is inconsistent tense. Should be 'didn't use to rest' to match the imperfect aspect of both verbs trabalhava/descansava."}
+{"id": "pt-1419", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'a torre de São Paulo' typically refers to Bandeirantes Monument or a specific landmark, but 'tower' is imprecise without context; 'the São Paulo landmark' or 'Imigrantes Bridge' structure would be clearer, though tower works if referring to a specific building"}
+{"id": "pt-1424", "severity": "low", "issue": "UNNATURAL", "note": "'was able to see' is technically correct but 'could see' is more natural for this context"}
+{"id": "pt-1437", "severity": "low", "issue": "UNNATURAL", "note": "'took the subway' or 'went by subway' is more natural than 'used to take the subway' given the contrast structure; the mixed aspect (habitual + past single action) reads awkwardly"}
+{"id": "pt-1439", "severity": "low", "issue": "UNNATURAL", "note": "'used to go to bed late' is technically correct but 'used to sleep late' or 'used to stay up late' is more natural in English"}
+{"id": "pt-1442", "severity": "medium", "issue": "UNNATURAL", "note": "Imperfect + simple past creates awkward temporal mismatch. 'While I was paying' suggests ongoing action interrupted, but 'he went' is abrupt. Better: 'While I was paying the bill, he left/went to get the car' or use past perfect."}
+{"id": "pt-1452", "severity": "medium", "issue": "UNNATURAL", "note": "Imperfect + simple past creates confusion. 'While she was singing' (ongoing) but 'everyone applauded' (completed). Better rendered as 'While she sang' or add temporal nuance to English."}
+{"id": "pt-1469", "severity": "low", "issue": "UNNATURAL", "note": "'Used to be cleaner' is idiomatic but 'The streets were cleaner before' (simple past) is more natural for Portuguese imperfect here. Minor register issue."}
+{"id": "pt-1470", "severity": "medium", "issue": "UNNATURAL", "note": "Imperfect + simple past mismatch. 'While it was raining' (ongoing) but 'we played' (completed). Should be 'While it was raining, we were playing cards' to match the imperfective sense."}
+{"id": "pt-1472", "severity": "medium", "issue": "UNNATURAL", "note": "English adds 'to me' but Portuguese 'me indicou' naturally carries this—more natural: 'He recommended a good restaurant to me' or simply 'He suggested a good restaurant'"}
+{"id": "pt-1477", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Imperfect 'dançava' = habitual past; English 'was dancing' suggests continuous action at that moment. Should be 'Everyone used to dance when the music stopped' or clarify the context"}
+{"id": "pt-1482", "severity": "medium", "issue": "UNNATURAL", "note": "'I noticed you've changed' uses present perfect but Portuguese past tense 'achei' + 'mudado' suggests completed observation. Better: 'I think you've changed' or 'I noticed you're different'"}
+{"id": "pt-1490", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Sonhava em ser' more naturally translates to 'to dream of to be'; English 'dream of being' is correct but 'sonhava em' can also mean 'dreamed about' (more literal)"}
+{"id": "pt-1571", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; 'but today of all days' is clunky; suggest 'but today he forgot'"}
+{"id": "pt-1584", "severity": "low", "issue": "UNNATURAL", "note": "'For a change' reads as sarcastic; more neutral 'As usual' or 'Once again' better fits context"}
+{"id": "pt-1509", "severity": "medium", "issue": "UNNATURAL", "note": "'without worry' should be 'without worries' or 'without a care' for natural English"}
+{"id": "pt-1514", "severity": "medium", "issue": "UNNATURAL", "note": "'had a coffee' is awkward; 'drank coffee' or 'had coffee' is more natural"}
+{"id": "pt-1519", "severity": "medium", "issue": "UNNATURAL", "note": "question phrasing is awkward; 'Did you use to live' is correct but 'Did you all live' or 'Did you guys live' sounds more natural in conversation"}
+{"id": "pt-1526", "severity": "low", "issue": "UNNATURAL", "note": "'talk little' is awkward; 'used to be quiet' or 'didn't talk much' is more natural"}
+{"id": "pt-1531", "severity": "medium", "issue": "UNNATURAL", "note": "\"by letter\" is slightly awkward; \"through the mail\" or \"in letters\" more natural"}
+{"id": "pt-1531", "fix": {"k": "pedir", "en": "to ask for; to request", "pos": "v"}}
+{"id": "pt-1549", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"cobrou o dinheiro que emprestei\" means 'he charged/collected the money I lent', but English says 'asked me to pay back the money I lent'—logic is reversed. Should be 'He charged me for the money I borrowed' or similar"}
+{"id": "pt-1549", "fix": {"k": "cobrar", "en": "to charge; to collect; to demand payment", "pos": "v"}}
+{"id": "pt-1591", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"se acordou com\" means \"woke up because of\" not \"woke up with\"; should be \"He woke up because of the alarm\" or \"The alarm woke him up\""}
+{"id": "pt-1591", "fix": {"k": "acordar", "en": "to wake up; to be woken up by", "pos": "v"}}
+{"id": "pt-1603", "severity": "medium", "issue": "UNNATURAL", "note": "\"reply to the message\" is awkward; more natural as \"reply to the message\" → \"answer the message\" or \"respond to the message\""}
+{"id": "pt-1604", "severity": "medium", "issue": "UNNATURAL", "note": "Tense mismatch: Portuguese present tense suggests habitual action, but English \"We meet\" could suggest present moment; better as \"We met\" (past) to match narrative context, or clarify habituality"}
+{"id": "pt-1613", "severity": "medium", "issue": "UNNATURAL", "note": "\"graduated with a degree in business administration\" is redundant; simpler as \"She graduated in business administration\" or \"She earned a degree in business administration\""}
+{"id": "pt-1622", "severity": "medium", "issue": "UNNATURAL", "note": "\"It's good for you to sleep\" is awkward; better as \"It's good that you sleep\" or \"You should sleep early\""}
+{"id": "pt-1631", "severity": "low", "issue": "CARD_DUPLICATE", "note": "Nearly identical to pt-1624; only setting differs (empresa vs vizinhos)"}
+{"id": "pt-1642", "severity": "medium", "issue": "UNNATURAL", "note": "\"there needs to be silence\" is stilted; better as \"the child needs silence\" or \"it needs to be quiet\""}
+{"id": "pt-1647", "severity": "medium", "issue": "UNNATURAL", "note": "\"switched to plane\" is missing object; should be \"switched to flying\" or \"switched to traveling by plane\""}
+{"id": "pt-1687", "severity": "medium", "issue": "UNNATURAL", "note": "For/by is awkward here; should be 'When do you need this?' or 'What's your deadline for this?'"}
+{"id": "pt-1698", "severity": "low", "issue": "UNNATURAL", "note": "'gets emotional easily with movies' is slightly odd; better: 'gets emotional easily at movies' or 'is easily moved by movies'"}
+{"id": "pt-1710", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'reminded ourselves of' is more accurate than 'remembered'; the reflexive suggests collective reflection"}
+{"id": "pt-1746", "severity": "medium", "issue": "UNNATURAL", "note": "Imperative + future mixed awkwardly; 'Sleep early today, [and] tomorrow we have to wake up early' flows better"}
+{"id": "pt-1755", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'A gente nos comprometeu' is reflexive; should be 'We committed ourselves to helping' or 'We undertook to help'"}
+{"id": "pt-1653", "severity": "medium", "issue": "UNNATURAL", "note": "\"by surprise\" is awkward; \"unexpectedly\" or \"suddenly\" flows better"}
+{"id": "pt-1654", "severity": "low", "issue": "UNNATURAL", "note": "\"received the job offer\" is technically correct but \"got a job offer\" is more natural"}
+{"id": "pt-1667", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Nos demos conta\" means \"realized\" or \"became aware\"; \"realized the mistake\" is correct but sentence structure suggests past moment; \"we realized\" works but imperfect aspect lost"}
+{"id": "pt-1679", "severity": "low", "issue": "UNNATURAL", "note": "\"have interest by\" is awkward; should be \"I'm interested in\" (already shown as alt) or \"I have an interest in\""}
+{"id": "pt-1680", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Nós nos despedimos\" is reflexive (we said goodbye to each other); \"A gente nos despedimos\" is grammatically inconsistent (mixing 3rd/1st person). Should be either \"Nós nos despedimos\" or \"A gente se despediu\"; also \"saudade\" is untranslatable cultural concept—\"with a feeling of longing\" or \"sadly\" better"}
+{"id": "pt-1725", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "atraso = lateness/delay, not 'being late' (gerund)"}
+{"id": "pt-1725", "fix": {"k": "atraso", "en": "lateness; delay", "pos": "n"}}
+{"id": "pt-1727", "severity": "medium", "issue": "UNNATURAL", "note": "should be 'I'll buy you lunch' not 'pay for your lunch' (pagar can mean to buy in this context, but 'I'll buy' is more natural)"}
+{"id": "pt-1732", "severity": "medium", "issue": "UNNATURAL", "note": "'when things calm down' is imprecise; 'com mais calma' = 'more calmly/at a more leisurely pace', not about external circumstances"}
+{"id": "pt-1735", "severity": "low", "issue": "UNNATURAL", "note": "'The painting was painted' is awkward redundancy; 'The painting was created' or 'was done' would be better"}
+{"id": "pt-1834", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Proíbo que usem\" = \"I forbid that you use\" or \"I forbid you to use\"; current translation omits the personal object"}
+{"id": "pt-1840", "severity": "low", "issue": "UNNATURAL", "note": "\"So there's no misunderstanding\" is slightly awkward; \"To avoid misunderstanding\" or \"So that there's no misunderstanding\" is more natural"}
+{"id": "pt-1848", "severity": "low", "issue": "UNNATURAL", "note": "\"let me know\" is informal; \"tell me\" or \"notify me\" would better match the conditional structure"}
+{"id": "pt-1854", "severity": "low", "issue": "UNNATURAL", "note": "\"introduce you to\" is correct but \"present you to\" (literal) sounds slightly formal; current phrasing is acceptable but English more commonly uses \"introduce\""}
+{"id": "pt-1856", "severity": "medium", "issue": "WRONG_REGISTER", "note": "\"I inform you that\" is overly formal; \"Eu lhe comunico\" is formal Portuguese but English \"I'm telling you\" or \"I'm informing you\" would be more natural in this context"}
+{"id": "pt-1771", "severity": "medium", "issue": "UNNATURAL", "note": "\"welcomed them very warmly\" is awkward; \"received them very warmly\" or \"greeted them warmly\" flows better"}
+{"id": "pt-1773", "severity": "low", "issue": "UNNATURAL", "note": "\"thank you from the heart\" is slightly poetic; more natural: \"I thank you sincerely\" or \"I'm grateful to you\""}
+{"id": "pt-1775", "severity": "low", "issue": "UNNATURAL", "note": "\"I wish you a happy birthday\" is grammatically correct but slightly formal; more natural: \"I wish you a happy birthday\" (acceptable) or \"Happy birthday to you\""}
+{"id": "pt-1782", "severity": "low", "issue": "UNNATURAL", "note": "\"accompanied them at the airport\" suggests staying with them there; \"accompanied them to the airport\" is more idiomatic"}
+{"id": "pt-1786", "severity": "low", "issue": "UNNATURAL", "note": "\"I'll see you tomorrow at work\" uses future tense but \"te vejo\" (present) in Portuguese is colloquial for near future; acceptable but could note this registers as more immediate"}
+{"id": "pt-1790", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"to snow in Rio\" is the infinitive form; the sentence means \"It's unlikely that it snows/will snow in Rio\" — the translation structure mismatches the subjunctive"}
+{"id": "pt-1797", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"A gente nos adaptou\" is reflexive but the English drops the reflexive sense; should be \"We adapted ourselves to the new life\" or \"We adjusted to the new life\""}
+{"id": "pt-1798", "severity": "low", "issue": "UNNATURAL", "note": "\"I wish everyone a good day\" is acceptable but slightly formal; \"I wish everyone a good day\" (stands) — minimal issue"}
+{"id": "pt-1803", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"A gente nos mudou\" is redundant/ungrammatical in Portuguese; should be \"A gente se mudou\" or \"Nós nos mudamos\". English translation is correct but source sentence is malformed."}
+{"id": "pt-1810", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"convite para o aniversário\" can mean the invitation itself or the party; English adds \"party\" which is reasonable but not explicit in source."}
+{"id": "pt-1813", "severity": "medium", "issue": "UNNATURAL", "note": "\"Eu te apresento o meu irmão\" in future context should use \"Vou te apresentar\" or \"Deixa eu te apresentar\"; present tense here is awkward for the English \"Let me introduce\"."}
+{"id": "pt-1817", "severity": "medium", "issue": "UNNATURAL", "note": "Same as pt-1813: present tense \"Eu te apresento\" doesn't naturally map to \"Let me introduce you\"; should use future or imperative form."}
+{"id": "pt-1828", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"que emprestei\" (that I lent) is ambiguous—could mean \"I lent to her\" or \"I lent to someone else\". English clarifies \"I lent her\" which assumes the former. Both interpretations are valid."}
+{"id": "pt-1865", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "passar por = to pass by/go by, but 'stopped by' implies deliberate stopping. Should be 'We passed by her house' or 'We went by her house'"}
+{"id": "pt-1870", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "fazer uma surpresa = to give/do a surprise, not simply 'surprised'. Better: 'She gave me a surprise' or 'She did something to surprise me'"}
+{"id": "pt-1883", "severity": "low", "issue": "UNNATURAL", "note": "'asked me a favor' is grammatically awkward in English. Should be 'asked me for a favor'"}
+{"id": "pt-1887", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "achar = to find/think/consider. 'Found you very funny' suggests discovering something, but context is judgment. Better: 'I thought you were very funny' or 'I found you very amusing'"}
+{"id": "pt-1911", "severity": "low", "issue": "UNNATURAL", "note": "English 'it rains' is awkward; 'it might rain' or 'that it will rain' is more natural"}
+{"id": "pt-1919", "severity": "medium", "issue": "UNNATURAL", "note": "'We met each other in college' is redundant; 'We met in college' is standard"}
+{"id": "pt-1986", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'mando' with future meaning is colloquial; 'vou mandar' would be clearer English match"}
+{"id": "pt-1990", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'mando' with future meaning; inconsistent with pt-1986 translation"}
+{"id": "pt-1993", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "English shifts to infinitive construction; should maintain 'that they treat' to match subjunctive"}
+{"id": "pt-1998", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Desejo que vocês sejam muito felizes juntos' more naturally renders as 'I wish you to be very happy together' or 'I wish you very much happiness'; current phrasing slightly restructured"}
+{"id": "pt-2003", "severity": "low", "issue": "UNNATURAL", "note": "Command form 'Me dá' is colloquial/informal; standard Portuguese would be 'Me dê' (formal subjunctive) or 'Me dá' (very casual); translation doesn't reflect register shift"}
+{"id": "pt-2004", "severity": "low", "issue": "UNNATURAL", "note": "Imperative 'Repete' is informal/directive; translation neutral on register"}
+{"id": "pt-2008", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Eu não o vi' is simple past (definite point); 'I haven't seen' is present perfect; should be 'I didn't see him'"}
+{"id": "pt-2011", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "participe das aulas = participate in classes; 'attends' misses the subjunctive sense of active participation"}
+{"id": "pt-2015", "severity": "low", "issue": "UNNATURAL", "note": "'I guarantee you this' is awkward; better 'I guarantee you that this' or 'I assure you this'"}
+{"id": "pt-2025", "severity": "medium", "issue": "UNNATURAL", "note": "'faz mal' = it's bad (for you); should be 'it's bad for you' not as standalone clause"}
+{"id": "pt-2026", "severity": "low", "issue": "UNNATURAL", "note": "'pra gente ir' = for us to go to; 'for us to go to' is slightly redundant; 'for us to go' is cleaner"}
+{"id": "pt-2035", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'É vergonhoso que tratem' = It's shameful that they treat; English says 'to treat' (infinitive), but Portuguese subjunctive means 'that they treat (thus)'"}
+{"id": "pt-2036", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'A gente nos conheceu' is contradictory (a gente = we, nos = us); should be 'We met each other in the bank line' or 'We met in the bank line'"}
+{"id": "pt-2039", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'A gente me pediu' is ungrammatical; 'a gente' (we) cannot take 'me' (me); likely should be 'They asked me' or possessive construction"}
+{"id": "pt-1922", "severity": "medium", "issue": "UNNATURAL", "note": "walked us to the door is awkward; should be 'walked us to' or better 'accompanied us to the door' but that's pt-1922's translation already"}
+{"id": "pt-1924", "severity": "medium", "issue": "UNNATURAL", "note": "'forbid you from doing' is stilted; more natural: 'I forbid you to do that'"}
+{"id": "pt-1928", "severity": "low", "issue": "UNNATURAL", "note": "pedir que takes subjunctive; 'I ask that you be patient' or 'I ask you to be patient' both work, but latter is more natural"}
+{"id": "pt-1932", "severity": "low", "issue": "MISSING_NUANCE", "note": "'alerted about' is less natural than 'warned us about' or 'alerted us to'; 'about the danger' could also be 'to the danger'"}
+{"id": "pt-1934", "severity": "low", "issue": "UNNATURAL", "note": "'I promise you I'll do better' works but 'I promise you I'll improve' or 'I promise I'll do better' is more idiomatic"}
+{"id": "pt-1938", "severity": "low", "issue": "UNNATURAL", "note": "'waited for them with anticipation' is awkward; natural: 'waited for them eagerly' or 'waited anxiously for them'"}
+{"id": "pt-1943", "severity": "low", "issue": "WRONG_REGISTER", "note": "'tasty' is informal/child-like; 'delicious' is more standard for formal hope-statement"}
+{"id": "pt-1944", "severity": "medium", "issue": "UNNATURAL", "note": "imperative without 'you' is curt; should be 'Turn off your phone' or 'Turn off the phone'"}
+{"id": "pt-1947", "severity": "low", "issue": "MISSING_NUANCE", "note": "'make friends easily' misses the reflexive sense; 'we easily make friends' or 'friendship comes easily to us' closer to 'a gente faz amizade'"}
+{"id": "pt-1950", "severity": "low", "issue": "UNNATURAL", "note": "'with her talent' is slightly off; 'with her talent' works but 'by her talent' is more natural after 'impressed'"}
+{"id": "pt-1951", "severity": "medium", "issue": "UNNATURAL", "note": "\"in every moment\" is awkward; \"at all times\" or \"throughout\" is more natural"}
+{"id": "pt-1957", "severity": "low", "issue": "UNNATURAL", "note": "\"the shortest way\" is acceptable but \"the shortest path\" or \"the shortest route\" sounds more natural"}
+{"id": "pt-1966", "severity": "low", "issue": "UNNATURAL", "note": "\"calm down\" as a standalone imperative response to that sentence is awkward; \"don't worry\" or \"relax\" fits better"}
+{"id": "pt-1975", "severity": "medium", "issue": "UNNATURAL", "note": "\"Allow me to introduce myself\" is overly formal for the casual Portuguese tone; \"Let me introduce myself\" or \"I'm introducing myself\" fits better"}
+{"id": "pt-2109", "severity": "medium", "issue": "UNNATURAL", "note": "\"Until proven otherwise\" is awkward; more natural: \"Until he proves me wrong\" or \"Unless proven otherwise\""}
+{"id": "pt-2116", "severity": "low", "issue": "UNNATURAL", "note": "\"Corre que a gente vai se atrasar\" = \"Run, we're going to be late\" is more direct than \"Hurry, we're going to be late\" — though both acceptable"}
+{"id": "pt-2121", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"se lembre\" (subjunctive) suggests doubt about whether he will remember; English \"remembers\" is present indicative. Should be \"I doubt he'll remember\" or \"I doubt he will remember\""}
+{"id": "pt-2042", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"a gente\" is colloquial 1st person plural; 'we' is correct, but 'another city' should be 'to another city' or the phrasing should match 'mudar de' (change from)"}
+{"id": "pt-2055", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Caso não tenha troco\" = 'In case you don't have change' or 'If you don't have change'; the question subject is unclear (you vs. customer). Should clarify perspective."}
+{"id": "pt-2063", "severity": "low", "issue": "UNNATURAL", "note": "\"Look how cool!\" is slightly stiff; more natural: \"Check out how cool!\" or \"That's so cool!\""}
+{"id": "pt-2064", "severity": "low", "issue": "UNNATURAL", "note": "\"Hold this for me\" is correct but \"Segura aqui pra mim\" is more colloquial imperative; natural in context"}
+{"id": "pt-2067", "severity": "low", "issue": "UNNATURAL", "note": "\"Deixa eu terminar\" is colloquial/nonstandard (should be \"Deixe-me\" formally); translation fine but register mismatch"}
+{"id": "pt-2141", "severity": "medium", "issue": "MISSING_NUANCE", "note": "é difícil que + subjunctive typically expresses 'it's difficult/hard that' (suggesting effort/difficulty), not 'unlikely' which would be 'é improvável que'"}
+{"id": "pt-2146", "severity": "low", "issue": "UNNATURAL", "note": "'Don't talk loud' should be 'Don't speak loudly' or 'Don't talk loudly'"}
+{"id": "pt-2153", "severity": "medium", "issue": "UNNATURAL", "note": "Embora chovendo uses gerund instead of subjunctive; awkward phrasing. Standard would be 'Embora estivesse chovendo' or 'Apesar de estar chovendo'"}
+{"id": "pt-2198", "severity": "low", "issue": "UNNATURAL", "note": "should be 'Wait a minute' or 'Wait a moment' — 'minutinho' is diminutive/informal, but 'moment' works adequately"}
+{"id": "pt-2212", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Would you accept a coffee?' is odd phrasing; should be 'Would you like a coffee?' or 'Would you have a coffee?'"}
+{"id": "pt-2213", "severity": "low", "issue": "UNNATURAL", "note": "'Sit here next to me' is awkward; more natural: 'Sit here beside me' or 'Sit down next to me'"}
+{"id": "pt-2214", "severity": "low", "issue": "UNNATURAL", "note": "'Fill up the car's tank' is slightly awkward; better: 'Fill up the gas tank' or 'Fill the car's tank'"}
+{"id": "pt-2245", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Junta as cadeiras\" means to gather/collect chairs together, not to put them in a pile. Translation should be 'Gather the chairs after the party' or 'Collect the chairs after the party', not 'put together'."}
+{"id": "pt-2245", "fix": {"k": "junta", "en": "to gather; to collect", "pos": "v"}}
+{"id": "pt-2071", "severity": "medium", "issue": "UNNATURAL", "note": "English omits 'the favor' implied by 'Faça o favor de'—should be 'Do me the favor of waiting in line' or 'Please wait in line' is acceptable but less literal"}
+{"id": "pt-2073", "severity": "low", "issue": "UNNATURAL", "note": "'Toma cuidado' is imperative-casual; 'Be careful' works but 'Take care on the road' captures imperative mood better"}
+{"id": "pt-2076", "severity": "low", "issue": "UNNATURAL", "note": "'Abre' is imperative-casual; 'Open the door for me' is colloquial-matching but 'Would you open the door for me' is more natural English register"}
+{"id": "pt-2077", "severity": "low", "issue": "UNNATURAL", "note": "'Liga' is imperative-casual; 'Call me when you arrive' matches but 'Give me a call when you arrive' is more natural English"}
+{"id": "pt-2078", "severity": "low", "issue": "UNNATURAL", "note": "'Coloca' is imperative-casual; 'Set the table' is correct but 'Put the table together for dinner' or 'Set the table for dinner' works"}
+{"id": "pt-2079", "severity": "low", "issue": "WRONG_REGISTER", "note": "'Confirme' is formal-imperative; 'Confirm' matches but context suggests formal request—'Please confirm your reservation in advance' is more natural"}
+{"id": "pt-2080", "severity": "low", "issue": "UNNATURAL", "note": "'Para o carro' is imperative-casual; 'Park the car right here' works but 'Stop the car right here' is closer to literal meaning of 'para'"}
+{"id": "pt-2081", "severity": "low", "issue": "UNNATURAL", "note": "'Pede' is imperative-casual; 'Order an Uber for us' works but 'Ask for an Uber for us' is closer to 'pede'"}
+{"id": "pt-2086", "severity": "low", "issue": "UNNATURAL", "note": "'Limpa' is imperative-casual; 'Clean the kitchen after cooking' works but 'Clean up the kitchen after cooking' is more natural"}
+{"id": "pt-2090", "severity": "low", "issue": "UNNATURAL", "note": "'Bota' is imperative-casual; 'Put more salt in the food' works but 'Add more salt to the food' is more natural English"}
+{"id": "pt-2092", "severity": "low", "issue": "UNNATURAL", "note": "'Puxa' is imperative-casual; 'Pull the door to open it' is awkward—'Pull the door open' or 'Pull the door to open it' needs 'Pull to open the door'"}
+{"id": "pt-2098", "severity": "low", "issue": "UNNATURAL", "note": "'Torço para que' means 'I'm rooting for' or 'I'm pulling for'—'I'm rooting for Brazil to win' is correct; 'Torço' as 'I'm rooting' is colloquial but acceptable"}
+{"id": "pt-2161", "severity": "medium", "issue": "UNNATURAL", "note": "\"you confirm\" is singular but \"confirmem\" is plural; should be \"they confirm\" or restructure"}
+{"id": "pt-2165", "severity": "low", "issue": "UNNATURAL", "note": "\"before it gets dark\" is slightly awkward; \"before nightfall\" or \"before it darkens\" flows better"}
+{"id": "pt-2167", "severity": "low", "issue": "UNNATURAL", "note": "\"Vem cá\" is casual/dialectal; \"Come here\" is correct but slightly formal; could note the register"}
+{"id": "pt-2172", "severity": "low", "issue": "UNNATURAL", "note": "\"Make lunch\" is slightly colloquial; \"Prepare lunch\" is more natural"}
+{"id": "pt-2181", "severity": "medium", "issue": "UNNATURAL", "note": "\"we go to\" is vague; should be \"we go to\" or \"we are going to\" — context suggests habitual/future, not past"}
+{"id": "pt-2189", "severity": "low", "issue": "UNNATURAL", "note": "\"right there\" is informal; \"is right over there\" or \"is over there\" better matches \"ali\""}
+{"id": "pt-2314", "severity": "medium", "issue": "UNNATURAL", "note": "English 'saves a seat' is odd; better 'reserves' or 'keeps' a seat"}
+{"id": "pt-2322", "severity": "medium", "issue": "UNNATURAL", "note": "'Would you mind waiting' is slightly stiff; more natural as 'Would you mind if we waited' or 'Could you wait'"}
+{"id": "pt-2331", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Portuguese says 'Would you mind if I sat here?' but English drops the conditional; should preserve it"}
+{"id": "pt-2340", "severity": "low", "issue": "MISSING_NUANCE", "note": "'skydive' is one term but Portuguese 'pular de paraquedas' is more literal 'jump with parachute'; both acceptable but consider adding alternate"}
+{"id": "pt-2259", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "conhecer means to meet/know; visit is visitar"}
+{"id": "pt-2264", "severity": "medium", "issue": "UNNATURAL", "note": "Passa... is imperative singular (you); 'Put on' is correct but 'before going' is more natural as 'antes de ir'"}
+{"id": "pt-2277", "severity": "medium", "issue": "UNNATURAL", "note": "'pegar estrada' is colloquial; 'hit the road' captures it, but 'to get on the road' or 'to set out' more standard"}
+{"id": "pt-2279", "severity": "low", "issue": "WRONG_REGISTER", "note": "Conditional 'saberia' is polite form; 'Could you tell me' is appropriate but 'Would you know how to tell me' is closer to Portuguese structure"}
+{"id": "pt-2259", "fix": {"k": "conhecer", "en": "to meet; to know; to visit", "pos": "v"}}
+{"id": "pt-2285", "severity": "medium", "issue": "UNNATURAL", "note": "English uses imperative 'do' but should use 'do what you have to' or 'do what needs to be done' for natural English flow"}
+{"id": "pt-2286", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Missing object: 'thank them for' or 'thank the host for'; Portuguese 'agradecer o convite' implies thanking for the invitation, not just thanking in general"}
+{"id": "pt-2291", "severity": "low", "issue": "MISSING_NUANCE", "note": "'her friends' is implied but Portuguese just says 'os amigos' (the friends); minor but 'the' would be more accurate"}
+{"id": "pt-2301", "severity": "medium", "issue": "UNNATURAL", "note": "'on the street behind' is awkward; should be 'on the back street' or 'on the street in back'"}
+{"id": "pt-2309", "severity": "low", "issue": "MISSING_NUANCE", "note": "English 'are you going to want' is technically correct but unusual; 'will you want' or 'do you want' is more natural"}
+{"id": "pt-2341", "severity": "low", "issue": "UNNATURAL", "note": "daqui a pouco more idiomatically rendered as 'in a little while' or 'shortly', not 'soon'"}
+{"id": "pt-2346", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'no qual ficamos' is 'in which we stayed', not 'we stayed at'; missing preposition in English"}
+{"id": "pt-2352", "severity": "low", "issue": "UNNATURAL", "note": "'recebê-lo' is 'to receive you' (more literal), 'to welcome you' is acceptable but 'to have you' or 'to see you' may be more natural in context"}
+{"id": "pt-2361", "severity": "low", "issue": "UNNATURAL", "note": "'fazer uma excursão pela cidade' is 'to take/make a tour of the city', but 'take a tour around' is slightly awkward; 'take a city tour' would be clearer"}
+{"id": "pt-2401", "severity": "medium", "issue": "UNNATURAL", "note": "take advantage of + to rest is awkward; 'use the holiday to rest' or 'make use of the holiday to rest' flows better"}
+{"id": "pt-2407", "severity": "medium", "issue": "UNNATURAL", "note": "'give a test' is less natural; 'administer' or 'conduct' preferred, or simply 'test the students'"}
+{"id": "pt-2416", "severity": "low", "issue": "MISSING_NUANCE", "note": "'is no longer showing' acceptable but 'is no longer in theaters' captures 'saiu de cartaz' more idiomatically"}
+{"id": "pt-2426", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Her birthday is next week' implies the date itself moves; should be 'She's having her birthday next week' or 'Her birthday is coming up next week'"}
+{"id": "pt-2427", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Proverb says 'he who warns is a friend (indeed)' — should translate as 'A true friend warns you' or 'A friend is one who warns'"}
+{"id": "pt-2461", "severity": "low", "issue": "UNNATURAL", "note": "Should specify 'birthday gift' not just 'gift' — missing context of 'de aniversário'"}
+{"id": "pt-2461", "fix": {"k": "presente de aniversário", "en": "birthday gift", "pos": "n"}}
+{"id": "pt-2462", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'pela qual passamos' means 'through/along which we passed', not 'we took'. More accurately 'The road we traveled along/drove on was under construction'"}
+{"id": "pt-2464", "severity": "low", "issue": "UNNATURAL", "note": "'participate in' is awkward; 'come to' is better but 'Are you going to the barbecue?' would be more natural"}
+{"id": "pt-2469", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing 'had already had dinner' — should be 'had eaten dinner' or 'had dinner'"}
+{"id": "pt-2481", "severity": "low", "issue": "UNNATURAL", "note": "'do everything possible' is more natural than 'do all possible'; 'I'll do my best' or 'I'll do everything I can' would be clearer"}
+{"id": "pt-2431", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "orçamento means 'budget' or 'estimate'; 'quote' is acceptable but 'estimate' is more standard"}
+{"id": "pt-2431", "fix": {"k": "orçamento", "en": "budget; estimate", "pos": "n"}}
+{"id": "pt-2438", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "tomar in 'o caminho que tomamos' means 'to take'; but 'the route we took' is correct. However, 'caminho' here should read as 'path/way', and 'took' is correct. Issue: 'route' is less natural than 'path' or 'way' for this phrasing"}
+{"id": "pt-2450", "severity": "low", "issue": "UNNATURAL", "note": "'when it's necessary' is slightly stiff; 'when necessary' flows better"}
+{"id": "pt-2459", "severity": "low", "issue": "UNNATURAL", "note": "'The person I like' is correct but 'A pessoa de quem eu gosto' more idiomatically translates 'The person whom I like' or 'The person I'm fond of'; current phrasing works but slightly awkward word order"}
+{"id": "pt-2372", "severity": "low", "issue": "UNNATURAL", "note": "prefer 'The reason he was absent' or 'The reason why he was absent is unknown' — 'by which' is less natural"}
+{"id": "pt-2373", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'assistir' primarily means 'to attend/be present at'; 'to watch' is secondary and context-dependent. Here 'to attend' may be the stronger translation."}
+{"id": "pt-2376", "severity": "low", "issue": "UNNATURAL", "note": "present tense 'it's raining' weakens conditional: better 'if it weren't raining' or 'but it was raining'"}
+{"id": "pt-2382", "severity": "low", "issue": "UNNATURAL", "note": "'taking off in' is slightly awkward; prefer 'leaving in' or 'departing in'"}
+{"id": "pt-2388", "severity": "low", "issue": "UNNATURAL", "note": "future prediction 'is going to be' is acceptable but present tense 'will be' is more natural for weather forecasts"}
+{"id": "pt-2390", "severity": "low", "issue": "UNNATURAL", "note": "'get back to you' is idiomatic but 'let you know' or 'tell you' captures 'te falo' more directly"}
+{"id": "pt-2396", "severity": "medium", "issue": "UNNATURAL", "note": "awkward relative clause construction; better 'The store to which I sent my resume' or 'The store I sent my resume to called me'"}
+{"id": "pt-2398", "severity": "low", "issue": "UNNATURAL", "note": "conditional with present 'we travel' is tense-inconsistent; should be 'while we're traveling' or 'while we travel'"}
+{"id": "pt-2399", "severity": "low", "issue": "UNNATURAL", "note": "'set a date' is imprecise; 'arrange a day' or 'pick a day' better fits 'combinar um dia'"}
+{"id": "pt-2400", "severity": "low", "issue": "UNNATURAL", "note": "missing article: 'on Sunday' needs 'the' or 'next Sunday'; also prefer 'at the Maracanã'"}
+{"id": "pt-2495", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"para quem eu fui\" means \"to whom I went\"; \"I went to\" requires different construction. Should be \"The dentist I went to\" or \"The dentist I see\""}
+{"id": "pt-2516", "severity": "medium", "issue": "UNNATURAL", "note": "\"The bridge we crossed\" is awkward for \"pela qual passamos\". Better: \"The bridge we crossed over\" or \"The bridge through which we passed\""}
+{"id": "pt-2518", "severity": "low", "issue": "UNNATURAL", "note": "\"ensinaria\" is conditional; \"I'd teach\" is correct but \"I would teach\" is more standard in English conditional sentences"}
+{"id": "pt-2525", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English translation is nonsensical ('send others'). Should be 'Whoever wants to goes, whoever doesn't wants to doesn't' or similar voluntary proverb."}
+{"id": "pt-2540", "severity": "medium", "issue": "UNNATURAL", "note": "'finish' for 'terminar' in construction context should be 'be completed' or 'will be finished' for better English idiom."}
+{"id": "pt-2547", "severity": "medium", "issue": "UNNATURAL", "note": "'You eat well' is awkward; more natural as 'One eats well' or 'The food is good' for this impersonal construction."}
+{"id": "pt-2552", "severity": "medium", "issue": "UNNATURAL", "note": "healthier→more healthily or suggest 'eat more healthily' for better naturalness"}
+{"id": "pt-2566", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ensinaria→would teach (conditional), but translation uses present 'teach'"}
+{"id": "pt-2578", "severity": "medium", "issue": "UNNATURAL", "note": "'Quoi dera' is optative/subjunctive wish expression; 'I wish I could' is correct but 'If only I could' captures register better"}
+{"id": "pt-2593", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "soubessem is subjunctive (knew/would know), not simple past; should be 'knew' or 'would know'"}
+{"id": "pt-2595", "severity": "low", "issue": "UNNATURAL", "note": "melted in the mouth is awkward; 'melted in your mouth' or 'melted on the tongue' is more natural"}
+{"id": "pt-2606", "severity": "medium", "issue": "MISSING_NUANCE", "note": "This is a Portuguese proverb; literal translation misses idiomatic meaning 'make do with what you have'"}
+{"id": "pt-2609", "severity": "low", "issue": "UNNATURAL", "note": "'like paradise' is imprecise; paradisíaca means 'paradisiacal' or 'heavenly'"}
+{"id": "pt-2620", "severity": "medium", "issue": "UNNATURAL", "note": "\"I didn't have to work tomorrow\" changes meaning; should be \"didn't work\" or \"weren't working\""}
+{"id": "pt-2631", "severity": "medium", "issue": "UNNATURAL", "note": "\"If you read the manual\" suggests simple conditional; should be \"If you were to read\" or \"If you had read\" to match subjunctive"}
+{"id": "pt-2634", "severity": "medium", "issue": "UNNATURAL", "note": "\"Two-bedroom apartment for sale\" is clunky; more natural as \"Two-bedroom apartment for sale\" or \"Apartment with two bedrooms for sale\" — but note: this is a passive construction (vende-se); English might say \"Two-bedroom apartment for sale\" or \"One sells a two-bedroom apartment\""}
+{"id": "pt-2641", "severity": "medium", "issue": "UNNATURAL", "note": "Present perfect continuous better as 'We have been talking' not 'We've been talking'—more precise in English"}
+{"id": "pt-2642", "severity": "medium", "issue": "UNNATURAL", "note": "'They had met' is simple past perfect; Portuguese pluperfect here suggests prior context—'They had already met' or 'They had gotten to know each other' more natural"}
+{"id": "pt-2643", "severity": "low", "issue": "UNNATURAL", "note": "Tínhamos (archaic form of tínhamos) → 'We had prepared ourselves' more natural than bare 'We had prepared'"}
+{"id": "pt-2649", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'had quit' correct but 'had resigned from' better captures demitir's professional context"}
+{"id": "pt-2666", "severity": "medium", "issue": "UNNATURAL", "note": "'had been in' is colloquial; 'had suffered a car accident' is more precise to the Portuguese"}
+{"id": "pt-2668", "severity": "low", "issue": "UNNATURAL", "note": "'had gotten married' is acceptable but 'had married' is more formal/standard English for pluperfect"}
+{"id": "pt-2675", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; 'So that' typically requires subjunctive or future tense in English when introducing purpose. 'In order that everyone understands' is stilted."}
+{"id": "pt-2675", "fix": {"k": "A fim de que", "en": "so that; in order that", "pos": "phrase"}}
+{"id": "pt-2688", "severity": "low", "issue": "UNNATURAL", "note": "Contraction 'wasn't' or 'wouldn't' would be more natural than 'wasn't going to' in this narrative context."}
+{"id": "pt-2691", "severity": "low", "issue": "UNNATURAL", "note": "'Tínhamos' should be 'Nós tínhamos' or simply 'Tínhamos'; the verb form itself suggests past pluperfect, but English 'We had rented' works naturally here—no major issue, but minor register inconsistency in Portuguese."}
+{"id": "pt-2744", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "pegaríamos o trem = we would catch the train (future conditional), but the conditional perfect 'would have caught' is required after 'had not been late' in English. Should be 'would have caught' not 'would catch'."}
+{"id": "pt-2751", "severity": "medium", "issue": "UNNATURAL", "note": "a equipe renderia mais = the team would perform better is slightly awkward; 'would have performed better' aligns with pluperfect 'had invested'."}
+{"id": "pt-2755", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "não teríamos ficado sem = we wouldn't have gone without is incomplete/unclear. Should be 'we wouldn't have run out' or 'we wouldn't have missed out'."}
+{"id": "pt-2760", "severity": "low", "issue": "MISSING_NUANCE", "note": "queria (simple past) can mean 'wished' or 'wanted'; context suggests 'I wish' (present unreal) rather than 'I wished' (past reflection)."}
+{"id": "pt-2795", "severity": "medium", "issue": "UNNATURAL", "note": "\"the whole world\" is awkward; \"travel around the world\" or \"travel the world\" is more natural"}
+{"id": "pt-2813", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"horta\" means vegetable garden specifically, not general garden; suggest \"vegetable garden\" or \"kitchen garden\""}
+{"id": "pt-2814", "severity": "low", "issue": "UNNATURAL", "note": "\"go on foot\" is archaic/formal; \"walk\" is more natural"}
+{"id": "pt-2702", "severity": "medium", "issue": "UNNATURAL", "note": "Present perfect 'has been hiring' suggests ongoing action, but Portuguese 'tem contratado' here implies completed hires. Better: 'The company has hired a lot of interns' (simple present perfect)."}
+{"id": "pt-2703", "severity": "medium", "issue": "UNNATURAL", "note": "English 'listening to podcasts' is more natural than the literal 'listening to a lot of Portuguese podcasts'. Better phrasing available but translation is defensible."}
+{"id": "pt-2704", "severity": "low", "issue": "UNNATURAL", "note": "'te diria' is informal/tu form; English 'you' is neutral. Consider 'I would tell you' stays acceptable but registers differ slightly in source."}
+{"id": "pt-2711", "severity": "medium", "issue": "UNNATURAL", "note": "English 'dedicating ourselves to' is more natural; 'dedicating ourselves with determination' is slightly awkward. Better: 'We've been dedicating ourselves to the project with dedication' or similar."}
+{"id": "pt-2714", "severity": "low", "issue": "UNNATURAL", "note": "'as if it were urgent' is subjunctive in English but slightly formal. Acceptable but 'as if it was urgent' is more colloquial."}
+{"id": "pt-2726", "severity": "medium", "issue": "UNNATURAL", "note": "'No sooner had he arrived than he wanted to leave' – subject ambiguity: Portuguese 'Mal chegou' doesn't specify gender/person clearly from context. Translation assumes 'he' but card provides no antecedent."}
+{"id": "pt-2763", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Portuguese uses conditional subjunctive 'queria que' (I would like/wish that), not simple past 'wished'"}
+{"id": "pt-2770", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Same as pt-2763: 'queria que' is conditional desire, not past 'wished'"}
+{"id": "pt-2778", "severity": "low", "issue": "UNNATURAL", "note": "'during the early morning' is awkward; 'early morning hours' or 'overnight' more natural"}
+{"id": "pt-2779", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'queria que' expresses conditional wish, not simple past 'wished'"}
+{"id": "pt-2780", "severity": "low", "issue": "UNNATURAL", "note": "'you'd hit less traffic' is informal; 'encounter less traffic' or 'avoid traffic' more standard"}
+{"id": "pt-2783", "severity": "low", "issue": "UNNATURAL", "note": "'arrive faster' should be 'arrive sooner' or 'get there faster'"}
+{"id": "pt-2825", "severity": "medium", "issue": "UNNATURAL", "note": "mixing past perfect condition with present result; should be 'I'd be more energized' (present) or restructure for clarity"}
+{"id": "pt-2841", "severity": "medium", "issue": "UNNATURAL", "note": "mixing imperfect condition with past perfect result ('already be retired'); should be consistent past perfect or restructure"}
+{"id": "pt-2842", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Portuguese uses past subjunctive (condition contrary to fact); English 'had' suggests past perfect but translation uses present 'have'"}
+{"id": "pt-2845", "severity": "medium", "issue": "UNNATURAL", "note": "mixing past perfect condition with present necessity; awkward shift in time frames"}
+{"id": "pt-2920", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "tivéssemos is subjunctive imperfect (if we had), not conditional present (if we have). Should be 'If we had a backyard' not present-tense conditional."}
+{"id": "pt-2935", "severity": "medium", "issue": "UNNATURAL", "note": "'without nervousness' is awkward; more natural: 'without being nervous' or 'calmly'"}
+{"id": "pt-2856", "severity": "medium", "issue": "UNNATURAL", "note": "English translation inverts subject-verb; should be 'Experienced employees are needed' or 'One needs experienced employees'"}
+{"id": "pt-2860", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'You breathe clean air' sounds overly personal/instructional; 'One breathes clean air' or 'Clean air is breathed' fits the impersonal construction better"}
+{"id": "pt-2867", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; 'He didn't know about the meeting either' is stilted; better: 'He didn't know about the meeting, either' or 'Nor did he know about the meeting'"}
+{"id": "pt-2871", "severity": "medium", "issue": "UNNATURAL", "note": "'A significant improvement in performance is noticeable' is passive and awkward; 'A notable improvement in performance is evident' or 'One notices a significant improvement' flows better"}
+{"id": "pt-2896", "severity": "medium", "issue": "UNNATURAL", "note": "English 'You hear' is awkward for impersonal passive. Better: 'A lot of forró is heard in the Northeast' or 'One hears a lot of forró in the Northeast'"}
+{"id": "pt-2897", "severity": "medium", "issue": "UNNATURAL", "note": "English 'There's a lot of discussion' doesn't match Portuguese structure. Better: 'Much is discussed about the new law' or 'The new law is discussed a lot'"}
+{"id": "pt-2903", "severity": "low", "issue": "UNNATURAL", "note": "'we'd fish on weekends' is slightly informal; consider 'we would fish on weekends' for consistency with other translations"}
+{"id": "pt-2905", "severity": "medium", "issue": "UNNATURAL", "note": "English 'There's a lot of talk' doesn't match Portuguese structure. Better: 'Much is talked about this in the newspapers' or 'This is talked about a lot in the newspapers'"}
+{"id": "pt-3037", "severity": "medium", "issue": "UNNATURAL", "note": "Present progressive 'am needing' is unnatural in English; should be simple present 'need'"}
+{"id": "pt-3042", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Continuamos procurando' = 'we continue to look' or 'we keep looking' (present), not past 'kept looking'"}
+{"id": "pt-3052", "severity": "medium", "issue": "UNNATURAL", "note": "'precisa de melhorar' is awkward; should be 'needs to improve' (without 'of')"}
+{"id": "pt-3056", "severity": "low", "issue": "MISSING_NUANCE", "note": "'tornou a ligar' emphasizes repetition/return; 'called back again' may better capture nuance than simple 'called again'"}
+{"id": "pt-2945", "severity": "medium", "issue": "UNNATURAL", "note": "English 'Commercial space for rent' is noun phrase; Portuguese uses impersonal reflexive 'Aluga-se' (lit. 'One rents'), better as 'Commercial space to rent' or 'Commercial office to rent'"}
+{"id": "pt-2948", "severity": "medium", "issue": "UNNATURAL", "note": "English 'to register' is vague; Portuguese 'um registro' specifically means a formal record/registration, better: 'It's necessary to make a formal record' or 'It's necessary to register this'"}
+{"id": "pt-2958", "severity": "medium", "issue": "UNNATURAL", "note": "'You live well in this city' is awkward with impersonal reflexive; better: 'One lives well in this city' or 'People live well in this city'"}
+{"id": "pt-2961", "severity": "low", "issue": "UNNATURAL", "note": "'talk it out' is idiomatic English; more literally: 'Instead of fighting, talk' or 'Instead of arguing, converse'"}
+{"id": "pt-2962", "severity": "low", "issue": "WRONG_REGISTER", "note": "'congress' (lowercase) is unusual in English; should be 'Congress' (capitalized as proper noun) or use 'parliament'"}
+{"id": "pt-3011", "severity": "medium", "issue": "UNNATURAL", "note": "\"left waiting\" suggests she was abandoned; better: \"She waited for over an hour\" or \"She spent over an hour waiting\""}
+{"id": "pt-3014", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"Diz-se\" can mean to be said/rumored; \"It is said\" is more formal than the conversational Portuguese suggests"}
+{"id": "pt-3015", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"In return\" or \"In exchange\" better captures the trade-off sense of \"em contrapartida\" than \"on the other hand\""}
+{"id": "pt-3022", "severity": "high", "issue": "UNNATURAL", "note": "\"De modo que\" + subjunctive = \"so that\" (purpose), but English phrasing is awkward; better: \"In order to start, we need your approval\" or restructure"}
+{"id": "pt-3025", "severity": "medium", "issue": "UNNATURAL", "note": "\"Estuda-se\" is impersonal; \"People study a lot...\" is fine but \"One studies\" or \"You have to study a lot\" may be more literal"}
+{"id": "pt-2979", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Acabei de ler = I just read (not finished reading). 'Finish' implies completion; 'just read' is more accurate for recent past."}
+{"id": "pt-2980", "severity": "low", "issue": "UNNATURAL", "note": "'in the fifties' is dated; 'in the 1950s' or 'in the nineteen-fifties' is more natural in modern English."}
+{"id": "pt-2992", "severity": "medium", "issue": "UNNATURAL", "note": "'nineteen sixty' is awkward; should be 'nineteen sixty' OR 'nineteen-sixty' (hyphenated) for year pronunciation."}
+{"id": "pt-2994", "severity": "medium", "issue": "UNNATURAL", "note": "'There's a lot of construction' misses the impersonal passive-voice tone. Better: 'A lot of construction happens/takes place in this area' or 'Much is built in this area.'"}
+{"id": "pt-2996", "severity": "low", "issue": "UNNATURAL", "note": "'You can see' is colloquial for the formal impersonal construction. Better: 'It can be seen that...' or 'One can see that...'"}
+{"id": "pt-3100", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing awkward; 'furada' is slang for 'a bad/stupid idea' but 'bad idea' alone misses the colloquial tone"}
+{"id": "pt-3105", "severity": "medium", "issue": "UNNATURAL", "note": "'Inasmuch as' is archaic/formal in English; 'Since' or 'Given that' is more natural"}
+{"id": "pt-3111", "severity": "medium", "issue": "UNNATURAL", "note": "'As well as her colleagues' is awkward; more natural: 'Like her colleagues' or 'Along with her colleagues'"}
+{"id": "pt-3118", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'pedido ela em casamento' = 'had proposed to her' but English says 'proposed to her' which is correct; however the source has grammatical error in PT (should be 'pedido-a' or 'a pedido'); the English is accurate but PT card has dialect/informal grammar"}
+{"id": "pt-3154", "severity": "medium", "issue": "UNNATURAL", "note": "English should be 'I came to ask you for a favor' (standard phrasing with 'for')"}
+{"id": "pt-3158", "severity": "medium", "issue": "UNNATURAL", "note": "More natural as 'I feel like going to the movies' or 'I'm in the mood for going to the movies'; 'a fin de' carries colloquial register"}
+{"id": "pt-3166", "severity": "medium", "issue": "UNNATURAL", "note": "Better as 'There is no one who can bear this situation' or 'No one can stand this situation'; 'there's no one who can stand' is awkward"}
+{"id": "pt-3173", "severity": "low", "issue": "UNNATURAL", "note": "More natural as 'He spent the whole night thinking about the matter' (standard phrasing)"}
+{"id": "pt-3180", "severity": "low", "issue": "MISSING_NUANCE", "note": "'on purpose' works but 'with bad intent' or 'maliciously' captures 'por mal' more precisely; consider noting this alternate meaning"}
+{"id": "pt-3128", "severity": "medium", "issue": "UNNATURAL", "note": "English 'dying of hunger' is idiomatic but 'I'm starving' or 'I'm very hungry' is more natural"}
+{"id": "pt-3129", "severity": "low", "issue": "MISSING_NUANCE", "note": "'dying to' works but 'eager to' or 'keen to' better captures the anticipation sense"}
+{"id": "pt-3137", "severity": "low", "issue": "MISSING_NUANCE", "note": "'dying to' works but 'eager to' more naturally expresses anticipation"}
+{"id": "pt-3138", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'dying of longing for you' or 'I miss you so much' — the English loses the intensity of 'morrendo de saudade'; 'I'm desperately missing you' better conveys the emotional weight"}
+{"id": "pt-3139", "severity": "low", "issue": "UNNATURAL", "note": "'volta e meia' means 'every now and then' or 'from time to time', not habitual 'keeps forgetting' — should be 'He occasionally forgets his keys'"}
+{"id": "pt-3146", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'dar um jeito' means 'to find a way' or 'to manage', not exactly 'figure this out' — better: 'I have to find a way to deal with this'"}
+{"id": "pt-3070", "severity": "medium", "issue": "UNNATURAL", "note": "\"Especially since\" suggests emphasis on one cause among others; Portuguese \"Até porque\" means \"and that's because\" or \"and besides\"—closer to \"and (it's true) because.\" Consider \"And that's because he was never very punctual\" or \"Besides, he was never very punctual.\""}
+{"id": "pt-3072", "severity": "medium", "issue": "UNNATURAL", "note": "\"just wait five more minutes\" is awkward word order; more natural as \"just wait another five minutes\" or \"wait just five more minutes.\""}
+{"id": "pt-3074", "severity": "medium", "issue": "WRONG_REGISTER", "note": "\"tô\" (colloquial \"estou\") + \"super busy\" is slang, but English \"super busy\" reads too informal/American. \"I'm swamped\" or \"I'm in a rush\" better matches the casual Portuguese tone."}
+{"id": "pt-3084", "severity": "medium", "issue": "UNNATURAL", "note": "\"I've been wanting to\" is present perfect; Portuguese \"Estou querendo\" is present continuous and means ongoing desire at the moment, not a duration. Better: \"I want to learn\" or \"I'm in the mood to learn.\""}
+{"id": "pt-3217", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "ia fazer uma surpresa = was going to make/throw a surprise, not 'plan a surprise'"}
+{"id": "pt-3217", "fix": {"k": "fazer uma surpresa", "en": "to throw a surprise", "pos": "phrase"}}
+{"id": "pt-3227", "severity": "high", "issue": "WRONG_REGISTER", "note": "'hot' is too informal/slang for 'gata'; should use more neutral 'attractive' or 'pretty'"}
+{"id": "pt-3227", "fix": {"k": "gata", "en": "attractive; pretty", "pos": "adj"}}
+{"id": "pt-3184", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "tinha se arrependido = had regretted, but English needs 'of' not 'the decision' alone; should be 'had regretted the decision' which is correct—no issue"}
+{"id": "pt-3194", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "informou que = informed that, but missing recipient 'us'; the driver didn't inform the street, informed someone"}
+{"id": "pt-3197", "severity": "low", "issue": "UNNATURAL", "note": "'good quality' sounds more natural as 'of good quality' or 'high-quality'"}
+{"id": "pt-3201", "severity": "medium", "issue": "UNNATURAL", "note": "'Say whatever you want' doesn't match 'Diga o que disser' (say what you say); should be 'Say what you will; no matter what you say'"}
+{"id": "pt-3245", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; 'say I'm not in' is more natural than 'say I'm not here'"}
+{"id": "pt-3245", "fix": {"k": "Quem quer que seja, diga que não estou.", "en": "Whoever it is, say I'm not in.", "pos": "phrase"}}
+{"id": "pt-3251", "severity": "medium", "issue": "UNNATURAL", "note": "'However little' is archaic/formal; 'No matter how little' is clearer"}
+{"id": "pt-3251", "fix": {"k": "Por pouco que seja", "en": "no matter how little; however little", "pos": "phrase"}}
+{"id": "pt-3259", "severity": "low", "issue": "UNNATURAL", "note": "'It's not certain he'll come' is slightly awkward; 'It's uncertain whether he'll come' or 'He may not come' more natural"}
+{"id": "pt-3264", "severity": "low", "issue": "UNNATURAL", "note": "'It doesn't seem like it's going to rain' is colloquial; 'It doesn't seem as if it will rain' is more standard"}
+{"id": "pt-3279", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Em tempo\" means \"by the way\" or \"in passing\", not \"at this time\"; \"homologadas\" means \"approved/ratified\" but context suggests \"homologated\" is awkward—\"approved\" is standard"}
+{"id": "pt-3279", "fix": {"k": "em tempo", "en": "by the way; in passing", "pos": "phrase"}}
+{"id": "pt-3290", "severity": "low", "issue": "UNNATURAL", "note": "\"a great help\" is natural but \"mão na roda\" idiom more commonly translates to \"a godsend\" or \"a lifesaver\"; current translation works but misses nuance"}
+{"id": "pt-3292", "severity": "low", "issue": "UNNATURAL", "note": "\"Ficou massa\" is slang/colloquial (turned out cool/awesome); \"turned out awesome\" works but \"came out\" or \"was\" might flow better"}
+{"id": "pt-3297", "severity": "medium", "issue": "WRONG_REGISTER", "note": "\"And then, fine?\" is overly literal; should be \"Hey, how's it going?\" or \"So, what's up?\" to match the casual Brazilian Portuguese greeting"}
+{"id": "pt-3298", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Sujou\" means \"it's messed up\" or \"we're busted\", not just \"trouble\"; the phrase implies something bad happened or they're in trouble, not a standalone interjection"}
+{"id": "pt-3298", "fix": {"k": "sujou", "en": "we're busted; it's messed up", "pos": "v"}}
+{"id": "pt-3336", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Partira is future perfect (will have left), not pluperfect; should be 'will have left' or present perfect context needed"}
+{"id": "pt-3341", "severity": "medium", "issue": "UNNATURAL", "note": "English rendering is awkward; 'This traffic is impossible! It's not moving at all' flows better"}
+{"id": "pt-3343", "severity": "medium", "issue": "WRONG_REGISTER", "note": "Overly formal English for standard business Portuguese; 'We clarify that the aforementioned request was denied' sounds stilted"}
+{"id": "pt-3344", "severity": "medium", "issue": "WRONG_REGISTER", "note": "Clitic pronoun reservamo-nos suggests formal/legal register, but English translation lacks that tone; 'We hereby reserve' would match better"}
+{"id": "pt-3348", "severity": "medium", "issue": "UNNATURAL", "note": "'You seem kind of down' misses the slang register of 'na bad'; 'you seem out of it' or 'you seem off' better captures the casual tone"}
+{"id": "pt-3354", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Since I can remember' is grammatically odd in English; idiomatically 'for as long as I can remember' or 'ever since I can remember' is standard"}
+{"id": "pt-3356", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Criara is future perfect (will have raised), not pluperfect; tense mismatch with English 'had raised'"}
+{"id": "pt-3301", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"muito do bom\" is colloquial slang meaning 'really great/awesome'; current translation misses the informal tone and structure"}
+{"id": "pt-3301", "fix": {"k": "muito do bom", "en": "really awesome; so cool", "pos": "phrase"}}
+{"id": "pt-3313", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"gente boa\" means 'good person; cool person' but the phrasing 'you're such a great person' is slightly formal; should reflect the casual compliment"}
+{"id": "pt-3313", "fix": {"k": "gente boa", "en": "good person; cool person", "pos": "phrase"}}
+{"id": "pt-3314", "severity": "high", "issue": "WRONG_REGISTER", "note": "English is overly formal/archaic ('herein'); Portuguese is already formal but English adds unnecessary 19th-century legal register"}
+{"id": "pt-3315", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"estar com a macaca\" is slang for 'to be annoyed/irritable'; translation should reflect this is an idiom, not literal"}
+{"id": "pt-3315", "fix": {"k": "estar com a macaca", "en": "to be irritable; to be in a bad mood", "pos": "phrase"}}
+{"id": "pt-3321", "severity": "medium", "issue": "MISSING_NUANCE", "note": "\"mala\" in this context means 'annoying; bothersome' but can also mean 'difficult; problematic'; translation only captures first sense"}
+{"id": "pt-3321", "fix": {"k": "mala", "en": "annoying; bothersome; difficult", "pos": "adj"}}
+{"id": "pt-3322", "severity": "medium", "issue": "UNNATURAL", "note": "\"raiz\" colloquially means 'authentic; genuine; real' in Brazilian slang; translation 'keep it real' works but 'no pretense' doesn't capture the authenticity aspect well"}
+{"id": "pt-3322", "fix": {"k": "raiz", "en": "authentic; genuine; real; down-to-earth", "pos": "adj"}}
+{"id": "pt-3330", "severity": "medium", "issue": "MISSING_NUANCE", "note": "\"o negócio é o seguinte\" is informal filler phrase meaning 'the thing is; here's the deal'; current translation misses that it's a casual speech filler"}
+{"id": "pt-3330", "fix": {"k": "o negócio é o seguinte", "en": "here's the deal; the thing is; look", "pos": "phrase"}}
+{"id": "pt-3392", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing awkward; 'He always looks out for number one' or 'He always puts himself first' more natural"}
+{"id": "pt-3393", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'tapar o sol com a peneira' means 'to hide/deny the obvious' not specifically 'hiding the truth'—better: 'There's no point denying the obvious'"}
+{"id": "pt-3395", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'sinistro' in slang means 'cool/awesome/dope' but English 'insane' could suggest dangerous/crazy; 'This outing is going to be awesome!' more accurate"}
+{"id": "pt-3397", "severity": "medium", "issue": "UNNATURAL", "note": "'sangue bom' literally 'good blood'—'This guy from Rio is so cool!' is idiomatic but 'This Rio guy has such a good vibe!' captures it better"}
+{"id": "pt-3406", "severity": "medium", "issue": "UNNATURAL", "note": "'com a faca e o queijo na mão' literally 'with the knife and cheese in hand' means to have control/advantage; 'She has everything in her hands' or 'She's in control' more precise than 'has everything she needs to succeed'"}
+{"id": "pt-3412", "severity": "low", "issue": "UNNATURAL", "note": "'Encaminho em anexo' more naturally 'I am enclosing' or 'Attached please find'; 'in anexo' word order awkward in English"}
+{"id": "pt-3414", "severity": "low", "issue": "UNNATURAL", "note": "'Tem por finalidade' slightly formal construction; 'Its purpose is' acceptable but 'to clarify' slightly off register"}
+{"id": "pt-3419", "severity": "low", "issue": "UNNATURAL", "note": "'Ô meu' is intimate/slang; 'Hey man' captures tone but 'me dá um tempo' 'give me a break' good; overall phrasing slightly stiff"}
+{"id": "pt-3361", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Manda a real\" means 'tell it straight/give it to me straight', but the full phrase is idiomatic. Translation is acceptable but 'Tell me straight' would be more natural."}
+{"id": "pt-3364", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Achara\" is future perfect (he will have found), not past perfect. Should be 'He will have found it strange...' or context requires simple past 'He found it strange...'"}
+{"id": "pt-3366", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Recebera\" is future perfect (he will have received), not simple past. Should be 'He will have received...' or if simple past intended: 'He had received' is only correct if explicitly marked as pluperfect."}
+{"id": "pt-3367", "severity": "low", "issue": "WRONG_REGISTER", "note": "\"Atenciosamente\" in formal closing means 'Respectfully' or 'Sincerely yours', not just 'Sincerely'. The full translation should reflect the formal register."}
+{"id": "pt-3370", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Subscrevo-me atenciosamente\" is a formal Portuguese closing meaning 'I remain respectfully yours' or 'Yours respectfully'. Translation is acceptable but 'Respectfully yours' is the standard English equivalent."}
+{"id": "pt-3372", "severity": "low", "issue": "UNNATURAL", "note": "\"Partiu praia\" is very colloquial (literally 'left for beach'). Translation 'Beach trip this weekend?' works but misses the casual nature. Could be 'Heading to the beach this weekend?'"}
+{"id": "pt-3377", "severity": "medium", "issue": "WRONG_REGISTER", "note": "\"Vossa Senhoria\" is archaic/ceremonial Portuguese. 'Your Lordship' or 'Your Honor' are overly formal in modern English. Should reflect that this is formal/legal but outdated Portuguese."}
+{"id": "pt-3384", "severity": "medium", "issue": "UNNATURAL", "note": "\"que da hora\" should be \"que da hora\" or \"que show\". Translation 'so cool' is acceptable but 'that's awesome' or 'that rocks' might be more natural for the slang intensity."}
+{"id": "pt-3390", "severity": "low", "issue": "UNNATURAL", "note": "\"Tu é\" is non-standard Brazilian Portuguese (should be 'Você é' or 'Tu és'). Translation is correct but should flag the dialectal nature. Also 'ligeirão' is augmentative slang ('super quick'), rendered adequately as 'quick' but 'speedy' captures the diminutive tone better."}
+{"id": "pt-3422", "severity": "medium", "issue": "UNNATURAL", "note": "\"the trend is positive\" misses the original's \"improvement\" sense; should be \"the trend is towards improvement\" or \"shows improvement\""}
+{"id": "pt-3424", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Tá osso\" is colloquial slang meaning \"it's tough/difficult\"; \"It's tough to find a job\" is correct but register mismatches with formal phrasing"}
+{"id": "pt-3431", "severity": "medium", "issue": "UNNATURAL", "note": "\"I communicate that\" is awkward English; should be \"I want to inform you\" or \"Please know that\""}
+{"id": "pt-3432", "severity": "medium", "issue": "WRONG_REGISTER", "note": "\"Meu\" as opening is very informal/slang vocative; \"Dude\" captures tone but \"My\" or \"Man\" more literal"}
+{"id": "pt-3441", "severity": "medium", "issue": "UNNATURAL", "note": "\"Whoa, what's this thing?\" is natural but \"trem\" (lit. \"train\") is regional slang for any object/situation; \"thing\" works but loses colloquial flavor"}
+{"id": "pt-3449", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Por oportuno\" means \"taking this opportunity\" or \"by way of this notice,\" NOT \"on this occasion\"; should reframe as \"I take this opportunity to inform you\""}
+{"id": "pt-3451", "severity": "medium", "issue": "UNNATURAL", "note": "\"It's not too much to remember\" is awkward; should emphasize importance not excessiveness"}
+{"id": "pt-3452", "severity": "medium", "issue": "UNNATURAL", "note": "\"for all due purposes\" is non-standard English; use \"for record\" or \"for due purposes\""}
+{"id": "pt-3457", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"empurrando com a barriga\" means laziness/inaction, not specifically procrastination; better: \"He's being lazy\" or \"He's not putting in effort\""}
+{"id": "pt-3458", "severity": "medium", "issue": "UNNATURAL", "note": "\"cara de pau\" is shameless/bold-faced; translation okay but \"He's too brazen\" or \"He's got nerve\" more natural"}
+{"id": "pt-3459", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"dar uma de João sem braço\" means to act helpless/play innocent; \"He played dumb\" is close but \"He acted helpless\" more accurate"}
+{"id": "pt-3460", "severity": "medium", "issue": "UNNATURAL", "note": "\"She's going overboard\" works but \"She's getting ahead of herself\" better captures \"pé na jaca\""}
+{"id": "pt-3462", "severity": "medium", "issue": "UNNATURAL", "note": "\"pendurado no trabalho\" means held back/dependent on work; \"swamped\" is wrong concept; better: \"I'm dependent on work\" or \"I'm hanging by work\""}
+{"id": "pt-3463", "severity": "medium", "issue": "UNNATURAL", "note": "\"pisou na bola\" means he blew it/messed up; \"let me down\" doesn't capture the error; better: \"He messed up with me\" or \"He dropped the ball on me\""}
+{"id": "pt-3465", "severity": "high", "issue": "UNNATURAL", "note": "\"Slowly one goes far\" is awkward; idiomatic English: \"Slow and steady goes far\" or \"Taking your time gets you far\""}
+{"id": "pt-3467", "severity": "medium", "issue": "UNNATURAL", "note": "\"They're all the same\" is imprecise; \"farinha do mesmo saco\" specifically means \"of the same ilk\" or \"two of a kind\"; better: \"They're of a feather\" or \"They're the same ilk\""}
+{"id": "pt-3469", "severity": "medium", "issue": "UNNATURAL", "note": "\"straightforward\" misses \"pão pão, queijo queijo\" (repetition for emphasis); better: \"This proposal is plain and simple\" or \"no-nonsense\""}
+{"id": "pt-3470", "severity": "medium", "issue": "UNNATURAL", "note": "\"gato e sapato\" idiom means treating someone without respect; \"pushed me around\" works but \"He jerked me around\" or \"He treated me like dirt\" more idiomatic"}
+{"id": "pt-3472", "severity": "medium", "issue": "MISSING_NUANCE", "note": "\"mão cheia\" can mean generous OR skilled/handy; translation only covers generous; should include both"}
+{"id": "pt-3475", "severity": "medium", "issue": "UNNATURAL", "note": "\"arraso\" in modern slang means impressive/awesome; \"hit\" is outdated; better: \"That party was awesome\" or \"a blast\""}
+{"id": "pt-3477", "severity": "medium", "issue": "UNNATURAL", "note": "\"por fora\" means literally outside; \"out of the loop\" is cultural translation but \"She's out of it\" more literally accurate"}
+{"id": "pt-3481", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"levou um balde de água fria\" means received cold water (rejection/insult), not a rude awakening"}
+{"id": "pt-3481", "fix": {"k": "levou um balde de água fria", "en": "received a rejection; got insulted", "pos": "phrase"}}
+{"id": "pt-3484", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"joga verde pra colher maduro\" means to sow discord to reap benefit, not fish for information"}
+{"id": "pt-3484", "fix": {"k": "joga verde pra colher maduro", "en": "to stir up trouble for personal gain; to provoke for advantage", "pos": "phrase"}}
+{"id": "pt-3485", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"dar uma colher de chá\" means to help/assist someone, not give them a break (leniency)"}
+{"id": "pt-3485", "fix": {"k": "dar uma colher de chá", "en": "to lend a hand; to help out", "pos": "phrase"}}
+{"id": "pt-3491", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"deu uma segurada\" means held on tight/gripped firmly, not held on to her job"}
+{"id": "pt-3491", "fix": {"k": "dar uma segurada", "en": "to hold on tight; to grip firmly", "pos": "phrase"}}
+{"id": "pt-3492", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"entrou de gaiato\" means entered without permission/sneaked in, not butted in verbally"}
+{"id": "pt-3492", "fix": {"k": "entrar de gaiato", "en": "to sneak in; to enter without permission", "pos": "phrase"}}
+{"id": "pt-3494", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"tiro e queda\" means quick/sudden success, but translation suggests certainty; should be 'smooth sailing' or 'went off without a hitch'"}
+{"id": "pt-3494", "fix": {"k": "tiro e queda", "en": "smooth sailing; a runaway success", "pos": "phrase"}}
+{"id": "pt-3501", "severity": "medium", "issue": "UNNATURAL", "note": "\"doesn't sit well with me\" is correct but \"doesn't go down well with me\" more natural for this idiom"}
+{"id": "pt-3503", "severity": "medium", "issue": "MISSING_NUANCE", "note": "\"café pequeno\" literally small coffee, but idiomatically means something trivial/beneath one's level, not just easy"}
+{"id": "pt-3503", "fix": {"k": "café pequeno", "en": "small potatoes; beneath one's level; child's play", "pos": "phrase"}}
+{"id": "pt-3507", "severity": "medium", "issue": "UNNATURAL", "note": "\"chutou o balde\" more specifically means lost control/gave up, slightly different nuance from 'threw in the towel'"}
+{"id": "pt-3507", "fix": {"k": "chutar o balde", "en": "to lose control; to give up; to throw in the towel", "pos": "phrase"}}
+{"id": "pt-3511", "severity": "medium", "issue": "MISSING_NUANCE", "note": "\"pano pra manga\" idiom means there's more to uncover/reveal; current translation misses the implication of hidden depth or untold story"}
+{"id": "pt-3513", "severity": "medium", "issue": "UNNATURAL", "note": "\"She tipped me off\" suggests advance warning of danger; \"um toque\" is more casual advice/heads-up. Better: 'She gave me a heads-up about the situation'"}
+{"id": "pt-3517", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"engolindo sapo\" means to swallow/accept humiliation or disrespect, not just unpleasant things. Better: 'She's putting up with humiliation/disrespect at work' or 'swallowing her pride'"}
+{"id": "pt-3518", "severity": "medium", "issue": "MISSING_NUANCE", "note": "\"deu com a língua nos dentes\" means she spoke without thinking/let something slip. \"Let the cat out of the bag\" works but missing the sense of careless speech"}
+{"id": "pt-3524", "severity": "medium", "issue": "UNNATURAL", "note": "\"por um fio de\" is awkward phrasing; more natural: 'I'm on a thread of losing my patience' or just 'I'm about to lose my patience'. Current is grammatically off"}
+{"id": "pt-3531", "severity": "medium", "issue": "MISSING_NUANCE", "note": "\"A casa caiu\" literally 'the house fell'; idiom means the scheme collapsed/was exposed. \"The jig was up\" captures this but could be clearer as 'everything fell apart' or 'the whole thing collapsed'"}
+{"id": "pt-3534", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"pagando o pato\" means to bear the consequences/pay the price, not necessarily 'taking the blame'. Better: 'He's bearing the consequences for something he didn't do'"}
+{"id": "pt-3535", "severity": "low", "issue": "UNNATURAL", "note": "\"doesn't get carried away easily\" is slightly awkward. Better: 'she doesn't get carried away' or 'she's hard to fool'"}
+{"id": "pt-3539", "severity": "medium", "issue": "UNNATURAL", "note": "\"It finally dawned on me\" suggests gradual realization; \"A ficha caiu\" is sudden realization/understanding. Better: 'The penny dropped when I saw the result' or 'It finally clicked when I saw the result'"}
+{"id": "pt-3541", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive conditional 'tiver condições' better rendered as 'if I'm able' or 'if I can afford it' rather than 'if I have the means'"}
+{"id": "pt-3543", "severity": "low", "issue": "UNNATURAL", "note": "'hasn't given any news' is awkward; 'hasn't been in touch' or 'hasn't given any sign of life' is more natural"}
+{"id": "pt-3547", "severity": "medium", "issue": "UNNATURAL", "note": "'washes her hands of it' is idiomatic but Portuguese phrase suggests 'when there's a problem' should be 'when things go wrong' for smoother parallel"}
+{"id": "pt-3549", "severity": "low", "issue": "UNNATURAL", "note": "'He had sworn to himself' reads slightly stiffly; 'He swore to himself' or 'He had made a vow to himself' flows better"}
+{"id": "pt-3552", "severity": "low", "issue": "UNNATURAL", "note": "'Who would have thought such a simple idea could change everything' — 'pudesse' (could/might) suggests possibility; 'would change' assumes certainty. Consider 'could possibly change'"}
+{"id": "pt-3558", "severity": "low", "issue": "UNNATURAL", "note": "'addresses the immediate issue' slightly misses tone; 'solves the immediate problem' or 'handles what's urgent now' better matches 'resolve o imediato'"}
+{"id": "pt-3562", "severity": "low", "issue": "UNNATURAL", "note": "'From the perspective of someone who lived the experience' is wordy; 'From the viewpoint of someone who experienced it' is tighter"}
+{"id": "pt-3567", "severity": "medium", "issue": "UNNATURAL", "note": "'In that it weighs' (literal 'em que pese') → 'Despite' works but 'notwithstanding' or 'in spite of' captures formality better"}
+{"id": "pt-3570", "severity": "low", "issue": "UNNATURAL", "note": "'It is necessary to reassess' is correct but impersonal passive; 'Reassessing the criteria adopted is necessary' or 'We must reassess' flows naturally"}
+{"id": "pt-3574", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "confirmara is past perfect (had confirmed), but English uses simple past (told); tense mismatch suggests awkward sequence"}
+{"id": "pt-3576", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "herdara (past perfect) + 'do pai' (from father) should be 'from his father' or 'his father's'; current phrasing inverts the relationship"}
+{"id": "pt-3578", "severity": "low", "issue": "UNNATURAL", "note": "fossem outros os tempos is subjunctive counterfactual; 'Were times different' is acceptable but 'Had times been different' more idiomatic"}
+{"id": "pt-3584", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "outrem = another person/someone else; 'No one else' is misleading—should be 'Anyone else' or 'Another person'"}
+{"id": "pt-3592", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "fora ele quem trouxera = it was he who had brought; English 'had been he who had brought' is awkward double past; should be 'It was he who had brought'"}
+{"id": "pt-3595", "severity": "low", "issue": "CARD_DUPLICATE", "note": "pt-3594 and pt-3595 are nearly identical (ressaltar vs salientar—both mean to emphasize/highlight); functionally duplicate cards"}
+{"id": "pt-3607", "severity": "medium", "issue": "UNNATURAL", "note": "from which they started is awkward; 'that they started from' or 'that they began with' flows better"}
+{"id": "pt-3615", "severity": "low", "issue": "UNNATURAL", "note": "'finally encountered defeat' or 'finally suffered defeat' is more natural than 'finally met defeat'"}
+{"id": "pt-3621", "severity": "medium", "issue": "UNNATURAL", "note": "'The fact that the data is incomplete' is more natural than 'The circumstance that the data is incomplete'"}
+{"id": "pt-3627", "severity": "low", "issue": "UNNATURAL", "note": "'at the destination' is awkward; 'at his destination' or simply 'at his destination' is more natural"}
+{"id": "pt-3630", "severity": "low", "issue": "UNNATURAL", "note": "'Let us be careful that past mistakes are not repeated' is more natural; current phrasing is slightly indirect"}
+{"id": "pt-3633", "severity": "medium", "issue": "UNNATURAL", "note": "\"come out expensive\" is awkward; idiom means cheap goods end up costing more overall"}
+{"id": "pt-3637", "severity": "medium", "issue": "UNNATURAL", "note": "\"Everyone should mind their own business\" adds imperative not in original; more literally \"each monkey on its own branch\""}
+{"id": "pt-3652", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Those who scorn it want to buy it\" misses the proverb sense: bargain hunters pretend disinterest to negotiate lower price"}
+{"id": "pt-3657", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"tombado\" can also mean \"listed as heritage\" or \"registered as protected\"; \"listed as a historical landmark\" is acceptable but slightly narrow"}
+{"id": "pt-3665", "severity": "medium", "issue": "UNNATURAL", "note": "Pluperfect perfect tense in English is awkward; 'had resisted' should be 'had resisted' but conjunction 'but' should be 'yet' for better flow with past narrative"}
+{"id": "pt-3678", "severity": "medium", "issue": "UNNATURAL", "note": "'had the participation of' is awkward; better: 'involved the participation of' or 'included two hundred volunteers'"}
+{"id": "pt-3681", "severity": "low", "issue": "MISSING_NUANCE", "note": "'like no one else' is idiomatic but 'as no one else does' or 'better than anyone' captures the Portuguese comparative sense more precisely"}
+{"id": "pt-3683", "severity": "medium", "issue": "UNNATURAL", "note": "'had been loved in return' is passive and awkward; better: 'his love had been returned' or 'had loved deeply and been loved in return'"}
+{"id": "pt-3687", "severity": "low", "issue": "UNNATURAL", "note": "'the peace he so sought' is slightly archaic; more natural: 'the peace he had sought so much' or 'the peace he had so desperately sought'"}
+{"id": "pt-3728", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Common proverb: 'Pimenta nos olhos dos outros é refresco' means 'It's easy to be indifferent to others' suffering' or 'Other people's pain is refreshing (to schadenfreude)'. Current translation misses the malicious undertone."}
+{"id": "pt-3731", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing. Better: 'Whoever associates with pigs will eat bran' (implying you become like those you associate with)."}
+{"id": "pt-3737", "severity": "low", "issue": "UNNATURAL", "note": "Minor: 'A crooked stick never straightens' is more natural than 'A stick that grows crooked never straightens out'."}
+{"id": "pt-3738", "severity": "low", "issue": "UNNATURAL", "note": "English idiom is 'Don't look a gift horse in the mouth' (no article needed before 'gift horse'). Current phrasing adds unnecessary 'Don't look' structure that doesn't match the Portuguese construction."}
+{"id": "pt-3739", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "'De molde a' means 'in order to; so as to', not 'In order to' (which is correct but the translation should use 'so as to' as alternate). Actually acceptable but 'so as to' is more common."}
+{"id": "pt-3746", "severity": "low", "issue": "UNNATURAL", "note": "Overly literal. Better: 'In Carnival, everyone is equal on the street' or more idiomatically 'Carnival is a place where everyone is equal'."}
+{"id": "pt-3756", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "This is a Portuguese proverb meaning 'the one who sleeps gets swept away' (careless person loses opportunity), not literally about a shrimp"}
+{"id": "pt-3757", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "This Portuguese proverb means 'Hell is paved with good intentions' but the English translation is the common English proverb phrasing; the source saying is different"}
+{"id": "pt-3768", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Portuguese: 'those with glass roof shouldn't throw stones at neighbor's' — English version 'shouldn't throw stones' is correct but misses the glass roof detail which is key to the idiom"}
+{"id": "pt-3770", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; 'Could you perhaps have already gone through' is strained. Better: 'Might you have gone through' or 'Have you perhaps already experienced'"}
+{"id": "pt-3771", "severity": "low", "issue": "UNNATURAL", "note": "'Cumpre-nos' is archaic/formal; translation matches but sounds equally archaic in English, which may or may not be intended"}
+{"id": "pt-3777", "severity": "low", "issue": "UNNATURAL", "note": "'One would say' is stilted; more natural: 'You'd think' or 'It seems' or 'One might say'"}
+{"id": "pt-3696", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Proverb meaning 'everyone has a bit of doctor/madness in them' not 'everyone's a bit of a doctor and crazy'; idiom lost in translation"}
+{"id": "pt-3697", "severity": "low", "issue": "UNNATURAL", "note": "'get my hands on' is idiomatic but Portuguese 'puser a mão' means 'put hand on/access'; natural phrasing would be 'If I could access that document'"}
+{"id": "pt-3698", "severity": "low", "issue": "UNNATURAL", "note": "Word order awkward; more natural: 'A caveat is warranted regarding...' or 'Regarding the interpretation of the data, a caveat applies'"}
+{"id": "pt-3705", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Proverb means 'silence/discretion is wise' not 'silence is golden'; different idiom used"}
+{"id": "pt-3707", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Filho de peixe, peixinho é' literally 'fish's son is a little fish' ≠ 'Like father, like son'; wrong proverb entirely"}
+{"id": "pt-3708", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Quem vai ao mar, perde o lugar' means 'if you leave, you lose your place' ≠ 'You snooze, you lose'; wrong proverb"}
+{"id": "pt-3713", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Proverb means 'local/familiar saints don't perform miracles for their own' (familiarity breeds contempt) ≠ literal translation given"}
+{"id": "pt-3714", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Quem não cola não sai da escola' is modern slang 'those who don't cheat don't leave school'; but original proverb may vary; awkward translation of idiomatic saying"}
+{"id": "pt-3720", "severity": "low", "issue": "UNNATURAL", "note": "Portuguese 'estrutura-se em' = 'is structured in'; more natural English: 'is structured in five chapters' (not 'in' but could be 'into')"}
+{"id": "pt-3786", "severity": "medium", "issue": "UNNATURAL", "note": "à guisa de is archaic/formal; 'by way of' is awkward; suggest 'In conclusion' or 'As a conclusion'"}
+{"id": "pt-3788", "severity": "low", "issue": "UNNATURAL", "note": "'are aligned with' is passive-stiff; 'align with' (active) reads more naturally"}
+{"id": "pt-3793", "severity": "medium", "issue": "UNNATURAL", "note": "'there being nothing more to discuss' is overly formal/archaic; suggest 'with nothing more to discuss'"}
+{"id": "pt-3796", "severity": "low", "issue": "UNNATURAL", "note": "'gets a hundred years of pardon' is awkward; suggest 'receives' or 'earns a hundred years of forgiveness'"}
+{"id": "pt-3798", "severity": "low", "issue": "UNNATURAL", "note": "'the study at hand' is stiff; 'this study' or 'the present study' reads better"}
+{"id": "pt-3800", "severity": "low", "issue": "UNNATURAL", "note": "'at the five percent level' is awkward; suggest 'at the 5% level' or 'at a significance level of 5%'"}
+{"id": "pt-3802", "severity": "medium", "issue": "UNNATURAL", "note": "'Unity makes strength' is incomplete; should be 'Unity is strength' or 'United we are strong'"}
+{"id": "pt-3805", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Once bitten, twice shy' is an English idiom with different meaning; gato escaldado = 'a cat that was scalded fears cold water' (burned once, fearful again)"}
+{"id": "pt-3810", "severity": "low", "issue": "UNNATURAL", "note": "'The dog that barks doesn't bite' needs article consistency; suggest 'A dog that barks doesn't bite'"}
+{"id": "pt-3850", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English idiom doesn't match Portuguese proverb meaning; should be closer to 'Prevention is better than cure' or 'Better to prevent than to remedy'"}
+{"id": "pt-3851", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English idiom is inaccurate; should translate the actual Portuguese proverb more literally: 'Those who wound with iron will be wounded with iron' or 'He who lives by the sword dies by the sword'"}
+{"id": "pt-3856", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'Saudade' is being translated as 'longing' but the card's pt-3847 establishes it as unique; should preserve the Portuguese term or use 'yearning'"}
+{"id": "pt-3857", "severity": "low", "issue": "WRONG_REGISTER", "note": "'The Parintins festival' is singular but should be 'The Parintins festivals' to match plural 'festas'"}
+{"id": "pt-3865", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Porquanto' means 'since/inasmuch as' more often than 'as long as'; should be 'Since the doubt persists' or 'Inasmuch as doubt persists'"}
+{"id": "pt-3870", "severity": "medium", "issue": "UNNATURAL", "note": "'achieved success' is redundant/awkward; better as 'were successful' or 'succeeded'"}
+{"id": "pt-3883", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "À mingua de = 'at a lack of' is archaic/obsolete phrasing; modern: 'For lack of' or 'Due to lack of' is correct, but 'mingua' itself means 'scarcity/lack'—translation acceptable but note the word is archaic"}
+{"id": "pt-3886", "severity": "low", "issue": "UNNATURAL", "note": "'manifestation' is technically correct but 'manifestation' sounds stilted in English; 'folk spectacle' or 'folklore tradition' would be more natural"}
+{"id": "pt-3895", "severity": "medium", "issue": "UNNATURAL", "note": "'is unwarranted' is awkward; better: 'is not warranted' or 'is uncalled for'"}
+{"id": "pt-3900", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Aware of' misses the nuance; 'A par de' means 'alongside; in spite of; on par with'—should be 'Despite the difficulties faced' or 'In spite of the difficulties faced'"}
+{"id": "pt-3904", "severity": "medium", "issue": "UNNATURAL", "note": "In English, 'sacred temple' is awkward for a stadium; 'sacred shrine' or 'shrine' would be more natural. Portuguese 'templo sagrado' is poetic but the translation should reflect that register."}
+{"id": "pt-3907", "severity": "medium", "issue": "UNNATURAL", "note": "'He had seen fit to consult' is archaic/stilted. Modern English: 'He saw fit to consult' or 'He deemed it wise to consult' would be more natural for the French construction 'Houvera por bem'."}
+{"id": "pt-3909", "severity": "low", "issue": "UNNATURAL", "note": "'is in constant transformation' is slightly stiff; 'undergoes constant transformation' or 'is constantly transforming' would be more natural."}
+{"id": "pt-3913", "severity": "medium", "issue": "UNNATURAL", "note": "Word order 'Was it mere coincidence or was there something more behind it?' sounds slightly off; should be 'Was it mere coincidence, or was there something more to it?' or 'behind all of this?'"}
+{"id": "pt-3916", "severity": "medium", "issue": "UNNATURAL", "note": "'From which it is concluded' is overly formal/passive; 'From this we conclude' or 'It follows that' would be more natural."}
+{"id": "pt-3920", "severity": "low", "issue": "UNNATURAL", "note": "'It would be a foolish mistake' is slightly redundant (foolish + mistake); 'It would be foolish to assume' or 'It would be a great mistake to assume' flows better."}
+{"id": "pt-3924", "severity": "low", "issue": "MISSING_NUANCE", "note": "Portuguese 'Boa noite' is used as both greeting (evening) and farewell (night); translation should clarify context or include both primary uses with semicolon."}
+{"id": "pt-3925", "severity": "low", "issue": "MISSING_NUANCE", "note": "English translation only gives 'Goodbye (informal)' but 'Tchau' derives from Italian 'ciao' and carries specific casual/friendly register; 'Bye' or 'See you' might be equally valid colloquial options."}
+{"id": "pt-3930", "severity": "low", "issue": "MISSING_NUANCE", "note": "'toilet' is British English; in American English 'bathroom' or 'restroom' is more standard. Translation should reflect that Portuguese context often uses 'banheiro' (literally 'bathroom')."}
+{"id": "pt-3817", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"assiste razão\" means \"has the right/is right\", not \"has grounds\". Should be \"He has no right in this claim\" or \"He is not right in this claim\"."}
+{"id": "pt-3820", "severity": "medium", "issue": "UNNATURAL", "note": "\"Grassa entre\" is an archaic/literary verb meaning \"to abound; to hold sway\". Translation misses the sense of prevalence. Better: \"A heated debate holds sway among the experts\" or \"prevails among experts\"."}
+{"id": "pt-3823", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"em tela\" is legal/formal jargon for \"in question\". \"at hand\" is acceptable but \"under consideration\" or \"in question\" better captures formal register."}
+{"id": "pt-3826", "severity": "medium", "issue": "UNNATURAL", "note": "\"Avultam\" means \"to loom large; to stand out\" (literary verb). Translation \"is mounting\" misses the sense of prominence/salience. Better: \"Criticism of the current economic model looms large\" or \"stands out prominently\"."}
+{"id": "pt-3828", "severity": "low", "issue": "WRONG_REGISTER", "note": "\"Nada obstante\" is archaic/formal Portuguese for \"notwithstanding\". While technically correct, modern Portuguese prefers \"Apesar de\" or \"Não obstante\". Translation is acceptable but marked as formal register variation."}
+{"id": "pt-3829", "severity": "low", "issue": "UNNATURAL", "note": "\"Tamanha era sua dedicação\" = \"Such was his dedication\" is grammatically correct but the inverted structure in Portuguese (predicate adjective at start) sounds more natural as \"His dedication was such that\" in English."}
+{"id": "pt-3838", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Impende observar\" is a formal legal phrase meaning \"it is necessary/incumbent to observe\". Translation \"It should be noted\" weakens the obligatory sense. Better: \"It is incumbent to observe\" or \"It must be noted\"."}
+{"id": "pt-3840", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Portuguese proverb about training from childhood. English translation quotes \"As the twig is bent, so grows the tree\" which is a different proverb about heredity/nature. Should be something like \"It's when young that the cucumber is bent\" (idiomatically: early training shapes character)."}

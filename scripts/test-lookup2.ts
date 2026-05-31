@@ -1,0 +1,10 @@
+import { lookupWord } from '../src/data/dictionary/ru';
+import { lookupWord as luHi } from '../src/data/dictionary/hi';
+console.log('=== Russian ===');
+console.log('туалет:', JSON.stringify(lookupWord('туалет')));
+console.log('по-русски:', JSON.stringify(lookupWord('по-русски')));
+console.log('из-за:', JSON.stringify(lookupWord('из-за')));
+console.log('кто-то:', JSON.stringify(lookupWord('кто-то')));
+console.log('=== Hindi ===');
+console.log('माता-पिता:', JSON.stringify(luHi('माता-पिता')));
+console.log('कभी-कभी:', JSON.stringify(luHi('कभी-कभी')));

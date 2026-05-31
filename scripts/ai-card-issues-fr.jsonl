@@ -1,0 +1,650 @@
+{"id": "fr-0072", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "emporter = to take away; 'bring' is apporter"}
+{"id": "fr-0031", "severity": "medium", "issue": "UNNATURAL", "note": "\"finish eating\" is correct but more natural as \"finish eating\" or \"are done eating\"; however \"finish eating\" is acceptable standard translation"}
+{"id": "fr-0052", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Tu poses une question\" is literally \"You ask a question\" but in French this is the standard phrasing; English more naturally says \"You ask a question\" which matches, so this is actually correct"}
+{"id": "fr-0102", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "emprunter means to borrow, not to take"}
+{"id": "fr-0102", "fix": {"k": "emprunter", "en": "to borrow", "pos": "v"}}
+{"id": "fr-0111", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "échouer à l'examen means to fail the exam (not pass it), but the translation needs article precision—'fail at the exam' is more literal and natural in English"}
+{"id": "fr-0003", "severity": "medium", "issue": "UNNATURAL", "note": "'You say hello' is awkward; 'You say goodbye' or 'You greet' would be more natural, but the translation matches the French literally"}
+{"id": "fr-0008", "severity": "medium", "issue": "UNNATURAL", "note": "'We pay attention' is correct but 'faire attention' idiomatically means 'to pay attention to' or 'to be careful'; missing the object makes it incomplete"}
+{"id": "fr-0018", "severity": "low", "issue": "UNNATURAL", "note": "'is still sleeping' uses 'is' but French present tense 'dort' = 'sleeps'; better as 'She still sleeps' or 'She's asleep'"}
+{"id": "fr-0021", "severity": "low", "issue": "UNNATURAL", "note": "'You cook' is correct but 'Tu fais la cuisine' idiomatically means 'to do the cooking'; 'You do the cooking' is more natural"}
+{"id": "fr-0212", "severity": "low", "issue": "UNNATURAL", "note": "English phrasing is awkward; 'Can you drive?' is more natural"}
+{"id": "fr-0221", "severity": "low", "issue": "UNNATURAL", "note": "English phrasing is awkward; 'He can speak English.' or 'He speaks English.' is more natural"}
+{"id": "fr-0123", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "savons takes direct object, not 'la réponse' with à; translation correct but 'savoir' has primary sense 'to know (fact)' vs 'connaître' (know person/place)"}
+{"id": "fr-0124", "severity": "low", "issue": "UNNATURAL", "note": "natural phrasing would be 'Can you repeat?' not 'Can you repeat that?' without explicit object in French"}
+{"id": "fr-0132", "severity": "low", "issue": "UNNATURAL", "note": "'Do you sleep well?' is awkward; better 'Are you sleeping well?' or 'Do you sleep well at night?'"}
+{"id": "fr-0150", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'They wish happy holidays' is ungrammatical English; should be 'They wish you happy holidays' or 'They wish happy holidays to you'"}
+{"id": "fr-0181", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"ce pantalon\" is singular; \"these pants\" suggests plural"}
+{"id": "fr-0181", "fix": {"k": "essayer", "en": "to try on", "pos": "v"}}
+{"id": "fr-0184", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Elle\" is feminine; \"It\" is incorrect pronoun—should be \"She shines in the sun\""}
+{"id": "fr-0198", "severity": "low", "issue": "UNNATURAL", "note": "\"He is thirty years old\" is acceptable but \"He is thirty\" is more natural in English"}
+{"id": "fr-0167", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'rendez visite' is awkward here; should use 'rendre visite à' or restructure as 'You are visiting your parents'"}
+{"id": "fr-0172", "severity": "medium", "issue": "UNNATURAL", "note": "Literal 'ask for the bill' is correct but 'demander l'addition' more naturally means 'request the check/bill'; phrasing could be 'You ask for the check'"}
+{"id": "fr-0175", "severity": "low", "issue": "MISSING_NUANCE", "note": "English translation is good but omits that 'je veux bien' can also mean 'I'm willing to' or 'I wouldn't mind'; current translation captures main sense"}
+{"id": "fr-0340", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing is awkward; more natural: 'Does your back hurt?' or 'Do you have back pain?'"}
+{"id": "fr-0351", "severity": "low", "issue": "UNNATURAL", "note": "Present tense 'I go' is technically correct but 'I'm going to the cinema' is more natural for this context"}
+{"id": "fr-0358", "severity": "low", "issue": "UNNATURAL", "note": "'You ride bikes' is slightly awkward; 'You bike' or 'You go biking' more natural"}
+{"id": "fr-0302", "severity": "medium", "issue": "UNNATURAL", "note": "'They party' is too colloquial; 'They have a party' or 'They celebrate' is more standard"}
+{"id": "fr-0313", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Vous êtes les bienvenus' means 'You are welcome' (in response to thanks), but the plural form suggests 'You all are welcome' — better as 'You are welcome'"}
+{"id": "fr-0326", "severity": "medium", "issue": "UNNATURAL", "note": "'You have a croissant' is unclear; should be 'You are having a croissant' or 'You are taking a croissant'"}
+{"id": "fr-0277", "severity": "medium", "issue": "UNNATURAL", "note": "Should be 'Do you take the bus or the metro?' — 'subway' is American English; French context calls for 'metro'"}
+{"id": "fr-0279", "severity": "medium", "issue": "UNNATURAL", "note": "'You heal quickly' is awkward; better: 'You recover quickly' or 'You get better quickly'"}
+{"id": "fr-0281", "severity": "low", "issue": "MISSING_NUANCE", "note": "'She jumps for joy' is correct but 'She jumps with joy' is equally natural and more common"}
+{"id": "fr-0293", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "'She is hot' is colloquial; standard English for the French idiom 'avoir chaud' is 'She is warm' or 'She feels hot'"}
+{"id": "fr-0248", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "sonnera/sonner à la porte means to ring (a bell) or knock, not 'ring the doorbell' specifically; better: 'I knock on the door' or 'I ring at the door'"}
+{"id": "fr-0260", "severity": "medium", "issue": "MISSING_NUANCE", "note": "offrir primarily means 'to offer; to give (a gift)' — translation captures gift sense but 'offer' is the core meaning"}
+{"id": "fr-0262", "severity": "low", "issue": "WRONG_REGISTER", "note": "'precious help' is overly formal/poetic; standard English: 'valuable help' or 'kind help'"}
+{"id": "fr-0262", "fix": {"k": "précieux", "en": "valuable; precious", "pos": "adj"}}
+{"id": "fr-0432", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing is terse; natural English would be 'Your tickets, please' or 'May I see your tickets?'. Current translation reads like an imperative demand rather than polite request."}
+{"id": "fr-0443", "severity": "medium", "issue": "UNNATURAL", "note": "'Are you done?' is colloquial; 'Est-ce que tu as fini ?' more literally means 'Have you finished?' which is the more natural English translation."}
+{"id": "fr-0391", "severity": "low", "issue": "UNNATURAL", "note": "'Please, close' is awkward; should be 'Please close' or 'Close the door, please'"}
+{"id": "fr-0398", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'J'ai le vertige' means 'I feel dizzy' or 'I'm dizzy', not 'I am dizzy' (state vs. sensation)"}
+{"id": "fr-0407", "severity": "low", "issue": "UNNATURAL", "note": "More naturally 'Do you agree?' or 'Are you in agreement?' — 'Do you agree?' preferred"}
+{"id": "fr-0415", "severity": "low", "issue": "UNNATURAL", "note": "'What interests you?' is slightly awkward; 'What interests you?' works but 'What are you interested in?' is more natural"}
+{"id": "fr-0362", "severity": "medium", "issue": "UNNATURAL", "note": "English should be 'We put on music' or 'We're playing music'; 'put on some music' is more idiomatic"}
+{"id": "fr-0365", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Je suis' means 'I follow' but 'suis' is present tense of suivre; translation is correct but the word order in French is oddly formal. However, the actual English is accurate."}
+{"id": "fr-0373", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Il me suffit d'une heure' means 'An hour is enough for me' or 'One hour suffices for me', not 'One hour is enough for me' - the subject is 'une heure', not 'il'. Better: 'An hour is enough for me'"}
+{"id": "fr-0384", "severity": "low", "issue": "UNNATURAL", "note": "Should be 'We are going to France this summer' (future action) not 'We go to France this summer' (habitual present)"}
+{"id": "fr-0456", "severity": "medium", "issue": "MISSING_NUANCE", "note": "French 'des animaux' includes all animals; 'pets' is narrower. Better: 'Do you have animals?' or 'Do you have any animals?'"}
+{"id": "fr-0462", "severity": "low", "issue": "UNNATURAL", "note": "'I can't wait to leave' is acceptable but 'I'm eager to leave' or 'I look forward to leaving' better captures 'avoir hâte'"}
+{"id": "fr-0467", "severity": "low", "issue": "WRONG_REGISTER", "note": "'professeure' is feminine form; English 'teacher' is gender-neutral and standard. Card is correct but note: article 'a' is optional in English after 'is' (both 'is a teacher' and 'is teacher' acceptable in modern usage)"}
+{"id": "fr-0480", "severity": "low", "issue": "UNNATURAL", "note": "'How much do I owe you?' uses 'you' singular; French 'vous' is formal plural/singular. Better: 'How much do I owe you?' (acceptable) but context matters for formality"}
+{"id": "fr-0494", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "vingt heures = 8pm (20:00), but English says 'eight pm' which is correct; however the phrasing 'at eight pm' is unusual—'at 8 p.m.' or '8pm' more natural, or in full '20:00'—actually this is acceptable. Review: the translation is accurate."}
+{"id": "fr-0505", "severity": "low", "issue": "UNNATURAL", "note": "article 'A' before descriptors is slightly stiff; more natural as 'A big suitcase' (acceptable) or context-dependent 'Big suitcase' without article in isolation"}
+{"id": "fr-0513", "severity": "medium", "issue": "UNNATURAL", "note": "In French, 'quelle taille faites-vous' is idiomatic for clothing size; English should be 'What size do you wear?' not 'What size are you?'"}
+{"id": "fr-0527", "severity": "low", "issue": "UNNATURAL", "note": "'A big black dog' is natural, but the French phrase 'Un gros chien noir' without context may need 'a big black dog' or simply 'Big black dog' depending on use. Minor register issue but acceptable."}
+{"id": "fr-0532", "severity": "low", "issue": "UNNATURAL", "note": "'Some warm bread rolls' is correct but 'petit pain' more idiomatically translates to 'bread roll' or 'bun'; phrasing is acceptable but 'warm bread rolls' could be 'warm buns' for naturalness."}
+{"id": "fr-0583", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "séance typically means 'session' or 'screening' (film), not 'showing' in general context"}
+{"id": "fr-0598", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "payante means 'paid; requires payment', not 'not free' — the English should be 'The entrance requires payment' or 'costs money'"}
+{"id": "fr-0599", "severity": "low", "issue": "UNNATURAL", "note": "article 'a' is odd before 'dessert' in English — should be 'Would you like dessert?' (no article)"}
+{"id": "fr-0545", "severity": "medium", "issue": "UNNATURAL", "note": "In English, 'What will you have?' is future tense, but French present 'tu prends' is asking what they are having/taking now. Better: 'What are you having?' or 'What will you take?'"}
+{"id": "fr-0553", "severity": "low", "issue": "UNNATURAL", "note": "'She drinks little wine' is slightly awkward English. More natural: 'She drinks little wine' → 'She drinks little of the wine' or 'She drinks barely any wine.' Current phrasing acceptable but stilted."}
+{"id": "fr-0555", "severity": "low", "issue": "UNNATURAL", "note": "'I call the bank' is correct but 'téléphoner à' more naturally translates 'to phone' or 'to call (someone/somewhere).' Current is acceptable but 'I phone the bank' more idiomatic."}
+{"id": "fr-0564", "severity": "low", "issue": "UNNATURAL", "note": "'It's windy today' is correct, but 'Il y a du vent' literally 'there is (some) wind.' Acceptable translation but could note the French structure doesn't use weather adjective."}
+{"id": "fr-0690", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "fraîche means 'fresh' or 'cool'; 'cold' would be 'froide'"}
+{"id": "fr-0690", "fix": {"k": "fraîche", "en": "fresh; cool", "pos": "adj"}}
+{"id": "fr-0603", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'je vais' = 'I am going' or 'I go' (future intent); 'I go' alone is simple present and less natural for this structure"}
+{"id": "fr-0606", "severity": "low", "issue": "MISSING_NUANCE", "note": "'grand' commonly means 'big' or 'large'; 'tall' is less typical for verre (glass). Consider 'a big glass of water' as primary"}
+{"id": "fr-0620", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Il lui reste une chance' = 'He/She has one chance left' but subject-verb agreement is ambiguous; more literally 'There remains to him/her one chance' or 'One chance remains to him/her'"}
+{"id": "fr-0631", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; better: 'When are we seeing each other?' or more naturally 'When will we see each other?'"}
+{"id": "fr-0637", "severity": "low", "issue": "UNNATURAL", "note": "word order awkward in English; better: 'It will probably rain tomorrow afternoon' or 'Tomorrow afternoon it will probably rain'"}
+{"id": "fr-0638", "severity": "medium", "issue": "UNNATURAL", "note": "'enfin' (finally) is oddly placed; more natural: 'Delighted finally to make your acquaintance' or 'Delighted to make your acquaintance at last'"}
+{"id": "fr-0646", "severity": "low", "issue": "UNNATURAL", "note": "present tense 'waits' for single action; better: 'A woman is waiting at the bus stop'"}
+{"id": "fr-0657", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing is awkward; better: 'Nowhere else can one find such cheese' or 'You can't find such cheese anywhere else'"}
+{"id": "fr-0658", "severity": "medium", "issue": "UNNATURAL", "note": "'Seated places' is awkward; better: 'Seating' or 'Seats'"}
+{"id": "fr-0778", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "sur place means 'here' or 'on the spot'; the translation suggests a restaurant order context but misses the actual meaning"}
+{"id": "fr-0778", "fix": {"k": "sur place", "en": "here; on the spot", "pos": "phrase"}}
+{"id": "fr-0730", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "tarte aux pommes is 'apple tart' not 'apple pie'"}
+{"id": "fr-0730", "fix": {"k": "tarte aux pommes", "en": "apple tart", "pos": "n"}}
+{"id": "fr-0736", "severity": "low", "issue": "UNNATURAL", "note": "'Careful' is colloquial; 'Beware' or 'Watch out' more natural for imperative warning"}
+{"id": "fr-0744", "severity": "low", "issue": "MISSING_NUANCE", "note": "tiède also means 'tepid'; lukewarm is correct but tepid captures indifference sense"}
+{"id": "fr-0697", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "frais means 'cool/fresh' (temperature), not 'chilled'; suggests wine quality rather than serving temperature"}
+{"id": "fr-0699", "severity": "low", "issue": "MISSING_NUANCE", "note": "plaire means 'to please'; 'makes him/her happy' is colloquial; better: 'pleases him/her'"}
+{"id": "fr-0703", "severity": "low", "issue": "UNNATURAL", "note": "phrasing is awkward; more natural: 'Doesn't that bother you?'"}
+{"id": "fr-0710", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "dire bien means 'to appeal to/sound appealing'; 'sounds good to me' captures intent but 'appeals to me' is more precise"}
+{"id": "fr-0782", "severity": "medium", "issue": "UNNATURAL", "note": "'really love' is stronger than 'plaît énormément'; better: 'I like this city enormously' or 'I love this city'"}
+{"id": "fr-0783", "severity": "medium", "issue": "UNNATURAL", "note": "'doesn't appeal to me' is awkward; better: 'That doesn't say anything to me' (literal) or 'That doesn't interest me'"}
+{"id": "fr-0788", "severity": "medium", "issue": "UNNATURAL", "note": "comma-separated alternatives unclear; should be: 'She is neat; careful' or choose primary sense"}
+{"id": "fr-0789", "severity": "low", "issue": "UNNATURAL", "note": "semicolon suggests equal weight; 'No big deal' is more colloquial inference than direct translation. Consider: 'It's not serious; it doesn't matter'"}
+{"id": "fr-0796", "severity": "low", "issue": "UNNATURAL", "note": "'blond with blue eyes' is natural English but 'aux yeux' more idiomatically renders 'with blue eyes' as descriptor; current phrasing acceptable but could be 'He is blond and has blue eyes'"}
+{"id": "fr-0797", "severity": "low", "issue": "UNNATURAL", "note": "same as fr-0796; 'with green eyes' acceptable but 'and has green eyes' more natural"}
+{"id": "fr-0841", "severity": "medium", "issue": "UNNATURAL", "note": "He looks nice is idiomatic but 'He seems/appears nice' better captures 'avoir l'air'"}
+{"id": "fr-0843", "severity": "low", "issue": "UNNATURAL", "note": "'I go shopping' is awkward; 'I'm doing shopping' or 'I'm going to shop' more natural for 'faire du shopping'"}
+{"id": "fr-0859", "severity": "low", "issue": "MISSING_NUANCE", "note": "'douce' can mean 'gentle' or 'soft'; 'soft' is incomplete without noting the gentleness sense"}
+{"id": "fr-0868", "severity": "low", "issue": "MISSING_NUANCE", "note": "'moelleux' means 'soft and tender' (food texture); 'fluffy' is incomplete—suggests 'soft; fluffy'"}
+{"id": "fr-0818", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French text has typo 'il y à' (should be 'il y a'); English translation is correct but source is malformed"}
+{"id": "fr-0820", "severity": "medium", "issue": "UNNATURAL", "note": "More natural: 'I dislike this smell' → 'This smell displeases me' or 'I find this smell unpleasant'"}
+{"id": "fr-0833", "severity": "low", "issue": "MISSING_NUANCE", "note": "Primary meaning is 'smiling'; 'cheerful' is secondary and less direct—consider 'is smiling' as main translation"}
+{"id": "fr-0835", "severity": "medium", "issue": "UNNATURAL", "note": "'Pardon, je suis désolé' is repetitive in English ('Sorry, I'm sorry'); better: 'Sorry, I apologize' or simply 'I'm sorry'"}
+{"id": "fr-0873", "severity": "medium", "issue": "MISSING_NUANCE", "note": "discrète primarily means 'discreet; tactful; unobtrusive'—'discreet' alone misses the common sense of 'reserved; modest'"}
+{"id": "fr-0886", "severity": "medium", "issue": "UNNATURAL", "note": "'Enchanted to meet you' is stilted; standard English is 'Pleased to meet you' or 'Nice to meet you'"}
+{"id": "fr-0888", "severity": "low", "issue": "MISSING_NUANCE", "note": "the '; ' separator correctly shows both meanings, but 'It's done!' is more natural primary translation than 'That's it!'"}
+{"id": "fr-0894", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French is 'J'ai téléphone' (present perfect), but accent missing on past participle—should be 'J'ai téléphoné'. English translation correct, but card source has typo"}
+{"id": "fr-0898", "severity": "low", "issue": "UNNATURAL", "note": "'dark blue' is correct but 'bleu foncé' more naturally renders as 'dark blue' (already given)—no issue; retain as-is"}
+{"id": "fr-0900", "severity": "low", "issue": "MISSING_NUANCE", "note": "'au feu' = 'at the traffic light'—'at the light' is acceptable but 'at the traffic light' is more precise"}
+{"id": "fr-0947", "severity": "medium", "issue": "WRONG_REGISTER", "note": "parenthetical gender marker inappropriate for language cards; remove"}
+{"id": "fr-0947", "fix": {"k": "collègue", "en": "colleague", "pos": "n"}}
+{"id": "fr-0975", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward in English; should be 'She always arrives late to French class' or rephrase to 'She's always arriving late to French class'"}
+{"id": "fr-0981", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'ronde' typically means 'plump; fat' when describing a person, not literally 'round'"}
+{"id": "fr-0990", "severity": "low", "issue": "MISSING_NUANCE", "note": "Common meaning 'muscular; brawny' omitted; 'sturdy / well-built' is vague"}
+{"id": "fr-0917", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "garé is misspelled; should be 'gare' (train station), not 'garé' (parked)"}
+{"id": "fr-0925", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "voyagé is misspelled; should be 'voyage' (trip), not 'voyagé' (traveled)"}
+{"id": "fr-0929", "severity": "medium", "issue": "UNNATURAL", "note": "better: 'She opened her shop at nine o'clock' or 'She would open her shop at nine o'clock' — English 'used to open' suggests habitual past, but imperfect here may simply describe a routine without emphasis"}
+{"id": "fr-0930", "severity": "medium", "issue": "UNNATURAL", "note": "better: 'We talked for hours on the phone' or 'We would talk for hours on the phone' — 'used to talk' emphasizes habit; imperfect in French is less emphatic"}
+{"id": "fr-1022", "severity": "medium", "issue": "UNNATURAL", "note": "English 'died very old' is awkward; should be 'died at a very old age' or 'died very elderly'"}
+{"id": "fr-1032", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'ont dit merci' = 'said thank you' or 'thanked', but 'thanked the cook' is slightly loose; should preserve 'said thank you to'"}
+{"id": "fr-1045", "severity": "low", "issue": "UNNATURAL", "note": "'There are a lot of people' is correct but 'il y a beaucoup de monde' more idiomatically = 'there are many people' or 'it's crowded'"}
+{"id": "fr-1082", "severity": "medium", "issue": "UNNATURAL", "note": "French 'Sûrement ils arriveront' suggests probability/assumption about future; 'Surely they'll arrive' sounds more declarative. Better: 'They'll surely arrive' or 'Surely they will arrive'"}
+{"id": "fr-1085", "severity": "low", "issue": "UNNATURAL", "note": "'when entering' is more natural than 'when entering in'; 'He said hello when entering' is more idiomatic"}
+{"id": "fr-1090", "severity": "low", "issue": "MISSING_NUANCE", "note": "English offers two translations but should clarify that 'Ça m'est égal' emphasizes indifference/neutrality more than 'I don't mind' (which can suggest acceptance). Primary sense is 'It's all the same to me' or 'I don't care'"}
+{"id": "fr-1106", "severity": "low", "issue": "UNNATURAL", "note": "'Consulted the doctor' is slightly formal/archaic English. More natural: 'I saw the doctor' or 'I visited the doctor'"}
+{"id": "fr-1052", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "menu du jour = menu of the day; 'set menu' suggests a fixed package, not necessarily what the phrase means"}
+{"id": "fr-1060", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "porté is misspelled in source; should be 'porte' (door). As written, 'porté' (carried) doesn't make sense. Assuming typo: sentence is correct but source has error"}
+{"id": "fr-1069", "severity": "medium", "issue": "UNNATURAL", "note": "present tense 'nous nous promenons' is habitual; 'We walk' is acceptable but 'We often take walks' or 'We go for walks' is more natural for this tense usage in English"}
+{"id": "fr-1072", "severity": "low", "issue": "MISSING_NUANCE", "note": "garder (enfants) can mean 'to babysit' or 'to look after' as well as 'to watch'; 'watched' is vague"}
+{"id": "fr-1078", "severity": "low", "issue": "UNNATURAL", "note": "word order awkward; 'Often we go for walks in the park' or 'We often go for walks in the park' flows better"}
+{"id": "fr-0995", "severity": "medium", "issue": "MISSING_NUANCE", "note": "curieux de can mean 'curious about' but also 'eager to'; should include both readings"}
+{"id": "fr-1002", "severity": "low", "issue": "UNNATURAL", "note": "'puts on makeup' is acceptable but 'does her makeup' more idiomatic in English"}
+{"id": "fr-1003", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'to go' and 'takeaway' are distinct registers; 'to go' is American casual, 'takeaway' is British; both valid but context matters"}
+{"id": "fr-1013", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "t'envoie un message is 'I'm sending you a message' (present) not 'I'll send' (future); future would be 'Je vais t'envoyer' or 'Je t'enverrai'"}
+{"id": "fr-1015", "severity": "low", "issue": "UNNATURAL", "note": "'It's sunny' is correct but 'There is sunshine' is more literal; however 'It's sunny' is standard English idiom so acceptable"}
+{"id": "fr-1019", "severity": "low", "issue": "UNNATURAL", "note": "'She left running' can be ambiguous (running away vs. in a running motion); 'She ran away' or 'She left in a hurry' clearer"}
+{"id": "fr-1130", "severity": "medium", "issue": "UNNATURAL", "note": "should be 's'est éteinte' (agreement with feminine 'lumière'); English 'went out' is correct but French has spelling error"}
+{"id": "fr-1139", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French says 'il y à trois ans' (malformed); should be 'il y a trois ans' (there is/are). English 'three years ago' is correct translation but French text has typo/error"}
+{"id": "fr-1177", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "dire means 'to say/to tell'; 'said the right answer' is awkward. Should be 'gave' or 'stated'"}
+{"id": "fr-1189", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French text has spelling error 'porté' (should be 'porte'), but translation is correct for intended meaning"}
+{"id": "fr-1192", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French text has spelling error 'porté' (should be 'porte'), but translation is correct for intended meaning"}
+{"id": "fr-1193", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French text has spelling error 'compté' (should be 'compte'), but translation is correct for intended meaning"}
+{"id": "fr-1154", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "tomber dans + staircase means falling down/through stairs, not 'on' them"}
+{"id": "fr-1158", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "prendre congé = to take leave; 'took the day off' implies only one day, but the phrase is broader"}
+{"id": "fr-1170", "severity": "low", "issue": "UNNATURAL", "note": "French has typo 'voyagé' instead of 'voyage', but English translation is acceptable despite the error"}
+{"id": "fr-1233", "severity": "medium", "issue": "UNNATURAL", "note": "English awkward; prefer 'while crossing' or 'as you crossed'"}
+{"id": "fr-1239", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'mil neuf cent quatre-vingt-dix' = 1990, but English says only '1990' without year format spelling"}
+{"id": "fr-1248", "severity": "low", "issue": "CARD_DUPLICATE", "note": "nearly identical to fr-1236/fr-1237 pattern; born/wore/chose same structural template"}
+{"id": "fr-1253", "severity": "low", "issue": "UNNATURAL", "note": "'dansé' is misspelled in source (should be 'danse'); English translation acceptable but source has typo"}
+{"id": "fr-1255", "severity": "medium", "issue": "UNNATURAL", "note": "'entré elles' is misspelled (should be 'entre elles'); 'among themselves' is correct but source has typo"}
+{"id": "fr-1206", "severity": "medium", "issue": "UNNATURAL", "note": "Missing 'à' before infinitive: should be 'the first to arrive' but French has 'première à arriver'—translation is correct but phrasing could reflect the structure better"}
+{"id": "fr-1212", "severity": "medium", "issue": "UNNATURAL", "note": "Imperfect tense suggests habitual/repeated action; 'shared' implies single event. Better: 'We used to share a room' or 'We would share'"}
+{"id": "fr-1214", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'une bonne noté' is grammatically incorrect French (should be 'une bonne note'), but the English 'got a good grade' is acceptable translation of the intended meaning"}
+{"id": "fr-1217", "severity": "low", "issue": "UNNATURAL", "note": "Imperfect in question implies habitual knowledge. Better: 'Did you use to know' or 'Were you acquainted with'"}
+{"id": "fr-1220", "severity": "low", "issue": "UNNATURAL", "note": "Imperfect suggests habitual preference. Better: 'Did you use to prefer' or 'Would you prefer'"}
+{"id": "fr-1223", "severity": "low", "issue": "UNNATURAL", "note": "'in the street' is overly formal; 'on the street' is more natural English"}
+{"id": "fr-1227", "severity": "low", "issue": "UNNATURAL", "note": "Imperfect (habitual past). Better: 'We used to always choose' or 'We would always choose'"}
+{"id": "fr-1228", "severity": "low", "issue": "UNNATURAL", "note": "Imperfect (habitual). Better: 'What time did you use to come home' or 'What time would you come home'"}
+{"id": "fr-1263", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "à six heures means 'at six o'clock', not 'for six o'clock'"}
+{"id": "fr-1275", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "porté is misspelled; should be 'porte' (door). Also 'Je suis entré' is redundant after pushing—'I entered' alone is better"}
+{"id": "fr-1279", "severity": "low", "issue": "UNNATURAL", "note": "'tarte aux pommes' is 'apple tart/cake', not 'apple pie'—pie is less common in French"}
+{"id": "fr-1281", "severity": "low", "issue": "UNNATURAL", "note": "'fraiche' should be 'fraîche' (accent); minor but common spelling error"}
+{"id": "fr-1289", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "'cabane' is a small hut/shed, not a full 'cabin'—'hut' or 'shack' more accurate"}
+{"id": "fr-1330", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "café bien serré is strong coffee, not specifically espresso"}
+{"id": "fr-1330", "fix": {"k": "bien serré", "en": "strong; well-brewed", "pos": "adj"}}
+{"id": "fr-1343", "severity": "medium", "issue": "UNNATURAL", "note": "imperfect aspect (essayait) suggests habitual action; 'used to try' or 'would try' more accurate than simple past 'tried'"}
+{"id": "fr-1348", "severity": "low", "issue": "MISSING_NUANCE", "note": "'used to watch' better captures the imperfect; 'after dinner' should be 'after dinner' (acceptable but 'après le dîner' = after the evening meal)"}
+{"id": "fr-1292", "severity": "medium", "issue": "UNNATURAL", "note": "English says 'an orange juice' but should be 'some orange juice' or 'orange juice' — uncountable in English"}
+{"id": "fr-1294", "severity": "low", "issue": "UNNATURAL", "note": "'a Noel' should be 'at Christmas' — French accent missing in source"}
+{"id": "fr-1295", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'à la posté' is misspelled French; should be 'à la poste' (post office)"}
+{"id": "fr-1302", "severity": "medium", "issue": "UNNATURAL", "note": "Better as 'They smoked on the balcony' — 'used to smoke' suggests habitual past, imperfect tense supports this but phrasing is awkward"}
+{"id": "fr-1304", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "English says 'this director's' but French says 'de ce réalisateur' (this director's); should be 'this director's latest film' not 'this director's'"}
+{"id": "fr-1310", "severity": "medium", "issue": "UNNATURAL", "note": "Better as 'Did you use to go to the pool on Wednesday afternoons?' — imparfait suggests habitual past"}
+{"id": "fr-1314", "severity": "low", "issue": "UNNATURAL", "note": "'mouille' missing accent: 'mouillé' — but also 'wet floor' is acceptable; minor spelling issue in French source"}
+{"id": "fr-1316", "severity": "low", "issue": "UNNATURAL", "note": "'ingredients' misspelled in English source: should be 'ingredients'"}
+{"id": "fr-1320", "severity": "low", "issue": "UNNATURAL", "note": "'marie' missing accent: 'marié'; also 'groom's health' is slightly awkward — 'to the groom's health' is more natural"}
+{"id": "fr-1352", "severity": "medium", "issue": "UNNATURAL", "note": "Imparfait suggests habitual past action, not a single completed event. English \"Did you sleep well\" implies one past occasion. Should be passé composé context or 'You used to sleep well' for imperfect."}
+{"id": "fr-1368", "severity": "low", "issue": "UNNATURAL", "note": "'took the same way' is acceptable but 'always took the same route' is more natural English"}
+{"id": "fr-1372", "severity": "low", "issue": "UNNATURAL", "note": "'met' would be clearer; 'met up' is more idiomatic for 'se retrouvaient'"}
+{"id": "fr-1373", "severity": "low", "issue": "UNNATURAL", "note": "Awkward phrasing. Better: 'I walked for twenty minutes to get to school' or 'It took me a twenty-minute walk to school'"}
+{"id": "fr-1382", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "cafetière a explosé = coffee maker exploded, not broke"}
+{"id": "fr-1384", "severity": "medium", "issue": "UNNATURAL", "note": "missing 'around' or 'all the way around' — 'walked around the city' is incomplete"}
+{"id": "fr-1392", "severity": "medium", "issue": "UNNATURAL", "note": "imperfect aspect suggests habitual action; 'I used to fill' is correct but 'I was filling' also works — current phrasing awkward"}
+{"id": "fr-1393", "severity": "low", "issue": "UNNATURAL", "note": "imperfect tense suggests habitual/ongoing; 'He used to drive' or 'He was driving' more natural than simple past"}
+{"id": "fr-1407", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "en voyagé is misspelled (should be en voyage); also 'I felt like' is correct but 'I had a desire to' is more literal"}
+{"id": "fr-1410", "severity": "low", "issue": "UNNATURAL", "note": "imperfect suggests habitual pattern; 'Did you use to go to bed late' more natural than simple past"}
+{"id": "fr-1413", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French uses 'à' not 'a' (accent required)"}
+{"id": "fr-1414", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French uses 'mathématiques' not 'mathematiques' (accents required)"}
+{"id": "fr-1424", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French uses 'détend' not 'detends' (accent required on present tense)"}
+{"id": "fr-1428", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French uses 'légende' not 'legende' (accent required)"}
+{"id": "fr-1432", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French uses 'inondées' not 'inondees' (accents required)"}
+{"id": "fr-1533", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French uses 'fatigue' (masculine adjective form); English should match with accent: 'fatigué'"}
+{"id": "fr-1539", "severity": "medium", "issue": "UNNATURAL", "note": "English 'had been wearing' (pluperfect) doesn't match French imparfait; should be 'had worn' or 'wore'"}
+{"id": "fr-1543", "severity": "low", "issue": "MISSING_NUANCE", "note": "'faire les courses' = to do shopping/groceries; 'shopping' alone is less precise in English"}
+{"id": "fr-1555", "severity": "low", "issue": "UNNATURAL", "note": "Imparfait 'dansait' indicates habitual past; 'used to dance' is more natural than simple 'danced'"}
+{"id": "fr-1504", "severity": "low", "issue": "UNNATURAL", "note": "English would more naturally be 'She always used to choose' or 'She would always choose' rather than simple past 'chose'"}
+{"id": "fr-1511", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'appeles' (appelés) means 'called' not 'called us' — should be 'called us' or 'phoned us' but accent mark missing on card"}
+{"id": "fr-1516", "severity": "low", "issue": "UNNATURAL", "note": "French imperfect suggests habitual action; 'He used to teach' or 'He taught (habitually)' more natural than simple 'taught'"}
+{"id": "fr-1518", "severity": "low", "issue": "UNNATURAL", "note": "French imperfect suggests ongoing state; 'We were hoping for' more natural than 'We hoped for'"}
+{"id": "fr-1522", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'entré frères et sœurs' is a typo; should be 'entre frères et sœurs' (between/among brothers and sisters) — English translation is correct but card has spelling error"}
+{"id": "fr-1441", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Imparfait suggests habitual action; 'She used to drink' or 'She would drink' more accurate than simple past 'drank'"}
+{"id": "fr-1442", "severity": "low", "issue": "UNNATURAL", "note": "'stopped' is acceptable but 'came to a stop' flows more naturally in context"}
+{"id": "fr-1449", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Plus-que-parfait 'attendaient depuis' requires 'had been waiting for'; current translation 'had been waiting for an hour' is correct but suggest clarification that duration is included"}
+{"id": "fr-1453", "severity": "low", "issue": "UNNATURAL", "note": "'were preparing' acceptable; 'were getting the meal ready' more natural"}
+{"id": "fr-1454", "severity": "low", "issue": "UNNATURAL", "note": "'I was taking a shower' slightly formal; 'I was in the shower' more natural"}
+{"id": "fr-1460", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'used to paint paintings' is redundant; consider 'She painted paintings in her studio' or 'She would paint in her studio'"}
+{"id": "fr-1466", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'She told me it yesterday' is ungrammatical; should be 'She told me that yesterday' or 'She told me it yesterday' requires different French structure"}
+{"id": "fr-1468", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Imparfait indicates habitual past; 'We used to eat together' more accurate than simple 'ate'"}
+{"id": "fr-1469", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Imparfait indicates habitual past; 'They used to go camping' more accurate than simple 'went'"}
+{"id": "fr-1472", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "venait = used to come (habitual past), not simple past"}
+{"id": "fr-1473", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "travaillaient (imparfait) means 'used to work' or 'were working', not 'had been working' (plus-que-parfait)"}
+{"id": "fr-1475", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "jouaient = used to play (habitual), not simple past 'played'"}
+{"id": "fr-1476", "severity": "low", "issue": "UNNATURAL", "note": "should be 'tired' not 'fatigue' (French word used as English)"}
+{"id": "fr-1477", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "te souvenais = used to remember (habitual), not 'Did you remember'"}
+{"id": "fr-1479", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "voyageais = used to travel (habitual), not simple past 'Did you travel'"}
+{"id": "fr-1481", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "te rappelles (présent) should translate as present tense, not past"}
+{"id": "fr-1482", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "habitais = used to live (habitual past), not simple past"}
+{"id": "fr-1483", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "aimais = used to like (habitual past), not simple past"}
+{"id": "fr-1484", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "souriait = used to smile (habitual), not simple past 'smiled'"}
+{"id": "fr-1485", "severity": "low", "issue": "UNNATURAL", "note": "'run down the stairs' misses the intensity of 'quatre à quatre' (very rapidly, taking multiple steps at once)"}
+{"id": "fr-1486", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "promettait = used to promise (habitual), not simple past"}
+{"id": "fr-1487", "severity": "low", "issue": "UNNATURAL", "note": "'road maps' should be 'road maps' but 'routieres' has accent missing in source"}
+{"id": "fr-1488", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "connais (présent) is present tense, not past; 'prenom' missing accent"}
+{"id": "fr-1489", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "courions = used to run (habitual), not simple past"}
+{"id": "fr-1490", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "écoutions = used to listen (habitual), not simple past"}
+{"id": "fr-1491", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "nageais = used to swim (habitual), not simple past"}
+{"id": "fr-1492", "severity": "low", "issue": "UNNATURAL", "note": "aimaient = used to like (habitual), better as 'used to like to walk'"}
+{"id": "fr-1493", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "me rappelais = used to remember (habitual), not simple past; 'detail' missing accent"}
+{"id": "fr-1494", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "partaient = used to leave (habitual), not simple past"}
+{"id": "fr-1495", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "pouvait = used to be able (habitual), not simple past"}
+{"id": "fr-1496", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "voyageaient = used to travel (habitual), not simple past; 'a' missing accent"}
+{"id": "fr-1499", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "rangeais = used to put away (habitual), not simple past"}
+{"id": "fr-1597", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; better: 'Are you hurrying up? We're going to be late!'"}
+{"id": "fr-1606", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French has typo 'posté' (should be 'poste'), but also 'le jour où' = 'on the day when', not just 'the day'"}
+{"id": "fr-1608", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "missing auxiliary verb; French says 's'intéressé' but should be 's'intéresse' (present); English should be 'He is interested in contemporary art' not matching incomplete French"}
+{"id": "fr-1611", "severity": "medium", "issue": "UNNATURAL", "note": "missing accent: 'arrêté' not 'arrete'; also 'station-service' typically one word or hyphenated but translation is acceptable"}
+{"id": "fr-1566", "severity": "medium", "issue": "UNNATURAL", "note": "Missing accent: 'repose' should be 'reposé'; also 'te' should be 't'"}
+{"id": "fr-1568", "severity": "medium", "issue": "UNNATURAL", "note": "Missing accents: 'telephonent' should be 'téléphonent'"}
+{"id": "fr-1571", "severity": "medium", "issue": "UNNATURAL", "note": "Missing accent: 'preparent' should be 'préparent'"}
+{"id": "fr-1573", "severity": "medium", "issue": "UNNATURAL", "note": "Missing accent: 'regardes' should be 'regardés'"}
+{"id": "fr-1579", "severity": "medium", "issue": "UNNATURAL", "note": "Missing accent: 'couche' should be 'couché'"}
+{"id": "fr-1580", "severity": "medium", "issue": "UNNATURAL", "note": "Missing accent: 'retourne' should be 'retourné'"}
+{"id": "fr-1582", "severity": "medium", "issue": "UNNATURAL", "note": "Missing accent: 'amuse' should be 'amusé'"}
+{"id": "fr-1586", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Tense error: 'me lavé' is incorrect form; should be 'me lave' (present) or 'me suis lavé' (passé composé). Current tense doesn't match translation."}
+{"id": "fr-1588", "severity": "medium", "issue": "UNNATURAL", "note": "Missing accent: 'paye' should be 'payé'"}
+{"id": "fr-1589", "severity": "medium", "issue": "UNNATURAL", "note": "Missing accent: 'eteint' should be 'éteint'"}
+{"id": "fr-1625", "severity": "medium", "issue": "UNNATURAL", "note": "Present continuous 'is answering' awkward here; 'answers' more natural in English"}
+{"id": "fr-1641", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French 's'est posé' (past tense) but English 'landed' is correct; however source has typo 'pose' not 'posé'—likely transcription error in source"}
+{"id": "fr-1645", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French 'Il en resté trois' is grammatically broken (missing verb); should be 'Il en reste trois' (There are three left) or 'Il en est resté trois' (There were three left)"}
+{"id": "fr-1681", "severity": "medium", "issue": "UNNATURAL", "note": "should be 'take a walk' or 'stroll' rather than 'walk'"}
+{"id": "fr-1688", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French is present tense 'travaillé' is not standard; if meant as passé composé it should be 'a travaillé' (worked), not 'works'"}
+{"id": "fr-1705", "severity": "low", "issue": "UNNATURAL", "note": "'dansé' should be 'danse' (dance class, not dance dance)"}
+{"id": "fr-1707", "severity": "low", "issue": "UNNATURAL", "note": "'equipe' missing accent: 'équipe'"}
+{"id": "fr-1710", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'étudié' is not standard French; should be 'J'ai étudié' (past) or 'J'étudie' (present), and meaning is 'I studied/study', not 'I study to become'"}
+{"id": "fr-1688", "fix": {"k": "travaillé", "en": "to work", "pos": "v"}}
+{"id": "fr-1710", "fix": {"k": "étudié", "en": "to study", "pos": "v"}}
+{"id": "fr-1750", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Verb form 'passés' is incorrect (2nd person singular conditional would be 'passerais'); English omits the conditional sense entirely. Should be 'Will you pass me the salt?' or 'Would you pass me the salt?'"}
+{"id": "fr-1754", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Verb 'regardé' is malformed (should be 'regardait' for past or 'regarde' for present). English 'looks' suggests present tense, but French past participle is incomplete; likely should be 'He looked at me with a smile.'"}
+{"id": "fr-1755", "severity": "medium", "issue": "UNNATURAL", "note": "English 'You've been watching her for five minutes' implies continuous present perfect, but French present tense 'tu la regardes' is simpler present. Better: 'You're watching her for five minutes.' or 'You watch her for five minutes.'"}
+{"id": "fr-1760", "severity": "medium", "issue": "UNNATURAL", "note": "English 'Students need to study more' uses bare plural, but 'Il faut que les étudiants' is more naturally 'The students need to study more' or 'Students must study more.'"}
+{"id": "fr-1668", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "cherché is past participle; should be 'have been looking' or present perfect tense indicated"}
+{"id": "fr-1668", "fix": {"k": "cherché", "en": "looked for", "pos": "v"}}
+{"id": "fr-1717", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "regardé is incorrect conjugation; should be regardé (past participle) but sentence structure suggests imperative. English 'Don't look' is correct for negative imperative 'Ne le regarde pas'"}
+{"id": "fr-1719", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "cherché is incorrect conjugation; should be 'He looked for her everywhere' (passé composé: a cherché) or 'He's been looking for her everywhere' (present perfect)"}
+{"id": "fr-1724", "severity": "low", "issue": "MISSING_NUANCE", "note": "'I'll call you back' assumes a prior call; 'I'll call you tonight' is more neutral and fits the French better"}
+{"id": "fr-1728", "severity": "low", "issue": "UNNATURAL", "note": "'Do you eat some often?' is awkward; better as 'Do you often eat some?' or 'Do you eat that often?'"}
+{"id": "fr-1730", "severity": "low", "issue": "UNNATURAL", "note": "'How many do you take?' requires context; more naturally 'How much do you take?' or 'How many do you have?'"}
+{"id": "fr-1737", "severity": "low", "issue": "UNNATURAL", "note": "'had seconds twice' is colloquial; more standard: 'went back for seconds twice' or 'took seconds twice'"}
+{"id": "fr-1834", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "interpretee → interprétée (accent); performed is correct but 'interpreted' also possible"}
+{"id": "fr-1849", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "étudié is past participle without auxiliary; should be present 'She studies' or past 'She studied'"}
+{"id": "fr-1858", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "pensé is past participle without auxiliary; should be present 'I think' or past 'I thought'"}
+{"id": "fr-1773", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "porté should be porte (door); porté means carried/worn. English translation is correct but French text has typo"}
+{"id": "fr-1785", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing awkward; 'It's warm and comfortable inside near the fire' reads more naturally"}
+{"id": "fr-1798", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Subject is 'la seule personne' (she/person), not specifically 'she'; translation should be 'She's the only person I know in this city' only if context makes gender clear, otherwise 'It's the only person I know in this city'"}
+{"id": "fr-1879", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "à should be a (accent error in French source); also 'finished them all' is correct but the French spelling error undermines the card"}
+{"id": "fr-1885", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "donnes should be donnés (missing accent); English is correct but French has spelling error"}
+{"id": "fr-1888", "severity": "medium", "issue": "UNNATURAL", "note": "a emporter should be à emporter (missing accent); English 'to go' is colloquial—more formal: 'to take away'"}
+{"id": "fr-1890", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "préféré should be préfère (wrong verb form—past participle instead of present); also 'I prefer it in blue' is grammatically odd in English; better: 'I prefer it in blue' or 'I like it better in blue'"}
+{"id": "fr-1812", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Missing accent on 'à' (Elle m'a aidé à porter). More importantly, 'helped me carry' is correct but the French shows 'a' not 'à', indicating a typo in source."}
+{"id": "fr-1817", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'par la posté' is incorrect French (should be 'par la poste'). Translation 'by mail' is correct for intended meaning, but source has spelling error."}
+{"id": "fr-1823", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Il me la prêté' is grammatically incomplete (missing auxiliary: should be 'Il me l'a prêté'). Translation assumes past tense but source lacks verb conjugation marker."}
+{"id": "fr-1830", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Translation misses the 'ne' (negative particle) in 'que tu ne manges': should capture the anxiety structure 'worried that you might not be eating' or 'worried you're not eating enough', which is present but the nuance of the subjunctive concern could be clearer."}
+{"id": "fr-1907", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French 'Il la porté' is missing auxiliary verb (should be 'Il l'a porté'). Current English 'He wears it' is present tense, but sentence is passé composé (past). Should be 'He wore it every day' or if correcting French: 'He wears it every day'"}
+{"id": "fr-1911", "severity": "medium", "issue": "UNNATURAL", "note": "Missing accent: 'a nager' should be 'à nager'. English is correct but this is a French-side typo that affects clarity."}
+{"id": "fr-1954", "severity": "low", "issue": "MISSING_NUANCE", "note": "English 'fruit' (uncountable) vs French 'des fruits' (countable plural); should be 'fruits' for accuracy"}
+{"id": "fr-1966", "severity": "low", "issue": "UNNATURAL", "note": "'Don't make noise' is awkward; more natural: 'Don't make any noise' or 'Be quiet'"}
+{"id": "fr-1922", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French has 'donné' (past participle) but English uses present tense 'gives'; source is malformed (missing auxiliary)"}
+{"id": "fr-1927", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French has 'travaillé' (past participle) but English uses present perfect; source is malformed (missing auxiliary)"}
+{"id": "fr-1932", "severity": "medium", "issue": "UNNATURAL", "note": "English 'Speak more quietly' is slightly awkward; more natural: 'Speak more softly' or 'Lower your voice'"}
+{"id": "fr-1934", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French 'emmenes' is misspelled/malformed (should be 'emmenés'); as written, unclear verb form"}
+{"id": "fr-1942", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French 'prepares' missing accent; should be 'prépares'"}
+{"id": "fr-2073", "severity": "medium", "issue": "UNNATURAL", "note": "He's waiting for us in front of the cinema is awkward; natural phrasing: He's waiting for us in front of the cinema → He's waiting for us outside the cinema or simply He's waiting for us at the cinema"}
+{"id": "fr-2081", "severity": "medium", "issue": "UNNATURAL", "note": "whose books I've all read is unnatural word order; should be whose books I've read or all of whose books I've read"}
+{"id": "fr-2086", "severity": "low", "issue": "UNNATURAL", "note": "Be quiet is informal for the imperative; Tais-toi is more direct/colloquial than Be quiet suggests"}
+{"id": "fr-2089", "severity": "low", "issue": "UNNATURAL", "note": "Be careful crossing the road feels slightly abbreviated; more natural: Be careful when crossing the road or Watch out when crossing"}
+{"id": "fr-2100", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Je souhaite que vous réussissiez votre examen = I wish (that) you pass/succeed in your exam, not I hope you pass; suggests desire/wish, not mere hope"}
+{"id": "fr-1981", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French uses passé composé 'as montres' (showed), English uses simple past; also 'montres' is misspelled (should be 'montrés')"}
+{"id": "fr-1986", "severity": "low", "issue": "UNNATURAL", "note": "'You need to send' is more natural than literal 'It is necessary that you send'; register mismatch"}
+{"id": "fr-1992", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'prévenir' means 'to warn' but in this context 'to inform' or 'to notify' is more accurate; 'warn about' creates false sense of danger"}
+{"id": "fr-2002", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French has grammatical error 'à' should be 'a', but translation should reflect: 'He explained everything to us'"}
+{"id": "fr-2008", "severity": "low", "issue": "UNNATURAL", "note": "'for Christmas' is non-standard; should be 'at Christmas' or 'for Christmas celebration' in English"}
+{"id": "fr-2015", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French uses passé composé (\"a rangé\"), English uses simple present (\"puts\"); should be \"She put it away in the drawer.\""}
+{"id": "fr-2019", "severity": "medium", "issue": "UNNATURAL", "note": "\"informes\" is missing accent (informés); also \"didn't inform us about it\" is slightly awkward—\"didn't inform us of it\" reads better"}
+{"id": "fr-2020", "severity": "medium", "issue": "UNNATURAL", "note": "\"prepares\" missing accent (préparées); English should be \"They prepared them for the picnic.\" (past tense, not present)"}
+{"id": "fr-2021", "severity": "medium", "issue": "UNNATURAL", "note": "\"en a marre\" is colloquial slang; \"fed up with\" captures it, but note could flag as informal register"}
+{"id": "fr-2022", "severity": "medium", "issue": "UNNATURAL", "note": "\"refrigerateur\" missing accent (réfrigérateur); minor spelling issue in French only"}
+{"id": "fr-2024", "severity": "medium", "issue": "UNNATURAL", "note": "\"reproche\" missing accent (reproché); also \"blamed him/her for it\" reads oddly—better: \"I never reproached him/her for it.\""}
+{"id": "fr-2028", "severity": "medium", "issue": "UNNATURAL", "note": "\"Couvrez-vous bien\" is more literally \"Cover yourself well\"; \"Bundle up\" is idiomatic but MISSING_NUANCE of the direct meaning"}
+{"id": "fr-2039", "severity": "medium", "issue": "UNNATURAL", "note": "\"envoyes\" missing accent (envoyés); also \"posté\" should be \"poste\" (accent: \"la poste\"); English tense correct (past) but French spelling errors"}
+{"id": "fr-2106", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "réussir = to succeed; 'passed' is incomplete—should be 'I'm happy my daughter succeeded' or 'did well'"}
+{"id": "fr-2106", "fix": {"k": "réussir", "en": "to succeed; to pass (exam)", "pos": "v"}}
+{"id": "fr-2117", "severity": "medium", "issue": "UNNATURAL", "note": "'would really enjoy' is awkward for conditional + bien; better: 'would really like to have' or 'I could really go for a tea'"}
+{"id": "fr-2130", "severity": "medium", "issue": "UNNATURAL", "note": "'save money every month' misses the idiomatic 'de côté' (set aside); better: 'It would be wise to set money aside every month'"}
+{"id": "fr-2041", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive context requires 'come' not 'comes'; should be 'It's urgent that the doctor come immediately'"}
+{"id": "fr-2043", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive context requires 'approve' not 'needs to approve'; should be 'It is necessary that the director approve this budget'"}
+{"id": "fr-2044", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive context requires 'arrive' not 'you always arrive'; should be 'It's unacceptable that you arrive always late'"}
+{"id": "fr-2050", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive context requires 'exercise' not 'you exercise'; should be 'It's good that you exercise regularly'"}
+{"id": "fr-2052", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive context requires 'trust' not 'we need to trust'; should be 'It is necessary that we trust our instincts'"}
+{"id": "fr-2056", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive context requires 'present' not 'needs to present'; should be 'It is necessary that each department present its annual report'"}
+{"id": "fr-2057", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive context requires 'learn' not 'you need to learn'; should be 'You need to to learn to manage your stress' or 'It is necessary that you learn to manage your stress'"}
+{"id": "fr-2058", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive context requires 'can succeed' not 'you can succeed'; should be 'For you to succeed, one must work hard' or restructure"}
+{"id": "fr-2059", "severity": "medium", "issue": "UNNATURAL", "note": "Register mismatch; 'for him to be' is stilted. Better: 'It's unusual for him to be late to work' → 'It's unusual that he is late for work'"}
+{"id": "fr-2060", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive context requires 'succeed' not 'succeeds'; should be 'For the project to succeed, we must work together'"}
+{"id": "fr-2063", "severity": "medium", "issue": "UNNATURAL", "note": "English inverts agent; better: 'I don't want anyone to disturb me during the meeting'"}
+{"id": "fr-2064", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive context requires 'discuss' not 'we need to discuss'; should be 'It is necessary that we discuss our plans for summer'"}
+{"id": "fr-2065", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive context requires 'pay' not 'we pay'; should be 'It's absurd that we pay so much for this service'"}
+{"id": "fr-2066", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive context and vague pronoun; should be 'For the party to be successful, one must organize well' or 'things must be well organized'"}
+{"id": "fr-2068", "severity": "low", "issue": "UNNATURAL", "note": "Minor: 'complain about anything' slightly awkward; 'complain about anything whatsoever' better matches subjunctive tone"}
+{"id": "fr-2069", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Je rougis facilement' can also mean 'I get embarrassed easily'; consider adding alternate"}
+{"id": "fr-2140", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French subjunctive 'vote' is singular; English should be 'votes' (third person singular present)"}
+{"id": "fr-2145", "severity": "low", "issue": "UNNATURAL", "note": "Better: 'I'm disappointed the concert has been cancelled' or 'is cancelled' — 'the concert is cancelled' is passive voice, slightly awkward in this context"}
+{"id": "fr-2152", "severity": "low", "issue": "UNNATURAL", "note": "'so loudly' is acceptable but 'so loud' is more natural in imperative commands"}
+{"id": "fr-2157", "severity": "low", "issue": "UNNATURAL", "note": "'It's appropriate that we make' → better: 'It's fitting that we make' or 'We should make'; 'convient' is formal/literary"}
+{"id": "fr-2168", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Translation uses 'we' but French 'il ne faudrait pas' is impersonal (one shouldn't); should be 'One shouldn't forget to book the tickets' or 'It shouldn't be forgotten to book the tickets'"}
+{"id": "fr-2187", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French uses present tense 'avant que tu ne t'en ailles, j'ai' but translation shifts to past 'Before you go' — should clarify temporal relationship or use 'Before you leave' to match present subjunctive"}
+{"id": "fr-2199", "severity": "medium", "issue": "UNNATURAL", "note": "Missing indirect object pronoun 'lui' in English; should be 'Explain it to him calmly' or 'Explain the situation to him calmly' is acceptable but 'Explain him the situation' would be wrong. Current phrasing is awkward."}
+{"id": "fr-2207", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Profite bien de tes vacances' implies 'make the most of' or 'enjoy thoroughly', not just passive enjoyment; 'Enjoy your vacation!' is acceptable but 'Make the most of your vacation!' captures the nuance better."}
+{"id": "fr-2219", "severity": "medium", "issue": "UNNATURAL", "note": "'Would you have the time' is awkward English; should be 'Would you have the time?' or better 'Could you tell me the time, please?' or 'Do you have the time, please?'"}
+{"id": "fr-2230", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "passer = to pass by/go past, not 'come'; should be 'pass by' or 'arrive'"}
+{"id": "fr-2231", "severity": "medium", "issue": "UNNATURAL", "note": "English 'your hand' is more natural than literal 'the hand'; French 'la main' uses definite article but English shifts to possessive"}
+{"id": "fr-2245", "severity": "low", "issue": "UNNATURAL", "note": "'at friends' house' is slightly awkward; 'at a friend's house' or 'at friends' houses' preferred"}
+{"id": "fr-2246", "severity": "low", "issue": "UNNATURAL", "note": "subject-verb agreement: 'their passport' (plural subject but singular object); should be 'their passports'"}
+{"id": "fr-2284", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "dix-sept heures is 5 PM (17:00), not 5 o'clock which typically means 5 AM"}
+{"id": "fr-2295", "severity": "low", "issue": "UNNATURAL", "note": "'to go faster' is awkward; 'go more quickly' is more natural"}
+{"id": "fr-2307", "severity": "medium", "issue": "MISSING_NUANCE", "note": "transports can also mean 'transportation' (more general); 'public transport' is narrower"}
+{"id": "fr-2252", "severity": "medium", "issue": "UNNATURAL", "note": "mixing conditional with present indicative awkward; should be 'If you talked to him, I'm sure he would understand' or restructure"}
+{"id": "fr-2254", "severity": "low", "issue": "UNNATURAL", "note": "'come into effect' is correct but 'go into effect' more common in American English"}
+{"id": "fr-2255", "severity": "low", "issue": "UNNATURAL", "note": "'at the restaurant' suggests a specific one; 'to a restaurant' or 'at a restaurant' less marked"}
+{"id": "fr-2266", "severity": "low", "issue": "UNNATURAL", "note": "'will be open exceptionally' is stiff; 'will be open on an exceptional Sunday' or 'will exceptionally open' reads better"}
+{"id": "fr-2277", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Je ferais' is conditional, not 'I would do' in sense of obligation/future; should be 'I would do anything' or restructure to reflect conditional mood properly—the sentence means 'I would do' (hypothetically) but sounds like stating a fact"}
+{"id": "fr-2280", "severity": "low", "issue": "MISSING_NUANCE", "note": "'someday' captures 'un jour' but 'one day' also valid; 'aimerait' is conditional and softer than 'would like'—could note as 'She would like to live in Paris one day (someday)'"}
+{"id": "fr-2349", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "seize heures is 4 PM (16:00), not 'four' without context—should be '4 PM' or 'four o'clock'"}
+{"id": "fr-2360", "severity": "medium", "issue": "UNNATURAL", "note": "dormît is archaic subjunctive; modern French uses 'dorme'. Translation 'would sleep' is correct but card reflects outdated grammar"}
+{"id": "fr-2362", "severity": "low", "issue": "MISSING_NUANCE", "note": "'cool down' is acceptable but 'get colder' or 'become cooler' captures 'se refroidira' more directly"}
+{"id": "fr-2325", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive passé (connût) is archaic/literary; modern French uses 'connaisse'. Translation reads naturally but represents outdated usage."}
+{"id": "fr-2326", "severity": "low", "issue": "UNNATURAL", "note": "Native speakers say 'quinze heures trente' but English 'three thirty' is informal for scheduled times; 'three thirty p.m.' or '15:30' more natural in formal context."}
+{"id": "fr-2333", "severity": "low", "issue": "UNNATURAL", "note": "'It would be time' is slightly awkward; 'It's about time' or 'It would be about time' more natural."}
+{"id": "fr-2335", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive passé (pût) is archaic; modern French uses 'puisse'. Also 'him' shifts gender—French 'l'' is ambiguous (could be feminine)."}
+{"id": "fr-2339", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive passé (comprît) is archaic; modern French uses 'comprenne'."}
+{"id": "fr-2408", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "vingt et une heures = 21:00 (9 PM), not 9 AM; translation should be 'nine in the evening' or '9 PM'"}
+{"id": "fr-2418", "severity": "medium", "issue": "UNNATURAL", "note": "'when you've gotten home' is awkward; should be 'when you get home' or 'when you arrive home' (present subjunctive context allows simple future)"}
+{"id": "fr-2425", "severity": "medium", "issue": "UNNATURAL", "note": "'I would have wanted to be' is awkward English; better as 'I would have liked to be there'"}
+{"id": "fr-2439", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "à dix-huit heures = at six o'clock (not 'at six' without 'o'clock')"}
+{"id": "fr-2441", "severity": "medium", "issue": "UNNATURAL", "note": "'surprise him' is awkward; 'give him a surprise' or 'throw him a surprise party' is more natural"}
+{"id": "fr-2454", "severity": "low", "issue": "UNNATURAL", "note": "'I've often told you about' is slightly awkward; 'I've spoken to you about often' or 'I've mentioned to you often' flows better"}
+{"id": "fr-2458", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Quand nous aurons le temps = When we will have time (future anterior); present tense 'When we have time' misses the temporal structure"}
+{"id": "fr-2511", "severity": "medium", "issue": "UNNATURAL", "note": "subjunctive 'lût' is archaic literary form; modern French uses 'lise' or simply 'lise'"}
+{"id": "fr-2513", "severity": "medium", "issue": "UNNATURAL", "note": "conditional 'changerais' in 'au cas où' clause is subjunctive register; more natural: 'Au cas où tu changerais d'avis' is acceptable but 'Au cas où tu changes d'avis' is modern colloquial alternative"}
+{"id": "fr-2474", "severity": "medium", "issue": "UNNATURAL", "note": "\"let me know what you think\" is awkward; French suggests \"tell me about it\" or \"give me your impressions\""}
+{"id": "fr-2476", "severity": "medium", "issue": "UNNATURAL", "note": "same issue as fr-2474; \"let me know what you think\" doesn't capture \"m'en dires des nouvelles\""}
+{"id": "fr-2481", "severity": "medium", "issue": "UNNATURAL", "note": "\"live beautiful adventures\" is awkward English; should be \"to have beautiful adventures\" or \"experience beautiful adventures\""}
+{"id": "fr-2371", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "vingt heures = 8 PM, not 8 o'clock (ambiguous time of day)"}
+{"id": "fr-2371", "fix": {"k": "vingt heures", "en": "eight o'clock in the evening; 8 PM", "pos": "phrase"}}
+{"id": "fr-2382", "severity": "medium", "issue": "UNNATURAL", "note": "French conditional expresses polite desire; 'could really go for' is informal/colloquial; 'I would really like an ice cream' more direct"}
+{"id": "fr-2393", "severity": "medium", "issue": "UNNATURAL", "note": "'fancy' is primarily British English; 'would you like to go' or 'would you feel like going' is more standard American English"}
+{"id": "fr-2553", "severity": "medium", "issue": "UNNATURAL", "note": "Future perfect tense should be 'When you finish' not 'When you've finished' in English prescriptive style for this context"}
+{"id": "fr-2563", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive 'sussions' requires 'know' not 'knew'; should be 'It was important that we knew the truth' or 'understand'"}
+{"id": "fr-2570", "severity": "low", "issue": "UNNATURAL", "note": "'would have wanted' is grammatically awkward; 'would have liked' is more natural"}
+{"id": "fr-2573", "severity": "low", "issue": "UNNATURAL", "note": "'gotten' is American; 'obtained' reads more naturally in this formal context"}
+{"id": "fr-2574", "severity": "medium", "issue": "UNNATURAL", "note": "'given birth' is correct but 'had the baby' is more natural in spoken English; translation is valid but marked for register"}
+{"id": "fr-2582", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "dît is imperfect subjunctive, translation should reflect past tense context more naturally: 'Whatever he said' works but 'No matter what he said' is more idiomatic"}
+{"id": "fr-2597", "severity": "low", "issue": "UNNATURAL", "note": "Translation 'She's the colleague' shifts subject; should be 'It's the colleague' or 'That's the colleague' to match French structure"}
+{"id": "fr-2521", "severity": "medium", "issue": "UNNATURAL", "note": "Future perfect 'will have received' more natural than 'you've received' for this context"}
+{"id": "fr-2525", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French is 'It's the doctor' not 'He's the doctor'; singular neuter 'c'est' → 'It's'"}
+{"id": "fr-2530", "severity": "low", "issue": "UNNATURAL", "note": "'pleased us a lot' is awkward; better: 'we really enjoyed the show' or 'we liked the show very much'"}
+{"id": "fr-2533", "severity": "low", "issue": "UNNATURAL", "note": "'for your file' sounds formal/stiff; more natural: 'for your application' or 'for your folder'"}
+{"id": "fr-2534", "severity": "low", "issue": "UNNATURAL", "note": "'the artist made' is imprecise; better: 'the artist painted'"}
+{"id": "fr-2539", "severity": "low", "issue": "UNNATURAL", "note": "'Provided you book' is awkward phrasing; better: 'If you book in advance' or 'Provided that you book in advance'"}
+{"id": "fr-2542", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'In case you didn't know' misses the conditional tone; better: 'In case you don't know' or 'In the event that you don't know'"}
+{"id": "fr-2546", "severity": "low", "issue": "UNNATURAL", "note": "'That's the moment when' is slightly stiff; more natural: 'That's when everything changed' or 'That was the turning point'"}
+{"id": "fr-2547", "severity": "low", "issue": "UNNATURAL", "note": "'remained passable' is awkward; better: 'remained passable' or 'was still passable'"}
+{"id": "fr-2549", "severity": "low", "issue": "UNNATURAL", "note": "Impersonal 'We should have' doesn't match 'Il aurait fallu' (neutral obligation); better: 'One should have booked in advance' or 'You should have booked in advance'"}
+{"id": "fr-2613", "severity": "medium", "issue": "UNNATURAL", "note": "pedestrian-only street → 'pedestrian' as standalone adjective is awkward; should be 'pedestrianized' or 'for pedestrians only'"}
+{"id": "fr-2621", "severity": "medium", "issue": "UNNATURAL", "note": "'sit down to eat' is overly specific; French 'passer à table' = 'sit down at the table' or 'sit down to dine'"}
+{"id": "fr-2625", "severity": "low", "issue": "UNNATURAL", "note": "'driving test' is colloquial; 'driving license exam' or 'driving exam' more precise for 'permis'"}
+{"id": "fr-2630", "severity": "low", "issue": "UNNATURAL", "note": "'dates from the nineteenth century' is slightly awkward; 'dates back to the nineteenth century' or 'is from the nineteenth century' more natural"}
+{"id": "fr-2649", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"C'est\" translates to \"It is\", not \"He's\". Should be \"It's the composer whose music moves me the most.\""}
+{"id": "fr-2657", "severity": "medium", "issue": "UNNATURAL", "note": "\"Pourvu que\" expresses a wish/hope, not a conditional. Better: \"Let's hope it doesn't rain tomorrow!\" or \"If only it wouldn't rain tomorrow!\" (current is acceptable but \"Let's hope\" is more idiomatic)"}
+{"id": "fr-2670", "severity": "low", "issue": "UNNATURAL", "note": "\"À condition de\" with infinitive means \"on condition of/provided that\" but the phrasing \"Provided we leave\" with conditional consequent is slightly awkward. More natural: \"If we leave now, we'll arrive on time.\" or \"Provided that we leave now, we'll arrive on time.\""}
+{"id": "fr-2705", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Subject mismatch: French 'Il fallait qu'elle pût' = 'It was necessary that she could', not 'She needed to be able to'"}
+{"id": "fr-2705", "fix": {"k": "falloir", "en": "to be necessary; to be required", "pos": "v"}}
+{"id": "fr-2716", "severity": "medium", "issue": "WRONG_REGISTER", "note": "Conditional 'aurais besoin' (would need) rendered as present 'need'; should be 'In case you should need me'"}
+{"id": "fr-2729", "severity": "low", "issue": "UNNATURAL", "note": "'Quand bien même' is concessive and emphatic; 'Even if' is acceptable but 'However much' or 'No matter if' captures nuance better"}
+{"id": "fr-2675", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Dès que + future perfect means 'as soon as' requires future, not present perfect; 'we've found' is present perfect, should be 'we find' or 'we will have found'"}
+{"id": "fr-2683", "severity": "medium", "issue": "UNNATURAL", "note": "'Even if it means being late' is awkward; French 'quitte à' expresses resigned acceptance better as 'even if we end up late' or 'even at the risk of being late'"}
+{"id": "fr-2691", "severity": "low", "issue": "WRONG_REGISTER", "note": "'Now' is colloquial; 'Or' in formal/literary French means 'however' or 'and yet', should be 'However' or 'Yet'"}
+{"id": "fr-2694", "severity": "medium", "issue": "MISSING_NUANCE", "note": "French 'on craignait qu'il ne revînt' includes expletive 'ne'; English 'They feared he would return' misses the subjunctive modal sense; better: 'They feared lest he return'"}
+{"id": "fr-2698", "severity": "low", "issue": "UNNATURAL", "note": "'would have wished' is stiff; French 'j'aurais souhaité' more naturally translates 'I would have liked' or 'I wish I could have'"}
+{"id": "fr-2731", "severity": "medium", "issue": "UNNATURAL", "note": "Missing 'years' after 'sixty-five'; should be 'his sixty-five years' or 'age sixty-five'"}
+{"id": "fr-2732", "severity": "low", "issue": "UNNATURAL", "note": "Slightly awkward; 'Even if we admit it's true' or 'Granted it's true' flows better"}
+{"id": "fr-2743", "severity": "medium", "issue": "UNNATURAL", "note": "'that he be obeyed' is archaic subjunctive; modern idiom: 'that he be obeyed' or better 'that people obey him'"}
+{"id": "fr-2744", "severity": "medium", "issue": "UNNATURAL", "note": "Literal but awkward; better: 'He regretted that he hadn't been warned' or 'He regretted not being warned'"}
+{"id": "fr-2747", "severity": "medium", "issue": "UNNATURAL", "note": "'to be silent' is slightly formal; 'to keep quiet' or 'to remain silent' more natural"}
+{"id": "fr-2748", "severity": "low", "issue": "UNNATURAL", "note": "Slightly formal; 'They regretted that he was no longer with them' or 'among them' both work, minor preference"}
+{"id": "fr-2752", "severity": "low", "issue": "UNNATURAL", "note": "'So he wouldn't misunderstand' is good, but 'point' in French means complete clarity; minor stylistic note"}
+{"id": "fr-2755", "severity": "medium", "issue": "UNNATURAL", "note": "Subjunctive here expresses wish; better: 'If only he would pass his exam!' or 'I hope he passes his exam!'"}
+{"id": "fr-2757", "severity": "low", "issue": "UNNATURAL", "note": "'that he live in peace' uses archaic/formal subjunctive; modern: 'that he would live in peace' or 'that he live peacefully'"}
+{"id": "fr-2760", "severity": "low", "issue": "UNNATURAL", "note": "Minor: 'He should have written that letter' is acceptable, but 'He ought to have written that letter' also fits"}
+{"id": "fr-2826", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Missing implied object; 'him' doesn't match French 'le' (referring to context). Better: 'We should have warned him' or clarify context. More literally: 'It would have been necessary that we warned him.'"}
+{"id": "fr-2834", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'to be given an accounting' is awkward; 'rendre des comptes à' = 'to account to/answer to'. Better: 'The director demanded that accounts be given to him' or 'The director demanded an accounting.'"}
+{"id": "fr-2843", "severity": "low", "issue": "UNNATURAL", "note": "'One could have done better' is more literal but 'We could have done better' is more natural English for this construction."}
+{"id": "fr-2796", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "subject shifts; should be 'He was the only man who had courage' not as written"}
+{"id": "fr-2804", "severity": "low", "issue": "UNNATURAL", "note": "'In case you're interested' is colloquial; 'Should this interest you' or 'Were this to interest you' better matches register"}
+{"id": "fr-2807", "severity": "low", "issue": "MISSING_NUANCE", "note": "'For little that the wind turns' misses the conditional force; 'If the wind so much as shifts' captures 'pour peu que' better"}
+{"id": "fr-2814", "severity": "low", "issue": "UNNATURAL", "note": "'kind' (for weather) is poetic; 'favorable' or 'good' is more standard"}
+{"id": "fr-2762", "severity": "medium", "issue": "UNNATURAL", "note": "Pluperfect subjunctive 'eût oublié' should render as 'had forgotten' not 'had forgotten'—translation is correct but register is archaic literary; consider noting this is formal/literary French"}
+{"id": "fr-2765", "severity": "medium", "issue": "UNNATURAL", "note": "Imperfect subjunctive 'vînt' is archaic; modern French uses 'vienne'. Translation acceptable but card teaches obsolete form"}
+{"id": "fr-2767", "severity": "low", "issue": "UNNATURAL", "note": "Imperfect subjunctive 'répondît' is archaic; modern: 'réponde'. Translation correct but form is literary/obsolete"}
+{"id": "fr-2768", "severity": "low", "issue": "UNNATURAL", "note": "Imperfect subjunctive 'reçût' is archaic; modern: 'reçoive'. Translation accurate but form is formal/literary"}
+{"id": "fr-2778", "severity": "medium", "issue": "UNNATURAL", "note": "Imperfect subjunctive 'perdît' is archaic; modern: 'perde'. Translation correct but form is obsolete in contemporary speech"}
+{"id": "fr-2779", "severity": "low", "issue": "UNNATURAL", "note": "Imperfect subjunctive 'sourît' is archaic; modern: 'sourie'. Translation acceptable but form is literary/dated"}
+{"id": "fr-2780", "severity": "low", "issue": "UNNATURAL", "note": "Imperfect subjunctive 'revînt' is archaic; modern: 'revienne'. Translation correct but form is formal/obsolete"}
+{"id": "fr-2781", "severity": "medium", "issue": "UNNATURAL", "note": "Imperfect subjunctive 'allât' is archaic; modern: 'aille'. Translation correct but form is literary/dated"}
+{"id": "fr-2783", "severity": "low", "issue": "UNNATURAL", "note": "Imperfect subjunctive 's'en allât' is archaic; modern: 's'en aille'. Translation acceptable but form is formal/obsolete"}
+{"id": "fr-2785", "severity": "medium", "issue": "UNNATURAL", "note": "Pluperfect subjunctive 'eût été' and 'restât' are archaic forms. Translation correct but uses obsolete subjunctive mood"}
+{"id": "fr-2786", "severity": "medium", "issue": "UNNATURAL", "note": "Pluperfect subjunctive 'eût mieux valu' and 'partît' are archaic. Translation correct but uses obsolete forms"}
+{"id": "fr-2787", "severity": "low", "issue": "UNNATURAL", "note": "Imperfect subjunctive 'fût' is archaic; modern: 'soit'. Translation correct but form is literary/dated"}
+{"id": "fr-2790", "severity": "medium", "issue": "UNNATURAL", "note": "Imperfect subjunctive 'hésitât' is archaic; modern: 'hésite'. Translation accurate but form is formal/obsolete"}
+{"id": "fr-2913", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "vingt heures = 8 PM, not 8 o'clock"}
+{"id": "fr-2930", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing awkward; better 'He goes by the title of doctor' or 'He calls himself doctor'"}
+{"id": "fr-2939", "severity": "low", "issue": "UNNATURAL", "note": "être en train de + infinitive emphasizes ongoing action; 'is in the process of learning' or 'is currently learning' more precise"}
+{"id": "fr-2881", "severity": "low", "issue": "UNNATURAL", "note": "Awkward phrasing; more natural: 'There is no doubt that she is competent' or 'It is beyond doubt that she is competent'"}
+{"id": "fr-2885", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French present perfect 'a été ouvert' suggests state from past to now; English 'has been open' is more accurate than simple past 'is open'"}
+{"id": "fr-2899", "severity": "low", "issue": "UNNATURAL", "note": "Translation drops the causal structure; more natural: 'Unable to travel, he would read adventure stories' or 'Lacking the ability to travel, he read adventure stories'"}
+{"id": "fr-2905", "severity": "low", "issue": "UNNATURAL", "note": "'You simply need' is slightly informal; 'You only need to' or 'You need only to' better captures 'Il vous suffit de'"}
+{"id": "fr-2851", "severity": "low", "issue": "UNNATURAL", "note": "Better: 'in a month's time' or 'within a month' — 'in a month' is awkward in English"}
+{"id": "fr-2858", "severity": "low", "issue": "MISSING_NUANCE", "note": "'holiday' is primarily British; 'vacation' is standard American. Context unclear which register intended"}
+{"id": "fr-2865", "severity": "low", "issue": "UNNATURAL", "note": "Subjunctive 'soit' suggests potential/hypothetical; 'that is' reads as simple indicative. Better: 'I want a book that will be interesting and easy to read' or 'I'm looking for a book that is interesting and easy to read'"}
+{"id": "fr-2871", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Moyennant quoi' means 'by which means' or 'in return for which'; 'Thanks to which' misses the conditional/transactional sense"}
+{"id": "fr-2974", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; should be 'I don't know anyone who is as patient' or 'I don't know anyone as patient as that'"}
+{"id": "fr-2985", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "1900 is 'mille neuf cent' or 'dix-neuf cents', but the French says 'en mille neuf cent' which is ambiguous/colloquial; English translation should clarify the year"}
+{"id": "fr-2991", "severity": "medium", "issue": "UNNATURAL", "note": "Better: 'On the pretext that time is lacking' or 'Under the pretext of lacking time'; current phrasing is slightly stiff"}
+{"id": "fr-2944", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "aménagée means 'to be developed/set up', not 'built'; suggest 'The bike path will be developed/set up next summer'"}
+{"id": "fr-2944", "fix": {"k": "aménager", "en": "to develop; to set up", "pos": "v"}}
+{"id": "fr-2954", "severity": "low", "issue": "UNNATURAL", "note": "For all that is awkward phrasing; 'Nevertheless' or 'Still' more natural"}
+{"id": "fr-2960", "severity": "low", "issue": "UNNATURAL", "note": "I know is present tense but French subjunctive 'connaisse' suggests hypothetical/superlative context; 'It's the best restaurant that I know of' slightly better"}
+{"id": "fr-2964", "severity": "low", "issue": "UNNATURAL", "note": "to see him smile is slightly awkward; 'It is rare that one sees him smile' more literal, or 'He rarely smiles' more natural but changes structure"}
+{"id": "fr-2966", "severity": "low", "issue": "UNNATURAL", "note": "'has been respected' is present perfect; French present passive 'est respectée' with 'depuis' suggests ongoing state; 'has been being respected' or 'is respected' (ongoing) more accurate"}
+{"id": "fr-3031", "severity": "medium", "issue": "UNNATURAL", "note": "English should be 'I am reading' or 'I'm in the process of reading' to preserve the 'en train de' emphasis"}
+{"id": "fr-3032", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Soit dit en passant' can also mean 'be it said in passing' — more formal than 'By the way'"}
+{"id": "fr-3041", "severity": "medium", "issue": "UNNATURAL", "note": "French 'depuis quand il avait mal' = 'how long he had been in pain'; English phrasing is awkward. Better: 'The doctor asked him how long he had been in pain.'"}
+{"id": "fr-3044", "severity": "low", "issue": "UNNATURAL", "note": "'make noise' is slightly awkward; 'make any noise' or 'make a noise' more natural"}
+{"id": "fr-3058", "severity": "high", "issue": "UNNATURAL", "note": "Awkward English passive; more natural: 'I am sending you the aforementioned document' or 'Enclosed is the aforementioned document'"}
+{"id": "fr-3065", "severity": "medium", "issue": "UNNATURAL", "note": "'got herself noticed' is awkward; 'stood out' or 'distinguished herself' is more natural"}
+{"id": "fr-3066", "severity": "low", "issue": "MISSING_NUANCE", "note": "'laisser' can mean to allow/permit; 'activity' is vague—'leisure activity' or 'extracurricular activity' would be more specific in context"}
+{"id": "fr-3072", "severity": "medium", "issue": "UNNATURAL", "note": "'The doctor recommended that he rest' uses subjunctive mood but English phrasing feels stiff; 'The doctor recommended he get rest' is more natural"}
+{"id": "fr-3078", "severity": "low", "issue": "UNNATURAL", "note": "'we must continue' doesn't match French subject ambiguity; could be 'one must' or 'you must' depending on context"}
+{"id": "fr-3089", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'insane amount of work' is too colloquial for the French 'boulot de dingue'; should be 'an insane workload' or 'crazy amount of work' to match register"}
+{"id": "fr-3003", "severity": "medium", "issue": "UNNATURAL", "note": "convenir means 'to be proper/fitting' but 'It is appropriate to respect' sounds awkward; 'It is fitting that the rules be respected' or 'One should respect the established rules' flows better"}
+{"id": "fr-3004", "severity": "medium", "issue": "UNNATURAL", "note": "Missing main clause context; 'Encore que' introduces concession but the standalone translation is grammatically incomplete without the main statement it modifies"}
+{"id": "fr-3008", "severity": "medium", "issue": "UNNATURAL", "note": "'it should be mentioned that there are risks' is awkward; better: 'it should be noted that the risks must be mentioned' or simply 'the risks should also be mentioned'"}
+{"id": "fr-3009", "severity": "low", "issue": "MISSING_NUANCE", "note": "'affirm anything' is slightly formal; 'assert' or 'claim' more natural; 'affirm' alone can sound technical"}
+{"id": "fr-3015", "severity": "low", "issue": "UNNATURAL", "note": "Inversion 'Aussi a-t-il' signals formal/literary register; translation 'Therefore, he decided' misses the inversion effect; 'So he decided' or 'Thus he decided' closer"}
+{"id": "fr-3020", "severity": "low", "issue": "UNNATURAL", "note": "'Rather than complaining, take action' uses imperative inconsistently; 'Rather than complain, act' or 'Instead of complaining, act' more natural"}
+{"id": "fr-3025", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'speed' in French slang means 'hyped/in a rush/wired'; 'hyped up' captures energy but 'way too hyped up' adds intensity not in original; 'He's way too wound up right now' or 'He's in overdrive' more accurate"}
+{"id": "fr-3029", "severity": "medium", "issue": "UNNATURAL", "note": "'called in a plumber urgently' is awkward word order; 'urgently called in a plumber' or 'had an emergency plumber come' flows better"}
+{"id": "fr-3125", "severity": "medium", "issue": "UNNATURAL", "note": "\"Show in\" is awkward; \"Have the next candidate come in\" or \"Bring in the next candidate\" is more natural"}
+{"id": "fr-3138", "severity": "medium", "issue": "UNNATURAL", "note": "\"Make him be quiet\" is awkward; \"Make him be quiet\" or \"Quiet him down\" preferred"}
+{"id": "fr-3141", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Subject mismatch: French is \"It just started raining\" but \"venir de se mettre à pleuvoir\" means \"it just started to rain\"; the phrase structure is also unusual in French (should be \"Il vient de se mettre à pleuvoir\" with impersonal il, not reflexive se mettre)"}
+{"id": "fr-3094", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "geste commercial = commercial concession/gesture, not necessarily discount"}
+{"id": "fr-3094", "fix": {"k": "geste commercial", "en": "commercial concession; gesture of goodwill", "pos": "phrase"}}
+{"id": "fr-3098", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "de sorte que = so that (purpose/result), not explaining causation; needs better context"}
+{"id": "fr-3098", "fix": {"k": "de sorte que", "en": "so that; with the result that", "pos": "conj"}}
+{"id": "fr-3100", "severity": "low", "issue": "UNNATURAL", "note": "landing would take place is stiff; landing will occur/be in ten minutes more natural"}
+{"id": "fr-3105", "severity": "low", "issue": "UNNATURAL", "note": "On top of everything is slightly awkward; Moreover/Furthermore more idiomatic"}
+{"id": "fr-3105", "fix": {"k": "par surcroît", "en": "moreover; furthermore; to make matters worse", "pos": "adv"}}
+{"id": "fr-3114", "severity": "low", "issue": "UNNATURAL", "note": "we are forced to admit is passive; we must admit/we cannot deny more natural"}
+{"id": "fr-3114", "fix": {"k": "force est de constater", "en": "one must acknowledge; it must be admitted; we cannot deny", "pos": "phrase"}}
+{"id": "fr-3117", "severity": "low", "issue": "WRONG_REGISTER", "note": "guest of honour is British; guest of honor (US) or honored guest more common"}
+{"id": "fr-3155", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "English adds 'us' (told us) but French says only 'qu'il avait' (told that he had) — no indirect object"}
+{"id": "fr-3156", "severity": "low", "issue": "MISSING_NUANCE", "note": "'pensait venir' = was thinking of coming; 'was thinking of' suggests contemplation, but 'planned to come' or 'was planning to come' is more natural"}
+{"id": "fr-3168", "severity": "low", "issue": "UNNATURAL", "note": "'It's unthinkable to give up now' is awkward; better: 'It's unthinkable that we give up now' or 'We can't possibly give up now'"}
+{"id": "fr-3173", "severity": "low", "issue": "UNNATURAL", "note": "'I make myself understood' is literal but stiff; more natural: 'I manage to make myself understood' or 'I can make myself understood'"}
+{"id": "fr-3193", "severity": "low", "issue": "MISSING_NUANCE", "note": "French says 'She told us' (nous is explicit), but English omits 'us'. Minor but the French is more specific."}
+{"id": "fr-3197", "severity": "medium", "issue": "UNNATURAL", "note": "'Whatever effort he makes' is grammatically acceptable but stilted. Better: 'No matter what effort he makes' or 'However much effort he makes'."}
+{"id": "fr-3207", "severity": "low", "issue": "UNNATURAL", "note": "'she didn't want to be disturbed' is passive and slightly softens the French reflexive. More direct: 'she didn't want anyone to bother her' or 'she didn't want to be bothered'."}
+{"id": "fr-3246", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; 'She asked who that bag belonged to' is more natural than 'to whom this bag belonged'"}
+{"id": "fr-3251", "severity": "medium", "issue": "UNNATURAL", "note": "'Let it be clear' is stilted; 'Make no mistake' or 'Let me be clear' is more idiomatic"}
+{"id": "fr-3252", "severity": "medium", "issue": "UNNATURAL", "note": "'However far away he may be' reads awkwardly; 'No matter how far away he is' flows better"}
+{"id": "fr-3258", "severity": "medium", "issue": "UNNATURAL", "note": "Missing indirect object pronoun in English; should be 'assured us that' or restructure"}
+{"id": "fr-3260", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Il a la classe' means 'he looks stylish/has style'; English 'He looks so cool in his new suit' is reasonable but 'Il a trop la classe' more idiomatically means 'He's got so much style' rather than emphasizing the suit"}
+{"id": "fr-3262", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'on lui rembourse' is passive/impersonal; should reflect 'demanded a refund' or 'demanded to be reimbursed' more clearly"}
+{"id": "fr-3275", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "concours means competitive contest/competition, not help. Should be something like 'Your participation/support' or context-dependent"}
+{"id": "fr-3277", "severity": "medium", "issue": "UNNATURAL", "note": "Second clause awkwardly phrased. Better: 'He's starving; he hasn't eaten since this morning.' or 'He's starving—he hasn't eaten since this morning.'"}
+{"id": "fr-3281", "severity": "medium", "issue": "UNNATURAL", "note": "Opening phrasing unnaturally literal. Better: 'Whether sick or whether he forgot, he didn't come.' or 'Either he was sick or he forgot, but either way he didn't come.'"}
+{"id": "fr-3285", "severity": "low", "issue": "UNNATURAL", "note": "Literal rendering of subjunctive. More natural: 'Everyone must be patient.' or 'Everyone needs to show patience.'"}
+{"id": "fr-3295", "severity": "medium", "issue": "UNNATURAL", "note": "'Speak on behalf of the feelings' is awkward. Better: 'I express the sentiments of the entire team.' or 'I voice the feelings of the entire team.'"}
+{"id": "fr-3300", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'To know the drill' is idiomatic but 'connaître la musique' literally means 'to know music.' The idiom means 'to know how things work; to be wise to something.' Should be 'To know the ropes.' or 'To know the score.'"}
+{"id": "fr-3217", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Inversion after 'eût-il' (conditional perfect) is misrepresented; should convey 'Even so, one would have needed to know in time' or similar"}
+{"id": "fr-3219", "severity": "medium", "issue": "UNNATURAL", "note": "'He annoyed me' is correct but 'prendre la tête' is idiomatic slang; 'He got on my nerves' or 'He bugged me' more natural"}
+{"id": "fr-3220", "severity": "medium", "issue": "UNNATURAL", "note": "'took off' is acceptable but 'se faire la malle' is colloquial; 'disappeared' or 'ran off' closer to register"}
+{"id": "fr-3225", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'asked' is correct but 'prier' is more formal/polite; 'requested' better captures the tone"}
+{"id": "fr-3229", "severity": "low", "issue": "MISSING_NUANCE", "note": "'compte rendu' can mean 'minutes', 'report', or 'summary'; 'meeting report' more general and accurate"}
+{"id": "fr-3231", "severity": "medium", "issue": "UNNATURAL", "note": "Colloquial register ('T'inquiète') not captured; should note casual/informal tone"}
+{"id": "fr-3236", "severity": "medium", "issue": "UNNATURAL", "note": "Inversion 'Que ne l'ai-je su' is archaic/literary; translation should preserve this register ('Why did I not know'; 'If only I'd known sooner' too plain)"}
+{"id": "fr-3339", "severity": "medium", "issue": "UNNATURAL", "note": "English 'For fear of rain' is more natural than the literal 'De crainte qu'il ne pleuve' structure; the translation should be 'For fear it might rain' or 'For fear it will rain' to match the French subjunctive."}
+{"id": "fr-3342", "severity": "medium", "issue": "UNNATURAL", "note": "'the expression of my distinguished regards' is archaic/stilted; more natural: 'my distinguished regards' or 'the expression of my most sincere regards'"}
+{"id": "fr-3349", "severity": "medium", "issue": "UNNATURAL", "note": "'This isn't the time for us to argue' is awkward; more natural: 'Now is not the time to argue' or 'This isn't the moment for us to quarrel'"}
+{"id": "fr-3350", "severity": "low", "issue": "UNNATURAL", "note": "'I kindly ask you to excuse' is slightly redundant; more natural: 'I ask you kindly to excuse' or 'I kindly ask you to forgive'"}
+{"id": "fr-3358", "severity": "high", "issue": "UNNATURAL", "note": "'I have the honour of requesting your kindness' is extremely formal/archaic; modern English would be 'I have the honour to request your kindness' or better yet 'I respectfully request your kindness'"}
+{"id": "fr-3301", "severity": "medium", "issue": "UNNATURAL", "note": "English is idiomatic but French sentence literally means 'rolling on gold'; consider noting this is an idiom in source"}
+{"id": "fr-3302", "severity": "low", "issue": "WRONG_REGISTER", "note": "'Let's hope' is slightly more formal than 'Pourvu que' which expresses wish/hope; 'I hope' or 'Hopefully' more natural"}
+{"id": "fr-3303", "severity": "medium", "issue": "UNNATURAL", "note": "'Shall we catch up' is odd; 'se capter' is slang for 'see you'; better: 'Should we meet up tomorrow?' or 'See you tomorrow?'"}
+{"id": "fr-3309", "severity": "low", "issue": "WRONG_REGISTER", "note": "'vachement' is very casual slang; 'really' is neutral; should note casual register"}
+{"id": "fr-3311", "severity": "low", "issue": "WRONG_REGISTER", "note": "'bordel' is vulgar slang; 'a total mess' is milder; should preserve vulgar tone or note register"}
+{"id": "fr-3312", "severity": "low", "issue": "WRONG_REGISTER", "note": "'marrer' is casual slang (avoir du fun); 'had a great laugh' is idiomatic but less slangy"}
+{"id": "fr-3313", "severity": "low", "issue": "WRONG_REGISTER", "note": "'stylée' is very casual/slangy; 'so cool' misses the fashion-specific register"}
+{"id": "fr-3321", "severity": "medium", "issue": "UNNATURAL", "note": "'chewed out' is informal; 'engueuler' is harsh/vulgar scolding; 'yelled at' or 'given hell' more precise"}
+{"id": "fr-3323", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Primary meaning is 'to be confused/muddled'; 'going nowhere fast' is secondary; should prioritize confusion"}
+{"id": "fr-3325", "severity": "low", "issue": "WRONG_REGISTER", "note": "'gonfle' is casual slang; 'really annoy me' is neutral; should preserve casual tone"}
+{"id": "fr-3329", "severity": "low", "issue": "WRONG_REGISTER", "note": "'galère' is very casual/slangy; 'a real pain' is milder; should note colloquial register"}
+{"id": "fr-3361", "severity": "medium", "issue": "UNNATURAL", "note": "English 'However brilliant' is slightly awkward; 'As brilliant as he may be' or 'Brilliant though he is' flows better"}
+{"id": "fr-3373", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Sucrer les fraises' means to to shake (from old age/fear), not specifically 'to be old and shaky'; the phrase describes involuntary trembling"}
+{"id": "fr-3374", "severity": "low", "issue": "UNNATURAL", "note": "'A small apartment to stay in' is awkward; 'a small second home; a pied-à-terre' is more natural"}
+{"id": "fr-3381", "severity": "low", "issue": "WRONG_REGISTER", "note": "'Kiffe' is very informal French slang; English 'totally love' captures register but could note 'to be crazy about; to love' as more standard"}
+{"id": "fr-3383", "severity": "low", "issue": "UNNATURAL", "note": "'It's not easy' misses the idiom; 'It's no piece of cake' or 'It's not a walk in the park' better captures 'ce n'est pas de la tarte'"}
+{"id": "fr-3388", "severity": "low", "issue": "WRONG_REGISTER", "note": "'Zarbi' is youth slang; 'really weird' captures meaning but could note this is very informal/argot"}
+{"id": "fr-3389", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'It can't hurt to try' is an interpretation; literal meaning is 'it won't break bread (won't cost anything/won't hurt)' but idiom means 'it's worth doing; it costs nothing'"}
+{"id": "fr-3451", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"However\" suggests contrast; \"No matter how\" or \"As\" is more accurate for concessive inversion"}
+{"id": "fr-3460", "severity": "medium", "issue": "UNNATURAL", "note": "\"believe in the assurance of my regard\" is archaic/wooden; should be \"believe in my high regard\" or \"with my highest regards\""}
+{"id": "fr-3471", "severity": "low", "issue": "MISSING_NUANCE", "note": "Primary meaning is \"to faint\"; \"pass out\" is secondary and can mean intoxication—should use \"; \" separator"}
+{"id": "fr-3478", "severity": "low", "issue": "MISSING_NUANCE", "note": "Should clarify both meanings with separator: \"to turn the page; to move on\""}
+{"id": "fr-3480", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"se mettre le doigt dans l'œil\" = to deceive oneself; \"to be completely wrong\" is imprecise. Better: \"to be mistaken; to fool oneself\""}
+{"id": "fr-3504", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Primary meaning is 'to feel melancholic/sad'; 'depressed' is secondary and risks overstating severity"}
+{"id": "fr-3504", "fix": {"k": "cafard", "en": "melancholy; depression", "pos": "n"}}
+{"id": "fr-3508", "severity": "low", "issue": "MISSING_NUANCE", "note": "English rendering captures both meanings but 'that's the limit' is also common"}
+{"id": "fr-3510", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'manger son chapeau' means to eat one's hat as a bet/admission of being wrong, not to recant words. 'To eat one's words' is different (se dédire)"}
+{"id": "fr-3392", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Literal: 'It's not the sea to drink' — English should reflect the idiom more naturally"}
+{"id": "fr-3392", "fix": {"k": "Ce n'est pas la mer à boire", "en": "It's not that big a deal; It's not that hard", "pos": "phrase"}}
+{"id": "fr-3394", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'avoir le bail' is slang for being excited/keen, but 'I'm so excited about tonight' misses the casual register nuance"}
+{"id": "fr-3395", "severity": "medium", "issue": "UNNATURAL", "note": "English 'It's she who's right' is archaic/formal; should be 'She's the one who's right' or 'She's right, not him'"}
+{"id": "fr-3399", "severity": "low", "issue": "UNNATURAL", "note": "Future anterior in French 'quand j'aurai envoyé' typically translates to simple future in English 'when I send' or 'once I've sent', not 'when I've sent' (too present-focused)"}
+{"id": "fr-3401", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Idiom 'ça ne casse pas trois pattes à un canard' means 'it's nothing special/no big deal', but English version is vague"}
+{"id": "fr-3401", "fix": {"k": "Ça ne casse pas trois pattes à un canard", "en": "It's no big deal; It won't set the world on fire", "pos": "phrase"}}
+{"id": "fr-3407", "severity": "low", "issue": "UNNATURAL", "note": "'Are you kidding me or what?' is slightly awkward; more natural: 'Are you messing with me?' or 'Seriously?'"}
+{"id": "fr-3408", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Avoir d'autres chats à fouetter' = 'to have other cats to whip' but English idiom is 'bigger fish to fry', not matching the French animal reference"}
+{"id": "fr-3415", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French 'avoir un chat dans la gorge' (cat in throat) translates to English idiom 'have a frog in one's throat', but they don't match — should note the French uses different animal"}
+{"id": "fr-3418", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'kiffer' is slang (to like/love); 'I loved that concert so much' is too standard — should reflect casual register ('I was so into that concert' or 'I dug that concert')"}
+{"id": "fr-3420", "severity": "medium", "issue": "UNNATURAL", "note": "'flippe' (slang for flip out/freak) renders as 'He's freaking out' — acceptable but 'He's flipping out' or 'He's anxious/nervous' might be more natural depending on context"}
+{"id": "fr-3519", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Se noyer dans un verre d'eau means to make a big fuss over something trivial, not to minimize a problem. The English reverses the meaning."}
+{"id": "fr-3520", "severity": "medium", "issue": "UNNATURAL", "note": "'Were it not for his age' is archaic. Better: 'If it weren't for his age' or 'Except for his age'."}
+{"id": "fr-3531", "severity": "medium", "issue": "UNNATURAL", "note": "'someone smaller than ourselves' is awkward. Better: 'someone weaker than us' or 'someone smaller than oneself'."}
+{"id": "fr-3540", "severity": "medium", "issue": "UNNATURAL", "note": "'What we need to start with' is stilted. Better: 'What we need to start with is; Where we need to start is'."}
+{"id": "fr-3422", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing is awkward; should be 'to strike the iron while it is hot' or better, 'to strike while the iron is hot' (the French has 'le fer' not just bare iron)"}
+{"id": "fr-3424", "severity": "low", "issue": "UNNATURAL", "note": "'Shall we go to the movies tonight?' is stilted; more natural: 'Shall we catch a movie tonight?' or 'Want to catch a movie tonight?'"}
+{"id": "fr-3425", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'seum' is slang (avoir le seum = to be angry/annoyed); 'gutted' works but omits the anger component; suggest 'I'm annoyed/upset; I missed the last metro' or flag 'seum' as slang requiring context"}
+{"id": "fr-3426", "severity": "low", "issue": "UNNATURAL", "note": "Slash-separated alternatives; should use semicolon: 'She toned it down; she compromised'"}
+{"id": "fr-3428", "severity": "medium", "issue": "UNNATURAL", "note": "'I've had it up to here' is awkward English for 'ras le bol'; better: 'I'm fed up with this situation' or 'I'm sick of this situation'"}
+{"id": "fr-3429", "severity": "low", "issue": "UNNATURAL", "note": "'has landed' is present perfect but conditional future makes sense here; suggest 'As soon as the plane lands, send me a message' (simpler) or 'will have landed' (more literal)"}
+{"id": "fr-3433", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'sentiments les meilleurs' is a formal closing formula meaning 'best regards' or 'kind regards', not 'believe in our best regards' which is nonsensical; should be 'We ask you to accept our kind regards'"}
+{"id": "fr-3438", "severity": "low", "issue": "MISSING_NUANCE", "note": "Slash-separated alternatives; should use semicolon: 'This situation is tough; tricky' or just 'This situation is tricky'"}
+{"id": "fr-3440", "severity": "low", "issue": "UNNATURAL", "note": "'Deign to accept' is archaic/theatrical; more natural: 'Please accept my humble apologies' or 'Kindly accept my apologies'"}
+{"id": "fr-3441", "severity": "medium", "issue": "UNNATURAL", "note": "'seriously creepy' misses 'flippant' modifier; should be closer to 'That guy is seriously trip-inducing/scary' or 'That guy seriously freaks me out' (flippant = to flip = to freak out in slang)"}
+{"id": "fr-3445", "severity": "low", "issue": "UNNATURAL", "note": "'Receive, Madam, the assurance of my highest consideration' is overly literal/archaic; better: 'Please accept, Madam, my highest regards' or 'Yours sincerely'"}
+{"id": "fr-3450", "severity": "low", "issue": "UNNATURAL", "note": "'For the attention of' is awkward; standard: 'Attention: Director of Human Resources' or 'To: Director of Human Resources'"}
+{"id": "fr-3542", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French idiom 'vendre la peau de l'ours avant de l'avoir tué' literally means 'don't sell the bearskin before killing the bear' — the English equivalent is 'don't count your chickens before they hatch' but this loses the bearskin reference; should preserve the original image or explain it's an idiomatic equivalent"}
+{"id": "fr-3543", "severity": "medium", "issue": "UNNATURAL", "note": "'To be self-centred' is awkward; should be 'to be self-absorbed; to focus on oneself' or 'to be navel-gazing'"}
+{"id": "fr-3545", "severity": "low", "issue": "MISSING_NUANCE", "note": "'avoir les doigts de fée' means having a magical touch or being very skillful with one's hands; 'magic fingers' is too literal and misses the sense of exceptional manual dexterity"}
+{"id": "fr-3554", "severity": "low", "issue": "UNNATURAL", "note": "'He ran breathlessly' is grammatically correct but 'à perdre haleine' idiomatically means 'until out of breath' or 'at a breakneck pace'; suggest 'He ran at breakneck speed' or 'He ran until breathless'"}
+{"id": "fr-3562", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French proverb 'C'est en forgeant qu'on devient forgeron' literally 'it is by forging that one becomes a blacksmith'; 'Practice makes perfect' is too loose; should be 'One becomes a blacksmith by forging' or 'You learn a craft by practicing it'"}
+{"id": "fr-3577", "severity": "medium", "issue": "UNNATURAL", "note": "\"gave him wrong information\" is awkward; \"misinformed him\" or \"gave him incorrect information\" flows better"}
+{"id": "fr-3578", "severity": "medium", "issue": "UNNATURAL", "note": "\"Being late is one thing, but lying is another\" misses the concessive tone; better: \"Being late is one thing, but lying, that's another\" or \"Late is fine, but lying isn't\""}
+{"id": "fr-3582", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"where the shoe pinches\" is idiomatic English but French \"bât blesse\" (saddle pinches) has different imagery; both valid but context-dependent"}
+{"id": "fr-3585", "severity": "low", "issue": "UNNATURAL", "note": "\"the clearer it is\" is grammatically acceptable but \"the clearer it becomes\" is more natural"}
+{"id": "fr-3598", "severity": "medium", "issue": "UNNATURAL", "note": "\"When he had drunk\" is archaic/literary English; \"After he drank\" or \"Once he had drunk\" is more natural"}
+{"id": "fr-3645", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French idiom means literally 'to have butter and butter money' — the English equivalent is correct but misses the actual French expression's poetic structure"}
+{"id": "fr-3653", "severity": "medium", "issue": "UNNATURAL", "note": "'startled upon hearing' is awkward; should be 'started' or 'jumped' (involuntary reflex sense)"}
+{"id": "fr-3603", "severity": "medium", "issue": "UNNATURAL", "note": "English 'The moment he had learned' sounds literary but 'As soon as' or 'The instant' matches French 'Sitôt qu'il' more naturally"}
+{"id": "fr-3610", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Especially since' misses the causal/reinforcing sense; should be 'All the more so because' or 'Furthermore, because'"}
+{"id": "fr-3616", "severity": "medium", "issue": "UNNATURAL", "note": "Inverted subject-verb is awkward in English; prefer 'It is rare to have the opportunity to meet him' or 'Opportunities to meet him are rare'"}
+{"id": "fr-3621", "severity": "medium", "issue": "UNNATURAL", "note": "'After he had reflected' is grammatically correct but stilted; 'After reflecting' or 'Once he had thought about it' flows better"}
+{"id": "fr-3625", "severity": "low", "issue": "UNNATURAL", "note": "'The circumstances we face' is slightly better than 'The circumstances to which we face' grammatically, though the French is valid"}
+{"id": "fr-3668", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French proverb translates to \"A bird in the hand is worth two in the bush\" but the actual French saying is about 'having' vs 'will have', not birds; common equivalent but not literal"}
+{"id": "fr-3678", "severity": "low", "issue": "UNNATURAL", "note": "\"There's none so deaf as those who won't listen\" is archaic phrasing; more natural: \"No one is so deaf as those who refuse to listen\" or \"He that hath ears to hear, let him hear\""}
+{"id": "fr-3688", "severity": "medium", "issue": "UNNATURAL", "note": "\"does not allow a definitive conclusion\" is implied but not stated; more accurate: \"does not allow us to conclude\" or \"prevents a decisive answer\""}
+{"id": "fr-3700", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Impossible n'est pas français\" is a famous Napoleon quote meaning 'nothing is impossible' or 'the impossible is not French'; the translation 'Nothing is impossible' misses the idiomatic force and the clever wordplay of the original"}
+{"id": "fr-3701", "severity": "medium", "issue": "UNNATURAL", "note": "\"Sleep on it\" is colloquial; more natural: \"Night brings counsel\" or \"Let me sleep on it\""}
+{"id": "fr-3710", "severity": "medium", "issue": "UNNATURAL", "note": "\"Short reckonings make long friends\" is archaic English; more natural modern equivalent: \"Clear accounts keep good friends\" or \"Settling accounts keeps friendships intact\""}
+{"id": "fr-3714", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Il n'est de pire eau que l'eau qui dort\" means 'there is no worse water than still water' or 'beware of still waters'; the English proverb 'Still waters run deep' has opposite connotations—it's positive, not cautionary"}
+{"id": "fr-3718", "severity": "low", "issue": "UNNATURAL", "note": "Awkward phrasing; more natural: \"To step back in order to move forward\" or \"To retreat in order to advance better\""}
+{"id": "fr-3721", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing awkward; 'keep one's composure' or 'stay level-headed' more natural"}
+{"id": "fr-3722", "severity": "low", "issue": "UNNATURAL", "note": "'To a brave heart' is literal but stiff; 'For the brave of heart' reads better"}
+{"id": "fr-3724", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French says 'for great evils, great remedies' (proportional response); English idiom shifts meaning to urgency/desperation"}
+{"id": "fr-3725", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French warns against appearance/clothes deception; English idiom about judging people differently; not equivalent"}
+{"id": "fr-3734", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French literally means 'everyone sees noon at their own door' (subjective perception of time/circumstances); English about perspective is looser"}
+{"id": "fr-3735", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French 'nature returns galloping' (nature reasserts itself); 'leopard can't change spots' is different proverb about permanent nature"}
+{"id": "fr-3739", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French 'dogs don't make cats' (offspring resemble parents); English idiom 'apple doesn't fall far' completely different saying"}
+{"id": "fr-3752", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "coûter means 'to cost'; the proverb means 'only the first step is costly/difficult' but English shifts meaning to difficulty rather than cost"}
+{"id": "fr-3752", "fix": {"k": "coûter", "en": "to cost; to be difficult", "pos": "v"}}
+{"id": "fr-3756", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Slow and steady wins the race' is a different proverb; French means 'there's no point running, one must leave at the right time'"}
+{"id": "fr-3761", "severity": "medium", "issue": "UNNATURAL", "note": "'the gift of succeeding' is awkward; 'not everyone is able to succeed' or 'it is not given to everyone to succeed' flows better"}
+{"id": "fr-3763", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'There's none so blind' should be 'There is none so blind'; also 'those' should be singular 'one' to match the proverb structure"}
+{"id": "fr-3766", "severity": "low", "issue": "UNNATURAL", "note": "'would be hazardous' is grammatically correct but 'would be rash' or 'would be premature' better captures 'hasardeuse' in academic context"}
+{"id": "fr-3777", "severity": "medium", "issue": "UNNATURAL", "note": "'to broaden the scope of' is acceptable but 'to broaden' alone is more natural; 'scope' is somewhat redundant with 'investigation'"}
+{"id": "fr-3780", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'our argument should be qualified' is passive and awkward; better 'we should qualify our argument' or 'it is fitting to qualify our claims'"}
+{"id": "fr-3843", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Charybde en Scylla is the French version of Scylla and Charybdis (between two dangers), not frying pan into fire"}
+{"id": "fr-3844", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French says Paris, English says Rome — proverb origin mismatch"}
+{"id": "fr-3854", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; better: 'It's only a step from saying he cheated' or 'From saying he cheated is but a step'"}
+{"id": "fr-3860", "severity": "medium", "issue": "UNNATURAL", "note": "'A miser's son is a spendthrift' is awkward; better: 'A miserly father, a prodigal son'"}
+{"id": "fr-3868", "severity": "medium", "issue": "UNNATURAL", "note": "archaic phrasing; more natural: 'The mountain labored and brought forth a mouse' or 'Much ado about nothing'"}
+{"id": "fr-3781", "severity": "low", "issue": "UNNATURAL", "note": "appert is archaic/legalistic; 'appears' is correct but 'it seems' would be more natural modern English"}
+{"id": "fr-3784", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "s'impose means 'is necessary/imperative', not 'is warranted'; should be 'is necessary' or 'is called for'"}
+{"id": "fr-3785", "severity": "low", "issue": "UNNATURAL", "note": "malaisé is formal; 'difficult' is correct but 'hard' would be more natural"}
+{"id": "fr-3786", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "en adéquation means 'in alignment with' or 'in accordance with', not 'consistent with'; these imply different relationships"}
+{"id": "fr-3789", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "se réfère à means 'refers to' or 'draws on', but 'adopts the theoretical framework of Bourdieu's work' would be clearer; current phrasing is awkward"}
+{"id": "fr-3791", "severity": "low", "issue": "UNNATURAL", "note": "se propose de is 'sets out to' (more forceful); 'aims to' is acceptable but slightly softens the French"}
+{"id": "fr-3794", "severity": "low", "issue": "UNNATURAL", "note": "permis de douter is awkward in English; should be 'one may doubt' or 'there is reason to doubt'"}
+{"id": "fr-3802", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Far from it' is incorrect; loin s'en faut means 'far from it; quite the opposite' but idiomatically it's 'anything but' or 'hardly'"}
+{"id": "fr-3804", "severity": "low", "issue": "UNNATURAL", "note": "'United we stand' is the proverb but incomplete; should be 'United we stand, divided we fall' or just 'In unity there is strength'"}
+{"id": "fr-3805", "severity": "low", "issue": "UNNATURAL", "note": "'A promise is a promise' works but the English proverb is 'A word to the wise' (which is fr-3806); less common rendering"}
+{"id": "fr-3809", "severity": "low", "issue": "UNNATURAL", "note": "'The absent are always wrong' is grammatically awkward; should be 'The absent are always at fault' or 'Those who are absent are always blamed'"}
+{"id": "fr-3810", "severity": "low", "issue": "UNNATURAL", "note": "'They're talking past each other' is colloquial paraphrase; more literal: 'It's a dialogue between deaf people' or 'two people talking at cross purposes'"}
+{"id": "fr-3811", "severity": "medium", "issue": "UNNATURAL", "note": "More natural: \"We're not there yet\" or \"We're not at that stage yet\""}
+{"id": "fr-3814", "severity": "medium", "issue": "UNNATURAL", "note": "\"Qu'à cela ne tienne\" idiom better as \"Never mind\" or \"No matter to that\"; \"start again\" should be \"start over\" or \"try again\""}
+{"id": "fr-3815", "severity": "low", "issue": "UNNATURAL", "note": "\"He who laughs last laughs best\" is correct but the French uses future tense; could say \"He who laughs last will have the last laugh\""}
+{"id": "fr-3822", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"À la guerre comme à la guerre\" means \"in wartime as in wartime\" (make do); English translation is paraphrased but misses the proverb sense. Better: \"In war as in war\" or \"You do what you must in difficult times\""}
+{"id": "fr-3827", "severity": "medium", "issue": "UNNATURAL", "note": "\"He thinks he's God's gift\" is colloquial slang; more literally \"He thinks he was born from Jupiter's thigh\" (referencing mythological arrogance). Better: \"He thinks he's someone special\" or keep literal"}
+{"id": "fr-3831", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "The French proverb literally says \"Never say 'fountain, I will not drink from your water'\" which warns against absolute statements. English \"Never say never\" captures intent but is incomplete translation of the actual French phrase structure"}
+{"id": "fr-3832", "severity": "low", "issue": "UNNATURAL", "note": "\"He who bites off more than he can chew\" is accurate but could also say \"Whoever embraces too much holds badly\" for more literal sense"}
+{"id": "fr-3834", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Après la pluie, le beau temps\" literally means \"After rain, fair weather\" (implication: good follows hardship). \"Every cloud has a silver lining\" conveys similar sentiment but different image. Better: \"After the rain comes fair weather\" or \"The sun always follows the rain\""}
+{"id": "fr-3838", "severity": "low", "issue": "UNNATURAL", "note": "Better: \"It's not a good idea to cross him\" or \"You shouldn't get on his bad side\""}
+{"id": "fr-3872", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French says you DON'T catch flies with vinegar (negative); English adds 'more flies with honey' which inverts the meaning"}
+{"id": "fr-3875", "severity": "medium", "issue": "UNNATURAL", "note": "'twixt is archaic/poetic; more natural modern equivalent needed"}
+{"id": "fr-3883", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Literally 'lacking thrushes, one eats blackbirds'—emphasizes making do with inferior substitute; 'you take what you can get' loses the quality-downgrade implication"}
+{"id": "fr-3884", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Latin proverb, not French translation of French phrase; belongs in different language deck or needs French equivalent"}
+{"id": "fr-3890", "severity": "medium", "issue": "UNNATURAL", "note": "'People are the only true wealth' adds 'only' and 'true' not in original; closer: 'there is no wealth but men'"}
+{"id": "fr-3899", "severity": "medium", "issue": "UNNATURAL", "note": "'For better or worse' typically precedes an action; 'nonetheless' or 'come what may' fits better; 'vaille que vaille' emphasizes persistence through difficulty"}
+{"id": "fr-3931", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French uses plural 'toilettes'; English should be 'Where are the toilets?' or 'Where is the bathroom?'"}
+{"id": "fr-3910", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "English uses idiomatic phrasing but French sentence structure is awkward; 'even on the darkest days' doesn't align with 'même les jours les plus sombres' which means 'even the darkest days' without 'on'"}
+{"id": "fr-3913", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "French means 'Each day has enough trouble of its own' (Matthew 6:34); English translation 'Sufficient unto the day is the evil thereof' is archaic KJV phrasing, not standard modern translation"}
+{"id": "fr-3914", "severity": "low", "issue": "UNNATURAL", "note": "'The game isn't worth the candle' is correct but archaic; modern English prefers 'it's not worth it' or 'the effort isn't worth it'"}
+{"id": "fr-3925", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "French is the literal saying 'Give to Caesar what belongs to Caesar'; English translation 'Give credit where credit is due' loses the original meaning about separating temporal and spiritual authority"}
+{"id": "fr-3927", "severity": "medium", "issue": "UNNATURAL", "note": "'Patience and time do more than strength or fury' is accurate but awkward; better: 'Patience and persistence accomplish more than force or rage'"}
+{"id": "fr-3928", "severity": "low", "issue": "MISSING_NUANCE", "note": "English should clarify that 'Bonjour' is time-dependent (before noon/early afternoon); 'Good day' or 'Hello' alone doesn't capture this"}
+{"id": "fr-3929", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Pardon' primarily means 'Excuse me' (to get attention or apologize for intrusion); 'I'm sorry' is secondary"}

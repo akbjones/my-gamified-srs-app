@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>LangLab — Architecture</title>
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'dark', securityLevel: 'loose', maxTextSize: 200000, flowchart: { htmlLabels: true, curve: 'basis' } });
+</script>
+<style>
+  :root { --bg: #0b0d12; --card: #14171f; --border: #232732; --text: #e6e7ea; --muted: #8c8f99; --accent: #6ea8ff; }
+  * { box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font: 15px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif; margin: 0; padding: 24px; max-width: 1300px; margin-inline: auto; }
+  h1 { font-size: 28px; margin: 0 0 4px; letter-spacing: -0.02em; }
+  h2 { font-size: 22px; margin: 32px 0 12px; padding-top: 24px; border-top: 1px solid var(--border); letter-spacing: -0.015em; }
+  h3 { font-size: 16px; margin: 20px 0 8px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .lede { color: var(--muted); margin-bottom: 24px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 16px; overflow-x: auto; }
+  .mermaid { display: flex; justify-content: center; min-height: 300px; }
+  .mermaid svg { max-width: 100%; height: auto !important; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid var(--border); }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+  code { background: var(--bg); border: 1px solid var(--border); padding: 1px 6px; border-radius: 4px; font-size: 13px; color: var(--accent); }
+  pre { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px; overflow-x: auto; font-size: 13px; line-height: 1.5; }
+  ul li { margin: 4px 0; }
+  details { margin: 8px 0; }
+  summary { cursor: pointer; padding: 6px 0; color: var(--accent); }
+  hr { border: 0; border-top: 1px solid var(--border); margin: 32px 0; }
+</style>
+</head>
+<body>
+
+<h1>LangLab — Architecture</h1>
+<p class="lede">Two diagrams: what runs on the phone (runtime) and what produced the data (pipeline). All file paths are real.</p>
+
+<h2>A. Runtime architecture — what runs in the user's browser</h2>
+<div class="card">
+<div class="mermaid">
+flowchart TB
+    subgraph Phone["📱 PWA"]
+        App["App.tsx<br/>view router + state owner"]
+
+        subgraph Views["Views"]
+            HOME["HOME"]
+            STUDY["StudySession"]
+            CHAL["ChallengeScreen<br/>WordTileChallenge"]
+            VOCAB["VocabList"]
+            STATS["GamificationHub"]
+            MAP["TopicMap"]
+            PLACE["PlacementTest"]
+            ONBOARD["Onboarding"]
+        end
+
+        subgraph Services["Services (logic)"]
+            SRS["srsService<br/>SM-2 + interleave"]
+            CHALSVC["challengeService<br/>tile selection"]
+            GAM["gamificationService<br/>streak + achievements"]
+            VOCABSVC["vocabService"]
+            STORE["storageService"]
+            NOTIF["notificationService"]
+            AUDIO["audioService"]
+        end
+
+        subgraph DataInBundle["Data baked into bundle"]
+            DECK11[("deck.json × 11<br/>~3500 cards each")]
+            DICT11[("dictionary/*.ts × 11<br/>4–9k entries<br/>+ lookupWord")]
+            CONJ11[("conjugation/*.ts × 11")]
+            TOPIC["topicConfig.ts<br/>20-node skill tree"]
+        end
+
+        subgraph Browser["Browser APIs"]
+            LS[("localStorage<br/>masteryMap, userStats")]
+            SW["Service Worker"]
+            TTS["Web Speech (fallback)"]
+        end
+
+        WP["WordPopover<br/>tap-a-word"]
+    end
+
+    CDN[("Netlify CDN<br/>quest-audio/*.mp3<br/>~45k files, 1.1GB")]
+    FORM["Netlify Forms<br/>word-flag submissions"]
+
+    App --> Views
+    Views --> Services
+    STUDY --> WP
+    CHAL --> WP
+    WP --> DICT11
+    WP --> CONJ11
+    Services --> DataInBundle
+    SRS <--> STORE
+    GAM <--> STORE
+    STORE <--> LS
+    AUDIO --> CDN
+    AUDIO -.-> TTS
+    NOTIF --> SW
+    WP -.->|⚑ flag| FORM
+</div>
+</div>
+
+<h3>What lives where</h3>
+<div class="card">
+<table>
+<tr><th>Layer</th><th>Purpose</th><th>Files</th></tr>
+<tr><td><b>App.tsx</b></td><td>Single source of truth for view, session, settings, userStats, masteryMap. Orchestrates view transitions.</td><td><code>src/App.tsx</code> (~1500 LoC)</td></tr>
+<tr><td><b>Views</b></td><td>Pure UI; receive props + dispatch via callbacks. No localStorage of their own.</td><td><code>src/components/*.tsx</code></td></tr>
+<tr><td><b>Services</b></td><td>All side-effecting logic — SRS, challenges, achievements, persistence.</td><td><code>src/services/*.ts</code></td></tr>
+<tr><td><b>Data (bundled)</b></td><td>Decks, dictionaries, conjugation engines — frozen at build time, no runtime fetching.</td><td><code>src/data/{lang}/</code>, <code>src/data/dictionary/</code></td></tr>
+<tr><td><b>Persistence</b></td><td>Per-language localStorage keys; migrated by <code>migrateStorageKeys</code> on app boot.</td><td><code>storageService.ts</code></td></tr>
+<tr><td><b>Audio</b></td><td>Pre-generated MP3s served from Netlify CDN; falls back to Web Speech API if missing.</td><td><code>public/quest-audio/</code></td></tr>
+</table>
+</div>
+
+<h3>Key flow — answering a card</h3>
+<div class="card">
+<pre>User taps card
+   ↓
+StudySession sees q (quality 0-5)
+   ↓
+App.handleAnswer()
+   ↓
+srsService.handleAnswerLogic()           ← SM-2 calculates next interval
+   ↓
+srsService.saveCardProgress()            ← writes masteryMap to localStorage
+   ↓
+gamificationService.recordAnswer()       ← streak, XP
+   ↓
+challengeService.selectTileCandidates()  ← 5 cards build a boss tile
+   ↓
+shouldTriggerChallenge() → if true → CHALLENGE view
+   ↓
+calculateBossRing() → tier S/A/B/C/D
+   ↓
+Back to StudySession with next card</pre>
+</div>
+
+<h2>B. Data pipeline — how cards & dicts were created</h2>
+<p class="lede">Offline pipeline that produced the data baked into the bundle. The runtime app never calls these scripts.</p>
+
+<div class="card">
+<div class="mermaid">
+flowchart TB
+    subgraph P1["Phase 1 — Card authoring"]
+        TPL["per-language generators<br/>e.g. generate-russian-deck.cjs"]
+        TPL --> RAWDECK[("raw deck.json<br/>target + english<br/>+ grammar tip")]
+    end
+
+    subgraph P2["Phase 2 — Dictionary build"]
+        EXTRACT["generate-dictionary.cjs<br/>tokenize every card"]
+        CLEAN["clean-rebuild-v2.cjs<br/>add types, lemmas"]
+        DICT[("dictionary/*.ts<br/>typed entries")]
+        EXTRACT --> CLEAN --> DICT
+    end
+
+    subgraph P3["Phase 3 — NLP enrichment"]
+        STANZA["nlp-qc.py<br/>Stanford Stanza"]
+        CROSSREF["nlp-cross-ref.cjs<br/>propagate lemmas"]
+        STANZA --> CROSSREF
+    end
+
+    subgraph P4["Phase 4 — IPA"]
+        IPA["generate-{lang}-ipa.cjs<br/>phonetic strings"]
+    end
+
+    subgraph P5["Phase 5 — Audio"]
+        GTTS["generate-audio.cjs<br/>Google Cloud TTS Wavenet"]
+        EDGE["fill-missing-audio.py<br/>Edge TTS (fallback)"]
+        MP3OUT[("public/quest-audio/<br/>~45k MP3s")]
+    end
+
+    subgraph P6["Phase 6 — Quality audits (recursive)"]
+        AUDIT1["comprehensive-audit.ts<br/>STRUCTURAL"]
+        AUDIT2["ai-semantic-audit.py"]
+        AUDIT3["ai-card-audit.py<br/>WRONG_TRANS, UNNATURAL"]
+        AUDIT4["ai-polysemy-audit.py<br/>completeness check"]
+        AUDIT5["find-real-missing.ts"]
+        AIGEN["ai-generate-missing.py"]
+    end
+
+    subgraph P7["Phase 7 — Fix application (Parse → Edit → Write)"]
+        APPLY["apply-*.cjs scripts<br/>vm.runInNewContext to parse,<br/>edit object, serialize back"]
+        FIXVERB["fix-verb-clauses.cjs<br/>pos:v → pos:phrase"]
+        MANUAL["manual-bill-fixes.json<br/>fallback for AI gaps"]
+    end
+
+    subgraph P8["Phase 8 — Build & deploy"]
+        VITE["vite build"]
+        DIST[("dist/ ~15MB JS")]
+        NETLIFY["Netlify CDN"]
+    end
+
+    TPL -.->|"35 nodes × ~110 cards"| RAWDECK
+    RAWDECK --> EXTRACT
+    DICT --> STANZA
+    CROSSREF -->|writes| DICT
+    DICT --> IPA
+    IPA -->|writes| DICT
+    RAWDECK --> GTTS --> MP3OUT
+    RAWDECK -.-> EDGE -.-> MP3OUT
+
+    DICT --> AUDIT1
+    DICT --> AUDIT2
+    DICT --> AUDIT3
+    DICT --> AUDIT4
+    DICT --> AUDIT5
+    AUDIT5 --> AIGEN
+
+    AUDIT2 --> APPLY
+    AUDIT3 --> APPLY
+    AUDIT4 --> APPLY
+    AIGEN --> APPLY
+    APPLY -->|writes| DICT
+    APPLY -->|writes| RAWDECK
+    FIXVERB -->|writes| DICT
+    MANUAL -->|writes| DICT
+
+    DICT --> VITE
+    RAWDECK --> VITE
+    VITE --> DIST
+    DIST --> NETLIFY
+    MP3OUT --> NETLIFY
+
+    P6 -.->|iterate| P6
+</div>
+</div>
+
+<h3>Pipeline statistics (current state)</h3>
+<div class="card">
+<table>
+<tr><th>Stage</th><th>Output</th><th>Volume</th></tr>
+<tr><td>Initial generation</td><td>11 deck.json</td><td>~38,500 cards</td></tr>
+<tr><td>Dictionary build</td><td>11 dict.ts</td><td>~67,000 entries</td></tr>
+<tr><td>NLP</td><td>nlp-qc-results</td><td>~250k tokens analyzed</td></tr>
+<tr><td>Audio</td><td>quest-audio/</td><td>~45,000 files (1.1 GB)</td></tr>
+<tr><td>Audit cycles</td><td>reports + fixes</td><td>~22,500 changes applied</td></tr>
+<tr><td>Build</td><td>dist/</td><td>15 MB JS, 251 KB CSS</td></tr>
+</table>
+</div>
+
+<h3>Patterns the pipeline relies on</h3>
+<div class="card">
+<details open>
+<summary><b>1. Parse → Edit → Write (never regex on .ts source)</b></summary>
+Every "apply fixes" script uses the same dance: <code>splitFile()</code> finds the dict literal, <code>vm.runInNewContext('({' + body + '})')</code> parses it as a JS object, the script edits the object, <code>serializeDict()</code> writes it back. Robust against odd characters in source words (apostrophes, Cyrillic, Devanagari).
+</details>
+<details>
+<summary><b>2. Resume by side effect</b></summary>
+Long audits write incremental progress to <code>*.jsonl</code>/<code>.json</code> after every 5 batches. On rerun, they skip entries already in the file. Tolerates API rate limits and Ctrl-C without losing work.
+</details>
+<details>
+<summary><b>3. Card-centric vs Dict-centric audits</b></summary>
+<code>ai-card-audit.py</code> walks deck → dict (does the entry match how this card uses it?). <code>ai-polysemy-audit.py</code> walks dict → reality (does the entry list all common meanings of this word?). The bill/check polysemy bug existed because the first kind of audit can't see meanings the deck doesn't exemplify.
+</details>
+<details>
+<summary><b>4. Real lookupWord everywhere</b></summary>
+The audit pipeline imports the actual production <code>lookupWord</code> from each dictionary file. So if hyphen handling, elisions, or verb form resolution change, audits automatically reflect what the user sees. No regex re-implementations of lookup logic.
+</details>
+<details>
+<summary><b>5. Stanza as ground truth, not gospel</b></summary>
+Stanza's POS/lemma analysis seeds the dictionary but is treated as a hint — discrepancies become <code>STANZA_LEMMA_MISMATCH</code> audit issues, not silent overwrites.
+</details>
+</div>
+
+<h2>C. How the two halves connect</h2>
+<div class="card">
+The runtime app <b>never calls</b> any pipeline scripts. The pipeline produces frozen artifacts (<code>.ts</code>, <code>.json</code>, <code>.mp3</code>) which Vite bundles into <code>dist/</code>. The app gets the result; the user's phone doesn't run Stanza or Claude.
+
+<p>If a user taps "⚑ flag as wrong" inside <code>WordPopover</code>, the issue goes to <b>Netlify Forms</b> (a separate channel). It's then a manual review step that may feed the next pipeline iteration — but that's a human-in-the-loop step, not an automated one.</p>
+</div>
+
+<h2>Where to look for X</h2>
+<div class="card">
+<table>
+<tr><th>If you want to…</th><th>Look at</th></tr>
+<tr><td>Understand a card's lifecycle</td><td><code>srsService.ts</code> (handleAnswerLogic, interleaveQueue)</td></tr>
+<tr><td>See how a tap-on-word works</td><td><code>WordPopover.tsx</code> → <code>dictionary/{lang}.ts::lookupWord</code> → <code>conjugation/{lang}.ts</code></td></tr>
+<tr><td>Trace a localStorage value</td><td>grep <code>storageService.ts</code> for the key</td></tr>
+<tr><td>Add a meaning to a word</td><td><code>manual-bill-fixes.json</code> + <code>node scripts/apply-manual-fixes.cjs</code></td></tr>
+<tr><td>Re-run the full audit cycle</td><td><code>scripts/AUDIT_SUMMARY.md</code> (step-by-step recipe)</td></tr>
+<tr><td>Generate a new language</td><td>walk Phase 1 → 5; the per-lang <code>generate-*-deck.cjs</code> is the template</td></tr>
+</table>
+</div>
+
+</body>
+</html>

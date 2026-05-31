@@ -1,0 +1,559 @@
+{"id": "cy-0101", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Mae e'n mynd â'r ci am dro bob nos = He takes the dog for a walk every evening, not 'walks the dog every evening' (bob nos = every night, not every evening)"}
+{"id": "cy-0101", "fix": {"k": "bob nos", "en": "every night", "pos": "phrase"}}
+{"id": "cy-0085", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward: 'in the evening sometimes' should be 'sometimes in the evening' or 'in the evenings sometimes'"}
+{"id": "cy-0087", "severity": "low", "issue": "MISSING_NUANCE", "note": "Mae'n braf can mean 'it's fine/nice/fair', but in weather context 'fine' is less common in modern English than 'nice' or 'lovely'"}
+{"id": "cy-0006", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Dw i'n ei gymryd is present tense 'I'm taking it', not future 'I'll take it'"}
+{"id": "cy-0006", "fix": {"k": "Dw i'n ei gymryd", "en": "I'm taking it; I take it", "pos": "phrase"}}
+{"id": "cy-0010", "severity": "low", "issue": "UNNATURAL", "note": "'maths' is British English; in Welsh context often 'mathematics' expected"}
+{"id": "cy-0017", "severity": "low", "issue": "UNNATURAL", "note": "'a CV' should be 'a thesis' (article consistency); alternatively 'my CV' more natural"}
+{"id": "cy-0019", "severity": "low", "issue": "UNNATURAL", "note": "'a thesis' without article context; 'my thesis' more idiomatic"}
+{"id": "cy-0012", "severity": "medium", "issue": "UNNATURAL", "note": "sounds good is acceptable but 'sounds nice' more natural for Welsh context"}
+{"id": "cy-0013", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'glaear' means mild/temperate weather; should be 'It's mild today' not 'It's mild today'—but the translation IS correct. Actually reviewing: this is correct."}
+{"id": "cy-0024", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "'Ble mae platfform tri?' - 'platfform' is misspelled Welsh (should be 'platffwrm'), but translation itself is accurate"}
+{"id": "cy-0034", "severity": "medium", "issue": "UNNATURAL", "note": "'gardens' as verb is awkward; 'does gardening' or 'works in the garden' more natural"}
+{"id": "cy-0035", "severity": "low", "issue": "WRONG_REGISTER", "note": "formal 'Do you need help?' better as 'Do you need any help?' for politeness"}
+{"id": "cy-0059", "severity": "medium", "issue": "UNNATURAL", "note": "'really like' is functional but 'very much like' more natural for 'yn fawr'"}
+{"id": "cy-0068", "severity": "low", "issue": "UNNATURAL", "note": "'What time is it now?' is repetitive; better as 'What time is it?' alone"}
+{"id": "cy-0097", "severity": "medium", "issue": "UNNATURAL", "note": "Missing conjunction 'and' between two independent clauses; should be 'It's cold today, and I need a coat' or use semicolon"}
+{"id": "cy-0171", "severity": "medium", "issue": "UNNATURAL", "note": "'He photographs birds' is awkward; better as 'He takes photographs of birds' or 'He photographs birds'"}
+{"id": "cy-0177", "severity": "low", "issue": "UNNATURAL", "note": "'How much is the price' is redundant; idiomatically 'How much does this cost?' or 'What is the price?'"}
+{"id": "cy-0164", "severity": "low", "issue": "UNNATURAL", "note": "Missing conjunction between clauses; should be 'Where is the nearest hospital? I'm in a hurry' or 'Where is the nearest hospital, as I'm in a hurry'"}
+{"id": "cy-0031", "severity": "medium", "issue": "UNNATURAL", "note": "Present continuous 'I'm seeing' is awkward; 'I see' or 'I'm visiting' fits better for optician context"}
+{"id": "cy-0108", "severity": "medium", "issue": "UNNATURAL", "note": "Present continuous 'I smell' suggests ongoing action; 'I can smell' or 'I'm smelling' (intentional action) would be clearer"}
+{"id": "cy-0044", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh has typo 'ymddiheurο' (with Greek omicron); should be 'ymddiheur'; translation itself is correct"}
+{"id": "cy-0189", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Should be 'at the school' not 'in the school'; Welsh uses 'yn yr ysgol' but English idiom requires 'at'"}
+{"id": "cy-0204", "severity": "low", "issue": "UNNATURAL", "note": "'almost there' is incomplete; should be 'almost here' or specify destination—'bron â chyrraedd' typically means 'almost arriving'"}
+{"id": "cy-0209", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'hi' (she/it) refers to weather/day context; should be 'It's perfect for a picnic' not 'She's perfect'"}
+{"id": "cy-0229", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Possessive 'Cymru's' is awkward; should be 'Welsh supporters' or 'supporters of Wales'"}
+{"id": "cy-0229", "fix": {"k": "cefnogwyr Cymru", "en": "Welsh supporters; supporters of Wales", "pos": "phrase"}}
+{"id": "cy-0235", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Missing verb; should be 'There are Welsh fairy tales' but phrasing suggests a statement about existence or a collection"}
+{"id": "cy-0236", "severity": "low", "issue": "MISSING_NUANCE", "note": "Snowdon is the English name; Yr Wyddfa is the Welsh name—may want to clarify in card context"}
+{"id": "cy-0241", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Welsh says 'Sunday morning' (fore Sul) but English translates it as 'on Sunday morning' — should be 'I washed the car Sunday morning' or clarify the temporal phrase"}
+{"id": "cy-0253", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing 'She's the happiest when...' is awkward; should be 'She is happiest when she's gardening' (superlative without article)"}
+{"id": "cy-0260", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh present tense 'yn gweithio' means 'is working'; 'has been working for a century' would require a perfect aspect not present in the Welsh"}
+{"id": "cy-0265", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh sentence structure lists languages but the English translation 'There's Welsh, Irish...' misrepresents the content; appears to be a fragment or lists without a main clause equivalent"}
+{"id": "cy-0281", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh asks about 'carw egnïol neu anobaith' (energetic deer or despair) which is nonsensical; English translation 'Do you have energetic deer or despair?' accurately reflects the Welsh but the Welsh itself appears corrupted or error-containing"}
+{"id": "cy-0283", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh 'talent troellog a phenelin' (winding talent and elbow) is nonsensical; English 'cooked winding talent and elbow' accurately reflects corrupted Welsh"}
+{"id": "cy-0274", "severity": "medium", "issue": "UNNATURAL", "note": "'without fail' is archaic for modern English; suggest 'every Sunday night without fail' or 'religiously' would be more natural"}
+{"id": "cy-0364", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh sentence is nonsensical (cooking a wasp and blanket); translation masks the semantic gibberish"}
+{"id": "cy-0384", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh sentence is nonsensical (cooking an accountant and swan); translation masks the semantic gibberish"}
+{"id": "cy-0383", "severity": "medium", "issue": "UNNATURAL", "note": "'Five-minute potatoes' is awkward; should be 'Five-minute potatoes are a quick and nutritious dish' or 'Potatoes cooked in five minutes'"}
+{"id": "cy-0303", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "English uses future tense 'shall we go', but Welsh 'awn ni' is first person plural future (we will go). Should be 'Where will we go next summer?' or 'Where are we going next summer?'"}
+{"id": "cy-0309", "severity": "low", "issue": "UNNATURAL", "note": "Literal 'Is it going to rain?' works but Welsh phrasing 'Ydy hi'n mynd i fwrw glaw?' (Is it going to throw rain) is slightly less natural in English; 'Will it rain?' is more idiomatic"}
+{"id": "cy-0312", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'nos Wener' means Friday night/evening, but context suggests 'Friday' or 'Friday night' is intended. 'on Friday night' is accurate but may not match speaker intent if they meant daytime"}
+{"id": "cy-0320", "severity": "low", "issue": "UNNATURAL", "note": "'Discourage you' is correct but archaic phrasing; 'get you down' or 'demoralize you' would be more natural modern English"}
+{"id": "cy-0119", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I go' should be 'I'm going' for the continuous Welsh construction"}
+{"id": "cy-0120", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I listen' should be 'I'm listening' for the continuous Welsh construction"}
+{"id": "cy-0121", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I write' should be 'I'm writing' for the continuous Welsh construction"}
+{"id": "cy-0125", "severity": "low", "issue": "UNNATURAL", "note": "Present tense 'I enjoy cooking' should be 'I'm enjoying cooking' for the continuous Welsh construction"}
+{"id": "cy-0126", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I like listening' should be 'I'm liking listening' or better as 'I like to listen' for the continuous Welsh construction"}
+{"id": "cy-0127", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I paint' should be 'I'm painting' for the continuous Welsh construction"}
+{"id": "cy-0128", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I tidy' should be 'I'm tidying' for the continuous Welsh construction"}
+{"id": "cy-0129", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I take care' should be 'I'm taking care' for the continuous Welsh construction"}
+{"id": "cy-0130", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I eat' should be 'I'm eating' for the continuous Welsh construction"}
+{"id": "cy-0131", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I work' should be 'I'm working' for the continuous Welsh construction"}
+{"id": "cy-0132", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I work' should be 'I'm working' for the continuous Welsh construction"}
+{"id": "cy-0136", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Present perfect 'I've been learning' is correct but simple past 'I learned' would also fit; current phrasing acceptable but 'I have been learning' clearer"}
+{"id": "cy-0138", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh uses preterite 'Coginiáis i' which is simple past; translation should be 'I cooked' not present context, but spelling 'Coginiáis' is non-standard (should be 'Coginiasais i')"}
+{"id": "cy-0145", "severity": "low", "issue": "UNNATURAL", "note": "Passive construction 'I'm being chilled' is awkward; more natural as 'The wind is chilling me' or 'I'm chilled by the wind'"}
+{"id": "cy-0147", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh 'Caria 'mlaen' is informal imperative; English should be 'Carry on' (informal) not formal. Also 'rwyt ti'n gwella' = 'you're improving' is accurate"}
+{"id": "cy-0149", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I study' should be 'I'm studying' for the continuous Welsh construction"}
+{"id": "cy-0150", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I'm flying' is acceptable but 'Dw i'n hedfan' emphasizes ongoing action; current translation works but slightly weak"}
+{"id": "cy-0155", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I like living' should be 'I'm liking living' which is awkward; better as 'I like to live' or keep as is but less idiomatic to Welsh continuous"}
+{"id": "cy-0156", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I go' should be 'I'm going' or 'I go' as habitual; current phrasing acceptable for habitual action"}
+{"id": "cy-0157", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I go' should be 'I'm going' or habitual 'I go'; acceptable as habitual but inconsistent with other continuous forms"}
+{"id": "cy-0158", "severity": "medium", "issue": "UNNATURAL", "note": "'I am baking' works but awkward with present continuous; could be 'I bake' as habitual action"}
+{"id": "cy-0170", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I go swimming' should be 'I'm going swimming' for the continuous Welsh construction"}
+{"id": "cy-0173", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I like eating' should reflect continuous construction; 'I'm liking eating' unnatural; acceptable as stated"}
+{"id": "cy-0174", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'I'm sneezing' works but 'sneezing all day' is better as 'I sneeze all day'; current acceptable"}
+{"id": "cy-0405", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Missing main verb; Welsh cleft construction 'Y gardd sy...' means 'It is the garden that...' not just 'The garden behind the house.'"}
+{"id": "cy-0413", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; better: 'There were four seasons, each one beautiful' → 'There were four seasons, each beautiful' or 'It was four seasons, each one beautiful'"}
+{"id": "cy-0332", "severity": "medium", "issue": "UNNATURAL", "note": "Should be 'Where do you originally come from?' or 'Where are you originally from?' — current phrasing is awkward"}
+{"id": "cy-0342", "severity": "medium", "issue": "UNNATURAL", "note": "'I have breakfast' is correct but 'I get breakfast' better captures 'cael' in this temporal context"}
+{"id": "cy-0346", "severity": "medium", "issue": "UNNATURAL", "note": "Same issue: 'We get supper' or 'We have supper' — 'cael' here means to have/get, not just eat"}
+{"id": "cy-0349", "severity": "low", "issue": "UNNATURAL", "note": "'And to be honest' is more natural than 'To be honest' alone; Welsh 'A bod yn onest' includes the conjunction"}
+{"id": "cy-0352", "severity": "medium", "issue": "UNNATURAL", "note": "Same as cy-0346: 'We get a meeting' is unnatural; should be 'We will have a meeting' or 'We will meet'"}
+{"id": "cy-0355", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Cleft sentence structure: should be 'It's the train I catch, not the bus' not 'the train I catch' — the copula and focus must be clear"}
+{"id": "cy-0451", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Welsh has object pronoun 'hi' (her) but English says 'her' twice; should be 'I didn't recognise her at first' or clarify if the second 'her' is needed"}
+{"id": "cy-0463", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh states 'there were eight guests at the dinner table', not 'we had'—no first person in original"}
+{"id": "cy-0478", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh 'ei chwaer' with soft mutation indicates 'her sister', not 'his sister'"}
+{"id": "cy-0421", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "chwarter wedi dau = quarter past two (2:15), not 'quarter past two' which is ambiguous; translation is correct but phrasing could be clearer"}
+{"id": "cy-0422", "severity": "medium", "issue": "UNNATURAL", "note": "'love visiting' is acceptable but 'wrth eu bodd yn ymweld' more idiomatically means 'are delighted to visit' or 'are very pleased visiting'"}
+{"id": "cy-0424", "severity": "medium", "issue": "UNNATURAL", "note": "'every midnight' is awkward; should be 'at midnight every night' or 'every night at midnight'"}
+{"id": "cy-0429", "severity": "low", "issue": "UNNATURAL", "note": "'above the rooftops' is correct but 'over the roofs' is more natural in English"}
+{"id": "cy-0434", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Edward the First' should be 'Edward I' (standard English form for monarchs)"}
+{"id": "cy-0444", "severity": "low", "issue": "UNNATURAL", "note": "Construction 'Mae poblaeth Cymru tua thair miliwn' translates literally as 'Wales's population is about three million' but English phrasing 'Wales has a population of...' is more natural here"}
+{"id": "cy-0445", "severity": "medium", "issue": "UNNATURAL", "note": "'Watching Channel Four Wales helps' is vague; original likely means 'helps' + object. Incomplete thought or needs context (helps what?)"}
+{"id": "cy-0527", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh sentence is incoherent/nonsensical; English translation doesn't match and doesn't make sense either"}
+{"id": "cy-0532", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh uses wrong word forms; 'sinamon blasus a sudd' doesn't mean 'tasty cinnamon and juice' in this context"}
+{"id": "cy-0533", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh sentence is grammatically broken; 'ael cul a pentir' (narrow eyebrow and headland) cannot be washed at school"}
+{"id": "cy-0536", "severity": "medium", "issue": "UNNATURAL", "note": "'twenty fifty' is awkward; 'two thousand fifty' or '2050' is standard for year references"}
+{"id": "cy-0499", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh says 'he has been teaching' (dysgu = to teach/learn, but context + tense = teaching), translation says 'taught' (past tense). Should be 'He has been teaching at the school for ten years.'"}
+{"id": "cy-0508", "severity": "medium", "issue": "UNNATURAL", "note": "'seven hundred years old' is correct but awkward phrasing in English. More natural: 'The guide said the castle was seven hundred years old' is actually fine—no issue on second read. Retracted."}
+{"id": "cy-0576", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Dysgodd = taught (past tense); should be 'He taught Welsh for twenty years' but context suggests he studied it, not taught others. Verify intent."}
+{"id": "cy-0576", "fix": {"k": "dysgu", "en": "to teach; to learn", "pos": "v"}}
+{"id": "cy-0585", "severity": "medium", "issue": "UNNATURAL", "note": "Phrasing 'a retired policeman' reads oddly; more natural as 'a retired policeman' or 'retired police officer'. Minor register issue."}
+{"id": "cy-0590", "severity": "low", "issue": "WRONG_REGISTER", "note": "British English 'practise' (verb) is correct but American English uses 'practice'; card uses British convention which is appropriate for Welsh context."}
+{"id": "cy-0622", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "pedwerydd ar bymtheg = nineteenth, not 'the nineteenth of'—should be 'on the nineteenth of July'"}
+{"id": "cy-0625", "severity": "medium", "issue": "UNNATURAL", "note": "'in her smile' is awkward; better phrasing: 'in the way she smiles' or 'in her smile'"}
+{"id": "cy-0628", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'four hundred and fifty miles to London' implies direction/distance measurement; Welsh structure suggests 'It is four hundred and fifty miles to London' (acceptable as is, but context-dependent)"}
+{"id": "cy-0650", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh sentence is incoherent/corrupted; English translation doesn't match original text at all"}
+{"id": "cy-0651", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh sentence is incoherent/corrupted; English translation bears no relation to original"}
+{"id": "cy-0656", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh sentence is incoherent; English translation is nonsensical and doesn't match source"}
+{"id": "cy-0659", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Nitrogen forms approximately 78% of atmosphere, not 80%; also 'eighty percent' should be 'eighty per cent' for consistency"}
+{"id": "cy-0544", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "tri deg = thirty, but 'dri deg' in this context typically means 'three tens' (standard form). The English should be 'The speed limit is thirty' which is correct, but Welsh typically uses 'tri deg' not 'dri deg' for the number itself in isolation."}
+{"id": "cy-0554", "severity": "low", "issue": "UNNATURAL", "note": "'My little brother is four' is incomplete—should be 'My little brother is four years old' to match the Welsh 'pedair oed'"}
+{"id": "cy-0555", "severity": "medium", "issue": "UNNATURAL", "note": "'Only yesterday morning I heard' has awkward word order; more natural English would be 'I only heard yesterday morning' or 'It was only yesterday morning that I heard'"}
+{"id": "cy-0564", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Dyn ni wedi' should be 'Dyn ni ddim wedi' (We haven't been married) or the sentence structure suggests 'We have been married' but the Welsh 'Dyn ni' without negation + past participle is grammatically odd; likely should translate as 'We've been married for twenty years' which matches, but the Welsh form is non-standard—however the English translation matches intended meaning"}
+{"id": "cy-0711", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Ches i ddim noson dda o gwsg = I didn't have a good night's sleep, not 'I didn't sleep well'"}
+{"id": "cy-0712", "severity": "low", "issue": "UNNATURAL", "note": "'very lovely' is redundant; prefer 'looks lovely' or 'looks very nice'"}
+{"id": "cy-0661", "severity": "medium", "issue": "UNNATURAL", "note": "English order awkward; 'I got nothing' is correct but 'I didn't get anything' would be more natural in modern English"}
+{"id": "cy-0663", "severity": "low", "issue": "MISSING_NUANCE", "note": "Both 'no point arguing' and 'no point in arguing' are valid; the 'in' version is slightly more common in standard English"}
+{"id": "cy-0679", "severity": "low", "issue": "UNNATURAL", "note": "'Wait a minute, please' (with comma) is more natural; current phrasing is slightly stiff"}
+{"id": "cy-0688", "severity": "low", "issue": "UNNATURAL", "note": "'There's no milk in the fridge' is more natural than 'There is no milk'"}
+{"id": "cy-0723", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh uses conditional imperfect; should be 'If it weren't so far away, I would walk there' (not 'there')"}
+{"id": "cy-0724", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'I'd like' is more polite/formal; 'I want' (dw i eisiau) is more casual/direct"}
+{"id": "cy-0725", "severity": "low", "issue": "UNNATURAL", "note": "'rush hours' (plural) is more natural than 'the rush hours'"}
+{"id": "cy-0730", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'dathlu eu priodas' typically means celebrating an anniversary, not the wedding day itself"}
+{"id": "cy-0732", "severity": "low", "issue": "UNNATURAL", "note": "'surprised' is acceptable but 'shocked' or 'astonished' better fits 'synnodd'"}
+{"id": "cy-0743", "severity": "low", "issue": "UNNATURAL", "note": "More natural: 'There is a community hall in our village' rather than 'Our village has'"}
+{"id": "cy-0770", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Picau ar y maen are Welsh cakes (a specific pastry), not 'the best Welsh cakes' — the translation misses that 'picau ar y maen' is the actual name of the dish"}
+{"id": "cy-0770", "fix": {"k": "picau ar y maen", "en": "Welsh cakes", "pos": "n"}}
+{"id": "cy-0775", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing: 'a walk along the cliff path' flows better as 'a walk along the cliff path' but the Welsh 'tro ar hyd' more naturally means 'a stroll' or 'a turn' — suggest 'Nothing compares to a stroll along the cliff path'"}
+{"id": "cy-0816", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Missing object 'it' — should be 'I can't afford it' but Welsh doesn't require explicit pronoun; translation incomplete without context"}
+{"id": "cy-0822", "severity": "medium", "issue": "UNNATURAL", "note": "'Da iawn am orffen' is more naturally 'Well done for finishing' not 'on finishing'"}
+{"id": "cy-0834", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'diolch' means 'to thank', but 'diolch' alone = 'thank you'; phrase should be 'I hope I get the opportunity to thank (someone)' — object missing"}
+{"id": "cy-0786", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English 'broke' doesn't match Welsh 'torrodd' (cut). 'Torrodd cacynen' = cut a wasp (nonsensical action). Likely 'Bryn cut a wasp and picked cherries in the garden' or entire sentence is malformed in source."}
+{"id": "cy-0787", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English 'cooked' doesn't match Welsh 'coginiodd' (cooked). 'Coginiodd...glaw' = cooked rain (impossible). Entire sentence appears corrupted or mistranslated from Welsh source."}
+{"id": "cy-0793", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'pŵdin' (pudding/dessert) can mean the specific dessert course or sweet dish. 'Can I have pudding, please?' is more literal; 'dessert' is acceptable but less precise to the Welsh term."}
+{"id": "cy-0800", "severity": "medium", "issue": "UNNATURAL", "note": "'Without a doubt' is grammatically complete but 'Heb os nac oni bai' literally = 'without if and or but'. Better: 'Undoubtedly' or 'Without question'."}
+{"id": "cy-0848", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "bara menyn = buttered bread, but should be 'bread and butter' or 'butter bread'; current phrasing suggests bread already buttered"}
+{"id": "cy-0859", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "athro = teacher, not professor; Welsh distinction lost"}
+{"id": "cy-0860", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "dogfen meddal a cogydd makes no sense; likely input error in Welsh source (should probably be objects/nouns that make sense with 'adeiladodd')"}
+{"id": "cy-0860", "severity": "high", "issue": "UNNATURAL", "note": "translation is incoherent; suggests corrupted Welsh card"}
+{"id": "cy-0877", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "geisiadau = applications/requests, not entries"}
+{"id": "cy-0878", "severity": "low", "issue": "UNNATURAL", "note": "better: 'I twisted my ankle while running yesterday' → 'while I was running' more natural"}
+{"id": "cy-0892", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "trowsiwr = cobbler; esgidiau lledr = leather shoes. But context suggests shoe repair, yet 'repairs' is correct—no issue on second read. Actually valid."}
+{"id": "cy-0897", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "siec = cheque (correct); ffyddlon = faithful/loyal (wrong for building context); odyn = kiln. Translation nonsensical—Welsh sentence itself appears corrupted or malformed"}
+{"id": "cy-0899", "severity": "low", "issue": "UNNATURAL", "note": "bondo should likely be 'bond' or eaves-related term; phrasing 'under the eaves' acceptable but Welsh word unclear"}
+{"id": "cy-0901", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"hindda twt\" does not mean \"tidy fair weather\"; likely \"diwrnod teg\" (fair day) or similar. Translation is incoherent."}
+{"id": "cy-0901", "fix": {"k": "hindda twt", "en": "[requires Welsh expertise; appears garbled]", "pos": "phrase"}}
+{"id": "cy-0920", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"band eang\" means \"broad band\" (broadband), not \"fast broadband\"; \"cyflym\" is redundant or incorrect descriptor here."}
+{"id": "cy-0928", "severity": "low", "issue": "UNNATURAL", "note": "\"The roasted parsnip is very tasty\" uses singular; Welsh suggests singular but context unusual for single parsnip. Minor register oddity."}
+{"id": "cy-0950", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh sentence is nonsensical (mixing unrelated nouns); translation is incoherent and doesn't match any plausible Welsh meaning"}
+{"id": "cy-0951", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh sentence is nonsensical; translation doesn't correspond to actual Welsh words in the sentence"}
+{"id": "cy-0952", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh sentence is nonsensical; translation is garbled and doesn't match the source"}
+{"id": "cy-0953", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh sentence is nonsensical; translation is incoherent and doesn't correspond to the Welsh"}
+{"id": "cy-1000", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Clywais i fod hi'n symud = I heard that she was moving (not 'is moving' — past tense context)"}
+{"id": "cy-1007", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Ro'n i wedi arfer codi'n gynnar = I used to get up early / I was accustomed to getting up early (not pluperfect 'had been used to')"}
+{"id": "cy-1013", "severity": "medium", "issue": "UNNATURAL", "note": "'There are lots of fish found' is awkward; 'There are a lot of fish' or 'Many fish are found' would be more natural"}
+{"id": "cy-1014", "severity": "low", "issue": "UNNATURAL", "note": "'On my own I did that' is grammatically stiff; 'I did that on my own' or 'I did it by myself' flows better"}
+{"id": "cy-0967", "severity": "medium", "issue": "UNNATURAL", "note": "Welsh 'cerdded y penwythnos diwethaf' is 'walking last weekend'; 'went hiking' adds 'hiking' not in source"}
+{"id": "cy-0968", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'heb iddo sylwi' = 'without him noticing'; translation is correct but Welsh phrasing is awkward/unclear in original"}
+{"id": "cy-0986", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'onnen bodlon' should be 'contented ash-tree' or similar; 'prifathro' is 'headteacher' not a lost object. Sentence structure suggests corrupted Welsh"}
+{"id": "cy-0987", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'siarcol clyfar' = 'clever charcoal'; grammatically odd. Welsh source appears corrupted or mistranslated"}
+{"id": "cy-1077", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh text is corrupted/nonsensical; 'switsh siomedig a harbwr' does not translate to 'disappointed switch and harbour'"}
+{"id": "cy-1078", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh text is corrupted/nonsensical; 'pysgotwr garw a bol' does not translate to 'rough fisherman and belly'"}
+{"id": "cy-1056", "severity": "medium", "issue": "UNNATURAL", "note": "'We take turns doing the dishes' is more natural than the current phrasing; should be 'We take turns to do the dishes' or 'We take turns washing the dishes'"}
+{"id": "cy-1023", "severity": "medium", "issue": "UNNATURAL", "note": "Used to be suggests habitual past; Welsh indicates simple past. Better: 'There was a market here every Friday in the past' or 'There used to be a market here every Friday.'"}
+{"id": "cy-1031", "severity": "medium", "issue": "UNNATURAL", "note": "'were completely tired' is awkward; 'blino'n lân' = 'tired out/exhausted'. Better: 'The children were exhausted after the journey.'"}
+{"id": "cy-1037", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Present tense 'extracts' assumes habitual action, but context suggests a specific event. Better: 'The dentist is extracting the wisdom tooth.' or 'The dentist pulled the wisdom tooth.'"}
+{"id": "cy-1041", "severity": "medium", "issue": "UNNATURAL", "note": "'absolutely breathtaking' is hyperbolic; 'syfrdanol' means 'stunning/breathtaking' but 'absolutely' overdoes it. Better: 'I found the scenery breathtaking.'"}
+{"id": "cy-1044", "severity": "low", "issue": "UNNATURAL", "note": "'the late bus' is ambiguous (could mean bus arriving late vs. final bus). Better: 'We can catch the last bus.' or 'We can catch the final bus.'"}
+{"id": "cy-1142", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "cyn iddi dywyllu = before it got dark/before nightfall; 'before dark' is less precise about the causation"}
+{"id": "cy-1146", "severity": "low", "issue": "UNNATURAL", "note": "'go sailing' is more natural than 'hwylio' alone; translation misses the prepositional nuance"}
+{"id": "cy-1160", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Missing main verb entirely; should be 'There is important industrial heritage' or similar"}
+{"id": "cy-1163", "severity": "low", "issue": "UNNATURAL", "note": "'give a helping hand' is awkward; 'may I help?' or 'can I lend a hand?' would be more natural"}
+{"id": "cy-1112", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Gallan nhw = They can (present tense), not future. Should be 'They can come tomorrow' but sentence structure suggests future intent; however 'gallu' here is present capability."}
+{"id": "cy-1119", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Coginioch chi = You cooked (past tense, second person plural), but no past tense marker in English translation. Should be 'You cooked a tasty meal.'"}
+{"id": "cy-1138", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing. More natural: 'Can you show it on the map?' or 'Can you show me on the map?'"}
+{"id": "cy-1171", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "eisteddfodau should be translated (cultural/competitive gatherings), not left untranslated"}
+{"id": "cy-1171", "fix": {"k": "eisteddfodau", "en": "eisteddfodau; competitive gatherings", "pos": "n"}}
+{"id": "cy-1184", "severity": "medium", "issue": "UNNATURAL", "note": "'There used to be' is archaic phrasing; 'There was once' or 'There was' flows better"}
+{"id": "cy-1191", "severity": "low", "issue": "UNNATURAL", "note": "'stronger than I like' is slightly awkward; 'stronger than I prefer' would be more natural"}
+{"id": "cy-1198", "severity": "low", "issue": "UNNATURAL", "note": "'I hoped to see' should be 'I was hoping to see' to match the imperfect tense (roeddwn i'n gobeithio)"}
+{"id": "cy-1093", "severity": "medium", "issue": "UNNATURAL", "note": "Welsh says doctor 'was saying' (dweud) but English 'was saying that I need' is awkward; should be 'told me' or 'said I needed'"}
+{"id": "cy-1095", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh 'roedd yn well' = 'it was better' not 'it was even better'; no 'hyd yn oed' for 'even'"}
+{"id": "cy-1103", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "budd-dal = benefit (noun); ceisio + noun doesn't mean 'trying benefit and theatre' — likely missing context or malformed Welsh"}
+{"id": "cy-1104", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ffridd = hillside not deceitful; pibyydd = sandpiper not pibyydd — sentence structure nonsensical in both languages"}
+{"id": "cy-1105", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "cert = cart not 'energetic cart'; hwylio = to sail not sailing; sentence structure broken"}
+{"id": "cy-1106", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "eryr = eagle not 'pathetic eagle'; ffeil = file not ffeil — adjectives misapplied, sentence incoherent"}
+{"id": "cy-1107", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "cyfarwyddwr = director; peiriannydd = engineer; sentence says 'Ffion lost frustrated director and engineer in the kitchen' — nonsensical"}
+{"id": "cy-1108", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "castanwydden = chestnut tree; tost = hot/toasted; sentence 'bought slow chestnut and toast' is incoherent"}
+{"id": "cy-1231", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "pobydd = baker (person), but context requires 'bakery' or 'baking'; 'blas a pobydd' is nonsensical"}
+{"id": "cy-1232", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "canŵ = canoe but 'dathlu canŵ' (celebrate canoe) makes no sense; likely 'canŵ' is error or 'tawch' mistranslated"}
+{"id": "cy-1232", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "tawch = smoke/haze, but 'tawch miniog' (sharp haze) is not idiomatic; unclear intended meaning"}
+{"id": "cy-1235", "severity": "medium", "issue": "UNNATURAL", "note": "'is struck with' is passive; more natural: 'is hit with' or 'you strike with'"}
+{"id": "cy-1218", "severity": "medium", "issue": "UNNATURAL", "note": "Omits 'very' or 'extremely' that the Welsh 'dros ben' emphasizes; should be 'was very fascinating' or 'was extremely interesting'"}
+{"id": "cy-1226", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'tegwch cymdeithasol' is 'social justice', not 'social fairness'"}
+{"id": "cy-1230", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Nonsensical translation; 'artisiog' does not mean 'artichoke' in any context; likely corruption in source Welsh or typo"}
+{"id": "cy-1303", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "gwella = to improve/better; cigydd = butcher; menyn = butter. Sentence makes no sense. Should likely be 'Rhaid i Angharad brynu cigydd a menyn hallt' (buy butcher [products] and salty butter) or similar food shopping context."}
+{"id": "cy-1312", "severity": "medium", "issue": "UNNATURAL", "note": "Should be 'I wished I could have stayed longer' to match past conditional meaning of 'y gallwn i aros yn hirach'. Current phrasing suggests ongoing wish about present ability."}
+{"id": "cy-1318", "severity": "low", "issue": "CARD_DUPLICATE", "note": "cy-1317 and cy-1318 differ only in final destination (sêr vs Awstralia). Both use identical conditional structure; consider whether both are needed or if one is a training variant."}
+{"id": "cy-1275", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "mae...am ddim means 'is free' (admission-free), but 'we should visit' doesn't flow naturally; 'we should visit it' or 'we ought to visit' would be better"}
+{"id": "cy-1285", "severity": "medium", "issue": "UNNATURAL", "note": "missing subject pronoun; should be 'I must write an essay' or 'An essay must be written by Friday' needs clarification—Welsh suggests obligation on unnamed subject"}
+{"id": "cy-1289", "severity": "low", "issue": "UNNATURAL", "note": "'Do you have any experience with computers?' is awkward; 'Do you have experience with computers?' is more natural"}
+{"id": "cy-1290", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh text contains corrupted character 'Drингon'; should be 'Dringon ni' (We climbed). Cannot validate against corrupted source."}
+{"id": "cy-1326", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh translates to 'Dafydd must imagine belt and easy boxing' but these are unrelated words; likely corrupted source"}
+{"id": "cy-1327", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh translates to 'Elin must drive moss and clever gooseberries' but these are unrelated words; likely corrupted source"}
+{"id": "cy-1328", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh translates to 'Iolo must think granite and dark bin' but these are unrelated words; likely corrupted source"}
+{"id": "cy-1329", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh translates to 'Heledd must smile climbing and proud cap' but these are unrelated words; likely corrupted source"}
+{"id": "cy-1330", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh translates to 'Megan must imagine mortgage and weak pudding' but these are unrelated words; likely corrupted source"}
+{"id": "cy-1331", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh translates to 'Guto must boil denim and winding cave' but these are unrelated words; likely corrupted source"}
+{"id": "cy-1333", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'bodlon' means 'content; satisfied' not 'content' as noun; should be 'Do you have a contented greenhouse or hobby?' but sentence is nonsensical"}
+{"id": "cy-1337", "severity": "low", "issue": "UNNATURAL", "note": "'across the Welsh hillsides' is awkward; 'across Welsh hills' or 'across the hills of Wales' reads better"}
+{"id": "cy-1405", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh 'siop tawel a ofn' does not mean 'quiet shop and fear' — appears to be garbled or mistranslated source text"}
+{"id": "cy-1405", "fix": {"k": "siop tawel a ofn", "en": "[requires clarification of Welsh source]", "pos": "phrase"}}
+{"id": "cy-1354", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Mae angen = 'there is a need' or '(someone) needs'; subject is not established. Translation should be 'There is a need to go to the dentist' or add subject like 'I/You need to go to the dentist'"}
+{"id": "cy-1359", "severity": "low", "issue": "UNNATURAL", "note": "'There is a cat sleeping' is awkward; better as 'A cat is sleeping on the chair' to match Welsh naturalism"}
+{"id": "cy-1375", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Present tense 'writes' is incorrect; should be habitual/general 'is writing' or future context 'is writing a new comedy' since dramodydd ysgrifennu comedi newydd suggests ongoing/future action"}
+{"id": "cy-1441", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "artisiog = artichoke (vegetable), but 'cangen' = branch (not edible); sentence is nonsensical. Check if Welsh source is correct."}
+{"id": "cy-1444", "severity": "medium", "issue": "UNNATURAL", "note": "'all night' is acceptable but 'through the night' is more natural for 'drwy'r nos'"}
+{"id": "cy-1447", "severity": "medium", "issue": "UNNATURAL", "note": "Welsh emphasis construction; 'It was to her (that) I ran' better captures the cleft structure"}
+{"id": "cy-1448", "severity": "medium", "issue": "UNNATURAL", "note": "'There were big storms last night' slightly awkward; 'Big storms happened last night' or 'It stormed greatly last night' more natural"}
+{"id": "cy-1459", "severity": "medium", "issue": "UNNATURAL", "note": "'Keep up the good habits' is stilted; 'Keep the good habits going' or 'Maintain good habits' more natural"}
+{"id": "cy-1463", "severity": "medium", "issue": "UNNATURAL", "note": "'It was believed the house was old' is passive; 'The house was believed to be old' more natural"}
+{"id": "cy-1468", "severity": "low", "issue": "MISSING_NUANCE", "note": "Welsh 'Dal ati' = 'keep at it; persist'; the proverb 'practice makes perfect' is idiomatic but 'ymarfer sy'n gwneud meistr' literally = 'practice makes master'. Both work but context matters."}
+{"id": "cy-1471", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing 'over the river' is awkward; 'across the river' is more natural"}
+{"id": "cy-1478", "severity": "medium", "issue": "UNNATURAL", "note": "'Keep reading' should be 'to keep reading' or 'Keep on reading' for consistency with imperative form"}
+{"id": "cy-1484", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Roeddwn i'n cofio is present continuous/imperfect, not simple past 'I remembered'; should be 'I was remembering' or 'I used to remember'"}
+{"id": "cy-1490", "severity": "medium", "issue": "UNNATURAL", "note": "'my eyes are weak' is awkward; more natural: 'my eyes are poor' or 'my eyesight is weak'"}
+{"id": "cy-1495", "severity": "low", "issue": "WRONG_REGISTER", "note": "Proper nouns (Prifysgol Cymru) typically kept untranslated; 'The University of Wales is old' reads as archaic. Consider 'The University of Wales' without translation or keep as-is if approved"}
+{"id": "cy-1506", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Present habitual action; should be 'We wash the clothes on Mondays' (correct) but Welsh is more naturally 'on Monday' (singular in Welsh habit context); however the English is acceptable"}
+{"id": "cy-1510", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh verb form 'Dawnsion ni' is imperfect/conditional context, not simple past; should be 'We would dance' or 'We danced' depending on context, but 'drwy'r nos' (all night) suggests past; translation acceptable but verb tense ambiguous in source"}
+{"id": "cy-1517", "severity": "medium", "issue": "UNNATURAL", "note": "English 'you'll get there' is colloquial for success; Welsh 'byddi di'n llwyddo' means 'you will succeed' more literally. Suggest 'and you'll succeed' or 'and you'll make it'"}
+{"id": "cy-1525", "severity": "medium", "issue": "UNNATURAL", "note": "Pronoun shift awkward: 'The baby...it cries' should be 'The baby...he/she cries' or 'The baby cries all night'"}
+{"id": "cy-1576", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "dril (drill) doesn't make sense as comparison to theatre; likely error in source Welsh or missing context"}
+{"id": "cy-1589", "severity": "medium", "issue": "UNNATURAL", "note": "should be 'at extreme temperatures' (plural) for idiomatic English"}
+{"id": "cy-1411", "severity": "medium", "issue": "UNNATURAL", "note": "Should be 'Let us discuss' (more literal) or rephrase as imperative for natural English"}
+{"id": "cy-1415", "severity": "low", "issue": "UNNATURAL", "note": "Should use 'is developing' or 'develops' consistently; present tense feels odd for habitual action"}
+{"id": "cy-1419", "severity": "low", "issue": "UNNATURAL", "note": "'stretches for miles' is weak; 'extends for miles' or 'stretches for miles' better captures 'ymestyn am filltiroedd'"}
+{"id": "cy-1421", "severity": "medium", "issue": "UNNATURAL", "note": "Idiomatic Welsh 'Mae'n flin gen i' is better rendered 'I apologize for disturbing you' or 'I'm sorry for disturbing you'"}
+{"id": "cy-1426", "severity": "low", "issue": "UNNATURAL", "note": "Should use 'good friendship' or 'true friendship' more naturally; 'is the foundation' is slightly stilted"}
+{"id": "cy-1431", "severity": "medium", "issue": "WRONG_REGISTER", "note": "Card uses 'Tweed is' (statement) but Welsh 'Mae'r twîd' is 'The tweed is'; should be 'The tweed is a traditional material for coats'"}
+{"id": "cy-1540", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh 'dolydd' means 'meadows', not part of what was broken. Sentence is incoherent in English."}
+{"id": "cy-1540", "fix": {"k": "dolydd", "en": "meadows", "pos": "n"}}
+{"id": "cy-1551", "severity": "medium", "issue": "UNNATURAL", "note": "Should be 'on Saturday night' not 'at the cinema on Saturday night' — awkward phrasing of temporal location."}
+{"id": "cy-1560", "severity": "medium", "issue": "UNNATURAL", "note": "Tortoises live 'for hundreds of years' or 'centuries' but 'for centuries' sounds archaic/poetic for this plain statement. Better: 'live for a very long time' or 'live for hundreds of years'."}
+{"id": "cy-1604", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh says 'Not everything yellow is gold' but English says 'Not everything that glitters is gold' - completely different proverb"}
+{"id": "cy-1604", "fix": {"k": "Nid aur yw popeth melyn, yn ôl y dihareb.", "en": "Not everything yellow is gold, according to the proverb.", "pos": "phrase"}}
+{"id": "cy-1687", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Welsh uses 'â' (with), not comparative. Should be 'The older houses have thicker walls' or 'The older houses are with thicker walls' — current phrasing is acceptable but 'â' means 'with', not a comparative structure here."}
+{"id": "cy-1693", "severity": "medium", "issue": "UNNATURAL", "note": "English 'better than English' is awkward; should be 'better than he speaks English' or 'better than English language skills' to match the Welsh structure."}
+{"id": "cy-1706", "severity": "low", "issue": "UNNATURAL", "note": "Colloquial Welsh construction; 'The older I become, the more I appreciate nature' would be more standard English."}
+{"id": "cy-1621", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "llachar means 'bright' but cortyn is 'string/rope', amheuaeth is 'doubt' — semantically nonsensical; likely a metaphorical or idiomatic phrase that needs native context"}
+{"id": "cy-1625", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Nes i fi ddeall' means 'Before I understood' or 'Until I understood', but the English suggests a temporal clause that doesn't match Welsh conditional structure"}
+{"id": "cy-1638", "severity": "medium", "issue": "UNNATURAL", "note": "'one away from home' is awkward; should be 'A Welshman abroad is the best Welshman' or 'The best Welshman is a Welshman away from home'"}
+{"id": "cy-1650", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Gorau po gyntaf' is a fixed phrase meaning 'the sooner the better'; English translation misses the 'better' part and adds 'finish' which isn't in the Welsh"}
+{"id": "cy-1715", "severity": "medium", "issue": "UNNATURAL", "note": "Present progressive awkward in English; 'I agree with the teacher' more natural"}
+{"id": "cy-1720", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh structure unclear/malformed; 'Llai yw mwy' doesn't parse as standard Welsh"}
+{"id": "cy-1724", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'derbyn' means to receive/accept, not 'receives' in sense of airport operations; should be 'handles' or 'accommodates'"}
+{"id": "cy-1732", "severity": "low", "issue": "UNNATURAL", "note": "Conditional 'would learn' acceptable but 'learn to play the harp' slightly stilted; 'play the harp' more idiomatic"}
+{"id": "cy-1737", "severity": "low", "issue": "UNNATURAL", "note": "Adverbial placement awkward; better as 'Words are sometimes more important than actions'"}
+{"id": "cy-1653", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "drych (mirror) doesn't match context; prysur (busy) is semantically odd for comparing a mirror and system"}
+{"id": "cy-1654", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "siocled (chocolate) and crefft (craft) are nonsensical objects to compare for cleanliness; glân typically means clean/pure but needs context"}
+{"id": "cy-1655", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "jiwdo (judo) cannot be 'warm'; tes is not standard Welsh for heatwave; entire comparison is incoherent"}
+{"id": "cy-1656", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "tâl (payment) cannot be 'slow'; comparison between payment and clay is nonsensical"}
+{"id": "cy-1658", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "llog (interest) cannot be 'ready/prepared'; comparison with experiment is incoherent"}
+{"id": "cy-1657", "severity": "low", "issue": "UNNATURAL", "note": "cawl is Welsh noun; 'the best cawl' reads as slightly foreign; consider 'makes the best cawl' or provide translation gloss"}
+{"id": "cy-1662", "severity": "low", "issue": "UNNATURAL", "note": "'passed' is acceptable but 'went past' or 'passed by' more natural for storm"}
+{"id": "cy-1679", "severity": "medium", "issue": "UNNATURAL", "note": "awkward word order; should be 'The further north you go, the more Welsh you'll hear' for natural English flow"}
+{"id": "cy-1782", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ffêr means 'ankle bone' (anatomical term), not a common merchant item; context suggests this may be nonsense or a test sentence"}
+{"id": "cy-1800", "severity": "medium", "issue": "UNNATURAL", "note": "comparing 'beic' (the bike) to 'car' (the car) is awkward; should be 'Beicio' vs 'gyrru' or rephrased as 'Cycling is healthier than driving'"}
+{"id": "cy-1748", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Nonsensical comparison of peace vs thistle with 'easy' vs 'prickly'; no clear semantic relation"}
+{"id": "cy-1749", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Illogical comparison of confidence vs competition with 'rude' vs unrelated quality"}
+{"id": "cy-1750", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Nonsensical comparison of form vs carpet with 'hard' vs unrelated property"}
+{"id": "cy-1751", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Illogical comparison of faith vs beetle with 'rich' vs unrelated quality"}
+{"id": "cy-1752", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Nonsensical comparison of observatory vs comedy with 'dangerous' vs unrelated property"}
+{"id": "cy-1753", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Illogical comparison of clay vs library with 'strong' vs unrelated quality"}
+{"id": "cy-1754", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Nonsensical comparison of tit (bird) vs journey with 'rare' vs unrelated property"}
+{"id": "cy-1755", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Illogical comparison of benefit vs microwave with 'free' vs unrelated quality"}
+{"id": "cy-1756", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Nonsensical comparison of tree vs seal with 'sharp' vs unrelated property"}
+{"id": "cy-1757", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Illogical comparison of cause vs pound with 'fresh' vs unrelated quality"}
+{"id": "cy-1759", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Nonsensical comparison of scooter vs lorry with 'confident' (typically human trait) vs unrelated property"}
+{"id": "cy-1835", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "gogledd oleuni is not standard Welsh for 'northern lights'; should be 'goleuadau'r gogledd' or 'aurora borealis'"}
+{"id": "cy-1838", "severity": "low", "issue": "UNNATURAL", "note": "phrasing 'soft as feathers' is natural but Welsh 'fel plu' literally means 'like feathers'; consider 'cystal ag eider down' or accept as idiomatic"}
+{"id": "cy-1840", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "soffren is welding, not soldering; soldering is 'toddi' or 'asio'"}
+{"id": "cy-1844", "severity": "medium", "issue": "UNNATURAL", "note": "'leaves the mark' is awkward; should be 'marks' or 'is the mark of' the extinct volcano"}
+{"id": "cy-1852", "severity": "low", "issue": "UNNATURAL", "note": "redundant repetition of 'mountains'; should be 'The Alps are higher than the mountains of Wales' (without 'mountains' after Alps)"}
+{"id": "cy-1854", "severity": "low", "issue": "UNNATURAL", "note": "'Our holiday was the best' is singular but Welsh mynyddoedd is plural context; minor mismatch but card reads naturally"}
+{"id": "cy-1896", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "gelf means 'craft' or 'art form', but 'an art' is awkward; should be 'art' (uncountable) or 'a craft'"}
+{"id": "cy-1903", "severity": "low", "issue": "UNNATURAL", "note": "'Jasper glistens' drops the article; should be 'The jasper glistens'"}
+{"id": "cy-1917", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "ôl troed is 'footprint' (singular); 'footprints' would be ôl traed (plural), but context suggests tracking one deer so singular is correct—translation is accurate"}
+{"id": "cy-1920", "severity": "low", "issue": "UNNATURAL", "note": "'the fireman' is outdated register; modern standard is 'the firefighter'"}
+{"id": "cy-1814", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "chwistrell ddŵr is a water spray/sprayer, not 'the water spray'; 'dyfrio' means 'to water' but 'waters' here is awkward—should be 'The water sprayer waters the pot plants' or 'The water spray is watering the potted plants'"}
+{"id": "cy-1816", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "This sentence compares wool to a jack in terms of narrowness, which is nonsensical. Welsh likely contains mistranslation or corrupted words; 'cul' (narrow) applied to wool and jack is inappropriate context"}
+{"id": "cy-1817", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Sentence compares diplomat's suitability to 'relief' (rhyddhad), which is incoherent. Either Welsh is corrupted or translation fundamentally wrong"}
+{"id": "cy-1818", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Comparing pressure being 'content' (bodlon) to fur makes no sense semantically. Welsh source appears corrupted or fundamentally mistranslated"}
+{"id": "cy-1819", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Judge's sharpness compared to asparagus is incoherent. Either Welsh is corrupted or this is a nonsense sentence"}
+{"id": "cy-1820", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Steel's narrowness compared to a hearse is semantically incoherent. Welsh source likely corrupted"}
+{"id": "cy-1821", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Country being 'wonderful' compared to a decision is incoherent. Welsh appears corrupted"}
+{"id": "cy-1822", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Tie being 'content' compared to sweets is nonsensical. Welsh source appears corrupted"}
+{"id": "cy-1823", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Salmon being 'serious' compared to joy is incoherent. Welsh likely corrupted"}
+{"id": "cy-1824", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Beech tree being 'proud' compared to a microscope is nonsensical. Welsh source appears corrupted"}
+{"id": "cy-1827", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Horse riding being 'obvious' compared to lichen is incoherent. Welsh likely corrupted"}
+{"id": "cy-1861", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "traethawd hir = long essay/thesis, not dissertation (which is more specialized). Should be 'long essay' or 'thesis'"}
+{"id": "cy-1861", "fix": {"k": "traethawd hir", "en": "long essay; thesis", "pos": "n"}}
+{"id": "cy-1876", "severity": "medium", "issue": "UNNATURAL", "note": "'June starts the official summer' is awkward; more natural: 'June marks the start of official summer' or 'Official summer begins in June'"}
+{"id": "cy-1880", "severity": "low", "issue": "MISSING_NUANCE", "note": "'would always read' captures habitual past, but 'he always used to read' is also common; acceptable but could note variant"}
+{"id": "cy-1883", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "'ended in a draw' is correct for sports, but 'draw' in context of match/game typically means tie/equal result; phrasing is fine but 'The match ended in a tie' is equally valid"}
+{"id": "cy-1884", "severity": "medium", "issue": "UNNATURAL", "note": "'Hydraulics use fluid pressure' treats hydraulics as plural agents; more natural: 'Hydraulics uses fluid pressure' (singular) or 'Hydraulic systems use fluid pressure'"}
+{"id": "cy-1886", "severity": "low", "issue": "MISSING_NUANCE", "note": "claddgell can mean vault/burial chamber/crypt; 'hides' suggests intentional concealment, but archaeological context suggests 'contains' or 'holds' may be more appropriate"}
+{"id": "cy-1956", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "batri solar typically refers to solar panel/array, not battery; 'battery' usually reserved for electrical storage (batri trydanol)"}
+{"id": "cy-1960", "severity": "low", "issue": "UNNATURAL", "note": "'a focus for' is slightly awkward; 'focal point' or 'venue' more idiomatic"}
+{"id": "cy-1974", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Land of my Fathers' is correct but 'Old Land of my Fathers' captures 'Hen' more completely"}
+{"id": "cy-1975", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "rugieir is red grouse, but English 'grouse' (plural) should specify; also 'pibyddion' are pipits but context suggests mountain pipits or meadow pipits"}
+{"id": "cy-1976", "severity": "low", "issue": "UNNATURAL", "note": "'returns to its shape' is awkward; 'returns to its original shape' or 'bounces back' more natural"}
+{"id": "cy-1982", "severity": "medium", "issue": "UNNATURAL", "note": "gentle is not the typical English descriptor for a lagoon; tranquil or serene would be more natural, or consider removing this adjective"}
+{"id": "cy-1990", "severity": "medium", "issue": "MISSING_NUANCE", "note": "te in Welsh can mean tea (the drink) or tea (the meal); translation assumes meal context but should clarify"}
+{"id": "cy-1998", "severity": "low", "issue": "UNNATURAL", "note": "stiff is awkward; better: My leg is stiff after sitting for too long (or: is rigid)"}
+{"id": "cy-1928", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'chi' is the formal/plural 'you' in Welsh, not something you use 'at first' with older people—the sentence structure suggests initial politeness strategy but the phrasing is unclear"}
+{"id": "cy-1931", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'bariwn' means 'baron' (a titled nobleman), not 'VIP' (a generic term for important person)"}
+{"id": "cy-1933", "severity": "medium", "issue": "UNNATURAL", "note": "'I broke' is past simple but the Welsh 'Dw i wedi' is present perfect ('I have broken'), implying recent completion or relevance; should be 'I have broken' or 'I've broken'"}
+{"id": "cy-1938", "severity": "medium", "issue": "UNNATURAL", "note": "Same as cy-1933: 'Dw i wedi' is present perfect, not simple past; should be 'I have hurt' or 'I've hurt'"}
+{"id": "cy-1941", "severity": "low", "issue": "UNNATURAL", "note": "British English uses 'analyses' (verb) but 'analyze/analyse' spelling varies; 'analyzes' (US) would be more consistent, though both acceptable"}
+{"id": "cy-1949", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Statement claims Bangor is the 'oldest city in Wales', but Bangor is a cathedral city, not historically the oldest. This is a factual error in the source sentence itself, not a translation issue, but the claim is dubious"}
+{"id": "cy-2011", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Welsh is imperative 'Continue/Carry on' but also includes 'knowledge is power' as a statement; translation misses the cohesion of the compound Welsh phrase structure"}
+{"id": "cy-2015", "severity": "low", "issue": "UNNATURAL", "note": "'hides the sun' is awkward; 'obscures' or 'blocks' would be more natural English"}
+{"id": "cy-2016", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'llywio' means 'to steer/guide' not 'navigate'; 'steers through' would be more accurate"}
+{"id": "cy-2018", "severity": "low", "issue": "UNNATURAL", "note": "'There are daffodils everywhere' is awkward for 'Mae cennin Pedr ym mhobman'; 'Daffodils are everywhere' is more natural"}
+{"id": "cy-2024", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Present tense 'Dw i'n byw' means 'I live' or 'I am living', not 'I've been living' (perfect); should be 'I live in Cardiff' or 'I have been living in Cardiff' depending on context, but cy text uses present not perfect"}
+{"id": "cy-2028", "severity": "low", "issue": "UNNATURAL", "note": "'turn in the constant wind' is awkward; 'turn in the steady wind' or 'spin with constant wind' would be more natural"}
+{"id": "cy-2039", "severity": "low", "issue": "UNNATURAL", "note": "'sunshine shines' is redundant tautology; 'The sun shines through the clouds' would be clearer"}
+{"id": "cy-2076", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "ffawydden is beech tree, but Welsh context suggests common mistranslation; verify if this is the intended tree species"}
+{"id": "cy-2084", "severity": "low", "issue": "UNNATURAL", "note": "shooting stars don't typically 'cross' the sky in English; 'streak across' or 'shoot across' more natural"}
+{"id": "cy-2095", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "diystyru means 'to dismiss; to disregard' not 'to underestimate'; correct translation is 'Don't dismiss/disregard what you've achieved'"}
+{"id": "cy-2095", "fix": {"k": "diystyru", "en": "to dismiss; to disregard", "pos": "v"}}
+{"id": "cy-2045", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "heriol means 'challenging' as in 'difficult/problematic', not describing the economy as challenging AT it. Should be 'The economy is difficult/challenging at the moment' or better 'The economy is in difficulty at the moment'"}
+{"id": "cy-2050", "severity": "low", "issue": "UNNATURAL", "note": "'swimming pool record' is awkward; 'pool record' alone is clearer"}
+{"id": "cy-2058", "severity": "low", "issue": "MISSING_NUANCE", "note": "hiraeth is untranslatable longing/homesickness for place/past; 'longing' alone misses the cultural weight"}
+{"id": "cy-2063", "severity": "low", "issue": "UNNATURAL", "note": "'are known throughout the world' is correct but 'are famous throughout the world' is more natural for this context"}
+{"id": "cy-2070", "severity": "low", "issue": "UNNATURAL", "note": "'With all respect' is slightly formal/archaic; 'With all due respect' is standard modern English"}
+{"id": "cy-2110", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Welsh says 'thirty' (tri deg), not 'thirtieth' — should be 'She celebrated her birthday at thirty last week' or similar"}
+{"id": "cy-2115", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Welsh is imperative ('Hit the nail…'), not infinitive. Should be 'Hit the nail on the head' not 'To hit…'"}
+{"id": "cy-2116", "severity": "low", "issue": "MISSING_NUANCE", "note": "'delynegol' primarily means 'harp-like' or 'pertaining to the harp'; 'lyrical' is poetic but not the core sense"}
+{"id": "cy-2121", "severity": "low", "issue": "MISSING_NUANCE", "note": "British English 'encyclopaedia' is more standard than 'encyclopedia' for formal Welsh contexts, though both acceptable"}
+{"id": "cy-2143", "severity": "medium", "issue": "MISSING_NUANCE", "note": "cywyddau is a specific Welsh poetic form; should clarify as 'cynghanedd poems' or 'Welsh court poems' rather than leaving untranslated"}
+{"id": "cy-2143", "fix": {"k": "cywyddau", "en": "cynghanedd poems; Welsh court poems", "pos": "n"}}
+{"id": "cy-2160", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'tomorrow morning' is correct but 'bore yfory' emphasizes the morning; more natural as 'tomorrow morning' but the Welsh word order suggests 'in the morning tomorrow'—current translation acceptable but could note 'in the morning tomorrow' as alternate"}
+{"id": "cy-2161", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "robin goch = robin (red robin is redundant in English); 'visits' is too formal for ymweld â in daily context"}
+{"id": "cy-2161", "fix": {"k": "ymweld â", "en": "to visit; to call on", "pos": "v"}}
+{"id": "cy-2173", "severity": "medium", "issue": "UNNATURAL", "note": "literal gloss unhelpful; should translate as idiomatic phrase meaning 'to give up; to throw in the towel'"}
+{"id": "cy-2173", "fix": {"k": "rhoi'r ffidl yn y to", "en": "to give up; to throw in the towel", "pos": "phrase"}}
+{"id": "cy-2177", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'llosgi eira' does not mean snowfall; 'llosgi' means burning/burning snow (rare poetic term); should be 'eira' (snow) or 'cawod eira' (snowfall)"}
+{"id": "cy-2177", "fix": {"k": "llosgi eira", "en": "snow; snowfall", "pos": "n"}}
+{"id": "cy-2188", "severity": "low", "issue": "UNNATURAL", "note": "'Take care while driving' is acceptable but 'Take care when driving' or 'Be careful while driving' more natural"}
+{"id": "cy-2227", "severity": "medium", "issue": "UNNATURAL", "note": "\"pays off\" is idiomatic but literal translation obscures meaning; Welsh suggests direct 'payoff' not figurative reward"}
+{"id": "cy-2230", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"gorffenna\" is conditional ('if I finish'), but future auxiliary \"bydda\" makes this future perfect, not simple conditional; should be 'If I finish the book, I will have lent it to you' or restructured"}
+{"id": "cy-2236", "severity": "low", "issue": "WRONG_REGISTER", "note": "\"harder\" is informal; \"more difficult\" is more standard for language comparison in academic register"}
+{"id": "cy-2245", "severity": "medium", "issue": "UNNATURAL", "note": "Missing past tense marker: 'Casglоn ni' suggests we-collected, but English phrasing 'We collected' is correct; issue is Welsh spelling/clarity (repeated 'l' in 'Casglоn')"}
+{"id": "cy-2249", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Cleft sentence in Welsh; English should be 'It is the farm that is near the lake' or 'The farm is the one near the lake', not simple 'The farm that is near the lake'"}
+{"id": "cy-2198", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Yfon ni = We drank (past tense), but English says present tense 'drank' without auxiliary. Should be 'We drank coffee at the café' which is correct, but the Welsh verb form suggests this is past tense narration not habitual. Actually this is correct—reviewing again, the match is fine."}
+{"id": "cy-2199", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Mae'r Noson Lawen' = 'The Noson Lawen', not 'A Noson Lawen'. English uses indefinite article but Welsh uses definite article 'r."}
+{"id": "cy-2207", "severity": "low", "issue": "UNNATURAL", "note": "'stocks goods from everywhere' is awkward; 'from every corner' (cwr) is more natural but English translation misses the idiom 'o bob cwr'"}
+{"id": "cy-2215", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'gnocell y coed' = 'woodpecker of the wood/trees' but English says 'the woodpecker' without possession marker. Should clarify or match article usage."}
+{"id": "cy-2219", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "'pobl ifanc' = 'young people', not specifically 'teenagers'. Translation narrows meaning."}
+{"id": "cy-2219", "fix": {"k": "pobl ifanc", "en": "to provide safe spaces for young people; teenagers", "pos": "phrase"}}
+{"id": "cy-2281", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Casglоn is past tense (we collected), but English uses present tense phrasing typical of technical writing; acceptable but inconsistent register"}
+{"id": "cy-2286", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "aber = estuary, wiwer = squirrel, pitw = tiny; but sentence structure corrupted—Welsh likely corrupted or nonsensical; translation appears to be literal gibberish"}
+{"id": "cy-2288", "severity": "low", "issue": "UNNATURAL", "note": "'Bwyton ni' is nonstandard; should be 'Aethon ni' or 'Fe aethon ni'; reads awkwardly"}
+{"id": "cy-2327", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "slefren fôr (jellyfish) doesn't 'flow' — should be 'drifts' or 'moves'"}
+{"id": "cy-2327", "fix": {"k": "llifo", "en": "to drift; to flow", "pos": "v"}}
+{"id": "cy-2330", "severity": "medium", "issue": "UNNATURAL", "note": "phrasing 'I have admiration for' is awkward; should be 'I admire'"}
+{"id": "cy-2337", "severity": "low", "issue": "UNNATURAL", "note": "'tries to break' suggests incomplete action; should be 'is trying to break' or 'attempts to break'"}
+{"id": "cy-2342", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "raced should be 'racet' or 'rhacét'; 'raced' is not standard Welsh for tennis racket"}
+{"id": "cy-2345", "severity": "low", "issue": "WRONG_REGISTER", "note": "contraction 'Ma'' is informal; more natural as 'Mae Rhodri yn lluchio' or 'Rhodri sy'n lluchio'"}
+{"id": "cy-2346", "severity": "medium", "issue": "UNNATURAL", "note": "phrase structure awkward; should be 'Mae siâp unigryw gan wydr chwythedig bob tro' or similar"}
+{"id": "cy-2356", "severity": "medium", "issue": "UNNATURAL", "note": "clumsy English; better 'There is a need to balance tourism and the environment' or 'Tourism and the environment need to be balanced'"}
+{"id": "cy-2358", "severity": "low", "issue": "UNNATURAL", "note": "should be 'a double-reed woodwind instrument' not 'pren' (wood) in this position; better 'The oboe is a woodwind instrument with a double reed'"}
+{"id": "cy-2362", "severity": "low", "issue": "UNNATURAL", "note": "'in difficulties' is awkward; better 'in distress' or 'in trouble'"}
+{"id": "cy-2367", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'yn yr aderyn' grammatically incorrect; should be 'yw'r aderyn' or 'is the fastest bird'; current Welsh doesn't match English"}
+{"id": "cy-2370", "severity": "low", "issue": "UNNATURAL", "note": "better 'The banjo is a traditional American instrument' or 'from America' alone"}
+{"id": "cy-2251", "severity": "low", "issue": "UNNATURAL", "note": "Wood carving creates detailed ornaments; better as 'Wood carving creates intricate/finely detailed ornaments'"}
+{"id": "cy-2251", "fix": {"k": "manwl", "en": "intricate; finely detailed", "pos": "adj"}}
+{"id": "cy-2252", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "sipsiwn = gypsies/Romani people, not 'travellers' (too generic); 'carafanau' typically refers to caravans as vehicles"}
+{"id": "cy-2252", "fix": {"k": "sipsiwn", "en": "gypsy; Romani person", "pos": "n"}}
+{"id": "cy-2258", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Casglоn should be 'Casglon' (past tense); means 'gathered/collected', not 'picked' in the sense of harvesting fruit"}
+{"id": "cy-2258", "fix": {"k": "casglоn", "en": "to gather; to collect", "pos": "v"}}
+{"id": "cy-2259", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "chwerthin iwrch = laughing roe deer/roebuck (odd phrase); gwynt doeth = wise wind (nonsensical); likely corrupted or mistranslated Welsh"}
+{"id": "cy-2259", "fix": {"k": "iwrch", "en": "roe deer; roebuck", "pos": "n"}}
+{"id": "cy-2260", "severity": "low", "issue": "UNNATURAL", "note": "originates from the bowels is awkward; better: 'springs from the depths/heart of the earth'"}
+{"id": "cy-2260", "fix": {"k": "crombil", "en": "depth; heart; innermost part", "pos": "n"}}
+{"id": "cy-2263", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "magnetosfferr protects Earth from solar wind/radiation, not 'the sun' itself"}
+{"id": "cy-2263", "fix": {"k": "haul", "en": "sun; solar (in scientific context: solar radiation)", "pos": "n"}}
+{"id": "cy-2268", "severity": "medium", "issue": "UNNATURAL", "note": "'with a tall black hat on' is awkward; better: 'wearing a tall black hat on'"}
+{"id": "cy-2275", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ffan sidan = silk fan, but fans don't 'cool heat'; should be 'cools the air' or 'provides cooling'"}
+{"id": "cy-2275", "fix": {"k": "gwres", "en": "heat; warmth; temperature", "pos": "n"}}
+{"id": "cy-2279", "severity": "low", "issue": "UNNATURAL", "note": "'unique but connected' is vague; better: 'unique yet connected' or 'distinctive but interconnected'"}
+{"id": "cy-2279", "fix": {"k": "gysylltiedig", "en": "connected; linked; related", "pos": "adj"}}
+{"id": "cy-2372", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "cannwyll is 'candle' not 'noisy candle'; swnllyd (noisy) modifies subject not object"}
+{"id": "cy-2372", "fix": {"k": "cannwyll swnllyd", "en": "a noisy candle; a sounding candle", "pos": "phrase"}}
+{"id": "cy-2378", "severity": "medium", "issue": "MISSING_NUANCE", "note": "persain can also mean 'fragrant; sweet-smelling' — musical context favours 'melodious' but full range should be noted"}
+{"id": "cy-2381", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; 'The nebula is an enormous cloud' reads better as 'The nebula is an enormous cloud made of gas and dust' or similar"}
+{"id": "cy-2390", "severity": "medium", "issue": "UNNATURAL", "note": "incomplete sentence in English; should be 'The person who is the kindest' or 'The kindest person'"}
+{"id": "cy-2403", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "mynd â = to take (someone/something along), not 'walk'; should be 'He will take the dog for a walk' or 'He will take the dog out for a walk'"}
+{"id": "cy-2403", "fix": {"k": "mynd â", "en": "to take (along)", "pos": "v"}}
+{"id": "cy-2410", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "troi di i'r chwith = 'if you turn left'; missing conditional form — should be 'Os troi di' or 'Os mei di'n troi'"}
+{"id": "cy-2418", "severity": "medium", "issue": "UNNATURAL", "note": "Translation 'It's the wind blowing the door' is awkward; more natural: 'It's the wind that's blowing the door' or context-dependent 'The wind is blowing the door'"}
+{"id": "cy-2416", "severity": "low", "issue": "UNNATURAL", "note": "Fragment without main clause; 'The group that is coming tonight' is incomplete. Likely needs context like 'That's the group...' or full sentence structure"}
+{"id": "cy-2417", "severity": "low", "issue": "UNNATURAL", "note": "Fragment without main clause; needs context or completion"}
+{"id": "cy-2474", "severity": "medium", "issue": "UNNATURAL", "note": "English uses 'scissors' (plural) but phrasing 'with sharp scissors' is awkward; should be 'with a sharp pair of scissors' or rephrase"}
+{"id": "cy-2481", "severity": "medium", "issue": "UNNATURAL", "note": "English 'threatened he would leave' is grammatically awkward; should be 'threatened to leave' or 'threatened that he would leave'"}
+{"id": "cy-2482", "severity": "medium", "issue": "UNNATURAL", "note": "English 'It was them who' uses non-standard pronoun; should be 'It was they who' or 'They were the ones who'"}
+{"id": "cy-2483", "severity": "medium", "issue": "UNNATURAL", "note": "English 'It was her who' uses non-standard pronoun; should be 'It was she who' or 'She was the one who'"}
+{"id": "cy-2491", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "blodau'r gog = cuckoo flowers, not bluebells"}
+{"id": "cy-2491", "fix": {"k": "blodau'r gog", "en": "cuckoo flowers", "pos": "n"}}
+{"id": "cy-2506", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Byddwn with conditional would/should form; 'I would be' not 'I will be'"}
+{"id": "cy-2518", "severity": "medium", "issue": "UNNATURAL", "note": "ffeindiai (conditional) mismatched with bydda i (future); should both be conditional or both future"}
+{"id": "cy-2431", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "ardd lysiau = vegetable garden (correct), but 'grows' is misleading—should be 'grows' (cultivates) or better: 'The vegetable garden has potatoes and beans growing in it' or 'There are potatoes and beans growing in the vegetable garden'"}
+{"id": "cy-2442", "severity": "medium", "issue": "UNNATURAL", "note": "Tense shift: conditional 'if we take' but then present 'the scenery is beautiful'—should match tense or add 'will be' for consistency in English"}
+{"id": "cy-2455", "severity": "low", "issue": "UNNATURAL", "note": "Awkward phrasing: 'without anyone knowing she had already gone home' is clunky—better: 'without anyone realizing she had already left for home' or 'without anyone knowing she'd already gone home'"}
+{"id": "cy-2543", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "oraf means 'warmest', not 'coldest'; should be 'coldest night ever' = 'noson oerraf erioed'"}
+{"id": "cy-2543", "fix": {"k": "oraf", "en": "warmest", "pos": "adj"}}
+{"id": "cy-2550", "severity": "medium", "issue": "UNNATURAL", "note": "'trains with' is awkward; more natural as 'trains on the punching bag' or 'practices with the punching bag'"}
+{"id": "cy-2551", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "torri'r lawnt = to cut the grass/lawn, not 'mow' (though mow is acceptable, 'cut' is more literal)"}
+{"id": "cy-2558", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Mae'n dal i'w weld a fydd... is malformed Welsh; likely should be 'Mae'n dal i'w weld a fydd y diwygiadau'n cyflawni eu hamcanion' but the grammar is unclear. Translation doesn't match the Welsh structure clearly."}
+{"id": "cy-2565", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "No 'us' in Welsh; should be 'He promised he would come' not 'He promised us he would come'"}
+{"id": "cy-2568", "severity": "medium", "issue": "UNNATURAL", "note": "Incomplete sentence in English; should be 'If I were in your place' (clause needs apodosis or context)"}
+{"id": "cy-2575", "severity": "low", "issue": "UNNATURAL", "note": "tro i'r siop = 'a trip/turn to the shop'; 'walk' is interpretive but 'trip' or 'visit' more neutral"}
+{"id": "cy-2653", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "priododd = married (past tense), but translation uses present tense 'married' which is ambiguous; should be 'where my parents got married' or 'were married'"}
+{"id": "cy-2654", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "dringais i'r haf = I climbed in the summer (relative clause missing relative pronoun); translation omits 'that' or 'which' and awkwardly reads as if 'the mountain' is the direct object of a transitive verb; should be 'That's the mountain (that) I climbed last summer' or 'That's the mountain I climbed in last summer'"}
+{"id": "cy-2666", "severity": "medium", "issue": "UNNATURAL", "note": "'I read the price had risen' is ambiguous and slightly awkward; should be 'I read that the price had risen' to clarify the reported speech structure"}
+{"id": "cy-2612", "severity": "medium", "issue": "UNNATURAL", "note": "Cleft construction 'It was him who painted' is archaic/formal; modern English prefers 'He painted the mural' or 'He was the one who painted it'"}
+{"id": "cy-2621", "severity": "low", "issue": "UNNATURAL", "note": "'the northernmost capital in the world' is awkward; prefer 'the world's northernmost capital' or 'the northernmost capital of the world'"}
+{"id": "cy-2623", "severity": "low", "issue": "UNNATURAL", "note": "'The Middle Ages is' treats plural as singular; should be 'The Middle Ages are'"}
+{"id": "cy-2626", "severity": "high", "issue": "UNNATURAL", "note": "'That it was her who was there' is grammatically awkward and unclear; likely means 'All she said was that she was there' or context is missing"}
+{"id": "cy-2629", "severity": "medium", "issue": "UNNATURAL", "note": "Cleft construction with 'It was him who suggested' is archaic; prefer 'He suggested the idea'"}
+{"id": "cy-2633", "severity": "medium", "issue": "UNNATURAL", "note": "Cleft construction 'It was them who found' is archaic; prefer 'They found the solution'"}
+{"id": "cy-2634", "severity": "medium", "issue": "UNNATURAL", "note": "Cleft construction 'It was them who brought' is archaic; prefer 'They brought the dessert'"}
+{"id": "cy-2635", "severity": "medium", "issue": "UNNATURAL", "note": "Cleft construction 'It was him who answered' is archaic; prefer 'He answered the door'"}
+{"id": "cy-2638", "severity": "medium", "issue": "UNNATURAL", "note": "'The news said' is awkward; prefer 'The news reported that' or 'According to the news'"}
+{"id": "cy-2672", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "English 'It was her who taught me' is ungrammatical; should be 'She was the one who taught me' or 'She taught me'"}
+{"id": "cy-2686", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh sentence is incoherent; 'bargen chwerw' (bitter bargain) and 'beiro' (pen) don't form a sensible object. Translation cannot match nonsensical source."}
+{"id": "cy-2687", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh sentence is incoherent; 'y lili cyflym' (the fast lily) and 'cotwm' (cotton) don't form a sensible object. Translation cannot match nonsensical source."}
+{"id": "cy-2691", "severity": "low", "issue": "MISSING_NUANCE", "note": "'torri ei sbectol' can mean 'broke' or 'broke off/snapped'; context suggests the glasses broke during running, but 'broke' alone is ambiguous"}
+{"id": "cy-2585", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "poetha should be 'poethaf' (superlative); 'the hottest' is correct but Welsh form is wrong in source"}
+{"id": "cy-2594", "severity": "low", "issue": "UNNATURAL", "note": "English should be 'I would run' not 'I'd run' for consistency, minor stylistic issue"}
+{"id": "cy-2598", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "paratödd contains non-Welsh character (ö); should be 'paratôdd'"}
+{"id": "cy-2600", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Translation is incoherent. 'nytiau' likely means 'knots/nuts' but 'gonest' (honest) makes no sense applied to passports/bolts. Source sentence is malformed"}
+{"id": "cy-2605", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'gwestiwn gwyntog' (windy question) is nonsensical; 'gwyntog' means windy/flatulent. Likely error in Welsh source"}
+{"id": "cy-2606", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'brws rhad' (cheap brush) being 'rolled' makes no sense; source Welsh appears corrupted or contains errors"}
+{"id": "cy-2610", "severity": "medium", "issue": "UNNATURAL", "note": "English should be 'I'd do it differently' or 'I'd do things differently'; 'do differently' is incomplete"}
+{"id": "cy-2731", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Translation treats 'Nhw oedd yn darganfod' as if it means 'It was them' but should be 'They were discovering' or 'They discovered'"}
+{"id": "cy-2731", "severity": "medium", "issue": "UNNATURAL", "note": "'the disappointed lawn' is odd; 'lawn' likely means 'full' or 'complete' here, not 'lawn' as grass"}
+{"id": "cy-2754", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "soddgrwth is Welsh cello/stringed instrument but English says 'cello plays' which suggests active playing; Welsh means 'is being played' or passive sense needed"}
+{"id": "cy-2754", "fix": {"k": "soddgrwth", "en": "cello", "pos": "n"}}
+{"id": "cy-2831", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "electrolytig is not standard Welsh for electrolysis; should be electrolysis or electrolyts"}
+{"id": "cy-2839", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing awkward; more natural: 'It would have been nice to go on holiday this year' should be 'It would have been nice to have gone on holiday this year' or similar"}
+{"id": "cy-2848", "severity": "medium", "issue": "MISSING_NUANCE", "note": "rhigol primarily means furrow/groove; in water context often ditch or channel—furrow is narrow interpretation"}
+{"id": "cy-2794", "severity": "medium", "issue": "UNNATURAL", "note": "phrasing awkward; better: 'The caramelized onion is on the steak' or 'The onion, caramelized, is on the steak'"}
+{"id": "cy-2802", "severity": "medium", "issue": "UNNATURAL", "note": "'Bonsai is a small tree' reads as definition; source treats it as instance. Better: 'The bonsai is a small tree artfully shaped'"}
+{"id": "cy-2807", "severity": "low", "issue": "UNNATURAL", "note": "'plunges into the pool from height' is awkward; better: 'dives into the pool from a height' or 'plunges from height into the pool'"}
+{"id": "cy-2812", "severity": "medium", "issue": "UNNATURAL", "note": "conditional without clear subject; better: 'It would have been better to consult with the community first' (more natural flow)"}
+{"id": "cy-2815", "severity": "medium", "issue": "UNNATURAL", "note": "'There are' with plural subject and scattered placement is awkward; better: 'Ancient cromlechs and standing stones are scattered across the Welsh countryside'"}
+{"id": "cy-2820", "severity": "low", "issue": "UNNATURAL", "note": "better phrasing: 'A raincoat is needed' (subject-first) or 'One needs a raincoat'"}
+{"id": "cy-2708", "severity": "medium", "issue": "UNNATURAL", "note": "Welsh copula construction should be 'She was the one who' or 'She it was who' in English"}
+{"id": "cy-2713", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "bagbib is singular; English should be 'The bagpipe is a traditional Scottish instrument' or 'Bagpipes are a traditional Scottish instrument' if treating plural form"}
+{"id": "cy-2715", "severity": "medium", "issue": "UNNATURAL", "note": "Welsh copula construction; should be 'It was us who' or 'We were the ones who'"}
+{"id": "cy-2716", "severity": "medium", "issue": "UNNATURAL", "note": "'hoovering lifts' is awkward; better as 'hoovering removes' or 'the hoover lifts'"}
+{"id": "cy-2718", "severity": "medium", "issue": "UNNATURAL", "note": "Welsh copula construction; should be 'It was them who' or 'They were the ones who'"}
+{"id": "cy-2719", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Meaning is unclear; 'wrth y pridd' means 'by/next to the soil', not idiomatic as presented"}
+{"id": "cy-2728", "severity": "medium", "issue": "UNNATURAL", "note": "'a place to bend and shape' is awkward; better as 'used for bending and shaping'"}
+{"id": "cy-2729", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Text corrupted or nonsensical; 'warws miniog' (sharp warehouse) and 'syrffio' (surfing) don't form coherent meaning"}
+{"id": "cy-2730", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Text corrupted or nonsensical; 'gôl pitw' (tiny goal) and 'ham' don't form coherent meaning in context"}
+{"id": "cy-2899", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Mae gan Trystan dri phentref = 'Trystan has three villages' not 'relatives in three villages'; pentref means village, not relative"}
+{"id": "cy-2901", "severity": "medium", "issue": "UNNATURAL", "note": "glues is too informal; mortar 'binds' or 'holds' stones together more naturally"}
+{"id": "cy-2907", "severity": "medium", "issue": "UNNATURAL", "note": "'joyfully' is awkward; mejor 'The porpoise jumps joyfully from the water' or omit adverb"}
+{"id": "cy-2907", "fix": {"k": "llamhidydd", "en": "porpoise", "pos": "n"}}
+{"id": "cy-2776", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Missing object: 'Mae angen troli siopa' = 'A shopping trolley is needed' OR 'We need a shopping trolley'; current translation suggests incomplete sentence"}
+{"id": "cy-2777", "severity": "medium", "issue": "UNNATURAL", "note": "'has gone' is vague; 'The coal industry has declined' or 'collapsed' better captures Welsh sense"}
+{"id": "cy-2780", "severity": "low", "issue": "UNNATURAL", "note": "Trailing period after closing quote is non-standard; should be: 'The expert said, \"The data is clear.\"'"}
+{"id": "cy-2783", "severity": "low", "issue": "UNNATURAL", "note": "Welsh 'sbectol' is typically plural in function; 'spectacles improve my sight' is correct but 'glasses improve my sight' more natural in modern English"}
+{"id": "cy-2788", "severity": "low", "issue": "UNNATURAL", "note": "'trochol' = 'immersive' is acceptable but 'engrossing' or 'immersive' are both valid; current choice is fine"}
+{"id": "cy-2852", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Subject missing in Welsh (Mae wedi = It has). English adds 'It' but should be 'It has been a pleasure...' More natural: 'It's been a pleasure to meet you' or 'Meeting you has been a pleasure'"}
+{"id": "cy-2856", "severity": "medium", "issue": "UNNATURAL", "note": "'He has volunteered here for over a year' uses present perfect but Welsh suggests ongoing state. Better: 'He has been volunteering here for over a year' or 'He's been volunteering here...'"}
+{"id": "cy-2859", "severity": "medium", "issue": "UNNATURAL", "note": "'The meal was refused' is awkward passive. More natural: 'The meal was rejected' or 'The meal was sent back'"}
+{"id": "cy-2873", "severity": "low", "issue": "UNNATURAL", "note": "'The potatoes are fried' is ambiguous (ongoing vs. completed state). Better: 'The potatoes have been fried' to match Welsh perfect aspect"}
+{"id": "cy-2874", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Incomplete sentence. Welsh 'Wrth siarad, sylweddolais i' = 'While speaking, I realised' needs object. Should be 'While speaking, I realised [something]'"}
+{"id": "cy-2879", "severity": "low", "issue": "UNNATURAL", "note": "'The microbiologist grows bacteria cultures' is awkward. Better: 'The microbiologist cultivates bacterial cultures' or 'grows cultures of bacteria'"}
+{"id": "cy-2913", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "ffynnon dŵr is a water fountain/well; 'decorates' misses that it's a structural/ornamental feature that sits in the square"}
+{"id": "cy-2917", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'beyond recognition' is too strong; 'tu hwnt i bob disgwyl' means 'beyond all expectation'"}
+{"id": "cy-2920", "severity": "high", "issue": "CARD_DUPLICATE", "note": "this is a phrase card with no context sentence—format breaks card structure"}
+{"id": "cy-2922", "severity": "low", "issue": "UNNATURAL", "note": "'hold high' reads awkwardly; 'keep your head high' or 'hold your head up' is more natural"}
+{"id": "cy-2930", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'The forty miles takes' is grammatically incorrect; should be 'Forty miles takes' or 'The forty-mile distance takes'"}
+{"id": "cy-2943", "severity": "medium", "issue": "UNNATURAL", "note": "In English, we say 'optimizes the fastest route' but more naturally 'optimizes the fastest path' or better yet 'finds the fastest route'. The phrasing 'optimizes the fastest route' is awkward because optimization typically finds or determines the fastest route, rather than optimizing an already-fastest one."}
+{"id": "cy-2944", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Llawdriniaeth pen-glin' = 'knee surgery' more naturally than 'knee operation'. While 'operation' is acceptable, 'surgery' is the standard medical English term."}
+{"id": "cy-2950", "severity": "medium", "issue": "UNNATURAL", "note": "The construction 'Not knowing the truth, I agreed' is grammatically valid but archaic/literary. More natural modern English: 'Without knowing the truth, I agreed' or 'Not knowing the truth, I agreed to it.'"}
+{"id": "cy-2960", "severity": "low", "issue": "MISSING_NUANCE", "note": "'From everywhere' is literal but 'from all corners' or 'from every corner' better captures the Welsh idiom 'o bob cwr' and is more idiomatic English."}
+{"id": "cy-2972", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ceg=mouth, but 'ceg araf' is nonsensical; likely should be 'ceg' error in source or 'Do you have a slow mouth or bamboo?' is not idiomatic Welsh"}
+{"id": "cy-2973", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "fâs=vase but clawdd=hedge/dike/bank; phrase 'narrow vase or bank' is incoherent—likely card construction error"}
+{"id": "cy-2974", "severity": "medium", "issue": "UNNATURAL", "note": "hambwrdd ysgafn = light tray is acceptable but phrasing 'Do you have light tray or stool?' reads awkwardly; should be 'a light tray or a stool'"}
+{"id": "cy-2975", "severity": "low", "issue": "MISSING_NUANCE", "note": "dyfrlliw can mean watercolour/aquarelle; 'creates a light and soft landscape' is valid but 'paints' might be more natural"}
+{"id": "cy-2990", "severity": "medium", "issue": "UNNATURAL", "note": "'flies to the accident' is awkward; should be 'flies to the scene of the accident' or 'responds to the accident'"}
+{"id": "cy-2994", "severity": "low", "issue": "UNNATURAL", "note": "'hurts after the work' is grammatically correct but 'hurts from the work' or 'aches after working' is more natural"}
+{"id": "cy-3001", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; 'performs skilfully' should be 'performs artistically' or 'performs with artistry'"}
+{"id": "cy-3001", "fix": {"k": "yn gelfydd", "en": "artistically; with artistry", "pos": "adv"}}
+{"id": "cy-3007", "severity": "medium", "issue": "UNNATURAL", "note": "carpet doesn't warm a room; should be 'insulates' or 'keeps warm'"}
+{"id": "cy-3007", "fix": {"k": "cynhesu", "en": "to insulate; to keep warm", "pos": "v"}}
+{"id": "cy-3017", "severity": "low", "issue": "WRONG_REGISTER", "note": "calan gaeaf is Samhain/All Hallows; 'Halloween' is colloquial English term; 'All Hallows' Eve' or 'Samhain' more precise"}
+{"id": "cy-3028", "severity": "medium", "issue": "UNNATURAL", "note": "'every aspect of athletics' is awkward; should be 'every aspect of athletic ability' or 'all athletic disciplines'"}
+{"id": "cy-3028", "fix": {"k": "pob agwedd o athletau", "en": "all athletic disciplines; every aspect of athletic ability", "pos": "phrase"}}
+{"id": "cy-3120", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh text appears corrupted or nonsensical; 'cnau coco' (coconuts), 'twt' (tidy), 'chwilen' (beetle) don't form coherent meaning in this context"}
+{"id": "cy-3069", "severity": "medium", "issue": "UNNATURAL", "note": "September is a sign of the harvest is awkward; better: 'September marks the beginning of the harvest' or 'September signals the harvest season'"}
+{"id": "cy-3075", "severity": "low", "issue": "UNNATURAL", "note": "'She counted fifteen daffodils in the vase' is grammatically correct but 'cenhinen Bedr' (St. Peter's leek, i.e., daffodil) usage is slightly poetic; acceptable but could be clearer"}
+{"id": "cy-3076", "severity": "medium", "issue": "UNNATURAL", "note": "'allows listening to' is awkward; better: 'allows one to listen to' or 'allows doctors to listen to'"}
+{"id": "cy-3086", "severity": "low", "issue": "UNNATURAL", "note": "'It's fairly warm today despite clouds in the sky' is grammatically correct but slightly redundant; 'despite the clouds' would be more natural"}
+{"id": "cy-3089", "severity": "medium", "issue": "UNNATURAL", "note": "'a solution that everyone agrees with' is awkward; better: 'a solution with which everyone agrees' or 'a solution that everyone can agree on'"}
+{"id": "cy-3038", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Archwiliodd = explored/examined; but 'rhaglen ddogfen' = documentary programme/film, not 'the documentary' as subject. Should be 'The documentary programme explored...' or restructure."}
+{"id": "cy-3041", "severity": "low", "issue": "MISSING_NUANCE", "note": "'copa' = summit/peak; 'Wyddfa' is Snowdon. 'Snowdon's summit' is slightly redundant—'Snowdon' alone or 'the summit of Snowdon' clearer."}
+{"id": "cy-3047", "severity": "low", "issue": "UNNATURAL", "note": "'sôn am' = talk about/mention. 'talks about' is acceptable but 'speaks of' or 'concerns' would be more poetic for a poem context."}
+{"id": "cy-3054", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'yn ffres y bore yma' = (in) fresh (this) morning—awkward phrasing. Should be 'freshly prepared this morning' or 'prepared with fresh ingredients this morning'."}
+{"id": "cy-3055", "severity": "low", "issue": "UNNATURAL", "note": "'Cadwch...oherwydd y defaid' = Keep...because of the sheep. Idiomatic but could be 'Keep the gate closed—there are sheep!' for more natural English."}
+{"id": "cy-3214", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; 'has been held' better as 'has been taking place' or restructured"}
+{"id": "cy-3225", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "subject should be 'Guilt', object 'his conscience'; current phrasing ambiguous — likely means 'Guilt gnaws at/eats into his conscience'"}
+{"id": "cy-3228", "severity": "medium", "issue": "UNNATURAL", "note": "'shake to the rhythm' is awkward; better 'shake with the rhythm' or 'shake in time with the rhythm'"}
+{"id": "cy-3236", "severity": "medium", "issue": "UNNATURAL", "note": "'clack in the flamenco' is vague; better 'clack during the flamenco' or 'clack out the flamenco rhythm'"}
+{"id": "cy-3121", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "deintydd = dentist (person), not dentistry; truenus = miserable/pathetic (of a person), but context suggests dental problem or disease; 'welingtons' is correct but sentence nonsensical"}
+{"id": "cy-3121", "fix": {"k": "deintydd", "en": "dentist; dental problem", "pos": "n"}}
+{"id": "cy-3138", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; 'fresh-squeezed' or 'freshly squeezed' more natural than 'squeezed fresh'"}
+{"id": "cy-3142", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Goron (Crown) = the name of a major poetry competition; 'am' = 'for/about', but context suggests 'competes for' or 'awards'; should clarify the Eisteddfod context"}
+{"id": "cy-3146", "severity": "low", "issue": "UNNATURAL", "note": "'son of' is archaic; 'Manawydan fab Llŷr' is proper name from mythology—modern translation would use 'Manawydan ap Llŷr' or just the name"}
+{"id": "cy-3184", "severity": "medium", "issue": "UNNATURAL", "note": "\"takes x-rays\" implies active collection; should be \"takes x-rays of\" or \"performs x-rays on\" but the Welsh suggests ongoing passive examination. Better: \"The radiographer takes x-ray images of the bones.\""}
+{"id": "cy-3189", "severity": "low", "issue": "UNNATURAL", "note": "\"melts\" is present tense but context suggests habitual/general fact. Consider \"is melting\" for better sense of ongoing process."}
+{"id": "cy-3192", "severity": "low", "issue": "UNNATURAL", "note": "\"built in the workshop\" is passive but slightly awkward phrasing. \"is being built\" is technically correct but \"is constructed\" might be more natural."}
+{"id": "cy-3197", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Queen of our Literature\" is capitalized oddly and may misrepresent the Welsh. If referring to a specific epithet (e.g., for a particular writer), context needed. If literal, should be lowercase or clarified."}
+{"id": "cy-3246", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "ffacbys = broad beans, not chickpeas; chickpeas = cïcerau"}
+{"id": "cy-3254", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; better: 'The lighthouse keeper keeps the light burning' → 'The lighthouse keeper tends the light' or reword as 'keeps the light lit'"}
+{"id": "cy-3265", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "carlwm = weasel, not stoat; stoat = bronwen or draenog benddu"}
+{"id": "cy-3157", "severity": "medium", "issue": "UNNATURAL", "note": "Welsh uses 'ant-hill' or 'ants' nest' idiomatically; 'twmpath' (mound) is awkward for ant colony"}
+{"id": "cy-3166", "severity": "medium", "issue": "UNNATURAL", "note": "'sharing the cooking' is awkward; more naturally 'we take turns cooking' or 'we cook together'"}
+{"id": "cy-3272", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "ddanteithfwyd is a noun (delicacy), not an adjective describing the croissant. Should be 'The almond croissant is a sweet delicacy' or 'is delicious' depending on intent. Current phrasing 'is a sweet delicacy' doesn't match the structure—croissant can't simultaneously be a delicacy AND a croissant in this construction."}
+{"id": "cy-3285", "severity": "medium", "issue": "UNNATURAL", "note": "Tsunami doesn't 'rise from' the ocean in English; it 'is caused by' or 'originates from' seismic activity. 'Rises from the ocean' suggests emergence rather than causation."}
+{"id": "cy-3300", "severity": "high", "issue": "UNNATURAL", "note": "'get on the ladder' is British colloquial for 'enter the property market'; phrasing is awkward. Standard English: 'get a foothold on the property ladder' or 'buy their first home.'"}
+{"id": "cy-3307", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Welsh proverb meaning 'Without sin, without being born' (none are born without fault) — current translation misses the idiomatic sense"}
+{"id": "cy-3318", "severity": "medium", "issue": "UNNATURAL", "note": "Conditional 'if I had needed it' is awkward; should be 'if I needed it' (simple past condition without counterfactual implication)"}
+{"id": "cy-3320", "severity": "high", "issue": "MISSING_NUANCE", "note": "'Cerdd gaeth' is a specific Welsh literary form (strict/strict-meter poetry); 'strict verse' too vague — should reference the Welsh poetic tradition or use 'englyn' equivalent"}
+{"id": "cy-3330", "severity": "low", "issue": "UNNATURAL", "note": "Article 'a' more natural: 'Rhys Lewis is a famous novel' (not standard without article in English)"}
+{"id": "cy-3368", "severity": "medium", "issue": "UNNATURAL", "note": "Rendering 'fila' as 'mansion' is awkward; 'villa' would be more direct and natural"}
+{"id": "cy-3374", "severity": "low", "issue": "MISSING_NUANCE", "note": "'buddiol i'r meddwl' can mean 'beneficial to the mind' as well as 'cognitive benefits'; the more literal sense is omitted"}
+{"id": "cy-3380", "severity": "medium", "issue": "UNNATURAL", "note": "Word order 'Every wait is long' is stiff; 'All waiting is long' or 'Every moment of waiting is long' sounds more natural"}
+{"id": "cy-3390", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Mae'r Goron am farddoniaeth rydd' means 'The Crown is in favour of free verse poetry' or 'advocates for'; not 'is for' in the sense of 'belonging to'"}
+{"id": "cy-3346", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh text is incoherent/nonsensical; translation cannot be validated. 'prysur' (busy/hurried) and 'gweithdy' (workshop) don't fit context of washing shoes."}
+{"id": "cy-3347", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Welsh 'cranc' means crab, not crank. 'poblogaidd a'r selsig' (popular and the sausages) is grammatically broken. Translation misrepresents the source text entirely."}
+{"id": "cy-3465", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "sgyscraper is not standard Welsh for skyscraper; should be 'adeilad uchel' or similar. Translation 'skyscraper' is correct but the Welsh term is non-standard/borrowed."}
+{"id": "cy-3472", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing 'Amazement fills me at seeing' is awkward; more natural: 'I am filled with amazement when seeing' or 'Amazement fills me when I see the sunset'"}
+{"id": "cy-3391", "severity": "medium", "issue": "UNNATURAL", "note": "English word order awkward; should be 'Branwen, daughter of Llŷr, is sad' or 'Branwen daughter-of-Llŷr is sad'"}
+{"id": "cy-3397", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'ar ben y lanfa' means 'on top of the jetty' or 'at the end of the jetty', but 'at the end' is misleading; 'on' is more accurate"}
+{"id": "cy-3399", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'coco' in Welsh refers to cocoa/cacao, not coconut; should be 'cocoa' or 'cacao'"}
+{"id": "cy-3400", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward: 'Cerddon ni' with 'We walked' creates redundancy; better as 'We walked' alone or restructure"}
+{"id": "cy-3414", "severity": "medium", "issue": "UNNATURAL", "note": "'centuries-old' is imprecise for 'canmlwydd' (literally 'hundred-year'); 'hundred-year-old' or 'centuries-old' depending on context"}
+{"id": "cy-3488", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "boda tinwyn = hen harrier, but 'circles' is imprecise; Welsh cylchu suggests continuous circling/flying in circles, not landing. Better: 'The hen harrier circles over the moorland' or 'wheels over'."}
+{"id": "cy-3494", "severity": "low", "issue": "UNNATURAL", "note": "'lands on the short runway' is awkward. Better: 'The aeroplane lands on the short airstrip' or 'landing strip'. Also 'llain lanio' typically = runway/landing strip (noun phrase)."}
+{"id": "cy-3502", "severity": "low", "issue": "UNNATURAL", "note": "'Excuse me' is slightly formal/polite for the casual imperative 'Esgusodwch fi'. Better: 'Excuse me' or 'Pardon me' (both acceptable, but context matters)."}
+{"id": "cy-3423", "severity": "medium", "issue": "UNNATURAL", "note": "English 'crowned poet' is awkward; should be 'laureate poet' or 'crowned bard' to match Welsh 'bardd coronog'"}
+{"id": "cy-3426", "severity": "low", "issue": "WRONG_REGISTER", "note": "Brecon Beacons is plural in Welsh (Bannau) but treated as singular in English; more natural: 'The Brecon Beacons are a beautiful national park'"}
+{"id": "cy-3432", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward relative clause construction; better: 'That's the poet whose words inspired a nation' or restructure to clarify the relationship"}
+{"id": "cy-3436", "severity": "low", "issue": "UNNATURAL", "note": "'Bydda i' is dialectal/non-standard future; more standard is 'Bydda i' but note this may be intentionally dialectal—flag for consistency check"}
+{"id": "cy-3439", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Credwn i' is past tense ('I believed'), but translation says present tense context is unclear; should clarify tense or match to 'I believed it was true' as given"}
+{"id": "cy-3445", "severity": "low", "issue": "UNNATURAL", "note": "'last Friday morning' is redundant/awkward; better: 'last Friday morning' or 'on Friday morning last week'"}
+{"id": "cy-3446", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Ar ben fy nigon' means 'at the top of my contentment/satisfaction'; 'Overjoyed' captures tone but misses idiomatic structure; should be 'I'm delighted; over the moon' or keep idiom"}
+{"id": "cy-3450", "severity": "medium", "issue": "UNNATURAL", "note": "Sentence fragment; needs context or restructuring. As-is, reads like a label not a sentence. Better: 'She wore a tall black hat and shawl' or similar"}

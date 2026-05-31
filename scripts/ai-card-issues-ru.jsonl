@@ -1,0 +1,782 @@
+{"id": "ru-0043", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; better: 'She asked what I do' or 'She wanted to know what I'm doing'"}
+{"id": "ru-0052", "severity": "low", "issue": "UNNATURAL", "note": "'Before sleep' is slightly stilted; more natural: 'Before bed' or 'Before going to bed'"}
+{"id": "ru-0056", "severity": "low", "issue": "UNNATURAL", "note": "'turned forty years old' is redundant; better: 'He turned forty yesterday' or 'He became forty yesterday'"}
+{"id": "ru-0057", "severity": "low", "issue": "UNNATURAL", "note": "More natural: 'Today is Friday, the thirteenth' (standard English date order)"}
+{"id": "ru-0008", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "свою means 'my own' not 'their'; should be 'I love my family'"}
+{"id": "ru-0018", "severity": "medium", "issue": "UNNATURAL", "note": "perfective aspect suggests completed action; 'I recently read a book' or 'I have recently read a book' more natural"}
+{"id": "ru-0021", "severity": "low", "issue": "UNNATURAL", "note": "perfective 'пишет письмо' is awkward; 'writes letters' or 'is writing a letter' more idiomatic"}
+{"id": "ru-0030", "severity": "medium", "issue": "UNNATURAL", "note": "'turned one year old' is awkward; prefer 'The child turned one' or 'The child became one year old'"}
+{"fix": {"k": "свою", "en": "my own; one's own", "pos": "pron"}}
+{"id": "ru-0099", "severity": "medium", "issue": "UNNATURAL", "note": "\"commutes to work now\" is awkward; present tense + 'now' suggests habitual action but ездит means 'goes/commutes' (habitual). Better: 'The programmer goes to work now' or 'is going to work now'"}
+{"id": "ru-0100", "severity": "medium", "issue": "UNNATURAL", "note": "\"The read book\" is grammatically odd English; use 'The book that was read' or 'The finished book'"}
+{"id": "ru-0113", "severity": "medium", "issue": "UNNATURAL", "note": "\"I will tell\" lacks object; Russian расскажу implies full disclosure. Better: 'I will tell you everything' or 'I will tell it all'"}
+{"id": "ru-0116", "severity": "low", "issue": "WRONG_REGISTER", "note": "'My brother' not in Russian source; Russian 'Брат' = 'The brother' or 'Brother'. Minor but shifts meaning slightly."}
+{"id": "ru-0062", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "У сестры means 'sister has' (possessive construction), not 'my sister has'"}
+{"id": "ru-0063", "severity": "medium", "issue": "UNNATURAL", "note": "imperative + indirect object; should be 'Give me three cups of tea, please' or 'Please give me three cups of tea'"}
+{"id": "ru-0066", "severity": "low", "issue": "UNNATURAL", "note": "'Ten to two' is correct but 'two minutes to two' or 'ten minutes to two' would be more natural depending on context"}
+{"id": "ru-0076", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "No article 'the' in Russian; should be 'I know a person who did this' or 'I know the person who did this' depending on context—current phrasing assumes definiteness not in source"}
+{"id": "ru-0077", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "No article 'the' in Russian; should be 'Show me a place where you work' or context-dependent 'the place'"}
+{"id": "ru-0086", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "учит язык = 'to teach a language', not 'to study a language'; учитель is 'teacher' so should be 'The teacher teaches a language now'"}
+{"id": "ru-0087", "severity": "low", "issue": "UNNATURAL", "note": "'always watches' is odd without purpose; could be 'habitually watches' but phrasing suggests habitual action may be unusual"}
+{"id": "ru-0128", "severity": "medium", "issue": "UNNATURAL", "note": "Double negative 'Вы не знаете' is too formal; should be 'Do you know' without negation"}
+{"id": "ru-0134", "severity": "low", "issue": "UNNATURAL", "note": "'speak a little slower' misses the polite conditional force; 'Could you speak a bit more slowly?' is better"}
+{"id": "ru-0142", "severity": "low", "issue": "UNNATURAL", "note": "'there is a lot of interesting things' is grammatically awkward; should be 'there are many interesting things' or 'there is much that is interesting'"}
+{"id": "ru-0147", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'harder than everyone' is incomplete; should be 'harder than anyone else' or 'harder than all the others'"}
+{"id": "ru-0155", "severity": "high", "issue": "UNNATURAL", "note": "скоро (soon) with present tense is awkward; should be 'is about to wash' or use future tense"}
+{"id": "ru-0157", "severity": "medium", "issue": "UNNATURAL", "note": "missing article; should be 'The brother' or 'His brother' for clarity in context"}
+{"id": "ru-0165", "severity": "medium", "issue": "UNNATURAL", "note": "читает книгу (reads a book) is generic; more naturally 'reads books' or specify which book"}
+{"id": "ru-0166", "severity": "medium", "issue": "UNNATURAL", "note": "пишет письмо (writes a letter) is generic habitual action; awkward without context"}
+{"id": "ru-0168", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "разбить огород means 'to create/start a garden', not 'break'; better: 'She plans to start a vegetable garden'"}
+{"id": "ru-0170", "severity": "medium", "issue": "UNNATURAL", "note": "довёл до конца is more emphatic than simple 'finished'; better: 'I saw the work through to the end' or 'I completed the work'"}
+{"id": "ru-0177", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "не читала (past perfective) = 'did not read' or 'has not read' (one-time action); current translation obscures the aspect"}
+{"id": "ru-0181", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "скоро means 'soon' but doesn't fit with present tense работает; needs 'will work soon' or sentence restructuring"}
+{"id": "ru-0188", "severity": "medium", "issue": "UNNATURAL", "note": "after lunch is odd for commuting to work; likely should be 'after lunch' to mean 'after having lunch' or context is unclear"}
+{"id": "ru-0189", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "обед means 'lunch'; 'cooks lunch at school after lunch' is contradictory; should be 'cooks lunch at school' or specify different meal"}
+{"id": "ru-0192", "severity": "medium", "issue": "UNNATURAL", "note": "Six hours of work are tiring uses plural verb; standard English: 'Six hours of work is tiring' (singular)"}
+{"id": "ru-0209", "severity": "medium", "issue": "UNNATURAL", "note": "'in a week, on Sunday' is contradictory; either 'in a week' or 'on Sunday next week'; неделя can mean 'seven days' but context suggests one specific day"}
+{"id": "ru-0241", "severity": "medium", "issue": "UNNATURAL", "note": "\"does laundry\" is idiomatic but awkward; \"washes clothes\" more natural"}
+{"id": "ru-0246", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "тихое = quiet; building cannot be quiet in this context without extra meaning"}
+{"id": "ru-0247", "severity": "high", "issue": "UNNATURAL", "note": "скоро (soon) modifies action oddly; should be \"will soon sing\" or rephrase"}
+{"id": "ru-0254", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "маленькое утро = small morning is nonsensical; утро cannot be \"small\""}
+{"id": "ru-0255", "severity": "medium", "issue": "UNNATURAL", "note": "дорога = road/trip; phrasing unclear—likely means \"How long is the trip?\" not \"does the trip take\""}
+{"id": "ru-0259", "severity": "medium", "issue": "UNNATURAL", "note": "\"See you tomorrow, have a good evening\" mixes farewell and greeting awkwardly; likely means \"Until tomorrow, good evening\" or \"Goodbye, have a good evening\""}
+{"id": "ru-0319", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Без четверти час\" means \"a quarter to one\" (12:45), but \"скоро обед\" (lunch is soon) doesn't logically follow. Translation conflates time-telling with a separate statement."}
+{"id": "ru-0320", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"девяти до девяти\" (9 to 9) is nonsensical. Should be \"from 9am to 9pm\" or clarify the hours intended."}
+{"id": "ru-0321", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Russian phone numbers use standard digit-by-digit format. \"восемь девятьсот семнадцать\" (8-900-17) is incomplete/unusual; likely should specify full number or use \"eight, nine hundred...\" pacing."}
+{"id": "ru-0329", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"рисует картину в магазине скоро\" (paints a picture in the store soon) is semantically odd. Likely error in source sentence construction or missing context."}
+{"id": "ru-0211", "severity": "medium", "issue": "UNNATURAL", "note": "Running at a station is odd; likely should be 'at the station' contextually, but phrasing 'on the platform' or similar would be more natural"}
+{"id": "ru-0212", "severity": "medium", "issue": "UNNATURAL", "note": "'paints a picture' suggests artistic creation; in Russian present imperfective бегает often suggests habitual action, and 'now' with present tense is slightly awkward—better 'is painting'"}
+{"id": "ru-0215", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "стирать = to wash (clothes); 'did laundry' is colloquial; translate as 'washed clothes' or 'did the laundry'"}
+{"id": "ru-0216", "severity": "medium", "issue": "UNNATURAL", "note": "мыл посуду in past tense; 'washed dishes' is correct but 'washed the dishes' is more natural in English"}
+{"id": "ru-0220", "severity": "medium", "issue": "UNNATURAL", "note": "рисует = to paint/draw; similar issue as ru-0212 with present + 'now'; better as 'is painting'"}
+{"id": "ru-0224", "severity": "medium", "issue": "UNNATURAL", "note": "рисует in present + 'on Monday' (future time); should be 'will paint' or 'is painting'"}
+{"id": "ru-0225", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "в парке (in the park), not в больнице (at the hospital); wrong location in English translation"}
+{"id": "ru-0227", "severity": "medium", "issue": "UNNATURAL", "note": "'the oldest' assumes two people; 'oldest' without article more natural for 'Who is the eldest among you?'"}
+{"id": "ru-0229", "severity": "medium", "issue": "UNNATURAL", "note": "'embroidered the christening gown' is awkward; more natural: 'embroidered a christening shirt' (рубашка = shirt/gown); also орнаментом should clarify it's embroidered 'with' not just location"}
+{"id": "ru-0232", "severity": "medium", "issue": "UNNATURAL", "note": "'poured wax candles' is incorrect; отливала = to cast/mold; should be 'molded' or 'cast wax candles'"}
+{"id": "ru-0331", "severity": "medium", "issue": "UNNATURAL", "note": "'work' is odd for a store; 'is open' is more natural"}
+{"id": "ru-0333", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "перед сном = 'before sleep/bed'; but ездит (habitual) + перед сном is illogical — likely means 'commutes to work' generally, not specifically before bed; context suggests error in source or translation is nonsensical"}
+{"id": "ru-0344", "severity": "low", "issue": "UNNATURAL", "note": "'today is wonderful weather' is awkward; should be 'today has wonderful weather' or 'the weather is wonderful today'"}
+{"id": "ru-0345", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "в театре = 'in the theater' but reading in a theater on weekends is implausible; likely means 'at home' (дома) or mistranslation of location"}
+{"id": "ru-0354", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "same issue as ru-0345: reading a book 'in the theater' is implausible; source or translation error"}
+{"id": "ru-0274", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Добрый день\" is a greeting (Good afternoon/Hello), not a question. The sentence structure suggests this is a polite greeting followed by a separate question about seating."}
+{"id": "ru-0280", "severity": "medium", "issue": "UNNATURAL", "note": "\"I'm not against going to the sea\" is grammatically correct but awkward. Better: \"I don't mind going to the sea\" or \"I'm willing to go to the sea.\""}
+{"id": "ru-0286", "severity": "low", "issue": "UNNATURAL", "note": "\"glad to see you again\" — more naturally \"I'm glad to see you again\" or \"pleased to see you again.\""}
+{"id": "ru-0289", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"ездил на работу\" means \"went to work\" or \"commuted to work,\" not \"commuted to work\" in the sense of regular travel. More naturally: \"The child went to work last week\" — though the scenario itself is semantically odd."}
+{"id": "ru-0290", "severity": "low", "issue": "UNNATURAL", "note": "\"Could you tell me where the metro is?\" is grammatically acceptable but slightly formal. More natural colloquial: \"Can you tell me where the metro is?\" or \"Where's the metro?\""}
+{"id": "ru-0291", "severity": "medium", "issue": "UNNATURAL", "note": "\"They chose the child's name for a long time\" is awkward. Better: \"They took a long time choosing the child's name\" or \"The child's name took a long time to choose.\""}
+{"id": "ru-0297", "severity": "low", "issue": "UNNATURAL", "note": "\"Inside the box there is a gift\" is grammatically correct but the article usage is slightly awkward. More natural: \"There is a gift inside the box\" or \"Inside the box is a gift.\""}
+{"id": "ru-0298", "severity": "low", "issue": "UNNATURAL", "note": "\"A large building is visible from afar\" is correct but stiff. More natural: \"You can see a large building from far away\" or \"A large building is visible from a distance.\""}
+{"id": "ru-0365", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Idiom mistranslated. 'Два сапога — пара' means 'they're two of a kind' (about matching people), not literal boots making a pair"}
+{"id": "ru-0377", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Добрый' means 'kind' as adjective for people/actions, not for cities. Likely should be 'A good/nice city' or this is nonsensical source"}
+{"id": "ru-0388", "severity": "high", "issue": "UNNATURAL", "note": "Child commuting to work daily is semantically implausible. Likely error in Russian source or English should be different context"}
+{"id": "ru-0403", "severity": "medium", "issue": "UNNATURAL", "note": "Parks don't typically 'stand' or be described as 'cheerful'; awkward personification in English"}
+{"id": "ru-0404", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "спортсмен = athlete; 'usually works in the office' contradicts the semantic expectation and likely indicates a nonsensical training sentence"}
+{"id": "ru-0409", "severity": "high", "issue": "UNNATURAL", "note": "Reading a book in a theater is contextually odd; likely a constructed/unrealistic sentence"}
+{"id": "ru-0410", "severity": "high", "issue": "UNNATURAL", "note": "Painting at a market is contextually implausible; likely a constructed sentence"}
+{"id": "ru-0411", "severity": "high", "issue": "UNNATURAL", "note": "Painting a picture in a theater is contextually implausible"}
+{"id": "ru-0412", "severity": "medium", "issue": "UNNATURAL", "note": "Reading at a train station is plausible but slightly awkward; consider 'on the platform' or similar"}
+{"id": "ru-0417", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "журналист = journalist; journalists don't typically cook lunch at school—semantic mismatch suggests flawed training data"}
+{"id": "ru-0451", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Article 'A' is grammatically incorrect before vowel; should be 'An'"}
+{"id": "ru-0452", "severity": "low", "issue": "UNNATURAL", "note": "'A big letter' is awkward; 'Big letter' or 'A long letter' more natural"}
+{"id": "ru-0453", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Сильное утро' doesn't mean 'strong morning'; утро here is abstract/idiomatic, not descriptive"}
+{"id": "ru-0457", "severity": "low", "issue": "UNNATURAL", "note": "Missing article; should be 'The sister' or 'My sister'"}
+{"id": "ru-0462", "severity": "low", "issue": "UNNATURAL", "note": "Missing article; should be 'The nurse' or 'A nurse'"}
+{"id": "ru-0466", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Ездил' is past imperfective (habitual/general past); 'commuted' implies repeated action. Better: 'went to work' or 'traveled to work'"}
+{"id": "ru-0470", "severity": "medium", "issue": "UNNATURAL", "note": "'Half past nine' is incorrect; Russian 'половина десятого' = 'half ten' = 9:30 by Russian time-telling convention"}
+{"id": "ru-0477", "severity": "low", "issue": "UNNATURAL", "note": "Missing article before 'girl'; should be 'The girl'"}
+{"id": "ru-0422", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Водитель (driver) doesn't typically cook at stations; likely context error or wrong sentence"}
+{"id": "ru-0424", "severity": "medium", "issue": "UNNATURAL", "note": "Reading in a store this morning is awkward context; tense/aspect also unclear (reads vs is reading)"}
+{"id": "ru-0425", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Nurse writing at market after lunch is implausible; likely wrong sentence or data corruption"}
+{"id": "ru-0427", "severity": "medium", "issue": "UNNATURAL", "note": "Should be 'can't find his keys anywhere' or 'can't find his keys in any place'; нигде emphasizes exhaustive search"}
+{"id": "ru-0432", "severity": "low", "issue": "MISSING_NUANCE", "note": "на третьем курсе better rendered as 'in the third year of study' or 'third year student'; 'third year' alone is vague"}
+{"id": "ru-0434", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Girl playing chess at market in evening is implausible context; likely data error"}
+{"id": "ru-0439", "severity": "medium", "issue": "UNNATURAL", "note": "Redundant: 'were building for two years and finally built it' repeats the action; should clarify aspect (imperfective/perfective distinction)"}
+{"id": "ru-0440", "severity": "medium", "issue": "UNNATURAL", "note": "'cycled through the rain' is awkward; 'was cycling' or 'rode through the rain' more natural"}
+{"id": "ru-0443", "severity": "low", "issue": "MISSING_NUANCE", "note": "Perfect aspect (I haven't heard) vs simple past (I didn't hear) distinction lost; Russian implies perfective result"}
+{"id": "ru-0450", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Новое море' (new sea) is nonsensical; likely typo for 'новое платье' (new dress) or similar"}
+{"id": "ru-0522", "severity": "high", "issue": "UNNATURAL", "note": "Word order is inverted; should be 'She read a task often' or 'She often read a task' (adverb before verb in English)"}
+{"id": "ru-0526", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Умное (smart/intelligent) cannot meaningfully modify море (sea); nonsensical phrase in both languages"}
+{"id": "ru-0527", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Доброе (kind/good-natured) cannot meaningfully modify окно (window); nonsensical phrase in both languages"}
+{"id": "ru-0528", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Весёлое (cheerful/merry) cannot meaningfully modify письмо (letter) in this context; nonsensical phrase"}
+{"id": "ru-0540", "severity": "low", "issue": "WRONG_REGISTER", "note": "Should be 'An old city' not 'A old city' (article usage error)"}
+{"id": "ru-0484", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'helps' with 'сейчас' (now) sounds awkward; should use present continuous 'is helping'"}
+{"id": "ru-0485", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'helps' with 'сейчас' (now) sounds awkward; should use present continuous 'is helping'"}
+{"id": "ru-0486", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'paints' with 'завтра' (tomorrow) is contradictory; use future 'will paint'"}
+{"id": "ru-0488", "severity": "low", "issue": "UNNATURAL", "note": "Imperative 'Sit down' needs comma before conjunction; 'already ready' is slightly redundant (though acceptable colloquially)"}
+{"id": "ru-0489", "severity": "medium", "issue": "UNNATURAL", "note": "Habitual action 'listens' in specific location 'in the store' is contextually odd; likely data error rather than natural Russian"}
+{"id": "ru-0491", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'reads' with 'сейчас' (now) should use present continuous 'is reading'"}
+{"id": "ru-0492", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'начинали' is imperfective past; 'started' suggests completed action; should be 'We used to start' or 'We have started'"}
+{"id": "ru-0496", "severity": "low", "issue": "MISSING_NUANCE", "note": "No possessive 'My' in Russian sentence; 'sister' alone is also acceptable"}
+{"id": "ru-0498", "severity": "high", "issue": "UNNATURAL", "note": "Salesman buying groceries in a park is nonsensical; likely data error"}
+{"id": "ru-0499", "severity": "high", "issue": "UNNATURAL", "note": "Cleaning apartment at beach is contextually absurd; likely data error"}
+{"id": "ru-0502", "severity": "medium", "issue": "UNNATURAL", "note": "Habitual action 'paints' in mountains is contextually odd; likely data error"}
+{"id": "ru-0504", "severity": "medium", "issue": "UNNATURAL", "note": "Habitual 'helps a friend in the restaurant' is contextually questionable; likely data error"}
+{"id": "ru-0510", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'ездит на работу на вокзале' = 'commutes to work at the station' but meaning is unclear; likely should be 'ездит на вокзал' (goes to the station for work) or 'works at the station'"}
+{"id": "ru-0543", "severity": "high", "issue": "UNNATURAL", "note": "друг (friend/person) doesn't naturally 'stand on a corner' in Russian; suggests the person is loitering or waiting, which is awkward without context"}
+{"id": "ru-0546", "severity": "medium", "issue": "UNNATURAL", "note": "'Welcome to our home' is interpretive; Russian says 'Welcome to us' — closer translation is 'Welcome, please come in' but the TO OUR HOME addition is not in source"}
+{"id": "ru-0551", "severity": "low", "issue": "UNNATURAL", "note": "'A old street' should be 'An old street' (article agreement)"}
+{"id": "ru-0552", "severity": "high", "issue": "UNNATURAL", "note": "песня (song) cannot be described as 'big' in this way; Russian uses большая but English 'big song' is awkward — should be 'important song' or clarify meaning"}
+{"id": "ru-0557", "severity": "medium", "issue": "UNNATURAL", "note": "'not tell me your name' is awkward; better: 'could you tell me your name?' (the 'не подскажете' is softening polite form, not negation in meaning)"}
+{"id": "ru-0566", "severity": "high", "issue": "UNNATURAL", "note": "'plays chess at the hospital' is oddly specific and contextually strange without explanation; suggests unusual situation"}
+{"id": "ru-0604", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "бегал (imperfective past) suggests habitual running, not a single event. Translation should reflect 'used to run' or 'was running', not simple past tense"}
+{"id": "ru-0605", "severity": "medium", "issue": "UNNATURAL", "note": "ходили кататься = 'went to go skating' (redundant structure in English); better: 'went skating'"}
+{"id": "ru-0612", "severity": "medium", "issue": "UNNATURAL", "note": "present continuous 'are buying' doesn't match typical Russian habitual present; should be 'buy'"}
+{"id": "ru-0616", "severity": "medium", "issue": "UNNATURAL", "note": "present continuous 'is watching' assumes ongoing action; Russian imperfective смотрит can mean habitual 'watches', should accept both"}
+{"id": "ru-0620", "severity": "low", "issue": "UNNATURAL", "note": "'commutes to work' is implied but not explicit; 'goes to work by [transport]' more literal, though current translation acceptable"}
+{"id": "ru-0624", "severity": "low", "issue": "UNNATURAL", "note": "'Be so kind' is archaic; modern English: 'Would you be so kind' or 'Could you pass the salt, please'"}
+{"id": "ru-0628", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "готовит (imperfective) means 'cooks/prepares'; 'always cooks lunch at home' is awkward if doctor doesn't work at home—context suggests 'prepares' might be better, but sentence itself is semantically odd"}
+{"id": "ru-0572", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'reads' is technically correct but contextually awkward; should be 'The girl is reading' or specify habitual action"}
+{"id": "ru-0576", "severity": "medium", "issue": "MISSING_NUANCE", "note": "учу can mean 'to study; to teach' — second sense omitted"}
+{"id": "ru-0577", "severity": "medium", "issue": "MISSING_NUANCE", "note": "учит can mean 'to study; to teach' — second sense omitted"}
+{"id": "ru-0578", "severity": "medium", "issue": "MISSING_NUANCE", "note": "учит can mean 'to study; to teach' — second sense omitted"}
+{"id": "ru-0579", "severity": "low", "issue": "UNNATURAL", "note": "'task' is technically correct but 'problem' is more natural for задачу in this context"}
+{"id": "ru-0580", "severity": "low", "issue": "UNNATURAL", "note": "'drove' is narrow; 'entered' or 'pulled into' better captures въехала"}
+{"id": "ru-0593", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "умная means 'intelligent; clever' not 'smart' in the sense of the book being intelligent — should be 'An intelligent book' or 'A clever book'"}
+{"id": "ru-0596", "severity": "high", "issue": "UNNATURAL", "note": "Highly implausible scenario (programmer painting at a station regularly); likely a constructed/test sentence but translation is literal and contextually bizarre"}
+{"id": "ru-0597", "severity": "high", "issue": "UNNATURAL", "note": "Highly implausible scenario (nurse dancing waltzes in a restaurant regularly); likely a constructed/test sentence but translation is literal and contextually bizarre"}
+{"id": "ru-0598", "severity": "high", "issue": "UNNATURAL", "note": "Highly implausible scenario (journalist washing dishes at work on weekends); likely a constructed/test sentence but translation is literal and contextually bizarre"}
+{"id": "ru-0599", "severity": "high", "issue": "UNNATURAL", "note": "Highly implausible scenario (grandmother cooking in a theater on weekends); likely a constructed/test sentence but translation is literal and contextually bizarre"}
+{"id": "ru-0600", "severity": "high", "issue": "UNNATURAL", "note": "Highly implausible scenario (doctor painting pictures in a studio on Mondays); likely a constructed/test sentence but translation is literal and contextually bizarre"}
+{"id": "ru-0593", "fix": {"k": "умная", "en": "intelligent; clever", "pos": "adj"}}
+{"id": "ru-0576", "fix": {"k": "учу", "en": "to study; to teach", "pos": "v"}}
+{"id": "ru-0577", "fix": {"k": "учит", "en": "to study; to teach", "pos": "v"}}
+{"id": "ru-0578", "fix": {"k": "учит", "en": "to study; to teach", "pos": "v"}}
+{"id": "ru-0634", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Добрая means 'kind/good' (describing character), not used for streets;句意不通 — likely meant 'Улица Добра' (proper name) or completely different sentence"}
+{"id": "ru-0635", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Сильная школа (strong/excellent school) — adjective describes quality, but 'a strong school' is awkward; should be 'A good school' or 'An excellent school'"}
+{"id": "ru-0636", "severity": "low", "issue": "MISSING_NUANCE", "note": "рисует картину can mean 'to draw/paint a picture' — translation captures this but 'paints' is more natural for картина than 'draws'"}
+{"id": "ru-0648", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ездит на работу в музее — 'commutes to work in the museum' suggests she works in the museum; should be 'commutes to work at the museum' or 'travels to the museum for work'"}
+{"id": "ru-0653", "severity": "low", "issue": "MISSING_NUANCE", "note": "мечтает о can mean 'to dream of; to dream about' — both valid, but 'of' is slightly more natural"}
+{"id": "ru-0657", "severity": "low", "issue": "UNNATURAL", "note": "'White snow covered the whole ground' — 'white' is redundant before snow; should be 'Snow covered the entire ground' or just 'covered all the ground'"}
+{"id": "ru-0671", "severity": "medium", "issue": "MISSING_NUANCE", "note": "тётя can mean 'aunt' but also 'a woman' (informal); 'my aunt' is more natural but not obligatory"}
+{"id": "ru-0677", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "рисует means 'to draw; to paint' but the sentence is nonsensical (chef painting at school). Likely a bad source sentence, not a translation error per se, but the English doesn't clarify the absurdity."}
+{"id": "ru-0680", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "на пляже = 'at the beach'; impossible for commuting to work. Source sentence is incoherent."}
+{"id": "ru-0681", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "на вокзале = 'at the station'; highly implausible context for playing chess during work commute. Source sentence is awkward."}
+{"id": "ru-0684", "severity": "medium", "issue": "UNNATURAL", "note": "'The driver ran in the morning in the park' — redundant/awkward phrasing; 'ran in the park in the morning' is more natural"}
+{"id": "ru-0687", "severity": "low", "issue": "UNNATURAL", "note": "'borscht and fresh bread' — English typically says 'borscht with fresh bread' or 'borscht accompanied by fresh bread' to match the со (with) preposition"}
+{"id": "ru-0691", "severity": "medium", "issue": "UNNATURAL", "note": "'Have a safe flight' is idiomatic but 'Хорошего полёта' literally means 'good flight' — prefer 'Have a good flight'"}
+{"id": "ru-0704", "severity": "medium", "issue": "UNNATURAL", "note": "'turned seventy years old' is awkward; prefer 'turned seventy' or 'became seventy'"}
+{"id": "ru-0708", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "present tense 'смотрит' + 'сейчас' = 'is watching', not 'watches'"}
+{"id": "ru-0709", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "imperfective 'читали' suggests ongoing/habitual action; 'were reading' or 'read (in general)' more accurate than simple past 'read'"}
+{"id": "ru-0718", "severity": "high", "issue": "UNNATURAL", "note": "context 'writes a letter in the hospital' is semantically odd and suggests missing context; unclear what action is being conveyed"}
+{"id": "ru-0719", "severity": "high", "issue": "UNNATURAL", "note": "context 'writes a letter in the store' is semantically odd and suggests missing context; unclear what action is being conveyed"}
+{"id": "ru-0720", "severity": "high", "issue": "UNNATURAL", "note": "context 'watches a movie at the market' is semantically odd and suggests missing context; unlikely real scenario"}
+{"id": "ru-0754", "severity": "high", "issue": "UNNATURAL", "note": "Driver cooking lunch in a museum is illogical; likely should be 'at home' or different context"}
+{"id": "ru-0758", "severity": "high", "issue": "UNNATURAL", "note": "Commuting to work 'at school tomorrow' is nonsensical; should be 'to school' or 'tomorrow' needs different construction"}
+{"id": "ru-0760", "severity": "high", "issue": "UNNATURAL", "note": "Commuting to work 'in the mountains' is implausible; likely should be different location"}
+{"id": "ru-0761", "severity": "high", "issue": "UNNATURAL", "note": "Chef painting pictures at work every day is illogical; likely should be different activity or context"}
+{"id": "ru-0770", "severity": "low", "issue": "MISSING_NUANCE", "note": "Can also mean 'ran across' or 'dashed across'; 'crossed' is acceptable but slightly formal"}
+{"id": "ru-0723", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "театре means 'in the theater', not 'apartment in the theater' — likely should be дома (at home) or this is nonsensical context"}
+{"id": "ru-0725", "severity": "medium", "issue": "UNNATURAL", "note": "'went around all the stores' is awkward; 'visited all the stores' or 'went to all the stores' is more natural"}
+{"id": "ru-0730", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ездит (present imperfective) + завтра (tomorrow) is contradictory; should be 'will commute' or 'commutes regularly', not future 'tomorrow'"}
+{"id": "ru-0734", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "спортсмен (athlete) washing dishes at home is semantically odd and inconsistent with ru-0731/ru-0736; likely data error"}
+{"id": "ru-0736", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "prodavets (salesman) washing dishes at home is semantically odd and repeated; likely data error"}
+{"id": "ru-0742", "severity": "medium", "issue": "UNNATURAL", "note": "'Glad to finally meet you in person' should be 'I'm glad to finally meet you in person' or 'Pleased to finally meet you in person' for natural English"}
+{"id": "ru-0748", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "писатель (writer) cooking lunch at work is semantically odd; likely data error like ru-0731/ru-0734/ru-0736"}
+{"id": "ru-0812", "severity": "medium", "issue": "UNNATURAL", "note": "смотрит фильм suggests watching a single, specific film; 'watches movies' or 'watches films' (plural/habitual) would be more natural"}
+{"id": "ru-0817", "severity": "medium", "issue": "UNNATURAL", "note": "missing article before 'sister'; should be 'for the sister' to match Russian dative construction"}
+{"id": "ru-0828", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "завезли means 'brought/delivered' (transported to a destination), not 'dropped off' which implies a secondary stop; 'We delivered groceries' or 'We brought groceries'"}
+{"id": "ru-0839", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "semantic anomaly suggests source sentence is nonsensical (salesman washing dishes in a museum); verify original Russian"}
+{"id": "ru-0840", "severity": "medium", "issue": "UNNATURAL", "note": "this morning' is awkward; use 'this morning' (definite article before time) or restructure: 'The programmer is washing dishes at home this morning'"}
+{"id": "ru-0782", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "тихий друг стоит на углу is nonsensical; likely 'тихий дом' (quiet house) or should be 'A quiet friend stands on the corner' is illogical translation"}
+{"id": "ru-0801", "severity": "medium", "issue": "UNNATURAL", "note": "'works in the office at home' is contradictory; should be 'works from home in an office' or 'works in a home office'"}
+{"id": "ru-0802", "severity": "high", "issue": "UNNATURAL", "note": "watching a movie at the airport is contextually odd; suggest 'The librarian usually watches a movie at the airport' may be a data error"}
+{"id": "ru-0805", "severity": "high", "issue": "UNNATURAL", "note": "'in the park soon' mixes location with temporal adverb awkwardly; should be 'will play chess in the park soon' or 'plays chess in the park'"}
+{"id": "ru-0807", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'commutes to work at the airport' is illogical; should be 'commutes to the airport for work' or 'works at the airport'"}
+{"id": "ru-0808", "severity": "high", "issue": "UNNATURAL", "note": "playing chess at the airport before bed is semantically incoherent; likely data error"}
+{"id": "ru-0809", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'far journey' omits common sense reading; 'далёкий' means 'distant' or 'remote' but 'long' (in duration) is also valid; 'The distant/remote journey' more literal"}
+{"id": "ru-0873", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "учит язык means 'studies/learns a language', not 'teaches language'. Context (salesman, mountains) is also implausible."}
+{"id": "ru-0878", "severity": "medium", "issue": "UNNATURAL", "note": "'Brother runs in the afternoon' uses bare 'Brother' awkwardly; should be 'My brother runs in the afternoon' or 'The brother runs in the afternoon'"}
+{"id": "ru-0880", "severity": "low", "issue": "UNNATURAL", "note": "'mom' should be capitalized to 'Mom' as a proper address"}
+{"id": "ru-0893", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "сильный means 'strong' but doesn't apply to tables in natural English; likely should be 'sturdy', 'solid', or 'heavy'"}
+{"id": "ru-0900", "severity": "medium", "issue": "UNNATURAL", "note": "'sings a song' is redundant; should be 'sings' or 'sings a song' only if the song title matters"}
+{"id": "ru-0843", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Doctor buying groceries in a library is semantically nonsensical; likely error in source sentence construction"}
+{"id": "ru-0848", "severity": "medium", "issue": "UNNATURAL", "note": "'dances a waltz at the party soon' — temporal placement awkward; should be 'will dance' or 'is going to dance'"}
+{"id": "ru-0849", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Driver painting pictures in a museum is semantically implausible; likely error in source sentence"}
+{"id": "ru-0850", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Architect cleaning apartment in a restaurant is semantically implausible; likely error in source sentence"}
+{"id": "ru-0851", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Chef painting pictures at a market is semantically implausible; likely error in source sentence"}
+{"id": "ru-0854", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'встречали Новый год' more idiomatically 'to celebrate; to see in' — current phrasing slightly stilted"}
+{"id": "ru-0857", "severity": "medium", "issue": "UNNATURAL", "note": "'studies a language at the hospital this morning' — present tense with 'this morning' is awkward; should clarify aspect/tense"}
+{"id": "ru-0862", "severity": "medium", "issue": "UNNATURAL", "note": "'commutes to work in the museum' — semantically odd (commute destination usually home/office, not museum); may be source error"}
+{"id": "ru-0864", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Translation has garbled phrase 'at worked last week' — ungrammatical English; source sentence likely malformed"}
+{"id": "ru-0865", "severity": "medium", "issue": "UNNATURAL", "note": "'The boat sailed to the island' — 'приплыла' is perfective (arrived), not durative sailing; should be 'The boat arrived at; sailed up to'"}
+{"id": "ru-0903", "severity": "medium", "issue": "UNNATURAL", "note": "учит язык should be 'learns/studies a language' not 'teaches'; context suggests learning"}
+{"id": "ru-0906", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ехать полчаса means 'it takes half an hour to travel' not 'between work and home to travel'; missing subject clarity"}
+{"id": "ru-0907", "severity": "medium", "issue": "UNNATURAL", "note": "рисует картину should be 'draws a picture' not 'paints'; рисовать is sketch/draw, not paint"}
+{"id": "ru-0908", "severity": "high", "issue": "UNNATURAL", "note": "implausible scenario; context and verb choice suggest a different activity or the sentence is intentionally absurd"}
+{"id": "ru-0909", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "завтра (tomorrow) conflicts with present tense помогает; should be 'will help' or use past tense"}
+{"id": "ru-0915", "severity": "high", "issue": "UNNATURAL", "note": "implausible scenario; brother doing laundry at school is contextually odd"}
+{"id": "ru-0919", "severity": "low", "issue": "MISSING_NUANCE", "note": "помахала рукой typically means 'waved' or 'waved goodbye'; 'waved her hand in farewell' is awkward phrasing"}
+{"id": "ru-0921", "severity": "medium", "issue": "UNNATURAL", "note": "'smart house' (дом with умный) more naturally translates as 'smart home'; context suggests building/architecture"}
+{"id": "ru-0927", "severity": "low", "issue": "MISSING_NUANCE", "note": "живыми цветами means 'live/fresh flowers' not just 'fresh'; живой emphasizes living/real vs artificial"}
+{"id": "ru-0932", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "стирать means to erase/wipe, not to do laundry; for laundry use стирать одежду but context is nonsensical (salesman doing laundry at work)"}
+{"id": "ru-0936", "severity": "medium", "issue": "UNNATURAL", "note": "imperfective aspect (плавает) with 'this morning' is awkward; should be perfective or clarify habitual action"}
+{"id": "ru-0939", "severity": "high", "issue": "UNNATURAL", "note": "librarian dancing waltz at party is implausible; likely artificial example"}
+{"id": "ru-0940", "severity": "high", "issue": "UNNATURAL", "note": "farmer rarely writing letters in mountains is implausible; likely artificial example"}
+{"id": "ru-0941", "severity": "high", "issue": "UNNATURAL", "note": "doctor dancing waltz at market is implausible; likely artificial example"}
+{"id": "ru-0944", "severity": "medium", "issue": "UNNATURAL", "note": "'before bed' helping someone in a museum is illogical; timing/location mismatch"}
+{"id": "ru-0947", "severity": "high", "issue": "UNNATURAL", "note": "grandmother dancing waltz in theater this morning is implausible; likely artificial example"}
+{"id": "ru-0948", "severity": "high", "issue": "UNNATURAL", "note": "programmer dancing waltz in park before bed is implausible; likely artificial example"}
+{"id": "ru-0949", "severity": "medium", "issue": "UNNATURAL", "note": "'in the park at home' is contradictory; park is not at home"}
+{"id": "ru-0958", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Russian says 'I bought dinner yesterday'; English should be 'I bought dinner yesterday' (word order issue in Russian is natural, not 'yesterday dinner')"}
+{"id": "ru-0997", "severity": "high", "issue": "UNNATURAL", "note": "\"walks in the park at home\" is contradictory; \"в парке дома\" is awkward—likely should be either \"в парке\" or \"дома\""}
+{"id": "ru-1002", "severity": "high", "issue": "UNNATURAL", "note": "\"runs in the morning at school\" with present tense + \"Сейчас\" (now) is temporally awkward; should clarify if habitual or immediate action"}
+{"id": "ru-1003", "severity": "high", "issue": "UNNATURAL", "note": "\"runs in the morning in the store\" is semantically odd; unclear why someone would run in a store"}
+{"id": "ru-1005", "severity": "medium", "issue": "UNNATURAL", "note": "\"did laundry\" is more natural than stated translation but acceptable; consider \"laundered\" or \"washed clothes\""}
+{"id": "ru-0966", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "открыть + accusative means 'to open', not 'to open a rule'. Sentence is ungrammatical in Russian (открыть правило is nonsensical)."}
+{"id": "ru-0967", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "закрыть письмо means 'to close/seal a letter', but English translation 'I closed a letter' is awkward. Should be 'I sealed a letter' or context needs clarification."}
+{"id": "ru-0968", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "решить + accusative means 'to solve' (a problem), not 'to decide'. 'Я решил книгу' is ungrammatical. Should be 'to solve' or source sentence is incorrect."}
+{"id": "ru-0970", "severity": "medium", "issue": "UNNATURAL", "note": "English 'to a friend' is more natural than 'to a friend'; article usage. Minor but 'writes a letter to a friend' is standard."}
+{"id": "ru-0972", "severity": "low", "issue": "UNNATURAL", "note": "'at home in the evening' is slightly awkward word order; 'in the evening at home' is more natural, though both acceptable."}
+{"id": "ru-0989", "severity": "medium", "issue": "UNNATURAL", "note": "'writes a letter in the library' — article usage inconsistent. Should be either 'a letter' (indefinite) or context-dependent. Currently reads oddly."}
+{"id": "ru-1054", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "перфективный аспект: 'ate' should be 'has eaten' or 'recently ate' (completed action)"}
+{"id": "ru-1062", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "обещается is reflexive; should be 'She promised to come on time' or 'She promises herself to come on time' — current phrasing unnatural"}
+{"id": "ru-1074", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "учил (imperfective past) suggests 'was studying' or 'studied (as a course)' — present translation too simple"}
+{"id": "ru-1079", "severity": "low", "issue": "UNNATURAL", "note": "'has fresh air and silence' is awkward; better 'fresh air and silence' or 'there is fresh air and silence'"}
+{"id": "ru-1029", "severity": "medium", "issue": "UNNATURAL", "note": "за город = to the countryside/out of town; 'outside the city' is awkward"}
+{"id": "ru-1037", "severity": "medium", "issue": "UNNATURAL", "note": "пока + imperfect + perfective is odd; should be 'While he waited for the train, he was reading' or 'While waiting..., he read'"}
+{"id": "ru-1038", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ездит на работу в музее makes no sense; 'commutes to work in the museum' is nonsensical; likely 'ездит на работу' alone"}
+{"id": "ru-1042", "severity": "low", "issue": "UNNATURAL", "note": "'turns around' is acceptable but 'turns back' is more natural for оборачивается назад"}
+{"id": "ru-1043", "severity": "low", "issue": "UNNATURAL", "note": "'Tell about yourself' should be 'Tell me about yourself' or 'Tell about yourself' is borderline; better: 'Tell me about yourself'"}
+{"id": "ru-1113", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "папа doesn't buy groceries in a park; location is illogical"}
+{"id": "ru-1114", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "teacher doesn't wash dishes in a theater; location is illogical"}
+{"id": "ru-1116", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "artist doesn't run at a train station; location is illogical"}
+{"id": "ru-1119", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "artist doesn't read at a market; location is illogical; also capitalize 'Monday'"}
+{"id": "ru-1120", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "writer helping friend in hospital is odd; also capitalize 'Monday'"}
+{"id": "ru-1122", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "literal translation 'sat in a puddle' doesn't match 'embarrassed herself'; missing actual meaning"}
+{"id": "ru-1126", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "artist doesn't buy groceries in a theater; location is illogical; also capitalize 'Monday'"}
+{"id": "ru-1133", "severity": "medium", "issue": "UNNATURAL", "note": "awkward word order; should be 'I wrote work yesterday' or better 'I did work yesterday'"}
+{"id": "ru-1140", "severity": "medium", "issue": "UNNATURAL", "note": "awkward word order; should be 'I did an exercise yesterday'"}
+{"id": "ru-1082", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'Sister' should be 'The sister' for consistency with other cards"}
+{"id": "ru-1083", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Russian sentence nonsensical (cleaning apartment at market); 'Sister' also missing article"}
+{"id": "ru-1085", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'Brother' should be 'The brother' for consistency"}
+{"id": "ru-1086", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Cleaning apartment in museum is illogical; likely context error"}
+{"id": "ru-1087", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward; should be 'The farmer often listens to music in the store'"}
+{"id": "ru-1089", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'Father' should be 'The father' for consistency"}
+{"id": "ru-1092", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'Brother' should be 'The brother' for consistency"}
+{"id": "ru-1094", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'Brother' should be 'The brother' for consistency"}
+{"id": "ru-1095", "severity": "medium", "issue": "UNNATURAL", "note": "Should be 'in the daytime' or 'during the day' rather than 'in the afternoon'"}
+{"id": "ru-1102", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'Mom' should be 'The mom' or 'Mother' for consistency"}
+{"id": "ru-1106", "severity": "medium", "issue": "UNNATURAL", "note": "Should be 'shines in one's eyes' or 'shines in the eyes'; current phrasing ambiguous"}
+{"id": "ru-1109", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Drives' is acceptable but 'operates' could be more precise for ведёт with vehicles"}
+{"id": "ru-1174", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'Sister' is too informal; should be 'The sister' or 'His sister'"}
+{"id": "ru-1177", "severity": "medium", "issue": "UNNATURAL", "note": "'does laundry' is awkward; use 'is doing laundry' for present continuous"}
+{"id": "ru-1178", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Present tense 'смотрит' does not match future 'Tomorrow'; should be 'will watch'"}
+{"id": "ru-1181", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Semantically implausible context; likely error in source sentence or translation intent"}
+{"id": "ru-1182", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Present tense 'поёт' contradicts 'Tomorrow'; should be 'will sing'"}
+{"id": "ru-1183", "severity": "medium", "issue": "UNNATURAL", "note": "Adverb fronting 'Rarely sister...' is awkward English; should be 'Sister rarely paints...'"}
+{"id": "ru-1186", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Present tense 'помогает' contradicts 'Tomorrow'; should be 'will help'"}
+{"id": "ru-1192", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Present tense 'учит' contradicts 'Before bed'; should be 'studies' (habitual) or context unclear"}
+{"id": "ru-1193", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Present tense 'ездит' contradicts 'Now'; should be 'is commuting' or 'commutes'"}
+{"id": "ru-1194", "severity": "medium", "issue": "UNNATURAL", "note": "Present continuous implied by Russian; should be 'is reading'"}
+{"id": "ru-1195", "severity": "medium", "issue": "UNNATURAL", "note": "Present continuous implied by Russian; should be 'is writing'"}
+{"id": "ru-1197", "severity": "medium", "issue": "UNNATURAL", "note": "Clearer as 'I read this book but didn't finish it' (simple past for both)"}
+{"id": "ru-1200", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'bought...dinner' is nonsensical word order; should be 'bought dinner in the morning'"}
+{"id": "ru-1231", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward; 'Soon' better as 'the policeman will soon help' or 'Soon the policeman will help'"}
+{"id": "ru-1235", "severity": "low", "issue": "WRONG_REGISTER", "note": "'monday' should be capitalized as 'Monday'"}
+{"id": "ru-1237", "severity": "low", "issue": "WRONG_REGISTER", "note": "'monday' should be capitalized as 'Monday'"}
+{"id": "ru-1241", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Russian says 'в парке' (in the park) but translation says 'in the library'"}
+{"id": "ru-1243", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'дарит' (gives; offers) could also mean 'provides' — 'offers' is acceptable but 'provides' captures the sense better"}
+{"id": "ru-1254", "severity": "high", "issue": "UNNATURAL", "note": "Phrase 'bought dinner' is awkward; should be 'often bought her dinner' or 'often bought dinner for [someone]'"}
+{"id": "ru-1255", "severity": "high", "issue": "UNNATURAL", "note": "Phrase 'bought immediately dinner' is ungrammatical; should be 'bought dinner right away' or 'immediately bought dinner'"}
+{"id": "ru-1204", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Russian sentence is ungrammatical (помогали долго книгу); translation nonsensical. Likely should be 'They helped [someone] for a long time' or similar."}
+{"id": "ru-1218", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Logically incoherent: brother washing dishes in a museum is implausible context; likely data error in original Russian."}
+{"id": "ru-1223", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'ездит на работу дома' is nonsensical (commutes to work at home). Should be 'commutes to work' or 'goes to work'; location is contradictory."}
+{"id": "ru-1224", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Grandfather washing dishes at school is implausible; likely data error in original Russian."}
+{"id": "ru-1230", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Policeman cleaning apartment at hospital is implausible; likely data error in original Russian."}
+{"id": "ru-1222", "severity": "medium", "issue": "UNNATURAL", "note": "'dances a waltz' should be 'dances the waltz' or 'does the waltz'; also beach context for waltzing is unusual."}
+{"id": "ru-1226", "severity": "medium", "issue": "UNNATURAL", "note": "'dances a waltz in the park' is awkward; 'dances the waltz' more natural. Park context for waltzing unusual."}
+{"id": "ru-1227", "severity": "medium", "issue": "UNNATURAL", "note": "'dances a waltz at the beach' awkward; beach + waltz is implausible context."}
+{"id": "ru-1228", "severity": "medium", "issue": "UNNATURAL", "note": "'dances a waltz at the station' is odd context; 'dances the waltz' more natural grammatically."}
+{"id": "ru-1207", "severity": "low", "issue": "UNNATURAL", "note": "'to all friends' slightly stiff; 'to all her friends' would be more natural."}
+{"id": "ru-1141", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "построил = to build, but with урок (lesson) is nonsensical; likely should be урок = lesson as object, but verb-object pairing is wrong"}
+{"id": "ru-1141", "fix": {"k": "построить", "en": "to build; to construct", "pos": "v"}}
+{"id": "ru-1142", "severity": "medium", "issue": "UNNATURAL", "note": "word order 'received yesterday a poem' is awkward; natural English: 'I received a poem yesterday'"}
+{"id": "ru-1143", "severity": "medium", "issue": "UNNATURAL", "note": "word order 'lost yesterday a task' is awkward; natural English: 'I lost a task yesterday'"}
+{"id": "ru-1144", "severity": "medium", "issue": "UNNATURAL", "note": "word order 'found yesterday an exercise' is awkward; natural English: 'I found an exercise yesterday'"}
+{"id": "ru-1146", "severity": "medium", "issue": "UNNATURAL", "note": "word order 'I wrote a letter long ago' is slightly awkward; natural: 'I wrote a letter long ago' or 'Long ago I wrote a letter'"}
+{"id": "ru-1148", "severity": "low", "issue": "UNNATURAL", "note": "ждать takes accusative (автобус) without preposition; 'wait for' is correct but article 'the' inconsistent with previous cards"}
+{"id": "ru-1151", "severity": "low", "issue": "UNNATURAL", "note": "article 'The' inconsistent; compare ru-1149/ru-1150 which use no article"}
+{"id": "ru-1152", "severity": "low", "issue": "UNNATURAL", "note": "article 'The' inconsistent with previous similar structures"}
+{"id": "ru-1153", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "приготовили = to prepare/cook; cannot take 'book' as direct object; nonsensical pairing"}
+{"id": "ru-1154", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "выучили = to learn; cannot take 'house' as direct object; nonsensical pairing"}
+{"id": "ru-1155", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "открыли = to open; cannot take 'rule' as direct object in this sense; nonsensical pairing"}
+{"id": "ru-1156", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "решили = to decide/to solve; 'book' is wrong object; should be problem/task/equation"}
+{"id": "ru-1158", "severity": "low", "issue": "UNNATURAL", "note": "article inconsistency; 'at the playground' vs 'on a playground' in ru-1162"}
+{"id": "ru-1159", "severity": "low", "issue": "UNNATURAL", "note": "article 'The' inconsistent; compare ru-1150 which uses no article"}
+{"id": "ru-1162", "severity": "low", "issue": "UNNATURAL", "note": "article 'The' inconsistent with ru-1158"}
+{"id": "ru-1163", "severity": "low", "issue": "UNNATURAL", "note": "article 'The' unnecessary; should be 'A friend often walks in the park'"}
+{"id": "ru-1164", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "покупал ужин = buy dinner is odd; likely should be 'dinner' or meal context unclear; imperfective aspect 'used to buy' is correct but object strange"}
+{"id": "ru-1168", "severity": "low", "issue": "UNNATURAL", "note": "article inconsistency; 'the window' vs 'a window'"}
+{"id": "ru-1291", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "решали долго книгу is grammatically broken Russian; 'решали' (decided) doesn't take direct object 'книгу' (book)"}
+{"id": "ru-1291", "fix": {"k": "решали", "en": "to solve; to decide", "pos": "v"}}
+{"id": "ru-1297", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "готовил весь день книгу is nonsensical; готовил (cooked) cannot take книгу (book) as object"}
+{"id": "ru-1298", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "решал весь день книгу is ungrammatical; решал (decided) cannot govern книгу (book)"}
+{"id": "ru-1301", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "скоро (soon) with present tense стирает is awkward; 'does laundry' is present habitual but скоро implies future"}
+{"id": "ru-1306", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "скоро дедушка стирает is contradictory; скоро implies future but стирает is present habitual; absurd context (laundry at station)"}
+{"id": "ru-1309", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "учит язык в аэропорту is contextually odd but grammatically valid; translation is acceptable"}
+{"id": "ru-1311", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "покупает продукты в больнице (buys groceries in hospital) is contextually implausible but grammatically correct"}
+{"id": "ru-1314", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "скоро студент работает has same tense-aspect contradiction as ru-1301/1306"}
+{"id": "ru-1315", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "рисует картину в магазине is contextually implausible but grammatically valid"}
+{"id": "ru-1317", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "убирает квартиру в больнице (cleans apartment in hospital) is contextually nonsensical"}
+{"id": "ru-1319", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "слушает музыку в магазине (listens to music in store) is contextually odd but grammatically valid"}
+{"id": "ru-1320", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "present tense слушает with 'this morning' (сегодня утром) is aspect mismatch; should be perfective or past"}
+{"id": "ru-1265", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "готовил means to prepare/cook food, not 'cooked a book'; книгу is direct object but phrase is nonsensical"}
+{"id": "ru-1265", "severity": "high", "issue": "UNNATURAL", "note": "word order awkward; should be 'I sometimes prepared a book' at minimum, but concept illogical"}
+{"id": "ru-1266", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "приготовила means to prepare/cook; 'cooked a book' is nonsensical"}
+{"id": "ru-1266", "severity": "high", "issue": "UNNATURAL", "note": "adverb placement and direct object illogical"}
+{"id": "ru-1267", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "приготовили means to prepare/cook; 'cooked a book' is nonsensical"}
+{"id": "ru-1268", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "учила means to teach or to learn; 'learned a house' is nonsensical"}
+{"id": "ru-1268", "severity": "high", "issue": "UNNATURAL", "note": "direct object дом illogical with учила"}
+{"id": "ru-1269", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "учил means to teach or to learn; 'learned a house' is nonsensical"}
+{"id": "ru-1270", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "выучили means to learn/memorize; 'learned a house' is nonsensical"}
+{"id": "ru-1271", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "выучил means to learn/memorize; 'learned a house' is nonsensical"}
+{"id": "ru-1272", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "открывали means to open; 'opened a rule' is nonsensical"}
+{"id": "ru-1273", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "открывал means to open; 'opened a rule' is nonsensical"}
+{"id": "ru-1274", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "открыли means to open; 'opened a rule' is nonsensical"}
+{"id": "ru-1275", "severity": "medium", "issue": "UNNATURAL", "note": "'closed a letter' is grammatically possible but unusual; закрывала typically used for doors/windows"}
+{"id": "ru-1276", "severity": "medium", "issue": "UNNATURAL", "note": "'closed a letter' is grammatically possible but unusual; закрывали typically used for doors/windows"}
+{"id": "ru-1277", "severity": "medium", "issue": "UNNATURAL", "note": "'closed a letter' is grammatically possible but unusual; закрыл typically used for doors/windows"}
+{"id": "ru-1278", "severity": "medium", "issue": "UNNATURAL", "note": "'closed a letter' is grammatically possible but unusual; закрыли typically used for doors/windows"}
+{"id": "ru-1279", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "решал means to solve; 'decided a book' is nonsensical"}
+{"id": "ru-1280", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "решила means to solve; 'decided a book' is nonsensical"}
+{"id": "ru-1284", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ответили на письмо means answered the letter; 'answered a letter' word order wrong or missing preposition"}
+{"id": "ru-1287", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "готовили means to prepare/cook; 'cooked a book' is nonsensical"}
+{"id": "ru-1288", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "учили means to teach/learn; 'learned a house' is nonsensical"}
+{"id": "ru-1289", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "открывали means to open; 'opened a rule' is nonsensical"}
+{"id": "ru-1290", "severity": "medium", "issue": "UNNATURAL", "note": "'closed a letter' is grammatically possible but unusual; закрывали typically used for doors/windows"}
+{"id": "ru-1321", "severity": "medium", "issue": "UNNATURAL", "note": "ran in the morning at home is awkward; should be 'ran at home in the morning' or 'was running in the morning at home'"}
+{"id": "ru-1324", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Present tense ездит means habitual action; 'Before bed' + 'commutes' is logically incoherent"}
+{"id": "ru-1325", "severity": "medium", "issue": "UNNATURAL", "note": "should be 'She wrote a letter all evening but didn't finish it' or 'but didn't complete it'"}
+{"id": "ru-1327", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "покупали ужин should be 'were buying dinner' or 'bought dinner'; word order 'bought for a long time dinner' is very unnatural"}
+{"id": "ru-1328", "severity": "medium", "issue": "UNNATURAL", "note": "should be 'They explained the rule in the morning' (natural object-first order)"}
+{"id": "ru-1332", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Present tense ездит + 'Soon' is contradictory; should be 'will commute' (future)"}
+{"id": "ru-1333", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'swimed' is not English (swam); 'swam to the restaurant' makes no sense; likely should be 'went' or 'drove'"}
+{"id": "ru-1334", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'leaded' is archaic/wrong form; водил means 'to lead; to drive'; should be 'I often drove to the restaurant' or 'took [someone] to the restaurant'"}
+{"id": "ru-1343", "severity": "medium", "issue": "UNNATURAL", "note": "should be 'plays the guitar' (with article)"}
+{"id": "ru-1347", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Present tense бегает + 'This morning' (specific time) is contradictory; should be 'is running' or use past 'ran'"}
+{"id": "ru-1348", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Present tense плавает + 'Before bed' (habitual/specific future?) is awkward; should clarify intent (habitual vs. one event)"}
+{"id": "ru-1351", "severity": "medium", "issue": "UNNATURAL", "note": "убирает квартиру дома is redundant (apartment already implies home); 'cleans' alone more natural"}
+{"id": "ru-1352", "severity": "medium", "issue": "UNNATURAL", "note": "танцует в магазине is contextually odd; no clear reason musician dances waltz in store"}
+{"id": "ru-1356", "severity": "medium", "issue": "UNNATURAL", "note": "водитель играет в шахматы в музее contextually implausible"}
+{"id": "ru-1358", "severity": "medium", "issue": "UNNATURAL", "note": "спортсмен убирает квартиру на вокзале contextually implausible"}
+{"id": "ru-1362", "severity": "medium", "issue": "UNNATURAL", "note": "архитектор смотрит фильм в магазине contextually implausible"}
+{"id": "ru-1364", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ездит на работу в школе means 'commutes to work at school' but should be 'commutes to school for work' or context is nonsensical"}
+{"id": "ru-1367", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "ездит на работу в аэропорту: 'commutes to work at the airport' is awkward; should clarify if 'to' or 'at'"}
+{"id": "ru-1368", "severity": "low", "issue": "UNNATURAL", "note": "redundant repetition of cooking action with different aspects; awkward phrasing"}
+{"id": "ru-1372", "severity": "medium", "issue": "UNNATURAL", "note": "'gives a lecture about physics' more natural than 'reads'; читает лекцию suggests reading/delivering, 'gives' better conveys intent"}
+{"id": "ru-1373", "severity": "medium", "issue": "UNNATURAL", "note": "библиотекарь танцует вальс на вокзале contextually implausible"}
+{"id": "ru-1378", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'wrote work' ungrammatical; should be 'usually did work' or 'usually wrote the assignment'"}
+{"id": "ru-1379", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'sometimes wrote work' ungrammatical; should be 'sometimes did work' or 'sometimes wrote the assignment'"}
+{"id": "ru-1380", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'wrote immediately work' ungrammatical; should be 'immediately wrote the assignment' or 'did the work right away'"}
+{"id": "ru-1458", "severity": "low", "issue": "WRONG_REGISTER", "note": "\"On monday\" should be capitalized: \"On Monday\""}
+{"id": "ru-1462", "severity": "medium", "issue": "UNNATURAL", "note": "Counterfactual conditional should be \"If we had had money, we would have bought a house\" to match Russian past counterfactual"}
+{"id": "ru-1476", "severity": "medium", "issue": "UNNATURAL", "note": "redundant adverbs; 'kept losing toys' already implies ongoing repetition, 'constantly' is superfluous"}
+{"id": "ru-1481", "severity": "high", "issue": "UNNATURAL", "note": "word order and phrasing broken; should be 'They spent a long time receiving a poem' or similar"}
+{"id": "ru-1482", "severity": "high", "issue": "UNNATURAL", "note": "word order and phrasing broken; should be 'They spent a long time losing a task' or similar"}
+{"id": "ru-1486", "severity": "high", "issue": "UNNATURAL", "note": "word order broken; should be 'He spent all day explaining a rule' or 'He explained a rule all day'"}
+{"id": "ru-1487", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "verb form 'go/drived' is incorrect; should be 'went' or 'drove'"}
+{"id": "ru-1488", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "verb form 'runed' is incorrect; should be 'ran'"}
+{"id": "ru-1489", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "verb form 'runed' is incorrect; should be 'ran'"}
+{"id": "ru-1490", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "verb form 'swimed' is incorrect; should be 'swam'; also 'swam to the airport' is illogical"}
+{"id": "ru-1491", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "verb form 'swimed' is incorrect; should be 'swam'; also 'swam to the airport' is illogical"}
+{"id": "ru-1492", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "verb form 'carryed' is incorrect; should be 'carried'; also 'carried to the airport' needs clarification (carried what?)"}
+{"id": "ru-1493", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'transported' is awkward; should be 'drove' or 'took' (context unclear without object)"}
+{"id": "ru-1494", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "verb form 'leaded' is incorrect; should be 'led'; also 'led to the store' is awkward (missing object or context)"}
+{"id": "ru-1495", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "verb form 'leaded' is incorrect; should be 'led'; also 'led to the store' is awkward (missing object or context)"}
+{"id": "ru-1499", "severity": "medium", "issue": "UNNATURAL", "note": "'does laundry' is idiomatic but 'stir' doesn't match; should be 'washes clothes' or 'does laundry'"}
+{"id": "ru-1381", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Word order wrong; should be 'She quickly wrote a paper' or 'She wrote a paper quickly'"}
+{"id": "ru-1382", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward; 'paints a picture' is redundant. Better: 'paints' or 'draws a picture'"}
+{"id": "ru-1383", "severity": "low", "issue": "MISSING_NUANCE", "note": "'стирает одежду' more naturally 'does laundry' but 'washes clothes' also valid"}
+{"id": "ru-1386", "severity": "high", "issue": "UNNATURAL", "note": "Adverb placement wrong in English; should be 'We usually did an exercise'"}
+{"id": "ru-1388", "severity": "high", "issue": "UNNATURAL", "note": "Word order; should be 'He immediately did an exercise' or 'He did an exercise immediately'"}
+{"id": "ru-1389", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'строить урок' means 'to structure/build a lesson', not 'built a lesson'; awkward phrasing"}
+{"id": "ru-1390", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'строить урок' = 'to structure a lesson', not 'built a lesson'"}
+{"id": "ru-1391", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'строить урок' = 'to structure a lesson', not 'built a lesson'"}
+{"id": "ru-1392", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'построить урок' = 'to structure/organize a lesson', not 'built a lesson'; awkward word order"}
+{"id": "ru-1393", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'построить урок' = 'to structure a lesson'; word order also wrong"}
+{"id": "ru-1396", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'получать стихотворение' = 'to learn/study a poem', not 'receive a poem'"}
+{"id": "ru-1397", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'получать стихотворение' = 'to learn/study a poem', not 'received a poem'"}
+{"id": "ru-1398", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'отвечать письмо' is incorrect; should be 'отвечать на письмо' (to answer a letter); 'answered' not 'answered a letter'"}
+{"id": "ru-1399", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'отвечать письмо' incorrect without 'на'; should be 'to answer/reply to a letter'"}
+{"id": "ru-1400", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Word order wrong; 'He immediately answered the letter' or 'He answered the letter immediately'"}
+{"id": "ru-1401", "severity": "high", "issue": "UNNATURAL", "note": "Word order; 'She quickly answered the letter' or 'She answered the letter quickly'"}
+{"id": "ru-1404", "severity": "high", "issue": "UNNATURAL", "note": "Word order; 'She quickly showed the house' or 'She showed the house quickly'"}
+{"id": "ru-1405", "severity": "high", "issue": "UNNATURAL", "note": "Word order; 'He immediately showed the house' or 'He showed the house immediately'"}
+{"id": "ru-1409", "severity": "high", "issue": "UNNATURAL", "note": "Word order; 'She quickly found the exercise' or 'She found the exercise quickly'"}
+{"id": "ru-1410", "severity": "high", "issue": "UNNATURAL", "note": "Word order; 'He immediately found the exercise' or 'He found the exercise immediately'"}
+{"id": "ru-1411", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "забывал with accusative object means 'forgot' (object), not 'forgot about place'; should be 'I sometimes forgot the house' or better context needed"}
+{"id": "ru-1411", "fix": {"k": "забывать", "en": "to forget", "pos": "v"}}
+{"id": "ru-1412", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "забыла дом is ungrammatical Russian; accusative requires 'дом' but semantics fail; word order and translation both problematic"}
+{"id": "ru-1413", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "забыли дом is ungrammatical; 'finally forgot a house' nonsensical"}
+{"id": "ru-1414", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "забывала ключи: English lacks 'her'; should be 'She often forgot her keys' (possessive implied in Russian)"}
+{"id": "ru-1418", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "скоро means 'soon' but in this context 'quickly' is intended; English renders as temporal 'soon' not adverbial manner"}
+{"id": "ru-1418", "fix": {"k": "скоро", "en": "soon; quickly", "pos": "adv"}}
+{"id": "ru-1421", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "забывали долго дом ungrammatical; 'forgot for a long time' nonsensical with direct object"}
+{"id": "ru-1422", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Mom cooks lunch after lunch' is nonsensical; обед appears twice with different meanings (meal vs. lunchtime)"}
+{"id": "ru-1423", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'He wrote all day work' is ungrammatical English; should be 'He worked all day' or 'He wrote for all day'"}
+{"id": "ru-1427", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'He did all day an exercise' is ungrammatical; should be 'He did exercises all day' or similar"}
+{"id": "ru-1428", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'He answered all day a letter' is ungrammatical; should be 'He spent all day answering a letter'"}
+{"id": "ru-1429", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'He found all day an exercise' ungrammatical; nonsensical context"}
+{"id": "ru-1430", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'He forgot all day a house' ungrammatical and nonsensical"}
+{"id": "ru-1434", "severity": "medium", "issue": "UNNATURAL", "note": "English should be 'It's a fifteen-minute walk to the station' or 'The station is fifteen minutes away on foot'"}
+{"id": "ru-1437", "severity": "high", "issue": "UNNATURAL", "note": "'I used to do every day an exercise' has awkward word order; should be 'I did an exercise every day' or 'I used to do exercises every day'"}
+{"id": "ru-1438", "severity": "high", "issue": "UNNATURAL", "note": "'I used to show every day a house' awkward; should be 'I used to show a house every day'"}
+{"id": "ru-1439", "severity": "high", "issue": "UNNATURAL", "note": "'I used to lose every day a task' awkward; should be 'I used to lose a task every day'"}
+{"id": "ru-1502", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "плавал = swam (past), not swimed; also плавать requires в (to) before destination, not на (on)"}
+{"id": "ru-1503", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "возил requires direct object (whom/what), but sentence lacks it; translation 'transported to' is incomplete"}
+{"id": "ru-1504", "severity": "medium", "issue": "UNNATURAL", "note": "везёт = is taking/is driving; 'driving' implies car, but везти includes any vehicle/conveyance"}
+{"id": "ru-1507", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "stирает (present) conflicts with завтра (tomorrow); should be 'will do laundry' or stирала was used"}
+{"id": "ru-1511", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "рисовал = drew/painted, but mixing musician with painting is semantically odd in original; check source"}
+{"id": "ru-1516", "severity": "medium", "issue": "UNNATURAL", "note": "'dances a waltz' — better as 'dances the waltz' or 'waltz-dances'"}
+{"id": "ru-1517", "severity": "high", "issue": "UNNATURAL", "note": "word order 'Always dad studies' is awkward; should be 'Dad always studies' or 'Always, dad studies'"}
+{"id": "ru-1518", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "buying groceries in a museum is nonsensical; likely source error, not translation error, but flag for review"}
+{"id": "ru-1519", "severity": "medium", "issue": "UNNATURAL", "note": "'dances a waltz' — better as 'dances the waltz' or 'waltz-dances'"}
+{"id": "ru-1520", "severity": "medium", "issue": "UNNATURAL", "note": "'dances a waltz' — better as 'dances the waltz' or 'waltz-dances'"}
+{"id": "ru-1524", "severity": "medium", "issue": "UNNATURAL", "note": "'walks in the park at home' is contradictory; 'in the park at home' needs clarification (park near home? or park, then home?)"}
+{"id": "ru-1526", "severity": "medium", "issue": "UNNATURAL", "note": "missing 'the' before 'brother' for consistency with other cards"}
+{"id": "ru-1528", "severity": "medium", "issue": "UNNATURAL", "note": "missing 'the' before 'sister' for consistency; also 'Rarely sister' needs article"}
+{"id": "ru-1567", "severity": "medium", "issue": "UNNATURAL", "note": "missing article 'a' before 'golden crust'; should be 'until a golden crust' or restructure"}
+{"id": "ru-1568", "severity": "low", "issue": "UNNATURAL", "note": "'golden pies' is awkward; 'rosy-cheeked pies' or 'golden pastries' better captures 'румяные'"}
+{"id": "ru-1578", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'runing' is a typo; should be 'running', but aspect suggests completed action 'ran' not 'was running'"}
+{"id": "ru-1579", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'I was leading to work' is nonsensical; should be 'I was driving to work' (вести in this context means to drive a vehicle)"}
+{"id": "ru-1580", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'leaded' is wrong verb form; should be 'drove' (водить = to drive/transport, not lead)"}
+{"id": "ru-1584", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'runed' is not a word; should be 'ran'"}
+{"id": "ru-1594", "severity": "high", "issue": "UNNATURAL", "note": "English mixes tenses: 'go/drived' is not grammatical; should be 'used to go' or 'would go'"}
+{"id": "ru-1595", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward; 'Often the student does laundry at home' should be 'The student often does laundry at home'"}
+{"id": "ru-1604", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "летал (flew) is motion by air; Russian means 'would travel/used to go', not literally fly"}
+{"id": "ru-1614", "severity": "high", "issue": "UNNATURAL", "note": "English mixes tenses: 'was go/driveing' is not grammatical; should be 'was going' or 'was driving'"}
+{"id": "ru-1615", "severity": "medium", "issue": "UNNATURAL", "note": "Incomplete; 'I was transporting to the station' needs object; likely 'I was driving/transporting someone to the station'"}
+{"id": "ru-1616", "severity": "medium", "issue": "UNNATURAL", "note": "Incomplete; 'She was transporting to the market' needs object; likely 'She was driving/transporting something to the market'"}
+{"id": "ru-1617", "severity": "medium", "issue": "UNNATURAL", "note": "Incomplete; 'He was leading to the market' needs object; likely 'He was leading someone to the market'"}
+{"id": "ru-1620", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "плыл means to swim/float in water; 'swiming to the market' is nonsensical; should be 'was swimming' but context suggests wrong verb choice in Russian"}
+{"id": "ru-1532", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "архитектор ездит на работу в театре = architect commutes to work AT the theater (works there), not \"in the theater\" as a location during commute"}
+{"id": "ru-1534", "severity": "medium", "issue": "UNNATURAL", "note": "watches a movie at the beach is awkward; 'watches a movie on the beach' is more natural"}
+{"id": "ru-1538", "severity": "low", "issue": "WRONG_REGISTER", "note": "'On monday' should be capitalized 'On Monday'"}
+{"id": "ru-1539", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "учит язык в магазине = studies a language IN the store; context is nonsensical—likely should be 'at school' or similar"}
+{"id": "ru-1540", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "медсестра помогает другу на пляже = nurse helps a friend AT the beach; context implausible for nursing work"}
+{"id": "ru-1543", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "фермер ездит на работу на пляже = farmer commutes to work AT the beach; illogical occupation-location pairing"}
+{"id": "ru-1544", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "художник ездит на работу на пляже = artist commutes to work AT the beach; illogical context"}
+{"id": "ru-1551", "severity": "high", "issue": "UNNATURAL", "note": "English word order 'explained immediately a rule' is wrong; should be 'explained a rule immediately' or 'immediately explained a rule'"}
+{"id": "ru-1552", "severity": "high", "issue": "UNNATURAL", "note": "English word order 'explained quickly a rule' is wrong; should be 'explained a rule quickly' or 'quickly explained a rule'"}
+{"id": "ru-1553", "severity": "high", "issue": "UNNATURAL", "note": "English word order 'received quickly a poem' is wrong; should be 'quickly received a poem' or 'received a poem quickly'"}
+{"id": "ru-1554", "severity": "high", "issue": "UNNATURAL", "note": "English word order 'received immediately a poem' is wrong; should be 'immediately received a poem' or 'received a poem immediately'"}
+{"id": "ru-1555", "severity": "high", "issue": "UNNATURAL", "note": "English word order 'lost a task' is odd; should be 'finally lost the task' or 'finally lost a task' (with article consistency)"}
+{"id": "ru-1556", "severity": "high", "issue": "UNNATURAL", "note": "English word order 'lost immediately a task' is wrong; should be 'immediately lost a task' or 'lost a task immediately'"}
+{"id": "ru-1557", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'were answering' (imperfective) is correct but 'answered' (perfective) would be more natural depending on context; current translation may be too progressive"}
+{"id": "ru-1685", "severity": "medium", "issue": "UNNATURAL", "note": "use 'leaps' or 'bounds' rather than 'jumps' for dolphin motion; 'above' is less natural than 'over' in this context"}
+{"id": "ru-1688", "severity": "low", "issue": "UNNATURAL", "note": "'in the dissertation' reads awkwardly; 'in her dissertation' or 'within his dissertation' preferred"}
+{"id": "ru-1695", "severity": "low", "issue": "UNNATURAL", "note": "French culinary term 'hollandaise' should use capital H (Hollandaise sauce)"}
+{"id": "ru-1621", "severity": "medium", "issue": "UNNATURAL", "note": "Should be 'was leading a boy to the market' or 'led a boy to the market'; 'leading to' is awkward"}
+{"id": "ru-1622", "severity": "high", "issue": "UNNATURAL", "note": "'go/drived' is incorrect; should be 'used to go' or 'often went'"}
+{"id": "ru-1623", "severity": "high", "issue": "UNNATURAL", "note": "'go/drived' is incorrect; should be 'used to go' or 'often went'"}
+{"id": "ru-1624", "severity": "high", "issue": "UNNATURAL", "note": "'go/drived' is incorrect; should be 'used to go' or 'often went'"}
+{"id": "ru-1625", "severity": "high", "issue": "UNNATURAL", "note": "'runed' is not a word; should be 'ran' or 'used to run'"}
+{"id": "ru-1627", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'плавал' means 'swam'; cannot swim to a library. Should be 'used to go' or context is nonsensical"}
+{"id": "ru-1628", "severity": "medium", "issue": "UNNATURAL", "note": "'carryed' is incorrect; should be 'carried'. Also incomplete sense without object."}
+{"id": "ru-1629", "severity": "medium", "issue": "UNNATURAL", "note": "'carryed' is incorrect; should be 'carried'. Also incomplete sense without object."}
+{"id": "ru-1630", "severity": "medium", "issue": "UNNATURAL", "note": "'carryed' is incorrect; should be 'carried'. Also incomplete sense without object."}
+{"id": "ru-1631", "severity": "medium", "issue": "UNNATURAL", "note": "'transported' is awkward; should be 'carried' or 'used to take'"}
+{"id": "ru-1636", "severity": "high", "issue": "UNNATURAL", "note": "'runed' is not a word; should be 'ran' or 'used to run'"}
+{"id": "ru-1637", "severity": "medium", "issue": "UNNATURAL", "note": "'carryed' is incorrect; should be 'carried'. Also incomplete sense without object."}
+{"id": "ru-1644", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'стирает' means 'to wash/do laundry' but 'does laundry at home' is awkward for 'на кухне' (in kitchen); should specify 'washes clothes'"}
+{"id": "ru-1650", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'квартиру на пляже' is odd context (apartment at beach); 'убирает' = to clean, but sentence is semantically strange"}
+{"id": "ru-1651", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "умойся = wash yourself/one's face (reflexive); translation omits the reflexive sense and says 'wash your face' literally"}
+{"id": "ru-1673", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "возить is to transport/to drive someone (to cinema), but 'transported to the cinema' is ungrammatical; should be 'took to the cinema' or 'drove to the cinema'"}
+{"id": "ru-1674", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'leaded' is not a word; should be 'took to the cinema' or 'drove to the cinema'"}
+{"id": "ru-1659", "severity": "low", "issue": "WRONG_REGISTER", "note": "'monday' should be capitalized to 'Monday'"}
+{"id": "ru-1715", "severity": "medium", "issue": "UNNATURAL", "note": "играются is reflexive and somewhat archaic/colloquial; standard is 'играют'"}
+{"id": "ru-1720", "severity": "medium", "issue": "UNNATURAL", "note": "'I'm always lucky on exams' misses the idiomatic sense; better 'I always have luck on exams' or 'I'm always fortunate on exams'"}
+{"id": "ru-1733", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "conditional + past = counterfactual; should be 'We would have waited if we had known'"}
+{"id": "ru-1734", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "counterfactual past; should be 'If it weren't for work, I would have slept'"}
+{"id": "ru-1735", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "counterfactual past; should be 'If I had known, I would have come'"}
+{"id": "ru-1739", "severity": "medium", "issue": "UNNATURAL", "note": "translation is correct but could be tightened; 'I would have taken' is understood as counterfactual but phrasing slightly awkward"}
+{"id": "ru-1748", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Missing comparison object; should be 'fresher than it was yesterday' or similar"}
+{"id": "ru-1757", "severity": "medium", "issue": "UNNATURAL", "note": "Missing main clause; reads as sentence fragment. Should be 'The most expensive restaurant in the city is...' or add context"}
+{"id": "ru-1766", "severity": "low", "issue": "UNNATURAL", "note": "'dressed warmer' is awkward; prefer 'dressed more warmly' or 'worn warmer clothes'"}
+{"id": "ru-1817", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward English phrasing; should be 'Nice to meet you, let's exchange contact information' or similar"}
+{"id": "ru-1829", "severity": "medium", "issue": "UNNATURAL", "note": "'How she would like to return' is awkward; Russian emphasizes emotional intensity—better: 'How much she would like to return' or 'She would so like to return'"}
+{"id": "ru-1776", "severity": "medium", "issue": "UNNATURAL", "note": "\"was doing music\" is awkward; should be \"studied music\" or \"played music\""}
+{"id": "ru-1777", "severity": "low", "issue": "WRONG_REGISTER", "note": "\"the internet\" (with definite article) is slightly formal; \"the internet\" is acceptable but \"internet\" alone is more natural in modern English"}
+{"id": "ru-1778", "severity": "low", "issue": "UNNATURAL", "note": "\"rarely makes mistakes\" is better than the implied construction; card is acceptable but could be clearer"}
+{"id": "ru-1781", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"называется\" means \"is called\"; \"Her name is Anna\" requires subject-verb agreement — should be \"She is called Anna\" or \"Her name is Anna\" (latter requires different structure)"}
+{"id": "ru-1792", "severity": "low", "issue": "WRONG_REGISTER", "note": "\"mom\" is informal; \"mother\" aligns better with formal conditional register"}
+{"id": "ru-1845", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "в аэропорт means 'to the airport', not 'in the airport'; should be 'to the airport'"}
+{"id": "ru-1849", "severity": "medium", "issue": "UNNATURAL", "note": "'Stay in place' is awkward; better: 'Stay here' or 'Stay put'"}
+{"id": "ru-1852", "severity": "low", "issue": "UNNATURAL", "note": "'you worked too much today' is slightly off; better: 'you've worked too much today'"}
+{"id": "ru-1855", "severity": "low", "issue": "UNNATURAL", "note": "'the neighbor' should be 'your neighbor' (соседом is the neighbor, but in this imperative context implies a specific neighbor the speaker knows)"}
+{"id": "ru-1922", "severity": "medium", "issue": "UNNATURAL", "note": "English 'possibly' sounds stilted with conditional; 'might' or 'could' more natural"}
+{"id": "ru-1932", "severity": "low", "issue": "UNNATURAL", "note": "'get a dog' is colloquial; 'acquire' or 'adopt' better matches formal Russian"}
+{"id": "ru-1941", "severity": "low", "issue": "MISSING_NUANCE", "note": "пельмени is a specific dumpling dish; may warrant gloss or explanation in learning context"}
+{"id": "ru-1943", "severity": "low", "issue": "UNNATURAL", "note": "'go to the sea' is slightly archaic English; 'go to the seaside' or 'go to the beach' more natural"}
+{"id": "ru-1894", "severity": "medium", "issue": "UNNATURAL", "note": "counterfactual conditional should use 'would have' for past-oriented meaning; 'would buy' is present-oriented but Russian suggests hypothetical outcome"}
+{"id": "ru-1895", "severity": "medium", "issue": "UNNATURAL", "note": "'would go' is present-oriented; Russian counterfactual suggests past intention 'would have gone'"}
+{"id": "ru-1897", "severity": "low", "issue": "UNNATURAL", "note": "'does sports' is colloquial; more standard: 'does sports' or 'plays sports'"}
+{"id": "ru-1906", "severity": "low", "issue": "UNNATURAL", "note": "'swings on a swing' is slightly redundant; 'swings' alone is clearer"}
+{"id": "ru-1917", "severity": "medium", "issue": "UNNATURAL", "note": "incomplete conditional; missing main clause antecedent. Should be 'If they studied, they would learn Russian' or similar"}
+{"id": "ru-1918", "severity": "low", "issue": "MISSING_NUANCE", "note": "'should have waited' is correct but 'ought to have waited' captures obligation nuance equally well"}
+{"id": "ru-1862", "severity": "medium", "issue": "WRONG_REGISTER", "note": "Generic 'your sister' should reflect informal imperative context; 'her birthday' is accurate but 'coming up soon' is more natural"}
+{"id": "ru-1865", "severity": "medium", "issue": "UNNATURAL", "note": "'He is surprised by the results' is accurate but 'удивляется' (surprises himself / is surprised at) is more active; consider 'He is amazed at the results'"}
+{"id": "ru-1868", "severity": "low", "issue": "UNNATURAL", "note": "'I would be glad to help' is correct but slightly formal; 'I'd be happy to help' is more colloquial"}
+{"id": "ru-1882", "severity": "medium", "issue": "UNNATURAL", "note": "'ни при каких условиях' (under no conditions whatsoever) — translation misses emphatic negation; should be 'We would refuse under no circumstances' or 'We would never refuse'"}
+{"id": "ru-1885", "severity": "low", "issue": "UNNATURAL", "note": "'you can barely be heard' is passive but 'тебя плохо слышно' is more impersonal; 'I can barely hear you' better captures the sense"}
+{"id": "ru-1888", "severity": "low", "issue": "UNNATURAL", "note": "'after long crying' is awkward; should be 'after crying for so long' or 'after a long cry'"}
+{"id": "ru-1890", "severity": "low", "issue": "UNNATURAL", "note": "'climbed up the ladder to the roof' is redundant; 'climbed the ladder' or 'climbed to the roof' is more natural"}
+{"id": "ru-1952", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "согласилась is feminine past/conditional; English should specify 'I would have agreed' or use gendered form if context demands it, but standard English doesn't mark gender here—translation is acceptable but could note the gendered conditional"}
+{"id": "ru-1967", "severity": "medium", "issue": "UNNATURAL", "note": "'Speak slower' is informal/non-standard; standard English is 'Speak more slowly' or 'Speak slower please'"}
+{"id": "ru-1968", "severity": "low", "issue": "MISSING_NUANCE", "note": "'ни за что' means 'under no circumstances; for nothing'—translation captures core meaning but 'He would never in any circumstances agree' or 'He wouldn't agree for anything' captures fuller sense"}
+{"id": "ru-2049", "severity": "medium", "issue": "WRONG_REGISTER", "note": "Informal imperative 'проверь' should be formal 'Проверьте' for consistency with other formal imperatives in batch"}
+{"id": "ru-2063", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing awkward; should be 'It's interesting to learn/study with our teacher' or 'Our teacher makes things interesting'"}
+{"id": "ru-2069", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'поёт песню в школе' means 'sings a song at school' (specific action), but context is unclear; if habitual, 'always' fits, but the sentence subject-verb pairing suggests unclear context"}
+{"id": "ru-2017", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; better: 'In his place I wouldn't argue' or 'If I were in his place I wouldn't argue'"}
+{"id": "ru-2030", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "present/past counterfactual mismatch; Russian describes unrealized past ('had studied'), not hypothetical present"}
+{"id": "ru-2031", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "present/past counterfactual mismatch; Russian describes unrealized past ('had come'), not hypothetical present"}
+{"id": "ru-2034", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "conditional mood inconsistency; should be 'If he had been here, he would have explained everything' or maintain present counterfactual throughout"}
+{"id": "ru-2036", "severity": "medium", "issue": "UNNATURAL", "note": "conditional without clear context; better: 'He would have easily managed' or 'He could easily manage'"}
+{"id": "ru-2039", "severity": "low", "issue": "UNNATURAL", "note": "'dance a waltz' is slightly awkward; more natural: 'would have danced a waltz'"}
+{"id": "ru-2040", "severity": "medium", "issue": "UNNATURAL", "note": "redundant modal construction; better: 'She should have warned (us)' or 'She ought to have warned'"}
+{"id": "ru-1985", "severity": "medium", "issue": "UNNATURAL", "note": "\"they promise rain\" is awkward; better: \"rain is predicted\" or \"they forecast rain\""}
+{"id": "ru-1991", "severity": "low", "issue": "UNNATURAL", "note": "\"don't retreat\" is technically correct but stilted; \"don't give in\" or \"don't back down\" more natural"}
+{"id": "ru-1998", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Russian conditional without main clause—incomplete thought. Translation treats it as complete, but should indicate: \"She would do yoga\" (if context were provided) or flag as fragmentary"}
+{"id": "ru-2002", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Conditional clause without apodosis (main clause). Sentence is incomplete in Russian; translation should reflect this or add implied clause"}
+{"id": "ru-2007", "severity": "medium", "issue": "UNNATURAL", "note": "\"If only everything were that simple\" is correct but \"If only it were all so simple\" flows more naturally"}
+{"id": "ru-2144", "severity": "medium", "issue": "UNNATURAL", "note": "\"renewed\" is awkward; \"restored\" is more idiomatic for fresco work"}
+{"id": "ru-2144", "fix": {"k": "обновил", "en": "to restore; to renew", "pos": "v"}}
+{"id": "ru-2150", "severity": "medium", "issue": "UNNATURAL", "note": "\"narrower\" is correct but \"narrow\" alone sounds incomplete; phrasing is acceptable but could clarify context"}
+{"id": "ru-2074", "severity": "medium", "issue": "UNNATURAL", "note": "\"Be so kind\" is archaic; modern English is \"Please pass me the salt and pepper\" or \"Would you pass me the salt and pepper?\""}
+{"id": "ru-2077", "severity": "low", "issue": "UNNATURAL", "note": "\"In order to make it\" is awkward; better: \"To make it on time, you need to get up early\""}
+{"id": "ru-2079", "severity": "low", "issue": "UNNATURAL", "note": "\"Don't hurry with the answer\" is slightly awkward; better: \"Don't rush your answer\" or \"Take your time with the answer\""}
+{"id": "ru-2083", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"most precious\" misses the sense of \"more precious than anything\"; better: \"Family is more precious than anything\" or \"Nothing is more precious than family\""}
+{"id": "ru-2086", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Russian uses nominative case (\"Суп горячее\") meaning \"The soup is hotter\"; translation correct but card may confuse; context suggests comparison with каша (porridge) but this is implicit"}
+{"id": "ru-2179", "severity": "high", "issue": "UNNATURAL", "note": "English word order awkward; should be 'I read a task yesterday' or 'Yesterday I read a task'"}
+{"id": "ru-2180", "severity": "medium", "issue": "UNNATURAL", "note": "'open since morning' is awkward; better as 'has been open since morning' or 'is open from morning'"}
+{"id": "ru-2182", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'учатся в школе' means 'study at school', not 'go to school'; should be 'Her children study at school'"}
+{"id": "ru-2190", "severity": "low", "issue": "UNNATURAL", "note": "'A clean lake is behind the forest' is awkward; better as 'The clean lake is behind the forest' or 'A clean lake lies behind the forest'"}
+{"id": "ru-2102", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Imperfective aspect implies habitual action; English 'paints' suggests ongoing/habitual but sentence structure with 'завтра' (tomorrow) is awkward. Should be 'will paint' (perfective context)."}
+{"id": "ru-2118", "severity": "medium", "issue": "UNNATURAL", "note": "'Sit comfortably' is awkward; better: 'Sit more comfortably' or 'Make yourselves comfortable'. Imperative поудобнее implies comparative."}
+{"id": "ru-2122", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Sentence makes no logical sense. 'The programmer always cleans the apartment in the museum' is nonsensical. Likely a data error or mistranslation."}
+{"id": "ru-2124", "severity": "medium", "issue": "MISSING_NUANCE", "note": "English translation is literal but misses idiomatic sense. Russian proverb means 'the further you go, the more trouble you encounter' (not just firewood). Should clarify or note as idiom."}
+{"id": "ru-2129", "severity": "low", "issue": "UNNATURAL", "note": "'Dress warmer' should be 'Dress more warmly' or 'Dress warmer' (comparative form preferred here, but 'more warmly' is more standard English)."}
+{"id": "ru-2265", "severity": "medium", "issue": "UNNATURAL", "note": "English 'It is three o'clock now' is awkward; more natural: 'It is three o'clock' or 'Now it is three o'clock'"}
+{"id": "ru-2268", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing 'Goodbye until tomorrow!' with exclamation mark sounds forced; more natural: 'Goodbye until tomorrow' or 'See you tomorrow'"}
+{"id": "ru-2193", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Proverb meaning: 'God helps those who wake early' or 'The early bird gets the worm'; current translation misses the proverb context and folk wisdom register"}
+{"id": "ru-2199", "severity": "low", "issue": "UNNATURAL", "note": "'more patient than mom' should be 'more patient than her mother' or 'more patient than mother' for clarity"}
+{"id": "ru-2209", "severity": "low", "issue": "UNNATURAL", "note": "'My female friend' is awkward; standard English is 'My friend' or 'My girlfriend' (if romantic context intended)"}
+{"id": "ru-2212", "severity": "medium", "issue": "UNNATURAL", "note": "Superlative construction awkward; should be 'Moscow is the most beautiful of all cities' or 'Moscow is more beautiful than all other cities'"}
+{"id": "ru-2223", "severity": "medium", "issue": "UNNATURAL", "note": "Missing main verb; should be 'The most beautiful girl in the class (is...)' or complete the thought"}
+{"id": "ru-2228", "severity": "medium", "issue": "UNNATURAL", "note": "Missing main verb; incomplete sentence structure"}
+{"id": "ru-2229", "severity": "low", "issue": "WRONG_REGISTER", "note": "'mom' is informal; 'mother' matches Russian мама in formal card context"}
+{"id": "ru-2233", "severity": "medium", "issue": "UNNATURAL", "note": "Missing main verb; incomplete sentence structure"}
+{"id": "ru-2237", "severity": "low", "issue": "MISSING_NUANCE", "note": "English 'taller' for выше may mislead; without object, 'taller' is incomplete—consider 'He is significantly taller than...' or 'He stands significantly higher'"}
+{"id": "ru-2236", "severity": "low", "issue": "WRONG_REGISTER", "note": "'mom' is informal; 'mother' is more neutral"}
+{"id": "ru-2293", "severity": "medium", "issue": "UNNATURAL", "note": "English uses 'by six' not 'no later than six' for time; 'no later than' sounds formal/awkward here"}
+{"id": "ru-2298", "severity": "low", "issue": "UNNATURAL", "note": "Comma placement awkward; 'Tell me please what time it is now' or 'What time is it now, please?' flows better"}
+{"id": "ru-2304", "severity": "low", "issue": "UNNATURAL", "note": "'The library I go to' is correct but 'that I go to' is more natural in English"}
+{"id": "ru-2308", "severity": "low", "issue": "UNNATURAL", "note": "'in which we walked' is grammatically correct but 'where we walked' is more natural"}
+{"id": "ru-2311", "severity": "low", "issue": "UNNATURAL", "note": "\"Here is the book\" is stiff; prefer \"Here's the book\" or \"This is the book\""}
+{"id": "ru-2318", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Subject \"he\" inserted but Russian sentence is impersonal; should be \"Not only did [someone] arrive late, but also forgot documents\" or restructure without explicit subject"}
+{"id": "ru-2324", "severity": "low", "issue": "UNNATURAL", "note": "Russian asks \"at whose house\" but English \"standing at\" is awkward; better: \"Whose house are you standing in front of?\" or \"By whose house are you standing?\""}
+{"id": "ru-2335", "severity": "low", "issue": "UNNATURAL", "note": "\"The road we drove on is bad\" reads oddly; prefer \"The road we drove on was bad\" (past tense match) or \"The road we were driving on is bad\""}
+{"id": "ru-2349", "severity": "medium", "issue": "UNNATURAL", "note": "Adverb placement awkward; 'thickly enveloped' reads stiffly. Better: 'Fog enveloped the meadows and fields densely early in the morning' or restructure."}
+{"id": "ru-2350", "severity": "low", "issue": "UNNATURAL", "note": "'Floor layer' is technically correct but 'parquet layer' or 'flooring installer' is more natural in English."}
+{"id": "ru-2361", "severity": "medium", "issue": "UNNATURAL", "note": "'Dances a waltz' is awkward; idiomatically 'Mom will dance the waltz tomorrow' or 'Mom will dance a waltz tomorrow' preferred."}
+{"id": "ru-2362", "severity": "medium", "issue": "UNNATURAL", "note": "'Washes dishes tomorrow' with future tense is unusual in English; typically would say 'will wash' or context implies immediate future."}
+{"id": "ru-2375", "severity": "high", "issue": "UNNATURAL", "note": "awkward word order; should be 'I used to read a task every day' or 'I read a task every day'"}
+{"id": "ru-2388", "severity": "medium", "issue": "UNNATURAL", "note": "missing 'by' or preposition; should be 'Here is the house (that) we are passing by' or 'we pass by'"}
+{"id": "ru-2399", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; better: 'The closed shop at the end of the street used to be a popular bookshop' (bookstore is commercial; bookshop more natural for Russian книжный)"}
+{"id": "ru-2401", "severity": "medium", "issue": "UNNATURAL", "note": "everyone was happy is too stative; 'everyone became happy' or 'everyone rejoiced' better captures обрадовались"}
+{"id": "ru-2403", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "повторила suggests 'told' or 'said again', not 'repeated'; 'Mom said that dinner is ready' more natural"}
+{"id": "ru-2409", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "дома завтра together is awkward; also conflicting time markers (present tense моет + завтра). Likely should be 'tomorrow at home' or 'will wash dishes'"}
+{"id": "ru-2413", "severity": "medium", "issue": "UNNATURAL", "note": "around which there is a fence is clunky; 'with a fence around it' or 'that has a fence around it' is more natural"}
+{"id": "ru-2419", "severity": "medium", "issue": "UNNATURAL", "note": "повторил чтобы is 'told/urged us to be careful', not just repeated a statement; should be 'Father told us to be careful'"}
+{"id": "ru-2424", "severity": "low", "issue": "UNNATURAL", "note": "due to the holiday the store is closed is slightly formal; comma placement could be clearer"}
+{"id": "ru-2492", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; better: 'I'm going to visit a friend' or 'I'm going to my friend's place'"}
+{"id": "ru-2500", "severity": "low", "issue": "UNNATURAL", "note": "Better: 'There are many stores in the city center' (more natural word order)"}
+{"id": "ru-2501", "severity": "low", "issue": "UNNATURAL", "note": "Better: 'At the beginning of the lesson, the teacher was explaining' or 'explained'"}
+{"id": "ru-2502", "severity": "low", "issue": "UNNATURAL", "note": "Better: 'A little house stands on the edge of the forest' (more natural word order)"}
+{"id": "ru-2505", "severity": "low", "issue": "UNNATURAL", "note": "Better: 'Unlike her brother, she is quiet' — subject pronoun 'her' is incorrect; should be 'Unlike her brother' only"}
+{"id": "ru-2519", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Fragment without verb; should be 'The painting hangs above the couch' or 'The painting is above the couch'"}
+{"id": "ru-2520", "severity": "medium", "issue": "UNNATURAL", "note": "Better: 'He is rich, but unhappy' (however + adjective without 'is' reads awkwardly)"}
+{"id": "ru-2461", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "через + мост means 'over/across the bridge', not 'across the bridge (as the destination)'; the sentence means 'A road goes over the bridge' or 'A road passes over the bridge'"}
+{"id": "ru-2478", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Скоро (soon) + present tense is illogical; likely error in source or should be present habitual; as written, 'Soon the writer listens...' is nonsensical"}
+{"id": "ru-2486", "severity": "medium", "issue": "UNNATURAL", "note": "мы ждём (we wait/are waiting) is present; with future condition (не будет ответа), should be 'we will wait' (будем ждать)"}
+{"id": "ru-2433", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing awkward; better: 'Either he forgot or didn't want to' (avoid repeated auxiliary)"}
+{"id": "ru-2434", "severity": "medium", "issue": "UNNATURAL", "note": "'was read across the country' is passive and vague; more natural: 'was read throughout the country' or 'people read it across the country'"}
+{"id": "ru-2440", "severity": "medium", "issue": "UNNATURAL", "note": "'the problem that upset him' shifts focus; more direct: 'the problem he is upset about' or 'the problem causing his distress'"}
+{"id": "ru-2444", "severity": "low", "issue": "UNNATURAL", "note": "'glassblower' is correct but archaic; 'glass artist' or 'glassblower' both work—minor stylistic note"}
+{"id": "ru-2448", "severity": "low", "issue": "UNNATURAL", "note": "'In the evening I rest' is stiff; more natural: 'I rest in the evening' or 'I relax in the evening'"}
+{"id": "ru-2449", "severity": "medium", "issue": "UNNATURAL", "note": "Zero article in Russian but 'The newspaper is on the desk' assumes specific newspaper; 'A newspaper is on the desk' or 'There is a newspaper on the desk' more idiomatic"}
+{"id": "ru-2456", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Он пришёл через час' means 'He arrived after an hour (had passed)' or 'He came an hour later,' not 'in an hour' (which implies future)"}
+{"id": "ru-2459", "severity": "low", "issue": "UNNATURAL", "note": "'coming from the store' is acceptable but 'He is coming from the store' requires context; 'He comes from the store' more neutral"}
+{"id": "ru-2524", "severity": "medium", "issue": "UNNATURAL", "note": "Natural English: 'He alternates between laughing and crying' or 'He laughs and cries by turns'; 'either...or' suggests exclusive choice, not alternation"}
+{"id": "ru-2529", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward word order; natural: 'He is rarely late' or 'He rarely arrives late'"}
+{"id": "ru-2530", "severity": "low", "issue": "UNNATURAL", "note": "More natural: 'The cat is under the table' (already acceptable, but English expects 'is')"}
+{"id": "ru-2531", "severity": "medium", "issue": "UNNATURAL", "note": "Present participle as adjective sounds strained; prefer 'The book being read is interesting' → 'The book I'm reading is interesting' or 'The book that is being read is interesting'"}
+{"id": "ru-2533", "severity": "low", "issue": "UNNATURAL", "note": "'It's still too early to get up' is acceptable but slightly awkward; 'It's still too early to be getting up' is more natural"}
+{"id": "ru-2534", "severity": "low", "issue": "UNNATURAL", "note": "'It's already too late for a walk' is acceptable but 'It's already too late to go for a walk' is more natural"}
+{"id": "ru-2540", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'из-за границы' = from outside the country/from abroad; 'I came from abroad' works but 'I came back from abroad' or 'I returned from abroad' more precisely captures the perfective aspect"}
+{"id": "ru-2555", "severity": "medium", "issue": "UNNATURAL", "note": "ran around → scattered throughout/dispersed across is more natural for разбежались по двору"}
+{"id": "ru-2559", "severity": "low", "issue": "UNNATURAL", "note": "it started to rain → it began raining is more natural"}
+{"id": "ru-2570", "severity": "low", "issue": "WRONG_REGISTER", "note": "don't know is informal; they said they don't know lacks the formal reporting tone"}
+{"id": "ru-2574", "severity": "medium", "issue": "UNNATURAL", "note": "Having said goodbye to → After saying goodbye to is more natural English"}
+{"id": "ru-2577", "severity": "medium", "issue": "UNNATURAL", "note": "Having learned the → After learning the or Upon learning the is more natural"}
+{"id": "ru-2594", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward word order; should be 'The newly built house on the corner of our street looks very modern' or 'The house newly built on the corner of our street looks very modern'"}
+{"id": "ru-2595", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Одетый' is a past passive participle meaning 'dressed/clothed', not 'the dressed child' which is unnatural. Should be 'The child, dressed and ready' or 'The dressed-up child'"}
+{"id": "ru-2598", "severity": "high", "issue": "UNNATURAL", "note": "Object-verb-adverb order is awkward English; should be 'She quickly read the task' or 'She read the task quickly'"}
+{"id": "ru-2602", "severity": "medium", "issue": "UNNATURAL", "note": "Missing context/verb; standalone phrase is incomplete. Should be 'On the occasion of the birthday' (with a main clause) or 'For the occasion of the birthday'"}
+{"id": "ru-2606", "severity": "high", "issue": "UNNATURAL", "note": "Awkward word order; should be 'He read the task all day' or 'He spent all day reading the task'"}
+{"id": "ru-2608", "severity": "low", "issue": "WRONG_REGISTER", "note": "'In childhood' is slightly formal/literary; more natural is 'As a child' or 'When I was a child'"}
+{"id": "ru-2612", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "перенесено = has been postponed/was postponed (past tense), not present tense 'is postponed'"}
+{"id": "ru-2612", "fix": {"k": "перенесено", "en": "has been postponed; was postponed", "pos": "v"}}
+{"id": "ru-2614", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "чтобы я больше отдыхал requires subjunctive 'that I rest more', not infinitive construction"}
+{"id": "ru-2614", "fix": {"k": "посоветовал", "en": "advised (that); recommended (that)", "pos": "v"}}
+{"id": "ru-2615", "severity": "low", "issue": "UNNATURAL", "note": "'A friend told that' is awkward; should be 'A friend told him that' or 'A friend said that'"}
+{"id": "ru-2622", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "витражное стекло = stained glass window pane or decorative glass (not necessarily 'stained glass' artwork; context matters)"}
+{"id": "ru-2622", "fix": {"k": "витражное стекло", "en": "stained glass; decorative glass pane", "pos": "n"}}
+{"id": "ru-2630", "severity": "low", "issue": "MISSING_NUANCE", "note": "парировать can also mean 'to parry' but also 'to ward off'; 'parried' is correct but 'blocked' is alternate"}
+{"id": "ru-2636", "severity": "low", "issue": "UNNATURAL", "note": "'grown-up children' is awkward phrasing; 'grown children' or 'adult children' more natural"}
+{"id": "ru-2679", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Present tense 'поёт' with 'скоро' is contradictory; should be future 'will sing' or present continuous context needed"}
+{"id": "ru-2685", "severity": "medium", "issue": "UNNATURAL", "note": "'The built house' is awkward; better as 'The newly built house' or 'The house that was built'"}
+{"id": "ru-2691", "severity": "medium", "issue": "UNNATURAL", "note": "'The painted picture' is stiff; more natural as 'The picture that was painted' or 'The painting'"}
+{"id": "ru-2692", "severity": "medium", "issue": "UNNATURAL", "note": "Imperative tone shift from past to present awkward; 'has long since been read, return it' flows better"}
+{"id": "ru-2641", "severity": "medium", "issue": "UNNATURAL", "note": "'The told story' is awkward; 'The story that was told' or 'The recounted story' reads better"}
+{"id": "ru-2643", "severity": "low", "issue": "UNNATURAL", "note": "'The surprised eyes of the child' is slightly formal; 'The child's surprised eyes' is more natural"}
+{"id": "ru-2649", "severity": "medium", "issue": "UNNATURAL", "note": "'ran away from class' suggests fleeing in panic; 'skipped class' better captures сбежал in this context"}
+{"id": "ru-2651", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "перелетела means 'flew over/across' but 'She flew across the ocean' implies an action; she didn't fly herself. Should be 'She flew over the ocean' or clarify the subject"}
+{"id": "ru-2656", "severity": "low", "issue": "UNNATURAL", "note": "'The bored child' from скучающий (present participle) is acceptable but 'The child who is bored' is more explicit"}
+{"id": "ru-2659", "severity": "medium", "issue": "UNNATURAL", "note": "'A spoken word cannot be taken back' is archaic/stiff; modern: 'Words that are spoken cannot be taken back' or 'You can't take back a spoken word'"}
+{"id": "ru-2667", "severity": "low", "issue": "UNNATURAL", "note": "'go to bed at eleven' is correct but 'I usually go to bed at eleven' would be more complete"}
+{"id": "ru-2715", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing awkward; should be 'She urged us not to worry' or 'She tried to convince us not to worry'"}
+{"id": "ru-2718", "severity": "medium", "issue": "UNNATURAL", "note": "Should be 'He was trying to convince us' or 'He tried to convince [someone]' — sentence lacks object"}
+{"id": "ru-2726", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "'пикантный' means spicy/piquant, but 'горный сыр' (mountain cheese) is typically not characterized primarily by spice; consider 'aromatic' or 'distinctive'"}
+{"id": "ru-2729", "severity": "low", "issue": "UNNATURAL", "note": "'The read book' is awkward English; better as 'The book she had read' or 'The finished book'"}
+{"id": "ru-2734", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "past tense 'said' requires past tense 'was talented', not present 'is talented'"}
+{"id": "ru-2735", "severity": "low", "issue": "UNNATURAL", "note": "'after severe hailstorm' needs article: 'after a severe hailstorm'"}
+{"id": "ru-2741", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "past tense 'said' requires past tense 'agreed', not present 'agree'"}
+{"id": "ru-2759", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "past tense 'were informed' requires past tense 'is delayed' → 'was delayed'"}
+{"id": "ru-2769", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing awkward; better: 'Sorry I'm late, there was traffic on the road' or 'Apologize for the delay, there was traffic on the road'"}
+{"id": "ru-2777", "severity": "low", "issue": "UNNATURAL", "note": "'informed that' is stilted; more natural: 'said she was leaving' or 'told me she was leaving'"}
+{"id": "ru-2788", "severity": "low", "issue": "UNNATURAL", "note": "'received education' is awkward; better: 'education one receives' or simply 'education helps in life'"}
+{"id": "ru-2789", "severity": "medium", "issue": "UNNATURAL", "note": "Impersonal construction awkward in English; better: 'Russian is considered difficult' or 'People consider Russian difficult'"}
+{"id": "ru-2816", "severity": "medium", "issue": "UNNATURAL", "note": "covered all roads with snow is awkward; 'snow' not in Russian but implied by метель"}
+{"id": "ru-2816", "fix": {"k": "замела", "en": "to cover; to sweep over", "pos": "v"}}
+{"id": "ru-2857", "severity": "medium", "issue": "MISSING_NUANCE", "note": "The proverb means 'sleep on it' or 'reconsider after rest'; the translation is literal but misses the idiomatic sense. Better: 'The morning is wiser than the evening' or 'Things look better in the morning'"}
+{"id": "ru-2870", "severity": "medium", "issue": "UNNATURAL", "note": "'Riding the train' suggests being a passenger; more naturally 'While traveling by train' or 'As we traveled by train'"}
+{"id": "ru-2880", "severity": "low", "issue": "WRONG_REGISTER", "note": "'Ткачиха' is an archaic/literary feminine form; modern translation would use 'weaver' without gender marker, but archaic style may be intentional for a folk-tale context"}
+{"id": "ru-2822", "severity": "medium", "issue": "UNNATURAL", "note": "\"assured that\" is awkward; should be \"assured [him/her] that\" or \"asserted that\""}
+{"id": "ru-2827", "severity": "low", "issue": "UNNATURAL", "note": "\"According to his words\" is stiff; \"By his account\" or \"He said\" flows better"}
+{"id": "ru-2830", "severity": "low", "issue": "UNNATURAL", "note": "\"According to her words\" is stiff; \"By her account\" or \"She said\" flows better"}
+{"id": "ru-2833", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "печальна means sad/sorrowful in emotional sense; here implies pathetic fallacy, better as \"sorrowful\" or acknowledge figurative use"}
+{"id": "ru-2841", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Russian imperfective past suggests habitual action; \"used to run\" or \"would run\" is more accurate than simple past \"ran\""}
+{"id": "ru-2846", "severity": "low", "issue": "UNNATURAL", "note": "\"for three months straight\" is slightly awkward; \"for the third consecutive month\" or \"for three months now\" is clearer"}
+{"id": "ru-2886", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "каша заварилась is idiomatic for 'things got messy/complicated' but 'things got complicated' is too vague; should reflect the metaphorical sense more directly"}
+{"id": "ru-2889", "severity": "medium", "issue": "UNNATURAL", "note": "'from the first of this month' is awkward; 'starting from the first of this month' or 'as of the first of this month' is more natural"}
+{"id": "ru-2892", "severity": "medium", "issue": "UNNATURAL", "note": "'The received package' is grammatically correct but 'The package I received' or 'A package I received' is more natural in English"}
+{"id": "ru-2899", "severity": "low", "issue": "UNNATURAL", "note": "'we continued' is incomplete; should be 'we continued walking' or 'we went on'"}
+{"id": "ru-2906", "severity": "low", "issue": "UNNATURAL", "note": "'Having thought' is stilted; 'After thinking' or 'After some thought' is more natural"}
+{"id": "ru-2914", "severity": "medium", "issue": "UNNATURAL", "note": "English passive 'was happy' is awkward; 'became happy' or 'rejoiced' better captures обрадовалась (perfective, sudden change of state)"}
+{"id": "ru-2920", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "масла = oil (cooking oil, vegetable oil); 'butter' is сливочное масло. Context suggests cooking oil."}
+{"id": "ru-2928", "severity": "medium", "issue": "UNNATURAL", "note": "'See you on Monday' is too casual for До встречи; 'Until Monday' or 'See you Monday' more formal/standard"}
+{"id": "ru-2933", "severity": "medium", "issue": "UNNATURAL", "note": "'reach out any time' is colloquial; 'feel free to contact me' or 'don't hesitate to reach out' more natural"}
+{"id": "ru-2976", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"has been repaired\" suggests completion, but Russian \"ремонтируется\" (is being repaired) indicates ongoing action. Should be \"is being repaired\" or \"has been under repair\"."}
+{"id": "ru-2978", "severity": "medium", "issue": "UNNATURAL", "note": "\"Sorry for the trouble\" is awkward phrasing. More natural: \"Excuse me for the bother\" or \"I apologize for troubling you\"."}
+{"id": "ru-2985", "severity": "medium", "issue": "UNNATURAL", "note": "\"solved by the students in half an hour on the exam\" is awkward. Better: \"The problem was solved by the students in half an hour during the exam\"."}
+{"id": "ru-2986", "severity": "medium", "issue": "UNNATURAL", "note": "\"Want some tea with honey, I just brewed some fresh?\" is grammatically incomplete. Better: \"Would you like some tea with honey? I just brewed a fresh pot.\" or similar."}
+{"id": "ru-2988", "severity": "low", "issue": "UNNATURAL", "note": "\"completely relaxed and at peace\" uses \"relaxed\" which doesn't fully capture \"спокойствие\" (peace/calm). Consider \"complete calm and tranquility\" or \"utter peace\"."}
+{"id": "ru-2997", "severity": "low", "issue": "UNNATURAL", "note": "\"on the area map\" is awkward. Better: \"on the local map\" or \"on a map of the area\"."}
+{"id": "ru-3041", "severity": "medium", "issue": "UNNATURAL", "note": "\"don't try to fool me\" is interpretive; more direct: \"don't deceive me\" or \"don't pull the wool over my eyes\""}
+{"id": "ru-3042", "severity": "low", "issue": "UNNATURAL", "note": "\"bread and salt is\" should be \"bread and salt are\" (plural subject in English)"}
+{"id": "ru-3043", "severity": "low", "issue": "UNNATURAL", "note": "\"the Snow Maiden\" — common name, but \"Snegurochka\" is more recognizable; \"with his granddaughter Snegurochka\" would be clearer"}
+{"id": "ru-3049", "severity": "medium", "issue": "UNNATURAL", "note": "Parenthetical gloss '(done flawlessly)' is explanatory, not translation; better: \"A mosquito won't file down its nose; impeccably done\" or separate as idiom meaning"}
+{"id": "ru-3050", "severity": "high", "issue": "UNNATURAL", "note": "Literal rendering is confusing; should be \"on the verge of tears; eyes glistening\" or clearer idiomatic sense"}
+{"id": "ru-3051", "severity": "medium", "issue": "UNNATURAL", "note": "Parenthetical gloss unclear; better: \"to hold a grudge against someone\" or \"to harbor ill will\""}
+{"id": "ru-3052", "severity": "low", "issue": "UNNATURAL", "note": "Parenthetical gloss awkward; better standalone: \"to step on the same rake; to repeat the same mistake\""}
+{"id": "ru-2943", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "1895 is 'eighteen ninety-five' but Russian says 'тысяча восемьсот девяносто пятый год' (one thousand eight hundred ninety-five), which is the correct full form; the English abbreviation is acceptable but the Russian phrasing is more formal/complete—minor discrepancy in register representation"}
+{"id": "ru-2946", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'моет посуду скоро' means 'washes dishes soon/quickly', not 'will wash' or habitual; 'скоро' is temporal (soon) or manner (quickly), not future tense marker"}
+{"id": "ru-2954", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Четыре месяца зимы бывают суровыми' — Russian has only 3 months of winter; this sentence is logically odd in source, but translation should note winter typically has 3 months, not 4"}
+{"id": "ru-2958", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Один в поле не воин' is a proverb meaning 'one person alone cannot accomplish much'; translation 'One man is not a warrior in the field' misses the idiomatic sense—should be 'One man alone cannot fight the battle' or similar"}
+{"id": "ru-2960", "severity": "medium", "issue": "UNNATURAL", "note": "'By running every day' is awkward; 'выносливее' means 'more enduring/more hardy' but the phrasing 'more enduring' is stiff—'more resilient' or 'stronger' more natural"}
+{"id": "ru-2969", "severity": "low", "issue": "UNNATURAL", "note": "'five world languages' is awkward; better 'five languages' or 'five languages around the world'; 'мира' (of the world) is present but 'world languages' as a phrase is stiff in English"}
+{"id": "ru-3006", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Perfective aspect 'построен' indicates completed action; 'was built' is correct but tense marker 'ago' placement is awkward. Should be 'This bridge was built a hundred years ago' or 'A hundred years ago this bridge was built.' Current phrasing suggests future or habitual."}
+{"id": "ru-3009", "severity": "medium", "issue": "UNNATURAL", "note": "'On the second floor of our building is the library' is inverted. More natural: 'The library is on the second floor of our building' or 'On the second floor of our building there is a library.'"}
+{"id": "ru-3010", "severity": "medium", "issue": "UNNATURAL", "note": "Subject-verb agreement issue in English. 'A third of the students' is plural, so should be 'were late' not 'was late.' Current translation has 'were late' which is correct, so no issue here — marking as false alarm. RETRACT."}
+{"id": "ru-3011", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Parenthetical meaning in English translation. Should be: 'To kill two birds with one stone' (standard idiom) or note both Russian literal and English equivalent separately."}
+{"id": "ru-3014", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Parenthetical gloss. Better as: 'Like snow falling on one's head; unexpectedly' or use standard English equivalent 'to come out of the blue.'"}
+{"id": "ru-3015", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Parenthetical gloss. Better as: 'Neither light nor dawn; at dawn' or 'at the crack of dawn.'"}
+{"id": "ru-3018", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Parenthetical gloss. Standard form: 'To beat around the bush' without parenthetical Russian translation hint."}
+{"id": "ru-3115", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English says 'dad cooks lunch' but Russian says 'brother washes dishes' — completely different actions and person"}
+{"id": "ru-3120", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English says 'programmer writes a letter' but Russian says 'student swims in the pool' — entirely mismatched"}
+{"id": "ru-3067", "severity": "medium", "issue": "UNNATURAL", "note": "Parenthetical '(informal)' violates format rules; should be integrated or omitted"}
+{"id": "ru-3075", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English translation 'There are no comrades in taste and color' is nonsensical; should be 'There's no accounting for taste' or similar"}
+{"id": "ru-3076", "severity": "high", "issue": "UNNATURAL", "note": "Translation is awkward and unclear; 'Be quiet, you,' doesn't capture the colloquial Russian imperative. Better: 'Hush, the baby is sleeping in the next room!'"}
+{"id": "ru-3079", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Second clause completely wrong: Russian says 'teacher buys groceries' but English says 'librarian walks at home'. Major error in translation."}
+{"id": "ru-3080", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'считает ворон' (count crows) is a Russian idiom meaning daydreaming/being distracted, but the English translation 'daydreams' omits the literal meaning; consider 'counts crows' or explain idiom better"}
+{"id": "ru-3083", "severity": "low", "issue": "MISSING_NUANCE", "note": "Should be 'The Seventh Wonder of the World' (capital W) to match standard phrasing"}
+{"id": "ru-3153", "severity": "medium", "issue": "UNNATURAL", "note": "\"big kisses\" is awkward; more natural: \"lots of kisses\" or \"warm kisses\""}
+{"id": "ru-3162", "severity": "low", "issue": "WRONG_REGISTER", "note": "\"The anthropologist\" uses definite article; source has no article, suggesting generic context"}
+{"id": "ru-3166", "severity": "medium", "issue": "UNNATURAL", "note": "\"get to the homework\" is awkward; better: \"get to work on homework\" or \"start your homework\""}
+{"id": "ru-3170", "severity": "low", "issue": "UNNATURAL", "note": "comma splice; should be: \"How are you? I haven't seen you in the city for a long time.\""}
+{"id": "ru-3171", "severity": "low", "issue": "WRONG_REGISTER", "note": "register label \"(informal)\" violates format rules; should omit or integrate naturally"}
+{"id": "ru-3172", "severity": "high", "issue": "UNNATURAL", "note": "parenthetical gloss format violates rules; should be: \"to work carelessly; to work with sleeves down\""}
+{"id": "ru-3173", "severity": "high", "issue": "UNNATURAL", "note": "parenthetical gloss format violates rules; should be: \"to work hard; to work with sleeves rolled up\""}
+{"id": "ru-3174", "severity": "high", "issue": "UNNATURAL", "note": "parenthetical gloss format violates rules; should be: \"to be indecisive; seven Fridays in a week\""}
+{"id": "ru-3175", "severity": "high", "issue": "UNNATURAL", "note": "parenthetical gloss format violates rules; should be: \"useless effort; like peas against a wall\""}
+{"id": "ru-3176", "severity": "low", "issue": "WRONG_REGISTER", "note": "register label \"(formal)\" violates format rules; should omit or integrate naturally"}
+{"id": "ru-3177", "severity": "low", "issue": "WRONG_REGISTER", "note": "register label \"(formal)\" violates format rules; should omit or integrate naturally"}
+{"id": "ru-3178", "severity": "low", "issue": "WRONG_REGISTER", "note": "register label \"(formal)\" violates format rules; should omit or integrate naturally"}
+{"id": "ru-3179", "severity": "high", "issue": "UNNATURAL", "note": "parenthetical gloss format violates rules; should be: \"to live lavishly; to live on a wide foot\""}
+{"id": "ru-3180", "severity": "high", "issue": "UNNATURAL", "note": "parenthetical gloss format violates rules; should be: \"to keep a secret; to keep the tongue behind the teeth\""}
+{"id": "ru-3121", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English describes different actions: 'boy paints' vs 'медсестра стирает' (nurse does laundry)"}
+{"id": "ru-3122", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English describes different actions: 'driver writes' vs 'полицейский бегает' (policeman runs)"}
+{"id": "ru-3123", "severity": "low", "issue": "UNNATURAL", "note": "'spare me a few minutes' is awkward; better: 'spare a few minutes of your time' or 'give me a few minutes'"}
+{"id": "ru-3125", "severity": "low", "issue": "UNNATURAL", "note": "Russian idiom uses 'ни рыба ни мясо' (neither fish nor meat); 'neither fish nor fowl' is English idiom but different intent; 'belong to' should be 'commit to' or 'side with'"}
+{"id": "ru-3128", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Parenthetical gloss '(hunger is a tough master)' should be main translation; phrase means hunger drives harsh necessity"}
+{"id": "ru-3129", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Parenthetical gloss should be in definition; better: 'the first pancake always comes out poorly; first attempts are imperfect'"}
+{"id": "ru-3133", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Idiomatic meaning (to deceive) should be primary; literal 'hang noodles on ears' is secondary"}
+{"id": "ru-3134", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Parenthetical gloss should be main definition; meaning: 'to be tone-deaf; lack musical ear'"}
+{"id": "ru-3135", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Parenthetical gloss should be primary definition; means 'something with both advantages and disadvantages'"}
+{"id": "ru-3138", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Parenthetical gloss should be main definition; means 'the weakest point breaks first'"}
+{"id": "ru-3142", "severity": "high", "issue": "WRONG_REGISTER", "note": "'Respectfully yours, Ivanov' is not authentic Russian; standard closings are 'С уважением' or 'С добрыми пожеланиями'; this reads like awkward English"}
+{"id": "ru-3149", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Better definition: 'to speak pointlessly; make empty promises or waste words'"}
+{"id": "ru-3150", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Better definition: 'to spread gossip; reveal family secrets publicly'"}
+{"id": "ru-3182", "severity": "medium", "issue": "UNNATURAL", "note": "Repetitive structure doesn't convey the proverb's meaning: 'live and learn throughout life' or 'you learn as long as you live'"}
+{"id": "ru-3184", "severity": "low", "issue": "UNNATURAL", "note": "'into the flames' should be 'into the flame' (singular) for idiom accuracy"}
+{"id": "ru-3192", "severity": "medium", "issue": "UNNATURAL", "note": "'Здорово, как сам' is colloquial greeting meaning 'How's it going?' not 'Hey, how are you'—translation misses the casual tone and construction"}
+{"id": "ru-3194", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Ювелирша' is a female jeweler; translation should specify 'female jeweler' or 'jeweler (female)' for clarity"}
+{"id": "ru-3196", "severity": "high", "issue": "UNNATURAL", "note": "Proverb means 'if you enjoy the benefit, accept the responsibility'—current translation is too literal and misses the idiom"}
+{"id": "ru-3203", "severity": "medium", "issue": "UNNATURAL", "note": "'Попал впросак' literally means 'got caught in an awkward position'—'got himself into trouble' is too generic; better: 'found himself in an awkward spot'"}
+{"id": "ru-3205", "severity": "low", "issue": "CARD_DUPLICATE", "note": "Nearly identical to ru-3204 (only 'обращение' vs 'письмо'); likely unintentional duplication"}
+{"id": "ru-3210", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Translation is nonsensical—'commutes to work in the park' and 'brother cleans the apartment' don't match source; source says 'salesman travels to work in park, grandmother prepares lunch' which itself is odd/incomplete"}
+{"id": "ru-3214", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing 'Call if anything' is awkward; should be 'Call if anything comes up' or 'Call if you need anything'"}
+{"id": "ru-3216", "severity": "medium", "issue": "UNNATURAL", "note": "English gloss 'The wolf's legs feed it' is confusing; idiomatic sense should clarify 'you must stay active/keep moving to survive'"}
+{"id": "ru-3217", "severity": "medium", "issue": "UNNATURAL", "note": "English 'To release on the brakes' is unclear; idiomatic meaning 'to let something slide; to go easy on someone' needs clearer phrasing"}
+{"id": "ru-3219", "severity": "low", "issue": "UNNATURAL", "note": "'A master of all hands' is awkward English; more natural: 'handy at everything' or 'a jack of all trades'"}
+{"id": "ru-3221", "severity": "low", "issue": "UNNATURAL", "note": "'will grind everything' is archaic/awkward; more natural: 'will overcome all obstacles' or 'will wear through anything'"}
+{"id": "ru-3226", "severity": "medium", "issue": "WRONG_REGISTER", "note": "English 'Girlfriend' is too casual/potentially ambiguous for Russian 'подруга' (friend); should be 'Friend' or use name"}
+{"id": "ru-3235", "severity": "low", "issue": "UNNATURAL", "note": "Missing final punctuation mark in English; should end with period"}
+{"id": "ru-3239", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English translation is completely wrong; mentions 'teacher does laundry' but Russian says 'ребёнок танцует вальс' (child dances waltz), not anything about teacher/laundry"}
+{"id": "ru-3240", "severity": "low", "issue": "UNNATURAL", "note": "'Until he calls' slightly awkward for Russian future condition; more natural: 'Until he calls, we will keep waiting' or 'We will wait until he calls'"}
+{"id": "ru-3271", "severity": "medium", "issue": "UNNATURAL", "note": "English passive construction awkward; suggest 'Obviously, we need to act' or 'It's obvious that action is needed'"}
+{"id": "ru-3274", "severity": "low", "issue": "UNNATURAL", "note": "Inversion 'Would it trouble you' is archaic; modern: 'Would you mind waiting?' or 'Could you wait?'"}
+{"id": "ru-3278", "severity": "low", "issue": "UNNATURAL", "note": "'I ask for your attention for a moment' is stiff; better: 'I ask for your attention for just a moment' or 'May I have your attention for a moment?'"}
+{"id": "ru-3283", "severity": "low", "issue": "UNNATURAL", "note": "Double negative 'is not without' is archaic English; idiomatic: 'The world has kind people' or 'There are kind people in the world'"}
+{"id": "ru-3297", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Proverb meaning 'fear holds back, but action succeeds'; current translation misses the motivational sense. Better: 'Eyes fear but hands will do it' or 'The eyes are timid but the hands are bold'"}
+{"id": "ru-3306", "severity": "medium", "issue": "UNNATURAL", "note": "English has redundant 'everywhere' after 'wherever we go'; should be 'Wherever we go, it's beautiful' or 'No matter where we go, everywhere is beautiful'"}
+{"id": "ru-3314", "severity": "low", "issue": "UNNATURAL", "note": "'you could hear the clock ticking' is more natural than 'you could hear, as the clock ticks'; minor tense/aspect mismatch"}
+{"id": "ru-3318", "severity": "medium", "issue": "UNNATURAL", "note": "'doesn't weigh down' is awkward; idiom should be 'One's own burden is light' or 'doesn't burden one'"}
+{"id": "ru-3328", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Bitter!' is correct but the custom's full context is that guests say this to encourage kissing; existing translation captures the purpose but 'Горько' literally means 'bitter' and this cultural detail could be clearer"}
+{"id": "ru-3243", "severity": "medium", "issue": "MISSING_NUANCE", "note": "This is a traditional Russian wish said after bathing, not describing the steam itself. The translation misses the idiomatic meaning entirely."}
+{"id": "ru-3248", "severity": "medium", "issue": "UNNATURAL", "note": "\"Time for business, an hour for fun\" is awkward. Better: \"Time is for work, an hour is for leisure\" or \"Time for business; leisure has its hour.\""}
+{"id": "ru-3252", "severity": "medium", "issue": "UNNATURAL", "note": "\"Would you be so kind as to pass\" is awkward modern English. Better: \"Would you kindly step aside?\" or \"Would you be so good as to move?\""}
+{"id": "ru-3266", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "English says \"sister buys groceries\" but Russian says \"сосед работает в офисе\" (neighbor works in an office). Complete mismatch."}
+{"id": "ru-3243", "fix": {"k": "С лёгким паром!", "en": "With light steam! (a traditional wish offered to someone after bathing)", "pos": "phrase"}}
+{"id": "ru-3338", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "троика is a three-horse sleigh/carriage, not specifically a sled; should be 'carriage' or 'sleigh'"}
+{"id": "ru-3340", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; suggest 'Where you're from is where you'll be needed' or 'Home is where you're useful'"}
+{"id": "ru-3342", "severity": "low", "issue": "UNNATURAL", "note": "'is for funerals' is awkward; suggest 'is only given at funerals' or 'signifies mourning'"}
+{"id": "ru-3346", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Love is evil' misses the proverb's sense; should be 'Love is blind' or 'Love is a tyrant'"}
+{"id": "ru-3359", "severity": "low", "issue": "UNNATURAL", "note": "awkward article omission; suggest 'The Trans-Siberian Railway is the longest railroad line' or 'railway'"}
+{"id": "ru-3360", "severity": "low", "issue": "UNNATURAL", "note": "register label '(informal)' belongs in notes, not translation; remove or rephrase"}
+{"id": "ru-3361", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Здравствуйте is plural/formal greeting; 'Hello' alone doesn't capture formality level typically marked in teaching"}
+{"id": "ru-3363", "severity": "low", "issue": "MISSING_NUANCE", "note": "пожалуйста has three main uses: please; you're welcome; here you go — only two listed"}
+{"id": "ru-3364", "severity": "medium", "issue": "UNNATURAL", "note": "'I'm sorry' is less common usage; извините primarily means 'excuse me' (addressing someone) or 'pardon me'"}
+{"id": "ru-3365", "severity": "low", "issue": "UNNATURAL", "note": "естественнее 'Where is the bathroom?' in most English-speaking contexts; 'toilet' is direct but slightly formal/British"}

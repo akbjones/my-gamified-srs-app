@@ -1,0 +1,618 @@
+{"id": "de-0103", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "vierzehn Uhr is 2 PM (14:00), not 'two' which is ambiguous; should be 'two o'clock' or '2 PM'"}
+{"id": "de-0115", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "dreiundzwanzig Uhr is 11 PM (23:00), not 'eleven' (which typically means 11 AM); should be 'eleven at night' or '11 PM'"}
+{"id": "de-0038", "severity": "low", "issue": "UNNATURAL", "note": "Present tense 'play' is acceptable but 'are playing' better matches German progressive sense"}
+{"id": "de-0040", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'schulfrei' means 'no school' or 'school-free', not 'have no school'; should be 'The children have the day off from school' or 'The children don't have school tomorrow'"}
+{"id": "de-0050", "severity": "low", "issue": "UNNATURAL", "note": "Word order awkward; should be 'We cook dinner together on Saturdays' for more natural English"}
+{"id": "de-0058", "severity": "low", "issue": "UNNATURAL", "note": "'very understandably' is awkward; should be 'very clearly' or 'in an easy to understand way'"}
+{"id": "de-0002", "severity": "medium", "issue": "UNNATURAL", "note": "Formal greeting phrasing awkward; 'I greet you warmly' sounds stilted in English. More natural: 'I warmly greet you' or 'Warm greetings.'"}
+{"id": "de-0005", "severity": "low", "issue": "UNNATURAL", "note": "'I'm just arriving' is acceptable but 'I've just arrived' or 'I'm arriving just now' may feel more natural depending on context."}
+{"id": "de-0008", "severity": "low", "issue": "UNNATURAL", "note": "'it was nice' is incomplete; should be 'it was nice to see you' or 'it was nice meeting you' for full sense."}
+{"id": "de-0018", "severity": "medium", "issue": "UNNATURAL", "note": "'I greet you very warmly' is stilted English; more natural: 'Warm greetings to you' or 'I send you very warm regards.'"}
+{"id": "de-0019", "severity": "low", "issue": "UNNATURAL", "note": "'cooking Italian' is awkward; better: 'cooking Italian food' or 'making Italian dishes.'"}
+{"id": "de-0025", "severity": "low", "issue": "UNNATURAL", "note": "'You practice piano every morning' could be 'You practice the piano every morning' for idiomatic English."}
+{"id": "de-0062", "severity": "medium", "issue": "UNNATURAL", "note": "English prefers 'She is homesick for her family' or 'She misses her family' — 'homesick for' is somewhat awkward; more natural is 'She is homesick and misses her family' or simply restructure"}
+{"id": "de-0065", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'reads' is technically correct but context suggests ongoing action; 'is reading' would be more natural"}
+{"id": "de-0072", "severity": "low", "issue": "UNNATURAL", "note": "'Schönen guten Morgen' is emphatic/poetic; standard English 'Good morning' is fine, but the original is slightly more elaborate"}
+{"id": "de-0077", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Ich höre gern' can also mean 'I enjoy listening' or 'I like listening'; current translation 'I like to listen' is acceptable but 'I enjoy listening' captures the preference sense better"}
+{"id": "de-0155", "severity": "medium", "issue": "UNNATURAL", "note": "Present tense 'will probably arrive' is awkward; should be 'will probably be a bit late' or use future tense construction"}
+{"id": "de-0178", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Kitchen closes at 22:00 (ten p.m.), not 'ten' (which is 10 a.m.)"}
+{"id": "de-0122", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Present perfect 'have had' is correct, but 'starke Kopfschmerzen' (strong headaches) is more naturally 'severe headache' or 'bad headache' in English; 'strong' is awkward"}
+{"id": "de-0128", "severity": "low", "issue": "UNNATURAL", "note": "Acceptable, but 'I give my mother flowers' suggests a general habit; 'I'm giving my mother flowers' (present progressive) better matches the German present tense describing a specific planned action"}
+{"id": "de-0145", "severity": "medium", "issue": "UNNATURAL", "note": "'I shower myself' is unnatural English; should be 'I shower' or 'I take a shower'"}
+{"id": "de-0148", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "German says 'um neunzehn Uhr' (at 7 p.m./19:00), but translation says 'at seven' which is ambiguous (7 a.m. or p.m.); should be 'at seven p.m.' or 'at 7 p.m.'"}
+{"id": "de-0247", "severity": "medium", "issue": "WRONG_REGISTER", "note": "\"Boah\" is very informal slang; English \"Man\" captures tone but \"Wow\" or \"Boy\" might be more natural for the context"}
+{"id": "de-0264", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Geiger\" means violinist (person), not \"the violinist play\" — should be \"She heard the violinist playing\" or \"the violin being played\""}
+{"id": "de-0215", "severity": "medium", "issue": "UNNATURAL", "note": "English should use 'picks us up' or 'is picking us up'; present tense here feels odd for a scheduled future event. German uses simple present for future, but English typically needs future auxiliary."}
+{"id": "de-0219", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'um halb acht' = at half past seven is correct, but 'halb acht' is 7:30, not 7:30 PM. The translation should specify '7:30 p.m.' or 'half past seven in the evening' to match the bedtime context."}
+{"id": "de-0225", "severity": "medium", "issue": "UNNATURAL", "note": "'come home on time today' is slightly awkward; should be 'you'd come home on time today' (matching the conditional 'würdest')."}
+{"id": "de-0231", "severity": "low", "issue": "UNNATURAL", "note": "'the last subway has already gone' is acceptable but 'the last subway is already gone' feels more natural in this context."}
+{"id": "de-0234", "severity": "medium", "issue": "UNNATURAL", "note": "German imperative (Sie-form) should preserve formality: 'Turn left at the traffic light and go straight for two hundred meters' is better. 'go two hundred meters straight' is awkward word order."}
+{"id": "de-0307", "severity": "medium", "issue": "UNNATURAL", "note": "English 'understanding for' is awkward; should be 'understanding of'"}
+{"id": "de-0327", "severity": "medium", "issue": "UNNATURAL", "note": "English 'warns about' is less precise than German construction; 'warns of' is more natural"}
+{"id": "de-0277", "severity": "medium", "issue": "UNNATURAL", "note": "Should be 'hiking and photographing' to maintain parallel gerund structure"}
+{"id": "de-0277", "fix": {"k": "Fotografieren", "en": "to photograph", "pos": "v"}}
+{"id": "de-0287", "severity": "low", "issue": "UNNATURAL", "note": "'bring...with' is slightly awkward; more natural as 'take my laptop to work'"}
+{"id": "de-0289", "severity": "low", "issue": "UNNATURAL", "note": "'have been lucky with the weather' is more natural than 'were lucky with the weather' for past perfect"}
+{"id": "de-0332", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "German means 'rain did not stop all afternoon' (duration); English 'the whole afternoon' is awkward—should be 'all afternoon' or 'throughout the afternoon'"}
+{"id": "de-0341", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'Laugenbrezel' is a specific type of pretzel (lye-dipped); generic 'pretzels' loses this distinction"}
+{"id": "de-0346", "severity": "low", "issue": "UNNATURAL", "note": "'covered with snow' is acceptable but 'covered in snow' is more natural in English"}
+{"id": "de-0374", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'fünf gerade sein zu lassen' is an idiom meaning to overlook/ignore something or be lenient, not specifically 'turn a blind eye'; 'overlook' or 'let things slide' fits better"}
+{"id": "de-0376", "severity": "medium", "issue": "UNNATURAL", "note": "'after half' is awkward; should be 'after eating half of it' or 'halfway through'"}
+{"id": "de-0377", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "neunzehn Uhr (19:00) is 7 PM, not 7 o'clock in general context; should specify '7 p.m.' or '19:00'"}
+{"id": "de-0384", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "halb acht means 7:30 (half before eight), not 'half past seven'; should be 'at half past seven' or 'at 7:30'"}
+{"id": "de-0392", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; 'you can't miss it' feels forced. Better: 'you can't fail to find it' or just 'you won't miss it'"}
+{"id": "de-0393", "severity": "high", "issue": "WRONG_REGISTER", "note": "'echt abgefahren' is very casual/slang; English 'really wild' approximates but 'really cool' or 'really fun' might be more natural for describing a shop"}
+{"id": "de-0394", "severity": "low", "issue": "UNNATURAL", "note": "Inverted structure is grammatically correct but sounds stiff; more natural: 'There is no better handmade chocolate in the entire city than here' or 'You can't find better handmade chocolate anywhere in the city'"}
+{"id": "de-0396", "severity": "low", "issue": "UNNATURAL", "note": "'before the exam' should be 'before the test' for consistency, though both work. Minor phrasing awkwardness in 'you have before the exam'"}
+{"id": "de-0413", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'You must not' is formal/prescriptive; German 'du darfst' is more permissive. Better: 'You mustn't tell anyone' or 'You're not allowed to tell anyone'"}
+{"id": "de-0454", "severity": "low", "issue": "UNNATURAL", "note": "\"difficulties with\" is awkward; \"trouble with\" or \"difficulty with\" (singular) reads more naturally"}
+{"id": "de-0458", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"visitors from relatives in Brazil\" is nonsensical; should be \"visitors who are relatives from Brazil\" or simply \"relatives visiting from Brazil\""}
+{"id": "de-0461", "severity": "low", "issue": "UNNATURAL", "note": "\"strict deadline\" is unusual; \"tight deadline\" or just \"deadline\" is standard"}
+{"id": "de-0470", "severity": "low", "issue": "UNNATURAL", "note": "\"about that\" is redundant after \"right\"; \"Basically you are absolutely right\" is cleaner"}
+{"id": "de-0421", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Keilriemen is a 'V-belt' or 'drive belt', not 'fan belt'"}
+{"id": "de-0421", "fix": {"k": "Keilriemen", "en": "V-belt; drive belt", "pos": "n"}}
+{"id": "de-0423", "severity": "low", "issue": "UNNATURAL", "note": "Standard English uses 'My name is' not 'I am called', but the German uses 'heiße' (literally 'I am called'). Translation is acceptable but slightly formal."}
+{"id": "de-0438", "severity": "low", "issue": "UNNATURAL", "note": "More natural phrasing: 'May I offer you dessert' or 'Would you like some dessert?' The current translation sounds slightly stilted."}
+{"id": "de-0439", "severity": "low", "issue": "CARD_DUPLICATE", "note": "de-0439 and de-0440 are identical translations with only punctuation difference in German source"}
+{"id": "de-0440", "severity": "low", "issue": "CARD_DUPLICATE", "note": "de-0440 and de-0439 are identical translations with only punctuation difference in German source"}
+{"id": "de-0446", "severity": "low", "issue": "UNNATURAL", "note": "Tense inconsistency: German uses preterite 'nähte' (past tense) but English 'sewed' is also past; however, phrasing 'The seamstress sewed' is more natural than alternatives. Actually acceptable."}
+{"id": "de-0485", "severity": "medium", "issue": "MISSING_NUANCE", "note": "gegen can mean 'against' but 'allergic to' requires 'auf' or 'allergisch auf'; gegen emphasizes opposition rather than allergic response"}
+{"id": "de-0488", "severity": "low", "issue": "UNNATURAL", "note": "omits 'o'clock' - should be 'at six o'clock' for complete natural English"}
+{"id": "de-0501", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "original phrase 'hat das Heft in der Hand und bestimmt, wohin die Reise geht' is an idiom meaning 'she calls the shots/is in control'; translation only captures partial meaning and loses 'has the reins in hand' sense"}
+{"id": "de-0508", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'wie das neue Restaurant schmeckt' = 'how the food tastes' or 'what the new restaurant's food is like'; 'tastes' refers to the experience/food, not the restaurant itself"}
+{"id": "de-0546", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward; 'hot strong espresso' reads better as 'hot, strong espresso' or reorder to 'strong hot espresso'"}
+{"id": "de-0567", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "German has typo 'verbessern' (not standard); assuming 'verbessern' intended as 'to improve', but English should say 'improve' not 'improve his German'—actually the English is correct. The German word itself is misspelled: should be 'verbessern' (correct form) or likely 'sich verbessern' (to improve oneself). Card has a typo."}
+{"id": "de-0567", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Typo in German: 'verbessern' is not a standard verb form. Should be 'verbessern' (but this doesn't exist either). Likely intended: 'sein Deutsch verbessern' is non-standard phrasing; should be 'sein Deutsch verbessert' or 'sein Deutsch besser machen' or similar."}
+{"id": "de-0182", "severity": "medium", "issue": "UNNATURAL", "note": "\"shower cold\" is awkward; should be \"take a cold shower\" or \"shower with cold water\""}
+{"id": "de-0183", "severity": "low", "issue": "UNNATURAL", "note": "\"I am ordering\" is present progressive; German simple present here is more habitual/timeless. \"I order\" or \"I'll order\" fits better depending on context"}
+{"id": "de-0184", "severity": "low", "issue": "UNNATURAL", "note": "\"has the best schnitzels\" sounds odd in English; \"serves the best schnitzel\" or \"makes the best schnitzel\" is more natural"}
+{"id": "de-0188", "severity": "low", "issue": "UNNATURAL", "note": "\"I can hear it clearly\" is slightly awkward for this context; \"I hear you\" or \"I can hear you\" flows better"}
+{"id": "de-0191", "severity": "low", "issue": "UNNATURAL", "note": "\"there is coffee and cake\" is technically correct but \"coffee and cake are served\" or \"they serve coffee and cake\" is more natural for scheduled events"}
+{"id": "de-0204", "severity": "low", "issue": "UNNATURAL", "note": "\"nine to five\" idiomatically means a standard workday in English but German says \"neun bis siebzehn Uhr\" (9 AM to 5 PM); translation works but context should clarify it's military time if not obvious"}
+{"id": "de-0511", "severity": "medium", "issue": "MISSING_NUANCE", "note": "wunderschön means 'wonderfully beautiful' or 'absolutely beautiful', not just 'beautiful'"}
+{"id": "de-0511", "fix": {"k": "wunderschön", "en": "wonderfully beautiful; absolutely beautiful", "pos": "adj"}}
+{"id": "de-0514", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing is awkward; should be 'A long, exhausting workday deserves a relaxed, quiet evening' or restructured"}
+{"id": "de-0517", "severity": "low", "issue": "MISSING_NUANCE", "note": "'zwei linke Hände' literally means 'two left hands' (the English 'all thumbs' is idiomatic equivalent but misses the German idiom itself)"}
+{"id": "de-0520", "severity": "low", "issue": "MISSING_NUANCE", "note": "Schokoladentorte is a layered chocolate cake/torte, not simply 'chocolate cake'"}
+{"id": "de-0520", "fix": {"k": "Schokoladentorte", "en": "chocolate torte; chocolate layer cake", "pos": "n"}}
+{"id": "de-0523", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; should be 'The steering wheel only turns to the right with difficulty' or 'turns right only with difficulty'"}
+{"id": "de-0524", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Zwetschgenröster is plum compote/plum sauce, not typically paired as 'for dessert' descriptor. Card needs clarification of the dish structure"}
+{"id": "de-0532", "severity": "low", "issue": "MISSING_NUANCE", "note": "'band' (tied/bound) is more precise than 'arranged'; suggests the act of tying the bouquet together"}
+{"id": "de-0540", "severity": "low", "issue": "MISSING_NUANCE", "note": "Berufsverkehr specifically means 'commuter traffic' or 'professional traffic', not just 'rush-hour traffic'"}
+{"id": "de-0540", "fix": {"k": "Berufsverkehr", "en": "commuter traffic; rush-hour traffic", "pos": "n"}}
+{"id": "de-0572", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Optiker is an optometrist/optician who sells glasses, not a jeweler. Polishing diamonds is not their work."}
+{"id": "de-0574", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing awkward; better: 'He is not coming back anymore' or 'He will not come back.'"}
+{"id": "de-0579", "severity": "low", "issue": "UNNATURAL", "note": "'get married' is passive; more natural: 'She will marry' or 'She will be married.'"}
+{"id": "de-0586", "severity": "low", "issue": "UNNATURAL", "note": "'does the laundry' is colloquial; 'She washes the laundry' is more literal and standard."}
+{"id": "de-0595", "severity": "low", "issue": "UNNATURAL", "note": "'golden honey' is poetic; 'the honey' or 'golden-colored honey' more natural."}
+{"id": "de-0615", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "zwanzig Uhr fünfzehn = 8:15 PM (20:15), not 'eight fifteen' which is ambiguous in 12-hour format"}
+{"id": "de-0621", "severity": "low", "issue": "UNNATURAL", "note": "'all involved' is slightly stiff; 'everyone involved' or 'all parties involved' is more natural"}
+{"id": "de-0627", "severity": "low", "issue": "UNNATURAL", "note": "'We are sharing the costs' → 'We're splitting the cost' or 'We're sharing the cost' (singular) is more natural"}
+{"id": "de-0634", "severity": "medium", "issue": "UNNATURAL", "note": "reflexive 'sich bestellen' is awkward in English; should be 'She orders a cappuccino and a croissant' without 'herself'"}
+{"id": "de-0651", "severity": "low", "issue": "UNNATURAL", "note": "'tastes the best' is slightly awkward; 'tastes best' is more natural"}
+{"id": "de-0657", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'reupholstered' requires an object; should be 'reupholstered the antique sofa with green velvet' (already correct) OR 'reupholstered...in green velvet' but 'with' + material is awkward. Better: 'upholstered...in green velvet'"}
+{"id": "de-0691", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Austrian highway toll (Vignette) is per year, not per week; typically €10/10 days or €120/year"}
+{"id": "de-0702", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing; better: 'Nice to meet you!' or 'Pleased to meet you!'"}
+{"id": "de-0707", "severity": "low", "issue": "WRONG_REGISTER", "note": "uses informal 'dich' but context suggests formal greeting; should be 'Sie' or clarify informality"}
+{"id": "de-0714", "severity": "low", "issue": "MISSING_NUANCE", "note": "'schuf' (past tense) suggests completed action; 'created' is acceptable but 'wove' might better capture the artisan context of 'Weberin'"}
+{"id": "de-0716", "severity": "medium", "issue": "UNNATURAL", "note": "'canceled the order by phone' is awkward; better: 'She canceled the order over the phone' or 'by telephone'"}
+{"id": "de-0662", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "vorlesen means to read aloud, but the English omits that this happens 'mornings' — it should clarify the timing better, and 'Nachrichten' (news items/articles) read aloud is unusual; the sense is likely 'I read the most interesting news in the morning before [starting the day]' but English says 'aloud'"}
+{"id": "de-0668", "severity": "low", "issue": "UNNATURAL", "note": "Word order is awkward; 'at the early morning at the waterhole' is redundant. Should be 'in the early morning' or 'at dawn at the waterhole'"}
+{"id": "de-0674", "severity": "low", "issue": "UNNATURAL", "note": "'since school days' is slightly stiff; 'since his school days' or 'since school' would be more natural"}
+{"id": "de-0678", "severity": "low", "issue": "UNNATURAL", "note": "'To the right of the town hall is' inverts typical English syntax; 'The tourist information office is to the right of the town hall' is more natural"}
+{"id": "de-0681", "severity": "low", "issue": "UNNATURAL", "note": "'A weekly market takes place on the market square' is slightly awkward; 'A weekly market is held on the market square' or 'The weekly market takes place on the market square' flows better"}
+{"id": "de-0690", "severity": "low", "issue": "UNNATURAL", "note": "'crispy vegetables' is unusual; 'fresh; crisp vegetables' or 'fresh vegetables and crisp produce' would be more idiomatic"}
+{"id": "de-0760", "severity": "medium", "issue": "UNNATURAL", "note": "should be 'navigated skillfully' not 'skillfully navigated'"}
+{"id": "de-0768", "severity": "medium", "issue": "UNNATURAL", "note": "awkward; better as 'seized hold of the audience' or 'took hold of the audience'"}
+{"id": "de-0780", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Abdecker' means renderer/animal processor, not knacker; knacker is UK slang for tired person"}
+{"id": "de-0780", "fix": {"k": "Abdecker", "en": "renderer; animal processor", "pos": "n"}}
+{"id": "de-0722", "severity": "low", "issue": "UNNATURAL", "note": "Awkward word order; 'He tells his grandson a pirate story' reads better as 'He tells a pirate story to his grandson' or 'He tells his grandson a pirate story'—though the German allows both, the English phrasing with 'his' is more natural than the literal 'the grandson'"}
+{"id": "de-0727", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'erneuern' means to renew/restore, but in context of 'Dachstuhl' (roof truss/frame), this typically means to replace or rebuild, not merely renew"}
+{"id": "de-0749", "severity": "low", "issue": "UNNATURAL", "note": "The verb 'poured' is technically correct for 'goss' but 'cast' or 'molded' would be more idiomatic for candlemaking"}
+{"id": "de-0750", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Wie finden Sie' idiomatically means 'How do you like' rather than 'How do you find'; the translation captures the meaning but misses the evaluative register"}
+{"id": "de-0784", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "über hundert Meter means 'over a hundred meters' (distance), not 'in the hundred-meter' (event); should be 'the 100-meter freestyle' or similar"}
+{"id": "de-0788", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "halb sieben = half past six is correct, but the phrasing 'sets her alarm clock to' is awkward; better: 'sets her alarm (clock) for half past six'"}
+{"id": "de-0790", "severity": "low", "issue": "UNNATURAL", "note": "'a map for me' is redundant after 'a city map'; better: 'Do you have a city map or a regular map?'"}
+{"id": "de-0801", "severity": "low", "issue": "UNNATURAL", "note": "'smile so friendly' is grammatically awkward; should be 'smile so pleasantly' or 'are always so friendly with your smile'"}
+{"id": "de-0802", "severity": "low", "issue": "UNNATURAL", "note": "'finds the idea good' is awkward English; better: 'likes the idea' or 'thinks the idea is good'"}
+{"id": "de-0844", "severity": "medium", "issue": "UNNATURAL", "note": "\"start with\" is awkward; should be \"start on\" or \"begin\"; \"anfangen mit\" typically means \"to begin with (something as a topic)\" but here the German means to start/begin the project itself"}
+{"id": "de-0846", "severity": "medium", "issue": "UNNATURAL", "note": "\"sorted the newly arrived books\" misses the prefix verb sense; \"sortierte ein\" = \"filed/shelved/catalogued\"; simple \"sorted\" doesn't capture the placement/arrangement meaning"}
+{"id": "de-0864", "severity": "high", "issue": "UNNATURAL", "note": "\"paint the fence in a friendly green\" is awkward phrasing; should be \"paint the fence a friendly green\" or \"paint the fence with a friendly green\"; \"in einem freundlichen Grün\" = \"in/with a friendly shade of green\""}
+{"id": "de-0865", "severity": "low", "issue": "UNNATURAL", "note": "\"stands in front of\" is grammatically correct but slightly formal; \"is in front of the house\" or \"is standing in front of the house\" more natural in English"}
+{"id": "de-0829", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; more natural: 'what is your name again?' or 'what did you say your name was?'"}
+{"id": "de-0831", "severity": "low", "issue": "UNNATURAL", "note": "'are visiting' is present progressive; German present tense here suggests simple present 'visit' as more direct match"}
+{"id": "de-0901", "severity": "medium", "issue": "UNNATURAL", "note": "\"eleven thirty ferry\" is awkward; should be \"ferry at eleven thirty\" or \"11:30 ferry\""}
+{"id": "de-0903", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"fertig machen\" means \"to prepare\" or \"to get ready\", not \"to finish making\". Should be \"I prepare dinner\" or \"I get dinner ready\""}
+{"id": "de-0920", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"wunderschönen\" is \"wonderful\" or \"magnificent\", not just \"beautiful\". \"Wunderbar/magnificent\" would better capture the intensity"}
+{"id": "de-0921", "severity": "low", "issue": "UNNATURAL", "note": "\"practiced piano the whole afternoon\" is slightly awkward; more natural as \"practiced piano all afternoon\" or \"spent the whole afternoon practicing piano\""}
+{"id": "de-0930", "severity": "low", "issue": "UNNATURAL", "note": "\"old stuff\" is very casual/slangy; \"junk\" or \"clutter\" would be more appropriate for standard English"}
+{"id": "de-0872", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "einpacken means to pack/wrap, but 'carefully wraps' suggests gift-wrapping; more naturally 'packs carefully' or 'wraps up carefully'"}
+{"id": "de-0876", "severity": "low", "issue": "UNNATURAL", "note": "'helped...very kindly' is awkward; better 'was very kind in helping' or 'helped very kindly'"}
+{"id": "de-0879", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Klempner typically means plumber, but plumbers don't usually install heating systems—that's a Heizungstechniker or Installatör; Klempner works with metal pipes/gutters"}
+{"id": "de-0880", "severity": "low", "issue": "UNNATURAL", "note": "'beautiful bouquet of flowers' is redundant; 'bouquet' already implies flowers. Better: 'lovely bouquet for my wife'"}
+{"id": "de-0881", "severity": "low", "issue": "MISSING_NUANCE", "note": "'wunderschönen' = 'splendid/gorgeous', not just 'beautiful'; translation undershoots the intensity"}
+{"id": "de-0888", "severity": "medium", "issue": "UNNATURAL", "note": "'I'll have' shifts to future; original is present tense. Should be 'I take' or 'I have'"}
+{"id": "de-0889", "severity": "low", "issue": "UNNATURAL", "note": "'appear on time' is awkward; better 'arrive on time' or 'be punctual'"}
+{"id": "de-0900", "severity": "low", "issue": "UNNATURAL", "note": "Missing comma after 'release'; 'According to the press release, the new product...'"}
+{"id": "de-0936", "severity": "medium", "issue": "UNNATURAL", "note": "present progressive 'am watching' is awkward; use simple present 'watch' or 'will watch'"}
+{"id": "de-0937", "severity": "medium", "issue": "UNNATURAL", "note": "word order awkward; better: 'She quietly closes the door behind her' or 'She closes the door quietly behind her'"}
+{"id": "de-0948", "severity": "medium", "issue": "UNNATURAL", "note": "should be 'I introduce my colleagues to the new intern' (reverse order more natural in English)"}
+{"id": "de-0953", "severity": "low", "issue": "UNNATURAL", "note": "'already at' is slightly awkward; better: 'opens at quarter to six' (the temporal context suffices)"}
+{"id": "de-0958", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'siebzehn Uhr' is 5 PM in 24-hour time, not 'five' in 12-hour format; should be '5 p.m.' or '17:00'"}
+{"id": "de-0959", "severity": "low", "issue": "UNNATURAL", "note": "redundant 'hin'; simply 'She takes her son to school every morning' is more natural"}
+{"id": "de-0966", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"unter drei Stunden bleiben\" means to finish/stay under three hours, but \"stayed under\" is wrong. Should be \"He finished the marathon in under three hours\" or \"He stayed under three hours\""}
+{"id": "de-0977", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"halb sieben\" is 6:30, not 7:30. Translation says \"half past six\" which is correct, but card says \"half past six\" = 6:30 = halb sieben. Actually correct. No issue."}
+{"id": "de-0988", "severity": "medium", "issue": "UNNATURAL", "note": "\"at five o'clock early tomorrow\" is awkward; should be \"at five o'clock tomorrow morning\" or \"at five tomorrow morning\""}
+{"id": "de-1021", "severity": "medium", "issue": "UNNATURAL", "note": "English word order awkward; should be 'I bring my sister flowers' or better 'I bring flowers to my sister'"}
+{"id": "de-1027", "severity": "low", "issue": "UNNATURAL", "note": "'call again' is slightly awkward; 'call back' or 'call once more' more natural"}
+{"id": "de-1036", "severity": "medium", "issue": "UNNATURAL", "note": "'has...very lieb' mixes English and German phrasing; should be 'loves his dog very much' or 'is very fond of his dog'"}
+{"id": "de-1039", "severity": "low", "issue": "UNNATURAL", "note": "'rehearsed' is correct but 'practised' also common; current phrasing acceptable but could say 'He rehearsed the presentation three times through'"}
+{"id": "de-1050", "severity": "low", "issue": "UNNATURAL", "note": "'its food' is correct but German 'sein Fressen' suggests 'his food'; minor register difference—both acceptable"}
+{"id": "de-0991", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward; should be 'He reads the most important news aloud on his tablet' or 'He reads aloud the most important news on his tablet' is stiff."}
+{"id": "de-0993", "severity": "medium", "issue": "UNNATURAL", "note": "'by myself for the first time' is awkward; better: 'made sushi myself for the first time' or 'made sushi for the first time by myself'."}
+{"id": "de-0994", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'after training' omits that 'Ausbildung' means vocational/apprenticeship training specifically, not general training. Consider 'after her apprenticeship' or 'after completing her apprenticeship'."}
+{"id": "de-0997", "severity": "low", "issue": "UNNATURAL", "note": "'the whole afternoon' at the end is awkward; better: 'We went for a walk by the lake for the whole afternoon' or 'the whole afternoon long'."}
+{"id": "de-1008", "severity": "medium", "issue": "UNNATURAL", "note": "'Morning, everything okay?' is missing context and is abrupt; 'Moin' is a casual North German greeting. Better: 'Hey, how's it going?' or 'How's everything with you?'"}
+{"id": "de-1009", "severity": "medium", "issue": "UNNATURAL", "note": "'We take a break' is present tense and stiff; better: 'We're taking a break' or 'Let's take a break'."}
+{"id": "de-1015", "severity": "low", "issue": "UNNATURAL", "note": "'She reads the letter again' is correct but 'nochmal' is more colloquial; 'once more' might be more natural in some contexts."}
+{"id": "de-1054", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Sentence structure suggests 'I bring the colleague his coffee' but German 'den Kollegen seinen Kaffee' (acc + acc) is unusual; more naturally 'I bring coffee to the colleague' or clarify if possessive pronoun is intended"}
+{"id": "de-1070", "severity": "low", "issue": "UNNATURAL", "note": "'planted' is correct but 'has planted' (present perfect) is more literal; 'planted' (simple past) is more natural in English narrative"}
+{"id": "de-1073", "severity": "low", "issue": "UNNATURAL", "note": "Word order 'deliver the goods to the customer' is more natural than 'deliver the customer the goods'"}
+{"id": "de-1112", "severity": "medium", "issue": "UNNATURAL", "note": "läuft mit is 'to run along/participate in running', but 'runs along every day' is awkward in English. Should be 'He runs every day as part of marathon training' or similar."}
+{"id": "de-1115", "severity": "medium", "issue": "UNNATURAL", "note": "'left my key lying in the office' is unidiomatic. Better: 'I left my key in the office' (the 'lying' adds nothing)."}
+{"id": "de-1123", "severity": "low", "issue": "WRONG_REGISTER", "note": "'prescribes the patient' is grammatically odd; 'prescribes a new medication to the patient' is more natural."}
+{"id": "de-1127", "severity": "low", "issue": "UNNATURAL", "note": "'I was very pleased about the unexpected gift' is correct but 'I was very delighted by the unexpected gift' flows better. Minor style issue."}
+{"id": "de-1135", "severity": "low", "issue": "UNNATURAL", "note": "'at exactly eight' is incomplete; should be 'at exactly eight o'clock' or 'at exactly 8 AM'."}
+{"id": "de-1171", "severity": "medium", "issue": "UNNATURAL", "note": "\"as a thank you\" is awkward; better: \"as a thank-you gift\" or \"to say thank you\""}
+{"id": "de-1175", "severity": "medium", "issue": "UNNATURAL", "note": "\"the last restaurant visit\" is awkward; better: \"our last restaurant visit\" or \"at the restaurant last time\""}
+{"id": "de-1183", "severity": "medium", "issue": "UNNATURAL", "note": "\"Warmly welcome to\" is grammatically awkward; better: \"Welcome to the course!\" or \"A warm welcome to the course!\""}
+{"id": "de-1195", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"darfst nicht\" means \"must not\" (prohibition), but context suggests \"mustn't forget\" (obligation); should be \"You must not forget to call\" or \"You shouldn't forget to call\""}
+{"id": "de-1144", "severity": "medium", "issue": "UNNATURAL", "note": "recover is a medical term; 'relax' or 'rest' is more natural for time off"}
+{"id": "de-1150", "severity": "low", "issue": "MISSING_NUANCE", "note": "begegnen can mean 'encounter' or 'meet' — 'run into' captures the accident aspect but 'meet' is also valid"}
+{"id": "de-1153", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'mit voller Tasche' means 'with a full bag/load' but translation doesn't convey the postman's laden state clearly"}
+{"id": "de-1162", "severity": "low", "issue": "UNNATURAL", "note": "'in which we were' is stiff; 'that we went to' or 'that we visited' is more idiomatic"}
+{"id": "de-1164", "severity": "low", "issue": "UNNATURAL", "note": "'in which we stayed' is slightly formal; 'that we stayed at' is more natural"}
+{"id": "de-1165", "severity": "low", "issue": "UNNATURAL", "note": "'cook from' is awkward; 'cook with' or simply 'use' is more natural"}
+{"id": "de-1168", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "Rolltreppe is an escalator, not typically used for subway access in standard German usage; phrasing is odd"}
+{"id": "de-1212", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Eisenbahn is a railway/train system, not typically used as subject of 'crossed'; should be 'The train crossed' or specify what crossed the bridge"}
+{"id": "de-1224", "severity": "low", "issue": "UNNATURAL", "note": "'explains the task to the students' is awkward; better: 'explains the task to the students' or 'explains the assignment to the students'"}
+{"id": "de-1091", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "drohen + dat. means 'to threaten (someone)'; 'mit' phrase means 'by calling/reporting to police', not 'with'. Better: 'He threatens the burglar by calling the police' or 'He threatens to call the police on the burglar'"}
+{"id": "de-1097", "severity": "medium", "issue": "UNNATURAL", "note": "'anything sensible' is awkward; more natural: 'I didn't eat anything decent/proper all day' or 'I didn't eat a proper meal all day'"}
+{"id": "de-1103", "severity": "low", "issue": "MISSING_NUANCE", "note": "'school days' is acceptable but 'since school' or 'since our school days' is more idiomatic"}
+{"id": "de-1239", "severity": "medium", "issue": "UNNATURAL", "note": "'fell down' is redundant; 'almost fell' is standard"}
+{"id": "de-1245", "severity": "low", "issue": "CARD_DUPLICATE", "note": "nearly identical to de-1244, only word order differs (greatly vs very greatly)"}
+{"id": "de-1253", "severity": "medium", "issue": "UNNATURAL", "note": "'you're welcome to take' is awkward; better: 'feel free to take' or 'you can take'"}
+{"id": "de-1268", "severity": "medium", "issue": "UNNATURAL", "note": "\"a beautiful starry sky\" is awkward; should be \"a beautiful starlit sky\" or \"beautiful starry skies\""}
+{"id": "de-1274", "severity": "medium", "issue": "UNNATURAL", "note": "\"likes the music particularly well\" is awkward word order; should be \"the older audience particularly likes the music\" or \"the older audience likes the music especially\""}
+{"id": "de-1280", "severity": "medium", "issue": "UNNATURAL", "note": "\"wrote on his essay\" is unnatural; should be \"worked on his essay\" or \"wrote his essay\""}
+{"id": "de-1287", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"give as a gift\" is implicit in schenken; translation could note this is specifically a gift, but current phrasing acceptable"}
+{"id": "de-1307", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "achtzehn Uhr = 6 PM (18:00), not 'six o'clock' which ambiguously suggests 6 AM"}
+{"id": "de-1312", "severity": "low", "issue": "UNNATURAL", "note": "after eating' is awkward; 'after the meal' or 'after dinner' would be more natural"}
+{"id": "de-1315", "severity": "low", "issue": "UNNATURAL", "note": "'how to fly a kite' is slightly formal; 'how to make a kite fly' is more colloquial but acceptable"}
+{"id": "de-1321", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Word order: 'to the new colleague' should come before 'the complicated accounting system' to match German dative-accusative structure"}
+{"id": "de-1334", "severity": "low", "issue": "UNNATURAL", "note": "'she is full enough' is awkward; 'she's full' or 'she's had enough' is more natural"}
+{"id": "de-1342", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Missing direct object; should be 'enables the student to spend/do a semester abroad' not just infinitive phrase"}
+{"id": "de-1346", "severity": "low", "issue": "MISSING_NUANCE", "note": "'girlfriend' assumes romantic relationship; 'friend' is safer for 'Freundin' which can mean either friend or girlfriend"}
+{"id": "de-1352", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "nach dem Essen = after eating, not 'after meals'; should be singular or use gerund"}
+{"id": "de-1356", "severity": "medium", "issue": "UNNATURAL", "note": "'in this cold' is awkward; better as 'in such cold' or 'despite the cold'"}
+{"id": "de-1360", "severity": "low", "issue": "UNNATURAL", "note": "'in front of' is awkward for concert hall context; 'on the stage of' or 'in' would be more natural"}
+{"id": "de-1363", "severity": "medium", "issue": "UNNATURAL", "note": "'respond to the offer' is indirect; German 'äußern' means to express/comment, better as 'express your views on the offer'"}
+{"id": "de-1364", "severity": "low", "issue": "UNNATURAL", "note": "missing 'we' subject emphasis; better as 'We arrived from Berlin to Munich in only four hours by ICE'"}
+{"id": "de-1369", "severity": "medium", "issue": "UNNATURAL", "note": "'talk loudly on the phone' is awkward; should be 'one must not talk loudly on the phone under any circumstances' or similar"}
+{"id": "de-1380", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "present tense 'lese' = 'am reading' (continuous); 'I read' is simple past or habitual"}
+{"id": "de-1389", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Wirbelsturm typically means tornado/whirlwind, not hurricane (which is Hurrikan/Orkan). Translation is inaccurate."}
+{"id": "de-1402", "severity": "low", "issue": "UNNATURAL", "note": "English phrasing 'is beautiful' sounds awkward; 'is beautifully colored' or 'is wonderfully beautiful' would be more natural."}
+{"id": "de-1405", "severity": "low", "issue": "MISSING_NUANCE", "note": "Ziel can mean goal/objective as well as destination. Current translation only captures destination sense."}
+{"id": "de-1422", "severity": "medium", "issue": "UNNATURAL", "note": "'fluently' should appear earlier in sentence: 'He can speak German and French fluently' → 'He can fluently speak German and French' or restructure"}
+{"id": "de-1427", "severity": "low", "issue": "UNNATURAL", "note": "'rather than drive' is correct but more natural as 'rather than by car' to match 'by bicycle' structure"}
+{"id": "de-1439", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'The little girl misses the toy very much' inverts the actual meaning. German 'Das Spielzeug fehlt dem Mädchen' = 'The toy is missing to the girl' = 'The girl misses the toy' is acceptable but 'The toy is missing from the girl' or 'The girl lacks the toy' better captures the dative construction"}
+{"id": "de-1449", "severity": "medium", "issue": "UNNATURAL", "note": "English 'during' doesn't match German 'bei dem turbulenten Flug' (lit. 'at the turbulent flight'); 'during' is acceptable but 'through' better captures the sense of enduring the turbulence"}
+{"id": "de-1457", "severity": "low", "issue": "UNNATURAL", "note": "'choose a book from the shelf' is slightly awkward; 'pick out a book from the shelf' more natural for 'aussuchen'"}
+{"id": "de-1460", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "English 'the salesperson says' is not in the German; should be 'I don't believe the salesperson' or 'I don't believe a single word of what the salesperson says'"}
+{"id": "de-1476", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "leihen is 'to borrow' (taking from someone), not 'to lend' (giving to someone). The German sentence means 'I borrow my charger from my colleague' but English says the opposite."}
+{"id": "de-1476", "fix": {"k": "leihen", "en": "to borrow; to lend", "pos": "v"}}
+{"id": "de-1479", "severity": "medium", "issue": "UNNATURAL", "note": "English word order is awkward. Should be 'I bring fresh cake from the baker to my parents' or 'I bring my parents fresh cake from the bakery.'"}
+{"id": "de-1484", "severity": "low", "issue": "UNNATURAL", "note": "'come to the birthday' is awkward. Better: 'come to the birthday party' or 'attend the birthday.'"}
+{"id": "de-1490", "severity": "medium", "issue": "UNNATURAL", "note": "'would like to prepare' is too tentative. Should be 'wants to prepare' or 'wishes to prepare.' German 'möchte' here = wants, not polite would-like."}
+{"id": "de-1496", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "German has typo: 'verbessern' should be 'verbessern' — but the real issue is the translation doesn't match the German word. Check if source card has a typo."}
+{"id": "de-1498", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'ten PM' is incorrect. 'zweiundzwanzig Uhr' = 22:00 = 10 PM in 24-hour format, but the card says 'after ten PM' which is ambiguous. Should clarify: '10 p.m. (22:00)' or just 'after 10 p.m.'"}
+{"id": "de-1507", "severity": "medium", "issue": "UNNATURAL", "note": "\"joint excursion\" is awkward; \"wonderful outing together\" or \"wonderful shared outing\" reads better"}
+{"id": "de-1508", "severity": "medium", "issue": "UNNATURAL", "note": "\"came late\" should be \"arrived late\"; \"zumal\" means \"especially since\" or \"all the more so because\"—phrasing could be clearer"}
+{"id": "de-1511", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"trip around the world\" is acceptable but \"world trip\" or \"world tour\" captures \"Weltreise\" more idiomatically"}
+{"id": "de-1518", "severity": "low", "issue": "UNNATURAL", "note": "\"my children's\" is correct but awkward; \"that of my children\" flows better in formal English"}
+{"id": "de-1520", "severity": "medium", "issue": "UNNATURAL", "note": "\"we today have\" is awkward word order; should be \"we have today\" or \"today we have\""}
+{"id": "de-1523", "severity": "medium", "issue": "UNNATURAL", "note": "\"address the topic\" is weak for \"befassen\" (to engage with, deal with); better: \"engage seriously with the topic\" or \"seriously tackle the issue\""}
+{"id": "de-1528", "severity": "low", "issue": "UNNATURAL", "note": "\"are made from my grandma's recipe\" is passive and wordy; \"follow my grandma's recipe\" or \"are my grandma's recipe\" is more natural"}
+{"id": "de-1534", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "darf + negation = 'is not allowed to'; 'may not' is ambiguous and suggests permission rather than prohibition"}
+{"id": "de-1538", "severity": "medium", "issue": "WRONG_REGISTER", "note": "sollst (imperative/command form) = 'you are to be'; 'should be' is weaker and misses the directive tone"}
+{"id": "de-1539", "severity": "medium", "issue": "WRONG_REGISTER", "note": "sollst (imperative) = 'you are to do'; 'should do' softens the command"}
+{"id": "de-1545", "severity": "medium", "issue": "UNNATURAL", "note": "'einen langen Weg machen' = 'to take a long walk' or 'to go a long way'; 'took a long walk' is acceptable but 'covered a long distance' is more literal"}
+{"id": "de-1554", "severity": "medium", "issue": "UNNATURAL", "note": "'Grüße ausrichten' = 'to deliver/convey regards'; 'send regards' is colloquial; 'give regards' more natural"}
+{"id": "de-1557", "severity": "medium", "issue": "WRONG_REGISTER", "note": "soll = 'is to/is supposed to' (neutral assignment); 'should' implies recommendation, not directive"}
+{"id": "de-1562", "severity": "medium", "issue": "UNNATURAL", "note": "\"stands on the hill\" is awkward; \"is on the hill\" or \"sits on the hill\" is more natural"}
+{"id": "de-1565", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Schrank means wardrobe/cabinet/closet, not wardrobe as clothing. Should be \"another cabinet\" or \"another closet\""}
+{"id": "de-1568", "severity": "medium", "issue": "UNNATURAL", "note": "\"allows finishing work earlier\" is awkward; better: \"allows them to leave work early\" or \"lets them finish early\""}
+{"id": "de-1572", "severity": "medium", "issue": "UNNATURAL", "note": "\"think too long about\" is awkward; better: \"shouldn't take too long to decide on\" or \"shouldn't hesitate too long about\""}
+{"id": "de-1584", "severity": "medium", "issue": "UNNATURAL", "note": "\"I see, so you were home the entire evening\" sounds stilted; more natural: \"So you were home all evening, were you?\" or \"I see, so you were home all evening.\""}
+{"id": "de-1589", "severity": "low", "issue": "UNNATURAL", "note": "\"six o'clock\" is literally correct but \"at six p.m.\" or \"at 6 p.m.\" would be clearer given context (achtzehn Uhr = 18:00)"}
+{"id": "de-1592", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "möchtest is 2nd person singular; should be 'Would you surely like' or 'You would surely like', but the original uses informal du not formal Sie"}
+{"id": "de-1608", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'Insofern stimme ich Ihnen zu, als' means 'I agree with you insofar as', not 'Insofar I agree...'; word order and phrasing incorrect"}
+{"id": "de-1612", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "zweiundzwanzig Uhr (22:00) incorrectly translated as 'ten'; should be 'ten p.m.' or '22:00'"}
+{"id": "de-1620", "severity": "low", "issue": "UNNATURAL", "note": "'of my entire life so far' is slightly redundant; 'of my entire life' or 'so far' would be more natural, though not strictly wrong"}
+{"id": "de-1632", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "German 'Kuckucksuhr' is feminine (die), so 'den' is wrong; should be 'die antike Kuckucksuhr' → 'the antique cuckoo clock' (article agreement error in German source, but English translation doesn't reflect the error)"}
+{"id": "de-1646", "severity": "low", "issue": "UNNATURAL", "note": "'one can see' is grammatically correct but slightly formal; 'you can see' would be more natural in English"}
+{"id": "de-1653", "severity": "medium", "issue": "UNNATURAL", "note": "'talks to nobody' is awkward; 'doesn't talk to anyone' more natural"}
+{"id": "de-1657", "severity": "medium", "issue": "UNNATURAL", "note": "'listened attentively to her patient's concerns' — 'to her patient's concerns' is awkward; should be 'to her patient about his/her concerns' or restructure"}
+{"id": "de-1676", "severity": "medium", "issue": "UNNATURAL", "note": "'Legt eure Handys weg' is imperative plural (you all put), but English 'Put your phones away' is neutral — acceptable but could note the register is casual/command"}
+{"id": "de-1688", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "English uses simple past 'saved' but German uses present perfect 'haben gespart', which is the standard in German for recent past. Translation should be 'We have saved' to match tense."}
+{"id": "de-1700", "severity": "low", "issue": "UNNATURAL", "note": "'driving to the North Sea for a beach holiday tomorrow' is awkward word order. Better: 'Tomorrow we are driving to the North Sea for a beach holiday' or 'We are driving to the North Sea tomorrow for a beach holiday.'"}
+{"id": "de-1710", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'A wonderful good morning' is not idiomatic English. German 'Einen wunderschönen guten Morgen!' is a greeting. Better: 'Have a wonderful good morning!' or 'Good morning!' or 'A very good morning!'"}
+{"id": "de-1743", "severity": "medium", "issue": "UNNATURAL", "note": "'myself' is awkward; standard English is 'I ordered a new laptop yesterday'"}
+{"id": "de-1744", "severity": "low", "issue": "UNNATURAL", "note": "'a coffee' is slightly unnatural; 'coffee' without article is more idiomatic"}
+{"id": "de-1752", "severity": "medium", "issue": "UNNATURAL", "note": "'relax from work' is awkward; 'recover from work' or 'relax after work' is more natural"}
+{"id": "de-1757", "severity": "low", "issue": "UNNATURAL", "note": "'anywhere' placement awkward; better as 'I can't find a suitable place to study'"}
+{"id": "de-1758", "severity": "low", "issue": "UNNATURAL", "note": "'into' is slightly awkward; 'on' is more natural for engraving on a ring"}
+{"id": "de-1769", "severity": "medium", "issue": "UNNATURAL", "note": "'until two' without context unclear; should be 'until 2 p.m.' or 'until 2 o'clock'"}
+{"id": "de-1809", "severity": "medium", "issue": "UNNATURAL", "note": "word order awkward; 'How much longer will it actually take until...' reads clunky; better: 'How much longer until the new swimming pool finally opens?' or 'When will the new swimming pool finally open?'"}
+{"id": "de-1828", "severity": "low", "issue": "UNNATURAL", "note": "'make yourself at home' is slightly formal/imperative; German 'fühlen Sie sich wie zu Hause' is politer invitation; consider 'please make yourself at home' or 'feel at home'"}
+{"id": "de-1713", "severity": "medium", "issue": "UNNATURAL", "note": "should be 'We are going to the supermarket' or 'We go to the supermarket' — 'into' suggests motion/entry, less natural for routine shopping"}
+{"id": "de-1714", "severity": "medium", "issue": "UNNATURAL", "note": "'I am very pleased' is stiff; more natural: 'I'm very glad' or 'I'm very happy'"}
+{"id": "de-1716", "severity": "low", "issue": "MISSING_NUANCE", "note": "'bestellen' can mean 'to order' (service/restaurant) but also 'to request'; context suggests ordering at café — acceptable but 'to request' is secondary sense"}
+{"id": "de-1723", "severity": "low", "issue": "WRONG_REGISTER", "note": "'cheap' has negative connotation; 'billiges Geschenk' more neutrally 'inexpensive gift' or 'affordable gift'"}
+{"id": "de-1729", "severity": "low", "issue": "UNNATURAL", "note": "'for dinner' less natural; prefer 'for supper' or 'in the evening' — 'zum Abend' = for the evening meal"}
+{"id": "de-1732", "severity": "low", "issue": "UNNATURAL", "note": "word order awkward; prefer 'She thanks all the helpers warmly' or 'She warmly thanks all the helpers'"}
+{"id": "de-1737", "severity": "medium", "issue": "UNNATURAL", "note": "'in the shelf' is awkward; should be 'on the shelf' or 'into the shelf' depending on context — 'in das Regal' suggests 'into' but 'on' more idiomatic"}
+{"id": "de-1771", "severity": "medium", "issue": "UNNATURAL", "note": "Word order is awkward; 'every morning' should come after 'takes time' or be repositioned"}
+{"id": "de-1772", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'im Regal' = 'on the shelf' not 'in the shelf'"}
+{"id": "de-1779", "severity": "low", "issue": "UNNATURAL", "note": "'inform ourselves about' is literal but 'find out about' or 'learn about' is more natural English"}
+{"id": "de-1785", "severity": "low", "issue": "UNNATURAL", "note": "'see the film' is British English; American English typically uses 'watch the movie'"}
+{"id": "de-1792", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; better as 'He prefers to spend his evening at home on the sofa' or 'He likes to spend his evenings on the sofa'"}
+{"id": "de-1862", "severity": "medium", "issue": "UNNATURAL", "note": "'goes to Spain' is slightly awkward; 'travels to Spain' or 'leaves for Spain' is more natural"}
+{"id": "de-1865", "severity": "low", "issue": "MISSING_NUANCE", "note": "German 'sich anziehen' emphasizes putting on clothes; 'changes into' implies removing first. 'puts on' would be more direct."}
+{"id": "de-1868", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'das Wiedersehen' means 'the reunion/meeting again'; translation 'seeing you again' is context-specific but misses that the German object is 'the reunion' not 'you'"}
+{"id": "de-1875", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "German 'Am wenigsten mag ich...' means 'I like ... the least'; English translation omits 'I like' entirely"}
+{"id": "de-1901", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing; more natural as 'I like chocolate ice cream best' or 'My favorite is chocolate ice cream'"}
+{"id": "de-1902", "severity": "low", "issue": "UNNATURAL", "note": "'My favorite thing to eat is' is slightly stilted; 'My favorite is' or 'I like Black Forest cherry cake best' flows better"}
+{"id": "de-1913", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "German uses present perfect 'geöffnet hat' (has opened), not simple present 'is open'; should be 'whether the shop was open on Sunday' or 'is open on Sundays'"}
+{"id": "de-1832", "severity": "low", "issue": "UNNATURAL", "note": "English 'stands' is awkward; 'is' or 'sits' preferred for inanimate objects"}
+{"id": "de-1838", "severity": "low", "issue": "UNNATURAL", "note": "'Watch the step' is imperative; 'Watch out for the step' is more natural"}
+{"id": "de-1847", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'scheint ins Fenster' means 'shines in through the window', not 'through the window'"}
+{"id": "de-1852", "severity": "low", "issue": "UNNATURAL", "note": "'in den Schrank' means 'into the wardrobe'; 'in' suggests motion, better as 'in the wardrobe'"}
+{"id": "de-1855", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "'See' is lake, not 'lake'; but translation says 'lake' which is correct. However, 'drifts on' is correct; no issue."}
+{"id": "de-1832", "severity": "low", "issue": "UNNATURAL", "note": "English 'stands' is awkward for inanimate objects; 'is' or 'sits' preferred"}
+{"id": "de-1838", "severity": "low", "issue": "UNNATURAL", "note": "'Watch the step' is incomplete; 'Watch out for the step' or 'Mind the step' is natural"}
+{"id": "de-1847", "severity": "low", "issue": "UNNATURAL", "note": "'shines through the window' is more natural than 'shines in the window'"}
+{"id": "de-1852", "severity": "low", "issue": "UNNATURAL", "note": "'in the wardrobe' better captures 'in den Schrank' (into, suggesting placement)"}
+{"id": "de-1968", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Idiom means 'to be in a difficult position' or 'caught between two conflicting loyalties', not literal standing between chairs"}
+{"id": "de-1974", "severity": "low", "issue": "UNNATURAL", "note": "'She felt unwell all day' is awkward; better 'She felt unwell/sick the whole day' or 'She didn't feel well all day'"}
+{"id": "de-1985", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "fährt mit = 'travels by/in'; 'drives with' is incorrect. Should be 'He travels by a fast boat' or 'He goes in a fast boat.'"}
+{"id": "de-1998", "severity": "low", "issue": "UNNATURAL", "note": "'urgently needs' is acceptable but more natural: 'The notebook urgently needs a software update' → 'The notebook needs a software update urgently' or keep as is. Minor stylistic note."}
+{"id": "de-2009", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Schwarzbrot literally means 'black bread' (rye or dark bread); translation as 'Rye bread' assumes specific type not stated in German. More accurate: 'The dark bread is healthier than the white bread' or 'The black bread is healthier than white bread.'"}
+{"id": "de-1922", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "sein Kissen should be 'his pillow' not 'his pillow'—the issue is grammatical in German: 'neben sein Kissen' is incorrect German (should be 'neben seinem Kissen'), but the translation is correct for what is written"}
+{"id": "de-1924", "severity": "medium", "issue": "UNNATURAL", "note": "'turns in front of the mirror' is awkward; should be 'twirls' or 'spins' to capture the sense of 'dreht sich'"}
+{"id": "de-1933", "severity": "low", "issue": "MISSING_NUANCE", "note": "'so much delay' is slightly awkward; more natural as 'so much of a delay' or 'such a long delay'"}
+{"id": "de-1937", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'on the shelf next to the front door' contradicts the German structure—'neben die Eingangstür' indicates location next to the door, not that the shelf is next to the door. Should be 'on the shelf by the front door' or clarify the spatial relationship"}
+{"id": "de-1944", "severity": "low", "issue": "UNNATURAL", "note": "'parks his bicycle' is colloquial; 'puts' or 'leans' more directly matches 'stellt'"}
+{"id": "de-1946", "severity": "low", "issue": "UNNATURAL", "note": "'feels like a stranger' is idiomatic English but 'feels strange/feels foreign' better matches 'fühlt sich noch fremd'"}
+{"id": "de-2016", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "verfahren means to drive/travel, not 'drove' alone; context suggests wrong direction as driver, not passenger"}
+{"id": "de-2022", "severity": "medium", "issue": "UNNATURAL", "note": "present perfect 'has been working' is more natural than simple present for duration; German present + seit implies ongoing state"}
+{"id": "de-2027", "severity": "medium", "issue": "MISSING_NUANCE", "note": "Brandherd = fire source/seat of fire; 'the fire source' is awkward; better: 'the burning area' or 'the source of the fire'"}
+{"id": "de-2030", "severity": "low", "issue": "UNNATURAL", "note": "'speaks German more fluently' reads awkwardly; smoother: 'speaks German more fluently than his classmates do'"}
+{"id": "de-2080", "severity": "medium", "issue": "UNNATURAL", "note": "etwas langsamer → 'somewhat slower' is awkward; 'a bit' or 'a little' preferred in English"}
+{"id": "de-2083", "severity": "medium", "issue": "UNNATURAL", "note": "word order: 'After long deliberation, I decide on' flows better than 'After long deliberation I decide on'"}
+{"id": "de-2088", "severity": "medium", "issue": "UNNATURAL", "note": "'travel by train rather than by plane' more natural than 'travel by train than by plane'"}
+{"id": "de-2097", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "spannendsten + location = 'is most exciting in the last chapter' changes meaning; should be 'becomes most exciting' or 'gets most exciting'"}
+{"id": "de-2041", "severity": "medium", "issue": "UNNATURAL", "note": "\"get individual advice\" is passive/indirect; better as \"consult with the travel agency for individual advice\" or \"have ourselves advised individually\""}
+{"id": "de-2049", "severity": "medium", "issue": "UNNATURAL", "note": "\"join the queue\" is idiomatic but the German uses \"sich anstellen\" (literally position oneself); \"get in line\" or \"line up\" more natural"}
+{"id": "de-2054", "severity": "low", "issue": "UNNATURAL", "note": "\"intensively occupied with\" is stiff; \"busy ourselves with\" or \"actively work on\" more natural"}
+{"id": "de-2058", "severity": "low", "issue": "UNNATURAL", "note": "\"stands in front of the door\" is awkward English; \"is parked in front of the door\" or \"is in front of the door\" more natural"}
+{"id": "de-2063", "severity": "medium", "issue": "UNNATURAL", "note": "Idiomatic German phrase; \"Jetzt haben wir den Salat\" is \"now we're in a mess\" not \"now we've got the mess\"; dash formatting also awkward"}
+{"id": "de-2064", "severity": "low", "issue": "UNNATURAL", "note": "\"make plans for Saturday for a brunch\" is redundant; \"arrange to have brunch together on Saturday\" better"}
+{"id": "de-2067", "severity": "low", "issue": "UNNATURAL", "note": "\"sincerely try\" is slightly off; \"earnestly try\" or \"make a genuine effort\" better captures \"redlich\""}
+{"id": "de-2106", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "S-Bahn is specifically urban rapid transit; 'commuter train' is acceptable but 'urban rail' or 'rapid transit train' more precise. Fernverkehr = 'long-distance rail' not 'long-distance services'."}
+{"id": "de-2106", "fix": {"k": "Fernverkehr", "en": "long-distance rail; long-distance trains", "pos": "n"}}
+{"id": "de-2111", "severity": "low", "issue": "UNNATURAL", "note": "'We'd best park' is archaic/poetic. Modern English: 'We should park' or 'It's best to park'."}
+{"id": "de-2116", "severity": "medium", "issue": "UNNATURAL", "note": "'We inform ourselves about' is awkward reflexive construction. Natural English: 'We check on' or 'We look up'."}
+{"id": "de-2122", "severity": "low", "issue": "UNNATURAL", "note": "'begins with the research' is awkward. More natural: 'begins to do research' or 'starts her research'."}
+{"id": "de-2132", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "Radweg is cycle/bike path, not cycle path for pedestrians. The sentence contradicts itself—a cycle path closed to pedestrians makes sense, but the English should say 'The bike path here is closed to pedestrians' or 'The cycle path here is off-limits to pedestrians'"}
+{"id": "de-2136", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'suchti' is not standard German; likely colloquial for 'süchtig' (addictive). But more critically: 'an einem Stück' means 'in one sitting/continuously,' not 'in one go' which is ambiguous. Better: 'all in one sitting' or 'all at once'"}
+{"id": "de-2140", "severity": "medium", "issue": "UNNATURAL", "note": "'fahren' can mean 'to drive' but often means 'to travel/go by vehicle.' Context missing. More neutral: 'She goes home' or 'She drives home' depending on context. 'fahren' is broader."}
+{"id": "de-2191", "severity": "medium", "issue": "UNNATURAL", "note": "\"goes out to get fresh air\" is awkward; more natural: \"goes out into the fresh air\" or \"goes outside for fresh air\""}
+{"id": "de-2217", "severity": "low", "issue": "UNNATURAL", "note": "\"soft bread roll\" is acceptable but \"soft roll\" is more natural; \"Brötchen\" is a bread roll, not requiring \"bread\""}
+{"id": "de-2162", "severity": "medium", "issue": "UNNATURAL", "note": "'walk around' is more natural than 'walk' for motion around an object; or use 'to go around'"}
+{"id": "de-2174", "severity": "low", "issue": "UNNATURAL", "note": "Simple present 'celebrate' is more natural than 'are celebrating' for a scheduled event"}
+{"id": "de-2180", "severity": "low", "issue": "UNNATURAL", "note": "'I cycle to work' or 'I ride a bike to work' more natural; 'ride my bike' adds possessive that German doesn't emphasize"}
+{"id": "de-2182", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward; 'Eggplant and zucchini taste best when grilled' flows better"}
+{"id": "de-2339", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Müllerin is female miller, but translation uses male form"}
+{"id": "de-2339", "fix": {"k": "Müllerin", "en": "the miller (female); miller's wife", "pos": "n"}}
+{"id": "de-2283", "severity": "medium", "issue": "UNNATURAL", "note": "'read the book to the end' is awkward; 'finish reading the book' or 'read the book all the way through' is more natural"}
+{"id": "de-2297", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'erneuerte' means 'to renew' but in art restoration context 'to restore' is the intended meaning; 'renewed' suggests making new again, not restoration"}
+{"id": "de-2310", "severity": "low", "issue": "UNNATURAL", "note": "'Outside of business hours' should be 'Outside business hours' or 'After business hours'; article placement is slightly awkward"}
+{"id": "de-2255", "severity": "medium", "issue": "UNNATURAL", "note": "English uses passive 'is normally' for a quantity that doesn't 'be' actively; better phrasing: 'amounts to' or 'typically ranges from'"}
+{"id": "de-2255", "fix": {"k": "beträgt", "en": "to amount to; to range", "pos": "v"}}
+{"id": "de-2257", "severity": "medium", "issue": "UNNATURAL", "note": "English word order 'knows exactly that' is stiff; natural phrasing: 'knows for certain that' or 'knows very well that'"}
+{"id": "de-2259", "severity": "medium", "issue": "UNNATURAL", "note": "'keep going straight' is more natural than 'then always keep going straight' (implies redundant 'always')"}
+{"id": "de-2273", "severity": "medium", "issue": "UNNATURAL", "note": "Awkward phrasing 'the fastest way...is via'; more natural: 'You can reach the summit fastest via the east path' or 'The east path is the fastest route to the summit'"}
+{"id": "de-2222", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "achtzehn Uhr is 6 PM (18:00), not 6 AM; also 'zu Abend' = dinner/supper, not simply dinner at that time"}
+{"id": "de-2228", "severity": "medium", "issue": "UNNATURAL", "note": "missing auxiliary: 'than the scientists expected' should be 'than the scientists had expected' to match German past tense"}
+{"id": "de-2233", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'am seltensten' = least often/rarest, but German says it rains least often in April; English reverses the logic—should be 'It rains least of all in April' or clarify the regional comparison"}
+{"id": "de-2243", "severity": "low", "issue": "UNNATURAL", "note": "'even warmer this summer than last' is awkward; better: 'even warmer this summer than it was last summer'"}
+{"id": "de-2244", "severity": "medium", "issue": "UNNATURAL", "note": "'closes at five already' is marked; more natural: 'closes as early as five' or 'closes at five o'clock already'"}
+{"id": "de-2249", "severity": "low", "issue": "UNNATURAL", "note": "'the very highest' is awkward; better: 'the very highest' → 'the highest of all' or simply 'extremely high'"}
+{"id": "de-2346", "severity": "medium", "issue": "UNNATURAL", "note": "Article placement awkward; should be 'the hotel prices' not 'the prices of the hotels'"}
+{"id": "de-2352", "severity": "low", "issue": "UNNATURAL", "note": "'watch German news' is acceptable but 'I watch German-language news' or 'I watch news in German' more natural"}
+{"id": "de-2356", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "German asks 'wohin wir ... reisen wollen' (where we want to travel); English 'where we want to travel' is correct but context suggests past reported speech ('asked where we wanted')—should be 'where we wanted to travel this summer'"}
+{"id": "de-2358", "severity": "low", "issue": "UNNATURAL", "note": "More natural: 'I am glad that you are helping me' or 'I am glad you're helping me'"}
+{"id": "de-2366", "severity": "medium", "issue": "UNNATURAL", "note": "'helped the child with speaking' is awkward; better: 'helped the child learn to speak' or 'helped the child with speech'"}
+{"id": "de-2403", "severity": "medium", "issue": "UNNATURAL", "note": "English phrasing is awkward; standard is 'Have a nice evening' or 'Enjoy your evening'"}
+{"id": "de-2414", "severity": "medium", "issue": "MISSING_NUANCE", "note": "'wohin er gefahren ist' implies 'where he drove/traveled to', not generic 'went'; suggests destination or journey"}
+{"id": "de-2425", "severity": "low", "issue": "UNNATURAL", "note": "'pass me' is idiomatic but 'give me' is more literal to 'gib mir'; both acceptable"}
+{"id": "de-2426", "severity": "low", "issue": "UNNATURAL", "note": "'Hab keine Angst' is colloquial/dialectal for 'Habe keine Angst'; 'Don't worry' might be more natural than 'Don't be afraid'"}
+{"id": "de-2433", "severity": "medium", "issue": "UNNATURAL", "note": "falls is conditional; 'in case' works but 'if' is more natural for weather warnings"}
+{"id": "de-2441", "severity": "low", "issue": "UNNATURAL", "note": "'here below on' is awkward; 'below here on' or 'on the dotted line below' reads better"}
+{"id": "de-2449", "severity": "low", "issue": "UNNATURAL", "note": "'taken into' is stiff; 'brought into' or 'carried into' is more natural"}
+{"id": "de-2455", "severity": "low", "issue": "UNNATURAL", "note": "'relaxed quiet' is redundant stacking; 'relaxing, quiet' or 'quiet, relaxing' reads better"}
+{"id": "de-2371", "severity": "medium", "issue": "UNNATURAL", "note": "should be 'Take the first street to the right' rather than 'on the right'"}
+{"id": "de-2376", "severity": "low", "issue": "UNNATURAL", "note": "'Come on now' is slightly awkward; 'come on' alone or 'come on already' flows better"}
+{"id": "de-2391", "severity": "low", "issue": "UNNATURAL", "note": "'beautiful in spring' is incomplete; should be 'is beautiful/lovely in spring' to better match 'wunderschön'"}
+{"id": "de-2392", "severity": "low", "issue": "UNNATURAL", "note": "missing article; should be 'Due to a burst water pipe, the street had to be closed'"}
+{"id": "de-2393", "severity": "medium", "issue": "UNNATURAL", "note": "'Komm klar' is slang and means 'get over it/deal with it' but the translation 'Deal with it' is too blunt; better: 'Come on, it's not the end of the world because of one bad grade'"}
+{"id": "de-2398", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "passive voice 'wird bezahlt' (is being paid) suggests future or habitual action; 'will be paid' or 'is paid' both work but context matters"}
+{"id": "de-2467", "severity": "medium", "issue": "UNNATURAL", "note": "\"Keep your hands off it\" is idiomatic but awkward; better: \"Stay away from it\" or \"Don't touch it\""}
+{"id": "de-2476", "severity": "low", "issue": "UNNATURAL", "note": "\"We go for a walk although it is raining outside\" uses simple present instead of natural present continuous; better: \"We are going for a walk even though it's raining\""}
+{"id": "de-2480", "severity": "low", "issue": "UNNATURAL", "note": "\"strong headache\" is slightly unnatural; \"severe headache\" or \"bad headache\" is more idiomatic"}
+{"id": "de-2482", "severity": "low", "issue": "UNNATURAL", "note": "\"He likes to eat fried noodles with fresh vegetables best\" is awkward word order; better: \"He most likes to eat fried noodles with fresh vegetables\" or \"His favorite is fried noodles with fresh vegetables\""}
+{"id": "de-2502", "severity": "medium", "issue": "UNNATURAL", "note": "awkward double 'has been' construction; should be 'She has been learning German since moving to Munich' or 'since she moved to Munich'"}
+{"id": "de-2506", "severity": "low", "issue": "UNNATURAL", "note": "'which is' sounds formal; 'that is' more natural in English"}
+{"id": "de-2510", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Komm gut nach Hause' is a farewell wish; 'Get home safely' is too imperative. Better: 'Have a safe trip home' or 'Safe travels home'"}
+{"id": "de-2536", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "halb neun means half past eight in German time convention, but English convention says 8:30; the translation is technically correct for German speakers' perspective but awkward for English speakers—should be 'Get up, it's already 8:30!' or clarify convention"}
+{"id": "de-2550", "severity": "low", "issue": "UNNATURAL", "note": "is broken works but 'is damaged' or 'needs repair' sounds more natural for describing a roof condition"}
+{"id": "de-2553", "severity": "medium", "issue": "UNNATURAL", "note": "'travel by a fast train' is awkward; 'take a fast train' or 'go by fast train' is more natural"}
+{"id": "de-2556", "severity": "low", "issue": "UNNATURAL", "note": "'carries a handbag to dinner' is slightly odd; 'takes' or 'brings' would be more natural, or 'wears'"}
+{"id": "de-2561", "severity": "medium", "issue": "UNNATURAL", "note": "'harvested golden honey' is awkward; 'golden' as a descriptor of honey is unusual in English; 'collected honey' or 'extracted golden honey' would be better"}
+{"id": "de-2562", "severity": "low", "issue": "UNNATURAL", "note": "'prepared fresh' is awkward word order; 'freshly prepared' or 'prepared fresh daily' is more natural"}
+{"id": "de-2575", "severity": "low", "issue": "UNNATURAL", "note": "'comfortable pants for the everyday' is slightly awkward; 'comfortable pants for everyday wear' or 'comfortable everyday pants' flows better"}
+{"id": "de-2647", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Glasblåserin contains non-German character (å); should be Glasbläserin (glassblower, female)"}
+{"id": "de-2658", "severity": "low", "issue": "UNNATURAL", "note": "Present tense 'I wear' is awkward; should be 'I'm wearing' or 'I will wear' depending on context"}
+{"id": "de-2670", "severity": "low", "issue": "UNNATURAL", "note": "'work under' is grammatically correct but 'work for' is more natural in this context"}
+{"id": "de-2581", "severity": "medium", "issue": "UNNATURAL", "note": "'buys herself' is awkward; 'gets herself' or 'buys' alone is more natural"}
+{"id": "de-2581", "fix": {"k": "sich kaufen", "en": "to buy; to get for oneself", "pos": "v"}}
+{"id": "de-2590", "severity": "low", "issue": "UNNATURAL", "note": "'beautiful old castle' reads better; 'wunderschönes' is emphatic but 'beautiful' alone captures the sense"}
+{"id": "de-2595", "severity": "medium", "issue": "UNNATURAL", "note": "'only fresh ingredients are used in cooking' is clunky; better: 'only fresh ingredients are cooked with' or 'only fresh ingredients are used'"}
+{"id": "de-2621", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "verschoben means 'postponed/rescheduled', not 'delayed'; correct: 'the flight was postponed by three hours'"}
+{"id": "de-2625", "severity": "low", "issue": "UNNATURAL", "note": "awkward phrasing; better: 'During twilight, the fireflies awaken' or 'Fireflies awaken during twilight'"}
+{"id": "de-2635", "severity": "low", "issue": "UNNATURAL", "note": "'picnics' as a verb is awkward here; better: 'has a picnic' or 'is picnicking'"}
+{"id": "de-2636", "severity": "low", "issue": "UNNATURAL", "note": "'are making a trip' is slightly stiff; better: 'are taking a trip' or 'are going on a trip'"}
+{"id": "de-2637", "severity": "low", "issue": "MISSING_NUANCE", "note": "wunderschön carries stronger emphasis than 'beautiful'; better: 'wonderful sunset' or 'magnificent sunset'"}
+{"id": "de-2705", "severity": "medium", "issue": "UNNATURAL", "note": "Missing relative pronoun 'that' before 'I know'; should be 'The song that is playing on the radio (that) I know from my youth' or restructure"}
+{"id": "de-2722", "severity": "low", "issue": "UNNATURAL", "note": "'cycling to driving' is awkward; more natural: 'He prefers to cycle rather than drive' or 'He prefers cycling to driving a car'"}
+{"id": "de-2671", "severity": "low", "issue": "UNNATURAL", "note": "Awkward phrasing; better: 'The bicycle I ride to work' or 'The bicycle with which I commute to work'"}
+{"id": "de-2693", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'seien...gestiegen' is subjunctive (reported speech), not simple past; should be 'are said to have risen' or 'allegedly rose'"}
+{"id": "de-2700", "severity": "low", "issue": "UNNATURAL", "note": "'fluent Italian and Portuguese' is awkward; better: 'also speaks Italian and Portuguese fluently'"}
+{"id": "de-2766", "severity": "medium", "issue": "UNNATURAL", "note": "\"won't leave my head\" is awkward; \"I can't get the melody out of my head\" is more natural"}
+{"id": "de-2767", "severity": "medium", "issue": "UNNATURAL", "note": "\"I especially enjoyed\" misses the German construction with schmecken; better: \"I particularly liked the taste of the traditional dish\""}
+{"id": "de-2775", "severity": "medium", "issue": "UNNATURAL", "note": "\"In that regard\" is imprecise for \"Insofern\" (which means \"to that extent\" or \"in that respect\"); better: \"To that extent, the investment paid off for everyone involved\""}
+{"id": "de-2737", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Grundpfeiler\" means pillars/foundations, but \"fundamental pillars\" is redundant; should be \"cornerstones\" or \"pillars\""}
+{"id": "de-2740", "severity": "low", "issue": "UNNATURAL", "note": "Present tense 'we increase' is grammatically correct but awkward; should be 'we are increasing' to match German present progressive sense"}
+{"id": "de-2745", "severity": "low", "issue": "UNNATURAL", "note": "\"waddles amusingly\" is awkward; should be \"waddles along amusingly\" or \"waddles in an amusing way\""}
+{"id": "de-2746", "severity": "low", "issue": "UNNATURAL", "note": "\"from red bricks\" is awkward phrasing; should be \"out of red bricks\" or \"with red bricks\""}
+{"id": "de-2753", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"since three years\" is ungrammatical English; should be \"has been under renovation for three years\" (already correct in translation, but card logic is sound)"}
+{"id": "de-2794", "severity": "medium", "issue": "UNNATURAL", "note": "English reads stiffly; 'proceedings were dropped' is passive/awkward. Consider 'the case was dismissed' or 'the proceedings were terminated'"}
+{"id": "de-2801", "severity": "medium", "issue": "UNNATURAL", "note": "Missing reported speech marker. Should be 'reports that the airport is closed' or 'reports the airport to be closed'"}
+{"id": "de-2806", "severity": "low", "issue": "UNNATURAL", "note": "Passive construction sounds formal/stiff. More natural: 'Please do not take photographs during the tour' or 'Photography is not permitted during the tour'"}
+{"id": "de-2815", "severity": "low", "issue": "UNNATURAL", "note": "'to whom I lent' is correct but formal; more natural in English: 'who I lent my notes to'"}
+{"id": "de-2818", "severity": "low", "issue": "UNNATURAL", "note": "'in which we always meet' is correct but formal/stiff; more natural: 'where we always meet'"}
+{"id": "de-2859", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "vierzehn Uhr dreißig is 14:30 (2:30 PM in 24-hour format), not '2:30' which suggests 2:30 AM or requires 'PM' clarification in English"}
+{"id": "de-2864", "severity": "low", "issue": "UNNATURAL", "note": "'informed about the change in time' is awkward; should be 'informed of the change in a timely manner' or 'informed promptly of the change'"}
+{"id": "de-2875", "severity": "low", "issue": "UNNATURAL", "note": "'bought' is correct but 'can be bought' sounds slightly formal; 'can be purchased' is more natural in English"}
+{"id": "de-2887", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "brings fresh energy → brings fresh wind (idiomatic but 'frischer Wind' is correct); however 'brings' with plural subject should be 'bring' in standard English"}
+{"id": "de-2887", "severity": "medium", "issue": "WRONG_REGISTER", "note": "plural subject 'staff' requires 'bring' not 'brings'"}
+{"id": "de-2898", "severity": "low", "issue": "MISSING_NUANCE", "note": "'bitten um' can also mean 'request' or 'ask for'; current translation 'ask for' is acceptable but 'request' is more formal alternative"}
+{"id": "de-2903", "severity": "low", "issue": "UNNATURAL", "note": "'explain the way to me' is awkward; better as 'show me the way to' or 'tell me how to get to'"}
+{"id": "de-2826", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward; 'punctually at seven every morning' should be 'at seven o'clock punctually every morning' or 'punctually every morning at seven'"}
+{"id": "de-2829", "severity": "low", "issue": "UNNATURAL", "note": "'both of us together' is redundant; better as 'older than both of us' or 'older than we are'"}
+{"id": "de-2836", "severity": "low", "issue": "UNNATURAL", "note": "Present tense 'plays' sounds stative; more natural as 'is playing' for ongoing action"}
+{"id": "de-2844", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "German past perfect 'war...gebaut worden' means 'had been built'; but 'for three years' suggests duration, not completion. Should be 'The bridge had been under construction for three years' or check source meaning"}
+{"id": "de-2850", "severity": "low", "issue": "MISSING_NUANCE", "note": "'renewed' is possible but 'resurfaced' or 'repaired' more commonly used for road damage; 'renewed' suggests complete replacement"}
+{"id": "de-3007", "severity": "medium", "issue": "UNNATURAL", "note": "awkward phrasing 'it's far out' — should be 'it's far from the center' or 'it's in the outskirts'"}
+{"id": "de-3020", "severity": "medium", "issue": "UNNATURAL", "note": "'has doubled in size' is implied but not stated; 'has doubled' alone is more natural English"}
+{"id": "de-3024", "severity": "low", "issue": "UNNATURAL", "note": "'In his place' is slightly stiff; 'If I were in his position' or 'In his shoes' reads more naturally"}
+{"id": "de-3030", "severity": "low", "issue": "UNNATURAL", "note": "'tells of her exciting youth' is stiff; 'talks enthusiastically about her exciting youth' flows better"}
+{"id": "de-2981", "severity": "medium", "issue": "UNNATURAL", "note": "Kühlschrankinhalt is awkward; 'what's in our fridge' or 'our refrigerator contents' more natural"}
+{"id": "de-2985", "severity": "low", "issue": "UNNATURAL", "note": "'in your place' is technically correct but 'in your shoes' more idiomatic"}
+{"id": "de-2999", "severity": "low", "issue": "UNNATURAL", "note": "Missing comma after 'In your place' makes it read slightly abruptly"}
+{"id": "de-2914", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "gegenüber means 'opposite/across from' (adverbial), but 'dem Nachbarn gegenüber' is dative phrase meaning 'to/towards the neighbor' or 'opposite the neighbor's home'. Current translation 'across the street' is vague and misses the dative relationship."}
+{"id": "de-2917", "severity": "low", "issue": "UNNATURAL", "note": "'are lush' is awkward; better as 'are juicy; luxuriant' or simply 'are verdant'. 'Saftig' literally means 'juicy' and figuratively 'lush/luxuriant'."}
+{"id": "de-2927", "severity": "low", "issue": "UNNATURAL", "note": "Present tense 'is signed' should be 'will be signed' or 'are signed' to match German present with future sense. 'wird unterschrieben' typically indicates immediate/near future or habitual present."}
+{"id": "de-2937", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "'another' is incorrect—'noch' here means 'still/more' but the sentence uses formal conditional. Better: 'Might I pour you more wine?' or 'Could I pour you another glass?'"}
+{"id": "de-2944", "severity": "medium", "issue": "UNNATURAL", "note": "reported that the patient's prognosis was favorable (indirect speech smoother than 'was')"}
+{"id": "de-2945", "severity": "low", "issue": "UNNATURAL", "note": "past tense 'wove' is archaic; 'wove' works but 'wove' should be 'wove'—actually acceptable, but 'wove' is correct past tense of 'to weave'"}
+{"id": "de-2956", "severity": "medium", "issue": "UNNATURAL", "note": "served' would be more natural than 'serve'; indirect speech: 'serve' vs. 'served' register mismatch"}
+{"id": "de-2961", "severity": "low", "issue": "UNNATURAL", "note": "If I were in your place' or 'In your shoes' more natural than 'In your place I would'"}
+{"id": "de-2965", "severity": "medium", "issue": "UNNATURAL", "note": "She told (that) she had lived in Japan for three years' more natural; 'told' needs 'that' or direct speech"}
+{"id": "de-3093", "severity": "low", "issue": "UNNATURAL", "note": "English 'he takes the bicycle' is awkward; 'he takes his bicycle' or 'he rides his bike' would be more natural"}
+{"id": "de-3111", "severity": "medium", "issue": "UNNATURAL", "note": "Missing comma after 'Nonetheless'; should be 'Nonetheless, we have to review'"}
+{"id": "de-3120", "severity": "low", "issue": "UNNATURAL", "note": "Missing comma after 'report'; should be 'According to the report, the company'"}
+{"id": "de-3066", "severity": "medium", "issue": "UNNATURAL", "note": "\"every time\" is awkward; German means he gets annoyed repeatedly but the phrasing suggests habitual action. Better: \"He gets terribly annoyed every time by the constant train delays\" or \"He gets very annoyed about the constantly delayed trains.\""}
+{"id": "de-3074", "severity": "medium", "issue": "UNNATURAL", "note": "\"stated she was not present\" is stiff; more natural: \"claimed she was not present\" or \"said she had not been present\""}
+{"id": "de-3078", "severity": "low", "issue": "UNNATURAL", "note": "\"Excuse me please\" is awkward word order; better: \"Excuse me, could you show me the way to the nearest hospital?\" (remove \"please\" after \"me\")"}
+{"id": "de-3084", "severity": "medium", "issue": "UNNATURAL", "note": "\"asks not to be disturbed\" is awkward; better: \"asks to not be disturbed\" or \"asks that he not be disturbed\""}
+{"id": "de-3031", "severity": "medium", "issue": "UNNATURAL", "note": "Missing 'would' — should be 'I would prefer to stay in bed all day' not omit auxiliary"}
+{"id": "de-3044", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward; suggest 'The fog settled thick over the meadows in the morning' → 'In the morning, the fog settled thickly over the meadows'"}
+{"id": "de-3050", "severity": "low", "issue": "UNNATURAL", "note": "Missing subject pronoun; should be 'She informed [us] that she unfortunately could not keep the appointment'"}
+{"id": "de-3052", "severity": "low", "issue": "UNNATURAL", "note": "'infolgedessen' signals causal relation but translation uses 'consequently' which is slightly abrupt; consider 'as a result'"}
+{"id": "de-3054", "severity": "low", "issue": "UNNATURAL", "note": "Missing subject pronoun; should be 'He informed [us] that he unfortunately couldn't participate in the workshop'"}
+{"id": "de-3123", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "German 'Beförderung' is feminine (die Beförderung), so 'deinem wohlverdienten Beförderung' is grammatically incorrect in German. English should reflect promotion, but the German source has a case/gender error. Suggest flagging source."}
+{"id": "de-3127", "severity": "low", "issue": "UNNATURAL", "note": "English 'assured he would' is slightly awkward; 'he assured us he would' or 'he assured me he would' would be more natural, but source German doesn't specify recipient clearly."}
+{"id": "de-3130", "severity": "low", "issue": "MISSING_NUANCE", "note": "'zeige' in German subjunctive mood signals reported speech/indirect claim; English 'shows' loses this modal nuance of 'allegedly shows' or 'purportedly shows'."}
+{"id": "de-3136", "severity": "low", "issue": "MISSING_NUANCE", "note": "German subjunctive 'laufe' signals reported/indirect speech; English 'was going' doesn't fully capture the reported nature. Better: 'was going' with context or 'she reported was going'."}
+{"id": "de-3146", "severity": "medium", "issue": "UNNATURAL", "note": "German 'Sie scheint, mit ihrem neuen Job sehr zufrieden zu sein' has awkward comma after scheint. English translation is correct but source has punctuation error. If source is authoritative, flag structural issue."}
+{"id": "de-3157", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "neunzehn Uhr (7 PM) is 19:00 in 24-hour time, which is 7 PM; translation says 'around seven PM' which is correct, but the original says 'gegen neunzehn Uhr' (around 7 PM), not a different time"}
+{"id": "de-3157", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "neunzehn Uhr = 7 PM in 24-hour format; translation is correct but needs verification of intent"}
+{"id": "de-3160", "severity": "medium", "issue": "UNNATURAL", "note": "'at a dead end' is idiomatic but 'in a dead end' or 'at an impasse' reads more naturally in English; missing comma before 'the negotiations'"}
+{"id": "de-3175", "severity": "low", "issue": "UNNATURAL", "note": "'The population' is awkward; 'The people' or 'Citizens' would be more natural"}
+{"id": "de-3180", "severity": "medium", "issue": "UNNATURAL", "note": "'takes caring attention of' is grammatically incorrect; should be 'gives caring attention to' or 'cares attentively for'"}
+{"id": "de-3181", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Mehrfamilienhaus is a multi-family house/building, not specifically an apartment building"}
+{"id": "de-3181", "fix": {"k": "Mehrfamilienhaus", "en": "multi-family house; multi-family building", "pos": "n"}}
+{"id": "de-3182", "severity": "medium", "issue": "UNNATURAL", "note": "German past perfect suggests completed state; 'were upset...for a long time' implies ongoing past action better rendered as 'have been upset' or restructured"}
+{"id": "de-3186", "severity": "low", "issue": "UNNATURAL", "note": "'at the time in question' is slightly stiff; 'at the time in question' or 'at the relevant time' would be more natural"}
+{"id": "de-3195", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Das ist nicht das Gelbe vom Ei' idiom means 'nothing special; not great' rather than 'nothing to write home about' which has slightly different connotation"}
+{"id": "de-3201", "severity": "low", "issue": "MISSING_NUANCE", "note": "'bedächtig' means deliberately/thoughtfully/slowly; 'deliberately' may imply intentional choice rather than slow careful movement"}
+{"id": "de-3201", "fix": {"k": "bedächtig", "en": "slowly; deliberately; thoughtfully", "pos": "adv"}}
+{"id": "de-3204", "severity": "low", "issue": "UNNATURAL", "note": "'Without thinking for long' is awkward; 'Without thinking long' or 'Without much thought' flows better"}
+{"id": "de-3212", "severity": "low", "issue": "WRONG_REGISTER", "note": "use 'our wedding anniversary' not 'the wedding anniversary'"}
+{"id": "de-3212", "fix": {"k": "Hochzeitstag", "en": "wedding anniversary", "pos": "n"}}
+{"id": "de-3218", "severity": "low", "issue": "UNNATURAL", "note": "'postpone to next month' more natural as 'postpone until next month'"}
+{"id": "de-3224", "severity": "medium", "issue": "UNNATURAL", "note": "'tell me everything in order' is awkward; should be 'tell me everything step by step' or 'one thing at a time'"}
+{"id": "de-3227", "severity": "low", "issue": "UNNATURAL", "note": "'beautiful melodies' more natural than 'wonderfully beautiful melodies' but card says 'wunderschöne' = very beautiful/lovely"}
+{"id": "de-3228", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'Abendbrot' is supper/dinner, not 'dinner' casserole in English context; 'supper casserole' or 'evening meal casserole' better"}
+{"id": "de-3233", "severity": "low", "issue": "UNNATURAL", "note": "'engaged with planning' awkward; better 'engaged in planning' or 'busy planning'"}
+{"id": "de-3239", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "German uses 'je schneller...desto eher' (the faster...the sooner) but English should be 'The faster we finish, the sooner we can go home' not repeat 'sooner' twice awkwardly"}
+{"id": "de-3272", "severity": "medium", "issue": "UNNATURAL", "note": "English 'get colder and colder' doesn't match German 'werden immer kälter' (progressive single sense); should be 'grow progressively colder' or 'get steadily colder'"}
+{"id": "de-3276", "severity": "low", "issue": "UNNATURAL", "note": "'at the same time' is redundant after 'also'; should omit or use 'yet' instead"}
+{"id": "de-3284", "severity": "low", "issue": "MISSING_NUANCE", "note": "'Kriminalroman' can mean crime novel or detective novel; 'crime novel' is broader and more common"}
+{"id": "de-3297", "severity": "medium", "issue": "UNNATURAL", "note": "'Please note that' is softer than 'Wir bitten um Kenntnisnahme'; should be 'We request notification that' or 'Please be advised that' for formal register"}
+{"id": "de-3241", "severity": "medium", "issue": "UNNATURAL", "note": "Word order awkward; 'to see you again soon' should be 'to see you again'—'soon' placement is stiff"}
+{"id": "de-3242", "severity": "medium", "issue": "UNNATURAL", "note": "'admittedly cheap' is forced; 'zwar' here signals concession, better as 'The offer is certainly cheap' or 'While the offer is cheap'"}
+{"id": "de-3247", "severity": "low", "issue": "UNNATURAL", "note": "'the tidying' is awkward; 'tidying up' or 'cleaning up' is more natural"}
+{"id": "de-3252", "severity": "low", "issue": "UNNATURAL", "note": "'halt' omitted from translation; 'Just' alone doesn't capture the emphatic/casual tone; 'do call me' or 'just go ahead and call' better"}
+{"id": "de-3256", "severity": "low", "issue": "UNNATURAL", "note": "'will exceptionally take place' is awkward; 'exceptionally takes place' or 'is taking place exceptionally' is more natural"}
+{"id": "de-3262", "severity": "low", "issue": "UNNATURAL", "note": "'entrance from the street' is awkward; 'entrance directly from the street' or 'street entrance' is more idiomatic"}
+{"id": "de-3264", "severity": "medium", "issue": "UNNATURAL", "note": "'What I like least is having to jog' is grammatically awkward; better as 'What I dislike most is having to jog' or 'I dislike most having to jog outside in bad weather'"}
+{"id": "de-3269", "severity": "low", "issue": "UNNATURAL", "note": "'The fastest way to get to the distant airport is by express bus' changes the structure; more natural as 'You get to the distant airport fastest by express bus' or 'The express bus is the fastest way'"}
+{"id": "de-3348", "severity": "medium", "issue": "UNNATURAL", "note": "\"most prefer to spend\" is awkward; should be \"I prefer to spend\" or \"I most like to spend\""}
+{"id": "de-3354", "severity": "low", "issue": "UNNATURAL", "note": "\"work focused\" should be \"work with focus\" or \"work concentratedly\""}
+{"id": "de-3356", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Bitte sehr, gern geschehen\" is two separate phrases; \"gern geschehen\" = \"gladly happened\" (you're welcome), but \"Bitte sehr\" = \"here you go\" or \"please\" (when offering something). Translation conflates them."}
+{"id": "de-3360", "severity": "low", "issue": "UNNATURAL", "note": "\"leans\" is awkward; should be \"has leaned\" or \"stands tilted/at an angle\""}
+{"id": "de-3301", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Wohngemeinschaftszimmer = shared apartment room is redundant; should be 'shared room' or 'apartment room'"}
+{"id": "de-3303", "severity": "low", "issue": "UNNATURAL", "note": "'when you have arrived safely' is grammatically correct but 'when you arrive safely' is more natural in English"}
+{"id": "de-3308", "severity": "low", "issue": "UNNATURAL", "note": "'Punctually at midnight' is awkward; better: 'Right at midnight' or 'At the stroke of midnight'"}
+{"id": "de-3323", "severity": "low", "issue": "UNNATURAL", "note": "'It rained admittedly' is stilted; better: 'Although it rained' or 'It did rain'"}
+{"id": "de-3327", "severity": "medium", "issue": "UNNATURAL", "note": "'impressively diverse' is awkward phrasing; better: 'impressively diverse' → 'truly remarkably diverse' or just 'really quite diverse'"}
+{"id": "de-3375", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Fingerhutblümchen is specifically foxglove (Digitalis), but the translation should use the standard botanical term; 'foxglove' alone is acceptable but 'Fingerhutblümchen' more precisely refers to the flower form"}
+{"id": "de-3380", "severity": "low", "issue": "UNNATURAL", "note": "'garden fruits' is slightly stiff; 'garden produce' or 'vegetables and fruit from her garden' would be more natural"}
+{"id": "de-3385", "severity": "low", "issue": "UNNATURAL", "note": "'immediately captivated me' is slightly awkward phrasing; 'immediately gripped me' or 'captivated me at once' flows better"}
+{"id": "de-3390", "severity": "low", "issue": "UNNATURAL", "note": "'adult education center' is a valid translation but 'folk high school' (literal rendering of Volkshochschule) is the more standard English term for this institution type"}
+{"id": "de-3426", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Da liegt der Hund begraben\" is an idiom meaning \"that's the crux of the matter\" or \"that's the real issue\", not literal dog burial"}
+{"id": "de-3426", "fix": {"k": "Da liegt der Hund begraben", "en": "that's the crux of the matter; that's the real issue", "pos": "phrase"}}
+{"id": "de-3434", "severity": "medium", "issue": "UNNATURAL", "note": "\"Stop briefly\" sounds abrupt; more natural: \"Stop for a moment\" or \"Hold on a second\""}
+{"id": "de-3444", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Butter bei die Fische\" is a German idiom; \"get down to brass tacks\" is correct but needs to recognize it's an idiom in source"}
+{"id": "de-3448", "severity": "low", "issue": "MISSING_NUANCE", "note": "\"tart\" is acceptable but \"sour\" or \"tangy\" may be more precise for säuerlich"}
+{"id": "de-3393", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Bogenschützin is feminine (female archer), but English 'archer' is gender-neutral; the translation obscures the specified gender"}
+{"id": "de-3394", "severity": "low", "issue": "UNNATURAL", "note": "'planned for three months' is awkward; 'planned three months ago' or 'planned for the past three months' reads more naturally"}
+{"id": "de-3395", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'blows' suggests the towel is doing the blowing; should be 'flutters' or 'is blown' to match the German passive sense"}
+{"id": "de-3398", "severity": "low", "issue": "UNNATURAL", "note": "'plan my meals...ahead' is redundant; 'plan my meals for the coming week' or 'plan ahead' alone would be clearer"}
+{"id": "de-3402", "severity": "low", "issue": "UNNATURAL", "note": "Better: 'Why did you leave the office so early today?' 'come from' is less idiomatic for leaving work"}
+{"id": "de-3404", "severity": "low", "issue": "UNNATURAL", "note": "Awkward phrasing; better: 'The easiest way to reach the city center is by tram' (slightly restructure to match German flow)"}
+{"id": "de-3407", "severity": "low", "issue": "UNNATURAL", "note": "'Monday to Friday' should be 'Monday through Friday' or 'Mondays to Fridays' for standard English"}
+{"id": "de-3409", "severity": "low", "issue": "UNNATURAL", "note": "'in a hundred meters' is awkward; better: 'a hundred meters ahead' or 'at a distance of a hundred meters'"}
+{"id": "de-3418", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "German idiom is 'Katze im Sack' (cat in the bag), English equivalent is 'pig in a poke' but the note should reflect the German source idiom more closely"}
+{"id": "de-3453", "severity": "medium", "issue": "UNNATURAL", "note": "English uses infinitive 'dance' but German 'sehen' with infinitive typically translates to 'saw him dancing' in natural English"}
+{"id": "de-3458", "severity": "low", "issue": "UNNATURAL", "note": "Slightly awkward; 'The delivery awaited for weeks' would be more natural as 'The delivery that had been awaited for weeks' or 'The long-awaited delivery'"}
+{"id": "de-3460", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'schliff' means 'to cut; to grind; to polish' but 'to perfect shape' suggests cutting/shaping, not polishing. Should be 'The jeweler cut the diamond to perfect shape'"}
+{"id": "de-3461", "severity": "low", "issue": "UNNATURAL", "note": "German allows both 'hören + infinitive' and gerund interpretation; 'playing' is acceptable but 'hear the children play' also natural"}
+{"id": "de-3467", "severity": "low", "issue": "UNNATURAL", "note": "Participial placement awkward; more natural as 'The department head, valued by all colleagues' or 'The esteemed department head'"}
+{"id": "de-3470", "severity": "low", "issue": "UNNATURAL", "note": "'in sunny September' is awkward; better as 'in September sunshine' or simply 'in September'"}
+{"id": "de-3474", "severity": "low", "issue": "UNNATURAL", "note": "'highly praised' is passive; 'highly lauded' more natural, or 'The critically acclaimed exhibition'"}
+{"id": "de-3481", "severity": "medium", "issue": "UNNATURAL", "note": "\"within a few weeks\" is slightly awkward; \"in a few weeks\" is more natural"}
+{"id": "de-3483", "severity": "low", "issue": "UNNATURAL", "note": "\"quietly singing to himself\" is grammatically correct but \"the boy singing quietly to himself\" flows better"}
+{"id": "de-3487", "severity": "medium", "issue": "UNNATURAL", "note": "\"it's supposed to be fantastic\" is colloquial for 'das soll fantastisch sein'; more natural: \"it's supposed to be fantastic\" or \"they say it's fantastic\""}
+{"id": "de-3490", "severity": "low", "issue": "UNNATURAL", "note": "\"every time it thunders\" is slightly formal; \"whenever it thunders\" is more idiomatic"}
+{"id": "de-3494", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Are you serious\" misses the rhetorical/confrontational tone of \"Ist das etwa dein Ernst\"; better: \"You can't be serious\" or \"Are you out of your mind\""}
+{"id": "de-3496", "severity": "low", "issue": "UNNATURAL", "note": "\"have a coffee brought to me\" is awkward; more natural: \"was just about to order a coffee\" or \"was just about to get someone to bring me a coffee\""}
+{"id": "de-3499", "severity": "low", "issue": "UNNATURAL", "note": "\"Is he actually also coming\" is redundant; \"Is he actually coming\" or \"Is he coming\" is more natural"}
+{"id": "de-3508", "severity": "medium", "issue": "UNNATURAL", "note": "\"She simply really wanted\" is clumsy; better: \"She simply really wanted to become a veterinarian and she did\" or \"She just had her heart set on becoming a veterinarian and she succeeded\""}
+{"id": "de-3512", "severity": "medium", "issue": "UNNATURAL", "note": "\"read the letter three times\" is awkward; \"read through the letter three times\" better matches \"durchlesen\""}
+{"id": "de-3512", "fix": {"k": "durchlesen", "en": "to read through; to read over", "pos": "v"}}
+{"id": "de-3518", "severity": "low", "issue": "UNNATURAL", "note": "\"the entire long way\" is redundant phrasing; \"the whole long way\" or \"all that way\" flows better"}
+{"id": "de-3526", "severity": "medium", "issue": "UNNATURAL", "note": "\"Against it speaks the fact that\" is awkward German-influenced English; should be \"The objection is that\" or \"Against it is the fact that\""}
+{"id": "de-3533", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"get down to brass tacks\" is an acceptable idiom but \"let's talk turkey\" or \"let's be straight about this\" might better capture the colloquial directness of this phrase"}
+{"id": "de-3540", "severity": "low", "issue": "UNNATURAL", "note": "\"plunges thirty meters into the depths\" is slightly awkward; \"drops thirty meters\" or \"falls thirty meters\" is more natural"}
+{"id": "de-3542", "severity": "medium", "issue": "UNNATURAL", "note": "Opening 'Please find attached' is awkward; German 'Anbei finden Sie' is more formal/direct"}
+{"id": "de-3548", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "German says 'genau' (exactly/precisely), not 'in detail' — should be 'I had the situation explained to me exactly/precisely'"}
+{"id": "de-3552", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'auf dem Schlauch stehen' is German idiom meaning 'to be stumped/at a loss', not literally 'on the hose'. English translation is nonsensical"}
+{"id": "de-3553", "severity": "low", "issue": "UNNATURAL", "note": "Phrasing 'Who has drunk the milk' is awkward; should be 'Who drank the milk' or 'Who's drunk the milk'"}
+{"id": "de-3554", "severity": "medium", "issue": "UNNATURAL", "note": "'Forget it' is too casual/dismissive for the German tone. Better: 'Never mind' or 'Don't worry about it'"}
+{"id": "de-3564", "severity": "low", "issue": "UNNATURAL", "note": "'hearty compliment' sounds odd; should be 'my sincere compliments to the chef' or 'warmest compliments'"}
+{"id": "de-3565", "severity": "low", "issue": "UNNATURAL", "note": "'Say, do you already have plans' — 'already' is slightly awkward here; better as 'do you have plans' or 'have you made plans yet'"}
+{"id": "de-3606", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"an die große Glocke hängen\" means to publicize/spread the word, not 'broadcast to everyone'; the translation misses the idiomatic sense and is too vague"}
+{"id": "de-3609", "severity": "medium", "issue": "UNNATURAL", "note": "\"Pflasterstein-Verleger\" is awkward; standard term is \"Pflasterer\" (paver); translation should reflect more common usage"}
+{"id": "de-3612", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"Das geht auf keine Kuhhaut\" is an idiom meaning 'it's unbelievable/incredible,' not simply 'outrageous'; the idiomatic force is lost"}
+{"id": "de-3625", "severity": "low", "issue": "WRONG_REGISTER", "note": "\"Köchin\" is female chef, but English 'chef' is gender-neutral; if the card specifies female, consider 'female chef' for clarity, though 'chef' alone is acceptable"}
+{"id": "de-3627", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Pharaonin\" is female pharaoh; translation says 'pharaoh' (gender-neutral); should be 'female pharaoh' or 'pharaoh (female)' for accuracy"}
+{"id": "de-3574", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "German proverb uses 'sparrow in hand vs. dove on roof'; English version says 'two in the bush' (different proverb). Should be 'A sparrow in the hand is worth more than a dove on the roof.'"}
+{"id": "de-3578", "severity": "low", "issue": "UNNATURAL", "note": "'In the following' is awkward; should be 'Below' or 'In the following section'"}
+{"id": "de-3583", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "German says advantages outweigh (no disadvantages mentioned), but English adds 'disadvantages' which isn't in source. Should omit 'the disadvantages' or rephrase as 'far outweigh any disadvantages'"}
+{"id": "de-3584", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'sich grün sein' is German idiom meaning 'not be able to stand each other'; translation completely inverts meaning. Should be 'The two neighbors can't stand each other but somehow get along splendidly' or better understand the contradiction"}
+{"id": "de-3595", "severity": "low", "issue": "UNNATURAL", "note": "'In favor of this is the fact that' is awkward construction; better: 'This is supported by the fact that' or 'Flexible working hours increase employee satisfaction'"}
+{"id": "de-3598", "severity": "low", "issue": "UNNATURAL", "note": "'annoys me big time' is too colloquial/slangy for 'nervt mich tierisch'; better: 'really annoys me' or 'drives me crazy'"}
+{"id": "de-3600", "severity": "low", "issue": "UNNATURAL", "note": "Redundant 'I would like to inform you that I would like to inform you'; should be 'For your information, the deadline has been extended' or 'I would like to inform you that...' (pick one)"}
+{"id": "de-3633", "severity": "medium", "issue": "UNNATURAL", "note": "subjunctive mood lost in translation; 'es sehe so aus, als ob' expresses doubt/unreality but 'appears as though' suggests more certainty"}
+{"id": "de-3640", "severity": "medium", "issue": "UNNATURAL", "note": "irrealis subjunctive 'hätte...können' is counterfactual wish; 'could have gone' reads as lost opportunity, not emotional regret"}
+{"id": "de-3641", "severity": "low", "issue": "MISSING_NUANCE", "note": "'one's own garden' is more natural English than 'from one's own garden'; the German emphasizes the personal possession"}
+{"id": "de-3642", "severity": "low", "issue": "WRONG_REGISTER", "note": "'remain with kind regards' is archaic/overly formal; modern English would be 'remain with best regards' or simply 'Best regards'"}
+{"id": "de-3657", "severity": "low", "issue": "WRONG_TRANSLATION", "note": "'mit Herz auf der Zunge' idiomatically means 'wears heart on sleeve' (candid, open), not specifically 'speaks from heart'"}
+{"id": "de-3693", "severity": "medium", "issue": "MISSING_NUANCE", "note": "German uses 'erst heute' (only today) but English translation omits 'only', changing the emphasis of the claim"}
+{"id": "de-3696", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "'dreht jeden Euro zweimal um' is an idiom meaning to scrimp/be very frugal, not literally turn euros twice. Should be 'He pinches every penny' or 'He's very tight with money'"}
+{"id": "de-3703", "severity": "medium", "issue": "UNNATURAL", "note": "'einen Vogel haben' is idiomatic (to be crazy/have a screw loose). 'You must be crazy' is acceptable but 'You're crazy' or 'You've lost your mind' is more natural English"}
+{"id": "de-3714", "severity": "medium", "issue": "UNNATURAL", "note": "'Anbei übersenden wir' is formal/bureaucratic German. English 'Enclosed we send' is awkward; better: 'Enclosed please find' or 'We enclose'"}
+{"id": "de-3754", "severity": "medium", "issue": "UNNATURAL", "note": "English 'fly' is ambiguous; German 'fliegen sehen' means she watched it fly (ongoing action), not saw it in the act of flying once. Better: 'She saw the falcon flying' or 'She watched the falcon fly.'"}
+{"id": "de-3758", "severity": "medium", "issue": "UNNATURAL", "note": "'No one is born a master' changes the meaning. Original idiom means 'practice makes perfect' or 'mastery takes time.' Better: 'No master has ever fallen from the sky' (more literal) or 'Nobody is born a master.'"}
+{"id": "de-3761", "severity": "low", "issue": "MISSING_NUANCE", "note": "Subjunctive 'sei' signals reported/indirect speech with doubt. English 'is' loses this epistemic distance. Better: 'He claims the diamond is a forgery' is acceptable, but 'claims it to be a forgery' captures the subjunctive better."}
+{"id": "de-3766", "severity": "medium", "issue": "UNNATURAL", "note": "'May I be forgiven' is archaic/poetic passive. Modern English would be 'Forgive me' or 'I beg your pardon.' Better: 'Forgive me, but I must disagree.'"}
+{"id": "de-3774", "severity": "high", "issue": "WRONG_REGISTER", "note": "'Geiles' is slang/colloquial (vulgar undertone); 'Schmacht' is dialectal/youth slang for intense hunger/craving. Translation 'great' and 'starving' are too mild and miss the register. Better: 'Let's go grab something awesome/delicious; I'm famished/ravenous.'"}
+{"id": "de-3662", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "Es ist mir ein Anliegen means 'It is a concern of mine' or 'I am concerned to', not 'It is my concern to'. The English phrasing inverts the meaning slightly."}
+{"id": "de-3663", "severity": "low", "issue": "UNNATURAL", "note": "'Let's not blow things out of proportion' is more natural than the literal 'Let the church remain in the village', but the idiom should be preserved or the translation clarified."}
+{"id": "de-3664", "severity": "medium", "issue": "UNNATURAL", "note": "'Clean slate' is not the standard English idiom for 'weiße Weste'. Better: 'He always has a clean record' or 'You can't pin anything on him'."}
+{"id": "de-3668", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'für die Katz' idiom typically means 'a wasted effort' or 'pointless', but 'for nothing' misses the sense that effort was expended futilely. Better: 'This is all for nothing' or 'a waste of effort'."}
+{"id": "de-3672", "severity": "low", "issue": "UNNATURAL", "note": "'I am of the opinion that' is stilted. More natural: 'I fundamentally believe that' or 'In my view'."}
+{"id": "de-3674", "severity": "low", "issue": "UNNATURAL", "note": "Missing 'doch' emphasis. Better: 'We're all in the same boat and we need to find a solution together' (adds emphasis to shared responsibility)."}
+{"id": "de-3675", "severity": "low", "issue": "UNNATURAL", "note": "'it can be said that' is passive and awkward. Better: 'In summary, both approaches have their advantages and disadvantages.'"}
+{"id": "de-3681", "severity": "medium", "issue": "UNNATURAL", "note": "'einen Strich durch die Rechnung machen' more literally means 'to cross out one's calculations/plans'. 'Thwarted my plans' works but 'He ruined my plans' or 'He spoiled things for me' is closer."}
+{"id": "de-3689", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "German is 'Sie hat mir das Herz auf der Zunge liegen' which is confusing construction. Likely should be 'Sie trägt ihr Herz auf der Zunge' = 'She wears her heart on her sleeve'. Current phrasing 'Sie hat mir das Herz auf der Zunge liegen' doesn't match the English idiom direction."}
+{"id": "de-3690", "severity": "medium", "issue": "UNNATURAL", "note": "'pulled my leg' works but 'told me a tall tale' or 'fed me a line' more directly mirrors 'einen Bären aufbinden' (to tie a bear on someone)."}
+{"id": "de-3786", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "'could be confirmed' suggests possibility; German 'konnte...bestätigt werden' in this context means 'was able to be confirmed' (successfully confirmed)"}
+{"id": "de-3791", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'Digga' is very casual Berlin slang; 'Bro' is acceptable but 'Man' might be more neutral"}
+{"id": "de-3792", "severity": "low", "issue": "UNNATURAL", "note": "'fill in for you' is awkward; prefer 'cover for you' or 'step in for you'"}
+{"id": "de-3802", "severity": "low", "issue": "UNNATURAL", "note": "'Mach hinne' is very colloquial (north German dialect); 'Hurry up' is acceptable but 'Get a move on' might better capture the tone"}
+{"id": "de-3806", "severity": "medium", "issue": "WRONG_REGISTER", "note": "'mega stressed' translates the slang but 'mega' as intensifier is very casual; 'really stressed' or 'extremely stressed' would be more standard"}
+{"id": "de-3807", "severity": "low", "issue": "UNNATURAL", "note": "'available to you' awkward phrasing; prefer 'happy to help with any questions' or 'available should you have any questions'"}
+{"id": "de-3722", "severity": "medium", "issue": "UNNATURAL", "note": "German uses subjunctive; English 'failed' should be 'were to fail' or 'should fail' for parallel mood"}
+{"id": "de-3724", "severity": "medium", "issue": "UNNATURAL", "note": "English 'didn't understand' is past indicative; German subjunctive 'verstünde' suggests ongoing counterfactual—better 'understood' or 'could understand'"}
+{"id": "de-3726", "severity": "medium", "issue": "UNNATURAL", "note": "English 'were delayed' is correct subjunctive, but 'In the event' + subjunctive is formal; 'If the delivery were' is clearer"}
+{"id": "de-3731", "severity": "low", "issue": "WRONG_REGISTER", "note": "'Crazy' is too informal for 'Krass' in this context; 'Awesome' or 'Impressive' better matches register"}
+{"id": "de-3734", "severity": "low", "issue": "WRONG_REGISTER", "note": "'Geil' is slang/vulgar in standard German; 'Awesome' captures intent but note register shift from original"}
+{"id": "de-3737", "severity": "low", "issue": "CARD_DUPLICATE", "note": "Identical to de-3736 in meaning and translation; only minor word order difference in German"}
+{"id": "de-3739", "severity": "low", "issue": "UNNATURAL", "note": "'still caught' is awkward; better 'have caught' or 'would have made' the flight"}
+{"id": "de-3742", "severity": "medium", "issue": "WRONG_NUANCE", "note": "'in the stars' (fate/destiny) misses 'noch in den Sternen' idiom meaning uncertain/undecided; better 'it remains to be seen'"}
+{"id": "de-3744", "severity": "low", "issue": "UNNATURAL", "note": "'super delicious' is redundant; 'really delicious' or 'really great' better matches casual 'mega lecker'"}
+{"id": "de-3745", "severity": "low", "issue": "UNNATURAL", "note": "'Oh no' is mild; 'Ach du Schande' is stronger exclamation; 'Oh my goodness' or 'Oh dear' better"}
+{"id": "de-3746", "severity": "low", "issue": "UNNATURAL", "note": "'Really nice' is flat; 'Voll nice' is slang-emphatic; better 'That's really cool' or 'How awesome'"}
+{"id": "de-3748", "severity": "low", "issue": "UNNATURAL", "note": "'so done' (exhausted colloquial) is correct but 'so exhausted' reads more naturally; keep colloquial or pick one register"}
+{"id": "de-3815", "severity": "low", "issue": "UNNATURAL", "note": "\"I almost fell asleep in the cinema\" is slightly awkward; \"I almost fell asleep at the cinema\" flows better"}
+{"id": "de-3824", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Quatsch nicht rum\" = don't talk nonsense/don't mess around; \"waffle on\" is not the primary meaning"}
+{"id": "de-3828", "severity": "medium", "issue": "MISSING_NUANCE", "note": "\"Morgenstund hat Gold im Mund\" literally = morning hour has gold in its mouth; standard English equivalent is \"the early bird catches the worm\" but misses the German idiom's focus on the value of early rising itself"}
+{"id": "de-3837", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "\"erklärte, dieses Experiment beweise\" = explained that this experiment proved; missing \"that\" makes the sentence ambiguous. Should be \"The professor explained that this experiment proved his theory.\""}
+{"id": "de-3933", "severity": "medium", "issue": "UNNATURAL", "note": "in the interpretation is awkward; should be 'during interpretation' or 'when interpreting'"}
+{"id": "de-3935", "severity": "medium", "issue": "MISSING_NUANCE", "note": "primary sense is 'you're welcome' (response to thanks); 'please' is secondary"}
+{"id": "de-3937", "severity": "low", "issue": "UNNATURAL", "note": "'the toilet' sounds clinical; 'restroom' or 'bathroom' more natural in English"}
+{"id": "de-3841", "severity": "medium", "issue": "WRONG_TRANSLATION", "note": "\"Das war wohl nichts\" means \"That didn't work\" or \"That was a no-go\", not \"That was nothing\""}
+{"id": "de-3841", "fix": {"k": "wohl nichts", "en": "didn't work; was no good", "pos": "phrase"}}
+{"id": "de-3847", "severity": "low", "issue": "UNNATURAL", "note": "Missing comma after \"perspective\" for readability in English"}
+{"id": "de-3858", "severity": "medium", "issue": "UNNATURAL", "note": "\"Mach dir mal locker\" → \"Take it easy\" or \"Relax\" would be more natural than \"Loosen up\""}
+{"id": "de-3858", "fix": {"k": "locker machen", "en": "to take it easy; to relax", "pos": "v"}}
+{"id": "de-3863", "severity": "low", "issue": "UNNATURAL", "note": "\"Lass mal treffen\" is colloquial; English should be \"Let's get together\" or \"Let's hang out\" rather than \"Let's meet up\""}
+{"id": "de-3868", "severity": "medium", "issue": "WRONG_REGISTER", "note": "\"totally messed up\" is too casual/vulgar for the context; \"totally screwed up\" or \"really messed up\" would be better"}
+{"id": "de-3870", "severity": "low", "issue": "UNNATURAL", "note": "\"aged eighteen to sixty-five\" is slightly awkward; \"aged eighteen to sixty-five years\" or \"between eighteen and sixty-five years old\" flows better"}
+{"id": "de-3877", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "German proverb about valuing small amounts; English translation is completely different proverb"}
+{"id": "de-3880", "severity": "medium", "issue": "UNNATURAL", "note": "'was totally pumped up' is awkward; better: 'was totally wired' or 'was totally high'"}
+{"id": "de-3881", "severity": "low", "issue": "UNNATURAL", "note": "'Chill out' should be 'Chill out,' (with comma) for naturalness; minor punctuation"}
+{"id": "de-3884", "severity": "low", "issue": "MISSING_NUANCE", "note": "'present study' can also mean 'this study' or 'the study presented here' — 'vorliegende' emphasizes relevance of the current work"}
+{"id": "de-3888", "severity": "low", "issue": "MISSING_NUANCE", "note": "'present study' — same as de-3884; 'vorliegende' emphasizes the study at hand"}
+{"id": "de-3891", "severity": "medium", "issue": "UNNATURAL", "note": "'I just don't get it why' is awkward; better: 'I just don't understand why' or 'I just can't figure out why'"}
+{"id": "de-3896", "severity": "low", "issue": "UNNATURAL", "note": "'see each other' is vague; 'meet up' or 'see one another' would be more natural for 'wiedersehen'"}
+{"id": "de-3902", "severity": "high", "issue": "WRONG_TRANSLATION", "note": "German proverb about echoing in forest; English idiom about karma/reciprocal justice — different meanings"}
+{"id": "de-3905", "severity": "medium", "issue": "UNNATURAL", "note": "'about that' is awkward; should be 'You can't be serious!' or 'surely you're joking'"}
+{"id": "de-3922", "severity": "medium", "issue": "UNNATURAL", "note": "'over there is a deer on the meadow' — word order unnatural; prefer 'Look, there's a deer over on the meadow'"}
+{"id": "de-3927", "severity": "low", "issue": "MISSING_NUANCE", "note": "methodisch can also mean 'systematic'; 'methodological' is more technical/narrow"}
+{"id": "de-3928", "severity": "low", "issue": "UNNATURAL", "note": "'of the second of November' is archaic phrasing; prefer 'from November 2nd' or 'dated November 2nd'"}

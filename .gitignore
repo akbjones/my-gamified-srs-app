@@ -5,3 +5,6 @@ dist
 # Generated TTS audio (regenerate with: GOOGLE_TTS_KEY=xxx node scripts/generate-audio.cjs)
 scripts/failed-audio.json
 .env.local
+.netlify/
+dist-slim/
+tsconfig.tsbuildinfo

@@ -1,0 +1,383 @@
+#!/usr/bin/env node
+/**
+ * Apply curated semantic fixes to Dutch dictionary — v2
+ * Handles escaped single quotes properly by doing line-level replacements.
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+const NL_PATH = path.join(__dirname, '..', 'src', 'data', 'dictionary', 'nl.ts');
+
+// ── Curated fix map: word → new English translation ──────────────
+const FIXES = new Map([
+  // === GARBAGE / TRUNCATED entries ===
+  ['brachten', 'to bring'],
+  ['doorzet', 'perseverance'],
+  ['druk', 'busy'],
+  ['drukke', 'busy'],
+  ['drukst', 'busiest'],
+  ['ervaren', 'experienced'],
+  ['geld', 'money'],
+  ['gepaard', 'paired'],
+  ['heftige', 'intense'],
+  ['ijs', 'ice'],
+  ['karretje', 'cart'],
+  ['kleren', 'clothes'],
+  ['nacht', 'night'],
+  ['nachts', 'at night'],
+  ['niks', 'nothing'],
+  ['nut', 'usefulness'],
+  ['ontlokte', 'to elicit'],
+  ['oppast', 'to babysit'],
+  ['plezier', 'pleasure'],
+  ['spannen', 'to tense'],
+  ['spant', 'to tense'],
+  ['vakantiedag', 'holiday'],
+  ['verbazen', 'to amaze'],
+  ['koningsdag', "King\\'s Day"],
+  ['koningsdagfestiviteiten', "King\\'s Day festivities"],
+  ['snap', 'to understand'],
+  ['begeleiden', 'to coach; guide'],
+  ['gesproken', 'spoken'],
+  ['sprak', 'spoke'],
+  ['spreek', 'to speak'],
+  ['spreekt', 'to speak'],
+  ['spreken', 'to speak'],
+  ['uur', "o\\'clock"],
+
+  // === WRONG MEANING ===
+  ['beschrijven', 'to describe'],
+  ['bewandelde', 'to walk'],
+  ['beukte', 'to batter'],
+  ['controlegroep', 'control group'],
+  ['dacht', 'thought'],
+  ['deden', 'did'],
+  ['deed', 'did'],
+  ['dekt', 'to cover'],
+  ['diepteinterviews', 'in-depth interviews'],
+  ['dijkverzwaring', 'dike reinforcement'],
+  ['dobbert', 'to bob'],
+  ['doorregenen', 'to rain through'],
+  ['draagt', 'to carry; wear'],
+  ['droeg', 'wore'],
+  ['droegen', 'wore'],
+  ['droogt', 'to dry'],
+  ['eindejaarsvergadering', 'year-end meeting'],
+  ['evidencebased', 'evidence-based'],
+  ['friet', 'fries'],
+  ['ga', 'to go'],
+  ['gaan', 'to go'],
+  ['gaat', 'to go'],
+  ['gaf', 'gave'],
+  ['gaven', 'gave'],
+  ['gebakken', 'fried; baked'],
+  ['gebroken', 'broken'],
+  ['gedaan', 'done'],
+  ['gedacht', 'thought'],
+  ['gedeeld', 'shared'],
+  ['gegaan', 'gone'],
+  ['gegeten', 'eaten'],
+  ['gelaten', 'left; resigned'],
+  ['gemaakt', 'made'],
+  ['gemoed', 'mood; mind'],
+  ['gepakt', 'grabbed; packed'],
+  ['gerend', 'ran'],
+  ['gericht', 'aimed; focused'],
+  ['geschat', 'estimated'],
+  ['gestaan', 'stood'],
+  ['gestelde', 'stated; set'],
+  ['gevlogen', 'flown'],
+  ['gewend', 'accustomed'],
+  ['geworteld', 'rooted'],
+  ['gezeten', 'sat; seated'],
+  ['ging', 'went'],
+  ['gingen', 'went'],
+  ['glinsterde', 'glittered'],
+  ['gloorde', 'glowed'],
+  ['hamkaas', 'ham and cheese'],
+  ['handschoenen', 'gloves'],
+  ['helden', 'heroes'],
+  ['hockeywedstrijd', 'hockey match'],
+  ['interactieeffecten', 'interaction effects'],
+  ['kabbelde', 'to ripple'],
+  ['kijf', 'quarrel'],
+  ['koffiedrinken', 'drinking coffee'],
+  ['kondigde', 'announced'],
+  ['kost', 'to cost'],
+  ['lag', 'lay'],
+  ['langer', 'longer'],
+  ['langere', 'longer'],
+  ['langst', 'longest'],
+  ['langste', 'longest'],
+  ['linkerkant', 'left side'],
+  ['maakt', 'to make'],
+  ['maakte', 'made'],
+  ['maakten', 'made'],
+  ['meertje', 'small lake'],
+  ['olijven', 'olives'],
+  ['ontkend', 'denied'],
+  ['ontkende', 'denied'],
+  ['oorbellletjes', 'earrings'],
+  ['oud-studiegenoot', 'former fellow student'],
+  ['peer-beoordelingsproces', 'peer review process'],
+  ['problematiek', 'set of problems'],
+  ['reservaat', 'nature reserve'],
+  ['rolletjes', 'rolls'],
+  ['rookt', 'to smoke'],
+  ['schemerde', 'to grow dim'],
+  ['significante', 'significant'],
+  ['stampot', 'mashed pot; stew'],
+  ['steigers', 'scaffolding'],
+  ['stonden', 'stood'],
+  ['touwtjes', 'strings'],
+  ['uiteengezet', 'explained'],
+  ['uitgereden', 'driven out'],
+  ['vergat', 'forgot'],
+  ['wanten', 'mittens'],
+  ['ware', 'true; real'],
+  ['weegt', 'weighs'],
+  ['wond', 'wound'],
+  ['wondje', 'small wound'],
+  ['woon-werkverkeer', 'commuting'],
+  ['zag', 'saw'],
+  ['zagen', 'saw'],
+  ['zaten', 'sat'],
+  ['zouter', 'saltier'],
+
+  // === WRONG SECONDARY MEANING ===
+  ['aten', 'ate'],
+  ['banden', 'tires; bonds'],
+  ['banen', 'jobs'],
+  ['belt', 'to call'],
+  ['betrad', 'entered'],
+  ['bevestigd', 'confirmed'],
+  ['bindt', 'to bind'],
+  ['dringt', 'to urge; insist'],
+  ['durft', 'to dare'],
+  ['duurde', 'lasted'],
+  ['duurt', 'to last; take'],
+  ['films', 'movies; films'],
+  ['fluitje', 'whistle; small flute'],
+  ['geeft', 'to give'],
+  ['geweten', 'conscience; known'],
+  ['hete', 'hot'],
+  ['hoi', 'hi'],
+  ['kaarten', 'cards'],
+  ['kampen', 'camps; to struggle'],
+  ['kosten', 'costs'],
+  ['luidt', 'reads; sounds'],
+  ['pakt', 'to grab; take'],
+  ['pakte', 'grabbed'],
+  ['patat', 'fries; chips'],
+  ['ploegen', 'teams'],
+  ['regent', 'to rain'],
+  ['rende', 'ran'],
+  ['stoppen', 'to stop'],
+  ['treft', 'to hit; encounter'],
+  ['trekt', 'to pull'],
+  ['verwarmt', 'to heat'],
+  ['verwelkt', 'to wilt'],
+  ['vliegt', 'to fly'],
+  ['vloog', 'flew'],
+  ['vraagt', 'to ask'],
+  ['wapent', 'to arm'],
+  ['weet', 'to know'],
+  ['zakt', 'to sink'],
+  ['speels', 'playful'],
+  ['spits', 'rush hour; point'],
+
+  // === BETTER TRANSLATION ===
+  ['betrapt', 'caught'],
+  ['biologisch', 'organic'],
+  ['blootgelegd', 'exposed'],
+  ['dwarrelden', 'swirled'],
+  ['gekopieerd', 'copied'],
+  ['indienen', 'to submit'],
+  ['kindje', 'baby; child'],
+  ['kogel', 'bullet'],
+  ['nichtje', 'niece; cousin'],
+  ['proefontwerp', 'draft design; prototype'],
+  ['schijnt', 'to seem; shine'],
+  ['tekent', 'to draw; sign'],
+  ['vergankelijke', 'perishable; transient'],
+  ['wolkje', 'small cloud'],
+  ['vrijmarkt', 'flea market'],
+  ['vissers', 'fishermen'],
+  ['gezien', 'seen'],
+  ['dronken', 'drunk'],
+  ['dronk', 'drank'],
+  ['verkocht', 'sold'],
+  ['verloren', 'lost'],
+  ['verteld', 'told'],
+  ['vertelde', 'told'],
+  ['vergapen', 'to marvel at'],
+  ['sloeg', 'struck; hit'],
+  ['vergrijzing', 'aging population'],
+  ['spraken', 'spoke'],
+  ['schreef', 'wrote'],
+  ['schreven', 'wrote'],
+  ['sliep', 'slept'],
+  ['sliepen', 'slept'],
+  ['kocht', 'bought'],
+  ['kochten', 'bought'],
+  ['kreeg', 'got; received'],
+  ['kregen', 'received'],
+  ['kwam', 'came'],
+  ['kwamen', 'came'],
+  ['hield', 'held'],
+  ['hielden', 'held'],
+  ['hing', 'hung'],
+  ['brak', 'broke'],
+  ['bracht', 'brought'],
+  ['gebracht', 'brought'],
+  ['gehouden', 'held; kept'],
+  ['gekocht', 'bought'],
+  ['gekomen', 'come; arrived'],
+  ['gekregen', 'received'],
+  ['gestuurd', 'sent'],
+  ['gewonnen', 'won'],
+  ['gezegd', 'said'],
+  ['gezongen', 'sung'],
+  ['geslapen', 'slept'],
+  ['zei', 'said'],
+  ['zeiden', 'said'],
+  ['zong', 'sang'],
+  ['zongen', 'sang'],
+  ['zwom', 'swam'],
+  ['vond', 'found'],
+  ['vonden', 'found'],
+  ['gevonden', 'found'],
+  ['gevoeld', 'felt'],
+  ['nam', 'took'],
+  ['genomen', 'taken'],
+  ['kende', 'knew'],
+  ['wist', 'knew'],
+  ['wisten', 'knew'],
+  ['meegenomen', 'taken along; brought'],
+  ['verstuurd', 'sent'],
+  ['stuurde', 'sent'],
+  ['verzonden', 'sent'],
+  ['betaald', 'paid'],
+  ['dachten', 'thought'],
+  ['gedronken', 'drunk; drank'],
+  ['vielen', 'fell'],
+  ['bevroren', 'frozen'],
+  ['blies', 'blew'],
+  ['geschiedde', 'happened'],
+  ['overviel', 'attacked; robbed'],
+  ['trof', 'struck; met'],
+  ['waaide', 'blew'],
+  ['waande', 'imagined; believed'],
+  ['groeide', 'grew'],
+  ['groeiden', 'grew'],
+  ['rezen', 'rose'],
+  ['probeerde', 'tried'],
+  ['ontmoette', 'met'],
+  ['ontmoetten', 'met'],
+  ['opgegroeid', 'grew up'],
+  ['verzorgd', 'cared for'],
+  ['uitverkocht', 'sold out'],
+  ['zonnetje', 'sunshine'],
+  ['drankje', 'drink'],
+  ['drankjes', 'drinks'],
+  ['windmolens', 'windmills'],
+  ['samenwerkingsverband', 'partnership; collaboration'],
+  ['streepjes', 'dashes; lines'],
+  ['vermoeiend', 'tiring'],
+  ['uiteenlopende', 'diverse; varying'],
+  ['gevarieerd', 'varied'],
+  ['dalende', 'declining; falling'],
+  ['ontroerend', 'moving; touching'],
+  ['komend', 'coming; next'],
+  ['komende', 'upcoming; next'],
+  ['ongerustheid', 'anxiety; worry'],
+  ['volk', 'people; nation'],
+  ['smaken', 'flavors; to taste'],
+  ['fundament', 'foundation'],
+  ['ov-chipkaart', 'public transport chip card'],
+  ['jemig', 'jeez; gosh'],
+  ['sprake', 'question; mention'],
+  ['gebaseerd', 'based'],
+  ['ondertekend', 'signed'],
+  ['toegepast', 'applied'],
+  ['gestemd', 'voted'],
+  ['stemde', 'voted'],
+  ['vertoond', 'shown; displayed'],
+  ['opgehaald', 'fetched; picked up'],
+  ['opgeknapt', 'renovated; fixed up'],
+  ['tochtje', 'trip; outing'],
+  ['keerde', 'returned'],
+  ['keerden', 'returned'],
+  ['keert', 'returns'],
+  ['oordeelde', 'judged; ruled'],
+  ['verontschuldigt', 'apologizes'],
+  ['vervelen', 'to bore; to be bored'],
+  ['opvattingen', 'views; opinions'],
+  ['overvol', 'overcrowded'],
+  ['onthouden', 'to remember'],
+  ['regelen', 'to arrange'],
+  ['nood', 'need; emergency'],
+  ['fouten', 'errors; mistakes'],
+  ['erger', 'worse'],
+  ['wijzer', 'wiser; pointer'],
+  ['soorten', 'species; kinds'],
+  ['groter', 'bigger; larger'],
+  ['noemend', 'mentioning'],
+  ['verlichting', 'relief; lighting'],
+  ['gewend', 'accustomed'],
+]);
+
+console.log(`Curated fixes: ${FIXES.size} entries`);
+
+// ── Apply fixes line by line ─────────────────────────────────────
+let src = fs.readFileSync(NL_PATH, 'utf8');
+const lines = src.split('\n');
+let applied = 0;
+const notFound = [];
+
+for (const [word, newEn] of FIXES) {
+  // Find the line with this word
+  const prefix = `  '${word}': { en: '`;
+  let found = false;
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].trimStart().startsWith(`'${word}': { en: '`) || lines[i].startsWith(prefix)) {
+      // Parse the line to replace just the en value
+      const line = lines[i];
+      // Find the en: ' ... ' portion — the value may contain escaped quotes
+      const enStart = line.indexOf("en: '");
+      if (enStart === -1) continue;
+      const valStart = enStart + 5; // position after "en: '"
+      // Find the closing quote that's not escaped
+      let valEnd = -1;
+      for (let j = valStart; j < line.length; j++) {
+        if (line[j] === "'" && line[j - 1] !== '\\') {
+          valEnd = j;
+          break;
+        }
+      }
+      if (valEnd === -1) continue;
+
+      // Replace the en value
+      const newLine = line.substring(0, valStart) + newEn + line.substring(valEnd);
+      lines[i] = newLine;
+      applied++;
+      found = true;
+      break;
+    }
+  }
+  if (!found) {
+    notFound.push(word);
+  }
+}
+
+fs.writeFileSync(NL_PATH, lines.join('\n'));
+
+console.log(`Applied: ${applied}`);
+if (notFound.length > 0) {
+  console.log(`Not found: ${notFound.length}`);
+  for (const w of notFound) {
+    console.log(`  - ${w}`);
+  }
+}
+console.log(`\nDUTCH COMPLETE — ${applied} fixes`);

@@ -622,11 +622,22 @@ const App: React.FC = () => {
           {/* Header row: title + language picker */}
           <header className="pt-3 pb-3 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              {/* Lambda λ — matches the PWA home-screen icon */}
-              <svg viewBox="0 0 32 32" className="w-9 h-9 text-[var(--accent)]" fill="none">
-                <g stroke="currentColor" strokeWidth="3.6" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M 11 8 L 24 24" />
-                  <path d="M 15.5 14 L 8 24" />
+              {/* Lambda λ badge — matches the PWA home-screen icon (Half-Life shape, gold on violet) */}
+              <svg viewBox="0 0 512 512" className="w-9 h-9 rounded-[20%]" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                  <linearGradient id="hdrBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#7C3AED"/>
+                    <stop offset="100%" stopColor="#5B21B6"/>
+                  </linearGradient>
+                  <linearGradient id="hdrGold" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#F5D76E"/>
+                    <stop offset="100%" stopColor="#D4A24C"/>
+                  </linearGradient>
+                </defs>
+                <rect width="512" height="512" rx="112" fill="url(#hdrBg)"/>
+                <g stroke="url(#hdrGold)" strokeWidth="82" strokeLinecap="butt" strokeLinejoin="miter" fill="none">
+                  <line x1="378" y1="115" x2="118" y2="412"/>
+                  <line x1="285" y1="222" x2="394" y2="412"/>
                 </g>
               </svg>
               <h1 className="text-2xl font-black tracking-[0.2em] uppercase text-[var(--accent)]" style={{ fontFamily: "'Orbitron', sans-serif" }}>

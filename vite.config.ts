@@ -15,8 +15,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icon.svg'],
       manifest: {
-        name: 'Language Quest',
-        short_name: 'LangQuest',
+        name: 'LangLab',
+        short_name: 'LangLab',
         description: 'Gamified spaced-repetition language learning',
         theme_color: '#7C3AED',
         background_color: '#0F0A1A',

@@ -276,6 +276,9 @@ const PopoverPortal: React.FC<{
   const [position, setPosition] = useState<'above' | 'below'>('above');
   const [showConj, setShowConj] = useState(false);
   const [conjTense, setConjTense] = useState('present');
+  // Tracks whether the user has manually picked a tense — if so, we stop
+  // auto-switching when the modal re-opens for the same word.
+  const [userPickedTense, setUserPickedTense] = useState(false);
 
   // Try to get conjugation table for verbs
   const conjugation = useCallback((): ConjugationTable | null => {
@@ -346,6 +349,39 @@ const PopoverPortal: React.FC<{
 
   let conjTable: ConjugationTable | null = null;
   try { conjTable = conjugation(); } catch (e) { console.error('Conjugation error for', rawToken, ':', e); }
+
+  // Normalize for comparison: lowercase, strip whitespace and accents.
+  // Tolerates "j'écris" / "ho mangiato" / regular spacing in compound forms.
+  const normalize = (s: string) => s.toLowerCase().replace(/\s+/g, '').normalize('NFD').replace(/[̀-ͯ]/g, '');
+  const normalizedToken = normalize(rawToken);
+
+  // For each tense, record whether it contains the matched form.
+  // This drives both the tab indicator (a small dot) and the auto-open tense.
+  const tenseHasMatch = React.useMemo(() => {
+    const out: Record<string, boolean> = {};
+    if (!conjTable) return out;
+    for (const [tense, forms] of Object.entries(conjTable.tenses)) {
+      out[tense] = forms.some(f => f && f !== '-' && normalize(f) === normalizedToken);
+    }
+    return out;
+  }, [conjTable, normalizedToken]);
+
+  // When the modal opens for a new word, auto-pick the first tense that
+  // contains the matched form. Only fires once per modal-open — if the
+  // user then taps a different tab, we don't fight them.
+  useEffect(() => {
+    if (!showConj || !conjTable || userPickedTense) return;
+    const firstMatch = Object.entries(tenseHasMatch).find(([, hit]) => hit)?.[0];
+    if (firstMatch && firstMatch !== conjTense) {
+      setConjTense(firstMatch);
+    }
+  }, [showConj, conjTable, tenseHasMatch, userPickedTense, conjTense]);
+
+  // Reset userPickedTense when the modal closes, so the next open re-runs
+  // the auto-select logic for a potentially different word.
+  useEffect(() => {
+    if (!showConj) setUserPickedTense(false);
+  }, [showConj]);
 
   useEffect(() => {
     if (!popoverRef.current) return;
@@ -569,21 +605,23 @@ const PopoverPortal: React.FC<{
             </div>
 
             {/* Tense tabs — wrap onto multiple rows so all are visible on mobile.
-                Native name + English translation in parens (smaller, dimmed). */}
+                Native name + English translation in parens (smaller, dimmed).
+                A tiny blue dot indicates that this tense contains the clicked form. */}
             <div className="px-4 py-3 border-b border-[var(--border-color)]">
               <div className="flex flex-wrap gap-1.5">
                 {Object.keys(conjTable.tenses).map(tense => {
-                  // Split "Presente (Present)" → native "Presente" + english "Present"
                   const fullLabel = TENSE_LABELS[tense] || tense;
                   const m = fullLabel.match(/^(.+?)\s*\(([^)]+)\)\s*$/);
                   const native = m ? m[1].trim() : fullLabel;
                   const english = m ? m[2].trim() : null;
+                  const isActive = conjTense === tense;
+                  const hasMatch = tenseHasMatch[tense];
                   return (
                     <button
                       key={tense}
-                      onClick={() => setConjTense(tense)}
-                      className={`px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wide transition-all whitespace-nowrap ${
-                        conjTense === tense
+                      onClick={() => { setConjTense(tense); setUserPickedTense(true); }}
+                      className={`relative px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wide transition-all whitespace-nowrap ${
+                        isActive
                           ? 'bg-blue-500 text-white shadow-md shadow-blue-500/30'
                           : 'bg-[var(--bg-inset)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] hover:text-[var(--text-primary)]'
                       }`}
@@ -591,6 +629,17 @@ const PopoverPortal: React.FC<{
                       {native}
                       {english && (
                         <span className="ml-1 text-[9px] font-medium opacity-70">({english})</span>
+                      )}
+                      {/* Match indicator — small dot in the top-right corner.
+                          On the active tab it sits over the blue bg so we use white;
+                          on inactive tabs it stays blue. */}
+                      {hasMatch && (
+                        <span
+                          aria-label="this card's form is in this tense"
+                          className={`absolute top-1 right-1 w-1.5 h-1.5 rounded-full ${
+                            isActive ? 'bg-white' : 'bg-blue-500'
+                          }`}
+                        />
                       )}
                     </button>
                   );
@@ -608,7 +657,7 @@ const PopoverPortal: React.FC<{
                       language === 'french' && i === 0 && /^[aeéèêëiîïoôuûùüyh]/i.test(form)
                         ? "j'"
                         : personLabels[i];
-                    const isMatchedForm = form.toLowerCase().replace(/\s+/g, '') === rawToken.toLowerCase().replace(/\s+/g, '');
+                    const isMatchedForm = form && form !== '-' && normalize(form) === normalizedToken;
                     return (
                       <div
                         key={i}
@@ -618,8 +667,8 @@ const PopoverPortal: React.FC<{
                             : 'hover:bg-[var(--bg-inset)]/50'
                         }`}
                       >
-                        <span className={`text-[10px] sm:text-[11px] font-mono uppercase tracking-wider w-16 sm:w-20 text-right shrink-0 ${
-                          isMatchedForm ? 'text-blue-500/80' : 'text-[var(--text-muted)]'
+                        <span className={`text-[11px] sm:text-xs uppercase tracking-wider w-16 sm:w-20 text-right shrink-0 ${
+                          isMatchedForm ? 'text-blue-500/80 font-bold' : 'text-[var(--text-muted)] font-semibold'
                         }`}>
                           {personLabel}
                         </span>

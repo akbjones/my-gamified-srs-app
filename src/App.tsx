@@ -652,13 +652,13 @@ const App: React.FC = () => {
               <div className="relative" ref={langDropdownRef}>
                 <button
                   onClick={() => setShowLangDropdown(prev => !prev)}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold border border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--accent)]/40 hover:text-[var(--accent)] transition-all"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold border border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--accent)]/40 hover:text-[var(--accent)] active:scale-95 transition-all"
                 >
                   <span>{LANGUAGE_CONFIG[lang].name}</span>
-                  <ChevronDown size={12} className={`transition-transform ${showLangDropdown ? 'rotate-180' : ''}`} />
+                  <ChevronDown size={14} className={`transition-transform ${showLangDropdown ? 'rotate-180' : ''}`} />
                 </button>
                 {showLangDropdown && (
-                  <div className="absolute right-0 top-full mt-1 w-48 stat-card p-1.5 z-40 animate-fade-in shadow-lg">
+                  <div className="absolute right-0 top-full mt-1.5 w-56 stat-card p-2 z-40 animate-fade-in shadow-lg">
                     {availableLanguages.map(l => (
                       <button
                         key={l}
@@ -666,14 +666,14 @@ const App: React.FC = () => {
                           handleLanguageChange(l);
                           setShowLangDropdown(false);
                         }}
-                        className={`w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-xs font-semibold transition-all ${
+                        className={`w-full flex items-center gap-2.5 px-3.5 py-3 rounded-lg text-sm font-semibold transition-all ${
                           l === lang
                             ? 'bg-[var(--accent)]/10 text-[var(--accent)]'
-                            : 'text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)]'
+                            : 'text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] active:scale-[0.98]'
                         }`}
                       >
                         <span>{LANGUAGE_CONFIG[l].name}</span>
-                        {l === lang && <span className="ml-auto text-[10px] opacity-60">active</span>}
+                        {l === lang && <span className="ml-auto text-[10px] font-bold uppercase tracking-wider opacity-60">active</span>}
                       </button>
                     ))}
                   </div>

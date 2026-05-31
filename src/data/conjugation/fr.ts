@@ -701,6 +701,7 @@ const IRR: Record<string, PartialTenses> = {
 
 // ── Main conjugation function ───────────────────────────────
 export function conjugate(infinitive: string): ConjugationTable | null {
+  if (!infinitive) return null;
   const raw = infinitive.trim().toLowerCase();
 
   // Detect reflexive: se/s' prefix

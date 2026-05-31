@@ -228,6 +228,7 @@ export const handleAnswerLogic = (
       currentIndex,
       isFlipped: false,
       newCardsSeen,
+      finishedCount: currentIndex,
     },
     updatedCard,
   };

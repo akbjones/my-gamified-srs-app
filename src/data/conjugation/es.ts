@@ -420,6 +420,7 @@ function merge(base: Record<TenseKey, Forms>, ...overrides: PartialTenses[]): Re
 
 // ── Main conjugation function ────────────────────────────────
 export function conjugate(infinitive: string): ConjugationTable | null {
+  if (!infinitive) return null;
   const inf = infinitive.toLowerCase().trim();
 
   // Detect reflexive

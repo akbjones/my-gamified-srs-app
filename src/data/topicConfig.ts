@@ -484,6 +484,42 @@ export function getNodeName(nodeId: string, lang: Language): string {
     ?? '';
 }
 
+// ── Thematic chapters — group grammar nodes into journey-friendly names ──
+// Replaces "Subjunctive nuances" / "Reported speech" framing with thematic
+// names. Used by the home screen for non-jargon progression display.
+export interface Chapter {
+  id: string;
+  name: string;        // user-facing name
+  blurb: string;       // one-line description
+  nodes: string[];     // grammar nodes that belong to this chapter
+}
+
+export const CHAPTERS: Chapter[] = [
+  { id: 'ch-01', name: 'First conversations',          blurb: 'Greet, introduce, ask basic questions.',           nodes: ['node-01', 'node-02', 'node-04', 'node-08'] },
+  { id: 'ch-02', name: 'Describing your world',        blurb: 'People, places, things, and how they feel.',       nodes: ['node-03', 'node-05', 'node-07'] },
+  { id: 'ch-03', name: 'Likes & preferences',          blurb: 'What you enjoy, want, and care about.',            nodes: ['node-06'] },
+  { id: 'ch-04', name: 'Telling stories',              blurb: 'Talk about what happened — past tense.',           nodes: ['node-09', 'node-10', 'node-11', 'node-12'] },
+  { id: 'ch-05', name: 'Daily life',                   blurb: 'Routines, places, people in context.',             nodes: ['node-13', 'node-14', 'node-15'] },
+  { id: 'ch-06', name: 'Hopes & suggestions',          blurb: 'Wishes, advice, gentle commands.',                 nodes: ['node-16', 'node-17'] },
+  { id: 'ch-07', name: 'What if & looking ahead',      blurb: 'Conditional, future, possibilities.',              nodes: ['node-18', 'node-19'] },
+  { id: 'ch-08', name: 'Joining ideas together',       blurb: 'Relative clauses and linked sentences.',           nodes: ['node-20', 'node-21'] },
+  { id: 'ch-09', name: 'Hypothetical thinking',        blurb: 'What might have been, complex conditions.',        nodes: ['node-22', 'node-23'] },
+  { id: 'ch-10', name: 'Sounding sophisticated',       blurb: 'Passive voice, advanced connectors.',              nodes: ['node-24', 'node-25', 'node-26'] },
+  { id: 'ch-11', name: 'Reporting & retelling',        blurb: 'Quoting, paraphrasing, narrating.',                nodes: ['node-27'] },
+  { id: 'ch-12', name: 'Refining your voice',          blurb: 'Subtle nuance, register, idioms.',                 nodes: ['node-28', 'node-29', 'node-30', 'node-31'] },
+  { id: 'ch-13', name: 'Mastery',                      blurb: 'Literary, academic, cultural fluency.',            nodes: ['node-32', 'node-33', 'node-34', 'node-35'] },
+];
+
+/** Find the chapter that contains a given grammarNode id. */
+export function getChapterForNode(nodeId: string): Chapter | null {
+  return CHAPTERS.find(c => c.nodes.includes(nodeId)) ?? null;
+}
+
+/** Index of the chapter (1-based) for use in display ("Chapter 4 of 13"). */
+export function chapterIndex(chapterId: string): number {
+  return CHAPTERS.findIndex(c => c.id === chapterId) + 1;
+}
+
 // 70% progress on a node to unlock the next
 export const UNLOCK_THRESHOLD = 0.7;
 

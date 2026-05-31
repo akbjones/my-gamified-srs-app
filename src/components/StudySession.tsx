@@ -50,6 +50,32 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
     }
   }, [card, session.language, autoPlayAudio, audioSpeed, googleTtsApiKey]);
 
+  // Keyboard shortcuts: 1=Again, 2=Hard, 3=Good, 4=Easy, Space=flip
+  // MUST be defined here (before any early return) to satisfy Rules of Hooks
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+      if (!card) return;
+
+      if (!isFlipped && (e.key === ' ' || e.key === 'Enter')) {
+        e.preventDefault();
+        setIsFlipped(true);
+        return;
+      }
+
+      if (isFlipped && !tileCardIds.has(card.id)) {
+        const ratings = { '1': 'AGAIN', '2': 'HARD', '3': 'GOOD', '4': 'EASY' } as const;
+        const rating = ratings[e.key as keyof typeof ratings];
+        if (rating) {
+          e.preventDefault();
+          submitAnswer(rating);
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [card, isFlipped, tileCardIds]);
+
   if (isComplete) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-6 animate-fade-in">
@@ -120,31 +146,6 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   const countReview = remainingQueue.filter(c => c.mastery === 2).length;
 
   const handleFlip = () => setIsFlipped(true);
-
-  // Keyboard shortcuts: 1=Again, 2=Hard, 3=Good, 4=Easy, Space=flip
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
-      if (!card) return;
-
-      if (!isFlipped && (e.key === ' ' || e.key === 'Enter')) {
-        e.preventDefault();
-        setIsFlipped(true);
-        return;
-      }
-
-      if (isFlipped && !tileCardIds.has(card.id)) {
-        const ratings = { '1': 'AGAIN', '2': 'HARD', '3': 'GOOD', '4': 'EASY' } as const;
-        const rating = ratings[e.key as keyof typeof ratings];
-        if (rating) {
-          e.preventDefault();
-          submitAnswer(rating);
-        }
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [card, isFlipped, tileCardIds]);
 
   const handlePlayAudio = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -404,4 +405,50 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   );
 };
 
-export default StudySession;
+// Error boundary to prevent StudySession crashes from showing a blank screen
+class StudySessionErrorBoundary extends React.Component<
+  { children: React.ReactNode; onAbort: () => void },
+  { hasError: boolean; error: Error | null }
+> {
+  constructor(props: { children: React.ReactNode; onAbort: () => void }) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+  componentDidCatch(error: Error, info: React.ErrorInfo) {
+    console.error('StudySession crashed:', error.message, info.componentStack);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-6 animate-fade-in p-6">
+          <div className="w-16 h-16 rounded-2xl bg-red-500/10 border border-red-500/30 flex items-center justify-center">
+            <AlertTriangle size={32} className="text-red-500" />
+          </div>
+          <div className="text-center max-w-sm">
+            <h2 className="text-2xl font-black text-[var(--text-primary)] mb-2">Something went wrong</h2>
+            <p className="text-sm text-[var(--text-secondary)] mb-2">The session encountered an error and had to stop.</p>
+            <p className="text-xs text-[var(--text-secondary)] opacity-60 mb-4">{this.state.error?.message}</p>
+          </div>
+          <button
+            onClick={() => { this.setState({ hasError: false, error: null }); this.props.onAbort(); }}
+            className="px-8 py-4 btn-primary rounded-xl font-black uppercase tracking-wider text-sm"
+          >
+            Back to Home
+          </button>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+const SafeStudySession: React.FC<StudySessionProps> = (props) => (
+  <StudySessionErrorBoundary onAbort={props.onAbort}>
+    <StudySession {...props} />
+  </StudySessionErrorBoundary>
+);
+
+export default SafeStudySession;

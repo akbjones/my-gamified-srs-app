@@ -526,84 +526,104 @@ const PopoverPortal: React.FC<{
       )}
       </div>
 
-      {/* Full-screen conjugation overlay — separate from the small popover so
-         users can actually read the tables. */}
+      {/* Full-screen conjugation overlay — polished layout so users can
+         actually read the tables comfortably. */}
       {showConj && conjTable && (
         <div
-          className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-stretch sm:items-center justify-center animate-fade-in"
+          className="fixed inset-0 z-[10000] bg-black/70 backdrop-blur-md flex items-stretch sm:items-center justify-center animate-fade-in"
           onClick={(e) => { e.stopPropagation(); setShowConj(false); }}
         >
           <div
-            className="bg-[var(--bg-card)] w-full sm:max-w-md sm:rounded-2xl shadow-2xl border border-[var(--border-color)] overflow-y-auto max-h-screen sm:max-h-[85vh] flex flex-col"
+            className="bg-[var(--bg-card)] w-full sm:max-w-md sm:rounded-3xl shadow-2xl border border-[var(--border-color)] overflow-hidden max-h-screen sm:max-h-[88vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Header */}
-            <div className="flex items-center justify-between px-5 py-4 border-b border-[var(--border-color)] sticky top-0 bg-[var(--bg-card)]">
-              <div>
-                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">
-                  Conjugation
-                </div>
-                <div className="text-xl font-black text-[var(--text-primary)]">
-                  {conjTable.infinitive}
-                  {conjTable.isReflexive && (
-                    <span className="text-xs text-[var(--text-muted)] font-normal ml-2">(reflexive)</span>
-                  )}
-                </div>
-              </div>
+            {/* Header — bigger, more breathing room, gradient accent */}
+            <div className="relative px-6 pt-6 pb-5 border-b border-[var(--border-color)] bg-gradient-to-b from-blue-500/5 to-transparent">
               <button
                 onClick={() => setShowConj(false)}
-                className="p-2 -mr-2 rounded-lg hover:bg-[var(--bg-card-hover)] active:scale-95 transition"
+                className="absolute top-4 right-4 p-2 rounded-xl hover:bg-[var(--bg-card-hover)] active:scale-95 transition"
                 aria-label="Close"
               >
                 <CloseIcon size={20} className="text-[var(--text-secondary)]" />
               </button>
+              <div className="text-[10px] font-bold text-blue-500 uppercase tracking-[0.2em] mb-1.5">
+                Conjugation
+              </div>
+              <div className="flex items-baseline gap-3 flex-wrap pr-10">
+                <div className="text-3xl font-black text-[var(--text-primary)] tracking-tight">
+                  {conjTable.infinitive}
+                </div>
+                {conjTable.isReflexive && (
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-purple-500 bg-purple-500/10 px-2 py-0.5 rounded-md">
+                    Reflexive
+                  </span>
+                )}
+              </div>
+              {/* Show the English meaning if the lemma entry has one */}
+              {lemmaEntry?.en && (
+                <div className="text-sm text-[var(--text-muted)] mt-1.5">
+                  {lemmaEntry.en.split(';')[0].trim()}
+                </div>
+              )}
             </div>
 
-            {/* Tense tabs */}
-            <div className="px-4 py-3 border-b border-[var(--border-color)] flex flex-wrap gap-2 sticky top-[73px] bg-[var(--bg-card)]">
-              {Object.keys(conjTable.tenses).map(tense => (
-                <button
-                  key={tense}
-                  onClick={() => setConjTense(tense)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all ${
-                    conjTense === tense
-                      ? 'bg-blue-500 text-white shadow'
-                      : 'bg-[var(--bg-inset)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)]'
-                  }`}
-                >
-                  {TENSE_LABELS[tense] || tense}
-                </button>
-              ))}
+            {/* Tense tabs — horizontal-scroll on overflow, larger tap targets */}
+            <div className="px-4 py-3 border-b border-[var(--border-color)] overflow-x-auto scrollbar-thin">
+              <div className="flex gap-2 min-w-max">
+                {Object.keys(conjTable.tenses).map(tense => (
+                  <button
+                    key={tense}
+                    onClick={() => setConjTense(tense)}
+                    className={`px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all whitespace-nowrap ${
+                      conjTense === tense
+                        ? 'bg-blue-500 text-white shadow-md shadow-blue-500/30'
+                        : 'bg-[var(--bg-inset)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] hover:text-[var(--text-primary)]'
+                    }`}
+                  >
+                    {TENSE_LABELS[tense] || tense}
+                  </button>
+                ))}
+              </div>
             </div>
 
-            {/* Forms */}
+            {/* Forms — scrolling region. Bigger numbers, clearer typography. */}
             {conjTable.tenses[conjTense] && (
-              <div className="p-5 space-y-2.5">
-                {conjTable.tenses[conjTense].map((form, i) => {
-                  const personLabel =
-                    language === 'french' && i === 0 && /^[aeéèêëiîïoôuûùüyh]/i.test(form)
-                      ? "j'"
-                      : personLabels[i];
-                  // Highlight the row matching the current rawToken
-                  const isMatchedForm = form.toLowerCase().replace(/\s+/g, '') === rawToken.toLowerCase().replace(/\s+/g, '');
-                  return (
-                    <div
-                      key={i}
-                      className={`flex items-baseline gap-3 px-3 py-2 rounded-lg ${
-                        isMatchedForm ? 'bg-blue-500/10 ring-1 ring-blue-500/30' : ''
-                      }`}
-                    >
-                      <span className="text-xs font-mono text-[var(--text-muted)] w-20 text-right shrink-0">
-                        {personLabel}
-                      </span>
-                      <span className={`text-base font-semibold ${
-                        isMatchedForm ? 'text-blue-500' : 'text-[var(--text-primary)]'
-                      }`}>
-                        {form}
-                      </span>
-                    </div>
-                  );
-                })}
+              <div className="overflow-y-auto flex-1">
+                <div className="p-5 space-y-1.5">
+                  {conjTable.tenses[conjTense].map((form, i) => {
+                    const personLabel =
+                      language === 'french' && i === 0 && /^[aeéèêëiîïoôuûùüyh]/i.test(form)
+                        ? "j'"
+                        : personLabels[i];
+                    const isMatchedForm = form.toLowerCase().replace(/\s+/g, '') === rawToken.toLowerCase().replace(/\s+/g, '');
+                    return (
+                      <div
+                        key={i}
+                        className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-colors ${
+                          isMatchedForm
+                            ? 'bg-blue-500/15 ring-1 ring-blue-500/40 shadow-sm'
+                            : 'hover:bg-[var(--bg-inset)]/50'
+                        }`}
+                      >
+                        <span className={`text-[11px] font-mono uppercase tracking-wider w-20 text-right shrink-0 ${
+                          isMatchedForm ? 'text-blue-500/80' : 'text-[var(--text-muted)]'
+                        }`}>
+                          {personLabel}
+                        </span>
+                        <span className={`text-lg font-semibold tracking-tight ${
+                          isMatchedForm ? 'text-blue-500' : 'text-[var(--text-primary)]'
+                        }`}>
+                          {form}
+                        </span>
+                        {isMatchedForm && (
+                          <span className="ml-auto text-[9px] font-bold uppercase tracking-wider text-blue-500 bg-blue-500/15 px-1.5 py-0.5 rounded">
+                            this card
+                          </span>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             )}
           </div>

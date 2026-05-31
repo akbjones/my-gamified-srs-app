@@ -6,23 +6,23 @@ const SLIDES = [
     description: 'Learn 11 languages through immersion. Real sentences, real context.',
   },
   {
-    title: 'Spaced Repetition',
+    title: 'Spaced repetition',
     description: 'Flashcards appear at the right time to help you remember. The more you practice, the smarter your schedule gets.',
   },
   {
-    title: 'Tap Any Word',
+    title: 'Tap any word',
     description: 'Tap any word in a sentence to see its definition, pronunciation, and grammar — instant context when you need it.',
   },
   {
-    title: 'Rate Your Knowledge',
+    title: 'Rate your knowledge',
     description: 'For every card, rate how well you knew it: Again, Hard, Good, or Easy. This personalizes your review schedule.',
   },
   {
-    title: 'Choose Your Focus',
+    title: 'Choose your focus',
     description: 'Focus your vocabulary on what matters to you — travel, work, or family. Or study general vocabulary across all topics.',
   },
   {
-    title: 'Ready to Start?',
+    title: 'Ready to start?',
     description: 'Pick your language and begin your journey. You can switch languages anytime!',
   },
 ];

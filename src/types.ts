@@ -150,6 +150,19 @@ export interface VocabEntry {
 
 export type VocabMap = Record<string, VocabEntry>; // keyed by lowercase word
 
+// ── Favorites ───────────────────────────────────────────────
+export interface FavoriteEntry {
+  word: string;         // lowercase form as keyed
+  translation: string;  // English meaning from dict at save time
+  ipa?: string;
+  pos?: string;
+  lemma?: string;       // base form if the saved word was inflected
+  example?: string;     // optional: card target sentence at save time
+  savedAt: number;      // Date.now()
+}
+
+export type FavoriteMap = Record<string, FavoriteEntry>; // keyed by lowercase word
+
 // ── Conjugation ─────────────────────────────────────────────
 export interface ConjugationTable {
   infinitive: string;

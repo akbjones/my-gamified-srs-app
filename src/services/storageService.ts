@@ -1,4 +1,4 @@
-import { MasteryMap, UserStats, DailyStats, Language, LearningGoal, ProgressState, VocabMap } from '../types';
+import { MasteryMap, UserStats, DailyStats, Language, LearningGoal, ProgressState, VocabMap, FavoriteMap, FavoriteEntry } from '../types';
 
 // Per-language keys (namespaced)
 const masteryKey = (lang: Language) => `quest_mastery_${lang}`;
@@ -8,6 +8,7 @@ const achievementsKey = (lang: Language) => `quest_achievements_${lang}`;
 const placementKey = (lang: Language) => `quest_placement_${lang}`;
 const progressKey = (lang: Language) => `quest_progress_${lang}`;
 const vocabKey = (lang: Language) => `quest_vocab_${lang}`;
+const favoritesKey = (lang: Language) => `quest_favorites_${lang}`;
 
 // Global keys (shared across languages)
 const SETTINGS_KEY = 'quest_settings';
@@ -165,6 +166,36 @@ export const saveVocabMap = (map: VocabMap, lang: Language): void => {
   localStorage.setItem(vocabKey(lang), JSON.stringify(map));
 };
 
+// ─── Favorites ─────────────────────────────────────────────
+export const loadFavorites = (lang: Language): FavoriteMap => {
+  return safeParse(localStorage.getItem(favoritesKey(lang)), {});
+};
+
+export const saveFavorites = (map: FavoriteMap, lang: Language): void => {
+  localStorage.setItem(favoritesKey(lang), JSON.stringify(map));
+};
+
+/** Toggle whether `word` is favorited in `lang`. Returns the updated map. */
+export const toggleFavorite = (
+  word: string,
+  lang: Language,
+  entry: Omit<FavoriteEntry, 'word' | 'savedAt'>,
+): FavoriteMap => {
+  const key = word.toLowerCase();
+  const map = loadFavorites(lang);
+  if (map[key]) {
+    delete map[key];
+  } else {
+    map[key] = { ...entry, word: key, savedAt: Date.now() };
+  }
+  saveFavorites(map, lang);
+  return map;
+};
+
+export const isFavorited = (word: string, lang: Language): boolean => {
+  return !!loadFavorites(lang)[word.toLowerCase()];
+};
+
 // ─── Reset ──────────────────────────────────────────────────
 export const resetAll = (): void => {
   // Clear all language-specific keys
@@ -177,6 +208,7 @@ export const resetAll = (): void => {
     localStorage.removeItem(placementKey(lang));
     localStorage.removeItem(progressKey(lang));
     localStorage.removeItem(vocabKey(lang));
+    localStorage.removeItem(favoritesKey(lang));
   }
   // Clear old non-namespaced keys too (for migration)
   localStorage.removeItem('quest_mastery');

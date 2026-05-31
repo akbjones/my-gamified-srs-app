@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import ReactDOM from 'react-dom';
+import { Star } from 'lucide-react';
+import { toggleFavorite, isFavorited } from '../services/storageService';
 import { lookupWord as lookupEs, DictEntry } from '../data/dictionary/es';
 import { lookupWord as lookupIt } from '../data/dictionary/it';
 import { lookupWord as lookupFr } from '../data/dictionary/fr';
@@ -214,6 +216,7 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
           rawToken={activeToken}
           wordRect={popoverRect}
           language={language}
+          sentence={sentence}
           onDismiss={() => setActiveIndex(null)}
         />
       )}
@@ -237,8 +240,14 @@ const PopoverPortal: React.FC<{
   rawToken: string;
   wordRect: DOMRect;
   language: Language;
+  sentence: string;
   onDismiss: () => void;
-}> = ({ entry, rawToken, wordRect, language, onDismiss }) => {
+}> = ({ entry, rawToken, wordRect, language, sentence, onDismiss }) => {
+  // Local state mirroring favorite status so the star icon updates on click.
+  const [isFav, setIsFav] = useState(() => isFavorited(rawToken, language));
+  useEffect(() => {
+    setIsFav(isFavorited(rawToken, language));
+  }, [rawToken, language]);
   // Lemma-first lookup: if entry has a lemma, look it up for display
   const lemmaEntry = React.useMemo(() => {
     if (!entry.lemma) return null;
@@ -401,8 +410,31 @@ const PopoverPortal: React.FC<{
         `}
       />
 
+      {/* Favorite star (top-right) */}
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          toggleFavorite(rawToken, language, {
+            translation: displayDefinition || entry.en || '',
+            ipa: displayIpa || '',
+            pos: entry.pos,
+            lemma: entry.lemma,
+            example: sentence,
+          });
+          setIsFav(prev => !prev);
+        }}
+        aria-label={isFav ? 'Remove from favourites' : 'Add to favourites'}
+        className={`absolute top-2 right-2 p-1 rounded transition-colors ${
+          isFav
+            ? 'text-yellow-400 hover:text-yellow-500'
+            : 'text-[var(--text-muted)] hover:text-yellow-400'
+        }`}
+      >
+        <Star size={18} fill={isFav ? 'currentColor' : 'none'} />
+      </button>
+
       {/* Translation — uses lemma definition when available and sanitized */}
-      <div className="text-base font-bold text-[var(--text-primary)] leading-snug">
+      <div className="text-base font-bold text-[var(--text-primary)] leading-snug pr-7">
         {displayDefinition}
       </div>
 

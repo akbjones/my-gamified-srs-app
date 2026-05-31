@@ -6,7 +6,7 @@ import PlacementTest from './components/PlacementTest';
 import ChallengeScreen from './components/ChallengeScreen';
 import StreakFlame from './components/StreakFlame';
 import { QuestCard, MasteryMap, SessionState, UserStats, DailyStats, Language, LearningGoal, LANGUAGE_CONFIG, GOAL_CONFIG, ProgressState, ChallengeMode, ChallengeQuestion, BossRing } from './types';
-import { MAIN_PATH, isNodeUnlocked, getNodeName } from './data/topicConfig';
+import { MAIN_PATH, isNodeUnlocked, getNodeName, getChapterForNode, chapterIndex } from './data/topicConfig';
 import { handleAnswerLogic, saveCardProgress, getRetention, burySiblings, interleaveQueue } from './services/srsService';
 import {
   migrateStorageKeys, loadMasteryMap, saveMasteryMap, loadUserStats, saveUserStats,
@@ -15,6 +15,7 @@ import {
   isPlacementComplete, setPlacementComplete, resetPlacement,
   loadProgressState, saveProgressState,
   loadVocabMap, saveVocabMap,
+  loadFavorites, saveFavorites,
 } from './services/storageService';
 import type { StudySettings, AudioSpeed } from './services/storageService';
 import {
@@ -36,8 +37,9 @@ import { lookupWord as lookupHi } from './data/dictionary/hi';
 import { lookupWord as lookupTr } from './data/dictionary/tr';
 import { lookupWord as lookupRu } from './data/dictionary/ru';
 import VocabList from './components/VocabList';
+import FavoritesList from './components/FavoritesList';
 import Onboarding from './components/Onboarding';
-import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff } from 'lucide-react';
+import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff, Star } from 'lucide-react';
 import {
   loadNotificationPrefs, saveNotificationPrefs, requestNotificationPermission,
   isNotificationSupported, onSessionComplete, initNotifications,
@@ -59,7 +61,7 @@ const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
   russian: lookupRu,
 };
 
-type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB';
+type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB' | 'FAVORITES';
 
 // Deck loaders — static imports for available languages
 // (dynamic import would be cleaner but static is simpler for Vite bundling)
@@ -121,41 +123,45 @@ const buildDeck = (
 
   const cards: QuestCard[] = [];
 
+  // Difficulty-ordered single stream: sort ALL cards by priority (computed difficulty rank),
+  // not grouped by grammar node. Theme filtering happens later via Vocab Focus.
+  // Cards without a priority fall to the end.
+  const allRawCards: any[] = [];
   for (const node of MAIN_PATH) {
     const nodeCards = nodeMap.get(node.id) || [];
-    // Sort cards within each node: priority first (practical before specialized),
-    // then by word count (shortest first) within each priority tier
-    nodeCards.sort((a: any, b: any) => {
-      const pa = a.priority ?? 2;
-      const pb = b.priority ?? 2;
-      if (pa !== pb) return pa - pb;
-      const aWords = (a.target || '').split(/\s+/).length;
-      const bWords = (b.target || '').split(/\s+/).length;
-      return aWords - bWords || a.id - b.id; // tiebreak by id
-    });
-    for (const rawCard of nodeCards) {
-      const id = String(rawCard.id);
-      const saved = masteryMap[id];
-      cards.push({
-        id,
-        target: rawCard.target,
-        english: rawCard.english,
-        category: node.tier,
-        topic: node.id,
-        audio: rawCard.audio || '',
-        grammar: rawCard.grammar || undefined,
-        tags: rawCard.tags || ['general'],
-        mastery: (saved?.mastery as number) ?? 0,
-        step: (saved?.step as number) ?? 0,
-        dueDate: (saved?.dueDate as number) ?? undefined,
-        interval: (saved?.interval as number) ?? 0,
-        ease: (saved?.ease as number) ?? 2.5,
-        failCount: (saved?.failCount as number) ?? 0,
-        isLeech: (saved?.isLeech as boolean) ?? false,
-        isSuspended: (saved?.isSuspended as boolean) ?? false,
-        priority: rawCard.priority ?? 2,
-      });
+    for (const c of nodeCards) {
+      allRawCards.push({ ...c, _nodeTier: node.tier, _nodeId: node.id });
     }
+  }
+  allRawCards.sort((a: any, b: any) => {
+    const pa = a.priority ?? 999999;
+    const pb = b.priority ?? 999999;
+    if (pa !== pb) return pa - pb;
+    return String(a.id).localeCompare(String(b.id));
+  });
+
+  for (const rawCard of allRawCards) {
+    const id = String(rawCard.id);
+    const saved = masteryMap[id];
+    cards.push({
+      id,
+      target: rawCard.target,
+      english: rawCard.english,
+      category: rawCard._nodeTier,
+      topic: rawCard._nodeId,
+      audio: rawCard.audio || '',
+      grammar: rawCard.grammar || undefined,
+      tags: rawCard.tags || ['general'],
+      mastery: (saved?.mastery as number) ?? 0,
+      step: (saved?.step as number) ?? 0,
+      dueDate: (saved?.dueDate as number) ?? undefined,
+      interval: (saved?.interval as number) ?? 0,
+      ease: (saved?.ease as number) ?? 2.5,
+      failCount: (saved?.failCount as number) ?? 0,
+      isLeech: (saved?.isLeech as boolean) ?? false,
+      isSuspended: (saved?.isSuspended as boolean) ?? false,
+      priority: rawCard.priority ?? 999999,
+    });
   }
 
   return cards;
@@ -200,11 +206,13 @@ const App: React.FC = () => {
   const [dailyStats, setDailyStats] = useState<DailyStats>(() => loadDailyStats(settings.selectedLanguage));
   const [progressState, setProgressState] = useState<ProgressState>(() => loadProgressState(settings.selectedLanguage));
   const [vocabMap, setVocabMap] = useState(() => loadVocabMap(settings.selectedLanguage));
+  const [favoritesMap, setFavoritesMap] = useState(() => loadFavorites(settings.selectedLanguage));
   const [tileCardIds, setTileCardIds] = useState<Set<string>>(new Set());
   const [pendingChallenge, setPendingChallenge] = useState<ChallengeMode | null>(null);
   const [challengeQuestions, setChallengeQuestions] = useState<ChallengeQuestion[]>([]);
   const [showTools, setShowTools] = useState(false);
   const [showLangDropdown, setShowLangDropdown] = useState(false);
+  const [showGoalMenu, setShowGoalMenu] = useState(false);
   const [showLangPicker, setShowLangPicker] = useState(() => !localStorage.getItem('quest_first_launch_done'));
   const [showOnboarding, setShowOnboarding] = useState(() => !localStorage.getItem('onboarding_complete'));
   const [notifPrefs, setNotifPrefs] = useState<NotificationPrefs>(() => loadNotificationPrefs());
@@ -240,7 +248,16 @@ const App: React.FC = () => {
     setDailyStats(loadDailyStats(lang));
     setProgressState(loadProgressState(lang));
     setVocabMap(loadVocabMap(lang));
+    setFavoritesMap(loadFavorites(lang));
   }, [lang, goal]);
+
+  // Refresh favorites whenever user lands on the home page —
+  // they may have starred new words during study/vocab views.
+  useEffect(() => {
+    if (view === 'HOME') {
+      setFavoritesMap(loadFavorites(lang));
+    }
+  }, [view, lang]);
 
   // Re-merge deck when masteryMap changes
   useEffect(() => {
@@ -390,12 +407,8 @@ const App: React.FC = () => {
       setDailyStats(newDaily);
       saveDailyStats(newDaily, lang);
 
-      // Track cumulative new cards for challenge triggers
+      // Track cumulative new cards (used internally; no gamified challenge triggers anymore)
       const newCumulative = progressState.cumulativeNewCards + 1;
-      const trigger = shouldTriggerChallenge(progressState, newCumulative);
-      if (trigger) {
-        setPendingChallenge(trigger);
-      }
       const newProgress = { ...progressState, cumulativeNewCards: newCumulative };
       setProgressState(newProgress);
       saveProgressState(newProgress, lang);
@@ -418,7 +431,11 @@ const App: React.FC = () => {
     setVocabMap(newVocab);
     saveVocabMap(newVocab, lang);
 
-    setSession(prev => ({ ...prev, ...updates }));
+    try {
+      setSession(prev => ({ ...prev, ...updates }));
+    } catch (e) {
+      console.error('setSession failed:', e);
+    }
   };
 
   const handleUndoAnswer = () => {
@@ -675,69 +692,24 @@ const App: React.FC = () => {
                   </div>
                 )}
               </div>
-              <button
-                onClick={toggleTheme}
-                className="p-2 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
-                title={settings.theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
-              >
-                {settings.theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-              </button>
             </div>
           </header>
 
-          {/* Combined stats + progress card */}
-          <div className="stat-card p-4 mb-3">
-            <div className="flex items-center justify-between">
-              {/* Streak flame */}
-              <div>
-                <StreakFlame streak={userStats.streak} freezes={userStats.streakFreezes ?? 0} size="lg" />
-              </div>
-
-              {/* Level + current topic */}
-              <div className="text-right">
-                {currentNode && (
-                  <div className="text-[10px] font-semibold uppercase tracking-widest mb-1 text-[var(--text-secondary)]">
-                    {currentNode.tier} &middot; {getNodeName(currentNode.id, lang)}
-                  </div>
-                )}
-                <div className="text-sm font-extrabold text-[var(--text-primary)]">
-                  {CHALLENGE_NAMES[lang] || 'Level'} {Math.min(progressState.nextBossIndex + 1, TOTAL_BOSSES)} of {TOTAL_BOSSES}
-                </div>
-              </div>
+          {/* Quiet topic-map link only — no level/chapter framing */}
+          <button
+            onClick={() => setView('TOPICS')}
+            className="w-full flex items-center justify-between px-3.5 py-2 mb-3 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[var(--border-hover)] active:scale-[0.99] transition-all group"
+          >
+            <div className="text-left">
+              <div className="text-[9px] font-semibold text-[var(--text-muted)] uppercase tracking-widest leading-none">Explore</div>
+              <div className="text-xs font-bold text-[var(--text-primary)] mt-0.5">Browse all topics</div>
             </div>
-
-            {/* Checkpoint progress bar */}
-            <div className="progress-rail mt-3">
-              <div
-                className="progress-fill bg-[var(--accent)]"
-                style={{ width: `${Math.min(((progressState.cumulativeNewCards % 150) / 150) * 100, 100)}%` }}
-              />
-            </div>
-
-            {/* Two navigation links */}
-            <div className="grid grid-cols-2 gap-2 mt-2.5">
-              <button
-                onClick={() => setView('GAMIFICATION')}
-                className="flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-widest text-[var(--accent)] border border-[var(--accent)]/30 bg-[var(--accent)]/5 hover:bg-[var(--accent)]/10 active:scale-95 transition-all"
-              >
-                <span>Stats</span>
-                <ChevronRight size={11} />
-              </button>
-              <button
-                onClick={() => setView('TOPICS')}
-                className="flex items-center justify-center gap-1.5 px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-widest text-[var(--accent)] border border-[var(--accent)]/30 bg-[var(--accent)]/5 hover:bg-[var(--accent)]/10 active:scale-95 transition-all"
-              >
-                <span>Map</span>
-                <span className="opacity-50">&middot;</span>
-                <span>{getTotalProgress()}%</span>
-                <ChevronRight size={11} />
-              </button>
-            </div>
-          </div>
+            <ChevronRight size={14} className="text-[var(--text-muted)] group-hover:text-[var(--text-secondary)] group-hover:translate-x-0.5 transition-all" />
+          </button>
 
           {/* Placement test CTA — compact banner, shown until completed */}
           {!isPlacementComplete(lang) && (
-            <div className="stat-card px-3 py-2.5 mb-3 border-amber-500/30 flex items-center gap-3">
+            <div className="stat-card px-3 py-2.5 mb-3 border-amber-500/30 flex items-center gap-2">
               <p className="flex-1 text-xs text-[var(--text-secondary)] leading-snug">
                 Know some {LANGUAGE_CONFIG[lang].name}? <span className="text-[var(--text-muted)]">Skip ahead with a 2-min test.</span>
               </p>
@@ -752,40 +724,72 @@ const App: React.FC = () => {
                   setPlacementComplete(lang);
                   setDeck(prev => [...prev]);
                 }}
-                className="shrink-0 text-[10px] text-[var(--text-muted)] font-bold hover:text-[var(--text-secondary)] transition-colors"
+                className="shrink-0 p-1.5 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-secondary)] hover:bg-[var(--bg-inset)] transition-all"
+                aria-label="Dismiss placement test prompt"
+                title="Dismiss"
               >
-                Skip
+                <X size={14} />
               </button>
             </div>
           )}
 
-          {/* Category focus — prominent selector */}
-          <div className="mb-3">
-            <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-2">Vocab Focus</div>
-            <div className="grid grid-cols-4 gap-1.5">
-              {(['general', 'travel', 'work', 'family'] as LearningGoal[]).map(g => {
-                const cfg = GOAL_CONFIG[g];
-                const isSelected = goal === g;
-                const Icon = g === 'general' ? Globe : g === 'travel' ? Plane : g === 'work' ? Briefcase : Heart;
-                return (
-                  <button
-                    key={g}
-                    onClick={() => handleGoalChange(g)}
-                    className={`flex flex-col items-center gap-1 py-2.5 rounded-xl transition-all border ${
-                      isSelected
-                        ? 'border-[var(--accent)]/40 bg-[var(--accent)]/10 text-[var(--accent)]'
-                        : 'border-[var(--border-color)] text-[var(--text-muted)] hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)]'
-                    }`}
-                  >
-                    <Icon size={16} />
-                    <span className="text-[10px] font-bold uppercase tracking-wider">{cfg.name}</span>
-                  </button>
-                );
-              })}
-            </div>
-            <p className="text-[11px] text-[var(--text-muted)] font-medium text-center mt-1.5">
-              {goal === 'general' ? 'Well-rounded vocabulary' : GOAL_CONFIG[goal].description}
-            </p>
+          {/* Category focus — compact dropdown */}
+          <div className="mb-3 relative">
+            {(() => {
+              const CurrentIcon = goal === 'general' ? Globe : goal === 'travel' ? Plane : goal === 'work' ? Briefcase : Heart;
+              return (
+                <button
+                  onClick={() => setShowGoalMenu(prev => !prev)}
+                  className="w-full flex items-center justify-between px-3.5 py-2 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[var(--border-hover)] active:scale-[0.99] transition-all"
+                >
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <CurrentIcon size={16} className="text-[var(--accent)] shrink-0" />
+                    <div className="text-left min-w-0">
+                      <div className="text-[9px] font-semibold text-[var(--text-muted)] uppercase tracking-widest leading-none">Focus</div>
+                      <div className="text-xs font-bold text-[var(--text-primary)] mt-0.5 truncate">
+                        {GOAL_CONFIG[goal].name}
+                        <span className="text-[10px] text-[var(--text-muted)] font-normal ml-1.5">
+                          {goal === 'general' ? 'Well-rounded' : GOAL_CONFIG[goal].description}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <ChevronDown size={14} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showGoalMenu ? 'rotate-180' : ''}`} />
+                </button>
+              );
+            })()}
+            {showGoalMenu && (
+              <>
+                {/* Click-outside catcher */}
+                <div className="fixed inset-0 z-20" onClick={() => setShowGoalMenu(false)} />
+                <div className="absolute left-0 right-0 top-full mt-1.5 z-30 stat-card p-1.5 animate-fade-in">
+                  {(['general', 'travel', 'work', 'family'] as LearningGoal[]).map(g => {
+                    const cfg = GOAL_CONFIG[g];
+                    const isSelected = goal === g;
+                    const Icon = g === 'general' ? Globe : g === 'travel' ? Plane : g === 'work' ? Briefcase : Heart;
+                    return (
+                      <button
+                        key={g}
+                        onClick={() => { handleGoalChange(g); setShowGoalMenu(false); }}
+                        className={`w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg transition-all ${
+                          isSelected
+                            ? 'bg-[var(--accent)]/10 text-[var(--accent)]'
+                            : 'text-[var(--text-secondary)] hover:bg-[var(--bg-inset)]'
+                        }`}
+                      >
+                        <Icon size={14} />
+                        <div className="text-left flex-1 min-w-0">
+                          <div className="text-xs font-bold">{cfg.name}</div>
+                          <div className="text-[10px] text-[var(--text-muted)] mt-0.5">
+                            {g === 'general' ? 'Well-rounded vocabulary' : cfg.description}
+                          </div>
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </>
+            )}
           </div>
 
           {/* Gentle notification prompt (after 3rd session) */}
@@ -846,52 +850,94 @@ const App: React.FC = () => {
             )}
           </button>
 
-          {/* Study more when caught up — starts a new session with configurable card count */}
+          {/* Study more when caught up — secondary text-link style */}
           {!hasCards && (
-            <div className="w-full flex items-center gap-2 mb-3 -mt-1">
-              <button
-                onClick={() => {
-                  const input = document.getElementById('study-more-count') as HTMLInputElement;
-                  const count = input ? parseInt(input.value) || 10 : 10;
-                  handleStartSession(count);
-                }}
-                className="flex-1 py-3 rounded-xl bg-[var(--bg-card)] border border-[var(--accent)]/30 text-[var(--accent)] text-sm font-bold hover:bg-[var(--accent)]/10 active:bg-[var(--accent)]/20 transition-colors"
-              >
-                Study More Cards
-              </button>
+            <div className="w-full flex items-center justify-center gap-2 mb-3 -mt-1.5 text-[12px] text-[var(--text-muted)]">
+              <span>Or study</span>
               <input
                 id="study-more-count"
                 type="number"
                 defaultValue={10}
                 min={1}
                 max={100}
-                className="w-16 py-3 rounded-xl bg-[var(--bg-card)] border border-[var(--border)] text-center text-sm font-bold text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)]"
+                className="w-12 py-1 rounded-md bg-transparent border border-[var(--border-color)] text-center text-[12px] font-semibold text-[var(--text-secondary)] focus:outline-none focus:border-[var(--accent)]"
               />
+              <button
+                onClick={() => {
+                  const input = document.getElementById('study-more-count') as HTMLInputElement;
+                  const count = input ? parseInt(input.value) || 10 : 10;
+                  handleStartSession(count);
+                }}
+                className="text-[var(--accent)] font-semibold hover:underline"
+              >
+                more cards
+              </button>
             </div>
           )}
 
-          {/* Vocab list button */}
-          {Object.keys(vocabMap).length > 0 && (
-            <button
-              onClick={() => setView('VOCAB')}
-              className="stat-card p-3.5 mb-3 w-full text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] group cursor-pointer"
-            >
-              <div className="flex items-center gap-3">
-                <div className="shrink-0 w-10 h-10 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
-                  <BookOpen size={18} className="text-[var(--accent)]" />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-0.5">
-                    Vocabulary
+          {/* Vocab list button — always visible for discoverability */}
+          {(() => {
+            const vocabCount = Object.keys(vocabMap).length;
+            const hasVocab = vocabCount > 0;
+            return (
+              <button
+                onClick={() => hasVocab && setView('VOCAB')}
+                disabled={!hasVocab}
+                className={`stat-card p-3.5 mb-3 w-full text-left transition-all group ${
+                  hasVocab
+                    ? 'hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer'
+                    : 'opacity-60 cursor-default'
+                }`}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="shrink-0 w-10 h-10 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
+                    <BookOpen size={18} className="text-[var(--accent)]" />
                   </div>
-                  <div className="text-sm font-bold text-[var(--text-primary)]">
-                    {Object.keys(vocabMap).length} words seen
+                  <div className="flex-1 min-w-0">
+                    <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-0.5">
+                      Vocabulary
+                    </div>
+                    <div className="text-sm font-bold text-[var(--text-primary)]">
+                      {hasVocab ? `${vocabCount} words seen` : 'Start studying to build it'}
+                    </div>
                   </div>
+                  {hasVocab && <ChevronRight size={14} className="text-[var(--text-muted)] group-hover:text-[var(--text-secondary)] transition-all group-hover:translate-x-0.5" />}
                 </div>
-                <ChevronRight size={14} className="text-[var(--text-muted)] group-hover:text-[var(--text-secondary)] transition-all group-hover:translate-x-0.5" />
-              </div>
-            </button>
-          )}
+              </button>
+            );
+          })()}
+
+          {/* Favourites list button */}
+          {(() => {
+            const favCount = Object.keys(favoritesMap).length;
+            const hasFav = favCount > 0;
+            return (
+              <button
+                onClick={() => hasFav && setView('FAVORITES')}
+                disabled={!hasFav}
+                className={`stat-card p-3.5 mb-3 w-full text-left transition-all group ${
+                  hasFav
+                    ? 'hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer'
+                    : 'opacity-60 cursor-default'
+                }`}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="shrink-0 w-10 h-10 rounded-xl bg-yellow-400/10 border border-yellow-400/30 flex items-center justify-center">
+                    <Star size={18} className="text-yellow-500" fill="currentColor" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-0.5">
+                      Favourites
+                    </div>
+                    <div className="text-sm font-bold text-[var(--text-primary)]">
+                      {hasFav ? `${favCount} word${favCount === 1 ? '' : 's'} saved` : 'Tap the ⭐ on any word to save it'}
+                    </div>
+                  </div>
+                  {hasFav && <ChevronRight size={14} className="text-[var(--text-muted)] group-hover:text-[var(--text-secondary)] transition-all group-hover:translate-x-0.5" />}
+                </div>
+              </button>
+            );
+          })()}
 
           {/* Settings — gear icon expandable */}
           <div className="flex justify-center">
@@ -956,6 +1002,30 @@ const App: React.FC = () => {
                   <button onClick={() => adjustSessionLimit(5)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95">
                     <Plus size={14} />
                   </button>
+                </div>
+              </div>
+
+              {/* Appearance */}
+              <div className="pt-3 border-t border-[var(--border-color)] space-y-3">
+                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">Appearance</div>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-[var(--text-secondary)]">Theme</span>
+                  <div className="flex gap-1">
+                    {(['light', 'dark'] as const).map(t => (
+                      <button
+                        key={t}
+                        onClick={() => handleUpdateSettings({ ...settings, theme: t })}
+                        className={`px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider transition-all border flex items-center gap-1.5 ${
+                          settings.theme === t
+                            ? 'border-[var(--accent)]/40 bg-[var(--accent)]/10 text-[var(--accent)]'
+                            : 'border-[var(--border-color)] text-[var(--text-muted)] hover:border-[var(--border-hover)]'
+                        }`}
+                      >
+                        {t === 'dark' ? <Moon size={11} /> : <Sun size={11} />}
+                        {t}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -1053,6 +1123,51 @@ const App: React.FC = () => {
                   )}
                 </div>
               )}
+
+              {/* Flagged Words */}
+              <div className="pt-3 border-t border-[var(--border-color)] space-y-3">
+                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">Flagged Words</div>
+                {(() => {
+                  const flags = JSON.parse(localStorage.getItem('quest_flagged_words') || '[]');
+                  if (flags.length === 0) {
+                    return <p className="text-[11px] text-[var(--text-muted)]">No words flagged. Tap "⚑ Flag as wrong" on any word's definition popover to report it.</p>;
+                  }
+                  return (
+                    <>
+                      <p className="text-[11px] text-[var(--text-muted)]">{flags.length} word{flags.length === 1 ? '' : 's'} flagged. Copy and send to me to fix.</p>
+                      <div className="max-h-40 overflow-y-auto bg-[var(--bg-inset)] rounded p-2 text-[10px] font-mono text-[var(--text-secondary)] space-y-1">
+                        {flags.map((f: any, i: number) => (
+                          <div key={i}>{f.language}: <span className="text-[var(--accent)]">{f.word}</span> = "{f.currentTranslation}" ({f.currentPos})</div>
+                        ))}
+                      </div>
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => {
+                            navigator.clipboard.writeText(JSON.stringify(flags, null, 2));
+                            const btn = event?.target as HTMLElement;
+                            if (btn) { btn.textContent = '✓ Copied'; setTimeout(() => { btn.textContent = 'Copy all'; }, 1500); }
+                          }}
+                          className="text-[10px] px-2 py-1 rounded border border-[var(--border-color)] hover:border-[var(--accent)] text-[var(--text-secondary)]"
+                        >
+                          Copy all
+                        </button>
+                        <button
+                          onClick={() => {
+                            if (confirm('Clear all flagged words?')) {
+                              localStorage.removeItem('quest_flagged_words');
+                              setShowTools(false);
+                              setTimeout(() => setShowTools(true), 50);
+                            }
+                          }}
+                          className="text-[10px] px-2 py-1 rounded border border-[var(--border-color)] hover:border-red-500 text-[var(--text-faint)]"
+                        >
+                          Clear
+                        </button>
+                      </div>
+                    </>
+                  );
+                })()}
+              </div>
 
               <div className="pt-2 border-t border-[var(--border-color)] space-y-2">
                 {isPlacementComplete(lang) && (
@@ -1157,6 +1272,22 @@ const App: React.FC = () => {
           language={lang}
           onBack={() => setView('HOME')}
           lookupFn={DICT_LOOKUP[lang] ?? undefined}
+        />
+      )}
+
+      {view === 'FAVORITES' && (
+        <FavoritesList
+          favoritesMap={favoritesMap}
+          language={lang}
+          onBack={() => {
+            // refresh in case user toggled favorites from another view
+            setFavoritesMap(loadFavorites(lang));
+            setView('HOME');
+          }}
+          onChange={(next) => {
+            setFavoritesMap(next);
+            saveFavorites(next, lang);
+          }}
         />
       )}
 

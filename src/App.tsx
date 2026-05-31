@@ -717,12 +717,12 @@ const App: React.FC = () => {
             {!hasCards ? (
               'All Caught Up'
             ) : (
-              <div className="flex items-center justify-center gap-3">
-                {/* Capital Λ with serifs — flat-top apex + horizontal feet at the base.
-                    Reads clearly as a Greek letter (not just a triangle). */}
-                <svg viewBox="0 0 512 512" className="w-6 h-6 shrink-0" style={{ color: '#F5D76E' }}>
+              <div className="flex items-baseline justify-center gap-2.5">
+                {/* Capital Λ — thinner stroke, white, prominent horizontal serifs at the base.
+                    Sits on the same baseline as "Study" so it doesn't float above the text. */}
+                <svg viewBox="0 0 512 512" className="w-[18px] h-[18px] shrink-0 self-center text-white">
                   <path
-                    d="M 256 88 L 408 414 L 428 414 L 428 430 L 310 430 L 310 414 L 328 414 L 256 260 L 184 414 L 202 414 L 202 430 L 84 430 L 84 414 L 104 414 Z"
+                    d="M 256 90 L 400 415 L 416 415 L 416 429 L 321 429 L 321 415 L 335 415 L 256 236 L 177 415 L 191 415 L 191 429 L 96 429 L 96 415 L 112 415 Z"
                     fill="currentColor"
                   />
                 </svg>
@@ -875,26 +875,49 @@ const App: React.FC = () => {
             );
           })()}
 
-          {/* Focus category — compact pill, full width */}
-          <div className="mb-2 relative">
+          {/* Focus + Settings — 2-col row, both as substantial cards */}
+          <div className="grid grid-cols-2 gap-2 mb-3 relative">
             {(() => {
               const CurrentIcon = goal === 'general' ? Globe : goal === 'travel' ? Plane : goal === 'work' ? Briefcase : Heart;
               return (
                 <button
                   onClick={() => setShowGoalMenu(prev => !prev)}
-                  className="w-full flex items-center justify-between px-3 py-2 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[var(--border-hover)] active:scale-[0.99] transition-all"
+                  className="stat-card p-4 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex flex-col gap-2"
                 >
-                  <div className="flex items-center gap-2 min-w-0">
-                    <CurrentIcon size={14} className="text-[var(--accent)] shrink-0" />
-                    <span className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">Focus</span>
-                    <span className="text-xs font-bold text-[var(--text-primary)] truncate">
+                  <div className="w-11 h-11 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
+                    <CurrentIcon size={20} className="text-[var(--accent)]" />
+                  </div>
+                  <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider">
+                    Focus
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold text-[var(--text-primary)] leading-tight truncate">
                       {GOAL_CONFIG[goal].name}
                     </span>
+                    <ChevronDown size={14} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showGoalMenu ? 'rotate-180' : ''}`} />
                   </div>
-                  <ChevronDown size={14} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showGoalMenu ? 'rotate-180' : ''}`} />
                 </button>
               );
             })()}
+            <button
+              onClick={() => setShowTools(prev => !prev)}
+              className={`stat-card p-4 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex flex-col gap-2 ${
+                showTools ? 'border-[var(--accent)]/40 bg-[var(--accent)]/5' : ''
+              }`}
+            >
+              <div className="w-11 h-11 rounded-xl bg-slate-500/10 border border-slate-500/20 flex items-center justify-center">
+                <Settings2 size={20} className="text-slate-500" />
+              </div>
+              <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider">
+                Settings
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-bold text-[var(--text-primary)] leading-tight">
+                  {showTools ? 'Tap to close' : 'Tap to open'}
+                </span>
+                <ChevronDown size={14} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showTools ? 'rotate-180' : ''}`} />
+              </div>
+            </button>
             {showGoalMenu && (
               <>
                 <div className="fixed inset-0 z-20" onClick={() => setShowGoalMenu(false)} />
@@ -958,21 +981,6 @@ const App: React.FC = () => {
               </div>
             </div>
           )}
-
-          {/* Settings — gear icon expandable */}
-          <div className="flex justify-center">
-            <button
-              onClick={() => setShowTools(prev => !prev)}
-              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg transition-all text-[10px] font-semibold uppercase tracking-widest ${
-                showTools
-                  ? 'text-[var(--accent)] bg-[var(--accent)]/10'
-                  : 'text-[var(--text-muted)] hover:text-[var(--text-secondary)]'
-              }`}
-            >
-              <Settings2 size={13} />
-              <span>Settings</span>
-            </button>
-          </div>
 
           {showTools && (
             <div className="stat-card animate-fade-in space-y-4 mt-2 mb-3">

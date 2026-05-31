@@ -5,7 +5,7 @@
       <stop offset="0%" stop-color="#7C3AED"/>
       <stop offset="100%" stop-color="#5B21B6"/>
     </linearGradient>
-    <!-- Subtle gold gradient for the lambda -->
+    <!-- Gold gradient -->
     <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="#F5D76E"/>
       <stop offset="100%" stop-color="#D4A24C"/>
@@ -13,13 +13,11 @@
   </defs>
   <!-- Rounded square -->
   <rect width="512" height="512" rx="112" fill="url(#bg)"/>
-  <!-- Lambda λ — Half-Life shape: thick diagonals with flat (butt) ends.
-       Long leg goes from upper-right apex down to lower-left.
-       Short leg branches off the long leg and goes to lower-right. -->
-  <g stroke="url(#gold)" stroke-width="82" stroke-linecap="butt" stroke-linejoin="miter" fill="none">
-    <!-- Long leg: apex → lower-left -->
-    <line x1="378" y1="115" x2="118" y2="412"/>
-    <!-- Short leg: branch on long leg → lower-right -->
-    <line x1="285" y1="222" x2="394" y2="412"/>
-  </g>
+  <!-- Capital Λ — symmetric, sharp apex with subtle flat top,
+       flat horizontal baseline. Distinct from Half-Life's
+       lowercase asymmetric λ with angled cuts. -->
+  <path
+    d="M 244 92 L 268 92 L 414 418 L 334 418 L 256 240 L 178 418 L 98 418 Z"
+    fill="url(#gold)"
+  />
 </svg>

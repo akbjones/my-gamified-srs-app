@@ -622,7 +622,7 @@ const App: React.FC = () => {
           {/* Header row: title + language picker */}
           <header className="pt-3 pb-3 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              {/* Lambda λ badge — matches the PWA home-screen icon (Half-Life shape, gold on violet) */}
+              {/* Capital Λ badge — matches the PWA home-screen icon (gold on violet) */}
               <svg viewBox="0 0 512 512" className="w-9 h-9 rounded-[20%]" preserveAspectRatio="xMidYMid meet">
                 <defs>
                   <linearGradient id="hdrBg" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -635,10 +635,10 @@ const App: React.FC = () => {
                   </linearGradient>
                 </defs>
                 <rect width="512" height="512" rx="112" fill="url(#hdrBg)"/>
-                <g stroke="url(#hdrGold)" strokeWidth="82" strokeLinecap="butt" strokeLinejoin="miter" fill="none">
-                  <line x1="378" y1="115" x2="118" y2="412"/>
-                  <line x1="285" y1="222" x2="394" y2="412"/>
-                </g>
+                <path
+                  d="M 244 92 L 268 92 L 414 418 L 334 418 L 256 240 L 178 418 L 98 418 Z"
+                  fill="url(#hdrGold)"
+                />
               </svg>
               <h1 className="text-2xl font-black tracking-[0.2em] uppercase text-[var(--accent)]" style={{ fontFamily: "'Orbitron', sans-serif" }}>
                 LANGLAB

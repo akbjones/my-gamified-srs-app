@@ -7,7 +7,7 @@ const SLIDES = [
   },
   {
     title: 'Spaced Repetition',
-    description: 'Flashcards appear at the perfect time to help you remember. The more you practice, the smarter your schedule gets.',
+    description: 'Flashcards appear at the right time to help you remember. The more you practice, the smarter your schedule gets.',
   },
   {
     title: 'Tap Any Word',
@@ -15,7 +15,7 @@ const SLIDES = [
   },
   {
     title: 'Rate Your Knowledge',
-    description: 'After each card, rate how well you knew it: Again, Hard, Good, or Easy. This personalizes your review schedule.',
+    description: 'For every card, rate how well you knew it: Again, Hard, Good, or Easy. This personalizes your review schedule.',
   },
   {
     title: 'Choose Your Focus',

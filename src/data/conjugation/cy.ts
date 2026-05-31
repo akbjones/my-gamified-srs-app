@@ -1541,12 +1541,36 @@ function buildPeriphrasticConditional(vn: string): Forms {
 
 /**
  * Build imperative forms. Welsh imperatives are typically:
- *   2sg: verb stem (or special form)
- *   2pl: verb stem + -wch
- * We store the 2sg form; all other persons get '-'.
+ *   2sg: verb stem + -a (familiar)
+ *   2pl: verb stem + -wch (formal / plural)
+ * Slots: [1sg, 2sg, 3sg, 1pl, 2pl, 3pl] — only 2sg and 2pl filled, others stay '-'.
  */
 function buildImperative(form: string): Forms {
   return ['-', form, '-', '-', '-', '-'];
+}
+
+/** Compute Welsh imperative stem by dropping the verb-noun's typical ending. */
+function welshStem(vn: string): string {
+  if (vn.endsWith('io'))   return vn.slice(0, -2) + 'i'; // coginio → cogini
+  if (vn.endsWith('eu'))   return vn.slice(0, -2);       // mwynheu → mwynh (rare)
+  if (vn.endsWith('u'))    return vn.slice(0, -1);       // cysgu → cysg
+  if (vn.endsWith('i'))    return vn.slice(0, -1);       // codi → cod
+  if (vn.endsWith('o'))    return vn.slice(0, -1);       // gwneuthuro → gwneuthur
+  if (vn.endsWith('ed'))   return vn.slice(0, -2);       // cerdded → cerdd
+  if (vn.endsWith('eg'))   return vn.slice(0, -2);       // disgwyl → disgwy (rare)
+  if (vn.endsWith('yd'))   return vn.slice(0, -2);       // dychwelyd → dychwel
+  return vn;                                              // siarad, bwyta stay as-is
+}
+
+/** Productive imperative for any regular verb-noun. */
+function buildPeriphrasticImperative(vn: string): Forms {
+  const stem = welshStem(vn);
+  // 2sg: stem + -a, unless stem already ends in -a (avoid -aa)
+  const sg = stem.endsWith('a') ? stem : stem + 'a';
+  // 2pl: stem + -wch. If stem ends in -a, the conventional form is -ewch
+  // (e.g. bwyta → bwytewch, not bwytawch)
+  const pl = stem.endsWith('a') ? stem.slice(0, -1) + 'ewch' : stem + 'wch';
+  return ['-', sg, '-', '-', pl, '-'];
 }
 
 // ─── Build full conjugation table ──────────────────────────────
@@ -1620,7 +1644,7 @@ export function conjugate(verb: string): ConjugationTable | null {
   const preterite = buildPeriphrasticPreterite(vn);
   const future = buildPeriphrasticFuture(vn);
   const conditional = buildPeriphrasticConditional(vn);
-  const imperative = buildImperative('-');
+  const imperative = buildPeriphrasticImperative(vn);
 
   return buildTable(vn, present, imperfect, preterite, future, conditional, imperative);
 }

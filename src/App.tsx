@@ -39,7 +39,7 @@ import { lookupWord as lookupRu } from './data/dictionary/ru';
 import VocabList from './components/VocabList';
 import FavoritesList from './components/FavoritesList';
 import Onboarding from './components/Onboarding';
-import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff, Star, PenTool } from 'lucide-react';
+import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff, Star, PenTool, Flame } from 'lucide-react';
 import {
   loadNotificationPrefs, saveNotificationPrefs, requestNotificationPermission,
   isNotificationSupported, onSessionComplete, initNotifications,
@@ -743,6 +743,47 @@ const App: React.FC = () => {
             )}
           </button>
 
+          {/* Today's progress + streak — fills space between Study button and the cards */}
+          {(() => {
+            const dailyGoal = settings.dailyNewLimit;
+            const dailyDone = dailyStats.newCardsCount;
+            const pct = dailyGoal > 0 ? Math.min(100, Math.round((dailyDone / dailyGoal) * 100)) : 0;
+            const streak = userStats.streak;
+            return (
+              <div className="stat-card px-4 py-3 mb-3 flex items-center gap-4">
+                {/* Progress bar — takes most of the width */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-baseline justify-between mb-1.5">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)]">Today</span>
+                    <span className="text-[11px] font-mono font-bold text-[var(--text-primary)]">
+                      {dailyDone} <span className="text-[var(--text-muted)] font-normal">/ {dailyGoal}</span>
+                    </span>
+                  </div>
+                  <div className="h-2 rounded-full bg-[var(--bg-inset)] overflow-hidden">
+                    <div
+                      className="h-full bg-gradient-to-r from-[var(--accent)] to-violet-400 rounded-full transition-all"
+                      style={{ width: `${pct}%` }}
+                    />
+                  </div>
+                </div>
+                {/* Streak counter — compact on the right */}
+                <button
+                  onClick={() => setView('GAMIFICATION')}
+                  className="shrink-0 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-[var(--bg-inset)] active:scale-95 transition-all"
+                  aria-label="View progress"
+                >
+                  <Flame
+                    size={20}
+                    className={streak > 0 ? 'text-orange-500 fill-orange-500/30' : 'text-[var(--text-faint)]'}
+                  />
+                  <span className={`text-lg font-black font-mono ${streak > 0 ? 'text-orange-500' : 'text-[var(--text-muted)]'}`}>
+                    {streak}
+                  </span>
+                </button>
+              </div>
+            );
+          })()}
+
           {/* Study more when caught up — secondary text-link style */}
           {!hasCards && (
             <div className="w-full flex items-center justify-center gap-2 mb-3 -mt-1.5 text-[12px] text-[var(--text-muted)]">
@@ -768,25 +809,25 @@ const App: React.FC = () => {
             </div>
           )}
 
-          {/* Quick-access grid: Topics + Vocabulary + Favourites — 3-col compact */}
+          {/* Quick-access grid: Topics + Vocabulary + Favourites — 3-col, taller cards */}
           {(() => {
             const vocabCount = Object.keys(vocabMap).length;
             const hasVocab = vocabCount > 0;
             const favCount = Object.keys(favoritesMap).length;
             const hasFav = favCount > 0;
             return (
-            <div className="grid grid-cols-3 gap-2 mb-2">
+            <div className="grid grid-cols-3 gap-2 mb-3">
               <button
                 onClick={() => setView('TOPICS')}
-                className="stat-card p-2.5 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer"
+                className="stat-card p-4 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer flex flex-col gap-2"
               >
-                <div className="w-8 h-8 rounded-lg bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center mb-1.5">
-                  <BookOpen size={14} className="text-[var(--accent)]" />
+                <div className="w-11 h-11 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
+                  <BookOpen size={20} className="text-[var(--accent)]" />
                 </div>
-                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider leading-none mb-1">
+                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider">
                   Topics
                 </div>
-                <div className="text-[11px] font-bold text-[var(--text-primary)] leading-tight">
+                <div className="text-xs font-bold text-[var(--text-primary)] leading-tight">
                   Browse all
                 </div>
               </button>
@@ -794,19 +835,19 @@ const App: React.FC = () => {
               <button
                 onClick={() => hasVocab && setView('VOCAB')}
                 disabled={!hasVocab}
-                className={`stat-card p-2.5 text-left transition-all ${
+                className={`stat-card p-4 text-left transition-all flex flex-col gap-2 ${
                   hasVocab
                     ? 'hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer'
                     : 'opacity-60 cursor-default'
                 }`}
               >
-                <div className="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-1.5">
-                  <PenTool size={14} className="text-blue-500" />
+                <div className="w-11 h-11 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
+                  <PenTool size={20} className="text-blue-500" />
                 </div>
-                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider leading-none mb-1">
+                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider">
                   Vocab
                 </div>
-                <div className="text-[11px] font-bold text-[var(--text-primary)] leading-tight">
+                <div className="text-xs font-bold text-[var(--text-primary)] leading-tight">
                   {hasVocab ? `${vocabCount} seen` : 'None yet'}
                 </div>
               </button>
@@ -814,19 +855,19 @@ const App: React.FC = () => {
               <button
                 onClick={() => hasFav && setView('FAVORITES')}
                 disabled={!hasFav}
-                className={`stat-card p-2.5 text-left transition-all ${
+                className={`stat-card p-4 text-left transition-all flex flex-col gap-2 ${
                   hasFav
                     ? 'hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer'
                     : 'opacity-60 cursor-default'
                 }`}
               >
-                <div className="w-8 h-8 rounded-lg bg-yellow-400/10 border border-yellow-400/30 flex items-center justify-center mb-1.5">
-                  <Star size={14} className="text-yellow-500" fill="currentColor" />
+                <div className="w-11 h-11 rounded-xl bg-yellow-400/10 border border-yellow-400/30 flex items-center justify-center">
+                  <Star size={20} className="text-yellow-500" fill="currentColor" />
                 </div>
-                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider leading-none mb-1">
+                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider">
                   Favs
                 </div>
-                <div className="text-[11px] font-bold text-[var(--text-primary)] leading-tight">
+                <div className="text-xs font-bold text-[var(--text-primary)] leading-tight">
                   {hasFav ? `${favCount} saved` : 'Tap ⭐'}
                 </div>
               </button>

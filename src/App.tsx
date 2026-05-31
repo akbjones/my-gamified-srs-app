@@ -622,23 +622,27 @@ const App: React.FC = () => {
           {/* Header row: title + language picker */}
           <header className="pt-3 pb-3 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              {/* Capital Λ badge — matches the PWA home-screen icon (gold on violet) */}
-              <svg viewBox="0 0 512 512" className="w-9 h-9 rounded-[20%]" preserveAspectRatio="xMidYMid meet">
-                <defs>
-                  <linearGradient id="hdrBg" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#7C3AED"/>
-                    <stop offset="100%" stopColor="#5B21B6"/>
-                  </linearGradient>
-                  <linearGradient id="hdrGold" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#F5D76E"/>
-                    <stop offset="100%" stopColor="#D4A24C"/>
-                  </linearGradient>
-                </defs>
-                <rect width="512" height="512" rx="112" fill="url(#hdrBg)"/>
-                <path
-                  d="M 244 92 L 268 92 L 414 418 L 334 418 L 256 240 L 178 418 L 98 418 Z"
-                  fill="url(#hdrGold)"
-                />
+              {/* Animated atom — in-app logo (PWA home-screen icon is separate, see public/icon.svg) */}
+              <svg viewBox="-2 -2 36 36" className="w-11 h-11 text-[var(--accent)]" fill="none" overflow="visible">
+                {/* Orbit paths (using <path> so animateMotion works) */}
+                <path id="orb1" d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="1.2" opacity="0.5" />
+                <g transform="rotate(60 16 16)">
+                  <path id="orb2" d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="1.2" opacity="0.5" />
+                </g>
+                <path d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="1.2" opacity="0.5" transform="rotate(120 16 16)" />
+                {/* Electrons orbiting along paths */}
+                <circle r="1.3" fill="currentColor">
+                  <animateMotion dur="3s" repeatCount="indefinite"><mpath href="#orb1" /></animateMotion>
+                </circle>
+                <g transform="rotate(60 16 16)">
+                  <circle r="1.3" fill="currentColor">
+                    <animateMotion dur="4s" repeatCount="indefinite"><mpath href="#orb2" /></animateMotion>
+                  </circle>
+                </g>
+                {/* Nucleus */}
+                <circle cx="16" cy="16" r="2.5" fill="currentColor">
+                  <animate attributeName="r" values="2.5;3;2.5" dur="2s" repeatCount="indefinite" />
+                </circle>
               </svg>
               <h1 className="text-2xl font-black tracking-[0.2em] uppercase text-[var(--accent)]" style={{ fontFamily: "'Orbitron', sans-serif" }}>
                 LANGLAB

@@ -569,24 +569,29 @@ const PopoverPortal: React.FC<{
             </div>
 
             {/* Tense tabs — wrap onto multiple rows so all are visible on mobile.
-                Labels are shortened (native name only, English in parentheses dropped). */}
+                Native name + English translation in parens (smaller, dimmed). */}
             <div className="px-4 py-3 border-b border-[var(--border-color)]">
               <div className="flex flex-wrap gap-1.5">
                 {Object.keys(conjTable.tenses).map(tense => {
-                  // Shorten "Presente (Present)" → "Presente"
+                  // Split "Presente (Present)" → native "Presente" + english "Present"
                   const fullLabel = TENSE_LABELS[tense] || tense;
-                  const shortLabel = fullLabel.replace(/\s*\([^)]*\)\s*/g, '').trim();
+                  const m = fullLabel.match(/^(.+?)\s*\(([^)]+)\)\s*$/);
+                  const native = m ? m[1].trim() : fullLabel;
+                  const english = m ? m[2].trim() : null;
                   return (
                     <button
                       key={tense}
                       onClick={() => setConjTense(tense)}
-                      className={`px-2.5 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wide transition-all whitespace-nowrap ${
+                      className={`px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wide transition-all whitespace-nowrap ${
                         conjTense === tense
                           ? 'bg-blue-500 text-white shadow-md shadow-blue-500/30'
                           : 'bg-[var(--bg-inset)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] hover:text-[var(--text-primary)]'
                       }`}
                     >
-                      {shortLabel}
+                      {native}
+                      {english && (
+                        <span className="ml-1 text-[9px] font-medium opacity-70">({english})</span>
+                      )}
                     </button>
                   );
                 })}

@@ -633,27 +633,12 @@ const App: React.FC = () => {
           {/* Header row: title + language + theme toggle */}
           <header className="pt-6 pb-5 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              {/* Atom icon */}
-              <svg viewBox="-2 -2 36 36" className="w-11 h-11 text-[var(--accent)]" fill="none" overflow="visible">
-                {/* Orbit paths (using <path> so animateMotion works) */}
-                <path id="orb1" d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="1.2" opacity="0.5" />
-                <g transform="rotate(60 16 16)">
-                  <path id="orb2" d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="1.2" opacity="0.5" />
+              {/* Lambda λ — matches the PWA home-screen icon */}
+              <svg viewBox="0 0 32 32" className="w-9 h-9 text-[var(--accent)]" fill="none">
+                <g stroke="currentColor" strokeWidth="3.6" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M 11 8 L 24 24" />
+                  <path d="M 15.5 14 L 8 24" />
                 </g>
-                <path d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="1.2" opacity="0.5" transform="rotate(120 16 16)" />
-                {/* Electrons orbiting along paths */}
-                <circle r="1.3" fill="currentColor">
-                  <animateMotion dur="3s" repeatCount="indefinite"><mpath href="#orb1" /></animateMotion>
-                </circle>
-                <g transform="rotate(60 16 16)">
-                  <circle r="1.3" fill="currentColor">
-                    <animateMotion dur="4s" repeatCount="indefinite"><mpath href="#orb2" /></animateMotion>
-                  </circle>
-                </g>
-                {/* Nucleus */}
-                <circle cx="16" cy="16" r="2.5" fill="currentColor">
-                  <animate attributeName="r" values="2.5;3;2.5" dur="2s" repeatCount="indefinite" />
-                </circle>
               </svg>
               <h1 className="text-2xl font-black tracking-[0.2em] uppercase text-[var(--accent)]" style={{ fontFamily: "'Orbitron', sans-serif" }}>
                 LANGLAB

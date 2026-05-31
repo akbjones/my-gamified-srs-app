@@ -7,11 +7,13 @@ import { PathNode, SideBranch, Language } from '../types';
 
 // Display labels for tiers — surfaced in TopicMap section headers.
 // Tier codes (A1, A2, …) are kept internal; learners see the descriptive label.
+// Labels are language-neutral so they fit Romance, Germanic, Slavic, Indic,
+// and Turkic languages alike (no Romance-only framing like "moods" or "object pronouns").
 export const TIER_LABELS: Record<string, string> = {
   A1: 'Foundations',
-  A2: 'Past & Pronouns',
-  B1: 'Moods & Complex Tenses',
-  B2: 'Advanced Grammar',
+  A2: 'Essentials',
+  B1: 'Intermediate',
+  B2: 'Advanced',
   C1: 'Refinement',
   C2: 'Mastery',
 };

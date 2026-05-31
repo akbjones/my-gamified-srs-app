@@ -537,59 +537,65 @@ const PopoverPortal: React.FC<{
             className="bg-[var(--bg-card)] w-full sm:max-w-md sm:rounded-3xl shadow-2xl border border-[var(--border-color)] overflow-hidden max-h-screen sm:max-h-[88vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Header — bigger, more breathing room, gradient accent */}
-            <div className="relative px-6 pt-6 pb-5 border-b border-[var(--border-color)] bg-gradient-to-b from-blue-500/5 to-transparent">
+            {/* Header — compact on mobile, more breathing room on desktop */}
+            <div className="relative px-5 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-5 border-b border-[var(--border-color)] bg-gradient-to-b from-blue-500/5 to-transparent">
               <button
                 onClick={() => setShowConj(false)}
-                className="absolute top-4 right-4 p-2 rounded-xl hover:bg-[var(--bg-card-hover)] active:scale-95 transition"
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 rounded-xl hover:bg-[var(--bg-card-hover)] active:scale-95 transition"
                 aria-label="Close"
               >
                 <CloseIcon size={20} className="text-[var(--text-secondary)]" />
               </button>
-              <div className="text-[10px] font-bold text-blue-500 uppercase tracking-[0.2em] mb-1.5">
+              <div className="text-[9px] sm:text-[10px] font-bold text-blue-500 uppercase tracking-[0.2em] mb-1">
                 Conjugation
               </div>
-              <div className="flex items-baseline gap-3 flex-wrap pr-10">
-                <div className="text-3xl font-black text-[var(--text-primary)] tracking-tight">
+              <div className="flex items-baseline gap-2 flex-wrap pr-10">
+                <div className="text-2xl sm:text-3xl font-black text-[var(--text-primary)] tracking-tight">
                   {conjTable.infinitive}
                 </div>
                 {conjTable.isReflexive && (
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-purple-500 bg-purple-500/10 px-2 py-0.5 rounded-md">
+                  <span className="text-[9px] font-bold uppercase tracking-wider text-purple-500 bg-purple-500/10 px-2 py-0.5 rounded-md">
                     Reflexive
                   </span>
                 )}
-              </div>
-              {/* Show the English meaning if the lemma entry has one */}
-              {lemmaEntry?.en && (
-                <div className="text-sm text-[var(--text-muted)] mt-1.5">
-                  {lemmaEntry.en.split(';')[0].trim()}
-                </div>
-              )}
-            </div>
-
-            {/* Tense tabs — horizontal-scroll on overflow, larger tap targets */}
-            <div className="px-4 py-3 border-b border-[var(--border-color)] overflow-x-auto scrollbar-thin">
-              <div className="flex gap-2 min-w-max">
-                {Object.keys(conjTable.tenses).map(tense => (
-                  <button
-                    key={tense}
-                    onClick={() => setConjTense(tense)}
-                    className={`px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition-all whitespace-nowrap ${
-                      conjTense === tense
-                        ? 'bg-blue-500 text-white shadow-md shadow-blue-500/30'
-                        : 'bg-[var(--bg-inset)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] hover:text-[var(--text-primary)]'
-                    }`}
-                  >
-                    {TENSE_LABELS[tense] || tense}
-                  </button>
-                ))}
+                {/* English meaning inline next to the infinitive on mobile */}
+                {lemmaEntry?.en && (
+                  <span className="text-xs sm:text-sm text-[var(--text-muted)]">
+                    · {lemmaEntry.en.split(';')[0].trim()}
+                  </span>
+                )}
               </div>
             </div>
 
-            {/* Forms — scrolling region. Bigger numbers, clearer typography. */}
+            {/* Tense tabs — wrap onto multiple rows so all are visible on mobile.
+                Labels are shortened (native name only, English in parentheses dropped). */}
+            <div className="px-4 py-3 border-b border-[var(--border-color)]">
+              <div className="flex flex-wrap gap-1.5">
+                {Object.keys(conjTable.tenses).map(tense => {
+                  // Shorten "Presente (Present)" → "Presente"
+                  const fullLabel = TENSE_LABELS[tense] || tense;
+                  const shortLabel = fullLabel.replace(/\s*\([^)]*\)\s*/g, '').trim();
+                  return (
+                    <button
+                      key={tense}
+                      onClick={() => setConjTense(tense)}
+                      className={`px-2.5 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wide transition-all whitespace-nowrap ${
+                        conjTense === tense
+                          ? 'bg-blue-500 text-white shadow-md shadow-blue-500/30'
+                          : 'bg-[var(--bg-inset)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] hover:text-[var(--text-primary)]'
+                      }`}
+                    >
+                      {shortLabel}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Forms — scrolling region. Tighter on mobile so all 6 persons fit. */}
             {conjTable.tenses[conjTense] && (
               <div className="overflow-y-auto flex-1">
-                <div className="p-5 space-y-1.5">
+                <div className="p-3 sm:p-5 space-y-1 sm:space-y-1.5">
                   {conjTable.tenses[conjTense].map((form, i) => {
                     const personLabel =
                       language === 'french' && i === 0 && /^[aeéèêëiîïoôuûùüyh]/i.test(form)
@@ -599,18 +605,18 @@ const PopoverPortal: React.FC<{
                     return (
                       <div
                         key={i}
-                        className={`flex items-center gap-3 px-4 py-3 rounded-xl transition-colors ${
+                        className={`flex items-center gap-3 px-3 py-2 sm:px-4 sm:py-3 rounded-xl transition-colors ${
                           isMatchedForm
                             ? 'bg-blue-500/15 ring-1 ring-blue-500/40 shadow-sm'
                             : 'hover:bg-[var(--bg-inset)]/50'
                         }`}
                       >
-                        <span className={`text-[11px] font-mono uppercase tracking-wider w-20 text-right shrink-0 ${
+                        <span className={`text-[10px] sm:text-[11px] font-mono uppercase tracking-wider w-16 sm:w-20 text-right shrink-0 ${
                           isMatchedForm ? 'text-blue-500/80' : 'text-[var(--text-muted)]'
                         }`}>
                           {personLabel}
                         </span>
-                        <span className={`text-lg font-semibold tracking-tight ${
+                        <span className={`text-base sm:text-lg font-semibold tracking-tight ${
                           isMatchedForm ? 'text-blue-500' : 'text-[var(--text-primary)]'
                         }`}>
                           {form}

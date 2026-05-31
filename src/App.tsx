@@ -39,7 +39,7 @@ import { lookupWord as lookupRu } from './data/dictionary/ru';
 import VocabList from './components/VocabList';
 import FavoritesList from './components/FavoritesList';
 import Onboarding from './components/Onboarding';
-import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff, Star } from 'lucide-react';
+import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff, Star, PenTool } from 'lucide-react';
 import {
   loadNotificationPrefs, saveNotificationPrefs, requestNotificationPermission,
   isNotificationSupported, onSessionComplete, initNotifications,
@@ -708,26 +708,27 @@ const App: React.FC = () => {
             </div>
           )}
 
-          {/* Study button — primary action, moved to top of dashboard */}
+          {/* Study button — primary action, generous size so it dominates the home view */}
           <button
             onClick={() => handleStartSession()}
             disabled={!hasCards}
-            className="w-full py-4 btn-primary rounded-xl text-base mb-2"
+            className="w-full py-7 btn-primary rounded-2xl text-lg mb-3"
           >
             {!hasCards ? (
               'All Caught Up'
             ) : (
-              <div className="flex items-center justify-center gap-2.5">
-                {/* Small Λ brand mark — echoes the PWA icon, gold accent */}
-                <svg viewBox="0 0 512 512" className="w-3.5 h-3.5 shrink-0" style={{ color: '#F5D76E' }}>
+              <div className="flex items-center justify-center gap-3">
+                {/* Capital Λ with serifs — flat-top apex + horizontal feet at the base.
+                    Reads clearly as a Greek letter (not just a triangle). */}
+                <svg viewBox="0 0 512 512" className="w-6 h-6 shrink-0" style={{ color: '#F5D76E' }}>
                   <path
-                    d="M 244 92 L 268 92 L 414 418 L 334 418 L 256 240 L 178 418 L 98 418 Z"
+                    d="M 256 88 L 408 414 L 428 414 L 428 430 L 310 430 L 310 414 L 328 414 L 256 260 L 184 414 L 202 414 L 202 430 L 84 430 L 84 414 L 104 414 Z"
                     fill="currentColor"
                   />
                 </svg>
-                <span className="font-extrabold text-base">Study</span>
+                <span className="font-extrabold text-xl">Study</span>
                 <span className="text-white/40">·</span>
-                <div className="flex items-center gap-2 text-[11px] font-bold opacity-85">
+                <div className="flex items-center gap-2 text-[12px] font-bold opacity-85">
                   {reviewsDue > 0 && (
                     <span>{reviewsDue} due</span>
                   )}
@@ -800,7 +801,7 @@ const App: React.FC = () => {
                 }`}
               >
                 <div className="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-1.5">
-                  <BookOpen size={14} className="text-blue-500" />
+                  <PenTool size={14} className="text-blue-500" />
                 </div>
                 <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider leading-none mb-1">
                   Vocab

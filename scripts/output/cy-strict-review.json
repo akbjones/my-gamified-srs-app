@@ -1,21 +1,86 @@
 {
   "language": "cy",
-  "total_entries": 6115,
+  "total_entries": 6116,
   "total_checked": 200,
-  "passed": 199,
-  "failed": 1,
-  "pass_rate": "99.5%",
+  "passed": 196,
+  "failed": 4,
+  "pass_rate": "98%",
   "grade": "A",
   "failures_by_type": {
-    "to_copula": 1
+    "semantic_fail": 4
   },
   "failure_examples": [
     {
-      "word": "cynhaliwyd",
-      "en": "to was held",
+      "word": "leiaf",
+      "en": "minimum",
+      "pos": "adj",
+      "google": "least",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "minimum"
+        ],
+        "gtWords": [
+          "least"
+        ],
+        "gt": "least"
+      }
+    },
+    {
+      "word": "tain",
+      "en": "tin",
+      "pos": "n",
+      "google": "tain",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "tin"
+        ],
+        "gtWords": [
+          "tain"
+        ],
+        "gt": "tain"
+      }
+    },
+    {
+      "word": "amrywiaeth",
+      "en": "variety",
+      "pos": "n",
+      "google": "diversity",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "variety"
+        ],
+        "gtWords": [
+          "diversity"
+        ],
+        "gt": "diversity"
+      }
+    },
+    {
+      "word": "gwisgodd",
+      "en": "to wear",
       "pos": "v",
-      "google": "was held",
-      "issues": "to_copula"
+      "google": "he dressed",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "wear"
+        ],
+        "gtWords": [
+          "dres"
+        ],
+        "gt": "he dressed"
+      }
     }
   ]
 }

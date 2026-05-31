@@ -2,17 +2,30 @@
   "language": "hi",
   "total_entries": 4743,
   "total_checked": 500,
-  "passed": 499,
-  "failed": 1,
-  "pass_rate": "99.8%",
+  "passed": 497,
+  "failed": 3,
+  "pass_rate": "99.4%",
   "grade": "A",
   "failures_by_type": {
-    "not_english": 1
+    "not_english": 2,
+    "to_prefix": 1
   },
   "failure_examples": [
     {
-      "word": "गुप्तचर",
-      "en": "spy",
+      "word": "मक्खियाँ",
+      "en": "fly",
+      "pos": "n",
+      "issues": "not_english"
+    },
+    {
+      "word": "पीजिए",
+      "en": "please drink",
+      "pos": "v",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "आसमान",
+      "en": "sky",
       "pos": "n",
       "issues": "not_english"
     }

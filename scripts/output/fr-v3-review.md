@@ -1,156 +1,158 @@
 # French Dictionary v3 Rebuild - 100-Entry Review
 
-**Date:** 2026-04-05
+**Date:** 2026-04-06
 **Total entries written:** 5502
 **Function words:** 333
 **Google translated:** 4084
 **Lemma-copied:** 1493
-**Context-fixed:** 162
+**Context-fixed:** 136
 **Ambiguity-fixed:** 52
 
 ## Review Results
 
-**Pass:** 72 / 100
-**Fail:** 28 / 100
+**Pass:** 70 / 100
+**Fail:** 30 / 100
 **Grade:** C
 
 ## Issues Found
 
 | Word | English | POS | Problems |
 |------|---------|-----|----------|
-| détruisit | destroyed | v | missing_to_on_verb |
-| obéît | obey | v | missing_to_on_verb |
-| entrerait | enter | v | missing_to_on_verb |
-| ayons | to let | v | wrong_pos |
-| parking | parking | n | self_referencing |
-| injustice | injustice | n | self_referencing |
-| répéter | repeat | v | missing_to_on_verb |
-| arrosee | watered | v | missing_to_on_verb |
-| apparu | appeared | v | missing_to_on_verb |
-| passionnante | exciting | adj | conjugated_english_ing |
-| ressaisit | regained | v | missing_to_on_verb |
-| cause | cause | n | self_referencing |
-| collection | collection | n | self_referencing |
-| atterrissage | landing | n | conjugated_english_ing |
-| exprimez | express | v | missing_to_on_verb |
-| coopérer | cooperate | v | missing_to_on_verb |
-| décourage | discourage | v | missing_to_on_verb |
-| excusez | excuse | v | missing_to_on_verb |
-| arrosé | watered | v | missing_to_on_verb |
-| investigation | investigation | n | self_referencing |
-| attention | attention | n | self_referencing |
-| innocent | innocent | adj | self_referencing |
-| festival | festival | n | self_referencing |
-| sol | to grind | n | wrong_to_on_noun, wrong_pos |
-| president | president | n | self_referencing |
-| confié | entrust | v | missing_to_on_verb |
-| rendez | to appointment | v | self_referencing |
-| monument | monument | n | self_referencing |
+| parvenus | to achieve | v | wrong_pos |
+| sujet | to subject | n | wrong_to_on_noun, wrong_pos |
+| prêtés | to lend | v | wrong_pos |
+| habilles | to dres | v | wrong_pos |
+| plantes | to plant | n | wrong_to_on_noun, wrong_pos |
+| choisisses | to choose | v | wrong_pos |
+| obligé | obliged | v | missing_to_on_verb, wrong_pos |
+| formation | training | n | conjugated_english_ing |
+| calmez | calm down | v | missing_to_on_verb, wrong_pos |
+| suivants | following | adj | conjugated_english_ing |
+| chercherons | seek | v | missing_to_on_verb |
+| voudra | to want | v | wrong_pos |
+| restions | to stay | v | wrong_pos |
+| raterons | miss | v | missing_to_on_verb, wrong_pos |
+| manquer | miss | v | missing_to_on_verb, wrong_pos |
+| éclate | burst | v | missing_to_on_verb, wrong_pos |
+| restait | to stay | v | wrong_pos |
+| plaigne | complaint | v | missing_to_on_verb, wrong_pos |
+| podcast | podcast | n | self_referencing |
+| trahi | betray | v | missing_to_on_verb, wrong_pos |
+| importance | importance | n | self_referencing |
+| invitée | to invite | v | wrong_pos |
+| mit | to put | v | self_referencing, wrong_pos |
+| repenser | rethink | v | missing_to_on_verb, wrong_pos |
+| aimerait | like | v | missing_to_on_verb, wrong_pos |
+| confiture | to jam | n | wrong_to_on_noun, wrong_pos |
+| inondées | flooded | v | missing_to_on_verb, wrong_pos |
+| grève | to strike | n | wrong_to_on_noun, wrong_pos |
+| sommet | to summit | n | wrong_to_on_noun, wrong_pos |
+| dessert | dessert | n | self_referencing |
 
 ## Full Sample
 
 | # | Word | English | POS | Status |
 |---|------|---------|-----|--------|
-| 1 | sculpteur | sculptor | n | PASS |
-| 2 | suivante | next | n | PASS |
-| 3 | partiras | to leave | v | PASS |
-| 4 | détruisit | destroyed | v | FAIL |
-| 5 | pendant | during | prep | PASS |
-| 6 | obéît | obey | v | FAIL |
-| 7 | idées | idea | n | PASS |
-| 8 | dettes | debt | n | PASS |
-| 9 | entrerait | enter | v | FAIL |
-| 10 | irons | to go | v | PASS |
-| 11 | jambes | leg | n | PASS |
-| 12 | ayons | to let | v | FAIL |
-| 13 | poète | poet | n | PASS |
-| 14 | grandissent | to grow | v | PASS |
-| 15 | fermement | firmly | adv | PASS |
-| 16 | assister | to attend | v | PASS |
-| 17 | faisaient | to do, to make | v | PASS |
-| 18 | pomme | apple | n | PASS |
-| 19 | suives | to follow | v | PASS |
-| 20 | parking | parking | n | FAIL |
-| 21 | amoureux | lover | adj | PASS |
-| 22 | fît | to do, to make | v | PASS |
-| 23 | injustice | injustice | n | FAIL |
-| 24 | prêter | to lend | v | PASS |
-| 25 | croyait | to believe | v | PASS |
-| 26 | voyageais | to travel | v | PASS |
-| 27 | rédigé | to write | v | PASS |
-| 28 | juillet | july | n | PASS |
-| 29 | regardions | to look | v | PASS |
-| 30 | répéter | repeat | v | FAIL |
-| 31 | nettoyer | to clean | v | PASS |
-| 32 | arrosee | watered | v | FAIL |
-| 33 | fuite | leak | n | PASS |
-| 34 | pourrez | to be able, can | v | PASS |
-| 35 | apparu | appeared | v | FAIL |
-| 36 | descendez | to go down | v | PASS |
-| 37 | passionnante | exciting | adj | FAIL |
-| 38 | vos | your | det | PASS |
-| 39 | envolent | to fly away | v | PASS |
-| 40 | ressaisit | regained | v | FAIL |
-| 41 | garder | to keep | v | PASS |
-| 42 | réveil | alarm | n | PASS |
-| 43 | en | of it, some | prep | PASS |
-| 44 | emménager | to move in | v | PASS |
-| 45 | cause | cause | n | FAIL |
-| 46 | arretee | to stop | v | PASS |
-| 47 | tomates | tomato | n | PASS |
-| 48 | venons | to come | v | PASS |
-| 49 | voyageur | traveler | n | PASS |
-| 50 | crainte | fear | n | PASS |
-| 51 | collection | collection | n | FAIL |
-| 52 | forces | strength | n | PASS |
-| 53 | atterrissage | landing | n | FAIL |
-| 54 | pages | page | n | PASS |
-| 55 | musique | music | n | PASS |
-| 56 | quel | which | det | PASS |
-| 57 | deux | two | n | PASS |
-| 58 | chante | to sing | v | PASS |
-| 59 | laissez | to let | v | PASS |
-| 60 | malades | sick | adj | PASS |
-| 61 | poste | job | n | PASS |
-| 62 | bonnes | good | adj | PASS |
-| 63 | exprimez | express | v | FAIL |
-| 64 | épée | sword | n | PASS |
-| 65 | erreur | error | n | PASS |
-| 66 | sauf | except | prep | PASS |
-| 67 | coopérer | cooperate | v | FAIL |
-| 68 | décourage | discourage | v | FAIL |
-| 69 | délibéré | deliberate | adj | PASS |
-| 70 | excusez | excuse | v | FAIL |
-| 71 | arrive | to arrive | v | PASS |
-| 72 | arrosé | watered | v | FAIL |
-| 73 | accès | access | n | PASS |
-| 74 | sentiments | feeling | n | PASS |
-| 75 | chômage | unemployment | n | PASS |
-| 76 | investigation | investigation | n | FAIL |
-| 77 | serons | to be | v | PASS |
-| 78 | attention | attention | n | FAIL |
-| 79 | aiderons | to help | v | PASS |
-| 80 | réussisse | to succe | v | PASS |
-| 81 | surveillance | monitoring | n | PASS |
-| 82 | devra | to have to, must | v | PASS |
-| 83 | innocent | innocent | adj | FAIL |
-| 84 | lumières | light | n | PASS |
-| 85 | rivière | river | n | PASS |
-| 86 | heure | hour | n | PASS |
-| 87 | costard | suit | n | PASS |
-| 88 | ironie | irony | n | PASS |
-| 89 | sucrée | sweet | adj | PASS |
-| 90 | festival | festival | n | FAIL |
-| 91 | sol | to grind | n | FAIL |
-| 92 | president | president | n | FAIL |
-| 93 | confié | entrust | v | FAIL |
-| 94 | rendez | to appointment | v | FAIL |
-| 95 | arrivés | to arrive | v | PASS |
-| 96 | simplement | simply | adv | PASS |
-| 97 | travaillais | to work | v | PASS |
-| 98 | essaierons | to try | v | PASS |
-| 99 | arrives | to arrive | v | PASS |
-| 100 | monument | monument | n | FAIL |
+| 1 | arrivée | arrival | n | PASS |
+| 2 | vérifient | to check | v | PASS |
+| 3 | écharpe | scarf | n | PASS |
+| 4 | parvenus | to achieve | v | FAIL |
+| 5 | main | hand | n | PASS |
+| 6 | refusé | to refuse | v | PASS |
+| 7 | rendre | to give back | v | PASS |
+| 8 | sujet | to subject | n | FAIL |
+| 9 | prêtés | to lend | v | FAIL |
+| 10 | habilles | to dres | v | FAIL |
+| 11 | suis | to be | v | PASS |
+| 12 | goûte | to taste | v | PASS |
+| 13 | plantes | to plant | n | FAIL |
+| 14 | aucuns | none | pron | PASS |
+| 15 | comprennent | to understand | v | PASS |
+| 16 | lapin | rabbit | n | PASS |
+| 17 | généralisation | generalization | n | PASS |
+| 18 | remarquables | remarkable | adj | PASS |
+| 19 | choisisses | to choose | v | FAIL |
+| 20 | finit | to finish | v | PASS |
+| 21 | entretien | interview | n | PASS |
+| 22 | pizza | pizza | n | PASS |
+| 23 | obligé | obliged | v | FAIL |
+| 24 | rideaux | curtain | n | PASS |
+| 25 | procéder | to proceed | v | PASS |
+| 26 | données | data | n | PASS |
+| 27 | compare | to compare | v | PASS |
+| 28 | formation | training | n | FAIL |
+| 29 | reviens | to come back | v | PASS |
+| 30 | calmez | calm down | v | FAIL |
+| 31 | cérémonie | ceremony | n | PASS |
+| 32 | inhabituel | unusual | adj | PASS |
+| 33 | suivants | following | adj | FAIL |
+| 34 | comme | as, like | conj | PASS |
+| 35 | chercherons | seek | v | FAIL |
+| 36 | témoin | witness | n | PASS |
+| 37 | voudra | to want | v | FAIL |
+| 38 | idées | idea | n | PASS |
+| 39 | le | the | det | PASS |
+| 40 | prirent | to take | v | PASS |
+| 41 | soulevée | to raise | v | PASS |
+| 42 | piste | track | n | PASS |
+| 43 | hésitât | to hesitate | v | PASS |
+| 44 | appétit | appetite | n | PASS |
+| 45 | restions | to stay | v | FAIL |
+| 46 | émission | emission | n | PASS |
+| 47 | raterons | miss | v | FAIL |
+| 48 | manquer | miss | v | FAIL |
+| 49 | annuler | to cancel | v | PASS |
+| 50 | contrôler | to control | v | PASS |
+| 51 | recevons | to receive | v | PASS |
+| 52 | éclate | burst | v | FAIL |
+| 53 | maire | mayor | n | PASS |
+| 54 | réagi | to react | v | PASS |
+| 55 | supposons | to assume | v | PASS |
+| 56 | fraises | strawberry | n | PASS |
+| 57 | grandes | big | adj | PASS |
+| 58 | pour | for | prep | PASS |
+| 59 | restait | to stay | v | FAIL |
+| 60 | ensemble | together | adv | PASS |
+| 61 | plaigne | complaint | v | FAIL |
+| 62 | quoique | though | conj | PASS |
+| 63 | modifications | modification | n | PASS |
+| 64 | podcast | podcast | n | FAIL |
+| 65 | apprenais | to learn | v | PASS |
+| 66 | causalité | causality | n | PASS |
+| 67 | noix | nut | n | PASS |
+| 68 | étonnant | amazing | adj | PASS |
+| 69 | vendue | to sell | v | PASS |
+| 70 | trahi | betray | v | FAIL |
+| 71 | ideal | ideal | adj | PASS |
+| 72 | repos | rest | n | PASS |
+| 73 | importance | importance | n | FAIL |
+| 74 | invitée | to invite | v | FAIL |
+| 75 | or | gold | n | PASS |
+| 76 | tomba | to fall | v | PASS |
+| 77 | mit | to put | v | FAIL |
+| 78 | cafetière | coffee maker | n | PASS |
+| 79 | procéderons | to proceed | v | PASS |
+| 80 | suspect | suspicious | adj | PASS |
+| 81 | variables | variable | n | PASS |
+| 82 | gardé | to keep | v | PASS |
+| 83 | connais | to know | v | PASS |
+| 84 | repenser | rethink | v | FAIL |
+| 85 | moelleux | soft | adj | PASS |
+| 86 | pourquoi | why | adv | PASS |
+| 87 | aimerait | like | v | FAIL |
+| 88 | confiture | to jam | n | FAIL |
+| 89 | rêves | dream | n | PASS |
+| 90 | réfère | to refer | v | PASS |
+| 91 | neveux | nephew | n | PASS |
+| 92 | inondées | flooded | v | FAIL |
+| 93 | grève | to strike | n | FAIL |
+| 94 | sombre | dark | adj | PASS |
+| 95 | vécût | to live | v | PASS |
+| 96 | perd | to lose | v | PASS |
+| 97 | sommet | to summit | n | FAIL |
+| 98 | services | service | n | PASS |
+| 99 | dessert | dessert | n | FAIL |
+| 100 | recettes | recipe | n | PASS |
 
 ## Post-Processing Stats
 
@@ -158,41 +160,36 @@
 === Post-Processing Report ===
   romanization: 1357
     examples: piano, attention, addition, acceptez, invitation
-  lowercased: 151
+  lowercased: 150
     examples: espagnol, buvons, français, paris, applaudissons
   stripped_article: 5
     examples: longtemps, lendemain, celui, quelques, lœil
-  stripped_pronoun: 126
-    examples: habitons, vendons, arrivons, connaissons, préparais
-  lemmatized_verb: 459
-    examples: besoin, paye, dépense, dort, ouvre
-  lemmatized_noun: 423
+  stripped_pronoun: 333
+    examples: habitons, vendons, arrivons, connaissons, commenceront
+  lemmatized_verb: 583
+    examples: paye, dépense, dort, ouvre, finis
+  lemmatized_noun: 371
     examples: joues, lunettes, fleurs, photos, fermes
-  fragment_trimmed: 3
-    examples: racontons, promenons, recontacterai
-  wrong_pos: 115
-    examples: besoin, aide, dépense, train, bois
+  fragment_trimmed: 2
+    examples: racontons, promenons
+  wrong_pos: 861
+    examples: étudions, besoin, aide, dépense, joues
   function_word_def: 83
     examples: pourriez, sûr, puis, faut, désormais
   stripped_false_to: 53
     examples: ensemble, matin, soir, rapidement, tôt
-  stripped_false_to_v2: 21
-    examples: reposer, réserver, réfléchir, déménager, terminer
-  self_referencing: 251
-    examples: piano, attention, addition, invitation, paris
-  total_flagged: 1806
-  duplicate_translations (10+): 11
+  stripped_false_to_v2: 11
+    examples: reposer, réserver, déménager, terminer, traverser
+  self_referencing: 215
+    examples: attention, addition, invitation, paris, dessert
+  total_flagged: 2516
+  duplicate_translations (10+): 16
+    "to leave" → 13 entries
+    "to sleep" → 12 entries
     "to finish" → 11 entries
-    "to arrive" → 10 entries
-    "to understand" → 11 entries
-    "to live" → 12 entries
-    "to find" → 16 entries
+    "to arrive" → 15 entries
+    "to understand" → 15 entries
 ```
 
 ## Garbled Keys Removed
 
-- `lattention` (was: "attention")
-- `saméliore` (was: "to improve")
-- `saméliorent` (was: "improve")
-- `voudriezvous` (was: "would you like")
-- `voulezvous` (was: "do you want")

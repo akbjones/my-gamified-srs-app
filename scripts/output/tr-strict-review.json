@@ -2,32 +2,14 @@
   "language": "tr",
   "total_entries": 9694,
   "total_checked": 200,
-  "passed": 197,
-  "failed": 3,
-  "pass_rate": "98.5%",
+  "passed": 195,
+  "failed": 5,
+  "pass_rate": "97.5%",
   "grade": "A",
   "failures_by_type": {
-    "semantic_fail": 3
+    "semantic_fail": 5
   },
   "failure_examples": [
-    {
-      "word": "sorumluluğumuzdur",
-      "en": "to ask",
-      "pos": "v",
-      "google": "It is our responsibility",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "ask"
-        ],
-        "gtWords": [
-          "responsibility"
-        ],
-        "gt": "It is our responsibility"
-      }
-    },
     {
       "word": "kayıyor",
       "en": "to cream",
@@ -47,23 +29,76 @@
       }
     },
     {
-      "word": "yemiyoruz",
-      "en": "to cooked, to food",
+      "word": "uyuyorsunuz",
+      "en": "to suit",
       "pos": "v",
-      "google": "we don't eat",
+      "google": "You are sleeping",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "cook",
-          "food"
+          "suit"
         ],
         "gtWords": [
-          "don",
-          "eat"
+          "be",
+          "sleep"
         ],
-        "gt": "we don't eat"
+        "gt": "You are sleeping"
+      }
+    },
+    {
+      "word": "sürüyordu",
+      "en": "to spread",
+      "pos": "v",
+      "google": "was continuing",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "spread"
+        ],
+        "gtWords": [
+          "continu"
+        ],
+        "gt": "was continuing"
+      }
+    },
+    {
+      "word": "hazırlandım",
+      "en": "to prepare",
+      "pos": "v",
+      "google": "I got ready",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "prepare"
+        ],
+        "gtWords": [
+          "ready"
+        ],
+        "gt": "I got ready"
+      }
+    },
+    {
+      "word": "tanıyor",
+      "en": "to recognise",
+      "pos": "v",
+      "google": "He knows",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "recognise"
+        ],
+        "gtWords": [
+          "know"
+        ],
+        "gt": "He knows"
       }
     }
   ]

@@ -2,27 +2,69 @@
   "language": "sv",
   "total_entries": 5335,
   "total_checked": 200,
-  "passed": 198,
-  "failed": 2,
-  "pass_rate": "99%",
+  "passed": 194,
+  "failed": 6,
+  "pass_rate": "97%",
   "grade": "A",
   "failures_by_type": {
-    "to_copula": 2
+    "to_copula": 3,
+    "to_past_tense": 1,
+    "semantic_fail": 1,
+    "to_noun": 1
   },
   "failure_examples": [
     {
-      "word": "skrevs",
-      "en": "to was written",
+      "word": "invigdes",
+      "en": "to was inaugurated",
       "pos": "v",
-      "google": "was written",
+      "google": "was inaugurated",
       "issues": "to_copula"
     },
     {
-      "word": "följdes",
-      "en": "to was followed",
+      "word": "mättes",
+      "en": "to was measured",
       "pos": "v",
-      "google": "was followed",
+      "google": "was measured",
       "issues": "to_copula"
+    },
+    {
+      "word": "skulle",
+      "en": "to said",
+      "pos": "v",
+      "google": "would",
+      "issues": "to_past_tense"
+    },
+    {
+      "word": "lämnar",
+      "en": "to leave",
+      "pos": "v",
+      "google": "leaves",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "leave"
+        ],
+        "gtWords": [
+          "leaf"
+        ],
+        "gt": "leaves"
+      }
+    },
+    {
+      "word": "godkändes",
+      "en": "to was approved",
+      "pos": "v",
+      "google": "was approved",
+      "issues": "to_copula"
+    },
+    {
+      "word": "plats",
+      "en": "to place",
+      "pos": "v",
+      "google": "place",
+      "issues": "to_noun"
     }
   ]
 }

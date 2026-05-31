@@ -7,8 +7,8 @@
   "pass_rate": "98%",
   "grade": "A",
   "failures_by_type": {
-    "to_past_tense": 1,
-    "semantic_fail": 3
+    "to_past_tense": 2,
+    "semantic_fail": 2
   },
   "failure_examples": [
     {
@@ -19,57 +19,46 @@
       "issues": "to_past_tense"
     },
     {
-      "word": "voudriez",
-      "en": "to want",
+      "word": "coûté",
+      "en": "to cost",
       "pos": "v",
-      "google": "would you like",
+      "google": "cost",
+      "issues": "to_past_tense"
+    },
+    {
+      "word": "adorerais",
+      "en": "to worship",
+      "pos": "v",
+      "google": "would love it",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "want"
+          "worship"
+        ],
+        "gtWords": [
+          "love"
+        ],
+        "gt": "would love it"
+      }
+    },
+    {
+      "word": "souhaiterais",
+      "en": "to wish",
+      "pos": "v",
+      "google": "would like",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "wish"
         ],
         "gtWords": [
           "like"
         ],
-        "gt": "would you like"
-      }
-    },
-    {
-      "word": "reviendrai",
-      "en": "to goodbye",
-      "pos": "v",
-      "google": "will return",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "goodbye"
-        ],
-        "gtWords": [
-          "return"
-        ],
-        "gt": "will return"
-      }
-    },
-    {
-      "word": "dinaient",
-      "en": "dined",
-      "pos": "n",
-      "google": "dinner",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "dine"
-        ],
-        "gtWords": [
-          "dinner"
-        ],
-        "gt": "dinner"
+        "gt": "would like"
       }
     }
   ]

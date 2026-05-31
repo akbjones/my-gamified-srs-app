@@ -2,88 +2,47 @@
   "language": "ru",
   "total_entries": 4783,
   "total_checked": 200,
-  "passed": 196,
-  "failed": 4,
-  "pass_rate": "98%",
+  "passed": 197,
+  "failed": 3,
+  "pass_rate": "98.5%",
   "grade": "A",
   "failures_by_type": {
-    "semantic_fail": 4
+    "semantic_fail": 1,
+    "to_prefix": 2
   },
   "failure_examples": [
     {
-      "word": "успеешь",
-      "en": "you\\",
+      "word": "вернёмся",
+      "en": "we\\",
       "pos": "n",
-      "google": "you'll make it",
+      "google": "we'll be back",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "you\\"
+          "we\\"
         ],
         "gtWords": [
           "ll",
-          "make"
+          "back"
         ],
-        "gt": "you'll make it"
+        "gt": "we'll be back"
       }
     },
     {
-      "word": "умываюсь",
-      "en": "i\\",
+      "word": "напишу",
+      "en": "to write",
       "pos": "n",
-      "google": "I'm washing my face",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "i\\"
-        ],
-        "gtWords": [
-          "wash",
-          "face"
-        ],
-        "gt": "I'm washing my face"
-      }
+      "google": "I'll write",
+      "issues": "to_prefix"
     },
     {
-      "word": "учишь",
-      "en": "to study",
-      "pos": "v",
-      "google": "you teach",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "study"
-        ],
-        "gtWords": [
-          "teach"
-        ],
-        "gt": "you teach"
-      }
-    },
-    {
-      "word": "придёшь",
-      "en": "you\\",
+      "word": "открою",
+      "en": "to open it",
       "pos": "n",
-      "google": "you'll come",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "you\\"
-        ],
-        "gtWords": [
-          "ll",
-          "come"
-        ],
-        "gt": "you'll come"
-      }
+      "google": "I'll open it",
+      "issues": "to_prefix"
     }
   ]
 }

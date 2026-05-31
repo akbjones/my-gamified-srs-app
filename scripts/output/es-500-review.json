@@ -7,21 +7,40 @@
   "pass_rate": "98.0%",
   "grade": "A",
   "failures_by_type": {
-    "self_ref": 9,
+    "self_ref": 7,
+    "to_prefix": 3,
     "not_english": 1
   },
   "failure_examples": [
     {
-      "word": "in",
-      "en": "in",
+      "word": "gas",
+      "en": "gas",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "moscas",
-      "en": "fly",
-      "pos": "n",
-      "issues": "not_english"
+      "word": "eras",
+      "en": "eras",
+      "pos": "v",
+      "issues": "to_prefix, self_ref"
+    },
+    {
+      "word": "parques",
+      "en": "parks",
+      "pos": "v",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "terrible",
+      "en": "terrible",
+      "pos": "adj",
+      "issues": "self_ref"
+    },
+    {
+      "word": "paredes",
+      "en": "walls",
+      "pos": "v",
+      "issues": "to_prefix"
     },
     {
       "word": "color",
@@ -30,44 +49,26 @@
       "issues": "self_ref"
     },
     {
-      "word": "cartagena",
-      "en": "cartagena",
+      "word": "tímido",
+      "en": "shy",
+      "pos": "adj",
+      "issues": "not_english"
+    },
+    {
+      "word": "late",
+      "en": "late",
+      "pos": "adj",
+      "issues": "self_ref"
+    },
+    {
+      "word": "michelin",
+      "en": "michelin",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "picchu",
-      "en": "picchu",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "embargo",
-      "en": "embargo",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "beethoven",
-      "en": "beethoven",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "gabriel",
-      "en": "gabriel",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "barcelona",
-      "en": "barcelona",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "talavera",
-      "en": "talavera",
+      "word": "crisis",
+      "en": "crisis",
       "pos": "n",
       "issues": "self_ref"
     }

@@ -1,12 +1,12 @@
 # Italian Dictionary v3 Rebuild - 100-Entry Review
 
-**Date:** 2026-04-05
+**Date:** 2026-04-06
 **Total entries written:** 6725
 **Function words:** 306
 **Google translated:** 4143
-**Bad lemmas removed:** 262
+**Bad lemmas removed:** 0
 **Lemma-copied:** 1337
-**Context-fixed:** 211
+**Context-fixed:** 180
 **Ambiguity-fixed:** 34
 
 ## Review Results
@@ -19,139 +19,139 @@
 
 | Word | English | POS | Problems |
 |------|---------|-----|----------|
-| concentrarmi | concentrate | v | missing_to_on_verb |
-| servizio | service | v | missing_to_on_verb |
-| zitta | to shut up | n | wrong_to_on_noun, wrong_pos |
-| auspica | hope | v | missing_to_on_verb |
-| lavoriamo | to work | v | wrong_pos |
-| dimenticato | forgotten | v | missing_to_on_verb |
-| attraversò | cross | v | missing_to_on_verb |
-| apprezzino | appreciate | v | missing_to_on_verb |
-| raccontava | to be telling | v | conjugated_english_ing |
-| trucchi | trick | v | missing_to_on_verb |
-| avvisassi | warned you | v | missing_to_on_verb |
-| time | time | n | self_referencing |
-| morì | to die | n | wrong_to_on_noun, wrong_pos |
-| costume | costume | v | missing_to_on_verb, self_referencing |
-| abitanti | inhabitant | v | missing_to_on_verb |
-| risponde | answer | v | missing_to_on_verb |
-| norme | to rule | n | wrong_to_on_noun, wrong_pos |
-| saresti | ? | v | missing_to_on_verb, truncated |
-| sviluppato | developed | v | missing_to_on_verb |
-| accompagnasse | accompany | v | missing_to_on_verb |
-| scavi | excavation | v | missing_to_on_verb |
-| gioco | game; to play | v | wrong_pos |
-| avventura | adventure | v | missing_to_on_verb |
-| sposati | married | v | missing_to_on_verb |
-| ringrazio | thank | v | missing_to_on_verb |
-| dallacqua | from the water | n | possible_garbled_key |
+| figurati | forget about it | v | missing_to_on_verb, wrong_pos |
+| desidero | wish | v | missing_to_on_verb, wrong_pos |
+| tratta | deals with | v | missing_to_on_verb, wrong_pos |
+| centrato | centered | v | missing_to_on_verb, wrong_pos |
+| definitiva | definitive | v | missing_to_on_verb, wrong_pos |
+| dubitavo | doubted | v | missing_to_on_verb, wrong_pos |
+| allegri | cheerful | v | missing_to_on_verb, wrong_pos |
+| crescita | to grow | v | wrong_pos |
+| cura | to care | v | wrong_pos |
+| solare | solar | v | missing_to_on_verb, wrong_pos |
+| spettacolo | to show | n | wrong_to_on_noun, wrong_pos |
+| stati | been (pl.) | v | missing_to_on_verb |
+| preliminari | preliminari | n | self_referencing |
+| finora | to finish | v | wrong_pos |
+| possiate | can | v | missing_to_on_verb, wrong_pos |
+| presentata | present | v | missing_to_on_verb, wrong_pos |
+| scoppiare | burst | v | missing_to_on_verb, wrong_pos |
+| avvincente | compelling | v | missing_to_on_verb, conjugated_english_ing, wrong_pos |
+| stipendio | salary | v | missing_to_on_verb, wrong_pos |
+| ceno | to have dinner | v | wrong_pos |
+| sorprenda | to surprise | v | wrong_pos |
+| cinema | cinema | n | self_referencing |
+| affollata | crowded | v | missing_to_on_verb, wrong_pos |
+| scherzando | joking | v | missing_to_on_verb, wrong_pos |
 | weekend | weekend | n | self_referencing |
-| spettacolare | spectacular | v | missing_to_on_verb |
+| galoppa | gallop | v | missing_to_on_verb, wrong_pos |
+| competenza | competence | v | missing_to_on_verb, wrong_pos |
+| colpito | to struck | v | wrong_pos |
 
 ## Full Sample
 
 | # | Word | English | POS | Status |
 |---|------|---------|-----|--------|
-| 1 | cambio | change; to change | v | PASS |
-| 2 | bionda | blonde | n | PASS |
-| 3 | dellautobus | bus | n | PASS |
-| 4 | gioia | joy | n | PASS |
-| 5 | concentrarmi | concentrate | v | FAIL |
-| 6 | servizio | service | v | FAIL |
-| 7 | zitta | to shut up | n | FAIL |
-| 8 | auspica | hope | v | FAIL |
-| 9 | rende | to make | v | PASS |
-| 10 | materia | matter | n | PASS |
-| 11 | conoscevo | to know | v | PASS |
-| 12 | lavoriamo | to work | v | FAIL |
-| 13 | quadro | square | n | PASS |
-| 14 | chiarimento | clarification | n | PASS |
-| 15 | sostenuto | to support | v | PASS |
-| 16 | arrangiarsi | to make do | v | PASS |
-| 17 | dimenticato | forgotten | v | FAIL |
-| 18 | benissimo | well | n | PASS |
-| 19 | patrimonio | heritage | n | PASS |
-| 20 | attraversò | cross | v | FAIL |
-| 21 | ce | there is | n | PASS |
-| 22 | arriverà | to arrive | v | PASS |
-| 23 | nome | name | n | PASS |
-| 24 | paese | village | n | PASS |
-| 25 | gestire | to manage | v | PASS |
-| 26 | avrà | to have | v | PASS |
-| 27 | apprezzino | appreciate | v | FAIL |
-| 28 | raccontava | to be telling | v | FAIL |
-| 29 | febbre | fever | n | PASS |
-| 30 | onorevole | honorable | n | PASS |
-| 31 | trucchi | trick | v | FAIL |
-| 32 | avvisassi | warned you | v | FAIL |
-| 33 | terzo | third | n | PASS |
-| 34 | vera | true | n | PASS |
-| 35 | lunga | long | n | PASS |
-| 36 | time | time | n | FAIL |
-| 37 | fortemente | strongly | adv | PASS |
-| 38 | morì | to die | n | FAIL |
-| 39 | pizzico | pinch | n | PASS |
-| 40 | nuvole | cloud | n | PASS |
-| 41 | urgente | urgent | n | PASS |
-| 42 | balletto | ballet | n | PASS |
-| 43 | impatto | impact | n | PASS |
-| 44 | completiamo | to complete | v | PASS |
-| 45 | annosa | age-old | adj | PASS |
-| 46 | torcere | to twist | v | PASS |
-| 47 | indietro | backward | n | PASS |
-| 48 | scelte | choice | n | PASS |
-| 49 | costume | costume | v | FAIL |
-| 50 | ghiande | acorn | n | PASS |
-| 51 | scrivere | to write | v | PASS |
-| 52 | operato | to operate | v | PASS |
-| 53 | collego | to connect | v | PASS |
-| 54 | richiesta | request | n | PASS |
-| 55 | buonissima | very good | n | PASS |
-| 56 | chiamiamo | to call | v | PASS |
-| 57 | abitanti | inhabitant | v | FAIL |
-| 58 | basso | low | n | PASS |
-| 59 | risponde | answer | v | FAIL |
-| 60 | giocando | to play | v | PASS |
-| 61 | norme | to rule | n | FAIL |
-| 62 | imparino | to learn | v | PASS |
-| 63 | ed | and | n | PASS |
-| 64 | giardino | garden | n | PASS |
-| 65 | saresti | ? | v | FAIL |
-| 66 | andrei | to go | v | PASS |
-| 67 | sagra | festival | n | PASS |
-| 68 | matura | mature | n | PASS |
-| 69 | qualcosa | something | adj | PASS |
-| 70 | minima | minimum | n | PASS |
-| 71 | fermata | to stop | v | PASS |
-| 72 | fatta | to do | v | PASS |
-| 73 | riscontro | feedback | n | PASS |
-| 74 | grattacielo | skyscraper | n | PASS |
-| 75 | frutta | fruit | n | PASS |
-| 76 | sviluppato | developed | v | FAIL |
-| 77 | accompagnasse | accompany | v | FAIL |
-| 78 | proviene | to come | v | PASS |
-| 79 | scavi | excavation | v | FAIL |
-| 80 | aggiungi | to add | v | PASS |
-| 81 | futuro | future | n | PASS |
-| 82 | gioco | game; to play | v | FAIL |
-| 83 | comode | comfortable | n | PASS |
-| 84 | avventura | adventure | v | FAIL |
-| 85 | doppia | double | n | PASS |
-| 86 | cerimonia | ceremony | n | PASS |
-| 87 | sposati | married | v | FAIL |
-| 88 | ringrazio | thank | v | FAIL |
-| 89 | costerà | to cost | v | PASS |
-| 90 | dirmelo | to tell me | v | PASS |
-| 91 | significa | to mean | v | PASS |
-| 92 | milioni | million | n | PASS |
-| 93 | dallacqua | from the water | n | FAIL |
-| 94 | weekend | weekend | n | FAIL |
-| 95 | spiegato | to explain | v | PASS |
-| 96 | ami | to love | v | PASS |
-| 97 | tua | your | n | PASS |
-| 98 | spettacolare | spectacular | v | FAIL |
-| 99 | lago | lake | n | PASS |
-| 100 | sufficiente | sufficient | n | PASS |
+| 1 | figurati | forget about it | v | FAIL |
+| 2 | desidero | wish | v | FAIL |
+| 3 | imparerò | to learn | v | PASS |
+| 4 | prese | to take | v | PASS |
+| 5 | parlerai | to talk | v | PASS |
+| 6 | tratta | deals with | v | FAIL |
+| 7 | centrato | centered | v | FAIL |
+| 8 | continuano | to continue | v | PASS |
+| 9 | spedita | to ship | v | PASS |
+| 10 | grandi | large | n | PASS |
+| 11 | algoritmo | algorithm | n | PASS |
+| 12 | prendete | to take | v | PASS |
+| 13 | opinioni | opinion | n | PASS |
+| 14 | definitiva | definitive | v | FAIL |
+| 15 | dica | to say | v | PASS |
+| 16 | possibile | possible | adj | PASS |
+| 17 | decenni | decade | n | PASS |
+| 18 | restano | to remain | v | PASS |
+| 19 | dubitavo | doubted | v | FAIL |
+| 20 | seduto | to sit | v | PASS |
+| 21 | posticipare | to postpone | v | PASS |
+| 22 | allegri | cheerful | v | FAIL |
+| 23 | prendo | to take | v | PASS |
+| 24 | dieci | ten | n | PASS |
+| 25 | povertà | poverty | n | PASS |
+| 26 | vanno | to go | v | PASS |
+| 27 | controlla | to count | v | PASS |
+| 28 | qualsiasi | any | n | PASS |
+| 29 | sosta | stopover | n | PASS |
+| 30 | chiedile | to ask | v | PASS |
+| 31 | segreto | secret | n | PASS |
+| 32 | vengano | to come | v | PASS |
+| 33 | crescita | to grow | v | FAIL |
+| 34 | quarantina | forty | n | PASS |
+| 35 | verdissime | very green | n | PASS |
+| 36 | straniero | foreigner | n | PASS |
+| 37 | cattedrale | cathedral | n | PASS |
+| 38 | cura | to care | v | FAIL |
+| 39 | miele | honey | n | PASS |
+| 40 | ormai | at this point | n | PASS |
+| 41 | giustizia | justice | n | PASS |
+| 42 | errore | mistake | n | PASS |
+| 43 | ore | hour | n | PASS |
+| 44 | carta | paper | n | PASS |
+| 45 | solare | solar | v | FAIL |
+| 46 | nuovi | new | n | PASS |
+| 47 | giappone | japan | n | PASS |
+| 48 | sedie | chair | n | PASS |
+| 49 | fenicottero | flamingo | n | PASS |
+| 50 | orecchie | ear | n | PASS |
+| 51 | scorso | last | n | PASS |
+| 52 | spettacolo | to show | n | FAIL |
+| 53 | bolle | bubble | n | PASS |
+| 54 | stati | been (pl.) | v | FAIL |
+| 55 | risposta | answer | n | PASS |
+| 56 | preliminari | preliminari | n | FAIL |
+| 57 | utile | useful | n | PASS |
+| 58 | castello | castle | n | PASS |
+| 59 | successo | success | n | PASS |
+| 60 | foto | photo | n | PASS |
+| 61 | finora | to finish | v | FAIL |
+| 62 | vivi | to live | v | PASS |
+| 63 | possiate | can | v | FAIL |
+| 64 | presentata | present | v | FAIL |
+| 65 | apprezzarlo | to appreciate it | v | PASS |
+| 66 | scoppiare | burst | v | FAIL |
+| 67 | eviti | to avoid | v | PASS |
+| 68 | serve | to serve | v | PASS |
+| 69 | dissi | to say | v | PASS |
+| 70 | avvincente | compelling | v | FAIL |
+| 71 | stipendio | salary | v | FAIL |
+| 72 | italiani | italian | n | PASS |
+| 73 | ceno | to have dinner | v | FAIL |
+| 74 | conosco | to know | v | PASS |
+| 75 | obiettivo | objective | adj | PASS |
+| 76 | succedere | to happen | v | PASS |
+| 77 | arrotola | to roll up | v | PASS |
+| 78 | tazza | cup | n | PASS |
+| 79 | sorprenda | to surprise | v | FAIL |
+| 80 | terrò | to keep | v | PASS |
+| 81 | cinema | cinema | n | FAIL |
+| 82 | dormivano | to sleep | v | PASS |
+| 83 | affollata | crowded | v | FAIL |
+| 84 | comunità | community | n | PASS |
+| 85 | ascolto | to listen | v | PASS |
+| 86 | scherzando | joking | v | FAIL |
+| 87 | straniera | foreigner | n | PASS |
+| 88 | weekend | weekend | n | FAIL |
+| 89 | suona | to play | v | PASS |
+| 90 | capisse | to understand | v | PASS |
+| 91 | galoppa | gallop | v | FAIL |
+| 92 | competenza | competence | v | FAIL |
+| 93 | ottimo | optimal | n | PASS |
+| 94 | barzelletta | joke | n | PASS |
+| 95 | mette | to put | v | PASS |
+| 96 | colpito | to struck | v | FAIL |
+| 97 | sarebbero | to be | v | PASS |
+| 98 | nuoto | to swim | v | PASS |
+| 99 | vissuto | to live | v | PASS |
+| 100 | corre | to run | v | PASS |
 
 ## Post-Processing Stats
 
@@ -163,39 +163,34 @@
     examples: direi, sì, attenzione, giusto, mangio
   stripped_article: 1
     examples: molta
-  stripped_pronoun: 653
-    examples: direi, dovremmo, bisognerebbe, mangio, compro
+  stripped_pronoun: 910
+    examples: direi, direi, dovremmo, bisognerebbe, sarebbe
   stripped_negation: 1
     examples: boh
-  lemmatized_verb: 539
-    examples: beve, apre, porta, vive, pulisce
-  lemmatized_noun: 417
-    examples: sì, preferisce, occhiali, chiude, risponde
+  lemmatized_verb: 676
+    examples: preferisce, beve, apre, porta, vive
+  lemmatized_noun: 346
+    examples: sì, occhiali, chiude, risponde, disegni
   fragment_trimmed: 3
     examples: millenovecentocinquanta, salutami, milleduecentosessantacinque
-  wrong_pos: 160
-    examples: gioco, finestra, lavoro, amici, lavoriamo
+  wrong_pos: 1021
+    examples: direi, dovremmo, bisognerebbe, cena, prepariamo
   function_word_def: 142
     examples: dovremmo, bisognerebbe, sarebbe, molte, attraverso
   stripped_false_to: 47
     examples: mattina, sera, più, già, lentamente
-  stripped_false_to_v2: 15
-    examples: preoccuparsi, concentrarmi, ingrassare, concludere, rifare
-  self_referencing: 88
-    examples: pasta, tennis, pizza, freddo, email
-  total_flagged: 1452
-  duplicate_translations (10+): 15
-    "to eat" → 11 entries
-    "to speak" → 12 entries
-    "to live" → 20 entries
-    "to work" → 16 entries
-    "to play" → 10 entries
+  stripped_false_to_v2: 3
+    examples: rifare, esagerare, affermare
+  self_referencing: 59
+    examples: freddo, bravo, computer, cinema, sport
+  total_flagged: 2284
+  duplicate_translations (10+): 28
+    "to say" → 12 entries
+    "to be" → 24 entries
+    "to eat" → 13 entries
+    "to buy" → 10 entries
+    "to cook" → 10 entries
 ```
 
 ## Garbled Keys Removed
 
-- `lacqua` (was: "water")
-- `luomo` (was: "man")
-- `lamico` (was: "friend")
-- `larte` (was: "famous")
-- `linverno` (was: "winter")

@@ -2,19 +2,47 @@
   "language": "sv",
   "total_entries": 5298,
   "total_checked": 500,
-  "passed": 484,
-  "failed": 16,
-  "pass_rate": "96.8%",
+  "passed": 486,
+  "failed": 14,
+  "pass_rate": "97.2%",
   "grade": "A",
   "failures_by_type": {
-    "self_ref": 10,
-    "truncated": 5,
-    "not_english": 1
+    "self_ref": 14
   },
   "failure_examples": [
     {
-      "word": "umeå",
-      "en": "umeå",
+      "word": "paradox",
+      "en": "paradox",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "symbol",
+      "en": "symbol",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "doggy",
+      "en": "doggy",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "kiruna",
+      "en": "kiruna",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "origami",
+      "en": "origami",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "tradition",
+      "en": "tradition",
       "pos": "n",
       "issues": "self_ref"
     },
@@ -25,87 +53,45 @@
       "issues": "self_ref"
     },
     {
-      "word": "utvalda",
-      "en": "?",
-      "pos": "n",
-      "issues": "truncated"
-    },
-    {
-      "word": "dill",
-      "en": "dill",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "oslo",
-      "en": "?",
-      "pos": "n",
-      "issues": "truncated"
-    },
-    {
-      "word": "april",
-      "en": "april",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "uppenbara",
-      "en": "?",
-      "pos": "adj",
-      "issues": "truncated"
-    },
-    {
-      "word": "spotify",
-      "en": "spotify",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "arga",
-      "en": "?",
-      "pos": "n",
-      "issues": "truncated"
-    },
-    {
-      "word": "skyarna",
-      "en": "sky",
-      "pos": "n",
-      "issues": "not_english"
-    },
-    {
-      "word": "selma",
-      "en": "selma",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "variation",
-      "en": "variation",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "genomförda",
-      "en": "?",
-      "pos": "n",
-      "issues": "truncated"
-    },
-    {
-      "word": "fossil",
-      "en": "fossil",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
       "word": "smoothie",
       "en": "smoothie",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "finger",
-      "en": "finger",
+      "word": "gotland",
+      "en": "gotland",
       "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "dessert",
+      "en": "dessert",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "gluten",
+      "en": "gluten",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "ikea",
+      "en": "ikea",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "alfred",
+      "en": "alfred",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "full",
+      "en": "full",
+      "pos": "adj",
       "issues": "self_ref"
     }
   ]

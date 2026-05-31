@@ -2,129 +2,104 @@
   "language": "pt",
   "total_entries": 5501,
   "total_checked": 200,
-  "passed": 193,
-  "failed": 7,
-  "pass_rate": "96.5%",
+  "passed": 195,
+  "failed": 5,
+  "pass_rate": "97.5%",
   "grade": "A",
   "failures_by_type": {
-    "semantic_fail": 6,
-    "to_past_tense": 1
+    "semantic_fail": 5
   },
   "failure_examples": [
     {
-      "word": "tiraria",
-      "en": "to throw",
+      "word": "passei",
+      "en": "to stroll",
       "pos": "v",
-      "google": "I would take",
+      "google": "I passed",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "throw"
+          "stroll"
         ],
         "gtWords": [
-          "take"
+          "pass"
         ],
-        "gt": "I would take"
+        "gt": "I passed"
       }
     },
     {
-      "word": "guardamos",
-      "en": "to save",
+      "word": "acordou",
+      "en": "to wake up",
       "pos": "v",
-      "google": "we keep",
+      "google": "he remembered",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "save"
+          "wake"
         ],
         "gtWords": [
-          "keep"
+          "remember"
         ],
-        "gt": "we keep"
+        "gt": "he remembered"
       }
     },
     {
-      "word": "mando",
-      "en": "to send",
+      "word": "sentindo",
+      "en": "to sit",
       "pos": "v",
-      "google": "I command",
+      "google": "feeling",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "send"
+          "sit"
         ],
         "gtWords": [
-          "command"
+          "feel"
         ],
-        "gt": "I command"
+        "gt": "feeling"
       }
     },
     {
-      "word": "digo",
-      "en": "to say",
+      "word": "emociona",
+      "en": "to thrill",
       "pos": "v",
-      "google": "I mean",
+      "google": "exciting",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "say"
+          "thrill"
         ],
         "gtWords": [
-          "mean"
+          "excite"
         ],
-        "gt": "I mean"
+        "gt": "exciting"
       }
     },
     {
-      "word": "guardei",
-      "en": "to save",
+      "word": "sentira",
+      "en": "to sit",
       "pos": "v",
-      "google": "I kept",
+      "google": "had felt",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "save"
+          "sit"
         ],
         "gtWords": [
-          "keep"
+          "have",
+          "feel"
         ],
-        "gt": "I kept"
+        "gt": "had felt"
       }
-    },
-    {
-      "word": "acompanho",
-      "en": "i\\",
-      "pos": "n",
-      "google": "I'm following",
-      "issues": "semantic_fail",
-      "semDetail": {
-        "pass": false,
-        "reason": "no_overlap",
-        "ourWords": [
-          "i\\"
-        ],
-        "gtWords": [
-          "follow"
-        ],
-        "gt": "I'm following"
-      }
-    },
-    {
-      "word": "custa",
-      "en": "to cost",
-      "pos": "v",
-      "google": "costs",
-      "issues": "to_past_tense"
     }
   ]
 }

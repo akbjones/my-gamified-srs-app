@@ -1,152 +1,160 @@
 # Turkish Dictionary v3 Rebuild - 100-Entry Review
 
-**Date:** 2026-04-05
+**Date:** 2026-04-06
 **Total entries written:** 9688
 **Function words:** 85
 **Google translated:** 5395
 **Lemma-copied:** 629
 **Bad lemmas removed:** 0
-**Context-fixed:** 116
+**Context-fixed:** 112
 
 ## Review Results
 
-**Pass:** 76 / 100
-**Fail:** 24 / 100
-**Grade:** C
+**Pass:** 68 / 100
+**Fail:** 32 / 100
+**Grade:** D
 
 ## Issues Found
 
 | Word | English | POS | Problems |
 |------|---------|-----|----------|
-| güçlüyüm | am strong | n | wrong_pos |
-| olan | who is, being | v | missing_to_on_verb, conjugated_english_ing |
-| olmamış | not | v | missing_to_on_verb |
-| yöneldiklerini | to be heading towards | n | wrong_to_on_noun, conjugated_english_ing, wrong_pos |
-| tasarrufu | to save | n | wrong_to_on_noun, wrong_pos |
-| okuma | to read | n | wrong_to_on_noun, wrong_pos |
-| sakatlandı | injured | v | missing_to_on_verb |
-| kaybetmezdik | to lose | n | wrong_to_on_noun, wrong_pos |
-| cevaplıyor | answering | v | missing_to_on_verb |
-| hayati | vital | v | missing_to_on_verb |
-| yeriz | food | v | missing_to_on_verb |
-| ezme | crushing | n | conjugated_english_ing |
-| diktirdim | to have it sewn | n | wrong_to_on_noun, wrong_pos |
-| duruyordu | to be standing | v | conjugated_english_ing |
-| bıraktı | left | n | conjugated_english_past, wrong_pos |
-| yürümeyi | to walk | n | wrong_to_on_noun, wrong_pos |
-| taşıma | transport | v | missing_to_on_verb |
-| tükendi | sold out | n | conjugated_english_past, wrong_pos |
-| içiyorsun | to be drinking | n | wrong_to_on_noun, wrong_pos |
-| akıyor | flowing | v | missing_to_on_verb, conjugated_english_ing |
-| içtim | to drink | n | wrong_to_on_noun, wrong_pos |
-| ezan | to call to prayer | n | wrong_to_on_noun, wrong_pos |
-| topladık | to collect | n | wrong_to_on_noun, wrong_pos |
-| boyattık | to have it painted | n | wrong_to_on_noun, wrong_pos |
+| pilot | pilot | n | self_referencing |
+| yapacaksınız | to do | n | wrong_to_on_noun, wrong_pos |
+| hoşlanıyor | like | v | missing_to_on_verb, wrong_pos |
+| plan | to plan | n | wrong_to_on_noun, wrong_pos |
+| büyüleyici | fascinating | n | conjugated_english_ing |
+| not | to note | n | wrong_to_on_noun, wrong_pos |
+| uçuşlar | flight | v | missing_to_on_verb, wrong_pos |
+| yemek | food | v | missing_to_on_verb, wrong_pos |
+| yerleştirdim | to place it | n | wrong_to_on_noun, wrong_pos |
+| dinse | religion | v | missing_to_on_verb, wrong_pos |
+| sever | to love | n | wrong_to_on_noun, wrong_pos |
+| ısınarak | warming up | v | missing_to_on_verb, conjugated_english_ing, wrong_pos |
+| kaldığım | to stay | n | wrong_to_on_noun, wrong_pos |
+| bulduk | found | n | conjugated_english_past, wrong_pos |
+| öğrendim | to learn | n | wrong_to_on_noun, wrong_pos |
+| yıllar | year | v | missing_to_on_verb, wrong_pos |
+| halay | halay | n | self_referencing |
+| tren | to train | n | wrong_to_on_noun, wrong_pos |
+| gelecekler | to come | v | wrong_pos |
+| örgüsü | knitting | n | conjugated_english_ing |
+| biter | end | v | missing_to_on_verb, wrong_pos |
+| içiyoruz | to be drinking | n | wrong_to_on_noun, wrong_pos |
+| var | there is, exists | v | missing_to_on_verb |
+| sevindik | to be happy | n | wrong_to_on_noun, wrong_pos |
+| belirtti | stated | v | missing_to_on_verb, wrong_pos |
+| gelişirdi | developed | v | missing_to_on_verb, wrong_pos |
+| çaldı | stole | v | missing_to_on_verb, conjugated_english_past, wrong_pos |
+| bekliyorum | to be waiting | n | wrong_to_on_noun, conjugated_english_ing, wrong_pos |
+| sürer | to spread | n | wrong_to_on_noun, wrong_pos |
+| bence | according to me | adv | conjugated_english_ing |
+| ıslanmazdım | to get wet | n | wrong_to_on_noun, wrong_pos |
+| toplantıyı | to meet | n | wrong_to_on_noun, wrong_pos |
 
 ## Full Sample
 
 | # | Word | English | POS | Status |
 |---|------|---------|-----|--------|
-| 1 | gideceğini | that he will go | n | PASS |
-| 2 | mezun | graduate | n | PASS |
-| 3 | antik | antique | n | PASS |
-| 4 | güçlüyüm | am strong | n | FAIL |
-| 5 | kızımın | my daughter | n | PASS |
-| 6 | arkadaşlarıyla | with his friend | n | PASS |
-| 7 | dengeli | balanced | adj | PASS |
-| 8 | büyükmüş | to be big | v | PASS |
-| 9 | olan | who is, being | v | FAIL |
-| 10 | zorluklarla | with difficulty | n | PASS |
-| 11 | tarihe | history | n | PASS |
-| 12 | ya | either, or | part | PASS |
-| 13 | olmamış | not | v | FAIL |
-| 14 | bakalım | let's see | n | PASS |
-| 15 | fiyatı | price | n | PASS |
-| 16 | yöneldiklerini | to be heading towards | n | FAIL |
-| 17 | tasarrufu | to save | n | FAIL |
-| 18 | okuma | to read | n | FAIL |
-| 19 | gelmeyecek | will not come | n | PASS |
-| 20 | sakatlandı | injured | v | FAIL |
-| 21 | sakin | beware | n | PASS |
-| 22 | nadiren | rarely | adv | PASS |
-| 23 | vardığımızda | when we arrive | n | PASS |
-| 24 | okuyucularını | reader | n | PASS |
-| 25 | pardösü | overcoat | n | PASS |
-| 26 | ajansı | agency | n | PASS |
-| 27 | üzüntüyle | with sadness | n | PASS |
-| 28 | bütçemiz | budget | n | PASS |
-| 29 | gördünüz | to see | v | PASS |
-| 30 | gelinimiz | our bride | n | PASS |
-| 31 | doğa | nature | n | PASS |
-| 32 | seviyorsunuz | to love | v | PASS |
-| 33 | kaybetmezdik | to lose | n | FAIL |
-| 34 | meydanın | square | n | PASS |
-| 35 | pazardan | from the market | n | PASS |
-| 36 | müziği | music | n | PASS |
-| 37 | meyveleri | fruit | n | PASS |
-| 38 | geçiyorum | i'm passing | n | PASS |
-| 39 | faktörlerin | factor | n | PASS |
-| 40 | çiçeklerini | flower | n | PASS |
-| 41 | müzikle | with music | n | PASS |
-| 42 | matematik | math | n | PASS |
-| 43 | çıkmış | out | n | PASS |
-| 44 | çatının | roof | n | PASS |
-| 45 | cevaplıyor | answering | v | FAIL |
-| 46 | milletimiz | our nation | n | PASS |
-| 47 | çocuklarla | with child | n | PASS |
-| 48 | hayati | vital | v | FAIL |
-| 49 | enerjik | energetic | n | PASS |
-| 50 | yaralı | wounded | adj | PASS |
-| 51 | kiraz | cherry | n | PASS |
-| 52 | yemeklerdir | food | n | PASS |
-| 53 | karşısında | against | n | PASS |
-| 54 | yeriz | food | v | FAIL |
-| 55 | ezme | crushing | n | FAIL |
-| 56 | diktirdim | to have it sewn | n | FAIL |
-| 57 | kazak | jumper | n | PASS |
-| 58 | bankta | in the bank | n | PASS |
-| 59 | ambulansta | in the ambulance | n | PASS |
-| 60 | çıkalım | let's go out | n | PASS |
-| 61 | duruyordu | to be standing | v | FAIL |
-| 62 | bıraktı | left | n | FAIL |
-| 63 | postanneden | from the post office | n | PASS |
-| 64 | prodüktör | producer | n | PASS |
-| 65 | yürümeyi | to walk | n | FAIL |
-| 66 | okuyacaksınız | to read | v | PASS |
-| 67 | nisan | april | n | PASS |
-| 68 | bodrumdaki | in the basement | n | PASS |
-| 69 | çalışmamız | our study | n | PASS |
-| 70 | taşıma | transport | v | FAIL |
-| 71 | saatlerce | for hour | adv | PASS |
-| 72 | mısır | sweetcorn | n | PASS |
-| 73 | yaşatıyor | to keep alive | v | PASS |
-| 74 | tükendi | sold out | n | FAIL |
-| 75 | çayı | tea | n | PASS |
-| 76 | cumhuriyet | republic | n | PASS |
-| 77 | at | horse | n | PASS |
-| 78 | kaygan | slippery | n | PASS |
-| 79 | balkona | the balcony | n | PASS |
-| 80 | geçerek | to go past | v | PASS |
-| 81 | güne | day | n | PASS |
-| 82 | içiyorsun | to be drinking | n | FAIL |
-| 83 | katma | added | n | PASS |
-| 84 | aramaya | to search | v | PASS |
-| 85 | kadife | velvet | n | PASS |
-| 86 | hırsız | thief | adj | PASS |
-| 87 | doğruluğunu | its accuracy | n | PASS |
-| 88 | fiyat | price | n | PASS |
-| 89 | akıyor | flowing | v | FAIL |
-| 90 | sabahtan | from the morning | n | PASS |
-| 91 | bileşik | compound | n | PASS |
-| 92 | içtim | to drink | n | FAIL |
-| 93 | ezan | to call to prayer | n | FAIL |
-| 94 | katındaki | on the floor | n | PASS |
-| 95 | topladık | to collect | n | FAIL |
-| 96 | başardım | succeeded | n | PASS |
-| 97 | boyattık | to have it painted | n | FAIL |
-| 98 | araştırmalar | research | n | PASS |
-| 99 | tarih | history | n | PASS |
-| 100 | çalmadı | to do not steal | v | PASS |
+| 1 | pilot | pilot | n | FAIL |
+| 2 | biz | we | pron | PASS |
+| 3 | sağda | right | n | PASS |
+| 4 | yapacaksınız | to do | n | FAIL |
+| 5 | titiz | rigorous | n | PASS |
+| 6 | yakasına | his collar | n | PASS |
+| 7 | saz | reed | n | PASS |
+| 8 | hoşlanıyor | like | v | FAIL |
+| 9 | plan | to plan | n | FAIL |
+| 10 | büyüleyici | fascinating | n | FAIL |
+| 11 | not | to note | n | FAIL |
+| 12 | fırtına | storm | n | PASS |
+| 13 | çay | tea | n | PASS |
+| 14 | köprüden | bridge | n | PASS |
+| 15 | ikili | dual | adj | PASS |
+| 16 | sınavı | exam | n | PASS |
+| 17 | hazinemi | my treasure | n | PASS |
+| 18 | uçuşlar | flight | v | FAIL |
+| 19 | korkak | coward | n | PASS |
+| 20 | dinozor | dinosaur | n | PASS |
+| 21 | yemek | food | v | FAIL |
+| 22 | ceket | jacket | n | PASS |
+| 23 | seriliydi | to spread | v | PASS |
+| 24 | unutmuşum | forgot | n | PASS |
+| 25 | edilemezdi | not be done | n | PASS |
+| 26 | baksaydık | if we looked | n | PASS |
+| 27 | tutam | pinch | n | PASS |
+| 28 | yerleştirdim | to place it | n | FAIL |
+| 29 | içer | to drink | v | PASS |
+| 30 | dinse | religion | v | FAIL |
+| 31 | sever | to love | n | FAIL |
+| 32 | otobüse | bus | n | PASS |
+| 33 | katından | from the floor | n | PASS |
+| 34 | ısınarak | warming up | v | FAIL |
+| 35 | yüksek | high | n | PASS |
+| 36 | kaldığım | to stay | n | FAIL |
+| 37 | bulduk | found | n | FAIL |
+| 38 | ofise | the office | n | PASS |
+| 39 | öğrendim | to learn | n | FAIL |
+| 40 | piyanoda | on the piano | n | PASS |
+| 41 | yıllar | year | v | FAIL |
+| 42 | kaç | how many | adj | PASS |
+| 43 | halay | halay | n | FAIL |
+| 44 | oluyor | to be | v | PASS |
+| 45 | tren | to train | n | FAIL |
+| 46 | ağrıtmak | hurt | n | PASS |
+| 47 | çatısından | from the roof | n | PASS |
+| 48 | denizde | sea | n | PASS |
+| 49 | veriyor | to give | v | PASS |
+| 50 | üniversiteye | the university | n | PASS |
+| 51 | duvarlarını | wall | n | PASS |
+| 52 | gecesi | night | n | PASS |
+| 53 | gelecekler | to come | v | FAIL |
+| 54 | açılışına | the opening | n | PASS |
+| 55 | boyuyla | with his height | n | PASS |
+| 56 | turizm | tourism | n | PASS |
+| 57 | örgüsü | knitting | n | FAIL |
+| 58 | biter | end | v | FAIL |
+| 59 | içiyoruz | to be drinking | n | FAIL |
+| 60 | ölçüyor | to measure | v | PASS |
+| 61 | plaj | beach | n | PASS |
+| 62 | sahibi | owner | n | PASS |
+| 63 | dilerim | wish | n | PASS |
+| 64 | yağmasına | plunder | n | PASS |
+| 65 | sıkılmıştı | to be bored | v | PASS |
+| 66 | kaçırmayalım | let's miss | n | PASS |
+| 67 | çevresel | environmental | adj | PASS |
+| 68 | yaralı | wounded | adj | PASS |
+| 69 | dokuzda | at nine | n | PASS |
+| 70 | var | there is, exists | v | FAIL |
+| 71 | beğendi | liked it | n | PASS |
+| 72 | sevindik | to be happy | n | FAIL |
+| 73 | çalabilir | can steal | n | PASS |
+| 74 | dişimi | my tooth | n | PASS |
+| 75 | hazırlık | preparation | n | PASS |
+| 76 | belirtti | stated | v | FAIL |
+| 77 | yapmam | to do | v | PASS |
+| 78 | sakalını | his beard | n | PASS |
+| 79 | gelişirdi | developed | v | FAIL |
+| 80 | çaldı | stole | v | FAIL |
+| 81 | hazırlıklarımı | my preparation | n | PASS |
+| 82 | zenginliğini | wealth | n | PASS |
+| 83 | bekliyorum | to be waiting | n | FAIL |
+| 84 | nazik | kind | adj | PASS |
+| 85 | sürer | to spread | n | FAIL |
+| 86 | tarım | agriculture | n | PASS |
+| 87 | çözülmeli | to be resolved | v | PASS |
+| 88 | bence | according to me | adv | FAIL |
+| 89 | i̇stanbulda | in Istanbul | n | PASS |
+| 90 | halı | state | n | PASS |
+| 91 | ıslanmazdım | to get wet | n | FAIL |
+| 92 | ihtimale | possibility | n | PASS |
+| 93 | restoranda | in the restaurant | n | PASS |
+| 94 | mümkün | possible | adj | PASS |
+| 95 | köşede | in the corner | n | PASS |
+| 96 | astronomlar | astronomer | n | PASS |
+| 97 | hostes | hostess | n | PASS |
+| 98 | üniversiteyi | university | n | PASS |
+| 99 | toplantıyı | to meet | n | FAIL |
+| 100 | kokuyordu | to smell | v | PASS |
 
 ## Post-Processing Stats
 
@@ -156,35 +164,35 @@
     examples: yoksa
   romanization: 338
     examples: spor, tamire, seviyor, restoran, doktor
-  lowercased: 715
+  lowercased: 713
     examples: türkçe, biliyor, dinlemiyor, gidelim, genellikle
   stripped_article: 55
     examples: biraz, lambayı, şehrin, dükkanın, gemiyi
-  stripped_pronoun: 727
-    examples: biliyor, kalıyoruz, içerim, özleyeceğim, okuyorsun
+  stripped_pronoun: 895
+    examples: biliyor, kalıyoruz, içerim, özleyeceğim, özleyeceğim
   stripped_negation: 78
     examples: tanımıyorum, istemiyorum, konuşamıyorum, bilmiyorum, içmedim
-  lemmatized_verb: 817
+  lemmatized_verb: 867
     examples: biliyor, musunuz, kalıyoruz, okuyorsun, sever
-  lemmatized_noun: 534
-    examples: önerir, çocuklarımızın, akşamları, hastaların, müzeleri
+  lemmatized_noun: 500
+    examples: çocuklarımızın, akşamları, hastaların, müzeleri, yıldır
   fragment_trimmed: 29
     examples: bent, görüşürüz, dönümümüzde, beklediğimiz, gezdiriyordu
-  wrong_pos: 698
+  wrong_pos: 1197
     examples: musunuz, haydi, kalıyoruz, yapmayı, sever
-  function_word_def: 172
+  function_word_def: 171
     examples: yapmayı, değilsiniz, su, ediyoruz, ettim
   stripped_false_to: 90
     examples: geç, akşam, boyunca, içinde, sabah
-  stripped_false_to_v2: 198
+  stripped_false_to_v2: 193
     examples: yürüyüşe, kıyısına, pikniğe, konuya, haritaya
-  self_referencing: 75
-    examples: lira, park, edip, film, darbuka
-  total_flagged: 1284
-  duplicate_translations (10+): 19
+  self_referencing: 59
+    examples: lira, edip, darbuka, pilot, baklavaı
+  total_flagged: 1766
+  duplicate_translations (10+): 24
     "to know" → 10 entries
-    "to drink" → 11 entries
-    "to do" → 23 entries
+    "to drink" → 10 entries
+    "to do" → 29 entries
     "to love" → 10 entries
-    "to want" → 12 entries
+    "to be" → 32 entries
 ```

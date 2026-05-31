@@ -1,153 +1,145 @@
 # German Dictionary v3 Rebuild - 100-Entry Review
 
-**Date:** 2026-04-05
+**Date:** 2026-04-06
 **Total entries written:** 7872
 **Function words:** 180
 **Google translated:** 5362
 **Lemma-copied:** 1016
-**Bad lemmas removed:** 1
-**Context-fixed:** 58
+**Bad lemmas removed:** 0
+**Context-fixed:** 68
 
 ## Review Results
 
-**Pass:** 75 / 100
-**Fail:** 25 / 100
-**Grade:** C
+**Pass:** 83 / 100
+**Fail:** 17 / 100
+**Grade:** B
 
 ## Issues Found
 
 | Word | English | POS | Problems |
 |------|---------|-----|----------|
-| restaurierte | restored | v | missing_to_on_verb |
-| gebaut | built | n | conjugated_english_past, wrong_pos |
-| schneeflocken | snowflake | v | missing_to_on_verb |
-| teilgenommen | participate | v | missing_to_on_verb |
-| fortbildungsseminar | training seminar | n | conjugated_english_ing |
-| entrümpeln | decluttering | v | missing_to_on_verb |
-| verspreche | promise | v | missing_to_on_verb |
-| liefern | delivery | v | missing_to_on_verb |
-| reisebüro | to travel agency | n | wrong_to_on_noun, wrong_pos |
-| veraltete | outdated | v | missing_to_on_verb |
-| besitzt | own | v | missing_to_on_verb |
-| verwandeln | transform | v | missing_to_on_verb |
-| wartezeit | to wait time | n | wrong_to_on_noun, wrong_pos |
-| gesunden | healthy | v | missing_to_on_verb |
-| kommenden | upcoming | v | missing_to_on_verb, conjugated_english_ing |
-| tat | to do | n | wrong_to_on_noun, wrong_pos |
-| wohlverdienten | well-deserved | v | missing_to_on_verb |
-| erfrischt | refresh | v | missing_to_on_verb |
-| vertraue | trust | v | missing_to_on_verb |
-| tagen | day | v | missing_to_on_verb |
-| abgeben | hand over | v | missing_to_on_verb |
-| kirschen | cherry | v | missing_to_on_verb |
-| schlief | to sleep | n | wrong_to_on_noun, wrong_pos |
-| gönne | treat yourself | v | missing_to_on_verb |
-| cello | cello | n | self_referencing |
+| glühenden | glowing | adj | conjugated_english_ing |
+| schneeflocken | snowflake | v | missing_to_on_verb, wrong_pos |
+| euren | your | v | missing_to_on_verb, wrong_pos |
+| chance | chance | n | self_referencing |
+| herausforderungen | to challenge | n | wrong_to_on_noun, wrong_pos |
+| schwierigen | difficult | v | missing_to_on_verb, wrong_pos |
+| gratulieren | congratulate | v | missing_to_on_verb, wrong_pos |
+| ausgewählte | to select | n | wrong_to_on_noun, wrong_pos |
+| pyrenäen | pyrenee | v | missing_to_on_verb, wrong_pos |
+| verstaucht | sprained | v | missing_to_on_verb, wrong_pos |
+| möbliertes | to furnish | n | wrong_to_on_noun, wrong_pos |
+| rasenmäher | mowing machine | n | conjugated_english_ing |
+| wochen | week | v | missing_to_on_verb, wrong_pos |
+| geliebt | to love | n | wrong_to_on_noun, wrong_pos |
+| löwen | lion | v | missing_to_on_verb, wrong_pos |
+| hinten | rear | v | missing_to_on_verb, wrong_pos |
+| intensiviert | intensified | v | missing_to_on_verb, wrong_pos |
 
 ## Full Sample
 
 | # | Word | English | POS | Status |
 |---|------|---------|-----|--------|
-| 1 | algorithmus | algorithm | n | PASS |
-| 2 | gespräch | conversation | n | PASS |
-| 3 | bezahlbare | affordable | n | PASS |
-| 4 | katz | cat | n | PASS |
-| 5 | besserung | improvement | n | PASS |
-| 6 | unhöfliches | impolite | n | PASS |
-| 7 | verlassen | to leave | v | PASS |
-| 8 | restaurierte | restored | v | FAIL |
-| 9 | befreundet | friend | n | PASS |
-| 10 | ostsee | baltic Sea | n | PASS |
-| 11 | verreisen | to travel | v | PASS |
-| 12 | ausbildung | education | n | PASS |
-| 13 | knapp | meager | n | PASS |
-| 14 | regelmäßig | regularly | adv | PASS |
-| 15 | zeitmaschine | time machine | n | PASS |
-| 16 | langsamer | slow | n | PASS |
-| 17 | kunde | customer | n | PASS |
-| 18 | straßenbahn | tram | n | PASS |
-| 19 | müllerin | miller | n | PASS |
-| 20 | rotes | red | adj | PASS |
-| 21 | küchentisch | kitchen table | adj | PASS |
-| 22 | gebaut | built | n | FAIL |
-| 23 | imker | beekeeper | n | PASS |
-| 24 | gegenseitiger | mutual | n | PASS |
-| 25 | schneeflocken | snowflake | v | FAIL |
-| 26 | teilgenommen | participate | v | FAIL |
-| 27 | fortbildungsseminar | training seminar | n | FAIL |
-| 28 | ziehen | to pull | v | PASS |
-| 29 | zerbrechliche | fragile | n | PASS |
-| 30 | erwiesen | to prove | v | PASS |
-| 31 | erstattung | refund | n | PASS |
-| 32 | setzt | to set | v | PASS |
-| 33 | wesentlich | significant | adj | PASS |
-| 34 | faden | thread | n | PASS |
-| 35 | entrümpeln | decluttering | v | FAIL |
-| 36 | eiche | oak | n | PASS |
-| 37 | landschaft | landscape | n | PASS |
-| 38 | konzerts | concert | n | PASS |
-| 39 | erreichen | to reach | v | PASS |
-| 40 | schwieriger | difficult | adj | PASS |
-| 41 | studien | to study | v | PASS |
-| 42 | neffe | nephew | n | PASS |
-| 43 | steige | to climb | v | PASS |
-| 44 | arbeitsstelle | job | n | PASS |
-| 45 | sooft | so often | n | PASS |
-| 46 | personalausweis | identity card | n | PASS |
-| 47 | verspreche | promise | v | FAIL |
-| 48 | servus | goodbye | n | PASS |
-| 49 | abgesagt | to cancel | v | PASS |
-| 50 | liefern | delivery | v | FAIL |
-| 51 | erreicht | to reach | v | PASS |
-| 52 | jedes | each | det | PASS |
-| 53 | reisebüro | to travel agency | n | FAIL |
-| 54 | fall | case | n | PASS |
-| 55 | veraltete | outdated | v | FAIL |
-| 56 | anwesend | present | n | PASS |
-| 57 | kater | hangover | n | PASS |
-| 58 | hotels | hotel | n | PASS |
-| 59 | besitzt | own | v | FAIL |
-| 60 | verwandeln | transform | v | FAIL |
-| 61 | angriff | attack | n | PASS |
-| 62 | eure | your | det | PASS |
-| 63 | gekauft | to buy | v | PASS |
-| 64 | aufgeführt | listed | n | PASS |
-| 65 | wartezeit | to wait time | n | FAIL |
-| 66 | tschüss | bye | interj | PASS |
-| 67 | benutzen | to use | v | PASS |
-| 68 | geschenkes | gift | n | PASS |
-| 69 | erst | first | adv | PASS |
-| 70 | bieten | to offer | v | PASS |
-| 71 | gesunden | healthy | v | FAIL |
-| 72 | kommenden | upcoming | v | FAIL |
-| 73 | tat | to do | n | FAIL |
-| 74 | wohlverdienten | well-deserved | v | FAIL |
-| 75 | gießen | to pour | v | PASS |
-| 76 | erfrischt | refresh | v | FAIL |
-| 77 | vertraue | trust | v | FAIL |
-| 78 | pistaziengeschmack | pistachio flavor | n | PASS |
-| 79 | dampfschifffahrtsgesellschaft | steamship company | n | PASS |
-| 80 | spargel | asparagus | n | PASS |
-| 81 | tagen | day | v | FAIL |
-| 82 | abgeben | hand over | v | FAIL |
-| 83 | motorroller | motor scooter | n | PASS |
-| 84 | analysierte | to analyze | v | PASS |
-| 85 | kirschen | cherry | v | FAIL |
-| 86 | stachelbeermarmelade | gooseberry jam | n | PASS |
-| 87 | pro | per | prep | PASS |
-| 88 | handel | trade | n | PASS |
-| 89 | schlief | to sleep | n | FAIL |
-| 90 | konzertsaal | concert hall | n | PASS |
-| 91 | thüringer | thuringian | n | PASS |
-| 92 | gönne | treat yourself | v | FAIL |
-| 93 | klarer | clear | n | PASS |
-| 94 | förderung | financial support | n | PASS |
-| 95 | gemeinschaftsküche | communal kitchen | n | PASS |
-| 96 | im | in the | prep | PASS |
-| 97 | pass | passport | n | PASS |
-| 98 | auszuprobieren | to try | v | PASS |
-| 99 | cello | cello | n | FAIL |
-| 100 | hälfte | half | n | PASS |
+| 1 | automobilhersteller | car manufacturer | n | PASS |
+| 2 | badezimmer | bathroom | n | PASS |
+| 3 | glühenden | glowing | adj | FAIL |
+| 4 | nachbar | neighbor | n | PASS |
+| 5 | schneeflocken | snowflake | v | FAIL |
+| 6 | euren | your | v | FAIL |
+| 7 | laufen | to run | v | PASS |
+| 8 | einwandfrei | flawless | n | PASS |
+| 9 | amboss | anvil | n | PASS |
+| 10 | leiht | to lend | v | PASS |
+| 11 | ferienwohnung | holiday apartment | n | PASS |
+| 12 | vergangene | past | n | PASS |
+| 13 | flug | flight | n | PASS |
+| 14 | irgendwann | sometime | adv | PASS |
+| 15 | kriegen | to get | v | PASS |
+| 16 | laugenbrezeln | pretzel | n | PASS |
+| 17 | briefkasten | mailbox | n | PASS |
+| 18 | musst | to have to | v | PASS |
+| 19 | unverzügliche | immediate | n | PASS |
+| 20 | selben | same | adj | PASS |
+| 21 | streckenrekord | track record | n | PASS |
+| 22 | letztes | last | adj | PASS |
+| 23 | zwei | two | det | PASS |
+| 24 | vorhersehbar | predictable | adj | PASS |
+| 25 | schuf | to create | v | PASS |
+| 26 | mittelalter | medieval | n | PASS |
+| 27 | gepflanzt | to plant | v | PASS |
+| 28 | unwetter | storm | n | PASS |
+| 29 | chance | chance | n | FAIL |
+| 30 | herausforderungen | to challenge | n | FAIL |
+| 31 | ausgibt | to spend | v | PASS |
+| 32 | individuell | individually | n | PASS |
+| 33 | bedeckte | covered | n | PASS |
+| 34 | sobald | as soon as | conj | PASS |
+| 35 | zahnarzt | dentist | n | PASS |
+| 36 | prüfen | to check | v | PASS |
+| 37 | schwierigen | difficult | v | FAIL |
+| 38 | schaue | to look | v | PASS |
+| 39 | verzeihe | to pardon | v | PASS |
+| 40 | lied | song | n | PASS |
+| 41 | gratulieren | congratulate | v | FAIL |
+| 42 | voraus | in advance | n | PASS |
+| 43 | ernsthaft | seriously | adj | PASS |
+| 44 | ehe | before | n | PASS |
+| 45 | geiger | violinist | n | PASS |
+| 46 | landest | to land | v | PASS |
+| 47 | ausgewählte | to select | n | FAIL |
+| 48 | gegessen | to eat | v | PASS |
+| 49 | südpol | south Pole | n | PASS |
+| 50 | getanzt | to dance | v | PASS |
+| 51 | vorschlag | suggestion | n | PASS |
+| 52 | kommt | to come | v | PASS |
+| 53 | junges | young | n | PASS |
+| 54 | teurer | expensive | adj | PASS |
+| 55 | verzeiht | to pardon | v | PASS |
+| 56 | einbruch | burglary | n | PASS |
+| 57 | sohn | son | n | PASS |
+| 58 | überraschung | surprise | n | PASS |
+| 59 | pyrenäen | pyrenee | v | FAIL |
+| 60 | schlechter | worse | n | PASS |
+| 61 | garten | garden | n | PASS |
+| 62 | sind | his, its; to be | v | PASS |
+| 63 | salz | salt | n | PASS |
+| 64 | tragen | to carry | v | PASS |
+| 65 | hinein | inside | n | PASS |
+| 66 | alten | old | adj | PASS |
+| 67 | billigste | cheapest | adj | PASS |
+| 68 | leihe | to lend | v | PASS |
+| 69 | mittwoch | wednesday | n | PASS |
+| 70 | pass | passport | n | PASS |
+| 71 | maßnahmen | to measure | v | PASS |
+| 72 | verstaucht | sprained | v | FAIL |
+| 73 | allmählich | gradually | adj | PASS |
+| 74 | bitte | please | interj | PASS |
+| 75 | möbliertes | to furnish | n | FAIL |
+| 76 | sage | to say | v | PASS |
+| 77 | genießen | to enjoy | v | PASS |
+| 78 | größeren | larger | adj | PASS |
+| 79 | rasenmäher | mowing machine | n | FAIL |
+| 80 | bürgermeister | mayor | n | PASS |
+| 81 | neugier | curiosity | n | PASS |
+| 82 | vermieter | landlord | n | PASS |
+| 83 | bibliothekarin | librarian | n | PASS |
+| 84 | unterrichtet | to teach | v | PASS |
+| 85 | sehen | to see | v | PASS |
+| 86 | gemütlicher | cozy | n | PASS |
+| 87 | überstunden | overtime | n | PASS |
+| 88 | kälter | cold | n | PASS |
+| 89 | wochen | week | v | FAIL |
+| 90 | kaufen | to buy | v | PASS |
+| 91 | pünktlicher | on time | n | PASS |
+| 92 | geliebt | to love | n | FAIL |
+| 93 | löwen | lion | v | FAIL |
+| 94 | jeden | everyone | det | PASS |
+| 95 | lissabon | lisbon | n | PASS |
+| 96 | fünfundachtzig | eighty-five | adj | PASS |
+| 97 | zugezogen | to move | v | PASS |
+| 98 | gehört | to hear | v | PASS |
+| 99 | hinten | rear | v | FAIL |
+| 100 | intensiviert | intensified | v | FAIL |
 
 ## Post-Processing Stats
 
@@ -161,31 +153,30 @@
     examples: deutschland, prost, hallo, deutsch, österreich
   stripped_article: 12
     examples: bisschen, haus, desto, erkältung, kleid
-  stripped_pronoun: 13
-    examples: kenne, empfehle, anfängst, vermisse, verspreche
+  stripped_pronoun: 21
+    examples: kenne, hätte, empfehle, anfängst, vermisse
   stripped_negation: 1
     examples: egal
-  lemmatized_verb: 532
+  lemmatized_verb: 709
     examples: geht, tut, gibt, kocht, studiert
-  lemmatized_noun: 588
+  lemmatized_noun: 487
     examples: grüße, wünsche, blumen, gemüse, wirtschaftswissenschaften
   fragment_trimmed: 10
     examples: hundertsiebzig, wiederzusehen, telefonieren, wiederhören, erdgeschossbüro
-  wrong_pos: 260
-    examples: besprechung, besuch, frage, lese, erklärt
+  wrong_pos: 1207
+    examples: siehst, fehlst, niemanden, wünsche, wirtschaftswissenschaften
   function_word_def: 128
     examples: tut, woher, viel, jeden, mehr
   stripped_false_to: 78
     examples: spät, viel, abend, mehr, regelmäßig
-  stripped_false_to_v2: 10
-    examples: tauschen, daran, nachzukochen, skifahren, einzuhalten
-  self_referencing: 224
-    examples: restaurant, hamburg, berlin, hey, computer
-  total_flagged: 1820
-  duplicate_translations (10+): 6
-    "to go" → 12 entries
+  stripped_false_to_v2: 6
+    examples: daran, nachzukochen, skifahren, abzuschließen, einzuhalten
+  self_referencing: 184
+    examples: hamburg, berlin, hey, computer, name
+  total_flagged: 2727
+  duplicate_translations (10+): 4
+    "to go" → 10 entries
     "to give" → 10 entries
     "beautiful" → 10 entries
-    "to open" → 12 entries
-    "to build" → 10 entries
+    "to open" → 11 entries
 ```

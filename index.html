@@ -27,6 +27,16 @@
       } catch(e) {}
     </script>
     <div id="root"></div>
+    <!-- Netlify Forms detection: hidden form so Netlify creates the form endpoint at build time -->
+    <form name="word-flag" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="language" />
+      <input type="text" name="word" />
+      <input type="text" name="currentTranslation" />
+      <input type="text" name="currentPos" />
+      <input type="text" name="sentence" />
+      <input type="text" name="suggestion" />
+      <input type="text" name="bot-field" />
+    </form>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

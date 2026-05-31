@@ -333,7 +333,7 @@ summaryLines.push('---');
 summaryLines.push('Grading: A=95%+, B=85-94%, C=75-84%, D=65-74%, F=<65%');
 
 fs.writeFileSync(
-  path.join(OUT_DIR, '500-review-summary.md'),
+  path.join(OUT_DIR, '500-review-v2-summary.md'),
   summaryLines.join('\n')
 );
 

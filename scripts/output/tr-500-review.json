@@ -2,75 +2,117 @@
   "language": "tr",
   "total_entries": 9688,
   "total_checked": 500,
-  "passed": 490,
-  "failed": 10,
-  "pass_rate": "98.0%",
+  "passed": 483,
+  "failed": 17,
+  "pass_rate": "96.6%",
   "grade": "A",
   "failures_by_type": {
-    "to_prefix": 1,
-    "self_ref": 8,
-    "not_english": 1
+    "self_ref": 6,
+    "to_prefix": 11,
+    "pos_mismatch": 2
   },
   "failure_examples": [
     {
-      "word": "kalıp",
-      "en": "last; pattern",
+      "word": "gezi",
+      "en": "gezi",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "serkane",
+      "en": "serkane",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "görmektedir",
+      "en": "sees",
       "pos": "v",
       "issues": "to_prefix"
     },
     {
-      "word": "galata",
-      "en": "galata",
+      "word": "ye",
+      "en": "ye",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "sudan",
-      "en": "sudan",
+      "word": "kullanarak",
+      "en": "using",
+      "pos": "v",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "ecein",
+      "en": "ecein",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "trabzonye",
-      "en": "trabzonye",
+      "word": "kurmuştur",
+      "en": "has established",
+      "pos": "v",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "süredir",
+      "en": "for a long time",
+      "pos": "v",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "izlenim",
+      "en": "impression",
+      "pos": "v",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "antep",
+      "en": "antep",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "gaziantep",
-      "en": "gaziantep",
+      "word": "zeminini",
+      "en": "the ground",
+      "pos": "v",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "aralar",
+      "en": "between",
+      "pos": "v",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "işime",
+      "en": "to my job",
+      "pos": "n",
+      "issues": "to_prefix, pos_mismatch"
+    },
+    {
+      "word": "ankara",
+      "en": "ankara",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "kurusu",
-      "en": "dry",
-      "pos": "adj",
-      "issues": "not_english"
+      "word": "yumurtalar",
+      "en": "eggs",
+      "pos": "v",
+      "issues": "to_prefix"
     },
     {
-      "word": "pamukkale",
-      "en": "pamukkale",
+      "word": "buldunuz",
+      "en": "you found",
+      "pos": "v",
+      "issues": "to_prefix"
+    },
+    {
+      "word": "kedilere",
+      "en": "to cats",
       "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "te",
-      "en": "te",
-      "pos": "suff",
-      "issues": "self_ref"
-    },
-    {
-      "word": "tundra",
-      "en": "tundra",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "post",
-      "en": "post",
-      "pos": "n",
-      "issues": "self_ref"
+      "issues": "to_prefix, pos_mismatch"
     }
   ]
 }

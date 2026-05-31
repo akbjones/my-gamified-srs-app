@@ -2,30 +2,30 @@
   "language": "hi",
   "total_entries": 4781,
   "total_checked": 200,
-  "passed": 198,
-  "failed": 2,
-  "pass_rate": "99%",
+  "passed": 197,
+  "failed": 3,
+  "pass_rate": "98.5%",
   "grade": "A",
   "failures_by_type": {
-    "semantic_fail": 2
+    "semantic_fail": 3
   },
   "failure_examples": [
     {
-      "word": "रही",
-      "en": "to stay",
-      "pos": "v",
-      "google": "doing",
+      "word": "अभिज्ञानशाकुंतलम",
+      "en": "abhigyanashakuntalam",
+      "pos": "n",
+      "google": "Abhijnanashakuntalam",
       "issues": "semantic_fail",
       "semDetail": {
         "pass": false,
         "reason": "no_overlap",
         "ourWords": [
-          "stay"
+          "abhigyanashakuntalam"
         ],
         "gtWords": [
-          "do"
+          "abhijnanashakuntalam"
         ],
-        "gt": "doing"
+        "gt": "Abhijnanashakuntalam"
       }
     },
     {
@@ -44,6 +44,24 @@
           "have"
         ],
         "gt": "had"
+      }
+    },
+    {
+      "word": "रहे",
+      "en": "to stay",
+      "pos": "v",
+      "google": "are",
+      "issues": "semantic_fail",
+      "semDetail": {
+        "pass": false,
+        "reason": "no_overlap",
+        "ourWords": [
+          "stay"
+        ],
+        "gtWords": [
+          "be"
+        ],
+        "gt": "are"
       }
     }
   ]

@@ -2,87 +2,105 @@
   "language": "de",
   "total_entries": 7872,
   "total_checked": 500,
-  "passed": 488,
-  "failed": 12,
-  "pass_rate": "97.6%",
+  "passed": 485,
+  "failed": 15,
+  "pass_rate": "97.0%",
   "grade": "A",
   "failures_by_type": {
-    "self_ref": 9,
-    "to_prefix": 2,
-    "not_english": 2
+    "self_ref": 14,
+    "mixed_case": 1,
+    "not_english": 1
   },
   "failure_examples": [
     {
-      "word": "dressing",
-      "en": "dressing",
+      "word": "tablet",
+      "en": "tablet",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "zucchini",
-      "en": "zucchini",
+      "word": "oregano",
+      "en": "oregano",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "argumentation",
-      "en": "argumentation",
+      "word": "variable",
+      "en": "variable",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "freut",
-      "en": "forward; be happy",
-      "pos": "v",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "still",
-      "en": "still",
+      "word": "schnitzel",
+      "en": "schnitzel",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "hollandaise",
-      "en": "hollandaise",
+      "word": "neuschwanstein",
+      "en": "neuschwanstein",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "paragraph",
-      "en": "paragraph",
+      "word": "triangulation",
+      "en": "triangulation",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "schalte",
-      "en": "turn; switch",
-      "pos": "v",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "pesto",
-      "en": "pesto",
+      "word": "ticket",
+      "en": "ticket",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "1900",
-      "en": "1900",
-      "pos": "num",
-      "issues": "self_ref, not_english"
-    },
-    {
-      "word": "cello",
-      "en": "cello",
+      "word": "ice",
+      "en": "ice",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "warum",
-      "en": "why",
-      "pos": "adv",
-      "issues": "not_english"
+      "word": "japan",
+      "en": "japan",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "promoviert",
+      "en": "PhD",
+      "pos": "n",
+      "issues": "mixed_case, not_english"
+    },
+    {
+      "word": "panorama",
+      "en": "panorama",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "gazpacho",
+      "en": "gazpacho",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "craft",
+      "en": "craft",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "marzipan",
+      "en": "marzipan",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "information",
+      "en": "information",
+      "pos": "adj",
+      "issues": "self_ref"
     }
   ]
 }

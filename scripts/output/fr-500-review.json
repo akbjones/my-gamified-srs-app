@@ -2,168 +2,120 @@
   "language": "fr",
   "total_entries": 5502,
   "total_checked": 500,
-  "passed": 474,
-  "failed": 26,
-  "pass_rate": "94.8%",
-  "grade": "B",
+  "passed": 482,
+  "failed": 18,
+  "pass_rate": "96.4%",
+  "grade": "A",
   "failures_by_type": {
-    "self_ref": 24,
-    "to_prefix": 2
+    "self_ref": 18,
+    "not_english": 1
   },
   "failure_examples": [
     {
-      "word": "viable",
-      "en": "viable",
+      "word": "million",
+      "en": "million",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "patient",
+      "en": "patient",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "president",
+      "en": "president",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "passion",
+      "en": "passion",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "six",
+      "en": "six",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "portrait",
+      "en": "portrait",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "contact",
+      "en": "contact",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "tesvous",
+      "en": "tesvous",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "rat",
+      "en": "rat",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "tgv",
+      "en": "tgv",
+      "pos": "n",
+      "issues": "self_ref, not_english"
+    },
+    {
+      "word": "omelette",
+      "en": "omelette",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "urgent",
+      "en": "urgent",
       "pos": "adj",
       "issues": "self_ref"
     },
     {
-      "word": "france",
-      "en": "france",
+      "word": "surplus",
+      "en": "surplus",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "cigarette",
-      "en": "cigarette",
+      "word": "contribution",
+      "en": "contribution",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "jaille",
-      "en": "jaille",
+      "word": "kilo",
+      "en": "kilo",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "perspective",
-      "en": "perspective",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "week",
-      "en": "week",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "effort",
-      "en": "effort",
+      "word": "strict",
+      "en": "strict",
       "pos": "adj",
       "issues": "self_ref"
     },
     {
-      "word": "horizon",
-      "en": "horizon",
+      "word": "namasse",
+      "en": "namasse",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "parachute",
-      "en": "parachute",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "importance",
-      "en": "importance",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "intervention",
-      "en": "intervention",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "verdict",
-      "en": "verdict",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "ingredient",
-      "en": "ingredient",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "nice",
-      "en": "nice",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "courut",
-      "en": "slow; run",
-      "pos": "v",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "courions",
-      "en": "slow; run",
-      "pos": "v",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "jen",
-      "en": "jen",
-      "pos": "adv",
-      "issues": "self_ref"
-    },
-    {
-      "word": "exorbitant",
-      "en": "exorbitant",
-      "pos": "adj",
-      "issues": "self_ref"
-    },
-    {
-      "word": "injustice",
-      "en": "injustice",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "davis",
-      "en": "davis",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "information",
-      "en": "information",
-      "pos": "adj",
-      "issues": "self_ref"
-    },
-    {
-      "word": "acheteen",
-      "en": "acheteen",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "message",
-      "en": "message",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "tact",
-      "en": "tact",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "confirmation",
-      "en": "confirmation",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "jupiter",
-      "en": "jupiter",
+      "word": "fur",
+      "en": "fur",
       "pos": "n",
       "issues": "self_ref"
     }

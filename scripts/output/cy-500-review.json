@@ -7,120 +7,11 @@
   "pass_rate": "95.0%",
   "grade": "A",
   "failures_by_type": {
-    "self_ref": 18,
-    "not_english": 2,
-    "to_prefix": 1,
-    "truncated": 4
+    "self_ref": 20,
+    "truncated": 4,
+    "not_english": 1
   },
   "failure_examples": [
-    {
-      "word": "karaoke",
-      "en": "karaoke",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "lyncs",
-      "en": "lynx",
-      "pos": "n",
-      "issues": "not_english"
-    },
-    {
-      "word": "owain",
-      "en": "owain",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "sioned",
-      "en": "sioned",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "brioche",
-      "en": "brioche",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "adeiladwyd",
-      "en": "building; construction",
-      "pos": "v",
-      "issues": "to_prefix"
-    },
-    {
-      "word": "gwynedd",
-      "en": "?",
-      "pos": "n",
-      "issues": "truncated"
-    },
-    {
-      "word": "conwy",
-      "en": "?",
-      "pos": "n",
-      "issues": "truncated"
-    },
-    {
-      "word": "halloumi",
-      "en": "halloumi",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "constrictor",
-      "en": "constrictor",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "hologram",
-      "en": "hologram",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "encyclopedia",
-      "en": "encyclopedia",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "triathlon",
-      "en": "triathlon",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "catrin",
-      "en": "catrin",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "1890",
-      "en": "?",
-      "pos": "num",
-      "issues": "truncated"
-    },
-    {
-      "word": "pam",
-      "en": "why",
-      "pos": "adv",
-      "issues": "not_english"
-    },
-    {
-      "word": "signal",
-      "en": "signal",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "wombat",
-      "en": "wombat",
-      "pos": "n",
-      "issues": "self_ref"
-    },
     {
       "word": "pero",
       "en": "pero",
@@ -128,40 +19,148 @@
       "issues": "self_ref"
     },
     {
-      "word": "plaster",
-      "en": "plaster",
+      "word": "nramar",
+      "en": "nramar",
       "pos": "n",
       "issues": "self_ref"
     },
     {
-      "word": "beethoven",
-      "en": "beethoven",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "storm",
-      "en": "storm",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "trystan",
-      "en": "trystan",
-      "pos": "n",
-      "issues": "self_ref"
-    },
-    {
-      "word": "parry-williams",
+      "word": "mwyalchen",
       "en": "?",
       "pos": "n",
       "issues": "truncated"
     },
     {
-      "word": "sampler",
-      "en": "sampler",
+      "word": "caernarfon",
+      "en": "caernarfon",
       "pos": "n",
       "issues": "self_ref"
+    },
+    {
+      "word": "marathon",
+      "en": "marathon",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "thesis",
+      "en": "thesis",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "caesar",
+      "en": "caesar",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "manon",
+      "en": "manon",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "wi-fi",
+      "en": "?",
+      "pos": "n",
+      "issues": "truncated"
+    },
+    {
+      "word": "mango",
+      "en": "?",
+      "pos": "n",
+      "issues": "truncated"
+    },
+    {
+      "word": "alcohol",
+      "en": "alcohol",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "camera",
+      "en": "camera",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "wimbledon",
+      "en": "wimbledon",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "asteroid",
+      "en": "asteroid",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "ping",
+      "en": "ping",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "cheddar",
+      "en": "cheddar",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "owen",
+      "en": "?",
+      "pos": "n",
+      "issues": "truncated"
+    },
+    {
+      "word": "anthem",
+      "en": "anthem",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "jig",
+      "en": "jig",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "actor",
+      "en": "actor",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "caldera",
+      "en": "caldera",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "japan",
+      "en": "japan",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "onyx",
+      "en": "onyx",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "obsidian",
+      "en": "obsidian",
+      "pos": "n",
+      "issues": "self_ref"
+    },
+    {
+      "word": "pam",
+      "en": "why",
+      "pos": "adv",
+      "issues": "not_english"
     }
   ]
 }

@@ -719,18 +719,12 @@ const App: React.FC = () => {
             ) : (
               <div className="flex items-baseline justify-center gap-2.5">
                 <span className="font-extrabold text-xl">Study</span>
-                <span className="text-white/40">·</span>
-                <div className="flex items-center gap-2 text-[12px] font-bold opacity-85">
-                  {reviewsDue > 0 && (
-                    <span>{reviewsDue} due</span>
-                  )}
-                  {reviewsDue > 0 && newAvailable > 0 && (
-                    <span className="text-white/40">+</span>
-                  )}
-                  {newAvailable > 0 && (
-                    <span>{newAvailable} new</span>
-                  )}
-                </div>
+                {reviewsDue > 0 && (
+                  <>
+                    <span className="text-white/40">·</span>
+                    <span className="text-[13px] font-bold opacity-85">{reviewsDue} due</span>
+                  </>
+                )}
               </div>
             )}
           </button>
@@ -742,35 +736,38 @@ const App: React.FC = () => {
             const pct = dailyGoal > 0 ? Math.min(100, Math.round((dailyDone / dailyGoal) * 100)) : 0;
             const streak = userStats.streak;
             return (
-              <div className="stat-card px-4 py-3 mb-3 flex items-center gap-4">
-                {/* Progress bar — takes most of the width */}
+              <div className="stat-card px-5 py-4 mb-3 flex items-center gap-5">
+                {/* Progress bar — wider/taller for more visual weight */}
                 <div className="flex-1 min-w-0">
-                  <div className="flex items-baseline justify-between mb-1.5">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)]">Today</span>
-                    <span className="text-[11px] font-mono font-bold text-[var(--text-primary)]">
+                  <div className="flex items-baseline justify-between mb-2">
+                    <span className="text-[11px] font-bold uppercase tracking-widest text-[var(--text-muted)]">Today</span>
+                    <span className="text-sm font-mono font-bold text-[var(--text-primary)]">
                       {dailyDone} <span className="text-[var(--text-muted)] font-normal">/ {dailyGoal}</span>
                     </span>
                   </div>
-                  <div className="h-2 rounded-full bg-[var(--bg-inset)] overflow-hidden">
+                  <div className="h-2.5 rounded-full bg-[var(--bg-inset)] overflow-hidden">
                     <div
                       className="h-full bg-gradient-to-r from-[var(--accent)] to-violet-400 rounded-full transition-all"
                       style={{ width: `${pct}%` }}
                     />
                   </div>
                 </div>
-                {/* Streak counter — compact on the right */}
+                {/* Streak counter — labeled, compact on the right */}
                 <button
                   onClick={() => setView('GAMIFICATION')}
-                  className="shrink-0 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg hover:bg-[var(--bg-inset)] active:scale-95 transition-all"
+                  className="shrink-0 flex flex-col items-center gap-0.5 px-2 py-1 rounded-lg hover:bg-[var(--bg-inset)] active:scale-95 transition-all"
                   aria-label="View progress"
                 >
-                  <Flame
-                    size={20}
-                    className={streak > 0 ? 'text-orange-500 fill-orange-500/30' : 'text-[var(--text-faint)]'}
-                  />
-                  <span className={`text-lg font-black font-mono ${streak > 0 ? 'text-orange-500' : 'text-[var(--text-muted)]'}`}>
-                    {streak}
-                  </span>
+                  <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)]">Streak</span>
+                  <div className="flex items-center gap-1">
+                    <Flame
+                      size={18}
+                      className={streak > 0 ? 'text-orange-500 fill-orange-500/30' : 'text-[var(--text-faint)]'}
+                    />
+                    <span className={`text-lg font-black font-mono ${streak > 0 ? 'text-orange-500' : 'text-[var(--text-muted)]'}`}>
+                      {streak}
+                    </span>
+                  </div>
                 </button>
               </div>
             );
@@ -830,17 +827,17 @@ const App: React.FC = () => {
                 className={`stat-card p-4 text-left transition-all flex flex-col gap-2 ${
                   hasVocab
                     ? 'hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer'
-                    : 'opacity-60 cursor-default'
+                    : 'grayscale opacity-50 cursor-default'
                 }`}
               >
-                <div className="w-11 h-11 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center">
-                  <PenTool size={20} className="text-blue-500" />
+                <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${hasVocab ? 'bg-blue-500/10 border border-blue-500/20' : 'bg-[var(--bg-inset)] border border-[var(--border-color)]'}`}>
+                  <PenTool size={20} className={hasVocab ? 'text-blue-500' : 'text-[var(--text-muted)]'} />
                 </div>
                 <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider">
                   Vocab
                 </div>
                 <div className="text-xs font-bold text-[var(--text-primary)] leading-tight">
-                  {hasVocab ? `${vocabCount} seen` : 'None yet'}
+                  {vocabCount}
                 </div>
               </button>
 
@@ -850,44 +847,44 @@ const App: React.FC = () => {
                 className={`stat-card p-4 text-left transition-all flex flex-col gap-2 ${
                   hasFav
                     ? 'hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer'
-                    : 'opacity-60 cursor-default'
+                    : 'grayscale opacity-50 cursor-default'
                 }`}
               >
-                <div className="w-11 h-11 rounded-xl bg-yellow-400/10 border border-yellow-400/30 flex items-center justify-center">
-                  <Star size={20} className="text-yellow-500" fill="currentColor" />
+                <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${hasFav ? 'bg-yellow-400/10 border border-yellow-400/30' : 'bg-[var(--bg-inset)] border border-[var(--border-color)]'}`}>
+                  <Star size={20} className={hasFav ? 'text-yellow-500' : 'text-[var(--text-muted)]'} fill={hasFav ? 'currentColor' : 'none'} />
                 </div>
                 <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider">
                   Favs
                 </div>
                 <div className="text-xs font-bold text-[var(--text-primary)] leading-tight">
-                  {hasFav ? `${favCount} saved` : 'Tap ⭐'}
+                  {favCount}
                 </div>
               </button>
             </div>
             );
           })()}
 
-          {/* Focus + Settings — 2-col row, both as substantial cards */}
-          <div className="grid grid-cols-2 gap-2 mb-3 relative">
+          {/* Focus + Settings — 2-col row. Focus is wider (2/3) since it changes more often. */}
+          <div className="grid grid-cols-3 gap-2 mb-3 relative">
             {(() => {
               const CurrentIcon = goal === 'general' ? Globe : goal === 'travel' ? Plane : goal === 'work' ? Briefcase : Heart;
               return (
                 <button
                   onClick={() => setShowGoalMenu(prev => !prev)}
-                  className="stat-card p-4 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex flex-col gap-2"
+                  className="col-span-2 stat-card p-5 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex items-center gap-4"
                 >
-                  <div className="w-11 h-11 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
-                    <CurrentIcon size={20} className="text-[var(--accent)]" />
+                  <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center shrink-0">
+                    <CurrentIcon size={22} className="text-[var(--accent)]" />
                   </div>
-                  <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider">
-                    Focus
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-bold text-[var(--text-primary)] leading-tight truncate">
+                  <div className="flex-1 min-w-0">
+                    <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-0.5">
+                      Focus
+                    </div>
+                    <div className="text-sm font-bold text-[var(--text-primary)] leading-tight truncate">
                       {GOAL_CONFIG[goal].name}
-                    </span>
-                    <ChevronDown size={14} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showGoalMenu ? 'rotate-180' : ''}`} />
+                    </div>
                   </div>
+                  <ChevronDown size={16} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showGoalMenu ? 'rotate-180' : ''}`} />
                 </button>
               );
             })()}
@@ -903,12 +900,7 @@ const App: React.FC = () => {
               <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider">
                 Settings
               </div>
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-bold text-[var(--text-primary)] leading-tight">
-                  {showTools ? 'Tap to close' : 'Tap to open'}
-                </span>
-                <ChevronDown size={14} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showTools ? 'rotate-180' : ''}`} />
-              </div>
+              <ChevronDown size={14} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showTools ? 'rotate-180' : ''}`} />
             </button>
             {showGoalMenu && (
               <>

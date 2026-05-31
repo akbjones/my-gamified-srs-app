@@ -537,11 +537,12 @@ const PopoverPortal: React.FC<{
             className="bg-[var(--bg-card)] w-full sm:max-w-md sm:rounded-3xl shadow-2xl border border-[var(--border-color)] overflow-hidden max-h-screen sm:max-h-[88vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Header — compact on mobile, more breathing room on desktop */}
-            <div className="relative px-5 pt-4 pb-3 sm:px-6 sm:pt-6 sm:pb-5 border-b border-[var(--border-color)] bg-gradient-to-b from-blue-500/5 to-transparent">
+            {/* Header — compact on mobile, more breathing room on desktop.
+                Safe-area padding on top so content stays clear of the notch / status bar. */}
+            <div className="relative px-5 pb-3 pt-[max(1rem,env(safe-area-inset-top))] sm:px-6 sm:pt-6 sm:pb-5 border-b border-[var(--border-color)] bg-gradient-to-b from-blue-500/5 to-transparent">
               <button
                 onClick={() => setShowConj(false)}
-                className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 rounded-xl hover:bg-[var(--bg-card-hover)] active:scale-95 transition"
+                className="absolute right-3 sm:right-4 top-[max(0.75rem,env(safe-area-inset-top))] sm:top-4 p-2 rounded-xl hover:bg-[var(--bg-card-hover)] active:scale-95 transition"
                 aria-label="Close"
               >
                 <CloseIcon size={20} className="text-[var(--text-secondary)]" />
@@ -592,10 +593,11 @@ const PopoverPortal: React.FC<{
               </div>
             </div>
 
-            {/* Forms — scrolling region. Tighter on mobile so all 6 persons fit. */}
+            {/* Forms — scrolling region. Tighter on mobile so all 6 persons fit.
+                Bottom safe-area padding so iPhone home indicator doesn't cover the last row. */}
             {conjTable.tenses[conjTense] && (
               <div className="overflow-y-auto flex-1">
-                <div className="p-3 sm:p-5 space-y-1 sm:space-y-1.5">
+                <div className="p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] sm:p-5 space-y-1 sm:space-y-1.5">
                   {conjTable.tenses[conjTense].map((form, i) => {
                     const personLabel =
                       language === 'french' && i === 0 && /^[aeéèêëiîïoôuûùüyh]/i.test(form)

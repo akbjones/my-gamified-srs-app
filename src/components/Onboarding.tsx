@@ -96,8 +96,8 @@ const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
 
   return (
     <div className="fixed inset-0 z-[60] flex flex-col bg-[var(--bg-primary)]">
-      {/* Skip button */}
-      <div className="flex justify-end p-4">
+      {/* Skip button — safe-area top padding to stay clear of notch */}
+      <div className="flex justify-end px-4 pb-2 pt-[max(1rem,env(safe-area-inset-top))]">
         <button
           onClick={onComplete}
           className="text-sm font-medium text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors px-3 py-1"
@@ -126,8 +126,8 @@ const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
         </div>
       </div>
 
-      {/* Bottom controls */}
-      <div className="flex flex-col items-center gap-5 pb-12 px-6">
+      {/* Bottom controls — safe-area padding so home indicator doesn't cover dots */}
+      <div className="flex flex-col items-center gap-5 px-6 pb-[max(3rem,env(safe-area-inset-bottom))]">
         {/* Dots */}
         <div className="flex gap-2">
           {SLIDES.map((_, i) => (

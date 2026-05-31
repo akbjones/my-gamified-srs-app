@@ -44,6 +44,12 @@ export default defineConfig({
         ],
       },
       workbox: {
+        // Take control of all clients immediately on activation so users
+        // see the new version on next page load (no need to close all tabs).
+        skipWaiting: true,
+        clientsClaim: true,
+        // Wipe outdated precaches so old assets don't linger.
+        cleanupOutdatedCaches: true,
         // Import our custom notification handler into the generated SW
         importScripts: ['sw-notifications.js'],
         // Only precache the app shell — NOT the 9000+ audio files

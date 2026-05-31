@@ -1,23 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <!-- Violet gradient background -->
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#7C3AED"/>
       <stop offset="100%" stop-color="#5B21B6"/>
     </linearGradient>
-    <!-- Gold gradient -->
-    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#F5D76E"/>
-      <stop offset="100%" stop-color="#D4A24C"/>
-    </linearGradient>
   </defs>
-  <!-- Rounded square -->
+  <!-- Violet rounded square -->
   <rect width="512" height="512" rx="112" fill="url(#bg)"/>
-  <!-- Capital Λ — symmetric, sharp apex with subtle flat top,
-       flat horizontal baseline. Distinct from Half-Life's
-       lowercase asymmetric λ with angled cuts. -->
-  <path
-    d="M 244 92 L 268 92 L 414 418 L 334 418 L 256 240 L 178 418 L 98 418 Z"
-    fill="url(#gold)"
-  />
+  <!-- Stylized serif lowercase λ — italic serif character so it inherits
+       proper apex shape, terminal serifs, and stroke contrast from the font. -->
+  <text
+    x="256"
+    y="395"
+    font-family='"Times New Roman", "Liberation Serif", "DejaVu Serif", Georgia, serif'
+    font-size="440"
+    font-style="italic"
+    font-weight="700"
+    fill="white"
+    text-anchor="middle"
+  >λ</text>
 </svg>

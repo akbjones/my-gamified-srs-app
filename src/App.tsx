@@ -718,14 +718,6 @@ const App: React.FC = () => {
               'All Caught Up'
             ) : (
               <div className="flex items-baseline justify-center gap-2.5">
-                {/* Capital Λ — thinner stroke, white, prominent horizontal serifs at the base.
-                    Sits on the same baseline as "Study" so it doesn't float above the text. */}
-                <svg viewBox="0 0 512 512" className="w-[18px] h-[18px] shrink-0 self-center text-white">
-                  <path
-                    d="M 256 90 L 400 415 L 416 415 L 416 429 L 321 429 L 321 415 L 335 415 L 256 236 L 177 415 L 191 415 L 191 429 L 96 429 L 96 415 L 112 415 Z"
-                    fill="currentColor"
-                  />
-                </svg>
                 <span className="font-extrabold text-xl">Study</span>
                 <span className="text-white/40">·</span>
                 <div className="flex items-center gap-2 text-[12px] font-bold opacity-85">

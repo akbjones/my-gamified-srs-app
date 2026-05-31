@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import ReactDOM from 'react-dom';
-import { Star } from 'lucide-react';
+import { Star, X as CloseIcon } from 'lucide-react';
 import { toggleFavorite, isFavorited } from '../services/storageService';
 import { lookupWord as lookupEs, DictEntry } from '../data/dictionary/es';
 import { lookupWord as lookupIt } from '../data/dictionary/it';
@@ -511,58 +511,104 @@ const PopoverPortal: React.FC<{
         </button>
       </div>
 
-      {/* Conjugation toggle */}
+      {/* Conjugation: open full-screen modal */}
       {conjTable && (
         <div className="mt-3 pt-3 border-t border-[var(--border-color)]">
           <button
-            onClick={() => setShowConj(!showConj)}
-            className="text-[11px] font-bold text-blue-500 hover:text-blue-400 transition-colors uppercase tracking-wider"
+            onClick={(e) => { e.stopPropagation(); setShowConj(true); }}
+            className="text-[11px] font-bold text-blue-500 hover:text-blue-400 transition-colors uppercase tracking-wider flex items-center gap-1"
           >
-            {showConj ? 'Hide' : 'Show'} Conjugation
-            {conjTable.isReflexive && ' (reflexive)'}
+            View conjugation
+            {conjTable.isReflexive && <span className="text-[var(--text-muted)] font-normal">(reflexive)</span>}
+            <span aria-hidden="true">↗</span>
           </button>
-
-          {showConj && (
-            <div className="mt-2 animate-fade-in">
-              {/* Tense tabs */}
-              <div className="flex flex-wrap gap-1 mb-2">
-                {Object.keys(conjTable.tenses).map(tense => (
-                  <button
-                    key={tense}
-                    onClick={() => setConjTense(tense)}
-                    className={`px-2 py-1 rounded text-[9px] font-bold uppercase tracking-wider transition-all ${
-                      conjTense === tense
-                        ? 'bg-blue-500/15 text-blue-500'
-                        : 'text-[var(--text-muted)] hover:text-[var(--text-secondary)]'
-                    }`}
-                  >
-                    {TENSE_LABELS[tense] || tense}
-                  </button>
-                ))}
-              </div>
-
-              {/* Conjugation grid */}
-              {conjTable.tenses[conjTense] && (
-                <div className="space-y-1">
-                  {conjTable.tenses[conjTense].map((form, i) => (
-                    <div key={i} className="flex items-baseline gap-2">
-                      <span className="text-[10px] text-[var(--text-faint)] font-mono w-16 text-right shrink-0">
-                        {language === 'french' && i === 0 && /^[aeéèêëiîïoôuûùüyh]/i.test(form)
-                          ? "j'"
-                          : personLabels[i]}
-                      </span>
-                      <span className="text-xs text-[var(--text-primary)] font-semibold">
-                        {form}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-          )}
         </div>
       )}
       </div>
+
+      {/* Full-screen conjugation overlay — separate from the small popover so
+         users can actually read the tables. */}
+      {showConj && conjTable && (
+        <div
+          className="fixed inset-0 z-[10000] bg-black/60 backdrop-blur-sm flex items-stretch sm:items-center justify-center animate-fade-in"
+          onClick={(e) => { e.stopPropagation(); setShowConj(false); }}
+        >
+          <div
+            className="bg-[var(--bg-card)] w-full sm:max-w-md sm:rounded-2xl shadow-2xl border border-[var(--border-color)] overflow-y-auto max-h-screen sm:max-h-[85vh] flex flex-col"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between px-5 py-4 border-b border-[var(--border-color)] sticky top-0 bg-[var(--bg-card)]">
+              <div>
+                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">
+                  Conjugation
+                </div>
+                <div className="text-xl font-black text-[var(--text-primary)]">
+                  {conjTable.infinitive}
+                  {conjTable.isReflexive && (
+                    <span className="text-xs text-[var(--text-muted)] font-normal ml-2">(reflexive)</span>
+                  )}
+                </div>
+              </div>
+              <button
+                onClick={() => setShowConj(false)}
+                className="p-2 -mr-2 rounded-lg hover:bg-[var(--bg-card-hover)] active:scale-95 transition"
+                aria-label="Close"
+              >
+                <CloseIcon size={20} className="text-[var(--text-secondary)]" />
+              </button>
+            </div>
+
+            {/* Tense tabs */}
+            <div className="px-4 py-3 border-b border-[var(--border-color)] flex flex-wrap gap-2 sticky top-[73px] bg-[var(--bg-card)]">
+              {Object.keys(conjTable.tenses).map(tense => (
+                <button
+                  key={tense}
+                  onClick={() => setConjTense(tense)}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all ${
+                    conjTense === tense
+                      ? 'bg-blue-500 text-white shadow'
+                      : 'bg-[var(--bg-inset)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)]'
+                  }`}
+                >
+                  {TENSE_LABELS[tense] || tense}
+                </button>
+              ))}
+            </div>
+
+            {/* Forms */}
+            {conjTable.tenses[conjTense] && (
+              <div className="p-5 space-y-2.5">
+                {conjTable.tenses[conjTense].map((form, i) => {
+                  const personLabel =
+                    language === 'french' && i === 0 && /^[aeéèêëiîïoôuûùüyh]/i.test(form)
+                      ? "j'"
+                      : personLabels[i];
+                  // Highlight the row matching the current rawToken
+                  const isMatchedForm = form.toLowerCase().replace(/\s+/g, '') === rawToken.toLowerCase().replace(/\s+/g, '');
+                  return (
+                    <div
+                      key={i}
+                      className={`flex items-baseline gap-3 px-3 py-2 rounded-lg ${
+                        isMatchedForm ? 'bg-blue-500/10 ring-1 ring-blue-500/30' : ''
+                      }`}
+                    >
+                      <span className="text-xs font-mono text-[var(--text-muted)] w-20 text-right shrink-0">
+                        {personLabel}
+                      </span>
+                      <span className={`text-base font-semibold ${
+                        isMatchedForm ? 'text-blue-500' : 'text-[var(--text-primary)]'
+                      }`}>
+                        {form}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </>,
     document.body
   );

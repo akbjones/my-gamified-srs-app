@@ -112,17 +112,22 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
     setPhase('question');
   }
 
-  /** Check if a node should be failed based on scores so far */
+  /** Check if a node should be failed based on scores so far.
+   *  More forgiving than the original (which failed on the first miss) —
+   *  a single wobble shouldn't decide your starting point.
+   */
   function shouldFailNode(ni: number, scores: Record<number, { mostly: number; noIdea: number }>): boolean {
     const s = scores[ni] || { mostly: 0, noIdea: 0 };
-    // 1 "no idea" → instant fail
-    if (s.noIdea >= 1) return true;
-    // 2 "mostly" in same node → fail
-    if (s.mostly >= 2) return true;
-    // Adjacent spillover: 1 "mostly" in previous node + 1 "mostly" in this node → fail
+    // 2 "no idea" in the same node → fail
+    if (s.noIdea >= 2) return true;
+    // 3 "mostly" in same node → fail
+    if (s.mostly >= 3) return true;
+    // 1 "no idea" + 1 "mostly" in same node → fail
+    if (s.noIdea >= 1 && s.mostly >= 1) return true;
+    // Adjacent spillover: 2 "mostly" in previous node + 1 "mostly" in this node → fail
     if (ni > 0 && s.mostly >= 1) {
       const prev = scores[ni - 1] || { mostly: 0, noIdea: 0 };
-      if (prev.mostly >= 1) return true;
+      if (prev.mostly >= 2) return true;
     }
     return false;
   }
@@ -131,9 +136,10 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
     const nextCardIndex = cardIndex + 1;
     const nodeCards = placementCards[nodeIndex] || [];
 
-    // Check if a "no idea" was just given — fail immediately (don't wait for node to finish)
+    // Check the now-stricter fail conditions — only bail out of the test
+    // when the node has *clearly* maxed out.
     const currentNodeScore = nodeScores[nodeIndex] || { mostly: 0, noIdea: 0 };
-    if (currentNodeScore.noIdea >= 1) {
+    if (shouldFailNode(nodeIndex, nodeScores)) {
       setCeilingNode(nodeIndex);
       setPhase('results');
       return;
@@ -244,11 +250,10 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
               &larr; Exit
             </button>
             <span
-              className="text-[10px] font-black uppercase tracking-wider"
-              style={{ color: currentNode.color }}
-            >
-              {currentNode.tier}
-            </span>
+              className="inline-block w-2 h-2 rounded-full"
+              style={{ backgroundColor: currentNode.color }}
+              aria-hidden="true"
+            />
             <span className="text-xs font-bold text-[var(--text-secondary)]">
               {getNodeName(currentNode.id, lang)}
             </span>
@@ -325,11 +330,10 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
               &larr; Exit
             </button>
             <span
-              className="text-[10px] font-black uppercase tracking-wider"
-              style={{ color: currentNode.color }}
-            >
-              {currentNode.tier}
-            </span>
+              className="inline-block w-2 h-2 rounded-full"
+              style={{ backgroundColor: currentNode.color }}
+              aria-hidden="true"
+            />
             <span className="text-xs font-bold text-[var(--text-secondary)]">
               {getNodeName(currentNode.id, lang)}
             </span>
@@ -438,20 +442,16 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           {ceilingNode !== null && ceilingNode > 0 ? (
             <>
               {/* Found a ceiling with some passed nodes */}
-              <div
-                className="text-[10px] font-black uppercase tracking-wider mb-2"
-                style={{ color: lastPassedNode?.color }}
-              >
-                Your level
-              </div>
-              <h1 className="text-3xl font-black text-[var(--text-primary)] mb-1">
-                {lastPassedNode?.tier}
+              <h1 className="text-2xl font-black text-[var(--text-primary)] mb-2">
+                You're ready to roll
               </h1>
-              <p className="text-sm text-[var(--text-secondary)] mb-6">
+              <p className="text-sm text-[var(--text-secondary)] mb-4">
                 Comfortable through <span className="font-bold">{lastPassedNode ? getNodeName(lastPassedNode.id, lang) : ''}</span>
               </p>
-              <p className="text-xs text-[var(--text-muted)] mb-1">
-                Starting from: <span className="font-bold" style={{ color: ceilingNodeObj?.color }}>{ceilingNodeObj?.tier} — {ceilingNodeObj ? getNodeName(ceilingNodeObj.id, lang) : ''}</span>
+              <p className="text-xs text-[var(--text-muted)] mb-1 flex items-center justify-center gap-2">
+                Starting from
+                <span className="inline-block w-2 h-2 rounded-full" style={{ backgroundColor: ceilingNodeObj?.color }} aria-hidden="true" />
+                <span className="font-bold text-[var(--text-secondary)]">{ceilingNodeObj ? getNodeName(ceilingNodeObj.id, lang) : ''}</span>
               </p>
             </>
           ) : ceilingNode === 0 ? (

@@ -875,67 +875,58 @@ const App: React.FC = () => {
             </div>
           )}
 
-          {/* Vocab list button — always visible for discoverability */}
+          {/* Vocabulary + Favourites — side by side */}
           {(() => {
             const vocabCount = Object.keys(vocabMap).length;
             const hasVocab = vocabCount > 0;
+            const favCount = Object.keys(favoritesMap).length;
+            const hasFav = favCount > 0;
             return (
+            <div className="grid grid-cols-2 gap-2 mb-3">
               <button
                 onClick={() => hasVocab && setView('VOCAB')}
                 disabled={!hasVocab}
-                className={`stat-card p-3.5 mb-3 w-full text-left transition-all group ${
+                className={`stat-card p-3 text-left transition-all group ${
                   hasVocab
                     ? 'hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer'
                     : 'opacity-60 cursor-default'
                 }`}
               >
-                <div className="flex items-center gap-3">
-                  <div className="shrink-0 w-10 h-10 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
-                    <BookOpen size={18} className="text-[var(--accent)]" />
+                <div className="flex items-center gap-2 mb-1.5">
+                  <div className="shrink-0 w-8 h-8 rounded-lg bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
+                    <BookOpen size={14} className="text-[var(--accent)]" />
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-0.5">
-                      Vocabulary
-                    </div>
-                    <div className="text-sm font-bold text-[var(--text-primary)]">
-                      {hasVocab ? `${vocabCount} words seen` : 'Start studying to build it'}
-                    </div>
+                  <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">
+                    Vocabulary
                   </div>
-                  {hasVocab && <ChevronRight size={14} className="text-[var(--text-muted)] group-hover:text-[var(--text-secondary)] transition-all group-hover:translate-x-0.5" />}
+                </div>
+                <div className="text-sm font-bold text-[var(--text-primary)] leading-snug">
+                  {hasVocab ? `${vocabCount} words seen` : 'Start studying to build it'}
                 </div>
               </button>
-            );
-          })()}
 
-          {/* Favourites list button */}
-          {(() => {
-            const favCount = Object.keys(favoritesMap).length;
-            const hasFav = favCount > 0;
-            return (
               <button
                 onClick={() => hasFav && setView('FAVORITES')}
                 disabled={!hasFav}
-                className={`stat-card p-3.5 mb-3 w-full text-left transition-all group ${
+                className={`stat-card p-3 text-left transition-all group ${
                   hasFav
                     ? 'hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer'
                     : 'opacity-60 cursor-default'
                 }`}
               >
-                <div className="flex items-center gap-3">
-                  <div className="shrink-0 w-10 h-10 rounded-xl bg-yellow-400/10 border border-yellow-400/30 flex items-center justify-center">
-                    <Star size={18} className="text-yellow-500" fill="currentColor" />
+                <div className="flex items-center gap-2 mb-1.5">
+                  <div className="shrink-0 w-8 h-8 rounded-lg bg-yellow-400/10 border border-yellow-400/30 flex items-center justify-center">
+                    <Star size={14} className="text-yellow-500" fill="currentColor" />
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-0.5">
-                      Favourites
-                    </div>
-                    <div className="text-sm font-bold text-[var(--text-primary)]">
-                      {hasFav ? `${favCount} word${favCount === 1 ? '' : 's'} saved` : 'Tap the ⭐ on any word to save it'}
-                    </div>
+                  <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">
+                    Favourites
                   </div>
-                  {hasFav && <ChevronRight size={14} className="text-[var(--text-muted)] group-hover:text-[var(--text-secondary)] transition-all group-hover:translate-x-0.5" />}
+                </div>
+                <div className="text-sm font-bold text-[var(--text-primary)] leading-snug">
+                  {hasFav ? `${favCount} word${favCount === 1 ? '' : 's'} saved` : 'Tap ⭐ on any word'}
                 </div>
               </button>
+            </div>
             );
           })()}
 

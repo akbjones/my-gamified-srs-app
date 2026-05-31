@@ -902,7 +902,7 @@ const App: React.FC = () => {
                   Settings
                 </div>
                 <div className="text-sm font-bold text-[var(--text-primary)] leading-tight truncate">
-                  {settings.dailyNewLimit} new/day
+                  {settings.dailyNewLimit}/day
                 </div>
               </div>
               <ChevronDown size={16} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showTools ? 'rotate-180' : ''}`} />

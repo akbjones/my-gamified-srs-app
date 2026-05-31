@@ -1,9 +1,20 @@
 import { PathNode, SideBranch, Language } from '../types';
 
-// 35 grammar-progression nodes mapped to CEFR levels (A1→C2).
+// 35 grammar-progression nodes grouped by tier.
 // Node names are language-specific — see NODE_NAMES below.
 // MAIN_PATH.name holds the English defaults; use getNodeName() for display.
 // Cards are assigned to nodes via the grammarNode field in deck.json.
+
+// Display labels for tiers — surfaced in TopicMap section headers.
+// Tier codes (A1, A2, …) are kept internal; learners see the descriptive label.
+export const TIER_LABELS: Record<string, string> = {
+  A1: 'Foundations',
+  A2: 'Past & Pronouns',
+  B1: 'Moods & Complex Tenses',
+  B2: 'Advanced Grammar',
+  C1: 'Refinement',
+  C2: 'Mastery',
+};
 
 export const MAIN_PATH: PathNode[] = [
   // ── A1 — Foundations (8 nodes) ──────────────────────────────

@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { QuestCard, Language, LANGUAGE_CONFIG } from '../types';
-import { MAIN_PATH, isNodeUnlocked, getNodeName } from '../data/topicConfig';
+import { MAIN_PATH, isNodeUnlocked, getNodeName, TIER_LABELS } from '../data/topicConfig';
 import { ChevronLeft, Lock, Check } from 'lucide-react';
 
 interface TopicMapProps {
@@ -86,7 +86,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
                         unlocked ? 'text-[var(--accent)]' : 'text-[var(--text-muted)]'
                       }`}
                     >
-                      {node.tier}
+                      {TIER_LABELS[node.tier] || node.tier}
                     </span>
                   </div>
                 </div>

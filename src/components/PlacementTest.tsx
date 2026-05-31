@@ -290,13 +290,13 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           </div>
         </div>
 
-        {/* Confidence buttons */}
+        {/* Confidence buttons — ordered low→high (no idea on left, know it on right) */}
         <div className="grid grid-cols-3 gap-2 mt-4 mb-2 shrink-0">
           <button
-            onClick={() => handleConfidence('know_it')}
-            className="py-3.5 rounded-xl border border-emerald-500/30 bg-[var(--bg-card)] hover:bg-emerald-500/10 active:bg-emerald-500/20 transition-all"
+            onClick={() => handleConfidence('no_idea')}
+            className="py-3.5 rounded-xl border border-red-500/30 bg-[var(--bg-card)] hover:bg-red-500/10 active:bg-red-500/20 transition-all"
           >
-            <div className="text-xs font-black text-emerald-500 uppercase">Know it</div>
+            <div className="text-xs font-black text-red-500 uppercase">No idea</div>
           </button>
           <button
             onClick={() => handleConfidence('mostly')}
@@ -305,10 +305,10 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
             <div className="text-xs font-black text-amber-500 uppercase">Mostly</div>
           </button>
           <button
-            onClick={() => handleConfidence('no_idea')}
-            className="py-3.5 rounded-xl border border-red-500/30 bg-[var(--bg-card)] hover:bg-red-500/10 active:bg-red-500/20 transition-all"
+            onClick={() => handleConfidence('know_it')}
+            className="py-3.5 rounded-xl border border-emerald-500/30 bg-[var(--bg-card)] hover:bg-emerald-500/10 active:bg-emerald-500/20 transition-all"
           >
-            <div className="text-xs font-black text-red-500 uppercase">No idea</div>
+            <div className="text-xs font-black text-emerald-500 uppercase">Know it</div>
           </button>
         </div>
       </div>

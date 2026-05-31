@@ -558,16 +558,6 @@ const App: React.FC = () => {
 
   const availableLanguages: Language[] = Object.keys(DECK_MAP) as Language[];
 
-  const LANGUAGE_FLAGS: Partial<Record<Language, string>> = {
-    spanish: '\u{1F1F2}\u{1F1FD}', italian: '\u{1F1EE}\u{1F1F9}', french: '\u{1F1EB}\u{1F1F7}',
-    portuguese: '\u{1F1E7}\u{1F1F7}', german: '\u{1F1E9}\u{1F1EA}', dutch: '\u{1F1F3}\u{1F1F1}',
-    swedish: '\u{1F1F8}\u{1F1EA}',
-    welsh: '\u{1F3F4}\u{E0067}\u{E0062}\u{E0077}\u{E006C}\u{E0073}\u{E007F}',
-    hindi: '\u{1F1EE}\u{1F1F3}',
-    turkish: '\u{1F1F9}\u{1F1F7}',
-    russian: '\u{1F1F7}\u{1F1FA}',
-  };
-
   // Close language dropdown when clicking outside
   useEffect(() => {
     if (!showLangDropdown) return;
@@ -617,9 +607,8 @@ const App: React.FC = () => {
                       localStorage.setItem('quest_first_launch_done', 'true');
                       setShowLangPicker(false);
                     }}
-                    className="stat-card p-4 flex flex-col items-center gap-2 hover:border-[var(--accent)]/40 hover:bg-[var(--accent)]/5 transition-all active:scale-95"
+                    className="stat-card p-4 flex items-center justify-center hover:border-[var(--accent)]/40 hover:bg-[var(--accent)]/5 transition-all active:scale-95"
                   >
-                    <span className="text-3xl">{LANGUAGE_FLAGS[l] || ''}</span>
                     <span className="text-sm font-bold text-[var(--text-primary)]">{LANGUAGE_CONFIG[l].name}</span>
                   </button>
               ))}
@@ -630,8 +619,8 @@ const App: React.FC = () => {
 
       {view === 'HOME' && (
         <section className="animate-fade-in">
-          {/* Header row: title + language + theme toggle */}
-          <header className="pt-6 pb-5 flex items-center justify-between">
+          {/* Header row: title + language picker */}
+          <header className="pt-3 pb-3 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               {/* Lambda λ — matches the PWA home-screen icon */}
               <svg viewBox="0 0 32 32" className="w-9 h-9 text-[var(--accent)]" fill="none">
@@ -650,7 +639,6 @@ const App: React.FC = () => {
                   onClick={() => setShowLangDropdown(prev => !prev)}
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold border border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--accent)]/40 hover:text-[var(--accent)] transition-all"
                 >
-                  <span className="text-base">{LANGUAGE_FLAGS[lang] || ''}</span>
                   <span>{LANGUAGE_CONFIG[lang].name}</span>
                   <ChevronDown size={12} className={`transition-transform ${showLangDropdown ? 'rotate-180' : ''}`} />
                 </button>
@@ -669,7 +657,6 @@ const App: React.FC = () => {
                             : 'text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)]'
                         }`}
                       >
-                        <span className="text-base">{LANGUAGE_FLAGS[l] || ''}</span>
                         <span>{LANGUAGE_CONFIG[l].name}</span>
                         {l === lang && <span className="ml-auto text-[10px] opacity-60">active</span>}
                       </button>
@@ -680,21 +667,9 @@ const App: React.FC = () => {
             </div>
           </header>
 
-          {/* Quiet topic-map link only — no level/chapter framing */}
-          <button
-            onClick={() => setView('TOPICS')}
-            className="w-full flex items-center justify-between px-3.5 py-2 mb-3 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[var(--border-hover)] active:scale-[0.99] transition-all group"
-          >
-            <div className="text-left">
-              <div className="text-[9px] font-semibold text-[var(--text-muted)] uppercase tracking-widest leading-none">Explore</div>
-              <div className="text-xs font-bold text-[var(--text-primary)] mt-0.5">Browse all topics</div>
-            </div>
-            <ChevronRight size={14} className="text-[var(--text-muted)] group-hover:text-[var(--text-secondary)] group-hover:translate-x-0.5 transition-all" />
-          </button>
-
           {/* Placement test CTA — compact banner, shown until completed */}
           {!isPlacementComplete(lang) && (
-            <div className="stat-card px-3 py-2.5 mb-3 border-amber-500/30 flex items-center gap-2">
+            <div className="stat-card px-3 py-2.5 mb-2 border-amber-500/30 flex items-center gap-2">
               <p className="flex-1 text-xs text-[var(--text-secondary)] leading-snug">
                 Know some {LANGUAGE_CONFIG[lang].name}? <span className="text-[var(--text-muted)]">Skip ahead with a 2-min test.</span>
               </p>
@@ -718,101 +693,11 @@ const App: React.FC = () => {
             </div>
           )}
 
-          {/* Category focus — compact dropdown */}
-          <div className="mb-3 relative">
-            {(() => {
-              const CurrentIcon = goal === 'general' ? Globe : goal === 'travel' ? Plane : goal === 'work' ? Briefcase : Heart;
-              return (
-                <button
-                  onClick={() => setShowGoalMenu(prev => !prev)}
-                  className="w-full flex items-center justify-between px-3.5 py-2 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[var(--border-hover)] active:scale-[0.99] transition-all"
-                >
-                  <div className="flex items-center gap-2.5 min-w-0">
-                    <CurrentIcon size={16} className="text-[var(--accent)] shrink-0" />
-                    <div className="text-left min-w-0">
-                      <div className="text-[9px] font-semibold text-[var(--text-muted)] uppercase tracking-widest leading-none">Focus</div>
-                      <div className="text-xs font-bold text-[var(--text-primary)] mt-0.5 truncate">
-                        {GOAL_CONFIG[goal].name}
-                        <span className="text-[10px] text-[var(--text-muted)] font-normal ml-1.5">
-                          {goal === 'general' ? 'Well-rounded' : GOAL_CONFIG[goal].description}
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <ChevronDown size={14} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showGoalMenu ? 'rotate-180' : ''}`} />
-                </button>
-              );
-            })()}
-            {showGoalMenu && (
-              <>
-                {/* Click-outside catcher */}
-                <div className="fixed inset-0 z-20" onClick={() => setShowGoalMenu(false)} />
-                <div className="absolute left-0 right-0 top-full mt-1.5 z-30 stat-card p-1.5 animate-fade-in">
-                  {(['general', 'travel', 'work', 'family'] as LearningGoal[]).map(g => {
-                    const cfg = GOAL_CONFIG[g];
-                    const isSelected = goal === g;
-                    const Icon = g === 'general' ? Globe : g === 'travel' ? Plane : g === 'work' ? Briefcase : Heart;
-                    return (
-                      <button
-                        key={g}
-                        onClick={() => { handleGoalChange(g); setShowGoalMenu(false); }}
-                        className={`w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg transition-all ${
-                          isSelected
-                            ? 'bg-[var(--accent)]/10 text-[var(--accent)]'
-                            : 'text-[var(--text-secondary)] hover:bg-[var(--bg-inset)]'
-                        }`}
-                      >
-                        <Icon size={14} />
-                        <div className="text-left flex-1 min-w-0">
-                          <div className="text-xs font-bold">{cfg.name}</div>
-                          <div className="text-[10px] text-[var(--text-muted)] mt-0.5">
-                            {g === 'general' ? 'Well-rounded vocabulary' : cfg.description}
-                          </div>
-                        </div>
-                      </button>
-                    );
-                  })}
-                </div>
-              </>
-            )}
-          </div>
-
-          {/* Gentle notification prompt (after 3rd session) */}
-          {showNotifPrompt && (
-            <div className="w-full mb-3 p-3 rounded-xl border border-[var(--accent)]/20 bg-[var(--accent)]/5 flex items-center gap-3">
-              <Bell size={18} className="text-[var(--accent)] shrink-0" />
-              <div className="flex-1 min-w-0">
-                <p className="text-xs font-semibold text-[var(--text-primary)]">Enable study reminders?</p>
-                <p className="text-[10px] text-[var(--text-muted)] mt-0.5">Get a daily nudge so you never miss a review.</p>
-              </div>
-              <div className="flex gap-1.5 shrink-0">
-                <button
-                  onClick={async () => {
-                    setShowNotifPrompt(false);
-                    await handleToggleNotifications(true);
-                  }}
-                  className="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-[var(--accent)] text-white"
-                >
-                  Sure
-                </button>
-                <button
-                  onClick={() => {
-                    setShowNotifPrompt(false);
-                    dismissPrompt();
-                  }}
-                  className="px-2.5 py-1 rounded-lg text-[10px] font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)]"
-                >
-                  Later
-                </button>
-              </div>
-            </div>
-          )}
-
-          {/* Study button with counts on the right */}
+          {/* Study button — primary action, moved to top of dashboard */}
           <button
             onClick={() => handleStartSession()}
             disabled={!hasCards}
-            className="w-full py-4 btn-primary rounded-xl text-base mb-3"
+            className="w-full py-4 btn-primary rounded-xl text-base mb-2"
           >
             {!hasCards ? (
               'All Caught Up'
@@ -860,60 +745,155 @@ const App: React.FC = () => {
             </div>
           )}
 
-          {/* Vocabulary + Favourites — side by side */}
+          {/* Quick-access grid: Topics + Vocabulary + Favourites — 3-col compact */}
           {(() => {
             const vocabCount = Object.keys(vocabMap).length;
             const hasVocab = vocabCount > 0;
             const favCount = Object.keys(favoritesMap).length;
             const hasFav = favCount > 0;
             return (
-            <div className="grid grid-cols-2 gap-2 mb-3">
+            <div className="grid grid-cols-3 gap-2 mb-2">
+              <button
+                onClick={() => setView('TOPICS')}
+                className="stat-card p-2.5 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer"
+              >
+                <div className="w-8 h-8 rounded-lg bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center mb-1.5">
+                  <BookOpen size={14} className="text-[var(--accent)]" />
+                </div>
+                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider leading-none mb-1">
+                  Topics
+                </div>
+                <div className="text-[11px] font-bold text-[var(--text-primary)] leading-tight">
+                  Browse all
+                </div>
+              </button>
+
               <button
                 onClick={() => hasVocab && setView('VOCAB')}
                 disabled={!hasVocab}
-                className={`stat-card p-3 text-left transition-all group ${
+                className={`stat-card p-2.5 text-left transition-all ${
                   hasVocab
                     ? 'hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer'
                     : 'opacity-60 cursor-default'
                 }`}
               >
-                <div className="flex items-center gap-2 mb-1.5">
-                  <div className="shrink-0 w-8 h-8 rounded-lg bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
-                    <BookOpen size={14} className="text-[var(--accent)]" />
-                  </div>
-                  <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">
-                    Vocabulary
-                  </div>
+                <div className="w-8 h-8 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-1.5">
+                  <BookOpen size={14} className="text-blue-500" />
                 </div>
-                <div className="text-sm font-bold text-[var(--text-primary)] leading-snug">
-                  {hasVocab ? `${vocabCount} words seen` : 'Start studying to build it'}
+                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider leading-none mb-1">
+                  Vocab
+                </div>
+                <div className="text-[11px] font-bold text-[var(--text-primary)] leading-tight">
+                  {hasVocab ? `${vocabCount} seen` : 'None yet'}
                 </div>
               </button>
 
               <button
                 onClick={() => hasFav && setView('FAVORITES')}
                 disabled={!hasFav}
-                className={`stat-card p-3 text-left transition-all group ${
+                className={`stat-card p-2.5 text-left transition-all ${
                   hasFav
                     ? 'hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer'
                     : 'opacity-60 cursor-default'
                 }`}
               >
-                <div className="flex items-center gap-2 mb-1.5">
-                  <div className="shrink-0 w-8 h-8 rounded-lg bg-yellow-400/10 border border-yellow-400/30 flex items-center justify-center">
-                    <Star size={14} className="text-yellow-500" fill="currentColor" />
-                  </div>
-                  <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">
-                    Favourites
-                  </div>
+                <div className="w-8 h-8 rounded-lg bg-yellow-400/10 border border-yellow-400/30 flex items-center justify-center mb-1.5">
+                  <Star size={14} className="text-yellow-500" fill="currentColor" />
                 </div>
-                <div className="text-sm font-bold text-[var(--text-primary)] leading-snug">
-                  {hasFav ? `${favCount} word${favCount === 1 ? '' : 's'} saved` : 'Tap ⭐ on any word'}
+                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider leading-none mb-1">
+                  Favs
+                </div>
+                <div className="text-[11px] font-bold text-[var(--text-primary)] leading-tight">
+                  {hasFav ? `${favCount} saved` : 'Tap ⭐'}
                 </div>
               </button>
             </div>
             );
           })()}
+
+          {/* Focus category — compact pill, full width */}
+          <div className="mb-2 relative">
+            {(() => {
+              const CurrentIcon = goal === 'general' ? Globe : goal === 'travel' ? Plane : goal === 'work' ? Briefcase : Heart;
+              return (
+                <button
+                  onClick={() => setShowGoalMenu(prev => !prev)}
+                  className="w-full flex items-center justify-between px-3 py-2 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] hover:border-[var(--border-hover)] active:scale-[0.99] transition-all"
+                >
+                  <div className="flex items-center gap-2 min-w-0">
+                    <CurrentIcon size={14} className="text-[var(--accent)] shrink-0" />
+                    <span className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">Focus</span>
+                    <span className="text-xs font-bold text-[var(--text-primary)] truncate">
+                      {GOAL_CONFIG[goal].name}
+                    </span>
+                  </div>
+                  <ChevronDown size={14} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showGoalMenu ? 'rotate-180' : ''}`} />
+                </button>
+              );
+            })()}
+            {showGoalMenu && (
+              <>
+                <div className="fixed inset-0 z-20" onClick={() => setShowGoalMenu(false)} />
+                <div className="absolute left-0 right-0 top-full mt-1.5 z-30 stat-card p-1.5 animate-fade-in">
+                  {(['general', 'travel', 'work', 'family'] as LearningGoal[]).map(g => {
+                    const cfg = GOAL_CONFIG[g];
+                    const isSelected = goal === g;
+                    const Icon = g === 'general' ? Globe : g === 'travel' ? Plane : g === 'work' ? Briefcase : Heart;
+                    return (
+                      <button
+                        key={g}
+                        onClick={() => { handleGoalChange(g); setShowGoalMenu(false); }}
+                        className={`w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg transition-all ${
+                          isSelected
+                            ? 'bg-[var(--accent)]/10 text-[var(--accent)]'
+                            : 'text-[var(--text-secondary)] hover:bg-[var(--bg-inset)]'
+                        }`}
+                      >
+                        <Icon size={14} />
+                        <div className="text-left flex-1 min-w-0">
+                          <div className="text-xs font-bold">{cfg.name}</div>
+                          <div className="text-[10px] text-[var(--text-muted)] mt-0.5">
+                            {g === 'general' ? 'Well-rounded vocabulary' : cfg.description}
+                          </div>
+                        </div>
+                      </button>
+                    );
+                  })}
+                </div>
+              </>
+            )}
+          </div>
+
+          {/* Notification prompt (after 3rd session) */}
+          {showNotifPrompt && (
+            <div className="w-full mb-2 p-3 rounded-xl border border-[var(--accent)]/20 bg-[var(--accent)]/5 flex items-center gap-3">
+              <Bell size={18} className="text-[var(--accent)] shrink-0" />
+              <div className="flex-1 min-w-0">
+                <p className="text-xs font-semibold text-[var(--text-primary)]">Enable study reminders?</p>
+                <p className="text-[10px] text-[var(--text-muted)] mt-0.5">Get a daily nudge so you never miss a review.</p>
+              </div>
+              <div className="flex gap-1.5 shrink-0">
+                <button
+                  onClick={async () => {
+                    setShowNotifPrompt(false);
+                    await handleToggleNotifications(true);
+                  }}
+                  className="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-[var(--accent)] text-white"
+                >
+                  Sure
+                </button>
+                <button
+                  onClick={() => {
+                    setShowNotifPrompt(false);
+                    dismissPrompt();
+                  }}
+                  className="px-2.5 py-1 rounded-lg text-[10px] font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)]"
+                >
+                  Later
+                </button>
+              </div>
+            </div>
+          )}
 
           {/* Settings — gear icon expandable */}
           <div className="flex justify-center">

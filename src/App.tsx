@@ -717,7 +717,14 @@ const App: React.FC = () => {
             {!hasCards ? (
               'All Caught Up'
             ) : (
-              <div className="flex items-center justify-center gap-3">
+              <div className="flex items-center justify-center gap-2.5">
+                {/* Small Λ brand mark — echoes the PWA icon, gold accent */}
+                <svg viewBox="0 0 512 512" className="w-3.5 h-3.5 shrink-0" style={{ color: '#F5D76E' }}>
+                  <path
+                    d="M 244 92 L 268 92 L 414 418 L 334 418 L 256 240 L 178 418 L 98 418 Z"
+                    fill="currentColor"
+                  />
+                </svg>
                 <span className="font-extrabold text-base">Study</span>
                 <span className="text-white/40">·</span>
                 <div className="flex items-center gap-2 text-[11px] font-bold opacity-85">

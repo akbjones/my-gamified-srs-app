@@ -2575,7 +2575,7 @@ const dictionary: Record<string, DictEntry> =               {
   'kön': { en: 'sex; gender', ipa: 'ɕøn', pos: 'n' },
   'könsneutrala': { en: 'gender-neutral', ipa: 'ɕønsnɛʉtrɑːla', pos: 'adj' },
   'könsroller': { en: 'gender roles', ipa: 'ɧœnsrʊllɛr', pos: 'n' },
-  'köp': { en: 'purchase; to buy', ipa: 'ɕøp', pos: 'n', lemma: 'köpa' },
+  'köp': { en: 'purchase; to buy; I buy (imperative / stem of köpa)', ipa: 'ɕøp', pos: 'n', lemma: 'köpa' },
   'köpa': { en: 'to buy', ipa: 'ˈɕøːˌpa', pos: 'v' },
   'köpas': { en: 'to buy', ipa: 'ˈɕøːˌpa', pos: 'v', lemma: 'köpa' },
   'köpenhamn': { en: 'Copenhagen', ipa: 'ˈɕøːpɛnˌhamn', pos: 'n' },

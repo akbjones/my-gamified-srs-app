@@ -864,14 +864,14 @@ const App: React.FC = () => {
             );
           })()}
 
-          {/* Focus + Settings — 2-col row. Focus is wider (2/3) since it changes more often. */}
-          <div className="grid grid-cols-3 gap-2 mb-3 relative">
+          {/* Focus + Settings — 2-col row, equal width, matching horizontal layouts */}
+          <div className="grid grid-cols-2 gap-2 mb-3 relative">
             {(() => {
               const CurrentIcon = goal === 'general' ? Globe : goal === 'travel' ? Plane : goal === 'work' ? Briefcase : Heart;
               return (
                 <button
                   onClick={() => setShowGoalMenu(prev => !prev)}
-                  className="col-span-2 stat-card p-5 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex items-center gap-4"
+                  className="stat-card p-5 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex items-center gap-3"
                 >
                   <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center shrink-0">
                     <CurrentIcon size={22} className="text-[var(--accent)]" />
@@ -890,17 +890,22 @@ const App: React.FC = () => {
             })()}
             <button
               onClick={() => setShowTools(prev => !prev)}
-              className={`stat-card p-4 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex flex-col gap-2 ${
+              className={`stat-card p-5 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex items-center gap-3 ${
                 showTools ? 'border-[var(--accent)]/40 bg-[var(--accent)]/5' : ''
               }`}
             >
-              <div className="w-11 h-11 rounded-xl bg-slate-500/10 border border-slate-500/20 flex items-center justify-center">
-                <Settings2 size={20} className="text-slate-500" />
+              <div className="w-12 h-12 rounded-xl bg-slate-500/10 border border-slate-500/20 flex items-center justify-center shrink-0">
+                <Settings2 size={22} className="text-slate-500" />
               </div>
-              <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider">
-                Settings
+              <div className="flex-1 min-w-0">
+                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-0.5">
+                  Settings
+                </div>
+                <div className="text-sm font-bold text-[var(--text-primary)] leading-tight truncate">
+                  {settings.dailyNewLimit} new/day
+                </div>
               </div>
-              <ChevronDown size={14} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showTools ? 'rotate-180' : ''}`} />
+              <ChevronDown size={16} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showTools ? 'rotate-180' : ''}`} />
             </button>
             {showGoalMenu && (
               <>

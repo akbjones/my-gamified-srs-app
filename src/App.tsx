@@ -397,37 +397,46 @@ const App: React.FC = () => {
     const isNewCard = currentCard.mastery === 0;
 
     const { sessionUpdates: updates, updatedCard } = handleAnswerLogic(rating, currentCard, session, (card) => {
-      const newMap = saveCardProgress(card, masteryMap, lang);
+      const newMap = saveCardProgress(card, lang);
       setMasteryMap(newMap);
     });
 
+    // CRITICAL: every save below reads fresh from localStorage before mutating,
+    // not from the React closure. Otherwise two rapid handleAnswer calls (user
+    // rating cards faster than React re-renders) would both base their saves on
+    // the stale closure value, and the second would silently erase the first's
+    // increment. This is the bug behind the "morning progress disappeared" reports.
+
     // Daily new card tracking
     if (isNewCard && rating !== 'AGAIN') {
-      const newDaily = { ...dailyStats, newCardsCount: dailyStats.newCardsCount + 1 };
+      const freshDaily = loadDailyStats(lang);
+      const newDaily = { ...freshDaily, newCardsCount: freshDaily.newCardsCount + 1 };
       setDailyStats(newDaily);
       saveDailyStats(newDaily, lang);
 
-      // Track cumulative new cards (used internally; no gamified challenge triggers anymore)
-      const newCumulative = progressState.cumulativeNewCards + 1;
-      const newProgress = { ...progressState, cumulativeNewCards: newCumulative };
+      // Track cumulative new cards
+      const freshProgress = loadProgressState(lang);
+      const newProgress = { ...freshProgress, cumulativeNewCards: freshProgress.cumulativeNewCards + 1 };
       setProgressState(newProgress);
       saveProgressState(newProgress, lang);
     }
 
-    // Track answer + count graduated cards
-    const newStats = recordAnswer(userStats);
+    // Track answer + count graduated cards (load fresh stats so concurrent
+    // increments don't overwrite each other)
+    const freshStats = loadUserStats(lang);
+    const newStats = recordAnswer(freshStats);
     if (updatedCard.mastery === 2 && currentCard.mastery < 2) {
       newStats.cardsLearned = newStats.cardsLearned + 1;
     }
-
     setUserStats(newStats);
     saveUserStats(newStats, lang);
 
     checkAchievements(newStats, masteryMap, deck, lang);
 
-    // Track vocabulary
+    // Track vocabulary (also fresh-load so we don't lose words from rapid answers)
     const lookupFn = DICT_LOOKUP[lang] ?? (() => null);
-    const newVocab = recordWordsFromCard(currentCard.target, vocabMap, lookupFn, rating === 'AGAIN');
+    const freshVocab = loadVocabMap(lang);
+    const newVocab = recordWordsFromCard(currentCard.target, freshVocab, lookupFn, rating === 'AGAIN');
     setVocabMap(newVocab);
     saveVocabMap(newVocab, lang);
 

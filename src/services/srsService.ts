@@ -14,9 +14,22 @@ export const getRetention = (cards: QuestCard[]): number => {
   return Math.round((retained / cards.length) * 100);
 };
 
-export const saveCardProgress = (card: QuestCard, masteryMap: MasteryMap, lang: Language): MasteryMap => {
+/** Save a card's progress to localStorage.
+ *
+ * IMPORTANT: This function reads the latest map from localStorage right
+ * before writing, instead of trusting an in-memory `masteryMap` argument
+ * captured in a React closure. Without this, two rapid submitAnswer calls
+ * (the user rating two cards before React re-renders) would both base their
+ * writes on the same stale closure map, and the second write would silently
+ * erase the first. localStorage is synchronous and single-threaded, so a
+ * load-modify-save cycle here is race-free.
+ */
+import { loadMasteryMap } from './storageService';
+
+export const saveCardProgress = (card: QuestCard, lang: Language): MasteryMap => {
+  const existing = loadMasteryMap(lang);
   const newMap = {
-    ...masteryMap,
+    ...existing,
     [card.id]: {
       mastery: card.mastery,
       step: card.step,

@@ -568,9 +568,9 @@ export const WELSH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'ifanc': {
     word: 'ifanc',
-    origin: 'Latin iuvencus',
+    origin: 'Brittonic Celtic',
     cognates: ['juvenile'],
-    note: 'Borrowed from Latin iuvencus (young) during Roman Britain — same root as English "juvenile". Welsh notably took this adjective from Latin.',
+    note: 'Same ancient Indo-European root as Latin iuvenis (giving English "juvenile") — a parallel inheritance from the shared root, not a Latin loan.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
   },

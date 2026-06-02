@@ -319,7 +319,7 @@ export const ITALIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
     word: 'Roma',
     origin: 'Latin Roma',
     cognates: ['Rome', 'romance'],
-    note: 'The legendary city — named for Romulus, the twin raised by a wolf. The word "romance" comes from Roma too: stories told in the Roman vernacular.',
+    note: 'Origin debated — possibly Etruscan, possibly an old river-name. The Romulus legend is folk etymology. "Romance" from Roma: tales in vernacular.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
   },

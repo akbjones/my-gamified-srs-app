@@ -728,14 +728,17 @@ const App: React.FC = () => {
             className="w-full py-7 btn-primary rounded-2xl text-lg mb-3"
           >
             {!hasCards ? (
-              'All Caught Up'
+              <div className="flex flex-col items-center gap-0.5">
+                <span className="font-extrabold text-xl">All Caught Up</span>
+                <span className="text-[11px] font-bold opacity-75">Nice work today</span>
+              </div>
             ) : (
               <div className="flex items-baseline justify-center gap-2.5">
                 <span className="font-extrabold text-xl">Study</span>
                 {reviewsDue > 0 && (
                   <>
                     <span className="text-white/40">·</span>
-                    <span className="text-[13px] font-bold opacity-85">{reviewsDue} due</span>
+                    <span className="text-[13px] font-bold opacity-85">{reviewsDue} to review</span>
                   </>
                 )}
               </div>
@@ -786,17 +789,18 @@ const App: React.FC = () => {
             );
           })()}
 
-          {/* Study more when caught up — secondary text-link style */}
+          {/* When caught up: explicit next-step suggestions instead of a tiny
+              "or study more" link that's easy to miss. */}
           {!hasCards && (
-            <div className="w-full flex items-center justify-center gap-2 mb-3 -mt-1.5 text-[12px] text-[var(--text-muted)]">
-              <span>Or study</span>
+            <div className="w-full mb-3 -mt-1 p-3 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] flex items-center justify-center gap-2 text-[12px]">
+              <span className="text-[var(--text-muted)]">Want more? Study</span>
               <input
                 id="study-more-count"
                 type="number"
                 defaultValue={10}
                 min={1}
                 max={100}
-                className="w-12 py-1 rounded-md bg-transparent border border-[var(--border-color)] text-center text-[12px] font-semibold text-[var(--text-secondary)] focus:outline-none focus:border-[var(--accent)]"
+                className="w-14 py-1 rounded-md bg-transparent border border-[var(--border-color)] text-center text-[13px] font-semibold text-[var(--text-secondary)] focus:outline-none focus:border-[var(--accent)]"
               />
               <button
                 onClick={() => {
@@ -804,9 +808,9 @@ const App: React.FC = () => {
                   const count = input ? parseInt(input.value) || 10 : 10;
                   handleStartSession(count);
                 }}
-                className="text-[var(--accent)] font-semibold hover:underline"
+                className="text-[var(--accent)] font-bold hover:underline active:scale-95 transition"
               >
-                more cards
+                extra cards →
               </button>
             </div>
           )}
@@ -915,7 +919,7 @@ const App: React.FC = () => {
                   Settings
                 </div>
                 <div className="text-sm font-bold text-[var(--text-primary)] leading-tight truncate">
-                  {getDailyLimitFor(settings, lang)}/day
+                  {getDailyLimitFor(settings, lang)} new/day
                 </div>
               </div>
               <ChevronDown size={16} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showTools ? 'rotate-180' : ''}`} />

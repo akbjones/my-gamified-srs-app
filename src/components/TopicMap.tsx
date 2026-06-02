@@ -52,12 +52,12 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
         <div className="text-sm font-black text-[var(--accent)]">{getTotalProgress()}%</div>
       </header>
 
-      {/* Explanation banner — clears up that the map is a passive overview,
-          not a menu. Users were tapping nodes expecting to navigate. */}
-      <div className="mx-4 mb-5 p-3 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] text-[11px] leading-relaxed text-[var(--text-secondary)]">
-        <p>
-          <span className="font-bold text-[var(--text-primary)]">Your grammar journey.</span> Cards are scheduled automatically based on what you've seen and how well you remember it. The pulsing node is where you are now — tap <span className="font-bold text-[var(--accent)]">Study</span> on the home screen to advance.
-        </p>
+      {/* Compact orientation banner — clarifies map is read-only without
+          eating vertical space. */}
+      <div className="mx-4 mb-4 px-3 py-2 rounded-lg bg-[var(--bg-card)] border border-[var(--border-color)] text-xs text-[var(--text-secondary)] text-center">
+        <span className="font-bold text-[var(--text-primary)]">Where you are.</span>
+        <span className="mx-1.5">·</span>
+        <span>Tap <span className="font-bold text-[var(--accent)]">Study</span> to advance.</span>
       </div>
 
       {/* Linear path */}

@@ -166,15 +166,16 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
     onAnswer(rating);
   };
 
+  // Explicit time units so "1m" can't be misread as "1 month".
   const getIntervalHint = (rating: string): string => {
-    if (rating === 'AGAIN') return '1m';
-    if (rating === 'HARD') return '6m';
+    if (rating === 'AGAIN') return '1 min';
+    if (rating === 'HARD') return '6 min';
     if (rating === 'GOOD') {
-      if (card!.mastery === 0) return '10m';
-      if (card!.mastery === 1 && card!.step === 0) return '10m';
-      return '1d';
+      if (card!.mastery === 0) return '10 min';
+      if (card!.mastery === 1 && card!.step === 0) return '10 min';
+      return '1 day';
     }
-    return '4d';
+    return '4 days';
   };
 
   return (
@@ -266,12 +267,17 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             </div>
           )}
 
-          {/* Leech badge — top of card */}
+          {/* "Tough" badge — replaces the cryptic "Leech" jargon. Cards that
+              fail 5+ times become flagged so the user knows to focus extra
+              attention. The title attribute provides hover/tap clarification. */}
           {card!.isLeech && (
             <div className="flex justify-center pt-2 shrink-0">
-              <div className="flex items-center gap-1 bg-orange-500/10 border border-orange-500/40 rounded-lg px-1.5 py-0.5">
+              <div
+                className="flex items-center gap-1 bg-orange-500/10 border border-orange-500/40 rounded-lg px-2 py-0.5"
+                title="You've struggled with this one — take a moment to re-read it"
+              >
                 <AlertTriangle size={10} className="text-orange-500" />
-                <span className="text-[10px] font-bold uppercase tracking-wider text-orange-500">Leech</span>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-orange-500">Tough one</span>
               </div>
             </div>
           )}

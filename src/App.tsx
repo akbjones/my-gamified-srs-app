@@ -359,10 +359,15 @@ const App: React.FC = () => {
     // When "Study More" is clicked, use the session card limit setting
     const sessionLimit = getSessionLimitFor(settings, lang);
     const dailyLimitRemaining = getDailyLimitFor(settings, lang) - dailyStats.newCardsCount;
-    const studyMoreCount = typeof studyMore === 'number' ? studyMore : (studyMore ? sessionLimit : 0);
+    const explicitCount = typeof studyMore === 'number';
+    const studyMoreCount = explicitCount ? (studyMore as number) : (studyMore ? sessionLimit : 0);
     const baseNewLimit = studyMore ? Math.max(studyMoreCount, dailyLimitRemaining) : Math.max(0, dailyLimitRemaining);
-    // Cap new cards at session limit when no reviews exist (prevents flooding after focus switch)
-    const newLimit = reviews.length === 0 ? Math.min(baseNewLimit, sessionLimit) : baseNewLimit;
+    // Cap new cards at session limit when no reviews exist — UNLESS the user
+    // explicitly typed a count in the "Want more? Study X extra cards" input.
+    // Previous bug: typing 20 was clipped to 10 because the cap fired anyway.
+    const newLimit = (reviews.length === 0 && !explicitCount)
+      ? Math.min(baseNewLimit, sessionLimit)
+      : baseNewLimit;
     const nodeCards = deck.filter(c => c.topic === currentNode.id && !c.isSuspended);
     const newCards = nodeCards
       .filter(c => c.mastery === 0)

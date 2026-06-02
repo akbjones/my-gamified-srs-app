@@ -161,9 +161,29 @@ export const playCardAudio = async (
     // user clicks Listen mid-autoplay), the older call's `currentAudio !==
     // audio` check will skip play() and the rejection-from-pause noise.
     const myToken = ++playToken;
+
+    // Retry once if the first fetch fails — this happens when the CDN is
+    // briefly cold or the user just unlocked the screen on mobile. Without
+    // a retry, the user used to hear robotic browser TTS as a fallback,
+    // then on the next card the real voice came back.
+    const fetchWithRetry = async (): Promise<Response> => {
+      try {
+        const r = await fetch(url);
+        if (!r.ok) throw new Error(`fetch ${r.status} for ${audioFile}`);
+        return r;
+      } catch (firstErr) {
+        // Quick retry, but only if we haven't been superseded.
+        if (myToken !== playToken) throw firstErr;
+        await new Promise(res => setTimeout(res, 350));
+        if (myToken !== playToken) throw firstErr;
+        const r = await fetch(url);
+        if (!r.ok) throw new Error(`retry fetch ${r.status} for ${audioFile}`);
+        return r;
+      }
+    };
+
     try {
-      const resp = await fetch(url);
-      if (!resp.ok) throw new Error(`fetch ${resp.status} for ${audioFile}`);
+      const resp = await fetchWithRetry();
       const blob = await resp.blob();
       // If a newer playCardAudio call has superseded this one, bail quietly.
       if (myToken !== playToken) return;
@@ -188,11 +208,12 @@ export const playCardAudio = async (
       // when the user clicks Listen during autoplay or rapidly switches cards.
       // The newer call is already handling playback; nothing to do.
       if (msg.includes('interrupted by a call to pause')) return;
-      // Surface real failures so they're visible in DevTools instead of
-      // silently degrading to browser TTS (which on systems without a
-      // matching voice is just silence).
-      console.warn('[audioService] pre-recorded audio failed, falling through to TTS:', msg);
-      // Fall through to TTS
+      // Surface real failures so they're visible in DevTools.
+      console.warn('[audioService] pre-recorded audio failed (after retry):', msg);
+      // We do NOT fall through to browser TTS when an audioFile was set —
+      // see the audioFile check at the end of this function. Falling through
+      // would play the robot voice and then the next card would play the real
+      // voice, which was disorienting.
     }
   }
 
@@ -209,6 +230,13 @@ export const playCardAudio = async (
     }
   }
 
-  // 3. Browser TTS fallback
-  playBrowserTts(targetText, lang, speed);
+  // 3. Browser TTS fallback — but ONLY when no MP3 was available to try in
+  // the first place. If an audioFile was provided and just failed to load
+  // (network error, transient 404), we'd rather stay silent than play the
+  // robotic system voice that doesn't match the recorded woman voice.
+  // The user can tap the audio button to retry; the MP3 will likely succeed
+  // on second attempt now that the cache is warm.
+  if (!audioFile) {
+    playBrowserTts(targetText, lang, speed);
+  }
 };

@@ -74,22 +74,70 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
   const [expandedWord, setExpandedWord] = useState<string | null>(null);
   const [conjTense, setConjTense] = useState('present');
 
-  // Try to get conjugation table for a vocab entry
+  // Try to get conjugation table for a vocab entry.
+  // Vocab stores the surface form (e.g. "parle", "tengo"); we have to follow
+  // the lemma chain in the dictionary to find the infinitive, or reconstruct
+  // it from a conjugated stem. Same logic as WordPopover so that an entry
+  // saved as "parle" yields the same conjugation table as one saved as "parler".
   const getConjugation = (entry: VocabEntry): ConjugationTable | null => {
-    if (entry.pos !== 'v') return null;
+    const freshPos = getPos(entry);
+    const hasVerbMeaning = (getTranslation(entry) || '').includes('to ') || freshPos === 'v';
+    if (!hasVerbMeaning) return null;
+
     const conjugateFn = CONJUGATE_FNS[language];
     if (!conjugateFn) return null;
 
-    // Try the word itself as an infinitive
-    const result = conjugateFn(entry.word);
-    if (result) return result;
+    const clean = entry.word.toLowerCase().replace(/[.,!?;:""«»()]/g, '');
 
-    // Try extracting infinitive from translation
+    // 1. Try the saved word as-is (works when the user saved an infinitive)
+    const direct = conjugateFn(clean);
+    if (direct) return direct;
+
+    // 2. Try the dictionary entry's lemma field — most reliable for an
+    //    inflected form like "parle" → lemma "parler"
+    const dictEntry = lookupFn ? lookupFn(entry.word) : null;
+    if (dictEntry?.lemma) {
+      const result = conjugateFn(dictEntry.lemma);
+      if (result) return result;
+    }
+
+    // 3. Try extracting an infinitive from the translation parenthetical
+    //    e.g. "to speak (parler)" → parler
     const t = getTranslation(entry);
     const inf = extractInfinitive(t);
     if (inf) {
       const r = conjugateFn(inf);
       if (r) return r;
+    }
+
+    // 4. Reconstruct infinitive from conjugated form by stem-trimming +
+    //    re-validating each candidate against the dictionary. Same algorithm
+    //    used in WordPopover so "tengo" → tener, "agissons" → agir, etc.
+    if (lookupFn) {
+      const stems = new Set<string>();
+      stems.add(clean);
+      for (let i = 1; i <= Math.min(clean.length - 2, 7); i++) {
+        stems.add(clean.slice(0, -i));
+      }
+      for (const stem of stems) {
+        for (const ending of [
+          'ir', 'er', 're', 'ar', 'or',           // Romance
+          'en', 'ern', 'eln', 'n',                 // Germanic
+          'a', 'e',                                 // Swedish
+          'mek', 'mak',                             // Turkish
+          'ना',                                      // Hindi
+          'ать', 'ять', 'еть', 'уть', 'оть',      // Russian
+          'ыть', 'ить', 'ть', 'ти', 'чь',
+          'ться', 'тись',
+        ]) {
+          const candidate = stem + ending;
+          const cand = lookupFn(candidate);
+          if (cand?.pos === 'v') {
+            const r = conjugateFn(candidate);
+            if (r) return r;
+          }
+        }
+      }
     }
 
     return null;

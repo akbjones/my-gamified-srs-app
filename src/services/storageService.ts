@@ -94,12 +94,24 @@ export const saveUnlockedAchievements = (ids: string[], lang: Language): void =>
   localStorage.setItem(achievementsKey(lang), JSON.stringify(ids));
 };
 
-// ─── Settings (global) ─────────────────────────────────────
+// ─── Settings (global + per-language) ──────────────────────
 export type AudioSpeed = 0.6 | 0.8 | 1.0;
 
+/** Per-language overrides for card-volume settings.
+ *  If a language has no entry, the global `dailyNewLimit` / `sessionCardLimit`
+ *  acts as the default. Theme, audio, etc. stay global. */
+export type PerLanguageLimits = Partial<Record<Language, {
+  dailyNewLimit?: number;
+  sessionCardLimit?: number;
+}>>;
+
 export interface StudySettings {
+  // Global defaults — apply to any language without an override
   dailyNewLimit: number;
   sessionCardLimit: number; // cards per "Study More" session (5–50)
+  // Per-language overrides for card volume
+  perLanguageLimits?: PerLanguageLimits;
+  // Other settings stay global
   selectedLanguage: Language;
   learningGoal: LearningGoal;
   theme: 'light' | 'dark';
@@ -111,6 +123,7 @@ export interface StudySettings {
 const DEFAULT_SETTINGS: StudySettings = {
   dailyNewLimit: 20,
   sessionCardLimit: 10,
+  perLanguageLimits: {},
   selectedLanguage: 'spanish',
   learningGoal: 'general',
   theme: 'light',
@@ -126,6 +139,30 @@ export const loadSettings = (): StudySettings => {
 
 export const saveSettings = (settings: StudySettings): void => {
   localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+};
+
+/** Get the effective daily new-card limit for `lang`, falling back to the global default. */
+export const getDailyLimitFor = (settings: StudySettings, lang: Language): number => {
+  return settings.perLanguageLimits?.[lang]?.dailyNewLimit ?? settings.dailyNewLimit;
+};
+
+/** Get the effective session card limit for `lang`, falling back to the global default. */
+export const getSessionLimitFor = (settings: StudySettings, lang: Language): number => {
+  return settings.perLanguageLimits?.[lang]?.sessionCardLimit ?? settings.sessionCardLimit;
+};
+
+/** Set the per-language daily-limit override (without touching other langs). */
+export const setDailyLimitFor = (settings: StudySettings, lang: Language, value: number): StudySettings => {
+  const perLang = { ...(settings.perLanguageLimits || {}) };
+  perLang[lang] = { ...(perLang[lang] || {}), dailyNewLimit: value };
+  return { ...settings, perLanguageLimits: perLang };
+};
+
+/** Set the per-language session-limit override. */
+export const setSessionLimitFor = (settings: StudySettings, lang: Language, value: number): StudySettings => {
+  const perLang = { ...(settings.perLanguageLimits || {}) };
+  perLang[lang] = { ...(perLang[lang] || {}), sessionCardLimit: value };
+  return { ...settings, perLanguageLimits: perLang };
 };
 
 // ─── Placement ──────────────────────────────────────────────

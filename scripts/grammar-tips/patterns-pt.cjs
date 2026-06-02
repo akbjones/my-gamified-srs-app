@@ -77,10 +77,24 @@ module.exports = [
   },
 
   // ── Imperfeito (habitual past / background) ──
+  // NOTE: \b is ASCII-only — uses lookaround over accented chars instead.
+  // -ia collides with many nouns (família, história, polícia, dia, tia).
   {
     id: 'pt-imperfeito',
     priority: 75,
-    match: t => /\b\w+(ava|ávamos|avam|ia|íamos|iam)\b/i.test(t),
+    match: t => {
+      // -ava/-avam are reliably verb forms; few nouns end this way
+      if (/(?<![a-záéíóúâêîôûãõç])[a-záéíóúâêîôûãõç]{2,}(?:ava|avas|ávamos|aváveis|avam)(?![a-záéíóúâêîôûãõç])/i.test(t)) return true;
+      // Irregular imperfeito of ser/ir/ter
+      if (/(?<![a-záéíóúâêîôûãõç])(era|eras|éramos|éreis|eram|ia|ias|íamos|íeis|iam|tinha|tinhas|tínhamos|tínheis|tinham)(?![a-záéíóúâêîôûãõç])/i.test(t)) {
+        // Exclude noun "ia" as a noun is impossible — "ia" only exists as verb (imperfect of ir)
+        // But still exclude common -ia-ending nouns
+        const NOUN_IA = /^(família|história|polícia|farmácia|democracia|geografia|filosofia|economia|teoria|biografia|categoria|fotografia|criança|infância|esperança|distância|importância|paciência|presença|tendência|experiência|consciência|preferência|ciência|justiça|notícia|delícia|caricia|magia|alegria|graça|herança|frequência|elegância|essência|circunstância)$/i;
+        const matches = t.match(/(?<![a-záéíóúâêîôûãõç])[a-záéíóúâêîôûãõç]{2,}(?:ia|ias|íamos|íeis|iam)(?![a-záéíóúâêîôûãõç])/gi) || [];
+        return matches.some(w => !NOUN_IA.test(w)) || /(?<![a-záéíóúâêîôûãõç])(era|eras|éramos|tinha|tinhas)(?![a-záéíóúâêîôûãõç])/i.test(t);
+      }
+      return false;
+    },
     tips: [
       "Imperfeito (`-ava/-ia` endings) paints background or habit: `quando era criança, jogava futebol` (as a kid, I used to play football). No clear endpoint.",
       "Use imperfeito for `was -ing`, `used to`, weather, age, time-of-day in the past. `Era`, `tinha`, `fazia`. Contrast with the preterite for sharp events.",

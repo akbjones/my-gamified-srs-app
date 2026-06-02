@@ -16,6 +16,7 @@ import {
   loadProgressState, saveProgressState,
   loadVocabMap, saveVocabMap,
   loadFavorites, saveFavorites,
+  getDailyLimitFor, getSessionLimitFor, setDailyLimitFor, setSessionLimitFor,
 } from './services/storageService';
 import type { StudySettings, AudioSpeed } from './services/storageService';
 import {
@@ -343,8 +344,8 @@ const App: React.FC = () => {
 
     // New cards: from the current frontier node, excluding suspended
     // When "Study More" is clicked, use the session card limit setting
-    const sessionLimit = settings.sessionCardLimit || 10;
-    const dailyLimitRemaining = settings.dailyNewLimit - dailyStats.newCardsCount;
+    const sessionLimit = getSessionLimitFor(settings, lang);
+    const dailyLimitRemaining = getDailyLimitFor(settings, lang) - dailyStats.newCardsCount;
     const studyMoreCount = typeof studyMore === 'number' ? studyMore : (studyMore ? sessionLimit : 0);
     const baseNewLimit = studyMore ? Math.max(studyMoreCount, dailyLimitRemaining) : Math.max(0, dailyLimitRemaining);
     // Cap new cards at session limit when no reviews exist (prevents flooding after focus switch)
@@ -530,14 +531,17 @@ const App: React.FC = () => {
     handleUpdateSettings({ ...settings, learningGoal: newGoal });
   };
 
+  // Per-language: adjusts only the current language's override, not the global default.
   const adjustLimit = (delta: number) => {
-    const next = Math.max(1, Math.min(50, settings.dailyNewLimit + delta));
-    handleUpdateSettings({ ...settings, dailyNewLimit: next });
+    const current = getDailyLimitFor(settings, lang);
+    const next = Math.max(1, Math.min(50, current + delta));
+    handleUpdateSettings(setDailyLimitFor(settings, lang, next));
   };
 
   const adjustSessionLimit = (delta: number) => {
-    const next = Math.max(5, Math.min(50, (settings.sessionCardLimit || 10) + delta));
-    handleUpdateSettings({ ...settings, sessionCardLimit: next });
+    const current = getSessionLimitFor(settings, lang);
+    const next = Math.max(5, Math.min(50, current + delta));
+    handleUpdateSettings(setSessionLimitFor(settings, lang, next));
   };
 
   // Computed stats
@@ -559,7 +563,7 @@ const App: React.FC = () => {
   const reviewsDue = allUnlockedCards.filter(
     c => c.mastery > 0 && (c.dueDate ? c.dueDate <= now : true)
   ).length;
-  const dailyLeft = Math.max(0, settings.dailyNewLimit - dailyStats.newCardsCount);
+  const dailyLeft = Math.max(0, getDailyLimitFor(settings, lang) - dailyStats.newCardsCount);
   const newAvailable = currentNode
     ? Math.min(deck.filter(c => c.topic === currentNode.id && c.mastery === 0 && !c.isSuspended).length, dailyLeft)
     : 0;
@@ -740,7 +744,7 @@ const App: React.FC = () => {
 
           {/* Today's progress + streak — fills space between Study button and the cards */}
           {(() => {
-            const dailyGoal = settings.dailyNewLimit;
+            const dailyGoal = getDailyLimitFor(settings, lang);
             const dailyDone = dailyStats.newCardsCount;
             const pct = dailyGoal > 0 ? Math.min(100, Math.round((dailyDone / dailyGoal) * 100)) : 0;
             const streak = userStats.streak;
@@ -911,7 +915,7 @@ const App: React.FC = () => {
                   Settings
                 </div>
                 <div className="text-sm font-bold text-[var(--text-primary)] leading-tight truncate">
-                  {settings.dailyNewLimit}/day
+                  {getDailyLimitFor(settings, lang)}/day
                 </div>
               </div>
               <ChevronDown size={16} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showTools ? 'rotate-180' : ''}`} />
@@ -990,7 +994,10 @@ const App: React.FC = () => {
               </div>
 
               <div>
-                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-3">New Cards / Day</div>
+                <div className="flex items-baseline justify-between mb-3">
+                  <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">New Cards / Day</div>
+                  <div className="text-[9px] font-semibold text-[var(--text-muted)] tracking-wide">for {LANGUAGE_CONFIG[lang].name}</div>
+                </div>
                 <div className="flex items-center gap-3">
                   <button onClick={() => adjustLimit(-5)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95">
                     <Minus size={14} />
@@ -999,7 +1006,7 @@ const App: React.FC = () => {
                     -1
                   </button>
                   <div className="flex-1 text-center">
-                    <div className="text-3xl font-extrabold font-mono text-[var(--text-primary)]">{settings.dailyNewLimit}</div>
+                    <div className="text-3xl font-extrabold font-mono text-[var(--text-primary)]">{getDailyLimitFor(settings, lang)}</div>
                   </div>
                   <button onClick={() => adjustLimit(1)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95 text-xs font-bold font-mono">
                     +1
@@ -1011,7 +1018,10 @@ const App: React.FC = () => {
               </div>
 
               <div className="pt-3 border-t border-[var(--border-color)]">
-                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest mb-3">Cards per Session</div>
+                <div className="flex items-baseline justify-between mb-3">
+                  <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">Cards per Session</div>
+                  <div className="text-[9px] font-semibold text-[var(--text-muted)] tracking-wide">for {LANGUAGE_CONFIG[lang].name}</div>
+                </div>
                 <div className="flex items-center gap-3">
                   <button onClick={() => adjustSessionLimit(-5)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95">
                     <Minus size={14} />
@@ -1020,7 +1030,7 @@ const App: React.FC = () => {
                     -1
                   </button>
                   <div className="flex-1 text-center">
-                    <div className="text-3xl font-extrabold font-mono text-[var(--text-primary)]">{settings.sessionCardLimit || 10}</div>
+                    <div className="text-3xl font-extrabold font-mono text-[var(--text-primary)]">{getSessionLimitFor(settings, lang)}</div>
                   </div>
                   <button onClick={() => adjustSessionLimit(1)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95 text-xs font-bold font-mono">
                     +1

@@ -143,10 +143,21 @@ module.exports = [
   },
 
   // ── Preterite vs Imperfect (past contrast) ──────────────────────────
+  // CRITICAL: JavaScript's `\b` is ASCII-only — `\b[a-z]+é\b` matches
+  // `despué` inside `después` because é→s is a word/non-word transition.
+  // We use unicode-aware lookbehind/lookahead boundaries instead so the
+  // pattern fires only on whole words.
   {
     id: 'es-preterite-action',
     priority: 60,
-    match: t => /\b[a-záéíóúñ]+(é|aste|ó|amos|asteis|aron|í|iste|ió|imos|isteis|ieron)\b/i.test(t) && !/\bía|ías|íamos|íais|ían\b/i.test(t),
+    match: t => {
+      // Match whole-word preterite forms only (irregular + regular endings)
+      const irr = /(?<![a-záéíóúñü])(fui|fuiste|fue|fuimos|fuisteis|fueron|tuve|tuviste|tuvo|tuvimos|tuvisteis|tuvieron|hice|hiciste|hizo|hicimos|hicisteis|hicieron|dije|dijiste|dijo|dijimos|dijisteis|dijeron|estuve|estuviste|estuvo|estuvimos|estuvisteis|estuvieron|vi|viste|vio|vimos|vine|viniste|vino|vinimos|vinisteis|vinieron|di|diste|dio|dimos|disteis|dieron|puse|pusiste|puso|pusimos|pusisteis|pusieron|supe|supiste|supo|supimos|supisteis|supieron|pude|pudiste|pudo|pudimos|pudisteis|pudieron|quise|quisiste|quiso|quisimos|quisisteis|quisieron)(?![a-záéíóúñü])/i;
+      if (irr.test(t)) return true;
+      // Regular preterite endings — require a stem of at least 2 letters before
+      const reg = /(?<![a-záéíóúñü])[a-záéíóúñü]{2,}(?:aste|asteis|aron|iste|isteis|ieron|ió)(?![a-záéíóúñü])/i;
+      return reg.test(t);
+    },
     tips: [
       "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite.",
       "Endings `-é/-aste/-ó/-amos/-asteis/-aron` (for -ar) and `-í/-iste/-ió/-imos/-isteis/-ieron` (for -er/-ir) signal preterite. One discrete event in the past.",
@@ -156,7 +167,16 @@ module.exports = [
   {
     id: 'es-imperfect-background',
     priority: 60,
-    match: t => /\b[a-záéíóúñ]+(aba|abas|ábamos|abais|aban|ía|ías|íamos|íais|ían)\b/i.test(t),
+    match: t => {
+      // -aba/-aban etc. are reliable verb forms (no common nouns end this way)
+      if (/(?<![a-záéíóúñü])[a-záéíóúñü]{2,}(?:aba|abas|ábamos|abais|aban)(?![a-záéíóúñü])/i.test(t)) return true;
+      // Irregular imperfect forms of ser/ir
+      if (/(?<![a-záéíóúñü])(era|eras|éramos|erais|eran|iba|ibas|íbamos|ibais|iban)(?![a-záéíóúñü])/i.test(t)) return true;
+      // -ía/-ían imperfect — must NOT be a common noun (día, guía, tía, policía, etc.)
+      const NOUN_IA = /^(día|días|guía|guías|tía|tías|policía|policías|alegría|alegrías|economía|categoría|fotografía|geografía|filosofía|teoría|melodía|simpatía|panadería|librería|carnicería|pastelería|peluquería|joyería|cafetería|sandía|magia|sangría|rabia|ironía|mía|tuya|suya|hacia|gracias|hambría|familía|fría|frías|vacía|vacías|propia|propias|sucia|sucias|limpia|limpias|sabia|sabias|amplia|amplias|envidia|distancia|importancia|paciencia|presencia|tendencia|experiencia|conciencia|preferencia|ciencia|provincia|farmacia|democracia|burocracia|justicia|noticia|noticias|policia|delicia|caricia)$/i;
+      const iaCands = t.match(/(?<![a-záéíóúñü])[a-záéíóúñü]{2,}(?:ía|ías|íamos|íais|ían)(?![a-záéíóúñü])/gi) || [];
+      return iaCands.some(w => !NOUN_IA.test(w));
+    },
     tips: [
       "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end.",
       "Use imperfect when describing what was going on, what used to happen, weather, age, or feelings in the past. `Era`, `tenía`, `hacía`. Background, not events.",

@@ -1079,7 +1079,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 198,
-    "grammar": "Negative imperatives usually use imperfective: `Не делай так` (don't do it like that). Perfective negative imperative is rarer and usually a warning: `Не упади!`."
+    "grammar": "Imperative is formed from the present-tense stem + ending: `-и/-й` for singular (ты), `-ите/-йте` for plural/formal (вы). `Читай → читайте`."
   },
   {
     "id": "ru-0096",
@@ -11774,7 +11774,7 @@
     ],
     "grammarNode": "node-12",
     "priority": 770,
-    "grammar": "Negative imperatives usually use imperfective: `Не делай так` (don't do it like that). Perfective negative imperative is rarer and usually a warning: `Не упади!`."
+    "grammar": "Use `ты`-form with friends/family/kids, `вы`-form for strangers, groups, or formality. The plural -ите ending also marks politeness."
   },
   {
     "id": "ru-1044",
@@ -12879,13 +12879,13 @@
     "target": "Завтра будет дождь.",
     "english": "It will rain tomorrow.",
     "audio": "ru-ru-0842.mp3",
-    "grammar": "Times of day are already in instrumental case: `утром` (in the morning), `днём` (in the daytime), `вечером` (in the evening), `ночью` (at night). One word, no preposition needed.",
     "tags": [
       "general",
       "travel"
     ],
     "grammarNode": "node-13",
-    "priority": 168
+    "priority": 168,
+    "grammar": "Time adverbs at sentence start are common in Russian. `Сегодня` (today), `Вчера` (yesterday), `Завтра` (tomorrow). Unlike German V2, Russian doesn't invert after a fronted adverb."
   },
   {
     "id": "ru-1131",
@@ -14623,7 +14623,7 @@
     ],
     "grammarNode": "node-14",
     "priority": 803,
-    "grammar": "If something happened repeatedly or as a habit → imperfective. If it happened once and completed → perfective. The frequency adverb is your clue."
+    "grammar": "Habitual past uses imperfective: `я часто ходил в кино` (I often went to the movies). Frequency words `часто`, `всегда`, `каждый день` signal imperfective."
   },
   {
     "id": "ru-1266",
@@ -15541,7 +15541,7 @@
     ],
     "grammarNode": "node-14",
     "priority": 472,
-    "grammar": "For 'in the morning/afternoon/evening', Russian uses the instrumental case of the noun — no preposition. `Утром` = literally 'by/with morning'."
+    "grammar": "Word order is flexible: `Сегодня я работаю` and `Я сегодня работаю` both mean 'today I work'. Fronting emphasizes 'when'."
   },
   {
     "id": "ru-1336",
@@ -16122,7 +16122,7 @@
     ],
     "grammarNode": "node-15",
     "priority": 546,
-    "grammar": "If something happened repeatedly or as a habit → imperfective. If it happened once and completed → perfective. The frequency adverb is your clue."
+    "grammar": "Compare: `Я читал книгу` (I was reading / used to read) vs `я прочитал книгу` (I read and finished it). Same English 'read', two Russian forms."
   },
   {
     "id": "ru-1379",
@@ -16297,7 +16297,7 @@
     ],
     "grammarNode": "node-15",
     "priority": 629,
-    "grammar": "If something happened repeatedly or as a habit → imperfective. If it happened once and completed → perfective. The frequency adverb is your clue."
+    "grammar": "Past tense forms agree with the SUBJECT's gender/number, not the speaker: `она читала`, `он читал`, `они читали`. The `-л/-ла/-ло/-ли` ending shifts."
   },
   {
     "id": "ru-1395",
@@ -16358,7 +16358,7 @@
     ],
     "grammarNode": "node-15",
     "priority": 465,
-    "grammar": "If something happened repeatedly or as a habit → imperfective. If it happened once and completed → perfective. The frequency adverb is your clue."
+    "grammar": "Habitual past uses imperfective: `я часто ходил в кино` (I often went to the movies). Frequency words `часто`, `всегда`, `каждый день` signal imperfective."
   },
   {
     "id": "ru-1400",
@@ -16470,7 +16470,7 @@
     ],
     "grammarNode": "node-15",
     "priority": 702,
-    "grammar": "If something happened repeatedly or as a habit → imperfective. If it happened once and completed → perfective. The frequency adverb is your clue."
+    "grammar": "Russian has TWO 'you's: `ты` (informal — family, friends, kids) and `вы` (formal — strangers, elders, work, AND plural for everyone). They use DIFFERENT verb forms: `ты говоришь` vs `вы говорите`."
   },
   {
     "id": "ru-1409",
@@ -17561,7 +17561,7 @@
     ],
     "grammarNode": "node-15",
     "priority": 910,
-    "grammar": "If something happened repeatedly or as a habit → imperfective. If it happened once and completed → perfective. The frequency adverb is your clue."
+    "grammar": "Compare: `Я читал книгу` (I was reading / used to read) vs `я прочитал книгу` (I read and finished it). Same English 'read', two Russian forms."
   },
   {
     "id": "ru-1503",
@@ -17631,7 +17631,7 @@
     ],
     "grammarNode": "node-15",
     "priority": 651,
-    "grammar": "Times of day are already in instrumental case: `утром` (in the morning), `днём` (in the daytime), `вечером` (in the evening), `ночью` (at night). One word, no preposition needed."
+    "grammar": "For 'in the morning/afternoon/evening', Russian uses the instrumental case of the noun — no preposition. `Утром` = literally 'by/with morning'."
   },
   {
     "id": "ru-1508",
@@ -19185,7 +19185,7 @@
     ],
     "grammarNode": "node-16",
     "priority": 1816,
-    "grammar": "If something happened repeatedly or as a habit → imperfective. If it happened once and completed → perfective. The frequency adverb is your clue."
+    "grammar": "Past tense forms agree with the SUBJECT's gender/number, not the speaker: `она читала`, `он читал`, `они читали`. The `-л/-ла/-ло/-ли` ending shifts."
   },
   {
     "id": "ru-1627",
@@ -19821,7 +19821,7 @@
     ],
     "grammarNode": "node-16",
     "priority": 1784,
-    "grammar": "If something happened repeatedly or as a habit → imperfective. If it happened once and completed → perfective. The frequency adverb is your clue."
+    "grammar": "Habitual past uses imperfective: `я часто ходил в кино` (I often went to the movies). Frequency words `часто`, `всегда`, `каждый день` signal imperfective."
   },
   {
     "id": "ru-1675",
@@ -21842,14 +21842,14 @@
     "target": "Принесите мне стакан воды, пожалуйста.",
     "english": "Bring me a glass of water, please.",
     "audio": "ru-ru-2008.mp3",
-    "grammar": "Negative imperatives usually use imperfective: `Не делай так` (don't do it like that). Perfective negative imperative is rarer and usually a warning: `Не упади!`.",
     "tags": [
       "family",
       "general",
       "travel"
     ],
     "grammarNode": "node-18",
-    "priority": 1598
+    "priority": 1598,
+    "grammar": "Some imperatives are irregular: `дать → дай`, `есть → ешь`. Memorize the common ones; they appear constantly in everyday speech."
   },
   {
     "id": "ru-1835",
@@ -22070,7 +22070,7 @@
     ],
     "grammarNode": "node-18",
     "priority": 2204,
-    "grammar": "Negative imperatives usually use imperfective: `Не делай так` (don't do it like that). Perfective negative imperative is rarer and usually a warning: `Не упади!`."
+    "grammar": "Imperative is formed from the present-tense stem + ending: `-и/-й` for singular (ты), `-ите/-йте` for plural/formal (вы). `Читай → читайте`."
   },
   {
     "id": "ru-1852",
@@ -22509,7 +22509,7 @@
     ],
     "grammarNode": "node-18",
     "priority": 2413,
-    "grammar": "Negative imperatives usually use imperfective: `Не делай так` (don't do it like that). Perfective negative imperative is rarer and usually a warning: `Не упади!`."
+    "grammar": "`Вы` is BOTH the formal singular and the plural — context tells you which. Verbs always conjugate as plural with `вы` even when addressing one person formally. Writing `Вы` with a capital is polite (especially in letters)."
   },
   {
     "id": "ru-1886",
@@ -23692,14 +23692,14 @@
     "target": "Позвони мне, когда вернёшься домой с работы.",
     "english": "Call me when you get back home from work.",
     "audio": "ru-ru-1457.mp3",
-    "grammar": "Negative imperatives usually use imperfective: `Не делай так` (don't do it like that). Perfective negative imperative is rarer and usually a warning: `Не упади!`.",
     "tags": [
       "family",
       "general",
       "work"
     ],
     "grammarNode": "node-19",
-    "priority": 2138
+    "priority": 2138,
+    "grammar": "Use `ты`-form with friends/family/kids, `вы`-form for strangers, groups, or formality. The plural -ите ending also marks politeness."
   },
   {
     "id": "ru-1980",
@@ -24964,7 +24964,7 @@
     ],
     "grammarNode": "node-20",
     "priority": 2493,
-    "grammar": "Negative imperatives usually use imperfective: `Не делай так` (don't do it like that). Perfective negative imperative is rarer and usually a warning: `Не упади!`."
+    "grammar": "Some imperatives are irregular: `дать → дай`, `есть → ешь`. Memorize the common ones; they appear constantly in everyday speech."
   },
   {
     "id": "ru-2081",
@@ -29639,7 +29639,7 @@
     ],
     "grammarNode": "node-24",
     "priority": 1967,
-    "grammar": "For 'in the morning/afternoon/evening', Russian uses the instrumental case of the noun — no preposition. `Утром` = literally 'by/with morning'."
+    "grammar": "Time adverbs at sentence start are common in Russian. `Сегодня` (today), `Вчера` (yesterday), `Завтра` (tomorrow). Unlike German V2, Russian doesn't invert after a fronted adverb."
   },
   {
     "id": "ru-2449",
@@ -30753,13 +30753,13 @@
     "target": "Послезавтра будет солнечно.",
     "english": "The day after tomorrow it will be sunny.",
     "audio": "ru-ru-2098.mp3",
-    "grammar": "For 'in the morning/afternoon/evening', Russian uses the instrumental case of the noun — no preposition. `Утром` = literally 'by/with morning'.",
     "tags": [
       "general",
       "travel"
     ],
     "grammarNode": "node-25",
-    "priority": 1934
+    "priority": 1934,
+    "grammar": "Times of day are already in instrumental case: `утром` (in the morning), `днём` (in the daytime), `вечером` (in the evening), `ночью` (at night). One word, no preposition needed."
   },
   {
     "id": "ru-2536",
@@ -37830,7 +37830,7 @@
     ],
     "grammarNode": "node-31",
     "priority": 2573,
-    "grammar": "Negative imperatives usually use imperfective: `Не делай так` (don't do it like that). Perfective negative imperative is rarer and usually a warning: `Не упади!`."
+    "grammar": "Imperative is formed from the present-tense stem + ending: `-и/-й` for singular (ты), `-ите/-йте` for plural/formal (вы). `Читай → читайте`."
   },
   {
     "id": "ru-3085",
@@ -39254,13 +39254,13 @@
     "target": "Смотритель маяка наблюдал за кораблями в штормовом море.",
     "english": "The lighthouse keeper observed the ships in the stormy sea.",
     "audio": "ru-ru-2666.mp3",
-    "grammar": "Negative imperatives usually use imperfective: `Не делай так` (don't do it like that). Perfective negative imperative is rarer and usually a warning: `Не упади!`.",
     "tags": [
       "general",
       "travel"
     ],
     "grammarNode": "node-32",
-    "priority": 3136
+    "priority": 3136,
+    "grammar": "Use `ты`-form with friends/family/kids, `вы`-form for strangers, groups, or formality. The plural -ите ending also marks politeness."
   },
   {
     "id": "ru-3201",

@@ -5405,7 +5405,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 207,
-    "grammar": "`Ddim` is a soft mutation of `dim` (nothing/none). It does the negation work. Order: verb + subject + ddim + rest."
+    "grammar": "Negation in Welsh: insert `ddim` after the subject. `Dw i'n hapus` (I'm happy) → `dw i ddim yn hapus` (I'm not happy). Notice `yn` stays for adjectives."
   },
   {
     "id": "cy-0417",
@@ -7029,7 +7029,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 158,
-    "grammar": "`yn` triggers soft mutation before adjectives: `da → yn dda`, `prysur → yn brysur`. Before verb-nouns there's no mutation: `yn cerdded`, `yn rhedeg`."
+    "grammar": "`yn` (often shortened to `'n` after a vowel) links the form of `bod` (to be) to an adjective or verb-noun. `Dw i'n hapus` (I am happy), `mae hi'n bwyta` (she is eating)."
   },
   {
     "id": "cy-0542",
@@ -7144,8 +7144,8 @@
       "general"
     ],
     "grammarNode": "node-05",
-    "grammar": "`Ddim` is a soft mutation of `dim` (nothing/none). It does the negation work. Order: verb + subject + ddim + rest.",
-    "priority": 444
+    "priority": 444,
+    "grammar": "`Ddim` is a soft mutation of `dim` (nothing/none). It does the negation work. Order: verb + subject + ddim + rest."
   },
   {
     "target": "Cyrhaeddodd y tymheredd wyth gradd ar hugain.",
@@ -7225,7 +7225,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 108,
-    "grammar": "`Ddim` is a soft mutation of `dim` (nothing/none). It does the negation work. Order: verb + subject + ddim + rest."
+    "grammar": "Some verbs negate by changing form: `dw → dwy(t)`, `mae → dyw/dydy`. You'll see different shapes for the same root depending on positive/negative/question."
   },
   {
     "id": "cy-0557",
@@ -8755,7 +8755,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 33,
-    "grammar": "`Ddim` is a soft mutation of `dim` (nothing/none). It does the negation work. Order: verb + subject + ddim + rest."
+    "grammar": "Formal/written: `Nid yw e'n hapus` instead of `dyw e ddim yn hapus`. Same meaning, more literary register. `Nid` fronts the negation."
   },
   {
     "id": "cy-0674",
@@ -8766,8 +8766,8 @@
       "general"
     ],
     "grammarNode": "node-06",
-    "grammar": "`Ddim` is a soft mutation of `dim` (nothing/none). It does the negation work. Order: verb + subject + ddim + rest.",
-    "priority": 140
+    "priority": 140,
+    "grammar": "Negation in Welsh: insert `ddim` after the subject. `Dw i'n hapus` (I'm happy) → `dw i ddim yn hapus` (I'm not happy). Notice `yn` stays for adjectives."
   },
   {
     "id": "cy-0675",
@@ -9839,7 +9839,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 755,
-    "grammar": "`yn` triggers soft mutation before adjectives: `da → yn dda`, `prysur → yn brysur`. Before verb-nouns there's no mutation: `yn cerdded`, `yn rhedeg`."
+    "grammar": "Skip `'n` and the sentence is broken: `dw i hapus` is wrong. The `'n` is mandatory between the verb and what follows."
   },
   {
     "id": "cy-0758",
@@ -10250,8 +10250,8 @@
       "general"
     ],
     "grammarNode": "node-07",
-    "grammar": "`Ddim` is a soft mutation of `dim` (nothing/none). It does the negation work. Order: verb + subject + ddim + rest.",
-    "priority": 15
+    "priority": 15,
+    "grammar": "Some verbs negate by changing form: `dw → dwy(t)`, `mae → dyw/dydy`. You'll see different shapes for the same root depending on positive/negative/question."
   },
   {
     "id": "cy-0789",
@@ -10582,7 +10582,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 136,
-    "grammar": "`Ddim` is a soft mutation of `dim` (nothing/none). It does the negation work. Order: verb + subject + ddim + rest."
+    "grammar": "Formal/written: `Nid yw e'n hapus` instead of `dyw e ddim yn hapus`. Same meaning, more literary register. `Nid` fronts the negation."
   },
   {
     "id": "cy-0815",
@@ -10808,8 +10808,8 @@
       "travel"
     ],
     "grammarNode": "node-07",
-    "grammar": "`Ddim` is a soft mutation of `dim` (nothing/none). It does the negation work. Order: verb + subject + ddim + rest.",
-    "priority": 298
+    "priority": 298,
+    "grammar": "Negation in Welsh: insert `ddim` after the subject. `Dw i'n hapus` (I'm happy) → `dw i ddim yn hapus` (I'm not happy). Notice `yn` stays for adjectives."
   },
   {
     "target": "Gan fod hi'n oer, gwisgodd e got.",
@@ -11026,8 +11026,8 @@
       "work"
     ],
     "grammarNode": "node-07",
-    "grammar": "`Ddim` is a soft mutation of `dim` (nothing/none). It does the negation work. Order: verb + subject + ddim + rest.",
-    "priority": 747
+    "priority": 747,
+    "grammar": "`Ddim` is a soft mutation of `dim` (nothing/none). It does the negation work. Order: verb + subject + ddim + rest."
   },
   {
     "id": "cy-0850",
@@ -16009,8 +16009,8 @@
       "general"
     ],
     "grammarNode": "node-10",
-    "grammar": "After `i + person`, soft mutation hits the verb-noun. `mynd → fynd`. `Rhaid i ti fwyta` (you must eat) — `bwyta` becomes `fwyta`.",
-    "priority": 1372
+    "priority": 1372,
+    "grammar": "`Rhaid i + person + verb-noun` = 'must / has to'. `Rhaid i fi fynd` = 'I must go'. Literal: 'necessity to me to go'. Welsh frames obligation as a state of necessity."
   },
   {
     "id": "cy-1233",
@@ -16107,8 +16107,8 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "grammar": "Possessives shift: `dy lyfr` (your book, informal — triggers soft mutation) vs `eich llyfr` (your book, formal/plural — no mutation). Same pattern across all your-pronouns.",
-    "priority": 296
+    "priority": 296,
+    "grammar": "Welsh has TWO 'you's: `ti` (informal singular — friends, family, kids, God in prayer) and `chi` (formal singular AND plural). They use DIFFERENT verb forms: `wyt ti'n` (are you, informal) vs `ydych chi'n` (are you, formal/plural)."
   },
   {
     "id": "cy-1241",
@@ -16183,8 +16183,8 @@
       "travel"
     ],
     "grammarNode": "node-11",
-    "grammar": "After `i + person`, soft mutation hits the verb-noun. `mynd → fynd`. `Rhaid i ti fwyta` (you must eat) — `bwyta` becomes `fwyta`.",
-    "priority": 424
+    "priority": 424,
+    "grammar": "After `i + person`, soft mutation hits the verb-noun. `mynd → fynd`. `Rhaid i ti fwyta` (you must eat) — `bwyta` becomes `fwyta`."
   },
   {
     "id": "cy-1247",
@@ -16223,7 +16223,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 500,
-    "grammar": "After `i + person`, soft mutation hits the verb-noun. `mynd → fynd`. `Rhaid i ti fwyta` (you must eat) — `bwyta` becomes `fwyta`."
+    "grammar": "Past obligation: `Roedd rhaid i mi fynd` (I had to go). Future: `Bydd rhaid i mi fynd` (I'll have to go). The `rhaid` part stays put; the auxiliary marks tense."
   },
   {
     "target": "Prynodd e ginio i ni.",
@@ -16803,8 +16803,8 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "grammar": "`Wrth + verb-noun` = 'while ...': `Wrth gerdded, gwelais y ci` (While walking, I saw the dog). Triggers soft mutation on the verb-noun.",
-    "priority": 1216
+    "priority": 1216,
+    "grammar": "`Wrth + verb-noun` = 'while ...': `Wrth gerdded, gwelais y ci` (While walking, I saw the dog). Triggers soft mutation on the verb-noun."
   },
   {
     "id": "cy-1295",
@@ -17228,8 +17228,8 @@
       "travel"
     ],
     "grammarNode": "node-11",
-    "grammar": "After `i + person`, soft mutation hits the verb-noun. `mynd → fynd`. `Rhaid i ti fwyta` (you must eat) — `bwyta` becomes `fwyta`.",
-    "priority": 1362
+    "priority": 1362,
+    "grammar": "Negate with `does dim rhaid`: `Does dim rhaid i fi fynd` (I don't have to go). Distinct from `dydw i ddim yn cael` (I'm not allowed) — necessity vs permission."
   },
   {
     "id": "cy-1328",
@@ -17241,7 +17241,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 1384,
-    "grammar": "After `i + person`, soft mutation hits the verb-noun. `mynd → fynd`. `Rhaid i ti fwyta` (you must eat) — `bwyta` becomes `fwyta`."
+    "grammar": "`Rhaid i + person + verb-noun` = 'must / has to'. `Rhaid i fi fynd` = 'I must go'. Literal: 'necessity to me to go'. Welsh frames obligation as a state of necessity."
   },
   {
     "id": "cy-1329",
@@ -17253,8 +17253,8 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "grammar": "After `i + person`, soft mutation hits the verb-noun. `mynd → fynd`. `Rhaid i ti fwyta` (you must eat) — `bwyta` becomes `fwyta`.",
-    "priority": 1365
+    "priority": 1365,
+    "grammar": "After `i + person`, soft mutation hits the verb-noun. `mynd → fynd`. `Rhaid i ti fwyta` (you must eat) — `bwyta` becomes `fwyta`."
   },
   {
     "id": "cy-1330",
@@ -20887,7 +20887,7 @@
     ],
     "grammarNode": "node-14",
     "priority": 270,
-    "grammar": "Equality: `mor + adj + â` = 'as ... as'. `Mor fawr â` (as big as). Triggers soft mutation on the adjective."
+    "grammar": "Comparatives: `yn fwy` (bigger), `yn llai` (smaller), `yn well` (better), `yn waeth` (worse). Use `na`/`nag` for 'than'."
   },
   {
     "id": "cy-1612",
@@ -21954,7 +21954,7 @@
     ],
     "grammarNode": "node-14",
     "priority": 1416,
-    "grammar": "`yn` triggers soft mutation before adjectives: `da → yn dda`, `prysur → yn brysur`. Before verb-nouns there's no mutation: `yn cerdded`, `yn rhedeg`."
+    "grammar": "Two flavors: `yn + adjective` (state, like 'I am sad'), `yn + verb-noun` (action, like 'I am running'). Same little word, different roles."
   },
   {
     "id": "cy-1694",
@@ -23047,7 +23047,7 @@
     ],
     "grammarNode": "node-15",
     "priority": 1970,
-    "grammar": "Soft mutation after the conditional pronoun: `Byddwn i'n bwyta → fwyta`. The verb-noun after `yn` keeps its original form; after a fronted object it'll soft-mutate."
+    "grammar": "Conditional forms (`byddwn`, `byddai`, `baswn`) = 'would'. `Byddwn i'n hoffi` (I would like). For 'if' clauses use `petai` or `pe bai`."
   },
   {
     "id": "cy-1779",
@@ -23927,7 +23927,7 @@
     ],
     "grammarNode": "node-15",
     "priority": 1229,
-    "grammar": "Equality: `mor + adj + â` = 'as ... as'. `Mor fawr â` (as big as). Triggers soft mutation on the adjective."
+    "grammar": "`Na` before consonants, `nag` before vowels: `mwy na deg` (more than ten), `mwy nag ugain` (more than twenty). Like English a/an."
   },
   {
     "id": "cy-1849",
@@ -27096,8 +27096,8 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "grammar": "Possessives shift: `dy lyfr` (your book, informal — triggers soft mutation) vs `eich llyfr` (your book, formal/plural — no mutation). Same pattern across all your-pronouns.",
-    "priority": 1908
+    "priority": 1908,
+    "grammar": "`Chi` works as BOTH formal singular and plural (like English 'you' covers both). With one stranger → chi. With a group of friends → also chi. With one friend → ti."
   },
   {
     "id": "cy-2099",
@@ -28554,8 +28554,8 @@
       "general"
     ],
     "grammarNode": "node-19",
-    "grammar": "After `i + person`, soft mutation hits the verb-noun. `mynd → fynd`. `Rhaid i ti fwyta` (you must eat) — `bwyta` becomes `fwyta`.",
-    "priority": 2036
+    "priority": 2036,
+    "grammar": "Past obligation: `Roedd rhaid i mi fynd` (I had to go). Future: `Bydd rhaid i mi fynd` (I'll have to go). The `rhaid` part stays put; the auxiliary marks tense."
   },
   {
     "id": "cy-2213",
@@ -30345,8 +30345,8 @@
       "work"
     ],
     "grammarNode": "node-21",
-    "grammar": "Soft mutation after the conditional pronoun: `Byddwn i'n bwyta → fwyta`. The verb-noun after `yn` keeps its original form; after a fronted object it'll soft-mutate.",
-    "priority": 2837
+    "priority": 2837,
+    "grammar": "Two conditional families: `bydd-` (modern, standard) and `bas-` (also modern, very common). Both translate as 'would (be)' + a following verb-noun."
   },
   {
     "id": "cy-2354",
@@ -30422,7 +30422,7 @@
     "id": "cy-2359",
     "audio": "cy-3901.mp3",
     "priority": 1345,
-    "grammar": "`yn` triggers soft mutation before adjectives: `da → yn dda`, `prysur → yn brysur`. Before verb-nouns there's no mutation: `yn cerdded`, `yn rhedeg`."
+    "grammar": "`yn` (often shortened to `'n` after a vowel) links the form of `bod` (to be) to an adjective or verb-noun. `Dw i'n hapus` (I am happy), `mae hi'n bwyta` (she is eating)."
   },
   {
     "target": "Mae angen buddsoddi mewn sgiliau digidol.",
@@ -33171,7 +33171,7 @@
     ],
     "grammarNode": "node-24",
     "priority": 2611,
-    "grammar": "Soft mutation after the conditional pronoun: `Byddwn i'n bwyta → fwyta`. The verb-noun after `yn` keeps its original form; after a fronted object it'll soft-mutate."
+    "grammar": "Compact alternative: `Hoffwn i ...` (I would like to ...) — `hoffwn` already has the conditional baked in. Common in polite requests."
   },
   {
     "id": "cy-2572",
@@ -35261,7 +35261,7 @@
     ],
     "grammarNode": "node-26",
     "priority": 1338,
-    "grammar": "`yn` triggers soft mutation before adjectives: `da → yn dda`, `prysur → yn brysur`. Before verb-nouns there's no mutation: `yn cerdded`, `yn rhedeg`."
+    "grammar": "Skip `'n` and the sentence is broken: `dw i hapus` is wrong. The `'n` is mandatory between the verb and what follows."
   },
   {
     "id": "cy-2736",
@@ -38491,7 +38491,7 @@
     ],
     "grammarNode": "node-29",
     "priority": 2737,
-    "grammar": "`yn` triggers soft mutation before adjectives: `da → yn dda`, `prysur → yn brysur`. Before verb-nouns there's no mutation: `yn cerdded`, `yn rhedeg`."
+    "grammar": "Two flavors: `yn + adjective` (state, like 'I am sad'), `yn + verb-noun` (action, like 'I am running'). Same little word, different roles."
   },
   {
     "id": "cy-2989",
@@ -43214,7 +43214,7 @@
     ],
     "grammarNode": "node-33",
     "priority": 3149,
-    "grammar": "`yn` triggers soft mutation before adjectives: `da → yn dda`, `prysur → yn brysur`. Before verb-nouns there's no mutation: `yn cerdded`, `yn rhedeg`."
+    "grammar": "`yn` (often shortened to `'n` after a vowel) links the form of `bod` (to be) to an adjective or verb-noun. `Dw i'n hapus` (I am happy), `mae hi'n bwyta` (she is eating)."
   },
   {
     "id": "cy-3358",
@@ -45061,7 +45061,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 92,
-    "grammar": "`yn` triggers soft mutation before adjectives: `da → yn dda`, `prysur → yn brysur`. Before verb-nouns there's no mutation: `yn cerdded`, `yn rhedeg`."
+    "grammar": "Possessives shift: `dy lyfr` (your book, informal — triggers soft mutation) vs `eich llyfr` (your book, formal/plural — no mutation). Same pattern across all your-pronouns."
   },
   {
     "id": "cy-3504",

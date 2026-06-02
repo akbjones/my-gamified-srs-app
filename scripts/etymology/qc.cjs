@@ -31,6 +31,7 @@ const WRITE_REPORT = args.includes('--report');
 const ALLOWED_SOURCES = new Set([
   'wiktionary', 'etymonline', 'rae', 'cnrtl', 'duden',
   'turner-cdial', 'vasmer',
+  'treccani', 'saob', 'gpc', 'nisanyan', 'platts',
 ]);
 
 // ── Jargon detector — these patterns flag pedantic linguistics ──

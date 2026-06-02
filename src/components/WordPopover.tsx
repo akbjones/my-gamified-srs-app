@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import ReactDOM from 'react-dom';
-import { Star, X as CloseIcon, BookText, ChevronDown } from 'lucide-react';
+import { Star, X as CloseIcon, BookText } from 'lucide-react';
 import { toggleFavorite, isFavorited } from '../services/storageService';
 import { lookupEtymology } from '../services/etymologyService';
 import { lookupWord as lookupEs, DictEntry } from '../data/dictionary/es';
@@ -496,51 +496,29 @@ const PopoverPortal: React.FC<{
       )}
 
       {/* Part of speech + Etymology — sit together as small chips so the user
-          sees at a glance what's available. Etymology uses a violet palette to
-          stay visually distinct from the amber grammar-tip overlay on the card.
-          The chip only renders when a verified etymology exists. */}
-      {(() => {
-        const ety = lookupEtymology(rawToken, language);
-        return (
-          <>
-            {(entry.pos || ety) && (
-              <div className="mt-2 flex items-center gap-1.5 flex-wrap">
-                {entry.pos && (
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)] bg-[var(--bg-inset)] px-1.5 py-0.5 rounded">
-                    {POS_LABELS[entry.pos] || entry.pos}
-                  </span>
-                )}
-                {ety && (
-                  <button
-                    onClick={(e) => { e.stopPropagation(); setEtymologyExpanded(prev => !prev); }}
-                    aria-expanded={etymologyExpanded}
-                    className="flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider text-violet-600 dark:text-violet-300 bg-violet-500/10 border border-violet-500/30 hover:bg-violet-500/15 transition-all active:scale-95"
-                  >
-                    <BookText size={11} />
-                    <span>Origin</span>
-                    <ChevronDown size={10} className={`transition-transform ${etymologyExpanded ? 'rotate-180' : ''}`} />
-                  </button>
-                )}
-              </div>
-            )}
-            {ety && etymologyExpanded && (
-              <div className="mt-2 px-3 py-2.5 rounded-lg bg-violet-500/5 border border-violet-500/20 animate-fade-in">
-                <div className="text-xs font-semibold text-violet-700 dark:text-violet-300 mb-1">{ety.origin}</div>
-                {ety.cognates && ety.cognates.length > 0 && (
-                  <div className="text-[11px] text-[var(--text-secondary)] mb-1">
-                    <span className="font-bold">Cognates: </span>
-                    {ety.cognates.join(', ')}
-                  </div>
-                )}
-                <div className="text-[11px] text-[var(--text-secondary)] leading-relaxed italic">{ety.note}</div>
-                <div className="mt-1.5 text-[9px] font-mono text-[var(--text-faint)] uppercase tracking-wider">
-                  Sources · {ety.sources.join(' · ')}
-                </div>
-              </div>
-            )}
-          </>
-        );
-      })()}
+          sees at a glance what's available. Etymology uses a violet palette so
+          its overlay mirrors the amber grammar-tip overlay — same layout, just
+          a different color. The chip only renders when a verified etymology
+          exists; the overlay (rendered below outside the popover scroll) is
+          shown when the user taps it. */}
+      {(entry.pos || lookupEtymology(rawToken, language)) && (
+        <div className="mt-2 flex items-center gap-1.5 flex-wrap">
+          {entry.pos && (
+            <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)] bg-[var(--bg-inset)] px-1.5 py-0.5 rounded">
+              {POS_LABELS[entry.pos] || entry.pos}
+            </span>
+          )}
+          {lookupEtymology(rawToken, language) && (
+            <button
+              onClick={(e) => { e.stopPropagation(); setEtymologyExpanded(true); }}
+              className="flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider text-violet-600 dark:text-violet-300 bg-violet-500/10 border border-violet-500/30 hover:bg-violet-500/15 transition-all active:scale-95"
+            >
+              <BookText size={11} />
+              <span>Origin</span>
+            </button>
+          )}
+        </div>
+      )}
 
       {/* Flag this word as wrong */}
       <div className="mt-3 pt-3 border-t border-[var(--border-color)]">
@@ -736,6 +714,40 @@ const PopoverPortal: React.FC<{
           </div>
         </div>
       )}
+
+      {/* Etymology overlay — centered modal with backdrop. Same layout pattern
+          as the Grammar Tip overlay on the study card, just violet instead of
+          amber. Tap anywhere to dismiss. */}
+      {etymologyExpanded && (() => {
+        const ety = lookupEtymology(rawToken, language);
+        if (!ety) return null;
+        return (
+          <div
+            className="fixed inset-0 z-[10001] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in cursor-pointer"
+            onClick={(e) => { e.stopPropagation(); setEtymologyExpanded(false); }}
+          >
+            <div className="bg-violet-50 dark:bg-[#100a1a] border border-violet-500/30 rounded-2xl p-6 max-w-sm w-full shadow-2xl">
+              <div className="flex items-center gap-1.5 mb-4 justify-center">
+                <BookText size={14} className="text-violet-500" />
+                <span className="text-[10px] font-bold uppercase tracking-wider text-violet-500">Etymology</span>
+              </div>
+              <div className="text-base font-bold text-violet-700 dark:text-violet-200 mb-3 text-center">{ety.origin}</div>
+              {ety.cognates && ety.cognates.length > 0 && (
+                <div className="text-xs text-slate-700 dark:text-violet-100 mb-3 text-center">
+                  <span className="font-bold">Cognates: </span>
+                  {ety.cognates.join(', ')}
+                </div>
+              )}
+              <p className="text-sm md:text-base text-slate-700 dark:text-violet-100 leading-relaxed text-center italic">
+                {ety.note}
+              </p>
+              <div className="mt-4 text-center text-[9px] font-mono text-violet-500/60 uppercase tracking-wider">
+                Sources · {ety.sources.join(' · ')}
+              </div>
+            </div>
+          </div>
+        );
+      })()}
     </>,
     document.body
   );

@@ -1010,7 +1010,7 @@ const App: React.FC = () => {
                   Settings
                 </div>
                 <div className="text-sm font-bold text-[var(--text-primary)] leading-tight truncate">
-                  Tap to customize
+                  Limits · theme · audio
                 </div>
               </div>
               <ChevronDown size={16} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showTools ? 'rotate-180' : ''}`} />

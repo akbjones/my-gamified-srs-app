@@ -267,19 +267,26 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
           onClick={!isFlipped ? handleFlip : undefined}
           className="study-card flex-1 min-h-0 flex flex-col cursor-pointer my-1 relative"
         >
-          {/* Grammar overlay — tap anywhere to dismiss */}
+          {/* Grammar overlay — centered modal with backdrop. Same layout
+              pattern as the etymology overlay in WordPopover, just amber
+              instead of violet so the two surfaces are visually parallel. */}
           {showGrammar && card!.grammar && (
             <div
-              className="absolute inset-0 z-10 bg-amber-50/95 dark:bg-[#1a1207]/95 rounded-2xl flex flex-col items-center justify-center p-8 animate-fade-in cursor-pointer"
+              className="fixed inset-0 z-[10001] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in cursor-pointer"
               onClick={(e) => { e.stopPropagation(); setShowGrammar(false); }}
             >
-              <div className="flex items-center gap-1.5 mb-4">
-                <BookOpen size={14} className="text-amber-500" />
-                <span className="text-[10px] font-bold uppercase tracking-wider text-amber-500">Grammar Tip</span>
+              <div className="bg-amber-50 dark:bg-[#1a1207] border border-amber-500/30 rounded-2xl p-6 max-w-sm w-full shadow-2xl">
+                <div className="flex items-center gap-1.5 mb-4 justify-center">
+                  <BookOpen size={14} className="text-amber-500" />
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-amber-500">Grammar Tip</span>
+                </div>
+                <p className="text-sm md:text-base text-slate-700 dark:text-amber-100 leading-relaxed text-center">
+                  {card!.grammar}
+                </p>
+                <div className="mt-4 text-center text-[9px] font-bold text-amber-500/60 uppercase tracking-wider">
+                  Tap anywhere to close
+                </div>
               </div>
-              <p className="text-sm md:text-base text-slate-700 dark:text-amber-100 leading-relaxed text-center max-w-xs">
-                {card!.grammar}
-              </p>
             </div>
           )}
 

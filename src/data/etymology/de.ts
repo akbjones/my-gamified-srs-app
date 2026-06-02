@@ -1,0 +1,86 @@
+import { EtymologyEntry } from './types';
+
+/** German etymology seed — 10 verified entries.
+ *  Cross-checked against Wiktionary (de+en), Etymonline, and Duden. */
+export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
+  'Blut': {
+    word: 'Blut',
+    origin: 'Germanic blōþą',
+    cognates: ['blood'],
+    note: 'Same Germanic root as English "blood" — virtually identical pronunciation 1500 years ago.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'duden'],
+  },
+  'Wasser': {
+    word: 'Wasser',
+    origin: 'Germanic watōr',
+    cognates: ['water'],
+    note: 'Same Germanic root as English "water" — both descend from one Indo-European word for water.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'duden'],
+  },
+  'Haus': {
+    word: 'Haus',
+    origin: 'Germanic hūsą',
+    cognates: ['house'],
+    note: 'Same Germanic root as English "house" — Anglo-Saxons and Germans split off from a shared tribe.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'duden'],
+  },
+  'Buch': {
+    word: 'Buch',
+    origin: 'Germanic bōk',
+    cognates: ['book', 'beech'],
+    note: 'Originally meant "beech tree" — early Germans carved runes onto beech wood for writing.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'duden'],
+  },
+  'Brot': {
+    word: 'Brot',
+    origin: 'Germanic braudą',
+    cognates: ['bread'],
+    note: 'Same Germanic root as English "bread" — "broth" also from the same root, originally "brewed thing".',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'duden'],
+  },
+  'Tag': {
+    word: 'Tag',
+    origin: 'Germanic dagaz',
+    cognates: ['day'],
+    note: 'Same Germanic root as English "day" — pronounced almost identically in Old High German.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'duden'],
+  },
+  'Nacht': {
+    word: 'Nacht',
+    origin: 'Germanic nahts',
+    cognates: ['night', 'nocturnal'],
+    note: 'Same ancient root as English "night" and Latin nox — one of the oldest shared Indo-European words.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'duden'],
+  },
+  'Hand': {
+    word: 'Hand',
+    origin: 'Germanic handuz',
+    cognates: ['hand'],
+    note: 'Same Germanic root as English "hand" — Latin used manus instead, so the word splits at the Roman/Germanic border.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'duden'],
+  },
+  'Mutter': {
+    word: 'Mutter',
+    origin: 'Germanic mōdēr',
+    cognates: ['mother', 'maternal'],
+    note: 'Same ancient root as English "mother", Latin mater, Sanskrit mātṛ — universal across millennia.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'duden'],
+  },
+  'Kindergarten': {
+    word: 'Kindergarten',
+    origin: 'German Kinder + Garten',
+    cognates: ['kindergarten'],
+    note: 'Literally "children\'s garden" — coined in 1840 by Friedrich Fröbel, adopted directly by English.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'duden'],
+  },
+};

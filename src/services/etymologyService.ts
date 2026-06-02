@@ -11,6 +11,11 @@ import { SPANISH_ETYMOLOGY } from '../data/etymology/es';
 import { ITALIAN_ETYMOLOGY } from '../data/etymology/it';
 import { FRENCH_ETYMOLOGY } from '../data/etymology/fr';
 import { PORTUGUESE_ETYMOLOGY } from '../data/etymology/pt';
+import { GERMAN_ETYMOLOGY } from '../data/etymology/de';
+import { DUTCH_ETYMOLOGY } from '../data/etymology/nl';
+import { SWEDISH_ETYMOLOGY } from '../data/etymology/sv';
+import { WELSH_ETYMOLOGY } from '../data/etymology/cy';
+import { TURKISH_ETYMOLOGY } from '../data/etymology/tr';
 import { HINDI_ETYMOLOGY } from '../data/etymology/hi';
 import { RUSSIAN_ETYMOLOGY } from '../data/etymology/ru';
 import { Language } from '../types';
@@ -20,6 +25,11 @@ const TABLES: Partial<Record<Language, Record<string, EtymologyEntry>>> = {
   italian: ITALIAN_ETYMOLOGY,
   french: FRENCH_ETYMOLOGY,
   portuguese: PORTUGUESE_ETYMOLOGY,
+  german: GERMAN_ETYMOLOGY,
+  dutch: DUTCH_ETYMOLOGY,
+  swedish: SWEDISH_ETYMOLOGY,
+  welsh: WELSH_ETYMOLOGY,
+  turkish: TURKISH_ETYMOLOGY,
   hindi: HINDI_ETYMOLOGY,
   russian: RUSSIAN_ETYMOLOGY,
 };

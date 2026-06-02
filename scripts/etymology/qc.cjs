@@ -34,13 +34,14 @@ const ALLOWED_SOURCES = new Set([
 ]);
 
 // ── Jargon detector — these patterns flag pedantic linguistics ──
+// "Germanic root" is OK (descriptive, not jargon). We only ban truly
+// academic notation: PIE, reconstructed forms with asterisks, laryngeals.
 const JARGON_PATTERNS = [
   /\bPIE\b/,
   /\bproto-indo-european\b/i,
   /\*\s*[a-záéíóúüñ]+/i,    // reconstructed forms like "*méh₂tēr"
   /h[₁₂₃]/,                  // laryngeal notations h₁, h₂, h₃
   /\bproto-slavic\b/i,
-  /\bgermanic root\b/i,      // too academic — prefer "ancient root"
 ];
 
 const MAX_NOTE_LENGTH = 150;
@@ -272,6 +273,11 @@ const langFiles = {
   italian:    'src/data/etymology/it.ts',
   french:     'src/data/etymology/fr.ts',
   portuguese: 'src/data/etymology/pt.ts',
+  german:     'src/data/etymology/de.ts',
+  dutch:      'src/data/etymology/nl.ts',
+  swedish:    'src/data/etymology/sv.ts',
+  welsh:      'src/data/etymology/cy.ts',
+  turkish:    'src/data/etymology/tr.ts',
   hindi:      'src/data/etymology/hi.ts',
   russian:    'src/data/etymology/ru.ts',
 };

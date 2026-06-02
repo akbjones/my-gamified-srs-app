@@ -39,8 +39,9 @@ import { lookupWord as lookupTr } from './data/dictionary/tr';
 import { lookupWord as lookupRu } from './data/dictionary/ru';
 import VocabList from './components/VocabList';
 import FavoritesList from './components/FavoritesList';
+import ListenMode from './components/ListenMode';
 import Onboarding from './components/Onboarding';
-import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff, Star, PenTool, Flame, BarChart3, CheckCheck, CalendarDays } from 'lucide-react';
+import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff, Star, PenTool, Flame, BarChart3, CheckCheck, CalendarDays, Volume2 } from 'lucide-react';
 import {
   loadNotificationPrefs, saveNotificationPrefs, requestNotificationPermission,
   isNotificationSupported, onSessionComplete, initNotifications,
@@ -62,7 +63,7 @@ const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
   russian: lookupRu,
 };
 
-type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB' | 'FAVORITES';
+type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB' | 'FAVORITES' | 'LISTEN';
 
 // Deck loaders — static imports for available languages
 // (dynamic import would be cleaner but static is simpler for Vite bundling)
@@ -754,6 +755,23 @@ const App: React.FC = () => {
             )}
           </button>
 
+          {/* Listen — secondary, passive listening mode. Only shown when the
+              user has at least a handful of seen cards to play through. */}
+          {(() => {
+            const playableCount = deck.filter(c => (c.interval || 0) > 0 && !c.isSuspended).length;
+            if (playableCount < 5) return null;
+            return (
+              <button
+                onClick={() => setView('LISTEN')}
+                className="w-full mb-3 -mt-1 py-2.5 flex items-center justify-center gap-2 text-[12px] font-bold text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+              >
+                <Volume2 size={14} />
+                <span>Or listen passively</span>
+                <span className="text-[10px] opacity-60">· {playableCount} cards</span>
+              </button>
+            );
+          })()}
+
           {/* Today's progress + streak — tappable to reveal Bento stats below.
               Default collapsed so the dashboard stays minimal; user opens
               the deeper stats when curious. */}
@@ -1396,6 +1414,16 @@ const App: React.FC = () => {
             setFavoritesMap(next);
             saveFavorites(next, lang);
           }}
+        />
+      )}
+
+      {view === 'LISTEN' && (
+        <ListenMode
+          cards={deck.filter(c => (c.interval || 0) > 0 && !c.isSuspended)}
+          language={lang}
+          audioSpeed={settings.audioSpeed}
+          googleTtsApiKey={settings.googleTtsApiKey}
+          onExit={() => setView('HOME')}
         />
       )}
 

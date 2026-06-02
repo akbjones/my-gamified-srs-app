@@ -1,10 +1,27 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { QuestCard, SessionState, Language, ChallengeMode } from '../types';
-import { Volume2, BookOpen, AlertTriangle, Swords, Zap } from 'lucide-react';
+import { Volume2, BookOpen, BookText, AlertTriangle, Swords, Zap } from 'lucide-react';
 import { playCardAudio, stopAudio } from '../services/audioService';
+import { lookupEtymology } from '../services/etymologyService';
 import type { AudioSpeed } from '../services/storageService';
 import WordPopover from './WordPopover';
 import WordTileChallenge from './WordTileChallenge';
+
+/** Find the first word in a target sentence that has a verified etymology
+ *  entry. Returns both the cleaned word (no punctuation) and the entry.
+ *  Used to surface a card-level "Etymology · word" button at the top of
+ *  the card so the user discovers etymology without first having to tap
+ *  individual words. */
+function findCardEtymology(targetSentence: string, language: Language) {
+  const tokens = targetSentence.split(/\s+/);
+  for (const raw of tokens) {
+    const cleaned = raw.replace(/[.,!?;:""«»()'"¿¡]/g, '').trim();
+    if (!cleaned) continue;
+    const entry = lookupEtymology(cleaned, language);
+    if (entry) return { word: cleaned, entry };
+  }
+  return null;
+}
 
 interface StudySessionProps {
   session: SessionState;
@@ -36,6 +53,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   const [isFlipped, setIsFlipped] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showGrammar, setShowGrammar] = useState(false);
+  const [showEtymology, setShowEtymology] = useState(false);
   const [studyMoreCount, setStudyMoreCount] = useState(10);
   // First-time hint: shown only on the very first card of the user's first
   // session, so they discover that words are tappable. Disappears on the
@@ -169,6 +187,15 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   const countLearn = remainingQueue.filter(c => c.mastery === 1).length;
   const countReview = remainingQueue.filter(c => c.mastery === 2).length;
 
+  // Find a card-level etymology word: first word in the target sentence with
+  // a verified etymology entry. Memoized on card+language so we don't rescan
+  // on every render. Used to show an "Origin · word" chip at the top of the
+  // card, parallel to the Grammar Tip chip.
+  const cardEty = useMemo(
+    () => (card?.target ? findCardEtymology(card.target, session.language) : null),
+    [card?.target, session.language],
+  );
+
   const handleFlip = () => setIsFlipped(true);
 
   const handlePlayAudio = (e: React.MouseEvent) => {
@@ -187,6 +214,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
     stopAudio();
     setIsFlipped(false);
     setShowGrammar(false);
+    setShowEtymology(false);
     onAnswer(rating);
   };
 
@@ -313,6 +341,73 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             </div>
           )}
 
+          {/* Top-of-card chips — Grammar Tip + Etymology surface here whenever
+              they're available, so the user can see at a glance what extras
+              this card offers and tap to learn. Both open the same kind of
+              centered modal, just different colors (amber / violet). The
+              Etymology chip names the specific word it covers so it's never
+              ambiguous which word the fact relates to. */}
+          {(card!.grammar || cardEty) && (
+            <div className="flex flex-wrap items-center justify-center gap-2 px-4 pt-2 shrink-0">
+              {card!.grammar && (
+                <button
+                  onClick={(e) => { e.stopPropagation(); setShowGrammar(true); }}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-300 bg-amber-500/10 border border-amber-500/40 hover:bg-amber-500/15 transition-all active:scale-95"
+                >
+                  <BookOpen size={12} />
+                  <span>Grammar tip</span>
+                </button>
+              )}
+              {cardEty && (
+                <button
+                  onClick={(e) => { e.stopPropagation(); setShowEtymology(true); }}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider text-violet-600 dark:text-violet-300 bg-violet-500/10 border border-violet-500/40 hover:bg-violet-500/15 transition-all active:scale-95"
+                >
+                  <BookText size={12} />
+                  <span>Origin · {cardEty.word}</span>
+                </button>
+              )}
+            </div>
+          )}
+
+          {/* Etymology overlay — same modal pattern as Grammar Tip, violet
+              palette. The word being explained sits prominently above the
+              origin so the user always knows what's being discussed. */}
+          {showEtymology && cardEty && (
+            <div
+              className="fixed inset-0 z-[10001] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in cursor-pointer"
+              onClick={(e) => { e.stopPropagation(); setShowEtymology(false); }}
+            >
+              <div className="bg-violet-50 dark:bg-[#100a1a] border border-violet-500/30 rounded-2xl p-6 max-w-sm w-full shadow-2xl">
+                <div className="flex items-center gap-1.5 mb-3 justify-center">
+                  <BookText size={14} className="text-violet-500" />
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-violet-500">Etymology</span>
+                </div>
+                <div className="text-2xl font-black text-violet-700 dark:text-violet-200 mb-2 text-center tracking-tight">
+                  {cardEty.word}
+                </div>
+                <div className="text-sm font-bold text-violet-600 dark:text-violet-300 mb-3 text-center">
+                  {cardEty.entry.origin}
+                </div>
+                {cardEty.entry.cognates && cardEty.entry.cognates.length > 0 && (
+                  <div className="text-xs text-slate-700 dark:text-violet-100 mb-3 text-center">
+                    <span className="font-bold">Cognates: </span>
+                    {cardEty.entry.cognates.join(', ')}
+                  </div>
+                )}
+                <p className="text-sm text-slate-700 dark:text-violet-100 leading-relaxed text-center italic">
+                  {cardEty.entry.note}
+                </p>
+                <div className="mt-4 text-center text-[9px] font-mono text-violet-500/60 uppercase tracking-wider">
+                  Sources · {cardEty.entry.sources.join(' · ')}
+                </div>
+                <div className="mt-2 text-center text-[9px] font-bold text-violet-500/60 uppercase tracking-wider">
+                  Tap anywhere to close
+                </div>
+              </div>
+            </div>
+          )}
+
           {/* Card content — dynamic font size based on sentence length */}
           {(() => {
             const wordCount = card!.target.split(/\s+/).length;
@@ -360,21 +455,10 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             );
           })()}
 
-          {/* Toolbar — bottom of card, proper touch targets */}
+          {/* Toolbar — bottom of card, audio actions only. Grammar Tip and
+              Etymology moved to the top chip row so they're discoverable
+              before flipping. */}
           <div className="flex items-center justify-center gap-2.5 px-4 py-2.5 shrink-0">
-            {isFlipped && card!.grammar && (
-              <button
-                onClick={(e) => { e.stopPropagation(); document.dispatchEvent(new MouseEvent('click', { bubbles: false })); setShowGrammar(!showGrammar); }}
-                className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border active:scale-95 ${
-                  showGrammar
-                    ? 'bg-[var(--accent)]/10 border-[var(--accent)]/40 text-[var(--accent)]'
-                    : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40'
-                }`}
-              >
-                <BookOpen size={14} />
-                <span>Grammar</span>
-              </button>
-            )}
             {isFlipped && (
               <button
                 onClick={handleSlowReplay}

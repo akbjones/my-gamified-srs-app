@@ -368,8 +368,13 @@ const App: React.FC = () => {
     const newLimit = (reviews.length === 0 && !explicitCount)
       ? Math.min(baseNewLimit, sessionLimit)
       : baseNewLimit;
+    // Source pool for new cards: stay inside the current topic for normal
+    // sessions, but expand to every unlocked card when the user explicitly
+    // typed a bonus count. Otherwise typing 40 only returns whatever's left
+    // in the current node (often 10 or fewer late in a topic).
     const nodeCards = deck.filter(c => c.topic === currentNode.id && !c.isSuspended);
-    const newCards = nodeCards
+    const sourceForNew = explicitCount ? allUnlockedCards : nodeCards;
+    const newCards = sourceForNew
       .filter(c => c.mastery === 0)
       .slice(0, newLimit);
 
@@ -770,18 +775,18 @@ const App: React.FC = () => {
               : 0;
             if (newAvailableInDeck === 0) return null;
             return (
-              <div className="w-full mb-3 p-3 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)]">
-                <div className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-2 text-center">
+              <div className="w-full mb-3 p-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)]">
+                <div className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-3 text-center">
                   {hasCards ? 'Or do a bonus session' : 'Want more?'}
                 </div>
-                <div className="flex items-stretch gap-2">
+                <div className="flex items-stretch gap-2.5">
                   <input
                     id="study-more-count"
                     type="number"
                     defaultValue={10}
                     min={1}
                     max={100}
-                    className="w-20 rounded-xl bg-[var(--bg-inset)] border border-[var(--border-color)] text-center text-lg font-extrabold font-mono text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)]"
+                    className="w-24 rounded-xl bg-[var(--bg-inset)] border-2 border-[var(--border-color)] text-center text-2xl font-extrabold font-mono text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)]"
                   />
                   <button
                     onClick={() => {
@@ -789,7 +794,7 @@ const App: React.FC = () => {
                       const count = input ? parseInt(input.value) || 10 : 10;
                       handleStartSession(count);
                     }}
-                    className="flex-1 py-3 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/40 text-[var(--accent)] font-bold text-sm hover:bg-[var(--accent)]/15 active:scale-95 transition"
+                    className="flex-1 py-5 rounded-xl bg-[var(--accent)]/15 border-2 border-[var(--accent)]/40 text-[var(--accent)] font-extrabold text-base hover:bg-[var(--accent)]/20 active:scale-95 transition"
                   >
                     Extra new cards
                   </button>

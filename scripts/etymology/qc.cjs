@@ -268,9 +268,12 @@ function crossLanguageCheck(allTables) {
 
 // ── Walk language files ────────────────────────────────────────
 const langFiles = {
-  spanish: 'src/data/etymology/es.ts',
-  hindi:   'src/data/etymology/hi.ts',
-  russian: 'src/data/etymology/ru.ts',
+  spanish:    'src/data/etymology/es.ts',
+  italian:    'src/data/etymology/it.ts',
+  french:     'src/data/etymology/fr.ts',
+  portuguese: 'src/data/etymology/pt.ts',
+  hindi:      'src/data/etymology/hi.ts',
+  russian:    'src/data/etymology/ru.ts',
 };
 
 const allTables = {};

@@ -1,0 +1,86 @@
+import { EtymologyEntry } from './types';
+
+/** Portuguese etymology seed — 10 verified entries.
+ *  Cross-checked against Wiktionary (pt+en) and Etymonline. */
+export const PORTUGUESE_ETYMOLOGY: Record<string, EtymologyEntry> = {
+  'sangue': {
+    word: 'sangue',
+    origin: 'Latin sanguis',
+    cognates: ['sanguine'],
+    note: 'English "sanguine" originally meant "blood-related" — Roman humoral theory linked it to cheer.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'coração': {
+    word: 'coração',
+    origin: 'Latin cor',
+    cognates: ['cordial', 'courage'],
+    note: '"Courage" originally meant "what comes from the heart" — bravery as a heart-feeling.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'mão': {
+    word: 'mão',
+    origin: 'Latin manus',
+    cognates: ['manual', 'manuscript', 'manage'],
+    note: '"Manuscript" literally means "written by hand" — manu (hand) + scriptus (written).',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'olho': {
+    word: 'olho',
+    origin: 'Latin oculus',
+    cognates: ['ocular', 'binoculars'],
+    note: 'Same ancient root as Sanskrit akṣi and Greek óps — old Indo-European eye-word.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'fogo': {
+    word: 'fogo',
+    origin: 'Latin focus',
+    cognates: ['focus', 'fuel', 'focal'],
+    note: 'Latin focus meant "hearth" — the family fire was literally the focal point of the home.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'amor': {
+    word: 'amor',
+    origin: 'Latin amor',
+    cognates: ['amorous', 'amateur'],
+    note: 'An "amateur" was originally a "lover" of something — done for love, not for money.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'família': {
+    word: 'família',
+    origin: 'Latin familia',
+    cognates: ['family', 'familiar'],
+    note: 'Latin familia originally meant "the household" — including servants and property.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'livro': {
+    word: 'livro',
+    origin: 'Latin liber',
+    cognates: ['library', 'libretto'],
+    note: 'Liber originally meant the inner bark of a tree — early writing surface.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'obrigado': {
+    word: 'obrigado',
+    origin: 'Latin obligatus',
+    cognates: ['obligated', 'obligation'],
+    note: 'Literally means "I am obligated to you" — thanks framed as a debt of gratitude.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'saudade': {
+    word: 'saudade',
+    origin: 'Latin solitas',
+    cognates: ['solitude'],
+    note: 'Famously untranslatable — a longing for someone or somewhere absent. Same root as "solitude".',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+};

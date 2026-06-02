@@ -1,0 +1,86 @@
+import { EtymologyEntry } from './types';
+
+/** Italian etymology seed — 10 verified entries.
+ *  Cross-checked against Wiktionary (it+en) and Etymonline. */
+export const ITALIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
+  'sangue': {
+    word: 'sangue',
+    origin: 'Latin sanguis',
+    cognates: ['sanguine'],
+    note: 'English "sanguine" originally meant "blood-related" — Roman humoral theory linked blood to cheer.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'cuore': {
+    word: 'cuore',
+    origin: 'Latin cor',
+    cognates: ['cordial', 'courage', 'concord'],
+    note: '"Concord" literally meant "hearts together" — agreement between minds.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'mano': {
+    word: 'mano',
+    origin: 'Latin manus',
+    cognates: ['manual', 'manage', 'manipulate'],
+    note: '"Manage" came from Italian maneggiare — handling a horse with one\'s hands.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'occhio': {
+    word: 'occhio',
+    origin: 'Latin oculus',
+    cognates: ['ocular', 'binoculars'],
+    note: 'Same ancient root as Sanskrit akṣi and Greek óps — Indo-European eye-word everywhere.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'fuoco': {
+    word: 'fuoco',
+    origin: 'Latin focus',
+    cognates: ['focus', 'fuel', 'focal'],
+    note: 'Latin focus originally meant "hearth" — the family fire was the focal point of the home.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'amore': {
+    word: 'amore',
+    origin: 'Latin amor',
+    cognates: ['amorous', 'amateur', 'enamour'],
+    note: 'An "amateur" was originally just a "lover" of something — done for love, not money.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'famiglia': {
+    word: 'famiglia',
+    origin: 'Latin familia',
+    cognates: ['family', 'familiar'],
+    note: 'Latin familia originally meant "the household" — servants and property, not just blood relatives.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'libro': {
+    word: 'libro',
+    origin: 'Latin liber',
+    cognates: ['library', 'libretto'],
+    note: 'Liber originally meant the inner bark of a tree — early writing surface before parchment.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'tempo': {
+    word: 'tempo',
+    origin: 'Latin tempus',
+    cognates: ['tempo', 'temporal', 'contemporary'],
+    note: 'Tempus covered both "time" and "weather" in Latin — Italian kept both senses.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'ciao': {
+    word: 'ciao',
+    origin: 'Venetian s\'ciao',
+    cognates: [],
+    note: 'Originally meant "I am your slave" in Venetian dialect — a humble greeting that became universal.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+};

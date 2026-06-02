@@ -8,12 +8,18 @@
 
 import { EtymologyEntry } from '../data/etymology/types';
 import { SPANISH_ETYMOLOGY } from '../data/etymology/es';
+import { ITALIAN_ETYMOLOGY } from '../data/etymology/it';
+import { FRENCH_ETYMOLOGY } from '../data/etymology/fr';
+import { PORTUGUESE_ETYMOLOGY } from '../data/etymology/pt';
 import { HINDI_ETYMOLOGY } from '../data/etymology/hi';
 import { RUSSIAN_ETYMOLOGY } from '../data/etymology/ru';
 import { Language } from '../types';
 
 const TABLES: Partial<Record<Language, Record<string, EtymologyEntry>>> = {
   spanish: SPANISH_ETYMOLOGY,
+  italian: ITALIAN_ETYMOLOGY,
+  french: FRENCH_ETYMOLOGY,
+  portuguese: PORTUGUESE_ETYMOLOGY,
   hindi: HINDI_ETYMOLOGY,
   russian: RUSSIAN_ETYMOLOGY,
 };

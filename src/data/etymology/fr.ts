@@ -1,0 +1,86 @@
+import { EtymologyEntry } from './types';
+
+/** French etymology seed — 10 verified entries.
+ *  Cross-checked against Wiktionary (fr+en), Etymonline, and CNRTL. */
+export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
+  'sang': {
+    word: 'sang',
+    origin: 'Latin sanguis',
+    cognates: ['sanguine'],
+    note: 'English "sanguine" originally meant "blood-related" — Roman humoral theory linked it to cheer.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'cnrtl'],
+  },
+  'cœur': {
+    word: 'cœur',
+    origin: 'Latin cor',
+    cognates: ['cordial', 'courage'],
+    note: '"Courage" originally meant "what comes from the heart" — bravery as a heart-feeling.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'cnrtl'],
+  },
+  'main': {
+    word: 'main',
+    origin: 'Latin manus',
+    cognates: ['manual', 'manage', 'manuscript'],
+    note: '"Manuscript" literally means "written by hand" — manu (hand) + scriptus (written).',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'cnrtl'],
+  },
+  'œil': {
+    word: 'œil',
+    origin: 'Latin oculus',
+    cognates: ['ocular', 'binoculars'],
+    note: 'Same ancient root as Sanskrit akṣi and Greek óps — Indo-European eye-word.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'cnrtl'],
+  },
+  'feu': {
+    word: 'feu',
+    origin: 'Latin focus',
+    cognates: ['focus', 'fuel', 'focal'],
+    note: 'Latin focus meant "hearth" — the family fire was literally the focal point of the home.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'cnrtl'],
+  },
+  'amour': {
+    word: 'amour',
+    origin: 'Latin amor',
+    cognates: ['amorous', 'amateur'],
+    note: 'An "amateur" was originally a "lover" of something — done for love, not for money.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'cnrtl'],
+  },
+  'famille': {
+    word: 'famille',
+    origin: 'Latin familia',
+    cognates: ['family', 'familiar'],
+    note: 'Latin familia originally meant "the household" — including servants and property.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'cnrtl'],
+  },
+  'livre': {
+    word: 'livre',
+    origin: 'Latin liber',
+    cognates: ['library', 'libretto'],
+    note: 'Liber originally meant the inner bark of a tree — early writing surface.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'cnrtl'],
+  },
+  'jardin': {
+    word: 'jardin',
+    origin: 'Frankish gardo',
+    cognates: ['garden', 'yard'],
+    note: 'Borrowed from Germanic into Old French — same root as English "garden" and "yard".',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'cnrtl'],
+  },
+  'travail': {
+    word: 'travail',
+    origin: 'Vulgar Latin tripalium',
+    cognates: ['travel'],
+    note: 'Originally a three-stake instrument of torture — English "travel" picked up the hardship sense.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'cnrtl'],
+  },
+};

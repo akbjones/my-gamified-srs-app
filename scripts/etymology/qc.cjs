@@ -51,7 +51,9 @@ const MIN_NOTE_LENGTH = 30;
 // At least ONE of these markers must appear in the note for it to feel like
 // a fact worth knowing rather than a dictionary stub.
 const INTERESTING_MARKERS = [
-  /\b\d{1,4}\s?(BCE|CE|AD|BC|century|s\.)/i,  // dates
+  /\b\d{1,4}\s?(BCE|CE|AD|BC|century|s\.)/i,  // dates with explicit unit
+  /\b\d{3,4}s\b/,                              // decade markers like "1500s", "1880s"
+  /\b\d{1,2}(th|st|nd|rd)\b/i,                  // "4th century" style ordinals
   /\bmeans?\b/i,                              // "originally meant X"
   /\boriginally\b/i,
   /\bliterally\b/i,

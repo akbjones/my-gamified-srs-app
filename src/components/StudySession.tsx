@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { QuestCard, SessionState, Language, ChallengeMode } from '../types';
-import { Volume2, BookOpen, AlertTriangle, Swords, Zap, Share2 } from 'lucide-react';
-import { shareCardImage } from '../services/cardImageService';
+import { Volume2, BookOpen, AlertTriangle, Swords, Zap } from 'lucide-react';
 import { playCardAudio, stopAudio } from '../services/audioService';
 import type { AudioSpeed } from '../services/storageService';
 import WordPopover from './WordPopover';
@@ -385,27 +384,6 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               <Volume2 size={14} />
               <span>Listen</span>
             </button>
-            {/* Share — renders the card as a PNG (target + translation +
-                LangLab mark) and opens the native share sheet, or downloads
-                if Web Share API isn't available. Only shown when flipped so
-                users can see the translation that goes in the image. */}
-            {isFlipped && (
-              <button
-                onClick={async (e) => {
-                  e.stopPropagation();
-                  await shareCardImage({
-                    target: card!.target,
-                    english: card!.english,
-                    language: session.language,
-                  });
-                }}
-                className="flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40 active:scale-95"
-                title="Share this card as an image"
-              >
-                <Share2 size={14} />
-                <span>Share</span>
-              </button>
-            )}
           </div>
         </div>
         )}

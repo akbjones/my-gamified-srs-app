@@ -495,34 +495,37 @@ const PopoverPortal: React.FC<{
         </div>
       )}
 
-      {/* Part of speech */}
-      {entry.pos && (
-        <div className="mt-2">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)] bg-[var(--bg-inset)] px-1.5 py-0.5 rounded">
-            {POS_LABELS[entry.pos] || entry.pos}
-          </span>
-        </div>
-      )}
-
-      {/* Etymology — only renders when a verified entry exists for this word.
-          Collapsed by default, expands inline on tap. Sources line shown small. */}
+      {/* Part of speech + Etymology — sit together as small chips so the user
+          sees at a glance what's available. Etymology uses a violet palette to
+          stay visually distinct from the amber grammar-tip overlay on the card.
+          The chip only renders when a verified etymology exists. */}
       {(() => {
         const ety = lookupEtymology(rawToken, language);
-        if (!ety) return null;
         return (
-          <div className="mt-3">
-            <button
-              onClick={(e) => { e.stopPropagation(); setEtymologyExpanded(prev => !prev); }}
-              aria-expanded={etymologyExpanded}
-              className="flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-500/10 border border-amber-500/30 hover:bg-amber-500/15 transition-all active:scale-95"
-            >
-              <BookText size={11} />
-              <span>Etymology</span>
-              <ChevronDown size={10} className={`transition-transform ${etymologyExpanded ? 'rotate-180' : ''}`} />
-            </button>
-            {etymologyExpanded && (
-              <div className="mt-2 px-3 py-2.5 rounded-lg bg-amber-500/5 border border-amber-500/20 animate-fade-in">
-                <div className="text-xs font-semibold text-amber-700 dark:text-amber-300 mb-1">{ety.origin}</div>
+          <>
+            {(entry.pos || ety) && (
+              <div className="mt-2 flex items-center gap-1.5 flex-wrap">
+                {entry.pos && (
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)] bg-[var(--bg-inset)] px-1.5 py-0.5 rounded">
+                    {POS_LABELS[entry.pos] || entry.pos}
+                  </span>
+                )}
+                {ety && (
+                  <button
+                    onClick={(e) => { e.stopPropagation(); setEtymologyExpanded(prev => !prev); }}
+                    aria-expanded={etymologyExpanded}
+                    className="flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider text-violet-600 dark:text-violet-300 bg-violet-500/10 border border-violet-500/30 hover:bg-violet-500/15 transition-all active:scale-95"
+                  >
+                    <BookText size={11} />
+                    <span>Origin</span>
+                    <ChevronDown size={10} className={`transition-transform ${etymologyExpanded ? 'rotate-180' : ''}`} />
+                  </button>
+                )}
+              </div>
+            )}
+            {ety && etymologyExpanded && (
+              <div className="mt-2 px-3 py-2.5 rounded-lg bg-violet-500/5 border border-violet-500/20 animate-fade-in">
+                <div className="text-xs font-semibold text-violet-700 dark:text-violet-300 mb-1">{ety.origin}</div>
                 {ety.cognates && ety.cognates.length > 0 && (
                   <div className="text-[11px] text-[var(--text-secondary)] mb-1">
                     <span className="font-bold">Cognates: </span>
@@ -535,7 +538,7 @@ const PopoverPortal: React.FC<{
                 </div>
               </div>
             )}
-          </div>
+          </>
         );
       })()}
 

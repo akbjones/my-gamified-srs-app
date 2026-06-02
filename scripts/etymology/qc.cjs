@@ -44,6 +44,30 @@ const JARGON_PATTERNS = [
 ];
 
 const MAX_NOTE_LENGTH = 150;
+const MIN_NOTE_LENGTH = 30;
+
+// ── Content quality patterns — what makes an etymology "interesting" ──
+// At least ONE of these markers must appear in the note for it to feel like
+// a fact worth knowing rather than a dictionary stub.
+const INTERESTING_MARKERS = [
+  /\b\d{1,4}\s?(BCE|CE|AD|BC|century|s\.)/i,  // dates
+  /\bmeans?\b/i,                              // "originally meant X"
+  /\boriginally\b/i,
+  /\bliterally\b/i,
+  /\bborrowed\b/i,
+  /\bvia\b/i,
+  /\bcoined\b/i,
+  /\bnamed after\b/i,
+  /\bloan\b/i,
+  /\b(misanalysis|metathesis|calque)\b/i,
+  /\bduring the\b/i,
+  /\bMughal|Moor|Ottoman|Persian|Roman|Greek|Anglo-Saxon|Norman\b/,
+  /\bhence\b/i,
+  /\bspread\b/i,
+  /\bsplit\b/i,
+  /\(.*\)/,                                   // any parenthetical adds nuance
+  /["'].+["']/,                               // quoted phrases
+];
 
 // ── Required fields ────────────────────────────────────────────
 const REQUIRED_FIELDS = ['word', 'origin', 'note', 'verified', 'sources'];
@@ -77,22 +101,58 @@ function loadLanguageTable(filePath) {
 }
 
 function parseEntryBody(body, key) {
+  // Parse a quoted string starting at index `i` in src. Handles escapes.
+  // Returns { value, end } or null if not at a quote.
+  const parseString = (src, i) => {
+    const open = src[i];
+    if (open !== "'" && open !== '"') return null;
+    let out = '';
+    let j = i + 1;
+    while (j < src.length) {
+      const ch = src[j];
+      if (ch === '\\' && j + 1 < src.length) {
+        const next = src[j + 1];
+        if (next === 'n') out += '\n';
+        else if (next === 't') out += '\t';
+        else out += next;
+        j += 2;
+        continue;
+      }
+      if (ch === open) return { value: out, end: j + 1 };
+      out += ch;
+      j++;
+    }
+    return null;
+  };
+
   const get = (field, isArray = false, isBool = false) => {
     if (isArray) {
-      const m = body.match(new RegExp(field + ":\\s*\\[([^\\]]*)\\]"));
+      const re = new RegExp(field + ":\\s*\\[");
+      const m = body.match(re);
       if (!m) return undefined;
-      return m[1]
-        .split(',')
-        .map(s => s.trim().replace(/^['"]|['"]$/g, ''))
-        .filter(Boolean);
+      let i = m.index + m[0].length;
+      const items = [];
+      while (i < body.length) {
+        while (i < body.length && /[\s,]/.test(body[i])) i++;
+        if (body[i] === ']') break;
+        const s = parseString(body, i);
+        if (!s) break;
+        items.push(s.value);
+        i = s.end;
+      }
+      return items;
     }
     if (isBool) {
       const m = body.match(new RegExp(field + ":\\s*(true|false)"));
       if (!m) return undefined;
       return m[1] === 'true';
     }
-    const m = body.match(new RegExp(field + ":\\s*['\"]([^'\"]*)['\"]"));
-    return m ? m[1] : undefined;
+    const re = new RegExp(field + ":\\s*");
+    const m = body.match(re);
+    if (!m) return undefined;
+    const i = m.index + m[0].length;
+    const s = parseString(body, i);
+    return s ? s.value : undefined;
   };
   return {
     word: get('word'),
@@ -122,9 +182,29 @@ function validateEntry(entry, lang) {
     issues.push({ id, severity: 'error', problem: 'verified: false — entry would not display but must not ship' });
   }
 
-  // Note length
-  if (typeof entry.note === 'string' && entry.note.length > MAX_NOTE_LENGTH) {
-    issues.push({ id, severity: 'error', problem: `note too long: ${entry.note.length} chars (max ${MAX_NOTE_LENGTH})` });
+  // Note length (both directions — too long is verbose, too short is fluff)
+  if (typeof entry.note === 'string') {
+    if (entry.note.length > MAX_NOTE_LENGTH) {
+      issues.push({ id, severity: 'error', problem: `note too long: ${entry.note.length} chars (max ${MAX_NOTE_LENGTH})` });
+    }
+    if (entry.note.length < MIN_NOTE_LENGTH) {
+      issues.push({ id, severity: 'error', problem: `note too short: ${entry.note.length} chars (min ${MIN_NOTE_LENGTH}) — say something interesting` });
+    }
+  }
+
+  // Content quality — note must contain at least 1 "interesting" marker
+  // (date, "originally", "via", "borrowed", cultural reference, etc.) OR
+  // the entry must list ≥ 2 cognates that justify it on their own.
+  if (typeof entry.note === 'string') {
+    const hasMarker = INTERESTING_MARKERS.some(re => re.test(entry.note));
+    const hasMultipleCognates = Array.isArray(entry.cognates) && entry.cognates.length >= 2;
+    if (!hasMarker && !hasMultipleCognates) {
+      issues.push({
+        id,
+        severity: 'error',
+        problem: 'note feels generic — add a historical fact, a date, a cultural anchor, OR list ≥2 cognates',
+      });
+    }
   }
 
   // Jargon detection in note

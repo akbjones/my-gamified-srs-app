@@ -31,6 +31,11 @@ const LANG_DECKS = {
   italian:    'src/data/italian/deck.json',
   french:     'src/data/french/deck.json',
   portuguese: 'src/data/portuguese/deck.json',
+  german:     'src/data/german/deck.json',
+  dutch:      'src/data/dutch/deck.json',
+  swedish:    'src/data/swedish/deck.json',
+  welsh:      'src/data/welsh/deck.json',
+  russian:    'src/data/russian/deck.json',
 };
 
 const A1_NODES = new Set(['node-01','node-02','node-03','node-04','node-05','node-06','node-07','node-08']);
@@ -158,6 +163,90 @@ const DETECTORS = {
       tense: 'futuro/condicional',
       destNode: 'node-19',
       test: t => /(?<![a-záéíóúâêîôûãõç])[a-záéíóúâêîôûãõç]{2,}(?:rei|rás|rá|remos|reis|rão|ria|rias|ríamos|ríeis|riam)(?![a-záéíóúâêîôûãõç])/i.test(t),
+    },
+  ],
+  german: [
+    {
+      tense: 'Präteritum (irregular)',
+      destNode: 'node-10',
+      test: t => /(?<![a-zäöüß])(war|warst|waren|wart|hatte|hattest|hatten|hattet|ging|gingen|gingst|kam|kamen|kamst|sah|sahen|sahst|sagte|sagten|sagtest|machte|machten|machtest|wollte|wollten|wolltest|konnte|konnten|konntest|sollte|sollten|solltest|musste|mussten|musstest|durfte|durften|durftest|fuhr|fuhren|fuhrst|nahm|nahmen|nahmst|gab|gaben|gabst|fand|fanden|fandst|stand|standen|standst|trank|tranken|trankst|schrieb|schrieben|schriebst|las|lasen|last|sprach|sprachen|sprachst|aß|aßen|aßt|trug|trugen|trugst|fiel|fielen|fielst|hielt|hielten|hieltest|ließ|ließen|ließt)(?![a-zäöüß])/i.test(t),
+    },
+    {
+      tense: 'Perfekt (compound)',
+      destNode: 'node-21',
+      test: t => /(?<![a-zäöüß])(habe|hast|hat|haben|habt|bin|bist|ist|sind|seid)\s+\S{1,40}?(?<![a-zäöüß])(ge[a-zäöüß]+t|ge[a-zäöüß]+en|gekommen|gegangen|gesehen|gemacht|gesagt|gehabt|gewesen|geworden|getan|gewusst|gekonnt|gewollt|gesollt|gemusst|gedurft|geblieben|geholfen|gegeben|genommen|gefunden|gestanden|getrunken|geschrieben|gelesen|gesprochen|gegessen|getragen|gefallen|gehalten|gelassen)(?![a-zäöüß])/i.test(t),
+    },
+    {
+      tense: 'Konjunktiv',
+      destNode: 'node-16',
+      test: t => /(?<![a-zäöüß])(wäre|wärst|wären|wärt|hätte|hättest|hätten|hättet|könnte|könntest|könnten|könntet|würde|würdest|würden|würdet|sollte|sollten|möchte|möchtest|möchten|möchtet|dürfte|dürftest|dürften|müsste|müsstest|müssten)(?![a-zäöüß])/i.test(t),
+    },
+  ],
+  dutch: [
+    {
+      tense: 'past (irregular)',
+      destNode: 'node-10',
+      test: t => /(?<![a-zäöë])(was|waren|had|hadden|ging|gingen|kwam|kwamen|zag|zagen|zei|zeiden|maakte|maakten|wilde|wilden|kon|konden|moest|moesten|mocht|mochten|sprak|spraken|las|lazen|schreef|schreven|nam|namen|gaf|gaven|vond|vonden|deed|deden|stond|stonden|liep|liepen|hield|hielden|liet|lieten|at|aten|dronk|dronken|reed|reden|werd|werden)(?![a-zäöë])/i.test(t),
+    },
+    {
+      tense: 'past (regular -de/-te)',
+      destNode: 'node-09',
+      test: t => /(?<![a-zäöë])[a-zäöë]{3,}(?:de|den|te|ten)(?![a-zäöë])/i.test(t) &&
+                /(?<![a-zäöë])(ik|jij|hij|zij|ze|wij|we|jullie|u)(?![a-zäöë])/i.test(t),
+    },
+    {
+      tense: 'perfect (compound)',
+      destNode: 'node-21',
+      test: t => /(?<![a-zäöë])(heb|hebt|heeft|hebben|ben|bent|is|zijn)\s+\S{1,30}?(?<![a-zäöë])(ge[a-zäöë]+|gekomen|gegaan|gezien|gemaakt|gezegd|geweest|geworden|gedaan|geweten|gekund|gewild|gemoeten|gebleven|geholpen|gegeven|genomen|gevonden|gestaan|gedronken|geschreven|gelezen|gesproken|gegeten|gedragen|gevallen|gehouden|gelaten)(?![a-zäöë])/i.test(t),
+    },
+  ],
+  swedish: [
+    {
+      tense: 'past (preteritum)',
+      destNode: 'node-09',
+      test: t => /(?<![a-zåäö])(var|hade|gick|kom|sa|sade|såg|gjorde|ville|kunde|skulle|måste|fick|tog|gav|fann|stod|sprang|skrev|läste|talade|åt|drack|kände|tyckte|trodde|visste|köpte|började|slutade|hörde|lärde|frågade|svarade|hjälpte|tittade|lyssnade|väntade|stannade)(?![a-zåäö])/i.test(t) ||
+                /(?<![a-zåäö])[a-zåäö]{3,}(?:ade|de)(?![a-zåäö])/i.test(t) && /(?<![a-zåäö])(jag|du|han|hon|den|det|vi|ni|de)(?![a-zåäö])/i.test(t),
+    },
+    {
+      tense: 'perfect (supinum)',
+      destNode: 'node-21',
+      test: t => /(?<![a-zåäö])(har|hade|hadde)\s+\S{1,30}?(?<![a-zåäö])(varit|haft|gått|kommit|sett|gjort|sagt|velat|kunnat|funnits|fått|tagit|givit|hittat|stått|sprungit|skrivit|läst|talat|ätit|druckit|kännt|trott|vetat|köpt|börjat|slutat|hört|lärt|frågat|svarat|hjälpt|tittat|lyssnat|väntat|stannat)(?![a-zåäö])/i.test(t),
+    },
+  ],
+  welsh: [
+    {
+      tense: 'past simple (-odd / irregular)',
+      destNode: 'node-10',
+      test: t => /(?<![a-zâêîôûŵŷ])[a-zâêîôûŵŷ]{3,}odd(?![a-zâêîôûŵŷ])/i.test(t) ||
+                /(?<![a-zâêîôûŵŷ])(aeth|aethon|aethant|aethom|aethoch|daeth|daethon|daethant|daethom|daethoch|gwnaeth|gwnaethon|gwnaethom|cafodd|cafon|cawsom|cawsant|gwelodd|clywodd|prynodd)(?![a-zâêîôûŵŷ])/i.test(t),
+    },
+    {
+      tense: 'past simple (1/2 person)',
+      destNode: 'node-09',
+      test: t => /(?<![a-zâêîôûŵŷ])[a-zâêîôûŵŷ]{3,}(?:ais|aist|asom|asoch|asant)(?![a-zâêîôûŵŷ])/i.test(t),
+    },
+    {
+      tense: 'imperfect (roedd)',
+      destNode: 'node-11',
+      test: t => /(?<![a-zâêîôûŵŷ])(roedd|roeddwn|roeddet|roedden|roeddech|doedd|doeddwn|doeddet|doedden|doeddech)(?![a-zâêîôûŵŷ])/i.test(t),
+    },
+    {
+      tense: 'conditional / future bydd',
+      destNode: 'node-19',
+      test: t => /(?<![a-zâêîôûŵŷ])(byddwn|byddai|byddent|fyddwn|fyddai|fyddent|baswn|basai|basech|petai|byddaf|byddi|bydd|byddwn|byddwch|byddan)(?![a-zâêîôûŵŷ])/i.test(t),
+    },
+  ],
+  russian: [
+    {
+      tense: 'past tense',
+      destNode: 'node-09',
+      test: t => /(?<![а-яёА-ЯЁ])(был|была|было|были|пошёл|пошла|пошло|пошли|сказал|сказала|сделал|сделала|купил|купила|увидел|увидела|пришёл|пришла|приехал|приехала|ушёл|ушла|закончил|закончила|открыл|открыла|закрыл|закрыла|посмотрел|посмотрела|позвонил|позвонила|вернулся|вернулась|читал|читала|писал|писала|жил|жила|работал|работала|играл|играла|учил|учила|любил|любила|думал|думала|знал|знала|хотел|хотела|видел|видела|слышал|слышала)(?![а-яёА-ЯЁ])/i.test(t) ||
+                /(?<![а-яёА-ЯЁ])[а-яё]{3,}(?:овал|овала|овали|евал|евала|евали)(?![а-яёА-ЯЁ])/i.test(t),
+    },
+    {
+      tense: 'future / будущее',
+      destNode: 'node-19',
+      test: t => /(?<![а-яёА-ЯЁ])(буду|будешь|будет|будем|будете|будут)(?![а-яёА-ЯЁ])/i.test(t),
     },
   ],
 };

@@ -95,7 +95,7 @@ const FavoritesList: React.FC<FavoritesListProps> = ({ favoritesMap, language, o
           <Star size={32} className="mx-auto mb-3 opacity-30" />
           <p className="text-sm">No favourites yet.</p>
           <p className="text-xs mt-2 max-w-[18rem] mx-auto">
-            Tap any word during study, then click the ⭐ in the popup to save it here.
+            Tap any word during study, then hit Save in the popup to add it here.
           </p>
         </div>
       ) : (

@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { ChallengeMode, ChallengeQuestion, BossRing, Language } from '../types';
-import { Zap } from 'lucide-react';
+import { Zap, Crown, Award, Sparkles, X as XIcon } from 'lucide-react';
 import { getBossForIndex } from '../data/bossArt';
 import { calculateBossRing } from '../services/challengeService';
 import WordTileChallenge from './WordTileChallenge';
@@ -244,8 +244,16 @@ const ChallengeScreen: React.FC<ChallengeScreenProps> = ({
         <>
           {bossDefeated ? (
             <>
-              <div className="text-4xl mb-3 animate-ring-reveal">
-                {ring === 'gold' ? '👑' : ring === 'silver' ? '🥈' : ring === 'bronze' ? '🥉' : '💀'}
+              <div className="mb-3 animate-ring-reveal">
+                {ring === 'gold' ? (
+                  <Crown size={44} className="text-yellow-500" />
+                ) : ring === 'silver' ? (
+                  <Award size={44} className="text-slate-400" />
+                ) : ring === 'bronze' ? (
+                  <Award size={44} className="text-orange-500" />
+                ) : (
+                  <XIcon size={44} className="text-red-500" />
+                )}
               </div>
               <TestTube color={boss.color} size={70} className="mb-3 opacity-60" />
               <h2 className="text-xl font-black text-[var(--text-primary)] mb-0.5">
@@ -260,7 +268,7 @@ const ChallengeScreen: React.FC<ChallengeScreenProps> = ({
             </>
           ) : (
             <>
-              <div className="text-4xl mb-3">💀</div>
+              <div className="mb-3"><XIcon size={44} className="text-red-500" /></div>
               <TestTube color={boss.color} size={70} className="mb-3 opacity-40 grayscale" />
               <h2 className="text-xl font-black text-[var(--text-primary)] mb-0.5">
                 {boss.name} Wins...
@@ -276,8 +284,12 @@ const ChallengeScreen: React.FC<ChallengeScreenProps> = ({
         </>
       ) : (
         <>
-          <div className="text-4xl mb-3">
-            {correctCount === totalQuestions ? '⚡' : correctCount >= 3 ? '✨' : '💪'}
+          <div className="mb-3">
+            {correctCount === totalQuestions ? (
+              <Zap size={44} className="text-yellow-500" />
+            ) : correctCount >= 3 ? (
+              <Sparkles size={44} className="text-violet-500" />
+            ) : null}
           </div>
           <h2 className="text-xl font-black text-[var(--text-primary)] mb-0.5">
             Challenge Complete!

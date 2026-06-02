@@ -525,8 +525,8 @@ const PopoverPortal: React.FC<{
         <button
           onClick={async () => {
             const btn = document.activeElement as HTMLElement;
-            const originalText = '⚑ Flag as wrong';
-            if (btn) btn.textContent = '⏳ Sending...';
+            const originalText = 'Flag as wrong';
+            if (btn) btn.textContent = 'Sending...';
 
             const flagEntry = {
               language,
@@ -558,15 +558,15 @@ const PopoverPortal: React.FC<{
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: formData.toString(),
               });
-              if (btn) btn.textContent = '✓ Sent. Thanks!';
+              if (btn) btn.textContent = 'Sent. Thanks!';
             } catch (e) {
-              if (btn) btn.textContent = '✓ Saved locally';
+              if (btn) btn.textContent = 'Saved locally';
             }
             setTimeout(() => { if (btn) btn.textContent = originalText; }, 2000);
           }}
           className="text-[10px] font-medium text-[var(--text-muted)] hover:text-orange-500 transition-colors"
         >
-          ⚑ Flag as wrong
+          Flag as wrong
         </button>
       </div>
 

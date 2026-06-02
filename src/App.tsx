@@ -1261,7 +1261,7 @@ const App: React.FC = () => {
                 {(() => {
                   const flags = JSON.parse(localStorage.getItem('quest_flagged_words') || '[]');
                   if (flags.length === 0) {
-                    return <p className="text-[11px] text-[var(--text-muted)]">No words flagged. Tap "⚑ Flag as wrong" on any word's definition popover to report it.</p>;
+                    return <p className="text-[11px] text-[var(--text-muted)]">No words flagged. Tap "Flag as wrong" on any word's definition popover to report it.</p>;
                   }
                   return (
                     <>
@@ -1276,7 +1276,7 @@ const App: React.FC = () => {
                           onClick={() => {
                             navigator.clipboard.writeText(JSON.stringify(flags, null, 2));
                             const btn = event?.target as HTMLElement;
-                            if (btn) { btn.textContent = '✓ Copied'; setTimeout(() => { btn.textContent = 'Copy all'; }, 1500); }
+                            if (btn) { btn.textContent = 'Copied'; setTimeout(() => { btn.textContent = 'Copy all'; }, 1500); }
                           }}
                           className="text-[10px] px-2 py-1 rounded border border-[var(--border-color)] hover:border-[var(--accent)] text-[var(--text-secondary)]"
                         >

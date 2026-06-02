@@ -1,6 +1,6 @@
 import React from 'react';
 import { Achievement, UserStats, BossRecord, Language } from '../types';
-import { Lock, Unlock, FlaskConical } from 'lucide-react';
+import { Lock, Unlock, FlaskConical, Crown, Award } from 'lucide-react';
 import { getBossForIndex } from '../data/bossArt';
 import { TOTAL_BOSSES } from '../services/challengeService';
 import StreakFlame from './StreakFlame';
@@ -22,7 +22,11 @@ const RING_STYLES = {
   gold: 'border-yellow-400/60 bg-yellow-400/10',
 };
 
-const RING_EMOJI = { none: '', bronze: '🥉', silver: '🥈', gold: '👑' };
+const RING_ICON = ({ ring }: { ring: 'bronze' | 'silver' | 'gold' }) => {
+  if (ring === 'gold') return <Crown size={14} className="mx-auto text-yellow-500" />;
+  if (ring === 'silver') return <Award size={14} className="mx-auto text-slate-400" />;
+  return <Award size={14} className="mx-auto text-orange-500" />;
+};
 
 const GamificationHub: React.FC<GamificationHubProps> = ({ stats, achievements, retention, onBack, bossRecords, nextBossIndex, language }) => {
   return (
@@ -96,7 +100,7 @@ const GamificationHub: React.FC<GamificationHubProps> = ({ stats, achievements, 
                 }`}
               >
                 {record && ring !== 'none' && (
-                  <div className="text-sm mb-0.5">{RING_EMOJI[ring]}</div>
+                  <div className="mb-0.5"><RING_ICON ring={ring} /></div>
                 )}
                 {isLocked && !record && (
                   <Lock size={12} className="mx-auto mb-0.5 text-[var(--text-faint)]" />

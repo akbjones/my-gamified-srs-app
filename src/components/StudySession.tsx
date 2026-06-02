@@ -333,9 +333,8 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                     Subtle: dashed border + soft animation. Dismisses on
                     any tap inside the card area. */}
                 {showFirstWowHint && !isFlipped && (
-                  <div className="mt-5 px-3 py-2 rounded-lg border border-dashed border-[var(--accent)]/50 bg-[var(--accent)]/5 text-[11px] font-semibold text-[var(--accent)] flex items-center gap-1.5 animate-fade-in">
-                    <span aria-hidden>👆</span>
-                    <span>Try tapping any word for instant context</span>
+                  <div className="mt-5 px-3 py-2 rounded-lg border border-dashed border-[var(--accent)]/50 bg-[var(--accent)]/5 text-[11px] font-semibold text-[var(--accent)] animate-fade-in text-center">
+                    Try tapping any word for instant context
                   </div>
                 )}
                 {isFlipped ? (

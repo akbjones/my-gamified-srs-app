@@ -205,14 +205,15 @@
   },
   {
     "id": "es-0016",
-    "target": "Mi abuelo es viudo.",
-    "english": "My grandfather is a widower.",
-    "audio": "es-60.mp3",
+    "target": "Mi abuela tiene un huerto.",
+    "english": "My grandmother has a vegetable garden.",
+    "audio": "es-173.mp3",
     "tags": [
       "family",
-      "general"
+      "general",
+      "travel"
     ],
-    "grammar": "Ser for civil status: \"Es soltero.\" Marital status uses ser — it defines identity, not a passing state.",
+    "grammar": "Spanish uses 'tener' for possession: 'tener un huerto' = to have a garden. Direct 'have', no auxiliary needed.",
     "grammarNode": "node-01",
     "priority": 204
   },
@@ -977,17 +978,16 @@
   },
   {
     "id": "es-0073",
-    "target": "Mi abuela tiene un huerto.",
-    "english": "My grandmother has a vegetable garden.",
-    "audio": "es-173.mp3",
+    "target": "Mi abuelo es viudo.",
+    "english": "My grandfather is a widower.",
+    "audio": "es-60.mp3",
     "tags": [
       "family",
-      "general",
-      "travel"
+      "general"
     ],
     "grammarNode": "node-01",
     "priority": 320,
-    "grammar": "Spain has a third pronoun: `vosotros` (you all, informal) with its own endings (-áis/-éis). Latin America uses `ustedes` for everyone plural. The `tú/usted` distinction is universal."
+    "grammar": "Ser for civil status: \"Es soltero.\" Marital status uses ser — it defines identity, not a passing state."
   },
   {
     "id": "es-0074",

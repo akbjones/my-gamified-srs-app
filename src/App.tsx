@@ -40,7 +40,7 @@ import { lookupWord as lookupRu } from './data/dictionary/ru';
 import VocabList from './components/VocabList';
 import FavoritesList from './components/FavoritesList';
 import Onboarding from './components/Onboarding';
-import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff, Star, PenTool, Flame } from 'lucide-react';
+import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff, Star, PenTool, Flame, BarChart3, CheckCheck, CalendarDays } from 'lucide-react';
 import {
   loadNotificationPrefs, saveNotificationPrefs, requestNotificationPermission,
   isNotificationSupported, onSessionComplete, initNotifications,
@@ -214,6 +214,18 @@ const App: React.FC = () => {
   const [showTools, setShowTools] = useState(false);
   const [showLangDropdown, setShowLangDropdown] = useState(false);
   const [showGoalMenu, setShowGoalMenu] = useState(false);
+  // Progress bento expansion state — persisted so the user's preference
+  // sticks across reloads.
+  const [showProgressBento, setShowProgressBento] = useState(() => {
+    try { return localStorage.getItem('progress_expanded') === '1'; } catch { return false; }
+  });
+  const toggleProgressBento = () => {
+    setShowProgressBento(prev => {
+      const next = !prev;
+      try { localStorage.setItem('progress_expanded', next ? '1' : '0'); } catch {}
+      return next;
+    });
+  };
   const [showLangPicker, setShowLangPicker] = useState(() => !localStorage.getItem('quest_first_launch_done'));
   const [showOnboarding, setShowOnboarding] = useState(() => !localStorage.getItem('onboarding_complete'));
   const [notifPrefs, setNotifPrefs] = useState<NotificationPrefs>(() => loadNotificationPrefs());
@@ -742,47 +754,106 @@ const App: React.FC = () => {
             )}
           </button>
 
-          {/* Today's progress + streak — fills space between Study button and the cards */}
+          {/* Today's progress + streak — tappable to reveal Bento stats below.
+              Default collapsed so the dashboard stays minimal; user opens
+              the deeper stats when curious. */}
           {(() => {
             const dailyGoal = getDailyLimitFor(settings, lang);
             const dailyDone = dailyStats.newCardsCount;
             const pct = dailyGoal > 0 ? Math.min(100, Math.round((dailyDone / dailyGoal) * 100)) : 0;
             const streak = userStats.streak;
             return (
-              <div className="stat-card px-5 py-4 mb-3 flex items-center gap-5">
-                {/* Progress bar — wider/taller for more visual weight */}
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-baseline justify-between mb-2">
-                    <span className="text-[11px] font-bold uppercase tracking-widest text-[var(--text-muted)]">Today</span>
-                    <span className="text-sm font-mono font-bold text-[var(--text-primary)]">
-                      {dailyDone} <span className="text-[var(--text-muted)] font-normal">/ {dailyGoal}</span>
-                    </span>
-                  </div>
-                  <div className="h-2.5 rounded-full bg-[var(--bg-inset)] overflow-hidden">
-                    <div
-                      className="h-full bg-gradient-to-r from-[var(--accent)] to-violet-400 rounded-full transition-all"
-                      style={{ width: `${pct}%` }}
-                    />
-                  </div>
-                </div>
-                {/* Streak counter — labeled, compact on the right */}
+              <>
                 <button
-                  onClick={() => setView('GAMIFICATION')}
-                  className="shrink-0 flex flex-col items-center gap-0.5 px-2 py-1 rounded-lg hover:bg-[var(--bg-inset)] active:scale-95 transition-all"
-                  aria-label="View progress"
+                  onClick={toggleProgressBento}
+                  className="w-full stat-card px-5 py-4 mb-2 flex items-center gap-5 hover:border-[var(--border-hover)] active:scale-[0.995] transition-all text-left"
+                  aria-expanded={showProgressBento}
+                  aria-controls="progress-bento"
                 >
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)]">Streak</span>
-                  <div className="flex items-center gap-1">
-                    <Flame
-                      size={18}
-                      className={streak > 0 ? 'text-orange-500 fill-orange-500/30' : 'text-[var(--text-faint)]'}
-                    />
-                    <span className={`text-lg font-black font-mono ${streak > 0 ? 'text-orange-500' : 'text-[var(--text-muted)]'}`}>
-                      {streak}
-                    </span>
+                  {/* Progress bar */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-baseline justify-between mb-2">
+                      <span className="text-[11px] font-bold uppercase tracking-widest text-[var(--text-muted)]">Today</span>
+                      <span className="text-sm font-mono font-bold text-[var(--text-primary)]">
+                        {dailyDone} <span className="text-[var(--text-muted)] font-normal">/ {dailyGoal}</span>
+                      </span>
+                    </div>
+                    <div className="h-2.5 rounded-full bg-[var(--bg-inset)] overflow-hidden">
+                      <div
+                        className="h-full bg-gradient-to-r from-[var(--accent)] to-violet-400 rounded-full transition-all"
+                        style={{ width: `${pct}%` }}
+                      />
+                    </div>
                   </div>
+                  {/* Streak counter */}
+                  <div className="shrink-0 flex flex-col items-center gap-0.5">
+                    <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)]">Streak</span>
+                    <div className="flex items-center gap-1">
+                      <Flame
+                        size={18}
+                        className={streak > 0 ? 'text-orange-500 fill-orange-500/30' : 'text-[var(--text-faint)]'}
+                      />
+                      <span className={`text-lg font-black font-mono ${streak > 0 ? 'text-orange-500' : 'text-[var(--text-muted)]'}`}>
+                        {streak}
+                      </span>
+                    </div>
+                  </div>
+                  {/* Expand chevron */}
+                  <ChevronDown
+                    size={16}
+                    className={`shrink-0 text-[var(--text-muted)] transition-transform ${showProgressBento ? 'rotate-180' : ''}`}
+                  />
                 </button>
-              </div>
+
+                {/* Bento — 4 calm stats that mean something. No XP, no badges.
+                    Words = vocab breadth; Memory = long-term retention rate;
+                    Learned = cards fully memorized; Days = total practice days. */}
+                {showProgressBento && (() => {
+                  const wordsCount = Object.keys(vocabMap).length;
+                  const cardsLearned = userStats.cardsLearned;
+                  const allDeckCards = deck.filter(c => !c.isSuspended);
+                  const longTerm = allDeckCards.filter(c => (c.interval || 0) >= 21).length;
+                  const memoryPct = allDeckCards.length > 0
+                    ? Math.round((longTerm / allDeckCards.length) * 100)
+                    : 0;
+                  // Approximate days active: 1 + days between firstSeen and now
+                  // when there's at least 1 review. Calm proxy, no streak guilt.
+                  const firstReviewTs = userStats.totalReviews > 0
+                    ? Math.min(...Object.values(vocabMap).map(v => v.firstSeen).filter(Boolean), Date.now())
+                    : Date.now();
+                  const daysActive = userStats.totalReviews > 0
+                    ? Math.max(1, Math.ceil((Date.now() - firstReviewTs) / 86400000))
+                    : 0;
+                  return (
+                    <div id="progress-bento" className="grid grid-cols-2 gap-2 mb-3 animate-fade-in">
+                      <div className="stat-card p-4">
+                        <BookOpen size={14} className="text-[var(--text-muted)] mb-1.5" />
+                        <div className="text-[9px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-1">Words</div>
+                        <div className="text-2xl font-mono font-black text-[var(--text-primary)] leading-none">{wordsCount.toLocaleString()}</div>
+                        <div className="text-[10px] text-[var(--text-muted)] mt-1 leading-tight">unique words in sentences</div>
+                      </div>
+                      <div className="stat-card p-4">
+                        <BarChart3 size={14} className="text-[var(--text-muted)] mb-1.5" />
+                        <div className="text-[9px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-1">Memory</div>
+                        <div className="text-2xl font-mono font-black text-[var(--text-primary)] leading-none">{memoryPct}%</div>
+                        <div className="text-[10px] text-[var(--text-muted)] mt-1 leading-tight">long-term recall (3+ weeks)</div>
+                      </div>
+                      <div className="stat-card p-4">
+                        <CheckCheck size={14} className="text-[var(--text-muted)] mb-1.5" />
+                        <div className="text-[9px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-1">Learned</div>
+                        <div className="text-2xl font-mono font-black text-[var(--text-primary)] leading-none">{cardsLearned.toLocaleString()}</div>
+                        <div className="text-[10px] text-[var(--text-muted)] mt-1 leading-tight">cards in long memory</div>
+                      </div>
+                      <div className="stat-card p-4">
+                        <CalendarDays size={14} className="text-[var(--text-muted)] mb-1.5" />
+                        <div className="text-[9px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-1">Days</div>
+                        <div className="text-2xl font-mono font-black text-[var(--text-primary)] leading-none">{daysActive}</div>
+                        <div className="text-[10px] text-[var(--text-muted)] mt-1 leading-tight">days you've practiced</div>
+                      </div>
+                    </div>
+                  );
+                })()}
+              </>
             );
           })()}
 

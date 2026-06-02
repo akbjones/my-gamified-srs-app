@@ -130,4 +130,17 @@ module.exports = [
     ],
   },
 
+  // ── Je / jij vs u (formal/informal you) ─────────────────────────
+  {
+    id: 'nl-je-u-formal',
+    priority: 88,
+    match: t => /\b(je|jij|jou|jouw|u|uw|jullie)\b/i.test(t),
+    tips: [
+      "Dutch has TWO 'you's: `je/jij` (informal — friends, family, peers) and `u` (formal — strangers, elders, business). They use DIFFERENT verb forms: `jij hebt` vs `u hebt` (or `u heeft`).",
+      "`Je` (unstressed) vs `jij` (stressed/contrastive) — same word, just emphasis. Possessive: `je/jouw boek` (your book, informal) vs `uw boek` (formal).",
+      "Modern Dutch trends toward `je` even with strangers, especially among younger speakers. But in customer service, with older people, or in writing — default to `u`. Belgian Dutch (Flemish) is more formal than Netherlands Dutch.",
+      "Plural is always `jullie` (you guys) — no formal plural. Even when addressing a group formally, `jullie` works. For very formal writing only, `u` covers both singular and plural.",
+    ],
+  },
+
 ];

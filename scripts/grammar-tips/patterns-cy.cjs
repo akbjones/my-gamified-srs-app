@@ -404,4 +404,17 @@ module.exports = [
     ],
   },
 
+  // ── Ti vs chi (informal singular vs formal / plural you) ────────
+  {
+    id: 'cy-ti-chi-formal',
+    priority: 88,
+    match: t => /\b(ti|chi|dy|eich|wyt|ydych|dych|dwyt|dydych)\b/i.test(t),
+    tips: [
+      "Welsh has TWO 'you's: `ti` (informal singular — friends, family, kids, God in prayer) and `chi` (formal singular AND plural). They use DIFFERENT verb forms: `wyt ti'n` (are you, informal) vs `ydych chi'n` (are you, formal/plural).",
+      "`Chi` works as BOTH formal singular and plural (like English 'you' covers both). With one stranger → chi. With a group of friends → also chi. With one friend → ti.",
+      "Possessives shift: `dy lyfr` (your book, informal — triggers soft mutation) vs `eich llyfr` (your book, formal/plural — no mutation). Same pattern across all your-pronouns.",
+      "Welsh is less strict about formality than German or Russian. Many speakers default to `chi` with adults they don't know, but `ti` spreads quickly once you're on first-name terms.",
+    ],
+  },
+
 ];

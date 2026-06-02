@@ -269,4 +269,19 @@ module.exports = [
     ],
   },
 
+  // ── Formal vs informal "you" — 3sg verbs double for usted ──────────
+  // Fires on common verb forms that hide this duality: puede = he/she can
+  // OR you (formal) can; puedes is only ever informal you.
+  {
+    id: 'es-formal-informal-you',
+    priority: 88,
+    match: t => /\b(puede|puedes|tiene|tienes|quiere|quieres|sabe|sabes|habla|hablas|come|comes|vive|vives|trabaja|trabajas|hace|haces|va|vas|viene|vienes|piensa|piensas|necesita|necesitas|cree|crees|debe|debes|está|estás)\b/i.test(t),
+    tips: [
+      "Spanish has TWO 'you's: `tú` (informal — friends, family, kids) and `usted` (formal — strangers, elders, work). They use DIFFERENT verb forms. `Tú puedes` but `usted puede` — same form as él/ella.",
+      "If you see `puede`, it could mean 'he/she can' OR 'you (formal) can'. Context decides. The form `puedes` is unambiguous — always informal you. Spanish reuses 3rd-person verbs for the formal you.",
+      "Default to `tú` with peers, `usted` when meeting someone older or in business. Latin Americans use `usted` more readily than Spaniards. Wrong tú can sound rude; wrong usted is just polite.",
+      "Spain has a third pronoun: `vosotros` (you all, informal) with its own endings (-áis/-éis). Latin America uses `ustedes` for everyone plural. The `tú/usted` distinction is universal.",
+    ],
+  },
+
 ];

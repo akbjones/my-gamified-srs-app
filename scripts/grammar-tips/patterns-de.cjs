@@ -192,4 +192,17 @@ module.exports = [
     ],
   },
 
+  // ── Du vs Sie (formal/informal you) — the biggest social trap ─────
+  {
+    id: 'de-du-sie-formal',
+    priority: 88,
+    match: t => /\b(du|Sie|Ihnen|Ihr|Ihre|Ihren|dich|dir)\b/.test(t),
+    tips: [
+      "German has TWO 'you's: `du` (informal — family, friends, kids, peers) and `Sie` (formal — strangers, work, anyone you don't know well). Capital-S `Sie` is required.",
+      "`Sie` looks like `sie` (she/they). The capital matters: `Sie sind` = you (formal) are; `sie sind` = they are. Verbs are always plural with Sie even for one person.",
+      "Default to `Sie` with anyone you'd address as Mr/Mrs in English. Wrong `du` can sound rude or condescending. Germans take this seriously — wait for them to suggest `wir können uns duzen` (we can switch to du).",
+      "Plural: `ihr` (informal — you guys) vs `Sie` (formal — same form as singular formal). `Wie geht es euch?` (informal) vs `Wie geht es Ihnen?` (formal).",
+    ],
+  },
+
 ];

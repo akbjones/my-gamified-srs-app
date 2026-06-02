@@ -133,4 +133,17 @@ module.exports = [
     ],
   },
 
+  // ── Du is universal — no formal/informal split (du-reform) ───────
+  {
+    id: 'sv-du-universal',
+    priority: 80,
+    match: t => /\b(du|ni|dig|dej|er|din|ditt|dina|er|ert|era)\b/i.test(t),
+    tips: [
+      "Swedish only has ONE 'you' in modern use: `du`. Use it with strangers, your boss, the king — everyone. The formal `Ni` is essentially extinct outside very formal letters.",
+      "This is unusual for European languages. Spanish, French, German, Russian all distinguish formal/informal — Swedish dropped it in the 1960s-70s ('du-reformen'). Don't reach for a formal 'you'; it doesn't exist.",
+      "`Ni` survives only as the plural 'you' (you all). Some older speakers or very formal contexts use `Ni` for one stranger, but it can actually sound stiff or even sarcastic. Default to `du`.",
+      "Possessives are straightforward: `din/ditt/dina` (your, singular) matching the noun's gender and number. `Er/ert/era` for plural 'your'. No formality dimension to worry about.",
+    ],
+  },
+
 ];

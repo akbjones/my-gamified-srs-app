@@ -186,4 +186,17 @@ module.exports = [
     ],
   },
 
+  // ── Tu vs você (regional formality + verb forms) ─────────────────
+  {
+    id: 'pt-tu-voce-formal',
+    priority: 88,
+    match: t => /\b(tu|você|vocês|o\s+senhor|a\s+senhora|os\s+senhores|as\s+senhoras)\b/i.test(t),
+    tips: [
+      "Portuguese has TWO main 'you's: `tu` (informal — Portugal and southern Brazil) and `você` (universal — informal in Brazil, semi-formal in Portugal). They use DIFFERENT verb forms: `tu falas` vs `você fala`.",
+      "Brazilian Portuguese: `você` is the default. Most Brazilians never say `tu`. `Você fala português?` is what you'll hear, with 3rd-person verbs.",
+      "European Portuguese: `tu` is for close friends/family, `você` is slightly more distant. For real formality, drop the pronoun and use `o senhor` (m) / `a senhora` (f): `O senhor sabe...?`.",
+      "Plural: `vocês` is universal. Portugal also has `vós` but it's extinct in speech. Just use `vocês` and you're safe everywhere.",
+    ],
+  },
+
 ];

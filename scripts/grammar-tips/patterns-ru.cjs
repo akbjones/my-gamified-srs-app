@@ -439,4 +439,17 @@ module.exports = [
     ],
   },
 
+  // ── Ты vs Вы (formal/informal you + plural) ─────────────────────
+  {
+    id: 'ru-ty-vy-formal',
+    priority: 88,
+    match: t => /(^|\s|[.,!?])(ты|вы|тебя|вас|тебе|вам|тобой|вами|твой|твоя|твоё|твои|ваш|ваша|ваше|ваши)(\s|[.,!?]|$)/i.test(t),
+    tips: [
+      "Russian has TWO 'you's: `ты` (informal — family, friends, kids) and `вы` (formal — strangers, elders, work, AND plural for everyone). They use DIFFERENT verb forms: `ты говоришь` vs `вы говорите`.",
+      "`Вы` is BOTH the formal singular and the plural — context tells you which. Verbs always conjugate as plural with `вы` even when addressing one person formally. Writing `Вы` with a capital is polite (especially in letters).",
+      "Default to `вы` with adults you don't know well. Russians are stricter about this than English speakers — wrong `ты` can sound rude. Wait for them to suggest `давай на ты` (let's switch to ты).",
+      "Possessives shift too: `твой` (your, informal) vs `ваш` (your, formal/plural). And the cases: `тебя/тебе/тобой` (informal) vs `вас/вам/вами` (formal/plural).",
+    ],
+  },
+
 ];

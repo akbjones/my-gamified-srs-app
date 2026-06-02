@@ -193,11 +193,29 @@ export const playCardAudio = async (
       // playback rate to compensate (avoid double-slowdown)
       audio.playbackRate = speed === 1.0 ? 1.05 : speed === 0.8 ? 1.0 : 0.8;
       currentAudio = audio;
-      audio.addEventListener('ended', () => {
-        if (objectUrl) URL.revokeObjectURL(objectUrl);
-      }, { once: true });
-      await audio.play();
-      return;
+
+      // Resolve when the audio FINISHES, not when it starts.
+      // The old code did `await audio.play()` and returned immediately, which
+      // resolves as soon as playback begins. That broke ListenMode's auto-
+      // advance (1800ms after START, not END) and made other callers think
+      // playback was done before it actually was. Now we await full duration,
+      // matching the Google TTS path.
+      const finalUrl = objectUrl;
+      return new Promise<void>((resolve, reject) => {
+        const cleanup = () => {
+          if (finalUrl) URL.revokeObjectURL(finalUrl);
+          objectUrl = null;
+        };
+        audio.addEventListener('ended', () => { cleanup(); resolve(); }, { once: true });
+        audio.addEventListener('error', () => { cleanup(); reject(new Error('audio playback error')); }, { once: true });
+        // pause()-on-stopAudio fires `pause` not `ended`. If a newer call
+        // supersedes us, currentAudio gets swapped out — bail on the pause
+        // event so the caller's await doesn't hang.
+        audio.addEventListener('pause', () => {
+          if (currentAudio !== audio) { cleanup(); resolve(); }
+        }, { once: true });
+        audio.play().catch(err => { cleanup(); reject(err); });
+      });
     } catch (err) {
       if (objectUrl) URL.revokeObjectURL(objectUrl);
       // If we got superseded, don't clobber the current audio or fall through.

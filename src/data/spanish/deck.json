@@ -10,7 +10,7 @@
     ],
     "grammarNode": "node-01",
     "grammar": "'Hacerse' in impersonal expressions: 'se me hace tarde' = it's getting late for me. The indirect object pronoun shows who is affected.",
-    "priority": 10
+    "priority": 2500
   },
   {
     "id": "es-0002",
@@ -144,7 +144,7 @@
       "travel"
     ],
     "grammar": "Estar for current condition: \"¿Cómo estás?\" How someone IS right now (condition, mood, health) → estar.",
-    "grammarNode": "node-01",
+    "grammarNode": "node-18",
     "priority": 152
   },
   {
@@ -172,7 +172,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-01",
+    "grammarNode": "node-18",
     "priority": 154
   },
   {
@@ -653,7 +653,7 @@
       "family",
       "general"
     ],
-    "grammarNode": "node-01",
+    "grammarNode": "node-16",
     "priority": 539,
     "grammar": "Subject pronouns are optional in Spanish: the verb ending tells you who. Native speakers drop them unless they're contrasting (I, not him) or clarifying."
   },
@@ -1683,7 +1683,7 @@
       "travel"
     ],
     "grammar": "\"El agua\" — feminine noun using \"el\" for sound: feminine nouns starting with stressed \"a-\" take \"el\" not \"la\" but stay feminine: \"el agua fría.\"",
-    "grammarNode": "node-01",
+    "grammarNode": "node-18",
     "priority": 876
   },
   {
@@ -1834,7 +1834,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-01",
+    "grammarNode": "node-19",
     "grammar": "'¿Cuánto?' agrees in gender/number: cuánto (m.sg), cuánta (f.sg), cuántos (m.pl), cuántas (f.pl).",
     "priority": 617
   },
@@ -2211,7 +2211,7 @@
       "travel"
     ],
     "grammar": "El agua — feminine noun uses 'el' before stressed a-. Adjective stays feminine: fría",
-    "grammarNode": "node-01",
+    "grammarNode": "node-18",
     "priority": 1268
   },
   {
@@ -2753,7 +2753,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-01",
+    "grammarNode": "node-19",
     "grammar": "'¿A qué hora...?' = At what time...? The preposition 'a' is required with clock times.",
     "priority": 848
   },
@@ -2781,7 +2781,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-01",
+    "grammarNode": "node-18",
     "grammar": "Spanish questions are framed by '¿' and '?' — the inverted mark at the start helps readers know a question is coming.",
     "priority": 765
   },
@@ -3242,7 +3242,7 @@
     "tags": [
       "general"
     ],
-    "grammarNode": "node-01",
+    "grammarNode": "node-09",
     "priority": 510,
     "grammar": "Quick rule: `para` = destination or purpose (it's FOR him, in order TO eat). `por` = reason or exchange (BECAUSE of him, FOR ten euros). When in doubt ask 'why?' (por) or 'what for?' (para)."
   },
@@ -4025,7 +4025,7 @@
       "family",
       "general"
     ],
-    "grammarNode": "node-01",
+    "grammarNode": "node-18",
     "priority": 1202
   },
   {
@@ -4297,7 +4297,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-01",
+    "grammarNode": "node-18",
     "priority": 1630,
     "grammar": "Quick rule: `para` = destination or purpose (it's FOR him, in order TO eat). `por` = reason or exchange (BECAUSE of him, FOR ten euros). When in doubt ask 'why?' (por) or 'what for?' (para)."
   },
@@ -4678,7 +4678,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-02",
+    "grammarNode": "node-10",
     "priority": 260,
     "grammar": "`para` is about endpoint and intent — destination, deadline, recipient. `por` is about cause, exchange, route, duration. English uses 'for' / 'by' / 'through' across both."
   },
@@ -5033,7 +5033,7 @@
       "family",
       "general"
     ],
-    "grammarNode": "node-02",
+    "grammarNode": "node-18",
     "priority": 576,
     "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
@@ -5072,7 +5072,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-02",
+    "grammarNode": "node-18",
     "priority": 929,
     "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
@@ -5355,7 +5355,8 @@
       "work"
     ],
     "grammarNode": "node-02",
-    "priority": 824
+    "priority": 824,
+    "grammar": "`ir a + infinitive` = the casual future, like English 'going to'. `Voy a comer` = 'I'm going to eat'. Way more common in speech than the textbook future tense."
   },
   {
     "id": "es-0397",
@@ -5510,7 +5511,7 @@
       "family",
       "general"
     ],
-    "grammarNode": "node-02",
+    "grammarNode": "node-19",
     "priority": 756,
     "grammar": "Adjectives agree with the noun's gender AND number: `el coche rojo` (m sg), `la casa roja` (f sg), `los coches rojos` (m pl), `las casas rojas` (f pl). One adjective, four forms."
   },
@@ -5590,7 +5591,7 @@
       "family",
       "general"
     ],
-    "grammarNode": "node-02",
+    "grammarNode": "node-18",
     "priority": 1013,
     "grammar": "Use imperfect when describing what was going on, what used to happen, weather, age, or feelings in the past. `Era`, `tenía`, `hacía`. Background, not events."
   },
@@ -5604,7 +5605,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-02",
+    "grammarNode": "node-18",
     "priority": 1111,
     "grammar": "Use imperfect when describing what was going on, what used to happen, weather, age, or feelings in the past. `Era`, `tenía`, `hacía`. Background, not events."
   },
@@ -6492,7 +6493,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-03",
+    "grammarNode": "node-10",
     "priority": 253,
     "grammar": "Endings `-é/-aste/-ó/-amos/-asteis/-aron` (for -ar) and `-í/-iste/-ió/-imos/-isteis/-ieron` (for -er/-ir) signal preterite. One discrete event in the past."
   },
@@ -7285,7 +7286,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-03",
+    "grammarNode": "node-18",
     "priority": 937,
     "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
@@ -7423,7 +7424,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-03",
+    "grammarNode": "node-16",
     "priority": 1318,
     "grammar": "`hay` = 'there is / there are'. It doesn't change for plural: `hay un libro` AND `hay tres libros`. Different verb than `tener` (to have). One word, no conjugation."
   },
@@ -7476,7 +7477,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-03",
+    "grammarNode": "node-18",
     "priority": 1184,
     "grammar": "Use imperfect when describing what was going on, what used to happen, weather, age, or feelings in the past. `Era`, `tenía`, `hacía`. Background, not events."
   },
@@ -7490,7 +7491,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-03",
+    "grammarNode": "node-18",
     "priority": 1358,
     "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
@@ -7532,7 +7533,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-03",
+    "grammarNode": "node-16",
     "priority": 1348,
     "grammar": "`ser` declares identity — the unchanging label of a person, object, or fact. Use it for permanence; reach for `estar` when it could change."
   },
@@ -7615,7 +7616,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-04",
+    "grammarNode": "node-09",
     "priority": 80,
     "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
@@ -7653,7 +7654,7 @@
     "tags": [
       "general"
     ],
-    "grammarNode": "node-04",
+    "grammarNode": "node-10",
     "priority": 24,
     "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
@@ -7666,7 +7667,7 @@
     ],
     "grammar": "\"¿Por qué?\" (two words, with accent) = Why? \"Porque\" (one word, no accent) = Because. The accent and spacing matter.",
     "audio": "es-481.mp3",
-    "grammarNode": "node-04",
+    "grammarNode": "node-10",
     "priority": 87
   },
   {
@@ -7718,7 +7719,7 @@
       "travel"
     ],
     "grammar": "\"La foto\" — feminine because it's short for \"la fotografía.\" Shortened words keep the gender of the full word.",
-    "grammarNode": "node-04",
+    "grammarNode": "node-09",
     "priority": 286
   },
   {
@@ -7757,7 +7758,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-04",
+    "grammarNode": "node-09",
     "priority": 168,
     "grammar": "Endings `-é/-aste/-ó/-amos/-asteis/-aron` (for -ar) and `-í/-iste/-ió/-imos/-isteis/-ieron` (for -er/-ir) signal preterite. One discrete event in the past."
   },
@@ -7771,7 +7772,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-04",
+    "grammarNode": "node-09",
     "priority": 335,
     "grammar": "Endings `-é/-aste/-ó/-amos/-asteis/-aron` (for -ar) and `-í/-iste/-ió/-imos/-isteis/-ieron` (for -er/-ir) signal preterite. One discrete event in the past."
   },
@@ -7956,7 +7957,7 @@
       "travel"
     ],
     "grammar": "La foto — shortened from la fotografía, keeps feminine gender",
-    "grammarNode": "node-04",
+    "grammarNode": "node-09",
     "priority": 162
   },
   {
@@ -7995,7 +7996,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-04",
+    "grammarNode": "node-10",
     "grammar": "Endings `-é/-aste/-ó/-amos/-asteis/-aron` (for -ar) and `-í/-iste/-ió/-imos/-isteis/-ieron` (for -er/-ir) signal preterite. One discrete event in the past.",
     "priority": 525
   },
@@ -8384,7 +8385,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-04",
+    "grammarNode": "node-19",
     "priority": 679,
     "grammar": "Plural marker is `-s` (after vowel: casas, libros) or `-es` (after consonant: papeles, animales). The article also pluralizes: el→los, la→las. Articles always match the noun."
   },
@@ -8436,7 +8437,7 @@
       "travel"
     ],
     "audio": "es-515.mp3",
-    "grammarNode": "node-04",
+    "grammarNode": "node-09",
     "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite.",
     "priority": 706
   },
@@ -8623,7 +8624,7 @@
       "family",
       "general"
     ],
-    "grammarNode": "node-04",
+    "grammarNode": "node-18",
     "priority": 1226,
     "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
@@ -8681,7 +8682,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-04",
+    "grammarNode": "node-11",
     "priority": 1210,
     "grammar": "`por` and `para` both translate as 'for' but never overlap: `por` looks backwards (cause), `para` looks forwards (goal). Mix them up and you'll say the opposite of what you mean."
   },
@@ -8696,7 +8697,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-04",
+    "grammarNode": "node-10",
     "priority": 1400,
     "grammar": "Endings `-é/-aste/-ó/-amos/-asteis/-aron` (for -ar) and `-í/-iste/-ió/-imos/-isteis/-ieron` (for -er/-ir) signal preterite. One discrete event in the past."
   },
@@ -8834,7 +8835,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-04",
+    "grammarNode": "node-16",
     "priority": 1637,
     "grammar": "Default to `tú` with peers, `usted` when meeting someone older or in business. Latin Americans use `usted` more readily than Spaniards. Wrong tú can sound rude; wrong usted is just polite."
   },
@@ -9598,7 +9599,7 @@
       "family",
       "general"
     ],
-    "grammarNode": "node-05",
+    "grammarNode": "node-09",
     "priority": 961,
     "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
@@ -9663,7 +9664,7 @@
       "travel"
     ],
     "grammar": "\"La moto\" — feminine because it's short for \"la motocicleta.\" Keeps gender of the full word.",
-    "grammarNode": "node-05",
+    "grammarNode": "node-16",
     "priority": 631
   },
   {
@@ -9786,7 +9787,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-05",
+    "grammarNode": "node-18",
     "priority": 640,
     "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
@@ -10058,7 +10059,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-05",
+    "grammarNode": "node-10",
     "priority": 375,
     "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
@@ -10125,7 +10126,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-05",
+    "grammarNode": "node-16",
     "priority": 930,
     "grammar": "Don't confuse `hay` (there is) with `ahí` (over there) or `ay` (ouch). `Hay` is the impersonal form of `haber` and never gets a subject."
   },
@@ -10276,7 +10277,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-05",
+    "grammarNode": "node-09",
     "priority": 1131,
     "grammar": "Quick rule: `para` = destination or purpose (it's FOR him, in order TO eat). `por` = reason or exchange (BECAUSE of him, FOR ten euros). When in doubt ask 'why?' (por) or 'what for?' (para)."
   },
@@ -10303,7 +10304,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-05",
+    "grammarNode": "node-11",
     "priority": 1255,
     "grammar": "Use imperfect when describing what was going on, what used to happen, weather, age, or feelings in the past. `Era`, `tenía`, `hacía`. Background, not events."
   },
@@ -10423,7 +10424,7 @@
     "tags": [
       "general"
     ],
-    "grammarNode": "node-05",
+    "grammarNode": "node-09",
     "priority": 927,
     "grammar": "`por` and `para` both translate as 'for' but never overlap: `por` looks backwards (cause), `para` looks forwards (goal). Mix them up and you'll say the opposite of what you mean."
   },
@@ -10634,7 +10635,7 @@
       "travel"
     ],
     "grammar": "\"Hacer\" has an irregular preterite stem (hice...). These irregular preterites share the same endings: -e, -iste, -o, -imos, -isteis, -ieron. No accents needed.",
-    "grammarNode": "node-06",
+    "grammarNode": "node-10",
     "priority": 208
   },
   {
@@ -10956,7 +10957,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-06",
+    "grammarNode": "node-10",
     "priority": 622,
     "grammar": "Endings `-é/-aste/-ó/-amos/-asteis/-aron` (for -ar) and `-í/-iste/-ió/-imos/-isteis/-ieron` (for -er/-ir) signal preterite. One discrete event in the past."
   },
@@ -11011,7 +11012,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-06",
+    "grammarNode": "node-10",
     "priority": 401,
     "grammar": "`por` and `para` both translate as 'for' but never overlap: `por` looks backwards (cause), `para` looks forwards (goal). Mix them up and you'll say the opposite of what you mean."
   },
@@ -11065,7 +11066,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-06",
+    "grammarNode": "node-10",
     "priority": 724,
     "grammar": "Endings `-é/-aste/-ó/-amos/-asteis/-aron` (for -ar) and `-í/-iste/-ió/-imos/-isteis/-ieron` (for -er/-ir) signal preterite. One discrete event in the past."
   },
@@ -11122,7 +11123,7 @@
       "travel"
     ],
     "grammar": "\"Lo que\" = what / that which: \"Lo que dices es verdad.\" Used for abstract ideas or things not yet identified.",
-    "grammarNode": "node-06",
+    "grammarNode": "node-10",
     "priority": 995
   },
   {
@@ -11135,7 +11136,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-06",
+    "grammarNode": "node-10",
     "priority": 1010,
     "grammar": "`para` is about endpoint and intent — destination, deadline, recipient. `por` is about cause, exchange, route, duration. English uses 'for' / 'by' / 'through' across both."
   },
@@ -11149,7 +11150,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-06",
+    "grammarNode": "node-10",
     "priority": 1026,
     "grammar": "Quick rule: `para` = destination or purpose (it's FOR him, in order TO eat). `por` = reason or exchange (BECAUSE of him, FOR ten euros). When in doubt ask 'why?' (por) or 'what for?' (para)."
   },
@@ -11190,7 +11191,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-06",
+    "grammarNode": "node-11",
     "priority": 1331,
     "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
@@ -11538,7 +11539,7 @@
       "travel"
     ],
     "grammar": "\"Fui\" — irregular preterite of \"ir\" (to go).",
-    "grammarNode": "node-06",
+    "grammarNode": "node-10",
     "priority": 941
   },
   {
@@ -11607,7 +11608,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-06",
+    "grammarNode": "node-10",
     "priority": 1729,
     "grammar": "Reflexive isn't always literal in English: `acordarse` = to remember, `quejarse` = to complain. If the dictionary entry ends in -se, you need a matching pronoun."
   },
@@ -12494,7 +12495,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-07",
+    "grammarNode": "node-09",
     "priority": 355,
     "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
@@ -12890,7 +12891,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-07",
+    "grammarNode": "node-11",
     "priority": 771,
     "grammar": "Reflexive verbs use a pronoun (me/te/se/nos/os/se) before the verb. `Me llamo` = 'I call myself' = 'My name is'. The pronoun matches the subject — it's not optional."
   },
@@ -12959,7 +12960,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-07",
+    "grammarNode": "node-11",
     "priority": 951,
     "grammar": "Use imperfect when describing what was going on, what used to happen, weather, age, or feelings in the past. `Era`, `tenía`, `hacía`. Background, not events."
   },
@@ -12987,7 +12988,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-07",
+    "grammarNode": "node-09",
     "priority": 1201,
     "grammar": "Spanish usually skips subject pronouns — `como pizza` already means 'I eat pizza'. Adding `yo` (yo como pizza) signals emphasis or contrast, like saying 'I'M the one eating'."
   },
@@ -13000,7 +13001,7 @@
       "family",
       "general"
     ],
-    "grammarNode": "node-07",
+    "grammarNode": "node-11",
     "priority": 1609,
     "grammar": "If you can replace 'is' with 'equals' in English, use `ser`. `Es importante` = importance equals this. With temporary descriptions you'd flip to `estar`."
   },
@@ -13015,7 +13016,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-07",
+    "grammarNode": "node-11",
     "priority": 1143,
     "grammar": "Quick rule: `para` = destination or purpose (it's FOR him, in order TO eat). `por` = reason or exchange (BECAUSE of him, FOR ten euros). When in doubt ask 'why?' (por) or 'what for?' (para)."
   },
@@ -13028,7 +13029,7 @@
       "family",
       "general"
     ],
-    "grammarNode": "node-07",
+    "grammarNode": "node-11",
     "priority": 1465,
     "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
@@ -13176,7 +13177,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-07",
+    "grammarNode": "node-18",
     "priority": 1084
   },
   {
@@ -13323,7 +13324,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-07",
+    "grammarNode": "node-11",
     "priority": 1133,
     "grammar": "The `se` in `se llama` / `se ducha` isn't decorative — it's the marker that the action loops back on the subject. Skip it and the sentence breaks."
   },
@@ -13350,7 +13351,7 @@
       "family",
       "general"
     ],
-    "grammarNode": "node-07",
+    "grammarNode": "node-11",
     "priority": 912,
     "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
@@ -13403,7 +13404,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-07",
+    "grammarNode": "node-09",
     "priority": 1336,
     "grammar": "Spanish requires double negatives: `no como nada` = 'I don't eat anything'. English drops the second one; Spanish needs both. `Como nada` would mean 'I eat nothing' (rare and emphatic)."
   },
@@ -13417,7 +13418,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-07",
+    "grammarNode": "node-11",
     "priority": 1077,
     "grammar": "Reflexive isn't always literal in English: `acordarse` = to remember, `quejarse` = to complain. If the dictionary entry ends in -se, you need a matching pronoun."
   },
@@ -13486,7 +13487,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-07",
+    "grammarNode": "node-11",
     "priority": 1266,
     "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
@@ -13500,7 +13501,7 @@
       "work"
     ],
     "audio": "es-935.mp3",
-    "grammarNode": "node-07",
+    "grammarNode": "node-18",
     "priority": 1472,
     "grammar": "Reflexive verbs use a pronoun (me/te/se/nos/os/se) before the verb. `Me llamo` = 'I call myself' = 'My name is'. The pronoun matches the subject — it's not optional."
   },
@@ -13528,7 +13529,7 @@
       "family",
       "general"
     ],
-    "grammarNode": "node-07",
+    "grammarNode": "node-11",
     "priority": 1649,
     "grammar": "Use imperfect when describing what was going on, what used to happen, weather, age, or feelings in the past. `Era`, `tenía`, `hacía`. Background, not events."
   },
@@ -13542,7 +13543,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-07",
+    "grammarNode": "node-11",
     "priority": 1506,
     "grammar": "The `se` in `se llama` / `se ducha` isn't decorative — it's the marker that the action loops back on the subject. Skip it and the sentence breaks."
   },
@@ -13556,7 +13557,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-07",
+    "grammarNode": "node-11",
     "priority": 1479,
     "grammar": "Use imperfect when describing what was going on, what used to happen, weather, age, or feelings in the past. `Era`, `tenía`, `hacía`. Background, not events."
   },
@@ -13613,7 +13614,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-07",
+    "grammarNode": "node-18",
     "priority": 1493,
     "grammar": "Use imperfect when describing what was going on, what used to happen, weather, age, or feelings in the past. `Era`, `tenía`, `hacía`. Background, not events."
   },
@@ -13860,7 +13861,7 @@
       "work"
     ],
     "grammar": "The 'se + indirect object' pattern expresses unplanned events: 'se me olvidó' = it slipped my mind (lit. it forgot itself on me).",
-    "grammarNode": "node-08",
+    "grammarNode": "node-09",
     "priority": 343
   },
   {
@@ -13900,7 +13901,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-09",
     "priority": 310,
     "grammar": "Endings `-é/-aste/-ó/-amos/-asteis/-aron` (for -ar) and `-í/-iste/-ió/-imos/-isteis/-ieron` (for -er/-ir) signal preterite. One discrete event in the past."
   },
@@ -13993,7 +13994,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-09",
     "priority": 546,
     "grammar": "Subject pronouns are optional in Spanish: the verb ending tells you who. Native speakers drop them unless they're contrasting (I, not him) or clarifying."
   },
@@ -14194,7 +14195,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-09",
     "priority": 887,
     "grammar": "The `se` in `se llama` / `se ducha` isn't decorative — it's the marker that the action loops back on the subject. Skip it and the sentence breaks."
   },
@@ -14289,7 +14290,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-09",
     "priority": 739,
     "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
@@ -14331,7 +14332,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 801,
     "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
@@ -14344,7 +14345,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 678,
     "grammar": "Endings `-é/-aste/-ó/-amos/-asteis/-aron` (for -ar) and `-í/-iste/-ió/-imos/-isteis/-ieron` (for -er/-ir) signal preterite. One discrete event in the past."
   },
@@ -14371,7 +14372,7 @@
       "travel"
     ],
     "grammar": "Por = on behalf of: fui por mi madre (I went in her place)",
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 359
   },
   {
@@ -14411,7 +14412,7 @@
       "work"
     ],
     "grammar": "Caerse/romperse — unplanned events: se cayó, se rompió",
-    "grammarNode": "node-08",
+    "grammarNode": "node-09",
     "priority": 1047
   },
   {
@@ -14480,7 +14481,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 782,
     "grammar": "Quick rule: `para` = destination or purpose (it's FOR him, in order TO eat). `por` = reason or exchange (BECAUSE of him, FOR ten euros). When in doubt ask 'why?' (por) or 'what for?' (para)."
   },
@@ -14666,7 +14667,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-09",
     "priority": 1090,
     "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
@@ -14680,7 +14681,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-09",
     "priority": 1144,
     "grammar": "Reflexive isn't always literal in English: `acordarse` = to remember, `quejarse` = to complain. If the dictionary entry ends in -se, you need a matching pronoun."
   },
@@ -14693,7 +14694,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 1155,
     "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
@@ -14721,7 +14722,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-19",
     "priority": 1413,
     "grammar": "Endings hint at gender but aren't reliable: words ending in `-o` are usually masc (`el libro`), `-a` usually fem (`la casa`). But there are traps: `la mano`, `el problema`, `el día`, `el mapa`, `el sistema`."
   },
@@ -14736,7 +14737,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 1606,
     "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
@@ -14750,7 +14751,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 1575,
     "grammar": "Endings `-é/-aste/-ó/-amos/-asteis/-aron` (for -ar) and `-í/-iste/-ió/-imos/-isteis/-ieron` (for -er/-ir) signal preterite. One discrete event in the past."
   },
@@ -14779,7 +14780,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 1812
   },
   {
@@ -14818,7 +14819,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 143,
     "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
@@ -14872,7 +14873,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-11",
     "priority": 1008,
     "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
@@ -14886,7 +14887,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-09",
     "priority": 809,
     "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
@@ -14966,7 +14967,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-09",
     "priority": 676,
     "grammar": "`para` is about endpoint and intent — destination, deadline, recipient. `por` is about cause, exchange, route, duration. English uses 'for' / 'by' / 'through' across both."
   },
@@ -14979,7 +14980,7 @@
       "family",
       "general"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-16",
     "priority": 909,
     "grammar": "Adjectives agree with the noun's gender AND number: `el coche rojo` (m sg), `la casa roja` (f sg), `los coches rojos` (m pl), `las casas rojas` (f pl). One adjective, four forms."
   },
@@ -14993,7 +14994,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-16",
     "priority": 1049,
     "grammar": "Adjectives agree with the noun's gender AND number: `el coche rojo` (m sg), `la casa roja` (f sg), `los coches rojos` (m pl), `las casas rojas` (f pl). One adjective, four forms."
   },
@@ -15063,7 +15064,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-11",
     "priority": 880
   },
   {
@@ -15152,7 +15153,7 @@
       "general"
     ],
     "grammar": "Despertarse = reflexive (to wake up). Preterite: se despertaron",
-    "grammarNode": "node-08",
+    "grammarNode": "node-09",
     "priority": 1022
   },
   {
@@ -15165,7 +15166,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-09",
     "priority": 819,
     "grammar": "Endings `-é/-aste/-ó/-amos/-asteis/-aron` (for -ar) and `-í/-iste/-ió/-imos/-isteis/-ieron` (for -er/-ir) signal preterite. One discrete event in the past."
   },
@@ -15245,7 +15246,7 @@
       "family",
       "general"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 983,
     "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
@@ -15259,7 +15260,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-11",
     "priority": 984
   },
   {
@@ -15314,7 +15315,7 @@
       "family",
       "general"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-09",
     "priority": 899,
     "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
@@ -15342,7 +15343,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-09",
     "priority": 1089,
     "grammar": "Subject pronouns are optional in Spanish: the verb ending tells you who. Native speakers drop them unless they're contrasting (I, not him) or clarifying."
   },
@@ -15356,7 +15357,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 1177,
     "grammar": "`para` is about endpoint and intent — destination, deadline, recipient. `por` is about cause, exchange, route, duration. English uses 'for' / 'by' / 'through' across both."
   },
@@ -15412,7 +15413,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 1269,
     "grammar": "Quick rule: `para` = destination or purpose (it's FOR him, in order TO eat). `por` = reason or exchange (BECAUSE of him, FOR ten euros). When in doubt ask 'why?' (por) or 'what for?' (para)."
   },
@@ -15426,7 +15427,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 1198,
     "grammar": "Endings `-é/-aste/-ó/-amos/-asteis/-aron` (for -ar) and `-í/-iste/-ió/-imos/-isteis/-ieron` (for -er/-ir) signal preterite. One discrete event in the past."
   },
@@ -15441,7 +15442,7 @@
       "work"
     ],
     "grammar": "\"Aunque\" + indicative = although (known fact): \"Aunque llueve, salgo.\" Compare: aunque + subjunctive = even if (hypothetical).",
-    "grammarNode": "node-08",
+    "grammarNode": "node-11",
     "priority": 1200
   },
   {
@@ -15456,7 +15457,8 @@
       "work"
     ],
     "grammarNode": "node-08",
-    "priority": 1305
+    "priority": 1305,
+    "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
   {
     "id": "es-1153",
@@ -15481,7 +15483,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-11",
     "priority": 1691,
     "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
@@ -15496,7 +15498,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-11",
     "priority": 1645
   },
   {
@@ -15508,7 +15510,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 1248,
     "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
@@ -15523,7 +15525,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-11",
     "priority": 1353
   },
   {
@@ -15535,7 +15537,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 1485,
     "grammar": "Endings `-é/-aste/-ó/-amos/-asteis/-aron` (for -ar) and `-í/-iste/-ió/-imos/-isteis/-ieron` (for -er/-ir) signal preterite. One discrete event in the past."
   },
@@ -15550,7 +15552,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-11",
     "priority": 1695,
     "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
@@ -15565,7 +15567,7 @@
       "work"
     ],
     "grammar": "\"Por la cual\" = for which (formal): \"La razón por la cual...\" More literary than \"por la que\" but same meaning.",
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 1644
   },
   {
@@ -15579,7 +15581,7 @@
       "travel",
       "work"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 1756,
     "grammar": "Endings `-é/-aste/-ó/-amos/-asteis/-aron` (for -ar) and `-í/-iste/-ió/-imos/-isteis/-ieron` (for -er/-ir) signal preterite. One discrete event in the past."
   },
@@ -15593,7 +15595,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 1459,
     "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
@@ -15607,7 +15609,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-11",
     "priority": 1931,
     "grammar": "Use imperfect when describing what was going on, what used to happen, weather, age, or feelings in the past. `Era`, `tenía`, `hacía`. Background, not events."
   },
@@ -15636,7 +15638,7 @@
       "general",
       "travel"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 2465
   },
   {
@@ -15675,7 +15677,7 @@
     "tags": [
       "general"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-09",
     "priority": 1386,
     "grammar": "Reflexive verbs use a pronoun (me/te/se/nos/os/se) before the verb. `Me llamo` = 'I call myself' = 'My name is'. The pronoun matches the subject — it's not optional."
   },
@@ -15702,7 +15704,7 @@
       "general",
       "work"
     ],
-    "grammarNode": "node-08",
+    "grammarNode": "node-10",
     "priority": 1227,
     "grammar": "Endings `-é/-aste/-ó/-amos/-asteis/-aron` (for -ar) and `-í/-iste/-ió/-imos/-isteis/-ieron` (for -er/-ir) signal preterite. One discrete event in the past."
   },
@@ -16452,7 +16454,8 @@
       "general"
     ],
     "grammarNode": "node-09",
-    "priority": 1083
+    "priority": 1083,
+    "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
   {
     "id": "es-1226",
@@ -17767,7 +17770,8 @@
       "travel"
     ],
     "grammarNode": "node-10",
-    "priority": 1492
+    "priority": 1492,
+    "grammar": "Use imperfect when describing what was going on, what used to happen, weather, age, or feelings in the past. `Era`, `tenía`, `hacía`. Background, not events."
   },
   {
     "id": "es-1324",
@@ -18426,7 +18430,8 @@
       "travel"
     ],
     "grammarNode": "node-10",
-    "priority": 1564
+    "priority": 1564,
+    "grammar": "Endings `-é/-aste/-ó/-amos/-asteis/-aron` (for -ar) and `-í/-iste/-ió/-imos/-isteis/-ieron` (for -er/-ir) signal preterite. One discrete event in the past."
   },
   {
     "id": "es-1373",
@@ -18551,7 +18556,8 @@
       "work"
     ],
     "grammarNode": "node-10",
-    "priority": 1572
+    "priority": 1572,
+    "grammar": "If you'd say 'used to' or 'was -ing' in English, Spanish wants imperfect. Preterite is for the single completed event that interrupts that background."
   },
   {
     "id": "es-1382",
@@ -19522,7 +19528,8 @@
       "work"
     ],
     "grammarNode": "node-11",
-    "priority": 1230
+    "priority": 1230,
+    "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
   {
     "id": "es-1455",
@@ -20137,7 +20144,8 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "priority": 1192
+    "priority": 1192,
+    "grammar": "Use imperfect when describing what was going on, what used to happen, weather, age, or feelings in the past. `Era`, `tenía`, `hacía`. Background, not events."
   },
   {
     "id": "es-1500",
@@ -20692,7 +20700,8 @@
       "travel"
     ],
     "grammarNode": "node-11",
-    "priority": 2149
+    "priority": 2149,
+    "grammar": "If you'd say 'used to' or 'was -ing' in English, Spanish wants imperfect. Preterite is for the single completed event that interrupts that background."
   },
   {
     "id": "es-1541",
@@ -22917,7 +22926,8 @@
       "general"
     ],
     "grammarNode": "node-13",
-    "priority": 1865
+    "priority": 1865,
+    "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
   {
     "id": "es-1706",
@@ -30813,7 +30823,8 @@
       "general"
     ],
     "grammarNode": "node-17",
-    "priority": 2196
+    "priority": 2196,
+    "grammar": "Use imperfect when describing what was going on, what used to happen, weather, age, or feelings in the past. `Era`, `tenía`, `hacía`. Background, not events."
   },
   {
     "id": "es-2292",
@@ -33183,7 +33194,8 @@
       "work"
     ],
     "grammarNode": "node-19",
-    "priority": 2383
+    "priority": 2383,
+    "grammar": "If you'd say 'used to' or 'was -ing' in English, Spanish wants imperfect. Preterite is for the single completed event that interrupts that background."
   },
   {
     "id": "es-2469",
@@ -33890,7 +33902,8 @@
       "travel"
     ],
     "grammarNode": "node-19",
-    "priority": 2670
+    "priority": 2670,
+    "grammar": "Three pieces: form of `ir`, then `a`, then the dictionary form of the verb. Skip the `a` and the sentence breaks. Easier than learning future-tense endings."
   },
   {
     "id": "es-2521",
@@ -35758,7 +35771,8 @@
       "travel"
     ],
     "grammarNode": "node-20",
-    "priority": 2523
+    "priority": 2523,
+    "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
   {
     "id": "es-2661",
@@ -36929,7 +36943,8 @@
       "work"
     ],
     "grammarNode": "node-21",
-    "priority": 2437
+    "priority": 2437,
+    "grammar": "Use imperfect when describing what was going on, what used to happen, weather, age, or feelings in the past. `Era`, `tenía`, `hacía`. Background, not events."
   },
   {
     "id": "es-2750",
@@ -38191,7 +38206,8 @@
       "work"
     ],
     "grammarNode": "node-22",
-    "priority": 3062
+    "priority": 3062,
+    "grammar": "If you'd say 'used to' or 'was -ing' in English, Spanish wants imperfect. Preterite is for the single completed event that interrupts that background."
   },
   {
     "id": "es-2845",
@@ -39188,7 +39204,8 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 2532
+    "priority": 2532,
+    "grammar": "Preterite frames the action as a unit: it started, it ended, it's done. Contrast with imperfect (-aba, -ía) which paints background or repetition."
   },
   {
     "id": "es-2921",
@@ -39467,7 +39484,8 @@
     ],
     "audio": "es-2813.mp3",
     "grammarNode": "node-23",
-    "priority": 3196
+    "priority": 3196,
+    "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
   {
     "id": "es-2942",
@@ -44238,7 +44256,8 @@
       "work"
     ],
     "grammarNode": "node-27",
-    "priority": 3181
+    "priority": 3181,
+    "grammar": "Use imperfect when describing what was going on, what used to happen, weather, age, or feelings in the past. `Era`, `tenía`, `hacía`. Background, not events."
   },
   {
     "id": "es-3298",
@@ -45774,7 +45793,8 @@
       "work"
     ],
     "grammarNode": "node-28",
-    "priority": 3717
+    "priority": 3717,
+    "grammar": "Preterite for completed past actions with a clear start/end: `comí pizza ayer` (I ate pizza yesterday). If you can pin it to a moment, use preterite."
   },
   {
     "id": "es-3413",
@@ -47793,7 +47813,8 @@
       "work"
     ],
     "grammarNode": "node-30",
-    "priority": 3509
+    "priority": 3509,
+    "grammar": "If you'd say 'used to' or 'was -ing' in English, Spanish wants imperfect. Preterite is for the single completed event that interrupts that background."
   },
   {
     "id": "es-3565",
@@ -52315,7 +52336,8 @@
       "work"
     ],
     "grammarNode": "node-35",
-    "priority": 3754
+    "priority": 3754,
+    "grammar": "Imperfect (`-aba/-ía` endings) paints background or habit: `de niño jugaba al fútbol` (as a kid I used to play football). No clear start or end."
   },
   {
     "id": "es-3906",

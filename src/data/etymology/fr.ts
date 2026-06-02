@@ -903,7 +903,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
     word: 'pomme',
     origin: 'Latin pomum',
     cognates: [],
-    note: 'From Latin pomum (any fruit) — French narrowed it to "apple", keeping pomme de terre "earth-apple" for potato. La grosse pomme = New York.',
+    note: 'From Latin pomum (any fruit) — French narrowed it specifically to "apple", while keeping pomme de terre "earth-apple" for potato.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'cnrtl'],
   },

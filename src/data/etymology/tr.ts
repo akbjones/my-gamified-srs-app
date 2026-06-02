@@ -746,9 +746,9 @@ export const TURKISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'kağıt': {
     word: 'kağıt',
-    origin: 'Chinese gao via Persian/Arabic',
+    origin: 'Persian kāghaz',
     cognates: [],
-    note: 'Originally from Chinese gao (paper) via Persian kāgad — Chinese paper-making spread along the Silk Road, replacing papyrus across the Islamic world.',
+    note: 'From Persian kāghaz — origin debated, possibly via Sogdian or Old Turkic. Chinese paper-making spread west along the Silk Road, replacing papyrus.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
   },

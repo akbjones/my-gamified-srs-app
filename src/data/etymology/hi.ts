@@ -839,7 +839,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
     word: 'कागज',
     origin: 'Persian kāgad',
     cognates: [],
-    note: 'Borrowed from Persian during the Mughal era — itself from Chinese gao (paper). Chinese paper-making spread along the Silk Road, replacing palm leaves.',
+    note: 'Borrowed from Persian during the Mughal era — Persian itself of debated origin, tied to Chinese paper-making that spread west, replacing palm leaves.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
   },

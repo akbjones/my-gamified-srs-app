@@ -414,15 +414,17 @@
   },
   {
     "id": "tr-0033",
-    "target": "Torunlarımı görünce gözlerim doluyor.",
-    "english": "My eyes fill with tears when I see my grandchildren.",
-    "audio": "tr-tr-1037.mp3",
+    "target": "İyi akşamlar, hoş geldiniz.",
+    "english": "Good evening, welcome.",
+    "audio": "tr-tr-0160.mp3",
     "tags": [
-      "general"
+      "family",
+      "general",
+      "travel"
     ],
-    "grammarNode": "node-01",
+    "grammarNode": "node-04",
     "priority": 404,
-    "grammar": "Decoding a long verb? Find `-iyor` first — that's your anchor. Then trace back to the root (left) and forward to the person ending (right). Layered like an onion."
+    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
   },
   {
     "id": "tr-0034",
@@ -2189,17 +2191,17 @@
   },
   {
     "id": "tr-0165",
-    "target": "Doktor yarın ameliyat yapacak.",
-    "english": "The doctor will perform surgery tomorrow.",
-    "audio": "tr-tr-0534.mp3",
+    "target": "Günaydın, kahvaltı hazır mı?",
+    "english": "Good morning, is breakfast ready?",
+    "audio": "tr-tr-0041.mp3",
     "tags": [
       "family",
       "general",
       "travel"
     ],
-    "grammarNode": "node-02",
+    "grammarNode": "node-04",
     "priority": 202,
-    "grammar": "Future doesn't always mean a fixed plan. It can express prediction, intention, even uncertainty: `yağmur yağacak` (it will rain — confident), `umarım gelecek` (I hope she'll come)."
+    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
   },
   {
     "id": "tr-0166",
@@ -2441,16 +2443,17 @@
   },
   {
     "id": "tr-0184",
-    "target": "Film çok etkileyiciydi, herkes ağladı.",
-    "english": "The movie was very moving, everyone cried.",
-    "audio": "tr-tr-0374.mp3",
+    "target": "Pahalı bir restoran yerine ucuz ve lezzetli bir lokanta bulduk.",
+    "english": "Instead of an expensive restaurant we found a cheap and delicious eatery.",
+    "audio": "tr-tr-1752.mp3",
     "tags": [
-      "family",
-      "general"
+      "general",
+      "travel",
+      "work"
     ],
-    "grammarNode": "node-02",
+    "grammarNode": "node-03",
     "priority": 396,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Locative doesn't make a noun definite. `Okulda öğrenci var` = 'there is a student at the school' — the locative doesn't add 'the'. Definiteness comes from context."
   },
   {
     "id": "tr-0185",
@@ -4072,17 +4075,16 @@
   },
   {
     "id": "tr-0307",
-    "target": "Pahalı bir restoran yerine ucuz ve lezzetli bir lokanta bulduk.",
-    "english": "Instead of an expensive restaurant we found a cheap and delicious eatery.",
-    "audio": "tr-tr-1752.mp3",
+    "target": "Film çok etkileyiciydi, herkes ağladı.",
+    "english": "The movie was very moving, everyone cried.",
+    "audio": "tr-tr-0374.mp3",
     "tags": [
-      "general",
-      "travel",
-      "work"
+      "family",
+      "general"
     ],
-    "grammarNode": "node-03",
+    "grammarNode": "node-02",
     "priority": 1499,
-    "grammar": "Locative doesn't make a noun definite. `Okulda öğrenci var` = 'there is a student at the school' — the locative doesn't add 'the'. Definiteness comes from context."
+    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
   },
   {
     "id": "tr-0308",
@@ -4208,17 +4210,15 @@
   },
   {
     "id": "tr-0318",
-    "target": "İyi akşamlar, hoş geldiniz.",
-    "english": "Good evening, welcome.",
-    "audio": "tr-tr-0160.mp3",
+    "target": "Torunlarımı görünce gözlerim doluyor.",
+    "english": "My eyes fill with tears when I see my grandchildren.",
+    "audio": "tr-tr-1037.mp3",
     "tags": [
-      "family",
-      "general",
-      "travel"
+      "general"
     ],
-    "grammarNode": "node-04",
+    "grammarNode": "node-01",
     "priority": 82,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Decoding a long verb? Find `-iyor` first — that's your anchor. Then trace back to the root (left) and forward to the person ending (right). Layered like an onion."
   },
   {
     "id": "tr-0319",
@@ -4249,17 +4249,17 @@
   },
   {
     "id": "tr-0321",
-    "target": "Günaydın, kahvaltı hazır mı?",
-    "english": "Good morning, is breakfast ready?",
-    "audio": "tr-tr-0041.mp3",
+    "target": "Doktor yarın ameliyat yapacak.",
+    "english": "The doctor will perform surgery tomorrow.",
+    "audio": "tr-tr-0534.mp3",
     "tags": [
       "family",
       "general",
       "travel"
     ],
-    "grammarNode": "node-04",
+    "grammarNode": "node-02",
     "priority": 47,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Future doesn't always mean a fixed plan. It can express prediction, intention, even uncertainty: `yağmur yağacak` (it will rain — confident), `umarım gelecek` (I hope she'll come)."
   },
   {
     "id": "tr-0322",

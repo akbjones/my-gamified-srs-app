@@ -900,16 +900,15 @@
   },
   {
     "id": "it-0069",
-    "target": "Io piango di gioia.",
-    "english": "I cry with joy.",
-    "audio": "it-98.mp3",
+    "target": "È bello che siate qui.",
+    "english": "It's nice that you're here.",
+    "audio": "it-262.mp3",
     "tags": [
       "family",
       "general"
     ],
-    "grammarNode": "node-01",
-    "priority": 416,
-    "grammar": "The verb ending tells you who: `mangio` (I), `mangi` (you), `mangia` (he/she). Subject pronouns are for emphasis or clarity, not the default."
+    "grammarNode": "node-02",
+    "priority": 416
   },
   {
     "id": "it-0070",
@@ -4409,15 +4408,16 @@
   },
   {
     "id": "it-0336",
-    "target": "È bello che siate qui.",
-    "english": "It's nice that you're here.",
-    "audio": "it-262.mp3",
+    "target": "Io piango di gioia.",
+    "english": "I cry with joy.",
+    "audio": "it-98.mp3",
     "tags": [
       "family",
       "general"
     ],
-    "grammarNode": "node-02",
-    "priority": 982
+    "grammarNode": "node-01",
+    "priority": 982,
+    "grammar": "The verb ending tells you who: `mangio` (I), `mangi` (you), `mangia` (he/she). Subject pronouns are for emphasis or clarity, not the default."
   },
   {
     "id": "it-0337",

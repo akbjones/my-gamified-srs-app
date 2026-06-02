@@ -2524,18 +2524,15 @@
   },
   {
     "id": "sv-0191",
-    "target": "Han är sjuk idag och kan inte gå till jobbet.",
-    "english": "He is sick today and cannot go to work.",
-    "audio": "sv-sv-0416.mp3",
+    "target": "Vi sjunger julvisor i december.",
+    "english": "We sing Christmas carols in December.",
+    "audio": "sv-sv-0309.mp3",
     "tags": [
-      "family",
-      "general",
-      "travel",
-      "work"
+      "general"
     ],
-    "grammarNode": "node-01",
+    "grammarNode": "node-02",
     "priority": 1440,
-    "grammar": "`inte` (not) goes AFTER the verb in main clauses: `jag äter inte pizza` (I don't eat pizza). Watch the position — putting `inte` first is wrong."
+    "grammar": "Endings tell you the verb group: -ar (group 1, regular), -er (group 2), -r on stems ending in vowel (group 3), zero (group 4 irregular). But the present form stays the same for every subject."
   },
   {
     "id": "sv-0192",
@@ -4054,14 +4051,17 @@
   },
   {
     "id": "sv-0306",
-    "target": "Vi sjunger julvisor i december.",
-    "english": "We sing Christmas carols in December.",
-    "audio": "sv-sv-0309.mp3",
+    "target": "Han är sjuk idag och kan inte gå till jobbet.",
+    "english": "He is sick today and cannot go to work.",
+    "audio": "sv-sv-0416.mp3",
     "tags": [
-      "general"
+      "family",
+      "general",
+      "travel",
+      "work"
     ],
-    "grammarNode": "node-02",
-    "grammar": "Endings tell you the verb group: -ar (group 1, regular), -er (group 2), -r on stems ending in vowel (group 3), zero (group 4 irregular). But the present form stays the same for every subject.",
+    "grammarNode": "node-01",
+    "grammar": "`inte` (not) goes AFTER the verb in main clauses: `jag äter inte pizza` (I don't eat pizza). Watch the position — putting `inte` first is wrong.",
     "priority": 538
   },
   {

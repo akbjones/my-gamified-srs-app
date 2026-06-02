@@ -1037,15 +1037,16 @@
   },
   {
     "id": "fr-0083",
-    "target": "Je pleure de joie.",
-    "english": "I cry with joy.",
-    "audio": "fr-94.mp3",
+    "target": "Nous voyons un beau coucher de soleil.",
+    "english": "We see a beautiful sunset.",
+    "audio": "fr-224.mp3",
     "tags": [
-      "family",
-      "general"
+      "general",
+      "travel"
     ],
-    "grammarNode": "node-01",
-    "priority": 492
+    "grammarNode": "node-02",
+    "priority": 492,
+    "grammar": "Articles elide before vowels: `le/la → l'` (`l'homme`, `l'eau`). Possessives shift gender too: `mon stylo` (m), `ma table` (f), but `mon amie` even though amie is feminine — euphony before vowels."
   },
   {
     "id": "fr-0084",
@@ -4330,16 +4331,15 @@
   },
   {
     "id": "fr-0346",
-    "target": "Nous voyons un beau coucher de soleil.",
-    "english": "We see a beautiful sunset.",
-    "audio": "fr-224.mp3",
+    "target": "Je pleure de joie.",
+    "english": "I cry with joy.",
+    "audio": "fr-94.mp3",
     "tags": [
-      "general",
-      "travel"
+      "family",
+      "general"
     ],
-    "grammarNode": "node-02",
-    "priority": 914,
-    "grammar": "Articles elide before vowels: `le/la → l'` (`l'homme`, `l'eau`). Possessives shift gender too: `mon stylo` (m), `ma table` (f), but `mon amie` even though amie is feminine — euphony before vowels."
+    "grammarNode": "node-01",
+    "priority": 914
   },
   {
     "id": "fr-0347",

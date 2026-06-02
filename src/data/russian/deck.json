@@ -2109,16 +2109,17 @@
   },
   {
     "id": "ru-0180",
-    "target": "Добрый врач лечит больных детей.",
-    "english": "A kind doctor treats sick children.",
-    "audio": "ru-ru-0378.mp3",
+    "target": "Доброе утро, кофе уже готов на столе.",
+    "english": "Good morning, the coffee is already ready on the table.",
+    "audio": "ru-ru-0003.mp3",
     "tags": [
       "family",
-      "general"
+      "general",
+      "travel"
     ],
-    "grammarNode": "node-02",
+    "grammarNode": "node-03",
     "priority": 293,
-    "grammar": "Adjective comes BEFORE the noun, like English. `Большой стол` (big table), not `стол большой` (which sounds like 'the table is big' — predicate)."
+    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
   },
   {
     "id": "ru-0181",
@@ -3979,17 +3980,16 @@
   },
   {
     "id": "ru-0346",
-    "target": "Доброе утро, кофе уже готов на столе.",
-    "english": "Good morning, the coffee is already ready on the table.",
-    "audio": "ru-ru-0003.mp3",
+    "target": "Добрый врач лечит больных детей.",
+    "english": "A kind doctor treats sick children.",
+    "audio": "ru-ru-0378.mp3",
     "tags": [
       "family",
-      "general",
-      "travel"
+      "general"
     ],
-    "grammarNode": "node-03",
+    "grammarNode": "node-02",
     "priority": 644,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "Adjective comes BEFORE the noun, like English. `Большой стол` (big table), not `стол большой` (which sounds like 'the table is big' — predicate)."
   },
   {
     "id": "ru-0347",

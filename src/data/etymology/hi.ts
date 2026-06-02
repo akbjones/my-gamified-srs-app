@@ -1,0 +1,86 @@
+import { EtymologyEntry } from './types';
+
+/** Hindi etymology seed — 10 verified entries.
+ *  Cross-checked against Wiktionary (hi+en) and Turner's CDIAL. */
+export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
+  'माँ': {
+    word: 'माँ',
+    origin: 'Sanskrit mātṛ',
+    cognates: ['mother', 'maternal'],
+    note: 'Same ancient Indo-European root as English "mother" and Latin mater.',
+    verified: true,
+    sources: ['wiktionary', 'turner-cdial'],
+  },
+  'माता': {
+    word: 'माता',
+    origin: 'Sanskrit mātṛ',
+    cognates: ['mother', 'maternal'],
+    note: 'Same ancient root as English "mother", Latin mater, Russian mat.',
+    verified: true,
+    sources: ['wiktionary', 'turner-cdial'],
+  },
+  'पिता': {
+    word: 'पिता',
+    origin: 'Sanskrit pitṛ',
+    cognates: ['father', 'paternal'],
+    note: 'Same ancient root as English "father", Latin pater, Greek patēr.',
+    verified: true,
+    sources: ['wiktionary', 'turner-cdial'],
+  },
+  'भाई': {
+    word: 'भाई',
+    origin: 'Sanskrit bhrātṛ',
+    cognates: ['brother', 'fraternity'],
+    note: 'Same ancient root as English "brother", Latin frater (hence "fraternity").',
+    verified: true,
+    sources: ['wiktionary', 'turner-cdial'],
+  },
+  'तीन': {
+    word: 'तीन',
+    origin: 'Sanskrit trī',
+    cognates: ['three', 'trio', 'triple'],
+    note: 'Same ancient root as English "three", Latin tres, Greek treis.',
+    verified: true,
+    sources: ['wiktionary', 'turner-cdial'],
+  },
+  'दो': {
+    word: 'दो',
+    origin: 'Sanskrit dvi',
+    cognates: ['two', 'dual', 'duo'],
+    note: 'Same ancient root as English "two" and Latin duo (hence "dual", "duo").',
+    verified: true,
+    sources: ['wiktionary', 'turner-cdial'],
+  },
+  'नया': {
+    word: 'नया',
+    origin: 'Sanskrit nava',
+    cognates: ['new', 'novel', 'innovate'],
+    note: 'Same ancient root as English "new", Latin novus (hence "novel", "innovate").',
+    verified: true,
+    sources: ['wiktionary', 'turner-cdial'],
+  },
+  'दाँत': {
+    word: 'दाँत',
+    origin: 'Sanskrit danta',
+    cognates: ['dental', 'dentist'],
+    note: 'Same ancient root as Latin dens (English "dental", "dentist").',
+    verified: true,
+    sources: ['wiktionary', 'turner-cdial'],
+  },
+  'दिल': {
+    word: 'दिल',
+    origin: 'Persian del',
+    cognates: [],
+    note: 'Borrowed during the Mughal era. The Sanskrit-derived word for heart is hṛdaya.',
+    verified: true,
+    sources: ['wiktionary'],
+  },
+  'चाय': {
+    word: 'चाय',
+    origin: 'Mandarin chá via Persian',
+    cognates: ['chai'],
+    note: 'English "tea" also from Chinese — but via the Min dialect (te), hence the split.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+};

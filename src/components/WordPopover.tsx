@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import ReactDOM from 'react-dom';
-import { Star, X as CloseIcon } from 'lucide-react';
+import { Star, X as CloseIcon, BookText, ChevronDown } from 'lucide-react';
 import { toggleFavorite, isFavorited } from '../services/storageService';
+import { lookupEtymology } from '../services/etymologyService';
 import { lookupWord as lookupEs, DictEntry } from '../data/dictionary/es';
 import { lookupWord as lookupIt } from '../data/dictionary/it';
 import { lookupWord as lookupFr } from '../data/dictionary/fr';
@@ -245,6 +246,9 @@ const PopoverPortal: React.FC<{
 }> = ({ entry, rawToken, wordRect, language, sentence, onDismiss }) => {
   // Local state mirroring favorite status so the star icon updates on click.
   const [isFav, setIsFav] = useState(() => isFavorited(rawToken, language));
+  // Etymology expand/collapse — collapsed by default so the entry shows up
+  // as a small tab the user opens deliberately.
+  const [etymologyExpanded, setEtymologyExpanded] = useState(false);
   useEffect(() => {
     setIsFav(isFavorited(rawToken, language));
   }, [rawToken, language]);
@@ -499,6 +503,41 @@ const PopoverPortal: React.FC<{
           </span>
         </div>
       )}
+
+      {/* Etymology — only renders when a verified entry exists for this word.
+          Collapsed by default, expands inline on tap. Sources line shown small. */}
+      {(() => {
+        const ety = lookupEtymology(rawToken, language);
+        if (!ety) return null;
+        return (
+          <div className="mt-3">
+            <button
+              onClick={(e) => { e.stopPropagation(); setEtymologyExpanded(prev => !prev); }}
+              aria-expanded={etymologyExpanded}
+              className="flex items-center gap-1.5 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider text-amber-600 bg-amber-500/10 border border-amber-500/30 hover:bg-amber-500/15 transition-all active:scale-95"
+            >
+              <BookText size={11} />
+              <span>Etymology</span>
+              <ChevronDown size={10} className={`transition-transform ${etymologyExpanded ? 'rotate-180' : ''}`} />
+            </button>
+            {etymologyExpanded && (
+              <div className="mt-2 px-3 py-2.5 rounded-lg bg-amber-500/5 border border-amber-500/20 animate-fade-in">
+                <div className="text-xs font-semibold text-amber-700 dark:text-amber-300 mb-1">{ety.origin}</div>
+                {ety.cognates && ety.cognates.length > 0 && (
+                  <div className="text-[11px] text-[var(--text-secondary)] mb-1">
+                    <span className="font-bold">Cognates: </span>
+                    {ety.cognates.join(', ')}
+                  </div>
+                )}
+                <div className="text-[11px] text-[var(--text-secondary)] leading-relaxed italic">{ety.note}</div>
+                <div className="mt-1.5 text-[9px] font-mono text-[var(--text-faint)] uppercase tracking-wider">
+                  Sources · {ety.sources.join(' · ')}
+                </div>
+              </div>
+            )}
+          </div>
+        );
+      })()}
 
       {/* Flag this word as wrong */}
       <div className="mt-3 pt-3 border-t border-[var(--border-color)]">

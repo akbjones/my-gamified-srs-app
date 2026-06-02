@@ -1,0 +1,86 @@
+import { EtymologyEntry } from './types';
+
+/** Spanish etymology seed — 10 verified entries.
+ *  All cross-checked against Wiktionary (es+en), Etymonline, and RAE. */
+export const SPANISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
+  'sangre': {
+    word: 'sangre',
+    origin: 'Latin sanguis',
+    cognates: ['sanguine'],
+    note: 'English "sanguine" originally meant "blood-related" — same Latin root.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'rae'],
+  },
+  'corazón': {
+    word: 'corazón',
+    origin: 'Latin cor',
+    cognates: ['cordial', 'courage'],
+    note: 'English "cordial" and "courage" both come from Latin cor (heart).',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'rae'],
+  },
+  'mano': {
+    word: 'mano',
+    origin: 'Latin manus',
+    cognates: ['manual', 'manipulate', 'manage'],
+    note: 'All from Latin manus (hand) — "manual" most direct, "manage" via Italian.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'rae'],
+  },
+  'pie': {
+    word: 'pie',
+    origin: 'Latin pes (genitive pedis)',
+    cognates: ['pedal', 'pedestrian', 'podium'],
+    note: 'Same root as English "pedal", "pedestrian"; "podium" via Greek.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'rae'],
+  },
+  'luz': {
+    word: 'luz',
+    origin: 'Latin lux',
+    cognates: ['lucid', 'illuminate', 'translucent'],
+    note: 'English "lucid" and "translucent" preserve the Latin lux (light).',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'rae'],
+  },
+  'vida': {
+    word: 'vida',
+    origin: 'Latin vita',
+    cognates: ['vital', 'vitamin'],
+    note: 'English "vitamin" coined in 1912 from "vital amine" — both from Latin vita.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'rae'],
+  },
+  'ojalá': {
+    word: 'ojalá',
+    origin: 'Arabic in shāʾ Allāh',
+    cognates: [],
+    note: '"If God wills it" — kept from 700 years of Moorish presence in Spain.',
+    verified: true,
+    sources: ['wiktionary', 'rae'],
+  },
+  'álgebra': {
+    word: 'álgebra',
+    origin: 'Arabic al-jabr',
+    cognates: ['algebra'],
+    note: 'From al-Khwarizmi\'s 820 CE math treatise — al-jabr meant "reunion of broken parts".',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'rae'],
+  },
+  'naranja': {
+    word: 'naranja',
+    origin: 'Persian nārang, ult. Sanskrit nāraṅga',
+    cognates: ['orange'],
+    note: 'English "orange" lost the initial n- via "a norange" → "an orange" misanalysis.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline'],
+  },
+  'caballo': {
+    word: 'caballo',
+    origin: 'Vulgar Latin caballus',
+    cognates: ['chivalry', 'cavalry', 'cavalier'],
+    note: 'Caballus meant "workhorse" — it replaced classical equus. English "chivalry" via French.',
+    verified: true,
+    sources: ['wiktionary', 'etymonline', 'rae'],
+  },
+};

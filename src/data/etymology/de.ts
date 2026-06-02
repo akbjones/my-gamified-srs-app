@@ -495,7 +495,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
     word: 'Kaffee',
     origin: 'Turkish kahve, ult. Arabic qahwa',
     cognates: ['coffee'],
-    note: 'From Arabic qahwa via Ottoman Turkish — the first Vienna Kaffeehaus opened in 1683 with beans abandoned by the retreating Ottoman army.',
+    note: 'From Arabic qahwa via Ottoman Turkish — coffee reached Vienna in 1683 around the Ottoman siege, and the city\'s coffeehouse culture grew from there.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],
   },

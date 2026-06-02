@@ -479,7 +479,7 @@ export const ITALIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
     word: 'caffè',
     origin: 'Italian caffè, ult. Arabic qahwa',
     cognates: ['coffee', 'café'],
-    note: 'Italians borrowed Arabic qahwa via Ottoman trade — the first European coffeehouse opened in Venice in 1645. From there it spread to France and beyond.',
+    note: 'Italians borrowed Arabic qahwa via Ottoman trade — coffee first reached Venice in 1645, and the drink spread from Italian ports to France and beyond.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
   },

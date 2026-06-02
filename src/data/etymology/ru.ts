@@ -566,9 +566,9 @@ export const RUSSIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'луна': {
     word: 'луна',
-    origin: 'Slavic luna, ult. Latin luna',
+    origin: 'Slavic luna',
     cognates: ['lunar'],
-    note: 'Borrowed from Latin luna in early Slavic times — same root as English "lunar". The native Slavic word месяц still means moon and month together.',
+    note: 'A Slavic root parallel to Latin luna — same Indo-European source as English "lunar". The native Slavic месяц still means moon AND month together.',
     verified: true,
     sources: ['wiktionary', 'vasmer'],
   },

@@ -30,12 +30,28 @@ const GRADE_CONFIG = {
   EASY:  { color: 'text-[var(--accent)]', bg: 'hover:bg-[var(--accent)]/10 active:bg-[var(--accent)]/20', border: 'border-[var(--accent)]/30' },
 } as const;
 
+const FIRST_WOW_KEY = 'first-session-wow-shown';
+
 const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAnswer, onAbort, onStudyMore, hasMoreCards, topicCards = [], autoPlayAudio, audioSpeed, googleTtsApiKey, tileCardIds = new Set(), pendingChallenge, onStartChallenge }) => {
   const [showInfo, setShowInfo] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showGrammar, setShowGrammar] = useState(false);
   const [studyMoreCount, setStudyMoreCount] = useState(10);
+  // First-time hint: shown only on the very first card of the user's first
+  // session, so they discover that words are tappable. Disappears on the
+  // first tap or after the card advances.
+  const [showFirstWowHint, setShowFirstWowHint] = useState(() => {
+    try {
+      return localStorage.getItem(FIRST_WOW_KEY) === null;
+    } catch {
+      return false;
+    }
+  });
+  const dismissFirstWowHint = () => {
+    setShowFirstWowHint(false);
+    try { localStorage.setItem(FIRST_WOW_KEY, '1'); } catch {}
+  };
 
   const isComplete = session.currentIndex >= session.queue.length;
   const card = isComplete ? null : session.queue[session.currentIndex];
@@ -297,12 +313,25 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               ? 'text-base md:text-lg'
               : 'text-sm md:text-base';
             return (
-              <div className="flex-1 flex flex-col items-center justify-center px-3 sm:px-5 min-h-0 overflow-y-auto">
+              <div
+                className="flex-1 flex flex-col items-center justify-center px-3 sm:px-5 min-h-0 overflow-y-auto"
+                onClickCapture={showFirstWowHint ? dismissFirstWowHint : undefined}
+              >
                 <WordPopover
                   sentence={card!.target}
                   language={session.language}
                   className={`${sizeClass} font-black tracking-tight text-[var(--text-primary)] leading-snug max-w-sm mx-auto`}
                 />
+                {/* First-session hint — shown once on the very first card
+                    to reveal that any word is tappable for instant context.
+                    Subtle: dashed border + soft animation. Dismisses on
+                    any tap inside the card area. */}
+                {showFirstWowHint && !isFlipped && (
+                  <div className="mt-5 px-3 py-2 rounded-lg border border-dashed border-[var(--accent)]/50 bg-[var(--accent)]/5 text-[11px] font-semibold text-[var(--accent)] flex items-center gap-1.5 animate-fade-in">
+                    <span aria-hidden>👆</span>
+                    <span>Try tapping any word for instant context</span>
+                  </div>
+                )}
                 {isFlipped ? (
                   <div className="mt-4 pt-4 border-t border-[var(--border-color)] w-full animate-fade-in">
                     <p className={`${engSizeClass} text-[var(--text-secondary)] font-bold italic leading-relaxed`}>

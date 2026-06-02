@@ -57,20 +57,16 @@ function scheduleNotification(opts) {
     const today = new Date().toDateString();
     const studiedToday = lastStudy === today;
 
-    // Pick notification content
+    // Pick notification content. Calm, factual — no guilt, no streak panic.
     let title, body;
     const dueCards = opts.dueCards || 0;
-    const streak = opts.streak || 0;
 
-    if (!studiedToday && streak > 1) {
-      title = 'Don\'t lose your streak!';
-      body = 'Your ' + streak + '-day streak is at risk. Quick review?';
-    } else if (dueCards > 0) {
-      title = 'Cards ready for review';
-      body = 'You have ' + dueCards + ' cards due. Keep your streak going!';
+    if (dueCards > 0) {
+      title = 'LangLab';
+      body = dueCards + ' card' + (dueCards === 1 ? '' : 's') + ' to review whenever you have a moment.';
     } else {
-      title = 'Time to study!';
-      body = 'Keep building your language skills with a quick session.';
+      title = 'LangLab';
+      body = 'Ready when you are.';
     }
 
     self.registration.showNotification(title, {

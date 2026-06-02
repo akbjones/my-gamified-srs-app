@@ -66,10 +66,18 @@ module.exports = [
   },
 
   // ── Pretérito perfeito (simple past) ──
+  // \b is ASCII-only; uses lookaround + min stem so it doesn't false-match
+  // common -i / -ou nouns (like "favoritou" doesn't exist, but "carlou" might).
   {
     id: 'pt-preterito-perfeito',
     priority: 75,
-    match: t => /\b\w+(ei|aste|ou|amos|aram|i|este|eu|emos|eram|i|iste|iu|imos|iram)\b/i.test(t),
+    match: t => {
+      // Regular preterite endings — restrictive: require 2+ letter stem
+      if (/(?<![a-záéíóúâêîôûãõç])[a-záéíóúâêîôûãõç]{2,}(?:aste|astes|aram|este|estes|eram|iste|istes|iram|iu|eu|ou)(?![a-záéíóúâêîôûãõç])/i.test(t)) return true;
+      // Irregular preterites
+      if (/(?<![a-záéíóúâêîôûãõç])(fui|foste|foi|fomos|fostes|foram|tive|tiveste|teve|tivemos|tivestes|tiveram|fiz|fizeste|fez|fizemos|fizestes|fizeram|disse|dissemos|disseram|vi|viste|viu|vimos|vistes|viram|vim|vieste|veio|viemos|vieram|dei|deste|deu|demos|deram|pus|puseste|pôs)(?![a-záéíóúâêîôûãõç])/i.test(t)) return true;
+      return false;
+    },
     tips: [
       "Portuguese preterite is a one-word past tense (no `tenho feito` aux). Endings: -ar verbs → -ei/-aste/-ou/-amos/-aram. `Falei`, `comi`, `parti`.",
       "Where English says 'I ate', Portuguese says `comi`. Where English says 'I have eaten', Portuguese ALSO uses `comi` most of the time. The simple past does both jobs.",

@@ -7148,7 +7148,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 444,
-    "grammar": "`Ddim` is a soft mutation of `dim` (nothing/none). It does the negation work. Order: verb + subject + ddim + rest."
+    "grammar": "Negation in Welsh: insert `ddim` after the subject. `Dw i'n hapus` (I'm happy) → `dw i ddim yn hapus` (I'm not happy). Notice `yn` stays for adjectives."
   },
   {
     "target": "Cyrhaeddodd y tymheredd wyth gradd ar hugain.",
@@ -9087,7 +9087,7 @@
     "id": "cy-0699",
     "audio": "cy-3708.mp3",
     "priority": 168,
-    "grammar": "`Ddim` is a soft mutation of `dim` (nothing/none). It does the negation work. Order: verb + subject + ddim + rest."
+    "grammar": "Negation in Welsh: insert `ddim` after the subject. `Dw i'n hapus` (I'm happy) → `dw i ddim yn hapus` (I'm not happy). Notice `yn` stays for adjectives."
   },
   {
     "target": "Dyw e ddim yn werth y drafferth.",
@@ -11032,7 +11032,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 747,
-    "grammar": "`Ddim` is a soft mutation of `dim` (nothing/none). It does the negation work. Order: verb + subject + ddim + rest."
+    "grammar": "Some verbs negate by changing form: `dw → dwy(t)`, `mae → dyw/dydy`. You'll see different shapes for the same root depending on positive/negative/question."
   },
   {
     "id": "cy-0850",
@@ -16192,7 +16192,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 424,
-    "grammar": "After `i + person`, soft mutation hits the verb-noun. `mynd → fynd`. `Rhaid i ti fwyta` (you must eat) — `bwyta` becomes `fwyta`."
+    "grammar": "`Rhaid i + person + verb-noun` = 'must / has to'. `Rhaid i fi fynd` = 'I must go'. Literal: 'necessity to me to go'. Welsh frames obligation as a state of necessity."
   },
   {
     "id": "cy-1247",
@@ -16812,8 +16812,7 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "priority": 1216,
-    "grammar": "`Wrth + verb-noun` = 'while ...': `Wrth gerdded, gwelais y ci` (While walking, I saw the dog). Triggers soft mutation on the verb-noun."
+    "priority": 1216
   },
   {
     "id": "cy-1295",
@@ -17263,7 +17262,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 1365,
-    "grammar": "After `i + person`, soft mutation hits the verb-noun. `mynd → fynd`. `Rhaid i ti fwyta` (you must eat) — `bwyta` becomes `fwyta`."
+    "grammar": "`Rhaid i + person + verb-noun` = 'must / has to'. `Rhaid i fi fynd` = 'I must go'. Literal: 'necessity to me to go'. Welsh frames obligation as a state of necessity."
   },
   {
     "id": "cy-1330",
@@ -27752,7 +27751,7 @@
     ],
     "grammarNode": "node-19",
     "priority": 1464,
-    "grammar": "`yn` triggers soft mutation before adjectives: `da → yn dda`, `prysur → yn brysur`. Before verb-nouns there's no mutation: `yn cerdded`, `yn rhedeg`."
+    "grammar": "`yn` (often shortened to `'n` after a vowel) links the form of `bod` (to be) to an adjective or verb-noun. `Dw i'n hapus` (I am happy), `mae hi'n bwyta` (she is eating)."
   },
   {
     "id": "cy-2149",
@@ -38811,7 +38810,7 @@
     ],
     "grammarNode": "node-29",
     "priority": 2870,
-    "grammar": "`yn` triggers soft mutation before adjectives: `da → yn dda`, `prysur → yn brysur`. Before verb-nouns there's no mutation: `yn cerdded`, `yn rhedeg`."
+    "grammar": "Skip `'n` and the sentence is broken: `dw i hapus` is wrong. The `'n` is mandatory between the verb and what follows."
   },
   {
     "id": "cy-3012",
@@ -42747,7 +42746,7 @@
     ],
     "grammarNode": "node-33",
     "priority": 3432,
-    "grammar": "Soft mutation after the conditional pronoun: `Byddwn i'n bwyta → fwyta`. The verb-noun after `yn` keeps its original form; after a fronted object it'll soft-mutate."
+    "grammar": "Conditional forms (`byddwn`, `byddai`, `baswn`) = 'would'. `Byddwn i'n hoffi` (I would like). For 'if' clauses use `petai` or `pe bai`."
   },
   {
     "target": "Mae'r canfyddiadau'n cefnogi'r ddamcaniaeth.",
@@ -45099,7 +45098,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 92,
-    "grammar": "Possessives shift: `dy lyfr` (your book, informal — triggers soft mutation) vs `eich llyfr` (your book, formal/plural — no mutation). Same pattern across all your-pronouns."
+    "grammar": "Welsh has TWO 'you's: `ti` (informal singular — friends, family, kids, God in prayer) and `chi` (formal singular AND plural). They use DIFFERENT verb forms: `wyt ti'n` (are you, informal) vs `ydych chi'n` (are you, formal/plural)."
   },
   {
     "id": "cy-3504",

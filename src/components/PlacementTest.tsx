@@ -41,6 +41,9 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   const [ceilingNode, setCeilingNode] = useState<number | null>(null);
   const [showGrammarDetail, setShowGrammarDetail] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  // Per-question state: whether the user has peeked at the English translation.
+  // Resets whenever the current card changes.
+  const [translationRevealed, setTranslationRevealed] = useState(false);
 
   // Pre-select 2 cards per node (35 nodes × 2 = 70 total cards)
   const placementCards = useMemo(() => selectPlacementCards(deck), [deck]);
@@ -61,6 +64,11 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
       playCardAudio(currentCard.audio, currentCard.target, lang, audioSpeed, googleTtsApiKey);
     }
     return () => { stopAudio(); };
+  }, [phase, nodeIndex, cardIndex]);
+
+  // Reset the "translation peeked" state whenever a new question loads
+  useEffect(() => {
+    setTranslationRevealed(false);
   }, [phase, nodeIndex, cardIndex]);
 
   const handlePlayAudio = () => {
@@ -287,6 +295,20 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
             >
               <Volume2 size={20} className={isPlaying ? 'text-blue-500 animate-pulse' : 'text-[var(--text-muted)]'} />
             </button>
+            {/* Translation peek — hidden until tapped. Use it to confirm
+                what the sentence means before committing to a confidence rating. */}
+            {translationRevealed ? (
+              <p className="mt-4 pt-4 border-t border-[var(--border-color)] text-sm text-[var(--text-secondary)] italic text-center leading-relaxed animate-fade-in">
+                {currentCard.english}
+              </p>
+            ) : (
+              <button
+                onClick={() => setTranslationRevealed(true)}
+                className="mt-3 text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+              >
+                Show translation
+              </button>
+            )}
           </div>
         </div>
 

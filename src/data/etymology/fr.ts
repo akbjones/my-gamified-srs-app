@@ -143,7 +143,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
     word: 'fromage',
     origin: 'Vulgar Latin formaticus',
     cognates: [],
-    note: 'Literally "shape-made" — cheese named after the form-press used to shape it. Italian "formaggio" preserves it.',
+    note: 'Named after the cheese-mold (Latin forma) — cheesemakers pressed curds into shaped wooden frames. Same root: Italian formaggio.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'cnrtl'],
   },

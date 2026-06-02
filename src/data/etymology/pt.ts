@@ -75,11 +75,11 @@ export const PORTUGUESE_ETYMOLOGY: Record<string, EtymologyEntry> = {
     verified: true,
     sources: ['wiktionary', 'etymonline'],
   },
-  'saudade': {
-    word: 'saudade',
-    origin: 'Latin solitas',
-    cognates: ['solitude'],
-    note: 'Famously untranslatable — a longing for someone or somewhere absent. Same root as "solitude".',
+  'cebra': {
+    word: 'cebra',
+    origin: 'Portuguese cebra, ult. unclear African',
+    cognates: ['zebra'],
+    note: 'Portuguese explorers in Africa took the local word — English "zebra" came directly from Portuguese in the 1600s.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
   },

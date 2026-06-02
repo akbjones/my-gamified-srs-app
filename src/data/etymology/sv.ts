@@ -149,11 +149,11 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
     verified: true,
     sources: ['wiktionary'],
   },
-  'lagom': {
-    word: 'lagom',
-    origin: 'Old Norse lag',
-    cognates: [],
-    note: 'Famously untranslatable — "just the right amount". Often cited as quintessentially Swedish in philosophy.',
+  'tungsten': {
+    word: 'tungsten',
+    origin: 'Swedish tung + sten',
+    cognates: ['tungsten'],
+    note: 'Literally "heavy stone" — Swedish chemists named the element tungsten in 1781, English borrowed the word directly.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
   },

@@ -728,10 +728,7 @@ const App: React.FC = () => {
             className="w-full py-7 btn-primary rounded-2xl text-lg mb-3"
           >
             {!hasCards ? (
-              <div className="flex flex-col items-center gap-0.5">
-                <span className="font-extrabold text-xl">All Caught Up</span>
-                <span className="text-[11px] font-bold opacity-75">Nice work today</span>
-              </div>
+              'All Caught Up'
             ) : (
               <div className="flex items-baseline justify-center gap-2.5">
                 <span className="font-extrabold text-xl">Study</span>

@@ -495,29 +495,26 @@ const PopoverPortal: React.FC<{
         </div>
       )}
 
-      {/* Part of speech + Etymology — sit together as small chips so the user
-          sees at a glance what's available. Etymology uses a violet palette so
-          its overlay mirrors the amber grammar-tip overlay — same layout, just
-          a different color. The chip only renders when a verified etymology
-          exists; the overlay (rendered below outside the popover scroll) is
-          shown when the user taps it. */}
-      {(entry.pos || lookupEtymology(rawToken, language)) && (
-        <div className="mt-2 flex items-center gap-1.5 flex-wrap">
-          {entry.pos && (
-            <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)] bg-[var(--bg-inset)] px-1.5 py-0.5 rounded">
-              {POS_LABELS[entry.pos] || entry.pos}
-            </span>
-          )}
-          {lookupEtymology(rawToken, language) && (
-            <button
-              onClick={(e) => { e.stopPropagation(); setEtymologyExpanded(true); }}
-              className="flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider text-violet-600 dark:text-violet-300 bg-violet-500/10 border border-violet-500/30 hover:bg-violet-500/15 transition-all active:scale-95"
-            >
-              <BookText size={11} />
-              <span>Origin</span>
-            </button>
-          )}
+      {/* Part of speech chip — small, neutral. */}
+      {entry.pos && (
+        <div className="mt-2">
+          <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)] bg-[var(--bg-inset)] px-1.5 py-0.5 rounded">
+            {POS_LABELS[entry.pos] || entry.pos}
+          </span>
         </div>
+      )}
+
+      {/* Etymology — when this word has a verified entry, surface it as a
+          full-width violet button so it's impossible to miss. Opens the
+          centered violet overlay (mirroring the amber grammar tip). */}
+      {lookupEtymology(rawToken, language) && (
+        <button
+          onClick={(e) => { e.stopPropagation(); setEtymologyExpanded(true); }}
+          className="mt-3 w-full flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-violet-600 dark:text-violet-300 bg-violet-500/10 border border-violet-500/40 hover:bg-violet-500/15 transition-all active:scale-95"
+        >
+          <BookText size={14} />
+          <span>See etymology</span>
+        </button>
       )}
 
       {/* Flag this word as wrong */}

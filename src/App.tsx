@@ -760,6 +760,44 @@ const App: React.FC = () => {
             )}
           </button>
 
+          {/* Bonus session — explicit "study N extra" affordance. Always visible
+              when there are unseen cards left in the current topic so the user
+              can push past the daily limit deliberately. Sized for thumb access
+              and prominent enough not to get missed. */}
+          {(() => {
+            const newAvailableInDeck = currentNode
+              ? deck.filter(c => c.topic === currentNode.id && c.mastery === 0 && !c.isSuspended).length
+              : 0;
+            if (newAvailableInDeck === 0) return null;
+            return (
+              <div className="w-full mb-3 p-3 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)]">
+                <div className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-2 text-center">
+                  {hasCards ? 'Or do a bonus session' : 'Want more?'}
+                </div>
+                <div className="flex items-stretch gap-2">
+                  <input
+                    id="study-more-count"
+                    type="number"
+                    defaultValue={10}
+                    min={1}
+                    max={100}
+                    className="w-20 rounded-xl bg-[var(--bg-inset)] border border-[var(--border-color)] text-center text-lg font-extrabold font-mono text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)]"
+                  />
+                  <button
+                    onClick={() => {
+                      const input = document.getElementById('study-more-count') as HTMLInputElement;
+                      const count = input ? parseInt(input.value) || 10 : 10;
+                      handleStartSession(count);
+                    }}
+                    className="flex-1 py-3 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/40 text-[var(--accent)] font-bold text-sm hover:bg-[var(--accent)]/15 active:scale-95 transition"
+                  >
+                    Extra new cards
+                  </button>
+                </div>
+              </div>
+            );
+          })()}
+
           {/* Listen — secondary, passive listening mode. Only shown when the
               user has at least a handful of seen cards to play through. */}
           {(() => {
@@ -771,8 +809,8 @@ const App: React.FC = () => {
                 className="w-full mb-3 -mt-1 py-2.5 flex items-center justify-center gap-2 text-[12px] font-bold text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
               >
                 <Volume2 size={14} />
-                <span>Or listen passively</span>
-                <span className="text-[10px] opacity-60">· {playableCount} cards</span>
+                <span>Listen passively to cards you've seen</span>
+                <span className="text-[10px] opacity-60">· {playableCount}</span>
               </button>
             );
           })()}
@@ -879,32 +917,6 @@ const App: React.FC = () => {
               </>
             );
           })()}
-
-          {/* When caught up: explicit next-step suggestions instead of a tiny
-              "or study more" link that's easy to miss. */}
-          {!hasCards && (
-            <div className="w-full mb-3 -mt-1 p-3 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] flex items-center justify-center gap-2 text-[12px]">
-              <span className="text-[var(--text-muted)]">Want more? Study</span>
-              <input
-                id="study-more-count"
-                type="number"
-                defaultValue={10}
-                min={1}
-                max={100}
-                className="w-14 py-1 rounded-md bg-transparent border border-[var(--border-color)] text-center text-[13px] font-semibold text-[var(--text-secondary)] focus:outline-none focus:border-[var(--accent)]"
-              />
-              <button
-                onClick={() => {
-                  const input = document.getElementById('study-more-count') as HTMLInputElement;
-                  const count = input ? parseInt(input.value) || 10 : 10;
-                  handleStartSession(count);
-                }}
-                className="text-[var(--accent)] font-bold hover:underline active:scale-95 transition"
-              >
-                extra cards →
-              </button>
-            </div>
-          )}
 
           {/* Quick-access grid: Topics + Vocabulary + Favourites — 3-col, taller cards */}
           {(() => {

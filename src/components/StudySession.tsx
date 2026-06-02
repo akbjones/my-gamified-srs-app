@@ -120,21 +120,29 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             </button>
           )}
           {hasMoreCards && onStudyMore && (
-            <div className="flex items-center gap-2 w-full">
-              <button onClick={() => onStudyMore(studyMoreCount)} className="px-6 py-3 btn-primary rounded-xl flex-1 text-sm font-bold">
-                Study More
-              </button>
-              <input
-                type="number"
-                min={1}
-                max={100}
-                value={studyMoreCount}
-                onChange={e => {
-                  const v = parseInt(e.target.value, 10);
-                  if (!isNaN(v) && v >= 1 && v <= 100) setStudyMoreCount(v);
-                }}
-                className="w-16 h-12 rounded-xl text-center text-sm font-bold bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-primary)] focus:border-[var(--accent)] focus:outline-none"
-              />
+            <div className="w-full p-3 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)]">
+              <div className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-2 text-center">
+                Keep going?
+              </div>
+              <div className="flex items-stretch gap-2">
+                <input
+                  type="number"
+                  min={1}
+                  max={100}
+                  value={studyMoreCount}
+                  onChange={e => {
+                    const v = parseInt(e.target.value, 10);
+                    if (!isNaN(v) && v >= 1 && v <= 100) setStudyMoreCount(v);
+                  }}
+                  className="w-20 rounded-xl text-center text-lg font-extrabold font-mono bg-[var(--bg-inset)] border border-[var(--border-color)] text-[var(--text-primary)] focus:border-[var(--accent)] focus:outline-none"
+                />
+                <button
+                  onClick={() => onStudyMore(studyMoreCount)}
+                  className="flex-1 py-3 rounded-xl btn-primary text-sm font-bold"
+                >
+                  More cards
+                </button>
+              </div>
             </div>
           )}
           <button

@@ -1167,8 +1167,8 @@ export const RUSSIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'жить': {
     word: 'жить',
     origin: 'Slavic žiti',
-    cognates: ['quick'],
-    note: 'Same ancient Indo-European root as English "quick" (originally "alive"), Latin vivere, and Sanskrit jīva — universal IE life-root.',
+    cognates: [],
+    note: 'Verb form of the same Slavic root as жизнь (life) — surfaces also in живой (alive), животное (animal), жилой (residential). The internal life-cluster.',
     verified: true,
     sources: ['wiktionary', 'vasmer'],
   },

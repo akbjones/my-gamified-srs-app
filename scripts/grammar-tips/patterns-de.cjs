@@ -205,4 +205,30 @@ module.exports = [
     ],
   },
 
+  // ── Gender + case (der/die/das change by role) ────────────────
+  {
+    id: 'de-gender-cases',
+    priority: 50,
+    match: t => /\b(der|die|das|den|dem|des|ein|eine|einen|einem|eines|einer)\b/.test(t),
+    tips: [
+      "German has THREE genders: `der` (m), `die` (f), `das` (n). Object gender is arbitrary — `der Tisch`, `die Lampe`, `das Buch`. Always memorize the noun WITH its article.",
+      "Articles also encode CASE (the noun's role in the sentence). `der Mann` → `den Mann` (acc, object) → `dem Mann` (dat, indirect) → `des Mannes` (gen). One noun, four article forms.",
+      "Quick gender hints from endings: `-ung`, `-heit`, `-keit`, `-schaft`, `-tät` → fem (die Zeitung). `-chen`, `-lein` → neut (das Mädchen). `-er`, `-ling` → masc. But only ~60% reliable.",
+      "After prepositions, the case is fixed: `für/durch/ohne/gegen/um` always accusative; `mit/nach/von/zu/bei/aus/seit` always dative; `in/auf/an/unter/über/vor/hinter/neben/zwischen` switch (acc for motion, dat for location).",
+    ],
+  },
+
+  // ── V2 word order (verb-second) ────────────────────────────────
+  {
+    id: 'de-v2-order',
+    priority: 50,
+    match: t => /^(Heute|Morgen|Gestern|Jetzt|Hier|Dort|Manchmal|Oft|Plötzlich|Im|Am|Um|Vor|Nach)\s+\w+/i.test(t),
+    tips: [
+      "German is V2: the conjugated verb is ALWAYS the second element. `Heute gehe ich ins Kino` (today go I to-the cinema) — NOT `Heute ich gehe`. Whatever comes first, the verb is right after.",
+      "Front a time word, an object, a clause — anything — and the verb stays second. `Im Park spiele ich Fußball`, `Mit meinem Bruder fahre ich nach Berlin`. Subject jumps after the verb.",
+      "Subordinate clauses break the rule: after `weil`, `dass`, `wenn`, `obwohl`, the verb goes to the END. `Ich weiß, dass er kommt`. Two different word orders in one language.",
+      "Modal verbs split: conjugated modal in V2 position, infinitive at the end. `Ich muss heute viel arbeiten` — `muss` is 2nd, `arbeiten` is last. Future and perfect work the same: `Ich habe ihn gesehen`.",
+    ],
+  },
+
 ];

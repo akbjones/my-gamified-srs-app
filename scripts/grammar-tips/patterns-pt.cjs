@@ -213,4 +213,17 @@ module.exports = [
     ],
   },
 
+  // ── Gender on inanimate nouns ───────────────────────────────────
+  {
+    id: 'pt-gender-arbitrary',
+    priority: 45,
+    match: t => /(^|\s)(o|a|os|as|um|uma|uns|umas|do|da|dos|das|no|na|nos|nas)\s+[a-záéíóúâêîôûãõç]+/i.test(t),
+    tips: [
+      "Portuguese nouns have GENDER: `o livro` (m), `a casa` (f). Arbitrary on objects. Always learn the article WITH the noun, never just `livro` alone.",
+      "Endings hint at gender: `-o` usually masc (`o livro`), `-a` usually fem (`a casa`). Exceptions: `o problema`, `o dia`, `a mão` (the hand, irregular).",
+      "Adjectives agree with the noun's gender and number: `o carro vermelho`, `a casa vermelha`, `os carros vermelhos`, `as casas vermelhas`. One adjective, four forms.",
+      "Articles + prepositions contract: `de + o → do`, `de + a → da`, `em + o → no`, `em + a → na`. Same gender info still applies — `na casa` is feminine.",
+    ],
+  },
+
 ];

@@ -300,4 +300,17 @@ module.exports = [
     ],
   },
 
+  // ── SOV word order — verb at the very end ──────────────────
+  {
+    id: 'tr-sov-order',
+    priority: 50,
+    match: t => /[a-zçğıöşü]/i.test(t),
+    tips: [
+      "Turkish is SOV: the verb ALWAYS goes at the end. `Ben elma yiyorum` (I apple eat) = 'I'm eating an apple'. English SVO flips to SOV. Long sentences pile everything before the verb.",
+      "No gender, no articles. `O` covers he/she/it. `Ev` means both 'a house' and 'the house' depending on context. Massive simplification compared to English/German.",
+      "Question particle `mi` floats to attach to whatever is being questioned: `Geliyor mu?` (Is he coming?), `Ev mi?` (Is it a house?). It harmonizes with the vowel of the word in front.",
+      "Negation glues a `-me/-ma` infix INTO the verb (vowel-harmonized): `geliyorum` (I come) → `gelmiyorum` (I don't come). The negative is part of the verb, not a separate word.",
+    ],
+  },
+
 ];

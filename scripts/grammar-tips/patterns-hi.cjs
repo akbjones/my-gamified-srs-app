@@ -408,4 +408,30 @@ module.exports = [
     ],
   },
 
+  // ── Postpositions (after the noun, not before) ──────────────
+  {
+    id: 'hi-postpositions',
+    priority: 55,
+    match: t => /(में|पर|से|को|का|की|के|तक|पास|बाद|पहले|साथ|ऊपर|नीचे|आगे|पीछे|सामने)/.test(t),
+    tips: [
+      "Hindi uses POSTPOSITIONS — the equivalent of 'in', 'on', 'with' comes AFTER the noun, not before. English `in the house` becomes Hindi `घर में` (house in). Total reversal of word order.",
+      "Most common postpositions: `में` (in), `पर` (on/at), `से` (from/with/by), `को` (to/at/marker), `तक` (until/up to), `के साथ` (with), `के बारे में` (about), `के पास` (near/has).",
+      "Postpositions trigger the OBLIQUE case on the noun in front. Direct: `लड़का` (boy), oblique: `लड़के` (boy + postposition). The noun changes form: `लड़के से` (from the boy), `लड़के को` (to the boy).",
+      "Many postpositions are compound — built from a basic one + `के`: `के बारे में` (about, lit. 'in the matter of'), `के सामने` (in front of). Learn them as whole units, not piece by piece.",
+    ],
+  },
+
+  // ── SOV word order — verb at the very end ──────────────────
+  {
+    id: 'hi-sov-order',
+    priority: 50,
+    match: t => /[ऀ-ॿ]/.test(t),
+    tips: [
+      "Hindi is SOV — Subject-Object-Verb. The verb ALWAYS goes at the end of the sentence. `मैं सेब खाता हूँ` (I apple eat) = 'I eat an apple'. English SVO becomes Hindi SOV.",
+      "Auxiliaries (`है/हैं/था/थी/हो`) come at the very end, AFTER the main verb. `राम घर जा रहा है` (Ram home going is) = 'Ram is going home'. Stack verb + aux at the tail.",
+      "Long sentences: pile everything before the verb. Place, time, manner, object — all come first, then finally the verb. `कल मेरा भाई स्कूल में पढ़ाई करता है` (yesterday my brother school in study does).",
+      "Question words go where the answer would go, not at the start: `तुम कहाँ जा रहे हो?` (you where going are?) = 'Where are you going?'. No fronting like English.",
+    ],
+  },
+
 ];

@@ -452,4 +452,30 @@ module.exports = [
     ],
   },
 
+  // ── Gender of inanimate nouns (predictable from ending) ─────
+  {
+    id: 'ru-gender-nouns',
+    priority: 45,
+    match: t => /(^|\s)(этот|эта|это|эти|тот|та|то|те|мой|моя|моё|мои|твой|твоя|твоё|твои|наш|наша|наше|наши|ваш|ваша|ваше|ваши)\s+[а-яёА-ЯЁ]+/i.test(t),
+    tips: [
+      "Russian has THREE genders. Unlike Spanish or German, gender is PREDICTABLE from the noun's ending: consonant → masc (дом, стол), `-а/-я` → fem (книга, неделя), `-о/-е` → neuter (окно, поле). Easy to guess.",
+      "Adjectives and demonstratives agree with gender + number: `этот дом` (m), `эта книга` (f), `это окно` (n), `эти дома/книги/окна` (pl). One word, four forms.",
+      "Exceptions: nouns ending in `-ь` can be either masc or fem — `день` (day, m), `ночь` (night, f). Memorize these. Some `-а` nouns are masc by meaning: `папа`, `дядя`, `мужчина`.",
+      "Past tense verbs ALSO agree with the subject's gender: `он читал` (m), `она читала` (f), `оно читало` (n). Adjectives, pronouns, and past verbs — all visibly gendered.",
+    ],
+  },
+
+  // ── Double negative is mandatory ────────────────────────────
+  {
+    id: 'ru-double-negative',
+    priority: 60,
+    match: t => /(^|\s)(никогда|никто|никого|никому|ничто|ничего|ничему|нигде|никуда|ниоткуда|ни\s+один|ни\s+одного|никакой)\b/i.test(t),
+    tips: [
+      "Russian REQUIRES the double negative — even though English avoids it. `Я никогда не был там` (literally 'I never not was there') = 'I've never been there'. Drop the `не` and the sentence is broken.",
+      "All negative pronouns and adverbs need BOTH the `ни-` word AND `не` before the verb: `никто не пришёл` (nobody not came = nobody came), `ничего не видел` (nothing not saw = saw nothing).",
+      "English rule 'two negatives make a positive' does NOT apply in Russian. The `ни-` word and the `не` work TOGETHER to express a single negation. They reinforce, not cancel.",
+      "List of negative words: `никто` (nobody), `ничто/ничего` (nothing), `никогда` (never), `нигде` (nowhere), `никуда` (to-nowhere), `никакой` (no kind of). All need `не` with the verb.",
+    ],
+  },
+
 ];

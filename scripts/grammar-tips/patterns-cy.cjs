@@ -417,4 +417,17 @@ module.exports = [
     ],
   },
 
+  // ── Gender (masc/fem) — and how mutation reveals it ──────────
+  {
+    id: 'cy-gender-mutation',
+    priority: 45,
+    match: t => /\b(y|yr|'r)\s+[a-zâêîôûŵŷ]+/i.test(t),
+    tips: [
+      "Welsh nouns have TWO genders: masculine and feminine. There's no neutral or 'thing' category — every noun is one or the other, arbitrarily. `Cath` (cat) is feminine; `ci` (dog) is masculine.",
+      "Feminine singular nouns SOFT-MUTATE after the article `y`/`yr`/`'r`: `cath → y gath` (the cat), `merch → y ferch` (the girl). Masculine nouns don't mutate. The mutation is your gender check.",
+      "Adjectives after feminine singular nouns ALSO soft-mutate: `cath fawr` (a big cat — `mawr` → `fawr` because cath is fem). After masculine: `ci mawr` (no mutation).",
+      "Numbers from 2 also have gendered forms: `dau gi` (two dogs, m) vs `dwy gath` (two cats, f). Same with `tri/tair` (three) and `pedwar/pedair` (four). After 5, no gender split.",
+    ],
+  },
+
 ];

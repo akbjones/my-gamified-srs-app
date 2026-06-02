@@ -214,4 +214,17 @@ module.exports = [
     ],
   },
 
+  // ── Gender on inanimate nouns ───────────────────────────────────
+  {
+    id: 'fr-gender-arbitrary',
+    priority: 45,
+    match: t => /(^|\s)(le|la|les|un|une|des|du|au|aux)\s+[a-zàâçéèêëîïôûùüÿ]+/i.test(t),
+    tips: [
+      "French nouns have GENDER: `le pain` (m), `la pomme` (f). It's arbitrary on objects — `une table` is feminine for no reason. Always learn nouns WITH their article.",
+      "Endings hint at gender: `-e` often feminine (la voiture, la maison), consonant or `-eau` often masculine (le pain, le bateau). But traps: `le problème` ends in -e, `la radio` ends in -o.",
+      "Adjectives agree: `un grand homme`, `une grande femme`, `de grands hommes`, `de grandes femmes`. Same adjective, four forms. The -e at end is the feminine marker.",
+      "Articles elide before vowels: `le/la → l'` (`l'homme`, `l'eau`). Possessives shift gender too: `mon stylo` (m), `ma table` (f), but `mon amie` even though amie is feminine — euphony before vowels.",
+    ],
+  },
+
 ];

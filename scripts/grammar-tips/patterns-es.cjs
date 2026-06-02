@@ -304,4 +304,17 @@ module.exports = [
     ],
   },
 
+  // ── Gender on inanimate nouns — el/la is arbitrary, not logical ───
+  {
+    id: 'es-gender-arbitrary',
+    priority: 45,
+    match: t => /(^|\s)(el|la|los|las|un|una|unos|unas)\s+[a-záéíóúñü]+/i.test(t),
+    tips: [
+      "Spanish nouns have GENDER (masc/fem), even objects: `el coche` (the car, m), `la mesa` (the table, f). English has no gender; you have to learn each noun WITH its article — never just 'coche'.",
+      "Endings hint at gender but aren't reliable: words ending in `-o` are usually masc (`el libro`), `-a` usually fem (`la casa`). But there are traps: `la mano`, `el problema`, `el día`, `el mapa`, `el sistema`.",
+      "Adjectives agree with the noun's gender AND number: `el coche rojo` (m sg), `la casa roja` (f sg), `los coches rojos` (m pl), `las casas rojas` (f pl). One adjective, four forms.",
+      "Plural marker is `-s` (after vowel: casas, libros) or `-es` (after consonant: papeles, animales). The article also pluralizes: el→los, la→las. Articles always match the noun.",
+    ],
+  },
+
 ];

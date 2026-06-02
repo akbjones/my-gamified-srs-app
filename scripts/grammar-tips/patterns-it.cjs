@@ -187,4 +187,17 @@ module.exports = [
     ],
   },
 
+  // ── Gender on inanimate nouns ───────────────────────────────────
+  {
+    id: 'it-gender-arbitrary',
+    priority: 45,
+    match: t => /(^|\s)(il|la|lo|i|le|gli|l'|un|una|un'|uno)\s*[a-zàèéìòù]+/i.test(t),
+    tips: [
+      "Italian nouns have GENDER: `il libro` (m), `la casa` (f). Arbitrary on objects — `la macchina` (the car) is feminine for no logical reason. Always learn nouns WITH their article.",
+      "Endings hint at gender: `-o` usually masc (`il libro`), `-a` usually fem (`la casa`). But: `la mano` is feminine, `il problema` is masculine. The article tells you the truth.",
+      "Three masculine articles depending on what follows: `il` (before consonant), `lo` (before s+consonant, gn, pn, ps, z, x), `l'` (before vowel). Plural: `i` and `gli`. Feminine simpler: `la`/`l'`/`le`.",
+      "Plural: `-o → -i` (libro → libri, m), `-a → -e` (casa → case, f). Adjectives agree: `un bel libro`, `una bella casa`, `i bei libri`, `le belle case`.",
+    ],
+  },
+
 ];

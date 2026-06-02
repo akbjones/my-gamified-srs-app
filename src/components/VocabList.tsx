@@ -67,9 +67,12 @@ function extractInfinitive(translation: string): string | null {
   return null;
 }
 
+type PosFilter = 'all' | 'n' | 'v' | 'adj' | 'adv' | 'other';
+
 const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, lookupFn }) => {
   const [search, setSearch] = useState('');
   const [sortMode, setSortMode] = useState<SortMode>('recent');
+  const [posFilter, setPosFilter] = useState<PosFilter>('all');
   const [showCommon, setShowCommon] = useState(false);
   const [expandedWord, setExpandedWord] = useState<string | null>(null);
   const [conjTense, setConjTense] = useState('present');
@@ -187,20 +190,46 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
   };
 
   const filterFn = (entry: VocabEntry) => {
-    if (!search) return true;
-    const q = search.toLowerCase();
-    return entry.word.includes(q) || entry.translation.toLowerCase().includes(q);
+    // Search filter
+    if (search) {
+      const q = search.toLowerCase();
+      if (!entry.word.includes(q) && !entry.translation.toLowerCase().includes(q)) return false;
+    }
+    // POS filter
+    if (posFilter !== 'all') {
+      const pos = getPos(entry);
+      if (posFilter === 'other') {
+        if (pos === 'n' || pos === 'v' || pos === 'adj' || pos === 'adv') return false;
+      } else if (pos !== posFilter) {
+        return false;
+      }
+    }
+    return true;
   };
 
   const filteredMain = useMemo(
     () => mainWords.filter(filterFn).sort(sortFn),
-    [mainWords, search, sortMode],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [mainWords, search, sortMode, posFilter],
   );
 
   const filteredCommon = useMemo(
     () => commonWords.filter(filterFn).sort(sortFn),
-    [commonWords, search, sortMode],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [commonWords, search, sortMode, posFilter],
   );
+
+  // Count words per POS so the chips can show counts
+  const posCounts = useMemo(() => {
+    const c: Record<string, number> = { all: allEntries.length, n: 0, v: 0, adj: 0, adv: 0, other: 0 };
+    for (const e of allEntries) {
+      const p = getPos(e);
+      if (p === 'n' || p === 'v' || p === 'adj' || p === 'adv') c[p]++;
+      else c.other++;
+    }
+    return c;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allEntries]);
 
   const POS_COLORS: Record<string, string> = {
     n: 'text-blue-500 bg-blue-500/10',
@@ -381,6 +410,36 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
           Sorted by most failed first — words you struggle with the most.
         </p>
       )}
+
+      {/* POS filter — horizontally scrollable chip row */}
+      <div className="flex gap-1.5 mb-4 overflow-x-auto -mx-4 px-4 pb-1 scrollbar-thin">
+        {([
+          { key: 'all', label: 'All', color: 'border-[var(--accent)]/40 bg-[var(--accent)]/10 text-[var(--accent)]' },
+          { key: 'n', label: 'Nouns', color: 'border-blue-500/40 bg-blue-500/10 text-blue-500' },
+          { key: 'v', label: 'Verbs', color: 'border-emerald-500/40 bg-emerald-500/10 text-emerald-500' },
+          { key: 'adj', label: 'Adjectives', color: 'border-purple-500/40 bg-purple-500/10 text-purple-500' },
+          { key: 'adv', label: 'Adverbs', color: 'border-amber-500/40 bg-amber-500/10 text-amber-500' },
+          { key: 'other', label: 'Other', color: 'border-slate-500/40 bg-slate-500/10 text-slate-500' },
+        ] as Array<{ key: PosFilter; label: string; color: string }>).map(({ key, label, color }) => {
+          const count = posCounts[key] || 0;
+          if (count === 0 && key !== 'all') return null;
+          const active = posFilter === key;
+          return (
+            <button
+              key={key}
+              onClick={() => setPosFilter(key)}
+              className={`shrink-0 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all border whitespace-nowrap ${
+                active
+                  ? color
+                  : 'border-[var(--border-color)] text-[var(--text-muted)] hover:border-[var(--border-hover)]'
+              }`}
+            >
+              <span>{label}</span>
+              <span className={`text-[9px] font-mono ${active ? 'opacity-70' : 'opacity-50'}`}>{count}</span>
+            </button>
+          );
+        })}
+      </div>
 
       {/* Main word list */}
       {filteredMain.length === 0 && filteredCommon.length === 0 ? (

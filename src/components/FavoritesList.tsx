@@ -11,25 +11,46 @@ interface FavoritesListProps {
 }
 
 type SortMode = 'recent' | 'alpha';
+type PosFilter = 'all' | 'n' | 'v' | 'adj' | 'adv' | 'other';
 
 const FavoritesList: React.FC<FavoritesListProps> = ({ favoritesMap, language, onBack, onChange }) => {
   const [sort, setSort] = useState<SortMode>('recent');
   const [query, setQuery] = useState('');
+  const [posFilter, setPosFilter] = useState<PosFilter>('all');
+
+  const allArr = useMemo(() => Object.values(favoritesMap), [favoritesMap]);
+
+  // Count words per POS so chips can show counts
+  const posCounts = useMemo(() => {
+    const c: Record<string, number> = { all: allArr.length, n: 0, v: 0, adj: 0, adv: 0, other: 0 };
+    for (const e of allArr) {
+      const p = e.pos;
+      if (p === 'n' || p === 'v' || p === 'adj' || p === 'adv') c[p]++;
+      else c.other++;
+    }
+    return c;
+  }, [allArr]);
 
   const entries = useMemo(() => {
-    const arr = Object.values(favoritesMap);
     const q = query.trim().toLowerCase();
-    const filtered = q
-      ? arr.filter(e =>
-          e.word.includes(q) ||
-          (e.translation || '').toLowerCase().includes(q) ||
-          (e.lemma || '').toLowerCase().includes(q),
-        )
-      : arr;
+    const filtered = allArr.filter(e => {
+      // Search
+      if (q && !e.word.includes(q) && !(e.translation || '').toLowerCase().includes(q) && !(e.lemma || '').toLowerCase().includes(q)) return false;
+      // POS filter
+      if (posFilter !== 'all') {
+        const p = e.pos;
+        if (posFilter === 'other') {
+          if (p === 'n' || p === 'v' || p === 'adj' || p === 'adv') return false;
+        } else if (p !== posFilter) {
+          return false;
+        }
+      }
+      return true;
+    });
     return [...filtered].sort((a, b) =>
       sort === 'recent' ? b.savedAt - a.savedAt : a.word.localeCompare(b.word),
     );
-  }, [favoritesMap, sort, query]);
+  }, [allArr, sort, query, posFilter]);
 
   const removeWord = (word: string) => {
     const next = { ...favoritesMap };
@@ -112,6 +133,35 @@ const FavoritesList: React.FC<FavoritesListProps> = ({ favoritesMap, language, o
               >
                 A → Z
               </button>
+            </div>
+            {/* POS filter chips — horizontal scroll on overflow */}
+            <div className="flex gap-1.5 overflow-x-auto -mx-4 px-4 pb-1 scrollbar-thin">
+              {([
+                { key: 'all', label: 'All', color: 'border-[var(--accent)]/40 bg-[var(--accent)]/10 text-[var(--accent)]' },
+                { key: 'n', label: 'Nouns', color: 'border-blue-500/40 bg-blue-500/10 text-blue-500' },
+                { key: 'v', label: 'Verbs', color: 'border-emerald-500/40 bg-emerald-500/10 text-emerald-500' },
+                { key: 'adj', label: 'Adjectives', color: 'border-purple-500/40 bg-purple-500/10 text-purple-500' },
+                { key: 'adv', label: 'Adverbs', color: 'border-amber-500/40 bg-amber-500/10 text-amber-500' },
+                { key: 'other', label: 'Other', color: 'border-slate-500/40 bg-slate-500/10 text-slate-500' },
+              ] as Array<{ key: PosFilter; label: string; color: string }>).map(({ key, label, color }) => {
+                const count = posCounts[key] || 0;
+                if (count === 0 && key !== 'all') return null;
+                const active = posFilter === key;
+                return (
+                  <button
+                    key={key}
+                    onClick={() => setPosFilter(key)}
+                    className={`shrink-0 flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider transition-all border whitespace-nowrap ${
+                      active
+                        ? color
+                        : 'border-[var(--border-color)] text-[var(--text-muted)] hover:border-[var(--border-hover)]'
+                    }`}
+                  >
+                    <span>{label}</span>
+                    <span className={`text-[9px] font-mono ${active ? 'opacity-70' : 'opacity-50'}`}>{count}</span>
+                  </button>
+                );
+              })}
             </div>
           </div>
 

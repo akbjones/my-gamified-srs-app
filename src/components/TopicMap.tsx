@@ -41,7 +41,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
   return (
     <section className="animate-fade-in min-h-screen pb-24">
       {/* Header */}
-      <header className="flex items-center justify-between py-5 mb-4">
+      <header className="flex items-center justify-between py-5 mb-2">
         <button onClick={onBack} className="btn-ghost flex items-center gap-1">
           <ChevronLeft size={16} />
           <span>Back</span>
@@ -51,6 +51,14 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
         </div>
         <div className="text-sm font-black text-[var(--accent)]">{getTotalProgress()}%</div>
       </header>
+
+      {/* Explanation banner — clears up that the map is a passive overview,
+          not a menu. Users were tapping nodes expecting to navigate. */}
+      <div className="mx-4 mb-5 p-3 rounded-xl bg-[var(--bg-card)] border border-[var(--border-color)] text-[11px] leading-relaxed text-[var(--text-secondary)]">
+        <p>
+          <span className="font-bold text-[var(--text-primary)]">Your grammar journey.</span> Cards are scheduled automatically based on what you've seen and how well you remember it. The pulsing node is where you are now — tap <span className="font-bold text-[var(--accent)]">Study</span> on the home screen to advance.
+        </p>
+      </div>
 
       {/* Linear path */}
       <div className="relative" style={{ paddingLeft: '40px' }}>
@@ -111,22 +119,29 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
                   style={{ left: '-30px', top: '18px' }}
                 />
 
-                {/* Node card */}
+                {/* Node card — view-only, not tappable. The "Now" pill on the
+                    active node makes the current position unmistakable. */}
                 <div
                   className={`w-full text-left rounded-xl p-4 transition-all relative ${
                     !unlocked
                       ? 'bg-[var(--bg-inset)] border border-[var(--border-color)]'
                       : isCurrent
-                        ? 'stat-card border-[var(--text-muted)]/30'
+                        ? 'stat-card border-[var(--accent)]/50 shadow-md shadow-[var(--accent)]/10'
                         : isComplete
                           ? 'stat-card border-emerald-500/20'
                           : 'stat-card'
                   }`}
                 >
+                  {/* "Now" pill on the currently-active node */}
+                  {isCurrent && (
+                    <span className="absolute -top-2 left-3 px-2 py-0.5 rounded-md bg-[var(--accent)] text-white text-[9px] font-bold uppercase tracking-widest shadow-md shadow-[var(--accent)]/30">
+                      Now
+                    </span>
+                  )}
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      {!unlocked && <Lock size={14} className="text-[var(--text-faint)]" />}
-                      {isComplete && <Check size={14} className="text-emerald-500" />}
+                    <div className="flex items-center gap-3 min-w-0">
+                      {!unlocked && <Lock size={14} className="text-[var(--text-faint)] shrink-0" />}
+                      {isComplete && <Check size={14} className="text-emerald-500 shrink-0" />}
                       <span className={`font-bold text-sm ${
                         !unlocked ? 'text-[var(--text-muted)]' : 'text-[var(--text-primary)]'
                       }`}>
@@ -134,7 +149,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
                       </span>
                     </div>
                     {unlocked && (
-                      <span className={`text-xs font-bold ${
+                      <span className={`text-xs font-bold shrink-0 ml-2 ${
                         isComplete ? 'text-emerald-500' : percent > 0 ? 'text-[var(--text-primary)]' : 'text-[var(--text-muted)]'
                       }`}>
                         {graduated}/{total}

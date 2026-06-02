@@ -446,7 +446,8 @@ const PopoverPortal: React.FC<{
         `}
       />
 
-      {/* Favorite star (top-right) */}
+      {/* Favorite button — pill-style with label, top-right. Far more visible
+          than a bare icon so users actually realise they can save words. */}
       <button
         onClick={(e) => {
           e.stopPropagation();
@@ -460,17 +461,19 @@ const PopoverPortal: React.FC<{
           setIsFav(prev => !prev);
         }}
         aria-label={isFav ? 'Remove from favourites' : 'Add to favourites'}
-        className={`absolute top-2 right-2 p-1 rounded transition-colors ${
+        className={`absolute top-2 right-2 flex items-center gap-1 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider transition-all active:scale-95 ${
           isFav
-            ? 'text-yellow-400 hover:text-yellow-500'
-            : 'text-[var(--text-muted)] hover:text-yellow-400'
+            ? 'bg-yellow-400/15 text-yellow-600 border border-yellow-400/40'
+            : 'bg-[var(--bg-inset)] text-[var(--text-muted)] border border-[var(--border-color)] hover:border-yellow-400/40 hover:text-yellow-500'
         }`}
       >
-        <Star size={18} fill={isFav ? 'currentColor' : 'none'} />
+        <Star size={12} fill={isFav ? 'currentColor' : 'none'} />
+        <span>{isFav ? 'Saved' : 'Save'}</span>
       </button>
 
-      {/* Translation — uses lemma definition when available and sanitized */}
-      <div className="text-base font-bold text-[var(--text-primary)] leading-snug pr-7">
+      {/* Translation — uses lemma definition when available and sanitized.
+          pr-16 leaves room for the Save pill on the right. */}
+      <div className="text-base font-bold text-[var(--text-primary)] leading-snug pr-16">
         {displayDefinition}
       </div>
 

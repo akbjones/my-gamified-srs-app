@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { QuestCard, MasteryMap, UserStats, Language, LANGUAGE_CONFIG } from '../types';
 import type { AudioSpeed } from '../services/storageService';
 import { MAIN_PATH, getNodeName } from '../data/topicConfig';
@@ -44,6 +44,10 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   // Per-question state: whether the user has peeked at the English translation.
   // Resets whenever the current card changes.
   const [translationRevealed, setTranslationRevealed] = useState(false);
+  // Tracks which card we've already triggered autoplay for. Prevents
+  // re-firing on phase changes (question → reveal → question via rerate)
+  // which used to interrupt and restart audio mid-listen.
+  const lastAutoplayedCardId = useRef<string | null>(null);
 
   // Pre-select 2 cards per node (35 nodes × 2 = 70 total cards)
   const placementCards = useMemo(() => selectPlacementCards(deck), [deck]);
@@ -58,13 +62,28 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   const currentCard = placementCards[nodeIndex]?.[cardIndex];
   const nudge = currentNode ? getGrammarNudge(currentNode.id, lang) : '';
 
-  // Auto-play audio when a new question appears (not on reveal)
+  // Auto-play audio — fires AT MOST ONCE per card (tracked by card id).
+  // This is the bug fix for "audio randomly stops and restarts during the test":
+  // the previous version put `phase` in the deps + a cleanup that always called
+  // stopAudio(), so EVERY phase transition (question → reveal, reveal → question
+  // via rerate) interrupted and restarted the audio. Now the ref guard ensures
+  // we never auto-trigger the same card's audio twice, and the cleanup only
+  // fires when the actual card changes (nodeIndex/cardIndex).
   useEffect(() => {
-    if (phase === 'question' && currentCard && autoPlayAudio) {
-      playCardAudio(currentCard.audio, currentCard.target, lang, audioSpeed, googleTtsApiKey);
-    }
-    return () => { stopAudio(); };
+    if (phase !== 'question' || !currentCard || !autoPlayAudio) return;
+    if (lastAutoplayedCardId.current === currentCard.id) return;
+    lastAutoplayedCardId.current = currentCard.id;
+    playCardAudio(currentCard.audio, currentCard.target, lang, audioSpeed, googleTtsApiKey);
+    // No cleanup here — audio is allowed to keep playing while the user reads
+    // the translation in the reveal phase.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, nodeIndex, cardIndex]);
+
+  // Stop audio when leaving the card entirely (new card or component unmount).
+  // Separate effect so phase changes within the same card don't trigger stop.
+  useEffect(() => {
+    return () => { stopAudio(); };
+  }, [nodeIndex, cardIndex]);
 
   // Reset the "translation peeked" state whenever a new question loads
   useEffect(() => {

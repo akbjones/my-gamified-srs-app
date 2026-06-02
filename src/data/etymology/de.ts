@@ -143,7 +143,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
     word: 'Doppelgänger',
     origin: 'German doppel + Gänger',
     cognates: ['doppelganger'],
-    note: 'Literally "double-walker" — coined by writer Jean Paul in 1796, entered English in 1851.',
+    note: 'Literally "double-walker" — coined by writer Jean Paul in his 1796 novel Siebenkäs to describe the eerie experience of meeting your own twin.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],
   },

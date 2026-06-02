@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { VocabMap, VocabEntry, Language, ConjugationTable } from '../types';
 import { isCommonWord } from '../services/vocabService';
-import { ChevronLeft, Search, Clock, AlertTriangle, ChevronDown } from 'lucide-react';
+import { ChevronLeft, Search, Clock, AlertTriangle, ChevronDown, Download } from 'lucide-react';
 import type { DictEntry } from '../data/dictionary/es';
 import { conjugate as conjugateEs } from '../data/conjugation/es';
 import { conjugate as conjugateIt } from '../data/conjugation/it';
@@ -318,6 +318,25 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
             {allEntries.length} words encountered
           </p>
         </div>
+        {/* Export — opens a printable HTML page; user saves as PDF via browser */}
+        {allEntries.length > 0 && (
+          <button
+            onClick={() => {
+              const exportable = allEntries.map(e => ({
+                ...e,
+                translation: getTranslation(e),
+                ipa: e.ipa,
+                pos: getPos(e),
+              }));
+              import('../services/vocabExportService').then(m => m.exportVocabList(exportable, language));
+            }}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[10px] font-bold uppercase tracking-wider border border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40 active:scale-95 transition-all"
+            title="Export as printable PDF (via browser print dialog)"
+          >
+            <Download size={12} />
+            <span>Export</span>
+          </button>
+        )}
       </div>
 
       {/* Search */}

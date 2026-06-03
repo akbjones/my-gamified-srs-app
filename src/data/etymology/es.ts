@@ -294,7 +294,7 @@ export const SPANISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'siesta': {
     word: 'siesta',
     origin: 'Latin sexta (hora)',
-    cognates: ['siesta'],
+    cognates: [],
     note: 'Literally "the sixth hour" — Romans rested at the sixth hour (noon). Entered English directly in 1655.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'rae'],
@@ -646,7 +646,7 @@ export const SPANISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'color': {
     word: 'color',
     origin: 'Latin color',
-    cognates: ['color'],
+    cognates: [],
     note: 'Same Latin root as English "color" — itself built on a verb "to cover, conceal". Color was originally seen as a covering layer over things.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'rae'],
@@ -902,7 +902,7 @@ export const SPANISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'playa': {
     word: 'playa',
     origin: 'Latin plagia',
-    cognates: ['playa'],
+    cognates: [],
     note: 'From Latin plagia (flat coastal area) — itself from Greek plagios (sloping). English borrowed "playa" directly from Spanish for flat coastal land.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'rae'],

@@ -49,7 +49,7 @@ export const WELSH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'corgi': {
     word: 'corgi',
     origin: 'Welsh cor + ci',
-    cognates: ['corgi'],
+    cognates: [],
     note: 'Literally "dwarf dog" in Welsh — originally bred low to the ground to nip cattle heels in Welsh fields without being kicked by the herd.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -113,7 +113,7 @@ export const WELSH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'flannel': {
     word: 'flannel',
     origin: 'Welsh gwlanen',
-    cognates: ['flannel'],
+    cognates: [],
     note: 'Borrowed from Welsh "gwlanen" (woolen cloth) in the 1500s — Welsh wool industry dominated medieval English trade.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -121,7 +121,7 @@ export const WELSH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'penguin': {
     word: 'penguin',
     origin: 'Welsh pen gwyn',
-    cognates: ['penguin'],
+    cognates: [],
     note: 'Possibly from Welsh "pen gwyn" (white head) — originally referred to the now-extinct great auk of the North Atlantic.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -225,7 +225,7 @@ export const WELSH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'crag': {
     word: 'crag',
     origin: 'Brittonic Celtic creic',
-    cognates: ['crag'],
+    cognates: [],
     note: 'Originally meant "steep rocky outcrop" — Snowdonia\'s skyline is built from them, the word still echoes in northern British place names.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],

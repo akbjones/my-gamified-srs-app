@@ -22,6 +22,22 @@ interface ListenModeProps {
  * Minimal controls: pause, skip forward/back, close.
  */
 const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, googleTtsApiKey, onExit }) => {
+  // Shuffle the cards on mount so users hear them in a fresh random order
+  // every time. Cycle through the whole shuffled list before reshuffling so
+  // no card repeats until everything's been heard once. Skip-back uses a
+  // separate history stack so going backwards retraces the actual play
+  // order, not just the shuffled index.
+  const shuffledRef = useRef<QuestCard[]>([]);
+  if (shuffledRef.current.length !== cards.length) {
+    const arr = [...cards];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    shuffledRef.current = arr;
+  }
+  const playList = shuffledRef.current;
+
   const [idx, setIdx] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [showTranslation, setShowTranslation] = useState(false);
@@ -30,7 +46,7 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
   const playingForCardId = useRef<string | null>(null);
   const timerRef = useRef<number | null>(null);
 
-  const card = cards[idx];
+  const card = playList[idx];
 
   const clearTimer = () => {
     if (timerRef.current !== null) {
@@ -50,14 +66,14 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
         clearTimer();
         timerRef.current = window.setTimeout(() => {
           setShowTranslation(false);
-          setIdx(i => (i + 1) % cards.length);
+          setIdx(i => (i + 1) % playList.length);
         }, 1800);
       }
     } catch {
       // Audio failed — skip to next so we don't get stuck.
       if (playingForCardId.current === card.id && isPlaying) {
         clearTimer();
-        timerRef.current = window.setTimeout(() => setIdx(i => (i + 1) % cards.length), 800);
+        timerRef.current = window.setTimeout(() => setIdx(i => (i + 1) % playList.length), 800);
       }
     }
   }, [card, language, audioSpeed, googleTtsApiKey, isPlaying, cards.length]);
@@ -146,7 +162,7 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
       {/* Controls */}
       <div className="flex items-center justify-center gap-4 pt-6">
         <button
-          onClick={() => { setShowTranslation(false); setIdx(i => (i - 1 + cards.length) % cards.length); }}
+          onClick={() => { setShowTranslation(false); setIdx(i => (i - 1 + playList.length) % playList.length); }}
           className="p-3 rounded-full border border-[var(--border-color)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40 active:scale-95 transition-all"
           aria-label="Previous"
         >
@@ -160,7 +176,7 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
           {isPlaying ? <Pause size={24} /> : <Play size={24} />}
         </button>
         <button
-          onClick={() => { setShowTranslation(false); setIdx(i => (i + 1) % cards.length); }}
+          onClick={() => { setShowTranslation(false); setIdx(i => (i + 1) % playList.length); }}
           className="p-3 rounded-full border border-[var(--border-color)] text-[var(--text-secondary)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40 active:scale-95 transition-all"
           aria-label="Next"
         >

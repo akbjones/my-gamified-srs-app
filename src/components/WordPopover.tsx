@@ -249,6 +249,14 @@ const PopoverPortal: React.FC<{
   // Etymology expand/collapse — collapsed by default so the entry shows up
   // as a small tab the user opens deliberately.
   const [etymologyExpanded, setEtymologyExpanded] = useState(false);
+  // Local mirror of etymology favorite state so the Save toggle flips
+  // immediately on tap without needing to close/reopen the modal.
+  const [etyFavSnapshot, setEtyFavSnapshot] = useState(false);
+  useEffect(() => {
+    if (etymologyExpanded) {
+      try { setEtyFavSnapshot(isEtymologyFavorited(rawToken, language)); } catch {}
+    }
+  }, [etymologyExpanded, rawToken, language]);
   useEffect(() => {
     setIsFav(isFavorited(rawToken, language));
   }, [rawToken, language]);
@@ -719,7 +727,6 @@ const PopoverPortal: React.FC<{
       {etymologyExpanded && (() => {
         const ety = lookupEtymology(rawToken, language);
         if (!ety) return null;
-        const etyFavd = isEtymologyFavorited(rawToken, language);
         return (
           <div
             className="fixed inset-0 z-[10001] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in cursor-pointer"
@@ -731,27 +738,27 @@ const PopoverPortal: React.FC<{
             >
               <button
                 onClick={() => {
-                  toggleEtymologyFavorite(
-                    rawToken,
-                    language,
-                    ety.origin,
-                    ety.note,
-                    ety.cognates,
-                    ety.sources,
-                    sentence,
-                  );
-                  // Force re-render by toggling expanded then back
-                  setEtymologyExpanded(false);
-                  setTimeout(() => setEtymologyExpanded(true), 0);
+                  try {
+                    toggleEtymologyFavorite(
+                      rawToken,
+                      language,
+                      ety.origin,
+                      ety.note,
+                      ety.cognates,
+                      ety.sources,
+                      sentence,
+                    );
+                    setEtyFavSnapshot(prev => !prev);
+                  } catch (e) { console.error('toggleEtymologyFavorite failed:', e); }
                 }}
                 className={`absolute top-2 right-2 flex items-center gap-1 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider transition-all active:scale-95 ${
-                  etyFavd
+                  etyFavSnapshot
                     ? 'bg-violet-500/20 text-violet-700 dark:text-violet-300 border border-violet-500/50'
                     : 'bg-white/80 dark:bg-[#06030d] text-violet-600 dark:text-violet-400 border border-violet-500/30 hover:border-violet-500/60'
                 }`}
               >
-                <Star size={11} fill={etyFavd ? 'currentColor' : 'none'} />
-                <span>{etyFavd ? 'Saved' : 'Save'}</span>
+                <Star size={11} fill={etyFavSnapshot ? 'currentColor' : 'none'} />
+                <span>{etyFavSnapshot ? 'Saved' : 'Save'}</span>
               </button>
               <div className="flex items-center gap-1.5 mb-3 justify-center">
                 <BookText size={14} className="text-violet-500" />

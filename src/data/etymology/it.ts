@@ -70,7 +70,7 @@ export const ITALIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'tempo': {
     word: 'tempo',
     origin: 'Latin tempus',
-    cognates: ['tempo', 'temporal', 'contemporary'],
+    cognates: ['temporal', 'contemporary'],
     note: 'Tempus covered both "time" and "weather" in Latin — Italian kept both senses.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -142,7 +142,7 @@ export const ITALIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'pizza': {
     word: 'pizza',
     origin: 'Italian pizza',
-    cognates: ['pizza'],
+    cognates: [],
     note: 'Possibly from Lombardic "bizzo" (mouthful) or Greek "pitta" (flatbread) — debated, both reach back over 1000 years.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -174,7 +174,7 @@ export const ITALIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'cappuccino': {
     word: 'cappuccino',
     origin: 'Italian cappuccio (hood)',
-    cognates: ['cappuccino'],
+    cognates: [],
     note: 'Named after the Capuchin monk order — the coffee\'s color matched their distinctive hooded robes.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -182,7 +182,7 @@ export const ITALIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'gondola': {
     word: 'gondola',
     origin: 'Venetian dialect',
-    cognates: ['gondola'],
+    cognates: [],
     note: 'The Venetian boat — origin debated, possibly Greek "kondoura" (small vessel). Meaning later expanded to cable cars and balloon cabins.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -198,7 +198,7 @@ export const ITALIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'influenza': {
     word: 'influenza',
     origin: 'Italian influenza (influence)',
-    cognates: ['influenza', 'influence'],
+    cognates: ['influence'],
     note: 'Medieval Italians thought epidemics came from the "influence" of unfavorable stars — the disease kept the name.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -206,7 +206,7 @@ export const ITALIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'soprano': {
     word: 'soprano',
     origin: 'Italian sopra (above)',
-    cognates: ['soprano'],
+    cognates: [],
     note: 'The highest voice in classical music — literally "the upper one". Italian dominated opera, hence the global music vocabulary.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -214,7 +214,7 @@ export const ITALIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'spaghetti': {
     word: 'spaghetti',
     origin: 'Italian spago + -etti',
-    cognates: ['spaghetti'],
+    cognates: [],
     note: 'Literally "little strings" — diminutive of spago (string). Entered English in 1849 and never left.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -222,7 +222,7 @@ export const ITALIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'diva': {
     word: 'diva',
     origin: 'Latin diva (goddess)',
-    cognates: ['diva', 'divine'],
+    cognates: ['divine'],
     note: 'Originally meant "goddess" — applied to celebrated opera singers in the 1800s, now any star with grand presence.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -262,7 +262,7 @@ export const ITALIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'fresco': {
     word: 'fresco',
     origin: 'Germanic frisk',
-    cognates: ['fresh', 'fresco'],
+    cognates: ['fresh'],
     note: 'Means "fresh, cool" — gave the art technique "fresco" (painting on fresh wet plaster) and English "fresh" itself.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -1150,7 +1150,7 @@ export const ITALIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'camera': {
     word: 'camera',
     origin: 'Latin camera',
-    cognates: ['camera', 'chamber'],
+    cognates: ['chamber'],
     note: 'Same Latin root as English "camera" and "chamber" — camera meant "vaulted room". The photo device kept the name from camera obscura (dark room).',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'treccani'],

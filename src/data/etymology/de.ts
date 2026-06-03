@@ -62,7 +62,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'Hand': {
     word: 'Hand',
     origin: 'Germanic handuz',
-    cognates: ['hand'],
+    cognates: [],
     note: 'Same Germanic root as English "hand" — Latin used manus instead, so the word splits at the Roman/Germanic border.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],
@@ -78,7 +78,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'Kindergarten': {
     word: 'Kindergarten',
     origin: 'German Kinder + Garten',
-    cognates: ['kindergarten'],
+    cognates: [],
     note: 'Literally "children\'s garden" — coined in 1840 by Friedrich Fröbel, adopted directly by English.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],
@@ -134,7 +134,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'Auto': {
     word: 'Auto',
     origin: 'Greek autós (self) via French',
-    cognates: ['automobile', 'auto'],
+    cognates: ['automobile'],
     note: 'Short for Automobil — coined in 1880s from Greek "self" + Latin "moving" (a self-moving vehicle).',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],
@@ -150,7 +150,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'Schadenfreude': {
     word: 'Schadenfreude',
     origin: 'German Schaden + Freude',
-    cognates: ['schadenfreude'],
+    cognates: [],
     note: 'Literally "harm-joy" — pleasure at another\'s misfortune. Compounding two simple words into a precise emotion is a German specialty.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],
@@ -174,7 +174,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'Hamburger': {
     word: 'Hamburger',
     origin: 'German Hamburg + -er',
-    cognates: ['hamburger'],
+    cognates: [],
     note: 'Literally "of Hamburg" — German immigrants brought the meat dish to America in the 1800s. The "-burger" part now stands alone.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],
@@ -182,7 +182,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'Wanderlust': {
     word: 'Wanderlust',
     origin: 'German wandern + Lust',
-    cognates: ['wanderlust'],
+    cognates: [],
     note: 'Literally "wander-desire" — the urge to travel. Lust here means "desire" without sexual implications, as it once did in English.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],
@@ -190,7 +190,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'Zeitgeist': {
     word: 'Zeitgeist',
     origin: 'German Zeit + Geist',
-    cognates: ['zeitgeist'],
+    cognates: [],
     note: 'Literally "time-spirit" — the defining mood of an era. Popularized by Hegel in early 1800s philosophy.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],
@@ -198,7 +198,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'Strudel': {
     word: 'Strudel',
     origin: 'German Strudel (whirlpool)',
-    cognates: ['strudel'],
+    cognates: [],
     note: 'Literally "whirlpool" — named for the layered swirl of the dough wrapped around fillings.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],
@@ -206,7 +206,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'Blitzkrieg': {
     word: 'Blitzkrieg',
     origin: 'German Blitz + Krieg',
-    cognates: ['blitzkrieg'],
+    cognates: [],
     note: 'Literally "lightning war" — coined in WWII for the rapid German military tactic. "Blitz" alone became the London air raids in 1940.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],
@@ -214,7 +214,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'Ersatz': {
     word: 'Ersatz',
     origin: 'German ersetzen (to replace)',
-    cognates: ['ersatz'],
+    cognates: [],
     note: 'Literally "replacement" — used for substitute products during WWI rationing. Now means any cheap imitation.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],
@@ -374,7 +374,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'Autobahn': {
     word: 'Autobahn',
     origin: 'German Auto + Bahn',
-    cognates: ['autobahn'],
+    cognates: [],
     note: 'Literally "car-track" — coined in the 1920s when Germany built the world\'s first dedicated motor road network. Bahn meant any cleared track.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],
@@ -470,7 +470,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'Wind': {
     word: 'Wind',
     origin: 'Germanic windaz',
-    cognates: ['wind'],
+    cognates: [],
     note: 'Same Germanic root as English "wind" — and the same Indo-European wind-root also gave Latin ventus, hence French vent and Italian vento.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],
@@ -550,7 +550,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'Name': {
     word: 'Name',
     origin: 'Germanic namō',
-    cognates: ['name'],
+    cognates: [],
     note: 'Same Germanic root as English "name" — and same ancient Indo-European source as Latin nomen, Russian имя, Sanskrit nāma. Universally old.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],
@@ -614,7 +614,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'Problem': {
     word: 'Problem',
     origin: 'Greek problēma via Latin',
-    cognates: ['problem'],
+    cognates: [],
     note: 'Built on Greek pro- (forward) + ballein (to throw) — literally "something thrown forward" for consideration. Same root as English "problem".',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],
@@ -1038,7 +1038,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'Arm': {
     word: 'Arm',
     origin: 'Germanic armaz',
-    cognates: ['arm'],
+    cognates: [],
     note: 'Same Germanic root as English "arm" — and same ancient Indo-European source as Latin armus (shoulder) and Sanskrit īrma.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],
@@ -1054,7 +1054,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'Finger': {
     word: 'Finger',
     origin: 'Germanic fingraz',
-    cognates: ['finger'],
+    cognates: [],
     note: 'Same Germanic root as English "finger" — origin debated, possibly built on the same root as "five" since fingers were the original counters.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'duden'],

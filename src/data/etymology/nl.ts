@@ -6,7 +6,7 @@ export const DUTCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'water': {
     word: 'water',
     origin: 'Germanic watōr',
-    cognates: ['water'],
+    cognates: [],
     note: 'Same Germanic root as English "water" — Dutch and English split off from one West Germanic dialect.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -70,7 +70,7 @@ export const DUTCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'apartheid': {
     word: 'apartheid',
     origin: 'Afrikaans/Dutch apart + heid',
-    cognates: ['apartheid'],
+    cognates: [],
     note: 'Literally "apart-ness" — coined in South African Afrikaans, entered English directly in the 1940s.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -174,7 +174,7 @@ export const DUTCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'spook': {
     word: 'spook',
     origin: 'Dutch spook',
-    cognates: ['spook'],
+    cognates: [],
     note: 'Old Dutch word for "ghost, apparition" — fits the foggy marsh landscapes of the Low Countries where eerie tales were born around peat fires.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -182,7 +182,7 @@ export const DUTCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'boom': {
     word: 'boom',
     origin: 'Germanic baumaz',
-    cognates: ['boom'],
+    cognates: [],
     note: 'Dutch for "tree" — same Germanic root as German Baum. Sailors transferred it to ship spars carved from single trunks, then to crane arms.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -206,7 +206,7 @@ export const DUTCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'cruise': {
     word: 'cruise',
     origin: 'Dutch kruisen (to cross)',
-    cognates: ['cruise'],
+    cognates: [],
     note: 'From kruisen (to cross) — Dutch patrol ships of the Republic zigzagged the seas in cross-pattern routes, hence the verb for sea-patrol.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -222,7 +222,7 @@ export const DUTCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'yankee': {
     word: 'yankee',
     origin: 'Dutch Jan Kees (nickname)',
-    cognates: ['yankee'],
+    cognates: [],
     note: 'Debated origin — most likely a nickname meaning "John Cheese" that Dutch New Yorkers used for English settlers in the 1600s.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -238,7 +238,7 @@ export const DUTCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'polder': {
     word: 'polder',
     origin: 'Middle Dutch polre',
-    cognates: ['polder'],
+    cognates: [],
     note: 'A pocket of land reclaimed from the sea by dykes and pumps — Dutch coastal engineers invented the technique in the 1100s.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -302,7 +302,7 @@ export const DUTCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'school': {
     word: 'school',
     origin: 'Greek skholē via Latin',
-    cognates: ['school', 'scholar'],
+    cognates: ['scholar'],
     note: 'The Greek root originally meant "leisure" — only those with free time could afford to study, hence the European word for school.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -406,7 +406,7 @@ export const DUTCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'week': {
     word: 'week',
     origin: 'Germanic wikō',
-    cognates: ['week'],
+    cognates: [],
     note: 'Same Germanic root as English "week" — originally meant "change, turn", since the week was the changing cycle of work days.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -470,7 +470,7 @@ export const DUTCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'wind': {
     word: 'wind',
     origin: 'Germanic windaz',
-    cognates: ['wind'],
+    cognates: [],
     note: 'Same Germanic root as English "wind" — and the same Indo-European wind-root also gave Latin ventus, hence French vent and Italian vento.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -758,7 +758,7 @@ export const DUTCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'bed': {
     word: 'bed',
     origin: 'Germanic badją',
-    cognates: ['bed'],
+    cognates: [],
     note: 'Same Germanic root as English "bed" — origin uncertain, possibly from an ancient root meaning "to dig" since early Germanic beds were dug-out pallets.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -886,7 +886,7 @@ export const DUTCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'fruit': {
     word: 'fruit',
     origin: 'Latin fructus via French',
-    cognates: ['fruit', 'fructose'],
+    cognates: ['fructose'],
     note: 'Borrowed from French fruit in the medieval period — same Latin root as English "fruit". Dutch replaced its native ooft with this Romance loan.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -1038,7 +1038,7 @@ export const DUTCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'arm': {
     word: 'arm',
     origin: 'Germanic armaz',
-    cognates: ['arm'],
+    cognates: [],
     note: 'Same Germanic root as English "arm" — and same ancient Indo-European source as Latin armus (shoulder) and Sanskrit īrma.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],

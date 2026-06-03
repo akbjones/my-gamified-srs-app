@@ -776,29 +776,55 @@ const App: React.FC = () => {
             if (newAvailableInDeck === 0) return null;
             return (
               <div className="w-full mb-2.5 p-3 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)]">
-                <div className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-2 text-center">
-                  {hasCards ? 'Or do a bonus session' : 'Want more?'}
+                <div className="text-xs font-bold uppercase tracking-wide text-[var(--text-secondary)] mb-2 text-center">
+                  Add more cards
                 </div>
-                <div className="flex items-stretch gap-2">
+                {/* −5 / number / +5 row with a Start button below — gives the
+                    user both granular control and a manual entry. */}
+                <div className="flex items-stretch gap-2 mb-2">
+                  <button
+                    onClick={() => {
+                      const input = document.getElementById('study-more-count') as HTMLInputElement;
+                      if (!input) return;
+                      const v = parseInt(input.value, 10) || 10;
+                      input.value = String(Math.max(1, v - 5));
+                    }}
+                    className="w-12 rounded-xl border-2 border-[var(--border-color)] text-[var(--text-muted)] font-bold hover:border-[var(--border-hover)] hover:text-[var(--text-primary)] active:scale-95 transition"
+                    aria-label="Decrease by 5"
+                  >
+                    −5
+                  </button>
                   <input
                     id="study-more-count"
                     type="number"
                     defaultValue={10}
                     min={1}
                     max={100}
-                    className="w-20 rounded-xl bg-[var(--bg-inset)] border-2 border-[var(--border-color)] text-center text-xl font-extrabold font-mono text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)]"
+                    className="flex-1 rounded-xl bg-[var(--bg-inset)] border-2 border-[var(--border-color)] text-center text-2xl font-extrabold font-mono text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)] py-2"
                   />
                   <button
                     onClick={() => {
                       const input = document.getElementById('study-more-count') as HTMLInputElement;
-                      const count = input ? parseInt(input.value) || 10 : 10;
-                      handleStartSession(count);
+                      if (!input) return;
+                      const v = parseInt(input.value, 10) || 10;
+                      input.value = String(Math.min(100, v + 5));
                     }}
-                    className="flex-1 py-3 rounded-xl bg-[var(--accent)]/15 border-2 border-[var(--accent)]/40 text-[var(--accent)] font-extrabold text-sm hover:bg-[var(--accent)]/20 active:scale-95 transition"
+                    className="w-12 rounded-xl border-2 border-[var(--border-color)] text-[var(--text-muted)] font-bold hover:border-[var(--border-hover)] hover:text-[var(--text-primary)] active:scale-95 transition"
+                    aria-label="Increase by 5"
                   >
-                    Extra new cards
+                    +5
                   </button>
                 </div>
+                <button
+                  onClick={() => {
+                    const input = document.getElementById('study-more-count') as HTMLInputElement;
+                    const count = input ? parseInt(input.value, 10) || 10 : 10;
+                    handleStartSession(count);
+                  }}
+                  className="w-full py-3 rounded-xl bg-[var(--accent)]/15 border-2 border-[var(--accent)]/40 text-[var(--accent)] font-extrabold text-sm hover:bg-[var(--accent)]/20 active:scale-95 transition"
+                >
+                  Start session
+                </button>
               </div>
             );
           })()}
@@ -811,11 +837,10 @@ const App: React.FC = () => {
             return (
               <button
                 onClick={() => setView('LISTEN')}
-                className="w-full mb-3 -mt-1 py-2.5 flex items-center justify-center gap-2 text-[12px] font-bold text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+                className="w-full mb-2.5 py-3 flex items-center justify-center gap-2 text-sm font-bold text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
               >
-                <Volume2 size={14} />
+                <Volume2 size={16} />
                 <span>Listen passively to cards you've seen</span>
-                <span className="text-[10px] opacity-60">· {playableCount}</span>
               </button>
             );
           })()}

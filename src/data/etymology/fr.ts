@@ -150,7 +150,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'café': {
     word: 'café',
     origin: 'Italian caffè, ult. Arabic qahwa',
-    cognates: ['coffee', 'café'],
+    cognates: ['coffee'],
     note: 'From the Arabic word for "coffee" — carried by Ottoman traders into Italian and French. English took both "café" and "coffee" from this journey.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'cnrtl'],
@@ -174,7 +174,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'chef': {
     word: 'chef',
     origin: 'Latin caput (head)',
-    cognates: ['chief', 'chef', 'capital'],
+    cognates: ['chief', 'capital'],
     note: 'The "head" person — in cooking, the chef de cuisine is the head of the kitchen. Same Latin root as "capital".',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'cnrtl'],
@@ -182,7 +182,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'restaurant': {
     word: 'restaurant',
     origin: 'French restaurer (to restore)',
-    cognates: ['restaurant', 'restore'],
+    cognates: ['restore'],
     note: 'First used in 1765 for a meat broth that "restored" strength — the word eventually shifted from the food to the place serving it.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'cnrtl'],
@@ -190,7 +190,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'boutique': {
     word: 'boutique',
     origin: 'Greek apothēkē via Provençal',
-    cognates: ['boutique', 'apothecary'],
+    cognates: ['apothecary'],
     note: 'From a Greek word meaning "storeroom" — the same root gave English "apothecary" (the pharmacist storing remedies).',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'cnrtl'],
@@ -198,7 +198,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'ballet': {
     word: 'ballet',
     origin: 'Italian balletto via French',
-    cognates: ['ballet'],
+    cognates: [],
     note: 'Literally "little dance" in Italian — French courts adopted Italian dance styles, then exported the word back out.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'cnrtl'],
@@ -206,7 +206,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'cliché': {
     word: 'cliché',
     origin: 'French clicher (to click)',
-    cognates: ['cliché'],
+    cognates: [],
     note: 'Printers\' slang for a stereotype plate — named for the click sound when molten metal hit the matrix. The reuse made it "stereotyped".',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'cnrtl'],
@@ -262,7 +262,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'argent': {
     word: 'argent',
     origin: 'Latin argentum',
-    cognates: ['Argentina', 'argent'],
+    cognates: ['Argentina'],
     note: 'Means "silver" first, "money" by extension. Argentina was named for the silver river the Spanish hoped to find there.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'cnrtl'],
@@ -294,7 +294,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'champagne': {
     word: 'champagne',
     origin: 'French Champagne (region)',
-    cognates: ['champagne'],
+    cognates: [],
     note: 'Named for the Champagne region of northeast France — the sparkling style was perfected there in the 1600s by Dom Pérignon and other Benedictine monks.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'cnrtl'],
@@ -350,7 +350,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'France': {
     word: 'France',
     origin: 'Latin Francia',
-    cognates: ['France'],
+    cognates: [],
     note: 'The land was renamed for the Franks, the Germanic tribe who took over after Rome — their name meant "free people". Earlier Romans called it Gallia.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'cnrtl'],
@@ -438,7 +438,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'manger': {
     word: 'manger',
     origin: 'Latin manducare',
-    cognates: ['mange', 'manger'],
+    cognates: ['mange'],
     note: 'Same Latin root as English "manger" (literally "the eating-place") and "mange" (dog skin disease, named for the eating-away). Originally "to chew".',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'cnrtl'],
@@ -454,7 +454,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'vent': {
     word: 'vent',
     origin: 'Latin ventus',
-    cognates: ['vent', 'ventilation'],
+    cognates: ['ventilation'],
     note: 'Same Latin root as English "vent" and "ventilation" — the same Indo-European wind-root also gave English "wind" via Germanic.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'cnrtl'],
@@ -598,7 +598,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'question': {
     word: 'question',
     origin: 'Latin quaestio',
-    cognates: ['question', 'quest', 'inquire'],
+    cognates: ['quest', 'inquire'],
     note: 'From Latin quaerere (to seek) — same root as English "quest" and "inquire". A question is literally "a seeking".',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'cnrtl'],
@@ -678,7 +678,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'table': {
     word: 'table',
     origin: 'Latin tabula',
-    cognates: ['table', 'tabular'],
+    cognates: ['tabular'],
     note: 'Same Latin root as English "table" and "tabular" — Latin tabula was a flat plank or board used for writing, gaming, or eating.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'cnrtl'],
@@ -862,7 +862,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'fruit': {
     word: 'fruit',
     origin: 'Latin fructus',
-    cognates: ['fruit', 'fructose'],
+    cognates: ['fructose'],
     note: 'Same Latin root as English "fruit" and "fructose" — Latin fructus meant "enjoyment, produce, yield", later narrowing to the edible reward of plants.',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'cnrtl'],
@@ -918,7 +918,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'orange': {
     word: 'orange',
     origin: 'Arabic nāranj',
-    cognates: ['orange'],
+    cognates: [],
     note: 'Same Arabic root as English "orange" — from Persian and ultimately Sanskrit nāraṅga. The "n-" was lost via "une norange" → "une orange".',
     verified: true,
     sources: ['wiktionary', 'etymonline', 'cnrtl'],

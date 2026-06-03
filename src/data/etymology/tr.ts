@@ -163,7 +163,7 @@ export const TURKISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'divan': {
     word: 'divan',
     origin: 'Persian dīvān',
-    cognates: ['divan'],
+    cognates: [],
     note: 'Originally meant "council room" in Persian — Ottoman bureaucrats sat on long cushioned benches, hence the modern "couch" sense.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -179,7 +179,7 @@ export const TURKISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'baklava': {
     word: 'baklava',
     origin: 'Turkish baklava',
-    cognates: ['baklava'],
+    cognates: [],
     note: 'Origin debated — possibly Turkic for "tied up in many layers". Perfected in Ottoman palace kitchens during the 1400s.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -211,7 +211,7 @@ export const TURKISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'pasha': {
     word: 'paşa',
     origin: 'Turkish paşa',
-    cognates: ['pasha'],
+    cognates: [],
     note: 'Ottoman title for high officials and generals — possibly from the Persian word for "emperor", or a Turkic contraction of "elder brother".',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -243,7 +243,7 @@ export const TURKISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'sultan': {
     word: 'sultan',
     origin: 'Arabic sulṭān',
-    cognates: ['sultan'],
+    cognates: [],
     note: 'Originally meant "power, authority" in Arabic — applied to Islamic rulers from the 1000s. The Ottoman line ruled as sultans for six centuries.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],

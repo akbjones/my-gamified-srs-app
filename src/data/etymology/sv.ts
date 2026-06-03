@@ -56,7 +56,7 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'fika': {
     word: 'fika',
     origin: 'Swedish slang reversal of kaffi',
-    cognates: ['fika'],
+    cognates: [],
     note: 'Coined as back-slang for kaffi (coffee) in early 1900s Sweden — now the daily coffee-and-cake pause that workplaces protect by law.',
     verified: true,
     sources: ['wiktionary'],
@@ -64,7 +64,7 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'ombudsman': {
     word: 'ombudsman',
     origin: 'Swedish ombud + man',
-    cognates: ['ombudsman'],
+    cognates: [],
     note: 'Literally "commission-man" — Sweden created the parliamentary office in 1809 as a public-complaint check on government authority.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -152,7 +152,7 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'tungsten': {
     word: 'tungsten',
     origin: 'Swedish tung + sten',
-    cognates: ['tungsten'],
+    cognates: [],
     note: 'Literally "heavy stone" — Swedish chemists named the element in 1781 for its remarkable density (heaviest naturally occurring metal at the time).',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -176,7 +176,7 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'ski': {
     word: 'ski',
     origin: 'Old Norse skíð',
-    cognates: ['ski'],
+    cognates: [],
     note: 'Originally meant "a split piece of wood" — Scandinavian hunters and trappers strapped wooden planks to their feet to cross deep winter snow.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -184,7 +184,7 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'saga': {
     word: 'saga',
     origin: 'Old Norse saga (story)',
-    cognates: ['saga'],
+    cognates: [],
     note: 'Originally a told story — same root as English "say" and "saw" (a proverb). Came to mean Norse hero-tales specifically.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -192,7 +192,7 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'troll': {
     word: 'troll',
     origin: 'Old Norse troll',
-    cognates: ['troll'],
+    cognates: [],
     note: 'Old Norse mythological giant — meaning expanded to any monstrous creature, then in internet age, "a disruptive commenter".',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -200,7 +200,7 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'viking': {
     word: 'viking',
     origin: 'Old Norse vikingr',
-    cognates: ['viking'],
+    cognates: [],
     note: 'Possibly from vík (bay, inlet) — "one who haunts the bays". The modern meaning was revived from old texts in the 1800s.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -208,7 +208,7 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'moped': {
     word: 'moped',
     origin: 'Swedish motor + pedaler',
-    cognates: ['moped'],
+    cognates: [],
     note: 'Swedish coinage from 1952 — combining "motor" and "pedals", since early mopeds needed pedaling to start.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -216,7 +216,7 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'gravlax': {
     word: 'gravlax',
     origin: 'Swedish grav + lax',
-    cognates: ['gravlax'],
+    cognates: [],
     note: 'Literally "grave salmon" — historically fishermen buried salt-cured salmon underground to ferment slightly. The name kept.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -224,7 +224,7 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'orienteering': {
     word: 'orienteering',
     origin: 'Swedish orientering',
-    cognates: ['orienteering'],
+    cognates: [],
     note: 'The sport of cross-country navigation by map and compass — invented in Sweden in the 1880s for military training.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -616,7 +616,7 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'problem': {
     word: 'problem',
     origin: 'Greek problēma via Latin',
-    cognates: ['problem'],
+    cognates: [],
     note: 'Built on Greek pro- (forward) + ballein (to throw) — literally "something thrown forward" for consideration. Same root as English "problem".',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -928,7 +928,7 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'salt': {
     word: 'salt',
     origin: 'Germanic saltą',
-    cognates: ['salt'],
+    cognates: [],
     note: 'Same Germanic root as English "salt" — and same ancient Indo-European source as Latin sal (giving Romance sal, sale, sel) and Russian соль.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -936,7 +936,7 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'citron': {
     word: 'citron',
     origin: 'Italian citrone via Latin',
-    cognates: ['citron'],
+    cognates: [],
     note: 'Same Latin root as English "citron" and "citrus" — Latin citrus originally meant a Mediterranean cedar-like tree, narrowed to the lemon.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -1008,7 +1008,7 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'son': {
     word: 'son',
     origin: 'Germanic sunuz',
-    cognates: ['son'],
+    cognates: [],
     note: 'Same Germanic root as English "son" — and same ancient Indo-European source as Sanskrit sūnu. The -son surname suffix preserves this everyday word.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -1040,7 +1040,7 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'arm': {
     word: 'arm',
     origin: 'Germanic armaz',
-    cognates: ['arm'],
+    cognates: [],
     note: 'Same Germanic root as English "arm" — and same ancient Indo-European source as Latin armus (shoulder) and Sanskrit īrma.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -1056,7 +1056,7 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'finger': {
     word: 'finger',
     origin: 'Germanic fingraz',
-    cognates: ['finger'],
+    cognates: [],
     note: 'Same Germanic root as English "finger" — origin debated, possibly built on the same root as "five" since fingers were the original counters.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],

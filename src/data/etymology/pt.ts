@@ -222,7 +222,7 @@ export const PORTUGUESE_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'banana': {
     word: 'banana',
     origin: 'West African (likely Wolof)',
-    cognates: ['banana'],
+    cognates: [],
     note: 'Portuguese sailors brought back the West African (likely Wolof) word along with the fruit in the 1500s — both spread through their Atlantic colonies.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -318,7 +318,7 @@ export const PORTUGUESE_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'samba': {
     word: 'samba',
     origin: 'Bantu (likely Kimbundu semba)',
-    cognates: ['samba'],
+    cognates: [],
     note: 'Brought to Brazil by enslaved Africans from Angola — likely from Kimbundu semba (a navel-bump dance move). Officially named a Brazilian genre in 1916.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],

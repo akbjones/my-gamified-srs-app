@@ -15,14 +15,22 @@ import WordTileChallenge from './WordTileChallenge';
  *  entry. Returns both the cleaned word (no punctuation) and the entry.
  *  Used to surface a card-level "Etymology · word" button at the top of
  *  the card so the user discovers etymology without first having to tap
- *  individual words. */
+ *  individual words.
+ *
+ *  Defensive try/catch — if any unexpected data shape slips through, we
+ *  fall back to no etymology rather than crashing the whole session. */
 function findCardEtymology(targetSentence: string, language: Language) {
-  const tokens = targetSentence.split(/\s+/);
-  for (const raw of tokens) {
-    const cleaned = raw.replace(/[.,!?;:""«»()'"¿¡]/g, '').trim();
-    if (!cleaned) continue;
-    const entry = lookupEtymology(cleaned, language);
-    if (entry) return { word: cleaned, entry };
+  try {
+    if (!targetSentence || typeof targetSentence !== 'string') return null;
+    const tokens = targetSentence.split(/\s+/);
+    for (const raw of tokens) {
+      const cleaned = raw.replace(/[.,!?;:""«»()'"¿¡]/g, '').trim();
+      if (!cleaned) continue;
+      const entry = lookupEtymology(cleaned, language);
+      if (entry) return { word: cleaned, entry };
+    }
+  } catch (e) {
+    console.error('findCardEtymology failed:', e);
   }
   return null;
 }
@@ -171,10 +179,17 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
           )}
           {hasMoreCards && onStudyMore && (
             <div className="w-full p-3 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)]">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-2 text-center">
-                Keep going?
+              <div className="text-xs font-bold uppercase tracking-wide text-[var(--text-secondary)] mb-2 text-center">
+                Add more cards
               </div>
-              <div className="flex items-stretch gap-2">
+              <div className="flex items-stretch gap-2 mb-2">
+                <button
+                  onClick={() => setStudyMoreCount(c => Math.max(1, c - 5))}
+                  className="w-12 rounded-xl border-2 border-[var(--border-color)] text-[var(--text-muted)] font-bold hover:border-[var(--border-hover)] hover:text-[var(--text-primary)] active:scale-95 transition"
+                  aria-label="Decrease by 5"
+                >
+                  −5
+                </button>
                 <input
                   type="number"
                   min={1}
@@ -184,15 +199,22 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                     const v = parseInt(e.target.value, 10);
                     if (!isNaN(v) && v >= 1 && v <= 100) setStudyMoreCount(v);
                   }}
-                  className="w-20 rounded-xl text-center text-lg font-extrabold font-mono bg-[var(--bg-inset)] border border-[var(--border-color)] text-[var(--text-primary)] focus:border-[var(--accent)] focus:outline-none"
+                  className="flex-1 rounded-xl text-center text-2xl font-extrabold font-mono bg-[var(--bg-inset)] border-2 border-[var(--border-color)] text-[var(--text-primary)] focus:border-[var(--accent)] focus:outline-none py-2"
                 />
                 <button
-                  onClick={() => onStudyMore(studyMoreCount)}
-                  className="flex-1 py-3 rounded-xl btn-primary text-sm font-bold"
+                  onClick={() => setStudyMoreCount(c => Math.min(100, c + 5))}
+                  className="w-12 rounded-xl border-2 border-[var(--border-color)] text-[var(--text-muted)] font-bold hover:border-[var(--border-hover)] hover:text-[var(--text-primary)] active:scale-95 transition"
+                  aria-label="Increase by 5"
                 >
-                  More cards
+                  +5
                 </button>
               </div>
+              <button
+                onClick={() => onStudyMore(studyMoreCount)}
+                className="w-full py-3 rounded-xl btn-primary text-sm font-bold"
+              >
+                Start session
+              </button>
             </div>
           )}
           <button

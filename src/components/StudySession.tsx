@@ -409,37 +409,37 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             </div>
           )}
 
-          {/* Top-of-card chips — Grammar always sits in the left slot,
-              Etymology always in the right slot. We render an empty slot
-              when one is missing so the present chip never drifts toward
-              the center. Both open the same centered modal shape, just
-              different colors (amber / violet). */}
-          {(card!.grammar || cardEty) && (
-            <div className="flex items-center justify-between gap-2 px-4 pt-2 shrink-0">
-              <div className="flex-1 flex justify-start">
-                {card!.grammar && (
-                  <button
-                    onClick={(e) => { e.stopPropagation(); setShowGrammar(true); }}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-300 bg-amber-500/10 border border-amber-500/40 hover:bg-amber-500/15 transition-all active:scale-95"
-                  >
-                    <BookOpen size={12} />
-                    <span>Grammar</span>
-                  </button>
-                )}
-              </div>
-              <div className="flex-1 flex justify-end">
-                {cardEty && (
-                  <button
-                    onClick={(e) => { e.stopPropagation(); setShowEtymology(true); }}
-                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider text-violet-600 dark:text-violet-300 bg-violet-500/10 border border-violet-500/40 hover:bg-violet-500/15 transition-all active:scale-95"
-                  >
-                    <BookText size={12} />
-                    <span>Etymology</span>
-                  </button>
-                )}
-              </div>
+          {/* Top-of-card chip row — ALWAYS rendered so card height stays
+              constant across cards. Grammar lives in a left-anchored slot
+              and only renders when card.grammar is present; Etymology lives
+              in a right-anchored slot and only renders when an etymology
+              entry exists. Each chip is pinned to its corner — the present
+              chip never drifts toward the center based on whether the
+              other one is around. */}
+          <div className="flex items-start justify-between gap-2 px-3 pt-2 shrink-0 min-h-[36px]">
+            <div className="flex-1 flex justify-start">
+              {card!.grammar && (
+                <button
+                  onClick={(e) => { e.stopPropagation(); setShowGrammar(true); }}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-300 bg-amber-500/10 border border-amber-500/40 hover:bg-amber-500/15 transition-all active:scale-95"
+                >
+                  <BookOpen size={12} />
+                  <span>Grammar</span>
+                </button>
+              )}
             </div>
-          )}
+            <div className="flex-1 flex justify-end">
+              {cardEty && (
+                <button
+                  onClick={(e) => { e.stopPropagation(); setShowEtymology(true); }}
+                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider text-violet-600 dark:text-violet-300 bg-violet-500/10 border border-violet-500/40 hover:bg-violet-500/15 transition-all active:scale-95"
+                >
+                  <BookText size={12} />
+                  <span>Etymology</span>
+                </button>
+              )}
+            </div>
+          </div>
 
           {/* Etymology overlay — same modal pattern as Grammar Tip, violet
               palette. The word being explained sits prominently above the

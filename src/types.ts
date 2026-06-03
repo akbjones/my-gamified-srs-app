@@ -151,17 +151,37 @@ export interface VocabEntry {
 export type VocabMap = Record<string, VocabEntry>; // keyed by lowercase word
 
 // ── Favorites ───────────────────────────────────────────────
+/** A favorite can be a single word (kind 'vocab' or undefined for legacy
+ *  entries), a card-level grammar tip ('grammar'), or a word-level etymology
+ *  fact ('etymology'). The fields used depend on the kind:
+ *
+ *    vocab     → translation, ipa?, pos?, lemma?, example?
+ *    grammar   → grammarTip, example? (card target so user remembers the
+ *                sentence the tip was attached to)
+ *    etymology → etymologyOrigin, etymologyNote, etymologyCognates?,
+ *                etymologySources?, example?
+ *
+ *  All three kinds share `word` (the human label — the saved word for vocab
+ *  and etymology, a short snippet for grammar) and `savedAt`. */
 export interface FavoriteEntry {
-  word: string;         // lowercase form as keyed
-  translation: string;  // English meaning from dict at save time
+  word: string;
+  kind?: 'vocab' | 'grammar' | 'etymology';  // undefined = vocab (legacy)
+  translation?: string;
   ipa?: string;
   pos?: string;
-  lemma?: string;       // base form if the saved word was inflected
-  example?: string;     // optional: card target sentence at save time
-  savedAt: number;      // Date.now()
+  lemma?: string;
+  example?: string;
+  // Grammar fields
+  grammarTip?: string;
+  // Etymology fields
+  etymologyOrigin?: string;
+  etymologyNote?: string;
+  etymologyCognates?: string[];
+  etymologySources?: string[];
+  savedAt: number;
 }
 
-export type FavoriteMap = Record<string, FavoriteEntry>; // keyed by lowercase word
+export type FavoriteMap = Record<string, FavoriteEntry>;
 
 // ── Conjugation ─────────────────────────────────────────────
 export interface ConjugationTable {

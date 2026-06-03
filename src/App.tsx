@@ -748,7 +748,7 @@ const App: React.FC = () => {
           <button
             onClick={() => handleStartSession()}
             disabled={!hasCards}
-            className="w-full py-7 btn-primary rounded-2xl text-lg mb-3"
+            className="w-full py-5 btn-primary rounded-2xl text-lg mb-2.5"
           >
             {!hasCards ? (
               'All Caught Up'
@@ -775,18 +775,18 @@ const App: React.FC = () => {
               : 0;
             if (newAvailableInDeck === 0) return null;
             return (
-              <div className="w-full mb-3 p-4 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)]">
-                <div className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-3 text-center">
+              <div className="w-full mb-2.5 p-3 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)]">
+                <div className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-2 text-center">
                   {hasCards ? 'Or do a bonus session' : 'Want more?'}
                 </div>
-                <div className="flex items-stretch gap-2.5">
+                <div className="flex items-stretch gap-2">
                   <input
                     id="study-more-count"
                     type="number"
                     defaultValue={10}
                     min={1}
                     max={100}
-                    className="w-24 rounded-xl bg-[var(--bg-inset)] border-2 border-[var(--border-color)] text-center text-2xl font-extrabold font-mono text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)]"
+                    className="w-20 rounded-xl bg-[var(--bg-inset)] border-2 border-[var(--border-color)] text-center text-xl font-extrabold font-mono text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)]"
                   />
                   <button
                     onClick={() => {
@@ -794,7 +794,7 @@ const App: React.FC = () => {
                       const count = input ? parseInt(input.value) || 10 : 10;
                       handleStartSession(count);
                     }}
-                    className="flex-1 py-5 rounded-xl bg-[var(--accent)]/15 border-2 border-[var(--accent)]/40 text-[var(--accent)] font-extrabold text-base hover:bg-[var(--accent)]/20 active:scale-95 transition"
+                    className="flex-1 py-3 rounded-xl bg-[var(--accent)]/15 border-2 border-[var(--accent)]/40 text-[var(--accent)] font-extrabold text-sm hover:bg-[var(--accent)]/20 active:scale-95 transition"
                   >
                     Extra new cards
                   </button>
@@ -923,66 +923,57 @@ const App: React.FC = () => {
             );
           })()}
 
-          {/* Quick-access grid: Topics + Vocabulary + Favourites — 3-col, taller cards */}
+          {/* Quick-access grid: Topics + Vocabulary + Favorites — compact 3-col. */}
           {(() => {
             const vocabCount = Object.keys(vocabMap).length;
             const hasVocab = vocabCount > 0;
             const favCount = Object.keys(favoritesMap).length;
             const hasFav = favCount > 0;
             return (
-            <div className="grid grid-cols-3 gap-2 mb-3">
+            <div className="grid grid-cols-3 gap-2 mb-2.5">
               <button
                 onClick={() => setView('TOPICS')}
-                className="stat-card p-4 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer flex flex-col gap-2"
+                className="stat-card p-2.5 text-center transition-all hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer flex flex-col items-center gap-1"
               >
-                <div className="w-11 h-11 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
-                  <BookOpen size={20} className="text-[var(--accent)]" />
+                <div className="w-9 h-9 rounded-lg bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
+                  <BookOpen size={16} className="text-[var(--accent)]" />
                 </div>
-                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider">
+                <div className="text-[10px] font-bold text-[var(--text-primary)] uppercase tracking-wider leading-tight">
                   Topics
-                </div>
-                <div className="text-xs font-bold text-[var(--text-primary)] leading-tight">
-                  Browse all
                 </div>
               </button>
 
               <button
                 onClick={() => hasVocab && setView('VOCAB')}
                 disabled={!hasVocab}
-                className={`stat-card p-4 text-left transition-all flex flex-col gap-2 ${
+                className={`stat-card p-2.5 text-center transition-all flex flex-col items-center gap-1 ${
                   hasVocab
                     ? 'hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer'
                     : 'grayscale opacity-50 cursor-default'
                 }`}
               >
-                <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${hasVocab ? 'bg-blue-500/10 border border-blue-500/20' : 'bg-[var(--bg-inset)] border border-[var(--border-color)]'}`}>
-                  <PenTool size={20} className={hasVocab ? 'text-blue-500' : 'text-[var(--text-muted)]'} />
+                <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${hasVocab ? 'bg-blue-500/10 border border-blue-500/20' : 'bg-[var(--bg-inset)] border border-[var(--border-color)]'}`}>
+                  <PenTool size={16} className={hasVocab ? 'text-blue-500' : 'text-[var(--text-muted)]'} />
                 </div>
-                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider">
-                  Vocab
-                </div>
-                <div className="text-xs font-bold text-[var(--text-primary)] leading-tight">
-                  {vocabCount}
+                <div className="text-[10px] font-bold text-[var(--text-primary)] uppercase tracking-wider leading-tight">
+                  Vocab · {vocabCount}
                 </div>
               </button>
 
               <button
                 onClick={() => hasFav && setView('FAVORITES')}
                 disabled={!hasFav}
-                className={`stat-card p-4 text-left transition-all flex flex-col gap-2 ${
+                className={`stat-card p-2.5 text-center transition-all flex flex-col items-center gap-1 ${
                   hasFav
                     ? 'hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer'
                     : 'grayscale opacity-50 cursor-default'
                 }`}
               >
-                <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${hasFav ? 'bg-yellow-400/10 border border-yellow-400/30' : 'bg-[var(--bg-inset)] border border-[var(--border-color)]'}`}>
-                  <Star size={20} className={hasFav ? 'text-yellow-500' : 'text-[var(--text-muted)]'} fill={hasFav ? 'currentColor' : 'none'} />
+                <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${hasFav ? 'bg-yellow-400/10 border border-yellow-400/30' : 'bg-[var(--bg-inset)] border border-[var(--border-color)]'}`}>
+                  <Star size={16} className={hasFav ? 'text-yellow-500' : 'text-[var(--text-muted)]'} fill={hasFav ? 'currentColor' : 'none'} />
                 </div>
-                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider">
-                  Favs
-                </div>
-                <div className="text-xs font-bold text-[var(--text-primary)] leading-tight">
-                  {favCount}
+                <div className="text-[10px] font-bold text-[var(--text-primary)] uppercase tracking-wider leading-tight">
+                  Favorites · {favCount}
                 </div>
               </button>
             </div>
@@ -996,10 +987,10 @@ const App: React.FC = () => {
               return (
                 <button
                   onClick={() => setShowGoalMenu(prev => !prev)}
-                  className="stat-card p-5 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex items-center gap-3"
+                  className="stat-card p-3.5 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex items-center gap-2.5"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center shrink-0">
-                    <CurrentIcon size={22} className="text-[var(--accent)]" />
+                  <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center shrink-0">
+                    <CurrentIcon size={18} className="text-[var(--accent)]" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-0.5">
@@ -1015,12 +1006,12 @@ const App: React.FC = () => {
             })()}
             <button
               onClick={() => setShowTools(prev => !prev)}
-              className={`stat-card p-5 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex items-center gap-3 ${
+              className={`stat-card p-3.5 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex items-center gap-2.5 ${
                 showTools ? 'border-[var(--accent)]/40 bg-[var(--accent)]/5' : ''
               }`}
             >
-              <div className="w-12 h-12 rounded-xl bg-slate-500/10 border border-slate-500/20 flex items-center justify-center shrink-0">
-                <Settings2 size={22} className="text-slate-500" />
+              <div className="w-10 h-10 rounded-xl bg-slate-500/10 border border-slate-500/20 flex items-center justify-center shrink-0">
+                <Settings2 size={18} className="text-slate-500" />
               </div>
               <div className="flex-1 min-w-0">
                 <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-0.5">
@@ -1097,18 +1088,18 @@ const App: React.FC = () => {
           )}
 
           {showTools && (
-            <div className="stat-card animate-fade-in space-y-4 mt-2 mb-3">
+            <div className="stat-card animate-fade-in space-y-5 mt-2 mb-3">
               <div className="flex items-center justify-between">
-                <h3 className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">Settings</h3>
+                <h3 className="text-sm font-bold text-[var(--text-primary)] uppercase tracking-wide">Settings</h3>
                 <button onClick={() => setShowTools(false)} className="text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors">
-                  <X size={14} />
+                  <X size={18} />
                 </button>
               </div>
 
               <div>
                 <div className="flex items-baseline justify-between mb-3">
-                  <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">New Cards / Day</div>
-                  <div className="text-[9px] font-semibold text-[var(--text-muted)] tracking-wide">for {LANGUAGE_CONFIG[lang].name}</div>
+                  <div className="text-xs font-bold text-[var(--text-secondary)] uppercase tracking-wide">New Cards / Day</div>
+                  <div className="text-[11px] font-semibold text-[var(--text-muted)] tracking-wide">for {LANGUAGE_CONFIG[lang].name}</div>
                 </div>
                 <div className="flex items-center gap-3">
                   <button onClick={() => adjustLimit(-5)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95">
@@ -1118,7 +1109,7 @@ const App: React.FC = () => {
                     -1
                   </button>
                   <div className="flex-1 text-center">
-                    <div className="text-3xl font-extrabold font-mono text-[var(--text-primary)]">{getDailyLimitFor(settings, lang)}</div>
+                    <div className="text-4xl font-extrabold font-mono text-[var(--text-primary)]">{getDailyLimitFor(settings, lang)}</div>
                   </div>
                   <button onClick={() => adjustLimit(1)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95 text-xs font-bold font-mono">
                     +1
@@ -1131,8 +1122,8 @@ const App: React.FC = () => {
 
               <div className="pt-3 border-t border-[var(--border-color)]">
                 <div className="flex items-baseline justify-between mb-3">
-                  <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">Cards per Session</div>
-                  <div className="text-[9px] font-semibold text-[var(--text-muted)] tracking-wide">for {LANGUAGE_CONFIG[lang].name}</div>
+                  <div className="text-xs font-bold text-[var(--text-secondary)] uppercase tracking-wide">Cards per Session</div>
+                  <div className="text-[11px] font-semibold text-[var(--text-muted)] tracking-wide">for {LANGUAGE_CONFIG[lang].name}</div>
                 </div>
                 <div className="flex items-center gap-3">
                   <button onClick={() => adjustSessionLimit(-5)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95">
@@ -1142,7 +1133,7 @@ const App: React.FC = () => {
                     -1
                   </button>
                   <div className="flex-1 text-center">
-                    <div className="text-3xl font-extrabold font-mono text-[var(--text-primary)]">{getSessionLimitFor(settings, lang)}</div>
+                    <div className="text-4xl font-extrabold font-mono text-[var(--text-primary)]">{getSessionLimitFor(settings, lang)}</div>
                   </div>
                   <button onClick={() => adjustSessionLimit(1)} className="w-9 h-9 rounded-lg border border-[var(--border-color)] text-[var(--text-muted)] flex items-center justify-center hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)] transition-all active:scale-95 text-xs font-bold font-mono">
                     +1
@@ -1154,22 +1145,22 @@ const App: React.FC = () => {
               </div>
 
               {/* Appearance */}
-              <div className="pt-3 border-t border-[var(--border-color)] space-y-3">
-                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">Appearance</div>
+              <div className="pt-4 border-t border-[var(--border-color)] space-y-3">
+                <div className="text-xs font-bold text-[var(--text-secondary)] uppercase tracking-wide">Appearance</div>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-[var(--text-secondary)]">Theme</span>
+                  <span className="text-sm text-[var(--text-primary)] font-semibold">Theme</span>
                   <div className="flex gap-1">
                     {(['light', 'dark'] as const).map(t => (
                       <button
                         key={t}
                         onClick={() => handleUpdateSettings({ ...settings, theme: t })}
-                        className={`px-3 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider transition-all border flex items-center gap-1.5 ${
+                        className={`px-3.5 py-1.5 rounded-md text-xs font-bold uppercase tracking-wider transition-all border flex items-center gap-1.5 ${
                           settings.theme === t
                             ? 'border-[var(--accent)]/40 bg-[var(--accent)]/10 text-[var(--accent)]'
                             : 'border-[var(--border-color)] text-[var(--text-muted)] hover:border-[var(--border-hover)]'
                         }`}
                       >
-                        {t === 'dark' ? <Moon size={11} /> : <Sun size={11} />}
+                        {t === 'dark' ? <Moon size={12} /> : <Sun size={12} />}
                         {t}
                       </button>
                     ))}
@@ -1178,11 +1169,11 @@ const App: React.FC = () => {
               </div>
 
               {/* Audio settings */}
-              <div className="pt-3 border-t border-[var(--border-color)] space-y-3">
-                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">Audio</div>
+              <div className="pt-4 border-t border-[var(--border-color)] space-y-3">
+                <div className="text-xs font-bold text-[var(--text-secondary)] uppercase tracking-wide">Audio</div>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-[var(--text-secondary)]">Auto-play</span>
+                  <span className="text-sm text-[var(--text-primary)] font-semibold">Auto-play</span>
                   <button
                     onClick={() => handleUpdateSettings({ ...settings, autoPlayAudio: !settings.autoPlayAudio })}
                     className={`w-10 h-6 rounded-full transition-all relative ${
@@ -1196,13 +1187,13 @@ const App: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-[var(--text-secondary)]">Speed</span>
-                  <div className="flex gap-1">
+                  <span className="text-sm text-[var(--text-primary)] font-semibold">Speed</span>
+                  <div className="flex gap-1.5">
                     {([0.6, 0.8, 1.0] as AudioSpeed[]).map(s => (
                       <button
                         key={s}
                         onClick={() => handleUpdateSettings({ ...settings, audioSpeed: s })}
-                        className={`px-2.5 py-1 rounded-md text-[10px] font-bold font-mono transition-all border ${
+                        className={`px-3 py-1.5 rounded-md text-xs font-bold font-mono transition-all border ${
                           settings.audioSpeed === s
                             ? 'border-[var(--accent)]/40 bg-[var(--accent)]/10 text-[var(--accent)]'
                             : 'border-[var(--border-color)] text-[var(--text-muted)] hover:border-[var(--border-hover)]'
@@ -1214,32 +1205,15 @@ const App: React.FC = () => {
                   </div>
                 </div>
 
-                <div>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-xs text-[var(--text-secondary)]">Google TTS</span>
-                    {settings.googleTtsApiKey ? (
-                      <span className="text-[10px] font-bold text-emerald-500 uppercase tracking-wider">Active</span>
-                    ) : (
-                      <span className="text-[10px] font-bold text-[var(--text-faint)] uppercase tracking-wider">Browser TTS</span>
-                    )}
-                  </div>
-                  <input
-                    type="password"
-                    placeholder="API key (optional)"
-                    value={settings.googleTtsApiKey || ''}
-                    onChange={(e) => handleUpdateSettings({ ...settings, googleTtsApiKey: e.target.value || undefined })}
-                    className="w-full text-[11px] px-2.5 py-1.5 rounded-lg border border-[var(--border-color)] bg-[var(--bg-inset)] text-[var(--text-secondary)] placeholder:text-[var(--text-faint)] focus:outline-none focus:border-[var(--accent)]/40"
-                  />
-                </div>
               </div>
 
               {/* Notification reminders */}
               {isNotificationSupported() && (
-                <div className="pt-3 border-t border-[var(--border-color)] space-y-3">
-                  <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">Reminders</div>
+                <div className="pt-4 border-t border-[var(--border-color)] space-y-3">
+                  <div className="text-xs font-bold text-[var(--text-secondary)] uppercase tracking-wide">Reminders</div>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-[var(--text-secondary)] flex items-center gap-1.5">
-                      {notifPrefs.enabled ? <Bell size={12} /> : <BellOff size={12} />}
+                    <span className="text-sm text-[var(--text-primary)] font-semibold flex items-center gap-1.5">
+                      {notifPrefs.enabled ? <Bell size={14} /> : <BellOff size={14} />}
                       Daily reminder
                     </span>
                     <button
@@ -1273,8 +1247,8 @@ const App: React.FC = () => {
               )}
 
               {/* Flagged Words */}
-              <div className="pt-3 border-t border-[var(--border-color)] space-y-3">
-                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-widest">Flagged Words</div>
+              <div className="pt-4 border-t border-[var(--border-color)] space-y-3">
+                <div className="text-xs font-bold text-[var(--text-secondary)] uppercase tracking-wide">Flagged Words</div>
                 {(() => {
                   const flags = JSON.parse(localStorage.getItem('quest_flagged_words') || '[]');
                   if (flags.length === 0) {
@@ -1317,21 +1291,32 @@ const App: React.FC = () => {
                 })()}
               </div>
 
-              <div className="pt-2 border-t border-[var(--border-color)] space-y-2">
+              {/* Danger zone — reset actions. Confirms required so the user
+                  can't accidentally wipe progress. Styled in muted red so it
+                  reads as serious but doesn't draw the eye like a CTA. */}
+              <div className="pt-4 border-t border-[var(--border-color)] space-y-3">
+                <div className="text-xs font-bold text-red-500/80 uppercase tracking-wide">Danger zone</div>
                 {isPlacementComplete(lang) && (
                   <button
                     onClick={() => {
-                      resetPlacement(lang);
-                      setDeck(prev => [...prev]); // force re-render
+                      if (confirm(`Reset the placement test for ${LANGUAGE_CONFIG[lang].name}? You'll start from level 0.`)) {
+                        resetPlacement(lang);
+                        setDeck(prev => [...prev]); // force re-render
+                      }
                     }}
-                    className="block text-[10px] text-[var(--text-faint)] hover:text-amber-400 transition-colors"
+                    className="w-full px-3 py-2.5 text-sm font-bold text-amber-600 dark:text-amber-400 border border-amber-500/30 rounded-lg hover:bg-amber-500/10 active:scale-95 transition-all"
                   >
                     Reset placement test
                   </button>
                 )}
                 <button
-                  onClick={() => { resetAll(); window.location.reload(); }}
-                  className="block text-[10px] text-[var(--text-faint)] hover:text-red-400 transition-colors"
+                  onClick={() => {
+                    if (confirm('Reset ALL data across every language? This wipes streaks, progress, mastery, favorites, vocab — everything. Cannot be undone.')) {
+                      resetAll();
+                      window.location.reload();
+                    }
+                  }}
+                  className="w-full px-3 py-2.5 text-sm font-bold text-red-600 dark:text-red-400 border border-red-500/30 rounded-lg hover:bg-red-500/10 active:scale-95 transition-all"
                 >
                   Reset all data
                 </button>

@@ -233,6 +233,79 @@ export const isFavorited = (word: string, lang: Language): boolean => {
   return !!loadFavorites(lang)[word.toLowerCase()];
 };
 
+// ─── Grammar / Etymology favorites ─────────────────────────
+// Different namespaces in the same FavoriteMap so the UI can show them all
+// together but filter by kind. Vocab keys stay raw (legacy compat); grammar
+// and etymology keys get a prefix so they can't collide with vocab words
+// like "etymology" or "grammar" if those ever get tapped as words.
+
+/** Build a stable storage key for a grammar-tip favorite. The tip itself is
+ *  the unique part — saving the same tip from another card de-dupes. */
+const grammarKey = (tip: string) =>
+  `__g__${tip.toLowerCase().replace(/\s+/g, ' ').trim()}`;
+
+const etymologyKey = (word: string) => `__e__${word.toLowerCase()}`;
+
+export const toggleGrammarFavorite = (
+  tip: string,
+  lang: Language,
+  example?: string,
+  label?: string,
+): FavoriteMap => {
+  const key = grammarKey(tip);
+  const map = loadFavorites(lang);
+  if (map[key]) {
+    delete map[key];
+  } else {
+    map[key] = {
+      word: label || tip.slice(0, 60) + (tip.length > 60 ? '…' : ''),
+      kind: 'grammar',
+      grammarTip: tip,
+      example,
+      savedAt: Date.now(),
+    };
+  }
+  saveFavorites(map, lang);
+  return map;
+};
+
+export const isGrammarFavorited = (tip: string, lang: Language): boolean => {
+  return !!loadFavorites(lang)[grammarKey(tip)];
+};
+
+export const toggleEtymologyFavorite = (
+  word: string,
+  lang: Language,
+  origin: string,
+  note: string,
+  cognates: string[] | undefined,
+  sources: string[],
+  example?: string,
+): FavoriteMap => {
+  const key = etymologyKey(word);
+  const map = loadFavorites(lang);
+  if (map[key]) {
+    delete map[key];
+  } else {
+    map[key] = {
+      word: word.toLowerCase(),
+      kind: 'etymology',
+      etymologyOrigin: origin,
+      etymologyNote: note,
+      etymologyCognates: cognates,
+      etymologySources: sources,
+      example,
+      savedAt: Date.now(),
+    };
+  }
+  saveFavorites(map, lang);
+  return map;
+};
+
+export const isEtymologyFavorited = (word: string, lang: Language): boolean => {
+  return !!loadFavorites(lang)[etymologyKey(word)];
+};
+
 // ─── Reset ──────────────────────────────────────────────────
 export const resetAll = (): void => {
   // Clear all language-specific keys

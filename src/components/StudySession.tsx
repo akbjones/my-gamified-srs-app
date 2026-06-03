@@ -1,8 +1,12 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { QuestCard, SessionState, Language, ChallengeMode } from '../types';
-import { Volume2, BookOpen, BookText, AlertTriangle, Swords, Zap } from 'lucide-react';
+import { Volume2, BookOpen, BookText, AlertTriangle, Swords, Zap, Star } from 'lucide-react';
 import { playCardAudio, stopAudio } from '../services/audioService';
 import { lookupEtymology } from '../services/etymologyService';
+import {
+  toggleGrammarFavorite, isGrammarFavorited,
+  toggleEtymologyFavorite, isEtymologyFavorited,
+} from '../services/storageService';
 import type { AudioSpeed } from '../services/storageService';
 import WordPopover from './WordPopover';
 import WordTileChallenge from './WordTileChallenge';
@@ -54,6 +58,10 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   const [isPlaying, setIsPlaying] = useState(false);
   const [showGrammar, setShowGrammar] = useState(false);
   const [showEtymology, setShowEtymology] = useState(false);
+  // Local mirrors of favorite state so the Save button in each overlay flips
+  // immediately on tap. Recomputed when the relevant overlay opens.
+  const [grammarFavd, setGrammarFavd] = useState(false);
+  const [etyFavd, setEtyFavd] = useState(false);
   const [studyMoreCount, setStudyMoreCount] = useState(10);
   // First-time hint: shown only on the very first card of the user's first
   // session, so they discover that words are tappable. Disappears on the
@@ -119,6 +127,20 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
     () => (card?.target ? findCardEtymology(card.target, session.language) : null),
     [card?.target, session.language],
   );
+
+  // Sync the Save button state when an overlay opens for a new card.
+  // Both effects are no-ops on closed overlays, so they don't fire spuriously.
+  useEffect(() => {
+    if (showGrammar && card?.grammar) {
+      setGrammarFavd(isGrammarFavorited(card.grammar, session.language));
+    }
+  }, [showGrammar, card?.grammar, session.language]);
+
+  useEffect(() => {
+    if (showEtymology && cardEty) {
+      setEtyFavd(isEtymologyFavorited(cardEty.word, session.language));
+    }
+  }, [showEtymology, cardEty, session.language]);
 
   if (isComplete) {
     return (
@@ -312,7 +334,27 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               className="fixed inset-0 z-[10001] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in cursor-pointer"
               onClick={(e) => { e.stopPropagation(); setShowGrammar(false); }}
             >
-              <div className="bg-amber-50 dark:bg-[#1a1207] border border-amber-500/30 rounded-2xl p-6 max-w-sm w-full shadow-2xl">
+              <div
+                className="bg-amber-50 dark:bg-[#1a1207] border border-amber-500/30 rounded-2xl p-6 max-w-sm w-full shadow-2xl relative"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Save toggle — saves the tip to Favorites under the 'grammar'
+                    kind. The card target sits in `example` so the user can recall
+                    which sentence the tip came from. */}
+                <button
+                  onClick={() => {
+                    toggleGrammarFavorite(card!.grammar!, session.language, card!.target);
+                    setGrammarFavd(prev => !prev);
+                  }}
+                  className={`absolute top-2 right-2 flex items-center gap-1 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider transition-all active:scale-95 ${
+                    grammarFavd
+                      ? 'bg-amber-500/20 text-amber-700 dark:text-amber-300 border border-amber-500/50'
+                      : 'bg-white/80 dark:bg-[#0a0604] text-amber-600 dark:text-amber-400 border border-amber-500/30 hover:border-amber-500/60'
+                  }`}
+                >
+                  <Star size={11} fill={grammarFavd ? 'currentColor' : 'none'} />
+                  <span>{grammarFavd ? 'Saved' : 'Save'}</span>
+                </button>
                 <div className="flex items-center gap-1.5 mb-4 justify-center">
                   <BookOpen size={14} className="text-amber-500" />
                   <span className="text-[10px] font-bold uppercase tracking-wider text-amber-500">Grammar Tip</span>
@@ -320,8 +362,11 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                 <p className="text-sm md:text-base text-slate-700 dark:text-amber-100 leading-relaxed text-center">
                   {card!.grammar}
                 </p>
-                <div className="mt-4 text-center text-[9px] font-bold text-amber-500/60 uppercase tracking-wider">
-                  Tap anywhere to close
+                <div
+                  className="mt-4 text-center text-[9px] font-bold text-amber-500/60 uppercase tracking-wider cursor-pointer"
+                  onClick={(e) => { e.stopPropagation(); setShowGrammar(false); }}
+                >
+                  Tap to close
                 </div>
               </div>
             </div>
@@ -379,7 +424,35 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               className="fixed inset-0 z-[10001] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in cursor-pointer"
               onClick={(e) => { e.stopPropagation(); setShowEtymology(false); }}
             >
-              <div className="bg-violet-50 dark:bg-[#100a1a] border border-violet-500/30 rounded-2xl p-6 max-w-sm w-full shadow-2xl">
+              <div
+                className="bg-violet-50 dark:bg-[#100a1a] border border-violet-500/30 rounded-2xl p-6 max-w-sm w-full shadow-2xl relative"
+                onClick={(e) => e.stopPropagation()}
+              >
+                {/* Save toggle — same shape as the Grammar overlay, violet
+                    palette. Stores under the 'etymology' kind keyed by word so
+                    it can't collide with vocab favorites for that same word. */}
+                <button
+                  onClick={() => {
+                    toggleEtymologyFavorite(
+                      cardEty.word,
+                      session.language,
+                      cardEty.entry.origin,
+                      cardEty.entry.note,
+                      cardEty.entry.cognates,
+                      cardEty.entry.sources,
+                      card!.target,
+                    );
+                    setEtyFavd(prev => !prev);
+                  }}
+                  className={`absolute top-2 right-2 flex items-center gap-1 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider transition-all active:scale-95 ${
+                    etyFavd
+                      ? 'bg-violet-500/20 text-violet-700 dark:text-violet-300 border border-violet-500/50'
+                      : 'bg-white/80 dark:bg-[#06030d] text-violet-600 dark:text-violet-400 border border-violet-500/30 hover:border-violet-500/60'
+                  }`}
+                >
+                  <Star size={11} fill={etyFavd ? 'currentColor' : 'none'} />
+                  <span>{etyFavd ? 'Saved' : 'Save'}</span>
+                </button>
                 <div className="flex items-center gap-1.5 mb-3 justify-center">
                   <BookText size={14} className="text-violet-500" />
                   <span className="text-[10px] font-bold uppercase tracking-wider text-violet-500">Etymology</span>
@@ -402,8 +475,11 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                 <div className="mt-4 text-center text-[9px] font-mono text-violet-500/60 uppercase tracking-wider">
                   Sources · {cardEty.entry.sources.join(' · ')}
                 </div>
-                <div className="mt-2 text-center text-[9px] font-bold text-violet-500/60 uppercase tracking-wider">
-                  Tap anywhere to close
+                <div
+                  className="mt-2 text-center text-[9px] font-bold text-violet-500/60 uppercase tracking-wider cursor-pointer"
+                  onClick={(e) => { e.stopPropagation(); setShowEtymology(false); }}
+                >
+                  Tap to close
                 </div>
               </div>
             </div>

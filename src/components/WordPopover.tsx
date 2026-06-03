@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import ReactDOM from 'react-dom';
 import { Star, X as CloseIcon, BookText } from 'lucide-react';
-import { toggleFavorite, isFavorited } from '../services/storageService';
+import { toggleFavorite, isFavorited, toggleEtymologyFavorite, isEtymologyFavorited } from '../services/storageService';
 import { lookupEtymology } from '../services/etymologyService';
 import { lookupWord as lookupEs, DictEntry } from '../data/dictionary/es';
 import { lookupWord as lookupIt } from '../data/dictionary/it';
@@ -714,21 +714,53 @@ const PopoverPortal: React.FC<{
 
       {/* Etymology overlay — centered modal with backdrop. Same layout pattern
           as the Grammar Tip overlay on the study card, just violet instead of
-          amber. Tap anywhere to dismiss. */}
+          amber. Tap anywhere to dismiss. Save toggle mirrors the one in the
+          card-level etymology overlay in StudySession. */}
       {etymologyExpanded && (() => {
         const ety = lookupEtymology(rawToken, language);
         if (!ety) return null;
+        const etyFavd = isEtymologyFavorited(rawToken, language);
         return (
           <div
             className="fixed inset-0 z-[10001] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in cursor-pointer"
             onClick={(e) => { e.stopPropagation(); setEtymologyExpanded(false); }}
           >
-            <div className="bg-violet-50 dark:bg-[#100a1a] border border-violet-500/30 rounded-2xl p-6 max-w-sm w-full shadow-2xl">
-              <div className="flex items-center gap-1.5 mb-4 justify-center">
+            <div
+              className="bg-violet-50 dark:bg-[#100a1a] border border-violet-500/30 rounded-2xl p-6 max-w-sm w-full shadow-2xl relative"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => {
+                  toggleEtymologyFavorite(
+                    rawToken,
+                    language,
+                    ety.origin,
+                    ety.note,
+                    ety.cognates,
+                    ety.sources,
+                    sentence,
+                  );
+                  // Force re-render by toggling expanded then back
+                  setEtymologyExpanded(false);
+                  setTimeout(() => setEtymologyExpanded(true), 0);
+                }}
+                className={`absolute top-2 right-2 flex items-center gap-1 px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider transition-all active:scale-95 ${
+                  etyFavd
+                    ? 'bg-violet-500/20 text-violet-700 dark:text-violet-300 border border-violet-500/50'
+                    : 'bg-white/80 dark:bg-[#06030d] text-violet-600 dark:text-violet-400 border border-violet-500/30 hover:border-violet-500/60'
+                }`}
+              >
+                <Star size={11} fill={etyFavd ? 'currentColor' : 'none'} />
+                <span>{etyFavd ? 'Saved' : 'Save'}</span>
+              </button>
+              <div className="flex items-center gap-1.5 mb-3 justify-center">
                 <BookText size={14} className="text-violet-500" />
                 <span className="text-[10px] font-bold uppercase tracking-wider text-violet-500">Etymology</span>
               </div>
-              <div className="text-base font-bold text-violet-700 dark:text-violet-200 mb-3 text-center">{ety.origin}</div>
+              <div className="text-2xl font-black text-violet-700 dark:text-violet-200 mb-2 text-center tracking-tight">
+                {rawToken}
+              </div>
+              <div className="text-sm font-bold text-violet-600 dark:text-violet-300 mb-3 text-center">{ety.origin}</div>
               {ety.cognates && ety.cognates.length > 0 && (
                 <div className="text-xs text-slate-700 dark:text-violet-100 mb-3 text-center">
                   <span className="font-bold">Cognates: </span>

@@ -110,6 +110,16 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [card, isFlipped, tileCardIds]);
 
+  // Find a card-level etymology word: first word in the target sentence with
+  // a verified etymology entry. Memoized on card+language so we don't rescan
+  // on every render. MUST live above the `if (isComplete)` early return —
+  // otherwise the hook is skipped on the completion screen and React crashes
+  // with "Rendered fewer hooks than during the previous render."
+  const cardEty = useMemo(
+    () => (card?.target ? findCardEtymology(card.target, session.language) : null),
+    [card?.target, session.language],
+  );
+
   if (isComplete) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-6 animate-fade-in">
@@ -186,15 +196,6 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   const countNew = remainingQueue.filter(c => c.mastery === 0).length;
   const countLearn = remainingQueue.filter(c => c.mastery === 1).length;
   const countReview = remainingQueue.filter(c => c.mastery === 2).length;
-
-  // Find a card-level etymology word: first word in the target sentence with
-  // a verified etymology entry. Memoized on card+language so we don't rescan
-  // on every render. Used to show an "Origin · word" chip at the top of the
-  // card, parallel to the Grammar Tip chip.
-  const cardEty = useMemo(
-    () => (card?.target ? findCardEtymology(card.target, session.language) : null),
-    [card?.target, session.language],
-  );
 
   const handleFlip = () => setIsFlipped(true);
 

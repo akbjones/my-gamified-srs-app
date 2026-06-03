@@ -108,7 +108,7 @@ const FavoritesList: React.FC<FavoritesListProps> = ({ favoritesMap, language, o
           <Star size={32} className="mx-auto mb-3 opacity-30" />
           <p className="text-sm">No favorites yet.</p>
           <p className="text-xs mt-2 max-w-[18rem] mx-auto">
-            Tap Save on any word's popup, any Grammar Tip, or any Etymology modal during study.
+            Tap Save on any word's popup, any Grammar modal, or any Etymology modal during study.
           </p>
         </div>
       ) : (
@@ -220,7 +220,7 @@ const FavoritesList: React.FC<FavoritesListProps> = ({ favoritesMap, language, o
                       <>
                         <div className="flex items-center gap-1.5 mb-1">
                           <BookOpen size={12} className="text-amber-500" />
-                          <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Grammar tip</span>
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Grammar</span>
                         </div>
                         <p className="text-sm text-[var(--text-primary)] leading-relaxed">{e.grammarTip}</p>
                       </>

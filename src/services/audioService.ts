@@ -120,12 +120,26 @@ async function playGoogleTts(
 }
 
 // ─── Browser TTS (fallback) ─────────────────────────────────────
-function playBrowserTts(text: string, lang: Language, speed: AudioSpeed): void {
-  if (!('speechSynthesis' in window)) return;
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = LANGUAGE_CONFIG[lang].bcp47;
-  utterance.rate = speed;
-  window.speechSynthesis.speak(utterance);
+// Returns a Promise that resolves when the utterance finishes (or is
+// cancelled by stopAudio). Without this, callers like ListenMode's auto-
+// advance would race ahead while the speech was still mid-sentence and
+// the next card's stopAudio() would chop off the previous one.
+function playBrowserTts(text: string, lang: Language, speed: AudioSpeed): Promise<void> {
+  return new Promise<void>((resolve) => {
+    if (!('speechSynthesis' in window)) {
+      resolve();
+      return;
+    }
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = LANGUAGE_CONFIG[lang].bcp47;
+    utterance.rate = speed;
+    // Resolve on both end and error – cancel via speechSynthesis.cancel()
+    // also fires onend. We don't reject on error because the caller treats
+    // "audio finished playing" and "audio failed" identically for advance.
+    utterance.onend = () => resolve();
+    utterance.onerror = () => resolve();
+    window.speechSynthesis.speak(utterance);
+  });
 }
 
 // ─── Main entry point ───────────────────────────────────────────
@@ -254,7 +268,11 @@ export const playCardAudio = async (
   // robotic system voice that doesn't match the recorded woman voice.
   // The user can tap the audio button to retry; the MP3 will likely succeed
   // on second attempt now that the cache is warm.
+  //
+  // Awaited so callers (ListenMode auto-advance) wait for the actual
+  // utterance to finish before moving on, instead of cycling through
+  // cards while a previous speech is still mid-sentence.
   if (!audioFile) {
-    playBrowserTts(targetText, lang, speed);
+    await playBrowserTts(targetText, lang, speed);
   }
 };

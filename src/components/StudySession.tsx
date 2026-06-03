@@ -432,7 +432,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                   className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider text-violet-600 dark:text-violet-300 bg-violet-500/10 border border-violet-500/40 hover:bg-violet-500/15 transition-all active:scale-95"
                 >
                   <BookText size={12} />
-                  <span>Origin · {cardEty.word}</span>
+                  <span>Etymology</span>
                 </button>
               )}
             </div>

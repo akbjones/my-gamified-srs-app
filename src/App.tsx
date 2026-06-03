@@ -1039,11 +1039,8 @@ const App: React.FC = () => {
                 <Settings2 size={18} className="text-slate-500" />
               </div>
               <div className="flex-1 min-w-0">
-                <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-0.5">
+                <div className="text-base font-bold text-[var(--text-primary)] leading-tight">
                   Settings
-                </div>
-                <div className="text-sm font-bold text-[var(--text-primary)] leading-tight truncate">
-                  Limits · theme · audio
                 </div>
               </div>
               <ChevronDown size={16} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showTools ? 'rotate-180' : ''}`} />

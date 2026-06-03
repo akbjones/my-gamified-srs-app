@@ -614,7 +614,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className={`mx-auto min-h-screen ${view === 'STUDY' || view === 'PLACEMENT' || view === 'CHALLENGE' ? 'max-w-lg px-0 pt-0 pb-0' : 'max-w-md px-5 pt-[max(1.25rem,env(safe-area-inset-top))] pb-20'}`}>
+    <div className={`mx-auto min-h-screen ${view === 'STUDY' || view === 'PLACEMENT' || view === 'CHALLENGE' ? 'max-w-lg px-0 pt-0 pb-0' : 'max-w-md px-5 pt-[max(0.5rem,env(safe-area-inset-top))] pb-[max(0.75rem,env(safe-area-inset-bottom))]'}`}>
       {/* First-time onboarding carousel */}
       {showOnboarding && (
         <Onboarding onComplete={() => {
@@ -656,7 +656,7 @@ const App: React.FC = () => {
       {view === 'HOME' && (
         <section className="animate-fade-in">
           {/* Header row: title + language picker */}
-          <header className="pt-3 pb-3 flex items-center justify-between">
+          <header className="pt-2 pb-2.5 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               {/* Animated atom — in-app logo (PWA home-screen icon is separate, see public/icon.svg) */}
               <svg viewBox="-2 -2 36 36" className="w-11 h-11 text-[var(--accent)]" fill="none" overflow="visible">
@@ -748,7 +748,7 @@ const App: React.FC = () => {
           <button
             onClick={() => handleStartSession()}
             disabled={!hasCards}
-            className="w-full py-5 btn-primary rounded-2xl text-lg mb-2.5"
+            className="w-full py-4 btn-primary rounded-2xl text-lg mb-2"
           >
             {!hasCards ? (
               'All Caught Up'
@@ -774,56 +774,52 @@ const App: React.FC = () => {
               ? deck.filter(c => c.topic === currentNode.id && c.mastery === 0 && !c.isSuspended).length
               : 0;
             if (newAvailableInDeck === 0) return null;
+            // Add more cards — single compact row so the whole dashboard fits
+            // on one phone screen without scrolling. Label sits inside the
+            // action button so the row reads as one control.
             return (
-              <div className="w-full mb-2.5 p-3 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)]">
-                <div className="text-xs font-bold uppercase tracking-wide text-[var(--text-secondary)] mb-2 text-center">
-                  Add more cards
-                </div>
-                {/* −5 / number / +5 row with a Start button below — gives the
-                    user both granular control and a manual entry. */}
-                <div className="flex items-stretch gap-2 mb-2">
-                  <button
-                    onClick={() => {
-                      const input = document.getElementById('study-more-count') as HTMLInputElement;
-                      if (!input) return;
-                      const v = parseInt(input.value, 10) || 10;
-                      input.value = String(Math.max(1, v - 5));
-                    }}
-                    className="w-12 rounded-xl border-2 border-[var(--border-color)] text-[var(--text-muted)] font-bold hover:border-[var(--border-hover)] hover:text-[var(--text-primary)] active:scale-95 transition"
-                    aria-label="Decrease by 5"
-                  >
-                    −5
-                  </button>
-                  <input
-                    id="study-more-count"
-                    type="number"
-                    defaultValue={10}
-                    min={1}
-                    max={100}
-                    className="flex-1 rounded-xl bg-[var(--bg-inset)] border-2 border-[var(--border-color)] text-center text-2xl font-extrabold font-mono text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)] py-2"
-                  />
-                  <button
-                    onClick={() => {
-                      const input = document.getElementById('study-more-count') as HTMLInputElement;
-                      if (!input) return;
-                      const v = parseInt(input.value, 10) || 10;
-                      input.value = String(Math.min(100, v + 5));
-                    }}
-                    className="w-12 rounded-xl border-2 border-[var(--border-color)] text-[var(--text-muted)] font-bold hover:border-[var(--border-hover)] hover:text-[var(--text-primary)] active:scale-95 transition"
-                    aria-label="Increase by 5"
-                  >
-                    +5
-                  </button>
-                </div>
+              <div className="w-full mb-2 flex items-stretch gap-1.5">
+                <button
+                  onClick={() => {
+                    const input = document.getElementById('study-more-count') as HTMLInputElement;
+                    if (!input) return;
+                    const v = parseInt(input.value, 10) || 10;
+                    input.value = String(Math.max(1, v - 5));
+                  }}
+                  className="w-10 rounded-xl border border-[var(--border-color)] text-[var(--text-muted)] font-bold text-sm hover:border-[var(--border-hover)] hover:text-[var(--text-primary)] active:scale-95 transition"
+                  aria-label="Decrease by 5"
+                >
+                  −5
+                </button>
+                <input
+                  id="study-more-count"
+                  type="number"
+                  defaultValue={10}
+                  min={1}
+                  max={100}
+                  className="w-14 rounded-xl bg-[var(--bg-inset)] border border-[var(--border-color)] text-center text-lg font-extrabold font-mono text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)] py-2"
+                />
+                <button
+                  onClick={() => {
+                    const input = document.getElementById('study-more-count') as HTMLInputElement;
+                    if (!input) return;
+                    const v = parseInt(input.value, 10) || 10;
+                    input.value = String(Math.min(100, v + 5));
+                  }}
+                  className="w-10 rounded-xl border border-[var(--border-color)] text-[var(--text-muted)] font-bold text-sm hover:border-[var(--border-hover)] hover:text-[var(--text-primary)] active:scale-95 transition"
+                  aria-label="Increase by 5"
+                >
+                  +5
+                </button>
                 <button
                   onClick={() => {
                     const input = document.getElementById('study-more-count') as HTMLInputElement;
                     const count = input ? parseInt(input.value, 10) || 10 : 10;
                     handleStartSession(count);
                   }}
-                  className="w-full py-3 rounded-xl bg-[var(--accent)]/15 border-2 border-[var(--accent)]/40 text-[var(--accent)] font-extrabold text-sm hover:bg-[var(--accent)]/20 active:scale-95 transition"
+                  className="flex-1 rounded-xl bg-[var(--accent)]/15 border border-[var(--accent)]/40 text-[var(--accent)] font-extrabold text-sm hover:bg-[var(--accent)]/20 active:scale-95 transition"
                 >
-                  Start session
+                  Add more cards
                 </button>
               </div>
             );
@@ -837,9 +833,9 @@ const App: React.FC = () => {
             return (
               <button
                 onClick={() => setView('LISTEN')}
-                className="w-full mb-2.5 py-3 flex items-center justify-center gap-2 text-sm font-bold text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+                className="w-full mb-2 py-2 flex items-center justify-center gap-2 text-sm font-bold text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
               >
-                <Volume2 size={16} />
+                <Volume2 size={14} />
                 <span>Listen passively to cards you've seen</span>
               </button>
             );
@@ -857,7 +853,7 @@ const App: React.FC = () => {
               <>
                 <button
                   onClick={toggleProgressBento}
-                  className="w-full stat-card px-5 py-4 mb-2 flex items-center gap-5 hover:border-[var(--border-hover)] active:scale-[0.995] transition-all text-left"
+                  className="w-full stat-card px-4 py-3 mb-2 flex items-center gap-4 hover:border-[var(--border-hover)] active:scale-[0.995] transition-all text-left"
                   aria-expanded={showProgressBento}
                   aria-controls="progress-bento"
                 >
@@ -955,7 +951,7 @@ const App: React.FC = () => {
             const favCount = Object.keys(favoritesMap).length;
             const hasFav = favCount > 0;
             return (
-            <div className="grid grid-cols-3 gap-2 mb-2.5">
+            <div className="grid grid-cols-3 gap-2 mb-2">
               <button
                 onClick={() => setView('TOPICS')}
                 className="stat-card p-2.5 text-center transition-all hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer flex flex-col items-center gap-1"
@@ -1006,13 +1002,13 @@ const App: React.FC = () => {
           })()}
 
           {/* Focus + Settings — 2-col row, equal width, matching horizontal layouts */}
-          <div className="grid grid-cols-2 gap-2 mb-3 relative">
+          <div className="grid grid-cols-2 gap-2 mb-2 relative">
             {(() => {
               const CurrentIcon = goal === 'general' ? Globe : goal === 'travel' ? Plane : goal === 'work' ? Briefcase : Heart;
               return (
                 <button
                   onClick={() => setShowGoalMenu(prev => !prev)}
-                  className="stat-card p-3.5 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex items-center gap-2.5"
+                  className="stat-card p-3 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex items-center gap-2.5"
                 >
                   <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center shrink-0">
                     <CurrentIcon size={18} className="text-[var(--accent)]" />

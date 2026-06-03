@@ -3,7 +3,7 @@
  * Bulk-fix Welsh past tense / inflected forms in cy.ts where the English
  * meaning is just the infinitive ("to X") despite being a conjugated form.
  *
- * Skips multi-meaning entries (en contains ';') — those need manual review.
+ * Skips multi-meaning entries (en contains ';') – those need manual review.
  * Skips entries where en doesn't start with "to ".
  */
 const fs = require('fs');
@@ -73,7 +73,7 @@ for (let i = 0; i < lines.length; i++) {
   const [, indent, word, currentEn, ipaPart, lemma] = m;
   if (word === lemma) continue;
 
-  // Skip multi-meaning entries — too risky for automatic fix
+  // Skip multi-meaning entries – too risky for automatic fix
   if (currentEn.includes(';')) { skipped++; continue; }
 
   // Must currently start with "to "
@@ -110,6 +110,6 @@ for (let i = 0; i < lines.length; i++) {
 }
 
 fs.writeFileSync(PATH, lines.join('\n'));
-console.log(`Fixed ${fixed} entries, skipped ${skipped} (multi-meaning or non-"to" entries — manual review).`);
+console.log(`Fixed ${fixed} entries, skipped ${skipped} (multi-meaning or non-"to" entries – manual review).`);
 console.log('Samples:');
 fixedSamples.forEach(s => console.log('  ' + s.word.padEnd(18) + ' "' + s.old + '" → "' + s.new + '"'));

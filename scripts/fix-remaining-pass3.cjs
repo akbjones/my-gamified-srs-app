@@ -251,7 +251,7 @@ async function main() {
       // Check if there's semantic overlap between our definition and Google's
       if (hasSemanticOverlap(entry.en, gt)) continue; // our definition is fine
 
-      // No overlap — Google's translation is different
+      // No overlap – Google's translation is different
       // If Google gives a noun, fix both en and pos
       if (isNounTranslation(gt)) {
         const gtClean = gt.toLowerCase().trim();

@@ -89,7 +89,7 @@ module.exports = [
     match: t => /\b(je\s+veux|tu\s+veux|il\s+veut|nous\s+voulons|vous\s+voulez|ils\s+veulent|peux|peut|pouvons|pouvez|peuvent|dois|doit|devons|devez|doivent)\s+\w+(er|ir|re|oir)\b/i.test(t),
     tips: [
       "Modal verbs (vouloir, pouvoir, devoir) take the infinitive directly: `je veux manger`, `il peut aider`, `nous devons partir`. No preposition between them.",
-      "Don't say `je veux à manger` — the preposition is wrong. Modal verb + bare infinitive. End of story.",
+      "Don't say `je veux à manger` – the preposition is wrong. Modal verb + bare infinitive. End of story.",
     ],
   },
 
@@ -99,7 +99,7 @@ module.exports = [
     priority: 75,
     match: t => /\b(j'y|tu\s+y|il\s+y|elle\s+y|on\s+y|nous\s+y|vous\s+y|ils\s+y|y\s+va|y\s+sont|y\s+vais|y\s+suis)\b/i.test(t),
     tips: [
-      "`y` = 'there' or 'to it' — replaces a place or `à + thing`. `Tu vas au cinéma? Oui, j'y vais` (Yes, I'm going there). Saves you repeating the location.",
+      "`y` = 'there' or 'to it' – replaces a place or `à + thing`. `Tu vas au cinéma? Oui, j'y vais` (Yes, I'm going there). Saves you repeating the location.",
       "`y` always sits before the verb: `j'y pense` (I think about it), `j'y vais` (I'm going there). Glued tight; never floats free.",
     ],
   },
@@ -110,7 +110,7 @@ module.exports = [
     priority: 75,
     match: t => /\b(j'en|tu\s+en|il\s+en|on\s+en|nous\s+en|vous\s+en|ils\s+en|en\s+veux|en\s+ai|en\s+veulent)\b/i.test(t),
     tips: [
-      "`en` = 'of it / of them / some' — replaces `de + noun` or a quantity. `Tu veux du café? Oui, j'en veux` (Yes, I want some).",
+      "`en` = 'of it / of them / some' – replaces `de + noun` or a quantity. `Tu veux du café? Oui, j'en veux` (Yes, I want some).",
       "After numbers and `beaucoup/peu/assez`, `en` is required: `j'en ai trois` (I have three [of them]). English drops the 'of them'; French keeps `en`.",
     ],
   },
@@ -122,7 +122,7 @@ module.exports = [
     match: t => /\b(du|de\s+la|de\s+l'|des)\s+\w+\b/i.test(t) && /\b(mange|mangeons|mangent|bois|boit|buvons|boivent|veux|voulez|achète|achetons|prends|prend)\b/i.test(t),
     tips: [
       "Partitive articles `du/de la/des` = 'some' (unspecified quantity). `Je mange du pain` = 'I eat some bread'. English often drops 'some'; French keeps the article.",
-      "After negation, all partitives collapse to `de`: `je mange du pain` → `je ne mange pas de pain`. Watch out — easy to miss when speaking quickly.",
+      "After negation, all partitives collapse to `de`: `je mange du pain` → `je ne mange pas de pain`. Watch out – easy to miss when speaking quickly.",
     ],
   },
 
@@ -143,7 +143,7 @@ module.exports = [
     priority: 80,
     match: t => /\bil\s+y\s+a\b/i.test(t),
     tips: [
-      "`il y a` = 'there is / there are' — singular AND plural. `Il y a une pomme`, `il y a trois pommes`. The form doesn't change. Past: `il y avait`.",
+      "`il y a` = 'there is / there are' – singular AND plural. `Il y a une pomme`, `il y a trois pommes`. The form doesn't change. Past: `il y avait`.",
       "Don't confuse `il y a` (there is) with `il a` (he has) or `il a y` (doesn't exist). The `y` is mandatory.",
     ],
   },
@@ -176,7 +176,7 @@ module.exports = [
     priority: 40,
     match: t => /\bj'(ai|aime|écoute|étudie|habite|essaie|adore|attends|écris)\b/i.test(t),
     tips: [
-      "`je` becomes `j'` before a vowel or silent h: `j'aime`, `j'habite`. Mandatory elision — saying `je aime` is wrong.",
+      "`je` becomes `j'` before a vowel or silent h: `j'aime`, `j'habite`. Mandatory elision – saying `je aime` is wrong.",
       "Other elisions to watch: `ne` → `n'`, `me` → `m'`, `te` → `t'`, `se` → `s'`, `le/la` → `l'`, `de` → `d'`, `que` → `qu'`. Vowel collision = elision.",
     ],
   },
@@ -220,10 +220,10 @@ module.exports = [
     priority: 45,
     match: t => /(^|\s)(le|la|les|un|une|des|du|au|aux)\s+[a-zàâçéèêëîïôûùüÿ]+/i.test(t),
     tips: [
-      "French nouns have GENDER: `le pain` (m), `la pomme` (f). It's arbitrary on objects — `une table` is feminine for no reason. Always learn nouns WITH their article.",
+      "French nouns have GENDER: `le pain` (m), `la pomme` (f). It's arbitrary on objects – `une table` is feminine for no reason. Always learn nouns WITH their article.",
       "Endings hint at gender: `-e` often feminine (la voiture, la maison), consonant or `-eau` often masculine (le pain, le bateau). But traps: `le problème` ends in -e, `la radio` ends in -o.",
       "Adjectives agree: `un grand homme`, `une grande femme`, `de grands hommes`, `de grandes femmes`. Same adjective, four forms. The -e at end is the feminine marker.",
-      "Articles elide before vowels: `le/la → l'` (`l'homme`, `l'eau`). Possessives shift gender too: `mon stylo` (m), `ma table` (f), but `mon amie` even though amie is feminine — euphony before vowels.",
+      "Articles elide before vowels: `le/la → l'` (`l'homme`, `l'eau`). Possessives shift gender too: `mon stylo` (m), `ma table` (f), but `mon amie` even though amie is feminine – euphony before vowels.",
     ],
   },
 

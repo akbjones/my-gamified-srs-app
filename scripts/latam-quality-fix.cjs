@@ -1,5 +1,5 @@
 /**
- * latam-quality-fix.cjs — Comprehensive quality + Latin American Spanish fixes.
+ * latam-quality-fix.cjs – Comprehensive quality + Latin American Spanish fixes.
  *
  * 1. Fix specific cards flagged during review (bad grammar, awkward phrasing, wrong translations)
  * 2. Systematic Spain-specific vocabulary → Latin American equivalents
@@ -130,7 +130,7 @@ for (const card of deck) {
 // 4. SPAIN → LATIN AMERICAN VOCABULARY
 // ═══════════════════════════════════════════
 
-// 4a. coger → tomar (when meaning "to take/catch" — vulgar in LatAm)
+// 4a. coger → tomar (when meaning "to take/catch" – vulgar in LatAm)
 // Be careful: "recoger" (to pick up) is fine, "escoger" (to choose) is fine
 for (const card of deck) {
   const before = card.target;
@@ -265,7 +265,7 @@ for (const card of deck) {
 }
 
 // 4i. piso (apartment) → departamento/apartamento
-// Be careful: "piso" also means "floor" — only replace when meaning "apartment"
+// Be careful: "piso" also means "floor" – only replace when meaning "apartment"
 for (const card of deck) {
   const before = card.target;
   // Patterns where "piso" clearly means apartment
@@ -328,7 +328,7 @@ for (const card of deck) {
   // Present: habláis → hablan, coméis → comen, vivís → viven
   // But be careful not to match words that naturally end in these patterns
 
-  // Check for "vosotros/vosotras" pronoun — dead giveaway
+  // Check for "vosotros/vosotras" pronoun – dead giveaway
   if (/\bvosotros\b/i.test(t) || /\bvosotras\b/i.test(t)) {
     card.target = card.target
       .replace(/\bvosotros\b/g, 'ustedes')

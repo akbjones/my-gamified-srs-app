@@ -405,7 +405,7 @@ async function main() {
   console.log(`\nLemma copy: ${lemmaCopyCount} entries copied from base word`);
 
   // ── Step 6: Force function table overrides ──
-  // (already done — function words were added first and will be in the results)
+  // (already done – function words were added first and will be in the results)
   // But we must ensure they override in the final output, so we apply them last
   // Build the final map with function words forced last
   const finalMap = {};

@@ -65,7 +65,7 @@ const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
 
 type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB' | 'FAVORITES' | 'LISTEN';
 
-// Deck loaders — static imports for available languages
+// Deck loaders – static imports for available languages
 // (dynamic import would be cleaner but static is simpler for Vite bundling)
 import rawSpanishDeck from './data/spanish/deck.json';
 import rawItalianDeck from './data/italian/deck.json';
@@ -215,7 +215,7 @@ const App: React.FC = () => {
   const [showTools, setShowTools] = useState(false);
   const [showLangDropdown, setShowLangDropdown] = useState(false);
   const [showGoalMenu, setShowGoalMenu] = useState(false);
-  // Progress bento expansion state — persisted so the user's preference
+  // Progress bento expansion state – persisted so the user's preference
   // sticks across reloads.
   const [showProgressBento, setShowProgressBento] = useState(() => {
     try { return localStorage.getItem('progress_expanded') === '1'; } catch { return false; }
@@ -265,7 +265,7 @@ const App: React.FC = () => {
     setFavoritesMap(loadFavorites(lang));
   }, [lang, goal]);
 
-  // Refresh favorites whenever user lands on the home page —
+  // Refresh favorites whenever user lands on the home page –
   // they may have starred new words during study/vocab views.
   useEffect(() => {
     if (view === 'HOME') {
@@ -317,7 +317,7 @@ const App: React.FC = () => {
   const handleToggleNotifications = async (enable: boolean) => {
     if (enable) {
       const granted = await requestNotificationPermission();
-      if (!granted) return; // user denied — don't enable
+      if (!granted) return; // user denied – don't enable
       const newPrefs = { ...notifPrefs, enabled: true };
       setNotifPrefs(newPrefs);
       saveNotificationPrefs(newPrefs);
@@ -362,7 +362,7 @@ const App: React.FC = () => {
     const explicitCount = typeof studyMore === 'number';
     const studyMoreCount = explicitCount ? (studyMore as number) : (studyMore ? sessionLimit : 0);
     const baseNewLimit = studyMore ? Math.max(studyMoreCount, dailyLimitRemaining) : Math.max(0, dailyLimitRemaining);
-    // Cap new cards at session limit when no reviews exist — UNLESS the user
+    // Cap new cards at session limit when no reviews exist – UNLESS the user
     // explicitly typed a count in the "Want more? Study X extra cards" input.
     // Previous bug: typing 20 was clipped to 10 because the cap fired anyway.
     const newLimit = (reviews.length === 0 && !explicitCount)
@@ -489,7 +489,7 @@ const App: React.FC = () => {
     const count = pendingChallenge === 'boss' ? 8 : 4;
     const questions = buildChallengeQuestions(recentCards, count);
     if (questions.length === 0) {
-      // Truly no eligible cards — go home
+      // Truly no eligible cards – go home
       setPendingChallenge(null);
       setView('HOME');
       return;
@@ -529,7 +529,7 @@ const App: React.FC = () => {
       setProgressState(newProgress);
       saveProgressState(newProgress, lang);
     } else {
-      // Checkpoint — just update lastCheckpointAt
+      // Checkpoint – just update lastCheckpointAt
       const newProgress = { ...progressState, lastCheckpointAt: progressState.cumulativeNewCards };
       setProgressState(newProgress);
       saveProgressState(newProgress, lang);
@@ -658,7 +658,7 @@ const App: React.FC = () => {
           {/* Header row: title + language picker */}
           <header className="pt-2 pb-2.5 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
-              {/* Animated atom — in-app logo (PWA home-screen icon is separate, see public/icon.svg) */}
+              {/* Animated atom – in-app logo (PWA home-screen icon is separate, see public/icon.svg) */}
               <svg viewBox="-2 -2 36 36" className="w-11 h-11 text-[var(--accent)]" fill="none" overflow="visible">
                 {/* Orbit paths (using <path> so animateMotion works) */}
                 <path id="orb1" d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="1.2" opacity="0.5" />
@@ -718,7 +718,7 @@ const App: React.FC = () => {
             </div>
           </header>
 
-          {/* Placement test CTA — compact banner, shown until completed */}
+          {/* Placement test CTA – compact banner, shown until completed */}
           {!isPlacementComplete(lang) && (
             <div className="stat-card px-3 py-2.5 mb-2 border-amber-500/30 flex items-center gap-2">
               <p className="flex-1 text-xs text-[var(--text-secondary)] leading-snug">
@@ -744,7 +744,7 @@ const App: React.FC = () => {
             </div>
           )}
 
-          {/* Study button — primary action, generous size so it dominates the home view */}
+          {/* Study button – primary action, generous size so it dominates the home view */}
           <button
             onClick={() => handleStartSession()}
             disabled={!hasCards}
@@ -765,7 +765,7 @@ const App: React.FC = () => {
             )}
           </button>
 
-          {/* Bonus session — explicit "study N extra" affordance. Always visible
+          {/* Bonus session – explicit "study N extra" affordance. Always visible
               when there are unseen cards left in the current topic so the user
               can push past the daily limit deliberately. Sized for thumb access
               and prominent enough not to get missed. */}
@@ -774,7 +774,7 @@ const App: React.FC = () => {
               ? deck.filter(c => c.topic === currentNode.id && c.mastery === 0 && !c.isSuspended).length
               : 0;
             if (newAvailableInDeck === 0) return null;
-            // Add more cards — single compact row so the whole dashboard fits
+            // Add more cards – single compact row so the whole dashboard fits
             // on one phone screen without scrolling. Label sits inside the
             // action button so the row reads as one control.
             return (
@@ -825,7 +825,7 @@ const App: React.FC = () => {
             );
           })()}
 
-          {/* Listen — secondary, passive listening mode. Only shown when the
+          {/* Listen – secondary, passive listening mode. Only shown when the
               user has at least a handful of seen cards to play through. */}
           {(() => {
             const playableCount = deck.filter(c => (c.interval || 0) > 0 && !c.isSuspended).length;
@@ -841,7 +841,7 @@ const App: React.FC = () => {
             );
           })()}
 
-          {/* Today's progress + streak — tappable to reveal Bento stats below.
+          {/* Today's progress + streak – tappable to reveal Bento stats below.
               Default collapsed so the dashboard stays minimal; user opens
               the deeper stats when curious. */}
           {(() => {
@@ -892,7 +892,7 @@ const App: React.FC = () => {
                   />
                 </button>
 
-                {/* Bento — 4 calm stats that mean something. No XP, no badges.
+                {/* Bento – 4 calm stats that mean something. No XP, no badges.
                     Words = vocab breadth; Memory = long-term retention rate;
                     Learned = cards fully memorized; Days = total practice days. */}
                 {showProgressBento && (() => {
@@ -944,7 +944,7 @@ const App: React.FC = () => {
             );
           })()}
 
-          {/* Quick-access grid: Topics + Vocabulary + Favorites — compact 3-col. */}
+          {/* Quick-access grid: Topics + Vocabulary + Favorites – compact 3-col. */}
           {(() => {
             const vocabCount = Object.keys(vocabMap).length;
             const hasVocab = vocabCount > 0;
@@ -1001,7 +1001,7 @@ const App: React.FC = () => {
             );
           })()}
 
-          {/* Focus + Settings — 2-col row, equal width, matching horizontal layouts */}
+          {/* Focus + Settings – 2-col row, equal width, matching horizontal layouts */}
           <div className="grid grid-cols-2 gap-2 mb-2 relative">
             {(() => {
               const CurrentIcon = goal === 'general' ? Globe : goal === 'travel' ? Plane : goal === 'work' ? Briefcase : Heart;
@@ -1309,7 +1309,7 @@ const App: React.FC = () => {
                 })()}
               </div>
 
-              {/* Danger zone — reset actions. Confirms required so the user
+              {/* Danger zone – reset actions. Confirms required so the user
                   can't accidentally wipe progress. Styled in muted red so it
                   reads as serious but doesn't draw the eye like a CTA. */}
               <div className="pt-4 border-t border-[var(--border-color)] space-y-3">
@@ -1329,7 +1329,7 @@ const App: React.FC = () => {
                 )}
                 <button
                   onClick={() => {
-                    if (confirm('Reset ALL data across every language? This wipes streaks, progress, mastery, favorites, vocab — everything. Cannot be undone.')) {
+                    if (confirm('Reset ALL data across every language? This wipes streaks, progress, mastery, favorites, vocab – everything. Cannot be undone.')) {
                       resetAll();
                       window.location.reload();
                     }

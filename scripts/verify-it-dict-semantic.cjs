@@ -4,7 +4,7 @@
  * 1. Parse all entries from it.ts
  * 2. Skip Italian function words
  * 3. Translate all remaining via Google (it→en), batch 80
- * 4. Compare — zero content-word match → flag for replacement
+ * 4. Compare – zero content-word match → flag for replacement
  * 5. Filter garbage Google results
  * 6. Output JSON with fixes
  */
@@ -149,7 +149,7 @@ function extractContentWords(text) {
   if (!text) return new Set();
   return new Set(
     text.toLowerCase()
-      .replace(/[().,!?;:"""''\/\-–—]/g, ' ')
+      .replace(/[().,!?;:"""''\/\-––]/g, ' ')
       .split(/\s+/)
       .filter(w => w.length > 1 && !STOP_WORDS.has(w))
   );
@@ -369,7 +369,7 @@ async function main() {
 }
 
 main().then(fixCount => {
-  console.log(`\nITALIAN SEMANTIC VERIFICATION COMPLETE — ${fixCount} fixes`);
+  console.log(`\nITALIAN SEMANTIC VERIFICATION COMPLETE – ${fixCount} fixes`);
 }).catch(err => {
   console.error('Fatal error:', err);
   process.exit(1);

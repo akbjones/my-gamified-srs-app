@@ -39,7 +39,7 @@ const lines = [];
 function P(s = '') { lines.push(s); }
 
 P('═'.repeat(80));
-P('  BIG FINAL AUDIT — 100 random cards per language across 4 focus slices');
+P('  BIG FINAL AUDIT – 100 random cards per language across 4 focus slices');
 P('═'.repeat(80));
 P();
 
@@ -76,5 +76,5 @@ for (const [lang, s] of Object.entries(stats)) {
 }
 
 fs.writeFileSync('scripts/big-final-audit.txt', lines.join('\n'));
-console.log('Saved scripts/big-final-audit.txt — ' + lines.length + ' lines');
+console.log('Saved scripts/big-final-audit.txt – ' + lines.length + ' lines');
 console.log('Total samples: ~' + Object.values(stats).reduce((a, s) => a + s.samples, 0));

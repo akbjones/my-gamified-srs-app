@@ -8,7 +8,7 @@ module.exports = [
     match: t => /^(Idag|I\s+morgon|I\s+går|Här|Där|Nu|Då|Ibland|Ofta|På|I)\s+\w+/i.test(t),
     tips: [
       "Swedish is V2: the verb is always the second element. `Idag äter jag pizza` (today I eat pizza), not `idag jag äter`. Subject jumps after the verb.",
-      "If anything but the subject opens the sentence, the subject inverts. Same rule as German/Dutch. `I morgon kommer han` — never `i morgon han kommer`.",
+      "If anything but the subject opens the sentence, the subject inverts. Same rule as German/Dutch. `I morgon kommer han` – never `i morgon han kommer`.",
     ],
   },
 
@@ -30,7 +30,7 @@ module.exports = [
     match: t => /\b\w+(ade|de|te|dde|tte)\b/i.test(t),
     tips: [
       "Swedish past tense endings: -ade (group 1, most regular), -de or -te (group 2 depending on voiced/voiceless stem). `Tittade`, `läste`, `köpte`. Same form for all subjects.",
-      "Group 4 verbs have vowel changes instead of endings: `dricka → drack`, `gå → gick`, `se → såg`. Memorise the principal parts — they're highly irregular but very common.",
+      "Group 4 verbs have vowel changes instead of endings: `dricka → drack`, `gå → gick`, `se → såg`. Memorise the principal parts – they're highly irregular but very common.",
     ],
   },
 
@@ -40,7 +40,7 @@ module.exports = [
     priority: 90,
     match: t => /\b(har|hade)\s+\w+(at|t|tt|it)\b/i.test(t),
     tips: [
-      "Perfect tense uses `har + supinum`: `jag har talat`, `vi har sett`. The supinum is the form ending -at / -t / -tt / -it — distinct from past tense.",
+      "Perfect tense uses `har + supinum`: `jag har talat`, `vi har sett`. The supinum is the form ending -at / -t / -tt / -it – distinct from past tense.",
       "Don't confuse supinum with the past tense. Past: `jag åt` (I ate). Perfect: `jag har ätit` (I have eaten). Same root, different endings, different uses.",
     ],
   },
@@ -63,7 +63,7 @@ module.exports = [
     match: t => /\b(mig|dig|honom|henne|oss|er|dem)\b/i.test(t),
     tips: [
       "Object pronouns: mig (me), dig (you), honom (him), henne (her), oss (us), er (you pl), dem (them). Place after the verb: `jag ser dig`.",
-      "In writing, `dem` is the standard object form for 'them' — but in speech, Swedes often say `dom` for both subject and object. Spelling stays formal.",
+      "In writing, `dem` is the standard object form for 'them' – but in speech, Swedes often say `dom` for both subject and object. Spelling stays formal.",
     ],
   },
 
@@ -84,7 +84,7 @@ module.exports = [
     priority: 75,
     match: t => /\b\w+\s+inte\b/i.test(t),
     tips: [
-      "`inte` (not) goes AFTER the verb in main clauses: `jag äter inte pizza` (I don't eat pizza). Watch the position — putting `inte` first is wrong.",
+      "`inte` (not) goes AFTER the verb in main clauses: `jag äter inte pizza` (I don't eat pizza). Watch the position – putting `inte` first is wrong.",
       "In subordinate clauses, `inte` moves BEFORE the verb: `att jag inte äter pizza` (that I don't eat pizza). Main vs subordinate flips it.",
     ],
   },
@@ -106,7 +106,7 @@ module.exports = [
     priority: 50,
     match: t => /\b\w{10,}\b/i.test(t),
     tips: [
-      "Swedish loves compound nouns — long words made of smaller ones. `Tandborste` = tooth + brush. Break them apart to read: `tand` + `borste`. The last piece carries the gender.",
+      "Swedish loves compound nouns – long words made of smaller ones. `Tandborste` = tooth + brush. Break them apart to read: `tand` + `borste`. The last piece carries the gender.",
       "If you see a 15-letter word, don't panic. It's almost certainly 2-3 words glued together. Read left to right, find the main noun on the right.",
     ],
   },
@@ -133,14 +133,14 @@ module.exports = [
     ],
   },
 
-  // ── Du is universal — no formal/informal split (du-reform) ───────
+  // ── Du is universal – no formal/informal split (du-reform) ───────
   {
     id: 'sv-du-universal',
     priority: 80,
     match: t => /\b(du|ni|dig|dej|er|din|ditt|dina|er|ert|era)\b/i.test(t),
     tips: [
-      "Swedish only has ONE 'you' in modern use: `du`. Use it with strangers, your boss, the king — everyone. The formal `Ni` is essentially extinct outside very formal letters.",
-      "This is unusual for European languages. Spanish, French, German, Russian all distinguish formal/informal — Swedish dropped it in the 1960s-70s ('du-reformen'). Don't reach for a formal 'you'; it doesn't exist.",
+      "Swedish only has ONE 'you' in modern use: `du`. Use it with strangers, your boss, the king – everyone. The formal `Ni` is essentially extinct outside very formal letters.",
+      "This is unusual for European languages. Spanish, French, German, Russian all distinguish formal/informal – Swedish dropped it in the 1960s-70s ('du-reformen'). Don't reach for a formal 'you'; it doesn't exist.",
       "`Ni` survives only as the plural 'you' (you all). Some older speakers or very formal contexts use `Ni` for one stranger, but it can actually sound stiff or even sarcastic. Default to `du`.",
       "Possessives are straightforward: `din/ditt/dina` (your, singular) matching the noun's gender and number. `Er/ert/era` for plural 'your'. No formality dimension to worry about.",
     ],

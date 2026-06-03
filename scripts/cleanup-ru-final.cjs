@@ -153,7 +153,7 @@ const overrides = {
 
 // ── Entries to fully revert (Google was wrong, original was fine) ──
 const fullReverts = [
-  'конечно',    // "of course" → "certainly" — both fine, keep original
+  'конечно',    // "of course" → "certainly" – both fine, keep original
   'рассказывает', // probably fine as is
   'сохранить', // probably fine as is
 ];
@@ -166,7 +166,7 @@ for (const [key, newEn] of Object.entries(overrides)) {
   if (setEn(key, newEn)) fixCount++;
 }
 
-// Apply reverts — find these in the fix log and restore original
+// Apply reverts – find these in the fix log and restore original
 const fixLog = require('./output/ru-semantic-fixes-v2.json');
 const fixMap = new Map(fixLog.map(f => [f.key, f.oldEn]));
 

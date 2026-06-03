@@ -99,29 +99,29 @@ function add(target, english, tags, grammar) {
 }
 
 // ─── NODE 9: A2 Por vs Para (2001-2250) ──────────────────────────
-add("Gracias por tu ayuda.", "Thanks for your help.", ["general"], "\"Por\" — cause/reason.");
-add("Este regalo es para ti.", "This gift is for you.", ["general"], "\"Para\" — recipient.");
-add("Pasamos por Madrid.", "We passed through Madrid.", ["travel", "general"], "\"Por\" — movement through a place.");
-add("Salimos para Madrid.", "We left for Madrid.", ["travel", "general"], "\"Para\" — destination.");
-add("Trabajo por la mañana.", "I work in the morning.", ["work", "general"], "\"Por\" — general time of day.");
-add("Lo necesito para el lunes.", "I need it by Monday.", ["work", "general"], "\"Para\" — deadline.");
-add("Lo cambié por otro.", "I exchanged it for another.", ["general"], "\"Por\" — exchange.");
-add("Estudio para aprender.", "I study in order to learn.", ["general"], "\"Para\" — purpose.");
-add("Pagué veinte euros por el libro.", "I paid twenty euros for the book.", ["general"], "\"Por\" — price/exchange.");
-add("Hago ejercicio por salud.", "I exercise for health.", ["general"], "\"Por\" — motivation/cause.");
+add("Gracias por tu ayuda.", "Thanks for your help.", ["general"], "\"Por\" – cause/reason.");
+add("Este regalo es para ti.", "This gift is for you.", ["general"], "\"Para\" – recipient.");
+add("Pasamos por Madrid.", "We passed through Madrid.", ["travel", "general"], "\"Por\" – movement through a place.");
+add("Salimos para Madrid.", "We left for Madrid.", ["travel", "general"], "\"Para\" – destination.");
+add("Trabajo por la mañana.", "I work in the morning.", ["work", "general"], "\"Por\" – general time of day.");
+add("Lo necesito para el lunes.", "I need it by Monday.", ["work", "general"], "\"Para\" – deadline.");
+add("Lo cambié por otro.", "I exchanged it for another.", ["general"], "\"Por\" – exchange.");
+add("Estudio para aprender.", "I study in order to learn.", ["general"], "\"Para\" – purpose.");
+add("Pagué veinte euros por el libro.", "I paid twenty euros for the book.", ["general"], "\"Por\" – price/exchange.");
+add("Hago ejercicio por salud.", "I exercise for health.", ["general"], "\"Por\" – motivation/cause.");
 add("Vamos para la playa.", "We're heading to the beach.", ["travel", "general"]);
 add("Caminamos por el parque.", "We walked through the park.", ["general"]);
 add("Esta carta es para María.", "This letter is for María.", ["general"]);
-add("Te llamo por teléfono.", "I'll call you by phone.", ["general"], "\"Por\" — means of communication.");
-add("Están aquí por tres días.", "They're here for three days.", ["travel", "general"], "\"Por\" — duration of time.");
+add("Te llamo por teléfono.", "I'll call you by phone.", ["general"], "\"Por\" – means of communication.");
+add("Están aquí por tres días.", "They're here for three days.", ["travel", "general"], "\"Por\" – duration of time.");
 add("Para mí, un café con leche.", "For me, a coffee with milk.", ["general"]);
 add("Mandé el paquete por correo.", "I sent the package by mail.", ["general"]);
-add("Para ser principiante, habla muy bien.", "For a beginner, he speaks very well.", ["general"], "\"Para\" — considering/in spite of.");
-add("Me preocupo por mi familia.", "I worry about my family.", ["family", "general"], "\"Por\" — concern/about.");
-add("¿Por qué no viniste?", "Why didn't you come?", ["general"], "\"¿Por qué?\" — why (for what reason)?");
-add("¿Para qué sirve esto?", "What is this for?", ["general"], "\"¿Para qué?\" — for what purpose?");
+add("Para ser principiante, habla muy bien.", "For a beginner, he speaks very well.", ["general"], "\"Para\" – considering/in spite of.");
+add("Me preocupo por mi familia.", "I worry about my family.", ["family", "general"], "\"Por\" – concern/about.");
+add("¿Por qué no viniste?", "Why didn't you come?", ["general"], "\"¿Por qué?\" – why (for what reason)?");
+add("¿Para qué sirve esto?", "What is this for?", ["general"], "\"¿Para qué?\" – for what purpose?");
 add("Por favor, cierra la puerta.", "Please close the door.", ["general"]);
-add("Lo hice por ti.", "I did it for you (because of you).", ["general"], "\"Por\" — on behalf of/because of.");
+add("Lo hice por ti.", "I did it for you (because of you).", ["general"], "\"Por\" – on behalf of/because of.");
 add("Para llegar, gira a la derecha.", "To get there, turn right.", ["travel", "general"]);
 add("Vine por el descuento.", "I came because of the discount.", ["general"]);
 
@@ -142,7 +142,7 @@ add("Te quiero mucho.", "I love you very much.", ["family", "general"]);
 add("Nos vemos mañana.", "See you tomorrow.", ["general"]);
 add("¿La conoces?", "Do you know her?", ["general"]);
 add("Les escribí una carta.", "I wrote them a letter.", ["general"]);
-add("Me gusta la música.", "I like music.", ["general"], "\"Me\" is indirect object — music pleases me.");
+add("Me gusta la música.", "I like music.", ["general"], "\"Me\" is indirect object – music pleases me.");
 add("Le dije la verdad.", "I told him the truth.", ["general"]);
 add("¿Te importa si abro la ventana?", "Do you mind if I open the window?", ["general"]);
 add("Los vi en el parque.", "I saw them in the park.", ["general"]);
@@ -153,21 +153,21 @@ add("Le compré flores a mi madre.", "I bought flowers for my mother.", ["family
 add("No la encuentro por ningún lado.", "I can't find it anywhere.", ["general"]);
 
 // ─── NODE 11: B1 Present Subjunctive (2501-2750) ────────────────
-add("Espero que estés bien.", "I hope you're well.", ["general"], "\"Espero que\" + subjunctive — expressing hope.");
+add("Espero que estés bien.", "I hope you're well.", ["general"], "\"Espero que\" + subjunctive – expressing hope.");
 add("Es importante que practiques todos los días.", "It's important that you practice every day.", ["general"]);
 add("No creo que sea una buena idea.", "I don't think it's a good idea.", ["general"]);
 add("Quiero que vengas a la fiesta.", "I want you to come to the party.", ["general"]);
 add("Es posible que llueva mañana.", "It's possible that it'll rain tomorrow.", ["general"]);
 add("Dudo que lo termine a tiempo.", "I doubt he'll finish it on time.", ["work", "general"]);
-add("Me alegro de que hayas venido.", "I'm glad you came.", ["general"], "\"Me alegro de que\" + subjunctive — emotion.");
+add("Me alegro de que hayas venido.", "I'm glad you came.", ["general"], "\"Me alegro de que\" + subjunctive – emotion.");
 add("Es necesario que todos asistan.", "It's necessary that everyone attend.", ["work", "general"]);
 add("No hay nadie que sepa la respuesta.", "There's nobody who knows the answer.", ["general"]);
 add("Busco un lugar donde pueda estudiar.", "I'm looking for a place where I can study.", ["general"], "Subjunctive after indefinite antecedent.");
-add("Te llamo para que sepas.", "I'm calling so that you know.", ["general"], "\"Para que\" + subjunctive — purpose.");
+add("Te llamo para que sepas.", "I'm calling so that you know.", ["general"], "\"Para que\" + subjunctive – purpose.");
 add("Antes de que te vayas, escúchame.", "Before you leave, listen to me.", ["general"]);
 add("Necesito que me ayudes.", "I need you to help me.", ["general"]);
 add("Es una lástima que no puedas venir.", "It's a shame you can't come.", ["general"]);
-add("Ojalá pudiera viajar más.", "I wish I could travel more.", ["travel", "general"], "\"Ojalá\" + subjunctive — wishing.");
+add("Ojalá pudiera viajar más.", "I wish I could travel more.", ["travel", "general"], "\"Ojalá\" + subjunctive – wishing.");
 add("No es que no quiera, es que no puedo.", "It's not that I don't want to, it's that I can't.", ["general"]);
 add("Con tal de que llegues a tiempo.", "As long as you arrive on time.", ["general"], "\"Con tal de que\" + subjunctive.");
 add("En caso de que necesites algo, llámame.", "In case you need something, call me.", ["general"]);
@@ -181,7 +181,7 @@ add("Dudo que el cliente acepte esas condiciones.", "I doubt the client will acc
 
 // ─── NODE 12: B1 Commands (2751-3000) ───────────────────────────
 add("Ven aquí, por favor.", "Come here, please.", ["general"], "Informal affirmative command of \"venir.\"");
-add("No hables tan alto.", "Don't speak so loud.", ["general"], "Negative informal command — uses subjunctive.");
+add("No hables tan alto.", "Don't speak so loud.", ["general"], "Negative informal command – uses subjunctive.");
 add("Dime la verdad.", "Tell me the truth.", ["general"]);
 add("Siéntate aquí.", "Sit down here.", ["general"]);
 add("No te preocupes.", "Don't worry.", ["general"]);
@@ -248,12 +248,12 @@ add("Cuando llegué, ya se habían ido.", "When I arrived, they had already left
 add("Nunca había comido paella antes.", "I had never eaten paella before.", ["general"]);
 add("Ya habíamos reservado el hotel.", "We had already booked the hotel.", ["travel", "general"]);
 add("Para las seis, habré terminado.", "By six, I will have finished.", ["general"], "Future perfect: habré + past participle.");
-add("Llevo tres años estudiando español.", "I've been studying Spanish for three years.", ["general"], "\"Llevar\" + time + gerund — ongoing duration.");
+add("Llevo tres años estudiando español.", "I've been studying Spanish for three years.", ["general"], "\"Llevar\" + time + gerund – ongoing duration.");
 add("Llevo una hora esperando.", "I've been waiting for an hour.", ["general"]);
 add("¿Cuánto tiempo llevas viviendo aquí?", "How long have you been living here?", ["general"]);
-add("Acabo de llegar.", "I just arrived.", ["general"], "\"Acabar de\" + infinitive — to have just done.");
+add("Acabo de llegar.", "I just arrived.", ["general"], "\"Acabar de\" + infinitive – to have just done.");
 add("Acaba de llamar tu madre.", "Your mother just called.", ["family", "general"]);
-add("El tren está a punto de salir.", "The train is about to leave.", ["travel", "general"], "\"Estar a punto de\" — to be about to.");
+add("El tren está a punto de salir.", "The train is about to leave.", ["travel", "general"], "\"Estar a punto de\" – to be about to.");
 add("Voy a empezar un curso nuevo.", "I'm going to start a new course.", ["general"]);
 add("¿Vas a venir o no?", "Are you going to come or not?", ["general"]);
 add("Seguiré intentándolo.", "I'll keep trying.", ["general"]);
@@ -265,13 +265,13 @@ add("La persona que llamó no dejó su nombre.", "The person who called didn't l
 add("El libro que estoy leyendo es fascinante.", "The book I'm reading is fascinating.", ["general"]);
 add("La ciudad donde nací ya no es la misma.", "The city where I was born is no longer the same.", ["general"]);
 add("Todo lo que dijo era mentira.", "Everything he said was a lie.", ["general"]);
-add("La razón por la que vinimos es importante.", "The reason we came is important.", ["general"], "\"Por la que\" — for which / the reason why.");
+add("La razón por la que vinimos es importante.", "The reason we came is important.", ["general"], "\"Por la que\" – for which / the reason why.");
 add("El restaurante en el que cenamos era excelente.", "The restaurant where we had dinner was excellent.", ["travel", "general"]);
 add("La empresa para la que trabajo es internacional.", "The company I work for is international.", ["work", "general"]);
 add("El amigo con quien viajé es muy divertido.", "The friend I traveled with is very fun.", ["travel", "general"]);
 add("La casa en la que crecí era pequeña.", "The house I grew up in was small.", ["family", "general"]);
 add("Lo que más me gusta es la música.", "What I like most is music.", ["general"]);
-add("El profesor, cuya clase es difícil, es muy bueno.", "The teacher, whose class is hard, is very good.", ["general"], "\"Cuyo/cuya\" — whose (relative possessive).");
+add("El profesor, cuya clase es difícil, es muy bueno.", "The teacher, whose class is hard, is very good.", ["general"], "\"Cuyo/cuya\" – whose (relative possessive).");
 add("Esa es la chica con la que hablé.", "That's the girl I talked to.", ["general"]);
 add("No entiendo lo que quieres decir.", "I don't understand what you mean.", ["general"]);
 add("El día en que nos conocimos fue especial.", "The day we met was special.", ["general"]);
@@ -288,7 +288,7 @@ add("Eso es exactamente lo que necesitaba.", "That's exactly what I needed.", ["
 add("La mujer cuyo hijo conociste es mi vecina.", "The woman whose son you met is my neighbor.", ["family", "general"]);
 
 // ─── NODE 16: B2 Imperfect Subjunctive (3751-4000) ──────────────
-add("Si tuviera más tiempo, viajaría más.", "If I had more time, I'd travel more.", ["general"], "Imperfect subjunctive + conditional — second conditional.");
+add("Si tuviera más tiempo, viajaría más.", "If I had more time, I'd travel more.", ["general"], "Imperfect subjunctive + conditional – second conditional.");
 add("Quería que vinieras a mi boda.", "I wanted you to come to my wedding.", ["family", "general"]);
 add("Si pudiera elegir, viviría en la costa.", "If I could choose, I'd live on the coast.", ["general"]);
 add("Me pidieron que llegara temprano.", "They asked me to arrive early.", ["work", "general"]);
@@ -318,7 +318,7 @@ add("Si estuviera en tu lugar, aceptaría la oferta.", "If I were in your place,
 add("Si hubiera sabido, habría venido antes.", "If I had known, I would have come earlier.", ["general"], "Third conditional: pluperfect subjunctive + conditional perfect.");
 add("Habría ido si me hubieras invitado.", "I would have gone if you had invited me.", ["general"]);
 add("Si hubiéramos salido antes, no habríamos llegado tarde.", "If we had left earlier, we wouldn't have arrived late.", ["general"]);
-add("De haber sabido la verdad, habría actuado diferente.", "Had I known the truth, I would have acted differently.", ["general"], "\"De haber\" + participle — literary third conditional.");
+add("De haber sabido la verdad, habría actuado diferente.", "Had I known the truth, I would have acted differently.", ["general"], "\"De haber\" + participle – literary third conditional.");
 add("¿Habrías hecho lo mismo en mi lugar?", "Would you have done the same in my place?", ["general"]);
 add("Si no hubiera llovido, habríamos ido al parque.", "If it hadn't rained, we would have gone to the park.", ["general"]);
 add("Habríamos ganado si hubiéramos jugado mejor.", "We would have won if we had played better.", ["general"]);
@@ -342,7 +342,7 @@ add("No habría funcionado aunque lo hubiéramos intentado.", "It wouldn't have 
 add("Si hubieras venido, te habrías divertido.", "If you had come, you would have had fun.", ["general"]);
 
 // ─── NODE 18: B2 Passive & Impersonal (4251-4500) ──────────────
-add("Se habla español en veinte países.", "Spanish is spoken in twenty countries.", ["general"], "\"Se\" + verb — passive/impersonal construction.");
+add("Se habla español en veinte países.", "Spanish is spoken in twenty countries.", ["general"], "\"Se\" + verb – passive/impersonal construction.");
 add("Se necesitan voluntarios.", "Volunteers are needed.", ["general"]);
 add("Aquí se come muy bien.", "The food here is very good.", ["general"]);
 add("Se prohíbe fumar.", "Smoking is prohibited.", ["general"]);
@@ -356,13 +356,13 @@ add("La carta fue escrita por mi abuelo.", "The letter was written by my grandfa
 add("Las ventanas fueron rotas por la tormenta.", "The windows were broken by the storm.", ["general"]);
 add("El proyecto será presentado mañana.", "The project will be presented tomorrow.", ["work", "general"]);
 add("La decisión ya ha sido tomada.", "The decision has already been made.", ["general"]);
-add("Se me olvidó comprar pan.", "I forgot to buy bread.", ["general"], "Accidental \"se\" — unintentional event.");
+add("Se me olvidó comprar pan.", "I forgot to buy bread.", ["general"], "Accidental \"se\" – unintentional event.");
 add("Se nos acabó la leche.", "We ran out of milk.", ["general"]);
 add("Se me ha perdido la cartera.", "I've lost my wallet.", ["general"]);
 add("Se me ha roto el teléfono.", "My phone broke.", ["general"]);
 add("Se te cayó el vaso.", "You dropped the glass.", ["general"]);
 add("Se me olvidaron las llaves.", "I forgot my keys.", ["general"]);
-add("Hay que estudiar más.", "One must study more.", ["general"], "\"Hay que\" — impersonal obligation.");
+add("Hay que estudiar más.", "One must study more.", ["general"], "\"Hay que\" – impersonal obligation.");
 add("No se puede estacionar aquí.", "You can't park here.", ["general"]);
 add("Se recomienda llegar temprano.", "It's recommended to arrive early.", ["travel", "general"]);
 add("Se ruega silencio.", "Silence is requested.", ["general"]);
@@ -382,10 +382,10 @@ add("En definitiva, lo importante es ser feliz.", "Ultimately, what matters is b
 add("Si bien es cierto que cometí errores, aprendí.", "While it's true I made mistakes, I learned.", ["general"]);
 add("A medida que pasa el tiempo, las cosas cambian.", "As time passes, things change.", ["general"]);
 add("Por mucho que lo intente, no consigo entenderlo.", "No matter how much I try, I can't understand it.", ["general"], "\"Por mucho que\" + subjunctive.");
-add("Sea cual sea tu decisión, te apoyaré.", "Whatever your decision, I'll support you.", ["general"], "\"Sea cual sea\" — whatever it may be.");
+add("Sea cual sea tu decisión, te apoyaré.", "Whatever your decision, I'll support you.", ["general"], "\"Sea cual sea\" – whatever it may be.");
 add("Siempre que tenga la oportunidad, viajo.", "Whenever I have the opportunity, I travel.", ["travel", "general"]);
 add("A raíz de la pandemia, todo cambió.", "As a result of the pandemic, everything changed.", ["general"]);
-add("No solo aprendió el idioma, sino que se sumergió en la cultura.", "Not only did he learn the language, but he immersed himself in the culture.", ["general"], "\"No solo...sino que\" — not only...but.");
+add("No solo aprendió el idioma, sino que se sumergió en la cultura.", "Not only did he learn the language, but he immersed himself in the culture.", ["general"], "\"No solo...sino que\" – not only...but.");
 add("Más allá de las diferencias, todos buscamos lo mismo.", "Beyond our differences, we all seek the same thing.", ["general"]);
 add("A fin de que mejoren los resultados, debemos actuar.", "In order for results to improve, we must act.", ["work", "general"]);
 add("Sin que nadie se diera cuenta, se marchó.", "Without anyone noticing, he left.", ["general"]);
@@ -396,7 +396,7 @@ add("A fin de cuentas, todos somos humanos.", "At the end of the day, we're all 
 add("En lo que se refiere a la economía, hay optimismo.", "As far as the economy is concerned, there's optimism.", ["general"]);
 
 // ─── NODE 20: B2 Mastery (4751-5000) ────────────────────────────
-add("Quienquiera que haya escrito este libro es un genio.", "Whoever wrote this book is a genius.", ["general"], "\"Quienquiera que\" + subjunctive — whoever.");
+add("Quienquiera que haya escrito este libro es un genio.", "Whoever wrote this book is a genius.", ["general"], "\"Quienquiera que\" + subjunctive – whoever.");
 add("Dondequiera que vayas, lleva un diccionario.", "Wherever you go, carry a dictionary.", ["general"]);
 add("Haga lo que haga, nunca parece suficiente.", "Whatever he does, it never seems enough.", ["general"], "Reduplicative subjunctive for emphasis.");
 add("No es oro todo lo que reluce.", "All that glitters is not gold.", ["general"]);

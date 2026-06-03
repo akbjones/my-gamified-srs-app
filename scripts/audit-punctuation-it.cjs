@@ -77,7 +77,7 @@ for (const card of deck) {
   // 6. Accent checks (only flag, skip "ne" as pronoun which is very common)
   for (const rule of ACCENT_REQUIRED) {
     if (rule.wrong.test(tLower)) {
-      // Skip "ne" check — too many false positives (ne as partitive pronoun)
+      // Skip "ne" check – too many false positives (ne as partitive pronoun)
       if (rule.note.startsWith('ne →')) continue;
       flag(card, `Missing accent: ${rule.note}`);
     }

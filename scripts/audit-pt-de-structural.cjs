@@ -283,7 +283,7 @@ function auditDeck(deck, langCode, langName) {
   result.sections.essentialVocab = {
     categories: vocabCoverage,
     summary: Object.entries(vocabCoverage).map(([cat, info]) =>
-      `${cat}: ${info.found}/${info.total} (${info.coveragePct}%) — missing: [${info.missingTerms.join(', ')}]`
+      `${cat}: ${info.found}/${info.total} (${info.coveragePct}%) – missing: [${info.missingTerms.join(', ')}]`
     ).join('\n')
   };
 
@@ -379,7 +379,7 @@ function printSummary(audit) {
   for (const node of Object.keys(pb.perNode).sort()) {
     const n = pb.perNode[node];
     const pStr = Object.entries(n.priorities).sort(([a],[b]) => a-b).map(([k,v]) => `P${k}:${v}`).join(' ');
-    console.log(`  ${node}: ${n.total} cards — ${pStr} (P1: ${n.p1Pct}%)`);
+    console.log(`  ${node}: ${n.total} cards – ${pStr} (P1: ${n.p1Pct}%)`);
   }
   if (pb.issues.length > 0) {
     console.log(`  ISSUES:`);

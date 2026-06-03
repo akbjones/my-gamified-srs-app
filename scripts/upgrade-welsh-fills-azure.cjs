@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Regenerate ONLY the Welsh fill audio files (the 11 cards in
- * scripts/edge-tts-cards.json) using Azure TTS with cy-GB-NiaNeural —
+ * scripts/edge-tts-cards.json) using Azure TTS with cy-GB-NiaNeural –
  * matching the rest of the Welsh deck's encoding.
  *
  * Usage:  node scripts/upgrade-welsh-fills-azure.cjs

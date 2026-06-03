@@ -155,7 +155,7 @@ function classifyMismatch(m) {
         gBase + 's' === dBase || gBase + 'es' === dBase) return 'plural-form';
   }
 
-  // 5. Dict entry has semicolon with multiple meanings — check each part
+  // 5. Dict entry has semicolon with multiple meanings – check each part
   if (dictEn.includes(';') || dictEn.includes(',')) {
     const parts = dictEn.split(/[;,]/).map(p => p.trim());
     for (const part of parts) {
@@ -169,7 +169,7 @@ function classifyMismatch(m) {
     }
   }
 
-  // 6. Dict says something clearly wrong — these are real errors
+  // 6. Dict says something clearly wrong – these are real errors
   // Check for clear indicators of wrong translation:
   // - Dict says a totally unrelated word
   // - Dict has garbage characters
@@ -194,7 +194,7 @@ console.log(`Real errors to fix: ${realErrors.length}`);
 // ── Additional filtering: remove cases where dict is actually better ──
 // These are cases where Google gave a less precise or less common translation
 const KEEP_DICT = new Set([
-  // Place names, proper nouns — dict is probably fine
+  // Place names, proper nouns – dict is probably fine
   // Words where dict has a more specific/accurate translation
 ]);
 

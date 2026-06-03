@@ -3,7 +3,7 @@
  * Rebuild ALL 11 language dictionaries from Wiktionary JSONL data.
  *
  * CRITICAL DIFFERENCE from rebuild-dict-from-wiktionary.cjs:
- *   - NO card-context scoring (scoreGloss) — this was the source of context bleed
+ *   - NO card-context scoring (scoreGloss) – this was the source of context bleed
  *   - Takes the FIRST primary/non-grammatical sense from Wiktionary
  *   - Form-of entries resolve to the base word's primary definition
  *
@@ -240,7 +240,7 @@ function downloadStream(url) {
 
 /**
  * Process the Wiktionary JSONL stream and build a clean dictionary.
- * NO context scoring — just take the first primary gloss.
+ * NO context scoring – just take the first primary gloss.
  */
 async function processKaikkiStream(langCode) {
   const info = LANG_MAP[langCode];
@@ -317,7 +317,7 @@ async function processKaikkiStream(langCode) {
               continue;
             }
 
-            // This is a real definition — take it
+            // This is a real definition – take it
             if (!firstGloss) {
               firstGloss = cleaned;
             }
@@ -337,7 +337,7 @@ async function processKaikkiStream(langCode) {
             }
           }
         } else if (baseWord) {
-          // This is purely a form-of entry — store for later resolution
+          // This is purely a form-of entry – store for later resolution
           if (!formRefs.has(word)) {
             formRefs.set(word, { baseWord, ipa, pos });
           }
@@ -356,7 +356,7 @@ async function processKaikkiStream(langCode) {
       if (definitions.has(word)) continue; // Already has a direct definition
       if (definitions.has(ref.baseWord)) {
         const baseDef = definitions.get(ref.baseWord);
-        // Inherit POS from base word — form-of entries often get wrong POS
+        // Inherit POS from base word – form-of entries often get wrong POS
         // (e.g., conjugated verb forms tagged as 'n')
         const resolvedPos = (baseDef.pos && baseDef.pos !== '?') ? baseDef.pos : (ref.pos !== '?' ? ref.pos : baseDef.pos);
         definitions.set(word, {
@@ -486,7 +486,7 @@ function parseExistingDict(langCode) {
 
   const footer = content.substring(footerStart);
 
-  // Parse existing entries — handle both single-quoted and double-quoted formats
+  // Parse existing entries – handle both single-quoted and double-quoted formats
   const existing = new Map();
   const dictSection = content.substring(block.startIdx, dictEndIdx + 1);
 
@@ -545,7 +545,7 @@ function generateDictEntries(entries) {
     const safeIpa = (entry.ipa || '?').replace(/'/g, "\\'");
     const safePos = (entry.pos || '?').replace(/'/g, "\\'");
 
-    // Quote keys — use double quotes for words containing apostrophes
+    // Quote keys – use double quotes for words containing apostrophes
     let key;
     if (word.includes("'")) {
       key = `"${word}"`;
@@ -603,7 +603,7 @@ async function rebuildLang(langCode) {
       merged.set(word, newEntry);
       wiktSourced++;
     } else {
-      // Wiktionary doesn't have this word — keep current entry as-is
+      // Wiktionary doesn't have this word – keep current entry as-is
       merged.set(word, { ...currentEntry });
       keptFromCurrent++;
     }
@@ -668,7 +668,7 @@ async function main() {
   const langs = args[0] === 'all' ? Object.keys(LANG_MAP) : [args[0]];
 
   console.log(`\nClean Wiktionary Dictionary Rebuild`);
-  console.log(`NO context scoring — first primary sense only`);
+  console.log(`NO context scoring – first primary sense only`);
   console.log(`Languages: ${langs.join(', ')}\n`);
 
   const results = [];

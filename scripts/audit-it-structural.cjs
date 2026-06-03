@@ -136,13 +136,13 @@ for (const [node, stats] of Object.entries(nodeStats)) {
   const p3pct = (p3 / total * 100);
 
   if (p1pct < 15 || p1pct > 50) {
-    priorityIssues.push({ node, issue: `P1 is ${p1pct.toFixed(1)}% (${p1}/${total}) — expected 15-50%` });
+    priorityIssues.push({ node, issue: `P1 is ${p1pct.toFixed(1)}% (${p1}/${total}) – expected 15-50%` });
   }
   if (p2pct < 20 || p2pct > 55) {
-    priorityIssues.push({ node, issue: `P2 is ${p2pct.toFixed(1)}% (${p2}/${total}) — expected 20-55%` });
+    priorityIssues.push({ node, issue: `P2 is ${p2pct.toFixed(1)}% (${p2}/${total}) – expected 20-55%` });
   }
   if (p3pct < 10 || p3pct > 45) {
-    priorityIssues.push({ node, issue: `P3 is ${p3pct.toFixed(1)}% (${p3}/${total}) — expected 10-45%` });
+    priorityIssues.push({ node, issue: `P3 is ${p3pct.toFixed(1)}% (${p3}/${total}) – expected 10-45%` });
   }
   // Check for missing priorities
   if (!p1) priorityIssues.push({ node, issue: 'No priority-1 cards at all!' });
@@ -158,16 +158,16 @@ const targetText = deck.map(c => c.target.toLowerCase());
 for (const [node, stats] of Object.entries(nodeStats)) {
   const meta = NODE_META[node];
   if (!meta) {
-    levelIssues.push({ node, issue: `Unknown node ${node} — not in NODE_META` });
+    levelIssues.push({ node, issue: `Unknown node ${node} – not in NODE_META` });
     continue;
   }
 
   // Node size: each node should have ~100-140 cards (3945/35 ≈ 113)
   if (stats.total < 80) {
-    levelIssues.push({ node, level: meta.level, issue: `Only ${stats.total} cards — too few (expected 80+)` });
+    levelIssues.push({ node, level: meta.level, issue: `Only ${stats.total} cards – too few (expected 80+)` });
   }
   if (stats.total > 160) {
-    levelIssues.push({ node, level: meta.level, issue: `${stats.total} cards — too many (expected ≤160)` });
+    levelIssues.push({ node, level: meta.level, issue: `${stats.total} cards – too many (expected ≤160)` });
   }
 
   // A1 nodes (01-08): sentences should be shorter on average
@@ -176,10 +176,10 @@ for (const [node, stats] of Object.entries(nodeStats)) {
   const avgLen = nodeCards.reduce((sum, c) => sum + c.target.split(/\s+/).length, 0) / nodeCards.length;
 
   if (meta.level === 'A1' && avgLen > 12) {
-    levelIssues.push({ node, level: 'A1', issue: `Avg sentence length ${avgLen.toFixed(1)} words — too complex for A1 (expected ≤12)` });
+    levelIssues.push({ node, level: 'A1', issue: `Avg sentence length ${avgLen.toFixed(1)} words – too complex for A1 (expected ≤12)` });
   }
   if (meta.level === 'C2' && avgLen < 5) {
-    levelIssues.push({ node, level: 'C2', issue: `Avg sentence length ${avgLen.toFixed(1)} words — too simple for C2 (expected ≥5)` });
+    levelIssues.push({ node, level: 'C2', issue: `Avg sentence length ${avgLen.toFixed(1)} words – too simple for C2 (expected ≥5)` });
   }
 
   // Check that P1 cards in nodes with 15+ cards don't exceed id 500 equivalent (i.e., they appear early)
@@ -193,7 +193,7 @@ for (const [node, stats] of Object.entries(nodeStats)) {
     // For nodes with 15+ cards, all P1 should be in the first ~70% of the deck
     if (maxP1 > 3500 && meta.level === 'A1') {
       // A1 priority-1 cards showing up very late is suspicious
-      levelIssues.push({ node, level: 'A1', issue: `A1 P1 card appears at id it-${maxP1} — may be too late in deck ordering` });
+      levelIssues.push({ node, level: 'A1', issue: `A1 P1 card appears at id it-${maxP1} – may be too late in deck ordering` });
     }
   }
 }
@@ -220,10 +220,10 @@ if (tagCounts.general < deck.length * 0.95) {
 for (const tag of ['travel', 'work', 'family']) {
   const pct = (tagCounts[tag] / deck.length * 100);
   if (pct < 30) {
-    tagIssues.push({ tag, issue: `Only ${pct.toFixed(1)}% cards have '${tag}' tag — expected ≥30%` });
+    tagIssues.push({ tag, issue: `Only ${pct.toFixed(1)}% cards have '${tag}' tag – expected ≥30%` });
   }
   if (pct > 70) {
-    tagIssues.push({ tag, issue: `${pct.toFixed(1)}% cards have '${tag}' tag — expected ≤70%` });
+    tagIssues.push({ tag, issue: `${pct.toFixed(1)}% cards have '${tag}' tag – expected ≤70%` });
   }
 }
 
@@ -263,7 +263,7 @@ const familyTagged = deck.filter(c => c.tags.includes('family'));
 for (const card of travelTagged.slice(0, sampleSize)) {
   const lower = card.target.toLowerCase();
   if (!travelWords.some(w => lower.includes(w)) && !lower.includes('dove') && !lower.includes('andiamo')) {
-    // Not necessarily wrong — tags are thematic, not keyword-based
+    // Not necessarily wrong – tags are thematic, not keyword-based
   }
 }
 
@@ -316,7 +316,7 @@ for (const num of nodeNumbers) {
   const meta = NODE_META[node];
   if (!meta) continue;
   if (LEVEL_ORDER[meta.level] < LEVEL_ORDER[prevLevel]) {
-    transitionIssues.push({ node, issue: `Level ${meta.level} comes after ${prevLevel} — regression in difficulty` });
+    transitionIssues.push({ node, issue: `Level ${meta.level} comes after ${prevLevel} – regression in difficulty` });
   }
   prevLevel = meta.level;
 }
@@ -336,7 +336,7 @@ const c2AvgLen = c2Nodes.reduce((s, n) => s + (nodeAvgLengths[n] || 0), 0) / c2N
 
 if (c2AvgLen <= a1AvgLen) {
   transitionIssues.push({
-    issue: `C2 avg sentence length (${c2AvgLen.toFixed(1)}) is not longer than A1 (${a1AvgLen.toFixed(1)}) — expected progression`
+    issue: `C2 avg sentence length (${c2AvgLen.toFixed(1)}) is not longer than A1 (${a1AvgLen.toFixed(1)}) – expected progression`
   });
 }
 
@@ -345,10 +345,10 @@ const grammarTipIssues = [];
 for (const [node, stats] of Object.entries(nodeStats)) {
   const pct = (stats.hasGrammar / stats.total * 100);
   if (pct < 15) {
-    grammarTipIssues.push({ node, issue: `Only ${pct.toFixed(1)}% grammar tips (${stats.hasGrammar}/${stats.total}) — expected ≥15%` });
+    grammarTipIssues.push({ node, issue: `Only ${pct.toFixed(1)}% grammar tips (${stats.hasGrammar}/${stats.total}) – expected ≥15%` });
   }
   if (pct > 50) {
-    grammarTipIssues.push({ node, issue: `${pct.toFixed(1)}% grammar tips (${stats.hasGrammar}/${stats.total}) — may be too many (≤50% expected)` });
+    grammarTipIssues.push({ node, issue: `${pct.toFixed(1)}% grammar tips (${stats.hasGrammar}/${stats.total}) – may be too many (≤50% expected)` });
   }
 }
 
@@ -503,7 +503,7 @@ if (idIssues.length) {
 console.log('\n── ESSENTIAL VOCAB COVERAGE ──');
 for (const [cat, r] of Object.entries(vocabResults)) {
   const status = r.pass ? 'PASS' : 'FAIL';
-  console.log(`  ${cat.padEnd(12)}: ${r.found}/${r.total} (${r.coverage}) [${status}]${r.missing.length ? ' — missing: ' + r.missing.slice(0, 5).join(', ') + (r.missing.length > 5 ? '...' : '') : ''}`);
+  console.log(`  ${cat.padEnd(12)}: ${r.found}/${r.total} (${r.coverage}) [${status}]${r.missing.length ? ' – missing: ' + r.missing.slice(0, 5).join(', ') + (r.missing.length > 5 ? '...' : '') : ''}`);
 }
 
 console.log(`\nFull report written to: ${OUTPUT_PATH}`);

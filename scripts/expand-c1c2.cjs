@@ -43,7 +43,7 @@ function addCards(cards) {
 }
 
 // ═══════════════════════════════════════════════════════════════
-// B2 BACKFILL — Nodes 16-20 (~60 cards each = ~300 total)
+// B2 BACKFILL – Nodes 16-20 (~60 cards each = ~300 total)
 // ═══════════════════════════════════════════════════════════════
 
 // NODE 16: Imperfect Subjunctive
@@ -279,13 +279,13 @@ addCards([
 console.log(`After B2 backfill: added ${added} cards (${dupes} dupes skipped)`);
 
 // ═══════════════════════════════════════════════════════════════
-// A2/B1 BACKFILL — ~150 cards for underpopulated nodes
+// A2/B1 BACKFILL – ~150 cards for underpopulated nodes
 // ═══════════════════════════════════════════════════════════════
 
 // NODE 08: Reflexive Verbs (underpopulated)
 addCards([
   { target: "Me despierto todos los días a las seis de la mañana.", english: "I wake up every day at six in the morning.", tags: ["general", "work"] },
-  { target: "Mi hija se viste sola desde los cuatro años.", english: "My daughter has been dressing herself since she was four.", tags: ["general", "family"], grammar: "Vestirse is reflexive — the person dresses themselves." },
+  { target: "Mi hija se viste sola desde los cuatro años.", english: "My daughter has been dressing herself since she was four.", tags: ["general", "family"], grammar: "Vestirse is reflexive – the person dresses themselves." },
   { target: "Nos divertimos mucho en la fiesta de anoche.", english: "We had a lot of fun at last night's party.", tags: ["general"] },
   { target: "¿A qué hora te acuestas normalmente?", english: "What time do you normally go to bed?", tags: ["general"] },
   { target: "Se preocupa demasiado por todo.", english: "He worries too much about everything.", tags: ["general", "family"] },
@@ -406,7 +406,7 @@ console.log(`After A2/B1 backfill: total added ${added} (${dupes} dupes)`);
 
 // NODE 21: Subjunctive Nuances
 addCards([
-  { target: "No creo que sea tan fácil como parece.", english: "I don't think it's as easy as it seems.", tags: ["general"], grammar: "No creo que + subjunctive — negated belief triggers subjunctive." },
+  { target: "No creo que sea tan fácil como parece.", english: "I don't think it's as easy as it seems.", tags: ["general"], grammar: "No creo que + subjunctive – negated belief triggers subjunctive." },
   { target: "Aunque tenga razón, debería ser más amable.", english: "Even if he's right, he should be kinder.", tags: ["general"] },
   { target: "Como si fuera la primera vez que lo hace.", english: "As if it were the first time he's doing it.", tags: ["general"], grammar: "Como si always takes imperfect subjunctive." },
   { target: "El hecho de que no haya venido me preocupa.", english: "The fact that he hasn't come worries me.", tags: ["general"], grammar: "El hecho de que + subjunctive for factual statements that trigger emotion." },

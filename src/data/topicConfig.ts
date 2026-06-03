@@ -1,11 +1,11 @@
 import { PathNode, SideBranch, Language } from '../types';
 
 // 35 grammar-progression nodes grouped by tier.
-// Node names are language-specific — see NODE_NAMES below.
+// Node names are language-specific – see NODE_NAMES below.
 // MAIN_PATH.name holds the English defaults; use getNodeName() for display.
 // Cards are assigned to nodes via the grammarNode field in deck.json.
 
-// Display labels for tiers — surfaced in TopicMap section headers.
+// Display labels for tiers – surfaced in TopicMap section headers.
 // Tier codes (A1, A2, …) are kept internal; learners see the descriptive label.
 // Labels are language-neutral so they fit Romance, Germanic, Slavic, Indic,
 // and Turkic languages alike (no Romance-only framing like "moods" or "object pronouns").
@@ -19,7 +19,7 @@ export const TIER_LABELS: Record<string, string> = {
 };
 
 export const MAIN_PATH: PathNode[] = [
-  // ── A1 — Foundations (8 nodes) ──────────────────────────────
+  // ── A1 – Foundations (8 nodes) ──────────────────────────────
   { id: 'node-01', name: 'Regular present tense',       tier: 'A1', color: '#22c55e' },
   { id: 'node-02', name: 'Irregular present verbs',     tier: 'A1', color: '#22c55e' },
   { id: 'node-03', name: 'Ser/Essere vs Estar/Stare',   tier: 'A1', color: '#22c55e' },
@@ -29,7 +29,7 @@ export const MAIN_PATH: PathNode[] = [
   { id: 'node-07', name: 'Descriptions & adjectives',   tier: 'A1', color: '#22c55e' },
   { id: 'node-08', name: 'Common expressions',          tier: 'A1', color: '#22c55e' },
 
-  // ── A2 — Past & Pronouns (7 nodes) ─────────────────────────
+  // ── A2 – Past & Pronouns (7 nodes) ─────────────────────────
   { id: 'node-09', name: 'Past tense: regular',         tier: 'A2', color: '#3b82f6' },
   { id: 'node-10', name: 'Past tense: irregular',       tier: 'A2', color: '#3b82f6' },
   { id: 'node-11', name: 'Imperfect tense',             tier: 'A2', color: '#3b82f6' },
@@ -38,7 +38,7 @@ export const MAIN_PATH: PathNode[] = [
   { id: 'node-14', name: 'Prepositions',                tier: 'A2', color: '#3b82f6' },
   { id: 'node-15', name: 'Object pronouns',             tier: 'A2', color: '#3b82f6' },
 
-  // ── B1 — Moods & Complex Tenses (6 nodes) ──────────────────
+  // ── B1 – Moods & Complex Tenses (6 nodes) ──────────────────
   { id: 'node-16', name: 'Present subjunctive',         tier: 'B1', color: '#f59e0b' },
   { id: 'node-17', name: 'Imperative / commands',       tier: 'B1', color: '#f59e0b' },
   { id: 'node-18', name: 'Conditional',                 tier: 'B1', color: '#f59e0b' },
@@ -46,7 +46,7 @@ export const MAIN_PATH: PathNode[] = [
   { id: 'node-20', name: 'Relative clauses',            tier: 'B1', color: '#f59e0b' },
   { id: 'node-21', name: 'Perfect & compound tenses',   tier: 'B1', color: '#f59e0b' },
 
-  // ── B2 — Advanced Grammar (6 nodes) ────────────────────────
+  // ── B2 – Advanced Grammar (6 nodes) ────────────────────────
   { id: 'node-22', name: 'Imperfect subjunctive',       tier: 'B2', color: '#ef4444' },
   { id: 'node-23', name: 'Complex conditionals',        tier: 'B2', color: '#ef4444' },
   { id: 'node-24', name: 'Passive & impersonal',        tier: 'B2', color: '#ef4444' },
@@ -54,13 +54,13 @@ export const MAIN_PATH: PathNode[] = [
   { id: 'node-26', name: 'Verb phrases & periphrasis',  tier: 'B2', color: '#ef4444' },
   { id: 'node-27', name: 'Reported speech',             tier: 'B2', color: '#ef4444' },
 
-  // ── C1 — Refinement (4 nodes) ──────────────────────────────
+  // ── C1 – Refinement (4 nodes) ──────────────────────────────
   { id: 'node-28', name: 'Subjunctive nuances',         tier: 'C1', color: '#8b5cf6' },
   { id: 'node-29', name: 'Register & formal style',     tier: 'C1', color: '#8b5cf6' },
   { id: 'node-30', name: 'Idiomatic expressions',       tier: 'C1', color: '#8b5cf6' },
   { id: 'node-31', name: 'Complex syntax',              tier: 'C1', color: '#8b5cf6' },
 
-  // ── C2 — Mastery (4 nodes) ─────────────────────────────────
+  // ── C2 – Mastery (4 nodes) ─────────────────────────────────
   { id: 'node-32', name: 'Literary tenses & narrative',  tier: 'C2', color: '#6366f1' },
   { id: 'node-33', name: 'Academic discourse',           tier: 'C2', color: '#6366f1' },
   { id: 'node-34', name: 'Cultural fluency',             tier: 'C2', color: '#6366f1' },
@@ -497,7 +497,7 @@ export function getNodeName(nodeId: string, lang: Language): string {
     ?? '';
 }
 
-// ── Thematic chapters — group grammar nodes into journey-friendly names ──
+// ── Thematic chapters – group grammar nodes into journey-friendly names ──
 // Replaces "Subjunctive nuances" / "Reported speech" framing with thematic
 // names. Used by the home screen for non-jargon progression display.
 export interface Chapter {
@@ -511,7 +511,7 @@ export const CHAPTERS: Chapter[] = [
   { id: 'ch-01', name: 'First conversations',          blurb: 'Greet, introduce, ask basic questions.',           nodes: ['node-01', 'node-02', 'node-04', 'node-08'] },
   { id: 'ch-02', name: 'Describing your world',        blurb: 'People, places, things, and how they feel.',       nodes: ['node-03', 'node-05', 'node-07'] },
   { id: 'ch-03', name: 'Likes & preferences',          blurb: 'What you enjoy, want, and care about.',            nodes: ['node-06'] },
-  { id: 'ch-04', name: 'Telling stories',              blurb: 'Talk about what happened — past tense.',           nodes: ['node-09', 'node-10', 'node-11', 'node-12'] },
+  { id: 'ch-04', name: 'Telling stories',              blurb: 'Talk about what happened – past tense.',           nodes: ['node-09', 'node-10', 'node-11', 'node-12'] },
   { id: 'ch-05', name: 'Daily life',                   blurb: 'Routines, places, people in context.',             nodes: ['node-13', 'node-14', 'node-15'] },
   { id: 'ch-06', name: 'Hopes & suggestions',          blurb: 'Wishes, advice, gentle commands.',                 nodes: ['node-16', 'node-17'] },
   { id: 'ch-07', name: 'What if & looking ahead',      blurb: 'Conditional, future, possibilities.',              nodes: ['node-18', 'node-19'] },

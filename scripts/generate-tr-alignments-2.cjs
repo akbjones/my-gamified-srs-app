@@ -20,7 +20,7 @@ function trLower(s) {
 // Strip punctuation but keep apostrophes in words
 function tokenize(sentence) {
   return trLower(sentence)
-    .replace(/[.,!?;:"""«»()—–…]/g, '')
+    .replace(/[.,!?;:"""«»()––…]/g, '')
     .split(/\s+/)
     .filter(w => w.length > 0);
 }

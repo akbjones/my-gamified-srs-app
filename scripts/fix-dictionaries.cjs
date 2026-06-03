@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Comprehensive dictionary fix script — Phase 2.
+ * Comprehensive dictionary fix script – Phase 2.
  *
  * Approach: Parse → Fix → Write (no regex on source code)
  * 1. Split each .ts file into pre-dict / dict-body / post-dict zones
@@ -84,7 +84,7 @@ const OVERRIDES = {
     'ले': { en: 'to take', pos: 'v', lemma: 'लेना' },
     'कर': { en: 'to do', pos: 'v', lemma: 'करना' },
     'भूख': { en: 'hunger', pos: 'n' },
-    // Verb forms missing lemma — manually curated
+    // Verb forms missing lemma – manually curated
     'योग': { en: 'yoga', pos: 'n' },
     'घूमने': { en: 'to roam, to wander', pos: 'v', lemma: 'घूमना' },
     'घूमती': { en: 'to roam, to wander', pos: 'v', lemma: 'घूमना' },
@@ -627,7 +627,7 @@ function validate(originalKeys, removedKeys, addedKeys, finalDict) {
 }
 
 // ══════════════════════════════════════════════════════════════
-// FIX RULES — executed in order
+// FIX RULES – executed in order
 // ══════════════════════════════════════════════════════════════
 
 function applyFixes(dict, lang) {
@@ -719,7 +719,7 @@ function applyFixes(dict, lang) {
     }
   }
 
-  // ── Rule 1b: REVERSE lemma propagation — if lemma is NOT a verb, strip "to" ──
+  // ── Rule 1b: REVERSE lemma propagation – if lemma is NOT a verb, strip "to" ──
   // Catches German noun plurals (Blumen→Blume), adj declensions (guten→gut) tagged as verbs
   for (const [key, entry] of Object.entries(dict)) {
     if (overridden.has(key)) continue;
@@ -775,11 +775,11 @@ function applyFixes(dict, lang) {
     if (entry.pos !== 'v') continue;
 
     const enWord = entry.en.slice(3).trim().toLowerCase();
-    // Skip if it's a known verb — that's correct
+    // Skip if it's a known verb – that's correct
     if (KNOWN_ENGLISH_VERBS.has(enWord)) continue;
     // Skip compound verbs like "to ice-skate", "to give birth"
     if (enWord.includes(' ') || enWord.includes('-')) continue;
-    // Skip if it has a lemma pointing to a real verb — it IS a verb, just bad translation
+    // Skip if it has a lemma pointing to a real verb – it IS a verb, just bad translation
     if (entry.lemma && dict[entry.lemma]?.pos === 'v') continue;
 
     // This is "to X" where X is not a known verb and no verb lemma
@@ -839,7 +839,7 @@ function applyFixes(dict, lang) {
         } else if (lemmaEntry.en.startsWith('to ')) {
           entry.en = lemmaEntry.en; stats.translationFix++; continue;
         } else if (!BAD_TO_PREFIX.test(lemmaEntry.en)) {
-          // Lemma's en doesn't have "to" — prefix it on the lemma AND on this entry
+          // Lemma's en doesn't have "to" – prefix it on the lemma AND on this entry
           entry.en = 'to ' + lemmaEntry.en;
           stats.translationFix++;
           continue;
@@ -856,7 +856,7 @@ function applyFixes(dict, lang) {
     // Do NOT blindly prefix "to" to multi-word phrases or unknown words
   }
 
-  // ── Rule 10b: Cleanup — strip bad "to " prefixes from previous runs ──
+  // ── Rule 10b: Cleanup – strip bad "to " prefixes from previous runs ──
   const BAD_TO = /^to (the |an |my |your |his |her |its |our |their |this |that |these |those |i |he |she |it |we |they |you |not |no |very |too |also |just |still |already |never |always |often |here |there |now |then |so |but |and |or |if |when |where |how |what |who |which |why |because )/i;
   for (const [key, entry] of Object.entries(dict)) {
     if (!entry.en || !BAD_TO.test(entry.en)) continue;
@@ -901,7 +901,7 @@ function applyFixes(dict, lang) {
     }
   }
 
-  // ── Rule 5: Semicolon dedup (careful — don't destroy dual meanings) ──
+  // ── Rule 5: Semicolon dedup (careful – don't destroy dual meanings) ──
   for (const [key, entry] of Object.entries(dict)) {
     if (overridden.has(key)) continue;
     if (!entry.en || !entry.en.includes(';') || !entry.lemma) continue;
@@ -962,7 +962,7 @@ function applyFixes(dict, lang) {
       stats.posFix++;
     }
   } catch (e) {
-    // NLP results file not found — just fix phrase→n
+    // NLP results file not found – just fix phrase→n
     for (const [key, entry] of Object.entries(dict)) {
       if (entry.pos === 'phrase') { entry.pos = 'n'; stats.posFix++; }
     }
@@ -993,7 +993,7 @@ function applyFixes(dict, lang) {
       }
     }
   } catch (e) {
-    // NLP corrections file not found — skip
+    // NLP corrections file not found – skip
   }
 
   // ── Rule 15b: Fix verbs without "to" using raw Stanza lemma data ──
@@ -1032,7 +1032,7 @@ function applyFixes(dict, lang) {
     }
   } catch (e) { /* no Stanza data */ }
 
-  // ── Rule 15c: AGGRESSIVE bare verb fix — prefix "to " to any remaining pos:'v' without "to " ──
+  // ── Rule 15c: AGGRESSIVE bare verb fix – prefix "to " to any remaining pos:'v' without "to " ──
   // Cleans up subjects/auxiliaries from the existing translation first.
   const SUBJECT_PFX = /^(I|he|she|it|we|they|you|one|someone|there) /i;
   const AUX_PFX = /^(am|is|are|was|were|been|be|being|have|has|had|do|does|did|will|would|shall|should|can|could|may|might|must)\s+/i;
@@ -1073,7 +1073,7 @@ function applyFixes(dict, lang) {
     stats.translationFix++;
   }
 
-  // ── Rule 16: Standardise polysemy notation — / becomes ; everywhere ──
+  // ── Rule 16: Standardise polysemy notation – / becomes ; everywhere ──
   for (const [key, entry] of Object.entries(dict)) {
     if (overridden.has(key)) continue;
     if (!entry.en || !entry.en.includes('/')) continue;

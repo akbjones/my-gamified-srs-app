@@ -64,7 +64,7 @@ const STOP_WORDS = new Set([
 function tokenize(sentence) {
   // Remove punctuation except apostrophes within words
   const cleaned = sentence
-    .replace(/[.,!?;:"""''()[\]{}—–…]/g, ' ')
+    .replace(/[.,!?;:"""''()[\]{}––…]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
   return cleaned.split(' ')
@@ -132,7 +132,7 @@ function checkEnglishQuality(english) {
   const issues = [];
 
   // Check for odd characters
-  if (/[^\x20-\x7E''""\-–—…]/.test(english) && !/[àáâãäåèéêëìíîïòóôõöùúûüñ]/i.test(english)) {
+  if (/[^\x20-\x7E''""\-––…]/.test(english) && !/[àáâãäåèéêëìíîïòóôõöùúûüñ]/i.test(english)) {
     // Allow common accented chars in proper nouns
   }
 

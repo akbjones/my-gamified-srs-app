@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * review-de-verbs.cjs — COMPLETE German dictionary review
+ * review-de-verbs.cjs – COMPLETE German dictionary review
  *
  * Categories:
  *   1. "to " on non-verbs → strip, fix POS

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * quality-audit-it.cjs — Comprehensive quality check on the Italian deck
+ * quality-audit-it.cjs – Comprehensive quality check on the Italian deck
  */
 const fs = require('fs');
 const path = require('path');
@@ -139,7 +139,7 @@ console.log('');
 const allWords = new Set();
 for (const c of deck) {
   const words = c.target.toLowerCase()
-    .replace(/[?!.,;:()""«»—'']/g, '')
+    .replace(/[?!.,;:()""«»–'']/g, '')
     .split(/\s+/)
     .filter(w => w.length > 0);
   words.forEach(w => allWords.add(w));
@@ -152,7 +152,7 @@ for (const goal of ['travel', 'work', 'family']) {
   const goalCards = deck.filter(c => c.tags.includes(goal));
   for (const c of goalCards) {
     const words = c.target.toLowerCase()
-      .replace(/[?!.,;:()""«»—'']/g, '')
+      .replace(/[?!.,;:()""«»–'']/g, '')
       .split(/\s+/)
       .filter(w => w.length > 0);
     words.forEach(w => goalWords.add(w));

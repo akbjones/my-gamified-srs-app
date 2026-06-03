@@ -1,5 +1,5 @@
 /**
- * Swedish Dictionary — Final Careful Fix Application v2
+ * Swedish Dictionary – Final Careful Fix Application v2
  * Handles escaped quotes (it\'s) in en values properly
  */
 
@@ -186,7 +186,7 @@ async function main() {
     'självklarhet':    'obviousness; a given',
     'herrgården':      'the manor; the mansion',
     'öden':            'fates; destinies',
-    // Also fix 'vara' POS — it should be 'v' not 'n'
+    // Also fix 'vara' POS – it should be 'v' not 'n'
   };
 
   for (const [key, newEn] of Object.entries(semanticFixes)) {
@@ -194,7 +194,7 @@ async function main() {
   }
 
   // ════════════════════════════════════════════════════════════
-  // Category 5: Fix POS for 'vara' — it's a verb not a noun
+  // Category 5: Fix POS for 'vara' – it's a verb not a noun
   // ════════════════════════════════════════════════════════════
   console.log('\nCategory 5: POS fixes');
   // vara should be pos: 'v' not 'n'
@@ -214,7 +214,7 @@ async function main() {
 }
 
 main().then(n => {
-  console.log(`\nSWEDISH COMPLETE — ${n} fixes`);
+  console.log(`\nSWEDISH COMPLETE – ${n} fixes`);
 }).catch(err => {
   console.error('FATAL:', err);
   process.exit(1);

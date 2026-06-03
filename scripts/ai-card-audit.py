@@ -56,11 +56,11 @@ SYSTEM = """You audit language learning cards. For each batch of cards in a targ
 identify any issues and suggest dictionary-level fixes.
 
 Categories of issues to detect:
-1. WRONG_TRANSLATION — English doesn't match target sentence
-2. UNNATURAL — translation is grammatically awkward
-3. MISSING_NUANCE — common alternate meaning omitted
-4. WRONG_REGISTER — formal/casual mismatch
-5. CARD_DUPLICATE — appears identical to others (only flag if obvious)
+1. WRONG_TRANSLATION – English doesn't match target sentence
+2. UNNATURAL – translation is grammatically awkward
+3. MISSING_NUANCE – common alternate meaning omitted
+4. WRONG_REGISTER – formal/casual mismatch
+5. CARD_DUPLICATE – appears identical to others (only flag if obvious)
 
 For each card with issues, return JSON Lines (one per card):
 {"id": "es-0001", "severity": "low|medium|high", "issue": "WRONG_TRANSLATION", "note": "brief"}
@@ -110,7 +110,7 @@ def call_api(lang_code, cards_batch, max_retries=5):
             return results
         except Exception as ex:
             err_str = str(ex)
-            # Rate limit — wait and retry
+            # Rate limit – wait and retry
             if '429' in err_str or 'rate_limit' in err_str:
                 wait = 30 * (attempt + 1)
                 time.sleep(wait)

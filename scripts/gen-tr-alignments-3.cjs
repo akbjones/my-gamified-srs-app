@@ -10,7 +10,7 @@ function turkishLower(s) {
 }
 
 function stripPunct(word) {
-  return word.replace(/[.,!?;:""«»()–—\-]/g, '').trim();
+  return word.replace(/[.,!?;:""«»()––\-]/g, '').trim();
 }
 
 // Master dictionary: lowercased Turkish word -> English meaning
@@ -1661,7 +1661,7 @@ const dict = {
 const alignments = {};
 
 for (const card of cards) {
-  const rawWords = card.target.replace(/[.,!?;:""«»()\-–—]/g, ' ').split(/\s+/).filter(Boolean);
+  const rawWords = card.target.replace(/[.,!?;:""«»()\-––]/g, ' ').split(/\s+/).filter(Boolean);
   const words = rawWords.map(w => turkishLower(stripPunct(w))).filter(Boolean);
 
   for (const word of words) {

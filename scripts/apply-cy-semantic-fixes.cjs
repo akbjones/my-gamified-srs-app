@@ -112,9 +112,9 @@ function shouldApplyFix(f) {
   if (isSpellingVariant(f.oldEn, f.googleEn)) return false;
 
   // Skip where dict already has a reasonable translation and Google is just different phrasing
-  // e.g., "to build" vs "construction" — both valid for "adeiladu"
+  // e.g., "to build" vs "construction" – both valid for "adeiladu"
   if (old.startsWith('to ') && !goog.startsWith('to ') && f.pos === 'v') {
-    // Dict has verb form, Google returned noun form — keep dict version for verbs
+    // Dict has verb form, Google returned noun form – keep dict version for verbs
     const verbStem = old.replace(/^to /, '');
     if (goog.includes(verbStem) || goog.endsWith('ing') || goog.endsWith('tion')) return false;
   }
@@ -160,7 +160,7 @@ function formatTranslation(googleEn, pos, oldEn) {
       // Remove double consonants at end
       if (g.match(/([a-z])\1$/)) g = g.slice(0, -1);
     } else if (/^(he |she |i |we |you |they |it )/.test(g)) {
-      // Conjugated form — try to get infinitive
+      // Conjugated form – try to get infinitive
       // "he built" → "to build" is hard automatically, keep as-is with "to" prefix
       // Actually, for these it's better to keep the old if it had "to"
       if (oldEn.toLowerCase().startsWith('to ')) return oldEn.toLowerCase();

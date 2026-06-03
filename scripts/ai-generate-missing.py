@@ -3,7 +3,7 @@
 Generate proper dictionary entries for all missing words across all 11 languages.
 Uses Claude Haiku (fast + cheap) with strict format enforcement.
 
-Output: scripts/ai-missing-{lang}.json — list of {k, en, ipa, pos, lemma?} entries.
+Output: scripts/ai-missing-{lang}.json – list of {k, en, ipa, pos, lemma?} entries.
 """
 import json
 import os

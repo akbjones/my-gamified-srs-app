@@ -3,11 +3,11 @@
  *
  * Two-pass script for cards in nodes 1-10 (indices 0-2499):
  *
- * PASS 1 — Semantic Retag:
+ * PASS 1 – Semantic Retag:
  *   Read each card's Spanish + English content and assign correct goal tags
  *   based on what the sentence is actually about. Never removes tags, only adds.
  *
- * PASS 2 — Generate New Cards:
+ * PASS 2 – Generate New Cards:
  *   For any node where a goal is below target count, generate new cards
  *   that teach the same grammar in the context of the needed goal.
  *
@@ -25,7 +25,7 @@ const deck = JSON.parse(fs.readFileSync(DECK_PATH, 'utf-8'));
 const PER_NODE = 250;
 const GOALS = ['travel', 'work', 'family'];
 
-// Node definitions for 1-10 — startIdx/endIdx are 0-based array indices (inclusive start, exclusive end for slice)
+// Node definitions for 1-10 – startIdx/endIdx are 0-based array indices (inclusive start, exclusive end for slice)
 const NODE_DEFS = {
   1:  { name: 'Present Tense',      tier: 'A1', startIdx: 0,    endIdx: 250 },
   2:  { name: 'Ser vs Estar',       tier: 'A1', startIdx: 250,  endIdx: 500 },
@@ -48,7 +48,7 @@ const TARGET_COUNT = {
 // PASS 1: SEMANTIC RETAGGING
 // ─────────────────────────────────────────────────────────────────────
 
-// Keyword lists for semantic tagging — match against combined target+english text
+// Keyword lists for semantic tagging – match against combined target+english text
 const TRAVEL_KEYWORDS = [
   // Transportation
   /\b(aeropuerto|airport|vuelo|flight|avión|plane|tren\b|train\b|autobús|bus\b|taxi|metro\b|subway|estación\b|station\b|terminal|equipaje|luggage|maleta|suitcase|pasaporte|passport|billete|ticket|boleto|embarque|boarding|aterriz|landing|despeg|takeoff|ferry|crucero|cruise)\b/i,
@@ -155,7 +155,7 @@ function semanticTag(card) {
 
 const NEW_CARDS = {
   // ═══════════════════════════════════════════════════════════════════
-  // NODE 1: Present Tense (A1) — regular -ar/-er/-ir verbs
+  // NODE 1: Present Tense (A1) – regular -ar/-er/-ir verbs
   // ═══════════════════════════════════════════════════════════════════
   1: {
     travel: [
@@ -242,7 +242,7 @@ const NEW_CARDS = {
   },
 
   // ═══════════════════════════════════════════════════════════════════
-  // NODE 2: Ser vs Estar (A1) — permanent vs temporary states
+  // NODE 2: Ser vs Estar (A1) – permanent vs temporary states
   // ═══════════════════════════════════════════════════════════════════
   2: {
     travel: [
@@ -329,7 +329,7 @@ const NEW_CARDS = {
   },
 
   // ═══════════════════════════════════════════════════════════════════
-  // NODE 3: Common Questions (A1) — question words, basic queries
+  // NODE 3: Common Questions (A1) – question words, basic queries
   // ═══════════════════════════════════════════════════════════════════
   3: {
     travel: [
@@ -416,7 +416,7 @@ const NEW_CARDS = {
   },
 
   // ═══════════════════════════════════════════════════════════════════
-  // NODE 4: Articles & Gender (A1) — el/la/los/las, masculine/feminine
+  // NODE 4: Articles & Gender (A1) – el/la/los/las, masculine/feminine
   // ═══════════════════════════════════════════════════════════════════
   4: {
     travel: [
@@ -503,7 +503,7 @@ const NEW_CARDS = {
   },
 
   // ═══════════════════════════════════════════════════════════════════
-  // NODE 5: Gustar & Similar (A1) — verbs with indirect object pronouns
+  // NODE 5: Gustar & Similar (A1) – verbs with indirect object pronouns
   // ═══════════════════════════════════════════════════════════════════
   5: {
     travel: [
@@ -590,7 +590,7 @@ const NEW_CARDS = {
   },
 
   // ═══════════════════════════════════════════════════════════════════
-  // NODE 6: Pretérito (A2) — completed past actions
+  // NODE 6: Pretérito (A2) – completed past actions
   // ═══════════════════════════════════════════════════════════════════
   6: {
     travel: [
@@ -677,7 +677,7 @@ const NEW_CARDS = {
   },
 
   // ═══════════════════════════════════════════════════════════════════
-  // NODE 7: Imperfecto (A2) — habitual/ongoing past
+  // NODE 7: Imperfecto (A2) – habitual/ongoing past
   // ═══════════════════════════════════════════════════════════════════
   7: {
     travel: [
@@ -764,7 +764,7 @@ const NEW_CARDS = {
   },
 
   // ═══════════════════════════════════════════════════════════════════
-  // NODE 8: Reflexive Verbs (A2) — daily routines
+  // NODE 8: Reflexive Verbs (A2) – daily routines
   // ═══════════════════════════════════════════════════════════════════
   8: {
     travel: [
@@ -851,7 +851,7 @@ const NEW_CARDS = {
   },
 
   // ═══════════════════════════════════════════════════════════════════
-  // NODE 9: Por vs Para (A2) — preposition distinction
+  // NODE 9: Por vs Para (A2) – preposition distinction
   // ═══════════════════════════════════════════════════════════════════
   9: {
     travel: [
@@ -938,7 +938,7 @@ const NEW_CARDS = {
   },
 
   // ═══════════════════════════════════════════════════════════════════
-  // NODE 10: Object Pronouns (A2) — me/te/lo/la/nos/les
+  // NODE 10: Object Pronouns (A2) – me/te/lo/la/nos/les
   // ═══════════════════════════════════════════════════════════════════
   10: {
     travel: [
@@ -1054,7 +1054,7 @@ for (let nodeNum = 1; nodeNum <= 10; nodeNum++) {
     }
   }
 }
-console.log(`PASS 1 — Retagged ${retagCount} cards based on content analysis.\n`);
+console.log(`PASS 1 – Retagged ${retagCount} cards based on content analysis.\n`);
 
 // After retag stats
 const afterRetagStats = {};
@@ -1104,7 +1104,7 @@ for (let nodeNum = 1; nodeNum <= 10; nodeNum++) {
   }
 }
 
-console.log(`PASS 2 — Generated ${totalNewCards} new cards to fill gaps.\n`);
+console.log(`PASS 2 – Generated ${totalNewCards} new cards to fill gaps.\n`);
 
 // Final stats
 console.log('\u2500'.repeat(80));

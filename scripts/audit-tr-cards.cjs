@@ -29,7 +29,7 @@ function loadDictionaryKeys() {
 // Strips punctuation, lowercases, splits on whitespace
 function tokenize(sentence) {
   return sentence
-    .replace(/[.,!?;:""''\"\'…\-–—()[\]{}«»‹›""]/g, ' ')
+    .replace(/[.,!?;:""''\"\'…\-––()[\]{}«»‹›""]/g, ' ')
     .toLowerCase()
     .split(/\s+/)
     .filter(w => w.length > 0);

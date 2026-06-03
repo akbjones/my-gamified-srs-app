@@ -364,7 +364,7 @@ console.log('JSON report written to scripts/output/audit-es-structural.json\n');
 
 // ─── HUMAN-READABLE SUMMARY ─────────────────────────────────────────────────
 console.log('═══════════════════════════════════════════════════════════════');
-console.log('  SPANISH DECK — COMPREHENSIVE STRUCTURAL AUDIT');
+console.log('  SPANISH DECK – COMPREHENSIVE STRUCTURAL AUDIT');
 console.log('═══════════════════════════════════════════════════════════════\n');
 
 // 1. Priority Weighting

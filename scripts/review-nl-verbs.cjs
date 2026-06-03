@@ -371,7 +371,7 @@ fix('afkijken', 'to copy, to cheat', 'v', undefined, 'wrong-meaning', 'garbled "
 fix('afkoelen', 'to cool down', 'v', undefined, 'wrong-meaning', 'garbled "to off"');
 fix('afkeer', 'aversion, dislike', 'n', undefined, 'ok', 'ok');
 fix('afkomst', 'origin, descent', 'n', undefined, 'wrong-meaning', 'garbled "proud"');
-fix('aflopen', 'to end, to expire', 'v', undefined, 'wrong-meaning', 'garbled "end" — needs "to "');
+fix('aflopen', 'to end, to expire', 'v', undefined, 'wrong-meaning', 'garbled "end" – needs "to "');
 fix('afgesloten', 'closed', 'adj', undefined, 'wrong-pos', 'adj not verb');
 fix('afgerond', 'to complete, to round off', 'v', 'afronden', 'ok', 'ok');
 fix('afrondt', 'to round off, to complete', 'v', 'afronden', 'wrong-meaning', 'garbled "says"');

@@ -117,7 +117,7 @@ for (const [word, alignedEntry] of Object.entries(aligned)) {
       keptOldCount++;
     }
   } else {
-    // Word in aligned but not in existing dict — add with minimal info
+    // Word in aligned but not in existing dict – add with minimal info
     merged[word] = {
       en: newEn,
       ipa: '?',

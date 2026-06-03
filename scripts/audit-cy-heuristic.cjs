@@ -22,7 +22,7 @@ for (const name of welshNames) {
   }
 }
 
-console.log('\n=== Self-referencing entries (Welsh word === English) — top 30 ===');
+console.log('\n=== Self-referencing entries (Welsh word === English) – top 30 ===');
 let count = 0;
 const selfRef = entries.filter(e => e.word.length >= 4 && e.word.toLowerCase() === e.en.toLowerCase() && e.pos === 'n');
 console.log('  Total self-referencing nouns:', selfRef.length);
@@ -30,7 +30,7 @@ for (const e of selfRef.slice(0, 30)) {
   console.log('  ' + e.word.padEnd(15) + '= [' + e.en + ']  (' + e.pos + ')');
 }
 
-console.log("\n=== Verbs without 'to' prefix — top 30 ===");
+console.log("\n=== Verbs without 'to' prefix – top 30 ===");
 const vMissingTo = entries.filter(e => e.pos === 'v' && !e.en.startsWith('to ') && !e.en.startsWith('to;') && !e.en.startsWith('(to)') && !e.en.startsWith("don't"));
 console.log('  Total verbs without "to":', vMissingTo.length);
 for (const e of vMissingTo.slice(0, 30)) {

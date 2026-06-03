@@ -31,7 +31,7 @@ const CONFIGS = [
 ];
 
 function tokenize(sentence: string): string[] {
-  return sentence.split(/[\s।,!?;:""''()—–…¿¡«»]+/).filter(w => w && w.length > 0);
+  return sentence.split(/[\s।,!?;:""''()––…¿¡«»]+/).filter(w => w && w.length > 0);
 }
 
 const result: Record<string, Array<{ word: string; count: number; cards: string[] }>> = {};

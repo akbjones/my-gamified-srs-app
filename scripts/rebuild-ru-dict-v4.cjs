@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Rebuild Russian dictionary v4 — full-sentence validation approach.
+ * Rebuild Russian dictionary v4 – full-sentence validation approach.
  *
  * Steps:
  *  1. Russian function word table (~150 entries, never sent to Google)
@@ -9,7 +9,7 @@
  *  4. Google Translate ALL unique sentences via translateSentences()
  *  5. For each word, validate against sentence translations via validateAndEnrich()
  *  6. Post-process every result via postProcess() (18-rule pipeline)
- *  7. Lemma copy — verified lemmas get their base word's definition
+ *  7. Lemma copy – verified lemmas get their base word's definition
  *  8. Apply to ru.ts, preserve IPA/lemma/pos + lookupWord + findInfinitive
  *  9. 100-entry random review -> scripts/output/ru-v5-review.md
  *
@@ -167,11 +167,11 @@ function collectDeckData() {
       const w = tok.trim()
         .toLowerCase()
         .replace(/[''""«»\u200B\u200C\u200D\uFEFF]/g, '')
-        .replace(/^[—–\-]+|[—–\-]+$/g, '')
+        .replace(/^[––\-]+|[––\-]+$/g, '')
         .trim();
       if (!w) continue;
       if (w.length < 2) continue;
-      // Russian uses Cyrillic — keep only tokens with at least one Cyrillic char
+      // Russian uses Cyrillic – keep only tokens with at least one Cyrillic char
       if (!/[а-яёА-ЯЁ]/i.test(w)) continue;
       wordFreq.set(w, (wordFreq.get(w) || 0) + 1);
       if (!wordCards.has(w)) wordCards.set(w, []);
@@ -319,7 +319,7 @@ async function main() {
 
   console.log('\n' + stats.report());
 
-  // Step 7: Lemma copy — verified lemmas get base word's definition
+  // Step 7: Lemma copy – verified lemmas get base word's definition
   console.log('\nStep 7: Lemma copy...');
 
   // 7a: Bad lemma removal first

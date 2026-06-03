@@ -32,7 +32,7 @@ const T = ["general", "family"];
 const newCards = [
 
   // ═══════════════════════════════════════════════════════════════
-  // A1 — Simple present, ser/estar, basic questions, articles (~108)
+  // A1 – Simple present, ser/estar, basic questions, articles (~108)
   // ═══════════════════════════════════════════════════════════════
   { target: "Mi madre cocina muy bien.", english: "My mother cooks very well.", tags: T },
   { target: "¿Cuántos hermanos tienes?", english: "How many siblings do you have?", tags: T, grammar: "¿Cuántos? = how many? Agrees in gender: cuántos/cuántas" },
@@ -144,7 +144,7 @@ const newCards = [
   { target: "Mi hijo pequeño ya camina.", english: "My little son already walks.", tags: T },
 
   // ═══════════════════════════════════════════════════════════════
-  // A2 — Past tenses, reflexives, object pronouns, por/para (~108)
+  // A2 – Past tenses, reflexives, object pronouns, por/para (~108)
   // ═══════════════════════════════════════════════════════════════
   { target: "Mi abuela nos visitó el domingo.", english: "My grandmother visited us on Sunday.", tags: T },
   { target: "Los niños se acostaron temprano.", english: "The kids went to bed early.", tags: T, grammar: "Acostarse = reflexive verb: se acostaron (they went to bed)" },
@@ -253,7 +253,7 @@ const newCards = [
   { target: "Los niños se quedaron dormidos en el coche.", english: "The kids fell asleep in the car.", tags: T },
 
   // ═══════════════════════════════════════════════════════════════
-  // B1 — Subjunctive, future, conditional, commands, relative clauses (~108)
+  // B1 – Subjunctive, future, conditional, commands, relative clauses (~108)
   // ═══════════════════════════════════════════════════════════════
   { target: "Quiero que los niños coman más verdura.", english: "I want the kids to eat more vegetables.", tags: T, grammar: "Subjunctive after quiero que: coman (not comen)" },
   { target: "La casa donde crecí ya no existe.", english: "The house where I grew up no longer exists.", tags: T },
@@ -336,7 +336,7 @@ const newCards = [
   { target: "No dejes que el perro se suba al sofá.", english: "Don't let the dog get on the couch.", tags: T },
   { target: "Si viene mucha gente, necesitaremos más sillas.", english: "If a lot of people come, we'll need more chairs.", tags: T },
   { target: "Ojalá mi madre se recupere pronto.", english: "I hope my mother recovers soon.", tags: T },
-  { target: "Date prisa, que llegamos tarde al colegio.", english: "Hurry up, we're late for school.", tags: T, grammar: "Date prisa — reflexive imperative: darse prisa (to hurry up)" },
+  { target: "Date prisa, que llegamos tarde al colegio.", english: "Hurry up, we're late for school.", tags: T, grammar: "Date prisa – reflexive imperative: darse prisa (to hurry up)" },
   { target: "No es normal que el bebé llore tanto.", english: "It's not normal for the baby to cry so much.", tags: T },
   { target: "Temo que mi padre esté enfermo.", english: "I'm afraid my father is sick.", tags: T },
   { target: "Cuando seas mayor, entenderás por qué lo hacemos.", english: "When you're older, you'll understand why we do it.", tags: T, grammar: "Ser in subjunctive: seas (when talking about future states)" },
@@ -362,7 +362,7 @@ const newCards = [
   { target: "Espero que la tarta de cumpleaños salga bien.", english: "I hope the birthday cake turns out well.", tags: T },
 
   // ═══════════════════════════════════════════════════════════════
-  // B2 — Imperfect subjunctive, conditionals II/III, passive, advanced connectors (~108)
+  // B2 – Imperfect subjunctive, conditionals II/III, passive, advanced connectors (~108)
   // ═══════════════════════════════════════════════════════════════
   { target: "Si mi abuelo viviera, estaría orgulloso.", english: "If my grandfather were alive, he'd be proud.", tags: T, grammar: "Type II conditional: si + imperfect subjunctive (viviera) + conditional (estaría)" },
   { target: "A pesar de las peleas, nos queremos mucho.", english: "Despite the arguments, we love each other a lot.", tags: T },

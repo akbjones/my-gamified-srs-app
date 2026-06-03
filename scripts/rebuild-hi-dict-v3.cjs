@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Rebuild Hindi dictionary v3 — uses shared pipeline utilities.
+ * Rebuild Hindi dictionary v3 – uses shared pipeline utilities.
  *
  * Steps:
  *  1. Hindi function word table (300+ entries, never sent to Google)
@@ -215,7 +215,7 @@ function collectDeckWords() {
     for (const tok of tokens) {
       const w = tok.trim()
         .replace(/[''""«»\u200B\u200C\u200D\uFEFF]/g, '') // strip curly quotes, ZWJ, etc.
-        .replace(/^[—–\-]+|[—–\-]+$/g, '')                  // strip leading/trailing dashes
+        .replace(/^[––\-]+|[––\-]+$/g, '')                  // strip leading/trailing dashes
         .trim();
       if (!w) continue;
       // Only keep tokens that contain at least one Devanagari character
@@ -313,7 +313,7 @@ async function main() {
   const stats = new PostProcessStats();
   const processed = {};
 
-  // Process function words (no post-processing needed — they're hand-curated)
+  // Process function words (no post-processing needed – they're hand-curated)
   for (const [word, def] of Object.entries(functionResults)) {
     processed[word] = { en: def, source: 'function_table' };
   }
@@ -537,7 +537,7 @@ async function main() {
   // Write review
   if (!fs.existsSync(OUTPUT_DIR)) fs.mkdirSync(OUTPUT_DIR, { recursive: true });
 
-  let md = `# Hindi Dictionary v3 Rebuild — 100-Entry Review\n\n`;
+  let md = `# Hindi Dictionary v3 Rebuild – 100-Entry Review\n\n`;
   md += `**Date:** ${new Date().toISOString().split('T')[0]}\n`;
   md += `**Total entries written:** ${entries.length}\n`;
   md += `**Function words:** ${Object.keys(functionResults).length}\n`;

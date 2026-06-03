@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Rebuild French dictionary v3 — uses shared pipeline utilities.
+ * Rebuild French dictionary v3 – uses shared pipeline utilities.
  *
  * Steps:
  *  1. French function word table (~150 entries, never sent to Google)
@@ -308,7 +308,7 @@ function collectDeckWords() {
       const w = tok.trim()
         .toLowerCase()
         .replace(/[''""«»\u200B\u200C\u200D\uFEFF]/g, '') // strip curly quotes, ZWJ
-        .replace(/^[—–\-]+|[—–\-]+$/g, '')                  // strip leading/trailing dashes
+        .replace(/^[––\-]+|[––\-]+$/g, '')                  // strip leading/trailing dashes
         .trim();
       if (!w) continue;
       // Skip single-char tokens (except common French ones)
@@ -332,7 +332,7 @@ function parseExistingDict() {
   const src = fs.readFileSync(DICT_PATH, 'utf8');
   const existing = {};
 
-  // Match entries — handle both single-quoted and double-quoted keys
+  // Match entries – handle both single-quoted and double-quoted keys
   // Single-quoted: 'word': { en: 'x', ipa: 'y', pos: 'z' },
   // Double-quoted: "aujourd'hui": { en: 'x', ipa: 'y', pos: 'z' },
   const entryRe = /^\s*(?:'([^']+)'|"([^"]+)"):\s*\{\s*en:\s*'([^']*)',\s*ipa:\s*'([^']*)',\s*pos:\s*'([^']*)'\s*(?:,\s*lemma:\s*'([^']*)')?\s*\}/gm;

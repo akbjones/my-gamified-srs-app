@@ -111,7 +111,7 @@ const ChallengeScreen: React.FC<ChallengeScreenProps> = ({
     setAnswers(newAnswers);
 
     if (newAnswers.length >= totalQuestions) {
-      // All questions done — freeze elapsed time before transitioning
+      // All questions done – freeze elapsed time before transitioning
       setFinalElapsedMs(Date.now() - startTime);
       setTimeout(() => setPhase('results'), 500);
     } else {

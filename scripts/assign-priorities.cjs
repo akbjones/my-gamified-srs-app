@@ -410,7 +410,7 @@ function assignPriority(card) {
   const contentWords = tokens.filter(w => !STOP_WORDS.has(w));
 
   if (contentWords.length === 0) {
-    // All stop words — likely very short practical phrase
+    // All stop words – likely very short practical phrase
     return tokens.length <= 5 ? 1 : 2;
   }
 

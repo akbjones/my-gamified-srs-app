@@ -33,7 +33,7 @@ const softReverse = {
 };
 
 function clean(w) {
-  return w.toLowerCase().replace(/[¿¡.,!?;:"""''()—–«»\d/]/g, '').trim();
+  return w.toLowerCase().replace(/[¿¡.,!?;:"""''()––«»\d/]/g, '').trim();
 }
 
 // Welsh stop words that don't need dictionary entries
@@ -263,7 +263,7 @@ function lookupMutated(w) {
 // ── Tokenize Welsh target sentence ────────────────────────────────────
 function tokenize(target) {
   return target
-    .replace(/[.,!?;:"""''()—–«»]/g, ' ')
+    .replace(/[.,!?;:"""''()––«»]/g, ' ')
     .split(/\s+/)
     .filter(t => t.length > 0);
 }

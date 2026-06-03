@@ -64,7 +64,7 @@ export function hasEtymology(word: string, lang: Language): boolean {
   return lookupEtymology(word, lang) !== null;
 }
 
-/** Diagnostics — counts verified entries per language. */
+/** Diagnostics – counts verified entries per language. */
 export function getEtymologyStats(): Partial<Record<Language, number>> {
   const out: Partial<Record<Language, number>> = {};
   for (const [lang, table] of Object.entries(TABLES) as [Language, Record<string, EtymologyEntry>][]) {

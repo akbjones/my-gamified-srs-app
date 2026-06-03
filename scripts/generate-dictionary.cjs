@@ -11,7 +11,7 @@ const deck = JSON.parse(fs.readFileSync(DECK_PATH, 'utf8'));
 const wordSet = new Set();
 deck.forEach(c => {
   c.target.toLowerCase()
-    .replace(/[¿¡.,!?;:"""''()—–\-\d\/]/g, ' ')
+    .replace(/[¿¡.,!?;:"""''()––\-\d\/]/g, ' ')
     .split(/\s+/)
     .forEach(w => { if (w.length > 0) wordSet.add(w); });
 });
@@ -1840,7 +1840,7 @@ for (const w of allWords) {
 console.log('Known infinitives:', knownInfinitives.size);
 
 // ============================================================
-// 5d. findInfinitive(word) — resolve conjugated form to infinitive
+// 5d. findInfinitive(word) – resolve conjugated form to infinitive
 // ============================================================
 function findInfinitive(word) {
   const w = word.toLowerCase();

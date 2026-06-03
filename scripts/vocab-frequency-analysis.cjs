@@ -584,7 +584,7 @@ for (const [code, r] of Object.entries(results)) {
 report += `\n## Cross-Language Node-01 Alignment\n\n`;
 report += `Common words missing from node-01 per language:\n\n`;
 for (const [code, missing] of Object.entries(langMissingCommon)) {
-  report += `- **${code.toUpperCase()}**: ${missing.length} missing — ${missing.slice(0, 20).join(', ')}${missing.length > 20 ? '...' : ''}\n`;
+  report += `- **${code.toUpperCase()}**: ${missing.length} missing – ${missing.slice(0, 20).join(', ')}${missing.length > 20 ? '...' : ''}\n`;
 }
 
 report += `\n## Rare/Obscure Words in Early Nodes (01-05)\n\n`;
@@ -614,7 +614,7 @@ for (const [code, r] of Object.entries(results)) {
 
   const smooth = stddev < avg * 0.5 ? 'SMOOTH' : stddev < avg * 0.8 ? 'MODERATE' : 'SPIKEY';
 
-  report += `- **${code.toUpperCase()}**: avg=${avg}, min=${min} (${minNode}), max=${max} (${maxNode}), stddev=${stddev} — **${smooth}**\n`;
+  report += `- **${code.toUpperCase()}**: avg=${avg}, min=${min} (${minNode}), max=${max} (${maxNode}), stddev=${stddev} – **${smooth}**\n`;
 }
 
 report += `\n## Key Findings\n\n`;

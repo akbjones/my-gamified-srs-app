@@ -179,7 +179,7 @@ function loadDeckWords() {
   const words = new Set();
   for (const card of deck) {
     const text = card.target || '';
-    const tokens = text.replace(/[.,!?;:"""''()—–…\[\]{}\d«»]/g, ' ')
+    const tokens = text.replace(/[.,!?;:"""''()––…\[\]{}\d«»]/g, ' ')
       .split(/\s+/)
       .filter(Boolean);
     for (const t of tokens) {
@@ -225,7 +225,7 @@ function buildWordCardsIndex(deck) {
   const index = {};
   for (const card of deck) {
     const words = (card.target || '')
-      .replace(/[.,!?;:"""''()—–…\[\]{}\d«»]/g, ' ')
+      .replace(/[.,!?;:"""''()––…\[\]{}\d«»]/g, ' ')
       .split(/\s+/)
       .filter(Boolean)
       .map(w => w.toLowerCase());
@@ -378,7 +378,7 @@ async function main() {
   console.log(`  ${functionKeys.length} function words (hand-verified)`);
   console.log(`  ${googleKeys.length} words to send to Google Translate`);
 
-  // Step 3: Build results — function words
+  // Step 3: Build results – function words
   const results = {};
   for (const key of functionKeys) {
     const existing = dict[key] || {};
@@ -438,10 +438,10 @@ async function main() {
       continue;
     }
 
-    // Turkish uses Latin script — detect if Google just echoed the word back
+    // Turkish uses Latin script – detect if Google just echoed the word back
     const rawLower = raw.toLowerCase().trim();
     if (rawLower === key) {
-      // Google echoed it back — probably a proper noun or unknown
+      // Google echoed it back – probably a proper noun or unknown
       googleProcessed[key] = { text: raw.toLowerCase(), echoedBack: true };
       continue;
     }
@@ -452,7 +452,7 @@ async function main() {
 
   console.log('\n' + stats.report());
 
-  // Step 6: Build final entries — Google words + lemma copy
+  // Step 6: Build final entries – Google words + lemma copy
   // First pass: collect base-form translations
   const baseTranslations = {};
   for (const key of googleKeys) {

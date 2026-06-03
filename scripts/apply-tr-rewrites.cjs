@@ -37,7 +37,7 @@ console.log('Rewrites missing (id not in deck): ' + missing);
 fs.writeFileSync(DECK_PATH, JSON.stringify(deck, null, 2) + '\n');
 console.log('Wrote ' + DECK_PATH);
 
-// Update manifest — append new IDs to turkish list (dedupe)
+// Update manifest – append new IDs to turkish list (dedupe)
 const existing = new Set(manifest.turkish || []);
 for (const id of newAudioIds) existing.add(id);
 manifest.turkish = [...existing].sort();

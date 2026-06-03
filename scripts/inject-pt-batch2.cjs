@@ -12,7 +12,7 @@ deck.forEach(card => {
   const text = card.target;
   if (!text) return;
   text.toLowerCase()
-    .replace(/[.,!?;:"()¡¿…—–\-]/g, ' ')
+    .replace(/[.,!?;:"()¡¿…––\-]/g, ' ')
     .split(/\s+/)
     .filter(w => w.length > 0)
     .forEach(w => words.set(w, (words.get(w) || 0) + 1));

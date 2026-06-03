@@ -90,7 +90,7 @@ const NODES = [
     tips: [
       '"Worden" + past participle = action happening now. "Zijn" + past participle = completed state.',
       'In passive, the agent is introduced with "door": "geschreven door mij".',
-      '"Er wordt + past participle" is impersonal passive — very common in Dutch.',
+      '"Er wordt + past participle" is impersonal passive – very common in Dutch.',
       'Passive is more common in formal Dutch; active voice is preferred in speech.',
     ],
   },
@@ -129,10 +129,10 @@ const NODES = [
       ['Er staan veel boeken in de kast.', 'There are many books on the shelf.'],
     ],
     tips: [
-      '"Er" as existential: "Er is/zijn..." = "There is/are..." — the most common use.',
+      '"Er" as existential: "Er is/zijn..." = "There is/are..." – the most common use.',
       '"Er" as prepositional pronoun: "er + preposition" replaces "preposition + het/dat" for things.',
-      '"Er" as partitive: "Ik heb er drie" = "I have three of them" — replaces "van + noun".',
-      '"Er" as locative: "Ik ben er geweest" = "I have been there" — less formal than "daar".',
+      '"Er" as partitive: "Ik heb er drie" = "I have three of them" – replaces "van + noun".',
+      '"Er" as locative: "Ik ben er geweest" = "I have been there" – less formal than "daar".',
     ],
   },
   {
@@ -213,7 +213,7 @@ const NODES = [
     tips: [
       'Subordinating conjunctions (omdat, hoewel, zodra, tenzij) push the verb to the end.',
       'Coordinating conjunctions (en, maar, want, dus) don\'t change word order.',
-      '"Doordat" = because (cause), "omdat" = because (reason) — subtle difference.',
+      '"Doordat" = because (cause), "omdat" = because (reason) – subtle difference.',
       '"Naarmate" (as/the more) and "mits" (provided that) are formal but common in written Dutch.',
     ],
   },
@@ -296,7 +296,7 @@ const NODES = [
       'Reported speech in Dutch uses "dat" (that) + verb at the end of the clause.',
       'Tense shifts back: present → past, perfect → past perfect, future → conditional.',
       'Reported questions use "of" (whether/if) or the question word: "Hij vroeg of...".',
-      'Unlike English, Dutch keeps "dat" — you rarely drop it: "Hij zei dat hij kwam."',
+      'Unlike English, Dutch keeps "dat" – you rarely drop it: "Hij zei dat hij kwam."',
     ],
   },
   {
@@ -334,9 +334,9 @@ const NODES = [
       ['Dat is gebakken lucht.', "That's hot air / empty promises."],
     ],
     tips: [
-      'Dutch idioms are colorful and culture-specific — they rarely translate literally.',
-      '"Gezellig" is untranslatable — it means cozy, fun, warm atmosphere all at once.',
-      'Many Dutch idioms involve food, weather, or animals — reflecting daily Dutch life.',
+      'Dutch idioms are colorful and culture-specific – they rarely translate literally.',
+      '"Gezellig" is untranslatable – it means cozy, fun, warm atmosphere all at once.',
+      'Many Dutch idioms involve food, weather, or animals – reflecting daily Dutch life.',
       'Using idioms correctly signals advanced fluency to native speakers.',
     ],
   },
@@ -541,7 +541,7 @@ const NODES = [
     tips: [
       'Academic Dutch uses impersonal constructions: "Er dient opgemerkt te worden dat..."',
       '"Uit onderzoek blijkt dat..." is a standard way to cite research findings in Dutch.',
-      'Hedging words: "mogelijk", "wellicht", "lijkt", "suggereren" — common in academic writing.',
+      'Hedging words: "mogelijk", "wellicht", "lijkt", "suggereren" – common in academic writing.',
       '"Met betrekking tot", "ten aanzien van", "in het licht van" are formal connectors.',
     ],
   },
@@ -580,9 +580,9 @@ const NODES = [
       ['Dat is typisch Hollands.', "That's typically Dutch."],
     ],
     tips: [
-      '"Gezellig" is the most Dutch word there is — it captures warmth, fun, togetherness, and coziness.',
+      '"Gezellig" is the most Dutch word there is – it captures warmth, fun, togetherness, and coziness.',
       '"Borrelen" (having drinks/snacks) is an important Dutch social ritual.',
-      'Dutch directness is cultural, not rude — they value honesty and efficiency in communication.',
+      'Dutch directness is cultural, not rude – they value honesty and efficiency in communication.',
       'The Dutch birthday circle: you congratulate everyone at a birthday party, not just the birthday person.',
     ],
   },
@@ -621,9 +621,9 @@ const NODES = [
       ['Al met al was het een geslaagde avond.', 'All in all, it was a successful evening.'],
     ],
     tips: [
-      '"Had ik maar..." expresses a wish about the past — Dutch equivalent of "If only I had...".',
+      '"Had ik maar..." expresses a wish about the past – Dutch equivalent of "If only I had...".',
       '"Hoe...des te..." is the Dutch correlative comparative: "The more...the more...".',
-      '"Mocht je..." = "Should you..." — a conditional with soft/polite register.',
+      '"Mocht je..." = "Should you..." – a conditional with soft/polite register.',
       '"Al met al" (all in all), "hoe dan ook" (in any case) are advanced discourse markers.',
     ],
   },

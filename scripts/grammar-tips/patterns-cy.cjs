@@ -34,8 +34,8 @@ module.exports = [
     match: t => /^(Dw\s+i'?n|Rwy'?n|Rydw\s+i'?n|Rydym|Wyt\s+ti'?n)\b/i.test(t),
     tips: [
       "`Dw i'n` (informal) / `Rwy'n` (slightly more formal) / `Rydw i'n` (formal) all mean 'I am ...'. Choose by register, not meaning.",
-      "Welsh always needs a subject pronoun — `dw` alone isn't enough. `Dw i'n`, `dwyt ti'n`, `mae e'n`, etc. The pronoun follows the verb.",
-      "`Rwy'n` shortens `Rydw i'n` — both work for the spoken language; `dw i'n` is the most casual. Books often use `Rydw i'n` for formality.",
+      "Welsh always needs a subject pronoun – `dw` alone isn't enough. `Dw i'n`, `dwyt ti'n`, `mae e'n`, etc. The pronoun follows the verb.",
+      "`Rwy'n` shortens `Rydw i'n` – both work for the spoken language; `dw i'n` is the most casual. Books often use `Rydw i'n` for formality.",
       "Plural: `dyn ni'n` / `rydym ni'n` (we are), `dych chi'n` / `rydych chi'n` (you all are). Same `'n` particle holds everything together.",
     ],
   },
@@ -47,9 +47,9 @@ module.exports = [
     match: t => /\b(yn|dau|dwy|dy|fy|ei|tri|chwe|i|o|am|ar|at|tan|dros|dan|drwy|gan|wrth|heb)\s+(b|d|g|m|ll|rh|t|c|p|f)\w*/i.test(t),
     tips: [
       "Soft mutation: certain words trigger the next consonant to soften. p→b, t→d, c→g, b→f, d→dd, g→ (drop), m→f, ll→l, rh→r. Triggers: `yn`, `dau`, `dwy`, `dy`, `ei` (his), most prepositions.",
-      "If a Welsh sentence looks 'wrong' compared to a dictionary form — that's probably a mutation. `Cath → fy nghath` (my cat, nasal); `cath → ei gath` (his cat, soft).",
-      "Soft mutation is the most common — feminine nouns also soft-mutate after the article `y`: `cath → y gath` (the cat). The form changes visibly.",
-      "Numbers trigger it: `dau gi` (two dogs, soft), `dwy ferch` (two girls, soft). After numbers 2, the noun softens — but 3 (`tri/tair`) doesn't trigger soft for masc, only aspirate.",
+      "If a Welsh sentence looks 'wrong' compared to a dictionary form – that's probably a mutation. `Cath → fy nghath` (my cat, nasal); `cath → ei gath` (his cat, soft).",
+      "Soft mutation is the most common – feminine nouns also soft-mutate after the article `y`: `cath → y gath` (the cat). The form changes visibly.",
+      "Numbers trigger it: `dau gi` (two dogs, soft), `dwy ferch` (two girls, soft). After numbers 2, the noun softens – but 3 (`tri/tair`) doesn't trigger soft for masc, only aspirate.",
     ],
   },
 
@@ -60,7 +60,7 @@ module.exports = [
     match: t => /\bfy\s+(ngh|mh|nh|ng|m|n)\w/i.test(t) || /\byn\s+(mh|ngh|nh|m|ng|n)\w/i.test(t) || /\byng\s+\w/i.test(t),
     tips: [
       "Nasal mutation hits after `fy` (my) and `yn` (in): p→mh, t→nh, c→ngh, b→m, d→n, g→ng. `Pen → fy mhen` (my head), `Caerdydd → yng Nghaerdydd` (in Cardiff).",
-      "Welsh has THREE mutation systems — soft, nasal, aspirate. Nasal is the rarest but very common after `fy` (my) and `yn` (in/at).",
+      "Welsh has THREE mutation systems – soft, nasal, aspirate. Nasal is the rarest but very common after `fy` (my) and `yn` (in/at).",
       "`yn` becomes `ym` before m-mutation and `yng` before ng-mutation. `Yn Caerdydd → yng Nghaerdydd` (in Cardiff). Spelling tracks the sound.",
       "Sound shifts: voiced stops become nasals. Hardest mutation to spot because the consonant itself transforms into a different letter combination.",
     ],
@@ -72,10 +72,10 @@ module.exports = [
     priority: 80,
     match: t => /\b(ei|tri|chwe|a|â)\s+(ch|ph|th)\w/i.test(t),
     tips: [
-      "Aspirate mutation: p→ph, t→th, c→ch — happens after `ei` (her), `tri`, `chwe`, `a` (and), `â` (with). `Cath → ei chath` (her cat).",
-      "Aspirate is the easiest to spot — words start with `ch`, `ph`, or `th`. If you see those, the trigger is usually one of: `ei` (her), `tri`, `chwe`, `a`/`â`.",
-      "Useful gender check: `ei` (his) triggers soft mutation, `ei` (her) triggers aspirate. `Ei gath` (his cat — soft) vs `ei chath` (her cat — aspirate).",
-      "`A` (and) only aspirate-mutates the very next word, and only if it starts p/t/c. `Coffi a the` (coffee and tea — th from t). Common in lists.",
+      "Aspirate mutation: p→ph, t→th, c→ch – happens after `ei` (her), `tri`, `chwe`, `a` (and), `â` (with). `Cath → ei chath` (her cat).",
+      "Aspirate is the easiest to spot – words start with `ch`, `ph`, or `th`. If you see those, the trigger is usually one of: `ei` (her), `tri`, `chwe`, `a`/`â`.",
+      "Useful gender check: `ei` (his) triggers soft mutation, `ei` (her) triggers aspirate. `Ei gath` (his cat – soft) vs `ei chath` (her cat – aspirate).",
+      "`A` (and) only aspirate-mutates the very next word, and only if it starts p/t/c. `Coffi a the` (coffee and tea – th from t). Common in lists.",
     ],
   },
 
@@ -98,9 +98,9 @@ module.exports = [
     priority: 70,
     match: t => /^(Ydy|Ydych|Wyt|Ydyn|Ydw|Oes|A\s+oes|A\s+ydy|A\s+yw)\b/i.test(t) || /\?$/.test(t),
     tips: [
-      "Yes/no questions just front a different form of `bod`: `Wyt ti'n hapus?` (Are you happy?). The intonation rise matters too — like English question shape.",
+      "Yes/no questions just front a different form of `bod`: `Wyt ti'n hapus?` (Are you happy?). The intonation rise matters too – like English question shape.",
       "Welsh has different question/affirmative verb forms. `Wyt` for 'are you?', `ydy` for 'is he/she/it?'. Use these in questions instead of `mae/dw`.",
-      "Existence questions use `oes`: `Oes coffi?` (Is there coffee?). Compare to `Ydy'r coffi yn dda?` (Is the coffee good?) — `oes` for unknown existence, `ydy` for specific identification.",
+      "Existence questions use `oes`: `Oes coffi?` (Is there coffee?). Compare to `Ydy'r coffi yn dda?` (Is the coffee good?) – `oes` for unknown existence, `ydy` for specific identification.",
       "Question particle `A` is optional in spoken Welsh: `A oes ...?` or just `Oes ...?`. Adding `A` makes it formal/literary.",
     ],
   },
@@ -126,7 +126,7 @@ module.exports = [
     tips: [
       "Conditional forms (`byddwn`, `byddai`, `baswn`) = 'would'. `Byddwn i'n hoffi` (I would like). For 'if' clauses use `petai` or `pe bai`.",
       "Two conditional families: `bydd-` (modern, standard) and `bas-` (also modern, very common). Both translate as 'would (be)' + a following verb-noun.",
-      "Compact alternative: `Hoffwn i ...` (I would like to ...) — `hoffwn` already has the conditional baked in. Common in polite requests.",
+      "Compact alternative: `Hoffwn i ...` (I would like to ...) – `hoffwn` already has the conditional baked in. Common in polite requests.",
       "Soft mutation after the conditional pronoun: `Byddwn i'n bwyta → fwyta`. The verb-noun after `yn` keeps its original form; after a fronted object it'll soft-mutate.",
     ],
   },
@@ -139,7 +139,7 @@ module.exports = [
     tips: [
       "Welsh expresses possession backwards: `Mae car gen i` literally = 'there is a car with me' = 'I have a car'. `Gen i` = me, `gen ti` = you, `gan + name` = with X.",
       "Northern Welsh uses `gen/gan`; southern uses `gyda` (`gyda fi`). Same meaning, different region. The structure is the same: existence + thing + 'with' + person.",
-      "Negate with `does dim`: `Does dim car gen i` (I don't have a car — literally 'there isn't a car with me'). The thing owned goes after `dim`.",
+      "Negate with `does dim`: `Does dim car gen i` (I don't have a car – literally 'there isn't a car with me'). The thing owned goes after `dim`.",
       "Question: `Oes car gen ti?` (Have you got a car?). Uses the existential `oes` because you're asking about existence-with-person.",
     ],
   },
@@ -151,9 +151,9 @@ module.exports = [
     match: t => /\brhaid\s+i\b/i.test(t),
     tips: [
       "`Rhaid i + person + verb-noun` = 'must / has to'. `Rhaid i fi fynd` = 'I must go'. Literal: 'necessity to me to go'. Welsh frames obligation as a state of necessity.",
-      "After `i + person`, soft mutation hits the verb-noun. `mynd → fynd`. `Rhaid i ti fwyta` (you must eat) — `bwyta` becomes `fwyta`.",
+      "After `i + person`, soft mutation hits the verb-noun. `mynd → fynd`. `Rhaid i ti fwyta` (you must eat) – `bwyta` becomes `fwyta`.",
       "Past obligation: `Roedd rhaid i mi fynd` (I had to go). Future: `Bydd rhaid i mi fynd` (I'll have to go). The `rhaid` part stays put; the auxiliary marks tense.",
-      "Negate with `does dim rhaid`: `Does dim rhaid i fi fynd` (I don't have to go). Distinct from `dydw i ddim yn cael` (I'm not allowed) — necessity vs permission.",
+      "Negate with `does dim rhaid`: `Does dim rhaid i fi fynd` (I don't have to go). Distinct from `dydw i ddim yn cael` (I'm not allowed) – necessity vs permission.",
     ],
   },
 
@@ -163,7 +163,7 @@ module.exports = [
     priority: 50,
     match: t => /\b\w'r\b/i.test(t),
     tips: [
-      "`'r` is the contracted definite article — happens after a vowel: `mae'r ci` (the dog is). Sticks to the preceding vowel.",
+      "`'r` is the contracted definite article – happens after a vowel: `mae'r ci` (the dog is). Sticks to the preceding vowel.",
       "Welsh has multiple forms of 'the': `y` before consonants, `yr` before vowels, `'r` after vowels in the previous word. `Mae'r ci` vs `mae yr afal` (the apple is).",
       "After consonants, the article is `y`: `y dyn` (the man), `y plant` (the children). Before vowels (including 'h'), `yr`: `yr afal`, `yr hen`.",
       "Feminine nouns soft-mutate after `y/yr/'r`: `cath → y gath` (the cat). Masculine and plural don't mutate after the article.",
@@ -178,8 +178,8 @@ module.exports = [
     tips: [
       "Welsh simple past 3rd person singular ends in `-odd`: `prynodd` (he/she bought), `gwelodd` (he/she saw), `coginiodd` (he/she cooked). Comes from `prynu`, `gweld`, `coginio`.",
       "Past tense in Welsh uses different person endings: -ais (I), -aist (you sg), -odd (he/she), -on (we), -och (you pl), -on (they). Stick to the verb-noun stem.",
-      "Verb-Subject-Object survives in past: `Prynodd Siân fara` (Siân bought bread). Verb first, then subject, then object — same VSO as present.",
-      "Different past form for `bod`: `roedd e/hi` (he/she was) — uses imperfect for state, not perfect. Don't use `bododd` (it doesn't exist).",
+      "Verb-Subject-Object survives in past: `Prynodd Siân fara` (Siân bought bread). Verb first, then subject, then object – same VSO as present.",
+      "Different past form for `bod`: `roedd e/hi` (he/she was) – uses imperfect for state, not perfect. Don't use `bododd` (it doesn't exist).",
     ],
   },
 
@@ -209,16 +209,16 @@ module.exports = [
     ],
   },
 
-  // ── Does dim / Nid oes — no existence ──
+  // ── Does dim / Nid oes – no existence ──
   {
     id: 'cy-does-dim',
     priority: 88,
     match: t => /\b(Does\s+dim|Nid\s+oes|Doedd\s+dim|Fydd\s+dim)\b/i.test(t),
     tips: [
-      "`Does dim` = 'there isn't / there's no'. `Does dim coffi` (there's no coffee). Negation of existence — different from negating an action.",
+      "`Does dim` = 'there isn't / there's no'. `Does dim coffi` (there's no coffee). Negation of existence – different from negating an action.",
       "Past form: `Doedd dim` (there wasn't). Future: `Fydd dim` (there won't be). Each tense has its own existential negation form.",
       "Formal/written: `Nid oes` instead of `does`. `Nid oes neb yma` (there's nobody here). Same meaning, different register.",
-      "Pair with `gen/gyda` for possession: `Does dim car gen i` (I don't have a car). The negation structure stays — only the prepositional phrase changes.",
+      "Pair with `gen/gyda` for possession: `Does dim car gen i` (I don't have a car). The negation structure stays – only the prepositional phrase changes.",
     ],
   },
 
@@ -268,9 +268,9 @@ module.exports = [
     match: t => /\b(un|dau|dwy|tri|tair|pedwar|pedair|pump|chwech|saith|wyth|naw|deg|deuddeg|pymtheg|ugain|hanner)\b/i.test(t),
     tips: [
       "Welsh numbers 1-10 have masculine and feminine forms: `dau/dwy` (2), `tri/tair` (3), `pedwar/pedair` (4). Match the noun's gender.",
-      "Numbers trigger mutations: `dau gi` (two dogs — soft), `tri chi` (three dogs — aspirate). Different number, different mutation.",
+      "Numbers trigger mutations: `dau gi` (two dogs – soft), `tri chi` (three dogs – aspirate). Different number, different mutation.",
       "Modern decimal counting (1, 2, ... 10, 11, 12 ...) is common in everyday speech, but the traditional vigesimal system (counts by 20) still appears, especially for dates and time.",
-      "Number agreement is singular: `pum afal` (five apples — apple stays singular!). Welsh, like many languages, counts on a singular noun after the number.",
+      "Number agreement is singular: `pum afal` (five apples – apple stays singular!). Welsh, like many languages, counts on a singular noun after the number.",
     ],
   },
 
@@ -296,11 +296,11 @@ module.exports = [
       "Possessive pronouns: `fy` (my), `dy` (your), `ei` (his/her), `ein` (our), `eich` (your pl), `eu` (their). Each triggers its own mutation on the noun.",
       "Mutation by possessive: `fy` (nasal), `dy/ei-his` (soft), `ei-her/eu` (aspirate), `ein/eich` (none). The same pattern = different meanings.",
       "Pronouns can double for emphasis: `fy nghi i` (my dog), with the `i` at the end mirroring the `fy`. Spoken Welsh adds the echo pronoun routinely.",
-      "Direct object of a verb often uses the possessive: `fy ngweld i` (to see me — literally 'my seeing me'). Welsh objects can ride along as possessives in verb-noun phrases.",
+      "Direct object of a verb often uses the possessive: `fy ngweld i` (to see me – literally 'my seeing me'). Welsh objects can ride along as possessives in verb-noun phrases.",
     ],
   },
 
-  // ── Mai/taw — focused statement ──
+  // ── Mai/taw – focused statement ──
   {
     id: 'cy-mai-taw',
     priority: 80,
@@ -308,7 +308,7 @@ module.exports = [
     tips: [
       "`Mai` (or southern `taw`) introduces a focused embedded clause: `Dw i'n meddwl mai John sy'n iawn` (I think it's John who's right). 'It is X that ...' structure.",
       "Use `mai/taw` after verbs of thinking, knowing, saying when you're emphasizing a noun, not the action. The non-verb element is fronted.",
-      "Compare `bod`-clauses (for verb-based facts) vs `mai`-clauses (for focused nouns). `Dw i'n meddwl bod e'n iawn` (I think he's right — fact) vs `mai e sy'n iawn` (it's him who's right — focus).",
+      "Compare `bod`-clauses (for verb-based facts) vs `mai`-clauses (for focused nouns). `Dw i'n meddwl bod e'n iawn` (I think he's right – fact) vs `mai e sy'n iawn` (it's him who's right – focus).",
       "Always followed by the fronted element + then a verb. `Mai yfory bydda i'n mynd` (it's tomorrow I'll be going). Used for any focus, not just people.",
     ],
   },
@@ -326,7 +326,7 @@ module.exports = [
     ],
   },
 
-  // ── Dim ond — only ──
+  // ── Dim ond – only ──
   {
     id: 'cy-dim-ond',
     priority: 70,
@@ -339,7 +339,7 @@ module.exports = [
     ],
   },
 
-  // ── Pan / pryd — when ──
+  // ── Pan / pryd – when ──
   {
     id: 'cy-pan-pryd',
     priority: 68,
@@ -347,12 +347,12 @@ module.exports = [
     tips: [
       "`Pan` = 'when' in statements: `Pan ddes i, roedd hi'n cysgu` (When I came, she was sleeping). Triggers soft mutation on the next verb.",
       "`Pryd` = 'when' in questions: `Pryd wyt ti'n dod?` (When are you coming?). Two different words for two roles.",
-      "Don't mix them up — using `pryd` in a statement (or `pan` in a question) sounds off. English uses 'when' for both, Welsh splits the work.",
-      "`Pan` often shifts the following verb: `Pan ges i amser` (When I had time) — `ces → ges` from soft mutation triggered by `pan`.",
+      "Don't mix them up – using `pryd` in a statement (or `pan` in a question) sounds off. English uses 'when' for both, Welsh splits the work.",
+      "`Pan` often shifts the following verb: `Pan ges i amser` (When I had time) – `ces → ges` from soft mutation triggered by `pan`.",
     ],
   },
 
-  // ── Yn ôl — back/again ──
+  // ── Yn ôl – back/again ──
   {
     id: 'cy-yn-ol',
     priority: 60,
@@ -365,7 +365,7 @@ module.exports = [
     ],
   },
 
-  // ── Cael — get/be ──
+  // ── Cael – get/be ──
   {
     id: 'cy-cael-passive',
     priority: 78,
@@ -378,14 +378,14 @@ module.exports = [
     ],
   },
 
-  // ── Eisiau — want ──
+  // ── Eisiau – want ──
   {
     id: 'cy-eisiau-want',
     priority: 80,
     match: t => /\b(eisiau|isio|moyn)\b/i.test(t),
     tips: [
       "`Eisiau` (or northern `isio`, southern `moyn`) = 'to want'. `Dw i eisiau coffi` (I want coffee). No `yn` before `eisiau`!",
-      "`Eisiau` is the major exception to the `yn`-rule. Even though `dw i eisiau` looks like it should have `'n`, it doesn't — `eisiau` is special.",
+      "`Eisiau` is the major exception to the `yn`-rule. Even though `dw i eisiau` looks like it should have `'n`, it doesn't – `eisiau` is special.",
       "Want to do something: `eisiau + verb-noun`. `Dw i eisiau mynd` (I want to go). Direct, no preposition needed.",
       "Southern Welsh: `moyn` more common. `Dw i moyn coffi`. Same structure, just regional preference.",
     ],
@@ -399,7 +399,7 @@ module.exports = [
     tips: [
       "`Y` (before consonants) and `yr` (before vowels) = 'the'. Definite article, no plural form needed.",
       "`A` at sentence start (in questions, before verb) = question particle. Often dropped in spoken Welsh: `(A) wyt ti'n dod?`.",
-      "Article `y` triggers soft mutation on feminine singular nouns: `y gath` (the cat — from `cath`). Masculine and plural stay as-is.",
+      "Article `y` triggers soft mutation on feminine singular nouns: `y gath` (the cat – from `cath`). Masculine and plural stay as-is.",
       "Two `a`s to keep apart: `a` (and, aspirate trigger) vs `â` (with, also aspirate but different meaning). The accent distinguishes them.",
     ],
   },
@@ -410,22 +410,22 @@ module.exports = [
     priority: 88,
     match: t => /\b(ti|chi|dy|eich|wyt|ydych|dych|dwyt|dydych)\b/i.test(t),
     tips: [
-      "Welsh has TWO 'you's: `ti` (informal singular — friends, family, kids, God in prayer) and `chi` (formal singular AND plural). They use DIFFERENT verb forms: `wyt ti'n` (are you, informal) vs `ydych chi'n` (are you, formal/plural).",
+      "Welsh has TWO 'you's: `ti` (informal singular – friends, family, kids, God in prayer) and `chi` (formal singular AND plural). They use DIFFERENT verb forms: `wyt ti'n` (are you, informal) vs `ydych chi'n` (are you, formal/plural).",
       "`Chi` works as BOTH formal singular and plural (like English 'you' covers both). With one stranger → chi. With a group of friends → also chi. With one friend → ti.",
-      "Possessives shift: `dy lyfr` (your book, informal — triggers soft mutation) vs `eich llyfr` (your book, formal/plural — no mutation). Same pattern across all your-pronouns.",
+      "Possessives shift: `dy lyfr` (your book, informal – triggers soft mutation) vs `eich llyfr` (your book, formal/plural – no mutation). Same pattern across all your-pronouns.",
       "Welsh is less strict about formality than German or Russian. Many speakers default to `chi` with adults they don't know, but `ti` spreads quickly once you're on first-name terms.",
     ],
   },
 
-  // ── Gender (masc/fem) — and how mutation reveals it ──────────
+  // ── Gender (masc/fem) – and how mutation reveals it ──────────
   {
     id: 'cy-gender-mutation',
     priority: 45,
     match: t => /\b(y|yr|'r)\s+[a-zâêîôûŵŷ]+/i.test(t),
     tips: [
-      "Welsh nouns have TWO genders: masculine and feminine. There's no neutral or 'thing' category — every noun is one or the other, arbitrarily. `Cath` (cat) is feminine; `ci` (dog) is masculine.",
+      "Welsh nouns have TWO genders: masculine and feminine. There's no neutral or 'thing' category – every noun is one or the other, arbitrarily. `Cath` (cat) is feminine; `ci` (dog) is masculine.",
       "Feminine singular nouns SOFT-MUTATE after the article `y`/`yr`/`'r`: `cath → y gath` (the cat), `merch → y ferch` (the girl). Masculine nouns don't mutate. The mutation is your gender check.",
-      "Adjectives after feminine singular nouns ALSO soft-mutate: `cath fawr` (a big cat — `mawr` → `fawr` because cath is fem). After masculine: `ci mawr` (no mutation).",
+      "Adjectives after feminine singular nouns ALSO soft-mutate: `cath fawr` (a big cat – `mawr` → `fawr` because cath is fem). After masculine: `ci mawr` (no mutation).",
       "Numbers from 2 also have gendered forms: `dau gi` (two dogs, m) vs `dwy gath` (two cats, f). Same with `tri/tair` (three) and `pedwar/pedair` (four). After 5, no gender split.",
     ],
   },

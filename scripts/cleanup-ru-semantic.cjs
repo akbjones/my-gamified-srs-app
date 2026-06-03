@@ -25,7 +25,7 @@ for (const f of fixes) {
   const nw = f.newEn;
   const pos = f.pos;
 
-  // 1. "to saw", "to took", "to drove" etc — Google gave English past tense,
+  // 1. "to saw", "to took", "to drove" etc – Google gave English past tense,
   //    but the dictionary should have the infinitive meaning
   if (pos === 'v' && /^to (saw|took|drove|met|stood|went|came|gave|made|ran|ate|drank|sang|wrote|read|bought|sold|found|knew|said|told|got|thought|brought|felt|put|left|had|did|been|kept|let|lost|paid|sat|sent|set|spent|taught|threw|wore|won|broke|chose|drew|fell|flew|grew|held|hid|hung|led|lay|lit|meant|rode|rang|rose|shook|shot|shut|slept|slid|spoke|stole|stuck|struck|swept|swam|swung|tore|woke|wove|fought|forgot|forgave|froze|ground|knelt|leapt|shone|sowed|spun|sprang|stung|stank|strode|strung|swore|typed|wept|wound|wrung|abandoned|cooked|objected)($| )/.test(nw)) {
     // If original was truncated/broken, provide a corrected infinitive
@@ -45,7 +45,7 @@ for (const f of fixes) {
     continue;
   }
 
-  // 3. Google gave "fast" for "быстро" (quickly) — both valid, keep original
+  // 3. Google gave "fast" for "быстро" (quickly) – both valid, keep original
   // 4. Revert synonym swaps where original was perfectly correct
   const synonymReverts = {
     'быстро': 'quickly',
@@ -64,7 +64,7 @@ for (const f of fixes) {
     continue;
   }
 
-  // 5. Fix "to I'm ...", "to i saw" etc — these are conjugated forms, clean them up
+  // 5. Fix "to I'm ...", "to i saw" etc – these are conjugated forms, clean them up
   if (pos === 'v') {
     let cleaned = nw;
     // Remove personal pronouns from verb translations

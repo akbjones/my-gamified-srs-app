@@ -5,8 +5,8 @@
  * Priority order:
  * 1. FUNCTION_WORDS hand-verified table (~80+ entries)
  * 2. Lemma copy (if word has lemma and lemma is in dict)
- * 3. Wiktionary (from git commit 3b22b4c2) — validated against cards
- * 4. Google Translate API — validated against cards
+ * 3. Wiktionary (from git commit 3b22b4c2) – validated against cards
+ * 4. Google Translate API – validated against cards
  * 5. Current dictionary as fallback
  *
  * Output: scripts/output/hi-dict-rebuild-preview.json + .md
@@ -182,14 +182,14 @@ function loadDeck() {
 
   for (const card of deck) {
     const tokens = card.target
-      .replace(/[.,!?;:"""\u2018\u2019()—–«»\u0964\u0965/\[\]{}।]/g, ' ')
+      .replace(/[.,!?;:"""\u2018\u2019()––«»\u0964\u0965/\[\]{}।]/g, ' ')
       .split(/\s+/)
       .map(t => t.trim())
       .filter(t => t.length > 0);
 
     const engWords = new Set(
       (card.english || '').toLowerCase()
-        .replace(/[.,!?;:"""\u2018\u2019()—–«»/\[\]{}]/g, ' ')
+        .replace(/[.,!?;:"""\u2018\u2019()––«»/\[\]{}]/g, ' ')
         .split(/\s+/)
         .filter(w => w.length > 2)
     );
@@ -506,7 +506,7 @@ async function main() {
         };
         continue;
       }
-      // Wiktionary exists but didn't validate — still save it as candidate
+      // Wiktionary exists but didn't validate – still save it as candidate
       firstPassResults[word] = {
         word,
         source: 'wiktionary_unvalidated',
@@ -565,7 +565,7 @@ async function main() {
       const googleValidation = validateAgainstCards(word, googleDef, wordToCards, wordToEnglish, cardEnglish);
 
       if (result.source === 'wiktionary_unvalidated') {
-        // Both Wiktionary and Google available — pick the better one
+        // Both Wiktionary and Google available – pick the better one
         const wiktValidation = validateAgainstCards(word, result.wiktCandidate, wordToCards, wordToEnglish, cardEnglish);
 
         if (googleValidation.validated && !wiktValidation.validated) {
@@ -601,7 +601,7 @@ async function main() {
       result.source = 'wiktionary';
       result.new_en = result.wiktCandidate;
     } else {
-      // Neither Google nor Wiktionary — use current if it's not garbage
+      // Neither Google nor Wiktionary – use current if it's not garbage
       if (entry && entry.en && entry.en !== '?' && isCleanDefinition(entry.en)) {
         result.source = 'current_fallback';
         result.new_en = entry.en;

@@ -483,7 +483,7 @@ function main() {
   console.log('\n  [5] Tag Coverage Flags:');
   for (const [code, r] of Object.entries(results)) {
     for (const f of r.tagCoverage.flagged) {
-      console.log(`    ${r.language}: ${f.tag} = ${f.pct}% — ${f.issue}`);
+      console.log(`    ${r.language}: ${f.tag} = ${f.pct}% – ${f.issue}`);
     }
   }
   if (Object.values(results).every(r => r.tagCoverage.flagged.length === 0)) {

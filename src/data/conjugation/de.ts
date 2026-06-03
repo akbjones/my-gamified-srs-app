@@ -6,12 +6,12 @@
  * Person order: ich, du, er/sie/es, wir, ihr, sie/Sie
  *
  * Tenses:
- *   present     — Prasens
- *   preterite   — Prateritum (simple past)
- *   imperfect   — Perfekt (compound past: haben/sein + Partizip II)
- *   future      — Futur I (werden + infinitive)
- *   conditional — Konjunktiv II (wurde + infinitive, or stem-changed for strong)
- *   subjunctive — Konjunktiv I (infinitive stem + endings)
+ *   present     – Prasens
+ *   preterite   – Prateritum (simple past)
+ *   imperfect   – Perfekt (compound past: haben/sein + Partizip II)
+ *   future      – Futur I (werden + infinitive)
+ *   conditional – Konjunktiv II (wurde + infinitive, or stem-changed for strong)
+ *   subjunctive – Konjunktiv I (infinitive stem + endings)
  */
 import type { ConjugationTable } from '../../types';
 
@@ -43,7 +43,7 @@ const SEPARABLE_PREFIXES = [
 // Sort by length descending so longer prefixes match first
 SEPARABLE_PREFIXES.sort((a, b) => b.length - a.length);
 
-// Inseparable prefixes — never separate, no ge- in past participle
+// Inseparable prefixes – never separate, no ge- in past participle
 const INSEPARABLE_PREFIXES = ['be', 'emp', 'ent', 'er', 'ge', 'miss', 'ver', 'zer'];
 
 function detectSeparablePrefix(inf: string): string | null {
@@ -636,9 +636,9 @@ const IRREGULARS: Record<string, IrregularData> = {
     isStrong: true,
     konjII: f('lüde,lüdest,lüde,lüden,lüdet,lüden'),
   },
-  // kaufen (for einkaufen) — regular, no entry needed
-  // machen (for aufmachen, zumachen) — regular, no entry needed
-  // stellen (for vorstellen) — regular, no entry needed
+  // kaufen (for einkaufen) – regular, no entry needed
+  // machen (for aufmachen, zumachen) – regular, no entry needed
+  // stellen (for vorstellen) – regular, no entry needed
 };
 
 // ── Sein-verbs: use "sein" as auxiliary in Perfekt ──────────
@@ -916,7 +916,7 @@ export function conjugate(infinitive: string): ConjugationTable | null {
         const auxForms = auxiliary === 'sein' ? SEIN_PRESENT : HABEN_PRESENT;
         forms = auxForms.map(a => a + ' ' + sepPP) as Forms;
       } else if (t === 'future') {
-        // Future: "werde aufmachen" — prefix stays with infinitive
+        // Future: "werde aufmachen" – prefix stays with infinitive
         forms = WERDEN_PRESENT.map(w => w + ' ' + inf) as Forms;
       } else if (t === 'conditional') {
         // Konjunktiv II: for most separable verbs, use "wurde + sep-infinitive"
@@ -931,7 +931,7 @@ export function conjugate(infinitive: string): ConjugationTable | null {
         forms = forms.map(form => form + ' ' + sepPrefix) as Forms;
       }
     } else if (isInseparable && t === 'imperfect') {
-      // Inseparable: no ge- in past participle — already handled in conjugateBase
+      // Inseparable: no ge- in past participle – already handled in conjugateBase
       // but we need to rebuild Perfekt with the inseparable verb's participle
       let pp: string;
       if (irrData) {

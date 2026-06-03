@@ -251,7 +251,7 @@ function checkGrammarTip(grammar, grammarNode) {
   if (!grammar) return issues;
 
   // Check for conjugation table patterns (not useful as tips)
-  if (/^(я|ты|он|она|мы|вы|они)\s*[-–—=:]/i.test(grammar)) {
+  if (/^(я|ты|он|она|мы|вы|они)\s*[-––=:]/i.test(grammar)) {
     issues.push('conjugation_table_tip');
   }
 

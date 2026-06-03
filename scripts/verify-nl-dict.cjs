@@ -4,7 +4,7 @@
  * 1. Parse every entry from nl.ts
  * 2. Skip function words
  * 3. Translate nl→en via Google (batches of 80)
- * 4. Compare — zero overlap → flag for replacement
+ * 4. Compare – zero overlap → flag for replacement
  * 5. Filter garbage Google results
  * 6. Output JSON with fixes
  */

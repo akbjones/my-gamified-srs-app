@@ -134,9 +134,9 @@ function auditDeck(deck, lang) {
     };
 
     // Flag issues: p1 should be ~40-60%, p2 ~25-40%, p3 ~10-25%
-    if (p1 / total < 0.30) priorityIssues.push(`${n}: P1 too low (${Math.round(p1/total*100)}%) — only ${p1}/${total}`);
-    if (p1 / total > 0.70) priorityIssues.push(`${n}: P1 too high (${Math.round(p1/total*100)}%) — ${p1}/${total}`);
-    if (p3 / total > 0.35) priorityIssues.push(`${n}: P3 too high (${Math.round(p3/total*100)}%) — ${p3}/${total}`);
+    if (p1 / total < 0.30) priorityIssues.push(`${n}: P1 too low (${Math.round(p1/total*100)}%) – only ${p1}/${total}`);
+    if (p1 / total > 0.70) priorityIssues.push(`${n}: P1 too high (${Math.round(p1/total*100)}%) – ${p1}/${total}`);
+    if (p3 / total > 0.35) priorityIssues.push(`${n}: P3 too high (${Math.round(p3/total*100)}%) – ${p3}/${total}`);
     if (p3 === 0 && total > 20) priorityIssues.push(`${n}: No P3 cards at all (${total} cards)`);
     if (p2 === 0 && total > 20) priorityIssues.push(`${n}: No P2 cards at all (${total} cards)`);
 
@@ -180,7 +180,7 @@ function auditDeck(deck, lang) {
 
     // Early nodes (1-7) should have shorter sentences
     if (nodeNum <= 7 && avgLen > 80) {
-      levelIssues.push(`${n}: Avg English length ${Math.round(avgLen)} chars — too complex for beginner node`);
+      levelIssues.push(`${n}: Avg English length ${Math.round(avgLen)} chars – too complex for beginner node`);
     }
   }
 
@@ -291,7 +291,7 @@ function auditDeck(deck, lang) {
   const vocabIssues = [];
   for (const [cat, data] of Object.entries(vocabCoverage)) {
     if (data.status === 'FAIL') {
-      vocabIssues.push(`${cat}: ${data.found}/${data.total} found (need ${data.minimum}) — missing: ${data.missingTerms.join(', ')}`);
+      vocabIssues.push(`${cat}: ${data.found}/${data.total} found (need ${data.minimum}) – missing: ${data.missingTerms.join(', ')}`);
     }
   }
 

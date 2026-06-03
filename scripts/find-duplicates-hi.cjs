@@ -44,7 +44,7 @@ const HINDI_NUMBERS = new Set([
 ]);
 
 function tokenizeHindi(s) {
-  return s.replace(/[।,!?;:।'""''()—–…]/g, ' ').split(/\s+/).filter(t => t.length > 0);
+  return s.replace(/[।,!?;:।'""''()––…]/g, ' ').split(/\s+/).filter(t => t.length > 0);
 }
 
 function skeletonize(target) {
@@ -83,7 +83,7 @@ console.log('Top 20 clusters by size:');
 console.log();
 
 for (const c of clusters.slice(0, 20)) {
-  console.log('▸ ' + c.cards.length + 'x — skeleton: ' + c.skel);
+  console.log('▸ ' + c.cards.length + 'x – skeleton: ' + c.skel);
   for (const card of c.cards.slice(0, 6)) {
     console.log('    ' + card.id + '  [pri ' + (card.priority || '?') + ']  ' + card.target);
   }

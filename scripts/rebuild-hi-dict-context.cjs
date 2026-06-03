@@ -6,9 +6,9 @@
  *   Step 1: Hand-verified function words (300+ entries)
  *   Step 2: Google Translate all content words (batch 80)
  *   Step 3: Post-process with 16 rules + proper noun + non-verb detection
- *   Step 4: Lemma copy — for EVERY entry with a lemma field, use the lemma's definition
- *   Step 5: Card-context validation — validate each entry against all cards containing it
- *   Step 6: POS fix — correct POS based on Google's raw output
+ *   Step 4: Lemma copy – for EVERY entry with a lemma field, use the lemma's definition
+ *   Step 5: Card-context validation – validate each entry against all cards containing it
+ *   Step 6: POS fix – correct POS based on Google's raw output
  *   Step 7: Apply to dictionary, preserving IPA and lemma fields
  */
 
@@ -409,7 +409,7 @@ import { findInfinitive } from '../conjugation/hi';
   const footer = suffixStart !== -1 ? '\n\n' + originalSrc.slice(suffixStart) : `
 
 export function lookupWord(word: string): DictEntry | null {
-  const clean = word.replace(/[।,!?;:"""''()—–\\-…]/g, '').trim();
+  const clean = word.replace(/[।,!?;:"""''()––\\-…]/g, '').trim();
   if (!clean) return null;
   if (dictionary[clean]) return dictionary[clean];
   return null;
@@ -671,7 +671,7 @@ async function main() {
     if (!rawLower.startsWith('to ') && currentPos === 'v' && !entry.lemma) {
       const isVerbLike = /^(be|have|do|go|get|make|take|come|give|find|know|see|think|say|want|need|try|keep|let|begin|start|stop|help|work|play|run|walk|eat|drink|sleep|read|write|speak|hear|feel|meet|show|leave|bring|buy|sell|pay|send|spend|teach|learn|grow|hold|cut|hit|set|sit|stand|fall|pick|pull|push|turn|open|close|break|build|throw|catch|carry|draw|drive|fly|ride|swim|climb|dance|sing|cook|wash|clean|bring|keep|lose|win|fight|hang|hang|lead|lie|lay|lend|light|mean|prove|ring|seek|sell|shake|shine|shoot|show|shut|slide|smell|speak|spell|split|steal|stick|sting|strike|swear|sweep|swing|tear|wake|wear|weave|wind|wrap)\b/i;
       const isPastParticiple = /^(stuck|adopted|risen|grown|arrived|come|gone|fallen|broken|spoken|written|given|taken|done|seen|heard|felt|found|lost|made|said|told|thought|known|meant|understood|become|begun|chosen|drawn|driven|eaten|flown|forgotten|frozen|gotten|hidden|hung|led|lain|lent|lit|proved|rung|sought|shaken|shone|shot|shown|shut|slid|smelt|spelt|split|stolen|stung|struck|sworn|swept|swung|torn|woken|worn|wound|wrapped)\b/i;
-      // Don't fix if the word ends with ना (infinitive) — those are definitely verbs
+      // Don't fix if the word ends with ना (infinitive) – those are definitely verbs
       if (!key.endsWith('ना') && !isVerbLike.test(rawLower.split(/\s+/)[0]) && !isPastParticiple.test(rawLower.split(/\s+/)[0])) {
         // Extra check: is the raw translation clearly a noun? (proper noun, common object, etc.)
         // Only fix for obvious cases
@@ -697,7 +697,7 @@ async function main() {
   // We need to lowercase everything EXCEPT actual proper nouns (person names, places, festivals).
   console.log('\nStep 6b: Fixing false proper noun capitalization...');
 
-  // Known proper noun patterns — these should STAY capitalized
+  // Known proper noun patterns – these should STAY capitalized
   const PROPER_NOUN_WORDS = new Set([
     // Will be populated from POS 'n' entries whose raw Google was capitalized AND
     // appear in cards as proper nouns
@@ -764,7 +764,7 @@ async function main() {
         if (isProperNoun) break;
       }
 
-      // Also check POS — adj/adv/conj should never be proper nouns
+      // Also check POS – adj/adv/conj should never be proper nouns
       if (['adj', 'adv', 'conj', 'prep', 'v'].includes(intermediate.pos)) {
         isProperNoun = false;
       }

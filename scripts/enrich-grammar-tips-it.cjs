@@ -99,7 +99,7 @@ const TIP_GENERATORS = {
       }
     }
     if (/\?/.test(t) && !/\b(chi|che|cosa|quale|dove|quando|come|perché)\b/i.test(t))
-      return 'Yes/no questions in Italian use rising intonation — no word order change needed. The verb stays in the same position.';
+      return 'Yes/no questions in Italian use rising intonation – no word order change needed. The verb stays in the same position.';
     return null;
   },
 
@@ -200,11 +200,11 @@ const TIP_GENERATORS = {
   'node-10': (t, e) => {
     // Imperfetto
     if (/\b\w+av[ao]\b/.test(t) && /\b(quando|mentre|sempre|spesso|ogni|da bambino|da piccol)\b/i.test(t))
-      return 'Imperfetto for habitual past actions: "Quando ero piccolo, giocavo sempre" — repeated actions in the past.';
+      return 'Imperfetto for habitual past actions: "Quando ero piccolo, giocavo sempre" – repeated actions in the past.';
     if (/\b(ero|eri|era|eravamo|erano)\b/.test(t))
       return 'Essere in imperfetto: ero, eri, era, eravamo, eravate, erano. Used for states, descriptions, and ongoing conditions.';
     if (/\b\w+av[ao]\b/.test(t) && /\bmentre\b/.test(t))
-      return 'Imperfetto with "mentre" describes background actions: "Mentre camminavo..." — ongoing action interrupted.';
+      return 'Imperfetto with "mentre" describes background actions: "Mentre camminavo..." – ongoing action interrupted.';
     return null;
   },
 
@@ -235,7 +235,7 @@ const TIP_GENERATORS = {
   },
 
   'node-13': (t, e) => {
-    // Verbi riflessivi — broader matching
+    // Verbi riflessivi – broader matching
     if (/\b(mi|ti|si|ci|vi)\s+\w+(?:o|i|a|e|iamo|ate|ono|ete|isco|isci|isce|iscono)\b/.test(t) && !/\b(mi|ti|ci|vi)\s+(piace|piacciono|sembra|serve|manca|interessa|ha)\b/.test(t))
       return 'Reflexive verb: the pronoun (mi, ti, si, ci, vi) shows the action reflects back on the subject.';
     if (/\bsi\s+\w+ano\b/.test(t))
@@ -243,7 +243,7 @@ const TIP_GENERATORS = {
     if (/\b(mi sono|ti sei|si è|ci siamo|si sono)\b/.test(t))
       return 'Reflexive verbs use "essere" in compound tenses, and the participle agrees: "Mi sono alzata" (f).';
     if (/\b\w+arsi\b|\b\w+ersi\b|\b\w+irsi\b/.test(t))
-      return 'Reflexive infinitive (-arsi, -ersi, -irsi): "Devo alzarmi" — the pronoun attaches to the infinitive end.';
+      return 'Reflexive infinitive (-arsi, -ersi, -irsi): "Devo alzarmi" – the pronoun attaches to the infinitive end.';
     return null;
   },
 
@@ -281,13 +281,13 @@ const TIP_GENERATORS = {
     if (/\b(qualunque|qualsiasi|chiunque|ovunque|dovunque|comunque)\b/.test(t))
       return 'Indefinite pronouns/adjectives (qualunque, chiunque, ovunque) take the subjunctive in formal usage.';
     if (/\bè\s+(meglio|importante|necessario|possibile|impossibile|giusto|sbagliato|bene|male|ora|tempo)\s+che\b/.test(t))
-      return '"È + adjective + che" triggers subjunctive: "È importante che tu venga" — impersonal evaluation + che.';
+      return '"È + adjective + che" triggers subjunctive: "È importante che tu venga" – impersonal evaluation + che.';
     if (/\b(prima che|senza che|a meno che|purché|affinché|a patto che|a condizione che)\b/.test(t))
       return 'These conjunctions always trigger the subjunctive: prima che (before), senza che (without), a meno che (unless).';
     if (/\b(credo|penso|spero|dubito|temo|sembra|pare|immagino|suppongo)\s+che\b/.test(t))
       return 'Verbs of opinion, hope, doubt, or perception + "che" require the subjunctive mood.';
     if (/\bche\b/.test(t) && /\b(sia|abbia|faccia|vada|stia|dica|possa|debba|sappia|venga|mangino|restiate|vengano|parlino|capiscano|finiscano)\b/.test(t))
-      return 'The subjunctive form appears after "che" — triggered by the main clause expressing opinion, wish, doubt, or necessity.';
+      return 'The subjunctive form appears after "che" – triggered by the main clause expressing opinion, wish, doubt, or necessity.';
     return null;
   },
 
@@ -298,7 +298,7 @@ const TIP_GENERATORS = {
     if (/\b(vorrei|sarei|avrei|potrei|dovrei|farei|andrei|verrei|berrei|rimarrei)\b/.test(t))
       return 'Irregular conditional forms: vorrei (volere), sarei (essere), avrei (avere), potrei (potere), farei (fare).';
     if (/\bse\s+\w+ssi\b/.test(t) && /\b\w+rebbe\b/.test(t))
-      return 'Hypothetical "se" clause: "Se avessi tempo, viaggerei" — imperfect subjunctive + conditional.';
+      return 'Hypothetical "se" clause: "Se avessi tempo, viaggerei" – imperfect subjunctive + conditional.';
     return null;
   },
 
@@ -351,7 +351,7 @@ const TIP_GENERATORS = {
     if (/\bcui\b/.test(t))
       return '"Cui" is used after prepositions in relative clauses: "con cui" (with whom), "in cui" (in which), "di cui" (of which).';
     if (/\b(il quale|la quale|i quali|le quali)\b/.test(t))
-      return '"Il quale/la quale" are formal alternatives to "che/cui" — they agree in gender/number and clarify ambiguity.';
+      return '"Il quale/la quale" are formal alternatives to "che/cui" – they agree in gender/number and clarify ambiguity.';
     if (/\bciò che\b/.test(t) || /\bquello che\b/.test(t))
       return '"Ciò che" / "quello che" = what/that which. Used when there is no specific antecedent.';
     if (/\bche\b/.test(t) && t.split(/\s+/).length >= 5)
@@ -422,11 +422,11 @@ const TIP_GENERATORS = {
   'node-26': (t, e) => {
     // Congiuntivo passato e trapassato
     if (/\b(abbia|abbiano)\s+\w+[at]o\b/.test(t))
-      return 'Congiuntivo passato: abbia/sia + participio. "Credo che abbia finito" — past subjunctive for completed actions.';
+      return 'Congiuntivo passato: abbia/sia + participio. "Credo che abbia finito" – past subjunctive for completed actions.';
     if (/\b(sia|siano)\s+\w+[at][oaie]\b/.test(t) && !/\b(è|sono)\s/.test(t))
-      return 'Congiuntivo passato with essere: "Penso che sia arrivato" — participle agrees with subject.';
+      return 'Congiuntivo passato with essere: "Penso che sia arrivato" – participle agrees with subject.';
     if (/\b(avesse|avessero)\s+\w+[at]o\b/.test(t))
-      return 'Congiuntivo trapassato: avessi/fossi + participio. "Se avesse saputo..." — for past unreal conditions.';
+      return 'Congiuntivo trapassato: avessi/fossi + participio. "Se avesse saputo..." – for past unreal conditions.';
     return null;
   },
 
@@ -503,7 +503,7 @@ const TIP_GENERATORS = {
     if (/\b(bisogna|occorre|è necessario|è bene|è ora|è tempo)\s+che\b/.test(t))
       return 'Impersonal expression of necessity + "che" always requires the subjunctive mood.';
     if (/\bprima che\b/.test(t))
-      return '"Prima che" (before) + congiuntivo: "Prima che me ne vada..." — temporal subordination requires subjunctive.';
+      return '"Prima che" (before) + congiuntivo: "Prima che me ne vada..." – temporal subordination requires subjunctive.';
     if (/\bche\b/.test(t) && /\b(sia|abbia|venga|vada|faccia|possa|debba|sappia|voglia|capiscano|studino)\b/.test(t))
       return 'The subjunctive form in this sentence signals that the main clause expresses opinion, wish, necessity, or doubt.';
     return null;
@@ -516,7 +516,7 @@ const TIP_GENERATORS = {
     if (/^(?:prenda|prendi|prendiamo|prendete)\b/i.test(t))
       return 'Imperativo of "prendere": prendi (tu), prenda (Lei formal), prendiamo (noi), prendete (voi).';
     if (/^(?:ricorda|ricordami|ricordati)\b/i.test(t))
-      return 'Imperativo with pronouns: "Ricordami di..." — pronouns attach to the end of affirmative commands.';
+      return 'Imperativo with pronouns: "Ricordami di..." – pronouns attach to the end of affirmative commands.';
     if (/^(?:assaggia|assaggiate|servi|servite|prepara|preparate)\b/i.test(t))
       return 'Imperative for instructions: commonly used in recipes, directions, and everyday requests.';
     if (/\b(figurati|macché|magari|mica|mah|boh)\b/.test(t))
@@ -597,5 +597,5 @@ if (!DRY_RUN) {
   fs.writeFileSync(DECK_PATH, JSON.stringify(deck, null, 2) + '\n');
   console.log('Saved to deck.json');
 } else {
-  console.log('(dry run — no changes)');
+  console.log('(dry run – no changes)');
 }

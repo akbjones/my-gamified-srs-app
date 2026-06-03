@@ -22,7 +22,7 @@ const A1_CARDS = [
   { target: "El avión sale a las ocho.", english: "The plane leaves at eight.", grammar: "\"Sale\" is the present tense of \"salir\" (to leave). Irregular: salgo, sales, sale, salimos, salís, salen." },
   { target: "Necesito mi pasaporte.", english: "I need my passport." },
   { target: "¿Cuál es la puerta de embarque?", english: "What is the boarding gate?" },
-  { target: "El vuelo es directo.", english: "The flight is direct.", grammar: "\"Ser\" is used for inherent characteristics. The flight IS direct — it's a defining feature of this flight." },
+  { target: "El vuelo es directo.", english: "The flight is direct.", grammar: "\"Ser\" is used for inherent characteristics. The flight IS direct – it's a defining feature of this flight." },
   { target: "Mi asiento está cerca de la ventana.", english: "My seat is near the window.", grammar: "\"Estar\" for location. The seat IS (located) near the window." },
   { target: "¿A qué hora llega el avión?", english: "What time does the plane arrive?" },
   { target: "La maleta es grande.", english: "The suitcase is big." },
@@ -149,7 +149,7 @@ const A1_CARDS = [
   { target: "¿Puede llamar un taxi?", english: "Can you call a taxi?" },
   { target: "¿Hay restaurantes cerca del hotel?", english: "Are there restaurants near the hotel?" },
 
-  // More A1 — beach, daily travel, numbers
+  // More A1 – beach, daily travel, numbers
   { target: "La playa es bonita.", english: "The beach is pretty." },
   { target: "El agua está fría.", english: "The water is cold.", grammar: "\"Estar\" for temporary conditions. The water IS cold right now." },
   { target: "¿Hay sombrillas en la playa?", english: "Are there umbrellas on the beach?" },
@@ -184,19 +184,19 @@ const A1_CARDS = [
 // A2 CARDS (~130): Past tenses, reflexives, object pronouns, por/para
 // ─────────────────────────────────────────────────────────────────────
 const A2_CARDS = [
-  // Past tense — airports & flights
+  // Past tense – airports & flights
   { target: "Perdí mi maleta en el aeropuerto.", english: "I lost my suitcase at the airport.", grammar: "\"Perdí\" is pretérito of \"perder.\" Irregular stem change only in present tense; pretérito is regular for -er verbs: perdí, perdiste, perdió." },
   { target: "El vuelo se retrasó dos horas.", english: "The flight was delayed two hours." },
   { target: "Llegamos al aeropuerto muy temprano.", english: "We arrived at the airport very early." },
   { target: "Facturé la maleta en el mostrador.", english: "I checked the suitcase at the counter." },
   { target: "El avión aterrizó sin problemas.", english: "The plane landed without problems." },
   { target: "Pasamos por el control de seguridad.", english: "We went through security." },
-  { target: "Compré los billetes por internet.", english: "I bought the tickets online.", grammar: "\"Por internet\" — \"por\" indicates the means/medium through which something is done." },
+  { target: "Compré los billetes por internet.", english: "I bought the tickets online.", grammar: "\"Por internet\" – \"por\" indicates the means/medium through which something is done." },
   { target: "Perdimos la conexión en Madrid.", english: "We missed the connection in Madrid." },
   { target: "Me senté en el asiento equivocado.", english: "I sat in the wrong seat.", grammar: "\"Sentarse\" is reflexive: me senté (I sat down). The pretérito of sentarse: me senté, te sentaste, se sentó." },
   { target: "El auxiliar de vuelo nos ayudó.", english: "The flight attendant helped us." },
 
-  // Past tense — hotels
+  // Past tense – hotels
   { target: "Nos quedamos en un hostal muy barato.", english: "We stayed at a very cheap hostel.", grammar: "\"Quedarse\" is reflexive: nos quedamos (we stayed). Without \"se,\" quedar means \"to remain\" or \"to meet up.\"" },
   { target: "La habitación no estaba lista cuando llegamos.", english: "The room wasn't ready when we arrived." },
   { target: "Dejé las llaves en la recepción.", english: "I left the keys at the reception." },
@@ -208,8 +208,8 @@ const A2_CARDS = [
   { target: "El aire acondicionado no funcionaba.", english: "The air conditioning wasn't working." },
   { target: "Pedí una habitación con vistas al mar.", english: "I asked for a room with a sea view." },
 
-  // Past tense — restaurants & food
-  { target: "Probé la paella por primera vez.", english: "I tried paella for the first time.", grammar: "\"Por primera vez\" — \"por\" here indicates \"for\" in the sense of occasion/circumstance." },
+  // Past tense – restaurants & food
+  { target: "Probé la paella por primera vez.", english: "I tried paella for the first time.", grammar: "\"Por primera vez\" – \"por\" here indicates \"for\" in the sense of occasion/circumstance." },
   { target: "El camarero nos recomendó el pescado.", english: "The waiter recommended the fish to us." },
   { target: "Pedimos una botella de vino tinto.", english: "We ordered a bottle of red wine." },
   { target: "La cena costó cuarenta euros.", english: "Dinner cost forty euros." },
@@ -220,11 +220,11 @@ const A2_CARDS = [
   { target: "Desayunamos en una cafetería cerca del hotel.", english: "We had breakfast at a cafe near the hotel." },
   { target: "El postre estaba riquísimo.", english: "The dessert was really delicious." },
 
-  // Past tense — transport & directions
-  { target: "Tomamos el metro para ir al centro.", english: "We took the metro to go downtown.", grammar: "\"Para ir\" — \"para\" + infinitive expresses purpose: in order to go." },
+  // Past tense – transport & directions
+  { target: "Tomamos el metro para ir al centro.", english: "We took the metro to go downtown.", grammar: "\"Para ir\" – \"para\" + infinitive expresses purpose: in order to go." },
   { target: "El taxi tardó veinte minutos en llegar.", english: "The taxi took twenty minutes to arrive." },
   { target: "Me bajé en la parada equivocada.", english: "I got off at the wrong stop.", grammar: "\"Bajarse\" is reflexive: me bajé (I got off). \"Subirse\" = to get on, \"bajarse\" = to get off." },
-  { target: "Alquilamos un coche por una semana.", english: "We rented a car for a week.", grammar: "\"Por una semana\" — \"por\" for duration of time. How long the rental lasted." },
+  { target: "Alquilamos un coche por una semana.", english: "We rented a car for a week.", grammar: "\"Por una semana\" – \"por\" for duration of time. How long the rental lasted." },
   { target: "El autobús nos dejó en la plaza.", english: "The bus dropped us off at the square." },
   { target: "Caminamos por el casco antiguo toda la tarde.", english: "We walked through the old town all afternoon.", grammar: "\"Por\" for movement through a place. \"Caminamos por\" = we walked through/around." },
   { target: "Cogí el tren equivocado.", english: "I took the wrong train." },
@@ -232,7 +232,7 @@ const A2_CARDS = [
   { target: "Cruzamos el puente para llegar a la otra orilla.", english: "We crossed the bridge to get to the other side." },
   { target: "Me perdí en las callejuelas del centro.", english: "I got lost in the narrow streets of the center." },
 
-  // Past tense — sightseeing
+  // Past tense – sightseeing
   { target: "Visitamos tres museos en un día.", english: "We visited three museums in one day." },
   { target: "Saqué muchas fotos del paisaje.", english: "I took many photos of the landscape." },
   { target: "La guía nos contó la historia del castillo.", english: "The guide told us the history of the castle." },
@@ -244,7 +244,7 @@ const A2_CARDS = [
   { target: "Nos sacamos una foto delante de la fuente.", english: "We took a photo in front of the fountain." },
   { target: "Recorrimos el barrio gótico a pie.", english: "We explored the Gothic Quarter on foot." },
 
-  // Past tense — shopping
+  // Past tense – shopping
   { target: "Compré regalos para toda la familia.", english: "I bought gifts for the whole family.", grammar: "\"Para\" indicates the recipient/beneficiary: gifts FOR the family." },
   { target: "Encontré una tienda de artesanías local.", english: "I found a local crafts shop." },
   { target: "Regateé el precio y me hicieron un descuento.", english: "I haggled the price and they gave me a discount." },
@@ -254,15 +254,15 @@ const A2_CARDS = [
   // Reflexives in travel
   { target: "Me levanté temprano para ver el amanecer.", english: "I got up early to see the sunrise." },
   { target: "Nos preparamos rápido para no perder el tren.", english: "We got ready quickly so we wouldn't miss the train." },
-  { target: "Se me cayó el teléfono en la piscina.", english: "I dropped my phone in the pool.", grammar: "\"Se me cayó\" — accidental reflexive construction. Literally: \"it fell itself on me.\" Used when something happens unintentionally." },
+  { target: "Se me cayó el teléfono en la piscina.", english: "I dropped my phone in the pool.", grammar: "\"Se me cayó\" – accidental reflexive construction. Literally: \"it fell itself on me.\" Used when something happens unintentionally." },
   { target: "Me quemé con el sol en la playa.", english: "I got sunburned on the beach." },
   { target: "Nos divertimos mucho en el parque temático.", english: "We had a lot of fun at the theme park." },
   { target: "Me aburrí en el museo de historia.", english: "I got bored at the history museum." },
-  { target: "Se me olvidó el protector solar.", english: "I forgot the sunscreen.", grammar: "\"Se me olvidó\" — another accidental reflexive. \"It forgot itself on me.\" Common way to say you forgot something unintentionally." },
+  { target: "Se me olvidó el protector solar.", english: "I forgot the sunscreen.", grammar: "\"Se me olvidó\" – another accidental reflexive. \"It forgot itself on me.\" Common way to say you forgot something unintentionally." },
   { target: "Me vestí rápido para la cena.", english: "I got dressed quickly for dinner." },
 
   // Object pronouns in travel
-  { target: "Se lo dije al recepcionista.", english: "I told it to the receptionist.", grammar: "\"Se lo dije\" — when \"le\" comes before \"lo/la,\" it becomes \"se\": le + lo → se lo." },
+  { target: "Se lo dije al recepcionista.", english: "I told it to the receptionist.", grammar: "\"Se lo dije\" – when \"le\" comes before \"lo/la,\" it becomes \"se\": le + lo → se lo." },
   { target: "La habitación me gustó mucho.", english: "I really liked the room." },
   { target: "El guía nos lo explicó todo.", english: "The guide explained everything to us." },
   { target: "Te lo recomiendo, el hotel es genial.", english: "I recommend it to you, the hotel is great." },
@@ -306,14 +306,14 @@ const A2_CARDS = [
   { target: "El barco salió del puerto a las diez.", english: "The boat left the port at ten." },
   { target: "Alquilé una bicicleta para recorrer la isla.", english: "I rented a bicycle to explore the island." },
 
-  // More A2 — additional past tense, reflexive, por/para travel
+  // More A2 – additional past tense, reflexive, por/para travel
   { target: "Me duché y bajé a desayunar.", english: "I showered and went down to have breakfast." },
   { target: "El tren se averió a mitad de camino.", english: "The train broke down halfway." },
   { target: "Reservamos una visita guiada por internet.", english: "We booked a guided tour online." },
-  { target: "Me quedé dormido en el autobús.", english: "I fell asleep on the bus.", grammar: "\"Quedarse dormido\" — reflexive construction meaning to fall asleep (unintentionally)." },
+  { target: "Me quedé dormido en el autobús.", english: "I fell asleep on the bus.", grammar: "\"Quedarse dormido\" – reflexive construction meaning to fall asleep (unintentionally)." },
   { target: "El taxista nos cobró por persona.", english: "The taxi driver charged us per person." },
   { target: "Nos alojamos en una casa rural.", english: "We stayed in a rural house." },
-  { target: "Me compré un sombrero para el sol.", english: "I bought myself a sun hat.", grammar: "\"Me compré\" — the reflexive here adds emphasis: I bought FOR MYSELF." },
+  { target: "Me compré un sombrero para el sol.", english: "I bought myself a sun hat.", grammar: "\"Me compré\" – the reflexive here adds emphasis: I bought FOR MYSELF." },
   { target: "Hicimos escala en Lisboa.", english: "We had a layover in Lisbon." },
   { target: "El guía nos llevó por las calles más bonitas.", english: "The guide took us through the prettiest streets." },
   { target: "Cenamos en un chiringuito en la playa.", english: "We had dinner at a beach bar." },
@@ -368,10 +368,10 @@ const B1_CARDS = [
   { target: "¿Cuánto tiempo estaremos en Barcelona?", english: "How long will we be in Barcelona?" },
   { target: "Reservaré el hotel esta noche.", english: "I will book the hotel tonight." },
   { target: "El guía nos recogerá en la puerta del hotel.", english: "The guide will pick us up at the hotel door." },
-  { target: "Saldremos temprano para evitar el tráfico.", english: "We will leave early to avoid traffic.", grammar: "\"Saldremos\" — irregular future of \"salir\": saldré, saldrás, saldrá, saldremos, saldréis, saldrán." },
+  { target: "Saldremos temprano para evitar el tráfico.", english: "We will leave early to avoid traffic.", grammar: "\"Saldremos\" – irregular future of \"salir\": saldré, saldrás, saldrá, saldremos, saldréis, saldrán." },
   { target: "¿A qué hora volveremos al hotel?", english: "What time will we return to the hotel?" },
   { target: "Habrá tiempo libre por la tarde.", english: "There will be free time in the afternoon.", grammar: "\"Habrá\" is the future of \"haber\" (there is/are). Irregular: habrá, not haberá." },
-  { target: "Tendremos que madrugar para coger el vuelo.", english: "We will have to get up early to catch the flight.", grammar: "\"Tendremos\" — irregular future of \"tener\": tendré, tendrás, tendrá, tendremos, tendréis, tendrán." },
+  { target: "Tendremos que madrugar para coger el vuelo.", english: "We will have to get up early to catch the flight.", grammar: "\"Tendremos\" – irregular future of \"tener\": tendré, tendrás, tendrá, tendremos, tendréis, tendrán." },
   { target: "El viaje durará unas cinco horas.", english: "The trip will last about five hours." },
   { target: "Podremos ver el atardecer desde la terraza.", english: "We will be able to see the sunset from the terrace." },
   { target: "Necesitaré un adaptador de enchufe.", english: "I will need a plug adapter." },
@@ -396,7 +396,7 @@ const B1_CARDS = [
   { target: "Pregunta en recepción por los horarios.", english: "Ask at the reception about the schedules." },
   { target: "No comas en esos puestos, son caros.", english: "Don't eat at those stalls, they're expensive." },
   { target: "Reserva con antelación, se llena rápido.", english: "Book in advance, it fills up quickly." },
-  { target: "Confirme su vuelo veinticuatro horas antes.", english: "Confirm your flight twenty-four hours in advance.", grammar: "Formal command (usted): \"confirme\" — subjunctive form used as imperative." },
+  { target: "Confirme su vuelo veinticuatro horas antes.", english: "Confirm your flight twenty-four hours in advance.", grammar: "Formal command (usted): \"confirme\" – subjunctive form used as imperative." },
   { target: "No dejes las maletas sin vigilar.", english: "Don't leave the suitcases unattended." },
   { target: "Pide el menú del día, es más barato.", english: "Order the set menu, it's cheaper." },
   { target: "No cambies dinero en el aeropuerto.", english: "Don't exchange money at the airport." },
@@ -436,7 +436,7 @@ const B1_CARDS = [
   { target: "Hemos recorrido toda la costa en una semana.", english: "We've traveled the whole coast in one week." },
   { target: "Me dijeron que el mejor restaurante está en la plaza.", english: "They told me the best restaurant is in the square." },
 
-  // More B1 — additional subjunctive, future, conditional, commands
+  // More B1 – additional subjunctive, future, conditional, commands
   { target: "Ojalá no haga demasiado calor mañana.", english: "I hope it's not too hot tomorrow." },
   { target: "Es probable que el museo esté lleno a esa hora.", english: "It's likely that the museum will be full at that time." },
   { target: "No creo que encontremos aparcamiento en el centro.", english: "I don't think we'll find parking in the center." },
@@ -447,7 +447,7 @@ const B1_CARDS = [
   { target: "¿Cuándo sabremos si el vuelo ha sido cancelado?", english: "When will we know if the flight has been canceled?" },
   { target: "Podríamos alquilar un apartamento en vez de un hotel.", english: "We could rent an apartment instead of a hotel." },
   { target: "No toques las obras de arte del museo.", english: "Don't touch the artwork in the museum." },
-  { target: "Venid con nosotros a la excursión.", english: "Come with us on the excursion.", grammar: "\"Venid\" — affirmative vosotros command. Used in Spain for informal plural." },
+  { target: "Venid con nosotros a la excursión.", english: "Come with us on the excursion.", grammar: "\"Venid\" – affirmative vosotros command. Used in Spain for informal plural." },
   { target: "No pierdas el billete, lo necesitas para volver.", english: "Don't lose the ticket, you need it to return." },
   { target: "El vuelo que cogimos hacía escala en Roma.", english: "The flight we took had a layover in Rome." },
   { target: "La isla a la que queremos ir está muy lejos.", english: "The island we want to go to is very far." },
@@ -511,12 +511,12 @@ const B2_CARDS = [
   { target: "El monumento fue declarado Patrimonio de la Humanidad.", english: "The monument was declared a World Heritage Site." },
 
   // Advanced connectors
-  { target: "A pesar de la lluvia, visitamos todos los monumentos.", english: "Despite the rain, we visited all the monuments.", grammar: "\"A pesar de\" (despite/in spite of) — an advanced concessive connector." },
+  { target: "A pesar de la lluvia, visitamos todos los monumentos.", english: "Despite the rain, we visited all the monuments.", grammar: "\"A pesar de\" (despite/in spite of) – an advanced concessive connector." },
   { target: "Dado que el vuelo se canceló, tuvimos que buscar otro.", english: "Given that the flight was canceled, we had to find another one." },
-  { target: "No obstante las malas críticas, el hotel estaba bien.", english: "Notwithstanding the bad reviews, the hotel was fine.", grammar: "\"No obstante\" (nevertheless/notwithstanding) — formal concessive connector." },
+  { target: "No obstante las malas críticas, el hotel estaba bien.", english: "Notwithstanding the bad reviews, the hotel was fine.", grammar: "\"No obstante\" (nevertheless/notwithstanding) – formal concessive connector." },
   { target: "Puesto que no había metro, tomamos un taxi.", english: "Since there was no metro, we took a taxi." },
   { target: "En cuanto a la gastronomía, fue lo mejor del viaje.", english: "As for the cuisine, it was the best part of the trip." },
-  { target: "Si bien el hotel era caro, la ubicación lo compensaba.", english: "Although the hotel was expensive, the location made up for it.", grammar: "\"Si bien\" (although/even though) — a formal concessive that introduces a contrasting idea." },
+  { target: "Si bien el hotel era caro, la ubicación lo compensaba.", english: "Although the hotel was expensive, the location made up for it.", grammar: "\"Si bien\" (although/even though) – a formal concessive that introduces a contrasting idea." },
   { target: "Por más que intentamos, no conseguimos entradas.", english: "No matter how much we tried, we couldn't get tickets." },
   { target: "A medida que avanzaba el viaje, nos sentíamos más cómodos.", english: "As the trip progressed, we felt more comfortable." },
   { target: "Tanto si llueve como si hace sol, iremos de excursión.", english: "Whether it rains or shines, we'll go on the excursion." },
@@ -539,7 +539,7 @@ const B2_CARDS = [
 
   // Cultural & nuanced travel
   { target: "Los horarios españoles me resultaron desconcertantes al principio.", english: "Spanish schedules were confusing to me at first." },
-  { target: "Habiendo viajado por toda Europa, puedo decir que España es única.", english: "Having traveled all over Europe, I can say that Spain is unique.", grammar: "\"Habiendo + participle\" — the compound gerund, used to express a completed action before the main clause." },
+  { target: "Habiendo viajado por toda Europa, puedo decir que España es única.", english: "Having traveled all over Europe, I can say that Spain is unique.", grammar: "\"Habiendo + participle\" – the compound gerund, used to express a completed action before the main clause." },
   { target: "Lo que más me impresionó fue la arquitectura modernista.", english: "What impressed me the most was the modernist architecture." },
   { target: "A pesar de no hablar el idioma, logramos comunicarnos.", english: "Despite not speaking the language, we managed to communicate." },
   { target: "Conviene que sepas algunas frases básicas antes de viajar.", english: "It's advisable that you know some basic phrases before traveling." },
@@ -552,8 +552,8 @@ const B2_CARDS = [
   // Travel planning & logistics (B2)
   { target: "Habría que tener en cuenta la diferencia horaria.", english: "One should take the time difference into account." },
   { target: "Es imprescindible que contrates un seguro de viaje.", english: "It's essential that you get travel insurance." },
-  { target: "En caso de que pierdas el pasaporte, acude al consulado.", english: "In case you lose your passport, go to the consulate.", grammar: "\"En caso de que\" always takes subjunctive — it introduces a hypothetical/future possibility." },
-  { target: "A fin de ahorrar, decidimos viajar en temporada baja.", english: "In order to save money, we decided to travel in the off-season.", grammar: "\"A fin de\" (in order to) — formal purpose connector, equivalent to \"para\" but more literary." },
+  { target: "En caso de que pierdas el pasaporte, acude al consulado.", english: "In case you lose your passport, go to the consulate.", grammar: "\"En caso de que\" always takes subjunctive – it introduces a hypothetical/future possibility." },
+  { target: "A fin de ahorrar, decidimos viajar en temporada baja.", english: "In order to save money, we decided to travel in the off-season.", grammar: "\"A fin de\" (in order to) – formal purpose connector, equivalent to \"para\" but more literary." },
   { target: "Salvo que surja un imprevisto, llegaremos el jueves.", english: "Unless something unexpected comes up, we'll arrive on Thursday." },
   { target: "El visado fue tramitado a través de la embajada.", english: "The visa was processed through the embassy." },
   { target: "Convendría que reserváramos los vuelos cuanto antes.", english: "It would be advisable for us to book the flights as soon as possible." },
@@ -568,7 +568,7 @@ const B2_CARDS = [
   { target: "Lo más gratificante de viajar es salir de tu zona de confort.", english: "The most rewarding thing about traveling is leaving your comfort zone." },
   { target: "A medida que ibas conociendo el barrio, te sentías más como en casa.", english: "As you got to know the neighborhood, you felt more at home." },
   { target: "Si me hubieran preguntado antes, habría dicho que no me interesaba.", english: "If they had asked me before, I would have said I wasn't interested." },
-  { target: "Cabe destacar que la hospitalidad fue lo mejor del viaje.", english: "It's worth noting that the hospitality was the best part of the trip.", grammar: "\"Cabe destacar que\" (it's worth noting that) — formal connector used in written/spoken narratives." },
+  { target: "Cabe destacar que la hospitalidad fue lo mejor del viaje.", english: "It's worth noting that the hospitality was the best part of the trip.", grammar: "\"Cabe destacar que\" (it's worth noting that) – formal connector used in written/spoken narratives." },
   { target: "Cada vez que vuelvo a ese lugar, descubro algo nuevo.", english: "Every time I go back to that place, I discover something new." },
   { target: "El hecho de haber viajado solo me hizo más independiente.", english: "The fact of having traveled alone made me more independent." },
   { target: "No hay nada como perderse por las calles de una ciudad desconocida.", english: "There's nothing like getting lost in the streets of an unknown city." },
@@ -577,33 +577,33 @@ const B2_CARDS = [
   { target: "A pesar de todos los contratiempos, repetiría el viaje sin dudarlo.", english: "Despite all the setbacks, I would repeat the trip without hesitation." },
   { target: "Lo que empezó como unas vacaciones se convirtió en una aventura.", english: "What started as a vacation turned into an adventure." },
   { target: "Si alguna vez tienes la oportunidad, no te lo pienses dos veces.", english: "If you ever have the opportunity, don't think twice." },
-  { target: "Fue tal la impresión que nos causó que decidimos quedarnos una semana más.", english: "The impression it made on us was such that we decided to stay one more week.", grammar: "\"Tal... que\" (such... that) — consecutive construction expressing result/consequence." },
+  { target: "Fue tal la impresión que nos causó que decidimos quedarnos una semana más.", english: "The impression it made on us was such that we decided to stay one more week.", grammar: "\"Tal... que\" (such... that) – consecutive construction expressing result/consequence." },
   { target: "Por poco perdemos el avión de vuelta.", english: "We almost missed the return flight.", grammar: "\"Por poco\" + present tense = almost (did something). A near-miss construction." },
   { target: "Habríamos disfrutado más de no haber estado tan cansados.", english: "We would have enjoyed it more had we not been so tired." },
   { target: "Todo lo que nos habían contado sobre ese lugar era cierto.", english: "Everything they had told us about that place was true." },
   { target: "Nada más llegar, supimos que habíamos elegido bien.", english: "As soon as we arrived, we knew we had chosen well.", grammar: "\"Nada más\" + infinitive = as soon as. A concise way to express immediacy." },
 
-  // More B2 — additional complex travel
+  // More B2 – additional complex travel
   { target: "Aun cuando el tiempo no acompañó, la experiencia fue memorable.", english: "Even though the weather didn't cooperate, the experience was memorable." },
   { target: "De no ser por la huelga de pilotos, habríamos viajado la semana pasada.", english: "Were it not for the pilots' strike, we would have traveled last week." },
   { target: "Cuanto antes reservemos, mejores asientos conseguiremos.", english: "The sooner we book, the better seats we'll get." },
   { target: "Si bien el vuelo fue largo, valió la pena por el destino.", english: "Although the flight was long, it was worth it for the destination." },
-  { target: "En el supuesto de que cancelen el vuelo, nos reembolsarán.", english: "In the event that they cancel the flight, they will reimburse us.", grammar: "\"En el supuesto de que\" (in the event that) — formal conditional connector, always takes subjunctive." },
+  { target: "En el supuesto de que cancelen el vuelo, nos reembolsarán.", english: "In the event that they cancel the flight, they will reimburse us.", grammar: "\"En el supuesto de que\" (in the event that) – formal conditional connector, always takes subjunctive." },
   { target: "Ni siquiera habiendo reservado con meses de antelación conseguimos mesa.", english: "Not even having booked months in advance did we get a table." },
   { target: "Siendo como es temporada alta, los precios están por las nubes.", english: "Being peak season as it is, the prices are sky-high." },
-  { target: "Con tal de que el hotel esté limpio, no me importa que sea pequeño.", english: "As long as the hotel is clean, I don't mind it being small.", grammar: "\"Con tal de que\" (as long as / provided that) — always triggers subjunctive." },
+  { target: "Con tal de que el hotel esté limpio, no me importa que sea pequeño.", english: "As long as the hotel is clean, I don't mind it being small.", grammar: "\"Con tal de que\" (as long as / provided that) – always triggers subjunctive." },
   { target: "A juzgar por las reseñas, ese restaurante es excelente.", english: "Judging by the reviews, that restaurant is excellent." },
   { target: "El viaje en sí no fue caro, pero el alojamiento disparó el presupuesto.", english: "The trip itself wasn't expensive, but the accommodation blew the budget." },
   { target: "Si hubiéramos cogido el avión de las seis, ya estaríamos allí.", english: "If we had taken the six o'clock plane, we would already be there.", grammar: "Mixed conditional: past unreal condition (pluperfect subjunctive) + present unreal result (conditional). \"Already would be\" refers to now." },
   { target: "A raíz de aquella experiencia, siempre contrato seguro de viaje.", english: "As a result of that experience, I always get travel insurance." },
   { target: "Por mucho que le insistí, el recepcionista se negó a devolverme el dinero.", english: "No matter how much I insisted, the receptionist refused to refund me." },
-  { target: "Habida cuenta de la situación, decidimos acortar el viaje.", english: "Given the situation, we decided to shorten the trip.", grammar: "\"Habida cuenta de\" (given/considering) — very formal causal connector." },
+  { target: "Habida cuenta de la situación, decidimos acortar el viaje.", english: "Given the situation, we decided to shorten the trip.", grammar: "\"Habida cuenta de\" (given/considering) – very formal causal connector." },
   { target: "Es poco probable que encontremos vuelos a ese precio de nuevo.", english: "It's unlikely that we'll find flights at that price again." },
   { target: "Dicho esto, el viaje superó con creces mis expectativas.", english: "That said, the trip far exceeded my expectations." },
   { target: "En vista de que el ferry se canceló, alquilamos un barco privado.", english: "In view of the fact that the ferry was canceled, we rented a private boat." },
   { target: "Quienquiera que haya diseñado este itinerario hizo un trabajo increíble.", english: "Whoever designed this itinerary did an incredible job.", grammar: "\"Quienquiera que\" (whoever) + subjunctive. Always takes subjunctive because the person is unknown/unspecified." },
   { target: "A falta de transporte público, tuvimos que ir andando.", english: "For lack of public transport, we had to go on foot." },
-  { target: "Si no llega a ser por ese mapa, nos habríamos perdido.", english: "If it hadn't been for that map, we would have gotten lost.", grammar: "\"Si no llega a ser por\" — colloquial alternative to \"si no hubiera sido por\" for past counterfactuals." },
+  { target: "Si no llega a ser por ese mapa, nos habríamos perdido.", english: "If it hadn't been for that map, we would have gotten lost.", grammar: "\"Si no llega a ser por\" – colloquial alternative to \"si no hubiera sido por\" for past counterfactuals." },
   { target: "Al margen de las quejas sobre el hotel, el viaje fue perfecto.", english: "Apart from the complaints about the hotel, the trip was perfect." },
   { target: "Para cuando quisimos comprar las entradas, ya se habían agotado.", english: "By the time we wanted to buy the tickets, they had already sold out." },
   { target: "El que hayamos podido viajar con tan poco presupuesto fue todo un logro.", english: "The fact that we were able to travel on such a small budget was quite an achievement." },
@@ -611,14 +611,14 @@ const B2_CARDS = [
   { target: "Cuantas más ciudades visitábamos, más difícil era elegir una favorita.", english: "The more cities we visited, the harder it was to choose a favorite." },
   { target: "Sin que nadie nos lo advirtiera, terminamos en una zona peligrosa.", english: "Without anyone warning us, we ended up in a dangerous area.", grammar: "\"Sin que\" (without) + subjunctive. Always triggers subjunctive." },
   { target: "Lo cierto es que viajar en temporada baja tiene muchas ventajas.", english: "The truth is that traveling in the off-season has many advantages." },
-  { target: "No bien habíamos desembarcado cuando empezó a llover a cántaros.", english: "No sooner had we disembarked than it started pouring.", grammar: "\"No bien... cuando\" (no sooner... than) — literary construction expressing immediate succession." },
+  { target: "No bien habíamos desembarcado cuando empezó a llover a cántaros.", english: "No sooner had we disembarked than it started pouring.", grammar: "\"No bien... cuando\" (no sooner... than) – literary construction expressing immediate succession." },
   { target: "Pese a las advertencias, decidimos aventurarnos por la selva.", english: "Despite the warnings, we decided to venture into the jungle." },
   { target: "Suponiendo que el tiempo mejore, podríamos hacer la ruta costera.", english: "Assuming the weather improves, we could do the coastal route." },
   { target: "Difícilmente habríamos encontrado un lugar más pintoresco.", english: "We would hardly have found a more picturesque place." },
-  { target: "Sea como sea, el viaje nos cambió la perspectiva.", english: "Be that as it may, the trip changed our perspective.", grammar: "\"Sea como sea\" (be that as it may) — concessive expression with duplicated subjunctive." },
+  { target: "Sea como sea, el viaje nos cambió la perspectiva.", english: "Be that as it may, the trip changed our perspective.", grammar: "\"Sea como sea\" (be that as it may) – concessive expression with duplicated subjunctive." },
   { target: "En tanto que turistas, debemos respetar las costumbres locales.", english: "As tourists, we must respect local customs." },
   { target: "El haber conocido a gente local enriqueció enormemente la experiencia.", english: "Having met local people enormously enriched the experience." },
-  { target: "A sabiendas de que llovería, decidimos ir igualmente.", english: "Knowing full well that it would rain, we decided to go anyway.", grammar: "\"A sabiendas de que\" (knowing full well that) — concessive expression implying deliberate awareness." },
+  { target: "A sabiendas de que llovería, decidimos ir igualmente.", english: "Knowing full well that it would rain, we decided to go anyway.", grammar: "\"A sabiendas de que\" (knowing full well that) – concessive expression implying deliberate awareness." },
   { target: "Más allá de los paisajes, lo que hace único a este destino es su gente.", english: "Beyond the landscapes, what makes this destination unique is its people." },
   { target: "De haber podido, nos habríamos quedado todo el verano.", english: "Had we been able to, we would have stayed the whole summer." },
   { target: "Si bien es cierto que la comida era cara, la calidad era excepcional.", english: "While it's true that the food was expensive, the quality was exceptional." },

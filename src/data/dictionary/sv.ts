@@ -1,5 +1,5 @@
 /**
- * Swedish dictionary — word lookup with IPA pronunciations.
+ * Swedish dictionary – word lookup with IPA pronunciations.
  * Every word appearing in the Swedish deck should have an entry.
  */
 
@@ -5664,7 +5664,7 @@ function resolveCompoundSV(w: string): DictEntry | null {
 }
 
 export function lookupWord(raw: string): DictEntry | null {
-  let clean = raw.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()—–«»/]/g, '').trim();
+  let clean = raw.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()––«»/]/g, '').trim();
   // Strip leading/trailing digits but keep the word (e.g., "1600-talet" -> "talet")
   clean = clean.replace(/^\d+[-–]?/, '').replace(/[-–]?\d+$/, '').trim();
   if (!clean || clean.length < 1) return null;

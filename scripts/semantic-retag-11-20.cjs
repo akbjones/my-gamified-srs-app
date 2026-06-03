@@ -3,11 +3,11 @@
  *
  * Two-pass script for cards in nodes 11-20 (indices 2500-4999):
  *
- * PASS 1 — Semantic Retag:
+ * PASS 1 – Semantic Retag:
  *   Read each card's Spanish + English content and assign correct goal tags
  *   based on what the sentence is actually about. Never removes tags, only adds.
  *
- * PASS 2 — Generate New Cards:
+ * PASS 2 – Generate New Cards:
  *   For any node where a goal is below target count, generate new cards
  *   that teach the same grammar in the context of the needed goal.
  *
@@ -25,7 +25,7 @@ const deck = JSON.parse(fs.readFileSync(DECK_PATH, 'utf-8'));
 const PER_NODE = 250;
 const GOALS = ['travel', 'work', 'family'];
 
-// Node definitions for 11-20 — startIdx/endIdx are 0-based array indices (inclusive start, exclusive end for slice)
+// Node definitions for 11-20 – startIdx/endIdx are 0-based array indices (inclusive start, exclusive end for slice)
 const NODE_DEFS = {
   11: { name: 'Comparatives & Superlatives', tier: 'B1', startIdx: 2500, endIdx: 2750 },
   12: { name: 'Future & Conditional', tier: 'B1', startIdx: 2750, endIdx: 3000 },
@@ -48,7 +48,7 @@ const TARGET_COUNT = {
 // PASS 1: SEMANTIC RETAGGING
 // ─────────────────────────────────────────────────────────────────────
 
-// Keyword lists for semantic tagging — match against combined target+english text
+// Keyword lists for semantic tagging – match against combined target+english text
 const TRAVEL_KEYWORDS = [
   // Transportation
   /\b(aeropuerto|airport|vuelo|flight|avión|plane|tren\b|train\b|autobús|bus\b|taxi|metro\b|subway|estación\b|station\b|terminal|equipaje|luggage|maleta|suitcase|pasaporte|passport|billete|ticket|boleto|embarque|boarding|aterriz|landing|despeg|takeoff|ferry|crucero|cruise)\b/i,
@@ -979,7 +979,7 @@ for (let nodeNum = 11; nodeNum <= 20; nodeNum++) {
     }
   }
 }
-console.log(`PASS 1 — Retagged ${retagCount} cards based on content analysis.\n`);
+console.log(`PASS 1 – Retagged ${retagCount} cards based on content analysis.\n`);
 
 // After retag stats
 const afterRetagStats = {};
@@ -1029,7 +1029,7 @@ for (let nodeNum = 11; nodeNum <= 20; nodeNum++) {
   }
 }
 
-console.log(`PASS 2 — Generated ${totalNewCards} new cards to fill gaps.\n`);
+console.log(`PASS 2 – Generated ${totalNewCards} new cards to fill gaps.\n`);
 
 // Final stats
 console.log('─'.repeat(80));
@@ -1039,7 +1039,7 @@ console.log('─'.repeat(80));
 for (let nodeNum = 11; nodeNum <= 20; nodeNum++) {
   const def = NODE_DEFS[nodeNum];
   const target = TARGET_COUNT[def.tier];
-  console.log(`\nNode ${nodeNum}: ${def.name} (${def.tier}) — target: ${target} per goal`);
+  console.log(`\nNode ${nodeNum}: ${def.name} (${def.tier}) – target: ${target} per goal`);
 
   for (const goal of GOALS) {
     const before = beforeStats[nodeNum][goal];

@@ -58,7 +58,7 @@ export interface Achievement {
   condition: (stats: UserStats, masteryMap: MasteryMap, deck: QuestCard[]) => boolean;
 }
 
-// Linear path node — a chunk of the main deck
+// Linear path node – a chunk of the main deck
 export interface PathNode {
   id: string;
   name: string;
@@ -161,7 +161,7 @@ export type VocabMap = Record<string, VocabEntry>; // keyed by lowercase word
  *    etymology → etymologyOrigin, etymologyNote, etymologyCognates?,
  *                etymologySources?, example?
  *
- *  All three kinds share `word` (the human label — the saved word for vocab
+ *  All three kinds share `word` (the human label – the saved word for vocab
  *  and etymology, a short snippet for grammar) and `savedAt`. */
 export interface FavoriteEntry {
   word: string;

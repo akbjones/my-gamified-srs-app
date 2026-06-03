@@ -139,8 +139,8 @@ function auditDeck(langConfig) {
     if (p1 === 0) priorityIssues.push(`${node}: NO priority-1 cards`);
     if (p2 === 0) priorityIssues.push(`${node}: NO priority-2 cards`);
     if (p3 === 0) priorityIssues.push(`${node}: NO priority-3 cards`);
-    if (total > 50 && p1 > total * 0.7) priorityIssues.push(`${node}: p1 is ${p1pct}% — too front-heavy`);
-    if (total > 50 && p3 > total * 0.6) priorityIssues.push(`${node}: p3 is ${p3pct}% — too back-heavy`);
+    if (total > 50 && p1 > total * 0.7) priorityIssues.push(`${node}: p1 is ${p1pct}% – too front-heavy`);
+    if (total > 50 && p3 > total * 0.6) priorityIssues.push(`${node}: p3 is ${p3pct}% – too back-heavy`);
   }
 
   report.sections.priorityBalance = {
@@ -170,14 +170,14 @@ function auditDeck(langConfig) {
 
     // Check sentence complexity grows with level
     if (nodeNum >= 15 && data.total >= 15 && avgWords < 4) {
-      levelIssues.push(`${node} (level ${nodeNum}): avg only ${avgWords.toFixed(1)} words — too simple for this level`);
+      levelIssues.push(`${node} (level ${nodeNum}): avg only ${avgWords.toFixed(1)} words – too simple for this level`);
     }
     if (nodeNum >= 25 && data.total >= 10 && avgWords < 5) {
-      levelIssues.push(`${node} (level ${nodeNum}): avg only ${avgWords.toFixed(1)} words — expected B1+ complexity`);
+      levelIssues.push(`${node} (level ${nodeNum}): avg only ${avgWords.toFixed(1)} words – expected B1+ complexity`);
     }
     // Nodes should have enough cards
     if (data.total < 50) {
-      levelIssues.push(`${node}: only ${data.total} cards — below minimum 50`);
+      levelIssues.push(`${node}: only ${data.total} cards – below minimum 50`);
     }
   }
 
@@ -200,7 +200,7 @@ function auditDeck(langConfig) {
   for (const tag of expectedTags) {
     const count = tagCounts[tag] || 0;
     if (count < 50) {
-      tagIssues.push(`Tag "${tag}": only ${count} cards — below minimum 50`);
+      tagIssues.push(`Tag "${tag}": only ${count} cards – below minimum 50`);
     }
   }
 
@@ -223,7 +223,7 @@ function auditDeck(langConfig) {
     tagDistPerNode[node] = nodeTags;
     const nonGeneralTags = Object.keys(nodeTags).filter(t => t !== 'general');
     if (nonGeneralTags.length === 0 && data.total > 20) {
-      tagIssues.push(`${node}: only "general" tag — needs travel/work/family variety`);
+      tagIssues.push(`${node}: only "general" tag – needs travel/work/family variety`);
     }
   }
 
@@ -332,7 +332,7 @@ function auditDeck(langConfig) {
       const p3AvgWords = p3Cards.reduce((s, c) => s + c.target.split(/\s+/).length, 0) / p3Cards.length;
       // p1 should generally be simpler or equal to p3 within same node
       if (p1AvgWords > p3AvgWords + 2) {
-        transitionIssues.push(`${node}: p1 cards (${p1AvgWords.toFixed(1)} avg words) MORE complex than p3 (${p3AvgWords.toFixed(1)}) — priority inversion`);
+        transitionIssues.push(`${node}: p1 cards (${p1AvgWords.toFixed(1)} avg words) MORE complex than p3 (${p3AvgWords.toFixed(1)}) – priority inversion`);
       }
     }
   }

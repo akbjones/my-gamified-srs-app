@@ -61,7 +61,7 @@ const FavoritesList: React.FC<FavoritesListProps> = ({ favoritesMap, language, o
     onChange(next);
   };
 
-  // Find the storage key for an entry — vocab uses the raw word; grammar uses
+  // Find the storage key for an entry – vocab uses the raw word; grammar uses
   // a __g__-prefixed normalized tip; etymology uses __e__-prefixed word. We
   // can't reverse-engineer the key from the entry alone, so look it up in the
   // map. This is O(n) per delete but n is small.
@@ -147,7 +147,7 @@ const FavoritesList: React.FC<FavoritesListProps> = ({ favoritesMap, language, o
                 A → Z
               </button>
             </div>
-            {/* Kind filter chips — vocab / grammar / etymology. Replaces the
+            {/* Kind filter chips – vocab / grammar / etymology. Replaces the
                 older POS chips since the list now holds three distinct kinds
                 of saved items. */}
             <div className="flex gap-1.5 overflow-x-auto -mx-4 px-4 pb-1 scrollbar-thin">
@@ -178,7 +178,7 @@ const FavoritesList: React.FC<FavoritesListProps> = ({ favoritesMap, language, o
             </div>
           </div>
 
-          {/* List — render by kind */}
+          {/* List – render by kind */}
           <div className="space-y-2">
             {entries.map(e => {
               const kind = e.kind ?? 'vocab';

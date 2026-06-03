@@ -150,86 +150,86 @@ function generatePTTip(card, tracker) {
   // Subjunctive triggers
   const subjTrigger = sent.match(/\b(embora|talvez|oxalá|caso|mesmo que|a menos que|sem que|antes que|para que|desde que|até que)\b/i);
   if (subjTrigger) {
-    candidates.push(`'${subjTrigger[1]}' always triggers the subjunctive — it signals uncertainty or a condition that may not be real.`);
+    candidates.push(`'${subjTrigger[1]}' always triggers the subjunctive – it signals uncertainty or a condition that may not be real.`);
   }
   
   // Emotion/desire + subjunctive
   const emotionSubj = sent.match(/\b(quero que|espero que|duvido que|é bom que|é importante que|é necessário que|lamento que|sinto que|prefiro que|é possível que|é provável que|não acredito que)\b/i);
   if (emotionSubj) {
-    candidates.push(`'${emotionSubj[1]}' requires the subjunctive — expressions of desire, doubt, or emotion always trigger it in the subordinate clause.`);
+    candidates.push(`'${emotionSubj[1]}' requires the subjunctive – expressions of desire, doubt, or emotion always trigger it in the subordinate clause.`);
   }
   
   // Se + imperfect subjunctive (specific verb)
   const seImpSubj = sent.match(/\bse\b.*?\b(fosse|tivesse|pudesse|soubesse|quisesse|fizesse|dissesse|viesse|houvesse|estivesse|morasse|trabalhasse|falasse|comprasse|vendesse|dormisse|ficasse|precisasse|existisse|chovesse|ganhasse|perdesse|mudasse|acabasse|começasse)\b/i);
   if (seImpSubj) {
-    candidates.push(`'Se + ${seImpSubj[1]}' sets up a contrary-to-fact condition — describing a hypothetical situation that isn't currently true.`);
+    candidates.push(`'Se + ${seImpSubj[1]}' sets up a contrary-to-fact condition – describing a hypothetical situation that isn't currently true.`);
   }
   
   // Conditional verbs (specific)
   const condVerb = sent.match(/\b(\w+(?:aria|arias|aríamos|ariam|eria|erias|eríamos|eriam|iria|irias|iríamos|iriam))\b/i);
   if (condVerb) {
     const root = condVerb[1].replace(/(aria|arias|aríamos|ariam|eria|erias|eríamos|eriam|iria|irias|iríamos|iriam)$/i, '');
-    candidates.push(`'${condVerb[1]}' is the conditional — it expresses what would happen. Formed by adding -ia endings to the infinitive stem.`);
+    candidates.push(`'${condVerb[1]}' is the conditional – it expresses what would happen. Formed by adding -ia endings to the infinitive stem.`);
   }
   
   // Future subjunctive forms
   const futSubj = sent.match(/\b(for|fizer|estiver|tiver|puder|souber|quiser|vier|trouxer|puser|disser|houver)\b/i);
   if (futSubj) {
-    candidates.push(`'${futSubj[1]}' is a future subjunctive form — used after 'quando', 'se', 'enquanto' for actions that may happen in the future.`);
+    candidates.push(`'${futSubj[1]}' is a future subjunctive form – used after 'quando', 'se', 'enquanto' for actions that may happen in the future.`);
   }
   
   // Personal infinitive
   const persInf = sent.match(/\b(\w+r)(mos|em|es)\b/i);
   if (persInf && nodeNum > 10) {
-    candidates.push(`The personal infinitive '${persInf[0]}' conjugates the infinitive for person — a uniquely Portuguese feature that simplifies complex clause structures.`);
+    candidates.push(`The personal infinitive '${persInf[0]}' conjugates the infinitive for person – a uniquely Portuguese feature that simplifies complex clause structures.`);
   }
   
   // Ir + infinitive
   const irInf = sent.match(/\b(vou|vai|vamos|vão)\s+(\w+r)\b/i);
   if (irInf) {
-    candidates.push(`'${irInf[1]} + ${irInf[2]}' is the informal future — far more natural in spoken Brazilian Portuguese than the simple future tense.`);
+    candidates.push(`'${irInf[1]} + ${irInf[2]}' is the informal future – far more natural in spoken Brazilian Portuguese than the simple future tense.`);
   }
   
   // Literary pluperfect (-ra)
   if (nodeNum >= 27) {
     const raForm = sent.match(/\b(\w{4,}[aeiou]ra)\b/i);
     if (raForm && !['agora', 'embora', 'ainda', 'hora', 'outra', 'primeira', 'sequer'].includes(raForm[1].toLowerCase())) {
-      candidates.push(`'${raForm[1]}' uses the literary simple pluperfect (-ra ending) — elegant in formal writing but replaced by 'tinha + participle' in speech.`);
+      candidates.push(`'${raForm[1]}' uses the literary simple pluperfect (-ra ending) – elegant in formal writing but replaced by 'tinha + participle' in speech.`);
     }
   }
   
   // Relative pronouns
   const relPron = sent.match(/\b(cujo|cuja|cujos|cujas)\b/i);
   if (relPron) {
-    candidates.push(`'${relPron[1]}' (whose) agrees with the possessed noun, not the possessor — one of the trickiest relative pronouns in Portuguese.`);
+    candidates.push(`'${relPron[1]}' (whose) agrees with the possessed noun, not the possessor – one of the trickiest relative pronouns in Portuguese.`);
   }
   const relQuem = sent.match(/\b(com quem|para quem|de quem|por quem|a quem|em quem)\b/i);
   if (relQuem) {
-    candidates.push(`'${relQuem[1]}' — after prepositions, use 'quem' for people. The preposition comes before the relative pronoun, unlike in informal English.`);
+    candidates.push(`'${relQuem[1]}' – after prepositions, use 'quem' for people. The preposition comes before the relative pronoun, unlike in informal English.`);
   }
   const relOnde = sent.match(/\b(onde|aonde)\b/i);
   if (relOnde && (engL.includes('where') || engL.includes('place'))) {
-    candidates.push(`'${relOnde[1]}' introduces a relative clause about places — 'onde' for location, 'aonde' with verbs of motion (ir, levar).`);
+    candidates.push(`'${relOnde[1]}' introduces a relative clause about places – 'onde' for location, 'aonde' with verbs of motion (ir, levar).`);
   }
   
   // Passive se
   if (/\b\w+[aeiou]-se\b/i.test(sent) || /\bse\s+(pode|deve|precisa|consegue|faz|diz|sabe|fala|vende|compra|come|vê|ouve|usa|pensa|acredita|imagina|espera|procura|encontra|nota|percebe|observa)\b/i.test(sentL)) {
     const verb = sent.match(/\bse\s+(\w+)\b/i) || sent.match(/\b(\w+)-se\b/i);
     if (verb) {
-      candidates.push(`'Se + ${verb[1]}' creates an impersonal/passive construction — very common in Portuguese for expressing general truths or what 'one does'.`);
+      candidates.push(`'Se + ${verb[1]}' creates an impersonal/passive construction – very common in Portuguese for expressing general truths or what 'one does'.`);
     }
   }
   
   // Diminutives
   const dim = sent.match(/\b(\w+(?:inho|inha|inhos|inhas|zinho|zinha))\b/i);
   if (dim) {
-    candidates.push(`'${dim[1]}' uses the diminutive — expressing smallness, affection, or casualness. Words ending in consonants typically use -zinho/-zinha.`);
+    candidates.push(`'${dim[1]}' uses the diminutive – expressing smallness, affection, or casualness. Words ending in consonants typically use -zinho/-zinha.`);
   }
   
   // Augmentatives
   const aug = sent.match(/\b(\w+(?:ão|ões|ona|onas))\b/i);
   if (aug && sent.length < 60) {
-    candidates.push(`Portuguese augmentatives (-ão/-ona) express large size or intensity, often with emotional undertones — can be admiring or pejorative.`);
+    candidates.push(`Portuguese augmentatives (-ão/-ona) express large size or intensity, often with emotional undertones – can be admiring or pejorative.`);
   }
   
   // Contractions (be specific about which one)
@@ -244,7 +244,7 @@ function generatePTTip(card, tracker) {
   for (const [form, expansion] of Object.entries(contractions)) {
     const regex = new RegExp(`\\b${form}\\b`, 'i');
     if (regex.test(sent)) {
-      candidates.push(`'${form}' contracts ${expansion} — these fusions are mandatory in Portuguese, never written separately.`);
+      candidates.push(`'${form}' contracts ${expansion} – these fusions are mandatory in Portuguese, never written separately.`);
       break;
     }
   }
@@ -253,42 +253,42 @@ function generatePTTip(card, tracker) {
   if (/\b(é|são|somos|sou)\b/i.test(sent) && !sent.includes('está') && !sent.includes('estou')) {
     const serForm = sent.match(/\b(é|são|somos|sou)\b/i)[1];
     if (engL.includes('is') || engL.includes('are') || engL.includes("'m") || engL.includes("'re")) {
-      candidates.push(`'${serForm}' (ser) — used for permanent qualities, identity, origin. Estar would imply a temporary state instead.`);
+      candidates.push(`'${serForm}' (ser) – used for permanent qualities, identity, origin. Estar would imply a temporary state instead.`);
     }
   }
   if (/\b(está|estou|estamos|estão)\b/i.test(sent) && !sent.includes(' é ') && !sent.includes(' são ')) {
     const estarForm = sent.match(/\b(está|estou|estamos|estão)\b/i)[1];
-    candidates.push(`'${estarForm}' (estar) — marks a temporary condition or location. Using 'ser' here would imply permanence.`);
+    candidates.push(`'${estarForm}' (estar) – marks a temporary condition or location. Using 'ser' here would imply permanence.`);
   }
   
   // Ter expressions
   if (/\b(tenho|tem|temos|têm)\s+(que|de)\b/i.test(sent)) {
-    candidates.push(`'Ter que/de + infinitive' expresses obligation (have to) — more colloquial than 'dever' and very common in spoken Portuguese.`);
+    candidates.push(`'Ter que/de + infinitive' expresses obligation (have to) – more colloquial than 'dever' and very common in spoken Portuguese.`);
   }
   
   // Ficar  
   if (/\bfic(o|a|am|amos|ou|ei|ava|avam|ará|aria)\b/i.test(sent)) {
     if (engL.includes('stay') || engL.includes('remain')) {
-      candidates.push(`'Ficar' here means 'to stay/remain' — but it's also used for 'to become' (ficar triste), 'to be located' (fica na rua), and 'to keep' (ficar com).`);
+      candidates.push(`'Ficar' here means 'to stay/remain' – but it's also used for 'to become' (ficar triste), 'to be located' (fica na rua), and 'to keep' (ficar com).`);
     } else if (engL.includes('becom') || engL.includes('get ')) {
-      candidates.push(`'Ficar' + adjective means 'to become/get' — one of ficar's most common uses. It implies a change of state.`);
+      candidates.push(`'Ficar' + adjective means 'to become/get' – one of ficar's most common uses. It implies a change of state.`);
     }
   }
   
   // Prepositions
   if (/\bpor\b/i.test(sent) && !sentL.includes('por que') && !sentL.includes('porque')) {
-    candidates.push(`'Por' indicates cause, means, or exchange — it contrasts with 'para' which indicates purpose or destination.`);
+    candidates.push(`'Por' indicates cause, means, or exchange – it contrasts with 'para' which indicates purpose or destination.`);
   }
   if (/\bpara\b/i.test(sent) && sent.includes('para')) {
     if (/para\s+\w+r\b/i.test(sent)) {
-      candidates.push(`'Para + infinitive' expresses purpose (in order to) — one of the most common uses of 'para' in Portuguese.`);
+      candidates.push(`'Para + infinitive' expresses purpose (in order to) – one of the most common uses of 'para' in Portuguese.`);
     }
   }
   
   // Gerund
   if (/\b(\w+ando|\w+endo|\w+indo)\b/i.test(sent)) {
     const gerund = sent.match(/\b(\w+(?:ando|endo|indo))\b/i)[1];
-    candidates.push(`'${gerund}' is the gerund — Brazilian Portuguese uses 'estar + gerund' for ongoing actions, while European Portuguese prefers 'estar a + infinitive'.`);
+    candidates.push(`'${gerund}' is the gerund – Brazilian Portuguese uses 'estar + gerund' for ongoing actions, while European Portuguese prefers 'estar a + infinitive'.`);
   }
   
   // Negative constructions
@@ -296,20 +296,20 @@ function generatePTTip(card, tracker) {
     candidates.push(`'Ninguém' (nobody) can appear before the verb without 'não', or after it with 'não': both 'ninguém falou' and 'não falou ninguém' are correct.`);
   }
   if (/\bnenhum|nenhuma\b/i.test(sent)) {
-    candidates.push(`'Nenhum/nenhuma' (none/no) is a stronger negation than 'não' — it emphasizes the complete absence of something.`);
+    candidates.push(`'Nenhum/nenhuma' (none/no) is a stronger negation than 'não' – it emphasizes the complete absence of something.`);
   }
   
   // Algo/alguém/algum
   if (/\b(algo|alguém|algum|alguma|alguns|algumas)\b/i.test(sent)) {
     const indef = sent.match(/\b(algo|alguém|algum|alguma)\b/i)[1];
-    candidates.push(`'${indef}' is an indefinite — Portuguese distinguishes between 'algo' (something), 'alguém' (someone), and 'algum/alguma' (some + noun).`);
+    candidates.push(`'${indef}' is an indefinite – Portuguese distinguishes between 'algo' (something), 'alguém' (someone), and 'algum/alguma' (some + noun).`);
   }
   
   // Questions
   if (sent.includes('?')) {
     const qWord = sent.match(/\b(Onde|Quando|Como|Quanto|Quem|Qual|Quais|Por que|Porque)\b/i);
     if (qWord) {
-      candidates.push(`'${qWord[1]}' starts an information question — Portuguese question word order is often flexible, but the question word typically comes first.`);
+      candidates.push(`'${qWord[1]}' starts an information question – Portuguese question word order is often flexible, but the question word typically comes first.`);
     }
   }
   
@@ -317,26 +317,26 @@ function generatePTTip(card, tracker) {
   if (nodeNum >= 25 && sent.length > 50) {
     const clauses = sent.split(/[,;]/).length;
     if (clauses >= 3) {
-      candidates.push(`This ${clauses}-clause sentence demonstrates advanced Portuguese syntax — break it at commas to identify each clause's subject and verb.`);
+      candidates.push(`This ${clauses}-clause sentence demonstrates advanced Portuguese syntax – break it at commas to identify each clause's subject and verb.`);
     }
   }
   
   // Verb tense based on node
   if (nodeNum <= 3 && /\b(sou|é|são|estou|está|estão|tenho|tem|têm|faço|faz|fazem|vou|vai|vão)\b/i.test(sent)) {
     const verb = sent.match(/\b(sou|é|são|estou|está|estão|tenho|tem|têm|faço|faz|fazem|vou|vai|vão)\b/i)[1];
-    candidates.push(`'${verb}' is an irregular present tense form — the most common Portuguese verbs are irregular and must be memorized.`);
+    candidates.push(`'${verb}' is an irregular present tense form – the most common Portuguese verbs are irregular and must be memorized.`);
   }
   
   // Pick the best candidate (least used so far)
   if (candidates.length === 0) {
     // Fallback tips based on what we can detect
     if (sent.length > 60) {
-      candidates.push(`In longer Portuguese sentences, identify the main verb first — subordinate clauses add detail but the main clause carries the core meaning.`);
+      candidates.push(`In longer Portuguese sentences, identify the main verb first – subordinate clauses add detail but the main clause carries the core meaning.`);
     } else if (/\b(muito|mais|menos|bastante|demais|tão|tanto)\b/i.test(sent)) {
       const intens = sent.match(/\b(muito|mais|menos|bastante|demais|tão|tanto)\b/i)[1];
-      candidates.push(`'${intens}' modifies intensity — Portuguese has a rich system of intensifiers that add nuance beyond simple adjectives.`);
+      candidates.push(`'${intens}' modifies intensity – Portuguese has a rich system of intensifiers that add nuance beyond simple adjectives.`);
     } else {
-      candidates.push(`Word order in Portuguese is flexible but SVO (subject-verb-object) is the default — deviations signal emphasis or style.`);
+      candidates.push(`Word order in Portuguese is flexible but SVO (subject-verb-object) is the default – deviations signal emphasis or style.`);
     }
   }
   
@@ -468,37 +468,37 @@ function generateDETip(card, tracker) {
     const indicativeMap = { 'wäre': 'ist/sind', 'hätte': 'hat/haben', 'könnte': 'kann/können', 'würde': 'wird/werden', 'müsste': 'muss/müssen', 'sollte': 'soll/sollen', 'dürfte': 'darf/dürfen', 'möchte': 'mag/mögen', 'käme': 'kommt', 'gäbe': 'gibt', 'wüsste': 'weiß', 'ginge': 'geht', 'fände': 'findet', 'bräuchte': 'braucht' };
     const ind = indicativeMap[konjForm[1].toLowerCase()];
     if (ind) {
-      candidates.push(`'${konjForm[1]}' is the Konjunktiv II of '${ind}' — softening the statement into a hypothetical or polite expression.`);
+      candidates.push(`'${konjForm[1]}' is the Konjunktiv II of '${ind}' – softening the statement into a hypothetical or polite expression.`);
     }
   }
   
   // Wenn + clause
   if (/\bwenn\b/i.test(sent)) {
     if (konjForm) {
-      candidates.push(`'Wenn' + Konjunktiv II creates a conditional: 'if...would' — the verb goes to the end of the wenn-clause.`);
+      candidates.push(`'Wenn' + Konjunktiv II creates a conditional: 'if...would' – the verb goes to the end of the wenn-clause.`);
     } else {
-      candidates.push(`'Wenn' pushes the verb to the clause end — after the wenn-clause, the main clause starts with the conjugated verb (V1 inversion).`);
+      candidates.push(`'Wenn' pushes the verb to the clause end – after the wenn-clause, the main clause starts with the conjugated verb (V1 inversion).`);
     }
   }
   
   // Dass
   if (/\bdass\b/i.test(sent)) {
-    candidates.push(`'Dass' (that) introduces a noun clause with verb-final order — the subject often comes right after 'dass' and the verb at the very end.`);
+    candidates.push(`'Dass' (that) introduces a noun clause with verb-final order – the subject often comes right after 'dass' and the verb at the very end.`);
   }
   
   // Weil
   if (/\bweil\b/i.test(sent)) {
-    candidates.push(`'Weil' (because) pushes the verb to the clause end — in formal German, this verb-final rule is strict. Casual speech sometimes bends it.`);
+    candidates.push(`'Weil' (because) pushes the verb to the clause end – in formal German, this verb-final rule is strict. Casual speech sometimes bends it.`);
   }
   
   // Obwohl
   if (/\bobwohl\b/i.test(sent)) {
-    candidates.push(`'Obwohl' (although) introduces a concessive clause — the verb moves to the end, and the main clause follows with V2 or V1 order.`);
+    candidates.push(`'Obwohl' (although) introduces a concessive clause – the verb moves to the end, and the main clause follows with V2 or V1 order.`);
   }
   
   // Ob
   if (/\bob\b/i.test(sent) && engL.includes('whether') || engL.includes('if')) {
-    candidates.push(`'Ob' (whether/if) introduces indirect yes/no questions — the verb goes to the end of the ob-clause.`);
+    candidates.push(`'Ob' (whether/if) introduces indirect yes/no questions – the verb goes to the end of the ob-clause.`);
   }
   
   // Nachdem
@@ -508,18 +508,18 @@ function generateDETip(card, tracker) {
   
   // Bevor
   if (/\bbevor\b/i.test(sentL)) {
-    candidates.push(`'Bevor' (before) sends the verb to the clause end — both clauses usually share the same tense, unlike 'nachdem'.`);
+    candidates.push(`'Bevor' (before) sends the verb to the clause end – both clauses usually share the same tense, unlike 'nachdem'.`);
   }
   
   // Während
   if (/\bwährend\b/i.test(sentL)) {
-    candidates.push(`'Während' means both 'while' (temporal) and 'whereas' (contrast) — context determines the meaning. As a conjunction, it triggers verb-final order.`);
+    candidates.push(`'Während' means both 'while' (temporal) and 'whereas' (contrast) – context determines the meaning. As a conjunction, it triggers verb-final order.`);
   }
   
   // Separable verbs (prefix at end)
   const prefixAtEnd = sent.match(/\b(an|auf|aus|ein|mit|vor|zu|ab|weg|um|nach|her|hin|los|zurück|zusammen|teil|fest)\b[.!?]\s*$/i);
   if (prefixAtEnd) {
-    candidates.push(`The prefix '${prefixAtEnd[1]}' at the sentence end is the separated part of the verb — in main clauses, separable prefixes always jump to the end.`);
+    candidates.push(`The prefix '${prefixAtEnd[1]}' at the sentence end is the separated part of the verb – in main clauses, separable prefixes always jump to the end.`);
   }
   
   // Modal verbs (specific)
@@ -534,10 +534,10 @@ function generateDETip(card, tracker) {
       'möchte': 'möchten (would like)', 'möchtest': 'möchten (would like)', 'möchten': 'möchten (would like)' };
     const infMatch = sent.match(/\b(\w+(?:en|ern|eln))\b[.!?]?\s*$/);
     if (infMatch) {
-      candidates.push(`'${modal[1]}' (${modalInfs[modal[1].toLowerCase()]?.split(' ')[0] || modal[1]}) pushes '${infMatch[1]}' to the infinitive at the sentence end — the modal verb frame is a core German pattern.`);
+      candidates.push(`'${modal[1]}' (${modalInfs[modal[1].toLowerCase()]?.split(' ')[0] || modal[1]}) pushes '${infMatch[1]}' to the infinitive at the sentence end – the modal verb frame is a core German pattern.`);
     } else {
       const inf = modalInfs[modal[1].toLowerCase()] || modal[1];
-      candidates.push(`'${modal[1]}' is from ${inf} — modal verbs take V2 position and send the main verb to the infinitive at the clause end.`);
+      candidates.push(`'${modal[1]}' is from ${inf} – modal verbs take V2 position and send the main verb to the infinitive at the clause end.`);
     }
   }
   
@@ -545,7 +545,7 @@ function generateDETip(card, tracker) {
   if (/\b(wird|werden|wurde|wurden)\b/i.test(sent) && /\bge\w+(t|en)\b/i.test(sent)) {
     const passAux = sent.match(/\b(wird|werden|wurde|wurden)\b/i)[1];
     const pp = sent.match(/\b(ge\w+(?:t|en))\b/i)[1];
-    candidates.push(`'${passAux}...${pp}' forms the passive — the agent (doer) can be added with 'von + dative' but is often omitted when unknown or unimportant.`);
+    candidates.push(`'${passAux}...${pp}' forms the passive – the agent (doer) can be added with 'von + dative' but is often omitted when unknown or unimportant.`);
   }
   
   // Reflexive (specific)
@@ -556,7 +556,7 @@ function generateDETip(card, tracker) {
     const reflIdx = words.findIndex(w => w.toLowerCase().replace(/[.,!?]/g, '') === refl[1].toLowerCase());
     if (reflIdx > 0) {
       const verb = words[reflIdx - 1] || words[reflIdx + 1];
-      candidates.push(`'${refl[1]}' is the reflexive pronoun for '${verb?.replace(/[.,!?]/g, '')}' — this verb requires a reflexive pronoun in German even though English often doesn't.`);
+      candidates.push(`'${refl[1]}' is the reflexive pronoun for '${verb?.replace(/[.,!?]/g, '')}' – this verb requires a reflexive pronoun in German even though English often doesn't.`);
     }
   }
   
@@ -564,7 +564,7 @@ function generateDETip(card, tracker) {
   const comp = sent.match(/\b(\w+er)\s+als\b/i);
   if (comp) {
     const base = comp[1].replace(/er$/, '');
-    candidates.push(`'${comp[1]} als' — comparative form. Some adjectives also take an umlaut: groß→größer, alt→älter, lang→länger.`);
+    candidates.push(`'${comp[1]} als' – comparative form. Some adjectives also take an umlaut: groß→größer, alt→älter, lang→länger.`);
   }
   
   // Two-way prepositions with case detection
@@ -586,7 +586,7 @@ function generateDETip(card, tracker) {
   for (const [prep, meaning] of Object.entries(datPreps)) {
     const regex = new RegExp(`\\b${prep}\\b`, 'i');
     if (regex.test(sent)) {
-      candidates.push(`'${prep}' (${meaning}) always governs the dative — the noun/pronoun that follows must show dative endings.`);
+      candidates.push(`'${prep}' (${meaning}) always governs the dative – the noun/pronoun that follows must show dative endings.`);
       break;
     }
   }
@@ -596,7 +596,7 @@ function generateDETip(card, tracker) {
   for (const [prep, meaning] of Object.entries(accPreps)) {
     const regex = new RegExp(`\\b${prep}\\b`, 'i');
     if (regex.test(sent)) {
-      candidates.push(`'${prep}' (${meaning}) always takes the accusative — no exceptions to this rule.`);
+      candidates.push(`'${prep}' (${meaning}) always takes the accusative – no exceptions to this rule.`);
       break;
     }
   }
@@ -604,63 +604,63 @@ function generateDETip(card, tracker) {
   // Genitive
   const genMatch = sent.match(/\b(des|eines)\s+(\w+(?:s|es))\b/i);
   if (genMatch) {
-    candidates.push(`'${genMatch[0]}' shows genitive case — indicating possession. Masculine/neuter nouns add -s or -es in genitive.`);
+    candidates.push(`'${genMatch[0]}' shows genitive case – indicating possession. Masculine/neuter nouns add -s or -es in genitive.`);
   }
   
   // Perfekt with haben
   if (/\b(habe|hast|hat|haben|habt)\b/i.test(sent) && /\b(ge\w+(?:t|en))\b/i.test(sent)) {
     const pp = sent.match(/\b(ge\w+(?:t|en))\b/i)[1];
-    candidates.push(`Perfekt: 'haben' + '${pp}' at the clause end — this is the standard way to talk about the past in spoken German.`);
+    candidates.push(`Perfekt: 'haben' + '${pp}' at the clause end – this is the standard way to talk about the past in spoken German.`);
   }
   
   // Perfekt with sein
   if (/\b(bin|bist|ist|sind|seid)\b/i.test(sent) && /\b(ge\w+en)\b/i.test(sent)) {
     const pp = sent.match(/\b(ge\w+en)\b/i)[1];
-    candidates.push(`Perfekt with 'sein' + '${pp}' — verbs of motion (gehen, kommen) or change of state (werden, sterben) use 'sein' instead of 'haben'.`);
+    candidates.push(`Perfekt with 'sein' + '${pp}' – verbs of motion (gehen, kommen) or change of state (werden, sterben) use 'sein' instead of 'haben'.`);
   }
   
   // Präteritum sein/haben
   if (/\b(war|waren)\b/i.test(sent) && !sentL.includes('wurde')) {
-    candidates.push(`'War/waren' (was/were) is Präteritum of 'sein' — one of the few verbs where simple past is preferred over Perfekt in everyday speech.`);
+    candidates.push(`'War/waren' (was/were) is Präteritum of 'sein' – one of the few verbs where simple past is preferred over Perfekt in everyday speech.`);
   }
   if (/\b(hatte|hatten)\b/i.test(sent)) {
-    candidates.push(`'Hatte/hatten' is Präteritum of 'haben' — like 'sein' and the modals, 'haben' commonly uses Präteritum even in spoken German.`);
+    candidates.push(`'Hatte/hatten' is Präteritum of 'haben' – like 'sein' and the modals, 'haben' commonly uses Präteritum even in spoken German.`);
   }
   
   // Relative clauses
   const relClause = sent.match(/,\s*(der|die|das|den|dem|dessen|deren|denen)\s+/i);
   if (relClause) {
     const caseMap = { 'der': 'nominative masculine', 'die': 'nominative feminine/plural', 'das': 'nominative neuter', 'den': 'accusative masculine', 'dem': 'dative', 'dessen': 'genitive masculine/neuter', 'deren': 'genitive feminine/plural', 'denen': 'dative plural' };
-    candidates.push(`'${relClause[1]}' introduces a relative clause (${caseMap[relClause[1].toLowerCase()] || relClause[1]}) — its case depends on its role within the relative clause, not the main clause.`);
+    candidates.push(`'${relClause[1]}' introduces a relative clause (${caseMap[relClause[1].toLowerCase()] || relClause[1]}) – its case depends on its role within the relative clause, not the main clause.`);
   }
   
   // Um...zu
   if (/\bum\b.*\bzu\b.*\b\w+en\b/i.test(sent)) {
-    candidates.push(`'Um...zu + infinitive' expresses purpose (in order to) — 'zu' sits directly before the infinitive, splitting separable verbs: 'um ein|zu|kaufen'.`);
+    candidates.push(`'Um...zu + infinitive' expresses purpose (in order to) – 'zu' sits directly before the infinitive, splitting separable verbs: 'um ein|zu|kaufen'.`);
   }
   
   // Negation
   if (/\bnicht\b/i.test(sent)) {
     if (/\bnicht\b.*\b\w+en\b[.!?]?\s*$/i.test(sent)) {
-      candidates.push(`'Nicht' comes before the infinitive/participle/prefix at the sentence end — its position follows a predictable pattern in German clause structure.`);
+      candidates.push(`'Nicht' comes before the infinitive/participle/prefix at the sentence end – its position follows a predictable pattern in German clause structure.`);
     } else {
-      candidates.push(`'Nicht' negates the element that follows it — placement is key: before adjectives, adverbs, and prepositional phrases.`);
+      candidates.push(`'Nicht' negates the element that follows it – placement is key: before adjectives, adverbs, and prepositional phrases.`);
     }
   }
   if (/\b(kein|keine|keinen|keinem|keiner|keines)\b/i.test(sent)) {
     const kein = sent.match(/\b(kein|keine|keinen|keinem|keiner|keines)\b/i)[1];
-    candidates.push(`'${kein}' negates the noun directly (like 'not a/no') — it takes the same endings as 'ein' and replaces the indefinite article.`);
+    candidates.push(`'${kein}' negates the noun directly (like 'not a/no') – it takes the same endings as 'ein' and replaces the indefinite article.`);
   }
   
   // Questions
   if (sent.includes('?')) {
     const qWord = sent.match(/^(Wer|Was|Wo|Wann|Warum|Wie|Welch\w*|Wessen|Wem|Wen|Wohin|Woher|Worüber|Wofür|Woran|Worauf|Worin|Womit)\b/i);
     if (qWord) {
-      candidates.push(`'${qWord[1]}' starts a W-question — the verb follows in second position (V2), just like in statements.`);
+      candidates.push(`'${qWord[1]}' starts a W-question – the verb follows in second position (V2), just like in statements.`);
     } else if (/^[A-ZÄÖÜ]/.test(sent)) {
       const firstWord = sent.match(/^(\w+)/)[1];
       if (/^(Ist|Sind|Hat|Haben|Kann|Muss|Will|Soll|Darf|Wird|Werden|War|Hatte|Konnte|Musste|Wollte|Sollte|Durfte|Hast|Bist|Habt|Seid|Möchtest|Möchten|Dürft)\b/i.test(sent)) {
-        candidates.push(`Yes/no questions start with the verb (V1) — '${firstWord}' leads because German doesn't use an auxiliary like English 'do'.`);
+        candidates.push(`Yes/no questions start with the verb (V1) – '${firstWord}' leads because German doesn't use an auxiliary like English 'do'.`);
       }
     }
   }
@@ -668,45 +668,45 @@ function generateDETip(card, tracker) {
   // Compound nouns
   const longNoun = sent.match(/\b([A-ZÄÖÜ]\w{11,})\b/);
   if (longNoun) {
-    candidates.push(`'${longNoun[1]}' is a compound noun — German joins nouns freely. The last element determines gender and the first elements modify meaning.`);
+    candidates.push(`'${longNoun[1]}' is a compound noun – German joins nouns freely. The last element determines gender and the first elements modify meaning.`);
   }
   
   // Adjective endings
   const adjEnd = sent.match(/\b(der|die|das|dem|den|des|ein|eine|einem|einer|eines|einen)\s+(\w+(?:e|er|es|en|em))\s+([A-ZÄÖÜ]\w+)\b/);
   if (adjEnd) {
-    candidates.push(`The adjective '${adjEnd[2]}' takes its ending from the article type and case — after definite articles, adjectives usually end in -e or -en.`);
+    candidates.push(`The adjective '${adjEnd[2]}' takes its ending from the article type and case – after definite articles, adjectives usually end in -e or -en.`);
   }
   
   // Es gibt
   if (/\bes gibt\b/i.test(sentL)) {
-    candidates.push(`'Es gibt' (there is/are) always takes accusative — the thing that 'exists' is the accusative object, not the subject.`);
+    candidates.push(`'Es gibt' (there is/are) always takes accusative – the thing that 'exists' is the accusative object, not the subject.`);
   }
   
   // Imperative
   if (/^(Komm|Geh|Fahr|Nimm|Gib|Sieh|Schau|Lies|Schreib|Sprich|Sag|Mach|Bring|Hol|Kauf|Iss|Trink|Schlaf|Lauf|Ruf|Steh|Sitz|Halt|Lass|Trag|Wirf|Öffne|Schließ|Dreh|Hör|Warte|Hilf|Pass|Setz|Stell|Leg|Zieh|Werd|Hab|Sei)\b/i.test(sent)) {
     const impVerb = sent.match(/^(\w+)/)[1];
-    candidates.push(`'${impVerb}!' — du-imperative. Strong verbs with e→i change keep it (gib!, nimm!, lies!), but e→ie verbs don't (sieh, not *sieh).`);
+    candidates.push(`'${impVerb}!' – du-imperative. Strong verbs with e→i change keep it (gib!, nimm!, lies!), but e→ie verbs don't (sieh, not *sieh).`);
   }
   
   // V2 rule
   if (nodeNum <= 5) {
     const words = sent.split(/\s+/);
     if (words.length >= 3 && !sent.includes('?')) {
-      candidates.push(`The verb sits in second position — even when a time/place expression starts the sentence, the verb stays second and the subject moves after it.`);
+      candidates.push(`The verb sits in second position – even when a time/place expression starts the sentence, the verb stays second and the subject moves after it.`);
     }
   }
   
   // Fallback
   if (nodeNum >= 25 && sent.length > 60) {
     const clauses = sent.split(/[,;]/).length;
-    candidates.push(`This ${clauses}-clause sentence shows advanced German syntax — find the V2 verb in the main clause first, then decode each subordinate clause.`);
+    candidates.push(`This ${clauses}-clause sentence shows advanced German syntax – find the V2 verb in the main clause first, then decode each subordinate clause.`);
   }
   
   if (candidates.length === 0) {
     if (sent.length > 60) {
-      candidates.push(`Complex German sentences nest clauses — identify the main verb in V2 position to find the sentence's core meaning.`);
+      candidates.push(`Complex German sentences nest clauses – identify the main verb in V2 position to find the sentence's core meaning.`);
     } else {
-      candidates.push(`German word order is more fixed than it seems — the verb position (V2 in main clauses, V-final in subordinates) is the key structural anchor.`);
+      candidates.push(`German word order is more fixed than it seems – the verb position (V2 in main clauses, V-final in subordinates) is the key structural anchor.`);
     }
   }
   

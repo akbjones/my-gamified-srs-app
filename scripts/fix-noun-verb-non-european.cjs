@@ -4,13 +4,13 @@
  *
  *   German  : 1sg present of -en verbs = verb stem (drop -en, sometimes also
  *             drop final -e of stem). Many nouns share that spelling.
- *             e.g.  arbeite (1sg of arbeiten) — distinct from noun "Arbeit"
+ *             e.g.  arbeite (1sg of arbeiten) – distinct from noun "Arbeit"
  *             but lowercase form arbeite is sometimes still confused.
  *   Dutch   : 1sg present = verb stem (drop -en). e.g. werken → werk (and noun
- *             werk = "work" — same as Italian lavoro pattern).
+ *             werk = "work" – same as Italian lavoro pattern).
  *   Swedish : less common, present tense ends in -ar/-er/-r, but the
  *             imperative form (often = noun) ends in -a or stem alone.
- *   Welsh   : multiple irregular conjugation patterns — skip the broad rule.
+ *   Welsh   : multiple irregular conjugation patterns – skip the broad rule.
  *   Hindi   : 1sg present continuous ends in हूँ. Forms are very different
  *             from noun, low false-positive risk.
  *   Turkish : agglutinative; 1sg present is verb-stem + -iyorum. Looks
@@ -50,7 +50,7 @@ const LANG_RULES = {
     derive1sg(inf) {
       // German: drop -en or -n to get stem, then 1sg = stem + 'e'
       // (arbeiten → arbeit → arbeite; lieben → lieb → liebe)
-      // Note: spelling reform — verbs ending -eln/-ern drop -n only (sammeln → sammle).
+      // Note: spelling reform – verbs ending -eln/-ern drop -n only (sammeln → sammle).
       if (inf.endsWith('eln')) return inf.slice(0, -3) + 'le';
       if (inf.endsWith('ern')) return inf.slice(0, -3) + 'ere';
       if (inf.endsWith('en'))  return inf.slice(0, -2) + 'e';
@@ -64,7 +64,7 @@ const LANG_RULES = {
     derive1sg(inf) {
       // Dutch: drop -en to get stem; 1sg = stem. Also collapse double vowels
       // and devoice final consonants per spelling rules (we keep it simple).
-      // werken → werk; lopen → loop (long vowel doubles) — skip vowel
+      // werken → werk; lopen → loop (long vowel doubles) – skip vowel
       // doubling for now; reasonable hit rate even without.
       if (inf.endsWith('en')) return inf.slice(0, -2);
       return null;
@@ -87,7 +87,7 @@ const LANG_RULES = {
     derive1sg(inf) {
       // Turkish infinitives end -mak / -mek. Stem = without that suffix.
       // çalışmak → çalış (stem; noun çalışma "work" close but not identical).
-      // We use bare stem here — many noun homonyms.
+      // We use bare stem here – many noun homonyms.
       if (inf.endsWith('mak') || inf.endsWith('mek')) return inf.slice(0, -3);
       return null;
     },
@@ -112,8 +112,8 @@ const LANG_RULES = {
     path: 'src/data/dictionary/hi.ts',
     label: '1sg of',
     derive1sg(inf) {
-      // Hindi infinitives end in ना. 1sg = stem + ता हूँ (m) — multi-word and
-      // unlikely to match a single noun entry. Skip — return null so nothing
+      // Hindi infinitives end in ना. 1sg = stem + ता हूँ (m) – multi-word and
+      // unlikely to match a single noun entry. Skip – return null so nothing
       // matches here. Hindi noun-verb polysemy is much rarer in dict shape.
       return null;
     },

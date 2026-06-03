@@ -47,7 +47,7 @@ const NODES = [
       '"Hoe gaat het?" is informal. Use "Hoe gaat het met u?" for formal situations.',
       'Dutch greetings change by time: goedemorgen (morning), goedemiddag (afternoon), goedenavond (evening).',
       '"Dag" can mean both hello and goodbye in Dutch.',
-      '"Alsjeblieft" (informal) vs "alstublieft" (formal) — both mean please/here you go.',
+      '"Alsjeblieft" (informal) vs "alstublieft" (formal) – both mean please/here you go.',
     ],
   },
   {
@@ -126,9 +126,9 @@ const NODES = [
       ['Heb je zin om mee te gaan?', 'Do you feel like coming along?'],
     ],
     tips: [
-      '"Zijn" (to be): ik ben, jij bent, hij/zij is, wij/zij zijn — all irregular forms.',
+      '"Zijn" (to be): ik ben, jij bent, hij/zij is, wij/zij zijn – all irregular forms.',
       '"Hebben" (to have): ik heb, jij hebt, hij/zij heeft, wij/zij hebben.',
-      '"Honger hebben" and "dorst hebben" — Dutch says "have hunger/thirst", not "am hungry/thirsty".',
+      '"Honger hebben" and "dorst hebben" – Dutch says "have hunger/thirst", not "am hungry/thirsty".',
       '"Gelijk hebben" = to be right. Dutch uses "hebben" for many expressions English uses "to be" for.',
     ],
   },
@@ -170,7 +170,7 @@ const NODES = [
       'Dutch has two articles: "de" (common gender ~75% of nouns) and "het" (neuter ~25%).',
       'Diminutives (words ending in -je) are always "het": het huisje, het meisje, het boekje.',
       'Plurals are always "de" regardless of singular: "het kind" → "de kinderen".',
-      'There is no reliable rule — you must memorize each noun\'s gender. Start with the most common ones.',
+      'There is no reliable rule – you must memorize each noun\'s gender. Start with the most common ones.',
     ],
   },
   {
@@ -210,7 +210,7 @@ const NODES = [
     tips: [
       'The V2 rule: the conjugated verb is ALWAYS in second position in main clauses.',
       'When a time/place phrase starts the sentence, the subject comes AFTER the verb: "Morgen ga ik..."',
-      'This inversion is mandatory in Dutch — it sounds wrong without it.',
+      'This inversion is mandatory in Dutch – it sounds wrong without it.',
       'Only the FIRST element can go before the verb. Multiple elements cannot precede it.',
     ],
   },
@@ -290,9 +290,9 @@ const NODES = [
       ['Proost! Op je gezondheid!', 'Cheers! To your health!'],
     ],
     tips: [
-      '"Lekker" is the essential Dutch food word — it means tasty but also nice/enjoyable in general.',
+      '"Lekker" is the essential Dutch food word – it means tasty but also nice/enjoyable in general.',
       '"Ik wil graag..." is the standard polite way to order in Dutch.',
-      '"Bitterballen", "stamppot", "stroopwafels" — knowing Dutch food shows cultural awareness.',
+      '"Bitterballen", "stamppot", "stroopwafels" – knowing Dutch food shows cultural awareness.',
       '"Proost!" (cheers) is said while making eye contact with everyone at the table.',
     ],
   },
@@ -415,7 +415,7 @@ const NODES = [
     tips: [
       'Object pronouns: mij/me (me), jou/je (you), hem (him), haar (her), ons (us), hen/hun (them).',
       'Short forms (me, je, ze) are used in speech; long forms (mij, jou, zij) for emphasis.',
-      '"Hen" is for direct objects, "hun" for indirect objects — but many Dutch people mix them.',
+      '"Hen" is for direct objects, "hun" for indirect objects – but many Dutch people mix them.',
       'Word order: indirect object usually comes before direct object: "Ik geef hem het boek."',
     ],
   },
@@ -700,7 +700,7 @@ const NODES = [
       ['Stap uit bij de derde halte.', 'Get off at the third stop.'],
     ],
     tips: [
-      '"Rechtdoor" (straight), "links" (left), "rechts" (right) — basic Dutch navigation words.',
+      '"Rechtdoor" (straight), "links" (left), "rechts" (right) – basic Dutch navigation words.',
       '"Hoe kom ik bij...?" (How do I get to...?) is the standard way to ask for directions.',
       'The Netherlands is a cycling country: "fietspad" (bike path) and "OV-chipkaart" (transit card) are essential.',
       '"Enkele reis" = single/one-way, "retour" = return/round-trip.',
@@ -825,7 +825,7 @@ const NODES = [
     tips: [
       'Diminutive rules: -je after most words, -tje after long vowels, -pje after -m, -etje after -ng.',
       'All diminutives are "het" words: "de hond" → "het hondje", "de boom" → "het boompje".',
-      'Dutch uses diminutives far more than English — "een biertje" is normal, not childish.',
+      'Dutch uses diminutives far more than English – "een biertje" is normal, not childish.',
       'Diminutives can express smallness, endearment, or casualness: "een kopje koffie" is standard.',
     ],
   },

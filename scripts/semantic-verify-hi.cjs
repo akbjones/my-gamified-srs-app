@@ -343,27 +343,27 @@ const SKIP_WORDS = new Set([
   'भारत', 'हिन्दुस्तान', 'पाकिस्तान', 'नेपाल',
 ]);
 
-// ── Words where Google Translate gives wrong/worse translations — keep stored definition ──
+// ── Words where Google Translate gives wrong/worse translations – keep stored definition ──
 const DO_NOT_FIX = new Set([
   // Google gives literal translations worse than stored
   'अधजल',     // half-filled (Google: semi-water)
   'अव्वल',    // first; top (Google: topper)
   'कठिनाइयाँ', // difficulty (Google: odds)
   // Hindi verb forms where Google returns English conjugated/wrong forms
-  'उतरा',     // descend (Google: landed — past tense)
-  'कहती',     // tell (Google: says — 3rd person)
-  'कहते',     // tell (Google: says — 3rd person)
-  'कही',      // tell — past of कहना (Google: somewhere — confuses with कहीं)
-  'गाई',      // to sing — past fem of गाना (Google: cow — confuses with गाय)
-  'जाती',     // to go — fem habitual (Google: caste — confuses with जाति)
-  'जीता',     // win (Google: won — past tense)
-  'जीती',     // win (Google: won — past tense)
-  'चुका',     // already — auxiliary (Google: paid — different word)
-  'ज़रा',     // a bit (Google: please — wrong)
-  'तरफ़',     // towards (Google: on the side — worse)
-  'डाली',     // to put/pour — verb form (Google: branch — confuses with noun)
-  'पाती',     // to get — verb form (Google: leaf — confuses with noun)
-  'गाए',      // cow — plural of गाय (Google: sang — confuses with verb गाना)
+  'उतरा',     // descend (Google: landed – past tense)
+  'कहती',     // tell (Google: says – 3rd person)
+  'कहते',     // tell (Google: says – 3rd person)
+  'कही',      // tell – past of कहना (Google: somewhere – confuses with कहीं)
+  'गाई',      // to sing – past fem of गाना (Google: cow – confuses with गाय)
+  'जाती',     // to go – fem habitual (Google: caste – confuses with जाति)
+  'जीता',     // win (Google: won – past tense)
+  'जीती',     // win (Google: won – past tense)
+  'चुका',     // already – auxiliary (Google: paid – different word)
+  'ज़रा',     // a bit (Google: please – wrong)
+  'तरफ़',     // towards (Google: on the side – worse)
+  'डाली',     // to put/pour – verb form (Google: branch – confuses with noun)
+  'पाती',     // to get – verb form (Google: leaf – confuses with noun)
+  'गाए',      // cow – plural of गाय (Google: sang – confuses with verb गाना)
 ]);
 
 // ── Quality filter: reject bad Google translations ──
@@ -423,7 +423,7 @@ function isGarbageTranslation(word, googleEn, pos, storedEn) {
   // 13. Google returned "is [adjective/noun]" pattern
   if (/^is /i.test(gLow)) return 'is-prefix';
 
-  // 14. Stored en has apostrophes — complex multi-meaning entries that often break
+  // 14. Stored en has apostrophes – complex multi-meaning entries that often break
   if (storedEn.includes("'")) return 'has-apostrophe';
 
   return null;
@@ -677,7 +677,7 @@ async function main() {
   console.log('Total entries checked: ' + wordsToCheck.length);
   console.log('Semantic matches: ' + matches);
   console.log('Mismatches fixed: ' + fixes.length);
-  console.log('\nHINDI COMPLETE — ' + fixes.length + ' fixes');
+  console.log('\nHINDI COMPLETE – ' + fixes.length + ' fixes');
 }
 
 main().catch(err => {

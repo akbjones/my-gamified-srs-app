@@ -204,13 +204,13 @@ async function main() {
         if (!gt || gt === '?') continue;
 
         if (looksLikeVerbPhrase(gt)) {
-          // Google thinks it's a verb form — add "to " if we can extract infinitive
-          // Actually, just leave it — the entry might be a conjugated form
+          // Google thinks it's a verb form – add "to " if we can extract infinitive
+          // Actually, just leave it – the entry might be a conjugated form
           // Better to change POS to match what it actually is
           continue;
         }
 
-        // Google returned a noun/adj — fix POS
+        // Google returned a noun/adj – fix POS
         const gtClean = gt.toLowerCase().replace(/&#39;/g, "'").replace(/&amp;/g, '&').trim();
 
         // If Google's translation matches our English, just fix POS
@@ -221,7 +221,7 @@ async function main() {
             reason: `pos_fix: GT="${gt}" matches our="${entry.en}"`
           });
         } else {
-          // Google gave different translation AND it's not a verb — fix both
+          // Google gave different translation AND it's not a verb – fix both
           if (gtClean.length >= 2 && gtClean.length <= 50) {
             fixes.push({
               key: entry.key,

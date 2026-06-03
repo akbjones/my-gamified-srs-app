@@ -107,7 +107,7 @@ function reverseVerb(form) {
 }
 
 function lookupWord(raw) {
-  let clean = raw.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()—–«»\d/]/g, '');
+  let clean = raw.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()––«»\d/]/g, '');
   if (!clean) return null;
 
   // Direct match
@@ -387,7 +387,7 @@ deck.forEach(card => {
   const text = card.target;
   if (!text) return;
   const tokens = text.toLowerCase()
-    .replace(/[.,!?;:""()¡¿…—–\-«»\d/]/g, ' ')
+    .replace(/[.,!?;:""()¡¿…––\-«»\d/]/g, ' ')
     .split(/\s+/)
     .filter(w => w.length > 0);
   tokens.forEach(w => {

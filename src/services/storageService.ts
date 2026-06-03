@@ -106,7 +106,7 @@ export type PerLanguageLimits = Partial<Record<Language, {
 }>>;
 
 export interface StudySettings {
-  // Global defaults — apply to any language without an override
+  // Global defaults – apply to any language without an override
   dailyNewLimit: number;
   sessionCardLimit: number; // cards per "Study More" session (5–50)
   // Per-language overrides for card volume
@@ -117,7 +117,7 @@ export interface StudySettings {
   theme: 'light' | 'dark';
   autoPlayAudio: boolean;
   audioSpeed: AudioSpeed;
-  googleTtsApiKey?: string; // optional — falls back to browser TTS if not set
+  googleTtsApiKey?: string; // optional – falls back to browser TTS if not set
 }
 
 const DEFAULT_SETTINGS: StudySettings = {
@@ -240,7 +240,7 @@ export const isFavorited = (word: string, lang: Language): boolean => {
 // like "etymology" or "grammar" if those ever get tapped as words.
 
 /** Build a stable storage key for a grammar-tip favorite. The tip itself is
- *  the unique part — saving the same tip from another card de-dupes. */
+ *  the unique part – saving the same tip from another card de-dupes. */
 const grammarKey = (tip: string) =>
   `__g__${tip.toLowerCase().replace(/\s+/g, ' ').trim()}`;
 

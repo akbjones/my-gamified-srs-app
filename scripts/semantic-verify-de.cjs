@@ -639,7 +639,7 @@ async function main() {
   console.log('Total entries checked: ' + wordsToCheck.length);
   console.log('Semantic matches: ' + matches);
   console.log('Mismatches fixed: ' + fixes.length);
-  console.log('\nGERMAN COMPLETE — ' + fixes.length + ' fixes');
+  console.log('\nGERMAN COMPLETE – ' + fixes.length + ' fixes');
 }
 
 main().catch(err => {

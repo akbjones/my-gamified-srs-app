@@ -43,7 +43,7 @@ function makeCard(target, english, grammarNode, tags, grammar) {
 const cards = [];
 
 // ═══════════════════════════════════════════════════════════════
-// NODE 21 — Sfumature del congiuntivo (~100 cards)
+// NODE 21 – Sfumature del congiuntivo (~100 cards)
 // ═══════════════════════════════════════════════════════════════
 
 const node21 = [
@@ -154,7 +154,7 @@ const node21 = [
 cards.push(...node21);
 
 // ═══════════════════════════════════════════════════════════════
-// NODE 22 — Perifrasi verbali (~100 cards)
+// NODE 22 – Perifrasi verbali (~100 cards)
 // ═══════════════════════════════════════════════════════════════
 
 const node22 = [
@@ -267,7 +267,7 @@ const node22 = [
 cards.push(...node22);
 
 // ═══════════════════════════════════════════════════════════════
-// NODE 23 — Discorso indiretto (~100 cards)
+// NODE 23 – Discorso indiretto (~100 cards)
 // ═══════════════════════════════════════════════════════════════
 
 const node23 = [
@@ -368,7 +368,7 @@ const node23 = [
 cards.push(...node23);
 
 // ═══════════════════════════════════════════════════════════════
-// NODE 24 — Registro & stile (~100 cards)
+// NODE 24 – Registro & stile (~100 cards)
 // ═══════════════════════════════════════════════════════════════
 
 const node24 = [
@@ -461,12 +461,12 @@ const node24 = [
 cards.push(...node24);
 
 // ═══════════════════════════════════════════════════════════════
-// NODE 25 — Espressioni idiomatiche (~100 cards)
+// NODE 25 – Espressioni idiomatiche (~100 cards)
 // ═══════════════════════════════════════════════════════════════
 
 const node25 = [
   // Common idioms
-  makeCard("Non vedo l'ora di partire per le vacanze estive!", "I can't wait to leave for the summer holidays!", "node-25", ["general", "travel"], "\"Non vedo l'ora di\" literally means \"I can't see the hour of\" — I can't wait."),
+  makeCard("Non vedo l'ora di partire per le vacanze estive!", "I can't wait to leave for the summer holidays!", "node-25", ["general", "travel"], "\"Non vedo l'ora di\" literally means \"I can't see the hour of\" – I can't wait."),
   makeCard("In bocca al lupo per l'esame di domani mattina!", "Good luck for tomorrow morning's exam!", "node-25", ["general", "work"], "\"In bocca al lupo\" (into the wolf's mouth) = good luck. Reply: \"Crepi!\""),
   makeCard("Acqua in bocca! Non dire niente a nessuno di questa cosa.", "Keep it a secret! Don't say anything to anyone about this.", "node-25", ["general", "family"]),
   makeCard("Non c'e due senza tre; vedrai che avrai un'altra occasione.", "There's no two without three; you'll see you'll get another chance.", "node-25", ["general", "work"], "\"Non c'e due senza tre\" = things come in threes (good or bad)."),
@@ -546,7 +546,7 @@ const node25 = [
 cards.push(...node25);
 
 // ═══════════════════════════════════════════════════════════════
-// NODE 26 — Sintassi complessa (~100 cards)
+// NODE 26 – Sintassi complessa (~100 cards)
 // ═══════════════════════════════════════════════════════════════
 
 const node26 = [

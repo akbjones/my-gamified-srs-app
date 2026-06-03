@@ -13,7 +13,7 @@ const path = require('path');
 const OUT = path.join(__dirname, '..', 'src', 'data', 'italian', 'a1a2.json');
 
 // ────────────────────────────────────────────
-// Node 01 — Presente indicativo  (~470 cards)
+// Node 01 – Presente indicativo  (~470 cards)
 // ────────────────────────────────────────────
 const node01 = [
   // ── parlare ──

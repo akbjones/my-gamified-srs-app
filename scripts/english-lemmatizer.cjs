@@ -574,7 +574,7 @@ function lemmatizeVerb(word) {
       if (base.length >= 2) return base;
     }
 
-    // -ying → -y (but NOT "dying" type — those are irregular)
+    // -ying → -y (but NOT "dying" type – those are irregular)
     if (stem.endsWith('y')) return stem; // e.g. "playing" → stem is "play"
 
     // Try adding back -e: making → mak → make
@@ -610,7 +610,7 @@ function lemmatizeVerb(word) {
     // If stem ends in consonant, might need +e: loved → lov → love
     if (/[bcdfghjklmnpqrstvwxyz]$/.test(stem) && stem.length >= 2) {
       // Check if stem + e makes more sense than stem alone
-      // Heuristic: if previous char is vowel + consonant, stem is fine (played → play — wait, that's -ed)
+      // Heuristic: if previous char is vowel + consonant, stem is fine (played → play – wait, that's -ed)
       // Actually "played" → stem="play", which is fine
       // "loved" → stem="lov" → need "love"
       // "used" → stem="us" → need "use"

@@ -48,7 +48,7 @@ const WordTileChallenge: React.FC<WordTileChallengeProps> = ({
     setCheckResult(null);
   }, [card.id]);
 
-  // NOTE: no auto-play on mount — hearing the sentence gives away the tile answer
+  // NOTE: no auto-play on mount – hearing the sentence gives away the tile answer
 
   const handleTapWord = (idx: number) => {
     if (checkResult || placedWords.length >= correct.length) return;
@@ -110,7 +110,7 @@ const WordTileChallenge: React.FC<WordTileChallengeProps> = ({
           <p className="text-base font-bold italic text-[var(--text-secondary)] leading-relaxed">
             {card.english}
           </p>
-          {/* Only show audio after answer is checked — hearing it before gives away the answer */}
+          {/* Only show audio after answer is checked – hearing it before gives away the answer */}
           {checkResult && (
             <button
               onClick={handlePlayAudio}
@@ -180,7 +180,7 @@ const WordTileChallenge: React.FC<WordTileChallengeProps> = ({
         </div>
       </div>
 
-      {/* Feedback — clean text only */}
+      {/* Feedback – clean text only */}
       <div className="h-14 flex items-center justify-center">
         {verdict === 'exact' && (
           <p className="text-sm font-black text-emerald-500 animate-fade-in">Correct</p>

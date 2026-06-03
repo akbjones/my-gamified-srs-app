@@ -11,7 +11,7 @@
  * Tips are picked deterministically (round-robin across matching cards
  * by their sorted position in the deck) so the same card always gets
  * the same tip on re-runs, AND different cards matching the same
- * pattern get different variants — preventing the kind of copy-paste
+ * pattern get different variants – preventing the kind of copy-paste
  * we already cleaned up.
  *
  * Run:
@@ -49,7 +49,7 @@ for (const lang of langs) {
 
   const patternPath = path.join(__dirname, cfg.patterns);
   if (!fs.existsSync(patternPath)) {
-    console.log(`${lang.padEnd(11)} (no patterns file yet — skipped)`);
+    console.log(`${lang.padEnd(11)} (no patterns file yet – skipped)`);
     continue;
   }
   // Clear require cache so we always re-read patterns
@@ -108,10 +108,10 @@ for (const lang of langs) {
   totals.byLang[lang] = langStats;
 
   if (APPLY && touched > 0) {
-    // Write back — only the cards we updated. We mutated in place inside the deck.
+    // Write back – only the cards we updated. We mutated in place inside the deck.
     fs.writeFileSync(cfg.deck, JSON.stringify(deck, null, 2) + '\n');
   }
 }
 
 console.log(`\nTOTAL: filled ${totals.matched}, unmatched ${totals.unmatched}`);
-if (!APPLY) console.log('(dry run — pass --apply to write changes)');
+if (!APPLY) console.log('(dry run – pass --apply to write changes)');

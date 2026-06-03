@@ -10,7 +10,7 @@ export interface DictEntry {
 
 // Lookup helper: strips punctuation, lowercases, tries base forms
 export function lookupWord(word: string): DictEntry | null {
-  const clean = word.toLowerCase().replace(/[.,!?;:\"\"""\u2018\u2019()—–\-]/g, '').trim();
+  const clean = word.toLowerCase().replace(/[.,!?;:\"\"""\u2018\u2019()––\-]/g, '').trim();
   if (!clean) return null;
 
   // Direct match
@@ -25,7 +25,7 @@ export function lookupWord(word: string): DictEntry | null {
     // Try the part before (c'è: c → che/ci, but usually after part resolves)
     const beforeApo = parts[0];
     if (beforeApo && dictionary[beforeApo]) return dictionary[beforeApo];
-    // Common elision prefixes — try reconstructing full forms
+    // Common elision prefixes – try reconstructing full forms
     const elisionMap: Record<string, string[]> = {
       'l': ['lo', 'la', 'il'],
       'd': ['di', 'da'],

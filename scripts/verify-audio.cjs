@@ -17,7 +17,7 @@ function normalize(t) {
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[¿¡.,!?;:"""''…—–\-()[\]{}]/g, '')
+    .replace(/[¿¡.,!?;:"""''…––\-()[\]{}]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -55,9 +55,9 @@ for (const id of sampleIds) {
   const exists = fs.existsSync(audioPath);
 
   if (!exists) {
-    // No audio file — expected for expansion cards
+    // No audio file – expected for expansion cards
     console.log(`ID ${id}: "${card.target.substring(0, 55)}"`);
-    console.log(`  Audio: ${card.audio} — NOT ON DISK (TTS fallback)`);
+    console.log(`  Audio: ${card.audio} – NOT ON DISK (TTS fallback)`);
     console.log(`  Expected old source: ${expectedOld ? expectedOld.audio : 'N/A (new card)'}`);
     console.log('');
     noAudio++;
@@ -65,8 +65,8 @@ for (const id of sampleIds) {
   }
 
   if (!expectedOld) {
-    // File exists but no old match — shouldn't happen after remap
-    console.log(`ID ${id}: "${card.target.substring(0, 55)}" — ⚠️ FILE EXISTS BUT NO OLD MATCH`);
+    // File exists but no old match – shouldn't happen after remap
+    console.log(`ID ${id}: "${card.target.substring(0, 55)}" – ⚠️ FILE EXISTS BUT NO OLD MATCH`);
     console.log('');
     incorrect++;
     continue;

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * validate-deck.cjs — Cross-language deck validator
+ * validate-deck.cjs – Cross-language deck validator
  *
  * Run after generating/merging any language deck to catch skew early.
  * Uses Spanish as the reference shape (node counts, tag distribution).
@@ -62,7 +62,7 @@ function validate(langDir, refDeck) {
   let warnings = 0;
 
   console.log(`\n${'═'.repeat(60)}`);
-  console.log(`  ${langDir.toUpperCase()} — ${deck.length} cards`);
+  console.log(`  ${langDir.toUpperCase()} – ${deck.length} cards`);
   console.log(`${'═'.repeat(60)}`);
 
   // ── 1. Total card count ──
@@ -100,7 +100,7 @@ function validate(langDir, refDeck) {
       console.log(`  ❌ ${g}: ${(pct*100).toFixed(1)}% (min ${GOAL_PCT_MIN*100}%)`);
       errors++;
     } else if (pct > GOAL_PCT_MAX) {
-      console.log(`  ❌ ${g}: ${(pct*100).toFixed(1)}% (max ${GOAL_PCT_MAX*100}%) — over-tagged!`);
+      console.log(`  ❌ ${g}: ${(pct*100).toFixed(1)}% (max ${GOAL_PCT_MAX*100}%) – over-tagged!`);
       errors++;
     } else {
       console.log(`  ✅ ${g}: ${(pct*100).toFixed(1)}%`);
@@ -164,7 +164,7 @@ function validate(langDir, refDeck) {
 
   // ── Summary ──
   console.log(`\n  Result: ${errors} errors, ${warnings} warnings`);
-  if (errors > 0) console.log(`  🔴 FAIL — needs fixing before release`);
+  if (errors > 0) console.log(`  🔴 FAIL – needs fixing before release`);
   else if (warnings > 0) console.log(`  🟡 PASS with warnings`);
   else console.log(`  🟢 PASS`);
 

@@ -4879,7 +4879,7 @@ function cleanWord(word: string): string {
   if (!word) return '';
   return word
     // Preserve hyphens (по-русски, из-за, etc.)
-    .replace(/[.,!?;:"""''«»()—–…\d]/g, '')
+    .replace(/[.,!?;:"""''«»()––…\d]/g, '')
     .trim()
     .toLowerCase();
 }

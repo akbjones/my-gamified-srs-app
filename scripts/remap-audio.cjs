@@ -28,7 +28,7 @@ function normalize(text) {
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[¿¡.,!?;:"""''…—–\-()[\]{}]/g, '')
+    .replace(/[¿¡.,!?;:"""''…––\-()[\]{}]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -146,7 +146,7 @@ function main() {
     console.log(`\n✅ Done! quest-audio now has ${finalCount} Spanish audio files (matched to new deck IDs)`);
     console.log(`   ${unmatched + fileMissing} cards will use TTS fallback`);
   } else {
-    console.log('\n❌ No matches found — something went wrong. Staging dir left for inspection.');
+    console.log('\n❌ No matches found – something went wrong. Staging dir left for inspection.');
   }
 }
 

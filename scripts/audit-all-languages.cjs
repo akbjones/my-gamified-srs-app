@@ -44,7 +44,7 @@ const BASE = path.join(__dirname, '..', 'src', 'data');
 
 // ── Helpers ─────────────────────────────────────────────────────
 function cleanWord(word) {
-  return word.replace(/[.,!?;:"""''()—–\-…¿¡«»\[\]{}]/g, '').trim().toLowerCase();
+  return word.replace(/[.,!?;:"""''()––\-…¿¡«»\[\]{}]/g, '').trim().toLowerCase();
 }
 
 function countDictEntries(code) {
@@ -264,7 +264,7 @@ function printResults(allResults) {
   const W = 100;
 
   console.log('\n' + '═'.repeat(W));
-  console.log('  CROSS-LANGUAGE QUALITY AUDIT — ' + new Date().toISOString().slice(0, 10));
+  console.log('  CROSS-LANGUAGE QUALITY AUDIT – ' + new Date().toISOString().slice(0, 10));
   console.log('═'.repeat(W));
 
   let totalPasses = 0;
@@ -273,7 +273,7 @@ function printResults(allResults) {
   for (const r of allResults) {
     const status = r.pass ? '✅ PASS' : '❌ FAIL';
     console.log(`\n${'─'.repeat(W)}`);
-    console.log(`  ${r.name.toUpperCase()} (${r.code}) — ${status}`);
+    console.log(`  ${r.name.toUpperCase()} (${r.code}) – ${status}`);
     console.log(`${'─'.repeat(W)}`);
 
     for (const [key, check] of Object.entries(r.checks)) {

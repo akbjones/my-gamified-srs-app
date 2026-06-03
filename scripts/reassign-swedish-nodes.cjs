@@ -5,7 +5,7 @@
  * Strategy:
  * 1. The 5 renamed theme nodes (01, 06, 07, 12, 17) had thematic content
  *    that now needs grammar-based reassignment.
- * 2. The other 30 nodes already have grammar-appropriate cards — keep those.
+ * 2. The other 30 nodes already have grammar-appropriate cards – keep those.
  * 3. Score cards from ALL nodes, but only force-reassign the 5 renamed nodes.
  *    For the other 30, only move a card if it scores drastically better elsewhere.
  * 4. After initial pass, rebalance to ensure 80–200 cards per node.
@@ -31,7 +31,7 @@ const RENAMED_NODES = new Set(['node-01', 'node-06', 'node-07', 'node-12', 'node
 // ── Helpers ──────────────────────────────────────────────────────────────
 
 function words(text) {
-  return text.replace(/[.,!?;:'"()\-–—…«»""'']/g, ' ').split(/\s+/).filter(Boolean);
+  return text.replace(/[.,!?;:'"()\-––…«»""'']/g, ' ').split(/\s+/).filter(Boolean);
 }
 
 function countWords(text, re) {
@@ -55,7 +55,7 @@ function scoreCard(card) {
   const s = (n, pts) => { scores[n] += pts; };
 
   // ═══════════════════════════════════════════════════════════════════════
-  // GRAMMAR TIP — strongest signal (20 pts)
+  // GRAMMAR TIP – strongest signal (20 pts)
   // ═══════════════════════════════════════════════════════════════════════
   if (g) {
     if (/\bpronoun|\bpresent\s+tense/.test(g) && !/perfect|perfekt/.test(g)) s('node-01', 20);
@@ -95,7 +95,7 @@ function scoreCard(card) {
   }
 
   // ═══════════════════════════════════════════════════════════════════════
-  // SWEDISH MORPHOLOGY (target text) — 6–12 pts per feature
+  // SWEDISH MORPHOLOGY (target text) – 6–12 pts per feature
   // ═══════════════════════════════════════════════════════════════════════
 
   // ── Present tense: -r ending on verbs ──
@@ -325,7 +325,7 @@ deck.forEach((card, i) => {
   const origScore = scores[origNode] || 0;
 
   if (RENAMED_NODES.has(origNode)) {
-    // Card is in a renamed node — MUST reassign based on grammar
+    // Card is in a renamed node – MUST reassign based on grammar
     if (bestScore > 0) {
       if (bestNode !== origNode) {
         if (sampleChanges.length < 50) {
@@ -339,10 +339,10 @@ deck.forEach((card, i) => {
         phase1Changes++;
       }
     } else {
-      // No strong signal — keep in original (now grammar-named) node
+      // No strong signal – keep in original (now grammar-named) node
     }
   } else {
-    // Card is in an unchanged grammar node — only move if MUCH better elsewhere
+    // Card is in an unchanged grammar node – only move if MUCH better elsewhere
     // and original score is weak (< 3)
     if (origScore < 3 && bestScore >= origScore + 12 && bestNode !== origNode) {
       if (sampleChanges.length < 50) {

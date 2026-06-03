@@ -63,7 +63,7 @@ const FUNCTION_WORDS = {
   "aujourd'hui": 'today', 'hier': 'yesterday',
   'demain': 'tomorrow', 'maintenant': 'now',
 
-  // Auxiliaries — être
+  // Auxiliaries – être
   'suis': 'am', 'es': 'are (informal)', 'est': 'is',
   'sommes': 'are (we)', 'êtes': 'are (you)', 'sont': 'are (they)',
   'étais': 'was (I/you)', 'était': 'was (he/she)',
@@ -71,7 +71,7 @@ const FUNCTION_WORDS = {
   'serai': 'will be (I)', 'sera': 'will be (he/she)',
   'seront': 'will be (they)',
 
-  // Auxiliaries — avoir
+  // Auxiliaries – avoir
   'ai': 'have (I)', 'as': 'have (you)', 'a': 'has',
   'avons': 'have (we)', 'avez': 'have (you pl.)', 'ont': 'have (they)',
   'avais': 'had (I/you)', 'avait': 'had (he/she)',
@@ -79,28 +79,28 @@ const FUNCTION_WORDS = {
   'aurai': 'will have (I)', 'aura': 'will have (he/she)',
   'auront': 'will have (they)',
 
-  // Common verb forms — faire
+  // Common verb forms – faire
   'fais': 'do, make (I/you)', 'fait': 'does, makes',
   'faisons': 'do, make (we)', 'faites': 'do, make (you pl.)',
   'font': 'do, make (they)',
 
-  // Common verb forms — aller
+  // Common verb forms – aller
   'vais': 'go (I)', 'vas': 'go (you)', 'va': 'goes',
   'allons': 'go (we)', 'allez': 'go (you pl.)', 'vont': 'go (they)',
 
-  // Common verb forms — pouvoir
+  // Common verb forms – pouvoir
   'peux': 'can (I/you)', 'peut': 'can (he/she)',
   'pouvons': 'can (we)', 'peuvent': 'can (they)',
 
-  // Common verb forms — devoir
+  // Common verb forms – devoir
   'dois': 'must (I/you)', 'doit': 'must (he/she)',
   'devons': 'must (we)', 'doivent': 'must (they)',
 
-  // Common verb forms — vouloir
+  // Common verb forms – vouloir
   'veux': 'want (I/you)', 'veut': 'wants',
   'voulons': 'want (we)', 'veulent': 'want (they)',
 
-  // Common verb forms — savoir
+  // Common verb forms – savoir
   'sais': 'know (I/you)', 'sait': 'knows',
   'savons': 'know (we)', 'savent': 'know (they)',
 };
@@ -381,7 +381,7 @@ async function main() {
     googleProcessed[key] = { text: result.text, flagged: result.flagged, flagReasons: result.flagReasons };
   }
 
-  // Step 4: Lemma copy — collect base translations, then copy to inflected forms
+  // Step 4: Lemma copy – collect base translations, then copy to inflected forms
   console.log('Applying lemma copy...');
   const lemmaTranslations = {};
   let lemmaCopyCount = 0;
@@ -452,7 +452,7 @@ async function main() {
   const shuffled = [...results].sort(() => Math.random() - 0.5);
   const sample = shuffled.slice(0, 200);
 
-  let md = `# French Dictionary Google Rebuild — Preview (200 random samples)\n\n`;
+  let md = `# French Dictionary Google Rebuild – Preview (200 random samples)\n\n`;
   md += `**Date:** ${new Date().toISOString().split('T')[0]}\n`;
   md += `**Total entries:** ${results.length}\n`;
   md += `**Changed:** ${changedCount}\n`;

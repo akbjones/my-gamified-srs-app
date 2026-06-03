@@ -160,12 +160,12 @@ const node02Cards = [
 ];
 
 // ─────────────────────────────────────────────────────────────
-// NODE-12: Past contrast — preterite vs imperfect (+18 cards)
+// NODE-12: Past contrast – preterite vs imperfect (+18 cards)
 // ─────────────────────────────────────────────────────────────
 
 const node12Cards = [
   { target: "Mientras llovía, llegamos al hotel.", english: "While it was raining, we arrived at the hotel.", tags: ["travel", "general"], grammar: "Imperfect (llovía) for background weather + preterite (llegamos) for completed action." },
-  { target: "Cuando era niño, vivía cerca del mar.", english: "When I was a child, I lived near the sea.", tags: ["family", "general"], grammar: "Both imperfect: era + vivía. Habitual past — describes how things used to be." },
+  { target: "Cuando era niño, vivía cerca del mar.", english: "When I was a child, I lived near the sea.", tags: ["family", "general"], grammar: "Both imperfect: era + vivía. Habitual past – describes how things used to be." },
   { target: "Estudiaba en la biblioteca cuando sonó mi teléfono.", english: "I was studying in the library when my phone rang.", tags: ["work", "general"], grammar: "Imperfect (estudiaba) for ongoing action + preterite (sonó) for sudden interruption." },
   { target: "De repente se apagaron las luces y todos gritaron.", english: "Suddenly the lights went out and everyone screamed.", tags: ["general", "travel"], grammar: "\"De repente\" triggers preterite: both actions (apagaron, gritaron) are sudden, completed events." },
   { target: "Mientras caminábamos por la playa, encontramos unas conchas.", english: "While we were walking on the beach, we found some shells.", tags: ["travel", "family"], grammar: "Imperfect (caminábamos) for background + preterite (encontramos) for the specific event." },
@@ -176,7 +176,7 @@ const node12Cards = [
   { target: "Hacía mucho sol cuando salimos de excursión.", english: "It was very sunny when we went on the excursion.", tags: ["travel", "general"], grammar: "Imperfect (hacía) for weather backdrop + preterite (salimos) for the specific departure." },
   { target: "Cuando tenía veinte años, viajé a México por primera vez.", english: "When I was twenty, I traveled to Mexico for the first time.", tags: ["travel", "general"], grammar: "Imperfect (tenía) for age/background + preterite (viajé) for the one-time event." },
   { target: "Mientras esperaba el autobús, vi a un viejo amigo.", english: "While I was waiting for the bus, I saw an old friend.", tags: ["general", "travel"], grammar: "Imperfect (esperaba) for ongoing wait + preterite (vi) for the sudden encounter." },
-  { target: "De repente el perro salió corriendo y cruzó la calle.", english: "Suddenly the dog ran out and crossed the street.", tags: ["general", "family"], grammar: "\"De repente\" + two preterites (salió, cruzó) — both sudden completed actions." },
+  { target: "De repente el perro salió corriendo y cruzó la calle.", english: "Suddenly the dog ran out and crossed the street.", tags: ["general", "family"], grammar: "\"De repente\" + two preterites (salió, cruzó) – both sudden completed actions." },
   { target: "Cuando era joven, quería ser médico.", english: "When I was young, I wanted to be a doctor.", tags: ["family", "work"], grammar: "Both imperfect: era + quería. Describes a past desire that lasted over time." },
   { target: "Mientras leía el periódico, alguien tocó la puerta.", english: "While I was reading the newspaper, someone knocked on the door.", tags: ["general", "family"], grammar: "Imperfect (leía) for ongoing activity + preterite (tocó) for the interruption." },
   { target: "Ya estaba dormido cuando llegó mi esposa.", english: "I was already asleep when my wife arrived.", tags: ["family", "general"], grammar: "\"Ya\" + imperfect (estaba) for existing state + preterite (llegó) for arrival." },

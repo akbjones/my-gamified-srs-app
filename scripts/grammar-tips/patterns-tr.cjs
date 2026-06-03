@@ -1,4 +1,4 @@
-/** Turkish grammar-tip patterns — deeply tailored to the agglutinative shock for English speakers. */
+/** Turkish grammar-tip patterns – deeply tailored to the agglutinative shock for English speakers. */
 module.exports = [
 
   // ── Verb at the end ──
@@ -23,7 +23,7 @@ module.exports = [
       "`-iyor` = 'am/is -ing' (continuous): `geliyorum` (I'm coming), `çalışıyor` (he's working). Person suffix after: -um (I), -sun (you), -uz (we), -sunuz (you-pl), -lar (they).",
       "Vowel harmony shifts the suffix: `-iyor` after front-vowel root, `-uyor` after rounded back vowel, `-ıyor` after back unrounded. `Gel-iyor`, `gör-üyor`, `kal-ıyor`, `bul-uyor`.",
       "`-iyor` covers BOTH 'I am doing now' AND 'I do generally' in many contexts. Turkish doesn't sharply split habitual from continuous like English does.",
-      "Decoding a long verb? Find `-iyor` first — that's your anchor. Then trace back to the root (left) and forward to the person ending (right). Layered like an onion.",
+      "Decoding a long verb? Find `-iyor` first – that's your anchor. Then trace back to the root (left) and forward to the person ending (right). Layered like an onion.",
     ],
   },
 
@@ -47,9 +47,9 @@ module.exports = [
     match: t => /\w+(de|da|te|ta)\b/i.test(t),
     tips: [
       "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back).",
-      "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book — kitap ends in p), `arabasta`? no, `arabada`.",
+      "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`.",
       "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly.",
-      "Locative doesn't make a noun definite. `Okulda öğrenci var` = 'there is a student at the school' — the locative doesn't add 'the'. Definiteness comes from context.",
+      "Locative doesn't make a noun definite. `Okulda öğrenci var` = 'there is a student at the school' – the locative doesn't add 'the'. Definiteness comes from context.",
     ],
   },
 
@@ -60,7 +60,7 @@ module.exports = [
     match: t => /\w+(den|dan|ten|tan)\b/i.test(t),
     tips: [
       "`-den/-dan` = 'from / out of / through': `evden` (from home), `İstanbul'dan` (from Istanbul), `pencereden` (through the window). Vowel harmony rules.",
-      "Hardening: after voiceless consonants, the suffix becomes `-ten/-tan`. `Kitaptan` (from the book — kitap ends in p), `evdan`? no, `evden`.",
+      "Hardening: after voiceless consonants, the suffix becomes `-ten/-tan`. `Kitaptan` (from the book – kitap ends in p), `evdan`? no, `evden`.",
       "Ablative isn't just physical 'from'. It marks the reason in 'because of': `soğuktan üşüdüm` (I got cold because of the cold). Also the standard in comparisons: `senden büyük` (bigger than you).",
       "After verb stems, -den/-dan makes a gerund-like noun: `gelmekten` (from coming), used with verbs like `vazgeçmek` (to give up). 'I gave up coming' = `gelmekten vazgeçtim`.",
     ],
@@ -73,7 +73,7 @@ module.exports = [
     match: t => /\w+(ye|ya|e|a)\b\s+(gidiyor|gitti|geliyor|geldi|ver|veriyor|söyl|yaz|gönder)/i.test(t),
     tips: [
       "Dative `-e/-a` = 'to / toward': `eve` (to home), `okula` (to school). Mandatory with motion verbs: `eve gidiyorum` (I'm going home).",
-      "After a vowel, insert a buffer 'y': `kapıya` (to the door — kapı + ya). Turkish hates back-to-back vowels.",
+      "After a vowel, insert a buffer 'y': `kapıya` (to the door – kapı + ya). Turkish hates back-to-back vowels.",
       "Dative also goes with verbs that take 'to' indirectly: `söylemek` (to tell to), `vermek` (to give to), `yardım etmek` (to help). The recipient ends in -e/-a.",
       "Time expressions: `saat üçe` (by three o'clock). The deadline takes dative. Turkish 'by 3' = 'to 3'.",
     ],
@@ -85,7 +85,7 @@ module.exports = [
     priority: 75,
     match: t => /\w+(im|ım|um|üm|in|ın|un|ün|si|sı|su|sü|imiz|ımız|umuz|ümüz|iniz|ınız|unuz|ünüz|leri|ları)\b/i.test(t),
     tips: [
-      "Possession is baked into the noun: `evim` (my house), `evin` (your house), `evi` (his/her house). No separate 'my', 'your', etc. — just suffix the owner onto the thing.",
+      "Possession is baked into the noun: `evim` (my house), `evin` (your house), `evi` (his/her house). No separate 'my', 'your', etc. – just suffix the owner onto the thing.",
       "Person endings: -im (my), -in (your), -i (his/her), -imiz (our), -iniz (your pl), -leri (their). Vowel harmony picks the right shape: -ım/-um/-üm after back/rounded roots.",
       "Buffer 's' after vowel-ending nouns: `araba` → `arabası` (his/her car). 'a' meets 'i' so 's' breaks them apart. Same for `kutu → kutusu`.",
       "You CAN add a separate 'my'/'your' word for emphasis: `benim evim` (MY house). The owner-pronoun is optional; the suffix is mandatory.",
@@ -113,7 +113,7 @@ module.exports = [
     tips: [
       "Yes/no questions use a separate particle: `mi / mı / mu / mü` (vowel harmony). It floats AFTER the questioned word: `Geliyor musun?` (Are you coming?).",
       "Person suffix attaches to `mi`, not the verb: `gidecek misin?` (will you go?), NOT `gideceksin mi`. The question particle steals the person ending.",
-      "Spacing matters: write `mi` SEPARATELY from the verb. Computer keyboards make it tempting to glue them — don't. `geliyor mu` two words, `geliyormusun` is broken.",
+      "Spacing matters: write `mi` SEPARATELY from the verb. Computer keyboards make it tempting to glue them – don't. `geliyor mu` two words, `geliyormusun` is broken.",
       "Picking the form: harmonise with the last vowel of the question target. After 'a/ı' → mı, 'e/i' → mi, 'o/u' → mu, 'ö/ü' → mü.",
     ],
   },
@@ -139,7 +139,7 @@ module.exports = [
     tips: [
       "Future tense `-ecek/-acak` + person suffix: `geleceğim` (I will come), `çalışacaksın` (you will work). Vowel harmony picks -ecek (front) or -acak (back).",
       "Spelling rule: `k` softens to `ğ` between vowels. `-ecek + -im` would give `-ecekim`, but you write `-eceğim`. Pronounced almost identically; spelling reflects the soft k.",
-      "Future doesn't always mean a fixed plan. It can express prediction, intention, even uncertainty: `yağmur yağacak` (it will rain — confident), `umarım gelecek` (I hope she'll come).",
+      "Future doesn't always mean a fixed plan. It can express prediction, intention, even uncertainty: `yağmur yağacak` (it will rain – confident), `umarım gelecek` (I hope she'll come).",
       "Future + question: `gelecek misin?` (will you come?). The `mi` question particle takes the person ending here.",
     ],
   },
@@ -152,8 +152,8 @@ module.exports = [
     tips: [
       "`var` = 'there is/are', `yok` = 'there isn't/aren't'. No 'to be' needed. `Sınıfta üç kişi var` (there are three people in the class). Just slap `var` at the end.",
       "Past forms: `vardı` (there was), `yoktu` (there wasn't). Future: `olacak` (will be). The bare `var/yok` covers only present.",
-      "Possession 'I have X': use locative + var. `Bende kalem var` (I have a pen — lit. 'at me a pen there is'). Turkish has no 'have' verb; it borrows `var`.",
-      "Combined with the possessive: `arabam var` (I have a car — 'my-car there is'). Different structure than the locative form, both valid.",
+      "Possession 'I have X': use locative + var. `Bende kalem var` (I have a pen – lit. 'at me a pen there is'). Turkish has no 'have' verb; it borrows `var`.",
+      "Combined with the possessive: `arabam var` (I have a car – 'my-car there is'). Different structure than the locative form, both valid.",
     ],
   },
 
@@ -187,9 +187,9 @@ module.exports = [
     priority: 80,
     match: t => /\w+(yi|yı|yu|yü|i|ı|u|ü)\b\s+\w+(yorum|yorsun|yor|du|dü|cek)/i.test(t),
     tips: [
-      "Definite direct objects take accusative -i (+ harmony, + buffer y after vowels): `kitabı okuyorum` (I'm reading the book — specific). `Kitap okuyorum` = 'I'm reading a book' (any book).",
+      "Definite direct objects take accusative -i (+ harmony, + buffer y after vowels): `kitabı okuyorum` (I'm reading the book – specific). `Kitap okuyorum` = 'I'm reading a book' (any book).",
       "No accusative = indefinite. Adding accusative = 'the / this specific one'. Turkish distinguishes 'a' vs 'the' through this suffix, not through articles.",
-      "Buffer y after vowel-final stems: `kapı + yı → kapıyı` (the door — acc). Without the y, the vowels would crash together.",
+      "Buffer y after vowel-final stems: `kapı + yı → kapıyı` (the door – acc). Without the y, the vowels would crash together.",
       "Pronouns have fixed accusative forms: `beni` (me), `seni` (you), `onu` (him/her/it). Memorise; the rule of -i + harmony still holds.",
     ],
   },
@@ -214,7 +214,7 @@ module.exports = [
     tips: [
       "`-(y)abilir/-(y)ebilir` = 'can / may': `gelebilirim` (I can come), `görebilirsin` (you can see). Stacks onto the root: root + a-/-e + bilir + person.",
       "`-malı/-meli` = 'must / should': `gitmeliyim` (I must go), `çalışmalısın` (you must work). Strong obligation; for softer 'should' use `gerekiyor` patterns.",
-      "Negative ability: `gelemem` (I can't come — gel + e + me + m). The ability suffix wraps around the negation; word builds out from the root.",
+      "Negative ability: `gelemem` (I can't come – gel + e + me + m). The ability suffix wraps around the negation; word builds out from the root.",
     ],
   },
 
@@ -226,7 +226,7 @@ module.exports = [
     tips: [
       "`-ken` = 'while X-ing': `çocukken` (while a child), `yürürken` (while walking). Attaches to nouns, adjectives, or verb-progressive forms.",
       "Tells background events: `eve geliyorken arkadaşımı gördüm` = 'while coming home, I saw my friend'. Sets up the scene for the main action.",
-      "After vowels, insert 'y': `gelirken` (while coming — gelir + ken). After consonants, just stick `-ken` on.",
+      "After vowels, insert 'y': `gelirken` (while coming – gelir + ken). After consonants, just stick `-ken` on.",
     ],
   },
 
@@ -260,9 +260,9 @@ module.exports = [
     priority: 55,
     match: t => /\w+(lik|lık|luk|lük)\b/i.test(t),
     tips: [
-      "`-lik` makes abstract nouns from words: `iyi` (good) → `iyilik` (goodness), `çocuk` (child) → `çocukluk` (childhood). Highly productive — slap on any adjective or noun.",
+      "`-lik` makes abstract nouns from words: `iyi` (good) → `iyilik` (goodness), `çocuk` (child) → `çocukluk` (childhood). Highly productive – slap on any adjective or noun.",
       "Also means 'place for X' or 'set of X': `kitap` (book) → `kitaplık` (bookshelf). Vowel harmony picks the right form.",
-      "Combines into long words: `arkadaş + lık → arkadaşlık` (friendship). Decoding tip: if you see -lik at the end of a long word, peel it off — the rest is the concrete root.",
+      "Combines into long words: `arkadaş + lık → arkadaşlık` (friendship). Decoding tip: if you see -lik at the end of a long word, peel it off – the rest is the concrete root.",
     ],
   },
 
@@ -300,7 +300,7 @@ module.exports = [
     ],
   },
 
-  // ── SOV word order — verb at the very end ──────────────────
+  // ── SOV word order – verb at the very end ──────────────────
   {
     id: 'tr-sov-order',
     priority: 50,

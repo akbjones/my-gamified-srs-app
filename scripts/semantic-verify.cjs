@@ -1,5 +1,5 @@
 /**
- * semantic-verify.cjs — Verify semicolon-containing Portuguese dictionary entries
+ * semantic-verify.cjs – Verify semicolon-containing Portuguese dictionary entries
  * by re-translating via Google Translate and comparing semantically.
  *
  * Usage: PATH="/opt/homebrew/bin:$PATH" node scripts/semantic-verify.cjs [--dry-run]
@@ -249,7 +249,7 @@ const VERB_LEMMA = {
   'happened': 'happen', 'happens': 'happen', 'happening': 'happen',
 };
 
-/** Lemmatize a word — irregular lookup, then strip common suffixes */
+/** Lemmatize a word – irregular lookup, then strip common suffixes */
 function lemmatize(word) {
   const w = word.toLowerCase();
   if (VERB_LEMMA[w]) return VERB_LEMMA[w];
@@ -503,7 +503,7 @@ const MANUAL_OVERRIDES = {
   // Verb forms of conseguir (to manage/achieve/be able to)
   'conseguia': 'to manage; achieve',
   'conseguisse': 'to manage; achieve',
-  // Subjunctive of ser/ir — keep multi-meaning
+  // Subjunctive of ser/ir – keep multi-meaning
   'for': 'to be; to go',
   'formos': 'to be; to go',
   // Contractions / particles
@@ -531,39 +531,39 @@ const MANUAL_OVERRIDES = {
   'deito': 'to lie down',
   // deparar (to come across)
   'deparamos': 'to come across',
-  // Verb forms of fazer (to do/make) — fizemos has wrong lemma too
+  // Verb forms of fazer (to do/make) – fizemos has wrong lemma too
   'fizemos': 'to do; make',
-  // falaria — conditional of falar
+  // falaria – conditional of falar
   'falaria': 'to speak; talk',
-  // gás — clearly a noun, not a verb!
+  // gás – clearly a noun, not a verb!
   'gás': 'gas',
   // lidar/ligar
   'lido': 'to deal; read',
   'liga': 'to call; turn on',
   'ligo': 'to call; turn on',
-  // machucada — hurt/injured
+  // machucada – hurt/injured
   'machucada': 'injured; hurt',
-  // merecer — to deserve
+  // merecer – to deserve
   'merece': 'to deserve',
-  // parecer — to seem/look like
+  // parecer – to seem/look like
   'parecida': 'similar; alike',
-  // pedir — to ask/request
+  // pedir – to ask/request
   'pediu': 'to ask; request',
-  // pegar — to grab/catch/take
+  // pegar – to grab/catch/take
   'pega': 'to grab; catch',
   'peguei': 'to grab; catch',
-  // providência — measures/steps
+  // providência – measures/steps
   'providências': 'measures; steps',
-  // saber — to know (saiba is subjunctive of saber, NOT sair!)
+  // saber – to know (saiba is subjunctive of saber, NOT sair!)
   'saiba': 'to know',
-  // servir — to serve
+  // servir – to serve
   'serve': 'to serve',
-  // tirar — to take out/remove
+  // tirar – to take out/remove
   'tira': 'to take; remove',
   'tiraram': 'to take; remove',
   'tiraria': 'to take; remove',
   'tirou': 'to take; remove',
-  // trocar — to exchange/switch
+  // trocar – to exchange/switch
   'trocou': 'to exchange; switch',
   'troquei': 'to exchange; switch',
 };
@@ -694,7 +694,7 @@ async function main() {
   // ── Verify preciso ──
   const precisoEntry = allEntries.find(e => e.word === 'preciso');
   if (precisoEntry) {
-    console.log(`\npreciso: current="${precisoEntry.en}" — verified as reasonable.`);
+    console.log(`\npreciso: current="${precisoEntry.en}" – verified as reasonable.`);
   }
 
   if (DRY_RUN) {

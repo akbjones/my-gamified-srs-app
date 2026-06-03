@@ -1,6 +1,6 @@
 /**
  * Targeted audit: only flag entries that are DEFINITELY wrong.
- * Very conservative — only catches clear-cut errors.
+ * Very conservative – only catches clear-cut errors.
  */
 const fs = require('fs');
 const path = require('path');
@@ -82,6 +82,6 @@ function auditAll() {
 const results = auditAll();
 for (const lang of Object.keys(results)) {
   for (const f of results[lang].fixes) {
-    console.log(`  ${lang} | ${f.word}: "${f.current_en}" — ${f.issue}`);
+    console.log(`  ${lang} | ${f.word}: "${f.current_en}" – ${f.issue}`);
   }
 }

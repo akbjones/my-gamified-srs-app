@@ -120,9 +120,9 @@ for (const [dir, code] of LANGS) {
 
   // Print
   if (issues.length === 0) {
-    console.log(code.toUpperCase() + ": ✅ " + sampleSize + " cards sampled — 0 issues");
+    console.log(code.toUpperCase() + ": ✅ " + sampleSize + " cards sampled – 0 issues");
   } else {
-    console.log(code.toUpperCase() + ": " + sampleSize + " cards sampled — " + issues.length + " issues:");
+    console.log(code.toUpperCase() + ": " + sampleSize + " cards sampled – " + issues.length + " issues:");
     const byType = {};
     for (const issue of issues) {
       if (!byType[issue.type]) byType[issue.type] = [];

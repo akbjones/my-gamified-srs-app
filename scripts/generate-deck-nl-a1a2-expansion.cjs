@@ -69,7 +69,7 @@ const NODES = [
       '"Hoi" and "hé" are very casual greetings used among friends; "goedemorgen/middag/avond" are more polite.',
       '"Doei" is informal for goodbye, while "tot ziens" is the standard polite form.',
       'When introducing someone, use "Dit is..." (This is...) rather than translating "Let me introduce...".',
-      '"Gefeliciteerd" is used for birthdays and any congratulations — the Dutch congratulate everyone at a party!',
+      '"Gefeliciteerd" is used for birthdays and any congratulations – the Dutch congratulate everyone at a party!',
     ],
   },
   {
@@ -190,7 +190,7 @@ const NODES = [
     tips: [
       '"Zijn" is used for states of being and movement verbs in the perfect tense: "Ik ben gegaan" (I have gone).',
       '"Hebben" appears in many fixed expressions: "honger hebben" (to be hungry), "gelijk hebben" (to be right).',
-      'Use "zijn" with adjectives about feelings: "Ik ben moe/blij/bang" — never "Ik heb moe".',
+      'Use "zijn" with adjectives about feelings: "Ik ben moe/blij/bang" – never "Ik heb moe".',
       '"Er is/er zijn" means "there is/there are": "Er is een probleem" (There is a problem).',
     ],
   },
@@ -249,7 +249,7 @@ const NODES = [
       ['Het onweer komt eraan.', 'The thunderstorm is coming.'],
     ],
     tips: [
-      'About 75% of Dutch nouns use "de" and 25% use "het" — when unsure, "de" is the safer guess.',
+      'About 75% of Dutch nouns use "de" and 25% use "het" – when unsure, "de" is the safer guess.',
       'All plural nouns use "de": "het kind" but "de kinderen", "het huis" but "de huizen".',
       'Diminutives are always "het": "de hond" becomes "het hondje", "de tafel" becomes "het tafeltje".',
       'Many abstract nouns ending in -heid, -nis, -ing use "de": de vrijheid, de kennis, de woning.',
@@ -313,7 +313,7 @@ const NODES = [
       'The V2 rule: the conjugated verb is ALWAYS in position 2. "Morgen ga ik..." not "Morgen ik ga...".',
       'Whatever comes first gets emphasis. "Gisteren..." emphasises when; "Ik..." is neutral.',
       'Time-manner-place order applies after the verb: "Ik ga morgen met de trein naar Amsterdam."',
-      'In yes/no questions the verb comes first: "Ga jij morgen naar school?" — this is called V1.',
+      'In yes/no questions the verb comes first: "Ga jij morgen naar school?" – this is called V1.',
     ],
   },
   {
@@ -372,7 +372,7 @@ const NODES = [
     ],
     tips: [
       'Dutch reverses tens and ones: 25 is "vijfentwintig" (five-and-twenty), not "twenty-five".',
-      '"Half zeven" means half past SIX (halfway TO seven) — a classic trap for English speakers.',
+      '"Half zeven" means half past SIX (halfway TO seven) – a classic trap for English speakers.',
       'For "quarter past" use "kwart over", for "quarter to" use "kwart voor".',
       'Ordinal numbers add -de (1st-19th) or -ste (20th+): eerste, tweede, derde... twintigste.',
     ],
@@ -432,10 +432,10 @@ const NODES = [
       ['Wilt u nog een rondje?', 'Would you like another round?'],
     ],
     tips: [
-      '"Koffie verkeerd" literally means "wrong coffee" — it is coffee with lots of warm milk, like a latte.',
+      '"Koffie verkeerd" literally means "wrong coffee" – it is coffee with lots of warm milk, like a latte.',
       '"Pinnen" means paying by debit card, the most common payment method in the Netherlands.',
       'When ordering, "Ik neem..." (I take) or "Mag ik..." (May I have) are both perfectly polite.',
-      '"Eet smakelijk!" is the Dutch "Bon appétit" — say it before everyone starts eating.',
+      '"Eet smakelijk!" is the Dutch "Bon appétit" – say it before everyone starts eating.',
     ],
   },
   {
@@ -554,7 +554,7 @@ const NODES = [
       ['Ze hebben alles geregeld.', 'They arranged everything.'],
     ],
     tips: [
-      'Use "zijn" for verbs of motion/change: "Ik ben gegaan/gekomen/gevallen" — use "hebben" for the rest.',
+      'Use "zijn" for verbs of motion/change: "Ik ben gegaan/gekomen/gevallen" – use "hebben" for the rest.',
       'Past participle of regular verbs: ge- + stem + -t (after t/k/f/s/ch/p) or -d: gewerkt, geleerd.',
       'Separable verbs get ge- in the middle: "opgebeld", "meegenomen", "thuisgekomen".',
       'Verbs with be-, ver-, ont-, ge-, er-, her- never add ge-: "verkocht" not "gevverkocht", "betaald" not "gebetaald".',
@@ -615,10 +615,10 @@ const NODES = [
       ['Ze vraagt het aan mij.', 'She asks me.'],
     ],
     tips: [
-      'Object pronouns: mij/me, jou/je, hem, haar, het, ons, jullie, hen/hun/ze — stressed vs unstressed forms.',
+      'Object pronouns: mij/me, jou/je, hem, haar, het, ons, jullie, hen/hun/ze – stressed vs unstressed forms.',
       '"Me" is the unstressed form of "mij": "Geef me dat" (casual) vs "Geef het aan mij" (emphatic).',
       'After prepositions, always use the stressed form: "voor mij", "met hem", "zonder haar".',
-      '"Hen" is for direct objects, "hun" for indirect — but in daily speech most Dutch people just use "ze".',
+      '"Hen" is for direct objects, "hun" for indirect – but in daily speech most Dutch people just use "ze".',
     ],
   },
   {
@@ -737,9 +737,9 @@ const NODES = [
       ['Ze identificeert zich met het hoofdpersonage.', 'She identifies with the main character.'],
     ],
     tips: [
-      'Reflexive pronouns: me, je, zich, ons, je, zich — "zich" is for hij/zij/het and zij (plural).',
+      'Reflexive pronouns: me, je, zich, ons, je, zich – "zich" is for hij/zij/het and zij (plural).',
       'Some verbs are ALWAYS reflexive in Dutch but not in English: "zich herinneren" (to remember).',
-      '"Zich voelen" means "to feel": "Ik voel me goed" — you cannot say "Ik voel goed".',
+      '"Zich voelen" means "to feel": "Ik voel me goed" – you cannot say "Ik voel goed".',
       'In questions the reflexive pronoun follows the subject: "Voel jij je beter?" (Do you feel better?).',
     ],
   },
@@ -859,7 +859,7 @@ const NODES = [
       ['We zitten rondom de tafel.', 'We sit around the table.'],
     ],
     tips: [
-      '"Op" is used for surfaces and days: "op de tafel", "op maandag" — but "in de ochtend" for parts of day.',
+      '"Op" is used for surfaces and days: "op de tafel", "op maandag" – but "in de ochtend" for parts of day.',
       '"Bij" means "at someone\'s place" or "near": "bij mijn ouders" = at my parents\' house.',
       '"Aan" often implies attachment or connection: "aan de muur" (on the wall), "aan tafel" (at the table).',
       '"In" vs "naar": "in" is static location, "naar" is direction: "Ik ben in Utrecht" vs "Ik ga naar Utrecht".',
@@ -1043,9 +1043,9 @@ const NODES = [
     ],
     tips: [
       '"Linksaf" (left), "rechtsaf" (right), "rechtdoor" (straight) are the key direction words.',
-      '"Overstappen" means to transfer/change trains — very common in Dutch railway travel.',
+      '"Overstappen" means to transfer/change trains – very common in Dutch railway travel.',
       'The OV-chipkaart is the contactless card used for all Dutch public transport.',
-      '"De spits" is rush hour — avoid travelling between 7-9 and 17-19 in the Randstad.',
+      '"De spits" is rush hour – avoid travelling between 7-9 and 17-19 in the Randstad.',
     ],
   },
   {
@@ -1164,9 +1164,9 @@ const NODES = [
       ['Geniet van elke dag!', 'Enjoy every day!'],
     ],
     tips: [
-      'The imperative is simply the verb stem: "Kom!" "Ga!" "Wacht!" — no subject is needed.',
+      'The imperative is simply the verb stem: "Kom!" "Ga!" "Wacht!" – no subject is needed.',
       'Add "maar" to soften a command: "Ga maar zitten" sounds friendly, like "Go ahead and sit down."',
-      'For "u" (formal), add -t: "Komt u binnen" — this is polite and used in shops and offices.',
+      'For "u" (formal), add -t: "Komt u binnen" – this is polite and used in shops and offices.',
       'Negative imperative: just add "niet" or "geen": "Loop niet op het gras!" (Don\'t walk on the grass!).',
     ],
   },
@@ -1226,8 +1226,8 @@ const NODES = [
     ],
     tips: [
       'After -m, add -pje: bloem->bloempje, boom->boompje, duim->duimpje.',
-      'After -ng, add -etje: ring->ringetje, woning->woninkje — note the spelling change with -ng!',
-      'Diminutives often do NOT mean "small" — "een biertje", "een broodje" are just normal-sized things.',
+      'After -ng, add -etje: ring->ringetje, woning->woninkje – note the spelling change with -ng!',
+      'Diminutives often do NOT mean "small" – "een biertje", "een broodje" are just normal-sized things.',
       'Double diminutives exist for emphasis: "een klein huisje" = a very small house (klein + -je).',
     ],
   },

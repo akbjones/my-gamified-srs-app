@@ -10,7 +10,7 @@ for (const [lang, code] of langs) {
 
   const words = new Set();
   deck.forEach(function(c) {
-    c.target.split(/[\s,;:.!?¿¡""«»()\-—–'…।॥؟]+/).forEach(function(w) {
+    c.target.split(/[\s,;:.!?¿¡""«»()\-––'…।॥؟]+/).forEach(function(w) {
       var clean = w.toLowerCase().replace(/^['']+|['']+$/g, '').replace(/[।॥]/g, '').trim();
       if (clean.length > 0 && !/^\d+$/.test(clean)) words.add(clean);
     });

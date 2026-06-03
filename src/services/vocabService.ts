@@ -5,20 +5,20 @@ import { DictEntry } from '../data/dictionary/es';
 export function tokenizeSentence(sentence: string): string[] {
   return sentence
     .toLowerCase()
-    .replace(/[¿¡.,!?;:"""''()—–\-…«»]/g, ' ')
+    .replace(/[¿¡.,!?;:"""''()––\-…«»]/g, ' ')
     .split(/\s+/)
     .filter(w => w.length > 0);
 }
 
-/** Tokenize preserving original case — returns [lowercase, original] pairs */
+/** Tokenize preserving original case – returns [lowercase, original] pairs */
 function tokenizeSentenceWithCase(sentence: string): [string, string][] {
   const raw = sentence
-    .replace(/[¿¡.,!?;:"""''()—–\-…«»]/g, ' ')
+    .replace(/[¿¡.,!?;:"""''()––\-…«»]/g, ' ')
     .split(/\s+/)
     .filter(w => w.length > 0);
   return raw.map((w, i) => {
     const lower = w.toLowerCase();
-    // First word is always capitalized (sentence start) — don't treat as proper noun
+    // First word is always capitalized (sentence start) – don't treat as proper noun
     const display = i === 0 ? lower : (w !== lower ? w : lower);
     return [lower, display];
   });

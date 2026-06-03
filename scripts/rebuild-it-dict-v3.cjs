@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Rebuild Italian dictionary v3 — uses shared pipeline utilities.
+ * Rebuild Italian dictionary v3 – uses shared pipeline utilities.
  *
  * Steps:
  *  1. Italian function word table (~180 entries, never sent to Google)
@@ -303,7 +303,7 @@ function collectDeckWords() {
       const w = tok.trim()
         .toLowerCase()
         .replace(/[''""«»\u200B\u200C\u200D\uFEFF]/g, '') // strip curly quotes, ZWJ
-        .replace(/^[—–\-]+|[—–\-]+$/g, '')                  // strip leading/trailing dashes
+        .replace(/^[––\-]+|[––\-]+$/g, '')                  // strip leading/trailing dashes
         .trim();
       if (!w) continue;
       // Skip single-char tokens (except common Italian ones)
@@ -327,7 +327,7 @@ function parseExistingDict() {
   const src = fs.readFileSync(DICT_PATH, 'utf8');
   const existing = {};
 
-  // Match entries — handle both single-quoted and double-quoted keys
+  // Match entries – handle both single-quoted and double-quoted keys
   const entryRe = /^\s*(?:'([^']+)'|"([^"]+)"):\s*\{\s*en:\s*'([^']*)',\s*ipa:\s*'([^']*)',\s*pos:\s*'([^']*)'\s*(?:,\s*lemma:\s*'([^']*)')?\s*\}/gm;
   let m;
   while ((m = entryRe.exec(src)) !== null) {

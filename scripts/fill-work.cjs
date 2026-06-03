@@ -33,7 +33,7 @@ const W = ["general", "work"];
 
 // ─── A1 CARDS (~130) ────────────────────────────────────────────
 const a1Cards = [
-  { target: "Trabajo en una oficina grande.", english: "I work in a big office.", tags: W, grammar: "Trabajar (to work) — regular -ar verb. Trabajo = I work." },
+  { target: "Trabajo en una oficina grande.", english: "I work in a big office.", tags: W, grammar: "Trabajar (to work) – regular -ar verb. Trabajo = I work." },
   { target: "¿A qué hora es la reunión?", english: "What time is the meeting?", tags: W },
   { target: "Mi jefe es muy amable.", english: "My boss is very kind.", tags: W, grammar: "Ser for permanent traits: es amable = is kind." },
   { target: "Tengo una entrevista mañana.", english: "I have an interview tomorrow.", tags: W },
@@ -215,7 +215,7 @@ const a2Cards = [
   { target: "El proyecto se retrasó dos semanas.", english: "The project was delayed by two weeks.", tags: W },
   { target: "La jefa me pidió el informe para hoy.", english: "The boss asked me for the report for today.", tags: W },
   { target: "Hablé con el departamento de ventas.", english: "I spoke with the sales department.", tags: W },
-  { target: "Se me olvidó enviar el correo.", english: "I forgot to send the email.", tags: W, grammar: "Se me olvidó: accidental se construction — 'it slipped my mind'." },
+  { target: "Se me olvidó enviar el correo.", english: "I forgot to send the email.", tags: W, grammar: "Se me olvidó: accidental se construction – 'it slipped my mind'." },
   { target: "No encontré el archivo en el servidor.", english: "I didn't find the file on the server.", tags: W },
   { target: "Me quedé hasta tarde para terminar.", english: "I stayed late to finish.", tags: W },
   { target: "Le pasé tu número al cliente.", english: "I gave your number to the client.", tags: W },
@@ -258,7 +258,7 @@ const a2Cards = [
   { target: "La oficina antigua era más pequeña.", english: "The old office was smaller.", tags: W },
   { target: "Antes no teníamos teletrabajo.", english: "Before, we didn't have remote work.", tags: W },
   { target: "Cuando empecé, no sabía usar el sistema.", english: "When I started, I didn't know how to use the system.", tags: W },
-  { target: "El proyecto me lo explicó María.", english: "María explained the project to me.", tags: W, grammar: "Me lo: double object pronouns — me (to me) + lo (it)." },
+  { target: "El proyecto me lo explicó María.", english: "María explained the project to me.", tags: W, grammar: "Me lo: double object pronouns – me (to me) + lo (it)." },
   { target: "Esa idea se la propuse yo.", english: "I was the one who proposed that idea.", tags: W },
   { target: "Te lo mando por correo ahora.", english: "I'll send it to you by email now.", tags: W },
   { target: "Nos lo confirmaron esta mañana.", english: "They confirmed it to us this morning.", tags: W },

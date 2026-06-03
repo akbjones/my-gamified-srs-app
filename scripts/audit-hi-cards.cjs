@@ -72,7 +72,7 @@ const VERB_SUFFIXES = ['ता', 'ती', 'ते', 'ना', 'ने', 'नी
 
 function tokenizeHindi(text) {
   // Remove punctuation, split on spaces
-  const cleaned = text.replace(/[।,?!;:'"()—–\-\.0-9]/g, ' ').trim();
+  const cleaned = text.replace(/[।,?!;:'"()––\-\.0-9]/g, ' ').trim();
   return cleaned.split(/\s+/).filter(w => w.length > 0);
 }
 

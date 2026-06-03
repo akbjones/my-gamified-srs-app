@@ -70,7 +70,7 @@ const stopWords = new Set([
 
 // Lookup helper mimicking the dictionary's lookupWord
 function lookupInDict(word) {
-  const clean = word.toLowerCase().replace(/[¿¡.,!?;:"""''()—–\-]/g, '').trim();
+  const clean = word.toLowerCase().replace(/[¿¡.,!?;:"""''()––\-]/g, '').trim();
   if (!clean || clean.length <= 1) return true; // skip single chars
   if (stopWords.has(clean)) return true;
   if (/^\d+$/.test(clean)) return true; // skip numbers
@@ -232,7 +232,7 @@ for (const card of batches) {
   const cardIssues = [];
 
   // 1. Dictionary coverage
-  const targetWords = card.target.split(/\s+/).map(w => w.toLowerCase().replace(/[¿¡.,!?;:"""''()—–\-]/g, '').trim()).filter(w => w.length > 1);
+  const targetWords = card.target.split(/\s+/).map(w => w.toLowerCase().replace(/[¿¡.,!?;:"""''()––\-]/g, '').trim()).filter(w => w.length > 1);
   const missingWords = targetWords.filter(w => !lookupInDict(w));
   if (missingWords.length > 0) {
     // Only flag if more than 2 words missing (many inflected forms won't match)

@@ -57,7 +57,7 @@ function scheduleNotification(opts) {
     const today = new Date().toDateString();
     const studiedToday = lastStudy === today;
 
-    // Pick notification content. Calm, factual — no guilt, no streak panic.
+    // Pick notification content. Calm, factual – no guilt, no streak panic.
     let title, body;
     const dueCards = opts.dueCards || 0;
 
@@ -81,7 +81,7 @@ function scheduleNotification(opts) {
     // Re-schedule for the next day
     scheduleNotification({
       ...opts,
-      lastStudyDate: lastStudy, // keep same — will be updated by next session
+      lastStudyDate: lastStudy, // keep same – will be updated by next session
     });
   }, safeDelay);
 }

@@ -1,11 +1,11 @@
 /**
- * Swedish Dictionary Semantic Verification — v2 (strict)
+ * Swedish Dictionary Semantic Verification – v2 (strict)
  *
  * Strategy:
  * 1. Parse ALL entries from sv.ts
  * 2. Skip function words (~140)
  * 3. Translate ALL remaining via Google (sv→en), batch 80
- * 4. Compare with STRICT overlap — zero content word match → candidate
+ * 4. Compare with STRICT overlap – zero content word match → candidate
  * 5. Apply heavy filtering to avoid false positives:
  *    - Skip verb forms where existing has infinitive (correct) and Google gave conjugated
  *    - Skip where existing is a valid synonym (semantic similarity)
@@ -41,7 +41,7 @@ const FUNCTION_WORDS = new Set([
   'upp', 'ner', 'ut', 'in', 'hem', 'bort', 'fram', 'tillbaka',
 ]);
 
-// Known synonym sets — words that are different but mean similar things
+// Known synonym sets – words that are different but mean similar things
 const SYNONYM_SETS = [
   ['shop', 'store', 'business', 'affair'],
   ['begin', 'start', 'commence'],
@@ -342,10 +342,10 @@ async function main() {
       if (isConjugatedVerbForm(c.google)) {
         // The existing infinitive is likely correct; Google translated the conjugated Swedish form
         // Only flag if the BASE meaning is different
-        // e.g. "bröt" existing="bread" google="broke" — HERE the existing is WRONG
-        // vs "betalade" existing="to pay" google="paid" — existing is correct
+        // e.g. "bröt" existing="bread" google="broke" – HERE the existing is WRONG
+        // vs "betalade" existing="to pay" google="paid" – existing is correct
         const existClean = c.existing.replace(/^to\s+/, '').trim();
-        // If existing already starts with "to " it means it has the infinitive — probably correct
+        // If existing already starts with "to " it means it has the infinitive – probably correct
         if (c.existing.startsWith('to ')) continue;
       }
     }
@@ -353,12 +353,12 @@ async function main() {
     // SKIP: entries where existing has a lemma and the word is an inflected form
     // These naturally won't match Google because Google translates the form, not the lemma
     if (c.lemma && c.lemma !== c.key) {
-      // This is an inflected form — Google will translate the form, but our dict has lemma meaning
+      // This is an inflected form – Google will translate the form, but our dict has lemma meaning
       // Only flag if meanings are VERY different (not just inflection)
       const existClean = normalize(c.existing);
       const googClean = normalize(c.google);
       // Skip if the existing meaning could be the base form of what Google returned
-      // e.g., existing="to pay", google="paid" — skip, same meaning
+      // e.g., existing="to pay", google="paid" – skip, same meaning
       if (c.pos === 'v') continue; // Skip all inflected verb forms
     }
 
@@ -381,7 +381,7 @@ async function main() {
       const existWords = getContentWords(c.existing);
       const googWords = getContentWords(c.google);
       // If Google adds "the" or pluralizes, that's expected for definite/plural Swedish forms
-      // e.g., existing="leaf" google="the leaves" — existing is base form, Google got inflected
+      // e.g., existing="leaf" google="the leaves" – existing is base form, Google got inflected
       // Only flag if completely different meaning
       const existBase = existWords.join(' ');
       const googBase = googWords.join(' ');
@@ -468,7 +468,7 @@ async function main() {
     // If neither matches, skip (ambiguous)
     if (!existRevMatch && !googRevMatch) {
       // Still include if Google gave a clear, specific answer
-      // But be conservative — skip
+      // But be conservative – skip
       continue;
     }
 
@@ -485,7 +485,7 @@ async function main() {
       continue;
     }
 
-    // Both match — ambiguous, could be synonym. Include only if very different
+    // Both match – ambiguous, could be synonym. Include only if very different
     // Skip these to be conservative
   }
 
@@ -542,7 +542,7 @@ async function main() {
 }
 
 main().then(n => {
-  console.log(`\nSWEDISH COMPLETE — ${n} fixes`);
+  console.log(`\nSWEDISH COMPLETE – ${n} fixes`);
 }).catch(err => {
   console.error('FATAL:', err);
   process.exit(1);

@@ -160,14 +160,14 @@ function validateDeck(cards, lang) {
     const leaked = hasEnglishLeakage(target, lang);
     if (leaked.length >= 2) {
       // Multiple English words in target is suspicious
-      flagged.push({ id: String(id), issue: 'MIXED', reason: `English words in target: ${leaked.join(', ')} — "${target.substring(0, 80)}"` });
+      flagged.push({ id: String(id), issue: 'MIXED', reason: `English words in target: ${leaked.join(', ')} – "${target.substring(0, 80)}"` });
       continue;
     }
     
     // Check mismatch
     const mismatchIssues = checkMismatch(target, english, lang);
     if (mismatchIssues.length > 0) {
-      flagged.push({ id: String(id), issue: 'MISMATCH', reason: mismatchIssues.join('; ') + ` — target: "${target.substring(0, 60)}" / english: "${english.substring(0, 60)}"` });
+      flagged.push({ id: String(id), issue: 'MISMATCH', reason: mismatchIssues.join('; ') + ` – target: "${target.substring(0, 60)}" / english: "${english.substring(0, 60)}"` });
     }
   }
   

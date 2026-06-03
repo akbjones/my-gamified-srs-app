@@ -112,7 +112,7 @@ Identify ANY of these issues:
 1. WRONG: Translation is incorrect/inaccurate
 2. POLYSEMY: Word has 2+ common meanings; translation only shows one. Show common meanings semicolon-separated.
 3. NO_TO: It's a verb but English doesn't have "to" prefix
-4. UNTRANSLATED: English is just the romanized form (e.g. "amit" for अमित — should be "Amit; boundless")
+4. UNTRANSLATED: English is just the romanized form (e.g. "amit" for अमित – should be "Amit; boundless")
 5. CAPITALIZED: Adjective/adverb/verb that's wrongly capitalized
 6. WRONG_POS: POS tag is wrong
 

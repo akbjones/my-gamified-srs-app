@@ -34,7 +34,7 @@ for (const [dir, code] of langs) {
   // Extract all unique words from deck
   const wordCounts = {};
   deck.forEach(function(c) {
-    c.target.split(/[\s,;:.!?¿¡""«»()\-—–'…।॥؟]+/).forEach(function(w) {
+    c.target.split(/[\s,;:.!?¿¡""«»()\-––'…।॥؟]+/).forEach(function(w) {
       const clean = w.toLowerCase().replace(/^['']+|['']+$/g, '').replace(/[।॥]/g, '').trim();
       if (clean.length > 0 && !/^\d+$/.test(clean)) {
         if (!wordCounts[clean]) wordCounts[clean] = 0;

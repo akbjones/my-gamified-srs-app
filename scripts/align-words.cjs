@@ -777,7 +777,7 @@ const SV_DICT = {
 };
 
 function cleanWord(w) {
-  return w.toLowerCase().replace(/[.,!?;:"""''()[\]{}\-–—…·\/\\«»¡¿]/g, '').trim();
+  return w.toLowerCase().replace(/[.,!?;:"""''()[\]{}\-––…·\/\\«»¡¿]/g, '').trim();
 }
 
 function processLanguage(deckPath, dict, langCode) {

@@ -11,7 +11,7 @@ const SLIDES = [
   },
   {
     title: 'Tap any word',
-    description: 'Tap any word in a sentence to see its definition, pronunciation, and grammar — instant context when you need it.',
+    description: 'Tap any word in a sentence to see its definition, pronunciation, and grammar – instant context when you need it.',
   },
   {
     title: 'Rate your knowledge',
@@ -19,7 +19,7 @@ const SLIDES = [
   },
   {
     title: 'Choose your focus',
-    description: 'Focus your vocabulary on what matters to you — travel, work, or family. Or study general vocabulary across all topics.',
+    description: 'Focus your vocabulary on what matters to you – travel, work, or family. Or study general vocabulary across all topics.',
   },
   {
     title: 'Ready to start?',
@@ -96,7 +96,7 @@ const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
 
   return (
     <div className="fixed inset-0 z-[60] flex flex-col bg-[var(--bg-primary)]">
-      {/* Skip button — safe-area top padding to stay clear of notch */}
+      {/* Skip button – safe-area top padding to stay clear of notch */}
       <div className="flex justify-end px-4 pb-2 pt-[max(1rem,env(safe-area-inset-top))]">
         <button
           onClick={onComplete}
@@ -126,7 +126,7 @@ const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
         </div>
       </div>
 
-      {/* Bottom controls — safe-area padding so home indicator doesn't cover dots */}
+      {/* Bottom controls – safe-area padding so home indicator doesn't cover dots */}
       <div className="flex flex-col items-center gap-5 px-6 pb-[max(3rem,env(safe-area-inset-bottom))]">
         {/* Dots */}
         <div className="flex gap-2">

@@ -108,7 +108,7 @@ function applyStemChange(
   return result;
 }
 
-const BOOT = [0, 1, 2, 5]; // yo, tú, él, ellos — the "boot" pattern
+const BOOT = [0, 1, 2, 5]; // yo, tú, él, ellos – the "boot" pattern
 
 interface StemChangeSpec {
   from: string;
@@ -157,7 +157,7 @@ function spellingChange(inf: string, spec: SpellingSpec, existingTenses?: Record
   const s = stem(inf);
   const override: PartialTenses = {};
 
-  // Preterite yo — apply spelling change on top of existing forms (to preserve stem changes)
+  // Preterite yo – apply spelling change on top of existing forms (to preserve stem changes)
   const basePret = existingTenses ? [...existingTenses.preterite] as Forms : [...regular(inf, 'preterite')] as Forms;
   const yoIdx = basePret[0].lastIndexOf(spec.from, s.length);
   if (yoIdx >= 0) {
@@ -165,7 +165,7 @@ function spellingChange(inf: string, spec: SpellingSpec, existingTenses?: Record
   }
   override.preterite = basePret;
 
-  // Subjunctive: all forms — apply on top of existing (preserves stem changes like e→ie)
+  // Subjunctive: all forms – apply on top of existing (preserves stem changes like e→ie)
   const baseSubj = existingTenses ? [...existingTenses.subjunctive] as Forms : regular(inf, 'subjunctive') as Forms;
   const subj = (baseSubj as string[]).map(f => {
     const idx = f.lastIndexOf(spec.from, s.length);
@@ -439,7 +439,7 @@ export function conjugate(infinitive: string): ConjugationTable | null {
     tenses = merge(tenses, stemChange(baseInf, STEM_CHANGERS[baseInf]));
   }
 
-  // Apply spelling changes (if any) — pass existing tenses so stem changes are preserved
+  // Apply spelling changes (if any) – pass existing tenses so stem changes are preserved
   if (SPELLING_CHANGERS[baseInf]) {
     tenses = merge(tenses, spellingChange(baseInf, SPELLING_CHANGERS[baseInf], tenses));
   }

@@ -275,7 +275,7 @@ for (const [lang, deckPath] of Object.entries(LANG_DECKS)) {
     }
   }
 
-  // Solution A — bump es-0001 priority so it's no longer the first card
+  // Solution A – bump es-0001 priority so it's no longer the first card
   if (lang === 'spanish') {
     const first = cards.find(c => c.id === 'es-0001');
     if (first && first.priority < 1500) {
@@ -309,4 +309,4 @@ for (const lang of Object.keys(LANG_DECKS)) {
   console.log(`${lang.padEnd(10)} ${row}`);
 }
 
-if (!APPLY) console.log('\n(dry run — pass --apply to write changes)');
+if (!APPLY) console.log('\n(dry run – pass --apply to write changes)');

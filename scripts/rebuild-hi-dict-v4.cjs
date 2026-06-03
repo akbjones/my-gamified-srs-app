@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Rebuild Hindi dictionary v4 — full-sentence validation approach.
+ * Rebuild Hindi dictionary v4 – full-sentence validation approach.
  *
  * Steps:
  *  1. Hindi function word table (300+ entries, never sent to Google)
@@ -9,7 +9,7 @@
  *  4. Google Translate ALL unique sentences via translateSentences()
  *  5. For each word, validate against sentence translations via validateAndEnrich()
  *  6. Post-process every result via postProcess() (18-rule pipeline)
- *  7. Lemma copy — verified lemmas get their base word's definition
+ *  7. Lemma copy – verified lemmas get their base word's definition
  *  8. Apply to hi.ts, preserve IPA/lemma/pos + footer (VERB_SUFFIX_PATTERNS, lookupWord, etc.)
  *  9. 100-entry random review -> scripts/output/hi-v5-review.md
  */
@@ -360,7 +360,7 @@ function collectDeckData() {
     for (const tok of tokens) {
       const w = tok.trim()
         .replace(/[''""«»\u200B\u200C\u200D\uFEFF]/g, '') // strip curly quotes, ZWJ, etc.
-        .replace(/^[—–\-]+|[—–\-]+$/g, '')                  // strip leading/trailing dashes
+        .replace(/^[––\-]+|[––\-]+$/g, '')                  // strip leading/trailing dashes
         .trim();
       if (!w) continue;
       // Only keep tokens that contain at least one Devanagari character
@@ -506,7 +506,7 @@ async function main() {
 
   console.log('\n' + stats.report());
 
-  // Step 7: Lemma copy — verified lemmas get base word's definition
+  // Step 7: Lemma copy – verified lemmas get base word's definition
   console.log('\nStep 7: Lemma copy...');
 
   // 7a: Bad lemma removal first

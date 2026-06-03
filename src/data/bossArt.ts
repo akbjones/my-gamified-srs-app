@@ -29,7 +29,7 @@ const BOSS_COLORS: string[] = [
   '#f43f5e', // 18 rose-500
   '#b91c1c', // 19 red-700
   '#7c3aed', // 20 violet-600 (app accent)
-  '#dc2626', // 21 red-600 — final boss
+  '#dc2626', // 21 red-600 – final boss
 ];
 
 // ── Per-language boss names ────────────────────────────────────

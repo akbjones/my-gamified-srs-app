@@ -96,7 +96,7 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
     const direct = conjugateFn(clean);
     if (direct) return direct;
 
-    // 2. Try the dictionary entry's lemma field — most reliable for an
+    // 2. Try the dictionary entry's lemma field – most reliable for an
     //    inflected form like "parle" → lemma "parler"
     const dictEntry = lookupFn ? lookupFn(entry.word) : null;
     if (dictEntry?.lemma) {
@@ -347,7 +347,7 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
             {allEntries.length} words encountered
           </p>
         </div>
-        {/* Export — opens a printable HTML page; user saves as PDF via browser */}
+        {/* Export – opens a printable HTML page; user saves as PDF via browser */}
         {allEntries.length > 0 && (
           <button
             onClick={() => {
@@ -407,11 +407,11 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
       </div>
       {sortMode === 'tricky' && (
         <p className="text-[10px] text-[var(--text-muted)] -mt-2 mb-3 leading-relaxed">
-          Sorted by most failed first — words you struggle with the most.
+          Sorted by most failed first – words you struggle with the most.
         </p>
       )}
 
-      {/* POS filter — horizontally scrollable chip row */}
+      {/* POS filter – horizontally scrollable chip row */}
       <div className="flex gap-1.5 mb-4 overflow-x-auto -mx-4 px-4 pb-1 scrollbar-thin">
         {([
           { key: 'all', label: 'All', color: 'border-[var(--accent)]/40 bg-[var(--accent)]/10 text-[var(--accent)]' },
@@ -454,7 +454,7 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
             {filteredMain.map(renderEntry)}
           </div>
 
-          {/* Common words — collapsed by default */}
+          {/* Common words – collapsed by default */}
           {filteredCommon.length > 0 && (
             <div className="mb-4">
               <button

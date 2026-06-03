@@ -5,15 +5,15 @@
  * Person order: я (I), ты (you), он/она (he/she), мы (we), вы (you-formal/pl), они (they)
  *
  * Russian verbs have two aspects: imperfective (ongoing) and perfective (completed).
- * This engine conjugates a single verb form — the aspect is inherent to the infinitive.
+ * This engine conjugates a single verb form – the aspect is inherent to the infinitive.
  *
  * Tenses:
- *   present      — Настоящее время (imperfective only; perfective uses future forms)
- *   past         — Прошедшее время (stem + л/ла/ло/ли)
- *   future       — Будущее время (буду + inf for impf; conjugated form for perf)
- *   imperative   — Повелительное (stem + й/и/ите)
- *   conditional  — Сослагательное (past + бы)
- *   short_part   — Краткое причастие (short participle forms)
+ *   present      – Настоящее время (imperfective only; perfective uses future forms)
+ *   past         – Прошедшее время (stem + л/ла/ло/ли)
+ *   future       – Будущее время (буду + inf for impf; conjugated form for perf)
+ *   imperative   – Повелительное (stem + й/и/ите)
+ *   conditional  – Сослагательное (past + бы)
+ *   short_part   – Краткое причастие (short participle forms)
  */
 import type { ConjugationTable } from '../../types';
 
@@ -75,7 +75,7 @@ interface IrregularData {
 
 const IRREGULARS: Record<string, IrregularData> = {
   'быть': {
-    present: ['—', '—', 'есть', '—', '—', '—'],  // rarely conjugated in present
+    present: ['–', '–', 'есть', '–', '–', '–'],  // rarely conjugated in present
     past: ['был', 'был/была', 'был/была', 'были', 'были', 'были'],
     isPerfective: false,
   },
@@ -237,14 +237,14 @@ function conjugateImperative(stem: string, infinitive: string): Forms {
 
   // Imperative doesn't have all 6 person forms, but we fill for consistency
   return [
-    '—', tyForm, '—',
-    `давайте ${infinitive}`, vyForm, '—',
+    '–', tyForm, '–',
+    `давайте ${infinitive}`, vyForm, '–',
   ];
 }
 
 function conjugateConditional(stem: string, infinitive: string): Forms {
   const past = conjugatePast(stem, infinitive);
-  return past.map(f => f === '—' ? '—' : `${f} бы`) as Forms;
+  return past.map(f => f === '–' ? '–' : `${f} бы`) as Forms;
 }
 
 // ── Main conjugation function ───────────────────────────────
@@ -269,7 +269,7 @@ export function conjugate(infinitive: string): ConjugationTable | null {
           let forms = [...irr.present];
           if (refl) {
             forms = forms.map(f => {
-              if (f === '—') return f;
+              if (f === '–') return f;
               const endsV = 'аеёиоуыэюя'.includes(f.slice(-1));
               return f + (endsV ? 'сь' : 'ся');
             });
@@ -307,7 +307,7 @@ export function conjugate(infinitive: string): ConjugationTable | null {
           const [ty, vy] = irr.imperative;
           const tyR = refl ? ty + 'ся' : ty;
           const vyR = refl ? vy + 'сь' : vy;
-          tenses[label] = ['—', tyR, '—', `давайте ${infinitive}`, vyR, '—'];
+          tenses[label] = ['–', tyR, '–', `давайте ${infinitive}`, vyR, '–'];
         } else {
           tenses[label] = conjugateImperative(stem, infinitive);
         }
@@ -377,7 +377,7 @@ export function findInfinitiveCandidates(form: string): string[] {
     }
   }
 
-  // Try present tense endings — generate ALL possible infinitives per stem
+  // Try present tense endings – generate ALL possible infinitives per stem
   // 1st conjugation endings (stem includes the thematic vowel)
   const firstConjEndings = ['ю', 'ешь', 'ет', 'ем', 'ете', 'ют'];
   // 2nd conjugation endings

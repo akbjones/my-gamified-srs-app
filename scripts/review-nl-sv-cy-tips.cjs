@@ -77,7 +77,7 @@ function reviewDutch(cards) {
     }
     // Generic present tense rule
     if (/^Dutch present tense: remove -en from the infinitive/.test(tip)) {
-      issues.push({ issue: 'repetitive', reason: "Generic present tense formation — too broad" });
+      issues.push({ issue: 'repetitive', reason: "Generic present tense formation – too broad" });
     }
     // Past tense tip on present sentence
     if (/imperfect|simple past|verleden|onvoltooid/i.test(tip)) {
@@ -131,7 +131,7 @@ function reviewSwedish(cards) {
     }
     // German comparison (irrelevant)
     if (/if you know german|parallel.*german|german.*strong.*weak/i.test(tip)) {
-      issues.push({ issue: 'irrelevant', reason: "Compares to German — not helpful for most learners" });
+      issues.push({ issue: 'irrelevant', reason: "Compares to German – not helpful for most learners" });
     }
     // Group 1 (-ar) on non-ar sentence
     if (/group 1.*\(-ar\)|group 1 verb|-ar\).*verb|verbs \(-ar\)/i.test(tip) && !/\w+ar\b/.test(sent)) {
@@ -317,7 +317,7 @@ function crossCuttingChecks(fixes, cards) {
             current_tip: tip,
             fixed_tip: '',
             issue: 'repetitive',
-            reason: `Exact tip on ${tipCards.length} cards — redundant`,
+            reason: `Exact tip on ${tipCards.length} cards – redundant`,
             sentence: c.target,
             english: c.english
           });

@@ -55,7 +55,7 @@ function extractDeckWords(langCode) {
   const wordContext = new Map(); // word -> Set of English words from cards containing it
   for (const card of deck) {
     const tokens = card.target
-      .replace(/[.,!?;:"""\u2018\u2019()—–«»\u0964\u0965/\[\]{}]/g, ' ')
+      .replace(/[.,!?;:"""\u2018\u2019()––«»\u0964\u0965/\[\]{}]/g, ' ')
       .split(/\s+/)
       .map(t => t.trim().toLowerCase())
       .filter(t => t.length > 0);
@@ -276,7 +276,7 @@ async function processKaikkiStream(langCode, neededWords, wordContext) {
       }
 
       if (bestEn) {
-        // If this word has a base word, it's an inflected form — set lemma
+        // If this word has a base word, it's an inflected form – set lemma
         const entry = { en: bestEn, ipa: bestIpa, pos: bestPos };
         if (bestBase && bestBase !== word) entry.lemma = bestBase;
         entries.set(word, entry);
@@ -348,13 +348,13 @@ async function processKaikkiStream(langCode, neededWords, wordContext) {
     for (const [word, entry] of entries) {
       if (!entry.en) { entries.delete(word); continue; }
       delete entry._base;
-      // Validate lemma references — only keep if lemma is different from the word itself
+      // Validate lemma references – only keep if lemma is different from the word itself
       if (entry.lemma === word) delete entry.lemma;
       // Ensure all verbs have "to " prefix
       if (entry.pos === 'v' && entry.en && !entry.en.startsWith('to ') && /^[a-z]/.test(entry.en)) {
         entry.en = 'to ' + entry.en;
       }
-      // Fix form-of entries with '?' pos — inherit from base if possible
+      // Fix form-of entries with '?' pos – inherit from base if possible
       if (entry.pos === '?' && entry.lemma && entries.has(entry.lemma)) {
         const baseEntry = entries.get(entry.lemma);
         if (baseEntry.pos && baseEntry.pos !== '?') entry.pos = baseEntry.pos;
@@ -467,7 +467,7 @@ function generateDictEntries(merged, langCode) {
     const safeIpa = entry.ipa.replace(/'/g, "\\'");
     const safePos = (entry.pos || '?').replace(/'/g, "\\'");
 
-    // Always quote keys to be safe — avoids issues with special chars, hyphens, accents, etc.
+    // Always quote keys to be safe – avoids issues with special chars, hyphens, accents, etc.
     const key = `'${word.replace(/'/g, "\\'")}'`;
 
     let line = `  ${key}: { en: '${safeEn}', ipa: '${safeIpa}', pos: '${safePos}'`;
@@ -500,7 +500,7 @@ async function rebuildLang(langCode) {
   // 3. Download and process kaikki.org data
   const wiktEntries = await processKaikkiStream(langCode, deckWords, wordContext);
 
-  // 4. Merge: Wiktionary only — NO fallback to old LLM-generated entries (they are unreliable)
+  // 4. Merge: Wiktionary only – NO fallback to old LLM-generated entries (they are unreliable)
   const merged = new Map();
   let wiktUsed = 0, missing = 0;
 
@@ -519,7 +519,7 @@ async function rebuildLang(langCode) {
     }
   }
 
-  // Don't include extra base words — keep dictionary lean and deck-focused
+  // Don't include extra base words – keep dictionary lean and deck-focused
 
   console.log(`  Wiktionary: ${wiktUsed} | Missing: ${missing}`);
   console.log(`  Total merged entries: ${merged.size}`);

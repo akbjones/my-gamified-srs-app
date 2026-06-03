@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Add grammar tips to Hindi deck cards that are missing them.
- * Tips are contextual — they relate to grammar, vocabulary, or cultural context
+ * Tips are contextual – they relate to grammar, vocabulary, or cultural context
  * visible in the card's target sentence.
  */
 
@@ -18,20 +18,20 @@ const cards = Array.isArray(deck) ? deck : Object.values(deck);
 
 function tipForPostpositions(t, e) {
   if (t.includes(' में ') && !t.includes('में से'))
-    return 'में = in/inside — a postposition that follows the noun: घर में (in the house).';
+    return 'में = in/inside – a postposition that follows the noun: घर में (in the house).';
   if (t.includes(' पर ') && !e.toLowerCase().includes('but'))
-    return 'पर = on/at — a postposition: मेज़ पर (on the table), स्टेशन पर (at the station).';
+    return 'पर = on/at – a postposition: मेज़ पर (on the table), स्टेशन पर (at the station).';
   if (/ से /.test(t) && (e.includes('from') || e.includes('since') || e.includes('with') || e.includes('than'))) {
     if (e.includes('than')) return 'से after a noun means "than" in comparisons: मुझसे बड़ा = bigger than me.';
     if (e.includes('since') || e.includes(' for ')) return 'से can mark the starting point in time: सुबह से = since morning.';
-    return 'से = from/by/with — a versatile postposition marking source, instrument, or comparison.';
+    return 'से = from/by/with – a versatile postposition marking source, instrument, or comparison.';
   }
   if (/ के लिए/.test(t) || / के लिये/.test(t))
     return 'के लिए = for (purpose/benefit). It is a compound postposition that follows the noun.';
   if (/ की ओर/.test(t))
-    return 'की ओर = towards — a compound postposition: स्कूल की ओर (towards school).';
+    return 'की ओर = towards – a compound postposition: स्कूल की ओर (towards school).';
   if (/ के बारे में/.test(t))
-    return 'के बारे में = about — a compound postposition: इस के बारे में (about this).';
+    return 'के बारे में = about – a compound postposition: इस के बारे में (about this).';
   if (/ के साथ/.test(t))
     return 'के साथ = with (accompaniment): दोस्तों के साथ = with friends.';
   if (/ के बाद/.test(t))
@@ -39,15 +39,15 @@ function tipForPostpositions(t, e) {
   if (/ के पहले/.test(t) || / से पहले/.test(t))
     return 'से पहले = before: सोने से पहले = before sleeping.';
   if (/ तक /.test(t) || / तक$/.test(t.trim()))
-    return 'तक = until/up to — marks a limit in time or space: शाम तक = until evening.';
+    return 'तक = until/up to – marks a limit in time or space: शाम तक = until evening.';
   if (/ के बीच/.test(t))
     return 'के बीच = between/among: दोनों के बीच = between the two.';
   if (/ के ऊपर/.test(t))
-    return 'के ऊपर = above/on top of — a compound postposition.';
+    return 'के ऊपर = above/on top of – a compound postposition.';
   if (/ के नीचे/.test(t))
-    return 'के नीचे = below/under — a compound postposition.';
+    return 'के नीचे = below/under – a compound postposition.';
   if (/ के पास/.test(t))
-    return 'के पास = near/have — also used for possession: मेरे पास किताब है (I have a book).';
+    return 'के पास = near/have – also used for possession: मेरे पास किताब है (I have a book).';
   if (/ के बिना/.test(t) || /बिना /.test(t))
     return 'बिना = without. It can precede or follow the noun: बिना पानी / पानी के बिना.';
   return null;
@@ -61,7 +61,7 @@ function tipForNe(t, e) {
     if (!words.includes('ने')) return null;
     if (e.includes('had ') || e.includes(' had'))
       return 'ने marks the agent in perfective transitive sentences. The verb agrees with the object, not the subject.';
-    return 'ने is the ergative marker — used with transitive verbs in past tense. The verb agrees with the object\'s gender/number.';
+    return 'ने is the ergative marker – used with transitive verbs in past tense. The verb agrees with the object\'s gender/number.';
   }
   return null;
 }
@@ -90,7 +90,7 @@ function tipForTense(t, e) {
   if (/ करता था/.test(t) || / करती थी/.test(t) || / करते थे/.test(t) ||
       / जाता था/.test(t) || / जाती थी/.test(t) || / जाते थे/.test(t) ||
       /ता था/.test(t) || /ती थी/.test(t) || /ते थे/.test(t)) {
-    return 'The -ता था/-ती थी/-ते थे form expresses past habitual — "used to do."';
+    return 'The -ता था/-ती थी/-ते थे form expresses past habitual – "used to do."';
   }
   // Future
   if (/ेगा/.test(t) || /ेगी/.test(t) || /ेंगे/.test(t) || /ूँगा/.test(t) || /ूँगी/.test(t)) {
@@ -104,7 +104,7 @@ function tipForTense(t, e) {
     if (t.includes('कृपया') || t.includes('कृप्या'))
       return 'कृपया + verb-इए is the polite imperative: कृपया बैठिए = please sit.';
     if (/आइए/.test(t) || /आइये/.test(t))
-      return 'आइए = please come — the polite imperative of आना.';
+      return 'आइए = please come – the polite imperative of आना.';
     return 'The -इए/-इये ending is the respectful imperative, used with आप.';
   }
   if (/ो$/.test(t.trim()) && e.toLowerCase().match(/^(come|go|sit|eat|tell|do|see|hear|take|bring)/))
@@ -128,7 +128,7 @@ function tipForNahiNa(t, e) {
   if (/ न /.test(t) && (e.includes('neither') || e.includes('nor') || e.includes('don\'t') || e.includes('not')))
     return 'न is the literary/formal negative, often in pairs: न यह, न वह (neither this nor that).';
   if (/ मत /.test(t))
-    return 'मत is the negative imperative — "don\'t": मत जाओ (don\'t go), मत करो (don\'t do it).';
+    return 'मत is the negative imperative – "don\'t": मत जाओ (don\'t go), मत करो (don\'t do it).';
   return null;
 }
 
@@ -138,13 +138,13 @@ function tipForQuestion(t, e) {
   if (/कहाँ/.test(t))
     return 'कहाँ = where. Hindi question words stay in their normal position, unlike English inversion.';
   if (/कब /.test(t) || /कब\?/.test(t))
-    return 'कब = when. Question words in Hindi stay in situ — no word-order change needed.';
+    return 'कब = when. Question words in Hindi stay in situ – no word-order change needed.';
   if (/कैसे /.test(t) || /कैसा /.test(t) || /कैसी /.test(t))
-    return 'कैसा/कैसी/कैसे = how/what kind — agrees with the noun\'s gender and number.';
+    return 'कैसा/कैसी/कैसे = how/what kind – agrees with the noun\'s gender and number.';
   if (/कौन /.test(t) || /किसने/.test(t))
     return 'कौन = who (direct), किसने = who (ergative, with ने in past tense).';
   if (/कितन/.test(t))
-    return 'कितना/कितनी/कितने = how much/many — agrees with the noun\'s gender and number.';
+    return 'कितना/कितनी/कितने = how much/many – agrees with the noun\'s gender and number.';
   if (/क्यों/.test(t))
     return 'क्यों = why. Like other question words, it stays in its natural position in the sentence.';
   return null;
@@ -183,7 +183,7 @@ function tipForChahiye(t, e) {
 
 function tipForHona(t, e) {
   if (/ होता है/.test(t) || / होती है/.test(t) || / होते हैं/.test(t))
-    return 'होता/होती/होते है = expresses general truths or habitual states — "tends to be" rather than "is right now."';
+    return 'होता/होती/होते है = expresses general truths or habitual states – "tends to be" rather than "is right now."';
   if (/ हो जा/.test(t) || / हो गय/.test(t) || / हो गई/.test(t))
     return 'हो जाना = to become (change of state): ठीक हो गया = got better, बंद हो गया = got closed.';
   return null;
@@ -201,7 +201,7 @@ function tipForPossessive(t, e) {
       return 'का/की/के = possession marker (like \'s). It agrees with the possessed noun: लड़के का घर, लड़के की किताब.';
   }
   if (/अपन/.test(t))
-    return 'अपना/अपनी/अपने = reflexive possessive — always refers back to the subject: मैं अपना काम करता हूँ.';
+    return 'अपना/अपनी/अपने = reflexive possessive – always refers back to the subject: मैं अपना काम करता हूँ.';
   return null;
 }
 
@@ -220,7 +220,7 @@ function tipForGender(t, e) {
   if (/लंबा /.test(t) || /लंबी /.test(t) || /लंबे /.test(t))
     return 'लंबा = long/tall: लंबा (m. sg.), लंबी (f.), लंबे (m. pl./oblique).';
   if (/सुंदर /.test(t))
-    return 'सुंदर = beautiful. It does not change with gender — invariable adjectives stay the same.';
+    return 'सुंदर = beautiful. It does not change with gender – invariable adjectives stay the same.';
   return null;
 }
 
@@ -240,7 +240,7 @@ function tipForCultural(t, e) {
   if (/होली/.test(t) && e.toLowerCase().includes('holi'))
     return 'होली = Festival of Colors, celebrated in spring with colored powders and water.';
   if (/चाय/.test(t) && !/ चाय /.test(t))
-    return 'चाय (f.) = tea — central to Indian social culture, often offered to guests as a welcome gesture.';
+    return 'चाय (f.) = tea – central to Indian social culture, often offered to guests as a welcome gesture.';
   if (/नमस्ते/.test(t))
     return 'नमस्ते comes from नमः (bow) + ते (to you). It serves as both greeting and farewell.';
   if (/प्रणाम/.test(t))
@@ -252,7 +252,7 @@ function tipForCultural(t, e) {
   if (/मंदिर/.test(t))
     return 'मंदिर (m.) = Hindu temple. The plural is मंदिर (same form).';
   if (/मस्जिद/.test(t))
-    return 'मस्जिद (f.) = mosque — reflects India\'s religious diversity.';
+    return 'मस्जिद (f.) = mosque – reflects India\'s religious diversity.';
   if (/गुरुद्वारा/.test(t))
     return 'गुरुद्वारा (m.) = Sikh temple, literally "door of the guru."';
   if (/पूजा/.test(t))
@@ -267,25 +267,25 @@ function tipForCultural(t, e) {
 function tipForVocabulary(t, e) {
   // Specific useful vocabulary explanations tied to what's in the sentence
   if (/ज़रूर/.test(t))
-    return 'ज़रूर = certainly/definitely — an adverb that adds emphasis to a promise or assurance.';
+    return 'ज़रूर = certainly/definitely – an adverb that adds emphasis to a promise or assurance.';
   if (/शायद/.test(t))
     return 'शायद = maybe/perhaps. Unlike ज़रूर (certainly), it expresses doubt or possibility.';
   if (/इसलिए/.test(t) || /इसीलिए/.test(t))
-    return 'इसलिए = therefore/that\'s why — connects a cause to its result.';
+    return 'इसलिए = therefore/that\'s why – connects a cause to its result.';
   if (/लेकिन/.test(t) || /मगर/.test(t) || /परंतु/.test(t) || /किंतु/.test(t)) {
     if (/परंतु/.test(t) || /किंतु/.test(t)) return 'परंतु/किंतु = but (formal/literary). Everyday Hindi uses लेकिन or मगर.';
     return 'लेकिन/मगर = but. लेकिन is more common; मगर is slightly more informal.';
   }
   if (/हालाँकि/.test(t))
-    return 'हालाँकि = although/even though — introduces a concessive clause.';
+    return 'हालाँकि = although/even though – introduces a concessive clause.';
   if (/इसके अलावा/.test(t) || /के अलावा/.test(t))
     return 'के अलावा = besides/apart from: इसके अलावा = apart from this.';
   if (/ख़ुश/.test(t) || /खुश/.test(t))
     return 'ख़ुश = happy (invariable adj.). ख़ुशी (f.) = happiness. The ख़ shows Urdu/Persian origin.';
   if (/ज़िंदगी/.test(t) || /ज़िन्दगी/.test(t))
-    return 'ज़िंदगी (f.) = life — a Persian-origin word commonly used in everyday Hindi.';
+    return 'ज़िंदगी (f.) = life – a Persian-origin word commonly used in everyday Hindi.';
   if (/दुनिया/.test(t))
-    return 'दुनिया (f.) = world — Arabic origin, widely used in everyday Hindi alongside विश्व (Sanskrit).';
+    return 'दुनिया (f.) = world – Arabic origin, widely used in everyday Hindi alongside विश्व (Sanskrit).';
   if (/ख़्वाब/.test(t) || /ख़याल/.test(t) || /ख्वाब/.test(t) || /ख्याल/.test(t))
     return 'ख़्वाब/ख़याल are Persian-origin words common in Hindi: ख़्वाब = dream, ख़याल = thought/care.';
   return null;
@@ -293,7 +293,7 @@ function tipForVocabulary(t, e) {
 
 function tipForOblique(t, e) {
   if (/लड़के /.test(t) && / में| पर| से| को| के/.test(t))
-    return 'लड़के is the oblique form of लड़का — masculine -ा nouns change to -े before postpositions.';
+    return 'लड़के is the oblique form of लड़का – masculine -ा nouns change to -े before postpositions.';
   if (/बच्चों/.test(t))
     return 'बच्चों = children (oblique plural). Plural oblique adds -ओं: बच्चा → बच्चे → बच्चों.';
   if (/लोगों/.test(t))
@@ -326,23 +326,23 @@ function tipForConditional(t, e) {
   if (/जब /.test(t) && /तब/.test(t))
     return 'जब...तब = when...then. The pair frames time-based conditions.';
   if (/जब /.test(t) && /तो/.test(t))
-    return 'जब...तो = when...then — used for temporal or conditional relationships.';
+    return 'जब...तो = when...then – used for temporal or conditional relationships.';
   if (/चाहे/.test(t))
-    return 'चाहे = whether/no matter — introduces a concessive condition: चाहे जो हो = whatever happens.';
+    return 'चाहे = whether/no matter – introduces a concessive condition: चाहे जो हो = whatever happens.';
   return null;
 }
 
 function tipForCorrelative(t, e) {
   if (/जो /.test(t) && /वह /.test(t))
-    return 'जो...वह = "the one who...that one" — Hindi uses correlative pairs instead of relative clauses.';
+    return 'जो...वह = "the one who...that one" – Hindi uses correlative pairs instead of relative clauses.';
   if (/जो /.test(t) && /वो /.test(t))
-    return 'जो...वो = "whoever/which...that" — a correlative pair. वो is the informal form of वह.';
+    return 'जो...वो = "whoever/which...that" – a correlative pair. वो is the informal form of वह.';
   if (/जहाँ/.test(t) && /वहाँ/.test(t))
-    return 'जहाँ...वहाँ = where...there — a correlative pair for location.';
+    return 'जहाँ...वहाँ = where...there – a correlative pair for location.';
   if (/जितना/.test(t) && /उतना/.test(t))
-    return 'जितना...उतना = as much...that much — correlative pair for comparison.';
+    return 'जितना...उतना = as much...that much – correlative pair for comparison.';
   if (/जैसा/.test(t) && /वैसा/.test(t))
-    return 'जैसा...वैसा = as...so — correlative pair: जैसा करोगे, वैसा भरोगे (as you sow, so you reap).';
+    return 'जैसा...वैसा = as...so – correlative pair: जैसा करोगे, वैसा भरोगे (as you sow, so you reap).';
   return null;
 }
 
@@ -387,7 +387,7 @@ function tipForParticiple(t, e) {
   if (/कर /.test(t) && /ते हुए/.test(t))
     return 'The -ते हुए form = "while doing": हँसते हुए = while laughing, चलते हुए = while walking.';
   if (/करके/.test(t) || /जाकर/.test(t) || /खाकर/.test(t) || /आकर/.test(t) || /देकर/.test(t) || /लेकर/.test(t) || /बनाकर/.test(t) || /पढ़कर/.test(t)) {
-    return 'Verb stem + कर/करके = "having done, then..." — chains sequential actions: खाकर सोया = ate then slept.';
+    return 'Verb stem + कर/करके = "having done, then..." – chains sequential actions: खाकर सोया = ate then slept.';
   }
   return null;
 }
@@ -399,7 +399,7 @@ function tipForBhi(t, e) {
   }
   if (/ ही /.test(t)) {
     if (e.includes('only') || e.includes('just') || e.includes('very'))
-      return 'ही = only/just/exactly — an emphatic particle: यही = this very one, वहीं = right there.';
+      return 'ही = only/just/exactly – an emphatic particle: यही = this very one, वहीं = right there.';
   }
   return null;
 }
@@ -408,21 +408,21 @@ function tipForMisc(t, e) {
   if (/कि /.test(t))
     return 'कि = that (conjunction), introducing a subordinate clause: मुझे लगता है कि... = I think that...';
   if (/वाकई/.test(t) || /सचमुच/.test(t))
-    return 'वाकई/सचमुच = really/truly — adverbs that add emphasis to a statement.';
+    return 'वाकई/सचमुच = really/truly – adverbs that add emphasis to a statement.';
   if (/ख़ैर/.test(t))
-    return 'ख़ैर = anyway/well — a discourse marker used to change topic or wrap up.';
+    return 'ख़ैर = anyway/well – a discourse marker used to change topic or wrap up.';
   if (/ज़रा/.test(t))
-    return 'ज़रा = a little/just — softens requests: ज़रा सुनिए = just listen a moment.';
+    return 'ज़रा = a little/just – softens requests: ज़रा सुनिए = just listen a moment.';
   if (/तो /.test(t) && !/ तो$/.test(t.trim()) && !/अगर/.test(t) && !/जब/.test(t)) {
     if (e.includes('then') || e.includes('so'))
-      return 'तो = then/so — a versatile particle that can emphasize, contrast, or connect clauses.';
+      return 'तो = then/so – a versatile particle that can emphasize, contrast, or connect clauses.';
   }
   if (/ ही नहीं/.test(t) && / बल्कि/.test(t))
-    return 'न केवल/सिर्फ़...बल्कि = not only...but also — a correlative conjunction pair.';
+    return 'न केवल/सिर्फ़...बल्कि = not only...but also – a correlative conjunction pair.';
   if (/ या /.test(t) && e.includes(' or '))
-    return 'या = or — the disjunctive conjunction: चाय या कॉफ़ी = tea or coffee.';
+    return 'या = or – the disjunctive conjunction: चाय या कॉफ़ी = tea or coffee.';
   if (/ और /.test(t) && e.includes(' and '))
-    return 'और = and — the most common conjunction in Hindi, connecting words, phrases, or clauses.';
+    return 'और = and – the most common conjunction in Hindi, connecting words, phrases, or clauses.';
   return null;
 }
 

@@ -1,7 +1,7 @@
 /**
  * Fix minor QC issues:
- * 1. FR: duplicate target "après la pluie, le beau temps." (ids 3769, 3918) — replace 3918
- * 2. TR: duplicate target "dost kara günde belli olur." (ids tr-3443, tr-3871) — replace tr-3871
+ * 1. FR: duplicate target "après la pluie, le beau temps." (ids 3769, 3918) – replace 3918
+ * 2. TR: duplicate target "dost kara günde belli olur." (ids tr-3443, tr-3871) – replace tr-3871
  */
 const fs = require("fs");
 

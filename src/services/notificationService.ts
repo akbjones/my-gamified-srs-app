@@ -2,7 +2,7 @@
  * Local notification service for study reminders.
  *
  * Uses the Web Notifications API via the service worker.  No server or push
- * subscription is required — all scheduling happens client-side with
+ * subscription is required – all scheduling happens client-side with
  * setTimeout + a daily-check heartbeat in the service worker.
  */
 

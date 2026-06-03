@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Rebuild Swedish dictionary v3 — uses shared pipeline utilities.
+ * Rebuild Swedish dictionary v3 – uses shared pipeline utilities.
  *
  * Steps:
  *  1. Swedish function word table (~130 entries, never sent to Google)
@@ -147,7 +147,7 @@ function collectDeckWords() {
       const w = tok.trim()
         .toLowerCase()
         .replace(/[''""«»\u200B\u200C\u200D\uFEFF]/g, '') // strip curly quotes, ZWJ
-        .replace(/^[—–\-]+|[—–\-]+$/g, '')                  // strip leading/trailing dashes
+        .replace(/^[––\-]+|[––\-]+$/g, '')                  // strip leading/trailing dashes
         .trim();
       if (!w) continue;
       // Skip single-char tokens
@@ -289,7 +289,7 @@ async function main() {
   let badLemmaCount = 0;
   for (const [word, ex] of Object.entries(existing)) {
     if (ex.lemma && !existing[ex.lemma] && !processed[ex.lemma]) {
-      // Lemma points to a non-existent base word — clear it
+      // Lemma points to a non-existent base word – clear it
       ex.lemma = null;
       badLemmaCount++;
     }

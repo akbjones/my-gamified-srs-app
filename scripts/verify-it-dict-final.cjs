@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Italian dictionary semantic verification — FINAL version.
+ * Italian dictionary semantic verification – FINAL version.
  * Uses v4 fixes JSON as input, applies only validated fixes.
  */
 
@@ -177,4 +177,4 @@ function main() {
 }
 
 const n = main();
-console.log(`\nITALIAN COMPLETE — ${n} fixes`);
+console.log(`\nITALIAN COMPLETE – ${n} fixes`);

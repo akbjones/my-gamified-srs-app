@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 /**
- * Rebuild Spanish dictionary v3 — uses shared pipeline utilities.
+ * Rebuild Spanish dictionary v3 – uses shared pipeline utilities.
  *
  * Steps:
  *  1. Spanish function word table (~200 entries, never sent to Google)
  *  2. Collect all words from deck, tokenize with tokenize(sentence, 'spanish')
  *  3. Google Translate non-function words via translateBatch() with truncation retry
  *  4. Post-process every result via postProcess() (all 18 rules)
- *     CRITICAL: Rule 8c determines verb from English output — prevents carro="to fall"
+ *     CRITICAL: Rule 8c determines verb from English output – prevents carro="to fall"
  *  5. Detect and remove bad lemma references (3-char prefix check)
  *  6. Lemma copy (only for verified lemmas)
  *  7. Card-context validation
@@ -391,7 +391,7 @@ function collectDeckWords() {
       const w = tok.trim()
         .toLowerCase()
         .replace(/[''""«»\u200B\u200C\u200D\uFEFF]/g, '') // strip curly quotes, ZWJ
-        .replace(/^[—–\-]+|[—–\-]+$/g, '')                  // strip leading/trailing dashes
+        .replace(/^[––\-]+|[––\-]+$/g, '')                  // strip leading/trailing dashes
         .trim();
       if (!w) continue;
       // Skip single-char tokens (except common Spanish ones)
@@ -415,7 +415,7 @@ function parseExistingDict() {
   const src = fs.readFileSync(DICT_PATH, 'utf8');
   const existing = {};
 
-  // Match entries — handle both single-quoted and double-quoted keys
+  // Match entries – handle both single-quoted and double-quoted keys
   const entryRe = /^\s*(?:'([^']+)'|"([^"]+)"):\s*\{\s*en:\s*'([^']*)',\s*ipa:\s*'([^']*)',\s*pos:\s*'([^']*)'\s*(?:,\s*lemma:\s*'([^']*)')?\s*\}/gm;
   let m;
   while ((m = entryRe.exec(src)) !== null) {
@@ -705,11 +705,11 @@ async function main() {
     // Check if pipeline flagged wrong_pos (meaning deck POS is unreliable)
     const hasWrongPos = proc.flagReasons && proc.flagReasons.includes('wrong_pos');
 
-    // 1. Wrong "to " prefix on nouns — but only if pipeline didn't already flag wrong_pos
+    // 1. Wrong "to " prefix on nouns – but only if pipeline didn't already flag wrong_pos
     if (pos === 'n' && en.startsWith('to ') && !en.startsWith('to the') && !en.includes(';') && !hasWrongPos) {
       problems.push('wrong_to_on_noun');
     }
-    // 2. Missing "to " on verbs — but only if pipeline didn't flag wrong_pos
+    // 2. Missing "to " on verbs – but only if pipeline didn't flag wrong_pos
     // (pipeline detected English output is not a verb, so omitting "to" is correct)
     if (pos === 'v' && !en.startsWith('to ') && !en.includes(';') && !hasWrongPos) {
       problems.push('missing_to_on_verb');

@@ -30,7 +30,7 @@ console.log(`Clean cards: ${cleanCards.length}`);
 // Tokenize Russian sentence: lowercase, strip punctuation, split on whitespace
 function tokenize(sentence) {
   return sentence
-    .replace(/[.,!?;:«»""''…—–\-\(\)\[\]\/\d]/g, ' ')
+    .replace(/[.,!?;:«»""''…––\-\(\)\[\]\/\d]/g, ' ')
     .toLowerCase()
     .split(/\s+/)
     .filter(w => w.length > 0);
@@ -2945,7 +2945,7 @@ const enStopWords = new Set([
 
 function tokenizeEnglish(sentence) {
   return sentence
-    .replace(/[.,!?;:"""''…—–\-\(\)\[\]\/]/g, ' ')
+    .replace(/[.,!?;:"""''…––\-\(\)\[\]\/]/g, ' ')
     .toLowerCase()
     .split(/\s+/)
     .filter(w => w.length > 1 && !enStopWords.has(w));

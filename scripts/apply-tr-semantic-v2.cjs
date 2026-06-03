@@ -223,7 +223,7 @@ async function main() {
   console.log(`Applied ${fixCount} fixes to tr.ts`);
   fs.writeFileSync(DICT_PATH, src);
   console.log('Written updated tr.ts');
-  console.log(`\nTURKISH SEMANTIC VERIFICATION — ${fixCount} fixes applied`);
+  console.log(`\nTURKISH SEMANTIC VERIFICATION – ${fixCount} fixes applied`);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

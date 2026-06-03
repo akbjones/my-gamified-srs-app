@@ -9,7 +9,7 @@
  * Strategy:
  * - Find general-only cards and add the most-needed goal tags based on content keywords
  * - For each node where general exceeds others by >15%, redistribute tags
- * - Never REMOVE a tag — only ADD tags to under-represented goals
+ * - Never REMOVE a tag – only ADD tags to under-represented goals
  * - Use content-based keyword matching first, then spread remaining evenly
  */
 
@@ -144,7 +144,7 @@ const targetOverall = Math.round(
 const generalExcess = finalCounts.general - targetOverall;
 if (generalExcess > targetOverall * 0.03) {
   console.log(`General is ${generalExcess} above target (${targetOverall}), trimming...`);
-  // Remove "general" from cards that have all 4 tags — these are already in every goal
+  // Remove "general" from cards that have all 4 tags – these are already in every goal
   // Start from the highest nodes (C2) where it matters least
   let trimmed = 0;
   const trimTarget = Math.round(generalExcess * 0.7); // Don't trim all, keep a small buffer

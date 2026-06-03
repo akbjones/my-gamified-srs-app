@@ -130,7 +130,7 @@ const FIXES = {
   "escalón":         { en: "step / stair", pos: "n" },
 
   // ═══════════════════════════════════════════════════════════════════════════
-  // 3. Words ending in -ería (shops/places/things — ALL are nouns)
+  // 3. Words ending in -ería (shops/places/things – ALL are nouns)
   // ═══════════════════════════════════════════════════════════════════════════
 
   "batería":         { en: "battery / drums", pos: "n" },
@@ -215,13 +215,13 @@ for (const [word, { en, pos }] of Object.entries(FIXES)) {
 }
 
 if (fixed === 0) {
-  console.log('No changes needed — all entries already correct.');
+  console.log('No changes needed – all entries already correct.');
   process.exit(0);
 }
 
 fs.writeFileSync(FILE, src, 'utf8');
 
-console.log(`\n=== fix-pos-es.cjs — Results ===\n`);
+console.log(`\n=== fix-pos-es.cjs – Results ===\n`);
 console.log(`Fixed:   ${fixed}`);
 console.log(`Skipped: ${skipped} (not found or already correct)\n`);
 console.log(`Changes:\n${report.join('\n')}\n`);

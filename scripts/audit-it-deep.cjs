@@ -59,7 +59,7 @@ const STOP_WORDS = new Set([
 // Tokenize
 function tokenize(text) {
   let clean = text.toLowerCase()
-    .replace(/[.,!?;:"""''()—–\-…\u200b\u00ab\u00bb]/g, ' ')
+    .replace(/[.,!?;:"""''()––\-…\u200b\u00ab\u00bb]/g, ' ')
     .replace(/'/g, "'");
   const rawTokens = clean.split(/\s+/).filter(Boolean);
   const tokens = [];
@@ -164,7 +164,7 @@ for (const card of cards) {
   }
   
   // 3. Duplicates
-  const normT = card.target.toLowerCase().replace(/[.,!?;:"""''()—–\-…]/g, '').replace(/\s+/g, ' ').trim();
+  const normT = card.target.toLowerCase().replace(/[.,!?;:"""''()––\-…]/g, '').replace(/\s+/g, ' ').trim();
   if (seen.has(normT)) {
     cardIssues.push({ type: 'duplicate_target', otherCard: seen.get(normT) });
     summary.duplicateTarget++;
@@ -172,7 +172,7 @@ for (const card of cards) {
     seen.set(normT, card.id);
   }
   
-  const normE = card.english.toLowerCase().replace(/[.,!?;:"""''()—–\-…]/g, '').replace(/\s+/g, ' ').trim();
+  const normE = card.english.toLowerCase().replace(/[.,!?;:"""''()––\-…]/g, '').replace(/\s+/g, ' ').trim();
   if (seenEnglish.has(normE)) {
     cardIssues.push({ type: 'duplicate_english', otherCard: seenEnglish.get(normE) });
     summary.duplicateEnglish++;

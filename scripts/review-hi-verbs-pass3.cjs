@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Hindi dictionary review — PASS 3
+ * Hindi dictionary review – PASS 3
  * Add missing lemmas to verb conjugations + fix remaining garbled entries.
  */
 

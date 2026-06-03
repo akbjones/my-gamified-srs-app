@@ -36,12 +36,12 @@ const FIXES = [
   [/\bUniversita\b/g, 'Università'],
   [/\bcaffe\b/g, 'caffè'],
   [/\bCaffe\b/g, 'Caffè'],
-  [/\bmeta\b/g, 'metà'],   // "meta" as "half" — rare as noun "goal" in these sentences
+  [/\bmeta\b/g, 'metà'],   // "meta" as "half" – rare as noun "goal" in these sentences
   [/\bcio\b(?!\s*è)/g, 'ciò'],  // ciò but not "cioè"
   [/\bCio\b(?!\s*è)/g, 'Ciò'],
   [/\bcioè\b/gi, 'cioè'],  // fix "cioE" → "cioè"
   [/\bCioe\b/g, 'Cioè'],
-  // Verbs: è (is) — only fix standalone "e" when it's clearly the verb
+  // Verbs: è (is) – only fix standalone "e" when it's clearly the verb
   // This is tricky because "e" is also "and". We fix patterns like "non e", "la vita e"
   [/\bnon e\b/g, 'non è'],
   [/\bla sfida e\b/gi, 'la sfida è'],

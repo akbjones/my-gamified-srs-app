@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Hindi dictionary review — PASS 2
+ * Hindi dictionary review – PASS 2
  * Deep manual review of all remaining issues after pass 1.
  * Handles: nouns wrongly tagged as verbs, garbled translations,
  * wrong meanings, garbage semicolons, POS errors.

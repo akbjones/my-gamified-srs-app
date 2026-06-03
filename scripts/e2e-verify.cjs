@@ -34,7 +34,7 @@ const placementSrc = fs.readFileSync(path.join(__dirname, '..', 'src', 'services
 const appSrc = fs.readFileSync(path.join(__dirname, '..', 'src', 'App.tsx'), 'utf8');
 
 // ─── 1. Topic Config: 35 nodes ─────────────────────────────────
-section('1. TopicConfig — 35 nodes');
+section('1. TopicConfig – 35 nodes');
 
 for (let i = 1; i <= 35; i++) {
   const nodeId = `node-${String(i).padStart(2, '0')}`;
@@ -56,7 +56,7 @@ for (const tier of ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']) {
 console.log(`  ✅ All 6 CEFR tiers present`);
 
 // ─── 2. Grammar Nudges: 35 per language ────────────────────────
-section('2. Grammar Descriptions — 35 nudges per language');
+section('2. Grammar Descriptions – 35 nudges per language');
 
 for (let i = 1; i <= 35; i++) {
   const nodeId = `node-${String(i).padStart(2, '0')}`;

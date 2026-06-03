@@ -11,7 +11,7 @@ export interface DictEntry {
 // Lookup helper: strips punctuation, lowercases, tries base forms
 export function lookupWord(word: string): DictEntry | null {
   // Preserve hyphens for compound words like check-in
-  const clean = word.toLowerCase().replace(/[¿¡.,!?;:"""''()—–]/g, '').trim();
+  const clean = word.toLowerCase().replace(/[¿¡.,!?;:"""''()––]/g, '').trim();
   if (!clean) return null;
 
   // Direct match (compounds like check-in kept intact)

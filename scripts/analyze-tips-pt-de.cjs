@@ -95,7 +95,7 @@ function analyzePT() {
     }
     
     // 2. Check for conjugation table patterns (not contextual)
-    if (/\b(eu|tu|ele|ela|nós|eles|elas|vocês?)\s*[-–—:]\s*(eu|tu|ele|ela|nós|eles|elas|vocês?)\s*[-–—:]/i.test(tip) ||
+    if (/\b(eu|tu|ele|ela|nós|eles|elas|vocês?)\s*[-––:]\s*(eu|tu|ele|ela|nós|eles|elas|vocês?)\s*[-––:]/i.test(tip) ||
         /eu \w+, tu \w+, ele \w+/i.test(tip) ||
         /\beu\b.*\btu\b.*\bele\b.*\bnós\b.*\beles\b/i.test(tip)) {
       issues.push({ id, current_tip: tip, issue: 'irrelevant', reason: 'Tip is a conjugation table/pattern rather than contextual explanation' });
@@ -234,7 +234,7 @@ function analyzeDE() {
     }
     
     // 5. Conjugation table patterns
-    if (/\b(ich|du|er|sie|wir|ihr)\s*[-–—:]\s*(ich|du|er|sie|wir|ihr)\s*[-–—:]/i.test(tip) ||
+    if (/\b(ich|du|er|sie|wir|ihr)\s*[-––:]\s*(ich|du|er|sie|wir|ihr)\s*[-––:]/i.test(tip) ||
         /ich \w+, du \w+, er \w+/i.test(tip) ||
         /\bich\b.*\bdu\b.*\ber\b.*\bwir\b.*\bsie\b/i.test(tip)) {
       issues.push({ id, current_tip: tip, issue: 'irrelevant', reason: 'Tip is a conjugation table/pattern rather than contextual explanation' });

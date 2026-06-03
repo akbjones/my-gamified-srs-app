@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * semantic-verify-es-full.cjs — Full semantic verification of ALL entries
+ * semantic-verify-es-full.cjs – Full semantic verification of ALL entries
  * in the Spanish dictionary. Translates every non-function-word via Google
  * Translate (es→en), compares semantically, replaces zero-overlap entries.
  */
@@ -1027,7 +1027,7 @@ async function main() {
 
   fs.writeFileSync(DICT_PATH, src);
   console.log(`\nWrote ${fixCount} fixes to ${DICT_PATH}`);
-  console.log(`\nSPANISH COMPLETE — ${fixCount} fixes`);
+  console.log(`\nSPANISH COMPLETE – ${fixCount} fixes`);
 }
 
 main().catch(err => {

@@ -359,7 +359,7 @@ function isSemanticMatch(storedEn, googleEn) {
     for (const sw of storedWords) {
       // Exact match
       if (gw === sw) return true;
-      // Substring match (at least 4 chars) — e.g. "protect" matches "protection"
+      // Substring match (at least 4 chars) – e.g. "protect" matches "protection"
       if (gw.length >= 4 && sw.length >= 4) {
         if (gw.startsWith(sw) || sw.startsWith(gw)) return true;
       }
@@ -406,7 +406,7 @@ function isGarbageTranslation(word, googleEn, pos, storedEn) {
   // 6. Translation is just a number
   if (/^\d+$/.test(gLow)) return 'number';
 
-  // 7. Google returned a past/conjugated form for a verb — we want infinitives only
+  // 7. Google returned a past/conjugated form for a verb – we want infinitives only
   if (pos === 'v') {
     // Past tense words (single-word)
     const PAST_FORMS = /^(to )?([\w]+ed|wrote|broke|spoke|drove|gave|took|went|came|got|knew|thought|felt|left|brought|found|told|said|made|sat|stood|met|paid|sent|built|caught|chose|wore|taught|bought|sold|fought|threw|grew|lost|fell|kept|held|began|meant|set|let|heard|led|drew|risen|shaken|beaten|bitten|blown|forgave|froze|hung|laid|lit|rang|sought|shot|shut|struck|stuck|stole|swept|swore|tore|wound|wove)$/i;
@@ -454,7 +454,7 @@ function postProcess(googleEn, pos, storedEn) {
     en = en.replace(/^to\s+/, '');
   }
 
-  // Truncate overly long translations — keep first meaningful part
+  // Truncate overly long translations – keep first meaningful part
   if (en.includes(',')) {
     const parts = en.split(',').map(p => p.trim());
     if (parts.length > 2) {
@@ -570,14 +570,14 @@ async function main() {
           mismatches--;
           continue;
         }
-        // "to [gerund]" — e.g. "to looking for", "to trying", "to feeling"
+        // "to [gerund]" – e.g. "to looking for", "to trying", "to feeling"
         if (/^to \w+ing(\s|$)/i.test(newEn)) {
           skippedGarbage++;
           garbageReasons['post-gerund'] = (garbageReasons['post-gerund'] || 0) + 1;
           mismatches--;
           continue;
         }
-        // "to [3rd person -s]" — e.g. "to brings", "to ends", "to coats"
+        // "to [3rd person -s]" – e.g. "to brings", "to ends", "to coats"
         if (/^to \w+s$/i.test(newEn) && !/(ss|us|ous|ious|ness)$/i.test(newEn)) {
           skippedGarbage++;
           garbageReasons['post-3rd-person'] = (garbageReasons['post-3rd-person'] || 0) + 1;
@@ -643,7 +643,7 @@ async function main() {
   console.log('Total entries checked: ' + wordsToCheck.length);
   console.log('Semantic matches: ' + matches);
   console.log('Mismatches fixed: ' + fixes.length);
-  console.log('\nPORTUGUESE COMPLETE — ' + fixes.length + ' fixes');
+  console.log('\nPORTUGUESE COMPLETE – ' + fixes.length + ' fixes');
 }
 
 main().catch(err => {

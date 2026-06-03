@@ -18,21 +18,21 @@ module.exports = [
     tips: [
       "Russian doesn't use 'to be' in the present: `Я студент` literally = 'I student' = 'I am a student'. The verb is implied. Adding `есть` would be old-fashioned.",
       "When you'd say 'is/are' in English, Russian usually says nothing. `Это дом` = 'this house' = 'this is a house'. The pause does the work.",
-      "Skip the copula in present. `Он врач` (he doctor = he is a doctor), `она дома` (she at home = she is at home). It's not broken — it's the rule.",
-      "Russian present tense of 'to be' is essentially silent. Past uses `был/была/было/были`, future uses `буду/будешь/...` — but right now, nothing.",
+      "Skip the copula in present. `Он врач` (he doctor = he is a doctor), `она дома` (she at home = she is at home). It's not broken – it's the rule.",
+      "Russian present tense of 'to be' is essentially silent. Past uses `был/была/было/были`, future uses `буду/будешь/...` – but right now, nothing.",
     ],
   },
 
-  // ── Меня зовут — name idiom ──
+  // ── Меня зовут – name idiom ──
   {
     id: 'ru-menya-zovut',
     priority: 95,
     match: t => /Меня\s+зовут|Тебя\s+зовут|Его\s+зовут|Её\s+зовут|Нас\s+зовут|Вас\s+зовут|Их\s+зовут|Как\s+(тебя|вас)\s+зовут/i.test(t),
     tips: [
       "`Меня зовут Олег` literally = 'me they-call Oleg' = 'My name is Oleg'. Russian uses a passive-style construction with the accusative pronoun.",
-      "The person is in ACCUSATIVE (меня, тебя, его, её, нас, вас, их), not nominative. `Зовут` = 'they call' — an unspecified plural subject.",
+      "The person is in ACCUSATIVE (меня, тебя, его, её, нас, вас, их), not nominative. `Зовут` = 'they call' – an unspecified plural subject.",
       "Asking: `Как тебя зовут?` (informal) or `Как вас зовут?` (formal). Literally 'How do they call you?'. The name comes back: `Меня зовут [name]`.",
-      "Compare: `Я Олег` (I'm Oleg — short intro) vs `Меня зовут Олег` (My name is Oleg — full formal intro). Both work, second is more polite.",
+      "Compare: `Я Олег` (I'm Oleg – short intro) vs `Меня зовут Олег` (My name is Oleg – full formal intro). Both work, second is more polite.",
     ],
   },
 
@@ -42,10 +42,10 @@ module.exports = [
     priority: 35,
     match: t => /^(Я|Ты|Он|Она|Оно|Мы|Вы|Они|Это)\s+[а-яёА-ЯЁ]+/i.test(t),
     tips: [
-      "Russian verbs conjugate by person and number, but unlike Spanish or Italian, Russian KEEPS the subject pronoun. Don't drop it — `читаю` alone sounds incomplete.",
+      "Russian verbs conjugate by person and number, but unlike Spanish or Italian, Russian KEEPS the subject pronoun. Don't drop it – `читаю` alone sounds incomplete.",
       "Six endings to learn: -ю/-у (я), -ешь/-ёшь (ты), -ет/-ёт (он/она), -ем/-ём (мы), -ете/-ёте (вы), -ют/-ут (они). One verb, six shapes.",
-      "Subject pronouns in Russian: я / ты / он / она / оно / мы / вы / они. You'll see them at the start of most sentences — natural, not redundant.",
-      "Russian belongs to a different group than Spanish/Italian — pronouns aren't optional. They mark the topic; ending agreement is extra confirmation.",
+      "Subject pronouns in Russian: я / ты / он / она / оно / мы / вы / они. You'll see them at the start of most sentences – natural, not redundant.",
+      "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation.",
     ],
   },
 
@@ -56,9 +56,9 @@ module.exports = [
     match: t => /[а-яё]+(ет|ит|ёт)(\s|[.,!?]|$)/i.test(t) && !/^(Я|Ты|Мы|Вы|Они)\s/i.test(t),
     tips: [
       "3rd-person singular endings: `-ет` (first conjugation: читает, делает), `-ит` (second conjugation: говорит, смотрит). Tells you 'he/she/it' is doing it.",
-      "Two conjugations to remember: I (`-ешь/-ет/-ем/-ете/-ют`) — most verbs; II (`-ишь/-ит/-им/-ите/-ат/-ят`) — verbs in `-ить` and some in `-еть/-ать`.",
+      "Two conjugations to remember: I (`-ешь/-ет/-ем/-ете/-ют`) – most verbs; II (`-ишь/-ит/-им/-ите/-ат/-ят`) – verbs in `-ить` and some in `-еть/-ать`.",
       "You can guess conjugation from the infinitive: `-ать/-ять/-овать/-еть` mostly → I; `-ить` and some `-еть/-ать` → II. Memorize the exceptions.",
-      "Stressed `-ёт` is just `-ет` with stress: `идёт`, `поёт`. The dots mark stress — important for pronunciation.",
+      "Stressed `-ёт` is just `-ет` with stress: `идёт`, `поёт`. The dots mark stress – important for pronunciation.",
     ],
   },
 
@@ -71,7 +71,7 @@ module.exports = [
       "3rd-person plural endings: `-ют/-ут` (first conjugation: читают, идут), `-ят/-ат` (second conjugation: говорят, кричат). 'They' do it.",
       "These plural endings also appear when speaking about an unspecified group: `говорят, что...` = 'they say that...' (people in general).",
       "Hard consonant before ending? Likely `-ут/-ат`. Soft (vowel-like)? Likely `-ют/-ят`. The spelling rule follows from the stem's consonant.",
-      "Watch for impersonal usage: `звонят в дверь` (someone's ringing the door — literally 'they ring'). Plural verb, no real subject mentioned.",
+      "Watch for impersonal usage: `звонят в дверь` (someone's ringing the door – literally 'they ring'). Plural verb, no real subject mentioned.",
     ],
   },
 
@@ -84,7 +84,7 @@ module.exports = [
       "To say 'in [language]' or 'speak [language]', use `по- + adjective`: `по-русски` (in Russian), `по-английски` (in English). Lowercase, hyphenated.",
       "`Я говорю по-русски` = 'I speak Russian'. The `по-` adverbial form differs from `русский язык` (the Russian language as a noun).",
       "After verbs of speaking, reading, writing → use `по-русски` style. After 'know' or 'study' → use `русский язык`. Two grammars, one meaning.",
-      "Always lowercase: `по-французски` not `По-Французски`. And no space — the hyphen sticks it to the adjective stem.",
+      "Always lowercase: `по-французски` not `По-Французски`. And no space – the hyphen sticks it to the adjective stem.",
     ],
   },
 
@@ -94,9 +94,9 @@ module.exports = [
     priority: 70,
     match: t => /(^|\s)(каждый|каждая|каждое|каждые|каждого|каждый\s+день|каждое\s+утро|весь|вся|всё|все|всю|всем|всему|всегда|никогда)(\s|[.,!?]|$)/i.test(t),
     tips: [
-      "`Каждый` (every) and `весь` (all/whole) act like adjectives — match gender, number, case. `Каждый день` (m, nom), `всю ночь` (f, acc).",
+      "`Каждый` (every) and `весь` (all/whole) act like adjectives – match gender, number, case. `Каждый день` (m, nom), `всю ночь` (f, acc).",
       "Frequency adverbs `всегда` (always), `никогда` (never) don't change shape. They sit before the verb: `я всегда читаю`.",
-      "`Никогда не` — Russian doubles up on negatives. `Я никогда не был там` (I never not have-been there). Don't drop the `не`; it's required.",
+      "`Никогда не` – Russian doubles up on negatives. `Я никогда не был там` (I never not have-been there). Don't drop the `не`; it's required.",
       "`Весь/вся/всё/все` covers 'all', 'the whole', 'everyone', 'everything' depending on form. Context + ending tells you which.",
     ],
   },
@@ -110,7 +110,7 @@ module.exports = [
       "Time adverbs at sentence start are common in Russian. `Сегодня` (today), `Вчера` (yesterday), `Завтра` (tomorrow). Unlike German V2, Russian doesn't invert after a fronted adverb.",
       "Times of day are already in instrumental case: `утром` (in the morning), `днём` (in the daytime), `вечером` (in the evening), `ночью` (at night). One word, no preposition needed.",
       "Word order is flexible: `Сегодня я работаю` and `Я сегодня работаю` both mean 'today I work'. Fronting emphasizes 'when'.",
-      "For 'in the morning/afternoon/evening', Russian uses the instrumental case of the noun — no preposition. `Утром` = literally 'by/with morning'.",
+      "For 'in the morning/afternoon/evening', Russian uses the instrumental case of the noun – no preposition. `Утром` = literally 'by/with morning'.",
     ],
   },
 
@@ -123,7 +123,7 @@ module.exports = [
       "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl).",
       "Dictionary form is masculine `-ый/-ой/-ий`. Swap to `-ая` for feminine, `-ое` for neuter, `-ые` for plural. Then cases shift the endings again.",
       "Soft adjectives (-ний type, e.g. `синий`) and hard (-ный, e.g. `красный`) follow different paradigms. Look at the consonant before the ending.",
-      "Adjective comes BEFORE the noun, like English. `Большой стол` (big table), not `стол большой` (which sounds like 'the table is big' — predicate).",
+      "Adjective comes BEFORE the noun, like English. `Большой стол` (big table), not `стол большой` (which sounds like 'the table is big' – predicate).",
     ],
   },
 
@@ -134,8 +134,8 @@ module.exports = [
     match: t => /(^|\s)(в|во|на|о|об|при)\s+[а-яёА-ЯЁ]+(е|и|у|ах|ях)(\s|[.,!?]|$)/i.test(t),
     tips: [
       "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table).",
-      "Same prepositions can take accusative for direction: `иду в школу` (going to school — acc) vs `я в школе` (at school — prep). Direction vs location.",
-      "Prepositional NEVER appears without a preposition — that's why it's called 'prepositional'. The case literally requires one.",
+      "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location.",
+      "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one.",
       "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`).",
     ],
   },
@@ -146,14 +146,14 @@ module.exports = [
     priority: 85,
     match: t => /(^|\s)(два|две|три|четыре|пять|шесть|семь|восемь|девять|десять|двадцать|тридцать|сорок|пятьдесят|сто|много|мало|несколько|сколько)\s+[а-яёА-ЯЁ]+/i.test(t),
     tips: [
-      "Numbers 2/3/4 (and `оба`/`полтора`) take genitive SINGULAR: `два дома` (two houses — house-of). Numbers 5+ take genitive PLURAL: `пять домов`.",
-      "Counterintuitive for English: 'two houses' isn't `два домы` — it's `два дома` (gen sg). Numbers force this case shift.",
+      "Numbers 2/3/4 (and `оба`/`полтора`) take genitive SINGULAR: `два дома` (two houses – house-of). Numbers 5+ take genitive PLURAL: `пять домов`.",
+      "Counterintuitive for English: 'two houses' isn't `два домы` – it's `два дома` (gen sg). Numbers force this case shift.",
       "`Много`, `мало`, `сколько`, `несколько` (much, little, how many, several) ALL take genitive plural: `много книг`, `мало времени`.",
-      "Числа `2/3/4` are special: gen sg even for 22, 23, 24, 32, etc. — anything ending in 2/3/4 (except 12/13/14). `Двадцать два дня`.",
+      "Числа `2/3/4` are special: gen sg even for 22, 23, 24, 32, etc. – anything ending in 2/3/4 (except 12/13/14). `Двадцать два дня`.",
     ],
   },
 
-  // ── Aspect — perfective verbs ──
+  // ── Aspect – perfective verbs ──
   {
     id: 'ru-aspect-pair',
     priority: 80,
@@ -162,7 +162,7 @@ module.exports = [
       "Perfective verb forms (often with prefixes like `по-`, `про-`, `с-`, `на-`) describe completed, one-time actions: `я прочитал книгу` (I read [and finished] the book).",
       "Every Russian verb comes in a pair: imperfective (process) and perfective (result). `Читать` (be reading) vs `прочитать` (have read). Pick by situation.",
       "Past tense often signals aspect by the prefix: bare verb (impf, ongoing) vs prefixed verb (pf, completed). `Я писал письмо` (I was writing) vs `я написал письмо` (I wrote and finished).",
-      "Aspect ≠ tense. Both imperfective and perfective have past, present, future forms — but perfective present is actually future-meaning. `Напишу` = 'I will (have) written'.",
+      "Aspect ≠ tense. Both imperfective and perfective have past, present, future forms – but perfective present is actually future-meaning. `Напишу` = 'I will (have) written'.",
     ],
   },
 
@@ -192,7 +192,7 @@ module.exports = [
     ],
   },
 
-  // ── No articles — это/вот ──
+  // ── No articles – это/вот ──
   {
     id: 'ru-no-articles',
     priority: 30,
@@ -201,7 +201,7 @@ module.exports = [
       "Russian has NO articles (no 'the' or 'a/an'). `Это книга` = 'this [is] a/the book'. The article is left to context and intonation.",
       "Want to emphasize 'this specific one'? Use `этот/эта/это` as a demonstrative. For 'one' (a specific one) use `один/одна/одно`. Otherwise nothing.",
       "Word order can replace articles: new/indefinite info tends to come LATER in the sentence, definite info comes earlier. `Книга на столе` (the book is on the table) vs `на столе книга` (there's a book on the table).",
-      "Skip `the`/`a` entirely in translation — adding them in Russian is grammatically impossible. Get used to bare nouns.",
+      "Skip `the`/`a` entirely in translation – adding them in Russian is grammatically impossible. Get used to bare nouns.",
     ],
   },
 
@@ -211,9 +211,9 @@ module.exports = [
     priority: 80,
     match: t => /(^|\s)(вижу|видишь|видит|видим|видите|видят|знаю|знаешь|знает|знаем|знаете|знают|люблю|любишь|любит|любим|любите|любят|жду|ждёшь|ждёт|ждут|встречаю|встречает|приглашаю|пригласил|пригласила|спросил|спросила)\s+[а-яёА-ЯЁ]+(а|я|у|ю)(\s|[.,!?]|$)/i.test(t),
     tips: [
-      "Animate masculine nouns (people, animals) in accusative look like genitive: `Я вижу брата` (I see brother — like 'of brother'). Inanimate stays nominative-shaped.",
+      "Animate masculine nouns (people, animals) in accusative look like genitive: `Я вижу брата` (I see brother – like 'of brother'). Inanimate stays nominative-shaped.",
       "If it answers 'whom?' and is a living being, use the genitive-style ending: `студента`, `мужчину`. For things, accusative = nominative for masc inanimate.",
-      "Feminine doesn't care about animacy in the accusative singular: `женщину`, `книгу` — both end in `-у/-ю` regardless. The rule applies to masc + all plurals.",
+      "Feminine doesn't care about animacy in the accusative singular: `женщину`, `книгу` – both end in `-у/-ю` regardless. The rule applies to masc + all plurals.",
       "All animate plurals (any gender) take accusative = genitive: `вижу студентов`, `вижу женщин`. Inanimates plural use nominative shape.",
     ],
   },
@@ -251,9 +251,9 @@ module.exports = [
     match: t => /(^|\s)чтобы(\s|[.,!?])/i.test(t),
     tips: [
       "`чтобы + infinitive` = 'in order to': `Я учусь, чтобы говорить по-русски` (I study to speak Russian). Same subject in both halves → infinitive.",
-      "Different subjects → `чтобы + past tense`: `Я хочу, чтобы ты пришёл` (I want you to come — literally 'that you came'). Past tense even though hypothetical.",
+      "Different subjects → `чтобы + past tense`: `Я хочу, чтобы ты пришёл` (I want you to come – literally 'that you came'). Past tense even though hypothetical.",
       "`Чтобы` always introduces purpose or desire. After verbs of wanting/asking/ordering with a different subject in the subordinate clause, it's required.",
-      "Don't confuse `чтобы` (purpose/desire) with `что` (statement). `Я знаю, что он пришёл` (I know that he came — fact) vs `я хочу, чтобы он пришёл` (I want him to come — wish).",
+      "Don't confuse `чтобы` (purpose/desire) with `что` (statement). `Я знаю, что он пришёл` (I know that he came – fact) vs `я хочу, чтобы он пришёл` (I want him to come – wish).",
     ],
   },
 
@@ -263,10 +263,10 @@ module.exports = [
     priority: 80,
     match: t => /(^|\s)(нет|не\s+было|не\s+будет)\s+[а-яёА-ЯЁ]+(а|я|и|ы|ов|ев|ей)(\s|[.,!?]|$)/i.test(t),
     tips: [
-      "Negation flips the object to genitive: `у меня нет книги` (I don't have a book — book in genitive). `Нет`, `не было`, `не будет` all take genitive.",
-      "Positive: `у меня есть книга` (I have a book — nom). Negative: `у меня нет книги` (no book — gen). The case shift signals the negation.",
-      "`Нет` is short for `не есть` — 'there is not'. The thing that doesn't exist must be in the genitive (the case of absence).",
-      "Time too: `Меня не было дома` (I wasn't home — literally 'of-me not was at home'). The subject of non-existence goes genitive.",
+      "Negation flips the object to genitive: `у меня нет книги` (I don't have a book – book in genitive). `Нет`, `не было`, `не будет` all take genitive.",
+      "Positive: `у меня есть книга` (I have a book – nom). Negative: `у меня нет книги` (no book – gen). The case shift signals the negation.",
+      "`Нет` is short for `не есть` – 'there is not'. The thing that doesn't exist must be in the genitive (the case of absence).",
+      "Time too: `Меня не было дома` (I wasn't home – literally 'of-me not was at home'). The subject of non-existence goes genitive.",
     ],
   },
 
@@ -279,7 +279,7 @@ module.exports = [
       "Instrumental case marks the tool, means, or accompaniment: `пишу карандашом` (write with pencil), `еду с другом` (go with a friend). Endings: -ом/-ем (m/n), -ой/-ей (f), -ью (f soft), -ами/-ями (pl).",
       "After `с` (with), the noun goes instrumental: `с братом`, `с сестрой`, `с друзьями`. Without `с`, instrumental marks the instrument itself.",
       "Professions in instrumental: `работаю учителем` (I work as a teacher). When you 'become' or 'be' something in professional sense, use instrumental.",
-      "Times of day are already instrumental: `утром` (in the morning), `вечером` (in the evening). No preposition — the case carries the meaning.",
+      "Times of day are already instrumental: `утром` (in the morning), `вечером` (in the evening). No preposition – the case carries the meaning.",
     ],
   },
 
@@ -289,7 +289,7 @@ module.exports = [
     priority: 88,
     match: t => /(^|\s)У\s+(меня|тебя|него|неё|нас|вас|них|[а-яёА-ЯЁ]+(а|я|ы|и))\s+(есть|нет|был|была|было|были|будет|будут)/i.test(t),
     tips: [
-      "Russian doesn't really have 'to have' — it uses `у + genitive` + `есть` (there is). `У меня есть книга` = 'at me there-is book' = 'I have a book'.",
+      "Russian doesn't really have 'to have' – it uses `у + genitive` + `есть` (there is). `У меня есть книга` = 'at me there-is book' = 'I have a book'.",
       "Negative drops `есть` and switches to `нет`: `У меня нет книги` (I don't have a book). The object goes genitive after `нет`.",
       "Past: `у меня была книга` (I had a book). Future: `у меня будет книга` (I will have a book). `Был/была/было/были` agrees with the THING owned.",
       "Pronouns after `у`: меня/тебя/него/неё/нас/вас/них (genitive forms). `У него` (he has), `у неё` (she has). The owner is in genitive.",
@@ -302,7 +302,7 @@ module.exports = [
     priority: 80,
     match: t => /(^|\s)(надо|нужно|нельзя|можно|должен|должна|должно|должны)(\s|[.,!?]|$)/i.test(t),
     tips: [
-      "`Надо` and `нужно` = 'need to / should'. Person goes dative: `Мне надо идти` (I need to go — literally 'to-me necessary to-go'). The 'subject' is in dative.",
+      "`Надо` and `нужно` = 'need to / should'. Person goes dative: `Мне надо идти` (I need to go – literally 'to-me necessary to-go'). The 'subject' is in dative.",
       "`Можно` (one can/may) and `нельзя` (one can't/may not) are impersonal: `Здесь можно курить?` (Can one smoke here?). No subject needed.",
       "`Должен/должна/должно/должны` (must/should) DOES agree with the subject in gender/number: `Я должен идти` (m), `она должна идти` (f).",
       "Negative obligation: `не надо` (don't need) vs `нельзя` (forbidden). Big difference: `не надо` = it's unnecessary, `нельзя` = it's not allowed.",
@@ -317,8 +317,8 @@ module.exports = [
     tips: [
       "`Нравиться` flips the subject and object: `Мне нравится книга` literally = 'to-me appeals book' = 'I like the book'. The thing liked is the GRAMMATICAL subject.",
       "Person who likes goes dative (мне, тебе, ему, ей, нам, вам, им). The verb agrees with what's LIKED, not the liker: `нравится` (sg) vs `нравятся` (pl).",
-      "Past tense agrees with the liked thing too: `Мне нравилась эта песня` (I liked this song — agrees with song, fem). Gender follows the object.",
-      "`Любить` (to love) works normally — subject = liker, object = liked: `Я люблю кофе`. Use `нравиться` for 'like', `любить` for 'love'.",
+      "Past tense agrees with the liked thing too: `Мне нравилась эта песня` (I liked this song – agrees with song, fem). Gender follows the object.",
+      "`Любить` (to love) works normally – subject = liker, object = liked: `Я люблю кофе`. Use `нравиться` for 'like', `любить` for 'love'.",
     ],
   },
 
@@ -329,9 +329,9 @@ module.exports = [
     match: t => /(^|\s)бы(\s|[.,!?]|$)/i.test(t),
     tips: [
       "`Бы + past tense` = conditional/subjunctive: `Я хотел бы пойти` (I would like to go), `если бы я знал` (if I knew). Past form even when meaning is hypothetical.",
-      "`Бы` can sit anywhere after the verb or pronoun: `Я бы пошёл`, `я пошёл бы`, `пошёл бы я`. Position is flexible — meaning stays the same.",
+      "`Бы` can sit anywhere after the verb or pronoun: `Я бы пошёл`, `я пошёл бы`, `пошёл бы я`. Position is flexible – meaning stays the same.",
       "`Если бы + past, ... бы + past` = 'if ... then would ...': `Если бы я знал, я бы пришёл` (If I had known, I would have come). Both halves take бы.",
-      "Polite requests use бы: `Я хотел бы` (I would like — softer than `я хочу`). Adding бы to a wish softens it considerably.",
+      "Polite requests use бы: `Я хотел бы` (I would like – softer than `я хочу`). Adding бы to a wish softens it considerably.",
     ],
   },
 
@@ -369,7 +369,7 @@ module.exports = [
     tips: [
       "Question words start the sentence: кто (who), что (what), где (where), когда (when), почему (why), как (how), сколько (how much), куда (where to), откуда (from where).",
       "`Где` vs `куда` vs `откуда`: location vs destination vs origin. `Где ты?` (Where are you?) vs `куда ты идёшь?` (Where are you going?). English uses 'where' for both.",
-      "`Почему` (why-cause) vs `зачем` (why-purpose). `Почему ты плачешь?` (why are you crying — what caused this?) vs `зачем ты пришёл?` (why did you come — what for?).",
+      "`Почему` (why-cause) vs `зачем` (why-purpose). `Почему ты плачешь?` (why are you crying – what caused this?) vs `зачем ты пришёл?` (why did you come – what for?).",
       "`Какой` (which/what kind) agrees with the noun: какой день, какая книга, какое окно, какие люди. Like an adjective in form.",
     ],
   },
@@ -381,9 +381,9 @@ module.exports = [
     match: t => /(^|\s)если(\s|[.,!?])/i.test(t),
     tips: [
       "`Если + future tense` for real conditions: `Если будет дождь, я останусь дома` (If it rains, I'll stay home). Both halves go in future.",
-      "Unlike English ('if it rains' — present), Russian uses future in both clauses for real future conditions.",
+      "Unlike English ('if it rains' – present), Russian uses future in both clauses for real future conditions.",
       "For hypothetical/unreal conditions, switch to `если бы + past`: `Если бы шёл дождь, я остался бы дома` (If it were raining, I would stay home).",
-      "Don't confuse `если` (if — condition) with `ли` (whether — indirect question). `Я не знаю, придёт ли он` (I don't know whether he'll come).",
+      "Don't confuse `если` (if – condition) with `ли` (whether – indirect question). `Я не знаю, придёт ли он` (I don't know whether he'll come).",
     ],
   },
 
@@ -394,8 +394,8 @@ module.exports = [
     match: t => /(^|\s)(который|которая|которое|которые|которого|которой|которому|которым|которой|которых|которыми)(\s|[.,!?]|$)/i.test(t),
     tips: [
       "`Который` (who/which/that) is the relative pronoun. It agrees with its noun in gender/number, but its case depends on its role IN the relative clause.",
-      "`Книга, которую я читаю` (the book that I'm reading — `книгу` is feminine, accusative because it's the object of `читаю`).",
-      "Compare: `Мужчина, который пришёл` (the man who came — nominative, subject) vs `мужчина, которого я знаю` (the man whom I know — accusative).",
+      "`Книга, которую я читаю` (the book that I'm reading – `книгу` is feminine, accusative because it's the object of `читаю`).",
+      "Compare: `Мужчина, который пришёл` (the man who came – nominative, subject) vs `мужчина, которого я знаю` (the man whom I know – accusative).",
       "Put a comma before `который` (Russian punctuation rule). The clause is set off by commas on both sides if it's in the middle.",
     ],
   },
@@ -406,8 +406,8 @@ module.exports = [
     priority: 80,
     match: t => /(^|\s)(себя|себе|собой|собою)(\s|[.,!?]|$)/i.test(t),
     tips: [
-      "`Себя` (oneself) refers back to the subject — any person, any gender. Same form regardless: `я знаю себя` (I know myself), `он знает себя` (he knows himself).",
-      "Cases of себя: gen/acc `себя`, dat/prep `себе`, instr `собой`. No nominative — you can't be the subject AND the object of yourself.",
+      "`Себя` (oneself) refers back to the subject – any person, any gender. Same form regardless: `я знаю себя` (I know myself), `он знает себя` (he knows himself).",
+      "Cases of себя: gen/acc `себя`, dat/prep `себе`, instr `собой`. No nominative – you can't be the subject AND the object of yourself.",
       "Use `себя` for the object position; use the reflexive suffix `-ся` if the verb has a reflexive form: `мыться` (wash oneself) vs `мыть себя` (which sounds odd).",
       "Common idioms: `у себя` (at one's place), `с собой` (with oneself / for takeaway), `по себе` (according to one's self).",
     ],
@@ -422,7 +422,7 @@ module.exports = [
       "Telling time uses `в + accusative`: `в час` (at one o'clock), `в два часа` (at two), `в пять часов` (at five). Hours follow the gen-sg/gen-pl number rules.",
       "Days of the week with `в + accusative`: `в понедельник` (on Monday), `в среду` (on Wednesday). Always `в` for days, never `на`.",
       "`Через + accusative` = 'in X time' (future from now): `через час` (in an hour), `через неделю` (in a week). For 'after X', use `после + genitive`.",
-      "Months with `в + prepositional`: `в январе` (in January), `в марте` (in March). Different preposition logic from days — annoying but consistent.",
+      "Months with `в + prepositional`: `в январе` (in January), `в марте` (in March). Different preposition logic from days – annoying but consistent.",
     ],
   },
 
@@ -433,9 +433,9 @@ module.exports = [
     match: t => /(^|\s)(мой|моя|моё|мои|моего|моей|моих|твой|твоя|твоё|твои|твоего|твоей|твоих|наш|наша|наше|наши|нашего|нашей|наших|ваш|ваша|ваше|ваши|вашего|вашей|ваших|его|её|их)(\s|[.,!?]|$)/i.test(t),
     tips: [
       "Possessives agree with the OWNED noun: `мой брат` (m), `моя сестра` (f), `моё окно` (n), `мои книги` (pl). Endings shift by gender, number, case.",
-      "`Его/её/их` (his/her/their) DON'T change — they're fixed forms regardless of what's owned. `Его дом`, `его машина`, `его книги` — all `его`.",
+      "`Его/её/их` (his/her/their) DON'T change – they're fixed forms regardless of what's owned. `Его дом`, `его машина`, `его книги` – all `его`.",
       "Possessives precede the noun: `мой дом`, not `дом мой`. Putting it after sounds emphatic or poetic.",
-      "For 'whose?', ask `чей/чья/чьё/чьи?` — same gender/number agreement: `чей это дом?` (whose house is this?).",
+      "For 'whose?', ask `чей/чья/чьё/чьи?` – same gender/number agreement: `чей это дом?` (whose house is this?).",
     ],
   },
 
@@ -445,9 +445,9 @@ module.exports = [
     priority: 88,
     match: t => /(^|\s|[.,!?])(ты|вы|тебя|вас|тебе|вам|тобой|вами|твой|твоя|твоё|твои|ваш|ваша|ваше|ваши)(\s|[.,!?]|$)/i.test(t),
     tips: [
-      "Russian has TWO 'you's: `ты` (informal — family, friends, kids) and `вы` (formal — strangers, elders, work, AND plural for everyone). They use DIFFERENT verb forms: `ты говоришь` vs `вы говорите`.",
-      "`Вы` is BOTH the formal singular and the plural — context tells you which. Verbs always conjugate as plural with `вы` even when addressing one person formally. Writing `Вы` with a capital is polite (especially in letters).",
-      "Default to `вы` with adults you don't know well. Russians are stricter about this than English speakers — wrong `ты` can sound rude. Wait for them to suggest `давай на ты` (let's switch to ты).",
+      "Russian has TWO 'you's: `ты` (informal – family, friends, kids) and `вы` (formal – strangers, elders, work, AND plural for everyone). They use DIFFERENT verb forms: `ты говоришь` vs `вы говорите`.",
+      "`Вы` is BOTH the formal singular and the plural – context tells you which. Verbs always conjugate as plural with `вы` even when addressing one person formally. Writing `Вы` with a capital is polite (especially in letters).",
+      "Default to `вы` with adults you don't know well. Russians are stricter about this than English speakers – wrong `ты` can sound rude. Wait for them to suggest `давай на ты` (let's switch to ты).",
       "Possessives shift too: `твой` (your, informal) vs `ваш` (your, formal/plural). And the cases: `тебя/тебе/тобой` (informal) vs `вас/вам/вами` (formal/plural).",
     ],
   },
@@ -460,8 +460,8 @@ module.exports = [
     tips: [
       "Russian has THREE genders. Unlike Spanish or German, gender is PREDICTABLE from the noun's ending: consonant → masc (дом, стол), `-а/-я` → fem (книга, неделя), `-о/-е` → neuter (окно, поле). Easy to guess.",
       "Adjectives and demonstratives agree with gender + number: `этот дом` (m), `эта книга` (f), `это окно` (n), `эти дома/книги/окна` (pl). One word, four forms.",
-      "Exceptions: nouns ending in `-ь` can be either masc or fem — `день` (day, m), `ночь` (night, f). Memorize these. Some `-а` nouns are masc by meaning: `папа`, `дядя`, `мужчина`.",
-      "Past tense verbs ALSO agree with the subject's gender: `он читал` (m), `она читала` (f), `оно читало` (n). Adjectives, pronouns, and past verbs — all visibly gendered.",
+      "Exceptions: nouns ending in `-ь` can be either masc or fem – `день` (day, m), `ночь` (night, f). Memorize these. Some `-а` nouns are masc by meaning: `папа`, `дядя`, `мужчина`.",
+      "Past tense verbs ALSO agree with the subject's gender: `он читал` (m), `она читала` (f), `оно читало` (n). Adjectives, pronouns, and past verbs – all visibly gendered.",
     ],
   },
 
@@ -471,7 +471,7 @@ module.exports = [
     priority: 60,
     match: t => /(^|\s)(никогда|никто|никого|никому|ничто|ничего|ничему|нигде|никуда|ниоткуда|ни\s+один|ни\s+одного|никакой)\b/i.test(t),
     tips: [
-      "Russian REQUIRES the double negative — even though English avoids it. `Я никогда не был там` (literally 'I never not was there') = 'I've never been there'. Drop the `не` and the sentence is broken.",
+      "Russian REQUIRES the double negative – even though English avoids it. `Я никогда не был там` (literally 'I never not was there') = 'I've never been there'. Drop the `не` and the sentence is broken.",
       "All negative pronouns and adverbs need BOTH the `ни-` word AND `не` before the verb: `никто не пришёл` (nobody not came = nobody came), `ничего не видел` (nothing not saw = saw nothing).",
       "English rule 'two negatives make a positive' does NOT apply in Russian. The `ни-` word and the `не` work TOGETHER to express a single negation. They reinforce, not cancel.",
       "List of negative words: `никто` (nobody), `ничто/ничего` (nothing), `никогда` (never), `нигде` (nowhere), `никуда` (to-nowhere), `никакой` (no kind of). All need `не` with the verb.",

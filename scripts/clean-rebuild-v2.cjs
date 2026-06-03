@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * clean-rebuild-v2.cjs — Spanish dictionary rebuild with proper verb infinitive handling
+ * clean-rebuild-v2.cjs – Spanish dictionary rebuild with proper verb infinitive handling
  *
  * Pipeline:
  *   1. Parse all entries from es.ts
@@ -330,7 +330,7 @@ const COMMON_NOUNS = new Set([
   'dress', 'shoe', 'hat', 'coat', 'jacket', 'pants', 'skirt',
 ]);
 
-// Words that are both valid verbs AND nouns/past tense — whitelist for QC
+// Words that are both valid verbs AND nouns/past tense – whitelist for QC
 const VERB_NOUN_OVERLAP = new Set([
   'store', 'fall', 'cut', 'read', 'rain', 'program', 'park', 'dress',
   'light', 'fire', 'snow', 'place', 'work', 'love', 'name', 'face',
@@ -371,7 +371,7 @@ async function main() {
   const nonVerbs = {};          // key → existing entry
 
   for (const [key, entry] of Object.entries(existing)) {
-    // Skip entries that are in function words table — they'll be handled there
+    // Skip entries that are in function words table – they'll be handled there
     if (FUNCTION_WORDS[key]) continue;
 
     const cleanKey = key.replace(/^[¿¡]+/, '');
@@ -437,13 +437,13 @@ async function main() {
 
     // Check if it's suspiciously short (< 3 chars) and not in our known-good list
     if (baseWord.length < 3 && !VALID_SHORT_VERBS.has(baseWord)) {
-      console.log(`  QC WARN: "${inf}" → "to ${translation}" — base too short`);
+      console.log(`  QC WARN: "${inf}" → "to ${translation}" – base too short`);
       isGood = false;
     }
 
     // Check against noun list (but allow known verb/noun overlaps)
     if (COMMON_NOUNS.has(baseWord) && !VERB_NOUN_OVERLAP.has(baseWord)) {
-      console.log(`  QC WARN: "${inf}" → "to ${translation}" — base is a common noun`);
+      console.log(`  QC WARN: "${inf}" → "to ${translation}" – base is a common noun`);
       isGood = false;
     }
 
@@ -546,7 +546,7 @@ async function main() {
     // Remove any "to " prefix that Google might have incorrectly added to non-verbs
     // Only strip if not a function word already
     if (translation && translation.startsWith('to ') && !entry.pos?.includes('v')) {
-      // Keep it for now — we'll QC later. Actually we should NOT strip "to " from
+      // Keep it for now – we'll QC later. Actually we should NOT strip "to " from
       // Google's non-verb translations because Google might be translating an -ar noun
       // that happens to end in a verb pattern. We'll QC in step 10.
     }
@@ -687,7 +687,7 @@ async function main() {
       if (!entry) continue;
 
       if (issue.includes('AUX:') || issue.includes('3RD:') || issue.includes('PAST:') || issue.includes('NOUN:')) {
-        // Bad "to X" — if it's supposed to be a verb, try keeping existing or using lemma
+        // Bad "to X" – if it's supposed to be a verb, try keeping existing or using lemma
         if (existing[key] && existing[key].en && existing[key].en !== entry.en) {
           fixDict[key].en = existing[key].en;
           fixes++;

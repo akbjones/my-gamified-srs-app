@@ -315,7 +315,7 @@ const IT_CORRECT = {
   'rivestito': 'covered, coated',
   'spinse': 'pushed (past tense)',
 
-  // === Words wrongly linked to stare (root: sta) — need to check ===
+  // === Words wrongly linked to stare (root: sta) – need to check ===
   'stadio': 'stadium',
   'stagione': 'season',
   'stabile': 'stable',
@@ -373,7 +373,7 @@ const FR_CORRECT = {
 };
 
 const PT_CORRECT = {
-  // PT has fewer issues — mostly clean
+  // PT has fewer issues – mostly clean
 };
 
 // ========== GENERATE FIX FILES ==========

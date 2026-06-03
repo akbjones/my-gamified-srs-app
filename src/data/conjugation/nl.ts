@@ -6,12 +6,12 @@
  * Person order: ik, jij, hij/zij, wij, jullie, zij
  *
  * Tenses:
- *   present     — Presens
- *   preterite   — Imperfectum (simple past)
- *   imperfect   — Perfectum (compound past: hebben/zijn + voltooid deelwoord)
- *   future      — Futurum (zullen + infinitive)
- *   conditional — Conditionalis (zou/zouden + infinitive)
- *   subjunctive — Aanv. wijs (aanvoegende wijs)
+ *   present     – Presens
+ *   preterite   – Imperfectum (simple past)
+ *   imperfect   – Perfectum (compound past: hebben/zijn + voltooid deelwoord)
+ *   future      – Futurum (zullen + infinitive)
+ *   conditional – Conditionalis (zou/zouden + infinitive)
+ *   subjunctive – Aanv. wijs (aanvoegende wijs)
  */
 import type { ConjugationTable } from '../../types';
 
@@ -41,7 +41,7 @@ const SEPARABLE_PREFIXES = [
 ];
 SEPARABLE_PREFIXES.sort((a, b) => b.length - a.length);
 
-// Inseparable prefixes — never separate, no ge- in past participle
+// Inseparable prefixes – never separate, no ge- in past participle
 const INSEPARABLE_PREFIXES = ['be', 'er', 'ge', 'her', 'ont', 'ver'];
 
 function detectSeparablePrefix(inf: string): string | null {
@@ -111,7 +111,7 @@ function getStem(inf: string): string {
   // e.g., lo-pen → stem needs "loop" (the 'o' was long/open)
   // e.g., ma-ken → stem needs "maak"
   // e.g., le-ven → stem needs "leev" → then v→f = "leef"
-  // e.g., re-zen → stem needs "reiz" → then z→s = "reis" — wait, reizen → reiz → reis
+  // e.g., re-zen → stem needs "reiz" → then z→s = "reis" – wait, reizen → reiz → reis
 
   // Detect: if infinitive minus -en gives a stem like CVC where the vowel was in open syllable
   // An open syllable = the vowel is followed by a single consonant + vowel (the -en)
@@ -796,7 +796,7 @@ function conjugateBase(
   // ── Conditionalis (conditional) ───
   const conditional: Forms = ZOU_FORMS.map(z => z + ' ' + inf) as Forms;
 
-  // ── Aanvoegende wijs (subjunctive) — same as present in modern Dutch ───
+  // ── Aanvoegende wijs (subjunctive) – same as present in modern Dutch ───
   const subjunctive: Forms = [...present] as Forms;
 
   return { present, preterite, imperfect, future, conditional, subjunctive };
@@ -882,7 +882,7 @@ export function conjugate(infinitive: string): ConjugationTable | null {
         const auxForms = auxiliary === 'zijn' ? ZIJN_PRESENT : HEBBEN_PRESENT;
         forms = auxForms.map(a => a + ' ' + sepPP) as Forms;
       } else if (t === 'future') {
-        // Future: "zal opbellen" — prefix stays with infinitive
+        // Future: "zal opbellen" – prefix stays with infinitive
         forms = ZULLEN_PRESENT.map(z => z + ' ' + inf) as Forms;
       } else if (t === 'conditional') {
         // Conditional: "zou opbellen"

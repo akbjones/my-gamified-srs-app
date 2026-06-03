@@ -71,7 +71,7 @@ async def main():
             continue
         ok, info = await generate(card)
         status = "OK" if ok else "FAIL"
-        print(f"  {cid}: {status} ({info}) — {card.get('target', '')[:50]}")
+        print(f"  {cid}: {status} ({info}) – {card.get('target', '')[:50]}")
         if ok:
             done += 1
         else:

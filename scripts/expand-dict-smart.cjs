@@ -48,7 +48,7 @@ while ((match = keyPattern.exec(dictContent)) !== null) {
 const deckWords = new Map();
 for (const card of deck) {
   for (const w of (card.target || '').split(/\s+/).filter(Boolean)) {
-    const clean = w.replace(/[.,!?;:""''()—–\-…¿¡«»\[\]{}]/g, '').trim().toLowerCase();
+    const clean = w.replace(/[.,!?;:""''()––\-…¿¡«»\[\]{}]/g, '').trim().toLowerCase();
     if (clean && clean.length > 0) {
       deckWords.set(clean, (deckWords.get(clean) || 0) + 1);
     }

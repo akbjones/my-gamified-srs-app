@@ -24,9 +24,9 @@ console.log(`Total entries parsed: ${entries.length}`);
 
 const fixes = [];
 const issueStats = {
-  'to_noun_not_verb': 0,      // "to accommodation" — noun with "to " prefix
-  'to_adj_not_verb': 0,       // "to comfortable" — adj with "to " prefix
-  'to_past_tense': 0,         // "to canceled" — past tense after "to"
+  'to_noun_not_verb': 0,      // "to accommodation" – noun with "to " prefix
+  'to_adj_not_verb': 0,       // "to comfortable" – adj with "to " prefix
+  'to_past_tense': 0,         // "to canceled" – past tense after "to"
   'to_gerund': 0,             // "to bring" (actually gerund issue)
   'to_garbled': 0,            // "to do you hear?" garbled question
   'to_not_english': 0,        // "to shaf", "to warne", "to ande"
@@ -45,7 +45,7 @@ function addFix(word, current_en, fixed_en, current_pos, fixed_pos, issue, reaso
 }
 
 // ============================================================
-// MANUAL FIXES — Spanish knowledge-based corrections
+// MANUAL FIXES – Spanish knowledge-based corrections
 // These are entries I've verified using Spanish language knowledge
 // ============================================================
 const MANUAL_FIXES = {
@@ -250,7 +250,7 @@ const MANUAL_FIXES = {
 
   // --- "to " + not English word ---
   'afeita': { en: 'to shave', pos: 'v', issue: 'to_not_english', reason: '"to shaf" is not English' },
-  'acaso': { en: 'perhaps', pos: 'adv', issue: 'to_not_english', reason: '"to perhap" — acaso means "perhaps"' },
+  'acaso': { en: 'perhaps', pos: 'adv', issue: 'to_not_english', reason: '"to perhap" – acaso means "perhaps"' },
   'aviso': { en: 'warning; notice', pos: 'n', issue: 'to_not_english', reason: '"to warne" is not English; aviso is noun' },
   'avisó': { en: 'to warn', pos: 'v', issue: 'to_not_english', reason: '"to warne" is not English' },
   'aprobarás': { en: 'to pass', pos: 'v', issue: 'to_not_english', reason: '"to pas" is not English' },
@@ -264,21 +264,21 @@ const MANUAL_FIXES = {
   'actuales': { en: 'current', pos: 'adj', issue: 'to_semantic_error', reason: 'actuales = "current" (plural)' },
   'actualicemos': { en: 'to update', pos: 'v', issue: 'to_semantic_error', reason: 'actualicemos is from actualizar (to update)' },
   'adaptador': { en: 'adapter', pos: 'n', issue: 'to_semantic_error', reason: 'adaptador is noun "adapter"' },
-  'alegró': { en: 'to be glad', pos: 'v', issue: 'to_semantic_error', reason: '"to glad" — glad is not a verb' },
+  'alegró': { en: 'to be glad', pos: 'v', issue: 'to_semantic_error', reason: '"to glad" – glad is not a verb' },
   'alentadores': { en: 'encouraging', pos: 'adj', issue: 'to_semantic_error', reason: 'alentadores is adj "encouraging"' },
   'acabamos': { en: 'to finish', pos: 'v', issue: 'to_semantic_error', reason: '"just finished" is not proper dict definition' },
   'acabó': { en: 'to finish', pos: 'v', issue: 'to_semantic_error', reason: '"just" is not a definition for acabar' },
   'acabo': { en: 'to finish', pos: 'v', issue: 'to_semantic_error', reason: '"just" is not a definition for acabar' },
-  'asusta': { en: 'to scare', pos: 'v', issue: 'to_semantic_error', reason: '"to scary" — scary is adj, should be "to scare"' },
-  'cobró': { en: 'to charge', pos: 'v', issue: 'to_semantic_error', reason: '"to collection" — cobrar = to charge' },
+  'asusta': { en: 'to scare', pos: 'v', issue: 'to_semantic_error', reason: '"to scary" – scary is adj, should be "to scare"' },
+  'cobró': { en: 'to charge', pos: 'v', issue: 'to_semantic_error', reason: '"to collection" – cobrar = to charge' },
   'abarca': { en: 'to encompass', pos: 'v', issue: 'to_semantic_error', reason: 'abarca (verb) = to encompass, not noun "cover"' },
-  'conocido': { en: 'well-known', pos: 'adj', issue: 'to_semantic_error', reason: '"to acquaintance" — conocido = well-known (adj)' },
+  'conocido': { en: 'well-known', pos: 'adj', issue: 'to_semantic_error', reason: '"to acquaintance" – conocido = well-known (adj)' },
   'comienzo': { en: 'beginning', pos: 'n', issue: 'to_semantic_error', reason: 'comienzo is noun "beginning", not "to eat"' },
   'comoquiera': { en: 'anyway', pos: 'adv', issue: 'to_semantic_error', reason: 'comoquiera is adverb "anyway"' },
   'aprendizaje': { en: 'learning', pos: 'n', issue: 'to_semantic_error', reason: 'aprendizaje is noun "learning"' },
   'cambio': { en: 'change', pos: 'n', issue: 'to_semantic_error', reason: 'cambio as noun = "change"' },
   'cambios': { en: 'change', pos: 'n', issue: 'to_semantic_error', reason: 'cambios is noun "changes"' },
-  'crianza': { en: 'upbringing', pos: 'n', issue: 'to_semantic_error', reason: '"to breed" — crianza is noun "upbringing"' },
+  'crianza': { en: 'upbringing', pos: 'n', issue: 'to_semantic_error', reason: '"to breed" – crianza is noun "upbringing"' },
   'bebida': { en: 'drink; beverage', pos: 'n', issue: 'to_semantic_error', reason: 'bebida is noun "drink/beverage"' },
   'bebidas': { en: 'drink; beverage', pos: 'n', issue: 'to_semantic_error', reason: 'bebidas is noun "drinks"' },
   'arañazos': { en: 'scratch', pos: 'n', issue: 'to_semantic_error', reason: 'arañazos is noun "scratches"' },
@@ -290,13 +290,13 @@ const MANUAL_FIXES = {
   'cocinera': { en: 'cook; chef', pos: 'n', issue: 'to_semantic_error', reason: 'cocinera is noun "cook/chef"' },
   'bronca': { en: 'row; argument', pos: 'n', issue: 'to_semantic_error', reason: 'bronca is noun "argument"' },
   'bienvenidos': { en: 'welcome', pos: 'adj', issue: 'to_semantic_error', reason: 'bienvenidos is adj/interj "welcome"' },
-  'callada': { en: 'quiet; silent', pos: 'adj', issue: 'to_semantic_error', reason: '"to silent" — callada is adj "quiet"' },
+  'callada': { en: 'quiet; silent', pos: 'adj', issue: 'to_semantic_error', reason: '"to silent" – callada is adj "quiet"' },
   'confusa': { en: 'confusing', pos: 'adj', issue: 'to_semantic_error', reason: '"to confuse" for adj confusa → "confusing"' },
   'beneficios': { en: 'benefit; profit', pos: 'n', issue: 'to_semantic_error', reason: 'beneficios is noun "benefits"' },
-  'harto': { en: 'fed up', pos: 'adj', issue: 'to_semantic_error', reason: '"to feed" — harto means "fed up" (adj)' },
+  'harto': { en: 'fed up', pos: 'adj', issue: 'to_semantic_error', reason: '"to feed" – harto means "fed up" (adj)' },
   'causas': { en: 'cause', pos: 'n', issue: 'to_semantic_error', reason: 'causas is noun "causes"' },
   'carga': { en: 'load; charge', pos: 'n', issue: 'to_semantic_error', reason: 'carga as noun = load/charge (duplicate "to load; to load")' },
-  'adónde': { en: 'where to', pos: 'adv', issue: 'to_semantic_error', reason: '"to where to" — adónde is adverb' },
+  'adónde': { en: 'where to', pos: 'adv', issue: 'to_semantic_error', reason: '"to where to" – adónde is adverb' },
 
   // --- Wrong POS ---
   'acceso': { en: 'access', pos: 'n', issue: 'wrong_pos', reason: 'acceso is noun, not adj' },
@@ -428,7 +428,7 @@ for (const entry of entries) {
         'weakened', 'welcomed', 'witnessed', 'wounded', 'yielded'].includes(firstWord);
 
       if (isParticiple) {
-        addFix(word, en, firstWord, pos, 'adj', 'to_past_tense', `"${en}" — "${firstWord}" is participle/adj`);
+        addFix(word, en, firstWord, pos, 'adj', 'to_past_tense', `"${en}" – "${firstWord}" is participle/adj`);
       } else {
         // Fix to base verb form
         let base = firstWord;

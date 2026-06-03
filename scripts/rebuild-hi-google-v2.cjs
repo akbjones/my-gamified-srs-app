@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Hindi Dictionary Rebuild v2 — Google Translate + 16-rule post-processing
+ * Hindi Dictionary Rebuild v2 – Google Translate + 16-rule post-processing
  *
  * 1. Parse current hi.ts dictionary for entries (word, en, pos, ipa, lemma)
  * 2. Use function word table for common words
@@ -190,14 +190,14 @@ function loadCardEnglish() {
   const wordToEnglish = new Map();
   for (const card of deck) {
     const hiTokens = card.target
-      .replace(/[.,!?;:"""\u2018\u2019()—–«»\u0964\u0965/\[\]{}]/g, ' ')
+      .replace(/[.,!?;:"""\u2018\u2019()––«»\u0964\u0965/\[\]{}]/g, ' ')
       .split(/\s+/)
       .map(t => t.trim().toLowerCase())
       .filter(t => t.length > 0);
 
     const enWords = new Set(
       (card.english || '').toLowerCase()
-        .replace(/[.,!?;:"""\u2018\u2019()—–«»/\[\]{}]/g, ' ')
+        .replace(/[.,!?;:"""\u2018\u2019()––«»/\[\]{}]/g, ' ')
         .split(/\s+/)
         .filter(w => w.length > 1)
     );
@@ -447,7 +447,7 @@ async function main() {
         lemma: entry.lemma,
       });
     } else {
-      // Base word not found or failed — translate directly
+      // Base word not found or failed – translate directly
       try {
         const [translation] = await googleTranslateBatch([entry.word]);
         const processed = postProcess(translation, entry.pos, entry.word, stats);
@@ -507,7 +507,7 @@ async function main() {
   const shuffled = [...results].sort(() => Math.random() - 0.5);
   const sample = shuffled.slice(0, 200);
   const mdLines = [
-    '# Hindi Dictionary Rebuild v2 — Preview (200 random samples)',
+    '# Hindi Dictionary Rebuild v2 – Preview (200 random samples)',
     '',
     `Generated: ${new Date().toISOString()}`,
     '',

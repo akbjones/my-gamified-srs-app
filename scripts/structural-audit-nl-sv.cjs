@@ -479,7 +479,7 @@ function auditDeck(langCode) {
 function printSummary(report) {
   const sep = '='.repeat(60);
   console.log(`\n${sep}`);
-  console.log(`  ${report.language} (${report.code}) — STRUCTURAL AUDIT`);
+  console.log(`  ${report.language} (${report.code}) – STRUCTURAL AUDIT`);
   console.log(`${sep}`);
   console.log(`  Total cards: ${report.totalCards} | Nodes: ${report.overallSummary.totalNodes}`);
   console.log(`  Grade: ${report.overallSummary.grade} (${report.overallSummary.totalIssues} total issues)\n`);

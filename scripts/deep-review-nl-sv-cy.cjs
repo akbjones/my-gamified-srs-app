@@ -270,7 +270,7 @@ function reviewSwedishDeep(cards) {
     if (!issue && /s-passive|passive.*-s form|passiv.*-s/i.test(tip)) {
       // Check if any verb ends in -s (s-passive)
       if (!/\b\w+(s)\b/.test(sent) || /\b(hans|hennes|deras|oss|dess)\b/.test(sent)) {
-        // Common -s words that aren't passive — need more care
+        // Common -s words that aren't passive – need more care
       }
     }
 
@@ -647,7 +647,7 @@ function reviewWelshDeep(cards) {
     // 58. Welsh fronting tip but sentence doesn't demonstrate fronting
     if (!issue && /^Welsh uses fronting/i.test(tip)) {
       // Fronting means a non-subject element comes first for emphasis
-      // Hard to detect programmatically — skip
+      // Hard to detect programmatically – skip
     }
 
     // 59. "Dy" mutation tip but no "dy"

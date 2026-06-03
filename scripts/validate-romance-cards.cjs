@@ -108,7 +108,7 @@ const FALSE_POSITIVES = new Set([
 
 function tokenize(text) {
   return text.toLowerCase()
-    .replace(/[.,!?;:'"()\-—–…«»""'']/g, ' ')
+    .replace(/[.,!?;:'"()\-––…«»""'']/g, ' ')
     .split(/\s+/)
     .filter(w => w.length > 0);
 }

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Fix 114 broken Turkish deck cards — replace target & english fields
+ * Fix 114 broken Turkish deck cards – replace target & english fields
  * with natural, grammatically correct Turkish sentences.
  */
 

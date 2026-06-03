@@ -54,7 +54,7 @@ export interface PlacementResults {
 
 /**
  * Apply placement results: graduate cards below ceiling, save everything.
- * No XP awarded — placement just sets your starting point.
+ * No XP awarded – placement just sets your starting point.
  * Returns updated masteryMap and userStats.
  */
 export function applyPlacementResults(

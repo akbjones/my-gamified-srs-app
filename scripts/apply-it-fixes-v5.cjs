@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Italian dictionary semantic verification — comprehensive final version.
+ * Italian dictionary semantic verification – comprehensive final version.
  * Uses Google Translate for forward + dual back-translation.
  * Applies only validated fixes with manual overrides for edge cases.
  */
@@ -150,7 +150,7 @@ const STOP = new Set(['a','an','the','to','of','in','on','at','for','and','or','
 
 function contentWords(t) {
   if (!t) return [];
-  return t.toLowerCase().replace(/[().,!?;:"""''\/\-–—]/g,' ')
+  return t.toLowerCase().replace(/[().,!?;:"""''\/\-––]/g,' ')
     .split(/\s+/).filter(w => w.length > 1 && !STOP.has(w));
 }
 
@@ -637,7 +637,7 @@ async function main() {
 }
 
 main().then(n => {
-  console.log(`\nITALIAN COMPLETE — ${n} fixes`);
+  console.log(`\nITALIAN COMPLETE – ${n} fixes`);
 }).catch(err => {
   console.error('Fatal:', err);
   process.exit(1);

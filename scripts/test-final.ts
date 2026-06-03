@@ -4,7 +4,7 @@ import { lookupWord as luDe } from '../src/data/dictionary/de';
 import { lookupWord as luTr } from '../src/data/dictionary/tr';
 import { lookupWord as luEs } from '../src/data/dictionary/es';
 
-console.log('User-reported issues — final state:');
+console.log('User-reported issues – final state:');
 console.log('');
 console.log('Russian:');
 console.log('  туалет:', JSON.stringify(luRu('туалет')));

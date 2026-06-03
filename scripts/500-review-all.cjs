@@ -270,7 +270,7 @@ for (const lang of LANGUAGES) {
   };
 
   results[lang] = result;
-  console.log(`  Result: ${passed}/${sample.length} passed (${passRate}%) — Grade ${grade}`);
+  console.log(`  Result: ${passed}/${sample.length} passed (${passRate}%) – Grade ${grade}`);
 
   // Write individual JSON
   fs.writeFileSync(

@@ -103,7 +103,7 @@ function tryVerbLookup(word) {
 }
 
 function lookupInDict(raw) {
-  let clean = raw.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()—–«»\d/…\[\]«»]/g, '').trim();
+  let clean = raw.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()––«»\d/…\[\]«»]/g, '').trim();
   if (!clean || clean.length <= 1) return true;
   if (STOP_WORDS.has(clean)) return true;
   if (KNOWN_COMPOUNDS.has(clean)) return true;
@@ -146,7 +146,7 @@ function lookupInDict(raw) {
 
 function extractWords(sentence) {
   return sentence
-    .replace(/[.,!?;:"""\u2018\u2019()—–«»\d/…\[\]«»]/g, ' ')
+    .replace(/[.,!?;:"""\u2018\u2019()––«»\d/…\[\]«»]/g, ' ')
     .split(/\s+/)
     .filter(w => w.length > 0);
 }
@@ -309,7 +309,7 @@ const allWords = new Set();
 const allMissing = new Set();
 for (const card of cards) {
   for (const w of extractWords(card.target)) {
-    const clean = w.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()—–«»\d/…\[\]«»]/g, '').trim();
+    const clean = w.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()––«»\d/…\[\]«»]/g, '').trim();
     if (clean.length > 1) {
       allWords.add(clean);
       if (!lookupInDict(w)) allMissing.add(clean);

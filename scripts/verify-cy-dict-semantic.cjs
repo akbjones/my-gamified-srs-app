@@ -4,7 +4,7 @@
  * 1. Parse ALL entries from cy.ts
  * 2. Skip function words
  * 3. Translate cy→en via Google, batch 80
- * 4. Compare — zero content word match → flag for replacement
+ * 4. Compare – zero content word match → flag for replacement
  * 5. Filter garbage Google results
  * 6. Output fixes JSON
  */
@@ -132,7 +132,7 @@ function translateBatch(texts) {
           });
           resolve(translations);
         } catch (e) {
-          reject(new Error(`Parse error: ${e.message} — ${data.slice(0, 200)}`));
+          reject(new Error(`Parse error: ${e.message} – ${data.slice(0, 200)}`));
         }
       });
     }).on('error', reject);
@@ -260,7 +260,7 @@ async function main() {
     }
 
     if (batchNum % 10 === 0 || batchNum === totalBatches) {
-      console.log(`  Batch ${batchNum}/${totalBatches} done — ${fixes.length} mismatches so far`);
+      console.log(`  Batch ${batchNum}/${totalBatches} done – ${fixes.length} mismatches so far`);
     }
 
     // Small delay between batches

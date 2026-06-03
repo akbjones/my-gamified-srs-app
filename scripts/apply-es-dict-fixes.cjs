@@ -127,10 +127,10 @@ const FIXES = {
   'debate': { en: 'debate', pos: 'n', issue: 'to_noun_not_verb' },
   'detalle': { en: 'detail', pos: 'n', issue: 'to_noun_not_verb' },
   'detalles': { en: 'detail', pos: 'n', issue: 'to_noun_not_verb' },
-  'salsa': { en: 'sauce; salsa', pos: 'n', issue: 'to_noun_not_verb', reason: '"to dip" — salsa is noun' },
+  'salsa': { en: 'sauce; salsa', pos: 'n', issue: 'to_noun_not_verb', reason: '"to dip" – salsa is noun' },
   'doble': { en: 'double', pos: 'adj', issue: 'to_noun_not_verb' },
   'gotas': { en: 'drop', pos: 'n', issue: 'to_noun_not_verb' },
-  'vivienda': { en: 'housing; dwelling', pos: 'n', issue: 'to_noun_not_verb', reason: '"to dwell" — vivienda is noun' },
+  'vivienda': { en: 'housing; dwelling', pos: 'n', issue: 'to_noun_not_verb', reason: '"to dwell" – vivienda is noun' },
   'experiencia': { en: 'experience', pos: 'n', issue: 'to_noun_not_verb' },
   'experiencias': { en: 'experience', pos: 'n', issue: 'to_noun_not_verb' },
   'excusas': { en: 'excuse', pos: 'n', issue: 'to_noun_not_verb' },
@@ -328,7 +328,7 @@ const FIXES = {
   'cobró': { en: 'to charge', pos: 'v', issue: 'to_semantic_error', reason: '"to collection"' },
   'abarca': { en: 'to encompass', pos: 'v', issue: 'to_semantic_error' },
   'conocido': { en: 'well-known', pos: 'adj', issue: 'to_semantic_error' },
-  'comienzo': { en: 'beginning', pos: 'n', issue: 'to_semantic_error', reason: '"to eat" — comienzo is noun' },
+  'comienzo': { en: 'beginning', pos: 'n', issue: 'to_semantic_error', reason: '"to eat" – comienzo is noun' },
   'comoquiera': { en: 'anyway', pos: 'adv', issue: 'to_semantic_error' },
   'aprendizaje': { en: 'learning', pos: 'n', issue: 'to_semantic_error' },
   'cambio': { en: 'change', pos: 'n', issue: 'to_semantic_error' },
@@ -353,19 +353,19 @@ const FIXES = {
   'carga': { en: 'load; charge', pos: 'n', issue: 'to_semantic_error' },
   'adónde': { en: 'where to', pos: 'adv', issue: 'to_semantic_error' },
   'arregló': { en: 'to fix', pos: 'v', issue: 'to_semantic_error', reason: '"to arrangement" → "to fix"' },
-  'marcaron': { en: 'to score', pos: 'v', issue: 'to_semantic_error', reason: '"to score" — actually OK but was not a verb-to issue' },
-  'cicatrizado': { en: 'scarred; healed', pos: 'adj', issue: 'to_semantic_error', reason: '"to scar" — cicatrizado is adj' },
+  'marcaron': { en: 'to score', pos: 'v', issue: 'to_semantic_error', reason: '"to score" – actually OK but was not a verb-to issue' },
+  'cicatrizado': { en: 'scarred; healed', pos: 'adj', issue: 'to_semantic_error', reason: '"to scar" – cicatrizado is adj' },
   'sonríe': { en: 'to smile', pos: 'v', issue: null },  // OK - smile IS a verb
   'sonrió': { en: 'to smile', pos: 'v', issue: null },  // OK
   'encantaría': { en: 'to love', pos: 'v', issue: null }, // OK in context
   'mandó': { en: 'to order; to send', pos: 'v', issue: 'to_semantic_error', reason: 'mandó is verb form, not "to command"' },
   'delegado': { en: 'delegate', pos: 'n', issue: 'to_noun_not_verb' },
-  'ochocientos': { en: 'eight hundred', pos: 'n', issue: 'to_semantic_error', reason: '"to eight hundred" — number, not verb' },
+  'ochocientos': { en: 'eight hundred', pos: 'n', issue: 'to_semantic_error', reason: '"to eight hundred" – number, not verb' },
   'abrazo': { en: 'hug', pos: 'n', issue: 'to_noun_not_verb' },
 
   // Entries where "to X" but the Spanish word is clearly from a different verb/noun
-  'hechas': { en: 'done; made', pos: 'adj', issue: 'to_semantic_error', reason: '"to done, made, fact" — hechas is adj' },
-  'hecho': { en: 'done; made; fact', pos: 'n', issue: 'to_semantic_error', reason: '"to done, made, fact" — hecho is noun/adj' },
+  'hechas': { en: 'done; made', pos: 'adj', issue: 'to_semantic_error', reason: '"to done, made, fact" – hechas is adj' },
+  'hecho': { en: 'done; made; fact', pos: 'n', issue: 'to_semantic_error', reason: '"to done, made, fact" – hecho is noun/adj' },
   'sido': { en: 'to be', pos: 'v', issue: 'to_semantic_error', reason: '"to been" → "to be"' },
   'podido': { en: 'to be able', pos: 'v', issue: 'to_semantic_error', reason: '"to been able" → "to be able"' },
 

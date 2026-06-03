@@ -317,7 +317,7 @@ Object.entries(reasonCounts).sort((a,b) => b[1] - a[1]).forEach(([r, c]) => {
 console.log('\nSample removed cards:');
 const removed = deck.filter(c => removeIds.has(c.id));
 removed.slice(0, 20).forEach(c => {
-  console.log(`  ${c.id} [${c.grammarNode}] "${c.english}" — ${removeReasons[c.id]}`);
+  console.log(`  ${c.id} [${c.grammarNode}] "${c.english}" – ${removeReasons[c.id]}`);
 });
 
 // === Apply removal ===

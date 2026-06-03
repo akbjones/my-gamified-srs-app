@@ -27,7 +27,7 @@ const NON_LATIN_LANGS = {
 // Tokenizer: same logic as audit.cjs
 function tokenize(text) {
   const words = new Set();
-  text.split(/[\s,;:.!?¿¡""«»()\-—–'…।॥؟\u200B\u200C\u200D]+/).forEach(function (w) {
+  text.split(/[\s,;:.!?¿¡""«»()\-––'…।॥؟\u200B\u200C\u200D]+/).forEach(function (w) {
     var clean = w.toLowerCase().replace(/^['']+|['']+$/g, '').replace(/[।॥]/g, '').trim();
     if (clean.length > 0 && !/^\d+$/.test(clean)) words.add(clean);
   });
@@ -387,7 +387,7 @@ for (const [dir, code] of LANGS) {
 // ══════════════════════════════════════════════════════════════
 
 console.log("╔═══════════════════════════════════════════════════════════════════╗");
-console.log("║           COMPREHENSIVE AUDIT — ALL 11 LANGUAGES                ║");
+console.log("║           COMPREHENSIVE AUDIT – ALL 11 LANGUAGES                ║");
 console.log("╚═══════════════════════════════════════════════════════════════════╝");
 console.log("");
 
@@ -397,7 +397,7 @@ for (const [dir, code] of LANGS) {
     r.tips.issues.length + r.audio.issues.length + r.tags.issues.length + r.pacing.issues.length;
 
   console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-  console.log("  " + code.toUpperCase() + " (" + dir + ") — " + totalIssues + " total issues");
+  console.log("  " + code.toUpperCase() + " (" + dir + ") – " + totalIssues + " total issues");
   console.log("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
 
   // 1. Dictionary

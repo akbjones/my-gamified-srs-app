@@ -1,5 +1,5 @@
 /**
- * French dictionary — word lookup with IPA pronunciations.
+ * French dictionary – word lookup with IPA pronunciations.
  * Every word appearing in the French deck should have an entry.
  */
 
@@ -16,7 +16,7 @@ const ELISION_PREFIXES = ["qu'", "l'", "d'", "j'", "n'", "s'", "c'", "m'", "t'"]
 // ── Main lookup function ──────────────────────────────────────
 export function lookupWord(raw: string): DictEntry | null {
   // 1. Clean: lowercase, strip punctuation (but NOT apostrophes or hyphens initially)
-  let clean = raw.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()—–«»\d/]/g, '');
+  let clean = raw.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()––«»\d/]/g, '');
   if (!clean) return null;
 
   // 2. Direct match (preserves hyphens for compound words like après-midi)

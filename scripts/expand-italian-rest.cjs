@@ -12,7 +12,7 @@ const path = require('path');
 const DECK_PATH = path.join(__dirname, '..', 'src', 'data', 'italian', 'deck.json');
 
 // ────────────────────────────────────────────
-// Node 01 — Presente indicativo (~68 new cards)
+// Node 01 – Presente indicativo (~68 new cards)
 // Less common verbs: correre, crescere, cadere, scendere, salire, nascere,
 // morire, scegliere, spegnere, accendere, rompere, proteggere, raccogliere,
 // proporre, produrre, tradurre, attrarre
@@ -111,7 +111,7 @@ const node01 = [
 ];
 
 // ────────────────────────────────────────────
-// Node 02 — Essere vs stare (~260 new cards)
+// Node 02 – Essere vs stare (~260 new cards)
 // ────────────────────────────────────────────
 const node02 = [
   // ── Essere: identity ──
@@ -383,7 +383,7 @@ const node02 = [
 ];
 
 // ────────────────────────────────────────────
-// PLACEHOLDER — remaining nodes added below
+// PLACEHOLDER – remaining nodes added below
 // ────────────────────────────────────────────
 const node03 = [
   // ── Che / Cosa / Che cosa ──

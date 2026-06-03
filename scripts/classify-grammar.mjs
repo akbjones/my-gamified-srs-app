@@ -1,5 +1,5 @@
 /**
- * Grammar Node Classifier for Spanish Deck (v3 — 35 nodes)
+ * Grammar Node Classifier for Spanish Deck (v3 – 35 nodes)
  *
  * Assigns each card to one of 35 CEFR grammar nodes (A1→C2) based on
  * sentence structure analysis and grammar tip keywords.
@@ -41,7 +41,7 @@ function norm(s) {
   return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 }
 
-// Lowercase but KEEP accents — for accent-critical patterns
+// Lowercase but KEEP accents – for accent-critical patterns
 function lower(s) {
   return s.toLowerCase();
 }
@@ -117,7 +117,7 @@ function classify(card) {
   if (/perfect|perfecto|haber|compound/.test(g)) scores[20] += 12;
 
   // ── Node 09: Regular preterite ──
-  // Time markers (shared between 09 and 10 — both benefit)
+  // Time markers (shared between 09 and 10 – both benefit)
   const hasPretMarker = /\b(ayer|anoche|la semana pasada|el mes pasado|el ano pasado|hace\s+\w+\s+(anos|meses|dias|semanas)|una vez|de repente|entonces|el otro dia|la otra noche)\b/.test(t);
   if (hasPretMarker) { scores[8] += 4; scores[9] += 4; }
   // Regular preterite endings: -aron, -ieron (3rd plural)
@@ -126,7 +126,7 @@ function classify(card) {
   if (/\w+(aste|iste)\b/.test(t)) { scores[8] += 4; scores[9] += 4; }
   // ACCENT-AWARE: -ó ending = preterite 3rd person (habló, comió, vivió)
   if (new RegExp(`[a-záéíóúüñ]{2,}ó${E}`).test(r)) { scores[8] += 4; scores[9] += 4; }
-  // ACCENT-AWARE: -é ending on verbs (hablé, comí) — 1st person preterite
+  // ACCENT-AWARE: -é ending on verbs (hablé, comí) – 1st person preterite
   const hasAccentE = new RegExp(`[a-záéíóúüñ]{3,}é${E}`).test(r);
   if (hasAccentE && !/\b(tambien|despues|cafe|jose|bebe|pure|canape|que|porque)\b/.test(t)) { scores[8] += 3; scores[9] += 3; }
   // Regular preterite: verbs with predictable conjugations (-ar verbs: -é/-aste/-ó/-amos/-aron; -er/-ir: -í/-iste/-ió/-imos/-ieron)
@@ -164,7 +164,7 @@ function classify(card) {
     || (new RegExp(`[a-záéíóúüñ]{2,}ó${E}`).test(r));
   const hasImpfSignal = /\b(era|eras|eramos|eran|estaba|estabas|estabamos|estaban|tenia|tenias|teniamos|tenian|habia|hacia|decia|podia|queria|sabia|venia|iba|ibas|ibamos|iban)\b/.test(t)
     || /\w{3,}(aba|abas|abamos|aban)\b/.test(t);
-  // Both tenses in same sentence — strong signal for past contrast
+  // Both tenses in same sentence – strong signal for past contrast
   if (hasPretSignal && hasImpfSignal) scores[11] += 14;
   if (/\bmientras\b/.test(t) && (hasPretSignal || hasImpfSignal)) scores[11] += 6;
   if (/\bcuando\b/.test(t) && hasPretSignal && hasImpfSignal) scores[11] += 6;
@@ -191,13 +191,13 @@ function classify(card) {
   if (/\bpor favor\b/.test(t) && words <= 12) scores[16] += 3;
 
   // ── Node 3: Ser vs estar ──
-  // Both in same sentence — strong signal
+  // Both in same sentence – strong signal
   if (/\b(es|son|soy|eres|somos)\b/.test(t) && /\b(esta|estan|estoy|estas|estamos)\b/.test(t)) scores[2] += 14;
   if (/\bser\b.*\bestar\b|\bestar\b.*\bser\b|ser vs|estar vs/.test(g)) scores[2] += 14;
   if (/\b(ser|estar)\b/.test(g) && /\b(temporary|permanent|location|state|characteristic|condition)\b/.test(g)) scores[2] += 10;
-  // Ser for identity/description — only short sentences
+  // Ser for identity/description – only short sentences
   if (words <= 7 && /\b(soy|eres|es|somos|son)\b/.test(t) && /\b(un|una|el|la|de|muy|bastante)\b/.test(t)) scores[2] += 4;
-  // Estar for states/location — only short sentences
+  // Estar for states/location – only short sentences
   if (words <= 7 && /\b(estoy|estas|esta|estamos|estan)\b/.test(t) && /\b(bien|mal|contento|triste|cansado|enfermo|ocupado|listo|nervioso|preocupado|aqui|alli|ahi|cerca|lejos|en)\b/.test(t)) scores[2] += 5;
   // Short sentences with ser/estar as main verb
   if (words <= 6 && /\b(es|son|soy|eres|somos|esta|estan|estoy|estas|estamos)\b/.test(t)) scores[2] += 3;
@@ -217,7 +217,7 @@ function classify(card) {
   if (/\bpara\s+(mi|ti|el|ella|nosotros|ellos|que|siempre|manana|hoy|cuando)\b/.test(t)) scores[13] += 4;
 
   // ── Node 15: Object pronouns ──
-  // Double object pronouns — very strong
+  // Double object pronouns – very strong
   if (/\b(me lo|me la|me los|me las|te lo|te la|te los|te las|se lo|se la|se los|se las|nos lo|nos la|nos los|nos las)\b/.test(t)) scores[14] += 12;
   if (/object pronoun|pronombre|direct object|indirect object|lo\/la|le\/les|complemento/.test(g)) scores[14] += 12;
   // Single pronoun before verb (broad verb list)
@@ -478,10 +478,10 @@ function assignByFeatures(raw, r, t, words, isQuestion) {
     return 15;
   }
 
-  // 9-11 words → node 19 (future — medium complexity)
+  // 9-11 words → node 19 (future – medium complexity)
   if (words <= 11) return 19;
 
-  // 12-15 words → node 20 (relative clauses — complex sentences)
+  // 12-15 words → node 20 (relative clauses – complex sentences)
   if (words <= 15) return 20;
 
   // 16-18 words → node 24 (passive & impersonal)
@@ -517,7 +517,7 @@ for (const card of deck) {
 // adjacent-tier node with the lowest count.
 
 // Soft caps: target max per node (total unique cards, not per goal)
-// Goal: no single node dominates — keep largest nodes under ~400
+// Goal: no single node dominates – keep largest nodes under ~400
 const NODE_CAPS = [
   /* 01 */ 350, /* 02 */ 350, /* 03 */ 350, /* 04 */ 350, /* 05 */ 250,
   /* 06 */ 250, /* 07 */ 350, /* 08 */ 300,
@@ -564,7 +564,7 @@ for (let pass = 0; pass < MAX_PASSES; pass++) {
     const nodeCards = deck.filter(c => c.grammarNode === nodeId);
     const overflow = nodeCounts[nodeIdx] - cap;
 
-    // Sort by "weakest match" — cards without grammar tips, longest first
+    // Sort by "weakest match" – cards without grammar tips, longest first
     const candidates = nodeCards
       .map(card => ({
         card,
@@ -656,7 +656,7 @@ for (const goal of ['general', 'travel', 'work', 'family']) {
   console.log(`  ${goal.padEnd(8)} (${String(gc.length).padStart(4)}): ${line}`);
 }
 
-// Samples — check classification of key cards
+// Samples – check classification of key cards
 console.log('\nSample cards:');
 for (const id of [1, 14, 100, 1205, 2770, 4923, 5083, 5260, 6171, 6548, 7000, 7704, 7800, 7900, 8000, 8100, 8200]) {
   const c = deck.find(d => d.id === id);

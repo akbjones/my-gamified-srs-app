@@ -230,7 +230,7 @@ for (const [tag, count] of Object.entries(tagCounts)) {
   }
 }
 
-// Check tags per node — travel/work/family should each appear in reasonable %
+// Check tags per node – travel/work/family should each appear in reasonable %
 const tagNodeIssues = [];
 for (const [node, stats] of Object.entries(nodeStats).sort()) {
   for (const tag of ['travel', 'work', 'family']) {
@@ -423,7 +423,7 @@ for (const [p, count] of Object.entries(priorityCounts).sort()) {
 console.log('');
 console.log(`--- Priority balance issues: ${priorityIssues.length} nodes ---`);
 for (const issue of priorityIssues.slice(0, 10)) {
-  console.log(`  ${issue.node} (${issue.level} ${issue.topic}): P1=${issue.percentages.p1}% P2=${issue.percentages.p2}% P3=${issue.percentages.p3}% — ${issue.issues.join('; ')}`);
+  console.log(`  ${issue.node} (${issue.level} ${issue.topic}): P1=${issue.percentages.p1}% P2=${issue.percentages.p2}% P3=${issue.percentages.p3}% – ${issue.issues.join('; ')}`);
 }
 
 console.log('');

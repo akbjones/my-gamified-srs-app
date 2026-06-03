@@ -62,7 +62,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   const currentCard = placementCards[nodeIndex]?.[cardIndex];
   const nudge = currentNode ? getGrammarNudge(currentNode.id, lang) : '';
 
-  // Auto-play audio — fires AT MOST ONCE per card (tracked by card id).
+  // Auto-play audio – fires AT MOST ONCE per card (tracked by card id).
   // This is the bug fix for "audio randomly stops and restarts during the test":
   // the previous version put `phase` in the deps + a cleanup that always called
   // stopAudio(), so EVERY phase transition (question → reveal, reveal → question
@@ -74,7 +74,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
     if (lastAutoplayedCardId.current === currentCard.id) return;
     lastAutoplayedCardId.current = currentCard.id;
     playCardAudio(currentCard.audio, currentCard.target, lang, audioSpeed, googleTtsApiKey);
-    // No cleanup here — audio is allowed to keep playing while the user reads
+    // No cleanup here – audio is allowed to keep playing while the user reads
     // the translation in the reveal phase.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, nodeIndex, cardIndex]);
@@ -140,7 +140,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   }
 
   /** Check if a node should be failed based on scores so far.
-   *  More forgiving than the original (which failed on the first miss) —
+   *  More forgiving than the original (which failed on the first miss) –
    *  a single wobble shouldn't decide your starting point.
    */
   function shouldFailNode(ni: number, scores: Record<number, { mostly: number; noIdea: number }>): boolean {
@@ -163,7 +163,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
     const nextCardIndex = cardIndex + 1;
     const nodeCards = placementCards[nodeIndex] || [];
 
-    // Check the now-stricter fail conditions — only bail out of the test
+    // Check the now-stricter fail conditions – only bail out of the test
     // when the node has *clearly* maxed out.
     const currentNodeScore = nodeScores[nodeIndex] || { mostly: 0, noIdea: 0 };
     if (shouldFailNode(nodeIndex, nodeScores)) {
@@ -180,7 +180,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
       return;
     }
 
-    // Finished all cards for this node — check stop conditions
+    // Finished all cards for this node – check stop conditions
     if (shouldFailNode(nodeIndex, nodeScores)) {
       setCeilingNode(nodeIndex);
       setPhase('results');
@@ -314,7 +314,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
             >
               <Volume2 size={20} className={isPlaying ? 'text-blue-500 animate-pulse' : 'text-[var(--text-muted)]'} />
             </button>
-            {/* Translation peek — hidden until tapped. Use it to confirm
+            {/* Translation peek – hidden until tapped. Use it to confirm
                 what the sentence means before committing to a confidence rating. */}
             {translationRevealed ? (
               <p className="mt-4 pt-4 border-t border-[var(--border-color)] text-sm text-[var(--text-secondary)] italic text-center leading-relaxed animate-fade-in">
@@ -331,7 +331,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           </div>
         </div>
 
-        {/* Confidence buttons — ordered low→high (no idea on left, know it on right) */}
+        {/* Confidence buttons – ordered low→high (no idea on left, know it on right) */}
         <div className="grid grid-cols-3 gap-2 mt-4 mb-2 shrink-0">
           <button
             onClick={() => handleConfidence('no_idea')}
@@ -420,7 +420,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
             </p>
           </div>
 
-          {/* Grammar nudge — compact, below card */}
+          {/* Grammar nudge – compact, below card */}
           {nudge && (
             <div className="rounded-xl bg-amber-500/5 border border-amber-500/20 p-3 mb-3">
               <div className="flex items-start gap-2">
@@ -452,7 +452,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           )}
         </div>
 
-        {/* Bottom buttons — right below content */}
+        {/* Bottom buttons – right below content */}
         <div className="flex gap-2 shrink-0 mt-2 mb-2">
           <button
             onClick={handleRerate}
@@ -502,7 +502,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
                 Starting fresh
               </h1>
               <p className="text-sm text-[var(--text-secondary)] mb-6">
-                You'll begin with the basics — that's a great foundation to build on.
+                You'll begin with the basics – that's a great foundation to build on.
               </p>
             </>
           ) : (

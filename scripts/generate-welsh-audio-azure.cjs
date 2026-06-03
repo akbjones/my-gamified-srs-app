@@ -147,7 +147,7 @@ async function main() {
 
       // On 429 (rate limit), wait longer and retry once
       if (err.message.includes('429')) {
-        console.log('  Rate limited — waiting 30s before retry...');
+        console.log('  Rate limited – waiting 30s before retry...');
         await sleep(30000);
         try {
           token = await fetchToken();

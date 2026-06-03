@@ -6143,7 +6143,7 @@ const dict: Record<string, DictEntry> =               {
 
 function clean(w: string): string {
   if (!w) return '';
-  return w.toLowerCase().replace(/[¿¡.,!?;:"""‘’()—–«»\d/]/g, '').trim();
+  return w.toLowerCase().replace(/[¿¡.,!?;:"""‘’()––«»\d/]/g, '').trim();
 }
 
 export function lookupWord(raw: string): DictEntry | null {

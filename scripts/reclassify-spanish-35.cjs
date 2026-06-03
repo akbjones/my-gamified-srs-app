@@ -52,7 +52,7 @@ function isExpression(t, e) {
 // ── Descriptions ─────────────────────────────────────────────
 // Sentences about describing: hay, colors, sizes, adjectives, appearances
 function isDescription(t, e) {
-  // "hay" (there is/are) — strong signal
+  // "hay" (there is/are) – strong signal
   if (/\bhay\b/i.test(t)) return true;
   // "es/son/está/están + adjective" patterns (description-focused)
   if (/\b(es|son|está|están)\s+(grande|pequeñ|bonit|fe[oa]|alt[oa]|baj[oa]|larg[oa]|cort[oa]|viej[oa]|nuev[oa]|llen[oa]|vací[oa]|modern[oa]|antig[oa]|cómod[oa]|elegant|hermosa?|important|famosa?|interesant|tranquil|ruid|limp[oa]|suci[oa]|clar[oa]|oscur[oa]|cálid[oa]|fresc[oa]|luminosa?|ampli[oa]|estrech[oa])/i.test(t)) return true;
@@ -548,7 +548,7 @@ if (underTarget.length > 0) {
 // Check for empty nodes
 for (let i = 1; i <= 35; i++) {
   const nid = `node-${String(i).padStart(2, '0')}`;
-  if (!finalDist[nid]) console.log(`⚠ ${nid}: 0 cards — EMPTY`);
+  if (!finalDist[nid]) console.log(`⚠ ${nid}: 0 cards – EMPTY`);
 }
 
 // ─── Write ────────────────────────────────────────────────────

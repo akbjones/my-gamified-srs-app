@@ -2,18 +2,18 @@
  * Turkish verb conjugation engine
  * Handles regular verbs with vowel harmony, and major irregular verbs.
  *
- * Turkish is agglutinative — suffixes are added to the verb stem following
+ * Turkish is agglutinative – suffixes are added to the verb stem following
  * vowel harmony rules (front/back, rounded/unrounded).
  *
  * Person order: ben (I), sen (you), o (he/she/it), biz (we), siz (you-pl/formal), onlar (they)
  *
  * Tenses:
- *   present_cont — Şimdiki zaman (-yor)
- *   aorist       — Geniş zaman (-r/-er/-ir/-ar)
- *   past         — Geçmiş zaman (-di/-dı/-du/-dü)
- *   reported     — Duyulan geçmiş (-miş/-mış/-muş/-müş)
- *   future       — Gelecek zaman (-ecek/-acak)
- *   conditional  — Şart (-se/-sa)
+ *   present_cont – Şimdiki zaman (-yor)
+ *   aorist       – Geniş zaman (-r/-er/-ir/-ar)
+ *   past         – Geçmiş zaman (-di/-dı/-du/-dü)
+ *   reported     – Duyulan geçmiş (-miş/-mış/-muş/-müş)
+ *   future       – Gelecek zaman (-ecek/-acak)
+ *   conditional  – Şart (-se/-sa)
  */
 import type { ConjugationTable } from '../../types';
 

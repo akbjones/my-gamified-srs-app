@@ -101,7 +101,7 @@ const STOP_WORDS = new Set([
 // ── Tokenize German sentence ──────────────────────────────
 function tokenize(sentence) {
   return sentence
-    .replace(/[.,!?;:"""«»()—–…''„"‚'\-]/g, ' ')
+    .replace(/[.,!?;:"""«»()––…''„"‚'\-]/g, ' ')
     .split(/\s+/)
     .map(w => w.toLowerCase().trim())
     .filter(w => w.length >= 2);
@@ -145,7 +145,7 @@ function reverseVerb(word) {
 }
 
 function lookupWord(raw) {
-  const word = raw.toLowerCase().replace(/[.,!?;:""«»()—–…'']/g, '').trim();
+  const word = raw.toLowerCase().replace(/[.,!?;:""«»()––…'']/g, '').trim();
   if (word.length < 2) return true; // skip short words
 
   // 1. Direct

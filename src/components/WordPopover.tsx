@@ -27,7 +27,7 @@ import { conjugate as conjugateTr } from '../data/conjugation/tr';
 import { conjugate as conjugateRu } from '../data/conjugation/ru';
 import { Language, ConjugationTable } from '../types';
 
-// Dynamic lookup per language — gracefully returns null for languages without a dictionary
+// Dynamic lookup per language – gracefully returns null for languages without a dictionary
 const LOOKUP_FNS: Partial<Record<Language, (w: string) => DictEntry | null>> = {
   spanish: lookupEs,
   italian: lookupIt,
@@ -210,7 +210,7 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
         );
       })}
 
-      {/* Portal popover — rendered at document body to escape overflow containers */}
+      {/* Portal popover – rendered at document body to escape overflow containers */}
       {activeEntry && popoverRect && (
         <PopoverPortal
           entry={activeEntry}
@@ -246,7 +246,7 @@ const PopoverPortal: React.FC<{
 }> = ({ entry, rawToken, wordRect, language, sentence, onDismiss }) => {
   // Local state mirroring favorite status so the star icon updates on click.
   const [isFav, setIsFav] = useState(() => isFavorited(rawToken, language));
-  // Etymology expand/collapse — collapsed by default so the entry shows up
+  // Etymology expand/collapse – collapsed by default so the entry shows up
   // as a small tab the user opens deliberately.
   const [etymologyExpanded, setEtymologyExpanded] = useState(false);
   // Local mirror of etymology favorite state so the Save toggle flips
@@ -288,7 +288,7 @@ const PopoverPortal: React.FC<{
   const [position, setPosition] = useState<'above' | 'below'>('above');
   const [showConj, setShowConj] = useState(false);
   const [conjTense, setConjTense] = useState('present');
-  // Tracks whether the user has manually picked a tense — if so, we stop
+  // Tracks whether the user has manually picked a tense – if so, we stop
   // auto-switching when the modal re-opens for the same word.
   const [userPickedTense, setUserPickedTense] = useState(false);
 
@@ -305,7 +305,7 @@ const PopoverPortal: React.FC<{
     const direct = conjugateFn(clean);
     if (direct) return direct;
 
-    // Try the lemma field (base/infinitive form) — most reliable for inflected forms
+    // Try the lemma field (base/infinitive form) – most reliable for inflected forms
     if (entry.lemma) {
       const result = conjugateFn(entry.lemma);
       if (result) return result;
@@ -324,7 +324,7 @@ const PopoverPortal: React.FC<{
     const lookupFn = LOOKUP_FNS[language];
     if (lookupFn) {
       // Generate candidate stems by progressively trimming from the end
-      // Include the full word as a stem — Germanic verbs like "ontmoet" need
+      // Include the full word as a stem – Germanic verbs like "ontmoet" need
       // stem + "en" → "ontmoeten" to find the infinitive
       const stems = new Set<string>();
       stems.add(clean);
@@ -379,7 +379,7 @@ const PopoverPortal: React.FC<{
   }, [conjTable, normalizedToken]);
 
   // When the modal opens for a new word, auto-pick the first tense that
-  // contains the matched form. Only fires once per modal-open — if the
+  // contains the matched form. Only fires once per modal-open – if the
   // user then taps a different tab, we don't fight them.
   useEffect(() => {
     if (!showConj || !conjTable || userPickedTense) return;
@@ -458,7 +458,7 @@ const PopoverPortal: React.FC<{
         `}
       />
 
-      {/* Favorite button — pill-style with label, top-right. Far more visible
+      {/* Favorite button – pill-style with label, top-right. Far more visible
           than a bare icon so users actually realise they can save words. */}
       <button
         onClick={(e) => {
@@ -483,27 +483,27 @@ const PopoverPortal: React.FC<{
         <span>{isFav ? 'Saved' : 'Save'}</span>
       </button>
 
-      {/* Translation — uses lemma definition when available and sanitized.
+      {/* Translation – uses lemma definition when available and sanitized.
           pr-16 leaves room for the Save pill on the right. */}
       <div className="text-base font-bold text-[var(--text-primary)] leading-snug pr-16">
         {displayDefinition}
       </div>
 
-      {/* Lemma (base form) — always shown with arrow format for consistency */}
+      {/* Lemma (base form) – always shown with arrow format for consistency */}
       {entry.lemma && (
         <div className="text-sm text-[var(--text-muted)] mt-0.5">
           → {entry.lemma}
         </div>
       )}
 
-      {/* IPA — prefers lemma IPA for inflected forms */}
+      {/* IPA – prefers lemma IPA for inflected forms */}
       {displayIpa && (
         <div className="text-sm text-blue-500 font-mono mt-1.5">
           /{displayIpa}/
         </div>
       )}
 
-      {/* Part of speech chip — small, neutral. */}
+      {/* Part of speech chip – small, neutral. */}
       {entry.pos && (
         <div className="mt-2">
           <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--text-muted)] bg-[var(--bg-inset)] px-1.5 py-0.5 rounded">
@@ -512,7 +512,7 @@ const PopoverPortal: React.FC<{
         </div>
       )}
 
-      {/* Etymology — when this word has a verified entry, surface it as a
+      {/* Etymology – when this word has a verified entry, surface it as a
           full-width violet button so it's impossible to miss. Opens the
           centered violet overlay (mirroring the amber grammar tip). */}
       {lookupEtymology(rawToken, language) && (
@@ -590,7 +590,7 @@ const PopoverPortal: React.FC<{
       )}
       </div>
 
-      {/* Full-screen conjugation overlay — polished layout so users can
+      {/* Full-screen conjugation overlay – polished layout so users can
          actually read the tables comfortably. */}
       {showConj && conjTable && (
         <div
@@ -601,7 +601,7 @@ const PopoverPortal: React.FC<{
             className="bg-[var(--bg-card)] w-full sm:max-w-md sm:rounded-3xl shadow-2xl border border-[var(--border-color)] overflow-hidden max-h-screen sm:max-h-[88vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Header — compact on mobile, more breathing room on desktop.
+            {/* Header – compact on mobile, more breathing room on desktop.
                 Safe-area padding on top so content stays clear of the notch / status bar. */}
             <div className="relative px-5 pb-3 pt-[max(1rem,env(safe-area-inset-top))] sm:px-6 sm:pt-6 sm:pb-5 border-b border-[var(--border-color)] bg-gradient-to-b from-blue-500/5 to-transparent">
               <button
@@ -632,7 +632,7 @@ const PopoverPortal: React.FC<{
               </div>
             </div>
 
-            {/* Tense tabs — wrap onto multiple rows so all are visible on mobile.
+            {/* Tense tabs – wrap onto multiple rows so all are visible on mobile.
                 Native name + English translation in parens (smaller, dimmed).
                 A tiny blue dot indicates that this tense contains the clicked form. */}
             <div className="px-4 py-3 border-b border-[var(--border-color)]">
@@ -658,7 +658,7 @@ const PopoverPortal: React.FC<{
                       {english && (
                         <span className="ml-1 text-[9px] font-medium opacity-70">({english})</span>
                       )}
-                      {/* Match indicator — small dot in the top-right corner.
+                      {/* Match indicator – small dot in the top-right corner.
                           On the active tab it sits over the blue bg so we use white;
                           on inactive tabs it stays blue. */}
                       {hasMatch && (
@@ -675,7 +675,7 @@ const PopoverPortal: React.FC<{
               </div>
             </div>
 
-            {/* Forms — scrolling region. Tighter on mobile so all 6 persons fit.
+            {/* Forms – scrolling region. Tighter on mobile so all 6 persons fit.
                 Bottom safe-area padding so iPhone home indicator doesn't cover the last row. */}
             {conjTable.tenses[conjTense] && (
               <div className="overflow-y-auto flex-1">
@@ -720,7 +720,7 @@ const PopoverPortal: React.FC<{
         </div>
       )}
 
-      {/* Etymology overlay — centered modal with backdrop. Same layout pattern
+      {/* Etymology overlay – centered modal with backdrop. Same layout pattern
           as the Grammar Tip overlay on the study card, just violet instead of
           amber. Tap anywhere to dismiss. Save toggle mirrors the one in the
           card-level etymology overlay in StudySession. */}

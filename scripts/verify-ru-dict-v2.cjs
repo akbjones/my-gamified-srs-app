@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 /**
- * Semantic verification of Russian dictionary via Google Translate API — v2.
+ * Semantic verification of Russian dictionary via Google Translate API – v2.
  * Avoids apostrophe escaping issues by using line-based reconstruction.
  *
  * Steps:
  * 1. Parse ALL entries from ru.ts using a robust TS-aware parser
  * 2. Skip function words, names, short words
  * 3. Translate ALL remaining via Google (ru→en), batch 80
- * 4. Compare — zero content word match → flag for replacement
+ * 4. Compare – zero content word match → flag for replacement
  * 5. Filter garbage Google results
- * 6. Apply to ru.ts by reconstructing lines — preserve IPA/POS/lemma exactly
+ * 6. Apply to ru.ts by reconstructing lines – preserve IPA/POS/lemma exactly
  * 7. Verify TypeScript
  */
 
@@ -307,7 +307,7 @@ async function main() {
       continue;
     }
 
-    // Mismatch — prepare replacement
+    // Mismatch – prepare replacement
     const newEn = formatTranslation(google, entry.pos);
     fixes.set(entry.key, newEn);
   }

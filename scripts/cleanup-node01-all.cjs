@@ -635,7 +635,7 @@ function isRare(word) {
   // Skip very short words (a, I, etc.)
   if (word.length <= 2) return false;
 
-  // Proper nouns (capitalized and not start of sentence — we'll handle that in caller)
+  // Proper nouns (capitalized and not start of sentence – we'll handle that in caller)
   // We check if word starts with uppercase
   if (/^[A-Z]/.test(word)) return false;
 
@@ -769,7 +769,7 @@ const results = [];
 for (const lang of LANGUAGES) {
   const langDir = path.join(BASE, lang);
   if (!fs.existsSync(path.join(langDir, 'deck.json'))) {
-    console.log(`Skipping ${lang} — no deck.json`);
+    console.log(`Skipping ${lang} – no deck.json`);
     continue;
   }
   const result = processLanguage(langDir, lang);

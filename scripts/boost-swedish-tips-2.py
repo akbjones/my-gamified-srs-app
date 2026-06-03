@@ -34,7 +34,7 @@ tips = {
     "Hon duschar i tio minuter.": '"Duscha" = shower. Not reflexive in Swedish (unlike "tvätta sig" = wash oneself).',
     "Vi äter frukost klockan halv åtta.": '"Halv åtta" = 7:30 (half TO eight). "Frukost" = breakfast.',
     "Han borstar tänderna efter frukost.": '"Borsta tänderna" = brush teeth. No reflexive pronoun needed (unlike German/French).',
-    "Hon sminkar sig varje dag.": '"Sminka sig" = put on makeup. Reflexive — she applies it to herself.',
+    "Hon sminkar sig varje dag.": '"Sminka sig" = put on makeup. Reflexive – she applies it to herself.',
     "Jag brukar jogga på morgonen.": '"Brukar" = usually do / tend to. A uniquely Swedish auxiliary for habitual actions.',
     "Vi lägger barnen klockan åtta.": '"Lägga" someone = put to bed. "Barnen" = the children (barn, plural unchanged).',
     "Han ställer klockan på sex.": '"Ställa klockan" = set the alarm. "Ställa" = place upright.',
@@ -54,7 +54,7 @@ tips = {
     "Det är inte så farligt.": '"Inte så" = not that (degree). "Farligt" = dangerous. Common reassurance.',
 
     # ── node-16: Perfekt (21% → target 28%) ──
-    "Vi har aldrig besökt Kiruna.": '"Kiruna" is Sweden\'s northernmost city — famous for the ice hotel and iron ore mine.',
+    "Vi har aldrig besökt Kiruna.": '"Kiruna" is Sweden\'s northernmost city – famous for the ice hotel and iron ore mine.',
     "Jag har läst den boken.": '"Läsa" → "läst" (supinum). "Den boken" = that book (demonstrative use of "den").',
     "De har kommit hem.": '"Komma" → "kommit" (supinum). Swedish uses "har" for all verbs in perfekt (unlike German).',
     "Jag har gett honom pengarna.": '"Ge" → "gett" (supinum). Short verb, short supinum. "Pengarna" = the money.',
@@ -62,7 +62,7 @@ tips = {
     "Hon har drömt om det länge.": '"Drömma" → "drömt." "Om" = about. Swedish supinum is always -t or -it ending.',
     "De har bestämt sig för att flytta.": '"Bestämma sig för" = decide (on). "Att flytta" = to move. Perfekt + infinitive.',
     "Har du provat surströmming?": '"Surströmming" = fermented herring. Iconic Swedish delicacy with a very strong smell.',
-    "Vi har haft en bra dag.": '"Ha" → "haft" (supinum). "Bra" = good (invariable — no agreement needed).',
+    "Vi har haft en bra dag.": '"Ha" → "haft" (supinum). "Bra" = good (invariable – no agreement needed).',
     "Jag har glömt lösenordet.": '"Lösenord" = password (lösen + ord). An ett-word: lösenordet.',
 
     # ── node-17: Directions (25% → target 28%) ──
@@ -72,7 +72,7 @@ tips = {
     "Kör försiktigt, det är halt.": '"Halt" = slippery (ice). "Kör försiktigt" = drive carefully (imperative).',
 
     # ── node-18: Subordinate clauses (20% → target 28%) ──
-    "Jag frågar om hon vill följa med.": '"Fråga om" = ask whether. "Följa med" = come along — very common particle verb.',
+    "Jag frågar om hon vill följa med.": '"Fråga om" = ask whether. "Följa med" = come along – very common particle verb.',
     "Jag ringer dig när jag kommer.": '"När" + present tense for future events in Swedish: "when I come" not "when I will come."',
     "Vi äter när maten är klar.": '"Klar" = ready/done. Subordinate clause keeps normal word order after "när."',
     "Sedan hon flyttade hit har hon trivts.": '"Sedan" = since. "Trivts" = enjoyed being here (deponent verb "trivas").',
@@ -101,10 +101,10 @@ tips = {
     "Priserna har höjts.": '"Höja" → "höjts" (perfekt s-passive). Very concise: har + supinum + s.',
 
     # ── node-23: S-verbs (21% → target 28%) ──
-    "De brottas på mattan.": '"Brottas" = wrestle. Reciprocal — they wrestle each other.',
+    "De brottas på mattan.": '"Brottas" = wrestle. Reciprocal – they wrestle each other.',
     "Vi enades om priset.": '"Enas om" = agree on. Past: "enades." Reciprocal s-verb.',
-    "Han kräks av maten.": '"Kräkas" = vomit. Deponent — active meaning but -s form always.',
-    "De längtade efter sommaren.": '"Längtas" or "längta" — both work. "Längtas" is more traditional.',
+    "Han kräks av maten.": '"Kräkas" = vomit. Deponent – active meaning but -s form always.',
+    "De längtade efter sommaren.": '"Längtas" or "längta" – both work. "Längtas" is more traditional.',
     "Vi andades tungt.": '"Andas" past: "andades." Even in past tense the -s remains.',
 
     # ── node-24: Future & conditional (23% → target 28%) ──
@@ -124,7 +124,7 @@ tips = {
 
     # ── node-26: Participles (20% → target 28%) ──
     "Ett avslappnande bad.": '"Avslappnande" = relaxing. Present participle from "avslappna." -ande is universal.',
-    "De fascinerande berättelserna.": '"Fascinerande" = fascinating. Present participle — never changes form.',
+    "De fascinerande berättelserna.": '"Fascinerande" = fascinating. Present participle – never changes form.',
     "En utmanande uppgift.": '"Utmanande" = challenging. From "utmana" (challenge).',
     "Ett inspirerande tal.": '"Inspirerande" = inspiring. "Tal" is ett-word: ett tal, talet, tal, talen.',
     "Den försenade avgången.": '"Försenad" = delayed. Past participle of "försena." "Avgång" = departure.',

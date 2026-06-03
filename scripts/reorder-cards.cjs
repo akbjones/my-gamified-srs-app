@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * reorder-cards.cjs — Reorder deck cards by grammar node, then difficulty
+ * reorder-cards.cjs – Reorder deck cards by grammar node, then difficulty
  *
  * Primary sort: grammarNode (node-01 < node-02 < ... < node-35)
  * Secondary sort: English-based difficulty score (easiest first within each node)
@@ -292,7 +292,7 @@ const COMMON_ENGLISH = new Set([
   'separate', 'single', 'double', 'wide', 'narrow',
   'dear', 'cheap', 'expensive', 'favorite', 'favourite',
 
-  // Nouns — people
+  // Nouns – people
   'man', 'men', 'woman', 'women', 'child', 'children', 'boy', 'girl',
   'baby', 'person', 'people', 'father', 'mother', 'parent', 'parents',
   'brother', 'sister', 'son', 'daughter', 'husband', 'wife',
@@ -302,14 +302,14 @@ const COMMON_ENGLISH = new Set([
   'writer', 'singer', 'player', 'king', 'queen', 'sir',
   'family', 'families', 'team', 'group', 'class', 'member', 'guest',
 
-  // Nouns — body
+  // Nouns – body
   'body', 'head', 'face', 'eye', 'eyes', 'ear', 'ears', 'nose', 'mouth',
   'tooth', 'teeth', 'lip', 'lips', 'hair', 'hand', 'hands', 'finger',
   'fingers', 'arm', 'arms', 'leg', 'legs', 'foot', 'feet', 'knee',
   'shoulder', 'back', 'neck', 'heart', 'blood', 'skin', 'bone',
   'stomach', 'brain', 'voice',
 
-  // Nouns — places
+  // Nouns – places
   'place', 'house', 'home', 'room', 'kitchen', 'bedroom', 'bathroom',
   'door', 'window', 'wall', 'floor', 'roof', 'garden', 'yard',
   'street', 'road', 'city', 'town', 'village', 'country', 'state',
@@ -319,7 +319,7 @@ const COMMON_ENGLISH = new Set([
   'station', 'airport', 'bank', 'museum', 'theater', 'theatre', 'gym',
   'farm', 'factory', 'building', 'apartment', 'flat',
 
-  // Nouns — nature
+  // Nouns – nature
   'river', 'lake', 'sea', 'ocean', 'beach', 'island', 'mountain',
   'hill', 'valley', 'forest', 'field', 'land', 'ground', 'earth',
   'sky', 'sun', 'moon', 'star', 'stars', 'cloud', 'clouds', 'wind',
@@ -327,13 +327,13 @@ const COMMON_ENGLISH = new Set([
   'flower', 'flowers', 'plant', 'plants', 'grass', 'leaf', 'leaves',
   'rock', 'stone', 'sand', 'dust', 'wood',
 
-  // Nouns — animals
+  // Nouns – animals
   'animal', 'animals', 'dog', 'dogs', 'cat', 'cats', 'bird', 'birds',
   'fish', 'horse', 'horses', 'cow', 'cows', 'chicken', 'pig',
   'sheep', 'rabbit', 'mouse', 'bear', 'lion', 'tiger', 'elephant',
   'monkey', 'snake', 'insect', 'butterfly', 'ant', 'bee', 'wolf',
 
-  // Nouns — food & drink
+  // Nouns – food & drink
   'food', 'meal', 'breakfast', 'lunch', 'dinner', 'bread', 'rice',
   'meat', 'chicken', 'fish', 'egg', 'eggs', 'cheese', 'butter',
   'milk', 'cream', 'sugar', 'salt', 'pepper', 'oil', 'flour',
@@ -342,7 +342,7 @@ const COMMON_ENGLISH = new Set([
   'tea', 'coffee', 'juice', 'beer', 'wine', 'drink', 'water',
   'vegetable', 'vegetables',
 
-  // Nouns — objects
+  // Nouns – objects
   'thing', 'things', 'book', 'books', 'page', 'letter', 'word', 'words',
   'paper', 'pen', 'pencil', 'picture', 'photo', 'photograph',
   'phone', 'telephone', 'computer', 'machine', 'screen',
@@ -358,7 +358,7 @@ const COMMON_ENGLISH = new Set([
   'tool', 'piece', 'part', 'bit',
   'medicine', 'drug',
 
-  // Nouns — abstract & time
+  // Nouns – abstract & time
   'time', 'day', 'days', 'night', 'nights', 'morning', 'afternoon',
   'evening', 'week', 'weeks', 'month', 'months', 'year', 'years',
   'hour', 'hours', 'minute', 'minutes', 'second', 'seconds', 'moment',
@@ -533,7 +533,7 @@ function tokenize(sentence) {
 }
 
 /**
- * Tokenize English text — strips punctuation, lowercases, splits on whitespace.
+ * Tokenize English text – strips punctuation, lowercases, splits on whitespace.
  */
 function tokenizeEnglish(sentence) {
   if (!sentence) return [];
@@ -634,11 +634,11 @@ function processLanguage({ dir, code }) {
 
   const cards = JSON.parse(fs.readFileSync(deckPath, 'utf8'));
   if (!Array.isArray(cards) || cards.length === 0) {
-    console.log(`  SKIP: ${dir} — empty or not an array`);
+    console.log(`  SKIP: ${dir} – empty or not an array`);
     return;
   }
 
-  console.log(`\n=== ${dir.toUpperCase()} (${code}) — ${cards.length} cards ===`);
+  console.log(`\n=== ${dir.toUpperCase()} (${code}) – ${cards.length} cards ===`);
 
   // Step 1: Score each card by English translation
   const scored = cards.map(card => scoreCard(card));
@@ -742,7 +742,7 @@ function processLanguage({ dir, code }) {
 }
 
 // Run for all languages
-console.log('Card Reordering Script — Grammar node order + difficulty scoring');
+console.log('Card Reordering Script – Grammar node order + difficulty scoring');
 console.log('Primary: grammarNode (node-01 < node-02 < ... < node-35)');
 console.log('Secondary: uncommon*10 + advancedConcept*5 + abstractQ*8 + subordinating*3 + sentLen + avgWordLen*0.5');
 console.log('Repetitive patterns (5+ identical) penalized to end of their node\n');

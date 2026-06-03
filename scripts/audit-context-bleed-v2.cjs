@@ -33,7 +33,7 @@ function auditEntry(entry, lang) {
     for (const part of parts) {
       const trimmed = part.trim().toLowerCase();
       if (functionWords.has(trimmed)) {
-        issues.push(`comma_function: "${en}" — one part is just "${trimmed}"`);
+        issues.push(`comma_function: "${en}" – one part is just "${trimmed}"`);
       }
     }
 
@@ -43,7 +43,7 @@ function auditEntry(entry, lang) {
       const combined = parts[i+1].trim().toLowerCase() + ' ' + parts[i].trim().toLowerCase();
       const commonPhrases = ['good morning', 'good night', 'good afternoon', 'good evening', 'too much', 'at least', 'at all', 'even though', 'of course', 'right now', 'each other', 'so much', 'as well', 'how much', 'how many', 'too many', 'after all', 'in front', 'on top'];
       if (commonPhrases.includes(combined)) {
-        issues.push(`reversed_phrase: "${en}" — should be "${combined}"`);
+        issues.push(`reversed_phrase: "${en}" – should be "${combined}"`);
       }
     }
   }
@@ -53,8 +53,8 @@ function auditEntry(entry, lang) {
   if (/^the /i.test(en) && pos !== 'det' && pos !== 'art') {
     // Allow "the" for some legitimate cases
     const afterThe = en.replace(/^the /i, '');
-    // If pos is noun, "the X" suggests context bleed — should just be "X"
-    issues.push(`leaked_the: "${en}" — should be "${afterThe}"`);
+    // If pos is noun, "the X" suggests context bleed – should just be "X"
+    issues.push(`leaked_the: "${en}" – should be "${afterThe}"`);
   }
 
   // 3. Definition starts with "a/an" for non-determiner words (nouns are borderline OK)
@@ -97,7 +97,7 @@ function auditEntry(entry, lang) {
 
   // 9. "to" prefix for nouns (wrong POS or wrong def)
   if (/^to /i.test(en) && pos === 'n') {
-    // Check if the word is actually a noun — "ahorros" means "savings" not "to save"
+    // Check if the word is actually a noun – "ahorros" means "savings" not "to save"
     issues.push(`noun_with_to: "${word}" has en="${en}" but pos=n`);
   }
 

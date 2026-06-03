@@ -87,7 +87,7 @@ function loadDict(filePath, varName) {
 
 function tokenize(sentence) {
   if (!sentence) return [];
-  return sentence.split(/[\s।,!?;:"""''()—–…¿¡]+/).filter(w => w && w.length > 0);
+  return sentence.split(/[\s।,!?;:"""''()––…¿¡]+/).filter(w => w && w.length > 0);
 }
 
 // Mirror the lookupWord logic from each dict (simplified)

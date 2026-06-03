@@ -716,8 +716,8 @@ function applyFix(lines, lineIndex, oldEn, newEn) {
 function extractWords(sentence, langCode) {
   return sentence
     .split(/[\s]+/)
-    .map(w => w.replace(/^[¿¡.,!?;:"""''()—–\-…·«»]+/, '')
-              .replace(/[¿¡.,!?;:"""''()—–\-…·«»]+$/, ''))
+    .map(w => w.replace(/^[¿¡.,!?;:"""''()––\-…·«»]+/, '')
+              .replace(/[¿¡.,!?;:"""''()––\-…·«»]+$/, ''))
     .filter(Boolean)
     .map(w => {
       if (['es', 'fr', 'de', 'it', 'pt', 'nl', 'sv', 'tr', 'cy'].includes(langCode)) {

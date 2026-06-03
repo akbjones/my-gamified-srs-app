@@ -52,7 +52,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
         <div className="text-sm font-black text-[var(--accent)]">{getTotalProgress()}%</div>
       </header>
 
-      {/* Compact orientation banner — clarifies map is read-only without
+      {/* Compact orientation banner – clarifies map is read-only without
           eating vertical space. */}
       <div className="mx-4 mb-4 px-3 py-2 rounded-lg bg-[var(--bg-card)] border border-[var(--border-color)] text-xs text-[var(--text-secondary)] text-center">
         <span className="font-bold text-[var(--text-primary)]">Where you are.</span>
@@ -62,7 +62,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
 
       {/* Linear path */}
       <div className="relative" style={{ paddingLeft: '40px' }}>
-        {/* Trunk line — centered on the dots */}
+        {/* Trunk line – centered on the dots */}
         <div className="absolute top-0 bottom-0 w-[2px] bg-[var(--progress-bg)]" style={{ left: '15px' }} />
 
         {MAIN_PATH.map((node, idx) => {
@@ -119,7 +119,7 @@ const TopicMap: React.FC<TopicMapProps> = ({ cards, language, onBack }) => {
                   style={{ left: '-30px', top: '18px' }}
                 />
 
-                {/* Node card — view-only, not tappable. The "Now" pill on the
+                {/* Node card – view-only, not tappable. The "Now" pill on the
                     active node makes the current position unmistakable. */}
                 <div
                   className={`w-full text-left rounded-xl p-4 transition-all relative ${

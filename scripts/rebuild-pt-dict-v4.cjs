@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Rebuild Portuguese dictionary v4 — full-sentence validation approach.
+ * Rebuild Portuguese dictionary v4 – full-sentence validation approach.
  *
  * Steps:
  *  1. Portuguese function word table (~180 entries, never sent to Google)
@@ -9,7 +9,7 @@
  *  4. Google Translate ALL unique sentences via translateSentences()
  *  5. For each word, validate against sentence translations via validateAndEnrich()
  *  6. Post-process every result via postProcess() (18-rule pipeline)
- *  7. Lemma copy — verified lemmas get their base word's definition
+ *  7. Lemma copy – verified lemmas get their base word's definition
  *  8. Noun/verb dual entries
  *  9. Apply to pt.ts, preserve IPA/lemma/pos + lookupWord + reverseVerb
  * 10. 100-entry random review -> scripts/output/pt-v5-review.md
@@ -228,7 +228,7 @@ const FUNCTION_WORDS = {
 };
 
 // ──────────────────────────────────────────────────────────────
-// Noun/verb dual entries — Portuguese words that are both
+// Noun/verb dual entries – Portuguese words that are both
 // ──────────────────────────────────────────────────────────────
 const NOUN_VERB_DUALS = {
   'viagem': { noun: 'trip, journey', verb: 'to travel' },
@@ -280,7 +280,7 @@ function collectDeckData() {
       const w = tok.trim()
         .toLowerCase()
         .replace(/[''""«»\u200B\u200C\u200D\uFEFF]/g, '')
-        .replace(/^[—–\-]+|[—–\-]+$/g, '')
+        .replace(/^[––\-]+|[––\-]+$/g, '')
         .trim();
       if (!w) continue;
       if (w.length < 2) continue;
@@ -433,7 +433,7 @@ async function main() {
 
   console.log('\n' + stats.report());
 
-  // Step 7: Lemma copy — verified lemmas get base word's definition
+  // Step 7: Lemma copy – verified lemmas get base word's definition
   console.log('\nStep 7: Lemma copy...');
 
   // 7a: Bad lemma removal first

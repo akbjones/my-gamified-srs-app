@@ -71,7 +71,7 @@ function commonPrefix(a, b) {
 // ===== SPANISH-SPECIFIC KNOWN WRONG MATCHES =====
 // These are words that look like they could be verb forms but aren't
 const ES_WRONG_MATCHES = {
-  // Words wrongly matched to "amar" (to love) — root "am"
+  // Words wrongly matched to "amar" (to love) – root "am"
   'amable': 'kind, friendly',
   'amables': 'kind, friendly (pl)',
   'amarillo': 'yellow',
@@ -99,7 +99,7 @@ const ES_WRONG_MATCHES = {
   'ampliado': 'expanded, broadened',
   'ambulancia': 'ambulance',
 
-  // Words wrongly matched to "caer" (to fall) — root "ca"
+  // Words wrongly matched to "caer" (to fall) – root "ca"
   'caballo': 'horse',
   'cabeza': 'head',
   'cabezota': 'stubborn',
@@ -114,7 +114,7 @@ const ES_WRONG_MATCHES = {
   'cajeros': 'ATMs, cashiers',
   'cala': 'cove, inlet',
 
-  // Words wrongly matched to "animar" — root "anim"
+  // Words wrongly matched to "animar" – root "anim"
   'animal': 'animal',
   'animales': 'animals',
 
@@ -187,7 +187,7 @@ const esWrong = findAllWrongLemmas('es');
 console.log(`Found ${esWrong.length} entries with potentially wrong lemma links:`);
 for (const w of esWrong) {
   const known = ES_WRONG_MATCHES[w.word];
-  console.log(`  ${w.word} → "${w.en}" (linked to ${w.lemma})${known ? ` — should be: "${known}"` : ''}`);
+  console.log(`  ${w.word} → "${w.en}" (linked to ${w.lemma})${known ? ` – should be: "${known}"` : ''}`);
 }
 
 // Also check for words that match known wrong matches but don't have lemma refs

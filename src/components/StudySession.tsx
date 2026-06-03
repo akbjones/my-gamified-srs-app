@@ -17,7 +17,7 @@ import WordTileChallenge from './WordTileChallenge';
  *  the card so the user discovers etymology without first having to tap
  *  individual words.
  *
- *  Defensive try/catch — if any unexpected data shape slips through, we
+ *  Defensive try/catch – if any unexpected data shape slips through, we
  *  fall back to no etymology rather than crashing the whole session. */
 function findCardEtymology(targetSentence: string, language: Language) {
   try {
@@ -128,7 +128,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
 
   // Find a card-level etymology word: first word in the target sentence with
   // a verified etymology entry. Memoized on card+language so we don't rescan
-  // on every render. MUST live above the `if (isComplete)` early return —
+  // on every render. MUST live above the `if (isComplete)` early return –
   // otherwise the hook is skipped on the completion screen and React crashes
   // with "Rendered fewer hooks than during the previous render."
   const cardEty = useMemo(
@@ -161,7 +161,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
           <p className="text-sm text-[var(--text-secondary)]">{session.finishedCount} cards reviewed</p>
         </div>
         <div className="flex flex-col gap-3 w-full max-w-xs">
-          {/* Challenge CTA — checkpoint or boss battle */}
+          {/* Challenge CTA – checkpoint or boss battle */}
           {pendingChallenge && onStartChallenge && (
             <button
               onClick={onStartChallenge}
@@ -348,7 +348,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
           onClick={!isFlipped ? handleFlip : undefined}
           className="study-card flex-1 min-h-0 flex flex-col cursor-pointer my-1 relative"
         >
-          {/* Grammar overlay — centered modal with backdrop. Same layout
+          {/* Grammar overlay – centered modal with backdrop. Same layout
               pattern as the etymology overlay in WordPopover, just amber
               instead of violet so the two surfaces are visually parallel. */}
           {showGrammar && card!.grammar && (
@@ -360,7 +360,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                 className="bg-amber-50 dark:bg-[#1a1207] border border-amber-500/30 rounded-2xl p-6 max-w-sm w-full shadow-2xl relative"
                 onClick={(e) => e.stopPropagation()}
               >
-                {/* Save toggle — saves the tip to Favorites under the 'grammar'
+                {/* Save toggle – saves the tip to Favorites under the 'grammar'
                     kind. The card target sits in `example` so the user can recall
                     which sentence the tip came from. */}
                 <button
@@ -394,14 +394,14 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             </div>
           )}
 
-          {/* "Tough" badge — replaces the cryptic "Leech" jargon. Cards that
+          {/* "Tough" badge – replaces the cryptic "Leech" jargon. Cards that
               fail 5+ times become flagged so the user knows to focus extra
               attention. The title attribute provides hover/tap clarification. */}
           {card!.isLeech && (
             <div className="flex justify-center pt-2 shrink-0">
               <div
                 className="flex items-center gap-1 bg-orange-500/10 border border-orange-500/40 rounded-lg px-2 py-0.5"
-                title="You've struggled with this one — take a moment to re-read it"
+                title="You've struggled with this one – take a moment to re-read it"
               >
                 <AlertTriangle size={10} className="text-orange-500" />
                 <span className="text-[10px] font-bold uppercase tracking-wider text-orange-500">Tough one</span>
@@ -409,11 +409,11 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             </div>
           )}
 
-          {/* Top-of-card chip row — ALWAYS rendered so card height stays
+          {/* Top-of-card chip row – ALWAYS rendered so card height stays
               constant across cards. Grammar lives in a left-anchored slot
               and only renders when card.grammar is present; Etymology lives
               in a right-anchored slot and only renders when an etymology
-              entry exists. Each chip is pinned to its corner — the present
+              entry exists. Each chip is pinned to its corner – the present
               chip never drifts toward the center based on whether the
               other one is around. */}
           <div className="flex items-start justify-between gap-2 px-3 pt-2 shrink-0 min-h-[36px]">
@@ -441,7 +441,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             </div>
           </div>
 
-          {/* Etymology overlay — same modal pattern as Grammar Tip, violet
+          {/* Etymology overlay – same modal pattern as Grammar Tip, violet
               palette. The word being explained sits prominently above the
               origin so the user always knows what's being discussed. */}
           {showEtymology && cardEty && (
@@ -453,7 +453,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                 className="bg-violet-50 dark:bg-[#100a1a] border border-violet-500/30 rounded-2xl p-6 max-w-sm w-full shadow-2xl relative"
                 onClick={(e) => e.stopPropagation()}
               >
-                {/* Save toggle — same shape as the Grammar overlay, violet
+                {/* Save toggle – same shape as the Grammar overlay, violet
                     palette. Stores under the 'etymology' kind keyed by word so
                     it can't collide with vocab favorites for that same word. */}
                 <button
@@ -510,7 +510,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             </div>
           )}
 
-          {/* Card content — dynamic font size based on sentence length */}
+          {/* Card content – dynamic font size based on sentence length */}
           {(() => {
             const wordCount = card!.target.split(/\s+/).length;
             const sizeClass = wordCount <= 6
@@ -533,7 +533,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                   language={session.language}
                   className={`${sizeClass} font-black tracking-tight text-[var(--text-primary)] leading-snug max-w-sm mx-auto`}
                 />
-                {/* First-session hint — shown once on the very first card
+                {/* First-session hint – shown once on the very first card
                     to reveal that any word is tappable for instant context.
                     Subtle: dashed border + soft animation. Dismisses on
                     any tap inside the card area. */}
@@ -557,7 +557,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             );
           })()}
 
-          {/* Toolbar — bottom of card, audio actions only. Grammar Tip and
+          {/* Toolbar – bottom of card, audio actions only. Grammar Tip and
               Etymology moved to the top chip row so they're discoverable
               before flipping. */}
           <div className="flex items-center justify-center gap-2.5 px-4 py-2.5 shrink-0">
@@ -588,7 +588,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
         </div>
         )}
 
-        {/* Grading buttons — hidden for tile cards (they self-grade) */}
+        {/* Grading buttons – hidden for tile cards (they self-grade) */}
         {isFlipped && !tileCardIds.has(card!.id) && (
           <div className="animate-slide-up pb-2 shrink-0">
             <div className="grid grid-cols-4 gap-2">

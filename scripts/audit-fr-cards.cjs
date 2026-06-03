@@ -88,7 +88,7 @@ const IR_SUFFIXES = ['issons', 'issez', 'issent', 'issais', 'issait', 'issaient'
 const RE_SUFFIXES = ['ons', 'ez', 'ent', 'u', 'ue', 'us', 'ues', 's'];
 
 function canLookup(word, sentenceLC) {
-  let clean = word.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()—–«»\d/?]/g, '');
+  let clean = word.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()––«»\d/?]/g, '');
   if (!clean) return true; // empty after cleaning = skip
 
   // Check if this word is part of a known compound in the sentence
@@ -189,7 +189,7 @@ function tryVerbReversal(form) {
 function tokenize(sentence) {
   // Split on spaces, then handle apostrophes
   return sentence
-    .replace(/[.,!?;:"""\u2018\u2019()—–«»]/g, '')
+    .replace(/[.,!?;:"""\u2018\u2019()––«»]/g, '')
     .split(/\s+/)
     .filter(w => w.length > 0);
 }
@@ -301,7 +301,7 @@ function checkGrammarTip(card) {
 
   // Extract quoted French words/phrases from tip
   // Use a robust approach: find all French vocabulary in the tip
-  const tipTokens = tipLC.replace(/[''"".,!?;:()\-—–=+/\\]/g, ' ').split(/\s+/).filter(w => w.length >= 3);
+  const tipTokens = tipLC.replace(/[''"".,!?;:()\-––=+/\\]/g, ' ').split(/\s+/).filter(w => w.length >= 3);
   const tipSkipEN = new Set(['the', 'is', 'are', 'was', 'were', 'a', 'an', 'in', 'of', 'to', 'and', 'or', 'not', 'for', 'it', 'this', 'that', 'with', 'from', 'but', 'by', 'as', 'on', 'be', 'at', 'use', 'note', 'means', 'used', 'always', 'before', 'after', 'example', 'like', 'just', 'only', 'can', 'same', 'way', 'when', 'than', 'more', 'very', 'goes', 'between', 'two', 'you', 'your', 'has', 'have', 'had', 'they', 'them', 'their', 'its', 'his', 'her', 'she', 'him', 'will', 'would', 'could', 'should', 'might', 'must', 'shall', 'may', 'about', 'into', 'over', 'did', 'does', 'been', 'being', 'each', 'which', 'there', 'then', 'here', 'all', 'any', 'some', 'most', 'other', 'what', 'how', 'who', 'where', 'why', 'also', 'both', 'own', 'such', 'need', 'keep', 'let', 'say', 'take', 'make', 'come', 'got', 'get', 'put', 'still', 'never', 'often', 'form', 'sound', 'hear', 'ending', 'last', 'irregular', 'regular', 'common', 'french', 'english', 'literally', 'literally', 'rather', 'instead', 'literally']);
 
   // Check if the grammar concept in the tip relates to the sentence

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Rebuild Dutch dictionary v4 — sentence-validated approach.
+ * Rebuild Dutch dictionary v4 – sentence-validated approach.
  *
  * Steps:
  *  1. Dutch function word table (~150 entries, never sent to Google)
@@ -9,7 +9,7 @@
  *  4. Google Translate ALL unique sentences via translateSentences()
  *  5. For each word, validate against sentence translations via validateAndEnrich()
  *  6. Post-process every result via postProcess() (18-rule pipeline)
- *  7. Lemma copy — verified lemmas get their base word's definition
+ *  7. Lemma copy – verified lemmas get their base word's definition
  *  8. Apply to nl.ts, preserve IPA/lemma/pos + IRREGULAR_MAP + CONTRACTION_MAP + lookupWord
  *  9. 100-entry random review -> scripts/output/nl-v5-review.md
  *
@@ -170,7 +170,7 @@ function collectDeckData() {
       const w = tok.trim()
         .toLowerCase()
         .replace(/[''""«»\u200B\u200C\u200D\uFEFF]/g, '')
-        .replace(/^[—–\-]+|[—–\-]+$/g, '')
+        .replace(/^[––\-]+|[––\-]+$/g, '')
         .trim();
       if (!w) continue;
       if (w.length < 2) continue;
@@ -322,7 +322,7 @@ async function main() {
 
   console.log('\n' + stats.report());
 
-  // Step 7: Lemma copy — verified lemmas get base word's definition
+  // Step 7: Lemma copy – verified lemmas get base word's definition
   console.log('\nStep 7: Lemma copy...');
 
   // 7a: Bad lemma removal first

@@ -10,7 +10,7 @@
  *   no-takeaway      no actionable language ("use", "remember", "don't", …)
  *   jargon-only      a single grammatical-jargon noun phrase
  *                    ("subjunctive mood"; "auxiliary verb")
- *   verb-pattern     "X → Xs in 3rd person singular" — pattern recitation
+ *   verb-pattern     "X → Xs in 3rd person singular" – pattern recitation
  *   meta             describes the card itself instead of grammar
  */
 const fs = require('fs');

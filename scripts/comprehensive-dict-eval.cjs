@@ -162,7 +162,7 @@ function loadDeckWords(lang) {
     if (!card.target) continue;
     // Tokenize: split on whitespace and strip punctuation
     const tokens = card.target
-      .replace(/[¿¡.,!?;:"""''()—–\-«»„"‚'…\[\]{}]/g, ' ')
+      .replace(/[¿¡.,!?;:"""''()––\-«»„"‚'…\[\]{}]/g, ' ')
       .split(/\s+/)
       .map(t => t.trim().toLowerCase())
       .filter(t => t.length > 0);

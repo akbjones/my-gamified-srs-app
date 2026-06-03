@@ -1019,7 +1019,7 @@ for (const [w, en] of Object.entries(PATCH)) {
 // Tokenize: strip punctuation, lowercase, split on whitespace
 function tokenize(text) {
   return text
-    .replace(/[.,!?¿¡;:"""«»—–…()\[\]{}\/\\]/g, '')
+    .replace(/[.,!?¿¡;:"""«»––…()\[\]{}\/\\]/g, '')
     .toLowerCase()
     .split(/\s+/)
     .filter(t => t.length > 0);

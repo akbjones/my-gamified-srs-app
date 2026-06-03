@@ -8,7 +8,7 @@ module.exports = [
     match: t => /^(Vandaag|Morgen|Gisteren|Soms|Vaak|Hier|Daar|In\s+\w+|Op\s+\w+|Na\s+\w+|Voor\s+\w+|Toen|Nu)\s+\w+/i.test(t),
     tips: [
       "Dutch follows V2 like German: the verb stays in second position. `Vandaag ga ik` (today I go), not `vandaag ik ga`. Subject jumps after the verb when something else opens the sentence.",
-      "Inversion is mandatory: if anything but the subject is first, the subject moves behind the verb. `Morgen werkt hij` — not `morgen hij werkt`.",
+      "Inversion is mandatory: if anything but the subject is first, the subject moves behind the verb. `Morgen werkt hij` – not `morgen hij werkt`.",
     ],
   },
 
@@ -60,7 +60,7 @@ module.exports = [
     priority: 90,
     match: t => /\ber\s+(is|zijn|was|waren|staat|staan|ligt|liggen|loopt|lopen|komt|komen)\b/i.test(t),
     tips: [
-      "`er` has many uses; the most common is existential: `er is`, `er zijn` = 'there is / there are'. Don't try to translate `er` literally — it's just a filler subject.",
+      "`er` has many uses; the most common is existential: `er is`, `er zijn` = 'there is / there are'. Don't try to translate `er` literally – it's just a filler subject.",
       "`er` also pairs with prepositions to replace 'it': `er aan denken` = 'to think of it', `er over praten` = 'to talk about it'. Glue to the start.",
     ],
   },
@@ -114,7 +114,7 @@ module.exports = [
     priority: 40,
     match: t => /\b(de|het)\s+\w+\b/i.test(t),
     tips: [
-      "Dutch has two genders: `de` (common — about 75% of nouns) and `het` (neuter — about 25%). No reliable rule; learn the article with the noun.",
+      "Dutch has two genders: `de` (common – about 75% of nouns) and `het` (neuter – about 25%). No reliable rule; learn the article with the noun.",
       "Plural is always `de`: `het kind` (the child) → `de kinderen` (the children). Singular needs you to remember which gender it is.",
     ],
   },
@@ -136,10 +136,10 @@ module.exports = [
     priority: 88,
     match: t => /\b(je|jij|jou|jouw|u|uw|jullie)\b/i.test(t),
     tips: [
-      "Dutch has TWO 'you's: `je/jij` (informal — friends, family, peers) and `u` (formal — strangers, elders, business). They use DIFFERENT verb forms: `jij hebt` vs `u hebt` (or `u heeft`).",
-      "`Je` (unstressed) vs `jij` (stressed/contrastive) — same word, just emphasis. Possessive: `je/jouw boek` (your book, informal) vs `uw boek` (formal).",
-      "Modern Dutch trends toward `je` even with strangers, especially among younger speakers. But in customer service, with older people, or in writing — default to `u`. Belgian Dutch (Flemish) is more formal than Netherlands Dutch.",
-      "Plural is always `jullie` (you guys) — no formal plural. Even when addressing a group formally, `jullie` works. For very formal writing only, `u` covers both singular and plural.",
+      "Dutch has TWO 'you's: `je/jij` (informal – friends, family, peers) and `u` (formal – strangers, elders, business). They use DIFFERENT verb forms: `jij hebt` vs `u hebt` (or `u heeft`).",
+      "`Je` (unstressed) vs `jij` (stressed/contrastive) – same word, just emphasis. Possessive: `je/jouw boek` (your book, informal) vs `uw boek` (formal).",
+      "Modern Dutch trends toward `je` even with strangers, especially among younger speakers. But in customer service, with older people, or in writing – default to `u`. Belgian Dutch (Flemish) is more formal than Netherlands Dutch.",
+      "Plural is always `jullie` (you guys) – no formal plural. Even when addressing a group formally, `jullie` works. For very formal writing only, `u` covers both singular and plural.",
     ],
   },
 

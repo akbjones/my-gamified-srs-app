@@ -172,7 +172,7 @@ const STOP_WORDS = new Set([
 function extractContentWords(text) {
   if (!text) return [];
   return text.toLowerCase()
-    .replace(/[().,!?;:"""''\/\-–—]/g, ' ')
+    .replace(/[().,!?;:"""''\/\-––]/g, ' ')
     .split(/\s+/)
     .filter(w => w.length > 1 && !STOP_WORDS.has(w));
 }
@@ -418,7 +418,7 @@ async function main() {
       }
     }
 
-    // It's a genuine error — Google forward and round-trip both disagree
+    // It's a genuine error – Google forward and round-trip both disagree
     genuineErrors.push(mm);
   }
 
@@ -490,7 +490,7 @@ async function main() {
 }
 
 main().then(fixCount => {
-  console.log(`\nITALIAN COMPLETE — ${fixCount} fixes`);
+  console.log(`\nITALIAN COMPLETE – ${fixCount} fixes`);
 }).catch(err => {
   console.error('Fatal error:', err);
   process.exit(1);

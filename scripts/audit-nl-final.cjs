@@ -51,7 +51,7 @@ const STOP = new Set([
 ]);
 
 function tokenize(s) {
-  return s.replace(/[.,!?;:"""''…—–\-\(\)\[\]\/]/g, ' ').toLowerCase().split(/\s+/).filter(w => w.length > 0);
+  return s.replace(/[.,!?;:"""''…––\-\(\)\[\]\/]/g, ' ').toLowerCase().split(/\s+/).filter(w => w.length > 0);
 }
 
 function inDict(word) {

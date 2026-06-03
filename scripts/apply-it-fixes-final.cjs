@@ -366,4 +366,4 @@ function main() {
 }
 
 const n = main();
-console.log(`\nITALIAN COMPLETE — ${n} fixes`);
+console.log(`\nITALIAN COMPLETE – ${n} fixes`);

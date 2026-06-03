@@ -3,8 +3,8 @@
 Fix Russian dictionary (ru.ts) entries where the 'en' field contains forward slashes.
 
 Two categories:
-1. Legitimate alternatives (verbs, adjectives, prepositions) — convert slash to comma or space.
-2. Garbage "word/context" fragments — keep only the actual translation (first part).
+1. Legitimate alternatives (verbs, adjectives, prepositions) – convert slash to comma or space.
+2. Garbage "word/context" fragments – keep only the actual translation (first part).
 """
 
 import re
@@ -16,7 +16,7 @@ OUTPUT = INPUT  # overwrite in place
 # ── Explicit corrections for known legitimate alternatives ──────────────
 # These are real translations where both parts matter.
 MANUAL_FIXES = {
-    # Verbs with dual meanings — use comma separation
+    # Verbs with dual meanings – use comma separation
     "to do/make": "to do, to make",
     "to do/make (perf.)": "to do, to make (perf.)",
     "to speak/say": "to speak, to say",
@@ -48,7 +48,7 @@ MANUAL_FIXES = {
     "to be liked/pleasing": "to be liked, to be pleasing",
     "say/speak": "to say, to speak",
 
-    # Compound phrases — use space
+    # Compound phrases – use space
     "good/night": "good night",
     "good/morning": "good morning",
     "good/afternoon": "good afternoon",
@@ -57,7 +57,7 @@ MANUAL_FIXES = {
     "excuse me/sorry": "excuse me, sorry",
     "forgive me/sorry": "forgive me, sorry",
 
-    # Adjective/adverb/noun alternatives — comma
+    # Adjective/adverb/noun alternatives – comma
     "all/everyone": "all, everyone",
     "all/whole (f.)": "all, whole (f.)",
     "all/whole (m.)": "all, whole (m.)",
@@ -147,7 +147,7 @@ MANUAL_FIXES = {
     "rather/fairly": "rather, fairly",
     "after all/you know": "after all, you know",
 
-    # Prepositions — comma or space
+    # Prepositions – comma or space
     "in/into": "in, into",
     "on/onto": "on, onto",
     "with/from": "with, from",
@@ -186,10 +186,10 @@ MANUAL_FIXES = {
 
 # ── Patterns for detecting "legitimate" vs "garbage" slash entries ──────
 # Legitimate: both parts form a real English translation
-# Garbage: "word/context" — the second part is just sentence context
+# Garbage: "word/context" – the second part is just sentence context
 
 def is_name_entry(en_val):
-    """Entries like 'виктор/name' — these are names."""
+    """Entries like 'виктор/name' – these are names."""
     return en_val.endswith('/name')
 
 def fix_name_entry(en_val):
@@ -297,7 +297,7 @@ def main():
             changes.append(f"  NAME:   '{original}' → '{fixed}'")
             return prefix + fixed.replace("'", "\\'") + suffix
 
-        # Garbage context entries — keep only first part
+        # Garbage context entries – keep only first part
         if is_garbage_context(en_val):
             fixed = extract_translation(en_val)
             # Handle some edge cases

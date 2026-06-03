@@ -17,7 +17,7 @@ module.exports = [
     tips: [
       "Quick rule: `para` = destination or purpose (it's FOR him, in order TO eat). `por` = reason or exchange (BECAUSE of him, FOR ten euros). When in doubt ask 'why?' (por) or 'what for?' (para).",
       "`por` and `para` both translate as 'for' but never overlap: `por` looks backwards (cause), `para` looks forwards (goal). Mix them up and you'll say the opposite of what you mean.",
-      "`para` is about endpoint and intent — destination, deadline, recipient. `por` is about cause, exchange, route, duration. English uses 'for' / 'by' / 'through' across both.",
+      "`para` is about endpoint and intent – destination, deadline, recipient. `por` is about cause, exchange, route, duration. English uses 'for' / 'by' / 'through' across both.",
     ],
   },
 
@@ -35,7 +35,7 @@ module.exports = [
     priority: 75,
     match: t => /\b(estoy|estás|está|estamos|están)\b/i.test(t),
     tips: [
-      "`estar` for how you ARE right now — mood, health, location, temporary state. Wrong: `soy cansado` (= I'm a tired *person*). Right: `estoy cansado` (= I'm tired *today*).",
+      "`estar` for how you ARE right now – mood, health, location, temporary state. Wrong: `soy cansado` (= I'm a tired *person*). Right: `estoy cansado` (= I'm tired *today*).",
       "Use `estar` when the answer could change tomorrow: location, feelings, ongoing actions. `estar + adjective` = it's a state, not a label.",
       "`está` covers 'is feeling / is located / is currently'. If the next word is a place or a temporary adjective, you almost always want `estar`.",
     ],
@@ -45,9 +45,9 @@ module.exports = [
     priority: 70,
     match: t => /\b(soy|eres|es|somos|son)\b\s+(un|una|el|la|los|las|mi|tu|su)?\s*[a-záéíóúñ]+/i.test(t),
     tips: [
-      "`ser` for what something IS, permanently — nationality, profession, day of the week, time, defining trait. `Es médico`, `es lunes`, `son las tres`.",
+      "`ser` for what something IS, permanently – nationality, profession, day of the week, time, defining trait. `Es médico`, `es lunes`, `son las tres`.",
       "If you can replace 'is' with 'equals' in English, use `ser`. `Es importante` = importance equals this. With temporary descriptions you'd flip to `estar`.",
-      "`ser` declares identity — the unchanging label of a person, object, or fact. Use it for permanence; reach for `estar` when it could change.",
+      "`ser` declares identity – the unchanging label of a person, object, or fact. Use it for permanence; reach for `estar` when it could change.",
     ],
   },
 
@@ -59,7 +59,7 @@ module.exports = [
     tips: [
       "`gustar` is backwards from English: the thing that pleases is the subject, not the person. `Me gusta la pizza` literally = 'pizza pleases me'. Plural thing? Use plural verb: `me gustan los libros`.",
       "Think 'X pleases me' for `me gusta X`. If X is plural, the verb agrees: `me gustan`. Same pattern with `encantar` (loves), `interesar` (interests), `doler` (hurts).",
-      "Don't say `yo gusto la pizza` — that means 'I am pleasing to pizza'. The Spanish flips: pizza is doing the pleasing. Match the verb to the thing, not to you.",
+      "Don't say `yo gusto la pizza` – that means 'I am pleasing to pizza'. The Spanish flips: pizza is doing the pleasing. Match the verb to the thing, not to you.",
     ],
   },
 
@@ -69,8 +69,8 @@ module.exports = [
     priority: 85,
     match: t => /\b(me|te|se|nos|os)\s+[a-záéíóúñ]+(?:o|as|a|amos|áis|an|í|aste|ó|amos|asteis|aron|ía|ías|íamos|íais|ían)\b/i.test(t),
     tips: [
-      "Reflexive verbs use a pronoun (me/te/se/nos/os/se) before the verb. `Me llamo` = 'I call myself' = 'My name is'. The pronoun matches the subject — it's not optional.",
-      "The `se` in `se llama` / `se ducha` isn't decorative — it's the marker that the action loops back on the subject. Skip it and the sentence breaks.",
+      "Reflexive verbs use a pronoun (me/te/se/nos/os/se) before the verb. `Me llamo` = 'I call myself' = 'My name is'. The pronoun matches the subject – it's not optional.",
+      "The `se` in `se llama` / `se ducha` isn't decorative – it's the marker that the action loops back on the subject. Skip it and the sentence breaks.",
       "Reflexive isn't always literal in English: `acordarse` = to remember, `quejarse` = to complain. If the dictionary entry ends in -se, you need a matching pronoun.",
     ],
   },
@@ -126,8 +126,8 @@ module.exports = [
     priority: 70,
     match: t => /(^|\s)(lo|la|los|las)\s+(veo|ves|ve|vemos|veis|ven|tengo|tienes|tiene|tomo|tomas|toma|miro|miras|mira|leo|lee|compro|compra|conozco)\b/i.test(t),
     tips: [
-      "Object pronouns sit BEFORE the verb in Spanish: `lo veo` (I see it), not `veo lo`. The pronoun replaces the noun and matches its gender/number — lo (m), la (f), los (mp), las (fp).",
-      "`lo/la/los/las` are 'it / them' — used when you don't repeat the noun. `Tengo el libro → lo tengo` (I have it). Before the verb, never after.",
+      "Object pronouns sit BEFORE the verb in Spanish: `lo veo` (I see it), not `veo lo`. The pronoun replaces the noun and matches its gender/number – lo (m), la (f), los (mp), las (fp).",
+      "`lo/la/los/las` are 'it / them' – used when you don't repeat the noun. `Tengo el libro → lo tengo` (I have it). Before the verb, never after.",
     ],
   },
 
@@ -137,13 +137,13 @@ module.exports = [
     priority: 65,
     match: t => /\ble\s+(doy|das|da|damos|dais|dan|digo|dices|dice|escribo|escribes|escribe|pregunto)\b/i.test(t),
     tips: [
-      "`le` = 'to him/her/you-formal', `les` = 'to them/you-plural'. Indirect object — the recipient. `Le doy el libro` = 'I give the book to him/her'.",
-      "Spanish often doubles up the recipient: `le doy el libro a María`. The `le` and `a María` BOTH say 'to María' — it's redundant by English standards but standard in Spanish.",
+      "`le` = 'to him/her/you-formal', `les` = 'to them/you-plural'. Indirect object – the recipient. `Le doy el libro` = 'I give the book to him/her'.",
+      "Spanish often doubles up the recipient: `le doy el libro a María`. The `le` and `a María` BOTH say 'to María' – it's redundant by English standards but standard in Spanish.",
     ],
   },
 
   // ── Preterite vs Imperfect (past contrast) ──────────────────────────
-  // CRITICAL: JavaScript's `\b` is ASCII-only — `\b[a-z]+é\b` matches
+  // CRITICAL: JavaScript's `\b` is ASCII-only – `\b[a-z]+é\b` matches
   // `despué` inside `después` because é→s is a word/non-word transition.
   // We use unicode-aware lookbehind/lookahead boundaries instead so the
   // pattern fires only on whole words.
@@ -154,7 +154,7 @@ module.exports = [
       // Match whole-word preterite forms only (irregular + regular endings)
       const irr = /(?<![a-záéíóúñü])(fui|fuiste|fue|fuimos|fuisteis|fueron|tuve|tuviste|tuvo|tuvimos|tuvisteis|tuvieron|hice|hiciste|hizo|hicimos|hicisteis|hicieron|dije|dijiste|dijo|dijimos|dijisteis|dijeron|estuve|estuviste|estuvo|estuvimos|estuvisteis|estuvieron|vi|viste|vio|vimos|vine|viniste|vino|vinimos|vinisteis|vinieron|di|diste|dio|dimos|disteis|dieron|puse|pusiste|puso|pusimos|pusisteis|pusieron|supe|supiste|supo|supimos|supisteis|supieron|pude|pudiste|pudo|pudimos|pudisteis|pudieron|quise|quisiste|quiso|quisimos|quisisteis|quisieron)(?![a-záéíóúñü])/i;
       if (irr.test(t)) return true;
-      // Regular preterite endings — require a stem of at least 2 letters before
+      // Regular preterite endings – require a stem of at least 2 letters before
       const reg = /(?<![a-záéíóúñü])[a-záéíóúñü]{2,}(?:aste|asteis|aron|iste|isteis|ieron|ió)(?![a-záéíóúñü])/i;
       return reg.test(t);
     },
@@ -172,7 +172,7 @@ module.exports = [
       if (/(?<![a-záéíóúñü])[a-záéíóúñü]{2,}(?:aba|abas|ábamos|abais|aban)(?![a-záéíóúñü])/i.test(t)) return true;
       // Irregular imperfect forms of ser/ir
       if (/(?<![a-záéíóúñü])(era|eras|éramos|erais|eran|iba|ibas|íbamos|ibais|iban)(?![a-záéíóúñü])/i.test(t)) return true;
-      // -ía/-ían imperfect — must NOT be a common noun (día, guía, tía, policía, etc.)
+      // -ía/-ían imperfect – must NOT be a common noun (día, guía, tía, policía, etc.)
       const NOUN_IA = /^(día|días|guía|guías|tía|tías|policía|policías|alegría|alegrías|economía|categoría|fotografía|geografía|filosofía|teoría|melodía|simpatía|panadería|librería|carnicería|pastelería|peluquería|joyería|cafetería|sandía|magia|sangría|rabia|ironía|mía|tuya|suya|hacia|gracias|hambría|familía|fría|frías|vacía|vacías|propia|propias|sucia|sucias|limpia|limpias|sabia|sabias|amplia|amplias|envidia|distancia|importancia|paciencia|presencia|tendencia|experiencia|conciencia|preferencia|ciencia|provincia|farmacia|democracia|burocracia|justicia|noticia|noticias|policia|delicia|caricia)$/i;
       const iaCands = t.match(/(?<![a-záéíóúñü])[a-záéíóúñü]{2,}(?:ía|ías|íamos|íais|ían)(?![a-záéíóúñü])/gi) || [];
       return iaCands.some(w => !NOUN_IA.test(w));
@@ -211,7 +211,7 @@ module.exports = [
     priority: 50,
     match: t => /\b[a-záéíóúñ]+(ito|ita|itos|itas|ico|ica|illo|illa)\b/i.test(t),
     tips: [
-      "Diminutive suffixes (-ito/-ita) add 'small / cute / affectionate' — not always literal size. `Mi gatito` = 'my (dear little) cat'. Spanish uses these way more than English.",
+      "Diminutive suffixes (-ito/-ita) add 'small / cute / affectionate' – not always literal size. `Mi gatito` = 'my (dear little) cat'. Spanish uses these way more than English.",
       "`-ito` softens the word emotionally too: `un momentito` = 'just a sec', `cafecito` = 'a little coffee' (or a sweet way to say coffee). It's tone, not measurement.",
     ],
   },
@@ -231,7 +231,7 @@ module.exports = [
     priority: 70,
     match: t => /\btan\s+\w+\s+como\b/i.test(t),
     tips: [
-      "`tan X como Y` = 'as X as Y' — equal comparison. `Tan alto como tú` = 'as tall as you'. Don't substitute `que` here.",
+      "`tan X como Y` = 'as X as Y' – equal comparison. `Tan alto como tú` = 'as tall as you'. Don't substitute `que` here.",
     ],
   },
 
@@ -242,7 +242,7 @@ module.exports = [
     match: t => /\bno\s+\w+\s+(nada|nunca|nadie|ningún|ninguna|ningunos|ningunas|jamás|tampoco)\b/i.test(t),
     tips: [
       "Spanish requires double negatives: `no como nada` = 'I don't eat anything'. English drops the second one; Spanish needs both. `Como nada` would mean 'I eat nothing' (rare and emphatic).",
-      "When a negative word comes after the verb, `no` goes before it. `No vi a nadie`, `nunca lo hago`. Two negatives don't cancel — they reinforce.",
+      "When a negative word comes after the verb, `no` goes before it. `No vi a nadie`, `nunca lo hago`. Two negatives don't cancel – they reinforce.",
     ],
   },
 
@@ -252,7 +252,7 @@ module.exports = [
     priority: 70,
     match: t => /\b(veo|ves|ve|visito|visitas|conozco|conoces|llamo|llamas|busco|escucho|invito|invitas|saludo|saludas|ayudo|ayudas|amo|amas|odio)\s+a\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+/i.test(t),
     tips: [
-      "Before a person, Spanish inserts `a` even when no preposition is needed in English: `veo a María` = 'I see María'. This `a` has no English translation — it just marks the person as a direct object.",
+      "Before a person, Spanish inserts `a` even when no preposition is needed in English: `veo a María` = 'I see María'. This `a` has no English translation – it just marks the person as a direct object.",
       "Personal `a`: required before specific people, pets, or personified things. `Conozco a Juan` (yes) but `conozco la ciudad` (no, ciudad isn't a person).",
     ],
   },
@@ -264,7 +264,7 @@ module.exports = [
     match: t => /\bacab[ao][a-z]*\s+de\s+[a-záéíóúñ]+(ar|er|ir)\b/i.test(t),
     tips: [
       "`acabar de + infinitive` = 'to have just done X'. `Acabo de comer` = 'I've just eaten'. Despite the English perfect tense, Spanish uses present.",
-      "Don't translate literally — `acabar` here doesn't mean 'finish'. The whole phrase means 'just (now) did'. Tight pairing of immediacy.",
+      "Don't translate literally – `acabar` here doesn't mean 'finish'. The whole phrase means 'just (now) did'. Tight pairing of immediacy.",
     ],
   },
 
@@ -274,7 +274,7 @@ module.exports = [
     priority: 30,
     match: t => /^\s*(?:yo|tú|él|ella|usted|nosotros|nosotras|vosotros|vosotras|ellos|ellas|ustedes)\s+/i.test(t),
     tips: [
-      "Spanish usually skips subject pronouns — `como pizza` already means 'I eat pizza'. Adding `yo` (yo como pizza) signals emphasis or contrast, like saying 'I'M the one eating'.",
+      "Spanish usually skips subject pronouns – `como pizza` already means 'I eat pizza'. Adding `yo` (yo como pizza) signals emphasis or contrast, like saying 'I'M the one eating'.",
       "Subject pronouns are optional in Spanish: the verb ending tells you who. Native speakers drop them unless they're contrasting (I, not him) or clarifying.",
     ],
   },
@@ -289,7 +289,7 @@ module.exports = [
     ],
   },
 
-  // ── Formal vs informal "you" — 3sg verbs double for usted ──────────
+  // ── Formal vs informal "you" – 3sg verbs double for usted ──────────
   // Fires on common verb forms that hide this duality: puede = he/she can
   // OR you (formal) can; puedes is only ever informal you.
   {
@@ -297,20 +297,20 @@ module.exports = [
     priority: 88,
     match: t => /\b(puede|puedes|tiene|tienes|quiere|quieres|sabe|sabes|habla|hablas|come|comes|vive|vives|trabaja|trabajas|hace|haces|va|vas|viene|vienes|piensa|piensas|necesita|necesitas|cree|crees|debe|debes|está|estás)\b/i.test(t),
     tips: [
-      "Spanish has TWO 'you's: `tú` (informal — friends, family, kids) and `usted` (formal — strangers, elders, work). They use DIFFERENT verb forms. `Tú puedes` but `usted puede` — same form as él/ella.",
-      "If you see `puede`, it could mean 'he/she can' OR 'you (formal) can'. Context decides. The form `puedes` is unambiguous — always informal you. Spanish reuses 3rd-person verbs for the formal you.",
+      "Spanish has TWO 'you's: `tú` (informal – friends, family, kids) and `usted` (formal – strangers, elders, work). They use DIFFERENT verb forms. `Tú puedes` but `usted puede` – same form as él/ella.",
+      "If you see `puede`, it could mean 'he/she can' OR 'you (formal) can'. Context decides. The form `puedes` is unambiguous – always informal you. Spanish reuses 3rd-person verbs for the formal you.",
       "Default to `tú` with peers, `usted` when meeting someone older or in business. Latin Americans use `usted` more readily than Spaniards. Wrong tú can sound rude; wrong usted is just polite.",
       "Spain has a third pronoun: `vosotros` (you all, informal) with its own endings (-áis/-éis). Latin America uses `ustedes` for everyone plural. The `tú/usted` distinction is universal.",
     ],
   },
 
-  // ── Gender on inanimate nouns — el/la is arbitrary, not logical ───
+  // ── Gender on inanimate nouns – el/la is arbitrary, not logical ───
   {
     id: 'es-gender-arbitrary',
     priority: 45,
     match: t => /(^|\s)(el|la|los|las|un|una|unos|unas)\s+[a-záéíóúñü]+/i.test(t),
     tips: [
-      "Spanish nouns have GENDER (masc/fem), even objects: `el coche` (the car, m), `la mesa` (the table, f). English has no gender; you have to learn each noun WITH its article — never just 'coche'.",
+      "Spanish nouns have GENDER (masc/fem), even objects: `el coche` (the car, m), `la mesa` (the table, f). English has no gender; you have to learn each noun WITH its article – never just 'coche'.",
       "Endings hint at gender but aren't reliable: words ending in `-o` are usually masc (`el libro`), `-a` usually fem (`la casa`). But there are traps: `la mano`, `el problema`, `el día`, `el mapa`, `el sistema`.",
       "Adjectives agree with the noun's gender AND number: `el coche rojo` (m sg), `la casa roja` (f sg), `los coches rojos` (m pl), `las casas rojas` (f pl). One adjective, four forms.",
       "Plural marker is `-s` (after vowel: casas, libros) or `-es` (after consonant: papeles, animales). The article also pluralizes: el→los, la→las. Articles always match the noun.",

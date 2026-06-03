@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Etymology QC — anti-hallucination gate.
+ * Etymology QC – anti-hallucination gate.
  *
  * Scans every entry in src/data/etymology/<lang>.ts for:
  *   - Required fields present (word, origin, note, verified, sources)
@@ -17,8 +17,8 @@
  *   node scripts/etymology/qc.cjs --report # also write a markdown checklist
  *
  * Exit codes:
- *   0 — all checks pass
- *   1 — at least one issue found (build gate fails)
+ *   0 – all checks pass
+ *   1 – at least one issue found (build gate fails)
  */
 
 const fs = require('fs');
@@ -34,7 +34,7 @@ const ALLOWED_SOURCES = new Set([
   'treccani', 'saob', 'gpc', 'nisanyan', 'platts',
 ]);
 
-// ── Jargon detector — these patterns flag pedantic linguistics ──
+// ── Jargon detector – these patterns flag pedantic linguistics ──
 // "Germanic root" is OK (descriptive, not jargon). We only ban truly
 // academic notation: PIE, reconstructed forms with asterisks, laryngeals.
 const JARGON_PATTERNS = [
@@ -48,7 +48,7 @@ const JARGON_PATTERNS = [
 const MAX_NOTE_LENGTH = 150;
 const MIN_NOTE_LENGTH = 30;
 
-// ── Content quality patterns — what makes an etymology "interesting" ──
+// ── Content quality patterns – what makes an etymology "interesting" ──
 // At least ONE of these markers must appear in the note for it to feel like
 // a fact worth knowing rather than a dictionary stub.
 const INTERESTING_MARKERS = [
@@ -183,20 +183,20 @@ function validateEntry(entry, lang) {
 
   // verified must be true
   if (entry.verified === false) {
-    issues.push({ id, severity: 'error', problem: 'verified: false — entry would not display but must not ship' });
+    issues.push({ id, severity: 'error', problem: 'verified: false – entry would not display but must not ship' });
   }
 
-  // Note length (both directions — too long is verbose, too short is fluff)
+  // Note length (both directions – too long is verbose, too short is fluff)
   if (typeof entry.note === 'string') {
     if (entry.note.length > MAX_NOTE_LENGTH) {
       issues.push({ id, severity: 'error', problem: `note too long: ${entry.note.length} chars (max ${MAX_NOTE_LENGTH})` });
     }
     if (entry.note.length < MIN_NOTE_LENGTH) {
-      issues.push({ id, severity: 'error', problem: `note too short: ${entry.note.length} chars (min ${MIN_NOTE_LENGTH}) — say something interesting` });
+      issues.push({ id, severity: 'error', problem: `note too short: ${entry.note.length} chars (min ${MIN_NOTE_LENGTH}) – say something interesting` });
     }
   }
 
-  // Content quality — note must contain at least 1 "interesting" marker
+  // Content quality – note must contain at least 1 "interesting" marker
   // (date, "originally", "via", "borrowed", cultural reference, etc.) OR
   // the entry must list ≥ 2 cognates that justify it on their own.
   if (typeof entry.note === 'string') {
@@ -206,7 +206,7 @@ function validateEntry(entry, lang) {
       issues.push({
         id,
         severity: 'error',
-        problem: 'note feels generic — add a historical fact, a date, a cultural anchor, OR list ≥2 cognates',
+        problem: 'note feels generic – add a historical fact, a date, a cultural anchor, OR list ≥2 cognates',
       });
     }
   }
@@ -223,11 +223,11 @@ function validateEntry(entry, lang) {
   // Sources required + allow-listed
   if (Array.isArray(entry.sources)) {
     if (entry.sources.length === 0) {
-      issues.push({ id, severity: 'error', problem: 'sources array is empty — at least 1 reference required' });
+      issues.push({ id, severity: 'error', problem: 'sources array is empty – at least 1 reference required' });
     }
     for (const s of entry.sources) {
       if (!ALLOWED_SOURCES.has(s)) {
-        issues.push({ id, severity: 'warning', problem: `unknown source "${s}" — add to ALLOWED_SOURCES if legitimate` });
+        issues.push({ id, severity: 'warning', problem: `unknown source "${s}" – add to ALLOWED_SOURCES if legitimate` });
       }
     }
   }
@@ -254,16 +254,16 @@ function crossLanguageCheck(allTables) {
   for (const [cog, origins] of Object.entries(cognateToOrigins)) {
     if (origins.length < 2) continue;
     // Strip leading language label (Latin, Sanskrit, etc.) and compare.
-    // We just check that the entries DON'T contradict — same cognate
+    // We just check that the entries DON'T contradict – same cognate
     // from supposedly unrelated families is suspicious.
     const families = new Set(origins.map(o => o.origin.split(/\s+/)[0]));
     if (families.size > 1) {
-      // Multiple source families — this is OK when shared via ancient root
+      // Multiple source families – this is OK when shared via ancient root
       // (e.g. mater via Latin & Sanskrit). Just note for review.
       issues.push({
         id: `cognate:${cog}`,
         severity: 'info',
-        problem: `cognate "${cog}" appears in ${origins.length} entries across families [${[...families].join(', ')}] — verify they share an ancient root`,
+        problem: `cognate "${cog}" appears in ${origins.length} entries across families [${[...families].join(', ')}] – verify they share an ancient root`,
       });
     }
   }
@@ -348,7 +348,7 @@ if (WRITE_REPORT) {
     checklistLines.push(`## ${lang}`);
     for (const entry of Object.values(table)) {
       const cogs = (entry.cognates || []).join(', ');
-      checklistLines.push(`- [${entry.verified ? 'x' : ' '}] **${entry.word}** — ${entry.origin}${cogs ? ' · cognates: ' + cogs : ''}`);
+      checklistLines.push(`- [${entry.verified ? 'x' : ' '}] **${entry.word}** – ${entry.origin}${cogs ? ' · cognates: ' + cogs : ''}`);
       checklistLines.push(`      Sources: ${(entry.sources || []).join(', ')}`);
       checklistLines.push(`      Note: ${entry.note}`);
       checklistLines.push('');

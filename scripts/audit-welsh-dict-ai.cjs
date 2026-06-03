@@ -104,7 +104,7 @@ async function main() {
   console.log(`\nDone. ${allFlags.length} flagged entries in scripts/output/cy-ai-audit.json`);
   console.log('\nSummary:');
   for (const f of allFlags) {
-    console.log(`  ${f.word.padEnd(15)} [${f.current}] → [${f.suggestion}] — ${f.reason}`);
+    console.log(`  ${f.word.padEnd(15)} [${f.current}] → [${f.suggestion}] – ${f.reason}`);
   }
 }
 

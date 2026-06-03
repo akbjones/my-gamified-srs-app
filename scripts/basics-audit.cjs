@@ -6,7 +6,7 @@
  * (numbers, colors, days, months, family, body, food, weather, etc).
  * A category is considered well-covered if it has ≥ 5 cards.
  *
- * Search is done on the English translation field — we look for English
+ * Search is done on the English translation field – we look for English
  * keywords that signal the category. This catches both vocabulary cards
  * and contextual usage cards.
  *

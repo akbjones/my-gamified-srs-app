@@ -42,7 +42,7 @@ print(f"Existing dictionary entries: {len(dict_keys)}")
 
 # ── Tokenize deck words ──────────────────────────────────────
 def clean_word(w):
-    return re.sub(r'[.,!?;:"""\'\'«»()—–…\d\[\]{}]', '', w).strip().lower()
+    return re.sub(r'[.,!?;:"""\'\'«»()––…\d\[\]{}]', '', w).strip().lower()
 
 deck_words = {}
 deck_sentences = {}  # word -> list of (target, english) pairs for translation
@@ -63,7 +63,7 @@ print(f"Unique deck words: {len(deck_words)}")
 
 # ── IRREGULARS (from conjugation/ru.ts) ──────────────────────
 IRREGULARS = {
-    'быть': {'present': ['—','—','есть','—','—','—'], 'past': ['был','была','было','были']},
+    'быть': {'present': ['–','–','есть','–','–','–'], 'past': ['был','была','было','были']},
     'есть': {'present': ['ем','ешь','ест','едим','едите','едят'], 'past': ['ел','ела','ело','ели']},
     'дать': {'present': ['дам','дашь','даст','дадим','дадите','дадут'], 'past': ['дал','дала','дало','дали']},
     'хотеть': {'present': ['хочу','хочешь','хочет','хотим','хотите','хотят']},
@@ -1186,7 +1186,7 @@ def guess_translation_from_context(word, sentences):
     # Tokenize both
     ru_words = [clean_word(w) for w in target.split() if clean_word(w)]
     en_words = english.lower().split()
-    en_words = [re.sub(r'[.,!?;:\'"()—–\-…]', '', w).strip() for w in en_words]
+    en_words = [re.sub(r'[.,!?;:\'"()––\-…]', '', w).strip() for w in en_words]
     en_words = [w for w in en_words if w]
 
     if not ru_words or not en_words:

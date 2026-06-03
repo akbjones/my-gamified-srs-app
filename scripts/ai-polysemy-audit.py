@@ -12,7 +12,7 @@ Specifically targets cases like:
 - NL rekening = currently 'account' but is 'bill/check' in restaurant context
 - DE Rechnung = 'invoice' but is 'bill/check' in everyday speech
 
-Output: scripts/ai-polysemy-{lang}.json — list of {k, en, pos} with COMPLETE
+Output: scripts/ai-polysemy-{lang}.json – list of {k, en, pos} with COMPLETE
 multi-meaning translations.
 """
 import json
@@ -54,7 +54,7 @@ A word like Italian 'conto' has these common meanings:
 - 'count'                     ← occasional
 - 'I count' (verb form)       ← rare, only in formal speech
 
-If the dict only lists 'to count', it's INCOMPLETE — users tapping 'conto' at
+If the dict only lists 'to count', it's INCOMPLETE – users tapping 'conto' at
 a restaurant will see 'to count' which is wrong for that context.
 
 Your job: for each dict entry, decide if common everyday meanings are missing.
@@ -70,9 +70,9 @@ Strict format rules:
 - POS: change pos to match the MOST COMMON meaning. If 'conto' is overwhelmingly
   a noun (bill/account) but currently tagged 'v' (verb), change pos to 'n' and put
   noun meanings first
-- Don't include rare/archaic/technical meanings — only what regular speakers use daily
+- Don't include rare/archaic/technical meanings – only what regular speakers use daily
 - Keep existing meanings if they're accurate
-- For function words (det, prep, conj, pron) usually skip — they rarely have polysemy
+- For function words (det, prep, conj, pron) usually skip – they rarely have polysemy
 
 ONLY return entries that genuinely need extension. Skip entries that are already
 complete or where current entry is fine. NO commentary."""
@@ -82,7 +82,7 @@ def make_prompt(lang_name, entries):
     lines = [f"Audit these {lang_name} dictionary entries. For each, decide if common everyday meanings are missing. Return JSON for entries needing extension only.\n"]
     for e in entries:
         lemma_str = f" (lemma={e['lemma']})" if e.get('lemma') else ''
-        lines.append(f"  {e['key']}: {e['en']} [pos={e['pos']}]{lemma_str} — appears in {e['freq']} cards")
+        lines.append(f"  {e['key']}: {e['en']} [pos={e['pos']}]{lemma_str} – appears in {e['freq']} cards")
     return '\n'.join(lines)
 
 

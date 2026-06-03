@@ -13,7 +13,7 @@
  *
  * For each match, prepend "I <verb-stem>" to the existing English and rewrite
  * the file. Adjective entries (past participles like "accepted") are left
- * alone — those are legitimately adjectives, not polysemy.
+ * alone – those are legitimately adjectives, not polysemy.
  */
 const fs = require('fs');
 

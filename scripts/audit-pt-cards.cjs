@@ -80,7 +80,7 @@ console.log(`Audio files: ${audioFiles.size}`);
 // Tokenize Portuguese sentence into words
 function tokenize(sentence) {
   return sentence
-    .replace(/[.,!?;:"""''()—–…\-\/\[\]{}]/g, ' ')
+    .replace(/[.,!?;:"""''()––…\-\/\[\]{}]/g, ' ')
     .split(/\s+/)
     .filter(w => w.length > 0)
     .map(w => w.toLowerCase());

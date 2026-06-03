@@ -1,5 +1,5 @@
 /**
- * fix-grammar-notes.cjs — Fix misattached grammar notes.
+ * fix-grammar-notes.cjs – Fix misattached grammar notes.
  *
  * Many grammar notes start with a quoted example sentence that belongs
  * to a different card. This script:
@@ -22,7 +22,7 @@ for (const card of deck) {
   if (!card.grammar || card.grammar.trim().length === 0) continue;
 
   const g = card.grammar;
-  const match = g.match(/^"([^"]+)"\s*[—–-]\s*(.*)/s);
+  const match = g.match(/^"([^"]+)"\s*[––-]\s*(.*)/s);
 
   if (!match) {
     kept++;
@@ -48,7 +48,7 @@ for (const card of deck) {
     card.grammar = explanation;
     fixed++;
   } else {
-    // Too short without the example — remove entirely
+    // Too short without the example – remove entirely
     delete card.grammar;
     removed++;
   }

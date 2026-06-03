@@ -149,7 +149,7 @@ function auditSpanish() {
       }
     }
 
-    // Check for wrong verb matching — word defined as unrelated verb
+    // Check for wrong verb matching – word defined as unrelated verb
     // Pattern: noun/adj/proper-noun with "(verb)" lemma reference that doesn't match
     const lemmaMatch = en.match(/\((\w+)\)$/);
     if (lemmaMatch) {

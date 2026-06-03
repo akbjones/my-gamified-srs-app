@@ -52,7 +52,7 @@ function generateSpanishTip(card) {
 
   // Gustar-like verbs ACTUALLY in the sentence
   if (/\bduele\b|\bduelen\b/.test(tN)) return "'Doler' works like 'gustar': the body part is the subject. 'Me duele la cabeza' = the head hurts to me. Plural: 'me duelen los pies'.";
-  if (/\bencant(a|o|ó)\b/.test(tN)) return "'Encantar' works like 'gustar' — the thing loved is the grammatical subject: 'me encanta' = it delights me.";
+  if (/\bencant(a|o|ó)\b/.test(tN)) return "'Encantar' works like 'gustar' – the thing loved is the grammatical subject: 'me encanta' = it delights me.";
   if (/\bsobra\b|\bsobran\b/.test(tN)) return "'Sobrar' follows the gustar pattern: the leftover thing is the subject. 'Le sobra dinero' = money is left over for him.";
   if (/\bqueda\b|\bquedan\b/.test(tN)) return "'Quedar' follows the gustar pattern: the remaining thing is the subject. 'Nos queda una semana' = one week remains for us.";
   if (/\bfascina\b|\bfascinan\b/.test(tN)) return "'Fascinar' follows the gustar pattern: the fascinating thing is the subject. 'Le fascina la cocina' = cooking fascinates her.";
@@ -218,7 +218,7 @@ function generateSpanishTip(card) {
   if (t.includes('¿')) return "Spanish questions can use inversion or just intonation. Written questions always need both ¿ and ? marks.";
   if (/\bmucho\b|\bmucha\b|\bmuchos\b|\bmuchas\b/.test(tN)) return "'Mucho' agrees when adjective (muchos amigos) but is invariable as adverb (trabaja mucho). Gender/number match only with nouns.";
   if (/\btodo\b|\btoda\b|\btodos\b|\btodas\b/.test(tN)) return "'Todo/toda/todos/todas' agrees in gender and number: 'todo el día' (all day), 'todas las mañanas' (every morning).";
-  if (/\bcada\b/.test(tN)) return "'Cada' (each/every) is invariable — it never changes form: 'cada día', 'cada semana', 'cada persona'.";
+  if (/\bcada\b/.test(tN)) return "'Cada' (each/every) is invariable – it never changes form: 'cada día', 'cada semana', 'cada persona'.";
   if (/\buna\b|\bun\b/.test(tN)) return "Indefinite articles match gender: 'un' (masc.), 'una' (fem.). 'Un sitio' but 'una botella'. Plural 'unos/unas' means 'some'.";
 
   // Broader fallbacks based on grammar node and sentence features
@@ -295,7 +295,7 @@ function generateItalianTip(card) {
   // Subject pronouns
   if (/^io\b/.test(tN)) {
     if (/\bmangio\b/.test(tN)) return "Italian usually drops subject pronouns: 'mangio la pasta' is more natural than 'io mangio'. Use 'io' only for emphasis or contrast.";
-    if (/\bamo\b/.test(tN)) return "'Amare' = to love (stronger than 'piacere'). 'La musica' uses the article — Italian uses definite articles with abstract nouns.";
+    if (/\bamo\b/.test(tN)) return "'Amare' = to love (stronger than 'piacere'). 'La musica' uses the article – Italian uses definite articles with abstract nouns.";
     if (/\bgioco\b/.test(tN)) return "'Giocare a' + sport: 'gioco a tennis'. Use 'a' before sports. 'Giocare' has a soft g before -o: 'gioco'.";
     if (/\bascolto\b/.test(tN)) return "'Ascoltare' = to listen to. The 'to' is built in: 'ascolto la musica'. No preposition needed.";
     if (/\babito\b/.test(tN)) return "'Abitare' = to live (somewhere). 'In centro' = downtown/in the center. 'In' without article before general areas.";
@@ -307,7 +307,7 @@ function generateItalianTip(card) {
   if (/^lui\b/.test(tN)) {
     if (/\bguarda\b/.test(tN)) return "'Guardare' = to watch/look at. No preposition needed: 'guarda la televisione'. Regular -are verb.";
     if (/\bmangia\b/.test(tN)) return "'Mangiare' keeps the -i- before -a: 'mangia' (he eats). But drops it before -i: 'mangi' (you eat).";
-    if (/\bvive\b/.test(tN)) return "'Vivere' = to live. Regular -ere verb: vivo, vivi, vive. 'In Italia' — use 'in' before countries.";
+    if (/\bvive\b/.test(tN)) return "'Vivere' = to live. Regular -ere verb: vivo, vivi, vive. 'In Italia' – use 'in' before countries.";
     if (/\bsta\b/.test(tN) && /\bcucinando\b/.test(tN)) return "'Stare + gerundio' for actions happening now: 'sta cucinando' = he's cooking right now. Gerund of -are: -ando.";
     return "'Lui' = he (subject). The verb ending (-a for third person -are, -e for -ere/-ire) already shows the person.";
   }
@@ -334,7 +334,7 @@ function generateItalianTip(card) {
     return "'Voi' form: -ate (-are), -ete (-ere), -ite (-ire). It's both informal and formal plural 'you'.";
   }
   if (/^loro\b/.test(tN)) {
-    if (/\babitano\b/.test(tN)) return "'Abitare' third person plural: 'abitano'. 'A Roma' — use 'a' before cities. Subject 'loro' is often dropped.";
+    if (/\babitano\b/.test(tN)) return "'Abitare' third person plural: 'abitano'. 'A Roma' – use 'a' before cities. Subject 'loro' is often dropped.";
     return "'Loro' (they) is often dropped since the verb ending (-ano/-ono) already indicates third person plural.";
   }
   if (/^tu\b/.test(tN)) {
@@ -572,7 +572,7 @@ function isFalsePositive(card, flagged) {
   const tip = flagged.current_tip;
   const tipLower = tip.toLowerCase();
 
-  // Spanish false positives — tip IS relevant because conjugated form of mentioned verb is in sentence
+  // Spanish false positives – tip IS relevant because conjugated form of mentioned verb is in sentence
   // tomar → tomo
   if (/\btomo\b|\btomas\b|\btoma\b|\btoman\b/.test(tN) && /tomar/i.test(tipLower)) return true;
   // querer → quiero
@@ -624,7 +624,7 @@ function isFalsePositive(card, flagged) {
   if (/\bdesayunais\b/.test(tN) && /desayun/i.test(tipLower)) return true;
   // es-0574: cómo IS in sentence and tip is about cómo
   if (/\bcomo\b/.test(tN) && t.includes('¿') && /cómo/i.test(tipLower)) return true;
-  // es-0417: time telling — son las IS in sentence
+  // es-0417: time telling – son las IS in sentence
   if (/\bson las\b/.test(tN) && /telling time/i.test(tipLower)) return true;
 
   // More gustar-pattern verbs where conjugated form IS in sentence
@@ -688,9 +688,9 @@ function isFalsePositive(card, flagged) {
   }
 
   // Italian false positives
-  // stare+gerundio — sta/stai IS in sentence
+  // stare+gerundio – sta/stai IS in sentence
   if (/\bsta\b.*\b\w+(ando|endo)\b|\bstai\b.*\b\w+(ando|endo)\b/.test(tN) && /stare/i.test(tipLower)) return true;
-  // essere — sono/siamo/sei IS in sentence
+  // essere – sono/siamo/sei IS in sentence
   if (/\bsiamo\b|\bsono\b|\bsei\b/.test(tN) && /essere/i.test(tipLower)) return true;
   // venire IS in sentence for it-0111
   if (/\bvenire\b/.test(tN) && /venire/i.test(tipLower)) return true;
@@ -721,25 +721,25 @@ function isFalsePositive(card, flagged) {
   if (/\bconosc/.test(tN) && /conoscere/i.test(tipLower)) return true;
 
   // French false positives
-  // habiter — habitons IS in sentence
+  // habiter – habitons IS in sentence
   if (/\bhabitons?\b/.test(tN) && /habiter/i.test(tipLower)) return true;
-  // écouter — écoutent IS in sentence
+  // écouter – écoutent IS in sentence
   if (/\becoutent?\b/.test(tN) && /couter/i.test(tipLower)) return true;
-  // téléphoner — téléphone IS in sentence
+  // téléphoner – téléphone IS in sentence
   if (/\btelephon/.test(tN) && /téléphoner/i.test(tipLower)) return true;
-  // finir — finis IS in sentence
+  // finir – finis IS in sentence
   if (/\bfinis\b|\bfinit\b/.test(tN) && /finir/i.test(tipLower)) return true;
-  // demander — demandez IS in sentence
+  // demander – demandez IS in sentence
   if (/\bdemandez?\b/.test(tN) && /demander/i.test(tipLower)) return true;
-  // avoir for age — a ... ans IS in sentence
+  // avoir for age – a ... ans IS in sentence
   if (/\ba\b.*\bans\b/.test(tN) && /avoir/i.test(tipLower) && /age|ans/i.test(tipLower)) return true;
   // je veux bien IS in sentence
   if (/\bje veux bien\b/.test(tN) && /je veux bien/i.test(tipLower)) return true;
   // l' elision IS demonstrated
   if (/l hotel|l aeroport|l ecole/.test(tN.replace(/'/g, ' ')) && /l'/i.test(tipLower)) return true;
-  // aller for health — vas IS in sentence
+  // aller for health – vas IS in sentence
   if (/\bvas\b/.test(tN) && /aller/i.test(tipLower)) return true;
-  // avoir for physical features — a les yeux IS in sentence
+  // avoir for physical features – a les yeux IS in sentence
   if (/\ba\b.*\byeux\b/.test(tN) && /avoir/i.test(tipLower)) return true;
   // à l'aéroport IS in sentence
   if (/\ba l/.test(tN.replace(/'/g, ' ')) && /à l/i.test(tipLower)) return true;

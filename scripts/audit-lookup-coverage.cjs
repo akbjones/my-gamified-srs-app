@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Audit dictionary lookup coverage — for each language, tokenize all deck
+ * Audit dictionary lookup coverage – for each language, tokenize all deck
  * sentences and check what % of tokens resolve via lookupWord().
  *
  * Usage: node scripts/audit-lookup-coverage.cjs [lang-code|all]
@@ -53,7 +53,7 @@ function auditLang(langCode) {
 
   for (const card of deck) {
     const tokens = card.target
-      .replace(/[.,!?;:"""\u2018\u2019()—–«»\u0964\u0965/\[\]{}]/g, ' ')
+      .replace(/[.,!?;:"""\u2018\u2019()––«»\u0964\u0965/\[\]{}]/g, ' ')
       .split(/\s+/)
       .map(t => t.trim().toLowerCase())
       .filter(t => t.length > 0);

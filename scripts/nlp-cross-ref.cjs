@@ -111,7 +111,7 @@ for (const [lang, nlpData] of Object.entries(nlpResults)) {
       verbFixes++;
     }
     else if (entry.pos === 'v' && !entry.lemma && stanzaLemma && dict[stanzaLemma]) {
-      // Entry is a verb but missing lemma — Stanza provides it
+      // Entry is a verb but missing lemma – Stanza provides it
       corrections[word] = {
         ...entry,
         lemma: stanzaLemma,

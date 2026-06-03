@@ -1,5 +1,5 @@
 /**
- * Dutch dictionary — word lookup with IPA pronunciations.
+ * Dutch dictionary – word lookup with IPA pronunciations.
  * Every word appearing in the Dutch deck should have an entry.
  */
 
@@ -252,7 +252,7 @@ const IRREGULAR_MAP: Record<string, string> = {
   'lach': 'lachen', 'lacht': 'lachen',
   // praten (to talk)
   'praat': 'praten', 'praatte': 'praten', 'gepraat': 'praten',
-  // rijden — already covered above
+  // rijden – already covered above
   // herhalen (to repeat)
   'herhaal': 'herhalen', 'herhaalt': 'herhalen',
   // gooien (to throw)
@@ -301,7 +301,7 @@ const IRREGULAR_MAP: Record<string, string> = {
   'bedank': 'bedanken', 'bedankt': 'bedanken',
   // begroeten (to greet)
   'begroet': 'begroeten', 'begroette': 'begroeten',
-  // verrijken — vermaken (to amuse)
+  // verrijken – vermaken (to amuse)
   'vermaak': 'vermaken',
   // beloven (to promise)
   'beloof': 'beloven', 'belooft': 'beloven', 'beloofde': 'beloven',
@@ -369,7 +369,7 @@ const IRREGULAR_MAP: Record<string, string> = {
   'tekortschiet': 'tekortschieten',
   // wennen (to get used to)
   'wen': 'wennen', 'went': 'wennen',
-  // wijzen — already above
+  // wijzen – already above
   // weigeren (to refuse)
   'weiger': 'weigeren', 'weigert': 'weigeren', 'weigerde': 'weigeren',
   // verspreiden (to spread)
@@ -402,7 +402,7 @@ const IRREGULAR_MAP: Record<string, string> = {
   'losbarstte': 'losbarsten', 'losbarst': 'losbarsten',
   // dwarrelen (to swirl)
   'dwarrel': 'dwarrelen', 'dwarrelden': 'dwarrelen',
-  // verrijken — verhalen (to tell/recover)
+  // verrijken – verhalen (to tell/recover)
   'verhaal_v': 'verhalen', 'verhaalde': 'verhalen',
   // uitleggen (to explain)
   'uitleg': 'uitleggen', 'uitlegde': 'uitleggen',
@@ -673,7 +673,7 @@ function resolveCompoundNL(w: string): DictEntry | null {
 
 // ── Main lookup function ──────────────────────────────────────
 export function lookupWord(raw: string): DictEntry | null {
-  let clean = raw.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()—–«»\d/]/g, '').trim();
+  let clean = raw.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()––«»\d/]/g, '').trim();
   if (!clean || clean.length < 1) return null;
 
   // 1. Direct / inflection / verb lookup

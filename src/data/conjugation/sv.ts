@@ -1,7 +1,7 @@
 /**
  * Swedish conjugation engine
  * --------------------------
- * Modern Swedish has NO person inflection — the same verb form is used
+ * Modern Swedish has NO person inflection – the same verb form is used
  * for all persons (jag, du, han/hon, vi, ni, de).
  *
  * Four conjugation groups:
@@ -117,7 +117,7 @@ const VOICELESS = new Set(['k', 'p', 't', 's', 'x']);
 // In Swedish, the Group 1/2 distinction for -a verbs is largely lexical.
 // We use an explicit set rather than heuristics (too many exceptions).
 const GROUP_2_VERBS = new Set([
-  // Group 2a — stem ends in voiced consonant (-er, -de, -t)
+  // Group 2a – stem ends in voiced consonant (-er, -de, -t)
   'ringa', 'hänga', 'svänga', 'stänga', 'tvinga', 'bringa', 'tränga',
   'bygga', 'lägga', 'smygga', 'snygga', 'vagga', 'rugga',
   'glömma', 'bestämma', 'stämma', 'skämma', 'drömma', 'gömma', 'strömma',
@@ -128,7 +128,7 @@ const GROUP_2_VERBS = new Set([
   'leva', 'väva',
   'ändra', 'undra', 'hindra', 'fördra',
   'vänja', 'svärja',
-  // Group 2b — stem ends in voiceless consonant (-er, -te, -t)
+  // Group 2b – stem ends in voiceless consonant (-er, -te, -t)
   'köpa', 'tycka', 'trycka', 'smycka', 'rycka', 'slicka', 'blicka',
   'hjälpa', 'skölpa',
   'söka', 'besöka', 'undersöka',
@@ -154,7 +154,7 @@ function detectGroup(infinitive: string): ConjGroup {
   }
 
   if (infinitive.endsWith('a')) {
-    // Check known Group 2 list — the only reliable way to distinguish 1 vs 2
+    // Check known Group 2 list – the only reliable way to distinguish 1 vs 2
     if (GROUP_2_VERBS.has(infinitive)) {
       const stem = infinitive.slice(0, -1);
       const lastChar = stem[stem.length - 1];
@@ -373,7 +373,7 @@ export function conjugate(infinitive: string): ConjugationTable | null {
     return buildTable(inf, present, past, supine, '-', 'har');
   }
 
-  // Regular conjugation — detectGroup now properly identifies Group 2 verbs
+  // Regular conjugation – detectGroup now properly identifies Group 2 verbs
   const group = detectGroup(inf);
   const forms = conjugateRegular(inf);
   return buildTable(inf, forms.present, forms.past, forms.supine, forms.imperative, 'har');

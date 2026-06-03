@@ -5,7 +5,7 @@
  * 1. Parse ALL entries from fr.ts
  * 2. Skip French function words
  * 3. Translate ALL remaining via Google (fr→en), batch 80
- * 4. Compare — zero content word match → replace
+ * 4. Compare – zero content word match → replace
  * 5. Filter garbage Google results + bad verb form translations
  * 6. Apply to fr.ts, preserve IPA/POS/lemma
  * 7. Verify TypeScript
@@ -386,7 +386,7 @@ function shouldReplace(word, entry, googleProcessed, dict) {
     if (existingEn === lemmaEn) return false;
     // If existing has semantic overlap with lemma, keep it
     if (hasSemanticOverlap(existingEn, lemmaEn)) return false;
-    // Existing doesn't match lemma at all — check Google
+    // Existing doesn't match lemma at all – check Google
     // If Google matches lemma, we should replace with lemma translation
     if (hasSemanticOverlap(googleProcessed, lemmaEn)) return true;
     // If Google doesn't match lemma either, but existing is obviously wrong, replace
@@ -416,7 +416,7 @@ function getBestTranslation(word, entry, googleProcessed, dict) {
     .replace(/&amp;/g, '&')
     .replace(/&quot;/g, '"');
 
-  // Don't use "to <past-tense>" patterns — these are bad verb translations
+  // Don't use "to <past-tense>" patterns – these are bad verb translations
   // e.g., "to acted", "to advanced", "to amused"
   if (/^to [a-z]+ed$/.test(result)) {
     const verb = result.slice(3);
@@ -626,7 +626,7 @@ async function main() {
     }
   }
 
-  console.log('FRENCH COMPLETE — ' + applied + ' fixes');
+  console.log('FRENCH COMPLETE – ' + applied + ' fixes');
 }
 
 main().catch(err => { console.error('Fatal:', err); process.exit(1); });

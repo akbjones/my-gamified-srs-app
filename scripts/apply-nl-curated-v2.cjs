@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Apply curated semantic fixes to Dutch dictionary — v2
+ * Apply curated semantic fixes to Dutch dictionary – v2
  * Handles escaped single quotes properly by doing line-level replacements.
  */
 
@@ -344,7 +344,7 @@ for (const [word, newEn] of FIXES) {
     if (lines[i].trimStart().startsWith(`'${word}': { en: '`) || lines[i].startsWith(prefix)) {
       // Parse the line to replace just the en value
       const line = lines[i];
-      // Find the en: ' ... ' portion — the value may contain escaped quotes
+      // Find the en: ' ... ' portion – the value may contain escaped quotes
       const enStart = line.indexOf("en: '");
       if (enStart === -1) continue;
       const valStart = enStart + 5; // position after "en: '"
@@ -380,4 +380,4 @@ if (notFound.length > 0) {
     console.log(`  - ${w}`);
   }
 }
-console.log(`\nDUTCH COMPLETE — ${applied} fixes`);
+console.log(`\nDUTCH COMPLETE – ${applied} fixes`);

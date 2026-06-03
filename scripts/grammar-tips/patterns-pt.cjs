@@ -7,9 +7,9 @@ module.exports = [
     priority: 100,
     match: t => /\b(estou|está|estamos|estão|estive|esteve|estávamos|estavam)\s+com\s+(fome|sede|sono|frio|calor|medo|pressa|raiva|saudade)\b/i.test(t),
     tips: [
-      "Portuguese says 'I am with hunger' (`estou com fome`) — different from Spanish (`tengo`) and French (`j'ai faim`). Same structure for `estou com sede` (thirsty), `estou com pressa` (in a hurry).",
+      "Portuguese says 'I am with hunger' (`estou com fome`) – different from Spanish (`tengo`) and French (`j'ai faim`). Same structure for `estou com sede` (thirsty), `estou com pressa` (in a hurry).",
       "Sensations use `estar com` + noun, not `ter`. `Tenho fome` exists but Brazilians prefer `estou com fome`. The `com` makes it about the temporary state, not possession.",
-      "Watch: fome, sede, sono, frio, calor, medo, pressa, raiva, saudade — all take `estar com` in BR. Direct translation 'I am hungry' (`sou faminto`) sounds bizarre.",
+      "Watch: fome, sede, sono, frio, calor, medo, pressa, raiva, saudade – all take `estar com` in BR. Direct translation 'I am hungry' (`sou faminto`) sounds bizarre.",
     ],
   },
 
@@ -30,7 +30,7 @@ module.exports = [
     priority: 60,
     match: t => /\bvocê\b/i.test(t),
     tips: [
-      "In Brazil, `você` is the default 'you' — even for friends and family. `Tu` exists but is regional (mostly the South). Use `você` everywhere and you're safe.",
+      "In Brazil, `você` is the default 'you' – even for friends and family. `Tu` exists but is regional (mostly the South). Use `você` everywhere and you're safe.",
       "`Você` conjugates as 3rd singular (like `ele/ela`): `você é`, `você tem`, `você fala`. Don't try to use the `tu` forms unless you're learning European Portuguese.",
     ],
   },
@@ -49,7 +49,7 @@ module.exports = [
     priority: 75,
     match: t => /\b(estou|está|estamos|estão)\s+(cansad[oa]|feliz|triste|nervoso[a]?|brav[oa]|alegre|ocupad[oa]|preocupad[oa]|doente)\b/i.test(t),
     tips: [
-      "`estar` for how you ARE right now — mood, health, location, temporary state. Wrong: `sou cansado` (I'm a tired *person*). Right: `estou cansado` (I'm tired *today*).",
+      "`estar` for how you ARE right now – mood, health, location, temporary state. Wrong: `sou cansado` (I'm a tired *person*). Right: `estou cansado` (I'm tired *today*).",
       "If the state could change tomorrow → `estar`. Permanent traits → `ser`. `Ele é nervoso` = he's a nervous type (always). `Ele está nervoso` = he's nervous right now.",
     ],
   },
@@ -60,7 +60,7 @@ module.exports = [
     priority: 95,
     match: t => /\bà\s+(escola|igreja|festa|casa|cidade|praia|noite|tarde|manhã|aula|consulta|reunião|loja|farmácia)\b/i.test(t),
     tips: [
-      "`à` is the famous `crase` — contraction of `a + a` (to the, feminine). `Vou à escola` = `vou a + a escola`. Watch for the grave accent — that's how you spot it.",
+      "`à` is the famous `crase` – contraction of `a + a` (to the, feminine). `Vou à escola` = `vou a + a escola`. Watch for the grave accent – that's how you spot it.",
       "Crase only happens before feminine words. `Vou ao cinema` (masc) keeps `ao`. `Vou à praia` (fem) gets `à` with the accent.",
     ],
   },
@@ -72,7 +72,7 @@ module.exports = [
     id: 'pt-preterito-perfeito',
     priority: 75,
     match: t => {
-      // Regular preterite endings — restrictive: require 2+ letter stem
+      // Regular preterite endings – restrictive: require 2+ letter stem
       if (/(?<![a-záéíóúâêîôûãõç])[a-záéíóúâêîôûãõç]{2,}(?:aste|astes|aram|este|estes|eram|iste|istes|iram|iu|eu|ou)(?![a-záéíóúâêîôûãõç])/i.test(t)) return true;
       // Irregular preterites
       if (/(?<![a-záéíóúâêîôûãõç])(fui|foste|foi|fomos|fostes|foram|tive|tiveste|teve|tivemos|tivestes|tiveram|fiz|fizeste|fez|fizemos|fizestes|fizeram|disse|dissemos|disseram|vi|viste|viu|vimos|vistes|viram|vim|vieste|veio|viemos|vieram|dei|deste|deu|demos|deram|pus|puseste|pôs)(?![a-záéíóúâêîôûãõç])/i.test(t)) return true;
@@ -85,7 +85,7 @@ module.exports = [
   },
 
   // ── Imperfeito (habitual past / background) ──
-  // NOTE: \b is ASCII-only — uses lookaround over accented chars instead.
+  // NOTE: \b is ASCII-only – uses lookaround over accented chars instead.
   // -ia collides with many nouns (família, história, polícia, dia, tia).
   {
     id: 'pt-imperfeito',
@@ -95,7 +95,7 @@ module.exports = [
       if (/(?<![a-záéíóúâêîôûãõç])[a-záéíóúâêîôûãõç]{2,}(?:ava|avas|ávamos|aváveis|avam)(?![a-záéíóúâêîôûãõç])/i.test(t)) return true;
       // Irregular imperfeito of ser/ir/ter
       if (/(?<![a-záéíóúâêîôûãõç])(era|eras|éramos|éreis|eram|ia|ias|íamos|íeis|iam|tinha|tinhas|tínhamos|tínheis|tinham)(?![a-záéíóúâêîôûãõç])/i.test(t)) {
-        // Exclude noun "ia" as a noun is impossible — "ia" only exists as verb (imperfect of ir)
+        // Exclude noun "ia" as a noun is impossible – "ia" only exists as verb (imperfect of ir)
         // But still exclude common -ia-ending nouns
         const NOUN_IA = /^(família|história|polícia|farmácia|democracia|geografia|filosofia|economia|teoria|biografia|categoria|fotografia|criança|infância|esperança|distância|importância|paciência|presença|tendência|experiência|consciência|preferência|ciência|justiça|notícia|delícia|caricia|magia|alegria|graça|herança|frequência|elegância|essência|circunstância)$/i;
         const matches = t.match(/(?<![a-záéíóúâêîôûãõç])[a-záéíóúâêîôûãõç]{2,}(?:ia|ias|íamos|íeis|iam)(?![a-záéíóúâêîôûãõç])/gi) || [];
@@ -115,7 +115,7 @@ module.exports = [
     priority: 85,
     match: t => /\b(me|te|se|nos)\s+(chamo|chama|chamamos|chamam|levanto|levanta|deito|deitamos|visto|vestimos|sento|sentamos|preparo|preparamos|lembro|lembramos|esqueço|esquecemos)\b/i.test(t),
     tips: [
-      "Reflexive verbs need a pronoun: `me chamo` (I'm called), `se levanta` (gets up). The pronoun matches the subject — me/te/se/nos/se.",
+      "Reflexive verbs need a pronoun: `me chamo` (I'm called), `se levanta` (gets up). The pronoun matches the subject – me/te/se/nos/se.",
       "Not always reflexive in English: `lembrar-se` = to remember, `esquecer-se` = to forget. The `-se` in the dictionary form tells you a pronoun is needed.",
     ],
   },
@@ -160,7 +160,7 @@ module.exports = [
     match: t => /\btem\s+(uma?|um|alguma?|algum|muito[as]?|poucos?|pouca|vários?|várias?)\s+\w+/i.test(t),
     tips: [
       "Brazilians use `tem` for 'there is/are' instead of `há`: `tem uma farmácia aqui` = 'there's a pharmacy here'. Same `ter` (to have) doing double duty.",
-      "`Há` exists in PT but sounds formal/written. `Tem` is what you'll hear in speech. Same word as the verb 'to have' — context tells you which.",
+      "`Há` exists in PT but sounds formal/written. `Tem` is what you'll hear in speech. Same word as the verb 'to have' – context tells you which.",
     ],
   },
 
@@ -192,8 +192,8 @@ module.exports = [
     priority: 50,
     match: t => /\b\w+(inho|inha|inhos|inhas|zinho|zinha)\b/i.test(t),
     tips: [
-      "Diminutives `-inho/-inha` add 'small / cute / friendly' — often emotional rather than literal. `Um cafezinho` = 'a (lovely little) coffee'. Brazilians sprinkle these everywhere.",
-      "`-inho` softens tone: `um momentinho` (just a sec), `obrigadinho` (thanks, friendly). Not about size — about warmth.",
+      "Diminutives `-inho/-inha` add 'small / cute / friendly' – often emotional rather than literal. `Um cafezinho` = 'a (lovely little) coffee'. Brazilians sprinkle these everywhere.",
+      "`-inho` softens tone: `um momentinho` (just a sec), `obrigadinho` (thanks, friendly). Not about size – about warmth.",
     ],
   },
 
@@ -214,7 +214,7 @@ module.exports = [
     priority: 88,
     match: t => /\b(tu|você|vocês|o\s+senhor|a\s+senhora|os\s+senhores|as\s+senhoras)\b/i.test(t),
     tips: [
-      "Portuguese has TWO main 'you's: `tu` (informal — Portugal and southern Brazil) and `você` (universal — informal in Brazil, semi-formal in Portugal). They use DIFFERENT verb forms: `tu falas` vs `você fala`.",
+      "Portuguese has TWO main 'you's: `tu` (informal – Portugal and southern Brazil) and `você` (universal – informal in Brazil, semi-formal in Portugal). They use DIFFERENT verb forms: `tu falas` vs `você fala`.",
       "Brazilian Portuguese: `você` is the default. Most Brazilians never say `tu`. `Você fala português?` is what you'll hear, with 3rd-person verbs.",
       "European Portuguese: `tu` is for close friends/family, `você` is slightly more distant. For real formality, drop the pronoun and use `o senhor` (m) / `a senhora` (f): `O senhor sabe...?`.",
       "Plural: `vocês` is universal. Portugal also has `vós` but it's extinct in speech. Just use `vocês` and you're safe everywhere.",
@@ -230,7 +230,7 @@ module.exports = [
       "Portuguese nouns have GENDER: `o livro` (m), `a casa` (f). Arbitrary on objects. Always learn the article WITH the noun, never just `livro` alone.",
       "Endings hint at gender: `-o` usually masc (`o livro`), `-a` usually fem (`a casa`). Exceptions: `o problema`, `o dia`, `a mão` (the hand, irregular).",
       "Adjectives agree with the noun's gender and number: `o carro vermelho`, `a casa vermelha`, `os carros vermelhos`, `as casas vermelhas`. One adjective, four forms.",
-      "Articles + prepositions contract: `de + o → do`, `de + a → da`, `em + o → no`, `em + a → na`. Same gender info still applies — `na casa` is feminine.",
+      "Articles + prepositions contract: `de + o → do`, `de + a → da`, `em + o → no`, `em + a → na`. Same gender info still applies – `na casa` is feminine.",
     ],
   },
 

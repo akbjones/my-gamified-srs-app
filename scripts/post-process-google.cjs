@@ -79,7 +79,7 @@ const KNOWN_NOUNS = new Set([
   'king', 'queen', 'god', 'heart', 'blood', 'bone', 'skin',
   'hair', 'tooth', 'foot', 'arm', 'leg', 'finger', 'nose', 'ear',
   'mouth', 'shoulder', 'neck', 'back', 'stomach', 'chest',
-  // Expanded set — nouns often mistaken as verbs
+  // Expanded set – nouns often mistaken as verbs
   'fly', 'finance', 'iron', 'steel', 'buddy', 'designer', 'coach', 'jersey', 'embargo', 'wifi',
   'building', 'reward', 'engineer', 'teacher', 'doctor', 'lawyer',
   'nurse', 'driver', 'singer', 'dancer', 'writer', 'player', 'leader',
@@ -176,7 +176,7 @@ const NOT_VERB_WORDS = new Set([
     'daily','weekly','monthly','yearly','regularly','occasionally','finally',
   ]);
 
-// Known English adjectives — prevent "to full", "to dear" etc.
+// Known English adjectives – prevent "to full", "to dear" etc.
 const KNOWN_ADJECTIVES = new Set([
   'full','empty','dear','wanted','closed','broken','frozen','lost',
   'born','tired','bored','excited','scared','worried','confused','surprised',
@@ -266,7 +266,7 @@ const KNOWN_ENGLISH_VERBS = new Set([
     'shut','lock','unlock','sign','register','cancel','celebrate','worship',
     'pray','fulfill','respect','honor','decorate','distribute','donate',
     'migrate','settle','conquer','rule','govern','elect','protest','reform',
-    // Expanded set 2 — addresses remaining missing_to_on_verb failures
+    // Expanded set 2 – addresses remaining missing_to_on_verb failures
     'talk','listen','erode','comb','chat','coach','iron','fan','reward',
     'budget','channel','comfort','commission','compound','conflict','contest',
     'contrast','counsel','counter','credit','cycle','debate','default',
@@ -309,7 +309,7 @@ const KNOWN_ENGLISH_VERBS = new Set([
     'view','voice','volunteer','voyage','wage','wager','wander','warehouse',
     'warrant','weather','welcome','whistle','witness','wonder','worship',
     'wound','wreck','wrestle','yield','zone','zoom',
-    // Expanded set — addresses missing_to_on_verb failures
+    // Expanded set – addresses missing_to_on_verb failures
     'accept','achieve','acquire','adapt','adjust','admire','advise','afford',
     'announce','apologize','appreciate','approach','approve','assemble','assist',
     'assume','attach','attempt','attract','balance','behave','belong','benefit',
@@ -371,7 +371,7 @@ const KNOWN_ENGLISH_VERBS = new Set([
     'retrieve','reveal','reverse','revise','revolve','reward','ring','ripen',
     'risk','rival','roam','rotate','rub','rush','sacrifice','sample',
     'satisfy','scatter','schedule','scratch','scream','secure','seize',
-    // Expanded set 3 — more missing verbs
+    // Expanded set 3 – more missing verbs
     'nest','hope','comment','avoid','score','narrow','register','schedule',
     'reason','page','mark','bath','bathe','serve','egg','room','base',
     'receive','enjoy','regret','retire','surf','dwell','stall','form',
@@ -594,7 +594,7 @@ function postProcess(raw, pos, sourceWord, stats) {
     stats.hit('truncated', sourceWord);
     stats.flag(sourceWord, 'truncated');
     flagReasons.push('truncated');
-    // Don't return yet — still apply other rules
+    // Don't return yet – still apply other rules
   }
 
   // ── Rule 3: Romanization detection ──
@@ -669,7 +669,7 @@ function postProcess(raw, pos, sourceWord, stats) {
     if (srcHasNonLatin && outputIsLatinOnly) {
       // Check if it's NOT a common English word (proper nouns aren't common words)
       const lower = singleWord.toLowerCase();
-      // Also check via lemmatizer — if lemmatize changes it, it's a known English word form
+      // Also check via lemmatizer – if lemmatize changes it, it's a known English word form
       const verbLemma = lemmatize(lower, 'v');
       const nounLemma = lemmatize(lower, 'n');
       const isKnownForm = verbLemma !== lower || nounLemma !== lower;
@@ -695,7 +695,7 @@ function postProcess(raw, pos, sourceWord, stats) {
         'gold','silver','iron','steel','wooden','plastic','cotton','silk','leather',
         'medical','dental','mental','physical','emotional','spiritual','musical',
         'seasonal','annual','daily','weekly','monthly','national','international',
-        // Expanded — common nouns/adjectives not in KNOWN_NOUNS
+        // Expanded – common nouns/adjectives not in KNOWN_NOUNS
         'house','money','study','music','place','power','point','group','state',
         'system','program','question','business','story','night','world','area',
         'course','company','problem','service','country','number','issue','part',
@@ -747,7 +747,7 @@ function postProcess(raw, pos, sourceWord, stats) {
       ]);
       const isCommonWord = FUNCTION_WORDS.has(lower) || KNOWN_NOUNS.has(lower) || KNOWN_ENGLISH_VERBS.has(lower) || NOT_VERB_WORDS.has(lower) || isKnownForm || lower.length <= 4 || COMMON_ENGLISH.has(lower);
       if (!isCommonWord) {
-        // It's a transliterated proper noun — capitalize and return
+        // It's a transliterated proper noun – capitalize and return
         text = singleWord.charAt(0).toUpperCase() + singleWord.slice(1).toLowerCase();
         flagReasons.push('proper_noun');
         return { text, flagged: flagReasons.length > 0, flagReasons };
@@ -816,7 +816,7 @@ function postProcess(raw, pos, sourceWord, stats) {
     !(pos === 'adj' || pos === 'adv');
 
   if (treatAsVerb) {
-    // It IS a verb — lemmatize and add "to "
+    // It IS a verb – lemmatize and add "to "
     let verbText = text.replace(/^to\s+/, '');
     const words = verbText.split(/\s+/);
     if (words.length <= 3) {
@@ -829,7 +829,7 @@ function postProcess(raw, pos, sourceWord, stats) {
     }
     text = 'to ' + verbText;
   } else if (text.startsWith('to ') && !treatAsVerb) {
-    // Has "to " but should not be treated as verb — strip it
+    // Has "to " but should not be treated as verb – strip it
     text = text.replace(/^to\s+/, '');
     stats.hit('stripped_false_to_v2', sourceWord);
   }
@@ -945,7 +945,7 @@ function postProcess(raw, pos, sourceWord, stats) {
   // If the translation equals the source word (Google couldn't translate it),
   // flag it UNLESS it's a known international/cognate word.
   if (sourceWord && text.toLowerCase().replace(/[^a-zà-ÿ]/g, '') === sourceWord.toLowerCase().replace(/[^a-zà-ÿ]/g, '') && text.length > 2) {
-    // Known international words that are the same in English — NOT self-referencing errors
+    // Known international words that are the same in English – NOT self-referencing errors
     const KNOWN_COGNATES = new Set([
       'taxi', 'hotel', 'wifi', 'radio', 'piano', 'sofa', 'yoga', 'safari',
       'embargo', 'jersey', 'chocolate', 'banana', 'guitar', 'plaza', 'fiesta',
@@ -1003,7 +1003,7 @@ function postProcess(raw, pos, sourceWord, stats) {
       stats.flag(sourceWord, 'self_referencing');
       flagReasons.push('self_referencing');
     }
-    // Keep the text regardless — it's the correct translation for cognates
+    // Keep the text regardless – it's the correct translation for cognates
   }
 
   // ── Rule 18: Mixed case cleanup ──

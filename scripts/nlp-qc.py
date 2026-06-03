@@ -72,7 +72,7 @@ def process_language(lang_code, deck_path, max_cards=None):
         deck = deck[:max_cards]
     print(f"  Cards: {len(deck)}")
 
-    # Initialize Stanza pipeline — NER may not be available for all languages
+    # Initialize Stanza pipeline – NER may not be available for all languages
     processors = 'tokenize,pos,lemma,ner'
     try:
         nlp = stanza.Pipeline(

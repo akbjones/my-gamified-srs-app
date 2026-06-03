@@ -1,5 +1,5 @@
 /**
- * final-cleanup.cjs — Remove exact duplicates, worst near-dupes, textbooky sentences.
+ * final-cleanup.cjs – Remove exact duplicates, worst near-dupes, textbooky sentences.
  * Then re-ID the entire deck sequentially.
  */
 const fs = require('fs');
@@ -58,7 +58,7 @@ for (const card of cleaned) {
     // If they're very similar (both start the same), keep the shorter one
     // But only if the full texts are different
     if (card.target.toLowerCase().trim() !== existing.target.toLowerCase().trim()) {
-      // Keep both — they're different enough sentences that happen to start the same
+      // Keep both – they're different enough sentences that happen to start the same
       final.push(card);
     } else {
       // This shouldn't happen since we already deduped, but just in case
@@ -100,7 +100,7 @@ console.log('Grammar notes: ' + grammar + ' (' + (grammar / final.length * 100).
 // Vocab diversity
 const allWords = new Set();
 for (const c of final) {
-  c.target.toLowerCase().replace(/[¿?¡!.,;:()""\-—«»]/g, '').split(/\s+/).filter(w => w.length > 0).forEach(w => allWords.add(w));
+  c.target.toLowerCase().replace(/[¿?¡!.,;:()""\-–«»]/g, '').split(/\s+/).filter(w => w.length > 0).forEach(w => allWords.add(w));
 }
 console.log('Unique vocab: ' + allWords.size + ' words');
 

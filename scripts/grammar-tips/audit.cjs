@@ -9,8 +9,8 @@
  * Why this exists: we mass-generated tips with broad regexes that matched
  * orthographic patterns (e.g. `\b[a-z]+ía\b` for Spanish imperfect) without
  * distinguishing verb forms from nouns ending the same way. Result: a card
- * like "La guía tiene un mapa del centro" — present tense, no past at all
- * — got tagged with an imperfect/preterite tip because "guía" / "centro"
+ * like "La guía tiene un mapa del centro" – present tense, no past at all
+ * – got tagged with an imperfect/preterite tip because "guía" / "centro"
  * ended in -ía / -tro. ~180 such mismatches in Spanish alone.
  *
  * The audit is HEURISTIC, not semantic. It uses pattern catalogs that map
@@ -48,9 +48,9 @@ const LANG_DECKS = {
 
 /**
  * Catalog of audit rules per language. Each rule has:
- *   tipClaim   — regex over the TIP text that identifies what the tip is about
- *   cardCheck  — regex over the CARD TARGET that must match for the claim to apply
- *   label      — short name for the rule (for reporting)
+ *   tipClaim   – regex over the TIP text that identifies what the tip is about
+ *   cardCheck  – regex over the CARD TARGET that must match for the claim to apply
+ *   label      – short name for the rule (for reporting)
  *
  * A card-tip pair is flagged as MISMATCH when:
  *   tipClaim matches the tip text   AND   cardCheck does NOT match the card target.
@@ -63,14 +63,14 @@ const RULES = {
     {
       label: 'preterite',
       tipClaim: /\bpreterite\b/i,
-      // NOTE: JS \b is ASCII-only — it false-matches inside words containing
+      // NOTE: JS \b is ASCII-only – it false-matches inside words containing
       // accented chars (despué\bs because é→s is treated as a word boundary).
       // We use unicode lookaround over the Spanish alphabet (incl. accents).
       cardCheck: t => {
         // Irregular preterite forms
         const irr = /(?<![a-záéíóúñü])(fui|fuiste|fue|fuimos|fuisteis|fueron|tuve|tuviste|tuvo|tuvimos|tuvisteis|tuvieron|hice|hiciste|hizo|hicimos|hicisteis|hicieron|dije|dijiste|dijo|dijimos|dijisteis|dijeron|estuve|estuviste|estuvo|estuvimos|estuvisteis|estuvieron|vi|viste|vio|vimos|vine|viniste|vino|vinimos|vinisteis|vinieron|di|diste|dio|dimos|disteis|dieron|puse|pusiste|puso|pusimos|pusisteis|pusieron|supe|supiste|supo|supimos|supisteis|supieron|pude|pudiste|pudo|pudimos|pudisteis|pudieron|quise|quisiste|quiso|quisimos|quisisteis|quisieron|trajo|trajeron|leyó|leyeron|oyó|oyeron)(?![a-záéíóúñü])/i;
         if (irr.test(t)) return true;
-        // Regular preterite endings — strict: must be whole-word, min 2-letter stem
+        // Regular preterite endings – strict: must be whole-word, min 2-letter stem
         const reg = /(?<![a-záéíóúñü])[a-záéíóúñü]{2,}(?:aste|asteis|aron|iste|isteis|ieron|ió)(?![a-záéíóúñü])/i;
         return reg.test(t);
       },
@@ -321,7 +321,7 @@ console.log(`\nTOTAL: checked ${totals.checked}, mismatches ${totals.mismatches}
 if (APPLY) {
   console.log('Applied: mismatched tips cleared. Re-run engine.cjs --apply to refill with tighter patterns.');
 } else {
-  console.log('(dry run — pass --apply to clear mismatched tips)');
+  console.log('(dry run – pass --apply to clear mismatched tips)');
 }
 
 if (args.includes('--json')) {

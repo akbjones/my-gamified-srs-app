@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Per-language audit for Hindi / Turkish / Russian — the languages where
+ * Per-language audit for Hindi / Turkish / Russian – the languages where
  * the European "noun spelled exactly like 1sg verb" pattern doesn't fire,
  * but each has its own bug shapes.
  *
@@ -57,7 +57,7 @@ function auditHindi(entries) {
     }
     // H3: feminine -ती forms attached to a masculine lemma but with masculine label
     if (word.endsWith('ती') && e.pos === 'v' && e.lemma && entries[e.lemma]?.en && !/feminine|f\./i.test(e.en)) {
-      // probably ok — flag only if en looks generic (no person/gender markers)
+      // probably ok – flag only if en looks generic (no person/gender markers)
       if (!/I |we |he |she |they /i.test(e.en) && e.en.length < 25) {
         buckets.H3_fem_misclass.push({ word, en: e.en, pos: e.pos, lemma: e.lemma });
       }
@@ -77,7 +77,7 @@ function auditTurkish(entries) {
     }
     // T2: noun tagged but contains causative/passive infix (-dir-, -il-, -in-)
     if (e.pos === 'n' && /(dir|tir|dur|tur|dür|tür|il|ıl|ul|ül|in|ın|un|ün)mek|mak/.test(word)) {
-      // ...too noisy. Skip this category — many false positives.
+      // ...too noisy. Skip this category – many false positives.
     }
     // T3: word ends with possessive suffix and not linked to lemma
     if (e.pos === 'n' && !e.lemma) {

@@ -48,7 +48,7 @@ const allKnown = new Set([...dictKeys, ...irregKeys]);
 
 // Simple suffix stripping to simulate lookupSV
 function canResolve(word) {
-  const w = word.toLowerCase().replace(/[.,!?;:'"()…\-–—]/g, '');
+  const w = word.toLowerCase().replace(/[.,!?;:'"()…\-––]/g, '');
   if (!w || w.length < 2) return true; // skip punctuation/tiny
   if (/^\d+$/.test(w)) return true; // numbers
   if (allKnown.has(w)) return true;
@@ -137,7 +137,7 @@ for (const card of cards) {
 
   // ── 1. Dictionary coverage ──
   const words = card.target
-    .replace(/[.,!?;:'"()…\-–—\d]/g, ' ')
+    .replace(/[.,!?;:'"()…\-––\d]/g, ' ')
     .split(/\s+/)
     .filter(w => w.length > 0)
     .map(w => w.toLowerCase());
@@ -234,7 +234,7 @@ for (const card of cards) {
   }
 
   // ── 4. Duplicates ──
-  const targetNorm = card.target.toLowerCase().replace(/[.,!?;:'"()…\-–—]/g, '').trim();
+  const targetNorm = card.target.toLowerCase().replace(/[.,!?;:'"()…\-––]/g, '').trim();
   if (seenTargets.has(targetNorm)) {
     cardIssues.push({ type: 'duplicate_target', duplicateOf: seenTargets.get(targetNorm) });
     summary.duplicateIssues++;
@@ -242,7 +242,7 @@ for (const card of cards) {
     seenTargets.set(targetNorm, card.id);
   }
 
-  const engNorm = eng.toLowerCase().replace(/[.,!?;:'"()…\-–—]/g, '').trim();
+  const engNorm = eng.toLowerCase().replace(/[.,!?;:'"()…\-––]/g, '').trim();
   if (seenEnglish.has(engNorm)) {
     cardIssues.push({ type: 'duplicate_english', duplicateOf: seenEnglish.get(engNorm) });
     // Don't count as separate issue if target is also duplicate

@@ -65,7 +65,7 @@ console.log(`Audio files: ${audioFiles.size}`);
 
 // ─── Helper: check if a German word is "covered" by dictionary ──
 function isWordCovered(word) {
-  const w = word.toLowerCase().replace(/[.,!?;:""«»()—–…''„"]/g, '').trim();
+  const w = word.toLowerCase().replace(/[.,!?;:""«»()––…''„"]/g, '').trim();
   if (!w || w.length <= 1) return true; // skip single chars
   if (/^\d+$/.test(w)) return true; // numbers
 
@@ -353,7 +353,7 @@ for (const card of allCards) {
   const { id, target, english, audio, grammar, grammarNode, tags, priority } = card;
 
   // 1. DICTIONARY COVERAGE
-  const words = target.split(/\s+/).map(w => w.toLowerCase().replace(/[.,!?;:""«»()—–…''„"]/g, '').trim()).filter(Boolean);
+  const words = target.split(/\s+/).map(w => w.toLowerCase().replace(/[.,!?;:""«»()––…''„"]/g, '').trim()).filter(Boolean);
   const uncoveredWords = [];
   for (const w of words) {
     if (STOP_WORDS.has(w)) continue;

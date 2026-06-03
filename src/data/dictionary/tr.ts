@@ -9700,7 +9700,7 @@ const dictionary: Record<string, DictEntry> =                 {
   'zürafa': { en: 'giraffe', ipa: 'zjɾafa', pos: 'n' },
   'belge': { en: 'document; evidence', ipa: 'ˈbɛlɡɛ', pos: 'n' },
   'tuvalet': { en: 'toilet; bathroom; restroom', ipa: 'tuvɑˈlɛt', pos: 'n' },
-  'ekşi bisiklet': { en: 'unclear source—ekşi does not modify bisiklet naturally', ipa: '', pos: 'phrase' },
+  'ekşi bisiklet': { en: 'unclear source–ekşi does not modify bisiklet naturally', ipa: '', pos: 'phrase' },
   'gönüllü olarak': { en: 'voluntarily; willingly', ipa: '', pos: 'phrase' },
   'ciddiyet ile': { en: 'seriously; solemnly', ipa: '', pos: 'adv' },
   'görüşelim': { en: 'let\'s meet', ipa: 'ɟœɾyʃe.ˈlim', pos: 'v', lemma: 'görüşmek' },
@@ -9757,7 +9757,7 @@ function cleanWord(word: string): string {
   if (!word) return '';
   return word
     // Preserve hyphens for compounds (e-posta, post-kuantum)
-    .replace(/[.,!?;:"""''()—–…«»]/g, '')
+    .replace(/[.,!?;:"""''()––…«»]/g, '')
     .trim()
     .toLowerCase();
 }
@@ -9775,7 +9775,7 @@ export function lookupWord(word: string): DictEntry | null {
     if (dictionary[noHyphen]) return dictionary[noHyphen];
   }
 
-  // Try suffix stripping (longest suffixes first — array is already ordered)
+  // Try suffix stripping (longest suffixes first – array is already ordered)
   for (const suffix of CASE_SUFFIXES) {
     if (clean.endsWith(suffix) && clean.length > suffix.length + 1) {
       const stem = clean.slice(0, -suffix.length);

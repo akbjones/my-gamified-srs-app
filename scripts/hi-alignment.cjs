@@ -882,7 +882,7 @@ const fallback = {
 function tokenize(sentence) {
   // Strip punctuation: ।, ?, !, comma, semicolon, colon, quotes, parens, dashes, ellipsis, Devanagari danda
   const cleaned = sentence
-    .replace(/[।?!,;:\-\–\—\"\'\"\"''()…।॥\u0964\u0965]/g, ' ')
+    .replace(/[।?!,;:\-\–\–\"\'\"\"''()…।॥\u0964\u0965]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
   if (!cleaned) return [];

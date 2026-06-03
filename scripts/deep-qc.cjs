@@ -40,7 +40,7 @@ for (const [dir, code] of LANGS) {
       addIssue(code, "tooShort", "Card " + card.id + ": \"" + card.target.slice(0, 60) + "\"");
     }
 
-    // Very long sentences (> 25 words) — might be too hard
+    // Very long sentences (> 25 words) – might be too hard
     if (card.target && card.target.trim().split(/\s+/).length > 25) {
       addIssue(code, "tooLong", "Card " + card.id + " has " + card.target.trim().split(/\s+/).length + " words");
     }
@@ -144,7 +144,7 @@ for (const [dir, code] of LANGS) {
   // ══════════════════════════════════════════════════
   const uniqueWords = new Set();
   for (const card of deck) {
-    (card.target || "").split(/[\s,;:.!?¿¡""«»()\-—–'…।]+/).forEach(function(w) {
+    (card.target || "").split(/[\s,;:.!?¿¡""«»()\-––'…।]+/).forEach(function(w) {
       const clean = w.toLowerCase().trim();
       if (clean.length > 0) uniqueWords.add(clean);
     });
@@ -175,7 +175,7 @@ for (const [dir, code] of LANGS) {
 // OUTPUT REPORT
 // ══════════════════════════════════════════════════
 console.log("╔══════════════════════════════════════════════════════╗");
-console.log("║           DEEP QC AUDIT — ALL 11 LANGUAGES          ║");
+console.log("║           DEEP QC AUDIT – ALL 11 LANGUAGES          ║");
 console.log("╚══════════════════════════════════════════════════════╝\n");
 
 for (const [dir, code] of LANGS) {

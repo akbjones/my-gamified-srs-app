@@ -13,7 +13,7 @@
  *
  * Why this matters: the placement test and the very first cards a user
  * sees set the tone. "Se me hace tarde." (es-0001) translates as "I'm
- * running late." — there's no obvious path from the English to the
+ * running late." – there's no obvious path from the English to the
  * Spanish for a beginner.
  *
  * Run:
@@ -43,7 +43,7 @@ const LANG_DECKS = {
 
 const A1_NODES = new Set(['node-01','node-02','node-03','node-04','node-05','node-06','node-07','node-08']);
 
-// Reverse / impersonal constructions per language — these are conceptually
+// Reverse / impersonal constructions per language – these are conceptually
 // hard for beginners because the grammatical subject ≠ the English subject.
 const REVERSE_PATTERNS = {
   spanish: [

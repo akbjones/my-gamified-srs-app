@@ -62,7 +62,7 @@ async def generate_one(card, semaphore, stats):
                     pct = (stats["done"] / stats["total"]) * 100
                     print(
                         f"  [{pct:.1f}%] {stats['done']}/{stats['total']} done "
-                        f"— {rate:.1f} cards/s — ~{int(remaining)}s remaining"
+                        f"– {rate:.1f} cards/s – ~{int(remaining)}s remaining"
                     )
                 return
 

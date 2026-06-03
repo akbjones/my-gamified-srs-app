@@ -35,7 +35,7 @@ const dryRun = args.includes('--dry-run');
 const concurrency = parseInt((args.find(a => a.startsWith('--concurrency=')) || '').split('=')[1]) || 20;
 const speakingRate = parseFloat((args.find(a => a.startsWith('--speed=')) || '').split('=')[1]) || 0.95;
 
-// Language support — default to Spanish for backwards compatibility
+// Language support – default to Spanish for backwards compatibility
 const lang = (args.find(a => a.startsWith('--lang=')) || '').split('=')[1] || 'es';
 const LANG_DEFAULTS = {
   es: { voice: 'es-US-Standard-A', prefix: 'es', deckDir: 'spanish' },
@@ -116,7 +116,7 @@ function callGoogleTTS(text) {
   });
 }
 
-// Rate limiter — token bucket, refills at `rate` tokens/sec
+// Rate limiter – token bucket, refills at `rate` tokens/sec
 class RateLimiter {
   constructor(ratePerMinute) {
     this.interval = 60000 / ratePerMinute; // ms between tokens
@@ -210,7 +210,7 @@ async function main() {
   }
 
   if (dryRun) {
-    console.log(`\nDry run — would generate ${toProcess.length} audio files`);
+    console.log(`\nDry run – would generate ${toProcess.length} audio files`);
     toProcess.slice(0, 5).forEach(c => {
       console.log(`  ${audioFilename(c.id)}: "${c.target}"`);
     });
@@ -243,7 +243,7 @@ async function main() {
           const rate = done / elapsed;
           const remaining = (toProcess.length - done) / rate;
           const pct = ((done / toProcess.length) * 100).toFixed(1);
-          console.log(`  [${pct}%] ${done}/${toProcess.length} done — ${rate.toFixed(1)} cards/s — ~${Math.ceil(remaining)}s remaining`);
+          console.log(`  [${pct}%] ${done}/${toProcess.length} done – ${rate.toFixed(1)} cards/s – ~${Math.ceil(remaining)}s remaining`);
         }
       } catch (err) {
         failed++;

@@ -1,5 +1,5 @@
 /**
- * semantic-verify-all.cjs — Verify semicolon-containing dictionary entries
+ * semantic-verify-all.cjs – Verify semicolon-containing dictionary entries
  * for ANY language by re-translating via Google Translate and comparing semantically.
  *
  * Usage: node scripts/semantic-verify-all.cjs <lang> [--dry-run]
@@ -173,7 +173,7 @@ const VERB_LEMMA = {
   'happened': 'happen', 'happens': 'happen', 'happening': 'happen',
 };
 
-/** Lemmatize a word — irregular lookup, then strip common suffixes */
+/** Lemmatize a word – irregular lookup, then strip common suffixes */
 function lemmatize(word) {
   const w = word.toLowerCase();
   if (VERB_LEMMA[w]) return VERB_LEMMA[w];
@@ -694,7 +694,7 @@ async function main() {
   console.log(`Reading ${LANG.toUpperCase()} dictionary from ${DICT_PATH}...`);
   let src = fs.readFileSync(DICT_PATH, 'utf8');
 
-  // Parse dictionary entries — handle both single-quote and double-quote keys
+  // Parse dictionary entries – handle both single-quote and double-quote keys
   const entryRe = /^\s+['"]([^'"]+)['"]\s*:\s*\{\s*en:\s*'([^']*)'(.*?)\}/gm;
   const allEntries = [];
   let m;

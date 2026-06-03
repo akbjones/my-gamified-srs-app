@@ -11,7 +11,7 @@ deck.forEach(card => {
   const text = card.target;
   if (!text) return;
   const tokens = text.toLowerCase()
-    .replace(/[.,!?;:"()¡¿…—–\-]/g, ' ')
+    .replace(/[.,!?;:"()¡¿…––\-]/g, ' ')
     .split(/\s+/)
     .filter(w => w.length > 0);
   tokens.forEach(w => {

@@ -11,7 +11,7 @@ const deck = JSON.parse(fs.readFileSync(DECK_PATH, 'utf8'));
 const wordSet = new Set();
 deck.forEach(c => {
   c.target.toLowerCase()
-    .replace(/[¿¡.,!?;:"""''()—–\-\d\/]/g, ' ')
+    .replace(/[¿¡.,!?;:"""''()––\-\d\/]/g, ' ')
     .split(/\s+/)
     .forEach(w => { if (w.length > 0) wordSet.add(w); });
 });
@@ -2230,7 +2230,7 @@ export interface DictEntry {
 
 // Lookup helper: strips punctuation, lowercases, tries base forms
 export function lookupWord(word: string): DictEntry | null {
-  const clean = word.toLowerCase().replace(/[.,!?;:\\"\\"""''()—–\\-]/g, '').trim();
+  const clean = word.toLowerCase().replace(/[.,!?;:\\"\\"""''()––\\-]/g, '').trim();
   if (!clean) return null;
 
   // Direct match

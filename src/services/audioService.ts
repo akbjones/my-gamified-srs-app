@@ -27,7 +27,7 @@ export const stopAudio = (): void => {
 
 // ─── Google Cloud TTS ───────────────────────────────────────────
 // Maps our Language type to Google Cloud TTS voice names
-// Using Standard voices (free tier friendly) — Latin American where available
+// Using Standard voices (free tier friendly) – Latin American where available
 const GOOGLE_VOICE_MAP: Record<Language, { languageCode: string; name: string }> = {
   spanish: { languageCode: 'es-US', name: 'es-US-Wavenet-A' },     // LatAm female
   italian: { languageCode: 'it-IT', name: 'it-IT-Wavenet-A' },
@@ -36,7 +36,7 @@ const GOOGLE_VOICE_MAP: Record<Language, { languageCode: string; name: string }>
   portuguese: { languageCode: 'pt-BR', name: 'pt-BR-Wavenet-A' },
   dutch: { languageCode: 'nl-NL', name: 'nl-NL-Wavenet-A' },
   swedish: { languageCode: 'sv-SE', name: 'sv-SE-Wavenet-D' },
-  welsh: { languageCode: 'cy-GB', name: 'cy-GB-Standard-A' }, // no Wavenet for Welsh — browser TTS fallback
+  welsh: { languageCode: 'cy-GB', name: 'cy-GB-Standard-A' }, // no Wavenet for Welsh – browser TTS fallback
   hindi: { languageCode: 'hi-IN', name: 'hi-IN-Wavenet-A' },
   turkish: { languageCode: 'tr-TR', name: 'tr-TR-Wavenet-A' },
   russian: { languageCode: 'ru-RU', name: 'ru-RU-Wavenet-A' },
@@ -99,7 +99,7 @@ async function playGoogleTts(
     objectUrl = URL.createObjectURL(blob);
     ttsCache.set(cacheKey, objectUrl);
 
-    // Cap cache size — evict oldest entries past 200
+    // Cap cache size – evict oldest entries past 200
     if (ttsCache.size > 200) {
       const firstKey = ttsCache.keys().next().value;
       if (firstKey) {
@@ -143,11 +143,11 @@ export const playCardAudio = async (
   // We fetch the file as a blob and create an object URL, then hand that to
   // the Audio element. Going via blob avoids two failure modes that plagued
   // the previous direct-`/quest-audio/...` approach:
-  //   1. Range-request stalls — some environments (PWA via service worker,
+  //   1. Range-request stalls – some environments (PWA via service worker,
   //      certain mobile browsers) never fire `canplaythrough` for small MP3s
   //      because the buffered-estimate heuristic gets confused and the
   //      Audio element parks in `networkState=2 readyState=0` indefinitely.
-  //   2. Silent autoplay fallthrough — when the load stalled, we used to
+  //   2. Silent autoplay fallthrough – when the load stalled, we used to
   //      time out and fall through to browser TTS, which on systems without
   //      a matching voice is just silence.
   if (audioFile) {
@@ -162,7 +162,7 @@ export const playCardAudio = async (
     // audio` check will skip play() and the rejection-from-pause noise.
     const myToken = ++playToken;
 
-    // Retry once if the first fetch fails — this happens when the CDN is
+    // Retry once if the first fetch fails – this happens when the CDN is
     // briefly cold or the user just unlocked the screen on mobile. Without
     // a retry, the user used to hear robotic browser TTS as a fallback,
     // then on the next card the real voice came back.
@@ -209,7 +209,7 @@ export const playCardAudio = async (
         audio.addEventListener('ended', () => { cleanup(); resolve(); }, { once: true });
         audio.addEventListener('error', () => { cleanup(); reject(new Error('audio playback error')); }, { once: true });
         // pause()-on-stopAudio fires `pause` not `ended`. If a newer call
-        // supersedes us, currentAudio gets swapped out — bail on the pause
+        // supersedes us, currentAudio gets swapped out – bail on the pause
         // event so the caller's await doesn't hang.
         audio.addEventListener('pause', () => {
           if (currentAudio !== audio) { cleanup(); resolve(); }
@@ -228,7 +228,7 @@ export const playCardAudio = async (
       if (msg.includes('interrupted by a call to pause')) return;
       // Surface real failures so they're visible in DevTools.
       console.warn('[audioService] pre-recorded audio failed (after retry):', msg);
-      // We do NOT fall through to browser TTS when an audioFile was set —
+      // We do NOT fall through to browser TTS when an audioFile was set –
       // see the audioFile check at the end of this function. Falling through
       // would play the robot voice and then the next card would play the real
       // voice, which was disorienting.
@@ -236,7 +236,7 @@ export const playCardAudio = async (
   }
 
   // 2. Try Google Cloud TTS if API key is set
-  // Skip for Welsh — Google Cloud TTS does not support cy-GB
+  // Skip for Welsh – Google Cloud TTS does not support cy-GB
   if (googleApiKey && lang !== 'welsh') {
     try {
       await playGoogleTts(targetText, lang, speed, googleApiKey);
@@ -248,7 +248,7 @@ export const playCardAudio = async (
     }
   }
 
-  // 3. Browser TTS fallback — but ONLY when no MP3 was available to try in
+  // 3. Browser TTS fallback – but ONLY when no MP3 was available to try in
   // the first place. If an audioFile was provided and just failed to load
   // (network error, transient 404), we'd rather stay silent than play the
   // robotic system voice that doesn't match the recorded woman voice.

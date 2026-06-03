@@ -617,7 +617,7 @@ function scoreCard(card, nodeId) {
     if (pat.test(english)) score += 2;
   }
 
-  // Tertiary: grammar tips (weight 4 — highly reliable)
+  // Tertiary: grammar tips (weight 4 – highly reliable)
   for (const pat of node.tipPatterns) {
     if (pat.test(grammar) || pat.test(target)) score += 4;
   }
@@ -757,7 +757,7 @@ for (let round = 0; round < 10; round++) {
     }
   }
 
-  // Step B: Fix underflow nodes (<80) — steal from largest nodes
+  // Step B: Fix underflow nodes (<80) – steal from largest nodes
   {
     const counts = getNodeCounts();
     const underNodes = Object.entries(counts)

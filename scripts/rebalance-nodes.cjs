@@ -1,5 +1,5 @@
 /**
- * rebalance-nodes.cjs — Smart node size rebalancing
+ * rebalance-nodes.cjs – Smart node size rebalancing
  *
  * Problem: Some nodes (esp. node-01, node-06) have far too many cards because
  * the classifier uses node-01 as a catch-all and preterite markers are common.
@@ -237,5 +237,5 @@ if (!DRY_RUN) {
   fs.writeFileSync(DECK_PATH, JSON.stringify(deck, null, 2));
   console.log('\nDeck saved.');
 } else {
-  console.log('\n(dry run — no changes)');
+  console.log('\n(dry run – no changes)');
 }

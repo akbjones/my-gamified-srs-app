@@ -743,7 +743,7 @@ async function main() {
     };
 
     allResults[lang] = result;
-    console.log(`  Result: ${passed}/${sample.length} passed (${passRate}%) — Grade ${grade}`);
+    console.log(`  Result: ${passed}/${sample.length} passed (${passRate}%) – Grade ${grade}`);
 
     // Write individual JSON
     fs.writeFileSync(
@@ -785,7 +785,7 @@ async function main() {
   const totalChecked = LANGUAGES.reduce((s, l) => s + allResults[l].total_checked, 0);
   const overallRate = +(totalPassed / totalChecked * 100).toFixed(1);
   const overallGrade = getGrade(overallRate);
-  lines.push(`| **ALL** | — | ${totalChecked} | ${totalPassed} | ${totalChecked - totalPassed} | ${overallRate}% | ${overallGrade} |`);
+  lines.push(`| **ALL** | – | ${totalChecked} | ${totalPassed} | ${totalChecked - totalPassed} | ${overallRate}% | ${overallGrade} |`);
 
   lines.push('');
   lines.push('## Failure Breakdown by Type');
@@ -817,7 +817,7 @@ async function main() {
       const top = r.failure_examples.slice(0, 15);
       for (const ex of top) {
         const gt = ex.google !== '?' ? ` | GT: "${ex.google}"` : '';
-        lines.push(`- **${ex.word}**: "${ex.en}" (pos=${ex.pos})${gt} — ${ex.issues}`);
+        lines.push(`- **${ex.word}**: "${ex.en}" (pos=${ex.pos})${gt} – ${ex.issues}`);
       }
       lines.push('');
     }
@@ -836,7 +836,7 @@ async function main() {
     const r = allResults[lang];
     console.log(`| ${lang.toUpperCase().padEnd(4)} | ${String(r.total_entries).padEnd(5)} | ${String(r.passed).padEnd(4)} | ${String(r.failed).padEnd(4)} | ${r.pass_rate.padEnd(6)} | ${r.grade}     |`);
   }
-  console.log(`| ALL  | —     | ${String(totalPassed).padEnd(4)} | ${String(totalChecked - totalPassed).padEnd(4)} | ${overallRate}% | ${overallGrade}     |`);
+  console.log(`| ALL  | –     | ${String(totalPassed).padEnd(4)} | ${String(totalChecked - totalPassed).padEnd(4)} | ${overallRate}% | ${overallGrade}     |`);
   console.log(`\nDone! Results in scripts/output/strict-review-summary.md`);
 }
 

@@ -53,7 +53,7 @@ for (const card of deck) {
   const sentence = card.target || '';
   const words = sentence.split(/\s+/).filter(Boolean);
   for (const w of words) {
-    const clean = w.replace(/[.,!?;:"""''()—–\-…¿¡«»\[\]{}]/g, '').trim().toLowerCase();
+    const clean = w.replace(/[.,!?;:"""''()––\-…¿¡«»\[\]{}]/g, '').trim().toLowerCase();
     if (clean && clean.length > 0) {
       deckWords.set(clean, (deckWords.get(clean) || 0) + 1);
     }

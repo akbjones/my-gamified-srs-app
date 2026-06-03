@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Exhaustive QC Engine — checks EVERY card and EVERY dictionary entry
- * across all 11 languages. Not sampling — full coverage.
+ * Exhaustive QC Engine – checks EVERY card and EVERY dictionary entry
+ * across all 11 languages. Not sampling – full coverage.
  *
  * Usage: node scripts/exhaustive-qc.cjs
  * Output: scripts/output/exhaustive-qc-report.json + stdout summary
@@ -512,7 +512,7 @@ function checkGrammarTips(deck) {
 // ── Main ─────────────────────────────────────────────────────
 function main() {
   console.log('='.repeat(70));
-  console.log('  EXHAUSTIVE QC ENGINE — Checking all cards & dictionaries');
+  console.log('  EXHAUSTIVE QC ENGINE – Checking all cards & dictionaries');
   console.log('='.repeat(70));
   console.log();
 

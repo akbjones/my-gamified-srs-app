@@ -4,7 +4,7 @@ const path = require('path');
 const BASE = '/Users/antoinevj/Documents/GitHub/my-gamified-srs-app/.claude/worktrees/agitated-boyd';
 
 function cleanWord(w) {
-  return w.toLowerCase().replace(/[.,!?;:"""''()[\]{}\-–—…·\/\\«»¡¿„"‚']/g, '').trim();
+  return w.toLowerCase().replace(/[.,!?;:"""''()[\]{}\-––…·\/\\«»¡¿„"‚']/g, '').trim();
 }
 
 // ============================================================

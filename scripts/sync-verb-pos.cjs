@@ -296,7 +296,7 @@ for (const lang of LANGUAGES) {
     for (const v of irrMapValues) verbInfinitives.add(v);
     console.log(`  IRREGULAR_MAP values: ${irrMapValues.length} unique infinitives`);
 
-    // Also collect all IRREGULAR_MAP keys (conjugated forms) — these need lemma
+    // Also collect all IRREGULAR_MAP keys (conjugated forms) – these need lemma
     const irrMapKeys = extractRecordKeys(dictSource, 'IRREGULAR_MAP');
     // We'll handle these separately below
   }
@@ -373,7 +373,7 @@ for (const lang of LANGUAGES) {
         entries.set(inf, { ...updated, lineNum: entry.lineNum, rawLine: buildEntryLine(inf, updated) });
       }
     } else {
-      // No dictionary entry — create one
+      // No dictionary entry – create one
       // We need to figure out the English translation
       // For now, we use the infinitive itself as placeholder
       createdCount++;
@@ -426,7 +426,7 @@ for (const lang of LANGUAGES) {
   }
 
   // 4c: Process entries that already have pos='v' AND lemma pointing to known verb infinitives
-  // Only fix "to " prefix — do NOT change pos for entries with wrong lemma assignments
+  // Only fix "to " prefix – do NOT change pos for entries with wrong lemma assignments
   for (const [key, entry] of entries) {
     if (entry.pos === 'v' && entry.lemma && verbInfinitives.has(entry.lemma)) {
       let changed = false;

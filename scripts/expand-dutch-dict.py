@@ -36,7 +36,7 @@ def parse_existing_keys(text: str) -> set:
 def tokenize(sentence: str) -> list:
     """Lowercase, strip punctuation, split into words."""
     s = sentence.lower()
-    s = re.sub(r"[¿¡.,!?;:\"\"\"''()—–«»/\d]", " ", s)
+    s = re.sub(r"[¿¡.,!?;:\"\"\"''()––«»/\d]", " ", s)
     return [w.strip() for w in s.split() if w.strip() and len(w.strip()) > 0]
 
 # ─── Step 3: Dutch IPA generation ───────────────────────────────────
@@ -522,7 +522,7 @@ def main():
         # Skip single characters
         if len(wl) <= 1:
             continue
-        # Skip if it's likely a proper noun (starts with capital in original) — but we lowercased
+        # Skip if it's likely a proper noun (starts with capital in original) – but we lowercased
         # Skip pure numbers
         if wl.isdigit():
             continue

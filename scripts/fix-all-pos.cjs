@@ -23,7 +23,7 @@ if (ceMatch) ceMatch[1].match(/'(\w+)'/g).forEach(m => {
   if (!VERBS.has(w) && !NOUNS.has(w)) ADJS.add(w); // treat as adj by default
 });
 
-// NOT_VERB_WORDS — things that should never get "to "
+// NOT_VERB_WORDS – things that should never get "to "
 const NOT_VERBS = new Set();
 const nvMatch = ppContent.match(/const NOT_VERB_WORDS = new Set\(\[([\s\S]*?)\]\)/);
 if (nvMatch) nvMatch[1].match(/'(\w+)'/g).forEach(m => NOT_VERBS.add(m.replace(/'/g, '')));
@@ -77,16 +77,16 @@ for (const lang of langs) {
 
     let changed = false;
 
-    // Rule 1: en starts with "to " — check if it's actually a verb
+    // Rule 1: en starts with "to " – check if it's actually a verb
     if (startsWithTo) {
       if (isNotVerb(firstWord) && !isEnglishVerb(firstWord)) {
-        // False "to " on a non-verb — strip it
+        // False "to " on a non-verb – strip it
         en = en.replace(/^to /, '');
         pos = isEnglishAdj(firstWord) ? 'adj' : 'n';
         toStripped++;
         changed = true;
       } else {
-        // Legitimate verb — ensure pos='v'
+        // Legitimate verb – ensure pos='v'
         if (pos !== 'v') {
           pos = 'v';
           posFixed++;
@@ -94,16 +94,16 @@ for (const lang of langs) {
         }
       }
     }
-    // Rule 2: en does NOT start with "to " — check if it should
+    // Rule 2: en does NOT start with "to " – check if it should
     else {
       if (isEnglishVerb(firstWord) && !isNotVerb(firstWord) && !isEnglishNoun(firstWord) && !isEnglishAdj(firstWord)) {
-        // It's a verb without "to " — add it
+        // It's a verb without "to " – add it
         en = 'to ' + en;
         pos = 'v';
         toAdded++;
         changed = true;
       } else {
-        // Not a verb — fix POS if wrong
+        // Not a verb – fix POS if wrong
         if (pos === 'v' && !isEnglishVerb(firstWord)) {
           pos = isEnglishAdj(firstWord) ? 'adj' : 'n';
           posFixed++;

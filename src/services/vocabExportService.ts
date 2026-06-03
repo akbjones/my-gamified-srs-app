@@ -61,7 +61,7 @@ export function exportVocabList(
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>LangLab Vocab — ${langLabel}</title>
+  <title>LangLab Vocab – ${langLabel}</title>
   <style>
     @page { size: A4; margin: 18mm 16mm; }
     * { box-sizing: border-box; }
@@ -194,7 +194,7 @@ export function exportVocabList(
   const url = URL.createObjectURL(blob);
   const win = window.open(url, '_blank');
   if (!win) {
-    // popup blocked — fallback to download
+    // popup blocked – fallback to download
     const a = document.createElement('a');
     a.href = url;
     a.download = `langlab-vocab-${language}.html`;

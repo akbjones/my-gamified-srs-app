@@ -14,7 +14,7 @@ const OUT = path.join(__dirname, '..', 'src', 'data', 'dictionary', 'de.ts');
 const wordSet = new Set();
 DECK.forEach(c => {
   c.target.toLowerCase()
-    .replace(/[.,!?;:""«»()—–…'']/g, ' ')
+    .replace(/[.,!?;:""«»()––…'']/g, ' ')
     .split(/\s+/)
     .filter(w => w.length > 1)
     .forEach(w => wordSet.add(w));
@@ -621,7 +621,7 @@ function reverseVerb(word: string): string | null {
 
 // ── Main lookup function ─────────────────────────────────────
 export function lookupWord(raw: string): DictEntry | null {
-  const word = raw.toLowerCase().replace(/[.,!?;:""«»()—–…'']/g, '').trim();
+  const word = raw.toLowerCase().replace(/[.,!?;:""«»()––…'']/g, '').trim();
   if (word.length < 2) return null;
 
   // 1. Direct lookup

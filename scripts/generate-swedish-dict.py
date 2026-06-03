@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate src/data/dictionary/sv.ts — Swedish dictionary with IPA.
+Generate src/data/dictionary/sv.ts – Swedish dictionary with IPA.
 Extracts all unique words from the Swedish deck, generates translations + IPA.
 """
 import json, re, sys
@@ -1393,7 +1393,7 @@ for word in words:
 # ─── Generate TypeScript output ────────────────────────────────
 lines = []
 lines.append('/**')
-lines.append(' * Swedish dictionary — word lookup with IPA pronunciations.')
+lines.append(' * Swedish dictionary – word lookup with IPA pronunciations.')
 lines.append(' * Every word appearing in the Swedish deck should have an entry.')
 lines.append(' */')
 lines.append('')
@@ -1424,7 +1424,7 @@ lines.append('')
 # Add lookupWord function - Swedish-specific morphology
 lines.append('export function lookupWord(raw: string): DictEntry | null {')
 lines.append('  // 1. Clean input: lowercase, strip punctuation')
-lines.append("  let clean = raw.toLowerCase().replace(/[¿¡.,!?;:\"\"\"\\u2018\\u2019()—–«»\\d/]/g, '').trim();")
+lines.append("  let clean = raw.toLowerCase().replace(/[¿¡.,!?;:\"\"\"\\u2018\\u2019()––«»\\d/]/g, '').trim();")
 lines.append("  if (!clean || clean.length < 1) return null;")
 lines.append('')
 lines.append('  // 2. Direct dictionary lookup')

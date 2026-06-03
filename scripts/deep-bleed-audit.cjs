@@ -41,7 +41,7 @@ function detectRealBleed(entry, lang) {
     if (pos === 'n' && /^to /.test(en)) {
       // French nouns ending in -tion, -ence, -ation defined as verbs
       if (/tion$|ence$|ation$|ment$|ure$/.test(word)) {
-        return { word, issue: 'noun_as_verb', detail: `French noun "${word}" defined as "${en}" — should be the noun form` };
+        return { word, issue: 'noun_as_verb', detail: `French noun "${word}" defined as "${en}" – should be the noun form` };
       }
     }
     // Check for specific known wrong entries
@@ -91,7 +91,7 @@ function detectRealBleed(entry, lang) {
       return { word, issue: 'wrong_meaning', detail: `"variables" means "variables/changeable", not "to vary"` };
     }
     if (word === 'combien' && en === 'how much, many') {
-      return { word, issue: 'context_bleed', detail: `"combien" means "how much, how many" — "many" alone is truncated` };
+      return { word, issue: 'context_bleed', detail: `"combien" means "how much, how many" – "many" alone is truncated` };
     }
   }
 
@@ -154,7 +154,7 @@ function fullScan(entries, lang) {
     // 1. Definition starts with "the " for a non-determiner
     // Only flag specific cases where "the" clearly leaked
     if (/^the /i.test(en) && !['det', 'art'].includes(pos)) {
-      // "the rest" for "demás" is actually correct — "the rest" IS the meaning
+      // "the rest" for "demás" is actually correct – "the rest" IS the meaning
       // "the one" for "celui" is correct
       // But "the X" for a regular noun is suspicious
       const afterThe = en.replace(/^the /i, '');
@@ -174,9 +174,9 @@ function fullScan(entries, lang) {
     }
 
     // 3. Definition contains parenthetical lemma reference that's wrong
-    // e.g., "to seem, to opinion(parere)" — broken definition
+    // e.g., "to seem, to opinion(parere)" – broken definition
     if (/to \w+\(/.test(en)) {
-      // Might be ok like "to swim (nuotare)" — check if noun with verb def
+      // Might be ok like "to swim (nuotare)" – check if noun with verb def
       if (pos === 'n' && /^to /.test(en)) {
         issues.push({ word, current_en: en, issue: 'noun defined as verb', pos, ipa });
       }
@@ -191,6 +191,6 @@ for (const lang of langs) {
   const results = fullScan(allEntries[lang], lang);
   console.log(`\n${lang.toUpperCase()}: ${allEntries[lang].length} entries, ${results.length} real issues found`);
   for (const r of results) {
-    console.log(`  ${r.word}: "${r.current_en}" — ${r.issue}`);
+    console.log(`  ${r.word}: "${r.current_en}" – ${r.issue}`);
   }
 }

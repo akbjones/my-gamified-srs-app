@@ -1,5 +1,5 @@
 /**
- * audit-grammar-tips.cjs — Detect and fix stale grammar tips.
+ * audit-grammar-tips.cjs – Detect and fix stale grammar tips.
  *
  * Finds grammar tips that don't match their card's sentence content.
  * E.g., a superlative "-ísimo" tip on a sentence without superlatives,

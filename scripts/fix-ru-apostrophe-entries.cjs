@@ -61,14 +61,14 @@ for (let i = 0; i < lines.length; i++) {
     // Match a line that starts with this key
     const keyPattern = `  '${key}': { en: '`;
     if (lines[i].trimStart().startsWith(`'${key}':`)) {
-      // Replace the en value — find the en: '...' portion
+      // Replace the en value – find the en: '...' portion
       const enStart = lines[i].indexOf("en: '");
       if (enStart === -1) continue;
 
       // Find where en value starts
       const valueStart = enStart + 5; // after "en: '"
 
-      // Find the closing quote — need to handle escaped quotes
+      // Find the closing quote – need to handle escaped quotes
       let j = valueStart;
       while (j < lines[i].length) {
         if (lines[i][j] === "'" && lines[i][j-1] !== '\\') break;

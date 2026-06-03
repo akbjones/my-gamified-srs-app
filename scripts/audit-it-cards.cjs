@@ -75,7 +75,7 @@ const STOP_WORDS = new Set([
 function tokenize(text) {
   // Remove punctuation, lowercase, split
   let clean = text.toLowerCase()
-    .replace(/[.,!?;:"""''()—–\-…\u200b]/g, ' ')
+    .replace(/[.,!?;:"""''()––\-…\u200b]/g, ' ')
     .replace(/'/g, "'"); // normalize apostrophe
   
   // Split on whitespace
@@ -157,7 +157,7 @@ function checkEnglish(eng) {
   }
   // Bad grammar patterns
   if (/\b(i am|i have|i was)\b/.test(eng) && eng[0] !== 'I' && !eng.includes('"') && !eng.includes("'")) {
-    // lowercase "i" as subject — only if not mid-sentence quote
+    // lowercase "i" as subject – only if not mid-sentence quote
   }
   // Double spaces
   if (/  /.test(eng)) issues.push('double_space');

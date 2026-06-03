@@ -4,7 +4,7 @@
  * 1. Parse all entries from ru.ts
  * 2. Skip function words
  * 3. Translate via Google (ru→en) in batches of 80
- * 4. Compare — zero match → replace
+ * 4. Compare – zero match → replace
  * 5. Filter garbage Google results
  * 6. Apply fixes to ru.ts, preserving IPA/POS/lemma
  * 7. Verify TypeScript
@@ -276,7 +276,7 @@ async function main() {
       continue;
     }
 
-    // No overlap — this is a mismatch
+    // No overlap – this is a mismatch
     const newEn = formatTranslation(google, entry.pos);
     fixes.push({
       key: entry.key,
@@ -337,7 +337,7 @@ async function main() {
   fs.writeFileSync(logPath, JSON.stringify(fixes, null, 2));
   console.log(`Fix log saved to ${logPath}`);
 
-  console.log(`\nDone — ${appliedCount} fixes applied.`);
+  console.log(`\nDone – ${appliedCount} fixes applied.`);
 }
 
 main().catch(err => {

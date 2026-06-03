@@ -8114,7 +8114,7 @@ function reverseVerb(word: string): string | null {
 
 // ── Main lookup function ─────────────────────────────────────
 export function lookupWord(raw: string): DictEntry | null {
-  const word = raw.toLowerCase().replace(/[.,!?;:""«»()—–…'']/g, '').trim();
+  const word = raw.toLowerCase().replace(/[.,!?;:""«»()––…'']/g, '').trim();
   if (word.length < 2) return null;
 
   // 1. Direct lookup

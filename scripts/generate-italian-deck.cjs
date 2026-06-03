@@ -6,7 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 
-// ─── NODE-01: Presente indicativo (A1) — present tense regular verbs ───
+// ─── NODE-01: Presente indicativo (A1) – present tense regular verbs ───
 const NODE_01 = [
   ["Ciao.", "Hello."],
   ["Buongiorno.", "Good morning."],
@@ -412,7 +412,7 @@ const NODE_01 = [
   ["Noi ci incontriamo al bar.", "We meet at the bar."],
 ];
 
-// ─── NODE-02: Essere vs stare (A1) — to be distinctions ───
+// ─── NODE-02: Essere vs stare (A1) – to be distinctions ───
 const NODE_02 = [
   ["Io sono italiano.", "I am Italian."],
   ["Tu sei americana.", "You are American."],
@@ -625,7 +625,7 @@ const NODE_02 = [
   ["Noi non stiamo facendo niente.", "We're not doing anything."],
 ];
 
-// ─── NODE-03: Domande comuni (A1) — common questions ───
+// ─── NODE-03: Domande comuni (A1) – common questions ───
 const NODE_03 = [
   ["Come ti chiami?", "What is your name?"],
   ["Mi chiamo Marco.", "My name is Marco."],
@@ -822,7 +822,7 @@ const NODE_03 = [
   ["Quanto costa un biglietto andata e ritorno?", "How much is a round-trip ticket?"],
 ];
 
-// ─── NODE-04: Articoli e genere (A1) — articles and gender ───
+// ─── NODE-04: Articoli e genere (A1) – articles and gender ───
 const NODE_04 = [
   ["Il ragazzo è simpatico.", "The boy is nice."],
   ["La ragazza è alta.", "The girl is tall."],
@@ -999,7 +999,7 @@ const NODE_04 = [
   ["La ricetta medica è obbligatoria.", "The prescription is mandatory."],
 ];
 
-// ─── NODE-05: Piacere e simili (A1) — "liking" verbs ───
+// ─── NODE-05: Piacere e simili (A1) – "liking" verbs ───
 const NODE_05 = [
   ["Mi piace la pizza.", "I like pizza."],
   ["Ti piace il gelato?", "Do you like ice cream?"],
@@ -1163,7 +1163,7 @@ const NODE_05 = [
   ["Ti serve un passaggio?", "Do you need a ride?"],
 ];
 
-// ─── NODE-06: Passato prossimo (A2) — past tense with avere/essere ───
+// ─── NODE-06: Passato prossimo (A2) – past tense with avere/essere ───
 const NODE_06 = [
   ["Ho mangiato la pizza.", "I ate the pizza."],
   ["Hai bevuto il caffè?", "Did you drink the coffee?"],
@@ -1304,7 +1304,7 @@ const NODE_06 = [
   ["Siamo arrivati giusto in tempo.", "We arrived just in time."],
 ];
 
-// ─── NODE-07: Imperfetto (A2) — imperfect tense ───
+// ─── NODE-07: Imperfetto (A2) – imperfect tense ───
 const NODE_07 = [
   ["Da bambino giocavo nel parco.", "As a child I played in the park."],
   ["Quando ero piccola, avevo un gatto.", "When I was little, I had a cat."],
@@ -1413,7 +1413,7 @@ const NODE_07 = [
   ["Una volta qui c'era un campo di grano.", "There used to be a wheat field here."],
 ];
 
-// ─── NODE-08: Verbi riflessivi (A2) — reflexive verbs ───
+// ─── NODE-08: Verbi riflessivi (A2) – reflexive verbs ───
 const NODE_08 = [
   ["Mi sveglio alle sette ogni mattina.", "I wake up at seven every morning."],
   ["Ti alzi sempre tardi.", "You always get up late."],
@@ -1516,7 +1516,7 @@ const NODE_08 = [
   ["Si stanno salutando.", "They're saying goodbye to each other."],
 ];
 
-// ─── NODE-09: Per vs da (A2) — preposition distinctions ───
+// ─── NODE-09: Per vs da (A2) – preposition distinctions ───
 const NODE_09 = [
   ["Studio italiano per lavoro.", "I study Italian for work."],
   ["Il regalo è per te.", "The gift is for you."],
@@ -1620,7 +1620,7 @@ const NODE_09 = [
   ["Per lo meno abbiamo provato.", "At least we tried."],
 ];
 
-// ─── NODE-10: Pronomi oggetto (A2) — object pronouns ───
+// ─── NODE-10: Pronomi oggetto (A2) – object pronouns ───
 const NODE_10 = [
   ["Mi chiami domani?", "Will you call me tomorrow?"],
   ["Ti aspetto al bar.", "I'll wait for you at the bar."],
@@ -1723,7 +1723,7 @@ const NODE_10 = [
   ["Dimmi la verità.", "Tell me the truth."],
 ];
 
-// ─── NODE-11: Congiuntivo presente (B1) — present subjunctive ───
+// ─── NODE-11: Congiuntivo presente (B1) – present subjunctive ───
 const NODE_11 = [
   ["Penso che lui abbia ragione.", "I think he's right.", "The subjunctive is triggered by 'penso che' (I think that)."],
   ["Credo che sia una buona idea.", "I think it's a good idea.", "Sia is the subjunctive of essere, triggered by 'credo che'."],
@@ -1807,7 +1807,7 @@ const NODE_11 = [
   ["Credo che l'italiano sia una bella lingua.", "I believe Italian is a beautiful language."],
 ];
 
-// ─── NODE-12: Imperativo (B1) — imperative/commands ───
+// ─── NODE-12: Imperativo (B1) – imperative/commands ───
 const NODE_12 = [
   ["Parla più forte!", "Speak louder!"],
   ["Ascolta bene!", "Listen carefully!"],
@@ -1908,7 +1908,7 @@ const NODE_12 = [
   ["Forza, ce la puoi fare!", "Come on, you can do it!"],
 ];
 
-// ─── NODE-13: Condizionale (B1) — conditional tense ───
+// ─── NODE-13: Condizionale (B1) – conditional tense ───
 const NODE_13 = [
   ["Vorrei un caffè, per favore.", "I would like a coffee, please."],
   ["Potresti aiutarmi?", "Could you help me?"],
@@ -1987,7 +1987,7 @@ const NODE_13 = [
   ["Direi che hai ragione.", "I'd say you're right."],
 ];
 
-// ─── NODE-14: Futuro e passato (B1) — future and perfect tenses ───
+// ─── NODE-14: Futuro e passato (B1) – future and perfect tenses ───
 const NODE_14 = [
   ["Domani andrò al lavoro.", "Tomorrow I'll go to work."],
   ["Partiremo venerdì mattina.", "We'll leave Friday morning."],
@@ -2068,7 +2068,7 @@ const NODE_14 = [
   ["Non appena avrò i risultati, ti informo.", "As soon as I have the results, I'll let you know."],
 ];
 
-// ─── NODE-15: Proposizioni relative (B1) — relative clauses ───
+// ─── NODE-15: Proposizioni relative (B1) – relative clauses ───
 const NODE_15 = [
   ["La donna che parla è mia madre.", "The woman who is speaking is my mother."],
   ["Il libro che leggo è interessante.", "The book I'm reading is interesting."],
@@ -2145,7 +2145,7 @@ const NODE_15 = [
   ["La donna di cui parliamo è la mia vicina.", "The woman we're talking about is my neighbor."],
 ];
 
-// ─── NODE-16: Congiuntivo imperfetto (B2) — imperfect subjunctive ───
+// ─── NODE-16: Congiuntivo imperfetto (B2) – imperfect subjunctive ───
 const NODE_16 = [
   ["Se avessi più tempo, viaggerei.", "If I had more time, I would travel.", "Imperfect subjunctive in hypothetical 'if' clauses."],
   ["Se potessi, verrei con te.", "If I could, I'd come with you."],
@@ -2208,7 +2208,7 @@ const NODE_16 = [
   ["Se avessi studiato di più, ora saprei.", "If I had studied more, now I'd know."],
 ];
 
-// ─── NODE-17: Periodo ipotetico (B2) — conditional sentences ───
+// ─── NODE-17: Periodo ipotetico (B2) – conditional sentences ───
 const NODE_17 = [
   ["Se piove, resto a casa.", "If it rains, I stay home.", "Periodo ipotetico della realtà: se + presente, presente."],
   ["Se hai fame, mangia qualcosa.", "If you're hungry, eat something."],
@@ -2262,7 +2262,7 @@ const NODE_17 = [
   ["Si comporta come se niente fosse.", "She acts as if nothing happened."],
 ];
 
-// ─── NODE-18: Passivo e impersonale (B2) — passive and impersonal ───
+// ─── NODE-18: Passivo e impersonale (B2) – passive and impersonal ───
 const NODE_18 = [
   ["La pizza è mangiata da tutti.", "Pizza is eaten by everyone.", "Passive voice: essere + past participle + da."],
   ["Il libro è stato scritto da Eco.", "The book was written by Eco."],
@@ -2321,7 +2321,7 @@ const NODE_18 = [
   ["Si suppone che arrivi domani.", "He's supposed to arrive tomorrow."],
 ];
 
-// ─── NODE-19: Connettivi avanzati (B2) — advanced connectors ───
+// ─── NODE-19: Connettivi avanzati (B2) – advanced connectors ───
 const NODE_19 = [
   ["Tuttavia, non sono d'accordo.", "However, I don't agree.", "'Tuttavia' is a formal connector meaning 'however'."],
   ["Nonostante tutto, sono felice.", "Despite everything, I'm happy."],
@@ -2380,7 +2380,7 @@ const NODE_19 = [
   ["Per non parlare del prezzo.", "Not to mention the price."],
 ];
 
-// ─── NODE-20: Misto avanzato (B2) — mixed advanced ───
+// ─── NODE-20: Misto avanzato (B2) – mixed advanced ───
 const NODE_20 = [
   ["Avrebbe dovuto dirmelo prima.", "He should have told me sooner."],
   ["Non avremmo mai pensato una cosa simile.", "We would never have thought such a thing."],
@@ -2434,7 +2434,7 @@ const NODE_20 = [
   ["Sarà quel che sarà.", "What will be, will be."],
 ];
 
-// ─── NODE-21: Sfumature del congiuntivo (C1) — subjunctive nuances ───
+// ─── NODE-21: Sfumature del congiuntivo (C1) – subjunctive nuances ───
 const NODE_21 = [
   ["Sembra che abbiano già preso una decisione.", "It seems they have already made a decision.", "Congiuntivo passato after 'sembra che'."],
   ["Benché avesse studiato molto, non superò l'esame.", "Although he had studied a lot, he didn't pass the exam.", "Congiuntivo trapassato with 'benché'."],
@@ -2473,7 +2473,7 @@ const NODE_21 = [
   ["Come se non bastasse, ha anche perso le chiavi.", "As if that weren't enough, he also lost the keys."],
 ];
 
-// ─── NODE-22: Perifrasi verbali (C1) — verb phrases ───
+// ─── NODE-22: Perifrasi verbali (C1) – verb phrases ───
 const NODE_22 = [
   ["Sto per partire.", "I'm about to leave.", "'Stare per' + infinitive: imminent action."],
   ["Stava per piovere quando siamo usciti.", "It was about to rain when we went out."],
@@ -2512,7 +2512,7 @@ const NODE_22 = [
   ["Non ho niente da perdere.", "I have nothing to lose."],
 ];
 
-// ─── NODE-23: Discorso indiretto (C1) — reported speech ───
+// ─── NODE-23: Discorso indiretto (C1) – reported speech ───
 const NODE_23 = [
   ["Ha detto che era stanco.", "He said he was tired.", "Reported speech: present becomes imperfect."],
   ["Mi ha detto che sarebbe venuto.", "He told me he would come.", "Future becomes conditional in reported speech."],
@@ -2551,7 +2551,7 @@ const NODE_23 = [
   ["Ha insistito perché restassimo a cena.", "He insisted that we stay for dinner.", "'Insistere perché' + subjunctive."],
 ];
 
-// ─── NODE-24: Registro e stile (C2) — register and style ───
+// ─── NODE-24: Registro e stile (C2) – register and style ───
 const NODE_24 = [
   ["La preghiamo di voler cortesemente attendere.", "We kindly ask you to please wait.", "Highly formal register using 'pregare' + courtesy formulas."],
   ["In merito alla Sua richiesta, Le comunichiamo quanto segue.", "Regarding your request, we inform you of the following."],
@@ -2590,7 +2590,7 @@ const NODE_24 = [
   ["Giusta la delibera del consiglio.", "In accordance with the council's resolution."],
 ];
 
-// ─── NODE-25: Espressioni idiomatiche (C2) — idiomatic fluency ───
+// ─── NODE-25: Espressioni idiomatiche (C2) – idiomatic fluency ───
 const NODE_25 = [
   ["Non vedo l'ora di rivederti!", "I can't wait to see you again!", "'Non vedere l'ora' = can't wait."],
   ["Ha preso in giro tutti.", "He made fun of everyone.", "'Prendere in giro' = to make fun of."],
@@ -2629,7 +2629,7 @@ const NODE_25 = [
   ["Scoprire l'acqua calda.", "To state the obvious."],
 ];
 
-// ─── NODE-26: Sintassi complessa (C2) — complex syntax ───
+// ─── NODE-26: Sintassi complessa (C2) – complex syntax ───
 const NODE_26 = [
   ["Per quanto la questione possa sembrare irrilevante, merita attenzione.", "However irrelevant the issue may seem, it deserves attention.", "Complex concessive clause with 'per quanto' + subjunctive."],
   ["Non fosse stato per il suo intervento, sarebbe stato un disastro.", "Had it not been for his intervention, it would have been a disaster.", "Inverted conditional without 'se'."],

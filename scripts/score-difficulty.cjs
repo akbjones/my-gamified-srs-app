@@ -83,7 +83,7 @@ const ADVANCED_MARKERS = {
   russian:   [/(бы\s|если\s+бы)/, /\b\w+(ший|щий|щая|щее|щие|вший|вшая|вшее)\b/, /\b(чтобы|поскольку|невзирая|несмотря)\b/],
 };
 
-// Subordinate-clause / connector words across many languages — presence boosts difficulty
+// Subordinate-clause / connector words across many languages – presence boosts difficulty
 const SUB_CLAUSE = /\b(although|because|while|whereas|nevertheless|despite|however|moreover|hence|therefore|wherein|whereby|que|qui|donc|cependant|néanmoins|wenn|weil|während|wobei|jedoch|obwohl|desde\s+que|porque|aunque|sin\s+embargo|sebbene|nonostante|tuttavia|чтобы|поскольку|однако|тем\s+не\s+менее|hoewel|terwijl|niettemin|ändock|trotz|چونکه|कि|यद्यपि|हालाँकि|rağmen|ancak|fakat|hâlbuki)\b/i;
 
 function syllableCountApprox(word) {
@@ -93,7 +93,7 @@ function syllableCountApprox(word) {
 }
 
 function tokenize(s) {
-  return s.split(/[\s।,!?;:""''()—–…¿¡«»\.]+/).filter(t => t && t.length > 0);
+  return s.split(/[\s।,!?;:""''()––…¿¡«»\.]+/).filter(t => t && t.length > 0);
 }
 
 // Tier offset: pushes each tier's band up by a fixed amount so C1/C2 idioms
@@ -117,7 +117,7 @@ function scoreCard(card, freqMap, lang) {
   // 1. Word count (linear, but cap at 25 for outliers)
   const wcScore = Math.min(n, 25);
 
-  // 2. Vocab rarity — for each token, find its rank in the frequency map
+  // 2. Vocab rarity – for each token, find its rank in the frequency map
   // Lower rank = more common. Use log-rank to compress.
   let rankSum = 0;
   let rankCount = 0;
@@ -128,7 +128,7 @@ function scoreCard(card, freqMap, lang) {
     if (freqMap.has(k)) {
       lr = Math.log10(1 + freqMap.get(k));
     } else {
-      // Unknown word — treat as rare (high rank)
+      // Unknown word – treat as rare (high rank)
       lr = Math.log10(1 + 5000);
     }
     rankSum += lr;
@@ -137,7 +137,7 @@ function scoreCard(card, freqMap, lang) {
   }
   const avgLogRank = rankCount > 0 ? rankSum / rankCount : 4;
 
-  // 3. Long-word factor — avg syllables per word
+  // 3. Long-word factor – avg syllables per word
   let sylSum = 0;
   for (const t of tokens) sylSum += syllableCountApprox(t);
   const avgSyl = sylSum / n;
@@ -156,8 +156,8 @@ function scoreCard(card, freqMap, lang) {
 
   // Composite (weights tunable)
   // - Word count: 3.0 (short sentences are easier)
-  // - Avg vocab rarity: 3.0 (boosted from 2.0 — every uncommon word counts)
-  // - Max vocab rarity: 2.5 (NEW — the single rarest word punishes short sentences
+  // - Avg vocab rarity: 3.0 (boosted from 2.0 – every uncommon word counts)
+  // - Max vocab rarity: 2.5 (NEW – the single rarest word punishes short sentences
   //   with one rare word like "Mae hi'n glaear heddiw" where the word count is
   //   small but `glaear` is rare)
   // - Avg syllables: 1.0

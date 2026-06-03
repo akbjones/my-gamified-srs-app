@@ -94,7 +94,7 @@ function fillLang(langCode) {
 
   // Match both single-quoted and double-quoted keys with ipa: '?'
   // Group 1: everything before "ipa: '?'"
-  // Group 2: the key (word) — captured from either single or double quote variant
+  // Group 2: the key (word) – captured from either single or double quote variant
   // Group 3: everything after "ipa: '?'" to end of object
   const re = /^(\s*(?:'([^'\\]*(?:\\.[^'\\]*)*)'|"([^"]*)"):\s*\{[^}]*?)ipa: '\?'([^}]*\})/gm;
 
@@ -113,7 +113,7 @@ function fillLang(langCode) {
   }
 
   if (entries.length === 0) {
-    console.log(`  ${langCode}: 0 gaps — skipping`);
+    console.log(`  ${langCode}: 0 gaps – skipping`);
     return 0;
   }
 

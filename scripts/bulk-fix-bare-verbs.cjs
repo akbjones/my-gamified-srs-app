@@ -58,7 +58,7 @@ function loadDict(file, varName) {
 }
 
 function tryInfinitiveFromStanza(stanzaLemma, dict, langCode) {
-  // For Russian and Hindi, Stanza often gives "bare stem" — try to match dictionary infinitive
+  // For Russian and Hindi, Stanza often gives "bare stem" – try to match dictionary infinitive
   const candidates = [stanzaLemma];
 
   // Russian verb endings
@@ -165,7 +165,7 @@ for (const lang of LANGS) {
             langStats.fromLemma++;
           }
         } else {
-          // Lemma also bare — clean it and prefix "to"
+          // Lemma also bare – clean it and prefix "to"
           const cleaned = cleanVerbTranslation(lemmaEntry.en);
           entry.en = 'to ' + cleaned;
           fixed = true;
@@ -220,5 +220,5 @@ console.log(`  From existing lemma: ${stats.fixedFromLemma}`);
 console.log(`  From Stanza lemma:   ${stats.fixedFromStanza}`);
 console.log(`  Direct prefix:        ${stats.fixedDirect}`);
 
-console.log('\nNOTE: Changes are in memory only — run fix-dictionaries.cjs to write them.');
+console.log('\nNOTE: Changes are in memory only – run fix-dictionaries.cjs to write them.');
 console.log('Better: Add the fixes to the OVERRIDES section of fix-dictionaries.cjs.');

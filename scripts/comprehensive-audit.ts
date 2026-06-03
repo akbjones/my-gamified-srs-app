@@ -96,7 +96,7 @@ interface Issue {
 // Sentence tokenizer that matches each language's punctuation
 function tokenize(sentence: string): string[] {
   if (!sentence) return [];
-  return sentence.split(/[\s।,!?;:""''()—–…¿¡«»]+/).filter(w => w && w.length > 0);
+  return sentence.split(/[\s।,!?;:""''()––…¿¡«»]+/).filter(w => w && w.length > 0);
 }
 
 function nodeNumber(card: Card): number {
@@ -206,7 +206,7 @@ function checkCard(card: Card, config: LangConfig, allCards: Card[], stanzaData:
       issues.push({ type: 'VERB_MISSING_TO', severity: 'medium', cardId: id, word: token, message: `Verb "${token}" shows "${en}" without "to" prefix` });
     }
 
-    // 10. Non-verb with "to" prefix (skip if en has semicolon — it's polysemy with intentional "to")
+    // 10. Non-verb with "to" prefix (skip if en has semicolon – it's polysemy with intentional "to")
     if (pos !== 'v' && pos && en.startsWith('to ') && !en.includes(';')) {
       issues.push({ type: 'NON_VERB_WITH_TO', severity: 'medium', cardId: id, word: token, message: `${pos} "${token}" has "to" prefix: "${en}"` });
     }
@@ -349,7 +349,7 @@ function checkCard(card: Card, config: LangConfig, allCards: Card[], stanzaData:
     const stanzaLemma = stanzaData.verb_lemmas?.[token]?.lemma;
     if (stanzaLemma && entry.lemma && stanzaLemma !== entry.lemma) {
       // Check if our lemma + ending matches Stanza's lemma
-      // (e.g. our "essere" vs Stanza "esser" — close enough)
+      // (e.g. our "essere" vs Stanza "esser" – close enough)
       if (!entry.lemma.startsWith(stanzaLemma) && !stanzaLemma.startsWith(entry.lemma)) {
         issues.push({
           type: 'STANZA_LEMMA_MISMATCH',

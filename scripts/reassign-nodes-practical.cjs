@@ -152,7 +152,7 @@ function scorePracticality(english) {
     delta = 8;
   }
 
-  // Practical hits pull earlier (mild — respect grammar complexity)
+  // Practical hits pull earlier (mild – respect grammar complexity)
   if (practicalHits >= 3) {
     delta -= 4;
   } else if (practicalHits >= 2) {
@@ -295,7 +295,7 @@ function processLanguage(lang, verbose) {
   const stats = { total: deck.length, pushed, pulled, unchanged, movements: movements.length };
 
   if (verbose) {
-    console.log(`  ${lang}: ${deck.length} cards — ${pushed} pushed later, ${pulled} pulled earlier, ${unchanged} unchanged`);
+    console.log(`  ${lang}: ${deck.length} cards – ${pushed} pushed later, ${pulled} pulled earlier, ${unchanged} unchanged`);
     console.log(`    Node distribution: ${Object.keys(dist).sort().map(k => `${k}:${dist[k]}`).join(' ')}`);
   }
 

@@ -345,14 +345,14 @@ async function fixSemanticFailures(lang, entries) {
     // If our entry is a verb, ensure Google's starts with "to "
     if (entry.pos === 'v') {
       if (!cleaned.startsWith('to ')) {
-        // Check if Google returned a conjugated form — if so, the infinitive might be fine
-        // e.g., "they say" for a word we define as "to count" — both could be valid
+        // Check if Google returned a conjugated form – if so, the infinitive might be fine
+        // e.g., "they say" for a word we define as "to count" – both could be valid
         // Only replace if Google returned a noun/adj that clearly shows our POS is wrong
         const gtWords = cleaned.split(/\s+/);
         const firstGtWord = gtWords[0];
         // If Google gives a noun (no verb indicators), maybe our POS is wrong
         if (!['i', 'he', 'she', 'we', 'they', 'it', 'you', 'let', 'will', 'would', 'could', 'should', 'is', 'are', 'was', 'were', 'has', 'have', 'had', 'being', 'been'].includes(firstGtWord)) {
-          // Google gave a plain noun/adj — our definition might be wrong
+          // Google gave a plain noun/adj – our definition might be wrong
           if (cleaned.length <= 50) {
             fixes.push({
               key: fail.word,
@@ -388,7 +388,7 @@ async function fixSemanticFailures(lang, entries) {
     if (ourBase === gtBase) continue;
 
     // Don't replace if Google just returned a different verb form
-    // e.g., "to live" vs "I lived" — both valid
+    // e.g., "to live" vs "I lived" – both valid
     // Only replace if there's zero word overlap
     const ourWords = new Set(ourBase.split(/[\s;,/]+/).filter(w => w.length > 2));
     const gtWordSet = new Set(gtBase.split(/[\s;,/]+/).filter(w => w.length > 2));

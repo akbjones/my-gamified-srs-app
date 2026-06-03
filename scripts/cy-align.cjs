@@ -2216,7 +2216,7 @@ function tokenize(sentence) {
        .replace(/\u03B1/g, 'a');  // Greek α -> Latin a
 
   // Remove punctuation but keep apostrophes that are part of words
-  s = s.replace(/[.,;:!?"""()—–\-\[\]{}…«»]/g, ' ');
+  s = s.replace(/[.,;:!?"""()––\-\[\]{}…«»]/g, ' ');
 
   // Split on whitespace
   let rawTokens = s.split(/\s+/).filter(t => t.length > 0);

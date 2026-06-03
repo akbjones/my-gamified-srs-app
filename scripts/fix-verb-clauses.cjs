@@ -96,7 +96,7 @@ for (const lang of LANGS) {
     if (entry.pos !== 'v') continue;
     if (!entry.en || entry.en.startsWith('to ')) continue;
     if (entry.en.includes(';')) {
-      // Polysemy — check if at least one part starts with 'to '
+      // Polysemy – check if at least one part starts with 'to '
       const parts = entry.en.split(';').map(p => p.trim());
       if (parts.some(p => p.startsWith('to '))) continue;
     }

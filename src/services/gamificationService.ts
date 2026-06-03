@@ -2,7 +2,7 @@ import { UserStats, MasteryMap, Achievement, QuestCard, Language, StreakTier } f
 import { ACHIEVEMENTS } from '../data/achievements';
 import { loadUnlockedAchievements, saveUnlockedAchievements } from './storageService';
 
-/** Simple answer recording — increments totalReviews */
+/** Simple answer recording – increments totalReviews */
 export const recordAnswer = (stats: UserStats): UserStats => ({
   ...stats,
   totalReviews: stats.totalReviews + 1,
@@ -29,18 +29,18 @@ export const updateStreak = (stats: UserStats): UserStats => {
   let freezeEarnedAtStreak = stats.freezeEarnedAtStreak ?? 0;
 
   if (stats.lastStudyDate === yesterday) {
-    // Studied yesterday — streak continues
+    // Studied yesterday – streak continues
     newStreak = stats.streak + 1;
   } else if (stats.lastStudyDate && newFreezes > 0) {
     // Missed yesterday but have a freeze
     const dayBefore = new Date(Date.now() - 2 * 86400000).toDateString();
     if (stats.lastStudyDate === dayBefore) {
-      // Only missed one day — use a freeze
+      // Only missed one day – use a freeze
       newStreak = stats.streak + 1;
       newFreezes -= 1;
       freezeUsedDates.push(yesterday);
     } else {
-      // Missed multiple days — freeze can't help
+      // Missed multiple days – freeze can't help
       newStreak = 1;
       freezeEarnedAtStreak = 0;
     }

@@ -4986,9 +4986,9 @@ const VERB_SUFFIX_PATTERNS: { suffix: string; replace: string }[] = [
 
 function cleanWord(word: string): string {
   if (!word) return '';
-  // Remove punctuation common in Hindi text — preserve hyphens for compound words
+  // Remove punctuation common in Hindi text – preserve hyphens for compound words
   return word
-    .replace(/[।,!?;:"""''()—–…]/g, '')
+    .replace(/[।,!?;:"""''()––…]/g, '')
     .trim();
 }
 

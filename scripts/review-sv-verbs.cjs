@@ -400,7 +400,7 @@ fix('fjädrar', 'feathers', 'n', 'fjäder', 'wrong-pos+to', 'noun not verb');
 fix('fjärilar', 'butterflies', 'n', 'fjäril', 'wrong-pos+to', 'noun not verb');
 fix('fjärilsarter', 'butterfly species', 'n', undefined, 'wrong-pos+to+truncated', 'noun not verb');
 
-// ── B. Garbage semicolons — first part is noise ──
+// ── B. Garbage semicolons – first part is noise ──
 fix('accepterade', 'accepted', 'v', 'acceptera', 'garbled', 'was "to ?"');
 fix('adresserat', 'addressed', 'v', undefined, 'garbage-semi', '"to addressed" wrong');
 fix('affärer', 'shops; businesses', 'n', 'affär', 'wrong-pos', 'noun not adj');
@@ -446,7 +446,7 @@ fix('cyklade', 'to cycle', 'v', 'cykla', 'garbage-semi+pos', 'not "barking"');
 fix('cyklar', 'to cycle', 'v', 'cykla', 'garbage-semi+pos', 'not "barking"');
 fix('cyklat', 'to cycle', 'v', 'cykla', 'garbage-semi+pos', 'not "barking"');
 
-// ── C. "dra" family — wrongly labelled as "tar; drag" noun ──
+// ── C. "dra" family – wrongly labelled as "tar; drag" noun ──
 fix('dra', 'to pull; draw', 'v', undefined, 'wrong-meaning+pos', 'verb not noun');
 fix('drack', 'to drink', 'v', 'dricka', 'wrong-meaning+pos+lemma', 'not dra');
 fix('dragit', 'to pull; draw', 'v', 'dra', 'wrong-meaning+pos', 'verb not noun');
@@ -459,7 +459,7 @@ fix('drog', 'to pull; draw', 'v', 'dra', 'wrong-meaning+pos', 'verb not noun');
 fix('druckit', 'to drink', 'v', 'dricka', 'wrong-meaning+pos+lemma', 'not dra');
 fix('drömmer', 'to dream', 'v', 'drömma', 'wrong-meaning+pos+lemma', 'not dra');
 
-// ── D. "ha" family — wrong lemma spreading garbage ──
+// ── D. "ha" family – wrong lemma spreading garbage ──
 fix('härdar', 'to harden', 'v', undefined, 'wrong-lemma+meaning', 'not ha, not "stove"');
 fix('hästar', 'horses', 'n', 'häst', 'wrong-lemma+meaning+pos', 'not ha, not "coffee"');
 fix('höger', 'right (direction)', 'n', undefined, 'wrong-lemma+meaning', 'not ha');
@@ -528,7 +528,7 @@ fix('döps', 'is baptized', 'v', undefined, 'bad-verb-form', '"to baptized"');
 fix('enades', 'agreed', 'v', undefined, 'bad-verb-form', '"to agreed"');
 fix('etsats', 'etched', 'v', undefined, 'bad-verb-form', '"to etched"');
 fix('falsifieras', 'to be falsified', 'v', undefined, 'bad-verb-form', '"to falsified"');
-fix('fallet', 'the case', 'n', 'fall', 'bad-verb-form+pos', '"to fallen" — its a noun');
+fix('fallet', 'the case', 'n', 'fall', 'bad-verb-form+pos', '"to fallen" – its a noun');
 fix('inbjuden', 'invited', 'v', undefined, 'bad-verb-form', '"to invited"');
 fix('påstod', 'claimed', 'v', undefined, 'bad-verb-form', '"to claimed"');
 fix('reparerade', 'repaired', 'v', undefined, 'bad-verb-form', '"to repaired"');
@@ -629,7 +629,7 @@ fix('stugan', 'the cottage', 'n', 'stuga', 'wrong-pos', 'noun not verb');
 fix('stugorna', 'the cottages', 'n', 'stuga', 'wrong-pos', 'noun not verb');
 
 // ============================================================
-// REVIEW LOOP — check every entry
+// REVIEW LOOP – check every entry
 // ============================================================
 const stats = {
   wrongPos: 0,
@@ -694,7 +694,7 @@ for (const entry of entries) {
       });
       continue;
     }
-    // It has "to " but not a known verb — might be a bad translation
+    // It has "to " but not a known verb – might be a bad translation
     stats.toOnNonVerb++;
     stats.total++;
     fixes.push({

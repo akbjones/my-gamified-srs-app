@@ -392,7 +392,7 @@ const node11Cards = [
 ];
 
 // ─────────────────────────────────────────────────────────────
-// NODE-12: Past contrast — passato prossimo vs imperfetto (+60 cards)
+// NODE-12: Past contrast – passato prossimo vs imperfetto (+60 cards)
 // BOTH tenses must appear in every sentence
 // ─────────────────────────────────────────────────────────────
 

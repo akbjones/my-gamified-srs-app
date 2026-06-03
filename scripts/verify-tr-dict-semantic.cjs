@@ -4,7 +4,7 @@
  * 1. Parse all entries from tr.ts
  * 2. Skip function words
  * 3. Translate all via Google Translate (tr→en), batch 80
- * 4. Compare — zero content word match → flag for replacement
+ * 4. Compare – zero content word match → flag for replacement
  * 5. Filter garbage Google results
  * 6. Output fixes JSON
  */

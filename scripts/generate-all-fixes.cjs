@@ -442,7 +442,7 @@ const FR_FIXES = {
 
 // ========== PORTUGUESE CORRECTIONS ==========
 const PT_FIXES = {
-  // PT is clean — no significant issues found
+  // PT is clean – no significant issues found
 };
 
 // ========== BUILD FIX FILES ==========

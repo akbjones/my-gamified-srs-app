@@ -213,7 +213,7 @@ export const handleAnswerLogic = (
         updatedCard.dueDate = now + updatedCard.interval;
       }
     } else {
-      // Review — cap at MAX_INTERVAL
+      // Review – cap at MAX_INTERVAL
       updatedCard.interval = Math.min(MAX_INTERVAL, Math.round((updatedCard.interval || 1 * DAY) * updatedCard.ease));
       updatedCard.dueDate = now + updatedCard.interval;
     }

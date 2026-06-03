@@ -5,9 +5,9 @@
  * the same dict. These are very often polysemous nouns/adjectives that ARE
  * ALSO a conjugated form of the verb, e.g.:
  *
- *   Italian  lavoro: 'work; job' (n, lemma=lavorare) — also 1sg "I work"
- *   Spanish  trabajo: 'work; job' (n, lemma=trabajar) — also 1sg "I work"
- *   French   travail: 'work' (n) — separate root from travailler, NOT a polysemy
+ *   Italian  lavoro: 'work; job' (n, lemma=lavorare) – also 1sg "I work"
+ *   Spanish  trabajo: 'work; job' (n, lemma=trabajar) – also 1sg "I work"
+ *   French   travail: 'work' (n) – separate root from travailler, NOT a polysemy
  *
  * Output: scripts/output/noun-verb-polysemy.json + a printed summary.
  */

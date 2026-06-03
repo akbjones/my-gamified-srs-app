@@ -43,14 +43,14 @@ for (const card of deck) {
   const sentence = card.target || '';
   const words = sentence.split(/\s+/).filter(Boolean);
   for (const w of words) {
-    const clean = w.replace(/[.,!?;:""''()—–\-…¿¡«»\[\]{}]/g, '').trim().toLowerCase();
+    const clean = w.replace(/[.,!?;:""''()––\-…¿¡«»\[\]{}]/g, '').trim().toLowerCase();
     if (clean && clean.length > 0) {
       if (!wordContexts.has(clean)) wordContexts.set(clean, []);
       wordContexts.get(clean).push({
         target: sentence,
         english: card.english || '',
-        targetWords: words.map(w2 => w2.replace(/[.,!?;:""''()—–\-…¿¡«»\[\]{}]/g, '').trim().toLowerCase()),
-        englishWords: (card.english || '').split(/\s+/).map(w2 => w2.replace(/[.,!?;:""''()—–\-…¿¡«»\[\]{}]/g, '').trim().toLowerCase()),
+        targetWords: words.map(w2 => w2.replace(/[.,!?;:""''()––\-…¿¡«»\[\]{}]/g, '').trim().toLowerCase()),
+        englishWords: (card.english || '').split(/\s+/).map(w2 => w2.replace(/[.,!?;:""''()––\-…¿¡«»\[\]{}]/g, '').trim().toLowerCase()),
       });
     }
   }

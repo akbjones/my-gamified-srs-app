@@ -134,7 +134,7 @@ function reviewDutch() {
     if (!fix && /^About two-thirds of Dutch nouns use 'de'/i.test(tip)) {
       // Only flag if sentence doesn't actually contain both de AND het
       if (!/\bde\b/.test(sent) || !/\bhet\b/.test(sent)) {
-        // Still has at least one article — only flag if neither
+        // Still has at least one article – only flag if neither
         if (!/\b(de|het)\b/.test(sent)) {
           fix = { issue: 'mismatch', fixed_tip: '' };
         }

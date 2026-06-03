@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Apply semantic fixes to Welsh dictionary — careful version.
+ * Apply semantic fixes to Welsh dictionary – careful version.
  *
  * Categories:
  * 1. REAL ERRORS: old meaning is genuinely wrong (apply Google)
@@ -65,13 +65,13 @@ for (const f of fixes) {
     const verbWord = oldL.replace(/^to /, '');
     const googVerb = googL.replace(/ing$/, '').replace(/(.)\1$/, '$1');
     if (googL.endsWith('ing')) {
-      // "to breathe" vs "breathing" — same verb
+      // "to breathe" vs "breathing" – same verb
       if (verbWord.replace(/e$/, '') === googVerb || verbWord === googVerb || stem(verbWord) === stem(googVerb)) {
         rejected.push({...f, reason: 'gerund≈infinitive'});
         continue;
       }
     }
-    // "to build" vs "construction" — if they share a root
+    // "to build" vs "construction" – if they share a root
     if (stem(verbWord).length >= 3 && stem(googL).length >= 3 && stem(verbWord) === stem(googL)) {
       rejected.push({...f, reason: 'same root'});
       continue;
@@ -157,7 +157,7 @@ for (const f of approved) {
   // For verbs, ensure "to " prefix
   if (pos === 'v') {
     if (!newEn.startsWith('to ')) {
-      // If it's a past tense from Google ("he built", "was sung"), skip — keep dict
+      // If it's a past tense from Google ("he built", "was sung"), skip – keep dict
       if (/^(he |she |i |we |you |they |it |was |were |been )/.test(newEn)) {
         continue; // Keep the dict version
       }
@@ -202,8 +202,8 @@ for (const f of approved) {
   if (newEn.startsWith('to to ')) continue;
 
   // Skip where old translation is actually correct and Google is wrong/different
-  // These need manual review — skip borderline cases
-  // E.g., "to, toward" entries for ato/atoch/atyn — these are prepositions
+  // These need manual review – skip borderline cases
+  // E.g., "to, toward" entries for ato/atoch/atyn – these are prepositions
   if (oldL.includes('toward') && ['prep', 'adv'].includes(pos)) continue;
 
   finalFixes.push({

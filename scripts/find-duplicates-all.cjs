@@ -73,7 +73,7 @@ const ENT = {
 };
 
 function tokenize(s) {
-  return s.replace(/[।,!?;:।'"“”‘’()—–…¿¡«»\.]+/g, ' ').split(/\s+/).filter(t => t.length > 0);
+  return s.replace(/[।,!?;:।'"“”‘’()––…¿¡«»\.]+/g, ' ').split(/\s+/).filter(t => t.length > 0);
 }
 
 function skeletonize(target, ent) {
@@ -83,7 +83,7 @@ function skeletonize(target, ent) {
     if (ent.places.has(t)) return '[PLACE]';
     if (/^[0-9]+$/.test(t)) return '[NUM]';
     if (/^[०-९]+$/.test(t)) return '[NUM]';
-    // Latin numerics word forms (en list — these may appear in some langs)
+    // Latin numerics word forms (en list – these may appear in some langs)
     if (i > 0 && ent.useCapitalHeuristic && /^[A-ZÀ-ÝŞİĞÜÖÇĞÄÖÜß][a-zà-ÿşığüöçğäöü]+$/.test(t)) {
       // Capitalized non-sentence-initial word: likely proper noun
       return '[PROP]';

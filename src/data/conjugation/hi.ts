@@ -10,12 +10,12 @@
  * participle suffixes: -ता→-ती, -रहा→-रही, -आ→-ई, etc.
  *
  * Tenses:
- *   present     — वर्तमान (habitual: stem + ता/ती/ते + auxiliary)
- *   continuous  — अपूर्ण (stem + रहा/रही + auxiliary)
- *   past        — भूतकाल (stem + आ/ई/ए, ergative with ने for transitive)
- *   habitual_past — अपूर्ण भूत (stem + ता/ती + था/थी)
- *   future      — भविष्य (stem + ऊँगा/एगा/एँगे etc.)
- *   subjunctive — संभावना (stem + ऊँ/ए/एँ/ओ)
+ *   present     – वर्तमान (habitual: stem + ता/ती/ते + auxiliary)
+ *   continuous  – अपूर्ण (stem + रहा/रही + auxiliary)
+ *   past        – भूतकाल (stem + आ/ई/ए, ergative with ने for transitive)
+ *   habitual_past – अपूर्ण भूत (stem + ता/ती + था/थी)
+ *   future      – भविष्य (stem + ऊँगा/एगा/एँगे etc.)
+ *   subjunctive – संभावना (stem + ऊँ/ए/एँ/ओ)
  */
 import type { ConjugationTable } from '../../types';
 
@@ -85,269 +85,269 @@ interface IrregularData {
 }
 
 const IRREGULARS: Record<string, IrregularData> = {
-  // होना — to be (highly irregular)
+  // होना – to be (highly irregular)
   'होना': {
     present: ['हूँ', 'है', 'है', 'हैं', 'हो', 'हैं'],
     pastForms: ['था', 'था', 'था', 'थे', 'थे', 'थे'],
     continuousStem: 'हो',
     futureStem: 'हो',
   },
-  // करना — to do
+  // करना – to do
   'करना': {
     presentStem: 'कर',
     pastForms: ['किया', 'किया', 'किया', 'किए', 'किए', 'किए'],
     futureStem: 'कर',
     isTransitive: true,
   },
-  // जाना — to go
+  // जाना – to go
   'जाना': {
     presentStem: 'जा',
     pastForms: ['गया', 'गया', 'गया', 'गए', 'गए', 'गए'],
     futureStem: 'जा',
   },
-  // आना — to come
+  // आना – to come
   'आना': {
     presentStem: 'आ',
     pastForms: ['आया', 'आया', 'आया', 'आए', 'आए', 'आए'],
     futureStem: 'आ',
   },
-  // देना — to give
+  // देना – to give
   'देना': {
     presentStem: 'दे',
     pastForms: ['दिया', 'दिया', 'दिया', 'दिए', 'दिए', 'दिए'],
     futureStem: 'दे',
     isTransitive: true,
   },
-  // लेना — to take
+  // लेना – to take
   'लेना': {
     presentStem: 'ले',
     pastForms: ['लिया', 'लिया', 'लिया', 'लिए', 'लिए', 'लिए'],
     futureStem: 'ले',
     isTransitive: true,
   },
-  // पीना — to drink
+  // पीना – to drink
   'पीना': {
     presentStem: 'पी',
     pastForms: ['पिया', 'पिया', 'पिया', 'पिए', 'पिए', 'पिए'],
     futureStem: 'पी',
     isTransitive: true,
   },
-  // खाना — to eat
+  // खाना – to eat
   'खाना': {
     presentStem: 'खा',
     pastForms: ['खाया', 'खाया', 'खाया', 'खाए', 'खाए', 'खाए'],
     futureStem: 'खा',
     isTransitive: true,
   },
-  // सोना — to sleep
+  // सोना – to sleep
   'सोना': {
     presentStem: 'सो',
     pastForms: ['सोया', 'सोया', 'सोया', 'सोए', 'सोए', 'सोए'],
     futureStem: 'सो',
   },
-  // धोना — to wash
+  // धोना – to wash
   'धोना': {
     presentStem: 'धो',
     pastForms: ['धोया', 'धोया', 'धोया', 'धोए', 'धोए', 'धोए'],
     futureStem: 'धो',
     isTransitive: true,
   },
-  // रोना — to cry
+  // रोना – to cry
   'रोना': {
     presentStem: 'रो',
     pastForms: ['रोया', 'रोया', 'रोया', 'रोए', 'रोए', 'रोए'],
     futureStem: 'रो',
   },
-  // सीखना — to learn
+  // सीखना – to learn
   'सीखना': {
     isTransitive: true,
   },
-  // लिखना — to write
+  // लिखना – to write
   'लिखना': {
     isTransitive: true,
   },
-  // पढ़ना — to read/study
+  // पढ़ना – to read/study
   'पढ़ना': {
     isTransitive: true,
   },
-  // बोलना — to speak
+  // बोलना – to speak
   'बोलना': {
     isTransitive: true,
   },
-  // देखना — to see
+  // देखना – to see
   'देखना': {
     isTransitive: true,
   },
-  // सुनना — to listen
+  // सुनना – to listen
   'सुनना': {
     isTransitive: true,
   },
-  // समझना — to understand
+  // समझना – to understand
   'समझना': {
     isTransitive: true,
   },
-  // कहना — to say
+  // कहना – to say
   'कहना': {
     pastForms: ['कहा', 'कहा', 'कहा', 'कहे', 'कहे', 'कहे'],
     isTransitive: true,
   },
-  // रहना — to stay/live
+  // रहना – to stay/live
   'रहना': {
     presentStem: 'रह',
   },
-  // चलना — to walk/move
+  // चलना – to walk/move
   'चलना': {
     presentStem: 'चल',
   },
-  // बैठना — to sit
+  // बैठना – to sit
   'बैठना': {
     pastForms: ['बैठा', 'बैठा', 'बैठा', 'बैठे', 'बैठे', 'बैठे'],
   },
-  // उठना — to get up
+  // उठना – to get up
   'उठना': {
     presentStem: 'उठ',
   },
-  // मिलना — to meet/be found
+  // मिलना – to meet/be found
   'मिलना': {
     presentStem: 'मिल',
   },
-  // रखना — to keep/put
+  // रखना – to keep/put
   'रखना': {
     isTransitive: true,
   },
-  // बनाना — to make
+  // बनाना – to make
   'बनाना': {
     presentStem: 'बना',
     futureStem: 'बना',
     isTransitive: true,
   },
-  // खोलना — to open
+  // खोलना – to open
   'खोलना': {
     isTransitive: true,
   },
-  // बंद करना — to close
+  // बंद करना – to close
   'बंद करना': {
     isTransitive: true,
   },
-  // मारना — to hit/kill
+  // मारना – to hit/kill
   'मारना': {
     isTransitive: true,
   },
-  // भेजना — to send
+  // भेजना – to send
   'भेजना': {
     isTransitive: true,
   },
-  // लाना — to bring
+  // लाना – to bring
   'लाना': {
     presentStem: 'ला',
     pastForms: ['लाया', 'लाया', 'लाया', 'लाए', 'लाए', 'लाए'],
     futureStem: 'ला',
     isTransitive: true,
   },
-  // चाहना — to want
+  // चाहना – to want
   'चाहना': {
     isTransitive: true,
   },
-  // जानना — to know
+  // जानना – to know
   'जानना': {
     isTransitive: true,
   },
-  // मानना — to agree/believe
+  // मानना – to agree/believe
   'मानना': {
     isTransitive: true,
   },
-  // पहुँचना — to arrive/reach
+  // पहुँचना – to arrive/reach
   'पहुँचना': {
     presentStem: 'पहुँच',
   },
-  // निकलना — to come out
+  // निकलना – to come out
   'निकलना': {
     presentStem: 'निकल',
   },
-  // बनना — to become
+  // बनना – to become
   'बनना': {
     presentStem: 'बन',
   },
-  // दौड़ना — to run
+  // दौड़ना – to run
   'दौड़ना': {
     presentStem: 'दौड़',
   },
-  // तैरना — to swim
+  // तैरना – to swim
   'तैरना': {
     presentStem: 'तैर',
   },
-  // गाना — to sing
+  // गाना – to sing
   'गाना': {
     presentStem: 'गा',
     pastForms: ['गाया', 'गाया', 'गाया', 'गाए', 'गाए', 'गाए'],
     futureStem: 'गा',
     isTransitive: true,
   },
-  // नाचना — to dance
+  // नाचना – to dance
   'नाचना': {
     presentStem: 'नाच',
   },
-  // हँसना — to laugh
+  // हँसना – to laugh
   'हँसना': {
     presentStem: 'हँस',
   },
-  // रुकना — to stop
+  // रुकना – to stop
   'रुकना': {
     presentStem: 'रुक',
   },
-  // गिरना — to fall
+  // गिरना – to fall
   'गिरना': {
     presentStem: 'गिर',
   },
-  // मरना — to die
+  // मरना – to die
   'मरना': {
     pastForms: ['मरा', 'मरा', 'मरा', 'मरे', 'मरे', 'मरे'],
   },
-  // जीना — to live
+  // जीना – to live
   'जीना': {
     presentStem: 'जी',
     pastForms: ['जिया', 'जिया', 'जिया', 'जिए', 'जिए', 'जिए'],
     futureStem: 'जी',
   },
-  // छोड़ना — to leave
+  // छोड़ना – to leave
   'छोड़ना': {
     isTransitive: true,
   },
-  // पकड़ना — to catch
+  // पकड़ना – to catch
   'पकड़ना': {
     isTransitive: true,
   },
-  // तोड़ना — to break
+  // तोड़ना – to break
   'तोड़ना': {
     isTransitive: true,
   },
-  // जोड़ना — to add/join
+  // जोड़ना – to add/join
   'जोड़ना': {
     isTransitive: true,
   },
-  // हारना — to lose
+  // हारना – to lose
   'हारना': {},
-  // जीतना — to win
+  // जीतना – to win
   'जीतना': {
     isTransitive: true,
   },
-  // बताना — to tell
+  // बताना – to tell
   'बताना': {
     presentStem: 'बता',
     futureStem: 'बता',
     isTransitive: true,
   },
-  // सिखाना — to teach
+  // सिखाना – to teach
   'सिखाना': {
     presentStem: 'सिखा',
     futureStem: 'सिखा',
     isTransitive: true,
   },
-  // पहनना — to wear
+  // पहनना – to wear
   'पहनना': {
     isTransitive: true,
   },
-  // उतारना — to remove/take off
+  // उतारना – to remove/take off
   'उतारना': {
     isTransitive: true,
   },
@@ -421,7 +421,7 @@ export function conjugateHindi(infinitive: string): ConjugationTable | null {
   const stem = getStem(infinitive);
   const irr = IRREGULARS[infinitive];
 
-  // Special case: होना (to be) — completely irregular
+  // Special case: होना (to be) – completely irregular
   if (infinitive === 'होना') {
     return {
       infinitive,

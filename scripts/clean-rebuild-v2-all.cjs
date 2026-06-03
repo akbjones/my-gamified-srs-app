@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * clean-rebuild-v2-all.cjs — Universal dictionary rebuild for any language
+ * clean-rebuild-v2-all.cjs – Universal dictionary rebuild for any language
  *
  * Usage: node scripts/clean-rebuild-v2-all.cjs <langCode>
  *   e.g.: node scripts/clean-rebuild-v2-all.cjs fr
@@ -599,7 +599,7 @@ const FUNCTION_WORDS_MAP = {
     'her':{en:'every/each',pos:'det'},'bazı':{en:'some',pos:'det'},
     'hiçbir':{en:'none/no',pos:'det'},'başka':{en:'other',pos:'det'},
     'hep':{en:'all/always',pos:'adv'},'bütün':{en:'all/whole',pos:'det'},
-    // High-frequency verb forms — Turkish is agglutinative, fewer fixed forms
+    // High-frequency verb forms – Turkish is agglutinative, fewer fixed forms
     'var':{en:'there is/exists',pos:'v'},'yok':{en:'there is not',pos:'v'},
   },
   ru: {
@@ -962,7 +962,7 @@ const VALID_SHORT_VERBS = new Set([
 
 async function main() {
   console.log(`\n${'═'.repeat(60)}`);
-  console.log(`  CLEAN REBUILD V2 — ${LANG.toUpperCase()}`);
+  console.log(`  CLEAN REBUILD V2 – ${LANG.toUpperCase()}`);
   console.log(`${'═'.repeat(60)}`);
 
   // ── Step 1: Parse ──
@@ -983,7 +983,7 @@ async function main() {
     const cleanKey = key.replace(/^[¿¡]+/, '');
 
     if (cfg.lemmaOnly) {
-      // Welsh: no consistent infinitive endings — use lemma field only
+      // Welsh: no consistent infinitive endings – use lemma field only
       if (entry.pos === 'v' && !entry.lemma) {
         verbInfinitives[key] = entry;
       } else if (entry.lemma && existing[entry.lemma]?.pos === 'v') {
@@ -1013,10 +1013,10 @@ async function main() {
       } else if (entry.lemma && isInfinitive(entry.lemma.replace(/^[¿¡]+/, ''))) {
         verbForms[key] = entry;
       } else if (entry.pos === 'v' && entry.lemma) {
-        // Has a verb lemma but lemma doesn't match infinitive pattern — still a verb form
+        // Has a verb lemma but lemma doesn't match infinitive pattern – still a verb form
         verbForms[key] = entry;
       } else if (entry.pos === 'v' && !entry.lemma) {
-        // Marked as verb but no lemma and doesn't look like infinitive — treat as non-verb
+        // Marked as verb but no lemma and doesn't look like infinitive – treat as non-verb
         // to avoid incorrect "to " prefix via Google
         nonVerbs[key] = entry;
       } else {
@@ -1074,11 +1074,11 @@ async function main() {
     let isGood = true;
 
     if (baseWord.length < 3 && !VALID_SHORT_VERBS.has(baseWord)) {
-      console.log(`  QC WARN: "${inf}" → "to ${translation}" — base too short`);
+      console.log(`  QC WARN: "${inf}" → "to ${translation}" – base too short`);
       isGood = false;
     }
     if (COMMON_NOUNS.has(baseWord) && !VERB_NOUN_OVERLAP.has(baseWord)) {
-      console.log(`  QC WARN: "${inf}" → "to ${translation}" — base is a common noun`);
+      console.log(`  QC WARN: "${inf}" → "to ${translation}" – base is a common noun`);
       isGood = false;
     }
 
@@ -1397,7 +1397,7 @@ async function main() {
 
   // ── Report ──
   console.log(`\n${'═'.repeat(50)}`);
-  console.log(`  REBUILD REPORT — ${LANG.toUpperCase()}`);
+  console.log(`  REBUILD REPORT – ${LANG.toUpperCase()}`);
   console.log(`${'═'.repeat(50)}`);
   console.log(`  Total entries written:    ${Object.keys(parseDict()).length}`);
   console.log(`  VERB_INFINITIVE:          ${Object.keys(verbInfinitives).length}`);

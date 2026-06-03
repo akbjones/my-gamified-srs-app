@@ -3,7 +3,7 @@
  * appear across the deck (resolved via the REAL lookupWord, so verb forms
  * count toward their lemma's frequency).
  *
- * Output: scripts/frequency-{lang}.json — array of {key, freq, en, pos, lemma?}
+ * Output: scripts/frequency-{lang}.json – array of {key, freq, en, pos, lemma?}
  * sorted by freq desc.
  */
 import * as fs from 'fs';
@@ -19,7 +19,7 @@ import { lookupWord as lookupHi } from '../src/data/dictionary/hi';
 import { lookupWord as lookupTr } from '../src/data/dictionary/tr';
 import { lookupWord as lookupRu } from '../src/data/dictionary/ru';
 
-// Also need raw dictionary access — read each TS file and parse
+// Also need raw dictionary access – read each TS file and parse
 import * as vm from 'vm';
 
 const CONFIGS = [
@@ -62,7 +62,7 @@ function loadRawDict(file: string, varName: string): Record<string, any> {
 }
 
 function tokenize(sentence: string): string[] {
-  return sentence.split(/[\s।,!?;:""''()—–…¿¡«»]+/).filter(w => w && w.length > 0);
+  return sentence.split(/[\s।,!?;:""''()––…¿¡«»]+/).filter(w => w && w.length > 0);
 }
 
 for (const config of CONFIGS) {
@@ -89,7 +89,7 @@ for (const config of CONFIGS) {
             resolvedKey = entry.lemma;
           } else {
             // Try to find the key by linear scan (slow but correct)
-            // Actually skip — we'll just count by direct token match
+            // Actually skip – we'll just count by direct token match
             continue;
           }
         } else {

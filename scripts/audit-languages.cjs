@@ -81,7 +81,7 @@ function checkDeck(lang) {
   let totalWordCount = 0;
   for (const card of deck) {
     const tokens = card.target.toLowerCase()
-      .replace(/[.,!?;:"""\u2018\u2019()—–«»\d/\\¿¡…]/g, ' ')
+      .replace(/[.,!?;:"""\u2018\u2019()––«»\d/\\¿¡…]/g, ' ')
       .split(/\s+/)
       .map(t => t.replace(/^['-]+|['-]+$/g, ''))
       .filter(t => t.length > 0);
@@ -188,7 +188,7 @@ function checkDictCompleteness(lang) {
     const allWords = new Set();
     for (const card of deck) {
       const words = card.target.split(/\s+/).map(w =>
-        w.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()—–«»\d/]/g, '').trim()
+        w.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()––«»\d/]/g, '').trim()
       ).filter(w => w.length > 0);
       for (const w of words) allWords.add(w);
     }
@@ -243,7 +243,7 @@ function checkTranslationQuality(lang) {
   const selfPct = total > 0 ? Math.round((selfTranslated / total) * 100) : 0;
 
   const issues = [];
-  if (selfPct > 40) issues.push(`${selfPct}% self-translated (${selfTranslated}/${total}) — target <40%`);
+  if (selfPct > 40) issues.push(`${selfPct}% self-translated (${selfTranslated}/${total}) – target <40%`);
 
   // Count entries with wrong POS for verb forms
   const verbFormPattern = /['"]([^'"]+)['"]\s*:\s*\{\s*en:\s*['"]to\s/g;
@@ -321,7 +321,7 @@ for (const lang of LANGUAGES) {
     console.log(`  Deck: SKIP (${deck.error})`);
   } else {
     const status = deck.pass ? '\x1b[32mPASS\x1b[0m' : '\x1b[31mFAIL\x1b[0m';
-    console.log(`  Deck: ${status} — ${deck.total} cards, ${deck.uniqueWords} unique words, avg ${deck.avgWordsPerSentence} words/sentence`);
+    console.log(`  Deck: ${status} – ${deck.total} cards, ${deck.uniqueWords} unique words, avg ${deck.avgWordsPerSentence} words/sentence`);
     console.log(`    Grammar tips: ${deck.grammarPct}%, Duplicates: ${deck.duplicates}, Nodes: ${deck.nodeCount} (${deck.minNode}-${deck.maxNode} cards/node)`);
     console.log(`    Tags: general=${deck.tags.general}% travel=${deck.tags.travel}% work=${deck.tags.work}% family=${deck.tags.family}%`);
     if (deck.issues.length > 0) {
@@ -336,7 +336,7 @@ for (const lang of LANGUAGES) {
     console.log(`  Dictionary: SKIP (${dict.error})`);
   } else {
     const status = dict.pass ? '\x1b[32mPASS\x1b[0m' : '\x1b[31mFAIL\x1b[0m';
-    console.log(`  Dictionary IPA: ${status} — ${dict.totalEntries} entries, ${dict.emptyIpa} empty IPA`);
+    console.log(`  Dictionary IPA: ${status} – ${dict.totalEntries} entries, ${dict.emptyIpa} empty IPA`);
     if (dict.issues.length > 0) {
       dict.issues.forEach(i => console.log(`    ⚠ ${i}`));
       allPassed = false;
@@ -349,7 +349,7 @@ for (const lang of LANGUAGES) {
     console.log(`  Dict Coverage: SKIP (${comp.error})`);
   } else {
     const status = comp.pass ? '\x1b[32mPASS\x1b[0m' : '\x1b[31mFAIL\x1b[0m';
-    console.log(`  Dict Coverage: ${status} — ${comp.totalWords} unique words, ${comp.missing} missing`);
+    console.log(`  Dict Coverage: ${status} – ${comp.totalWords} unique words, ${comp.missing} missing`);
     if (comp.issues.length > 0) {
       comp.issues.forEach(i => console.log(`    ⚠ ${i}`));
       allPassed = false;
@@ -362,7 +362,7 @@ for (const lang of LANGUAGES) {
     console.log(`  Translation: SKIP (${trans.error})`);
   } else {
     const status = trans.pass ? '\x1b[32mPASS\x1b[0m' : '\x1b[33mWARN\x1b[0m';
-    console.log(`  Translation: ${status} — ${trans.selfPct}% self-translated (${trans.selfTranslated}/${trans.total})`);
+    console.log(`  Translation: ${status} – ${trans.selfPct}% self-translated (${trans.selfTranslated}/${trans.total})`);
     if (trans.issues.length > 0) {
       trans.issues.forEach(i => console.log(`    ⚠ ${i}`));
       // Don't fail the whole audit for translation quality, just warn
@@ -375,7 +375,7 @@ for (const lang of LANGUAGES) {
     console.log(`  Conjugation: SKIP (${conj.error})`);
   } else {
     const status = conj.pass ? '\x1b[32mPASS\x1b[0m' : '\x1b[31mFAIL\x1b[0m';
-    console.log(`  Conjugation: ${status} — ${conj.passed}/${conj.tested} verbs OK`);
+    console.log(`  Conjugation: ${status} – ${conj.passed}/${conj.tested} verbs OK`);
     if (conj.issues.length > 0) {
       conj.issues.forEach(i => console.log(`    ⚠ ${i}`));
       allPassed = false;

@@ -4,7 +4,7 @@
  *
  * Reads scripts/edge-tts-cards.json (manifest of cards using Edge TTS)
  * and regenerates each card's audio via Google Cloud TTS. Existing audio
- * files in `public/quest-audio/` are overwritten in place — no deck.json
+ * files in `public/quest-audio/` are overwritten in place – no deck.json
  * changes needed.
  *
  * Skipping rules:
@@ -41,7 +41,7 @@ const VOICES = {
   german:     { code: 'de-DE', voice: 'de-DE-Wavenet-A' },
   dutch:      { code: 'nl-NL', voice: 'nl-NL-Wavenet-A' },
   swedish:    { code: 'sv-SE', voice: 'sv-SE-Wavenet-A' },
-  // welsh:   no Google TTS voice available — skipped
+  // welsh:   no Google TTS voice available – skipped
   hindi:      { code: 'hi-IN', voice: 'hi-IN-Wavenet-A' },
   turkish:    { code: 'tr-TR', voice: 'tr-TR-Wavenet-A' },
   russian:    { code: 'ru-RU', voice: 'ru-RU-Wavenet-A' },
@@ -84,7 +84,7 @@ function ttsOnce(text, voiceConf) {
         catch (e) { return reject({ transient: true, msg: 'JSON parse fail: ' + data.slice(0, 80) }); }
         if (j.error) {
           const msg = j.error.message || 'unknown error';
-          // "API key expired" is a known rate-limit disguise — retry
+          // "API key expired" is a known rate-limit disguise – retry
           const transient = /expired|RESOURCE_EXHAUSTED|UNAVAILABLE|TOO_MANY_REQUESTS/i.test(msg) || res.statusCode >= 500;
           return reject({ transient, msg, fatal: /BILLING_DISABLED|SERVICE_DISABLED/.test(msg) });
         }
@@ -154,7 +154,7 @@ async function processLang(lang, manifest) {
       console.log(`  ${id}: ERROR ${(e.msg || e.message || String(e)).slice(0, 120)}`);
       failed++;
       if (e.fatal) {
-        console.log(`  Fatal error — aborting ${lang}`);
+        console.log(`  Fatal error – aborting ${lang}`);
         break;
       }
     }
@@ -168,7 +168,7 @@ async function main() {
   const manifest = JSON.parse(fs.readFileSync('scripts/edge-tts-cards.json', 'utf8'));
   const langs = langArg ? [langArg] : Object.keys(VOICES);
   if (!langArg) {
-    console.log('Skipping welsh — no Google TTS voice exists for cy-GB.');
+    console.log('Skipping welsh – no Google TTS voice exists for cy-GB.');
   }
   const totals = { done: 0, failed: 0 };
   for (const lang of langs) {

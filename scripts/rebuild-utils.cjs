@@ -10,7 +10,7 @@
 const https = require('https');
 const API_KEY = 'AIzaSyBImkCNYcI1m9mloUNcYcDN2L5dQZwADzI';
 
-// Common English words — if Google returns something NOT in this set
+// Common English words – if Google returns something NOT in this set
 // and it's short (<6 chars), it might be truncated
 const REAL_ENGLISH_WORDS = new Set([
   // 2-letter
@@ -410,7 +410,7 @@ function validateAndEnrich(word, individualTranslation, contexts) {
     for (const w of allContextWords) {
       if (STOP.has(w)) continue;
       if (indivWords.includes(w)) continue; // already in individual translation
-      // This is a potential alternative sense — but only if it's not just a common word
+      // This is a potential alternative sense – but only if it's not just a common word
       // We'll collect all and pick the most frequent
       alternativeSenses.set(w, (alternativeSenses.get(w) || 0) + 1);
     }

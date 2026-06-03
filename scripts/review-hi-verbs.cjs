@@ -954,7 +954,7 @@ for (const e of entries) {
       // Check for bad verb forms after "to"
       else if (isBadVerbForm(afterTo)) {
         issueType = 'bad-verb-form';
-        note = `"to ${afterTo}" — bad verb form`;
+        note = `"to ${afterTo}" – bad verb form`;
         // Try to fix by lemmatizing
         const base = afterTo.replace(/ed$/, '').replace(/ing$/, '').replace(/s$/, '');
         if (KNOWN_ENGLISH_VERBS.has(base)) {

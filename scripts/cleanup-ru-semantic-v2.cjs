@@ -68,7 +68,7 @@ for (const f of fixes) {
     continue;
   }
 
-  // 2. Google gave past tense for verbs — revert unless original was genuinely wrong
+  // 2. Google gave past tense for verbs – revert unless original was genuinely wrong
   const pastTenseWords = ['saw', 'took', 'drove', 'met', 'stood', 'went', 'came', 'gave',
     'made', 'ran', 'ate', 'drank', 'sang', 'wrote', 'bought', 'sold', 'found', 'knew',
     'said', 'told', 'got', 'thought', 'brought', 'felt', 'put', 'left', 'kept', 'lost',
@@ -125,17 +125,17 @@ for (const f of fixes) {
   }
 
   // 4. Google translating a noun form differently but both correct
-  // e.g. "house" → "home", "city" → "cities" — usually fine, revert unless original was garbled
+  // e.g. "house" → "home", "city" → "cities" – usually fine, revert unless original was garbled
   const garbledOld = /\\|waf|drif|[^a-zA-Z\s;,()\-'./!?0-9]/.test(oldEn) ||
                      oldEn.trim().length <= 2;
 
   if (!garbledOld && newEn.length <= oldEn.length * 0.5 && !isPastTense) {
-    // New is much shorter — likely losing information, revert
+    // New is much shorter – likely losing information, revert
     revert.push({ key, reason: 'info_loss', oldEn });
     continue;
   }
 
-  // 5. Genuine fixes — keep
+  // 5. Genuine fixes – keep
   keep.push({ key, oldEn, newEn });
 }
 

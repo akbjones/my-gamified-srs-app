@@ -44,7 +44,7 @@ function generateDuds(correctWords: string[], siblingCards: QuestCard[], count: 
   for (const card of siblingCards) {
     for (const raw of card.target.split(/\s+/)) {
       const w = normalizeTileWord(raw);
-      if (w.length < 3) continue;          // skip "y", "a", "de", etc. — too obvious
+      if (w.length < 3) continue;          // skip "y", "a", "de", etc. – too obvious
       if (correctSet.has(w)) continue;      // already in the sentence
       if (seen.has(w)) continue;            // dedupe
       seen.add(w);
@@ -146,9 +146,9 @@ export function buildChallengeQuestions(cards: QuestCard[], count: number): Chal
 
 // ── Answer Checking ─────────────────────────────────────────
 // Spanish has flexible word order, so we give detailed feedback:
-//   'exact'     — perfect match (original order)
-//   'close'     — right words, 1-2 in wrong position (still counts as correct)
-//   'wrong'     — picked a dud word
+//   'exact'     – perfect match (original order)
+//   'close'     – right words, 1-2 in wrong position (still counts as correct)
+//   'wrong'     – picked a dud word
 export interface TileCheckResult {
   verdict: 'exact' | 'close' | 'wrong';
   misplacedWords?: string[];   // words in wrong position (for 'close')
@@ -164,7 +164,7 @@ export function checkTileAnswer(placed: string[], correct: string[]): TileCheckR
   const correctSorted = [...correct].sort();
   if (!placedSorted.every((w, i) => w === correctSorted[i])) return { verdict: 'wrong' };
 
-  // All right words, just in different order — find which are misplaced
+  // All right words, just in different order – find which are misplaced
   const misplaced: string[] = [];
   for (let i = 0; i < placed.length; i++) {
     if (placed[i] !== correct[i]) misplaced.push(placed[i]);

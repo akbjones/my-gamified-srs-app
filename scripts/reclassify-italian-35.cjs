@@ -52,7 +52,7 @@ function isExpression(t, e) {
 // ── Descriptions ─────────────────────────────────────────────
 // Sentences about describing: c'è/ci sono, colors, sizes, adjectives
 function isDescription(t, e) {
-  // "c'è" / "ci sono" (there is/are) — strong signal
+  // "c'è" / "ci sono" (there is/are) – strong signal
   if (/\bc'è\b/i.test(t) || /\bci sono\b/i.test(t)) return true;
   // "è/sono + adjective" patterns (description-focused)
   if (/\b(è|sono)\s+(grande|piccol[oa]|bell[oa]|brutt[oa]|alt[oa]|bass[oa]|lung[oa]|cort[oa]|vecchi[oa]|nuov[oa]|pien[oa]|vuot[oa]|modern[oa]|antic[oa]|comod[oa]|elegant[ei]|hermos[oa]|important[ei]|famos[oa]|interessant[ei]|tranquill[oa]|rumoros[oa]|pulit[oa]|sporc[oa]|chiar[oa]|scur[oa]|cald[oa]|fresc[oa]|luminos[oa]|ampi[oa]|strett[oa]|bellissim[oa]|pesant[ei]|legg[ei]r[oa])/i.test(t)) return true;
@@ -72,7 +72,7 @@ function isDescription(t, e) {
 // ── Irregular present verbs ──────────────────────────────────
 // Only match when an irregular verb is the MAIN action (not just copula "è")
 function hasIrregularPresentFocus(t) {
-  // essere — identity/state forms (NOT "è" as copula in descriptions)
+  // essere – identity/state forms (NOT "è" as copula in descriptions)
   if (/\b(sono|sei|siamo|siete)\b/i.test(t) && !/\b(c'è|ci sono)\b/i.test(t)) return true;
   // avere
   if (/\b(ho|hai|ha|abbiamo|avete|hanno)\b/i.test(t) && !/\b(ho|hai|ha|abbiamo|avete|hanno)\s+\w+(ato|uto|ito|tto|sto|rso|rto|sso|nto|lto)\b/i.test(t)) return true;

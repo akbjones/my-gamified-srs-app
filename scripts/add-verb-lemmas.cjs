@@ -98,7 +98,7 @@ function processTurkish() {
   function findTurkishInfinitive(form) {
     if (form.endsWith('mek') || form.endsWith('mak')) return form;
 
-    // Strategy 1: Progressive trimming — only accept actual infinitives from the dict
+    // Strategy 1: Progressive trimming – only accept actual infinitives from the dict
     for (let i = form.length - 1; i >= 2; i--) {
       const prefix = form.slice(0, i);
       const mak = prefix + 'mak';
@@ -152,7 +152,7 @@ function processTurkish() {
       }
     }
 
-    // Strategy 3: suffix stripping — return even if not in dict infinitives set
+    // Strategy 3: suffix stripping – return even if not in dict infinitives set
     const hardenMap = { 'd': 't', 'b': 'p', 'c': 'ç', 'ğ': 'k' };
     for (const suffix of TENSE_SUFFIXES) {
       if (form.endsWith(suffix)) {
@@ -291,7 +291,7 @@ function processHindi() {
       }
     }
 
-    // Strategy 2: suffix stripping — return stem+ना even if not a known infinitive
+    // Strategy 2: suffix stripping – return stem+ना even if not a known infinitive
     for (const suffix of ALL_SUFFIXES) {
       if (form.endsWith(suffix)) {
         const stem = form.slice(0, -suffix.length);

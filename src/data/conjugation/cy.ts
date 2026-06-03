@@ -3,7 +3,7 @@
  * ------------------------
  * Welsh (Cymraeg) conjugation is distinctive among European languages:
  *
- * 1. The verb "bod" (to be) is central — used to form periphrastic tenses
+ * 1. The verb "bod" (to be) is central – used to form periphrastic tenses
  *    for the vast majority of verbs.
  * 2. Most verbs in spoken Welsh use PERIPHRASTIC forms:
  *      bod (conjugated) + yn + verbal noun
@@ -42,7 +42,7 @@ interface IrregularEntry {
 }
 
 const IRREGULARS: Record<string, IrregularEntry> = {
-  // ── bod (to be) — the most important Welsh verb ──
+  // ── bod (to be) – the most important Welsh verb ──
   'bod': {
     vn: 'bod',
     present: [
@@ -318,7 +318,7 @@ const IRREGULARS: Record<string, IrregularEntry> = {
     imperative: '-',
   },
 
-  // ── gwybod (to know — facts) ──
+  // ── gwybod (to know – facts) ──
   'gwybod': {
     vn: 'gwybod',
     present: [
@@ -364,7 +364,7 @@ const IRREGULARS: Record<string, IrregularEntry> = {
     imperative: '-',
   },
 
-  // ── adnabod (to know / recognize — people, places) ──
+  // ── adnabod (to know / recognize – people, places) ──
   'adnabod': {
     vn: 'adnabod',
     present: [
@@ -1543,7 +1543,7 @@ function buildPeriphrasticConditional(vn: string): Forms {
  * Build imperative forms. Welsh imperatives are typically:
  *   2sg: verb stem + -a (familiar)
  *   2pl: verb stem + -wch (formal / plural)
- * Slots: [1sg, 2sg, 3sg, 1pl, 2pl, 3pl] — only 2sg and 2pl filled, others stay '-'.
+ * Slots: [1sg, 2sg, 3sg, 1pl, 2pl, 3pl] – only 2sg and 2pl filled, others stay '-'.
  */
 function buildImperative(form: string): Forms {
   return ['-', form, '-', '-', '-', '-'];

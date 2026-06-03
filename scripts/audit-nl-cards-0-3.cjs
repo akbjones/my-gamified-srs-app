@@ -77,7 +77,7 @@ const STOP_WORDS = new Set([
 // ── Tokenize Dutch sentence ─────────────────────────────────
 function tokenize(sentence) {
   return sentence
-    .replace(/[.,!?;:()"""''—–\-\[\]\/]/g, ' ')
+    .replace(/[.,!?;:()"""''––\-\[\]\/]/g, ' ')
     .split(/\s+/)
     .filter(w => w.length > 0);
 }

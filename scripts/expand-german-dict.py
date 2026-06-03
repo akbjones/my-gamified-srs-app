@@ -784,14 +784,14 @@ def build_alignment_dict(cards):
 def tokenize(sentence: str) -> set:
     """Tokenize a German sentence into lowercase words."""
     # Remove punctuation, split by whitespace
-    cleaned = re.sub(r'[.,!?;:"""«»()—–…\'\'`\-/\[\]{}0-9]', ' ', sentence)
+    cleaned = re.sub(r'[.,!?;:"""«»()––…\'\'`\-/\[\]{}0-9]', ' ', sentence)
     tokens = {t.lower().strip() for t in cleaned.split() if len(t.strip()) >= 2}
     return tokens
 
 
 def tokenize_with_originals(sentence: str) -> list:
     """Tokenize preserving original casing for POS detection."""
-    cleaned = re.sub(r'[.,!?;:"""«»()—–…\'\'`\-/\[\]{}]', ' ', sentence)
+    cleaned = re.sub(r'[.,!?;:"""«»()––…\'\'`\-/\[\]{}]', ' ', sentence)
     return [t.strip() for t in cleaned.split() if len(t.strip()) >= 2]
 
 

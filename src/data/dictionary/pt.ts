@@ -1,5 +1,5 @@
 /**
- * Brazilian Portuguese dictionary — word lookup with IPA pronunciations.
+ * Brazilian Portuguese dictionary – word lookup with IPA pronunciations.
  * Every word appearing in the Portuguese deck should have an entry.
  */
 
@@ -471,7 +471,7 @@ const CLITICS = ['se', 'me', 'te', 'lhe', 'lhes', 'nos', 'vos', 'o', 'a', 'os', 
   'lo', 'la', 'los', 'las', 'no', 'na', 'ei', 'á', 'ão', 'ia', 'emos'];
 
 export function lookupWord(raw: string): DictEntry | null {
-  let clean = raw.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()—–«»\d/]/g, '');
+  let clean = raw.toLowerCase().replace(/[¿¡.,!?;:"""\u2018\u2019()––«»\d/]/g, '');
   if (!clean) return null;
 
   // Direct match

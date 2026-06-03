@@ -101,12 +101,12 @@ const grammarTips = {
   'node-07': [
     '"Jag skulle vilja ha..." is the polite way to order at a restaurant in Swedish.',
     '"Notan, tack" is how you ask for the bill. Tips are not expected but rounding up is common.',
-    '"Smörgås" originally meant "butter goose" — a traditional Swedish open sandwich.',
+    '"Smörgås" originally meant "butter goose" – a traditional Swedish open sandwich.',
   ],
   'node-08': [
     '"Det gör inget" literally means "it does nothing" but is used like "it doesn\'t matter."',
     '"Oj" is a very common Swedish exclamation of surprise, used constantly in daily speech.',
-    '"Lagom" means "just the right amount" — a uniquely Swedish concept with no direct English translation.',
+    '"Lagom" means "just the right amount" – a uniquely Swedish concept with no direct English translation.',
   ],
   'node-09': [
     'Swedish has four verb groups with different past tense patterns. Group 1: -ade, Group 2: -de/-te.',
@@ -160,7 +160,7 @@ const grammarTips = {
   ],
   'node-29': [
     'Formal: "Ni" (you, formal), "Med vänliga hälsningar" (Kind regards). Used in business.',
-    'Informal: "du" (you), "Hej" / "Tjena" (Hi). Sweden is very informal — "du-reform" of the 1960s.',
+    'Informal: "du" (you), "Hej" / "Tjena" (Hi). Sweden is very informal – "du-reform" of the 1960s.',
   ],
   'node-30': [
     'Particle verbs change meaning with a stressed particle: "slå" (hit) → "slå upp" (look up).',

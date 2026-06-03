@@ -46,7 +46,7 @@ def turkish_to_ipa(word: str) -> str:
         c = chars[i]
 
         if c == 'ğ':
-            # ğ lengthens preceding vowel — represent as ː
+            # ğ lengthens preceding vowel – represent as ː
             if result and result[-1] not in ('.', ):
                 result.append('ː')
             i += 1
@@ -366,7 +366,7 @@ COMMON_WORDS = {
 def tokenize(text: str) -> list:
     """Tokenize a Turkish sentence into words."""
     # Remove punctuation but keep Turkish chars
-    text = re.sub(r"[.,!?;:\"\"\"''()—–\-…«»\[\]{}/<>@#$%^&*+=~`|\\]", ' ', text)
+    text = re.sub(r"[.,!?;:\"\"\"''()––\-…«»\[\]{}/<>@#$%^&*+=~`|\\]", ' ', text)
     # Handle apostrophes in proper nouns like Türkiye'den
     text = re.sub(r"'", "'", text)  # normalize fancy apostrophes
     words = text.lower().split()

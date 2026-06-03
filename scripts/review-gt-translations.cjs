@@ -272,12 +272,12 @@ const PARTICLES_GRAMMATICAL = {
 };
 
 // ============================================================
-// ANALYSIS ENGINE — manually calibrated
+// ANALYSIS ENGINE – manually calibrated
 // ============================================================
 
 function analyzeWord(word, googleTrans, cardEnglish, lang, wordIndex, totalWords, target) {
   const issues = [];
-  const w = word.toLowerCase().replace(/[.!?,;:¿¡—"""]/g, '');
+  const w = word.toLowerCase().replace(/[.!?,;:¿¡–"""]/g, '');
   const g = googleTrans.trim();
   const gLower = g.toLowerCase();
   const engLower = cardEnglish.toLowerCase();
@@ -410,7 +410,7 @@ function analyzeWord(word, googleTrans, cardEnglish, lang, wordIndex, totalWords
     issues.push({ type: 'WRONG_SENSE', detail: `"${word}" → "${g}" should be "with"`, severity: 'high' });
   }
   // Dutch het → "It" when means "the"
-  // (this is actually ambiguous — het = the/it in Dutch)
+  // (this is actually ambiguous – het = the/it in Dutch)
 
   // Swedish köttbullar → "noisette" (should be "meatballs")
   if (lang === 'sv' && w === 'köttbullar' && gLower === 'noisette') {
@@ -888,8 +888,8 @@ md += `## Systemic Patterns Found
 ### 1. Article/Copula → Pronoun (Romance Languages)
 The single most common and most damaging pattern. Google translates definite articles as pronouns:
 - Spanish: **el→"he"** (appears ~20+ times), la→"the" (correct sometimes)
-- Italian: **è→"And"** (catastrophic — "is" becomes "and"), la→"there"
-- French: **est→"East"** (catastrophic — most common verb becomes direction)
+- Italian: **è→"And"** (catastrophic – "is" becomes "and"), la→"there"
+- French: **est→"East"** (catastrophic – most common verb becomes direction)
 - Portuguese: **no→"node"**, está→"this", é→"and"
 
 ### 2. Wrong Sense for Homographs
@@ -905,8 +905,8 @@ Google preserves source-language capitalization. German capitalizes ALL nouns, s
 
 ### 4. Grammatical Particles Mistranslated
 Many languages have particles that don't map 1:1 to English:
-- Hindi: ने (agent marker), से, में, पर, को — these are postpositions Google handles inconsistently
-- Welsh: yn (verbal particle), wedi (perfective), ddim (negation) — Welsh grammar markers poorly handled
+- Hindi: ने (agent marker), से, में, पर, को – these are postpositions Google handles inconsistently
+- Welsh: yn (verbal particle), wedi (perfective), ddim (negation) – Welsh grammar markers poorly handled
 - Turkish: agglutinative suffixes (-da, -den, -yla) handled by Google within compound forms but isolated words lose context
 
 ### 5. Verb Form Issues
@@ -939,11 +939,11 @@ Google frequently gives inflected forms instead of dictionary base forms:
 
 ### Recommended Strategy
 
-1. **Primary source: Wiktionary** — already have rebuild script. Use for definitions, POS, IPA.
-2. **Secondary source: Google Translate with auto-fix pipeline** — only when Wiktionary has no entry.
+1. **Primary source: Wiktionary** – already have rebuild script. Use for definitions, POS, IPA.
+2. **Secondary source: Google Translate with auto-fix pipeline** – only when Wiktionary has no entry.
 3. **Auto-fix pipeline**: lowercase → function word table → verb base form → fragment trim.
-4. **Never use raw Google output** — even "perfect" translations often have capitalization issues.
-5. **Per-language function word tables are essential** — the 50 most common function words per language need hardcoded correct translations.
+4. **Never use raw Google output** – even "perfect" translations often have capitalization issues.
+5. **Per-language function word tables are essential** – the 50 most common function words per language need hardcoded correct translations.
 
 ### Expected Quality After Pipeline
 
@@ -1012,7 +1012,7 @@ console.log('Per-language:');
 for (const lang of Object.keys(data)) {
   const r = results[lang];
   const hi = r.allFlags.filter(f => f.severity === 'high').length;
-  console.log(`  ${langNames[lang].padEnd(11)} ${r.allFlags.length.toString().padStart(3)} issues / ${r.totalWords} words (${(r.allFlags.length / r.totalWords * 100).toFixed(1)}%) — ${hi} high-sev`);
+  console.log(`  ${langNames[lang].padEnd(11)} ${r.allFlags.length.toString().padStart(3)} issues / ${r.totalWords} words (${(r.allFlags.length / r.totalWords * 100).toFixed(1)}%) – ${hi} high-sev`);
 }
 console.log();
 console.log('Written to:');

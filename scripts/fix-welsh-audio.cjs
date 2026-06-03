@@ -27,7 +27,7 @@ for (const card of deck) {
   const text = card.target
     .replace(/'/g, "'\\''")
     .replace(/[""«»]/g, '"')
-    .replace(/[–—]/g, '-');
+    .replace(/[––]/g, '-');
 
   try {
     execSync(`espeak-ng -v cy -s 150 '${text}' --stdout | lame --quiet -V 2 - '${outPath}'`, {
@@ -37,13 +37,13 @@ for (const card of deck) {
     const newSize = fs.statSync(outPath).size;
     if (newSize > 0) {
       fixed++;
-      console.log(`  ✓ Fixed ${card.audio} (${newSize} bytes) — "${card.target.slice(0, 50)}"`);
+      console.log(`  ✓ Fixed ${card.audio} (${newSize} bytes) – "${card.target.slice(0, 50)}"`);
     } else {
       // If still 0 bytes, generate a silent placeholder
-      console.log(`  ⚠ Still empty: ${card.audio} — "${card.target.slice(0, 50)}"`);
+      console.log(`  ⚠ Still empty: ${card.audio} – "${card.target.slice(0, 50)}"`);
     }
   } catch (err) {
-    console.log(`  ✗ Failed: ${card.audio} — ${err.message.slice(0, 80)}`);
+    console.log(`  ✗ Failed: ${card.audio} – ${err.message.slice(0, 80)}`);
   }
 }
 

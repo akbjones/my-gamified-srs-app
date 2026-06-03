@@ -102,7 +102,7 @@ const LANG_CONFIGS = {
   },
   cy: {
     name: 'Welsh',
-    infinitiveEndings: [], // No consistent ending — use pos='v'
+    infinitiveEndings: [], // No consistent ending – use pos='v'
     extraInfinitiveEndings: [],
     conjugateFnName: 'conjugate',
     useVerbPosOnly: true,
@@ -188,7 +188,7 @@ function stripTypeScript(source) {
     // Remove return type annotations from function declarations
     // function foo(params): ReturnType { → function foo(params) {
     // Also handle object return types: function foo(params): { x: string; } {
-    // Strategy: find the last `{` on the line — that's the function body opener
+    // Strategy: find the last `{` on the line – that's the function body opener
     if (/function\s+\w+\s*\([^)]*\)\s*:/.test(line) && line.includes('{')) {
       // Find position of the last `{` (function body)
       const lastBrace = line.lastIndexOf('{');
@@ -284,7 +284,7 @@ function removeObjectReturnTypes(code) {
       let foundClosing = false;
       while (j < lines.length) {
         const jLine = lines[j];
-        // Check if this line contains `} {` — the return type closer + body opener
+        // Check if this line contains `} {` – the return type closer + body opener
         if (/^\s*\}\s*\{/.test(jLine) && braceDepth === 1) {
           foundClosing = true;
           break;
@@ -450,7 +450,7 @@ function stripParamTypes(params) {
     // Handle optional params: name?: Type → name
     const optMatch = trimmed.match(/^(\w+)\s*\??\s*:\s*.+$/);
     if (optMatch) return optMatch[1];
-    // Destructured params or rest params — leave as-is
+    // Destructured params or rest params – leave as-is
     return trimmed.replace(/:\s*\w+(\[\])?$/, '');
   }).join(', ');
 }
@@ -568,10 +568,10 @@ function loadDictionary(lang) {
  * We extract individual words that could appear in the dictionary.
  */
 function extractWords(form) {
-  if (!form || form === '-' || form === '—') return [];
+  if (!form || form === '-' || form === '–') return [];
 
   // Split on spaces and slash
-  const words = form.split(/[\s\/]+/).filter(w => w.length > 0 && w !== '-' && w !== '—');
+  const words = form.split(/[\s\/]+/).filter(w => w.length > 0 && w !== '-' && w !== '–');
   return words;
 }
 
@@ -615,7 +615,7 @@ function buildVerbMap(lang, config) {
       } else {
         for (const re of config.infinitiveEndings) {
           if (re.test(word) && (!config.minLength || word.length >= config.minLength)) {
-            // Try conjugating — if it works, it's likely a verb
+            // Try conjugating – if it works, it's likely a verb
             const result = conjugate(word);
             if (result) {
               isInfinitive = true;
@@ -693,7 +693,7 @@ function buildVerbMap(lang, config) {
       for (const form of forms) {
         const words = extractWords(form);
         for (const word of words) {
-          const lower = word.toLowerCase().replace(/[.,!?;:"""''()—–\-]/g, '');
+          const lower = word.toLowerCase().replace(/[.,!?;:"""''()––\-]/g, '');
           if (lower.length < 2) continue;
 
           // Don't map auxiliary/helper words to this verb
@@ -979,9 +979,9 @@ function applyDictionaryUpdates(source, updates, entries) {
 // ── Main ───────────────────────────────────────────────────────
 function main() {
   console.log('╔══════════════════════════════════════════════════════════╗');
-  console.log('║          BUILD VERB MAPS — Verb Form → Infinitive       ║');
+  console.log('║          BUILD VERB MAPS – Verb Form → Infinitive       ║');
   console.log('╚══════════════════════════════════════════════════════════╝');
-  if (DRY_RUN) console.log('\n  [DRY RUN MODE — no files will be modified]');
+  if (DRY_RUN) console.log('\n  [DRY RUN MODE – no files will be modified]');
 
   const results = [];
 

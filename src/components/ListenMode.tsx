@@ -41,7 +41,7 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
   const [idx, setIdx] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [showTranslation, setShowTranslation] = useState(false);
-  // Avoid re-triggering playback on every render — only fire when the
+  // Avoid re-triggering playback on every render – only fire when the
   // playback state actually changes.
   const playingForCardId = useRef<string | null>(null);
   const timerRef = useRef<number | null>(null);
@@ -70,7 +70,7 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
         }, 1800);
       }
     } catch {
-      // Audio failed — skip to next so we don't get stuck.
+      // Audio failed – skip to next so we don't get stuck.
       if (playingForCardId.current === card.id && isPlaying) {
         clearTimer();
         timerRef.current = window.setTimeout(() => setIdx(i => (i + 1) % playList.length), 800);
@@ -90,7 +90,7 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
     return () => {
       clearTimer();
     };
-    // playCurrent intentionally NOT in deps to avoid loop — it depends on
+    // playCurrent intentionally NOT in deps to avoid loop – it depends on
     // card.id which is already a dep.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [card?.id, isPlaying]);
@@ -106,7 +106,7 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
   if (!card) {
     return (
       <div className="flex flex-col h-dvh items-center justify-center px-6 text-center">
-        <p className="text-[var(--text-muted)]">No cards to play yet — study a few first.</p>
+        <p className="text-[var(--text-muted)]">No cards to play yet – study a few first.</p>
         <button onClick={onExit} className="mt-4 px-4 py-2 rounded-lg border border-[var(--border-color)] text-sm font-bold">Back</button>
       </div>
     );
@@ -133,7 +133,7 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
         </button>
       </header>
 
-      {/* Progress indicator — calm dot row, no progress bar */}
+      {/* Progress indicator – calm dot row, no progress bar */}
       <div className="flex items-center gap-1.5 mb-6 justify-center">
         <span className="text-[10px] font-mono text-[var(--text-muted)]">{idx + 1}</span>
         <span className="text-[10px] text-[var(--text-faint)]">/</span>

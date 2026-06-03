@@ -41,7 +41,7 @@ function addCards(cards) {
 }
 
 // ═══════════════════════════════════════════════════════════════
-// NODE 21: Subjunctive Nuances (C1)  — 38 → ~100 (+62 cards)
+// NODE 21: Subjunctive Nuances (C1)  – 38 → ~100 (+62 cards)
 // Covers: negated belief, como si, el hecho de que, reduplicative,
 //         indefinite antecedents, por más que, antes de que, etc.
 // ═══════════════════════════════════════════════════════════════
@@ -98,7 +98,7 @@ addCards([
 ]);
 
 // ═══════════════════════════════════════════════════════════════
-// NODE 22: Verb Phrases (C1)  — 79 → ~110 (+30 cards)
+// NODE 22: Verb Phrases (C1)  – 79 → ~110 (+30 cards)
 // Covers: llevar+gerund, acabar de, ponerse a, dejar de,
 //         volver a, seguir+gerund, andar+gerund, estar a punto de
 // ═══════════════════════════════════════════════════════════════
@@ -140,7 +140,7 @@ addCards([
 ]);
 
 // ═══════════════════════════════════════════════════════════════
-// NODE 23: Reported Speech (C1)  — 65 → ~100 (+35 cards)
+// NODE 23: Reported Speech (C1)  – 65 → ~100 (+35 cards)
 // Covers: dijo que, pregunto si, pidio que + subj,
 //         tense shifting, demonstrative shifts
 // ═══════════════════════════════════════════════════════════════
@@ -186,7 +186,7 @@ addCards([
 ]);
 
 // ═══════════════════════════════════════════════════════════════
-// NODE 24: Register & Style (C2)  — 63 → ~105 (+42 cards)
+// NODE 24: Register & Style (C2)  – 63 → ~105 (+42 cards)
 // Covers: cabe + inf, de haber + participle, future of probability,
 //         academic discourse markers, pretérito anterior patterns
 // ═══════════════════════════════════════════════════════════════
@@ -236,14 +236,14 @@ addCards([
 ]);
 
 // ═══════════════════════════════════════════════════════════════
-// NODE 25: Idiomatic Fluency (C2)  — 73 → ~105 (+32 cards)
+// NODE 25: Idiomatic Fluency (C2)  – 73 → ~105 (+32 cards)
 // Covers: proverbs, body part idioms, colloquial expressions,
 //         figurative language, common fixed phrases
 // ═══════════════════════════════════════════════════════════════
 
 addCards([
   // --- general ---
-  { target: "Al mal tiempo, buena cara.", english: "When life gives you lemons, make lemonade.", grammarNode: "node-25", grammar: "Proverb: literally 'in bad weather, a good face' — stay positive." },
+  { target: "Al mal tiempo, buena cara.", english: "When life gives you lemons, make lemonade.", grammarNode: "node-25", grammar: "Proverb: literally 'in bad weather, a good face' – stay positive." },
   { target: "Eso me suena a chino.", english: "That's all Greek to me.", grammarNode: "node-25" },
   { target: "No tiene ni pies ni cabeza lo que estas diciendo.", english: "What you're saying makes no sense at all.", grammarNode: "node-25", grammar: "No tener ni pies ni cabeza = to make no sense (literally: no feet or head)." },
   { target: "Le dio en el clavo con su analisis de la situacion.", english: "He hit the nail on the head with his analysis of the situation.", grammarNode: "node-25" },
@@ -280,7 +280,7 @@ addCards([
 ]);
 
 // ═══════════════════════════════════════════════════════════════
-// NODE 26: Complex Syntax (C2)  — 51 → ~100 (+49 cards)
+// NODE 26: Complex Syntax (C2)  – 51 → ~100 (+49 cards)
 // Covers: absolute participial clauses, nominalized infinitives,
 //         cleft sentences, comparative correlatives,
 //         multiple subordination, complex relative clauses

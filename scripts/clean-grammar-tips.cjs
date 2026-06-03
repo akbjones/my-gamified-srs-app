@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Phase A: strip grammar tips that are just a word-translation (X = Y.).
- * These add zero pedagogical value — the WordPopover already shows the
+ * These add zero pedagogical value – the WordPopover already shows the
  * translation when the user taps the word.
  *
  * Phase B: detect duplicate tips that appear on >= 5 cards and report them

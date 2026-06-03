@@ -27,7 +27,7 @@ function flagEntry(entry, lang) {
 
   // 1. Definition starts with leaked article (but source word is not a det/article)
   if (LEAKED_ARTICLES.test(en) && pos !== 'det' && pos !== 'art') {
-    // Allow "the" for some nouns that need it — skip if it's like "the + one word"
+    // Allow "the" for some nouns that need it – skip if it's like "the + one word"
     // Flag if it's "the X" where X alone would be the definition
     const withoutArticle = en.replace(/^(the|a|an)\s+/i, '');
     if (withoutArticle !== en) {
@@ -35,7 +35,7 @@ function flagEntry(entry, lang) {
     }
   }
 
-  // 2. Comma parts are NOT synonyms — check for sentence-fragment-like comma splits
+  // 2. Comma parts are NOT synonyms – check for sentence-fragment-like comma splits
   if (enParts.length >= 2) {
     // Check if parts look like unrelated words (not synonyms)
     // Heuristic: if one part is a common function word and the other is a content word
@@ -51,7 +51,7 @@ function flagEntry(entry, lang) {
     }
   }
 
-  // 3. Definition is very long (>60 chars) — likely a phrase/sentence
+  // 3. Definition is very long (>60 chars) – likely a phrase/sentence
   if (en.length > 60) {
     issues.push({ type: 'too_long', detail: `definition is ${en.length} chars` });
   }
@@ -87,7 +87,7 @@ function flagEntry(entry, lang) {
     issues.push({ type: 'too_many_meanings', detail: `${enParts.length} comma parts` });
   }
 
-  // 10. Check for leaked "not" — common in context bleed
+  // 10. Check for leaked "not" – common in context bleed
   if (/^not /i.test(en) && pos !== 'adv' && pos !== 'adj' && !word.match(/^(no|ni|ne|non|sin|sem|ohne|niet)/)) {
     issues.push({ type: 'leaked_not', detail: `starts with "not"` });
   }

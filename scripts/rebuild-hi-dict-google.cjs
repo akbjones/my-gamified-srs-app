@@ -526,7 +526,7 @@ async function main() {
     const rawTranslation = googleResults[key];
 
     if (rawTranslation === null || rawTranslation === undefined) {
-      // API failed — keep old
+      // API failed – keep old
       googleProcessed[key] = { text: entry.en || '?', isTransliteration: false, failed: true };
       continue;
     }
@@ -617,7 +617,7 @@ async function main() {
   const shuffled = [...devanagariResults].sort(() => Math.random() - 0.5);
   const sample = shuffled.slice(0, 200);
 
-  let md = `# Hindi Dictionary Google Rebuild — Preview (200 random samples)\n\n`;
+  let md = `# Hindi Dictionary Google Rebuild – Preview (200 random samples)\n\n`;
   md += `**Date:** ${new Date().toISOString().split('T')[0]}\n`;
   md += `**Total entries:** ${results.length}\n`;
   md += `**Changed:** ${changedCount}\n`;

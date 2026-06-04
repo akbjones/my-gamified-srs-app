@@ -736,7 +736,7 @@ const App: React.FC = () => {
                       setShowPlacementPrompt(false);
                       setView('PLACEMENT');
                     }}
-                    className="w-full py-2.5 rounded-xl text-sm font-bold btn-primary"
+                    className="w-full py-2.5 rounded-xl text-sm font-bold btn-primary normal-case tracking-normal"
                   >
                     Take the 2-min test
                   </button>
@@ -1001,7 +1001,7 @@ const App: React.FC = () => {
                       setShowNotifPrompt(false);
                       await handleToggleNotifications(true);
                     }}
-                    className="flex-1 py-2.5 rounded-xl text-sm font-bold btn-primary"
+                    className="flex-1 py-2.5 rounded-xl text-sm font-bold btn-primary normal-case tracking-normal"
                   >
                     Enable
                   </button>

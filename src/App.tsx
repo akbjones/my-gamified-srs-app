@@ -680,10 +680,10 @@ const App: React.FC = () => {
               <div className="relative" ref={langDropdownRef}>
                 <button
                   onClick={() => setShowLangDropdown(prev => !prev)}
-                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-base font-bold border border-violet-500/40 bg-violet-500/15 text-violet-600 dark:text-violet-300 hover:bg-violet-500/25 active:scale-95 transition-all"
+                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-bold border border-violet-500/40 bg-violet-500/15 text-violet-600 dark:text-violet-300 hover:bg-violet-500/25 active:scale-95 transition-all"
                 >
                   <span>{LANGUAGE_CONFIG[lang].name}</span>
-                  <ChevronDown size={16} className={`transition-transform ${showLangDropdown ? 'rotate-180' : ''}`} />
+                  <ChevronDown size={14} className={`transition-transform ${showLangDropdown ? 'rotate-180' : ''}`} />
                 </button>
                 {showLangDropdown && (
                   <div className="absolute right-0 top-full mt-1.5 w-56 stat-card p-2 z-40 animate-fade-in shadow-lg">
@@ -766,7 +766,7 @@ const App: React.FC = () => {
               }
             }}
             disabled={!hasCards}
-            className="w-full py-4 btn-primary rounded-2xl text-lg mb-2"
+            className="w-full py-6 btn-primary rounded-2xl text-lg mb-2"
           >
             {!hasCards ? (
               'All Caught Up'

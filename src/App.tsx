@@ -215,6 +215,7 @@ const App: React.FC = () => {
   const [showTools, setShowTools] = useState(false);
   const [showLangDropdown, setShowLangDropdown] = useState(false);
   const [showGoalMenu, setShowGoalMenu] = useState(false);
+  const [showLibraryMenu, setShowLibraryMenu] = useState(false);
   const [showLangPicker, setShowLangPicker] = useState(() => !localStorage.getItem('quest_first_launch_done'));
   const [showOnboarding, setShowOnboarding] = useState(() => !localStorage.getItem('onboarding_complete'));
   const [notifPrefs, setNotifPrefs] = useState<NotificationPrefs>(() => loadNotificationPrefs());
@@ -852,46 +853,51 @@ const App: React.FC = () => {
               to keep the home view focused on the primary action (Study)
               and the streak. They're still one tap away. */}
 
-          {/* Focus + Settings – 2-col row, equal width, matching horizontal layouts */}
-          <div className="grid grid-cols-2 gap-2 mb-2 relative">
+          {/* Focus / Library / Settings – 3-col row, vertical tiles
+              (icon top, label below) so each fits cleanly on a 375px
+              phone. All three full-color so none reads as subordinate.
+              Library replaces what used to be the standalone Topics/Vocab/
+              Favorites grid – the dropdown lists those three destinations. */}
+          <div className="grid grid-cols-3 gap-2 mb-2 relative">
             {(() => {
               const CurrentIcon = goal === 'general' ? Globe : goal === 'travel' ? Plane : goal === 'work' ? Briefcase : Heart;
               return (
                 <button
                   onClick={() => setShowGoalMenu(prev => !prev)}
-                  className="stat-card p-3 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex items-center gap-2.5"
+                  className={`stat-card p-2.5 transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex flex-col items-center gap-1.5 ${showGoalMenu ? 'border-[var(--accent)]/40 bg-[var(--accent)]/5' : ''}`}
                 >
-                  <div className="w-10 h-10 rounded-xl bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center shrink-0">
-                    <CurrentIcon size={18} className="text-[var(--accent)]" />
+                  <div className="w-9 h-9 rounded-lg bg-[var(--accent)]/15 border border-[var(--accent)]/30 flex items-center justify-center">
+                    <CurrentIcon size={16} className="text-[var(--accent)]" />
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <div className="text-[10px] font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-0.5">
-                      Focus
-                    </div>
-                    <div className="text-sm font-bold text-[var(--text-primary)] leading-tight truncate">
-                      {GOAL_CONFIG[goal].name}
-                    </div>
+                  <div className="text-xs font-bold text-[var(--text-primary)] leading-tight text-center truncate w-full">
+                    {GOAL_CONFIG[goal].name}
                   </div>
-                  <ChevronDown size={16} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showGoalMenu ? 'rotate-180' : ''}`} />
                 </button>
               );
             })()}
             <button
-              onClick={() => setShowTools(prev => !prev)}
-              className={`stat-card p-3.5 text-left transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex items-center gap-2.5 ${
-                showTools ? 'border-[var(--accent)]/40 bg-[var(--accent)]/5' : ''
-              }`}
+              onClick={() => setShowLibraryMenu(prev => !prev)}
+              className={`stat-card p-2.5 transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex flex-col items-center gap-1.5 ${showLibraryMenu ? 'border-blue-500/40 bg-blue-500/5' : ''}`}
             >
-              <div className="w-10 h-10 rounded-xl bg-slate-500/10 border border-slate-500/20 flex items-center justify-center shrink-0">
-                <Settings2 size={18} className="text-slate-500" />
+              <div className="w-9 h-9 rounded-lg bg-blue-500/15 border border-blue-500/30 flex items-center justify-center">
+                <BookOpen size={16} className="text-blue-500" />
               </div>
-              <div className="flex-1 min-w-0">
-                <div className="text-base font-bold text-[var(--text-primary)] leading-tight">
-                  Settings
-                </div>
+              <div className="text-xs font-bold text-[var(--text-primary)] leading-tight">
+                Library
               </div>
-              <ChevronDown size={16} className={`text-[var(--text-muted)] shrink-0 transition-transform ${showTools ? 'rotate-180' : ''}`} />
             </button>
+            <button
+              onClick={() => setShowTools(prev => !prev)}
+              className={`stat-card p-2.5 transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex flex-col items-center gap-1.5 ${showTools ? 'border-slate-500/40 bg-slate-500/5' : ''}`}
+            >
+              <div className="w-9 h-9 rounded-lg bg-slate-500/15 border border-slate-500/30 flex items-center justify-center">
+                <Settings2 size={16} className="text-slate-500" />
+              </div>
+              <div className="text-xs font-bold text-[var(--text-primary)] leading-tight">
+                Settings
+              </div>
+            </button>
+
             {showGoalMenu && (
               <>
                 <div className="fixed inset-0 z-20" onClick={() => setShowGoalMenu(false)} />
@@ -923,6 +929,41 @@ const App: React.FC = () => {
                 </div>
               </>
             )}
+
+            {showLibraryMenu && (() => {
+              const vocabCount = Object.keys(vocabMap).length;
+              const favCount = Object.keys(favoritesMap).length;
+              const items = [
+                { key: 'units',  label: 'Units',     sub: 'Grammar curriculum map',                                          Icon: BookOpen, color: 'text-[var(--accent)]', onClick: () => setView('TOPICS'),    available: true },
+                { key: 'vocab',  label: 'Vocab',     sub: vocabCount > 0 ? `${vocabCount} words you've seen` : 'Start studying to fill this',  Icon: PenTool,  color: 'text-blue-500',        onClick: () => setView('VOCAB'),     available: vocabCount > 0 },
+                { key: 'favs',   label: 'Favorites', sub: favCount > 0 ? `${favCount} saved items` : 'Tap Save in a popup to fill this',     Icon: Star,     color: 'text-yellow-500',      onClick: () => setView('FAVORITES'), available: favCount > 0 },
+              ];
+              return (
+                <>
+                  <div className="fixed inset-0 z-20" onClick={() => setShowLibraryMenu(false)} />
+                  <div className="absolute left-0 right-0 top-full mt-1.5 z-30 stat-card p-1.5 animate-fade-in">
+                    {items.map(it => (
+                      <button
+                        key={it.key}
+                        onClick={() => { if (it.available) { it.onClick(); setShowLibraryMenu(false); } }}
+                        disabled={!it.available}
+                        className={`w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg transition-all text-left ${
+                          it.available
+                            ? 'text-[var(--text-secondary)] hover:bg-[var(--bg-inset)]'
+                            : 'text-[var(--text-faint)] cursor-default'
+                        }`}
+                      >
+                        <it.Icon size={14} className={it.available ? it.color : ''} />
+                        <div className="flex-1 min-w-0">
+                          <div className="text-xs font-bold">{it.label}</div>
+                          <div className="text-[10px] text-[var(--text-muted)] mt-0.5">{it.sub}</div>
+                        </div>
+                      </button>
+                    ))}
+                  </div>
+                </>
+              );
+            })()}
           </div>
 
           {/* Notification prompt – centered modal with backdrop instead of
@@ -1027,58 +1068,6 @@ const App: React.FC = () => {
               </div>
 
               {/* Appearance */}
-              {/* Browse – moved out of the home grid to declutter. The
-                  three destinations share a row and only the available ones
-                  light up (Vocab/Favorites hide their count when empty). */}
-              <div className="pt-4 border-t border-[var(--border-color)] space-y-3">
-                <div className="text-xs font-bold text-[var(--text-secondary)] uppercase tracking-wide">Browse</div>
-                <div className="grid grid-cols-3 gap-2">
-                  <button
-                    onClick={() => setView('TOPICS')}
-                    className="flex flex-col items-center gap-1.5 px-2 py-3 rounded-xl border border-[var(--border-color)] hover:border-[var(--accent)]/40 active:scale-95 transition"
-                  >
-                    <BookOpen size={18} className="text-[var(--accent)]" />
-                    <span className="text-xs font-bold text-[var(--text-primary)]">Units</span>
-                  </button>
-                  {(() => {
-                    const vocabCount = Object.keys(vocabMap).length;
-                    const hasVocab = vocabCount > 0;
-                    return (
-                      <button
-                        onClick={() => hasVocab && setView('VOCAB')}
-                        disabled={!hasVocab}
-                        className={`flex flex-col items-center gap-1.5 px-2 py-3 rounded-xl border transition ${
-                          hasVocab
-                            ? 'border-[var(--border-color)] hover:border-blue-500/40 active:scale-95'
-                            : 'border-[var(--border-color)] opacity-40 cursor-default'
-                        }`}
-                      >
-                        <PenTool size={18} className={hasVocab ? 'text-blue-500' : 'text-[var(--text-muted)]'} />
-                        <span className="text-xs font-bold text-[var(--text-primary)]">Vocab{hasVocab ? ` · ${vocabCount}` : ''}</span>
-                      </button>
-                    );
-                  })()}
-                  {(() => {
-                    const favCount = Object.keys(favoritesMap).length;
-                    const hasFav = favCount > 0;
-                    return (
-                      <button
-                        onClick={() => hasFav && setView('FAVORITES')}
-                        disabled={!hasFav}
-                        className={`flex flex-col items-center gap-1.5 px-2 py-3 rounded-xl border transition ${
-                          hasFav
-                            ? 'border-[var(--border-color)] hover:border-yellow-400/40 active:scale-95'
-                            : 'border-[var(--border-color)] opacity-40 cursor-default'
-                        }`}
-                      >
-                        <Star size={18} className={hasFav ? 'text-yellow-500' : 'text-[var(--text-muted)]'} fill={hasFav ? 'currentColor' : 'none'} />
-                        <span className="text-xs font-bold text-[var(--text-primary)]">Favorites{hasFav ? ` · ${favCount}` : ''}</span>
-                      </button>
-                    );
-                  })()}
-                </div>
-              </div>
-
               <div className="pt-4 border-t border-[var(--border-color)] space-y-3">
                 <div className="text-xs font-bold text-[var(--text-secondary)] uppercase tracking-wide">Appearance</div>
                 <div className="flex items-center justify-between">

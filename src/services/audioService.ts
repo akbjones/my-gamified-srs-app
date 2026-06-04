@@ -262,17 +262,12 @@ export const playCardAudio = async (
     }
   }
 
-  // 3. Browser TTS fallback – but ONLY when no MP3 was available to try in
-  // the first place. If an audioFile was provided and just failed to load
-  // (network error, transient 404), we'd rather stay silent than play the
-  // robotic system voice that doesn't match the recorded woman voice.
-  // The user can tap the audio button to retry; the MP3 will likely succeed
-  // on second attempt now that the cache is warm.
-  //
-  // Awaited so callers (ListenMode auto-advance) wait for the actual
-  // utterance to finish before moving on, instead of cycling through
-  // cards while a previous speech is still mid-sentence.
-  if (!audioFile) {
-    await playBrowserTts(targetText, lang, speed);
-  }
+  // 3. Browser TTS fallback. Originally only fired when no audioFile was
+  // provided so we wouldn't mix the robot voice in mid-card after an
+  // MP3 failed partway through. But if the MP3 fetch itself fails (e.g.
+  // 404 because the file was never generated), staying silent meant
+  // ListenMode would silently zip past those cards in 1.8s each. Now
+  // we always fall through to browser TTS – callers await it so the
+  // listen loop waits for the actual speech to finish before advancing.
+  await playBrowserTts(targetText, lang, speed);
 };

@@ -215,18 +215,6 @@ const App: React.FC = () => {
   const [showTools, setShowTools] = useState(false);
   const [showLangDropdown, setShowLangDropdown] = useState(false);
   const [showGoalMenu, setShowGoalMenu] = useState(false);
-  // Progress bento expansion state – persisted so the user's preference
-  // sticks across reloads.
-  const [showProgressBento, setShowProgressBento] = useState(() => {
-    try { return localStorage.getItem('progress_expanded') === '1'; } catch { return false; }
-  });
-  const toggleProgressBento = () => {
-    setShowProgressBento(prev => {
-      const next = !prev;
-      try { localStorage.setItem('progress_expanded', next ? '1' : '0'); } catch {}
-      return next;
-    });
-  };
   const [showLangPicker, setShowLangPicker] = useState(() => !localStorage.getItem('quest_first_launch_done'));
   const [showOnboarding, setShowOnboarding] = useState(() => !localStorage.getItem('onboarding_complete'));
   const [notifPrefs, setNotifPrefs] = useState<NotificationPrefs>(() => loadNotificationPrefs());
@@ -691,10 +679,10 @@ const App: React.FC = () => {
               <div className="relative" ref={langDropdownRef}>
                 <button
                   onClick={() => setShowLangDropdown(prev => !prev)}
-                  className="flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold border border-[var(--border-color)] text-[var(--text-secondary)] hover:border-[var(--accent)]/40 hover:text-[var(--accent)] active:scale-95 transition-all"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-base font-bold border border-violet-500/40 bg-violet-500/15 text-violet-600 dark:text-violet-300 hover:bg-violet-500/25 active:scale-95 transition-all"
                 >
                   <span>{LANGUAGE_CONFIG[lang].name}</span>
-                  <ChevronDown size={14} className={`transition-transform ${showLangDropdown ? 'rotate-180' : ''}`} />
+                  <ChevronDown size={16} className={`transition-transform ${showLangDropdown ? 'rotate-180' : ''}`} />
                 </button>
                 {showLangDropdown && (
                   <div className="absolute right-0 top-full mt-1.5 w-56 stat-card p-2 z-40 animate-fade-in shadow-lg">
@@ -824,11 +812,8 @@ const App: React.FC = () => {
             const streak = userStats.streak;
             return (
               <>
-                <button
-                  onClick={toggleProgressBento}
-                  className="w-full stat-card px-4 py-3 mb-2 flex items-center gap-4 hover:border-[var(--border-hover)] active:scale-[0.995] transition-all text-left"
-                  aria-expanded={showProgressBento}
-                  aria-controls="progress-bento"
+                <div
+                  className="w-full stat-card px-4 py-3 mb-2 flex items-center gap-4"
                 >
                   {/* Progress bar */}
                   <div className="flex-1 min-w-0">
@@ -858,121 +843,14 @@ const App: React.FC = () => {
                       </span>
                     </div>
                   </div>
-                  {/* Expand chevron */}
-                  <ChevronDown
-                    size={16}
-                    className={`shrink-0 text-[var(--text-muted)] transition-transform ${showProgressBento ? 'rotate-180' : ''}`}
-                  />
-                </button>
-
-                {/* Bento – 4 calm stats that mean something. No XP, no badges.
-                    Words = vocab breadth; Memory = long-term retention rate;
-                    Learned = cards fully memorized; Days = total practice days. */}
-                {showProgressBento && (() => {
-                  const wordsCount = Object.keys(vocabMap).length;
-                  const cardsLearned = userStats.cardsLearned;
-                  const allDeckCards = deck.filter(c => !c.isSuspended);
-                  const longTerm = allDeckCards.filter(c => (c.interval || 0) >= 21).length;
-                  const memoryPct = allDeckCards.length > 0
-                    ? Math.round((longTerm / allDeckCards.length) * 100)
-                    : 0;
-                  // Approximate days active: 1 + days between firstSeen and now
-                  // when there's at least 1 review. Calm proxy, no streak guilt.
-                  const firstReviewTs = userStats.totalReviews > 0
-                    ? Math.min(...Object.values(vocabMap).map(v => v.firstSeen).filter(Boolean), Date.now())
-                    : Date.now();
-                  const daysActive = userStats.totalReviews > 0
-                    ? Math.max(1, Math.ceil((Date.now() - firstReviewTs) / 86400000))
-                    : 0;
-                  return (
-                    <div id="progress-bento" className="grid grid-cols-2 gap-2 mb-3 animate-fade-in">
-                      <div className="stat-card p-4">
-                        <BookOpen size={14} className="text-[var(--text-muted)] mb-1.5" />
-                        <div className="text-[9px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-1">Words</div>
-                        <div className="text-2xl font-mono font-black text-[var(--text-primary)] leading-none">{wordsCount.toLocaleString()}</div>
-                        <div className="text-[10px] text-[var(--text-muted)] mt-1 leading-tight">unique words in sentences</div>
-                      </div>
-                      <div className="stat-card p-4">
-                        <BarChart3 size={14} className="text-[var(--text-muted)] mb-1.5" />
-                        <div className="text-[9px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-1">Memory</div>
-                        <div className="text-2xl font-mono font-black text-[var(--text-primary)] leading-none">{memoryPct}%</div>
-                        <div className="text-[10px] text-[var(--text-muted)] mt-1 leading-tight">long-term recall (3+ weeks)</div>
-                      </div>
-                      <div className="stat-card p-4">
-                        <CheckCheck size={14} className="text-[var(--text-muted)] mb-1.5" />
-                        <div className="text-[9px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-1">Learned</div>
-                        <div className="text-2xl font-mono font-black text-[var(--text-primary)] leading-none">{cardsLearned.toLocaleString()}</div>
-                        <div className="text-[10px] text-[var(--text-muted)] mt-1 leading-tight">cards in long memory</div>
-                      </div>
-                      <div className="stat-card p-4">
-                        <CalendarDays size={14} className="text-[var(--text-muted)] mb-1.5" />
-                        <div className="text-[9px] font-bold uppercase tracking-widest text-[var(--text-muted)] mb-1">Days</div>
-                        <div className="text-2xl font-mono font-black text-[var(--text-primary)] leading-none">{daysActive}</div>
-                        <div className="text-[10px] text-[var(--text-muted)] mt-1 leading-tight">days you've practiced</div>
-                      </div>
-                    </div>
-                  );
-                })()}
+                </div>
               </>
             );
           })()}
 
-          {/* Quick-access grid: Units + Vocabulary + Favorites – compact 3-col. */}
-          {(() => {
-            const vocabCount = Object.keys(vocabMap).length;
-            const hasVocab = vocabCount > 0;
-            const favCount = Object.keys(favoritesMap).length;
-            const hasFav = favCount > 0;
-            return (
-            <div className="grid grid-cols-3 gap-2 mb-2">
-              <button
-                onClick={() => setView('TOPICS')}
-                className="stat-card p-2.5 text-center transition-all hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer flex flex-col items-center gap-1"
-              >
-                <div className="w-9 h-9 rounded-lg bg-[var(--accent)]/10 border border-[var(--accent)]/20 flex items-center justify-center">
-                  <BookOpen size={16} className="text-[var(--accent)]" />
-                </div>
-                <div className="text-[10px] font-bold text-[var(--text-primary)] uppercase tracking-wider leading-tight">
-                  Units
-                </div>
-              </button>
-
-              <button
-                onClick={() => hasVocab && setView('VOCAB')}
-                disabled={!hasVocab}
-                className={`stat-card p-2.5 text-center transition-all flex flex-col items-center gap-1 ${
-                  hasVocab
-                    ? 'hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer'
-                    : 'grayscale opacity-50 cursor-default'
-                }`}
-              >
-                <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${hasVocab ? 'bg-blue-500/10 border border-blue-500/20' : 'bg-[var(--bg-inset)] border border-[var(--border-color)]'}`}>
-                  <PenTool size={16} className={hasVocab ? 'text-blue-500' : 'text-[var(--text-muted)]'} />
-                </div>
-                <div className="text-[10px] font-bold text-[var(--text-primary)] uppercase tracking-wider leading-tight">
-                  Vocab · {vocabCount}
-                </div>
-              </button>
-
-              <button
-                onClick={() => hasFav && setView('FAVORITES')}
-                disabled={!hasFav}
-                className={`stat-card p-2.5 text-center transition-all flex flex-col items-center gap-1 ${
-                  hasFav
-                    ? 'hover:border-[var(--border-hover)] active:scale-[0.99] cursor-pointer'
-                    : 'grayscale opacity-50 cursor-default'
-                }`}
-              >
-                <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${hasFav ? 'bg-yellow-400/10 border border-yellow-400/30' : 'bg-[var(--bg-inset)] border border-[var(--border-color)]'}`}>
-                  <Star size={16} className={hasFav ? 'text-yellow-500' : 'text-[var(--text-muted)]'} fill={hasFav ? 'currentColor' : 'none'} />
-                </div>
-                <div className="text-[10px] font-bold text-[var(--text-primary)] uppercase tracking-wider leading-tight">
-                  Favorites · {favCount}
-                </div>
-              </button>
-            </div>
-            );
-          })()}
+          {/* Units / Vocab / Favorites moved into the Settings panel below
+              to keep the home view focused on the primary action (Study)
+              and the streak. They're still one tap away. */}
 
           {/* Focus + Settings – 2-col row, equal width, matching horizontal layouts */}
           <div className="grid grid-cols-2 gap-2 mb-2 relative">
@@ -1149,6 +1027,58 @@ const App: React.FC = () => {
               </div>
 
               {/* Appearance */}
+              {/* Browse – moved out of the home grid to declutter. The
+                  three destinations share a row and only the available ones
+                  light up (Vocab/Favorites hide their count when empty). */}
+              <div className="pt-4 border-t border-[var(--border-color)] space-y-3">
+                <div className="text-xs font-bold text-[var(--text-secondary)] uppercase tracking-wide">Browse</div>
+                <div className="grid grid-cols-3 gap-2">
+                  <button
+                    onClick={() => setView('TOPICS')}
+                    className="flex flex-col items-center gap-1.5 px-2 py-3 rounded-xl border border-[var(--border-color)] hover:border-[var(--accent)]/40 active:scale-95 transition"
+                  >
+                    <BookOpen size={18} className="text-[var(--accent)]" />
+                    <span className="text-xs font-bold text-[var(--text-primary)]">Units</span>
+                  </button>
+                  {(() => {
+                    const vocabCount = Object.keys(vocabMap).length;
+                    const hasVocab = vocabCount > 0;
+                    return (
+                      <button
+                        onClick={() => hasVocab && setView('VOCAB')}
+                        disabled={!hasVocab}
+                        className={`flex flex-col items-center gap-1.5 px-2 py-3 rounded-xl border transition ${
+                          hasVocab
+                            ? 'border-[var(--border-color)] hover:border-blue-500/40 active:scale-95'
+                            : 'border-[var(--border-color)] opacity-40 cursor-default'
+                        }`}
+                      >
+                        <PenTool size={18} className={hasVocab ? 'text-blue-500' : 'text-[var(--text-muted)]'} />
+                        <span className="text-xs font-bold text-[var(--text-primary)]">Vocab{hasVocab ? ` · ${vocabCount}` : ''}</span>
+                      </button>
+                    );
+                  })()}
+                  {(() => {
+                    const favCount = Object.keys(favoritesMap).length;
+                    const hasFav = favCount > 0;
+                    return (
+                      <button
+                        onClick={() => hasFav && setView('FAVORITES')}
+                        disabled={!hasFav}
+                        className={`flex flex-col items-center gap-1.5 px-2 py-3 rounded-xl border transition ${
+                          hasFav
+                            ? 'border-[var(--border-color)] hover:border-yellow-400/40 active:scale-95'
+                            : 'border-[var(--border-color)] opacity-40 cursor-default'
+                        }`}
+                      >
+                        <Star size={18} className={hasFav ? 'text-yellow-500' : 'text-[var(--text-muted)]'} fill={hasFav ? 'currentColor' : 'none'} />
+                        <span className="text-xs font-bold text-[var(--text-primary)]">Favorites{hasFav ? ` · ${favCount}` : ''}</span>
+                      </button>
+                    );
+                  })()}
+                </div>
+              </div>
+
               <div className="pt-4 border-t border-[var(--border-color)] space-y-3">
                 <div className="text-xs font-bold text-[var(--text-secondary)] uppercase tracking-wide">Appearance</div>
                 <div className="flex items-center justify-between">

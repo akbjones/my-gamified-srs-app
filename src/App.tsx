@@ -648,9 +648,9 @@ const App: React.FC = () => {
         <section className="animate-fade-in">
           {/* Header row: title + language picker */}
           <header className="pt-2 pb-2.5 flex items-center justify-between">
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-2">
               {/* Animated atom – in-app logo (PWA home-screen icon is separate, see public/icon.svg) */}
-              <svg viewBox="-2 -2 36 36" className="w-11 h-11 text-[var(--accent)]" fill="none" overflow="visible">
+              <svg viewBox="-2 -2 36 36" className="w-9 h-9 text-[var(--accent)]" fill="none" overflow="visible">
                 {/* Orbit paths (using <path> so animateMotion works) */}
                 <path id="orb1" d="M2,16 A14,5 0 1,0 30,16 A14,5 0 1,0 2,16" stroke="currentColor" strokeWidth="1.2" opacity="0.5" />
                 <g transform="rotate(60 16 16)">
@@ -671,7 +671,7 @@ const App: React.FC = () => {
                   <animate attributeName="r" values="2.5;3;2.5" dur="2s" repeatCount="indefinite" />
                 </circle>
               </svg>
-              <h1 className="text-2xl font-black tracking-[0.2em] uppercase text-[var(--accent)]" style={{ fontFamily: "'Orbitron', sans-serif" }}>
+              <h1 className="text-xl font-black tracking-[0.15em] uppercase text-[var(--accent)]" style={{ fontFamily: "'Orbitron', sans-serif" }}>
                 LANGLAB
               </h1>
             </div>

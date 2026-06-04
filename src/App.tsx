@@ -231,6 +231,9 @@ const App: React.FC = () => {
   const [showOnboarding, setShowOnboarding] = useState(() => !localStorage.getItem('onboarding_complete'));
   const [notifPrefs, setNotifPrefs] = useState<NotificationPrefs>(() => loadNotificationPrefs());
   const [showNotifPrompt, setShowNotifPrompt] = useState(false);
+  // Placement test offer – shown as a modal interstitial the first time
+  // the user taps Study in a language they haven't placed in yet.
+  const [showPlacementPrompt, setShowPlacementPrompt] = useState(false);
   const langDropdownRef = useRef<HTMLDivElement>(null);
   // Undo stack for going back to previous cards
   const [answerHistory, setAnswerHistory] = useState<Array<{
@@ -718,35 +721,61 @@ const App: React.FC = () => {
             </div>
           </header>
 
-          {/* Placement test CTA – compact banner, shown until completed */}
-          {!isPlacementComplete(lang) && (
-            <div className="stat-card px-3 py-2.5 mb-2 border-amber-500/30 flex items-center gap-2">
-              <p className="flex-1 text-xs text-[var(--text-secondary)] leading-snug">
-                Know some {LANGUAGE_CONFIG[lang].name}? <span className="text-[var(--text-muted)]">Skip ahead with a 2-min test.</span>
-              </p>
-              <button
-                onClick={() => setView('PLACEMENT')}
-                className="shrink-0 px-3.5 py-1.5 btn-primary rounded-lg text-[10px]"
+          {/* Placement test interstitial – appears once when the user taps
+              Study for a language they haven't placed in. Two choices: take
+              the 2-min test, or skip and start at level 0. Either dismisses
+              the prompt for good (setPlacementComplete is also called on
+              skip so it never re-appears). */}
+          {showPlacementPrompt && (
+            <div
+              className="fixed inset-0 z-[10000] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in"
+              onClick={() => setShowPlacementPrompt(false)}
+            >
+              <div
+                className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-6 max-w-sm w-full shadow-2xl"
+                onClick={e => e.stopPropagation()}
               >
-                Test
-              </button>
-              <button
-                onClick={() => {
-                  setPlacementComplete(lang);
-                  setDeck(prev => [...prev]);
-                }}
-                className="shrink-0 p-1.5 rounded-lg text-[var(--text-muted)] hover:text-[var(--text-secondary)] hover:bg-[var(--bg-inset)] transition-all"
-                aria-label="Dismiss placement test prompt"
-                title="Dismiss"
-              >
-                <X size={14} />
-              </button>
+                <h3 className="text-lg font-bold text-[var(--text-primary)] text-center mb-1.5">
+                  Know some {LANGUAGE_CONFIG[lang].name} already?
+                </h3>
+                <p className="text-sm text-[var(--text-muted)] text-center mb-5">
+                  Take a quick 2-minute test to skip ahead, or just start from the beginning.
+                </p>
+                <div className="flex flex-col gap-2">
+                  <button
+                    onClick={() => {
+                      setShowPlacementPrompt(false);
+                      setView('PLACEMENT');
+                    }}
+                    className="w-full py-2.5 rounded-xl text-sm font-bold btn-primary"
+                  >
+                    Take the 2-min test
+                  </button>
+                  <button
+                    onClick={() => {
+                      setShowPlacementPrompt(false);
+                      setPlacementComplete(lang);
+                      setDeck(prev => [...prev]);
+                      handleStartSession();
+                    }}
+                    className="w-full py-2.5 rounded-xl text-sm font-bold bg-[var(--bg-inset)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] active:scale-95 transition"
+                  >
+                    Skip, start from the beginning
+                  </button>
+                </div>
+              </div>
             </div>
           )}
 
           {/* Study button – primary action, generous size so it dominates the home view */}
           <button
-            onClick={() => handleStartSession()}
+            onClick={() => {
+              if (!isPlacementComplete(lang)) {
+                setShowPlacementPrompt(true);
+              } else {
+                handleStartSession();
+              }
+            }}
             disabled={!hasCards}
             className="w-full py-4 btn-primary rounded-2xl text-lg mb-2"
           >
@@ -769,62 +798,6 @@ const App: React.FC = () => {
               when there are unseen cards left in the current topic so the user
               can push past the daily limit deliberately. Sized for thumb access
               and prominent enough not to get missed. */}
-          {(() => {
-            const newAvailableInDeck = currentNode
-              ? deck.filter(c => c.topic === currentNode.id && c.mastery === 0 && !c.isSuspended).length
-              : 0;
-            if (newAvailableInDeck === 0) return null;
-            // Add more cards – single compact row so the whole dashboard fits
-            // on one phone screen without scrolling. Label sits inside the
-            // action button so the row reads as one control.
-            return (
-              <div className="w-full mb-2 flex items-stretch gap-1.5">
-                <button
-                  onClick={() => {
-                    const input = document.getElementById('study-more-count') as HTMLInputElement;
-                    if (!input) return;
-                    const v = parseInt(input.value, 10) || 10;
-                    input.value = String(Math.max(1, v - 5));
-                  }}
-                  className="w-10 rounded-xl border border-[var(--border-color)] text-[var(--text-muted)] font-bold text-sm hover:border-[var(--border-hover)] hover:text-[var(--text-primary)] active:scale-95 transition"
-                  aria-label="Decrease by 5"
-                >
-                  −5
-                </button>
-                <input
-                  id="study-more-count"
-                  type="number"
-                  defaultValue={10}
-                  min={1}
-                  max={100}
-                  className="w-14 rounded-xl bg-[var(--bg-inset)] border border-[var(--border-color)] text-center text-lg font-extrabold font-mono text-[var(--text-primary)] focus:outline-none focus:border-[var(--accent)] py-2"
-                />
-                <button
-                  onClick={() => {
-                    const input = document.getElementById('study-more-count') as HTMLInputElement;
-                    if (!input) return;
-                    const v = parseInt(input.value, 10) || 10;
-                    input.value = String(Math.min(100, v + 5));
-                  }}
-                  className="w-10 rounded-xl border border-[var(--border-color)] text-[var(--text-muted)] font-bold text-sm hover:border-[var(--border-hover)] hover:text-[var(--text-primary)] active:scale-95 transition"
-                  aria-label="Increase by 5"
-                >
-                  +5
-                </button>
-                <button
-                  onClick={() => {
-                    const input = document.getElementById('study-more-count') as HTMLInputElement;
-                    const count = input ? parseInt(input.value, 10) || 10 : 10;
-                    handleStartSession(count);
-                  }}
-                  className="flex-1 rounded-xl bg-[var(--accent)]/15 border border-[var(--accent)]/40 text-[var(--accent)] font-extrabold text-sm hover:bg-[var(--accent)]/20 active:scale-95 transition"
-                >
-                  Add more cards
-                </button>
-              </div>
-            );
-          })()}
-
           {/* Listen – secondary, passive listening mode. Only shown when the
               user has at least a handful of seen cards to play through. */}
           {(() => {
@@ -1074,33 +1047,46 @@ const App: React.FC = () => {
             )}
           </div>
 
-          {/* Notification prompt (after 3rd session) */}
+          {/* Notification prompt – centered modal with backdrop instead of
+              a bottom-of-screen panel. Triggers after the 3rd session. Tap
+              backdrop or Later to dismiss; "Enable" fires the permission
+              flow. */}
           {showNotifPrompt && (
-            <div className="w-full mb-2 p-3 rounded-xl border border-[var(--accent)]/20 bg-[var(--accent)]/5 flex items-center gap-3">
-              <Bell size={18} className="text-[var(--accent)] shrink-0" />
-              <div className="flex-1 min-w-0">
-                <p className="text-xs font-semibold text-[var(--text-primary)]">Enable study reminders?</p>
-                <p className="text-[10px] text-[var(--text-muted)] mt-0.5">Get a daily nudge so you never miss a review.</p>
-              </div>
-              <div className="flex gap-1.5 shrink-0">
-                <button
-                  onClick={async () => {
-                    setShowNotifPrompt(false);
-                    await handleToggleNotifications(true);
-                  }}
-                  className="px-2.5 py-1 rounded-lg text-[10px] font-bold bg-[var(--accent)] text-white"
-                >
-                  Sure
-                </button>
-                <button
-                  onClick={() => {
-                    setShowNotifPrompt(false);
-                    dismissPrompt();
-                  }}
-                  className="px-2.5 py-1 rounded-lg text-[10px] font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)]"
-                >
-                  Later
-                </button>
+            <div
+              className="fixed inset-0 z-[10000] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in"
+              onClick={() => { setShowNotifPrompt(false); dismissPrompt(); }}
+            >
+              <div
+                className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-6 max-w-sm w-full shadow-2xl"
+                onClick={e => e.stopPropagation()}
+              >
+                <div className="flex justify-center mb-3">
+                  <div className="w-12 h-12 rounded-full bg-[var(--accent)]/10 border border-[var(--accent)]/30 flex items-center justify-center">
+                    <Bell size={22} className="text-[var(--accent)]" />
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-[var(--text-primary)] text-center mb-1.5">Daily study reminder?</h3>
+                <p className="text-sm text-[var(--text-muted)] text-center mb-5">A gentle nudge so you never miss a review.</p>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => {
+                      setShowNotifPrompt(false);
+                      dismissPrompt();
+                    }}
+                    className="flex-1 py-2.5 rounded-xl text-sm font-bold bg-[var(--bg-inset)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] active:scale-95 transition"
+                  >
+                    Not now
+                  </button>
+                  <button
+                    onClick={async () => {
+                      setShowNotifPrompt(false);
+                      await handleToggleNotifications(true);
+                    }}
+                    className="flex-1 py-2.5 rounded-xl text-sm font-bold btn-primary"
+                  >
+                    Enable
+                  </button>
+                </div>
               </div>
             </div>
           )}

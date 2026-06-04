@@ -19,7 +19,7 @@ const SLIDES = [
   },
   {
     title: 'Choose your focus',
-    description: 'Focus your vocabulary on what matters to you – travel, work, or family. Or study general vocabulary across all topics.',
+    description: 'Focus your vocabulary on what matters to you – travel, work, or family. Or study general vocabulary across all units.',
   },
   {
     title: 'Ready to start?',

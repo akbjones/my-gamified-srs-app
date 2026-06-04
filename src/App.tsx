@@ -944,7 +944,7 @@ const App: React.FC = () => {
             );
           })()}
 
-          {/* Quick-access grid: Topics + Vocabulary + Favorites – compact 3-col. */}
+          {/* Quick-access grid: Units + Vocabulary + Favorites – compact 3-col. */}
           {(() => {
             const vocabCount = Object.keys(vocabMap).length;
             const hasVocab = vocabCount > 0;
@@ -960,7 +960,7 @@ const App: React.FC = () => {
                   <BookOpen size={16} className="text-[var(--accent)]" />
                 </div>
                 <div className="text-[10px] font-bold text-[var(--text-primary)] uppercase tracking-wider leading-tight">
-                  Topics
+                  Units
                 </div>
               </button>
 

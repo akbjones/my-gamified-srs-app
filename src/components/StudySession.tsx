@@ -177,7 +177,11 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               </div>
             </button>
           )}
-          {hasMoreCards && onStudyMore && (
+          {/* Add more cards – always shown at session end, even after the
+              daily allowance is exhausted, because the user typing a count
+              here is an explicit override of the daily cap. The ±5 + number
+              + Start row matches the dashboard's bonus-session panel. */}
+          {onStudyMore && (
             <div className="w-full p-3 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)]">
               <div className="text-xs font-bold uppercase tracking-wide text-[var(--text-secondary)] mb-2 text-center">
                 Add more cards
@@ -219,11 +223,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
           )}
           <button
             onClick={onAbort}
-            className={`px-8 py-3 rounded-xl w-full ${
-              (hasMoreCards && onStudyMore) || pendingChallenge
-                ? 'bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-secondary)] font-bold hover:bg-[var(--bg-card-hover)] active:bg-[var(--bg-inset)] transition-colors'
-                : 'btn-primary'
-            }`}
+            className="px-8 py-3 rounded-xl w-full bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-secondary)] font-bold hover:bg-[var(--bg-card-hover)] active:bg-[var(--bg-inset)] transition-colors"
           >
             Back to Home
           </button>

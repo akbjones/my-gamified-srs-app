@@ -78,7 +78,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'चाय': {
     word: 'चाय',
     origin: 'Mandarin chá via Persian',
-    cognates: ['chai'],
+    cognates: [],
     note: 'English "tea" also from Chinese – but via the Min dialect (te), hence the split.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -118,7 +118,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'योग': {
     word: 'योग',
     origin: 'Sanskrit yoga',
-    cognates: ['yoke', 'yoga'],
+    cognates: ['yoke'],
     note: 'Yoga literally meant "yoking" – uniting mind and body. Same root as English "yoke".',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -126,7 +126,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'गुरु': {
     word: 'गुरु',
     origin: 'Sanskrit guru',
-    cognates: ['guru', 'gravity'],
+    cognates: ['gravity'],
     note: 'Guru literally meant "heavy, weighty" – a teacher of weighty importance. Same root as Latin gravis.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -134,7 +134,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'राजा': {
     word: 'राजा',
     origin: 'Sanskrit rājan',
-    cognates: ['regal', 'royal', 'rajah'],
+    cognates: ['regal', 'royal'],
     note: 'Same root as Latin rex (English "regal", "royal") – an ancient Indo-European king-word.',
     verified: true,
     sources: ['wiktionary', 'turner-cdial'],
@@ -238,7 +238,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'पंडित': {
     word: 'पंडित',
     origin: 'Sanskrit paṇḍita',
-    cognates: ['pundit'],
+    cognates: [],
     note: 'Means "learned, wise" – the title for a Brahmin master of Sanskrit scripture. Still a respected honorific in Hindustani classical music and academia.',
     verified: true,
     sources: ['wiktionary', 'turner-cdial'],
@@ -246,7 +246,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'मंत्र': {
     word: 'मंत्र',
     origin: 'Sanskrit mantra',
-    cognates: ['mantra'],
+    cognates: [],
     note: 'Literally "instrument of thought" – built from Sanskrit roots for "think" and "tool". Sacred sound formulas chanted to focus the mind in Vedic ritual.',
     verified: true,
     sources: ['wiktionary', 'turner-cdial'],
@@ -254,7 +254,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'जंगल': {
     word: 'जंगल',
     origin: 'Sanskrit jaṅgala',
-    cognates: ['jungle'],
+    cognates: [],
     note: 'In Sanskrit meant "arid scrubland" – the opposite of cultivated land. Hindi still uses it for any wild terrain, not specifically tropical forest.',
     verified: true,
     sources: ['wiktionary', 'turner-cdial'],
@@ -262,7 +262,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'पजामा': {
     word: 'पजामा',
     origin: 'Persian pāy-jāmah',
-    cognates: ['pajamas'],
+    cognates: [],
     note: 'Literally "leg-clothing" in Persian – the loose drawstring trousers worn under longer tunics across Persia and Mughal India.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -270,7 +270,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'शैम्पू': {
     word: 'शैम्पू',
     origin: 'Hindi cāmpo',
-    cognates: ['shampoo'],
+    cognates: [],
     note: 'Originally meant "to press, knead" in Hindi – the head and shoulder massage given at Indian barbershops, with oil pressed into the scalp.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -278,7 +278,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'अवतार': {
     word: 'अवतार',
     origin: 'Sanskrit avatāra',
-    cognates: ['avatar'],
+    cognates: [],
     note: 'Literally "descent" (ava-tar) – a deity stepping down into earthly form. The Bhagavad Gita names ten avatars of Vishnu sent to restore dharma.',
     verified: true,
     sources: ['wiktionary', 'turner-cdial'],
@@ -286,7 +286,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'खाकी': {
     word: 'खाकी',
     origin: 'Persian khākī',
-    cognates: ['khaki'],
+    cognates: [],
     note: 'Literally "dust-colored" in Persian – the color of dry Persian and Indian soil, used for cotton uniforms that wouldn\'t show dust.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -294,7 +294,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'चटनी': {
     word: 'चटनी',
     origin: 'Hindi caṭnī',
-    cognates: ['chutney'],
+    cognates: [],
     note: 'From a Hindi verb meaning "to lick" – the spicy fresh condiment so flavorful you lick the last bit off your fingers. Every region has its own.',
     verified: true,
     sources: ['wiktionary', 'turner-cdial'],
@@ -302,7 +302,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'योगी': {
     word: 'योगी',
     origin: 'Sanskrit yogin',
-    cognates: ['yogi'],
+    cognates: [],
     note: 'Literally "one who practices yoga (union)" – a wandering ascetic on the spiritual path, traditionally renouncing worldly attachments.',
     verified: true,
     sources: ['wiktionary', 'turner-cdial'],
@@ -310,7 +310,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'नमस्ते': {
     word: 'नमस्ते',
     origin: 'Sanskrit namas + te',
-    cognates: ['namaste'],
+    cognates: [],
     note: 'Literally "I bow to you" – namas means a bow or reverence, te means "to you". The hands-together gesture is the physical bow.',
     verified: true,
     sources: ['wiktionary', 'turner-cdial'],
@@ -318,7 +318,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'कर्म': {
     word: 'कर्म',
     origin: 'Sanskrit karma',
-    cognates: ['karma'],
+    cognates: [],
     note: 'Literally just "action, deed" – in Vedic thought every action plants a seed that ripens later, the basis of cosmic moral consequence.',
     verified: true,
     sources: ['wiktionary', 'turner-cdial'],
@@ -326,7 +326,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'निर्वाण': {
     word: 'निर्वाण',
     origin: 'Sanskrit nirvāṇa',
-    cognates: ['nirvana'],
+    cognates: [],
     note: 'Literally "blowing out, extinguishing" – the moment a flame is snuffed by a breath. In Buddhism, the extinguishing of desire and rebirth.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -334,7 +334,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'तंदूर': {
     word: 'तंदूर',
     origin: 'Persian tannūr, ult. Akkadian tinūru',
-    cognates: ['tandoor'],
+    cognates: [],
     note: 'A clay oven sunk into the ground – traceable to ancient Mesopotamia in 3000 BCE. Mughal cooks brought the design to Indian kitchens.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -342,7 +342,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'समोसा': {
     word: 'समोसा',
     origin: 'Persian sambūsa',
-    cognates: ['samosa'],
+    cognates: [],
     note: 'Originally a Persian street snack – triangular fried pastry with spiced fillings, brought to India by traders along the Silk Road in the 1300s.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -430,7 +430,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'हिन्दी': {
     word: 'हिन्दी',
     origin: 'Persian Hindī',
-    cognates: ['Hindi'],
+    cognates: [],
     note: 'The Persian name for the people across the Sindhu (Indus) river – persians dropped the "s" to make it Hindū, then Hindī for "the Sindhu-tongue".',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -438,7 +438,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'दिल्ली': {
     word: 'दिल्ली',
     origin: 'Sanskrit Dhillika',
-    cognates: ['Delhi'],
+    cognates: [],
     note: 'The Hindi name for Delhi – origin debated, possibly from a king\'s name or Sanskrit for "threshold". Seven cities have risen and fallen on the site.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -446,7 +446,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'गंगा': {
     word: 'गंगा',
     origin: 'Sanskrit Gaṅgā',
-    cognates: ['Ganges'],
+    cognates: [],
     note: 'The Ganges river – possibly from a root meaning "swift-flowing". Personified as the goddess Ganga, who descended from heaven to wash away sins.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -702,7 +702,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'मौसम': {
     word: 'मौसम',
     origin: 'Arabic mawsim via Persian',
-    cognates: ['monsoon'],
+    cognates: [],
     note: 'Same Arabic root that gave English "monsoon" – originally meant "season for sailing". The seasonal winds of the Indian Ocean named the rainy season.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -790,7 +790,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'जनवरी': {
     word: 'जनवरी',
     origin: 'English January',
-    cognates: ['January'],
+    cognates: [],
     note: 'Borrowed from English during the colonial era – ultimately from Latin Ianuarius (Janus, the god of beginnings). Native Hindi uses Vikram calendar.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],
@@ -942,7 +942,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   'क्रिसमस': {
     word: 'क्रिसमस',
     origin: 'English Christmas',
-    cognates: ['Christmas'],
+    cognates: [],
     note: 'Borrowed from English during the colonial era – itself from Old English "Christ-mass". Sanskrit-derived बड़ा दिन ("big day") runs in parallel.',
     verified: true,
     sources: ['wiktionary', 'etymonline'],

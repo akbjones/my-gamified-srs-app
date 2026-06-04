@@ -37494,5 +37494,909 @@
     "grammarNode": "node-01",
     "priority": 45,
     "category": "months"
+  },
+  {
+    "id": "hi-3200",
+    "target": "मैं छात्र हूँ।",
+    "english": "I am a student.",
+    "audio": "hi-hi-3200.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 45,
+    "grammar": "मैं → हूँ (main hun). The auxiliary changes by subject: मैं → हूँ, वह → है, हम/आप → हैं."
+  },
+  {
+    "id": "hi-3201",
+    "target": "मेरी माँ शिक्षिका हैं।",
+    "english": "My mother is a teacher.",
+    "audio": "hi-hi-3201.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 46
+  },
+  {
+    "id": "hi-3202",
+    "target": "मेरे पिता डॉक्टर हैं।",
+    "english": "My father is a doctor.",
+    "audio": "hi-hi-3202.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 47,
+    "grammar": "For respect, even one person takes हैं (hain), not है. मेरे पिता हैं (my father is, respectful)."
+  },
+  {
+    "id": "hi-3203",
+    "target": "यह मेरा भाई है।",
+    "english": "This is my brother.",
+    "audio": "hi-hi-3203.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 48,
+    "grammar": "यह (yeh = this) for nearby, वह (woh = that) for far. यह मेरा भाई है = This is my brother."
+  },
+  {
+    "id": "hi-3204",
+    "target": "वह मेरी बहन है।",
+    "english": "That is my sister.",
+    "audio": "hi-hi-3204.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 49
+  },
+  {
+    "id": "hi-3205",
+    "target": "मेरा नाम सीमा है।",
+    "english": "My name is Seema.",
+    "audio": "hi-hi-3205.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 50,
+    "grammar": "मेरा (mera = my, m), मेरी (meri = my, f), मेरे (mere = my, m pl). The owned thing's gender picks the form."
+  },
+  {
+    "id": "hi-3206",
+    "target": "तुम्हारा घर बड़ा है।",
+    "english": "Your house is big.",
+    "audio": "hi-hi-3206.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 51,
+    "grammar": "तुम्हारा (tumhara = your, m). For feminine: तुम्हारी. For plural/respect: तुम्हारे."
+  },
+  {
+    "id": "hi-3207",
+    "target": "मेरी कलम लाल है।",
+    "english": "My pen is red.",
+    "audio": "hi-hi-3207.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 52
+  },
+  {
+    "id": "hi-3208",
+    "target": "मेरा कुत्ता काला है।",
+    "english": "My dog is black.",
+    "audio": "hi-hi-3208.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 53
+  },
+  {
+    "id": "hi-3209",
+    "target": "यह बिल्ली प्यारी है।",
+    "english": "This cat is cute.",
+    "audio": "hi-hi-3209.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 54
+  },
+  {
+    "id": "hi-3210",
+    "target": "यह खाना स्वादिष्ट है।",
+    "english": "This food is delicious.",
+    "audio": "hi-hi-3210.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 55
+  },
+  {
+    "id": "hi-3211",
+    "target": "मेरी कमीज़ नीली है।",
+    "english": "My shirt is blue.",
+    "audio": "hi-hi-3211.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 56
+  },
+  {
+    "id": "hi-3212",
+    "target": "मेरा बेटा छोटा है।",
+    "english": "My son is small.",
+    "audio": "hi-hi-3212.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 57,
+    "grammar": "Adjective matches the noun's gender. छोटा (chota, m) for boy/son. छोटी (choti) for girl/daughter."
+  },
+  {
+    "id": "hi-3213",
+    "target": "मेरी बेटी बड़ी है।",
+    "english": "My daughter is big.",
+    "audio": "hi-hi-3213.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 58
+  },
+  {
+    "id": "hi-3214",
+    "target": "मेरा दोस्त भारतीय है।",
+    "english": "My friend is Indian.",
+    "audio": "hi-hi-3214.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 59
+  },
+  {
+    "id": "hi-3215",
+    "target": "यह किताब नई है।",
+    "english": "This book is new.",
+    "audio": "hi-hi-3215.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 60
+  },
+  {
+    "id": "hi-3216",
+    "target": "वह आदमी अच्छा है।",
+    "english": "That man is good.",
+    "audio": "hi-hi-3216.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 61
+  },
+  {
+    "id": "hi-3217",
+    "target": "यह औरत डॉक्टर है।",
+    "english": "This woman is a doctor.",
+    "audio": "hi-hi-3217.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 62
+  },
+  {
+    "id": "hi-3218",
+    "target": "मेरा घर दूर है।",
+    "english": "My house is far.",
+    "audio": "hi-hi-3218.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 64
+  },
+  {
+    "id": "hi-3219",
+    "target": "तुम्हारा बेटा बड़ा है।",
+    "english": "Your son is big.",
+    "audio": "hi-hi-3219.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 65
+  },
+  {
+    "id": "hi-3220",
+    "target": "शुभ प्रभात!",
+    "english": "Good morning!",
+    "audio": "hi-hi-3220.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 6
+  },
+  {
+    "id": "hi-3221",
+    "target": "शुभ रात्रि!",
+    "english": "Good night!",
+    "audio": "hi-hi-3221.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 7
+  },
+  {
+    "id": "hi-3222",
+    "target": "कैसे हो?",
+    "english": "How are you?",
+    "audio": "hi-hi-3222.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 8,
+    "grammar": "Use कैसे (kaise = how) with masculine हो (ho, informal you). For respect: कैसे हैं? (kaise hain?)."
+  },
+  {
+    "id": "hi-3223",
+    "target": "मैं ठीक हूँ।",
+    "english": "I am fine.",
+    "audio": "hi-hi-3223.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 9
+  },
+  {
+    "id": "hi-3224",
+    "target": "धन्यवाद!",
+    "english": "Thank you!",
+    "audio": "hi-hi-3224.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 10
+  },
+  {
+    "id": "hi-3225",
+    "target": "बहुत धन्यवाद!",
+    "english": "Thank you very much!",
+    "audio": "hi-hi-3225.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 11
+  },
+  {
+    "id": "hi-3226",
+    "target": "कृपया मदद कीजिए।",
+    "english": "Please help.",
+    "audio": "hi-hi-3226.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 12,
+    "grammar": "कृपया (kripaya = please, formal). For favors, end with कीजिए (kijiye, polite imperative)."
+  },
+  {
+    "id": "hi-3227",
+    "target": "कोई बात नहीं।",
+    "english": "No problem.",
+    "audio": "hi-hi-3227.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 18
+  },
+  {
+    "id": "hi-3228",
+    "target": "अलविदा!",
+    "english": "Goodbye!",
+    "audio": "hi-hi-3228.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 21,
+    "grammar": "अलविदा (alvida) = formal goodbye. For \"see you again\" use फिर मिलेंगे (phir milenge)."
+  },
+  {
+    "id": "hi-3229",
+    "target": "स्वागत है!",
+    "english": "Welcome!",
+    "audio": "hi-hi-3229.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 22
+  },
+  {
+    "id": "hi-3230",
+    "target": "मुझे माफ़ कीजिए।",
+    "english": "Please forgive me.",
+    "audio": "hi-hi-3230.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 24
+  },
+  {
+    "id": "hi-3231",
+    "target": "आइए, अंदर आइए।",
+    "english": "Please come in.",
+    "audio": "hi-hi-3231.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 25,
+    "grammar": "आइए (aaiye = come, polite imperative). For -ना verbs, drop -ना and add -इए for polite commands."
+  },
+  {
+    "id": "hi-3232",
+    "target": "बैठिए।",
+    "english": "Please sit.",
+    "audio": "hi-hi-3232.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 26
+  },
+  {
+    "id": "hi-3233",
+    "target": "चाय लीजिए।",
+    "english": "Please have tea.",
+    "audio": "hi-hi-3233.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 27
+  },
+  {
+    "id": "hi-3234",
+    "target": "सुनिए।",
+    "english": "Listen please.",
+    "audio": "hi-hi-3234.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 28
+  },
+  {
+    "id": "hi-3235",
+    "target": "नमस्ते भाई।",
+    "english": "Hello brother.",
+    "audio": "hi-hi-3235.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 29
+  },
+  {
+    "id": "hi-3236",
+    "target": "नमस्ते बहन।",
+    "english": "Hello sister.",
+    "audio": "hi-hi-3236.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 30
+  },
+  {
+    "id": "hi-3237",
+    "target": "फिर मिलेंगे।",
+    "english": "See you later.",
+    "audio": "hi-hi-3237.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 31
+  },
+  {
+    "id": "hi-3238",
+    "target": "कल मिलते हैं।",
+    "english": "See you tomorrow.",
+    "audio": "hi-hi-3238.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 32,
+    "grammar": "कल (kal) = yesterday OR tomorrow. Context decides. Future-leaning verb (मिलते हैं) here points forward: \"tomorrow\"."
+  },
+  {
+    "id": "hi-3239",
+    "target": "हाँ, ज़रूर।",
+    "english": "Yes, of course.",
+    "audio": "hi-hi-3239.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 33
+  },
+  {
+    "id": "hi-3240",
+    "target": "तुम्हारा नाम क्या है?",
+    "english": "What is your name?",
+    "audio": "hi-hi-3240.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 34,
+    "grammar": "क्या (kya) at the start = yes/no marker OR what. Here: \"what is your name?\". Word order: tum-hara-naam-kya-hai."
+  },
+  {
+    "id": "hi-3241",
+    "target": "आपका नाम क्या है?",
+    "english": "What is your name? (polite)",
+    "audio": "hi-hi-3241.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 35
+  },
+  {
+    "id": "hi-3242",
+    "target": "यह क्या है?",
+    "english": "What is this?",
+    "audio": "hi-hi-3242.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 38
+  },
+  {
+    "id": "hi-3243",
+    "target": "वह कौन है?",
+    "english": "Who is that?",
+    "audio": "hi-hi-3243.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 41,
+    "grammar": "कौन (kaun) = who. कौन is for people: कौन है? (who is?). क्या is for things."
+  },
+  {
+    "id": "hi-3244",
+    "target": "तुम कौन हो?",
+    "english": "Who are you?",
+    "audio": "hi-hi-3244.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 42
+  },
+  {
+    "id": "hi-3245",
+    "target": "मेरा फ़ोन कहाँ है?",
+    "english": "Where is my phone?",
+    "audio": "hi-hi-3245.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 44
+  },
+  {
+    "id": "hi-3246",
+    "target": "तुम कहाँ हो?",
+    "english": "Where are you?",
+    "audio": "hi-hi-3246.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 66
+  },
+  {
+    "id": "hi-3247",
+    "target": "यह कौन सा है?",
+    "english": "Which one is this?",
+    "audio": "hi-hi-3247.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 67,
+    "grammar": "कौन सा (kaun sa) = which (m). For f: कौन सी. For pl: कौन से. Picks one item from many."
+  },
+  {
+    "id": "hi-3248",
+    "target": "कितने बजे हैं?",
+    "english": "What time is it?",
+    "audio": "hi-hi-3248.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 68,
+    "grammar": "कितने बजे हैं? (kitne baje hain?) = literally \"how many struck have?\" = what time is it? Memorize as a phrase."
+  },
+  {
+    "id": "hi-3249",
+    "target": "यह कितने का है?",
+    "english": "How much does this cost?",
+    "audio": "hi-hi-3249.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 69,
+    "grammar": "कितने का (kitne ka) for masculine items, कितने की for feminine. Used in shop questions: यह कितने का है? = how much is this?"
+  },
+  {
+    "id": "hi-3250",
+    "target": "कौन सा रंग है?",
+    "english": "Which color is it?",
+    "audio": "hi-hi-3250.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 70
+  },
+  {
+    "id": "hi-3251",
+    "target": "क्या तुम भारतीय हो?",
+    "english": "Are you Indian?",
+    "audio": "hi-hi-3251.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 71,
+    "grammar": "क्या (kya) at the start makes a yes/no question. क्या तुम भारतीय हो? = Are you Indian? (lit. \"yes-no you Indian are?\")."
+  },
+  {
+    "id": "hi-3252",
+    "target": "क्या यह सही है?",
+    "english": "Is this correct?",
+    "audio": "hi-hi-3252.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 73
+  },
+  {
+    "id": "hi-3253",
+    "target": "यह सच है?",
+    "english": "Is this true?",
+    "audio": "hi-hi-3253.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 74
+  },
+  {
+    "id": "hi-3254",
+    "target": "मैं कहाँ जाऊँ?",
+    "english": "Where should I go?",
+    "audio": "hi-hi-3254.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 75
+  },
+  {
+    "id": "hi-3255",
+    "target": "कितने लोग हैं?",
+    "english": "How many people are there?",
+    "audio": "hi-hi-3255.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 76,
+    "grammar": "कितने (kitne) = how many. कितने लोग? (how many people). कितनी for feminine items."
+  },
+  {
+    "id": "hi-3256",
+    "target": "कैसा है खाना?",
+    "english": "How is the food?",
+    "audio": "hi-hi-3256.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 77
+  },
+  {
+    "id": "hi-3257",
+    "target": "यह किसका है?",
+    "english": "Whose is this?",
+    "audio": "hi-hi-3257.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 78,
+    "grammar": "किसका (kiska) = whose (for m thing). किसकी for f, किसके for plural. यह किसकी किताब है? = whose book is this?"
+  },
+  {
+    "id": "hi-3258",
+    "target": "तुम क्या चाहते हो?",
+    "english": "What do you want?",
+    "audio": "hi-hi-3258.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 79
+  },
+  {
+    "id": "hi-3259",
+    "target": "क्या तुम तैयार हो?",
+    "english": "Are you ready?",
+    "audio": "hi-hi-3259.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 80
+  },
+  {
+    "id": "hi-3260",
+    "target": "चाय गरम है।",
+    "english": "The tea is hot.",
+    "audio": "hi-hi-3260.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 81
+  },
+  {
+    "id": "hi-3261",
+    "target": "पानी ठंडा है।",
+    "english": "The water is cold.",
+    "audio": "hi-hi-3261.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 82
+  },
+  {
+    "id": "hi-3262",
+    "target": "दूध मीठा है।",
+    "english": "The milk is sweet.",
+    "audio": "hi-hi-3262.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 83
+  },
+  {
+    "id": "hi-3263",
+    "target": "फल ताज़ा है।",
+    "english": "The fruit is fresh.",
+    "audio": "hi-hi-3263.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 84
+  },
+  {
+    "id": "hi-3264",
+    "target": "फिल्म अच्छी है।",
+    "english": "The movie is good.",
+    "audio": "hi-hi-3264.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 85,
+    "grammar": "फिल्म (film) is feminine in Hindi, so the adjective ends in -ी: अच्छी (achchi, good-f). For m: अच्छा."
+  },
+  {
+    "id": "hi-3265",
+    "target": "सड़क लंबी है।",
+    "english": "The road is long.",
+    "audio": "hi-hi-3265.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 86
+  },
+  {
+    "id": "hi-3266",
+    "target": "किताब मेज़ पर है।",
+    "english": "The book is on the table.",
+    "audio": "hi-hi-3266.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 87,
+    "grammar": "पर (par) = on. Comes AFTER the noun: मेज़ पर (mez par = on the table). Hindi puts position words after."
+  },
+  {
+    "id": "hi-3267",
+    "target": "फ़ोन जेब में है।",
+    "english": "The phone is in the pocket.",
+    "audio": "hi-hi-3267.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 88
+  },
+  {
+    "id": "hi-3268",
+    "target": "माँ रसोई में है।",
+    "english": "Mother is in the kitchen.",
+    "audio": "hi-hi-3268.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 89
+  },
+  {
+    "id": "hi-3269",
+    "target": "बच्चे पार्क में हैं।",
+    "english": "The children are in the park.",
+    "audio": "hi-hi-3269.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 90,
+    "grammar": "For plural subjects use हैं (hain). बच्चे (bachche = children, m pl) → हैं."
+  },
+  {
+    "id": "hi-3270",
+    "target": "हम घर में हैं।",
+    "english": "We are at home.",
+    "audio": "hi-hi-3270.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 91
+  },
+  {
+    "id": "hi-3271",
+    "target": "कुर्सी कमरे में है।",
+    "english": "The chair is in the room.",
+    "audio": "hi-hi-3271.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 92,
+    "grammar": "कमरा (kamra = room) shifts to कमरे (kamre) before में. -आ ending nouns change to -ए before position words."
+  },
+  {
+    "id": "hi-3272",
+    "target": "बैग कुर्सी पर है।",
+    "english": "The bag is on the chair.",
+    "audio": "hi-hi-3272.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 93
+  },
+  {
+    "id": "hi-3273",
+    "target": "आज सोमवार है।",
+    "english": "Today is Monday.",
+    "audio": "hi-hi-3273.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 94
+  },
+  {
+    "id": "hi-3274",
+    "target": "कल मंगलवार है।",
+    "english": "Tomorrow is Tuesday.",
+    "audio": "hi-hi-3274.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 95
+  },
+  {
+    "id": "hi-3275",
+    "target": "साल में बारह महीने हैं।",
+    "english": "There are twelve months in a year.",
+    "audio": "hi-hi-3275.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 96,
+    "grammar": "For \"there is/are\", just use है/हैं at the end. साल में बारह महीने हैं = year-in twelve months are = there are 12 months in a year."
+  },
+  {
+    "id": "hi-3276",
+    "target": "हफ़्ते में सात दिन हैं।",
+    "english": "There are seven days in a week.",
+    "audio": "hi-hi-3276.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 97
+  },
+  {
+    "id": "hi-3277",
+    "target": "अभी सुबह है।",
+    "english": "It is morning now.",
+    "audio": "hi-hi-3277.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 98
+  },
+  {
+    "id": "hi-3278",
+    "target": "मेरी जेब खाली है।",
+    "english": "My pocket is empty.",
+    "audio": "hi-hi-3278.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 99
+  },
+  {
+    "id": "hi-3279",
+    "target": "यह काम कठिन है।",
+    "english": "This work is hard.",
+    "audio": "hi-hi-3279.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 100
   }
 ]

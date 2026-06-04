@@ -701,7 +701,7 @@ const App: React.FC = () => {
                         }`}
                       >
                         <span>{LANGUAGE_CONFIG[l].name}</span>
-                        {l === lang && <span className="ml-auto text-[10px] font-bold uppercase tracking-wider opacity-60">active</span>}
+                        {l === lang && <span className="ml-auto text-[11px] font-bold uppercase tracking-wider opacity-60">active</span>}
                       </button>
                     ))}
                   </div>
@@ -776,7 +776,7 @@ const App: React.FC = () => {
                 {reviewsDue > 0 && (
                   <>
                     <span className="text-white/40">·</span>
-                    <span className="text-[13px] font-bold opacity-85">{reviewsDue} to review</span>
+                    <span className="text-sm font-bold opacity-85">{reviewsDue} to review</span>
                   </>
                 )}
               </div>
@@ -819,7 +819,7 @@ const App: React.FC = () => {
                   {/* Progress bar */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-baseline justify-between mb-2">
-                      <span className="text-[11px] font-bold uppercase tracking-widest text-[var(--text-muted)]">Today</span>
+                      <span className="text-xs font-bold uppercase tracking-widest text-[var(--text-muted)]">Today</span>
                       <span className="text-sm font-mono font-bold text-[var(--text-primary)]">
                         {dailyDone} <span className="text-[var(--text-muted)] font-normal">/ {dailyGoal}</span>
                       </span>
@@ -833,7 +833,7 @@ const App: React.FC = () => {
                   </div>
                   {/* Streak counter */}
                   <div className="shrink-0 flex flex-col items-center gap-0.5">
-                    <span className="text-[10px] font-bold uppercase tracking-widest text-[var(--text-muted)]">Streak</span>
+                    <span className="text-xs font-bold uppercase tracking-widest text-[var(--text-muted)]">Streak</span>
                     <div className="flex items-center gap-1">
                       <Flame
                         size={18}
@@ -919,7 +919,7 @@ const App: React.FC = () => {
                         <Icon size={14} />
                         <div className="text-left flex-1 min-w-0">
                           <div className="text-xs font-bold">{cfg.name}</div>
-                          <div className="text-[10px] text-[var(--text-muted)] mt-0.5">
+                          <div className="text-[11px] text-[var(--text-muted)] mt-0.5">
                             {g === 'general' ? 'Well-rounded vocabulary' : cfg.description}
                           </div>
                         </div>
@@ -956,7 +956,7 @@ const App: React.FC = () => {
                         <it.Icon size={14} className={it.available ? it.color : ''} />
                         <div className="flex-1 min-w-0">
                           <div className="text-xs font-bold">{it.label}</div>
-                          <div className="text-[10px] text-[var(--text-muted)] mt-0.5">{it.sub}</div>
+                          <div className="text-[11px] text-[var(--text-muted)] mt-0.5">{it.sub}</div>
                         </div>
                       </button>
                     ))}

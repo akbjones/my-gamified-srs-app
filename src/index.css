@@ -67,11 +67,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Mono for numbers, codes, stats. Inconsolata has a plain undecorated
-   oval zero (no slash, no dot, no line). JetBrains Mono dotted the zero,
-   Roboto Mono slashed it – both read as a marked-up character to users.
-   font-variant-numeric also explicitly clears any zero-styling features. */
-.font-mono { font-family: 'Inconsolata', monospace; font-variant-numeric: normal; }
+/* Mono for numbers, codes, stats. Ubuntu Mono has a clean oval zero
+   with no slash, no dot, no line – verified default glyph. Previous
+   attempts (JetBrains Mono = dot, Roboto Mono = slash, Inconsolata =
+   slash by default) all rendered marked-up zeros. */
+.font-mono { font-family: 'Ubuntu Mono', monospace; font-variant-numeric: normal; font-feature-settings: "zero" 0; }
 
 /* === ANIMATIONS === */
 @keyframes fade-in {

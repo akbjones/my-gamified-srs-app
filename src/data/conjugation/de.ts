@@ -6,12 +6,12 @@
  * Person order: ich, du, er/sie/es, wir, ihr, sie/Sie
  *
  * Tenses:
- *   present     – Prasens
- *   preterite   – Prateritum (simple past)
- *   imperfect   – Perfekt (compound past: haben/sein + Partizip II)
- *   future      – Futur I (werden + infinitive)
- *   conditional – Konjunktiv II (wurde + infinitive, or stem-changed for strong)
- *   subjunctive – Konjunktiv I (infinitive stem + endings)
+ *   present     – prasens
+ *   preterite   – prateritum (simple past)
+ *   imperfect   – perfekt (compound past: haben/sein + Partizip II)
+ *   future      – futur I (werden + infinitive)
+ *   conditional – konjunktiv II (wurde + infinitive, or stem-changed for strong)
+ *   subjunctive – konjunktiv I (infinitive stem + endings)
  */
 import type { ConjugationTable } from '../../types';
 

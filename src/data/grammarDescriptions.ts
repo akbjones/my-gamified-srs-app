@@ -11,7 +11,7 @@ import { Language } from '../types';
 
 export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> = {
   spanish: {
-    // ── A1 – Foundations ──────────────────────────────────────────
+    // ── A1 – foundations ──────────────────────────────────────────
     'node-01': 'This sentence uses regular present tense – notice the -ar, -er, -ir verb endings for everyday actions.',
     'node-02': 'This sentence features an irregular present verb – stems change or forms are unique (soy, tengo, voy, hago, digo).',
     'node-03': 'This sentence distinguishes "ser" (identity, traits, origin) from "estar" (states, location, conditions).',
@@ -21,7 +21,7 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-07': 'This sentence uses descriptive language – adjectives, "hay" (there is/are), colors, sizes, and basic characterization.',
     'node-08': 'This sentence uses a common expression – greetings, numbers, time, weather, or fixed everyday phrases.',
 
-    // ── A2 – Past & Pronouns ──────────────────────────────────────
+    // ── A2 – past & Pronouns ──────────────────────────────────────
     'node-09': 'This sentence uses the preterite with regular verbs – completed, one-time past actions with standard -é/-aste/-ó endings.',
     'node-10': 'This sentence uses an irregular preterite form – verbs with stem changes (tuvo, hizo, fue, dijo, puso) in the past.',
     'node-11': 'This sentence uses the imperfect tense – habitual, ongoing, or background actions in the past (-aba/-ía endings).',
@@ -30,7 +30,7 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-14': 'This sentence distinguishes "por" (cause, exchange, duration) from "para" (purpose, destination, deadline).',
     'node-15': 'This sentence uses object pronouns – direct (lo, la, los, las), indirect (le, les), or combined placement.',
 
-    // ── B1 – Moods & Complex Tenses ──────────────────────────────
+    // ── B1 – moods & Complex Tenses ──────────────────────────────
     'node-16': 'This sentence uses the present subjunctive – triggered by wishes, doubts, emotions, or hypothetical situations.',
     'node-17': 'This sentence uses the imperative – giving commands, instructions, or polite requests (tú, usted, nosotros forms).',
     'node-18': 'This sentence uses the conditional – expressing what would happen, polite requests, or hypothetical outcomes.',
@@ -38,7 +38,7 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-20': 'This sentence uses a relative clause – "que", "quien", "donde", or "cuyo" to connect and describe within clauses.',
     'node-21': 'This sentence uses a compound tense – haber + participle for pluperfect, future perfect, or conditional perfect.',
 
-    // ── B2 – Advanced Grammar ─────────────────────────────────────
+    // ── B2 – advanced Grammar ─────────────────────────────────────
     'node-22': 'This sentence uses the imperfect subjunctive – hypothetical past, wishes, or "si" clauses (-ara/-iera endings).',
     'node-23': 'This sentence uses a complex conditional – "si hubiera…, habría…" (if X had happened, Y would have happened).',
     'node-24': 'This sentence uses a passive or impersonal construction – "se" as a marker for general statements or passive voice.',
@@ -46,20 +46,20 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-26': 'This sentence uses a verb phrase – llevar + gerund, acabar de + infinitive, ponerse a + infinitive, and similar.',
     'node-27': 'This sentence uses reported speech (estilo indirecto) – conveying what someone said with tense and reference shifts.',
 
-    // ── C1 – Refinement ───────────────────────────────────────────
+    // ── C1 – refinement ───────────────────────────────────────────
     'node-28': 'This sentence explores subjunctive nuances – mood contrasts with "como si", "el hecho de que", or "no creo que".',
     'node-29': 'This sentence uses formal or literary register – usted forms, passato remoto, academic markers, or elevated style.',
     'node-30': 'This sentence uses an idiomatic expression – proverbs, fixed phrases, or colloquial constructions of native speakers.',
     'node-31': 'This sentence uses complex syntax – participial clauses, multiple subordination, or nominalization patterns.',
 
-    // ── C2 – Mastery ──────────────────────────────────────────────
+    // ── C2 – mastery ──────────────────────────────────────────────
     'node-32': 'This sentence uses literary tenses or narrative style – literary past, poetic register, or storytelling constructions.',
     'node-33': 'This sentence uses academic or professional discourse – formal argumentation, technical register, structured reasoning.',
     'node-34': 'This sentence reflects cultural fluency – culturally embedded expressions, regional variation, or proverb usage.',
     'node-35': 'This sentence combines multiple advanced patterns – near-native complexity across grammar, register, and idiom.',
   },
   italian: {
-    // ── A1 – Foundations ──────────────────────────────────────────
+    // ── A1 – foundations ──────────────────────────────────────────
     'node-01': 'This sentence uses the presente indicativo – regular -are, -ere, -ire verb conjugation for everyday actions.',
     'node-02': 'This sentence features an irregular present verb – unique forms like sono, ho, vado, faccio, dico, vengo.',
     'node-03': 'This sentence distinguishes "essere" (identity, origin) from "stare" (states, conditions, progressive).',
@@ -69,7 +69,7 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-07': 'This sentence uses descriptive language – adjectives, "c\'è/ci sono" (there is/are), and basic characterization.',
     'node-08': 'This sentence uses a common expression – greetings, numbers, time, weather, or fixed everyday phrases.',
 
-    // ── A2 – Past & Pronouns ──────────────────────────────────────
+    // ── A2 – past & Pronouns ──────────────────────────────────────
     'node-09': 'This sentence uses the passato prossimo with regular verbs – avere/essere + regular past participles (-ato/-uto/-ito).',
     'node-10': 'This sentence uses an irregular passato prossimo – irregular participles (fatto, detto, scritto) or essere-verbs.',
     'node-11': 'This sentence uses the imperfetto – habitual, ongoing, or background actions in the past (-avo/-evo/-ivo endings).',
@@ -78,7 +78,7 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-14': 'This sentence distinguishes "per" (purpose, duration, exchange) from "da" (origin, agent, since, at someone\'s place).',
     'node-15': 'This sentence uses object pronouns – direct (lo, la, li, le), indirect (gli, le), combined, ne, and ci.',
 
-    // ── B1 – Moods & Complex Tenses ──────────────────────────────
+    // ── B1 – moods & Complex Tenses ──────────────────────────────
     'node-16': 'This sentence uses the congiuntivo presente – triggered by opinions, emotions, doubt, or necessity (che + subjunctive).',
     'node-17': 'This sentence uses the imperativo – commands and requests. Negative tu-form uses "non" + infinitive.',
     'node-18': 'This sentence uses the condizionale – expressing what would happen, polite requests, or hypothetical outcomes.',
@@ -86,7 +86,7 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-20': 'This sentence uses a relative clause – "che", "cui", "il quale", or "dove" to connect and describe.',
     'node-21': 'This sentence uses a compound tense – avere/essere + participle for trapassato, futuro anteriore, or condizionale passato.',
 
-    // ── B2 – Advanced Grammar ─────────────────────────────────────
+    // ── B2 – advanced Grammar ─────────────────────────────────────
     'node-22': 'This sentence uses the congiuntivo imperfetto – hypothetical past, wishes, or "se" clauses (-assi/-essi/-issi).',
     'node-23': 'This sentence uses a complex periodo ipotetico – "se avessi…, avrei…" (if X had happened, Y would have happened).',
     'node-24': 'This sentence uses a passive or impersonal construction – "si" impersonale or "venire" + past participle.',
@@ -94,20 +94,20 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-26': 'This sentence uses a verb phrase – stare per + infinitive, mettersi a, finire di, continuare a, and similar.',
     'node-27': 'This sentence uses reported speech (discorso indiretto) – conveying what someone said with tense and reference shifts.',
 
-    // ── C1 – Refinement ───────────────────────────────────────────
+    // ── C1 – refinement ───────────────────────────────────────────
     'node-28': 'This sentence explores congiuntivo nuances – mood contrasts with "come se", "il fatto che", or "non credo che".',
-    'node-29': 'This sentence uses formal or literary register – Lei form, passato remoto, academic markers, or elevated style.',
+    'node-29': 'This sentence uses formal or literary register – lei form, passato remoto, academic markers, or elevated style.',
     'node-30': 'This sentence uses an idiomatic expression – proverbs, fixed phrases, or colloquial constructions of native speakers.',
     'node-31': 'This sentence uses complex syntax – participial clauses, multiple subordination, or nominalization patterns.',
 
-    // ── C2 – Mastery ──────────────────────────────────────────────
+    // ── C2 – mastery ──────────────────────────────────────────────
     'node-32': 'This sentence uses literary tenses or narrative style – passato remoto in prose, poetic register, or narrative forms.',
     'node-33': 'This sentence uses academic or professional discourse – formal argumentation, technical register, structured reasoning.',
     'node-34': 'This sentence reflects cultural fluency – culturally embedded expressions, regional variation, or proverb usage.',
     'node-35': 'This sentence combines multiple advanced patterns – near-native complexity across grammar, register, and idiom.',
   },
   french: {
-    // ── A1 – Foundations ──────────────────────────────────────────
+    // ── A1 – foundations ──────────────────────────────────────────
     'node-01': 'This sentence uses regular present tense – notice the -er, -ir, -re verb endings for everyday actions.',
     'node-02': 'This sentence features an irregular present verb – unique stems or forms (suis, ai, vais, fais, dis, vois).',
     'node-03': 'This sentence contrasts "être" (identity, origin, state) with "avoir" (possession, age, avoir-expressions like j\'ai faim).',
@@ -117,7 +117,7 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-07': 'This sentence uses descriptive language – adjectives, "il y a" (there is/are), colors, sizes, and characterization.',
     'node-08': 'This sentence uses a common expression – greetings, numbers, time, weather, or fixed everyday phrases.',
 
-    // ── A2 – Past & Pronouns ──────────────────────────────────────
+    // ── A2 – past & Pronouns ──────────────────────────────────────
     'node-09': 'This sentence uses the passé composé with regular verbs – avoir/être + past participle (-é/-i/-u).',
     'node-10': 'This sentence uses an irregular passé composé – irregular participles (fait, dit, vu, pris, mis) or être-verbs.',
     'node-11': 'This sentence uses the imparfait – habitual, ongoing, or background actions in the past (-ais/-ait/-ions endings).',
@@ -126,7 +126,7 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-14': 'This sentence distinguishes "pour" (purpose, destination, in favor of) from "par" (means, agent, through, per).',
     'node-15': 'This sentence uses object pronouns – direct (le, la, les), indirect (lui, leur), y, en, and pronoun placement.',
 
-    // ── B1 – Moods & Complex Tenses ──────────────────────────────
+    // ── B1 – moods & Complex Tenses ──────────────────────────────
     'node-16': 'This sentence uses the subjonctif présent – triggered by wishes, doubt, emotions, necessity (il faut que, je veux que).',
     'node-17': 'This sentence uses the impératif – commands and requests. Negative uses "ne…pas" around the verb.',
     'node-18': 'This sentence uses the conditionnel – expressing what would happen, polite requests, or hypothetical outcomes.',
@@ -134,7 +134,7 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-20': 'This sentence uses a relative clause – "qui", "que", "dont", "où", or "lequel" to connect and describe.',
     'node-21': 'This sentence uses a compound tense – avoir/être + participle for plus-que-parfait, futur antérieur, or conditionnel passé.',
 
-    // ── B2 – Advanced Grammar ─────────────────────────────────────
+    // ── B2 – advanced Grammar ─────────────────────────────────────
     'node-22': 'This sentence uses the subjonctif imparfait – literary past subjunctive or formal registers (-asse/-isse/-usse).',
     'node-23': 'This sentence uses a complex conditional – "si j\'avais…, j\'aurais…" (if X had happened, Y would have happened).',
     'node-24': 'This sentence uses a passive or impersonal construction – "on" as impersonal, "être" + past participle, or "il est" structures.',
@@ -142,20 +142,20 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-26': 'This sentence uses a verb phrase – venir de + infinitive, être en train de, se mettre à, finir par, and similar.',
     'node-27': 'This sentence uses reported speech (discours indirect) – conveying what someone said with tense and reference shifts.',
 
-    // ── C1 – Refinement ───────────────────────────────────────────
+    // ── C1 – refinement ───────────────────────────────────────────
     'node-28': 'This sentence explores subjonctif nuances – mood contrasts with "comme si", "le fait que", or "je ne pense pas que".',
     'node-29': 'This sentence uses formal or literary register – vous form, elevated vocabulary, academic markers, or written style.',
     'node-30': 'This sentence uses an idiomatic expression – proverbs, fixed phrases, or colloquial constructions of native speakers.',
     'node-31': 'This sentence uses complex syntax – participial clauses, multiple subordination, or nominalization patterns.',
 
-    // ── C2 – Mastery ──────────────────────────────────────────────
+    // ── C2 – mastery ──────────────────────────────────────────────
     'node-32': 'This sentence uses the passé simple or literary tenses – literary narrative past, rarely used in speech.',
     'node-33': 'This sentence uses academic or professional discourse – formal argumentation, technical register, structured reasoning.',
     'node-34': 'This sentence reflects cultural fluency – culturally embedded expressions, regional variation, or proverb usage.',
     'node-35': 'This sentence combines multiple advanced patterns – near-native complexity across grammar, register, and idiom.',
   },
   portuguese: {
-    // ── A1 – Foundations ──────────────────────────────────────────
+    // ── A1 – foundations ──────────────────────────────────────────
     'node-01': 'Regular -ar/-er/-ir verbs follow predictable patterns in the present tense.',
     'node-02': 'Irregular present verbs have unique stems or endings (sou, tenho, vou, faço, digo).',
     'node-03': '"Ser" expresses identity, origin, and traits; "estar" expresses states, location, and conditions.',
@@ -165,7 +165,7 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-07': 'Adjectives, "tem/há" (there is/are), colors, and sizes describe people and things.',
     'node-08': 'Greetings, numbers, time, weather, and fixed everyday phrases used in daily life.',
 
-    // ── A2 – Past & Pronouns ──────────────────────────────────────
+    // ── A2 – past & Pronouns ──────────────────────────────────────
     'node-09': 'Regular pretérito perfeito uses standard endings (-ei/-ou/-amos/-aram) for completed past actions.',
     'node-10': 'Irregular pretérito perfeito has stem changes (fez, foi, teve, disse, pôs) in the past.',
     'node-11': 'Pretérito imperfeito describes habitual, ongoing, or background actions in the past (-ava/-ia endings).',
@@ -174,7 +174,7 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-14': '"Por" indicates cause, exchange, or duration; "para" indicates purpose, destination, or deadline.',
     'node-15': 'Object pronouns (me, te, o/a, lhe, nos) replace direct and indirect objects in a sentence.',
 
-    // ── B1 – Moods & Complex Tenses ──────────────────────────────
+    // ── B1 – moods & Complex Tenses ──────────────────────────────
     'node-16': 'Present subjunctive is triggered by wishes, doubts, emotions, or hypothetical situations (que eu fale).',
     'node-17': 'Imperative forms give commands and instructions – affirmative and negative forms differ.',
     'node-18': 'Conditional expresses what would happen, polite requests, or hypothetical outcomes (-ia endings).',
@@ -182,7 +182,7 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-20': 'Relative clauses use "que", "quem", "onde", or "cujo" to connect and describe within clauses.',
     'node-21': 'Compound tenses use ter + participle for pluperfect, future perfect, or conditional perfect.',
 
-    // ── B2 – Advanced Grammar ─────────────────────────────────────
+    // ── B2 – advanced Grammar ─────────────────────────────────────
     'node-22': 'Imperfect subjunctive handles hypothetical past, wishes, or "se" clauses (-asse/-esse/-isse endings).',
     'node-23': 'Complex conditionals use "se tivesse…, teria…" (if X had happened, Y would have happened).',
     'node-24': 'Passive voice uses "ser + participle"; impersonal "se" marks general statements.',
@@ -190,20 +190,20 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-26': 'Verb phrases combine verbs: acabar de + infinitive, estar a + infinitive, começar a + infinitive.',
     'node-27': 'Reported speech (discurso indireto) conveys what someone said with tense and reference shifts.',
 
-    // ── C1 – Refinement ───────────────────────────────────────────
+    // ── C1 – refinement ───────────────────────────────────────────
     'node-28': 'Subjunctive nuances involve mood contrasts with "como se", "o facto de que", or "não creio que".',
     'node-29': 'Formal register uses "o senhor/a senhora", elevated vocabulary, and academic markers.',
     'node-30': 'Idiomatic expressions, proverbs, and colloquial constructions reflect native-speaker fluency.',
     'node-31': 'Complex syntax includes participial clauses, multiple subordination, and nominalization.',
 
-    // ── C2 – Mastery ──────────────────────────────────────────────
+    // ── C2 – mastery ──────────────────────────────────────────────
     'node-32': 'Literary tenses (pretérito mais-que-perfeito simples) and narrative style appear in formal writing.',
     'node-33': 'Academic discourse uses formal argumentation, technical register, and structured reasoning.',
     'node-34': 'Cultural fluency involves culturally embedded expressions, regional variation, and proverb usage.',
     'node-35': 'Advanced mastery combines multiple patterns – near-native complexity across grammar, register, and idiom.',
   },
   german: {
-    // ── A1 – Foundations ──────────────────────────────────────────
+    // ── A1 – foundations ──────────────────────────────────────────
     'node-01': 'This sentence uses personal pronouns and present tense – ich/du/er/sie/wir/ihr/sie with regular verb endings: -e, -st, -t, -en.',
     'node-02': 'This sentence uses regular present tense – notice the verb endings: -e, -st, -t, -en for standard verbs.',
     'node-03': 'This sentence contrasts "sein" (identity, traits, location) with "haben" (possession, age, expressions like "ich habe Hunger").',
@@ -220,14 +220,14 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-14': 'This sentence uses a two-way preposition (in, an, auf, über, unter, vor, hinter, neben, zwischen) – accusative for motion, dative for location.',
     'node-15': 'This sentence uses pronouns or reflexive verbs – personal pronouns change by case; reflexive verbs use sich/mich/dich.',
 
-    // ── A2 – Expanding Grammar ──────────────────────────────────
+    // ── A2 – expanding Grammar ──────────────────────────────────
     'node-16': 'This sentence uses comparatives or superlatives – mehr/weniger, -er ending, am -sten, or irregular forms (besser, am besten).',
     'node-17': 'This sentence uses temporal expressions and conjunctions – "als" (when, past), "wenn" (when/if), "bevor" (before), "nachdem" (after) connect time clauses.',
     'node-18': 'This sentence uses a subordinate clause – conjunctions like weil, dass, wenn, ob, als push the verb to the END of the clause.',
     'node-19': 'This sentence uses the imperative – commands and requests in du, ihr, or Sie form.',
     'node-20': 'This sentence uses adjective endings – adjectives before nouns get endings based on gender, case, and article type (strong/weak/mixed).',
 
-    // ── B1 – Intermediate ───────────────────────────────────────
+    // ── B1 – intermediate ───────────────────────────────────────
     'node-21': 'This sentence uses the genitive case – showing possession ("des Mannes", "der Frau") or with genitive prepositions (wegen, trotz, während).',
     'node-22': 'This sentence uses a relative clause – "der/die/das" as relative pronouns, with the verb at the end of the clause.',
     'node-23': 'This sentence uses the passive voice – "werden + past participle" where the subject receives the action.',
@@ -236,14 +236,14 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-26': 'This sentence uses an infinitive construction – "um…zu" (in order to), "ohne…zu" (without), "statt…zu" (instead of).',
     'node-27': 'This sentence uses advanced connectors – obwohl, trotzdem, allerdings, dennoch, außerdem, deshalb, and similar.',
 
-    // ── B2 – Advanced ───────────────────────────────────────────
+    // ── B2 – advanced ───────────────────────────────────────────
     'node-28': 'This sentence features noun compounds – German builds complex words by joining nouns: Handschuh (hand+shoe = glove).',
     'node-29': 'This sentence uses an extended adjective construction – participial attributes before the noun create dense, literary phrases.',
     'node-30': 'This sentence uses a double infinitive or complex verb chain – modal verbs in perfect tense keep infinitive form.',
     'node-31': 'This sentence uses formal register – elevated vocabulary, complex structures, and professional or academic tone.',
     'node-32': 'This sentence uses an idiomatic expression – proverbs, fixed phrases, or figurative constructions common among native speakers.',
 
-    // ── C1/C2 – Mastery ─────────────────────────────────────────
+    // ── C1/C2 – mastery ─────────────────────────────────────────
     'node-33': 'This sentence uses advanced subjunctive – "als ob" + Konjunktiv II, complex hypotheticals, or literary subjunctive forms.',
     'node-34': 'This sentence uses academic or professional German – formal argumentation, technical register, or structured discourse.',
     'node-35': 'This sentence uses modal particles (doch, mal, ja, eben, halt, schon) – subtle words that add nuance and speaker attitude.',
@@ -294,7 +294,7 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-06': 'This sentence uses questions and interrogatives – "vem" (who), "vad" (what), "var" (where), "när" (when), "hur" (how).',
     'node-07': 'This sentence uses descriptive language – adjectives with en/ett agreement, "det finns" (there is/are), and basic characterization.',
     'node-08': 'This sentence uses a common expression – everyday phrases and fixed expressions used in daily Swedish life.',
-    'node-09': 'This sentence uses the preteritum (simple past) – Group 1 adds -ade, Group 2 adds -de/-te, Group 4 verbs change their vowel.',
+    'node-09': 'This sentence uses the preteritum (simple past) – group 1 adds -ade, Group 2 adds -de/-te, Group 4 verbs change their vowel.',
     'node-10': 'This sentence uses object pronouns – mig, dig, honom, henne, oss, er, dem. Short forms (mej, dej) are common in speech.',
     'node-11': 'This sentence uses a modal verb – kan (can), måste (must), ska (shall), vill (want). The main verb stays as infinitive.',
     'node-12': 'This sentence uses a reflexive verb – "sig" marks reflexive: "tvätta sig" (wash oneself), "klä på sig" (get dressed), "sätta sig" (sit down).',

@@ -2,8 +2,23 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { VitePWA } from 'vite-plugin-pwa';
+import { execSync } from 'child_process';
+import { readFileSync } from 'fs';
+
+// Inject app version + git short SHA at build time so the footer can
+// display them. Fall back to "dev" when not in a git repo or git isn't
+// installed in the build environment.
+const pkg = JSON.parse(readFileSync('./package.json', 'utf-8'));
+let sha = 'dev';
+try { sha = execSync('git rev-parse --short HEAD').toString().trim(); } catch {}
+const buildDate = new Date().toISOString().slice(0, 10);
 
 export default defineConfig({
+  define: {
+    __APP_VERSION__: JSON.stringify(pkg.version),
+    __APP_SHA__: JSON.stringify(sha),
+    __APP_BUILD_DATE__: JSON.stringify(buildDate),
+  },
   preview: {
     // Allow tunneling services so we can share the preview build externally.
     allowedHosts: ['.trycloudflare.com', '.ngrok.io', 'langlab-srs.netlify.app', 'localhost'],

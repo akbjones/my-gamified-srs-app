@@ -13,12 +13,12 @@
  *    chi (you pl./formal), nhw (they)
  *
  * Tenses produced:
- *   present     – Presennol      (rwy'n + VN / inflected present)
- *   imperfect   – Amherffaith    (roeddwn i'n + VN / inflected imperfect)
- *   preterite   – Gorffennol     (gwnes i + VN / inflected preterite)
- *   future      – Dyfodol        (bydda i'n + VN / inflected future)
- *   conditional – Amodol         (baswn i'n + VN / inflected conditional)
- *   subjunctive – Gorchmynnol    (imperative forms)
+ *   present     – presennol      (rwy'n + VN / inflected present)
+ *   imperfect   – amherffaith    (roeddwn i'n + VN / inflected imperfect)
+ *   preterite   – gorffennol     (gwnes i + VN / inflected preterite)
+ *   future      – dyfodol        (bydda i'n + VN / inflected future)
+ *   conditional – amodol         (baswn i'n + VN / inflected conditional)
+ *   subjunctive – gorchmynnol    (imperative forms)
  */
 
 import type { ConjugationTable } from '../../types';

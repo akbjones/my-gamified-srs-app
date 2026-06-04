@@ -331,6 +331,11 @@ const PopoverPortal: React.FC<{
       for (let i = 1; i <= Math.min(clean.length - 2, 7); i++) {
         stems.add(clean.slice(0, -i));
       }
+      // Local normalize for matching forms against the input token.
+      const norm = (s: string) =>
+        s.toLowerCase().replace(/\s+/g, '').normalize('NFD').replace(/[̀-ͯ]/g, '');
+      const tokenNorm = norm(clean);
+
       for (const stem of stems) {
         // IMPORTANT: When adding a new language, add its infinitive endings here!
         // Romance: -ir, -er, -re, -ar, -or  |  Germanic: -en, -ern, -eln, -n
@@ -351,6 +356,22 @@ const PopoverPortal: React.FC<{
           if (dictEntry?.pos === 'v') {
             const r = conjugateFn(candidate);
             if (r) return r;
+          }
+          // Fallback: candidate isn't in the dictionary, but the conjugation
+          // engine still generates a table. Accept it ONLY if the input token
+          // actually appears as one of the generated forms – that proves the
+          // candidate is the real infinitive, not nonsense like "agisser".
+          // Catches verbs missing from the dict (e.g. Spanish "despedir" from
+          // "despedimos") without inventing fake verbs.
+          else if (!dictEntry) {
+            const r = conjugateFn(candidate);
+            if (r) {
+              for (const forms of Object.values(r.tenses)) {
+                if (forms.some(f => f && f !== '-' && norm(f) === tokenNorm)) {
+                  return r;
+                }
+              }
+            }
           }
         }
       }
@@ -525,8 +546,23 @@ const PopoverPortal: React.FC<{
         </button>
       )}
 
-      {/* Flag this word as wrong */}
-      <div className="mt-3 pt-3 border-t border-[var(--border-color)]">
+      {/* Conjugation: open full-screen modal */}
+      {conjTable && (
+        <div className="mt-3 pt-3 border-t border-[var(--border-color)]">
+          <button
+            onClick={(e) => { e.stopPropagation(); setShowConj(true); }}
+            className="text-[11px] font-bold text-blue-500 hover:text-blue-400 transition-colors uppercase tracking-wider flex items-center gap-1"
+          >
+            View conjugation
+            {conjTable.isReflexive && <span className="text-[var(--text-muted)] font-normal">(reflexive)</span>}
+            <span aria-hidden="true">↗</span>
+          </button>
+        </div>
+      )}
+
+      {/* Flag this word as wrong – bottom-right of the popover, small text
+          so it never competes with the translation / cognate content above. */}
+      <div className="mt-2 flex justify-end">
         <button
           onClick={async () => {
             const btn = document.activeElement as HTMLElement;
@@ -541,14 +577,12 @@ const PopoverPortal: React.FC<{
               timestamp: Date.now(),
             };
 
-            // Save locally too (backup)
             const flags = JSON.parse(localStorage.getItem('quest_flagged_words') || '[]');
             if (!flags.find((f: any) => f.language === language && f.word === rawToken)) {
               flags.push(flagEntry);
               localStorage.setItem('quest_flagged_words', JSON.stringify(flags));
             }
 
-            // POST to Netlify Forms
             try {
               const formData = new URLSearchParams();
               formData.append('form-name', 'word-flag');
@@ -569,25 +603,11 @@ const PopoverPortal: React.FC<{
             }
             setTimeout(() => { if (btn) btn.textContent = originalText; }, 2000);
           }}
-          className="text-[10px] font-medium text-[var(--text-muted)] hover:text-orange-500 transition-colors"
+          className="text-[10px] font-medium text-[var(--text-faint)] hover:text-orange-500 transition-colors"
         >
           Flag as wrong
         </button>
       </div>
-
-      {/* Conjugation: open full-screen modal */}
-      {conjTable && (
-        <div className="mt-3 pt-3 border-t border-[var(--border-color)]">
-          <button
-            onClick={(e) => { e.stopPropagation(); setShowConj(true); }}
-            className="text-[11px] font-bold text-blue-500 hover:text-blue-400 transition-colors uppercase tracking-wider flex items-center gap-1"
-          >
-            View conjugation
-            {conjTable.isReflexive && <span className="text-[var(--text-muted)] font-normal">(reflexive)</span>}
-            <span aria-hidden="true">↗</span>
-          </button>
-        </div>
-      )}
       </div>
 
       {/* Full-screen conjugation overlay – polished layout so users can

@@ -12,12 +12,12 @@
  *   Group 4  (strong/irr):   gå → går, gick, gått
  *
  * Tenses produced:
- *   present     – Presens
- *   preterite   – Preteritum (simple past)
- *   imperfect   – Perfekt (har/hade + supinum)
- *   future      – Futurum (ska + infinitive)
- *   conditional – Konditionalis (skulle + infinitive)
- *   subjunctive – Imperativ (practical substitute for subjunctive)
+ *   present     – presens
+ *   preterite   – preteritum (simple past)
+ *   imperfect   – perfekt (har/hade + supinum)
+ *   future      – futurum (ska + infinitive)
+ *   conditional – konditionalis (skulle + infinitive)
+ *   subjunctive – imperativ (practical substitute for subjunctive)
  */
 
 import type { ConjugationTable } from '../../types';

@@ -1341,6 +1341,16 @@ const App: React.FC = () => {
               </div>
             </div>
           )}
+
+          {/* Version log – build info pinned to the very bottom of the home
+              view so users can quote the exact build when reporting issues. */}
+          <div className="mt-3 pt-3 border-t border-[var(--border-color)] flex items-center justify-center gap-2 text-[10px] font-mono text-[var(--text-faint)]">
+            <span>v{__APP_VERSION__}</span>
+            <span>·</span>
+            <span>{__APP_SHA__}</span>
+            <span>·</span>
+            <span>{__APP_BUILD_DATE__}</span>
+          </div>
         </section>
       )}
 

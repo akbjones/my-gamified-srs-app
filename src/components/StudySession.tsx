@@ -433,15 +433,12 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             </div>
           )}
 
-          {/* Top-of-card chip row – ALWAYS rendered so card height stays
-              constant across cards. Grammar lives in a left-anchored slot
-              and only renders when card.grammar is present; Etymology lives
-              in a right-anchored slot and only renders when an etymology
-              entry exists. Each chip is pinned to its corner – the present
-              chip never drifts toward the center based on whether the
-              other one is around. */}
-          <div className="flex items-start justify-between gap-2 px-3 pt-2 shrink-0 min-h-[36px]">
-            <div className="flex-1 flex justify-start">
+          {/* Top-right chip stack – Grammar always on top, Etymology below.
+              Both pinned to the top-right corner of the card so they're
+              always within thumb reach in the same spot. Absolute positioning
+              so they don't affect the card content's vertical layout. */}
+          {(card!.grammar || cardEty) && (
+            <div className="absolute top-2 right-2 z-10 flex flex-col items-end gap-1.5">
               {card!.grammar && (
                 <button
                   onClick={(e) => { e.stopPropagation(); setShowGrammar(true); }}
@@ -451,8 +448,6 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                   <span>Grammar</span>
                 </button>
               )}
-            </div>
-            <div className="flex-1 flex justify-end">
               {cardEty && (
                 <button
                   onClick={(e) => { e.stopPropagation(); setShowEtymology(true); }}
@@ -463,7 +458,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                 </button>
               )}
             </div>
-          </div>
+          )}
 
           {/* Etymology overlay – same modal pattern as Grammar Tip, violet
               palette. The word being explained sits prominently above the

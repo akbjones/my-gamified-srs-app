@@ -67,8 +67,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Mono for numbers, codes, stats */
-.font-mono { font-family: 'JetBrains Mono', monospace; }
+/* Mono for numbers, codes, stats. Roboto Mono has a clean, undotted zero
+   by default – JetBrains Mono uses a slashed/dotted zero that read as
+   wrong to users at a glance. */
+.font-mono { font-family: 'Roboto Mono', monospace; }
 
 /* === ANIMATIONS === */
 @keyframes fade-in {

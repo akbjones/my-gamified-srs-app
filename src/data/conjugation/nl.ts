@@ -6,12 +6,12 @@
  * Person order: ik, jij, hij/zij, wij, jullie, zij
  *
  * Tenses:
- *   present     – Presens
- *   preterite   – Imperfectum (simple past)
- *   imperfect   – Perfectum (compound past: hebben/zijn + voltooid deelwoord)
- *   future      – Futurum (zullen + infinitive)
- *   conditional – Conditionalis (zou/zouden + infinitive)
- *   subjunctive – Aanv. wijs (aanvoegende wijs)
+ *   present     – presens
+ *   preterite   – imperfectum (simple past)
+ *   imperfect   – perfectum (compound past: hebben/zijn + voltooid deelwoord)
+ *   future      – futurum (zullen + infinitive)
+ *   conditional – conditionalis (zou/zouden + infinitive)
+ *   subjunctive – aanv. wijs (aanvoegende wijs)
  */
 import type { ConjugationTable } from '../../types';
 

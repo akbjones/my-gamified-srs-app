@@ -19,7 +19,7 @@ export const TIER_LABELS: Record<string, string> = {
 };
 
 export const MAIN_PATH: PathNode[] = [
-  // ── A1 – Foundations (8 nodes) ──────────────────────────────
+  // ── A1 – foundations (8 nodes) ──────────────────────────────
   { id: 'node-01', name: 'Regular present tense',       tier: 'A1', color: '#22c55e' },
   { id: 'node-02', name: 'Irregular present verbs',     tier: 'A1', color: '#22c55e' },
   { id: 'node-03', name: 'Ser/Essere vs Estar/Stare',   tier: 'A1', color: '#22c55e' },
@@ -29,7 +29,7 @@ export const MAIN_PATH: PathNode[] = [
   { id: 'node-07', name: 'Descriptions & adjectives',   tier: 'A1', color: '#22c55e' },
   { id: 'node-08', name: 'Common expressions',          tier: 'A1', color: '#22c55e' },
 
-  // ── A2 – Past & Pronouns (7 nodes) ─────────────────────────
+  // ── A2 – past & Pronouns (7 nodes) ─────────────────────────
   { id: 'node-09', name: 'Past tense: regular',         tier: 'A2', color: '#3b82f6' },
   { id: 'node-10', name: 'Past tense: irregular',       tier: 'A2', color: '#3b82f6' },
   { id: 'node-11', name: 'Imperfect tense',             tier: 'A2', color: '#3b82f6' },
@@ -38,7 +38,7 @@ export const MAIN_PATH: PathNode[] = [
   { id: 'node-14', name: 'Prepositions',                tier: 'A2', color: '#3b82f6' },
   { id: 'node-15', name: 'Object pronouns',             tier: 'A2', color: '#3b82f6' },
 
-  // ── B1 – Moods & Complex Tenses (6 nodes) ──────────────────
+  // ── B1 – moods & Complex Tenses (6 nodes) ──────────────────
   { id: 'node-16', name: 'Present subjunctive',         tier: 'B1', color: '#f59e0b' },
   { id: 'node-17', name: 'Imperative / commands',       tier: 'B1', color: '#f59e0b' },
   { id: 'node-18', name: 'Conditional',                 tier: 'B1', color: '#f59e0b' },
@@ -46,7 +46,7 @@ export const MAIN_PATH: PathNode[] = [
   { id: 'node-20', name: 'Relative clauses',            tier: 'B1', color: '#f59e0b' },
   { id: 'node-21', name: 'Perfect & compound tenses',   tier: 'B1', color: '#f59e0b' },
 
-  // ── B2 – Advanced Grammar (6 nodes) ────────────────────────
+  // ── B2 – advanced Grammar (6 nodes) ────────────────────────
   { id: 'node-22', name: 'Imperfect subjunctive',       tier: 'B2', color: '#ef4444' },
   { id: 'node-23', name: 'Complex conditionals',        tier: 'B2', color: '#ef4444' },
   { id: 'node-24', name: 'Passive & impersonal',        tier: 'B2', color: '#ef4444' },
@@ -54,13 +54,13 @@ export const MAIN_PATH: PathNode[] = [
   { id: 'node-26', name: 'Verb phrases & periphrasis',  tier: 'B2', color: '#ef4444' },
   { id: 'node-27', name: 'Reported speech',             tier: 'B2', color: '#ef4444' },
 
-  // ── C1 – Refinement (4 nodes) ──────────────────────────────
+  // ── C1 – refinement (4 nodes) ──────────────────────────────
   { id: 'node-28', name: 'Subjunctive nuances',         tier: 'C1', color: '#8b5cf6' },
   { id: 'node-29', name: 'Register & formal style',     tier: 'C1', color: '#8b5cf6' },
   { id: 'node-30', name: 'Idiomatic expressions',       tier: 'C1', color: '#8b5cf6' },
   { id: 'node-31', name: 'Complex syntax',              tier: 'C1', color: '#8b5cf6' },
 
-  // ── C2 – Mastery (4 nodes) ─────────────────────────────────
+  // ── C2 – mastery (4 nodes) ─────────────────────────────────
   { id: 'node-32', name: 'Literary tenses & narrative',  tier: 'C2', color: '#6366f1' },
   { id: 'node-33', name: 'Academic discourse',           tier: 'C2', color: '#6366f1' },
   { id: 'node-34', name: 'Cultural fluency',             tier: 'C2', color: '#6366f1' },
@@ -380,7 +380,7 @@ export const NODE_NAMES: Partial<Record<Language, Record<string, string>>> = {
   hindi: {
     'node-01': 'Personal pronouns & present habitual (-ता/-ती)',
     'node-02': 'Present habitual tense',
-    'node-03': 'Honaa vs karnaa (to be vs to do)',
+    'node-03': 'होना vs करना (to be vs to do)',
     'node-04': 'Gender & postpositions',
     'node-05': 'Numerals & oblique case',
     'node-06': 'Accusative/dative (को construction)',
@@ -388,25 +388,25 @@ export const NODE_NAMES: Partial<Record<Language, Record<string, string>>> = {
     'node-08': 'Common expressions',
     'node-09': 'Simple past tense',
     'node-10': 'Present continuous',
-    'node-11': 'Modal verbs (saknaa/chaahiye)',
+    'node-11': 'Modal verbs (सकना/चाहिए)',
     'node-12': 'Reflexive verbs (अपना/खुद)',
-    'node-13': 'Negation (nahiin/mat/na)',
-    'node-14': 'Postpositions (mein/par/ko/se)',
+    'node-13': 'Negation (नहीं/मत/न)',
+    'node-14': 'Postpositions (में/पर/को/से)',
     'node-15': 'Adjective agreement & comparison',
     'node-16': 'Past habitual tense',
     'node-17': 'Compound postpositions (के ऊपर/के नीचे)',
     'node-18': 'Subordinate clauses (ki/jo/jab)',
-    'node-19': 'Imperative (tuu/tum/aap)',
+    'node-19': 'Imperative (तू/तुम/आप)',
     'node-20': 'Compound verbs',
-    'node-21': 'Relative clauses (jo...vo)',
-    'node-22': 'Passive voice (jaanaa passive)',
-    'node-23': 'Ergative case (ne construction)',
+    'node-21': 'Relative clauses (जो...वो)',
+    'node-22': 'Passive voice (जाना passive)',
+    'node-23': 'Ergative case (ने construction)',
     'node-24': 'Future tense',
     'node-25': 'Advanced connectors',
-    'node-26': 'Conjunct verbs (N + karnaa)',
+    'node-26': 'Conjunct verbs (N + करना)',
     'node-27': 'Reported speech',
     'node-28': 'Idiomatic expressions',
-    'node-29': 'Formal vs informal register (aap/tum/tuu)',
+    'node-29': 'Formal vs informal register (आप/तुम/तू)',
     'node-30': 'Sanskritized vs Persianized Hindi',
     'node-31': 'Complex sentence structures',
     'node-32': 'Literary & written Hindi',

@@ -9,10 +9,10 @@
  *
  * Tenses:
  *   present_cont – Şimdiki zaman (-yor)
- *   aorist       – Geniş zaman (-r/-er/-ir/-ar)
- *   past         – Geçmiş zaman (-di/-dı/-du/-dü)
- *   reported     – Duyulan geçmiş (-miş/-mış/-muş/-müş)
- *   future       – Gelecek zaman (-ecek/-acak)
+ *   aorist       – geniş zaman (-r/-er/-ir/-ar)
+ *   past         – geçmiş zaman (-di/-dı/-du/-dü)
+ *   reported     – duyulan geçmiş (-miş/-mış/-muş/-müş)
+ *   future       – gelecek zaman (-ecek/-acak)
  *   conditional  – Şart (-se/-sa)
  */
 import type { ConjugationTable } from '../../types';

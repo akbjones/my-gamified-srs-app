@@ -264,15 +264,39 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   };
 
   // Explicit time units so "1m" can't be misread as "1 month".
+  // For mature cards (mastery 2) the actual interval comes from the SRS
+  // formulas in srsService – the hint mirrors those so users see "13 days"
+  // on Easy for a 4-day card instead of a constant "4 days" that's only
+  // accurate at graduation.
   const getIntervalHint = (rating: string): string => {
+    const MIN = 60_000;
+    const DAY = 24 * 60 * 60 * 1000;
+    const c = card!;
+    const ease = c.ease || 2.5;
+    const interval = c.interval || 0;
+
+    const fmt = (ms: number): string => {
+      if (ms < DAY) return `${Math.round(ms / MIN)} min`;
+      const d = Math.round(ms / DAY);
+      if (d < 30) return d === 1 ? '1 day' : `${d} days`;
+      const mo = Math.round(d / 30);
+      return mo === 1 ? '1 mo' : `${mo} mo`;
+    };
+
     if (rating === 'AGAIN') return '1 min';
-    if (rating === 'HARD') return '6 min';
-    if (rating === 'GOOD') {
-      if (card!.mastery === 0) return '10 min';
-      if (card!.mastery === 1 && card!.step === 0) return '10 min';
-      return '1 day';
+    if (rating === 'HARD') {
+      if (c.mastery < 2) return '6 min';
+      return fmt(Math.max(1 * DAY, Math.round(interval * 1.2)));
     }
-    return '4 days';
+    if (rating === 'GOOD') {
+      if (c.mastery === 0) return '10 min';
+      if (c.mastery === 1 && c.step === 0) return '10 min';
+      if (c.mastery === 1) return '1 day';
+      return fmt(Math.round((interval || 1 * DAY) * ease));
+    }
+    // EASY
+    if (c.mastery < 2) return '4 days';
+    return fmt(Math.round((interval || 1 * DAY) * ease * 1.3));
   };
 
   return (

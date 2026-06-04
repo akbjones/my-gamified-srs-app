@@ -477,7 +477,7 @@ export const ITALIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'caffè': {
     word: 'caffè',
-    origin: 'Italian caffè, ult. Arabic qahwa',
+    origin: 'Italian caffè, ultimately Arabic qahwa',
     cognates: ['coffee', 'café'],
     note: 'Italians borrowed Arabic qahwa via Ottoman trade – coffee first reached Venice in 1645, and the drink spread from Italian ports to France and beyond.',
     verified: true,
@@ -493,7 +493,7 @@ export const ITALIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'zucchero': {
     word: 'zucchero',
-    origin: 'Arabic sukkar, ult. Sanskrit śarkarā',
+    origin: 'Arabic sukkar, ultimately Sanskrit śarkarā',
     cognates: ['sugar'],
     note: 'Originally Sanskrit śarkarā ("gravel, sand") – sugar crystals reminded ancient Indians of grit. Same root gave English "sugar" via Arabic and Italian.',
     verified: true,

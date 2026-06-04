@@ -69,7 +69,7 @@ export const SPANISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'naranja': {
     word: 'naranja',
-    origin: 'Persian nārang, ult. Sanskrit nāraṅga',
+    origin: 'Persian nārang, ultimately Sanskrit nāraṅga',
     cognates: ['orange'],
     note: 'English "orange" lost the initial n- via "a norange" → "an orange" misanalysis.',
     verified: true,
@@ -261,7 +261,7 @@ export const SPANISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'arroz': {
     word: 'arroz',
-    origin: 'Arabic ar-ruzz, ult. Greek óryza',
+    origin: 'Arabic ar-ruzz, ultimately Greek óryza',
     cognates: ['rice'],
     note: 'Greek óryza traveled via Arabic into Spain – English "rice" came via Old French from the same Greek root.',
     verified: true,
@@ -277,7 +277,7 @@ export const SPANISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'guitarra': {
     word: 'guitarra',
-    origin: 'Arabic qīṯāra, ult. Greek kithara',
+    origin: 'Arabic qīṯāra, ultimately Greek kithara',
     cognates: ['guitar'],
     note: 'From an ancient Greek string-instrument word – traveled via Arabic into Spain, then onward to English. Instrument and word crossed the Mediterranean.',
     verified: true,
@@ -541,7 +541,7 @@ export const SPANISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'café': {
     word: 'café',
-    origin: 'Italian caffè, ult. Arabic qahwa',
+    origin: 'Italian caffè, ultimately Arabic qahwa',
     cognates: ['coffee'],
     note: 'From the Arabic word for "coffee" – carried by Ottoman traders into Italian and French. English took both "café" and "coffee" from this journey.',
     verified: true,
@@ -957,7 +957,7 @@ export const SPANISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'azúcar': {
     word: 'azúcar',
-    origin: 'Arabic as-sukkar, ult. Sanskrit śarkarā',
+    origin: 'Arabic as-sukkar, ultimately Sanskrit śarkarā',
     cognates: ['sugar'],
     note: 'Same Sanskrit root as English "sugar" – śarkarā meant "gravel, sand". Spanish kept the Arabic article fused on (az-), reflecting Moorish trade.',
     verified: true,

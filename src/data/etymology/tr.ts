@@ -26,7 +26,7 @@ export const TURKISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'şeker': {
     word: 'şeker',
-    origin: 'Persian shakar, ult. Sanskrit śarkarā',
+    origin: 'Persian shakar, ultimately Sanskrit śarkarā',
     cognates: ['sugar'],
     note: 'Same chain as Spanish azúcar – Sanskrit → Persian → Arabic → European trade routes brought sugar westward.',
     verified: true,

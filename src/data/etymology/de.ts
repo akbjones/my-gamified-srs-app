@@ -493,7 +493,7 @@ export const GERMAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'Kaffee': {
     word: 'Kaffee',
-    origin: 'Turkish kahve, ult. Arabic qahwa',
+    origin: 'Turkish kahve, ultimately Arabic qahwa',
     cognates: ['coffee'],
     note: 'From Arabic qahwa via Ottoman Turkish – coffee reached Vienna in 1683 around the Ottoman siege, and the city\'s coffeehouse culture grew from there.',
     verified: true,

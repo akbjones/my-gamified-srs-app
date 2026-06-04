@@ -149,7 +149,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'café': {
     word: 'café',
-    origin: 'Italian caffè, ult. Arabic qahwa',
+    origin: 'Italian caffè, ultimately Arabic qahwa',
     cognates: ['coffee'],
     note: 'From the Arabic word for "coffee" – carried by Ottoman traders into Italian and French. English took both "café" and "coffee" from this journey.',
     verified: true,
@@ -573,7 +573,7 @@ export const FRENCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'numéro': {
     word: 'numéro',
-    origin: 'Italian numero, ult. Latin numerus',
+    origin: 'Italian numero, ultimately Latin numerus',
     cognates: ['number'],
     note: 'Borrowed from Italian numero in the 1500s – same Latin root as English "number". The native French nombre is used in mathematical contexts.',
     verified: true,

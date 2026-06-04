@@ -333,7 +333,7 @@ export const HINDI_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'तंदूर': {
     word: 'तंदूर',
-    origin: 'Persian tannūr, ult. Akkadian tinūru',
+    origin: 'Persian tannūr, ultimately Akkadian tinūru',
     cognates: [],
     note: 'A clay oven sunk into the ground – traceable to ancient Mesopotamia in 3000 BCE. Mughal cooks brought the design to Indian kitchens.',
     verified: true,

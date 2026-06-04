@@ -77,7 +77,7 @@ export const PORTUGUESE_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'cebra': {
     word: 'cebra',
-    origin: 'Portuguese cebra, ult. unclear African',
+    origin: 'Portuguese cebra, ultimately unclear African',
     cognates: ['zebra'],
     note: 'Portuguese explorers in Africa brought the word back in the 1500s – original African etymology is still debated by linguists.',
     verified: true,
@@ -493,7 +493,7 @@ export const PORTUGUESE_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'café': {
     word: 'café',
-    origin: 'Italian caffè, ult. Arabic qahwa',
+    origin: 'Italian caffè, ultimately Arabic qahwa',
     cognates: ['coffee'],
     note: 'From the Arabic word for "coffee" – carried by Ottoman traders into Italian and French. Brazilian coffee plantations later supplied much of the world.',
     verified: true,
@@ -933,7 +933,7 @@ export const PORTUGUESE_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'açúcar': {
     word: 'açúcar',
-    origin: 'Arabic as-sukkar, ult. Sanskrit śarkarā',
+    origin: 'Arabic as-sukkar, ultimately Sanskrit śarkarā',
     cognates: ['sugar'],
     note: 'Same Sanskrit root as English "sugar" – śarkarā meant "gravel, sand". Portuguese sugar plantations in Brazil supplied much of the world by the 1600s.',
     verified: true,

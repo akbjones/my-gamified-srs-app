@@ -990,7 +990,7 @@ export const RUSSIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'вино': {
     word: 'вино',
-    origin: 'Slavic vino, ult. Latin vinum',
+    origin: 'Slavic vino, ultimately Latin vinum',
     cognates: ['wine'],
     note: 'Same root as English "wine" – Slavic vino is likely a parallel inheritance from the shared ancestral root, not a Latin loan.',
     verified: true,
@@ -998,7 +998,7 @@ export const RUSSIAN_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'сахар': {
     word: 'сахар',
-    origin: 'Greek sakkharon, ult. Sanskrit śarkarā',
+    origin: 'Greek sakkharon, ultimately Sanskrit śarkarā',
     cognates: ['sugar'],
     note: 'Same Sanskrit root as English "sugar" – śarkarā meant "gravel, sand". Russian took it via Greek, while Western Europe took it via Arabic.',
     verified: true,

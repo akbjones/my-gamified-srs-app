@@ -485,7 +485,7 @@ export const DUTCH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'koffie': {
     word: 'koffie',
-    origin: 'Turkish kahve, ult. Arabic qahwa',
+    origin: 'Turkish kahve, ultimately Arabic qahwa',
     cognates: ['coffee'],
     note: 'From Arabic qahwa via Ottoman Turkish – Dutch traders brought coffee from Yemen to Europe and Java in the 1600s, building the colonial coffee trade.',
     verified: true,

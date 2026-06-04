@@ -487,7 +487,7 @@ export const SWEDISH_ETYMOLOGY: Record<string, EtymologyEntry> = {
   },
   'kaffe': {
     word: 'kaffe',
-    origin: 'Turkish kahve, ult. Arabic qahwa',
+    origin: 'Turkish kahve, ultimately Arabic qahwa',
     cognates: ['coffee'],
     note: 'From Arabic qahwa via Ottoman Turkish – coffee reached Sweden in the late 1600s and became central to the daily fika ritual by the 1800s.',
     verified: true,

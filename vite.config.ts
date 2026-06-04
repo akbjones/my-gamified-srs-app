@@ -6,11 +6,25 @@ import { execSync } from 'child_process';
 import { readFileSync } from 'fs';
 
 // Inject app version + git short SHA at build time so the footer can
-// display them. Fall back to "dev" when not in a git repo or git isn't
-// installed in the build environment.
+// display them.
+// Resolution order:
+//   1. CF_PAGES_COMMIT_SHA  – Cloudflare Pages exposes this for every build
+//   2. VERCEL_GIT_COMMIT_SHA – Vercel equivalent
+//   3. COMMIT_REF           – Netlify equivalent
+//   4. `git rev-parse --short HEAD`         – local dev
+//   5. 'dev' literal as last resort
+// The platform env var is preferred over `git` because some CI runners
+// use shallow clones / detached HEADs where the local git command can
+// return blank.
 const pkg = JSON.parse(readFileSync('./package.json', 'utf-8'));
-let sha = 'dev';
-try { sha = execSync('git rev-parse --short HEAD').toString().trim(); } catch {}
+let sha = process.env.CF_PAGES_COMMIT_SHA?.slice(0, 7) ||
+          process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 7) ||
+          process.env.COMMIT_REF?.slice(0, 7) ||
+          '';
+if (!sha) {
+  try { sha = execSync('git rev-parse --short HEAD').toString().trim(); } catch {}
+}
+if (!sha) sha = 'dev';
 const buildDate = new Date().toISOString().slice(0, 10);
 
 export default defineConfig({

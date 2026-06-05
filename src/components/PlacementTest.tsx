@@ -248,13 +248,13 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
 
         <button
           onClick={() => setPhase('question')}
-          className="w-full py-4 btn-primary rounded-xl text-base mb-3"
+          className="w-full py-2.5 rounded-xl text-sm font-bold btn-primary normal-case tracking-normal mb-2"
         >
           Start
         </button>
         <button
           onClick={onSkip}
-          className="w-full py-3 text-xs text-[var(--text-muted)] font-bold hover:text-[var(--text-secondary)] transition-colors"
+          className="w-full py-2.5 rounded-xl text-sm font-bold bg-[var(--bg-inset)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] active:scale-95 transition"
         >
           Start from the beginning instead
         </button>
@@ -267,25 +267,17 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   if (phase === 'question' && currentCard) {
     return (
       <div className="flex flex-col h-dvh px-5 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))]">
-        {/* Header: exit + tier + node name */}
+        {/* Header: just exit + progress count. The node name was telling
+            the user which curriculum section they were being tested on,
+            which isn't actionable info during the test – removed for focus. */}
         <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center gap-2">
-            <button
-              onClick={onSkip}
-              className="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-wider hover:text-[var(--text-secondary)] transition-colors mr-1"
-            >
-              &larr; Exit
-            </button>
-            <span
-              className="inline-block w-2 h-2 rounded-full"
-              style={{ backgroundColor: currentNode.color }}
-              aria-hidden="true"
-            />
-            <span className="text-xs font-bold text-[var(--text-secondary)]">
-              {getNodeName(currentNode.id, lang)}
-            </span>
-          </div>
-          <span className="text-[10px] font-mono text-[var(--text-muted)]">
+          <button
+            onClick={onSkip}
+            className="text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider hover:text-[var(--text-secondary)] transition-colors"
+          >
+            &larr; Exit
+          </button>
+          <span className="text-xs font-mono text-[var(--text-muted)]">
             {nodeIndex + 1}/{MAIN_PATH.length}
           </span>
         </div>

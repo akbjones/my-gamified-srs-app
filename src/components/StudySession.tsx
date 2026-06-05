@@ -438,22 +438,22 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               always within thumb reach in the same spot. Absolute positioning
               so they don't affect the card content's vertical layout. */}
           {(card!.grammar || cardEty) && (
-            <div className="absolute top-2 right-2 z-10 flex flex-col items-end gap-1.5">
+            <div className="absolute top-2 right-2 z-10 flex flex-col items-end gap-2">
               {card!.grammar && (
                 <button
                   onClick={(e) => { e.stopPropagation(); setShowGrammar(true); }}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider text-amber-600 dark:text-amber-300 bg-amber-500/10 border border-amber-500/40 hover:bg-amber-500/15 transition-all active:scale-95"
+                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-300 bg-amber-500/10 border border-amber-500/40 hover:bg-amber-500/15 transition-all active:scale-95"
                 >
-                  <BookOpen size={12} />
+                  <BookOpen size={14} />
                   <span>Grammar</span>
                 </button>
               )}
               {cardEty && (
                 <button
                   onClick={(e) => { e.stopPropagation(); setShowEtymology(true); }}
-                  className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider text-violet-600 dark:text-violet-300 bg-violet-500/10 border border-violet-500/40 hover:bg-violet-500/15 transition-all active:scale-95"
+                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-violet-600 dark:text-violet-300 bg-violet-500/10 border border-violet-500/40 hover:bg-violet-500/15 transition-all active:scale-95"
                 >
-                  <BookText size={12} />
+                  <BookText size={14} />
                   <span>Etymology</span>
                 </button>
               )}
@@ -558,7 +558,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                     any tap inside the card area. */}
                 {showFirstWowHint && !isFlipped && (
                   <div className="mt-5 px-3 py-2 rounded-lg border border-dashed border-[var(--accent)]/50 bg-[var(--accent)]/5 text-[11px] font-semibold text-[var(--accent)] animate-fade-in text-center">
-                    Try tapping any word for instant context
+                    Tap any word to see its definition
                   </div>
                 )}
                 {isFlipped ? (

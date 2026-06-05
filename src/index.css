@@ -67,11 +67,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Mono for numbers, codes, stats. Ubuntu Mono has a clean oval zero
-   with no slash, no dot, no line – verified default glyph. Previous
-   attempts (JetBrains Mono = dot, Roboto Mono = slash, Inconsolata =
-   slash by default) all rendered marked-up zeros. */
-.font-mono { font-family: 'Ubuntu Mono', monospace; font-variant-numeric: normal; font-feature-settings: "zero" 0; }
+/* Mono for numbers, codes, stats. Cutive Mono is a typewriter-style
+   font with an unambiguously plain oval zero – no slash, no dot, no
+   internal mark of any kind. Previous attempts (JetBrains Mono = dot,
+   Roboto Mono = slash, Inconsolata = slash, Ubuntu Mono = small slash
+   that reads as a dot at small sizes) all left some mark inside the
+   zero. font-feature-settings and font-variant-numeric stay as
+   belt-and-braces against any future zero-styling features. */
+.font-mono {
+  font-family: 'Cutive Mono', 'Courier New', monospace;
+  font-variant-numeric: normal lining-nums;
+  font-feature-settings: "zero" 0;
+}
 
 /* === ANIMATIONS === */
 @keyframes fade-in {

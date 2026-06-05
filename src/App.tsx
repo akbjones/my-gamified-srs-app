@@ -41,7 +41,7 @@ import VocabList from './components/VocabList';
 import FavoritesList from './components/FavoritesList';
 import ListenMode from './components/ListenMode';
 import Onboarding from './components/Onboarding';
-import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff, Star, PenTool, Flame, BarChart3, CheckCheck, CalendarDays, Volume2 } from 'lucide-react';
+import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff, Star, PenTool, Flame, BarChart3, CheckCheck, CalendarDays, Volume2, Library as LibraryIcon, Milestone } from 'lucide-react';
 import {
   loadNotificationPrefs, saveNotificationPrefs, requestNotificationPermission,
   isNotificationSupported, onSessionComplete, initNotifications,
@@ -880,7 +880,7 @@ const App: React.FC = () => {
               className={`stat-card p-2.5 transition-all hover:border-[var(--border-hover)] active:scale-[0.99] flex flex-col items-center gap-1.5 ${showLibraryMenu ? 'border-blue-500/40 bg-blue-500/5' : ''}`}
             >
               <div className="w-9 h-9 rounded-lg bg-blue-500/15 border border-blue-500/30 flex items-center justify-center">
-                <BookOpen size={16} className="text-blue-500" />
+                <LibraryIcon size={16} className="text-blue-500" />
               </div>
               <div className="text-xs font-bold text-[var(--text-primary)] leading-tight">
                 Library
@@ -934,7 +934,7 @@ const App: React.FC = () => {
               const vocabCount = Object.keys(vocabMap).length;
               const favCount = Object.keys(favoritesMap).length;
               const items = [
-                { key: 'units',  label: 'Units',     sub: 'Grammar curriculum map',                                          Icon: BookOpen, color: 'text-[var(--accent)]', onClick: () => setView('TOPICS'),    available: true },
+                { key: 'units',  label: 'Units',     sub: 'Grammar curriculum map',                                          Icon: Milestone, color: 'text-[var(--accent)]', onClick: () => setView('TOPICS'),    available: true },
                 { key: 'vocab',  label: 'Vocab',     sub: vocabCount > 0 ? `${vocabCount} words you've seen` : 'Start studying to fill this',  Icon: PenTool,  color: 'text-blue-500',        onClick: () => setView('VOCAB'),     available: vocabCount > 0 },
                 { key: 'favs',   label: 'Favorites', sub: favCount > 0 ? `${favCount} saved items` : 'Tap Save in a popup to fill this',     Icon: Star,     color: 'text-yellow-500',      onClick: () => setView('FAVORITES'), available: favCount > 0 },
               ];

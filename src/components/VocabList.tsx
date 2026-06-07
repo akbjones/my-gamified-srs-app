@@ -1,7 +1,8 @@
 import React, { useState, useMemo } from 'react';
 import { VocabMap, VocabEntry, Language, ConjugationTable } from '../types';
 import { isCommonWord } from '../services/vocabService';
-import { ChevronLeft, Search, Clock, AlertTriangle, ChevronDown, Download } from 'lucide-react';
+import { ChevronLeft, Search, Clock, AlertTriangle, ChevronDown, Download, Star } from 'lucide-react';
+import { toggleFavorite, isFavorited } from '../services/storageService';
 import type { DictEntry } from '../data/dictionary/es';
 import { conjugate as conjugateEs } from '../data/conjugation/es';
 import { conjugate as conjugateIt } from '../data/conjugation/it';
@@ -76,6 +77,16 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
   const [showCommon, setShowCommon] = useState(false);
   const [expandedWord, setExpandedWord] = useState<string | null>(null);
   const [conjTense, setConjTense] = useState('present');
+  // Local mirror of which vocab words are favorited so the star pill
+  // flips immediately on tap without round-tripping localStorage on every
+  // render. Seeded from the current state on first render.
+  const [favSet, setFavSet] = useState<Set<string>>(() => {
+    const s = new Set<string>();
+    for (const w of Object.keys(vocabMap)) {
+      if (isFavorited(w, language)) s.add(w);
+    }
+    return s;
+  });
 
   // Try to get conjugation table for a vocab entry.
   // Vocab stores the surface form (e.g. "parle", "tengo"); we have to follow
@@ -282,14 +293,43 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
               </div>
             )}
           </div>
-          <div className="flex items-center gap-3 shrink-0 text-[10px] font-mono">
-            <span className="text-[var(--text-muted)]">{entry.timesSeen}x</span>
-            {entry.timesFailed > 0 && (
-              <span className="text-red-500 font-bold">{entry.timesFailed}F</span>
-            )}
-            {pos === 'v' && (
-              <ChevronDown size={12} className={`text-emerald-500 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
-            )}
+          <div className="flex items-center gap-2.5 shrink-0">
+            {/* Save / unsave to Favorites. stopPropagation so the click
+                doesn't also toggle the row's verb-conjugation expansion. */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                const isFav = favSet.has(entry.word);
+                toggleFavorite(entry.word, language, {
+                  translation: entry.translation || '',
+                  ipa: entry.ipa || '',
+                  pos: entry.pos,
+                  example: '',
+                });
+                setFavSet(prev => {
+                  const next = new Set(prev);
+                  if (isFav) next.delete(entry.word); else next.add(entry.word);
+                  return next;
+                });
+              }}
+              aria-label={favSet.has(entry.word) ? 'Remove from favorites' : 'Add to favorites'}
+              className={`p-1.5 rounded-md transition-all active:scale-95 ${
+                favSet.has(entry.word)
+                  ? 'text-yellow-500'
+                  : 'text-[var(--text-faint)] hover:text-yellow-500'
+              }`}
+            >
+              <Star size={14} fill={favSet.has(entry.word) ? 'currentColor' : 'none'} />
+            </button>
+            <div className="flex items-center gap-2 text-[10px] font-mono">
+              <span className="text-[var(--text-muted)]">{entry.timesSeen}x</span>
+              {entry.timesFailed > 0 && (
+                <span className="text-red-500 font-bold">{entry.timesFailed}F</span>
+              )}
+              {pos === 'v' && (
+                <ChevronDown size={12} className={`text-emerald-500 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+              )}
+            </div>
           </div>
         </div>
 

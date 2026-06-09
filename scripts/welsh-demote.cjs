@@ -302,6 +302,337 @@ const RULES = [
       return s;
     },
   },
+  // ---- 5-9x tier ----
+  {
+    name: 'conditional-forms-9',
+    tipMatch: /^Conditional forms \(`byddwn`, `byddai`, `baswn`\)/,
+    keep: 2,
+    score: (target) => {
+      if (!/\b(byddwn|byddai|byddent|baswn|basai|hoffwn|hoffai)\b/i.test(target)) return 0;
+      let s = 5;
+      if (target.length < 40) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'two-conditionals-9',
+    tipMatch: /^Two conditional families: `bydd-` \(modern, standard\)/,
+    keep: 2,
+    score: (target) => {
+      if (!/\b(byddwn|byddai|byddent|baswn|basai|basent)\b/i.test(target)) return 0;
+      let s = 5;
+      if (target.length < 40) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'welsh-genders-8',
+    tipMatch: /^Welsh nouns have TWO genders/,
+    keep: 1, // generic
+    score: (target) => {
+      // Demo: a card showing y + fem soft-mut, or fy + nasal-mut
+      if (!/\b(y|yr)\s+(f|dd|l|r)\w|\bfy\s+(mh|nh|ngh)\w/.test(target)) return 0;
+      let s = 4;
+      if (target.length < 35) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'fem-sing-y-sm-8',
+    tipMatch: /^Feminine singular nouns SOFT-MUTATE after the article/,
+    keep: 2,
+    score: (target) => {
+      if (!/\b(y|yr|'r)\s+(f|dd|l|r)\w/.test(target)) return 0;
+      let s = 5;
+      if (target.length < 35) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'adj-fem-sm-8',
+    tipMatch: /^Adjectives after feminine singular nouns ALSO soft-mutate/,
+    keep: 2,
+    score: (target) => {
+      // Demo: a feminine noun + an SM'd adjective
+      // Approximated by: fem-noun-context (cath/merch/etc.) + adj-starting-with f/dd/l/r
+      // Hard to do robustly. Use a loose heuristic: y + (f|dd|l|r)\w+\s+(f|dd|l|r)\w
+      if (!/\b(y|yr|'r)\s+\w+\s+(f|dd|l|r)\w/.test(target)) return 0;
+      let s = 4;
+      if (target.length < 40) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'num-gender-8',
+    tipMatch: /^Numbers from 2 also have gendered forms/,
+    keep: 2,
+    score: (target) => {
+      if (!/\b(dau|dwy)\s+\w/.test(target)) return 0;
+      let s = 5;
+      if (target.length < 35) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'hoffwn-compact-8',
+    tipMatch: /^Compact alternative: `Hoffwn i \.\.\.`/,
+    keep: 2,
+    score: (target) => {
+      if (!/\bHoffwn\b/i.test(target)) return 0;
+      let s = 6;
+      if (target.length < 35) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'rwyn-shortens-7',
+    tipMatch: /^`Rwy'n` shortens `Rydw i'n`/,
+    keep: 1, // moved tip — most demos use Dw i'n, not Rwy'n
+    score: (target) => {
+      // Demo only if Rwy'n actually appears
+      if (!/\bRwy'n\b/i.test(target)) return 0;
+      let s = 7;
+      if (target.length < 30) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'plural-pronouns-7',
+    tipMatch: /^Plural: `dyn ni'n` \/ `rydym ni'n`/,
+    keep: 2,
+    score: (target) => {
+      if (!/\b(dyn ni'n|rydym ni'n|dych chi'n|rydych chi'n|ni'n|chi'n)\b/i.test(target)) return 0;
+      let s = 5;
+      if (target.length < 35) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'dw-rwy-rydw-formality-7',
+    tipMatch: /^`Dw i'n` \(informal\) \/ `Rwy'n` \(slightly more formal\)/,
+    keep: 1, // generic info — minimal host
+    score: (target) => {
+      if (!/^(Dw i'n|Rwy'n|Rydw i'n)\b/i.test(target)) return 0;
+      let s = 5;
+      if (target.length < 25) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'subject-pronoun-needed-7',
+    tipMatch: /^Welsh always needs a subject pronoun/,
+    keep: 1,
+    score: (target) => {
+      // Demo: card with explicit subject pronoun after bod
+      if (!/^(Dw|Mae|Bydd|Roedd)\s+(i|e|hi|ni|nhw|chi|ti)\b/i.test(target)) return 0;
+      let s = 5;
+      if (target.length < 30) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'yn-adj-sm-7',
+    tipMatch: /^`yn` triggers soft mutation before adjectives/,
+    keep: 2,
+    score: (target) => {
+      // Demo: 'n/yn + an SM-adjective initial (d-, f-, g-, dd-, l-)
+      // Excluding b/m since b/m can also be dictionary forms.
+      if (!/'n\s+(d|f|g|dd|l)\w/i.test(target)) return 0;
+      let s = 5;
+      if (target.length < 30) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'ddim-negation-7',
+    tipMatch: /^`Ddim` is a soft mutation of `dim`/,
+    keep: 2,
+    score: (target) => {
+      if (!/\bddim\b/i.test(target)) return 0;
+      let s = 5;
+      if (target.length < 35) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'cond-pronoun-sm-7',
+    tipMatch: /^Soft mutation after the conditional pronoun/,
+    keep: 2,
+    score: (target) => {
+      // Demo: byddwn/byddai + fronted SM verb-noun (f-, d-, g-)
+      if (!/\b(byddwn|byddai|baswn)\s+i?'?n?\s+(f|d|g)\w/i.test(target)) return 0;
+      let s = 5;
+      if (target.length < 40) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'yes-no-questions-6',
+    tipMatch: /^Yes\/no questions just front a different form of `bod`/,
+    keep: 1,
+    score: (target) => {
+      if (!/^(Wyt|Ydy|Oes|Dych)\b/i.test(target)) return 0;
+      let s = 5;
+      if (target.length < 30) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'question-verb-forms-6',
+    tipMatch: /^Welsh has different question\/affirmative verb forms/,
+    keep: 1,
+    score: (target) => {
+      if (!/^(Wyt|Ydy|Oes|Dych)\b/i.test(target)) return 0;
+      let s = 5;
+      if (target.length < 30) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'oes-existence-6',
+    tipMatch: /^Existence questions use `oes`/,
+    keep: 2,
+    score: (target) => {
+      if (!/\bOes\b/.test(target)) return 0;
+      let s = 6;
+      if (target.length < 35) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'particle-a-6',
+    tipMatch: /^Question particle `A` is optional/,
+    keep: 1,
+    score: (target) => {
+      // Demo: any question card
+      if (!/\?$/.test(target)) return 0;
+      let s = 3;
+      if (target.length < 30) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'negation-ddim-6',
+    tipMatch: /^Negation in Welsh: insert `ddim` after the subject/,
+    keep: 2,
+    score: (target) => {
+      if (!/\bddim\b/i.test(target)) return 0;
+      let s = 5;
+      if (target.length < 35) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'bydd-future-6',
+    tipMatch: /^`Bydd` = 'will be'/,
+    keep: 2,
+    score: (target) => {
+      if (!/^Bydd\b/.test(target)) return 0;
+      let s = 6;
+      if (target.length < 35) s += 2;
+      return s;
+    },
+  },
+  // 5x tier
+  {
+    name: 'verb-shape-negate-5',
+    tipMatch: /^Some verbs negate by changing form/,
+    keep: 1,
+    score: (target) => {
+      if (!/\b(dwyt|dyw|dydy|dydyn)\b/i.test(target)) return 0;
+      let s = 5;
+      if (target.length < 35) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'roedd-was-5',
+    tipMatch: /^`Roedd` = 'was\/were'/,
+    keep: 2,
+    score: (target) => {
+      if (!/^Roedd\b/.test(target)) return 0;
+      let s = 6;
+      if (target.length < 35) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'imperfect-paradigm-5',
+    tipMatch: /^Full imperfect: `roeddwn i, roeddet ti/,
+    keep: 1,
+    score: (target) => {
+      if (!/\b(roeddwn|roeddet|roedd|roedden|roeddech)\b/i.test(target)) return 0;
+      let s = 5;
+      if (target.length < 40) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'formal-nid-5',
+    tipMatch: /^Formal\/written: `Nid yw e'n hapus`/,
+    keep: 1,
+    score: (target) => {
+      if (!/\bNid\s+yw/i.test(target)) return 0;
+      let s = 7;
+      if (target.length < 35) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'past-vs-imperf-5',
+    tipMatch: /^Compare past simple vs imperfect/,
+    keep: 1,
+    score: (target) => {
+      // Need imperfect (roedd*) AND past (verb+odd/ais)
+      if (!(/\broedd/i.test(target) && /\w+(odd|ais)\b/i.test(target))) return 0;
+      let s = 6;
+      return s;
+    },
+  },
+  {
+    name: 'doeddwn-neg-5',
+    tipMatch: /^Negative: `doeddwn i ddim`/,
+    keep: 1,
+    score: (target) => {
+      if (!/\b(doeddwn|doeddet|doedd|doedden|doeddech)\b/i.test(target)) return 0;
+      let s = 7;
+      if (target.length < 40) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'bydd-future-paradigm-5',
+    tipMatch: /^Full future of `bod`: `byddaf i/,
+    keep: 1,
+    score: (target) => {
+      if (!/\b(byddaf|byddi|bydd|byddwn|byddwch|byddan)\b/i.test(target)) return 0;
+      let s = 5;
+      if (target.length < 35) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'future-yn-vn-5',
+    tipMatch: /^Future \+ yn \+ verb-noun = simple future/,
+    keep: 1,
+    score: (target) => {
+      if (!/^Bydd\w*\s+\w+\s+(yn|'n)\s+\w/i.test(target)) return 0;
+      let s = 5;
+      if (target.length < 40) s += 2;
+      return s;
+    },
+  },
+  {
+    name: 'fydd-neg-5',
+    tipMatch: /^Negate by softening: `bydd → fydd`/,
+    keep: 1,
+    score: (target) => {
+      if (!/^Fydd\b/i.test(target)) return 0;
+      let s = 7;
+      if (target.length < 35) s += 2;
+      return s;
+    },
+  },
 ];
 
 const removedCardIds = new Set();

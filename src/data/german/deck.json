@@ -218,7 +218,7 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "grammar": "`Sie` looks like `sie` (she/they). The capital matters: `Sie sind` = you (formal) are; `sie sind` = they are. Verbs are always plural with Sie even for one person.",
+    "grammar": "Sie (you formal) looks like sie (she/they). Capital matters: Sie sind = you are (formal), sie sind = they are. Always plural verb form.",
     "priority": 73
   },
   {
@@ -423,7 +423,7 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "grammar": "Plural: `ihr` (informal – you guys) vs `Sie` (formal – same form as singular formal). `Wie geht es euch?` (informal) vs `Wie geht es Ihnen?` (formal).",
+    "grammar": "Plural: ihr (informal, you guys) vs Sie (formal, same as singular formal). Wie geht es euch? vs Wie geht es Ihnen?",
     "priority": 109
   },
   {
@@ -1144,7 +1144,7 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "grammar": "`Sie` looks like `sie` (she/they). The capital matters: `Sie sind` = you (formal) are; `sie sind` = they are. Verbs are always plural with Sie even for one person.",
+    "grammar": "Sie (you formal) looks like sie (she/they). Capital matters: Sie sind = you are (formal), sie sind = they are. Always plural verb form.",
     "priority": 458
   },
   {
@@ -1238,7 +1238,7 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "grammar": "Plural: `ihr` (informal – you guys) vs `Sie` (formal – same form as singular formal). `Wie geht es euch?` (informal) vs `Wie geht es Ihnen?` (formal).",
+    "grammar": "Plural: ihr (informal, you guys) vs Sie (formal, same as singular formal). Wie geht es euch? vs Wie geht es Ihnen?",
     "priority": 424
   },
   {
@@ -1927,7 +1927,7 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "grammar": "`Sie` looks like `sie` (she/they). The capital matters: `Sie sind` = you (formal) are; `sie sind` = they are. Verbs are always plural with Sie even for one person.",
+    "grammar": "Sie (you formal) looks like sie (she/they). Capital matters: Sie sind = you are (formal), sie sind = they are. Always plural verb form.",
     "priority": 1364
   },
   {
@@ -2339,7 +2339,7 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "grammar": "Statement starts with something other than the subject? The verb still goes second: `Heute gehe ich ins Kino` (not `Heute ich gehe`). Subject jumps behind the verb to keep V2.",
+    "grammar": "If something other than the subject opens the sentence, the verb stays in slot 2. Heute gehe ich ins Kino (not Heute ich gehe).",
     "priority": 1469
   },
   {
@@ -2379,7 +2379,7 @@
       "travel"
     ],
     "grammarNode": "node-01",
-    "grammar": "Relative pronouns (der/die/das + cases) match the noun's gender but take the case from their role in the relative clause. `Der Mann, der dort steht` (m, nominative subject).",
+    "grammar": "Relative pronouns match the noun's gender, but their case comes from their role in the relative clause. Der Mann, der dort steht (m, subject).",
     "priority": 843
   },
   {
@@ -2614,7 +2614,7 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "grammar": "Plural: `ihr` (informal – you guys) vs `Sie` (formal – same form as singular formal). `Wie geht es euch?` (informal) vs `Wie geht es Ihnen?` (formal).",
+    "grammar": "Plural: ihr (informal, you guys) vs Sie (formal, same as singular formal). Wie geht es euch? vs Wie geht es Ihnen?",
     "priority": 1279
   },
   {
@@ -2751,7 +2751,7 @@
       "travel"
     ],
     "grammarNode": "node-01",
-    "grammar": "`Sie` looks like `sie` (she/they). The capital matters: `Sie sind` = you (formal) are; `sie sind` = they are. Verbs are always plural with Sie even for one person.",
+    "grammar": "Sie (you formal) looks like sie (she/they). Capital matters: Sie sind = you are (formal), sie sind = they are. Always plural verb form.",
     "priority": 1153
   },
   {
@@ -3036,7 +3036,7 @@
       "travel"
     ],
     "grammarNode": "node-01",
-    "grammar": "Relative pronouns (der/die/das + cases) match the noun's gender but take the case from their role in the relative clause. `Der Mann, der dort steht` (m, nominative subject).",
+    "grammar": "Relative pronouns match the noun's gender, but their case comes from their role in the relative clause. Der Mann, der dort steht (m, subject).",
     "priority": 1665
   },
   {
@@ -5425,7 +5425,7 @@
       "general"
     ],
     "grammarNode": "node-03",
-    "grammar": "Two main culprits English speakers forget: `weil` (because) and `dass` (that). Both shove the verb to the back. `Weil er müde ist`, not `weil er ist müde`.",
+    "grammar": "Two traps: weil (because) and dass (that). Both push the verb to the back. Weil er müde ist – not weil er ist müde.",
     "priority": 77
   },
   {
@@ -6186,7 +6186,7 @@
       "work"
     ],
     "grammarNode": "node-03",
-    "grammar": "Plural: `ihr` (informal – you guys) vs `Sie` (formal – same form as singular formal). `Wie geht es euch?` (informal) vs `Wie geht es Ihnen?` (formal).",
+    "grammar": "Plural: ihr (informal, you guys) vs Sie (formal, same as singular formal). Wie geht es euch? vs Wie geht es Ihnen?",
     "priority": 577
   },
   {
@@ -6524,7 +6524,7 @@
       "travel"
     ],
     "grammarNode": "node-03",
-    "grammar": "Statement starts with something other than the subject? The verb still goes second: `Heute gehe ich ins Kino` (not `Heute ich gehe`). Subject jumps behind the verb to keep V2.",
+    "grammar": "If something other than the subject opens the sentence, the verb stays in slot 2. Heute gehe ich ins Kino (not Heute ich gehe).",
     "priority": 1287
   },
   {
@@ -6990,7 +6990,7 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "grammar": "Two main culprits English speakers forget: `weil` (because) and `dass` (that). Both shove the verb to the back. `Weil er müde ist`, not `weil er ist müde`.",
+    "grammar": "Two traps: weil (because) and dass (that). Both push the verb to the back. Weil er müde ist – not weil er ist müde.",
     "priority": 1678
   },
   {
@@ -7082,7 +7082,7 @@
       "travel"
     ],
     "grammarNode": "node-03",
-    "grammar": "Relative pronouns (der/die/das + cases) match the noun's gender but take the case from their role in the relative clause. `Der Mann, der dort steht` (m, nominative subject).",
+    "grammar": "Relative pronouns match the noun's gender, but their case comes from their role in the relative clause. Der Mann, der dort steht (m, subject).",
     "priority": 1144
   },
   {
@@ -7288,7 +7288,7 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "grammar": "`Sie` looks like `sie` (she/they). The capital matters: `Sie sind` = you (formal) are; `sie sind` = they are. Verbs are always plural with Sie even for one person.",
+    "grammar": "Sie (you formal) looks like sie (she/they). Capital matters: Sie sind = you are (formal), sie sind = they are. Always plural verb form.",
     "priority": 151
   },
   {
@@ -7543,7 +7543,7 @@
       "work"
     ],
     "grammarNode": "node-04",
-    "grammar": "Plural: `ihr` (informal – you guys) vs `Sie` (formal – same form as singular formal). `Wie geht es euch?` (informal) vs `Wie geht es Ihnen?` (formal).",
+    "grammar": "Plural: ihr (informal, you guys) vs Sie (formal, same as singular formal). Wie geht es euch? vs Wie geht es Ihnen?",
     "priority": 291
   },
   {
@@ -7593,7 +7593,7 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "grammar": "`Sie` looks like `sie` (she/they). The capital matters: `Sie sind` = you (formal) are; `sie sind` = they are. Verbs are always plural with Sie even for one person.",
+    "grammar": "Sie (you formal) looks like sie (she/they). Capital matters: Sie sind = you are (formal), sie sind = they are. Always plural verb form.",
     "priority": 187
   },
   {
@@ -7631,7 +7631,7 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "grammar": "`kein` = 'no / not a' – negates a noun directly. `Ich habe kein Geld` (I have no money), not `ich habe nicht Geld`. Use `kein` instead of `nicht` when negating a noun with no article or with `ein/eine`.",
+    "grammar": "kein = no / not a. Used to negate a noun. Ich habe kein Geld (I have no money), not ich habe nicht Geld. Use kein instead of nicht with nouns.",
     "priority": 87
   },
   {
@@ -7734,7 +7734,7 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "grammar": "`kein` = 'no / not a' – negates a noun directly. `Ich habe kein Geld` (I have no money), not `ich habe nicht Geld`. Use `kein` instead of `nicht` when negating a noun with no article or with `ein/eine`.",
+    "grammar": "kein = no / not a. Used to negate a noun. Ich habe kein Geld (I have no money), not ich habe nicht Geld. Use kein instead of nicht with nouns.",
     "priority": 64
   },
   {
@@ -7971,7 +7971,7 @@
     "target": "Die Kellnerin bringt dem Gast die Speisekarte.",
     "english": "The waitress brings the guest the menu.",
     "audio": "de-de-3810.mp3",
-    "grammar": "The indirect object (the receiver) goes in dative: `ich gebe dem Mann das Buch`. `Dem Mann` = to the man. English doesn't always need 'to' – German doesn't either, but uses dative case.",
+    "grammar": "The indirect object (receiver) goes in dative. ich gebe dem Mann das Buch. Dem Mann = to the man. English drops the \"to\"; German uses dative.",
     "tags": [
       "general",
       "travel"
@@ -8139,7 +8139,7 @@
     "target": "Der Förster zeigt dem Wanderer den Waldpfad.",
     "english": "The forester shows the hiker the forest path.",
     "audio": "de-de-3811.mp3",
-    "grammar": "Pronoun forms in dative: mir, dir, ihm, ihr, uns, euch, ihnen. `Ich helfe dir` = 'I help you' (dir, not dich – helfen takes dative).",
+    "grammar": "Dative pronouns: mir, dir, ihm, ihr, uns, euch, ihnen. Ich helfe dir = I help you (dir, not dich – helfen takes dative).",
     "tags": [
       "general",
       "travel"
@@ -8681,7 +8681,7 @@
       "work"
     ],
     "grammarNode": "node-04",
-    "grammar": "Statement starts with something other than the subject? The verb still goes second: `Heute gehe ich ins Kino` (not `Heute ich gehe`). Subject jumps behind the verb to keep V2.",
+    "grammar": "If something other than the subject opens the sentence, the verb stays in slot 2. Heute gehe ich ins Kino (not Heute ich gehe).",
     "priority": 1084
   },
   {
@@ -8829,7 +8829,7 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "grammar": "Plural: `ihr` (informal – you guys) vs `Sie` (formal – same form as singular formal). `Wie geht es euch?` (informal) vs `Wie geht es Ihnen?` (formal).",
+    "grammar": "Plural: ihr (informal, you guys) vs Sie (formal, same as singular formal). Wie geht es euch? vs Wie geht es Ihnen?",
     "priority": 1883
   },
   {
@@ -9234,7 +9234,7 @@
       "general"
     ],
     "grammarNode": "node-05",
-    "grammar": "`kein` = 'no / not a' – negates a noun directly. `Ich habe kein Geld` (I have no money), not `ich habe nicht Geld`. Use `kein` instead of `nicht` when negating a noun with no article or with `ein/eine`.",
+    "grammar": "kein = no / not a. Used to negate a noun. Ich habe kein Geld (I have no money), not ich habe nicht Geld. Use kein instead of nicht with nouns.",
     "priority": 27
   },
   {
@@ -9513,7 +9513,7 @@
       "travel"
     ],
     "grammarNode": "node-05",
-    "grammar": "`Sie` looks like `sie` (she/they). The capital matters: `Sie sind` = you (formal) are; `sie sind` = they are. Verbs are always plural with Sie even for one person.",
+    "grammar": "Sie (you formal) looks like sie (she/they). Capital matters: Sie sind = you are (formal), sie sind = they are. Always plural verb form.",
     "priority": 362
   },
   {
@@ -10275,7 +10275,7 @@
       "travel"
     ],
     "grammarNode": "node-05",
-    "grammar": "Plural: `ihr` (informal – you guys) vs `Sie` (formal – same form as singular formal). `Wie geht es euch?` (informal) vs `Wie geht es Ihnen?` (formal).",
+    "grammar": "Plural: ihr (informal, you guys) vs Sie (formal, same as singular formal). Wie geht es euch? vs Wie geht es Ihnen?",
     "priority": 1147
   },
   {
@@ -11579,7 +11579,7 @@
       "travel"
     ],
     "grammarNode": "node-06",
-    "grammar": "The indirect object (the receiver) goes in dative: `ich gebe dem Mann das Buch`. `Dem Mann` = to the man. English doesn't always need 'to' – German doesn't either, but uses dative case.",
+    "grammar": "The indirect object (receiver) goes in dative. ich gebe dem Mann das Buch. Dem Mann = to the man. English drops the \"to\"; German uses dative.",
     "priority": 1466
   },
   {
@@ -11855,7 +11855,7 @@
       "work"
     ],
     "grammarNode": "node-07",
-    "grammar": "Pronoun forms in dative: mir, dir, ihm, ihr, uns, euch, ihnen. `Ich helfe dir` = 'I help you' (dir, not dich – helfen takes dative).",
+    "grammar": "Dative pronouns: mir, dir, ihm, ihr, uns, euch, ihnen. Ich helfe dir = I help you (dir, not dich – helfen takes dative).",
     "priority": 157
   },
   {
@@ -11881,7 +11881,7 @@
       "work"
     ],
     "grammarNode": "node-07",
-    "grammar": "The indirect object (the receiver) goes in dative: `ich gebe dem Mann das Buch`. `Dem Mann` = to the man. English doesn't always need 'to' – German doesn't either, but uses dative case.",
+    "grammar": "The indirect object (receiver) goes in dative. ich gebe dem Mann das Buch. Dem Mann = to the man. English drops the \"to\"; German uses dative.",
     "priority": 158
   },
   {
@@ -13573,7 +13573,7 @@
       "travel"
     ],
     "grammarNode": "node-08",
-    "grammar": "Pronoun forms in dative: mir, dir, ihm, ihr, uns, euch, ihnen. `Ich helfe dir` = 'I help you' (dir, not dich – helfen takes dative).",
+    "grammar": "Dative pronouns: mir, dir, ihm, ihr, uns, euch, ihnen. Ich helfe dir = I help you (dir, not dich – helfen takes dative).",
     "priority": 316
   },
   {
@@ -16912,7 +16912,7 @@
       "travel"
     ],
     "grammarNode": "node-09",
-    "grammar": "Two main culprits English speakers forget: `weil` (because) and `dass` (that). Both shove the verb to the back. `Weil er müde ist`, not `weil er ist müde`.",
+    "grammar": "Two traps: weil (because) and dass (that). Both push the verb to the back. Weil er müde ist – not weil er ist müde.",
     "priority": 2045
   },
   {
@@ -28290,7 +28290,7 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "grammar": "Relative pronouns (der/die/das + cases) match the noun's gender but take the case from their role in the relative clause. `Der Mann, der dort steht` (m, nominative subject).",
+    "grammar": "Relative pronouns match the noun's gender, but their case comes from their role in the relative clause. Der Mann, der dort steht (m, subject).",
     "priority": 2640
   },
   {
@@ -30871,7 +30871,7 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "grammar": "Relative pronouns (der/die/das + cases) match the noun's gender but take the case from their role in the relative clause. `Der Mann, der dort steht` (m, nominative subject).",
+    "grammar": "Relative pronouns match the noun's gender, but their case comes from their role in the relative clause. Der Mann, der dort steht (m, subject).",
     "priority": 2619
   },
   {

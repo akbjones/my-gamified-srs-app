@@ -165,7 +165,7 @@
     "target": "हैलो दोस्तों, आज हम कहाँ चलें?",
     "english": "Hello friends, where shall we go today?",
     "audio": "hi-hi-0014.mp3",
-    "grammar": "Hindi is SOV – subject-Object-Verb. The verb ALWAYS goes at the end of the sentence. `मैं सेब खाता हूँ` (I apple eat) = 'I eat an apple'. English SVO becomes Hindi SOV.",
+    "grammar": "Hindi is SOV – the verb always goes at the END. मैं सेब खाता हूँ (I apple eat) = I eat an apple. English SVO flips to SOV.",
     "tags": [
       "family",
       "general",
@@ -230,7 +230,7 @@
     "target": "यह मेरा पसंदीदा खाना है, बहुत स्वादिष्ट!",
     "english": "This is my favorite food, very delicious!",
     "audio": "hi-hi-0019.mp3",
-    "grammar": "Auxiliaries (`है/हैं/था/थी/हो`) come at the very end, AFTER the main verb. `राम घर जा रहा है` (Ram home going is) = 'Ram is going home'. Stack verb + aux at the tail.",
+    "grammar": "Auxiliaries (है/हैं/था/थी/हो) come at the very end, AFTER the main verb. राम घर जा रहा है (Ram is going home).",
     "tags": [
       "family",
       "general",
@@ -362,7 +362,7 @@
     "target": "नमस्ते आंटी, सब ठीक है ना?",
     "english": "Hello Aunty, everything is fine right?",
     "audio": "hi-hi-0029.mp3",
-    "grammar": "Long sentences: pile everything before the verb. Place, time, manner, object – all come first, then finally the verb. `कल मेरा भाई स्कूल में पढ़ाई करता है` (yesterday my brother school in study does).",
+    "grammar": "For long sentences, pile everything before the verb: time, place, object. कल मेरा भाई स्कूल में पढ़ाई करता है (yesterday my brother studies at school).",
     "tags": [
       "general",
       "travel"
@@ -589,7 +589,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 422,
-    "grammar": "`भी` (also/even) sits AFTER the word it emphasises: `मैं भी जाऊँगा` (I'll go too – emphasis on 'I'). `मैं कल भी जाऊँगा` (I'll go tomorrow too – emphasis on 'tomorrow')."
+    "grammar": "भी (also/even) sits AFTER the word it emphasises. मैं भी जाऊँगा (I'll go too). मैं कल भी जाऊँगा (I'll go tomorrow too)."
   },
   {
     "id": "hi-0047",
@@ -2214,14 +2214,14 @@
     ],
     "grammarNode": "node-03",
     "priority": 432,
-    "grammar": "Pick the form by the GENDER of the thing owned, not the owner: `राम का घर` (m), `राम की किताब` (f), `राम के बच्चे` (m pl). Wrong agreement = wrong sentence."
+    "grammar": "Pick का / की / के by the gender of the thing OWNED, not the owner. राम का घर (m), राम की किताब (f), राम के बच्चे (m pl)."
   },
   {
     "id": "hi-0170",
     "target": "भूगोल में हमने महाद्वीपों के बारे में सीखा।",
     "english": "In geography, we learned about the continents.",
     "audio": "hi-hi-0170.mp3",
-    "grammar": "`का / की / के` = possession ('of'). Order is owner FIRST + linker + thing: `राम का घर` = 'Ram's house' (lit. 'Ram of house'). English uses 's; Hindi uses three forms.",
+    "grammar": "का / की / के = of. Order: owner + linker + thing. राम का घर = Ram's house (lit. \"Ram of house\"). Three forms by gender.",
     "tags": [
       "general",
       "work"
@@ -2253,7 +2253,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 512,
-    "grammar": "Pronouns have built-in possessives: `मेरा/मेरी/मेरे` (my), `तेरा/तेरी/तेरे` (your-intimate), `तुम्हारा/तुम्हारी/तुम्हारे` (your-familiar), `उसका/उसकी/उसके` (his/her). Still gender-agree with the thing."
+    "grammar": "Possessives by pronoun: मेरा (my), तुम्हारा (your), उसका (his/her). Still gender-agree with the thing owned."
   },
   {
     "id": "hi-0173",
@@ -2568,7 +2568,7 @@
     "target": "मेरी छोटी बेटी को रंगीन चित्र बनाना बहुत पसंद है।",
     "english": "My little daughter loves to draw colorful pictures.",
     "audio": "hi-hi-0196.mp3",
-    "grammar": "`को` marks two things: (1) specific direct objects (`राम को बुलाओ` – call Ram), (2) indirect objects / recipients (`बच्चे को खाना दो` – give the child food).",
+    "grammar": "को marks two things: specific direct objects (राम को बुलाओ = call Ram) and indirect objects (बच्चे को खाना दो = give the child food).",
     "tags": [
       "family",
       "general"
@@ -2872,7 +2872,7 @@
     "target": "मुझे विश्वास है कि सब कुछ ठीक हो जाएगा।",
     "english": "I believe that everything will be alright.",
     "audio": "hi-hi-0220.mp3",
-    "grammar": "Question words go where the answer would go, not at the start: `तुम कहाँ जा रहे हो?` (you where going are?) = 'Where are you going?'. No fronting like English.",
+    "grammar": "Question words go where the answer would go, not at the start. तुम कहाँ जा रहे हो? (you where going?) = where are you going?",
     "tags": [
       "general"
     ],
@@ -2965,14 +2965,14 @@
     ],
     "grammarNode": "node-04",
     "priority": 100,
-    "grammar": "Hindi is SOV – subject-Object-Verb. The verb ALWAYS goes at the end of the sentence. `मैं सेब खाता हूँ` (I apple eat) = 'I eat an apple'. English SVO becomes Hindi SOV."
+    "grammar": "Hindi is SOV – the verb always goes at the END. मैं सेब खाता हूँ (I apple eat) = I eat an apple. English SVO flips to SOV."
   },
   {
     "id": "hi-0229",
     "target": "बेटा, स्कूल कैसा रहा आज?",
     "english": "Son, how was school today?",
     "audio": "hi-hi-0229.mp3",
-    "grammar": "Auxiliaries (`है/हैं/था/थी/हो`) come at the very end, AFTER the main verb. `राम घर जा रहा है` (Ram home going is) = 'Ram is going home'. Stack verb + aux at the tail.",
+    "grammar": "Auxiliaries (है/हैं/था/थी/हो) come at the very end, AFTER the main verb. राम घर जा रहा है (Ram is going home).",
     "tags": [
       "family",
       "general",
@@ -2987,7 +2987,7 @@
     "target": "नमस्ते अमित भाई, सब कुशल?",
     "english": "Hello brother Amit, all well?",
     "audio": "hi-hi-0230.mp3",
-    "grammar": "Long sentences: pile everything before the verb. Place, time, manner, object – all come first, then finally the verb. `कल मेरा भाई स्कूल में पढ़ाई करता है` (yesterday my brother school in study does).",
+    "grammar": "For long sentences, pile everything before the verb: time, place, object. कल मेरा भाई स्कूल में पढ़ाई करता है (yesterday my brother studies at school).",
     "tags": [
       "family",
       "general"
@@ -3027,7 +3027,7 @@
     "target": "उसने बिना सोचे-समझे जवाब दे दिया।",
     "english": "He answered without thinking.",
     "audio": "hi-hi-0234.mp3",
-    "grammar": "Question words go where the answer would go, not at the start: `तुम कहाँ जा रहे हो?` (you where going are?) = 'Where are you going?'. No fronting like English.",
+    "grammar": "Question words go where the answer would go, not at the start. तुम कहाँ जा रहे हो? (you where going?) = where are you going?",
     "tags": [
       "general"
     ],
@@ -3092,7 +3092,7 @@
     "target": "कहाँ गायब थे इतने दिन?",
     "english": "Where have you been all this time?",
     "audio": "hi-hi-0239.mp3",
-    "grammar": "Hindi is SOV – subject-Object-Verb. The verb ALWAYS goes at the end of the sentence. `मैं सेब खाता हूँ` (I apple eat) = 'I eat an apple'. English SVO becomes Hindi SOV.",
+    "grammar": "Hindi is SOV – the verb always goes at the END. मैं सेब खाता हूँ (I apple eat) = I eat an apple. English SVO flips to SOV.",
     "tags": [
       "family",
       "general"
@@ -3105,7 +3105,7 @@
     "target": "अभी-अभी पहुँचे? सफ़र कैसा रहा?",
     "english": "Just arrived? How was the journey?",
     "audio": "hi-hi-0240.mp3",
-    "grammar": "Auxiliaries (`है/हैं/था/थी/हो`) come at the very end, AFTER the main verb. `राम घर जा रहा है` (Ram home going is) = 'Ram is going home'. Stack verb + aux at the tail.",
+    "grammar": "Auxiliaries (है/हैं/था/थी/हो) come at the very end, AFTER the main verb. राम घर जा रहा है (Ram is going home).",
     "tags": [
       "general",
       "travel"
@@ -3777,7 +3777,7 @@
     "target": "खिड़की के परदे बदलने का वक़्त आ गया।",
     "english": "It's time to change the window curtains.",
     "audio": "hi-hi-0292.mp3",
-    "grammar": "Pick the form by the GENDER of the thing owned, not the owner: `राम का घर` (m), `राम की किताब` (f), `राम के बच्चे` (m pl). Wrong agreement = wrong sentence.",
+    "grammar": "Pick का / की / के by the gender of the thing OWNED, not the owner. राम का घर (m), राम की किताब (f), राम के बच्चे (m pl).",
     "tags": [
       "family",
       "general",
@@ -3937,7 +3937,7 @@
     "target": "छत्तीस तरह के पकवान बने थे शादी में।",
     "english": "Thirty-six types of dishes were made at the wedding.",
     "audio": "hi-hi-0304.mp3",
-    "grammar": "Pronouns have built-in possessives: `मेरा/मेरी/मेरे` (my), `तेरा/तेरी/तेरे` (your-intimate), `तुम्हारा/तुम्हारी/तुम्हारे` (your-familiar), `उसका/उसकी/उसके` (his/her). Still gender-agree with the thing.",
+    "grammar": "Possessives by pronoun: मेरा (my), तुम्हारा (your), उसका (his/her). Still gender-agree with the thing owned.",
     "tags": [
       "family",
       "general"
@@ -4098,7 +4098,7 @@
     "target": "वह बीमार होने के बावजूद दफ़्तर गया।",
     "english": "He went to the office despite being sick.",
     "audio": "hi-hi-0316.mp3",
-    "grammar": "`का / की / के` = possession ('of'). Order is owner FIRST + linker + thing: `राम का घर` = 'Ram's house' (lit. 'Ram of house'). English uses 's; Hindi uses three forms.",
+    "grammar": "का / की / के = of. Order: owner + linker + thing. राम का घर = Ram's house (lit. \"Ram of house\"). Three forms by gender.",
     "tags": [
       "family",
       "general",
@@ -4577,7 +4577,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 54,
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms."
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences."
   },
   {
     "id": "hi-0354",
@@ -4615,7 +4615,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 76,
-    "grammar": "Long sentences: pile everything before the verb. Place, time, manner, object – all come first, then finally the verb. `कल मेरा भाई स्कूल में पढ़ाई करता है` (yesterday my brother school in study does)."
+    "grammar": "For long sentences, pile everything before the verb: time, place, object. कल मेरा भाई स्कूल में पढ़ाई करता है (yesterday my brother studies at school)."
   },
   {
     "id": "hi-0357",
@@ -4801,7 +4801,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 268,
-    "grammar": "Question words go where the answer would go, not at the start: `तुम कहाँ जा रहे हो?` (you where going are?) = 'Where are you going?'. No fronting like English."
+    "grammar": "Question words go where the answer would go, not at the start. तुम कहाँ जा रहे हो? (you where going?) = where are you going?"
   },
   {
     "id": "hi-0371",
@@ -5152,7 +5152,7 @@
     "target": "मैंने पिछले साल दो लाख रुपये बचाए।",
     "english": "I saved two lakh rupees last year.",
     "audio": "hi-hi-0397.mp3",
-    "grammar": "Hindi is SOV – subject-Object-Verb. The verb ALWAYS goes at the end of the sentence. `मैं सेब खाता हूँ` (I apple eat) = 'I eat an apple'. English SVO becomes Hindi SOV.",
+    "grammar": "Hindi is SOV – the verb always goes at the END. मैं सेब खाता हूँ (I apple eat) = I eat an apple. English SVO flips to SOV.",
     "tags": [
       "general",
       "travel",
@@ -5184,7 +5184,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 359,
-    "grammar": "`का / की / के` = possession ('of'). Order is owner FIRST + linker + thing: `राम का घर` = 'Ram's house' (lit. 'Ram of house'). English uses 's; Hindi uses three forms."
+    "grammar": "का / की / के = of. Order: owner + linker + thing. राम का घर = Ram's house (lit. \"Ram of house\"). Three forms by gender."
   },
   {
     "id": "hi-0400",
@@ -5399,7 +5399,7 @@
     "target": "आज हमने कुल मिलाकर पाँच किलोमीटर पैदल चले।",
     "english": "Today we walked a total of five kilometers on foot.",
     "audio": "hi-hi-0416.mp3",
-    "grammar": "Auxiliaries (`है/हैं/था/थी/हो`) come at the very end, AFTER the main verb. `राम घर जा रहा है` (Ram home going is) = 'Ram is going home'. Stack verb + aux at the tail.",
+    "grammar": "Auxiliaries (है/हैं/था/थी/हो) come at the very end, AFTER the main verb. राम घर जा रहा है (Ram is going home).",
     "tags": [
       "general",
       "travel"
@@ -5554,7 +5554,7 @@
     "target": "दो सौ ग्राम चीनी और आधा किलो आटा दो।",
     "english": "Give two hundred grams sugar and half kilo flour.",
     "audio": "hi-hi-0429.mp3",
-    "grammar": "Long sentences: pile everything before the verb. Place, time, manner, object – all come first, then finally the verb. `कल मेरा भाई स्कूल में पढ़ाई करता है` (yesterday my brother school in study does).",
+    "grammar": "For long sentences, pile everything before the verb: time, place, object. कल मेरा भाई स्कूल में पढ़ाई करता है (yesterday my brother studies at school).",
     "tags": [
       "family",
       "general"
@@ -5639,7 +5639,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 1209,
-    "grammar": "Pick the form by the GENDER of the thing owned, not the owner: `राम का घर` (m), `राम की किताब` (f), `राम के बच्चे` (m pl). Wrong agreement = wrong sentence."
+    "grammar": "Pick का / की / के by the gender of the thing OWNED, not the owner. राम का घर (m), राम की किताब (f), राम के बच्चे (m pl)."
   },
   {
     "id": "hi-0436",
@@ -5678,7 +5678,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 999,
-    "grammar": "Pronouns have built-in possessives: `मेरा/मेरी/मेरे` (my), `तेरा/तेरी/तेरे` (your-intimate), `तुम्हारा/तुम्हारी/तुम्हारे` (your-familiar), `उसका/उसकी/उसके` (his/her). Still gender-agree with the thing."
+    "grammar": "Possessives by pronoun: मेरा (my), तुम्हारा (your), उसका (his/her). Still gender-agree with the thing owned."
   },
   {
     "id": "hi-0439",
@@ -5833,7 +5833,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 262,
-    "grammar": "`को` marks two things: (1) specific direct objects (`राम को बुलाओ` – call Ram), (2) indirect objects / recipients (`बच्चे को खाना दो` – give the child food)."
+    "grammar": "को marks two things: specific direct objects (राम को बुलाओ = call Ram) and indirect objects (बच्चे को खाना दो = give the child food)."
   },
   {
     "id": "hi-0452",
@@ -5860,7 +5860,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 468,
-    "grammar": "Specific or definite? Add `को`. `एक किताब लाओ` (bring a book – unspecific) vs `इस किताब को लाओ` (bring this book – specific). English uses 'a' vs 'this'; Hindi uses absence vs `को`."
+    "grammar": "Specific? Add को. एक किताब लाओ (bring a book) vs इस किताब को लाओ (bring this book). Absence vs को marks specificity."
   },
   {
     "id": "hi-0454",
@@ -6020,7 +6020,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 173,
-    "grammar": "`को` marks two things: (1) specific direct objects (`राम को बुलाओ` – call Ram), (2) indirect objects / recipients (`बच्चे को खाना दो` – give the child food)."
+    "grammar": "को marks two things: specific direct objects (राम को बुलाओ = call Ram) and indirect objects (बच्चे को खाना दो = give the child food)."
   },
   {
     "id": "hi-0466",
@@ -6091,7 +6091,7 @@
     "target": "किताब छपेगी तो लेखक को रॉयल्टी मिलेगी।",
     "english": "The author will get royalty when the book is printed.",
     "audio": "hi-hi-0471.mp3",
-    "grammar": "Specific or definite? Add `को`. `एक किताब लाओ` (bring a book – unspecific) vs `इस किताब को लाओ` (bring this book – specific). English uses 'a' vs 'this'; Hindi uses absence vs `को`.",
+    "grammar": "Specific? Add को. एक किताब लाओ (bring a book) vs इस किताब को लाओ (bring this book). Absence vs को marks specificity.",
     "tags": [
       "general",
       "work"
@@ -6136,7 +6136,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 532,
-    "grammar": "`को` marks two things: (1) specific direct objects (`राम को बुलाओ` – call Ram), (2) indirect objects / recipients (`बच्चे को खाना दो` – give the child food)."
+    "grammar": "को marks two things: specific direct objects (राम को बुलाओ = call Ram) and indirect objects (बच्चे को खाना दो = give the child food)."
   },
   {
     "id": "hi-0475",
@@ -6149,7 +6149,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 689,
-    "grammar": "Specific or definite? Add `को`. `एक किताब लाओ` (bring a book – unspecific) vs `इस किताब को लाओ` (bring this book – specific). English uses 'a' vs 'this'; Hindi uses absence vs `को`."
+    "grammar": "Specific? Add को. एक किताब लाओ (bring a book) vs इस किताब को लाओ (bring this book). Absence vs को marks specificity."
   },
   {
     "id": "hi-0476",
@@ -6637,14 +6637,14 @@
     ],
     "grammarNode": "node-06",
     "priority": 201,
-    "grammar": "Specific or definite? Add `को`. `एक किताब लाओ` (bring a book – unspecific) vs `इस किताब को लाओ` (bring this book – specific). English uses 'a' vs 'this'; Hindi uses absence vs `को`."
+    "grammar": "Specific? Add को. एक किताब लाओ (bring a book) vs इस किताब को लाओ (bring this book). Absence vs को marks specificity."
   },
   {
     "id": "hi-0512",
     "target": "ठेकेदार ने मज़दूरों को मज़दूरी बाँटी।",
     "english": "The contractor distributed wages to the laborers.",
     "audio": "hi-hi-0512.mp3",
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms.",
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences.",
     "tags": [
       "general"
     ],
@@ -6775,7 +6775,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 113,
-    "grammar": "`का / की / के` = possession ('of'). Order is owner FIRST + linker + thing: `राम का घर` = 'Ram's house' (lit. 'Ram of house'). English uses 's; Hindi uses three forms."
+    "grammar": "का / की / के = of. Order: owner + linker + thing. राम का घर = Ram's house (lit. \"Ram of house\"). Three forms by gender."
   },
   {
     "id": "hi-0523",
@@ -6967,7 +6967,7 @@
     "target": "कृपया मुझे एक ठंडा गिलास पानी दे दीजिए।",
     "english": "Please give me a cold glass of water.",
     "audio": "hi-hi-0537.mp3",
-    "grammar": "Question words go where the answer would go, not at the start: `तुम कहाँ जा रहे हो?` (you where going are?) = 'Where are you going?'. No fronting like English.",
+    "grammar": "Question words go where the answer would go, not at the start. तुम कहाँ जा रहे हो? (you where going?) = where are you going?",
     "tags": [
       "family",
       "general",
@@ -7119,7 +7119,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 249,
-    "grammar": "Hindi is SOV – subject-Object-Verb. The verb ALWAYS goes at the end of the sentence. `मैं सेब खाता हूँ` (I apple eat) = 'I eat an apple'. English SVO becomes Hindi SOV."
+    "grammar": "Hindi is SOV – the verb always goes at the END. मैं सेब खाता हूँ (I apple eat) = I eat an apple. English SVO flips to SOV."
   },
   {
     "id": "hi-0549",
@@ -7139,7 +7139,7 @@
     "target": "आज मौसम बहुत अच्छा है, बाहर चलें?",
     "english": "The weather is very nice today, shall we go out?",
     "audio": "hi-hi-0550.mp3",
-    "grammar": "Auxiliaries (`है/हैं/था/थी/हो`) come at the very end, AFTER the main verb. `राम घर जा रहा है` (Ram home going is) = 'Ram is going home'. Stack verb + aux at the tail.",
+    "grammar": "Auxiliaries (है/हैं/था/थी/हो) come at the very end, AFTER the main verb. राम घर जा रहा है (Ram is going home).",
     "tags": [
       "general",
       "travel"
@@ -7240,7 +7240,7 @@
     "target": "अगले साल नई फ़सल और अच्छी होगी।",
     "english": "Next year's crop will be even better.",
     "audio": "hi-hi-0558.mp3",
-    "grammar": "Long sentences: pile everything before the verb. Place, time, manner, object – all come first, then finally the verb. `कल मेरा भाई स्कूल में पढ़ाई करता है` (yesterday my brother school in study does).",
+    "grammar": "For long sentences, pile everything before the verb: time, place, object. कल मेरा भाई स्कूल में पढ़ाई करता है (yesterday my brother studies at school).",
     "tags": [
       "general",
       "travel"
@@ -7488,14 +7488,14 @@
     ],
     "grammarNode": "node-07",
     "priority": 1089,
-    "grammar": "Pick the form by the GENDER of the thing owned, not the owner: `राम का घर` (m), `राम की किताब` (f), `राम के बच्चे` (m pl). Wrong agreement = wrong sentence."
+    "grammar": "Pick का / की / के by the gender of the thing OWNED, not the owner. राम का घर (m), राम की किताब (f), राम के बच्चे (m pl)."
   },
   {
     "id": "hi-0578",
     "target": "बड़े भाई की बड़ी किताबें मेरी अलमारी में नहीं आतीं।",
     "english": "Elder brother's big books don't fit in my cupboard.",
     "audio": "hi-hi-0578.mp3",
-    "grammar": "`का / की / के` = possession ('of'). Order is owner FIRST + linker + thing: `राम का घर` = 'Ram's house' (lit. 'Ram of house'). English uses 's; Hindi uses three forms.",
+    "grammar": "का / की / के = of. Order: owner + linker + thing. राम का घर = Ram's house (lit. \"Ram of house\"). Three forms by gender.",
     "tags": [
       "family",
       "general",
@@ -7722,7 +7722,7 @@
     "target": "आदाब अर्ज़ है, मिज़ाज शरीफ़?",
     "english": "My respects to you; how is your health?",
     "audio": "hi-hi-0596.mp3",
-    "grammar": "Question words go where the answer would go, not at the start: `तुम कहाँ जा रहे हो?` (you where going are?) = 'Where are you going?'. No fronting like English.",
+    "grammar": "Question words go where the answer would go, not at the start. तुम कहाँ जा रहे हो? (you where going?) = where are you going?",
     "tags": [
       "general"
     ],
@@ -7770,7 +7770,7 @@
     "target": "ख़ैर, जो हुआ सो हुआ।",
     "english": "Anyway, what's done is done.",
     "audio": "hi-hi-0600.mp3",
-    "grammar": "Hindi is SOV – subject-Object-Verb. The verb ALWAYS goes at the end of the sentence. `मैं सेब खाता हूँ` (I apple eat) = 'I eat an apple'. English SVO becomes Hindi SOV.",
+    "grammar": "Hindi is SOV – the verb always goes at the END. मैं सेब खाता हूँ (I apple eat) = I eat an apple. English SVO flips to SOV.",
     "tags": [
       "general"
     ],
@@ -7782,7 +7782,7 @@
     "target": "बेशक, तुम्हारी मेहनत रंग लाई।",
     "english": "Indeed, your hard work paid off.",
     "audio": "hi-hi-0601.mp3",
-    "grammar": "Auxiliaries (`है/हैं/था/थी/हो`) come at the very end, AFTER the main verb. `राम घर जा रहा है` (Ram home going is) = 'Ram is going home'. Stack verb + aux at the tail.",
+    "grammar": "Auxiliaries (है/हैं/था/थी/हो) come at the very end, AFTER the main verb. राम घर जा रहा है (Ram is going home).",
     "tags": [
       "general",
       "work"
@@ -7800,7 +7800,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 114,
-    "grammar": "Long sentences: pile everything before the verb. Place, time, manner, object – all come first, then finally the verb. `कल मेरा भाई स्कूल में पढ़ाई करता है` (yesterday my brother school in study does)."
+    "grammar": "For long sentences, pile everything before the verb: time, place, object. कल मेरा भाई स्कूल में पढ़ाई करता है (yesterday my brother studies at school)."
   },
   {
     "id": "hi-0603",
@@ -7837,7 +7837,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 169,
-    "grammar": "Question words go where the answer would go, not at the start: `तुम कहाँ जा रहे हो?` (you where going are?) = 'Where are you going?'. No fronting like English."
+    "grammar": "Question words go where the answer would go, not at the start. तुम कहाँ जा रहे हो? (you where going?) = where are you going?"
   },
   {
     "id": "hi-0606",
@@ -8001,7 +8001,7 @@
     "target": "वह तो बहुत पहले ही चला गया।",
     "english": "He left a very long time ago.",
     "audio": "hi-hi-0620.mp3",
-    "grammar": "`भी` (also/even) sits AFTER the word it emphasises: `मैं भी जाऊँगा` (I'll go too – emphasis on 'I'). `मैं कल भी जाऊँगा` (I'll go tomorrow too – emphasis on 'tomorrow').",
+    "grammar": "भी (also/even) sits AFTER the word it emphasises. मैं भी जाऊँगा (I'll go too). मैं कल भी जाऊँगा (I'll go tomorrow too).",
     "tags": [
       "general",
       "travel"
@@ -8093,7 +8093,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 49,
-    "grammar": "Hindi is SOV – subject-Object-Verb. The verb ALWAYS goes at the end of the sentence. `मैं सेब खाता हूँ` (I apple eat) = 'I eat an apple'. English SVO becomes Hindi SOV."
+    "grammar": "Hindi is SOV – the verb always goes at the END. मैं सेब खाता हूँ (I apple eat) = I eat an apple. English SVO flips to SOV."
   },
   {
     "id": "hi-0628",
@@ -8112,7 +8112,7 @@
     "target": "अरे, तुम यहाँ कब आए?",
     "english": "Oh, when did you come here?",
     "audio": "hi-hi-0629.mp3",
-    "grammar": "Auxiliaries (`है/हैं/था/थी/हो`) come at the very end, AFTER the main verb. `राम घर जा रहा है` (Ram home going is) = 'Ram is going home'. Stack verb + aux at the tail.",
+    "grammar": "Auxiliaries (है/हैं/था/थी/हो) come at the very end, AFTER the main verb. राम घर जा रहा है (Ram is going home).",
     "tags": [
       "general"
     ],
@@ -8172,7 +8172,7 @@
     "target": "फिर भी, उसने हिम्मत नहीं हारी।",
     "english": "Still, she did not lose courage.",
     "audio": "hi-hi-0634.mp3",
-    "grammar": "Long sentences: pile everything before the verb. Place, time, manner, object – all come first, then finally the verb. `कल मेरा भाई स्कूल में पढ़ाई करता है` (yesterday my brother school in study does).",
+    "grammar": "For long sentences, pile everything before the verb: time, place, object. कल मेरा भाई स्कूल में पढ़ाई करता है (yesterday my brother studies at school).",
     "tags": [
       "general"
     ],
@@ -8195,7 +8195,7 @@
     "target": "नरेश, ज़रा यहाँ आकर यह देखो।",
     "english": "Naresh, come here and look at this.",
     "audio": "hi-hi-0636.mp3",
-    "grammar": "Question words go where the answer would go, not at the start: `तुम कहाँ जा रहे हो?` (you where going are?) = 'Where are you going?'. No fronting like English.",
+    "grammar": "Question words go where the answer would go, not at the start. तुम कहाँ जा रहे हो? (you where going?) = where are you going?",
     "tags": [
       "general"
     ],
@@ -8212,7 +8212,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 139,
-    "grammar": "Hindi is SOV – subject-Object-Verb. The verb ALWAYS goes at the end of the sentence. `मैं सेब खाता हूँ` (I apple eat) = 'I eat an apple'. English SVO becomes Hindi SOV."
+    "grammar": "Hindi is SOV – the verb always goes at the END. मैं सेब खाता हूँ (I apple eat) = I eat an apple. English SVO flips to SOV."
   },
   {
     "id": "hi-0638",
@@ -8325,7 +8325,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 289,
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms."
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences."
   },
   {
     "id": "hi-0647",
@@ -8363,7 +8363,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 360,
-    "grammar": "Pronouns have built-in possessives: `मेरा/मेरी/मेरे` (my), `तेरा/तेरी/तेरे` (your-intimate), `तुम्हारा/तुम्हारी/तुम्हारे` (your-familiar), `उसका/उसकी/उसके` (his/her). Still gender-agree with the thing."
+    "grammar": "Possessives by pronoun: मेरा (my), तुम्हारा (your), उसका (his/her). Still gender-agree with the thing owned."
   },
   {
     "id": "hi-0650",
@@ -8632,7 +8632,7 @@
     "target": "लंबी कूद में धावक ने छह मीटर पार किया।",
     "english": "The athlete cleared six meters in the long jump.",
     "audio": "hi-hi-0673.mp3",
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms.",
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences.",
     "tags": [
       "general"
     ],
@@ -8667,7 +8667,7 @@
     "target": "शोर सुनकर वह चौंक उठा।",
     "english": "He jumped at the noise.",
     "audio": "hi-hi-0676.mp3",
-    "grammar": "Auxiliaries (`है/हैं/था/थी/हो`) come at the very end, AFTER the main verb. `राम घर जा रहा है` (Ram home going is) = 'Ram is going home'. Stack verb + aux at the tail.",
+    "grammar": "Auxiliaries (है/हैं/था/थी/हो) come at the very end, AFTER the main verb. राम घर जा रहा है (Ram is going home).",
     "tags": [
       "general"
     ],
@@ -8718,7 +8718,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 140,
-    "grammar": "Long sentences: pile everything before the verb. Place, time, manner, object – all come first, then finally the verb. `कल मेरा भाई स्कूल में पढ़ाई करता है` (yesterday my brother school in study does)."
+    "grammar": "For long sentences, pile everything before the verb: time, place, object. कल मेरा भाई स्कूल में पढ़ाई करता है (yesterday my brother studies at school)."
   },
   {
     "id": "hi-0682",
@@ -8984,7 +8984,7 @@
     "target": "ओहो, तुम यहाँ! बहुत अच्छा हुआ।",
     "english": "Oh, you're here! I'm so glad.",
     "audio": "hi-hi-0704.mp3",
-    "grammar": "Question words go where the answer would go, not at the start: `तुम कहाँ जा रहे हो?` (you where going are?) = 'Where are you going?'. No fronting like English.",
+    "grammar": "Question words go where the answer would go, not at the start. तुम कहाँ जा रहे हो? (you where going?) = where are you going?",
     "tags": [
       "general"
     ],
@@ -9055,14 +9055,14 @@
     ],
     "grammarNode": "node-09",
     "priority": 1032,
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms."
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences."
   },
   {
     "id": "hi-0710",
     "target": "राहुल ने नई दुकान का उद्घाटन किया।",
     "english": "Rahul inaugurated the new shop.",
     "audio": "hi-hi-0710.mp3",
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms.",
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences.",
     "tags": [
       "general",
       "travel"
@@ -9171,7 +9171,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1606,
-    "grammar": "`का / की / के` = possession ('of'). Order is owner FIRST + linker + thing: `राम का घर` = 'Ram's house' (lit. 'Ram of house'). English uses 's; Hindi uses three forms."
+    "grammar": "का / की / के = of. Order: owner + linker + thing. राम का घर = Ram's house (lit. \"Ram of house\"). Three forms by gender."
   },
   {
     "id": "hi-0721",
@@ -9235,7 +9235,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 765,
-    "grammar": "Pick the form by the GENDER of the thing owned, not the owner: `राम का घर` (m), `राम की किताब` (f), `राम के बच्चे` (m pl). Wrong agreement = wrong sentence."
+    "grammar": "Pick का / की / के by the gender of the thing OWNED, not the owner. राम का घर (m), राम की किताब (f), राम के बच्चे (m pl)."
   },
   {
     "id": "hi-0726",
@@ -9248,7 +9248,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 565,
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms."
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences."
   },
   {
     "id": "hi-0727",
@@ -9278,7 +9278,7 @@
     "target": "पड़ोसन ने हमें खाने पर बुलाया।",
     "english": "The neighbor invited us for dinner.",
     "audio": "hi-hi-0729.mp3",
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms.",
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences.",
     "tags": [
       "general",
       "travel"
@@ -9349,7 +9349,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 803,
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms."
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences."
   },
   {
     "id": "hi-0735",
@@ -9368,7 +9368,7 @@
     "target": "तीसरे दिन हम शिमला पहुँच गए।",
     "english": "On the third day, we reached Shimla.",
     "audio": "hi-hi-0736.mp3",
-    "grammar": "Hindi is SOV – subject-Object-Verb. The verb ALWAYS goes at the end of the sentence. `मैं सेब खाता हूँ` (I apple eat) = 'I eat an apple'. English SVO becomes Hindi SOV.",
+    "grammar": "Hindi is SOV – the verb always goes at the END. मैं सेब खाता हूँ (I apple eat) = I eat an apple. English SVO flips to SOV.",
     "tags": [
       "general"
     ],
@@ -9435,7 +9435,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 708,
-    "grammar": "Auxiliaries (`है/हैं/था/थी/हो`) come at the very end, AFTER the main verb. `राम घर जा रहा है` (Ram home going is) = 'Ram is going home'. Stack verb + aux at the tail."
+    "grammar": "Auxiliaries (है/हैं/था/थी/हो) come at the very end, AFTER the main verb. राम घर जा रहा है (Ram is going home)."
   },
   {
     "id": "hi-0742",
@@ -9473,14 +9473,14 @@
     ],
     "grammarNode": "node-09",
     "priority": 859,
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms."
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences."
   },
   {
     "id": "hi-0745",
     "target": "श्याम सुबह जल्दी उठा और दौड़ने गया।",
     "english": "Shyam woke up early in the morning and went running.",
     "audio": "hi-hi-0745.mp3",
-    "grammar": "Long sentences: pile everything before the verb. Place, time, manner, object – all come first, then finally the verb. `कल मेरा भाई स्कूल में पढ़ाई करता है` (yesterday my brother school in study does).",
+    "grammar": "For long sentences, pile everything before the verb: time, place, object. कल मेरा भाई स्कूल में पढ़ाई करता है (yesterday my brother studies at school).",
     "tags": [
       "family",
       "general",
@@ -9518,7 +9518,7 @@
     "target": "सविता सुबह जल्दी उठी और योग किया।",
     "english": "Savita woke up early and did yoga.",
     "audio": "hi-hi-0749.mp3",
-    "grammar": "Question words go where the answer would go, not at the start: `तुम कहाँ जा रहे हो?` (you where going are?) = 'Where are you going?'. No fronting like English.",
+    "grammar": "Question words go where the answer would go, not at the start. तुम कहाँ जा रहे हो? (you where going?) = where are you going?",
     "tags": [
       "family",
       "general",
@@ -9532,7 +9532,7 @@
     "target": "शीला सुबह जल्दी उठी और योग किया।",
     "english": "Sheela woke up early and did yoga.",
     "audio": "hi-hi-0750.mp3",
-    "grammar": "Hindi is SOV – subject-Object-Verb. The verb ALWAYS goes at the end of the sentence. `मैं सेब खाता हूँ` (I apple eat) = 'I eat an apple'. English SVO becomes Hindi SOV.",
+    "grammar": "Hindi is SOV – the verb always goes at the END. मैं सेब खाता हूँ (I apple eat) = I eat an apple. English SVO flips to SOV.",
     "tags": [
       "family",
       "general",
@@ -9572,7 +9572,7 @@
     "target": "अध्यापक ने कठिन विषय आसानी से समझाया।",
     "english": "The teacher explained the difficult topic easily.",
     "audio": "hi-hi-0753.mp3",
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms.",
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences.",
     "tags": [
       "general",
       "travel"
@@ -9599,7 +9599,7 @@
     "target": "उसने दरवाज़ा बंद किया और सो गया।",
     "english": "He closed the door and fell asleep.",
     "audio": "hi-hi-0755.mp3",
-    "grammar": "Auxiliaries (`है/हैं/था/थी/हो`) come at the very end, AFTER the main verb. `राम घर जा रहा है` (Ram home going is) = 'Ram is going home'. Stack verb + aux at the tail.",
+    "grammar": "Auxiliaries (है/हैं/था/थी/हो) come at the very end, AFTER the main verb. राम घर जा रहा है (Ram is going home).",
     "tags": [
       "family",
       "general"
@@ -9634,7 +9634,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 884,
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms."
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences."
   },
   {
     "id": "hi-0758",
@@ -9746,7 +9746,7 @@
     "target": "पत्रकार ने साक्षात्कार में कड़े सवाल पूछे।",
     "english": "The journalist asked tough questions in the interview.",
     "audio": "hi-hi-0766.mp3",
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms.",
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences.",
     "tags": [
       "general",
       "work"
@@ -9766,7 +9766,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 968,
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms."
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences."
   },
   {
     "id": "hi-0768",
@@ -9850,7 +9850,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1331,
-    "grammar": "Pronouns have built-in possessives: `मेरा/मेरी/मेरे` (my), `तेरा/तेरी/तेरे` (your-intimate), `तुम्हारा/तुम्हारी/तुम्हारे` (your-familiar), `उसका/उसकी/उसके` (his/her). Still gender-agree with the thing."
+    "grammar": "Possessives by pronoun: मेरा (my), तुम्हारा (your), उसका (his/her). Still gender-agree with the thing owned."
   },
   {
     "id": "hi-0774",
@@ -9884,7 +9884,7 @@
     "target": "मुझे बेहद ख़ुशी है कि आप मिलने आए।",
     "english": "I am extremely happy that you came to visit.",
     "audio": "hi-hi-0776.mp3",
-    "grammar": "Long sentences: pile everything before the verb. Place, time, manner, object – all come first, then finally the verb. `कल मेरा भाई स्कूल में पढ़ाई करता है` (yesterday my brother school in study does).",
+    "grammar": "For long sentences, pile everything before the verb: time, place, object. कल मेरा भाई स्कूल में पढ़ाई करता है (yesterday my brother studies at school).",
     "tags": [
       "family",
       "general"
@@ -9917,7 +9917,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1152,
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms."
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences."
   },
   {
     "id": "hi-0779",
@@ -9964,7 +9964,7 @@
     "target": "गीता ने पूरी किताब एक दिन में पढ़ ली।",
     "english": "Geeta read the entire book in one day.",
     "audio": "hi-hi-0782.mp3",
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms.",
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences.",
     "tags": [
       "general",
       "work"
@@ -10025,7 +10025,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1493,
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms."
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences."
   },
   {
     "id": "hi-0787",
@@ -10111,7 +10111,7 @@
     "target": "मैंने पहली बार दक्षिण भारतीय डोसा खाया और बहुत पसंद आया।",
     "english": "I ate South Indian dosa for the first time and liked it very much.",
     "audio": "hi-hi-0793.mp3",
-    "grammar": "Question words go where the answer would go, not at the start: `तुम कहाँ जा रहे हो?` (you where going are?) = 'Where are you going?'. No fronting like English.",
+    "grammar": "Question words go where the answer would go, not at the start. तुम कहाँ जा रहे हो? (you where going?) = where are you going?",
     "tags": [
       "family",
       "general",
@@ -10137,7 +10137,7 @@
     "target": "बढ़ई ने मज़बूत अलमारी बनाई।",
     "english": "The carpenter made a sturdy cupboard.",
     "audio": "hi-hi-0795.mp3",
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms.",
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences.",
     "tags": [
       "general"
     ],
@@ -10203,7 +10203,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 721,
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms."
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences."
   },
   {
     "id": "hi-0801",
@@ -10261,7 +10261,7 @@
     "target": "मूर्तिकार ने संगमरमर से कलाकृति बनाई।",
     "english": "The sculptor made an artwork from marble.",
     "audio": "hi-hi-0805.mp3",
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms.",
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences.",
     "tags": [
       "general"
     ],
@@ -10316,7 +10316,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 917,
-    "grammar": "Subject forms with ने: `मैंने` (I), `तूने` (you-intimate), `तुमने` (you), `आपने` (you-resp), `इसने/उसने` (he/she), `इन्होंने/उन्होंने` (they). These are the 'past transitive' subject forms."
+    "grammar": "Subject forms with ने: मैंने (I), तुमने (you), आपने (you-resp), उसने (he/she), उन्होंने (they). Used in past transitive sentences."
   },
   {
     "id": "hi-0810",
@@ -10583,7 +10583,7 @@
     "target": "सलाम, भई कैसा चल रहा है सब?",
     "english": "Hello, how is everything going brother?",
     "audio": "hi-hi-0834.mp3",
-    "grammar": "Hindi is SOV – subject-Object-Verb. The verb ALWAYS goes at the end of the sentence. `मैं सेब खाता हूँ` (I apple eat) = 'I eat an apple'. English SVO becomes Hindi SOV.",
+    "grammar": "Hindi is SOV – the verb always goes at the END. मैं सेब खाता हूँ (I apple eat) = I eat an apple. English SVO flips to SOV.",
     "tags": [
       "family",
       "general"
@@ -11068,7 +11068,7 @@
     "target": "धोबी कपड़े धो रहा है नदी किनारे।",
     "english": "The washerman is washing clothes by the river.",
     "audio": "hi-hi-0878.mp3",
-    "grammar": "Auxiliaries (`है/हैं/था/थी/हो`) come at the very end, AFTER the main verb. `राम घर जा रहा है` (Ram home going is) = 'Ram is going home'. Stack verb + aux at the tail.",
+    "grammar": "Auxiliaries (है/हैं/था/थी/हो) come at the very end, AFTER the main verb. राम घर जा रहा है (Ram is going home).",
     "tags": [
       "family",
       "general",
@@ -11144,7 +11144,7 @@
     "target": "मैं हिंदी सीख रहा हूँ, कृपया धीरे बोलिए।",
     "english": "I am learning Hindi, please speak slowly.",
     "audio": "hi-hi-0884.mp3",
-    "grammar": "Long sentences: pile everything before the verb. Place, time, manner, object – all come first, then finally the verb. `कल मेरा भाई स्कूल में पढ़ाई करता है` (yesterday my brother school in study does).",
+    "grammar": "For long sentences, pile everything before the verb: time, place, object. कल मेरा भाई स्कूल में पढ़ाई करता है (yesterday my brother studies at school).",
     "tags": [
       "general",
       "work"
@@ -11235,7 +11235,7 @@
     ],
     "grammarNode": "node-10",
     "priority": 1324,
-    "grammar": "`का / की / के` = possession ('of'). Order is owner FIRST + linker + thing: `राम का घर` = 'Ram's house' (lit. 'Ram of house'). English uses 's; Hindi uses three forms."
+    "grammar": "का / की / के = of. Order: owner + linker + thing. राम का घर = Ram's house (lit. \"Ram of house\"). Three forms by gender."
   },
   {
     "id": "hi-0892",
@@ -11406,7 +11406,7 @@
     "target": "बूँदा-बाँदी हो रही है बाहर।",
     "english": "It is drizzling outside.",
     "audio": "hi-hi-0906.mp3",
-    "grammar": "Question words go where the answer would go, not at the start: `तुम कहाँ जा रहे हो?` (you where going are?) = 'Where are you going?'. No fronting like English.",
+    "grammar": "Question words go where the answer would go, not at the start. तुम कहाँ जा रहे हो? (you where going?) = where are you going?",
     "tags": [
       "general"
     ],
@@ -11606,7 +11606,7 @@
     ],
     "grammarNode": "node-10",
     "priority": 1155,
-    "grammar": "Pick the form by the GENDER of the thing owned, not the owner: `राम का घर` (m), `राम की किताब` (f), `राम के बच्चे` (m pl). Wrong agreement = wrong sentence."
+    "grammar": "Pick का / की / के by the gender of the thing OWNED, not the owner. राम का घर (m), राम की किताब (f), राम के बच्चे (m pl)."
   },
   {
     "id": "hi-0924",
@@ -12067,7 +12067,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 660,
-    "grammar": "Pronouns have built-in possessives: `मेरा/मेरी/मेरे` (my), `तेरा/तेरी/तेरे` (your-intimate), `तुम्हारा/तुम्हारी/तुम्हारे` (your-familiar), `उसका/उसकी/उसके` (his/her). Still gender-agree with the thing."
+    "grammar": "Possessives by pronoun: मेरा (my), तुम्हारा (your), उसका (his/her). Still gender-agree with the thing owned."
   },
   {
     "id": "hi-0966",
@@ -12153,7 +12153,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 1026,
-    "grammar": "`का / की / के` = possession ('of'). Order is owner FIRST + linker + thing: `राम का घर` = 'Ram's house' (lit. 'Ram of house'). English uses 's; Hindi uses three forms."
+    "grammar": "का / की / के = of. Order: owner + linker + thing. राम का घर = Ram's house (lit. \"Ram of house\"). Three forms by gender."
   },
   {
     "id": "hi-0973",
@@ -12242,7 +12242,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 1290,
-    "grammar": "Pick the form by the GENDER of the thing owned, not the owner: `राम का घर` (m), `राम की किताब` (f), `राम के बच्चे` (m pl). Wrong agreement = wrong sentence."
+    "grammar": "Pick का / की / के by the gender of the thing OWNED, not the owner. राम का घर (m), राम की किताब (f), राम के बच्चे (m pl)."
   },
   {
     "id": "hi-0980",
@@ -12279,7 +12279,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 1560,
-    "grammar": "Pronouns have built-in possessives: `मेरा/मेरी/मेरे` (my), `तेरा/तेरी/तेरे` (your-intimate), `तुम्हारा/तुम्हारी/तुम्हारे` (your-familiar), `उसका/उसकी/उसके` (his/her). Still gender-agree with the thing."
+    "grammar": "Possessives by pronoun: मेरा (my), तुम्हारा (your), उसका (his/her). Still gender-agree with the thing owned."
   },
   {
     "id": "hi-0984",
@@ -12742,14 +12742,14 @@
     ],
     "grammarNode": "node-11",
     "priority": 1035,
-    "grammar": "`भी` (also/even) sits AFTER the word it emphasises: `मैं भी जाऊँगा` (I'll go too – emphasis on 'I'). `मैं कल भी जाऊँगा` (I'll go tomorrow too – emphasis on 'tomorrow')."
+    "grammar": "भी (also/even) sits AFTER the word it emphasises. मैं भी जाऊँगा (I'll go too). मैं कल भी जाऊँगा (I'll go tomorrow too)."
   },
   {
     "id": "hi-1025",
     "target": "अनिल को यह काम आज ही करना चाहिए।",
     "english": "Anil should do this work today itself.",
     "audio": "hi-hi-1025.mp3",
-    "grammar": "`भी` (also/even) sits AFTER the word it emphasises: `मैं भी जाऊँगा` (I'll go too – emphasis on 'I'). `मैं कल भी जाऊँगा` (I'll go tomorrow too – emphasis on 'tomorrow').",
+    "grammar": "भी (also/even) sits AFTER the word it emphasises. मैं भी जाऊँगा (I'll go too). मैं कल भी जाऊँगा (I'll go tomorrow too).",
     "tags": [
       "general",
       "travel",

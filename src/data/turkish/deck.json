@@ -60,7 +60,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 187,
-    "grammar": "Future tense `-ecek/-acak` + person suffix: `geleceğim` (I will come), `çalışacaksın` (you will work). Vowel harmony picks -ecek (front) or -acak (back)."
+    "grammar": "Future = stem + -ecek/-acak + person. geleceğim (I will come), çalışacaksın (you will work). -ecek after front vowels, -acak after back."
   },
   {
     "id": "tr-0006",
@@ -92,7 +92,7 @@
     "target": "Halam spor yapmayı çok sever.",
     "english": "My aunt loves doing sports.",
     "audio": "tr-tr-1036.mp3",
-    "grammar": "Turkish is SOV: the verb ALWAYS goes at the end. `Ben elma yiyorum` (I apple eat) = 'I'm eating an apple'. English SVO flips to SOV. Long sentences pile everything before the verb.",
+    "grammar": "Turkish is SOV: verb always at the end. Ben elma yiyorum (I apple eat) = I'm eating an apple. English SVO flips to SOV.",
     "tags": [
       "family",
       "general"
@@ -235,7 +235,7 @@
     "target": "Teyzem her bayram bize börek gönderir.",
     "english": "My aunt sends us pastry every holiday.",
     "audio": "tr-tr-1134.mp3",
-    "grammar": "No gender, no articles. `O` covers he/she/it. `Ev` means both 'a house' and 'the house' depending on context. Massive simplification compared to English/German.",
+    "grammar": "No gender, no articles. O = he/she/it. Ev = both \"a house\" and \"the house\" depending on context.",
     "tags": [
       "family",
       "general",
@@ -269,7 +269,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 666,
-    "grammar": "`var` = 'there is/are', `yok` = 'there isn't/aren't'. No 'to be' needed. `Sınıfta üç kişi var` (there are three people in the class). Just slap `var` at the end."
+    "grammar": "var = there is/are, yok = there isn't. No \"to be\" needed. Sınıfta üç kişi var = there are three people in the class."
   },
   {
     "id": "tr-0022",
@@ -450,7 +450,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 522,
-    "grammar": "`-den/-dan` = 'from / out of / through': `evden` (from home), `İstanbul'dan` (from Istanbul), `pencereden` (through the window). Vowel harmony rules."
+    "grammar": "-den / -dan = from / out of / through. evden (from home), İstanbul'dan (from Istanbul), pencereden (through the window)."
   },
   {
     "id": "tr-0036",
@@ -653,7 +653,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 464,
-    "grammar": "Ablative isn't just physical 'from'. It marks the reason in 'because of': `soğuktan üşüdüm` (I got cold because of the cold). Also the standard in comparisons: `senden büyük` (bigger than you)."
+    "grammar": "-den/-dan also marks cause and comparison. soğuktan üşüdüm (cold because of the cold). senden büyük (bigger than you)."
   },
   {
     "id": "tr-0051",
@@ -740,7 +740,7 @@
     "target": "İnşallah sınavı geçeriz, çok çalıştık.",
     "english": "Hopefully we'll pass the exam, we studied a lot.",
     "audio": "tr-tr-1933.mp3",
-    "grammar": "Question particle `mi` floats to attach to whatever is being questioned: `Geliyor mu?` (Is he coming?), `Ev mi?` (Is it a house?). It harmonizes with the vowel of the word in front.",
+    "grammar": "Question particle mi floats: Geliyor mu? (Is he coming?), Ev mi? (Is it a house?). Harmonizes with the preceding vowel.",
     "tags": [
       "general",
       "work"
@@ -985,7 +985,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 501,
-    "grammar": "After verb stems, -den/-dan makes a gerund-like noun: `gelmekten` (from coming), used with verbs like `vazgeçmek` (to give up). 'I gave up coming' = `gelmekten vazgeçtim`."
+    "grammar": "-den/-dan on a verb stem makes a noun: gelmekten (from coming). \"I gave up coming\" = gelmekten vazgeçtim."
   },
   {
     "id": "tr-0076",
@@ -1173,7 +1173,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 549,
-    "grammar": "`var` = 'there is/are', `yok` = 'there isn't/aren't'. No 'to be' needed. `Sınıfta üç kişi var` (there are three people in the class). Just slap `var` at the end."
+    "grammar": "var = there is/are, yok = there isn't. No \"to be\" needed. Sınıfta üç kişi var = there are three people in the class."
   },
   {
     "id": "tr-0090",
@@ -1214,7 +1214,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 502,
-    "grammar": "Possession 'I have X': use locative + var. `Bende kalem var` (I have a pen – lit. 'at me a pen there is'). Turkish has no 'have' verb; it borrows `var`."
+    "grammar": "\"I have X\" = locative + var. Bende kalem var = I have a pen (lit. \"at me a pen there is\"). Turkish has no separate \"have\" verb."
   },
   {
     "id": "tr-0093",
@@ -1484,7 +1484,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 679,
-    "grammar": "`-den/-dan` = 'from / out of / through': `evden` (from home), `İstanbul'dan` (from Istanbul), `pencereden` (through the window). Vowel harmony rules."
+    "grammar": "-den / -dan = from / out of / through. evden (from home), İstanbul'dan (from Istanbul), pencereden (through the window)."
   },
   {
     "id": "tr-0113",
@@ -1708,7 +1708,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 944,
-    "grammar": "`var` = 'there is/are', `yok` = 'there isn't/aren't'. No 'to be' needed. `Sınıfta üç kişi var` (there are three people in the class). Just slap `var` at the end."
+    "grammar": "var = there is/are, yok = there isn't. No \"to be\" needed. Sınıfta üç kişi var = there are three people in the class."
   },
   {
     "id": "tr-0129",
@@ -1777,7 +1777,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 1566,
-    "grammar": "Negation glues a `-me/-ma` infix INTO the verb (vowel-harmonized): `geliyorum` (I come) → `gelmiyorum` (I don't come). The negative is part of the verb, not a separate word."
+    "grammar": "Negation = -me/-ma INSIDE the verb. geliyorum (I come) → gelmiyorum (I don't come). Part of the verb, not a separate word."
   },
   {
     "id": "tr-0134",
@@ -1867,7 +1867,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 56,
-    "grammar": "Spelling rule: `k` softens to `ğ` between vowels. `-ecek + -im` would give `-ecekim`, but you write `-eceğim`. Pronounced almost identically; spelling reflects the soft k."
+    "grammar": "k → ğ between vowels. -ecek + -im becomes -eceğim, not -ecekim. Pronounced almost the same; spelling tracks the soft k."
   },
   {
     "id": "tr-0141",
@@ -2066,7 +2066,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 248,
-    "grammar": "`-den/-dan` = 'from / out of / through': `evden` (from home), `İstanbul'dan` (from Istanbul), `pencereden` (through the window). Vowel harmony rules."
+    "grammar": "-den / -dan = from / out of / through. evden (from home), İstanbul'dan (from Istanbul), pencereden (through the window)."
   },
   {
     "id": "tr-0156",
@@ -2121,7 +2121,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 513,
-    "grammar": "Turkish is SOV: the verb ALWAYS goes at the end. `Ben elma yiyorum` (I apple eat) = 'I'm eating an apple'. English SVO flips to SOV. Long sentences pile everything before the verb."
+    "grammar": "Turkish is SOV: verb always at the end. Ben elma yiyorum (I apple eat) = I'm eating an apple. English SVO flips to SOV."
   },
   {
     "id": "tr-0160",
@@ -2254,7 +2254,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 167,
-    "grammar": "Future tense `-ecek/-acak` + person suffix: `geleceğim` (I will come), `çalışacaksın` (you will work). Vowel harmony picks -ecek (front) or -acak (back)."
+    "grammar": "Future = stem + -ecek/-acak + person. geleceğim (I will come), çalışacaksın (you will work). -ecek after front vowels, -acak after back."
   },
   {
     "id": "tr-0170",
@@ -2292,7 +2292,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 280,
-    "grammar": "Spelling rule: `k` softens to `ğ` between vowels. `-ecek + -im` would give `-ecekim`, but you write `-eceğim`. Pronounced almost identically; spelling reflects the soft k."
+    "grammar": "k → ğ between vowels. -ecek + -im becomes -eceğim, not -ecekim. Pronounced almost the same; spelling tracks the soft k."
   },
   {
     "id": "tr-0173",
@@ -2305,7 +2305,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 154,
-    "grammar": "Future tense `-ecek/-acak` + person suffix: `geleceğim` (I will come), `çalışacaksın` (you will work). Vowel harmony picks -ecek (front) or -acak (back)."
+    "grammar": "Future = stem + -ecek/-acak + person. geleceğim (I will come), çalışacaksın (you will work). -ecek after front vowels, -acak after back."
   },
   {
     "id": "tr-0174",
@@ -2371,14 +2371,14 @@
     ],
     "grammarNode": "node-02",
     "priority": 131,
-    "grammar": "Possession 'I have X': use locative + var. `Bende kalem var` (I have a pen – lit. 'at me a pen there is'). Turkish has no 'have' verb; it borrows `var`."
+    "grammar": "\"I have X\" = locative + var. Bende kalem var = I have a pen (lit. \"at me a pen there is\"). Turkish has no separate \"have\" verb."
   },
   {
     "id": "tr-0179",
     "target": "Kendine dikkat et, hava soğuk.",
     "english": "Take care, the weather is cold.",
     "audio": "tr-tr-0027.mp3",
-    "grammar": "No gender, no articles. `O` covers he/she/it. `Ev` means both 'a house' and 'the house' depending on context. Massive simplification compared to English/German.",
+    "grammar": "No gender, no articles. O = he/she/it. Ev = both \"a house\" and \"the house\" depending on context.",
     "tags": [
       "family",
       "general",
@@ -2547,7 +2547,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 366,
-    "grammar": "Spelling rule: `k` softens to `ğ` between vowels. `-ecek + -im` would give `-ecekim`, but you write `-eceğim`. Pronounced almost identically; spelling reflects the soft k."
+    "grammar": "k → ğ between vowels. -ecek + -im becomes -eceğim, not -ecekim. Pronounced almost the same; spelling tracks the soft k."
   },
   {
     "id": "tr-0192",
@@ -2567,7 +2567,7 @@
     "target": "Bu ne kadar, fiyatı nedir?",
     "english": "How much is this, what is the price?",
     "audio": "tr-tr-0752.mp3",
-    "grammar": "Question particle `mi` floats to attach to whatever is being questioned: `Geliyor mu?` (Is he coming?), `Ev mi?` (Is it a house?). It harmonizes with the vowel of the word in front.",
+    "grammar": "Question particle mi floats: Geliyor mu? (Is he coming?), Ev mi? (Is it a house?). Harmonizes with the preceding vowel.",
     "tags": [
       "general",
       "work"
@@ -2677,7 +2677,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 392,
-    "grammar": "`var` = 'there is/are', `yok` = 'there isn't/aren't'. No 'to be' needed. `Sınıfta üç kişi var` (there are three people in the class). Just slap `var` at the end."
+    "grammar": "var = there is/are, yok = there isn't. No \"to be\" needed. Sınıfta üç kişi var = there are three people in the class."
   },
   {
     "id": "tr-0202",
@@ -3014,7 +3014,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 1359,
-    "grammar": "Possession 'I have X': use locative + var. `Bende kalem var` (I have a pen – lit. 'at me a pen there is'). Turkish has no 'have' verb; it borrows `var`."
+    "grammar": "\"I have X\" = locative + var. Bende kalem var = I have a pen (lit. \"at me a pen there is\"). Turkish has no separate \"have\" verb."
   },
   {
     "id": "tr-0227",
@@ -3038,7 +3038,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 108,
-    "grammar": "Negation glues a `-me/-ma` infix INTO the verb (vowel-harmonized): `geliyorum` (I come) → `gelmiyorum` (I don't come). The negative is part of the verb, not a separate word."
+    "grammar": "Negation = -me/-ma INSIDE the verb. geliyorum (I come) → gelmiyorum (I don't come). Part of the verb, not a separate word."
   },
   {
     "id": "tr-0229",
@@ -3140,7 +3140,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 844,
-    "grammar": "Possession 'I have X': use locative + var. `Bende kalem var` (I have a pen – lit. 'at me a pen there is'). Turkish has no 'have' verb; it borrows `var`."
+    "grammar": "\"I have X\" = locative + var. Bende kalem var = I have a pen (lit. \"at me a pen there is\"). Turkish has no separate \"have\" verb."
   },
   {
     "id": "tr-0237",
@@ -3215,7 +3215,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 178,
-    "grammar": "Future doesn't always mean a fixed plan. It can express prediction, intention, even uncertainty: `yağmur yağacak` (it will rain – confident), `umarım gelecek` (I hope she'll come)."
+    "grammar": "Future can also be prediction or intention, not just a fixed plan. yağmur yağacak (it will rain), umarım gelecek (I hope she comes)."
   },
   {
     "id": "tr-0243",
@@ -3229,7 +3229,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 287,
-    "grammar": "Future doesn't always mean a fixed plan. It can express prediction, intention, even uncertainty: `yağmur yağacak` (it will rain – confident), `umarım gelecek` (I hope she'll come)."
+    "grammar": "Future can also be prediction or intention, not just a fixed plan. yağmur yağacak (it will rain), umarım gelecek (I hope she comes)."
   },
   {
     "id": "tr-0244",
@@ -3470,7 +3470,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 162,
-    "grammar": "Future tense `-ecek/-acak` + person suffix: `geleceğim` (I will come), `çalışacaksın` (you will work). Vowel harmony picks -ecek (front) or -acak (back)."
+    "grammar": "Future = stem + -ecek/-acak + person. geleceğim (I will come), çalışacaksın (you will work). -ecek after front vowels, -acak after back."
   },
   {
     "id": "tr-0262",
@@ -3483,7 +3483,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 277,
-    "grammar": "Future tense `-ecek/-acak` + person suffix: `geleceğim` (I will come), `çalışacaksın` (you will work). Vowel harmony picks -ecek (front) or -acak (back)."
+    "grammar": "Future = stem + -ecek/-acak + person. geleceğim (I will come), çalışacaksın (you will work). -ecek after front vowels, -acak after back."
   },
   {
     "id": "tr-0263",
@@ -3497,7 +3497,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 249,
-    "grammar": "Spelling rule: `k` softens to `ğ` between vowels. `-ecek + -im` would give `-ecekim`, but you write `-eceğim`. Pronounced almost identically; spelling reflects the soft k."
+    "grammar": "k → ğ between vowels. -ecek + -im becomes -eceğim, not -ecekim. Pronounced almost the same; spelling tracks the soft k."
   },
   {
     "id": "tr-0264",
@@ -3511,7 +3511,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 181,
-    "grammar": "Spelling rule: `k` softens to `ğ` between vowels. `-ecek + -im` would give `-ecekim`, but you write `-eceğim`. Pronounced almost identically; spelling reflects the soft k."
+    "grammar": "k → ğ between vowels. -ecek + -im becomes -eceğim, not -ecekim. Pronounced almost the same; spelling tracks the soft k."
   },
   {
     "id": "tr-0265",
@@ -3563,7 +3563,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 224,
-    "grammar": "`var` = 'there is/are', `yok` = 'there isn't/aren't'. No 'to be' needed. `Sınıfta üç kişi var` (there are three people in the class). Just slap `var` at the end."
+    "grammar": "var = there is/are, yok = there isn't. No \"to be\" needed. Sınıfta üç kişi var = there are three people in the class."
   },
   {
     "id": "tr-0269",
@@ -3588,7 +3588,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 221,
-    "grammar": "Future doesn't always mean a fixed plan. It can express prediction, intention, even uncertainty: `yağmur yağacak` (it will rain – confident), `umarım gelecek` (I hope she'll come)."
+    "grammar": "Future can also be prediction or intention, not just a fixed plan. yağmur yağacak (it will rain), umarım gelecek (I hope she comes)."
   },
   {
     "id": "tr-0271",
@@ -3629,7 +3629,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 361,
-    "grammar": "Future doesn't always mean a fixed plan. It can express prediction, intention, even uncertainty: `yağmur yağacak` (it will rain – confident), `umarım gelecek` (I hope she'll come)."
+    "grammar": "Future can also be prediction or intention, not just a fixed plan. yağmur yağacak (it will rain), umarım gelecek (I hope she comes)."
   },
   {
     "id": "tr-0274",
@@ -3712,7 +3712,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 544,
-    "grammar": "Future tense `-ecek/-acak` + person suffix: `geleceğim` (I will come), `çalışacaksın` (you will work). Vowel harmony picks -ecek (front) or -acak (back)."
+    "grammar": "Future = stem + -ecek/-acak + person. geleceğim (I will come), çalışacaksın (you will work). -ecek after front vowels, -acak after back."
   },
   {
     "id": "tr-0280",
@@ -3779,7 +3779,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 598,
-    "grammar": "Ablative isn't just physical 'from'. It marks the reason in 'because of': `soğuktan üşüdüm` (I got cold because of the cold). Also the standard in comparisons: `senden büyük` (bigger than you)."
+    "grammar": "-den/-dan also marks cause and comparison. soğuktan üşüdüm (cold because of the cold). senden büyük (bigger than you)."
   },
   {
     "id": "tr-0285",
@@ -3911,7 +3911,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 412,
-    "grammar": "`var` = 'there is/are', `yok` = 'there isn't/aren't'. No 'to be' needed. `Sınıfta üç kişi var` (there are three people in the class). Just slap `var` at the end."
+    "grammar": "var = there is/are, yok = there isn't. No \"to be\" needed. Sınıfta üç kişi var = there are three people in the class."
   },
   {
     "id": "tr-0295",
@@ -4031,7 +4031,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 1150,
-    "grammar": "Spelling rule: `k` softens to `ğ` between vowels. `-ecek + -im` would give `-ecekim`, but you write `-eceğim`. Pronounced almost identically; spelling reflects the soft k."
+    "grammar": "k → ğ between vowels. -ecek + -im becomes -eceğim, not -ecekim. Pronounced almost the same; spelling tracks the soft k."
   },
   {
     "id": "tr-0304",
@@ -4121,7 +4121,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 879,
-    "grammar": "Possession 'I have X': use locative + var. `Bende kalem var` (I have a pen – lit. 'at me a pen there is'). Turkish has no 'have' verb; it borrows `var`."
+    "grammar": "\"I have X\" = locative + var. Bende kalem var = I have a pen (lit. \"at me a pen there is\"). Turkish has no separate \"have\" verb."
   },
   {
     "id": "tr-0311",
@@ -4157,7 +4157,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 893,
-    "grammar": "Possession 'I have X': use locative + var. `Bende kalem var` (I have a pen – lit. 'at me a pen there is'). Turkish has no 'have' verb; it borrows `var`."
+    "grammar": "\"I have X\" = locative + var. Bende kalem var = I have a pen (lit. \"at me a pen there is\"). Turkish has no separate \"have\" verb."
   },
   {
     "id": "tr-0314",
@@ -4169,7 +4169,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 894,
-    "grammar": "`var` = 'there is/are', `yok` = 'there isn't/aren't'. No 'to be' needed. `Sınıfta üç kişi var` (there are three people in the class). Just slap `var` at the end."
+    "grammar": "var = there is/are, yok = there isn't. No \"to be\" needed. Sınıfta üç kişi var = there are three people in the class."
   },
   {
     "id": "tr-0315",
@@ -4225,7 +4225,7 @@
     "target": "Bilet kırk beş lira.",
     "english": "The ticket costs forty-five lira.",
     "audio": "tr-tr-0667.mp3",
-    "grammar": "Turkish is SOV: the verb ALWAYS goes at the end. `Ben elma yiyorum` (I apple eat) = 'I'm eating an apple'. English SVO flips to SOV. Long sentences pile everything before the verb.",
+    "grammar": "Turkish is SOV: verb always at the end. Ben elma yiyorum (I apple eat) = I'm eating an apple. English SVO flips to SOV.",
     "tags": [
       "general",
       "travel",
@@ -4259,7 +4259,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 47,
-    "grammar": "Future doesn't always mean a fixed plan. It can express prediction, intention, even uncertainty: `yağmur yağacak` (it will rain – confident), `umarım gelecek` (I hope she'll come)."
+    "grammar": "Future can also be prediction or intention, not just a fixed plan. yağmur yağacak (it will rain), umarım gelecek (I hope she comes)."
   },
   {
     "id": "tr-0322",
@@ -4272,7 +4272,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 54,
-    "grammar": "Future tense `-ecek/-acak` + person suffix: `geleceğim` (I will come), `çalışacaksın` (you will work). Vowel harmony picks -ecek (front) or -acak (back)."
+    "grammar": "Future = stem + -ecek/-acak + person. geleceğim (I will come), çalışacaksın (you will work). -ecek after front vowels, -acak after back."
   },
   {
     "id": "tr-0323",
@@ -4301,7 +4301,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 175,
-    "grammar": "Future doesn't always mean a fixed plan. It can express prediction, intention, even uncertainty: `yağmur yağacak` (it will rain – confident), `umarım gelecek` (I hope she'll come)."
+    "grammar": "Future can also be prediction or intention, not just a fixed plan. yağmur yağacak (it will rain), umarım gelecek (I hope she comes)."
   },
   {
     "id": "tr-0325",
@@ -4315,7 +4315,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 124,
-    "grammar": "Spelling rule: `k` softens to `ğ` between vowels. `-ecek + -im` would give `-ecekim`, but you write `-eceğim`. Pronounced almost identically; spelling reflects the soft k."
+    "grammar": "k → ğ between vowels. -ecek + -im becomes -eceğim, not -ecekim. Pronounced almost the same; spelling tracks the soft k."
   },
   {
     "id": "tr-0326",
@@ -4397,7 +4397,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 429,
-    "grammar": "Future tense `-ecek/-acak` + person suffix: `geleceğim` (I will come), `çalışacaksın` (you will work). Vowel harmony picks -ecek (front) or -acak (back)."
+    "grammar": "Future = stem + -ecek/-acak + person. geleceğim (I will come), çalışacaksın (you will work). -ecek after front vowels, -acak after back."
   },
   {
     "id": "tr-0332",
@@ -4411,7 +4411,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 376,
-    "grammar": "Future doesn't always mean a fixed plan. It can express prediction, intention, even uncertainty: `yağmur yağacak` (it will rain – confident), `umarım gelecek` (I hope she'll come)."
+    "grammar": "Future can also be prediction or intention, not just a fixed plan. yağmur yağacak (it will rain), umarım gelecek (I hope she comes)."
   },
   {
     "id": "tr-0333",
@@ -4478,7 +4478,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 273,
-    "grammar": "Spelling rule: `k` softens to `ğ` between vowels. `-ecek + -im` would give `-ecekim`, but you write `-eceğim`. Pronounced almost identically; spelling reflects the soft k."
+    "grammar": "k → ğ between vowels. -ecek + -im becomes -eceğim, not -ecekim. Pronounced almost the same; spelling tracks the soft k."
   },
   {
     "id": "tr-0338",
@@ -4491,7 +4491,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 139,
-    "grammar": "Future doesn't always mean a fixed plan. It can express prediction, intention, even uncertainty: `yağmur yağacak` (it will rain – confident), `umarım gelecek` (I hope she'll come)."
+    "grammar": "Future can also be prediction or intention, not just a fixed plan. yağmur yağacak (it will rain), umarım gelecek (I hope she comes)."
   },
   {
     "id": "tr-0339",
@@ -4546,7 +4546,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 164,
-    "grammar": "Future tense `-ecek/-acak` + person suffix: `geleceğim` (I will come), `çalışacaksın` (you will work). Vowel harmony picks -ecek (front) or -acak (back)."
+    "grammar": "Future = stem + -ecek/-acak + person. geleceğim (I will come), çalışacaksın (you will work). -ecek after front vowels, -acak after back."
   },
   {
     "id": "tr-0343",
@@ -4559,7 +4559,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 196,
-    "grammar": "Future tense `-ecek/-acak` + person suffix: `geleceğim` (I will come), `çalışacaksın` (you will work). Vowel harmony picks -ecek (front) or -acak (back)."
+    "grammar": "Future = stem + -ecek/-acak + person. geleceğim (I will come), çalışacaksın (you will work). -ecek after front vowels, -acak after back."
   },
   {
     "id": "tr-0344",
@@ -4628,7 +4628,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 152,
-    "grammar": "Spelling rule: `k` softens to `ğ` between vowels. `-ecek + -im` would give `-ecekim`, but you write `-eceğim`. Pronounced almost identically; spelling reflects the soft k."
+    "grammar": "k → ğ between vowels. -ecek + -im becomes -eceğim, not -ecekim. Pronounced almost the same; spelling tracks the soft k."
   },
   {
     "id": "tr-0349",
@@ -4642,7 +4642,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 188,
-    "grammar": "Spelling rule: `k` softens to `ğ` between vowels. `-ecek + -im` would give `-ecekim`, but you write `-eceğim`. Pronounced almost identically; spelling reflects the soft k."
+    "grammar": "k → ğ between vowels. -ecek + -im becomes -eceğim, not -ecekim. Pronounced almost the same; spelling tracks the soft k."
   },
   {
     "id": "tr-0350",
@@ -4655,7 +4655,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 147,
-    "grammar": "Future doesn't always mean a fixed plan. It can express prediction, intention, even uncertainty: `yağmur yağacak` (it will rain – confident), `umarım gelecek` (I hope she'll come)."
+    "grammar": "Future can also be prediction or intention, not just a fixed plan. yağmur yağacak (it will rain), umarım gelecek (I hope she comes)."
   },
   {
     "id": "tr-0351",
@@ -4695,7 +4695,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 134,
-    "grammar": "Future doesn't always mean a fixed plan. It can express prediction, intention, even uncertainty: `yağmur yağacak` (it will rain – confident), `umarım gelecek` (I hope she'll come)."
+    "grammar": "Future can also be prediction or intention, not just a fixed plan. yağmur yağacak (it will rain), umarım gelecek (I hope she comes)."
   },
   {
     "id": "tr-0354",
@@ -4734,7 +4734,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 387,
-    "grammar": "Future tense `-ecek/-acak` + person suffix: `geleceğim` (I will come), `çalışacaksın` (you will work). Vowel harmony picks -ecek (front) or -acak (back)."
+    "grammar": "Future = stem + -ecek/-acak + person. geleceğim (I will come), çalışacaksın (you will work). -ecek after front vowels, -acak after back."
   },
   {
     "id": "tr-0357",
@@ -4788,7 +4788,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 195,
-    "grammar": "Spelling rule: `k` softens to `ğ` between vowels. `-ecek + -im` would give `-ecekim`, but you write `-eceğim`. Pronounced almost identically; spelling reflects the soft k."
+    "grammar": "k → ğ between vowels. -ecek + -im becomes -eceğim, not -ecekim. Pronounced almost the same; spelling tracks the soft k."
   },
   {
     "id": "tr-0361",
@@ -4827,7 +4827,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 89,
-    "grammar": "Future doesn't always mean a fixed plan. It can express prediction, intention, even uncertainty: `yağmur yağacak` (it will rain – confident), `umarım gelecek` (I hope she'll come)."
+    "grammar": "Future can also be prediction or intention, not just a fixed plan. yağmur yağacak (it will rain), umarım gelecek (I hope she comes)."
   },
   {
     "id": "tr-0364",
@@ -4851,7 +4851,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 428,
-    "grammar": "Future tense `-ecek/-acak` + person suffix: `geleceğim` (I will come), `çalışacaksın` (you will work). Vowel harmony picks -ecek (front) or -acak (back)."
+    "grammar": "Future = stem + -ecek/-acak + person. geleceğim (I will come), çalışacaksın (you will work). -ecek after front vowels, -acak after back."
   },
   {
     "id": "tr-0366",
@@ -4931,7 +4931,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 358,
-    "grammar": "Spelling rule: `k` softens to `ğ` between vowels. `-ecek + -im` would give `-ecekim`, but you write `-eceğim`. Pronounced almost identically; spelling reflects the soft k."
+    "grammar": "k → ğ between vowels. -ecek + -im becomes -eceğim, not -ecekim. Pronounced almost the same; spelling tracks the soft k."
   },
   {
     "id": "tr-0372",
@@ -4944,7 +4944,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 333,
-    "grammar": "Future tense `-ecek/-acak` + person suffix: `geleceğim` (I will come), `çalışacaksın` (you will work). Vowel harmony picks -ecek (front) or -acak (back)."
+    "grammar": "Future = stem + -ecek/-acak + person. geleceğim (I will come), çalışacaksın (you will work). -ecek after front vowels, -acak after back."
   },
   {
     "id": "tr-0373",
@@ -4996,7 +4996,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 398,
-    "grammar": "Future doesn't always mean a fixed plan. It can express prediction, intention, even uncertainty: `yağmur yağacak` (it will rain – confident), `umarım gelecek` (I hope she'll come)."
+    "grammar": "Future can also be prediction or intention, not just a fixed plan. yağmur yağacak (it will rain), umarım gelecek (I hope she comes)."
   },
   {
     "id": "tr-0377",
@@ -5229,7 +5229,7 @@
     "target": "Buz gibi soğuk suyu bir dikişte içti.",
     "english": "He drank the ice-cold water in one go.",
     "audio": "tr-tr-0954.mp3",
-    "grammar": "No gender, no articles. `O` covers he/she/it. `Ev` means both 'a house' and 'the house' depending on context. Massive simplification compared to English/German.",
+    "grammar": "No gender, no articles. O = he/she/it. Ev = both \"a house\" and \"the house\" depending on context.",
     "tags": [
       "general",
       "travel"
@@ -5322,7 +5322,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 1155,
-    "grammar": "Question particle `mi` floats to attach to whatever is being questioned: `Geliyor mu?` (Is he coming?), `Ev mi?` (Is it a house?). It harmonizes with the vowel of the word in front."
+    "grammar": "Question particle mi floats: Geliyor mu? (Is he coming?), Ev mi? (Is it a house?). Harmonizes with the preceding vowel."
   },
   {
     "id": "tr-0402",
@@ -5638,7 +5638,7 @@
     "target": "Üniversiteye hangi otobüs gider?",
     "english": "Which bus goes to the university?",
     "audio": "tr-tr-3402.mp3",
-    "grammar": "Negation glues a `-me/-ma` infix INTO the verb (vowel-harmonized): `geliyorum` (I come) → `gelmiyorum` (I don't come). The negative is part of the verb, not a separate word.",
+    "grammar": "Negation = -me/-ma INSIDE the verb. geliyorum (I come) → gelmiyorum (I don't come). Part of the verb, not a separate word.",
     "tags": [
       "general",
       "travel",
@@ -5683,7 +5683,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 371,
-    "grammar": "Turkish is SOV: the verb ALWAYS goes at the end. `Ben elma yiyorum` (I apple eat) = 'I'm eating an apple'. English SVO flips to SOV. Long sentences pile everything before the verb."
+    "grammar": "Turkish is SOV: verb always at the end. Ben elma yiyorum (I apple eat) = I'm eating an apple. English SVO flips to SOV."
   },
   {
     "id": "tr-0430",
@@ -6369,7 +6369,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 833,
-    "grammar": "After verb stems, -den/-dan makes a gerund-like noun: `gelmekten` (from coming), used with verbs like `vazgeçmek` (to give up). 'I gave up coming' = `gelmekten vazgeçtim`."
+    "grammar": "-den/-dan on a verb stem makes a noun: gelmekten (from coming). \"I gave up coming\" = gelmekten vazgeçtim."
   },
   {
     "id": "tr-0483",
@@ -6642,7 +6642,7 @@
     "target": "Yazar akşamüstü sadyuma topladı.",
     "english": "The writer collected something at the stadium in the late afternoon.",
     "audio": "tr-tr-1181.mp3",
-    "grammar": "No gender, no articles. `O` covers he/she/it. `Ev` means both 'a house' and 'the house' depending on context. Massive simplification compared to English/German.",
+    "grammar": "No gender, no articles. O = he/she/it. Ev = both \"a house\" and \"the house\" depending on context.",
     "tags": [
       "general",
       "travel",
@@ -6656,7 +6656,7 @@
     "target": "Sapasağlam bir bina, hiç eskimemiş.",
     "english": "A perfectly solid building, hasn't aged at all.",
     "audio": "tr-tr-0922.mp3",
-    "grammar": "Question particle `mi` floats to attach to whatever is being questioned: `Geliyor mu?` (Is he coming?), `Ev mi?` (Is it a house?). It harmonizes with the vowel of the word in front.",
+    "grammar": "Question particle mi floats: Geliyor mu? (Is he coming?), Ev mi? (Is it a house?). Harmonizes with the preceding vowel.",
     "tags": [
       "general"
     ],
@@ -6853,7 +6853,7 @@
     "target": "Mehmet romani çarşıda bıraktı.",
     "english": "Mehmet left the novel at the bazaar.",
     "audio": "tr-tr-0915.mp3",
-    "grammar": "Negation glues a `-me/-ma` infix INTO the verb (vowel-harmonized): `geliyorum` (I come) → `gelmiyorum` (I don't come). The negative is part of the verb, not a separate word.",
+    "grammar": "Negation = -me/-ma INSIDE the verb. geliyorum (I come) → gelmiyorum (I don't come). Part of the verb, not a separate word.",
     "tags": [
       "general",
       "travel"
@@ -6880,7 +6880,7 @@
     "target": "Pencereyi aç, hava çok sıcak.",
     "english": "Open the window, it's very hot.",
     "audio": "tr-tr-0961.mp3",
-    "grammar": "Turkish is SOV: the verb ALWAYS goes at the end. `Ben elma yiyorum` (I apple eat) = 'I'm eating an apple'. English SVO flips to SOV. Long sentences pile everything before the verb.",
+    "grammar": "Turkish is SOV: verb always at the end. Ben elma yiyorum (I apple eat) = I'm eating an apple. English SVO flips to SOV.",
     "tags": [
       "family",
       "general",
@@ -7088,7 +7088,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 1230,
-    "grammar": "No gender, no articles. `O` covers he/she/it. `Ev` means both 'a house' and 'the house' depending on context. Massive simplification compared to English/German."
+    "grammar": "No gender, no articles. O = he/she/it. Ev = both \"a house\" and \"the house\" depending on context."
   },
   {
     "id": "tr-0538",
@@ -7107,7 +7107,7 @@
     "target": "Mutfağımız küçük ama kullanışlı.",
     "english": "Our kitchen is small but practical.",
     "audio": "tr-tr-0789.mp3",
-    "grammar": "Question particle `mi` floats to attach to whatever is being questioned: `Geliyor mu?` (Is he coming?), `Ev mi?` (Is it a house?). It harmonizes with the vowel of the word in front.",
+    "grammar": "Question particle mi floats: Geliyor mu? (Is he coming?), Ev mi? (Is it a house?). Harmonizes with the preceding vowel.",
     "tags": [
       "family",
       "general"
@@ -7236,7 +7236,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 378,
-    "grammar": "`-den/-dan` = 'from / out of / through': `evden` (from home), `İstanbul'dan` (from Istanbul), `pencereden` (through the window). Vowel harmony rules."
+    "grammar": "-den / -dan = from / out of / through. evden (from home), İstanbul'dan (from Istanbul), pencereden (through the window)."
   },
   {
     "id": "tr-0549",
@@ -7524,7 +7524,7 @@
     "target": "Fatma her pazar çarşıdan dolma almayı sever.",
     "english": "Fatma likes to buy stuffed grape leaves from the market every Sunday.",
     "audio": "tr-fill-tr-0570.mp3",
-    "grammar": "Negation glues a `-me/-ma` infix INTO the verb (vowel-harmonized): `geliyorum` (I come) → `gelmiyorum` (I don't come). The negative is part of the verb, not a separate word.",
+    "grammar": "Negation = -me/-ma INSIDE the verb. geliyorum (I come) → gelmiyorum (I don't come). Part of the verb, not a separate word.",
     "tags": [
       "family",
       "general"
@@ -7549,7 +7549,7 @@
     "target": "Yeni komşumuz çok nazik ve yardımsever bir kişi.",
     "english": "Our new neighbor is a very kind and helpful person.",
     "audio": "tr-tr-0887.mp3",
-    "grammar": "Turkish is SOV: the verb ALWAYS goes at the end. `Ben elma yiyorum` (I apple eat) = 'I'm eating an apple'. English SVO flips to SOV. Long sentences pile everything before the verb.",
+    "grammar": "Turkish is SOV: verb always at the end. Ben elma yiyorum (I apple eat) = I'm eating an apple. English SVO flips to SOV.",
     "tags": [
       "family",
       "general"
@@ -7623,7 +7623,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 1172,
-    "grammar": "No gender, no articles. `O` covers he/she/it. `Ev` means both 'a house' and 'the house' depending on context. Massive simplification compared to English/German."
+    "grammar": "No gender, no articles. O = he/she/it. Ev = both \"a house\" and \"the house\" depending on context."
   },
   {
     "id": "tr-0578",
@@ -8166,7 +8166,7 @@
     "target": "Ninem her akşam bize masal anlatırdı.",
     "english": "My grandmother used to tell us stories every evening.",
     "audio": "tr-tr-1140.mp3",
-    "grammar": "Question particle `mi` floats to attach to whatever is being questioned: `Geliyor mu?` (Is he coming?), `Ev mi?` (Is it a house?). It harmonizes with the vowel of the word in front.",
+    "grammar": "Question particle mi floats: Geliyor mu? (Is he coming?), Ev mi? (Is it a house?). Harmonizes with the preceding vowel.",
     "tags": [
       "family",
       "general",
@@ -8410,7 +8410,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 208,
-    "grammar": "Negation glues a `-me/-ma` infix INTO the verb (vowel-harmonized): `geliyorum` (I come) → `gelmiyorum` (I don't come). The negative is part of the verb, not a separate word."
+    "grammar": "Negation = -me/-ma INSIDE the verb. geliyorum (I come) → gelmiyorum (I don't come). Part of the verb, not a separate word."
   },
   {
     "id": "tr-0638",
@@ -8423,7 +8423,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 226,
-    "grammar": "Ablative isn't just physical 'from'. It marks the reason in 'because of': `soğuktan üşüdüm` (I got cold because of the cold). Also the standard in comparisons: `senden büyük` (bigger than you)."
+    "grammar": "-den/-dan also marks cause and comparison. soğuktan üşüdüm (cold because of the cold). senden büyük (bigger than you)."
   },
   {
     "id": "tr-0639",
@@ -8554,7 +8554,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 442,
-    "grammar": "After verb stems, -den/-dan makes a gerund-like noun: `gelmekten` (from coming), used with verbs like `vazgeçmek` (to give up). 'I gave up coming' = `gelmekten vazgeçtim`."
+    "grammar": "-den/-dan on a verb stem makes a noun: gelmekten (from coming). \"I gave up coming\" = gelmekten vazgeçtim."
   },
   {
     "id": "tr-0649",
@@ -8827,7 +8827,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 654,
-    "grammar": "Ablative isn't just physical 'from'. It marks the reason in 'because of': `soğuktan üşüdüm` (I got cold because of the cold). Also the standard in comparisons: `senden büyük` (bigger than you)."
+    "grammar": "-den/-dan also marks cause and comparison. soğuktan üşüdüm (cold because of the cold). senden büyük (bigger than you)."
   },
   {
     "id": "tr-0670",
@@ -8895,7 +8895,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 617,
-    "grammar": "Turkish is SOV: the verb ALWAYS goes at the end. `Ben elma yiyorum` (I apple eat) = 'I'm eating an apple'. English SVO flips to SOV. Long sentences pile everything before the verb."
+    "grammar": "Turkish is SOV: verb always at the end. Ben elma yiyorum (I apple eat) = I'm eating an apple. English SVO flips to SOV."
   },
   {
     "id": "tr-0675",
@@ -9406,7 +9406,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 1198,
-    "grammar": "`-den/-dan` = 'from / out of / through': `evden` (from home), `İstanbul'dan` (from Istanbul), `pencereden` (through the window). Vowel harmony rules."
+    "grammar": "-den / -dan = from / out of / through. evden (from home), İstanbul'dan (from Istanbul), pencereden (through the window)."
   },
   {
     "id": "tr-0714",
@@ -9543,7 +9543,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 81,
-    "grammar": "No gender, no articles. `O` covers he/she/it. `Ev` means both 'a house' and 'the house' depending on context. Massive simplification compared to English/German."
+    "grammar": "No gender, no articles. O = he/she/it. Ev = both \"a house\" and \"the house\" depending on context."
   },
   {
     "id": "tr-0725",
@@ -9577,7 +9577,7 @@
     "target": "İyi yemek iyi malzemeyle yapılır.",
     "english": "Good food is made with good ingredients.",
     "audio": "tr-tr-2188.mp3",
-    "grammar": "Question particle `mi` floats to attach to whatever is being questioned: `Geliyor mu?` (Is he coming?), `Ev mi?` (Is it a house?). It harmonizes with the vowel of the word in front.",
+    "grammar": "Question particle mi floats: Geliyor mu? (Is he coming?), Ev mi? (Is it a house?). Harmonizes with the preceding vowel.",
     "tags": [
       "family",
       "general",
@@ -9744,7 +9744,7 @@
     "target": "Kahvaltıda bal, kaymak ve taze ekmek yeterli.",
     "english": "Honey, cream and fresh bread are enough for breakfast.",
     "audio": "tr-tr-1342.mp3",
-    "grammar": "Negation glues a `-me/-ma` infix INTO the verb (vowel-harmonized): `geliyorum` (I come) → `gelmiyorum` (I don't come). The negative is part of the verb, not a separate word.",
+    "grammar": "Negation = -me/-ma INSIDE the verb. geliyorum (I come) → gelmiyorum (I don't come). Part of the verb, not a separate word.",
     "tags": [
       "family",
       "general",
@@ -9785,7 +9785,7 @@
     "target": "Hemşire tansiyonumu ölçtü.",
     "english": "The nurse took my blood pressure.",
     "audio": "tr-tr-1116.mp3",
-    "grammar": "Turkish is SOV: the verb ALWAYS goes at the end. `Ben elma yiyorum` (I apple eat) = 'I'm eating an apple'. English SVO flips to SOV. Long sentences pile everything before the verb.",
+    "grammar": "Turkish is SOV: verb always at the end. Ben elma yiyorum (I apple eat) = I'm eating an apple. English SVO flips to SOV.",
     "tags": [
       "general"
     ],
@@ -10032,7 +10032,7 @@
     "target": "Veteriner geçen yıl hasanee boyadı.",
     "english": "The vet cleaned to the hospital last year.",
     "audio": "tr-tr-1191.mp3",
-    "grammar": "No gender, no articles. `O` covers he/she/it. `Ev` means both 'a house' and 'the house' depending on context. Massive simplification compared to English/German.",
+    "grammar": "No gender, no articles. O = he/she/it. Ev = both \"a house\" and \"the house\" depending on context.",
     "tags": [
       "family",
       "general",
@@ -10090,7 +10090,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 541,
-    "grammar": "Ablative isn't just physical 'from'. It marks the reason in 'because of': `soğuktan üşüdüm` (I got cold because of the cold). Also the standard in comparisons: `senden büyük` (bigger than you)."
+    "grammar": "-den/-dan also marks cause and comparison. soğuktan üşüdüm (cold because of the cold). senden büyük (bigger than you)."
   },
   {
     "id": "tr-0767",
@@ -10138,7 +10138,7 @@
     "target": "Fırıncı her sabah taze ekmek pişirir.",
     "english": "The baker bakes fresh bread every morning.",
     "audio": "tr-tr-0784.mp3",
-    "grammar": "Question particle `mi` floats to attach to whatever is being questioned: `Geliyor mu?` (Is he coming?), `Ev mi?` (Is it a house?). It harmonizes with the vowel of the word in front.",
+    "grammar": "Question particle mi floats: Geliyor mu? (Is he coming?), Ev mi? (Is it a house?). Harmonizes with the preceding vowel.",
     "tags": [
       "family",
       "general",
@@ -10225,7 +10225,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 607,
-    "grammar": "After verb stems, -den/-dan makes a gerund-like noun: `gelmekten` (from coming), used with verbs like `vazgeçmek` (to give up). 'I gave up coming' = `gelmekten vazgeçtim`."
+    "grammar": "-den/-dan on a verb stem makes a noun: gelmekten (from coming). \"I gave up coming\" = gelmekten vazgeçtim."
   },
   {
     "id": "tr-0777",
@@ -10756,7 +10756,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1091,
-    "grammar": "`-den/-dan` = 'from / out of / through': `evden` (from home), `İstanbul'dan` (from Istanbul), `pencereden` (through the window). Vowel harmony rules."
+    "grammar": "-den / -dan = from / out of / through. evden (from home), İstanbul'dan (from Istanbul), pencereden (through the window)."
   },
   {
     "id": "tr-0819",
@@ -10802,7 +10802,7 @@
     "target": "Ramazan'da akşam yemeği çok önemlidir.",
     "english": "Dinner is very important during Ramadan.",
     "audio": "tr-tr-1219.mp3",
-    "grammar": "Negation glues a `-me/-ma` infix INTO the verb (vowel-harmonized): `geliyorum` (I come) → `gelmiyorum` (I don't come). The negative is part of the verb, not a separate word.",
+    "grammar": "Negation = -me/-ma INSIDE the verb. geliyorum (I come) → gelmiyorum (I don't come). Part of the verb, not a separate word.",
     "tags": [
       "general",
       "travel",
@@ -10926,14 +10926,14 @@
     ],
     "grammarNode": "node-09",
     "priority": 1281,
-    "grammar": "Turkish is SOV: the verb ALWAYS goes at the end. `Ben elma yiyorum` (I apple eat) = 'I'm eating an apple'. English SVO flips to SOV. Long sentences pile everything before the verb."
+    "grammar": "Turkish is SOV: verb always at the end. Ben elma yiyorum (I apple eat) = I'm eating an apple. English SVO flips to SOV."
   },
   {
     "id": "tr-0832",
     "target": "Annem her öğlen taze ekmek yapar.",
     "english": "My mother makes fresh bread every noon.",
     "audio": "tr-tr-1123.mp3",
-    "grammar": "No gender, no articles. `O` covers he/she/it. `Ev` means both 'a house' and 'the house' depending on context. Massive simplification compared to English/German.",
+    "grammar": "No gender, no articles. O = he/she/it. Ev = both \"a house\" and \"the house\" depending on context.",
     "tags": [
       "family",
       "general"
@@ -10953,7 +10953,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1148,
-    "grammar": "Ablative isn't just physical 'from'. It marks the reason in 'because of': `soğuktan üşüdüm` (I got cold because of the cold). Also the standard in comparisons: `senden büyük` (bigger than you)."
+    "grammar": "-den/-dan also marks cause and comparison. soğuktan üşüdüm (cold because of the cold). senden büyük (bigger than you)."
   },
   {
     "id": "tr-0834",
@@ -11057,7 +11057,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 708,
-    "grammar": "Question particle `mi` floats to attach to whatever is being questioned: `Geliyor mu?` (Is he coming?), `Ev mi?` (Is it a house?). It harmonizes with the vowel of the word in front."
+    "grammar": "Question particle mi floats: Geliyor mu? (Is he coming?), Ev mi? (Is it a house?). Harmonizes with the preceding vowel."
   },
   {
     "id": "tr-0842",
@@ -11095,7 +11095,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 971,
-    "grammar": "After verb stems, -den/-dan makes a gerund-like noun: `gelmekten` (from coming), used with verbs like `vazgeçmek` (to give up). 'I gave up coming' = `gelmekten vazgeçtim`."
+    "grammar": "-den/-dan on a verb stem makes a noun: gelmekten (from coming). \"I gave up coming\" = gelmekten vazgeçtim."
   },
   {
     "id": "tr-0845",
@@ -11133,7 +11133,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 873,
-    "grammar": "`-den/-dan` = 'from / out of / through': `evden` (from home), `İstanbul'dan` (from Istanbul), `pencereden` (through the window). Vowel harmony rules."
+    "grammar": "-den / -dan = from / out of / through. evden (from home), İstanbul'dan (from Istanbul), pencereden (through the window)."
   },
   {
     "id": "tr-0848",
@@ -11200,7 +11200,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 876,
-    "grammar": "Ablative isn't just physical 'from'. It marks the reason in 'because of': `soğuktan üşüdüm` (I got cold because of the cold). Also the standard in comparisons: `senden büyük` (bigger than you)."
+    "grammar": "-den/-dan also marks cause and comparison. soğuktan üşüdüm (cold because of the cold). senden büyük (bigger than you)."
   },
   {
     "id": "tr-0853",
@@ -11214,7 +11214,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 979,
-    "grammar": "After verb stems, -den/-dan makes a gerund-like noun: `gelmekten` (from coming), used with verbs like `vazgeçmek` (to give up). 'I gave up coming' = `gelmekten vazgeçtim`."
+    "grammar": "-den/-dan on a verb stem makes a noun: gelmekten (from coming). \"I gave up coming\" = gelmekten vazgeçtim."
   },
   {
     "id": "tr-0854",
@@ -11297,7 +11297,7 @@
     "target": "Eczacı kışın bahçee bıraktı.",
     "english": "The pharmacist left the garden in winter.",
     "audio": "tr-tr-1060.mp3",
-    "grammar": "Negation glues a `-me/-ma` infix INTO the verb (vowel-harmonized): `geliyorum` (I come) → `gelmiyorum` (I don't come). The negative is part of the verb, not a separate word.",
+    "grammar": "Negation = -me/-ma INSIDE the verb. geliyorum (I come) → gelmiyorum (I don't come). Part of the verb, not a separate word.",
     "tags": [
       "family",
       "general",
@@ -11367,7 +11367,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 687,
-    "grammar": "`-den/-dan` = 'from / out of / through': `evden` (from home), `İstanbul'dan` (from Istanbul), `pencereden` (through the window). Vowel harmony rules."
+    "grammar": "-den / -dan = from / out of / through. evden (from home), İstanbul'dan (from Istanbul), pencereden (through the window)."
   },
   {
     "id": "tr-0866",
@@ -11411,7 +11411,7 @@
     "target": "Anneye güzel bir hediye aldık.",
     "english": "We bought mom a nice gift.",
     "audio": "tr-tr-1077.mp3",
-    "grammar": "Turkish is SOV: the verb ALWAYS goes at the end. `Ben elma yiyorum` (I apple eat) = 'I'm eating an apple'. English SVO flips to SOV. Long sentences pile everything before the verb.",
+    "grammar": "Turkish is SOV: verb always at the end. Ben elma yiyorum (I apple eat) = I'm eating an apple. English SVO flips to SOV.",
     "tags": [
       "family",
       "general",
@@ -11431,7 +11431,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1083,
-    "grammar": "No gender, no articles. `O` covers he/she/it. `Ev` means both 'a house' and 'the house' depending on context. Massive simplification compared to English/German."
+    "grammar": "No gender, no articles. O = he/she/it. Ev = both \"a house\" and \"the house\" depending on context."
   },
   {
     "id": "tr-0871",
@@ -11450,7 +11450,7 @@
     "target": "Pilot sık sık bankaa sattı.",
     "english": "The pilot started to the bank often.",
     "audio": "tr-tr-1017.mp3",
-    "grammar": "Question particle `mi` floats to attach to whatever is being questioned: `Geliyor mu?` (Is he coming?), `Ev mi?` (Is it a house?). It harmonizes with the vowel of the word in front.",
+    "grammar": "Question particle mi floats: Geliyor mu? (Is he coming?), Ev mi? (Is it a house?). Harmonizes with the preceding vowel.",
     "tags": [
       "general",
       "travel",
@@ -11652,7 +11652,7 @@
     "target": "Merhaba, sizinle tanışmak büyük bir onur.",
     "english": "Hello, it's a great honor to meet you.",
     "audio": "tr-tr-0129.mp3",
-    "grammar": "Negation glues a `-me/-ma` infix INTO the verb (vowel-harmonized): `geliyorum` (I come) → `gelmiyorum` (I don't come). The negative is part of the verb, not a separate word.",
+    "grammar": "Negation = -me/-ma INSIDE the verb. geliyorum (I come) → gelmiyorum (I don't come). Part of the verb, not a separate word.",
     "tags": [
       "general"
     ],
@@ -11792,7 +11792,7 @@
     "target": "Söğüş kebap soğan ve maydanozla servis edilir.",
     "english": "Söğüş kebap is served with onion and parsley.",
     "audio": "tr-tr-1235.mp3",
-    "grammar": "Turkish is SOV: the verb ALWAYS goes at the end. `Ben elma yiyorum` (I apple eat) = 'I'm eating an apple'. English SVO flips to SOV. Long sentences pile everything before the verb.",
+    "grammar": "Turkish is SOV: verb always at the end. Ben elma yiyorum (I apple eat) = I'm eating an apple. English SVO flips to SOV.",
     "tags": [
       "family",
       "general",
@@ -11823,7 +11823,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1629,
-    "grammar": "No gender, no articles. `O` covers he/she/it. `Ev` means both 'a house' and 'the house' depending on context. Massive simplification compared to English/German."
+    "grammar": "No gender, no articles. O = he/she/it. Ev = both \"a house\" and \"the house\" depending on context."
   },
   {
     "id": "tr-0902",
@@ -11874,7 +11874,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1417,
-    "grammar": "Ablative isn't just physical 'from'. It marks the reason in 'because of': `soğuktan üşüdüm` (I got cold because of the cold). Also the standard in comparisons: `senden büyük` (bigger than you)."
+    "grammar": "-den/-dan also marks cause and comparison. soğuktan üşüdüm (cold because of the cold). senden büyük (bigger than you)."
   },
   {
     "id": "tr-0906",
@@ -11999,7 +11999,7 @@
     "target": "Köy kahvaltısı çeşit çeşit peynir ve reçelle doludur.",
     "english": "Village breakfast is full of various cheeses and jams.",
     "audio": "tr-tr-1276.mp3",
-    "grammar": "Question particle `mi` floats to attach to whatever is being questioned: `Geliyor mu?` (Is he coming?), `Ev mi?` (Is it a house?). It harmonizes with the vowel of the word in front.",
+    "grammar": "Question particle mi floats: Geliyor mu? (Is he coming?), Ev mi? (Is it a house?). Harmonizes with the preceding vowel.",
     "tags": [
       "general",
       "travel"
@@ -12051,7 +12051,7 @@
     "target": "Her sabah bir bardak ılık su içmek faydalı.",
     "english": "Drinking a glass of warm water every morning is beneficial.",
     "audio": "tr-tr-1650.mp3",
-    "grammar": "Negation glues a `-me/-ma` infix INTO the verb (vowel-harmonized): `geliyorum` (I come) → `gelmiyorum` (I don't come). The negative is part of the verb, not a separate word.",
+    "grammar": "Negation = -me/-ma INSIDE the verb. geliyorum (I come) → gelmiyorum (I don't come). Part of the verb, not a separate word.",
     "tags": [
       "family",
       "general",
@@ -12122,7 +12122,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 2094,
-    "grammar": "After verb stems, -den/-dan makes a gerund-like noun: `gelmekten` (from coming), used with verbs like `vazgeçmek` (to give up). 'I gave up coming' = `gelmekten vazgeçtim`."
+    "grammar": "-den/-dan on a verb stem makes a noun: gelmekten (from coming). \"I gave up coming\" = gelmekten vazgeçtim."
   },
   {
     "id": "tr-0925",
@@ -12170,7 +12170,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 667,
-    "grammar": "`-den/-dan` = 'from / out of / through': `evden` (from home), `İstanbul'dan` (from Istanbul), `pencereden` (through the window). Vowel harmony rules."
+    "grammar": "-den / -dan = from / out of / through. evden (from home), İstanbul'dan (from Istanbul), pencereden (through the window)."
   },
   {
     "id": "tr-0929",
@@ -12211,7 +12211,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 917,
-    "grammar": "Ablative isn't just physical 'from'. It marks the reason in 'because of': `soğuktan üşüdüm` (I got cold because of the cold). Also the standard in comparisons: `senden büyük` (bigger than you)."
+    "grammar": "-den/-dan also marks cause and comparison. soğuktan üşüdüm (cold because of the cold). senden büyük (bigger than you)."
   },
   {
     "id": "tr-0932",
@@ -12225,7 +12225,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 583,
-    "grammar": "After verb stems, -den/-dan makes a gerund-like noun: `gelmekten` (from coming), used with verbs like `vazgeçmek` (to give up). 'I gave up coming' = `gelmekten vazgeçtim`."
+    "grammar": "-den/-dan on a verb stem makes a noun: gelmekten (from coming). \"I gave up coming\" = gelmekten vazgeçtim."
   },
   {
     "id": "tr-0933",
@@ -12239,7 +12239,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 624,
-    "grammar": "`-den/-dan` = 'from / out of / through': `evden` (from home), `İstanbul'dan` (from Istanbul), `pencereden` (through the window). Vowel harmony rules."
+    "grammar": "-den / -dan = from / out of / through. evden (from home), İstanbul'dan (from Istanbul), pencereden (through the window)."
   },
   {
     "id": "tr-0934",
@@ -12431,7 +12431,7 @@
     ],
     "grammarNode": "node-10",
     "priority": 790,
-    "grammar": "After verb stems, -den/-dan makes a gerund-like noun: `gelmekten` (from coming), used with verbs like `vazgeçmek` (to give up). 'I gave up coming' = `gelmekten vazgeçtim`."
+    "grammar": "-den/-dan on a verb stem makes a noun: gelmekten (from coming). \"I gave up coming\" = gelmekten vazgeçtim."
   },
   {
     "id": "tr-0950",
@@ -12626,7 +12626,7 @@
     "target": "İftar sofrası çeşit çeşit yemeklerle donatılır.",
     "english": "The iftar table is spread with various dishes.",
     "audio": "tr-tr-1231.mp3",
-    "grammar": "Turkish is SOV: the verb ALWAYS goes at the end. `Ben elma yiyorum` (I apple eat) = 'I'm eating an apple'. English SVO flips to SOV. Long sentences pile everything before the verb.",
+    "grammar": "Turkish is SOV: verb always at the end. Ben elma yiyorum (I apple eat) = I'm eating an apple. English SVO flips to SOV.",
     "tags": [
       "family",
       "general"
@@ -12781,7 +12781,7 @@
     ],
     "grammarNode": "node-10",
     "priority": 537,
-    "grammar": "No gender, no articles. `O` covers he/she/it. `Ev` means both 'a house' and 'the house' depending on context. Massive simplification compared to English/German."
+    "grammar": "No gender, no articles. O = he/she/it. Ev = both \"a house\" and \"the house\" depending on context."
   },
   {
     "id": "tr-0978",
@@ -13014,7 +13014,7 @@
     "target": "Teyzem harika yaprak sarması yapar.",
     "english": "My aunt makes wonderful stuffed vine leaves.",
     "audio": "tr-tr-1344.mp3",
-    "grammar": "Question particle `mi` floats to attach to whatever is being questioned: `Geliyor mu?` (Is he coming?), `Ev mi?` (Is it a house?). It harmonizes with the vowel of the word in front.",
+    "grammar": "Question particle mi floats: Geliyor mu? (Is he coming?), Ev mi? (Is it a house?). Harmonizes with the preceding vowel.",
     "tags": [
       "family",
       "general"
@@ -13051,7 +13051,7 @@
     "target": "Keşke Türkçeyi daha iyi konuşabilsem.",
     "english": "I wish I could speak Turkish better.",
     "audio": "tr-tr-1934.mp3",
-    "grammar": "Negation glues a `-me/-ma` infix INTO the verb (vowel-harmonized): `geliyorum` (I come) → `gelmiyorum` (I don't come). The negative is part of the verb, not a separate word.",
+    "grammar": "Negation = -me/-ma INSIDE the verb. geliyorum (I come) → gelmiyorum (I don't come). Part of the verb, not a separate word.",
     "tags": [
       "general"
     ],

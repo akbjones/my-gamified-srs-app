@@ -138,7 +138,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 175,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0017",
@@ -462,7 +462,7 @@
     "target": "Нигде не продают свежий хлеб.",
     "english": "Fresh bread is sold nowhere.",
     "audio": "ru-ru-0261.mp3",
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl).",
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift.",
     "tags": [
       "family",
       "general",
@@ -561,7 +561,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 121,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0056",
@@ -657,7 +657,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 521,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0063",
@@ -814,7 +814,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 477,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0075",
@@ -1058,7 +1058,7 @@
     "target": "Врач работает в офисе вечером.",
     "english": "The doctor works in the office in the evening.",
     "audio": "ru-ru-2930.mp3",
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table).",
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table).",
     "tags": [
       "family",
       "general",
@@ -1086,7 +1086,7 @@
     "target": "Мой отец работает на заводе.",
     "english": "My father works at a factory.",
     "audio": "ru-ru-0354.mp3",
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location.",
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "family",
       "general",
@@ -1106,7 +1106,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 348,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0098",
@@ -1132,7 +1132,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 58,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0100",
@@ -1146,7 +1146,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 262,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0101",
@@ -1186,7 +1186,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 627,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0104",
@@ -1241,7 +1241,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 696,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0108",
@@ -1280,7 +1280,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 727,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0111",
@@ -1294,7 +1294,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 506,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0112",
@@ -1308,7 +1308,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 512,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0113",
@@ -1359,7 +1359,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 276,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0117",
@@ -1380,7 +1380,7 @@
     "target": "Водитель ездит на работу после обеда.",
     "english": "The driver commutes to work after lunch.",
     "audio": "ru-ru-3073.mp3",
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one.",
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
     "tags": [
       "general",
       "travel",
@@ -1482,7 +1482,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 316,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0127",
@@ -1575,7 +1575,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 1027,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0134",
@@ -1666,7 +1666,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 978,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0141",
@@ -1745,7 +1745,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 1399,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0147",
@@ -2116,7 +2116,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 293,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0181",
@@ -2130,14 +2130,14 @@
     ],
     "grammarNode": "node-02",
     "priority": 365,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0182",
     "target": "Девочка часто работает в офисе.",
     "english": "The girl often works in the office.",
     "audio": "ru-ru-3242.mp3",
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`).",
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant.",
     "tags": [
       "family",
       "general",
@@ -2205,7 +2205,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 683,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0188",
@@ -2219,7 +2219,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 186,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0190",
@@ -2285,7 +2285,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 431,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0198",
@@ -2345,7 +2345,7 @@
     "target": "На даче есть небольшой огород.",
     "english": "At the dacha there is a small vegetable garden.",
     "audio": "ru-ru-3298.mp3",
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table).",
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table).",
     "tags": [
       "family",
       "general",
@@ -2365,14 +2365,14 @@
     ],
     "grammarNode": "node-02",
     "priority": 56,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0205",
     "target": "Повар редко работает в офисе.",
     "english": "The chef rarely works in the office.",
     "audio": "ru-ru-3026.mp3",
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location.",
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "general",
       "work"
@@ -2447,7 +2447,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 138,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0214",
@@ -2474,7 +2474,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 273,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0216",
@@ -2583,7 +2583,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 983,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0226",
@@ -2620,7 +2620,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 826,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0229",
@@ -2645,7 +2645,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 716,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0231",
@@ -2669,7 +2669,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 1389,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0233",
@@ -2893,7 +2893,7 @@
     "target": "Маленькое утро выглядит прекрасно.",
     "english": "A small morning looks wonderful.",
     "audio": "ru-ru-0407.mp3",
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl).",
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift.",
     "tags": [
       "family",
       "general",
@@ -3136,7 +3136,7 @@
     "target": "Мальчик часто работает в офисе.",
     "english": "The boy often works in the office.",
     "audio": "ru-ru-3093.mp3",
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one.",
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
     "tags": [
       "family",
       "general",
@@ -3210,7 +3210,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 609,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0281",
@@ -3237,7 +3237,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 467,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0283",
@@ -3307,14 +3307,14 @@
     ],
     "grammarNode": "node-03",
     "priority": 618,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0288",
     "target": "Бабушка работала в офисе на прошлой неделе.",
     "english": "Grandmother worked in the office last week.",
     "audio": "ru-ru-3172.mp3",
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`).",
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant.",
     "tags": [
       "family",
       "general",
@@ -3519,7 +3519,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 136,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0309",
@@ -3558,7 +3558,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 147,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0312",
@@ -3571,7 +3571,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 320,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0313",
@@ -3617,7 +3617,7 @@
     "target": "Начало весны – моё любимое время.",
     "english": "The beginning of spring is my favorite time.",
     "audio": "ru-ru-0556.mp3",
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl).",
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift.",
     "tags": [
       "general",
       "travel"
@@ -3703,7 +3703,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 574,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0324",
@@ -3807,14 +3807,14 @@
     ],
     "grammarNode": "node-03",
     "priority": 671,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0333",
     "target": "Водитель ездит на работу перед сном.",
     "english": "The driver commutes to work before bed.",
     "audio": "ru-ru-3087.mp3",
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table).",
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table).",
     "tags": [
       "family",
       "general",
@@ -4013,7 +4013,7 @@
     "target": "Спокойной ночи, приятных снов и хорошего отдыха.",
     "english": "Good night, pleasant dreams and good rest.",
     "audio": "ru-ru-0012.mp3",
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl).",
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift.",
     "tags": [
       "family",
       "general",
@@ -4088,7 +4088,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1007,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0355",
@@ -4303,7 +4303,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 161,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0378",
@@ -4340,7 +4340,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 255,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0381",
@@ -4391,7 +4391,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 753,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0385",
@@ -4446,7 +4446,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 204,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0392",
@@ -4512,7 +4512,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 133,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0398",
@@ -4537,7 +4537,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 424,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0400",
@@ -4587,14 +4587,14 @@
     ],
     "grammarNode": "node-04",
     "priority": 215,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0404",
     "target": "Спортсмен обычно работает в офисе.",
     "english": "The athlete usually works in the office.",
     "audio": "ru-ru-3194.mp3",
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location.",
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "general",
       "work"
@@ -4662,7 +4662,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 617,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0414",
@@ -4690,7 +4690,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 613,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0416",
@@ -4717,7 +4717,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 717,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0419",
@@ -4757,7 +4757,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 759,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0423",
@@ -4771,7 +4771,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 804,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0426",
@@ -4846,7 +4846,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 964,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0432",
@@ -4860,7 +4860,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 992,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0433",
@@ -4874,7 +4874,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 1115,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0435",
@@ -4974,7 +4974,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 592,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0443",
@@ -5029,7 +5029,7 @@
     "target": "Спокойной ночи, сладких снов!",
     "english": "Good night, sweet dreams!",
     "audio": "ru-ru-0104.mp3",
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl).",
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift.",
     "tags": [
       "family",
       "general",
@@ -5088,7 +5088,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 197,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0452",
@@ -5280,7 +5280,7 @@
     "target": "Сестра готовила обед дома на прошлой неделе.",
     "english": "Sister cooked lunch at home last week.",
     "audio": "ru-ru-3532.mp3",
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl).",
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift.",
     "tags": [
       "family",
       "general",
@@ -5347,7 +5347,7 @@
     "target": "В театре показывают новую пьесу.",
     "english": "A new play is being shown at the theater.",
     "audio": "ru-ru-0721.mp3",
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one.",
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
     "tags": [
       "family",
       "general",
@@ -5374,7 +5374,7 @@
     "target": "Удачи вам на экзамене завтра!",
     "english": "Good luck on your exam tomorrow!",
     "audio": "ru-ru-0044.mp3",
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`).",
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant.",
     "tags": [
       "general",
       "travel",
@@ -5401,7 +5401,7 @@
     "target": "Девочка танцует на уроке балета.",
     "english": "The girl dances at her ballet lesson.",
     "audio": "ru-ru-0319.mp3",
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table).",
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table).",
     "tags": [
       "general",
       "work"
@@ -5428,7 +5428,7 @@
     "target": "Интересная выставка открылась в музее.",
     "english": "An interesting exhibition opened at the museum.",
     "audio": "ru-ru-0440.mp3",
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location.",
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "general",
       "travel"
@@ -5446,7 +5446,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 602,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0482",
@@ -5485,7 +5485,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 596,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0485",
@@ -5499,7 +5499,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 225,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0487",
@@ -5512,7 +5512,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 538,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0488",
@@ -5539,14 +5539,14 @@
     ],
     "grammarNode": "node-05",
     "priority": 648,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0490",
     "target": "Мальчик всегда помогает другу в театре.",
     "english": "The boy always helps a friend in the theater.",
     "audio": "ru-ru-3546.mp3",
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one.",
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
     "tags": [
       "family",
       "general",
@@ -5604,7 +5604,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 657,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0496",
@@ -5644,7 +5644,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 588,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0500",
@@ -5698,7 +5698,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 638,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0505",
@@ -5832,7 +5832,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 933,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0517",
@@ -5847,7 +5847,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 580,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0520",
@@ -5900,7 +5900,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 374,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0524",
@@ -5951,14 +5951,14 @@
     ],
     "grammarNode": "node-06",
     "priority": 182,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0528",
     "target": "Весёлое письмо выглядит прекрасно.",
     "english": "A cheerful letter looks wonderful.",
     "audio": "ru-ru-0411.mp3",
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl).",
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift.",
     "tags": [
       "general"
     ],
@@ -6083,7 +6083,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 332,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0538",
@@ -6111,14 +6111,14 @@
     ],
     "grammarNode": "node-06",
     "priority": 141,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0540",
     "target": "Старый город стоит на углу.",
     "english": "An old city stands on the corner.",
     "audio": "ru-fill-ru-0540.mp3",
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`).",
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant.",
     "tags": [
       "family",
       "general",
@@ -6138,7 +6138,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 165,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0542",
@@ -6152,14 +6152,14 @@
     ],
     "grammarNode": "node-06",
     "priority": 189,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0543",
     "target": "Красивый друг стоит на углу.",
     "english": "A beautiful friend stands on the corner.",
     "audio": "ru-ru-0388.mp3",
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table).",
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table).",
     "tags": [
       "family",
       "general",
@@ -6272,7 +6272,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 285,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0552",
@@ -6378,7 +6378,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 591,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0560",
@@ -6436,7 +6436,7 @@
     "target": "Дети рисуют большую картину на стене.",
     "english": "Children are drawing a big picture on the wall.",
     "audio": "ru-ru-0476.mp3",
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location.",
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "family",
       "general",
@@ -6546,14 +6546,14 @@
     ],
     "grammarNode": "node-09",
     "priority": 1014,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0575",
     "target": "Дедушка читал книгу в магазине на прошлой неделе.",
     "english": "Grandfather read a book in the store last week.",
     "audio": "ru-ru-3663.mp3",
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one.",
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
     "tags": [
       "family",
       "general",
@@ -6574,7 +6574,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 268,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0577",
@@ -6722,7 +6722,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 612,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0588",
@@ -6734,7 +6734,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 498,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0589",
@@ -6747,7 +6747,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 763,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0591",
@@ -6813,14 +6813,14 @@
     ],
     "grammarNode": "node-06",
     "priority": 733,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0596",
     "target": "Программист всегда рисует картину на вокзале.",
     "english": "The programmer always paints a picture at the station.",
     "audio": "ru-ru-3383.mp3",
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`).",
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant.",
     "tags": [
       "general",
       "travel"
@@ -6879,7 +6879,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 723,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0605",
@@ -6912,7 +6912,7 @@
     "target": "Удачи на экзамене, я уверен, что ты справишься.",
     "english": "Good luck on the exam, I'm sure you'll do well.",
     "audio": "ru-ru-0102.mp3",
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table).",
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table).",
     "tags": [
       "general",
       "work"
@@ -6943,7 +6943,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 534,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0610",
@@ -6962,7 +6962,7 @@
     "target": "Программист редко покупает продукты на вокзале.",
     "english": "The programmer rarely buys groceries at the station.",
     "audio": "ru-ru-3368.mp3",
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location.",
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "general",
       "travel"
@@ -7001,7 +7001,7 @@
     "target": "Примите мои искренние соболезнования.",
     "english": "Please accept my deepest condolences.",
     "audio": "ru-ru-3404.mp3",
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl).",
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift.",
     "tags": [
       "general"
     ],
@@ -7019,7 +7019,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 111,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0616",
@@ -7090,7 +7090,7 @@
     "target": "Мама отвела ребёнка в школу.",
     "english": "Mom took the child to school.",
     "audio": "ru-ru-1171.mp3",
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one.",
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
     "tags": [
       "family",
       "general",
@@ -7149,7 +7149,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 333,
-    "grammar": "Adjectives must agree with their noun's gender, number, AND case. `Красивый дом` (m), `красивая книга` (f), `красивое здание` (n), `красивые книги` (pl)."
+    "grammar": "Adjectives match the noun: красивый дом (m), красивая книга (f), красивое здание (n), красивые книги (pl). Gender + number both shift."
   },
   {
     "id": "ru-0630",
@@ -7231,7 +7231,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 630,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0641",
@@ -7245,14 +7245,14 @@
     ],
     "grammarNode": "node-07",
     "priority": 642,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0643",
     "target": "Директор всегда читает книгу в библиотеке.",
     "english": "The director always reads a book at the library.",
     "audio": "ru-ru-3511.mp3",
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`).",
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant.",
     "tags": [
       "general",
       "travel",
@@ -7298,14 +7298,14 @@
     ],
     "grammarNode": "node-07",
     "priority": 789,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0647",
     "target": "Привет, давай встретимся в кафе после обеда.",
     "english": "Hi, let's meet at the cafe after lunch.",
     "audio": "ru-ru-0034.mp3",
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table).",
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table).",
     "tags": [
       "general",
       "travel"
@@ -7324,7 +7324,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 38,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0650",
@@ -7451,7 +7451,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 423,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0662",
@@ -7484,7 +7484,7 @@
     "target": "Учитель вывел детей на площадку.",
     "english": "The teacher led the children to the playground.",
     "audio": "ru-ru-1153.mp3",
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location.",
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "family",
       "general",
@@ -7530,7 +7530,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 743,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0668",
@@ -7661,7 +7661,7 @@
     "target": "Продавец иногда играет в шахматы на вокзале.",
     "english": "The salesman sometimes plays chess at the station.",
     "audio": "ru-ru-3392.mp3",
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one.",
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
     "tags": [
       "general",
       "travel"
@@ -7687,7 +7687,7 @@
     "target": "Друг пел песню в аэропорту на прошлой неделе.",
     "english": "The friend sang a song at the airport last week.",
     "audio": "ru-ru-3462.mp3",
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`).",
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant.",
     "tags": [
       "family",
       "general",
@@ -7708,7 +7708,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 998,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0685",
@@ -7863,7 +7863,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 77,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0697",
@@ -8015,7 +8015,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 468,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0713",
@@ -8084,14 +8084,14 @@
     ],
     "grammarNode": "node-08",
     "priority": 567,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0721",
     "target": "Брат плавал в бассейне на прошлой неделе.",
     "english": "Brother swam in the pool last week.",
     "audio": "ru-ru-3220.mp3",
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table).",
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table).",
     "tags": [
       "family",
       "general",
@@ -8118,7 +8118,7 @@
     "target": "Дедушка убирал квартиру в театре на прошлой неделе.",
     "english": "Grandfather cleaned the apartment in the theater last week.",
     "audio": "ru-ru-3629.mp3",
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location.",
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "family",
       "general",
@@ -8206,7 +8206,7 @@
     "target": "Программист ездит на работу завтра.",
     "english": "The programmer will commute to work tomorrow.",
     "audio": "ru-ru-3494.mp3",
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one.",
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
     "tags": [
       "general",
       "travel",
@@ -8299,7 +8299,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 383,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0740",
@@ -8442,7 +8442,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 777,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0752",
@@ -8455,7 +8455,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 452,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0753",
@@ -8494,7 +8494,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 797,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0758",
@@ -8508,7 +8508,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 787,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0759",
@@ -8548,7 +8548,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 1009,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0764",
@@ -8574,14 +8574,14 @@
     ],
     "grammarNode": "node-09",
     "priority": 818,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0766",
     "target": "Программист рисовал картину в студии на прошлой неделе.",
     "english": "The programmer painted a picture in the studio last week.",
     "audio": "ru-ru-3492.mp3",
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`).",
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant.",
     "tags": [
       "general",
       "travel"
@@ -8786,7 +8786,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 857,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0783",
@@ -8839,7 +8839,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1110,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0789",
@@ -8932,7 +8932,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1315,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0796",
@@ -8979,7 +8979,7 @@
     "target": "Иногда бабушка смотрит фильм в горах.",
     "english": "Sometimes grandmother watches a movie in the mountains.",
     "audio": "ru-ru-3908.mp3",
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table).",
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table).",
     "tags": [
       "family",
       "general"
@@ -8999,7 +8999,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1256,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0802",
@@ -9012,7 +9012,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1284,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0803",
@@ -9033,7 +9033,7 @@
     "target": "Друг всегда помогает другу в библиотеке.",
     "english": "The friend always helps a friend in the library.",
     "audio": "ru-ru-3724.mp3",
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location.",
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "family",
       "general",
@@ -9054,7 +9054,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1459,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0809",
@@ -9318,7 +9318,7 @@
     "target": "Мне нечего надеть на вечеринку.",
     "english": "I have nothing to wear to the party.",
     "audio": "ru-ru-0600.mp3",
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one.",
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
     "tags": [
       "family",
       "general"
@@ -9338,7 +9338,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1107,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0836",
@@ -9384,7 +9384,7 @@
     "target": "Продавец иногда моет посуду в музее.",
     "english": "The salesman sometimes washes dishes in the museum.",
     "audio": "ru-ru-3522.mp3",
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`).",
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant.",
     "tags": [
       "family",
       "general",
@@ -9432,7 +9432,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1275,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0845",
@@ -9452,7 +9452,7 @@
     "target": "После дождя на небе появилась радуга.",
     "english": "After the rain, a rainbow appeared in the sky.",
     "audio": "ru-ru-0516.mp3",
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table).",
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table).",
     "tags": [
       "general",
       "travel"
@@ -9471,7 +9471,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1543,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0852",
@@ -9517,7 +9517,7 @@
     "target": "Директор танцует вальс в парке после обеда.",
     "english": "The director dances a waltz in the park after lunch.",
     "audio": "ru-ru-3551.mp3",
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location.",
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "general",
       "travel",
@@ -9537,14 +9537,14 @@
     ],
     "grammarNode": "node-09",
     "priority": 1432,
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one."
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
   },
   {
     "id": "ru-0859",
     "target": "Медсестра бегала утром в парке на прошлой неделе.",
     "english": "The nurse ran in the morning in the park last week.",
     "audio": "ru-ru-3631.mp3",
-    "grammar": "Prepositional NEVER appears without a preposition – that's why it's called 'prepositional'. The case literally requires one.",
+    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
     "tags": [
       "family",
       "general",
@@ -9565,7 +9565,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1685,
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`)."
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant."
   },
   {
     "id": "ru-0861",
@@ -9579,7 +9579,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1523,
-    "grammar": "Prepositional case (`-е/-и/-у`) follows `в`, `на`, `о/об`, `при` for location or topic. `в Москве` (in Moscow), `на столе` (on the table)."
+    "grammar": "After в, на, о, при for a place or topic, the noun gets -е (or -и/-у). в Москве (v Moskve = in Moscow), на столе (na stole = on the table)."
   },
   {
     "id": "ru-0863",
@@ -9599,7 +9599,7 @@
     "target": "Инженер работал в офисе на работе на прошлой неделе.",
     "english": "The engineer worked in the office at worked last week.",
     "audio": "ru-ru-3296.mp3",
-    "grammar": "Topic with `о/об`: `думаю о доме` (thinking about home). `Об` before vowels (`об этом`), `о` before consonants (`о тебе`).",
+    "grammar": "To say \"about X\" use о / об + noun in -е. думаю о доме (dumayu o dome = thinking about home). Об before a vowel, о before a consonant.",
     "tags": [
       "general",
       "travel",
@@ -9715,7 +9715,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1327,
-    "grammar": "Same prepositions can take accusative for direction: `иду в школу` (going to school – acc) vs `я в школе` (at school – prep). Direction vs location."
+    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0874",

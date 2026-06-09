@@ -47,7 +47,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 179,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0005",
@@ -137,7 +137,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 337,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0012",
@@ -359,7 +359,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 342,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0029",
@@ -424,7 +424,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 404,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0034",
@@ -437,7 +437,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 388,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0035",
@@ -488,7 +488,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 415,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0039",
@@ -543,7 +543,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 526,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0043",
@@ -556,7 +556,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 145,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0044",
@@ -583,7 +583,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 783,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0046",
@@ -727,7 +727,7 @@
     "target": "Geçen yaz Karadeniz kıyısına gittik.",
     "english": "Last summer we went to the Black Sea coast.",
     "audio": "tr-tr-1238.mp3",
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless).",
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü).",
     "tags": [
       "general",
       "travel"
@@ -774,7 +774,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 325,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0060",
@@ -958,7 +958,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 519,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0074",
@@ -1012,7 +1012,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 553,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0078",
@@ -1091,7 +1091,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 582,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0084",
@@ -1104,7 +1104,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 580,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0085",
@@ -1241,7 +1241,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 497,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0095",
@@ -1320,7 +1320,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 750,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0101",
@@ -1382,7 +1382,7 @@
     "target": "Dükkân sahibi bakarken bize çay ikram etti.",
     "english": "The shop owner offered us tea while we looked.",
     "audio": "tr-tr-1253.mp3",
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version.",
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came.",
     "tags": [
       "general",
       "travel"
@@ -1499,7 +1499,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 811,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0114",
@@ -1536,7 +1536,7 @@
     "target": "Uçak iki saat gecikti ve çok bekledik.",
     "english": "The plane was two hours late and we waited a long time.",
     "audio": "tr-tr-0403.mp3",
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless).",
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü).",
     "tags": [
       "general",
       "travel"
@@ -1597,7 +1597,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 872,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0121",
@@ -1696,7 +1696,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 1210,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0128",
@@ -1722,7 +1722,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 972,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0130",
@@ -1750,7 +1750,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 1345,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0132",
@@ -1853,7 +1853,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 949,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0140",
@@ -2014,7 +2014,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 74,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0152",
@@ -2039,7 +2039,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 281,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0154",
@@ -2094,7 +2094,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 305,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0158",
@@ -2148,7 +2148,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 597,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0162",
@@ -2201,7 +2201,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 202,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0166",
@@ -2241,7 +2241,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 268,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0169",
@@ -2425,7 +2425,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 307,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0183",
@@ -2439,7 +2439,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 184,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0184",
@@ -2507,7 +2507,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 113,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0189",
@@ -2521,7 +2521,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 301,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0190",
@@ -2534,7 +2534,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 332,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0191",
@@ -2651,7 +2651,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 528,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0200",
@@ -2704,7 +2704,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 421,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0204",
@@ -2731,7 +2731,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 477,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0206",
@@ -2785,7 +2785,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 912,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0210",
@@ -2798,7 +2798,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 782,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0211",
@@ -2826,7 +2826,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 751,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0213",
@@ -2891,7 +2891,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 776,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0218",
@@ -2905,7 +2905,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 1009,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0219",
@@ -2959,7 +2959,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 1042,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0223",
@@ -2974,7 +2974,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 1124,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0224",
@@ -3115,7 +3115,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 918,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0235",
@@ -3128,7 +3128,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 813,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0236",
@@ -3189,7 +3189,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 111,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0241",
@@ -3256,7 +3256,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 460,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0246",
@@ -3271,7 +3271,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 144,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0247",
@@ -3285,7 +3285,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 282,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0248",
@@ -3311,7 +3311,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 137,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0250",
@@ -3352,7 +3352,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 252,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0253",
@@ -3418,7 +3418,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 339,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0258",
@@ -3431,7 +3431,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 292,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0259",
@@ -3537,7 +3537,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 313,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0267",
@@ -3550,7 +3550,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 279,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0268",
@@ -3576,7 +3576,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 275,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0270",
@@ -3657,7 +3657,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 473,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0276",
@@ -3671,7 +3671,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 469,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0277",
@@ -3699,7 +3699,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 770,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0279",
@@ -3719,7 +3719,7 @@
     "target": "Eczacı soğuk algınlığım için ilaç verdi.",
     "english": "The pharmacist gave me medicine for my cold.",
     "audio": "tr-tr-0296.mp3",
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version.",
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came.",
     "tags": [
       "family",
       "general",
@@ -3740,7 +3740,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 846,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0282",
@@ -3753,7 +3753,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 548,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0283",
@@ -3792,7 +3792,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 671,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0286",
@@ -3818,7 +3818,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 265,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0288",
@@ -3870,7 +3870,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 746,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0292",
@@ -3884,7 +3884,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 623,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0293",
@@ -3897,7 +3897,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 914,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0294",
@@ -3925,7 +3925,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 669,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0296",
@@ -3938,7 +3938,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 697,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0297",
@@ -3966,7 +3966,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 1017,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0299",
@@ -3979,7 +3979,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 913,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0300",
@@ -4006,7 +4006,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 1037,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0302",
@@ -4084,7 +4084,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 1499,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0308",
@@ -4369,7 +4369,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 269,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0330",
@@ -4383,7 +4383,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 230,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0331",
@@ -4504,7 +4504,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 266,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0340",
@@ -4573,7 +4573,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 100,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0345",
@@ -4601,7 +4601,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 288,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0347",
@@ -4615,7 +4615,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 270,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0348",
@@ -4814,7 +4814,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 262,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0363",
@@ -4839,7 +4839,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 190,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0365",
@@ -4878,7 +4878,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 327,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0368",
@@ -4904,7 +4904,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 122,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0370",
@@ -4982,7 +4982,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 165,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0376",
@@ -5022,7 +5022,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 747,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0379",
@@ -5036,7 +5036,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 403,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0380",
@@ -5063,7 +5063,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 596,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0382",
@@ -5100,7 +5100,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 567,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0385",
@@ -5141,7 +5141,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 409,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0388",
@@ -5181,14 +5181,14 @@
     ],
     "grammarNode": "node-04",
     "priority": 600,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0391",
     "target": "Öğretmen dün bahçeyle ilgilendi ama bitiremedi.",
     "english": "The teacher took care of the garden yesterday but couldn't finish.",
     "audio": "tr-tr-2161.mp3",
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version.",
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came.",
     "tags": [
       "family",
       "general",
@@ -5247,7 +5247,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 691,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0396",
@@ -5267,7 +5267,7 @@
     "target": "Öğretmen postaneye mektup göndermek için gitti.",
     "english": "The teacher went to the post office to send a letter.",
     "audio": "tr-fill-tr-0397.mp3",
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless).",
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü).",
     "tags": [
       "general",
       "work"
@@ -5285,7 +5285,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 895,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0399",
@@ -5337,7 +5337,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 1031,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0403",
@@ -5351,7 +5351,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 926,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0404",
@@ -5416,7 +5416,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 257,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0409",
@@ -5441,7 +5441,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 214,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0411",
@@ -5478,7 +5478,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 505,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0414",
@@ -5503,7 +5503,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 1401,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0416",
@@ -5567,7 +5567,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 46,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0421",
@@ -5670,7 +5670,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 149,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0429",
@@ -5707,7 +5707,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 437,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0432",
@@ -5746,7 +5746,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 511,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0435",
@@ -5770,7 +5770,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 234,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0437",
@@ -5822,7 +5822,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 274,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0441",
@@ -5860,7 +5860,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 253,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0444",
@@ -5963,7 +5963,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 143,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0452",
@@ -5977,7 +5977,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 447,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0453",
@@ -5991,7 +5991,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 58,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0454",
@@ -6004,7 +6004,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 335,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0455",
@@ -6030,7 +6030,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 561,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0457",
@@ -6043,7 +6043,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 557,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0458",
@@ -6070,7 +6070,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 720,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0460",
@@ -6120,7 +6120,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 531,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0464",
@@ -6186,7 +6186,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 463,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0469",
@@ -6199,7 +6199,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 374,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0470",
@@ -6288,7 +6288,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 706,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0477",
@@ -6315,7 +6315,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 731,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0479",
@@ -6342,7 +6342,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 908,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0481",
@@ -6356,7 +6356,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 749,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0482",
@@ -6394,7 +6394,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 870,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0485",
@@ -6432,7 +6432,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 899,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0488",
@@ -6510,7 +6510,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 1313,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0494",
@@ -6538,7 +6538,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 794,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0496",
@@ -6551,7 +6551,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 875,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0497",
@@ -6578,7 +6578,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 1174,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0499",
@@ -6591,7 +6591,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 1005,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0500",
@@ -6606,7 +6606,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 842,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0501",
@@ -6621,7 +6621,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 1067,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0502",
@@ -6635,7 +6635,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 1158,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0503",
@@ -6720,7 +6720,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 1941,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0510",
@@ -6756,7 +6756,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 133,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0513",
@@ -6846,7 +6846,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 272,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0520",
@@ -6873,7 +6873,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 317,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0522",
@@ -6991,7 +6991,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 445,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0531",
@@ -7033,7 +7033,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 743,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0534",
@@ -7061,7 +7061,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 858,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0536",
@@ -7100,7 +7100,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 340,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0539",
@@ -7126,7 +7126,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 271,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0541",
@@ -7141,7 +7141,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 160,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0542",
@@ -7154,7 +7154,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 314,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0543",
@@ -7168,7 +7168,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 324,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0544",
@@ -7196,7 +7196,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 236,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0546",
@@ -7210,7 +7210,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 354,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0547",
@@ -7222,7 +7222,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 566,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0548",
@@ -7263,7 +7263,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 635,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0551",
@@ -7302,7 +7302,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 843,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0554",
@@ -7315,7 +7315,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 462,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0555",
@@ -7341,7 +7341,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 475,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0557",
@@ -7415,7 +7415,7 @@
     "target": "Kocaman bir pizza söyledik, hepimize yetti.",
     "english": "We ordered a huge pizza, it was enough for all of us.",
     "audio": "tr-tr-0916.mp3",
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless).",
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü).",
     "tags": [
       "general",
       "travel"
@@ -7489,7 +7489,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 601,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0568",
@@ -7517,7 +7517,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 970,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0570",
@@ -7594,7 +7594,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 1050,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0576",
@@ -7609,7 +7609,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 692,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0577",
@@ -7700,7 +7700,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 222,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0584",
@@ -7712,7 +7712,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 757,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0585",
@@ -7737,7 +7737,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 710,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0587",
@@ -7775,7 +7775,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 866,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0590",
@@ -7788,7 +7788,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 628,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0591",
@@ -7850,7 +7850,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 61,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0596",
@@ -7864,7 +7864,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 91,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0597",
@@ -7883,7 +7883,7 @@
     "target": "Şarkıyı herkes çok beğendi.",
     "english": "Everyone liked the song very much.",
     "audio": "tr-tr-1004.mp3",
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version.",
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came.",
     "tags": [
       "general"
     ],
@@ -7914,7 +7914,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 148,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0601",
@@ -7943,7 +7943,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 231,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0603",
@@ -8064,7 +8064,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 169,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0612",
@@ -8079,7 +8079,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 322,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0613",
@@ -8107,7 +8107,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 331,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0615",
@@ -8185,7 +8185,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 466,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0621",
@@ -8221,7 +8221,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 209,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0624",
@@ -8286,7 +8286,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 308,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0629",
@@ -8300,7 +8300,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 106,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0630",
@@ -8313,7 +8313,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 138,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0631",
@@ -8328,7 +8328,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 229,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0632",
@@ -8342,7 +8342,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 245,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0633",
@@ -8355,14 +8355,14 @@
     ],
     "grammarNode": "node-07",
     "priority": 304,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0634",
     "target": "Avukat kitapi dağda temizledi.",
     "english": "The lawyer cleaned the book on the mountain.",
     "audio": "tr-tr-0868.mp3",
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless).",
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü).",
     "tags": [
       "family",
       "general",
@@ -8383,7 +8383,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 233,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0636",
@@ -8396,7 +8396,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 216,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0637",
@@ -8495,7 +8495,7 @@
     "target": "Sekreter telefona kibarca cevap verdi.",
     "english": "The secretary answered the phone politely.",
     "audio": "tr-tr-2140.mp3",
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version.",
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came.",
     "tags": [
       "general",
       "travel",
@@ -8540,7 +8540,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 507,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0648",
@@ -8590,7 +8590,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 220,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0652",
@@ -8603,7 +8603,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 217,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0653",
@@ -8617,7 +8617,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 381,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0654",
@@ -8629,7 +8629,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 189,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0655",
@@ -8641,7 +8641,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 439,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0656",
@@ -8669,7 +8669,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 365,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0658",
@@ -8696,7 +8696,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 503,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0660",
@@ -8736,7 +8736,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 704,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0663",
@@ -8750,7 +8750,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 474,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0664",
@@ -8776,7 +8776,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 356,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0666",
@@ -8802,7 +8802,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 509,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0668",
@@ -8841,7 +8841,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 577,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0671",
@@ -8919,7 +8919,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 719,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0677",
@@ -8943,14 +8943,14 @@
     ],
     "grammarNode": "node-07",
     "priority": 993,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0679",
     "target": "Biz şimdi deniz kıyısına gittik.",
     "english": "We went to the seaside just now.",
     "audio": "tr-fill-tr-0679.mp3",
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless).",
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü).",
     "tags": [
       "family",
       "general",
@@ -8985,7 +8985,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 742,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0682",
@@ -8999,14 +8999,14 @@
     ],
     "grammarNode": "node-07",
     "priority": 800,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0683",
     "target": "Annem bu sabah mektup yazdı sonra dinlendi.",
     "english": "My mom wrote a letter this morning and then rested.",
     "audio": "tr-tr-2182.mp3",
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version.",
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came.",
     "tags": [
       "family",
       "general",
@@ -9026,7 +9026,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 862,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0685",
@@ -9040,7 +9040,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 744,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0686",
@@ -9095,7 +9095,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 778,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0690",
@@ -9122,7 +9122,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 978,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0692",
@@ -9181,7 +9181,7 @@
     "target": "Bu ay elektrik faturamız üç yüz lira geldi.",
     "english": "Our electricity bill came to three hundred lira this month.",
     "audio": "tr-tr-0587.mp3",
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless).",
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü).",
     "tags": [
       "general",
       "travel",
@@ -9201,7 +9201,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 956,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0698",
@@ -9251,7 +9251,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 1156,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0702",
@@ -9280,7 +9280,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 1255,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0704",
@@ -9303,7 +9303,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 534,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0706",
@@ -9317,7 +9317,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 238,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0707",
@@ -9329,7 +9329,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 318,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0708",
@@ -9343,7 +9343,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 434,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0709",
@@ -9381,7 +9381,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 664,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0712",
@@ -9454,7 +9454,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 142,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0718",
@@ -9505,7 +9505,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 66,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0722",
@@ -9556,7 +9556,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 482,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0726",
@@ -9616,7 +9616,7 @@
     "target": "Dedem bana satranç oynamayı öğretti.",
     "english": "My grandfather taught me how to play chess.",
     "audio": "tr-tr-1153.mp3",
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version.",
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came.",
     "tags": [
       "family",
       "general"
@@ -9684,7 +9684,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 395,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0736",
@@ -9697,7 +9697,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 484,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0737",
@@ -9737,7 +9737,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 950,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0740",
@@ -9764,7 +9764,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 1109,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0742",
@@ -9778,7 +9778,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 1016,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0743",
@@ -9803,7 +9803,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 352,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0745",
@@ -9829,7 +9829,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 341,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0747",
@@ -9841,7 +9841,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 294,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0748",
@@ -9856,7 +9856,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 115,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0749",
@@ -9870,7 +9870,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 416,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0750",
@@ -9895,7 +9895,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 163,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0752",
@@ -9933,7 +9933,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 259,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0755",
@@ -9947,7 +9947,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 338,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0756",
@@ -9961,7 +9961,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 368,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0757",
@@ -9987,7 +9987,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 205,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0759",
@@ -10001,7 +10001,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 451,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0760",
@@ -10025,7 +10025,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 488,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0762",
@@ -10052,7 +10052,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 470,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0764",
@@ -10117,7 +10117,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 707,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0769",
@@ -10158,7 +10158,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 408,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0772",
@@ -10171,7 +10171,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 754,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0773",
@@ -10184,7 +10184,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 520,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0774",
@@ -10212,7 +10212,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 589,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0776",
@@ -10239,7 +10239,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 808,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0778",
@@ -10262,7 +10262,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 766,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0780",
@@ -10275,7 +10275,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 662,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0781",
@@ -10327,7 +10327,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 752,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0785",
@@ -10340,7 +10340,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 845,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0786",
@@ -10379,7 +10379,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 616,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0789",
@@ -10392,7 +10392,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 1046,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0790",
@@ -10406,7 +10406,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 931,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0791",
@@ -10432,7 +10432,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 946,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0793",
@@ -10445,7 +10445,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 1000,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0794",
@@ -10459,7 +10459,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 740,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0795",
@@ -10497,7 +10497,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 1065,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0798",
@@ -10524,7 +10524,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 1006,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0800",
@@ -10548,7 +10548,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 1352,
-    "grammar": "Simple past `-di/-dı/-du/-dü` + person: `geldim` (I came), `gördün` (you saw), `yedi` (he/she ate). Vowel harmony + consonant hardening (-ti after voiceless)."
+    "grammar": "Past tense = stem + di + person. geldim (I came), gördün (you saw), yedi (he ate). The di matches the stem vowel (di / dı / du / dü)."
   },
   {
     "id": "tr-0802",
@@ -10633,7 +10633,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 989,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0809",
@@ -10657,7 +10657,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 476,
-    "grammar": "Person endings on -di: -im (I), -in (you), -∅ (he/she), -ik (we), -iniz (you pl), -iler (they). Vowel harmony picks the version."
+    "grammar": "Past-tense person endings: -im (I), -in (you), nothing (he/she), -ik (we), -iniz (you pl), -ler (they). gel-di-m = I came."
   },
   {
     "id": "tr-0811",
@@ -10694,7 +10694,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 864,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0814",
@@ -10823,7 +10823,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 819,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0824",
@@ -10837,7 +10837,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 969,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0825",
@@ -10863,7 +10863,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1319,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0827",
@@ -11507,7 +11507,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1178,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0877",
@@ -11520,7 +11520,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1510,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0878",
@@ -11619,7 +11619,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1416,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0886",
@@ -11682,7 +11682,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1270,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0891",
@@ -11785,7 +11785,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1446,
-    "grammar": "`-de/-da` = 'in / at / on': `evde` (at home), `okulda` (at school), `İstanbul'da` (in Istanbul). Vowel harmony picks -de (front) or -da (back)."
+    "grammar": "Add -de / -da to a word to say in / at / on. evde (at home), okulda (at school), İstanbul'da (in Istanbul). -de after front vowels, -da after back."
   },
   {
     "id": "tr-0899",
@@ -11848,7 +11848,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1570,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0904",
@@ -11901,7 +11901,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1373,
-    "grammar": "Consonant assimilation: after voiceless consonants (p, ç, t, k, f, h, s, ş), the suffix hardens to `-te/-ta`. `Kitapta` (in the book – kitap ends in p), `arabasta`? no, `arabada`."
+    "grammar": "After a hard ending (p, ç, t, k, f, h, s, ş) the suffix hardens: -de becomes -te. kitapta (in the book) – the p forces the t. arabada (in the car) stays soft."
   },
   {
     "id": "tr-0908",
@@ -11927,7 +11927,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1664,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0910",
@@ -11955,7 +11955,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1684,
-    "grammar": "Apostrophe before suffixes for proper nouns: `İstanbul'da`, `Ankara'ya`. Without the apostrophe, the proper noun looks chained-in incorrectly."
+    "grammar": "Names get an apostrophe before any suffix: İstanbul'da (in Istanbul), Ankara'ya (to Ankara). The apostrophe keeps the name visible."
   },
   {
     "id": "tr-0912",

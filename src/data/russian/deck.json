@@ -62,7 +62,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 315,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0008",
@@ -87,7 +87,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 244,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0010",
@@ -390,7 +390,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 371,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0043",
@@ -402,7 +402,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 407,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0044",
@@ -429,7 +429,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 130,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0046",
@@ -534,7 +534,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 341,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0054",
@@ -814,7 +814,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 477,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0075",
@@ -921,7 +921,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 246,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0083",
@@ -1086,7 +1086,7 @@
     "target": "Мой отец работает на заводе.",
     "english": "My father works at a factory.",
     "audio": "ru-ru-0354.mp3",
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "family",
       "general",
@@ -1106,7 +1106,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 348,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0098",
@@ -1186,7 +1186,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 627,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0104",
@@ -1254,7 +1254,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 652,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0109",
@@ -1280,7 +1280,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 727,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0111",
@@ -1359,7 +1359,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 276,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0117",
@@ -1380,7 +1380,7 @@
     "target": "Водитель ездит на работу после обеда.",
     "english": "The driver commutes to work after lunch.",
     "audio": "ru-ru-3073.mp3",
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending.",
     "tags": [
       "general",
       "travel",
@@ -1440,7 +1440,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 658,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0124",
@@ -1455,7 +1455,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 713,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0125",
@@ -1575,7 +1575,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 1027,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0134",
@@ -1944,7 +1944,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 65,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0165",
@@ -2026,7 +2026,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 94,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0173",
@@ -2130,7 +2130,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 365,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0182",
@@ -2180,7 +2180,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 639,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0186",
@@ -2205,7 +2205,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 683,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0188",
@@ -2338,7 +2338,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 288,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0202",
@@ -2365,14 +2365,14 @@
     ],
     "grammarNode": "node-02",
     "priority": 56,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0205",
     "target": "Повар редко работает в офисе.",
     "english": "The chef rarely works in the office.",
     "audio": "ru-ru-3026.mp3",
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "general",
       "work"
@@ -2419,7 +2419,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 725,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0211",
@@ -2447,7 +2447,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 138,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0214",
@@ -2645,7 +2645,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 716,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0231",
@@ -2754,7 +2754,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 177,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0240",
@@ -3136,7 +3136,7 @@
     "target": "Мальчик часто работает в офисе.",
     "english": "The boy often works in the office.",
     "audio": "ru-ru-3093.mp3",
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending.",
     "tags": [
       "family",
       "general",
@@ -3210,7 +3210,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 609,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0281",
@@ -3558,7 +3558,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 147,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0312",
@@ -3571,7 +3571,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 320,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0313",
@@ -3834,7 +3834,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 798,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0335",
@@ -4088,7 +4088,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1007,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0355",
@@ -4239,7 +4239,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 53,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0373",
@@ -4252,7 +4252,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 190,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0374",
@@ -4303,7 +4303,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 161,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0378",
@@ -4537,7 +4537,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 424,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0400",
@@ -4587,14 +4587,14 @@
     ],
     "grammarNode": "node-04",
     "priority": 215,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0404",
     "target": "Спортсмен обычно работает в офисе.",
     "english": "The athlete usually works in the office.",
     "audio": "ru-ru-3194.mp3",
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "general",
       "work"
@@ -4743,7 +4743,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 741,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0421",
@@ -4757,7 +4757,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 759,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0423",
@@ -4771,7 +4771,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 804,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0426",
@@ -4974,7 +4974,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 592,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0443",
@@ -5192,7 +5192,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 594,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0460",
@@ -5347,7 +5347,7 @@
     "target": "В театре показывают новую пьесу.",
     "english": "A new play is being shown at the theater.",
     "audio": "ru-ru-0721.mp3",
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending.",
     "tags": [
       "family",
       "general",
@@ -5367,7 +5367,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 251,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0475",
@@ -5428,7 +5428,7 @@
     "target": "Интересная выставка открылась в музее.",
     "english": "An interesting exhibition opened at the museum.",
     "audio": "ru-ru-0440.mp3",
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "general",
       "travel"
@@ -5446,7 +5446,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 602,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0482",
@@ -5539,14 +5539,14 @@
     ],
     "grammarNode": "node-05",
     "priority": 648,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0490",
     "target": "Мальчик всегда помогает другу в театре.",
     "english": "The boy always helps a friend in the theater.",
     "audio": "ru-ru-3546.mp3",
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending.",
     "tags": [
       "family",
       "general",
@@ -5604,7 +5604,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 657,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0496",
@@ -5847,7 +5847,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 580,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0520",
@@ -5887,7 +5887,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 47,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0523",
@@ -5900,7 +5900,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 374,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0524",
@@ -6152,7 +6152,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 189,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0543",
@@ -6364,7 +6364,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 433,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0559",
@@ -6378,7 +6378,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 591,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0560",
@@ -6436,7 +6436,7 @@
     "target": "Дети рисуют большую картину на стене.",
     "english": "Children are drawing a big picture on the wall.",
     "audio": "ru-ru-0476.mp3",
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "family",
       "general",
@@ -6553,7 +6553,7 @@
     "target": "Дедушка читал книгу в магазине на прошлой неделе.",
     "english": "Grandfather read a book in the store last week.",
     "audio": "ru-ru-3663.mp3",
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending.",
     "tags": [
       "family",
       "general",
@@ -6613,7 +6613,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 110,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0580",
@@ -6695,7 +6695,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 381,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0586",
@@ -6734,7 +6734,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 498,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0589",
@@ -6775,7 +6775,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 526,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0593",
@@ -6813,7 +6813,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 733,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0596",
@@ -6962,7 +6962,7 @@
     "target": "Программист редко покупает продукты на вокзале.",
     "english": "The programmer rarely buys groceries at the station.",
     "audio": "ru-ru-3368.mp3",
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "general",
       "travel"
@@ -7031,7 +7031,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 11,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0617",
@@ -7090,7 +7090,7 @@
     "target": "Мама отвела ребёнка в школу.",
     "english": "Mom took the child to school.",
     "audio": "ru-ru-1171.mp3",
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending.",
     "tags": [
       "family",
       "general",
@@ -7245,7 +7245,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 642,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0643",
@@ -7298,7 +7298,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 789,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0647",
@@ -7484,7 +7484,7 @@
     "target": "Учитель вывел детей на площадку.",
     "english": "The teacher led the children to the playground.",
     "audio": "ru-ru-1153.mp3",
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "family",
       "general",
@@ -7530,7 +7530,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 743,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0668",
@@ -7661,7 +7661,7 @@
     "target": "Продавец иногда играет в шахматы на вокзале.",
     "english": "The salesman sometimes plays chess at the station.",
     "audio": "ru-ru-3392.mp3",
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending.",
     "tags": [
       "general",
       "travel"
@@ -7708,7 +7708,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 998,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0685",
@@ -7810,7 +7810,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 73,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0693",
@@ -7951,7 +7951,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 101,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0707",
@@ -8029,7 +8029,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 174,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0714",
@@ -8084,7 +8084,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 567,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0721",
@@ -8118,7 +8118,7 @@
     "target": "Дедушка убирал квартиру в театре на прошлой неделе.",
     "english": "Grandfather cleaned the apartment in the theater last week.",
     "audio": "ru-ru-3629.mp3",
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "family",
       "general",
@@ -8149,7 +8149,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 294,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0726",
@@ -8206,7 +8206,7 @@
     "target": "Программист ездит на работу завтра.",
     "english": "The programmer will commute to work tomorrow.",
     "audio": "ru-ru-3494.mp3",
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending.",
     "tags": [
       "general",
       "travel",
@@ -8299,7 +8299,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 383,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0740",
@@ -8428,7 +8428,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 507,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0751",
@@ -8494,7 +8494,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 797,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0758",
@@ -8508,7 +8508,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 787,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0759",
@@ -8522,7 +8522,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 1080,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0762",
@@ -8731,7 +8731,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 419,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0778",
@@ -8786,7 +8786,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 857,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0783",
@@ -8839,7 +8839,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1110,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0789",
@@ -9012,7 +9012,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1284,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0803",
@@ -9033,7 +9033,7 @@
     "target": "Друг всегда помогает другу в библиотеке.",
     "english": "The friend always helps a friend in the library.",
     "audio": "ru-ru-3724.mp3",
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "family",
       "general",
@@ -9054,7 +9054,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1459,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0809",
@@ -9195,7 +9195,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1147,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0822",
@@ -9260,7 +9260,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 911,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0828",
@@ -9318,7 +9318,7 @@
     "target": "Мне нечего надеть на вечеринку.",
     "english": "I have nothing to wear to the party.",
     "audio": "ru-ru-0600.mp3",
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending.",
     "tags": [
       "family",
       "general"
@@ -9365,7 +9365,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1358,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0838",
@@ -9471,7 +9471,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1543,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0852",
@@ -9517,7 +9517,7 @@
     "target": "Директор танцует вальс в парке после обеда.",
     "english": "The director dances a waltz in the park after lunch.",
     "audio": "ru-ru-3551.mp3",
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school).",
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school).",
     "tags": [
       "general",
       "travel",
@@ -9537,14 +9537,14 @@
     ],
     "grammarNode": "node-09",
     "priority": 1432,
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е."
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending."
   },
   {
     "id": "ru-0859",
     "target": "Медсестра бегала утром в парке на прошлой неделе.",
     "english": "The nurse ran in the morning in the park last week.",
     "audio": "ru-ru-3631.mp3",
-    "grammar": "The -е ending only ever appears after a preposition – that's the rule. No preposition, no -е.",
+    "grammar": "When the noun ends in -е after one of в, на, о, при, you're seeing the prepositional case. It's tied to those prepositions, not a general -e ending.",
     "tags": [
       "family",
       "general",
@@ -9654,7 +9654,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 961,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0869",
@@ -9715,7 +9715,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 1327,
-    "grammar": "After в / на: direction takes -у, location takes -е. иду в школу (iduv shkolu = going to school) vs я в школе (ya v shkole = at school)."
+    "grammar": "After в / на: direction uses accusative, location uses prepositional. иду в школу (idu v shkolu = going to school) vs я в школе (ya v shkole = at school)."
   },
   {
     "id": "ru-0874",
@@ -9814,7 +9814,7 @@
     ],
     "grammarNode": "node-10",
     "priority": 647,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0882",
@@ -9949,7 +9949,7 @@
     ],
     "grammarNode": "node-10",
     "priority": 1112,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0892",
@@ -10570,7 +10570,7 @@
     ],
     "grammarNode": "node-10",
     "priority": 874,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0952",
@@ -10711,7 +10711,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 430,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0963",
@@ -10791,7 +10791,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 830,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0969",
@@ -10830,7 +10830,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 855,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0972",
@@ -10895,7 +10895,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 841,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0977",
@@ -10956,7 +10956,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 899,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-0982",
@@ -11008,7 +11008,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 1357,
-    "grammar": "Russian verbs conjugate by person + number, but unlike Spanish or Italian, you KEEP the pronoun. читаю (chitayu = I read) on its own sounds incomplete – say я читаю."
+    "grammar": "Russian verbs conjugate by person + number, but the pronoun usually stays. Я читаю is the default; читаю alone sounds clipped (allowed colloquially)."
   },
   {
     "id": "ru-0986",
@@ -11232,7 +11232,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 670,
-    "grammar": "Russian belongs to a different group than Spanish/Italian – pronouns aren't optional. They mark the topic; ending agreement is extra confirmation."
+    "grammar": "Unlike Spanish/Italian where the pronoun is usually dropped, Russian keeps it most of the time. The ending agrees too – that's extra confirmation."
   },
   {
     "id": "ru-1012",

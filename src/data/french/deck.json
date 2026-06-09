@@ -193,7 +193,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 6,
-    "grammar": "Modal verbs (vouloir, pouvoir, devoir) take the infinitive directly: `je veux manger`, `il peut aider`, `nous devons partir`. No preposition between them."
+    "grammar": "Modals (vouloir, pouvoir, devoir) take the infinitive directly. je veux manger (I want to eat), il peut aider (he can help). No preposition between them."
   },
   {
     "id": "fr-0017",
@@ -206,7 +206,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 90,
-    "grammar": "Don't say `je veux à manger` – the preposition is wrong. Modal verb + bare infinitive. End of story."
+    "grammar": "Don't say je veux à manger – the à is wrong. Modal verb + bare infinitive, no preposition."
   },
   {
     "id": "fr-0018",
@@ -244,7 +244,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 129,
-    "grammar": "Modal verbs (vouloir, pouvoir, devoir) take the infinitive directly: `je veux manger`, `il peut aider`, `nous devons partir`. No preposition between them."
+    "grammar": "Modals (vouloir, pouvoir, devoir) take the infinitive directly. je veux manger (I want to eat), il peut aider (he can help). No preposition between them."
   },
   {
     "id": "fr-0021",
@@ -2527,7 +2527,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 30,
-    "grammar": "Don't say `je veux à manger` – the preposition is wrong. Modal verb + bare infinitive. End of story."
+    "grammar": "Don't say je veux à manger – the à is wrong. Modal verb + bare infinitive, no preposition."
   },
   {
     "id": "fr-0202",
@@ -2539,7 +2539,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 244,
-    "grammar": "Modal verbs (vouloir, pouvoir, devoir) take the infinitive directly: `je veux manger`, `il peut aider`, `nous devons partir`. No preposition between them."
+    "grammar": "Modals (vouloir, pouvoir, devoir) take the infinitive directly. je veux manger (I want to eat), il peut aider (he can help). No preposition between them."
   },
   {
     "id": "fr-0203",
@@ -2565,7 +2565,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 389,
-    "grammar": "Don't say `je veux à manger` – the preposition is wrong. Modal verb + bare infinitive. End of story."
+    "grammar": "Don't say je veux à manger – the à is wrong. Modal verb + bare infinitive, no preposition."
   },
   {
     "id": "fr-0205",
@@ -2655,7 +2655,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 301,
-    "grammar": "Modal verbs (vouloir, pouvoir, devoir) take the infinitive directly: `je veux manger`, `il peut aider`, `nous devons partir`. No preposition between them."
+    "grammar": "Modals (vouloir, pouvoir, devoir) take the infinitive directly. je veux manger (I want to eat), il peut aider (he can help). No preposition between them."
   },
   {
     "id": "fr-0212",
@@ -2975,7 +2975,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 556,
-    "grammar": "Don't say `je veux à manger` – the preposition is wrong. Modal verb + bare infinitive. End of story."
+    "grammar": "Don't say je veux à manger – the à is wrong. Modal verb + bare infinitive, no preposition."
   },
   {
     "id": "fr-0238",
@@ -3088,7 +3088,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 436,
-    "grammar": "Modal verbs (vouloir, pouvoir, devoir) take the infinitive directly: `je veux manger`, `il peut aider`, `nous devons partir`. No preposition between them."
+    "grammar": "Modals (vouloir, pouvoir, devoir) take the infinitive directly. je veux manger (I want to eat), il peut aider (he can help). No preposition between them."
   },
   {
     "id": "fr-0247",
@@ -4383,7 +4383,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 622,
-    "grammar": "`je` becomes `j'` before a vowel or silent h: `j'aime`, `j'habite`. Mandatory elision – saying `je aime` is wrong."
+    "grammar": "je → j' before a vowel or silent h: j'aime (I love), j'habite (I live). Elision is mandatory – je aime is wrong."
   },
   {
     "id": "fr-0351",
@@ -4974,7 +4974,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 511,
-    "grammar": "Other elisions to watch: `ne` → `n'`, `me` → `m'`, `te` → `t'`, `se` → `s'`, `le/la` → `l'`, `de` → `d'`, `que` → `qu'`. Vowel collision = elision."
+    "grammar": "More elisions: ne → n', me → m', te → t', se → s', le/la → l', de → d', que → qu'. Any vowel collision triggers it."
   },
   {
     "id": "fr-0399",
@@ -5033,7 +5033,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 454,
-    "grammar": "`je` becomes `j'` before a vowel or silent h: `j'aime`, `j'habite`. Mandatory elision – saying `je aime` is wrong."
+    "grammar": "je → j' before a vowel or silent h: j'aime (I love), j'habite (I live). Elision is mandatory – je aime is wrong."
   },
   {
     "id": "fr-0404",
@@ -5142,7 +5142,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 638,
-    "grammar": "Other elisions to watch: `ne` → `n'`, `me` → `m'`, `te` → `t'`, `se` → `s'`, `le/la` → `l'`, `de` → `d'`, `que` → `qu'`. Vowel collision = elision."
+    "grammar": "More elisions: ne → n', me → m', te → t', se → s', le/la → l', de → d', que → qu'. Any vowel collision triggers it."
   },
   {
     "id": "fr-0413",
@@ -5238,7 +5238,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 752,
-    "grammar": "`je` becomes `j'` before a vowel or silent h: `j'aime`, `j'habite`. Mandatory elision – saying `je aime` is wrong."
+    "grammar": "je → j' before a vowel or silent h: j'aime (I love), j'habite (I live). Elision is mandatory – je aime is wrong."
   },
   {
     "id": "fr-0421",
@@ -5849,7 +5849,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 418,
-    "grammar": "Regular endings: -er → -é, -ir → -i, -re → -u. Irregular ones (fait, dit, pris, lu, vu, eu, été) need memorising."
+    "grammar": "Regular past participles: -er → -é, -ir → -i, -re → -u. Irregulars (fait, dit, pris, lu, vu, eu, été) need separate memory."
   },
   {
     "id": "fr-0470",
@@ -6501,7 +6501,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 979,
-    "grammar": "Other elisions to watch: `ne` → `n'`, `me` → `m'`, `te` → `t'`, `se` → `s'`, `le/la` → `l'`, `de` → `d'`, `que` → `qu'`. Vowel collision = elision."
+    "grammar": "More elisions: ne → n', me → m', te → t', se → s', le/la → l', de → d', que → qu'. Any vowel collision triggers it."
   },
   {
     "id": "fr-0523",
@@ -6539,7 +6539,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 808,
-    "grammar": "`je` becomes `j'` before a vowel or silent h: `j'aime`, `j'habite`. Mandatory elision – saying `je aime` is wrong."
+    "grammar": "je → j' before a vowel or silent h: j'aime (I love), j'habite (I live). Elision is mandatory – je aime is wrong."
   },
   {
     "id": "fr-0526",
@@ -6993,7 +6993,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 888,
-    "grammar": "Other negative pairs: `ne...jamais` (never), `ne...plus` (no longer), `ne...rien` (nothing), `ne...personne` (no one). Always TWO parts around the verb."
+    "grammar": "Negative pairs: ne … jamais (never), ne … plus (no longer), ne … rien (nothing), ne … personne (no one). Always TWO parts around the verb."
   },
   {
     "id": "fr-0563",
@@ -7088,7 +7088,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 871,
-    "grammar": "Past participle agrees with a direct object only when that object COMES BEFORE the verb. `J'ai mangé la pomme` (no agreement) vs `la pomme que j'ai mangée` (e added). Easy to miss in speech."
+    "grammar": "Past participle agrees with the direct object ONLY when it comes BEFORE the verb. j'ai mangé la pomme (no -e) vs la pomme que j'ai mangée (-e). Easy to miss in speech."
   },
   {
     "id": "fr-0571",
@@ -8099,7 +8099,7 @@
     "target": "Viens ici, j'ai besoin de ton aide maintenant.",
     "english": "Come here, I need your help now.",
     "audio": "fr-871.mp3",
-    "grammar": "Other elisions to watch: `ne` → `n'`, `me` → `m'`, `te` → `t'`, `se` → `s'`, `le/la` → `l'`, `de` → `d'`, `que` → `qu'`. Vowel collision = elision.",
+    "grammar": "More elisions: ne → n', me → m', te → t', se → s', le/la → l', de → d', que → qu'. Any vowel collision triggers it.",
     "tags": [
       "general"
     ],
@@ -8853,7 +8853,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 869,
-    "grammar": "`je` becomes `j'` before a vowel or silent h: `j'aime`, `j'habite`. Mandatory elision – saying `je aime` is wrong."
+    "grammar": "je → j' before a vowel or silent h: j'aime (I love), j'habite (I live). Elision is mandatory – je aime is wrong."
   },
   {
     "id": "fr-0712",
@@ -9055,7 +9055,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1132,
-    "grammar": "Regular endings: -er → -é, -ir → -i, -re → -u. Irregular ones (fait, dit, pris, lu, vu, eu, été) need memorising."
+    "grammar": "Regular past participles: -er → -é, -ir → -i, -re → -u. Irregulars (fait, dit, pris, lu, vu, eu, été) need separate memory."
   },
   {
     "id": "fr-0728",
@@ -9067,7 +9067,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 921,
-    "grammar": "Other elisions to watch: `ne` → `n'`, `me` → `m'`, `te` → `t'`, `se` → `s'`, `le/la` → `l'`, `de` → `d'`, `que` → `qu'`. Vowel collision = elision."
+    "grammar": "More elisions: ne → n', me → m', te → t', se → s', le/la → l', de → d', que → qu'. Any vowel collision triggers it."
   },
   {
     "id": "fr-0729",
@@ -9956,7 +9956,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1010,
-    "grammar": "Past participle agrees with a direct object only when that object COMES BEFORE the verb. `J'ai mangé la pomme` (no agreement) vs `la pomme que j'ai mangée` (e added). Easy to miss in speech."
+    "grammar": "Past participle agrees with the direct object ONLY when it comes BEFORE the verb. j'ai mangé la pomme (no -e) vs la pomme que j'ai mangée (-e). Easy to miss in speech."
   },
   {
     "id": "fr-0800",
@@ -10056,7 +10056,7 @@
       "general"
     ],
     "grammarNode": "node-06",
-    "grammar": "Regular endings: -er → -é, -ir → -i, -re → -u. Irregular ones (fait, dit, pris, lu, vu, eu, été) need memorising.",
+    "grammar": "Regular past participles: -er → -é, -ir → -i, -re → -u. Irregulars (fait, dit, pris, lu, vu, eu, été) need separate memory.",
     "priority": 1252
   },
   {
@@ -10070,7 +10070,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1437,
-    "grammar": "Past participle agrees with a direct object only when that object COMES BEFORE the verb. `J'ai mangé la pomme` (no agreement) vs `la pomme que j'ai mangée` (e added). Easy to miss in speech."
+    "grammar": "Past participle agrees with the direct object ONLY when it comes BEFORE the verb. j'ai mangé la pomme (no -e) vs la pomme que j'ai mangée (-e). Easy to miss in speech."
   },
   {
     "id": "fr-0809",
@@ -10162,7 +10162,7 @@
       "travel"
     ],
     "grammarNode": "node-21",
-    "grammar": "Regular endings: -er → -é, -ir → -i, -re → -u. Irregular ones (fait, dit, pris, lu, vu, eu, été) need memorising.",
+    "grammar": "Regular past participles: -er → -é, -ir → -i, -re → -u. Irregulars (fait, dit, pris, lu, vu, eu, été) need separate memory.",
     "priority": 928
   },
   {
@@ -11658,7 +11658,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 844,
-    "grammar": "Past participle agrees with a direct object only when that object COMES BEFORE the verb. `J'ai mangé la pomme` (no agreement) vs `la pomme que j'ai mangée` (e added). Easy to miss in speech."
+    "grammar": "Past participle agrees with the direct object ONLY when it comes BEFORE the verb. j'ai mangé la pomme (no -e) vs la pomme que j'ai mangée (-e). Easy to miss in speech."
   },
   {
     "id": "fr-0935",
@@ -12035,7 +12035,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1256,
-    "grammar": "Regular endings: -er → -é, -ir → -i, -re → -u. Irregular ones (fait, dit, pris, lu, vu, eu, été) need memorising."
+    "grammar": "Regular past participles: -er → -é, -ir → -i, -re → -u. Irregulars (fait, dit, pris, lu, vu, eu, été) need separate memory."
   },
   {
     "id": "fr-0965",
@@ -12049,7 +12049,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1098,
-    "grammar": "Past participle agrees with a direct object only when that object COMES BEFORE the verb. `J'ai mangé la pomme` (no agreement) vs `la pomme que j'ai mangée` (e added). Easy to miss in speech."
+    "grammar": "Past participle agrees with the direct object ONLY when it comes BEFORE the verb. j'ai mangé la pomme (no -e) vs la pomme que j'ai mangée (-e). Easy to miss in speech."
   },
   {
     "id": "fr-0966",
@@ -12126,7 +12126,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1388,
-    "grammar": "Regular endings: -er → -é, -ir → -i, -re → -u. Irregular ones (fait, dit, pris, lu, vu, eu, été) need memorising."
+    "grammar": "Regular past participles: -er → -é, -ir → -i, -re → -u. Irregulars (fait, dit, pris, lu, vu, eu, été) need separate memory."
   },
   {
     "id": "fr-0972",
@@ -12515,7 +12515,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 65,
-    "grammar": "Other negative pairs: `ne...jamais` (never), `ne...plus` (no longer), `ne...rien` (nothing), `ne...personne` (no one). Always TWO parts around the verb."
+    "grammar": "Negative pairs: ne … jamais (never), ne … plus (no longer), ne … rien (nothing), ne … personne (no one). Always TWO parts around the verb."
   },
   {
     "id": "fr-1005",
@@ -12853,7 +12853,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 896,
-    "grammar": "Past participle agrees with a direct object only when that object COMES BEFORE the verb. `J'ai mangé la pomme` (no agreement) vs `la pomme que j'ai mangée` (e added). Easy to miss in speech."
+    "grammar": "Past participle agrees with the direct object ONLY when it comes BEFORE the verb. j'ai mangé la pomme (no -e) vs la pomme que j'ai mangée (-e). Easy to miss in speech."
   },
   {
     "id": "fr-1033",
@@ -12914,7 +12914,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 582,
-    "grammar": "Regular endings: -er → -é, -ir → -i, -re → -u. Irregular ones (fait, dit, pris, lu, vu, eu, été) need memorising."
+    "grammar": "Regular past participles: -er → -é, -ir → -i, -re → -u. Irregulars (fait, dit, pris, lu, vu, eu, été) need separate memory."
   },
   {
     "id": "fr-1038",
@@ -12967,7 +12967,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 967,
-    "grammar": "Past participle agrees with a direct object only when that object COMES BEFORE the verb. `J'ai mangé la pomme` (no agreement) vs `la pomme que j'ai mangée` (e added). Easy to miss in speech."
+    "grammar": "Past participle agrees with the direct object ONLY when it comes BEFORE the verb. j'ai mangé la pomme (no -e) vs la pomme que j'ai mangée (-e). Easy to miss in speech."
   },
   {
     "id": "fr-1042",
@@ -13134,7 +13134,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1317,
-    "grammar": "Regular endings: -er → -é, -ir → -i, -re → -u. Irregular ones (fait, dit, pris, lu, vu, eu, été) need memorising."
+    "grammar": "Regular past participles: -er → -é, -ir → -i, -re → -u. Irregulars (fait, dit, pris, lu, vu, eu, été) need separate memory."
   },
   {
     "id": "fr-1055",
@@ -13197,7 +13197,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1073,
-    "grammar": "Past participle agrees with a direct object only when that object COMES BEFORE the verb. `J'ai mangé la pomme` (no agreement) vs `la pomme que j'ai mangée` (e added). Easy to miss in speech."
+    "grammar": "Past participle agrees with the direct object ONLY when it comes BEFORE the verb. j'ai mangé la pomme (no -e) vs la pomme que j'ai mangée (-e). Easy to miss in speech."
   },
   {
     "id": "fr-1060",
@@ -13223,7 +13223,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1033,
-    "grammar": "Regular endings: -er → -é, -ir → -i, -re → -u. Irregular ones (fait, dit, pris, lu, vu, eu, été) need memorising."
+    "grammar": "Regular past participles: -er → -é, -ir → -i, -re → -u. Irregulars (fait, dit, pris, lu, vu, eu, été) need separate memory."
   },
   {
     "id": "fr-1062",
@@ -13236,7 +13236,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 903,
-    "grammar": "Past participle agrees with a direct object only when that object COMES BEFORE the verb. `J'ai mangé la pomme` (no agreement) vs `la pomme que j'ai mangée` (e added). Easy to miss in speech."
+    "grammar": "Past participle agrees with the direct object ONLY when it comes BEFORE the verb. j'ai mangé la pomme (no -e) vs la pomme que j'ai mangée (-e). Easy to miss in speech."
   },
   {
     "id": "fr-1063",
@@ -13540,7 +13540,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 1372,
-    "grammar": "Regular endings: -er → -é, -ir → -i, -re → -u. Irregular ones (fait, dit, pris, lu, vu, eu, été) need memorising."
+    "grammar": "Regular past participles: -er → -é, -ir → -i, -re → -u. Irregulars (fait, dit, pris, lu, vu, eu, été) need separate memory."
   },
   {
     "id": "fr-1086",
@@ -13593,7 +13593,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1835,
-    "grammar": "Past participle agrees with a direct object only when that object COMES BEFORE the verb. `J'ai mangé la pomme` (no agreement) vs `la pomme que j'ai mangée` (e added). Easy to miss in speech."
+    "grammar": "Past participle agrees with the direct object ONLY when it comes BEFORE the verb. j'ai mangé la pomme (no -e) vs la pomme que j'ai mangée (-e). Easy to miss in speech."
   },
   {
     "id": "fr-1090",
@@ -13845,7 +13845,7 @@
       "travel"
     ],
     "grammarNode": "node-21",
-    "grammar": "Regular endings: -er → -é, -ir → -i, -re → -u. Irregular ones (fait, dit, pris, lu, vu, eu, été) need memorising.",
+    "grammar": "Regular past participles: -er → -é, -ir → -i, -re → -u. Irregulars (fait, dit, pris, lu, vu, eu, été) need separate memory.",
     "priority": 872
   },
   {
@@ -13946,7 +13946,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1248,
-    "grammar": "Past participle agrees with a direct object only when that object COMES BEFORE the verb. `J'ai mangé la pomme` (no agreement) vs `la pomme que j'ai mangée` (e added). Easy to miss in speech."
+    "grammar": "Past participle agrees with the direct object ONLY when it comes BEFORE the verb. j'ai mangé la pomme (no -e) vs la pomme que j'ai mangée (-e). Easy to miss in speech."
   },
   {
     "id": "fr-1118",
@@ -14074,7 +14074,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1091,
-    "grammar": "Regular endings: -er → -é, -ir → -i, -re → -u. Irregular ones (fait, dit, pris, lu, vu, eu, été) need memorising."
+    "grammar": "Regular past participles: -er → -é, -ir → -i, -re → -u. Irregulars (fait, dit, pris, lu, vu, eu, été) need separate memory."
   },
   {
     "id": "fr-1128",
@@ -14101,7 +14101,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1231,
-    "grammar": "Past participle agrees with a direct object only when that object COMES BEFORE the verb. `J'ai mangé la pomme` (no agreement) vs `la pomme que j'ai mangée` (e added). Easy to miss in speech."
+    "grammar": "Past participle agrees with the direct object ONLY when it comes BEFORE the verb. j'ai mangé la pomme (no -e) vs la pomme que j'ai mangée (-e). Easy to miss in speech."
   },
   {
     "id": "fr-1130",
@@ -14154,7 +14154,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1452,
-    "grammar": "Regular endings: -er → -é, -ir → -i, -re → -u. Irregular ones (fait, dit, pris, lu, vu, eu, été) need memorising."
+    "grammar": "Regular past participles: -er → -é, -ir → -i, -re → -u. Irregulars (fait, dit, pris, lu, vu, eu, été) need separate memory."
   },
   {
     "id": "fr-1134",
@@ -14166,7 +14166,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1363,
-    "grammar": "Past participle agrees with a direct object only when that object COMES BEFORE the verb. `J'ai mangé la pomme` (no agreement) vs `la pomme que j'ai mangée` (e added). Easy to miss in speech."
+    "grammar": "Past participle agrees with the direct object ONLY when it comes BEFORE the verb. j'ai mangé la pomme (no -e) vs la pomme que j'ai mangée (-e). Easy to miss in speech."
   },
   {
     "id": "fr-1135",
@@ -14244,7 +14244,7 @@
       "general"
     ],
     "grammarNode": "node-08",
-    "grammar": "Regular endings: -er → -é, -ir → -i, -re → -u. Irregular ones (fait, dit, pris, lu, vu, eu, été) need memorising.",
+    "grammar": "Regular past participles: -er → -é, -ir → -i, -re → -u. Irregulars (fait, dit, pris, lu, vu, eu, été) need separate memory.",
     "priority": 1640
   },
   {
@@ -22710,7 +22710,7 @@
     ],
     "grammarNode": "node-14",
     "priority": 1920,
-    "grammar": "Other negative pairs: `ne...jamais` (never), `ne...plus` (no longer), `ne...rien` (nothing), `ne...personne` (no one). Always TWO parts around the verb."
+    "grammar": "Negative pairs: ne … jamais (never), ne … plus (no longer), ne … rien (nothing), ne … personne (no one). Always TWO parts around the verb."
   },
   {
     "id": "fr-1831",
@@ -25464,7 +25464,7 @@
     ],
     "grammarNode": "node-15",
     "priority": 2153,
-    "grammar": "Other negative pairs: `ne...jamais` (never), `ne...plus` (no longer), `ne...rien` (nothing), `ne...personne` (no one). Always TWO parts around the verb."
+    "grammar": "Negative pairs: ne … jamais (never), ne … plus (no longer), ne … rien (nothing), ne … personne (no one). Always TWO parts around the verb."
   },
   {
     "id": "fr-2064",

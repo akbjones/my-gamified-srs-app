@@ -19,7 +19,18 @@ const checks = {
   tooLong:           tip => tip.length > 120,
   veryLong:          tip => tip.length > 170,
   multipleSentences: tip => (tip.match(/[.!?]\s+[A-Z]/g) || []).length >= 2,
-  noExample:         tip => !/[=→]|`[^`]+`.*=\s|\([a-zA-Zà-ÿñčğşıöüáéíóúāīūṛ ]+\s*=/.test(tip),
+  noExample: tip => {
+    // A worked example shows up as ONE of:
+    //   - "=" or "→" sign (e.g. "ke paas = near")
+    //   - backtick-fenced foreign word followed by an "=" gloss
+    //   - parenthetical containing at least 2 latin words or a single English
+    //     word (e.g. "(the car, m)", "(I ate)", "(big table)")
+    //   - colon followed by a quoted example
+    if (/[=→]/.test(tip)) return false;
+    if (/`[^`]+`.*=\s/.test(tip)) return false;
+    if (/\([^)]{4,}\)/.test(tip)) return false; // any parenthetical with content
+    return true;
+  },
   jargon:            tip => /\b(postposition|preposition|nominative|accusative|dative|genitive|locative|ablative|instrumental|vocative|ergative|absolutive|aorist|aspect|perfective|imperfective|participle|gerund|infinitive|conjugation|declension|oblique|allomorph|enclitic|proclitic|metathesis|fricative|plosive|sibilant|labial|velar|dental|stative|dynamic|telic|atelic|valence|valency)\b/i.test(tip),
   noRomanization:    (tip, lang) => {
     if (!['hindi','russian'].includes(lang)) return false;

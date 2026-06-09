@@ -657,7 +657,8 @@
       "travel"
     ],
     "grammarNode": "node-01",
-    "priority": 143
+    "priority": 143,
+    "grammar": "Feminine singular nouns SOFT-MUTATE after `y`/`yr`/`'r`: `merch → y ferch`, `cath → y gath`. Masculine nouns stay as-is."
   },
   {
     "id": "cy-0085",
@@ -954,7 +955,8 @@
       "travel"
     ],
     "grammarNode": "node-01",
-    "priority": 999
+    "priority": 999,
+    "grammar": "Soft mutation: p→b, t→d, c→g, b→f, d→dd, m→f, ll→l. Trigger here: `dau` (two). After the number 2 the noun softens."
   },
   {
     "id": "cy-0116",
@@ -1686,7 +1688,8 @@
       "travel"
     ],
     "grammarNode": "node-01",
-    "priority": 405
+    "priority": 405,
+    "grammar": "Feminine singular nouns SOFT-MUTATE after `y`/`yr`/`'r`: `merch → y ferch`, `cath → y gath`. Masculine nouns stay as-is."
   },
   {
     "id": "cy-0039",
@@ -1756,7 +1759,8 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "priority": 225
+    "priority": 225,
+    "grammar": "`Rwy'n` is a contraction of `Rydw i'n` (I am). Both work; `Rwy'n` is shorter and common in writing. `Dw i'n` is the most casual spoken form."
   },
   {
     "id": "cy-0112",
@@ -2645,7 +2649,8 @@
       "general"
     ],
     "grammarNode": "node-02",
-    "priority": 445
+    "priority": 445,
+    "grammar": "Plural forms of present `bod`: `dyn ni'n` / `rydym ni'n` (we are), `dych chi'n` / `rydych chi'n` (you all are)."
   },
   {
     "id": "cy-0219",
@@ -4022,7 +4027,8 @@
       "general"
     ],
     "grammarNode": "node-03",
-    "priority": 537
+    "priority": 537,
+    "grammar": "Plural forms of present `bod`: `dyn ni'n` / `rydym ni'n` (we are), `dych chi'n` / `rydych chi'n` (you all are)."
   },
   {
     "id": "cy-0333",
@@ -4898,7 +4904,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 41
+    "priority": 41,
+    "grammar": "Soft mutation: p→b, t→d, c→g, b→f, d→dd, m→f, ll→l. Trigger here: `dau` (two). After the number 2 the noun softens."
   },
   {
     "id": "cy-0404",
@@ -6051,7 +6058,8 @@
       "work"
     ],
     "grammarNode": "node-04",
-    "priority": 905
+    "priority": 905,
+    "grammar": "Numbers from 2 onwards have masc/fem forms. `dau gi` (2 m. dogs) vs `dwy gath` (2 f. cats). The noun soft-mutates either way."
   },
   {
     "id": "cy-0498",
@@ -6113,7 +6121,8 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "priority": 981
+    "priority": 981,
+    "grammar": "Numbers from 2 onwards have masc/fem forms. `dau gi` (2 m. dogs) vs `dwy gath` (2 f. cats). The noun soft-mutates either way."
   },
   {
     "id": "cy-0503",
@@ -6570,7 +6579,8 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "priority": 160
+    "priority": 160,
+    "grammar": "`Roedd` = was/were (3rd person), imperfect of `bod`. `Roedd e'n hapus` = he was happy. Used for past states."
   },
   {
     "id": "cy-0541",
@@ -7086,7 +7096,8 @@
       "work"
     ],
     "grammarNode": "node-11",
-    "priority": 180
+    "priority": 180,
+    "grammar": "`Roedd` = was/were (3rd person), imperfect of `bod`. `Roedd e'n hapus` = he was happy. Used for past states."
   },
   {
     "id": "cy-0583",
@@ -8479,7 +8490,8 @@
       "work"
     ],
     "grammarNode": "node-11",
-    "priority": 450
+    "priority": 450,
+    "grammar": "Negative imperfect: `doeddwn i ddim` (I wasn't), `doedd e ddim` (he wasn't). The `r-` of `roedd` becomes `d-` for negation."
   },
   {
     "target": "Dyw hi ddim â diddordeb mewn pêl-droed.",
@@ -10009,7 +10021,8 @@
     ],
     "id": "cy-0823",
     "audio": "cy-3707.mp3",
-    "priority": 74
+    "priority": 74,
+    "grammar": "Negate future by softening: `bydd → fydd`. `Fydd hi ddim yn dod` (she won't come). Same `ddim` particle as the present negative."
   },
   {
     "id": "cy-0824",
@@ -33886,7 +33899,8 @@
       "travel"
     ],
     "grammarNode": "node-27",
-    "priority": 1492
+    "priority": 1492,
+    "grammar": "`Newydd` as a perfect-like particle = 'just (now)'. `Dw i newydd fwyta` = I've just eaten. Compare `wedi` (generic perfect) vs `newydd` (very recent)."
   },
   {
     "id": "cy-2830",

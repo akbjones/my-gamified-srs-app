@@ -248,7 +248,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
 
         <button
           onClick={() => setPhase('question')}
-          className="w-full py-2.5 rounded-xl text-sm font-bold btn-primary normal-case tracking-normal mb-2"
+          className="w-full py-2.5 rounded-xl text-sm font-bold bg-[var(--accent)] text-white hover:bg-[var(--accent)]/90 active:scale-95 transition mb-2"
         >
           Start
         </button>

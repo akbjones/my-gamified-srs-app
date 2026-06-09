@@ -31,7 +31,7 @@ const checks = {
     if (/\([^)]{4,}\)/.test(tip)) return false; // any parenthetical with content
     return true;
   },
-  jargon:            tip => /\b(postposition|preposition|nominative|accusative|dative|genitive|locative|ablative|instrumental|vocative|ergative|absolutive|aorist|aspect|perfective|imperfective|participle|gerund|infinitive|conjugation|declension|oblique|allomorph|enclitic|proclitic|metathesis|fricative|plosive|sibilant|labial|velar|dental|stative|dynamic|telic|atelic|valence|valency)\b/i.test(tip),
+  jargon: tip => /\b(ergative|absolutive|aorist|telic|atelic|valence|valency|allomorph|enclitic|proclitic|metathesis|fricative|plosive|sibilant|labial|velar|stative|declension|gerund)\b/i.test(tip),
   noRomanization:    (tip, lang) => {
     if (!['hindi','russian'].includes(lang)) return false;
     if (!/[ऀ-ॿЀ-ӿ]/.test(tip)) return false;

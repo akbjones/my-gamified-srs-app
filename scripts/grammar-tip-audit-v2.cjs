@@ -35,7 +35,9 @@ const checks = {
   noRomanization:    (tip, lang) => {
     if (!['hindi','russian'].includes(lang)) return false;
     if (!/[ऀ-ॿЀ-ӿ]/.test(tip)) return false;
-    return !/\([a-zA-Z][a-zA-Z' ]+\s*[=,]/.test(tip);
+    // Accept any parenthetical containing 2+ Latin letters in sequence.
+    // This catches both (roman = X) and (-ta, m sg) style annotations.
+    return !/\([^)]*[a-zA-Z]{2,}/.test(tip);
   },
   cryptic:           tip => tip.length < 50,
 };

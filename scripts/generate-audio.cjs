@@ -37,18 +37,22 @@ const speakingRate = parseFloat((args.find(a => a.startsWith('--speed=')) || '')
 
 // Language support – default to Spanish for backwards compatibility
 const lang = (args.find(a => a.startsWith('--lang=')) || '').split('=')[1] || 'es';
+// Canonical voices per language — Chirp 3 HD (Google's highest tier,
+// female "Aoede" voice for cross-language consistency). Welsh is
+// handled separately by regen-welsh-inconsistent.py (Azure/Edge TTS
+// because Google has no premium Welsh tier — see scripts/CANONICAL-VOICES.md).
 const LANG_DEFAULTS = {
-  es: { voice: 'es-US-Standard-A', prefix: 'es', deckDir: 'spanish' },
-  it: { voice: 'it-IT-Standard-A', prefix: 'it', deckDir: 'italian' },
-  de: { voice: 'de-DE-Wavenet-A', prefix: 'de', deckDir: 'german' },
-  fr: { voice: 'fr-FR-Standard-A', prefix: 'fr', deckDir: 'french' },
-  pt: { voice: 'pt-BR-Wavenet-A', prefix: 'pt', deckDir: 'portuguese' },
-  nl: { voice: 'nl-NL-Standard-A', prefix: 'nl', deckDir: 'dutch' },
-  sv: { voice: 'sv-SE-Wavenet-D', prefix: 'sv', deckDir: 'swedish' },
-  cy: { voice: 'cy-GB-Standard-A', prefix: 'cy', deckDir: 'welsh' },
-  hi: { voice: 'hi-IN-Wavenet-A', prefix: 'hi', deckDir: 'hindi' },
-  tr: { voice: 'tr-TR-Wavenet-A', prefix: 'tr', deckDir: 'turkish' },
-  ru: { voice: 'ru-RU-Wavenet-A', prefix: 'ru', deckDir: 'russian' },
+  es: { voice: 'es-US-Chirp3-HD-Aoede', prefix: 'es', deckDir: 'spanish' },
+  it: { voice: 'it-IT-Chirp3-HD-Aoede', prefix: 'it', deckDir: 'italian' },
+  de: { voice: 'de-DE-Chirp3-HD-Aoede', prefix: 'de', deckDir: 'german' },
+  fr: { voice: 'fr-FR-Chirp3-HD-Aoede', prefix: 'fr', deckDir: 'french' },
+  pt: { voice: 'pt-BR-Chirp3-HD-Aoede', prefix: 'pt', deckDir: 'portuguese' },
+  nl: { voice: 'nl-NL-Chirp3-HD-Aoede', prefix: 'nl', deckDir: 'dutch' },
+  sv: { voice: 'sv-SE-Chirp3-HD-Aoede', prefix: 'sv', deckDir: 'swedish' },
+  cy: { voice: 'cy-GB-Standard-A', prefix: 'cy', deckDir: 'welsh' }, // not used — Welsh via Azure NiaNeural
+  hi: { voice: 'hi-IN-Chirp3-HD-Aoede', prefix: 'hi', deckDir: 'hindi' },
+  tr: { voice: 'tr-TR-Chirp3-HD-Aoede', prefix: 'tr', deckDir: 'turkish' },
+  ru: { voice: 'ru-RU-Chirp3-HD-Aoede', prefix: 'ru', deckDir: 'russian' },
 };
 const langConfig = LANG_DEFAULTS[lang];
 if (!langConfig) {

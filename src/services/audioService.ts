@@ -93,20 +93,21 @@ export const stopAudio = (): void => {
 };
 
 // ─── Google Cloud TTS ───────────────────────────────────────────
-// Maps our Language type to Google Cloud TTS voice names
-// Using Standard voices (free tier friendly) – Latin American where available
+// Canonical voices: Chirp 3 HD "Aoede" (female, Google's highest quality
+// tier). Used when the pre-recorded MP3 fails to load and we fall back
+// to live API synthesis. Matches the voice used by scripts/generate-audio.cjs.
 const GOOGLE_VOICE_MAP: Record<Language, { languageCode: string; name: string }> = {
-  spanish: { languageCode: 'es-US', name: 'es-US-Wavenet-A' },     // LatAm female
-  italian: { languageCode: 'it-IT', name: 'it-IT-Wavenet-A' },
-  german:  { languageCode: 'de-DE', name: 'de-DE-Wavenet-A' },
-  french:  { languageCode: 'fr-FR', name: 'fr-FR-Wavenet-A' },
-  portuguese: { languageCode: 'pt-BR', name: 'pt-BR-Wavenet-A' },
-  dutch: { languageCode: 'nl-NL', name: 'nl-NL-Wavenet-A' },
-  swedish: { languageCode: 'sv-SE', name: 'sv-SE-Wavenet-D' },
-  welsh: { languageCode: 'cy-GB', name: 'cy-GB-Standard-A' }, // no Wavenet for Welsh – browser TTS fallback
-  hindi: { languageCode: 'hi-IN', name: 'hi-IN-Wavenet-A' },
-  turkish: { languageCode: 'tr-TR', name: 'tr-TR-Wavenet-A' },
-  russian: { languageCode: 'ru-RU', name: 'ru-RU-Wavenet-A' },
+  spanish: { languageCode: 'es-US', name: 'es-US-Chirp3-HD-Aoede' },
+  italian: { languageCode: 'it-IT', name: 'it-IT-Chirp3-HD-Aoede' },
+  german:  { languageCode: 'de-DE', name: 'de-DE-Chirp3-HD-Aoede' },
+  french:  { languageCode: 'fr-FR', name: 'fr-FR-Chirp3-HD-Aoede' },
+  portuguese: { languageCode: 'pt-BR', name: 'pt-BR-Chirp3-HD-Aoede' },
+  dutch: { languageCode: 'nl-NL', name: 'nl-NL-Chirp3-HD-Aoede' },
+  swedish: { languageCode: 'sv-SE', name: 'sv-SE-Chirp3-HD-Aoede' },
+  welsh: { languageCode: 'cy-GB', name: 'cy-GB-Standard-A' }, // no Google premium for Welsh — browser TTS fallback
+  hindi: { languageCode: 'hi-IN', name: 'hi-IN-Chirp3-HD-Aoede' },
+  turkish: { languageCode: 'tr-TR', name: 'tr-TR-Chirp3-HD-Aoede' },
+  russian: { languageCode: 'ru-RU', name: 'ru-RU-Chirp3-HD-Aoede' },
 };
 
 // Speed maps to Google TTS speakingRate (0.25–4.0, 1.0 = normal)

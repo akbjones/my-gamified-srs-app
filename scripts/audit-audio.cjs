@@ -22,16 +22,16 @@ const fs = require('fs');
 const path = require('path');
 
 const LANGS = {
-  spanish:    { prefix: 'es', canonicalSig: 0x44 },
-  italian:    { prefix: 'it', canonicalSig: 0x44 },
-  french:     { prefix: 'fr', canonicalSig: 0x44 },
-  portuguese: { prefix: 'pt', canonicalSig: 0x44 },
-  german:     { prefix: 'de', canonicalSig: 0x44 },
-  dutch:      { prefix: 'nl', canonicalSig: 0x44 },
-  swedish:    { prefix: 'sv', canonicalSig: 0x44 },
-  turkish:    { prefix: 'tr', canonicalSig: 0x44 },
-  hindi:      { prefix: 'hi', canonicalSig: 0x44 },
-  russian:    { prefix: 'ru', canonicalSig: 0x44 },
+  spanish:    { prefix: 'es', canonicalSig: 0x84 },
+  italian:    { prefix: 'it', canonicalSig: 0x84 },
+  french:     { prefix: 'fr', canonicalSig: 0x84 },
+  portuguese: { prefix: 'pt', canonicalSig: 0x84 },
+  german:     { prefix: 'de', canonicalSig: 0x84 },
+  dutch:      { prefix: 'nl', canonicalSig: 0x84 },
+  swedish:    { prefix: 'sv', canonicalSig: 0x84 },
+  turkish:    { prefix: 'tr', canonicalSig: 0x84 },
+  hindi:      { prefix: 'hi', canonicalSig: 0x84 },
+  russian:    { prefix: 'ru', canonicalSig: 0x84 },
   welsh:      { prefix: 'cy', canonicalSig: [0x80, 0x64] }, // two valid signatures
 };
 

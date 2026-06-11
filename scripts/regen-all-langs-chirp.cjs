@@ -138,6 +138,13 @@ async function processLang(langName) {
     return null;
   }
 
+  // Nothing to do (e.g. resume from a fully-done language): skip the queue
+  // loop entirely. Without this guard, the launch() while-loop never enters
+  // its body and resolveAll() never fires → script hangs forever.
+  if (work.length === 0) {
+    return { done: 0, failed: 0 };
+  }
+
   let inFlight = 0;
   let cursor = 0;
   let done = 0;

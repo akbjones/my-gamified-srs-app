@@ -91,7 +91,11 @@ export default defineConfig({
             urlPattern: /\/quest-audio\/.*\.mp3$/,
             handler: 'CacheFirst',
             options: {
-              cacheName: 'audio-cache',
+              // BUMP THIS NAME whenever the audio voice/source changes.
+              // Old cache name is auto-evicted; users will re-download
+              // only the files they actually study (maxEntries cap below).
+              // v2 = 2026-06-11 Welsh fix + 10-language Chirp3-HD upgrade
+              cacheName: 'audio-cache-v2',
               expiration: {
                 maxEntries: 500,
                 maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days

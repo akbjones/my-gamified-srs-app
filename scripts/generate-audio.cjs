@@ -37,22 +37,24 @@ const speakingRate = parseFloat((args.find(a => a.startsWith('--speed=')) || '')
 
 // Language support – default to Spanish for backwards compatibility
 const lang = (args.find(a => a.startsWith('--lang=')) || '').split('=')[1] || 'es';
-// Canonical voices per language — Chirp 3 HD (Google's highest tier,
-// female "Aoede" voice for cross-language consistency). Welsh is
-// handled separately by regen-welsh-inconsistent.py (Azure/Edge TTS
-// because Google has no premium Welsh tier — see scripts/CANONICAL-VOICES.md).
+// Canonical voices per language — language-NATIVE female voices.
+// Previously we tried Chirp3-HD-Aoede (a multilingual female) for
+// cross-language consistency, but it produced ~half-length audio on
+// non-English languages (most catastrophically Hindi — it couldn't
+// read Devanagari properly). Native Neural2/Wavenet voices are the
+// correct choice. See scripts/CANONICAL-VOICES.md.
 const LANG_DEFAULTS = {
-  es: { voice: 'es-US-Chirp3-HD-Aoede', prefix: 'es', deckDir: 'spanish' },
-  it: { voice: 'it-IT-Chirp3-HD-Aoede', prefix: 'it', deckDir: 'italian' },
-  de: { voice: 'de-DE-Chirp3-HD-Aoede', prefix: 'de', deckDir: 'german' },
-  fr: { voice: 'fr-FR-Chirp3-HD-Aoede', prefix: 'fr', deckDir: 'french' },
-  pt: { voice: 'pt-BR-Chirp3-HD-Aoede', prefix: 'pt', deckDir: 'portuguese' },
-  nl: { voice: 'nl-NL-Chirp3-HD-Aoede', prefix: 'nl', deckDir: 'dutch' },
-  sv: { voice: 'sv-SE-Chirp3-HD-Aoede', prefix: 'sv', deckDir: 'swedish' },
-  cy: { voice: 'cy-GB-Standard-A', prefix: 'cy', deckDir: 'welsh' }, // not used — Welsh via Azure NiaNeural
-  hi: { voice: 'hi-IN-Chirp3-HD-Aoede', prefix: 'hi', deckDir: 'hindi' },
-  tr: { voice: 'tr-TR-Chirp3-HD-Aoede', prefix: 'tr', deckDir: 'turkish' },
-  ru: { voice: 'ru-RU-Chirp3-HD-Aoede', prefix: 'ru', deckDir: 'russian' },
+  es: { voice: 'es-US-Neural2-A', prefix: 'es', deckDir: 'spanish' },
+  it: { voice: 'it-IT-Neural2-A', prefix: 'it', deckDir: 'italian' },
+  de: { voice: 'de-DE-Neural2-G', prefix: 'de', deckDir: 'german' },
+  fr: { voice: 'fr-FR-Neural2-F', prefix: 'fr', deckDir: 'french' },
+  pt: { voice: 'pt-BR-Neural2-A', prefix: 'pt', deckDir: 'portuguese' },
+  nl: { voice: 'nl-NL-Wavenet-F', prefix: 'nl', deckDir: 'dutch' },     // no Neural2 for Dutch
+  sv: { voice: 'sv-SE-Wavenet-A', prefix: 'sv', deckDir: 'swedish' },   // no Neural2 for Swedish
+  cy: { voice: 'cy-GB-Standard-A', prefix: 'cy', deckDir: 'welsh' },    // not used — Welsh via Azure NiaNeural
+  hi: { voice: 'hi-IN-Neural2-A', prefix: 'hi', deckDir: 'hindi' },
+  tr: { voice: 'tr-TR-Wavenet-A', prefix: 'tr', deckDir: 'turkish' },   // no Neural2 for Turkish
+  ru: { voice: 'ru-RU-Wavenet-A', prefix: 'ru', deckDir: 'russian' },   // no Neural2 for Russian
 };
 const langConfig = LANG_DEFAULTS[lang];
 if (!langConfig) {

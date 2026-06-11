@@ -29,17 +29,22 @@ if (!API_KEY) {
   process.exit(1);
 }
 
+// Language-native female voices — Neural2 where available, Wavenet
+// otherwise. The previous Chirp3-HD-Aoede choice was a MULTILINGUAL
+// voice and produced bad/scrambled output on non-English languages
+// (Hindi was the most obvious — Aoede produced ~half-length audio
+// because it couldn't read Devanagari properly).
 const LANGS = {
-  spanish:    { code: 'es-US', voice: 'es-US-Chirp3-HD-Aoede', prefix: 'es' },
-  italian:    { code: 'it-IT', voice: 'it-IT-Chirp3-HD-Aoede', prefix: 'it' },
-  french:     { code: 'fr-FR', voice: 'fr-FR-Chirp3-HD-Aoede', prefix: 'fr' },
-  portuguese: { code: 'pt-BR', voice: 'pt-BR-Chirp3-HD-Aoede', prefix: 'pt' },
-  german:     { code: 'de-DE', voice: 'de-DE-Chirp3-HD-Aoede', prefix: 'de' },
-  dutch:      { code: 'nl-NL', voice: 'nl-NL-Chirp3-HD-Aoede', prefix: 'nl' },
-  swedish:    { code: 'sv-SE', voice: 'sv-SE-Chirp3-HD-Aoede', prefix: 'sv' },
-  turkish:    { code: 'tr-TR', voice: 'tr-TR-Chirp3-HD-Aoede', prefix: 'tr' },
-  hindi:      { code: 'hi-IN', voice: 'hi-IN-Chirp3-HD-Aoede', prefix: 'hi' },
-  russian:    { code: 'ru-RU', voice: 'ru-RU-Chirp3-HD-Aoede', prefix: 'ru' },
+  spanish:    { code: 'es-US', voice: 'es-US-Neural2-A', prefix: 'es' },
+  italian:    { code: 'it-IT', voice: 'it-IT-Neural2-A', prefix: 'it' },
+  french:     { code: 'fr-FR', voice: 'fr-FR-Neural2-F', prefix: 'fr' },
+  portuguese: { code: 'pt-BR', voice: 'pt-BR-Neural2-A', prefix: 'pt' },
+  german:     { code: 'de-DE', voice: 'de-DE-Neural2-G', prefix: 'de' },
+  dutch:      { code: 'nl-NL', voice: 'nl-NL-Wavenet-F', prefix: 'nl' },  // no Neural2 for Dutch
+  swedish:    { code: 'sv-SE', voice: 'sv-SE-Wavenet-A', prefix: 'sv' },  // no Neural2 for Swedish
+  turkish:    { code: 'tr-TR', voice: 'tr-TR-Wavenet-A', prefix: 'tr' },  // no Neural2 for Turkish
+  hindi:      { code: 'hi-IN', voice: 'hi-IN-Neural2-A', prefix: 'hi' },
+  russian:    { code: 'ru-RU', voice: 'ru-RU-Wavenet-A', prefix: 'ru' },  // no Neural2 for Russian
 };
 
 const args = process.argv.slice(2);

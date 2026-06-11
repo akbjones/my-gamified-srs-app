@@ -7,20 +7,25 @@ a different script or voice.
 
 | Language    | Voice                              | Provider | Script                                |
 |-------------|------------------------------------|----------|---------------------------------------|
-| Spanish     | `es-US-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=es`        |
-| Italian     | `it-IT-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=it`        |
-| French      | `fr-FR-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=fr`        |
-| Portuguese  | `pt-BR-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=pt`        |
-| German      | `de-DE-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=de`        |
-| Dutch       | `nl-NL-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=nl`        |
-| Swedish     | `sv-SE-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=sv`        |
-| Turkish     | `tr-TR-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=tr`        |
-| Hindi       | `hi-IN-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=hi`        |
-| Russian     | `ru-RU-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=ru`        |
+| Spanish     | `es-US-Neural2-A`                  | Google   | `generate-audio.cjs --lang=es`        |
+| Italian     | `it-IT-Neural2-A`                  | Google   | `generate-audio.cjs --lang=it`        |
+| French      | `fr-FR-Neural2-F`                  | Google   | `generate-audio.cjs --lang=fr`        |
+| Portuguese  | `pt-BR-Neural2-A`                  | Google   | `generate-audio.cjs --lang=pt`        |
+| German      | `de-DE-Neural2-G`                  | Google   | `generate-audio.cjs --lang=de`        |
+| Dutch       | `nl-NL-Wavenet-F`                  | Google   | `generate-audio.cjs --lang=nl`        |
+| Swedish     | `sv-SE-Wavenet-A`                  | Google   | `generate-audio.cjs --lang=sv`        |
+| Turkish     | `tr-TR-Wavenet-A`                  | Google   | `generate-audio.cjs --lang=tr`        |
+| Hindi       | `hi-IN-Neural2-A`                  | Google   | `generate-audio.cjs --lang=hi`        |
+| Russian     | `ru-RU-Wavenet-A`                  | Google   | `generate-audio.cjs --lang=ru`        |
 | **Welsh**   | `cy-GB-NiaNeural`                  | **Azure / Edge TTS** | `regen-welsh-inconsistent.py` |
 
-All voices are **female** for cross-language consistency. The Aoede voice
-is Google Chirp 3 HD's stock female across all languages we support.
+All voices are **female and language-NATIVE**. Earlier we tried
+`Chirp3-HD-Aoede` as a single cross-language voice for cosmetic
+consistency, but Aoede is a **multilingual** voice that mispronounces
+non-English languages — most catastrophically Hindi (Aoede could not
+read Devanagari, producing ~half-length jumbled audio). The fix is
+language-native Neural2/Wavenet voices, which sound correct in each
+target language even though the voice name varies across languages.
 
 ## Why Welsh is different
 

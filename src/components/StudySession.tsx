@@ -96,8 +96,12 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
       prevCardId.current = card.id;
       if (autoPlayAudio) {
         playCardAudio(card.audio, card.target, session.language, audioSpeed, googleTtsApiKey);
+      } else {
+        // With autoplay off, preload the current card so the first manual
+        // Play click is instant too.
+        preloadCardAudio(card.audio);
       }
-      // Preload the next 2 cards' audio in the background so the user
+      // Always preload the next 2 cards' audio in the background so the user
       // hears playback instantly when they navigate forward.
       for (let lookahead = 1; lookahead <= 2; lookahead++) {
         const next = session.queue[session.currentIndex + lookahead];

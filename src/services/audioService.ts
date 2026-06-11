@@ -10,6 +10,73 @@ let playToken = 0;
 // In-memory cache for Google TTS audio blobs (avoids re-fetching)
 const ttsCache = new Map<string, string>(); // key → objectURL
 
+// ─── Pre-recorded MP3 cache ─────────────────────────────────────
+// Card audio is preloaded ahead of time so the user hears playback
+// instantly on card change instead of waiting for a fresh fetch.
+// Key: audio filename (e.g. "es-37.mp3"); value: { blob URL, mtime touch }.
+// LRU-ish bounded — when full, drop the oldest non-pending entry.
+const MP3_CACHE_MAX = 24;
+type Mp3CacheEntry = { url: string; touched: number };
+const mp3Cache = new Map<string, Mp3CacheEntry>();
+// In-flight fetches to dedupe concurrent preload+play requests
+const mp3InFlight = new Map<string, Promise<string>>();
+
+function getAudioBase(): string {
+  return (import.meta.env.VITE_AUDIO_BASE_URL || '/quest-audio').replace(/\/$/, '');
+}
+
+function fetchAndCacheMp3(audioFile: string): Promise<string> {
+  const cached = mp3Cache.get(audioFile);
+  if (cached) {
+    cached.touched = Date.now();
+    return Promise.resolve(cached.url);
+  }
+  const existing = mp3InFlight.get(audioFile);
+  if (existing) return existing;
+
+  const url = `${getAudioBase()}/${audioFile}`;
+  const promise = (async () => {
+    const r = await fetch(url);
+    if (!r.ok) throw new Error(`fetch ${r.status} for ${audioFile}`);
+    const blob = await r.blob();
+    const objectUrl = URL.createObjectURL(blob);
+    // Evict oldest if full
+    if (mp3Cache.size >= MP3_CACHE_MAX) {
+      let oldestKey: string | null = null;
+      let oldestTime = Infinity;
+      for (const [k, v] of mp3Cache) {
+        if (v.touched < oldestTime) {
+          oldestTime = v.touched;
+          oldestKey = k;
+        }
+      }
+      if (oldestKey) {
+        const dropped = mp3Cache.get(oldestKey);
+        if (dropped) URL.revokeObjectURL(dropped.url);
+        mp3Cache.delete(oldestKey);
+      }
+    }
+    mp3Cache.set(audioFile, { url: objectUrl, touched: Date.now() });
+    return objectUrl;
+  })();
+  mp3InFlight.set(audioFile, promise);
+  promise.finally(() => mp3InFlight.delete(audioFile));
+  return promise;
+}
+
+/**
+ * Preload audio for an upcoming card. Fire-and-forget — failures are
+ * silent. Call this when you know which cards the user is likely to
+ * hit next so the playback is instant when they get there.
+ */
+export const preloadCardAudio = (audioFile: string | undefined): void => {
+  if (!audioFile) return;
+  if (mp3Cache.has(audioFile) || mp3InFlight.has(audioFile)) return;
+  fetchAndCacheMp3(audioFile).catch(() => {
+    // Silent: preloading failures don't matter; live fetch will retry.
+  });
+};
+
 export const stopAudio = (): void => {
   if (currentAudio) {
     currentAudio.pause();
@@ -165,43 +232,33 @@ export const playCardAudio = async (
   //      time out and fall through to browser TTS, which on systems without
   //      a matching voice is just silence.
   if (audioFile) {
-    // VITE_AUDIO_BASE_URL: set at build time when audio is hosted elsewhere
-    // (e.g. Cloudflare R2). Falls back to relative `/quest-audio` for local dev
-    // where files are served from public/quest-audio.
-    const AUDIO_BASE = (import.meta.env.VITE_AUDIO_BASE_URL || '/quest-audio').replace(/\/$/, '');
-    const url = `${AUDIO_BASE}/${audioFile}`;
-    let objectUrl: string | null = null;
     // Each call gets a token; if a newer call comes in (rapid card changes,
     // user clicks Listen mid-autoplay), the older call's `currentAudio !==
     // audio` check will skip play() and the rejection-from-pause noise.
     const myToken = ++playToken;
+    let objectUrl: string | null = null;
 
-    // Retry once if the first fetch fails – this happens when the CDN is
-    // briefly cold or the user just unlocked the screen on mobile. Without
-    // a retry, the user used to hear robotic browser TTS as a fallback,
-    // then on the next card the real voice came back.
-    const fetchWithRetry = async (): Promise<Response> => {
+    // Try the preload cache first. If hit, playback is instant (no fetch).
+    // Falls through to fetchAndCacheMp3 on miss (which itself retries via
+    // the existing logic — but we replicate the 350ms retry on miss only).
+    const fetchWithCache = async (): Promise<string> => {
       try {
-        const r = await fetch(url);
-        if (!r.ok) throw new Error(`fetch ${r.status} for ${audioFile}`);
-        return r;
+        return await fetchAndCacheMp3(audioFile);
       } catch (firstErr) {
-        // Quick retry, but only if we haven't been superseded.
         if (myToken !== playToken) throw firstErr;
         await new Promise(res => setTimeout(res, 350));
         if (myToken !== playToken) throw firstErr;
-        const r = await fetch(url);
-        if (!r.ok) throw new Error(`retry fetch ${r.status} for ${audioFile}`);
-        return r;
+        return await fetchAndCacheMp3(audioFile);
       }
     };
 
     try {
-      const resp = await fetchWithRetry();
-      const blob = await resp.blob();
+      const cachedUrl = await fetchWithCache();
       // If a newer playCardAudio call has superseded this one, bail quietly.
       if (myToken !== playToken) return;
-      objectUrl = URL.createObjectURL(blob);
+      // Use the cached URL directly — do NOT revoke it in cleanup, since the
+      // cache owns the URL lifecycle.
+      objectUrl = cachedUrl;
       const audio = new Audio(objectUrl);
       // Pre-recorded files are generated at 0.95x speaking rate, so adjust
       // playback rate to compensate (avoid double-slowdown)
@@ -214,24 +271,19 @@ export const playCardAudio = async (
       // advance (1800ms after START, not END) and made other callers think
       // playback was done before it actually was. Now we await full duration,
       // matching the Google TTS path.
-      const finalUrl = objectUrl;
+      // NOTE: do not revoke objectUrl on cleanup — the mp3 cache owns its
+      // lifecycle (eviction releases the URL). Revoking here would break
+      // subsequent cache hits for the same file.
       return new Promise<void>((resolve, reject) => {
-        const cleanup = () => {
-          if (finalUrl) URL.revokeObjectURL(finalUrl);
-          objectUrl = null;
-        };
-        audio.addEventListener('ended', () => { cleanup(); resolve(); }, { once: true });
-        audio.addEventListener('error', () => { cleanup(); reject(new Error('audio playback error')); }, { once: true });
-        // pause()-on-stopAudio fires `pause` not `ended`. If a newer call
-        // supersedes us, currentAudio gets swapped out – bail on the pause
-        // event so the caller's await doesn't hang.
+        audio.addEventListener('ended', () => { resolve(); }, { once: true });
+        audio.addEventListener('error', () => { reject(new Error('audio playback error')); }, { once: true });
         audio.addEventListener('pause', () => {
-          if (currentAudio !== audio) { cleanup(); resolve(); }
+          if (currentAudio !== audio) { resolve(); }
         }, { once: true });
-        audio.play().catch(err => { cleanup(); reject(err); });
+        audio.play().catch(err => { reject(err); });
       });
     } catch (err) {
-      if (objectUrl) URL.revokeObjectURL(objectUrl);
+      // Don't revoke — cache owns the URL.
       // If we got superseded, don't clobber the current audio or fall through.
       if (myToken !== playToken) return;
       currentAudio = null;

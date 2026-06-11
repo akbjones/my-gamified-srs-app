@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Play, Pause, SkipForward, SkipBack, X, Volume2 } from 'lucide-react';
 import { QuestCard, Language, LANGUAGE_CONFIG } from '../types';
-import { playCardAudio, stopAudio } from '../services/audioService';
+import { playCardAudio, stopAudio, preloadCardAudio } from '../services/audioService';
 import type { AudioSpeed } from '../services/storageService';
 
 interface ListenModeProps {
@@ -58,6 +58,11 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
   const playCurrent = useCallback(async () => {
     if (!card) return;
     playingForCardId.current = card.id;
+    // Preload the next 2 cards so playback is instant after the 1.8s dwell.
+    for (let lookahead = 1; lookahead <= 2; lookahead++) {
+      const next = playList[(idx + lookahead) % playList.length];
+      if (next?.audio) preloadCardAudio(next.audio);
+    }
     try {
       await playCardAudio(card.audio, card.target, language, audioSpeed, googleTtsApiKey);
       // playCardAudio resolves when audio finishes. Move to the next card

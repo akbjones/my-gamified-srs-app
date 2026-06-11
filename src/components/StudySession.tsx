@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { QuestCard, SessionState, Language, ChallengeMode } from '../types';
 import { Volume2, BookOpen, BookText, AlertTriangle, Swords, Zap, Star } from 'lucide-react';
-import { playCardAudio, stopAudio } from '../services/audioService';
+import { playCardAudio, stopAudio, preloadCardAudio } from '../services/audioService';
 import { lookupEtymology } from '../services/etymologyService';
 import {
   toggleGrammarFavorite, isGrammarFavorited,
@@ -97,8 +97,14 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
       if (autoPlayAudio) {
         playCardAudio(card.audio, card.target, session.language, audioSpeed, googleTtsApiKey);
       }
+      // Preload the next 2 cards' audio in the background so the user
+      // hears playback instantly when they navigate forward.
+      for (let lookahead = 1; lookahead <= 2; lookahead++) {
+        const next = session.queue[session.currentIndex + lookahead];
+        if (next?.audio) preloadCardAudio(next.audio);
+      }
     }
-  }, [card, session.language, autoPlayAudio, audioSpeed, googleTtsApiKey]);
+  }, [card, session.language, autoPlayAudio, audioSpeed, googleTtsApiKey, session.queue, session.currentIndex]);
 
   // Keyboard shortcuts: 1=Again, 2=Hard, 3=Good, 4=Easy, Space=flip
   // MUST be defined here (before any early return) to satisfy Rules of Hooks

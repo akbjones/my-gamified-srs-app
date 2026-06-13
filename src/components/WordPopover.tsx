@@ -399,6 +399,22 @@ const PopoverPortal: React.FC<{
     return out;
   }, [conjTable, normalizedToken]);
 
+  // Locate the matched form's exact tense + person so the "on this card" banner
+  // can spell it out for the user before they even read the table.
+  const matchedFormInfo = React.useMemo(() => {
+    if (!conjTable) return null;
+    const labels = PERSON_LABELS[language] || PERSON_LABELS.spanish;
+    for (const [tense, forms] of Object.entries(conjTable.tenses)) {
+      const idx = forms.findIndex(f => f && f !== '-' && normalize(f) === normalizedToken);
+      if (idx !== -1) {
+        const rawTense = TENSE_LABELS[tense] || tense;
+        const tenseShort = rawTense.replace(/\s*\([^)]+\)\s*$/, '').trim().toLowerCase();
+        return { tense, tenseShort, form: forms[idx], personLabel: labels[idx] };
+      }
+    }
+    return null;
+  }, [conjTable, normalizedToken, language]);
+
   // When the modal opens for a new word, auto-pick the first tense that
   // contains the matched form. Only fires once per modal-open – if the
   // user then taps a different tab, we don't fight them.
@@ -618,7 +634,7 @@ const PopoverPortal: React.FC<{
           onClick={(e) => { e.stopPropagation(); setShowConj(false); }}
         >
           <div
-            className="bg-[var(--bg-card)] w-full sm:max-w-md sm:rounded-3xl shadow-2xl border border-[var(--border-color)] overflow-hidden max-h-screen sm:max-h-[88vh] flex flex-col"
+            className="bg-[var(--bg-card)] w-full sm:max-w-xl sm:rounded-3xl shadow-2xl border border-[var(--border-color)] overflow-hidden max-h-screen sm:max-h-[88vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Header – compact on mobile, more breathing room on desktop.
@@ -652,11 +668,31 @@ const PopoverPortal: React.FC<{
               </div>
             </div>
 
+            {/* "On this card" banner — spells out the matched form + tense + person
+                before the user has to scan the table. Only shown when the conjugation
+                engine actually found the clicked form somewhere in the table. */}
+            {matchedFormInfo && (
+              <div className="px-5 py-3 sm:px-6 sm:py-4 border-b border-[var(--border-color)] bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent">
+                <div className="flex items-center gap-3">
+                  <div className="w-1 h-10 sm:h-12 bg-amber-500 rounded-full shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <div className="text-[10px] sm:text-xs font-bold text-amber-500 uppercase tracking-[0.18em] mb-0.5">
+                      Used on this card
+                    </div>
+                    <div className="text-base sm:text-lg leading-tight">
+                      <span className="font-bold text-[var(--text-primary)]">{matchedFormInfo.form}</span>
+                      <span className="text-[var(--text-muted)] text-sm sm:text-base"> · {matchedFormInfo.personLabel} · {matchedFormInfo.tenseShort}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Tense tabs – wrap onto multiple rows so all are visible on mobile.
                 Native name + English translation in parens (smaller, dimmed).
-                A tiny blue dot indicates that this tense contains the clicked form. */}
-            <div className="px-4 py-3 border-b border-[var(--border-color)]">
-              <div className="flex flex-wrap gap-1.5">
+                An amber dot indicates that this tense contains the clicked form. */}
+            <div className="px-4 py-3 sm:px-5 sm:py-4 border-b border-[var(--border-color)]">
+              <div className="flex flex-wrap gap-2">
                 {Object.keys(conjTable.tenses).map(tense => {
                   const fullLabel = TENSE_LABELS[tense] || tense;
                   const m = fullLabel.match(/^(.+?)\s*\(([^)]+)\)\s*$/);
@@ -668,7 +704,7 @@ const PopoverPortal: React.FC<{
                     <button
                       key={tense}
                       onClick={() => { setConjTense(tense); setUserPickedTense(true); }}
-                      className={`relative px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wide transition-all whitespace-nowrap ${
+                      className={`relative px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-lg text-xs sm:text-sm font-bold uppercase tracking-wide transition-all whitespace-nowrap ${
                         isActive
                           ? 'bg-blue-500 text-white shadow-md shadow-blue-500/30'
                           : 'bg-[var(--bg-inset)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] hover:text-[var(--text-primary)]'
@@ -676,17 +712,15 @@ const PopoverPortal: React.FC<{
                     >
                       {native}
                       {english && (
-                        <span className="ml-1 text-[9px] font-medium opacity-70">({english})</span>
+                        <span className="ml-1.5 text-[10px] sm:text-xs font-medium opacity-70">({english})</span>
                       )}
-                      {/* Match indicator – small dot in the top-right corner.
-                          On the active tab it sits over the blue bg so we use white;
-                          on inactive tabs it stays blue. */}
+                      {/* Match indicator – amber dot in the top-right corner so it
+                          stays distinct from the active-tab blue. Ring matches the
+                          card bg so the dot reads as a floating badge, not blended. */}
                       {hasMatch && (
                         <span
                           aria-label="this card's form is in this tense"
-                          className={`absolute top-1 right-1 w-1.5 h-1.5 rounded-full ${
-                            isActive ? 'bg-white' : 'bg-blue-500'
-                          }`}
+                          className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-amber-500 ring-2 ring-[var(--bg-card)]"
                         />
                       )}
                     </button>
@@ -709,25 +743,25 @@ const PopoverPortal: React.FC<{
                     return (
                       <div
                         key={i}
-                        className={`flex items-center gap-3 px-3 py-2 sm:px-4 sm:py-3 rounded-xl transition-colors ${
+                        className={`flex items-center gap-3 px-3 py-2.5 sm:px-4 sm:py-3.5 rounded-xl transition-colors ${
                           isMatchedForm
-                            ? 'bg-blue-500/15 ring-1 ring-blue-500/40 shadow-sm'
+                            ? 'bg-amber-500/15 ring-2 ring-amber-500/60 shadow-lg shadow-amber-500/5 border-l-4 border-amber-500'
                             : 'hover:bg-[var(--bg-inset)]/50'
                         }`}
                       >
-                        <span className={`text-[11px] sm:text-xs uppercase tracking-wider w-16 sm:w-20 text-right shrink-0 ${
-                          isMatchedForm ? 'text-blue-500/80 font-bold' : 'text-[var(--text-muted)] font-semibold'
+                        <span className={`text-xs sm:text-sm uppercase tracking-wider w-16 sm:w-24 text-right shrink-0 ${
+                          isMatchedForm ? 'text-amber-500 font-extrabold' : 'text-[var(--text-muted)] font-semibold'
                         }`}>
                           {personLabel}
                         </span>
-                        <span className={`text-base sm:text-lg font-semibold tracking-tight ${
-                          isMatchedForm ? 'text-blue-500' : 'text-[var(--text-primary)]'
+                        <span className={`text-lg sm:text-xl font-bold tracking-tight ${
+                          isMatchedForm ? 'text-amber-500' : 'text-[var(--text-primary)]'
                         }`}>
                           {form}
                         </span>
                         {isMatchedForm && (
-                          <span className="ml-auto text-[9px] font-bold uppercase tracking-wider text-blue-500 bg-blue-500/15 px-1.5 py-0.5 rounded">
-                            this card
+                          <span className="ml-auto text-[10px] sm:text-xs font-bold uppercase tracking-wider text-amber-500 bg-amber-500/20 px-2 py-1 rounded-md whitespace-nowrap">
+                            ← on this card
                           </span>
                         )}
                       </div>

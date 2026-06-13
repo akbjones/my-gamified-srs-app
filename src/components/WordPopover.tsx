@@ -383,21 +383,41 @@ const PopoverPortal: React.FC<{
   let conjTable: ConjugationTable | null = null;
   try { conjTable = conjugation(); } catch (e) { console.error('Conjugation error for', rawToken, ':', e); }
 
-  // Normalize for comparison: lowercase, strip whitespace and accents.
-  // Tolerates "j'écris" / "ho mangiato" / regular spacing in compound forms.
-  const normalize = (s: string) => s.toLowerCase().replace(/\s+/g, '').normalize('NFD').replace(/[̀-ͯ]/g, '');
-  const normalizedToken = normalize(rawToken);
+  // Two normalize layers. Strict (lowercase + trim) preserves diacritics so we
+  // can distinguish "tem" (3sg, no accent) from "têm" (3pl, circumflex) in
+  // Portuguese — same letters, different forms. Loose strips accents as a
+  // tolerant fallback for cases like a user tapping "ecris" when the table
+  // has "j'écris".
+  const strict = (s: string) => s.toLowerCase().replace(/\s+/g, '');
+  const loose  = (s: string) => strict(s).normalize('NFD').replace(/[̀-ͯ]/g, '');
+  const normalize = loose;        // keep available for any out-of-block callers
+  const strictToken = strict(rawToken);
+  const looseToken  = loose(rawToken);
+  const normalizedToken = looseToken;
+
+  // For each tense, the exact form-row index the user tapped — -1 if no match.
+  // Strict pass first (preserves accents) so "tem" doesn't double-highlight as
+  // both "ele tem" and "eles têm". Falls back to loose only if strict misses.
+  const matchedIndexPerTense = React.useMemo(() => {
+    const out: Record<string, number> = {};
+    if (!conjTable) return out;
+    for (const [tense, forms] of Object.entries(conjTable.tenses)) {
+      let idx = forms.findIndex(f => f && f !== '-' && strict(f) === strictToken);
+      if (idx === -1) {
+        idx = forms.findIndex(f => f && f !== '-' && loose(f) === looseToken);
+      }
+      out[tense] = idx;
+    }
+    return out;
+  }, [conjTable, strictToken, looseToken]);
 
   // For each tense, record whether it contains the matched form.
   // This drives both the tab indicator (a small dot) and the auto-open tense.
   const tenseHasMatch = React.useMemo(() => {
     const out: Record<string, boolean> = {};
-    if (!conjTable) return out;
-    for (const [tense, forms] of Object.entries(conjTable.tenses)) {
-      out[tense] = forms.some(f => f && f !== '-' && normalize(f) === normalizedToken);
-    }
+    for (const [tense, idx] of Object.entries(matchedIndexPerTense)) out[tense] = idx !== -1;
     return out;
-  }, [conjTable, normalizedToken]);
+  }, [matchedIndexPerTense]);
 
   // Locate the matched form's exact tense + person so the "on this card" banner
   // can spell it out for the user before they even read the table.
@@ -405,8 +425,8 @@ const PopoverPortal: React.FC<{
     if (!conjTable) return null;
     const labels = PERSON_LABELS[language] || PERSON_LABELS.spanish;
     for (const [tense, forms] of Object.entries(conjTable.tenses)) {
-      const idx = forms.findIndex(f => f && f !== '-' && normalize(f) === normalizedToken);
-      if (idx !== -1) {
+      const idx = matchedIndexPerTense[tense];
+      if (idx !== undefined && idx !== -1) {
         const rawTense = TENSE_LABELS[tense] || tense;
         const tenseShort = rawTense.replace(/\s*\([^)]+\)\s*$/, '').trim().toLowerCase();
         return { tense, tenseShort, form: forms[idx], personLabel: labels[idx] };
@@ -739,7 +759,7 @@ const PopoverPortal: React.FC<{
                       language === 'french' && i === 0 && /^[aeéèêëiîïoôuûùüyh]/i.test(form)
                         ? "j'"
                         : personLabels[i];
-                    const isMatchedForm = form && form !== '-' && normalize(form) === normalizedToken;
+                    const isMatchedForm = i === matchedIndexPerTense[conjTense];
                     return (
                       <div
                         key={i}

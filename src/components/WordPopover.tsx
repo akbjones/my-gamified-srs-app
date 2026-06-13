@@ -647,7 +647,7 @@ const PopoverPortal: React.FC<{
               >
                 <CloseIcon size={20} className="text-[var(--text-secondary)]" />
               </button>
-              <div className="text-[9px] sm:text-[10px] font-bold text-blue-500 uppercase tracking-[0.2em] mb-1">
+              <div className="text-xs sm:text-sm font-bold text-blue-500 uppercase tracking-[0.2em] mb-1">
                 Conjugation
               </div>
               <div className="flex items-baseline gap-2 flex-wrap pr-10">
@@ -655,7 +655,7 @@ const PopoverPortal: React.FC<{
                   {conjTable.infinitive}
                 </div>
                 {conjTable.isReflexive && (
-                  <span className="text-[9px] font-bold uppercase tracking-wider text-purple-500 bg-purple-500/10 px-2 py-0.5 rounded-md">
+                  <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-purple-500 bg-purple-500/10 px-2 py-0.5 rounded-md">
                     Reflexive
                   </span>
                 )}
@@ -676,12 +676,12 @@ const PopoverPortal: React.FC<{
                 <div className="flex items-center gap-3">
                   <div className="w-1 h-10 sm:h-12 bg-amber-500 rounded-full shrink-0" />
                   <div className="flex-1 min-w-0">
-                    <div className="text-[10px] sm:text-xs font-bold text-amber-500 uppercase tracking-[0.18em] mb-0.5">
+                    <div className="text-xs sm:text-sm font-bold text-amber-500 uppercase tracking-[0.18em] mb-0.5">
                       Used on this card
                     </div>
                     <div className="text-base sm:text-lg leading-tight">
                       <span className="font-bold text-[var(--text-primary)]">{matchedFormInfo.form}</span>
-                      <span className="text-[var(--text-muted)] text-sm sm:text-base"> · {matchedFormInfo.personLabel} · {matchedFormInfo.tenseShort}</span>
+                      <span className="text-[var(--text-muted)] text-xs sm:text-sm"> · {matchedFormInfo.personLabel} · {matchedFormInfo.tenseShort}</span>
                     </div>
                   </div>
                 </div>
@@ -712,7 +712,7 @@ const PopoverPortal: React.FC<{
                     >
                       {native}
                       {english && (
-                        <span className="ml-1.5 text-[10px] sm:text-xs font-medium opacity-70">({english})</span>
+                        <span className="ml-1.5 text-xs sm:text-sm font-medium opacity-70">({english})</span>
                       )}
                       {/* Match indicator – amber dot in the top-right corner so it
                           stays distinct from the active-tab blue. Ring matches the
@@ -754,13 +754,13 @@ const PopoverPortal: React.FC<{
                         }`}>
                           {personLabel}
                         </span>
-                        <span className={`text-lg sm:text-xl font-bold tracking-tight ${
+                        <span className={`text-base sm:text-lg font-bold tracking-tight ${
                           isMatchedForm ? 'text-amber-500' : 'text-[var(--text-primary)]'
                         }`}>
                           {form}
                         </span>
                         {isMatchedForm && (
-                          <span className="ml-auto text-[10px] sm:text-xs font-bold uppercase tracking-wider text-amber-500 bg-amber-500/20 px-2 py-1 rounded-md whitespace-nowrap">
+                          <span className="ml-auto text-xs sm:text-sm font-bold uppercase tracking-wider text-amber-500 bg-amber-500/20 px-2 py-1 rounded-md whitespace-nowrap">
                             ← on this card
                           </span>
                         )}

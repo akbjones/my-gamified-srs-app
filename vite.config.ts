@@ -95,7 +95,8 @@ export default defineConfig({
               // Old cache name is auto-evicted; users will re-download
               // only the files they actually study (maxEntries cap below).
               // v2 = 2026-06-11 Welsh fix + 10-language Chirp3-HD upgrade
-              cacheName: 'audio-cache-v3',
+              // v4 = 2026-06-13 force-evict stale v3 entries after native-voice regen
+              cacheName: 'audio-cache-v4',
               expiration: {
                 maxEntries: 500,
                 maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days

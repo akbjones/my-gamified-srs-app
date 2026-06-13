@@ -25,6 +25,11 @@ function getAudioBase(): string {
   return (import.meta.env.VITE_AUDIO_BASE_URL || '/quest-audio').replace(/\/$/, '');
 }
 
+// Bump whenever audio content changes — appended as ?v=N to every audio
+// URL so CDN edge nodes serving stale bytes for unversioned URLs can't hit.
+// Pair with audio-cache-vN bump in vite.config.ts.
+const AUDIO_VERSION = '4';
+
 function fetchAndCacheMp3(audioFile: string): Promise<string> {
   const cached = mp3Cache.get(audioFile);
   if (cached) {
@@ -34,7 +39,7 @@ function fetchAndCacheMp3(audioFile: string): Promise<string> {
   const existing = mp3InFlight.get(audioFile);
   if (existing) return existing;
 
-  const url = `${getAudioBase()}/${audioFile}`;
+  const url = `${getAudioBase()}/${audioFile}?v=${AUDIO_VERSION}`;
   const promise = (async () => {
     const r = await fetch(url);
     if (!r.ok) throw new Error(`fetch ${r.status} for ${audioFile}`);

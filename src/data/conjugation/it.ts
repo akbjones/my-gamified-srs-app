@@ -193,16 +193,14 @@ const IRREGULAR_PARTICIPLES: Record<string, string> = {
   succedere: 'successo', concludere: 'concluso', proporre: 'proposto',
   esporre: 'esposto', comporre: 'composto', supporre: 'supposto',
   comprendere: 'compreso', prevedere: 'previsto', riprendere: 'ripreso',
-  rispondere2: 'risposto', sorridere: 'sorriso', ridere: 'riso',
+  sorridere: 'sorriso', ridere: 'riso',
   dividere: 'diviso', muovere: 'mosso', smuovere: 'smosso', sciogliere: 'sciolto',
   raccogliere: 'raccolto', accogliere: 'accolto', porre: 'posto',
-  apparire: 'apparso', comparire: 'comparso', sparire: 'sparito',
-  scomparire: 'scomparso', morsi: 'morso', mordere: 'morso',
+  apparire: 'apparso', comparire: 'comparso',
+  scomparire: 'scomparso', mordere: 'morso',
   giungere: 'giunto', raggiungere: 'raggiunto', dipendere: 'dipeso',
   attendere: 'atteso', estendere: 'esteso', sospendere: 'sospeso',
-  pretendere: 'preteso', tendere: 'teso', accorgersi: 'accorto',
-  // Common -ire irregulars
-  morire: 'morto',
+  pretendere: 'preteso', tendere: 'teso',
 };
 
 const ESSERE_PRESENT = ['sono', 'sei', 'è', 'siamo', 'siete', 'sono'];

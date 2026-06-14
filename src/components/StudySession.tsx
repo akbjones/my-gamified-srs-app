@@ -59,7 +59,7 @@ const GRADE_CONFIG = {
   AGAIN: { color: 'text-red-500', bg: 'bg-red-500/15 hover:bg-red-500/25 active:bg-red-500/35', border: 'border-red-500/60' },
   HARD:  { color: 'text-orange-500', bg: 'bg-orange-500/15 hover:bg-orange-500/25 active:bg-orange-500/35', border: 'border-orange-500/60' },
   GOOD:  { color: 'text-emerald-500', bg: 'bg-emerald-500/15 hover:bg-emerald-500/25 active:bg-emerald-500/35', border: 'border-emerald-500/60' },
-  EASY:  { color: 'text-[var(--accent)]', bg: 'bg-[var(--accent)]/15 hover:bg-[var(--accent)]/25 active:bg-[var(--accent)]/35', border: 'border-[var(--accent)]/60' },
+  EASY:  { color: 'text-violet-500', bg: 'bg-violet-500/15 hover:bg-violet-500/25 active:bg-violet-500/35', border: 'border-violet-500/60' },
 } as const;
 
 const FIRST_WOW_KEY = 'first-session-wow-shown';
@@ -634,7 +634,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                     className={`py-5 rounded-xl bg-[var(--bg-card)] border ${cfg.border} ${cfg.bg} ${cfg.color} active:scale-95 transition-all`}
                   >
                     <div className="text-base font-black uppercase tracking-wide">{rating}</div>
-                    <div className="text-[11px] text-[var(--text-muted)] font-semibold mt-0.5">{getIntervalHint(rating)}</div>
+                    <div className="text-xs text-[var(--text-secondary)] font-bold mt-0.5">{getIntervalHint(rating)}</div>
                   </button>
                 );
               })}

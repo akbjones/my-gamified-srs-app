@@ -70,6 +70,36 @@ const PERSON_LABELS: Record<string, string[]> = {
   russian: ['я', 'ты', 'он/она', 'мы', 'вы', 'они'],
 };
 
+// Pronoun → person index. Used to disambiguate ambiguous form matches
+// using sentence context. E.g. German "spielen" matches both wir (3) and
+// sie (5) — finding "wir" in the sentence picks 3; finding nothing picks
+// 3rd person by default (since "die Kinder spielen" without an explicit
+// "sie" is still 3pl, not 1pl).
+//
+// Ambiguous pronouns (German "sie" = she/they/Sie-formal, Dutch "ze"
+// = she/they) are deliberately omitted — better to fall back to the
+// 3rd-person default than to guess wrong.
+const PRONOUN_INDEX: Record<string, Record<string, number>> = {
+  spanish: { yo: 0, 'tú': 1, tu: 1, 'él': 2, ella: 2, usted: 2, ud: 2, nosotros: 3, nosotras: 3, vosotros: 4, vosotras: 4, ellos: 5, ellas: 5, ustedes: 5, uds: 5 },
+  italian: { io: 0, tu: 1, lui: 2, lei: 2, noi: 3, voi: 4, loro: 5 },
+  french: { je: 0, "j'": 0, tu: 1, il: 2, elle: 2, on: 2, nous: 3, vous: 4, ils: 5, elles: 5 },
+  portuguese: { eu: 0, tu: 1, ele: 2, ela: 2, 'você': 2, voce: 2, vc: 2, 'nós': 3, nos: 3, 'vós': 4, vos: 4, eles: 5, elas: 5, 'vocês': 5, voces: 5 },
+  german: { ich: 0, du: 1, er: 2, es: 2, wir: 3, ihr: 4 },
+  dutch: { ik: 0, jij: 1, je: 1, hij: 2, het: 2, wij: 3, we: 3, jullie: 4 },
+  swedish: { jag: 0, du: 1, han: 2, hon: 2, den: 2, det: 2, vi: 3, ni: 4, de: 5, dom: 5 },
+  welsh: { fi: 0, ti: 1, fe: 2, hi: 2, ni: 3, chi: 4, nhw: 5 },
+  hindi: { 'मैं': 0, 'तू': 1, 'वह': 2, 'यह': 2, 'हम': 3, 'तुम': 4, 'आप': 5, 'वे': 5 },
+  turkish: { ben: 0, sen: 1, o: 2, biz: 3, siz: 4, onlar: 5 },
+  russian: { 'я': 0, 'ты': 1, 'он': 2, 'она': 2, 'мы': 3, 'вы': 4, 'они': 5 },
+};
+
+// Tie-break order when multiple form rows match and no pronoun in context
+// resolves it. 3rd-person first because cards typically describe others
+// ("die Kinder spielen", "ele tem") without an explicit pronoun. 1st/2nd
+// person always require an explicit pronoun in most languages — if no
+// pronoun is present, those persons are unlikely intent.
+const PERSON_TIEBREAK = [2, 5, 3, 0, 1, 4];
+
 // Fallback tense labels for legacy keys. Each conjugation engine now provides
 // its own localized labels (e.g. "Presente (Present)") as tense object keys,
 // so these only apply if a raw English key is encountered.
@@ -396,20 +426,60 @@ const PopoverPortal: React.FC<{
   const normalizedToken = looseToken;
 
   // For each tense, the exact form-row index the user tapped — -1 if no match.
-  // Strict pass first (preserves accents) so "tem" doesn't double-highlight as
-  // both "ele tem" and "eles têm". Falls back to loose only if strict misses.
+  //
+  //   1. Strict pass collects ALL rows whose form equals the tapped token
+  //      (case-folded, accents preserved — so "tem" doesn't match "têm").
+  //   2. If only one strict match, use it.
+  //   3. If multiple (e.g. German "spielen" = wir/sie/Sie share the form),
+  //      look for a pronoun in the sentence that points at one of them.
+  //   4. Otherwise tie-break by PERSON_TIEBREAK (3sg/3pl preferred over 1/2
+  //      person, because cards without an explicit pronoun usually describe
+  //      a 3rd-person subject — "die Kinder spielen", not "we play").
+  //   5. If no strict match at all, repeat with loose (accent-stripped) match
+  //      as a tolerant fallback.
   const matchedIndexPerTense = React.useMemo(() => {
     const out: Record<string, number> = {};
     if (!conjTable) return out;
+
+    // Detect pronouns nearby in the sentence — these break ties when the form
+    // matches multiple person rows.
+    const pronouns = PRONOUN_INDEX[language] || {};
+    const tokens = sentence
+      .toLowerCase()
+      .replace(/[.,!?;:""''«»()¿¡]/g, '')
+      .split(/\s+/)
+      .filter(Boolean);
+    const personsInContext = new Set<number>();
+    for (const w of tokens) {
+      if (w in pronouns) personsInContext.add(pronouns[w]);
+    }
+
+    const pickBest = (matches: number[]): number => {
+      if (matches.length === 0) return -1;
+      if (matches.length === 1) return matches[0];
+      const ctxHit = matches.find(i => personsInContext.has(i));
+      if (ctxHit !== undefined) return ctxHit;
+      for (const p of PERSON_TIEBREAK) if (matches.includes(p)) return p;
+      return matches[0];
+    };
+
     for (const [tense, forms] of Object.entries(conjTable.tenses)) {
-      let idx = forms.findIndex(f => f && f !== '-' && strict(f) === strictToken);
-      if (idx === -1) {
-        idx = forms.findIndex(f => f && f !== '-' && loose(f) === looseToken);
+      const strictMatches: number[] = [];
+      forms.forEach((f, i) => {
+        if (f && f !== '-' && strict(f) === strictToken) strictMatches.push(i);
+      });
+      if (strictMatches.length > 0) {
+        out[tense] = pickBest(strictMatches);
+        continue;
       }
-      out[tense] = idx;
+      const looseMatches: number[] = [];
+      forms.forEach((f, i) => {
+        if (f && f !== '-' && loose(f) === looseToken) looseMatches.push(i);
+      });
+      out[tense] = pickBest(looseMatches);
     }
     return out;
-  }, [conjTable, strictToken, looseToken]);
+  }, [conjTable, strictToken, looseToken, sentence, language]);
 
   // For each tense, record whether it contains the matched form.
   // This drives both the tab indicator (a small dot) and the auto-open tense.

@@ -7,12 +7,17 @@ import type { ConjugationTable } from '../../types';
 
 // ── Types ───────────────────────────────────────────────────
 type Forms = [string, string, string, string, string, string]; // io, tu, lui, noi, voi, loro
-type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive';
+type TenseKey = 'present' | 'passato_prossimo' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive';
 type PartialTenses = Partial<Record<TenseKey, Forms>>;
-const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive'];
+// Order matters — UI renders tabs in this sequence. Passato prossimo sits
+// right after present because in spoken Italian it IS the everyday past
+// tense; passato remoto is mostly literary/southern. The deck overwhelmingly
+// has present and spoken-past usage, so this ordering matches user intent.
+const TENSES: TenseKey[] = ['present', 'passato_prossimo', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive'];
 
 const TENSE_LABELS: Record<TenseKey, string> = {
   present: 'Presente (Present)',
+  passato_prossimo: 'Passato Prossimo (Present Perfect)',
   preterite: 'Passato Remoto (Preterite)',
   imperfect: 'Imperfetto (Imperfect)',
   future: 'Futuro (Future)',
@@ -41,6 +46,10 @@ const merge = (base: Record<TenseKey, Forms>, over: PartialTenses): Record<Tense
 const REG: Record<string, Record<TenseKey, Forms>> = {
   are: {
     present:     f('o,i,a,iamo,ate,ano'),
+    // Passato prossimo is composed at runtime (aux + participle); these
+    // placeholders just satisfy the iteration loop and get overwritten in
+    // conjugate() after all other tenses + irregular overrides land.
+    passato_prossimo: f(',,,,,'),
     preterite:   f('ai,asti,\u00f2,ammo,aste,arono'),
     imperfect:   f('avo,avi,ava,avamo,avate,avano'),
     future:      f('er\u00f2,erai,er\u00e0,eremo,erete,eranno'),
@@ -49,6 +58,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
   },
   ere: {
     present:     f('o,i,e,iamo,ete,ono'),
+    passato_prossimo: f(',,,,,'),
     preterite:   f('ei,esti,\u00e9,emmo,este,erono'),
     imperfect:   f('evo,evi,eva,evamo,evate,evano'),
     future:      f('er\u00f2,erai,er\u00e0,eremo,erete,eranno'),
@@ -57,6 +67,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
   },
   ire: {
     present:     f('o,i,e,iamo,ite,ono'),
+    passato_prossimo: f(',,,,,'),
     preterite:   f('ii,isti,\u00ec,immo,iste,irono'),
     imperfect:   f('ivo,ivi,iva,ivamo,ivate,ivano'),
     future:      f('ir\u00f2,irai,ir\u00e0,iremo,irete,iranno'),
@@ -144,6 +155,87 @@ const CONTRACTED: Record<string, { conj: string; stem: string }> = {
 };
 
 // ── Regular conjugation builder ─────────────────────────────
+// ── Passato Prossimo (compound past) ────────────────────────
+// Italians use passato prossimo for ~90% of everyday past-tense speech
+// ("ho mangiato", "sono andato"). Built as aux (avere/essere) + past
+// participle. Auxiliary selection depends on the verb:
+//   essere — intransitive motion/state verbs + all reflexives. Participle
+//            agrees with subject (we show masculine: -o sg, -i pl).
+//   avere  — everything else. Participle is invariable here (we don't
+//            try to model the rare direct-object agreement).
+const ESSERE_VERBS = new Set([
+  // Motion
+  'andare', 'venire', 'partire', 'arrivare', 'tornare', 'ritornare',
+  'entrare', 'uscire', 'salire', 'scendere', 'cadere', 'fuggire',
+  'rientrare', 'passare',
+  // State / change of state
+  'essere', 'stare', 'rimanere', 'restare', 'diventare', 'divenire',
+  'nascere', 'morire', 'crescere', 'apparire', 'comparire', 'sparire',
+  'scomparire', 'esistere', 'vivere', 'durare',
+  // Impersonal + sense
+  'piacere', 'dispiacere', 'bastare', 'sembrare', 'parere', 'occorrere',
+  'succedere', 'accadere', 'capitare', 'mancare',
+]);
+
+const IRREGULAR_PARTICIPLES: Record<string, string> = {
+  // -ere irregulars (most common)
+  fare: 'fatto', dire: 'detto', vedere: 'visto', prendere: 'preso',
+  mettere: 'messo', scrivere: 'scritto', leggere: 'letto', chiudere: 'chiuso',
+  aprire: 'aperto', venire: 'venuto', essere: 'stato', stare: 'stato',
+  bere: 'bevuto', rimanere: 'rimasto', nascere: 'nato', morire: 'morto',
+  chiedere: 'chiesto', decidere: 'deciso', rispondere: 'risposto',
+  vivere: 'vissuto', perdere: 'perso', rompere: 'rotto', offrire: 'offerto',
+  correre: 'corso', accendere: 'acceso', spegnere: 'spento', vincere: 'vinto',
+  piangere: 'pianto', spendere: 'speso', coprire: 'coperto', soffrire: 'sofferto',
+  scegliere: 'scelto', spingere: 'spinto', dipingere: 'dipinto', stringere: 'stretto',
+  cuocere: 'cotto', cogliere: 'colto', togliere: 'tolto', tradurre: 'tradotto',
+  produrre: 'prodotto', condurre: 'condotto', ridurre: 'ridotto',
+  succedere: 'successo', concludere: 'concluso', proporre: 'proposto',
+  esporre: 'esposto', comporre: 'composto', supporre: 'supposto',
+  comprendere: 'compreso', prevedere: 'previsto', riprendere: 'ripreso',
+  rispondere2: 'risposto', sorridere: 'sorriso', ridere: 'riso',
+  dividere: 'diviso', muovere: 'mosso', smuovere: 'smosso', sciogliere: 'sciolto',
+  raccogliere: 'raccolto', accogliere: 'accolto', porre: 'posto',
+  apparire: 'apparso', comparire: 'comparso', sparire: 'sparito',
+  scomparire: 'scomparso', morsi: 'morso', mordere: 'morso',
+  giungere: 'giunto', raggiungere: 'raggiunto', dipendere: 'dipeso',
+  attendere: 'atteso', estendere: 'esteso', sospendere: 'sospeso',
+  pretendere: 'preteso', tendere: 'teso', accorgersi: 'accorto',
+  // Common -ire irregulars
+  morire: 'morto',
+};
+
+const ESSERE_PRESENT = ['sono', 'sei', 'è', 'siamo', 'siete', 'sono'];
+const AVERE_PRESENT  = ['ho', 'hai', 'ha', 'abbiamo', 'avete', 'hanno'];
+
+function pastParticiple(inf: string): string {
+  if (IRREGULAR_PARTICIPLES[inf]) return IRREGULAR_PARTICIPLES[inf];
+  if (inf.endsWith('are')) return inf.slice(0, -3) + 'ato';
+  if (inf.endsWith('ere')) return inf.slice(0, -3) + 'uto';
+  if (inf.endsWith('ire')) return inf.slice(0, -3) + 'ito';
+  return inf;
+}
+
+function passatoProssimo(inf: string, isReflexive: boolean): Forms {
+  const useEssere = isReflexive || ESSERE_VERBS.has(inf);
+  const aux = useEssere ? ESSERE_PRESENT : AVERE_PRESENT;
+  const part = pastParticiple(inf);
+  if (useEssere && part.endsWith('o')) {
+    // Subject-agreement: -o sg, -i pl (masculine). We don't try to model
+    // feminine in the table — too many forms for too little gain.
+    const root = part.slice(0, -1);
+    return [
+      `${aux[0]} ${part}`,
+      `${aux[1]} ${part}`,
+      `${aux[2]} ${part}`,
+      `${aux[3]} ${root}i`,
+      `${aux[4]} ${root}i`,
+      `${aux[5]} ${root}i`,
+    ] as unknown as Forms;
+  }
+  return aux.map(a => `${a} ${part}`) as unknown as Forms;
+}
+
 function conjugateRegular(inf: string): Record<TenseKey, Forms> | null {
   let conj: string;
   let s: string;
@@ -523,6 +615,12 @@ export function conjugate(infinitive: string): ConjugationTable | null {
   // Apply irregular overrides
   const overrides = IRR[inf];
   const tenses = overrides ? merge(regular, overrides) : regular;
+
+  // Compose passato prossimo from aux + participle. Done AFTER irregular
+  // overrides so we always pick up the irregular participle (fatto, visto,
+  // detto, etc.) and the irregular auxiliary (essere/avere) decisions land
+  // in one consistent place.
+  tenses.passato_prossimo = passatoProssimo(inf, isReflexive);
 
   // Build final tenses record (with reflexive pronouns and localized labels)
   const finalTenses: Record<string, string[]> = {};

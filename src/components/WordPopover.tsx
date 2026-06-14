@@ -290,6 +290,10 @@ const PopoverPortal: React.FC<{
   useEffect(() => {
     setIsFav(isFavorited(rawToken, language));
   }, [rawToken, language]);
+  // Russian aspect-pair swap state. Hoisted above lemmaEntry because that
+  // memo reads it. Reset whenever the conjugation overlay closes.
+  const [swappedTo, setSwappedTo] = useState<string | null>(null);
+
   // Lemma-first lookup: if entry has a lemma, look it up for display.
   // When the aspect-pair swap is active, look up THAT verb instead so the
   // header title, English meaning, and aspect badge all reflect the swap.
@@ -324,11 +328,8 @@ const PopoverPortal: React.FC<{
   // Tracks whether the user has manually picked a tense – if so, we stop
   // auto-switching when the modal re-opens for the same word.
   const [userPickedTense, setUserPickedTense] = useState(false);
-  // When non-null, the conjugation overlay swaps to this verb instead of the
-  // one derived from rawToken. Set by clicking the Russian aspect-pair link
-  // ("читать → click прочитать"). Reset whenever the overlay closes so the
-  // next open starts at the natural lookup again.
-  const [swappedTo, setSwappedTo] = useState<string | null>(null);
+  // swappedTo is declared earlier (hoisted) so the lemmaEntry memo can read
+  // it. Reset whenever the overlay closes so the next open starts fresh.
   useEffect(() => { if (!showConj) setSwappedTo(null); }, [showConj]);
 
   // Try to get conjugation table for verbs

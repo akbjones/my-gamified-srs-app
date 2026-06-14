@@ -89,14 +89,22 @@ export default defineConfig({
         runtimeCaching: [
           {
             urlPattern: /\/quest-audio\/.*\.mp3$/,
-            handler: 'CacheFirst',
+            // StaleWhileRevalidate: serve cached audio instantly, then refresh
+            // from network in the background. Two reasons we switched off
+            // CacheFirst: (1) when a user studies on multiple devices, a PC
+            // that's been offline can have stale audio bytes locked in cache
+            // forever; SwR auto-heals on next play. (2) audio regens won't
+            // need a cache-name bump to reach existing users — the next play
+            // after the regen pulls fresh bytes.
+            handler: 'StaleWhileRevalidate',
             options: {
-              // BUMP THIS NAME whenever the audio voice/source changes.
-              // Old cache name is auto-evicted; users will re-download
-              // only the files they actually study (maxEntries cap below).
+              // BUMP THIS NAME whenever the audio voice/source changes —
+              // ensures users with broken cached bytes get a one-shot fresh
+              // download even before SwR's background refresh kicks in.
               // v2 = 2026-06-11 Welsh fix + 10-language Chirp3-HD upgrade
               // v4 = 2026-06-13 force-evict stale v3 entries after native-voice regen
-              cacheName: 'audio-cache-v4',
+              // v5 = 2026-06-14 switch to StaleWhileRevalidate for cross-device resilience
+              cacheName: 'audio-cache-v5',
               expiration: {
                 maxEntries: 500,
                 maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days

@@ -119,6 +119,11 @@ function fixLanguage(lang) {
 
   for (const e of noLemmaVerbs) {
     if (phaseAFixedKeys.has(e.key)) continue;
+    // SAFETY: never add a lemma to an entry that already looks like an
+    // infinitive itself. Without this guard, two infinitives sharing an
+    // English meaning (e.g. Hindi जाना "to go" vs चलना "to walk; to go")
+    // would wrongly point at each other.
+    if (infSuffix && infSuffix.test(e.key)) { stats.phaseB_none++; continue; }
     const en = getEn(e.body);
     if (!en) { stats.phaseB_none++; continue; }
     const firstPhrase = en.split(';')[0].trim();

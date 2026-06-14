@@ -52,11 +52,14 @@ interface StudySessionProps {
   onStartChallenge?: () => void;
 }
 
+// Resting state now ALWAYS shows the rating color (was previously a near-grey
+// card bg with only a thin colored border, which read as muted/disabled).
+// Bg /15 + border 2px ensures the four ratings are immediately scannable.
 const GRADE_CONFIG = {
-  AGAIN: { color: 'text-red-500', bg: 'hover:bg-red-500/10 active:bg-red-500/20', border: 'border-red-500/30' },
-  HARD:  { color: 'text-orange-500', bg: 'hover:bg-orange-500/10 active:bg-orange-500/20', border: 'border-orange-500/30' },
-  GOOD:  { color: 'text-emerald-500', bg: 'hover:bg-emerald-500/10 active:bg-emerald-500/20', border: 'border-emerald-500/30' },
-  EASY:  { color: 'text-[var(--accent)]', bg: 'hover:bg-[var(--accent)]/10 active:bg-[var(--accent)]/20', border: 'border-[var(--accent)]/30' },
+  AGAIN: { color: 'text-red-500', bg: 'bg-red-500/15 hover:bg-red-500/25 active:bg-red-500/35', border: 'border-red-500/60' },
+  HARD:  { color: 'text-orange-500', bg: 'bg-orange-500/15 hover:bg-orange-500/25 active:bg-orange-500/35', border: 'border-orange-500/60' },
+  GOOD:  { color: 'text-emerald-500', bg: 'bg-emerald-500/15 hover:bg-emerald-500/25 active:bg-emerald-500/35', border: 'border-emerald-500/60' },
+  EASY:  { color: 'text-[var(--accent)]', bg: 'bg-[var(--accent)]/15 hover:bg-[var(--accent)]/25 active:bg-[var(--accent)]/35', border: 'border-[var(--accent)]/60' },
 } as const;
 
 const FIRST_WOW_KEY = 'first-session-wow-shown';
@@ -200,7 +203,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               <div className="flex items-stretch gap-2 mb-2">
                 <button
                   onClick={() => setStudyMoreCount(c => Math.max(1, c - 5))}
-                  className="w-12 rounded-xl border-2 border-[var(--border-color)] text-[var(--text-muted)] font-bold hover:border-[var(--border-hover)] hover:text-[var(--text-primary)] active:scale-95 transition"
+                  className="w-14 rounded-xl border-2 border-[var(--border-color)] text-[var(--text-secondary)] text-lg font-bold hover:border-[var(--border-hover)] hover:text-[var(--text-primary)] active:scale-95 transition"
                   aria-label="Decrease by 5"
                 >
                   −5
@@ -214,11 +217,11 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                     const v = parseInt(e.target.value, 10);
                     if (!isNaN(v) && v >= 1 && v <= 100) setStudyMoreCount(v);
                   }}
-                  className="flex-1 rounded-xl text-center text-2xl font-extrabold font-mono bg-[var(--bg-inset)] border-2 border-[var(--border-color)] text-[var(--text-primary)] focus:border-[var(--accent)] focus:outline-none py-2"
+                  className="flex-1 rounded-xl text-center text-2xl font-extrabold bg-[var(--bg-inset)] border-2 border-[var(--border-color)] text-[var(--text-primary)] focus:border-[var(--accent)] focus:outline-none py-2"
                 />
                 <button
                   onClick={() => setStudyMoreCount(c => Math.min(100, c + 5))}
-                  className="w-12 rounded-xl border-2 border-[var(--border-color)] text-[var(--text-muted)] font-bold hover:border-[var(--border-hover)] hover:text-[var(--text-primary)] active:scale-95 transition"
+                  className="w-14 rounded-xl border-2 border-[var(--border-color)] text-[var(--text-secondary)] text-lg font-bold hover:border-[var(--border-hover)] hover:text-[var(--text-primary)] active:scale-95 transition"
                   aria-label="Increase by 5"
                 >
                   +5
@@ -228,7 +231,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                 onClick={() => onStudyMore(studyMoreCount)}
                 className="w-full py-3 rounded-xl btn-primary text-sm font-bold"
               >
-                Start session
+                Continue session
               </button>
             </div>
           )}
@@ -630,8 +633,8 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                     onClick={() => submitAnswer(rating)}
                     className={`py-5 rounded-xl bg-[var(--bg-card)] border ${cfg.border} ${cfg.bg} ${cfg.color} active:scale-95 transition-all`}
                   >
-                    <div className="text-sm font-black uppercase">{rating}</div>
-                    <div className="text-[10px] text-[var(--text-muted)] font-mono mt-0.5">{getIntervalHint(rating)}</div>
+                    <div className="text-base font-black uppercase tracking-wide">{rating}</div>
+                    <div className="text-[11px] text-[var(--text-muted)] font-semibold mt-0.5">{getIntervalHint(rating)}</div>
                   </button>
                 );
               })}

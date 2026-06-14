@@ -843,7 +843,7 @@ const App: React.FC = () => {
                     <div className="flex items-baseline justify-between mb-2">
                       <span className="text-xs font-bold uppercase tracking-widest text-[var(--text-muted)]">Today</span>
                       <span className="text-sm font-extrabold text-[var(--text-primary)] tabular-nums">
-                        {dailyDone} <span className="text-[var(--text-muted)] font-normal">/ {dailyGoal}</span>
+                        {dailyDone} <span className="text-[var(--text-muted)]">/ {dailyGoal}</span>
                       </span>
                     </div>
                     <div className="h-2.5 rounded-full bg-[var(--bg-inset)] overflow-hidden">

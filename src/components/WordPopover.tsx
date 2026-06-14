@@ -330,16 +330,26 @@ const PopoverPortal: React.FC<{
     const conjugateFn = CONJUGATE_FNS[language];
     if (!conjugateFn) return null;
 
-    // Try the raw token as-is (works when tapping an infinitive like "parler")
     const clean = rawToken.toLowerCase().replace(/[.,!?;:""«»()]/g, '');
-    const direct = conjugateFn(clean);
-    if (direct) return direct;
 
-    // Try the lemma field (base/infinitive form) – most reliable for inflected forms
+    // Lemma FIRST when the dict entry is inflected. A `lemma` field on a
+    // dict entry means "this is an inflected form; the real infinitive is
+    // X" — so we MUST go to X to get the correct table. Without this we
+    // hit the bug where conjugatePt("quer") happily returns a fake -er
+    // verb on stem "qu" (forms: quo, ques, que, ...) instead of resolving
+    // to "querer". The fake table title showed "quer", the row matcher
+    // couldn't find "quer" anywhere in those fake forms, and the "used on
+    // this card" banner never fired.
     if (entry.lemma) {
       const result = conjugateFn(entry.lemma);
       if (result) return result;
     }
+
+    // No lemma in the entry (or the lemma engine call failed) — try the
+    // raw token itself. Works when tapping a real infinitive like "parler"
+    // that has no `lemma` field of its own.
+    const direct = conjugateFn(clean);
+    if (direct) return direct;
 
     // Try the infinitive from translation parenthetical: "to speak (parler)"
     const inf = extractInfinitive(entry.en);

@@ -413,12 +413,15 @@ const PopoverPortal: React.FC<{
   let conjTable: ConjugationTable | null = null;
   try { conjTable = conjugation(); } catch (e) { console.error('Conjugation error for', rawToken, ':', e); }
 
-  // Two normalize layers. Strict (lowercase + trim) preserves diacritics so we
-  // can distinguish "tem" (3sg, no accent) from "têm" (3pl, circumflex) in
+  // Two normalize layers. Both strip leading/trailing punctuation so a tapped
+  // word like "entendo," (with a comma from the sentence) still matches the
+  // form "entendo" in the table. Strict preserves diacritics so we can
+  // distinguish "tem" (3sg, no accent) from "têm" (3pl, circumflex) in
   // Portuguese — same letters, different forms. Loose strips accents as a
   // tolerant fallback for cases like a user tapping "ecris" when the table
   // has "j'écris".
-  const strict = (s: string) => s.toLowerCase().replace(/\s+/g, '');
+  const stripPunct = (s: string) => s.replace(/[.,!?;:""''«»()¿¡—–\-]/g, '');
+  const strict = (s: string) => stripPunct(s.toLowerCase()).replace(/\s+/g, '');
   const loose  = (s: string) => strict(s).normalize('NFD').replace(/[̀-ͯ]/g, '');
   const normalize = loose;        // keep available for any out-of-block callers
   const strictToken = strict(rawToken);

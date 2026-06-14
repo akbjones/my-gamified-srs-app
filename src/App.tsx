@@ -200,6 +200,8 @@ const App: React.FC = () => {
   const [view, setView] = useState<View>('HOME');
   const [deck, setDeck] = useState<QuestCard[]>([]);
   const [masteryMap, setMasteryMap] = useState<MasteryMap>({});
+  // One-shot toast shown on HOME after placement test completes. Auto-dismisses.
+  const [placementToast, setPlacementToast] = useState<string | null>(null);
   const [settings, setSettings] = useState<StudySettings>(() => {
     migrateStorageKeys(); // one-time migration of old keys
     return loadSettings();
@@ -256,6 +258,13 @@ const App: React.FC = () => {
     setVocabMap(loadVocabMap(lang));
     setFavoritesMap(loadFavorites(lang));
   }, [lang, goal]);
+
+  // Auto-dismiss the placement toast after 6s. Click to dismiss earlier.
+  useEffect(() => {
+    if (!placementToast) return;
+    const t = setTimeout(() => setPlacementToast(null), 6000);
+    return () => clearTimeout(t);
+  }, [placementToast]);
 
   // Refresh favorites whenever user lands on the home page –
   // they may have starred new words during study/vocab views.
@@ -645,6 +654,19 @@ const App: React.FC = () => {
         </div>
       )}
 
+      {view === 'HOME' && placementToast && (
+        <div
+          className="fixed left-1/2 -translate-x-1/2 top-[max(1rem,env(safe-area-inset-top))] z-[10000] max-w-md w-[calc(100%-2rem)] px-4 py-3 rounded-xl bg-emerald-500/20 border border-emerald-500/50 backdrop-blur-md shadow-lg animate-fade-in cursor-pointer"
+          onClick={() => setPlacementToast(null)}
+        >
+          <div className="flex items-center gap-2">
+            <div className="text-emerald-400 text-lg">✓</div>
+            <div className="text-sm font-bold text-[var(--text-primary)] leading-tight">
+              {placementToast}
+            </div>
+          </div>
+        </div>
+      )}
       {view === 'HOME' && (
         <section className="animate-fade-in">
           {/* Header row: title + language picker */}
@@ -820,7 +842,7 @@ const App: React.FC = () => {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-baseline justify-between mb-2">
                       <span className="text-xs font-bold uppercase tracking-widest text-[var(--text-muted)]">Today</span>
-                      <span className="text-sm font-mono font-bold text-[var(--text-primary)]">
+                      <span className="text-sm font-extrabold text-[var(--text-primary)] tabular-nums">
                         {dailyDone} <span className="text-[var(--text-muted)] font-normal">/ {dailyGoal}</span>
                       </span>
                     </div>
@@ -839,7 +861,7 @@ const App: React.FC = () => {
                         size={18}
                         className={streak > 0 ? 'text-orange-500 fill-orange-500/30' : 'text-[var(--text-faint)]'}
                       />
-                      <span className={`text-lg font-black font-mono ${streak > 0 ? 'text-orange-500' : 'text-[var(--text-muted)]'}`}>
+                      <span className={`text-lg font-black tabular-nums ${streak > 0 ? 'text-orange-500' : 'text-[var(--text-muted)]'}`}>
                         {streak}
                       </span>
                     </div>
@@ -1382,6 +1404,15 @@ const App: React.FC = () => {
               setProgressState(newProgress);
               saveProgressState(newProgress, lang);
             }
+            // Concrete signal that placement actually moved their progress.
+            // Without this users complained "did anything happen?" because the
+            // graduated cards' due dates are 4-10 days out — they don't show
+            // up in TODAY's queue.
+            setPlacementToast(
+              fastTrackedCount > 0
+                ? `Placement saved — ${fastTrackedCount.toLocaleString()} cards marked as known`
+                : `Placement complete — starting from the beginning`
+            );
             setView('HOME');
           }}
           onSkip={() => {

@@ -40,6 +40,9 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   const [nodeScores, setNodeScores] = useState<Record<number, { mostly: number; noIdea: number }>>({});
   const [lastRating, setLastRating] = useState<ConfidenceRating | null>(null);
   const [ceilingNode, setCeilingNode] = useState<number | null>(null);
+  // Cap on per-card "Skip" — users can't game the test by skipping every card.
+  // Forced to rate at least 1/3 of the cards. After cap, the Skip button hides.
+  const [skipCount, setSkipCount] = useState(0);
   const [showGrammarDetail, setShowGrammarDetail] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   // Per-question state: whether the user has peeked at the English translation.
@@ -102,6 +105,34 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   // - 1 "no idea" in a node → fail that node
   // - 2 "mostly" in a single node → fail that node
   // - 2 "mostly" across two adjacent nodes → fail the later node
+
+  // Cap = ⌊2/3 × totalTestCards⌋. Once skipCount hits this, the Skip button
+  // is hidden — user has to commit to a rating for the rest of the test.
+  const skipCap = Math.floor(totalTestCards * 2 / 3);
+  const canSkip = skipCount < skipCap;
+
+  function handleSkip() {
+    setSkipCount(c => c + 1);
+    // Advance to next card without recording a rating. Mirrors handleNext's
+    // navigation logic — fall through to next card in node, next node, or
+    // results — but never trips shouldFailNode because nothing was scored.
+    const nextCardIndex = cardIndex + 1;
+    const nodeCards = placementCards[nodeIndex] || [];
+    if (nextCardIndex < nodeCards.length) {
+      setCardIndex(nextCardIndex);
+      setLastRating(null);
+      return;
+    }
+    const nextNode = nodeIndex + 1;
+    if (nextNode >= MAIN_PATH.length) {
+      setCeilingNode(null);
+      setPhase('results');
+      return;
+    }
+    setNodeIndex(nextNode);
+    setCardIndex(0);
+    setLastRating(null);
+  }
 
   function handleConfidence(rating: ConfidenceRating) {
     setLastRating(rating);
@@ -278,7 +309,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           >
             &larr; Exit
           </button>
-          <span className="text-xs font-mono text-[var(--text-muted)]">
+          <span className="text-xs font-bold text-[var(--text-muted)] tabular-nums">
             {nodeIndex + 1}/{MAIN_PATH.length}
           </span>
         </div>
@@ -344,6 +375,22 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           >
             <div className="text-xs font-black text-emerald-500 uppercase">Know it</div>
           </button>
+        </div>
+        {/* Per-card Skip — bypasses scoring for the current card. Capped at
+            ⌊2/3 × totalTestCards⌋ so the test still gets a real signal. */}
+        <div className="flex justify-center mb-2 shrink-0">
+          {canSkip ? (
+            <button
+              onClick={handleSkip}
+              className="text-xs font-bold uppercase tracking-wider text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors px-3 py-1.5"
+            >
+              Skip this card · {skipCap - skipCount} left
+            </button>
+          ) : (
+            <span className="text-xs font-bold uppercase tracking-wider text-[var(--text-faint)] px-3 py-1.5">
+              No skips left — please rate
+            </span>
+          )}
         </div>
       </div>
     );

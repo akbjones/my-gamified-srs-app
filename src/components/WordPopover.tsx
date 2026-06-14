@@ -290,13 +290,16 @@ const PopoverPortal: React.FC<{
   useEffect(() => {
     setIsFav(isFavorited(rawToken, language));
   }, [rawToken, language]);
-  // Lemma-first lookup: if entry has a lemma, look it up for display
+  // Lemma-first lookup: if entry has a lemma, look it up for display.
+  // When the aspect-pair swap is active, look up THAT verb instead so the
+  // header title, English meaning, and aspect badge all reflect the swap.
   const lemmaEntry = React.useMemo(() => {
-    if (!entry.lemma) return null;
+    const target = swappedTo || entry.lemma;
+    if (!target) return null;
     const lookupFn = LOOKUP_FNS[language];
     if (!lookupFn) return null;
-    return lookupFn(entry.lemma);
-  }, [entry.lemma, language]);
+    return lookupFn(target);
+  }, [swappedTo, entry.lemma, language]);
 
   // Determine the display definition: prefer lemma's definition, sanitized
   const displayDefinition = React.useMemo(() => {
@@ -321,14 +324,25 @@ const PopoverPortal: React.FC<{
   // Tracks whether the user has manually picked a tense – if so, we stop
   // auto-switching when the modal re-opens for the same word.
   const [userPickedTense, setUserPickedTense] = useState(false);
+  // When non-null, the conjugation overlay swaps to this verb instead of the
+  // one derived from rawToken. Set by clicking the Russian aspect-pair link
+  // ("читать → click прочитать"). Reset whenever the overlay closes so the
+  // next open starts at the natural lookup again.
+  const [swappedTo, setSwappedTo] = useState<string | null>(null);
+  useEffect(() => { if (!showConj) setSwappedTo(null); }, [showConj]);
 
   // Try to get conjugation table for verbs
   const conjugation = useCallback((): ConjugationTable | null => {
+    const conjugateFn = CONJUGATE_FNS[language];
+    if (!conjugateFn) return null;
+
+    // Aspect-pair swap takes precedence — when the user clicks the pair link
+    // we just conjugate the target verb directly, no fallback chain.
+    if (swappedTo) return conjugateFn(swappedTo);
+
     // Show conjugation if POS is verb OR if definition contains verb meaning ("to X")
     const hasVerbMeaning = entry.en?.includes('to ') || entry.pos === 'v';
     if (!hasVerbMeaning) return null;
-    const conjugateFn = CONJUGATE_FNS[language];
-    if (!conjugateFn) return null;
 
     const clean = rawToken.toLowerCase().replace(/[.,!?;:""«»()]/g, '');
 
@@ -825,8 +839,24 @@ const PopoverPortal: React.FC<{
                       {aspectEntry.pair && (
                         <>
                           <span className="text-[var(--text-muted)]">pair:</span>
-                          <span className="font-bold text-blue-500">{aspectEntry.pair}</span>
+                          <button
+                            onClick={() => {
+                              setSwappedTo(aspectEntry.pair!);
+                              setUserPickedTense(false);
+                            }}
+                            className="font-bold text-blue-500 hover:text-blue-400 active:scale-95 transition-all underline decoration-blue-500/30 underline-offset-2 hover:decoration-blue-500/70"
+                          >
+                            {aspectEntry.pair} ↗
+                          </button>
                         </>
+                      )}
+                      {swappedTo && (
+                        <button
+                          onClick={() => { setSwappedTo(null); setUserPickedTense(false); }}
+                          className="ml-auto text-[10px] sm:text-xs font-bold uppercase tracking-wider text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors px-2 py-1 rounded border border-[var(--border-color)] hover:border-[var(--border-hover)]"
+                        >
+                          ← back
+                        </button>
                       )}
                     </div>
                     {aspectEntry.note && (

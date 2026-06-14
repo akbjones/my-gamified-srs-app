@@ -11,10 +11,10 @@ import type { ConjugationTable } from '../../types';
 
 // ── Types ────────────────────────────────────────────────────
 type Forms = [string, string, string, string, string, string];
-type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive';
+type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive' | 'imperative';
 type PartialTenses = Partial<Record<TenseKey, Forms>>;
 
-const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive'];
+const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive', 'imperative'];
 
 const TENSE_LABELS: Record<TenseKey, string> = {
   present: 'Presente (Present)',
@@ -23,6 +23,7 @@ const TENSE_LABELS: Record<TenseKey, string> = {
   future: 'Futuro (Future)',
   conditional: 'Condicional (Conditional)',
   subjunctive: 'Subjuntivo (Subjunctive)',
+  imperative: 'Imperativo (Imperative)',
 };
 const REFLEXIVE_PRONOUNS: Forms = ['me', 'te', 'se', 'nos', 'vos', 'se'];
 
@@ -71,6 +72,9 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     future:      f('arei,arás,ará,aremos,areis,arão'),
     conditional: f('aria,arias,aria,aríamos,aríeis,ariam'),
     subjunctive: f('e,es,e,emos,eis,em'),
+    // Affirmative imperative. Slot 0 (eu) has no imperative; slots 2/3/5
+    // (você/nós/vocês) get patched from the final subjunctive in conjugate().
+    imperative:  f('-,a,e,emos,ai,em'),
   },
   er: {
     present:     f('o,es,e,emos,eis,em'),
@@ -79,6 +83,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     future:      f('erei,erás,erá,eremos,ereis,erão'),
     conditional: f('eria,erias,eria,eríamos,eríeis,eriam'),
     subjunctive: f('a,as,a,amos,ais,am'),
+    imperative:  f('-,e,a,amos,ei,am'),
   },
   ir: {
     present:     f('o,es,e,imos,is,em'),
@@ -87,6 +92,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     future:      f('irei,irás,irá,iremos,ireis,irão'),
     conditional: f('iria,irias,iria,iríamos,iríeis,iriam'),
     subjunctive: f('a,as,a,amos,ais,am'),
+    imperative:  f('-,e,a,amos,i,am'),
   },
 };
 
@@ -98,11 +104,13 @@ function regular(inf: string, tense: TenseKey): Forms {
   if (!vc || vc === 'or') return f(',,,,, ');
   const s = stem(inf);
   const endings = REG[vc][tense];
+  // "-" placeholder (e.g. yo/eu slot of imperative) stays as-is rather
+  // than being concatenated with the stem.
   // Future and conditional use the full infinitive as stem
   if (tense === 'future' || tense === 'conditional') {
-    return endings.map(e => s + e) as unknown as Forms;
+    return endings.map(e => e === '-' ? '-' : s + e) as unknown as Forms;
   }
-  return endings.map(e => s + e) as unknown as Forms;
+  return endings.map(e => e === '-' ? '-' : s + e) as unknown as Forms;
 }
 
 /** Build full regular conjugation for an infinitive */
@@ -267,9 +275,15 @@ function applyStemChangePositions(
   stemStr: string,
 ): Forms {
   const result = [...forms] as Forms;
+  // Bound the search to the stem portion only (indices 0..stemLen-1).
+  // Using stemStr.length included the first char of the ending and would
+  // wrongly match the trailing vowel of subjunctive endings — same latent
+  // bug the Spanish engine had.
+  const searchUpTo = Math.max(0, stemStr.length - 1);
   for (const pos of positions) {
     const form = result[pos];
-    const idx = form.lastIndexOf(from, stemStr.length);
+    if (form === '-') continue;
+    const idx = form.lastIndexOf(from, searchUpTo);
     if (idx >= 0) {
       result[pos] = form.slice(0, idx) + to + form.slice(idx + from.length);
     }
@@ -337,6 +351,37 @@ function irregPreterite(s: string, third: string, thirdPl: string): Forms {
 }
 
 // ── Fully irregular verb table ───────────────────────────────
+// Irregular tu-imperative forms — these don't follow the 3sg-present
+// pattern. Slots 2/3/5 (você/nós/vocês) come from the final subjunctive,
+// so we only override slot 1 here.
+const IRREGULAR_TU_IMPERATIVE: Record<string, string> = {
+  ser: 'sê',
+  ter: 'tem',
+  ir: 'vai',
+  fazer: 'faz',
+  vir: 'vem',
+  dizer: 'diz',
+  pôr: 'põe',
+  ver: 'vê',
+  saber: 'sabe',
+  haver: 'há',
+  estar: 'está',
+  poder: 'pode',
+  querer: 'quer',
+};
+
+// Irregular vós (slot 4) imperative forms — for short-stem verbs the regular
+// stem + ei/i pattern fails (ser → "sei" instead of "sede"). The vós form
+// is morphologically infinitive minus -r + -de for these.
+const IRREGULAR_VOS_IMPERATIVE: Record<string, string> = {
+  ser: 'sede',
+  ter: 'tende',
+  ir: 'ide',
+  vir: 'vinde',
+  ver: 'vede',
+  pôr: 'ponde',
+};
+
 const IRREGULARS: Record<string, PartialTenses> = {
   // ─── ser ───
   ser: {
@@ -742,13 +787,17 @@ export function conjugate(infinitive: string): ConjugationTable | null {
 
     // Build a base from the irregular data. -or verbs need full overrides.
     // Use pôr regular pattern as fallback (future/conditional use 'por' stem)
+    const subj = irrData.subjunctive || f(',,,,, ');
     const base: Record<TenseKey, Forms> = {
       present:     irrData.present || f(',,,,, '),
       preterite:   irrData.preterite || f(',,,,, '),
       imperfect:   irrData.imperfect || f(',,,,, '),
       future:      irrData.future || f(',,,,, '),
       conditional: irrData.conditional || f(',,,,, '),
-      subjunctive: irrData.subjunctive || f(',,,,, '),
+      subjunctive: subj,
+      // Build imperative from subjunctive (slots 2/3/5) + irregular tu (slot 1)
+      // + vosotros-style slot 4 (pôr → ponde).
+      imperative: ['-', IRREGULAR_TU_IMPERATIVE[inf] || subj[2], subj[2], subj[3], 'ponde', subj[5]] as unknown as Forms,
     };
 
     // Prepend reflexive pronouns if needed
@@ -789,6 +838,18 @@ export function conjugate(infinitive: string): ConjugationTable | null {
   if (IRREGULARS[inf]) {
     tenses = merge(tenses, IRREGULARS[inf]);
   }
+
+  // Derive imperative slots 2/3/5 from the FINAL subjunctive — every
+  // irregular subjunctive (sea/tenha/vá/...) flows through automatically.
+  // Slot 1 (tu) keeps the regular stem-changed form unless we have an
+  // irregular tu form mapped.
+  const imp = [...tenses.imperative] as Forms;
+  imp[2] = tenses.subjunctive[2];
+  imp[3] = tenses.subjunctive[3];
+  imp[5] = tenses.subjunctive[5];
+  if (IRREGULAR_TU_IMPERATIVE[inf]) imp[1] = IRREGULAR_TU_IMPERATIVE[inf];
+  if (IRREGULAR_VOS_IMPERATIVE[inf]) imp[4] = IRREGULAR_VOS_IMPERATIVE[inf];
+  tenses.imperative = imp;
 
   // Prepend reflexive pronouns if needed
   const finalTenses = applyReflexive(tenses, isReflexive);

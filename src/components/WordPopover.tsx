@@ -476,7 +476,20 @@ const PopoverPortal: React.FC<{
       return matches[0];
     };
 
+    // Word-level helpers — needed because compound conjugation forms span
+    // multiple words ("देता हूँ", "ho mangiato", "j'ai mangé", "ich habe
+    // gegessen"). The user taps ONE word, but the whole-string comparison
+    // never matches. Splitting the form on whitespace and matching the
+    // tapped token against any of its words resolves this for every
+    // compound-tense language at once.
+    const stripPunctLocal = (s: string) => s.replace(/[.,!?;:""''«»()¿¡—–\-]/g, '');
+    const wordsOf = (form: string) =>
+      form.split(/\s+/).map(w => stripPunctLocal(w.toLowerCase())).filter(Boolean);
+    const formContainsWord = (form: string, normFn: (s: string) => string, target: string) =>
+      wordsOf(form).some(w => normFn(w) === target);
+
     for (const [tense, forms] of Object.entries(conjTable.tenses)) {
+      // Pass 1 — strict full-string match (preserves accents).
       const strictMatches: number[] = [];
       forms.forEach((f, i) => {
         if (f && f !== '-' && strict(f) === strictToken) strictMatches.push(i);
@@ -485,11 +498,32 @@ const PopoverPortal: React.FC<{
         out[tense] = pickBest(strictMatches);
         continue;
       }
+      // Pass 2 — loose full-string match (accent-stripped).
       const looseMatches: number[] = [];
       forms.forEach((f, i) => {
         if (f && f !== '-' && loose(f) === looseToken) looseMatches.push(i);
       });
-      out[tense] = pickBest(looseMatches);
+      if (looseMatches.length > 0) {
+        out[tense] = pickBest(looseMatches);
+        continue;
+      }
+      // Pass 3 — word-level strict match. Splits the form on whitespace and
+      // checks if any word matches the tapped token. Catches Hindi "देता हूँ",
+      // Italian "ho mangiato", French "j'ai mangé", German "habe gegessen".
+      const wordStrictMatches: number[] = [];
+      forms.forEach((f, i) => {
+        if (f && f !== '-' && formContainsWord(f, s => stripPunctLocal(s).replace(/\s+/g,''), strictToken)) wordStrictMatches.push(i);
+      });
+      if (wordStrictMatches.length > 0) {
+        out[tense] = pickBest(wordStrictMatches);
+        continue;
+      }
+      // Pass 4 — word-level loose match.
+      const wordLooseMatches: number[] = [];
+      forms.forEach((f, i) => {
+        if (f && f !== '-' && formContainsWord(f, s => loose(s), looseToken)) wordLooseMatches.push(i);
+      });
+      out[tense] = pickBest(wordLooseMatches);
     }
     return out;
   }, [conjTable, strictToken, looseToken, sentence, language]);

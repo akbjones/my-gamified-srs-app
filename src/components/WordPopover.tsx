@@ -803,6 +803,40 @@ const PopoverPortal: React.FC<{
                   </span>
                 )}
               </div>
+              {/* Russian aspect indicator — shows imperfective/perfective/bi-aspectual
+                  badge + pair link + (where present) a user-friendly explainer for
+                  suppletive pairs, motion verbs, and semantic shifts. */}
+              {(() => {
+                const aspectEntry = lemmaEntry?.aspect ? lemmaEntry : (entry.aspect ? entry : null);
+                if (!aspectEntry || language !== 'russian') return null;
+                const pillFor = {
+                  impf: { label: 'Imperfective', cls: 'text-emerald-700 dark:text-emerald-300 bg-emerald-500/15 border-emerald-500/30' },
+                  pf:   { label: 'Perfective',   cls: 'text-orange-700 dark:text-orange-300 bg-orange-500/15 border-orange-500/30'   },
+                  bi:   { label: 'Both aspects', cls: 'text-purple-700 dark:text-purple-300 bg-purple-500/15 border-purple-500/30'   },
+                } as const;
+                const p = pillFor[aspectEntry.aspect as 'impf' | 'pf' | 'bi'];
+                if (!p) return null;
+                return (
+                  <div className="mt-2.5 flex flex-col gap-1.5">
+                    <div className="flex items-center gap-2 flex-wrap text-xs sm:text-sm">
+                      <span className={`font-bold uppercase tracking-wider px-2 py-0.5 rounded-md border ${p.cls}`}>
+                        {p.label}
+                      </span>
+                      {aspectEntry.pair && (
+                        <>
+                          <span className="text-[var(--text-muted)]">pair:</span>
+                          <span className="font-bold text-blue-500">{aspectEntry.pair}</span>
+                        </>
+                      )}
+                    </div>
+                    {aspectEntry.note && (
+                      <div className="text-xs leading-relaxed text-[var(--text-secondary)] bg-amber-500/10 border-l-2 border-amber-500/60 px-3 py-2 rounded-r-md">
+                        {aspectEntry.note}
+                      </div>
+                    )}
+                  </div>
+                );
+              })()}
             </div>
 
             {/* "On this card" banner — spells out the matched form + tense + person

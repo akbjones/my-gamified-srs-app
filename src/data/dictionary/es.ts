@@ -6,6 +6,13 @@ export interface DictEntry {
   ipa: string;  // IPA pronunciation
   pos?: string; // Part of speech: n, v, adj, adv, prep, conj, det, pron
   lemma?: string; // Base/infinitive form
+  // Russian-specific. aspect tags the verb as imperfective, perfective, or
+  // bi-aspectual. pair points at the partner verb's dict key. note is
+  // user-facing copy shown in the conjugation overlay when the relationship
+  // is non-obvious (suppletive pairs, semantic shifts, motion-verb pairs).
+  aspect?: 'impf' | 'pf' | 'bi';
+  pair?: string;
+  note?: string;
 }
 
 // Lookup helper: strips punctuation, lowercases, tries base forms

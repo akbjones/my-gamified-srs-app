@@ -21,9 +21,9 @@ import type { ConjugationTable } from '../../types';
 
 // ── Types ───────────────────────────────────────────────────
 type Forms = [string, string, string, string, string, string];
-type TenseKey = 'present' | 'continuous' | 'past' | 'habitual_past' | 'future' | 'subjunctive';
+type TenseKey = 'present' | 'continuous' | 'past' | 'habitual_past' | 'future' | 'subjunctive' | 'imperative';
 
-const TENSES: TenseKey[] = ['present', 'continuous', 'past', 'habitual_past', 'future', 'subjunctive'];
+const TENSES: TenseKey[] = ['present', 'continuous', 'past', 'habitual_past', 'future', 'subjunctive', 'imperative'];
 
 const TENSE_LABELS: Record<TenseKey, string> = {
   present: 'वर्तमान (Present)',
@@ -32,6 +32,7 @@ const TENSE_LABELS: Record<TenseKey, string> = {
   habitual_past: 'अभ्यस्त भूत (Past Habitual)',
   future: 'भविष्य (Future)',
   subjunctive: 'संभावना (Subjunctive)',
+  imperative: 'आज्ञार्थक (Imperative)',
 };
 
 const PERSON_LABELS = ['मैं', 'तू', 'वह/यह', 'हम', 'तुम', 'आप/वे'];
@@ -82,6 +83,7 @@ interface IrregularData {
   futureStem?: string;       // if future stem differs
   continuousStem?: string;   // if continuous stem differs
   isTransitive?: boolean;    // for ergative past marking
+  politeImperative?: string; // override for आप form (देना→दीजिए, लेना→लीजिए, करना→कीजिए)
 }
 
 const IRREGULARS: Record<string, IrregularData> = {
@@ -98,6 +100,7 @@ const IRREGULARS: Record<string, IrregularData> = {
     pastForms: ['किया', 'किया', 'किया', 'किए', 'किए', 'किए'],
     futureStem: 'कर',
     isTransitive: true,
+    politeImperative: 'कीजिए',
   },
   // जाना – to go
   'जाना': {
@@ -117,6 +120,7 @@ const IRREGULARS: Record<string, IrregularData> = {
     pastForms: ['दिया', 'दिया', 'दिया', 'दिए', 'दिए', 'दिए'],
     futureStem: 'दे',
     isTransitive: true,
+    politeImperative: 'दीजिए',
   },
   // लेना – to take
   'लेना': {
@@ -124,6 +128,7 @@ const IRREGULARS: Record<string, IrregularData> = {
     pastForms: ['लिया', 'लिया', 'लिया', 'लिए', 'लिए', 'लिए'],
     futureStem: 'ले',
     isTransitive: true,
+    politeImperative: 'लीजिए',
   },
   // पीना – to drink
   'पीना': {
@@ -131,6 +136,7 @@ const IRREGULARS: Record<string, IrregularData> = {
     pastForms: ['पिया', 'पिया', 'पिया', 'पिए', 'पिए', 'पिए'],
     futureStem: 'पी',
     isTransitive: true,
+    politeImperative: 'पीजिए',
   },
   // खाना – to eat
   'खाना': {
@@ -411,6 +417,42 @@ function conjugateRegular(stem: string, tense: TenseKey): Forms {
         `${stem}${SUBJ_SUFFIXES[4]}`,
         `${stem}${SUBJ_SUFFIXES[5]}`,
       ];
+    case 'imperative': {
+      // Imperative only exists for 2nd-person (तू / तुम / आप). Other slots
+      // are '-' which the UI renders as "no form for this person". The
+      // stem-vowel handling is the tricky part:
+      //
+      //   Short-e ending (दे/ले): drop the े matra, then append ो / ीजिए
+      //     → दे → दो, दीजिए   |   ले → लो, लीजिए
+      //
+      //   Other vowel-matra ending (खा/जा/आ): keep the matra, use the
+      //   FULL vowel characters ओ / इ (not the matras ो / ि)
+      //     → खा → खाओ, खाइए   |   जा → जाओ, जाइए
+      //
+      //   Consonant ending (बोल/कर): use vowel matras as suffix
+      //     → बोल → बोलो, बोलिए
+      //
+      // Irregular polite forms (करना→कीजिए, पीना→पीजिए) still need
+      // politeImperative overrides because the stem-rule doesn't predict them.
+      const lastChar = stem.charAt(stem.length - 1);
+      const vowelMatras = new Set(['ा', 'ि', 'ी', 'ु', 'ू', 'ृ', 'ै', 'ो', 'ौ']);
+      // Standalone vowel letters (single-character stems like आ in आना).
+      // Same treatment as vowel-matra: use full-vowel suffixes.
+      const standaloneVowels = new Set(['अ', 'आ', 'इ', 'ई', 'उ', 'ऊ', 'ऋ', 'ए', 'ऐ', 'ओ', 'औ']);
+      let tumForm: string, aapForm: string;
+      if (lastChar === 'े') {
+        const root = stem.slice(0, -1);
+        tumForm = `${root}ो`;
+        aapForm = `${root}ीजिए`;
+      } else if (vowelMatras.has(lastChar) || standaloneVowels.has(lastChar)) {
+        tumForm = `${stem}ओ`;
+        aapForm = `${stem}इए`;
+      } else {
+        tumForm = `${stem}ो`;
+        aapForm = `${stem}िए`;
+      }
+      return ['-', stem, '-', '-', tumForm, aapForm];
+    }
   }
 }
 
@@ -445,6 +487,10 @@ export function conjugateHindi(infinitive: string): ConjugationTable | null {
           'होऊँ', 'हो', 'हो',
           'होएँ', 'होओ', 'होएँ',
         ],
+        [TENSE_LABELS.imperative]: [
+          '-', 'हो', '-',
+          '-', 'हो', 'होइए',
+        ],
       },
     };
   }
@@ -468,6 +514,13 @@ export function conjugateHindi(infinitive: string): ConjugationTable | null {
         tense === 'past' ? (irr?.pastStem ?? stem) : effectiveStem,
         tense,
       );
+      // Overlay the irregular polite imperative (आप form) — देना→दीजिए,
+      // लेना→लीजिए, करना→कीजिए — onto the regular-pattern result.
+      if (tense === 'imperative' && irr?.politeImperative) {
+        const arr = tenses[label].slice();
+        arr[5] = irr.politeImperative;
+        tenses[label] = arr;
+      }
     }
   }
 

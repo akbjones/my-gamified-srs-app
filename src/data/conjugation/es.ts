@@ -7,10 +7,10 @@ import type { ConjugationTable } from '../../types';
 
 // ── Types ────────────────────────────────────────────────────
 type Forms = [string, string, string, string, string, string]; // yo, tú, él, nosotros, vosotros, ellos
-type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive';
+type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive' | 'imperative';
 type PartialTenses = Partial<Record<TenseKey, Forms>>;
 
-const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive'];
+const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive', 'imperative'];
 
 const TENSE_LABELS: Record<TenseKey, string> = {
   present: 'Presente (Present)',
@@ -19,6 +19,7 @@ const TENSE_LABELS: Record<TenseKey, string> = {
   future: 'Futuro (Future)',
   conditional: 'Condicional (Conditional)',
   subjunctive: 'Subjuntivo (Subjunctive)',
+  imperative: 'Imperativo (Imperative)',
 };
 
 const REFLEXIVE_PRONOUNS: Forms = ['me', 'te', 'se', 'nos', 'os', 'se'];
@@ -32,6 +33,9 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     future:      ['aré', 'arás', 'ará', 'aremos', 'aréis', 'arán'],
     conditional: ['aría', 'arías', 'aría', 'aríamos', 'aríais', 'arían'],
     subjunctive: ['e', 'es', 'e', 'emos', 'éis', 'en'],
+    // Affirmative imperative. Slot 0 (yo) has no imperative form.
+    // tú=stem+a, usted=subj 3sg, nos=subj 1pl, vos=stem+ad, uds=subj 3pl
+    imperative:  ['-', 'a', 'e', 'emos', 'ad', 'en'],
   },
   er: {
     present:     ['o', 'es', 'e', 'emos', 'éis', 'en'],
@@ -40,6 +44,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     future:      ['eré', 'erás', 'erá', 'eremos', 'eréis', 'erán'],
     conditional: ['ería', 'erías', 'ería', 'eríamos', 'eríais', 'erían'],
     subjunctive: ['a', 'as', 'a', 'amos', 'áis', 'an'],
+    imperative:  ['-', 'e', 'a', 'amos', 'ed', 'an'],
   },
   ir: {
     present:     ['o', 'es', 'e', 'imos', 'ís', 'en'],
@@ -48,6 +53,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     future:      ['iré', 'irás', 'irá', 'iremos', 'iréis', 'irán'],
     conditional: ['iría', 'irías', 'iría', 'iríamos', 'iríais', 'irían'],
     subjunctive: ['a', 'as', 'a', 'amos', 'áis', 'an'],
+    imperative:  ['-', 'e', 'a', 'amos', 'id', 'an'],
   },
 };
 
@@ -71,11 +77,13 @@ function regular(inf: string, tense: TenseKey): Forms {
   const vc = verbClass(inf)!;
   const s = stem(inf);
   const endings = REG[vc][tense];
+  // "-" is a placeholder for slots that don't exist in this tense (e.g.
+  // the yo slot of imperative). Keep it as-is rather than prefixing the stem.
   // Future and conditional use the full infinitive as stem
   if (tense === 'future' || tense === 'conditional') {
-    return endings.map(e => inf.slice(0, -2) + e) as unknown as Forms;
+    return endings.map(e => e === '-' ? '-' : inf.slice(0, -2) + e) as unknown as Forms;
   }
-  return endings.map(e => s + e) as unknown as Forms;
+  return endings.map(e => e === '-' ? '-' : s + e) as unknown as Forms;
 }
 
 /** Build full regular conjugation for an infinitive */
@@ -97,10 +105,16 @@ function applyStemChange(
   stemStr: string,
 ): Forms {
   const result = [...forms] as Forms;
+  // Search bound is stemStr.length - 1 (LAST INDEX of the stem portion).
+  // Using stemStr.length included the first char of the ending, so for
+  // subjunctive cerre (stem "cerr", ending "e"), lastIndexOf("e", 4)
+  // matched the trailing "e" instead of the stem "e". With stemStr.length - 1
+  // the search is constrained to indices 0..stemLen-1 only.
+  const searchUpTo = Math.max(0, stemStr.length - 1);
   for (const pos of positions) {
-    // Find the last occurrence of `from` in the stem portion and replace it
     const formStem = result[pos];
-    const idx = formStem.lastIndexOf(from, stemStr.length);
+    if (formStem === '-') continue;
+    const idx = formStem.lastIndexOf(from, searchUpTo);
     if (idx >= 0) {
       result[pos] = formStem.slice(0, idx) + to + formStem.slice(idx + from.length);
     }
@@ -109,6 +123,10 @@ function applyStemChange(
 }
 
 const BOOT = [0, 1, 2, 5]; // yo, tú, él, ellos – the "boot" pattern
+// Imperative skips slot 0 (no yo form) and skips vosotros/nosotros for the
+// MAIN stem change (those use the regular -ad/-ed/-id ending). For -ir
+// verbs, nosotros (3) gets a SECONDARY change (e→i, o→u) like subjunctive.
+const IMP_BOOT = [1, 2, 5];
 
 interface StemChangeSpec {
   from: string;
@@ -141,6 +159,16 @@ function stemChange(inf: string, spec: StemChangeSpec): PartialTenses {
   if (vc === 'ir' && spec.preteriteTo) {
     override.preterite = applyStemChange(regular(inf, 'preterite'), spec.from, spec.preteriteTo, [2, 5], s);
   }
+
+  // Imperative: tú/usted/uds get main change; nosotros gets secondary for -ir.
+  let imp = applyStemChange(regular(inf, 'imperative'), spec.from, spec.to, IMP_BOOT, s);
+  if (vc === 'ir') {
+    const secondary = spec.preteriteTo || spec.to;
+    if (secondary !== spec.from) {
+      imp = applyStemChange(imp, spec.from, secondary, [3], s);
+    }
+  }
+  override.imperative = imp;
 
   return override;
 }
@@ -196,6 +224,22 @@ function irregPreterite(s: string, thirdPlural?: string): Forms {
 }
 
 // ── Fully irregular verb table ───────────────────────────────
+// Irregular tú-imperative forms — these don't follow the "3rd-person sg
+// present indicative" pattern. The other imperative slots (usted/nosotros/
+// ustedes) flow from the final subjunctive automatically, so we only need
+// to override the tú slot here.
+const IRREGULAR_TU_IMPERATIVE: Record<string, string> = {
+  ser: 'sé',
+  ir: 've',
+  tener: 'ten',
+  poner: 'pon',
+  hacer: 'haz',
+  decir: 'di',
+  venir: 'ven',
+  salir: 'sal',
+  estar: 'está',
+};
+
 const IRREGULARS: Record<string, PartialTenses> = {
   ser: {
     present:     ['soy', 'eres', 'es', 'somos', 'sois', 'son'],
@@ -448,6 +492,19 @@ export function conjugate(infinitive: string): ConjugationTable | null {
   if (IRREGULARS[baseInf]) {
     tenses = merge(tenses, IRREGULARS[baseInf]);
   }
+
+  // Derive imperative slots 2/3/5 from the FINAL subjunctive — this way
+  // every irregular subjunctive (ser→sea, ir→vaya, tener→tenga, ...) flows
+  // through to the corresponding usted/nosotros/ustedes imperative slot
+  // without needing per-verb imperative overrides. Slot 1 (tú) is patched
+  // for verbs in IRREGULAR_TU_IMPERATIVE; everyone else keeps the regular
+  // pattern (which stem changes already applied to).
+  const imp = [...tenses.imperative] as Forms;
+  imp[2] = tenses.subjunctive[2];
+  imp[3] = tenses.subjunctive[3];
+  imp[5] = tenses.subjunctive[5];
+  if (IRREGULAR_TU_IMPERATIVE[baseInf]) imp[1] = IRREGULAR_TU_IMPERATIVE[baseInf];
+  tenses.imperative = imp;
 
   // Prepend reflexive pronouns if needed
   if (isReflexive) {

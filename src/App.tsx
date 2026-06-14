@@ -817,7 +817,7 @@ const App: React.FC = () => {
             return (
               <button
                 onClick={() => setView('LISTEN')}
-                className="w-full mb-2 py-2 flex items-center justify-center gap-2 text-sm font-bold text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+                className="w-full mb-2 px-3 py-2.5 flex items-center justify-center gap-2 text-sm font-bold text-[var(--text-secondary)] bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl hover:border-[var(--accent)]/40 hover:text-[var(--accent)] hover:bg-[var(--accent)]/5 active:scale-[0.99] transition-all"
               >
                 <Volume2 size={14} />
                 <span>Listen passively to cards you've seen</span>
@@ -841,7 +841,7 @@ const App: React.FC = () => {
                   {/* Progress bar */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-baseline justify-between mb-2">
-                      <span className="text-xs font-bold uppercase tracking-widest text-[var(--text-muted)]">Today</span>
+                      <span className="text-sm font-bold uppercase tracking-wider text-[var(--text-muted)]">Today</span>
                       <span className="text-sm font-extrabold text-[var(--text-primary)] tabular-nums">
                         {dailyDone} <span className="text-[var(--text-muted)]">/ {dailyGoal}</span>
                       </span>
@@ -855,13 +855,13 @@ const App: React.FC = () => {
                   </div>
                   {/* Streak counter */}
                   <div className="shrink-0 flex flex-col items-center gap-0.5">
-                    <span className="text-xs font-bold uppercase tracking-widest text-[var(--text-muted)]">Streak</span>
+                    <span className="text-sm font-bold uppercase tracking-wider text-[var(--text-muted)]">Streak</span>
                     <div className="flex items-center gap-1">
                       <Flame
                         size={18}
                         className={streak > 0 ? 'text-orange-500 fill-orange-500/30' : 'text-[var(--text-faint)]'}
                       />
-                      <span className={`text-lg font-black tabular-nums ${streak > 0 ? 'text-orange-500' : 'text-[var(--text-muted)]'}`}>
+                      <span className={`text-sm font-extrabold tabular-nums ${streak > 0 ? 'text-orange-500' : 'text-[var(--text-muted)]'}`}>
                         {streak}
                       </span>
                     </div>
@@ -891,7 +891,7 @@ const App: React.FC = () => {
                   <div className="w-9 h-9 rounded-lg bg-[var(--accent)]/15 border border-[var(--accent)]/30 flex items-center justify-center">
                     <CurrentIcon size={16} className="text-[var(--accent)]" />
                   </div>
-                  <div className="text-xs font-bold text-[var(--text-primary)] leading-tight text-center truncate w-full">
+                  <div className="text-sm font-bold text-[var(--text-primary)] leading-tight text-center truncate w-full">
                     {GOAL_CONFIG[goal].name}
                   </div>
                 </button>
@@ -904,7 +904,7 @@ const App: React.FC = () => {
               <div className="w-9 h-9 rounded-lg bg-blue-500/15 border border-blue-500/30 flex items-center justify-center">
                 <LibraryIcon size={16} className="text-blue-500" />
               </div>
-              <div className="text-xs font-bold text-[var(--text-primary)] leading-tight">
+              <div className="text-sm font-bold text-[var(--text-primary)] leading-tight">
                 Library
               </div>
             </button>
@@ -915,7 +915,7 @@ const App: React.FC = () => {
               <div className="w-9 h-9 rounded-lg bg-slate-500/15 border border-slate-500/30 flex items-center justify-center">
                 <Settings2 size={16} className="text-slate-500" />
               </div>
-              <div className="text-xs font-bold text-[var(--text-primary)] leading-tight">
+              <div className="text-sm font-bold text-[var(--text-primary)] leading-tight">
                 Settings
               </div>
             </button>

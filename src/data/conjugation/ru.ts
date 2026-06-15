@@ -142,7 +142,85 @@ const IRREGULARS: Record<string, IrregularData> = {
     imperative: ['стань', 'станьте'],
     isPerfective: true,
   },
+  // Prefixed motion verbs that don't fall cleanly out of идти's stem (the
+  // prefix triggers stem reshape, "по" + "идти" → "пойти" not "поидти").
+  // Add the most-common ones directly rather than try to model the morphology.
+  'пойти': {
+    present: ['пойду', 'пойдёшь', 'пойдёт', 'пойдём', 'пойдёте', 'пойдут'],
+    past:    ['пошёл', 'пошёл/пошла', 'пошёл/пошла', 'пошли', 'пошли', 'пошли'],
+    imperative: ['пойди', 'пойдите'],
+    isPerfective: true,
+  },
+  'прийти': {
+    present: ['приду', 'придёшь', 'придёт', 'придём', 'придёте', 'придут'],
+    past:    ['пришёл', 'пришёл/пришла', 'пришёл/пришла', 'пришли', 'пришли', 'пришли'],
+    imperative: ['приди', 'придите'],
+    isPerfective: true,
+  },
+  'уйти': {
+    present: ['уйду', 'уйдёшь', 'уйдёт', 'уйдём', 'уйдёте', 'уйдут'],
+    past:    ['ушёл', 'ушёл/ушла', 'ушёл/ушла', 'ушли', 'ушли', 'ушли'],
+    imperative: ['уйди', 'уйдите'],
+    isPerfective: true,
+  },
+  'выйти': {
+    present: ['выйду', 'выйдешь', 'выйдет', 'выйдем', 'выйдете', 'выйдут'],
+    past:    ['вышел', 'вышел/вышла', 'вышел/вышла', 'вышли', 'вышли', 'вышли'],
+    imperative: ['выйди', 'выйдите'],
+    isPerfective: true,
+  },
+  'войти': {
+    present: ['войду', 'войдёшь', 'войдёт', 'войдём', 'войдёте', 'войдут'],
+    past:    ['вошёл', 'вошёл/вошла', 'вошёл/вошла', 'вошли', 'вошли', 'вошли'],
+    imperative: ['войди', 'войдите'],
+    isPerfective: true,
+  },
+  'перейти': {
+    present: ['перейду', 'перейдёшь', 'перейдёт', 'перейдём', 'перейдёте', 'перейдут'],
+    past:    ['перешёл', 'перешёл/перешла', 'перешёл/перешла', 'перешли', 'перешли', 'перешли'],
+    imperative: ['перейди', 'перейдите'],
+    isPerfective: true,
+  },
 };
+
+// Common Russian verb prefixes that derive perfectives from imperfective
+// roots. Sorted longest-first so multi-character prefixes match before their
+// shorter substrings (про- before при- before по-, etc.). Includes devoiced
+// variants (рас-, вос-, ис-, нис-) that appear before voiceless consonants.
+const RU_PERFECTIVE_PREFIXES = [
+  'пере', 'пред',
+  'про', 'при', 'под', 'воз', 'раз', 'рас', 'низ', 'нис', 'над', 'вос', 'бес', 'без',
+  'вы', 'на', 'по', 'за', 'до', 'об', 'из', 'ис',
+  'у', 'с', 'в',
+];
+
+// When a verb isn't directly in IRREGULARS (e.g. написать), try stripping
+// each prefix and see if the remainder IS an irregular root (писать). If so,
+// we can reuse the root's stem alternations with the prefix re-attached:
+//   написать → strip "на" → "писать" → IRREGULARS["писать"] hit
+//   forms become "на" + ["пишу", "пишешь", ...] = ["напишу", "напишешь", ...]
+//
+// Same trick rescues подписать, переписать, исписать, попросить (if просить
+// is added later), полюбить, увидеть, услышать, поехать, etc.
+function findPrefixedIrregular(infinitive: string): { prefix: string; root: string; data: IrregularData } | null {
+  for (const p of RU_PERFECTIVE_PREFIXES) {
+    if (!infinitive.startsWith(p)) continue;
+    const root = infinitive.slice(p.length);
+    const data = IRREGULARS[root];
+    if (data) return { prefix: p, root, data };
+  }
+  return null;
+}
+
+// Apply a prefix to each form in an Irregular forms array. Slash-separated
+// gender variants (e.g. "был/была") get each part prefixed independently.
+function prefixForms(forms: string[], prefix: string): string[] {
+  return forms.map(f => {
+    if (f === '–') return f;
+    if (f.includes('/')) return f.split('/').map(p => prefix + p).join('/');
+    return prefix + f;
+  });
+}
 
 // ── Regular conjugation ─────────────────────────────────────
 function conjugatePresent(stem: string, infinitive: string): Forms {
@@ -255,7 +333,26 @@ export function conjugate(infinitive: string): ConjugationTable | null {
 
   const stem = getStem(infinitive);
   const baseInf = infinitive.replace(/ся$/, '').replace(/сь$/, '');
-  const irr = IRREGULARS[baseInf];
+  // Direct hit on IRREGULARS first (e.g. писать, сказать). Falls back to a
+  // prefix-strip lookup so prefixed perfectives like написать, переписать,
+  // подписать reuse писать's stem alternation without each needing its own
+  // IRREGULARS entry.
+  let irr = IRREGULARS[baseInf];
+  let irrPrefix = '';
+  if (!irr) {
+    const m = findPrefixedIrregular(baseInf);
+    if (m) {
+      irr = {
+        present: m.data.present ? prefixForms(m.data.present, m.prefix) as Forms : undefined,
+        past: m.data.past ? prefixForms(m.data.past, m.prefix) as Forms : undefined,
+        imperative: m.data.imperative
+          ? prefixForms(m.data.imperative, m.prefix) as [string, string]
+          : undefined,
+        isPerfective: true,
+      };
+      irrPrefix = m.prefix;
+    }
+  }
   const refl = isReflexive(infinitive);
 
   const tenses: Record<string, string[]> = {};

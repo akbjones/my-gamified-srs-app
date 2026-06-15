@@ -433,7 +433,7 @@ const PopoverPortal: React.FC<{
     }
 
     return null;
-  }, [entry, rawToken, language]);
+  }, [entry, rawToken, language, swappedTo]);
 
   let conjTable: ConjugationTable | null = null;
   try { conjTable = conjugation(); } catch (e) { console.error('Conjugation error for', rawToken, ':', e); }

@@ -307,10 +307,17 @@ function buildTable(
   // But more accurately: check if it's a deponent/reflexive -s verb
   // For now, simple check: finnas, hoppas, etc.
 
+  // S-passive: present + s (talas, läses) and past + s (talades, lästes,
+  // skrevs). Common in news/formal writing; needs its own rows so taps on
+  // "konstaterades" or "byggs" highlight something.
+  const presentPassive = present.endsWith('r') ? present.slice(0, -1) + 's' : present + 's';
+  const pastPassive = past + 's';
   const tenses: Record<string, string[]> = {
     'Presens (Present)': allPersons(present),
     'Preteritum (Past)': allPersons(past),
     'Supinum (Supine)': allPersons(`${auxiliary} ${supine}`),
+    'Presens Passiv (Present Passive)': allPersons(presentPassive),
+    'Preteritum Passiv (Past Passive)': allPersons(pastPassive),
     'Futurum (Future)': allPersons(`ska ${infinitive}`),
     'Konditionalis (Conditional)': allPersons(`skulle ${infinitive}`),
     'Imperativ (Imperative)': allPersons(imperative === '-' ? '-' : imperative),

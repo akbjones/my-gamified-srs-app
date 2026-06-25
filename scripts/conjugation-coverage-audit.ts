@@ -72,7 +72,7 @@ function matcherMatches(forms: string[], rawToken: string, lang = ''): boolean {
   // Pass 2: loose full-string
   if (forms.some(f => f && f !== '-' && loose(f) === lT)) return true;
   // Pass 3: word-level strict
-  const wordsOf = (f: string) => f.split(/\s+/).map(w => stripPunct(w.toLowerCase())).filter(Boolean);
+  const wordsOf = (f: string) => f.split(/[\s/]+/).map(w => stripPunct(w.toLowerCase())).filter(Boolean);
   if (forms.some(f => f && f !== '-' && wordsOf(f).some(w => strict(w).replace(/\s+/g, '') === sT))) return true;
   // Pass 4: word-level loose
   if (forms.some(f => f && f !== '-' && wordsOf(f).some(w => loose(w) === lT))) return true;
@@ -172,6 +172,17 @@ for (const [code, cfg] of Object.entries(LANGS) as [LangCode, typeof LANGS[LangC
       if (!table) {
         buckets.no_table++;
         failures.push({ lang: cfg.name, card: card.target, token: tok, lemma, cls: 'no_table', detail: 'engine returned null' });
+        continue;
+      }
+      // Banner-handled case: if the tapped (cleaned) form IS the engine's
+      // infinitive, the UI shows the blue "Dictionary form" banner from
+      // Phase 4B. The matcher correctly returns no row (infinitives aren't
+      // rows) but the user experience is correct — they see "you tapped the
+      // base infinitive, conjugations below". Count this as a pass.
+      const cleanLower = clean.toLowerCase();
+      const infLower = table.infinitive.toLowerCase();
+      if (cleanLower === infLower) {
+        buckets.success++; perLang[cfg.name].pass++;
         continue;
       }
       // Run matcher against every tense's forms

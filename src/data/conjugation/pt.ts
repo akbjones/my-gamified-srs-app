@@ -434,7 +434,7 @@ const IRREGULARS: Record<string, PartialTenses> = {
   },
   // ─── ir ───
   ir: {
-    present:     f('vou,vais,vai,vamos,ides,vão'),
+    present:     f('vou,vais,vai,vamos/vamo,ides,vão'),
     preterite:   f('fui,foste,foi,fomos,fostes,foram'),
     imperfect:   f('ia,ias,ia,íamos,íeis,iam'),
     subjunctive: f('vá,vás,vá,vamos,vades,vão'),

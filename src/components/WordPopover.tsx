@@ -505,8 +505,12 @@ const PopoverPortal: React.FC<{
     // tapped token against any of its words resolves this for every
     // compound-tense language at once.
     const stripPunctLocal = (s: string) => s.replace(/[.,!?;:""''«»()¿¡—–\-।॥]/g, '');
+    // Split on whitespace AND slash. Engines emit slash-joined alternates for
+    // gender (Russian past "встречался/встречалась") and stress-variant
+    // imperatives (Russian "позволи/позволь", "позволите/позвольте"). Both
+    // need to be matchable as separate words.
     const wordsOf = (form: string) =>
-      form.split(/\s+/).map(w => stripPunctLocal(w.toLowerCase())).filter(Boolean);
+      form.split(/[\s/]+/).map(w => stripPunctLocal(w.toLowerCase())).filter(Boolean);
     const formContainsWord = (form: string, normFn: (s: string) => string, target: string) =>
       wordsOf(form).some(w => normFn(w) === target);
 

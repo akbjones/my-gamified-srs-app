@@ -7,10 +7,10 @@ import type { ConjugationTable } from '../../types';
 
 // ── Types ────────────────────────────────────────────────────
 type Forms = [string, string, string, string, string, string]; // yo, tú, él, nosotros, vosotros, ellos
-type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive' | 'imperative' | 'past_participle';
+type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive' | 'imperfect_subjunctive' | 'imperative' | 'past_participle';
 type PartialTenses = Partial<Record<TenseKey, Forms>>;
 
-const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive', 'imperative', 'past_participle'];
+const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive', 'imperfect_subjunctive', 'imperative', 'past_participle'];
 
 const TENSE_LABELS: Record<TenseKey, string> = {
   present: 'Presente (Present)',
@@ -19,6 +19,7 @@ const TENSE_LABELS: Record<TenseKey, string> = {
   future: 'Futuro (Future)',
   conditional: 'Condicional (Conditional)',
   subjunctive: 'Subjuntivo (Subjunctive)',
+  imperfect_subjunctive: 'Imp. Subjuntivo (-ra/-se)',
   imperative: 'Imperativo (Imperative)',
   past_participle: 'Participio (Past Participle)',
 };
@@ -55,6 +56,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     // Affirmative imperative. Slot 0 (yo) has no imperative form.
     // tú=stem+a, usted=subj 3sg, nos=subj 1pl, vos=stem+ad, uds=subj 3pl
     imperative:  ['-', 'a', 'e', 'emos', 'ad', 'en'],
+    imperfect_subjunctive: ['-', '-', '-', '-', '-', '-'],
     past_participle: ['-', '-', '-', '-', '-', '-'],   // overwritten in conjugate() — single form, no person agreement
   },
   er: {
@@ -65,6 +67,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     conditional: ['ería', 'erías', 'ería', 'eríamos', 'eríais', 'erían'],
     subjunctive: ['a', 'as', 'a', 'amos', 'áis', 'an'],
     imperative:  ['-', 'e', 'a', 'amos', 'ed', 'an'],
+    imperfect_subjunctive: ['-', '-', '-', '-', '-', '-'],
     past_participle: ['-', '-', '-', '-', '-', '-'],
   },
   ir: {
@@ -75,6 +78,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     conditional: ['iría', 'irías', 'iría', 'iríamos', 'iríais', 'irían'],
     subjunctive: ['a', 'as', 'a', 'amos', 'áis', 'an'],
     imperative:  ['-', 'e', 'a', 'amos', 'id', 'an'],
+    imperfect_subjunctive: ['-', '-', '-', '-', '-', '-'],
     past_participle: ['-', '-', '-', '-', '-', '-'],
   },
 };
@@ -527,6 +531,36 @@ export function conjugate(infinitive: string): ConjugationTable | null {
   imp[5] = tenses.subjunctive[5];
   if (IRREGULAR_TU_IMPERATIVE[baseInf]) imp[1] = IRREGULAR_TU_IMPERATIVE[baseInf];
   tenses.imperative = imp;
+
+  // Derive the imperfect subjunctive from the preterite. The rule:
+  // take preterite 3pl (e.g. "hubieron", "hablaron"), strip -ron, then
+  // append -ra/-ras/-ra/-´ramos/-rais/-ran. Plus the -se alternate
+  // (-se/-ses/-se/-´semos/-seis/-sen). Joined by '/'.
+  // Examples: haber → hubiera/hubiese, hubieras/hubieses, …
+  //           hablar → hablara/hablase, hablaras/hablases, …
+  //           comer → comiera/comiese, …
+  const pret3pl = tenses.preterite[5];
+  if (pret3pl && pret3pl.endsWith('ron')) {
+    const root = pret3pl.slice(0, -3);          // "hubie" / "habla" / "comie"
+    // 1pl needs an accent on the vowel before -ramos / -semos. We add it on the
+    // last vowel of the root.
+    const accentMap: Record<string, string> = { a: 'á', e: 'é', i: 'í', o: 'ó', u: 'ú' };
+    const lastVowelIdx = (() => {
+      for (let i = root.length - 1; i >= 0; i--) if ('aeiou'.includes(root[i])) return i;
+      return -1;
+    })();
+    const rootAccented = lastVowelIdx >= 0
+      ? root.slice(0, lastVowelIdx) + accentMap[root[lastVowelIdx]] + root.slice(lastVowelIdx + 1)
+      : root;
+    tenses.imperfect_subjunctive = [
+      `${root}ra/${root}se`,
+      `${root}ras/${root}ses`,
+      `${root}ra/${root}se`,
+      `${rootAccented}ramos/${rootAccented}semos`,
+      `${root}rais/${root}seis`,
+      `${root}ran/${root}sen`,
+    ] as Forms;
+  }
 
   // Populate past_participle as a single-form tense — slots 0-1 + 3-5 stay
   // '-' (no person agreement). Slot 2 shows the participle. The matcher will

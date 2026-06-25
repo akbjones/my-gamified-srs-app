@@ -18,9 +18,16 @@
 import type { ConjugationTable } from '../../types';
 
 type Forms = [string, string, string, string, string, string];
-type TenseKey = 'present_cont' | 'aorist' | 'past' | 'reported' | 'future' | 'conditional';
+type TenseKey =
+  | 'present_cont' | 'aorist' | 'past' | 'reported' | 'future' | 'conditional'
+  | 'imperative' | 'necessitative'
+  | 'present_cont_neg' | 'aorist_neg' | 'past_neg' | 'reported_neg' | 'future_neg' | 'conditional_neg' | 'necessitative_neg';
 
-const TENSES: TenseKey[] = ['present_cont', 'aorist', 'past', 'reported', 'future', 'conditional'];
+const TENSES: TenseKey[] = [
+  'present_cont', 'aorist', 'past', 'reported', 'future', 'conditional',
+  'imperative', 'necessitative',
+  'present_cont_neg', 'aorist_neg', 'past_neg', 'reported_neg', 'future_neg', 'conditional_neg', 'necessitative_neg',
+];
 
 const TENSE_LABELS: Record<TenseKey, string> = {
   present_cont: 'Şimdiki Zaman (Present Cont.)',
@@ -29,6 +36,15 @@ const TENSE_LABELS: Record<TenseKey, string> = {
   reported: 'Duyulan Geçmiş (Reported)',
   future: 'Gelecek Zaman (Future)',
   conditional: 'Şart (Conditional)',
+  imperative: 'Emir Kipi (Imperative)',
+  necessitative: 'Gereklilik Kipi (Necessitative)',
+  present_cont_neg: 'Şimdiki Zaman Olumsuz (Present Cont. Neg.)',
+  aorist_neg: 'Geniş Zaman Olumsuz (Aorist Neg.)',
+  past_neg: 'Geçmiş Zaman Olumsuz (Past Neg.)',
+  reported_neg: 'Duyulan Geçmiş Olumsuz (Reported Neg.)',
+  future_neg: 'Gelecek Zaman Olumsuz (Future Neg.)',
+  conditional_neg: 'Şart Olumsuz (Conditional Neg.)',
+  necessitative_neg: 'Gereklilik Olumsuz (Necessitative Neg.)',
 };
 
 // ── Vowel harmony helpers ───────────────────────────────────
@@ -237,6 +253,149 @@ function conjugateConditional(stem: string, _inf: string): Forms {
   ];
 }
 
+// ── Imperative ────────────────────────────────────────────
+// Person column ordering matches other tenses: ben/sen/o/biz/siz/onlar.
+// ben has no imperative; biz uses cohortative (gel-elim "let's come").
+function conjugateImperative(stem: string, _inf: string): Forms {
+  const a = harmonyAE(stem);
+  const h = harmony4(stem);
+  return [
+    '-',                  // ben (no 1sg imperative)
+    `${stem}`,            // sen: bare stem — gel
+    `${stem}s${h}n`,      // o: gelsin (jussive)
+    `${stem}${a}l${harmony4(stem + a)}m`, // biz: gel-elim (let's)
+    `${stem}${h}n`,       // siz: gelin (also formal sing)
+    `${stem}s${h}nler`,   // onlar: gelsinler — simplified, ler/lar follows harmony
+  ];
+}
+
+// ── Necessitative (-meli/-malı) ───────────────────────────
+// "must/have to": gelmeliyim (I must come)
+function conjugateNecessitative(stem: string, _inf: string): Forms {
+  const a = harmonyAE(stem);
+  const base = `${stem}m${a}l${harmony4(stem + 'm' + a)}`;
+  return [
+    `${base}y${harmony4(base)}m`,    // -meliyim
+    `${base}s${harmony4(base)}n`,    // -melisin
+    `${base}`,                        // -meli
+    `${base}y${harmony4(base)}z`,    // -meliyiz
+    `${base}s${harmony4(base)}n${harmony4(base)}z`, // -melisiniz
+    `${base}ler`,                     // -meliler
+  ];
+}
+
+// ── Negation helpers ──────────────────────────────────────
+/** Negative present continuous: stem + MI/MU + yor.
+ * Note: the negative suffix harmonizes to mı/mi/mu/mü (4-way) before -yor,
+ * not to me/ma. Example: gelmek → gelmiyor (NOT gelmeyor), okumak → okumuyor.
+ */
+function conjugatePresentContNeg(stem: string, _inf: string): Forms {
+  // Negative -mI- doesn't trigger stem-final-vowel drop the way -yor does in the
+  // positive: oku + m + u + yor = okumuyor (NOT okmuyor). So we keep the full stem.
+  const s = stem;
+  const neg = harmony4(s);  // mı/mi/mu/mü
+  const base = `${s}m${neg}yor`;
+  return [
+    `${base}um`,
+    `${base}sun`,
+    `${base}`,
+    `${base}uz`,
+    `${base}sunuz`,
+    `${base}lar`,
+  ];
+}
+
+/** Negative aorist: stem + me/ma (no -r/-er), with irregular 1sg/1pl + 2pl forms.
+ * gelmek → gelmem, gelmezsin, gelmez, gelmeyiz, gelmezsiniz, gelmezler
+ */
+function conjugateAoristNeg(stem: string, _inf: string): Forms {
+  const a = harmonyAE(stem);
+  const me = `${stem}m${a}`;
+  const mez = `${stem}m${a}z`;
+  return [
+    `${me}m`,             // ben: gelmem
+    `${mez}s${harmony4(mez)}n`,  // sen: gelmezsin
+    `${mez}`,             // o: gelmez
+    `${me}y${harmony4(me)}z`,    // biz: gelmeyiz
+    `${mez}s${harmony4(mez)}n${harmony4(mez)}z`, // siz: gelmezsiniz
+    `${mez}ler`,          // onlar: gelmezler
+  ];
+}
+
+/** Negative past: stem + me/ma + di + person. gelmek → gelmedim */
+function conjugatePastNeg(stem: string, _inf: string): Forms {
+  const a = harmonyAE(stem);
+  const base = `${stem}m${a}d${harmony4(stem + 'm' + a + 'd')}`;
+  return [
+    `${base}m`,
+    `${base}n`,
+    `${stem}m${a}d${harmony4(stem + 'm' + a + 'd')}`,
+    `${base}k`,
+    `${base}n${harmony4(base)}z`,
+    `${stem}m${a}d${harmony4(stem + 'm' + a + 'd')}lar`,
+  ];
+}
+
+/** Negative reported: stem + me/ma + miş + person. gelmek → gelmemişim */
+function conjugateReportedNeg(stem: string, _inf: string): Forms {
+  const a = harmonyAE(stem);
+  const base = `${stem}m${a}m${harmony4(stem + 'm' + a + 'm')}ş`;
+  const h = harmony4(base);
+  return [
+    `${base}${h}m`,
+    `${base}s${h}n`,
+    `${base}`,
+    `${base}${h}z`,
+    `${base}s${h}n${h}z`,
+    `${base}lar`,
+  ];
+}
+
+/** Negative future: stem + me/ma + yacak/yecek. gelmek → gelmeyeceğim */
+function conjugateFutureNeg(stem: string, _inf: string): Forms {
+  const a = harmonyAE(stem);
+  // stem + me/ma + y + acak/ecek
+  const ya = `${stem}m${a}y${a}c${a}k`;
+  const yaSoft = `${stem}m${a}y${a}c${a}ğ`;
+  const h = harmony4(ya);
+  return [
+    `${yaSoft}${h}m`,
+    `${ya}s${h}n`,
+    `${ya}`,
+    `${yaSoft}${h}z`,
+    `${ya}s${h}n${h}z`,
+    `${ya}lar`,
+  ];
+}
+
+/** Negative conditional: stem + me/ma + se/sa + person. gelmek → gelmesem */
+function conjugateConditionalNeg(stem: string, _inf: string): Forms {
+  const a = harmonyAE(stem);
+  const base = `${stem}m${a}s${a}`;
+  return [
+    `${base}m`,
+    `${base}n`,
+    `${base}`,
+    `${base}k`,
+    `${base}n${harmony4(base)}z`,
+    `${stem}m${a}s${a}lar`,
+  ];
+}
+
+/** Negative necessitative: stem + me/ma + meli/malı. gelmek → gelmemeliyim */
+function conjugateNecessitativeNeg(stem: string, _inf: string): Forms {
+  const a = harmonyAE(stem);
+  const base = `${stem}m${a}m${a}l${harmony4(stem + 'm' + a + 'm' + a)}`;
+  return [
+    `${base}y${harmony4(base)}m`,
+    `${base}s${harmony4(base)}n`,
+    `${base}`,
+    `${base}y${harmony4(base)}z`,
+    `${base}s${harmony4(base)}n${harmony4(base)}z`,
+    `${base}ler`,
+  ];
+}
+
 // ── Main conjugation function ───────────────────────────────
 export function conjugate(infinitive: string): ConjugationTable | null {
   // Turkish dict has a Phase-B inheritance bug where some entries have a
@@ -291,6 +450,33 @@ export function conjugate(infinitive: string): ConjugationTable | null {
       case 'conditional':
         tenses[label] = conjugateConditional(stem, infinitive);
         break;
+      case 'imperative':
+        tenses[label] = conjugateImperative(rawStem, infinitive);
+        break;
+      case 'necessitative':
+        tenses[label] = conjugateNecessitative(rawStem, infinitive);
+        break;
+      case 'present_cont_neg':
+        tenses[label] = conjugatePresentContNeg(rawStem, infinitive);
+        break;
+      case 'aorist_neg':
+        tenses[label] = conjugateAoristNeg(rawStem, infinitive);
+        break;
+      case 'past_neg':
+        tenses[label] = conjugatePastNeg(rawStem, infinitive);
+        break;
+      case 'reported_neg':
+        tenses[label] = conjugateReportedNeg(rawStem, infinitive);
+        break;
+      case 'future_neg':
+        tenses[label] = conjugateFutureNeg(rawStem, infinitive);
+        break;
+      case 'conditional_neg':
+        tenses[label] = conjugateConditionalNeg(rawStem, infinitive);
+        break;
+      case 'necessitative_neg':
+        tenses[label] = conjugateNecessitativeNeg(rawStem, infinitive);
+        break;
     }
   }
 
@@ -302,7 +488,39 @@ export function conjugate(infinitive: string): ConjugationTable | null {
 }
 
 // ── Reverse lookup: find infinitive from conjugated form ────
+// Order matters: longer/more-specific suffixes BEFORE shorter ones so
+// "okumuyorsun" matches "muyorsun" (negative present cont) before "yorsun".
 const TENSE_SUFFIXES = [
+  // Negative present continuous (longer prefix forms first)
+  'mıyorum', 'mıyorsun', 'mıyor', 'mıyoruz', 'mıyorsunuz', 'mıyorlar',
+  'miyorum', 'miyorsun', 'miyor', 'miyoruz', 'miyorsunuz', 'miyorlar',
+  'muyorum', 'muyorsun', 'muyor', 'muyoruz', 'muyorsunuz', 'muyorlar',
+  'müyorum', 'müyorsun', 'müyor', 'müyoruz', 'müyorsunuz', 'müyorlar',
+  // Negative future
+  'mayacağım', 'mayacaksın', 'mayacak', 'mayacağız', 'mayacaksınız', 'mayacaklar',
+  'meyeceğim', 'meyeceksin', 'meyecek', 'meyeceğiz', 'meyeceksiniz', 'meyecekler',
+  // Negative reported
+  'mamışım', 'mamışsın', 'mamış', 'mamışız', 'mamışsınız', 'mamışlar',
+  'memişim', 'memişsin', 'memiş', 'memişiz', 'memişsiniz', 'memişler',
+  // Negative past
+  'madım', 'madın', 'madı', 'madık', 'madınız', 'madılar',
+  'medim', 'medin', 'medi', 'medik', 'mediniz', 'mediler',
+  // Negative aorist (irregular: no -r)
+  'mam', 'men', 'mez', 'meyiz', 'mezsin', 'mezler', 'mezsiniz',
+  'maz', 'mayız', 'mazsın', 'mazlar', 'mazsınız',
+  // Negative conditional
+  'masam', 'masan', 'masa', 'masak', 'masanız', 'masalar',
+  'mesem', 'mesen', 'mese', 'mesek', 'meseniz', 'meseler',
+  // Necessitative (positive + negative)
+  'malıyım', 'malısın', 'malı', 'malıyız', 'malısınız', 'malılar',
+  'meliyim', 'melisin', 'meli', 'meliyiz', 'melisiniz', 'meliler',
+  'mamalıyım', 'mamalısın', 'mamalı', 'mamalıyız', 'mamalısınız', 'mamalılar',
+  'memeliyim', 'memelisin', 'memeli', 'memeliyiz', 'memelisiniz', 'memeliler',
+  // Imperative
+  'sinler', 'sınlar', 'sunlar', 'sünler',
+  'sin', 'sın', 'sun', 'sün',
+  'iniz', 'ınız', 'unuz', 'ünüz',
+  'elim', 'alım',
   // Present continuous
   'yorum', 'yorsun', 'yor', 'yoruz', 'yorsunuz', 'yorlar',
   // Future

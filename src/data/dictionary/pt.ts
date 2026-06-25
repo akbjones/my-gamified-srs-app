@@ -6199,7 +6199,7 @@ const dictionary: Record<string, DictEntry> =              {
   'valioso': { en: 'valuable', ipa: 'va.li.ˈo.zu', pos: 'adj' },
   'valor': { en: 'value', ipa: 'va.ˈloʁ', pos: 'n' },
   'valores': { en: 'values; securities', ipa: 'va.ˈlo.ɾis', pos: 'n', lemma: 'valor' },
-  'vamo': { en: 'to let us go', ipa: '', pos: 'v' },
+  'vamo': { en: 'let\'s go (colloquial, dropped final -s)', ipa: '', pos: 'v', lemma: 'ir' },
   'vamos': { en: 'to go', ipa: '', pos: 'v', lemma: 'ir' },
   'vantagem': { en: 'advantage', ipa: 'vɐ̃.ˈta.ʒẽj', pos: 'n' },
   'vantagens': { en: 'advantages', ipa: 'vɐ̃.ˈta.ʒẽjs', pos: 'n', lemma: 'vantagem' },

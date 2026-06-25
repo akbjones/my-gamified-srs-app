@@ -142,6 +142,12 @@ const IRREGULARS: Record<string, IrregularData> = {
     imperative: ['стань', 'станьте'],
     isPerfective: true,
   },
+  'начать': {
+    present: ['начну', 'начнёшь', 'начнёт', 'начнём', 'начнёте', 'начнут'],
+    past:    ['начал', 'начал/начала', 'начал/начала', 'начали', 'начали', 'начали'],
+    imperative: ['начни', 'начните'],
+    isPerfective: true,
+  },
   // Prefixed motion verbs that don't fall cleanly out of идти's stem (the
   // prefix triggers stem reshape, "по" + "идти" → "пойти" not "поидти").
   // Add the most-common ones directly rather than try to model the morphology.
@@ -240,11 +246,13 @@ function conjugatePresent(stem: string, infinitive: string): Forms {
     ];
   } else {
     // 1st conjugation: -у/-ю, -ешь, -ет, -ем, -ете, -ут/-ют
-    const s = stem.endsWith('а') || stem.endsWith('я') ? stem.slice(0, -1) : stem;
-    const vowelStem = stem.endsWith('а') || stem.endsWith('я') || stem.endsWith('е');
+    // Default keeps the stem-final thematic vowel (читать → читаю/читаешь;
+    // встречаться → встречаюсь/встречаешься). The writing-class with
+    // consonant mutation (писать → пишу; казать → кажу) drops the 'а' and
+    // mutates — that minority class needs an explicit IRREGULARS entry.
     forms = [
-      `${s}ю`, `${s}ешь`, `${s}ет`,
-      `${s}ем`, `${s}ете`, `${s}ют`,
+      `${stem}ю`, `${stem}ешь`, `${stem}ет`,
+      `${stem}ем`, `${stem}ете`, `${stem}ют`,
     ];
   }
 
@@ -295,12 +303,22 @@ function conjugateFuture(stem: string, infinitive: string): Forms {
 
 function conjugateImperative(stem: string, infinitive: string): Forms {
   const refl = isReflexive(infinitive);
+  const baseInf = infinitive.replace(/ся$/, '').replace(/сь$/, '');
 
   // Basic imperative: stem + й/и (ты), stem + йте/ите (вы)
   let tyForm: string;
   let vyForm: string;
 
-  if (stem.endsWith('а') || stem.endsWith('я') || stem.endsWith('е')) {
+  // 2nd-conj -ить verbs: strip the thematic 'и' before adding the suffix to
+  // avoid "позволии"/"позволиите". Produce BOTH the -и/-ите form AND the
+  // -ь/-ьте soft-sign variant so the matcher catches either (позволь,
+  // позвольте vs. позвонь, позвоните — the stress-driven choice depends on
+  // the verb, but having both as alternates is safe for matching).
+  if (baseInf.endsWith('ить')) {
+    const root = stem.endsWith('и') ? stem.slice(0, -1) : stem;
+    tyForm = `${root}и/${root}ь`;
+    vyForm = `${root}ите/${root}ьте`;
+  } else if (stem.endsWith('а') || stem.endsWith('я') || stem.endsWith('е')) {
     tyForm = stem + 'й';
     vyForm = stem + 'йте';
   } else {
@@ -309,8 +327,9 @@ function conjugateImperative(stem: string, infinitive: string): Forms {
   }
 
   if (refl) {
-    tyForm += 'сь';
-    vyForm += 'сь';
+    // For slash-joined alternates apply -сь to each branch.
+    tyForm = tyForm.includes('/') ? tyForm.split('/').map(p => p + 'сь').join('/') : tyForm + 'сь';
+    vyForm = vyForm.includes('/') ? vyForm.split('/').map(p => p + 'сь').join('/') : vyForm + 'сь';
   }
 
   // Imperative doesn't have all 6 person forms, but we fill for consistency

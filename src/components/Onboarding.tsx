@@ -15,7 +15,11 @@ const SLIDES = [
   },
   {
     title: 'Rate your knowledge',
-    description: 'For every card, rate how well you knew it: Again, Hard, Good, or Easy. This personalizes your review schedule.',
+    description: 'For every card, rate how well you knew it: No idea, Hard, Knew it, or Very easy. Be honest – not strategic.',
+  },
+  {
+    title: 'We handle the timing',
+    description: "Cards you struggled with come back sooner. Cards you knew instantly get pushed weeks or months out. You won't see exact intervals on the buttons – they'd just tempt you to game the schedule. Rate honestly and trust the algorithm.",
   },
   {
     title: 'Choose your focus',

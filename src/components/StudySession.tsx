@@ -55,11 +55,13 @@ interface StudySessionProps {
 // Resting state now ALWAYS shows the rating color (was previously a near-grey
 // card bg with only a thin colored border, which read as muted/disabled).
 // Bg /15 + border 2px ensures the four ratings are immediately scannable.
+// `label` is the user-facing text; internal ids (AGAIN/HARD/GOOD/EASY) stay
+// the same so SRS persistence and analytics don't break.
 const GRADE_CONFIG = {
-  AGAIN: { color: 'text-red-500', bg: 'bg-red-500/15 hover:bg-red-500/25 active:bg-red-500/35', border: 'border-red-500/60' },
-  HARD:  { color: 'text-orange-500', bg: 'bg-orange-500/15 hover:bg-orange-500/25 active:bg-orange-500/35', border: 'border-orange-500/60' },
-  GOOD:  { color: 'text-emerald-500', bg: 'bg-emerald-500/15 hover:bg-emerald-500/25 active:bg-emerald-500/35', border: 'border-emerald-500/60' },
-  EASY:  { color: 'text-violet-500', bg: 'bg-violet-500/15 hover:bg-violet-500/25 active:bg-violet-500/35', border: 'border-violet-500/60' },
+  AGAIN: { label: 'No idea',   color: 'text-red-500',     bg: 'bg-red-500/15 hover:bg-red-500/25 active:bg-red-500/35',         border: 'border-red-500/60' },
+  HARD:  { label: 'Hard',      color: 'text-orange-500',  bg: 'bg-orange-500/15 hover:bg-orange-500/25 active:bg-orange-500/35', border: 'border-orange-500/60' },
+  GOOD:  { label: 'Knew it',   color: 'text-emerald-500', bg: 'bg-emerald-500/15 hover:bg-emerald-500/25 active:bg-emerald-500/35', border: 'border-emerald-500/60' },
+  EASY:  { label: 'Very easy', color: 'text-violet-500',  bg: 'bg-violet-500/15 hover:bg-violet-500/25 active:bg-violet-500/35',   border: 'border-violet-500/60' },
 } as const;
 
 const FIRST_WOW_KEY = 'first-session-wow-shown';
@@ -114,7 +116,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
     }
   }, [card, session.language, autoPlayAudio, audioSpeed, googleTtsApiKey, session.queue, session.currentIndex]);
 
-  // Keyboard shortcuts: 1=Again, 2=Hard, 3=Good, 4=Easy, Space=flip
+  // Keyboard shortcuts: 1=No idea, 2=Hard, 3=Knew it, 4=Very easy, Space=flip
   // MUST be defined here (before any early return) to satisfy Rules of Hooks
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -277,42 +279,6 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
     onAnswer(rating);
   };
 
-  // Explicit time units so "1m" can't be misread as "1 month".
-  // For mature cards (mastery 2) the actual interval comes from the SRS
-  // formulas in srsService – the hint mirrors those so users see "13 days"
-  // on Easy for a 4-day card instead of a constant "4 days" that's only
-  // accurate at graduation.
-  const getIntervalHint = (rating: string): string => {
-    const MIN = 60_000;
-    const DAY = 24 * 60 * 60 * 1000;
-    const c = card!;
-    const ease = c.ease || 2.5;
-    const interval = c.interval || 0;
-
-    const fmt = (ms: number): string => {
-      if (ms < DAY) return `${Math.round(ms / MIN)} min`;
-      const d = Math.round(ms / DAY);
-      if (d < 30) return d === 1 ? '1 day' : `${d} days`;
-      const mo = Math.round(d / 30);
-      return mo === 1 ? '1 mo' : `${mo} mo`;
-    };
-
-    if (rating === 'AGAIN') return '1 min';
-    if (rating === 'HARD') {
-      if (c.mastery < 2) return '6 min';
-      return fmt(Math.max(1 * DAY, Math.round(interval * 1.2)));
-    }
-    if (rating === 'GOOD') {
-      if (c.mastery === 0) return '10 min';
-      if (c.mastery === 1 && c.step === 0) return '10 min';
-      if (c.mastery === 1) return '1 day';
-      return fmt(Math.round((interval || 1 * DAY) * ease));
-    }
-    // EASY
-    if (c.mastery < 2) return '4 days';
-    return fmt(Math.round((interval || 1 * DAY) * ease * 1.3));
-  };
-
   return (
     <>
       {/* Info modal */}
@@ -323,12 +289,15 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
         >
           <div className="stat-card p-6 text-sm leading-8 text-[var(--text-secondary)] w-full max-w-xs">
             <h3 className="font-black text-[var(--text-primary)] border-b border-[var(--border-color)] pb-3 mb-4 text-base">
-              Grading Guide
+              Rate honestly
             </h3>
-            <p><span className="text-red-500 font-black">Again</span> &mdash; Didn't know it. Restart.</p>
-            <p><span className="text-orange-500 font-black">Hard</span> &mdash; Struggled. Repeat soon.</p>
-            <p><span className="text-emerald-500 font-black">Good</span> &mdash; Got it. Advance step.</p>
-            <p><span className="text-[var(--accent)] font-black">Easy</span> &mdash; Too easy. Skip ahead.</p>
+            <p><span className="text-red-500 font-black">No idea</span> &ndash; Total blank. Restart.</p>
+            <p><span className="text-orange-500 font-black">Hard</span> &ndash; Got it, but it was a struggle.</p>
+            <p><span className="text-emerald-500 font-black">Knew it</span> &ndash; Recalled without effort.</p>
+            <p><span className="text-violet-500 font-black">Very easy</span> &ndash; Instant. Push it further out.</p>
+            <p className="mt-4 text-xs text-[var(--text-muted)] leading-relaxed">
+              Your rating sets the next review time automatically &ndash; you don't need to think about timing.
+            </p>
             <div className="mt-5 pt-3 border-t border-[var(--border-color)] text-center text-xs text-[var(--text-muted)] font-bold">
               Tap anywhere to close
             </div>
@@ -631,10 +600,9 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                   <button
                     key={rating}
                     onClick={() => submitAnswer(rating)}
-                    className={`py-5 rounded-xl bg-[var(--bg-card)] border ${cfg.border} ${cfg.bg} ${cfg.color} active:scale-95 transition-all`}
+                    className={`py-6 rounded-xl bg-[var(--bg-card)] border ${cfg.border} ${cfg.bg} ${cfg.color} active:scale-95 transition-all`}
                   >
-                    <div className="text-base font-black uppercase tracking-wide">{rating}</div>
-                    <div className="text-xs text-[var(--text-secondary)] font-bold mt-0.5">{getIntervalHint(rating)}</div>
+                    <div className="text-sm sm:text-base font-black tracking-wide leading-tight">{cfg.label}</div>
                   </button>
                 );
               })}

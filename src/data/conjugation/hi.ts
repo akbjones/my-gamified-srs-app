@@ -23,16 +23,21 @@ import type { ConjugationTable } from '../../types';
 type Forms = [string, string, string, string, string, string];
 type TenseKey =
   | 'present' | 'continuous' | 'past' | 'habitual_past' | 'future' | 'subjunctive' | 'imperative'
-  | 'present_fem' | 'continuous_fem' | 'past_fem' | 'habitual_past_fem' | 'future_fem';
+  | 'present_fem' | 'continuous_fem' | 'past_fem' | 'habitual_past_fem' | 'future_fem'
+  | 'perfect' | 'perfect_fem' | 'past_perfect' | 'past_perfect_fem'
+  | 'oblique_infinitive';
 
 const TENSES: TenseKey[] = [
   'present', 'present_fem',
   'continuous', 'continuous_fem',
   'past', 'past_fem',
+  'perfect', 'perfect_fem',
+  'past_perfect', 'past_perfect_fem',
   'habitual_past', 'habitual_past_fem',
   'future', 'future_fem',
   'subjunctive',
   'imperative',
+  'oblique_infinitive',
 ];
 
 const TENSE_LABELS: Record<TenseKey, string> = {
@@ -46,8 +51,13 @@ const TENSE_LABELS: Record<TenseKey, string> = {
   habitual_past_fem: 'अभ्यस्त भूत (Past Habitual, f.)',
   future: 'भविष्य (Future, m.)',
   future_fem: 'भविष्य (Future, f.)',
+  perfect: 'पूर्ण (Perfect, m.)',
+  perfect_fem: 'पूर्ण (Perfect, f.)',
+  past_perfect: 'पूर्ण भूत (Past Perfect, m.)',
+  past_perfect_fem: 'पूर्ण भूत (Past Perfect, f.)',
   subjunctive: 'संभावना (Subjunctive)',
   imperative: 'आज्ञार्थक (Imperative)',
+  oblique_infinitive: 'तिर्यक (Oblique Infinitive)',
 };
 
 const PERSON_LABELS = ['मैं', 'तू', 'वह/यह', 'हम', 'तुम', 'आप/वे'];
@@ -547,6 +557,18 @@ function conjugateRegular(stem: string, tense: TenseKey): Forms {
       const sx = getFutureSuffixes(stem, true);
       return [`${stem}${sx[0]}`, `${stem}${sx[1]}`, `${stem}${sx[2]}`, `${stem}${sx[3]}`, `${stem}${sx[4]}`, `${stem}${sx[5]}`];
     }
+    case 'oblique_infinitive': {
+      // Single form used regardless of person: replace infinitive's final ा
+      // with े. We get the bare stem here, so reconstruct: stem + ने.
+      const ob = `${stem}ने`;
+      return [ob, ob, ob, ob, ob, ob];
+    }
+    case 'perfect':
+    case 'perfect_fem':
+    case 'past_perfect':
+    case 'past_perfect_fem':
+      // Handled in the main loop — needs the past form + an auxiliary.
+      return ['', '', '', '', '', ''];
     case 'imperative': {
       // Imperative only exists for 2nd-person (तू / तुम / आप). Other slots
       // are '-' which the UI renders as "no form for this person". The
@@ -611,6 +633,12 @@ export function conjugateHindi(infinitive: string): ConjugationTable | null {
         ],
         [TENSE_LABELS.past]: irr!.pastForms!,
         [TENSE_LABELS.past_fem]: ['थी', 'थी', 'थी', 'थीं', 'थीं', 'थीं'],
+        // Perfect of होना is unusual — "हुआ है" (has happened/become). Listed for
+        // completeness rather than typical SRS usage.
+        [TENSE_LABELS.perfect]: ['हुआ हूँ', 'हुआ है', 'हुआ है', 'हुए हैं', 'हुए हो', 'हुए हैं'],
+        [TENSE_LABELS.perfect_fem]: ['हुई हूँ', 'हुई है', 'हुई है', 'हुई हैं', 'हुई हो', 'हुई हैं'],
+        [TENSE_LABELS.past_perfect]: ['हुआ था', 'हुआ था', 'हुआ था', 'हुए थे', 'हुए थे', 'हुए थे'],
+        [TENSE_LABELS.past_perfect_fem]: ['हुई थी', 'हुई थी', 'हुई थी', 'हुई थीं', 'हुई थीं', 'हुई थीं'],
         [TENSE_LABELS.habitual_past]: [
           'होता था', 'होता था', 'होता था',
           'होते थे', 'होते थे', 'होते थे',
@@ -656,6 +684,9 @@ export function conjugateHindi(infinitive: string): ConjugationTable | null {
     } else if (tense === 'past_fem' && irr?.pastForms) {
       // Derive feminine past from the irregular masculine past forms.
       tenses[label] = pastFormsToFem(irr.pastForms);
+    } else if (tense === 'perfect' || tense === 'perfect_fem' || tense === 'past_perfect' || tense === 'past_perfect_fem') {
+      // Skip — handled below after the base past tenses are computed.
+      continue;
     } else {
       tenses[label] = conjugateRegular(
         tense === 'past' || tense === 'past_fem' ? (irr?.pastStem ?? stem) : effectiveStem,
@@ -669,6 +700,32 @@ export function conjugateHindi(infinitive: string): ConjugationTable | null {
         tenses[label] = arr;
       }
     }
+  }
+
+  // Derive perfect + past perfect (both genders) from the bare past forms.
+  // Perfect: past form + present auxiliary (हूँ/है/हैं/हो).
+  // Past perfect: past form + था/थे (m) or थी/थीं (f).
+  const pastM = tenses[TENSE_LABELS.past];
+  const pastF = tenses[TENSE_LABELS.past_fem];
+  if (pastM) {
+    tenses[TENSE_LABELS.perfect] = [
+      `${pastM[0]} ${PRESENT_AUX[0]}`, `${pastM[1]} ${PRESENT_AUX[1]}`, `${pastM[2]} ${PRESENT_AUX[2]}`,
+      `${pastM[3]} ${PRESENT_AUX[3]}`, `${pastM[4]} ${PRESENT_AUX[4]}`, `${pastM[5]} ${PRESENT_AUX[5]}`,
+    ];
+    tenses[TENSE_LABELS.past_perfect] = [
+      `${pastM[0]} ${PAST_HAB_AUX[0]}`, `${pastM[1]} ${PAST_HAB_AUX[1]}`, `${pastM[2]} ${PAST_HAB_AUX[2]}`,
+      `${pastM[3]} ${PAST_HAB_AUX[3]}`, `${pastM[4]} ${PAST_HAB_AUX[4]}`, `${pastM[5]} ${PAST_HAB_AUX[5]}`,
+    ];
+  }
+  if (pastF) {
+    tenses[TENSE_LABELS.perfect_fem] = [
+      `${pastF[0]} ${PRESENT_AUX[0]}`, `${pastF[1]} ${PRESENT_AUX[1]}`, `${pastF[2]} ${PRESENT_AUX[2]}`,
+      `${pastF[3]} ${PRESENT_AUX[3]}`, `${pastF[4]} ${PRESENT_AUX[4]}`, `${pastF[5]} ${PRESENT_AUX[5]}`,
+    ];
+    tenses[TENSE_LABELS.past_perfect_fem] = [
+      `${pastF[0]} ${PAST_HAB_AUX_F[0]}`, `${pastF[1]} ${PAST_HAB_AUX_F[1]}`, `${pastF[2]} ${PAST_HAB_AUX_F[2]}`,
+      `${pastF[3]} ${PAST_HAB_AUX_F[3]}`, `${pastF[4]} ${PAST_HAB_AUX_F[4]}`, `${pastF[5]} ${PAST_HAB_AUX_F[5]}`,
+    ];
   }
 
   return {
@@ -703,6 +760,11 @@ export function findInfinitive(form: string): string | null {
   // Direct infinitive
   if (form.endsWith('ना') && (IRREGULARS[form] || form.length >= 4)) {
     return form;
+  }
+  // Oblique infinitive: stem + ने (e.g. घूमने → घूमना)
+  if (form.endsWith('ने') && form.length >= 4) {
+    const candidate = form.slice(0, -2) + 'ना';
+    if (IRREGULARS[candidate] || candidate.length >= 4) return candidate;
   }
 
   // Check irregular past forms

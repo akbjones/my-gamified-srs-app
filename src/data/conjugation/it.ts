@@ -7,13 +7,13 @@ import type { ConjugationTable } from '../../types';
 
 // ── Types ───────────────────────────────────────────────────
 type Forms = [string, string, string, string, string, string]; // io, tu, lui, noi, voi, loro
-type TenseKey = 'present' | 'passato_prossimo' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive';
+type TenseKey = 'present' | 'passato_prossimo' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive' | 'past_participle';
 type PartialTenses = Partial<Record<TenseKey, Forms>>;
 // Order matters — UI renders tabs in this sequence. Passato prossimo sits
 // right after present because in spoken Italian it IS the everyday past
 // tense; passato remoto is mostly literary/southern. The deck overwhelmingly
 // has present and spoken-past usage, so this ordering matches user intent.
-const TENSES: TenseKey[] = ['present', 'passato_prossimo', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive'];
+const TENSES: TenseKey[] = ['present', 'passato_prossimo', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive', 'past_participle'];
 
 const TENSE_LABELS: Record<TenseKey, string> = {
   present: 'Presente (Present)',
@@ -23,6 +23,7 @@ const TENSE_LABELS: Record<TenseKey, string> = {
   future: 'Futuro (Future)',
   conditional: 'Condizionale (Conditional)',
   subjunctive: 'Congiuntivo (Subjunctive)',
+  past_participle: 'Participio (Past Participle)',
 };
 const REFLEXIVE_PRONOUNS: Forms = ['mi', 'ti', 'si', 'ci', 'vi', 'si'];
 
@@ -50,6 +51,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     // placeholders just satisfy the iteration loop and get overwritten in
     // conjugate() after all other tenses + irregular overrides land.
     passato_prossimo: f(',,,,,'),
+    past_participle: f(',,,,,'),
     preterite:   f('ai,asti,\u00f2,ammo,aste,arono'),
     imperfect:   f('avo,avi,ava,avamo,avate,avano'),
     future:      f('er\u00f2,erai,er\u00e0,eremo,erete,eranno'),
@@ -59,6 +61,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
   ere: {
     present:     f('o,i,e,iamo,ete,ono'),
     passato_prossimo: f(',,,,,'),
+    past_participle: f(',,,,,'),
     preterite:   f('ei,esti,\u00e9,emmo,este,erono'),
     imperfect:   f('evo,evi,eva,evamo,evate,evano'),
     future:      f('er\u00f2,erai,er\u00e0,eremo,erete,eranno'),
@@ -68,6 +71,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
   ire: {
     present:     f('o,i,e,iamo,ite,ono'),
     passato_prossimo: f(',,,,,'),
+    past_participle: f(',,,,,'),
     preterite:   f('ii,isti,\u00ec,immo,iste,irono'),
     imperfect:   f('ivo,ivi,iva,ivamo,ivate,ivano'),
     future:      f('ir\u00f2,irai,ir\u00e0,iremo,irete,iranno'),
@@ -619,6 +623,9 @@ export function conjugate(infinitive: string): ConjugationTable | null {
   // detto, etc.) and the irregular auxiliary (essere/avere) decisions land
   // in one consistent place.
   tenses.passato_prossimo = passatoProssimo(inf, isReflexive);
+  // Past participle as a standalone tense row, single form in slot 2.
+  const _part = pastParticiple(inf);
+  tenses.past_participle = ['-', '-', _part, '-', '-', '-'] as Forms;
 
   // Build final tenses record (with reflexive pronouns and localized labels)
   const finalTenses: Record<string, string[]> = {};

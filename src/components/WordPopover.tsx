@@ -445,7 +445,7 @@ const PopoverPortal: React.FC<{
   // Portuguese — same letters, different forms. Loose strips accents as a
   // tolerant fallback for cases like a user tapping "ecris" when the table
   // has "j'écris".
-  const stripPunct = (s: string) => s.replace(/[.,!?;:""''«»()¿¡—–\-]/g, '');
+  const stripPunct = (s: string) => s.replace(/[.,!?;:""''«»()¿¡—–\-।॥]/g, '');
   const strict = (s: string) => stripPunct(s.toLowerCase()).replace(/\s+/g, '');
   const loose  = (s: string) => strict(s).normalize('NFD').replace(/[̀-ͯ]/g, '');
   const normalize = loose;        // keep available for any out-of-block callers
@@ -497,7 +497,7 @@ const PopoverPortal: React.FC<{
     // never matches. Splitting the form on whitespace and matching the
     // tapped token against any of its words resolves this for every
     // compound-tense language at once.
-    const stripPunctLocal = (s: string) => s.replace(/[.,!?;:""''«»()¿¡—–\-]/g, '');
+    const stripPunctLocal = (s: string) => s.replace(/[.,!?;:""''«»()¿¡—–\-।॥]/g, '');
     const wordsOf = (form: string) =>
       form.split(/\s+/).map(w => stripPunctLocal(w.toLowerCase())).filter(Boolean);
     const formContainsWord = (form: string, normFn: (s: string) => string, target: string) =>

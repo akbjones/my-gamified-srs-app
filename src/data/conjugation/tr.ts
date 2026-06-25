@@ -239,6 +239,16 @@ function conjugateConditional(stem: string, _inf: string): Forms {
 
 // ── Main conjugation function ───────────────────────────────
 export function conjugate(infinitive: string): ConjugationTable | null {
+  // Turkish dict has a Phase-B inheritance bug where some entries have a
+  // bare-stem lemma (e.g. lemma: 'geç' for 'geçeriz'). Add the -mek/-mak
+  // back when the caller hands us a stem. Pick suffix by vowel harmony:
+  // last vowel in [a, ı, o, u] → -mak; in [e, i, ö, ü] → -mek.
+  if (!infinitive.endsWith('mek') && !infinitive.endsWith('mak')) {
+    const lastVowel = (infinitive.match(/[aıoueiöü](?=[^aıoueiöü]*$)/i) || [''])[0].toLowerCase();
+    const backVowels = ['a', 'ı', 'o', 'u'];
+    const suffix = backVowels.includes(lastVowel) ? 'mak' : 'mek';
+    infinitive = infinitive + suffix;
+  }
   if (!infinitive.endsWith('mek') && !infinitive.endsWith('mak')) return null;
 
   const rawStem = getStem(infinitive);

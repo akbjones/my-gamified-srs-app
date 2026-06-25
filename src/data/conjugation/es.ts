@@ -7,10 +7,10 @@ import type { ConjugationTable } from '../../types';
 
 // ── Types ────────────────────────────────────────────────────
 type Forms = [string, string, string, string, string, string]; // yo, tú, él, nosotros, vosotros, ellos
-type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive' | 'imperative';
+type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive' | 'imperative' | 'past_participle';
 type PartialTenses = Partial<Record<TenseKey, Forms>>;
 
-const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive', 'imperative'];
+const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive', 'imperative', 'past_participle'];
 
 const TENSE_LABELS: Record<TenseKey, string> = {
   present: 'Presente (Present)',
@@ -20,7 +20,26 @@ const TENSE_LABELS: Record<TenseKey, string> = {
   conditional: 'Condicional (Conditional)',
   subjunctive: 'Subjuntivo (Subjunctive)',
   imperative: 'Imperativo (Imperative)',
+  past_participle: 'Participio (Past Participle)',
 };
+
+// Spanish past participle: -ar verbs → -ado, -er/-ir → -ido. ~30 common irregulars.
+const ES_IRREGULAR_PARTICIPLES: Record<string, string> = {
+  hacer: 'hecho', decir: 'dicho', ver: 'visto', escribir: 'escrito',
+  abrir: 'abierto', poner: 'puesto', volver: 'vuelto', cubrir: 'cubierto',
+  descubrir: 'descubierto', morir: 'muerto', romper: 'roto', resolver: 'resuelto',
+  devolver: 'devuelto', envolver: 'envuelto', revolver: 'revuelto', disolver: 'disuelto',
+  imprimir: 'impreso', satisfacer: 'satisfecho', deshacer: 'deshecho', rehacer: 'rehecho',
+  proveer: 'provisto', prever: 'previsto', componer: 'compuesto', proponer: 'propuesto',
+  suponer: 'supuesto', disponer: 'dispuesto', oponer: 'opuesto', exponer: 'expuesto',
+  imponer: 'impuesto', deponer: 'depuesto',
+};
+function esPastParticiple(inf: string): string {
+  if (ES_IRREGULAR_PARTICIPLES[inf]) return ES_IRREGULAR_PARTICIPLES[inf];
+  if (inf.endsWith('ar')) return inf.slice(0, -2) + 'ado';
+  if (inf.endsWith('er') || inf.endsWith('ir')) return inf.slice(0, -2) + 'ido';
+  return inf;
+}
 
 const REFLEXIVE_PRONOUNS: Forms = ['me', 'te', 'se', 'nos', 'os', 'se'];
 
@@ -36,6 +55,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     // Affirmative imperative. Slot 0 (yo) has no imperative form.
     // tú=stem+a, usted=subj 3sg, nos=subj 1pl, vos=stem+ad, uds=subj 3pl
     imperative:  ['-', 'a', 'e', 'emos', 'ad', 'en'],
+    past_participle: ['-', '-', '-', '-', '-', '-'],   // overwritten in conjugate() — single form, no person agreement
   },
   er: {
     present:     ['o', 'es', 'e', 'emos', 'éis', 'en'],
@@ -45,6 +65,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     conditional: ['ería', 'erías', 'ería', 'eríamos', 'eríais', 'erían'],
     subjunctive: ['a', 'as', 'a', 'amos', 'áis', 'an'],
     imperative:  ['-', 'e', 'a', 'amos', 'ed', 'an'],
+    past_participle: ['-', '-', '-', '-', '-', '-'],
   },
   ir: {
     present:     ['o', 'es', 'e', 'imos', 'ís', 'en'],
@@ -54,6 +75,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     conditional: ['iría', 'irías', 'iría', 'iríamos', 'iríais', 'irían'],
     subjunctive: ['a', 'as', 'a', 'amos', 'áis', 'an'],
     imperative:  ['-', 'e', 'a', 'amos', 'id', 'an'],
+    past_participle: ['-', '-', '-', '-', '-', '-'],
   },
 };
 
@@ -505,6 +527,12 @@ export function conjugate(infinitive: string): ConjugationTable | null {
   imp[5] = tenses.subjunctive[5];
   if (IRREGULAR_TU_IMPERATIVE[baseInf]) imp[1] = IRREGULAR_TU_IMPERATIVE[baseInf];
   tenses.imperative = imp;
+
+  // Populate past_participle as a single-form tense — slots 0-1 + 3-5 stay
+  // '-' (no person agreement). Slot 2 shows the participle. The matcher will
+  // find it via the row, and the UI renders only the non-'-' row.
+  const participle = esPastParticiple(baseInf);
+  tenses.past_participle = ['-', '-', participle, '-', '-', '-'] as Forms;
 
   // Prepend reflexive pronouns if needed
   if (isReflexive) {

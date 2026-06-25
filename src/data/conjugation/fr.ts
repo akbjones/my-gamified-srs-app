@@ -7,9 +7,9 @@ import type { ConjugationTable } from '../../types';
 
 // ── Types ───────────────────────────────────────────────────
 type Forms = [string, string, string, string, string, string]; // je, tu, il, nous, vous, ils
-type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive';
+type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive' | 'past_participle';
 type PartialTenses = Partial<Record<TenseKey, Forms>>;
-const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive'];
+const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive', 'past_participle'];
 
 const TENSE_LABELS: Record<TenseKey, string> = {
   present: 'Présent (Present)',
@@ -18,7 +18,37 @@ const TENSE_LABELS: Record<TenseKey, string> = {
   future: 'Futur (Future)',
   conditional: 'Conditionnel (Conditional)',
   subjunctive: 'Subjonctif (Subjunctive)',
+  past_participle: 'Participe Passé (Past Participle)',
 };
+
+const FR_IRREGULAR_PARTICIPLES: Record<string, string> = {
+  être: 'été', avoir: 'eu', faire: 'fait', dire: 'dit', voir: 'vu',
+  prendre: 'pris', mettre: 'mis', écrire: 'écrit', lire: 'lu',
+  ouvrir: 'ouvert', couvrir: 'couvert', offrir: 'offert', souffrir: 'souffert',
+  naître: 'né', mourir: 'mort', venir: 'venu', tenir: 'tenu', devenir: 'devenu',
+  revenir: 'revenu', maintenir: 'maintenu', retenir: 'retenu', obtenir: 'obtenu',
+  connaître: 'connu', reconnaître: 'reconnu', savoir: 'su', boire: 'bu',
+  courir: 'couru', recevoir: 'reçu', pouvoir: 'pu', devoir: 'dû',
+  vouloir: 'voulu', valoir: 'valu', vivre: 'vécu', conduire: 'conduit',
+  construire: 'construit', produire: 'produit', traduire: 'traduit',
+  introduire: 'introduit', détruire: 'détruit', cuire: 'cuit',
+  rire: 'ri', sourire: 'souri', suivre: 'suivi', éteindre: 'éteint',
+  peindre: 'peint', craindre: 'craint', plaindre: 'plaint', joindre: 'joint',
+  rejoindre: 'rejoint', résoudre: 'résolu', dissoudre: 'dissous',
+  battre: 'battu', combattre: 'combattu', vaincre: 'vaincu',
+  rompre: 'rompu', interrompre: 'interrompu', perdre: 'perdu',
+  répondre: 'répondu', vendre: 'vendu', attendre: 'attendu',
+  descendre: 'descendu', défendre: 'défendu', entendre: 'entendu',
+  rendre: 'rendu', tendre: 'tendu',
+};
+function frPastParticiple(inf: string): string {
+  if (FR_IRREGULAR_PARTICIPLES[inf]) return FR_IRREGULAR_PARTICIPLES[inf];
+  if (inf.endsWith('er')) return inf.slice(0, -2) + 'é';
+  if (inf.endsWith('ir')) return inf.slice(0, -2) + 'i';
+  if (inf.endsWith('re')) return inf.slice(0, -2) + 'u';
+  if (inf.endsWith('oir')) return inf.slice(0, -3) + 'u';
+  return inf;
+}
 const REFLEXIVE_PRONOUNS: Forms = ['me', 'te', 'se', 'nous', 'vous', 'se'];
 
 // ── Helpers ─────────────────────────────────────────────────
@@ -50,6 +80,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     future:      f('erai,eras,era,erons,erez,eront'),
     conditional: f('erais,erais,erait,erions,eriez,eraient'),
     subjunctive: f('e,es,e,ions,iez,ent'),
+    past_participle: f(',,,,,'),
   },
   ir: {
     // Type 2 -ir (finir pattern): -iss- in present plural + subjunctive
@@ -59,6 +90,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     future:      f('irai,iras,ira,irons,irez,iront'),
     conditional: f('irais,irais,irait,irions,iriez,iraient'),
     subjunctive: f('isse,isses,isse,issions,issiez,issent'),
+    past_participle: f(',,,,,'),
   },
   re: {
     present:     f('s,s,,ons,ez,ent'),
@@ -67,6 +99,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     future:      f('rai,ras,ra,rons,rez,ront'),
     conditional: f('rais,rais,rait,rions,riez,raient'),
     subjunctive: f('e,es,e,ions,iez,ent'),
+    past_participle: f(',,,,,'),
   },
 };
 
@@ -723,10 +756,18 @@ export function conjugate(infinitive: string): ConjugationTable | null {
   // Replace passé simple with passé composé (more useful for learners)
   const passeCompose = buildPasseCompose(inf, isReflexive);
 
+  // Past participle as a standalone row (single form, no reflexive prefix).
+  tenses.past_participle = ['-', '-', frPastParticiple(inf), '-', '-', '-'] as Forms;
+
   // Build final tenses record with localized labels
   const finalTenses: Record<string, string[]> = {};
   for (const t of TENSES) {
     const label = TENSE_LABELS[t];
+    if (t === 'past_participle') {
+      // Past participle is invariable here — no reflexive pronoun prefix.
+      finalTenses[label] = [...tenses[t]];
+      continue;
+    }
     if (t === 'preterite') {
       // Show passé composé instead of passé simple
       if (isReflexive) {

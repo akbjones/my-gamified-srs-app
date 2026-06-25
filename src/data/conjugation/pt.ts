@@ -11,10 +11,10 @@ import type { ConjugationTable } from '../../types';
 
 // ── Types ────────────────────────────────────────────────────
 type Forms = [string, string, string, string, string, string];
-type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive' | 'imperative';
+type TenseKey = 'present' | 'preterite' | 'imperfect' | 'future' | 'conditional' | 'subjunctive' | 'imperative' | 'past_participle';
 type PartialTenses = Partial<Record<TenseKey, Forms>>;
 
-const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive', 'imperative'];
+const TENSES: TenseKey[] = ['present', 'preterite', 'imperfect', 'future', 'conditional', 'subjunctive', 'imperative', 'past_participle'];
 
 const TENSE_LABELS: Record<TenseKey, string> = {
   present: 'Presente (Present)',
@@ -24,7 +24,24 @@ const TENSE_LABELS: Record<TenseKey, string> = {
   conditional: 'Condicional (Conditional)',
   subjunctive: 'Subjuntivo (Subjunctive)',
   imperative: 'Imperativo (Imperative)',
+  past_participle: 'Particípio (Past Participle)',
 };
+
+const PT_IRREGULAR_PARTICIPLES: Record<string, string> = {
+  fazer: 'feito', dizer: 'dito', ver: 'visto', escrever: 'escrito',
+  abrir: 'aberto', pôr: 'posto', vir: 'vindo', morrer: 'morto',
+  pagar: 'pago', ganhar: 'ganho', gastar: 'gasto', aceitar: 'aceito',
+  satisfazer: 'satisfeito', descobrir: 'descoberto', cobrir: 'coberto',
+  expor: 'exposto', compor: 'composto', propor: 'proposto', supor: 'suposto',
+  dispor: 'disposto', opor: 'oposto', impor: 'imposto', depor: 'deposto',
+  refazer: 'refeito', desfazer: 'desfeito',
+};
+function ptPastParticiple(inf: string): string {
+  if (PT_IRREGULAR_PARTICIPLES[inf]) return PT_IRREGULAR_PARTICIPLES[inf];
+  if (inf.endsWith('ar')) return inf.slice(0, -2) + 'ado';
+  if (inf.endsWith('er') || inf.endsWith('ir')) return inf.slice(0, -2) + 'ido';
+  return inf;
+}
 const REFLEXIVE_PRONOUNS: Forms = ['me', 'te', 'se', 'nos', 'vos', 'se'];
 
 // ── Helpers ──────────────────────────────────────────────────
@@ -75,6 +92,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     // Affirmative imperative. Slot 0 (eu) has no imperative; slots 2/3/5
     // (você/nós/vocês) get patched from the final subjunctive in conjugate().
     imperative:  f('-,a,e,emos,ai,em'),
+    past_participle: f(',,,,,'),
   },
   er: {
     present:     f('o,es,e,emos,eis,em'),
@@ -84,6 +102,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     conditional: f('eria,erias,eria,eríamos,eríeis,eriam'),
     subjunctive: f('a,as,a,amos,ais,am'),
     imperative:  f('-,e,a,amos,ei,am'),
+    past_participle: f(',,,,,'),
   },
   ir: {
     present:     f('o,es,e,imos,is,em'),
@@ -93,6 +112,7 @@ const REG: Record<string, Record<TenseKey, Forms>> = {
     conditional: f('iria,irias,iria,iríamos,iríeis,iriam'),
     subjunctive: f('a,as,a,amos,ais,am'),
     imperative:  f('-,e,a,amos,i,am'),
+    past_participle: f(',,,,,'),
   },
 };
 
@@ -798,6 +818,7 @@ export function conjugate(infinitive: string): ConjugationTable | null {
       // Build imperative from subjunctive (slots 2/3/5) + irregular tu (slot 1)
       // + vosotros-style slot 4 (pôr → ponde).
       imperative: ['-', IRREGULAR_TU_IMPERATIVE[inf] || subj[2], subj[2], subj[3], 'ponde', subj[5]] as unknown as Forms,
+      past_participle: ['-', '-', ptPastParticiple(inf), '-', '-', '-'] as unknown as Forms,
     };
 
     // Prepend reflexive pronouns if needed
@@ -850,6 +871,9 @@ export function conjugate(infinitive: string): ConjugationTable | null {
   if (IRREGULAR_TU_IMPERATIVE[inf]) imp[1] = IRREGULAR_TU_IMPERATIVE[inf];
   if (IRREGULAR_VOS_IMPERATIVE[inf]) imp[4] = IRREGULAR_VOS_IMPERATIVE[inf];
   tenses.imperative = imp;
+
+  // Past participle as a standalone tense row, single form in slot 2.
+  tenses.past_participle = ['-', '-', ptPastParticiple(inf), '-', '-', '-'] as Forms;
 
   // Prepend reflexive pronouns if needed
   const finalTenses = applyReflexive(tenses, isReflexive);

@@ -240,14 +240,22 @@ function conjugateConditional(stem: string, _inf: string): Forms {
 // ── Main conjugation function ───────────────────────────────
 export function conjugate(infinitive: string): ConjugationTable | null {
   // Turkish dict has a Phase-B inheritance bug where some entries have a
-  // bare-stem lemma (e.g. lemma: 'geç' for 'geçeriz'). Add the -mek/-mak
-  // back when the caller hands us a stem. Pick suffix by vowel harmony:
-  // last vowel in [a, ı, o, u] → -mak; in [e, i, ö, ü] → -mek.
+  // bare-stem lemma (e.g. lemma: 'geç' for 'geçeriz'). Try the -mek/-mak
+  // back-suffix, but conservatively — only for short consonant-ending
+  // tokens that don't already contain inflection markers. Otherwise the
+  // engine happily appends to gerunds ("bastırınca" → "bastırıncamak")
+  // and produces nonsense tables that fool the matcher.
   if (!infinitive.endsWith('mek') && !infinitive.endsWith('mak')) {
-    const lastVowel = (infinitive.match(/[aıoueiöü](?=[^aıoueiöü]*$)/i) || [''])[0].toLowerCase();
-    const backVowels = ['a', 'ı', 'o', 'u'];
-    const suffix = backVowels.includes(lastVowel) ? 'mak' : 'mek';
-    infinitive = infinitive + suffix;
+    const INFLECTION_MARKERS = ['ıyor', 'iyor', 'uyor', 'üyor', 'mış', 'miş', 'muş', 'müş', 'acak', 'ecek', 'ınca', 'ince', 'unca', 'ünce', 'arak', 'erek', 'dik', 'tik', 'dim', 'tim', 'sin', 'sun', 'sünüz'];
+    const looksLikeStem = infinitive.length <= 7
+      && /[^aıoueiöü]$/.test(infinitive)
+      && !INFLECTION_MARKERS.some(m => infinitive.includes(m));
+    if (looksLikeStem) {
+      const lastVowel = (infinitive.match(/[aıoueiöü](?=[^aıoueiöü]*$)/i) || [''])[0].toLowerCase();
+      const backVowels = ['a', 'ı', 'o', 'u'];
+      const suffix = backVowels.includes(lastVowel) ? 'mak' : 'mek';
+      infinitive = infinitive + suffix;
+    }
   }
   if (!infinitive.endsWith('mek') && !infinitive.endsWith('mak')) return null;
 

@@ -58,11 +58,15 @@ const LANGS: Record<LangCode, { name: string; deckPath: string; lookup: LookupFn
 
 // Same normalizers + matcher passes as WordPopover.tsx
 const stripPunct = (s: string) => s.replace(/[.,!?;:""''«»()¿¡—–\-।॥]/g, '');
-const strict = (s: string) => stripPunct(s.toLowerCase()).replace(/\s+/g, '');
-const loose  = (s: string) => strict(s).normalize('NFD').replace(/[̀-ͯ]/g, '');
+function stripFrenchElision(s: string, lang: string): string {
+  if (lang !== 'French') return s;
+  return s.replace(/^(qu|j|m|t|s|n|l|d|c)'/i, '');
+}
+const strict = (s: string, lang = '') => stripPunct(stripFrenchElision(s, lang).toLowerCase()).replace(/\s+/g, '');
+const loose  = (s: string, lang = '') => strict(s, lang).normalize('NFD').replace(/[̀-ͯ]/g, '');
 
-function matcherMatches(forms: string[], rawToken: string): boolean {
-  const sT = strict(rawToken), lT = loose(rawToken);
+function matcherMatches(forms: string[], rawToken: string, lang = ''): boolean {
+  const sT = strict(rawToken, lang), lT = loose(rawToken, lang);
   // Pass 1: strict full-string
   if (forms.some(f => f && f !== '-' && strict(f) === sT)) return true;
   // Pass 2: loose full-string
@@ -72,6 +76,13 @@ function matcherMatches(forms: string[], rawToken: string): boolean {
   if (forms.some(f => f && f !== '-' && wordsOf(f).some(w => strict(w).replace(/\s+/g, '') === sT))) return true;
   // Pass 4: word-level loose
   if (forms.some(f => f && f !== '-' && wordsOf(f).some(w => loose(w) === lT))) return true;
+  // Pass 5: German colloquial -e drop ("hab" → "habe")
+  if (lang === 'German') {
+    const augS = sT + 'e';
+    const augL = lT + 'e';
+    if (forms.some(f => f && f !== '-' && strict(f) === augS)) return true;
+    if (forms.some(f => f && f !== '-' && loose(f) === augL)) return true;
+  }
   return false;
 }
 
@@ -113,7 +124,11 @@ for (const [code, cfg] of Object.entries(LANGS) as [LangCode, typeof LANGS[LangC
   let tested = 0;
   for (const card of cards) {
     if (tested >= SAMPLE_PER_LANG) break;
-    const tokens = (card.target || '').split(/\s+/).map(t => t.replace(/[.,!?;:""''«»()¿¡—–]/g, '')).filter(Boolean);
+    // Match the real app's tokenizer: just whitespace split. Punctuation
+    // including apostrophes is preserved for lookupWord to handle (lookupWord
+    // for French has elision rules; lookupWord for others strips the right
+    // punct as needed).
+    const tokens = (card.target || '').split(/\s+/).filter(Boolean);
     for (const tok of tokens) {
       if (tested >= SAMPLE_PER_LANG) break;
       const entry = cfg.lookup(tok);
@@ -123,12 +138,14 @@ for (const [code, cfg] of Object.entries(LANGS) as [LangCode, typeof LANGS[LangC
       tested++;
       perLang[cfg.name].tested++;
 
-      // Try the WordPopover conjugation lookup chain
+      // Try the WordPopover conjugation lookup chain.
+      // Real WordPopover strips ASCII punctuation before passing to conjugate
+      // (so "dormir." → "dormir" → conjugate("dormir") works). Mirror that.
       const lemma = entry.lemma ?? null;
+      const clean = tok.toLowerCase().replace(/[.,!?;:""''«»()¿¡—–]/g, '');
       let table: CT | null = null;
-      // Lemma-first when present
       if (lemma) table = cfg.conjugate(lemma) as CT | null;
-      if (!table) table = cfg.conjugate(tok.toLowerCase()) as CT | null;
+      if (!table) table = cfg.conjugate(clean) as CT | null;
 
       if (!table) {
         buckets.no_table++;
@@ -138,7 +155,7 @@ for (const [code, cfg] of Object.entries(LANGS) as [LangCode, typeof LANGS[LangC
       // Run matcher against every tense's forms
       let matched = false;
       for (const forms of Object.values(table.tenses)) {
-        if (matcherMatches(forms as string[], tok)) { matched = true; break; }
+        if (matcherMatches(forms as string[], tok, cfg.name)) { matched = true; break; }
       }
       if (matched) { buckets.success++; perLang[cfg.name].pass++; }
       else {

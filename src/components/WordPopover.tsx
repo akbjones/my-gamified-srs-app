@@ -446,7 +446,14 @@ const PopoverPortal: React.FC<{
   // tolerant fallback for cases like a user tapping "ecris" when the table
   // has "j'écris".
   const stripPunct = (s: string) => s.replace(/[.,!?;:""''«»()¿¡—–\-।॥]/g, '');
-  const strict = (s: string) => stripPunct(s.toLowerCase()).replace(/\s+/g, '');
+  // French elision: tokens like "j'aurais", "m'avais", "n'est", "qu'on" carry
+  // a contraction prefix that the conjugation engine never emits. Strip it
+  // for matching purposes so the verb form alone matches the table row.
+  const stripFrenchElision = (s: string): string => {
+    if (language !== 'french') return s;
+    return s.replace(/^(qu|j|m|t|s|n|l|d|c)'/, '');
+  };
+  const strict = (s: string) => stripPunct(stripFrenchElision(s).toLowerCase()).replace(/\s+/g, '');
   const loose  = (s: string) => strict(s).normalize('NFD').replace(/[̀-ͯ]/g, '');
   const normalize = loose;        // keep available for any out-of-block callers
   const strictToken = strict(rawToken);
@@ -538,7 +545,33 @@ const PopoverPortal: React.FC<{
       forms.forEach((f, i) => {
         if (f && f !== '-' && formContainsWord(f, s => loose(s), looseToken)) wordLooseMatches.push(i);
       });
-      out[tense] = pickBest(wordLooseMatches);
+      if (wordLooseMatches.length > 0) {
+        out[tense] = pickBest(wordLooseMatches);
+        continue;
+      }
+      // Pass 5 — German colloquial -e drop. Speakers commonly drop the final
+      // -e from 1sg present ("ich hab" instead of "ich habe", "ich sag"
+      // instead of "ich sage"). The engine emits the formal -e form, so add
+      // an "e" to the tapped token and retry.
+      if (language === 'german') {
+        const augmented = strictToken + 'e';
+        const augLoose  = looseToken + 'e';
+        const augStrictMatches: number[] = [];
+        forms.forEach((f, i) => {
+          if (f && f !== '-' && strict(f) === augmented) augStrictMatches.push(i);
+        });
+        if (augStrictMatches.length > 0) {
+          out[tense] = pickBest(augStrictMatches);
+          continue;
+        }
+        const augLooseMatches: number[] = [];
+        forms.forEach((f, i) => {
+          if (f && f !== '-' && loose(f) === augLoose) augLooseMatches.push(i);
+        });
+        out[tense] = pickBest(augLooseMatches);
+        continue;
+      }
+      out[tense] = -1;
     }
     return out;
   }, [conjTable, strictToken, looseToken, sentence, language]);
@@ -561,11 +594,20 @@ const PopoverPortal: React.FC<{
       if (idx !== undefined && idx !== -1) {
         const rawTense = TENSE_LABELS[tense] || tense;
         const tenseShort = rawTense.replace(/\s*\([^)]+\)\s*$/, '').trim().toLowerCase();
-        return { tense, tenseShort, form: forms[idx], personLabel: labels[idx] };
+        return { tense, tenseShort, form: forms[idx], personLabel: labels[idx], isInfinitive: false };
+      }
+    }
+    // No row matched. Detect the "user tapped the infinitive itself" case so
+    // we can show a friendly badge instead of a blank header — saves the
+    // table looking broken when it's just the dictionary form.
+    if (conjTable.infinitive) {
+      const infNorm = strict(conjTable.infinitive);
+      if (infNorm === strictToken || loose(conjTable.infinitive) === looseToken) {
+        return { tense: '', tenseShort: '', form: conjTable.infinitive, personLabel: '', isInfinitive: true };
       }
     }
     return null;
-  }, [conjTable, normalizedToken, language]);
+  }, [conjTable, normalizedToken, strictToken, looseToken, language]);
 
   // When the modal opens for a new word, auto-pick the first tense that
   // contains the matched form. Only fires once per modal-open – if the
@@ -874,9 +916,10 @@ const PopoverPortal: React.FC<{
             </div>
 
             {/* "On this card" banner — spells out the matched form + tense + person
-                before the user has to scan the table. Only shown when the conjugation
-                engine actually found the clicked form somewhere in the table. */}
-            {matchedFormInfo && (
+                before the user has to scan the table. Branches: matched form (amber)
+                vs infinitive-tapped (blue informational). The latter prevents the
+                overlay looking broken when the user tapped the dictionary form. */}
+            {matchedFormInfo && !matchedFormInfo.isInfinitive && (
               <div className="px-5 py-3 sm:px-6 sm:py-4 border-b border-[var(--border-color)] bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent">
                 <div className="flex items-center gap-3">
                   <div className="w-1 h-10 sm:h-12 bg-amber-500 rounded-full shrink-0" />
@@ -887,6 +930,21 @@ const PopoverPortal: React.FC<{
                     <div className="text-base sm:text-lg leading-tight">
                       <span className="font-bold text-[var(--text-primary)]">{matchedFormInfo.form}</span>
                       <span className="text-[var(--text-muted)] text-xs sm:text-sm"> · {matchedFormInfo.personLabel} · {matchedFormInfo.tenseShort}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            {matchedFormInfo && matchedFormInfo.isInfinitive && (
+              <div className="px-5 py-3 sm:px-6 sm:py-4 border-b border-[var(--border-color)] bg-gradient-to-r from-blue-500/10 via-blue-500/5 to-transparent">
+                <div className="flex items-center gap-3">
+                  <div className="w-1 h-10 sm:h-12 bg-blue-500 rounded-full shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <div className="text-xs sm:text-sm font-bold text-blue-500 uppercase tracking-[0.18em] mb-0.5">
+                      Dictionary form
+                    </div>
+                    <div className="text-sm sm:text-base text-[var(--text-secondary)] leading-tight">
+                      You tapped the base infinitive. Its conjugations are below.
                     </div>
                   </div>
                 </div>

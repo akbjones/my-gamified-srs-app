@@ -571,6 +571,51 @@ const PopoverPortal: React.FC<{
         out[tense] = pickBest(augLooseMatches);
         continue;
       }
+      // Pass 5 — Welsh consonant mutations. The engine emits the radical (base)
+      // form (e.g. "clywed", "rhedeg", "gallu") but on cards the form may be
+      // soft-mutated by a triggering preposition or particle:
+      //   c → g    (clywed → glywed)
+      //   p → b    (pen → ben)
+      //   t → d    (tad → dad)
+      //   g → Ø    (gallu → allu — the G is dropped entirely)
+      //   b → f    (bod → fod)
+      //   d → dd   (dod → ddod)
+      //   m → f    (mam → fam)
+      //   ll → l   (llaeth → laeth)
+      //   rh → r   (rhedeg → redeg)
+      // For each tapped form try its de-mutated variants and re-match.
+      if (language === 'welsh') {
+        const variants: string[] = [];
+        const tok = strictToken;
+        if (tok.length > 0) {
+          const c0 = tok.charAt(0);
+          if (c0 === 'g') variants.push('c' + tok.slice(1));        // glywed → clywed
+          if (c0 === 'b') variants.push('p' + tok.slice(1));        // ben → pen
+          if (c0 === 'd' && tok.charAt(1) !== 'd') variants.push('t' + tok.slice(1));
+          if (c0 === 'f') {
+            variants.push('b' + tok.slice(1));                       // fod → bod
+            variants.push('m' + tok.slice(1));                       // fam → mam
+          }
+          if (tok.startsWith('dd')) variants.push('d' + tok.slice(2));    // ddod → dod
+          if (c0 === 'l' && tok.charAt(1) !== 'l') variants.push('ll' + tok.slice(1));  // laeth → llaeth
+          if (c0 === 'r' && tok.charAt(1) !== 'h') variants.push('rh' + tok.slice(1));  // redeg → rhedeg
+          // G-drop: vowel-initial token may be a g-dropped soft mutation
+          if ('aeiouwy'.includes(c0)) variants.push('g' + tok);     // allwch → gallwch
+        }
+        let matched = -1;
+        const wordsOf = (f: string) => f.split(/\s+/).map(w => stripPunct(w.toLowerCase())).filter(Boolean);
+        for (const v of variants) {
+          forms.forEach((f, i) => {
+            if (matched !== -1) return;
+            if (!f || f === '-') return;
+            if (strict(f) === v || loose(f) === v) { matched = i; return; }
+            // Word-level: engine emits "gallwch chi" / "yn rhedeg" etc.
+            if (wordsOf(f).some(w => strict(w) === v || loose(w) === v)) matched = i;
+          });
+          if (matched !== -1) break;
+        }
+        if (matched !== -1) { out[tense] = matched; continue; }
+      }
       out[tense] = -1;
     }
     return out;

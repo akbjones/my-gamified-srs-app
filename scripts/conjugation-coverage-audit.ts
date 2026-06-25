@@ -83,6 +83,28 @@ function matcherMatches(forms: string[], rawToken: string, lang = ''): boolean {
     if (forms.some(f => f && f !== '-' && strict(f) === augS)) return true;
     if (forms.some(f => f && f !== '-' && loose(f) === augL)) return true;
   }
+  // Pass 5: Welsh soft-mutation reverse. The engine emits radical forms but
+  // cards may carry mutated forms (c→g, p→b, t→d, g→Ø, b→f, d→dd, m→f,
+  // ll→l, rh→r).
+  if (lang === 'Welsh') {
+    const variants: string[] = [];
+    const c0 = sT.charAt(0);
+    if (c0 === 'g') variants.push('c' + sT.slice(1));
+    if (c0 === 'b') variants.push('p' + sT.slice(1));
+    if (c0 === 'd' && sT.charAt(1) !== 'd') variants.push('t' + sT.slice(1));
+    if (c0 === 'f') { variants.push('b' + sT.slice(1)); variants.push('m' + sT.slice(1)); }
+    if (sT.startsWith('dd')) variants.push('d' + sT.slice(2));
+    if (c0 === 'l' && sT.charAt(1) !== 'l') variants.push('ll' + sT.slice(1));
+    if (c0 === 'r' && sT.charAt(1) !== 'h') variants.push('rh' + sT.slice(1));
+    if ('aeiouwy'.includes(c0)) variants.push('g' + sT);
+    for (const v of variants) {
+      // Full-string match
+      if (forms.some(f => f && f !== '-' && (strict(f) === v || loose(f) === v))) return true;
+      // Word-level match — engine emits "gallwch chi", "rhedeg" alone in
+      // wordsOf("yn rhedeg"), etc.
+      if (forms.some(f => f && f !== '-' && wordsOf(f).some(w => strict(w).replace(/\s+/g, '') === v || loose(w) === v))) return true;
+    }
+  }
   return false;
 }
 

@@ -21,16 +21,31 @@ import type { ConjugationTable } from '../../types';
 
 // ── Types ───────────────────────────────────────────────────
 type Forms = [string, string, string, string, string, string];
-type TenseKey = 'present' | 'continuous' | 'past' | 'habitual_past' | 'future' | 'subjunctive' | 'imperative';
+type TenseKey =
+  | 'present' | 'continuous' | 'past' | 'habitual_past' | 'future' | 'subjunctive' | 'imperative'
+  | 'present_fem' | 'continuous_fem' | 'past_fem' | 'habitual_past_fem' | 'future_fem';
 
-const TENSES: TenseKey[] = ['present', 'continuous', 'past', 'habitual_past', 'future', 'subjunctive', 'imperative'];
+const TENSES: TenseKey[] = [
+  'present', 'present_fem',
+  'continuous', 'continuous_fem',
+  'past', 'past_fem',
+  'habitual_past', 'habitual_past_fem',
+  'future', 'future_fem',
+  'subjunctive',
+  'imperative',
+];
 
 const TENSE_LABELS: Record<TenseKey, string> = {
-  present: 'वर्तमान (Present)',
-  continuous: 'अपूर्ण (Continuous)',
-  past: 'भूतकाल (Past)',
-  habitual_past: 'अभ्यस्त भूत (Past Habitual)',
-  future: 'भविष्य (Future)',
+  present: 'वर्तमान (Present, m.)',
+  present_fem: 'वर्तमान (Present, f.)',
+  continuous: 'अपूर्ण (Continuous, m.)',
+  continuous_fem: 'अपूर्ण (Continuous, f.)',
+  past: 'भूतकाल (Past, m.)',
+  past_fem: 'भूतकाल (Past, f.)',
+  habitual_past: 'अभ्यस्त भूत (Past Habitual, m.)',
+  habitual_past_fem: 'अभ्यस्त भूत (Past Habitual, f.)',
+  future: 'भविष्य (Future, m.)',
+  future_fem: 'भविष्य (Future, f.)',
   subjunctive: 'संभावना (Subjunctive)',
   imperative: 'आज्ञार्थक (Imperative)',
 };
@@ -57,22 +72,38 @@ const PRESENT_SUFFIX_PL = 'ते';
 const CONT_SUFFIX_SG = ' रहा';
 const CONT_SUFFIX_PL = ' रहे';
 
+// ── Continuous tense (feminine) ─────────────────────────────
+// मैं ...रही हूँ. Feminine plural keeps रही (number is on the aux): हम रही हैं
+const CONT_SUFFIX_F_SG = ' रही';
+const CONT_SUFFIX_F_PL = ' रही';
+
+// ── Habitual / present suffixes (feminine) ──────────────────
+// stem + ती (sg) or ती (pl, number carried by aux)
+const PRESENT_SUFFIX_F = 'ती';
+
 // ── Past tense (masculine, simple perfective) ───────────────
 // Intransitive: मैं गया, तू गया, वह गया, हम गए, तुम गए, वे गए
 // Transitive uses ने (ergative): मैंने किया, तूने किया, etc.
 const PAST_SUFFIX_SG = 'ा';  // added to stem: खेल → खेला
 const PAST_SUFFIX_PL = 'े';  // खेल → खेले
 
+// ── Past tense (feminine) ───────────────────────────────────
+// खेल → खेली (sg), खेलीं (pl, with chandrabindu nasalization)
+const PAST_SUFFIX_F_SG = 'ी';
+const PAST_SUFFIX_F_PL = 'ीं';
+
 // ── Past habitual (masculine) ───────────────────────────────
 const PAST_HAB_AUX: Forms = ['था', 'था', 'था', 'थे', 'थे', 'थे'];
 
-// ── Future tense ────────────────────────────────────────────
-// मैं ...ऊँगा, तू ...एगा, वह ...एगा, हम ...एँगे, तुम ...ओगे, आप ...एँगे
-const FUTURE_SUFFIXES: Forms = ['ऊँगा', 'एगा', 'एगा', 'एँगे', 'ओगे', 'एँगे'];
+// ── Past habitual (feminine) ────────────────────────────────
+const PAST_HAB_AUX_F: Forms = ['थी', 'थी', 'थी', 'थीं', 'थीं', 'थीं'];
+
+// ── Future + subjunctive: suffixes computed at call time by
+// getFutureSuffixes()/getSubjunctiveSuffixes() since the shape depends on
+// whether the stem ends in a consonant (matra suffix) or vowel (full vowel).
 
 // ── Subjunctive ─────────────────────────────────────────────
 // मैं ...ऊँ, तू ...ए, वह ...ए, हम ...एँ, तुम ...ओ, आप ...एँ
-const SUBJ_SUFFIXES: Forms = ['ऊँ', 'ए', 'ए', 'एँ', 'ओ', 'एँ'];
 
 // ── Irregular verb data ─────────────────────────────────────
 interface IrregularData {
@@ -359,6 +390,75 @@ const IRREGULARS: Record<string, IrregularData> = {
   },
 };
 
+// ── Masculine → feminine past form transform ────────────────
+// Patterns:
+//   गया → गई    (drop या, add ई)
+//   किया → की   (Cि+या pattern: drop ि+या, add ी to bare consonant)
+//   दिया → दी
+//   लिया → ली
+//   पिया → पी
+//   खाया → खाई  (Cा+या: keep ा matra, add ई)
+//   आया → आई
+//   सोया → सोई
+//   खेला → खेली (drop ा, add ी)
+// Plural feminine adds nasalization: गई → गईं, खेली → खेलीं
+function mascToFemPast(masc: string, plural: boolean): string {
+  let base: string;
+  if (masc.endsWith('या')) {
+    const root = masc.slice(0, -2);
+    if (root.endsWith('ि')) {
+      // Cि+या cases: किया, दिया, लिया, पिया → drop the i-matra, attach ी
+      base = root.slice(0, -1) + 'ी';
+    } else {
+      base = root + 'ई';
+    }
+  } else if (masc.endsWith('ा')) {
+    base = masc.slice(0, -1) + 'ी';
+  } else {
+    base = masc;
+  }
+  if (!plural) return base;
+  if (base.endsWith('ई')) return base.slice(0, -1) + 'ईं';
+  if (base.endsWith('ी')) return base.slice(0, -1) + 'ीं';
+  return base + 'ं';
+}
+
+/** Derive the full 6-person feminine past from the masculine pastForms by
+ * pulling the singular masc (index 0) and nasalising for plural slots. */
+function pastFormsToFem(masc: Forms): Forms {
+  const femSg = mascToFemPast(masc[0], false);
+  const femPl = mascToFemPast(masc[0], true);
+  return [femSg, femSg, femSg, femPl, femPl, femPl];
+}
+
+// ── Vowel-vs-consonant ending detection for suffix shape ────
+// Hindi future/subjunctive suffixes attach differently to consonant- vs
+// vowel-ending stems. खेल (cons) + ूँगा → खेलूँगा. जा (vowel) + ऊँगा → जाऊँगा.
+const VOWEL_MATRAS = 'ािीुूेैोौृं';
+const STANDALONE_VOWELS = 'अआइईउऊऋएऐओऔ';
+function isVowelEndingStem(stem: string): boolean {
+  if (!stem) return false;
+  const last = stem.charAt(stem.length - 1);
+  return VOWEL_MATRAS.includes(last) || STANDALONE_VOWELS.includes(last);
+}
+
+function getFutureSuffixes(stem: string, fem: boolean): Forms {
+  const v = isVowelEndingStem(stem);
+  if (fem) {
+    return v
+      ? ['ऊँगी', 'एगी', 'एगी', 'एँगी', 'ओगी', 'एँगी']
+      : ['ूँगी', 'ेगी', 'ेगी', 'ेंगी', 'ोगी', 'ेंगी'];
+  }
+  return v
+    ? ['ऊँगा', 'एगा', 'एगा', 'एँगे', 'ओगे', 'एँगे']
+    : ['ूँगा', 'ेगा', 'ेगा', 'ेंगे', 'ोगे', 'ेंगे'];
+}
+
+function getSubjunctiveSuffixes(stem: string): Forms {
+  const v = isVowelEndingStem(stem);
+  return v ? ['ऊँ', 'ए', 'ए', 'एँ', 'ओ', 'एँ'] : ['ूँ', 'े', 'े', 'ें', 'ो', 'ें'];
+}
+
 // ── Regular conjugation ─────────────────────────────────────
 function conjugateRegular(stem: string, tense: TenseKey): Forms {
   switch (tense) {
@@ -399,24 +499,54 @@ function conjugateRegular(stem: string, tense: TenseKey): Forms {
         `${stem}${PRESENT_SUFFIX_PL} ${PAST_HAB_AUX[4]}`,
         `${stem}${PRESENT_SUFFIX_PL} ${PAST_HAB_AUX[5]}`,
       ];
-    case 'future':
+    case 'future': {
+      const sx = getFutureSuffixes(stem, false);
+      return [`${stem}${sx[0]}`, `${stem}${sx[1]}`, `${stem}${sx[2]}`, `${stem}${sx[3]}`, `${stem}${sx[4]}`, `${stem}${sx[5]}`];
+    }
+    case 'subjunctive': {
+      const sx = getSubjunctiveSuffixes(stem);
+      return [`${stem}${sx[0]}`, `${stem}${sx[1]}`, `${stem}${sx[2]}`, `${stem}${sx[3]}`, `${stem}${sx[4]}`, `${stem}${sx[5]}`];
+    }
+    case 'present_fem':
       return [
-        `${stem}${FUTURE_SUFFIXES[0]}`,
-        `${stem}${FUTURE_SUFFIXES[1]}`,
-        `${stem}${FUTURE_SUFFIXES[2]}`,
-        `${stem}${FUTURE_SUFFIXES[3]}`,
-        `${stem}${FUTURE_SUFFIXES[4]}`,
-        `${stem}${FUTURE_SUFFIXES[5]}`,
+        `${stem}${PRESENT_SUFFIX_F} ${PRESENT_AUX[0]}`,
+        `${stem}${PRESENT_SUFFIX_F} ${PRESENT_AUX[1]}`,
+        `${stem}${PRESENT_SUFFIX_F} ${PRESENT_AUX[2]}`,
+        `${stem}${PRESENT_SUFFIX_F} ${PRESENT_AUX[3]}`,
+        `${stem}${PRESENT_SUFFIX_F} ${PRESENT_AUX[4]}`,
+        `${stem}${PRESENT_SUFFIX_F} ${PRESENT_AUX[5]}`,
       ];
-    case 'subjunctive':
+    case 'continuous_fem':
       return [
-        `${stem}${SUBJ_SUFFIXES[0]}`,
-        `${stem}${SUBJ_SUFFIXES[1]}`,
-        `${stem}${SUBJ_SUFFIXES[2]}`,
-        `${stem}${SUBJ_SUFFIXES[3]}`,
-        `${stem}${SUBJ_SUFFIXES[4]}`,
-        `${stem}${SUBJ_SUFFIXES[5]}`,
+        `${stem}${CONT_SUFFIX_F_SG} ${PRESENT_AUX[0]}`,
+        `${stem}${CONT_SUFFIX_F_SG} ${PRESENT_AUX[1]}`,
+        `${stem}${CONT_SUFFIX_F_SG} ${PRESENT_AUX[2]}`,
+        `${stem}${CONT_SUFFIX_F_PL} ${PRESENT_AUX[3]}`,
+        `${stem}${CONT_SUFFIX_F_PL} ${PRESENT_AUX[4]}`,
+        `${stem}${CONT_SUFFIX_F_PL} ${PRESENT_AUX[5]}`,
       ];
+    case 'past_fem':
+      return [
+        `${stem}${PAST_SUFFIX_F_SG}`,
+        `${stem}${PAST_SUFFIX_F_SG}`,
+        `${stem}${PAST_SUFFIX_F_SG}`,
+        `${stem}${PAST_SUFFIX_F_PL}`,
+        `${stem}${PAST_SUFFIX_F_PL}`,
+        `${stem}${PAST_SUFFIX_F_PL}`,
+      ];
+    case 'habitual_past_fem':
+      return [
+        `${stem}${PRESENT_SUFFIX_F} ${PAST_HAB_AUX_F[0]}`,
+        `${stem}${PRESENT_SUFFIX_F} ${PAST_HAB_AUX_F[1]}`,
+        `${stem}${PRESENT_SUFFIX_F} ${PAST_HAB_AUX_F[2]}`,
+        `${stem}${PRESENT_SUFFIX_F} ${PAST_HAB_AUX_F[3]}`,
+        `${stem}${PRESENT_SUFFIX_F} ${PAST_HAB_AUX_F[4]}`,
+        `${stem}${PRESENT_SUFFIX_F} ${PAST_HAB_AUX_F[5]}`,
+      ];
+    case 'future_fem': {
+      const sx = getFutureSuffixes(stem, true);
+      return [`${stem}${sx[0]}`, `${stem}${sx[1]}`, `${stem}${sx[2]}`, `${stem}${sx[3]}`, `${stem}${sx[4]}`, `${stem}${sx[5]}`];
+    }
     case 'imperative': {
       // Imperative only exists for 2nd-person (तू / तुम / आप). Other slots
       // are '-' which the UI renders as "no form for this person". The
@@ -470,18 +600,32 @@ export function conjugateHindi(infinitive: string): ConjugationTable | null {
       isReflexive: false,
       tenses: {
         [TENSE_LABELS.present]: irr!.present!,
+        [TENSE_LABELS.present_fem]: irr!.present!,  // hai/hu form is gender-neutral
         [TENSE_LABELS.continuous]: [
           'हो रहा हूँ', 'हो रहा है', 'हो रहा है',
           'हो रहे हैं', 'हो रहे हो', 'हो रहे हैं',
         ],
+        [TENSE_LABELS.continuous_fem]: [
+          'हो रही हूँ', 'हो रही है', 'हो रही है',
+          'हो रही हैं', 'हो रही हो', 'हो रही हैं',
+        ],
         [TENSE_LABELS.past]: irr!.pastForms!,
+        [TENSE_LABELS.past_fem]: ['थी', 'थी', 'थी', 'थीं', 'थीं', 'थीं'],
         [TENSE_LABELS.habitual_past]: [
           'होता था', 'होता था', 'होता था',
           'होते थे', 'होते थे', 'होते थे',
         ],
+        [TENSE_LABELS.habitual_past_fem]: [
+          'होती थी', 'होती थी', 'होती थी',
+          'होती थीं', 'होती थीं', 'होती थीं',
+        ],
         [TENSE_LABELS.future]: [
           'होऊँगा', 'होएगा', 'होएगा',
           'होएँगे', 'होओगे', 'होएँगे',
+        ],
+        [TENSE_LABELS.future_fem]: [
+          'होऊँगी', 'होएगी', 'होएगी',
+          'होएँगी', 'होओगी', 'होएँगी',
         ],
         [TENSE_LABELS.subjunctive]: [
           'होऊँ', 'हो', 'हो',
@@ -509,9 +653,12 @@ export function conjugateHindi(infinitive: string): ConjugationTable | null {
       tenses[label] = irr.present;
     } else if (tense === 'past' && irr?.pastForms) {
       tenses[label] = irr.pastForms;
+    } else if (tense === 'past_fem' && irr?.pastForms) {
+      // Derive feminine past from the irregular masculine past forms.
+      tenses[label] = pastFormsToFem(irr.pastForms);
     } else {
       tenses[label] = conjugateRegular(
-        tense === 'past' ? (irr?.pastStem ?? stem) : effectiveStem,
+        tense === 'past' || tense === 'past_fem' ? (irr?.pastStem ?? stem) : effectiveStem,
         tense,
       );
       // Overlay the irregular polite imperative (आप form) — देना→दीजिए,
@@ -532,9 +679,11 @@ export function conjugateHindi(infinitive: string): ConjugationTable | null {
 }
 
 // ── Reverse lookup: find infinitive from conjugated form ────
+// Suffixes used to strip an inflection back to its bare stem. Feminine
+// variants included so that e.g. "खेलती" round-trips to "खेलना".
 const HABITUAL_SUFFIXES = ['ता', 'ती', 'ते'];
 const CONTINUOUS_PARTICLES = ['रहा', 'रही', 'रहे'];
-const PAST_SUFFIXES_M = ['ा', 'े', 'ी'];
+const PAST_SUFFIXES_M = ['ा', 'े', 'ी', 'ीं'];
 const FUTURE_SUFFIX_LIST = ['ऊँगा', 'ऊँगी', 'एगा', 'एगी', 'एँगे', 'एँगी', 'ओगे', 'ओगी'];
 const SUBJUNCTIVE_LIST = ['ऊँ', 'ए', 'एँ', 'ओ'];
 

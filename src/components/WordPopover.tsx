@@ -732,11 +732,9 @@ const PopoverPortal: React.FC<{
           so it never competes with the translation / cognate content above. */}
       <div className="mt-2 flex justify-end">
         <button
-          onClick={async () => {
-            const btn = document.activeElement as HTMLElement;
-            const originalText = 'Flag as wrong';
-            if (btn) btn.textContent = 'Sending...';
-
+          onClick={() => {
+            // 1) Persist the flag to localStorage synchronously — this is the
+            //    real "save" path. Anything below is best-effort telemetry.
             const flagEntry = {
               language,
               word: rawToken,
@@ -744,32 +742,37 @@ const PopoverPortal: React.FC<{
               currentPos: entry.pos || '',
               timestamp: Date.now(),
             };
-
             const flags = JSON.parse(localStorage.getItem('quest_flagged_words') || '[]');
             if (!flags.find((f: any) => f.language === language && f.word === rawToken)) {
               flags.push(flagEntry);
               localStorage.setItem('quest_flagged_words', JSON.stringify(flags));
             }
 
-            try {
-              const formData = new URLSearchParams();
-              formData.append('form-name', 'word-flag');
-              formData.append('language', language);
-              formData.append('word', rawToken);
-              formData.append('currentTranslation', entry.en || '');
-              formData.append('currentPos', entry.pos || '');
-              formData.append('sentence', '');
-              formData.append('suggestion', '');
-              await fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: formData.toString(),
-              });
-              if (btn) btn.textContent = 'Sent. Thanks!';
-            } catch (e) {
-              if (btn) btn.textContent = 'Saved locally';
-            }
-            setTimeout(() => { if (btn) btn.textContent = originalText; }, 2000);
+            // 2) Fire-and-forget Netlify form submission with a 4-second hard
+            //    timeout via AbortSignal. Earlier code awaited fetch('/') with
+            //    no timeout, so when the form endpoint was unconfigured (it
+            //    always is right now) the POST would hang and freeze the
+            //    popover on "Sending..." indefinitely.
+            const ctrl = new AbortController();
+            setTimeout(() => ctrl.abort(), 4000);
+            const formData = new URLSearchParams();
+            formData.append('form-name', 'word-flag');
+            formData.append('language', language);
+            formData.append('word', rawToken);
+            formData.append('currentTranslation', entry.en || '');
+            formData.append('currentPos', entry.pos || '');
+            formData.append('sentence', sentence || '');
+            formData.append('suggestion', '');
+            fetch('/', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: formData.toString(),
+              signal: ctrl.signal,
+            }).catch(() => { /* silently ignore — localStorage already has it */ });
+
+            // 3) Dismiss the popover immediately so the user sees feedback,
+            //    not a stuck "Sending..." button.
+            onDismiss();
           }}
           className="text-[10px] font-medium text-[var(--text-faint)] hover:text-orange-500 transition-colors"
         >

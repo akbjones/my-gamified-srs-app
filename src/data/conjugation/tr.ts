@@ -21,11 +21,13 @@ type Forms = [string, string, string, string, string, string];
 type TenseKey =
   | 'present_cont' | 'aorist' | 'past' | 'reported' | 'future' | 'conditional'
   | 'imperative' | 'necessitative'
-  | 'present_cont_neg' | 'aorist_neg' | 'past_neg' | 'reported_neg' | 'future_neg' | 'conditional_neg' | 'necessitative_neg';
+  | 'present_cont_neg' | 'aorist_neg' | 'past_neg' | 'reported_neg' | 'future_neg' | 'conditional_neg' | 'necessitative_neg'
+  | 'temporal_converb' | 'manner_converb';
 
 const TENSES: TenseKey[] = [
   'present_cont', 'aorist', 'past', 'reported', 'future', 'conditional',
   'imperative', 'necessitative',
+  'temporal_converb', 'manner_converb',
   'present_cont_neg', 'aorist_neg', 'past_neg', 'reported_neg', 'future_neg', 'conditional_neg', 'necessitative_neg',
 ];
 
@@ -38,6 +40,8 @@ const TENSE_LABELS: Record<TenseKey, string> = {
   conditional: 'Şart (Conditional)',
   imperative: 'Emir Kipi (Imperative)',
   necessitative: 'Gereklilik Kipi (Necessitative)',
+  temporal_converb: '-ınca/-ince (When X)',
+  manner_converb: '-arak/-erek (By X-ing)',
   present_cont_neg: 'Şimdiki Zaman Olumsuz (Present Cont. Neg.)',
   aorist_neg: 'Geniş Zaman Olumsuz (Aorist Neg.)',
   past_neg: 'Geçmiş Zaman Olumsuz (Past Neg.)',
@@ -284,6 +288,26 @@ function conjugateNecessitative(stem: string, _inf: string): Forms {
   ];
 }
 
+// ── Non-finite converbs (no person agreement) ─────────────
+/** Temporal converb (-ınca / -ince / -unca / -ünce): "when X happens".
+ * Single form, all six person columns identical. Example: gel-ince ("upon
+ * coming"), bastır-ınca ("when it presses"). */
+function conjugateTemporalConverb(stem: string, _inf: string): Forms {
+  const h = harmony4(stem);
+  // -ınca/-unca for back vowels, -ince/-ünce for front vowels. The 'a/e' at
+  // the end follows 2-way harmony of the harmony-4 buffer vowel itself.
+  const final = isBackVowel(h) ? 'a' : 'e';
+  const form = `${stem}${h}nc${final}`;
+  return [form, form, form, form, form, form];
+}
+
+/** Manner converb (-arak / -erek): "by X-ing". Single form. */
+function conjugateMannerConverb(stem: string, _inf: string): Forms {
+  const a = harmonyAE(stem);
+  const form = `${stem}${a}r${a}k`;
+  return [form, form, form, form, form, form];
+}
+
 // ── Negation helpers ──────────────────────────────────────
 /** Negative present continuous: stem + MI/MU + yor.
  * Note: the negative suffix harmonizes to mı/mi/mu/mü (4-way) before -yor,
@@ -455,6 +479,12 @@ export function conjugate(infinitive: string): ConjugationTable | null {
         break;
       case 'necessitative':
         tenses[label] = conjugateNecessitative(rawStem, infinitive);
+        break;
+      case 'temporal_converb':
+        tenses[label] = conjugateTemporalConverb(rawStem, infinitive);
+        break;
+      case 'manner_converb':
+        tenses[label] = conjugateMannerConverb(rawStem, infinitive);
         break;
       case 'present_cont_neg':
         tenses[label] = conjugatePresentContNeg(rawStem, infinitive);

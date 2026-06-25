@@ -289,14 +289,14 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
         >
           <div className="stat-card p-6 text-sm leading-8 text-[var(--text-secondary)] w-full max-w-xs">
             <h3 className="font-black text-[var(--text-primary)] border-b border-[var(--border-color)] pb-3 mb-4 text-base">
-              Rate honestly
+              How ratings work
             </h3>
-            <p><span className="text-red-500 font-black">No idea</span> &ndash; Total blank. Restart.</p>
-            <p><span className="text-orange-500 font-black">Hard</span> &ndash; Got it, but it was a struggle.</p>
-            <p><span className="text-emerald-500 font-black">Knew it</span> &ndash; Recalled without effort.</p>
-            <p><span className="text-violet-500 font-black">Very easy</span> &ndash; Instant. Push it further out.</p>
+            <p><span className="text-red-500 font-black">No idea</span> &ndash; total blank. Restart.</p>
+            <p><span className="text-orange-500 font-black">Hard</span> &ndash; got it, but it was a struggle.</p>
+            <p><span className="text-emerald-500 font-black">Knew it</span> &ndash; recalled without effort.</p>
+            <p><span className="text-violet-500 font-black">Very easy</span> &ndash; instant.</p>
             <p className="mt-4 text-xs text-[var(--text-muted)] leading-relaxed">
-              Your rating sets the next review time automatically &ndash; you don't need to think about timing.
+              Your rating sets the next review time.
             </p>
             <div className="mt-5 pt-3 border-t border-[var(--border-color)] text-center text-xs text-[var(--text-muted)] font-bold">
               Tap anywhere to close

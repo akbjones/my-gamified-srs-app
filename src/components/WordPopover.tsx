@@ -320,6 +320,7 @@ const PopoverPortal: React.FC<{
   // Display IPA: prefer lemma's IPA for inflected forms
   const displayIpa = (lemmaEntry?.ipa) || entry.ipa;
   const popoverRef = useRef<HTMLDivElement>(null);
+  const tenseTabBarRef = useRef<HTMLDivElement>(null);
   const [measured, setMeasured] = useState(false);
   const [finalPos, setFinalPos] = useState({ top: 0, left: 0 });
   const [position, setPosition] = useState<'above' | 'below'>('above');
@@ -675,6 +676,16 @@ const PopoverPortal: React.FC<{
     if (!showConj) setUserPickedTense(false);
   }, [showConj]);
 
+  // Scroll the active tense tab into view in the horizontally-scrolling tab
+  // bar. Critical for Turkish/Hindi/Russian where 15+ tenses don't all fit
+  // on screen — without this the active tab can be off-screen and the user
+  // doesn't know which tense the conjugation matches.
+  useEffect(() => {
+    if (!showConj || !tenseTabBarRef.current) return;
+    const active = tenseTabBarRef.current.querySelector<HTMLButtonElement>(`button[data-tense="${CSS.escape(conjTense)}"]`);
+    if (active) active.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+  }, [showConj, conjTense, conjTable]);
+
   useEffect(() => {
     if (!popoverRef.current) return;
     const reposition = () => {
@@ -1000,11 +1011,18 @@ const PopoverPortal: React.FC<{
               </div>
             )}
 
-            {/* Tense tabs – wrap onto multiple rows so all are visible on mobile.
-                Native name + English translation in parens (smaller, dimmed).
-                An amber dot indicates that this tense contains the clicked form. */}
-            <div className="px-4 py-3 sm:px-5 sm:py-4 border-b border-[var(--border-color)]">
-              <div className="flex flex-wrap gap-2">
+            {/* Tense tabs — single-row horizontal scroll. Languages like Turkish
+                have 17 tenses; wrapping them onto multiple rows ate all the
+                vertical real estate and left a tiny window for the actual
+                conjugation forms. Horizontal scroll keeps the tab strip a
+                fixed-height (one row) and lets users swipe through. The active
+                tab scrolls itself into view so users always see the current
+                tense without hunting. */}
+            <div className="border-b border-[var(--border-color)]">
+              <div
+                ref={tenseTabBarRef}
+                className="flex gap-2 overflow-x-auto px-4 py-3 sm:px-5 sm:py-4 [scrollbar-width:thin] [-webkit-overflow-scrolling:touch]"
+              >
                 {Object.keys(conjTable.tenses).map(tense => {
                   const fullLabel = TENSE_LABELS[tense] || tense;
                   const m = fullLabel.match(/^(.+?)\s*\(([^)]+)\)\s*$/);
@@ -1015,8 +1033,9 @@ const PopoverPortal: React.FC<{
                   return (
                     <button
                       key={tense}
+                      data-tense={tense}
                       onClick={() => { setConjTense(tense); setUserPickedTense(true); }}
-                      className={`relative px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-lg text-xs sm:text-sm font-bold uppercase tracking-wide transition-all whitespace-nowrap ${
+                      className={`relative px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-lg text-xs sm:text-sm font-bold uppercase tracking-wide transition-all whitespace-nowrap shrink-0 ${
                         isActive
                           ? 'bg-blue-500 text-white shadow-md shadow-blue-500/30'
                           : 'bg-[var(--bg-inset)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] hover:text-[var(--text-primary)]'

@@ -1,0 +1,28 @@
+{
+  "description": "Strict re-audit of the full Hindi deck after calibration showed the lenient round missed 4.6× more issues. 12 parallel agents with stricter rubric (flag every textbook-formal sentence a friend would notice). Quality still uneven across chunks — some agents under-flagged their range despite the strict prompt. Use this alongside the original 225-card audit (docs/hindi-register-full-audit.json); together they form the candidate pool for rewrite.",
+  "audit_date": "2026-06-27",
+  "method": "Strict 12-agent re-audit. Calibration on cards 1500-1749 found 65/250 (26%); the agents on full deck found a total of ~360 cards new + overlap. Extrapolated true rate is ~25-30% of 3171 = 800+, but agent variance suggests real number is between 400-800.",
+  "per_chunk_counts": {
+    "0-264 (agent 1)": 7,
+    "265-528 (agent 2)": 5,
+    "529-792 (agent 3)": 17,
+    "793-1056 (agent 4)": 64,
+    "1057-1320 (agent 5)": 31,
+    "1321-1584 (agent 6)": 10,
+    "1585-1848 (agent 7)": 29,
+    "1849-2112 (agent 8)": 19,
+    "2113-2376 (agent 9)": 60,
+    "2377-2640 (agent 10)": 11,
+    "2641-2904 (agent 11)": 25,
+    "2905-3170 (agent 12)": 92,
+    "total_raw_flags": 370
+  },
+  "quality_notes": {
+    "agent_4_strong": "chunk 793-1056 agent was thorough — found 64 issues including subtle ones like अहिंसा, सम्मान, कुम्हार, मधुमेह, संग्रहालय",
+    "agent_12_strong": "chunk 2905-3170 agent was thorough — caught the entire academic/research-essay block (hi-2940 through hi-3014) plus discourse markers",
+    "agent_9_strong": "chunk 2113-2376 agent caught 60 incl. passive Sanskrit constructions",
+    "agents_1_2_6_10_weak": "These under-flagged their ranges. The same kinds of issues that other agents found elsewhere (Sanskrit vocab, passive constructions, encyclopedic phrasings) are present in those ranges but mostly waved past. A re-pass on those chunks specifically would likely add 50-100 more.",
+    "agent_1_data_quality": "Agent 1 returned IDs from outside its assigned range (hi-1365, hi-1366, hi-1383, hi-1608, hi-1628, hi-1635). These overlap with other chunks and have been deduped."
+  },
+  "recommendation": "The strict audit + original audit together identify ~500 unique flagged cards. This is the action set. The weak chunks (0-264, 265-528, 1321-1584, 2377-2640) should get a focused re-pass before the full rewrite phase — those four ranges likely hide another 100-150 issues. After that, the realistic action set is ~600-700 cards."
+}

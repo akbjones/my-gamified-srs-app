@@ -469,6 +469,18 @@ function getSubjunctiveSuffixes(stem: string): Forms {
   return v ? ['ऊँ', 'ए', 'ए', 'एँ', 'ओ', 'एँ'] : ['ूँ', 'े', 'े', 'ें', 'ो', 'ें'];
 }
 
+// Past-tense suffixes vary by stem-final vowel.
+// Consonant-ending (बोल, खेल): bare matras work — बोल+ा, बोल+े, बोल+ी, बोल+ीं
+// Vowel-ending (बना, सुना): need full vowels — बना+या (with -य- buffer or full vowel),
+// बना+ए, बना+ई, बना+ईं
+function getPastSuffixes(stem: string, fem: boolean): { sg: string; pl: string } {
+  const v = isVowelEndingStem(stem);
+  if (fem) {
+    return v ? { sg: 'ई', pl: 'ईं' } : { sg: 'ी', pl: 'ीं' };
+  }
+  return v ? { sg: 'या', pl: 'ए' } : { sg: 'ा', pl: 'े' };
+}
+
 // ── Regular conjugation ─────────────────────────────────────
 function conjugateRegular(stem: string, tense: TenseKey): Forms {
   switch (tense) {
@@ -491,15 +503,13 @@ function conjugateRegular(stem: string, tense: TenseKey): Forms {
         `${stem}${CONT_SUFFIX_PL} ${PRESENT_AUX[4]}`,
         `${stem}${CONT_SUFFIX_PL} ${PRESENT_AUX[5]}`,
       ];
-    case 'past':
+    case 'past': {
+      const px = getPastSuffixes(stem, false);
       return [
-        `${stem}${PAST_SUFFIX_SG}`,
-        `${stem}${PAST_SUFFIX_SG}`,
-        `${stem}${PAST_SUFFIX_SG}`,
-        `${stem}${PAST_SUFFIX_PL}`,
-        `${stem}${PAST_SUFFIX_PL}`,
-        `${stem}${PAST_SUFFIX_PL}`,
+        `${stem}${px.sg}`, `${stem}${px.sg}`, `${stem}${px.sg}`,
+        `${stem}${px.pl}`, `${stem}${px.pl}`, `${stem}${px.pl}`,
       ];
+    }
     case 'habitual_past':
       return [
         `${stem}${PRESENT_SUFFIX_SG} ${PAST_HAB_AUX[0]}`,
@@ -535,15 +545,13 @@ function conjugateRegular(stem: string, tense: TenseKey): Forms {
         `${stem}${CONT_SUFFIX_F_PL} ${PRESENT_AUX[4]}`,
         `${stem}${CONT_SUFFIX_F_PL} ${PRESENT_AUX[5]}`,
       ];
-    case 'past_fem':
+    case 'past_fem': {
+      const px = getPastSuffixes(stem, true);
       return [
-        `${stem}${PAST_SUFFIX_F_SG}`,
-        `${stem}${PAST_SUFFIX_F_SG}`,
-        `${stem}${PAST_SUFFIX_F_SG}`,
-        `${stem}${PAST_SUFFIX_F_PL}`,
-        `${stem}${PAST_SUFFIX_F_PL}`,
-        `${stem}${PAST_SUFFIX_F_PL}`,
+        `${stem}${px.sg}`, `${stem}${px.sg}`, `${stem}${px.sg}`,
+        `${stem}${px.pl}`, `${stem}${px.pl}`, `${stem}${px.pl}`,
       ];
+    }
     case 'habitual_past_fem':
       return [
         `${stem}${PRESENT_SUFFIX_F} ${PAST_HAB_AUX_F[0]}`,
@@ -740,23 +748,38 @@ export function conjugateHindi(infinitive: string): ConjugationTable | null {
 // variants included so that e.g. "खेलती" round-trips to "खेलना".
 const HABITUAL_SUFFIXES = ['ता', 'ती', 'ते'];
 const CONTINUOUS_PARTICLES = ['रहा', 'रही', 'रहे'];
-const PAST_SUFFIXES_M = ['ा', 'े', 'ी', 'ीं'];
+// Includes the full-vowel variants (ई / ईं at U+0908) used by stems ending
+// in -ा, where the matra ी cannot attach: बनाना → बनाई (not बनाी).
+const PAST_SUFFIXES_M = ['ा', 'े', 'ी', 'ीं', 'ई', 'ईं'];
 const FUTURE_SUFFIX_LIST = ['ऊँगा', 'ऊँगी', 'एगा', 'एगी', 'एँगे', 'एँगी', 'ओगे', 'ओगी'];
-const SUBJUNCTIVE_LIST = ['ऊँ', 'ए', 'एँ', 'ओ'];
+// Includes consonant-stem variants (ें U+0947+U+0902 vs the full-vowel एँ).
+const SUBJUNCTIVE_LIST = ['ऊँ', 'ें', 'एँ', 'ूँ', 'ए', 'े', 'ओ', 'ो'];
 
-// Build reverse map from irregular past forms
+// Build reverse map from irregular past forms (both genders so "गई" → जाना).
 const PAST_REVERSE = new Map<string, string>();
 for (const [inf, data] of Object.entries(IRREGULARS)) {
   if (data.pastForms) {
-    for (const form of data.pastForms) {
-      if (!PAST_REVERSE.has(form)) {
-        PAST_REVERSE.set(form, inf);
-      }
+    const fem = pastFormsToFem(data.pastForms);
+    for (const form of [...data.pastForms, ...fem]) {
+      if (!PAST_REVERSE.has(form)) PAST_REVERSE.set(form, inf);
     }
   }
 }
 
+// Auxiliary / copula forms of होना — tapping these in a sentence
+// should route the user to होना's conjugation table.
+const HONA_AUX = new Set([
+  'हूँ', 'है', 'हैं', 'हो',                  // present
+  'था', 'थी', 'थे', 'थीं',                   // past
+  'होगा', 'होगी', 'होंगे', 'होंगी',           // future
+  'हुआ', 'हुई', 'हुए', 'हुईं',                // perfect participles
+  'रहा', 'रही', 'रहे', 'रहीं',                // continuous particle (also stem of रहना)
+]);
+
 export function findInfinitive(form: string): string | null {
+  // होना auxiliary forms
+  if (HONA_AUX.has(form)) return 'होना';
+
   // Direct infinitive
   if (form.endsWith('ना') && (IRREGULARS[form] || form.length >= 4)) {
     return form;
@@ -824,10 +847,30 @@ export function findInfinitive(form: string): string | null {
     }
   }
 
-  // Check simple past: remove ा/ी/े
+  // -कर compound non-finite (बैठकर "having sat" → बैठना, आकर → आना)
+  if (mainWord.endsWith('कर') && mainWord.length >= 3) {
+    const stem = mainWord.slice(0, -2);
+    for (const [inf, data] of Object.entries(IRREGULARS)) {
+      if (data.presentStem === stem || getStem(inf) === stem) return inf;
+    }
+    if (stem.length > 0) return stem + 'ना';
+  }
+
+  // Imperative familiar -ो (करो, रखो, लो, खाओ)
+  if (mainWord.endsWith('ो') && mainWord.length >= 2) {
+    const stem = mainWord.slice(0, -1);
+    for (const [inf, data] of Object.entries(IRREGULARS)) {
+      if (data.presentStem === stem || getStem(inf) === stem) return inf;
+    }
+    if (stem.length >= 2) return stem + 'ना';
+  }
+  // Vowel-ending stems use -ओ suffix (खा + ओ → खाओ): try matching IRREGULARS
+  // by extending with ना. Already covered above.
+
+  // Check simple past: strip the matched suffix (was: hardcoded slice(-1))
   for (const s of PAST_SUFFIXES_M) {
-    if (mainWord.endsWith(s) && mainWord.length > 2) {
-      const stem = mainWord.slice(0, -1);
+    if (mainWord.endsWith(s) && mainWord.length > s.length + 1) {
+      const stem = mainWord.slice(0, -s.length);
       if (stem.length > 0) {
         for (const [inf, data] of Object.entries(IRREGULARS)) {
           if (data.pastStem === stem || getStem(inf) === stem) return inf;
@@ -835,6 +878,18 @@ export function findInfinitive(form: string): string | null {
         return stem + 'ना';
       }
     }
+  }
+
+  // Bare stem / imperative tu-form — irregular first (आ→आना, जा→जाना)
+  for (const [inf, data] of Object.entries(IRREGULARS)) {
+    if (data.presentStem === mainWord || getStem(inf) === mainWord) return inf;
+  }
+
+  // Regular bare stem fallback: short tokens we couldn't otherwise resolve
+  // are treated as plain stems (लग → लगना, फेंक → फेंकना, निकाल → निकालना).
+  // Caller filters to pos:'v' so we're not over-matching nouns.
+  if (mainWord.length >= 2 && mainWord.length <= 6 && !mainWord.endsWith('ना')) {
+    return mainWord + 'ना';
   }
 
   return null;

@@ -1,0 +1,650 @@
+{
+  "version": 2,
+  "description": "Hindi vocabulary register audit list. 'formal' = textbook/Sanskrit-derived word; 'preferred' = what urban Hindi speakers actually say in everyday speech. Each entry has a severity: 'high' = nobody says this in casual speech (definite swap); 'medium' = formal sounds textbook-ish, preferred is more natural (swap unless context is formal); 'low' = both registers are common (only swap if the surrounding sentence is otherwise casual). Used by scripts/audit-hi-register.cjs.",
+  "categories": {
+    "public_places": {
+      "policy": "default-English",
+      "rationale": "Modern urban places. Signs may use formal Hindi but speakers code-switch.",
+      "entries": [
+        {
+          "formal": "शौचालय",
+          "preferred": "टॉयलेट",
+          "alt": [
+            "बाथरूम"
+          ],
+          "rom": "shauchālay → toilet/bathroom",
+          "note": "शौचालय reads euphemistic; nobody asks for it in conversation",
+          "severity": "high"
+        },
+        {
+          "formal": "विद्यालय",
+          "preferred": "स्कूल",
+          "rom": "vidyālay → school",
+          "severity": "medium"
+        },
+        {
+          "formal": "महाविद्यालय",
+          "preferred": "कॉलेज",
+          "rom": "mahāvidyālay → college",
+          "severity": "medium"
+        },
+        {
+          "formal": "कार्यालय",
+          "preferred": "ऑफिस",
+          "rom": "kāryālay → office",
+          "severity": "medium"
+        },
+        {
+          "formal": "चिकित्सालय",
+          "preferred": "अस्पताल",
+          "rom": "chikitsālay → hospital",
+          "note": "अस्पताल is itself a borrowing but fully naturalized",
+          "severity": "medium"
+        },
+        {
+          "formal": "भोजनालय",
+          "preferred": "रेस्तरां",
+          "alt": [
+            "रेस्टोरेंट"
+          ],
+          "rom": "bhojanālay → restaurant",
+          "severity": "medium"
+        },
+        {
+          "formal": "पुस्तकालय",
+          "preferred": "लाइब्रेरी",
+          "rom": "pustakālay → library",
+          "severity": "medium"
+        },
+        {
+          "formal": "मुद्रालय",
+          "preferred": "बैंक",
+          "rom": "mudrālay → bank",
+          "note": "बैंक is universal",
+          "severity": "medium"
+        }
+      ]
+    },
+    "transport": {
+      "policy": "default-English",
+      "rationale": "Modern transport vocabulary is English-borrowed in spoken Hindi.",
+      "entries": [
+        {
+          "formal": "रेलगाड़ी",
+          "preferred": "ट्रेन",
+          "rom": "railgāṛī → train",
+          "severity": "medium"
+        },
+        {
+          "formal": "वायुयान",
+          "preferred": "हवाई जहाज़",
+          "alt": [
+            "प्लेन"
+          ],
+          "rom": "vāyuyān → hawai jahaz/plane",
+          "note": "हवाई जहाज़ is acceptable native compound",
+          "severity": "medium"
+        },
+        {
+          "formal": "यातायात",
+          "preferred": "ट्रैफिक",
+          "rom": "yātāyāt → traffic",
+          "severity": "medium"
+        },
+        {
+          "formal": "बस अड्डा",
+          "preferred": "बस स्टैंड",
+          "rom": "bus aḍḍā → bus stand",
+          "note": "अड्डा is fine but बस स्टैंड is more common",
+          "severity": "low"
+        },
+        {
+          "formal": "रेलवे स्टेशन",
+          "preferred": "स्टेशन",
+          "rom": "railway station → station",
+          "note": "shortened in speech",
+          "severity": "low"
+        }
+      ]
+    },
+    "tech": {
+      "policy": "default-English",
+      "rationale": "Tech vocabulary is universally code-switched. The Sanskrit alternatives are archaic.",
+      "entries": [
+        {
+          "formal": "दूरभाष",
+          "preferred": "फोन",
+          "rom": "dūrbhāṣ → phone",
+          "note": "Nobody under 80 says दूरभाष",
+          "severity": "high"
+        },
+        {
+          "formal": "संगणक",
+          "preferred": "कंप्यूटर",
+          "rom": "saṅgaṇak → computer",
+          "note": "Pure archaism",
+          "severity": "high"
+        },
+        {
+          "formal": "चलचित्र",
+          "preferred": "मूवी",
+          "alt": [
+            "फिल्म"
+          ],
+          "rom": "chalchitr → movie/film",
+          "note": "फिल्म is also fine",
+          "severity": "high"
+        },
+        {
+          "formal": "अंतरजाल",
+          "preferred": "इंटरनेट",
+          "rom": "antarjāl → internet",
+          "severity": "high"
+        },
+        {
+          "formal": "विद्युत संदेश",
+          "preferred": "ईमेल",
+          "rom": "vidyut sandesh → email",
+          "severity": "high"
+        },
+        {
+          "formal": "लघु संदेश",
+          "preferred": "मैसेज",
+          "alt": [
+            "एसएमएस"
+          ],
+          "rom": "laghu sandesh → message/SMS",
+          "severity": "high"
+        }
+      ]
+    },
+    "work": {
+      "policy": "default-English",
+      "rationale": "Modern workplace vocabulary is English-borrowed in spoken Hindi.",
+      "entries": [
+        {
+          "formal": "बैठक",
+          "preferred": "मीटिंग",
+          "rom": "baiṭhak → meeting",
+          "note": "बैठक exists but मीटिंग is dominant in offices",
+          "severity": "medium"
+        },
+        {
+          "formal": "परियोजना",
+          "preferred": "प्रोजेक्ट",
+          "rom": "pariyojnā → project",
+          "severity": "medium"
+        },
+        {
+          "formal": "प्रबंधक",
+          "preferred": "मैनेजर",
+          "rom": "prabandhak → manager",
+          "severity": "medium"
+        },
+        {
+          "formal": "सहकर्मी",
+          "preferred": "कलीग",
+          "rom": "sahkarmī → colleague",
+          "note": "less common as English borrow, सहकर्मी also fine",
+          "severity": "low"
+        },
+        {
+          "formal": "कार्यक्रम",
+          "preferred": "प्रोग्राम",
+          "rom": "kāryakram → program",
+          "note": "कार्यक्रम is acceptable; both used",
+          "severity": "low"
+        },
+        {
+          "formal": "नियुक्ति",
+          "preferred": "अपॉइंटमेंट",
+          "rom": "niyukti → appointment",
+          "severity": "medium"
+        }
+      ]
+    },
+    "roles_people": {
+      "policy": "mixed — see notes",
+      "rationale": "Some formal terms are still natural (मित्र in literary), others fully replaced.",
+      "entries": [
+        {
+          "formal": "चिकित्सक",
+          "preferred": "डॉक्टर",
+          "rom": "chikitsk → doctor",
+          "severity": "medium"
+        },
+        {
+          "formal": "अध्यापक",
+          "preferred": "टीचर",
+          "alt": [
+            "सर",
+            "मैम"
+          ],
+          "rom": "adhyāpak → teacher/sir/ma'am",
+          "note": "Students say सर/मैम when addressing",
+          "severity": "medium"
+        },
+        {
+          "formal": "अध्यापिका",
+          "preferred": "टीचर",
+          "alt": [
+            "मैम"
+          ],
+          "rom": "adhyāpikā → teacher (f)",
+          "severity": "medium"
+        },
+        {
+          "formal": "विद्यार्थी",
+          "preferred": "स्टूडेंट",
+          "alt": [
+            "बच्चे",
+            "छात्र"
+          ],
+          "rom": "vidyārthī → student",
+          "note": "Context matters: छात्र in formal writing, स्टूडेंट in speech",
+          "severity": "low"
+        },
+        {
+          "formal": "मित्र",
+          "preferred": "दोस्त",
+          "alt": [
+            "फ्रेंड"
+          ],
+          "rom": "mitr → friend/dost",
+          "note": "दोस्त is the natural choice; मित्र feels literary",
+          "severity": "low"
+        }
+      ]
+    },
+    "food": {
+      "policy": "keep-Hindi for traditional; default-English for modern.",
+      "rationale": "Traditional foods stay in Hindi. Restaurant/modern food vocabulary code-switches.",
+      "entries": [
+        {
+          "formal": "भोजन",
+          "preferred": "खाना",
+          "rom": "bhojan → khānā (food)",
+          "note": "भोजन reads ceremonial; खाना is the everyday word",
+          "severity": "low"
+        },
+        {
+          "formal": "भोजन करना",
+          "preferred": "खाना खाना",
+          "rom": "bhojan karnā → khānā khānā (to eat)",
+          "note": "Or just खाना as a verb",
+          "severity": "medium"
+        },
+        {
+          "formal": "जलपान",
+          "preferred": "नाश्ता",
+          "rom": "jalpān → nāshtā (breakfast/snack)",
+          "note": "नाश्ता is universal",
+          "severity": "low"
+        }
+      ]
+    },
+    "time_scheduling": {
+      "policy": "default-English for modern scheduling concepts.",
+      "rationale": "Weekend/weekday/schedule etc. are English-borrowed in speech.",
+      "entries": [
+        {
+          "formal": "सप्ताहांत",
+          "preferred": "वीकेंड",
+          "rom": "saptāhānt → weekend",
+          "severity": "medium"
+        },
+        {
+          "formal": "अवकाश",
+          "preferred": "छुट्टी",
+          "rom": "avkāsh → chuṭṭī (holiday/leave)",
+          "note": "छुट्टी is universal",
+          "severity": "low"
+        },
+        {
+          "formal": "समय",
+          "preferred": "टाइम",
+          "rom": "samay → time",
+          "note": "Both common; in conversation 'टाइम क्या है?' is more frequent than 'समय क्या है?'",
+          "severity": "low"
+        }
+      ]
+    },
+    "verbs_compound": {
+      "policy": "default-English borrowing + करना.",
+      "rationale": "Hindi commonly forms verbs by attaching करना to English nouns. This is THE everyday pattern for modern actions.",
+      "entries": [
+        {
+          "formal": "अध्ययन करना",
+          "preferred": "पढ़ाई करना",
+          "alt": [
+            "स्टडी करना"
+          ],
+          "rom": "adhyayan karnā → paṛhāī karnā/study karnā (to study)",
+          "severity": "high"
+        },
+        {
+          "formal": "क्रय करना",
+          "preferred": "खरीदना",
+          "rom": "kray karnā → kharīdnā (to buy)",
+          "note": "खरीदना is the everyday verb",
+          "severity": "high"
+        },
+        {
+          "formal": "विक्रय करना",
+          "preferred": "बेचना",
+          "rom": "vikray karnā → bechnā (to sell)",
+          "severity": "high"
+        },
+        {
+          "formal": "भ्रमण करना",
+          "preferred": "घूमना",
+          "rom": "bhramaṇ karnā → ghūmnā (to roam/travel)",
+          "severity": "high"
+        },
+        {
+          "formal": "विश्राम करना",
+          "preferred": "आराम करना",
+          "rom": "vishrām karnā → ārām karnā (to rest)",
+          "note": "आराम is itself an Arabic borrowing but fully naturalized",
+          "severity": "medium"
+        },
+        {
+          "formal": "वार्तालाप करना",
+          "preferred": "बात करना",
+          "alt": [
+            "बातचीत करना"
+          ],
+          "rom": "vārtālāp karnā → bāt karnā (to talk)",
+          "severity": "high"
+        },
+        {
+          "formal": "प्रयास करना",
+          "preferred": "कोशिश करना",
+          "alt": [
+            "ट्राय करना"
+          ],
+          "rom": "prayās karnā → koshish karnā (to try)",
+          "severity": "medium"
+        },
+        {
+          "formal": "आरंभ करना",
+          "preferred": "शुरू करना",
+          "rom": "ārambh karnā → shurū karnā (to start)",
+          "severity": "medium"
+        },
+        {
+          "formal": "अंत करना",
+          "preferred": "खत्म करना",
+          "rom": "ant karnā → khatm karnā (to finish)",
+          "severity": "medium"
+        },
+        {
+          "formal": "स्मरण करना",
+          "preferred": "याद करना",
+          "rom": "smaraṇ karnā → yād karnā (to remember)",
+          "severity": "high"
+        },
+        {
+          "formal": "प्रदर्शन करना",
+          "preferred": "दिखाना",
+          "rom": "pradarshan karnā → dikhānā (to show)",
+          "note": "Both still used; दिखाना more natural in casual speech",
+          "severity": "medium"
+        },
+        {
+          "formal": "वहन करना",
+          "preferred": "ले जाना",
+          "rom": "vahan karnā → le jānā (to carry)",
+          "severity": "high"
+        },
+        {
+          "formal": "ग्रहण करना",
+          "preferred": "लेना",
+          "rom": "grahaṇ karnā → lenā (to take/accept)",
+          "severity": "high"
+        },
+        {
+          "formal": "कार्य करना",
+          "preferred": "काम करना",
+          "rom": "kārya karnā → kām karnā (to work)",
+          "severity": "medium"
+        }
+      ]
+    },
+    "verbs_modern_codemix": {
+      "policy": "English verb + करना is the everyday pattern.",
+      "rationale": "Modern action verbs (manage, share, send, update) are universally code-switched. Sanskrit equivalents don't exist or are obscure.",
+      "entries": [
+        {
+          "formal": "प्रबंधन करना",
+          "preferred": "मैनेज करना",
+          "rom": "prabandhan karnā → manage karnā",
+          "severity": "high"
+        },
+        {
+          "formal": "साझा करना",
+          "preferred": "शेयर करना",
+          "rom": "sājhā karnā → share karnā",
+          "note": "साझा is still used in writing; spoken default is शेयर",
+          "severity": "high"
+        },
+        {
+          "formal": "प्रेषित करना",
+          "preferred": "सेंड करना",
+          "alt": [
+            "भेजना"
+          ],
+          "rom": "preṣit karnā → bhejnā/send karnā (to send)",
+          "note": "भेजना works fine for non-tech sending",
+          "severity": "low"
+        },
+        {
+          "formal": "अद्यतन करना",
+          "preferred": "अपडेट करना",
+          "rom": "adyatan karnā → update karnā",
+          "note": "अद्यतन = update is dictionary-only",
+          "severity": "high"
+        },
+        {
+          "formal": "आरक्षित करना",
+          "preferred": "बुक करना",
+          "rom": "ārakṣit karnā → book karnā",
+          "note": "Trains: बुक करना; formal आरक्षित in writing only",
+          "severity": "high"
+        },
+        {
+          "formal": "रद्द करना",
+          "preferred": "कैंसल करना",
+          "rom": "radd karnā → cancel karnā",
+          "note": "रद्द is acceptable; both used",
+          "severity": "low"
+        },
+        {
+          "formal": "अग्रेषित करना",
+          "preferred": "फॉरवर्ड करना",
+          "rom": "agreṣit karnā → forward karnā",
+          "severity": "high"
+        }
+      ]
+    },
+    "miscellaneous_high_formal": {
+      "policy": "swap to natural equivalent",
+      "rationale": "Sanskrit/tatsama words used only in literary or news contexts; ordinary speech uses simpler forms.",
+      "entries": [
+        {
+          "formal": "अति",
+          "preferred": "बहुत",
+          "rom": "ati → bahut (very)",
+          "severity": "high"
+        },
+        {
+          "formal": "किंतु",
+          "preferred": "लेकिन",
+          "rom": "kintu → lekin (but)",
+          "severity": "medium"
+        },
+        {
+          "formal": "परंतु",
+          "preferred": "लेकिन",
+          "rom": "parantu → lekin (but)",
+          "severity": "medium"
+        },
+        {
+          "formal": "क्योंकि",
+          "preferred": "क्योंकि",
+          "rom": "kyonki → kyonki (because)",
+          "note": "Already natural; included for completeness",
+          "severity": "medium"
+        },
+        {
+          "formal": "तथापि",
+          "preferred": "फिर भी",
+          "rom": "tathāpi → phir bhī (even so)",
+          "severity": "high"
+        },
+        {
+          "formal": "अतएव",
+          "preferred": "इसलिए",
+          "rom": "ataev → islie (therefore)",
+          "severity": "high"
+        },
+        {
+          "formal": "यदि",
+          "preferred": "अगर",
+          "rom": "yadi → agar (if)",
+          "note": "यदि still used in formal writing",
+          "severity": "low"
+        }
+      ]
+    }
+  },
+  "keep_pure_hindi": {
+    "description": "Domains where pure Hindi vocabulary is THE natural choice. Don't swap these.",
+    "domains": [
+      {
+        "domain": "family",
+        "examples": [
+          "माँ",
+          "पिताजी/पापा",
+          "बहन",
+          "भाई",
+          "बेटा",
+          "बेटी",
+          "दादी",
+          "दादा",
+          "नानी",
+          "नाना",
+          "चाचा",
+          "चाची",
+          "मामा",
+          "मामी"
+        ]
+      },
+      {
+        "domain": "body parts",
+        "examples": [
+          "सिर",
+          "हाथ",
+          "पैर",
+          "आँख",
+          "कान",
+          "नाक",
+          "मुँह",
+          "पेट",
+          "दिल"
+        ]
+      },
+      {
+        "domain": "weather/nature",
+        "examples": [
+          "बारिश",
+          "धूप",
+          "हवा",
+          "बादल",
+          "पहाड़",
+          "नदी",
+          "पेड़",
+          "फूल"
+        ]
+      },
+      {
+        "domain": "time of day",
+        "examples": [
+          "सुबह",
+          "दोपहर",
+          "शाम",
+          "रात"
+        ]
+      },
+      {
+        "domain": "colors",
+        "examples": [
+          "लाल",
+          "हरा",
+          "नीला",
+          "पीला",
+          "काला",
+          "सफ़ेद"
+        ]
+      },
+      {
+        "domain": "basic emotions",
+        "examples": [
+          "खुश",
+          "उदास",
+          "गुस्सा",
+          "डर",
+          "प्यार"
+        ]
+      },
+      {
+        "domain": "home cooking food",
+        "examples": [
+          "रोटी",
+          "चावल",
+          "सब्ज़ी",
+          "दाल",
+          "चाय",
+          "पानी"
+        ]
+      },
+      {
+        "domain": "cultural/religious",
+        "examples": [
+          "दिवाली",
+          "होली",
+          "ईद",
+          "पूजा",
+          "मंदिर",
+          "मस्जिद",
+          "गुरुद्वारा"
+        ]
+      },
+      {
+        "domain": "everyday verbs",
+        "examples": [
+          "जाना",
+          "आना",
+          "खाना",
+          "पीना",
+          "सोना",
+          "उठना",
+          "बैठना",
+          "देखना",
+          "सुनना",
+          "बोलना",
+          "करना",
+          "होना"
+        ]
+      }
+    ]
+  },
+  "contextual_exceptions": {
+    "description": "Cards that SHOULD use formal register because the context demands it. Don't flag these.",
+    "rules": [
+      "Cards labeled as 'formal letter', 'government form', 'news headline', 'official sign' — keep the formal Hindi",
+      "Cards explicitly teaching formal/literary register — keep formal",
+      "Cards in a designated 'formal/literary' unit — keep formal"
+    ]
+  }
+}

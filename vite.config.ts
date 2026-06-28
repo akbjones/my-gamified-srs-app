@@ -104,7 +104,8 @@ export default defineConfig({
               // v2 = 2026-06-11 Welsh fix + 10-language Chirp3-HD upgrade
               // v4 = 2026-06-13 force-evict stale v3 entries after native-voice regen
               // v5 = 2026-06-14 switch to StaleWhileRevalidate for cross-device resilience
-              cacheName: 'audio-cache-v5',
+              // v6 = 2026-06-27 Hindi register cleanup (473 cards regen'd)
+              cacheName: 'audio-cache-v6',
               expiration: {
                 maxEntries: 500,
                 maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days

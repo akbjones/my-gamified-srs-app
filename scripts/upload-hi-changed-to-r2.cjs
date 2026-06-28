@@ -14,7 +14,11 @@ const https = require('https');
 
 const TOKEN = process.env.CLOUDFLARE_API_TOKEN;
 const ACCT = process.env.CLOUDFLARE_ACCOUNT_ID;
-const BUCKET = process.env.CF_BUCKET || 'langlab-audio';
+// The public binding pub-fa9d7e83...r2.dev/quest-audio/<file> serves from
+// THIS bucket with the quest-audio/ prefix; do NOT use langlab-audio (that
+// bucket exists but is not served by the prod public URL).
+const BUCKET = process.env.CF_BUCKET || 'langlab-srs-audio';
+const KEY_PREFIX = process.env.CF_KEY_PREFIX || 'quest-audio/';
 if (!TOKEN || !ACCT) {
   console.error('Set CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID');
   process.exit(1);
@@ -46,7 +50,7 @@ function uploadOne(filename) {
     const stream = fs.createReadStream(filepath);
     const req = https.request({
       hostname: 'api.cloudflare.com', port: 443, method: 'PUT',
-      path: `/client/v4/accounts/${ACCT}/r2/buckets/${BUCKET}/objects/${encodeURIComponent(filename)}`,
+      path: `/client/v4/accounts/${ACCT}/r2/buckets/${BUCKET}/objects/${encodeURI(KEY_PREFIX + filename)}`,
       headers: {
         Authorization: `Bearer ${TOKEN}`,
         'Content-Type': 'audio/mpeg',

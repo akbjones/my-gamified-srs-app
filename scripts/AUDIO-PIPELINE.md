@@ -32,6 +32,24 @@ by Vite during dev and by Cloudflare Pages in prod. The path is
 configurable via `VITE_AUDIO_BASE_URL` (e.g. point at Cloudflare R2 if
 the deck size makes Pages prohibitive).
 
+### Cloudflare R2 prod setup
+
+- Bucket: `langlab-srs-audio` (NOT `langlab-audio` — that's an old bucket
+  that's not served by the public URL)
+- Key prefix: `quest-audio/<filename>`
+- Public URL: `https://pub-fa9d7e83944246fcb9a03f217e1dd0c9.r2.dev/quest-audio/<filename>`
+- **CORS is required**. Without it, `fetch()` from the app fails silently
+  and the audio service falls through to iOS's robotic system TTS — which
+  is what users hear as "old voices coming back". Set CORS via:
+  ```bash
+  curl -X PUT \
+    -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+    -H "Content-Type: application/json" \
+    -d '{"rules":[{"allowed":{"origins":["*"],"methods":["GET","HEAD"],"headers":["*"]},"exposeHeaders":["Content-Length","ETag","Content-Type"],"maxAgeSeconds":3600}]}' \
+    "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/r2/buckets/langlab-srs-audio/cors"
+  ```
+  Verify with `curl -I -H "Origin: https://langlab-srs.netlify.app" -X OPTIONS <audio-url>` — should return 204 with `Access-Control-Allow-Origin: *`.
+
 ## Playback (`src/services/audioService.ts`)
 
 Three-tier fallback chain:

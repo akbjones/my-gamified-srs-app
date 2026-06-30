@@ -98,24 +98,28 @@ export const stopAudio = (): void => {
 };
 
 // ─── Google Cloud TTS ───────────────────────────────────────────
-// Canonical voices: language-NATIVE female voices (Neural2 where
-// available, Wavenet otherwise). Used when the pre-recorded MP3 fails
-// to load and we fall back to live API synthesis. Matches the voice
-// used by scripts/generate-audio.cjs. Earlier multilingual Chirp3-HD
-// Aoede choice was reverted because Aoede couldn't read non-Latin
-// scripts properly (most notably Hindi Devanagari).
+// Canonical voices: Chirp3-HD-Aoede (the same voice generate-audio.cjs
+// regen'd all 10 non-Welsh languages with in 2026-06-28). When the
+// pre-recorded MP3 fails to load and we fall back to live API
+// synthesis, this MUST match — otherwise the user hears one voice on
+// cards whose MP3 fetched cleanly and a DIFFERENT voice on cards
+// whose MP3 fetch failed. (That's how we discovered users heard
+// "switching between two voices" on Hindi.)
+//
+// Earlier note about Aoede struggling with non-Latin scripts was
+// addressed by Google; verified across all 10 languages.
 const GOOGLE_VOICE_MAP: Record<Language, { languageCode: string; name: string }> = {
-  spanish: { languageCode: 'es-US', name: 'es-US-Neural2-A' },
-  italian: { languageCode: 'it-IT', name: 'it-IT-Neural2-A' },
-  german:  { languageCode: 'de-DE', name: 'de-DE-Neural2-G' },
-  french:  { languageCode: 'fr-FR', name: 'fr-FR-Neural2-F' },
-  portuguese: { languageCode: 'pt-BR', name: 'pt-BR-Neural2-A' },
-  dutch: { languageCode: 'nl-NL', name: 'nl-NL-Wavenet-F' },
-  swedish: { languageCode: 'sv-SE', name: 'sv-SE-Wavenet-A' },
+  spanish: { languageCode: 'es-US', name: 'es-US-Chirp3-HD-Aoede' },
+  italian: { languageCode: 'it-IT', name: 'it-IT-Chirp3-HD-Aoede' },
+  german:  { languageCode: 'de-DE', name: 'de-DE-Chirp3-HD-Aoede' },
+  french:  { languageCode: 'fr-FR', name: 'fr-FR-Chirp3-HD-Aoede' },
+  portuguese: { languageCode: 'pt-BR', name: 'pt-BR-Chirp3-HD-Aoede' },
+  dutch: { languageCode: 'nl-NL', name: 'nl-NL-Chirp3-HD-Aoede' },
+  swedish: { languageCode: 'sv-SE', name: 'sv-SE-Chirp3-HD-Aoede' },
   welsh: { languageCode: 'cy-GB', name: 'cy-GB-Standard-A' }, // no Google premium for Welsh — browser TTS fallback
-  hindi: { languageCode: 'hi-IN', name: 'hi-IN-Neural2-A' },
-  turkish: { languageCode: 'tr-TR', name: 'tr-TR-Wavenet-A' },
-  russian: { languageCode: 'ru-RU', name: 'ru-RU-Wavenet-A' },
+  hindi: { languageCode: 'hi-IN', name: 'hi-IN-Chirp3-HD-Aoede' },
+  turkish: { languageCode: 'tr-TR', name: 'tr-TR-Chirp3-HD-Aoede' },
+  russian: { languageCode: 'ru-RU', name: 'ru-RU-Chirp3-HD-Aoede' },
 };
 
 // Speed maps to Google TTS speakingRate (0.25–4.0, 1.0 = normal)

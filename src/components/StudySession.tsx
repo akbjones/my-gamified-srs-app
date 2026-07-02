@@ -11,6 +11,7 @@ import type { AudioSpeed } from '../services/storageService';
 import WordPopover from './WordPopover';
 import WordTileChallenge from './WordTileChallenge';
 import FirstTimeIntro from './FirstTimeIntro';
+import AddMoreCardsPanel from './AddMoreCardsPanel';
 import { SHOW_GRAMMAR_TIPS } from '../config/featureFlags';
 
 /** Find the first word in a target sentence that has a verified etymology
@@ -77,7 +78,6 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   // immediately on tap. Recomputed when the relevant overlay opens.
   const [grammarFavd, setGrammarFavd] = useState(false);
   const [etyFavd, setEtyFavd] = useState(false);
-  const [studyMoreCount, setStudyMoreCount] = useState(10);
   // First-time hint: shown only on the very first card of the user's first
   // session, so they discover that words are tappable. Disappears on the
   // first tap or after the card advances.
@@ -196,48 +196,8 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
           )}
           {/* Add more cards – always shown at session end, even after the
               daily allowance is exhausted, because the user typing a count
-              here is an explicit override of the daily cap. The ±5 + number
-              + Start row matches the dashboard's bonus-session panel. */}
-          {onStudyMore && (
-            <div className="w-full p-3 rounded-2xl bg-[var(--bg-card)] border border-[var(--border-color)]">
-              <div className="text-xs font-bold uppercase tracking-wide text-[var(--text-secondary)] mb-2 text-center">
-                Add more cards
-              </div>
-              <div className="flex items-stretch gap-2 mb-2">
-                <button
-                  onClick={() => setStudyMoreCount(c => Math.max(1, c - 5))}
-                  className="w-14 rounded-xl border-2 border-[var(--border-color)] text-[var(--text-secondary)] text-lg font-bold hover:border-[var(--border-hover)] hover:text-[var(--text-primary)] active:scale-95 transition"
-                  aria-label="Decrease by 5"
-                >
-                  −5
-                </button>
-                <input
-                  type="number"
-                  min={1}
-                  max={100}
-                  value={studyMoreCount}
-                  onChange={e => {
-                    const v = parseInt(e.target.value, 10);
-                    if (!isNaN(v) && v >= 1 && v <= 100) setStudyMoreCount(v);
-                  }}
-                  className="flex-1 rounded-xl text-center text-2xl font-extrabold bg-[var(--bg-inset)] border-2 border-[var(--border-color)] text-[var(--text-primary)] focus:border-[var(--accent)] focus:outline-none py-2"
-                />
-                <button
-                  onClick={() => setStudyMoreCount(c => Math.min(100, c + 5))}
-                  className="w-14 rounded-xl border-2 border-[var(--border-color)] text-[var(--text-secondary)] text-lg font-bold hover:border-[var(--border-hover)] hover:text-[var(--text-primary)] active:scale-95 transition"
-                  aria-label="Increase by 5"
-                >
-                  +5
-                </button>
-              </div>
-              <button
-                onClick={() => onStudyMore(studyMoreCount)}
-                className="w-full py-3 rounded-xl btn-primary text-sm font-bold"
-              >
-                Continue session
-              </button>
-            </div>
-          )}
+              here is an explicit override of the daily cap. */}
+          {onStudyMore && <AddMoreCardsPanel onStart={onStudyMore} />}
           <button
             onClick={onAbort}
             className="px-8 py-3 rounded-xl w-full bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-secondary)] font-bold hover:bg-[var(--bg-card-hover)] active:bg-[var(--bg-inset)] transition-colors"

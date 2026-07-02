@@ -141,6 +141,9 @@ const GROUP_2_VERBS = new Set([
   'använda', 'vända', 'sända', 'tända', 'hända', 'lända',
   'mäta', 'väta', 'böta',
   'lyfta', 'skifta', 'gifta',
+  // Additional Group 2 verbs found via card audit
+  'höra', 'lära', 'åka', 'leka', 'växa', 'försöka', 'tillhöra',
+  'innebära', 'skina', 'öka', 'sluta', 'skynda',
 ]);
 
 // ─── Helper: detect conjugation group ───────────────────────────
@@ -328,6 +331,85 @@ function buildTable(
     isReflexive: isReflexive && !infinitive.startsWith('finnas'),
     tenses,
   };
+}
+
+// ─── Reverse lookup: form → infinitive ────────────────────────
+// Build once at module init. Maps every known irregular form
+// (present/past/supine/imperative) back to its infinitive so
+// tapping a conjugated form in a card routes to the right table.
+const IRREGULAR_REVERSE = new Map<string, string>();
+for (const [inf, data] of Object.entries(IRREGULARS)) {
+  for (const f of [data.present, data.past, data.supine, data.imperative]) {
+    if (f && f !== '-' && !IRREGULAR_REVERSE.has(f)) IRREGULAR_REVERSE.set(f, inf);
+  }
+}
+
+export function findInfinitive(form: string): string | null {
+  if (!form) return null;
+  const f = form.toLowerCase().trim();
+  // Irregulars (present/past/supine/imperative → infinitive) always win.
+  const irr = IRREGULAR_REVERSE.get(f);
+  if (irr) return irr;
+
+  // Suffix-based unwinding — order matters because tokens like 'köpte' end
+  // in both 'te' AND 'e'; we must check past-tense endings BEFORE treating
+  // the form as an infinitive-shaped word.
+
+  // Group 3 short-vowel infinitive family (bo, tro, ro, sy).
+  // These MUST be checked before generic supine/present rules so 'bott'
+  // doesn't get eaten by the -tt supine rule.
+  if (f.endsWith('dde') && f.length >= 5) return f.slice(0, -3);              // bodde → bo
+  if (f.endsWith('tt')  && f.length >= 4 && f.length <= 5) {
+    const stem = f.slice(0, -2);
+    if (/[aeiouyåäö]$/.test(stem)) return stem;                                // bott → bo
+  }
+  if (f.endsWith('r') && f.length >= 3 && f.length <= 4) {
+    const stem = f.slice(0, -1);
+    if (/[aeiouyåäö]$/.test(stem)) return stem;                                // bor → bo
+  }
+
+  // Short deponent infinitives (ses, kys) — 3-4 char forms ending in -s
+  // are their own infinitives, NOT `<X>as`.
+  if (f.endsWith('s') && f.length >= 2 && f.length <= 4) return f;
+
+  // Deponent / s-passive forms (-s ending on infinitive).
+  // Past deponent (-ades / -des): lyckades → lyckas, träffades → träffas
+  if (f.endsWith('ades') && f.length >= 5) return f.slice(0, -3) + 'as';
+  if (f.endsWith('des')  && f.length >= 5) return f.slice(0, -3) + 'as';
+  if (f.endsWith('tes')  && f.length >= 5) return f.slice(0, -3) + 'as';
+  // Present deponent (bare -s): minns → minnas, trivs → trivas, syns → synas
+  if (f.endsWith('s') && !f.endsWith('as') && f.length >= 5) {
+    return f.slice(0, -1) + 'as';
+  }
+  // s-passive: serveras → servera
+  if (f.endsWith('as')  && f.length >= 4) return f.slice(0, -1);
+
+  // Group 1 (-ade past, -ar present): kastar → kasta, kastade → kasta
+  if (f.endsWith('ade') && f.length >= 4) return f.slice(0, -2);
+  if (f.endsWith('ar')  && f.length >= 4) return f.slice(0, -1);
+  // Group 2 past: köpte → köpa, levde → leva
+  if (f.endsWith('te')  && f.length >= 4) return f.slice(0, -2) + 'a';
+  if (f.endsWith('de')  && f.length >= 4) return f.slice(0, -2) + 'a';
+  // Group 2 present: tänker → tänka, kör → köra (short: only strip r)
+  if (f.endsWith('er')  && f.length >= 4) return f.slice(0, -2) + 'a';
+  // General supine -tt / -t. Skip forms where the stem already ends in
+  // 'a' to avoid doubling (öppnat → öppna, not öppnaa).
+  if (f.endsWith('tt')  && f.length >= 5) {
+    const stem = f.slice(0, -2);
+    return stem.endsWith('a') ? stem : stem + 'a';
+  }
+  if (f.endsWith('t')   && f.length >= 4) {
+    const stem = f.slice(0, -1);
+    return stem.endsWith('a') ? stem : stem + 'a';
+  }
+
+  // Infinitive-shaped: bare -a or -e. This last so past-tense -te/-de
+  // aren't misread as infinitives.
+  if (f.endsWith('a') || f.endsWith('e')) return f;
+
+  // Short stems ending in a consonant — assume regular Group 1 infinitive.
+  if (f.length >= 2) return f + 'a';
+  return null;
 }
 
 // ─── Main export ───────────────────────────────────────────────

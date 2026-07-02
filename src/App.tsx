@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react';
 import TopicMap from './components/TopicMap';
 import StudySession from './components/StudySession';
+import AddMoreCardsPanel from './components/AddMoreCardsPanel';
 import GamificationHub from './components/GamificationHub';
 import PlacementTest from './components/PlacementTest';
 import ChallengeScreen from './components/ChallengeScreen';
@@ -804,6 +805,17 @@ const App: React.FC = () => {
               </div>
             )}
           </button>
+
+          {/* When all reviews are done, offer an inline way to pull more
+              cards into today's queue. Same panel that appears at the end
+              of a study session — bringing it up-front so the user isn't
+              stuck at "All caught up" when they still want to learn. */}
+          {!hasCards && isPlacementComplete(lang) && (
+            <AddMoreCardsPanel
+              variant="home"
+              onStart={(count) => handleStartSession(count)}
+            />
+          )}
 
           {/* Bonus session – explicit "study N extra" affordance. Always visible
               when there are unseen cards left in the current topic so the user

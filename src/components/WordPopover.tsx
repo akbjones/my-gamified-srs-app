@@ -230,7 +230,7 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
               onClick={(e) => handleWordClick(i, e)}
               className={`
                 transition-all duration-150 cursor-pointer rounded-sm px-[1px] -mx-[1px]
-                ${hasEntry ? 'hover:bg-blue-500/15 hover:text-blue-500' : ''}
+                ${hasEntry ? 'tappable-word hover:bg-blue-500/15 hover:text-blue-500' : ''}
                 ${isActive ? 'bg-blue-500/15 text-blue-500' : ''}
               `}
             >

@@ -249,3 +249,19 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
+/* Tappable-word affordance: subtle dotted underline on any word in a card
+ * that has a dictionary entry. Users can't otherwise tell that words are
+ * interactive on mobile (no cursor). Deliberately understated — a heavier
+ * underline would compete with the sentence's typography. */
+.tappable-word {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: color-mix(in oklab, var(--accent) 55%, transparent);
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+}
+.tappable-word:hover {
+  text-decoration-style: solid;
+  text-decoration-color: var(--accent);
+}

@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { QuestCard, SessionState, Language, ChallengeMode } from '../types';
-import { Volume2, BookOpen, BookText, AlertTriangle, Swords, Zap, Star } from 'lucide-react';
+import { Volume2, BookOpen, BookText, AlertTriangle, Swords, Zap, Star, Hand } from 'lucide-react';
 import { playCardAudio, stopAudio, preloadCardAudio } from '../services/audioService';
 import { lookupEtymology } from '../services/etymologyService';
 import {
   toggleGrammarFavorite, isGrammarFavorited,
   toggleEtymologyFavorite, isEtymologyFavorited,
+  loadFavorites,
 } from '../services/storageService';
 import type { AudioSpeed } from '../services/storageService';
 import WordPopover from './WordPopover';
@@ -96,11 +97,23 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   const isComplete = session.currentIndex >= session.queue.length;
   const card = isComplete ? null : session.queue[session.currentIndex];
 
+  // "Has the user ever saved a word in this language?" gate for the
+  // recurring tap-hint below the card. Recomputed each card in case they
+  // just saved on the previous card — the hint should vanish immediately.
+  const [hasEverSavedWord, setHasEverSavedWord] = useState(
+    () => Object.keys(loadFavorites(session.language)).length > 0,
+  );
+
   // All hooks MUST be above any early return
   const prevCardId = useRef<string | null>(null);
   useEffect(() => {
     if (card && card.id !== prevCardId.current) {
       prevCardId.current = card.id;
+      // Re-check favorites on each card change so the tap-hint disappears
+      // immediately once the user saves their first word.
+      if (!hasEverSavedWord && Object.keys(loadFavorites(session.language)).length > 0) {
+        setHasEverSavedWord(true);
+      }
       if (autoPlayAudio) {
         playCardAudio(card.audio, card.target, session.language, audioSpeed, googleTtsApiKey);
       } else {
@@ -508,9 +521,22 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                     </p>
                   </div>
                 ) : (
-                  <div className="mt-6 text-xs text-[var(--text-muted)] font-bold uppercase tracking-widest">
-                    Tap to reveal
-                  </div>
+                  <>
+                    {/* Persistent tappable-word hint. Shown to every user
+                        until they save their first word in this language,
+                        so newcomers who dismiss the welcome modal without
+                        reading still discover the feature via repeated
+                        exposure. Disappears the moment they save. */}
+                    {!hasEverSavedWord && (
+                      <div className="mt-5 flex items-center gap-1.5 text-[11px] text-[var(--accent)]/80 font-semibold">
+                        <Hand size={12} />
+                        <span>Tap underlined words to define & save</span>
+                      </div>
+                    )}
+                    <div className="mt-6 text-xs text-[var(--text-muted)] font-bold uppercase tracking-widest">
+                      Tap to reveal
+                    </div>
+                  </>
                 )}
               </div>
             );

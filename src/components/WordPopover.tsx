@@ -200,6 +200,12 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
     const entry = lookup(token);
     if (!entry) return;
 
+    // Mark the discovery flag so the recurring hint below the card can
+    // hide itself. Doing this once the popover opens (rather than
+    // waiting for a Save) means users who just want to look up a word
+    // aren't reminded of the feature they already know about.
+    try { localStorage.setItem('word-popover-opened', '1'); } catch {}
+
     // Get the word element's viewport rect for portal positioning
     const wordEl = wordRefs.current[index];
     if (wordEl) {

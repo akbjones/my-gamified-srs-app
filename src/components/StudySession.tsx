@@ -97,11 +97,15 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   const isComplete = session.currentIndex >= session.queue.length;
   const card = isComplete ? null : session.queue[session.currentIndex];
 
-  // "Has the user ever saved a word in this language?" gate for the
-  // recurring tap-hint below the card. Recomputed each card in case they
-  // just saved on the previous card — the hint should vanish immediately.
-  const [hasEverSavedWord, setHasEverSavedWord] = useState(
-    () => Object.keys(loadFavorites(session.language)).length > 0,
+  // "Has the user discovered the word popover feature?" gate for the
+  // recurring tap-hint below the card. True as soon as EITHER (a) they've
+  // saved a word in this language, or (b) they've opened any word popover
+  // at least once — because if they've seen a definition come up, they
+  // already know the feature exists.
+  const [hasDiscoveredWords, setHasDiscoveredWords] = useState(
+    () =>
+      Object.keys(loadFavorites(session.language)).length > 0 ||
+      localStorage.getItem('word-popover-opened') === '1',
   );
 
   // All hooks MUST be above any early return
@@ -109,10 +113,14 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   useEffect(() => {
     if (card && card.id !== prevCardId.current) {
       prevCardId.current = card.id;
-      // Re-check favorites on each card change so the tap-hint disappears
-      // immediately once the user saves their first word.
-      if (!hasEverSavedWord && Object.keys(loadFavorites(session.language)).length > 0) {
-        setHasEverSavedWord(true);
+      // Re-check discovery flags on every card change so the tap-hint
+      // disappears immediately after they open a popover or save a word.
+      if (
+        !hasDiscoveredWords &&
+        (Object.keys(loadFavorites(session.language)).length > 0 ||
+          localStorage.getItem('word-popover-opened') === '1')
+      ) {
+        setHasDiscoveredWords(true);
       }
       if (autoPlayAudio) {
         playCardAudio(card.audio, card.target, session.language, audioSpeed, googleTtsApiKey);
@@ -527,7 +535,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                         so newcomers who dismiss the welcome modal without
                         reading still discover the feature via repeated
                         exposure. Disappears the moment they save. */}
-                    {!hasEverSavedWord && (
+                    {!hasDiscoveredWords && (
                       <div className="mt-5 flex items-center gap-1.5 text-[11px] text-[var(--accent)]/80 font-semibold">
                         <Hand size={12} />
                         <span>Tap underlined words to define & save</span>

@@ -520,6 +520,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                 <WordPopover
                   sentence={card!.target}
                   language={session.language}
+                  interactive={isFlipped}
                   className={`${sizeClass} font-black tracking-tight text-[var(--text-primary)] leading-snug max-w-sm mx-auto`}
                 />
                 {isFlipped ? (
@@ -527,24 +528,20 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                     <p className={`${engSizeClass} text-[var(--text-secondary)] font-bold italic leading-relaxed`}>
                       {card!.english}
                     </p>
-                  </div>
-                ) : (
-                  <>
-                    {/* Persistent tappable-word hint. Shown to every user
-                        until they save their first word in this language,
-                        so newcomers who dismiss the welcome modal without
-                        reading still discover the feature via repeated
-                        exposure. Disappears the moment they save. */}
+                    {/* Tap-hint now lives here — words only become tappable
+                        once the card is flipped, so the hint is honest.
+                        Disappears the moment the user opens any popover. */}
                     {!hasDiscoveredWords && (
-                      <div className="mt-5 flex items-center gap-1.5 text-[11px] text-[var(--accent)]/80 font-semibold">
+                      <div className="mt-4 flex items-center gap-1.5 text-[11px] text-[var(--accent)]/80 font-semibold">
                         <Hand size={12} />
                         <span>Tap underlined words to define & save</span>
                       </div>
                     )}
-                    <div className="mt-6 text-xs text-[var(--text-muted)] font-bold uppercase tracking-widest">
-                      Tap to reveal
-                    </div>
-                  </>
+                  </div>
+                ) : (
+                  <div className="mt-6 text-xs text-[var(--text-muted)] font-bold uppercase tracking-widest">
+                    Tap to reveal
+                  </div>
                 )}
               </div>
             );
@@ -599,12 +596,22 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               })}
             </div>
             <div className="flex justify-center mt-2 gap-4">
-              <button
-                onClick={() => { setIsFlipped(false); setShowGrammar(false); }}
-                className="py-2.5 px-5 text-sm font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
-              >
-                &larr; Back
-              </button>
+              {onUndoAnswer && session.currentIndex > 0 && (
+                <button
+                  onClick={() => {
+                    // Back from a flipped card should undo the last answer
+                    // and take the user to the previous card entirely —
+                    // not just flip this one over. Matches expected
+                    // behaviour of a "Back" affordance.
+                    setIsFlipped(false);
+                    setShowGrammar(false);
+                    onUndoAnswer();
+                  }}
+                  className="py-2.5 px-5 text-sm font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
+                >
+                  &larr; Back
+                </button>
+              )}
               <button
                 onClick={() => setShowInfo(true)}
                 className="py-2.5 px-4 text-sm font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"

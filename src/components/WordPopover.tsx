@@ -116,6 +116,10 @@ interface WordPopoverProps {
   sentence: string;
   language: Language;
   className?: string;
+  /** When false, words render without the tappable-word affordance and
+   *  clicks are ignored. Used on the front of the card so users can't
+   *  cheat by tapping words before recalling the sentence. */
+  interactive?: boolean;
 }
 
 const POS_LABELS: Record<string, string> = {
@@ -165,7 +169,7 @@ function sanitizeDefinition(en: string, lemmaEn?: string): string | null {
   return cleaned;
 }
 
-const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className = '' }) => {
+const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className = '', interactive = true }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [popoverRect, setPopoverRect] = useState<DOMRect | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -194,6 +198,7 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
 
   const handleWordClick = (index: number, e: React.MouseEvent) => {
     e.stopPropagation();
+    if (!interactive) return;
     const token = tokens[index];
     if (!token || token.trim() === '') return;
 
@@ -235,8 +240,9 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
               ref={(el) => { wordRefs.current[i] = el; }}
               onClick={(e) => handleWordClick(i, e)}
               className={`
-                transition-all duration-150 cursor-pointer rounded-sm px-[1px] -mx-[1px]
-                ${hasEntry ? 'tappable-word hover:bg-blue-500/15 hover:text-blue-500' : ''}
+                transition-all duration-150 rounded-sm px-[1px] -mx-[1px]
+                ${interactive ? 'cursor-pointer' : ''}
+                ${interactive && hasEntry ? 'tappable-word hover:bg-blue-500/15 hover:text-blue-500' : ''}
                 ${isActive ? 'bg-blue-500/15 text-blue-500' : ''}
               `}
             >

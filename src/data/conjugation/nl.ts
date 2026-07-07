@@ -14,6 +14,7 @@
  *   subjunctive – aanv. wijs (aanvoegende wijs)
  */
 import type { ConjugationTable } from '../../types';
+import { lookupWord } from '../dictionary/nl';
 
 // ── Types ───────────────────────────────────────────────────
 type Forms = [string, string, string, string, string, string];
@@ -800,6 +801,307 @@ function conjugateBase(
   const subjunctive: Forms = [...present] as Forms;
 
   return { present, preterite, imperfect, future, conditional, subjunctive };
+}
+
+// ── Reverse lookup: form → infinitive ───────────────────────
+// Built once at module init: every known irregular form (all present
+// persons, past sg/pl, past participle, the infinitive itself) maps back
+// to its infinitive so tapping a conjugated form routes to the right table.
+const IRREGULAR_REVERSE = new Map<string, string>();
+for (const [inf, data] of Object.entries(IRREGULARS)) {
+  const forms: string[] = [inf, data.pastSg, data.pastPl, data.pastParticiple];
+  if (data.present) forms.push(...data.present);
+  for (const fo of forms) {
+    if (fo && fo !== '-' && !IRREGULAR_REVERSE.has(fo)) IRREGULAR_REVERSE.set(fo, inf);
+  }
+}
+
+/**
+ * Is this candidate a real Dutch verb lemma? Accept irregular-table entries
+ * and dictionary entries marked pos 'v' (or glossed "to ..."). The dict's
+ * fuzzy lookup can resolve a fake spelling to a real entry, so when the
+ * matched entry carries a `lemma` it must equal the candidate itself.
+ */
+function isVerbLemma(candidate: string): boolean {
+  if (IRREGULARS[candidate]) return true;
+  const e = lookupWord(candidate);
+  if (!e) return false;
+  if (e.lemma && e.lemma !== candidate) return false;
+  // Require the infinitive-style "to …" gloss: the dict's fuzzy fallbacks
+  // (suffix stripping, compound splitting) can resolve fake spellings to
+  // form-level entries, which are glossed "goes"/"made", not "to go".
+  return e.pos === 'v' && e.en.startsWith('to ');
+}
+
+// Prefixes recognised when REVERSING separable forms. Superset of the
+// engine's SEPARABLE_PREFIXES, which stays untouched (conjugate()
+// behavior unchanged).
+const REVERSE_PREFIXES = [
+  ...SEPARABLE_PREFIXES,
+  'binnen', 'thuis', 'open', 'schoon', 'langs', 'rond', 'neer', 'vast',
+  'tegen', 'goed', 'verder', 'voorbij',
+].sort((a, b) => b.length - a.length);
+
+/**
+ * Given a bare verb stem (as produced by Dutch spelling: maak, zit, werk,
+ * leef, reis…), generate infinitive candidates in likelihood order.
+ * Dutch open/closed-syllable spelling means the reverse mapping is not
+ * unique, so callers validate candidates against the dictionary.
+ */
+function stemCandidates(stem: string): string[] {
+  const cands: string[] = [];
+  if (!stem || stem.length < 2) return cands;
+
+  // Stem ends in a long vowel (ga → gaan, zie → zien, doe → doen)
+  if (/(?:aa|ee|oo|uu|ie|oe)$/.test(stem)) {
+    cands.push(stem + 'n');
+    return cands;
+  }
+
+  // Doubled vowel + single consonant: closed syllable opens up again.
+  // maak → maken, loop → lopen; with f/v & s/z alternation:
+  // leef → leven, lees → lezen.
+  const dv = stem.match(/^(.*)(aa|ee|oo|uu)([bcdfghjklmnpqrstvwxz])$/);
+  if (dv) {
+    const [, pre, vv, c] = dv;
+    const open = pre + vv[0];
+    if (c === 'f') {
+      cands.push(open + 'ven', open + 'fen');
+    } else if (c === 's') {
+      cands.push(open + 'zen', open + 'sen');
+    } else {
+      cands.push(open + c + 'en');
+    }
+    // NOTE: no `stem + 'en'` fallback here — a double vowel in an open
+    // syllable (maaken, informeeren) is never valid modern Dutch spelling.
+    return cands;
+  }
+
+  // Final syllable -el/-er/-em/-en after a consonant: usually unstressed
+  // (wandel → wandelen, luister → luisteren — no doubling), but stressed
+  // monosyllable-final stems double (bel → bellen), so offer both.
+  if (/[^aeiou]e[lrmn]$/.test(stem)) {
+    cands.push(stem + 'en');
+    cands.push(stem + stem[stem.length - 1] + 'en');
+    return cands;
+  }
+
+  // Diphthong / vowel cluster + f/s: f→v, s→z is common but not universal.
+  // reis → reizen, blijf → blijven; but eis → eisen.
+  const fs = stem.match(/^(.*(?:[aeiou]{2}|ij))([fs])$/);
+  if (fs) {
+    const [, pre, c] = fs;
+    cands.push(pre + (c === 'f' ? 'v' : 'z') + 'en');
+    cands.push(stem + 'en');
+    return cands;
+  }
+
+  // Single vowel + single final consonant: closed short syllable doubles
+  // the consonant in the infinitive. zit → zitten, stop → stoppen.
+  const sv = stem.match(/(?:^|[^aeiou])[aeiou]([bcdfgklmnprstz])$/);
+  if (sv) {
+    cands.push(stem + sv[1] + 'en');
+    cands.push(stem + 'en');
+    return cands;
+  }
+
+  // Vowel-final stems: only glide endings (-aai/-ooi/-oei) take -en
+  // (naai → naaien, gooi → gooien); anything else (omva, spoelde) is not
+  // a possible Dutch verb stem — emit nothing rather than fake lemmas.
+  if (/[aeiou]$/.test(stem)) {
+    if (/[aeiou]{2}i$/.test(stem)) cands.push(stem + 'en');
+    return cands;
+  }
+
+  // Consonant cluster endings: werk → werken, wacht → wachten;
+  // cluster + f often hides a v (durf → durven), cluster + s usually stays.
+  if (stem.endsWith('f')) cands.push(stem.slice(0, -1) + 'ven');
+  cands.push(stem + 'en');
+  if (stem.endsWith('s')) cands.push(stem.slice(0, -1) + 'zen');
+  return cands;
+}
+
+/** Does conjugate(lemma)'s table contain the form (single words of multi-word rows count)? */
+function tableHasForm(lemma: string, form: string): boolean {
+  if (lemma === form) return true;
+  const table = conjugate(lemma);
+  if (!table) return false;
+  for (const forms of Object.values(table.tenses)) {
+    for (const fo of forms) {
+      const lf = fo.toLowerCase();
+      if (lf === form) return true;
+      if (lf.includes(' ')) {
+        const words = lf.split(/\s+/);
+        if (words.includes(form)) return true;
+        // Separable verbs are tabled in main-clause order ("gaat weg");
+        // subclause order joins them ("weggaat").
+        if (words.length === 2 && words[1] + words[0] === form) return true;
+      }
+    }
+  }
+  return false;
+}
+
+/** Deferred fallbacks accumulated while unwinding. */
+interface ResolveOut {
+  dictOnly: string[]; // dict-validated lemmas whose table lacks the form
+  guesses: string[];  // unvalidated spelling-rule guesses
+}
+
+/**
+ * Try stem candidates against the ORIGINAL form. Priority:
+ *   1. dictionary-validated lemma whose table round-trips the form
+ *   2. lemma whose table round-trips the form (spelling adjudicates itself)
+ *   3. (deferred) dictionary-validated lemma — table may be incomplete
+ *   4. (deferred) first spelling-rule guess
+ */
+function resolveStem(stem: string, original: string, out: ResolveOut): string | null {
+  // Prefix + irregular present stem: terugkom → terug + kom → terugkomen.
+  // Must run before spelling-rule doubling, which would guess "terugkommen".
+  for (const p of REVERSE_PREFIXES) {
+    if (stem.startsWith(p) && stem.length > p.length + 1) {
+      const restIrr = IRREGULAR_REVERSE.get(stem.slice(p.length));
+      if (restIrr) {
+        const full = p + restIrr;
+        if (isVerbLemma(full) || tableHasForm(full, original)) return full;
+      }
+    }
+  }
+
+  const cands = stemCandidates(stem);
+  let roundtripOnly: string | null = null;
+  let dictOnly: string | null = null;
+  for (const c of cands) {
+    const valid = isVerbLemma(c);
+    const rt = tableHasForm(c, original);
+    if (valid && rt) return c;
+    if (rt && c !== original && !roundtripOnly) roundtripOnly = c;
+    if (valid && !dictOnly) dictOnly = c;
+  }
+  if (roundtripOnly) return roundtripOnly;
+  if (dictOnly) out.dictOnly.push(dictOnly);
+  if (cands.length > 0) out.guesses.push(cands[0]);
+  return null;
+}
+
+/**
+ * Core suffix unwinding for a single word. Returns a confident lemma, or
+ * null (accumulating fallbacks in `out`). ORDER MATTERS: longer/more
+ * specific suffixes are tried before shorter ones, and whole-word readings
+ * before prefix-stripped ones so inseparable ge- verbs (gebruiken,
+ * geloven) beat the ge-participle reading.
+ */
+function unwind(w: string, out: ResolveOut): string | null {
+  const irr = IRREGULAR_REVERSE.get(w);
+  if (irr) return irr;
+
+  // The word may already be an infinitive (wachten, maken, opstaan, doen)
+  if (w.endsWith('n') && w.length >= 4 && isVerbLemma(w)) return w;
+
+  // ── Other -en forms: past plural, strong participle ──
+  if (w.endsWith('en') && w.length >= 4) {
+    // Strong past participle: ge + infinitive-shaped (gelopen → lopen);
+    // irregulars are caught above, this covers dict-known strong verbs.
+    if (w.startsWith('ge') && w.length >= 6) {
+      const rest = w.slice(2);
+      if (isVerbLemma(rest) && tableHasForm(rest, w)) return rest;
+    }
+    // Weak past plural: werkten → werk → werken, maakten → maken
+    if (w.endsWith('ten') || w.endsWith('den')) {
+      const hit = resolveStem(w.slice(0, -3), w, out);
+      if (hit) return hit;
+    }
+    // Generic: strip -en and re-derive (covers odd spellings)
+    const hit = resolveStem(w.slice(0, -2), w, out);
+    if (hit) return hit;
+    out.guesses.push(w); // infinitive-shaped word is itself a decent guess
+    return null;
+  }
+
+  // ── Present participle: -end / -ende (lachend → lachen) ──
+  if (w.endsWith('ende') && w.length >= 7) {
+    const hit = resolveStem(w.slice(0, -4), w, out);
+    if (hit) return hit;
+  }
+  if (w.endsWith('end') && w.length >= 6) {
+    const hit = resolveStem(w.slice(0, -3), w, out);
+    if (hit) return hit;
+  }
+
+  // ── Weak past singular: -te / -de (maakte → maken, woonde → wonen) ──
+  if ((w.endsWith('te') || w.endsWith('de')) && w.length >= 5) {
+    const hit = resolveStem(w.slice(0, -2), w, out);
+    if (hit) return hit;
+  }
+
+  // ── Present 2/3sg or weak participle: -t / -d ──
+  if ((w.endsWith('t') || w.endsWith('d')) && w.length >= 4) {
+    // ge- weak participle first, but only with full confidence (dict-valid
+    // AND round-trip): gemaakt → maken. Inseparable ge- verbs (gebruikt →
+    // gebruiken) fail this test and resolve as whole words below.
+    if (w.startsWith('ge') && w.length >= 6) {
+      for (const c of stemCandidates(w.slice(2, -1))) {
+        if (isVerbLemma(c) && tableHasForm(c, w)) return c;
+      }
+    }
+    const hit = resolveStem(w.slice(0, -1), w, out);
+    if (hit) return hit;
+    // ge- weak participle, lower confidence: gereisd → reizen
+    if (w.startsWith('ge') && w.length >= 6) {
+      const geHit = resolveStem(w.slice(2, -1), w, out);
+      if (geHit) return geHit;
+    }
+  }
+
+  // ── Bare stem: 1sg present / imperative (maak, werk, reis) ──
+  return resolveStem(w, w, out);
+}
+
+/**
+ * Find the infinitive (lemma) for a conjugated Dutch verb form, so tapping
+ * any verb in a card resolves to a lemma whose conjugation table contains
+ * that form. Irregular forms come from the reverse map; regular forms are
+ * unwound by suffix + Dutch spelling rules; candidates are validated
+ * against the dictionary and by round-tripping through conjugate() so
+ * spelling-rule guesses don't produce fake lemmas.
+ */
+export function findInfinitive(form: string): string | null {
+  if (!form) return null;
+  const w = form.toLowerCase().trim();
+  if (!w || w.length < 2 || !/^[a-zäëïöüé]+$/.test(w)) return null;
+
+  const out: ResolveOut = { dictOnly: [], guesses: [] };
+  const direct = unwind(w, out);
+  if (direct) return direct;
+
+  // ── Separable-prefix forms: opgestaan → op + gestaan → opstaan,
+  //    weggaat → weggaan, aankomt → aankomen, opbelde → opbellen ──
+  for (const p of REVERSE_PREFIXES) {
+    if (!w.startsWith(p) || w.length < p.length + 3) continue;
+    const rest = w.slice(p.length);
+    const subOut: ResolveOut = { dictOnly: [], guesses: [] };
+    const confident = unwind(rest, subOut);
+    const restInf = confident ?? subOut.dictOnly[0] ?? subOut.guesses[0] ?? null;
+    if (!restInf) continue;
+    const full = p + restInf;
+    // Accept when the recombined verb is a real dictionary verb, its table
+    // round-trips the form, the remainder resolved confidently (irregular
+    // form, participle, or round-tripping stem), or the remainder is an
+    // unmistakable irregular participle (opgestaan: ge- + irregular).
+    if (
+      isVerbLemma(full) ||
+      tableHasForm(full, w) ||
+      confident !== null ||
+      (rest.startsWith('ge') && IRREGULAR_REVERSE.has(rest)) ||
+      IRREGULARS[restInf]
+    ) {
+      return full;
+    }
+  }
+
+  // ── Fall back: dictionary-validated lemma (table may be incomplete),
+  //    then the best unvalidated spelling-rule guess ──
+  return out.dictOnly[0] ?? out.guesses[0] ?? null;
 }
 
 // ── Main conjugation function ───────────────────────────────

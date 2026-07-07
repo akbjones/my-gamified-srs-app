@@ -11,8 +11,9 @@
  * eleven deck.json files here would drag ~15 MB into any bundle that
  * touches the registry.
  *
- * HONEST GAPS (surfaced, not hidden — the audit reports them):
- * - findInfinitive missing for: nl (agent in flight)
+ * All 11 languages now export findInfinitive and register-policy
+ * artifacts; remaining sub-95% round-trip scores are tracked as known
+ * gaps in docs/audit-baseline.json.
  */
 import type { ContractDictEntry, ScriptDescriptor, VoiceSpec } from '../types/language';
 
@@ -33,7 +34,7 @@ import { conjugate as conjIt, findInfinitive as findInfIt } from '../data/conjug
 import { conjugate as conjFr, findInfinitive as findInfFr } from '../data/conjugation/fr';
 import { conjugate as conjPt, findInfinitive as findInfPt } from '../data/conjugation/pt';
 import { conjugate as conjDe, findInfinitive as findInfDe } from '../data/conjugation/de';
-import { conjugate as conjNl } from '../data/conjugation/nl';
+import { conjugate as conjNl, findInfinitive as findInfNl } from '../data/conjugation/nl';
 import { conjugate as conjSv, findInfinitive as findInfSv } from '../data/conjugation/sv';
 import { conjugate as conjCy, findInfinitive as findInfCy } from '../data/conjugation/cy';
 import { conjugateHindi as conjHi, findInfinitive as findInfHi } from '../data/conjugation/hi';
@@ -159,7 +160,7 @@ export const REGISTRY: Record<string, RegistryEntry> = {
   },
   dutch: {
     key: 'dutch', code: 'nl', deckPath: 'src/data/dutch/deck.json',
-    lookup: lookupNl, conjugate: conjNl, findInfinitive: null,
+    lookup: lookupNl, conjugate: conjNl, findInfinitive: findInfNl,
     script: latin, voice: google('nl-NL', 'nl-NL-Chirp3-HD-Aoede'),
     registerPolicy: {
       policyDoc: 'docs/dutch-register-policy.md',

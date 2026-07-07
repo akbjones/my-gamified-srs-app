@@ -1,0 +1,5701 @@
+{
+ "language": "tr",
+ "deck_size": 3117,
+ "total_rated": 3117,
+ "ratings_histogram": {
+  "1": 187,
+  "2": 208,
+  "3": 99,
+  "4": 100,
+  "5": 74,
+  "6": 1648,
+  "7": 801
+ },
+ "flagged": [
+  {
+   "id": "tr-0256",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Turkish 'butterfly set out to search for celery' vs gloss 'the fok tried to eat the levrek' — total mismatch, gloss has untranslated words",
+   "fix_target": "Kelebek çiçekten çiçeğe uçtu.",
+   "fix_english": "The butterfly flew from flower to flower."
+  },
+  {
+   "id": "tr-0292",
+   "q": "Q1",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad + gloss mismatch (tamir etti='repaired' vs 'read'); 'repaired a foolish scarf in the forest'.",
+   "fix_target": "Ali dün ormanda çadırını tamir etti.",
+   "fix_english": "Ali repaired his tent in the forest yesterday."
+  },
+  {
+   "id": "tr-0367",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'yemeği söyledi' = said the food: absurd; typo 'yemeki'; broken gloss.",
+   "fix_target": "Ali şarkıyı spor salonunda söyledi.",
+   "fix_english": "Ali sang the song at the gym."
+  },
+  {
+   "id": "tr-0412",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; English gloss itself broken (contains Turkish words 'depolama','edebiyat').",
+   "fix_target": "Bu uygulama sayesinde Türkçe öğrenmek kolaylaştı.",
+   "fix_english": "Thanks to this app, learning Turkish became easier."
+  },
+  {
+   "id": "tr-0446",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad: 'çanta tercüme ediyor' = translating a bag; broken gloss 'narrow a bag'.",
+   "fix_target": "Dedem uzun bir mektubu tercüme ediyor.",
+   "fix_english": "My grandfather is translating a long letter."
+  },
+  {
+   "id": "tr-0464",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad 'çorba fotoğraf çekiyor'; broken gloss 'photos soup'.",
+   "fix_target": "Diş hekimi tiyatroda fotoğraf çekiyor.",
+   "fix_english": "The dentist is taking photos at the theater."
+  },
+  {
+   "id": "tr-0476",
+   "q": "Q1",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad + gloss mismatch (tamir etti='repaired' vs 'saw'); 'repaired hard pants at stadium'.",
+   "fix_target": "Müdür şafakta stadyumda ışıkları tamir etti.",
+   "fix_english": "The director repaired the lights at the stadium at dawn."
+  },
+  {
+   "id": "tr-0495",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad 'kirli eldiven...pişirdi' (cooked dirty glove) + tense mismatch.",
+   "fix_target": "Çiftçi her sabah göl kenarında balık pişirirdi.",
+   "fix_english": "The farmer used to cook fish by the lake every morning."
+  },
+  {
+   "id": "tr-0514",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad 'fakir rapor pişiriyorlar' (cooking poor report); broken gloss.",
+   "fix_target": "Onlar mutfakta güzel bir yemek pişiriyorlar.",
+   "fix_english": "They are cooking a nice meal in the kitchen."
+  },
+  {
+   "id": "tr-0541",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Nonsense: 'cooked the article at the bank'",
+   "fix_target": "Fotoğrafçı fotoğrafı stüdyoda çekti.",
+   "fix_english": "The photographer took the photo at the studio."
+  },
+  {
+   "id": "tr-0545",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Typo 'pastaı' + absurd (painting a cake at mosque)",
+   "fix_target": "Annem pastayı mutfakta yaptı.",
+   "fix_english": "My mother made the cake in the kitchen."
+  },
+  {
+   "id": "tr-0567",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word-salad: 'heavy cookie wrote on the mountain'",
+   "fix_target": "Komşular gün batımında dağda kurabiye yedi.",
+   "fix_english": "The neighbors ate cookies on the mountain at sunset."
+  },
+  {
+   "id": "tr-0581",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Nonsense: 'they cook a smart tulip'",
+   "fix_target": "Onlar bahçede lale yetiştiriyorlar.",
+   "fix_english": "They are growing tulips in the garden."
+  },
+  {
+   "id": "tr-0590",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word-salad: 'cowardly motorcycle made at bakery'",
+   "fix_target": "Avukat hafta içi fırından ekmek aldı.",
+   "fix_english": "The lawyer bought bread from the bakery on weekdays."
+  },
+  {
+   "id": "tr-0613",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Nonsense 'hasanee' + tense mismatch (next month + past)",
+   "fix_target": "Ressam gelecek ay hastanede resim yapacak.",
+   "fix_english": "The painter will paint at the hospital next month."
+  },
+  {
+   "id": "tr-0629",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Typo 'mektupi' + absurd (cooked a letter)",
+   "fix_target": "Zeynep mektubu ofiste yazdı.",
+   "fix_english": "Zeynep wrote the letter at the office."
+  },
+  {
+   "id": "tr-0642",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word-salad: 'the fish dances'",
+   "fix_target": "Komşular bahçede neşeyle dans ediyor.",
+   "fix_english": "The neighbors are dancing joyfully in the garden."
+  },
+  {
+   "id": "tr-0643",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Nonsense: 'they dance a television'",
+   "fix_target": "Onlar evde televizyon izliyorlar.",
+   "fix_english": "They are watching television at home."
+  },
+  {
+   "id": "tr-0651",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Typo 'pilavi' + nonsense (said the rice at the gym)",
+   "fix_target": "Berber lokantada pilav söyledi.",
+   "fix_english": "The barber ordered rice pilaf at the restaurant."
+  },
+  {
+   "id": "tr-0688",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word-salad: 'busy shirt painted at post office'",
+   "fix_target": "Arkeolog her sabah postaneye mektup bıraktı.",
+   "fix_english": "The archaeologist left a letter at the post office every morning."
+  },
+  {
+   "id": "tr-0689",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word-salad: 'hard bus left at butcher shop'",
+   "fix_target": "Turistler geçen yıl kasaptan et aldı.",
+   "fix_english": "The tourists bought meat from the butcher last year."
+  },
+  {
+   "id": "tr-0702",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Nonsense: 'cooked an expensive motorcycle by the lake'",
+   "fix_target": "Diş hekimi bu akşam göl kenarında balık pişirdi.",
+   "fix_english": "The dentist cooked fish by the lake this evening."
+  },
+  {
+   "id": "tr-0708",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Typo 'kebapi' + nonsense (sewed the kebab)",
+   "fix_target": "Komşular alışveriş merkezinde kebap yedi.",
+   "fix_english": "The neighbors ate kebab at the shopping mall."
+  },
+  {
+   "id": "tr-0748",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Typo 'pastaı' + nonsense (wrote the cake at the bank)",
+   "fix_target": "Mühendis raporu bankada yazdı.",
+   "fix_english": "The engineer wrote the report at the bank."
+  },
+  {
+   "id": "tr-0762",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Nonsense 'hasanee' + gloss mismatch (boyadı=painted vs 'cleaned')",
+   "fix_target": "Veteriner geçen yıl kliniği boyadı.",
+   "fix_english": "The vet painted the clinic last year."
+  },
+  {
+   "id": "tr-0804",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad ('quail measures rough grapefruit') and English gloss unrelated",
+   "fix_target": "Greyfurt biraz acı bir meyvedir.",
+   "fix_english": "Grapefruit is a slightly bitter fruit."
+  },
+  {
+   "id": "tr-0810",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "Absurd ('repaired the soup') plus typo 'çorbaı'",
+   "fix_target": "Psikolog çorbasını mutfakta içti.",
+   "fix_english": "The psychologist drank his soup in the kitchen."
+  },
+  {
+   "id": "tr-0813",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad; English gloss ungrammatical",
+   "fix_target": "Gazeteci sık sık göl kenarında gazete okudu.",
+   "fix_english": "The journalist often read the newspaper by the lake."
+  },
+  {
+   "id": "tr-0848",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "Typo 'otenlden'; 'pişirdi'(cooked) vs English 'started'; word salad",
+   "fix_target": "Mehmet yemeği sabırla pişirdi.",
+   "fix_english": "Mehmet cooked the meal patiently."
+  },
+  {
+   "id": "tr-0855",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Absurd ('cooked from the library'), missing object",
+   "fix_target": "Dedem yemeği coşkuyla pişirdi.",
+   "fix_english": "My grandfather cooked the meal enthusiastically."
+  },
+  {
+   "id": "tr-0872",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "Typo 'bankaa'; 'sattı'(sold) vs English 'started'; word salad",
+   "fix_target": "Pilot sık sık bankaya para yatırdı.",
+   "fix_english": "The pilot often deposited money at the bank."
+  },
+  {
+   "id": "tr-0907",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad; English gloss unrelated",
+   "fix_target": "Aşçı yazın spor salonunda çok çalıştı.",
+   "fix_english": "The chef worked out a lot at the gym in summer."
+  },
+  {
+   "id": "tr-0908",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad ('repaired small a rose at the bazaar')",
+   "fix_target": "Babaanne her pazar çarşıda alışveriş yaptı.",
+   "fix_english": "My grandmother went shopping at the bazaar every Sunday."
+  },
+  {
+   "id": "tr-0922",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad ('left new a cat at the hotel')",
+   "fix_target": "Diş hekimi her sabah otelde kahvaltı yaptı.",
+   "fix_english": "The dentist had breakfast at the hotel every morning."
+  },
+  {
+   "id": "tr-0925",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad; English gloss entirely different words",
+   "fix_target": "Tesisatçı geçen hafta aletle rafı monte etti.",
+   "fix_english": "The plumber assembled the shelf with a tool last week."
+  },
+  {
+   "id": "tr-0946",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad ('found ugly a tulip at the gym')",
+   "fix_target": "Terzi şafakta spor salonunda spor yaptı.",
+   "fix_english": "The tailor exercised at the gym at dawn."
+  },
+  {
+   "id": "tr-0991",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad ('will sit the magazine')",
+   "fix_target": "Bahçıvan yarın bahçede oturacak.",
+   "fix_english": "The gardener will sit in the garden tomorrow."
+  },
+  {
+   "id": "tr-1025",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad ('repaired dirty vegetable'); English gloss ungrammatical",
+   "fix_target": "Mühendis deniz kıyısında eski motoru tamir etti.",
+   "fix_english": "The engineer repaired the old engine on the coast."
+  },
+  {
+   "id": "tr-1033",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad ('left long mushrooms at school')",
+   "fix_target": "Kasap öğleden sonra taze eti dükkanda bıraktı.",
+   "fix_english": "The butcher left the fresh meat at the shop in the afternoon."
+  },
+  {
+   "id": "tr-1034",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad; 'söyledi' vs English 'collected'",
+   "fix_target": "Arkadaşlar öğleden sonra dağda türkü söyledi.",
+   "fix_english": "The friends sang folk songs on the mountain in the afternoon."
+  },
+  {
+   "id": "tr-1035",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad ('easy a taxi on the mountain came/said')",
+   "fix_target": "Balıkçı öğleden sonra dağda taksi bekledi.",
+   "fix_english": "The fisherman waited for a taxi on the mountain in the afternoon."
+  },
+  {
+   "id": "tr-1037",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad ('cooked hard a tree'); English 'saw' mismatch",
+   "fix_target": "Garson akşamüstü göl kenarında balık pişirdi.",
+   "fix_english": "The waiter cooked fish by the lake in the late afternoon."
+  },
+  {
+   "id": "tr-1059",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; English gloss is unrelated garbage",
+   "fix_target": "Hemşire her gün hastaların ateşini kaydeder.",
+   "fix_english": "The nurse records the patients' temperature every day."
+  },
+  {
+   "id": "tr-1067",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'akıllı otobüs'; yazdı=wrote vs gloss 'bought'",
+   "fix_target": "Yazar sabahleyin deniz kıyısında yeni romanını yazdı.",
+   "fix_english": "The writer wrote his new novel by the sea in the morning."
+  },
+  {
+   "id": "tr-1106",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad: 'speaks kebab at the station'",
+   "fix_target": "Öğretmen istasyonda öğrencilerle konuşuyor.",
+   "fix_english": "The teacher is talking with students at the station."
+  },
+  {
+   "id": "tr-1114",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad: konuşuyor='speaks umbrella' vs gloss 'looking for'",
+   "fix_target": "Annem alışveriş merkezinde şemsiye arıyor.",
+   "fix_english": "My mother is looking for an umbrella at the shopping mall."
+  },
+  {
+   "id": "tr-1131",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad both sides ('wet memory'/'basit baraj')",
+   "fix_target": "Keşke dansçı biletini önceden alsaydı.",
+   "fix_english": "I wish the dancer had bought her ticket in advance."
+  },
+  {
+   "id": "tr-1184",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'acı kuş'; geldi=came vs gloss 'repaired'",
+   "fix_target": "Komşular gün batımında bahçede sohbet etti.",
+   "fix_english": "The neighbors chatted in the garden at sunset."
+  },
+  {
+   "id": "tr-1185",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'sıcak şemsiye'; yazdı=wrote vs gloss 'repaired'",
+   "fix_target": "Arkeolog bu sabah kasapta et aldı.",
+   "fix_english": "The archaeologist bought meat at the butcher shop this morning."
+  },
+  {
+   "id": "tr-1187",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'uzun salata'; tamir etti vs gloss 'cooked'",
+   "fix_target": "Arkeolog bu sabah koyda eski bir kalıntı buldu.",
+   "fix_english": "The archaeologist found an old ruin in the bay this morning."
+  },
+  {
+   "id": "tr-1188",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'soğuk kebap'; tamir etti vs gloss 'came'",
+   "fix_target": "Kardeşim hafta içi otelde çalıştı.",
+   "fix_english": "My sibling worked at the hotel on weekdays."
+  },
+  {
+   "id": "tr-1189",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'ucuz hikaye'; tamir etti vs gloss 'cleaned'",
+   "fix_target": "Fatma hafta içi otelde bir kitap okudu.",
+   "fix_english": "Fatma read a book at the hotel on weekdays."
+  },
+  {
+   "id": "tr-1190",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'ucuz çiçek'; bıraktı vs gloss 'started'",
+   "fix_target": "Çiftçi bu sabah deniz kıyısında çiçek topladı.",
+   "fix_english": "The farmer picked flowers on the coast this morning."
+  },
+  {
+   "id": "tr-1195",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad + typo 'tiyatro'de'; gloss unrelated (amiral/bakkal)",
+   "fix_target": "Çiftçi tiyatroda sessizce oturdu.",
+   "fix_english": "The farmer sat quietly at the theater."
+  },
+  {
+   "id": "tr-1198",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'gürültülü gül'; söyledi vs gloss 'went'",
+   "fix_target": "Anneannem hafta içi plajda türkü söyledi.",
+   "fix_english": "My grandmother sang a folk song at the beach on weekdays."
+  },
+  {
+   "id": "tr-1250",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'mutlu bilgisayar' (happy computer)",
+   "fix_target": "Yazar yeni bilgisayarında kitabını çeviriyor.",
+   "fix_english": "The writer is translating her book on her new computer."
+  },
+  {
+   "id": "tr-1256",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'anahtar dans ediyor' (key dances)",
+   "fix_target": "Çocuklar pazarda neşeyle dans ediyor.",
+   "fix_english": "The children are dancing cheerfully at the market."
+  },
+  {
+   "id": "tr-1290",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'zor taksi'; geldi vs gloss 'repaired'",
+   "fix_target": "Diş hekimi gelecek ay taksiyle konser salonuna gidecek.",
+   "fix_english": "The dentist will go to the concert hall by taxi next month."
+  },
+  {
+   "id": "tr-1336",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'ucuz kuş kilisede temizledi' is nonsense and gloss mismatches.",
+   "fix_target": "Diş hekimi bu sabah kliniğini baştan aşağı temizledi.",
+   "fix_english": "The dentist cleaned his clinic thoroughly this morning."
+  },
+  {
+   "id": "tr-1360",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Scrambled word salad; 'kilisede şaşkınlıkla satıyor' is nonsense.",
+   "fix_target": "Balıkçı akşamları limanda balık satıyor.",
+   "fix_english": "The fisherman sells fish at the harbor in the evenings."
+  },
+  {
+   "id": "tr-1362",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Scrambled; 'stadyumda mutlulukla oturuyor' plus gloss mismatch.",
+   "fix_target": "Garson bayramda ailesiyle mutlulukla oturuyor.",
+   "fix_english": "During the holiday the waiter sits happily with his family."
+  },
+  {
+   "id": "tr-1370",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Scrambled; 'Sen ... pişiriyor' subject-verb disagreement and word salad.",
+   "fix_target": "Sen yazın çarşıda ciddiyetle yemek pişiriyorsun.",
+   "fix_english": "In summer you cook food seriously at the bazaar."
+  },
+  {
+   "id": "tr-1397",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'meşup aslan hastanede pişirdi' is nonsense.",
+   "fix_target": "Babaannem gün batımında mutfakta yemek pişirdi.",
+   "fix_english": "My grandmother cooked food in the kitchen at sunset."
+  },
+  {
+   "id": "tr-1398",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'nazik bilgisayar kasapta yaptı' is nonsense.",
+   "fix_target": "Yazar gün batımında kafede bilgisayarında çalıştı.",
+   "fix_english": "The writer worked on his computer at the cafe at sunset."
+  },
+  {
+   "id": "tr-1399",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'yalancı hikaye koyda pişirdi' is nonsense.",
+   "fix_target": "Müzisyen öğleden sonra koyda güzel bir şarkı besteledi.",
+   "fix_english": "The musician composed a beautiful song in the bay in the afternoon."
+  },
+  {
+   "id": "tr-1400",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'yalancı tramvay manav söyledi' is nonsense.",
+   "fix_target": "Garson öğleden sonra manavda alışveriş yaptı.",
+   "fix_english": "The waiter went shopping at the greengrocer in the afternoon."
+  },
+  {
+   "id": "tr-1402",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'dürüst gemi konser salonunda yaptı' is nonsense.",
+   "fix_target": "Kaptan sabahleyin gemiyi limandan çıkardı.",
+   "fix_english": "The captain took the ship out of the harbor in the morning."
+  },
+  {
+   "id": "tr-1409",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'gürültülü gazete yüzme havuzunda temizledi' is nonsense.",
+   "fix_target": "Kardeşim geçen yıl yüzme havuzunu temizledi.",
+   "fix_english": "My sibling cleaned the swimming pool last year."
+  },
+  {
+   "id": "tr-1415",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'sinemadan ciddiyet ile dikti' (sewed) is nonsense, gloss mismatch.",
+   "fix_target": "Yazar sinemada filmi ciddiyetle izledi.",
+   "fix_english": "The writer watched the film seriously at the cinema."
+  },
+  {
+   "id": "tr-1424",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'soğuk kebap deniz kıyısında topladı' is nonsense.",
+   "fix_target": "Müdür şafakta deniz kıyısında yürüyüş yaptı.",
+   "fix_english": "The director took a walk by the coast at dawn."
+  },
+  {
+   "id": "tr-1436",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'dergi oturuyorum' (I sit magazine) is nonsense; should be 'okuyorum'.",
+   "fix_target": "Ben şimdi dergi okuyorum.",
+   "fix_english": "I am reading a magazine right now."
+  },
+  {
+   "id": "tr-1441",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'ekşi bisiklet' (sour bicycle) is nonsense and 'bisiklet bakıyor' misses dative.",
+   "fix_target": "Öğretmen yeni bisiklete bakıyor.",
+   "fix_english": "The teacher is looking at the new bicycle."
+  },
+  {
+   "id": "tr-1445",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'portakal kalkar' (gets up the orange) is nonsense.",
+   "fix_target": "İtfaiyeci genellikle erken kalkar.",
+   "fix_english": "The firefighter usually gets up early."
+  },
+  {
+   "id": "tr-1456",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'rapor seviyorum' (I love report) contradicts gloss 'reading'.",
+   "fix_target": "Ben şu anda rapor okuyorum.",
+   "fix_english": "I am reading a report right now."
+  },
+  {
+   "id": "tr-1460",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'evden söyledik' (said from home) is nonsense; should be 'çıktık'.",
+   "fix_target": "Biz az önce evden çıktık.",
+   "fix_english": "We just left home."
+  },
+  {
+   "id": "tr-1509",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'sandalye koşar' (runs the chair) is nonsense.",
+   "fix_target": "Mühendis genellikle sabahları koşar.",
+   "fix_english": "The engineer usually runs in the mornings."
+  },
+  {
+   "id": "tr-1510",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'elma içer' (drinks the apple) is nonsense.",
+   "fix_target": "Aşçı bazen elma yer.",
+   "fix_english": "The cook sometimes eats an apple."
+  },
+  {
+   "id": "tr-1511",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'su öğretti' (taught the water) is nonsense.",
+   "fix_target": "İtfaiyeci dün çocuklara yüzmeyi öğretti.",
+   "fix_english": "The firefighter taught the children to swim yesterday."
+  },
+  {
+   "id": "tr-1512",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'şapka içti' (drank the hat) is nonsense.",
+   "fix_target": "Gazeteci dün çay içti.",
+   "fix_english": "The journalist drank tea yesterday."
+  },
+  {
+   "id": "tr-1522",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'kirli uçak tercüme ediyor' (translating a dirty plane) is nonsense.",
+   "fix_target": "Fatma önemli bir belgeyi tercüme ediyor.",
+   "fix_english": "Fatma is translating an important document."
+  },
+  {
+   "id": "tr-1530",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'pasaport içer' (drinks the passport) is nonsense.",
+   "fix_target": "Garson her sabah kahve içer.",
+   "fix_english": "The waiter drinks coffee every morning."
+  },
+  {
+   "id": "tr-1532",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "'baharatlı yönetim besledi' word salad; gloss has untranslated Turkish words.",
+   "fix_target": "Ebe dün yeni doğan bebeği besledi.",
+   "fix_english": "The midwife fed the newborn baby yesterday."
+  },
+  {
+   "id": "tr-1533",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "'atılgan bellek geliştirdi' word salad; gloss has untranslated Turkish words.",
+   "fix_target": "Hakim dün önemli bir karar verdi.",
+   "fix_english": "The judge made an important decision yesterday."
+  },
+  {
+   "id": "tr-1617",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "non-word 'editledi', misspelled 'üniversite'da', English gloss unrelated with untranslated words",
+   "fix_target": "Komisyoncu seni üniversitede gördü.",
+   "fix_english": "The broker saw you at the university."
+  },
+  {
+   "id": "tr-1620",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "typo 'hasanee' (hastaneye) + 'bought to the hospital' nonsense",
+   "fix_target": "Fotoğrafçı hafta içi hastaneye gitti.",
+   "fix_english": "The photographer went to the hospital on weekdays."
+  },
+  {
+   "id": "tr-1782",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "typo 'bankaa' (bankaya) + 'bankaya bitirdi' nonsense, missing object",
+   "fix_target": "Psikolog gün batımında işini bankada bitirdi.",
+   "fix_english": "The psychologist finished his work at the bank at sunset."
+  },
+  {
+   "id": "tr-1868",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'yavaş çanta ... bitirdi' nonsense, gloss mismatched",
+   "fix_target": "O yaz deniz kıyısında çantasını kaybetti.",
+   "fix_english": "That summer she lost her bag on the coast."
+  },
+  {
+   "id": "tr-1869",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'dolma boyadı' = painted stuffed leaves; absurd, gloss says prepared",
+   "fix_target": "Fatma her pazar evde dolma yaptı.",
+   "fix_english": "Fatma made stuffed grape leaves at home every Sunday."
+  },
+  {
+   "id": "tr-1872",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'cesur kamera' + scrambled order; nonsense",
+   "fix_target": "Terzi gün batımında müzede eski bir kamera gördü.",
+   "fix_english": "The tailor saw an old camera at the museum at sunset."
+  },
+  {
+   "id": "tr-1876",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'tatlı gazete fırında tamir etti'; nonsense, gloss mismatched",
+   "fix_target": "Balıkçı sabahleyin fırının önünde gazete okudu.",
+   "fix_english": "The fisherman read a newspaper in front of the bakery in the morning."
+  },
+  {
+   "id": "tr-1878",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'yalancı tohum ... yaptı'; nonsense, gloss mismatched",
+   "fix_target": "Kasap geçen hafta deniz kıyısında balık pişirdi.",
+   "fix_english": "The butcher grilled fish on the coast last week."
+  },
+  {
+   "id": "tr-1882",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'meyve ... geldi' incoherent; gloss says 'sold', verb is 'came'",
+   "fix_target": "Anneannem her gün pazardan taze meyve aldı.",
+   "fix_english": "My grandmother bought fresh fruit from the market every day."
+  },
+  {
+   "id": "tr-1883",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'taze aslan ... tamir etti'; nonsense",
+   "fix_target": "Fotoğrafçı her sabah tiyatroda fotoğraf çekti.",
+   "fix_english": "The photographer took photos at the theater every morning."
+  },
+  {
+   "id": "tr-1884",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "scrambled 'dolma ... aldı'; gloss 'went' mismatches, incoherent",
+   "fix_target": "Anneannem akşam yemeğinde dolma yaptı.",
+   "fix_english": "My grandmother made stuffed grape leaves for dinner."
+  },
+  {
+   "id": "tr-1889",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'çirkin kartal ... yazdı'; nonsense",
+   "fix_target": "Berber az önce müşterisinin saçını kesti.",
+   "fix_english": "The barber just cut his customer's hair."
+  },
+  {
+   "id": "tr-1955",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'korkak ağaç ... yazdı'; nonsense",
+   "fix_target": "Komşular yazın spor salonunda çalıştı.",
+   "fix_english": "The neighbors worked out at the gym in summer."
+  },
+  {
+   "id": "tr-1959",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'kirli şapka ... boyadı'; nonsense, gloss mismatched",
+   "fix_target": "Ali bayramda yüzme havuzunda yüzdü.",
+   "fix_english": "Ali swam in the swimming pool during the holiday."
+  },
+  {
+   "id": "tr-1960",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'tatlı çorba ... başladı'; nonsense, gloss mismatched",
+   "fix_target": "Fotoğrafçı akşamüstü havuz kenarında fotoğraf çekmeye başladı.",
+   "fix_english": "In the late afternoon the photographer started taking photos by the pool."
+  },
+  {
+   "id": "tr-1980",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'büyük papağan ... bıraktı'; nonsense, gloss mismatched",
+   "fix_target": "Berber gün batımında stadyumda maç izledi.",
+   "fix_english": "The barber watched a match at the stadium at sunset."
+  },
+  {
+   "id": "tr-1984",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'kirli taksi ... tamir etti' scrambled; gloss 'came' mismatched",
+   "fix_target": "Babam geçen yıl bozulan taksiyi tamir etti.",
+   "fix_english": "My dad repaired the broken-down taxi last year."
+  },
+  {
+   "id": "tr-2011",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'mektup uyuyacak' = will sleep the letter; nonsense",
+   "fix_target": "Şoför yarın erkenden yola çıkacak.",
+   "fix_english": "The driver will set off early tomorrow."
+  },
+  {
+   "id": "tr-2024",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'modern plaj edinirdim' absurd; gloss 'serin lokma' totally mismatched",
+   "fix_target": "Mümkün olsa deniz kenarında bir ev alırdım.",
+   "fix_english": "If possible, I would buy a house by the sea."
+  },
+  {
+   "id": "tr-2047",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'üzgün saat ... sattı'; nonsense",
+   "fix_target": "Dedem geçen gün eski saatini sattı.",
+   "fix_english": "My grandfather sold his old watch the other day."
+  },
+  {
+   "id": "tr-2048",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'korkak dergi ... aldı'; nonsense, gloss mismatched",
+   "fix_target": "Hemşire öğleden sonra bir dergi aldı.",
+   "fix_english": "The nurse bought a magazine in the afternoon."
+  },
+  {
+   "id": "tr-2054",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'ince kartal ... tamir etti'; nonsense",
+   "fix_target": "Başkan geçen hafta yeni eczaneyi açtı.",
+   "fix_english": "The president opened the new pharmacy last week."
+  },
+  {
+   "id": "tr-2056",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'kolay radyo ... sattı'; nonsense",
+   "fix_target": "Kasap her pazar taze et sattı.",
+   "fix_english": "The butcher sold fresh meat every Sunday."
+  },
+  {
+   "id": "tr-2057",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'sessiz araba ... gördü' scrambled; gloss 'wrote' mismatched",
+   "fix_target": "Babam bu sabah yolda güzel bir araba gördü.",
+   "fix_english": "My dad saw a nice car on the road this morning."
+  },
+  {
+   "id": "tr-2060",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'şiir gülüyorum' ungrammatical nonsense",
+   "fix_target": "Ben bugünlerde şiir yazıyorum.",
+   "fix_english": "I've been writing poetry lately."
+  },
+  {
+   "id": "tr-2063",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'zengin kitap ... okudu'; nonsense",
+   "fix_target": "Aşçı şafakta yeni bir yemek kitabı okudu.",
+   "fix_english": "The chef read a new cookbook at dawn."
+  },
+  {
+   "id": "tr-2065",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad 'hızlı atkı ... dikti'; nonsense, gloss mismatched",
+   "fix_target": "Zeynep hafta sonu kızına güzel bir atkı ördü.",
+   "fix_english": "Zeynep knitted a nice scarf for her daughter on the weekend."
+  },
+  {
+   "id": "tr-2070",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'süt oturacak' = will sit the milk; nonsense",
+   "fix_target": "Kız yarın süt içecek.",
+   "fix_english": "The girl will drink milk tomorrow."
+  },
+  {
+   "id": "tr-2128",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; English gloss is nonsense",
+   "fix_target": "Ben hafta sonu okulda kitap topladım.",
+   "fix_english": "On the weekend I collected books at school."
+  },
+  {
+   "id": "tr-2130",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad, nonsensical",
+   "fix_target": "Kasap dün yüzme havuzuna gitti ve yüzdü.",
+   "fix_english": "The butcher went to the swimming pool and swam yesterday."
+  },
+  {
+   "id": "tr-2132",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad, nonsensical",
+   "fix_target": "Kardeşim hafta sonu meydanda kamerayla fotoğraf çekti.",
+   "fix_english": "My sibling took photos with a camera in the square on the weekend."
+  },
+  {
+   "id": "tr-2133",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad, nonsensical",
+   "fix_target": "Başkan hafta içi ormanda bir aslan gördü.",
+   "fix_english": "The president saw a lion in the forest on a weekday."
+  },
+  {
+   "id": "tr-2155",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad, nonsensical",
+   "fix_target": "Diş hekimi bayramda çarşıda salata aldı.",
+   "fix_english": "The dentist bought salad at the bazaar during the holiday."
+  },
+  {
+   "id": "tr-2156",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad, nonsensical",
+   "fix_target": "Veteriner gün batımında kasaptan kebap aldı.",
+   "fix_english": "The vet bought kebab from the butcher at sunset."
+  },
+  {
+   "id": "tr-2158",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad, nonsensical",
+   "fix_target": "Babam öğleden sonra camide büyük bir kitap okudu.",
+   "fix_english": "My father read a big book at the mosque in the afternoon."
+  },
+  {
+   "id": "tr-2159",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad, nonsensical",
+   "fix_target": "Avukat hafta sonu spor salonunda spora başladı.",
+   "fix_english": "The lawyer started exercising at the gym on the weekend."
+  },
+  {
+   "id": "tr-2189",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad, nonsensical",
+   "fix_target": "Çocuklar hafta sonu parkta bilgisayar oyunu oynadı.",
+   "fix_english": "The children played a computer game in the park on the weekend."
+  },
+  {
+   "id": "tr-2235",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad: 'başladı' with 'sert ayakkabı', gloss mismatch",
+   "fix_target": "Onlar akşamüstü alışveriş merkezinde ayakkabı aldılar.",
+   "fix_english": "They bought shoes at the shopping mall in the late afternoon."
+  },
+  {
+   "id": "tr-2242",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad: 'boyadı' with 'ucuz telefon', gloss mismatch",
+   "fix_target": "Terzi öğleden sonra konser salonunda ucuz bir telefon buldu.",
+   "fix_english": "The tailor found a cheap phone at the concert hall in the afternoon."
+  },
+  {
+   "id": "tr-2276",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad: 'boyadı' with 'kaba ceket', gloss mismatch",
+   "fix_target": "Komşular hafta içi ormanda kalın ceket giydi.",
+   "fix_english": "The neighbors wore thick jackets in the forest on weekdays."
+  },
+  {
+   "id": "tr-2310",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad, nonsensical",
+   "fix_target": "Hasan geçen yıl ormanda motosiklet sürdü.",
+   "fix_english": "Hasan rode a motorcycle in the forest last year."
+  },
+  {
+   "id": "tr-2312",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad: 'dikti' with 'ekşi sebze', nonsensical",
+   "fix_target": "Psikolog öğleden sonra sebze yemeği pişirdi.",
+   "fix_english": "The psychologist cooked a vegetable dish in the afternoon."
+  },
+  {
+   "id": "tr-2322",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad: 'dikti' (sewed) with 'tuzlu kurabiye', nonsensical",
+   "fix_target": "Diş hekimi gelecek ay tuzlu kurabiye yapacak.",
+   "fix_english": "The dentist will make salty cookies next month."
+  },
+  {
+   "id": "tr-2325",
+   "q": "Q3",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad: 'yaptı' with 'uzun balık', gloss mismatch",
+   "fix_target": "Arkadaşlar hafta içi birlikte balık pişirdi.",
+   "fix_english": "The friends cooked fish together on weekdays."
+  },
+  {
+   "id": "tr-2354",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; buldu means found not saw, nonsense object placement",
+   "fix_target": "Diş hekimi yazın meydanda ucuz bir çorbacı buldu.",
+   "fix_english": "The dentist found a cheap soup place in the square in summer."
+  },
+  {
+   "id": "tr-2357",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "wrong case (plaja) + subject-verb disagreement (biz...gelmeyeceğiz)",
+   "fix_target": "Biz plaja gelmeyeceğiz.",
+   "fix_english": "We won't come to the beach."
+  },
+  {
+   "id": "tr-2393",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'gürültülü yemek aldı' nonsense, gloss mismatch",
+   "fix_target": "Anneannem şimdi deniz kıyısında taze balık aldı.",
+   "fix_english": "My grandmother just bought fresh fish on the coast."
+  },
+  {
+   "id": "tr-2395",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'geniş atkı pazarda yazdı' nonsense",
+   "fix_target": "Doktor her pazar pazarda geniş bir atkı aldı.",
+   "fix_english": "The doctor bought a wide scarf at the market every Sunday."
+  },
+  {
+   "id": "tr-2396",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'bayat radyo sinemada söyledi' nonsense",
+   "fix_target": "Öğrenciler öğleden sonra sinemada eski bir şarkı söyledi.",
+   "fix_english": "The students sang an old song at the cinema in the afternoon."
+  },
+  {
+   "id": "tr-2398",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; tamir etti (repaired) does not match soup, nonsense",
+   "fix_target": "Yazar dün akşam ormanda tuzlu bir çorba içti.",
+   "fix_english": "The writer drank a salty soup in the forest last night."
+  },
+  {
+   "id": "tr-2409",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'sessiz otobüs ... yazdı' nonsense",
+   "fix_target": "Çiftçi dün alışveriş merkezinde yeni bir telefon aldı.",
+   "fix_english": "The farmer bought a new phone at the shopping mall yesterday."
+  },
+  {
+   "id": "tr-2410",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad + wrong case 'spor salonunda gitti'",
+   "fix_target": "Müdür her pazar spor salonuna gitti.",
+   "fix_english": "The director went to the gym every Sunday."
+  },
+  {
+   "id": "tr-2411",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'cesur ayakkabı ... pişirdi' nonsense",
+   "fix_target": "Hemşire öğleden sonra spor salonunda su içti.",
+   "fix_english": "The nurse drank water at the gym in the afternoon."
+  },
+  {
+   "id": "tr-2412",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'fakir motosiklet ... sattı' nonsense",
+   "fix_target": "Garson öğleden sonra alışveriş merkezinde eski motosikletini sattı.",
+   "fix_english": "The waiter sold his old motorcycle at the shopping mall in the afternoon."
+  },
+  {
+   "id": "tr-2425",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'yavaş rapor ... buldu' nonsense",
+   "fix_target": "Veteriner her sabah göl kenarında bir rapor yazdı.",
+   "fix_english": "The vet wrote a report by the lake every morning."
+  },
+  {
+   "id": "tr-2450",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; temizledi does not match, nonsense",
+   "fix_target": "Avukat göl kenarında küçük bir tavşan gördü.",
+   "fix_english": "The lawyer saw a small rabbit by the lake."
+  },
+  {
+   "id": "tr-2451",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'üzgün rapor bankada okudu' nonsense",
+   "fix_target": "Müzisyen hafta içi bankada bir rapor okudu.",
+   "fix_english": "The musician read a report at the bank on weekdays."
+  },
+  {
+   "id": "tr-2452",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; misplaced 'sessiz kartal'",
+   "fix_target": "Babam kışın konser salonunda bir kartal gördü.",
+   "fix_english": "My father saw an eagle at the concert hall in winter."
+  },
+  {
+   "id": "tr-2455",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'kolay bitki yüzme havuzunda yaptı' nonsense",
+   "fix_target": "Kaptan geçen yıl yüzme havuzunun yanında bir bitki dikti.",
+   "fix_english": "The captain planted a plant next to the swimming pool last year."
+  },
+  {
+   "id": "tr-2457",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'dar köpek ... bıraktı' nonsense",
+   "fix_target": "Veteriner her sabah köpeği yüzme havuzunun yanında bıraktı.",
+   "fix_english": "The vet left the dog by the swimming pool every morning."
+  },
+  {
+   "id": "tr-2465",
+   "q": "Q4",
+   "rating": 1,
+   "type": "both",
+   "issue": "word salad; english untranslated ('zor kazma')",
+   "fix_target": "Kaptan yeni bir işletme kurmaya karar verdi.",
+   "fix_english": "The captain decided to start a new business."
+  },
+  {
+   "id": "tr-2468",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'korkak taksi ... aldı' nonsense",
+   "fix_target": "Terzi yazın konser salonunun önünde bir taksi tuttu.",
+   "fix_english": "The tailor caught a taxi in front of the concert hall in summer."
+  },
+  {
+   "id": "tr-2515",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'hafif araba spor salonunda temizledi' nonsense",
+   "fix_target": "Öğrenciler geçen hafta spor salonunu temizledi.",
+   "fix_english": "The students cleaned the gym last week."
+  },
+  {
+   "id": "tr-2516",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'yalancı atkı ... buldu' nonsense",
+   "fix_target": "Babam geçen yıl konser salonunda bir atkı buldu.",
+   "fix_english": "My father found a scarf at the concert hall last year."
+  },
+  {
+   "id": "tr-2572",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; yaptı does not match mushrooms, nonsense",
+   "fix_target": "Gazeteci gece spor salonunda spor yaptı.",
+   "fix_english": "The journalist exercised at the gym at night."
+  },
+  {
+   "id": "tr-2573",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'yeni kuş ... bitirdi' nonsense",
+   "fix_target": "Zeynep gelecek hafta deniz kıyısında yeni bir kuş görecek.",
+   "fix_english": "Zeynep will see a new bird on the coast next week."
+  },
+  {
+   "id": "tr-2574",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'aptal salata ... bıraktı' nonsense",
+   "fix_target": "Hemşire her sabah deniz kıyısında salata yedi.",
+   "fix_english": "The nurse ate salad on the coast every morning."
+  },
+  {
+   "id": "tr-2575",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'zor rapor ... tamir etti' nonsense",
+   "fix_target": "Kardeşim gün batımında otelde bir rapor yazdı.",
+   "fix_english": "My sibling wrote a report at the hotel at sunset."
+  },
+  {
+   "id": "tr-2576",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad + tense mismatch (gelecek hafta ... sattı)",
+   "fix_target": "Kardeşim gelecek hafta alışveriş merkezinde elbise satacak.",
+   "fix_english": "My sibling will sell dresses at the shopping mall next week."
+  },
+  {
+   "id": "tr-2577",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "word salad; 'kirli bitki ... boyadı' nonsense",
+   "fix_target": "Komşular dün akşam evlerinin duvarını boyadı.",
+   "fix_english": "The neighbors painted their house wall last night."
+  },
+  {
+   "id": "tr-2631",
+   "q": "Q4",
+   "rating": 1,
+   "type": "both",
+   "issue": "Pure word salad 'acı taksi manav dikti'; gloss equally broken.",
+   "fix_target": "Kaptan öğleden sonra manavdan taze meyve aldı.",
+   "fix_english": "The captain bought fresh fruit from the greengrocer in the afternoon."
+  },
+  {
+   "id": "tr-2634",
+   "q": "Q4",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad 'mutlu elbise yüzme havuzunda başladı'; nonsense.",
+   "fix_target": "Berber dün akşam yüzme havuzunda yüzdü.",
+   "fix_english": "The barber swam in the swimming pool last night."
+  },
+  {
+   "id": "tr-2647",
+   "q": "Q4",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad 'mutlu aslan camide pişirdi' (cooked a happy lion at the mosque).",
+   "fix_target": "Mehmet hafta sonu camide cemaatle namaz kıldı.",
+   "fix_english": "On the weekend, Mehmet prayed with the congregation at the mosque."
+  },
+  {
+   "id": "tr-2689",
+   "q": "Q4",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad 'geniş kravat evde geldi'; verb 'geldi' vs gloss 'saw' mismatch.",
+   "fix_target": "Anneannem bazen evde dedemin kravatını ütüler.",
+   "fix_english": "My grandmother sometimes irons my grandfather's tie at home."
+  },
+  {
+   "id": "tr-2700",
+   "q": "Q4",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad 'sert tekne çarşıda pişirdi' (cooked a hard boat).",
+   "fix_target": "Ali öğleden sonra çarşıda taze sebze aldı.",
+   "fix_english": "Ali bought fresh vegetables at the bazaar in the afternoon."
+  },
+  {
+   "id": "tr-2702",
+   "q": "Q4",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad 'uzun ağaç kilisede tamir etti' (repaired a long tree).",
+   "fix_target": "Arkadaşlar hafta sonu eski kilisenin çatısını tamir etti.",
+   "fix_english": "The friends repaired the old church's roof on the weekend."
+  },
+  {
+   "id": "tr-2705",
+   "q": "Q4",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad 'ekşi uçak yüzme havuzunda topladı' (gathered a sour plane).",
+   "fix_target": "Fotoğrafçı her sabah havuz kenarında fotoğraf çekti.",
+   "fix_english": "The photographer took photos by the pool every morning."
+  },
+  {
+   "id": "tr-2706",
+   "q": "Q4",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad 'taze makale göl kenarında tamir etti' (repaired a fresh article).",
+   "fix_target": "Çiftçi akşamüstü göl kenarında çitini tamir etti.",
+   "fix_english": "The farmer repaired his fence by the lake in the late afternoon."
+  },
+  {
+   "id": "tr-2749",
+   "q": "Q4",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad 'kolay kamera eczanede gitti'; case error with 'gitti'.",
+   "fix_target": "Babaannem öğleden sonra eczaneye gitti.",
+   "fix_english": "My grandmother went to the pharmacy in the afternoon."
+  },
+  {
+   "id": "tr-2777",
+   "q": "Q4",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad 'dürüst lale köprüde yazdı' (wrote an honest tulip).",
+   "fix_target": "Hasan bu sabah köprüde arkadaşına mektup yazdı.",
+   "fix_english": "This morning, Hasan wrote a letter to his friend on the bridge."
+  },
+  {
+   "id": "tr-2782",
+   "q": "Q4",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad 'çirkin şiir köprüde yaptı' (made an ugly poem).",
+   "fix_target": "Psikolog öğleden sonra köprüde bir şiir okudu.",
+   "fix_english": "The psychologist read a poem on the bridge in the afternoon."
+  },
+  {
+   "id": "tr-2788",
+   "q": "Q4",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad 'eski hikaye çarşıda tamir etti' (repaired an old story).",
+   "fix_target": "Kardeşim geçen yıl çarşıda eski bir saat tamir etti.",
+   "fix_english": "Last year, my sibling repaired an old clock at the bazaar."
+  },
+  {
+   "id": "tr-2801",
+   "q": "Q4",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad 'hastanede makale içiyoruz' (drink an article).",
+   "fix_target": "Biz hastanede çay içiyoruz.",
+   "fix_english": "We drink tea at the hospital."
+  },
+  {
+   "id": "tr-2845",
+   "q": "Q4",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad 'hafif televizyon müzede sattı' (sold a light television).",
+   "fix_target": "Kardeşim gün batımında müze dükkânında kitap sattı.",
+   "fix_english": "At sunset, my sibling sold books at the museum shop."
+  },
+  {
+   "id": "tr-2850",
+   "q": "Q4",
+   "rating": 1,
+   "type": "both",
+   "issue": "Word salad 'gürültülü çiçek bankada tamir etti' (repaired a noisy flower).",
+   "fix_target": "Fatma bu sabah bankada işlerini halletti.",
+   "fix_english": "This morning, Fatma took care of her business at the bank."
+  },
+  {
+   "id": "tr-2863",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; random nouns/adjectives, gloss also incoherent",
+   "fix_target": "Garson öğleden sonra çantasını kütüphanede bıraktı.",
+   "fix_english": "The waiter left his bag in the library in the afternoon."
+  },
+  {
+   "id": "tr-2906",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad (tatlı dolma tamir etti); nonsense",
+   "fix_target": "Balıkçı genellikle ağlarını sokakta tamir eder.",
+   "fix_english": "The fisherman usually repairs his nets on the street."
+  },
+  {
+   "id": "tr-2907",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'makale topladı', gloss incoherent",
+   "fix_target": "Kardeşim kışın deniz kıyısında küçük taşlar topladı.",
+   "fix_english": "My sibling collected small stones on the coast in winter."
+  },
+  {
+   "id": "tr-2923",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'moderatör mide sakatlandı', gloss placeholder words",
+   "fix_target": "Karate yapan sporcu dizini sakatladı.",
+   "fix_english": "The athlete who does karate injured his knee."
+  },
+  {
+   "id": "tr-2926",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'çirkin kuş meydanda aldı'",
+   "fix_target": "Diş hekimi her sabah meydanda gazete alır.",
+   "fix_english": "The dentist buys a newspaper in the square every morning."
+  },
+  {
+   "id": "tr-2927",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'ince börek ... pişirdi' vs gloss 'painted pastry'",
+   "fix_target": "Arkeolog geçen yıl incecik bir börek pişirdi.",
+   "fix_english": "The archaeologist cooked a very thin pastry last year."
+  },
+  {
+   "id": "tr-2937",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'resif yanında kaymak arıyordu', gloss placeholder words",
+   "fix_target": "Tavşan bahçede yiyecek arıyordu.",
+   "fix_english": "The rabbit was looking for food in the garden."
+  },
+  {
+   "id": "tr-2966",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'zengin makale ... aldı'",
+   "fix_target": "Başkan bazen yüzme havuzunda gazete okur.",
+   "fix_english": "The president sometimes reads a newspaper at the swimming pool."
+  },
+  {
+   "id": "tr-2967",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; verb/gloss mismatch (gördü vs 'repaired')",
+   "fix_target": "Başkan gün batımında ormanda bir geyik gördü.",
+   "fix_english": "The president saw a deer in the forest at sunset."
+  },
+  {
+   "id": "tr-2972",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'kolay tekne ... dikti', future+past clash",
+   "fix_target": "Zeynep gelecek hafta spor salonunda antrenman yapacak.",
+   "fix_english": "Zeynep will train at the gym next week."
+  },
+  {
+   "id": "tr-2973",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'ağır tohum ... topladı'",
+   "fix_target": "Diş hekimi hafta sonu bahçede tohum ekti.",
+   "fix_english": "The dentist planted seeds in the garden over the weekend."
+  },
+  {
+   "id": "tr-2977",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'yavaş hikaye ... tamir etti'",
+   "fix_target": "Mühendis gün batımında havaalanında bir arıza tamir etti.",
+   "fix_english": "The engineer repaired a fault at the airport at sunset."
+  },
+  {
+   "id": "tr-3008",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'tuzlu gömlek ... okudu', gloss 'said salty a shirt'",
+   "fix_target": "Gazeteci şafakta spor salonunda haberleri okudu.",
+   "fix_english": "The journalist read the news at the gym at dawn."
+  },
+  {
+   "id": "tr-3019",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Nonsense; 'yavruağzı tedavi edildi', gloss unrelated",
+   "fix_target": "Bu hasta dün akşamdan beri tedavi ediliyor.",
+   "fix_english": "This patient has been under treatment since last evening."
+  },
+  {
+   "id": "tr-3020",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'sessiz bilgisayar pazarda gitti' case error",
+   "fix_target": "Mühendis her pazar pazara gider.",
+   "fix_english": "The engineer goes to the market every Sunday."
+  },
+  {
+   "id": "tr-3034",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'kaba tekne spor salonunda boyadı'",
+   "fix_target": "Arkeolog kışın eski bir tekneyi boyadı.",
+   "fix_english": "The archaeologist painted an old boat in winter."
+  },
+  {
+   "id": "tr-3039",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'sert kedi ... topladı'",
+   "fix_target": "Gazeteci gün batımında deniz kıyısında deniz kabukları topladı.",
+   "fix_english": "The journalist collected seashells on the coast at sunset."
+  },
+  {
+   "id": "tr-3043",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Nonsense + tense clash: 'samyeli yarın sabah düzeltildi'",
+   "fix_target": "Bu rapor yarın sabah düzeltilecek.",
+   "fix_english": "This report will be corrected tomorrow morning."
+  },
+  {
+   "id": "tr-3047",
+   "q": "Q4",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "Word salad; 'sert papağan ... yazdı'",
+   "fix_target": "Yazar gece konser salonunda yeni bir hikaye yazdı.",
+   "fix_english": "The writer wrote a new story at the concert hall at night."
+  },
+  {
+   "id": "tr-0149",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'mektup öğreniyor' = learning a letter, semantic nonsense",
+   "fix_target": "O parkta şarkı öğreniyor.",
+   "fix_english": "He/She is learning a song in the park."
+  },
+  {
+   "id": "tr-0153",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "WRONG CASE: 'okulda geldim' must be dative 'okula geldim'",
+   "fix_target": "Ben az önce okula geldim.",
+   "fix_english": "I just arrived at school."
+  },
+  {
+   "id": "tr-0155",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'marketten yaptık' word salad (made from the market), gloss also nonsense",
+   "fix_target": "Biz geçen yıl markette alışveriş yaptık.",
+   "fix_english": "We shopped at the market last year."
+  },
+  {
+   "id": "tr-0169",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'otelde biteceksiniz' — a person as subject of bitmek is absurd",
+   "fix_target": "Siz yakında otele varacaksınız.",
+   "fix_english": "You will arrive at the hotel soon."
+  },
+  {
+   "id": "tr-0171",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "WRONG CASE: 'restoranda gelecekler' must be dative 'restorana'",
+   "fix_target": "Onlar birazdan restorana gelecekler.",
+   "fix_english": "They will arrive at the restaurant in a moment."
+  },
+  {
+   "id": "tr-0173",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "WRONG CASE: 'restoranda geleceksin' must be 'restorana'; gloss 'go' mismatches gelmek",
+   "fix_target": "Sen ileride restorana geleceksin.",
+   "fix_english": "You will come to the restaurant in the future."
+  },
+  {
+   "id": "tr-0176",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'şiir ağlıyoruz' = we cry poetry, word salad (should be okuyoruz)",
+   "fix_target": "Biz bu aralar şiir okuyoruz.",
+   "fix_english": "We've been reciting poetry lately."
+  },
+  {
+   "id": "tr-0186",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'anahtar temizliyor' = a baker cleaning a key, semantic absurdity",
+   "fix_target": "Fırıncı göl kenarında ekmek satıyor.",
+   "fix_english": "The baker sells bread by the lake."
+  },
+  {
+   "id": "tr-0191",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'otelde gideceğim' wrong case + gloss 'stay' mismatches gitmek",
+   "fix_target": "Ben önümüzdeki yıl otelde kalacağım.",
+   "fix_english": "I will stay at the hotel next year."
+  },
+  {
+   "id": "tr-0195",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "WRONG CASE: 'markette geldiniz' must be dative 'markete'",
+   "fix_target": "Siz biraz önce markete geldiniz.",
+   "fix_english": "You came to the market a moment ago."
+  },
+  {
+   "id": "tr-0196",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "typo 'hastanneden' (hastaneden); also 'found from hospital' is odd",
+   "fix_target": "Siz biraz önce hastanede buldunuz.",
+   "fix_english": "You found it at the hospital a moment ago."
+  },
+  {
+   "id": "tr-0205",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "WRONG CASE: 'havaalanında geldik' must be dative 'havaalanına'",
+   "fix_target": "Biz iki gün önce havaalanına geldik.",
+   "fix_english": "We arrived at the airport two days ago."
+  },
+  {
+   "id": "tr-0210",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "scrambled word order ('sık sık Balıkçı...'), and 'sabırla'=patiently mismatches gloss 'quickly'",
+   "fix_target": "Balıkçı her sabah göl kenarında sabırla balık tutuyor.",
+   "fix_english": "The fisherman patiently fishes by the lake every morning."
+  },
+  {
+   "id": "tr-0243",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "WRONG CASE: 'hastanede gidecek' must be dative 'hastaneye'",
+   "fix_target": "O yakında hastaneye gidecek.",
+   "fix_english": "He/She will go to the hospital soon."
+  },
+  {
+   "id": "tr-0257",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'farmer sold the story at the stadium' is semantic word salad",
+   "fix_target": "Çiftçi sebzeleri pazarda sattı.",
+   "fix_english": "The farmer sold the vegetables at the market."
+  },
+  {
+   "id": "tr-0258",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "malformed accusative 'baklavaı' must be 'baklavayı'",
+   "fix_target": "Turistler baklavayı restoranda yedi.",
+   "fix_english": "The tourists ate the baklava at the restaurant."
+  },
+  {
+   "id": "tr-0325",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Wrong case: 'bahçede gideceğiz' must be dative 'bahçeye'.",
+   "fix_target": "Biz yakında bahçeye gideceğiz.",
+   "fix_english": "We will go to the garden soon."
+  },
+  {
+   "id": "tr-0331",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Wrong case: 'okulda gidecek' must be 'okula gidecek'.",
+   "fix_target": "O önümüzdeki yıl okula gidecek.",
+   "fix_english": "He/She will go to school next year."
+  },
+  {
+   "id": "tr-0346",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'şiiri boyadı' = painted the poem: semantic absurdity.",
+   "fix_target": "Dedem eski sandalyeyi bahçede boyadı.",
+   "fix_english": "My grandfather painted the old chair in the garden."
+  },
+  {
+   "id": "tr-0354",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Wrong case: 'kütüphanede gideceğiz' must be dative 'kütüphaneye'.",
+   "fix_target": "Biz ileride kütüphaneye gideceğiz.",
+   "fix_english": "We will go to the library in the future."
+  },
+  {
+   "id": "tr-0361",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Wrong case: 'mutfakta gideceksiniz' must be dative 'mutfağa'.",
+   "fix_target": "Siz ileride mutfağa gideceksiniz.",
+   "fix_english": "You (formal) will go to the kitchen in the future."
+  },
+  {
+   "id": "tr-0370",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Wrong case: 'plajda geleceğim' must be 'plaja'; gloss 'go' vs gelmek 'come'.",
+   "fix_target": "Ben önümüzdeki yıl plaja gideceğim.",
+   "fix_english": "I will go to the beach next year."
+  },
+  {
+   "id": "tr-0372",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Wrong case: 'kütüphanede geleceğiz' must be dative 'kütüphaneye'.",
+   "fix_target": "Biz gelecek hafta kütüphaneye gideceğiz.",
+   "fix_english": "We will go to the library next week."
+  },
+  {
+   "id": "tr-0377",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Wrong case: 'kütüphanede gideceksiniz' must be dative 'kütüphaneye'.",
+   "fix_target": "Siz önümüzdeki yıl kütüphaneye gideceksiniz.",
+   "fix_english": "You will go to the library next year."
+  },
+  {
+   "id": "tr-0402",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Scrambled word order 'pahalı tohum göl kenarında temizledi' + tense mismatch (her sabah...temizledi).",
+   "fix_target": "Fatma her sabah göl kenarında tohumları temizlerdi.",
+   "fix_english": "Fatma used to clean the seeds by the lake every morning."
+  },
+  {
+   "id": "tr-0410",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'romanı dikti' absurd (sew/plant a novel); typo 'romani'.",
+   "fix_target": "Kaptan romanı sokakta okudu.",
+   "fix_english": "The captain read the novel on the street."
+  },
+  {
+   "id": "tr-0413",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'böreği tamir etti' = repaired the pastry: absurd; typo 'böreki'.",
+   "fix_target": "Çiftçi çiti yüzme havuzunun yanında tamir etti.",
+   "fix_english": "The farmer repaired the fence next to the swimming pool."
+  },
+  {
+   "id": "tr-0439",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'restorana yazdı' = wrote to the restaurant, but gloss says 'went'—mismatch.",
+   "fix_target": "Arkeolog dün restorana gitti.",
+   "fix_english": "The archaeologist went to the restaurant yesterday."
+  },
+  {
+   "id": "tr-0481",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Word salad 'soğuk kuş...boyadı' (painted cold bird) + tense mismatch (her sabah...boyadı).",
+   "fix_target": "Arkeolog her sabah stadyumda eski duvarları boyardı.",
+   "fix_english": "The archaeologist used to paint the old walls at the stadium every morning."
+  },
+  {
+   "id": "tr-0488",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'taze tren' (fresh train) absurd adjective+noun; word salad.",
+   "fix_target": "Hemşire öğleden sonra pazarda taze balık gördü.",
+   "fix_english": "The nurse saw fresh fish at the market in the afternoon."
+  },
+  {
+   "id": "tr-0491",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Subject-verb disagreement: 'Ben...hazırladı...döndü' must agree with 'ben'.",
+   "fix_target": "Ben bazen alışveriş listesi hazırlarım ve eve dönerim.",
+   "fix_english": "Sometimes I prepare a shopping list and return home."
+  },
+  {
+   "id": "tr-0496",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'uzun tren...tamir etti' absurd (repairing a train at a pool).",
+   "fix_target": "Ali dün yüzme havuzunda bozuk pompayı tamir etti.",
+   "fix_english": "Ali repaired the broken pump at the swimming pool yesterday."
+  },
+  {
+   "id": "tr-0498",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'kolay kurabiye...temizledi' absurd (cleaned easy cookie); objectless structure.",
+   "fix_target": "Diş hekimi öğleden sonra tiyatroda koltukları temizledi.",
+   "fix_english": "The dentist cleaned the seats at the theater in the afternoon."
+  },
+  {
+   "id": "tr-0499",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'yalancı gemi...tamir etti' absurd (repaired a fake ship at the mosque).",
+   "fix_target": "Diş hekimi bayramda camide kapıyı tamir etti.",
+   "fix_english": "The dentist repaired the door at the mosque during the holiday."
+  },
+  {
+   "id": "tr-0500",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'gürültülü dolma...pişirdi' absurd adjective (noisy dolma).",
+   "fix_target": "Diş hekimi dün akşam restoranda dolma pişirdi.",
+   "fix_english": "The dentist cooked dolma at the restaurant last night."
+  },
+  {
+   "id": "tr-0501",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'tuzlu mektup...boyadı' absurd (painted a salty letter).",
+   "fix_target": "Annem geçen hafta odayı mavi renge boyadı.",
+   "fix_english": "My mother painted the room blue last week."
+  },
+  {
+   "id": "tr-0503",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'sadyuma' + 'stadyuma topladı' objectless/odd.",
+   "fix_target": "Yazar akşamüstü stadyumda notlarını topladı.",
+   "fix_english": "The writer gathered his notes at the stadium in the late afternoon."
+  },
+  {
+   "id": "tr-0542",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Semantic absurdity: painting a magazine at the theater",
+   "fix_target": "Fırıncı dergiyi tiyatroda okudu.",
+   "fix_english": "The baker read the magazine at the theater."
+  },
+  {
+   "id": "tr-0543",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'kebapi' + absurd (vet selling kebab at theater)",
+   "fix_target": "Veteriner kediyi klinikte muayene etti.",
+   "fix_english": "The vet examined the cat at the clinic."
+  },
+  {
+   "id": "tr-0557",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Word-salad, lowercase start, absurd (crying in wonder at post office)",
+   "fix_target": "Kardeşim şafakta postanede sırada bekliyor.",
+   "fix_english": "At dawn my sibling is waiting in line at the post office."
+  },
+  {
+   "id": "tr-0560",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Tense mismatch (dün akşam + present continuous), word-salad",
+   "fix_target": "Garson dün akşam lokantada isteksizce çalıştı.",
+   "fix_english": "Last night the waiter worked reluctantly at the restaurant."
+  },
+  {
+   "id": "tr-0575",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Subject/object confusion: 'ice cream loves both'",
+   "fix_target": "Dondurmayı sıcak havada hem büyükler hem küçükler sever.",
+   "fix_english": "In hot weather both grown-ups and children love ice cream."
+  },
+  {
+   "id": "tr-0583",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'kebapi' + odd (fisherman selling kebab at butcher)",
+   "fix_target": "Balıkçı balığı tezgâhta sattı.",
+   "fix_english": "The fisherman sold the fish at the stall."
+  },
+  {
+   "id": "tr-0586",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Nonsense: precipice helping learn geography",
+   "fix_target": "Bu harita sayesinde coğrafya öğrenmek kolaylaştı.",
+   "fix_english": "Thanks to this map, learning geography became easier."
+  },
+  {
+   "id": "tr-0588",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Nonsense: pot helping learn journalism",
+   "fix_target": "Bu kitap sayesinde gazetecilik öğrenmek kolaylaştı.",
+   "fix_english": "Thanks to this book, learning journalism became easier."
+  },
+  {
+   "id": "tr-0595",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Subject-verb disagreement: 'Ben...anlamadı'",
+   "fix_target": "Ben markette hiçbir şey anlamadım.",
+   "fix_english": "I didn't understand anything at the market."
+  },
+  {
+   "id": "tr-0602",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'mektupi' + gloss mismatch (letter vs 'something')",
+   "fix_target": "Komşular bahçede sebze sattı.",
+   "fix_english": "The neighbors sold vegetables in the garden."
+  },
+  {
+   "id": "tr-0612",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo/nonsense 'hasanee' (should be hastaneye)",
+   "fix_target": "Pilot her sabah havaalanına gitti.",
+   "fix_english": "The pilot went to the airport every morning."
+  },
+  {
+   "id": "tr-0631",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'hastanneden' + odd (sewed from the hospital)",
+   "fix_target": "Annem eteği evde düzgünce dikti.",
+   "fix_english": "My mother sewed the skirt neatly at home."
+  },
+  {
+   "id": "tr-0634",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'kitapi' + absurd (cleaned the book on mountain)",
+   "fix_target": "Avukat kitabı ofiste okudu.",
+   "fix_english": "The lawyer read the book at the office."
+  },
+  {
+   "id": "tr-0640",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'dolmaı' + odd (found dolma on the bridge)",
+   "fix_target": "Anneannem dolmayı mutfakta yaptı.",
+   "fix_english": "My grandmother made the stuffed grape leaves in the kitchen."
+  },
+  {
+   "id": "tr-0652",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'pilavi' + odd (chef started the rice at the gym)",
+   "fix_target": "Aşçı pilavı mutfakta pişirdi.",
+   "fix_english": "The chef cooked the rice in the kitchen."
+  },
+  {
+   "id": "tr-0656",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'bankaa' + incomplete 'topladı' (collected what?)",
+   "fix_target": "Diş hekimi sabahleyin bankada para çekti.",
+   "fix_english": "The dentist withdrew money at the bank in the morning."
+  },
+  {
+   "id": "tr-0705",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Wrong locative 'hastane'ta' (should be hastanede) + odd verb",
+   "fix_target": "Veteriner onları klinikte muayene etti.",
+   "fix_english": "The vet examined them at the clinic."
+  },
+  {
+   "id": "tr-0706",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'kebapi' + odd (bought kebab at pharmacy)",
+   "fix_target": "Yazar ilacı eczaneden aldı.",
+   "fix_english": "The writer bought the medicine from the pharmacy."
+  },
+  {
+   "id": "tr-0710",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Nonsense: memory helping learn advertising",
+   "fix_target": "Bu kurs sayesinde reklamcılık öğrenmek kolaylaştı.",
+   "fix_english": "Thanks to this course, learning advertising became easier."
+  },
+  {
+   "id": "tr-0752",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Wrong dative 'havalimanı'ya' + odd 'basınç yüzünden'",
+   "fix_target": "Yağmur yüzünden havalimanına gidemedik.",
+   "fix_english": "We couldn't go to the airport because of the rain."
+  },
+  {
+   "id": "tr-0756",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'bankaa' + gloss mismatch (topladı vs 'sold')",
+   "fix_target": "Fatma hafta içi bankada para yatırdı.",
+   "fix_english": "Fatma deposited money at the bank on weekdays."
+  },
+  {
+   "id": "tr-0775",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'çorbaı' + odd (bought soup at swimming pool)",
+   "fix_target": "Diş hekimi çorbayı lokantada içti.",
+   "fix_english": "The dentist had the soup at the restaurant."
+  },
+  {
+   "id": "tr-0787",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Subject-verb disagreement: 'Ben...yıkadı' must be 'yıkadım'",
+   "fix_target": "Ben bugün bulaşık yıkadım çünkü zamanım vardı.",
+   "fix_english": "I washed the dishes today because I had time."
+  },
+  {
+   "id": "tr-0847",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'buldu' (found) mismatches English 'said'; missing object, ablative odd",
+   "fix_target": "Fatma anahtarını restoranda hızlıca buldu.",
+   "fix_english": "Fatma quickly found her key at the restaurant."
+  },
+  {
+   "id": "tr-0849",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Transitive 'bıraktı' with no object; 'left the kitchen' needs 'ayrıldı'",
+   "fix_target": "Balıkçı mutfaktan coşkuyla ayrıldı.",
+   "fix_english": "The fisherman left the kitchen enthusiastically."
+  },
+  {
+   "id": "tr-0850",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'hastanneden'; 'gitti' should be 'ayrıldı' for leaving",
+   "fix_target": "Öğrenciler hastaneden dikkatle ayrıldı.",
+   "fix_english": "The students left the hospital carefully."
+  },
+  {
+   "id": "tr-0852",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'hastanneden'; 'buldu' with no object, ablative wrong",
+   "fix_target": "Dedem anahtarını hastanede sessizce buldu.",
+   "fix_english": "My grandfather quietly found his key at the hospital."
+  },
+  {
+   "id": "tr-0853",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Transitive 'sattı' with no object; incoherent",
+   "fix_target": "Babaanne evini mutlulukla sattı.",
+   "fix_english": "Grandmother happily sold her house."
+  },
+  {
+   "id": "tr-0854",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'bahçeden pişirdi' wrong case + no object; should be locative",
+   "fix_target": "Çocuklar yemeği bahçede güzelce pişirdi.",
+   "fix_english": "The children cooked the meal nicely in the garden."
+  },
+  {
+   "id": "tr-0856",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'bitirdi' with no object, ablative odd",
+   "fix_target": "Öğrenciler alışverişi markette düzgünce bitirdi.",
+   "fix_english": "The students finished the shopping neatly at the market."
+  },
+  {
+   "id": "tr-0858",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'yaptı' with no object, ablative wrong",
+   "fix_target": "Çiftçi müzede merakla resim yaptı.",
+   "fix_english": "The farmer curiously drew a picture at the museum."
+  },
+  {
+   "id": "tr-0860",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'bahçee'; 'bıraktı' with no object",
+   "fix_target": "Eczacı kışın arabayı bahçeye bıraktı.",
+   "fix_english": "The pharmacist left the car in the garden in winter."
+  },
+  {
+   "id": "tr-0861",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'ofise yazdı'(wrote to office) mismatches English 'went'",
+   "fix_target": "Eczacı kışın ofise gitti.",
+   "fix_english": "The pharmacist went to the office in winter."
+  },
+  {
+   "id": "tr-0865",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'postanneden'; 'postaneden başladı' wrong case",
+   "fix_target": "Çiftçi işe postanede dikkatle başladı.",
+   "fix_english": "The farmer carefully started the work at the post office."
+  },
+  {
+   "id": "tr-0871",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'tamir etti' with no object; English 'made' vague",
+   "fix_target": "Şoför arabayı okulda düzgünce tamir etti.",
+   "fix_english": "The driver neatly repaired the car at school."
+  },
+  {
+   "id": "tr-0928",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'otenlden'; 'başladı'(started) vs English 'left'",
+   "fix_target": "Onlar otelden aceleyle ayrıldı.",
+   "fix_english": "They left the hotel hastily."
+  },
+  {
+   "id": "tr-0930",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'istansyondan'; 'bıraktı' with no object",
+   "fix_target": "Çiftçi istasyondan öfkeyle ayrıldı.",
+   "fix_english": "The farmer left the station angrily."
+  },
+  {
+   "id": "tr-0931",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'gördü'(saw) mismatches English 'bought'; ablative odd",
+   "fix_target": "Psikolog restorandan dikkatle yemek aldı.",
+   "fix_english": "The psychologist carefully bought food from the restaurant."
+  },
+  {
+   "id": "tr-0932",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'postanneden'; 'yaptı' no object, English 'repaired' mismatch",
+   "fix_target": "Ressam resmi dikkatle yaptı.",
+   "fix_english": "The painter carefully made the painting."
+  },
+  {
+   "id": "tr-0933",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'postanneden'; 'okudu'(read) mismatches English 'sold'",
+   "fix_target": "Öğretmen mektubu postanede dikkatle okudu.",
+   "fix_english": "The teacher carefully read the letter at the post office."
+  },
+  {
+   "id": "tr-0935",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'tamir etti'(repaired) mismatches English 'collected'; no object",
+   "fix_target": "Dedem arabayı düzgünce tamir etti.",
+   "fix_english": "My grandfather neatly repaired the car."
+  },
+  {
+   "id": "tr-0938",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'tamir etti'(repaired) mismatches English 'painted'; no object",
+   "fix_target": "Anneanne makineyi ciddiyetle tamir etti.",
+   "fix_english": "My grandmother seriously repaired the machine."
+  },
+  {
+   "id": "tr-0978",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'topladı' with missing object; incomplete",
+   "fix_target": "Hasan eşyalarını ofisten öfkeyle topladı.",
+   "fix_english": "Hasan angrily gathered his things from the office."
+  },
+  {
+   "id": "tr-0979",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'otenlden'; 'temizledi'(cleaned) mismatches English 'wrote'",
+   "fix_target": "O oteli coşkuyla temizledi.",
+   "fix_english": "He/She enthusiastically cleaned the hotel."
+  },
+  {
+   "id": "tr-0980",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'istansyondan'; 'bitirdi'(finished) mismatches English 'started'",
+   "fix_target": "Eczacı işini istasyonda güzelce bitirdi.",
+   "fix_english": "The pharmacist nicely finished her work at the station."
+  },
+  {
+   "id": "tr-0981",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'dikti'(sewed) mismatches English 'started'; ablative odd",
+   "fix_target": "Dedem düğmeyi üzüntüyle dikti.",
+   "fix_english": "My grandfather sadly sewed the button."
+  },
+  {
+   "id": "tr-0984",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'yaptı' with no object; 'did it' vague, ablative odd",
+   "fix_target": "Şoför işini bankada merakla yaptı.",
+   "fix_english": "The driver curiously did his work at the bank."
+  },
+  {
+   "id": "tr-0985",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'eczaneden temizledi' wrong case + no object",
+   "fix_target": "Kardeşim eczaneyi sabırla temizledi.",
+   "fix_english": "My sibling patiently cleaned the pharmacy."
+  },
+  {
+   "id": "tr-0986",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'yazdı' with no object; 'mutfaktan yazdı' odd",
+   "fix_target": "Çocuklar mutfakta öfkeyle mektup yazdı.",
+   "fix_english": "The children angrily wrote a letter in the kitchen."
+  },
+  {
+   "id": "tr-0987",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'söyledi' with no content object; 'ofisten söyledi' odd",
+   "fix_target": "Arkeolog haberi ofiste dikkatsizce söyledi.",
+   "fix_english": "The archaeologist carelessly said the news at the office."
+  },
+  {
+   "id": "tr-0989",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'yaptı' with no object; 'did it' vague",
+   "fix_target": "Babaanne işini bankada sabırla yaptı.",
+   "fix_english": "My grandmother patiently did her work at the bank."
+  },
+  {
+   "id": "tr-0990",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'yazdı' with no object; ablative odd",
+   "fix_target": "Arkadaşlar bankada neşeyle çek yazdı.",
+   "fix_english": "The friends cheerfully wrote a check at the bank."
+  },
+  {
+   "id": "tr-0992",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'otenlden'; 'gitti' should be 'ayrıldı' for leaving",
+   "fix_target": "Ressam otelden sabırla ayrıldı.",
+   "fix_english": "The painter patiently left the hotel."
+  },
+  {
+   "id": "tr-0997",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'temizledi' with no object; ablative odd",
+   "fix_target": "Garson masayı ciddiyetle temizledi.",
+   "fix_english": "The waiter seriously cleaned the table."
+  },
+  {
+   "id": "tr-0998",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'sattı' with no object; ablative odd",
+   "fix_target": "Diş hekimi ofisini dikkatsizce sattı.",
+   "fix_english": "The dentist carelessly sold his office."
+  },
+  {
+   "id": "tr-1005",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Typo 'postanneden'; 'boyadı' no object, ablative odd",
+   "fix_target": "Ressam duvarı ciddiyetle boyadı.",
+   "fix_english": "The painter seriously painted the wall."
+  },
+  {
+   "id": "tr-1054",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'pişirdi' cooked-from-museum is nonsense",
+   "fix_target": "Müzisyen müzede üzgün bir şarkı çaldı.",
+   "fix_english": "The musician played a sad song at the museum."
+  },
+  {
+   "id": "tr-1076",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "subject-verb disagreement: Ben...istemedi should be istemedim",
+   "fix_target": "Ben havaalanında hiçbir şey istemedim.",
+   "fix_english": "I didn't want anything at the airport."
+  },
+  {
+   "id": "tr-1090",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "gitti=went but gloss says 'found'; objectless",
+   "fix_target": "Kaptan evden güzelce ayrıldı.",
+   "fix_english": "The captain left home nicely."
+  },
+  {
+   "id": "tr-1091",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "söyledi=said but gloss 'wrote'; empty",
+   "fix_target": "Onlar parkta yüksek sesle şarkı söyledi.",
+   "fix_english": "They sang loudly in the park."
+  },
+  {
+   "id": "tr-1125",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "pişirdi cooked-from-park nonsense",
+   "fix_target": "Psikolog parkta yavaşça yürüdü.",
+   "fix_english": "The psychologist walked slowly in the park."
+  },
+  {
+   "id": "tr-1129",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "typo 'postanneden' + pişirdi-from-post-office nonsense",
+   "fix_target": "Babaannem postaneden yavaşça çıktı.",
+   "fix_english": "My grandmother slowly walked out of the post office."
+  },
+  {
+   "id": "tr-1164",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "typo 'otenlden' + yaptı=made vs gloss 'finished'",
+   "fix_target": "Garson otelde mutlulukla çalıştı.",
+   "fix_english": "The waiter worked happily at the hotel."
+  },
+  {
+   "id": "tr-1165",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "typo 'standyumdan' + dikti=sewed vs gloss 'cooked'",
+   "fix_target": "Annem dikkatle bir elbise dikti.",
+   "fix_english": "My mother carefully sewed a dress."
+  },
+  {
+   "id": "tr-1183",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'zor eldiven', scrambled order",
+   "fix_target": "Ali öğleden sonra bahçede eldivenlerini topladı.",
+   "fix_english": "Ali gathered his gloves in the garden in the afternoon."
+  },
+  {
+   "id": "tr-1192",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "typo 'standyumdan' + gördü=saw vs gloss 'cleaned'",
+   "fix_target": "Mühendis stadyumda maçı üzüntüyle izledi.",
+   "fix_english": "The engineer watched the match sadly at the stadium."
+  },
+  {
+   "id": "tr-1194",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "typo 'postanneden' + başladı vs gloss 'cooked'",
+   "fix_target": "Dedem postaneden öfkeyle çıktı.",
+   "fix_english": "My grandfather left the post office angrily."
+  },
+  {
+   "id": "tr-1207",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'akıllı ödev' intrusion; konuşuyor odd",
+   "fix_target": "Arkadaşlar ödevi birlikte konuşuyor.",
+   "fix_english": "The friends are discussing the homework together."
+  },
+  {
+   "id": "tr-1238",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "oturuyorsun=sit vs gloss 'read'; 'roman oturuyorsun'",
+   "fix_target": "Sen plajda roman okuyorsun.",
+   "fix_english": "You are reading a novel at the beach."
+  },
+  {
+   "id": "tr-1239",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'roman yapıyoruz'=make a novel vs gloss 'cook'",
+   "fix_target": "Biz mutfakta yemek yapıyoruz.",
+   "fix_english": "We are cooking in the kitchen."
+  },
+  {
+   "id": "tr-1241",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "typo 'hastanneden' + bıraktı vs gloss 'saw'",
+   "fix_target": "Müdür hastaneden aceleyle ayrıldı.",
+   "fix_english": "The director hurriedly left the hospital."
+  },
+  {
+   "id": "tr-1242",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "typo 'standyumdan' + başladı vs gloss 'went'",
+   "fix_target": "Öğretmen stadyumdan isteksizce ayrıldı.",
+   "fix_english": "The teacher reluctantly left the stadium."
+  },
+  {
+   "id": "tr-1257",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'saat fotoğraf' intrusion (photograph a watch)",
+   "fix_target": "Onlar ormanda fotoğraf çekiyorlar.",
+   "fix_english": "They are taking photos in the forest."
+  },
+  {
+   "id": "tr-1260",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'parka okudu' wrong case + okumak vs gloss 'said'",
+   "fix_target": "Fotoğrafçı öğleden sonra parkta kitap okudu.",
+   "fix_english": "The photographer read a book in the park in the afternoon."
+  },
+  {
+   "id": "tr-1264",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "typo 'istansyondan' + tamir etti vs gloss 'wrote'",
+   "fix_target": "Avukat istasyonda ciddiyetle çalıştı.",
+   "fix_english": "The lawyer worked seriously at the station."
+  },
+  {
+   "id": "tr-1297",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'tablet tercüme' intrusion (translate a tablet)",
+   "fix_target": "Fotoğrafçı stadyumda tabletiyle çalışıyor.",
+   "fix_english": "The photographer is working with his tablet at the stadium."
+  },
+  {
+   "id": "tr-1298",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "typo 'müze'da' + 'hiçbir zaman alıştı' needs negative",
+   "fix_target": "Masör müzeye hiçbir zaman alışamadı.",
+   "fix_english": "The masseur never got used to the museum."
+  },
+  {
+   "id": "tr-1306",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Passive 'dezenfekte olarak sterilize edildi' means the surgeon himself was sterilized; contradicts gloss.",
+   "fix_target": "Cerrah ameliyat öncesinde ellerini titizlikle dezenfekte edip sterilize etti.",
+   "fix_english": "The surgeon meticulously disinfected and sterilized his hands before the operation."
+  },
+  {
+   "id": "tr-1309",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'ödev gidiyorlar' is ungrammatical; should be 'ödev yapıyorlar'.",
+   "fix_target": "Onlar mutfakta ödev yapıyorlar.",
+   "fix_english": "They do homework in the kitchen."
+  },
+  {
+   "id": "tr-1417",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'kalın saat' (thick watch) is nonsense filler.",
+   "fix_target": "Kaptan güvertede fotoğraf çekiyor.",
+   "fix_english": "The captain is taking photos on the deck."
+  },
+  {
+   "id": "tr-1419",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Scrambled; 'manav yavaşça bekliyor' missing case, tense mismatch with gloss.",
+   "fix_target": "Çiftçi birazdan manavın önünde bekleyecek.",
+   "fix_english": "Soon the farmer will wait in front of the greengrocer."
+  },
+  {
+   "id": "tr-1423",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Scrambled; butcher repairing on a bridge with no object is odd.",
+   "fix_target": "Kasap bu sabah tezgâhını coşkuyla tamir ediyor.",
+   "fix_english": "This morning the butcher enthusiastically repairs his counter."
+  },
+  {
+   "id": "tr-1426",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'büyük aslan alışveriş merkezinde buldu' (found a lion at the mall) is absurd.",
+   "fix_target": "O her gün alışveriş merkezinde güzel fırsatlar buldu.",
+   "fix_english": "He found good deals at the shopping mall every day."
+  },
+  {
+   "id": "tr-1437",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'gazete yazıyorsun' (writing) contradicts gloss 'reading'.",
+   "fix_target": "Sen şimdi gazete okuyorsun.",
+   "fix_english": "You are reading the newspaper now."
+  },
+  {
+   "id": "tr-1438",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'okulda seviyoruz' (we love) contradicts gloss 'having fun'.",
+   "fix_target": "Biz şimdi okulda eğleniyoruz.",
+   "fix_english": "We are having fun at school right now."
+  },
+  {
+   "id": "tr-1452",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'kitap yapıyorlar' (making books) contradicts gloss 'read books'.",
+   "fix_target": "Onlar sık sık kitap okuyorlar.",
+   "fix_english": "They often read books."
+  },
+  {
+   "id": "tr-1457",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'rapor anlıyorum' (understand) contradicts gloss 'reading'.",
+   "fix_target": "Ben şu anda raporu okuyorum.",
+   "fix_english": "I am reading the report right now."
+  },
+  {
+   "id": "tr-1458",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'gazete yazıyorlar' (writing) contradicts gloss 'read'.",
+   "fix_target": "Onlar her sabah gazete okuyorlar.",
+   "fix_english": "They read the newspaper every morning."
+  },
+  {
+   "id": "tr-1459",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Wrong case: 'okulda gittin' must be 'okula gittin' (dative).",
+   "fix_target": "Sen az önce okula gittin.",
+   "fix_english": "You went to school just now."
+  },
+  {
+   "id": "tr-1469",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'otelde alacağız' (will buy) contradicts gloss 'will stay'.",
+   "fix_target": "Biz önümüzdeki yıl otelde kalacağız.",
+   "fix_english": "We will stay at the hotel next year."
+  },
+  {
+   "id": "tr-1476",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'havaalanından yaptım' is incomplete nonsense (no object).",
+   "fix_target": "Ben iki gün önce havaalanında check-in yaptım.",
+   "fix_english": "I checked in at the airport two days ago."
+  },
+  {
+   "id": "tr-1481",
+   "q": "Q2",
+   "rating": 2,
+   "type": "both",
+   "issue": "'stadyum daha sert olsun' odd; English gloss has untranslated Turkish words.",
+   "fix_target": "İstiyorum ki antrenman daha sıkı olsun.",
+   "fix_english": "I want the training to be tougher."
+  },
+  {
+   "id": "tr-1513",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'kitap temizledi' (cleaned the book) is nonsense.",
+   "fix_target": "Hemşire dün odayı temizledi.",
+   "fix_english": "The nurse cleaned the room yesterday."
+  },
+  {
+   "id": "tr-1521",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'restoranda alacaksınız' (will buy) contradicts gloss 'will eat'.",
+   "fix_target": "Siz birazdan restoranda yiyeceksiniz.",
+   "fix_english": "You will eat at the restaurant in a moment."
+  },
+  {
+   "id": "tr-1523",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'roman içiyorsunuz' (drink novels) contradicts gloss 'read'.",
+   "fix_target": "Siz sık sık roman okuyorsunuz.",
+   "fix_english": "You often read novels."
+  },
+  {
+   "id": "tr-1524",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'roman içiyoruz' (drink a novel) contradicts gloss 'reading'.",
+   "fix_target": "Biz şu anda roman okuyoruz.",
+   "fix_english": "We are reading a novel right now."
+  },
+  {
+   "id": "tr-1526",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'şiir içiyorsun' (drink poetry) contradicts gloss 'read'.",
+   "fix_target": "Sen bu aralar şiir okuyorsun.",
+   "fix_english": "You read poetry these days."
+  },
+  {
+   "id": "tr-1534",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Wrong case: 'restoranda gittin' must be 'restorana gittin' (dative).",
+   "fix_target": "Sen biraz önce restorana gittin.",
+   "fix_english": "You went to the restaurant a moment ago."
+  },
+  {
+   "id": "tr-1536",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Scrambled; 'yakında ... koşuyor' tense mismatch and word order.",
+   "fix_target": "Fırıncı her sabah parkta hızlıca koşuyor.",
+   "fix_english": "The baker runs quickly in the park every morning."
+  },
+  {
+   "id": "tr-1562",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "subject-verb disagreement Siz...koşuyor + nonsense meaning",
+   "fix_target": "Siz kütüphanede sessizce ders çalışıyorsunuz.",
+   "fix_english": "You are studying quietly in the library."
+  },
+  {
+   "id": "tr-1564",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad (photographing a bus at the swimming pool), missing accusative",
+   "fix_target": "Başkan havuz kenarında fotoğraf çekiyor.",
+   "fix_english": "The president is taking photos by the pool."
+  },
+  {
+   "id": "tr-1592",
+   "q": "Q3",
+   "rating": 2,
+   "type": "both",
+   "issue": "word salad 'tatlı anahtar' + English gloss says sewed, Turkish says gördü",
+   "fix_target": "Arkeolog gün batımında okulda eski bir anahtar gördü.",
+   "fix_english": "The archaeologist saw an old key at school at sunset."
+  },
+  {
+   "id": "tr-1594",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'mantar söyledi' (said a mushroom)",
+   "fix_target": "Ali gece alışveriş merkezinde mutlu bir şarkı söyledi.",
+   "fix_english": "Ali happily sang a song at the shopping mall at night."
+  },
+  {
+   "id": "tr-1603",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad, making sweet vegetables at a swimming pool",
+   "fix_target": "Mehmet öğleden sonra mutfakta sebze yemeği yaptı.",
+   "fix_english": "Mehmet made a vegetable dish in the kitchen in the afternoon."
+  },
+  {
+   "id": "tr-1605",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "English gloss (archaeologist/key) has nothing to do with the Turkish sentence",
+   "fix_target": "Psikolog onları dinledi ve duygusal zekâlarını geliştirmelerini önerdi.",
+   "fix_english": "The psychologist listened to them and advised them to develop their emotional intelligence."
+  },
+  {
+   "id": "tr-1606",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'tuzlu gemi' (salty ship) started at swimming pool",
+   "fix_target": "Yazar geçen hafta yeni romanına başladı.",
+   "fix_english": "The writer started his new novel last week."
+  },
+  {
+   "id": "tr-1613",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'şiir uyuyorsun' (sleep a poem)",
+   "fix_target": "Sen bugünlerde şiir yazıyorsun.",
+   "fix_english": "You are writing poetry these days."
+  },
+  {
+   "id": "tr-1629",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "semantic absurdity, repairing a blanket with a wrench + missing accusative",
+   "fix_target": "Balıkçı İngiliz anahtarı kullanarak musluğu onardı.",
+   "fix_english": "The fisherman repaired the tap using a wrench."
+  },
+  {
+   "id": "tr-1641",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'hızlı yemek başladı' + gloss 'wrote' mismatch",
+   "fix_target": "Aşçı öğleden sonra mutfakta yemeğe başladı.",
+   "fix_english": "The chef started cooking in the kitchen in the afternoon."
+  },
+  {
+   "id": "tr-1647",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'ince taksi aldı' (collected thin taxi)",
+   "fix_target": "Garson geçen yıl deniz kıyısında taksiye bindi.",
+   "fix_english": "The waiter got in a taxi by the sea last year."
+  },
+  {
+   "id": "tr-1648",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'küçük çiçek yazdı' + gelecek ay (next month) with past tense",
+   "fix_target": "Başkan geçen ay deniz kıyısında bir kitap yazdı.",
+   "fix_english": "The president wrote a book by the sea last month."
+  },
+  {
+   "id": "tr-1649",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'hafif şemsiye okudu' (read a light umbrella)",
+   "fix_target": "Fotoğrafçı bu sabah göl kenarında kitap okudu.",
+   "fix_english": "The photographer read a book by the lake this morning."
+  },
+  {
+   "id": "tr-1678",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'yalancı şemsiye yaptı' (made a lying umbrella)",
+   "fix_target": "Babaanne akşamüstü pazarda alışveriş yaptı.",
+   "fix_english": "Grandmother did shopping at the market in the evening."
+  },
+  {
+   "id": "tr-1722",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'sert dolma söyledi' (said hard dolma)",
+   "fix_target": "Babam akşamüstü mutfakta dolma yaptı.",
+   "fix_english": "My father made stuffed grape leaves in the kitchen in the evening."
+  },
+  {
+   "id": "tr-1728",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'eski kartal topladı' + gelecek hafta with past tense",
+   "fix_target": "Ressam geçen hafta göl kenarında resim yaptı.",
+   "fix_english": "The painter painted by the lake last week."
+  },
+  {
+   "id": "tr-1733",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'yumuşak baklava tamir etti' (repaired soft baklava)",
+   "fix_target": "Anneanne öğleden sonra alışveriş merkezinden baklava aldı.",
+   "fix_english": "Grandmother bought baklava from the shopping mall in the afternoon."
+  },
+  {
+   "id": "tr-1772",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'ucuz araba temizledi' + gloss 'started' mismatch",
+   "fix_target": "Diş hekimi sık sık arabasını temizler.",
+   "fix_english": "The dentist often cleans his car."
+  },
+  {
+   "id": "tr-1774",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'sert telefon tamir etti' (repaired a hard phone)",
+   "fix_target": "Avukat her sabah göl kenarında telefonla konuşur.",
+   "fix_english": "The lawyer talks on the phone by the lake every morning."
+  },
+  {
+   "id": "tr-1789",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'plaja sattı' (sold to the beach) missing object + gloss 'sewed' mismatch",
+   "fix_target": "Diş hekimi geçen yıl arabasını sattı.",
+   "fix_english": "The dentist sold his car last year."
+  },
+  {
+   "id": "tr-1805",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'dürüst dergi' (honest magazine); gloss says fashion magazine",
+   "fix_target": "Öğrenciler yazın alışveriş merkezinden bir dergi aldı.",
+   "fix_english": "The students bought a magazine from the shopping mall in summer."
+  },
+  {
+   "id": "tr-1809",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'taze kravat bitirdi' (finished a fresh tie)",
+   "fix_target": "Öğretmen her pazar spor salonunda antrenmanını bitirir.",
+   "fix_english": "The teacher finishes his workout at the gym every Sunday."
+  },
+  {
+   "id": "tr-1818",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'dar çorba boyadı' (painted narrow soup)",
+   "fix_target": "Fotoğrafçı bu akşam konser salonunda fotoğraf çekti.",
+   "fix_english": "The photographer took photos at the concert hall this evening."
+  },
+  {
+   "id": "tr-1819",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word salad 'hafif gemi aldı' (bought a light ship); gloss says equipment",
+   "fix_target": "Aşçı bu sabah alışveriş merkezinden malzeme aldı.",
+   "fix_english": "The chef bought ingredients from the shopping mall this morning."
+  },
+  {
+   "id": "tr-1846",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "English says 'paint the apple' but target 'elma satacak' = will sell an apple; mismatch/absurd",
+   "fix_target": "Ressam yarın bir elma resmi çizecek.",
+   "fix_english": "The painter will draw a picture of an apple tomorrow."
+  },
+  {
+   "id": "tr-1860",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "subject-verb disagreement: 'Ben...yaptı/dinlendi' must be 'yaptım/dinlendim'",
+   "fix_target": "Ben akşamleyin temizlik yaptım sonra dinlendim.",
+   "fix_english": "In the evening I cleaned and then rested."
+  },
+  {
+   "id": "tr-1891",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'bayat motosiklet' (stale motorcycle) semantic mismatch; scrambled",
+   "fix_target": "Avukat öğleden sonra çarşıda eski bir motosiklet buldu.",
+   "fix_english": "The lawyer found an old motorcycle at the bazaar in the afternoon."
+  },
+  {
+   "id": "tr-1894",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'yumuşak mektup' + scrambled word order; unnatural",
+   "fix_target": "Hasan gün batımında havuz kenarında bir mektup yazdı.",
+   "fix_english": "Hasan wrote a letter by the pool at sunset."
+  },
+  {
+   "id": "tr-1947",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "subject-verb disagreement 'Ben...yıkadı/uyudu' must be 'yıkadım/uyudum'",
+   "fix_target": "Ben genellikle çamaşır yıkardım ve sonra uyurdum.",
+   "fix_english": "I usually did the laundry and then slept."
+  },
+  {
+   "id": "tr-1962",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "subject-verb disagreement 'Ben...yaptı/döndü' must be 'yaptım/döndüm'",
+   "fix_target": "Ben öğleden sonra spor yaptım ve eve döndüm.",
+   "fix_english": "In the afternoon I did sports and went home."
+  },
+  {
+   "id": "tr-2001",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "subject-verb disagreement 'Ben...söyledi/sıkılmıştı' must be 1st person",
+   "fix_target": "Ben bu sabah şarkı söyledim çünkü sıkılmıştım.",
+   "fix_english": "I sang this morning because I was bored."
+  },
+  {
+   "id": "tr-2045",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'baklava sokakta pişirdi' odd; gloss 'found' mismatches 'pişirdi'",
+   "fix_target": "Öğrenciler her pazar sokakta ucuz baklava yedi.",
+   "fix_english": "The students ate cheap baklava on the street every Sunday."
+  },
+  {
+   "id": "tr-2094",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Subject-verb disagreement: 'Ben...hazırladı' must be 'hazırladım'; 'zamanı' should be 'zamanım'",
+   "fix_target": "Ben her zaman alışveriş listesi hazırladım çünkü zamanım vardı.",
+   "fix_english": "I always prepared a shopping list because I had time."
+  },
+  {
+   "id": "tr-2142",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'ihanet ile' (with betrayal) is a wrong word; should be 'içtenlikle'",
+   "fix_target": "İlgi ve alakanız için içtenlikle teşekkür ederiz.",
+   "fix_english": "We sincerely thank you for your interest and attention."
+  },
+  {
+   "id": "tr-2166",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Wrong case: 'otelde gideceksin' must be 'otele gideceksin'",
+   "fix_target": "Sen yakında otele gideceksin.",
+   "fix_english": "You will go to the hotel soon."
+  },
+  {
+   "id": "tr-2323",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Subject-verb disagreement: 'Ben...yıkadı...çıktı' must be 'yıkadım...çıktım'",
+   "fix_target": "Ben hafta sonu bulaşık yıkadım sonra dışarı çıktım.",
+   "fix_english": "I washed the dishes on the weekend then went outside."
+  },
+  {
+   "id": "tr-2334",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Subject-verb disagreement: 'Biz...yapmayacak' must be 'yapmayacağız'",
+   "fix_target": "Biz ofiste bir şey yapmayacağız.",
+   "fix_english": "We won't do anything at the office."
+  },
+  {
+   "id": "tr-2342",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "wrong case: gitmek needs dative 'parka', not locative 'parkta'",
+   "fix_target": "O gelecek hafta parka gidecek.",
+   "fix_english": "He/She will go to the park next week."
+  },
+  {
+   "id": "tr-2367",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "wrong case: gelmek needs dative 'bahçeye'",
+   "fix_target": "Ben ileride bahçeye geleceğim.",
+   "fix_english": "I will come to the garden later."
+  },
+  {
+   "id": "tr-2369",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "wrong case: gelmek needs dative 'müzeye'",
+   "fix_target": "Siz ileride müzeye geleceksiniz.",
+   "fix_english": "You (formal) will come to the museum later."
+  },
+  {
+   "id": "tr-2486",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "broken word order 'kaba şapka evde yaptı'",
+   "fix_target": "Dedem bu sabah evde bir şapka yaptı.",
+   "fix_english": "My grandfather made a hat at home this morning."
+  },
+  {
+   "id": "tr-2524",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "word-salady 'mütevazı fosforlu incelemeye'; gloss drops words",
+   "fix_target": "Denizci fosforlu maddeyi incelemeye niyetliydi.",
+   "fix_english": "The sailor intended to examine the phosphorescent substance."
+  },
+  {
+   "id": "tr-2561",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "english is word salad (untranslated dedektif/kunduz), no match",
+   "fix_target": "Patron hemşire bulsun diye bekledik.",
+   "fix_english": "We waited for the boss to find a nurse."
+  },
+  {
+   "id": "tr-2567",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "absurd 'kar fırtınası bulsun'; english untranslated nonsense",
+   "fix_target": "Fırıncı ekmeği pişirsin diye bekledik.",
+   "fix_english": "We waited for the baker to bake the bread."
+  },
+  {
+   "id": "tr-2579",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "missing genitive 'bodrumun'; english untranslated (mimar/kriket)",
+   "fix_target": "Tesisatçı bodrumun tamamlandığını belirtti.",
+   "fix_english": "The plumber stated that the basement was completed."
+  },
+  {
+   "id": "tr-2581",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "semantic absurdity 'felsefe hazır'; missing genitive",
+   "fix_target": "Rahip törenin hazır olduğunu belirtti.",
+   "fix_english": "The priest stated that the ceremony was ready."
+  },
+  {
+   "id": "tr-2605",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "Random adjective 'yalancı gemi' (false ship); English 'schooner' doesn't match, semantically absurd.",
+   "fix_target": "Anneannem geçen hafta sahilde taze balık sattı.",
+   "fix_english": "My grandmother sold fresh fish on the coast last week."
+  },
+  {
+   "id": "tr-2628",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "Word salad 'geniş ağaç ... bıraktı' (left a wide tree); nonsensical.",
+   "fix_target": "Aşçı dün bıçağını deniz kıyısında bıraktı.",
+   "fix_english": "The chef left his knife on the coast yesterday."
+  },
+  {
+   "id": "tr-2641",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Template nonsense 'ardıç ortasında' (in the middle of the juniper); absurd.",
+   "fix_target": "Timsah nehir kenarında özenle ilerliyordu.",
+   "fix_english": "The crocodile was moving carefully along the river's edge."
+  },
+  {
+   "id": "tr-2642",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Nonsense 'demir karşısında' (opposite the iron); absurd.",
+   "fix_target": "Tavşan çimenlerin üzerinde hızla ilerliyordu.",
+   "fix_english": "The rabbit was moving quickly across the grass."
+  },
+  {
+   "id": "tr-2644",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Nonsense 'ılıman dibinde' (at the bottom of the temperate); absurd.",
+   "fix_target": "Kaplan ormanın derinliklerinde şafakta ilerliyordu.",
+   "fix_english": "The tiger was moving through the depths of the forest at dawn."
+  },
+  {
+   "id": "tr-2645",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Semantic absurdity: seagull moving around an orchid.",
+   "fix_target": "Martı limanın çevresinde durmadan dolaşıyordu.",
+   "fix_english": "The seagull was continuously moving around the harbor."
+  },
+  {
+   "id": "tr-2648",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "Word salad 'hızlı gül fırında buldu' (found a fast rose).",
+   "fix_target": "Turistler hafta içi fırında taze ekmek buldu.",
+   "fix_english": "During the week, the tourists found fresh bread at the bakery."
+  },
+  {
+   "id": "tr-2649",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "Word salad 'temiz tavşan postanede boyadı' (painted a clean rabbit).",
+   "fix_target": "Gazeteci hafta sonu postanede bir mektup yolladı.",
+   "fix_english": "On the weekend, the journalist sent a letter at the post office."
+  },
+  {
+   "id": "tr-2715",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "Non-sequitur (boss wore pants because of storm); English gloss is broken with untranslated Turkish words.",
+   "fix_target": "Fırtına çıkınca babam kalın montunu giydi.",
+   "fix_english": "When the storm broke out, my father put on his thick coat."
+  },
+  {
+   "id": "tr-2717",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "Template nonsense; English gloss mismatches (gorilla/kristal vs fok/ırmak).",
+   "fix_target": "Fok ırmağın kıyısında yavaşça ilerliyordu.",
+   "fix_english": "The seal was moving slowly along the riverbank."
+  },
+  {
+   "id": "tr-2722",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "Bureaucratic template with random referent; apostrophe error 'Kasap'daki'; gloss mismatch.",
+   "fix_target": "Kasaptaki et fiyatlarının incelenmesi hususunda arz ederim.",
+   "fix_english": "I respectfully submit the matter of the meat prices at the butcher for examination."
+  },
+  {
+   "id": "tr-2723",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "Bureaucratic template, empty referent 'çip'; gloss mismatch (lizard/stadium).",
+   "fix_target": "Havalimanındaki güvenlik sisteminin incelenmesi hususunda arz ederim.",
+   "fix_english": "I respectfully submit the matter of the security system at the airport for examination."
+  },
+  {
+   "id": "tr-2724",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "Bureaucratic template; 'Mahkeme'daki' locative error; nonsense referent 'don'; gloss mismatch.",
+   "fix_target": "Mahkemedeki dosyanın incelenmesi hususunda arz ederim.",
+   "fix_english": "I respectfully submit the matter of the file at the court for examination."
+  },
+  {
+   "id": "tr-2725",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "Bureaucratic template; apostrophe error; gloss mismatch (klima/mahkeme).",
+   "fix_target": "İstasyondaki arızanın incelenmesi hususunda arz ederim.",
+   "fix_english": "I respectfully submit the matter of the malfunction at the station for examination."
+  },
+  {
+   "id": "tr-2726",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "Bureaucratic template; empty referent; gloss mismatch (limon/park).",
+   "fix_target": "Pansiyondaki tesisatın incelenmesi hususunda arz ederim.",
+   "fix_english": "I respectfully submit the matter of the plumbing at the guesthouse for examination."
+  },
+  {
+   "id": "tr-2728",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "Word salad 'biyoloji çok kalın bir aşamaya geldi'; gloss has untranslated Turkish words.",
+   "fix_target": "Yeni yöntem sayesinde biyoloji önemli bir aşamaya geldi.",
+   "fix_english": "Thanks to the new method, biology has reached an important stage."
+  },
+  {
+   "id": "tr-2732",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Incomplete/nonsense: 'kütüphanede biliyor musun?' (do you know in the library?).",
+   "fix_target": "Kütüphanenin nerede olduğunu biliyor musun?",
+   "fix_english": "Do you know where the library is?"
+  },
+  {
+   "id": "tr-2734",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Incomplete/nonsense: 'sık sık biliyor musunuz?' (do you often know?).",
+   "fix_target": "Buraya sık sık gelir misiniz?",
+   "fix_english": "Do you come here often?"
+  },
+  {
+   "id": "tr-2748",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "Word salad 'yavaş televizyon müzede bıraktı' (left television slowly).",
+   "fix_target": "Annem hafta içi çantasını müzede unuttu.",
+   "fix_english": "During the week, my mother left her bag at the museum."
+  },
+  {
+   "id": "tr-2797",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "Word salad 'zor kamera ormanda gördü' (saw a hard camera); gloss says 'said'.",
+   "fix_target": "Zeynep öğleden sonra ormanda güzel bir kuş gördü.",
+   "fix_english": "In the afternoon, Zeynep saw a beautiful bird in the forest."
+  },
+  {
+   "id": "tr-2812",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "Word salad 'yalancı tablet kilisede gördü' (saw a lying tablet).",
+   "fix_target": "Garson öğleden sonra kilisenin önünde bir arkadaşını gördü.",
+   "fix_english": "In the afternoon, the waiter saw a friend in front of the church."
+  },
+  {
+   "id": "tr-2851",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "Word salad 'yeni makale ... sattı'; tense clash 'gelecek ay ... sattı' (next month ... sold).",
+   "fix_target": "Başkan gelecek ay alışveriş merkezinde yeni mağazayı açacak.",
+   "fix_english": "Next month, the president will open the new store at the shopping mall."
+  },
+  {
+   "id": "tr-2947",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Semantic absurdity: 'write the computer'",
+   "fix_target": "Kaptan yarın rapor yazacak.",
+   "fix_english": "The captain will write a report tomorrow."
+  },
+  {
+   "id": "tr-3015",
+   "q": "Q4",
+   "rating": 2,
+   "type": "both",
+   "issue": "English gloss is placeholder garbage; barber cooking odd",
+   "fix_target": "Aşçı marmelat ve hindi eti ile muhteşem bir yemek hazırladı.",
+   "fix_english": "The cook prepared a wonderful meal with marmalade and turkey meat."
+  },
+  {
+   "id": "tr-3044",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Semantic/tense clash: 'şu anda taşındı' (now + past)",
+   "fix_target": "Bu astronot yeni bir eve taşındı.",
+   "fix_english": "This astronaut moved to a new house."
+  },
+  {
+   "id": "tr-0147",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'evden geldik' = came FROM home, but English gloss says 'came home'"
+  },
+  {
+   "id": "tr-0172",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'restoranda bitecek' — person subject of bitmek is semantically odd",
+   "fix_target": "O birazdan restorana varacak.",
+   "fix_english": "He/She will arrive at the restaurant in a moment."
+  },
+  {
+   "id": "tr-0223",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'Anneanne' lacks possessive (gloss 'my'); object placement 'pahalı şemsiye ... gördü' is awkward",
+   "fix_target": "Anneannem geçen hafta alışveriş merkezinde pahalı bir şemsiye gördü.",
+   "fix_english": "My grandmother saw an expensive umbrella at the shopping mall last week."
+  },
+  {
+   "id": "tr-0239",
+   "q": "Q1",
+   "rating": 3,
+   "type": "register",
+   "issue": "encyclopedic/essay register (verimlilik, 'öte yandan', gündeme geliyor) inappropriate for Q1 everyday speech",
+   "fix_target": "Bu makine işleri hızlandırıyor ama bazen sorun da çıkarıyor.",
+   "fix_english": "This machine speeds up the work but sometimes causes problems too."
+  },
+  {
+   "id": "tr-0242",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'hastanede bitecekler' — person subject of bitmek is semantically odd",
+   "fix_target": "Onlar yakında hastaneye gidecekler.",
+   "fix_english": "They will go to the hospital soon."
+  },
+  {
+   "id": "tr-0251",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'mutfaktan söyledin' — söylemek takes locative not ablative; gloss says 'in the kitchen'",
+   "fix_target": "Sen geçen hafta bunu mutfakta söyledin.",
+   "fix_english": "You said this in the kitchen last week."
+  },
+  {
+   "id": "tr-0278",
+   "q": "Q1",
+   "rating": 3,
+   "type": "register",
+   "issue": "'bulunmaktadır' (-maktadır + -dir) is encyclopedic, not everyday Q1 speech.",
+   "fix_target": "Kütüphanede nadide el yazması eserler var.",
+   "fix_english": "There are rare handwritten works in the library."
+  },
+  {
+   "id": "tr-0297",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Lowercase start, mid-sentence capital; 'dikkatle gülüyor' odd and gloss 'quietly' mismatches.",
+   "fix_target": "Anneannem bu sabah alışveriş merkezinde neşeyle gülüyor.",
+   "fix_english": "My grandmother is smiling cheerfully at the shopping mall this morning."
+  },
+  {
+   "id": "tr-0298",
+   "q": "Q1",
+   "rating": 3,
+   "type": "register",
+   "issue": "'mevcuttur' encyclopedic -dir copula; not everyday speech.",
+   "fix_target": "Botanik bahçesinde yüzlerce farklı bitki türü var.",
+   "fix_english": "There are hundreds of different plant species in the botanical garden."
+  },
+  {
+   "id": "tr-0436",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Typo 'mektupi' should be 'mektubu'.",
+   "fix_target": "Eczacı mektubu okulda bitirdi.",
+   "fix_english": "The pharmacist finished the letter at school."
+  },
+  {
+   "id": "tr-0452",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Typo 'kahvealtı' should be 'kahvaltı'.",
+   "fix_target": "Günaydın, kahvaltı hazırlığım bitmek üzere.",
+   "fix_english": "Good morning, I'm almost done preparing breakfast."
+  },
+  {
+   "id": "tr-0456",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Typo 'parmaığımı' should be 'parmağımı'.",
+   "fix_target": "Mutfakta yemek yaparken parmağımı kestim.",
+   "fix_english": "I cut my finger while cooking in the kitchen."
+  },
+  {
+   "id": "tr-0467",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Lowercase start + mid-sentence capital 'Arkadaşlar'; awkward template word order.",
+   "fix_target": "Arkadaşlar bu sabah stadyumda müziği sessizce dinliyor.",
+   "fix_english": "The friends are quietly listening to the music at the stadium this morning."
+  },
+  {
+   "id": "tr-0520",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Typo 'romani' should be 'romanı'.",
+   "fix_target": "Mehmet romanı çarşıda bıraktı.",
+   "fix_english": "Mehmet left the novel at the bazaar."
+  },
+  {
+   "id": "tr-0546",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Typo 'kitapi' (should be kitabı)",
+   "fix_target": "Psikolog kitabı istasyonda buldu.",
+   "fix_english": "The psychologist found the book at the station."
+  },
+  {
+   "id": "tr-0565",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Missing possessive agreement 'etli ekmeği'",
+   "fix_target": "Bu restoranın etli ekmeği çok meşhur olmuş.",
+   "fix_english": "This restaurant's meat bread has become very famous."
+  },
+  {
+   "id": "tr-0573",
+   "q": "Q1",
+   "rating": 3,
+   "type": "register",
+   "issue": "News passive 'sevk edildi', not everyday speech",
+   "fix_target": "Depremden sonra yardım ekipleri hemen bölgeye gitti.",
+   "fix_english": "After the earthquake, aid teams went to the area right away."
+  },
+  {
+   "id": "tr-0584",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Missing accusative 'kalıntıları'",
+   "fix_target": "Arkeologlar hangi medeniyete ait kalıntıları keşfetti?",
+   "fix_english": "Which civilization's remains did the archaeologists discover?"
+  },
+  {
+   "id": "tr-0587",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Lowercase start, awkward fronted template",
+   "fix_target": "Kaptan hafta içi pazarda mutlulukla dolaşıyor.",
+   "fix_english": "During the week the captain strolls happily at the market."
+  },
+  {
+   "id": "tr-0611",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Odd collocation 'ödevi söyledi' (said the homework)",
+   "fix_target": "Çocuklar ödevi göl kenarında yaptı.",
+   "fix_english": "The children did their homework by the lake."
+  },
+  {
+   "id": "tr-0632",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Odd ablative 'restorandan bitirdi'",
+   "fix_target": "Öğretmen yemeğini restoranda hızlıca bitirdi.",
+   "fix_english": "The teacher quickly finished her meal at the restaurant."
+  },
+  {
+   "id": "tr-0638",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Incomplete (left what?) + 'birazdan' with past tense",
+   "fix_target": "Eczacı çantasını restoranda bıraktı.",
+   "fix_english": "The pharmacist left her bag at the restaurant."
+  },
+  {
+   "id": "tr-0645",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Lowercase start, 'yakında' (soon) with present tense, awkward",
+   "fix_target": "Biz stadyumda mutlulukla koşuyoruz.",
+   "fix_english": "We run happily at the stadium."
+  },
+  {
+   "id": "tr-0648",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Odd 'ciddiyet ile buldu' + ablative 'restorandan buldu'",
+   "fix_target": "Müdür cüzdanını restoranda buldu.",
+   "fix_english": "The manager found his wallet at the restaurant."
+  },
+  {
+   "id": "tr-0653",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Odd collocation 'makaleyi tamir etti' (repaired the article)",
+   "fix_target": "Pilot radyoyu istasyonda tamir etti.",
+   "fix_english": "The pilot repaired the radio at the station."
+  },
+  {
+   "id": "tr-0712",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Lowercase start, awkward fronted template",
+   "fix_target": "Veteriner hafta sonu göl kenarında kuşları izliyor.",
+   "fix_english": "On the weekend the vet is watching the birds by the lake."
+  },
+  {
+   "id": "tr-0759",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Odd collocation 'hikayeyi temizledi' (cleaned the story)",
+   "fix_target": "Başkan hikayeyi göl kenarında okudu.",
+   "fix_english": "The president read the story by the lake."
+  },
+  {
+   "id": "tr-0771",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Odd collocation 'ödevi söyledi' (said the homework)",
+   "fix_target": "Diş hekimi randevu saatini bana söyledi.",
+   "fix_english": "The dentist told me the appointment time."
+  },
+  {
+   "id": "tr-0794",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Habitual adverb 'genellikle' clashes with simple past 'yaptı'; needs aorist",
+   "fix_target": "Arkadaşım genellikle yürüyüş yapardı ve çok eğlenirdi.",
+   "fix_english": "My friend usually went for a walk and had a great time."
+  },
+  {
+   "id": "tr-0806",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Typo 'böreki' must be 'böreği'; buying pastry 'in the bay' is odd",
+   "fix_target": "Hasan böreği fırından aldı.",
+   "fix_english": "Hasan bought the pastry from the bakery."
+  },
+  {
+   "id": "tr-0820",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Gloss mismatch: Turkish 'leylek' (stork) vs English 'karaca'",
+   "fix_target": "Çocuklar kedi beslemeyi çok sever.",
+   "fix_english": "Children love feeding cats."
+  },
+  {
+   "id": "tr-0840",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Habitual 'her zaman' with simple past 'izledi'; agreement 'zamanı'->'zamanları'",
+   "fix_target": "Onlar her zaman film izlerdi çünkü zamanları vardı.",
+   "fix_english": "They always watched movies because they had time."
+  },
+  {
+   "id": "tr-0859",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'gözlük yapacak'(will make glasses) mismatches English 'eye exam'",
+   "fix_target": "Çiftçi yarın göz muayenesine gidecek.",
+   "fix_english": "The farmer will go for an eye exam tomorrow."
+  },
+  {
+   "id": "tr-0951",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'anlıyoruz' (non-continuous verb) in continuous; semantically odd",
+   "fix_target": "Biz şu anda mutfakta yemek yapıyoruz.",
+   "fix_english": "We are cooking in the kitchen right now."
+  },
+  {
+   "id": "tr-0983",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'kütüphaneden başladı' wrong case for 'started at'; needs object",
+   "fix_target": "Arkadaşlar ödeve kütüphanede sessizce başladı.",
+   "fix_english": "The friends quietly started the homework at the library."
+  },
+  {
+   "id": "tr-1055",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "objectless 'yaptı', Turkish doesn't match 'made the garden neat'",
+   "fix_target": "Çiftçi bahçeyi düzgünce düzenledi.",
+   "fix_english": "The farmer tidied up the garden neatly."
+  },
+  {
+   "id": "tr-1063",
+   "q": "Q2",
+   "rating": 3,
+   "type": "register",
+   "issue": "'Nitekim' is an essay connective, not conversational",
+   "fix_target": "Tahmin ettiğimiz gibi sonuç olumsuz çıktı.",
+   "fix_english": "As we expected, the result came out negative."
+  },
+  {
+   "id": "tr-1093",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "typo 'istansyondan'; objectless reading",
+   "fix_target": "Hasan istasyonda isteksizce kitap okudu.",
+   "fix_english": "Hasan read a book reluctantly at the station."
+  },
+  {
+   "id": "tr-1094",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "gördü=saw but gloss 'found'; empty",
+   "fix_target": "Zeynep eczaneden heyecanla çıktı.",
+   "fix_english": "Zeynep left the pharmacy excitedly."
+  },
+  {
+   "id": "tr-1095",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "bıraktı=left/quit but gloss 'started'",
+   "fix_target": "Hasan ofisten dikkatsizce ayrıldı.",
+   "fix_english": "Hasan left the office carelessly."
+  },
+  {
+   "id": "tr-1100",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "aldı=took but gloss 'went'; empty",
+   "fix_target": "Mühendis bahçeden heyecanla çıktı.",
+   "fix_english": "The engineer left the garden excitedly."
+  },
+  {
+   "id": "tr-1101",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "okudu=read but gloss 'started'; objectless",
+   "fix_target": "Psikolog ofiste aceleyle bir rapor okudu.",
+   "fix_english": "The psychologist hastily read a report at the office."
+  },
+  {
+   "id": "tr-1102",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "başladı=started but gloss 'left'",
+   "fix_target": "Anneannem bankadan öfkeyle ayrıldı.",
+   "fix_english": "My grandmother left the bank angrily."
+  },
+  {
+   "id": "tr-1103",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "typo 'standyumdan'; objectless",
+   "fix_target": "Arkadaşlar stadyumdan sessizce çıktı.",
+   "fix_english": "The friends quietly left the stadium."
+  },
+  {
+   "id": "tr-1123",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "typo 'standyumdan'; objectless",
+   "fix_target": "Mehmet stadyumda hızlıca bir not yazdı.",
+   "fix_english": "Mehmet quickly wrote a note at the stadium."
+  },
+  {
+   "id": "tr-1127",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "typo 'istansyondan'; objectless",
+   "fix_target": "Garson istasyonda arkadaşını gördü.",
+   "fix_english": "The waiter saw his friend at the station."
+  },
+  {
+   "id": "tr-1166",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "başladı=started vs gloss 'cooked'",
+   "fix_target": "Müzisyen markette neşeyle çalışmaya başladı.",
+   "fix_english": "The musician cheerfully started working at the market."
+  },
+  {
+   "id": "tr-1193",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "buldu=found vs gloss 'wrote'; empty",
+   "fix_target": "Garson plajda kaybettiği anahtarı sabırla buldu.",
+   "fix_english": "The waiter patiently found the key he had lost at the beach."
+  },
+  {
+   "id": "tr-1211",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'fırın komşuluğunda' unnatural phrasing",
+   "fix_target": "Sıradan bir müdür fırının yanında duruyor.",
+   "fix_english": "An ordinary manager is standing next to the bakery."
+  },
+  {
+   "id": "tr-1243",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "bıraktı=left vs gloss 'sold'",
+   "fix_target": "Psikolog kütüphaneden heyecanla ayrıldı.",
+   "fix_english": "The psychologist left the library excitedly."
+  },
+  {
+   "id": "tr-1293",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "typo 'standyumdan'; objectless boyadı",
+   "fix_target": "Psikolog stadyumda duvarı düzgünce boyadı.",
+   "fix_english": "The psychologist neatly painted the wall at the stadium."
+  },
+  {
+   "id": "tr-1294",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "typo 'kaymakamlık'da'; objectless 'alıştı'",
+   "fix_target": "Haham kaymakamlıktaki işine zor alıştı.",
+   "fix_english": "The rabbi had a hard time getting used to his job at the district office."
+  },
+  {
+   "id": "tr-1343",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'hikaye öğreniyorlar' (learning) contradicts gloss 'reading a story'.",
+   "fix_target": "Onlar plajda hikâye okuyorlar.",
+   "fix_english": "They are reading a story at the beach."
+  },
+  {
+   "id": "tr-1344",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'ödev okuyorsunuz' (reading homework) should be 'ödev yapıyorsunuz'.",
+   "fix_target": "Siz plajda ödev yapıyorsunuz.",
+   "fix_english": "You are doing homework at the beach."
+  },
+  {
+   "id": "tr-1374",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Scrambled word order; gloss 'quietly' mismatches 'isteksizce' (reluctantly).",
+   "fix_target": "Babam hafta sonu müzede isteksizce yürüyor.",
+   "fix_english": "On weekends my father walks reluctantly in the museum."
+  },
+  {
+   "id": "tr-1401",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Typo 'avizanin' should be 'avizenin'.",
+   "fix_target": "Lacivert perde balkonun yanında avizenin altında sallanıyordu.",
+   "fix_english": "The navy blue curtain was swaying next to the balcony under the chandelier."
+  },
+  {
+   "id": "tr-1412",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'bahçeden ... söyledi' missing 'şarkı' and wrong case; gloss says 'sang'.",
+   "fix_target": "Onlar bahçede neşeyle şarkı söyledi.",
+   "fix_english": "They sang cheerfully in the garden."
+  },
+  {
+   "id": "tr-1468",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'kütüphaneden gördünüz' wrong case; gloss says 'in the library'.",
+   "fix_target": "Siz az önce kütüphanede gördünüz.",
+   "fix_english": "You saw something in the library just now."
+  },
+  {
+   "id": "tr-1535",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'havaalanından bıraktı' — ablative with 'bırakmak' is wrong; needs dative.",
+   "fix_target": "O biraz önce beni havaalanına bıraktı.",
+   "fix_english": "He/She dropped me off at the airport a moment ago."
+  },
+  {
+   "id": "tr-1593",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "şimdi (now) with past tense + missing accusative on çanta",
+   "fix_target": "Müdür şimdi meydanda küçük çantasını tamir ediyor.",
+   "fix_english": "The director is repairing his small bag in the square now."
+  },
+  {
+   "id": "tr-1625",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "wrong verb 'şiir bakıyor' should be 'şiir okuyor'",
+   "fix_target": "Balıkçı alışveriş merkezinde şiir okuyor.",
+   "fix_english": "The fisherman is reading poetry at the shopping mall."
+  },
+  {
+   "id": "tr-1630",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "contradiction 'ciddiyet ile gülüyor' (laughing seriously)",
+   "fix_target": "Arkadaşlar şimdi sokakta kahkahayla gülüyor.",
+   "fix_english": "The friends are now laughing out loud on the street."
+  },
+  {
+   "id": "tr-1634",
+   "q": "Q3",
+   "rating": 3,
+   "type": "both",
+   "issue": "'üzüntüyle satıyor' missing object; gloss 'carefully' mismatches üzüntüyle (sadly)",
+   "fix_target": "Gün batımında turistler stadyum önünde bilet satıyor.",
+   "fix_english": "At sunset the tourists are selling tickets in front of the stadium."
+  },
+  {
+   "id": "tr-1683",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'her zaman' habitual with simple past; should be aorist/-ardı",
+   "fix_target": "Arkadaşım her zaman önce yürüyüş yapar, sonra kahve içerdi.",
+   "fix_english": "My friend would always go for a walk first and then drink coffee."
+  },
+  {
+   "id": "tr-1720",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'bazen' with simple past; gloss 'once' mismatches bazen (sometimes)",
+   "fix_target": "Kardeşim bugün spor yaptı çünkü hava güzeldi.",
+   "fix_english": "My sibling did sports today because the weather was nice."
+  },
+  {
+   "id": "tr-1777",
+   "q": "Q3",
+   "rating": 3,
+   "type": "register",
+   "issue": "-maktadır formal progressive, not spoken",
+   "fix_target": "Şirketimiz yeni pazarlara açılıyor.",
+   "fix_english": "Our company is expanding to new markets."
+  },
+  {
+   "id": "tr-1803",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "wrong suffix/apostrophe 'tatil köyü'ya' should be 'tatil köyüne'",
+   "fix_target": "Eğer gök gürültüsü olmazsa, tatil köyüne gideriz.",
+   "fix_english": "If there is no thunderstorm, we will go to the holiday village."
+  },
+  {
+   "id": "tr-1832",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "habitual 'genellikle' with definite past 'çizdi'; needs aorist past 'çizerdi'",
+   "fix_target": "O genellikle resim çizerdi çünkü zamanı vardı.",
+   "fix_english": "He usually drew pictures because he had time."
+  },
+  {
+   "id": "tr-1836",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'her zaman' + definite past 'yıkadı'; habitual needs 'yıkardı'",
+   "fix_target": "Öğretmen her zaman çamaşır yıkardı çünkü zamanı vardı.",
+   "fix_english": "The teacher always did laundry because she had time."
+  },
+  {
+   "id": "tr-1910",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'her zaman ... yıkadı' habitual needs aorist; gloss is present habitual",
+   "fix_target": "Komşumuz her zaman çamaşır yıkar ama bir türlü bitiremez.",
+   "fix_english": "Our neighbor always washes laundry but can never finish it."
+  },
+  {
+   "id": "tr-1911",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'her zaman söyledi' habitual needs 'söylerdi'",
+   "fix_target": "Babam her zaman şarkı söylerdi çünkü canı sıkılırdı.",
+   "fix_english": "My dad always sang because he got bored."
+  },
+  {
+   "id": "tr-1961",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'her zaman yaptı' habitual needs aorist 'yapardı/çıkardı'",
+   "fix_target": "O her zaman ütü yapardı sonra dışarı çıkardı.",
+   "fix_english": "He always ironed and then went out."
+  },
+  {
+   "id": "tr-1983",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'her zaman yaptı ... uyudu' habitual needs aorist",
+   "fix_target": "Kardeşim her zaman ütü yapardı ve sonra uyurdu.",
+   "fix_english": "My sibling always ironed and then slept."
+  },
+  {
+   "id": "tr-1986",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "typo 'onarımış' should be 'onarmış'",
+   "fix_target": "Restorasyoncular tarihî hamamın kubbe ve sütunlarını aslına uygun onarmış.",
+   "fix_english": "The restorers repaired the historical bath's dome and columns true to the original."
+  },
+  {
+   "id": "tr-2039",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'genellikle çizdik ... bıraktık' habitual needs aorist",
+   "fix_target": "Biz genellikle resim çizerdik ama yarıda bırakırdık.",
+   "fix_english": "We usually drew pictures but left them halfway."
+  },
+  {
+   "id": "tr-2099",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'üretildi' (was manufactured) is wrong verb for a park; should be 'yapıldı'",
+   "fix_target": "Bu park sonbaharda yapıldı.",
+   "fix_english": "This park was built in autumn."
+  },
+  {
+   "id": "tr-2115",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Typo: 'pastane'ya' must be 'pastaneye'",
+   "fix_target": "Eğer poyraz olmasaydı, pastaneye varırdık.",
+   "fix_english": "If there hadn't been a northerly wind, we would have reached the bakery."
+  },
+  {
+   "id": "tr-2183",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'genellikle' (habitual) with simple past; needs aorist 'çalışır...döner'",
+   "fix_target": "Babam genellikle ders çalışır ve eve döner.",
+   "fix_english": "My dad usually studies and then goes home."
+  },
+  {
+   "id": "tr-2184",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'genellikle' with simple past; needs aorist 'yıkar...bırakır'",
+   "fix_target": "Komşumuz genellikle çamaşır yıkar ama yarıda bırakır.",
+   "fix_english": "Our neighbor usually does laundry but leaves it halfway."
+  },
+  {
+   "id": "tr-2233",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Unnatural word order: object after locative",
+   "fix_target": "Başkan dün akşam bankada sert eldivenler gördü.",
+   "fix_english": "The president saw hard gloves at the bank last night."
+  },
+  {
+   "id": "tr-2246",
+   "q": "Q3",
+   "rating": 3,
+   "type": "register",
+   "issue": "'-mektedir' official progressive; conversational is 'üretiliyor'",
+   "fix_target": "Bu ürün Türkiye'de üretiliyor.",
+   "fix_english": "This product is produced in Turkey."
+  },
+  {
+   "id": "tr-2254",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Typo: 'okuseydım' must be 'okusaydım'",
+   "fix_target": "Keşke grafik tasarım okusaydım, arayüz geliştirme uzmanı olurdum.",
+   "fix_english": "I wish I had studied graphic design; I would have become a UI development expert."
+  },
+  {
+   "id": "tr-2304",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Non-Turkish word 'Observatöryümde'; use 'gözlemevimizde/teleskopla'",
+   "fix_target": "Gözlemevimizde yeni bir kuyruklu yıldız teleskopla gözlemlendi.",
+   "fix_english": "A new comet was observed through a telescope at our observatory."
+  },
+  {
+   "id": "tr-2306",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Semantic absurdity: you don't grate ('rendelemek') chickpeas",
+   "fix_target": "Önce nohutları haşladım sonra tencereye koydum.",
+   "fix_english": "First I boiled the chickpeas, then put them in the pot."
+  },
+  {
+   "id": "tr-2376",
+   "q": "Q4",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "english mismatch: target says will read at cinema, gloss says going",
+   "fix_target": "Biz gelecek hafta sinemada okuyacağız.",
+   "fix_english": "We will read at the cinema next week."
+  },
+  {
+   "id": "tr-2377",
+   "q": "Q4",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "english mismatch: target says will read at cinema, gloss says going",
+   "fix_target": "Ben gelecek hafta sinemada okuyacağım.",
+   "fix_english": "I will read at the cinema next week."
+  },
+  {
+   "id": "tr-2423",
+   "q": "Q4",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "söz vermek takes dative: 'bitireceğine' not 'bitireceğini'",
+   "fix_target": "Babam bu işi bugün bitireceğine söz verdi.",
+   "fix_english": "My father promised he would finish this job today."
+  },
+  {
+   "id": "tr-2502",
+   "q": "Q4",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "tense mismatch: 'birazdan' (future) with present continuous; lowercase start",
+   "fix_target": "Babaannem birazdan ormanda acele edecek.",
+   "fix_english": "In a moment my grandmother will hurry in the forest."
+  },
+  {
+   "id": "tr-2508",
+   "q": "Q4",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "tense mismatch: 'dün akşam' (past) with present continuous 'alıyor'",
+   "fix_target": "Müdür dün akşam hastaneden bir şey aldı.",
+   "fix_english": "Last night the director picked something up from the hospital."
+  },
+  {
+   "id": "tr-2517",
+   "q": "Q4",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "typo/spacing: 'veranda da' should be 'verandada'",
+   "fix_target": "Yaz akşamları verandada oturup çay içmek keyifli.",
+   "fix_english": "It's enjoyable to sit on the porch and drink tea on summer evenings."
+  },
+  {
+   "id": "tr-2522",
+   "q": "Q4",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "wrong dative + apostrophe: 'han'ya' should be 'hana'",
+   "fix_target": "Mimar hana gideceğini bildirdi.",
+   "fix_english": "The architect announced that they would go to the inn."
+  },
+  {
+   "id": "tr-2584",
+   "q": "Q4",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "odd non-idiomatic 'hayal kırıklığı görsün'",
+   "fix_target": "Fizyoterapist hastayı görsün diye bekledik.",
+   "fix_english": "We waited for the physiotherapist to see the patient."
+  },
+  {
+   "id": "tr-2718",
+   "q": "Q4",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Template sentence, semantically thin (baker reluctantly selling in a bay); object missing.",
+   "fix_target": "Kışın fırıncı köyün fırınında ekmek satıyor.",
+   "fix_english": "In winter, the baker sells bread at the village bakery."
+  },
+  {
+   "id": "tr-2721",
+   "q": "Q4",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Stilted template 'söğüt içinde ... ilerliyordu'; awkward locative.",
+   "fix_target": "Muhabbet kuşu söğüdün dalları arasında neşeyle uçuyordu.",
+   "fix_english": "The lovebird was cheerfully flying among the willow branches."
+  },
+  {
+   "id": "tr-2731",
+   "q": "Q4",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Case error: passive 'aktarıldı' takes nominative subject, not accusative 'eserleri'.",
+   "fix_target": "Nadir bulunan el yazması Osmanlıca eserler dijital ortama aktarıldı.",
+   "fix_english": "Rare handwritten Ottoman manuscripts were transferred to digital media."
+  },
+  {
+   "id": "tr-2784",
+   "q": "Q4",
+   "rating": 3,
+   "type": "both",
+   "issue": "Odd 'gönüllü olarak dans ediyor' (dances as a volunteer); gloss 'curiously' mismatches.",
+   "fix_target": "Gün batımında eczacı evde neşeyle dans ediyor.",
+   "fix_english": "At sunset, the pharmacist dances joyfully at home."
+  },
+  {
+   "id": "tr-2857",
+   "q": "Q4",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Case error: 'baldır sakatlandı' needs possessive/accusative ('baldırını sakatladı').",
+   "fix_target": "Binicilik yapan hostes baldırını sakatladı.",
+   "fix_english": "The flight attendant who does horseback riding injured her calf."
+  },
+  {
+   "id": "tr-2983",
+   "q": "Q4",
+   "rating": 3,
+   "type": "register",
+   "issue": "-maktadır progressive on everyday content; dead in speech",
+   "fix_target": "Öğrenciler sınavlara hazırlanıyor.",
+   "fix_english": "Students are preparing for exams."
+  },
+  {
+   "id": "tr-2984",
+   "q": "Q4",
+   "rating": 3,
+   "type": "both",
+   "issue": "Typo 'Müzakeler'; -mekte olup/-mektedir news register",
+   "fix_target": "Müzakereler devam ediyor ve sonuç bekleniyor.",
+   "fix_english": "Negotiations are continuing and a result is expected."
+  },
+  {
+   "id": "tr-0261",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "Writing at a market is pragmatically odd; stiff time+place drill."
+  },
+  {
+   "id": "tr-0262",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "bitmek with a person subject ('he will finish at the market') is semantically odd."
+  },
+  {
+   "id": "tr-0264",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "Reading at a market—pragmatically odd stiff drill."
+  },
+  {
+   "id": "tr-0265",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "söylemek with no object ('we said at the museum') is incomplete."
+  },
+  {
+   "id": "tr-0273",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "Writing in the kitchen next year—odd stiff drill."
+  },
+  {
+   "id": "tr-0274",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "yapmak with no object ('will do at the hospital') is incomplete."
+  },
+  {
+   "id": "tr-0277",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'crying at the beach lately' is semantically odd."
+  },
+  {
+   "id": "tr-0311",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Absurd contrast (peninsula vs axe) no one would make."
+  },
+  {
+   "id": "tr-0312",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Absurd contrast (boza vs sofa)."
+  },
+  {
+   "id": "tr-0313",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Absurd contrast (database vs dam)."
+  },
+  {
+   "id": "tr-0314",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Absurd contrast (gazelle vs robot)."
+  },
+  {
+   "id": "tr-0315",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Absurd contrast (broccoli vs drone)."
+  },
+  {
+   "id": "tr-0330",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "yapmak with no object ('we did at the office')."
+  },
+  {
+   "id": "tr-0332",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "yapmak with no object ('will do at school')."
+  },
+  {
+   "id": "tr-0338",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "bitmek with people subject ('they will finish at the beach') is odd."
+  },
+  {
+   "id": "tr-0343",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "yapmak with no object ('will do at school')."
+  },
+  {
+   "id": "tr-0348",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "yapmak with no object ('will do at the office')."
+  },
+  {
+   "id": "tr-0350",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "bitmek with 'we' subject ('we will finish at the beach') is odd."
+  },
+  {
+   "id": "tr-0351",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "yapmak with no object ('will do at the museum')."
+  },
+  {
+   "id": "tr-0352",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "Writing at a museum—stiff drill."
+  },
+  {
+   "id": "tr-0353",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "bitmek with 'I' subject ('I will finish in the park') is odd."
+  },
+  {
+   "id": "tr-0355",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "yapmak with no object ('will do at the museum')."
+  },
+  {
+   "id": "tr-0369",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "vermek with no object ('I gave in the park') is incomplete."
+  },
+  {
+   "id": "tr-0371",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "bitmek with 'we' subject ('we will finish in the kitchen') is odd."
+  },
+  {
+   "id": "tr-0373",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'Dondurmaları' carries accusative/possessive suffix as subject; gloss 'the ice creams'."
+  },
+  {
+   "id": "tr-0422",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Lowercase sentence start; 'sık sık anlıyor mu' slightly odd."
+  },
+  {
+   "id": "tr-0505",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Lowercase start + mid-sentence capital 'Doktor'; odd context."
+  },
+  {
+   "id": "tr-0506",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Lowercase start + mid-sentence capital 'Veteriner'; interpreting at a mall is odd."
+  },
+  {
+   "id": "tr-0544",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Grammatical but random template (article left at pharmacy)"
+  },
+  {
+   "id": "tr-0559",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "Marketing/encyclopedic -dir copula, not conversational"
+  },
+  {
+   "id": "tr-0566",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Missing accusative on 'güneş batışını'"
+  },
+  {
+   "id": "tr-0568",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'bazen' pairs awkwardly with simple past"
+  },
+  {
+   "id": "tr-0580",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Random template sentence, contextless"
+  },
+  {
+   "id": "tr-0635",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Grammatical but random template sentence"
+  },
+  {
+   "id": "tr-0679",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'şimdi' (now) awkward with simple past 'gittik'"
+  },
+  {
+   "id": "tr-0704",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Contextless template adverb sentence"
+  },
+  {
+   "id": "tr-0707",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Grammatical but random template sentence"
+  },
+  {
+   "id": "tr-0747",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Grammatical but random template sentence"
+  },
+  {
+   "id": "tr-0758",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Grammatical but random template sentence"
+  },
+  {
+   "id": "tr-0875",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Semantically odd: 'learning at the cinema right now'"
+  },
+  {
+   "id": "tr-0926",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "Essay connective 'ne var ki' + technical 'sürdürülebilir'; stiff for Q2"
+  },
+  {
+   "id": "tr-1051",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "leaving hospital 'admiringly' is semantically odd though grammatical",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "tr-1053",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "objectless adverb+ablative drill, semantically empty"
+  },
+  {
+   "id": "tr-1057",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "barber 'sold from the market', objectless/empty"
+  },
+  {
+   "id": "tr-1066",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'yükümlü olduğunun farkındadır' bureaucratic phrasing for Q2"
+  },
+  {
+   "id": "tr-1111",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "ablative+gloss mismatch ('from library'/'the library')"
+  },
+  {
+   "id": "tr-1124",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "objectless adverb+ablative drill, empty"
+  },
+  {
+   "id": "tr-1126",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "objectless 'buldu', empty"
+  },
+  {
+   "id": "tr-1196",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "objectless 'temizledi from restaurant'"
+  },
+  {
+   "id": "tr-1208",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "missing accusative 'raporu'; stiff"
+  },
+  {
+   "id": "tr-1307",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'aceleyle dinliyor' (listens hurriedly) is a semantically odd collocation."
+  },
+  {
+   "id": "tr-1366",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'parkta tercüme ediyorlar' (translating in the park) is a semantically odd scene."
+  },
+  {
+   "id": "tr-1425",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'kutunun arasındaydı' with a single box should be 'içindeydi'."
+  },
+  {
+   "id": "tr-1429",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Bare fragment 'bazen istiyor musun?' with no complement is stiff/incomplete."
+  },
+  {
+   "id": "tr-1430",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'müzede bilmiyorlar' (don't know at the museum) is incomplete and odd."
+  },
+  {
+   "id": "tr-1435",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Fragment 'her zaman biliyor musun?' feels incomplete without an object."
+  },
+  {
+   "id": "tr-1455",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'rapor çalışıyoruz' needs 'rapor üzerinde/rapora çalışıyoruz'."
+  },
+  {
+   "id": "tr-1465",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'marketten buldun' — ablative with 'bulmak' is awkward; locative expected."
+  },
+  {
+   "id": "tr-1505",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'gazete anlıyor' misses accusative and is a semantically odd claim."
+  },
+  {
+   "id": "tr-1508",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'şiir bekliyorsunuz' (wait for poetry) is a semantically odd collocation."
+  },
+  {
+   "id": "tr-1561",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "grammatical but artificial random profession/place/adverb combo (waiting in astonishment at airport)"
+  },
+  {
+   "id": "tr-1565",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "artificial combo, quietly taking photos at cinema is odd"
+  },
+  {
+   "id": "tr-1567",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "artificial combo, captain slowly listening at post office"
+  },
+  {
+   "id": "tr-1574",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "artificial combo, pharmacist carelessly photographing at bank"
+  },
+  {
+   "id": "tr-1581",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "artificial combo, pilot voluntarily speaking at bakery"
+  },
+  {
+   "id": "tr-1589",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "odd combo, missing accusative on atkı (büyük atkıyı)"
+  },
+  {
+   "id": "tr-1621",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "artificial combo, photographer waiting happily in a cove"
+  },
+  {
+   "id": "tr-1622",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "artificial combo, captain crying enthusiastically at stadium"
+  },
+  {
+   "id": "tr-1631",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "artificial combo, yakında (soon) with present continuous"
+  },
+  {
+   "id": "tr-1759",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'bazen...çekti' habitual/past awkwardness"
+  },
+  {
+   "id": "tr-1761",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'bazen...çekti' habitual/past awkwardness"
+  },
+  {
+   "id": "tr-1786",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "'olmalıdır' -dır copula stiff for a conversational opinion (olmalı natural)"
+  },
+  {
+   "id": "tr-1843",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "-maktadır news/official progressive, not spoken"
+  },
+  {
+   "id": "tr-1844",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "-mektedir passive news register"
+  },
+  {
+   "id": "tr-1850",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "encyclopedic -dir copula in conversational card"
+  },
+  {
+   "id": "tr-1858",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "encyclopedic -dir copula, stiff"
+  },
+  {
+   "id": "tr-1887",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "-mekte/-maktadır news progressive, not conversational"
+  },
+  {
+   "id": "tr-1888",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "encyclopedic -dir copula, essay register"
+  },
+  {
+   "id": "tr-1896",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "-maktadır official/news progressive for everyday 'growing'"
+  },
+  {
+   "id": "tr-1945",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "-maktadır official/press register"
+  },
+  {
+   "id": "tr-1974",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "-makta/-maktadır news register, not spoken"
+  },
+  {
+   "id": "tr-1978",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "-mekte passive + official 'aranmaktadır', bureaucratic"
+  },
+  {
+   "id": "tr-1979",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "-mekte/-maktadır press/report register"
+  },
+  {
+   "id": "tr-2013",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "tarafından-passive where active is natural in speech"
+  },
+  {
+   "id": "tr-2145",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Semantic oddity: jogging at a tea shop (çay ocağı)",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "tr-2171",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Semantic oddity: shopping at a hospital; bare verb",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "tr-2172",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Bare 'yazacak' with odd context (writing at a restaurant)",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "tr-2206",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Bare 'yapacaklar' (do something) at a restaurant, thin meaning",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "tr-2259",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'biz biteceğiz' (we will end) is an odd use of 'bitmek'",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "tr-2260",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'sen biteceksin' (you will end) is an odd/ominous use of 'bitmek'",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "tr-2264",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Bare 'alacaksınız' (get something) in a park, thin meaning",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "tr-2277",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Semantic oddity: jogging in a hospital corridor",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "tr-2289",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Bare 'yapacaksın' (do something) at airport, thin meaning",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "tr-2333",
+   "q": "Q3",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Bare 'yapmayacak' (won't do something) in library, thin meaning",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "tr-2390",
+   "q": "Q4",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "minor gloss mismatch: karıştırmak=stir, gloss says sautéed"
+  },
+  {
+   "id": "tr-2497",
+   "q": "Q4",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "semantic oddity: lighting a fire because the weather warmed up"
+  },
+  {
+   "id": "tr-2568",
+   "q": "Q4",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "minor gloss mismatch: karıştırmak=stir, gloss says prepared"
+  },
+  {
+   "id": "tr-2655",
+   "q": "Q4",
+   "rating": 4,
+   "type": "register",
+   "issue": "Archaic Ottoman diplomatic register (devletlû, muahede) dead in speech; acceptable Q4 variety."
+  },
+  {
+   "id": "tr-2843",
+   "q": "Q4",
+   "rating": 4,
+   "type": "register",
+   "issue": "Officialese '-maktadır' progressive ('oluşturmaktadır'), dead in casual speech."
+  },
+  {
+   "id": "tr-2985",
+   "q": "Q4",
+   "rating": 4,
+   "type": "register",
+   "issue": "Bureaucratic officialese (arz ederim, gereğini rica ederim); dead in speech"
+  },
+  {
+   "id": "tr-0010",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "'tamire ihtiyaç duyuyor' for a roof is stiff/bookish; everyday would be 'tamir gerekiyor'"
+  },
+  {
+   "id": "tr-0040",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "encyclopedic -dir copula 'insandır' in a conversational compliment"
+  },
+  {
+   "id": "tr-0146",
+   "q": "Q1",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "'ödev seviyorsunuz' — present continuous for a stative liking is unnatural; aorist 'seversiniz' expected"
+  },
+  {
+   "id": "tr-0187",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "objectless transitive drill 'markette gördünüz' (saw what?) reads stiff/incomplete"
+  },
+  {
+   "id": "tr-0190",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "objectless 'otelde verdiler' (gave what, to whom?) is stiff/incomplete"
+  },
+  {
+   "id": "tr-0203",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "objectless 'parkta başladık' (began what?) reads stiff/incomplete"
+  },
+  {
+   "id": "tr-0237",
+   "q": "Q1",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "comparing 'dere' (stream) with 'bordo' (maroon) is a semantically incoherent pair"
+  },
+  {
+   "id": "tr-0244",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "objectless 'ofiste alacaklar' (buy what?) reads stiff/incomplete"
+  },
+  {
+   "id": "tr-0246",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "objectless 'ofiste bulduk' (found what?) reads stiff/incomplete"
+  },
+  {
+   "id": "tr-0247",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "objectless 'mutfaktan başladılar' reads stiff/incomplete"
+  },
+  {
+   "id": "tr-0248",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "objectless 'müzede verdin' (gave what?) reads stiff/incomplete"
+  },
+  {
+   "id": "tr-0249",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "objectless 'evde verdim' (gave what?) reads stiff/incomplete"
+  },
+  {
+   "id": "tr-0252",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "objectless 'mutfakta başladın' reads stiff/incomplete"
+  },
+  {
+   "id": "tr-0259",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "'president finished the novel at the theater' is a stiff, contextless drill sentence"
+  },
+  {
+   "id": "tr-0260",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "objectless 'ofiste yazacaksın' (write what?) reads stiff/incomplete"
+  },
+  {
+   "id": "tr-0263",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "Reading at the airport—stiff, unnatural time+place drill."
+  },
+  {
+   "id": "tr-0266",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "Objectless 'başladım' + stiff time+place drill."
+  },
+  {
+   "id": "tr-0267",
+   "q": "Q1",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "görmek with no object ('you saw at the office') is incomplete."
+  },
+  {
+   "id": "tr-0269",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "Objectless 'başladınız'—stiff drill."
+  },
+  {
+   "id": "tr-0324",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "Stiff time+place drill (write in the garden)."
+  },
+  {
+   "id": "tr-0329",
+   "q": "Q1",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "Objectless 'başladın' ('you started at home') is incomplete."
+  },
+  {
+   "id": "tr-0340",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "Stiff drill (write at home)."
+  },
+  {
+   "id": "tr-0342",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "Stiff drill (read in the garden)."
+  },
+  {
+   "id": "tr-0347",
+   "q": "Q1",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "'gazeteyi otelde topladı' is odd/stiff (collecting a newspaper at a hotel)."
+  },
+  {
+   "id": "tr-0349",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "Stiff drill (start in the garden)."
+  },
+  {
+   "id": "tr-0357",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "Stiff drill (start at the museum)."
+  },
+  {
+   "id": "tr-0360",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "Stiff drill (read in the garden)."
+  },
+  {
+   "id": "tr-0387",
+   "q": "Q1",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "'kısa araba' (short car) is an odd descriptor; 'küçük' expected."
+  },
+  {
+   "id": "tr-0423",
+   "q": "Q1",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "'doctor takes photos carelessly'—grammatical but pragmatically odd."
+  },
+  {
+   "id": "tr-0577",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "Encyclopedic -dendir copula, slightly written"
+  },
+  {
+   "id": "tr-0591",
+   "q": "Q1",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "Contextless template adverb sentence"
+  },
+  {
+   "id": "tr-0604",
+   "q": "Q1",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "Awkward 'mutlu bir şekilde oturuyoruz' for 'we live happily'"
+  },
+  {
+   "id": "tr-0715",
+   "q": "Q1",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "Contextless template ('they arrive nicely')"
+  },
+  {
+   "id": "tr-0742",
+   "q": "Q1",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "Missing accusative 'çayı' in written form"
+  },
+  {
+   "id": "tr-0778",
+   "q": "Q1",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "Slightly off 'sizi çok duydum' for 'heard a lot about you'"
+  },
+  {
+   "id": "tr-0796",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Encyclopedic -dir copula ('serindir') in conversational context"
+  },
+  {
+   "id": "tr-0857",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "'kütüphaneden gitti' stiff; 'ayrıldı' more natural for leaving"
+  },
+  {
+   "id": "tr-1007",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "'bildirdi' (formally notified) mildly stiff for everyday speech"
+  },
+  {
+   "id": "tr-1108",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "'evden' should be 'evde' for 'at home'; slightly off"
+  },
+  {
+   "id": "tr-1120",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "fronted 'sık sık' lowercase mid-sentence, marked word order"
+  },
+  {
+   "id": "tr-1133",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "scrambled word order but meaning recoverable"
+  },
+  {
+   "id": "tr-1167",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "objectless 'yapacağız', vague"
+  },
+  {
+   "id": "tr-1236",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "objectless 'içiyorum', vague"
+  },
+  {
+   "id": "tr-1272",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "fronted adverb lowercase, capitalization artifact"
+  },
+  {
+   "id": "tr-1273",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "fronted adverb lowercase, capitalization artifact"
+  },
+  {
+   "id": "tr-1278",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "fronted adverb lowercase, capitalization artifact"
+  },
+  {
+   "id": "tr-1391",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "'tatlıların üstünde ... lezzet katıyor' is awkward; should be 'tatlılara lezzet katıyor'."
+  },
+  {
+   "id": "tr-1428",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "'heyecanla satıyorlar' with no object feels incomplete in isolation."
+  },
+  {
+   "id": "tr-1434",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "'gönüllü olarak izliyorsun' is an unnatural, stiff collocation."
+  },
+  {
+   "id": "tr-1442",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "'parkta buldun' with no object feels incomplete in isolation."
+  },
+  {
+   "id": "tr-1443",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "'hastanede bıraktık' with no object feels incomplete in isolation."
+  },
+  {
+   "id": "tr-1463",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "'müzeden aldın' with no object feels incomplete in isolation."
+  },
+  {
+   "id": "tr-1464",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "'parkta bıraktılar' with no object feels incomplete in isolation."
+  },
+  {
+   "id": "tr-1612",
+   "q": "Q3",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "grammatical but odd standalone question 'do you understand these days'"
+  },
+  {
+   "id": "tr-1638",
+   "q": "Q3",
+   "rating": 5,
+   "type": "register",
+   "issue": "'Temenni ederim' somewhat formal opener, borderline for conversation"
+  },
+  {
+   "id": "tr-1822",
+   "q": "Q3",
+   "rating": 5,
+   "type": "register",
+   "issue": "'bir Haziran'da' stiff/odd for 'in June'; natural is just 'Haziran'da'"
+  },
+  {
+   "id": "tr-1931",
+   "q": "Q3",
+   "rating": 5,
+   "type": "register",
+   "issue": "-mektedir formal progressive, borderline news language"
+  },
+  {
+   "id": "tr-2162",
+   "q": "Q3",
+   "rating": 5,
+   "type": "register",
+   "issue": "Very formal Ottoman-flavored ceremonial speech, but contextually natural for an opening",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "tr-2176",
+   "q": "Q3",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "Bare 'başlayacaksınız' (start something) at a hotel, thin meaning",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "tr-2192",
+   "q": "Q3",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "Semantic oddity: fresh air and clean water on a street corner",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "tr-2196",
+   "q": "Q3",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "Semantic oddity: a street corner's air taking on seasonal beauty",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "tr-2222",
+   "q": "Q3",
+   "rating": 5,
+   "type": "register",
+   "issue": "Formal written '-malıdır'; speech would use 'aktarılmalı'",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "tr-2525",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "'olmuştur' written/encyclopedic copula, stiff for conversation"
+  },
+  {
+   "id": "tr-2637",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "Stiff written-officialese phrasing 'çaba göstermesi beklenir'; formal but Q4-tolerable."
+  },
+  {
+   "id": "tr-2712",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "Archaic obsequious 'zatıâliniz'; very formal but survives as Q4 register flavor."
+  },
+  {
+   "id": "tr-2730",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "Formal 'ricada bulunuyorum' officialese; coherent, Q4-tolerable."
+  },
+  {
+   "id": "tr-2834",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "Encyclopedic/news '-miştir' copula ('keşfetmiştir'); stiff in speech, Q4-tolerable."
+  },
+  {
+   "id": "tr-2853",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "Ottoman-formal 'müracaat etmek' where 'başvurmak' is natural; heard but stiff."
+  },
+  {
+   "id": "tr-2856",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "Historical/encyclopedic '-muştur' copula ('oluşturmuştur'); formal, Q4-tolerable."
+  },
+  {
+   "id": "tr-2884",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "-mektedir progressive (ilerlemektedir); stiff even for Q4"
+  },
+  {
+   "id": "tr-2886",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "Bureaucratic 'bilginize sunarız'; official phrasing"
+  },
+  {
+   "id": "tr-2920",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "Essay register: -mekte olup + -dır copula"
+  },
+  {
+   "id": "tr-2991",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "Essay connective 'bununla birlikte'; written register"
+  },
+  {
+   "id": "tr-3009",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "-maktadır (azalmaktadır); documentary register"
+  }
+ ]
+}

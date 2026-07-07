@@ -1,0 +1,3295 @@
+{
+ "language": "ru",
+ "deck_size": 3174,
+ "total_rated": 3174,
+ "ratings_histogram": {
+  "1": 9,
+  "2": 72,
+  "3": 107,
+  "4": 115,
+  "5": 82,
+  "6": 1973,
+  "7": 816
+ },
+ "flagged": [
+  {
+   "id": "ru-0377",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "A kind city standing on a corner is nonsense.",
+   "fix_target": "Добрый человек стоит на углу.",
+   "fix_english": "A kind man is standing on the corner."
+  },
+  {
+   "id": "ru-0388",
+   "q": "Q1",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "A child commuting to work every evening is absurd.",
+   "fix_target": "Ребёнок ездит в школу каждое утро.",
+   "fix_english": "The child goes to school every morning."
+  },
+  {
+   "id": "ru-0966",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'открыл правило' is nonsense; English also broken",
+   "fix_target": "Я вчера открыл окно.",
+   "fix_english": "I opened the window yesterday."
+  },
+  {
+   "id": "ru-0968",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'решил книгу' nonsense (decided a book)",
+   "fix_target": "Я решил вчера задачу.",
+   "fix_english": "I solved a problem yesterday."
+  },
+  {
+   "id": "ru-1141",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'построил урок' nonsense (built a lesson)",
+   "fix_target": "Я вчера построил домик из кубиков.",
+   "fix_english": "Yesterday I built a little house out of blocks."
+  },
+  {
+   "id": "ru-1153",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'приготовили книгу' nonsense (cooked a book)",
+   "fix_target": "Они приготовили утром завтрак.",
+   "fix_english": "They made breakfast in the morning."
+  },
+  {
+   "id": "ru-1154",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'выучили дом' nonsense (learned a house)",
+   "fix_target": "Они выучили утром стихотворение.",
+   "fix_english": "They learned a poem in the morning."
+  },
+  {
+   "id": "ru-1156",
+   "q": "Q2",
+   "rating": 1,
+   "type": "correctness",
+   "issue": "'решили книгу' nonsense; gloss 'solved the problem'",
+   "fix_target": "Они решили утром задачу.",
+   "fix_english": "They solved the problem in the morning."
+  },
+  {
+   "id": "ru-1204",
+   "q": "Q2",
+   "rating": 1,
+   "type": "both",
+   "issue": "'помогали...книгу' nonsense + wrong case (helped a book)",
+   "fix_target": "Они долго помогали другу.",
+   "fix_english": "They helped a friend for a long time."
+  },
+  {
+   "id": "ru-0044",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "age must use dative 'Бабушке ... лет', not 'У бабушки'",
+   "fix_target": "Бабушке восемьдесят пять лет.",
+   "fix_english": "Grandmother is eighty-five years old."
+  },
+  {
+   "id": "ru-0099",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "multidirectional 'ездит' with 'сейчас' wrong; needs unidirectional 'едет'",
+   "fix_target": "Программист сейчас едет на работу.",
+   "fix_english": "The programmer is going to work now."
+  },
+  {
+   "id": "ru-0181",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "present 'работает' clashes with future 'скоро'/English 'will work'",
+   "fix_target": "Сосед скоро будет работать в офисе.",
+   "fix_english": "The neighbor will work in the office soon."
+  },
+  {
+   "id": "ru-0254",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'Маленькое утро' is nonsense collocation (small morning)",
+   "fix_target": "Тихое утро выглядит прекрасно.",
+   "fix_english": "A quiet morning looks wonderful."
+  },
+  {
+   "id": "ru-0289",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "semantic absurdity: a child commuting to work",
+   "fix_target": "Отец ездил на работу на прошлой неделе.",
+   "fix_english": "Father commuted to work last week."
+  },
+  {
+   "id": "ru-0333",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Commuting to work before bed is absurd.",
+   "fix_target": "Водитель ездит на работу каждое утро.",
+   "fix_english": "The driver commutes to work every morning."
+  },
+  {
+   "id": "ru-0450",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "A 'new sea' is a semantic absurdity.",
+   "fix_target": "Синее море выглядит прекрасно.",
+   "fix_english": "The blue sea looks wonderful."
+  },
+  {
+   "id": "ru-0453",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "A 'strong morning' is a semantic absurdity.",
+   "fix_target": "Тихое утро выглядит прекрасно.",
+   "fix_english": "A quiet morning looks wonderful."
+  },
+  {
+   "id": "ru-0457",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Cooking lunch before bed is absurd.",
+   "fix_target": "Сестра готовит обед на кухне.",
+   "fix_english": "Sister is cooking lunch in the kitchen."
+  },
+  {
+   "id": "ru-0522",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Awkward word order and 'читала задачу' (tasks are solved, not read).",
+   "fix_target": "Она часто читала книгу.",
+   "fix_english": "She often read a book."
+  },
+  {
+   "id": "ru-0526",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "A 'smart sea' is a semantic absurdity.",
+   "fix_target": "Спокойное море выглядит прекрасно.",
+   "fix_english": "A calm sea looks wonderful."
+  },
+  {
+   "id": "ru-0527",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "A 'kind window' is a semantic absurdity.",
+   "fix_target": "Чистое окно выглядит прекрасно.",
+   "fix_english": "A clean window looks wonderful."
+  },
+  {
+   "id": "ru-0634",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'Добрая улица' (a kind street) is nonsense; adjective cannot describe a street this way.",
+   "fix_target": "Добрая соседка очень важна для меня.",
+   "fix_english": "A kind neighbor is very important to me."
+  },
+  {
+   "id": "ru-0723",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'убирал квартиру в театре' - an apartment inside a theater is nonsense.",
+   "fix_target": "Дедушка убирал квартиру на прошлой неделе.",
+   "fix_english": "Grandfather cleaned the apartment last week."
+  },
+  {
+   "id": "ru-0758",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'ездит на работу в школе' - commuting to work 'at school' is contradictory nonsense.",
+   "fix_target": "Программист едет на работу завтра.",
+   "fix_english": "The programmer is going to work tomorrow."
+  },
+  {
+   "id": "ru-0843",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'покупает продукты в библиотеке' - buying groceries in a library is nonsense.",
+   "fix_target": "Врач всегда покупает продукты в магазине.",
+   "fix_english": "The doctor always buys groceries at the store."
+  },
+  {
+   "id": "ru-0864",
+   "q": "Q1",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'в офисе на работе' is redundant nonsense and English gloss has typo 'at worked'.",
+   "fix_target": "Инженер работал в офисе на прошлой неделе.",
+   "fix_english": "The engineer worked in the office last week."
+  },
+  {
+   "id": "ru-0944",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Absurd: helping a friend in a museum before bed",
+   "fix_target": "После работы учитель помогает другу.",
+   "fix_english": "After work the teacher helps a friend."
+  },
+  {
+   "id": "ru-0948",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Absurd: dancing a waltz in a park before bed",
+   "fix_target": "Программист танцует вальс на вечеринке.",
+   "fix_english": "The programmer dances a waltz at the party."
+  },
+  {
+   "id": "ru-0949",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'в парке дома' contradictory (park + at home)",
+   "fix_target": "Друг гулял в парке на прошлой неделе.",
+   "fix_english": "The friend walked in the park last week."
+  },
+  {
+   "id": "ru-0997",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'в парке дома' contradictory location",
+   "fix_target": "Программист редко гуляет в парке.",
+   "fix_english": "The programmer rarely walks in the park."
+  },
+  {
+   "id": "ru-1002",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Contradictory: 'сейчас...бегает утром в школе'",
+   "fix_target": "Сейчас писатель бегает в парке.",
+   "fix_english": "Now the writer is running in the park."
+  },
+  {
+   "id": "ru-1003",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Absurd: running in the morning in the store",
+   "fix_target": "Утром студент бегает в парке.",
+   "fix_english": "In the morning the student runs in the park."
+  },
+  {
+   "id": "ru-1038",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Absurd: commutes to work in a museum before bed",
+   "fix_target": "Программист ездит на работу на метро.",
+   "fix_english": "The programmer commutes to work by metro."
+  },
+  {
+   "id": "ru-1083",
+   "q": "Q2",
+   "rating": 2,
+   "type": "both",
+   "issue": "Absurd cleaning apartment at the market; English drops location",
+   "fix_target": "Сестра всегда убирает квартиру по субботам.",
+   "fix_english": "The sister always cleans the apartment on Saturdays."
+  },
+  {
+   "id": "ru-1126",
+   "q": "Q2",
+   "rating": 2,
+   "type": "both",
+   "issue": "Absurd 'в театре' + gloss says 'at the store'",
+   "fix_target": "В понедельник художник покупает продукты в магазине.",
+   "fix_english": "On Monday the artist buys groceries in the store."
+  },
+  {
+   "id": "ru-1192",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Absurd: studying a language in a store before bed",
+   "fix_target": "Перед сном бабушка учит язык дома.",
+   "fix_english": "Before bed grandmother studies a language at home."
+  },
+  {
+   "id": "ru-1193",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Contradictory 'сейчас...ездит на работу в библиотеке'",
+   "fix_target": "Медсестра каждый день ездит на работу на автобусе.",
+   "fix_english": "The nurse commutes to work by bus every day."
+  },
+  {
+   "id": "ru-1196",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Absurd: helping a friend at the station before bed",
+   "fix_target": "После работы медсестра помогает другу.",
+   "fix_english": "After work the nurse helps a friend."
+  },
+  {
+   "id": "ru-1223",
+   "q": "Q2",
+   "rating": 2,
+   "type": "both",
+   "issue": "'ездит на работу дома' contradictory; multidirectional verb with 'сейчас'",
+   "fix_target": "Сейчас продавец едет на работу.",
+   "fix_english": "The salesman is going to work now."
+  },
+  {
+   "id": "ru-1265",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'готовил книгу' = cooked a book; gloss says meal",
+   "fix_target": "Я иногда готовил ужин.",
+   "fix_english": "I sometimes cooked dinner."
+  },
+  {
+   "id": "ru-1266",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'приготовила книгу' = cooked a book; gloss says meal",
+   "fix_target": "Она быстро приготовила ужин.",
+   "fix_english": "She quickly cooked dinner."
+  },
+  {
+   "id": "ru-1267",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'приготовили книгу' = cooked a book; gloss says dinner",
+   "fix_target": "Мы наконец приготовили ужин.",
+   "fix_english": "We finally cooked dinner."
+  },
+  {
+   "id": "ru-1268",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'учила дом' = taught the house; gloss says lesson",
+   "fix_target": "Она часто учила урок.",
+   "fix_english": "She often studied the lesson."
+  },
+  {
+   "id": "ru-1269",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'учил дом' = studied the house; gloss says lesson",
+   "fix_target": "Ты редко учил урок.",
+   "fix_english": "You rarely studied the lesson."
+  },
+  {
+   "id": "ru-1270",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'выучили дом' = memorized the house; gloss says lesson",
+   "fix_target": "Мы наконец выучили урок.",
+   "fix_english": "We finally memorized the lesson."
+  },
+  {
+   "id": "ru-1271",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'выучил дом' = memorized the house; gloss says lesson",
+   "fix_target": "Он сразу выучил урок.",
+   "fix_english": "He memorized the lesson immediately."
+  },
+  {
+   "id": "ru-1279",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'решал книгу' = solved a book; gloss says problem",
+   "fix_target": "Я иногда решал задачу.",
+   "fix_english": "I sometimes solved the problem."
+  },
+  {
+   "id": "ru-1280",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'решила книгу' means solved a book; gloss says decided to read",
+   "fix_target": "Она быстро решила задачу.",
+   "fix_english": "She quickly solved the problem."
+  },
+  {
+   "id": "ru-1287",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'готовили книгу' = cooked a book; gloss says prepared",
+   "fix_target": "Они долго готовили ужин.",
+   "fix_english": "They cooked dinner for a long time."
+  },
+  {
+   "id": "ru-1288",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'учили дом' = taught the house; gloss says lesson",
+   "fix_target": "Они долго учили урок.",
+   "fix_english": "They studied the lesson for a long time."
+  },
+  {
+   "id": "ru-1291",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'решали книгу' = solved a book; gloss garbled",
+   "fix_target": "Они долго решали задачу.",
+   "fix_english": "They solved the problem for a long time."
+  },
+  {
+   "id": "ru-1297",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'готовил книгу' = cooked a book",
+   "fix_target": "Он весь день готовил ужин.",
+   "fix_english": "He cooked dinner all day."
+  },
+  {
+   "id": "ru-1298",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'решал книгу' = solved a book",
+   "fix_target": "Он весь день решал задачу.",
+   "fix_english": "He solved the problem all day."
+  },
+  {
+   "id": "ru-1324",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'before bed commutes to work at the hospital' contradictory",
+   "fix_target": "Утром друг ездит на работу в больницу.",
+   "fix_english": "In the morning the friend goes to work at the hospital."
+  },
+  {
+   "id": "ru-1333",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'плавала в ресторан' = swam to a restaurant",
+   "fix_target": "Я часто ходила в ресторан.",
+   "fix_english": "I often went to the restaurant."
+  },
+  {
+   "id": "ru-1364",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'ездит на работу в школе' contradictory + present",
+   "fix_target": "Сегодня утром программист едет на работу.",
+   "fix_english": "This morning the programmer is going to work."
+  },
+  {
+   "id": "ru-1396",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'получала стихотворение' = received a poem; gloss says studied",
+   "fix_target": "Она часто учила стихотворение.",
+   "fix_english": "She often studied a poem."
+  },
+  {
+   "id": "ru-1397",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'получал стихотворение' = received a poem; gloss says studied",
+   "fix_target": "Я иногда учил стихотворение.",
+   "fix_english": "I sometimes studied a poem."
+  },
+  {
+   "id": "ru-1490",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'плавал в аэропорт' = swam to the airport",
+   "fix_target": "Он часто ездил в аэропорт.",
+   "fix_english": "He often went to the airport."
+  },
+  {
+   "id": "ru-1491",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'плавала в аэропорт' = swam to the airport",
+   "fix_target": "Она часто ездила в аэропорт.",
+   "fix_english": "She often went to the airport."
+  },
+  {
+   "id": "ru-1502",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'плавал на станцию' = swam to the station",
+   "fix_target": "Мальчик часто ходил на станцию.",
+   "fix_english": "The boy often went to the station."
+  },
+  {
+   "id": "ru-1518",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Semantic absurdity: you don't buy groceries in a museum",
+   "fix_target": "Часто сосед покупает продукты в магазине.",
+   "fix_english": "Often the neighbor buys groceries in the store."
+  },
+  {
+   "id": "ru-1524",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'в парке дома' is contradictory word salad",
+   "fix_target": "Вечером художник гуляет в парке рядом с домом.",
+   "fix_english": "In the evening the artist walks in the park near home."
+  },
+  {
+   "id": "ru-1528",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Absurd: commuting to work 'в горах' (in the mountains)",
+   "fix_target": "Сестра редко ездит на работу на машине.",
+   "fix_english": "The sister rarely commutes to work by car."
+  },
+  {
+   "id": "ru-1539",
+   "q": "Q2",
+   "rating": 2,
+   "type": "both",
+   "issue": "'в магазине' vs English 'at school' mismatch; studying a language in a store is odd",
+   "fix_target": "В понедельник студент учит язык в университете.",
+   "fix_english": "On Monday the student studies a language at the university."
+  },
+  {
+   "id": "ru-1543",
+   "q": "Q2",
+   "rating": 2,
+   "type": "both",
+   "issue": "'на пляже' vs English 'on the farm' mismatch; commuting to work on a beach absurd",
+   "fix_target": "В понедельник фермер едет на работу в поле.",
+   "fix_english": "On Monday the farmer goes to work in the field."
+  },
+  {
+   "id": "ru-1544",
+   "q": "Q2",
+   "rating": 2,
+   "type": "both",
+   "issue": "'на пляже' vs English 'at the studio' mismatch; commuting to work on a beach absurd",
+   "fix_target": "После обеда художник едет на работу в студию.",
+   "fix_english": "After lunch the artist goes to work at the studio."
+  },
+  {
+   "id": "ru-1555",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'потеряли задачу' is nonsense (can't 'lose a task')",
+   "fix_target": "Мы наконец потеряли терпение.",
+   "fix_english": "We finally lost patience."
+  },
+  {
+   "id": "ru-1556",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'потерял задачу' is nonsense",
+   "fix_target": "Он сразу потерял терпение.",
+   "fix_english": "He immediately lost patience."
+  },
+  {
+   "id": "ru-1620",
+   "q": "Q2",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'плыл на рынок' (swimming to a market) is absurd",
+   "fix_target": "Мальчик плыл к другому берегу.",
+   "fix_english": "The boy was swimming to the other bank."
+  },
+  {
+   "id": "ru-1627",
+   "q": "Q2",
+   "rating": 2,
+   "type": "both",
+   "issue": "'плавал в библиотеку' (swimming to library) absurd; English 'went' mismatch",
+   "fix_target": "Я часто плавал в бассейне.",
+   "fix_english": "I often swam in the pool."
+  },
+  {
+   "id": "ru-1781",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'называется' is for objects/titles, not naming a person; must be 'зовут'",
+   "fix_target": "Её зовут Анна.",
+   "fix_english": "Her name is Anna."
+  },
+  {
+   "id": "ru-2026",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "semantic absurdity: salesman dancing a waltz in the library after lunch",
+   "fix_target": "Продавец магазина отлично танцует вальс.",
+   "fix_english": "The shop assistant dances the waltz very well."
+  },
+  {
+   "id": "ru-2122",
+   "q": "Q3",
+   "rating": 2,
+   "type": "both",
+   "issue": "Semantic nonsense 'cleans the apartment in the museum'; English gloss omits 'в музее' entirely",
+   "fix_target": "Программист всегда убирает квартиру по субботам.",
+   "fix_english": "The programmer always cleans the apartment on Saturdays."
+  },
+  {
+   "id": "ru-2321",
+   "q": "Q3",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Misspelling: 'доволна' should be 'довольна'.",
+   "fix_target": "Она довольна своей работой.",
+   "fix_english": "She is satisfied with her job."
+  },
+  {
+   "id": "ru-2375",
+   "q": "Q3",
+   "rating": 2,
+   "type": "both",
+   "issue": "'читал ... задачу' is nonsensical (задачи решают, не читают) and English gloss is broken.",
+   "fix_target": "Я читал газету каждый день.",
+   "fix_english": "I used to read the newspaper every day."
+  },
+  {
+   "id": "ru-2478",
+   "q": "Q3",
+   "rating": 2,
+   "type": "both",
+   "issue": "'Скоро ... слушает' tense mismatch and 'Скоро' not in English gloss; random nonsense.",
+   "fix_target": "Писатель слушает музыку в магазине.",
+   "fix_english": "The writer listens to music in the store."
+  },
+  {
+   "id": "ru-2679",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Word-salad: 'скоро' + present 'поёт' tense mismatch and absurd (athlete singing at work).",
+   "fix_target": "Скоро спортсмен выступит на соревнованиях.",
+   "fix_english": "Soon the athlete will compete at the competition."
+  },
+  {
+   "id": "ru-2870",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'Едя' is a nonstandard/non-existent gerund of ехать, jarring to native ears",
+   "fix_target": "Сидя в поезде, мы любовались пейзажем.",
+   "fix_english": "Sitting on the train, we admired the scenery."
+  },
+  {
+   "id": "ru-3122",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "Two unrelated clauses stitched into word-salad; no coherent meaning.",
+   "fix_target": "Художник рисует картину в мастерской, а спортсмен бегает по утрам.",
+   "fix_english": "The artist paints a picture in his studio, and the athlete runs in the mornings."
+  },
+  {
+   "id": "ru-3210",
+   "q": "Q4",
+   "rating": 2,
+   "type": "correctness",
+   "issue": "'ездит на работу в парке' is semantically absurd; disconnected clauses.",
+   "fix_target": "Продавец каждый день ездит на работу на метро, а бабушка готовит обед.",
+   "fix_english": "The salesman commutes to work by metro every day, and grandmother prepares lunch."
+  },
+  {
+   "id": "ru-0043",
+   "q": "Q1",
+   "rating": 3,
+   "type": "register",
+   "issue": "'поинтересовалась' is bookish for everyday 'спросила'",
+   "fix_target": "Она спросила, чем я занимаюсь.",
+   "fix_english": "She asked what I do."
+  },
+  {
+   "id": "ru-0091",
+   "q": "Q1",
+   "rating": 3,
+   "type": "register",
+   "issue": "attributive active participle 'читающий мальчик' bookish at Q1",
+   "fix_target": "Мальчик сидит у окна и читает.",
+   "fix_english": "The boy is sitting by the window and reading."
+  },
+  {
+   "id": "ru-0093",
+   "q": "Q1",
+   "rating": 3,
+   "type": "register",
+   "issue": "fronted gerund clause 'Ожидая автобус' bookish at Q1",
+   "fix_target": "Пока я ждал автобус, я читал газету.",
+   "fix_english": "While waiting for the bus, I read a newspaper."
+  },
+  {
+   "id": "ru-0100",
+   "q": "Q1",
+   "rating": 3,
+   "type": "register",
+   "issue": "attributive passive participle 'прочитанная книга' bookish at Q1",
+   "fix_target": "Книга, которую я прочитал, стоит на полке.",
+   "fix_english": "The book that I read is on the shelf."
+  },
+  {
+   "id": "ru-0151",
+   "q": "Q1",
+   "rating": 3,
+   "type": "register",
+   "issue": "'Приветствую вас от имени нашей компании' formal/bureaucratic, dead in casual speech",
+   "fix_target": "Здравствуйте, я представляю нашу компанию.",
+   "fix_english": "Hello, I represent our company."
+  },
+  {
+   "id": "ru-0158",
+   "q": "Q1",
+   "rating": 3,
+   "type": "register",
+   "issue": "'составляет' is kancelyarit; everyday drops it",
+   "fix_target": "Скидка пятнадцать процентов.",
+   "fix_english": "The discount is fifteen percent."
+  },
+  {
+   "id": "ru-0229",
+   "q": "Q1",
+   "rating": 3,
+   "type": "register",
+   "issue": "rare bookish vocabulary (вышивальщица, крестильная рубашка, цветочный орнамент) far above Q1 speech",
+   "fix_target": "Мастерица вышивала рубашку цветами.",
+   "fix_english": "The needlewoman embroidered a shirt with flowers."
+  },
+  {
+   "id": "ru-0231",
+   "q": "Q1",
+   "rating": 3,
+   "type": "register",
+   "issue": "'мыловар', 'изготовил' bookish/kancelyarit, above Q1 everyday",
+   "fix_target": "Она сделала ароматное мыло с лавандой.",
+   "fix_english": "She made fragrant lavender soap."
+  },
+  {
+   "id": "ru-0232",
+   "q": "Q1",
+   "rating": 3,
+   "type": "register",
+   "issue": "'свечница отливала ... различных форм и размеров' bookish, above Q1 speech",
+   "fix_target": "Она делала восковые свечи разных форм.",
+   "fix_english": "She made wax candles of different shapes."
+  },
+  {
+   "id": "ru-0277",
+   "q": "Q1",
+   "rating": 3,
+   "type": "register",
+   "issue": "'состоялся' is newsy/bookish for everyday 'был'",
+   "fix_target": "Серьёзный разговор был вчера вечером.",
+   "fix_english": "There was a serious conversation yesterday evening."
+  },
+  {
+   "id": "ru-0403",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "A cheerful park standing on a corner is unnatural.",
+   "fix_target": "Весёлый клоун стоит на углу.",
+   "fix_english": "A cheerful clown is standing on the corner."
+  },
+  {
+   "id": "ru-0498",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Buying groceries in a park is absurd.",
+   "fix_target": "Продавец часто покупает продукты в магазине.",
+   "fix_english": "The salesman often buys groceries in the store."
+  },
+  {
+   "id": "ru-0528",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "A 'cheerful letter looking wonderful' is unnatural.",
+   "fix_target": "Красивое письмо выглядит прекрасно.",
+   "fix_english": "A beautiful letter looks wonderful."
+  },
+  {
+   "id": "ru-0540",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "A city standing on a corner is nonsense.",
+   "fix_target": "Старый дом стоит на углу.",
+   "fix_english": "An old house stands on the corner."
+  },
+  {
+   "id": "ru-0596",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "A programmer always painting a picture at the station is absurd.",
+   "fix_target": "Художник всегда рисует картину в парке.",
+   "fix_english": "The artist always paints a picture in the park."
+  },
+  {
+   "id": "ru-0635",
+   "q": "Q1",
+   "rating": 3,
+   "type": "both",
+   "issue": "'Сильная школа' is odd collocation and gloss says 'good school' not 'strong'.",
+   "fix_target": "Хорошая школа очень важна для меня.",
+   "fix_english": "A good school is very important to me."
+  },
+  {
+   "id": "ru-0639",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'скоро' stranded at end with habitual present is ungrammatical word order.",
+   "fix_target": "Скоро бабушка поможет другу в театре.",
+   "fix_english": "Grandmother will soon help a friend at the theater."
+  },
+  {
+   "id": "ru-0730",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Habitual 'ездит' clashes with future adverb 'завтра'.",
+   "fix_target": "Программист ездит на работу каждый день.",
+   "fix_english": "The programmer commutes to work every day."
+  },
+  {
+   "id": "ru-0801",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'работает в офисе дома' - working in an office at home is contradictory.",
+   "fix_target": "Девочка иногда работает из дома.",
+   "fix_english": "The girl sometimes works from home."
+  },
+  {
+   "id": "ru-0869",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Dancing a waltz 'before bed' is a semantic absurdity.",
+   "fix_target": "Писатель танцует вальс на празднике.",
+   "fix_english": "The writer dances a waltz at the party."
+  },
+  {
+   "id": "ru-0893",
+   "q": "Q1",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'Сильный стол' is wrong collocation; a table is крепкий/прочный, not сильный.",
+   "fix_target": "Крепкий стол стоит на углу.",
+   "fix_english": "A sturdy table stands on the corner."
+  },
+  {
+   "id": "ru-0967",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'закрыл письмо' not idiomatic for sealing a letter",
+   "fix_target": "Я закрыл вчера окно.",
+   "fix_english": "I closed the window yesterday."
+  },
+  {
+   "id": "ru-1040",
+   "q": "Q2",
+   "rating": 3,
+   "type": "register",
+   "issue": "Fronted gerund clause, literary for Q2",
+   "fix_target": "Она улыбнулась, протянула руку и представилась новому коллеге.",
+   "fix_english": "She smiled, extended her hand and introduced herself to the new colleague."
+  },
+  {
+   "id": "ru-1062",
+   "q": "Q2",
+   "rating": 3,
+   "type": "both",
+   "issue": "'обещается' archaic/wrong; should be 'обещает'",
+   "fix_target": "Она обещает прийти вовремя.",
+   "fix_english": "She promises to come on time."
+  },
+  {
+   "id": "ru-1113",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Absurd: buying groceries in the park",
+   "fix_target": "Завтра папа покупает продукты в магазине.",
+   "fix_english": "Tomorrow dad buys groceries in the store."
+  },
+  {
+   "id": "ru-1119",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Gloss mismatch: 'на рынке' vs 'at home'; odd scene",
+   "fix_target": "В понедельник художник читает книгу дома.",
+   "fix_english": "On Monday the artist reads a book at home."
+  },
+  {
+   "id": "ru-1121",
+   "q": "Q2",
+   "rating": 3,
+   "type": "register",
+   "issue": "Bookish 'Благодарность наполнила его сердце'",
+   "fix_target": "Он был благодарен соседу за помощь.",
+   "fix_english": "He was grateful to the neighbor for the help."
+  },
+  {
+   "id": "ru-1143",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'потерял задачу' odd collocation",
+   "fix_target": "Я вчера потерял ключи.",
+   "fix_english": "I lost my keys yesterday."
+  },
+  {
+   "id": "ru-1155",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'открыли правило' odd collocation",
+   "fix_target": "Они открыли утром окно.",
+   "fix_english": "They opened the window in the morning."
+  },
+  {
+   "id": "ru-1178",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Gloss drops 'в школе'; watching a movie at school odd",
+   "fix_target": "Завтра бабушка смотрит фильм дома.",
+   "fix_english": "Tomorrow grandmother watches a movie at home."
+  },
+  {
+   "id": "ru-1182",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Gloss drops 'в музее'; singing in a museum odd",
+   "fix_target": "Завтра бабушка поёт песню на концерте.",
+   "fix_english": "Tomorrow grandmother sings a song at the concert."
+  },
+  {
+   "id": "ru-1224",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "washing dishes 'at school' is an absurd location",
+   "fix_target": "Вечером дедушка моет посуду дома.",
+   "fix_english": "In the evening grandfather washes dishes at home."
+  },
+  {
+   "id": "ru-1230",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "cleaning an apartment 'at the hospital' is absurd",
+   "fix_target": "Обычно полицейский убирает квартиру дома.",
+   "fix_english": "Usually the policeman cleans the apartment at home."
+  },
+  {
+   "id": "ru-1272",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'открывали правило книги' is garbled",
+   "fix_target": "Мы обычно открывали учебник на нужном правиле.",
+   "fix_english": "We usually opened the textbook to the right rule."
+  },
+  {
+   "id": "ru-1275",
+   "q": "Q2",
+   "rating": 3,
+   "type": "both",
+   "issue": "'закрывать письмо' wrong collocation for seal + word order",
+   "fix_target": "Она часто запечатывала письмо.",
+   "fix_english": "She often sealed the letter."
+  },
+  {
+   "id": "ru-1276",
+   "q": "Q2",
+   "rating": 3,
+   "type": "both",
+   "issue": "'закрывать письмо' wrong for seal + word order",
+   "fix_target": "Мы обычно запечатывали письмо.",
+   "fix_english": "We usually sealed the letter."
+  },
+  {
+   "id": "ru-1284",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'ответили письмо' missing 'на'; wrong case",
+   "fix_target": "Они ответили на письмо утром.",
+   "fix_english": "They answered the letter in the morning."
+  },
+  {
+   "id": "ru-1286",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'забыли дом' = forgot a house, nonsensical",
+   "fix_target": "Они забыли утром ключи.",
+   "fix_english": "They forgot their keys in the morning."
+  },
+  {
+   "id": "ru-1289",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'долго открывали тайну правила' + 'long discovered' garbled",
+   "fix_target": "Они долго разбирались с этим правилом.",
+   "fix_english": "They spent a long time figuring out this rule."
+  },
+  {
+   "id": "ru-1290",
+   "q": "Q2",
+   "rating": 3,
+   "type": "both",
+   "issue": "'закрывать письмо' wrong for seal",
+   "fix_target": "Они долго запечатывали письмо.",
+   "fix_english": "They spent a long time sealing the letter."
+  },
+  {
+   "id": "ru-1306",
+   "q": "Q2",
+   "rating": 3,
+   "type": "both",
+   "issue": "doing laundry 'at the station' + скоро+present",
+   "fix_target": "Скоро дедушка постирает одежду дома.",
+   "fix_english": "Grandfather will do laundry at home soon."
+  },
+  {
+   "id": "ru-1311",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "buying groceries 'at the hospital' is absurd",
+   "fix_target": "Обычно водитель покупает продукты в магазине.",
+   "fix_english": "Usually the driver buys groceries in the store."
+  },
+  {
+   "id": "ru-1314",
+   "q": "Q2",
+   "rating": 3,
+   "type": "both",
+   "issue": "'в офисе дома' contradictory + скоро+present",
+   "fix_target": "Скоро студент будет работать дома.",
+   "fix_english": "Soon the student will work from home."
+  },
+  {
+   "id": "ru-1317",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "cleaning an apartment 'at the hospital' is absurd",
+   "fix_target": "Часто ребёнок убирает квартиру дома.",
+   "fix_english": "Often the child cleans the apartment at home."
+  },
+  {
+   "id": "ru-1319",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'before bed' listening to music 'in the store' contradictory",
+   "fix_target": "Перед сном папа слушает музыку дома.",
+   "fix_english": "Before bed dad listens to music at home."
+  },
+  {
+   "id": "ru-1332",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'скоро' + multidirectional 'ездит' present is wrong for future",
+   "fix_target": "Скоро полицейский будет ездить на работу.",
+   "fix_english": "Soon the policeman will commute to work."
+  },
+  {
+   "id": "ru-1334",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'водил в ресторан' missing object; wrong verb for going",
+   "fix_target": "Я часто ездил в ресторан.",
+   "fix_english": "I often went to the restaurant."
+  },
+  {
+   "id": "ru-1352",
+   "q": "Q2",
+   "rating": 3,
+   "type": "both",
+   "issue": "'завтра' + present 'танцует'; dancing waltz in a store",
+   "fix_target": "Завтра музыкант будет танцевать вальс на вечеринке.",
+   "fix_english": "Tomorrow the musician will dance a waltz at the party."
+  },
+  {
+   "id": "ru-1356",
+   "q": "Q2",
+   "rating": 3,
+   "type": "both",
+   "issue": "'завтра' + present; playing chess in a museum",
+   "fix_target": "Завтра водитель будет играть в шахматы.",
+   "fix_english": "Tomorrow the driver will play chess."
+  },
+  {
+   "id": "ru-1358",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "cleaning an apartment 'at the station' is absurd",
+   "fix_target": "В понедельник спортсмен убирает квартиру дома.",
+   "fix_english": "On Monday the athlete cleans the apartment at home."
+  },
+  {
+   "id": "ru-1366",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "cleaning an apartment 'at the hospital' is absurd",
+   "fix_target": "На прошлой неделе спортсмен убирал квартиру дома.",
+   "fix_english": "Last week the athlete cleaned the apartment at home."
+  },
+  {
+   "id": "ru-1398",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'отвечала письмо' missing 'на'; wrong case",
+   "fix_target": "Она часто отвечала на письмо.",
+   "fix_english": "She often answered the letter."
+  },
+  {
+   "id": "ru-1399",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'отвечали письмо' missing 'на'; wrong case",
+   "fix_target": "Мы обычно отвечали на письмо.",
+   "fix_english": "We usually answered the letter."
+  },
+  {
+   "id": "ru-1400",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'ответил письмо' missing 'на'; wrong case",
+   "fix_target": "Он сразу ответил на письмо.",
+   "fix_english": "He answered the letter immediately."
+  },
+  {
+   "id": "ru-1401",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'ответила письмо' missing 'на'; wrong case",
+   "fix_target": "Она быстро ответила на письмо.",
+   "fix_english": "She quickly answered the letter."
+  },
+  {
+   "id": "ru-1406",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'терять задачу' odd collocation for lose",
+   "fix_target": "Ты редко терял ключи.",
+   "fix_english": "You rarely lost your keys."
+  },
+  {
+   "id": "ru-1411",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'забывал дом' = forgot a house, nonsensical",
+   "fix_target": "Я иногда забывал ключи.",
+   "fix_english": "I sometimes forgot my keys."
+  },
+  {
+   "id": "ru-1412",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'забыла дом' = forgot a house, nonsensical",
+   "fix_target": "Она быстро забыла об этом.",
+   "fix_english": "She quickly forgot about it."
+  },
+  {
+   "id": "ru-1413",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'забыли дом' = forgot a house, nonsensical",
+   "fix_target": "Мы наконец забыли об этом.",
+   "fix_english": "We finally forgot about it."
+  },
+  {
+   "id": "ru-1421",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'забывали дом' = forgot a house, nonsensical",
+   "fix_target": "Они долго не могли забыть тот дом.",
+   "fix_english": "They couldn't forget that house for a long time."
+  },
+  {
+   "id": "ru-1422",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'готовит обед после обеда' = cooks lunch after lunch, contradictory",
+   "fix_target": "Мама готовит обед днём.",
+   "fix_english": "Mom cooks lunch in the afternoon."
+  },
+  {
+   "id": "ru-1428",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'отвечал письмо' missing 'на'; wrong case",
+   "fix_target": "Он весь день отвечал на письмо.",
+   "fix_english": "He spent all day answering the letter."
+  },
+  {
+   "id": "ru-1430",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'забывал дом' = forgot a house, nonsensical",
+   "fix_target": "Он весь день всё забывал.",
+   "fix_english": "He kept forgetting things all day."
+  },
+  {
+   "id": "ru-1439",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'терять задачу' odd collocation for lose",
+   "fix_target": "Я каждый день терял ключи.",
+   "fix_english": "I lost my keys every day."
+  },
+  {
+   "id": "ru-1481",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'получали стихотворение' = received a poem; gloss garbled",
+   "fix_target": "Они долго учили стихотворение.",
+   "fix_english": "They studied the poem for a long time."
+  },
+  {
+   "id": "ru-1482",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'терять задачу' odd collocation for lose",
+   "fix_target": "Они долго искали нужную задачу.",
+   "fix_english": "They spent a long time looking for the right problem."
+  },
+  {
+   "id": "ru-1492",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'носил в аэропорт' missing object",
+   "fix_target": "Он часто носил вещи в аэропорт.",
+   "fix_english": "He often carried things to the airport."
+  },
+  {
+   "id": "ru-1493",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'возил в аэропорт' missing object",
+   "fix_target": "Я часто возил людей в аэропорт.",
+   "fix_english": "I often drove people to the airport."
+  },
+  {
+   "id": "ru-1494",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'водил в магазин' missing object",
+   "fix_target": "Он часто водил детей в магазин.",
+   "fix_english": "He often took the children to the store."
+  },
+  {
+   "id": "ru-1495",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'водила в магазин' missing object",
+   "fix_target": "Она часто водила детей в магазин.",
+   "fix_english": "She often took the children to the store."
+  },
+  {
+   "id": "ru-1503",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'возил в больницу' missing object",
+   "fix_target": "Мальчик часто ездил в больницу.",
+   "fix_english": "The boy often went to the hospital."
+  },
+  {
+   "id": "ru-1529",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Absurd location: doing laundry 'на работе'",
+   "fix_target": "Сегодня утром программист стирает одежду дома.",
+   "fix_english": "This morning the programmer does laundry at home."
+  },
+  {
+   "id": "ru-1532",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Absurd: commuting to work 'в театре'",
+   "fix_target": "Обычно архитектор ездит на работу на метро.",
+   "fix_english": "Usually the architect commutes to work by metro."
+  },
+  {
+   "id": "ru-1540",
+   "q": "Q2",
+   "rating": 3,
+   "type": "both",
+   "issue": "'на пляже' vs English 'at the clinic' mismatch",
+   "fix_target": "Каждый день медсестра помогает больным в клинике.",
+   "fix_english": "Every day the nurse helps patients at the clinic."
+  },
+  {
+   "id": "ru-1551",
+   "q": "Q2",
+   "rating": 3,
+   "type": "register",
+   "issue": "Unnatural word order 'объяснил сразу правило'; adverb belongs before verb",
+   "fix_target": "Он сразу объяснил правило.",
+   "fix_english": "He immediately explained the rule."
+  },
+  {
+   "id": "ru-1552",
+   "q": "Q2",
+   "rating": 3,
+   "type": "register",
+   "issue": "Unnatural word order 'объяснила быстро правило'",
+   "fix_target": "Она быстро объяснила правило.",
+   "fix_english": "She quickly explained the rule."
+  },
+  {
+   "id": "ru-1553",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Word order off and 'получила стихотворение' semantically odd",
+   "fix_target": "Она быстро получила письмо.",
+   "fix_english": "She quickly received a letter."
+  },
+  {
+   "id": "ru-1554",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Word order off and 'получил стихотворение' semantically odd",
+   "fix_target": "Он сразу получил письмо.",
+   "fix_english": "He immediately received a letter."
+  },
+  {
+   "id": "ru-1558",
+   "q": "Q2",
+   "rating": 3,
+   "type": "register",
+   "issue": "Bookish participial construction 'остававшееся открытым десятилетиями' at Q2",
+   "fix_target": "Математик решил уравнение, которое десятилетиями никто не мог решить.",
+   "fix_english": "The mathematician solved an equation that no one could solve for decades."
+  },
+  {
+   "id": "ru-1575",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Transitive возить with no object; incomplete sentence",
+   "fix_target": "Она часто возила детей домой.",
+   "fix_english": "She often drove the kids home."
+  },
+  {
+   "id": "ru-1579",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Transitive вести with no object; also вести is on-foot, not 'driving'",
+   "fix_target": "Я вела сына в школу.",
+   "fix_english": "I was walking my son to school."
+  },
+  {
+   "id": "ru-1580",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Transitive водить with no object; incomplete",
+   "fix_target": "Мальчик часто водил собаку домой.",
+   "fix_english": "The boy often walked the dog home."
+  },
+  {
+   "id": "ru-1615",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Transitive везти with no object; incomplete",
+   "fix_target": "Я везла подругу на станцию.",
+   "fix_english": "I was taking my friend to the station."
+  },
+  {
+   "id": "ru-1616",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Transitive везти with no object; incomplete",
+   "fix_target": "Она везла овощи на рынок.",
+   "fix_english": "She was taking vegetables to the market."
+  },
+  {
+   "id": "ru-1617",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Transitive вести with no object; incomplete",
+   "fix_target": "Он вёл коня на рынок.",
+   "fix_english": "He was leading a horse to the market."
+  },
+  {
+   "id": "ru-1621",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Transitive вести with no object; incomplete",
+   "fix_target": "Мальчик вёл козу на рынок.",
+   "fix_english": "The boy was leading a goat to the market."
+  },
+  {
+   "id": "ru-1628",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Transitive носить with no object; incomplete",
+   "fix_target": "Я часто носил книги в библиотеку.",
+   "fix_english": "I often carried books to the library."
+  },
+  {
+   "id": "ru-1629",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Transitive носить with no object; incomplete",
+   "fix_target": "Я часто носила еду в парк.",
+   "fix_english": "I often carried food to the park."
+  },
+  {
+   "id": "ru-1630",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Transitive носить with no object; incomplete",
+   "fix_target": "Она часто носила книги в библиотеку.",
+   "fix_english": "She often carried books to the library."
+  },
+  {
+   "id": "ru-1631",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Transitive возить with no object; incomplete",
+   "fix_target": "Я часто возила книги в библиотеку.",
+   "fix_english": "I often took books to the library."
+  },
+  {
+   "id": "ru-1637",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Transitive носить with no object; incomplete",
+   "fix_target": "Мальчик часто носил мяч в парк.",
+   "fix_english": "The boy often carried a ball to the park."
+  },
+  {
+   "id": "ru-1650",
+   "q": "Q2",
+   "rating": 3,
+   "type": "both",
+   "issue": "Cleaning an apartment 'на пляже' absurd; English drops the location",
+   "fix_target": "Архитектор всегда убирает квартиру по выходным.",
+   "fix_english": "The architect always cleans the apartment on weekends."
+  },
+  {
+   "id": "ru-1659",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Washing dishes 'в музее' is absurd",
+   "fix_target": "В понедельник писатель моет посуду дома.",
+   "fix_english": "On Monday the writer washes dishes at home."
+  },
+  {
+   "id": "ru-1660",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Cleaning an apartment 'на пляже' is absurd",
+   "fix_target": "По выходным архитектор убирает квартиру.",
+   "fix_english": "On weekends the architect cleans the apartment."
+  },
+  {
+   "id": "ru-1673",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Transitive возить with no object; incomplete",
+   "fix_target": "Он часто возил детей в кино.",
+   "fix_english": "He often drove the kids to the cinema."
+  },
+  {
+   "id": "ru-1674",
+   "q": "Q2",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Transitive водить with no object; incomplete",
+   "fix_target": "Я часто водила детей в кино.",
+   "fix_english": "I often took the kids to the cinema."
+  },
+  {
+   "id": "ru-1816",
+   "q": "Q3",
+   "rating": 3,
+   "type": "register",
+   "issue": "awkward word order 'Я бы должен был'; non-idiomatic, natural is 'Я должен был'",
+   "fix_target": "Я должен был позвонить.",
+   "fix_english": "I should have called."
+  },
+  {
+   "id": "ru-1868",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'Я бы рад' drops the required copula 'был'; must be 'Я был бы рад'",
+   "fix_target": "Я был бы рад помочь.",
+   "fix_english": "I would be glad to help."
+  },
+  {
+   "id": "ru-1917",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "gloss mismatch: English adds 'if they studied' absent from the Russian",
+   "fix_target": "Они бы выучили русский.",
+   "fix_english": "They would learn Russian."
+  },
+  {
+   "id": "ru-2040",
+   "q": "Q3",
+   "rating": 3,
+   "type": "both",
+   "issue": "English says 'us' but Russian has no нас; бы+должна была word order stilted",
+   "fix_target": "Она должна была нас предупредить.",
+   "fix_english": "She should have warned us."
+  },
+  {
+   "id": "ru-2179",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'прочитал задачу' is an odd collocation and the English 'I read yesterday a task' is broken",
+   "fix_target": "Я вчера прочитал интересную статью.",
+   "fix_english": "Yesterday I read an interesting article."
+  },
+  {
+   "id": "ru-2268",
+   "q": "Q3",
+   "rating": 3,
+   "type": "register",
+   "issue": "'До свидания до завтра' is redundant/unnatural; no one stacks both",
+   "fix_target": "До завтра!",
+   "fix_english": "See you tomorrow!"
+  },
+  {
+   "id": "ru-2409",
+   "q": "Q3",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Present 'моет' with future adverb 'завтра' clashes with the future English gloss.",
+   "fix_target": "Библиотекарь будет мыть посуду дома завтра.",
+   "fix_english": "The librarian will wash dishes at home tomorrow."
+  },
+  {
+   "id": "ru-2531",
+   "q": "Q3",
+   "rating": 3,
+   "type": "register",
+   "issue": "'Читаемая книга' present passive participle is dead in speech.",
+   "fix_target": "Книга, которую я читаю, интересная.",
+   "fix_english": "The book I'm reading is interesting."
+  },
+  {
+   "id": "ru-2598",
+   "q": "Q4",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Unnatural word order ('прочитала быстро задачу'); adverb misplaced.",
+   "fix_target": "Она быстро прочитала задачу.",
+   "fix_english": "She quickly read the problem."
+  },
+  {
+   "id": "ru-2606",
+   "q": "Q4",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "Awkward word order and semantically odd (reading a 'задача' all day).",
+   "fix_target": "Он весь день читал книгу.",
+   "fix_english": "He read a book all day."
+  },
+  {
+   "id": "ru-2715",
+   "q": "Q4",
+   "rating": 3,
+   "type": "correctness",
+   "issue": "'убеждать, чтобы' is nonstandard government; needs infinitive or 'уговаривать'.",
+   "fix_target": "Она уговаривала нас не волноваться.",
+   "fix_english": "She urged us not to worry."
+  },
+  {
+   "id": "ru-0119",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "'ездит на работу после обеда' semantically odd commuting template"
+  },
+  {
+   "id": "ru-0182",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "'Девочка часто работает в офисе' semantically odd, template-generated"
+  },
+  {
+   "id": "ru-0188",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "'ездит на работу после обеда' odd commuting template"
+  },
+  {
+   "id": "ru-0205",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "'Повар редко работает в офисе' semantically odd (chef in office)"
+  },
+  {
+   "id": "ru-0211",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "'бегает утром на вокзале' semantically odd (running at the station)"
+  },
+  {
+   "id": "ru-0246",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "'Тихое здание выглядит прекрасно' odd collocation, template-generated"
+  },
+  {
+   "id": "ru-0275",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "'Мальчик часто работает в офисе' semantically odd (boy in office)"
+  },
+  {
+   "id": "ru-0310",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Dancing a waltz right before bed is an odd scenario.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0312",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Template mismatch: a musician usually working in an office is odd.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0354",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Reading a book in the theater is an odd scenario.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0404",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "An athlete usually working in an office is an odd pairing.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0451",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "An old window 'looking wonderful' is an odd template line.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0452",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "A big letter 'looking wonderful' is an odd template line.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0489",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Listening to music in the store is an odd template pairing.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0490",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Always helping a friend in the theater is an odd scenario.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0504",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Always helping a friend in the restaurant is an odd scenario.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0517",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Director dancing a waltz after lunch is a stiff template pairing.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0534",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "'имеют' is bookish; everyday would be 'В больших городах много проблем'.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0541",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "A park standing on a corner is an odd template line.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0543",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'A beautiful friend' on the corner is an odd collocation.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0552",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "A 'big song' being very important is an odd template line.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0559",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Rarely helping a friend in the museum is an odd scenario.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0575",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Reading a book in the store is an odd scenario.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0579",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'прочитали задачу' plus awkward word order (наконец mid-clause).",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0593",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'An intelligent book' being very important is a borderline template line.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0604",
+   "q": "Q1",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Running at the station is odd, and the gloss 'used to run last week' mismatches.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0611",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "Odd template: buying groceries at a train station is implausible everyday content.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0641",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "Implausible template: driver listening to music at the hospital.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0681",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "Implausible template: salesman playing chess at the station.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0682",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "'Сочувствие соседей помогло семье пережить' is written/literary, not Q1 speech.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0689",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "'Разочарование было заметно в её глазах после неприятного известия' is literary narration.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0757",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "Implausible template: salesman rarely playing chess at the station.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0800",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "Implausible template: grandmother sometimes watching a movie in the mountains.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0802",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "Implausible template: librarian usually watching a movie at the airport.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0804",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "'Друг всегда помогает другу' is awkward repetition of друг.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0809",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "'Далёкий путь утомил путешественников' is literary/bookish, not Q1 speech.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0839",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "Implausible template: salesman washing dishes in a museum.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0856",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "Implausible template: director dancing a waltz in the park after lunch.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0860",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "Implausible template: musician washing dishes in a museum.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0861",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "Implausible template: dancing a waltz at the market.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0863",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "'возвёл стену' is elevated/bookish; everyday speech uses построил/сложил.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0873",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "Implausible template: salesman often studying a language in the mountains.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0908",
+   "q": "Q1",
+   "rating": 4,
+   "type": "register",
+   "issue": "Implausible template: policeman always writing a letter in the store.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0932",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "Doing laundry at work is an odd everyday scene"
+  },
+  {
+   "id": "ru-1088",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "Buying groceries at the airport is odd"
+  },
+  {
+   "id": "ru-1116",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "Running in the morning at the station is odd"
+  },
+  {
+   "id": "ru-1118",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "Bookish literary description, dead in speech at Q2"
+  },
+  {
+   "id": "ru-1127",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "Literary description, bookish for Q2"
+  },
+  {
+   "id": "ru-1181",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "Buying groceries in the mountains is odd"
+  },
+  {
+   "id": "ru-1186",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "Gloss drops 'в театре'"
+  },
+  {
+   "id": "ru-1231",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'скоро' + present tense reads as a drill, not speech",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1254",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "adverb misplaced: 'покупала часто ужин' unnatural order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1255",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "adverb misplaced: 'купил сразу ужин' marked order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1277",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'закрыл сразу письмо' odd collocation + marked order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1278",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'закрыли наконец письмо' odd collocation + order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1301",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'скоро' + present tense reads as a drill",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1321",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "running 'at home' is an odd pairing",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1327",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'покупали долго ужин' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1344",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'светлое будущее' is a propaganda cliché",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1347",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'сегодня утром' with present 'бегает' vs past gloss, tense mismatch",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1362",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "watching a movie 'in the store' is odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1367",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'ездит на работу в аэропорту' ambiguous/odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1378",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'писали обычно работу' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1379",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'писал иногда работу' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1380",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'написал сразу работу' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1381",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'написала быстро работу' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1386",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'делали обычно упражнение' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1387",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'сделали наконец упражнение' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1388",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'сделал сразу упражнение' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1389",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'строить урок' jargon + marked order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1390",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'строить урок' jargon + marked order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1391",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'строили обычно урок' jargon + marked order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1392",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'построил сразу урок' odd collocation + order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1393",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'построили наконец урок' odd collocation + order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1394",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'объясняли обычно правило' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1395",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'объясняла часто правило' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1402",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'показывал редко дом' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1403",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'показывали обычно дом' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1404",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'показала быстро дом' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1405",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'показал сразу дом' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1407",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'находил иногда упражнение' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1408",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'находил редко упражнение' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1409",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'нашла быстро упражнение' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1410",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'нашёл сразу упражнение' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1427",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'делал весь день упражнение' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1429",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'находил весь день упражнение' odd durative semantics",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1451",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "singing 'in the library' is odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1467",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'завтра' + present 'моет' for future",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1484",
+   "q": "Q2",
+   "rating": 4,
+   "type": "correctness",
+   "issue": "'сегодня утром' with present, tense mismatch",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1486",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'объяснял весь день правило' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1499",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'скоро' + present 'стирает' for future",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1500",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'скоро' + present 'моет' for future",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1516",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "Waltz 'на работе' plus fronted adverb reads as odd auto-generated combo"
+  },
+  {
+   "id": "ru-1517",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "Fronted 'Всегда папа' unnatural word order; studying a language 'в горах' odd"
+  },
+  {
+   "id": "ru-1565",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "Dancing a waltz 'на вокзале' is an odd auto-generated combo"
+  },
+  {
+   "id": "ru-1589",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "'часто летал в университет' (flying to university) is semantically odd"
+  },
+  {
+   "id": "ru-1648",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "Fronted 'Часто' plus dancing a waltz 'в музее' is an odd combo"
+  },
+  {
+   "id": "ru-1668",
+   "q": "Q2",
+   "rating": 4,
+   "type": "register",
+   "issue": "Literary 'Одиночество тяготило его' not everyday speech"
+  },
+  {
+   "id": "ru-1882",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "'ни при каких условиях' is bureaucratic; speech uses 'ни за что'"
+  },
+  {
+   "id": "ru-2349",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "Literary 'густо окутал луга и поля' - bookish, not spoken."
+  },
+  {
+   "id": "ru-2383",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "Bookish connective 'поскольку' in casual sentence."
+  },
+  {
+   "id": "ru-2424",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "Bureaucratic connective 'в связи с'."
+  },
+  {
+   "id": "ru-2434",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "Fronted participle 'Переведённая книга' is bookish."
+  },
+  {
+   "id": "ru-2482",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "Participial construction 'Играющие во дворе дети' is bookish for speech."
+  },
+  {
+   "id": "ru-2487",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "Bookish passive 'был починен моим отцом'."
+  },
+  {
+   "id": "ru-2516",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "Fronted gerund clause 'Слушая лекцию' at Q3."
+  },
+  {
+   "id": "ru-2517",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "Participial 'Покрашенный забор ... придаёт' is bookish."
+  },
+  {
+   "id": "ru-2518",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "Participial 'Решённая задача' + calque phrasing."
+  },
+  {
+   "id": "ru-2537",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "Bureaucratic 'По поводу вашего вопроса'."
+  },
+  {
+   "id": "ru-2562",
+   "q": "Q3",
+   "rating": 4,
+   "type": "register",
+   "issue": "Bookish 'Наряду с работой'."
+  },
+  {
+   "id": "ru-2691",
+   "q": "Q4",
+   "rating": 4,
+   "type": "register",
+   "issue": "Awkward word order: 'подарена на день рождения маме' — маме stranded at end."
+  },
+  {
+   "id": "ru-2735",
+   "q": "Q4",
+   "rating": 4,
+   "type": "register",
+   "issue": "'градобитие' is a rare/archaic word; normal speech uses 'после сильного града'."
+  },
+  {
+   "id": "ru-2833",
+   "q": "Q4",
+   "rating": 4,
+   "type": "register",
+   "issue": "Poetic personification 'Высохшая река печальна' — artificial, not spoken."
+  },
+  {
+   "id": "ru-2841",
+   "q": "Q4",
+   "rating": 4,
+   "type": "both",
+   "issue": "English 'used to run...last week' contradictory; бегала утром на прошлой неделе slightly artificial",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-2854",
+   "q": "Q4",
+   "rating": 4,
+   "type": "register",
+   "issue": "'прибыть по назначению' is a stiff/off collocation for a letter arriving",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0005",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "'Который час сейчас?' slightly stiff/redundant word order for casual speech"
+  },
+  {
+   "id": "ru-0009",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "unnatural placement of 'хорошо' at end; natural is 'Я хорошо говорю по-русски'"
+  },
+  {
+   "id": "ru-0010",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "stiff word order 'говорит по-русски хорошо' vs natural 'хорошо говорит'"
+  },
+  {
+   "id": "ru-0011",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "stiff word order 'говорит по-русски хорошо' vs natural 'хорошо говорит'"
+  },
+  {
+   "id": "ru-0048",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "'Нигде не продают свежий хлеб' semantically odd/stiff generalization"
+  },
+  {
+   "id": "ru-0087",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "'всегда смотрит фильм' (singular) odd collocation, template-generated"
+  },
+  {
+   "id": "ru-0192",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "'Шесть часов работы утомляют' slightly stiff/bookish phrasing"
+  },
+  {
+   "id": "ru-0203",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "'Музыкант всегда ездит на работу' bland/odd template sentence"
+  },
+  {
+   "id": "ru-0288",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "'Бабушка работала в офисе' mildly odd template sentence"
+  },
+  {
+   "id": "ru-0321",
+   "q": "Q1",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "Phone number is incomplete/unnatural as spoken.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0400",
+   "q": "Q1",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "Architect washing dishes before bed is a stiff template pairing.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0506",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "'проживает' is bureaucratic; everyday speech uses 'живёт'.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0542",
+   "q": "Q1",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "A table 'on the corner' is a borderline template line.",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-0672",
+   "q": "Q1",
+   "rating": 5,
+   "type": "register",
+   "issue": "'юноша' is bookish and mismatched with 'учится в нашем классе' (too old a word).",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1026",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "'покупает продукты дома' slightly odd"
+  },
+  {
+   "id": "ru-1030",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Cooking lunch at a train station is an odd scene"
+  },
+  {
+   "id": "ru-1039",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Painting a picture in a restaurant is odd"
+  },
+  {
+   "id": "ru-1084",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Child helping a friend at work is an odd scene"
+  },
+  {
+   "id": "ru-1094",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Playing chess in a restaurant is odd"
+  },
+  {
+   "id": "ru-1128",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Technical phrasing 'с максимальной дистанции'"
+  },
+  {
+   "id": "ru-1133",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "English 'wrote work' is an awkward gloss"
+  },
+  {
+   "id": "ru-1234",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "playing chess 'in the mountains' is an odd pairing",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1236",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "singing a song 'in the store' is odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1237",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "painting a picture 'at the market' is odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1239",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "writing a letter 'in the mountains' is odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1240",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "reading a book 'at the market' is odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1243",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "'дарит тень' slightly literary for Q2",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1274",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "'открыли важное правило' for 'discovered' is slightly bookish",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1309",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "studying a language 'at the airport' is odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1313",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "writing a letter 'in the mountains' is odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1315",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "painting a picture 'in the store' is odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1316",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "singing 'in the restaurant' mildly odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1320",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "listening to music 'at school' mildly odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1353",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "slightly literary phrasing",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1354",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "singing a song 'at work' mildly odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1359",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "painting a picture 'in the park' mildly odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1361",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "painting a picture 'in the theater' is odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1373",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "dancing a waltz 'at the station' is odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1374",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "literary phrasing, fine at higher levels",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1452",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "watching a movie 'at the hospital' mildly odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1453",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "writing a letter 'at the market' is odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1456",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "reading a book 'at the station' mildly odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1457",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "listening to music 'in the museum' is odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1460",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "singing a song 'in the mountains' mildly odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1476",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "'терял игрушки постоянно' marked word order",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1496",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "athlete 'paints a picture every day' mildly odd",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-1506",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Fronted 'Редко' before subject is stilted; natural order 'Ребёнок редко...'"
+  },
+  {
+   "id": "ru-1519",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Fronted 'Иногда' before subject is textbook-stiff"
+  },
+  {
+   "id": "ru-1520",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Fronted 'Редко' before subject is textbook-stiff"
+  },
+  {
+   "id": "ru-1522",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Fronted 'Иногда' before subject is textbook-stiff"
+  },
+  {
+   "id": "ru-1531",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Nature-documentary register (подкарауливает/на илистом берегу) not everyday speech"
+  },
+  {
+   "id": "ru-1537",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Bookish descriptive register (обрушивается с тридцатиметровой высоты)"
+  },
+  {
+   "id": "ru-1541",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Nature-documentary register (бесшумно охотится на мышей)"
+  },
+  {
+   "id": "ru-1546",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "'считаются деликатесом' mildly bookish/menu register"
+  },
+  {
+   "id": "ru-1561",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Bookish geographic register (тайга покрывает территории хвойными лесами)"
+  },
+  {
+   "id": "ru-1595",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Fronted 'Часто' before subject is textbook-stiff"
+  },
+  {
+   "id": "ru-1649",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Fronted 'Иногда' before subject is textbook-stiff"
+  },
+  {
+   "id": "ru-1665",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Poetic register (грациозно плавает по тихому озеру на рассвете)"
+  },
+  {
+   "id": "ru-1685",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Poetic 'над пенящимися волнами' and stiff word order 'прыгает элегантно'"
+  },
+  {
+   "id": "ru-1692",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "Bookish geographic register (береговая линия простирается)"
+  },
+  {
+   "id": "ru-1715",
+   "q": "Q2",
+   "rating": 5,
+   "type": "correctness",
+   "issue": "'играются' is nonstandard/colloquial-substandard; standard is 'играют'"
+  },
+  {
+   "id": "ru-1767",
+   "q": "Q2",
+   "rating": 5,
+   "type": "register",
+   "issue": "'если бы я имел больше времени' bookish; natural is 'если бы у меня было'"
+  },
+  {
+   "id": "ru-1786",
+   "q": "Q3",
+   "rating": 5,
+   "type": "register",
+   "issue": "'стремлюсь к успеху' slightly bookish/aspirational for everyday speech"
+  },
+  {
+   "id": "ru-1907",
+   "q": "Q3",
+   "rating": 5,
+   "type": "register",
+   "issue": "textbook/descriptive phrasing, dead in ordinary speech"
+  },
+  {
+   "id": "ru-1908",
+   "q": "Q3",
+   "rating": 5,
+   "type": "register",
+   "issue": "literary description ('степные просторы... под бескрайним небом'), not spoken"
+  },
+  {
+   "id": "ru-2144",
+   "q": "Q3",
+   "rating": 5,
+   "type": "register",
+   "issue": "Dense encyclopedic descriptive line, not spoken speech"
+  },
+  {
+   "id": "ru-2166",
+   "q": "Q3",
+   "rating": 5,
+   "type": "register",
+   "issue": "'наиболее подготовлен' bookish; speech uses самый/лучше всех"
+  },
+  {
+   "id": "ru-2207",
+   "q": "Q3",
+   "rating": 5,
+   "type": "register",
+   "issue": "'наиболее важный' bookish; spoken would be самый важный"
+  },
+  {
+   "id": "ru-2208",
+   "q": "Q3",
+   "rating": 5,
+   "type": "register",
+   "issue": "'наименее сложная' bookish, rare in speech"
+  },
+  {
+   "id": "ru-2222",
+   "q": "Q3",
+   "rating": 5,
+   "type": "register",
+   "issue": "'Свой дом – лучше всего' stilted; свой as sentence-initial subject is marginal"
+  },
+  {
+   "id": "ru-2240",
+   "q": "Q3",
+   "rating": 5,
+   "type": "register",
+   "issue": "'наименее опытная' bookish, rare in speech"
+  },
+  {
+   "id": "ru-2584",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "Bookish reflexive passive 'книга читается с большим интересом' — dead in speech, but Q4 register variety."
+  },
+  {
+   "id": "ru-2736",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "Textbook reflexive passive with instrumental agent — dead in speech, Q4 tolerated."
+  },
+  {
+   "id": "ru-2834",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "Textbook passive 'Обед готовится поваром' — dead in speech, Q4 tolerated."
+  },
+  {
+   "id": "ru-2881",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "'Смотря в окно' less idiomatic than 'Глядя в окно' as a temporal gerund",
+   "fix_target": "",
+   "fix_english": ""
+  },
+  {
+   "id": "ru-3185",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "'Милостивый государь' is pre-revolutionary, dead in modern speech/letters."
+  },
+  {
+   "id": "ru-3204",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "'Соблаговолите' is archaic bureaucratese, effectively dead today."
+  },
+  {
+   "id": "ru-3205",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "'Соблаговолите' archaic; near-duplicate of 3204, dead-in-speech."
+  },
+  {
+   "id": "ru-3252",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "'Не соизволите ли вы' is archaic/ironic; no one says it seriously."
+  },
+  {
+   "id": "ru-3262",
+   "q": "Q4",
+   "rating": 5,
+   "type": "register",
+   "issue": "'Не изволите ли вы' is archaic, dead outside period stylization."
+  }
+ ]
+}

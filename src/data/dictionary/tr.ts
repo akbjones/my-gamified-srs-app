@@ -7885,6 +7885,7 @@ const dictionary: Record<string, DictEntry> =                 {
   'stresi': { en: 'stress', ipa: 'stɾe.si', pos: 'n' },
   'stresli': { en: 'stressful', ipa: 'stɾesˈli', pos: 'adj' },
   'stressten': { en: 'from stress', ipa: 'stɾessten', pos: 'n' },
+  'stüdyo': { en: 'studio', ipa: 'styd.jo', pos: 'n' },
   'su': { en: 'water', ipa: 'sˈʊ', pos: 'n' },
   'subtropik': { en: 'subtropical', ipa: 'subtɾopik', pos: 'n' },
   'sucuklu': { en: 'with sausage; sausage', ipa: 'su.dʒuk.lu', pos: 'adj' },

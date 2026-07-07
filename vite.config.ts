@@ -107,7 +107,8 @@ export default defineConfig({
               // v6 = 2026-06-27 Hindi register cleanup (473 cards regen'd)
               // v7 = 2026-06-28 10-lang Chirp3-HD-Aoede regen (~38k files)
               // v8 = 2026-07-07 Hindi greetings register fix (5 cards)
-              cacheName: 'audio-cache-v8',
+              // v9 = 2026-07-08 RU+TR quality pilot (28 cards)
+              cacheName: 'audio-cache-v9',
               expiration: {
                 maxEntries: 500,
                 maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days

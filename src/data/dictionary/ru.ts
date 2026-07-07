@@ -1680,6 +1680,7 @@ const dictionary: Record<string, DictEntry> =                {
   'куртки': { en: 'jackets', ipa: 'ˈkʊrtkʲi', pos: 'n' },
   'кусает': { en: 'to bite', ipa: 'kusˈɑjit', pos: 'v' },
   'кусок': { en: 'piece', ipa: 'kusˈok', pos: 'n' },
+  'кубиков': { en: 'blocks (gen. pl.)', ipa: 'ˈkubʲikəf', pos: 'n' },
   'кусочка': { en: 'piece', ipa: 'kusotɕka', pos: 'n' },
   'кухне': { en: 'kitchen', ipa: 'kˈuxnʲi', pos: 'n' },
   'кухня': { en: 'kitchen', ipa: 'ˈkuxnʲə', pos: 'n' },

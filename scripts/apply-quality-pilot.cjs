@@ -7,7 +7,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const pilot = JSON.parse(fs.readFileSync('/tmp/quality-pilot.json', 'utf8'));
+const pilot = JSON.parse(fs.readFileSync(process.argv[2] || '/tmp/quality-pilot.json', 'utf8'));
 
 for (const [lang, fixes] of Object.entries(pilot)) {
   const deckPath = path.resolve(__dirname, '..', 'src', 'data', lang, 'deck.json');

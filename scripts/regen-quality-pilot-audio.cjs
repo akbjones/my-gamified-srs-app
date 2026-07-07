@@ -16,7 +16,7 @@ const VOICES = {
   turkish: { lc: 'tr-TR', name: 'tr-TR-Chirp3-HD-Aoede', prefix: 'tr' },
 };
 const AUDIO_DIR = path.resolve(__dirname, '..', 'public', 'quest-audio');
-const pilot = JSON.parse(fs.readFileSync('/tmp/quality-pilot.json', 'utf8'));
+const pilot = JSON.parse(fs.readFileSync(process.argv[2] || '/tmp/quality-pilot.json', 'utf8'));
 
 function tts(text, v) {
   return new Promise((resolve, reject) => {

@@ -1,0 +1,22 @@
+{
+  "language": "greek",
+  "policy": "docs/greek-register-policy.md",
+  "note": "Seed lexicon (Stage-1 scaffold). severity: high = fails Q1/Q2 gate; medium = review. Two directions: katharevousa formality nobody speaks, and slang below Q4. Match σ-normalized + accent-stripped.",
+  "offenders": [
+    { "word": "δύναται", "severity": "high", "reason": "formal 'can' — use μπορεί" },
+    { "word": "όστις", "severity": "high", "reason": "katharevousa relative — use που/όποιος" },
+    { "word": "ούτως", "severity": "high", "reason": "formal 'thus' — use έτσι" },
+    { "word": "ενταύθα", "severity": "high", "reason": "archaic 'here' — use εδώ" },
+    { "word": "άπαντες", "severity": "high", "reason": "formal 'all' — use όλοι" },
+    { "word": "καθότι", "severity": "medium", "reason": "formal 'because' — use επειδή/γιατί" },
+    { "word": "πλην", "severity": "medium", "reason": "formal 'except' — use εκτός από" },
+    { "word": "ωσαύτως", "severity": "high", "reason": "archaic 'likewise' — use επίσης" },
+    { "word": "τουτέστιν", "severity": "high", "reason": "archaic 'that is' — use δηλαδή" },
+    { "word": "ομιλώ", "severity": "medium", "reason": "formal 'speak' — everyday is μιλάω" },
+    { "word": "επιθυμώ", "severity": "medium", "reason": "formal 'desire' — everyday is θέλω" },
+    { "word": "οικία", "severity": "medium", "reason": "formal 'residence' — everyday is σπίτι" },
+    { "word": "ύδωρ", "severity": "high", "reason": "ancient 'water' — use νερό" },
+    { "word": "ρε", "severity": "medium", "reason": "informal particle — tips only, not modeled sentences below Q4" },
+    { "word": "μαλάκα", "severity": "high", "reason": "vulgar address — never modeled" }
+  ]
+}

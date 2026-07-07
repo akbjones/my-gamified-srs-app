@@ -41,7 +41,9 @@ import { conjugateHindi as conjHi, findInfinitive as findInfHi } from '../data/c
 import { conjugate as conjTr, findInfinitive as findInfTr } from '../data/conjugation/tr';
 import { conjugate as conjRu, findInfinitive as findInfRu } from '../data/conjugation/ru';
 import { lookupWord as lookupId } from '../data/dictionary/id';
+import { lookupWord as lookupEl } from '../data/dictionary/el';
 import { conjugate as conjId, findInfinitive as findInfId } from '../data/conjugation/id';
+import { conjugate as conjEl, findInfinitive as findInfEl } from '../data/conjugation/el';
 
 // ── Script descriptors ──────────────────────────────────────────
 
@@ -80,6 +82,17 @@ const cyrillic: ScriptDescriptor = {
   lowercase: (t) => t.toLowerCase(),
   isWordChar: (c) => /[а-яёА-ЯЁ]/.test(c),
   combiningNotes: 'ё/е variance: lookups should tolerate е-for-ё spellings.',
+};
+
+/** Greek: final sigma (ς/σ) is positional orthography — all dictionary
+ *  keys and matching are σ-normalized. Accents are phonemic but matching
+ *  is accent-tolerant (mobile taps sometimes strip them). */
+const greek: ScriptDescriptor = {
+  direction: 'ltr',
+  tokenize: wsTokenize,
+  lowercase: (t) => t.toLowerCase().replace(/ς/g, 'σ'),
+  isWordChar: (c) => /[α-ωΑ-Ωάέήίόύώϊϋΐΰς]/.test(c),
+  combiningNotes: 'Final sigma: ς word-finally, σ elsewhere — normalize to σ for lookups.',
 };
 
 /** Devanagari: caseless; matra composition rules constrain suffixing. */
@@ -222,6 +235,16 @@ export const REGISTRY: Record<string, RegistryEntry> = {
     registerPolicy: {
       policyDoc: 'docs/indonesian-register-policy.md',
       offenderLexicon: 'docs/indonesian-register-offenders.json',
+    },
+  },
+  // ── Staged (Stage-1 scaffold; not yet in the app UI) ──────────
+  greek: {
+    key: 'greek', code: 'el', deckPath: 'src/data/greek/deck.json',
+    lookup: lookupEl, conjugate: conjEl, findInfinitive: findInfEl,
+    script: greek, voice: google('el-GR', 'el-GR-Chirp3-HD-Aoede'),
+    registerPolicy: {
+      policyDoc: 'docs/greek-register-policy.md',
+      offenderLexicon: 'docs/greek-register-offenders.json',
     },
   },
 };

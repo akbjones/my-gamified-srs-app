@@ -1,0 +1,932 @@
+[
+  {
+    "id": "id-0501",
+    "target": "Hari ini cuacanya cerah sekali.",
+    "english": "The weather today is really clear.",
+    "audio": "id-id-0501.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 501
+  },
+  {
+    "id": "id-0502",
+    "target": "Kalau hujan, saya naik taksi ke kantor.",
+    "english": "If it rains, I take a taxi to the office.",
+    "audio": "id-id-0502.mp3",
+    "tags": ["general", "work", "travel"],
+    "grammarNode": "node-13",
+    "priority": 502,
+    "grammar": "kalau starts an if-clause; no 'then' word needed after the comma: Kalau hujan, saya naik taksi."
+  },
+  {
+    "id": "id-0503",
+    "target": "Di luar sedang hujan deras.",
+    "english": "It is raining heavily outside.",
+    "audio": "id-id-0503.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 503
+  },
+  {
+    "id": "id-0504",
+    "target": "Jangan lupa bawa payung hari ini.",
+    "english": "Don't forget to bring an umbrella today.",
+    "audio": "id-id-0504.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 504,
+    "grammar": "Jangan lupa + verb = don't forget to: Jangan lupa bawa payung."
+  },
+  {
+    "id": "id-0505",
+    "target": "Langit mendung, mungkin sebentar lagi hujan.",
+    "english": "The sky is overcast, maybe it will rain soon.",
+    "audio": "id-id-0505.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 505
+  },
+  {
+    "id": "id-0506",
+    "target": "Musim hujan di Jakarta mulai bulan November.",
+    "english": "The rainy season in Jakarta starts in November.",
+    "audio": "id-id-0506.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 506
+  },
+  {
+    "id": "id-0507",
+    "target": "Saya tidak suka udara panas dan lembap.",
+    "english": "I don't like hot and humid air.",
+    "audio": "id-id-0507.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 507
+  },
+  {
+    "id": "id-0508",
+    "target": "Cuaca di Bandung lebih sejuk daripada di Jakarta.",
+    "english": "The weather in Bandung is cooler than in Jakarta.",
+    "audio": "id-id-0508.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 508,
+    "grammar": "lebih + adjective + daripada compares: lebih sejuk daripada Jakarta = cooler than Jakarta."
+  },
+  {
+    "id": "id-0509",
+    "target": "Apakah besok akan hujan lagi?",
+    "english": "Will it rain again tomorrow?",
+    "audio": "id-id-0509.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 509
+  },
+  {
+    "id": "id-0510",
+    "target": "Kalau cuaca cerah, kami pergi ke pantai.",
+    "english": "If the weather is clear, we go to the beach.",
+    "audio": "id-id-0510.mp3",
+    "tags": ["general", "travel", "family"],
+    "grammarNode": "node-13",
+    "priority": 510
+  },
+  {
+    "id": "id-0511",
+    "target": "Angin bertiup kencang sekali malam ini.",
+    "english": "The wind is blowing very strongly tonight.",
+    "audio": "id-id-0511.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 511
+  },
+  {
+    "id": "id-0512",
+    "target": "Jalan di depan rumah kami banjir lagi.",
+    "english": "The street in front of our house is flooded again.",
+    "audio": "id-id-0512.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-13",
+    "priority": 512
+  },
+  {
+    "id": "id-0513",
+    "target": "Musim kemarau biasanya mulai bulan Mei.",
+    "english": "The dry season usually starts in May.",
+    "audio": "id-id-0513.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 513,
+    "grammar": "musim = season. Indonesia has two: musim hujan (rainy) and musim kemarau (dry)."
+  },
+  {
+    "id": "id-0514",
+    "target": "Hari ini panas sekali, sampai tiga puluh lima derajat.",
+    "english": "It is very hot today, up to thirty-five degrees.",
+    "audio": "id-id-0514.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 514
+  },
+  {
+    "id": "id-0515",
+    "target": "Saya kehujanan waktu pulang dari pasar tadi.",
+    "english": "I got caught in the rain coming home from the market earlier.",
+    "audio": "id-id-0515.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 515,
+    "grammar": "ke-…-an around a noun = affected by it: kehujanan = caught in the rain."
+  },
+  {
+    "id": "id-0516",
+    "target": "Bawa jas hujan kalau naik motor hari ini.",
+    "english": "Bring a raincoat if you ride a motorbike today.",
+    "audio": "id-id-0516.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 516
+  },
+  {
+    "id": "id-0517",
+    "target": "Udara pagi di gunung dingin dan segar.",
+    "english": "The morning air in the mountains is cold and fresh.",
+    "audio": "id-id-0517.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 517
+  },
+  {
+    "id": "id-0518",
+    "target": "Kalau banjir, anak-anak tidak pergi ke sekolah.",
+    "english": "If there is a flood, the children don't go to school.",
+    "audio": "id-id-0518.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-13",
+    "priority": 518
+  },
+  {
+    "id": "id-0519",
+    "target": "Cuaca hari ini bagus untuk jalan-jalan.",
+    "english": "Today's weather is good for going out for a stroll.",
+    "audio": "id-id-0519.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 519,
+    "grammar": "Doubling a verb relaxes it: jalan-jalan = to stroll, go out (not just 'walk')."
+  },
+  {
+    "id": "id-0520",
+    "target": "Sudah tiga hari hujan tidak berhenti.",
+    "english": "It has been raining nonstop for three days.",
+    "audio": "id-id-0520.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 520
+  },
+  {
+    "id": "id-0521",
+    "target": "Di musim kemarau, sungai kecil itu kering.",
+    "english": "In the dry season, that small river is dry.",
+    "audio": "id-id-0521.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 521
+  },
+  {
+    "id": "id-0522",
+    "target": "Besok kami mendaki gunung kalau tidak hujan.",
+    "english": "Tomorrow we will climb the mountain if it doesn't rain.",
+    "audio": "id-id-0522.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 522
+  },
+  {
+    "id": "id-0523",
+    "target": "Baju saya basah karena hujan tadi sore.",
+    "english": "My clothes are wet because of the rain this afternoon.",
+    "audio": "id-id-0523.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 523
+  },
+  {
+    "id": "id-0524",
+    "target": "Jemur pakaian di luar, hari ini panas.",
+    "english": "Hang the laundry outside, it is hot today.",
+    "audio": "id-id-0524.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-13",
+    "priority": 524
+  },
+  {
+    "id": "id-0525",
+    "target": "Suhu di sini turun waktu malam hari.",
+    "english": "The temperature here drops at night.",
+    "audio": "id-id-0525.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 525
+  },
+  {
+    "id": "id-0526",
+    "target": "Kata ramalan cuaca, besok akan cerah.",
+    "english": "According to the weather forecast, tomorrow will be clear.",
+    "audio": "id-id-0526.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 526,
+    "grammar": "kata + source = 'according to': Kata ramalan cuaca, besok cerah."
+  },
+  {
+    "id": "id-0527",
+    "target": "Saya suka duduk di teras waktu hujan.",
+    "english": "I like sitting on the terrace when it rains.",
+    "audio": "id-id-0527.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 527
+  },
+  {
+    "id": "id-0528",
+    "target": "Kalau panas begini, saya minum es teh.",
+    "english": "When it is hot like this, I drink iced tea.",
+    "audio": "id-id-0528.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 528,
+    "grammar": "begini = 'like this': panas begini = hot like this."
+  },
+  {
+    "id": "id-0529",
+    "target": "Musim dingin di Jepang mulai bulan Desember.",
+    "english": "Winter in Japan starts in December.",
+    "audio": "id-id-0529.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 529
+  },
+  {
+    "id": "id-0530",
+    "target": "Awan hitam itu tanda hujan akan turun.",
+    "english": "Those black clouds are a sign rain is coming.",
+    "audio": "id-id-0530.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 530
+  },
+  {
+    "id": "id-0531",
+    "target": "Kami berteduh di halte sampai hujan berhenti.",
+    "english": "We took shelter at the bus stop until the rain stopped.",
+    "audio": "id-id-0531.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 531
+  },
+  {
+    "id": "id-0532",
+    "target": "Jalanan licin, hati-hati kalau naik motor.",
+    "english": "The roads are slippery, be careful if you ride a motorbike.",
+    "audio": "id-id-0532.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 532
+  },
+  {
+    "id": "id-0533",
+    "target": "Tahun ini ada banjir besar di kota kami.",
+    "english": "This year there was a big flood in our city.",
+    "audio": "id-id-0533.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 533
+  },
+  {
+    "id": "id-0534",
+    "target": "Anak saya senang main hujan di halaman.",
+    "english": "My child loves playing in the rain in the yard.",
+    "audio": "id-id-0534.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-13",
+    "priority": 534
+  },
+  {
+    "id": "id-0535",
+    "target": "Pakai topi, matahari siang ini terik sekali.",
+    "english": "Wear a hat, the midday sun is really scorching.",
+    "audio": "id-id-0535.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 535
+  },
+  {
+    "id": "id-0536",
+    "target": "Kalau mendung begini, jangan jemur pakaian dulu.",
+    "english": "When it is overcast like this, don't hang out the laundry yet.",
+    "audio": "id-id-0536.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-13",
+    "priority": 536,
+    "grammar": "dulu after a command = 'for now / yet': Jangan jemur dulu = don't hang it out yet."
+  },
+  {
+    "id": "id-0537",
+    "target": "Cuaca di pantai sangat panas siang tadi.",
+    "english": "The weather at the beach was very hot this afternoon.",
+    "audio": "id-id-0537.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 537
+  },
+  {
+    "id": "id-0538",
+    "target": "Hujan gerimis tidak apa-apa, kita tetap jalan.",
+    "english": "A little drizzle is fine, we are still going.",
+    "audio": "id-id-0538.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 538,
+    "grammar": "tidak apa-apa = 'it's okay, no problem' — the everyday reassurance phrase."
+  },
+  {
+    "id": "id-0539",
+    "target": "Setelah hujan, udara jadi sejuk dan bersih.",
+    "english": "After the rain, the air becomes cool and clean.",
+    "audio": "id-id-0539.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 539,
+    "grammar": "jadi before an adjective = 'becomes': udara jadi sejuk = the air turns cool."
+  },
+  {
+    "id": "id-0540",
+    "target": "Banjir kemarin masuk sampai ke dalam rumah.",
+    "english": "Yesterday's flood came all the way into the house.",
+    "audio": "id-id-0540.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 540
+  },
+  {
+    "id": "id-0541",
+    "target": "Saya selalu cek ramalan cuaca sebelum berangkat.",
+    "english": "I always check the weather forecast before leaving.",
+    "audio": "id-id-0541.mp3",
+    "tags": ["general", "work", "travel"],
+    "grammarNode": "node-13",
+    "priority": 541
+  },
+  {
+    "id": "id-0542",
+    "target": "Kalau musim hujan, bawa payung ke mana-mana.",
+    "english": "In the rainy season, take an umbrella everywhere.",
+    "audio": "id-id-0542.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 542,
+    "grammar": "Doubled mana = 'everywhere': ke mana-mana (to everywhere), di mana-mana (everywhere)."
+  },
+  {
+    "id": "id-0543",
+    "target": "Angin laut sore hari enak sekali di sini.",
+    "english": "The sea breeze in the late afternoon is really pleasant here.",
+    "audio": "id-id-0543.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 543
+  },
+  {
+    "id": "id-0544",
+    "target": "Kantor kami tutup karena banjir besar hari ini.",
+    "english": "Our office is closed because of the big flood today.",
+    "audio": "id-id-0544.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-13",
+    "priority": 544
+  },
+  {
+    "id": "id-0545",
+    "target": "Jangan berenang di laut kalau ombak besar.",
+    "english": "Don't swim in the sea when the waves are big.",
+    "audio": "id-id-0545.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-13",
+    "priority": 545
+  },
+  {
+    "id": "id-0546",
+    "target": "Kemarin hujan es turun di kota Bandung.",
+    "english": "Yesterday hail fell in the city of Bandung.",
+    "audio": "id-id-0546.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 546,
+    "grammar": "hujan + noun names the rain type: hujan es = hail, hujan deras = heavy rain."
+  },
+  {
+    "id": "id-0547",
+    "target": "Cuaca panas membuat saya cepat lelah.",
+    "english": "Hot weather makes me tired quickly.",
+    "audio": "id-id-0547.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-13",
+    "priority": 547
+  },
+  {
+    "id": "id-0548",
+    "target": "Kalau dingin, ibu membuat teh jahe hangat.",
+    "english": "When it is cold, Mom makes warm ginger tea.",
+    "audio": "id-id-0548.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-13",
+    "priority": 548
+  },
+  {
+    "id": "id-0549",
+    "target": "Musim hujan tahun ini datang lebih awal.",
+    "english": "This year's rainy season came earlier.",
+    "audio": "id-id-0549.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 549
+  },
+  {
+    "id": "id-0550",
+    "target": "Sepatu saya kotor karena jalan masih basah.",
+    "english": "My shoes are dirty because the road is still wet.",
+    "audio": "id-id-0550.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-13",
+    "priority": 550
+  },
+  {
+    "id": "id-0551",
+    "target": "Apa hobi kamu di waktu luang?",
+    "english": "What is your hobby in your free time?",
+    "audio": "id-id-0551.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 551,
+    "grammar": "waktu luang = free time: di waktu luang = in your free time."
+  },
+  {
+    "id": "id-0552",
+    "target": "Saya suka membaca novel sebelum tidur.",
+    "english": "I like reading novels before sleeping.",
+    "audio": "id-id-0552.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 552,
+    "grammar": "suka + verb = like doing something: suka membaca = like reading."
+  },
+  {
+    "id": "id-0553",
+    "target": "Setiap akhir pekan kami bermain sepak bola.",
+    "english": "Every weekend we play soccer.",
+    "audio": "id-id-0553.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 553,
+    "grammar": "akhir pekan = weekend ('end of week'): setiap akhir pekan = every weekend."
+  },
+  {
+    "id": "id-0554",
+    "target": "Kakak saya biasanya berenang setiap hari Minggu.",
+    "english": "My older sibling usually swims every Sunday.",
+    "audio": "id-id-0554.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-14",
+    "priority": 554,
+    "grammar": "biasanya (usually) sits before the verb: Dia biasanya berenang hari Minggu."
+  },
+  {
+    "id": "id-0555",
+    "target": "Kadang-kadang saya menonton film di bioskop.",
+    "english": "Sometimes I watch movies at the cinema.",
+    "audio": "id-id-0555.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 555,
+    "grammar": "kadang-kadang = sometimes: Kadang-kadang saya menonton film."
+  },
+  {
+    "id": "id-0556",
+    "target": "Ayah suka memancing di sungai dekat rumah.",
+    "english": "Dad likes fishing in the river near the house.",
+    "audio": "id-id-0556.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-14",
+    "priority": 556
+  },
+  {
+    "id": "id-0557",
+    "target": "Kami sekeluarga suka memasak bersama hari Minggu.",
+    "english": "Our whole family likes cooking together on Sundays.",
+    "audio": "id-id-0557.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-14",
+    "priority": 557,
+    "grammar": "se- + noun = one whole unit: sekeluarga = the whole family, sekelas = the whole class."
+  },
+  {
+    "id": "id-0558",
+    "target": "Saya belajar main gitar dari video di internet.",
+    "english": "I am learning to play guitar from videos on the internet.",
+    "audio": "id-id-0558.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 558
+  },
+  {
+    "id": "id-0559",
+    "target": "Teman kantor saya suka bersepeda ke mana-mana.",
+    "english": "My office friend likes cycling everywhere.",
+    "audio": "id-id-0559.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-14",
+    "priority": 559
+  },
+  {
+    "id": "id-0560",
+    "target": "Musik apa yang biasanya kamu dengarkan?",
+    "english": "What music do you usually listen to?",
+    "audio": "id-id-0560.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 560,
+    "grammar": "yang links a question word to its verb: Musik apa yang kamu suka? = what music do you like?"
+  },
+  {
+    "id": "id-0561",
+    "target": "Setiap pagi dia lari di taman kota.",
+    "english": "Every morning he runs in the city park.",
+    "audio": "id-id-0561.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 561
+  },
+  {
+    "id": "id-0562",
+    "target": "Hobi saya menggambar wajah orang di kereta.",
+    "english": "My hobby is drawing people's faces on the train.",
+    "audio": "id-id-0562.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-14",
+    "priority": 562
+  },
+  {
+    "id": "id-0563",
+    "target": "Akhir pekan ini kami mau menonton konser musik.",
+    "english": "This weekend we want to watch a music concert.",
+    "audio": "id-id-0563.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 563
+  },
+  {
+    "id": "id-0564",
+    "target": "Saya suka memasak makanan Korea di rumah.",
+    "english": "I like cooking Korean food at home.",
+    "audio": "id-id-0564.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 564
+  },
+  {
+    "id": "id-0565",
+    "target": "Dia bisa bermain piano sejak kecil.",
+    "english": "She has been able to play the piano since she was little.",
+    "audio": "id-id-0565.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-14",
+    "priority": 565,
+    "grammar": "sejak = since: sejak kecil = since childhood, sejak tadi = for a while now."
+  },
+  {
+    "id": "id-0566",
+    "target": "Kami biasanya jalan-jalan ke mal hari Sabtu.",
+    "english": "We usually go out to the mall on Saturdays.",
+    "audio": "id-id-0566.mp3",
+    "tags": ["general", "family", "travel"],
+    "grammarNode": "node-14",
+    "priority": 566
+  },
+  {
+    "id": "id-0567",
+    "target": "Suami saya suka menanam sayur di kebun kecil.",
+    "english": "My husband likes growing vegetables in a small garden.",
+    "audio": "id-id-0567.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-14",
+    "priority": 567
+  },
+  {
+    "id": "id-0568",
+    "target": "Setelah kerja, saya berolahraga di gym dekat kantor.",
+    "english": "After work, I exercise at the gym near the office.",
+    "audio": "id-id-0568.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-14",
+    "priority": 568
+  },
+  {
+    "id": "id-0569",
+    "target": "Film Indonesia sekarang bagus-bagus sekali.",
+    "english": "Indonesian films these days are all really good.",
+    "audio": "id-id-0569.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 569,
+    "grammar": "Doubling an adjective spreads it over many items: bagus-bagus = all (of them) good."
+  },
+  {
+    "id": "id-0570",
+    "target": "Anak saya suka menyanyi lagu anak-anak.",
+    "english": "My child likes singing children's songs.",
+    "audio": "id-id-0570.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-14",
+    "priority": 570
+  },
+  {
+    "id": "id-0571",
+    "target": "Saya membaca berita di ponsel setiap pagi.",
+    "english": "I read the news on my phone every morning.",
+    "audio": "id-id-0571.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-14",
+    "priority": 571
+  },
+  {
+    "id": "id-0572",
+    "target": "Kadang-kadang kami bermain kartu sampai malam.",
+    "english": "Sometimes we play cards until late at night.",
+    "audio": "id-id-0572.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-14",
+    "priority": 572
+  },
+  {
+    "id": "id-0573",
+    "target": "Olahraga apa yang paling kamu suka?",
+    "english": "What sport do you like the most?",
+    "audio": "id-id-0573.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 573,
+    "grammar": "paling = the most: paling suka = like most, paling bagus = the best."
+  },
+  {
+    "id": "id-0574",
+    "target": "Di waktu luang, dia menulis cerita pendek.",
+    "english": "In her free time, she writes short stories.",
+    "audio": "id-id-0574.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 574
+  },
+  {
+    "id": "id-0575",
+    "target": "Kami menonton pertandingan bola di rumah teman.",
+    "english": "We watch the football match at a friend's house.",
+    "audio": "id-id-0575.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 575
+  },
+  {
+    "id": "id-0576",
+    "target": "Saya baru mulai belajar memasak masakan Padang.",
+    "english": "I just started learning to cook Padang cuisine.",
+    "audio": "id-id-0576.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 576,
+    "grammar": "baru before a verb = just (recently): baru mulai = just started."
+  },
+  {
+    "id": "id-0577",
+    "target": "Setiap sore anak-anak bermain layang-layang di lapangan.",
+    "english": "Every afternoon the children fly kites on the field.",
+    "audio": "id-id-0577.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-14",
+    "priority": 577
+  },
+  {
+    "id": "id-0578",
+    "target": "Ibu saya suka menari tarian tradisional Bali.",
+    "english": "My mother likes dancing traditional Balinese dances.",
+    "audio": "id-id-0578.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-14",
+    "priority": 578
+  },
+  {
+    "id": "id-0579",
+    "target": "Akhir pekan lalu kami mendaki gunung bersama.",
+    "english": "Last weekend we hiked a mountain together.",
+    "audio": "id-id-0579.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-14",
+    "priority": 579
+  },
+  {
+    "id": "id-0580",
+    "target": "Saya lebih suka membaca buku daripada menonton televisi.",
+    "english": "I prefer reading books to watching television.",
+    "audio": "id-id-0580.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 580,
+    "grammar": "lebih suka X daripada Y = prefer X to Y: lebih suka membaca daripada menonton."
+  },
+  {
+    "id": "id-0581",
+    "target": "Dia mengambil foto pemandangan waktu jalan-jalan.",
+    "english": "He takes photos of scenery while traveling around.",
+    "audio": "id-id-0581.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-14",
+    "priority": 581
+  },
+  {
+    "id": "id-0582",
+    "target": "Kolam renang dekat rumah buka sampai jam sembilan.",
+    "english": "The swimming pool near the house is open until nine o'clock.",
+    "audio": "id-id-0582.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 582
+  },
+  {
+    "id": "id-0583",
+    "target": "Teman saya suka main catur setelah makan siang.",
+    "english": "My friend likes playing chess after lunch.",
+    "audio": "id-id-0583.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-14",
+    "priority": 583
+  },
+  {
+    "id": "id-0584",
+    "target": "Biasanya saya dengarkan musik waktu membersihkan rumah.",
+    "english": "I usually listen to music while cleaning the house.",
+    "audio": "id-id-0584.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-14",
+    "priority": 584
+  },
+  {
+    "id": "id-0585",
+    "target": "Apa yang biasanya kamu lakukan hari Minggu?",
+    "english": "What do you usually do on Sundays?",
+    "audio": "id-id-0585.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 585
+  },
+  {
+    "id": "id-0586",
+    "target": "Kami suka mencoba kafe baru setiap bulan.",
+    "english": "We like trying a new cafe every month.",
+    "audio": "id-id-0586.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-14",
+    "priority": 586
+  },
+  {
+    "id": "id-0587",
+    "target": "Dia berlatih badminton dua kali seminggu.",
+    "english": "He practices badminton twice a week.",
+    "audio": "id-id-0587.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 587,
+    "grammar": "kali counts times: dua kali seminggu = twice a week, sekali = once."
+  },
+  {
+    "id": "id-0588",
+    "target": "Saya suka masak, tapi tidak suka cuci piring.",
+    "english": "I like cooking, but I don't like washing dishes.",
+    "audio": "id-id-0588.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-14",
+    "priority": 588,
+    "grammar": "In conversation the meN- prefix often drops: memasak → masak, mencuci → cuci."
+  },
+  {
+    "id": "id-0589",
+    "target": "Setiap malam Jumat kami berkumpul dan bernyanyi bersama.",
+    "english": "Every Friday night we get together and sing.",
+    "audio": "id-id-0589.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-14",
+    "priority": 589
+  },
+  {
+    "id": "id-0590",
+    "target": "Menonton film horor bukan hobi saya.",
+    "english": "Watching horror films is not my hobby.",
+    "audio": "id-id-0590.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 590,
+    "grammar": "bukan negates nouns, tidak negates verbs: bukan hobi saya = not my hobby."
+  },
+  {
+    "id": "id-0591",
+    "target": "Dia belajar bahasa Jepang sebagai hobi baru.",
+    "english": "She is learning Japanese as a new hobby.",
+    "audio": "id-id-0591.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 591
+  },
+  {
+    "id": "id-0592",
+    "target": "Kami main musik bersama di garasi setiap Sabtu.",
+    "english": "We play music together in the garage every Saturday.",
+    "audio": "id-id-0592.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 592
+  },
+  {
+    "id": "id-0593",
+    "target": "Saya suka membuat kue untuk teman kantor.",
+    "english": "I like making cakes for my office friends.",
+    "audio": "id-id-0593.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-14",
+    "priority": 593
+  },
+  {
+    "id": "id-0594",
+    "target": "Kapan kamu biasanya punya waktu luang?",
+    "english": "When do you usually have free time?",
+    "audio": "id-id-0594.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 594
+  },
+  {
+    "id": "id-0595",
+    "target": "Akhir pekan depan ada festival musik di pantai.",
+    "english": "Next weekend there is a music festival at the beach.",
+    "audio": "id-id-0595.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-14",
+    "priority": 595,
+    "grammar": "depan after a time word = next: akhir pekan depan = next weekend, bulan depan = next month."
+  },
+  {
+    "id": "id-0596",
+    "target": "Dia jarang menonton televisi, lebih suka membaca.",
+    "english": "He rarely watches television, he prefers reading.",
+    "audio": "id-id-0596.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 596,
+    "grammar": "jarang = rarely, before the verb: Dia jarang menonton televisi."
+  },
+  {
+    "id": "id-0597",
+    "target": "Bermain game di ponsel itu hobi anak muda sekarang.",
+    "english": "Playing games on the phone is young people's hobby now.",
+    "audio": "id-id-0597.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 597
+  },
+  {
+    "id": "id-0598",
+    "target": "Saya menulis catatan perjalanan setiap kali liburan.",
+    "english": "I write travel notes every time I go on vacation.",
+    "audio": "id-id-0598.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-14",
+    "priority": 598
+  },
+  {
+    "id": "id-0599",
+    "target": "Kadang-kadang kami masak sate di halaman belakang.",
+    "english": "Sometimes we grill satay in the backyard.",
+    "audio": "id-id-0599.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-14",
+    "priority": 599
+  },
+  {
+    "id": "id-0600",
+    "target": "Hobi baru saya memotret burung di taman.",
+    "english": "My new hobby is photographing birds in the park.",
+    "audio": "id-id-0600.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-14",
+    "priority": 600
+  }
+]

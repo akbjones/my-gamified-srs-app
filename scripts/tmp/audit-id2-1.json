@@ -1,0 +1,156 @@
+[
+  {
+    "id": "id-0306",
+    "rating": 5,
+    "issue": "Grammar tip is factually muddled: 'yang can point back to a whole action' misdescribes an object relative clause — yang refers to the noun (baju), not to an action. Sentence itself is fine.",
+    "fix": {
+      "target": "Baju yang kamu beli kemarin bagus sekali.",
+      "english": "The shirt that you bought yesterday is really nice.",
+      "grammar": "yang also links a noun to what someone did to it: baju yang kamu beli = the shirt that you bought."
+    }
+  },
+  {
+    "id": "id-0311",
+    "rating": 5,
+    "issue": "English-calque collocation: 'bus yang pergi ke bandara' — pergi is for people; natives say 'bus yang ke bandara' or 'bus jurusan bandara' for a route.",
+    "fix": {
+      "target": "Bus yang ke bandara berangkat jam enam.",
+      "english": "The bus that goes to the airport leaves at six.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0318",
+    "rating": 5,
+    "issue": "Same calque as id-0311: 'bus yang pergi ke stasiun' — vehicles are not said to pergi; the natural route phrasing is 'bus yang ke stasiun'.",
+    "fix": {
+      "target": "Ini bus yang ke stasiun, bukan?",
+      "english": "This is the bus that goes to the station, isn't it?",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0338",
+    "rating": 5,
+    "issue": "Clunky double 'bulan': 'Bulan Desember bulan paling sibuk' — the zero-copula equational with the repeated noun reads awkwardly; needs adalah or the first bulan dropped.",
+    "fix": {
+      "target": "Desember adalah bulan paling sibuk untuk kami.",
+      "english": "December is the busiest month for us.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0340",
+    "rating": 5,
+    "issue": "Deixis clash: 'Kamar ini ... di hotel itu' — pointing at THIS room while calling the hotel you are standing in THAT hotel is incoherent; gloss faithfully copies the clash.",
+    "fix": {
+      "target": "Kamar ini yang paling murah di hotel ini.",
+      "english": "This room is the cheapest one in this hotel.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0371",
+    "rating": 5,
+    "issue": "Gloss fidelity: bare 'adik' glossed as 'little sibling is sleeping' — unnatural English with no possessor; add 'saya' to the target so both sides match cleanly.",
+    "fix": {
+      "target": "Jangan bicara keras-keras, adik saya sedang tidur.",
+      "english": "Don't talk loudly, my little sibling is sleeping.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0372",
+    "rating": 5,
+    "issue": "Clipped comment 'tidak baik' with no subject is stiff textbook Indonesian; a native warning uses nanti + consequence.",
+    "fix": {
+      "target": "Jangan makan terlalu cepat, nanti sakit perut.",
+      "english": "Don't eat too fast, you will get a stomachache.",
+      "grammar": "nanti in a warning means 'or else': nanti sakit perut = you'll get a stomachache."
+    }
+  },
+  {
+    "id": "id-0376",
+    "rating": 5,
+    "issue": "Unnatural collocation: 'menu makanannya' is redundant — in a restaurant you ask for 'menunya', never 'menu makanan'.",
+    "fix": {
+      "target": "Boleh saya minta menunya, Bu?",
+      "english": "May I have the menu, ma'am?",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0387",
+    "rating": 5,
+    "issue": "Imperative drops the -i suffix: mencicipi's imperative is 'cicipi'; bare 'cicip' is Jakarta-colloquial clipping (offender in Q1-Q3). Only the meN- prefix drops in requests, not verb suffixes.",
+    "fix": {
+      "target": "Coba cicipi sup ini, rasanya enak sekali.",
+      "english": "Try a taste of this soup, it tastes really good.",
+      "grammar": null
+    },
+    "newTokens": {
+      "cicipi": {
+        "en": "taste, sample (imperative of mencicipi)",
+        "ipa": "/tʃiˈtʃipi/",
+        "pos": "verb"
+      }
+    }
+  },
+  {
+    "id": "id-0390",
+    "rating": 4,
+    "issue": "English-calque location: 'berfoto di depan pantai' (in front of the beach) is not a natural place phrase — natives take photos 'di pantai' or 'di pinggir pantai'; the odd English gloss mirrors the calque.",
+    "fix": {
+      "target": "Mari kita berfoto bersama di pantai.",
+      "english": "Let's take a photo together at the beach.",
+      "grammar": "ber- turns a noun into 'do X': berfoto = take a photo."
+    }
+  },
+  {
+    "id": "id-0411",
+    "rating": 5,
+    "issue": "Tense mismatch: with no time anchor, 'Saya mandi dulu' defaults to a present intention ('I'll shower first'), but the gloss is past; the tip's own example even glosses it present ('I shower first'), contradicting the card.",
+    "fix": {
+      "target": "Tadi pagi saya mandi dulu, lalu sarapan dengan keluarga.",
+      "english": "This morning I showered first, then had breakfast with my family.",
+      "grammar": "dulu after a verb means 'first': mandi dulu = shower first, before anything else."
+    }
+  },
+  {
+    "id": "id-0414",
+    "rating": 5,
+    "issue": "Bookish register for Q2: 'hujan turun sangat deras' is written-narrative prose; in conversation natives say 'hujan deras sekali'.",
+    "fix": {
+      "target": "Kemarin pagi hujan deras sekali.",
+      "english": "Yesterday morning it rained really hard.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0437",
+    "rating": 5,
+    "issue": "Broken collocation: 'tidur larut' is clipped — the set phrase is 'tidur larut malam', which would clash with 'tadi malam'; the natural single word for staying up late is 'begadang'.",
+    "fix": {
+      "target": "Tadi malam saya begadang karena pekerjaan.",
+      "english": "Last night I stayed up late because of work.",
+      "grammar": "begadang = stay up late into the night — one everyday word, no extra phrase needed."
+    },
+    "newTokens": {
+      "begadang": {
+        "en": "to stay up late (at night)",
+        "ipa": "/bəˈɡadaŋ/",
+        "pos": "verb"
+      }
+    }
+  },
+  {
+    "id": "id-0460",
+    "rating": 5,
+    "issue": "English calque: 'saya merasa pusing' copies 'I feel dizzy' — natives state symptoms directly ('saya pusing'); merasa here is stiff clinic-form language for Q2.",
+    "fix": {
+      "target": "Pagi ini saya pusing dan mual.",
+      "english": "This morning I feel dizzy and nauseous.",
+      "grammar": null
+    }
+  }
+]

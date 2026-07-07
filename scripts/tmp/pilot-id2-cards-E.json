@@ -1,0 +1,1228 @@
+[
+ {
+  "id": "id-0701",
+  "target": "Saya cari hotel yang dekat dengan stasiun.",
+  "english": "I am looking for a hotel that is near the station.",
+  "audio": "id-id-0701.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-09",
+  "priority": 701,
+  "grammar": "yang links a noun to its description: hotel yang dekat = a hotel that is near."
+ },
+ {
+  "id": "id-0702",
+  "target": "Ada kamar yang lebih besar untuk keluarga?",
+  "english": "Is there a bigger room for a family?",
+  "audio": "id-id-0702.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-09",
+  "priority": 702
+ },
+ {
+  "id": "id-0703",
+  "target": "Kereta lebih cepat daripada bus ke bandara.",
+  "english": "The train is faster than the bus to the airport.",
+  "audio": "id-id-0703.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-10",
+  "priority": 703,
+  "grammar": "lebih ... daripada = more ... than: lebih cepat daripada bus = faster than the bus."
+ },
+ {
+  "id": "id-0704",
+  "target": "Hotel ini paling murah di dekat pantai.",
+  "english": "This hotel is the cheapest near the beach.",
+  "audio": "id-id-0704.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-10",
+  "priority": 704,
+  "grammar": "paling = the most: paling murah = the cheapest."
+ },
+ {
+  "id": "id-0705",
+  "target": "Tolong panggil taksi untuk saya sekarang.",
+  "english": "Please call a taxi for me now.",
+  "audio": "id-id-0705.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-11",
+  "priority": 705
+ },
+ {
+  "id": "id-0706",
+  "target": "Boleh saya lihat kamarnya dulu?",
+  "english": "May I see the room first?",
+  "audio": "id-id-0706.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-11",
+  "priority": 706,
+  "grammar": "boleh = may (permission): Boleh saya lihat? = May I see?"
+ },
+ {
+  "id": "id-0707",
+  "target": "Bisa minta peta kota ini?",
+  "english": "Can I get a map of this city?",
+  "audio": "id-id-0707.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-11",
+  "priority": 707,
+  "grammar": "minta = ask for a thing: Bisa minta peta? = Can I get a map?"
+ },
+ {
+  "id": "id-0708",
+  "target": "Kemarin kami tiba di Jakarta malam hari.",
+  "english": "Yesterday we arrived in Jakarta at night.",
+  "audio": "id-id-0708.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-12",
+  "priority": 708
+ },
+ {
+  "id": "id-0709",
+  "target": "Tadi saya sudah beli tiket kereta di loket.",
+  "english": "Earlier I already bought train tickets at the counter.",
+  "audio": "id-id-0709.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-12",
+  "priority": 709,
+  "grammar": "tadi = earlier today: tadi saya sudah beli = I already bought (it) earlier."
+ },
+ {
+  "id": "id-0710",
+  "target": "Setelah makan siang, kami pergi ke museum.",
+  "english": "After lunch, we went to the museum.",
+  "audio": "id-id-0710.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-13",
+  "priority": 710,
+  "grammar": "setelah = after: setelah makan siang = after lunch."
+ },
+ {
+  "id": "id-0711",
+  "target": "Kalau hujan, kita naik taksi saja.",
+  "english": "If it rains, let's just take a taxi.",
+  "audio": "id-id-0711.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-14",
+  "priority": 711,
+  "grammar": "kalau = if: kalau hujan = if it rains. No extra word for 'then'."
+ },
+ {
+  "id": "id-0712",
+  "target": "Besok pagi kami akan berangkat ke Bali.",
+  "english": "Tomorrow morning we will depart for Bali.",
+  "audio": "id-id-0712.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-15",
+  "priority": 712
+ },
+ {
+  "id": "id-0713",
+  "target": "Jangan lupa bawa paspor dan tiket kamu.",
+  "english": "Don't forget to bring your passport and ticket.",
+  "audio": "id-id-0713.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-16",
+  "priority": 713,
+  "grammar": "jangan lupa = don't forget: jangan lupa bawa paspor = don't forget your passport."
+ },
+ {
+  "id": "id-0714",
+  "target": "Di mana halte bus yang ke pusat kota?",
+  "english": "Where is the bus stop that goes to the city center?",
+  "audio": "id-id-0714.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-09",
+  "priority": 714
+ },
+ {
+  "id": "id-0715",
+  "target": "Kamar di lantai atas lebih tenang daripada di bawah.",
+  "english": "The room upstairs is quieter than the one downstairs.",
+  "audio": "id-id-0715.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-10",
+  "priority": 715
+ },
+ {
+  "id": "id-0716",
+  "target": "Tolong antar koper ini ke kamar saya.",
+  "english": "Please take this suitcase to my room.",
+  "audio": "id-id-0716.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-11",
+  "priority": 716,
+  "grammar": "tolong + verb = please (do something): tolong antar = please take (it) there."
+ },
+ {
+  "id": "id-0717",
+  "target": "Kemarin kami menginap di hotel dekat bandara.",
+  "english": "Yesterday we stayed overnight at a hotel near the airport.",
+  "audio": "id-id-0717.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-12",
+  "priority": 717,
+  "grammar": "menginap = meN- + inap: kami menginap di hotel = we stayed overnight at a hotel."
+ },
+ {
+  "id": "id-0718",
+  "target": "Sebelum berangkat, saya cek jadwal kereta dulu.",
+  "english": "Before departing, I check the train schedule first.",
+  "audio": "id-id-0718.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-13",
+  "priority": 718
+ },
+ {
+  "id": "id-0719",
+  "target": "Kalau ada kamar kosong, saya mau menginap dua malam.",
+  "english": "If there is a vacant room, I want to stay two nights.",
+  "audio": "id-id-0719.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-14",
+  "priority": 719
+ },
+ {
+  "id": "id-0720",
+  "target": "Rencananya kami pergi ke pantai hari Minggu.",
+  "english": "The plan is we go to the beach on Sunday.",
+  "audio": "id-id-0720.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-15",
+  "priority": 720
+ },
+ {
+  "id": "id-0721",
+  "target": "Semoga cuaca bagus selama liburan kita.",
+  "english": "Hopefully the weather is good during our vacation.",
+  "audio": "id-id-0721.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-16",
+  "priority": 721,
+  "grammar": "semoga = hopefully: semoga cuaca bagus = hope the weather is good."
+ },
+ {
+  "id": "id-0722",
+  "target": "Kami mau kamar yang dekat dengan kolam renang.",
+  "english": "We want a room that is near the swimming pool.",
+  "audio": "id-id-0722.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-09",
+  "priority": 722
+ },
+ {
+  "id": "id-0723",
+  "target": "Naik kereta lebih nyaman daripada naik bus malam.",
+  "english": "Taking the train is more comfortable than taking the night bus.",
+  "audio": "id-id-0723.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-10",
+  "priority": 723
+ },
+ {
+  "id": "id-0724",
+  "target": "Permisi, boleh saya duduk di kursi dekat jendela?",
+  "english": "Excuse me, may I sit in the seat by the window?",
+  "audio": "id-id-0724.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-11",
+  "priority": 724
+ },
+ {
+  "id": "id-0725",
+  "target": "Tadi malam kami jalan kaki ke pasar malam.",
+  "english": "Last night we walked to the night market.",
+  "audio": "id-id-0725.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-12",
+  "priority": 725
+ },
+ {
+  "id": "id-0726",
+  "target": "Setelah sampai di hotel, kami langsung tidur.",
+  "english": "After arriving at the hotel, we went straight to sleep.",
+  "audio": "id-id-0726.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-13",
+  "priority": 726,
+  "grammar": "langsung = straight away: kami langsung tidur = we went straight to sleep."
+ },
+ {
+  "id": "id-0727",
+  "target": "Kalau kamu capek, kita istirahat di kafe itu.",
+  "english": "If you are tired, we can rest at that cafe.",
+  "audio": "id-id-0727.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-14",
+  "priority": 727
+ },
+ {
+  "id": "id-0728",
+  "target": "Nanti sore kami mau lihat matahari terbenam di pantai.",
+  "english": "Later this afternoon we want to watch the sunset at the beach.",
+  "audio": "id-id-0728.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-15",
+  "priority": 728
+ },
+ {
+  "id": "id-0729",
+  "target": "Sebaiknya kamu pesan hotel dari sekarang.",
+  "english": "You had better book the hotel from now.",
+  "audio": "id-id-0729.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-16",
+  "priority": 729,
+  "grammar": "sebaiknya = had better: sebaiknya pesan sekarang = better book now."
+ },
+ {
+  "id": "id-0730",
+  "target": "Restoran yang di sebelah hotel itu enak sekali.",
+  "english": "The restaurant next to the hotel is very good.",
+  "audio": "id-id-0730.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-09",
+  "priority": 730
+ },
+ {
+  "id": "id-0731",
+  "target": "Jalan kaki lebih cepat karena jalanan macet sekali.",
+  "english": "Walking is faster because the streets are very jammed.",
+  "audio": "id-id-0731.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-10",
+  "priority": 731
+ },
+ {
+  "id": "id-0732",
+  "target": "Bisa tolong foto kami di depan candi ini?",
+  "english": "Could you please take our photo in front of this temple?",
+  "audio": "id-id-0732.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-11",
+  "priority": 732
+ },
+ {
+  "id": "id-0733",
+  "target": "Kemarin sore kami turun dari kapal di pelabuhan.",
+  "english": "Yesterday afternoon we got off the ship at the harbor.",
+  "audio": "id-id-0733.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-12",
+  "priority": 733
+ },
+ {
+  "id": "id-0734",
+  "target": "Kalau mau menukar uang, di mana tempat terbaik?",
+  "english": "If I want to exchange money, where is the best place?",
+  "audio": "id-id-0734.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-14",
+  "priority": 734
+ },
+ {
+  "id": "id-0735",
+  "target": "Minggu depan saya akan terbang ke Lombok.",
+  "english": "Next week I will fly to Lombok.",
+  "audio": "id-id-0735.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-15",
+  "priority": 735
+ },
+ {
+  "id": "id-0736",
+  "target": "Laporan yang kamu kirim kemarin sudah saya baca.",
+  "english": "I have already read the report you sent yesterday.",
+  "audio": "id-id-0736.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-09",
+  "priority": 736,
+  "grammar": "yang also points back to things: laporan yang kamu kirim = the report you sent."
+ },
+ {
+  "id": "id-0737",
+  "target": "Tolong kirim ulang dokumen itu ke email saya.",
+  "english": "Please resend that document to my email.",
+  "audio": "id-id-0737.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-11",
+  "priority": 737
+ },
+ {
+  "id": "id-0738",
+  "target": "Rapat tadi pagi selesai jam sebelas.",
+  "english": "This morning's meeting finished at eleven.",
+  "audio": "id-id-0738.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-12",
+  "priority": 738
+ },
+ {
+  "id": "id-0739",
+  "target": "Kami akan mulai proyek baru bulan depan.",
+  "english": "We will start a new project next month.",
+  "audio": "id-id-0739.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-15",
+  "priority": 739
+ },
+ {
+  "id": "id-0740",
+  "target": "Ruang rapat di lantai dua lebih besar.",
+  "english": "The meeting room on the second floor is bigger.",
+  "audio": "id-id-0740.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-10",
+  "priority": 740
+ },
+ {
+  "id": "id-0741",
+  "target": "Kalau ada pertanyaan, kirim pesan ke saya.",
+  "english": "If there are questions, send me a message.",
+  "audio": "id-id-0741.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-14",
+  "priority": 741
+ },
+ {
+  "id": "id-0742",
+  "target": "Boleh saya pulang lebih awal hari ini?",
+  "english": "May I go home earlier today?",
+  "audio": "id-id-0742.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-11",
+  "priority": 742
+ },
+ {
+  "id": "id-0743",
+  "target": "Kemarin saya kerja lembur sampai jam sembilan malam.",
+  "english": "Yesterday I worked overtime until nine at night.",
+  "audio": "id-id-0743.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-12",
+  "priority": 743
+ },
+ {
+  "id": "id-0744",
+  "target": "Setelah rapat, kita bahas jadwal proyek ini.",
+  "english": "After the meeting, let's discuss this project's schedule.",
+  "audio": "id-id-0744.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-13",
+  "priority": 744
+ },
+ {
+  "id": "id-0745",
+  "target": "Jangan lupa simpan dokumen sebelum pulang.",
+  "english": "Don't forget to save the document before going home.",
+  "audio": "id-id-0745.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-16",
+  "priority": 745
+ },
+ {
+  "id": "id-0746",
+  "target": "Saya butuh rekan yang bisa bantu proyek ini.",
+  "english": "I need a colleague who can help with this project.",
+  "audio": "id-id-0746.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-09",
+  "priority": 746
+ },
+ {
+  "id": "id-0747",
+  "target": "Kirim laporan itu paling lambat hari Jumat.",
+  "english": "Send that report by Friday at the latest.",
+  "audio": "id-id-0747.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-10",
+  "priority": 747,
+  "grammar": "paling lambat = at the latest: paling lambat hari Jumat = by Friday at the latest."
+ },
+ {
+  "id": "id-0748",
+  "target": "Tolong jelaskan bagian ini sekali lagi.",
+  "english": "Please explain this part one more time.",
+  "audio": "id-id-0748.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-11",
+  "priority": 748,
+  "grammar": "-kan turns a word into a doing-verb: jelas (clear) → jelaskan = explain."
+ },
+ {
+  "id": "id-0749",
+  "target": "Tadi pagi saya sudah telepon klien dari Surabaya.",
+  "english": "Earlier this morning I already called the client from Surabaya.",
+  "audio": "id-id-0749.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-12",
+  "priority": 749
+ },
+ {
+  "id": "id-0750",
+  "target": "Sebelum presentasi, saya siapkan semua data dulu.",
+  "english": "Before the presentation, I prepare all the data first.",
+  "audio": "id-id-0750.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-13",
+  "priority": 750
+ },
+ {
+  "id": "id-0751",
+  "target": "Kalau laporan belum selesai, bilang ke saya.",
+  "english": "If the report is not finished yet, tell me.",
+  "audio": "id-id-0751.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-14",
+  "priority": 751
+ },
+ {
+  "id": "id-0752",
+  "target": "Besok kami akan rapat dengan tim pemasaran.",
+  "english": "Tomorrow we will have a meeting with the marketing team.",
+  "audio": "id-id-0752.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-15",
+  "priority": 752,
+  "grammar": "akan marks the future: kami akan rapat = we will have a meeting."
+ },
+ {
+  "id": "id-0753",
+  "target": "Semoga presentasi kamu berjalan lancar besok.",
+  "english": "Hopefully your presentation goes smoothly tomorrow.",
+  "audio": "id-id-0753.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-16",
+  "priority": 753
+ },
+ {
+  "id": "id-0754",
+  "target": "Klien yang datang tadi mau lihat kantor baru.",
+  "english": "The client who came earlier wants to see the new office.",
+  "audio": "id-id-0754.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-09",
+  "priority": 754
+ },
+ {
+  "id": "id-0755",
+  "target": "Jadwal minggu ini lebih padat daripada minggu lalu.",
+  "english": "This week's schedule is fuller than last week's.",
+  "audio": "id-id-0755.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-10",
+  "priority": 755
+ },
+ {
+  "id": "id-0756",
+  "target": "Bisa bantu saya cek angka di laporan ini?",
+  "english": "Can you help me check the numbers in this report?",
+  "audio": "id-id-0756.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-11",
+  "priority": 756
+ },
+ {
+  "id": "id-0757",
+  "target": "Kemarin atasan saya pulang cepat karena sakit.",
+  "english": "Yesterday my boss went home early because he was sick.",
+  "audio": "id-id-0757.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-12",
+  "priority": 757
+ },
+ {
+  "id": "id-0758",
+  "target": "Setelah kirim email itu, saya langsung pulang.",
+  "english": "After sending that email, I went straight home.",
+  "audio": "id-id-0758.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-13",
+  "priority": 758
+ },
+ {
+  "id": "id-0759",
+  "target": "Kalau rapat batal, saya kabari kamu segera.",
+  "english": "If the meeting is cancelled, I'll let you know right away.",
+  "audio": "id-id-0759.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-14",
+  "priority": 759,
+  "grammar": "-i makes a verb aim at someone: kabar (news) → kabari = let (someone) know."
+ },
+ {
+  "id": "id-0760",
+  "target": "Bulan depan kantor kami pindah ke gedung baru.",
+  "english": "Next month our office moves to a new building.",
+  "audio": "id-id-0760.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-15",
+  "priority": 760
+ },
+ {
+  "id": "id-0761",
+  "target": "Sebaiknya kita tunda rapat sampai besok pagi.",
+  "english": "We had better postpone the meeting until tomorrow morning.",
+  "audio": "id-id-0761.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-16",
+  "priority": 761
+ },
+ {
+  "id": "id-0762",
+  "target": "Mana dokumen yang harus saya baca dulu?",
+  "english": "Which document should I read first?",
+  "audio": "id-id-0762.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-09",
+  "priority": 762
+ },
+ {
+  "id": "id-0763",
+  "target": "Kantin di kantor lama lebih murah daripada di sini.",
+  "english": "The canteen at the old office was cheaper than here.",
+  "audio": "id-id-0763.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-10",
+  "priority": 763
+ },
+ {
+  "id": "id-0764",
+  "target": "Tolong tunggu sebentar, saya panggil manajer dulu.",
+  "english": "Please wait a moment, I'll call the manager first.",
+  "audio": "id-id-0764.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-11",
+  "priority": 764
+ },
+ {
+  "id": "id-0765",
+  "target": "Proyek itu sudah selesai minggu lalu.",
+  "english": "That project was already finished last week.",
+  "audio": "id-id-0765.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-12",
+  "priority": 765,
+  "grammar": "sudah marks a finished action, verbs never change: sudah selesai = already done."
+ },
+ {
+  "id": "id-0766",
+  "target": "Sebelum pulang, saya harus jawab tiga email lagi.",
+  "english": "Before going home, I have to answer three more emails.",
+  "audio": "id-id-0766.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-13",
+  "priority": 766
+ },
+ {
+  "id": "id-0767",
+  "target": "Kalau kamu sibuk, saya bisa hubungi klien itu.",
+  "english": "If you are busy, I can contact that client.",
+  "audio": "id-id-0767.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-14",
+  "priority": 767
+ },
+ {
+  "id": "id-0768",
+  "target": "Saya mau ambil cuti dua hari minggu depan.",
+  "english": "I want to take two days of leave next week.",
+  "audio": "id-id-0768.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-15",
+  "priority": 768
+ },
+ {
+  "id": "id-0769",
+  "target": "Jangan lupa isi jadwal kamu sebelum rapat besok.",
+  "english": "Don't forget to fill in your schedule before tomorrow's meeting.",
+  "audio": "id-id-0769.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-16",
+  "priority": 769
+ },
+ {
+  "id": "id-0770",
+  "target": "Gaji di perusahaan baru itu lebih tinggi.",
+  "english": "The salary at that new company is higher.",
+  "audio": "id-id-0770.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-10",
+  "priority": 770
+ },
+ {
+  "id": "id-0771",
+  "target": "Kemarin kami makan malam di rumah nenek.",
+  "english": "Yesterday we had dinner at grandma's house.",
+  "audio": "id-id-0771.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-12",
+  "priority": 771
+ },
+ {
+  "id": "id-0772",
+  "target": "Setelah makan malam, ayah cuci piring di dapur.",
+  "english": "After dinner, dad washes the dishes in the kitchen.",
+  "audio": "id-id-0772.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-13",
+  "priority": 772
+ },
+ {
+  "id": "id-0773",
+  "target": "Tolong bantu adik kamu dengan tugas sekolahnya.",
+  "english": "Please help your little brother with his schoolwork.",
+  "audio": "id-id-0773.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-11",
+  "priority": 773
+ },
+ {
+  "id": "id-0774",
+  "target": "Akhir pekan ini kami mau piknik di taman kota.",
+  "english": "This weekend we want to picnic in the city park.",
+  "audio": "id-id-0774.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-15",
+  "priority": 774
+ },
+ {
+  "id": "id-0775",
+  "target": "Anak yang paling kecil sudah tidur dari tadi.",
+  "english": "The youngest child has been asleep for a while.",
+  "audio": "id-id-0775.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-09",
+  "priority": 775,
+  "grammar": "dari tadi = since earlier: sudah tidur dari tadi = has been asleep for a while."
+ },
+ {
+  "id": "id-0776",
+  "target": "Kakak saya lebih tinggi daripada ayah sekarang.",
+  "english": "My older brother is taller than dad now.",
+  "audio": "id-id-0776.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-10",
+  "priority": 776
+ },
+ {
+  "id": "id-0777",
+  "target": "Kalau cuaca bagus, kita main bola di halaman.",
+  "english": "If the weather is nice, we play ball in the yard.",
+  "audio": "id-id-0777.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-14",
+  "priority": 777
+ },
+ {
+  "id": "id-0778",
+  "target": "Tadi sore ibu jemput adik di sekolah.",
+  "english": "Earlier this afternoon mom picked up little sister at school.",
+  "audio": "id-id-0778.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-12",
+  "priority": 778
+ },
+ {
+  "id": "id-0779",
+  "target": "Sebelum tidur, nenek cerita tentang masa kecilnya.",
+  "english": "Before bed, grandma tells stories about her childhood.",
+  "audio": "id-id-0779.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-13",
+  "priority": 779
+ },
+ {
+  "id": "id-0780",
+  "target": "Jangan lupa matikan lampu sebelum tidur, ya.",
+  "english": "Don't forget to turn off the light before bed, okay?",
+  "audio": "id-id-0780.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-16",
+  "priority": 780,
+  "grammar": "matikan = mati (off) + -kan: matikan lampu = turn off the light."
+ },
+ {
+  "id": "id-0781",
+  "target": "Besok kami akan mengunjungi kakek di kampung.",
+  "english": "Tomorrow we will visit grandpa in the village.",
+  "audio": "id-id-0781.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-15",
+  "priority": 781,
+  "grammar": "mengunjungi = meN- + kunjung + -i: mengunjungi kakek = to visit grandpa."
+ },
+ {
+  "id": "id-0782",
+  "target": "Sepupu saya yang tinggal di Bandung datang besok.",
+  "english": "My cousin who lives in Bandung is coming tomorrow.",
+  "audio": "id-id-0782.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-09",
+  "priority": 782
+ },
+ {
+  "id": "id-0783",
+  "target": "Adik saya lebih suka susu daripada teh manis.",
+  "english": "My little brother prefers milk to sweet tea.",
+  "audio": "id-id-0783.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-10",
+  "priority": 783
+ },
+ {
+  "id": "id-0784",
+  "target": "Minta tolong angkat jemuran, sebentar lagi hujan.",
+  "english": "Please bring in the laundry, it's about to rain.",
+  "audio": "id-id-0784.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-11",
+  "priority": 784
+ },
+ {
+  "id": "id-0785",
+  "target": "Kemarin anak-anak berenang di kolam dekat rumah.",
+  "english": "Yesterday the kids swam in the pool near the house.",
+  "audio": "id-id-0785.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-12",
+  "priority": 785,
+  "grammar": "ber- verbs describe an activity: renang → berenang = to swim."
+ },
+ {
+  "id": "id-0786",
+  "target": "Setelah sarapan, kami bersihkan rumah bersama-sama.",
+  "english": "After breakfast, we clean the house together.",
+  "audio": "id-id-0786.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-13",
+  "priority": 786,
+  "grammar": "bersama-sama = together: bersihkan rumah bersama-sama = clean the house together."
+ },
+ {
+  "id": "id-0787",
+  "target": "Kalau kamu lapar, ada nasi goreng di meja.",
+  "english": "If you are hungry, there is fried rice on the table.",
+  "audio": "id-id-0787.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-14",
+  "priority": 787
+ },
+ {
+  "id": "id-0788",
+  "target": "Liburan sekolah nanti, kami mau ke rumah paman.",
+  "english": "During the school holidays, we want to go to uncle's house.",
+  "audio": "id-id-0788.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-15",
+  "priority": 788
+ },
+ {
+  "id": "id-0789",
+  "target": "Semoga adik kamu cepat sembuh, ya.",
+  "english": "Hope your little brother gets well soon, okay?",
+  "audio": "id-id-0789.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-16",
+  "priority": 789
+ },
+ {
+  "id": "id-0790",
+  "target": "Foto yang di dinding itu dari pernikahan kami.",
+  "english": "The photo on the wall is from our wedding.",
+  "audio": "id-id-0790.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-09",
+  "priority": 790
+ },
+ {
+  "id": "id-0791",
+  "target": "Rumah baru kami lebih dekat ke sekolah anak-anak.",
+  "english": "Our new house is closer to the children's school.",
+  "audio": "id-id-0791.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-10",
+  "priority": 791
+ },
+ {
+  "id": "id-0792",
+  "target": "Boleh anak-anak main di rumah teman sampai sore?",
+  "english": "May the kids play at their friend's house until the afternoon?",
+  "audio": "id-id-0792.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-11",
+  "priority": 792
+ },
+ {
+  "id": "id-0793",
+  "target": "Tadi malam kami menonton film kartun bersama anak-anak.",
+  "english": "Last night we watched a cartoon movie with the kids.",
+  "audio": "id-id-0793.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-12",
+  "priority": 793
+ },
+ {
+  "id": "id-0794",
+  "target": "Sebelum berangkat sekolah, adik selalu sarapan dulu.",
+  "english": "Before leaving for school, little brother always has breakfast first.",
+  "audio": "id-id-0794.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-13",
+  "priority": 794
+ },
+ {
+  "id": "id-0795",
+  "target": "Kalau sudah selesai makan, bawa piring ke dapur.",
+  "english": "When you have finished eating, take your plate to the kitchen.",
+  "audio": "id-id-0795.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-14",
+  "priority": 795
+ },
+ {
+  "id": "id-0796",
+  "target": "Minggu depan kami akan merayakan ulang tahun ibu.",
+  "english": "Next week we will celebrate mom's birthday.",
+  "audio": "id-id-0796.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-15",
+  "priority": 796
+ },
+ {
+  "id": "id-0797",
+  "target": "Sebaiknya anak-anak tidur sebelum jam sembilan malam.",
+  "english": "The kids had better sleep before nine at night.",
+  "audio": "id-id-0797.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-16",
+  "priority": 797
+ },
+ {
+  "id": "id-0798",
+  "target": "Kue yang ibu buat kemarin sudah habis.",
+  "english": "The cake mom made yesterday is all gone.",
+  "audio": "id-id-0798.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-09",
+  "priority": 798
+ },
+ {
+  "id": "id-0799",
+  "target": "Waktu saya kecil, kami tinggal di dekat pantai.",
+  "english": "When I was little, we lived near the beach.",
+  "audio": "id-id-0799.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-13",
+  "priority": 799,
+  "grammar": "waktu + clause = when (in the past): waktu saya kecil = when I was little."
+ },
+ {
+  "id": "id-0800",
+  "target": "Nanti malam kita masak sup ayam bersama, ya.",
+  "english": "Tonight let's cook chicken soup together, okay?",
+  "audio": "id-id-0800.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-15",
+  "priority": 800
+ }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "id": "id-0473",
+    "rating": 5,
+    "issue": "Gloss mismatch: tangan = hand; 'arm' is lengan. Also 'boxes' plural is fine (unmarked), but the body-part gloss is wrong.",
+    "fix": {
+      "target": "Tangan saya sakit setelah mengangkat kotak berat.",
+      "english": "My hand hurts after lifting heavy boxes.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-0478",
+    "rating": 5,
+    "issue": "Grammar tip is misleading: 'janji alone means promise' — janji alone also means appointment (the deck's own id-0609 tip says so: 'ada janji = have an appointment'). Internal contradiction.",
+    "fix": {
+      "target": "Saya mau membuat janji dengan dokter gigi.",
+      "english": "I want to make an appointment with the dentist.",
+      "grammar": "membuat janji = make an appointment: membuat janji dengan dokter gigi."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-0495",
+    "rating": 5,
+    "issue": "Bare-root 'periksa' as main verb violates register policy rule 5 (cards model full meN- form; no tip notes the drop). Full form for having one's eyes checked is memeriksakan.",
+    "fix": {
+      "target": "Minggu lalu saya memeriksakan mata di klinik.",
+      "english": "Last week I had my eyes checked at a clinic.",
+      "grammar": null
+    },
+    "newTokens": { "memeriksakan": "to have (something) checked/examined" }
+  },
+  {
+    "id": "id-0496",
+    "rating": 5,
+    "issue": "'bisa menunggu besok' reads as 'can wait for tomorrow'; 'wait until tomorrow' needs sampai: menunggu sampai besok.",
+    "fix": {
+      "target": "Istirahat dulu, pekerjaan bisa menunggu sampai besok.",
+      "english": "Rest first, the work can wait until tomorrow.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-0511",
+    "rating": 5,
+    "issue": "'Angin bertiup kencang' is weather-report/news register, not conversational (policy rule 2: Q3 formality only where the situation is formal — casual weather talk is not). Speakers say 'anginnya kencang sekali'.",
+    "fix": {
+      "target": "Anginnya kencang sekali malam ini.",
+      "english": "The wind is really strong tonight.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-0525",
+    "rating": 4,
+    "issue": "Time-word stacking: 'waktu malam hari' jams the conjunction waktu against the time noun phrase malam hari — clunky and non-idiomatic. Natural: 'kalau malam' or 'pada malam hari'.",
+    "fix": {
+      "target": "Kalau malam, suhu di sini turun.",
+      "english": "At night, the temperature here drops.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-0537",
+    "rating": 5,
+    "issue": "'siang tadi' is the marked order; idiomatic is 'tadi siang' (the deck itself uses 'tadi sore' in id-0523 and 'tadi siang' in id-0425). 'sangat panas' also stiffer than 'panas sekali' conversationally.",
+    "fix": {
+      "target": "Tadi siang cuaca di pantai panas sekali.",
+      "english": "At midday today the weather at the beach was very hot.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-0541",
+    "rating": 5,
+    "issue": "Bare-root 'cek' as main verb; policy rule 5 says cards model the full meN- form (mengecek), tips may note the drop — no tip here.",
+    "fix": {
+      "target": "Saya selalu mengecek ramalan cuaca sebelum berangkat.",
+      "english": "I always check the weather forecast before leaving.",
+      "grammar": null
+    },
+    "newTokens": { "mengecek": "to check" }
+  },
+  {
+    "id": "id-0543",
+    "rating": 4,
+    "issue": "Awkward noun-phrase stacking: 'Angin laut sore hari enak sekali di sini' strings angin laut + sore hari with no linker. Natural phrasing fronts the time: 'Kalau sore, angin lautnya enak.'",
+    "fix": {
+      "target": "Kalau sore, angin laut di sini enak sekali.",
+      "english": "In the late afternoon, the sea breeze here is really pleasant.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-0545",
+    "rating": 5,
+    "issue": "'kalau ombak besar' is clipped; the conditional wants the definite -nya: 'kalau ombaknya besar' (cf. 'jalanan licin' pattern the deck handles correctly in id-0532).",
+    "fix": {
+      "target": "Jangan berenang di laut kalau ombaknya besar.",
+      "english": "Don't swim in the sea when the waves are big.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-0546",
+    "rating": 4,
+    "issue": "Grammar tip is factually wrong: it claims 'hujan + noun names the rain type' then gives 'hujan deras' as an example — deras is an adjective, not a noun. Sentence itself is fine.",
+    "fix": {
+      "target": "Kemarin hujan es turun di kota Bandung.",
+      "english": "Yesterday hail fell in the city of Bandung.",
+      "grammar": "hujan es = hail, literally 'ice rain': Kemarin hujan es turun."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-0551",
+    "rating": 5,
+    "issue": "English-calque redundancy: 'Apa hobi kamu di waktu luang?' — a hobby is by definition what you do in free time; the tacked-on 'di waktu luang' mirrors awkward English, not Indonesian usage.",
+    "fix": {
+      "target": "Apa yang biasanya kamu lakukan di waktu luang?",
+      "english": "What do you usually do in your free time?",
+      "grammar": "waktu luang = free time: di waktu luang = in your free time."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-0570",
+    "rating": 4,
+    "issue": "menyanyi is intransitive; with an object the verb is menyanyikan ('menyanyi lagu' is the colloquial drop the policy says not to model untagged). Standard: menyanyikan lagu.",
+    "fix": {
+      "target": "Anak saya suka menyanyikan lagu anak-anak.",
+      "english": "My child likes singing children's songs.",
+      "grammar": "menyanyikan = sing something: menyanyikan lagu = to sing a song."
+    },
+    "newTokens": { "menyanyikan": "to sing (a song)" }
+  },
+  {
+    "id": "id-0572",
+    "rating": 5,
+    "issue": "Gloss overshoots: 'sampai malam' = until night(fall); 'until late at night' is 'sampai larut malam' (larut already taught at id-0437).",
+    "fix": {
+      "target": "Kadang-kadang kami bermain kartu sampai larut malam.",
+      "english": "Sometimes we play cards until late at night.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-0578",
+    "rating": 5,
+    "issue": "menari is intransitive; with a named dance as object the standard verb is menarikan (same transitivity issue as id-0570).",
+    "fix": {
+      "target": "Ibu saya suka menarikan tarian tradisional Bali.",
+      "english": "My mother likes dancing traditional Balinese dances.",
+      "grammar": "menarikan = dance a specific dance: menarikan tarian Bali."
+    },
+    "newTokens": { "menarikan": "to dance (a particular dance)" }
+  },
+  {
+    "id": "id-0581",
+    "rating": 5,
+    "issue": "'mengambil foto' is an English calque of 'take a photo'; the natural verb is memotret, which the deck itself uses at id-0600.",
+    "fix": {
+      "target": "Dia memotret pemandangan waktu jalan-jalan.",
+      "english": "He photographs scenery while traveling around.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-0584",
+    "rating": 4,
+    "issue": "Register inconsistency in one sentence: bare-root 'saya dengarkan musik' (colloquial meN- drop, untagged — policy rule 5) alongside full-form 'membersihkan'. Model mendengarkan.",
+    "fix": {
+      "target": "Biasanya saya mendengarkan musik waktu membersihkan rumah.",
+      "english": "I usually listen to music while cleaning the house.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-0589",
+    "rating": 3,
+    "issue": "Gloss error on a real-world trap: 'malam Jumat' means THURSDAY night (the eve of Friday, with spooky connotations to boot); 'Friday night' is 'Jumat malam'. Target and gloss contradict each other.",
+    "fix": {
+      "target": "Setiap Jumat malam kami berkumpul dan bernyanyi bersama.",
+      "english": "Every Friday night we get together and sing.",
+      "grammar": "Jumat malam = Friday night; malam Jumat means Thursday night (the eve of Friday)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-0599",
+    "rating": 4,
+    "issue": "Gloss mismatch: masak = cook, but English says 'grill'; satay is grilled — the collocation is membakar sate (bakar sate). Also bare 'masak' reused untagged.",
+    "fix": {
+      "target": "Kadang-kadang kami membakar sate di halaman belakang.",
+      "english": "Sometimes we grill satay in the backyard.",
+      "grammar": "membakar = to grill or burn: membakar sate = to grill satay."
+    },
+    "newTokens": { "membakar": "to grill, to burn" }
+  },
+  {
+    "id": "id-0631",
+    "rating": 5,
+    "issue": "Calque/ambiguity: 'tidak mendengar telepon kamu' reads as 'didn't hear your telephone (device)'. You hear the phone ring: tidak mendengar ponsel berbunyi, or telepon dari kamu for 'a call from you'.",
+    "fix": {
+      "target": "Maaf, tadi saya tidak mendengar ponsel saya berbunyi.",
+      "english": "Sorry, I did not hear my phone ring earlier.",
+      "grammar": null
+    },
+    "newTokens": { "berbunyi": "to ring, to make a sound" }
+  }
+]

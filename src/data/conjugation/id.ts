@@ -54,7 +54,11 @@ export const KNOWN_ROOTS = new Set<string>([
   'nikah', 'kumpul', 'angkat', 'henti', 'lambat', 'dekat',
   'tiba', 'sarapan', 'naik', 'mandi', 'masuk', 'keluar',
   'tonton', 'tawar', 'pesan', 'jemput', 'antar', 'parkir',
-  'ada', 'boleh', 'belok', 'jumpa', 'lewat', 'terbit', 'minta', 'turun',
+  'ada', 'boleh', 'belok', 'jumpa', 'lewat', 'terbit', 'minta', 'turun', 'kembali',
+  // batch-2 roots
+  'begadang',
+  'bakar', 'bunyi',
+  'ajak', 'bahas', 'balas', 'batal', 'batuk', 'belanja', 'beri', 'bersih', 'bilang', 'cat', 'cek', 'cerita', 'cicip', 'daki', 'doa', 'foto', 'gambar', 'gantung', 'hadap', 'hilang', 'hubung', 'hujan', 'ikut', 'inap', 'isi', 'istirahat', 'jadi', 'jaga', 'janji', 'jatuh', 'jelas', 'jemur', 'kabar', 'kunci', 'kunjung', 'laku', 'latih', 'libur', 'mampir', 'muncul', 'nyala', 'nyanyi', 'olahraga', 'pancing', 'panggil', 'pasang', 'periksa', 'pilih', 'pindah', 'pinjam', 'potret', 'rawat', 'raya', 'renang', 'sepeda', 'siap', 'sikat', 'simpan', 'sumbat', 'tanam', 'tangis', 'tari', 'taruh', 'teduh', 'telan', 'telepon', 'terbang', 'tiup', 'tukar', 'tunda', 'undang',
 ]);
 
 const VOWELS = 'aiueo';
@@ -95,6 +99,16 @@ const PER_KAN: Record<string, string[]> = {
   boleh: ['perbolehkan', 'memperbolehkan'],
 };
 
+/** Lexicalized ke-(-an) forms — only real words get a row (kehujanan is
+ *  "caught in the rain", ketemu is colloquial "meet"). */
+const KE_FORMS: Record<string, string[]> = {
+  hujan: ['kehujanan'],
+  panas: ['kepanasan'],
+  dingin: ['kedinginan'],
+  temu: ['ketemu'],
+  tinggal: ['ketinggalan'],
+};
+
 export function conjugate(rootOrForm: string): ConjugationTable | null {
   if (!rootOrForm) return null;
   const w = rootOrForm.toLowerCase().trim();
@@ -113,6 +127,10 @@ export function conjugate(rootOrForm: string): ConjugationTable | null {
     '-i (Locative)': [root + 'i', meN + 'i', 'di' + root + 'i'],
   };
   if (PER_KAN[root]) tenses['per-…-kan (Causative)'] = PER_KAN[root];
+  if (KE_FORMS[root]) tenses['ke- (Lexicalized)'] = KE_FORMS[root];
+  // Reduplication is productive for iterative/leisurely meaning
+  // (jalan-jalan "stroll around", lihat-lihat "browse")
+  tenses['Reduplikasi (Iterative)'] = [`${root}-${root}`];
   return { infinitive: root, isReflexive: false, tenses };
 }
 
@@ -140,6 +158,10 @@ export function findInfinitive(form: string): string | null {
   if (!form) return null;
   const w = form.toLowerCase().trim();
   if (KNOWN_ROOTS.has(w)) return w;
+
+  // Reduplication: jalan-jalan → jalan
+  const redup = w.match(/^([a-z]+)-\1$/);
+  if (redup && KNOWN_ROOTS.has(redup[1])) return redup[1];
 
   // Suffix variants of the bare form and of each prefix-stripped candidate
   const bases = [w];

@@ -1,0 +1,168 @@
+[
+  {
+    "id": "id-0634",
+    "rating": 5,
+    "issue": "'balasan pesan dari dia' stacks two nouns awkwardly — natives say 'balasan darinya' or 'balasan pesannya', not 'a reply-of-message from him'; 'dari dia' after formal 'sedang menunggu' also mixes registers.",
+    "fix": {
+      "target": "Saya sedang menunggu balasan darinya.",
+      "english": "I am waiting for a reply from him.",
+      "grammar": null
+    },
+    "newTokens": {
+      "darinya": { "en": "from him/her (dari + -nya)", "ipa": "daˈriɲa", "pos": "prep" }
+    }
+  },
+  {
+    "id": "id-0637",
+    "rating": 5,
+    "issue": "'berjanji datang' clips the complement — a promise about a future act takes 'akan': 'berjanji akan datang'. Bare 'berjanji datang' reads as truncated textbook prose.",
+    "fix": {
+      "target": "Dia berjanji akan datang, tapi tidak muncul.",
+      "english": "He promised he would come, but did not show up.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0638",
+    "rating": 5,
+    "issue": "'Telepon dari kantor itu' parses most naturally as 'the call from that office', and the present-tense gloss is odd for a phone call. Natives anchor it in time: 'telepon dari kantor tadi'.",
+    "fix": {
+      "target": "Telepon dari kantor tadi penting sekali.",
+      "english": "That call from the office earlier was very important.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0648",
+    "rating": 5,
+    "issue": "Register: 'ponsel' is the written-media word — across a table everyone says 'HP' (ha-pe). 'meminjam telepon teman' doubles down with dated 'telepon' for a handset. Q2 should model the spoken word.",
+    "fix": {
+      "target": "HP saya mati, jadi saya pinjam HP teman.",
+      "english": "My phone died, so I borrowed a friend's phone.",
+      "grammar": "HP (say: ha-pe) is the spoken word for phone: HP saya mati = my phone died."
+    },
+    "newTokens": {
+      "hp": { "en": "cell phone (spoken; pronounced ha-pe)", "ipa": "haˈpe", "pos": "n" }
+    }
+  },
+  {
+    "id": "id-0649",
+    "rating": 5,
+    "issue": "Register clash: formal 'bertemu' inside a casual meetup arrangement closed with 'ya'. When fixing a meeting spot with a friend, the universal spoken verb is 'ketemu'.",
+    "fix": {
+      "target": "Kita ketemu di depan pintu masuk mal, ya.",
+      "english": "We will meet in front of the mall entrance, okay.",
+      "grammar": "ketemu is the spoken form of bertemu: kita ketemu jam lima = we meet at five."
+    }
+  },
+  {
+    "id": "id-0667",
+    "rating": 5,
+    "issue": "Gloss mismatch: 'tidak menyala' = 'is not on' (a state), but the gloss says 'does not turn on'. For a light that refuses to come on, natives say 'tidak mau menyala' or just 'mati'.",
+    "fix": {
+      "target": "Lampu di kamar mandi tidak mau menyala.",
+      "english": "The light in the bathroom will not turn on.",
+      "grammar": "tidak mau + verb for things = won't: lampunya tidak mau menyala = it won't turn on."
+    }
+  },
+  {
+    "id": "id-0674",
+    "rating": 5,
+    "issue": "'hilang satu' is countable-English phrasing — for one of a pair (socks, shoes, gloves) the idiom is 'hilang sebelah'.",
+    "fix": {
+      "target": "Kaus kaki saya hilang sebelah di kamar.",
+      "english": "One of my socks is missing in the room.",
+      "grammar": "sebelah = one of a pair: hilang sebelah = one of the two is missing."
+    }
+  },
+  {
+    "id": "id-0678",
+    "rating": 5,
+    "issue": "'mengecat pagar dengan warna hijau' is wordy report-style phrasing ('with the color green'); spoken Indonesian attaches the color directly: 'mengecat pagar warna hijau' or 'mengecat pagar hijau'.",
+    "fix": {
+      "target": "Ayah sedang mengecat pagar warna hijau.",
+      "english": "Dad is painting the fence green.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0685",
+    "rating": 5,
+    "issue": "Calque of 'bed sheets': 'seprai tempat tidur' is redundant — 'seprai' already means bed sheet and never takes 'tempat tidur' after it.",
+    "fix": {
+      "target": "Dia mengganti seprai setiap minggu.",
+      "english": "She changes the sheets every week.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0693",
+    "rating": 4,
+    "issue": "'terlihat bagus untuk kamu' is a word-for-word calque of 'looks good on/for you'. The Indonesian idiom for clothes suiting someone is 'cocok' (or colloquially 'bagus di kamu').",
+    "fix": {
+      "target": "Rok merah itu cocok sekali untuk kamu.",
+      "english": "That red skirt really suits you.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0708",
+    "rating": 5,
+    "issue": "'Kemarin kami tiba ... malam hari' is a roundabout calque of 'Yesterday we arrived at night' — the natural time phrase is simply 'kemarin malam' (last night).",
+    "fix": {
+      "target": "Kami tiba di Jakarta kemarin malam.",
+      "english": "We arrived in Jakarta last night.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0734",
+    "rating": 5,
+    "issue": "'di mana tempat terbaik?' calques 'where is the best place?' — 'terbaik' is written register, and natives ask 'di mana yang paling bagus?' instead of naming an abstract 'tempat'.",
+    "fix": {
+      "target": "Kalau mau tukar uang, di mana yang paling bagus?",
+      "english": "If I want to exchange money, where is the best place?",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0746",
+    "rating": 5,
+    "issue": "Gloss fidelity: bare 'rekan' reads as 'associate/partner', not 'colleague' — the everyday office word is 'rekan kerja'.",
+    "fix": {
+      "target": "Saya butuh rekan kerja yang bisa bantu proyek ini.",
+      "english": "I need a colleague who can help with this project.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0759",
+    "rating": 5,
+    "issue": "'saya kabari kamu segera' puts 'segera' in English sentence-final adverb position; natives front it onto the verb: 'saya langsung kabari kamu' / 'segera saya kabari'.",
+    "fix": {
+      "target": "Kalau rapat batal, saya langsung kabari kamu.",
+      "english": "If the meeting is cancelled, I'll let you know right away.",
+      "grammar": "-i makes a verb aim at someone: kabar (news) → kabari = let (someone) know."
+    }
+  },
+  {
+    "id": "id-0766",
+    "rating": 5,
+    "issue": "Collocation: emails are 'dibalas', not 'dijawab' — 'balas email' is the fixed pairing (cf. membalas for replying to messages); 'jawab email' is English 'answer emails' leaking through.",
+    "fix": {
+      "target": "Sebelum pulang, saya harus balas tiga email lagi.",
+      "english": "Before going home, I have to reply to three more emails.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0773",
+    "rating": 4,
+    "issue": "'bantu ... dengan tugas sekolahnya' is the English 'help with X' calque — 'membantu dengan' is not an Indonesian pattern; help + the action: 'bantu adik mengerjakan tugasnya'.",
+    "fix": {
+      "target": "Tolong bantu adik kamu mengerjakan tugas sekolahnya.",
+      "english": "Please help your little brother do his schoolwork.",
+      "grammar": null
+    }
+  }
+]

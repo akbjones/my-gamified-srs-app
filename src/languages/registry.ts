@@ -43,9 +43,11 @@ import { conjugate as conjRu, findInfinitive as findInfRu } from '../data/conjug
 import { lookupWord as lookupId } from '../data/dictionary/id';
 import { lookupWord as lookupEl } from '../data/dictionary/el';
 import { lookupWord as lookupKo } from '../data/dictionary/ko';
+import { lookupWord as lookupAr } from '../data/dictionary/ar';
 import { conjugate as conjId, findInfinitive as findInfId } from '../data/conjugation/id';
 import { conjugate as conjEl, findInfinitive as findInfEl } from '../data/conjugation/el';
 import { conjugate as conjKo, findInfinitive as findInfKo } from '../data/conjugation/ko';
+import { conjugate as conjAr, findInfinitive as findInfAr } from '../data/conjugation/ar';
 
 // ── Script descriptors ──────────────────────────────────────────
 
@@ -105,6 +107,19 @@ const hangul: ScriptDescriptor = {
   lowercase: (t) => t, // caseless script
   isWordChar: (c) => /[가-힣]/.test(c),
   combiningNotes: 'Noun particles attach to tokens; lookup strips them longest-first before dictionary match.',
+};
+
+/** Arabic: FIRST RTL SCRIPT — app-side integration is gated on the RTL
+ *  workstream (popover math, underline rendering, card layout all assume
+ *  LTR). Caseless; lookup folds alif variants and strips proclitics. */
+const arabic: ScriptDescriptor = {
+  direction: 'rtl',
+  tokenize: wsTokenize,
+  lowercase: (t) => t.replace(/[أإآ]/g, 'ا').replace(/ى/g, 'ي'), // orthographic fold, not case
+  isWordChar: (c) => /[ء-ي]/.test(c),
+  combiningNotes:
+    'No harakat on cards (deck policy) — pronunciation via per-card transliteration. ' +
+    'Proclitics و/ف/ب/ل/س/ال attach to the written word; lookup strips them.',
 };
 
 /** Devanagari: caseless; matra composition rules constrain suffixing. */
@@ -266,6 +281,15 @@ export const REGISTRY: Record<string, RegistryEntry> = {
     registerPolicy: {
       policyDoc: 'docs/korean-register-policy.md',
       offenderLexicon: 'docs/korean-register-offenders.json',
+    },
+  },
+  msa: {
+    key: 'msa', code: 'ar', deckPath: 'src/data/msa/deck.json',
+    lookup: lookupAr, conjugate: conjAr, findInfinitive: findInfAr,
+    script: arabic, voice: google('ar-XA', 'ar-XA-Chirp3-HD-Aoede'),
+    registerPolicy: {
+      policyDoc: 'docs/msa-register-policy.md',
+      offenderLexicon: 'docs/msa-register-offenders.json',
     },
   },
 };

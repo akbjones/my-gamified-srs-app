@@ -108,8 +108,8 @@ export const stopAudio = (): void => {
 //
 // Earlier note about Aoede struggling with non-Latin scripts was
 // addressed by Google; verified across all 10 languages.
-// 'greek'/'korean' are staged (registry + audits only) ahead of app-side Language integration
-const GOOGLE_VOICE_MAP: Record<Language | 'greek' | 'korean', { languageCode: string; name: string }> = {
+// 'greek'/'korean'/'msa' are staged (registry + audits only) ahead of app-side Language integration
+const GOOGLE_VOICE_MAP: Record<Language | 'greek' | 'korean' | 'msa', { languageCode: string; name: string }> = {
   spanish: { languageCode: 'es-US', name: 'es-US-Chirp3-HD-Aoede' },
   italian: { languageCode: 'it-IT', name: 'it-IT-Chirp3-HD-Aoede' },
   german:  { languageCode: 'de-DE', name: 'de-DE-Chirp3-HD-Aoede' },
@@ -124,6 +124,7 @@ const GOOGLE_VOICE_MAP: Record<Language | 'greek' | 'korean', { languageCode: st
   indonesian: { languageCode: 'id-ID', name: 'id-ID-Chirp3-HD-Aoede' },
   greek: { languageCode: 'el-GR', name: 'el-GR-Chirp3-HD-Aoede' },
   korean: { languageCode: 'ko-KR', name: 'ko-KR-Chirp3-HD-Aoede' },
+  msa: { languageCode: 'ar-XA', name: 'ar-XA-Chirp3-HD-Aoede' },
 };
 
 // Speed maps to Google TTS speakingRate (0.25–4.0, 1.0 = normal)

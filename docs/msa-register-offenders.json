@@ -1,0 +1,17 @@
+{
+  "language": "msa",
+  "policy": "docs/msa-register-policy.md",
+  "note": "Seed lexicon (Stage-1 scaffold). Two directions: hyper-classical vocabulary above modern standard usage, and dialect intrusions that belong in a dialect deck. Match on normalized orthography (alif-folded).",
+  "offenders": [
+    { "word": "أنّى", "severity": "high", "reason": "classical 'how/whence' — use كيف/من أين" },
+    { "word": "لعمري", "severity": "high", "reason": "classical oath — archaic" },
+    { "word": "إذ", "severity": "medium", "reason": "literary 'as/since' connective — prefer لأن/عندما in learner MSA" },
+    { "word": "حيثما", "severity": "medium", "reason": "literary 'wherever' — prefer أينما" },
+    { "word": "بدي", "severity": "high", "reason": "Levantine 'I want' — dialect intrusion; MSA is أريد" },
+    { "word": "عايز", "severity": "high", "reason": "Egyptian 'I want' — dialect intrusion" },
+    { "word": "مش", "severity": "high", "reason": "dialect negation — MSA is لا/ليس/ما" },
+    { "word": "هلق", "severity": "high", "reason": "Levantine 'now' — MSA is الآن" },
+    { "word": "دلوقتي", "severity": "high", "reason": "Egyptian 'now' — MSA is الآن" },
+    { "word": "ازيك", "severity": "high", "reason": "Egyptian greeting — MSA is كيف حالك" }
+  ]
+}

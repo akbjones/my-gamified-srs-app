@@ -42,8 +42,10 @@ import { conjugate as conjTr, findInfinitive as findInfTr } from '../data/conjug
 import { conjugate as conjRu, findInfinitive as findInfRu } from '../data/conjugation/ru';
 import { lookupWord as lookupId } from '../data/dictionary/id';
 import { lookupWord as lookupEl } from '../data/dictionary/el';
+import { lookupWord as lookupKo } from '../data/dictionary/ko';
 import { conjugate as conjId, findInfinitive as findInfId } from '../data/conjugation/id';
 import { conjugate as conjEl, findInfinitive as findInfEl } from '../data/conjugation/el';
+import { conjugate as conjKo, findInfinitive as findInfKo } from '../data/conjugation/ko';
 
 // ── Script descriptors ──────────────────────────────────────────
 
@@ -93,6 +95,16 @@ const greek: ScriptDescriptor = {
   lowercase: (t) => t.toLowerCase().replace(/ς/g, 'σ'),
   isWordChar: (c) => /[α-ωΑ-Ωάέήίόύώϊϋΐΰς]/.test(c),
   combiningNotes: 'Final sigma: ς word-finally, σ elsewhere — normalize to σ for lookups.',
+};
+
+/** Hangul: caseless; whitespace tokenize works but lookup must strip
+ *  noun particles (학교에서 → 학교) — handled inside the ko lookup. */
+const hangul: ScriptDescriptor = {
+  direction: 'ltr',
+  tokenize: wsTokenize,
+  lowercase: (t) => t, // caseless script
+  isWordChar: (c) => /[가-힣]/.test(c),
+  combiningNotes: 'Noun particles attach to tokens; lookup strips them longest-first before dictionary match.',
 };
 
 /** Devanagari: caseless; matra composition rules constrain suffixing. */
@@ -245,6 +257,15 @@ export const REGISTRY: Record<string, RegistryEntry> = {
     registerPolicy: {
       policyDoc: 'docs/greek-register-policy.md',
       offenderLexicon: 'docs/greek-register-offenders.json',
+    },
+  },
+  korean: {
+    key: 'korean', code: 'ko', deckPath: 'src/data/korean/deck.json',
+    lookup: lookupKo, conjugate: conjKo, findInfinitive: findInfKo,
+    script: hangul, voice: google('ko-KR', 'ko-KR-Chirp3-HD-Aoede'),
+    registerPolicy: {
+      policyDoc: 'docs/korean-register-policy.md',
+      offenderLexicon: 'docs/korean-register-offenders.json',
     },
   },
 };

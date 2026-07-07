@@ -1,0 +1,16 @@
+{
+  "language": "korean",
+  "policy": "docs/korean-register-policy.md",
+  "note": "Seed lexicon (Stage-1 scaffold). severity: high = fails Q1/Q2 gate; medium = review. The main register control for Korean is STRUCTURAL (sentence-final speech level) — see policy rule 1; this lexicon covers vocabulary-level offenders.",
+  "offenders": [
+    { "word": "당신", "severity": "high", "reason": "marked 'you' — real Korean uses name+씨 or omits; modeling it teaches a pragmatic error" },
+    { "word": "금일", "severity": "high", "reason": "officialese 'today' — use 오늘" },
+    { "word": "명일", "severity": "high", "reason": "officialese 'tomorrow' — use 내일" },
+    { "word": "본인", "severity": "medium", "reason": "formal 'oneself/I' — use 저" },
+    { "word": "귀하", "severity": "high", "reason": "epistolary 'you (esteemed)' — letters only" },
+    { "word": "하오니", "severity": "high", "reason": "archaic connective — officialese" },
+    { "word": "바랍니다", "severity": "medium", "reason": "announcement-speak 'we hope/please' — fine in Q3/Q4 signage contexts only" },
+    { "word": "야", "severity": "medium", "reason": "casual vocative — 반말 territory, Q4 tips only" },
+    { "word": "너", "severity": "medium", "reason": "casual 'you' — 반말; below Q4 use name+씨 or omit" }
+  ]
+}

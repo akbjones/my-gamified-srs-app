@@ -20,6 +20,7 @@ a different script or voice.
 | **Welsh**   | `cy-GB-NiaNeural`                  | **Azure / Edge TTS** | `regen-welsh-inconsistent.py` |
 | Indonesian  | `id-ID-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=id --voice=id-ID-Chirp3-HD-Aoede` (staged) |
 | Greek       | `el-GR-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=el --voice=el-GR-Chirp3-HD-Aoede` (staged) |
+| Korean      | `ko-KR-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=ko --voice=ko-KR-Chirp3-HD-Aoede` (staged) |
 
 All voices are **female**. As of 2026-06-28 we migrated 10 non-Welsh
 languages from Neural2/Wavenet to `Chirp3-HD-Aoede` for substantially

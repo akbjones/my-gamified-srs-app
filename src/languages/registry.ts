@@ -215,7 +215,6 @@ export const REGISTRY: Record<string, RegistryEntry> = {
       offenderLexicon: 'docs/russian-register-offenders.json',
     },
   },
-  // ── Staged (Stage-1 scaffold; not yet in the app UI) ──────────
   indonesian: {
     key: 'indonesian', code: 'id', deckPath: 'src/data/indonesian/deck.json',
     lookup: lookupId, conjugate: conjId, findInfinitive: findInfId,

@@ -31,7 +31,9 @@
  */
 
 export interface ConjugationTable {
-  verb: string;
+  /** The root — Indonesian's equivalent of the dictionary form. */
+  infinitive: string;
+  isReflexive: boolean; // no reflexive category in Indonesian; always false
   tenses: Record<string, string[]>;
 }
 
@@ -111,7 +113,7 @@ export function conjugate(rootOrForm: string): ConjugationTable | null {
     '-i (Locative)': [root + 'i', meN + 'i', 'di' + root + 'i'],
   };
   if (PER_KAN[root]) tenses['per-…-kan (Causative)'] = PER_KAN[root];
-  return { verb: root, tenses };
+  return { infinitive: root, isReflexive: false, tenses };
 }
 
 // ── findInfinitive: derived form → root ─────────────────────────

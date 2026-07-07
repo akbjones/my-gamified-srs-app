@@ -10,7 +10,7 @@ import { findInfinitive } from '../conjugation/id';
 
 export interface DictEntry {
   en: string;
-  ipa?: string;
+  ipa: string;
   pos?: string;
   /** Root whose derivation table opens when this token is tapped. */
   lemma?: string;

@@ -80,6 +80,7 @@ import rawWelshDeck from './data/welsh/deck.json';
 import rawHindiDeck from './data/hindi/deck.json';
 import rawTurkishDeck from './data/turkish/deck.json';
 import rawRussianDeck from './data/russian/deck.json';
+import rawIndonesianDeck from './data/indonesian/deck.json';
 
 const DECK_MAP: Partial<Record<Language, any[]>> = {
   spanish: rawSpanishDeck,
@@ -93,6 +94,7 @@ const DECK_MAP: Partial<Record<Language, any[]>> = {
   hindi: rawHindiDeck,
   turkish: rawTurkishDeck,
   russian: rawRussianDeck,
+  indonesian: rawIndonesianDeck,
 };
 
 // Transform raw deck.json cards into QuestCards mapped to linear path nodes
@@ -184,6 +186,7 @@ const CHALLENGE_NAMES: Record<Language, string> = {
   hindi: 'Level',
   turkish: 'Level',
   russian: 'Level',
+  indonesian: 'Level',
 };
 
 // Find the current frontier node (first incomplete unlocked node)

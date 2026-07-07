@@ -55,6 +55,7 @@ const LANG_DEFAULTS = {
   hi: { voice: 'hi-IN-Neural2-A', prefix: 'hi', deckDir: 'hindi' },
   tr: { voice: 'tr-TR-Wavenet-A', prefix: 'tr', deckDir: 'turkish' },   // no Neural2 for Turkish
   ru: { voice: 'ru-RU-Wavenet-A', prefix: 'ru', deckDir: 'russian' },   // no Neural2 for Russian
+  id: { voice: 'id-ID-Chirp3-HD-Aoede', prefix: 'id', deckDir: 'indonesian' }, // canonical per CANONICAL-VOICES.md
 };
 const langConfig = LANG_DEFAULTS[lang];
 if (!langConfig) {

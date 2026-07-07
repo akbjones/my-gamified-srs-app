@@ -1,4 +1,4 @@
-export type Language = 'spanish' | 'italian' | 'german' | 'french' | 'portuguese' | 'dutch' | 'swedish' | 'welsh' | 'hindi' | 'turkish' | 'russian';
+export type Language = 'spanish' | 'italian' | 'german' | 'french' | 'portuguese' | 'dutch' | 'swedish' | 'welsh' | 'hindi' | 'turkish' | 'russian' | 'indonesian';
 export type LearningGoal = 'general' | 'travel' | 'work' | 'family';
 
 export interface QuestCard {
@@ -127,6 +127,7 @@ export const LANGUAGE_CONFIG: Record<Language, { name: string; code: string; bcp
   hindi: { name: 'Hindi', code: 'HI', bcp47: 'hi-IN' },
   turkish: { name: 'Turkish', code: 'TR', bcp47: 'tr-TR' },
   russian: { name: 'Russian', code: 'RU', bcp47: 'ru-RU' },
+  indonesian: { name: 'Indonesian', code: 'ID', bcp47: 'id-ID' },
 };
 
 export const GOAL_CONFIG: Record<LearningGoal, { name: string; description: string }> = {

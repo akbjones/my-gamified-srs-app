@@ -12,8 +12,7 @@
  * touches the registry.
  *
  * HONEST GAPS (surfaced, not hidden — the audit reports them):
- * - findInfinitive missing for: cy, de, es, fr, it, nl, pt
- * - register policy artifacts missing for all but hi, ru, tr
+ * - findInfinitive missing for: nl (agent in flight)
  */
 import type { ContractDictEntry, ScriptDescriptor, VoiceSpec } from '../types/language';
 
@@ -29,14 +28,14 @@ import { lookupWord as lookupHi } from '../data/dictionary/hi';
 import { lookupWord as lookupTr } from '../data/dictionary/tr';
 import { lookupWord as lookupRu } from '../data/dictionary/ru';
 
-import { conjugate as conjEs } from '../data/conjugation/es';
-import { conjugate as conjIt } from '../data/conjugation/it';
-import { conjugate as conjFr } from '../data/conjugation/fr';
-import { conjugate as conjPt } from '../data/conjugation/pt';
-import { conjugate as conjDe } from '../data/conjugation/de';
+import { conjugate as conjEs, findInfinitive as findInfEs } from '../data/conjugation/es';
+import { conjugate as conjIt, findInfinitive as findInfIt } from '../data/conjugation/it';
+import { conjugate as conjFr, findInfinitive as findInfFr } from '../data/conjugation/fr';
+import { conjugate as conjPt, findInfinitive as findInfPt } from '../data/conjugation/pt';
+import { conjugate as conjDe, findInfinitive as findInfDe } from '../data/conjugation/de';
 import { conjugate as conjNl } from '../data/conjugation/nl';
 import { conjugate as conjSv, findInfinitive as findInfSv } from '../data/conjugation/sv';
-import { conjugate as conjCy } from '../data/conjugation/cy';
+import { conjugate as conjCy, findInfinitive as findInfCy } from '../data/conjugation/cy';
 import { conjugateHindi as conjHi, findInfinitive as findInfHi } from '../data/conjugation/hi';
 import { conjugate as conjTr, findInfinitive as findInfTr } from '../data/conjugation/tr';
 import { conjugate as conjRu, findInfinitive as findInfRu } from '../data/conjugation/ru';
@@ -115,52 +114,76 @@ export interface RegistryEntry {
 export const REGISTRY: Record<string, RegistryEntry> = {
   spanish: {
     key: 'spanish', code: 'es', deckPath: 'src/data/spanish/deck.json',
-    lookup: lookupEs, conjugate: conjEs, findInfinitive: null,
+    lookup: lookupEs, conjugate: conjEs, findInfinitive: findInfEs,
     script: latin, voice: google('es-US', 'es-US-Chirp3-HD-Aoede'),
-    registerPolicy: { policyDoc: null, offenderLexicon: null },
+    registerPolicy: {
+      policyDoc: 'docs/spanish-register-policy.md',
+      offenderLexicon: 'docs/spanish-register-offenders.json',
+    },
   },
   italian: {
     key: 'italian', code: 'it', deckPath: 'src/data/italian/deck.json',
-    lookup: lookupIt, conjugate: conjIt, findInfinitive: null,
+    lookup: lookupIt, conjugate: conjIt, findInfinitive: findInfIt,
     script: latin, voice: google('it-IT', 'it-IT-Chirp3-HD-Aoede'),
-    registerPolicy: { policyDoc: null, offenderLexicon: null },
+    registerPolicy: {
+      policyDoc: 'docs/italian-register-policy.md',
+      offenderLexicon: 'docs/italian-register-offenders.json',
+    },
   },
   french: {
     key: 'french', code: 'fr', deckPath: 'src/data/french/deck.json',
-    lookup: lookupFr, conjugate: conjFr, findInfinitive: null,
+    lookup: lookupFr, conjugate: conjFr, findInfinitive: findInfFr,
     script: latin, voice: google('fr-FR', 'fr-FR-Chirp3-HD-Aoede'),
-    registerPolicy: { policyDoc: null, offenderLexicon: null },
+    registerPolicy: {
+      policyDoc: 'docs/french-register-policy.md',
+      offenderLexicon: 'docs/french-register-offenders.json',
+    },
   },
   portuguese: {
     key: 'portuguese', code: 'pt', deckPath: 'src/data/portuguese/deck.json',
-    lookup: lookupPt, conjugate: conjPt, findInfinitive: null,
+    lookup: lookupPt, conjugate: conjPt, findInfinitive: findInfPt,
     script: latin, voice: google('pt-BR', 'pt-BR-Chirp3-HD-Aoede'),
-    registerPolicy: { policyDoc: null, offenderLexicon: null },
+    registerPolicy: {
+      policyDoc: 'docs/portuguese-register-policy.md',
+      offenderLexicon: 'docs/portuguese-register-offenders.json',
+    },
   },
   german: {
     key: 'german', code: 'de', deckPath: 'src/data/german/deck.json',
-    lookup: lookupDe, conjugate: conjDe, findInfinitive: null,
+    lookup: lookupDe, conjugate: conjDe, findInfinitive: findInfDe,
     script: latin, voice: google('de-DE', 'de-DE-Chirp3-HD-Aoede'),
-    registerPolicy: { policyDoc: null, offenderLexicon: null },
+    registerPolicy: {
+      policyDoc: 'docs/german-register-policy.md',
+      offenderLexicon: 'docs/german-register-offenders.json',
+    },
   },
   dutch: {
     key: 'dutch', code: 'nl', deckPath: 'src/data/dutch/deck.json',
     lookup: lookupNl, conjugate: conjNl, findInfinitive: null,
     script: latin, voice: google('nl-NL', 'nl-NL-Chirp3-HD-Aoede'),
-    registerPolicy: { policyDoc: null, offenderLexicon: null },
+    registerPolicy: {
+      policyDoc: 'docs/dutch-register-policy.md',
+      offenderLexicon: 'docs/dutch-register-offenders.json',
+    },
   },
   swedish: {
     key: 'swedish', code: 'sv', deckPath: 'src/data/swedish/deck.json',
     lookup: lookupSv, conjugate: conjSv, findInfinitive: findInfSv,
     script: latin, voice: google('sv-SE', 'sv-SE-Chirp3-HD-Aoede'),
-    registerPolicy: { policyDoc: null, offenderLexicon: null },
+    registerPolicy: {
+      policyDoc: 'docs/swedish-register-policy.md',
+      offenderLexicon: 'docs/swedish-register-offenders.json',
+    },
   },
   welsh: {
     key: 'welsh', code: 'cy', deckPath: 'src/data/welsh/deck.json',
-    lookup: lookupCy, conjugate: conjCy, findInfinitive: null,
+    lookup: lookupCy, conjugate: conjCy, findInfinitive: findInfCy,
     script: latinWelsh,
     voice: { languageCode: 'cy-GB', name: 'cy-GB-NiaNeural', provider: 'edge-tts' },
-    registerPolicy: { policyDoc: null, offenderLexicon: null },
+    registerPolicy: {
+      policyDoc: 'docs/welsh-register-policy.md',
+      offenderLexicon: 'docs/welsh-register-offenders.json',
+    },
   },
   hindi: {
     key: 'hindi', code: 'hi', deckPath: 'src/data/hindi/deck.json',
@@ -176,7 +199,7 @@ export const REGISTRY: Record<string, RegistryEntry> = {
     lookup: lookupTr, conjugate: conjTr, findInfinitive: findInfTr,
     script: latinTurkish, voice: google('tr-TR', 'tr-TR-Chirp3-HD-Aoede'),
     registerPolicy: {
-      policyDoc: null, // gap: policy doc not yet written (lexicon exists)
+      policyDoc: 'docs/turkish-register-policy.md',
       offenderLexicon: 'docs/turkish-register-offenders.json',
     },
   },
@@ -185,7 +208,7 @@ export const REGISTRY: Record<string, RegistryEntry> = {
     lookup: lookupRu, conjugate: conjRu, findInfinitive: findInfRu,
     script: cyrillic, voice: google('ru-RU', 'ru-RU-Chirp3-HD-Aoede'),
     registerPolicy: {
-      policyDoc: null, // gap: policy doc not yet written (lexicon exists)
+      policyDoc: 'docs/russian-register-policy.md',
       offenderLexicon: 'docs/russian-register-offenders.json',
     },
   },

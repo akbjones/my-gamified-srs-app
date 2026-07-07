@@ -646,3 +646,249 @@ export function conjugate(infinitive: string): ConjugationTable | null {
     tenses: finalTenses,
   };
 }
+
+// ── Reverse lookup: conjugated form → infinitive ────────────
+// Built lazily on first call by running conjugate() over every verb the
+// engine already knows to be irregular (IRR overrides, contracted stems,
+// irregular participles, essere-auxiliary verbs). Every single-word form
+// in those tables maps back to its lemma, so "vado", "farò", "misi",
+// "andati" all route to the right table. For compound forms ("ho fatto",
+// "sono andati") only the participle is indexed — auxiliaries themselves
+// resolve via essere/avere, which are seeded first.
+let _reverse: Map<string, string> | null = null;
+
+function irregularReverse(): Map<string, string> {
+  if (_reverse) return _reverse;
+  _reverse = new Map<string, string>();
+  const seeds: string[] = ['essere', 'avere'];
+  for (const k of [
+    ...Object.keys(IRR),
+    ...Object.keys(CONTRACTED),
+    ...Object.keys(IRREGULAR_PARTICIPLES),
+    ...ESSERE_VERBS,
+  ]) {
+    if (!seeds.includes(k)) seeds.push(k);
+  }
+  for (const lemma of seeds) {
+    const table = conjugate(lemma);
+    if (!table) continue;
+    for (const forms of Object.values(table.tenses)) {
+      for (const form of forms) {
+        if (!form || form === '-') continue;
+        const words = form.split(' ');
+        // Compound tense: index the participle (last word) only.
+        const w = words[words.length - 1];
+        if (w && w !== '-' && !_reverse.has(w)) _reverse.set(w, lemma);
+      }
+    }
+  }
+  return _reverse;
+}
+
+// ── Known lemmas: adjudicate ambiguous conjugation classes ──
+// Endings like -o / -i / -e / -ono fit more than one class ("vendo" could
+// unwind to vendare/vendere/vendire). Candidates are checked against this
+// set first, so real verbs beat the mechanical default. Seeded from the
+// engine's own irregular tables plus common REGULAR -ere and non-isco -ire
+// verbs (the two classes that lose coin-flips to the -are default).
+const KNOWN_REGULARS = [
+  // Regular / compound -ere verbs not in the irregular tables
+  'vendere', 'credere', 'ricevere', 'ripetere', 'battere', 'temere',
+  'premere', 'godere', 'rendere', 'intendere', 'difendere', 'offendere',
+  'permettere', 'promettere', 'ammettere', 'smettere', 'trasmettere',
+  'commettere', 'sorprendere', 'apprendere', 'discutere', 'esprimere',
+  'insistere', 'assistere', 'resistere', 'consistere', 'includere',
+  'escludere', 'uccidere', 'descrivere', 'iscrivere', 'proteggere',
+  'correggere', 'distruggere', 'interrompere', 'nascondere', 'risolvere',
+  'svolgere', 'rivolgere', 'volgere', 'aggiungere', 'convincere',
+  'riconoscere', 'piovere', 'accorrere', 'soccorrere',
+  'ottenere', 'mantenere', 'sostenere', 'contenere', 'appartenere',
+  // Regular (non-isco) -ire verbs
+  'partire', 'sentire', 'dormire', 'seguire', 'proseguire', 'inseguire',
+  'servire', 'vestire', 'mentire', 'avvertire', 'convertire', 'divertire',
+  'investire', 'scoprire', 'ricoprire', 'bollire', 'cucire', 'riempire',
+  'udire', 'sfuggire', 'aggredire', 'condire', 'gradire', 'smarrire',
+  'marcire', 'arrossire', 'arrendere', 'sorgere',
+  'accorgere', 'porgere', 'scorgere', 'emergere', 'immergere', 'assumere',
+  'riassumere', 'presumere',
+];
+
+let _known: Set<string> | null = null;
+function knownLemmas(): Set<string> {
+  if (_known) return _known;
+  _known = new Set<string>([
+    ...Object.keys(IRR),
+    ...Object.keys(CONTRACTED),
+    ...Object.keys(IRREGULAR_PARTICIPLES),
+    ...ESSERE_VERBS,
+    ...ISCO_VERBS,
+    ...KNOWN_REGULARS,
+  ]);
+  return _known;
+}
+
+// ── Suffix-unwinding rules ──────────────────────────────────
+// Each rule strips a regular ending and proposes infinitive classes.
+// ORDER MATTERS: longer / more specific endings first, so "parlerai"
+// hits the future -erai rule before the preterite -ai rule, and
+// "finiscono" hits -iscono before -ono.
+type Cls = 'are' | 'ere' | 'ire';
+// weak: this rule's reading loses to a later rule's -are reading when no
+// known lemma matches (participle -uto/-ito vs -utare/-itare present:
+// "saluti" is salutare 2sg, not a participle of "salere").
+interface UnwindRule { suf: string; cls: Cls[]; min?: number; weak?: boolean }
+
+const AE: Cls[] = ['are', 'ere'];
+const AEI: Cls[] = ['are', 'ere', 'ire'];
+const EI: Cls[] = ['ere', 'ire'];
+
+const UNWIND_RULES: UnwindRule[] = [
+  // -isc- present & subjunctive (finiscono → finire)
+  { suf: 'iscono', cls: ['ire'] }, { suf: 'iscano', cls: ['ire'] },
+  { suf: 'isco', cls: ['ire'] }, { suf: 'isci', cls: ['ire'] },
+  { suf: 'isce', cls: ['ire'] }, { suf: 'isca', cls: ['ire'] },
+  // Conditional (parlerebbe → parlare, venderebbe → vendere)
+  { suf: 'erebbero', cls: AE }, { suf: 'erebbe', cls: AE },
+  { suf: 'eresti', cls: AE }, { suf: 'eremmo', cls: AE },
+  { suf: 'ereste', cls: AE }, { suf: 'erei', cls: AE },
+  { suf: 'irebbero', cls: ['ire'] }, { suf: 'irebbe', cls: ['ire'] },
+  { suf: 'iresti', cls: ['ire'] }, { suf: 'iremmo', cls: ['ire'] },
+  { suf: 'ireste', cls: ['ire'] }, { suf: 'irei', cls: ['ire'] },
+  // Future (parlerò → parlare — note the -er- stem shift for -are verbs)
+  { suf: 'eranno', cls: AE }, { suf: 'erete', cls: AE },
+  { suf: 'eremo', cls: AE }, { suf: 'erai', cls: AE },
+  { suf: 'erà', cls: AE }, { suf: 'erò', cls: AE },
+  { suf: 'iranno', cls: ['ire'] }, { suf: 'irete', cls: ['ire'] },
+  { suf: 'iremo', cls: ['ire'] }, { suf: 'irai', cls: ['ire'] },
+  { suf: 'irà', cls: ['ire'] }, { suf: 'irò', cls: ['ire'] },
+  // Imperfetto (parlava → parlare, vendeva → vendere, finiva → finire)
+  { suf: 'avamo', cls: ['are'] }, { suf: 'avate', cls: ['are'] },
+  { suf: 'avano', cls: ['are'] }, { suf: 'avo', cls: ['are'] },
+  { suf: 'avi', cls: ['are'] }, { suf: 'ava', cls: ['are'] },
+  { suf: 'evamo', cls: ['ere'] }, { suf: 'evate', cls: ['ere'] },
+  { suf: 'evano', cls: ['ere'] }, { suf: 'evo', cls: ['ere'] },
+  { suf: 'evi', cls: ['ere'] }, { suf: 'eva', cls: ['ere'] },
+  { suf: 'ivamo', cls: ['ire'] }, { suf: 'ivate', cls: ['ire'] },
+  { suf: 'ivano', cls: ['ire'] }, { suf: 'ivo', cls: ['ire'] },
+  { suf: 'ivi', cls: ['ire'] }, { suf: 'iva', cls: ['ire'] },
+  // Passato remoto (parlò → parlare, vendé → vendere, finì → finire)
+  { suf: 'arono', cls: ['are'] }, { suf: 'ammo', cls: ['are'] },
+  { suf: 'asti', cls: ['are'] }, { suf: 'aste', cls: ['are'] },
+  { suf: 'ai', cls: ['are'] }, { suf: 'ò', cls: ['are'] },
+  { suf: 'erono', cls: ['ere'] }, { suf: 'emmo', cls: ['ere'] },
+  { suf: 'esti', cls: ['ere'] }, { suf: 'este', cls: ['ere'] },
+  { suf: 'ei', cls: ['ere'], min: 3 }, { suf: 'é', cls: ['ere'] },
+  { suf: 'irono', cls: ['ire'] }, { suf: 'immo', cls: ['ire'] },
+  { suf: 'isti', cls: ['ire'] }, { suf: 'iste', cls: ['ire'] },
+  { suf: 'ii', cls: ['ire'] }, { suf: 'ì', cls: ['ire'] },
+  // Gerund (parlando → parlare, vendendo → vendere, partendo → partire)
+  { suf: 'ando', cls: ['are'] }, { suf: 'endo', cls: EI },
+  // Past participle + agreement (parlato/-a/-i/-e; venduto; finito).
+  // -ate/-ete/-ite double as voi-present and land on the same lemma.
+  { suf: 'ato', cls: ['are'] }, { suf: 'ata', cls: ['are'] },
+  { suf: 'ati', cls: ['are'] }, { suf: 'ate', cls: ['are'] },
+  { suf: 'uto', cls: ['ere'], weak: true }, { suf: 'uta', cls: ['ere'], weak: true },
+  { suf: 'uti', cls: ['ere'], weak: true }, { suf: 'ute', cls: ['ere'], weak: true },
+  { suf: 'ito', cls: ['ire'], weak: true }, { suf: 'ita', cls: ['ire'], weak: true },
+  { suf: 'iti', cls: ['ire'], weak: true }, { suf: 'ite', cls: ['ire'] },
+  { suf: 'ete', cls: ['ere'] },
+  // Present / subjunctive plurals
+  { suf: 'iamo', cls: AEI }, { suf: 'iate', cls: AEI },
+  { suf: 'ano', cls: AEI }, { suf: 'ono', cls: EI },
+  { suf: 'ino', cls: ['are'] },
+  // Present / subjunctive singulars — last, shortest
+  { suf: 'o', cls: AEI }, { suf: 'i', cls: AEI },
+  { suf: 'a', cls: AEI }, { suf: 'e', cls: EI },
+];
+
+/**
+ * Candidate lemmas for a stripped stem. When the stripped ending began
+ * with e/i, spelling-change verbs need restoring first:
+ *   cerch|i  → cercare  (-care/-gare wrote an h before e/i)
+ *   mang|erò → mangiare (-ciare/-giare dropped the i before e/i)
+ * Restored candidates go first for soft endings; the plain stem+class
+ * candidates follow in the rule's class order.
+ */
+function candidateLemmas(stemPart: string, classes: Cls[], softEnding: boolean): string[] {
+  const out: string[] = [];
+  const push = (c: string) => {
+    if (c.length >= 4 && !out.includes(c)) out.push(c);
+  };
+  if (softEnding && classes.includes('are')) {
+    if (/[cg]h$/.test(stemPart)) push(stemPart.slice(0, -1) + 'are');
+    else if (/[cg]$/.test(stemPart)) push(stemPart + 'iare');
+  }
+  for (const c of classes) push(stemPart + c);
+  return out;
+}
+
+export function findInfinitive(form: string): string | null {
+  if (!form) return null;
+  let fm = form.toLowerCase().trim();
+  if (!fm) return null;
+
+  // Elision: l'ho → ho, dev'essere → essere
+  const apo = fm.lastIndexOf('’') >= 0 ? fm.lastIndexOf('’') : fm.lastIndexOf("'");
+  if (apo >= 0 && apo < fm.length - 1) fm = fm.slice(apo + 1);
+
+  // Multi-word input ("ho fatto"): the verb payload is the last word.
+  const words = fm.split(/\s+/);
+  fm = words[words.length - 1];
+
+  // Irregular forms (vado, farò, misi, è, andati…) always win.
+  const reverse = irregularReverse();
+  const irr = reverse.get(fm);
+  if (irr) return irr;
+
+  // Already an infinitive (also reflexive -arsi/-ersi/-irsi).
+  if (fm.length >= 4 && /(?:are|ere|ire)$/.test(fm)) return fm;
+  if (fm.length >= 6 && /(?:arsi|ersi|irsi)$/.test(fm)) return fm;
+
+  // Apocopated infinitive (poter correre → potere, far vedere → fare).
+  if (fm.length >= 3 && /[aei]r$/.test(fm)) return fm + 'e';
+
+  // Clitic imperative (siediti → siedi → sedere, dimmi-style excluded).
+  // Conservative: only accept when the stripped remainder is itself a
+  // known irregular form, so "senti"/"capisci" fall through untouched.
+  for (const clitic of ['gli', 'mi', 'ti', 'si', 'ci', 'vi', 'lo', 'la', 'li', 'le', 'ne']) {
+    if (fm.length > clitic.length + 2 && fm.endsWith(clitic)) {
+      const stripped = reverse.get(fm.slice(0, -clitic.length));
+      if (stripped) return stripped;
+    }
+  }
+
+  // Gerunds of contracted-stem verbs (dicendo → dire, facendo → fare).
+  if (fm.endsWith('endo')) {
+    const GERUND_STEMS: Record<string, string> = {
+      fac: 'fare', dic: 'dire', bev: 'bere', pon: 'porre',
+      traduc: 'tradurre', tra: 'trarre',
+    };
+    const g = GERUND_STEMS[fm.slice(0, -4)];
+    if (g) return g;
+  }
+
+  // Regular suffix unwinding: collect candidates across matching rules
+  // (rule order = priority), then let known lemmas beat the default class.
+  const candidates: { c: string; weak: boolean }[] = [];
+  for (const rule of UNWIND_RULES) {
+    if (!fm.endsWith(rule.suf)) continue;
+    const stemPart = fm.slice(0, -rule.suf.length);
+    if (stemPart.length < (rule.min ?? 2)) continue;
+    const soft = /^[eièéì]/.test(rule.suf);
+    for (const c of candidateLemmas(stemPart, rule.cls, soft)) {
+      if (!candidates.some((x) => x.c === c)) {
+        candidates.push({ c, weak: rule.weak ?? false });
+      }
+    }
+  }
+  if (candidates.length === 0) return null;
+
+  const known = knownLemmas();
+  for (const { c } of candidates) {
+    if (known.has(c)) return c;
+  }
+  // No known verb matched: first candidate from a non-weak rule wins
+  // ("saluti" → salutare via the -i rule, not "salere" via -uti).
+  const strong = candidates.find((x) => !x.weak);
+  return (strong ?? candidates[0]).c;
+}

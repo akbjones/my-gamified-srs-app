@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "description": "Portuguese vocabulary register audit list. 'formal' = literary/EP-written item dead in Brazilian conversation; 'preferred' = what Brazilian speakers actually say. Deck targets Brazilian Portuguese: você/vocês default, o senhor/a senhora polite. Severity: 'high' = dead in BR speech, swap wherever it appears in conversational cards; 'medium' = written-leaning, swap in beginner content. See docs/portuguese-register-policy.md.",
+  "categories": {
+    "dead_in_speech": {
+      "policy": "swap-in-conversational-cards",
+      "rationale": "Literary and European-written morphology that Brazilian speech has abandoned.",
+      "entries": [
+        {
+          "formal": "vós (fazeis, ireis, vosso)",
+          "preferred": "vocês (fazem, vão, de vocês)",
+          "note": "Dead in all spoken Portuguese; survives in liturgy and archaic texts only.",
+          "severity": "high"
+        },
+        {
+          "formal": "mesoclisis (dir-lhe-ei, far-se-á)",
+          "preferred": "vou dizer (para ele) / vai ser feito",
+          "note": "Written-formal fossil; in Brazil it reads as parody of officialese.",
+          "severity": "high"
+        },
+        {
+          "formal": "synthetic pluperfect (falara, fizera)",
+          "preferred": "tinha falado / tinha feito",
+          "note": "Literary tense. Speech always uses tinha + participle. Fixed expressions (quem me dera) are exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "cujo / cuja",
+          "preferred": "(rephrase with que + possessive)",
+          "note": "«o homem cujo carro...» → «o homem que o carro dele...» or restructure. Alive in writing, dead in BR conversation.",
+          "severity": "high"
+        },
+        {
+          "formal": "todavia",
+          "preferred": "mas",
+          "note": "Essay/report connector; speech says mas or só que.",
+          "severity": "medium"
+        },
+        {
+          "formal": "a fim de",
+          "preferred": "para",
+          "note": "Bureaucratic purpose connector. The slang «a fim de» (= in the mood for: «tô a fim de pizza») is fully alive and unrelated — exempt.",
+          "severity": "medium"
+        }
+      ]
+    }
+  }
+}

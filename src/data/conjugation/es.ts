@@ -587,3 +587,150 @@ export function conjugate(infinitive: string): ConjugationTable | null {
     tenses: labeledTenses,
   };
 }
+
+// ── Reverse lookup: conjugated form → infinitive ─────────────
+// Built once at module init by running every verb with irregular data
+// (full irregulars, stem-changers, spelling-changers, irregular participles)
+// through conjugate() and indexing every produced word. This captures boot
+// forms (pienso→pensar, puedo→poder), accented preterites (estuvo→estar),
+// spelling shifts (busqué→buscar) and irregular participles (hecho→hacer)
+// without duplicating any data.
+const IRREGULAR_REVERSE = new Map<string, string>();
+{
+  const knownLemmas = [
+    ...Object.keys(IRREGULARS),
+    ...Object.keys(STEM_CHANGERS),
+    ...Object.keys(SPELLING_CHANGERS),
+    ...Object.keys(ES_IRREGULAR_PARTICIPLES),
+  ];
+  // Impersonal 'hay' is not produced by any person slot of haber's table.
+  IRREGULAR_REVERSE.set('hay', 'haber');
+  for (const lemma of knownLemmas) {
+    if (!IRREGULAR_REVERSE.has(lemma)) IRREGULAR_REVERSE.set(lemma, lemma);
+    const table = conjugate(lemma);
+    if (!table) continue;
+    for (const forms of Object.values(table.tenses)) {
+      for (const form of forms) {
+        if (!form || form === '-') continue;
+        // Split multi-word ("me levanto") and alternate ("hablara/hablase") forms
+        for (const piece of form.split(/[\s/]+/)) {
+          if (!piece || piece === '-') continue;
+          if (!IRREGULAR_REVERSE.has(piece)) IRREGULAR_REVERSE.set(piece, lemma);
+        }
+      }
+    }
+  }
+}
+
+// Ordered regular-suffix rules: strip the suffix, append the verb class.
+// Sorted longest-suffix-first at init so e.g. 'comió' hits -ió before -ó and
+// 'hablábamos' hits -ábamos before -amos. Ambiguous person endings shared
+// between classes (-e, -a, -emos, …) are safe because Spanish regular
+// conjugation is mechanically invertible: the guessed class reproduces the
+// original form in at least one tense of the guessed lemma's table.
+const REGULAR_SUFFIX_RULES: Array<[string, string]> = [
+  // Imperfect subjunctive (-ra/-se families)
+  ['áramos', 'ar'], ['ásemos', 'ar'], ['arais', 'ar'], ['aseis', 'ar'],
+  ['aras', 'ar'], ['ases', 'ar'], ['aran', 'ar'], ['asen', 'ar'],
+  ['ara', 'ar'], ['ase', 'ar'],
+  ['iéramos', 'er'], ['iésemos', 'er'], ['ierais', 'er'], ['ieseis', 'er'],
+  ['ieras', 'er'], ['ieses', 'er'], ['ieran', 'er'], ['iesen', 'er'],
+  ['iera', 'er'], ['iese', 'er'],
+  // Preterite
+  ['asteis', 'ar'], ['aste', 'ar'], ['aron', 'ar'], ['ó', 'ar'], ['é', 'ar'],
+  ['isteis', 'er'], ['iste', 'er'], ['ieron', 'er'], ['ió', 'er'], ['í', 'er'],
+  // Imperfect
+  ['ábamos', 'ar'], ['abais', 'ar'], ['aban', 'ar'], ['abas', 'ar'], ['aba', 'ar'],
+  ['íamos', 'er'], ['íais', 'er'], ['ían', 'er'], ['ías', 'er'], ['ía', 'er'],
+  // Participles & gerunds
+  ['ado', 'ar'], ['ando', 'ar'],
+  ['ido', 'er'], ['iendo', 'er'], ['yendo', 'er'],
+  // Present indicative / subjunctive / imperative person endings
+  ['amos', 'ar'], ['áis', 'ar'], ['an', 'ar'], ['as', 'ar'], ['ad', 'ar'],
+  ['emos', 'er'], ['éis', 'er'], ['en', 'er'], ['es', 'er'], ['ed', 'er'],
+  ['imos', 'ir'], ['ís', 'ir'], ['id', 'ir'],
+  ['o', 'ar'], ['a', 'ar'], ['e', 'er'],
+].sort((a, b) => b[0].length - a[0].length) as Array<[string, string]>;
+
+// Future / conditional endings: the remainder after stripping is the FULL
+// infinitive (hablaré → hablar), so these are checked before generic rules
+// and only fire when the remainder already ends in -ar/-er/-ir/-ír.
+const FUT_COND_ENDINGS = [
+  'íamos', 'emos', 'íais', 'éis', 'ías', 'ían', 'ía', 'án', 'ás', 'á', 'é',
+].sort((a, b) => b.length - a.length);
+
+// Enclitic pronouns that attach to infinitives, gerunds and affirmative
+// imperatives (verte, diciéndome, dámelo). Longest first.
+const CLITICS = [
+  'noslo', 'nosla', 'noslos', 'noslas',
+  'melo', 'mela', 'melos', 'melas',
+  'telo', 'tela', 'telos', 'telas',
+  'selo', 'sela', 'selos', 'selas',
+  'nos', 'les', 'los', 'las',
+  'me', 'te', 'se', 'le', 'lo', 'la', 'os',
+].sort((a, b) => b.length - a.length);
+
+function stripAccents(s: string): string {
+  return s.replace(/[áéíóú]/g, c => ('aeiou'['áéíóú'.indexOf(c)]));
+}
+
+/**
+ * Resolve a conjugated Spanish verb form back to an infinitive whose
+ * conjugation table (via conjugate()) contains the form.
+ * Returns null when the token cannot plausibly be a verb form.
+ */
+export function findInfinitive(form: string): string | null {
+  if (!form) return null;
+  const f = form.toLowerCase().replace(/[¿¡.,!?;:"""''()––]/g, '').trim();
+  if (!f) return null;
+
+  // 1. Known irregular / stem-changing / spelling-changing forms win.
+  const irr = IRREGULAR_REVERSE.get(f);
+  if (irr) return irr;
+
+  // 2. Already an infinitive (incl. reflexive -se): return as-is.
+  if (/(?:[aei]r|ír)(?:se)?$/.test(f) && f.length >= 3) return f;
+
+  // 3. Future / conditional: strip ending, remainder must be an infinitive.
+  for (const e of FUT_COND_ENDINGS) {
+    if (f.endsWith(e)) {
+      const rest = f.slice(0, -e.length);
+      if (rest.length >= 3 && /(?:[aei]r|ír)$/.test(rest)) return rest;
+    }
+  }
+
+  // 4. Enclitic pronouns on non-finite / imperative forms:
+  //    infinitive+clitic (verte → ver), gerund+clitic (diciéndome →
+  //    diciendo → decir), imperative+clitic (dámelo → da → dar).
+  for (const cl of CLITICS) {
+    if (f.endsWith(cl) && f.length > cl.length + 1) {
+      const rest = f.slice(0, -cl.length);
+      if (/(?:[aei]r|ír)$/.test(rest)) return rest;              // infinitive
+      const plain = stripAccents(rest);
+      if (/(?:ando|iendo|yendo)$/.test(plain)) {                  // gerund
+        const viaMap = IRREGULAR_REVERSE.get(plain);
+        if (viaMap) return viaMap;
+        if (plain.endsWith('ando')) return plain.slice(0, -4) + 'ar';
+        return plain.slice(0, -5) + 'er';
+      }
+      const viaMap = IRREGULAR_REVERSE.get(plain) ?? IRREGULAR_REVERSE.get(rest);
+      if (viaMap) return viaMap;                                  // imperative
+      // Nosotros imperative + nos drops the final -s (vámonos → vamos):
+      if (cl === 'nos' && plain.endsWith('mo')) {
+        const restored = IRREGULAR_REVERSE.get(plain + 's');
+        if (restored) return restored;
+        if (plain.endsWith('emo')) return plain.slice(0, -3) + 'ar';   // centrémonos → centrar
+        if (plain.endsWith('amo')) return plain.slice(0, -3) + 'er';   // subjunctive -amos of -er/-ir
+      }
+    }
+  }
+
+  // 5. Ordered regular-suffix unwinding.
+  for (const [suf, cls] of REGULAR_SUFFIX_RULES) {
+    if (f.endsWith(suf) && f.length > suf.length + 1) {
+      return f.slice(0, -suf.length) + cls;
+    }
+  }
+
+  return null;
+}

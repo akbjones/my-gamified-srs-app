@@ -891,6 +891,334 @@ export function conjugate(infinitive: string): ConjugationTable | null {
   };
 }
 
+// ── Reverse lookup: form → infinitive ────────────────────────
+// Built once at module init from the engine's own tables so that
+// tapping any conjugated form in a card routes to the right lemma.
+
+/** Gerund of an infinitive (not stored in the table, derived here) */
+function gerundOf(inf: string): string {
+  if (inf === 'pôr') return 'pondo';
+  if (inf.endsWith('por')) return inf.slice(0, -1) + 'ndo'; // compor → compondo
+  const vc = verbClass(inf);
+  const s = stem(inf);
+  if (vc === 'ar') return s + 'ando';
+  if (vc === 'er') return s + 'endo';
+  if (vc === 'ir') return s + 'indo';
+  return inf;
+}
+
+// Common REGULAR verbs used to disambiguate ambiguous person endings
+// (-a/-e/-o/-am/-em/... can belong to -ar, -er or -ir paradigms).
+// Verbs already present in IRREGULARS / SPELLING_RULES / STEM_CHANGERS /
+// EAR_VERBS do not need to be listed here.
+const KNOWN_REGULAR_VERBS = new Set([
+  // -er
+  'comer', 'beber', 'viver', 'escrever', 'aprender', 'entender', 'compreender',
+  'atender', 'pretender', 'vender', 'correr', 'morrer', 'responder', 'receber',
+  'dever', 'resolver', 'devolver', 'envolver', 'desenvolver', 'prometer',
+  'cometer', 'bater', 'sofrer', 'esconder', 'acender', 'defender', 'depender',
+  'surpreender', 'erguer', 'mexer', 'chover', 'romper', 'interromper',
+  'vencer', 'descer', 'nascer', 'aquecer', 'adoecer', 'estabelecer',
+  'permanecer', 'aparecer', 'desaparecer', 'falecer', 'favorecer',
+  'fortalecer', 'envelhecer', 'escolher', 'encher', 'colher', 'recolher',
+  'acolher', 'doer', 'prender', 'suceder', 'conceder', 'proceder', 'correr',
+  // -ir
+  'partir', 'decidir', 'dividir', 'assistir', 'existir', 'insistir',
+  'desistir', 'resistir', 'persistir', 'discutir', 'garantir', 'permitir',
+  'admitir', 'transmitir', 'emitir', 'omitir', 'imprimir', 'cumprir',
+  'curtir', 'unir', 'reunir', 'definir', 'surgir', 'atingir', 'fingir',
+  'agir', 'reagir', 'corrigir', 'proibir', 'contribuir', 'distribuir',
+  'atribuir', 'evoluir', 'diminuir', 'substituir', 'assumir', 'consumir',
+  'presumir', 'resumir', 'investir', 'aplaudir', 'expandir', 'refletir',
+  'adquirir', 'interferir', 'transferir', 'sorrir', 'confundir',
+  // -iar (present: anuncio/anuncia — the 'ia' ending is NOT imperfect here)
+  'anunciar', 'pronunciar', 'denunciar', 'copiar', 'negociar', 'premiar',
+  'adiar', 'confiar', 'desconfiar', 'variar', 'criar', 'guiar', 'enviar',
+  'avaliar', 'iniciar', 'financiar', 'apreciar', 'presenciar', 'associar',
+  'beneficiar', 'odiar',
+  // -ar (needed so subjunctive/imperative -e/-em forms resolve)
+  'falar', 'trabalhar', 'olhar', 'pensar', 'andar', 'morar', 'estudar',
+  'comprar', 'usar', 'tomar', 'deixar', 'esperar', 'precisar', 'gostar',
+  'ajudar', 'encontrar', 'lembrar', 'levar', 'chamar', 'visitar', 'passar',
+  'entrar', 'voltar', 'tentar', 'tirar', 'parar', 'mandar', 'mostrar',
+  'mudar', 'acabar', 'acordar', 'amar', 'assinar', 'avisar', 'cantar',
+  'casar', 'cozinhar', 'cuidar', 'descansar', 'desejar', 'ensinar',
+  'escutar', 'evitar', 'fechar', 'ganhar', 'guardar', 'jantar', 'lavar',
+  'ligar', 'limpar', 'melhorar', 'nadar', 'notar', 'organizar', 'participar',
+  'pegar', 'perguntar', 'preparar', 'procurar', 'provar', 'reclamar',
+  'reservar', 'respirar', 'sonhar', 'telefonar', 'terminar', 'tratar',
+  'treinar', 'trocar', 'viajar', 'virar', 'gritar', 'caminhar', 'cancelar',
+  'combinar', 'comemorar', 'completar', 'concordar', 'confirmar',
+  'considerar', 'contar', 'continuar', 'conversar', 'convidar', 'demorar',
+  'economizar', 'faltar', 'funcionar', 'imaginar', 'importar', 'informar',
+  'lutar', 'marcar', 'misturar', 'montar', 'observar', 'pintar', 'plantar',
+  'puxar', 'quebrar', 'realizar', 'recomendar', 'registrar', 'relaxar',
+  'renovar', 'respeitar', 'salvar', 'secar', 'segurar', 'separar',
+  'significar', 'soltar', 'superar', 'transformar', 'utilizar', 'verificar',
+  'voar', 'acreditar', 'aproveitar', 'apresentar', 'descobrir', 'aumentar',
+]);
+
+const KNOWN_VERBS = new Set<string>([
+  ...Object.keys(IRREGULARS),
+  ...Object.keys(SPELLING_RULES),
+  ...Object.keys(STEM_CHANGERS),
+  ...EAR_VERBS,
+  ...Object.keys(PT_IRREGULAR_PARTICIPLES),
+  ...KNOWN_REGULAR_VERBS,
+]);
+
+const IRREGULAR_REVERSE = new Map<string, string>();
+function addReverse(form: string, inf: string): void {
+  // Some slots hold alternatives ("vamos/vamo") — index each one.
+  for (const piece of form.split('/')) {
+    const p = piece.trim().toLowerCase();
+    if (!p || p === '-') continue;
+    if (!IRREGULAR_REVERSE.has(p)) IRREGULAR_REVERSE.set(p, inf);
+  }
+}
+
+// Build the reverse map. Order matters for shared forms (fui/foi/foram are
+// both ser and ir): first lemma wins, and IRREGULARS is ordered by frequency.
+(function buildReverseMap(): void {
+  const lemmas = [
+    ...Object.keys(IRREGULARS),
+    ...Object.keys(SPELLING_RULES),
+    ...Object.keys(STEM_CHANGERS),
+    ...EAR_VERBS,
+    ...Object.keys(PT_IRREGULAR_PARTICIPLES),
+  ];
+  const seen = new Set<string>();
+  for (const inf of lemmas) {
+    if (seen.has(inf)) continue;
+    seen.add(inf);
+    addReverse(inf, inf);
+    const table = conjugate(inf);
+    if (table) {
+      for (const forms of Object.values(table.tenses)) {
+        for (const form of forms) addReverse(form, inf);
+      }
+      // Imperfect + future subjunctive derive from the preterite 3pl stem
+      // (tiveram → tivesse/tiver, fizeram → fizesse/fizer, foram → fosse/for)
+      const pret3pl = table.tenses[TENSE_LABELS.preterite]?.[5];
+      if (pret3pl && pret3pl.endsWith('ram')) {
+        const base = pret3pl.slice(0, -3); // tiveram → tive
+        for (const s of ['sse', 'sses', 'ssem']) addReverse(base + s, inf);
+        for (const s of ['r', 'res', 'rmos', 'rem']) addReverse(base + s, inf);
+      }
+    }
+    // Gerund + inflected participles are not table rows — derive them.
+    addReverse(gerundOf(inf), inf);
+    const pp = ptPastParticiple(inf);
+    if (pp.endsWith('o')) {
+      addReverse(pp, inf);
+      addReverse(pp + 's', inf);
+      addReverse(pp.slice(0, -1) + 'a', inf);
+      addReverse(pp.slice(0, -1) + 'as', inf);
+    }
+  }
+  // Colloquial spoken-BR reductions of estar
+  // ('tão' is deliberately excluded — it is almost always the adverb "so")
+  for (const c of ['tô', 'tá', 'tamos', 'tava', 'tavam']) {
+    if (!IRREGULAR_REVERSE.has(c)) IRREGULAR_REVERSE.set(c, 'estar');
+  }
+})();
+
+/**
+ * Rebuild an -ar infinitive from a stem that appeared before 'e'
+ * (preterite eu / subjunctive): orthography reverses there.
+ *   fiqu(ei) → ficar, chegu(e) → chegar, comec(ei) → começar
+ */
+function arCandidate(s: string): string {
+  if (s.endsWith('qu')) return s.slice(0, -2) + 'car';
+  if (s.endsWith('gu')) return s.slice(0, -2) + 'gar';
+  if (s.endsWith('c')) return s.slice(0, -1) + 'çar';
+  return s + 'ar';
+}
+
+/** Reverse a/o-context orthography for -er/-ir candidates (conheç → conhec) */
+function erIrStems(s: string): string[] {
+  const out = [s];
+  if (s.endsWith('ç')) out.push(s.slice(0, -1) + 'c');
+  if (s.endsWith('j')) out.push(s.slice(0, -1) + 'g');
+  if (s.endsWith('g')) out.push(s + 'u');
+  return out;
+}
+
+/** First candidate present in KNOWN_VERBS, else the given default */
+function pickKnown(candidates: string[], fallback: string): string {
+  for (const c of candidates) {
+    if (KNOWN_VERBS.has(c)) return c;
+  }
+  return fallback;
+}
+
+/** Candidates for endings shared by -ar / -er / -ir paradigms */
+function ambiguous(s: string, order: ('ar' | 'er' | 'ir')[], fallback: string): string {
+  const cands: string[] = [];
+  for (const cls of order) {
+    if (cls === 'ar') {
+      cands.push(s + 'ar');
+    } else {
+      for (const st of erIrStems(s)) cands.push(st + cls);
+    }
+  }
+  return pickKnown(cands, fallback);
+}
+
+/**
+ * Resolve a conjugated Portuguese form to its infinitive.
+ * Irregular forms hit the precomputed reverse map; regular forms are
+ * unwound with ordered suffix rules (longest / most specific first).
+ * Returns null only for empty input — a best-guess lemma is always
+ * preferable to nothing for unknown verb-looking tokens.
+ */
+export function findInfinitive(form: string): string | null {
+  if (!form) return null;
+  let f = form.toLowerCase().trim();
+  if (!f) return null;
+
+  const direct = IRREGULAR_REVERSE.get(f);
+  if (direct) return direct;
+
+  // Multi-word forms ("se levanta", "vai falar"): resolve the main verb.
+  if (f.includes(' ')) {
+    const CLITIC_WORDS = new Set(['se', 'me', 'te', 'nos', 'vos', 'lhe', 'lhes', 'não', 'o', 'a', 'os', 'as']);
+    const words = f.split(/\s+/).filter(w => !CLITIC_WORDS.has(w));
+    if (words.length === 0) return null;
+    return findInfinitive(words[words.length - 1]);
+  }
+
+  // Clitic-attached forms: levanta-se, buscá-lo, vendê-la, ouvi-lo,
+  // mesoclisis (far-se-á), and -mos+nos elision (reservamo-nos)
+  if (f.includes('-')) {
+    const parts = f.split('-');
+    const CLITICS_SET = new Set(['se', 'me', 'te', 'nos', 'vos', 'lhe', 'lhes',
+      'o', 'a', 'os', 'as', 'lo', 'la', 'los', 'las', 'no', 'na', 'nas']);
+    // Mesoclisis: far-se-á → fará, dir-me-ia → diria
+    if (parts.length === 3 && CLITICS_SET.has(parts[1])) {
+      return findInfinitive(parts[0] + parts[2]);
+    }
+    let base = parts[0];
+    // Nós form drops its -s before the clitic "nos": reservamo-nos → reservamos
+    if (parts[1] === 'nos' && base.endsWith('mo')) base += 's';
+    const deacc = base.replace(/á$/, 'a').replace(/ê$/, 'e').replace(/ô$/, 'o');
+    const hit = IRREGULAR_REVERSE.get(base) ?? IRREGULAR_REVERSE.get(deacc + 'r');
+    if (hit) return hit;
+    // Stressed final vowel = truncated infinitive (buscá-lo → buscar)
+    if (/[áêô]$/.test(base)) return deacc + 'r';
+    if (/[ai]$/.test(base) && IRREGULAR_REVERSE.get(base + 'r')) return IRREGULAR_REVERSE.get(base + 'r')!;
+    f = base;
+    const hit2 = IRREGULAR_REVERSE.get(f);
+    if (hit2) return hit2;
+  }
+
+  // Already an infinitive (falar, comer, partir)
+  if (/(ar|er|ir)$/.test(f) && f.length >= 4) return f;
+
+  // Personal infinitive / future subjunctive of regulars:
+  // falarmos → falar, comerem → comer, partires → partir
+  let m = f.match(/^(.{2,}[aei]r)(mos|em|es|des)$/);
+  if (m) return m[1];
+
+  // Gerunds (unambiguous: -ando/-endo/-indo map 1:1 to class)
+  if (f.endsWith('ando') && f.length >= 6) return f.slice(0, -4) + 'ar';
+  if (f.endsWith('endo') && f.length >= 6) return f.slice(0, -4) + 'er';
+  if (f.endsWith('indo') && f.length >= 6) return f.slice(0, -4) + 'ir';
+
+  // Participles (incl. feminine/plural agreement)
+  m = f.match(/^(.{2,})ad[oa]s?$/);
+  if (m) return m[1] + 'ar';
+  m = f.match(/^(.{2,})id[oa]s?$/);
+  if (m) return ambiguous(m[1], ['er', 'ir'], m[1] + 'er');
+
+  // Future / conditional: the stem IS the infinitive (falarei → falar,
+  // comeria → comer, abriria → abrir, comporá → compor)
+  m = f.match(/^(.{2,}[aeio]r)(ei|ás|á|emos|eis|ão)$/);
+  if (m) return m[1];
+  m = f.match(/^(.{2,}[aeio]r)(ia|ias|íamos|íeis|iam)$/);
+  if (m) return m[1];
+
+  // Imperfect -ar (unambiguous)
+  m = f.match(/^(.{2,})(ávamos|áveis|avas|avam|ava)$/);
+  if (m) return m[1] + 'ar';
+
+  // Imperfect -er/-ir — also matches -iar presents (anuncia → anunciar),
+  // so try the -iar reading against known verbs first.
+  m = f.match(/^(.{2,})(íamos|íeis|ias|iam|ia)$/);
+  if (m) {
+    const s = m[1];
+    return pickKnown([s + 'iar', s + 'er', s + 'ir'], s + 'er');
+  }
+
+  // Preterite (mostly unambiguous)
+  if (f.endsWith('aram') && f.length >= 6) return f.slice(0, -4) + 'ar';
+  if (f.endsWith('eram') && f.length >= 6) return f.slice(0, -4) + 'er';
+  if (f.endsWith('iram') && f.length >= 6) return f.slice(0, -4) + 'ir';
+  if (f.endsWith('astes') && f.length >= 7) return f.slice(0, -5) + 'ar';
+  if (f.endsWith('estes') && f.length >= 7) return f.slice(0, -5) + 'er';
+  if (f.endsWith('istes') && f.length >= 7) return f.slice(0, -5) + 'ir';
+  if (f.endsWith('aste') && f.length >= 6) return f.slice(0, -4) + 'ar';
+  if (f.endsWith('este') && f.length >= 6) return f.slice(0, -4) + 'er';
+  if (f.endsWith('iste') && f.length >= 6) return f.slice(0, -4) + 'ir';
+  if (f.endsWith('ou') && f.length >= 4) return f.slice(0, -2) + 'ar';
+  if (f.endsWith('ei') && f.length >= 4) return arCandidate(f.slice(0, -2));
+  if (f.endsWith('eu') && f.length >= 4) return f.slice(0, -2) + 'er';
+  if (f.endsWith('iu') && f.length >= 4) return f.slice(0, -2) + 'ir';
+
+  // Imperfect subjunctive (class-specific theme vowel)
+  m = f.match(/^(.{2,})(ássemos|asses|assem|asse)$/);
+  if (m) return m[1] + 'ar';
+  m = f.match(/^(.{2,})(êssemos|esses|essem|esse)$/);
+  if (m) return m[1] + 'er';
+  m = f.match(/^(.{2,})(íssemos|isses|issem|isse)$/);
+  if (m) return m[1] + 'ir';
+
+  // Unknown -ear verbs in the present (passeia-pattern)
+  m = f.match(/^(.{2,})ei([oa]s?|am)$/);
+  if (m && KNOWN_VERBS.has(m[1] + 'ear')) return m[1] + 'ear';
+
+  // Person endings shared across classes — resolve via known-verb set,
+  // then fall back to the statistically likeliest class.
+  if (f.endsWith('amos') && f.length >= 6) {
+    return ambiguous(f.slice(0, -4), ['ar', 'er', 'ir'], f.slice(0, -4) + 'ar');
+  }
+  if (f.endsWith('emos') && f.length >= 6) {
+    const s = f.slice(0, -4);
+    return pickKnown([s + 'er', arCandidate(s), ...erIrStems(s).map(st => st + 'ir')], s + 'er');
+  }
+  if (f.endsWith('imos') && f.length >= 6) return f.slice(0, -4) + 'ir';
+  if (f.endsWith('am') && f.length >= 4) {
+    return ambiguous(f.slice(0, -2), ['ar', 'er', 'ir'], f.slice(0, -2) + 'ar');
+  }
+  if (f.endsWith('em') && f.length >= 4) {
+    const s = f.slice(0, -2);
+    return pickKnown([s + 'er', s + 'ir', arCandidate(s)], s + 'er');
+  }
+  if (f.endsWith('es') && f.length >= 4) {
+    const s = f.slice(0, -2);
+    return pickKnown([s + 'er', s + 'ir', arCandidate(s)], s + 'er');
+  }
+  if (f.endsWith('as') && f.length >= 4) {
+    return ambiguous(f.slice(0, -2), ['ar', 'er', 'ir'], f.slice(0, -2) + 'ar');
+  }
+  if (f.endsWith('i') && f.length >= 4) {
+    const s = f.slice(0, -1);
+    return pickKnown([s + 'er', s + 'ir'], s + 'ir');
+  }
+  if (f.endsWith('o') && f.length >= 3) {
+    return ambiguous(f.slice(0, -1), ['ar', 'er', 'ir'], f.slice(0, -1) + 'ar');
+  }
+  if (f.endsWith('a') && f.length >= 3) {
+    return ambiguous(f.slice(0, -1), ['ar', 'er', 'ir'], f.slice(0, -1) + 'ar');
+  }
+  if (f.endsWith('e') && f.length >= 3) {
+    const s = f.slice(0, -1);
+    return pickKnown([s + 'er', s + 'ir', arCandidate(s)], s + 'er');
+  }
+
+  return null;
+}
+
 /** Prepend reflexive pronouns to all forms */
 function applyReflexive(
   tenses: Record<TenseKey, Forms>,

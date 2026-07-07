@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "description": "Swedish vocabulary register audit list. 'formal' = kanslisvenska/literary item dead in conversation; 'preferred' = what Swedish speakers actually say. Deck uses universal du (du-reformen); Ni as polite singular is a register error. Severity: 'high' = dead in speech, swap wherever it appears in conversational cards; 'medium' = written-leaning, swap in beginner content. See docs/swedish-register-policy.md.",
+  "categories": {
+    "dead_in_speech": {
+      "policy": "swap-in-conversational-cards",
+      "rationale": "Kanslisvenska and literary forms that never occur in modern conversation.",
+      "entries": [
+        {
+          "formal": "ej / icke",
+          "preferred": "inte",
+          "note": "Sign and legal negation («Ej i trafik»). Quoting signage is exempt; dialogue is always inte. icke- as a prefix (icke-rökare) is standard — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "erhålla",
+          "preferred": "få",
+          "note": "Kanslisvenska 'receive'; speech says få.",
+          "severity": "high"
+        },
+        {
+          "formal": "ty",
+          "preferred": "för / eftersom",
+          "note": "Archaic 'because'; survives only in hymns, old prose, and irony.",
+          "severity": "high"
+        },
+        {
+          "formal": "således",
+          "preferred": "alltså / så",
+          "note": "Report/academic connector; speech says alltså or så.",
+          "severity": "medium"
+        },
+        {
+          "formal": "medelst",
+          "preferred": "med",
+          "note": "Bureaucratic 'by means of'; jocular use is intentional register play.",
+          "severity": "high"
+        },
+        {
+          "formal": "Ni (polite singular address)",
+          "preferred": "du",
+          "note": "Post du-reformen, du is universal address. ni as genuine plural ('you all') is standard — exempt.",
+          "severity": "high"
+        }
+      ]
+    }
+  }
+}

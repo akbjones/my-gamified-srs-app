@@ -37,11 +37,14 @@ const TENSE_LABELS: Record<TenseKey, string> = {
 function isSecondConjugation(infinitive: string): boolean {
   // 2nd conjugation: most -ить verbs
   if (infinitive.endsWith('ить') || infinitive.endsWith('иться')) return true;
+  // -оять verbs (стоять, бояться) are 2nd conjugation: стою/стоишь, боюсь/боишься
+  if (infinitive.endsWith('оять') || infinitive.endsWith('ояться')) return true;
   // Some -еть and -ать verbs are 2nd conjugation (exceptions)
   const secondConjExceptions = new Set([
     'смотреть', 'видеть', 'ненавидеть', 'зависеть', 'терпеть',
     'вертеть', 'обидеть', 'сидеть', 'лететь', 'гореть',
-    'слышать', 'дышать', 'держать', 'гнать',
+    'слышать', 'дышать', 'держать', 'гнать', 'лежать', 'висеть',
+    'спать', 'стучать', 'молчать', 'кричать', 'звучать', 'бояться',
   ]);
   return secondConjExceptions.has(infinitive.replace('ся', ''));
 }
@@ -76,7 +79,8 @@ interface IrregularData {
 const IRREGULARS: Record<string, IrregularData> = {
   'быть': {
     present: ['–', '–', 'есть', '–', '–', '–'],  // rarely conjugated in present
-    past: ['был', 'был/была', 'был/была', 'были', 'были', 'были'],
+    past: ['был', 'был/была', 'был/была/было', 'были', 'были', 'были'],
+    imperative: ['будь', 'будьте'],
     isPerfective: false,
   },
   'есть': {  // to eat
@@ -122,6 +126,34 @@ const IRREGULARS: Record<string, IrregularData> = {
   'пить': {
     present: ['пью', 'пьёшь', 'пьёт', 'пьём', 'пьёте', 'пьют'],
     imperative: ['пей', 'пейте'],
+  },
+  'петь': {
+    present: ['пою', 'поёшь', 'поёт', 'поём', 'поёте', 'поют'],
+    imperative: ['пой', 'пойте'],
+  },
+  'звать': {
+    present: ['зову', 'зовёшь', 'зовёт', 'зовём', 'зовёте', 'зовут'],
+    past: ['звал', 'звал/звала', 'звал/звала/звало', 'звали', 'звали', 'звали'],
+    imperative: ['зови', 'зовите'],
+  },
+  'вести': {
+    present: ['веду', 'ведёшь', 'ведёт', 'ведём', 'ведёте', 'ведут'],
+    past: ['вёл', 'вёл/вела', 'вёл/вела/вело', 'вели', 'вели', 'вели'],
+    imperative: ['веди', 'ведите'],
+  },
+  'ждать': {
+    present: ['жду', 'ждёшь', 'ждёт', 'ждём', 'ждёте', 'ждут'],
+    imperative: ['жди', 'ждите'],
+  },
+  'ходить': {
+    present: ['хожу', 'ходишь', 'ходит', 'ходим', 'ходите', 'ходят'],
+    imperative: ['ходи', 'ходите'],
+  },
+  'найти': {
+    present: ['найду', 'найдёшь', 'найдёт', 'найдём', 'найдёте', 'найдут'],
+    past: ['нашёл', 'нашёл/нашла', 'нашёл/нашла/нашло', 'нашли', 'нашли', 'нашли'],
+    imperative: ['найди', 'найдите'],
+    isPerfective: true,
   },
   'писать': {
     present: ['пишу', 'пишешь', 'пишет', 'пишем', 'пишете', 'пишут'],
@@ -238,11 +270,23 @@ function conjugatePresent(stem: string, infinitive: string): Forms {
 
   if (is2nd) {
     // 2nd conjugation: -у/-ю, -ишь, -ит, -им, -ите, -ат/-ят
-    const s = stem.endsWith('и') ? stem.slice(0, -1) : stem;
-    // Consonant mutation in 1st person for some verbs
+    // Thematic vowel drops: люби → люб, стоя → сто, смотре → смотр, лежа → леж
+    const s = /[иеяа]$/.test(stem) ? stem.slice(0, -1) : stem;
+    // Spelling rule after hushers (ж/ч/ш/щ): ю→у, я→а (учу/учат, not учю/учят).
+    // 1sg consonant mutation (вижу, люблю) still needs an IRREGULARS entry.
+    const husher = /[жчшщ]$/.test(s);
     forms = [
-      `${s}ю`, `${s}ишь`, `${s}ит`,
-      `${s}им`, `${s}ите`, `${s}ят`,
+      `${s}${husher ? 'у' : 'ю'}`, `${s}ишь`, `${s}ит`,
+      `${s}им`, `${s}ите`, `${s}${husher ? 'ат' : 'ят'}`,
+    ];
+  } else if (baseInf.endsWith('овать') || baseInf.endsWith('евать')) {
+    // -ова-/-ева- verbs replace the suffix with -у- in the present:
+    // танцевать → танцую, рисовать → рисуешь (NOT танцеваю/рисоваю).
+    // (давать-class -авать verbs keep -а- and live in IRREGULARS.)
+    const s = stem.slice(0, -3) + 'у';
+    forms = [
+      `${s}ю`, `${s}ешь`, `${s}ет`,
+      `${s}ем`, `${s}ете`, `${s}ют`,
     ];
   } else {
     // 1st conjugation: -у/-ю, -ешь, -ет, -ем, -ете, -ут/-ют
@@ -273,10 +317,12 @@ function conjugatePast(stem: string, infinitive: string): Forms {
   // Past tense: stem + л, stem + ла, stem + ло, stem + ли
   const m = `${stem}л${rs(false)}`;
   const f = `${stem}ла${rs(true)}`;
+  const n = `${stem}ло${rs(true)}`;
   const mf = `${m}/${f}`;
+  const mfn = `${m}/${f}/${n}`; // 3sg can be он/она/оно (случилось, было)
   const pl = `${stem}ли${rs(true)}`;
 
-  return [m, mf, mf, pl, pl, pl];
+  return [m, mf, mfn, pl, pl, pl];
 }
 
 function conjugateFuture(stem: string, infinitive: string): Forms {

@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "description": "Dutch vocabulary register audit list. 'formal' = schrijftaal (written-only) item dead in conversation; 'preferred' = what Dutch speakers actually say. Deck defaults: je casual / u formal. Severity: 'high' = dead in speech, swap wherever it appears in conversational cards; 'medium' = written-leaning, swap in beginner content. See docs/dutch-register-policy.md.",
+  "categories": {
+    "schrijftaal": {
+      "policy": "swap-in-conversational-cards",
+      "rationale": "The classic Dutch written-only word list; every style guide flags these as never-spoken.",
+      "entries": [
+        {
+          "formal": "reeds",
+          "preferred": "al",
+          "note": "Pure schrijftaal; nobody says reeds.",
+          "severity": "high"
+        },
+        {
+          "formal": "thans",
+          "preferred": "nu",
+          "note": "Written/official only.",
+          "severity": "high"
+        },
+        {
+          "formal": "heden",
+          "preferred": "vandaag / nu",
+          "note": "Survives on shop signs («heden gesloten») and in «heden ten dage» (itself formal). Speech says vandaag.",
+          "severity": "high"
+        },
+        {
+          "formal": "indien",
+          "preferred": "als",
+          "note": "Written conditional; contracts and forms. Speech always uses als.",
+          "severity": "high"
+        },
+        {
+          "formal": "tevens",
+          "preferred": "ook",
+          "note": "Report/announcement connector.",
+          "severity": "high"
+        },
+        {
+          "formal": "gaarne",
+          "preferred": "graag",
+          "note": "Archaic-formal; alive only in hyper-polite correspondence and irony.",
+          "severity": "high"
+        }
+      ]
+    }
+  }
+}

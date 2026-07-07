@@ -22,6 +22,7 @@
  */
 
 import type { ConjugationTable } from '../../types';
+import { lookupWord } from '../dictionary/cy';
 
 // ─── Types ─────────────────────────────────────────────────────
 type Forms = [string, string, string, string, string, string];
@@ -1598,6 +1599,243 @@ function buildTable(
     isReflexive: false, // Welsh does not have reflexive verbs in the Romance sense
     tenses,
   };
+}
+
+// ─── Reverse lookup: conjugated form → verbal noun ─────────────
+// Built once at module init so tapping "welodd", "aeth" or "byddwn" in a
+// card routes to the right conjugation table.
+
+/** Pronouns / particles that appear inside table cells but are never verb forms. */
+const NON_VERB_WORDS = new Set([
+  'i', 'di', 'ti', 'e', 'fe', 'fo', 'hi', 'ni', 'chi', 'nhw', 'fi', 'yn', '-', '',
+]);
+
+/**
+ * Colloquial / literary / negative / mutated forms of "bod" that do not
+ * appear verbatim in the engine's table but must still resolve to bod.
+ */
+const BOD_EXTRA = [
+  // present
+  'dw', 'dwi', 'rwy', 'rw', 'ydw', 'wyt', 'dwyt', 'mae', 'maen', 'ydy', 'ydi',
+  'yw', 'ydyn', 'ydych', 'dych', 'dach', 'dan', 'rydyn', 'rydych', 'ryn', 'rych',
+  'sy', 'sydd', 'oes', 'does', 'dyw', 'dydy', 'dydw', 'dydyn', 'dydych',
+  // imperfect
+  'oeddwn', 'oeddet', 'oedd', 'oedden', 'oeddech', 'doedd', 'doeddwn',
+  'doeddet', 'doedden', 'doeddech',
+  // future (incl. soft-mutated)
+  'byddaf', 'bydda', 'byddi', 'bydd', 'byddwn', 'byddwch', 'byddan',
+  'fyddaf', 'fydda', 'fyddi', 'fydd', 'fyddwn', 'fyddwch', 'fyddan',
+  // habitual imperfect / conditional (incl. soft-mutated)
+  'byddai', 'byddet', 'bydden', 'byddech', 'fyddai', 'fyddet', 'fydden', 'fyddech',
+  'baswn', 'baset', 'basai', 'basen', 'basech',
+  'faswn', 'faset', 'fasai', 'fasen', 'fasech',
+  'taswn', 'taset', 'tasai', 'tasen', 'tasech',
+  'petawn', 'petaet', 'petai', 'petaen', 'petaech',
+  // preterite (incl. soft-mutated)
+  'bûm', 'bues', 'buest', 'bu', 'buodd', 'buon', 'buoch', 'buom',
+  'fues', 'fuest', 'fu', 'fuodd', 'fuon', 'fuoch',
+  // subjunctive / imperative
+  'bo', 'boed', 'bydded', 'byddwch',
+];
+
+const IRREGULAR_REVERSE = new Map<string, string>();
+
+function harvestForm(form: string, vn: string): void {
+  for (const raw of form.toLowerCase().split(/[\s/]+/)) {
+    // "rwy'n" → "rwy", "i'n" → "i"
+    const word = raw.split("'")[0].trim();
+    if (NON_VERB_WORDS.has(word)) continue;
+    if (!IRREGULAR_REVERSE.has(word)) IRREGULAR_REVERSE.set(word, vn);
+  }
+}
+
+// Seed bod's colloquial forms FIRST — its auxiliary forms appear inside every
+// periphrastic table cell and must always win over the verbal noun they carry.
+for (const f of BOD_EXTRA) {
+  if (!IRREGULAR_REVERSE.has(f)) IRREGULAR_REVERSE.set(f, 'bod');
+}
+// bod is the first key of IRREGULARS, so its table forms are harvested before
+// any periphrastic cell of another verb can claim an auxiliary word.
+for (const [vn, data] of Object.entries(IRREGULARS)) {
+  for (const tense of [data.present, data.imperfect, data.preterite, data.future, data.conditional]) {
+    if (!tense) continue;
+    for (const form of tense) harvestForm(form, vn);
+  }
+  if (data.imperative && data.imperative !== '-') harvestForm(data.imperative, vn);
+}
+
+// Irregular inflection stems (incl. vowel-affected ones like saf- → sefyll,
+// meddyli- → meddwl) so unseen persons/tenses of irregulars still resolve.
+const STEM_TO_VN = new Map<string, string>();
+for (const [vn, data] of Object.entries(IRREGULARS)) {
+  if (!STEM_TO_VN.has(welshStem(vn))) STEM_TO_VN.set(welshStem(vn), vn);
+  const pret3 = data.preterite?.[2]?.split(' ')[0];
+  if (pret3 && pret3.endsWith('odd')) {
+    const stem = pret3.slice(0, -3);
+    if (!STEM_TO_VN.has(stem)) STEM_TO_VN.set(stem, vn);
+  }
+}
+
+// ── Initial-mutation reversal ──
+// Mirrors the mutation-reversing matcher in src/data/dictionary/cy.ts.
+// 2-char prefixes are listed before their 1-char counterparts.
+const SOFT_REVERSE: Array<[string, string[]]> = [
+  ['dd', ['d']], ['g', ['c']], ['b', ['p']], ['d', ['t']],
+  ['f', ['b', 'm']], ['l', ['ll']], ['r', ['rh']],
+];
+const NASAL_REVERSE: Array<[string, string]> = [
+  ['ngh', 'c'], ['mh', 'p'], ['nh', 't'], ['ng', 'g'], ['m', 'b'], ['n', 'd'],
+];
+const ASPIRATE_REVERSE: Array<[string, string]> = [
+  ['ch', 'c'], ['ph', 'p'], ['th', 't'],
+];
+
+/** All plausible unmutated spellings of w (w itself excluded). */
+function demutationCandidates(w: string): string[] {
+  const out: string[] = [];
+  const push = (c: string) => {
+    if (c && c !== w && !out.includes(c)) out.push(c);
+  };
+  for (const [mut, origs] of SOFT_REVERSE) {
+    if (w.startsWith(mut)) for (const o of origs) push(o + w.slice(mut.length));
+  }
+  // g-drop: soft mutation deletes initial g (gweld → weld, gadael → adael)
+  push('g' + w);
+  // h-prothesis: h added before a vowel (ei hanfon ← anfon)
+  if (/^h[aeiouwyâêîôûŵŷ]/.test(w)) push(w.slice(1));
+  for (const [mut, orig] of NASAL_REVERSE) {
+    if (w.startsWith(mut)) push(orig + w.slice(mut.length));
+  }
+  for (const [mut, orig] of ASPIRATE_REVERSE) {
+    if (w.startsWith(mut)) push(orig + w.slice(mut.length));
+  }
+  return out;
+}
+
+// ── Suffix unwinding ──
+// Personal endings of the synthetic (inflected) conjugation, longest first.
+// preterite -ais/-aist/-odd/-on/-och (+ literary -asom/-asoch/-asant,
+// colloquial -son), future -a/-i/-ith/-iff/-wn/-wch/-an, imperfect/conditional
+// -wn/-et/-ai/-en/-ech, impersonal -wyd/-ir/-id.
+const INFLECTION_SUFFIXES = [
+  'asant', 'asoch', 'asom', 'aist', 'ais', 'odd', 'ith', 'iff', 'wyd',
+  'och', 'wch', 'son', 'wn', 'on', 'an', 'en', 'ech', 'et', 'ir', 'id',
+  'ai', 'af', 'i', 'a',
+];
+// 1-char suffixes are too ambiguous to guess from — they only resolve when a
+// candidate verbal noun is confirmed against IRREGULARS or the dictionary.
+const GUESSABLE_SUFFIXES = new Set(
+  INFLECTION_SUFFIXES.filter((s) => s.length >= 2),
+);
+/** Verbal-noun endings tried when rebuilding a lemma from a bare stem. */
+const VN_ENDINGS = ['', 'u', 'o', 'i', 'io', 'ed', 'eg', 'yd', 'a', 'au', 'ael', 'aw'];
+
+/** True when the dictionary knows w as a verbal noun ("to ..."). */
+function isDictVerbNoun(w: string): boolean {
+  const entry = lookupWord(w);
+  return !!entry && entry.pos === 'v' && /(^|; ?)to /.test(entry.en);
+}
+
+/** Candidate stems for a clipped form: as-is, de-doubled, re-doubled, eu→au. */
+function stemVariants(stem: string): string[] {
+  const variants = [stem];
+  if (/(nn|rr)$/.test(stem)) variants.push(stem.slice(0, -1)); // gofynn → gofyn
+  if (stem.endsWith('eu')) variants.push(stem.slice(0, -2) + 'au'); // dechreu → dechrau
+  // Verbal nouns with an internal double consonant simplify it before
+  // endings: ennill → enillodd, torri → tor-. Re-double to recover the noun.
+  const redoubled = stem.replace(/([aeiouwyâêîôûŵŷ])([nr])(?=[^nr])/, '$1$2$2');
+  if (redoubled !== stem) variants.push(redoubled);
+  // H-infix stems: aspirated h appears in inflected stems only
+  // (cyrhaedd- ← cyrraedd, arhos- ← aros).
+  if (/[nr]h/.test(stem)) {
+    variants.push(stem.replace(/rh/, 'rr'));
+    variants.push(stem.replace(/([nr])h/, '$1'));
+  }
+  // Vowel-affected -ew-/-aw- stems (gwrandew- ← gwrando, gadaw- ← gadael).
+  if (stem.endsWith('ew') || stem.endsWith('aw')) {
+    variants.push(stem.slice(0, -2) + 'o');
+    variants.push(stem.slice(0, -2) + 'ael');
+  }
+  return variants;
+}
+
+/** Try to confirm a verbal noun for a stem clipped from an inflected form. */
+function vnFromStem(stem: string): string | null {
+  const variants = stemVariants(stem);
+  for (const s of variants) {
+    const irr = STEM_TO_VN.get(s);
+    if (irr) return irr;
+  }
+  // Endings outer, variants inner: common endings win across all variants,
+  // so gwrandaw- finds gwrando (aw→o + '') before gwrandawyd (stem + 'yd').
+  for (const end of VN_ENDINGS) {
+    for (const s of variants) {
+      const cand = s + end;
+      if (IRREGULARS[cand]) return cand;
+      if (isDictVerbNoun(cand)) return cand;
+    }
+  }
+  return null;
+}
+
+/**
+ * Resolve a (possibly mutated, possibly inflected) Welsh verb form to the
+ * verbal noun whose conjugation table contains it.
+ *
+ * Order: irregular forms (incl. every bod auxiliary) → known verbal nouns →
+ * mutation reversal → personal-ending unwinding → best-effort guess. Falls
+ * back to the token itself: in periphrastic Welsh most verb tokens already
+ * ARE verbal nouns, and conjugate() accepts any plausible one.
+ */
+export function findInfinitive(form: string): string | null {
+  if (!form) return null;
+  // First word only; strip clitics ("welodd" from "welodd hi", "rwy" from "rwy'n")
+  const f = form.toLowerCase().trim().split(/\s+/)[0].split("'")[0];
+  if (!f || f.length < 2) return null;
+
+  const candidates = [f, ...demutationCandidates(f)];
+
+  // 1. Known irregular form (any person/tense, incl. bod auxiliaries)
+  for (const c of candidates) {
+    const vn = IRREGULAR_REVERSE.get(c);
+    if (vn) return vn;
+  }
+
+  // 2. Already a known irregular verbal noun (possibly mutated: "weld" → "gweld")
+  for (const c of candidates) {
+    if (IRREGULARS[c]) return c;
+  }
+
+  // 3. Unwind personal endings — unmutated candidates first, so "drefnodd"
+  //    resolves through "trefnodd" to "trefnu" rather than to "drefnu".
+  const suffixOrder = [...demutationCandidates(f), f];
+  for (const c of suffixOrder) {
+    for (const suf of INFLECTION_SUFFIXES) {
+      if (!c.endsWith(suf) || c.length < suf.length + 2) continue;
+      const vn = vnFromStem(c.slice(0, -suf.length));
+      if (vn) return vn;
+    }
+  }
+
+  // 4. A dictionary-confirmed verbal noun. The token itself is tried first:
+  //    if the dictionary resolves it (directly or via its own mutation
+  //    matcher), its periphrastic table is built from the tapped spelling.
+  for (const c of candidates) {
+    if (isDictVerbNoun(c)) return c;
+  }
+
+  // 5. Inflection-shaped but unconfirmed: rebuild a plausible verbal noun.
+  for (const suf of INFLECTION_SUFFIXES) {
+    if (!GUESSABLE_SUFFIXES.has(suf)) continue;
+    if (!f.endsWith(suf) || f.length < suf.length + 3) continue;
+    const stem = f.slice(0, -suf.length);
+    if (stem.endsWith('i')) return stem + 'o'; // gweithi- → gweithio
+    if (/[aeiouwyâêîôûŵŷ]$/.test(stem)) return stem;
+    return stem + 'u';
+  }
+
+  // 6. Treat the token as a verbal noun (periphrastic Welsh default).
+  return f;
 }
 
 // ─── Main export ───────────────────────────────────────────────

@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "description": "French vocabulary register audit list. 'formal' = written-only or archaic item dead in conversation; 'preferred' = what French speakers actually say. Deck defaults: tu/vous by context, passé composé in dialogue, on for casual 'we'. Severity: 'high' = dead in speech, swap wherever it appears in conversational cards; 'medium' = written-leaning, swap in beginner content. See docs/french-register-policy.md.",
+  "categories": {
+    "dead_in_speech": {
+      "policy": "swap-in-conversational-cards",
+      "rationale": "Written-French tense, negation, and connector machinery that never occurs in conversation.",
+      "entries": [
+        {
+          "formal": "passé simple in dialogue (il alla, elle fit, nous fûmes)",
+          "preferred": "passé composé (il est allé, elle a fait, on a été)",
+          "note": "Written-narrative tense. Fine in Q4 reading/narrative cards taught as such; never in dialogue.",
+          "severity": "high"
+        },
+        {
+          "formal": "ne ... point",
+          "preferred": "ne ... pas",
+          "note": "Archaic/literary negation; survives only in fixed regional or jocular use.",
+          "severity": "high"
+        },
+        {
+          "formal": "nous (casual 'we' subject)",
+          "preferred": "on",
+          "note": "«nous allons au cinéma» → «on va au ciné» in speech. nous stays in formal speech/writing and as object/stressed pronoun — exempt those.",
+          "severity": "medium"
+        },
+        {
+          "formal": "afin de / afin que",
+          "preferred": "pour / pour que",
+          "note": "Formal purpose connector; conversation uses pour (que).",
+          "severity": "medium"
+        },
+        {
+          "formal": "nonobstant",
+          "preferred": "malgré",
+          "note": "Legal fossil.",
+          "severity": "high"
+        },
+        {
+          "formal": "car (in dialogue)",
+          "preferred": "parce que",
+          "note": "car is normal in writing but stiff in casual speech. Only flag in conversational cards.",
+          "severity": "low"
+        }
+      ]
+    }
+  }
+}

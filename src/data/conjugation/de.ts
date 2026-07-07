@@ -860,6 +860,143 @@ function conjugateBase(inf: string, isInseparable: boolean): Record<TenseKey, Fo
   return { present, preterite, imperfect, future, conditional, subjunctive };
 }
 
+// ── Reverse lookup: form → infinitive ───────────────────────
+// Built once at module init by harvesting EVERY single-word form the
+// engine itself generates for each irregular verb (present incl. umlaut/
+// ablaut du/er forms, strong & mixed preterites, Konjunktiv I + II,
+// past participle, du-imperative). Tapping "spricht", "gab", "ging",
+// "fährt", "gesprochen", "wäre" etc. routes back to the right lemma.
+const IRREGULAR_REVERSE = new Map<string, string>();
+
+function harvestForm(form: string, inf: string): void {
+  const key = form.toLowerCase();
+  if (key && !IRREGULAR_REVERSE.has(key)) IRREGULAR_REVERSE.set(key, inf);
+}
+
+for (const [inf, data] of Object.entries(IRREGULARS)) {
+  const stem = getStem(inf);
+  const present: Forms = data.present
+    ? data.present
+    : data.presentStem23
+      ? applyPresentStemChange(stem, data.presentStem23, inf)
+      : conjugateWeakPresent(stem, inf);
+  const preterite: Forms = data.isStrong
+    ? conjugateStrongPreterite(data.preteriteStem)
+    : conjugateWeakPreteriteFromStem(data.preteriteStem);
+  const konjI = getKonjunktivI(inf);
+  for (const forms of [present, preterite, konjI]) {
+    for (const w of forms) harvestForm(w, inf);
+  }
+  if (data.konjII) for (const w of data.konjII) harvestForm(w, inf);
+  harvestForm(data.pastParticiple, inf);
+  harvestForm(inf, inf);
+  // du-imperative of e→i strong verbs is the bare changed stem (gib! nimm!)
+  if (data.presentStem23) harvestForm(data.presentStem23[0], inf);
+}
+
+/** Stem → infinitive: -el/-er stems take -n (sammel→sammeln), else -en. */
+function stemToInfinitive(stem: string): string {
+  if (/(?:el|er)$/.test(stem) && stem.length >= 4) return stem + 'n';
+  return stem + 'en';
+}
+
+/** Resolve a single-word form ignoring separable prefixes. */
+function findInfinitiveCore(w: string): string | null {
+  // 1. Harvested irregular/strong forms always win (ist, war, gab, ging,
+  //    spricht, fährt, gesprochen, wäre, hätte, möchte, ...)
+  const irr = IRREGULAR_REVERSE.get(w);
+  if (irr) return irr;
+
+  // 1b. Inseparable prefix + harvested strong form: gefällt → ge+fällt →
+  //     gefallen, verspricht → versprechen. Checked before the generic
+  //     participle rules so ablauted prefixed forms keep their base verb.
+  for (const p of INSEPARABLE_PREFIXES) {
+    if (w.startsWith(p) && w.length > p.length + 2) {
+      const base = IRREGULAR_REVERSE.get(w.slice(p.length));
+      if (base) return p + base;
+    }
+  }
+
+  // 2. Already infinitive-shaped: machen, wandern, sammeln.
+  //    (Also catches wir/sie present + zu-less infinitives; weak preterite
+  //    plurals like "machten" are accepted as-is rather than misparsed,
+  //    since we cannot distinguish them from -ten infinitives (warten).)
+  if (/(?:en|ern|eln)$/.test(w) && w.length >= 4) return w;
+
+  // 3. Weak past participle: ge…(e)t → strip ge- and -t (gemacht→machen,
+  //    gearbeitet→arbeiten, gewandert→wandern).
+  let m = w.match(/^ge(.{2,}?)(et|t)$/);
+  if (m) return stemToInfinitive(m[1]);
+  // Strong participle ge…en for a-ablaut-free verbs (gefahren→fahren,
+  //    gegeben→geben). True ablaut participles (gesprochen) come from
+  //    the harvested table above, so this fallback only sees the rest.
+  m = w.match(/^ge(.{2,})en$/);
+  if (m) return m[1] + 'en';
+
+  // 4. Weak preterite, longest suffix first: arbeitete(st/t/n) → arbeiten,
+  //    machte(st/t/n) → machen.
+  m = w.match(/^(.{2,}?)et(?:e|est|en|et)$/);
+  if (m && /[td]$/.test(m[1])) return stemToInfinitive(m[1]);
+  m = w.match(/^(.{2,}?)t(?:e|est|et)$/);
+  if (m) return stemToInfinitive(m[1]);
+
+  // 5. Present endings. -est/-et (e-insertion stems: arbeitest, wartet),
+  //    then -st, -t, -e. Sibilant stems (ss/ß/z/x) take bare -t in the
+  //    du-form, so strip only the t: umfasst → umfassen, tanzt → tanzen.
+  m = w.match(/^(.{2,}[td])(?:est|et)$/);
+  if (m) return stemToInfinitive(m[1]);
+  m = w.match(/^(.{2,}(?:ss|ß|z|x))t$/);
+  if (m) return stemToInfinitive(m[1]);
+  m = w.match(/^(.{2,})st$/);
+  if (m) return stemToInfinitive(m[1]);
+  m = w.match(/^(.{2,})t$/);
+  if (m) return stemToInfinitive(m[1]);
+  m = w.match(/^(.{2,})e$/);
+  if (m) {
+    // 1sg of -eln verbs drops the stem e: sammle → samml → sammeln
+    if (/[^aeiouäöül]l$/.test(m[1])) return m[1].slice(0, -1) + 'eln';
+    return stemToInfinitive(m[1]);
+  }
+
+  // 5b. Present participle: überzeugend → überzeugen
+  m = w.match(/^(.{3,})end$/);
+  if (m) return m[1] + 'en';
+
+  // 6. Bare stem (du-imperative: mach! komm! geh!)
+  if (w.length >= 2) return stemToInfinitive(w);
+  return null;
+}
+
+export function findInfinitive(form: string): string | null {
+  if (!form) return null;
+  const w = form.toLowerCase().trim();
+  if (w.length < 2) return null;
+
+  const direct = findInfinitiveCore(w);
+  // A confident hit (harvested irregular or infinitive-shaped) stands.
+  if (IRREGULAR_REVERSE.has(w)) return direct;
+  if (/(?:en|ern|eln)$/.test(w) && w.length >= 4) return direct;
+
+  // Separable-prefix forms: aufgemacht → auf + machen → aufmachen,
+  // anfängt → an + fangen → anfangen, aufzumachen → aufmachen.
+  for (const p of SEPARABLE_PREFIXES) {
+    if (!w.startsWith(p)) continue;
+    let rest = w.slice(p.length);
+    if (rest.startsWith('zu') && rest.length > 4) rest = rest.slice(2); // zu-infinitive
+    if (rest.length < 3) continue;
+    // Only trust the prefix split when the remainder is a KNOWN form:
+    // harvested irregular (gemacht, fängt, steht) or a weak ge-participle.
+    if (IRREGULAR_REVERSE.has(rest)) {
+      return p + IRREGULAR_REVERSE.get(rest)!;
+    }
+    const pp = rest.match(/^ge(.{2,}?)(et|t)$/);
+    if (pp) return p + stemToInfinitive(pp[1]);
+    if (/(?:en|ern|eln)$/.test(rest) && rest.length >= 4) return p + rest;
+  }
+
+  return direct;
+}
+
 // ── Main conjugation function ───────────────────────────────
 export function conjugate(infinitive: string): ConjugationTable | null {
   if (!infinitive) return null;

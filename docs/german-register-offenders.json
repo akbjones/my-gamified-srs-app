@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "description": "German vocabulary register audit list. 'formal' = Amtsdeutsch/Schriftsprache item stiff or dead in conversation; 'preferred' = what German speakers actually say. Deck defaults: du/Sie by context, Perfekt in dialogue (sein/haben/modals keep Präteritum). Severity: 'high' = dead in speech, swap wherever it appears in conversational cards; 'medium' = written-leaning, swap in beginner content. See docs/german-register-policy.md.",
+  "categories": {
+    "dead_in_speech": {
+      "policy": "swap-in-conversational-cards",
+      "rationale": "Written-German verbs, connectors, and tense usage that never occur in conversation.",
+      "entries": [
+        {
+          "formal": "sich begeben",
+          "preferred": "gehen / fahren",
+          "note": "«sich zum Bahnhof begeben» is announcement/officialese; speech says gehen or fahren. Medical «sich in Behandlung begeben» is genre language — exempt when quoted.",
+          "severity": "high"
+        },
+        {
+          "formal": "erhalten (in dialogue)",
+          "preferred": "bekommen / kriegen",
+          "note": "erhalten is standard in letters and forms; conversation says bekommen (neutral) or kriegen (colloquial). Only flag in dialogue cards.",
+          "severity": "medium"
+        },
+        {
+          "formal": "des Weiteren",
+          "preferred": "außerdem",
+          "note": "Report/essay connector.",
+          "severity": "high"
+        },
+        {
+          "formal": "diesbezüglich",
+          "preferred": "dazu / darüber",
+          "note": "Amtsdeutsch; in speech it reads as corporate parody.",
+          "severity": "high"
+        },
+        {
+          "formal": "welcher / welche / welches (relative pronoun)",
+          "preferred": "der / die / das",
+          "note": "«der Mann, welcher dort steht» → «der Mann, der dort steht». Question-word welcher («Welcher Bus?») is everyday — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "Präteritum of ordinary verbs in dialogue (ich aß, er kaufte)",
+          "preferred": "Perfekt (ich habe gegessen, er hat gekauft)",
+          "note": "Written-narrative tense. Exempt: sein, haben, modals, werden, es gab, and Q4 narrative/reading cards taught as such.",
+          "severity": "high"
+        }
+      ]
+    }
+  }
+}

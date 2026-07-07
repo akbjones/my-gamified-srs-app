@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "description": "Spanish vocabulary register audit list. 'formal' = literary/legal/report-language item dead or stiff in conversation; 'preferred' = what Spanish speakers actually say. Deck targets neutral Latin American Spanish (tú/usted, ustedes; no vos, no vosotros). Severity: 'high' = dead in speech, swap wherever it appears in conversational cards; 'medium' = written-leaning, swap in beginner content. See docs/spanish-register-policy.md.",
+  "categories": {
+    "dead_in_speech": {
+      "policy": "swap-in-conversational-cards",
+      "rationale": "Literary and legal constructions no Spanish speaker uses in conversation anywhere in the Spanish-speaking world.",
+      "entries": [
+        {
+          "formal": "mas",
+          "preferred": "pero",
+          "note": "The accentless conjunction mas (= but) is purely literary. más (more) is a different word — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "cuyo",
+          "preferred": "(rephrase with que + possessive)",
+          "note": "«el señor cuyo coche está afuera» → «el señor que tiene el coche afuera». Alive in writing, dead in conversation.",
+          "severity": "high"
+        },
+        {
+          "formal": "future subjunctive (hubiere, fuere, tuviere)",
+          "preferred": "present subjunctive or indicative",
+          "note": "Legal fossil («si hubiere lugar»). Survives only in law and fixed sayings («sea lo que fuere» → «sea lo que sea»).",
+          "severity": "high"
+        },
+        {
+          "formal": "a fin de que",
+          "preferred": "para que",
+          "note": "Bureaucratic purpose connector.",
+          "severity": "high"
+        },
+        {
+          "formal": "asimismo",
+          "preferred": "también",
+          "note": "Report/minutes language; conversation uses también or además.",
+          "severity": "medium"
+        },
+        {
+          "formal": "dicho / dicha (= the aforementioned)",
+          "preferred": "ese / esa / este / esta",
+          "note": "Only the legalese determiner sense («dicha persona» → «esa persona»). Participle of decir («ha dicho») is everyday — exempt.",
+          "severity": "high"
+        }
+      ]
+    }
+  }
+}

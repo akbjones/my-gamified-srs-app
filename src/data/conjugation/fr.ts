@@ -804,3 +804,217 @@ export function conjugate(infinitive: string): ConjugationTable | null {
     tenses: finalTenses,
   };
 }
+
+// ── Reverse lookup: conjugated form → infinitive ────────────
+// Built once at module init (placed after conjugate() so every data
+// const above is initialised). For each lemma with irregular forms or
+// stem changes we run conjugate() and register every produced form,
+// which guarantees the mapped lemma's table really contains the form.
+
+// Regular -er verbs whose surface forms collide with -ir/-re suffix
+// rules (laissons ≠ *lair, tirons ≠ futur of *tir). Registering them
+// lets the map win before suffix unwinding guesses wrong.
+const COMMON_COLLIDING_ER = [
+  'laisser', 'glisser', 'baisser', 'hisser', 'pousser',
+  'tirer', 'retirer', 'attirer', 'admirer', 'désirer', 'respirer',
+  'inspirer', 'soupirer', 'expirer', 'virer',
+];
+
+// Common -yer / -eler / -eter verbs not already in the stem-change sets.
+const COMMON_STEM_CHANGE_EXTRA = [
+  'payer', 'essayer', 'employer', 'nettoyer', 'ennuyer', 'appuyer',
+  'essuyer', 'renvoyer', 'appeler', 'rappeler', 'jeter', 'rejeter',
+  'projeter',
+];
+
+// Common -ier verbs: lets 'étudions/oublie/criez' unwind to -ier
+// instead of the imparfait -er reading.
+const COMMON_IER_VERBS = new Set([
+  'étudier', 'oublier', 'remercier', 'crier', 'prier', 'plier', 'copier',
+  'marier', 'vérifier', 'apprécier', 'associer', 'confier', 'envier',
+  'justifier', 'modifier', 'multiplier', 'nier', 'photographier',
+  'signifier', 'simplifier', 'skier', 'varier', 'identifier', 'négocier',
+  'publier', 'expédier', 'licencier', 'remédier', 'trier', 'colorier',
+]);
+
+const IRREGULAR_REVERSE = new Map<string, string>();
+
+function registerLemma(lemma: string): void {
+  const table = conjugate(lemma);
+  if (!table) return;
+  const reg = (form: string) => {
+    const k = form.toLowerCase();
+    if (k && k !== '-' && !IRREGULAR_REVERSE.has(k)) IRREGULAR_REVERSE.set(k, lemma);
+  };
+  reg(lemma);
+  for (const forms of Object.values(table.tenses)) {
+    for (const form of forms) {
+      if (!form || form === '-') continue;
+      reg(form);
+      // Passé composé rows: register the participle word alone
+      // ("ai parlé" → "parlé"), never the auxiliary.
+      const words = form.split(' ');
+      if (words.length > 1) reg(words[words.length - 1]);
+    }
+  }
+}
+
+// Order matters: earlier registrations win on collisions
+// (suis → être, not suivre; vis → vivre, not voir).
+for (const lemma of ['être', 'avoir', 'aller', 'faire', 'vivre']) registerLemma(lemma);
+for (const lemma of Object.keys(IRR)) registerLemma(lemma);
+for (const lemma of Object.keys(IRR_PARTICIPLES)) registerLemma(lemma);
+for (const lemma of Object.keys(FR_IRREGULAR_PARTICIPLES)) registerLemma(lemma);
+for (const lemma of TYPE3_IR) registerLemma(lemma);
+for (const lemma of ETRE_VERBS) registerLemma(lemma);
+for (const s of [GRAVE_ELER, GRAVE_ETER, E_STEM_CHANGE, ACUTE_STEM_CHANGE]) {
+  for (const lemma of s) registerLemma(lemma);
+}
+for (const lemma of COMMON_STEM_CHANGE_EXTRA) registerLemma(lemma);
+for (const lemma of COMMON_COLLIDING_ER) registerLemma(lemma);
+
+// High-frequency passé simple / imperfect-subjunctive forms. The displayed
+// tables use passé composé instead of passé simple, so these forms are never
+// produced by conjugate() — map them explicitly so taps still route to the
+// right verb.
+const PASSE_SIMPLE_EXTRA: Record<string, string> = {
+  fus: 'être', fut: 'être', fûmes: 'être', fûtes: 'être', furent: 'être', fût: 'être',
+  eus: 'avoir', eut: 'avoir', eûmes: 'avoir', eûtes: 'avoir', eurent: 'avoir', eût: 'avoir',
+  fis: 'faire', fit: 'faire', fîmes: 'faire', firent: 'faire', fît: 'faire',
+  alla: 'aller', allèrent: 'aller', allât: 'aller',
+  vint: 'venir', vinrent: 'venir', vînt: 'venir',
+  prit: 'prendre', prirent: 'prendre', prît: 'prendre',
+  mit: 'mettre', mirent: 'mettre', mît: 'mettre',
+  dit: 'dire', dirent: 'dire', dît: 'dire',
+  put: 'pouvoir', purent: 'pouvoir', pût: 'pouvoir',
+  dut: 'devoir', durent: 'devoir', dût: 'devoir',
+  voulut: 'vouloir', voulurent: 'vouloir', voulût: 'vouloir',
+  sut: 'savoir', surent: 'savoir', sût: 'savoir',
+  vit: 'voir', virent: 'voir', vît: 'voir',
+  plut: 'plaire', plût: 'plaire', tut: 'taire', tût: 'taire',
+  sourît: 'sourire', souriant: 'sourire', riant: 'rire',
+  // Irregular present participles (tables carry no -ant row either)
+  étant: 'être', ayant: 'avoir', faisant: 'faire', sachant: 'savoir',
+  venant: 'venir', tenant: 'tenir', prenant: 'prendre', voyant: 'voir',
+  pouvant: 'pouvoir', voulant: 'vouloir', devant: 'devoir', disant: 'dire',
+  mettant: 'mettre', suivant: 'suivre', vivant: 'vivre', buvant: 'boire',
+  croyant: 'croire', lisant: 'lire', écrivant: 'écrire',
+  connaissant: 'connaître', recevant: 'recevoir', ouvrant: 'ouvrir',
+};
+for (const [form, lemma] of Object.entries(PASSE_SIMPLE_EXTRA)) {
+  if (!IRREGULAR_REVERSE.has(form)) IRREGULAR_REVERSE.set(form, lemma);
+}
+
+const FUTURE_COND_ENDINGS = 'aient|ions|iez|ais|ait|ai|as|a|ons|ez|ont';
+const FUT_ER = new RegExp(`^(.+er)(?:${FUTURE_COND_ENDINGS})$`);
+const FUT_IR = new RegExp(`^(.+ir)(?:${FUTURE_COND_ENDINGS})$`);
+const FUT_RE = new RegExp(`^(.+[dt]r)(?:${FUTURE_COND_ENDINGS})$`);
+
+/** Rebuild an -er infinitive from a stem, undoing -ger/-cer spelling
+ *  insertions when the stripped ending began with a/o (mangeons → manger). */
+function stemToEr(s: string, endingWasAO: boolean): string {
+  if (endingWasAO) {
+    if (s.endsWith('ge')) return s.slice(0, -1) + 'er';
+    if (s.endsWith('ç')) return s.slice(0, -1) + 'cer';
+  }
+  return s + 'er';
+}
+
+/**
+ * Resolve a conjugated French form to an infinitive whose conjugation
+ * table contains that form. Returns null when nothing plausible fits.
+ */
+export function findInfinitive(form: string): string | null {
+  if (!form) return null;
+  let fm = form.normalize('NFC').toLowerCase().trim();
+
+  // Strip reflexive / elided pronoun: "se lave" → "lave", "s'appelle" → "appelle"
+  if (fm.startsWith('se ') || fm.startsWith('me ') || fm.startsWith('te ')) fm = fm.slice(3);
+  else if (fm.startsWith("s'") || fm.startsWith("m'") || fm.startsWith("t'")) fm = fm.slice(2);
+  if (!fm) return null;
+
+  const hit = IRREGULAR_REVERSE.get(fm);
+  if (hit) return hit;
+
+  // Participle agreement: obtenus/obtenue(s) → obtenu → obtenir.
+  if (/(?:s|e|es)$/.test(fm)) {
+    for (const cut of [1, 2]) {
+      const h = fm.length > cut + 1 ? IRREGULAR_REVERSE.get(fm.slice(0, -cut)) : undefined;
+      if (h) return h;
+    }
+  }
+
+  // Multi-word (passé composé "ai parlé"): resolve on the participle.
+  if (fm.includes(' ')) {
+    const last = fm.split(' ').pop()!;
+    const h = IRREGULAR_REVERSE.get(last);
+    if (h) return h;
+    fm = last;
+  }
+  if (fm.length < 3) return null;
+
+  // Already infinitive-shaped.
+  if (/(?:er|oir|dre|aître)$/.test(fm)) return fm;
+  if (fm.endsWith('ir') && !FUT_IR.test(fm)) return fm;
+
+  // Type 2 -ir (-iss- pattern): finissons → finir, réussissait → réussir.
+  const iss = fm.match(/^(.{2,})iss(?:ons|ez|ent|ais|ait|aient|ions|iez|es|e)$/);
+  if (iss) return iss[1] + 'ir';
+
+  // Futur / conditionnel: stem is the full infinitive (+ endings).
+  const futEr = fm.match(FUT_ER);
+  if (futEr) return futEr[1];                       // parlerai → parler
+  const futIr = fm.match(FUT_IR);
+  if (futIr) return futIr[1];                       // finirons → finir
+
+  // -ier verbs: present/participle forms where the i belongs to the stem.
+  if (fm.endsWith('ions') || fm.endsWith('iez')) {
+    const stemI = fm.slice(0, -(fm.endsWith('ions') ? 3 : 2));  // étudi
+    if (COMMON_IER_VERBS.has(stemI + 'er')) return stemI + 'er'; // étudions → étudier
+    return stemToEr(fm.slice(0, -(fm.endsWith('ions') ? 4 : 3)), false); // parlions → parler
+  }
+  if (fm.endsWith('ie') || fm.endsWith('ies')) {
+    const stemI = fm.endsWith('ies') ? fm.slice(0, -2) : fm.slice(0, -1); // oubli
+    if (COMMON_IER_VERBS.has(stemI + 'er')) return stemI + 'er';          // oublie → oublier
+    // Otherwise a type-2 feminine participle: finie(s) → finir.
+    return fm.slice(0, -(fm.endsWith('ies') ? 3 : 2)) + 'ir';
+  }
+
+  // -venir / -tenir compounds without explicit overrides:
+  // préviens → prévenir, soutient → soutenir, appartiennent → appartenir.
+  const vt = fm.match(/^(.+[vt])ien(?:s|t|ne|nes|nent)$/);
+  if (vt) return vt[1] + 'enir';
+
+  // Gérondif / participe présent: parlant → parler, finissant → finir.
+  if (fm.endsWith('issant')) return fm.slice(0, -6) + 'ir';
+  if (fm.endsWith('ant') && fm.length >= 5) return stemToEr(fm.slice(0, -3), true);
+
+  // Imparfait / présent / subjonctif of -er verbs (largest class).
+  for (const end of ['aient', 'èrent', 'âmes', 'âtes', 'ais', 'ait', 'ons', 'ez', 'ent', 'es']) {
+    if (fm.endsWith(end) && fm.length > end.length + 1) {
+      return stemToEr(fm.slice(0, -end.length), /^[aoâè]/.test(end));
+    }
+  }
+
+  // Participles.
+  if (/ées?$/.test(fm)) return fm.replace(/ées?$/, 'er');       // parlée(s) → parler
+  if (/és?$/.test(fm)) return fm.replace(/és?$/, 'er');         // parlé(s) → parler
+  if (fm.endsWith('it') || fm.endsWith('is')) return fm.slice(0, -2) + 'ir'; // finit/finis → finir
+  if (fm.endsWith('i')) return fm.slice(0, -1) + 'ir';          // fini → finir
+  if (fm.endsWith('us')) return fm.slice(0, -2) + 're';         // vendus → vendre
+  if (fm.endsWith('u')) return fm.slice(0, -1) + 're';          // vendu → vendre
+
+  // Regular -re present: corresponds / correspond → correspondre.
+  if (fm.endsWith('ds')) return fm.slice(0, -1) + 're';
+  if (fm.endsWith('d')) return fm + 're';
+
+  // Last resort: -re futur/conditionnel not caught by the irregular map.
+  const futRe = fm.match(FUT_RE);
+  if (futRe) return futRe[1] + 'e';                 // correspondrai → correspondre
+
+  // Présent -e / -a (passé simple): parle → parler, mangea → manger.
+  if (fm.endsWith('e')) return stemToEr(fm.slice(0, -1), false);
+  if (fm.endsWith('a')) return stemToEr(fm.slice(0, -1), true);
+
+  return null;
+}

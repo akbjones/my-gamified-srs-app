@@ -107,7 +107,7 @@ for (const lang of langs) {
           for (const arr of Object.values(table.tenses || {})) {
             for (const f of arr) {
               forms.add(m.script.lowercase(f));
-              for (const w of f.split(/\s+/)) forms.add(m.script.lowercase(w));
+              for (const w of f.split(/[\s/]+/)) forms.add(m.script.lowercase(w));
             }
           }
           if (low === m.script.lowercase(lemma) || forms.has(low)) ok++;

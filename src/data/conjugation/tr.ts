@@ -76,6 +76,12 @@ function harmonyAE(word: string): string {
   return isBackVowel(lastVowel(word)) ? 'a' : 'e';
 }
 
+/** 3rd-plural -lar/-ler by 2-way harmony on the word built so far.
+ *  Hardcoded 'lar'/'ler' produced gelirlar/yapmazler-class errors. */
+function pluralLE(ctx: string): string {
+  return harmonyAE(ctx) === 'a' ? 'lar' : 'ler';
+}
+
 /** 4-way harmony: ı/i/u/ü */
 function harmony4(word: string): string {
   const v = lastVowel(word);
@@ -180,11 +186,13 @@ function conjugateAorist(stem: string, inf: string): Forms {
     aoristBase = s + (endsWithVowel(s) ? 'r' : `${harmony4(s)}r`);
   } else {
     // Regular: stem + er/ar (2-way harmony) for consonant-ending
-    // stem + r for vowel-ending
-    if (endsWithVowel(stem)) {
-      aoristBase = stem + 'r';
+    // stem + r for vowel-ending. Voicing irregulars (etmek→ed, gitmek→gid)
+    // use their present stem before the vowel-initial suffix: ed+er → eder.
+    const s0 = irr?.presentStem || stem;
+    if (endsWithVowel(s0)) {
+      aoristBase = s0 + 'r';
     } else {
-      aoristBase = stem + harmonyAE(stem) + 'r';
+      aoristBase = s0 + harmonyAE(s0) + 'r';
     }
   }
 
@@ -194,7 +202,7 @@ function conjugateAorist(stem: string, inf: string): Forms {
     `${aoristBase}`,
     `${aoristBase}${harmony4(aoristBase)}z`,
     `${aoristBase}s${harmony4(aoristBase)}n${harmony4(aoristBase)}z`,
-    `${aoristBase}lar`,
+    `${aoristBase}${pluralLE(aoristBase)}`,
   ];
 }
 
@@ -212,7 +220,7 @@ function conjugatePast(stem: string, _inf: string): Forms {
     `${stem}${d}${h}`,
     `${base}k`,
     `${base}n${h}z`,
-    `${stem}${d}${h}lar`,
+    `${stem}${d}${h}${pluralLE(stem + d + h)}`,
   ];
 }
 
@@ -225,13 +233,17 @@ function conjugateReported(stem: string, _inf: string): Forms {
     `${base}`,
     `${base}${h}z`,
     `${base}s${h}n${h}z`,
-    `${base}lar`,
+    `${base}${pluralLE(base)}`,
   ];
 }
 
 function conjugateFuture(stem: string, _inf: string): Forms {
-  const a = harmonyAE(stem);
-  let s = endsWithVowel(stem) ? stem.slice(0, -1) + 'y' : stem;
+  // Voicing irregulars (etmek→ed, gitmek→gid) surface before the
+  // vowel-initial future suffix: ed+ecek → edecek (not etecek).
+  const irrF = IRREGULARS[_inf];
+  const stemF = irrF?.presentStem || stem;
+  const a = harmonyAE(stemF);
+  let s = endsWithVowel(stemF) ? stemF.slice(0, -1) + 'y' : stemF;
   const base = `${s}${a}c${a}k`;
   const h = harmony4(base);
   return [
@@ -240,7 +252,7 @@ function conjugateFuture(stem: string, _inf: string): Forms {
     `${base}`,
     `${s}${a}c${a}ğ${h}z`,
     `${s}${a}c${a}ks${h}n${h}z`,
-    `${s}${a}c${a}klar`,
+    `${s}${a}c${a}k${pluralLE(a)}`,
   ];
 }
 
@@ -253,7 +265,7 @@ function conjugateConditional(stem: string, _inf: string): Forms {
     `${base}`,
     `${base}k`,
     `${base}n${harmony4(base)}z`,
-    `${stem}s${a}lar`,
+    `${stem}s${a}${pluralLE(a)}`,
   ];
 }
 
@@ -269,7 +281,7 @@ function conjugateImperative(stem: string, _inf: string): Forms {
     `${stem}s${h}n`,      // o: gelsin (jussive)
     `${stem}${a}l${harmony4(stem + a)}m`, // biz: gel-elim (let's)
     `${stem}${h}n`,       // siz: gelin (also formal sing)
-    `${stem}s${h}nler`,   // onlar: gelsinler — simplified, ler/lar follows harmony
+    `${stem}s${h}n${pluralLE(stem + 's' + h + 'n')}`,   // onlar: gelsinler/yapsınlar
   ];
 }
 
@@ -284,7 +296,7 @@ function conjugateNecessitative(stem: string, _inf: string): Forms {
     `${base}`,                        // -meli
     `${base}y${harmony4(base)}z`,    // -meliyiz
     `${base}s${harmony4(base)}n${harmony4(base)}z`, // -melisiniz
-    `${base}ler`,                     // -meliler
+    `${base}${pluralLE(base)}`,               // -meliler/-malılar
   ];
 }
 
@@ -325,7 +337,7 @@ function conjugatePresentContNeg(stem: string, _inf: string): Forms {
     `${base}`,
     `${base}uz`,
     `${base}sunuz`,
-    `${base}lar`,
+    `${base}${pluralLE(base)}`,
   ];
 }
 
@@ -342,7 +354,7 @@ function conjugateAoristNeg(stem: string, _inf: string): Forms {
     `${mez}`,             // o: gelmez
     `${me}y${harmony4(me)}z`,    // biz: gelmeyiz
     `${mez}s${harmony4(mez)}n${harmony4(mez)}z`, // siz: gelmezsiniz
-    `${mez}ler`,          // onlar: gelmezler
+    `${mez}${pluralLE(mez)}`,   // onlar: gelmezler/yapmazlar
   ];
 }
 
@@ -356,7 +368,7 @@ function conjugatePastNeg(stem: string, _inf: string): Forms {
     `${stem}m${a}d${harmony4(stem + 'm' + a + 'd')}`,
     `${base}k`,
     `${base}n${harmony4(base)}z`,
-    `${stem}m${a}d${harmony4(stem + 'm' + a + 'd')}lar`,
+    `${stem}m${a}d${harmony4(stem + 'm' + a + 'd')}${pluralLE(a)}`,
   ];
 }
 
@@ -371,7 +383,7 @@ function conjugateReportedNeg(stem: string, _inf: string): Forms {
     `${base}`,
     `${base}${h}z`,
     `${base}s${h}n${h}z`,
-    `${base}lar`,
+    `${base}${pluralLE(base)}`,
   ];
 }
 
@@ -388,7 +400,7 @@ function conjugateFutureNeg(stem: string, _inf: string): Forms {
     `${ya}`,
     `${yaSoft}${h}z`,
     `${ya}s${h}n${h}z`,
-    `${ya}lar`,
+    `${ya}${pluralLE(ya)}`,
   ];
 }
 
@@ -402,7 +414,7 @@ function conjugateConditionalNeg(stem: string, _inf: string): Forms {
     `${base}`,
     `${base}k`,
     `${base}n${harmony4(base)}z`,
-    `${stem}m${a}s${a}lar`,
+    `${stem}m${a}s${a}${pluralLE(a)}`,
   ];
 }
 
@@ -416,7 +428,7 @@ function conjugateNecessitativeNeg(stem: string, _inf: string): Forms {
     `${base}`,
     `${base}y${harmony4(base)}z`,
     `${base}s${harmony4(base)}n${harmony4(base)}z`,
-    `${base}ler`,
+    `${base}${pluralLE(base)}`,
   ];
 }
 

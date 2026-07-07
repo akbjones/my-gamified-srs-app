@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "description": "Welsh register audit list. 'formal' = literary Welsh (Cymraeg Llenyddol) form dead in speech; 'preferred' = Cymraeg Byw colloquial form the deck targets. Deck defaults: ti casual / chi formal-plural. Severity: 'high' = dead in speech, swap wherever it appears in conversational cards; 'medium' = written-leaning, swap in beginner content. See docs/welsh-register-policy.md.",
+  "categories": {
+    "literary_forms": {
+      "policy": "swap-in-conversational-cards",
+      "rationale": "Literary-Welsh verb morphology and particles that no speaker uses in conversation; the colloquial forms are what Dysgu Cymraeg courses teach.",
+      "entries": [
+        {
+          "formal": "yr wyf (fi)",
+          "preferred": "dw i / rydw i",
+          "rom": "yr wyf → dw i (I am)",
+          "note": "Literary first-person copula; speech is dw i (or rydw i in careful/taught register).",
+          "severity": "high"
+        },
+        {
+          "formal": "nid wyf",
+          "preferred": "dw i ddim",
+          "rom": "nid wyf → dw i ddim (I am not)",
+          "note": "Literary negation; colloquial Welsh negates with ddim.",
+          "severity": "high"
+        },
+        {
+          "formal": "y mae",
+          "preferred": "mae",
+          "rom": "y mae → mae (is/are)",
+          "note": "The preverbal particle y(r) is literary; speech drops it.",
+          "severity": "high"
+        },
+        {
+          "formal": "gennyf / gennym",
+          "preferred": "gen i / gynnon ni (N) or gyda fi / gyda ni (S)",
+          "rom": "gennyf → gen i / gyda fi (with me, I have)",
+          "note": "Literary inflected preposition. Keep North or South forms consistent within a card.",
+          "severity": "high"
+        },
+        {
+          "formal": "impersonal -ir/-wyd (gwelir, gwnaethpwyd)",
+          "preferred": "cael passive (mae'n cael ei weld, cafodd ei wneud)",
+          "rom": "gwelir → mae'n cael ei weld (is seen)",
+          "note": "Impersonal forms are written/official Welsh. Signage («ni chaniateir ysmygu») is genre language — exempt when quoted.",
+          "severity": "high"
+        },
+        {
+          "formal": "sydd yn (uncontracted)",
+          "preferred": "sy'n",
+          "rom": "sydd yn → sy'n (which is)",
+          "note": "Speech always contracts; the full form reads literary. sydd sentence-finally («pwy sydd?» → «pwy sy?») follows the same pattern.",
+          "severity": "medium"
+        }
+      ]
+    }
+  }
+}

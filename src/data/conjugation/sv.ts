@@ -142,8 +142,8 @@ const GROUP_2_VERBS = new Set([
   'mäta', 'väta', 'böta',
   'lyfta', 'skifta', 'gifta',
   // Additional Group 2 verbs found via card audit
-  'höra', 'lära', 'åka', 'leka', 'växa', 'försöka', 'tillhöra',
-  'innebära', 'skina', 'öka', 'sluta', 'skynda',
+  'höra', 'lära', 'åka', 'köra', 'leka', 'växa', 'försöka', 'tillhöra',
+  'innebära', 'skina',
 ]);
 
 // ─── Helper: detect conjugation group ───────────────────────────
@@ -151,6 +151,14 @@ const GROUP_2_VERBS = new Set([
 type ConjGroup = '1' | '2a' | '2b' | '3' | '4';
 
 function detectGroup(infinitive: string): ConjGroup {
+  // Known Group 2 verbs win outright — 3-letter -a members (åka, öka) would
+  // otherwise be swallowed by the short-verb test below
+  if (GROUP_2_VERBS.has(infinitive)) {
+    const stem = infinitive.slice(0, -1);
+    const lastChar = stem[stem.length - 1];
+    return VOICELESS.has(lastChar) ? '2b' : '2a';
+  }
+
   // Group 3: short verbs ending in stressed vowel (bo, tro, sy, nå, etc.)
   if (/^[a-zåäö]{1,3}$/.test(infinitive) && /[aeiouåäö]$/.test(infinitive)) {
     return '3';
@@ -250,7 +258,8 @@ function conjugateRegular(infinitive: string): {
         };
       }
       return {
-        present: stem + 'er',
+        // Stems ending in -r: present is the bare stem (kör/hör/lär, not körer)
+        present: stem.endsWith('r') ? stem : stem + 'er',
         past: ps + 'de',
         supine: ps + 't',
         imperative: stem,

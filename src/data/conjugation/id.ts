@@ -48,6 +48,11 @@ export const KNOWN_ROOTS = new Set<string>([
   'rasa', 'suka', 'cinta', 'sayang', 'harap', 'mau', 'ingin',
   'butuh', 'perlu', 'punya', 'dapat', 'bisa', 'sapu', 'pukul',
   'tinggal', 'hidup', 'mati', 'sakit', 'sembuh', 'ubah', 'ganti',
+  // pilot-deck roots (batch B/D bare roots + derived-form roots)
+  'nikah', 'kumpul', 'angkat', 'henti', 'lambat', 'dekat',
+  'tiba', 'sarapan', 'naik', 'mandi', 'masuk', 'keluar',
+  'tonton', 'tawar', 'pesan', 'jemput', 'antar', 'parkir',
+  'ada', 'boleh', 'belok', 'jumpa', 'lewat', 'terbit', 'minta', 'turun',
 ]);
 
 const VOWELS = 'aiueo';
@@ -73,13 +78,20 @@ export function applyMeN(root: string): string {
   }
 }
 
-/** ber- has two irregularities worth encoding: belajar, bekerja. */
+/** ber- irregulars, plus roots whose ber- form takes reciprocal -an. */
 function applyBer(root: string): string {
   if (root === 'ajar') return 'belajar';
   if (root === 'kerja') return 'bekerja';
+  if (root === 'kenal') return 'berkenalan'; // reciprocal -an is the real form
   if (root.startsWith('r')) return 'be' + root; // berenang-class (renang)
   return 'ber' + root;
 }
+
+/** Roots with a lexicalized per-…-kan causative worth a table row. */
+const PER_KAN: Record<string, string[]> = {
+  kenal: ['perkenalkan', 'memperkenalkan'],
+  boleh: ['perbolehkan', 'memperbolehkan'],
+};
 
 export function conjugate(rootOrForm: string): ConjugationTable | null {
   if (!rootOrForm) return null;
@@ -89,18 +101,17 @@ export function conjugate(rootOrForm: string): ConjugationTable | null {
   if (!/^[a-z-]+$/.test(root)) return null;
 
   const meN = applyMeN(root);
-  return {
-    verb: root,
-    tenses: {
-      'Akar (Root)': [root],
-      'meN- (Active)': [meN],
-      'di- (Passive)': ['di' + root],
-      'ter- (Stative)': ['ter' + root],
-      'ber- (Middle)': [applyBer(root)],
-      '-kan (Causative)': [root + 'kan', meN + 'kan', 'di' + root + 'kan'],
-      '-i (Locative)': [root + 'i', meN + 'i', 'di' + root + 'i'],
-    },
+  const tenses: Record<string, string[]> = {
+    'Akar (Root)': [root],
+    'meN- (Active)': [meN],
+    'di- (Passive)': ['di' + root],
+    'ter- (Stative)': ['ter' + root],
+    'ber- (Middle)': [applyBer(root)],
+    '-kan (Causative)': [root + 'kan', meN + 'kan', 'di' + root + 'kan'],
+    '-i (Locative)': [root + 'i', meN + 'i', 'di' + root + 'i'],
   };
+  if (PER_KAN[root]) tenses['per-…-kan (Causative)'] = PER_KAN[root];
+  return { verb: root, tenses };
 }
 
 // ── findInfinitive: derived form → root ─────────────────────────
@@ -139,6 +150,8 @@ export function findInfinitive(form: string): string | null {
     const candidates: string[] = [];
     if (base.startsWith('me')) candidates.push(...reverseMeN(base));
     if (base.startsWith('diper')) candidates.push(base.slice(5));
+    if (base.startsWith('memper')) candidates.push(base.slice(6));
+    if (base.startsWith('per')) candidates.push(base.slice(3));
     if (base.startsWith('di')) candidates.push(base.slice(2));
     if (base.startsWith('ter')) candidates.push(base.slice(3));
     if (base === 'belajar') candidates.push('ajar');

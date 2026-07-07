@@ -1,0 +1,128 @@
+[
+  {
+    "id": "id-0104",
+    "rating": 4,
+    "issue": "English calque: 'pergi' for a departing bus is unnatural — scheduled transport 'berangkat' (departs). Natives say 'Busnya baru saja berangkat', not 'bus ... pergi'.",
+    "fix": {
+      "target": "Bus ke bandara baru saja berangkat.",
+      "english": "The bus to the airport just left.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0110",
+    "rating": 5,
+    "issue": "Awkward mix of the ongoing-state marker 'masih' with a schedule phrase 'sampai malam' — natives say either 'masih buka' (still open now) or 'buka sampai malam' (open until night), not both stacked.",
+    "fix": {
+      "target": "Toko itu masih buka sekarang.",
+      "english": "That store is still open now.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0119",
+    "rating": 4,
+    "issue": "Calque of 'Where does this bus go?' — Indonesian destination questions for vehicles drop the verb: 'Bus ini ke mana?'. 'Bus ini pergi ke mana?' is textbook-English phrasing no native would use at a bus stop.",
+    "fix": {
+      "target": "Bus ini ke mana?",
+      "english": "Where does this bus go?",
+      "grammar": "Destination questions can drop the verb: Bus ini ke mana? (Where does this bus go?)"
+    }
+  },
+  {
+    "id": "id-0125",
+    "rating": 4,
+    "issue": "'mulai kerja baru itu' is an English calque of 'start that new job' — 'kerja' as a bare noun for 'a job' does not take 'baru itu' naturally; natives say 'mulai kerja di kantor baru' or 'mulai pekerjaan baru'.",
+    "fix": {
+      "target": "Kapan kamu mulai kerja di kantor baru?",
+      "english": "When do you start work at the new office?",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0131",
+    "rating": 5,
+    "issue": "Stiff register: after the modal 'mau', conversational Indonesian uses the bare root ('mau beli'), which this deck itself models elsewhere (id-0191 'mau pesan', id-0210 'beli'). 'mau membeli' reads as written prose in a shopping context.",
+    "fix": {
+      "target": "Saya mau beli tiga kilo beras.",
+      "english": "I want to buy three kilos of rice.",
+      "grammar": "After mau, the bare root is natural in speech: mau beli = want to buy."
+    }
+  },
+  {
+    "id": "id-0161",
+    "rating": 5,
+    "issue": "Slightly unidiomatic: the set phrase is 'mandi air dingin' (take a cold shower); 'mandi dengan air dingin' is bookish instrumental phrasing.",
+    "fix": {
+      "target": "Setiap pagi saya mandi air dingin.",
+      "english": "Every morning I bathe with cold water.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0172",
+    "rating": 3,
+    "issue": "Wrong verb: 'mendengar' = to hear (perceive by chance); deliberate listening is 'mendengarkan'. The English gloss 'I listen to music' does not match 'mendengar musik' (I hear music). Classic dengar/dengarkan error.",
+    "fix": {
+      "target": "Saya mendengarkan musik sambil memasak.",
+      "english": "I listen to music while cooking.",
+      "grammar": "sambil = while (one person, two actions): makan sambil membaca = eat while reading."
+    },
+    "newTokens": {
+      "mendengarkan": { "en": "to listen to", "ipa": "məndəˈŋarkan", "pos": "verb" }
+    }
+  },
+  {
+    "id": "id-0179",
+    "rating": 5,
+    "issue": "Register: 'kepada' is written/formal Indonesian; in neutral conversation people send messages 'ke' someone. Q2 card should model the conversational preposition.",
+    "fix": {
+      "target": "Saya mengirim pesan ke teman kerja.",
+      "english": "I send a message to a coworker.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0182",
+    "rating": 4,
+    "issue": "Missing benefactive -kan: reading a story aloud to someone is 'membacakan cerita'; 'membaca cerita untuk anaknya' is grammatical but not what natives say, and the card sits right after the -kan tip card (id-0180) without using the pattern.",
+    "fix": {
+      "target": "Dia membacakan cerita untuk anaknya setiap malam.",
+      "english": "She reads her child a story every night.",
+      "grammar": "-kan can mean doing it for someone: membaca (read) → membacakan (read aloud to someone)."
+    },
+    "newTokens": {
+      "membacakan": { "en": "to read aloud to (someone)", "ipa": "məmbaˈtʃakan", "pos": "verb" }
+    }
+  },
+  {
+    "id": "id-0183",
+    "rating": 5,
+    "issue": "Register: 'pada akhir pekan' is written-style; conversational Indonesian drops 'pada' or uses 'di' for time expressions (the deck itself drops it in id-0148/id-0149).",
+    "fix": {
+      "target": "Kami membersihkan rumah di akhir pekan.",
+      "english": "We clean the house on the weekend.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0184",
+    "rating": 4,
+    "issue": "'memulai pekerjaan' is report-speak (bureaucratese) for a daily-routine card; conversational Indonesian is 'mulai kerja / mulai bekerja' (compare the deck's own id-0139 'Saya mulai kerja jam delapan pagi').",
+    "fix": {
+      "target": "Saya mulai bekerja jam sembilan pagi.",
+      "english": "I start work at nine in the morning.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0190",
+    "rating": 5,
+    "issue": "Register: 'pada hari kerja' is stiff written style; conversation uses 'di hari kerja' or 'kalau hari kerja'.",
+    "fix": {
+      "target": "Kami tidur lebih awal di hari kerja.",
+      "english": "We sleep earlier on workdays.",
+      "grammar": null
+    }
+  }
+]

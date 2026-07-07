@@ -1,0 +1,79 @@
+[
+  {
+    "id": "id-0213",
+    "rating": 4,
+    "issue": "memberi + thing without a recipient is prescriptively off: memberi takes the recipient (memberi saya harga), memberikan takes the thing given (memberikan harga khusus). As written it models the wrong valency for beginners.",
+    "fix": {
+      "target": "Penjual itu memberi saya harga khusus.",
+      "english": "That seller gives me a special price.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0219",
+    "rating": 5,
+    "issue": "Unnatural collocation: indah is for scenery/abstract beauty (pemandangan indah); for cloth a native says batik yang cantik/bagus. Slightly brochure-stiff for a conversational Q1/Q2 card.",
+    "fix": {
+      "target": "Dia menjual kain batik yang cantik.",
+      "english": "She sells beautiful batik cloth.",
+      "grammar": null
+    },
+    "newTokens": {
+      "cantik": {
+        "en": "pretty, beautiful (of things and people)",
+        "ipa": "ˈtʃantɪʔ",
+        "pos": "adjective"
+      }
+    }
+  },
+  {
+    "id": "id-0232",
+    "rating": 4,
+    "issue": "Possession: 'anak dia' is marked/contrastive; the neutral third-person possessive natives actually produce is anaknya. Card should model -nya, which the deck itself teaches at id-0237.",
+    "fix": {
+      "target": "Anaknya sudah besar sekarang.",
+      "english": "Her child is already big now.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0234",
+    "rating": 4,
+    "issue": "Same possession problem as id-0232: 'istri dia' is stilted; neutral conversational Indonesian is istrinya. 'Noun + dia' should not be the modeled form for beginners.",
+    "fix": {
+      "target": "Istrinya orang Bali.",
+      "english": "His wife is Balinese.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0238",
+    "rating": 3,
+    "issue": "Tip misleads: it teaches attributive adjective order (rumah besar = big house), but in this sentence besar is a PREDICATE ('the house IS big'), not a modifier. A learner will misparse 'Rumahnya besar' as 'the big house'. Sentence itself is fine; tip must match the construction.",
+    "fix": {
+      "target": "Rumahnya besar dan bersih.",
+      "english": "His house is big and clean.",
+      "grammar": "No word for 'is' before adjectives: Rumahnya besar = His house (is) big."
+    }
+  },
+  {
+    "id": "id-0289",
+    "rating": 5,
+    "issue": "Register mismatch: kepada is formal-written; talking about emailing 'bos' (informal noun) a speaker says ke bos. Minor stiffness in a Q1/Q2 conversational card.",
+    "fix": {
+      "target": "Saya sudah mengirim email ke bos.",
+      "english": "I have already sent an email to the boss.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0294",
+    "rating": 4,
+    "issue": "Tip contains a wrong literal analysis: glossing jalan kaki as 'lit. road foot' misteaches — jalan here is the verb 'walk', not the noun 'road'. Factually misleading etymology in a tip.",
+    "fix": {
+      "target": "Saya jalan kaki ke pasar setiap pagi.",
+      "english": "I walk to the market every morning.",
+      "grammar": "jalan kaki = go on foot: Saya jalan kaki ke pasar = I walk to the market."
+    }
+  }
+]

@@ -1,1 +1,3694 @@
-[]
+[
+ {
+  "id": "id-0001",
+  "target": "Selamat pagi! Apa kabar?",
+  "english": "Good morning! How are you?",
+  "audio": "id-id-0001.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 1,
+  "grammar": "Apa kabar? is literally 'what news?' — the everyday 'how are you?'. Reply: Kabar baik."
+ },
+ {
+  "id": "id-0002",
+  "target": "Selamat siang, Bu Sari.",
+  "english": "Good day, Mrs. Sari.",
+  "audio": "id-id-0002.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 2,
+  "grammar": "Bu (short for Ibu) is the polite title for a woman: Selamat siang, Bu Sari."
+ },
+ {
+  "id": "id-0003",
+  "target": "Selamat sore, Pak Budi.",
+  "english": "Good afternoon, Mr. Budi.",
+  "audio": "id-id-0003.mp3",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 3
+ },
+ {
+  "id": "id-0004",
+  "target": "Selamat malam, semuanya.",
+  "english": "Good evening, everyone.",
+  "audio": "id-id-0004.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 4
+ },
+ {
+  "id": "id-0005",
+  "target": "Kabar baik, terima kasih.",
+  "english": "I'm fine, thank you.",
+  "audio": "id-id-0005.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 5
+ },
+ {
+  "id": "id-0006",
+  "target": "Halo, senang bertemu dengan kamu.",
+  "english": "Hello, nice to meet you.",
+  "audio": "id-id-0006.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 6,
+  "grammar": "bertemu = ber- + temu (meet): Senang bertemu dengan kamu = nice to meet you."
+ },
+ {
+  "id": "id-0007",
+  "target": "Sampai jumpa besok!",
+  "english": "See you tomorrow!",
+  "audio": "id-id-0007.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 7
+ },
+ {
+  "id": "id-0008",
+  "target": "Selamat tinggal, Pak.",
+  "english": "Goodbye, sir.",
+  "audio": "id-id-0008.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 8,
+  "grammar": "Selamat tinggal is a final goodbye; for 'see you later' say Sampai jumpa."
+ },
+ {
+  "id": "id-0009",
+  "target": "Selamat datang di rumah kami.",
+  "english": "Welcome to our house.",
+  "audio": "id-id-0009.mp3",
+  "tags": [
+   "general",
+   "family",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 9
+ },
+ {
+  "id": "id-0010",
+  "target": "Apa kabar keluarga kamu?",
+  "english": "How is your family?",
+  "audio": "id-id-0010.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 10
+ },
+ {
+  "id": "id-0011",
+  "target": "Nama saya Andi.",
+  "english": "My name is Andi.",
+  "audio": "id-id-0011.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 11,
+  "grammar": "Indonesian drops 'is' in simple sentences: Nama saya Andi = My name (is) Andi."
+ },
+ {
+  "id": "id-0012",
+  "target": "Siapa nama kamu?",
+  "english": "What is your name?",
+  "audio": "id-id-0012.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 12
+ },
+ {
+  "id": "id-0013",
+  "target": "Saya dari Inggris.",
+  "english": "I am from England.",
+  "audio": "id-id-0013.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 13
+ },
+ {
+  "id": "id-0014",
+  "target": "Kamu tinggal di mana?",
+  "english": "Where do you live?",
+  "audio": "id-id-0014.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 14,
+  "grammar": "di mana = where; question words often sit at the end: Kamu tinggal di mana?"
+ },
+ {
+  "id": "id-0015",
+  "target": "Saya tinggal di Jakarta.",
+  "english": "I live in Jakarta.",
+  "audio": "id-id-0015.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 15
+ },
+ {
+  "id": "id-0016",
+  "target": "Perkenalkan, ini istri saya.",
+  "english": "Let me introduce you, this is my wife.",
+  "audio": "id-id-0016.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 16,
+  "grammar": "Perkenalkan opens an introduction: Perkenalkan, ini istri saya = meet my wife."
+ },
+ {
+  "id": "id-0017",
+  "target": "Senang berkenalan dengan Anda.",
+  "english": "Pleased to make your acquaintance.",
+  "audio": "id-id-0017.mp3",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 17
+ },
+ {
+  "id": "id-0018",
+  "target": "Saya bekerja di rumah sakit.",
+  "english": "I work at a hospital.",
+  "audio": "id-id-0018.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 18,
+  "grammar": "bekerja = ber- + kerja (work): Saya bekerja di rumah sakit = I work at a hospital."
+ },
+ {
+  "id": "id-0019",
+  "target": "Dia teman saya dari kantor.",
+  "english": "He is my friend from the office.",
+  "audio": "id-id-0019.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 19
+ },
+ {
+  "id": "id-0020",
+  "target": "Ini kartu nama saya.",
+  "english": "This is my business card.",
+  "audio": "id-id-0020.mp3",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 20
+ },
+ {
+  "id": "id-0021",
+  "target": "Saya guru bahasa Inggris.",
+  "english": "I am an English teacher.",
+  "audio": "id-id-0021.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 21,
+  "grammar": "No word for 'am/is' before nouns: Saya guru = I am a teacher."
+ },
+ {
+  "id": "id-0022",
+  "target": "Kamu murid baru, ya?",
+  "english": "You are a new student, right?",
+  "audio": "id-id-0022.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 22
+ },
+ {
+  "id": "id-0023",
+  "target": "Pak Budi manajer kami.",
+  "english": "Mr. Budi is our manager.",
+  "audio": "id-id-0023.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 23
+ },
+ {
+  "id": "id-0024",
+  "target": "Dia adik saya.",
+  "english": "He is my younger sibling.",
+  "audio": "id-id-0024.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 24,
+  "grammar": "In conversation just drop 'is': Dia adik saya. adalah sounds formal, like a definition."
+ },
+ {
+  "id": "id-0025",
+  "target": "Kami dari Australia.",
+  "english": "We are from Australia.",
+  "audio": "id-id-0025.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 25
+ },
+ {
+  "id": "id-0026",
+  "target": "Kita teman sekarang.",
+  "english": "We are friends now.",
+  "audio": "id-id-0026.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 26,
+  "grammar": "kita includes the listener, kami excludes them: kita pergi (you too) / kami pergi (not you)."
+ },
+ {
+  "id": "id-0027",
+  "target": "Mereka turis dari Jepang.",
+  "english": "They are tourists from Japan.",
+  "audio": "id-id-0027.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 27
+ },
+ {
+  "id": "id-0028",
+  "target": "Bahasa Indonesia adalah bahasa nasional.",
+  "english": "Indonesian is the national language.",
+  "audio": "id-id-0028.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 28
+ },
+ {
+  "id": "id-0029",
+  "target": "Kami tinggal bersama di Bandung.",
+  "english": "We live together in Bandung.",
+  "audio": "id-id-0029.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 29
+ },
+ {
+  "id": "id-0030",
+  "target": "Mereka datang dari Surabaya.",
+  "english": "They came from Surabaya.",
+  "audio": "id-id-0030.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 30
+ },
+ {
+  "id": "id-0031",
+  "target": "Ini rumah orang tua saya.",
+  "english": "This is my parents' house.",
+  "audio": "id-id-0031.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 31,
+  "grammar": "ini before a noun = 'this is'; after it = 'this': ini rumah (this is a house) / rumah ini (this house)."
+ },
+ {
+  "id": "id-0032",
+  "target": "Itu kantor pos.",
+  "english": "That is the post office.",
+  "audio": "id-id-0032.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 32
+ },
+ {
+  "id": "id-0033",
+  "target": "Ini paspor saya.",
+  "english": "This is my passport.",
+  "audio": "id-id-0033.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 33
+ },
+ {
+  "id": "id-0034",
+  "target": "Itu hotel kami.",
+  "english": "That is our hotel.",
+  "audio": "id-id-0034.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 34
+ },
+ {
+  "id": "id-0035",
+  "target": "Ini suami saya, namanya Tono.",
+  "english": "This is my husband, his name is Tono.",
+  "audio": "id-id-0035.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 35
+ },
+ {
+  "id": "id-0036",
+  "target": "Itu anak-anak mereka.",
+  "english": "Those are their children.",
+  "audio": "id-id-0036.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 36
+ },
+ {
+  "id": "id-0037",
+  "target": "Terima kasih banyak, Pak!",
+  "english": "Thank you very much, sir!",
+  "audio": "id-id-0037.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 37
+ },
+ {
+  "id": "id-0038",
+  "target": "Sama-sama, Bu.",
+  "english": "You're welcome, ma'am.",
+  "audio": "id-id-0038.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 38,
+  "grammar": "Sama-sama ('same-same') is the standard reply to terima kasih."
+ },
+ {
+  "id": "id-0039",
+  "target": "Permisi, saya mau lewat.",
+  "english": "Excuse me, I want to get past.",
+  "audio": "id-id-0039.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 39
+ },
+ {
+  "id": "id-0040",
+  "target": "Maaf, saya datang terlambat.",
+  "english": "Sorry, I arrived late.",
+  "audio": "id-id-0040.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 40
+ },
+ {
+  "id": "id-0041",
+  "target": "Saya tidak lapar sekarang.",
+  "english": "I am not hungry now.",
+  "audio": "id-id-0041.mp3",
+  "tags": [
+   "general",
+   "family",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 41,
+  "grammar": "tidak negates verbs/adjectives, bukan negates nouns: Saya tidak lapar. / Ini bukan rumah saya."
+ },
+ {
+  "id": "id-0042",
+  "target": "Dia tidak suka kopi.",
+  "english": "He does not like coffee.",
+  "audio": "id-id-0042.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 42
+ },
+ {
+  "id": "id-0043",
+  "target": "Kami tidak punya mobil.",
+  "english": "We do not have a car.",
+  "audio": "id-id-0043.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 43
+ },
+ {
+  "id": "id-0044",
+  "target": "Ini bukan tas saya.",
+  "english": "This is not my bag.",
+  "audio": "id-id-0044.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 44
+ },
+ {
+  "id": "id-0045",
+  "target": "Dia bukan guru, dia dokter.",
+  "english": "He is not a teacher, he is a doctor.",
+  "audio": "id-id-0045.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 45,
+  "grammar": "bukan can correct a noun: Dia bukan guru, dia dokter = not a teacher but a doctor."
+ },
+ {
+  "id": "id-0046",
+  "target": "Itu bukan masalah besar.",
+  "english": "That is not a big problem.",
+  "audio": "id-id-0046.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 46
+ },
+ {
+  "id": "id-0047",
+  "target": "Saya bukan orang Jepang.",
+  "english": "I am not Japanese.",
+  "audio": "id-id-0047.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 47
+ },
+ {
+  "id": "id-0048",
+  "target": "Mereka tidak bekerja hari ini.",
+  "english": "They are not working today.",
+  "audio": "id-id-0048.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 48
+ },
+ {
+  "id": "id-0049",
+  "target": "Anak itu tidak mau tidur.",
+  "english": "That child does not want to sleep.",
+  "audio": "id-id-0049.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 49
+ },
+ {
+  "id": "id-0050",
+  "target": "Rumah ini tidak besar.",
+  "english": "This house is not big.",
+  "audio": "id-id-0050.mp3",
+  "tags": [
+   "general",
+   "family",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 50
+ },
+ {
+  "id": "id-0051",
+  "target": "Ibu saya bukan orang Bali.",
+  "english": "My mother is not from Bali.",
+  "audio": "id-id-0051.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 51
+ },
+ {
+  "id": "id-0052",
+  "target": "Kopi ini tidak panas.",
+  "english": "This coffee is not hot.",
+  "audio": "id-id-0052.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 52
+ },
+ {
+  "id": "id-0053",
+  "target": "Saya tidak tahu jalan itu.",
+  "english": "I do not know that road.",
+  "audio": "id-id-0053.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 53
+ },
+ {
+  "id": "id-0054",
+  "target": "Itu bukan kunci kamar saya.",
+  "english": "That is not my room key.",
+  "audio": "id-id-0054.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 54
+ },
+ {
+  "id": "id-0055",
+  "target": "Kami bukan turis, kami tinggal di sini.",
+  "english": "We are not tourists, we live here.",
+  "audio": "id-id-0055.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 55
+ },
+ {
+  "id": "id-0056",
+  "target": "Saya tidak bisa datang besok.",
+  "english": "I cannot come tomorrow.",
+  "audio": "id-id-0056.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 56,
+  "grammar": "bisa = can: Saya tidak bisa datang = I cannot come."
+ },
+ {
+  "id": "id-0057",
+  "target": "Dia tidak minum teh.",
+  "english": "He does not drink tea.",
+  "audio": "id-id-0057.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 57
+ },
+ {
+  "id": "id-0058",
+  "target": "Apakah kamu suka makanan pedas?",
+  "english": "Do you like spicy food?",
+  "audio": "id-id-0058.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 58,
+  "grammar": "Apakah turns a statement into a yes/no question: Kamu suka kopi. → Apakah kamu suka kopi?"
+ },
+ {
+  "id": "id-0059",
+  "target": "Apakah masih ada kamar kosong?",
+  "english": "Are there still any rooms available?",
+  "audio": "id-id-0059.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 59
+ },
+ {
+  "id": "id-0060",
+  "target": "Apakah dia kakak kamu?",
+  "english": "Is she your older sibling?",
+  "audio": "id-id-0060.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 60
+ },
+ {
+  "id": "id-0061",
+  "target": "Apakah bus ini pergi ke bandara?",
+  "english": "Does this bus go to the airport?",
+  "audio": "id-id-0061.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 61
+ },
+ {
+  "id": "id-0062",
+  "target": "Apakah Anda bisa membantu saya?",
+  "english": "Can you help me?",
+  "audio": "id-id-0062.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 62,
+  "grammar": "membantu = mem- + bantu (help); meN- makes the active verb."
+ },
+ {
+  "id": "id-0063",
+  "target": "Apakah kantor buka hari Sabtu?",
+  "english": "Is the office open on Saturday?",
+  "audio": "id-id-0063.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 63
+ },
+ {
+  "id": "id-0064",
+  "target": "Apakah ini kereta ke Bogor?",
+  "english": "Is this the train to Bogor?",
+  "audio": "id-id-0064.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 64
+ },
+ {
+  "id": "id-0065",
+  "target": "Apakah kamu sudah makan?",
+  "english": "Have you eaten yet?",
+  "audio": "id-id-0065.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 65,
+  "grammar": "sudah = already: Apakah kamu sudah makan? = Have you eaten (yet)?"
+ },
+ {
+  "id": "id-0066",
+  "target": "Kamu orang Indonesia?",
+  "english": "Are you Indonesian?",
+  "audio": "id-id-0066.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 66,
+  "grammar": "In speech a rising tone alone makes a yes/no question: Kamu orang Indonesia?"
+ },
+ {
+  "id": "id-0067",
+  "target": "Dia datang besok?",
+  "english": "Is he coming tomorrow?",
+  "audio": "id-id-0067.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 67
+ },
+ {
+  "id": "id-0068",
+  "target": "Ini tempat duduk saya?",
+  "english": "Is this my seat?",
+  "audio": "id-id-0068.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 68
+ },
+ {
+  "id": "id-0069",
+  "target": "Anda bekerja di sini?",
+  "english": "Do you work here?",
+  "audio": "id-id-0069.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 69
+ },
+ {
+  "id": "id-0070",
+  "target": "Apa itu, Pak?",
+  "english": "What is that, sir?",
+  "audio": "id-id-0070.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 70
+ },
+ {
+  "id": "id-0071",
+  "target": "Kamu mau minum apa?",
+  "english": "What do you want to drink?",
+  "audio": "id-id-0071.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 71,
+  "grammar": "apa can sit at the end: Kamu mau minum apa? = What do you want to drink?"
+ },
+ {
+  "id": "id-0072",
+  "target": "Apa nama jalan ini?",
+  "english": "What is the name of this street?",
+  "audio": "id-id-0072.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 72
+ },
+ {
+  "id": "id-0073",
+  "target": "Siapa nama anak kamu?",
+  "english": "What is your child's name?",
+  "audio": "id-id-0073.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 73,
+  "grammar": "Asking a name uses siapa (who), not apa: Siapa nama kamu? = What is your name?"
+ },
+ {
+  "id": "id-0074",
+  "target": "Siapa itu di depan pintu?",
+  "english": "Who is that at the front door?",
+  "audio": "id-id-0074.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 74
+ },
+ {
+  "id": "id-0075",
+  "target": "Siapa manajer kamu di kantor?",
+  "english": "Who is your manager at the office?",
+  "audio": "id-id-0075.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 75
+ },
+ {
+  "id": "id-0076",
+  "target": "Saya sudah makan siang di kantor.",
+  "english": "I already ate lunch at the office.",
+  "audio": "id-id-0076.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 76,
+  "grammar": "sudah marks completion — no past tense needed: Saya sudah makan. (I already ate.)"
+ },
+ {
+  "id": "id-0077",
+  "target": "Kami sudah tiba di hotel.",
+  "english": "We have already arrived at the hotel.",
+  "audio": "id-id-0077.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 77
+ },
+ {
+  "id": "id-0078",
+  "target": "Ibu sudah bangun sejak jam lima pagi.",
+  "english": "Mom has been up since five in the morning.",
+  "audio": "id-id-0078.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 78
+ },
+ {
+  "id": "id-0079",
+  "target": "Dia sudah selesai bekerja hari ini.",
+  "english": "He has already finished working today.",
+  "audio": "id-id-0079.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 79
+ },
+ {
+  "id": "id-0080",
+  "target": "Apakah kamu sudah minum kopi?",
+  "english": "Have you already had coffee?",
+  "audio": "id-id-0080.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 80,
+  "grammar": "Answer a sudah question with the marker itself: Sudah. (Already.) or Belum. (Not yet.)"
+ },
+ {
+  "id": "id-0081",
+  "target": "Anak-anak sudah tidur di kamar.",
+  "english": "The children are already asleep in the bedroom.",
+  "audio": "id-id-0081.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 81
+ },
+ {
+  "id": "id-0082",
+  "target": "Kereta sudah tiba di stasiun.",
+  "english": "The train has already arrived at the station.",
+  "audio": "id-id-0082.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 82
+ },
+ {
+  "id": "id-0083",
+  "target": "Saya belum sarapan pagi ini.",
+  "english": "I have not had breakfast yet this morning.",
+  "audio": "id-id-0083.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 83,
+  "grammar": "belum = not yet — expected to happen later: Saya belum makan. (I have not eaten yet.)"
+ },
+ {
+  "id": "id-0084",
+  "target": "Ayah belum pulang dari kantor.",
+  "english": "Dad has not come home from the office yet.",
+  "audio": "id-id-0084.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 84
+ },
+ {
+  "id": "id-0085",
+  "target": "Kami belum membeli tiket pesawat.",
+  "english": "We have not bought the plane tickets yet.",
+  "audio": "id-id-0085.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 85
+ },
+ {
+  "id": "id-0086",
+  "target": "Dia belum selesai mencuci piring.",
+  "english": "She has not finished washing the dishes yet.",
+  "audio": "id-id-0086.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 86
+ },
+ {
+  "id": "id-0087",
+  "target": "Kamu belum tidur?",
+  "english": "You're not asleep yet?",
+  "audio": "id-id-0087.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 87
+ },
+ {
+  "id": "id-0088",
+  "target": "Saya belum menerima jawaban dari mereka.",
+  "english": "I have not received an answer from them yet.",
+  "audio": "id-id-0088.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 88
+ },
+ {
+  "id": "id-0089",
+  "target": "Ibu sedang memasak di dapur.",
+  "english": "Mom is cooking in the kitchen.",
+  "audio": "id-id-0089.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 89,
+  "grammar": "sedang marks action in progress: Ibu sedang memasak. (Mom is cooking right now.)"
+ },
+ {
+  "id": "id-0090",
+  "target": "Saya sedang menunggu bus di halte.",
+  "english": "I am waiting for the bus at the stop.",
+  "audio": "id-id-0090.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 90
+ },
+ {
+  "id": "id-0091",
+  "target": "Mereka sedang makan malam bersama.",
+  "english": "They are having dinner together.",
+  "audio": "id-id-0091.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 91
+ },
+ {
+  "id": "id-0092",
+  "target": "Adik sedang belajar untuk ujian besok.",
+  "english": "My younger sibling is studying for tomorrow's exam.",
+  "audio": "id-id-0092.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 92,
+  "grammar": "untuk = for (purpose): belajar untuk ujian (study for the exam)"
+ },
+ {
+  "id": "id-0093",
+  "target": "Kami sedang mengerjakan proyek baru.",
+  "english": "We are working on a new project.",
+  "audio": "id-id-0093.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 93
+ },
+ {
+  "id": "id-0094",
+  "target": "Dia sedang berbicara dengan tamu.",
+  "english": "He is speaking with a guest.",
+  "audio": "id-id-0094.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 94
+ },
+ {
+  "id": "id-0095",
+  "target": "Saya akan pergi ke pasar besok pagi.",
+  "english": "I will go to the market tomorrow morning.",
+  "audio": "id-id-0095.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 95,
+  "grammar": "akan marks the future — the verb never changes: Saya akan pergi. (I will go.)"
+ },
+ {
+  "id": "id-0096",
+  "target": "Kami akan datang ke rumah kamu nanti malam.",
+  "english": "We will come to your house tonight.",
+  "audio": "id-id-0096.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 96
+ },
+ {
+  "id": "id-0097",
+  "target": "Dia akan mulai pekerjaan baru bulan depan.",
+  "english": "She will start a new job next month.",
+  "audio": "id-id-0097.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 97
+ },
+ {
+  "id": "id-0098",
+  "target": "Pesawat akan tiba sebentar lagi.",
+  "english": "The plane will arrive shortly.",
+  "audio": "id-id-0098.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 98
+ },
+ {
+  "id": "id-0099",
+  "target": "Saya akan membayar dengan uang tunai.",
+  "english": "I will pay with cash.",
+  "audio": "id-id-0099.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 99
+ },
+ {
+  "id": "id-0100",
+  "target": "Mereka akan menjual rumah itu tahun depan.",
+  "english": "They will sell that house next year.",
+  "audio": "id-id-0100.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 100
+ },
+ {
+  "id": "id-0101",
+  "target": "Saya baru saja bangun tidur.",
+  "english": "I just woke up.",
+  "audio": "id-id-0101.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 101,
+  "grammar": "baru saja = just now: Saya baru saja bangun. (I just woke up.)"
+ },
+ {
+  "id": "id-0102",
+  "target": "Tamu itu baru saja pergi.",
+  "english": "That guest just left.",
+  "audio": "id-id-0102.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 102
+ },
+ {
+  "id": "id-0103",
+  "target": "Kami baru saja selesai makan malam.",
+  "english": "We just finished dinner.",
+  "audio": "id-id-0103.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 103
+ },
+ {
+  "id": "id-0104",
+  "target": "Bus ke bandara baru saja berangkat.",
+  "english": "The bus to the airport just left.",
+  "audio": "id-id-0104.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 104
+ },
+ {
+  "id": "id-0105",
+  "target": "Dia baru saja mengirim email itu.",
+  "english": "He just sent that email.",
+  "audio": "id-id-0105.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 105
+ },
+ {
+  "id": "id-0106",
+  "target": "Saya masih menunggu di depan toko.",
+  "english": "I am still waiting in front of the store.",
+  "audio": "id-id-0106.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 106
+ },
+ {
+  "id": "id-0107",
+  "target": "Ayah masih bekerja di kantor.",
+  "english": "Dad is still working at the office.",
+  "audio": "id-id-0107.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 107,
+  "grammar": "masih = still, the action continues: Dia masih bekerja. (He is still working.)"
+ },
+ {
+  "id": "id-0108",
+  "target": "Kopi ini masih panas.",
+  "english": "This coffee is still hot.",
+  "audio": "id-id-0108.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 108
+ },
+ {
+  "id": "id-0109",
+  "target": "Kami masih punya waktu satu jam.",
+  "english": "We still have one hour.",
+  "audio": "id-id-0109.mp3",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 109
+ },
+ {
+  "id": "id-0110",
+  "target": "Toko itu masih buka sekarang.",
+  "english": "That store is still open now.",
+  "audio": "id-id-0110.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 110
+ },
+ {
+  "id": "id-0111",
+  "target": "Saya pernah pergi ke Bali dua kali.",
+  "english": "I have been to Bali twice.",
+  "audio": "id-id-0111.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 111,
+  "grammar": "pernah = have ever done at least once: Saya pernah ke Bali. (I have been to Bali.)"
+ },
+ {
+  "id": "id-0112",
+  "target": "Apakah kamu pernah makan sate?",
+  "english": "Have you ever eaten satay?",
+  "audio": "id-id-0112.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 112
+ },
+ {
+  "id": "id-0113",
+  "target": "Dia belum pernah naik pesawat.",
+  "english": "He has never been on a plane.",
+  "audio": "id-id-0113.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 113,
+  "grammar": "belum pernah = never so far: Dia belum pernah naik pesawat. (He has never flown.)"
+ },
+ {
+  "id": "id-0114",
+  "target": "Kami pernah tinggal di Jakarta.",
+  "english": "We once lived in Jakarta.",
+  "audio": "id-id-0114.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 114
+ },
+ {
+  "id": "id-0115",
+  "target": "Ibu pernah bekerja di rumah sakit.",
+  "english": "Mom once worked at a hospital.",
+  "audio": "id-id-0115.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 115
+ },
+ {
+  "id": "id-0116",
+  "target": "Permisi, di mana kamar mandi?",
+  "english": "Excuse me, where is the bathroom?",
+  "audio": "id-id-0116.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 116,
+  "grammar": "di mana asks where something is: Di mana kamar mandi? (Where is the bathroom?)"
+ },
+ {
+  "id": "id-0117",
+  "target": "Kamu tinggal di mana sekarang?",
+  "english": "Where do you live now?",
+  "audio": "id-id-0117.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 117
+ },
+ {
+  "id": "id-0118",
+  "target": "Ke mana kamu pergi hari ini?",
+  "english": "Where are you going today?",
+  "audio": "id-id-0118.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 118,
+  "grammar": "ke mana asks where to (motion): Ke mana kamu pergi? (Where are you going?)"
+ },
+ {
+  "id": "id-0119",
+  "target": "Bus ini ke mana?",
+  "english": "Where does this bus go?",
+  "audio": "id-id-0119.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 119,
+  "grammar": "Destination questions can drop the verb: Bus ini ke mana? (Where does this bus go?)"
+ },
+ {
+  "id": "id-0120",
+  "target": "Dari mana asal keluarga kamu?",
+  "english": "Where is your family from?",
+  "audio": "id-id-0120.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 120
+ },
+ {
+  "id": "id-0121",
+  "target": "Dari mana kamu tahu berita itu?",
+  "english": "Where did you hear that news from?",
+  "audio": "id-id-0121.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-04",
+  "priority": 121
+ },
+ {
+  "id": "id-0122",
+  "target": "Kapan kamu pulang ke rumah?",
+  "english": "When are you going home?",
+  "audio": "id-id-0122.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 122,
+  "grammar": "kapan = when: Kapan kamu pulang? (When are you going home?)"
+ },
+ {
+  "id": "id-0123",
+  "target": "Kapan toko ini buka lagi?",
+  "english": "When does this store open again?",
+  "audio": "id-id-0123.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 123
+ },
+ {
+  "id": "id-0124",
+  "target": "Kapan kita bertemu lagi?",
+  "english": "When will we meet again?",
+  "audio": "id-id-0124.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-04",
+  "priority": 124
+ },
+ {
+  "id": "id-0125",
+  "target": "Kapan kamu mulai kerja di kantor baru?",
+  "english": "When do you start work at the new office?",
+  "audio": "id-id-0125.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-04",
+  "priority": 125
+ },
+ {
+  "id": "id-0126",
+  "target": "Berapa harga tiket ini?",
+  "english": "How much is this ticket?",
+  "audio": "id-id-0126.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 126,
+  "grammar": "berapa asks how much or how many: Berapa harga tiket ini? (How much is this ticket?)"
+ },
+ {
+  "id": "id-0127",
+  "target": "Harga tiket masuk lima puluh ribu rupiah.",
+  "english": "The entrance ticket costs fifty thousand rupiah.",
+  "audio": "id-id-0127.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 127,
+  "grammar": "Tens stack simply: lima puluh = five tens = 50, dua puluh = 20."
+ },
+ {
+  "id": "id-0128",
+  "target": "Kopi ini harganya dua puluh lima ribu.",
+  "english": "This coffee costs twenty-five thousand.",
+  "audio": "id-id-0128.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 128
+ },
+ {
+  "id": "id-0129",
+  "target": "Berapa orang di keluarga kamu?",
+  "english": "How many people are in your family?",
+  "audio": "id-id-0129.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 129
+ },
+ {
+  "id": "id-0130",
+  "target": "Ada empat orang di keluarga saya.",
+  "english": "There are four people in my family.",
+  "audio": "id-id-0130.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 130,
+  "grammar": "ada = there is/are: Ada empat orang. (There are four people.)"
+ },
+ {
+  "id": "id-0131",
+  "target": "Saya mau beli tiga kilo beras.",
+  "english": "I want to buy three kilos of rice.",
+  "audio": "id-id-0131.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 131,
+  "grammar": "After mau, the bare root is natural in speech: mau beli = want to buy."
+ },
+ {
+  "id": "id-0132",
+  "target": "Berapa umur anak kamu sekarang?",
+  "english": "How old is your child now?",
+  "audio": "id-id-0132.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 132,
+  "grammar": "berapa umur = how old: Berapa umur anak kamu? (How old is your child?)"
+ },
+ {
+  "id": "id-0133",
+  "target": "Umur saya tiga puluh dua tahun.",
+  "english": "I am thirty-two years old.",
+  "audio": "id-id-0133.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 133
+ },
+ {
+  "id": "id-0134",
+  "target": "Kamar ini seratus ribu rupiah semalam.",
+  "english": "This room is one hundred thousand rupiah a night.",
+  "audio": "id-id-0134.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 134,
+  "grammar": "se- means one: seratus = one hundred, semalam = one night."
+ },
+ {
+  "id": "id-0135",
+  "target": "Kami butuh dua kamar untuk empat orang.",
+  "english": "We need two rooms for four people.",
+  "audio": "id-id-0135.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 135
+ },
+ {
+  "id": "id-0136",
+  "target": "Jam berapa sekarang di sana?",
+  "english": "What time is it there now?",
+  "audio": "id-id-0136.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-04",
+  "priority": 136,
+  "grammar": "jam berapa = what time: Jam berapa sekarang? (What time is it now?)"
+ },
+ {
+  "id": "id-0137",
+  "target": "Sekarang jam sembilan pagi.",
+  "english": "It is nine in the morning now.",
+  "audio": "id-id-0137.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 137,
+  "grammar": "Time of day follows the hour: jam sembilan pagi = 9 a.m., jam sembilan malam = 9 p.m."
+ },
+ {
+  "id": "id-0138",
+  "target": "Jam berapa kamu bangun setiap pagi?",
+  "english": "What time do you wake up every morning?",
+  "audio": "id-id-0138.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 138
+ },
+ {
+  "id": "id-0139",
+  "target": "Saya mulai kerja jam delapan pagi.",
+  "english": "I start work at eight in the morning.",
+  "audio": "id-id-0139.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-04",
+  "priority": 139
+ },
+ {
+  "id": "id-0140",
+  "target": "Kereta ke Bandung datang jam tiga sore.",
+  "english": "The train to Bandung arrives at three in the afternoon.",
+  "audio": "id-id-0140.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 140,
+  "grammar": "sore = late afternoon, about 3-6 p.m.: jam tiga sore = 3 p.m."
+ },
+ {
+  "id": "id-0141",
+  "target": "Kami makan malam jam tujuh.",
+  "english": "We eat dinner at seven o'clock.",
+  "audio": "id-id-0141.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 141
+ },
+ {
+  "id": "id-0142",
+  "target": "Pasar buka dari pagi sampai sore.",
+  "english": "The market is open from morning until late afternoon.",
+  "audio": "id-id-0142.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 142
+ },
+ {
+  "id": "id-0143",
+  "target": "Siang ini saya makan di rumah.",
+  "english": "This afternoon I am eating at home.",
+  "audio": "id-id-0143.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 143
+ },
+ {
+  "id": "id-0144",
+  "target": "Bagaimana kabar keluarga kamu?",
+  "english": "How is your family doing?",
+  "audio": "id-id-0144.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 144,
+  "grammar": "bagaimana = how: Bagaimana kabar kamu? (How are you?)"
+ },
+ {
+  "id": "id-0145",
+  "target": "Bagaimana cara pergi ke stasiun?",
+  "english": "How do I get to the station?",
+  "audio": "id-id-0145.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 145
+ },
+ {
+  "id": "id-0146",
+  "target": "Bagaimana cuaca di Jakarta hari ini?",
+  "english": "How is the weather in Jakarta today?",
+  "audio": "id-id-0146.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 146
+ },
+ {
+  "id": "id-0147",
+  "target": "Hari ini hari Senin, bukan?",
+  "english": "Today is Monday, isn't it?",
+  "audio": "id-id-0147.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 147,
+  "grammar": "Days take hari first: hari Senin = Monday, hari Sabtu = Saturday."
+ },
+ {
+  "id": "id-0148",
+  "target": "Kami pergi ke pantai hari Sabtu.",
+  "english": "We are going to the beach on Saturday.",
+  "audio": "id-id-0148.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 148
+ },
+ {
+  "id": "id-0149",
+  "target": "Saya tidak bekerja hari Minggu.",
+  "english": "I do not work on Sunday.",
+  "audio": "id-id-0149.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-04",
+  "priority": 149
+ },
+ {
+  "id": "id-0150",
+  "target": "Rapat itu hari Jumat jam sepuluh pagi.",
+  "english": "The meeting is on Friday at ten in the morning.",
+  "audio": "id-id-0150.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-04",
+  "priority": 150
+ },
+ {
+  "id": "id-0151",
+  "target": "Saya bangun pagi setiap hari.",
+  "english": "I wake up early every day.",
+  "audio": "id-id-0151.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-05",
+  "priority": 151
+ },
+ {
+  "id": "id-0152",
+  "target": "Dia mencuci muka di kamar mandi.",
+  "english": "She washes her face in the bathroom.",
+  "audio": "id-id-0152.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-05",
+  "priority": 152,
+  "grammar": "Before c, meN- becomes men-: cuci → mencuci (wash)."
+ },
+ {
+  "id": "id-0153",
+  "target": "Ibu memasak nasi goreng untuk sarapan.",
+  "english": "Mom cooks fried rice for breakfast.",
+  "audio": "id-id-0153.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 153,
+  "grammar": "Roots starting with m keep a simple me-: masak → memasak (cook)."
+ },
+ {
+  "id": "id-0154",
+  "target": "Kami sarapan bersama di dapur.",
+  "english": "We have breakfast together in the kitchen.",
+  "audio": "id-id-0154.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 154
+ },
+ {
+  "id": "id-0155",
+  "target": "Saya menulis catatan di buku kecil.",
+  "english": "I write notes in a small book.",
+  "audio": "id-id-0155.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-05",
+  "priority": 155,
+  "grammar": "Before t, meN- becomes men- and the t drops: tulis → menulis (write)."
+ },
+ {
+  "id": "id-0156",
+  "target": "Ayah membaca koran setiap pagi.",
+  "english": "Dad reads the newspaper every morning.",
+  "audio": "id-id-0156.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 156,
+  "grammar": "Before b, meN- becomes mem- and the b stays: baca → membaca (read)."
+ },
+ {
+  "id": "id-0157",
+  "target": "Saya membeli kopi sebelum bekerja.",
+  "english": "I buy coffee before working.",
+  "audio": "id-id-0157.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-05",
+  "priority": 157
+ },
+ {
+  "id": "id-0158",
+  "target": "Dia bekerja di kantor sampai sore.",
+  "english": "He works at the office until late afternoon.",
+  "audio": "id-id-0158.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-05",
+  "priority": 158
+ },
+ {
+  "id": "id-0159",
+  "target": "Kakak menonton televisi setelah makan malam.",
+  "english": "My older sibling watches television after dinner.",
+  "audio": "id-id-0159.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 159
+ },
+ {
+  "id": "id-0160",
+  "target": "Saya tidur jam sepuluh malam.",
+  "english": "I sleep at ten at night.",
+  "audio": "id-id-0160.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-05",
+  "priority": 160
+ },
+ {
+  "id": "id-0161",
+  "target": "Setiap pagi saya mandi air dingin.",
+  "english": "Every morning I bathe with cold water.",
+  "audio": "id-id-0161.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-05",
+  "priority": 161
+ },
+ {
+  "id": "id-0162",
+  "target": "Dia menyapu lantai sebelum berangkat.",
+  "english": "She sweeps the floor before leaving.",
+  "audio": "id-id-0162.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-05",
+  "priority": 162,
+  "grammar": "Before s, meN- becomes meny- and the s drops: sapu → menyapu (sweep)."
+ },
+ {
+  "id": "id-0163",
+  "target": "Saya mengambil handuk dari lemari.",
+  "english": "I take a towel from the cupboard.",
+  "audio": "id-id-0163.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-05",
+  "priority": 163,
+  "grammar": "Vowel-first roots take meng-: ambil → mengambil (take)."
+ },
+ {
+  "id": "id-0164",
+  "target": "Ibu mencuci baju setiap hari Sabtu.",
+  "english": "Mom washes clothes every Saturday.",
+  "audio": "id-id-0164.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 164
+ },
+ {
+  "id": "id-0165",
+  "target": "Saya sedang membaca buku baru.",
+  "english": "I am reading a new book.",
+  "audio": "id-id-0165.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-05",
+  "priority": 165,
+  "grammar": "sedang marks an action happening right now: sedang membaca = is reading."
+ },
+ {
+  "id": "id-0166",
+  "target": "Adik menulis surat untuk teman.",
+  "english": "My younger sibling writes a letter to a friend.",
+  "audio": "id-id-0166.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 166
+ },
+ {
+  "id": "id-0167",
+  "target": "Kami memasak makan malam bersama.",
+  "english": "We cook dinner together.",
+  "audio": "id-id-0167.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 167
+ },
+ {
+  "id": "id-0168",
+  "target": "Saya minum teh hangat pagi ini.",
+  "english": "I drink warm tea this morning.",
+  "audio": "id-id-0168.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-05",
+  "priority": 168
+ },
+ {
+  "id": "id-0169",
+  "target": "Dia sudah bangun sebelum matahari terbit.",
+  "english": "He already woke up before sunrise.",
+  "audio": "id-id-0169.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-05",
+  "priority": 169,
+  "grammar": "sudah marks a finished action: sudah bangun = already woke up."
+ },
+ {
+  "id": "id-0170",
+  "target": "Saya menutup jendela sebelum tidur.",
+  "english": "I close the window before sleeping.",
+  "audio": "id-id-0170.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-05",
+  "priority": 170,
+  "grammar": "sebelum (before) takes a verb directly: sebelum tidur = before sleeping."
+ },
+ {
+  "id": "id-0171",
+  "target": "Ayah membuka toko jam delapan pagi.",
+  "english": "Dad opens the shop at eight in the morning.",
+  "audio": "id-id-0171.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 171
+ },
+ {
+  "id": "id-0172",
+  "target": "Saya mendengarkan musik sambil memasak.",
+  "english": "I listen to music while cooking.",
+  "audio": "id-id-0172.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-05",
+  "priority": 172,
+  "grammar": "sambil = while (one person, two actions): makan sambil membaca = eat while reading."
+ },
+ {
+  "id": "id-0173",
+  "target": "Setelah kerja saya langsung pulang.",
+  "english": "After work I go straight home.",
+  "audio": "id-id-0173.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-05",
+  "priority": 173,
+  "grammar": "langsung means straight away: langsung pulang = go straight home."
+ },
+ {
+  "id": "id-0174",
+  "target": "Kakak sedang mencuci piring di dapur.",
+  "english": "My older sibling is washing dishes in the kitchen.",
+  "audio": "id-id-0174.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 174
+ },
+ {
+  "id": "id-0175",
+  "target": "Saya memakai baju kerja setiap hari Senin.",
+  "english": "I wear work clothes every Monday.",
+  "audio": "id-id-0175.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-05",
+  "priority": 175
+ },
+ {
+  "id": "id-0176",
+  "target": "Dia membawa bekal ke kantor.",
+  "english": "She brings packed food to the office.",
+  "audio": "id-id-0176.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-05",
+  "priority": 176
+ },
+ {
+  "id": "id-0177",
+  "target": "Saya menonton berita sebelum berangkat kerja.",
+  "english": "I watch the news before leaving for work.",
+  "audio": "id-id-0177.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-05",
+  "priority": 177
+ },
+ {
+  "id": "id-0178",
+  "target": "Anak-anak belajar setelah makan siang.",
+  "english": "The children study after lunch.",
+  "audio": "id-id-0178.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 178
+ },
+ {
+  "id": "id-0179",
+  "target": "Saya mengirim pesan ke teman kerja.",
+  "english": "I send a message to a coworker.",
+  "audio": "id-id-0179.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-05",
+  "priority": 179
+ },
+ {
+  "id": "id-0180",
+  "target": "Ibu membangunkan adik jam enam pagi.",
+  "english": "Mom wakes my younger sibling at six in the morning.",
+  "audio": "id-id-0180.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 180,
+  "grammar": "-kan makes a verb act on someone: bangun (wake up) → membangunkan (wake someone up)."
+ },
+ {
+  "id": "id-0181",
+  "target": "Saya menulis daftar belanja untuk besok.",
+  "english": "I write a shopping list for tomorrow.",
+  "audio": "id-id-0181.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-05",
+  "priority": 181
+ },
+ {
+  "id": "id-0182",
+  "target": "Dia membacakan cerita untuk anaknya setiap malam.",
+  "english": "She reads her child a story every night.",
+  "audio": "id-id-0182.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 182,
+  "grammar": "-kan can mean doing it for someone: membaca (read) → membacakan (read aloud to someone)."
+ },
+ {
+  "id": "id-0183",
+  "target": "Kami membersihkan rumah di akhir pekan.",
+  "english": "We clean the house on the weekend.",
+  "audio": "id-id-0183.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 183
+ },
+ {
+  "id": "id-0184",
+  "target": "Saya mulai bekerja jam sembilan pagi.",
+  "english": "I start work at nine in the morning.",
+  "audio": "id-id-0184.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-05",
+  "priority": 184
+ },
+ {
+  "id": "id-0185",
+  "target": "Ayah mematikan lampu sebelum tidur.",
+  "english": "Dad turns off the lamp before sleeping.",
+  "audio": "id-id-0185.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 185
+ },
+ {
+  "id": "id-0186",
+  "target": "Saya sarapan roti dan telur.",
+  "english": "I have bread and eggs for breakfast.",
+  "audio": "id-id-0186.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-05",
+  "priority": 186
+ },
+ {
+  "id": "id-0187",
+  "target": "Dia sedang menulis laporan untuk kantor.",
+  "english": "He is writing a report for the office.",
+  "audio": "id-id-0187.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-05",
+  "priority": 187
+ },
+ {
+  "id": "id-0188",
+  "target": "Saya mencuci tangan sebelum makan.",
+  "english": "I wash my hands before eating.",
+  "audio": "id-id-0188.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-05",
+  "priority": 188
+ },
+ {
+  "id": "id-0189",
+  "target": "Setiap malam saya membaca sebelum tidur.",
+  "english": "Every night I read before sleeping.",
+  "audio": "id-id-0189.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-05",
+  "priority": 189
+ },
+ {
+  "id": "id-0190",
+  "target": "Kami tidur lebih awal di hari kerja.",
+  "english": "We sleep earlier on workdays.",
+  "audio": "id-id-0190.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-05",
+  "priority": 190
+ },
+ {
+  "id": "id-0191",
+  "target": "Saya mau pesan nasi goreng satu.",
+  "english": "I want to order one fried rice.",
+  "audio": "id-id-0191.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 191,
+  "grammar": "mau + verb = want to: mau pesan = want to order."
+ },
+ {
+  "id": "id-0192",
+  "target": "Makanan di warung ini enak sekali.",
+  "english": "The food at this food stall is very tasty.",
+  "audio": "id-id-0192.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 192
+ },
+ {
+  "id": "id-0193",
+  "target": "Tolong jangan terlalu pedas.",
+  "english": "Please do not make it too spicy.",
+  "audio": "id-id-0193.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 193
+ },
+ {
+  "id": "id-0194",
+  "target": "Saya ingin mencoba sate ayam.",
+  "english": "I want to try chicken satay.",
+  "audio": "id-id-0194.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 194
+ },
+ {
+  "id": "id-0195",
+  "target": "Minumnya es teh manis saja.",
+  "english": "Just sweet iced tea to drink.",
+  "audio": "id-id-0195.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 195,
+  "grammar": "saja means just/only: es teh saja = just iced tea."
+ },
+ {
+  "id": "id-0196",
+  "target": "Berapa harga satu porsi mie goreng?",
+  "english": "How much is one portion of fried noodles?",
+  "audio": "id-id-0196.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 196,
+  "grammar": "Berapa harga ...? asks a price: Berapa harga kopi ini? = How much is this coffee?"
+ },
+ {
+  "id": "id-0197",
+  "target": "Apakah makanan ini pedas?",
+  "english": "Is this food spicy?",
+  "audio": "id-id-0197.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 197
+ },
+ {
+  "id": "id-0198",
+  "target": "Saya pesan ayam goreng dan nasi putih.",
+  "english": "I order fried chicken and white rice.",
+  "audio": "id-id-0198.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 198
+ },
+ {
+  "id": "id-0199",
+  "target": "Boleh minta air putih?",
+  "english": "May I have plain water?",
+  "audio": "id-id-0199.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 199,
+  "grammar": "Boleh minta ...? politely asks for something: Boleh minta air? = May I have water?"
+ },
+ {
+  "id": "id-0200",
+  "target": "Rasanya manis dan sedikit pedas.",
+  "english": "It tastes sweet and a little spicy.",
+  "audio": "id-id-0200.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-06",
+  "priority": 200,
+  "grammar": "-nya can mean the/its: rasa (taste) → rasanya (the taste of it)."
+ },
+ {
+  "id": "id-0201",
+  "target": "Kami makan malam di restoran dekat hotel.",
+  "english": "We have dinner at a restaurant near the hotel.",
+  "audio": "id-id-0201.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 201
+ },
+ {
+  "id": "id-0202",
+  "target": "Boleh lihat menunya lagi?",
+  "english": "May I see the menu again?",
+  "audio": "id-id-0202.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 202
+ },
+ {
+  "id": "id-0203",
+  "target": "Saya suka masakan Indonesia.",
+  "english": "I like Indonesian food.",
+  "audio": "id-id-0203.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-06",
+  "priority": 203
+ },
+ {
+  "id": "id-0204",
+  "target": "Pelayan itu membawa pesanan kami.",
+  "english": "The waiter brings our order.",
+  "audio": "id-id-0204.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 204
+ },
+ {
+  "id": "id-0205",
+  "target": "Makanannya sudah datang, silakan makan.",
+  "english": "The food has arrived, please eat.",
+  "audio": "id-id-0205.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 205,
+  "grammar": "silakan politely invites someone to act: silakan makan = please eat."
+ },
+ {
+  "id": "id-0206",
+  "target": "Saya mau membeli oleh-oleh untuk keluarga.",
+  "english": "I want to buy souvenirs for my family.",
+  "audio": "id-id-0206.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-06",
+  "priority": 206
+ },
+ {
+  "id": "id-0207",
+  "target": "Berapa harga tas ini?",
+  "english": "How much is this bag?",
+  "audio": "id-id-0207.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 207
+ },
+ {
+  "id": "id-0208",
+  "target": "Wah, itu terlalu mahal untuk saya.",
+  "english": "Wow, that is too expensive for me.",
+  "audio": "id-id-0208.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 208,
+  "grammar": "terlalu = too (more than you want): terlalu mahal = too expensive."
+ },
+ {
+  "id": "id-0209",
+  "target": "Boleh kurang sedikit harganya?",
+  "english": "Can the price come down a little?",
+  "audio": "id-id-0209.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 209
+ },
+ {
+  "id": "id-0210",
+  "target": "Kalau beli dua, ada diskon?",
+  "english": "If I buy two, is there a discount?",
+  "audio": "id-id-0210.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 210,
+  "grammar": "kalau means if: kalau beli dua = if (you) buy two."
+ },
+ {
+  "id": "id-0211",
+  "target": "Baju ini murah dan bagus.",
+  "english": "This shirt is cheap and nice.",
+  "audio": "id-id-0211.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-06",
+  "priority": 211
+ },
+ {
+  "id": "id-0212",
+  "target": "Saya membeli buah di pasar pagi.",
+  "english": "I buy fruit at the morning market.",
+  "audio": "id-id-0212.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-06",
+  "priority": 212
+ },
+ {
+  "id": "id-0213",
+  "target": "Penjual itu memberi saya harga khusus.",
+  "english": "That seller gives me a special price.",
+  "audio": "id-id-0213.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-06",
+  "priority": 213
+ },
+ {
+  "id": "id-0214",
+  "target": "Saya membayar dengan uang tunai.",
+  "english": "I pay with cash.",
+  "audio": "id-id-0214.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 214
+ },
+ {
+  "id": "id-0215",
+  "target": "Ada ukuran yang lebih besar?",
+  "english": "Is there a bigger size?",
+  "audio": "id-id-0215.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-06",
+  "priority": 215,
+  "grammar": "yang turns a description into the one that: yang lebih besar = the bigger one."
+ },
+ {
+  "id": "id-0216",
+  "target": "Toko itu tutup hari Minggu.",
+  "english": "That shop is closed on Sundays.",
+  "audio": "id-id-0216.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-06",
+  "priority": 216
+ },
+ {
+  "id": "id-0217",
+  "target": "Saya mencari sandal untuk pantai.",
+  "english": "I am looking for sandals for the beach.",
+  "audio": "id-id-0217.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 217
+ },
+ {
+  "id": "id-0218",
+  "target": "Harga di pasar bisa ditawar.",
+  "english": "Prices at the market can be bargained.",
+  "audio": "id-id-0218.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-06",
+  "priority": 218,
+  "grammar": "di- makes a verb passive: tawar (bargain) → ditawar (be bargained over)."
+ },
+ {
+  "id": "id-0219",
+  "target": "Dia menjual kain batik yang cantik.",
+  "english": "She sells beautiful batik cloth.",
+  "audio": "id-id-0219.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-06",
+  "priority": 219
+ },
+ {
+  "id": "id-0220",
+  "target": "Saya coba dulu baju ini, ya?",
+  "english": "Let me try this shirt first, okay?",
+  "audio": "id-id-0220.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 220,
+  "grammar": "dulu after a verb means first: coba dulu = try it first."
+ },
+ {
+  "id": "id-0221",
+  "target": "Terima kasih, kembaliannya ambil saja.",
+  "english": "Thank you, just keep the change.",
+  "audio": "id-id-0221.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 221
+ },
+ {
+  "id": "id-0222",
+  "target": "Kami membeli air minum di toko kecil.",
+  "english": "We buy drinking water at a small shop.",
+  "audio": "id-id-0222.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-06",
+  "priority": 222
+ },
+ {
+  "id": "id-0223",
+  "target": "Pesanan saya belum datang.",
+  "english": "My order has not come yet.",
+  "audio": "id-id-0223.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-06",
+  "priority": 223
+ },
+ {
+  "id": "id-0224",
+  "target": "Kopi di sini lebih murah daripada di hotel.",
+  "english": "Coffee here is cheaper than at the hotel.",
+  "audio": "id-id-0224.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 224,
+  "grammar": "lebih ... daripada compares: lebih murah daripada di hotel = cheaper than at the hotel."
+ },
+ {
+  "id": "id-0225",
+  "target": "Saya kenyang, makanannya enak sekali.",
+  "english": "I am full, the food is very tasty.",
+  "audio": "id-id-0225.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 225
+ },
+ {
+  "id": "id-0226",
+  "target": "Saya punya dua kakak dan satu adik.",
+  "english": "I have two older siblings and one younger sibling.",
+  "audio": "id-id-0226.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 226,
+  "grammar": "punya = have: Saya punya adik = I have a younger sibling."
+ },
+ {
+  "id": "id-0227",
+  "target": "Ibu saya suka memasak di rumah.",
+  "english": "My mother likes to cook at home.",
+  "audio": "id-id-0227.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 227,
+  "grammar": "Possessor comes AFTER the noun: ibu saya = my mother (lit. mother I)."
+ },
+ {
+  "id": "id-0228",
+  "target": "Ayah saya bekerja di kantor besar.",
+  "english": "My father works at a big office.",
+  "audio": "id-id-0228.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 228
+ },
+ {
+  "id": "id-0229",
+  "target": "Kakak saya tinggal di Bandung.",
+  "english": "My older sibling lives in Bandung.",
+  "audio": "id-id-0229.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 229
+ },
+ {
+  "id": "id-0230",
+  "target": "Adik saya masih kecil.",
+  "english": "My younger sibling is still small.",
+  "audio": "id-id-0230.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 230
+ },
+ {
+  "id": "id-0231",
+  "target": "Rumah saya dekat pasar.",
+  "english": "My house is near the market.",
+  "audio": "id-id-0231.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-07",
+  "priority": 231
+ },
+ {
+  "id": "id-0232",
+  "target": "Anaknya sudah besar sekarang.",
+  "english": "Her child is already big now.",
+  "audio": "id-id-0232.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 232
+ },
+ {
+  "id": "id-0233",
+  "target": "Suami saya suka kopi hitam.",
+  "english": "My husband likes black coffee.",
+  "audio": "id-id-0233.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 233
+ },
+ {
+  "id": "id-0234",
+  "target": "Istrinya orang Bali.",
+  "english": "His wife is Balinese.",
+  "audio": "id-id-0234.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 234
+ },
+ {
+  "id": "id-0235",
+  "target": "Nama teman saya Sari.",
+  "english": "My friend's name is Sari.",
+  "audio": "id-id-0235.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-07",
+  "priority": 235
+ },
+ {
+  "id": "id-0236",
+  "target": "Keluarga kami tinggal di Jakarta.",
+  "english": "Our family lives in Jakarta.",
+  "audio": "id-id-0236.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 236,
+  "grammar": "kami = we (not you); kita = we (with you): keluarga kami = our family."
+ },
+ {
+  "id": "id-0237",
+  "target": "Ibunya sedang tidur di kamar.",
+  "english": "His mother is sleeping in the bedroom.",
+  "audio": "id-id-0237.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 237,
+  "grammar": "-nya on a noun = his/her: ibunya = his/her mother."
+ },
+ {
+  "id": "id-0238",
+  "target": "Rumahnya besar dan bersih.",
+  "english": "His house is big and clean.",
+  "audio": "id-id-0238.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-07",
+  "priority": 238,
+  "grammar": "No word for 'is' before adjectives: Rumahnya besar = His house (is) big."
+ },
+ {
+  "id": "id-0239",
+  "target": "Dia suka bermain bola dengan temannya.",
+  "english": "He likes playing football with his friend.",
+  "audio": "id-id-0239.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-07",
+  "priority": 239
+ },
+ {
+  "id": "id-0240",
+  "target": "Kakek dan nenek saya tinggal di desa.",
+  "english": "My grandfather and grandmother live in a village.",
+  "audio": "id-id-0240.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 240
+ },
+ {
+  "id": "id-0241",
+  "target": "Dia punya banyak teman di sekolah.",
+  "english": "She has many friends at school.",
+  "audio": "id-id-0241.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-07",
+  "priority": 241
+ },
+ {
+  "id": "id-0242",
+  "target": "Teman saya sangat baik.",
+  "english": "My friend is very kind.",
+  "audio": "id-id-0242.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-07",
+  "priority": 242
+ },
+ {
+  "id": "id-0243",
+  "target": "Orang itu tinggi dan kurus.",
+  "english": "That person is tall and thin.",
+  "audio": "id-id-0243.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-07",
+  "priority": 243
+ },
+ {
+  "id": "id-0244",
+  "target": "Adik kamu sudah makan belum?",
+  "english": "Has your younger sibling eaten yet?",
+  "audio": "id-id-0244.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 244,
+  "grammar": "sudah ... belum? = already or not yet: Sudah makan belum? = Eaten yet?"
+ },
+ {
+  "id": "id-0245",
+  "target": "Saya sayang keluarga saya.",
+  "english": "I love my family.",
+  "audio": "id-id-0245.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 245
+ },
+ {
+  "id": "id-0246",
+  "target": "Kami punya satu anak perempuan.",
+  "english": "We have one daughter.",
+  "audio": "id-id-0246.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 246,
+  "grammar": "anak perempuan = daughter (lit. child female); anak laki-laki = son."
+ },
+ {
+  "id": "id-0247",
+  "target": "Anak laki-laki itu anak saya.",
+  "english": "That boy is my son.",
+  "audio": "id-id-0247.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 247
+ },
+ {
+  "id": "id-0248",
+  "target": "Ibu saya lebih muda dari ayah saya.",
+  "english": "My mother is younger than my father.",
+  "audio": "id-id-0248.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 248,
+  "grammar": "lebih + adjective + dari = more ... than: lebih muda dari = younger than."
+ },
+ {
+  "id": "id-0249",
+  "target": "Kakak saya menikah tahun lalu.",
+  "english": "My older sibling got married last year.",
+  "audio": "id-id-0249.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 249
+ },
+ {
+  "id": "id-0250",
+  "target": "Suaminya bekerja di rumah sakit.",
+  "english": "Her husband works at a hospital.",
+  "audio": "id-id-0250.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 250
+ },
+ {
+  "id": "id-0251",
+  "target": "Nenek saya pandai memasak rendang.",
+  "english": "My grandmother is good at cooking rendang.",
+  "audio": "id-id-0251.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 251
+ },
+ {
+  "id": "id-0252",
+  "target": "Anak-anak sedang bermain di depan rumah.",
+  "english": "The children are playing in front of the house.",
+  "audio": "id-id-0252.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-07",
+  "priority": 252,
+  "grammar": "Doubling a noun makes it plural: anak-anak = children."
+ },
+ {
+  "id": "id-0253",
+  "target": "Berapa umur kamu sekarang?",
+  "english": "How old are you now?",
+  "audio": "id-id-0253.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-07",
+  "priority": 253
+ },
+ {
+  "id": "id-0254",
+  "target": "Umur adik saya sepuluh tahun.",
+  "english": "My younger sibling is ten years old.",
+  "audio": "id-id-0254.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 254
+ },
+ {
+  "id": "id-0255",
+  "target": "Orang tua saya tinggal jauh dari sini.",
+  "english": "My parents live far from here.",
+  "audio": "id-id-0255.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 255,
+  "grammar": "orang tua = parents (lit. old people): orang tua saya = my parents."
+ },
+ {
+  "id": "id-0256",
+  "target": "Dia anak pertama di keluarganya.",
+  "english": "He is the first child in his family.",
+  "audio": "id-id-0256.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 256
+ },
+ {
+  "id": "id-0257",
+  "target": "Guru saya orang yang sabar.",
+  "english": "My teacher is a patient person.",
+  "audio": "id-id-0257.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-07",
+  "priority": 257
+ },
+ {
+  "id": "id-0258",
+  "target": "Teman saya datang dari Surabaya kemarin.",
+  "english": "My friend came from Surabaya yesterday.",
+  "audio": "id-id-0258.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-07",
+  "priority": 258
+ },
+ {
+  "id": "id-0259",
+  "target": "Mereka punya rumah baru di kota.",
+  "english": "They have a new house in the city.",
+  "audio": "id-id-0259.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-07",
+  "priority": 259
+ },
+ {
+  "id": "id-0260",
+  "target": "Orang-orang di sini sangat ramah.",
+  "english": "People here are very friendly.",
+  "audio": "id-id-0260.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-07",
+  "priority": 260
+ },
+ {
+  "id": "id-0261",
+  "target": "Istri saya guru bahasa Inggris.",
+  "english": "My wife is an English teacher.",
+  "audio": "id-id-0261.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 261,
+  "grammar": "No word for is: Istri saya guru = My wife (is) a teacher."
+ },
+ {
+  "id": "id-0262",
+  "target": "Saya tinggal dengan orang tua saya.",
+  "english": "I live with my parents.",
+  "audio": "id-id-0262.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 262
+ },
+ {
+  "id": "id-0263",
+  "target": "Keluarga besar kami berkumpul setiap tahun.",
+  "english": "Our extended family gathers every year.",
+  "audio": "id-id-0263.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 263,
+  "grammar": "keluarga besar = extended family (lit. big family)."
+ },
+ {
+  "id": "id-0264",
+  "target": "Belok kiri di lampu merah itu.",
+  "english": "Turn left at that traffic light.",
+  "audio": "id-id-0264.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 264,
+  "grammar": "belok kiri = turn left; belok kanan = turn right."
+ },
+ {
+  "id": "id-0265",
+  "target": "Kantor pos ada di sebelah kanan.",
+  "english": "The post office is on the right side.",
+  "audio": "id-id-0265.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 265
+ },
+ {
+  "id": "id-0266",
+  "target": "Jalan lurus terus sampai pasar.",
+  "english": "Keep going straight until the market.",
+  "audio": "id-id-0266.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 266
+ },
+ {
+  "id": "id-0267",
+  "target": "Hotel itu dekat dengan pantai.",
+  "english": "That hotel is near the beach.",
+  "audio": "id-id-0267.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 267
+ },
+ {
+  "id": "id-0268",
+  "target": "Kantor saya jauh dari rumah.",
+  "english": "My office is far from home.",
+  "audio": "id-id-0268.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 268,
+  "grammar": "jauh dari = far from; dekat dengan = near to."
+ },
+ {
+  "id": "id-0269",
+  "target": "Saya naik bus ke kantor setiap hari.",
+  "english": "I take the bus to the office every day.",
+  "audio": "id-id-0269.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 269,
+  "grammar": "naik + vehicle = take/ride: naik bus = take the bus."
+ },
+ {
+  "id": "id-0270",
+  "target": "Dia naik kereta ke Bogor pagi ini.",
+  "english": "She takes the train to Bogor this morning.",
+  "audio": "id-id-0270.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 270
+ },
+ {
+  "id": "id-0271",
+  "target": "Kami naik ojek karena jalan macet.",
+  "english": "We took a motorcycle taxi because the road was jammed.",
+  "audio": "id-id-0271.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 271
+ },
+ {
+  "id": "id-0272",
+  "target": "Tas saya ada di atas meja.",
+  "english": "My bag is on the table.",
+  "audio": "id-id-0272.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-08",
+  "priority": 272,
+  "grammar": "di + position word: di atas meja = on (top of) the table."
+ },
+ {
+  "id": "id-0273",
+  "target": "Kucing itu tidur di bawah kursi.",
+  "english": "That cat is sleeping under the chair.",
+  "audio": "id-id-0273.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-08",
+  "priority": 273
+ },
+ {
+  "id": "id-0274",
+  "target": "Kunci ada di dalam tas hitam itu.",
+  "english": "The key is inside that black bag.",
+  "audio": "id-id-0274.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-08",
+  "priority": 274
+ },
+ {
+  "id": "id-0275",
+  "target": "Mobil saya parkir di depan gedung.",
+  "english": "My car is parked in front of the building.",
+  "audio": "id-id-0275.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 275,
+  "grammar": "di depan = in front of; di belakang = behind."
+ },
+ {
+  "id": "id-0276",
+  "target": "Toilet ada di belakang ruang rapat.",
+  "english": "The toilet is behind the meeting room.",
+  "audio": "id-id-0276.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 276
+ },
+ {
+  "id": "id-0277",
+  "target": "Saya bekerja di kantor dekat stasiun.",
+  "english": "I work at an office near the station.",
+  "audio": "id-id-0277.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 277
+ },
+ {
+  "id": "id-0278",
+  "target": "Rapat mulai jam sembilan pagi.",
+  "english": "The meeting starts at nine in the morning.",
+  "audio": "id-id-0278.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 278
+ },
+ {
+  "id": "id-0279",
+  "target": "Bos saya sedang rapat dengan klien.",
+  "english": "My boss is in a meeting with a client.",
+  "audio": "id-id-0279.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 279
+ },
+ {
+  "id": "id-0280",
+  "target": "Saya berangkat ke kantor jam tujuh.",
+  "english": "I leave for the office at seven.",
+  "audio": "id-id-0280.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 280
+ },
+ {
+  "id": "id-0281",
+  "target": "Dari sini ke bandara berapa lama?",
+  "english": "How long from here to the airport?",
+  "audio": "id-id-0281.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 281,
+  "grammar": "dari ... ke ... = from ... to: dari sini ke bandara = from here to the airport."
+ },
+ {
+  "id": "id-0282",
+  "target": "Naik taksi ke bandara mahal sekali.",
+  "english": "Taking a taxi to the airport is very expensive.",
+  "audio": "id-id-0282.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 282
+ },
+ {
+  "id": "id-0283",
+  "target": "Di mana halte bus terdekat?",
+  "english": "Where is the nearest bus stop?",
+  "audio": "id-id-0283.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 283,
+  "grammar": "ter- + adjective = the most: terdekat = the nearest, from dekat (near)."
+ },
+ {
+  "id": "id-0284",
+  "target": "Halte bus ada di depan bank.",
+  "english": "The bus stop is in front of the bank.",
+  "audio": "id-id-0284.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 284
+ },
+ {
+  "id": "id-0285",
+  "target": "Saya turun di halte berikutnya.",
+  "english": "I get off at the next stop.",
+  "audio": "id-id-0285.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 285,
+  "grammar": "naik = get on, turun = get off: turun di halte = get off at the stop."
+ },
+ {
+  "id": "id-0286",
+  "target": "Kereta ke Surabaya berangkat jam delapan.",
+  "english": "The train to Surabaya departs at eight.",
+  "audio": "id-id-0286.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 286
+ },
+ {
+  "id": "id-0287",
+  "target": "Maaf, saya datang terlambat ke rapat.",
+  "english": "Sorry, I came late to the meeting.",
+  "audio": "id-id-0287.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 287
+ },
+ {
+  "id": "id-0288",
+  "target": "Kantor kami ada di lantai lima.",
+  "english": "Our office is on the fifth floor.",
+  "audio": "id-id-0288.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 288
+ },
+ {
+  "id": "id-0289",
+  "target": "Saya sudah mengirim email ke bos.",
+  "english": "I have already sent an email to the boss.",
+  "audio": "id-id-0289.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 289
+ },
+ {
+  "id": "id-0290",
+  "target": "Jangan lupa bawa laptop ke rapat.",
+  "english": "Don't forget to bring a laptop to the meeting.",
+  "audio": "id-id-0290.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 290,
+  "grammar": "jangan = don't (command): Jangan lupa! = Don't forget!"
+ },
+ {
+  "id": "id-0291",
+  "target": "Dia sedang bekerja dari rumah hari ini.",
+  "english": "He is working from home today.",
+  "audio": "id-id-0291.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 291
+ },
+ {
+  "id": "id-0292",
+  "target": "Stasiun kereta ada di dekat hotel.",
+  "english": "The train station is near the hotel.",
+  "audio": "id-id-0292.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 292
+ },
+ {
+  "id": "id-0293",
+  "target": "Belok kanan setelah kantor pos.",
+  "english": "Turn right after the post office.",
+  "audio": "id-id-0293.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 293
+ },
+ {
+  "id": "id-0294",
+  "target": "Saya jalan kaki ke pasar setiap pagi.",
+  "english": "I walk to the market every morning.",
+  "audio": "id-id-0294.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 294,
+  "grammar": "jalan kaki = go on foot: Saya jalan kaki ke pasar = I walk to the market."
+ },
+ {
+  "id": "id-0295",
+  "target": "Minggu ini saya sangat sibuk dengan pekerjaan.",
+  "english": "This week I am very busy with work.",
+  "audio": "id-id-0295.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 295
+ },
+ {
+  "id": "id-0296",
+  "target": "Ruang rapat ada di sebelah dapur.",
+  "english": "The meeting room is next to the kitchen.",
+  "audio": "id-id-0296.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 296
+ },
+ {
+  "id": "id-0297",
+  "target": "Bus itu berhenti di depan sekolah.",
+  "english": "That bus stops in front of the school.",
+  "audio": "id-id-0297.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 297
+ },
+ {
+  "id": "id-0298",
+  "target": "Saya pulang dari kantor naik kereta.",
+  "english": "I go home from the office by train.",
+  "audio": "id-id-0298.mp3",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 298
+ },
+ {
+  "id": "id-0299",
+  "target": "Mereka pergi ke luar kota untuk bekerja.",
+  "english": "They go out of town for work.",
+  "audio": "id-id-0299.mp3",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 299
+ },
+ {
+  "id": "id-0300",
+  "target": "Selamat, kamu dapat pekerjaan baru itu!",
+  "english": "Congratulations, you got that new job!",
+  "audio": "id-id-0300.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 300
+ }
+]

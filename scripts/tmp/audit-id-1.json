@@ -1,0 +1,72 @@
+[
+ {
+  "id": "id-0023",
+  "rating": 5,
+  "issue": "Grammatical, but pragmatically odd: flatly telling someone 'Anda manajer kami' to their face is not a sentence natives produce; superiors are addressed as Pak/Bu, not informed of their own role. Works better as third-person identification.",
+  "fix": {
+   "target": "Pak Budi manajer kami.",
+   "english": "Mr. Budi is our manager.",
+   "grammar": null
+  }
+ },
+ {
+  "id": "id-0024",
+  "rating": 3,
+  "issue": "adalah where copula-drop is natural: no native says 'Dia adalah adik saya' across a table — adalah belongs in definitions/formal writing (cf. id-0028), not a personal kinship statement. Q1 register policy requires neutral conversational; the tip even admits adalah is optional yet the card models the stiff variant.",
+  "fix": {
+   "target": "Dia adik saya.",
+   "english": "He is my younger sibling.",
+   "grammar": "In conversation just drop 'is': Dia adik saya. adalah sounds formal, like a definition."
+  }
+ },
+ {
+  "id": "id-0030",
+  "rating": 5,
+  "issue": "Gloss mismatch: English 'They come from Surabaya' reads as origin/hometown (berasal dari), but datang dari describes a movement event (arrived/traveled from). Fix the gloss to the motion reading.",
+  "fix": {
+   "target": "Mereka datang dari Surabaya.",
+   "english": "They came from Surabaya.",
+   "grammar": null
+  }
+ },
+ {
+  "id": "id-0059",
+  "rating": 5,
+  "issue": "English calque: 'Apakah Anda punya kamar kosong?' transplants 'Do you have a vacant room?' word-for-word. At a hotel desk natives ask availability with (masih) ada, not punya addressed to the clerk.",
+  "fix": {
+   "target": "Apakah masih ada kamar kosong?",
+   "english": "Are there still any rooms available?",
+   "grammar": null
+  }
+ },
+ {
+  "id": "id-0087",
+  "rating": 5,
+  "issue": "Stiff for the situation: a late-night check-in like this is asked with plain rising intonation, not formal Apakah + belum; and the gloss 'Have you not slept yet?' is stilted English no one says. Intonation questions are already taught (id-0066), so the natural form fits the deck.",
+  "fix": {
+   "target": "Kamu belum tidur?",
+   "english": "You're not asleep yet?",
+   "grammar": null
+  }
+ },
+ {
+  "id": "id-0092",
+  "rating": 5,
+  "issue": "Gloss adds information not in the Indonesian: adik is gender-neutral 'younger sibling' (the deck's own gloss at id-0024/id-0060), but here it is rendered 'little brother'. Inconsistent and unfaithful.",
+  "fix": {
+   "target": "Adik sedang belajar untuk ujian besok.",
+   "english": "My younger sibling is studying for tomorrow's exam.",
+   "grammar": "untuk = for (purpose): belajar untuk ujian (study for the exam)"
+  }
+ },
+ {
+  "id": "id-0097",
+  "rating": 5,
+  "issue": "Loose noun phrase: 'mulai kerja baru' uses bare kerja as the noun 'job'; standard conversational Indonesian says pekerjaan baru (kerja-as-noun leans colloquial, e.g. 'dapat kerjaan'). pekerjaan already appears elsewhere in the deck, so no new vocabulary.",
+  "fix": {
+   "target": "Dia akan mulai pekerjaan baru bulan depan.",
+   "english": "She will start a new job next month.",
+   "grammar": null
+  }
+ }
+]

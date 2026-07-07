@@ -1,0 +1,116 @@
+/**
+ * Merge wave 3 (slices A–H, id-0801..id-1800) into the existing
+ * Indonesian deck + dictionary, with the same gates as the pilot merge.
+ *
+ *   npx tsx scripts/tmp/merge-id-wave3.ts          # check only
+ *   npx tsx scripts/tmp/merge-id-wave3.ts --write  # write deck + dict + roots
+ */
+import { readFileSync, writeFileSync } from 'fs';
+
+const ROOT = new URL('../..', import.meta.url).pathname;
+const write = process.argv.includes('--write');
+
+interface Card { id: string; target: string; english: string; audio: string; tags: string[]; grammarNode: string; priority: number; grammar?: string }
+interface DictEntry { en: string; ipa?: string; pos?: string; lemma?: string }
+
+const existing: Card[] = JSON.parse(readFileSync(`${ROOT}src/data/indonesian/deck.json`, 'utf8'));
+const newCards: Card[] = [];
+const dict: Record<string, DictEntry> = {};
+const newRoots = new Set<string>();
+for (const b of ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H']) {
+  newCards.push(...JSON.parse(readFileSync(`${ROOT}scripts/tmp/wave3-cards-${b}.json`, 'utf8')));
+  const d: Record<string, DictEntry> = JSON.parse(readFileSync(`${ROOT}scripts/tmp/wave3-dict-${b}.json`, 'utf8'));
+  for (const [k, v] of Object.entries(d)) {
+    const key = k.toLowerCase();
+    if (!dict[key]) dict[key] = v;
+  }
+  try {
+    for (const r of JSON.parse(readFileSync(`${ROOT}scripts/tmp/wave3-roots-${b}.json`, 'utf8'))) newRoots.add(r);
+  } catch { /* roots file optional */ }
+}
+
+const problems: string[] = [];
+
+// ids: continue exactly from 0301, unique overall
+const allIds = new Set(existing.map(c => c.id));
+newCards.sort((a, b) => a.id.localeCompare(b.id));
+newCards.forEach((c, i) => {
+  const want = `id-${String(i + 801).padStart(4, '0')}`;
+  if (c.id !== want) problems.push(`id gap: got ${c.id}, expected ${want}`);
+  if (allIds.has(c.id)) problems.push(`id collision with existing deck: ${c.id}`);
+  if (c.audio !== `id-${c.id}.mp3`) problems.push(`${c.id}: audio "${c.audio}"`);
+  if (!c.tags?.includes('general')) problems.push(`${c.id}: missing general tag`);
+});
+
+// sentence uniqueness across OLD + NEW
+const seen = new Map<string, string>();
+for (const c of [...existing, ...newCards]) {
+  const norm = c.target.toLowerCase().replace(/[^a-z ]/g, '').trim();
+  if (seen.has(norm)) problems.push(`dup sentence: ${c.id} == ${seen.get(norm)}`);
+  seen.set(norm, c.id);
+}
+
+// register offenders
+const off = JSON.parse(readFileSync(`${ROOT}docs/indonesian-register-offenders.json`, 'utf8'));
+for (const c of newCards) {
+  const toks = new Set(c.target.toLowerCase().replace(/[^a-z -]/g, '').split(/\s+/));
+  for (const o of off.offenders) if (toks.has(o.word)) problems.push(`${c.id}: offender "${o.word}" (${o.severity})`);
+}
+
+// tips
+const tips = newCards.filter(c => c.grammar);
+for (const c of tips) if (c.grammar!.length > 120) problems.push(`${c.id}: tip ${c.grammar!.length} chars`);
+
+// coverage vs merged dict ∪ existing dict source
+const dictSrc = readFileSync(`${ROOT}src/data/dictionary/id.ts`, 'utf8');
+const existingKeys = new Set([...dictSrc.matchAll(/^\s{2}['"]([^'"]+)['"]:\s*\{/gm)].map(m => m[1]));
+const missingToks = new Set<string>();
+for (const c of newCards) {
+  for (const raw of c.target.split(/\s+/)) {
+    const tok = raw.toLowerCase().replace(/[^a-z-]/g, '');
+    if (tok && !dict[tok] && !existingKeys.has(tok)) missingToks.add(tok);
+  }
+}
+if (missingToks.size) problems.push(`${missingToks.size} tokens uncovered: ${[...missingToks].slice(0, 15).join(', ')}`);
+
+const tagCount: Record<string, number> = {};
+for (const c of newCards) for (const t of c.tags) tagCount[t] = (tagCount[t] || 0) + 1;
+console.log(`new cards: ${newCards.length}, tips: ${tips.length} (${Math.round(tips.length * 100 / newCards.length)}%), dict entries offered: ${Object.keys(dict).length}, new roots: ${[...newRoots].join(', ') || 'none'}`);
+console.log('tags:', JSON.stringify(tagCount));
+if (problems.length) {
+  console.log(`\n${problems.length} PROBLEMS:`);
+  for (const p of problems.slice(0, 40)) console.log('  ·', p);
+}
+
+if (write) {
+  if (problems.length) { console.log('\nrefusing to --write with problems present'); process.exit(1); }
+  // deck
+  writeFileSync(`${ROOT}src/data/indonesian/deck.json`, JSON.stringify([...existing, ...newCards], null, 1) + '\n');
+  // dict splice (skip keys already present anywhere in id.ts)
+  let src = dictSrc;
+  const esc = (s: string) => s.replace(/\\/g, '\\\\').replace(/'/g, "\\'");
+  const lines = Object.entries(dict)
+    .filter(([k]) => !existingKeys.has(k))
+    .sort(([a], [b]) => a.localeCompare(b))
+    .map(([k, v]) => {
+      const key = k.includes("'") ? `"${k}"` : `'${k}'`;
+      const parts = [`en: '${esc(v.en)}'`];
+      if (v.ipa) parts.push(`ipa: '${esc(v.ipa)}'`);
+      if (v.pos) parts.push(`pos: '${esc(v.pos)}'`);
+      if (v.lemma) parts.push(`lemma: '${esc(v.lemma)}'`);
+      return `  ${key}: { ${parts.join(', ')} },`;
+    });
+  const block = `\n  // ── Batch-2 entries (generated by merge-id-wave3.ts) ──\n${lines.join('\n')}\n`;
+  src = src.replace(/\n  \/\/ ── Wave-3 entries[\s\S]*?(?=\n};)/, ''); // idempotent
+  src = src.replace(/\n};\n\nconst clean/, `${block}};\n\nconst clean`);
+  writeFileSync(`${ROOT}src/data/dictionary/id.ts`, src);
+  // roots
+  if (newRoots.size) {
+    let eng = readFileSync(`${ROOT}src/data/conjugation/id.ts`, 'utf8');
+    const anchor = '  // batch-2 roots';
+    const addition = `  // wave-3 roots\n  ${[...newRoots].sort().map(r => `'${r}'`).join(', ')},\n${anchor}`;
+    if (!eng.includes('// wave-3 roots')) eng = eng.replace(anchor, addition);
+    writeFileSync(`${ROOT}src/data/conjugation/id.ts`, eng);
+  }
+  console.log(`\nwrote deck (${existing.length + newCards.length} cards), dict (+${lines.length}), roots (+${newRoots.size})`);
+}

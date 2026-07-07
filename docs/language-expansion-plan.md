@@ -43,10 +43,12 @@ Contract-first: a language exists in the repo only as a
    register policy doc + offender lexicon (seeded, even if short),
    empty deck, stub dictionary, `findInfinitive` exported from day one
    (may start as reverse-map-only). Baseline entries added. CI green.
-2. **Script primer** (where needed) — ordinary cards in node-00
-   (letter → sound + example word), not an app mode: Greek ~20 cards,
-   Korean ~30, Arabic ~60 (joined forms). MSA and Lebanese share one
-   primer (MSA ships it; Lebanese deck references its concepts).
+2. **Script primer — DEFERRED (user decision 2026-07-07).** No
+   per-language alphabet primers. How the app teaches scripts (Greek
+   alphabet, Hangul, Arabic script — and retroactively Devanagari/
+   Cyrillic) is a single cross-language design question to be settled
+   separately. Pilots start at node-01 with sentence cards, like
+   Indonesian did.
 3. **Pilot deck (~300 cards)** — authored against the register policy,
    then the full gate order from docs/audit-checklist.md:
    dict-coverage 100% → conjugation round-trip → register classifier →

@@ -90,6 +90,12 @@ LLM ever read them.
 - R2 bucket CORS: GET/HEAD from `*`, verified with an OPTIONS preflight
   (missing CORS silently degraded ALL audio to iOS system TTS).
 - SW + `?v=` cache-bust behavior on iOS PWA (force-quit does not evict).
+- **Dev must NOT point VITE_AUDIO_BASE_URL at R2.** Local dev serves
+  `public/quest-audio` directly; an R2 base in `.env.*.local` makes any
+  not-yet-uploaded file (new language mid-rollout) 404 → live-TTS
+  fallback → a freshly synthesized take per play ("different audio
+  tracks on replay", 2026-07-07). R2 URL is injected at prod build time
+  only.
 
 ## Gate order for a content batch
 

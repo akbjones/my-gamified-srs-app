@@ -18,6 +18,7 @@ import {
   loadVocabMap, saveVocabMap,
   loadFavorites, saveFavorites,
   getDailyLimitFor, getSessionLimitFor, setDailyLimitFor, setSessionLimitFor,
+  getGoalFor, setGoalFor,
 } from './services/storageService';
 import type { StudySettings, AudioSpeed } from './services/storageService';
 import {
@@ -244,7 +245,7 @@ const App: React.FC = () => {
   });
 
   const lang = settings.selectedLanguage;
-  const goal = settings.learningGoal;
+  const goal = getGoalFor(settings, lang);
 
   // Load deck when language or goal changes
   useEffect(() => {
@@ -553,7 +554,7 @@ const App: React.FC = () => {
   };
 
   const handleGoalChange = (newGoal: LearningGoal) => {
-    handleUpdateSettings({ ...settings, learningGoal: newGoal });
+    handleUpdateSettings(setGoalFor(settings, lang, newGoal));
   };
 
   // Per-language: adjusts only the current language's override, not the global default.

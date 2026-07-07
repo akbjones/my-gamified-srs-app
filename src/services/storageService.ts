@@ -111,8 +111,13 @@ export interface StudySettings {
   sessionCardLimit: number; // cards per "Study More" session (5–50)
   // Per-language overrides for card volume
   perLanguageLimits?: PerLanguageLimits;
+  // Per-language theme selection (general/travel/work/family). Switching
+  // languages restores that language's last goal instead of carrying the
+  // previous language's goal over.
+  goalByLanguage?: Partial<Record<Language, LearningGoal>>;
   // Other settings stay global
   selectedLanguage: Language;
+  /** Legacy global goal — superseded by goalByLanguage; kept for migration. */
   learningGoal: LearningGoal;
   theme: 'light' | 'dark';
   autoPlayAudio: boolean;
@@ -133,7 +138,15 @@ const DEFAULT_SETTINGS: StudySettings = {
 
 export const loadSettings = (): StudySettings => {
   const parsed = safeParse<Partial<StudySettings> | null>(localStorage.getItem(SETTINGS_KEY), null);
-  if (parsed) return { ...DEFAULT_SETTINGS, ...parsed };
+  if (parsed) {
+    const settings = { ...DEFAULT_SETTINGS, ...parsed };
+    // Migrate the legacy global goal: seed only the currently-selected
+    // language with it; every other language starts at 'general'.
+    if (!parsed.goalByLanguage && parsed.learningGoal && parsed.learningGoal !== 'general') {
+      settings.goalByLanguage = { [settings.selectedLanguage]: parsed.learningGoal };
+    }
+    return settings;
+  }
   return DEFAULT_SETTINGS;
 };
 
@@ -163,6 +176,20 @@ export const setSessionLimitFor = (settings: StudySettings, lang: Language, valu
   const perLang = { ...(settings.perLanguageLimits || {}) };
   perLang[lang] = { ...(perLang[lang] || {}), sessionCardLimit: value };
   return { ...settings, perLanguageLimits: perLang };
+};
+
+/** Get the goal (theme filter) for `lang` — that language's last selection, else 'general'. */
+export const getGoalFor = (settings: StudySettings, lang: Language): LearningGoal => {
+  return settings.goalByLanguage?.[lang] ?? 'general';
+};
+
+/** Remember the goal for `lang` only; other languages keep their own. */
+export const setGoalFor = (settings: StudySettings, lang: Language, goal: LearningGoal): StudySettings => {
+  return {
+    ...settings,
+    goalByLanguage: { ...(settings.goalByLanguage || {}), [lang]: goal },
+    learningGoal: goal, // legacy field kept in sync for anything still reading it
+  };
 };
 
 // ─── Placement ──────────────────────────────────────────────

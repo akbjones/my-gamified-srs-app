@@ -97,10 +97,18 @@ Contract-first: a language exists in the repo only as a
 ### MSA Arabic
 - **First RTL language — UI workstream gates this stage** (see below).
 - Bare script, no harakat; stored per-card transliteration line.
-- Deck mandate: MSA is nobody's everyday speech — the register policy
-  *inverts*. Q1–Q4 target reading/news/announcements/travel
-  comprehension and pan-Arab intelligibility; "would a Cairo taxi
-  driver say this" is NOT the test here (it is for Lebanese).
+- Deck mandate (user decision 2026-07-07): **Q1 still opens with basic
+  everyday sentences in MSA** — greetings, introductions, simple
+  needs — because that is what learners expect and it teaches how the
+  language works, even though spoken usage would be dialect. From Q2
+  upward the deck leans into MSA's real strengths: reading, news,
+  announcements, travel signage, pan-Arab intelligibility. The register
+  test is "is this natural *written/formal* Arabic", not "would a
+  Beirut taxi driver say this" (that test belongs to Lebanese).
+- **The goal dropdown (general/travel/work/family) stays** for MSA and
+  all new languages, with the same tag-coverage targets as the existing
+  eleven (general 100%, others 40–60%) — dropping it for one language
+  is more confusing than tags that skew formal.
 - `findInfinitive`: start as reverse map harvested from the engine's
   own tables (the approach that got 6 languages to 90%+), plus prefix
   stripping (sa-, wa-, bi-, al-). Root-pattern extraction is a later

@@ -1,0 +1,1252 @@
+{
+  "version": 1,
+  "description": "Turkish vocabulary register audit list. 'formal' = Ottoman-era Arabic/Persian loan or stiff written construction (or, in reform_words_overcorrected, an öz Türkçe coinage that lost to an older loan in daily speech); 'preferred' = what Turkish speakers actually say in everyday conversation. Severity: 'high' = dead in modern speech, swap wherever it appears; 'medium' = alive in official/news/academic registers but stiff in dialogue — swap in beginner content; 'low' = both registers common, context call. Guiding principle: target what people SAY, not language-reform ideology. Legal/official set phrases quoted as such are exempt. Used by scripts/audit-tr-register.cjs.",
+  "categories": {
+    "bureaucratic_verbs": {
+      "policy": "swap-always-unless-noted",
+      "rationale": "Ottoman bureaucratic verb + etmek/olmak compounds. Most have a single dominant everyday equivalent. A few survive as euphemisms or in fossilized official phrases — see notes.",
+      "entries": [
+        {
+          "formal": "müracaat etmek",
+          "preferred": "başvurmak",
+          "rom": "müracaat etmek → başvurmak (to apply)",
+          "note": "müracaat survives on old signage ('Müracaat' = reception desk); nobody uses the verb in speech",
+          "severity": "high"
+        },
+        {
+          "formal": "iştirak etmek",
+          "preferred": "katılmak",
+          "rom": "iştirak etmek → katılmak (to participate)",
+          "severity": "high"
+        },
+        {
+          "formal": "vasıl olmak",
+          "preferred": "varmak",
+          "alt": [
+            "ulaşmak"
+          ],
+          "rom": "vasıl olmak → varmak/ulaşmak (to arrive)",
+          "severity": "high"
+        },
+        {
+          "formal": "talep etmek",
+          "preferred": "istemek",
+          "rom": "talep etmek → istemek (to request)",
+          "note": "the noun talep is alive in economics (arz-talep) and customer-service talk; the verb is stiff in dialogue",
+          "severity": "medium"
+        },
+        {
+          "formal": "temin etmek",
+          "preferred": "sağlamak",
+          "alt": [
+            "bulmak"
+          ],
+          "rom": "temin etmek → sağlamak/bulmak (to obtain, provide)",
+          "severity": "medium"
+        },
+        {
+          "formal": "tanzim etmek",
+          "preferred": "düzenlemek",
+          "rom": "tanzim etmek → düzenlemek (to arrange, draw up)",
+          "note": "'fatura tanzimi' is pure officialese; only historical 'tanzim satış' keeps the word visible",
+          "severity": "high"
+        },
+        {
+          "formal": "arz etmek",
+          "preferred": "sunmak",
+          "alt": [
+            "söylemek"
+          ],
+          "rom": "arz etmek → sunmak/söylemek (to submit, present)",
+          "note": "the closing 'arz ederim' is the standard formula in official correspondence and military speech — exempt when quoted as such",
+          "severity": "high"
+        },
+        {
+          "formal": "ikamet etmek",
+          "preferred": "oturmak",
+          "rom": "ikamet etmek → oturmak (to reside, live)",
+          "note": "'Nerede oturuyorsun?' is the only natural spoken form; ikamet belongs on residence-permit forms",
+          "severity": "medium"
+        },
+        {
+          "formal": "vefat etmek",
+          "preferred": "ölmek",
+          "rom": "vefat etmek → ölmek (to pass away / to die)",
+          "note": "NOT a dead word — vefat etmek is the standard polite euphemism for a person's death; keep it when softness/respect is the point, teach ölmek as the plain verb",
+          "severity": "medium"
+        },
+        {
+          "formal": "imza etmek",
+          "preferred": "imzalamak",
+          "rom": "imza etmek → imzalamak (to sign)",
+          "note": "dated periphrastic variant; imzalamak is universal",
+          "severity": "high"
+        },
+        {
+          "formal": "ihtiva etmek",
+          "preferred": "içermek",
+          "rom": "ihtiva etmek → içermek (to contain)",
+          "severity": "high"
+        },
+        {
+          "formal": "iktiza etmek",
+          "preferred": "gerekmek",
+          "rom": "iktiza etmek → gerekmek (to be necessary)",
+          "severity": "high"
+        },
+        {
+          "formal": "beyan etmek",
+          "preferred": "söylemek",
+          "alt": [
+            "bildirmek"
+          ],
+          "rom": "beyan etmek → söylemek/bildirmek (to declare)",
+          "note": "legal/tax contexts (beyanname, gümrük beyanı) are exempt — there beyan is the technical term",
+          "severity": "medium"
+        },
+        {
+          "formal": "ifade etmek",
+          "preferred": "söylemek",
+          "alt": [
+            "anlatmak",
+            "dile getirmek"
+          ],
+          "rom": "ifade etmek → söylemek/anlatmak (to express, say)",
+          "note": "fine in essays; in dialogue it sounds like a news anchor. The noun ifade is alive (police statement, 'ifade vermek')",
+          "severity": "medium"
+        },
+        {
+          "formal": "tebrik etmek",
+          "preferred": "kutlamak",
+          "rom": "tebrik etmek → kutlamak (to congratulate)",
+          "note": "the exclamation 'Tebrikler!' is fully alive and should never be flagged; only the verb sounds stiff ('seni tebrik ederim' vs 'kutlarım')",
+          "severity": "medium"
+        },
+        {
+          "formal": "teşrif etmek",
+          "preferred": "gelmek",
+          "rom": "teşrif etmek → gelmek (to honor with one's presence / to come)",
+          "note": "survives in hyper-polite hospitality ('teşrif edin') and in irony; never neutral",
+          "severity": "high"
+        },
+        {
+          "formal": "tekabül etmek",
+          "preferred": "karşılık gelmek",
+          "rom": "tekabül etmek → karşılık gelmek (to correspond to)",
+          "note": "academic register; heard in lectures, not conversation",
+          "severity": "medium"
+        },
+        {
+          "formal": "addetmek",
+          "preferred": "saymak",
+          "rom": "addetmek → saymak (to consider, deem)",
+          "severity": "high"
+        },
+        {
+          "formal": "ihtar etmek",
+          "preferred": "uyarmak",
+          "rom": "ihtar etmek → uyarmak (to warn)",
+          "note": "the noun ihtar is alive as a legal notice (ihtarname) and a football booking; the verb is dead in speech",
+          "severity": "medium"
+        },
+        {
+          "formal": "tasdik etmek",
+          "preferred": "onaylamak",
+          "rom": "tasdik etmek → onaylamak (to approve, certify)",
+          "note": "official-document contexts exempt; occasionally jocular in speech ('tasdik ediyorum!')",
+          "severity": "medium"
+        },
+        {
+          "formal": "tediye etmek",
+          "preferred": "ödemek",
+          "rom": "tediye etmek → ödemek (to pay)",
+          "severity": "high"
+        },
+        {
+          "formal": "istifade etmek",
+          "preferred": "yararlanmak",
+          "alt": [
+            "faydalanmak"
+          ],
+          "rom": "istifade etmek → yararlanmak/faydalanmak (to benefit from)",
+          "note": "faydalanmak is also Arabic-derived but fully alive — target usage, not etymology",
+          "severity": "high"
+        },
+        {
+          "formal": "müzakere etmek",
+          "preferred": "görüşmek",
+          "alt": [
+            "tartışmak"
+          ],
+          "rom": "müzakere etmek → görüşmek/tartışmak (to negotiate, discuss)",
+          "note": "diplomacy/news register; müzakere as noun is standard there",
+          "severity": "medium"
+        },
+        {
+          "formal": "münakaşa etmek",
+          "preferred": "tartışmak",
+          "alt": [
+            "kavga etmek"
+          ],
+          "rom": "münakaşa etmek → tartışmak (to argue, quarrel)",
+          "note": "colloquially alive for verbal quarrels, especially among older speakers ('münakaşa etmeyin') — context call",
+          "severity": "low"
+        },
+        {
+          "formal": "ibraz etmek",
+          "preferred": "göstermek",
+          "rom": "ibraz etmek → göstermek (to present, show a document)",
+          "note": "official signage ('kimlik ibrazı zorunludur') is exempt when quoted",
+          "severity": "high"
+        },
+        {
+          "formal": "ifa etmek",
+          "preferred": "yerine getirmek",
+          "alt": [
+            "yapmak"
+          ],
+          "rom": "ifa etmek → yerine getirmek (to fulfill, perform)",
+          "severity": "high"
+        },
+        {
+          "formal": "icra etmek",
+          "preferred": "yapmak",
+          "alt": [
+            "yerine getirmek"
+          ],
+          "rom": "icra etmek → yapmak (to carry out)",
+          "note": "icra is alive as the debt-enforcement office ('icraya vermek') and in music (a piece is 'icra edilir') — exempt those senses",
+          "severity": "medium"
+        },
+        {
+          "formal": "istihdam etmek",
+          "preferred": "işe almak",
+          "alt": [
+            "çalıştırmak"
+          ],
+          "rom": "istihdam etmek → işe almak/çalıştırmak (to employ)",
+          "note": "news/economics register; istihdam as noun (employment) is the standard technical term",
+          "severity": "medium"
+        },
+        {
+          "formal": "tetkik etmek",
+          "preferred": "incelemek",
+          "rom": "tetkik etmek → incelemek (to examine)",
+          "note": "the noun tetkik is fully alive in medicine ('tetkikler istendi' = tests were ordered) — exempt that sense",
+          "severity": "high"
+        },
+        {
+          "formal": "iştigal etmek",
+          "preferred": "uğraşmak",
+          "rom": "iştigal etmek → uğraşmak (to be occupied with)",
+          "note": "survives jocularly in mock-formal 'ne işle iştigal ediyorsunuz?'",
+          "severity": "high"
+        },
+        {
+          "formal": "muvaffak olmak",
+          "preferred": "başarmak",
+          "rom": "muvaffak olmak → başarmak (to succeed)",
+          "note": "older speakers only; blessing formula 'Allah muvaffak etsin' survives regionally",
+          "severity": "high"
+        },
+        {
+          "formal": "vuku bulmak",
+          "preferred": "olmak",
+          "alt": [
+            "gerçekleşmek",
+            "yaşanmak"
+          ],
+          "rom": "vuku bulmak → olmak/gerçekleşmek (to occur)",
+          "severity": "high"
+        },
+        {
+          "formal": "zuhur etmek",
+          "preferred": "ortaya çıkmak",
+          "rom": "zuhur etmek → ortaya çıkmak (to appear, emerge)",
+          "note": "sometimes used jocularly for someone showing up unannounced — that use is intentional register play",
+          "severity": "high"
+        },
+        {
+          "formal": "tahsil etmek",
+          "preferred": "toplamak",
+          "alt": [
+            "okumak"
+          ],
+          "rom": "tahsil etmek → toplamak (to collect money) / okumak (to be educated)",
+          "note": "two senses: tahsilat is alive in payments; 'tahsil görmek' for education is dated — 'okumak' is what people say",
+          "severity": "medium"
+        }
+      ]
+    },
+    "abstract_nouns": {
+      "policy": "swap-in-beginner-content",
+      "rationale": "Ottoman abstract nouns with everyday equivalents. Several remain colloquially alive in set phrases or specific senses — do not blanket-swap without checking notes.",
+      "entries": [
+        {
+          "formal": "husus",
+          "preferred": "konu",
+          "rom": "husus → konu (matter, point)",
+          "note": "'bu hususta' is pure bureaucratese; speech says 'bu konuda'",
+          "severity": "high"
+        },
+        {
+          "formal": "lüzum",
+          "preferred": "gerek",
+          "rom": "lüzum → gerek (need, necessity)",
+          "note": "'lüzum yok' lingers with older speakers, but 'gerek yok' is the default everywhere",
+          "severity": "high"
+        },
+        {
+          "formal": "keyfiyet",
+          "preferred": "durum",
+          "alt": [
+            "nitelik"
+          ],
+          "rom": "keyfiyet → durum/nitelik (state of affairs, quality)",
+          "severity": "high"
+        },
+        {
+          "formal": "malumat",
+          "preferred": "bilgi",
+          "rom": "malumat → bilgi (information)",
+          "note": "do not confuse with the adjective malum, which is alive (see quantifiers_adjectives)",
+          "severity": "high"
+        },
+        {
+          "formal": "ahval",
+          "preferred": "durum",
+          "alt": [
+            "haller"
+          ],
+          "rom": "ahval → durum (circumstances)",
+          "note": "survives jocularly in greetings ('ahval nasıl?') — intentional flavor, exempt there",
+          "severity": "high"
+        },
+        {
+          "formal": "mezkur",
+          "preferred": "adı geçen",
+          "alt": [
+            "bu",
+            "söz konusu"
+          ],
+          "rom": "mezkur → adı geçen (aforementioned)",
+          "severity": "high"
+        },
+        {
+          "formal": "hadise",
+          "preferred": "olay",
+          "rom": "hadise → olay (event, incident)",
+          "note": "alive among older speakers and in 'hadise çıkarmak' (to make a scene); olay is the neutral default",
+          "severity": "medium"
+        },
+        {
+          "formal": "netice",
+          "preferred": "sonuç",
+          "rom": "netice → sonuç (result)",
+          "note": "the connector 'neticede' is still common in speech — exempt; the bare noun is dated",
+          "severity": "medium"
+        },
+        {
+          "formal": "gaye",
+          "preferred": "amaç",
+          "rom": "gaye → amaç (aim, purpose)",
+          "note": "older speakers; amaç won",
+          "severity": "medium"
+        },
+        {
+          "formal": "vasıta",
+          "preferred": "araç",
+          "rom": "vasıta → araç (means, vehicle)",
+          "note": "'vasıtasıyla' → 'aracılığıyla' or plain 'üzerinden'; older speakers still say vasıta for vehicles",
+          "severity": "medium"
+        },
+        {
+          "formal": "vaziyet",
+          "preferred": "durum",
+          "rom": "vaziyet → durum (situation)",
+          "note": "colloquially alive ('vaziyet ne?', 'vaziyeti idare et') — context call, do not blanket-swap",
+          "severity": "low"
+        },
+        {
+          "formal": "mesele",
+          "preferred": "sorun",
+          "alt": [
+            "konu"
+          ],
+          "rom": "mesele → sorun/konu (issue, problem)",
+          "note": "fully alive ('mesele yok', 'para meselesi', 'mesele şu ki') — only swap if sentence is otherwise plain-neutral",
+          "severity": "low"
+        },
+        {
+          "formal": "kabiliyet",
+          "preferred": "yetenek",
+          "rom": "kabiliyet → yetenek (talent, ability)",
+          "note": "kabiliyetli is still colloquial; yetenek is the neutral default (yetenekli, yetenek avcısı)",
+          "severity": "low"
+        },
+        {
+          "formal": "istikamet",
+          "preferred": "yön",
+          "rom": "istikamet → yön (direction)",
+          "note": "alive on the traffic sign 'mecburi istikamet' and in dolmuş/military talk — exempt those; elsewhere yön",
+          "severity": "medium"
+        },
+        {
+          "formal": "mecburiyet",
+          "preferred": "zorunluluk",
+          "rom": "mecburiyet → zorunluluk (obligation)",
+          "note": "the adjective mecbur is fully colloquial ('mecburum', 'mecbur muyum?') — never flag mecbur itself",
+          "severity": "medium"
+        },
+        {
+          "formal": "ehemmiyet",
+          "preferred": "önem",
+          "rom": "ehemmiyet → önem (importance)",
+          "note": "'ehemmiyet verme' heard only from older speakers",
+          "severity": "high"
+        },
+        {
+          "formal": "vazife",
+          "preferred": "görev",
+          "rom": "vazife → görev (duty)",
+          "note": "alive with older speakers and in moralizing tone ('vazifen bu'); görev is neutral",
+          "severity": "medium"
+        },
+        {
+          "formal": "talebe",
+          "preferred": "öğrenci",
+          "rom": "talebe → öğrenci (student)",
+          "note": "older speakers and religious-school contexts only",
+          "severity": "high"
+        },
+        {
+          "formal": "muallim",
+          "preferred": "öğretmen",
+          "rom": "muallim → öğretmen (teacher)",
+          "severity": "high"
+        },
+        {
+          "formal": "sıhhat",
+          "preferred": "sağlık",
+          "rom": "sıhhat → sağlık (health)",
+          "note": "set phrase 'sıhhatler olsun' (after a haircut/bath) is fully alive — exempt; elsewhere sağlık",
+          "severity": "high"
+        },
+        {
+          "formal": "emniyet",
+          "preferred": "güvenlik",
+          "rom": "emniyet → güvenlik (safety, security)",
+          "note": "Emniyet as the police force (proper noun) and 'emniyet kemeri' (seatbelt) are standard — exempt those senses",
+          "severity": "medium"
+        },
+        {
+          "formal": "zaruret",
+          "preferred": "zorunluluk",
+          "alt": [
+            "mecburiyet"
+          ],
+          "rom": "zaruret → zorunluluk (necessity)",
+          "severity": "high"
+        },
+        {
+          "formal": "menfaat",
+          "preferred": "çıkar",
+          "rom": "menfaat → çıkar (self-interest)",
+          "note": "menfaatçi (self-serving person) is alive colloquially; the bare noun is formal",
+          "severity": "medium"
+        },
+        {
+          "formal": "teferruat",
+          "preferred": "ayrıntı",
+          "alt": [
+            "detay"
+          ],
+          "rom": "teferruat → ayrıntı/detay (detail)",
+          "note": "detay (French loan) is the true spoken default; ayrıntı is the neutral written word; teferruatlı = older speakers",
+          "severity": "medium"
+        },
+        {
+          "formal": "münasebet",
+          "preferred": "ilişki",
+          "alt": [
+            "bağlantı"
+          ],
+          "rom": "münasebet → ilişki (relation, connection)",
+          "note": "münasebetsiz (rude, out of line) is fully alive — exempt; 'ne münasebet!' (certainly not!) is also alive",
+          "severity": "medium"
+        },
+        {
+          "formal": "mahiyet",
+          "preferred": "nitelik",
+          "alt": [
+            "içerik"
+          ],
+          "rom": "mahiyet → nitelik/içerik (nature, essence)",
+          "note": "'işin mahiyeti' is bureaucratic/legal boilerplate",
+          "severity": "high"
+        },
+        {
+          "formal": "meblağ",
+          "preferred": "tutar",
+          "alt": [
+            "miktar"
+          ],
+          "rom": "meblağ → tutar/miktar (sum of money)",
+          "severity": "high"
+        },
+        {
+          "formal": "şahıs",
+          "preferred": "kişi",
+          "rom": "şahıs → kişi (person)",
+          "note": "şahsen (personally) is fully alive — exempt; şahıs in dialogue sounds like a police report",
+          "severity": "medium"
+        },
+        {
+          "formal": "bedel",
+          "preferred": "ücret",
+          "alt": [
+            "karşılık"
+          ],
+          "rom": "bedel → ücret/karşılık (fee, price paid)",
+          "note": "alive in 'bedelli askerlik', transfer fees, and 'bedelini ödemek' (pay the price) — context call",
+          "severity": "low"
+        },
+        {
+          "formal": "ebeveyn",
+          "preferred": "anne baba",
+          "rom": "ebeveyn → anne baba (parents)",
+          "note": "parenting-literature and school-circular word; at home everyone says anne baba(m)",
+          "severity": "medium"
+        },
+        {
+          "formal": "misal",
+          "preferred": "örnek",
+          "rom": "misal → örnek (example)",
+          "note": "'mesela' is universal and untouchable; bare 'misal' as a sentence-initial filler is actually colloquial-jocular — context call",
+          "severity": "low"
+        },
+        {
+          "formal": "hakikat",
+          "preferred": "gerçek",
+          "rom": "hakikat → gerçek (truth)",
+          "note": "'hakkaten' (really) is fully alive colloquially; hakikat itself carries literary/religious flavor — context call",
+          "severity": "low"
+        }
+      ]
+    },
+    "time_words": {
+      "policy": "swap-in-beginner-content",
+      "rationale": "Ottoman temporal adverbs and postpositional phrases. Modern speech uses sonra, önce, sırasında, -ken and plain hemen/genelde.",
+      "entries": [
+        {
+          "formal": "müddet",
+          "preferred": "süre",
+          "rom": "müddet → süre (duration, period)",
+          "note": "'bir müddet sonra' survives with older speakers; süre is the default everywhere else",
+          "severity": "high"
+        },
+        {
+          "formal": "esnasında",
+          "preferred": "sırasında",
+          "alt": [
+            "-ken"
+          ],
+          "rom": "esnasında → sırasında / -ken (during)",
+          "note": "the suffix -ken ('yemek yerken') is the most natural spoken option of all",
+          "severity": "medium"
+        },
+        {
+          "formal": "akabinde",
+          "preferred": "sonra",
+          "alt": [
+            "ardından"
+          ],
+          "rom": "akabinde → sonra/ardından (right after)",
+          "severity": "high"
+        },
+        {
+          "formal": "evvel",
+          "preferred": "önce",
+          "rom": "evvel → önce (before, ago)",
+          "note": "alive in set forms — evvela (first of all), evvelsi gün (day before yesterday), and rural/older speech; standalone 'beş sene evvel' sounds dated-flavorful, not wrong",
+          "severity": "medium"
+        },
+        {
+          "formal": "evvelce",
+          "preferred": "önceden",
+          "alt": [
+            "eskiden"
+          ],
+          "rom": "evvelce → önceden/eskiden (previously)",
+          "severity": "high"
+        },
+        {
+          "formal": "bilahare",
+          "preferred": "daha sonra",
+          "rom": "bilahare → daha sonra (later on)",
+          "note": "occasionally jocular in educated banter; otherwise dead",
+          "severity": "high"
+        },
+        {
+          "formal": "müteakiben",
+          "preferred": "ardından",
+          "alt": [
+            "sonra"
+          ],
+          "rom": "müteakiben → ardından/sonra (subsequently)",
+          "severity": "high"
+        },
+        {
+          "formal": "müteakip",
+          "preferred": "sonraki",
+          "alt": [
+            "izleyen"
+          ],
+          "rom": "müteakip → sonraki/izleyen (following)",
+          "note": "'günü müteakip' is pure officialese",
+          "severity": "high"
+        },
+        {
+          "formal": "zarfında",
+          "preferred": "içinde",
+          "rom": "zarfında → içinde (within a period)",
+          "note": "'üç gün zarfında' is bureaucratic; zarf = envelope is a different, fully alive word",
+          "severity": "high"
+        },
+        {
+          "formal": "halihazırda",
+          "preferred": "şu anda",
+          "alt": [
+            "şu an",
+            "şimdilik"
+          ],
+          "rom": "halihazırda → şu anda (currently)",
+          "note": "journalistic and frequently misused; fine in reports, stiff in dialogue",
+          "severity": "medium"
+        },
+        {
+          "formal": "derhal",
+          "preferred": "hemen",
+          "rom": "derhal → hemen (immediately)",
+          "note": "alive as a sharp command ('Derhal buraya gel!') — intentional emphasis; neutral speech uses hemen",
+          "severity": "medium"
+        },
+        {
+          "formal": "ekseriya",
+          "preferred": "genelde",
+          "alt": [
+            "çoğunlukla"
+          ],
+          "rom": "ekseriya → genelde/çoğunlukla (usually)",
+          "severity": "high"
+        },
+        {
+          "formal": "daima",
+          "preferred": "hep",
+          "alt": [
+            "her zaman"
+          ],
+          "rom": "daima → hep/her zaman (always)",
+          "note": "alive in slogans and mottos ('daima ileri') and posh speech; hep/her zaman are the conversational defaults",
+          "severity": "medium"
+        },
+        {
+          "formal": "vakit",
+          "preferred": "zaman",
+          "rom": "vakit → zaman (time)",
+          "note": "fully alive ('vaktim yok', 'namaz vakti', 'tam vaktinde') — both registers common, no swap needed; context call only",
+          "severity": "low"
+        },
+        {
+          "formal": "itibarıyla",
+          "preferred": "olarak",
+          "alt": [
+            "-den başlayarak"
+          ],
+          "rom": "bugün itibarıyla → bugünden başlayarak / bugün olarak (as of)",
+          "note": "'-den itibaren' ('saat beşten itibaren') is fully alive — never flag it; only '-ı itibarıyla' is the stiff construction",
+          "severity": "medium"
+        }
+      ]
+    },
+    "quantifiers_adjectives": {
+      "policy": "swap-in-beginner-content-unless-noted",
+      "rationale": "Ottoman adjectives and quantifiers. Beware: several survive colloquially as emphatic or jocular flavor (mühim, malum, külliyen) — those are low severity by design.",
+      "entries": [
+        {
+          "formal": "muhtelif",
+          "preferred": "çeşitli",
+          "alt": [
+            "değişik"
+          ],
+          "rom": "muhtelif → çeşitli (various)",
+          "severity": "high"
+        },
+        {
+          "formal": "ekseriyet",
+          "preferred": "çoğunluk",
+          "rom": "ekseriyet → çoğunluk (majority)",
+          "note": "'ekseriyetle' heard only from older speakers",
+          "severity": "high"
+        },
+        {
+          "formal": "kafi",
+          "preferred": "yeterli",
+          "alt": [
+            "yeter"
+          ],
+          "rom": "kafi → yeterli/yeter (sufficient)",
+          "note": "'Kafi!' as a dramatic interjection survives (dated-theatrical); attributive use is stiff",
+          "severity": "medium"
+        },
+        {
+          "formal": "mühim",
+          "preferred": "önemli",
+          "rom": "mühim → önemli (important)",
+          "note": "still colloquially alive for emphasis ('en mühimi bu', 'mühim değil' among older speakers) — do NOT mark high; context call",
+          "severity": "low"
+        },
+        {
+          "formal": "malum",
+          "preferred": "belli",
+          "alt": [
+            "bilinen"
+          ],
+          "rom": "malum → belli/bilinen (known, obvious)",
+          "note": "fully alive colloquially ('malum sebeplerden', discourse marker 'malum ya...') — context call only",
+          "severity": "low"
+        },
+        {
+          "formal": "mevcut",
+          "preferred": "var",
+          "alt": [
+            "olan",
+            "şimdiki"
+          ],
+          "rom": "mevcut → var/olan (existing, present)",
+          "note": "alive in semi-formal 'mevcut durumda' and classroom roll count ('mevcut 30'); in plain speech 'X var' beats 'X mevcuttur'",
+          "severity": "medium"
+        },
+        {
+          "formal": "münferit",
+          "preferred": "tek tük",
+          "alt": [
+            "ayrı",
+            "tekil"
+          ],
+          "rom": "münferit → tek tük/ayrı (isolated, individual)",
+          "note": "news word ('münferit olaylar'); nobody says it conversationally",
+          "severity": "high"
+        },
+        {
+          "formal": "müstakil",
+          "preferred": "ayrı",
+          "alt": [
+            "bağımsız"
+          ],
+          "rom": "müstakil → ayrı/bağımsız (separate, detached)",
+          "note": "fully alive in real estate ('müstakil ev' = detached house) — exempt that sense",
+          "severity": "medium"
+        },
+        {
+          "formal": "vahim",
+          "preferred": "ciddi",
+          "alt": [
+            "çok kötü"
+          ],
+          "rom": "vahim → ciddi/çok kötü (grave, dire)",
+          "note": "news register; heard in deliberately dramatic speech ('durum vahim')",
+          "severity": "medium"
+        },
+        {
+          "formal": "elzem",
+          "preferred": "şart",
+          "alt": [
+            "çok gerekli"
+          ],
+          "rom": "elzem → şart/çok gerekli (essential)",
+          "note": "alive for emphasis among educated speakers ('elzem değil') — medium, not high",
+          "severity": "medium"
+        },
+        {
+          "formal": "bilumum",
+          "preferred": "bütün",
+          "alt": [
+            "her türlü"
+          ],
+          "rom": "bilumum → bütün/her türlü (all and sundry)",
+          "note": "survives jocularly ('bilumum akraba') — intentional humor is exempt",
+          "severity": "high"
+        },
+        {
+          "formal": "umumi",
+          "preferred": "genel",
+          "rom": "umumi → genel (general, public)",
+          "note": "fossil on old signage ('umumi tuvalet'); 'umumiyetle' is dated for genellikle/genelde",
+          "severity": "high"
+        },
+        {
+          "formal": "hususi",
+          "preferred": "özel",
+          "rom": "hususi → özel (private, special)",
+          "note": "older speakers; 'hususi araç' long replaced by 'özel araç'",
+          "severity": "high"
+        },
+        {
+          "formal": "muayyen",
+          "preferred": "belirli",
+          "alt": [
+            "belli"
+          ],
+          "rom": "muayyen → belirli/belli (definite, specified)",
+          "severity": "high"
+        },
+        {
+          "formal": "mütemadiyen",
+          "preferred": "sürekli",
+          "alt": [
+            "durmadan"
+          ],
+          "rom": "mütemadiyen → sürekli/durmadan (continuously)",
+          "note": "survives as jocular-emphatic exaggeration ('mütemadiyen şikayet ediyor') — that use is intentional",
+          "severity": "medium"
+        },
+        {
+          "formal": "külliyen",
+          "preferred": "tamamen",
+          "rom": "külliyen → tamamen (entirely)",
+          "note": "alive in emphatic denial ('külliyen yalan!') — colloquial flavor, exempt when emphatic",
+          "severity": "medium"
+        },
+        {
+          "formal": "takriben",
+          "preferred": "yaklaşık",
+          "alt": [
+            "aşağı yukarı"
+          ],
+          "rom": "takriben → yaklaşık/aşağı yukarı (approximately)",
+          "note": "older speakers only",
+          "severity": "high"
+        },
+        {
+          "formal": "aşikar",
+          "preferred": "açık",
+          "alt": [
+            "belli",
+            "ortada"
+          ],
+          "rom": "aşikar → açık/belli/ortada (obvious)",
+          "note": "literary but heard in argumentative speech ('aşikar ki'); 'ortada' is the punchy spoken option",
+          "severity": "medium"
+        },
+        {
+          "formal": "fevkalade",
+          "preferred": "harika",
+          "alt": [
+            "olağanüstü"
+          ],
+          "rom": "fevkalade → harika/olağanüstü (extraordinary, marvelous)",
+          "note": "alive as a posh/dated exclamation ('Fevkalade!') — intentional register play; neutral speech says harika",
+          "severity": "medium"
+        },
+        {
+          "formal": "müstesna",
+          "preferred": "hariç",
+          "rom": "müstesna → hariç (except; exceptional)",
+          "note": "as 'except' ('İstanbul müstesna') legal-archaic = high; as praise ('müstesna güzellik') literary/ad copy — that sense is deliberate",
+          "severity": "high"
+        },
+        {
+          "formal": "sair",
+          "preferred": "diğer",
+          "rom": "sair → diğer (other, miscellaneous)",
+          "note": "the contraction 'vesaire (vs.)' is fully alive — never flag it; bare 'sair' is legal boilerplate",
+          "severity": "high"
+        },
+        {
+          "formal": "lüzumsuz",
+          "preferred": "gereksiz",
+          "rom": "lüzumsuz → gereksiz (unnecessary)",
+          "note": "unlike lüzum, lüzumsuz is still colloquially alive ('lüzumsuz konuşma') — context call",
+          "severity": "low"
+        },
+        {
+          "formal": "ehven",
+          "preferred": "daha ucuz",
+          "alt": [
+            "daha uygun"
+          ],
+          "rom": "ehven → daha ucuz/uygun (cheaper, more tolerable)",
+          "note": "set phrase 'ehven-i şer' (lesser evil) alive among educated speakers — exempt",
+          "severity": "high"
+        }
+      ]
+    },
+    "conjunctions_connectors": {
+      "policy": "context-call-heavy",
+      "rationale": "Connectors are where register play is most intentional — lakin, velhasıl, keza survive as deliberate flavor. Only the true fossils (binaenaleyh, mamafih, mucibince) are unconditional swaps.",
+      "entries": [
+        {
+          "formal": "zira",
+          "preferred": "çünkü",
+          "rom": "zira → çünkü (because)",
+          "note": "common in writing; in speech sounds bookish, though some educated speakers use it deliberately",
+          "severity": "medium"
+        },
+        {
+          "formal": "lakin",
+          "preferred": "ama",
+          "rom": "lakin → ama (but)",
+          "note": "alive in speech for poetic/emphatic effect ('lakin unutma...') — intentional flavor; do not flag in dialogue meant to be expressive",
+          "severity": "low"
+        },
+        {
+          "formal": "binaenaleyh",
+          "preferred": "bu yüzden",
+          "alt": [
+            "dolayısıyla"
+          ],
+          "rom": "binaenaleyh → bu yüzden (consequently)",
+          "severity": "high"
+        },
+        {
+          "formal": "nitekim",
+          "preferred": "zaten",
+          "alt": [
+            "gerçekten de"
+          ],
+          "rom": "nitekim → zaten/gerçekten de (indeed, as a matter of fact)",
+          "note": "journalistic but genuinely used by educated speakers — medium, not high",
+          "severity": "medium"
+        },
+        {
+          "formal": "mamafih",
+          "preferred": "yine de",
+          "alt": [
+            "bununla birlikte"
+          ],
+          "rom": "mamafih → yine de (nevertheless)",
+          "severity": "high"
+        },
+        {
+          "formal": "keza",
+          "preferred": "aynı şekilde",
+          "alt": [
+            "...de"
+          ],
+          "rom": "keza → aynı şekilde (likewise)",
+          "note": "survives as educated-jocular one-word agreement ('Keza.') — intentional; otherwise dead",
+          "severity": "high"
+        },
+        {
+          "formal": "dahi",
+          "preferred": "bile",
+          "rom": "dahi → bile (even)",
+          "note": "fine in writing and formal emphasis; bile is the spoken default. Unrelated homograph dâhi (genius) is a different word",
+          "severity": "medium"
+        },
+        {
+          "formal": "yahut",
+          "preferred": "ya da",
+          "alt": [
+            "veya"
+          ],
+          "rom": "yahut → ya da/veya (or)",
+          "note": "'yahut da' as an afterthought filler is alive for some speakers; as a plain 'or' it reads dated",
+          "severity": "medium"
+        },
+        {
+          "formal": "veyahut",
+          "preferred": "ya da",
+          "rom": "veyahut → ya da (or else)",
+          "note": "survives as a deliberate drawl ('veyahut da...'); plain use is dated",
+          "severity": "medium"
+        },
+        {
+          "formal": "şayet",
+          "preferred": "eğer",
+          "rom": "şayet → eğer (if)",
+          "note": "alive but formal-leaning; plain -se/-sa with no conjunction at all is the most natural spoken conditional",
+          "severity": "medium"
+        },
+        {
+          "formal": "binaen",
+          "preferred": "-den dolayı",
+          "alt": [
+            "dayanarak"
+          ],
+          "rom": "buna binaen → bundan dolayı (based on, owing to)",
+          "severity": "high"
+        },
+        {
+          "formal": "mucibince",
+          "preferred": "gereğince",
+          "alt": [
+            "-e göre"
+          ],
+          "rom": "mucibince → gereğince / -e göre (pursuant to)",
+          "note": "legal fossil; even gereğince is formal — plain '-e göre' in speech",
+          "severity": "high"
+        },
+        {
+          "formal": "hasebiyle",
+          "preferred": "yüzünden",
+          "alt": [
+            "nedeniyle"
+          ],
+          "rom": "hasebiyle → yüzünden/nedeniyle (by reason of)",
+          "note": "jocular educated use is alive ('yorgunluk hasebiyle') — intentional humor exempt",
+          "severity": "high"
+        },
+        {
+          "formal": "nazaran",
+          "preferred": "göre",
+          "alt": [
+            "kıyasla"
+          ],
+          "rom": "-e nazaran → -e göre/kıyasla (compared to)",
+          "severity": "high"
+        },
+        {
+          "formal": "velhasıl",
+          "preferred": "kısacası",
+          "rom": "velhasıl → kısacası (in short)",
+          "note": "colloquially alive as a storyteller's wrap-up; 'velhasıl kelam' is jocular set phrase — context call, often intentional",
+          "severity": "low"
+        },
+        {
+          "formal": "ezcümle",
+          "preferred": "kısacası",
+          "alt": [
+            "örneğin"
+          ],
+          "rom": "ezcümle → kısacası/örneğin (in sum, namely)",
+          "note": "jocular revival among columnists; not conversational",
+          "severity": "high"
+        },
+        {
+          "formal": "gerek ... gerekse",
+          "preferred": "hem ... hem",
+          "rom": "gerek A gerekse B → hem A hem B (both A and B)",
+          "note": "fine in writing and speeches; hem...hem (de) is the spoken pair",
+          "severity": "medium"
+        }
+      ]
+    },
+    "formal_constructions": {
+      "policy": "swap-in-dialogue-and-beginner-content",
+      "rationale": "Grammatical constructions of official/academic prose. Standard in reports and news — flag them only in conversational example sentences. Quoted legal text is exempt.",
+      "entries": [
+        {
+          "formal": "-makta/-mekte (yapmaktadır)",
+          "preferred": "-ıyor (yapıyor)",
+          "rom": "artmaktadır → artıyor (is increasing)",
+          "note": "the -maktadır progressive is standard in academic/news prose — flag only in dialogue and beginner sentences",
+          "severity": "high"
+        },
+        {
+          "formal": "-makta olan",
+          "preferred": "-an/-en",
+          "rom": "çalışmakta olan → çalışan (who is working)",
+          "severity": "high"
+        },
+        {
+          "formal": "gerekmektedir",
+          "preferred": "gerekiyor",
+          "alt": [
+            "lazım"
+          ],
+          "rom": "gerekmektedir → gerekiyor/lazım (is necessary)",
+          "note": "'lazım' is the most colloquial of all ('gitmem lazım')",
+          "severity": "high"
+        },
+        {
+          "formal": "tarafından + passive",
+          "preferred": "active voice",
+          "rom": "polis tarafından durduruldu → polis durdurdu (the police stopped [him])",
+          "note": "agentless passive is fine when the agent is unknown/irrelevant; it is the explicit 'X tarafından' in dialogue that sounds like a police report",
+          "severity": "medium"
+        },
+        {
+          "formal": "-dığı takdirde",
+          "preferred": "-se/-sa",
+          "rom": "gelmediği takdirde → gelmezse (if he doesn't come)",
+          "note": "contract/legal texts exempt when quoted",
+          "severity": "high"
+        },
+        {
+          "formal": "-mak suretiyle",
+          "preferred": "-arak/-erek",
+          "rom": "imzalamak suretiyle → imzalayarak (by signing)",
+          "severity": "high"
+        },
+        {
+          "formal": "-mak kaydıyla",
+          "preferred": "-mak şartıyla",
+          "alt": [
+            "-irse"
+          ],
+          "rom": "ödemek kaydıyla → ödemek şartıyla / öderse (provided that)",
+          "note": "kaydıyla is contract language; şartıyla is neutral, plain conditional -irse is most spoken",
+          "severity": "medium"
+        },
+        {
+          "formal": "söz konusu (determiner)",
+          "preferred": "bu",
+          "alt": [
+            "o"
+          ],
+          "rom": "söz konusu araç → bu araç (the vehicle in question → this vehicle)",
+          "note": "the set phrase 'söz konusu bile olamaz!' (out of the question!) is fully alive — exempt; only the determiner use is bureaucratic",
+          "severity": "medium"
+        },
+        {
+          "formal": "mevzubahis",
+          "preferred": "söz konusu",
+          "alt": [
+            "bahsedilen"
+          ],
+          "rom": "mevzubahis → söz konusu/bahsedilen (under discussion)",
+          "note": "ironic-jocular use is alive among educated speakers; neutral use is dead",
+          "severity": "high"
+        },
+        {
+          "formal": "-e istinaden",
+          "preferred": "-e dayanarak",
+          "alt": [
+            "-den dolayı"
+          ],
+          "rom": "rapora istinaden → rapora dayanarak (based on the report)",
+          "severity": "high"
+        },
+        {
+          "formal": "-mek maksadıyla",
+          "preferred": "-mek için",
+          "rom": "görüşmek maksadıyla → görüşmek için (in order to meet)",
+          "note": "maksat itself survives colloquially in 'maksat muhabbet (olsun)' — exempt that idiom",
+          "severity": "medium"
+        },
+        {
+          "formal": "-ması doğrultusunda",
+          "preferred": "için",
+          "alt": [
+            "yönünde"
+          ],
+          "rom": "yapılması doğrultusunda → yapılması için (toward doing)",
+          "note": "bureaucratic filler; usually deletable entirely",
+          "severity": "medium"
+        },
+        {
+          "formal": "ile ilgili olarak",
+          "preferred": "hakkında",
+          "alt": [
+            "konusunda",
+            "ile ilgili"
+          ],
+          "rom": "konuyla ilgili olarak → konu hakkında (regarding the topic)",
+          "note": "'ile ilgili' without 'olarak' is fine in speech; the 'olarak' tail is the bureaucratic part",
+          "severity": "low"
+        },
+        {
+          "formal": "ne şekilde",
+          "preferred": "nasıl",
+          "rom": "ne şekilde → nasıl (in what manner → how)",
+          "severity": "medium"
+        },
+        {
+          "formal": "-mek durumunda kalmak",
+          "preferred": "-mek zorunda kalmak",
+          "rom": "gitmek durumunda kaldım → gitmek zorunda kaldım (I had to go)",
+          "note": "both heard; 'durumunda' leans corporate-polite, 'zorunda' is the natural spoken default",
+          "severity": "low"
+        }
+      ]
+    },
+    "reform_words_overcorrected": {
+      "policy": "prefer-spoken-loan",
+      "rationale": "Öz Türkçe coinages pushed in education/writing that never displaced the older (usually Arabic) loan in daily speech. The reform word is 'formal' here. Target what people say, not purist ideology — but note where the coinage owns a domain (math class, software UI, urbanism).",
+      "entries": [
+        {
+          "formal": "yanıt",
+          "preferred": "cevap",
+          "rom": "yanıt → cevap (answer)",
+          "note": "yanıt owns exams and software UI ('yanıtla'); in conversation everyone says 'cevap ver'",
+          "severity": "medium"
+        },
+        {
+          "formal": "sözcük",
+          "preferred": "kelime",
+          "rom": "sözcük → kelime (word)",
+          "note": "sözcük belongs to grammar class and linguistics; kelime is universal in speech",
+          "severity": "medium"
+        },
+        {
+          "formal": "kent",
+          "preferred": "şehir",
+          "rom": "kent → şehir (city)",
+          "note": "kent is alive in compounds and municipal branding ('kentsel dönüşüm', 'kent konseyi') — exempt those; plain speech says şehir",
+          "severity": "medium"
+        },
+        {
+          "formal": "olanak",
+          "preferred": "imkân",
+          "rom": "olanak → imkân (possibility, means)",
+          "note": "'imkânı yok' / 'imkânsız' are the living idioms; olanak reads as newspaper prose",
+          "severity": "medium"
+        },
+        {
+          "formal": "olasılık",
+          "preferred": "ihtimal",
+          "rom": "olasılık → ihtimal (probability)",
+          "note": "olasılık owns math class; conversation says 'ihtimal vermiyorum', 'düşük ihtimal'",
+          "severity": "medium"
+        },
+        {
+          "formal": "koşul",
+          "preferred": "şart",
+          "rom": "koşul → şart (condition)",
+          "note": "'şart değil', 'tek şartla' are the spoken idioms; koşul is fine in written/technical prose — context call",
+          "severity": "low"
+        },
+        {
+          "formal": "ivedi",
+          "preferred": "acil",
+          "rom": "ivedi → acil (urgent)",
+          "note": "bureaucratic öz Türkçe found on memos ('ivedilikle'); nobody says ivedi — acil is universal (Acil = ER)",
+          "severity": "high"
+        },
+        {
+          "formal": "betimlemek",
+          "preferred": "anlatmak",
+          "alt": [
+            "tarif etmek"
+          ],
+          "rom": "betimlemek → anlatmak/tarif etmek (to describe)",
+          "note": "literature-class word; speech uses anlatmak or tarif etmek",
+          "severity": "medium"
+        },
+        {
+          "formal": "yaşam",
+          "preferred": "hayat",
+          "rom": "yaşam → hayat (life)",
+          "note": "both alive; hayat dominates speech and set phrases ('hayatım', 'hayatta olmaz', 'iş hayatı') — context call",
+          "severity": "low"
+        },
+        {
+          "formal": "yapıt",
+          "preferred": "eser",
+          "rom": "yapıt → eser (work of art)",
+          "note": "art-criticism register; eser is what people say ('eser miktarda' is a separate live idiom)",
+          "severity": "medium"
+        },
+        {
+          "formal": "örneğin",
+          "preferred": "mesela",
+          "rom": "örneğin → mesela (for example)",
+          "note": "both fine — örneğin is written-neutral, mesela is the spoken default; only swap in casual dialogue",
+          "severity": "low"
+        }
+      ]
+    }
+  }
+}

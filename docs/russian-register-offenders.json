@@ -1,0 +1,1041 @@
+{
+  "version": 2,
+  "description": "Russian vocabulary register audit list. 'formal' = bookish (knizhny), bureaucratic (kantselyarit), or news-cliché item; 'preferred' = what Russian speakers actually say in everyday conversation. Severity: 'high' = dead in modern casual speech, swap wherever it appears; 'medium' = bookish but heard in formal contexts, swap in beginner content only; 'low' = both registers common, context call. Set phrases, proverbs, and literary quotes are exempt from all swaps. Used by scripts/audit-ru-register.cjs.",
+  "categories": {
+    "copula_and_linkers": {
+      "policy": "swap-on-sight",
+      "rationale": "Conversational Russian drops the copula (dash or nothing) and uses short native conjunctions. Long prepositional conjunctions are the #1 marker of translated-from-textbook Russian.",
+      "entries": [
+        {
+          "formal": "является",
+          "preferred": "это",
+          "alt": ["(omit copula)"],
+          "rom": "yavlyaetsya → eto (is)",
+          "note": "Spoken Russian drops the copula or uses это: «Москва — (это) столица», never «Москва является столицей». Reflexive являться = 'to show up / appear (to someone)' is a different verb and fine.",
+          "severity": "high"
+        },
+        {
+          "formal": "являться",
+          "preferred": "быть",
+          "rom": "yavlyat'sya → byt' (to be)",
+          "note": "As infinitive copula («хочу являться членом» → «хочу быть членом»). Past tense: «являлся» → «был».",
+          "severity": "high"
+        },
+        {
+          "formal": "поскольку",
+          "preferred": "потому что",
+          "alt": ["раз"],
+          "rom": "poskol'ku → potomu chto (because)",
+          "note": "раз works when the reason is fronted: «Раз ты устал, иди спать».",
+          "severity": "high"
+        },
+        {
+          "formal": "вследствие",
+          "preferred": "из-за",
+          "rom": "vsledstvie → iz-za (because of)",
+          "severity": "high"
+        },
+        {
+          "formal": "вследствие того что",
+          "preferred": "потому что",
+          "rom": "vsledstvie togo chto → potomu chto (because)",
+          "severity": "high"
+        },
+        {
+          "formal": "в связи с",
+          "preferred": "из-за",
+          "rom": "v svyazi s → iz-za (because of)",
+          "note": "Pure kantselyarit; only heard in announcements («в связи с ремонтом»). Quoting an announcement verbatim is exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "в связи с тем что",
+          "preferred": "потому что",
+          "rom": "v svyazi s tem chto → potomu chto (because)",
+          "severity": "high"
+        },
+        {
+          "formal": "ввиду",
+          "preferred": "из-за",
+          "rom": "vvidu → iz-za (because of)",
+          "note": "«иметь в виду» (to mean / keep in mind) is a different, fully spoken expression — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "в силу",
+          "preferred": "из-за",
+          "rom": "v silu → iz-za (owing to)",
+          "note": "«в силу привычки» borderline set phrase, still better as «по привычке».",
+          "severity": "high"
+        },
+        {
+          "formal": "по причине",
+          "preferred": "из-за",
+          "rom": "po prichine → iz-za (by reason of)",
+          "severity": "high"
+        },
+        {
+          "formal": "при условии что",
+          "preferred": "если",
+          "rom": "pri uslovii chto → esli (provided that → if)",
+          "severity": "high"
+        },
+        {
+          "formal": "в случае если",
+          "preferred": "если",
+          "rom": "v sluchae esli → esli (in case → if)",
+          "note": "«на всякий случай» (just in case) is everyday speech — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "с целью",
+          "preferred": "чтобы",
+          "rom": "s tsel'yu → chtoby (with the aim of → in order to)",
+          "severity": "high"
+        },
+        {
+          "formal": "в целях",
+          "preferred": "чтобы",
+          "rom": "v tselyakh → chtoby (for the purposes of → to)",
+          "severity": "high"
+        },
+        {
+          "formal": "для того чтобы",
+          "preferred": "чтобы",
+          "rom": "dlya togo chtoby → chtoby (in order to → to)",
+          "note": "Acceptable when genuinely emphatic; default to plain чтобы in beginner content.",
+          "severity": "medium"
+        },
+        {
+          "formal": "таким образом",
+          "preferred": "так что",
+          "alt": ["значит", "то есть"],
+          "rom": "takim obrazom → tak chto / znachit (thus → so)",
+          "note": "Literal manner sense «таким образом = in this way» → «вот так / так».",
+          "severity": "medium"
+        },
+        {
+          "formal": "однако",
+          "preferred": "но",
+          "rom": "odnako → no (however → but)",
+          "note": "однако is alive in speech, often as a standalone exclamation («Однако!»). Only swap when the sentence is otherwise casual.",
+          "severity": "low"
+        },
+        {
+          "formal": "тем не менее",
+          "preferred": "всё равно",
+          "alt": ["и всё-таки"],
+          "rom": "tem ne menee → vsyo ravno (nevertheless → still/anyway)",
+          "severity": "medium"
+        },
+        {
+          "formal": "несмотря на то что",
+          "preferred": "хотя",
+          "rom": "nesmotrya na to chto → khotya (despite the fact that → although)",
+          "note": "Plain «несмотря на + noun» is acceptable in speech; the full conjunction is heavy.",
+          "severity": "medium"
+        },
+        {
+          "formal": "следовательно",
+          "preferred": "значит",
+          "rom": "sledovatel'no → znachit (consequently → so)",
+          "note": "In speech следовательно sounds like a math proof or ironic Sherlock imitation.",
+          "severity": "medium"
+        },
+        {
+          "formal": "в то время как",
+          "preferred": "а",
+          "alt": ["пока"],
+          "rom": "v to vremya kak → a / poka (whereas → while/and)",
+          "note": "Contrast sense → «а»; simultaneity sense → «пока». Choose by meaning.",
+          "severity": "medium"
+        },
+        {
+          "formal": "либо",
+          "preferred": "или",
+          "rom": "libo → ili (or)",
+          "note": "Paired «либо..., либо...» is alive in speech; single либо between nouns is bookish.",
+          "severity": "medium"
+        },
+        {
+          "formal": "также",
+          "preferred": "тоже",
+          "alt": ["ещё", "и"],
+          "rom": "takzhe → tozhe / eshchyo (also)",
+          "note": "«Я также хочу...» → «Я тоже хочу...». List-final «а также» → «и ещё».",
+          "severity": "medium"
+        },
+        {
+          "formal": "дабы",
+          "preferred": "чтобы",
+          "rom": "daby → chtoby (so that)",
+          "note": "Archaic; survives only as deliberate irony. Never teach.",
+          "severity": "high"
+        },
+        {
+          "formal": "ибо",
+          "preferred": "потому что",
+          "rom": "ibo → potomu chto (for/because)",
+          "note": "Archaic-biblical; used only ironically or in memes. Never teach.",
+          "severity": "high"
+        }
+      ]
+    },
+    "bureaucratic_verbs": {
+      "policy": "swap-preserving-aspect",
+      "rationale": "Kantselyarit replaces plain verbs with abstract ones and light-verb constructions. When swapping, the aspect of the original MUST be preserved: осуществил (pf) → сделал (pf), осуществлял (impf) → делал (impf). Changing aspect changes the meaning.",
+      "entries": [
+        {
+          "formal": "осуществлять",
+          "preferred": "делать",
+          "alt": ["проводить"],
+          "rom": "osushchestvlyat' → delat' (to carry out → to do)",
+          "note": "Preserve aspect: осуществить → сделать, осуществлять → делать. «осуществить мечту» → «исполнить мечту».",
+          "severity": "high"
+        },
+        {
+          "formal": "осуществить",
+          "preferred": "сделать",
+          "alt": ["провести", "исполнить"],
+          "rom": "osushchestvit' → sdelat' (to carry out → to do, pf)",
+          "note": "Perfective pair of осуществлять; keep the perfective in the replacement.",
+          "severity": "high"
+        },
+        {
+          "formal": "реализовывать",
+          "preferred": "делать",
+          "alt": ["выполнять", "воплощать"],
+          "rom": "realizovyvat' → delat' / vypolnyat' (to implement → to do)",
+          "note": "«реализовать товар» = продать (sell); «реализовать план» → «выполнить план». Aspect: реализовать (pf) → сделать/выполнить (pf).",
+          "severity": "high"
+        },
+        {
+          "formal": "обеспечивать",
+          "preferred": "давать",
+          "alt": ["устраивать"],
+          "rom": "obespechivat' → davat' (to provide → to give)",
+          "note": "«обеспечивать семью» (to support one's family) is normal spoken Russian — exempt. Only the bureaucratic 'provide/ensure' sense is dead.",
+          "severity": "high"
+        },
+        {
+          "formal": "производить",
+          "preferred": "делать",
+          "rom": "proizvodit' → delat' (to perform → to do)",
+          "note": "Only light-verb uses are dead: «производить оплату/осмотр/уборку» → «платить/осматривать/убирать». Manufacture sense («завод производит машины») is fine. «производить впечатление» is a live set phrase — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "предоставлять",
+          "preferred": "давать",
+          "rom": "predostavlyat' → davat' (to furnish → to give)",
+          "note": "Aspect: предоставить → дать. «предоставить слово» (give the floor) is a set phrase — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "приобретать",
+          "preferred": "покупать",
+          "rom": "priobretat' → pokupat' (to acquire → to buy)",
+          "note": "Only for the 'buy' sense. «приобрести опыт/привычку» (gain experience/a habit) is normal — exempt. Aspect: приобрести → купить.",
+          "severity": "medium"
+        },
+        {
+          "formal": "направляться",
+          "preferred": "идти",
+          "alt": ["ехать"],
+          "rom": "napravlyat'sya → idti / ekhat' (to proceed → to go)",
+          "note": "Choose идти (on foot) vs ехать (by vehicle) from context.",
+          "severity": "high"
+        },
+        {
+          "formal": "проживать",
+          "preferred": "жить",
+          "rom": "prozhivat' → zhit' (to reside → to live)",
+          "note": "Police-form language («проживаю по адресу»). Only forms and hotel sites use it.",
+          "severity": "high"
+        },
+        {
+          "formal": "иметься",
+          "preferred": "есть",
+          "rom": "imeetsya → est' (there is available → there is)",
+          "note": "«У нас имеется...» → «У нас есть...». Ironic use in speech exists but never neutral.",
+          "severity": "high"
+        },
+        {
+          "formal": "иметь возможность",
+          "preferred": "мочь",
+          "rom": "imet' vozmozhnost' → moch' (to have the possibility → can)",
+          "severity": "high"
+        },
+        {
+          "formal": "иметь место",
+          "preferred": "быть",
+          "alt": ["происходить", "случаться"],
+          "rom": "imet' mesto → byt' / proiskhodit' (to take place → to happen)",
+          "severity": "high"
+        },
+        {
+          "formal": "обладать",
+          "preferred": "иметь",
+          "alt": ["у ... есть"],
+          "rom": "obladat' → imet' / u ... est' (to possess → to have)",
+          "note": "Best rephrased with the у-construction: «он обладает талантом» → «у него талант».",
+          "severity": "medium"
+        },
+        {
+          "formal": "располагать",
+          "preferred": "иметь",
+          "alt": ["у ... есть"],
+          "rom": "raspolagat' → imet' (to have at one's disposal → to have)",
+          "note": "Only the 'have' sense («располагаем временем»). «Располагайтесь!» (make yourself at home) is spoken and unrelated — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "прибывать",
+          "preferred": "приезжать",
+          "alt": ["приходить"],
+          "rom": "pribyvat' → priezzhat' / prikhodit' (to arrive → to come)",
+          "note": "Station announcements («поезд прибывает на второй путь») are set official language — exempt when quoting announcements. Aspect: прибыть → приехать/прийти.",
+          "severity": "high"
+        },
+        {
+          "formal": "покидать",
+          "preferred": "уходить из",
+          "alt": ["уезжать из"],
+          "rom": "pokidat' → ukhodit' iz (to depart from → to leave)",
+          "note": "Emotive/poetic uses («не покидай меня») are literary register by design — exempt in song or quote contexts.",
+          "severity": "medium"
+        },
+        {
+          "formal": "приступать к",
+          "preferred": "начинать",
+          "rom": "pristupat' k → nachinat' (to commence → to start)",
+          "note": "Aspect: приступить к работе → начать работать.",
+          "severity": "high"
+        },
+        {
+          "formal": "завершать",
+          "preferred": "заканчивать",
+          "rom": "zavershat' → zakanchivat' (to conclude → to finish)",
+          "note": "Aspect: завершить → закончить.",
+          "severity": "medium"
+        },
+        {
+          "formal": "содействовать",
+          "preferred": "помогать",
+          "rom": "sodeystvovat' → pomogat' (to render assistance → to help)",
+          "severity": "high"
+        },
+        {
+          "formal": "способствовать",
+          "preferred": "помогать",
+          "rom": "sposobstvovat' → pomogat' (to facilitate → to help)",
+          "note": "Often better rephrased entirely: «это способствует здоровью» → «это полезно для здоровья».",
+          "severity": "medium"
+        },
+        {
+          "formal": "оказывать помощь",
+          "preferred": "помогать",
+          "rom": "okazyvat' pomoshch' → pomogat' (to render aid → to help)",
+          "note": "Classic light-verb construction; the plain verb always wins. Aspect: оказать помощь → помочь.",
+          "severity": "high"
+        },
+        {
+          "formal": "оказывать влияние",
+          "preferred": "влиять",
+          "rom": "okazyvat' vliyanie → vliyat' (to exert influence → to influence)",
+          "note": "Aspect: оказать влияние → повлиять.",
+          "severity": "high"
+        },
+        {
+          "formal": "принимать участие",
+          "preferred": "участвовать",
+          "rom": "prinimat' uchastie → uchastvovat' (to take part → to participate)",
+          "severity": "medium"
+        },
+        {
+          "formal": "принимать решение",
+          "preferred": "решать",
+          "rom": "prinimat' reshenie → reshat' (to make a decision → to decide)",
+          "note": "«принять решение» is acceptable when the decision itself is emphasized; default to решить in beginner content. Aspect: принять решение → решить.",
+          "severity": "medium"
+        },
+        {
+          "formal": "надлежит",
+          "preferred": "надо",
+          "rom": "nadlezhit → nado (it behooves → must)",
+          "note": "Pure legalese; never spoken outside courtrooms and irony.",
+          "severity": "high"
+        },
+        {
+          "formal": "следует",
+          "preferred": "надо",
+          "alt": ["лучше", "стоит"],
+          "rom": "sleduet → nado / luchshe (one should → should/better)",
+          "note": "Bookish but genuinely used in advice and instructions — medium, not high. «стоит» is the most natural soft-advice replacement. Motion sense of следовать (to follow) is unrelated — exempt.",
+          "severity": "medium"
+        },
+        {
+          "formal": "необходимо",
+          "preferred": "нужно",
+          "alt": ["надо"],
+          "rom": "neobkhodimo → nuzhno / nado (it is necessary → need)",
+          "note": "Alive in formal speech and signage; swap in beginner content only. Adjective необходимый (essential) is common — exempt.",
+          "severity": "medium"
+        },
+        {
+          "formal": "требуется",
+          "preferred": "нужно",
+          "rom": "trebuetsya → nuzhno (is required → is needed)",
+          "note": "Job-ad formula «требуется продавец» is standard genre language — exempt in that context.",
+          "severity": "medium"
+        },
+        {
+          "formal": "употреблять",
+          "preferred": "есть",
+          "alt": ["пить", "использовать"],
+          "rom": "upotreblyat' → est' / pit' (to consume → to eat/drink)",
+          "note": "«употреблять алкоголь» is clinical or ironic. Linguistic sense («это слово редко употребляется») is standard — exempt.",
+          "severity": "medium"
+        },
+        {
+          "formal": "проинформировать",
+          "preferred": "сказать",
+          "alt": ["сообщить", "предупредить"],
+          "rom": "proinformirovat' → skazat' / soobshchit' (to inform → to tell)",
+          "severity": "medium"
+        },
+        {
+          "formal": "задействовать",
+          "preferred": "использовать",
+          "alt": ["подключить"],
+          "rom": "zadeystvovat' → ispol'zovat' (to bring into play → to use)",
+          "note": "Modern officialese, spreading in corporate speech but still marked.",
+          "severity": "medium"
+        }
+      ]
+    },
+    "formal_pointers_quantifiers": {
+      "policy": "swap-on-sight",
+      "rationale": "Document-language determiners and degree words. данный as 'this' is the single most reliable kantselyarit marker in Russian.",
+      "entries": [
+        {
+          "formal": "данный",
+          "preferred": "этот",
+          "rom": "dannyy → etot (the given → this)",
+          "note": "«в данном случае» → «в этом случае». The noun данные (data) is normal — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "настоящий (=this)",
+          "preferred": "этот",
+          "rom": "nastoyashchiy → etot (the present → this)",
+          "note": "Only the document sense («настоящий договор» = this contract). настоящий = 'real, genuine' («настоящий друг») is everyday — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "указанный",
+          "preferred": "этот",
+          "alt": ["тот"],
+          "rom": "ukazannyy → etot / tot (the indicated → this/that)",
+          "severity": "high"
+        },
+        {
+          "formal": "вышеупомянутый",
+          "preferred": "тот (самый)",
+          "rom": "vysheupomyanutyy → tot (samyy) (the aforementioned → that (very))",
+          "note": "Used in speech only as a joke about bureaucrats.",
+          "severity": "high"
+        },
+        {
+          "formal": "вышеуказанный",
+          "preferred": "тот",
+          "rom": "vysheukazannyy → tot (the above-indicated → that)",
+          "severity": "high"
+        },
+        {
+          "formal": "некоторый",
+          "preferred": "какой-то",
+          "alt": ["кое-какой"],
+          "rom": "nekotoryy → kakoy-to (a certain → some)",
+          "note": "Plural некоторые (= some people/things: «некоторые думают...») is fully spoken — exempt. Only singular attributive use («некоторое время» is a live set phrase, exempt too) is bookish.",
+          "severity": "low"
+        },
+        {
+          "formal": "ряд (=several)",
+          "preferred": "несколько",
+          "rom": "ryad → neskol'ko (a number of → several)",
+          "note": "Only the quantifier sense («ряд вопросов»). ряд = row/line («первый ряд») is everyday — exempt. «целый ряд» → «много».",
+          "severity": "medium"
+        },
+        {
+          "formal": "определённый (=some)",
+          "preferred": "какой-то",
+          "rom": "opredelyonnyy → kakoy-to (a certain → some)",
+          "note": "Only the vague-quantifier sense («в определённый момент»). The 'specific/definite' sense is standard — exempt.",
+          "severity": "low"
+        },
+        {
+          "formal": "различный",
+          "preferred": "разный",
+          "rom": "razlichnyy → raznyy (various → different)",
+          "severity": "medium"
+        },
+        {
+          "formal": "многочисленный",
+          "preferred": "много",
+          "rom": "mnogochislennyy → mnogo (numerous → many)",
+          "note": "Rephrase: «многочисленные туристы» → «много туристов».",
+          "severity": "medium"
+        },
+        {
+          "formal": "значительный",
+          "preferred": "большой",
+          "rom": "znachitel'nyy → bol'shoy (considerable → big)",
+          "severity": "medium"
+        },
+        {
+          "formal": "незначительный",
+          "preferred": "небольшой",
+          "alt": ["маленький"],
+          "rom": "neznachitel'nyy → nebol'shoy (insignificant → small)",
+          "severity": "medium"
+        },
+        {
+          "formal": "прочий",
+          "preferred": "другой",
+          "alt": ["остальной"],
+          "rom": "prochiy → drugoy / ostal'noy (other/sundry → other)",
+          "note": "«и прочее» / «и так далее» tail formulas are alive in speech — exempt; attributive прочий («прочие вопросы») is bureaucratic.",
+          "severity": "medium"
+        },
+        {
+          "formal": "каковой",
+          "preferred": "который",
+          "rom": "kakovoy → kotoryy (which (archaic) → which)",
+          "note": "Legal archaism; never teach.",
+          "severity": "high"
+        },
+        {
+          "formal": "таковой",
+          "preferred": "такой",
+          "rom": "takovoy → takoy (such (archaic) → such)",
+          "note": "«как таковой» (as such) is a live set phrase — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "сей",
+          "preferred": "этот",
+          "rom": "sey → etot (this (archaic) → this)",
+          "note": "Ironic only. Fossilized forms «сию минуту», «до сих пор», «сегодня» are exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "оный",
+          "preferred": "тот",
+          "rom": "onyy → tot (the said (archaic) → that)",
+          "note": "Ironic-archaic only.",
+          "severity": "high"
+        },
+        {
+          "formal": "столь",
+          "preferred": "так",
+          "alt": ["такой"],
+          "rom": "stol' → tak / takoy (so (bookish) → so/such)",
+          "severity": "high"
+        },
+        {
+          "formal": "весьма",
+          "preferred": "очень",
+          "rom": "ves'ma → ochen' (rather/quite → very)",
+          "note": "Alive in educated speech, often with a slightly ironic-understated tone. Context call.",
+          "severity": "low"
+        },
+        {
+          "formal": "крайне",
+          "preferred": "очень",
+          "alt": ["ужасно", "жутко"],
+          "rom": "krayne → ochen' (extremely → very)",
+          "note": "Heard in formal registers; the colloquial intensifiers ужасно/жутко fit casual dialogue better.",
+          "severity": "medium"
+        }
+      ]
+    },
+    "time_and_place": {
+      "policy": "swap-on-sight",
+      "rationale": "Time and place officialese. сейчас, потом, рядом, вовремя cover almost everything a learner needs.",
+      "entries": [
+        {
+          "formal": "в настоящее время",
+          "preferred": "сейчас",
+          "rom": "v nastoyashchee vremya → seychas (at the present time → now)",
+          "severity": "medium"
+        },
+        {
+          "formal": "на данный момент",
+          "preferred": "сейчас",
+          "rom": "na dannyy moment → seychas (at the given moment → now)",
+          "severity": "high"
+        },
+        {
+          "formal": "в данный момент",
+          "preferred": "сейчас",
+          "rom": "v dannyy moment → seychas (at this moment → now)",
+          "note": "Survives in phone-support speech («абонент в данный момент занят»); still swap for learners.",
+          "severity": "medium"
+        },
+        {
+          "formal": "в настоящий момент",
+          "preferred": "сейчас",
+          "rom": "v nastoyashchiy moment → seychas (at the present moment → now)",
+          "severity": "high"
+        },
+        {
+          "formal": "на сегодняшний день",
+          "preferred": "сейчас",
+          "alt": ["сегодня"],
+          "rom": "na segodnyashniy den' → seychas (as of today → now)",
+          "severity": "medium"
+        },
+        {
+          "formal": "в течение",
+          "preferred": "за",
+          "alt": ["во время"],
+          "rom": "v techenie → za / vo vremya (in the course of → in/during)",
+          "note": "Duration-of-completion → за («в течение часа сделаю» → «за час сделаю»); span → во время or bare accusative («в течение всего дня» → «весь день»). «в течение дня» itself is semi-alive — medium.",
+          "severity": "medium"
+        },
+        {
+          "formal": "в ходе",
+          "preferred": "во время",
+          "rom": "v khode → vo vremya (in the course of → during)",
+          "note": "News formula («в ходе переговоров»).",
+          "severity": "high"
+        },
+        {
+          "formal": "посредством",
+          "preferred": "через",
+          "alt": ["с помощью"],
+          "rom": "posredstvom → cherez / s pomoshch'yu (by means of → through/with)",
+          "severity": "high"
+        },
+        {
+          "formal": "путём",
+          "preferred": "через",
+          "alt": ["с помощью"],
+          "rom": "putyom → cherez / s pomoshch'yu (by way of → through/with)",
+          "note": "Only the instrumental-preposition use. «обманным путём» and noun путь (way/path) are fine — exempt. Often best rephrased with a gerundless clause: «путём голосования» → «голосованием».",
+          "severity": "high"
+        },
+        {
+          "formal": "при помощи",
+          "preferred": "с помощью",
+          "rom": "pri pomoshchi → s pomoshch'yu (with the aid of → with the help of)",
+          "note": "Both are acceptable; с помощью is the neutral default.",
+          "severity": "low"
+        },
+        {
+          "formal": "вблизи",
+          "preferred": "рядом с",
+          "alt": ["недалеко от"],
+          "rom": "vblizi → ryadom s (in the vicinity of → next to)",
+          "severity": "high"
+        },
+        {
+          "formal": "в непосредственной близости от",
+          "preferred": "рядом с",
+          "rom": "v neposredstvennoy blizosti ot → ryadom s (in immediate proximity to → right next to)",
+          "note": "Real-estate-listing language.",
+          "severity": "high"
+        },
+        {
+          "formal": "вдали от",
+          "preferred": "далеко от",
+          "rom": "vdali ot → daleko ot (far from)",
+          "note": "вдали от has a poetic tinge («вдали от дома»); далеко от is the neutral spoken form.",
+          "severity": "medium"
+        },
+        {
+          "formal": "незамедлительно",
+          "preferred": "сразу",
+          "alt": ["сразу же"],
+          "rom": "nezamedlitel'no → srazu (without delay → right away)",
+          "severity": "high"
+        },
+        {
+          "formal": "в кратчайшие сроки",
+          "preferred": "как можно быстрее",
+          "alt": ["быстро"],
+          "rom": "v kratchayshie sroki → kak mozhno bystree (in the shortest terms → as fast as possible)",
+          "severity": "high"
+        },
+        {
+          "formal": "своевременно",
+          "preferred": "вовремя",
+          "rom": "svoevremenno → vovremya (in a timely manner → on time)",
+          "severity": "high"
+        },
+        {
+          "formal": "ежедневно",
+          "preferred": "каждый день",
+          "rom": "ezhednevno → kazhdyy den' (daily → every day)",
+          "note": "Fine on schedules and labels; in dialogue people say каждый день.",
+          "severity": "medium"
+        },
+        {
+          "formal": "ежегодно",
+          "preferred": "каждый год",
+          "rom": "ezhegodno → kazhdyy god (annually → every year)",
+          "severity": "medium"
+        },
+        {
+          "formal": "в дальнейшем",
+          "preferred": "потом",
+          "alt": ["дальше"],
+          "rom": "v dal'neyshem → potom / dal'she (henceforth → later/further)",
+          "severity": "medium"
+        },
+        {
+          "formal": "впоследствии",
+          "preferred": "потом",
+          "rom": "vposledstvii → potom (subsequently → later)",
+          "severity": "medium"
+        }
+      ]
+    },
+    "abstract_nouns": {
+      "policy": "rephrase-with-verb",
+      "rationale": "Kantselyarit nominalizes everything. The fix is usually not a synonym but a rephrase: turn the noun back into a verb or an есть/нет construction.",
+      "entries": [
+        {
+          "formal": "наличие",
+          "preferred": "(rephrase with есть)",
+          "rom": "nalichie → est'-construction (presence of → there is)",
+          "note": "«при наличии времени» → «если есть время»; «наличие мест» → «есть места». Наличные (cash) is a different word — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "отсутствие",
+          "preferred": "(rephrase with нет)",
+          "rom": "otsutstvie → net-construction (absence of → there is no)",
+          "note": "«из-за отсутствия денег» → «потому что нет денег». «в его отсутствие» is formal but used — context call there; default swap for learners.",
+          "severity": "medium"
+        },
+        {
+          "formal": "осуществление",
+          "preferred": "(rephrase with verb)",
+          "rom": "osushchestvlenie → verb rephrase (implementation → doing)",
+          "note": "«осуществление плана» → «выполнить план» / «как выполнить план». Never has a one-word spoken synonym; restructure the sentence.",
+          "severity": "high"
+        },
+        {
+          "formal": "реализация",
+          "preferred": "(rephrase with verb)",
+          "rom": "realizatsiya → verb rephrase (realization → doing/selling)",
+          "note": "Sales sense = продажа; plan sense → выполнить. Restructure rather than substitute.",
+          "severity": "high"
+        },
+        {
+          "formal": "использование",
+          "preferred": "(rephrase with пользоваться)",
+          "rom": "ispol'zovanie → pol'zovat'sya rephrase (usage → to use)",
+          "note": "«использование телефона запрещено» → «телефоном пользоваться нельзя».",
+          "severity": "medium"
+        },
+        {
+          "formal": "предоставление",
+          "preferred": "(rephrase with давать)",
+          "rom": "predostavlenie → davat' rephrase (provision → giving)",
+          "severity": "high"
+        },
+        {
+          "formal": "приобретение",
+          "preferred": "покупка",
+          "rom": "priobretenie → pokupka (acquisition → purchase)",
+          "note": "Or rephrase with купить. Gain-sense («приобретение опыта») → «получить опыт».",
+          "severity": "medium"
+        },
+        {
+          "formal": "получение",
+          "preferred": "(rephrase with получить)",
+          "rom": "poluchenie → poluchit' rephrase (receipt of → to get)",
+          "note": "«после получения диплома» → «когда получишь диплом».",
+          "severity": "medium"
+        },
+        {
+          "formal": "выполнение",
+          "preferred": "(rephrase with сделать)",
+          "rom": "vypolnenie → sdelat' rephrase (fulfilment → to do)",
+          "note": "«выполнение домашнего задания» → «сделать домашку/домашнее задание».",
+          "severity": "medium"
+        },
+        {
+          "formal": "проведение",
+          "preferred": "(rephrase with провести)",
+          "rom": "provedenie → provesti rephrase (holding of → to hold)",
+          "note": "«во время проведения концерта» → «во время концерта» — often the noun just deletes.",
+          "severity": "medium"
+        },
+        {
+          "formal": "обеспечение",
+          "preferred": "(rephrase with verb)",
+          "rom": "obespechenie → verb rephrase (provision/ensuring → giving)",
+          "note": "«программное обеспечение» (software) is the standard term — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "функционирование",
+          "preferred": "работа",
+          "rom": "funktsionirovanie → rabota (functioning → work/operation)",
+          "severity": "high"
+        },
+        {
+          "formal": "усовершенствование",
+          "preferred": "улучшение",
+          "rom": "usovershenstvovanie → uluchshenie (refinement → improvement)",
+          "note": "Or rephrase with улучшить/сделать лучше.",
+          "severity": "medium"
+        },
+        {
+          "formal": "недопущение",
+          "preferred": "(rephrase with чтобы не)",
+          "rom": "nedopushchenie → chtoby ne rephrase (prevention of → so that ... not)",
+          "note": "«для недопущения ошибок» → «чтобы не было ошибок».",
+          "severity": "high"
+        },
+        {
+          "formal": "проживание",
+          "preferred": "жильё",
+          "rom": "prozhivanie → zhil'yo (residence → housing/place to stay)",
+          "note": "Booking-site term («проживание с завтраком») is genre-standard — exempt in travel-booking contexts; in dialogue say «жильё» or rephrase with жить.",
+          "severity": "medium"
+        }
+      ]
+    },
+    "news_cliches": {
+      "policy": "swap-to-concrete",
+      "rationale": "News and official-notice vocabulary hides concrete everyday words behind generic multi-word labels. Prefer the concrete noun the context implies.",
+      "entries": [
+        {
+          "formal": "мероприятие",
+          "preferred": "встреча",
+          "alt": ["праздник", "событие", "вечеринка"],
+          "rom": "meropriyatie → vstrecha / prazdnik (event (official) → meeting/party)",
+          "note": "Alive in corporate speech and irony («корпоративное мероприятие»), but a learner should name the concrete thing: концерт, вечеринка, встреча.",
+          "severity": "medium"
+        },
+        {
+          "formal": "функционировать",
+          "preferred": "работать",
+          "rom": "funktsionirovat' → rabotat' (to function → to work)",
+          "severity": "high"
+        },
+        {
+          "formal": "финансовые средства",
+          "preferred": "деньги",
+          "rom": "finansovye sredstva → den'gi (financial means → money)",
+          "severity": "high"
+        },
+        {
+          "formal": "денежные средства",
+          "preferred": "деньги",
+          "rom": "denezhnye sredstva → den'gi (monetary funds → money)",
+          "note": "Bank-statement language; even bank clerks say деньги aloud.",
+          "severity": "high"
+        },
+        {
+          "formal": "транспортное средство",
+          "preferred": "машина",
+          "rom": "transportnoe sredstvo → mashina (vehicle → car)",
+          "note": "Traffic-code term. Pick the concrete vehicle from context: машина, автобус, мотоцикл.",
+          "severity": "high"
+        },
+        {
+          "formal": "населённый пункт",
+          "preferred": "город",
+          "alt": ["деревня", "посёлок"],
+          "rom": "naselyonnyy punkt → gorod / derevnya (populated locality → town/village)",
+          "severity": "high"
+        },
+        {
+          "formal": "лица (=people)",
+          "preferred": "люди",
+          "rom": "litsa → lyudi (persons → people)",
+          "note": "Only the legal-official 'persons' sense («посторонним лицам вход воспрещён»). лицо = face is everyday — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "продукты питания",
+          "preferred": "продукты",
+          "alt": ["еда"],
+          "rom": "produkty pitaniya → produkty / eda (food products → groceries/food)",
+          "severity": "high"
+        },
+        {
+          "formal": "жилое помещение",
+          "preferred": "квартира",
+          "alt": ["жильё", "дом"],
+          "rom": "zhiloe pomeshchenie → kvartira / zhil'yo (residential premises → flat/home)",
+          "severity": "high"
+        },
+        {
+          "formal": "учебное заведение",
+          "preferred": "школа",
+          "alt": ["университет", "вуз"],
+          "rom": "uchebnoe zavedenie → shkola / universitet (educational institution → school/university)",
+          "note": "вуз (university, acronym) is fully colloquial.",
+          "severity": "medium"
+        },
+        {
+          "formal": "медицинское учреждение",
+          "preferred": "больница",
+          "alt": ["поликлиника"],
+          "rom": "meditsinskoe uchrezhdenie → bol'nitsa / poliklinika (medical facility → hospital/clinic)",
+          "severity": "high"
+        },
+        {
+          "formal": "головной убор",
+          "preferred": "шапка",
+          "alt": ["кепка", "шляпа"],
+          "rom": "golovnoy ubor → shapka (headwear → hat)",
+          "note": "Store-sign and dress-code word; in speech people name the specific hat.",
+          "severity": "medium"
+        },
+        {
+          "formal": "порядка (=approximately)",
+          "preferred": "около",
+          "alt": ["примерно", "где-то"],
+          "rom": "poryadka → okolo / primerno (on the order of → about)",
+          "note": "Only the quantifier use («порядка ста человек»). порядок = order is everyday — exempt. где-то is the most colloquial option.",
+          "severity": "medium"
+        },
+        {
+          "formal": "касательно",
+          "preferred": "насчёт",
+          "alt": ["про"],
+          "rom": "kasatel'no → naschyot / pro (with regard to → about)",
+          "severity": "high"
+        },
+        {
+          "formal": "относительно (=about)",
+          "preferred": "насчёт",
+          "alt": ["о", "про"],
+          "rom": "otnositel'no → naschyot / o (concerning → about)",
+          "note": "Only the preposition sense. Adverb относительно (= relatively: «относительно недорого») is alive — exempt.",
+          "severity": "medium"
+        },
+        {
+          "formal": "в отношении",
+          "preferred": "насчёт",
+          "alt": ["к"],
+          "rom": "v otnoshenii → naschyot / k (in relation to → about/towards)",
+          "severity": "high"
+        },
+        {
+          "formal": "согласно",
+          "preferred": "по",
+          "rom": "soglasno → po (in accordance with → according to)",
+          "note": "«согласно расписанию» → «по расписанию». In quoting rules/laws согласно is genre-appropriate — exempt there.",
+          "severity": "medium"
+        },
+        {
+          "formal": "в соответствии с",
+          "preferred": "по",
+          "rom": "v sootvetstvii s → po (in conformity with → according to)",
+          "severity": "high"
+        },
+        {
+          "formal": "в рамках",
+          "preferred": "в",
+          "alt": ["во время", "внутри"],
+          "rom": "v ramkakh → v / vo vremya (within the framework of → in/during)",
+          "note": "«в рамках фестиваля» → «на фестивале». Often the phrase just deletes.",
+          "severity": "medium"
+        },
+        {
+          "formal": "на предмет",
+          "preferred": "насчёт",
+          "rom": "na predmet → naschyot (for the purpose of checking → about)",
+          "note": "«проверить на предмет ошибок» → «проверить, нет ли ошибок».",
+          "severity": "high"
+        },
+        {
+          "formal": "по вопросу",
+          "preferred": "насчёт",
+          "alt": ["о"],
+          "rom": "po voprosu → naschyot / o (on the question of → about)",
+          "severity": "high"
+        },
+        {
+          "formal": "озвучить (=to say)",
+          "preferred": "сказать",
+          "alt": ["назвать"],
+          "rom": "ozvuchit' → skazat' / nazvat' (to voice → to say/name)",
+          "note": "Modern officialese that has spread widely into casual speech; many editors dislike it but it is genuinely common. Dubbing sense (озвучить фильм) is the original, standard use — exempt.",
+          "severity": "low"
+        }
+      ]
+    },
+    "structural_patterns": {
+      "policy": "rephrase-clause",
+      "rationale": "Participles and gerunds are written-Russian machinery. Spoken Russian uses который-clauses and когда/после того как-clauses instead. Severity high for Q1-Q2 (beginner) content; lexicalized participles that have become ordinary adjectives or adverbs are exempt.",
+      "entries": [
+        {
+          "formal": "present active participle -ущий/-ющий (e.g. читающий, работающий)",
+          "preferred": "который + present-tense verb (который читает, который работает)",
+          "rom": "-ushchiy/-yushchiy → kotoryy + verb (who is X-ing → who X-es)",
+          "note": "«человек, читающий книгу» → «человек, который читает книгу». Lexicalized adjectives (следующий, текущий, подходящий) are ordinary words — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "present active participle -ащий/-ящий (e.g. говорящий, лежащий)",
+          "preferred": "который + present-tense verb (который говорит, который лежит)",
+          "rom": "-ashchiy/-yashchiy → kotoryy + verb (who is X-ing → who X-es)",
+          "note": "«студент, говорящий по-русски» → «студент, который говорит по-русски». Lexicalized: настоящий (real), стоящий (worthwhile) — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "past active participle -вший/-ший (e.g. прочитавший, пришедший)",
+          "preferred": "который + past-tense verb (который прочитал, который пришёл)",
+          "rom": "-vshiy/-shiy → kotoryy + past verb (who X-ed → who X-ed)",
+          "note": "Preserve aspect inside the clause: прочитавший (pf) → который прочитал (pf), читавший (impf) → который читал (impf). Lexicalized бывший (ex-, former) is everyday — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "present passive participle -емый/-имый (e.g. используемый, обсуждаемый)",
+          "preferred": "который-clause with 3pl or passive (который используют)",
+          "rom": "-emyy/-imyy → kotoryy + 3pl verb (which is X-ed → which they X)",
+          "note": "«используемый метод» → «метод, который используют». Lexicalized adjectives (любимый, необходимый, независимый) are everyday — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "attributive past passive participle -нный/-тый (e.g. написанный, купленный)",
+          "preferred": "который-clause (который написали / который купили)",
+          "rom": "-nnyy/-tyy → kotoryy + verb (which was X-ed → which they X-ed)",
+          "note": "Short predicative forms (сделано, закрыто, куплено, «магазин закрыт») are fully spoken — exempt. Only long attributive chains before nouns are bookish.",
+          "severity": "medium"
+        },
+        {
+          "formal": "imperfective gerund -я/-а (e.g. читая, говоря, работая)",
+          "preferred": "когда/пока-clause or two coordinated verbs (когда я читал..., пока работал...)",
+          "rom": "-ya/-a gerund → kogda/poka-clause (while X-ing → while X)",
+          "note": "«Читая книгу, я уснул» → «Я читал книгу и уснул». Lexicalized adverbs сидя, стоя, лёжа, молча, не спеша, шутя and discourse markers судя по, честно говоря, кстати говоря are everyday — exempt.",
+          "severity": "high"
+        },
+        {
+          "formal": "perfective gerund -в/-вши (e.g. прочитав, придя, сделав)",
+          "preferred": "после того как / когда + past perfective (когда я прочитал..., после того как пришёл...)",
+          "rom": "-v/-vshi gerund → posle togo kak / kogda-clause (having X-ed → after X-ing)",
+          "note": "«Придя домой, он поужинал» → «Он пришёл домой и поужинал» or «Когда он пришёл домой, он поужинал». Preserve perfective aspect in the rephrase.",
+          "severity": "high"
+        },
+        {
+          "formal": "genitive-chain nominalization (e.g. улучшение качества обслуживания клиентов)",
+          "preferred": "rephrase with finite verbs (лучше обслуживать клиентов)",
+          "rom": "noun+gen+gen chains → verb rephrase (improvement of quality of service → serve better)",
+          "note": "Stacked verbal nouns in genitive are the core of kantselyarit. Break the chain: keep at most one abstract noun, turn the rest into verbs.",
+          "severity": "high"
+        }
+      ]
+    }
+  }
+}

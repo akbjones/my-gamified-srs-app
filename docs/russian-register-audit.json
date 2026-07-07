@@ -1,0 +1,1095 @@
+[
+  {
+    "id": "ru-2348",
+    "target": "Либо мы идём сейчас, либо не идём вообще.",
+    "english": "Either we go now or we don't go at all.",
+    "tags": [
+      "general"
+    ],
+    "score": 2,
+    "weightedScore": 4,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "либо",
+        "preferred": "или",
+        "alt": [],
+        "category": "copula_and_linkers",
+        "rom": "libo → ili (or)",
+        "note": "Paired «либо..., либо...» is alive in speech; single либо between nouns is bookish.",
+        "severity": "medium"
+      },
+      {
+        "formal": "либо",
+        "preferred": "или",
+        "alt": [],
+        "category": "copula_and_linkers",
+        "rom": "libo → ili (or)",
+        "note": "Paired «либо..., либо...» is alive in speech; single либо between nouns is bookish.",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2383",
+    "target": "Он ушёл, поскольку ему стало скучно.",
+    "english": "He left since he got bored.",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 3,
+    "maxSeverity": "high",
+    "hits": [
+      {
+        "formal": "поскольку",
+        "preferred": "потому что",
+        "alt": [
+          "раз"
+        ],
+        "category": "copula_and_linkers",
+        "rom": "poskol'ku → potomu chto (because)",
+        "note": "раз works when the reason is fronted: «Раз ты устал, иди спать».",
+        "severity": "high"
+      }
+    ]
+  },
+  {
+    "id": "ru-2424",
+    "target": "В связи с праздником магазин закрыт.",
+    "english": "Due to the holiday the store is closed.",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 3,
+    "maxSeverity": "high",
+    "hits": [
+      {
+        "formal": "в связи с",
+        "preferred": "из-за",
+        "alt": [],
+        "category": "copula_and_linkers",
+        "rom": "v svyazi s → iz-za (because of)",
+        "note": "Pure kantselyarit; only heard in announcements («в связи с ремонтом»). Quoting an announcement verbatim is exempt.",
+        "severity": "high"
+      }
+    ]
+  },
+  {
+    "id": "ru-2431",
+    "target": "Я согласен, при условии что ты поможешь.",
+    "english": "I agree, on the condition that you help.",
+    "tags": [
+      "general"
+    ],
+    "score": 1,
+    "weightedScore": 3,
+    "maxSeverity": "high",
+    "hits": [
+      {
+        "formal": "при условии что",
+        "preferred": "если",
+        "alt": [],
+        "category": "copula_and_linkers",
+        "rom": "pri uslovii chto → esli (provided that → if)",
+        "note": "",
+        "severity": "high"
+      }
+    ]
+  },
+  {
+    "id": "ru-2806",
+    "target": "Проверьте электронную почту на наличие новых писем.",
+    "english": "Check your email for new messages.",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "score": 1,
+    "weightedScore": 3,
+    "maxSeverity": "high",
+    "hits": [
+      {
+        "formal": "наличие",
+        "preferred": "(rephrase with есть)",
+        "alt": [],
+        "category": "abstract_nouns",
+        "rom": "nalichie → est'-construction (presence of → there is)",
+        "note": "«при наличии времени» → «если есть время»; «наличие мест» → «есть места». Наличные (cash) is a different word — exempt.",
+        "severity": "high"
+      }
+    ]
+  },
+  {
+    "id": "ru-0091",
+    "target": "Читающий мальчик сидит у окна.",
+    "english": "The reading boy is sitting by the window.",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Читающий",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:active_participle",
+        "rom": "",
+        "note": "Active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-0795",
+    "target": "В течение года он выучил язык.",
+    "english": "During the year he learned the language.",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "в течение",
+        "preferred": "за",
+        "alt": [
+          "во время"
+        ],
+        "category": "time_and_place",
+        "rom": "v techenie → za / vo vremya (in the course of → in/during)",
+        "note": "Duration-of-completion → за («в течение часа сделаю» → «за час сделаю»); span → во время or bare accusative («в течение всего дня» → «весь день»). «в течение дня» itself is semi-alive — medium.",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-1677",
+    "target": "Стоматолог посоветовал ежедневно пользоваться зубной нитью.",
+    "english": "The dentist advised using dental floss daily.",
+    "tags": [
+      "general"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "ежедневно",
+        "preferred": "каждый день",
+        "alt": [],
+        "category": "time_and_place",
+        "rom": "ezhednevno → kazhdyy den' (daily → every day)",
+        "note": "Fine on schedules and labels; in dialogue people say каждый день.",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-1686",
+    "target": "Водолаз исследовал затонувший корабль на морском дне.",
+    "english": "The diver explored the sunken ship on the seabed.",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "затонувший",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:past_participle",
+        "rom": "",
+        "note": "Past active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2077",
+    "target": "Для того чтобы успеть, нужно встать рано.",
+    "english": "In order to make it, you need to get up early.",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "для того чтобы",
+        "preferred": "чтобы",
+        "alt": [],
+        "category": "copula_and_linkers",
+        "rom": "dlya togo chtoby → chtoby (in order to → to)",
+        "note": "Acceptable when genuinely emphatic; default to plain чтобы in beginner content.",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2144",
+    "target": "Реставратор обновил потускневшую потолочную фреску собора.",
+    "english": "The restorer restored the faded ceiling fresco of the cathedral.",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "потускневшую",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:past_participle",
+        "rom": "",
+        "note": "Past active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2482",
+    "target": "Играющие во дворе дети шумели до самого вечера.",
+    "english": "The children playing in the yard were noisy until evening.",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Играющие",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:active_participle",
+        "rom": "",
+        "note": "Active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2499",
+    "target": "Согласно плану, мы начнём завтра.",
+    "english": "According to the plan, we will start tomorrow.",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "согласно",
+        "preferred": "по",
+        "alt": [],
+        "category": "news_cliches",
+        "rom": "soglasno → po (in accordance with → according to)",
+        "note": "«согласно расписанию» → «по расписанию». In quoting rules/laws согласно is genre-appropriate — exempt there.",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2523",
+    "target": "Тем не менее, мы продолжили.",
+    "english": "Nevertheless, we continued.",
+    "tags": [
+      "general"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "тем не менее",
+        "preferred": "всё равно",
+        "alt": [
+          "и всё-таки"
+        ],
+        "category": "copula_and_linkers",
+        "rom": "tem ne menee → vsyo ravno (nevertheless → still/anyway)",
+        "note": "",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2560",
+    "target": "В течение дня он работал.",
+    "english": "During the day he worked.",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "в течение",
+        "preferred": "за",
+        "alt": [
+          "во время"
+        ],
+        "category": "time_and_place",
+        "rom": "v techenie → za / vo vremya (in the course of → in/during)",
+        "note": "Duration-of-completion → за («в течение часа сделаю» → «за час сделаю»); span → во время or bare accusative («в течение всего дня» → «весь день»). «в течение дня» itself is semi-alive — medium.",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2624",
+    "target": "Плотно позавтракав, семья отправилась в путь на дачу.",
+    "english": "Having eaten a hearty breakfast, the family set off on their journey to the dacha.",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "позавтракав,",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:gerund",
+        "rom": "",
+        "note": "Gerund clause — convert to когда/после того как at Q1–Q3",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2640",
+    "target": "Падающий снег красивый.",
+    "english": "The falling snow is beautiful.",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Падающий",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:active_participle",
+        "rom": "",
+        "note": "Active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2656",
+    "target": "Скучающий ребёнок хочет играть.",
+    "english": "The bored child wants to play.",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Скучающий",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:active_participle",
+        "rom": "",
+        "note": "Active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2682",
+    "target": "Сидящий на скамейке старик читает газету.",
+    "english": "The old man sitting on the bench is reading a newspaper.",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Сидящий",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:active_participle",
+        "rom": "",
+        "note": "Active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2687",
+    "target": "Бегущая по улице собака напугала маленького ребёнка.",
+    "english": "The dog running down the street scared the little child.",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Бегущая",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:active_participle",
+        "rom": "",
+        "note": "Active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2695",
+    "target": "Читающий газету дедушка сидел на скамейке в парке.",
+    "english": "The grandfather reading the newspaper was sitting on a bench in the park.",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Читающий",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:active_participle",
+        "rom": "",
+        "note": "Active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2731",
+    "target": "Выбранный ресторан оказался лучшим из всех, что мы когда-либо посещали.",
+    "english": "The chosen restaurant turned out to be the best we had ever visited.",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "либо",
+        "preferred": "или",
+        "alt": [],
+        "category": "copula_and_linkers",
+        "rom": "libo → ili (or)",
+        "note": "Paired «либо..., либо...» is alive in speech; single либо between nouns is bookish.",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2751",
+    "target": "Растущий город нуждается в школах.",
+    "english": "The growing city needs schools.",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Растущий",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:active_participle",
+        "rom": "",
+        "note": "Active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2760",
+    "target": "Позавтракав, дети пошли в школу.",
+    "english": "Having had breakfast, the children went to school.",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Позавтракав,",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:gerund",
+        "rom": "",
+        "note": "Gerund clause — convert to когда/после того как at Q1–Q3",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2795",
+    "target": "Висящая на стене картина красивая.",
+    "english": "The painting hanging on the wall is beautiful.",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Висящая",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:active_participle",
+        "rom": "",
+        "note": "Active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2813",
+    "target": "Спящий на диване кот не слышал звонок двери.",
+    "english": "The cat sleeping on the couch didn't hear the doorbell.",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Спящий",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:active_participle",
+        "rom": "",
+        "note": "Active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2815",
+    "target": "Поющая в хоре девушка выступит на концерте завтра.",
+    "english": "The girl singing in the choir will perform at the concert tomorrow.",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Поющая",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:active_participle",
+        "rom": "",
+        "note": "Active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2831",
+    "target": "Опавшие листья шуршат.",
+    "english": "The fallen leaves rustle.",
+    "tags": [
+      "general"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Опавшие",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:past_participle",
+        "rom": "",
+        "note": "Past active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2832",
+    "target": "Встретившись, друзья обнялись.",
+    "english": "Having met, friends hugged.",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Встретившись,",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:gerund",
+        "rom": "",
+        "note": "Gerund clause — convert to когда/после того как at Q1–Q3",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2836",
+    "target": "Умывшись, он сел завтракать.",
+    "english": "Having washed up, he sat down to have breakfast.",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Умывшись,",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:gerund",
+        "rom": "",
+        "note": "Gerund clause — convert to когда/после того как at Q1–Q3",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2844",
+    "target": "Идущий по улице человек – мой сосед.",
+    "english": "The person walking along the street is my neighbor.",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Идущий",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:active_participle",
+        "rom": "",
+        "note": "Active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2850",
+    "target": "Работающий в офисе человек редко выходит на прогулку.",
+    "english": "The person working in the office rarely goes for a walk.",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Работающий",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:active_participle",
+        "rom": "",
+        "note": "Active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2856",
+    "target": "Танцующая пара красивая.",
+    "english": "The dancing couple is beautiful.",
+    "tags": [
+      "general"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Танцующая",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:active_participle",
+        "rom": "",
+        "note": "Active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2860",
+    "target": "Пообедав, мы продолжили путь.",
+    "english": "Having had lunch, we continued our journey.",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Пообедав,",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:gerund",
+        "rom": "",
+        "note": "Gerund clause — convert to когда/после того как at Q1–Q3",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2884",
+    "target": "Товары доставляются на дом в течение трёх дней.",
+    "english": "Goods are delivered to your home within three days.",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "в течение",
+        "preferred": "за",
+        "alt": [
+          "во время"
+        ],
+        "category": "time_and_place",
+        "rom": "v techenie → za / vo vremya (in the course of → in/during)",
+        "note": "Duration-of-completion → за («в течение часа сделаю» → «за час сделаю»); span → во время or bare accusative («в течение всего дня» → «весь день»). «в течение дня» itself is semi-alive — medium.",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2885",
+    "target": "Вопрос обсуждался на собрании в течение двух часов.",
+    "english": "The question was discussed at the meeting for two hours.",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "в течение",
+        "preferred": "за",
+        "alt": [
+          "во время"
+        ],
+        "category": "time_and_place",
+        "rom": "v techenie → za / vo vremya (in the course of → in/during)",
+        "note": "Duration-of-completion → за («в течение часа сделаю» → «за час сделаю»); span → во время or bare accusative («в течение всего дня» → «весь день»). «в течение дня» itself is semi-alive — medium.",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2895",
+    "target": "Созревшие плоды падают.",
+    "english": "The ripe fruits fall.",
+    "tags": [
+      "general"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Созревшие",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:past_participle",
+        "rom": "",
+        "note": "Past active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2904",
+    "target": "Библиотекарь расставил по полкам вновь поступившие книги.",
+    "english": "The librarian arranged the newly arrived books on the shelves.",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "поступившие",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:past_participle",
+        "rom": "",
+        "note": "Past active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2906",
+    "target": "Подумав, он согласился.",
+    "english": "Having thought, he agreed.",
+    "tags": [
+      "general"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "Подумав,",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:gerund",
+        "rom": "",
+        "note": "Gerund clause — convert to когда/после того как at Q1–Q3",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2977",
+    "target": "Закон нарушен водителем, превысившим скорость на трассе.",
+    "english": "The law was broken by the driver who exceeded the speed on the highway.",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "превысившим",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:past_participle",
+        "rom": "",
+        "note": "Past active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-3042",
+    "target": "Хлеб-соль – традиционное русское приветствие для почётных гостей, символизирующее гостеприимство и дружбу.",
+    "english": "Bread and salt is the traditional Russian welcome for honoured guests, symbolising hospitality and friendship.",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "символизирующее",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:active_participle",
+        "rom": "",
+        "note": "Active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-3160",
+    "target": "Для того чтобы получить визу, нужны документы.",
+    "english": "In order to get a visa, you need documents.",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "для того чтобы",
+        "preferred": "чтобы",
+        "alt": [],
+        "category": "copula_and_linkers",
+        "rom": "dlya togo chtoby → chtoby (in order to → to)",
+        "note": "Acceptable when genuinely emphatic; default to plain чтобы in beginner content.",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-3207",
+    "target": "В то время как он работал, она готовила ужин.",
+    "english": "While he was working, she was cooking dinner.",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "в то время как",
+        "preferred": "а",
+        "alt": [
+          "пока"
+        ],
+        "category": "copula_and_linkers",
+        "rom": "v to vremya kak → a / poka (whereas → while/and)",
+        "note": "Contrast sense → «а»; simultaneity sense → «пока». Choose by meaning.",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-3313",
+    "target": "Несмотря на то что шёл дождь, мы пошли гулять.",
+    "english": "Despite the rain, we went for a walk.",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "несмотря на то что",
+        "preferred": "хотя",
+        "alt": [],
+        "category": "copula_and_linkers",
+        "rom": "nesmotrya na to chto → khotya (despite the fact that → although)",
+        "note": "Plain «несмотря на + noun» is acceptable in speech; the full conjunction is heavy.",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-3316",
+    "target": "Масленица – любимый русский праздник блинов, знаменующий конец зимы и приход весны.",
+    "english": "Maslenitsa is the beloved Russian pancake festival that marks the end of winter and the coming of spring.",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "score": 1,
+    "weightedScore": 2,
+    "maxSeverity": "medium",
+    "hits": [
+      {
+        "formal": "знаменующий",
+        "preferred": "(restructure)",
+        "alt": [],
+        "category": "structural:active_participle",
+        "rom": "",
+        "note": "Active participle — LLM judges: lexicalized adjective (keep) vs bookish clause (который-clause)",
+        "severity": "medium"
+      }
+    ]
+  },
+  {
+    "id": "ru-2520",
+    "target": "Он богат, однако несчастлив.",
+    "english": "He is rich, but unhappy.",
+    "tags": [
+      "general"
+    ],
+    "score": 1,
+    "weightedScore": 1,
+    "maxSeverity": "low",
+    "hits": [
+      {
+        "formal": "однако",
+        "preferred": "но",
+        "alt": [],
+        "category": "copula_and_linkers",
+        "rom": "odnako → no (however → but)",
+        "note": "однако is alive in speech, often as a standalone exclamation («Однако!»). Only swap when the sentence is otherwise casual.",
+        "severity": "low"
+      }
+    ]
+  }
+]

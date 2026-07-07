@@ -116,13 +116,18 @@ Contract-first: a language exists in the repo only as a
 - Dictionary keys: bare-script forms; lookups tolerant of alif variants
   (أ/إ/آ/ا) and ta marbuta (ة/ه) — encode in ScriptDescriptor notes.
 
-### Lebanese Arabic (last; inherits everything)
-- **Gate 0 — voice A/B test before anything else:** generate ~10
-  Lebanese-written sentences (بدي، عم بـ، هلق، مش) through
-  ar-LB-LaylaNeural and have the user listen. Edge dialect voices are
-  trained largely on MSA-ish text; if Layla reads Lebanese text
-  unnaturally, the language is blocked and we reassess (RamiNeural,
-  or Egyptian fallback). Do not author 300 cards before this.
+### Lebanese Arabic — PARKED (Gate-0 failed, 2026-07-07)
+- **Gate 0 verdict: FAILED across all tested providers.** Edge
+  ar-LB-Layla/Rami and ar-EG-Salma read dialect text as MSA
+  ("all very much MSA sounding"); ElevenLabs multilingual likewise
+  (هلق → "hallaq" with /q/ instead of Lebanese "hallaʔ", رفقاتي with
+  full MSA vowels). No TTS on the market renders Lebanese convincingly
+  right now.
+- **Decision: ship MSA, park the dialect slot.** Re-run Gate 0
+  (13 sentences, ~10 minutes) when new dialect voices appear — the
+  test protocol and sentence sets live in scripts/tmp/ar-lb-samples/
+  and scripts/tmp/ar-eg-samples/. Zero cards were authored before the
+  gate — this is the gate working as designed.
 - Orthography convention doc is part of the register policy: Lebanese
   has no standard spelling — pick conventions (script not Arabizi,
   progressive عم + verb, بدّي for want, negation مش/ما) and the

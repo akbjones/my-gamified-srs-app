@@ -651,10 +651,10 @@ const App: React.FC = () => {
                     }}
                     className="stat-card p-4 flex items-center justify-center hover:border-[var(--accent)]/40 hover:bg-[var(--accent)]/5 transition-all active:scale-95"
                   >
-                    <span className="text-sm font-bold text-[var(--text-primary)]">
+                    <span className="text-sm font-bold text-[var(--text-primary)] whitespace-nowrap">
                       {LANGUAGE_CONFIG[l].name}
                       {LANGUAGE_CONFIG[l].variety && (
-                        <span className="block text-[10px] font-semibold text-[var(--text-muted)]">{LANGUAGE_CONFIG[l].variety}</span>
+                        <span className="ml-1 text-[9px] font-semibold text-[var(--text-muted)]">({LANGUAGE_CONFIG[l].variety})</span>
                       )}
                     </span>
                   </button>
@@ -732,10 +732,10 @@ const App: React.FC = () => {
                             : 'text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] active:scale-[0.98]'
                         }`}
                       >
-                        <span>
+                        <span className="whitespace-nowrap">
                           {LANGUAGE_CONFIG[l].name}
                           {LANGUAGE_CONFIG[l].variety && (
-                            <span className="ml-1.5 text-[11px] font-medium text-[var(--text-muted)]">({LANGUAGE_CONFIG[l].variety})</span>
+                            <span className="ml-1 text-[10px] font-medium text-[var(--text-muted)]">({LANGUAGE_CONFIG[l].variety})</span>
                           )}
                         </span>
                         {l === lang && <span className="ml-auto text-[11px] font-bold uppercase tracking-wider opacity-60">active</span>}

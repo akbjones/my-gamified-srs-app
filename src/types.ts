@@ -115,12 +115,15 @@ export interface ProgressState {
 }
 
 // Language configuration
-export const LANGUAGE_CONFIG: Record<Language, { name: string; code: string; bcp47: string }> = {
-  spanish: { name: 'Spanish', code: 'ES', bcp47: 'es-MX' },
+// `variety` names the specific standard the deck teaches, shown small in
+// the language pickers. Only set where a learner could be surprised —
+// unmarked standards (German, French, Dutch…) stay unlabeled.
+export const LANGUAGE_CONFIG: Record<Language, { name: string; code: string; bcp47: string; variety?: string }> = {
+  spanish: { name: 'Spanish', code: 'ES', bcp47: 'es-MX', variety: 'Latin American' },
   italian: { name: 'Italian', code: 'IT', bcp47: 'it-IT' },
   german:  { name: 'German',  code: 'DE', bcp47: 'de-DE' },
   french:  { name: 'French',  code: 'FR', bcp47: 'fr-FR' },
-  portuguese: { name: 'Portuguese', code: 'PT', bcp47: 'pt-BR' },
+  portuguese: { name: 'Portuguese', code: 'PT', bcp47: 'pt-BR', variety: 'Brazilian' },
   dutch: { name: 'Dutch', code: 'NL', bcp47: 'nl-NL' },
   swedish: { name: 'Swedish', code: 'SV', bcp47: 'sv-SE' },
   welsh: { name: 'Welsh', code: 'CY', bcp47: 'cy-GB' },

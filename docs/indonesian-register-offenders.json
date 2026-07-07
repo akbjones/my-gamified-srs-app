@@ -1,0 +1,27 @@
+{
+  "language": "indonesian",
+  "policy": "docs/indonesian-register-policy.md",
+  "note": "Seed lexicon (Stage-1 scaffold). severity: high = fails Q1/Q2 gate; medium = review. Two directions: formal baku that no one speaks, and Jakarta slang below Q4.",
+  "offenders": [
+    { "word": "merupakan", "severity": "high", "reason": "formal 'to constitute' — bureaucratic; use 'adalah' or drop the copula" },
+    { "word": "tersebut", "severity": "high", "reason": "formal anaphor 'the aforementioned' — use 'itu'" },
+    { "word": "beserta", "severity": "high", "reason": "formal 'together with' — use 'dengan' or 'sama'" },
+    { "word": "menggunakan", "severity": "medium", "reason": "formal 'to utilize' — 'pakai/memakai' is what people say" },
+    { "word": "mengatakan", "severity": "medium", "reason": "reporting verb of news prose — 'bilang' in conversation" },
+    { "word": "memperoleh", "severity": "high", "reason": "formal 'to obtain' — use 'dapat/mendapat'" },
+    { "word": "terdapat", "severity": "high", "reason": "formal existential 'there is' — use 'ada'" },
+    { "word": "melaksanakan", "severity": "high", "reason": "officialese 'to carry out' — use 'melakukan' or a concrete verb" },
+    { "word": "yakni", "severity": "medium", "reason": "formal 'namely' — use 'yaitu' or rephrase" },
+    { "word": "guna", "severity": "medium", "reason": "formal 'for the purpose of' — use 'untuk'" },
+    { "word": "senantiasa", "severity": "high", "reason": "literary 'always' — use 'selalu'" },
+    { "word": "amat", "severity": "medium", "reason": "literary intensifier — use 'sangat' or 'sekali'" },
+    { "word": "gue", "severity": "high", "reason": "Jakarta slang 'I' — below Q4 only saya/aku" },
+    { "word": "lo", "severity": "high", "reason": "Jakarta slang 'you' — below Q4 only kamu/Anda" },
+    { "word": "nggak", "severity": "medium", "reason": "colloquial 'not' — cards model 'tidak'; tips may mention nggak" },
+    { "word": "gak", "severity": "medium", "reason": "colloquial 'not' — cards model 'tidak'" },
+    { "word": "banget", "severity": "medium", "reason": "colloquial intensifier — cards model 'sekali/sangat' below Q4" },
+    { "word": "udah", "severity": "medium", "reason": "colloquial 'sudah' — cards model the full form" },
+    { "word": "aja", "severity": "medium", "reason": "colloquial 'saja' — cards model the full form" },
+    { "word": "gimana", "severity": "medium", "reason": "colloquial 'bagaimana' — cards model the full form" }
+  ]
+}

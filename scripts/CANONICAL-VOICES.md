@@ -18,6 +18,7 @@ a different script or voice.
 | Hindi       | `hi-IN-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=hi --voice=hi-IN-Chirp3-HD-Aoede` |
 | Russian     | `ru-RU-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=ru --voice=ru-RU-Chirp3-HD-Aoede` |
 | **Welsh**   | `cy-GB-NiaNeural`                  | **Azure / Edge TTS** | `regen-welsh-inconsistent.py` |
+| Indonesian  | `id-ID-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=id --voice=id-ID-Chirp3-HD-Aoede` (staged) |
 
 All voices are **female**. As of 2026-06-28 we migrated 10 non-Welsh
 languages from Neural2/Wavenet to `Chirp3-HD-Aoede` for substantially

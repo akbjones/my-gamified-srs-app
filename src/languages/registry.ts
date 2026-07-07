@@ -40,6 +40,8 @@ import { conjugate as conjCy, findInfinitive as findInfCy } from '../data/conjug
 import { conjugateHindi as conjHi, findInfinitive as findInfHi } from '../data/conjugation/hi';
 import { conjugate as conjTr, findInfinitive as findInfTr } from '../data/conjugation/tr';
 import { conjugate as conjRu, findInfinitive as findInfRu } from '../data/conjugation/ru';
+import { lookupWord as lookupId } from '../data/dictionary/id';
+import { conjugate as conjId, findInfinitive as findInfId } from '../data/conjugation/id';
 
 // ── Script descriptors ──────────────────────────────────────────
 
@@ -211,6 +213,16 @@ export const REGISTRY: Record<string, RegistryEntry> = {
     registerPolicy: {
       policyDoc: 'docs/russian-register-policy.md',
       offenderLexicon: 'docs/russian-register-offenders.json',
+    },
+  },
+  // ── Staged (Stage-1 scaffold; not yet in the app UI) ──────────
+  indonesian: {
+    key: 'indonesian', code: 'id', deckPath: 'src/data/indonesian/deck.json',
+    lookup: lookupId, conjugate: conjId, findInfinitive: findInfId,
+    script: latin, voice: google('id-ID', 'id-ID-Chirp3-HD-Aoede'),
+    registerPolicy: {
+      policyDoc: 'docs/indonesian-register-policy.md',
+      offenderLexicon: 'docs/indonesian-register-offenders.json',
     },
   },
 };

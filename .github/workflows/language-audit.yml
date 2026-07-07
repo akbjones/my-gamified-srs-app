@@ -1,0 +1,29 @@
+name: language-audit
+
+on:
+  push:
+    branches: ['**']
+    paths:
+      - 'src/data/**'
+      - 'src/languages/**'
+      - 'src/services/audioService.ts'
+      - 'vite.config.ts'
+      - 'scripts/audit-lang.ts'
+      - 'docs/audit-baseline.json'
+  pull_request:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx tsc --noEmit -p .
+      # Fails only on REGRESSIONS vs docs/audit-baseline.json.
+      # Known gaps stay visible in the log; burning them down means
+      # re-running `npm run audit:baseline` and committing the file.
+      - run: npm run audit:langs

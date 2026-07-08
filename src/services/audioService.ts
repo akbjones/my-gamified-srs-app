@@ -28,7 +28,7 @@ function getAudioBase(): string {
 // Bump whenever audio content changes — appended as ?v=N to every audio
 // URL so CDN edge nodes serving stale bytes for unversioned URLs can't hit.
 // Pair with audio-cache-vN bump in vite.config.ts.
-const AUDIO_VERSION = '10';
+const AUDIO_VERSION = '11';
 
 function fetchAndCacheMp3(audioFile: string): Promise<string> {
   const cached = mp3Cache.get(audioFile);
@@ -68,6 +68,19 @@ function fetchAndCacheMp3(audioFile: string): Promise<string> {
   promise.finally(() => mp3InFlight.delete(audioFile));
   return promise;
 }
+
+/**
+ * Warm the cache for a whole session queue (first N cards), staggered so
+ * we don't burst-hammer R2 on session start. Cold-start fetch flakiness
+ * on a card's first appearance was a reported bug; this makes the first
+ * plays come from memory.
+ */
+export const preloadSessionAudio = (audioFiles: (string | undefined)[], limit = 12): void => {
+  const files = audioFiles.filter((f): f is string => !!f).slice(0, limit);
+  files.forEach((f, i) => {
+    setTimeout(() => preloadCardAudio(f), i * 250);
+  });
+};
 
 /**
  * Preload audio for an upcoming card. Fire-and-forget — failures are
@@ -234,7 +247,9 @@ export const playCardAudio = async (
   lang: Language = 'spanish',
   speed: AudioSpeed = 0.8,
   googleApiKey?: string,
+  opts?: { allowBrowserTts?: boolean },
 ): Promise<void> => {
+  const allowBrowserTts = opts?.allowBrowserTts ?? true;
   stopAudio();
 
   // 1. Try pre-recorded MP3 first.
@@ -259,14 +274,18 @@ export const playCardAudio = async (
     // Try the preload cache first. If hit, playback is instant (no fetch).
     // Falls through to fetchAndCacheMp3 on miss (which itself retries via
     // the existing logic — but we replicate the 350ms retry on miss only).
+    // Three attempts with growing backoff — transient R2/network blips on a
+    // card's FIRST appearance were the "no audio, then it works later" bug.
     const fetchWithCache = async (): Promise<string> => {
-      try {
-        return await fetchAndCacheMp3(audioFile);
-      } catch (firstErr) {
-        if (myToken !== playToken) throw firstErr;
-        await new Promise(res => setTimeout(res, 350));
-        if (myToken !== playToken) throw firstErr;
-        return await fetchAndCacheMp3(audioFile);
+      const delays = [350, 1200];
+      for (let attempt = 0; ; attempt++) {
+        try {
+          return await fetchAndCacheMp3(audioFile);
+        } catch (err) {
+          if (myToken !== playToken || attempt >= delays.length) throw err;
+          await new Promise(res => setTimeout(res, delays[attempt]));
+          if (myToken !== playToken) throw err;
+        }
       }
     };
 
@@ -332,12 +351,14 @@ export const playCardAudio = async (
     }
   }
 
-  // 3. Browser TTS fallback. Originally only fired when no audioFile was
-  // provided so we wouldn't mix the robot voice in mid-card after an
-  // MP3 failed partway through. But if the MP3 fetch itself fails (e.g.
-  // 404 because the file was never generated), staying silent meant
-  // ListenMode would silently zip past those cards in 1.8s each. Now
-  // we always fall through to browser TTS – callers await it so the
-  // listen loop waits for the actual speech to finish before advancing.
-  await playBrowserTts(targetText, lang, speed);
+  // 3. Browser TTS fallback. ListenMode wants it (silence would zip past
+  // cards); study surfaces do NOT — the system voice differs from the
+  // canonical one, which users experience as "several voices". For them
+  // we stay silent, warm the cache in the background, and the next tap
+  // or appearance plays the real recording.
+  if (allowBrowserTts) {
+    await playBrowserTts(targetText, lang, speed);
+  } else if (audioFile) {
+    setTimeout(() => preloadCardAudio(audioFile), 2000);
+  }
 };

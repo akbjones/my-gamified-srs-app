@@ -1,0 +1,85 @@
+[
+ {
+  "id": "el-0007",
+  "rating": 5,
+  "issue": "Greek 'μαμά μου' is natural, but the gloss 'Good night, my mom.' is a word-for-word calque no English speaker says.",
+  "fix": {
+   "target": "Καληνύχτα, μαμά μου.",
+   "english": "Good night, mom.",
+   "grammar": "Καληνύχτα is only for parting at night — greet people in the evening with καλησπέρα."
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "el-0012",
+  "rating": 4,
+  "issue": "With σήμερα, 'τι κάνετε σήμερα;' reads as 'what are you doing today?', not the glossed 'how are you today?'. The σήμερα is an English 'how are you today' calque; Greeks just say τι κάνετε;",
+  "fix": {
+   "target": "Χαίρετε, τι κάνετε;",
+   "english": "Hello, how are you?",
+   "grammar": "Χαίρετε is a polite all-purpose hello, safe with strangers: Χαίρετε, τι κάνετε;"
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "el-0033",
+  "rating": 4,
+  "issue": "'Μιλάτε αγγλικά, παρακαλώ;' tacks παρακαλώ onto a yes/no question — an English 'please' calque; no Athenian phrases it this way. The gloss 'Do you speak English, please?' is equally unnatural. The idiomatic opener is συγγνώμη.",
+  "fix": {
+   "target": "Συγγνώμη, μιλάτε αγγλικά;",
+   "english": "Excuse me, do you speak English?",
+   "grammar": null
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "el-0066",
+  "rating": 4,
+  "issue": "Aspect error: 'Αύριο θα μιλάμε πάλι' uses the imperfective future (habitual/ongoing) for a one-time event; a native says θα μιλήσουμε or τα λέμε αύριο. Perfective stems are unavailable to the engine, so the fix uses the very natural colloquial present-as-future.",
+  "fix": {
+   "target": "Μιλάμε αύριο, εντάξει;",
+   "english": "We'll talk tomorrow, okay?",
+   "grammar": "Greek uses the present for near plans: Μιλάμε αύριο = We'll talk tomorrow."
+  },
+  "newTokens": {
+   "εντάξει": {
+    "en": "okay, all right",
+    "ipa": "eˈdaksi",
+    "pos": "interjection"
+   }
+  }
+ },
+ {
+  "id": "el-0075",
+  "rating": 5,
+  "issue": "Register clash: αντίο sounds final/formal (parting for good), which sits oddly next to the casual 'τα λέμε αύριο'. Everyday Greek pairs τα λέμε with γεια.",
+  "fix": {
+   "target": "Γεια, τα λέμε αύριο!",
+   "english": "Bye, see you tomorrow!",
+   "grammar": "Τα λέμε (literally 'we say them') is the everyday 'see you / talk soon'."
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "el-0091",
+  "rating": 4,
+  "issue": "Tip mismatch: the card teaches του = 'his' (and the sentence starts with feminine αυτή), but the tip explains masculine αυτός, which does not appear in the sentence and was already covered on el-0090.",
+  "fix": {
+   "target": "Αυτή είναι η γυναίκα του.",
+   "english": "This is his wife.",
+   "grammar": "του = his and follows the noun: η γυναίκα του = his wife."
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "el-0118",
+  "rating": 5,
+  "issue": "Tip is factually wrong as stated: 'After the verb, ο becomes τον' — position is irrelevant (subjects follow verbs too: ήρθε ο Νίκος). The article changes because the noun is the object.",
+  "fix": {
+   "target": "Θέλουμε τον λογαριασμό, παρακαλώ.",
+   "english": "We want the bill, please.",
+   "grammar": "θέλω and έχω take τον for masculine 'the': θέλω τον λογαριασμό = I want the bill."
+  },
+  "newTokens": {}
+ }
+]

@@ -1,0 +1,70 @@
+[
+  {
+    "id": "el-0161",
+    "rating": 5,
+    "issue": "Sentence fine, tip factually overgeneralizes: 'πόσα with plurals' is only true for neuters — m/f plurals take πόσοι/πόσες (πόσες μέρες; πόσοι άνθρωποι;). As written the tip teaches learners to say *πόσα μέρες.",
+    "fix": {
+      "target": "Πόσο νερό πίνεις την ημέρα;",
+      "english": "How much water do you drink a day?",
+      "grammar": "πόσο asks 'how much' with things you measure: πόσο νερό πίνεις; (how much water?)"
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-0169",
+    "rating": 5,
+    "issue": "With a demonstrative object, natives strongly prefer clitic doubling: Πώς το λέτε αυτό στα ελληνικά; Bare 'Πώς λέτε αυτό' is understandable but reads as learner Greek; the clitic-less pattern is natural only with a quoted word (Πώς λέτε 'apple' στα ελληνικά;).",
+    "fix": {
+      "target": "Πώς το λέτε αυτό στα ελληνικά;",
+      "english": "How do you say this in Greek?",
+      "grammar": "'In Greek' is στα ελληνικά — languages take στα: στα αγγλικά (in English)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-0172",
+    "rating": 5,
+    "issue": "Sentence fine, tip factually wrong: μακριά is an adverb ('far'), not an adjective (that's μακρινός). Calling it an adjective plants a false part-of-speech fact.",
+    "fix": {
+      "target": "Πόσο μακριά είναι η παραλία;",
+      "english": "How far is the beach?",
+      "grammar": "πόσο before a describing word asks 'how —': πόσο μακριά; (how far?)"
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-0207",
+    "rating": 5,
+    "issue": "Sentence fine, tip is multi-rule: it teaches both και μισή (half past) and και τέταρτο (quarter past), the second with no worked example. Pilot tip format is one rule + one example; el-0209 already models και τέταρτο in context.",
+    "fix": {
+      "target": "Είναι δώδεκα και μισή.",
+      "english": "It's half past twelve.",
+      "grammar": "και μισή = half past: δώδεκα και μισή (half past twelve, 12:30)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-0263",
+    "rating": 5,
+    "issue": "Gloss mismatch: English 'We come from Athens' reads as origin/hometown, but έρχομαι από expresses physical motion — origin is Είμαστε από την Αθήνα. Since the card teaches the -ομαι form ερχόμαστε (cf. el-0262 tip), fix the gloss to the motion reading rather than swap the verb.",
+    "fix": {
+      "target": "Ερχόμαστε από την Αθήνα.",
+      "english": "We are coming from Athens.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-0286",
+    "rating": 4,
+    "issue": "English calque: bare 'Από τώρα' does not mean habitual 'from now on' — it means 'already/starting this early' (Από τώρα; = Already?). The idiomatic phrase for a standing change is Από εδώ και πέρα (or από τώρα και στο εξής, too formal for Q1). Verb θα ψωνίζουμε (θα + present, engine-conjugatable) is correct and kept.",
+    "fix": {
+      "target": "Από εδώ και πέρα θα ψωνίζουμε στην αγορά.",
+      "english": "From now on we will shop at the market.",
+      "grammar": null
+    },
+    "newTokens": {
+      "πέρα": { "en": "onward; beyond", "ipa": "ˈpera", "pos": "adv" }
+    }
+  }
+]

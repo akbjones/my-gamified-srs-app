@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { QuestCard, SessionState, Language, ChallengeMode } from '../types';
 import { Volume2, BookOpen, BookText, AlertTriangle, Swords, Zap, Star, Hand } from 'lucide-react';
-import { playCardAudio, stopAudio, preloadCardAudio } from '../services/audioService';
+import { playCardAudio, stopAudio, preloadCardAudio, preloadSessionAudio } from '../services/audioService';
 import { lookupEtymology } from '../services/etymologyService';
 import {
   toggleGrammarFavorite, isGrammarFavorited,
@@ -109,6 +109,15 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   );
 
   // All hooks MUST be above any early return
+
+  // Warm the audio cache for the session's opening cards as soon as the
+  // session starts — cold-start fetch flakiness on a card's first
+  // appearance was the "no audio / different voice" bug.
+  useEffect(() => {
+    preloadSessionAudio(session.queue.map(c => c.audio));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [session.language, session.topic]);
+
   const prevCardId = useRef<string | null>(null);
   useEffect(() => {
     if (card && card.id !== prevCardId.current) {
@@ -123,7 +132,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
         setHasDiscoveredWords(true);
       }
       if (autoPlayAudio) {
-        playCardAudio(card.audio, card.target, session.language, audioSpeed, googleTtsApiKey);
+        playCardAudio(card.audio, card.target, session.language, audioSpeed, googleTtsApiKey, { allowBrowserTts: false });
       } else {
         // With autoplay off, preload the current card so the first manual
         // Play click is instant too.
@@ -244,13 +253,13 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   const handlePlayAudio = (e: React.MouseEvent) => {
     e.stopPropagation();
     setIsPlaying(true);
-    playCardAudio(card!.audio, card!.target, session.language, audioSpeed, googleTtsApiKey).finally(() => setIsPlaying(false));
+    playCardAudio(card!.audio, card!.target, session.language, audioSpeed, googleTtsApiKey, { allowBrowserTts: false }).finally(() => setIsPlaying(false));
   };
 
   const handleSlowReplay = (e: React.MouseEvent) => {
     e.stopPropagation();
     setIsPlaying(true);
-    playCardAudio(card!.audio, card!.target, session.language, 0.6, googleTtsApiKey).finally(() => setIsPlaying(false));
+    playCardAudio(card!.audio, card!.target, session.language, 0.6, googleTtsApiKey, { allowBrowserTts: false }).finally(() => setIsPlaying(false));
   };
 
   const submitAnswer = (rating: 'AGAIN' | 'HARD' | 'GOOD' | 'EASY') => {

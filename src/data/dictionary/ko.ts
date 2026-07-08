@@ -387,7 +387,7 @@ const DICT: Record<string, DictEntry> = {
 // Noun particles, longest first. Stripping order matters: 에서 before 에.
 const PARTICLES = [
   '에서는', '에서도', '한테서', '으로는', '까지는',
-  '에서', '에게', '한테', '부터', '까지', '처럼', '보다', '마다',
+  '에서', '에게', '한테', '부터', '까지', '처럼', '보다', '마다', '으로', '에는', '이랑', '하고',
   '은', '는', '이', '가', '을', '를', '에', '도', '만', '와', '과', '랑', '의', '로'
 ];
 

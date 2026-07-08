@@ -107,7 +107,7 @@ const IRREGULAR_FUTURE: Record<string, string> = {
 /** Derive the 해요체 (polite present) form of a -다 dictionary form. */
 export function haeyo(dictForm: string): string | null {
   const w = dictForm.trim();
-  if (!w.endsWith('다')) return null;
+  if (!w.endsWith('다') || w.length < 2) return null;
   if (IRREGULARS[w]) return IRREGULARS[w];
   // X하다 compounds → X해요 (공부하다 → 공부해요)
   if (w.endsWith('하다')) return w.slice(0, -2) + '해요';
@@ -212,7 +212,7 @@ function buildReverse(): Map<string, string> {
   const add = (key: string, v: string) => {
     if (key && !m.has(key)) m.set(key, v);
   };
-  for (const v of KNOWN_VERBS) {
+  for (const v of new Set([...KNOWN_VERBS, ...Object.keys(IRREGULARS)])) {
     const t = conjugate(v);
     if (!t) continue;
     for (const forms of Object.values(t.tenses)) {

@@ -106,6 +106,10 @@ const hangul: ScriptDescriptor = {
   tokenize: wsTokenize,
   lowercase: (t) => t, // caseless script
   isWordChar: (c) => /[가-힣]/.test(c),
+  // Copula (and other endings) attach to their complement: 학생이에요
+  // ends with the table form 이에요. Suffix match, min 2 syllables to
+  // avoid trivial single-jamo-block hits.
+  formMatches: (token, form) => token === form || (form.length >= 2 && token.endsWith(form)),
   combiningNotes: 'Noun particles attach to tokens; lookup strips them longest-first before dictionary match.',
 };
 
@@ -264,7 +268,6 @@ export const REGISTRY: Record<string, RegistryEntry> = {
       offenderLexicon: 'docs/indonesian-register-offenders.json',
     },
   },
-  // ── Staged (Stage-1 scaffold; not yet in the app UI) ──────────
   greek: {
     key: 'greek', code: 'el', deckPath: 'src/data/greek/deck.json',
     lookup: lookupEl, conjugate: conjEl, findInfinitive: findInfEl,
@@ -274,6 +277,7 @@ export const REGISTRY: Record<string, RegistryEntry> = {
       offenderLexicon: 'docs/greek-register-offenders.json',
     },
   },
+  // ── Staged (Stage-1 scaffold; not yet in the app UI) ──────────
   korean: {
     key: 'korean', code: 'ko', deckPath: 'src/data/korean/deck.json',
     lookup: lookupKo, conjugate: conjKo, findInfinitive: findInfKo,

@@ -39,7 +39,16 @@ const V = { a: 0, eo: 4, o: 8, wa: 9, u: 13, wo: 14, eu: 18, i: 20 };
 
 // Full 해요체 forms for stems the algebra can't derive (irregulars).
 const IRREGULARS: Record<string, string> = {
+  '이다': '이에요',   // copula "to be" (X이에요/예요)
+  '아니다': '아니에요', // negative copula
   '하다': '해요',
+  '가깝다': '가까워요',
+  '닫다': '닫아요',
+  '멀다': '멀어요',
+  '반갑다': '반가워요',
+  '씻다': '씻어요',
+  '어떻다': '어때요',
+  '열다': '열어요',
   '돕다': '도와요',
   '춥다': '추워요',
   '덥다': '더워요',
@@ -101,11 +110,14 @@ export function conjugate(dictForm: string): ConjugationTable | null {
   const w = dictForm.trim();
   const polite = haeyo(w);
   if (!polite) return null;
+  // The copula has two 해요체 allomorphs: 이에요 after consonant-final
+  // nouns, 예요 after vowel-final (학생이에요 / 친구예요).
+  const politeRow = w === '이다' ? ['이에요', '예요'] : [polite];
   return {
     infinitive: w,
     isReflexive: false,
     tenses: {
-      '해요체 (Polite present)': [polite],
+      '해요체 (Polite present)': politeRow,
       '사전형 (Dictionary form)': [w],
     },
   };
@@ -117,6 +129,8 @@ let REVERSE: Map<string, string> | null = null;
 
 /** Dictionary forms the reverse map is seeded from — grows with the deck. */
 export const KNOWN_VERBS = [
+  '이다', '아니다', '있다', '없다',
+  '걸리다', '괜찮다', '끝나다', '만나다', '맛있다', '맞다', '비싸다', '사다', '산책하다', '샤워하다', '쇼핑하다', '숙제하다', '싸다', '웃다', '일어나다', '자다', '작다', '좋다', '죄송하다', '청소하다', '타다', '필요하다',
   '가다', '오다', '보다', '주다', '되다', '하다', '먹다', '읽다', '앉다',
   '입다', '찾다', '받다', '살다', '알다', '만들다', '듣다', '걷다',
   '마시다', '가르치다', '기다리다', '배우다', '쓰다', '크다', '바쁘다',

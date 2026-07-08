@@ -1,1 +1,3551 @@
-[]
+[
+ {
+  "id": "ko-0001",
+  "target": "안녕하세요, 민수 씨.",
+  "english": "Hello, Minsu.",
+  "audio": "ko-ko-0001.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 1,
+  "grammar": "안녕하세요 (annyeonghaseyo) works morning, noon, and night — Korean's one all-day hello."
+ },
+ {
+  "id": "ko-0002",
+  "target": "안녕하세요? 저는 지은이에요.",
+  "english": "Hello! I'm Jieun.",
+  "audio": "ko-ko-0002.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 2
+ },
+ {
+  "id": "ko-0003",
+  "target": "수진 씨, 안녕하세요?",
+  "english": "Sujin, hello!",
+  "audio": "ko-ko-0003.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 3
+ },
+ {
+  "id": "ko-0004",
+  "target": "여러분, 안녕하세요?",
+  "english": "Hello, everyone!",
+  "audio": "ko-ko-0004.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 4
+ },
+ {
+  "id": "ko-0005",
+  "target": "안녕히 가세요, 민수 씨.",
+  "english": "Goodbye, Minsu.",
+  "audio": "ko-ko-0005.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 5,
+  "grammar": "안녕히 가세요 (annyeonghi gaseyo) to the person leaving; 안녕히 계세요 (gyeseyo) to the one staying."
+ },
+ {
+  "id": "ko-0006",
+  "target": "안녕히 계세요, 선생님.",
+  "english": "Goodbye, teacher.",
+  "audio": "ko-ko-0006.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 6
+ },
+ {
+  "id": "ko-0007",
+  "target": "만나서 반가워요, 준호 씨.",
+  "english": "Nice to meet you, Junho.",
+  "audio": "ko-ko-0007.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 7,
+  "grammar": "만나서 반가워요 (mannaseo bangawoyo) is one fixed phrase — 'glad to meet you.'"
+ },
+ {
+  "id": "ko-0008",
+  "target": "저도 만나서 반가워요.",
+  "english": "Nice to meet you too.",
+  "audio": "ko-ko-0008.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 8,
+  "grammar": "도 replaces 은/는 to say 'too': 저도 (jeodo = me too)."
+ },
+ {
+  "id": "ko-0009",
+  "target": "저는 수진이에요.",
+  "english": "I'm Sujin.",
+  "audio": "ko-ko-0009.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 9,
+  "grammar": "이에요 after a consonant, 예요 after a vowel: 수진이에요 (Sujin-ieyo), 민수예요 (Minsu-yeyo)."
+ },
+ {
+  "id": "ko-0010",
+  "target": "저는 민수예요.",
+  "english": "I'm Minsu.",
+  "audio": "ko-ko-0010.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 10
+ },
+ {
+  "id": "ko-0011",
+  "target": "이름이 뭐예요?",
+  "english": "What's your name?",
+  "audio": "ko-ko-0011.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 11,
+  "grammar": "Korean drops 'your' — 이름이 뭐예요? (ireumi mwoyeyo) is literally 'name is what?'"
+ },
+ {
+  "id": "ko-0012",
+  "target": "제 이름은 김민수예요.",
+  "english": "My name is Kim Minsu.",
+  "audio": "ko-ko-0012.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 12,
+  "grammar": "제 (je) = my, the humble form of 저의: 제 이름 (je ireum = my name)."
+ },
+ {
+  "id": "ko-0013",
+  "target": "민수 씨예요?",
+  "english": "Are you Minsu?",
+  "audio": "ko-ko-0013.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 13,
+  "grammar": "No word for 'you' needed — use the name + 씨: 민수 씨예요? (Minsu ssi-yeyo = are you Minsu?)"
+ },
+ {
+  "id": "ko-0014",
+  "target": "네, 제가 민수예요.",
+  "english": "Yes, I'm Minsu.",
+  "audio": "ko-ko-0014.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 14
+ },
+ {
+  "id": "ko-0015",
+  "target": "아니요, 저는 민수가 아니에요.",
+  "english": "No, I'm not Minsu.",
+  "audio": "ko-ko-0015.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 15
+ },
+ {
+  "id": "ko-0016",
+  "target": "저는 마이클이에요.",
+  "english": "I'm Michael.",
+  "audio": "ko-ko-0016.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 16
+ },
+ {
+  "id": "ko-0017",
+  "target": "저는 애나예요.",
+  "english": "I'm Anna.",
+  "audio": "ko-ko-0017.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 17
+ },
+ {
+  "id": "ko-0018",
+  "target": "수진 씨, 이분은 제 친구예요.",
+  "english": "Sujin, this is my friend.",
+  "audio": "ko-ko-0018.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 18
+ },
+ {
+  "id": "ko-0019",
+  "target": "이분은 박 선생님이에요.",
+  "english": "This is Teacher Park.",
+  "audio": "ko-ko-0019.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 19
+ },
+ {
+  "id": "ko-0020",
+  "target": "제 동생은 학생이에요.",
+  "english": "My younger sibling is a student.",
+  "audio": "ko-ko-0020.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 20
+ },
+ {
+  "id": "ko-0021",
+  "target": "어느 나라 사람이에요?",
+  "english": "What country are you from?",
+  "audio": "ko-ko-0021.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 21,
+  "grammar": "어느 나라 사람이에요? (eoneu nara saramieyo) — literally 'which country person?' — asks nationality."
+ },
+ {
+  "id": "ko-0022",
+  "target": "저는 한국 사람이에요.",
+  "english": "I'm Korean.",
+  "audio": "ko-ko-0022.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 22
+ },
+ {
+  "id": "ko-0023",
+  "target": "저는 영국 사람이에요.",
+  "english": "I'm British.",
+  "audio": "ko-ko-0023.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 23
+ },
+ {
+  "id": "ko-0024",
+  "target": "저는 미국 사람이에요.",
+  "english": "I'm American.",
+  "audio": "ko-ko-0024.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 24
+ },
+ {
+  "id": "ko-0025",
+  "target": "민수 씨는 한국 사람이에요.",
+  "english": "Minsu is Korean.",
+  "audio": "ko-ko-0025.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 25,
+  "grammar": "은/는 marks the topic — 은 after consonants, 는 after vowels: 저는 (jeoneun), 씨는 (ssi-neun)."
+ },
+ {
+  "id": "ko-0026",
+  "target": "지은 씨도 한국 사람이에요?",
+  "english": "Is Jieun Korean too?",
+  "audio": "ko-ko-0026.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 26,
+  "grammar": "Yes/no questions keep the same words — just a rising tone: 사람이에요? (saramieyo?)"
+ },
+ {
+  "id": "ko-0027",
+  "target": "아니요, 지은 씨는 미국 사람이에요.",
+  "english": "No, Jieun is American.",
+  "audio": "ko-ko-0027.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 27
+ },
+ {
+  "id": "ko-0028",
+  "target": "저는 중국 사람이 아니에요.",
+  "english": "I'm not Chinese.",
+  "audio": "ko-ko-0028.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 28,
+  "grammar": "'Is not X' = X이/가 아니에요: 중국 사람이 아니에요 (sarami anieyo = am not Chinese)."
+ },
+ {
+  "id": "ko-0029",
+  "target": "준호 씨는 일본 사람이에요?",
+  "english": "Is Junho Japanese?",
+  "audio": "ko-ko-0029.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 29
+ },
+ {
+  "id": "ko-0030",
+  "target": "저는 서울에 살아요.",
+  "english": "I live in Seoul.",
+  "audio": "ko-ko-0030.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 30
+ },
+ {
+  "id": "ko-0031",
+  "target": "직업이 뭐예요?",
+  "english": "What's your job?",
+  "audio": "ko-ko-0031.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 31
+ },
+ {
+  "id": "ko-0032",
+  "target": "저는 학생이에요.",
+  "english": "I'm a student.",
+  "audio": "ko-ko-0032.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 32
+ },
+ {
+  "id": "ko-0033",
+  "target": "저는 대학생이에요.",
+  "english": "I'm a university student.",
+  "audio": "ko-ko-0033.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 33
+ },
+ {
+  "id": "ko-0034",
+  "target": "저는 선생님이에요.",
+  "english": "I'm a teacher.",
+  "audio": "ko-ko-0034.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 34
+ },
+ {
+  "id": "ko-0035",
+  "target": "저는 회사원이에요.",
+  "english": "I'm an office worker.",
+  "audio": "ko-ko-0035.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 35
+ },
+ {
+  "id": "ko-0036",
+  "target": "수진 씨는 의사예요.",
+  "english": "Sujin is a doctor.",
+  "audio": "ko-ko-0036.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 36
+ },
+ {
+  "id": "ko-0037",
+  "target": "준호 씨는 간호사예요.",
+  "english": "Junho is a nurse.",
+  "audio": "ko-ko-0037.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 37
+ },
+ {
+  "id": "ko-0038",
+  "target": "지은 씨는 가수예요?",
+  "english": "Is Jieun a singer?",
+  "audio": "ko-ko-0038.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 38
+ },
+ {
+  "id": "ko-0039",
+  "target": "아니요, 지은 씨는 배우예요.",
+  "english": "No, Jieun is an actor.",
+  "audio": "ko-ko-0039.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 39
+ },
+ {
+  "id": "ko-0040",
+  "target": "저는 학생이 아니에요.",
+  "english": "I'm not a student.",
+  "audio": "ko-ko-0040.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 40
+ },
+ {
+  "id": "ko-0041",
+  "target": "민수 씨는 요리사가 아니에요.",
+  "english": "Minsu is not a cook.",
+  "audio": "ko-ko-0041.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 41
+ },
+ {
+  "id": "ko-0042",
+  "target": "저는 기자예요.",
+  "english": "I'm a journalist.",
+  "audio": "ko-ko-0042.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 42
+ },
+ {
+  "id": "ko-0043",
+  "target": "감사합니다, 선생님.",
+  "english": "Thank you, teacher.",
+  "audio": "ko-ko-0043.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 43,
+  "grammar": "감사합니다 (gamsahamnida) is formal-polite — the safe thank-you for staff, elders, strangers."
+ },
+ {
+  "id": "ko-0044",
+  "target": "정말 감사합니다.",
+  "english": "Thank you very much.",
+  "audio": "ko-ko-0044.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 44
+ },
+ {
+  "id": "ko-0045",
+  "target": "아, 죄송해요.",
+  "english": "Oh, I'm sorry.",
+  "audio": "ko-ko-0045.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 45,
+  "grammar": "죄송해요 (joesonghaeyo) is the everyday polite 'sorry' — bump into someone, say it."
+ },
+ {
+  "id": "ko-0046",
+  "target": "정말 죄송해요.",
+  "english": "I'm really sorry.",
+  "audio": "ko-ko-0046.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 46
+ },
+ {
+  "id": "ko-0047",
+  "target": "괜찮아요, 민수 씨.",
+  "english": "It's okay, Minsu.",
+  "audio": "ko-ko-0047.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 47,
+  "grammar": "괜찮아요 (gwaenchanayo) covers 'it's fine,' 'no problem,' and 'I'm OK' — one word, many uses."
+ },
+ {
+  "id": "ko-0048",
+  "target": "네, 괜찮아요.",
+  "english": "Yes, I'm fine.",
+  "audio": "ko-ko-0048.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 48
+ },
+ {
+  "id": "ko-0049",
+  "target": "수진 씨, 괜찮아요?",
+  "english": "Sujin, are you okay?",
+  "audio": "ko-ko-0049.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 49
+ },
+ {
+  "id": "ko-0050",
+  "target": "아니에요, 괜찮아요.",
+  "english": "Not at all, it's fine.",
+  "audio": "ko-ko-0050.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 50,
+  "grammar": "아니에요 (anieyo) after thanks = 'not at all / you're welcome.'"
+ },
+ {
+  "id": "ko-0051",
+  "target": "저기요, 죄송해요.",
+  "english": "Excuse me, sorry.",
+  "audio": "ko-ko-0051.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 51
+ },
+ {
+  "id": "ko-0052",
+  "target": "정말 고마워요, 지은 씨.",
+  "english": "Thanks a lot, Jieun. (friendly polite)",
+  "audio": "ko-ko-0052.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 52,
+  "grammar": "고마워요 (gomawoyo) = warm everyday thanks; 감사합니다 is the formal notch up."
+ },
+ {
+  "id": "ko-0053",
+  "target": "반가워요, 마이클 씨.",
+  "english": "Nice to meet you, Michael.",
+  "audio": "ko-ko-0053.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 53
+ },
+ {
+  "id": "ko-0054",
+  "target": "지은 씨, 학생이에요?",
+  "english": "Jieun, are you a student?",
+  "audio": "ko-ko-0054.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 54
+ },
+ {
+  "id": "ko-0055",
+  "target": "네, 학생이에요.",
+  "english": "Yes, I'm a student.",
+  "audio": "ko-ko-0055.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 55,
+  "grammar": "Korean drops pronouns when clear — 학생이에요 (haksaengieyo) alone means 'I'm a student.'"
+ },
+ {
+  "id": "ko-0056",
+  "target": "아니요, 회사원이에요.",
+  "english": "No, I'm an office worker.",
+  "audio": "ko-ko-0056.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 56
+ },
+ {
+  "id": "ko-0057",
+  "target": "마이클 씨, 미국 사람이에요?",
+  "english": "Michael, are you American?",
+  "audio": "ko-ko-0057.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 57
+ },
+ {
+  "id": "ko-0058",
+  "target": "네, 미국 사람이에요.",
+  "english": "Yes, I'm American.",
+  "audio": "ko-ko-0058.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 58
+ },
+ {
+  "id": "ko-0059",
+  "target": "아니요, 캐나다 사람이에요.",
+  "english": "No, I'm Canadian.",
+  "audio": "ko-ko-0059.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 59
+ },
+ {
+  "id": "ko-0060",
+  "target": "네, 맞아요.",
+  "english": "Yes, that's right.",
+  "audio": "ko-ko-0060.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 60,
+  "grammar": "맞아요 (majayo) = 'that's right' — the everyday way to confirm."
+ },
+ {
+  "id": "ko-0061",
+  "target": "이거 뭐예요?",
+  "english": "What's this?",
+  "audio": "ko-ko-0061.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 61,
+  "grammar": "이 = near me, 그 = near you, 저 = far from both: 이거/그거/저거 (igeo/geugeo/jeogeo)."
+ },
+ {
+  "id": "ko-0062",
+  "target": "그거 뭐예요?",
+  "english": "What's that (by you)?",
+  "audio": "ko-ko-0062.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 62
+ },
+ {
+  "id": "ko-0063",
+  "target": "저거 뭐예요?",
+  "english": "What's that (over there)?",
+  "audio": "ko-ko-0063.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 63
+ },
+ {
+  "id": "ko-0064",
+  "target": "이거 커피예요.",
+  "english": "This is coffee.",
+  "audio": "ko-ko-0064.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 64
+ },
+ {
+  "id": "ko-0065",
+  "target": "그거 제 가방이에요.",
+  "english": "That's my bag.",
+  "audio": "ko-ko-0065.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 65
+ },
+ {
+  "id": "ko-0066",
+  "target": "저거 우리 집이에요.",
+  "english": "That over there is our house.",
+  "audio": "ko-ko-0066.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 66,
+  "grammar": "Koreans say 우리 (uri = our) even for their own home or family: 우리 집 (uri jip = my house)."
+ },
+ {
+  "id": "ko-0067",
+  "target": "이거 물이에요?",
+  "english": "Is this water?",
+  "audio": "ko-ko-0067.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 67
+ },
+ {
+  "id": "ko-0068",
+  "target": "아니요, 그거 차예요.",
+  "english": "No, that's tea.",
+  "audio": "ko-ko-0068.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 68
+ },
+ {
+  "id": "ko-0069",
+  "target": "이거 한국어로 뭐예요?",
+  "english": "What's this in Korean?",
+  "audio": "ko-ko-0069.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 69,
+  "grammar": "(으)로 = 'in / by means of': 한국어로 (hangugeo-ro) = in Korean."
+ },
+ {
+  "id": "ko-0070",
+  "target": "질문 있어요?",
+  "english": "Do you have a question?",
+  "audio": "ko-ko-0070.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 70,
+  "grammar": "Korean 'have' is 'exist': 있어요 (isseoyo) = there is / I have; 없어요 (eopseoyo) = don't have."
+ },
+ {
+  "id": "ko-0071",
+  "target": "네, 질문이 있어요.",
+  "english": "Yes, I have a question.",
+  "audio": "ko-ko-0071.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 71
+ },
+ {
+  "id": "ko-0072",
+  "target": "민수 씨, 시간 있어요?",
+  "english": "Minsu, do you have time?",
+  "audio": "ko-ko-0072.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
+  "priority": 72
+ },
+ {
+  "id": "ko-0073",
+  "target": "아니요, 시간이 없어요.",
+  "english": "No, I don't have time.",
+  "audio": "ko-ko-0073.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-01",
+  "priority": 73
+ },
+ {
+  "id": "ko-0074",
+  "target": "저는 우산이 없어요.",
+  "english": "I don't have an umbrella.",
+  "audio": "ko-ko-0074.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 74
+ },
+ {
+  "id": "ko-0075",
+  "target": "여권 있어요?",
+  "english": "Do you have your passport?",
+  "audio": "ko-ko-0075.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 75
+ },
+ {
+  "id": "ko-0076",
+  "target": "물을 마셔요.",
+  "english": "I drink water.",
+  "audio": "ko-ko-0076.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 76,
+  "grammar": "을/를 marks the object — 을 after a consonant, 를 after a vowel: 물을 마셔요 (mur-eul masyeoyo = I drink water)."
+ },
+ {
+  "id": "ko-0077",
+  "target": "커피를 마셔요.",
+  "english": "I drink coffee.",
+  "audio": "ko-ko-0077.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 77
+ },
+ {
+  "id": "ko-0078",
+  "target": "밥을 먹어요.",
+  "english": "I eat rice.",
+  "audio": "ko-ko-0078.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 78
+ },
+ {
+  "id": "ko-0079",
+  "target": "빵을 먹어요.",
+  "english": "I eat bread.",
+  "audio": "ko-ko-0079.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 79
+ },
+ {
+  "id": "ko-0080",
+  "target": "책을 읽어요.",
+  "english": "I read a book.",
+  "audio": "ko-ko-0080.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 80
+ },
+ {
+  "id": "ko-0081",
+  "target": "사과를 사요.",
+  "english": "I buy apples.",
+  "audio": "ko-ko-0081.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 81,
+  "grammar": "사요 means 'buy' — one letter from 싸요 (ssayo = cheap): 사과를 사요 (sagwa-reul sayo = I buy apples)."
+ },
+ {
+  "id": "ko-0082",
+  "target": "영화를 봐요.",
+  "english": "I watch a movie.",
+  "audio": "ko-ko-0082.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 82
+ },
+ {
+  "id": "ko-0083",
+  "target": "우유를 마셔요.",
+  "english": "I drink milk.",
+  "audio": "ko-ko-0083.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 83
+ },
+ {
+  "id": "ko-0084",
+  "target": "김치를 좋아해요.",
+  "english": "I like kimchi.",
+  "audio": "ko-ko-0084.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 84,
+  "grammar": "좋아해요 'like' takes an object with 을/를: 김치를 좋아해요 (gimchi-reul joahaeyo = I like kimchi)."
+ },
+ {
+  "id": "ko-0085",
+  "target": "친구를 만나요.",
+  "english": "I meet a friend.",
+  "audio": "ko-ko-0085.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 85
+ },
+ {
+  "id": "ko-0086",
+  "target": "신문을 읽어요.",
+  "english": "I read the newspaper.",
+  "audio": "ko-ko-0086.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 86
+ },
+ {
+  "id": "ko-0087",
+  "target": "차를 마셔요.",
+  "english": "I drink tea.",
+  "audio": "ko-ko-0087.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 87
+ },
+ {
+  "id": "ko-0088",
+  "target": "텔레비전을 봐요.",
+  "english": "I watch television.",
+  "audio": "ko-ko-0088.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 88
+ },
+ {
+  "id": "ko-0089",
+  "target": "과일을 사요.",
+  "english": "I buy fruit.",
+  "audio": "ko-ko-0089.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 89
+ },
+ {
+  "id": "ko-0090",
+  "target": "음악을 들어요.",
+  "english": "I listen to music.",
+  "audio": "ko-ko-0090.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 90,
+  "grammar": "들어요 covers both 'listen' and 'hear': 음악을 들어요 (eumag-eul deureoyo = I listen to music)."
+ },
+ {
+  "id": "ko-0091",
+  "target": "저는 커피를 좋아해요.",
+  "english": "I like coffee.",
+  "audio": "ko-ko-0091.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 91,
+  "grammar": "은/는 sets the topic — 'as for X': 저는 커피를 좋아해요 (jeo-neun keopi-reul joahaeyo)."
+ },
+ {
+  "id": "ko-0092",
+  "target": "동생은 우유를 마셔요.",
+  "english": "My younger sibling drinks milk.",
+  "audio": "ko-ko-0092.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 92
+ },
+ {
+  "id": "ko-0093",
+  "target": "친구가 와요.",
+  "english": "A friend is coming.",
+  "audio": "ko-ko-0093.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 93,
+  "grammar": "이/가 marks the subject — 가 after a vowel, 이 after a consonant: 친구가 와요 (chingu-ga wayo)."
+ },
+ {
+  "id": "ko-0094",
+  "target": "버스가 와요.",
+  "english": "The bus is coming.",
+  "audio": "ko-ko-0094.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 94
+ },
+ {
+  "id": "ko-0095",
+  "target": "시간이 없어요.",
+  "english": "I don't have time.",
+  "audio": "ko-ko-0095.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 95
+ },
+ {
+  "id": "ko-0096",
+  "target": "돈이 없어요.",
+  "english": "I don't have money.",
+  "audio": "ko-ko-0096.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 96
+ },
+ {
+  "id": "ko-0097",
+  "target": "물이 있어요.",
+  "english": "There is water.",
+  "audio": "ko-ko-0097.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 97
+ },
+ {
+  "id": "ko-0098",
+  "target": "학교에 가요.",
+  "english": "I go to school.",
+  "audio": "ko-ko-0098.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 98,
+  "grammar": "에 marks a destination or a time: 학교에 가요 (hakgyo-e gayo = I go to school)."
+ },
+ {
+  "id": "ko-0099",
+  "target": "시장에 가요.",
+  "english": "I go to the market.",
+  "audio": "ko-ko-0099.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 99
+ },
+ {
+  "id": "ko-0100",
+  "target": "집에 있어요.",
+  "english": "I'm at home.",
+  "audio": "ko-ko-0100.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 100
+ },
+ {
+  "id": "ko-0101",
+  "target": "카페에서 커피를 마셔요.",
+  "english": "I drink coffee at a cafe.",
+  "audio": "ko-ko-0101.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 101,
+  "grammar": "에서 marks where an action happens: 카페에서 마셔요 (kape-eseo masyeoyo = I drink at a cafe)."
+ },
+ {
+  "id": "ko-0102",
+  "target": "집에서 요리해요.",
+  "english": "I cook at home.",
+  "audio": "ko-ko-0102.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 102
+ },
+ {
+  "id": "ko-0103",
+  "target": "도서관에서 공부해요.",
+  "english": "I study at the library.",
+  "audio": "ko-ko-0103.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 103
+ },
+ {
+  "id": "ko-0104",
+  "target": "회사에서 일해요.",
+  "english": "I work at a company.",
+  "audio": "ko-ko-0104.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 104
+ },
+ {
+  "id": "ko-0105",
+  "target": "식당에서 밥을 먹어요.",
+  "english": "I eat at a restaurant.",
+  "audio": "ko-ko-0105.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 105
+ },
+ {
+  "id": "ko-0106",
+  "target": "저도 커피를 마셔요.",
+  "english": "I drink coffee too.",
+  "audio": "ko-ko-0106.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 106,
+  "grammar": "도 means 'too' and replaces 은/는 or 을/를: 저도 마셔요 (jeo-do masyeoyo = I drink too)."
+ },
+ {
+  "id": "ko-0107",
+  "target": "동생도 학교에 가요.",
+  "english": "My younger sibling goes to school too.",
+  "audio": "ko-ko-0107.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 107
+ },
+ {
+  "id": "ko-0108",
+  "target": "빵도 사요.",
+  "english": "I buy bread too.",
+  "audio": "ko-ko-0108.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 108
+ },
+ {
+  "id": "ko-0109",
+  "target": "오늘도 일해요.",
+  "english": "I work today too.",
+  "audio": "ko-ko-0109.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 109
+ },
+ {
+  "id": "ko-0110",
+  "target": "고기를 안 먹어요.",
+  "english": "I don't eat meat.",
+  "audio": "ko-ko-0110.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 110,
+  "grammar": "안 goes right before the verb: 안 먹어요 (an meogeoyo = I don't eat)."
+ },
+ {
+  "id": "ko-0111",
+  "target": "커피를 안 마셔요.",
+  "english": "I don't drink coffee.",
+  "audio": "ko-ko-0111.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 111
+ },
+ {
+  "id": "ko-0112",
+  "target": "텔레비전을 안 봐요.",
+  "english": "I don't watch television.",
+  "audio": "ko-ko-0112.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 112
+ },
+ {
+  "id": "ko-0113",
+  "target": "오늘은 공부 안 해요.",
+  "english": "I'm not studying today.",
+  "audio": "ko-ko-0113.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 113,
+  "grammar": "With 하다 verbs, 안 slips inside: 공부 안 해요 (gongbu an haeyo = I don't study)."
+ },
+ {
+  "id": "ko-0114",
+  "target": "오늘은 못 가요.",
+  "english": "I can't go today.",
+  "audio": "ko-ko-0114.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 114,
+  "grammar": "못 = can't, 안 = don't: 못 가요 (mot gayo = I can't go)."
+ },
+ {
+  "id": "ko-0115",
+  "target": "생선을 못 먹어요.",
+  "english": "I can't eat fish.",
+  "audio": "ko-ko-0115.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 115
+ },
+ {
+  "id": "ko-0116",
+  "target": "아침에 운동해요.",
+  "english": "I exercise in the morning.",
+  "audio": "ko-ko-0116.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 116
+ },
+ {
+  "id": "ko-0117",
+  "target": "공원에서 산책해요.",
+  "english": "I take a walk in the park.",
+  "audio": "ko-ko-0117.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 117
+ },
+ {
+  "id": "ko-0118",
+  "target": "주스를 마셔요.",
+  "english": "I drink juice.",
+  "audio": "ko-ko-0118.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 118
+ },
+ {
+  "id": "ko-0119",
+  "target": "라면을 먹어요.",
+  "english": "I eat ramyeon.",
+  "audio": "ko-ko-0119.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 119,
+  "grammar": "라면을 먹어요 (ramyeon-eul meogeoyo) — 라면 is instant noodles, Korea's favorite late-night meal."
+ },
+ {
+  "id": "ko-0120",
+  "target": "케이크를 만들어요.",
+  "english": "I make a cake.",
+  "audio": "ko-ko-0120.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 120
+ },
+ {
+  "id": "ko-0121",
+  "target": "가방을 사요.",
+  "english": "I buy a bag.",
+  "audio": "ko-ko-0121.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 121
+ },
+ {
+  "id": "ko-0122",
+  "target": "우산을 찾아요.",
+  "english": "I'm looking for my umbrella.",
+  "audio": "ko-ko-0122.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 122,
+  "grammar": "찾아요 means both 'look for' and 'find': 우산을 찾아요 (usan-eul chajayo = I look for my umbrella)."
+ },
+ {
+  "id": "ko-0123",
+  "target": "옷을 입어요.",
+  "english": "I put on clothes.",
+  "audio": "ko-ko-0123.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 123
+ },
+ {
+  "id": "ko-0124",
+  "target": "신발을 사요.",
+  "english": "I buy shoes.",
+  "audio": "ko-ko-0124.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 124
+ },
+ {
+  "id": "ko-0125",
+  "target": "문을 열어요.",
+  "english": "I open the door.",
+  "audio": "ko-ko-0125.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 125
+ },
+ {
+  "id": "ko-0126",
+  "target": "창문을 닫아요.",
+  "english": "I close the window.",
+  "audio": "ko-ko-0126.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 126
+ },
+ {
+  "id": "ko-0127",
+  "target": "손을 씻어요.",
+  "english": "I wash my hands.",
+  "audio": "ko-ko-0127.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 127,
+  "grammar": "씻어요 'wash' works for hands, face, and fruit: 손을 씻어요 (son-eul ssiseoyo = I wash my hands)."
+ },
+ {
+  "id": "ko-0128",
+  "target": "사진을 봐요.",
+  "english": "I look at photos.",
+  "audio": "ko-ko-0128.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 128
+ },
+ {
+  "id": "ko-0129",
+  "target": "한국어를 배워요.",
+  "english": "I learn Korean.",
+  "audio": "ko-ko-0129.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 129
+ },
+ {
+  "id": "ko-0130",
+  "target": "편지를 써요.",
+  "english": "I write a letter.",
+  "audio": "ko-ko-0130.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 130
+ },
+ {
+  "id": "ko-0131",
+  "target": "이름을 써요.",
+  "english": "I write my name.",
+  "audio": "ko-ko-0131.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 131
+ },
+ {
+  "id": "ko-0132",
+  "target": "버스를 타요.",
+  "english": "I take the bus.",
+  "audio": "ko-ko-0132.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 132,
+  "grammar": "타요 'take/ride' uses 을/를: 버스를 타요 (beoseu-reul tayo = I take the bus)."
+ },
+ {
+  "id": "ko-0133",
+  "target": "지하철을 타요.",
+  "english": "I take the subway.",
+  "audio": "ko-ko-0133.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 133
+ },
+ {
+  "id": "ko-0134",
+  "target": "표를 사요.",
+  "english": "I buy a ticket.",
+  "audio": "ko-ko-0134.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 134
+ },
+ {
+  "id": "ko-0135",
+  "target": "마트에서 야채를 사요.",
+  "english": "I buy vegetables at the supermarket.",
+  "audio": "ko-ko-0135.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 135
+ },
+ {
+  "id": "ko-0136",
+  "target": "아버지는 신문을 봐요.",
+  "english": "My father reads the newspaper.",
+  "audio": "ko-ko-0136.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 136,
+  "grammar": "봐요 covers watching and casual reading: 신문을 봐요 (sinmun-eul bwayo = I read the paper)."
+ },
+ {
+  "id": "ko-0137",
+  "target": "어머니는 요리를 좋아해요.",
+  "english": "My mother likes cooking.",
+  "audio": "ko-ko-0137.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 137
+ },
+ {
+  "id": "ko-0138",
+  "target": "친구는 커피를 안 마셔요.",
+  "english": "My friend doesn't drink coffee.",
+  "audio": "ko-ko-0138.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 138
+ },
+ {
+  "id": "ko-0139",
+  "target": "우유가 있어요?",
+  "english": "Is there milk?",
+  "audio": "ko-ko-0139.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 139
+ },
+ {
+  "id": "ko-0140",
+  "target": "화장실이 어디에 있어요?",
+  "english": "Where is the bathroom?",
+  "audio": "ko-ko-0140.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 140,
+  "grammar": "The survival question: 화장실이 어디에 있어요? (hwajangsil-i eodi-e isseoyo? = where is the bathroom?)"
+ },
+ {
+  "id": "ko-0141",
+  "target": "가게에서 뭐를 사요?",
+  "english": "What are you buying at the store?",
+  "audio": "ko-ko-0141.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 141,
+  "grammar": "In speech 을/를 often drops: 뭐를 사요? → 뭐 사요? (mwo sayo? = what are you buying?)"
+ },
+ {
+  "id": "ko-0142",
+  "target": "김밥을 좋아해요?",
+  "english": "Do you like gimbap?",
+  "audio": "ko-ko-0142.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 142,
+  "grammar": "김밥 (gimbap) is seaweed rice rolls: 김밥을 좋아해요? (gimbab-eul joahaeyo? = do you like gimbap?)"
+ },
+ {
+  "id": "ko-0143",
+  "target": "네, 김밥을 아주 좋아해요.",
+  "english": "Yes, I really like gimbap.",
+  "audio": "ko-ko-0143.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 143
+ },
+ {
+  "id": "ko-0144",
+  "target": "아니요, 생선을 안 좋아해요.",
+  "english": "No, I don't like fish.",
+  "audio": "ko-ko-0144.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 144
+ },
+ {
+  "id": "ko-0145",
+  "target": "맥주를 마셔요?",
+  "english": "Do you drink beer?",
+  "audio": "ko-ko-0145.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 145
+ },
+ {
+  "id": "ko-0146",
+  "target": "아니요, 맥주를 못 마셔요.",
+  "english": "No, I can't drink beer.",
+  "audio": "ko-ko-0146.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 146
+ },
+ {
+  "id": "ko-0147",
+  "target": "회사에서 컴퓨터를 써요.",
+  "english": "I use a computer at work.",
+  "audio": "ko-ko-0147.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 147,
+  "grammar": "써요 means 'write' and also 'use': 컴퓨터를 써요 (keompyuteo-reul sseoyo = I use a computer)."
+ },
+ {
+  "id": "ko-0148",
+  "target": "방을 청소해요.",
+  "english": "I clean the room.",
+  "audio": "ko-ko-0148.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 148
+ },
+ {
+  "id": "ko-0149",
+  "target": "커피가 필요해요.",
+  "english": "I need coffee.",
+  "audio": "ko-ko-0149.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 149,
+  "grammar": "필요해요 'need' takes 이/가, not 을/를: 커피가 필요해요 (keopi-ga piryohaeyo = I need coffee)."
+ },
+ {
+  "id": "ko-0150",
+  "target": "주말에 가족을 만나요.",
+  "english": "I meet my family on the weekend.",
+  "audio": "ko-ko-0150.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 150
+ },
+ {
+  "id": "ko-0151",
+  "target": "지금 뭐 해요?",
+  "english": "What are you doing now?",
+  "audio": "ko-ko-0151.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 151,
+  "grammar": "Questions keep the same -요 form — only intonation rises: 지금 뭐 해요? (jigeum mwo haeyo? = what are you doing now?)"
+ },
+ {
+  "id": "ko-0152",
+  "target": "뭐 먹어요?",
+  "english": "What are you eating?",
+  "audio": "ko-ko-0152.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 152
+ },
+ {
+  "id": "ko-0153",
+  "target": "오늘 뭐 해요?",
+  "english": "What are you doing today?",
+  "audio": "ko-ko-0153.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 153
+ },
+ {
+  "id": "ko-0154",
+  "target": "그거는 뭐예요?",
+  "english": "What is that one?",
+  "audio": "ko-ko-0154.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 154,
+  "grammar": "After a vowel the copula is 예요: 이거 뭐예요? (igeo mwoyeyo? = what is this?)"
+ },
+ {
+  "id": "ko-0155",
+  "target": "이 노래 이름이 뭐예요?",
+  "english": "What is the name of this song?",
+  "audio": "ko-ko-0155.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 155
+ },
+ {
+  "id": "ko-0156",
+  "target": "주말에 뭐 해요?",
+  "english": "What are you doing on the weekend?",
+  "audio": "ko-ko-0156.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 156
+ },
+ {
+  "id": "ko-0157",
+  "target": "어디 가요?",
+  "english": "Where are you going?",
+  "audio": "ko-ko-0157.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 157,
+  "grammar": "어디 (eodi = where) usually drops its particle in speech: 어디 가요? (eodi gayo? = where are you going?)"
+ },
+ {
+  "id": "ko-0158",
+  "target": "어디에 살아요?",
+  "english": "Where do you live?",
+  "audio": "ko-ko-0158.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 158
+ },
+ {
+  "id": "ko-0159",
+  "target": "어디에서 일해요?",
+  "english": "Where do you work?",
+  "audio": "ko-ko-0159.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 159
+ },
+ {
+  "id": "ko-0160",
+  "target": "화장실이 어디예요?",
+  "english": "Where is the bathroom?",
+  "audio": "ko-ko-0160.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 160,
+  "grammar": "Ask where something is with -이/가 어디예요?: 화장실이 어디예요? (hwajangsiri eodiyeyo?)"
+ },
+ {
+  "id": "ko-0161",
+  "target": "역이 어디예요?",
+  "english": "Where is the station?",
+  "audio": "ko-ko-0161.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 161
+ },
+ {
+  "id": "ko-0162",
+  "target": "지금 어디에 있어요?",
+  "english": "Where are you now?",
+  "audio": "ko-ko-0162.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 162
+ },
+ {
+  "id": "ko-0163",
+  "target": "그 사람이 누구예요?",
+  "english": "Who is that person?",
+  "audio": "ko-ko-0163.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 163
+ },
+ {
+  "id": "ko-0164",
+  "target": "누구를 기다려요?",
+  "english": "Who are you waiting for?",
+  "audio": "ko-ko-0164.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 164
+ },
+ {
+  "id": "ko-0165",
+  "target": "누구와 살아요?",
+  "english": "Who do you live with?",
+  "audio": "ko-ko-0165.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 165
+ },
+ {
+  "id": "ko-0166",
+  "target": "민수 씨가 누구예요?",
+  "english": "Who is Minsu?",
+  "audio": "ko-ko-0166.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 166,
+  "grammar": "Korean avoids 'you' — use the person's name + 씨: 민수 씨 (Minsu-ssi = Minsu)."
+ },
+ {
+  "id": "ko-0167",
+  "target": "언제 와요?",
+  "english": "When are you coming?",
+  "audio": "ko-ko-0167.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 167
+ },
+ {
+  "id": "ko-0168",
+  "target": "언제 시작해요?",
+  "english": "When does it start?",
+  "audio": "ko-ko-0168.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 168
+ },
+ {
+  "id": "ko-0169",
+  "target": "생일이 언제예요?",
+  "english": "When is your birthday?",
+  "audio": "ko-ko-0169.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 169,
+  "grammar": "Ask when something is with -이/가 언제예요?: 생일이 언제예요? (saengiri eonjeyeyo?)"
+ },
+ {
+  "id": "ko-0170",
+  "target": "회의가 언제예요?",
+  "english": "When is the meeting?",
+  "audio": "ko-ko-0170.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 170
+ },
+ {
+  "id": "ko-0171",
+  "target": "왜 웃어요?",
+  "english": "Why are you laughing?",
+  "audio": "ko-ko-0171.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 171
+ },
+ {
+  "id": "ko-0172",
+  "target": "왜 안 먹어요?",
+  "english": "Why aren't you eating?",
+  "audio": "ko-ko-0172.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 172
+ },
+ {
+  "id": "ko-0173",
+  "target": "왜 바빠요?",
+  "english": "Why are you busy?",
+  "audio": "ko-ko-0173.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 173
+ },
+ {
+  "id": "ko-0174",
+  "target": "어떻게 가요?",
+  "english": "How do I get there?",
+  "audio": "ko-ko-0174.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 174,
+  "grammar": "어떻게 (eotteoke) = how: 어떻게 가요? (eotteoke gayo? = how do I get there?)"
+ },
+ {
+  "id": "ko-0175",
+  "target": "역에 어떻게 가요?",
+  "english": "How do I get to the station?",
+  "audio": "ko-ko-0175.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 175
+ },
+ {
+  "id": "ko-0176",
+  "target": "날씨가 어때요?",
+  "english": "How is the weather?",
+  "audio": "ko-ko-0176.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 176,
+  "grammar": "어때요? (eottaeyo?) asks 'how is …?': 날씨가 어때요? (nalssiga eottaeyo? = how is the weather?)"
+ },
+ {
+  "id": "ko-0177",
+  "target": "일이 어때요?",
+  "english": "How is work?",
+  "audio": "ko-ko-0177.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 177
+ },
+ {
+  "id": "ko-0178",
+  "target": "커피 한 잔 마셔요.",
+  "english": "I drink one cup of coffee.",
+  "audio": "ko-ko-0178.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 178,
+  "grammar": "Count things with native numbers + a counter: 한 잔 (han jan = one cup), 두 명 (du myeong = two people)."
+ },
+ {
+  "id": "ko-0179",
+  "target": "사과 한 개 먹어요.",
+  "english": "I eat one apple.",
+  "audio": "ko-ko-0179.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 179
+ },
+ {
+  "id": "ko-0180",
+  "target": "빵 두 개 사요.",
+  "english": "I buy two pieces of bread.",
+  "audio": "ko-ko-0180.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 180
+ },
+ {
+  "id": "ko-0181",
+  "target": "친구 두 명이 와요.",
+  "english": "Two friends are coming.",
+  "audio": "ko-ko-0181.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 181
+ },
+ {
+  "id": "ko-0182",
+  "target": "가족이 다섯 명이에요.",
+  "english": "There are five people in my family.",
+  "audio": "ko-ko-0182.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 182
+ },
+ {
+  "id": "ko-0183",
+  "target": "몇 명이에요?",
+  "english": "How many people are there?",
+  "audio": "ko-ko-0183.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 183,
+  "grammar": "몇 + counter asks 'how many': 몇 명이에요? (myeot myeong-ieyo? = how many people?)"
+ },
+ {
+  "id": "ko-0184",
+  "target": "몇 개 있어요?",
+  "english": "How many do you have?",
+  "audio": "ko-ko-0184.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 184
+ },
+ {
+  "id": "ko-0185",
+  "target": "동생이 두 명 있어요.",
+  "english": "I have two younger siblings.",
+  "audio": "ko-ko-0185.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 185
+ },
+ {
+  "id": "ko-0186",
+  "target": "가방이 두 개 있어요.",
+  "english": "I have two bags.",
+  "audio": "ko-ko-0186.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 186
+ },
+ {
+  "id": "ko-0187",
+  "target": "이거 얼마예요?",
+  "english": "How much is this?",
+  "audio": "ko-ko-0187.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 187,
+  "grammar": "얼마예요? (eolmayeyo?) = 'how much is it?' — the everyday shopping question."
+ },
+ {
+  "id": "ko-0188",
+  "target": "커피가 얼마예요?",
+  "english": "How much is the coffee?",
+  "audio": "ko-ko-0188.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 188
+ },
+ {
+  "id": "ko-0189",
+  "target": "오천 원이에요.",
+  "english": "It is 5,000 won.",
+  "audio": "ko-ko-0189.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 189,
+  "grammar": "Money uses Sino-Korean numbers + 원: 오천 원이에요 (ocheon won-ieyo = it is 5,000 won)."
+ },
+ {
+  "id": "ko-0190",
+  "target": "만 원이에요.",
+  "english": "It is 10,000 won.",
+  "audio": "ko-ko-0190.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 190,
+  "grammar": "Korean counts big money in units of 만 (man = 10,000): 만 원 (man won = 10,000 won)."
+ },
+ {
+  "id": "ko-0191",
+  "target": "빵이 이천 원이에요.",
+  "english": "The bread is 2,000 won.",
+  "audio": "ko-ko-0191.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 191
+ },
+ {
+  "id": "ko-0192",
+  "target": "물이 천 원이에요.",
+  "english": "The water is 1,000 won.",
+  "audio": "ko-ko-0192.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 192
+ },
+ {
+  "id": "ko-0193",
+  "target": "표가 삼만 원이에요.",
+  "english": "The ticket is 30,000 won.",
+  "audio": "ko-ko-0193.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 193
+ },
+ {
+  "id": "ko-0194",
+  "target": "너무 비싸요.",
+  "english": "It is too expensive.",
+  "audio": "ko-ko-0194.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 194
+ },
+ {
+  "id": "ko-0195",
+  "target": "이 가게가 싸요.",
+  "english": "This store is cheap.",
+  "audio": "ko-ko-0195.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 195
+ },
+ {
+  "id": "ko-0196",
+  "target": "지금 돈이 없어요.",
+  "english": "I do not have money right now.",
+  "audio": "ko-ko-0196.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 196
+ },
+ {
+  "id": "ko-0197",
+  "target": "지금 돈이 있어요?",
+  "english": "Do you have money now?",
+  "audio": "ko-ko-0197.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 197
+ },
+ {
+  "id": "ko-0198",
+  "target": "지금 몇 시예요?",
+  "english": "What time is it now?",
+  "audio": "ko-ko-0198.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 198,
+  "grammar": "Ask the time with 몇 시예요? (myeot siyeyo? = what time is it?)"
+ },
+ {
+  "id": "ko-0199",
+  "target": "세 시예요.",
+  "english": "It is three o'clock.",
+  "audio": "ko-ko-0199.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 199,
+  "grammar": "Hours use native numbers + 시: 세 시 (se si = three o'clock), 한 시 (han si = one o'clock)."
+ },
+ {
+  "id": "ko-0200",
+  "target": "한 시예요.",
+  "english": "It is one o'clock.",
+  "audio": "ko-ko-0200.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 200
+ },
+ {
+  "id": "ko-0201",
+  "target": "두 시 반이에요.",
+  "english": "It is half past two.",
+  "audio": "ko-ko-0201.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 201,
+  "grammar": "반 (ban) = half: 두 시 반 (du si ban = half past two)."
+ },
+ {
+  "id": "ko-0202",
+  "target": "여섯 시에 일어나요.",
+  "english": "I get up at six o'clock.",
+  "audio": "ko-ko-0202.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 202,
+  "grammar": "에 after a time means 'at': 여섯 시에 일어나요 (yeoseot si-e ireonayo = I get up at six)."
+ },
+ {
+  "id": "ko-0203",
+  "target": "다섯 시에 끝나요.",
+  "english": "It ends at five o'clock.",
+  "audio": "ko-ko-0203.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 203
+ },
+ {
+  "id": "ko-0204",
+  "target": "두 시에 회의가 있어요.",
+  "english": "There is a meeting at two o'clock.",
+  "audio": "ko-ko-0204.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 204
+ },
+ {
+  "id": "ko-0205",
+  "target": "몇 시에 시작해요?",
+  "english": "What time does it start?",
+  "audio": "ko-ko-0205.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 205
+ },
+ {
+  "id": "ko-0206",
+  "target": "몇 시에 자요?",
+  "english": "What time do you go to sleep?",
+  "audio": "ko-ko-0206.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 206
+ },
+ {
+  "id": "ko-0207",
+  "target": "일곱 시에 저녁을 먹어요.",
+  "english": "I eat dinner at seven o'clock.",
+  "audio": "ko-ko-0207.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 207
+ },
+ {
+  "id": "ko-0208",
+  "target": "몇 시에 도착해요?",
+  "english": "What time do you arrive?",
+  "audio": "ko-ko-0208.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 208
+ },
+ {
+  "id": "ko-0209",
+  "target": "한 시간 걸려요.",
+  "english": "It takes one hour.",
+  "audio": "ko-ko-0209.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 209,
+  "grammar": "걸려요 (geollyeoyo) = 'it takes (time)': 한 시간 걸려요 (han sigan geollyeoyo = it takes an hour)."
+ },
+ {
+  "id": "ko-0210",
+  "target": "버스가 열 시에 와요.",
+  "english": "The bus comes at ten o'clock.",
+  "audio": "ko-ko-0210.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 210
+ },
+ {
+  "id": "ko-0211",
+  "target": "오늘 무슨 요일이에요?",
+  "english": "What day is it today?",
+  "audio": "ko-ko-0211.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 211,
+  "grammar": "무슨 (museun) = 'what kind of': 무슨 요일이에요? (museun yoirieyo? = what day is it?)"
+ },
+ {
+  "id": "ko-0212",
+  "target": "오늘은 금요일이에요.",
+  "english": "Today is Friday.",
+  "audio": "ko-ko-0212.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 212,
+  "grammar": "After a consonant the copula is 이에요: 금요일이에요 (geumyoirieyo = it is Friday)."
+ },
+ {
+  "id": "ko-0213",
+  "target": "내일은 토요일이에요.",
+  "english": "Tomorrow is Saturday.",
+  "audio": "ko-ko-0213.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 213
+ },
+ {
+  "id": "ko-0214",
+  "target": "월요일에 일해요.",
+  "english": "I work on Monday.",
+  "audio": "ko-ko-0214.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 214,
+  "grammar": "Days of the week take 에 (on): 월요일에 일해요 (woryoire ilhaeyo = I work on Monday)."
+ },
+ {
+  "id": "ko-0215",
+  "target": "화요일에 운동해요.",
+  "english": "I exercise on Tuesday.",
+  "audio": "ko-ko-0215.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 215
+ },
+ {
+  "id": "ko-0216",
+  "target": "수요일에 한국어를 배워요.",
+  "english": "I learn Korean on Wednesday.",
+  "audio": "ko-ko-0216.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 216
+ },
+ {
+  "id": "ko-0217",
+  "target": "목요일에 친구를 만나요.",
+  "english": "I meet a friend on Thursday.",
+  "audio": "ko-ko-0217.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 217
+ },
+ {
+  "id": "ko-0218",
+  "target": "일요일에 집에서 요리해요.",
+  "english": "I cook at home on Sunday.",
+  "audio": "ko-ko-0218.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 218
+ },
+ {
+  "id": "ko-0219",
+  "target": "주말에 영화를 봐요.",
+  "english": "I watch a movie on the weekend.",
+  "audio": "ko-ko-0219.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 219
+ },
+ {
+  "id": "ko-0220",
+  "target": "내일 가요.",
+  "english": "I am going tomorrow.",
+  "audio": "ko-ko-0220.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 220,
+  "grammar": "The present tense covers the near future: 내일 가요 (naeil gayo = I am going tomorrow)."
+ },
+ {
+  "id": "ko-0221",
+  "target": "내일 친구가 와요.",
+  "english": "A friend is coming tomorrow.",
+  "audio": "ko-ko-0221.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 221
+ },
+ {
+  "id": "ko-0222",
+  "target": "오늘 학교에 가요.",
+  "english": "I am going to school today.",
+  "audio": "ko-ko-0222.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 222
+ },
+ {
+  "id": "ko-0223",
+  "target": "지금 집에 가요.",
+  "english": "I am going home now.",
+  "audio": "ko-ko-0223.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 223
+ },
+ {
+  "id": "ko-0224",
+  "target": "내일 서울에 가요.",
+  "english": "I am going to Seoul tomorrow.",
+  "audio": "ko-ko-0224.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 224
+ },
+ {
+  "id": "ko-0225",
+  "target": "지금 시작해요.",
+  "english": "I am starting now.",
+  "audio": "ko-ko-0225.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 225
+ },
+ {
+  "id": "ko-0226",
+  "target": "아침에 학교에 가요.",
+  "english": "I go to school in the morning.",
+  "audio": "ko-ko-0226.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 226,
+  "grammar": "에 marks the destination: 학교에 가요 (hakgyo-e gayo = I go to school)."
+ },
+ {
+  "id": "ko-0227",
+  "target": "집에 와요.",
+  "english": "I'm coming home.",
+  "audio": "ko-ko-0227.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 227
+ },
+ {
+  "id": "ko-0228",
+  "target": "오늘 회사에 가요.",
+  "english": "Today I go to the office.",
+  "audio": "ko-ko-0228.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-04",
+  "priority": 228
+ },
+ {
+  "id": "ko-0229",
+  "target": "친구가 우리 집에 와요.",
+  "english": "A friend comes to our house.",
+  "audio": "ko-ko-0229.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 229,
+  "grammar": "와요 = motion toward the speaker; 가요 = away: 집에 와요 (jib-e wayo = comes home)."
+ },
+ {
+  "id": "ko-0230",
+  "target": "내일 시장에 가요.",
+  "english": "Tomorrow I go to the market.",
+  "audio": "ko-ko-0230.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 230
+ },
+ {
+  "id": "ko-0231",
+  "target": "아침에 학교에 와요.",
+  "english": "I come to school in the morning.",
+  "audio": "ko-ko-0231.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 231,
+  "grammar": "에 also marks time: 아침에 (achim-e = in the morning)."
+ },
+ {
+  "id": "ko-0232",
+  "target": "버스로 회사에 가요.",
+  "english": "I go to the office by bus.",
+  "audio": "ko-ko-0232.mp3",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 232,
+  "grammar": "로 = by (a means of transport): 버스로 가요 (beoseu-ro gayo = I go by bus)."
+ },
+ {
+  "id": "ko-0233",
+  "target": "주말에 공원에 가요.",
+  "english": "On the weekend I go to the park.",
+  "audio": "ko-ko-0233.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 233
+ },
+ {
+  "id": "ko-0234",
+  "target": "친구랑 카페에 가요.",
+  "english": "I go to a café with a friend.",
+  "audio": "ko-ko-0234.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 234,
+  "grammar": "랑 = with (someone), friendly in speech: 친구랑 (chingu-rang = with a friend)."
+ },
+ {
+  "id": "ko-0235",
+  "target": "지금 은행에 가요.",
+  "english": "I'm going to the bank now.",
+  "audio": "ko-ko-0235.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 235
+ },
+ {
+  "id": "ko-0236",
+  "target": "엄마가 집에 와요.",
+  "english": "Mom comes home.",
+  "audio": "ko-ko-0236.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 236
+ },
+ {
+  "id": "ko-0237",
+  "target": "저녁에 식당에 가요.",
+  "english": "In the evening I go to a restaurant.",
+  "audio": "ko-ko-0237.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 237
+ },
+ {
+  "id": "ko-0238",
+  "target": "지하철로 공항에 가요.",
+  "english": "I go to the airport by subway.",
+  "audio": "ko-ko-0238.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 238
+ },
+ {
+  "id": "ko-0239",
+  "target": "월요일에 회사에서 일해요.",
+  "english": "I work at the office on Mondays.",
+  "audio": "ko-ko-0239.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-04",
+  "priority": 239,
+  "grammar": "에서 marks where an action happens: 회사에서 일해요 (hoesa-eseo ilhaeyo = I work at the office)."
+ },
+ {
+  "id": "ko-0240",
+  "target": "주말에 도서관에서 공부해요.",
+  "english": "I study at the library on weekends.",
+  "audio": "ko-ko-0240.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 240
+ },
+ {
+  "id": "ko-0241",
+  "target": "친구랑 카페에서 커피를 마셔요.",
+  "english": "I drink coffee with a friend at a café.",
+  "audio": "ko-ko-0241.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 241
+ },
+ {
+  "id": "ko-0242",
+  "target": "저녁에 식당에서 밥을 먹어요.",
+  "english": "I eat dinner at a restaurant in the evening.",
+  "audio": "ko-ko-0242.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 242
+ },
+ {
+  "id": "ko-0243",
+  "target": "오늘 집에서 요리해요.",
+  "english": "I am cooking at home today.",
+  "audio": "ko-ko-0243.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 243
+ },
+ {
+  "id": "ko-0244",
+  "target": "공원에서 운동해요.",
+  "english": "I exercise in the park.",
+  "audio": "ko-ko-0244.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 244
+ },
+ {
+  "id": "ko-0245",
+  "target": "마트에서 과일을 사요.",
+  "english": "I buy fruit at the supermarket.",
+  "audio": "ko-ko-0245.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 245
+ },
+ {
+  "id": "ko-0246",
+  "target": "학교에서 한국어를 배워요.",
+  "english": "I learn Korean at school.",
+  "audio": "ko-ko-0246.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 246
+ },
+ {
+  "id": "ko-0247",
+  "target": "집에서 음악을 들어요.",
+  "english": "I listen to music at home.",
+  "audio": "ko-ko-0247.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 247
+ },
+ {
+  "id": "ko-0248",
+  "target": "서점에서 책을 사요.",
+  "english": "I buy a book at the bookstore.",
+  "audio": "ko-ko-0248.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 248
+ },
+ {
+  "id": "ko-0249",
+  "target": "매일 운동해요.",
+  "english": "I exercise every day.",
+  "audio": "ko-ko-0249.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 249,
+  "grammar": "Noun + 해요 makes an action verb: 운동해요 (undonghaeyo = I exercise, lit. do exercise)."
+ },
+ {
+  "id": "ko-0250",
+  "target": "아침에 공부해요.",
+  "english": "I study in the morning.",
+  "audio": "ko-ko-0250.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 250
+ },
+ {
+  "id": "ko-0251",
+  "target": "엄마한테 전화해요.",
+  "english": "I call mom.",
+  "audio": "ko-ko-0251.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 251,
+  "grammar": "한테 = to (a person): 엄마한테 전화해요 (eomma-hante jeonhwahaeyo = I call mom)."
+ },
+ {
+  "id": "ko-0252",
+  "target": "저녁에 요리해요.",
+  "english": "I cook in the evening.",
+  "audio": "ko-ko-0252.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 252
+ },
+ {
+  "id": "ko-0253",
+  "target": "주말에 쇼핑해요.",
+  "english": "I shop on the weekend.",
+  "audio": "ko-ko-0253.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 253
+ },
+ {
+  "id": "ko-0254",
+  "target": "오늘 청소해요.",
+  "english": "I clean today.",
+  "audio": "ko-ko-0254.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 254
+ },
+ {
+  "id": "ko-0255",
+  "target": "친구랑 같이 운동해요.",
+  "english": "I exercise together with a friend.",
+  "audio": "ko-ko-0255.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 255,
+  "grammar": "같이 = together: 같이 운동해요 (gachi undonghaeyo = we exercise together)."
+ },
+ {
+  "id": "ko-0256",
+  "target": "회사에서 전화해요.",
+  "english": "I make phone calls at the office.",
+  "audio": "ko-ko-0256.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-04",
+  "priority": 256
+ },
+ {
+  "id": "ko-0257",
+  "target": "매일 한국어를 공부해요.",
+  "english": "I study Korean every day.",
+  "audio": "ko-ko-0257.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 257
+ },
+ {
+  "id": "ko-0258",
+  "target": "아빠가 요리해요.",
+  "english": "Dad cooks.",
+  "audio": "ko-ko-0258.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 258
+ },
+ {
+  "id": "ko-0259",
+  "target": "지금 숙제해요.",
+  "english": "I'm doing homework now.",
+  "audio": "ko-ko-0259.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 259
+ },
+ {
+  "id": "ko-0260",
+  "target": "주말에 친구를 만나요.",
+  "english": "I meet a friend on the weekend.",
+  "audio": "ko-ko-0260.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 260
+ },
+ {
+  "id": "ko-0261",
+  "target": "저녁에 산책해요.",
+  "english": "I take a walk in the evening.",
+  "audio": "ko-ko-0261.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 261
+ },
+ {
+  "id": "ko-0262",
+  "target": "밤에 샤워해요.",
+  "english": "I take a shower at night.",
+  "audio": "ko-ko-0262.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 262
+ },
+ {
+  "id": "ko-0263",
+  "target": "커피를 좋아해요.",
+  "english": "I like coffee.",
+  "audio": "ko-ko-0263.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 263,
+  "grammar": "To like something: noun + 을/를 좋아해요: 커피를 좋아해요 (keopi-reul joahaeyo = I like coffee)."
+ },
+ {
+  "id": "ko-0264",
+  "target": "한국 음식을 좋아해요.",
+  "english": "I like Korean food.",
+  "audio": "ko-ko-0264.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 264
+ },
+ {
+  "id": "ko-0265",
+  "target": "우리 가족은 김치를 좋아해요.",
+  "english": "Our family likes kimchi.",
+  "audio": "ko-ko-0265.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 265
+ },
+ {
+  "id": "ko-0266",
+  "target": "운동을 좋아해요?",
+  "english": "Do you like exercise?",
+  "audio": "ko-ko-0266.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 266,
+  "grammar": "A question keeps the same words — just raise the tone: 좋아해요? (joahaeyo? = do you like it?)"
+ },
+ {
+  "id": "ko-0267",
+  "target": "강아지를 좋아해요.",
+  "english": "I like dogs.",
+  "audio": "ko-ko-0267.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 267
+ },
+ {
+  "id": "ko-0268",
+  "target": "친구는 영화를 좋아해요.",
+  "english": "My friend likes movies.",
+  "audio": "ko-ko-0268.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 268
+ },
+ {
+  "id": "ko-0269",
+  "target": "저는 음악을 정말 좋아해요.",
+  "english": "I really like music.",
+  "audio": "ko-ko-0269.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 269
+ },
+ {
+  "id": "ko-0270",
+  "target": "동생은 게임을 좋아해요.",
+  "english": "My younger sibling likes games.",
+  "audio": "ko-ko-0270.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 270
+ },
+ {
+  "id": "ko-0271",
+  "target": "물 주세요.",
+  "english": "Water, please.",
+  "audio": "ko-ko-0271.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 271,
+  "grammar": "Ordering: thing + 주세요: 물 주세요 (mul juseyo = water, please). A fixed phrase — use it as is."
+ },
+ {
+  "id": "ko-0272",
+  "target": "커피 주세요.",
+  "english": "Coffee, please.",
+  "audio": "ko-ko-0272.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 272
+ },
+ {
+  "id": "ko-0273",
+  "target": "메뉴 주세요.",
+  "english": "The menu, please.",
+  "audio": "ko-ko-0273.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 273
+ },
+ {
+  "id": "ko-0274",
+  "target": "비빔밥 주세요.",
+  "english": "Bibimbap, please.",
+  "audio": "ko-ko-0274.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 274
+ },
+ {
+  "id": "ko-0275",
+  "target": "김치 좀 주세요.",
+  "english": "Some kimchi, please.",
+  "audio": "ko-ko-0275.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 275,
+  "grammar": "좀 softens a request: 김치 좀 주세요 (gimchi jom juseyo = some kimchi, please)."
+ },
+ {
+  "id": "ko-0276",
+  "target": "영수증 주세요.",
+  "english": "The receipt, please.",
+  "audio": "ko-ko-0276.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 276
+ },
+ {
+  "id": "ko-0277",
+  "target": "여기 화장실이 어디에 있어요?",
+  "english": "Where is the bathroom here?",
+  "audio": "ko-ko-0277.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 277,
+  "grammar": "어디에 있어요? = where is …?: 화장실이 어디에 있어요? (hwajangsil-i eodi-e isseoyo?)"
+ },
+ {
+  "id": "ko-0278",
+  "target": "여기에 있어요.",
+  "english": "It's here.",
+  "audio": "ko-ko-0278.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 278,
+  "grammar": "여기 = here, 거기 = there (by you), 저기 = over there: 여기에 있어요 (yeogi-e isseoyo = it's here)."
+ },
+ {
+  "id": "ko-0279",
+  "target": "은행은 저기에 있어요.",
+  "english": "The bank is over there.",
+  "audio": "ko-ko-0279.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 279
+ },
+ {
+  "id": "ko-0280",
+  "target": "지하철역이 어디에 있어요?",
+  "english": "Where is the subway station?",
+  "audio": "ko-ko-0280.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 280
+ },
+ {
+  "id": "ko-0281",
+  "target": "병원은 학교 옆에 있어요.",
+  "english": "The hospital is next to the school.",
+  "audio": "ko-ko-0281.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 281,
+  "grammar": "옆에 = next to: 학교 옆에 있어요 (hakgyo yeop-e isseoyo = it's next to the school)."
+ },
+ {
+  "id": "ko-0282",
+  "target": "카페는 은행 앞에 있어요.",
+  "english": "The café is in front of the bank.",
+  "audio": "ko-ko-0282.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 282
+ },
+ {
+  "id": "ko-0283",
+  "target": "편의점이 집 근처에 있어요.",
+  "english": "The convenience store is near my house.",
+  "audio": "ko-ko-0283.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 283,
+  "grammar": "근처에 = near: 집 근처에 있어요 (jip geuncheo-e isseoyo = it's near my house)."
+ },
+ {
+  "id": "ko-0284",
+  "target": "제 가방은 거기에 있어요.",
+  "english": "My bag is there.",
+  "audio": "ko-ko-0284.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 284,
+  "grammar": "제 = my (humble, from 저): 제 가방 (je gabang = my bag)."
+ },
+ {
+  "id": "ko-0285",
+  "target": "공원이 어디에 있어요?",
+  "english": "Where is the park?",
+  "audio": "ko-ko-0285.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 285
+ },
+ {
+  "id": "ko-0286",
+  "target": "열쇠가 여기에 없어요.",
+  "english": "The key isn't here.",
+  "audio": "ko-ko-0286.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 286
+ },
+ {
+  "id": "ko-0287",
+  "target": "호텔이 공항 근처에 있어요.",
+  "english": "The hotel is near the airport.",
+  "audio": "ko-ko-0287.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 287
+ },
+ {
+  "id": "ko-0288",
+  "target": "고양이가 집에 있어요.",
+  "english": "The cat is at home.",
+  "audio": "ko-ko-0288.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 288,
+  "grammar": "To say where something is: place + 에 있어요: 집에 있어요 (jib-e isseoyo = it's at home)."
+ },
+ {
+  "id": "ko-0289",
+  "target": "날씨가 좋아요.",
+  "english": "The weather is good.",
+  "audio": "ko-ko-0289.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 289,
+  "grammar": "Korean adjectives work like verbs — no 'is' needed: 좋아요 (joayo) alone means 'it's good'."
+ },
+ {
+  "id": "ko-0290",
+  "target": "이 식당은 정말 맛있어요.",
+  "english": "This restaurant is really delicious.",
+  "audio": "ko-ko-0290.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 290
+ },
+ {
+  "id": "ko-0291",
+  "target": "불고기가 맛있어요.",
+  "english": "The bulgogi is delicious.",
+  "audio": "ko-ko-0291.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 291
+ },
+ {
+  "id": "ko-0292",
+  "target": "이 가방은 너무 비싸요.",
+  "english": "This bag is too expensive.",
+  "audio": "ko-ko-0292.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 292,
+  "grammar": "너무 = too/so: 너무 비싸요 (neomu bissayo = it's too expensive)."
+ },
+ {
+  "id": "ko-0293",
+  "target": "이 옷은 싸요.",
+  "english": "These clothes are cheap.",
+  "audio": "ko-ko-0293.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 293
+ },
+ {
+  "id": "ko-0294",
+  "target": "우리 집은 커요.",
+  "english": "Our house is big.",
+  "audio": "ko-ko-0294.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 294
+ },
+ {
+  "id": "ko-0295",
+  "target": "제 방은 작아요.",
+  "english": "My room is small.",
+  "audio": "ko-ko-0295.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 295
+ },
+ {
+  "id": "ko-0296",
+  "target": "백화점은 비싸요.",
+  "english": "The department store is expensive.",
+  "audio": "ko-ko-0296.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 296
+ },
+ {
+  "id": "ko-0297",
+  "target": "이 공원은 정말 좋아요.",
+  "english": "This park is really nice.",
+  "audio": "ko-ko-0297.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 297
+ },
+ {
+  "id": "ko-0298",
+  "target": "학교가 커요.",
+  "english": "The school is big.",
+  "audio": "ko-ko-0298.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 298
+ },
+ {
+  "id": "ko-0299",
+  "target": "공항은 집에서 멀어요.",
+  "english": "The airport is far from home.",
+  "audio": "ko-ko-0299.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 299,
+  "grammar": "에서 also means 'from' with distance: 집에서 멀어요 (jib-eseo meoreoyo = far from home)."
+ },
+ {
+  "id": "ko-0300",
+  "target": "지하철역이 집에서 가까워요.",
+  "english": "The subway station is close to my house.",
+  "audio": "ko-ko-0300.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 300
+ }
+]

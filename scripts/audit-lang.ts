@@ -110,7 +110,10 @@ for (const lang of langs) {
               for (const w of f.split(/[\s/]+/)) forms.add(m.script.lowercase(w));
             }
           }
-          if (low === m.script.lowercase(lemma) || forms.has(low)) ok++;
+          const match = m.script.formMatches
+            ? [...forms].some(f => m.script.formMatches!(low, f))
+            : forms.has(low);
+          if (low === m.script.lowercase(lemma) || match) ok++;
           else failures.set(tok, (failures.get(tok) || 0) + 1);
         }
       }

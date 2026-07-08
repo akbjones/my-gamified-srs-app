@@ -1,0 +1,700 @@
+[
+  {
+    "id": "ko-0001",
+    "target": "안녕하세요, 민수 씨.",
+    "english": "Hello, Minsu.",
+    "audio": "ko-ko-0001.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 1,
+    "grammar": "안녕하세요 (annyeonghaseyo) works morning, noon, and night — Korean's one all-day hello."
+  },
+  {
+    "id": "ko-0002",
+    "target": "안녕하세요? 저는 지은이에요.",
+    "english": "Hello! I'm Jieun.",
+    "audio": "ko-ko-0002.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 2
+  },
+  {
+    "id": "ko-0003",
+    "target": "수진 씨, 안녕하세요?",
+    "english": "Sujin, hello!",
+    "audio": "ko-ko-0003.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 3
+  },
+  {
+    "id": "ko-0004",
+    "target": "여러분, 안녕하세요?",
+    "english": "Hello, everyone!",
+    "audio": "ko-ko-0004.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 4
+  },
+  {
+    "id": "ko-0005",
+    "target": "안녕히 가세요, 민수 씨.",
+    "english": "Goodbye, Minsu.",
+    "audio": "ko-ko-0005.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 5,
+    "grammar": "안녕히 가세요 (annyeonghi gaseyo) to the person leaving; 안녕히 계세요 (gyeseyo) to the one staying."
+  },
+  {
+    "id": "ko-0006",
+    "target": "안녕히 계세요, 선생님.",
+    "english": "Goodbye, teacher.",
+    "audio": "ko-ko-0006.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 6
+  },
+  {
+    "id": "ko-0007",
+    "target": "만나서 반가워요, 준호 씨.",
+    "english": "Nice to meet you, Junho.",
+    "audio": "ko-ko-0007.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 7,
+    "grammar": "만나서 반가워요 (mannaseo bangawoyo) is one fixed phrase — 'glad to meet you.'"
+  },
+  {
+    "id": "ko-0008",
+    "target": "저도 만나서 반가워요.",
+    "english": "Nice to meet you too.",
+    "audio": "ko-ko-0008.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 8,
+    "grammar": "도 replaces 은/는 to say 'too': 저도 (jeodo = me too)."
+  },
+  {
+    "id": "ko-0009",
+    "target": "저는 수진이에요.",
+    "english": "I'm Sujin.",
+    "audio": "ko-ko-0009.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 9,
+    "grammar": "이에요 after a consonant, 예요 after a vowel: 수진이에요 (Sujin-ieyo), 민수예요 (Minsu-yeyo)."
+  },
+  {
+    "id": "ko-0010",
+    "target": "저는 민수예요.",
+    "english": "I'm Minsu.",
+    "audio": "ko-ko-0010.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 10
+  },
+  {
+    "id": "ko-0011",
+    "target": "이름이 뭐예요?",
+    "english": "What's your name?",
+    "audio": "ko-ko-0011.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 11,
+    "grammar": "Korean drops 'your' — 이름이 뭐예요? (ireumi mwoyeyo) is literally 'name is what?'"
+  },
+  {
+    "id": "ko-0012",
+    "target": "제 이름은 김민수예요.",
+    "english": "My name is Kim Minsu.",
+    "audio": "ko-ko-0012.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 12,
+    "grammar": "제 (je) = my, the humble form of 저의: 제 이름 (je ireum = my name)."
+  },
+  {
+    "id": "ko-0013",
+    "target": "민수 씨예요?",
+    "english": "Are you Minsu?",
+    "audio": "ko-ko-0013.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 13,
+    "grammar": "No word for 'you' needed — use the name + 씨: 민수 씨예요? (Minsu ssi-yeyo = are you Minsu?)"
+  },
+  {
+    "id": "ko-0014",
+    "target": "네, 제가 민수예요.",
+    "english": "Yes, I'm Minsu.",
+    "audio": "ko-ko-0014.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 14
+  },
+  {
+    "id": "ko-0015",
+    "target": "아니요, 저는 민수가 아니에요.",
+    "english": "No, I'm not Minsu.",
+    "audio": "ko-ko-0015.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 15
+  },
+  {
+    "id": "ko-0016",
+    "target": "저는 마이클이에요.",
+    "english": "I'm Michael.",
+    "audio": "ko-ko-0016.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 16
+  },
+  {
+    "id": "ko-0017",
+    "target": "저는 애나예요.",
+    "english": "I'm Anna.",
+    "audio": "ko-ko-0017.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 17
+  },
+  {
+    "id": "ko-0018",
+    "target": "수진 씨, 이분은 제 친구예요.",
+    "english": "Sujin, this is my friend.",
+    "audio": "ko-ko-0018.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 18
+  },
+  {
+    "id": "ko-0019",
+    "target": "이분은 박 선생님이에요.",
+    "english": "This is Teacher Park.",
+    "audio": "ko-ko-0019.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 19
+  },
+  {
+    "id": "ko-0020",
+    "target": "제 동생은 학생이에요.",
+    "english": "My younger sibling is a student.",
+    "audio": "ko-ko-0020.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 20
+  },
+  {
+    "id": "ko-0021",
+    "target": "어느 나라 사람이에요?",
+    "english": "What country are you from?",
+    "audio": "ko-ko-0021.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 21,
+    "grammar": "어느 나라 사람이에요? (eoneu nara saramieyo) — literally 'which country person?' — asks nationality."
+  },
+  {
+    "id": "ko-0022",
+    "target": "저는 한국 사람이에요.",
+    "english": "I'm Korean.",
+    "audio": "ko-ko-0022.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 22
+  },
+  {
+    "id": "ko-0023",
+    "target": "저는 영국 사람이에요.",
+    "english": "I'm British.",
+    "audio": "ko-ko-0023.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 23
+  },
+  {
+    "id": "ko-0024",
+    "target": "저는 미국 사람이에요.",
+    "english": "I'm American.",
+    "audio": "ko-ko-0024.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 24
+  },
+  {
+    "id": "ko-0025",
+    "target": "민수 씨는 한국 사람이에요.",
+    "english": "Minsu is Korean.",
+    "audio": "ko-ko-0025.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 25,
+    "grammar": "은/는 marks the topic — 은 after consonants, 는 after vowels: 저는 (jeoneun), 씨는 (ssi-neun)."
+  },
+  {
+    "id": "ko-0026",
+    "target": "지은 씨도 한국 사람이에요?",
+    "english": "Is Jieun Korean too?",
+    "audio": "ko-ko-0026.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 26,
+    "grammar": "Yes/no questions keep the same words — just a rising tone: 사람이에요? (saramieyo?)"
+  },
+  {
+    "id": "ko-0027",
+    "target": "아니요, 지은 씨는 미국 사람이에요.",
+    "english": "No, Jieun is American.",
+    "audio": "ko-ko-0027.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 27
+  },
+  {
+    "id": "ko-0028",
+    "target": "저는 중국 사람이 아니에요.",
+    "english": "I'm not Chinese.",
+    "audio": "ko-ko-0028.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 28,
+    "grammar": "'Is not X' = X이/가 아니에요: 중국 사람이 아니에요 (sarami anieyo = am not Chinese)."
+  },
+  {
+    "id": "ko-0029",
+    "target": "준호 씨는 일본 사람이에요?",
+    "english": "Is Junho Japanese?",
+    "audio": "ko-ko-0029.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 29
+  },
+  {
+    "id": "ko-0030",
+    "target": "저는 서울에 살아요.",
+    "english": "I live in Seoul.",
+    "audio": "ko-ko-0030.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 30
+  },
+  {
+    "id": "ko-0031",
+    "target": "직업이 뭐예요?",
+    "english": "What's your job?",
+    "audio": "ko-ko-0031.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 31
+  },
+  {
+    "id": "ko-0032",
+    "target": "저는 학생이에요.",
+    "english": "I'm a student.",
+    "audio": "ko-ko-0032.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 32
+  },
+  {
+    "id": "ko-0033",
+    "target": "저는 대학생이에요.",
+    "english": "I'm a university student.",
+    "audio": "ko-ko-0033.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 33
+  },
+  {
+    "id": "ko-0034",
+    "target": "저는 선생님이에요.",
+    "english": "I'm a teacher.",
+    "audio": "ko-ko-0034.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 34
+  },
+  {
+    "id": "ko-0035",
+    "target": "저는 회사원이에요.",
+    "english": "I'm an office worker.",
+    "audio": "ko-ko-0035.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 35
+  },
+  {
+    "id": "ko-0036",
+    "target": "수진 씨는 의사예요.",
+    "english": "Sujin is a doctor.",
+    "audio": "ko-ko-0036.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 36
+  },
+  {
+    "id": "ko-0037",
+    "target": "준호 씨는 간호사예요.",
+    "english": "Junho is a nurse.",
+    "audio": "ko-ko-0037.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 37
+  },
+  {
+    "id": "ko-0038",
+    "target": "지은 씨는 가수예요?",
+    "english": "Is Jieun a singer?",
+    "audio": "ko-ko-0038.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 38
+  },
+  {
+    "id": "ko-0039",
+    "target": "아니요, 지은 씨는 배우예요.",
+    "english": "No, Jieun is an actor.",
+    "audio": "ko-ko-0039.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 39
+  },
+  {
+    "id": "ko-0040",
+    "target": "저는 학생이 아니에요.",
+    "english": "I'm not a student.",
+    "audio": "ko-ko-0040.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 40
+  },
+  {
+    "id": "ko-0041",
+    "target": "민수 씨는 요리사가 아니에요.",
+    "english": "Minsu is not a cook.",
+    "audio": "ko-ko-0041.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 41
+  },
+  {
+    "id": "ko-0042",
+    "target": "저는 기자예요.",
+    "english": "I'm a journalist.",
+    "audio": "ko-ko-0042.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 42
+  },
+  {
+    "id": "ko-0043",
+    "target": "감사합니다, 선생님.",
+    "english": "Thank you, teacher.",
+    "audio": "ko-ko-0043.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 43,
+    "grammar": "감사합니다 (gamsahamnida) is formal-polite — the safe thank-you for staff, elders, strangers."
+  },
+  {
+    "id": "ko-0044",
+    "target": "정말 감사합니다.",
+    "english": "Thank you very much.",
+    "audio": "ko-ko-0044.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 44
+  },
+  {
+    "id": "ko-0045",
+    "target": "아, 죄송해요.",
+    "english": "Oh, I'm sorry.",
+    "audio": "ko-ko-0045.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 45,
+    "grammar": "죄송해요 (joesonghaeyo) is the everyday polite 'sorry' — bump into someone, say it."
+  },
+  {
+    "id": "ko-0046",
+    "target": "정말 죄송해요.",
+    "english": "I'm really sorry.",
+    "audio": "ko-ko-0046.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 46
+  },
+  {
+    "id": "ko-0047",
+    "target": "괜찮아요, 민수 씨.",
+    "english": "It's okay, Minsu.",
+    "audio": "ko-ko-0047.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 47,
+    "grammar": "괜찮아요 (gwaenchanayo) covers 'it's fine,' 'no problem,' and 'I'm OK' — one word, many uses."
+  },
+  {
+    "id": "ko-0048",
+    "target": "네, 괜찮아요.",
+    "english": "Yes, I'm fine.",
+    "audio": "ko-ko-0048.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 48
+  },
+  {
+    "id": "ko-0049",
+    "target": "수진 씨, 괜찮아요?",
+    "english": "Sujin, are you okay?",
+    "audio": "ko-ko-0049.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 49
+  },
+  {
+    "id": "ko-0050",
+    "target": "아니에요, 괜찮아요.",
+    "english": "Not at all, it's fine.",
+    "audio": "ko-ko-0050.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 50,
+    "grammar": "아니에요 (anieyo) after thanks = 'not at all / you're welcome.'"
+  },
+  {
+    "id": "ko-0051",
+    "target": "저기요, 죄송해요.",
+    "english": "Excuse me, sorry.",
+    "audio": "ko-ko-0051.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 51
+  },
+  {
+    "id": "ko-0052",
+    "target": "정말 고마워요, 지은 씨.",
+    "english": "Thanks a lot, Jieun. (friendly polite)",
+    "audio": "ko-ko-0052.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 52,
+    "grammar": "고마워요 (gomawoyo) = warm everyday thanks; 감사합니다 is the formal notch up."
+  },
+  {
+    "id": "ko-0053",
+    "target": "반가워요, 마이클 씨.",
+    "english": "Nice to meet you, Michael.",
+    "audio": "ko-ko-0053.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 53
+  },
+  {
+    "id": "ko-0054",
+    "target": "지은 씨, 학생이에요?",
+    "english": "Jieun, are you a student?",
+    "audio": "ko-ko-0054.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 54
+  },
+  {
+    "id": "ko-0055",
+    "target": "네, 학생이에요.",
+    "english": "Yes, I'm a student.",
+    "audio": "ko-ko-0055.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 55,
+    "grammar": "Korean drops pronouns when clear — 학생이에요 (haksaengieyo) alone means 'I'm a student.'"
+  },
+  {
+    "id": "ko-0056",
+    "target": "아니요, 회사원이에요.",
+    "english": "No, I'm an office worker.",
+    "audio": "ko-ko-0056.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 56
+  },
+  {
+    "id": "ko-0057",
+    "target": "마이클 씨, 미국 사람이에요?",
+    "english": "Michael, are you American?",
+    "audio": "ko-ko-0057.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 57
+  },
+  {
+    "id": "ko-0058",
+    "target": "네, 미국 사람이에요.",
+    "english": "Yes, I'm American.",
+    "audio": "ko-ko-0058.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 58
+  },
+  {
+    "id": "ko-0059",
+    "target": "아니요, 캐나다 사람이에요.",
+    "english": "No, I'm Canadian.",
+    "audio": "ko-ko-0059.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 59
+  },
+  {
+    "id": "ko-0060",
+    "target": "네, 맞아요.",
+    "english": "Yes, that's right.",
+    "audio": "ko-ko-0060.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 60,
+    "grammar": "맞아요 (majayo) = 'that's right' — the everyday way to confirm."
+  },
+  {
+    "id": "ko-0061",
+    "target": "이거 뭐예요?",
+    "english": "What's this?",
+    "audio": "ko-ko-0061.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 61,
+    "grammar": "이 = near me, 그 = near you, 저 = far from both: 이거/그거/저거 (igeo/geugeo/jeogeo)."
+  },
+  {
+    "id": "ko-0062",
+    "target": "그거 뭐예요?",
+    "english": "What's that (by you)?",
+    "audio": "ko-ko-0062.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 62
+  },
+  {
+    "id": "ko-0063",
+    "target": "저거 뭐예요?",
+    "english": "What's that (over there)?",
+    "audio": "ko-ko-0063.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 63
+  },
+  {
+    "id": "ko-0064",
+    "target": "이거 커피예요.",
+    "english": "This is coffee.",
+    "audio": "ko-ko-0064.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 64
+  },
+  {
+    "id": "ko-0065",
+    "target": "그거 제 가방이에요.",
+    "english": "That's my bag.",
+    "audio": "ko-ko-0065.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 65
+  },
+  {
+    "id": "ko-0066",
+    "target": "저거 우리 집이에요.",
+    "english": "That over there is our house.",
+    "audio": "ko-ko-0066.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 66,
+    "grammar": "Koreans say 우리 (uri = our) even for their own home or family: 우리 집 (uri jip = my house)."
+  },
+  {
+    "id": "ko-0067",
+    "target": "이거 물이에요?",
+    "english": "Is this water?",
+    "audio": "ko-ko-0067.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 67
+  },
+  {
+    "id": "ko-0068",
+    "target": "아니요, 그거 차예요.",
+    "english": "No, that's tea.",
+    "audio": "ko-ko-0068.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 68
+  },
+  {
+    "id": "ko-0069",
+    "target": "이거 한국어로 뭐예요?",
+    "english": "What's this in Korean?",
+    "audio": "ko-ko-0069.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 69,
+    "grammar": "(으)로 = 'in / by means of': 한국어로 (hangugeo-ro) = in Korean."
+  },
+  {
+    "id": "ko-0070",
+    "target": "질문 있어요?",
+    "english": "Do you have a question?",
+    "audio": "ko-ko-0070.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 70,
+    "grammar": "Korean 'have' is 'exist': 있어요 (isseoyo) = there is / I have; 없어요 (eopseoyo) = don't have."
+  },
+  {
+    "id": "ko-0071",
+    "target": "네, 질문이 있어요.",
+    "english": "Yes, I have a question.",
+    "audio": "ko-ko-0071.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 71
+  },
+  {
+    "id": "ko-0072",
+    "target": "민수 씨, 시간 있어요?",
+    "english": "Minsu, do you have time?",
+    "audio": "ko-ko-0072.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 72
+  },
+  {
+    "id": "ko-0073",
+    "target": "아니요, 시간이 없어요.",
+    "english": "No, I don't have time.",
+    "audio": "ko-ko-0073.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 73
+  },
+  {
+    "id": "ko-0074",
+    "target": "저는 우산이 없어요.",
+    "english": "I don't have an umbrella.",
+    "audio": "ko-ko-0074.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 74
+  },
+  {
+    "id": "ko-0075",
+    "target": "여권 있어요?",
+    "english": "Do you have your passport?",
+    "audio": "ko-ko-0075.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 75
+  }
+]

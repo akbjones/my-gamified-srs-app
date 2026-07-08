@@ -1,0 +1,889 @@
+[
+ {
+  "id": "ko-0226",
+  "target": "아침에 학교에 가요.",
+  "english": "I go to school in the morning.",
+  "audio": "ko-ko-0226.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 226,
+  "grammar": "에 marks the destination: 학교에 가요 (hakgyo-e gayo = I go to school)."
+ },
+ {
+  "id": "ko-0227",
+  "target": "집에 와요.",
+  "english": "I'm coming home.",
+  "audio": "ko-ko-0227.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 227
+ },
+ {
+  "id": "ko-0228",
+  "target": "오늘 회사에 가요.",
+  "english": "Today I go to the office.",
+  "audio": "ko-ko-0228.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-04",
+  "priority": 228
+ },
+ {
+  "id": "ko-0229",
+  "target": "친구가 우리 집에 와요.",
+  "english": "A friend comes to our house.",
+  "audio": "ko-ko-0229.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 229,
+  "grammar": "와요 = motion toward the speaker; 가요 = away: 집에 와요 (jib-e wayo = comes home)."
+ },
+ {
+  "id": "ko-0230",
+  "target": "내일 시장에 가요.",
+  "english": "Tomorrow I go to the market.",
+  "audio": "ko-ko-0230.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 230
+ },
+ {
+  "id": "ko-0231",
+  "target": "아침에 학교에 와요.",
+  "english": "I come to school in the morning.",
+  "audio": "ko-ko-0231.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 231,
+  "grammar": "에 also marks time: 아침에 (achim-e = in the morning)."
+ },
+ {
+  "id": "ko-0232",
+  "target": "버스로 회사에 가요.",
+  "english": "I go to the office by bus.",
+  "audio": "ko-ko-0232.mp3",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 232,
+  "grammar": "로 = by (a means of transport): 버스로 가요 (beoseu-ro gayo = I go by bus)."
+ },
+ {
+  "id": "ko-0233",
+  "target": "주말에 공원에 가요.",
+  "english": "On the weekend I go to the park.",
+  "audio": "ko-ko-0233.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 233
+ },
+ {
+  "id": "ko-0234",
+  "target": "친구랑 카페에 가요.",
+  "english": "I go to a café with a friend.",
+  "audio": "ko-ko-0234.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 234,
+  "grammar": "랑 = with (someone), friendly in speech: 친구랑 (chingu-rang = with a friend)."
+ },
+ {
+  "id": "ko-0235",
+  "target": "지금 은행에 가요.",
+  "english": "I'm going to the bank now.",
+  "audio": "ko-ko-0235.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 235
+ },
+ {
+  "id": "ko-0236",
+  "target": "엄마가 집에 와요.",
+  "english": "Mom comes home.",
+  "audio": "ko-ko-0236.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 236
+ },
+ {
+  "id": "ko-0237",
+  "target": "저녁에 식당에 가요.",
+  "english": "In the evening I go to a restaurant.",
+  "audio": "ko-ko-0237.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 237
+ },
+ {
+  "id": "ko-0238",
+  "target": "지하철로 공항에 가요.",
+  "english": "I go to the airport by subway.",
+  "audio": "ko-ko-0238.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 238
+ },
+ {
+  "id": "ko-0239",
+  "target": "월요일에 회사에서 일해요.",
+  "english": "I work at the office on Mondays.",
+  "audio": "ko-ko-0239.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-04",
+  "priority": 239,
+  "grammar": "에서 marks where an action happens: 회사에서 일해요 (hoesa-eseo ilhaeyo = I work at the office)."
+ },
+ {
+  "id": "ko-0240",
+  "target": "주말에 도서관에서 공부해요.",
+  "english": "I study at the library on weekends.",
+  "audio": "ko-ko-0240.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 240
+ },
+ {
+  "id": "ko-0241",
+  "target": "친구랑 카페에서 커피를 마셔요.",
+  "english": "I drink coffee with a friend at a café.",
+  "audio": "ko-ko-0241.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 241
+ },
+ {
+  "id": "ko-0242",
+  "target": "저녁에 식당에서 밥을 먹어요.",
+  "english": "I eat dinner at a restaurant in the evening.",
+  "audio": "ko-ko-0242.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 242
+ },
+ {
+  "id": "ko-0243",
+  "target": "오늘 집에서 요리해요.",
+  "english": "I am cooking at home today.",
+  "audio": "ko-ko-0243.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 243
+ },
+ {
+  "id": "ko-0244",
+  "target": "공원에서 운동해요.",
+  "english": "I exercise in the park.",
+  "audio": "ko-ko-0244.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 244
+ },
+ {
+  "id": "ko-0245",
+  "target": "마트에서 과일을 사요.",
+  "english": "I buy fruit at the supermarket.",
+  "audio": "ko-ko-0245.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 245
+ },
+ {
+  "id": "ko-0246",
+  "target": "학교에서 한국어를 배워요.",
+  "english": "I learn Korean at school.",
+  "audio": "ko-ko-0246.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 246
+ },
+ {
+  "id": "ko-0247",
+  "target": "집에서 음악을 들어요.",
+  "english": "I listen to music at home.",
+  "audio": "ko-ko-0247.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 247
+ },
+ {
+  "id": "ko-0248",
+  "target": "서점에서 책을 사요.",
+  "english": "I buy a book at the bookstore.",
+  "audio": "ko-ko-0248.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 248
+ },
+ {
+  "id": "ko-0249",
+  "target": "매일 운동해요.",
+  "english": "I exercise every day.",
+  "audio": "ko-ko-0249.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 249,
+  "grammar": "Noun + 해요 makes an action verb: 운동해요 (undonghaeyo = I exercise, lit. do exercise)."
+ },
+ {
+  "id": "ko-0250",
+  "target": "아침에 공부해요.",
+  "english": "I study in the morning.",
+  "audio": "ko-ko-0250.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 250
+ },
+ {
+  "id": "ko-0251",
+  "target": "엄마한테 전화해요.",
+  "english": "I call mom.",
+  "audio": "ko-ko-0251.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 251,
+  "grammar": "한테 = to (a person): 엄마한테 전화해요 (eomma-hante jeonhwahaeyo = I call mom)."
+ },
+ {
+  "id": "ko-0252",
+  "target": "저녁에 요리해요.",
+  "english": "I cook in the evening.",
+  "audio": "ko-ko-0252.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 252
+ },
+ {
+  "id": "ko-0253",
+  "target": "주말에 쇼핑해요.",
+  "english": "I shop on the weekend.",
+  "audio": "ko-ko-0253.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 253
+ },
+ {
+  "id": "ko-0254",
+  "target": "오늘 청소해요.",
+  "english": "I clean today.",
+  "audio": "ko-ko-0254.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 254
+ },
+ {
+  "id": "ko-0255",
+  "target": "친구랑 같이 운동해요.",
+  "english": "I exercise together with a friend.",
+  "audio": "ko-ko-0255.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 255,
+  "grammar": "같이 = together: 같이 운동해요 (gachi undonghaeyo = we exercise together)."
+ },
+ {
+  "id": "ko-0256",
+  "target": "회사에서 전화해요.",
+  "english": "I make phone calls at the office.",
+  "audio": "ko-ko-0256.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-04",
+  "priority": 256
+ },
+ {
+  "id": "ko-0257",
+  "target": "매일 한국어를 공부해요.",
+  "english": "I study Korean every day.",
+  "audio": "ko-ko-0257.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 257
+ },
+ {
+  "id": "ko-0258",
+  "target": "아빠가 요리해요.",
+  "english": "Dad cooks.",
+  "audio": "ko-ko-0258.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 258
+ },
+ {
+  "id": "ko-0259",
+  "target": "지금 숙제해요.",
+  "english": "I'm doing homework now.",
+  "audio": "ko-ko-0259.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 259
+ },
+ {
+  "id": "ko-0260",
+  "target": "주말에 친구를 만나요.",
+  "english": "I meet a friend on the weekend.",
+  "audio": "ko-ko-0260.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 260
+ },
+ {
+  "id": "ko-0261",
+  "target": "저녁에 산책해요.",
+  "english": "I take a walk in the evening.",
+  "audio": "ko-ko-0261.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 261
+ },
+ {
+  "id": "ko-0262",
+  "target": "밤에 샤워해요.",
+  "english": "I take a shower at night.",
+  "audio": "ko-ko-0262.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 262
+ },
+ {
+  "id": "ko-0263",
+  "target": "커피를 좋아해요.",
+  "english": "I like coffee.",
+  "audio": "ko-ko-0263.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 263,
+  "grammar": "To like something: noun + 을/를 좋아해요: 커피를 좋아해요 (keopi-reul joahaeyo = I like coffee)."
+ },
+ {
+  "id": "ko-0264",
+  "target": "한국 음식을 좋아해요.",
+  "english": "I like Korean food.",
+  "audio": "ko-ko-0264.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 264
+ },
+ {
+  "id": "ko-0265",
+  "target": "우리 가족은 김치를 좋아해요.",
+  "english": "Our family likes kimchi.",
+  "audio": "ko-ko-0265.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 265
+ },
+ {
+  "id": "ko-0266",
+  "target": "운동을 좋아해요?",
+  "english": "Do you like exercise?",
+  "audio": "ko-ko-0266.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 266,
+  "grammar": "A question keeps the same words — just raise the tone: 좋아해요? (joahaeyo? = do you like it?)"
+ },
+ {
+  "id": "ko-0267",
+  "target": "강아지를 좋아해요.",
+  "english": "I like dogs.",
+  "audio": "ko-ko-0267.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 267
+ },
+ {
+  "id": "ko-0268",
+  "target": "친구는 영화를 좋아해요.",
+  "english": "My friend likes movies.",
+  "audio": "ko-ko-0268.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 268
+ },
+ {
+  "id": "ko-0269",
+  "target": "저는 음악을 정말 좋아해요.",
+  "english": "I really like music.",
+  "audio": "ko-ko-0269.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 269
+ },
+ {
+  "id": "ko-0270",
+  "target": "동생은 게임을 좋아해요.",
+  "english": "My younger sibling likes games.",
+  "audio": "ko-ko-0270.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 270
+ },
+ {
+  "id": "ko-0271",
+  "target": "물 주세요.",
+  "english": "Water, please.",
+  "audio": "ko-ko-0271.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 271,
+  "grammar": "Ordering: thing + 주세요: 물 주세요 (mul juseyo = water, please). A fixed phrase — use it as is."
+ },
+ {
+  "id": "ko-0272",
+  "target": "커피 주세요.",
+  "english": "Coffee, please.",
+  "audio": "ko-ko-0272.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 272
+ },
+ {
+  "id": "ko-0273",
+  "target": "메뉴 주세요.",
+  "english": "The menu, please.",
+  "audio": "ko-ko-0273.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 273
+ },
+ {
+  "id": "ko-0274",
+  "target": "비빔밥 주세요.",
+  "english": "Bibimbap, please.",
+  "audio": "ko-ko-0274.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 274
+ },
+ {
+  "id": "ko-0275",
+  "target": "김치 좀 주세요.",
+  "english": "Some kimchi, please.",
+  "audio": "ko-ko-0275.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 275,
+  "grammar": "좀 softens a request: 김치 좀 주세요 (gimchi jom juseyo = some kimchi, please)."
+ },
+ {
+  "id": "ko-0276",
+  "target": "영수증 주세요.",
+  "english": "The receipt, please.",
+  "audio": "ko-ko-0276.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 276
+ },
+ {
+  "id": "ko-0277",
+  "target": "여기 화장실이 어디에 있어요?",
+  "english": "Where is the bathroom here?",
+  "audio": "ko-ko-0277.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 277,
+  "grammar": "어디에 있어요? = where is …?: 화장실이 어디에 있어요? (hwajangsil-i eodi-e isseoyo?)"
+ },
+ {
+  "id": "ko-0278",
+  "target": "여기에 있어요.",
+  "english": "It's here.",
+  "audio": "ko-ko-0278.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 278,
+  "grammar": "여기 = here, 거기 = there (by you), 저기 = over there: 여기에 있어요 (yeogi-e isseoyo = it's here)."
+ },
+ {
+  "id": "ko-0279",
+  "target": "은행은 저기에 있어요.",
+  "english": "The bank is over there.",
+  "audio": "ko-ko-0279.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 279
+ },
+ {
+  "id": "ko-0280",
+  "target": "지하철역이 어디에 있어요?",
+  "english": "Where is the subway station?",
+  "audio": "ko-ko-0280.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 280
+ },
+ {
+  "id": "ko-0281",
+  "target": "병원은 학교 옆에 있어요.",
+  "english": "The hospital is next to the school.",
+  "audio": "ko-ko-0281.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 281,
+  "grammar": "옆에 = next to: 학교 옆에 있어요 (hakgyo yeop-e isseoyo = it's next to the school)."
+ },
+ {
+  "id": "ko-0282",
+  "target": "카페는 은행 앞에 있어요.",
+  "english": "The café is in front of the bank.",
+  "audio": "ko-ko-0282.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 282
+ },
+ {
+  "id": "ko-0283",
+  "target": "편의점이 집 근처에 있어요.",
+  "english": "The convenience store is near my house.",
+  "audio": "ko-ko-0283.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 283,
+  "grammar": "근처에 = near: 집 근처에 있어요 (jip geuncheo-e isseoyo = it's near my house)."
+ },
+ {
+  "id": "ko-0284",
+  "target": "제 가방은 거기에 있어요.",
+  "english": "My bag is there.",
+  "audio": "ko-ko-0284.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 284,
+  "grammar": "제 = my (humble, from 저): 제 가방 (je gabang = my bag)."
+ },
+ {
+  "id": "ko-0285",
+  "target": "공원이 어디에 있어요?",
+  "english": "Where is the park?",
+  "audio": "ko-ko-0285.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 285
+ },
+ {
+  "id": "ko-0286",
+  "target": "열쇠가 여기에 없어요.",
+  "english": "The key isn't here.",
+  "audio": "ko-ko-0286.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 286
+ },
+ {
+  "id": "ko-0287",
+  "target": "호텔이 공항 근처에 있어요.",
+  "english": "The hotel is near the airport.",
+  "audio": "ko-ko-0287.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 287
+ },
+ {
+  "id": "ko-0288",
+  "target": "고양이가 집에 있어요.",
+  "english": "The cat is at home.",
+  "audio": "ko-ko-0288.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 288,
+  "grammar": "To say where something is: place + 에 있어요: 집에 있어요 (jib-e isseoyo = it's at home)."
+ },
+ {
+  "id": "ko-0289",
+  "target": "날씨가 좋아요.",
+  "english": "The weather is good.",
+  "audio": "ko-ko-0289.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 289,
+  "grammar": "Korean adjectives work like verbs — no 'is' needed: 좋아요 (joayo) alone means 'it's good'."
+ },
+ {
+  "id": "ko-0290",
+  "target": "이 식당은 정말 맛있어요.",
+  "english": "This restaurant is really delicious.",
+  "audio": "ko-ko-0290.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 290
+ },
+ {
+  "id": "ko-0291",
+  "target": "불고기가 맛있어요.",
+  "english": "The bulgogi is delicious.",
+  "audio": "ko-ko-0291.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 291
+ },
+ {
+  "id": "ko-0292",
+  "target": "이 가방은 너무 비싸요.",
+  "english": "This bag is too expensive.",
+  "audio": "ko-ko-0292.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 292,
+  "grammar": "너무 = too/so: 너무 비싸요 (neomu bissayo = it's too expensive)."
+ },
+ {
+  "id": "ko-0293",
+  "target": "이 옷은 싸요.",
+  "english": "These clothes are cheap.",
+  "audio": "ko-ko-0293.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 293
+ },
+ {
+  "id": "ko-0294",
+  "target": "우리 집은 커요.",
+  "english": "Our house is big.",
+  "audio": "ko-ko-0294.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-04",
+  "priority": 294
+ },
+ {
+  "id": "ko-0295",
+  "target": "제 방은 작아요.",
+  "english": "My room is small.",
+  "audio": "ko-ko-0295.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 295
+ },
+ {
+  "id": "ko-0296",
+  "target": "백화점은 비싸요.",
+  "english": "The department store is expensive.",
+  "audio": "ko-ko-0296.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 296
+ },
+ {
+  "id": "ko-0297",
+  "target": "이 공원은 정말 좋아요.",
+  "english": "This park is really nice.",
+  "audio": "ko-ko-0297.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 297
+ },
+ {
+  "id": "ko-0298",
+  "target": "학교가 커요.",
+  "english": "The school is big.",
+  "audio": "ko-ko-0298.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-04",
+  "priority": 298
+ },
+ {
+  "id": "ko-0299",
+  "target": "공항은 집에서 멀어요.",
+  "english": "The airport is far from home.",
+  "audio": "ko-ko-0299.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 299,
+  "grammar": "에서 also means 'from' with distance: 집에서 멀어요 (jib-eseo meoreoyo = far from home)."
+ },
+ {
+  "id": "ko-0300",
+  "target": "지하철역이 집에서 가까워요.",
+  "english": "The subway station is close to my house.",
+  "audio": "ko-ko-0300.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 300
+ }
+]

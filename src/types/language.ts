@@ -64,6 +64,12 @@ export interface ScriptDescriptor {
    *  silently fails on Cyrillic/Devanagari — every matcher and classifier
    *  must use this instead. */
   isWordChar: (ch: string) => boolean;
+  /** Custom form-vs-token match for the conjugation round-trip audit.
+   *  Default is equality. Agglutinative scripts need more: Korean's
+   *  copula attaches to its complement (학생 + 이에요 = 학생이에요), so
+   *  the token legitimately ENDS WITH the table form without equalling
+   *  it. Encode that here rather than weakening the audit globally. */
+  formMatches?: (token: string, tableForm: string) => boolean;
   /** Romanization for learner display, where deterministic. */
   transliterate?: (text: string) => string;
   /** Free-text notes engines must respect (e.g. Devanagari matra

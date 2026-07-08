@@ -54,9 +54,11 @@ export const KNOWN_ROOTS = new Set<string>([
   'nikah', 'kumpul', 'angkat', 'henti', 'lambat', 'dekat',
   'tiba', 'sarapan', 'naik', 'mandi', 'masuk', 'keluar',
   'tonton', 'tawar', 'pesan', 'jemput', 'antar', 'parkir',
-  'ada', 'boleh', 'belok', 'jumpa', 'lewat', 'terbit', 'minta', 'turun', 'kembali', 'numpang', 'baik',
+  'ada', 'boleh', 'belok', 'jumpa', 'lewat', 'terbit', 'minta', 'turun', 'kembali', 'numpang', 'baik', 'diam',
   // wave-3 roots
   'aju', 'alam', 'alas', 'aman', 'antre', 'asal', 'atur', 'bagi', 'bahagia', 'baik', 'beda', 'berangkat', 'beres', 'besar', 'biasa', 'bimbing', 'buang', 'bungkus', 'capai', 'catat', 'celaka', 'cepat', 'cetak', 'cium', 'curi', 'daftar', 'dagang', 'darat', 'dingin', 'ganggu', 'gilir', 'goreng', 'habis', 'hadir', 'hangat', 'hias', 'hibur', 'hitung', 'kata', 'kebun', 'kejar', 'kejut', 'keliling', 'kemudi', 'kering', 'ketuk', 'kosong', 'kuliah', 'kurang', 'lahir', 'lamar', 'lampir', 'lanjut', 'lapor', 'layan', 'lebih', 'lelah', 'lembur', 'luka', 'lukis', 'lulus', 'macet', 'maju', 'menang', 'milik', 'mohon', 'muat', 'mudik', 'mundur', 'nikmat', 'obrol', 'pajang', 'paksa', 'pamer', 'pamit', 'panas', 'pandang', 'pandu', 'panjang', 'pasar', 'pecah', 'percaya', 'pimpin', 'potong', 'puji', 'putar', 'putus', 'ramai', 'rapi', 'repot', 'rindu', 'saji', 'salah', 'sambut', 'sampai', 'saran', 'sayur', 'sebar', 'seberang', 'sehat', 'sempat', 'senang', 'sentuh', 'serah', 'setir', 'setrika', 'setuju', 'sewa', 'siram', 'sulit', 'sumbang', 'suruh', 'susun', 'tabung', 'tandatangan', 'tanding', 'tangkap', 'tani', 'tarik', 'teman', 'tempuh', 'teriak', 'tetes', 'timbang', 'titip', 'tolak', 'traktir', 'transfer', 'tugas', 'tuju', 'tumpang', 'tumpuk', 'tunang', 'tunjuk', 'turut', 'ucap', 'ukur', 'ulang', 'umum', 'undur', 'usaha',
+  // wave-4 roots
+  'absen', 'aduk', 'akhir', 'aneh', 'anggap', 'arti', 'asin', 'bangga', 'benci', 'berhasil', 'betah', 'bosan', 'cabut', 'campur', 'canggung', 'cas', 'cemar', 'darah', 'daur', 'denda', 'doyan', 'dukung', 'gagal', 'geprek', 'gerak', 'geser', 'gigit', 'goda', 'gonggong', 'gugup', 'hapus', 'harga', 'haru', 'hemat', 'indah', 'jahit', 'jebak', 'jelang', 'jujur', 'kaget', 'kagum', 'kalah', 'kecewa', 'kecil', 'kelok', 'kemas', 'kembang', 'kena', 'kendara', 'ketik', 'khawatir', 'kira', 'kokok', 'kukus', 'larang', 'lega', 'lempem', 'lepas', 'libat', 'lipat', 'lomba', 'luap', 'luncur', 'malu', 'nyaman', 'oles', 'padam', 'panen', 'peduli', 'pegang', 'pelihara', 'pendam', 'peras', 'pisah', 'puas', 'pulih', 'pungut', 'ragu', 'rantau', 'rebus', 'rebut', 'reda', 'rokok', 'rusak', 'sabar', 'sadar', 'salin', 'sambung', 'sanggup', 'sebut', 'sedia', 'sedih', 'segar', 'sejuk', 'semangat', 'sembunyi', 'sepi', 'sesat', 'siang', 'suap', 'tagih', 'tahan', 'takut', 'tambah', 'tampung', 'tawa', 'tebang', 'tenang', 'tengkar', 'tengok', 'tentu', 'terjun', 'tumbang', 'tumbuh', 'tumis', 'ulas', 'ulek', 'unduh', 'unggah', 'urus', 'usir', 'usul', 'yakin',
   // batch-2 roots
   'begadang',
   'bakar', 'bunyi',
@@ -107,6 +109,8 @@ const PER_KAN: Record<string, string[]> = {
   kenal: ['perkenalkan', 'memperkenalkan'],
   boleh: ['perbolehkan', 'memperbolehkan'],
   baik: ['perbaiki', 'memperbaiki', 'diperbaiki'], // "to fix" — per-…-i class
+  panjang: ['perpanjang', 'memperpanjang', 'diperpanjang'], // extend (visa, contract)
+  timbang: ['pertimbangkan', 'mempertimbangkan', 'dipertimbangkan'], // consider
 };
 
 /** Lexicalized ke-(-an) forms — only real words get a row (kehujanan is
@@ -124,6 +128,8 @@ const KE_FORMS: Record<string, string[]> = {
 const BER_AN: Record<string, string> = {
   jual: 'berjualan',   // to sell (as one's trade)
   tunang: 'bertunangan', // to be engaged
+  pergi: 'bepergian',  // to travel/be away
+  dapat: 'berpendapat', // to hold an opinion (ber+peN+dapat)
 };
 
 export function conjugate(rootOrForm: string): ConjugationTable | null {
@@ -147,12 +153,15 @@ export function conjugate(rootOrForm: string): ConjugationTable | null {
   if (KE_FORMS[root]) tenses['ke- (Lexicalized)'] = KE_FORMS[root];
   // Object clitic -nya attaches to active forms: membacanya "reads it",
   // menghabiskannya "finishes it", mengunjunginya "visits it/them"
-  tenses['-nya (+ object)'] = [`${meN}nya`, `${meN}kannya`, `${meN}inya`];
+  tenses['-nya (+ object)'] = [`${root}nya`, `${meN}nya`, `${meN}kannya`, `${meN}inya`];
   // -lah softens imperatives/invitations: mampirlah "do drop by"
   tenses['-lah (Softener)'] = [`${root}lah`];
   // Reduplication: iterative (jalan-jalan "stroll") and root-meN reciprocal
   // (tawar-menawar "bargaining", jual-menjual "trading")
-  tenses['Reduplikasi (Iterative)'] = [`${root}-${root}`, `${root}-${meN}`];
+  tenses['Reduplikasi (Iterative)'] = [`${root}-${root}`, `${root}-${meN}`, `${meN}-${root}`];
+  // Colloquial nge- active on short roots (ngecas "to charge", ngecat)
+  const syl = root.split('').filter(c => VOWELS.includes(c)).length;
+  if (syl <= 1) tenses['nge- (Colloquial)'] = [`nge${root}`];
   return { infinitive: root, isReflexive: false, tenses };
 }
 

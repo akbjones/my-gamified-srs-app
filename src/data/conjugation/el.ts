@@ -78,14 +78,16 @@ export function conjugate(lemma: string): ConjugationTable | null {
     };
   }
 
-  // Passive/deponent -ομαι (έρχομαι, σκέφτομαι)
+  // Passive/deponent -ομαι (έρχομαι, σκέφτομαι). In 1pl the stress moves
+  // onto -όμαστε, so the stem loses its accent: έρχ- → ερχόμαστε.
   if (w.endsWith('ομαι')) {
     const s = w.slice(0, -4);
+    const sBare = stripAccents(s);
     return {
       infinitive: w,
       isReflexive: true,
       tenses: {
-        'Ενεστώτας (Present)': [`${s}ομαι`, `${s}εσαι`, `${s}εται`, `${s}όμαστε`, `${s}εστε`, `${s}ονται`],
+        'Ενεστώτας (Present)': [`${s}ομαι`, `${s}εσαι`, `${s}εται`, `${sBare}όμαστε`, `${s}εστε`, `${s}ονται`],
       },
     };
   }

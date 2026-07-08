@@ -1,0 +1,892 @@
+[
+ {
+  "id": "el-0151",
+  "target": "Τι κάνεις το πρωί;",
+  "english": "What do you do in the morning?",
+  "audio": "el-el-0151.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 151
+ },
+ {
+  "id": "el-0152",
+  "target": "Πού είναι το ξενοδοχείο;",
+  "english": "Where is the hotel?",
+  "audio": "el-el-0152.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 152,
+  "grammar": "Πού with an accent asks 'where': Πού είναι; Without the accent, που means 'that'."
+ },
+ {
+  "id": "el-0153",
+  "target": "Πότε ανοίγει το μουσείο;",
+  "english": "When does the museum open?",
+  "audio": "el-el-0153.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 153
+ },
+ {
+  "id": "el-0154",
+  "target": "Ποιος είναι ο γιατρός;",
+  "english": "Who is the doctor?",
+  "audio": "el-el-0154.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 154,
+  "grammar": "Ποιος matches the noun's gender: ποιος άντρας; ποια γυναίκα; ποιο παιδί;"
+ },
+ {
+  "id": "el-0155",
+  "target": "Γιατί μαθαίνεις ελληνικά;",
+  "english": "Why are you learning Greek?",
+  "audio": "el-el-0155.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 155
+ },
+ {
+  "id": "el-0156",
+  "target": "Πώς πας στη δουλειά;",
+  "english": "How do you get to work?",
+  "audio": "el-el-0156.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 156,
+  "grammar": "Πώς with an accent asks 'how': Πώς πας; (How do you get there?)"
+ },
+ {
+  "id": "el-0157",
+  "target": "Τι θέλετε, παρακαλώ;",
+  "english": "What would you like, please?",
+  "audio": "el-el-0157.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 157
+ },
+ {
+  "id": "el-0158",
+  "target": "Πού μένεις τώρα;",
+  "english": "Where do you live now?",
+  "audio": "el-el-0158.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 158
+ },
+ {
+  "id": "el-0159",
+  "target": "Πότε φεύγει το λεωφορείο;",
+  "english": "When does the bus leave?",
+  "audio": "el-el-0159.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 159
+ },
+ {
+  "id": "el-0160",
+  "target": "Ποια είναι η αδερφή σου;",
+  "english": "Which one is your sister?",
+  "audio": "el-el-0160.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 160
+ },
+ {
+  "id": "el-0161",
+  "target": "Πόσο νερό πίνεις την ημέρα;",
+  "english": "How much water do you drink a day?",
+  "audio": "el-el-0161.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 161,
+  "grammar": "Use πόσο with uncountables (πόσο νερό;) and πόσα with plurals (πόσα παιδιά;)."
+ },
+ {
+  "id": "el-0162",
+  "target": "Γιατί δεν έρχεσαι μαζί μας;",
+  "english": "Why aren't you coming with us?",
+  "audio": "el-el-0162.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 162
+ },
+ {
+  "id": "el-0163",
+  "target": "Πώς τον λένε;",
+  "english": "What's his name?",
+  "audio": "el-el-0163.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 163,
+  "grammar": "Πώς σε λένε; is literally 'How do they call you?' Reply: Με λένε Άννα."
+ },
+ {
+  "id": "el-0164",
+  "target": "Τι δουλειά κάνετε;",
+  "english": "What work do you do?",
+  "audio": "el-el-0164.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 164
+ },
+ {
+  "id": "el-0165",
+  "target": "Πού πάει αυτό το λεωφορείο;",
+  "english": "Where does this bus go?",
+  "audio": "el-el-0165.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 165,
+  "grammar": "'This bus' doubles the article: αυτό το λεωφορείο — αυτό + το + noun."
+ },
+ {
+  "id": "el-0166",
+  "target": "Πότε αρχίζει η ταινία;",
+  "english": "When does the movie start?",
+  "audio": "el-el-0166.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 166
+ },
+ {
+  "id": "el-0167",
+  "target": "Ποιο παγωτό θέλεις;",
+  "english": "Which ice cream do you want?",
+  "audio": "el-el-0167.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 167
+ },
+ {
+  "id": "el-0168",
+  "target": "Γιατί κλείνει νωρίς το μαγαζί;",
+  "english": "Why does the shop close early?",
+  "audio": "el-el-0168.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 168
+ },
+ {
+  "id": "el-0169",
+  "target": "Πώς λέτε αυτό στα ελληνικά;",
+  "english": "How do you say this in Greek?",
+  "audio": "el-el-0169.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 169,
+  "grammar": "'In Greek' is στα ελληνικά — languages take στα: στα αγγλικά (in English)."
+ },
+ {
+  "id": "el-0170",
+  "target": "Τι τρως το μεσημέρι;",
+  "english": "What do you eat at midday?",
+  "audio": "el-el-0170.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 170
+ },
+ {
+  "id": "el-0171",
+  "target": "Ποιος μιλάει ελληνικά εδώ;",
+  "english": "Who speaks Greek here?",
+  "audio": "el-el-0171.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 171
+ },
+ {
+  "id": "el-0172",
+  "target": "Πόσο μακριά είναι η παραλία;",
+  "english": "How far is the beach?",
+  "audio": "el-el-0172.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 172,
+  "grammar": "πόσο + adjective asks degree: πόσο μακριά; (how far?)"
+ },
+ {
+  "id": "el-0173",
+  "target": "Πόσο κάνει αυτό;",
+  "english": "How much is this?",
+  "audio": "el-el-0173.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 173,
+  "grammar": "Πόσο κάνει; is the everyday 'how much is it?' Reply: Κάνει δύο ευρώ."
+ },
+ {
+  "id": "el-0174",
+  "target": "Ο καφές κάνει τρία ευρώ.",
+  "english": "The coffee costs three euros.",
+  "audio": "el-el-0174.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 174
+ },
+ {
+  "id": "el-0175",
+  "target": "Πόσο κοστίζει το εισιτήριο;",
+  "english": "How much does the ticket cost?",
+  "audio": "el-el-0175.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 175
+ },
+ {
+  "id": "el-0176",
+  "target": "Το εισιτήριο κοστίζει δέκα ευρώ.",
+  "english": "The ticket costs ten euros.",
+  "audio": "el-el-0176.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 176
+ },
+ {
+  "id": "el-0177",
+  "target": "Θέλω δύο κιλά ντομάτες.",
+  "english": "I want two kilos of tomatoes.",
+  "audio": "el-el-0177.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 177,
+  "grammar": "Quantities attach directly — no word for 'of': δύο κιλά ντομάτες."
+ },
+ {
+  "id": "el-0178",
+  "target": "Ένα νερό και δύο καφέδες, παρακαλώ.",
+  "english": "One water and two coffees, please.",
+  "audio": "el-el-0178.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 178
+ },
+ {
+  "id": "el-0179",
+  "target": "Έχετε πέντε λεμόνια;",
+  "english": "Do you have five lemons?",
+  "audio": "el-el-0179.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 179
+ },
+ {
+  "id": "el-0180",
+  "target": "Το τυρί κάνει οχτώ ευρώ το κιλό.",
+  "english": "The cheese costs eight euros a kilo.",
+  "audio": "el-el-0180.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 180,
+  "grammar": "Per-unit prices use το: οχτώ ευρώ το κιλό (eight euros a kilo)."
+ },
+ {
+  "id": "el-0181",
+  "target": "Πληρώνω είκοσι ευρώ για το ταξί.",
+  "english": "I pay twenty euros for the taxi.",
+  "audio": "el-el-0181.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 181
+ },
+ {
+  "id": "el-0182",
+  "target": "Το δωμάτιο κοστίζει πενήντα ευρώ.",
+  "english": "The room costs fifty euros.",
+  "audio": "el-el-0182.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 182
+ },
+ {
+  "id": "el-0183",
+  "target": "Έχω μόνο σαράντα ευρώ.",
+  "english": "I only have forty euros.",
+  "audio": "el-el-0183.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 183
+ },
+ {
+  "id": "el-0184",
+  "target": "Θέλω τέσσερα μήλα και έξι πορτοκάλια.",
+  "english": "I want four apples and six oranges.",
+  "audio": "el-el-0184.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 184
+ },
+ {
+  "id": "el-0185",
+  "target": "Πόσα παιδιά έχετε;",
+  "english": "How many children do you have?",
+  "audio": "el-el-0185.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 185
+ },
+ {
+  "id": "el-0186",
+  "target": "Έχουμε τρία παιδιά.",
+  "english": "We have three children.",
+  "audio": "el-el-0186.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 186,
+  "grammar": "Three is τρία with neuters (τρία παιδιά) and τρεις with m/f nouns (τρεις μέρες)."
+ },
+ {
+  "id": "el-0187",
+  "target": "Το βιβλίο κάνει δώδεκα ευρώ.",
+  "english": "The book costs twelve euros.",
+  "audio": "el-el-0187.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 187
+ },
+ {
+  "id": "el-0188",
+  "target": "Αγοράζω εφτά εισιτήρια για αύριο.",
+  "english": "I'm buying seven tickets for tomorrow.",
+  "audio": "el-el-0188.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 188
+ },
+ {
+  "id": "el-0189",
+  "target": "Εκατό γραμμάρια τυρί, παρακαλώ.",
+  "english": "A hundred grams of cheese, please.",
+  "audio": "el-el-0189.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 189
+ },
+ {
+  "id": "el-0190",
+  "target": "Η σαλάτα κάνει έξι ευρώ.",
+  "english": "The salad costs six euros.",
+  "audio": "el-el-0190.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 190
+ },
+ {
+  "id": "el-0191",
+  "target": "Πόσο κάνουν δύο καφέδες;",
+  "english": "How much are two coffees?",
+  "audio": "el-el-0191.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 191,
+  "grammar": "For several items the verb goes plural: Πόσο κάνουν δύο καφέδες;"
+ },
+ {
+  "id": "el-0192",
+  "target": "Κάνουν εννιά ευρώ μαζί.",
+  "english": "They cost nine euros together.",
+  "audio": "el-el-0192.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 192
+ },
+ {
+  "id": "el-0193",
+  "target": "Πληρώνουμε ενενήντα ευρώ τη βραδιά.",
+  "english": "We pay ninety euros a night.",
+  "audio": "el-el-0193.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 193
+ },
+ {
+  "id": "el-0194",
+  "target": "Θέλω μισό κιλό ελιές.",
+  "english": "I want half a kilo of olives.",
+  "audio": "el-el-0194.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 194,
+  "grammar": "μισό = half: μισό κιλό (half a kilo). With ώρα it's μισή: μισή ώρα."
+ },
+ {
+  "id": "el-0195",
+  "target": "Τριάντα ευρώ είναι πολλά.",
+  "english": "Thirty euros is a lot.",
+  "audio": "el-el-0195.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 195
+ },
+ {
+  "id": "el-0196",
+  "target": "Τι ώρα είναι;",
+  "english": "What time is it?",
+  "audio": "el-el-0196.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 196,
+  "grammar": "Τι ώρα είναι; = What time is it? Reply: Είναι τρεις. (It's three.)"
+ },
+ {
+  "id": "el-0197",
+  "target": "Είναι τρεις το απόγευμα.",
+  "english": "It's three in the afternoon.",
+  "audio": "el-el-0197.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 197
+ },
+ {
+  "id": "el-0198",
+  "target": "Το μάθημα αρχίζει στις εννιά.",
+  "english": "The lesson starts at nine.",
+  "audio": "el-el-0198.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 198,
+  "grammar": "'At' + clock time is στις: στις εννιά (at nine), στις δύο (at two)."
+ },
+ {
+  "id": "el-0199",
+  "target": "Δουλεύω από τις οχτώ το πρωί.",
+  "english": "I work from eight in the morning.",
+  "audio": "el-el-0199.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 199
+ },
+ {
+  "id": "el-0200",
+  "target": "Η τράπεζα κλείνει στις δύο.",
+  "english": "The bank closes at two.",
+  "audio": "el-el-0200.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 200
+ },
+ {
+  "id": "el-0201",
+  "target": "Τρώμε βραδινό στις οχτώ.",
+  "english": "We eat dinner at eight.",
+  "audio": "el-el-0201.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 201
+ },
+ {
+  "id": "el-0202",
+  "target": "Το τρένο φτάνει στις πέντε.",
+  "english": "The train arrives at five.",
+  "audio": "el-el-0202.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 202
+ },
+ {
+  "id": "el-0203",
+  "target": "Ξυπνάω στις εφτά το πρωί.",
+  "english": "I wake up at seven in the morning.",
+  "audio": "el-el-0203.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 203,
+  "grammar": "Parts of the day take το: το πρωί (in the morning), το βράδυ (in the evening)."
+ },
+ {
+  "id": "el-0204",
+  "target": "Τι ώρα κλείνει το φαρμακείο;",
+  "english": "What time does the pharmacy close?",
+  "audio": "el-el-0204.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 204
+ },
+ {
+  "id": "el-0205",
+  "target": "Το μαγαζί ανοίγει στις έντεκα.",
+  "english": "The shop opens at eleven.",
+  "audio": "el-el-0205.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 205
+ },
+ {
+  "id": "el-0206",
+  "target": "Έχουμε ραντεβού στη μία.",
+  "english": "We have an appointment at one.",
+  "audio": "el-el-0206.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 206,
+  "grammar": "'At one' is στη μία, not στις — μία (one) is singular."
+ },
+ {
+  "id": "el-0207",
+  "target": "Είναι δώδεκα και μισή.",
+  "english": "It's half past twelve.",
+  "audio": "el-el-0207.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 207,
+  "grammar": "και μισή = half past: δώδεκα και μισή (12:30). και τέταρτο = quarter past."
+ },
+ {
+  "id": "el-0208",
+  "target": "Το λεωφορείο φεύγει σε δεκαπέντε λεπτά.",
+  "english": "The bus leaves in fifteen minutes.",
+  "audio": "el-el-0208.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 208,
+  "grammar": "σε + a time span means 'in': σε δεκαπέντε λεπτά (in fifteen minutes)."
+ },
+ {
+  "id": "el-0209",
+  "target": "Φτάνω στο γραφείο στις εννιά και τέταρτο.",
+  "english": "I arrive at the office at quarter past nine.",
+  "audio": "el-el-0209.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 209
+ },
+ {
+  "id": "el-0210",
+  "target": "Η ταβέρνα ανοίγει στις εφτά το βράδυ.",
+  "english": "The taverna opens at seven in the evening.",
+  "audio": "el-el-0210.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 210
+ },
+ {
+  "id": "el-0211",
+  "target": "Τι ώρα αρχίζει ο αγώνας;",
+  "english": "What time does the match start?",
+  "audio": "el-el-0211.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 211
+ },
+ {
+  "id": "el-0212",
+  "target": "Σήμερα είναι Δευτέρα.",
+  "english": "Today is Monday.",
+  "audio": "el-el-0212.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 212,
+  "grammar": "Days are feminine except το Σάββατο: η Δευτέρα, η Τρίτη."
+ },
+ {
+  "id": "el-0213",
+  "target": "Αύριο είναι Τρίτη.",
+  "english": "Tomorrow is Tuesday.",
+  "audio": "el-el-0213.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 213
+ },
+ {
+  "id": "el-0214",
+  "target": "Την Τετάρτη δουλεύω από το σπίτι.",
+  "english": "On Wednesday I work from home.",
+  "audio": "el-el-0214.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 214,
+  "grammar": "'On' + day uses την/το: την Τετάρτη (on Wednesday), το Σάββατο."
+ },
+ {
+  "id": "el-0215",
+  "target": "Την Πέμπτη πάμε σινεμά.",
+  "english": "On Thursday we're going to the movies.",
+  "audio": "el-el-0215.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 215
+ },
+ {
+  "id": "el-0216",
+  "target": "Την Παρασκευή τρώμε έξω.",
+  "english": "On Friday we eat out.",
+  "audio": "el-el-0216.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 216
+ },
+ {
+  "id": "el-0217",
+  "target": "Το Σάββατο πάω στην αγορά.",
+  "english": "On Saturday I go to the market.",
+  "audio": "el-el-0217.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 217
+ },
+ {
+  "id": "el-0218",
+  "target": "Την Κυριακή δεν δουλεύουμε.",
+  "english": "On Sunday we don't work.",
+  "audio": "el-el-0218.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 218
+ },
+ {
+  "id": "el-0219",
+  "target": "Αύριο θα πάω στην παραλία.",
+  "english": "Tomorrow I'll go to the beach.",
+  "audio": "el-el-0219.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 219,
+  "grammar": "Future = θα + verb: πάω (I go) → θα πάω (I will go)."
+ },
+ {
+  "id": "el-0220",
+  "target": "Αύριο θα είμαι στο γραφείο.",
+  "english": "Tomorrow I'll be at the office.",
+  "audio": "el-el-0220.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 220
+ },
+ {
+  "id": "el-0221",
+  "target": "Σήμερα δεν έχω μάθημα.",
+  "english": "Today I don't have class.",
+  "audio": "el-el-0221.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 221
+ },
+ {
+  "id": "el-0222",
+  "target": "Αύριο θα έχουμε καλό καιρό.",
+  "english": "Tomorrow we'll have good weather.",
+  "audio": "el-el-0222.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 222
+ },
+ {
+  "id": "el-0223",
+  "target": "Τι θα κάνεις το Σαββατοκύριακο;",
+  "english": "What will you do on the weekend?",
+  "audio": "el-el-0223.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 223,
+  "grammar": "Σαββατοκύριακο (weekend) glues Σάββατο + Κυριακή together."
+ },
+ {
+  "id": "el-0224",
+  "target": "Αύριο θα πάμε στη γιαγιά.",
+  "english": "Tomorrow we'll go to grandma's.",
+  "audio": "el-el-0224.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-03",
+  "priority": 224
+ },
+ {
+  "id": "el-0225",
+  "target": "Θα περιμένω στη στάση στις έξι.",
+  "english": "I'll wait at the stop at six.",
+  "audio": "el-el-0225.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 225
+ }
+]

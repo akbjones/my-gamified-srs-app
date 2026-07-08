@@ -1,0 +1,700 @@
+[
+  {
+    "id": "el-0001",
+    "target": "Καλημέρα, τι κάνεις;",
+    "english": "Good morning, how are you?",
+    "audio": "el-el-0001.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 1,
+    "grammar": "Τι κάνεις; is literally 'what are you doing?' — the everyday 'how are you?'. Reply: Καλά, εσύ;"
+  },
+  {
+    "id": "el-0002",
+    "target": "Καλημέρα σας, κύριε Νίκο.",
+    "english": "Good morning, Mr. Nikos.",
+    "audio": "el-el-0002.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 2
+  },
+  {
+    "id": "el-0003",
+    "target": "Γεια σου, Μαρία!",
+    "english": "Hi, Maria!",
+    "audio": "el-el-0003.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 3,
+    "grammar": "Γεια σου to one friend; γεια σας to a group or a stranger: Γεια σας, κύριε!"
+  },
+  {
+    "id": "el-0004",
+    "target": "Γεια σας, κυρία Ελένη.",
+    "english": "Hello, Mrs. Eleni.",
+    "audio": "el-el-0004.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 4
+  },
+  {
+    "id": "el-0005",
+    "target": "Καλησπέρα σε όλους!",
+    "english": "Good evening, everyone!",
+    "audio": "el-el-0005.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 5,
+    "grammar": "Καλησπέρα works from late afternoon onward; καλημέρα until early afternoon."
+  },
+  {
+    "id": "el-0006",
+    "target": "Καλησπέρα, τι κάνετε;",
+    "english": "Good evening, how are you?",
+    "audio": "el-el-0006.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 6
+  },
+  {
+    "id": "el-0007",
+    "target": "Καληνύχτα, μαμά μου.",
+    "english": "Good night, my mom.",
+    "audio": "el-el-0007.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 7,
+    "grammar": "Καληνύχτα is only for parting at night — greet people in the evening with καλησπέρα."
+  },
+  {
+    "id": "el-0008",
+    "target": "Πολύ καλά, εσύ;",
+    "english": "Very well, and you?",
+    "audio": "el-el-0008.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 8
+  },
+  {
+    "id": "el-0009",
+    "target": "Έτσι κι έτσι σήμερα.",
+    "english": "So-so today.",
+    "audio": "el-el-0009.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 9
+  },
+  {
+    "id": "el-0010",
+    "target": "Τι κάνετε, κύριε Παπαδόπουλε;",
+    "english": "How are you, Mr. Papadopoulos?",
+    "audio": "el-el-0010.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 10,
+    "grammar": "Use the -ετε form with strangers and elders: Τι κάνετε; With friends: Τι κάνεις;"
+  },
+  {
+    "id": "el-0011",
+    "target": "Γεια σας, παιδιά!",
+    "english": "Hello, guys!",
+    "audio": "el-el-0011.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 11
+  },
+  {
+    "id": "el-0012",
+    "target": "Χαίρετε, τι κάνετε σήμερα;",
+    "english": "Hello, how are you today?",
+    "audio": "el-el-0012.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 12
+  },
+  {
+    "id": "el-0013",
+    "target": "Με λένε Γιώργο.",
+    "english": "My name is Giorgos.",
+    "audio": "el-el-0013.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 13,
+    "grammar": "Με λένε... is literally 'they call me': Με λένε Άννα = My name is Anna."
+  },
+  {
+    "id": "el-0014",
+    "target": "Πώς σε λένε;",
+    "english": "What's your name?",
+    "audio": "el-el-0014.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 14
+  },
+  {
+    "id": "el-0015",
+    "target": "Πώς σας λένε, κυρία μου;",
+    "english": "What is your name, madam?",
+    "audio": "el-el-0015.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 15,
+    "grammar": "σε λένε with a friend, σας λένε to be polite: Πώς σας λένε; (What's your name?)"
+  },
+  {
+    "id": "el-0016",
+    "target": "Ονομάζομαι Κώστας, χαίρω πολύ.",
+    "english": "My name is Kostas, pleased to meet you.",
+    "audio": "el-el-0016.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 16,
+    "grammar": "Ονομάζομαι is the slightly formal 'my name is'; everyday speech prefers Με λένε."
+  },
+  {
+    "id": "el-0017",
+    "target": "Χαίρω πολύ, Γιάννη!",
+    "english": "Pleased to meet you, Yannis!",
+    "audio": "el-el-0017.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 17
+  },
+  {
+    "id": "el-0018",
+    "target": "Από πού είσαι;",
+    "english": "Where are you from?",
+    "audio": "el-el-0018.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 18
+  },
+  {
+    "id": "el-0019",
+    "target": "Είμαι από την Ελλάδα.",
+    "english": "I am from Greece.",
+    "audio": "el-el-0019.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 19
+  },
+  {
+    "id": "el-0020",
+    "target": "Είμαι από την Αγγλία, εσύ;",
+    "english": "I'm from England, and you?",
+    "audio": "el-el-0020.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 20
+  },
+  {
+    "id": "el-0021",
+    "target": "Αυτή είναι η φίλη μου, η Σοφία.",
+    "english": "This is my friend Sofia.",
+    "audio": "el-el-0021.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 21,
+    "grammar": "Greek repeats 'the' before names: η φίλη μου, η Σοφία (my friend Sofia)."
+  },
+  {
+    "id": "el-0022",
+    "target": "Αυτός είναι ο άντρας μου.",
+    "english": "This is my husband.",
+    "audio": "el-el-0022.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 22
+  },
+  {
+    "id": "el-0023",
+    "target": "Από πού είστε, κύριε;",
+    "english": "Where are you from, sir?",
+    "audio": "el-el-0023.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 23
+  },
+  {
+    "id": "el-0024",
+    "target": "Είμαι Έλληνας, από την Αθήνα.",
+    "english": "I am Greek, from Athens.",
+    "audio": "el-el-0024.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 24
+  },
+  {
+    "id": "el-0025",
+    "target": "Η Άννα είναι Ελληνίδα.",
+    "english": "Anna is Greek.",
+    "audio": "el-el-0025.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 25,
+    "grammar": "Nationalities change with gender: ο Έλληνας (Greek man), η Ελληνίδα (Greek woman)."
+  },
+  {
+    "id": "el-0026",
+    "target": "Είσαι Άγγλος ή Αμερικανός;",
+    "english": "Are you English or American?",
+    "audio": "el-el-0026.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 26
+  },
+  {
+    "id": "el-0027",
+    "target": "Η μητέρα μου είναι Ιταλίδα.",
+    "english": "My mother is Italian.",
+    "audio": "el-el-0027.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 27
+  },
+  {
+    "id": "el-0028",
+    "target": "Μένω στην Αθήνα τώρα.",
+    "english": "I live in Athens now.",
+    "audio": "el-el-0028.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 28
+  },
+  {
+    "id": "el-0029",
+    "target": "Πού μένεις, Μαρία;",
+    "english": "Where do you live, Maria?",
+    "audio": "el-el-0029.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 29
+  },
+  {
+    "id": "el-0030",
+    "target": "Μιλάς λίγο ελληνικά;",
+    "english": "Do you speak a little Greek?",
+    "audio": "el-el-0030.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 30,
+    "grammar": "No 'you' needed — the ending -ς already says it: Μιλάς; = Do you speak?"
+  },
+  {
+    "id": "el-0031",
+    "target": "Ναι, μιλάω λίγα ελληνικά.",
+    "english": "Yes, I speak a little Greek.",
+    "audio": "el-el-0031.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 31
+  },
+  {
+    "id": "el-0032",
+    "target": "Δεν μιλάω καλά ακόμα.",
+    "english": "I don't speak well yet.",
+    "audio": "el-el-0032.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 32
+  },
+  {
+    "id": "el-0033",
+    "target": "Μιλάτε αγγλικά, παρακαλώ;",
+    "english": "Do you speak English, please?",
+    "audio": "el-el-0033.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 33
+  },
+  {
+    "id": "el-0034",
+    "target": "Τι δουλειά κάνεις;",
+    "english": "What work do you do?",
+    "audio": "el-el-0034.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 34
+  },
+  {
+    "id": "el-0035",
+    "target": "Είμαι δάσκαλος σε σχολείο.",
+    "english": "I am a teacher at a school.",
+    "audio": "el-el-0035.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 35,
+    "grammar": "No 'a' before jobs: Είμαι δάσκαλος = I am a teacher."
+  },
+  {
+    "id": "el-0036",
+    "target": "Η Ελένη είναι γιατρός.",
+    "english": "Eleni is a doctor.",
+    "audio": "el-el-0036.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 36
+  },
+  {
+    "id": "el-0037",
+    "target": "Είμαστε φοιτητές στο πανεπιστήμιο.",
+    "english": "We are students at the university.",
+    "audio": "el-el-0037.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 37
+  },
+  {
+    "id": "el-0038",
+    "target": "Ο Νίκος είναι σερβιτόρος.",
+    "english": "Nikos is a waiter.",
+    "audio": "el-el-0038.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 38
+  },
+  {
+    "id": "el-0039",
+    "target": "Είστε μηχανικός, κύριε;",
+    "english": "Are you an engineer, sir?",
+    "audio": "el-el-0039.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 39
+  },
+  {
+    "id": "el-0040",
+    "target": "Δουλεύω σε ένα γραφείο.",
+    "english": "I work in an office.",
+    "audio": "el-el-0040.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 40
+  },
+  {
+    "id": "el-0041",
+    "target": "Η αδερφή μου είναι δασκάλα.",
+    "english": "My sister is a teacher.",
+    "audio": "el-el-0041.mp3",
+    "tags": ["general", "family", "work"],
+    "grammarNode": "node-01",
+    "priority": 41,
+    "grammar": "Many job words have a feminine form: ο δάσκαλος → η δασκάλα (teacher)."
+  },
+  {
+    "id": "el-0042",
+    "target": "Πού δουλεύεις τώρα;",
+    "english": "Where do you work now?",
+    "audio": "el-el-0042.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 42
+  },
+  {
+    "id": "el-0043",
+    "target": "Είμαι κουρασμένος σήμερα.",
+    "english": "I am tired today.",
+    "audio": "el-el-0043.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 43,
+    "grammar": "Adjectives match the speaker: a man says κουρασμένος, a woman κουρασμένη (tired)."
+  },
+  {
+    "id": "el-0044",
+    "target": "Είμαι κουρασμένη, πάω σπίτι.",
+    "english": "I'm tired, I'm going home.",
+    "audio": "el-el-0044.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 44
+  },
+  {
+    "id": "el-0045",
+    "target": "Είσαι χαρούμενος σήμερα, Πέτρο;",
+    "english": "Are you happy today, Petros?",
+    "audio": "el-el-0045.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 45
+  },
+  {
+    "id": "el-0046",
+    "target": "Η Σοφία είναι χαρούμενη.",
+    "english": "Sofia is happy.",
+    "audio": "el-el-0046.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 46
+  },
+  {
+    "id": "el-0047",
+    "target": "Είμαι λίγο άρρωστος.",
+    "english": "I am a little sick.",
+    "audio": "el-el-0047.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 47
+  },
+  {
+    "id": "el-0048",
+    "target": "Το παιδί είναι άρρωστο σήμερα.",
+    "english": "The child is sick today.",
+    "audio": "el-el-0048.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 48,
+    "grammar": "With neuter nouns the adjective ends in -ο: το παιδί είναι άρρωστο (the child is sick)."
+  },
+  {
+    "id": "el-0049",
+    "target": "Είμαστε πολύ χαρούμενοι εδώ.",
+    "english": "We are very happy here.",
+    "audio": "el-el-0049.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 49,
+    "grammar": "Describing 'we': χαρούμενοι for men or a mixed group, χαρούμενες for women only."
+  },
+  {
+    "id": "el-0050",
+    "target": "Νιώθω πολύ καλά σήμερα.",
+    "english": "I feel very well today.",
+    "audio": "el-el-0050.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 50
+  },
+  {
+    "id": "el-0051",
+    "target": "Πώς νιώθεις, αγάπη μου;",
+    "english": "How do you feel, my love?",
+    "audio": "el-el-0051.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 51
+  },
+  {
+    "id": "el-0052",
+    "target": "Πού είσαι τώρα, Γιάννη;",
+    "english": "Where are you now, Yannis?",
+    "audio": "el-el-0052.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 52
+  },
+  {
+    "id": "el-0053",
+    "target": "Είμαι στο σπίτι με τη μαμά.",
+    "english": "I am at home with mom.",
+    "audio": "el-el-0053.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 53
+  },
+  {
+    "id": "el-0054",
+    "target": "Οι γονείς μου είναι εδώ.",
+    "english": "My parents are here.",
+    "audio": "el-el-0054.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 54
+  },
+  {
+    "id": "el-0055",
+    "target": "Είμαστε στη δουλειά ακόμα.",
+    "english": "We are still at work.",
+    "audio": "el-el-0055.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 55
+  },
+  {
+    "id": "el-0056",
+    "target": "Τα παιδιά είναι στο σχολείο.",
+    "english": "The children are at school.",
+    "audio": "el-el-0056.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 56
+  },
+  {
+    "id": "el-0057",
+    "target": "Είστε έτοιμοι, παιδιά;",
+    "english": "Are you ready, guys?",
+    "audio": "el-el-0057.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 57
+  },
+  {
+    "id": "el-0058",
+    "target": "Ο Γιώργος δεν είναι εδώ σήμερα.",
+    "english": "Giorgos is not here today.",
+    "audio": "el-el-0058.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 58
+  },
+  {
+    "id": "el-0059",
+    "target": "Δεν είμαι από εδώ.",
+    "english": "I am not from here.",
+    "audio": "el-el-0059.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 59,
+    "grammar": "δεν before the verb makes it negative: Δεν είμαι = I am not."
+  },
+  {
+    "id": "el-0060",
+    "target": "Εγώ είμαι ο Κώστας.",
+    "english": "I am Kostas.",
+    "audio": "el-el-0060.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 60,
+    "grammar": "Εγώ adds emphasis — plain Είμαι ο Κώστας already means 'I am Kostas'."
+  },
+  {
+    "id": "el-0061",
+    "target": "Πάω στη δουλειά τώρα.",
+    "english": "I am going to work now.",
+    "audio": "el-el-0061.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 61
+  },
+  {
+    "id": "el-0062",
+    "target": "Έχεις δίκιο, συγγνώμη.",
+    "english": "You're right, sorry.",
+    "audio": "el-el-0062.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 62
+  },
+  {
+    "id": "el-0063",
+    "target": "Έχω δουλειά αύριο το πρωί.",
+    "english": "I have work tomorrow morning.",
+    "audio": "el-el-0063.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 63
+  },
+  {
+    "id": "el-0064",
+    "target": "Θα είμαι εκεί στις πέντε.",
+    "english": "I will be there at five.",
+    "audio": "el-el-0064.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 64,
+    "grammar": "θα + present makes the future: Θα είμαι εκεί = I will be there."
+  },
+  {
+    "id": "el-0065",
+    "target": "Θα είμαστε σπίτι το βράδυ.",
+    "english": "We will be home in the evening.",
+    "audio": "el-el-0065.mp3",
+    "tags": ["general", "family"],
+    "grammarNode": "node-01",
+    "priority": 65
+  },
+  {
+    "id": "el-0066",
+    "target": "Αύριο θα μιλάμε πάλι.",
+    "english": "We will talk again tomorrow.",
+    "audio": "el-el-0066.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 66
+  },
+  {
+    "id": "el-0067",
+    "target": "Ευχαριστώ πολύ για όλα!",
+    "english": "Thank you very much for everything!",
+    "audio": "el-el-0067.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 67
+  },
+  {
+    "id": "el-0068",
+    "target": "Παρακαλώ, δεν κάνει τίποτα.",
+    "english": "You're welcome, it's nothing.",
+    "audio": "el-el-0068.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 68,
+    "grammar": "παρακαλώ means 'please' AND 'you're welcome' — the standard reply to ευχαριστώ."
+  },
+  {
+    "id": "el-0069",
+    "target": "Έναν καφέ, παρακαλώ.",
+    "english": "One coffee, please.",
+    "audio": "el-el-0069.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 69
+  },
+  {
+    "id": "el-0070",
+    "target": "Συγγνώμη, είστε ο κύριος Νίκος;",
+    "english": "Excuse me, are you Mr. Nikos?",
+    "audio": "el-el-0070.mp3",
+    "tags": ["general", "work"],
+    "grammarNode": "node-01",
+    "priority": 70,
+    "grammar": "συγγνώμη does double duty: 'sorry' for mistakes and 'excuse me' to get attention."
+  },
+  {
+    "id": "el-0071",
+    "target": "Συγγνώμη, δεν καταλαβαίνω.",
+    "english": "Sorry, I don't understand.",
+    "audio": "el-el-0071.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 71
+  },
+  {
+    "id": "el-0072",
+    "target": "Σε ευχαριστώ πολύ, Μαρία!",
+    "english": "Thank you very much, Maria!",
+    "audio": "el-el-0072.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 72
+  },
+  {
+    "id": "el-0073",
+    "target": "Κανένα πρόβλημα, φίλε μου.",
+    "english": "No problem, my friend.",
+    "audio": "el-el-0073.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 73
+  },
+  {
+    "id": "el-0074",
+    "target": "Γεια σας και ευχαριστώ πολύ!",
+    "english": "Goodbye and thank you very much!",
+    "audio": "el-el-0074.mp3",
+    "tags": ["general", "travel"],
+    "grammarNode": "node-01",
+    "priority": 74,
+    "grammar": "γεια σου/σας works both coming and going — 'hi' and 'bye' alike."
+  },
+  {
+    "id": "el-0075",
+    "target": "Αντίο, τα λέμε αύριο!",
+    "english": "Goodbye, see you tomorrow!",
+    "audio": "el-el-0075.mp3",
+    "tags": ["general"],
+    "grammarNode": "node-01",
+    "priority": 75,
+    "grammar": "Τα λέμε (literally 'we say them') is the everyday 'see you / talk soon'."
+  }
+]

@@ -1,0 +1,910 @@
+[
+ {
+  "id": "el-0076",
+  "target": "Έχω μία αδερφή.",
+  "english": "I have one sister.",
+  "audio": "el-el-0076.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 76,
+  "grammar": "έχω means 'I have': Έχω μία αδερφή = I have one sister."
+ },
+ {
+  "id": "el-0077",
+  "target": "Έχω έναν αδερφό.",
+  "english": "I have one brother.",
+  "audio": "el-el-0077.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 77,
+  "grammar": "'A/one' matches the word: έναν αδερφό, μία αδερφή, ένα παιδί."
+ },
+ {
+  "id": "el-0078",
+  "target": "Εσύ έχεις αδέρφια;",
+  "english": "Do you have siblings?",
+  "audio": "el-el-0078.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 78
+ },
+ {
+  "id": "el-0079",
+  "target": "Ναι, έχω δύο αδέρφια.",
+  "english": "Yes, I have two siblings.",
+  "audio": "el-el-0079.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 79
+ },
+ {
+  "id": "el-0080",
+  "target": "Η οικογένειά μου είναι μεγάλη.",
+  "english": "My family is big.",
+  "audio": "el-el-0080.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 80,
+  "grammar": "μου = my, and it comes after the word: η οικογένειά μου = my family."
+ },
+ {
+  "id": "el-0081",
+  "target": "Ο μπαμπάς μου δουλεύει εδώ.",
+  "english": "My dad works here.",
+  "audio": "el-el-0081.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 81
+ },
+ {
+  "id": "el-0082",
+  "target": "Η μαμά μου μιλάει αγγλικά.",
+  "english": "My mom speaks English.",
+  "audio": "el-el-0082.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 82
+ },
+ {
+  "id": "el-0083",
+  "target": "Έχουμε ένα παιδί.",
+  "english": "We have one child.",
+  "audio": "el-el-0083.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 83
+ },
+ {
+  "id": "el-0084",
+  "target": "Εσείς έχετε παιδιά;",
+  "english": "Do you have children?",
+  "audio": "el-el-0084.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 84,
+  "grammar": "Εσείς/έχετε is the polite or plural 'you': Εσείς έχετε παιδιά; = Do you have children?"
+ },
+ {
+  "id": "el-0085",
+  "target": "Ο γιος μου πάει σχολείο.",
+  "english": "My son goes to school.",
+  "audio": "el-el-0085.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 85
+ },
+ {
+  "id": "el-0086",
+  "target": "Η κόρη μου διαβάζει πολύ.",
+  "english": "My daughter reads a lot.",
+  "audio": "el-el-0086.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 86
+ },
+ {
+  "id": "el-0087",
+  "target": "Έχω έναν παππού και μία γιαγιά.",
+  "english": "I have a grandpa and a grandma.",
+  "audio": "el-el-0087.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 87
+ },
+ {
+  "id": "el-0088",
+  "target": "Ο παππούς μου λέει ωραίες ιστορίες.",
+  "english": "My grandpa tells nice stories.",
+  "audio": "el-el-0088.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 88
+ },
+ {
+  "id": "el-0089",
+  "target": "Η γιαγιά μου κάνει καλό φαγητό.",
+  "english": "My grandma makes good food.",
+  "audio": "el-el-0089.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 89
+ },
+ {
+  "id": "el-0090",
+  "target": "Αυτή είναι η γυναίκα μου.",
+  "english": "This is my wife.",
+  "audio": "el-el-0090.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 90,
+  "grammar": "αυτή = this (one) for feminine words: Αυτή είναι η γυναίκα μου = This is my wife."
+ },
+ {
+  "id": "el-0091",
+  "target": "Αυτή είναι η γυναίκα του.",
+  "english": "This is his wife.",
+  "audio": "el-el-0091.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 91,
+  "grammar": "αυτός = this (one) for masculine words: αυτός ο άντρας = this man."
+ },
+ {
+  "id": "el-0092",
+  "target": "Έχω ένα καινούριο τηλέφωνο.",
+  "english": "I have a new phone.",
+  "audio": "el-el-0092.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 92
+ },
+ {
+  "id": "el-0093",
+  "target": "Έχεις το κλειδί;",
+  "english": "Do you have the key?",
+  "audio": "el-el-0093.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 93
+ },
+ {
+  "id": "el-0094",
+  "target": "Ναι, το κλειδί είναι στην τσάντα.",
+  "english": "Yes, the key is in the bag.",
+  "audio": "el-el-0094.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 94,
+  "grammar": "στην = σε + την: στην τσάντα = in the bag."
+ },
+ {
+  "id": "el-0095",
+  "target": "Έχω δύο εισιτήρια για αύριο.",
+  "english": "I have two tickets for tomorrow.",
+  "audio": "el-el-0095.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 95
+ },
+ {
+  "id": "el-0096",
+  "target": "Έχεις το διαβατήριό σου;",
+  "english": "Do you have your passport?",
+  "audio": "el-el-0096.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 96
+ },
+ {
+  "id": "el-0097",
+  "target": "Η βαλίτσα μου είναι μικρή.",
+  "english": "My suitcase is small.",
+  "audio": "el-el-0097.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 97,
+  "grammar": "η goes with feminine words: η βαλίτσα = the suitcase, η μαμά = the mom."
+ },
+ {
+  "id": "el-0098",
+  "target": "Το βιβλίο είναι στο γραφείο.",
+  "english": "The book is at the office.",
+  "audio": "el-el-0098.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 98,
+  "grammar": "το goes with neuter words: το βιβλίο = the book, το παιδί = the child."
+ },
+ {
+  "id": "el-0099",
+  "target": "Ο υπολογιστής μου είναι παλιός.",
+  "english": "My computer is old.",
+  "audio": "el-el-0099.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 99,
+  "grammar": "ο goes with masculine words: ο υπολογιστής = the computer, ο γιος = the son."
+ },
+ {
+  "id": "el-0100",
+  "target": "Έχουμε έναν σκύλο και μία γάτα.",
+  "english": "We have a dog and a cat.",
+  "audio": "el-el-0100.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 100
+ },
+ {
+  "id": "el-0101",
+  "target": "Ο σκύλος τρώει τώρα.",
+  "english": "The dog is eating now.",
+  "audio": "el-el-0101.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 101
+ },
+ {
+  "id": "el-0102",
+  "target": "Δεν έχω αυτοκίνητο.",
+  "english": "I don't have a car.",
+  "audio": "el-el-0102.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 102,
+  "grammar": "δεν makes it negative and goes right before the verb: Δεν έχω = I don't have."
+ },
+ {
+  "id": "el-0103",
+  "target": "Δεν έχουμε χρόνο σήμερα.",
+  "english": "We don't have time today.",
+  "audio": "el-el-0103.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 103
+ },
+ {
+  "id": "el-0104",
+  "target": "Δεν θέλω καφέ, ευχαριστώ.",
+  "english": "I don't want coffee, thank you.",
+  "audio": "el-el-0104.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 104
+ },
+ {
+  "id": "el-0105",
+  "target": "Δεν είμαστε από εδώ.",
+  "english": "We are not from here.",
+  "audio": "el-el-0105.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 105,
+  "grammar": "δεν works with είμαι too: Δεν είμαι από εδώ = I am not from here."
+ },
+ {
+  "id": "el-0106",
+  "target": "Δεν ξέρω ακόμα.",
+  "english": "I don't know yet.",
+  "audio": "el-el-0106.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 106
+ },
+ {
+  "id": "el-0107",
+  "target": "Δεν μιλάω καλά ελληνικά ακόμα.",
+  "english": "I don't speak Greek well yet.",
+  "audio": "el-el-0107.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 107
+ },
+ {
+  "id": "el-0108",
+  "target": "Ο μπαμπάς μου δεν πίνει καφέ.",
+  "english": "My dad doesn't drink coffee.",
+  "audio": "el-el-0108.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 108
+ },
+ {
+  "id": "el-0109",
+  "target": "Δεν έχουν παιδιά.",
+  "english": "They don't have children.",
+  "audio": "el-el-0109.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 109
+ },
+ {
+  "id": "el-0110",
+  "target": "Δεν βλέπω το κλειδί μου.",
+  "english": "I don't see my key.",
+  "audio": "el-el-0110.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 110
+ },
+ {
+  "id": "el-0111",
+  "target": "Η γάτα δεν τρώει ψωμί.",
+  "english": "The cat doesn't eat bread.",
+  "audio": "el-el-0111.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 111
+ },
+ {
+  "id": "el-0112",
+  "target": "Δεν θέλουμε τραπέζι έξω.",
+  "english": "We don't want a table outside.",
+  "audio": "el-el-0112.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 112
+ },
+ {
+  "id": "el-0113",
+  "target": "Αυτό δεν είναι το τηλέφωνό μου.",
+  "english": "This is not my phone.",
+  "audio": "el-el-0113.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 113,
+  "grammar": "αυτό = this (one) for neuter words: αυτό το παιδί = this child."
+ },
+ {
+  "id": "el-0114",
+  "target": "Θέλω έναν καφέ, παρακαλώ.",
+  "english": "I want a coffee, please.",
+  "audio": "el-el-0114.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 114,
+  "grammar": "θέλω = I want: Θέλω έναν καφέ = I want a coffee."
+ },
+ {
+  "id": "el-0115",
+  "target": "Θέλεις νερό ή χυμό;",
+  "english": "Do you want water or juice?",
+  "audio": "el-el-0115.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 115
+ },
+ {
+  "id": "el-0116",
+  "target": "Ναι, θέλω λίγο νερό.",
+  "english": "Yes, I want a little water.",
+  "audio": "el-el-0116.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 116
+ },
+ {
+  "id": "el-0117",
+  "target": "Η μαμά μου θέλει ένα τσάι.",
+  "english": "My mom wants a tea.",
+  "audio": "el-el-0117.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 117
+ },
+ {
+  "id": "el-0118",
+  "target": "Θέλουμε τον λογαριασμό, παρακαλώ.",
+  "english": "We want the bill, please.",
+  "audio": "el-el-0118.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 118,
+  "grammar": "After the verb, ο becomes τον: θέλω τον λογαριασμό = I want the bill."
+ },
+ {
+  "id": "el-0119",
+  "target": "Θέλετε κάτι άλλο;",
+  "english": "Do you want anything else?",
+  "audio": "el-el-0119.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 119
+ },
+ {
+  "id": "el-0120",
+  "target": "Όχι, ευχαριστώ, τίποτα άλλο.",
+  "english": "No, thank you, nothing else.",
+  "audio": "el-el-0120.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 120
+ },
+ {
+  "id": "el-0121",
+  "target": "Το παιδί θέλει ένα παγωτό.",
+  "english": "The child wants an ice cream.",
+  "audio": "el-el-0121.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 121
+ },
+ {
+  "id": "el-0122",
+  "target": "Θέλω ένα εισιτήριο για την Αθήνα.",
+  "english": "I want a ticket to Athens.",
+  "audio": "el-el-0122.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 122,
+  "grammar": "Places take the article: η Αθήνα — για την Αθήνα = to Athens."
+ },
+ {
+  "id": "el-0123",
+  "target": "Ο άντρας μου θέλει έναν καινούριο υπολογιστή.",
+  "english": "My husband wants a new computer.",
+  "audio": "el-el-0123.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 123
+ },
+ {
+  "id": "el-0124",
+  "target": "Θέλω να πάω σπίτι.",
+  "english": "I want to go home.",
+  "audio": "el-el-0124.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 124,
+  "grammar": "να links two verbs: θέλω να πάω = I want to go."
+ },
+ {
+  "id": "el-0125",
+  "target": "Θέλω να μιλάω ελληνικά κάθε μέρα.",
+  "english": "I want to speak Greek every day.",
+  "audio": "el-el-0125.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 125
+ },
+ {
+  "id": "el-0126",
+  "target": "Θέλεις να πάμε για καφέ;",
+  "english": "Do you want us to go for coffee?",
+  "audio": "el-el-0126.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 126,
+  "grammar": "The verb after να shows who acts: θέλεις να πάμε = you want us to go."
+ },
+ {
+  "id": "el-0127",
+  "target": "Το παιδί θέλει να τρώει παγωτό κάθε μέρα.",
+  "english": "The child wants to eat ice cream every day.",
+  "audio": "el-el-0127.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 127
+ },
+ {
+  "id": "el-0128",
+  "target": "Θέλουμε να μένουμε κοντά στη θάλασσα.",
+  "english": "We want to live near the sea.",
+  "audio": "el-el-0128.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 128
+ },
+ {
+  "id": "el-0129",
+  "target": "Η κόρη μου θέλει να διαβάζει ιστορίες κάθε βράδυ.",
+  "english": "My daughter wants to read stories every night.",
+  "audio": "el-el-0129.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 129
+ },
+ {
+  "id": "el-0130",
+  "target": "Δεν θέλω να δουλεύω το Σάββατο.",
+  "english": "I don't want to work on Saturday.",
+  "audio": "el-el-0130.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 130
+ },
+ {
+  "id": "el-0131",
+  "target": "Θέλω να ακούω μουσική κάθε πρωί.",
+  "english": "I want to listen to music every morning.",
+  "audio": "el-el-0131.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 131
+ },
+ {
+  "id": "el-0132",
+  "target": "Ο γιος μου θέλει να πάει σινεμά.",
+  "english": "My son wants to go to the cinema.",
+  "audio": "el-el-0132.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 132
+ },
+ {
+  "id": "el-0133",
+  "target": "Θέλουμε να βλέπουμε τη θάλασσα από το σπίτι.",
+  "english": "We want to see the sea from the house.",
+  "audio": "el-el-0133.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 133
+ },
+ {
+  "id": "el-0134",
+  "target": "Αυτό το βιβλίο είναι πολύ καλό.",
+  "english": "This book is very good.",
+  "audio": "el-el-0134.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 134,
+  "grammar": "'This X' needs the article too: αυτό το βιβλίο = this book."
+ },
+ {
+  "id": "el-0135",
+  "target": "Αυτή η τσάντα είναι ακριβή.",
+  "english": "This bag is expensive.",
+  "audio": "el-el-0135.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 135
+ },
+ {
+  "id": "el-0136",
+  "target": "Αυτός ο καφές είναι πολύ ωραίος.",
+  "english": "This coffee is very nice.",
+  "audio": "el-el-0136.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 136
+ },
+ {
+  "id": "el-0137",
+  "target": "Αυτό είναι το γραφείο μας.",
+  "english": "This is our office.",
+  "audio": "el-el-0137.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 137,
+  "grammar": "μας = our, and it follows the word: το γραφείο μας = our office."
+ },
+ {
+  "id": "el-0138",
+  "target": "Αυτή είναι η θεία μου.",
+  "english": "This is my aunt.",
+  "audio": "el-el-0138.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 138
+ },
+ {
+  "id": "el-0139",
+  "target": "Αυτός είναι ο θείος μου από την Κρήτη.",
+  "english": "This is my uncle from Crete.",
+  "audio": "el-el-0139.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 139
+ },
+ {
+  "id": "el-0140",
+  "target": "Ο σκύλος μας είναι πολύ μεγάλος.",
+  "english": "Our dog is very big.",
+  "audio": "el-el-0140.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 140
+ },
+ {
+  "id": "el-0141",
+  "target": "Η μουσική εδώ είναι πολύ ωραία.",
+  "english": "The music here is very nice.",
+  "audio": "el-el-0141.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 141
+ },
+ {
+  "id": "el-0142",
+  "target": "Το νερό είναι πολύ κρύο.",
+  "english": "The water is very cold.",
+  "audio": "el-el-0142.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 142
+ },
+ {
+  "id": "el-0143",
+  "target": "Αυτό το τρένο πάει στην Αθήνα;",
+  "english": "Does this train go to Athens?",
+  "audio": "el-el-0143.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 143
+ },
+ {
+  "id": "el-0144",
+  "target": "Ο καφές είναι καλός εδώ.",
+  "english": "The coffee is good here.",
+  "audio": "el-el-0144.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 144,
+  "grammar": "Adjectives match the word: καλός καφές, καλή μέρα, καλό παιδί."
+ },
+ {
+  "id": "el-0145",
+  "target": "Η δουλειά μου είναι καλή.",
+  "english": "My job is good.",
+  "audio": "el-el-0145.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 145
+ },
+ {
+  "id": "el-0146",
+  "target": "Το φαγητό εδώ είναι πολύ καλό.",
+  "english": "The food here is very good.",
+  "audio": "el-el-0146.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 146
+ },
+ {
+  "id": "el-0147",
+  "target": "Το σπίτι μας είναι μικρό αλλά ωραίο.",
+  "english": "Our house is small but nice.",
+  "audio": "el-el-0147.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 147
+ },
+ {
+  "id": "el-0148",
+  "target": "Η βαλίτσα είναι μεγάλη και βαριά.",
+  "english": "The suitcase is big and heavy.",
+  "audio": "el-el-0148.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 148
+ },
+ {
+  "id": "el-0149",
+  "target": "Ο αδερφός μου έχει έναν μεγάλο σκύλο.",
+  "english": "My brother has a big dog.",
+  "audio": "el-el-0149.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 149
+ },
+ {
+  "id": "el-0150",
+  "target": "Δεν θέλω το μεγάλο δωμάτιο, θέλω το μικρό.",
+  "english": "I don't want the big room, I want the small one.",
+  "audio": "el-el-0150.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 150,
+  "grammar": "Skip the repeated word: θέλω το μικρό = I want the small one."
+ }
+]

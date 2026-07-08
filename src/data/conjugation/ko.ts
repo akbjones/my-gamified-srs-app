@@ -2,8 +2,11 @@
  * Korean conjugation engine — Stage-1 scaffold.
  *
  * Canonical speech level: 해요체 (polite informal) per the register
- * policy — every table row is the -요 form. The pilot stage adds
- * 합니다체 rows and past/future tenses.
+ * policy — every table row is the -요 form.
+ *
+ * Stage 2 adds 과거 (past: haeyo form + ㅆ 받침 → 갔어요/먹었어요, with
+ * the copula family as explicit irregulars) and 미래 (future: stem +
+ * (으)ㄹ 거예요, with ㄹ-stem, ㅂ-irregular and ㄷ-irregular handling).
  *
  * The scaffold covers the three conjugation classes that matter first:
  * - vowel-harmony contraction: 가다 → 가요, 오다 → 와요, 먹다 → 먹어요
@@ -78,6 +81,29 @@ const IRREGULARS: Record<string, string> = {
   '배우다': '배워요',
 };
 
+// Past forms the ㅆ-받침 algebra can't derive (copula/honorific family).
+const IRREGULAR_PAST: Record<string, string> = {
+  '이다': '이었어요',   // + 였어요 allomorph added in the table row
+  '이시다': '이셨어요',
+  '아니다': '아니었어요',
+};
+
+// Future attachment stems for irregular classes: the (으)ㄹ attaches to a
+// MODIFIED stem for ㅂ-irregulars (춥 → 추우 + ㄹ → 추울 거예요) and
+// ㄷ-irregulars (듣 → 들 + 을 → 들을 거예요).
+const IRREGULAR_FUTURE_STEM: Record<string, string> = {
+  '돕다': '도우', '춥다': '추우', '덥다': '더우', '어렵다': '어려우',
+  '쉽다': '쉬우', '고맙다': '고마우', '가깝다': '가까우', '반갑다': '반가우',
+};
+
+// ㄷ-irregulars mutate ㄷ→ㄹ but still take 을 (들을 거예요), so the
+// (으)ㄹ algebra can't place them — full futures instead.
+const IRREGULAR_FUTURE: Record<string, string> = {
+  '듣다': '들을 거예요',
+  '걷다': '걸을 거예요',
+  '어떻다': '어떨 거예요',
+};
+
 /** Derive the 해요체 (polite present) form of a -다 dictionary form. */
 export function haeyo(dictForm: string): string | null {
   const w = dictForm.trim();
@@ -106,6 +132,42 @@ export function haeyo(dictForm: string): string | null {
   return stem + (bright ? '아요' : '어요');
 }
 
+// ㅆ final-consonant index in the jamo block
+const T_SS = 20;
+// ㄹ final-consonant index
+const T_L = 8;
+
+/** 과거 (past): polite form minus 요, ㅆ 받침 on the last syllable, + 어요. */
+export function past(dictForm: string): string | null {
+  const w = dictForm.trim();
+  if (IRREGULAR_PAST[w]) return IRREGULAR_PAST[w];
+  const polite = haeyo(w);
+  if (!polite) return null;
+  const pre = polite.slice(0, -1); // strip 요
+  const last = pre[pre.length - 1];
+  const d = decompose(last);
+  if (!d || d[2] !== 0) return null; // last syllable must be open
+  return pre.slice(0, -1) + compose(d[0], d[1], T_SS) + '어요';
+}
+
+/** 미래 (future): stem + (으)ㄹ 거예요. */
+export function future(dictForm: string): string | null {
+  const w = dictForm.trim();
+  if (!w.endsWith('다')) return null;
+  if (IRREGULAR_FUTURE[w]) return IRREGULAR_FUTURE[w];
+  const stem = IRREGULAR_FUTURE_STEM[w] ?? w.slice(0, -1);
+  const last = stem[stem.length - 1];
+  const d = decompose(last);
+  if (!d) return null;
+  const [ini, vow, fin] = d;
+  if (fin === 0) {
+    // vowel-final (incl. modified ㅂ-irregular stems): attach ㄹ 받침
+    return stem.slice(0, -1) + compose(ini, vow, T_L) + ' 거예요';
+  }
+  if (fin === T_L) return stem + ' 거예요'; // ㄹ-stem: 살다 → 살 거예요
+  return stem + '을 거예요'; // consonant-final: 먹다 → 먹을 거예요
+}
+
 export function conjugate(dictForm: string): ConjugationTable | null {
   if (!dictForm) return null;
   const w = dictForm.trim();
@@ -114,13 +176,18 @@ export function conjugate(dictForm: string): ConjugationTable | null {
   // The copula has two 해요체 allomorphs: 이에요 after consonant-final
   // nouns, 예요 after vowel-final (학생이에요 / 친구예요).
   const politeRow = w === '이다' ? ['이에요', '예요'] : [polite];
+  const tenses: Record<string, string[]> = {
+    '해요체 (Polite present)': politeRow,
+  };
+  const pst = past(w);
+  if (pst) tenses['과거 (Past)'] = w === '이다' ? [pst, '였어요'] : [pst];
+  const fut = future(w);
+  if (fut) tenses['미래 (Future)'] = w === '이다' ? ['일 거예요'] : [fut];
+  tenses['사전형 (Dictionary form)'] = [w];
   return {
     infinitive: w,
     isReflexive: false,
-    tenses: {
-      '해요체 (Polite present)': politeRow,
-      '사전형 (Dictionary form)': [w],
-    },
+    tenses,
   };
 }
 
@@ -142,13 +209,24 @@ export const KNOWN_VERBS = [
 
 function buildReverse(): Map<string, string> {
   const m = new Map<string, string>();
+  const add = (key: string, v: string) => {
+    if (key && !m.has(key)) m.set(key, v);
+  };
   for (const v of KNOWN_VERBS) {
-    const p = haeyo(v);
-    if (!p) continue;
-    if (!m.has(p)) m.set(p, v);
-    // bare form without -요 (해체/banmal): 가요 → 가
-    const bare = p.slice(0, -1);
-    if (bare && !m.has(bare)) m.set(bare, v);
+    const t = conjugate(v);
+    if (!t) continue;
+    for (const forms of Object.values(t.tenses)) {
+      for (const f of forms) {
+        if (f.includes(' ')) {
+          // future 갈 거예요: index the stem word — 갈 → 가다
+          add(f.split(' ')[0], v);
+        } else {
+          add(f, v);
+          // bare form without -요 (해체/banmal): 가요 → 가, 갔어요 → 갔어
+          if (f.endsWith('요')) add(f.slice(0, -1), v);
+        }
+      }
+    }
   }
   return m;
 }

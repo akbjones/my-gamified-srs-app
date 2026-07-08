@@ -109,7 +109,12 @@ const hangul: ScriptDescriptor = {
   // Copula (and other endings) attach to their complement: 학생이에요
   // ends with the table form 이에요. Suffix match, min 2 syllables to
   // avoid trivial single-jamo-block hits.
-  formMatches: (token, form) => token === form || (form.length >= 2 && token.endsWith(form)),
+  formMatches: (token, form) =>
+    token === form ||
+    (form.length >= 2 && token.endsWith(form)) ||
+    // multi-word forms (갈 거예요): each word matches on its own, and the
+    // stem word also matches agglutinated tokens (좋아할 endsWith 할)
+    (form.includes(' ') && form.split(' ').some((p) => p === token || (p.length >= 2 && token.endsWith(p)))),
   combiningNotes: 'Noun particles attach to tokens; lookup strips them longest-first before dictionary match.',
 };
 

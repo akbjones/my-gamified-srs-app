@@ -16,6 +16,7 @@ import { lookupWord as lookupTr } from '../data/dictionary/tr';
 import { lookupWord as lookupRu } from '../data/dictionary/ru';
 import { lookupWord as lookupId } from '../data/dictionary/id';
 import { lookupWord as lookupEl } from '../data/dictionary/el';
+import { lookupWord as lookupKo } from '../data/dictionary/ko';
 import { conjugate as conjugateEs } from '../data/conjugation/es';
 import { conjugate as conjugateIt } from '../data/conjugation/it';
 import { conjugate as conjugateFr } from '../data/conjugation/fr';
@@ -29,6 +30,7 @@ import { conjugate as conjugateTr } from '../data/conjugation/tr';
 import { conjugate as conjugateRu } from '../data/conjugation/ru';
 import { conjugate as conjugateId } from '../data/conjugation/id';
 import { conjugate as conjugateEl } from '../data/conjugation/el';
+import { conjugate as conjugateKo } from '../data/conjugation/ko';
 import { Language, ConjugationTable } from '../types';
 
 // Dynamic lookup per language – gracefully returns null for languages without a dictionary
@@ -46,6 +48,7 @@ const LOOKUP_FNS: Partial<Record<Language, (w: string) => DictEntry | null>> = {
   russian: lookupRu,
   indonesian: lookupId,
   greek: lookupEl,
+  korean: lookupKo,
 };
 
 const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable | null>> = {
@@ -62,6 +65,7 @@ const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable 
   russian: conjugateRu,
   indonesian: conjugateId,
   greek: conjugateEl,
+  korean: conjugateKo,
 };
 
 const PERSON_LABELS: Record<string, string[]> = {
@@ -79,6 +83,8 @@ const PERSON_LABELS: Record<string, string[]> = {
   // Indonesian rows are affix forms, not persons — no row labels
   indonesian: ['', '', '', '', '', ''],
   greek: ['εγώ', 'εσύ', 'αυτός/αυτή', 'εμείς', 'εσείς', 'αυτοί'],
+  // Korean rows are speech-level forms, not persons
+  korean: ['', '', '', '', '', ''],
 };
 
 // Pronoun → person index. Used to disambiguate ambiguous form matches

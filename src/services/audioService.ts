@@ -121,8 +121,8 @@ export const stopAudio = (): void => {
 //
 // Earlier note about Aoede struggling with non-Latin scripts was
 // addressed by Google; verified across all 10 languages.
-// 'korean'/'msa' are staged (registry + audits only) ahead of app-side Language integration
-const GOOGLE_VOICE_MAP: Record<Language | 'korean' | 'msa', { languageCode: string; name: string }> = {
+// 'msa' is staged (registry + audits only) ahead of app-side Language integration
+const GOOGLE_VOICE_MAP: Record<Language | 'msa', { languageCode: string; name: string }> = {
   spanish: { languageCode: 'es-US', name: 'es-US-Chirp3-HD-Aoede' },
   italian: { languageCode: 'it-IT', name: 'it-IT-Chirp3-HD-Aoede' },
   german:  { languageCode: 'de-DE', name: 'de-DE-Chirp3-HD-Aoede' },

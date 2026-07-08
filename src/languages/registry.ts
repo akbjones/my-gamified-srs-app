@@ -277,7 +277,6 @@ export const REGISTRY: Record<string, RegistryEntry> = {
       offenderLexicon: 'docs/greek-register-offenders.json',
     },
   },
-  // ── Staged (Stage-1 scaffold; not yet in the app UI) ──────────
   korean: {
     key: 'korean', code: 'ko', deckPath: 'src/data/korean/deck.json',
     lookup: lookupKo, conjugate: conjKo, findInfinitive: findInfKo,
@@ -287,6 +286,7 @@ export const REGISTRY: Record<string, RegistryEntry> = {
       offenderLexicon: 'docs/korean-register-offenders.json',
     },
   },
+  // ── Staged (Stage-1 scaffold; not yet in the app UI) ──────────
   msa: {
     key: 'msa', code: 'ar', deckPath: 'src/data/msa/deck.json',
     lookup: lookupAr, conjugate: conjAr, findInfinitive: findInfAr,

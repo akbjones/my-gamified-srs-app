@@ -1,0 +1,141 @@
+[
+  {
+    "id": "id-0809",
+    "rating": 5,
+    "issue": "Clause-final 'oleh adik' after a time adverb is written-register for a mundane family chore; in speech the kin agent sits right after the di- verb with no oleh (cf. id-0814's own tip).",
+    "fix": {
+      "target": "Sampahnya sudah dibuang adik tadi pagi.",
+      "english": "The trash was already taken out by my little brother this morning.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0824",
+    "rating": 5,
+    "issue": "Same oleh-overuse pattern: 'disiram setiap sore oleh ayah' is news-prose ordering; conversational Indonesian puts the short kin agent directly after the verb: 'disiram ayah setiap sore'.",
+    "fix": {
+      "target": "Tanamannya disiram ayah setiap sore.",
+      "english": "The plants are watered by Dad every afternoon.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0825",
+    "rating": 5,
+    "issue": "'di bawah matahari' is an English calque of 'under the sun'; natives say 'di bawah sinar/terik matahari' or simply 'dijemur di luar' (jemur already implies sun-drying).",
+    "fix": {
+      "target": "Kasurnya dijemur di luar supaya tidak lembap.",
+      "english": "The mattress is put out to dry so it doesn't get damp.",
+      "grammar": "supaya = so that: dijemur supaya tidak lembap = dried so it doesn't get damp."
+    }
+  },
+  {
+    "id": "id-0844",
+    "rating": 4,
+    "issue": "'bisa diminta gratis' is unnatural — you ambil/dapat a free map, you don't 'request it free'; and the -nya definite marker (the node's teaching point) is glossed indefinite 'A city map', contradicting the pattern.",
+    "fix": {
+      "target": "Peta kotanya bisa diambil gratis di lobi hotel.",
+      "english": "The city map can be picked up for free in the hotel lobby.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0860",
+    "rating": 5,
+    "issue": "Gloss mismatch: 'Karyawan baru itu' is a specific person and the sentence reads as completed narrative, but the English 'The new employee is trained during...' reads as a generic company policy.",
+    "fix": {
+      "target": "Karyawan baru itu dilatih selama dua minggu pertama.",
+      "english": "That new employee was trained for the first two weeks.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0869",
+    "rating": 5,
+    "issue": "'dicuci bersama' is ambiguous — it reads 'washed together (with someone)' rather than the intended 'washed in one load'; the idiomatic word is 'sekaligus'.",
+    "fix": {
+      "target": "Pakaian kotor dikumpulkan dulu sebelum dicuci sekaligus.",
+      "english": "The dirty clothes are gathered first before being washed all at once.",
+      "grammar": null
+    },
+    "newTokens": {
+      "sekaligus": { "en": "all at once; in one go", "ipa": "səkaliˈgus", "pos": "adv" }
+    }
+  },
+  {
+    "id": "id-0890",
+    "rating": 5,
+    "issue": "Gloss fidelity: 'barangnya' is general belongings/stuff, not specifically 'the bags' — the English narrows the meaning and would back-translate as 'tasnya'.",
+    "fix": {
+      "target": "Tolong dijaga barangnya, saya ke toilet sebentar.",
+      "english": "Please keep an eye on my things; I'm going to the toilet for a moment.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0892",
+    "rating": 4,
+    "issue": "'janjinya dengan anak-anak' means an appointment/plan made WITH the kids, but the gloss says 'the promise TO the kids' (that would be 'janji kepada'); on top of that 'jangan dilupakan' with an abstract object is stiff — jangan+di- suits concrete requests.",
+    "fix": {
+      "target": "Jangan dibatalkan janjinya dengan anak-anak besok.",
+      "english": "Don't cancel the plans with the kids tomorrow.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0932",
+    "rating": 5,
+    "issue": "'gedung seni' is not an Indonesian collocation — the fixed terms are 'gedung kesenian' or, for where a dancer actually trains, 'sanggar (tari)'.",
+    "fix": {
+      "target": "Penari muda itu berlatih setiap sore di sanggar tari.",
+      "english": "That young dancer practices every afternoon at the dance studio.",
+      "grammar": null
+    },
+    "newTokens": {
+      "sanggar": { "en": "studio, workshop (for arts practice)", "ipa": "ˈsaŋgar", "pos": "n" }
+    }
+  },
+  {
+    "id": "id-0955",
+    "rating": 5,
+    "issue": "Referential clash: distal 'Pembantu rumah tangga itu' (that helper, someone else's) cooking 'untuk keluarga kami' (for OUR family) — a native would say 'pembantu kami'; 'itu' + 'kami' don't sit together.",
+    "fix": {
+      "target": "Pembantu kami memasak makanan untuk seluruh keluarga.",
+      "english": "Our helper cooks food for the whole family.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0974",
+    "rating": 5,
+    "issue": "Gloss calque: 'lebih berat' for training means tougher/harder; 'This morning's practice is heavier' is unidiomatic English carried over word-for-word from berat.",
+    "fix": {
+      "target": "Latihan pagi ini lebih berat daripada latihan kemarin.",
+      "english": "This morning's practice was tougher than yesterday's practice.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-0987",
+    "rating": 5,
+    "issue": "Register clash: formal 'atas' + bare casual 'kamu' ('atas bantuan kamu') is a mix natives avoid — the natural forms are 'atas bantuanmu' or 'atas bantuannya'.",
+    "fix": {
+      "target": "Terima kasih banyak atas bantuanmu minggu lalu.",
+      "english": "Thank you very much for your help last week.",
+      "grammar": "bantu (help, verb) → bantuan (help, noun): the aid that is given."
+    },
+    "newTokens": {
+      "bantuanmu": { "en": "your help (bantuan + -mu)", "ipa": "banˈtuanmu", "pos": "n" }
+    }
+  },
+  {
+    "id": "id-1031",
+    "rating": 5,
+    "issue": "'di bawah matahari' is the same 'under the sun' calque as id-0825; for overheating the idiomatic phrase is 'di bawah terik matahari' (under the scorching sun).",
+    "fix": {
+      "target": "Dia kepanasan karena berdiri lama di bawah terik matahari.",
+      "english": "He got overheated because he stood for a long time under the scorching sun.",
+      "grammar": null
+    }
+  }
+]

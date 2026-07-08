@@ -1,0 +1,246 @@
+[
+  {
+    "id": "id-1052",
+    "rating": 4,
+    "issue": "English calque: 'bus kota datang sangat lambat' copies 'came very slowly' — describes slow motion, not lateness. Natives express this as taking long: 'datangnya lama (sekali)'.",
+    "fix": {
+      "target": "Dia terlambat ke rapat karena bus kota datangnya lama sekali.",
+      "english": "He was late to the meeting because the city bus took a very long time to come.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1097",
+    "rating": 5,
+    "issue": "Register clash: informal possessive 'laporanmu' with formal 'agar' — the deck's own id-1094 tip says 'Say supaya in chat'. Keep agar but make the whole frame formal.",
+    "fix": {
+      "target": "Mohon kirim laporan Anda hari ini agar tim bisa membacanya sebelum rapat.",
+      "english": "Please send your report today so that the team can read it before the meeting.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1099",
+    "rating": 5,
+    "issue": "Formal 'agar' in a casual parental instruction with informal 'tanganmu' — violates the register split id-1094's tip teaches (agar = announcements/notices). Recast as signage register: drop -mu.",
+    "fix": {
+      "target": "Cuci tangan dengan sabun agar kuman tidak ikut masuk ke makanan.",
+      "english": "Wash your hands with soap so that germs don't get into the food.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1111",
+    "rating": 5,
+    "issue": "Gloss infidelity: 'my head is still dizzy' is unidiomatic English — 'kepala (saya) pusing' is the standard idiom for having a headache, not a dizzy head. Sentence itself is fine.",
+    "fix": {
+      "target": "Walaupun sudah minum obat, kepala saya masih pusing sampai sekarang.",
+      "english": "Although I've taken medicine, I still have a headache even now.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1151",
+    "rating": 5,
+    "issue": "Bare-root 'tanda tangan' as main verb with no tip — policy rule 5 says cards model the full meN- form (menandatangani); the deck only introduces verbal 'tanda tangan' with a tip much later (id-1534/1535).",
+    "fix": {
+      "target": "Sebelum menandatangani kontrak itu, baca dulu semua halamannya.",
+      "english": "Before signing that contract, first read all of its pages.",
+      "grammar": null
+    },
+    "newTokens": {
+      "menandatangani": "to sign (a document)"
+    }
+  },
+  {
+    "id": "id-1155",
+    "rating": 5,
+    "issue": "Gloss mismatch: baju glossed as 'dress' — a dress is gaun; the deck elsewhere consistently glosses baju as shirt (e.g. id-1237). Misleads learners on a basic noun.",
+    "fix": {
+      "target": "Sesudah kamu mencoba baju itu, gantung lagi di tempatnya, ya.",
+      "english": "After you try on that shirt, hang it back in its place, okay?",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1163",
+    "rating": 5,
+    "issue": "'kalau tidak semut datang' is abrupt/unnatural — a warned future consequence takes nanti: 'kalau tidak nanti semut datang' (cf. the block's other cards with akan/stative predicates).",
+    "fix": {
+      "target": "Simpan kue itu di kulkas, kalau tidak nanti semut datang.",
+      "english": "Put that cake in the fridge; otherwise the ants will come.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1164",
+    "rating": 4,
+    "issue": "Wrong subject for adversative ke-...-an: 'kepalamu kepanasan' — the sufferer is the person (kamu kepanasan), exactly as the deck's own id-1167 models 'kamu kedinginan'. Gloss copies the calque ('your head will get overheated').",
+    "fix": {
+      "target": "Pakai topi dan kacamata hitam, kalau tidak kamu kepanasan di jalan.",
+      "english": "Wear a hat and sunglasses; otherwise you'll get overheated on the way.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1197",
+    "rating": 5,
+    "issue": "bilang + bahwa register hybrid in a casual report — colloquial verb with written-style complementizer; the deck's own id-1196 tip says speakers drop bahwa. Overuse across this block.",
+    "fix": {
+      "target": "Dia bilang dia sudah membaca email saya.",
+      "english": "He said he had already read my email.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1199",
+    "rating": 5,
+    "issue": "bilang + bahwa hybrid in a family/casual context — mom relaying that grandma is staying over would never use written-style bahwa with colloquial bilang.",
+    "fix": {
+      "target": "Ibu bilang nenek akan menginap di rumah kita.",
+      "english": "Mom said grandma will stay over at our house.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1200",
+    "rating": 5,
+    "issue": "bilang + bahwa hybrid in casual gossip context; the tip's own example ('Katanya begitu, tapi belum tentu benar') is bahwa-free — the card should match.",
+    "fix": {
+      "target": "Dia bilang kabar itu belum tentu benar.",
+      "english": "She said that news is not necessarily true.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1201",
+    "rating": 5,
+    "issue": "Triple register mix: formal 'Dalam suratnya' + colloquial 'bilang' + formal 'bahwa'. For letter content the natural verb is menulis, which also licenses bahwa.",
+    "fix": {
+      "target": "Dalam suratnya, dia menulis bahwa dia ingin cepat pulang.",
+      "english": "In his letter, he wrote that he wants to come home soon.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1203",
+    "rating": 5,
+    "issue": "Exasperated spoken complaint ('sudah bilang berkali-kali') jammed together with written-style bahwa — real speech drops it or uses kalau.",
+    "fix": {
+      "target": "Saya sudah bilang berkali-kali, pintunya harus dikunci.",
+      "english": "I have said many times that the door must be locked.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1204",
+    "rating": 5,
+    "issue": "bilang ke ayah + bahwa: casual family message with formal complementizer; the deck's own id-1206 models the natural spoken pattern (plain clause or kalau) for exactly this frame.",
+    "fix": {
+      "target": "Tolong bilang ke ayah, saya pulang agak malam.",
+      "english": "Please tell dad I'm coming home a bit late.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1207",
+    "rating": 5,
+    "issue": "bilang + bahwa hybrid; when the message is formal enough for bahwa, the natural relay verb is sampaikan (already taught at id-1208/1209), not colloquial bilang.",
+    "fix": {
+      "target": "Tolong sampaikan ke tim bahwa rapat sore ini dibatalkan.",
+      "english": "Please tell the team that this afternoon's meeting is canceled.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1211",
+    "rating": 5,
+    "issue": "Missing addressee marking: 'tolong bilang saya menunggu' parses on first read as 'tell me...' — bilang needs ke + addressee before the reported clause (cf. id-1195's own tip: bilang ke X = tell X).",
+    "fix": {
+      "target": "Kalau kamu bertemu dia, tolong bilang ke dia saya menunggu di sini.",
+      "english": "If you meet him, please tell him I'm waiting here.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1212",
+    "rating": 5,
+    "issue": "bilang + bahwa hybrid in a hotel-service instruction — semi-formal message wants sampaikan with bahwa, or bilang without it. Same fault as id-1207.",
+    "fix": {
+      "target": "Tolong sampaikan ke tamu bahwa kamarnya sudah siap.",
+      "english": "Please tell the guest that their room is ready.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1255",
+    "rating": 5,
+    "issue": "Subjectless complement calques 'I think let's just walk' — 'Saya pikir jalan kaki saja' needs kita; the English gloss inherits the awkwardness.",
+    "fix": {
+      "target": "Saya pikir kita jalan kaki saja, soalnya hotelnya dekat.",
+      "english": "I think we should just walk, since the hotel is close.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1262",
+    "rating": 5,
+    "issue": "Gloss mismatch: 'tanya orang di sana' is generic (ask someone at that place); the gloss 'the person over there' points at a specific individual, which would be 'orang itu / orang yang di sana'.",
+    "fix": {
+      "target": "Saya rasa lebih baik kita tanya orang di sana.",
+      "english": "I feel it's better if we ask someone over there.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1264",
+    "rating": 4,
+    "issue": "English calque: opening a neutral question with 'Kamu pikir...?' mirrors 'Do you think...?' but in Indonesian tends to sound accusatory (cf. 'Kamu pikir kamu siapa?'). Opinion questions use Menurut kamu, as the deck's own id-1237 teaches.",
+    "fix": {
+      "target": "Menurut kamu, kita bisa sampai sebelum toko tutup?",
+      "english": "Do you think we can get there before the shop closes?",
+      "grammar": "Ask opinions with Menurut kamu...? — starting with Kamu pikir...? often sounds like an accusation."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1266",
+    "rating": 4,
+    "issue": "Misplaced juga: 'Saya pikir begitu juga' reads as 'begitu juga' (= likewise/so does X); 'I think so too' puts juga on the thinker: 'Saya juga pikir begitu'.",
+    "fix": {
+      "target": "Saya juga pikir begitu, kita memang perlu istirahat.",
+      "english": "I think so too, we really do need a rest.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-1294",
+    "rating": 5,
+    "issue": "Word order: 'terus tanya' reads as 'then asked'; the idiomatic order for persistent asking is 'tanya terus' (verb + terus = keeps V-ing).",
+    "fix": {
+      "target": "Anak saya tanya terus kapan kita pergi ke kebun binatang.",
+      "english": "My child keeps asking when we're going to the zoo.",
+      "grammar": null
+    },
+    "newTokens": {}
+  }
+]

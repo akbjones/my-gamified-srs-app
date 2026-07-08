@@ -1,0 +1,222 @@
+[
+  {
+    "id": "id-1312",
+    "rating": 4,
+    "issue": "Pragmatics: a cashier never addresses a customer as 'kamu' — counter speech uses Kak/Bu/Pak or just 'Totalnya...'. 'Total belanjaan kamu' from staff reads impolite and unreal.",
+    "fix": {
+      "target": "Totalnya enam ratus sembilan puluh ribu rupiah, Kak.",
+      "english": "The total is six hundred and ninety thousand rupiah, miss.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-1318",
+    "rating": 5,
+    "issue": "Calque: 'masih terlalu mahal untuk saya' mirrors English 'still too expensive for me'. The bargaining idiom at the stall is 'masih mahal' / 'kemahalan'.",
+    "fix": {
+      "target": "Wah, masih kemahalan, Pak.",
+      "english": "Wow, that is still way too expensive, sir.",
+      "grammar": "ke-...-an makes 'too X': mahal → kemahalan = too expensive, overpriced."
+    }
+  },
+  {
+    "id": "id-1323",
+    "rating": 4,
+    "issue": "Seller addressing a customer as 'kamu' is impolite/unreal — the giving-in formula is 'Ya sudah, khusus buat Ibu/Kakak'. 'Baiklah' is also stiff for market talk.",
+    "fix": {
+      "target": "Ya sudah, khusus untuk Ibu, dua ratus ribu saja.",
+      "english": "Alright then, just for you, ma'am, only two hundred thousand.",
+      "grammar": "Ya sudah = alright then — the giving-in phrase: Ya sudah, dua ratus ribu saja."
+    }
+  },
+  {
+    "id": "id-1363",
+    "rating": 4,
+    "issue": "Factually off and wrong verb: at an ATM you cover the KEYPAD (tombol), not the screen, and covering = tutupi; 'tutup layar' reads as 'close/shut the screen'.",
+    "fix": {
+      "target": "Tutupi tombol dengan tangan waktu memasukkan PIN.",
+      "english": "Cover the keypad with your hand when entering your PIN.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-1384",
+    "rating": 5,
+    "issue": "Spelling: KBBI standard is 'prangko'; 'perangko' is a widespread but nonstandard variant — a deck should model the standard form.",
+    "fix": {
+      "target": "Saya membeli prangko untuk mengirim kartu pos ke teman.",
+      "english": "I bought stamps to send a postcard to a friend.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-1385",
+    "rating": 5,
+    "issue": "For packages the everyday verb is 'sampai' — the plaintive idiom is 'belum sampai juga'. 'belum tiba juga' pairs a formal verb with a colloquial complaint pattern.",
+    "fix": {
+      "target": "Paket dari ibu saya belum sampai juga.",
+      "english": "The package from my mother still has not arrived.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-1396",
+    "rating": 5,
+    "issue": "Nonstandard double object: 'meminjamkan saya uang' — the -kan verb takes the THING as object (meminjamkan uang ke saya); the deck's own id-1524 models the correct pattern. Tip repeats the flawed frame.",
+    "fix": {
+      "target": "Kakak meminjamkan uang ke saya untuk membeli buku kuliah.",
+      "english": "My older sibling lent me money to buy college books.",
+      "grammar": "meminjam = borrow, meminjamkan = lend: meminjamkan uang ke saya = lent money to me."
+    }
+  },
+  {
+    "id": "id-1403",
+    "rating": 5,
+    "issue": "'...atau tidak' makes the cashier's offer blunt ('or not?'). The real checkout formula is simply 'Struknya mau dibawa, Kak?'",
+    "fix": {
+      "target": "Struknya mau dibawa, Kak?",
+      "english": "Would you like the receipt, miss?",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-1413",
+    "rating": 5,
+    "issue": "Nobody heading out to change money says 'tempat penukaran uang' — the universal spoken term is the loan 'money changer'; the long form lives on signage. Deck already uses loans (QRIS, transfer).",
+    "fix": {
+      "target": "Saya menukar dolar di money changer dekat hotel.",
+      "english": "I exchange dollars at the money changer near the hotel.",
+      "grammar": "Indonesians say money changer; tempat penukaran uang is the formal sign version."
+    }
+  },
+  {
+    "id": "id-1444",
+    "rating": 5,
+    "issue": "Register realism: office speech overwhelmingly uses the loan 'deadline'; 'tenggat' is journalistic/formal writing. Six cards (1444/45/49/52/54/55) model tenggat as the default spoken word — keep at most one as the formal synonym.",
+    "fix": {
+      "target": "Deadline laporan ini hari Kamis jam lima sore.",
+      "english": "The deadline for this report is Thursday at five in the afternoon.",
+      "grammar": "Office speech uses deadline; tenggat is its formal written synonym."
+    }
+  },
+  {
+    "id": "id-1445",
+    "rating": 5,
+    "issue": "Same tenggat-as-everyday-speech issue as id-1444: spoken office Indonesian says 'sebelum deadline'.",
+    "fix": {
+      "target": "Saya harus menyelesaikan revisi ini sebelum deadline.",
+      "english": "I have to finish this revision before the deadline.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-1449",
+    "rating": 5,
+    "issue": "'mengejar tenggat' is a bookish rendering of the ubiquitous office idiom 'kejar deadline' — no one races a 'tenggat' out loud.",
+    "fix": {
+      "target": "Tim kami sedang mengejar deadline proyek minggu ini.",
+      "english": "Our team is chasing the project deadline this week.",
+      "grammar": "kejar deadline = race the deadline: kami sedang mengejar deadline."
+    }
+  },
+  {
+    "id": "id-1452",
+    "rating": 5,
+    "issue": "Same tenggat register issue; spoken form is 'deadline-nya besok'. The -nya tip itself is good and transfers cleanly.",
+    "fix": {
+      "target": "Deadline-nya besok, tapi laporan saya sudah selesai hari ini.",
+      "english": "The deadline is tomorrow, but my report is already finished today.",
+      "grammar": "-nya can mean 'the one we know': deadline-nya besok = the deadline is tomorrow."
+    }
+  },
+  {
+    "id": "id-1454",
+    "rating": 5,
+    "issue": "Same tenggat register issue: 'supaya selesai sebelum deadline' is what a teammate would actually say.",
+    "fix": {
+      "target": "Ayo kita bagi tugas supaya selesai sebelum deadline.",
+      "english": "Let's divide the tasks so we finish before the deadline.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-1455",
+    "rating": 5,
+    "issue": "Same tenggat register issue; the tinggal tip is fine and unaffected.",
+    "fix": {
+      "target": "Waktu kita tinggal dua hari sebelum deadline proyek.",
+      "english": "We only have two days left before the project deadline.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-1456",
+    "rating": 5,
+    "issue": "'mengumpulkan laporan' is school hand-in language and also parses as 'collecting reports (from others)'. Office speech for submitting on time is mengirim/menyerahkan laporan.",
+    "fix": {
+      "target": "Dia selalu mengirim laporan tepat waktu.",
+      "english": "He always sends in his reports on time.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-1468",
+    "rating": 5,
+    "issue": "The idiom is reduplicated: 'jauh-jauh hari' = well in advance. Clipped 'dari jauh hari' occurs in print but sounds off in speech.",
+    "fix": {
+      "target": "Kalau mau cuti panjang, ajukan jauh-jauh hari.",
+      "english": "If you want a long leave, put in for it well in advance.",
+      "grammar": "jauh-jauh hari = well in advance: ajukan jauh-jauh hari."
+    }
+  },
+  {
+    "id": "id-1469",
+    "rating": 5,
+    "issue": "'pada hari Jumat' is paper bureaucratese in a spoken request — even a formal request to Pak Dedi drops 'pada'. Policy: formal cards must read natural, not stilted.",
+    "fix": {
+      "target": "Pak Dedi, saya mohon izin cuti hari Jumat.",
+      "english": "Mr. Dedi, I would like to request leave on Friday.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-1470",
+    "rating": 5,
+    "issue": "Register clash: formal 'permohonan ... disetujui' glued to casual 'kamu'. HR speech says 'pengajuan cuti', matching mengajukan taught in id-1462.",
+    "fix": {
+      "target": "Pengajuan cuti kamu sudah disetujui atasan.",
+      "english": "Your leave request has been approved by the boss.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-1487",
+    "rating": 5,
+    "issue": "'rekan tim' is a clipped calque of 'teammate' — natural Indonesian is 'teman satu tim' or 'rekan kerja'.",
+    "fix": {
+      "target": "Selama saya sakit, tugas saya dikerjakan teman satu tim.",
+      "english": "While I was sick, my tasks were done by a teammate.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-1499",
+    "rating": 5,
+    "issue": "Interview register: this is the interviewer speaking, and interviews are formal (policy rule 4) — interviewers use Anda, not kamu, and say 'perusahaan sebelumnya', not 'perusahaan lama'.",
+    "fix": {
+      "target": "Ceritakan pengalaman kerja Anda di perusahaan sebelumnya.",
+      "english": "Tell me about your work experience at your previous company.",
+      "grammar": "Interviewers use Anda, never kamu: pengalaman kerja Anda = your work experience."
+    }
+  },
+  {
+    "id": "id-1542",
+    "rating": 5,
+    "issue": "'Email saya penuh' says the mailbox is out of storage; the after-leave situation is a backlog — the idiom is 'email menumpuk' (piled up). The gloss carries the same calque.",
+    "fix": {
+      "target": "Email saya menumpuk setelah cuti seminggu.",
+      "english": "My emails piled up after a week of leave.",
+      "grammar": "menumpuk = to pile up: email menumpuk = emails piled up."
+    }
+  }
+]

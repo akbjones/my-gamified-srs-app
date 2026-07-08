@@ -1,0 +1,112 @@
+[
+  {
+    "id": "id-1555",
+    "rating": 5,
+    "issue": "Collocation slightly off: 'lebih berat dari batas dua puluh kilo' compares weight to a limit word-for-word from English ('heavier than the limit'). Check-in agents say the bag 'melebihi batas' (exceeds the limit) or 'kelebihan X kilo'.",
+    "fix": {
+      "target": "Maaf, bagasi Anda melebihi batas dua puluh kilo.",
+      "english": "Sorry, your luggage is over the twenty-kilo limit.",
+      "grammar": "melebihi = to go over: melebihi batas dua puluh kilo = over the twenty-kilo limit."
+    }
+  },
+  {
+    "id": "id-1556",
+    "rating": 5,
+    "issue": "English calque: 'bayar untuk bagasi tambahan' copies 'pay FOR'. Indonesian bayar takes the thing paid directly: 'bayar bagasi tambahan' or 'bayar biaya bagasi tambahan'.",
+    "fix": {
+      "target": "Saya mau bayar biaya bagasi tambahan ini.",
+      "english": "I want to pay the fee for this extra luggage.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-1586",
+    "rating": 5,
+    "issue": "'jadwal baru keluar satu jam lagi' is ambiguous for a learner: 'baru' reads either as adjective (new schedule) or as the adverb 'only then' (the schedule only comes out in an hour). A definiteness marker on 'baru' removes the trap.",
+    "fix": {
+      "target": "Kata petugas, jadwal barunya keluar satu jam lagi.",
+      "english": "According to the officer, the new schedule comes out in an hour.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-1608",
+    "rating": 5,
+    "issue": "Register: 'tersumbat' is the written/technical word for clogged; a guest complaining at the front desk says 'mampet'. Q3 hotel-complaint dialogue should model the spoken word (policy rule 2 direction).",
+    "fix": {
+      "target": "Toilet di kamar kami mampet sejak siang tadi.",
+      "english": "The toilet in our room has been clogged since midday.",
+      "grammar": "mampet = clogged, the everyday word; tersumbat is what a plumber's report says."
+    }
+  },
+  {
+    "id": "id-1611",
+    "rating": 5,
+    "issue": "Ungrammatical verb+adjective string: 'air ... keluar kecil sekali' (the water comes-out small). Natural phrasing nominalizes the coming-out: 'keluarnya kecil' or simply 'airnya kecil sekali' for weak pressure.",
+    "fix": {
+      "target": "Air di kamar mandi keluarnya kecil sekali pagi ini.",
+      "english": "The water in the bathroom is only coming out in a trickle this morning.",
+      "grammar": "keluarnya kecil = its flow is weak: -nya turns keluar (come out) into 'the coming-out'."
+    }
+  },
+  {
+    "id": "id-1620",
+    "rating": 5,
+    "issue": "Tip misparses the sentence: in 'masalah air panasnya', -nya attaches to the whole noun phrase 'masalah air panas' (the hot-water problem we mentioned), not to 'air panas' alone. Glossing it as 'its hot water (the hotel's)' teaches the wrong bracketing. Sentence itself is fine.",
+    "fix": {
+      "target": "Masalah air panasnya selesai setelah teknisi datang.",
+      "english": "The hot water problem was resolved after the technician came.",
+      "grammar": "-nya on a whole phrase marks it as the one already discussed: masalah air panasnya = that hot-water problem."
+    }
+  },
+  {
+    "id": "id-1639",
+    "rating": 4,
+    "issue": "Meaning error: 'semua keluarga' = 'all the families', not 'the whole family'. For one family fitting in the car it must be 'seluruh keluarga', 'sekeluarga', or 'semua anggota keluarga'. Gloss and target diverge.",
+    "fix": {
+      "target": "Ayah menyewa mobil besar supaya seluruh keluarga muat.",
+      "english": "Dad rented a big car so the whole family would fit.",
+      "grammar": "seluruh = the whole of one thing: seluruh keluarga = the whole family; semua keluarga = all the (separate) families."
+    }
+  },
+  {
+    "id": "id-1719",
+    "rating": 5,
+    "issue": "Translationese: 'buat permohonan' calques 'make a wish' with a bureaucratic noun — permohonan is a formal application (visa, permit). At a birthday people say 'make a wish' in English or 'ucapkan harapan/permohonanmu dalam hati'.",
+    "fix": {
+      "target": "Ayo tiup lilinnya, jangan lupa ucapkan harapanmu dulu!",
+      "english": "Come on, blow out the candles — don't forget to make your wish first!",
+      "grammar": "harapan = a hope/wish, from harap: ucapkan harapanmu = say your wish."
+    }
+  },
+  {
+    "id": "id-1730",
+    "rating": 4,
+    "issue": "Grammar/gloss mismatch: 'ulang tahun kembar mereka' reads as 'their twin birthday' — kembar is an adjective. 'Their twins' needs a head noun: 'anak kembar mereka' or 'si kembar'.",
+    "fix": {
+      "target": "Kami merayakan ulang tahun anak kembar mereka di taman kota.",
+      "english": "We celebrated their twins' birthday at the city park.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-1781",
+    "rating": 5,
+    "issue": "Doubled beneficiary: membawakan already means 'bring FOR someone', so 'membawakan mainan untuk keponakan' marks the beneficiary twice. Either 'membawakan keponakan mainan' or plain 'membawa mainan untuk keponakan'.",
+    "fix": {
+      "target": "Selain kue, kami juga membawakan keponakan mainan.",
+      "english": "Besides cakes, we also brought our nephews and nieces toys.",
+      "grammar": "membawakan puts the person right after the verb: membawakan keponakan mainan = brought the nieces and nephews toys."
+    }
+  },
+  {
+    "id": "id-1792",
+    "rating": 5,
+    "issue": "Spelling: Indonesian standard is 'Sumatera' (KBBI/official); 'Sumatra' is the English spelling. Target-language text should model the Indonesian form.",
+    "fix": {
+      "target": "Tahun ini keluarga dari Sumatera juga ikut datang.",
+      "english": "This year the family from Sumatra is coming along too.",
+      "grammar": null
+    }
+  }
+]

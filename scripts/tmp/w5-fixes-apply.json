@@ -1,0 +1,444 @@
+[
+ {
+  "id": "id-2833",
+  "rating": 5,
+  "issue": "Register wobble: 'aku' is the only non-saya first-person pronoun in nodes 33-34 (all sibling anecdote cards use saya; aku is otherwise clustered in the later intimate-register block from id-3180 on). Mixing 'aku' with formal conjunction 'tetapi' in the same clause is also incongruous.",
+  "fix": {
+   "target": "Ceritanya saya mau berhemat bulan ini, tetapi ada diskon besar di mana-mana.",
+   "english": null,
+   "grammar": null
+  },
+  "newTokens": {},
+  "src": 1
+ },
+ {
+  "id": "id-2835",
+  "rating": 5,
+  "issue": "Gloss garbled: 'what happened isn't necessarily true' asserts the event occurred and questions its truth, which is backwards — 'belum tentu benar kejadiannya' means it is not certain the thing actually happened at all. Target sentence itself is natural.",
+  "fix": {
+   "target": null,
+   "english": "All that is just what people say; it's not necessarily what really happened.",
+   "grammar": null
+  },
+  "newTokens": {},
+  "src": 1
+ },
+ {
+  "id": "id-2853",
+  "rating": 5,
+  "issue": "Gloss tense clash: 'before we knew it, he has now become famous' mixes past 'knew' with present perfect + 'now' — unnatural English that will read as a translation error. Target sentence is a good tahu-tahu use.",
+  "fix": {
+   "target": null,
+   "english": "He used to come to this food stall often; before we knew it, he'd become a famous person.",
+   "grammar": null
+  },
+  "newTokens": {},
+  "src": 1
+ },
+ {
+  "id": "id-2860",
+  "rating": 5,
+  "issue": "Sequencing: 'cuma' makes its deck-wide debut here (node-33), 91 cards before its register tip at id-2951 where the hanya/cuma contrast is actually taught. An untipped colloquialism debut violates the heard-vs-modeled discipline the slice otherwise keeps; hanya preserves the sentence and defers cuma to its tipped card.",
+  "fix": {
+   "target": "Katanya dia hanya mau melihat-lihat, ujung-ujungnya dia pulang membawa tiga kantong belanja.",
+   "english": null,
+   "grammar": null
+  },
+  "newTokens": {},
+  "src": 1
+ },
+ {
+  "id": "id-2882",
+  "rating": 4,
+  "issue": "'Sudah diberi jalan lebih dekat' misfires: 'diberi jalan' is the fixed expression 'given way / let through', so the clause reads 'having been yielded to closer' — an English calque of 'given a shorter route'. Indonesian shows someone a route (ditunjukkan jalan), it doesn't give one.",
+  "fix": {
+   "target": "Sudah ditunjukkan jalan yang lebih dekat, dia malah memilih jalan memutar.",
+   "english": "He'd already been shown a shorter route; instead he chose the long way around.",
+   "grammar": null
+  },
+  "newTokens": {},
+  "src": 1
+ },
+ {
+  "id": "id-2908",
+  "rating": 5,
+  "issue": "Dangling connective: the card opens with 'Sampai-sampai' but sampai-sampai is a consequence clause that needs an antecedent in the same sentence; as a standalone SRS card it is a fragment ('So much so that...' with no 'so much' stated). Restructure to carry its own cause.",
+  "fix": {
+   "target": "Kami tertawa terlalu keras, sampai-sampai tetangga ikut keluar.",
+   "english": "We laughed too loudly, so much so that the neighbors came out too.",
+   "grammar": null
+  },
+  "newTokens": {},
+  "src": 1
+ },
+ {
+  "id": "id-2911",
+  "rating": 4,
+  "issue": "'salah memakai kacamata orang lain' double-marks the mistake and comes out wrong: salah memakai = put on the WRONG one, so adding 'orang lain' yields 'wrongly wore someone else's glasses'. Natural phrasing is either 'salah memakai kacamata' or 'tidak sengaja memakai kacamata orang lain'.",
+  "fix": {
+   "target": "Dia menahan tawa waktu bos tidak sengaja memakai kacamata orang lain.",
+   "english": "He held back laughter when the boss accidentally put on someone else's glasses.",
+   "grammar": null
+  },
+  "newTokens": {},
+  "src": 1
+ },
+ {
+  "id": "id-3032",
+  "rating": 4,
+  "issue": "Heard-particle policy breach: 'sih' is modeled in the learner's own first-person voice, while the sibling particles lho (id-2891) and kok (id-2892) are correctly quarantined inside quoted speech. Policy rule 3: heard language, not modeled language. Quote it and make the tip say recognize-don't-copy, matching the lho card.",
+  "fix": {
+   "target": "Teman saya bilang, \"Filmnya bagus sih, cuma terlalu panjang.\"",
+   "english": "My friend said, \"The movie's good, I admit — it's just too long.\"",
+   "grammar": "Sih = spoken particle you'll hear everywhere: bagus sih = it's good, I admit. Recognize it — no need to use it."
+  },
+  "newTokens": {},
+  "src": 1
+ },
+ {
+  "id": "id-3095",
+  "rating": 5,
+  "issue": "Formal boilerplate slightly wrong: real surat keterangan certificates close with 'untuk dipergunakan sebagaimana mestinya' (or digunakan) — 'dipakai' is too casual for this fixed formula, and the whole point of the card is the authentic wording.",
+  "fix": {
+   "target": "Surat keterangan kerja ini dibuat untuk dipergunakan sebagaimana mestinya.",
+   "english": "This employment certificate is issued to be used as appropriate.",
+   "grammar": null
+  },
+  "newTokens": {
+   "dipergunakan": "be used (formal certificate boilerplate, from guna)"
+  },
+  "src": 2
+ },
+ {
+  "id": "id-3107",
+  "rating": 5,
+  "issue": "Formal sign card lacks a register-naming tip: the tip is pure morphology (peN-) and never tells the learner this is sign language or what people actually say. Policy rule 4 requires formal cards to name the register.",
+  "fix": {
+   "target": "Area ini khusus untuk pemegang kartu anggota.",
+   "english": "This area is exclusively for membership card holders.",
+   "grammar": "Sign word: pemegang kartu = 'card holder' (peN- = the holder) — spoken: yang punya kartu anggota."
+  },
+  "newTokens": {},
+  "src": 2
+ },
+ {
+  "id": "id-3166",
+  "rating": 5,
+  "issue": "Inaccurate everyday-equivalent in tip: 'speech often servis' is misleading here — servis means repair/maintenance service (servis motor); for layanan pelanggan people say CS, never 'servis pelanggan'. The tip risks teaching a wrong collocation.",
+  "fix": {
+   "target": "Layanan pelanggan kami dapat dihubungi dua puluh empat jam.",
+   "english": "Our customer service can be reached twenty-four hours a day.",
+   "grammar": "layanan = formal 'service', from melayani — in speech, customer service is just CS (ce-es)."
+  },
+  "newTokens": {},
+  "src": 2
+ },
+ {
+  "id": "id-3171",
+  "rating": 5,
+  "issue": "The formal Indonesian is off: bank notices say 'penarikan (tunai)' for withdrawals and ask customers to 'konfirmasi/dikonfirmasi sehari sebelumnya' — 'pengambilan uang ... harap dilaporkan' (be reported) is not how any bank phrases it. Tip repeats the wrong noun.",
+  "fix": {
+   "target": "Penarikan uang di atas sepuluh juta harap dikonfirmasi sehari sebelumnya.",
+   "english": "Withdrawals above ten million should be confirmed one day in advance.",
+   "grammar": "penarikan uang = 'withdrawal', bank language — spoken: mau ambil uang."
+  },
+  "newTokens": {
+   "penarikan": "withdrawal (banking, from tarik)",
+   "dikonfirmasi": "be confirmed"
+  },
+  "src": 2
+ },
+ {
+  "id": "id-3209",
+  "rating": 5,
+  "issue": "Gloss overtranslates: pahit banget = 'really bitter', not 'way too bitter' — 'too' would be terlalu/kepahitan. The card teaches banget = sekali/sangat, so the gloss should not smuggle in excess.",
+  "fix": {
+   "target": "Kopi di kedai baru itu pahit banget menurutku.",
+   "english": "The coffee at that new cafe is really bitter, if you ask me.",
+   "grammar": null
+  },
+  "newTokens": {},
+  "src": 2
+ },
+ {
+  "id": "id-3230",
+  "rating": 5,
+  "issue": "Internal register clash: 'akhir pekan' is flagged by this deck's own tip (id-3132) as the news word — 'in conversation everyone says weekend or Sabtu-Minggu' — yet here it sits in a slang card next to 'lagi ngapain'. Recast with the conversational form.",
+  "fix": {
+   "target": "Dia tanya aku lagi ngapain Sabtu-Minggu ini.",
+   "english": "She asked what I was up to this weekend.",
+   "grammar": null
+  },
+  "newTokens": {},
+  "src": 2
+ },
+ {
+  "id": "id-3236",
+  "rating": 5,
+  "issue": "Incoherent register mix: nobody who softens with dong asks 'seru tidak?' — the natural tag with dong is 'seru nggak?'. nggak is already sanctioned in this node (id-3176ff), so the fix stays within taught material.",
+  "fix": {
+   "target": "Cerita dong, liburanmu di Bali kemarin seru nggak?",
+   "english": "Come on, tell me — was your Bali trip fun or not?",
+   "grammar": null
+  },
+  "newTokens": {},
+  "src": 2
+ },
+ {
+  "id": "id-3268",
+  "rating": 5,
+  "issue": "Colloquial card missing its register tip: this is the first (and only) occurrence of the interjection 'duh' in the slice and the card has no grammar tip at all — policy rule 3 requires sanctioned colloquials to carry a tip.",
+  "fix": {
+   "target": "Duh, aku ketinggalan dompet di rumah lagi.",
+   "english": "Ugh, I left my wallet at home again.",
+   "grammar": "Duh = 'ugh/oh no', the spoken groan for small disasters: duh, ketinggalan dompet!"
+  },
+  "newTokens": {},
+  "src": 2
+ },
+ {
+  "id": "id-3290",
+  "rating": 5,
+  "issue": "Internal register clash: the deck's own tip (id-3112) says 'in real life everyone says HP', yet this everyday-speech card (a parent nagging a child) uses written-register 'ponsel'. In node-36 the spoken word belongs in the sentence.",
+  "fix": {
+   "target": "Jangan main HP terus, matamu bisa sakit.",
+   "english": "Stop playing on your phone all the time — your eyes will hurt.",
+   "grammar": "Main HP = 'be on your phone' — HP (ha-pe) is what everyone calls a phone in speech."
+  },
+  "newTokens": {
+   "HP": "cellphone, phone (spoken; pronounced ha-pe)"
+  },
+  "src": 2
+ },
+ {
+  "id": "id-3308",
+  "rating": 4,
+  "issue": "Process error: the stated order (akta kelahiran first, THEN name enters KK) is backwards. Adding a newborn to the KK needs the hospital's surat keterangan lahir, not the akta; under Dukcapil's integrated service the akta, updated KK, and KIA are issued together in one visit. The card teaches a wrong bureaucratic sequence in the node whose whole point is sequence accuracy.",
+  "fix": {
+   "target": "Nama anak dimasukkan ke kartu keluarga bersamaan dengan pengurusan akta kelahirannya.",
+   "english": "The child's name is added to the family card at the same time as the birth certificate is processed.",
+   "grammar": "Bersamaan dengan = at the same time as: diurus bersamaan = processed together — one Dukcapil visit."
+  },
+  "src": 3
+ },
+ {
+  "id": "id-3373",
+  "rating": 5,
+  "issue": "Currency: the kelas 1-2-3 room system is being phased out — Perpres 59/2024 mandated the standard inpatient class (KRIS) in place of class-based rooms from mid-2025, so 'kelas rawat menentukan kamar' is stale-to-wrong for a 2026 learner walking into a hospital.",
+  "fix": {
+   "target": "Kamar pasien BPJS sekarang mulai disamakan lewat kelas rawat inap standar.",
+   "english": "BPJS patient rooms are now starting to be standardized through the standard inpatient class.",
+   "grammar": "KRIS (kelas rawat inap standar) is replacing the old kelas 1–3 — one standard room class for all."
+  },
+  "src": 3
+ },
+ {
+  "id": "id-3404",
+  "rating": 5,
+  "issue": "Stale terminology: from the 2025/2026 intake, PPDB was rebranded SPMB and 'jalur zonasi' was renamed 'jalur domisili' (placement by home address). Parents still say zonasi colloquially, but a card teaching the official track name should teach the current one.",
+  "fix": {
+   "target": "Kami mendaftarkan anak ke sekolah dekat rumah lewat jalur domisili.",
+   "english": "We registered our child at a school near home through the residence track.",
+   "grammar": "Jalur domisili = placement by home address — the 2025 rename of the old jalur zonasi."
+  },
+  "src": 3
+ },
+ {
+  "id": "id-3503",
+  "rating": 4,
+  "issue": "Logic/custom error: Imlek is a one-day national holiday — falling on a Monday cannot by itself close an office for two days. The real two-day closure comes from cuti bersama (a government joint-leave day) attached to the holiday; the card misses the chance to teach that essential calendar word.",
+  "fix": {
+   "target": "Kantor teman saya libur dua hari karena ada cuti bersama setelah hari raya Imlek.",
+   "english": "My friend's office is off for two days because there is a joint leave day after Imlek.",
+   "grammar": "Cuti bersama = government-set joint leave glued onto holidays — Indonesia's long-weekend maker."
+  },
+  "src": 3
+ },
+ {
+  "id": "id-3551",
+  "rating": 5,
+  "issue": "Gloss infidelity: in English you fill a PRESCRIPTION, not a medicine — 'this medicine has to be filled' is broken pharmacy English. 'Ditebus' = redeemed/bought against the prescription. The tip repeats the same 'filled' error.",
+  "fix": {
+   "target": "Obat ini harus ditebus dengan resep dokter di apotek.",
+   "english": "You can only get this medicine with a doctor's prescription at the pharmacy.",
+   "grammar": "Obat resep = prescription medicine: ditebus dengan resep = bought only against a prescription."
+  },
+  "src": 4
+ },
+ {
+  "id": "id-3562",
+  "rating": 5,
+  "issue": "Tip defect: final sentence 'The -kan asks it done' is garbled English and explains nothing about causative -kan. Sentence itself is fine.",
+  "fix": {
+   "target": "Kalau demamnya tidak turun dalam tiga hari, segera periksakan ke dokter.",
+   "english": "If the fever doesn't go down in three days, have it checked by a doctor right away.",
+   "grammar": "Periksakan = have it checked: periksakan ke dokter = get a doctor to look at it."
+  },
+  "src": 4
+ },
+ {
+  "id": "id-3572",
+  "rating": 4,
+  "issue": "Factual usage error: Indonesians read phone and emergency numbers digit by digit — 112 is 'satu satu dua', never 'seratus dua belas'. The card actively teaches a reading no one would use when calling for help.",
+  "fix": {
+   "target": "Nomor darurat di Indonesia adalah satu satu dua, mudah diingat.",
+   "english": "The emergency number in Indonesia is one-one-two, easy to remember.",
+   "grammar": "Numbers you dial are read digit by digit: 112 = satu satu dua, never seratus dua belas."
+  },
+  "src": 4
+ },
+ {
+  "id": "id-3640",
+  "rating": 5,
+  "issue": "Dangling clause after 'bilang': 'orang Indonesia bilang sedang masuk angin' never names who is masuk angin, so the report has no subject. Natural speech supplies it: 'bilang kamu sedang masuk angin'.",
+  "fix": {
+   "target": "Kalau badan pegal dan meriang, orang Indonesia bilang kamu sedang masuk angin.",
+   "english": "When your body is achy and feverish, Indonesians say you have 'masuk angin'.",
+   "grammar": "Masuk angin ('wind got in') = the classic catch-all unwellness: chills, bloating, fatigue. Untranslatable."
+  },
+  "src": 4
+ },
+ {
+  "id": "id-3653",
+  "rating": 5,
+  "issue": "'Meskipun modern' is a dangling English-style adjective — a person isn't 'modern' the way a building is; the concessive clause reads translated. The doctor-tolerates-kerokan framing itself is good and worth keeping.",
+  "fix": {
+   "target": "Dokter kami tidak melarang kerokan, asal kulitnya tidak sampai terluka.",
+   "english": "Our doctor doesn't forbid kerokan, as long as the skin doesn't get injured.",
+   "grammar": "Asal = as long as (condition): asal kulit tidak terluka = as long as the skin isn't hurt."
+  },
+  "src": 4
+ },
+ {
+  "id": "id-3654",
+  "rating": 5,
+  "issue": "Word-for-word calque of 'is always in Grandma's bag wherever she goes': existence verb 'ada di dalam tas' cannot take the direction phrase 'ke mana-mana'. Indonesian needs a motion verb to carry 'everywhere'.",
+  "fix": {
+   "target": "Balsam hangat ini selalu dibawa nenek ke mana-mana di dalam tasnya.",
+   "english": "Grandma takes this warming balm everywhere in her bag.",
+   "grammar": null
+  },
+  "src": 4
+ },
+ {
+  "id": "id-3669",
+  "rating": 5,
+  "issue": "'Menitip salam' is a hybrid register form: conversational Indonesian says 'titip salam', the full formal form is 'menitipkan salam'. Bare meN- without -kan on titip is the one variant nobody models.",
+  "fix": {
+   "target": "Ibu titip salam dan doa untuk tantemu yang sedang sakit.",
+   "english": "Mom sends her greetings and prayers for your aunt who is sick.",
+   "grammar": "Titip salam = pass greetings through someone: ibu titip salam = mom sends her regards."
+  },
+  "src": 4
+ },
+ {
+  "id": "id-3824",
+  "rating": 5,
+  "issue": "English gloss calques the membuat+passive frame: 'Strong winds made the flight to Lombok get postponed' is not natural English. Indonesian sentence is fine.",
+  "fix": {
+   "target": null,
+   "english": "Strong winds caused the flight to Lombok to be postponed until tomorrow morning.",
+   "grammar": null
+  },
+  "newTokens": [],
+  "src": 5
+ },
+ {
+  "id": "id-3834",
+  "rating": 5,
+  "issue": "Tip factual error: glosses the root 'putus' as 'decide'. Putus means broken/severed/cut off; the verb 'decide' is memutuskan. As written the tip teaches a wrong word meaning. Sentence itself is excellent.",
+  "fix": {
+   "target": null,
+   "english": null,
+   "grammar": "ke-...-an also makes nouns from verbs: memutuskan decide, keputusan decision; sempat manage to, kesempatan chance."
+  },
+  "newTokens": [],
+  "src": 5
+ },
+ {
+  "id": "id-3842",
+  "rating": 5,
+  "issue": "Collocation: friendships 'berawal dari', not 'mulai dari'. 'Persahabatan kami mulai dari kos yang sama' is clipped and off-collocation — mulai dari is the 'starting from/ranging from' frame, not 'originated in'.",
+  "fix": {
+   "target": "Persahabatan kami berawal dari kos yang sama lima belas tahun lalu.",
+   "english": null,
+   "grammar": null
+  },
+  "newTokens": [
+   "berawal"
+  ],
+  "src": 5
+ },
+ {
+  "id": "id-3866",
+  "rating": 5,
+  "issue": "Site vocabulary: workers say 'lokasi proyek' (or 'proyek' alone) for a construction site; 'lokasi pembangunan' is planning-document language. Tool/PPE vocab (helm, sarung tangan) is otherwise precise; wajib register fits a safety rule.",
+  "fix": {
+   "target": "Helm dan sarung tangan wajib dipakai semua pekerja di lokasi proyek ini.",
+   "english": null,
+   "grammar": null
+  },
+  "newTokens": [],
+  "src": 5
+ },
+ {
+  "id": "id-3880",
+  "rating": 5,
+  "issue": "Set idiom clipped: 'dibahas panjang' — the fixed collocation is 'dibahas panjang lebar' (discussed at length). Bare 'panjang' reads as truncated.",
+  "fix": {
+   "target": "Usul yang kamu tulis kemarin dibahas panjang lebar dalam rapat direksi tadi pagi.",
+   "english": null,
+   "grammar": null
+  },
+  "newTokens": [],
+  "src": 5
+ },
+ {
+  "id": "id-3887",
+  "rating": 5,
+  "issue": "Orthography: 'lebaran' lowercase. Lebaran is a proper noun (the holiday) and is capitalized — the deck itself writes 'Lebaran' in its three other occurrences, so this card breaks internal consistency too. Sentence and perantauan tip are otherwise excellent.",
+  "fix": {
+   "target": "Setiap Lebaran, rumah kami penuh dengan saudara yang pulang dari perantauan.",
+   "english": null,
+   "grammar": null
+  },
+  "newTokens": [],
+  "src": 5
+ },
+ {
+  "id": "id-3896",
+  "rating": 5,
+  "issue": "Dictionary-example-ese: 'sinyal telepon hilang' — nobody says sinyal telepon; it's 'sinyal HP' or just 'tidak ada sinyal'. The bare-sinyal version is the natural remote-area complaint.",
+  "fix": {
+   "target": "Peta kertas tetap berguna kalau tidak ada sinyal di daerah terpencil.",
+   "english": "A paper map is still useful if there is no signal in a remote area.",
+   "grammar": null
+  },
+  "newTokens": [],
+  "src": 5
+ },
+ {
+  "id": "id-3933",
+  "rating": 4,
+  "issue": "Proverb wording off: canonical form is 'Buah jatuh tak jauh dari pohonnya' — the fixed proverb uses 'tak', and normalizing it to 'tidak' breaks the quoted wording (severe under proverb-exactness rule; a learner who repeats the card's version will sound off). 'tak' is already deck vocabulary via id-3930 'Tak kenal maka tak sayang'. Application clause and tip are good.",
+  "fix": {
+   "target": "Buah jatuh tak jauh dari pohonnya; anak itu rajin persis seperti ibunya.",
+   "english": null,
+   "grammar": null
+  },
+  "newTokens": [],
+  "src": 5
+ },
+ {
+  "id": "id-3912",
+  "rating": 5,
+  "issue": "English gloss calques 'melahirkan': 'every answer gives birth to a new question' is translationese. Indonesian melahirkan = 'generate/spark' in this frame; the Indonesian sentence itself is natural and vivid.",
+  "fix": {
+   "target": null,
+   "english": "That child's curiosity never runs out; every answer sparks a new question.",
+   "grammar": null
+  },
+  "newTokens": [],
+  "src": 5
+ }
+]

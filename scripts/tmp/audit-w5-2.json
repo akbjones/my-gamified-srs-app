@@ -1,0 +1,108 @@
+[
+ {
+  "id": "id-3095",
+  "rating": 5,
+  "issue": "Formal boilerplate slightly wrong: real surat keterangan certificates close with 'untuk dipergunakan sebagaimana mestinya' (or digunakan) — 'dipakai' is too casual for this fixed formula, and the whole point of the card is the authentic wording.",
+  "fix": {
+   "target": "Surat keterangan kerja ini dibuat untuk dipergunakan sebagaimana mestinya.",
+   "english": "This employment certificate is issued to be used as appropriate.",
+   "grammar": null
+  },
+  "newTokens": {
+   "dipergunakan": "be used (formal certificate boilerplate, from guna)"
+  }
+ },
+ {
+  "id": "id-3107",
+  "rating": 5,
+  "issue": "Formal sign card lacks a register-naming tip: the tip is pure morphology (peN-) and never tells the learner this is sign language or what people actually say. Policy rule 4 requires formal cards to name the register.",
+  "fix": {
+   "target": "Area ini khusus untuk pemegang kartu anggota.",
+   "english": "This area is exclusively for membership card holders.",
+   "grammar": "Sign word: pemegang kartu = 'card holder' (peN- = the holder) — spoken: yang punya kartu anggota."
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "id-3166",
+  "rating": 5,
+  "issue": "Inaccurate everyday-equivalent in tip: 'speech often servis' is misleading here — servis means repair/maintenance service (servis motor); for layanan pelanggan people say CS, never 'servis pelanggan'. The tip risks teaching a wrong collocation.",
+  "fix": {
+   "target": "Layanan pelanggan kami dapat dihubungi dua puluh empat jam.",
+   "english": "Our customer service can be reached twenty-four hours a day.",
+   "grammar": "layanan = formal 'service', from melayani — in speech, customer service is just CS (ce-es)."
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "id-3171",
+  "rating": 5,
+  "issue": "The formal Indonesian is off: bank notices say 'penarikan (tunai)' for withdrawals and ask customers to 'konfirmasi/dikonfirmasi sehari sebelumnya' — 'pengambilan uang ... harap dilaporkan' (be reported) is not how any bank phrases it. Tip repeats the wrong noun.",
+  "fix": {
+   "target": "Penarikan uang di atas sepuluh juta harap dikonfirmasi sehari sebelumnya.",
+   "english": "Withdrawals above ten million should be confirmed one day in advance.",
+   "grammar": "penarikan uang = 'withdrawal', bank language — spoken: mau ambil uang."
+  },
+  "newTokens": {
+   "penarikan": "withdrawal (banking, from tarik)",
+   "dikonfirmasi": "be confirmed"
+  }
+ },
+ {
+  "id": "id-3209",
+  "rating": 5,
+  "issue": "Gloss overtranslates: pahit banget = 'really bitter', not 'way too bitter' — 'too' would be terlalu/kepahitan. The card teaches banget = sekali/sangat, so the gloss should not smuggle in excess.",
+  "fix": {
+   "target": "Kopi di kedai baru itu pahit banget menurutku.",
+   "english": "The coffee at that new cafe is really bitter, if you ask me.",
+   "grammar": null
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "id-3230",
+  "rating": 5,
+  "issue": "Internal register clash: 'akhir pekan' is flagged by this deck's own tip (id-3132) as the news word — 'in conversation everyone says weekend or Sabtu-Minggu' — yet here it sits in a slang card next to 'lagi ngapain'. Recast with the conversational form.",
+  "fix": {
+   "target": "Dia tanya aku lagi ngapain Sabtu-Minggu ini.",
+   "english": "She asked what I was up to this weekend.",
+   "grammar": null
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "id-3236",
+  "rating": 5,
+  "issue": "Incoherent register mix: nobody who softens with dong asks 'seru tidak?' — the natural tag with dong is 'seru nggak?'. nggak is already sanctioned in this node (id-3176ff), so the fix stays within taught material.",
+  "fix": {
+   "target": "Cerita dong, liburanmu di Bali kemarin seru nggak?",
+   "english": "Come on, tell me — was your Bali trip fun or not?",
+   "grammar": null
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "id-3268",
+  "rating": 5,
+  "issue": "Colloquial card missing its register tip: this is the first (and only) occurrence of the interjection 'duh' in the slice and the card has no grammar tip at all — policy rule 3 requires sanctioned colloquials to carry a tip.",
+  "fix": {
+   "target": "Duh, aku ketinggalan dompet di rumah lagi.",
+   "english": "Ugh, I left my wallet at home again.",
+   "grammar": "Duh = 'ugh/oh no', the spoken groan for small disasters: duh, ketinggalan dompet!"
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "id-3290",
+  "rating": 5,
+  "issue": "Internal register clash: the deck's own tip (id-3112) says 'in real life everyone says HP', yet this everyday-speech card (a parent nagging a child) uses written-register 'ponsel'. In node-36 the spoken word belongs in the sentence.",
+  "fix": {
+   "target": "Jangan main HP terus, matamu bisa sakit.",
+   "english": "Stop playing on your phone all the time — your eyes will hurt.",
+   "grammar": "Main HP = 'be on your phone' — HP (ha-pe) is what everyone calls a phone in speech."
+  },
+  "newTokens": {
+   "HP": "cellphone, phone (spoken; pronounced ha-pe)"
+  }
+ }
+]

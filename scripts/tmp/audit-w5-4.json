@@ -1,0 +1,72 @@
+[
+  {
+    "id": "id-3551",
+    "rating": 5,
+    "issue": "Gloss infidelity: in English you fill a PRESCRIPTION, not a medicine — 'this medicine has to be filled' is broken pharmacy English. 'Ditebus' = redeemed/bought against the prescription. The tip repeats the same 'filled' error.",
+    "fix": {
+      "target": "Obat ini harus ditebus dengan resep dokter di apotek.",
+      "english": "You can only get this medicine with a doctor's prescription at the pharmacy.",
+      "grammar": "Obat resep = prescription medicine: ditebus dengan resep = bought only against a prescription."
+    }
+  },
+  {
+    "id": "id-3562",
+    "rating": 5,
+    "issue": "Tip defect: final sentence 'The -kan asks it done' is garbled English and explains nothing about causative -kan. Sentence itself is fine.",
+    "fix": {
+      "target": "Kalau demamnya tidak turun dalam tiga hari, segera periksakan ke dokter.",
+      "english": "If the fever doesn't go down in three days, have it checked by a doctor right away.",
+      "grammar": "Periksakan = have it checked: periksakan ke dokter = get a doctor to look at it."
+    }
+  },
+  {
+    "id": "id-3572",
+    "rating": 4,
+    "issue": "Factual usage error: Indonesians read phone and emergency numbers digit by digit — 112 is 'satu satu dua', never 'seratus dua belas'. The card actively teaches a reading no one would use when calling for help.",
+    "fix": {
+      "target": "Nomor darurat di Indonesia adalah satu satu dua, mudah diingat.",
+      "english": "The emergency number in Indonesia is one-one-two, easy to remember.",
+      "grammar": "Numbers you dial are read digit by digit: 112 = satu satu dua, never seratus dua belas."
+    }
+  },
+  {
+    "id": "id-3640",
+    "rating": 5,
+    "issue": "Dangling clause after 'bilang': 'orang Indonesia bilang sedang masuk angin' never names who is masuk angin, so the report has no subject. Natural speech supplies it: 'bilang kamu sedang masuk angin'.",
+    "fix": {
+      "target": "Kalau badan pegal dan meriang, orang Indonesia bilang kamu sedang masuk angin.",
+      "english": "When your body is achy and feverish, Indonesians say you have 'masuk angin'.",
+      "grammar": "Masuk angin ('wind got in') = the classic catch-all unwellness: chills, bloating, fatigue. Untranslatable."
+    }
+  },
+  {
+    "id": "id-3653",
+    "rating": 5,
+    "issue": "'Meskipun modern' is a dangling English-style adjective — a person isn't 'modern' the way a building is; the concessive clause reads translated. The doctor-tolerates-kerokan framing itself is good and worth keeping.",
+    "fix": {
+      "target": "Dokter kami tidak melarang kerokan, asal kulitnya tidak sampai terluka.",
+      "english": "Our doctor doesn't forbid kerokan, as long as the skin doesn't get injured.",
+      "grammar": "Asal = as long as (condition): asal kulit tidak terluka = as long as the skin isn't hurt."
+    }
+  },
+  {
+    "id": "id-3654",
+    "rating": 5,
+    "issue": "Word-for-word calque of 'is always in Grandma's bag wherever she goes': existence verb 'ada di dalam tas' cannot take the direction phrase 'ke mana-mana'. Indonesian needs a motion verb to carry 'everywhere'.",
+    "fix": {
+      "target": "Balsam hangat ini selalu dibawa nenek ke mana-mana di dalam tasnya.",
+      "english": "Grandma takes this warming balm everywhere in her bag.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-3669",
+    "rating": 5,
+    "issue": "'Menitip salam' is a hybrid register form: conversational Indonesian says 'titip salam', the full formal form is 'menitipkan salam'. Bare meN- without -kan on titip is the one variant nobody models.",
+    "fix": {
+      "target": "Ibu titip salam dan doa untuk tantemu yang sedang sakit.",
+      "english": "Mom sends her greetings and prayers for your aunt who is sick.",
+      "grammar": "Titip salam = pass greetings through someone: ibu titip salam = mom sends her regards."
+    }
+  }
+]

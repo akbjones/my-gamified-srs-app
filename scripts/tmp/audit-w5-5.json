@@ -1,0 +1,255 @@
+[
+  {
+    "id": "id-3804",
+    "rating": 6,
+    "issue": "Minor echo: 'rak kayu ini hari ini' stacks two 'ini' — grammatical and understandable, just slightly clunky read aloud. 'rak kayu itu hari ini' would flow better.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3805",
+    "rating": 6,
+    "issue": "'menaiki tangga' is written-register; across a table people say 'naik tangga'. Full meN- form is policy-canonical (rule 5), so acceptable, but naik is the lexicalized everyday verb here.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3810",
+    "rating": 6,
+    "issue": "'masih berfungsi' leans technical-manual; the across-the-table phrasing for grandma's sewing machine is 'masih bisa dipakai' or 'masih jalan'. Not wrong, slightly stiff for the domestic scene.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3820",
+    "rating": 6,
+    "issue": "'Jalan menuju bandara' has a travel-notice flavor (menuju); casual speech says 'jalan ke bandara'. Situationally defensible as reported closure info.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3824",
+    "rating": 5,
+    "issue": "English gloss calques the membuat+passive frame: 'Strong winds made the flight to Lombok get postponed' is not natural English. Indonesian sentence is fine.",
+    "fix": {
+      "target": null,
+      "english": "Strong winds caused the flight to Lombok to be postponed until tomorrow morning.",
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3828",
+    "rating": 6,
+    "issue": "'orang tua' is ambiguous (parents vs. the elderly). The contrast pair 'orang tua dan anak kecil' does read as 'old folks and small children' in a health warning, so it works, but a learner who just learned orang tua = parents may misparse. 'orang yang sudah tua' would be unambiguous.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3834",
+    "rating": 5,
+    "issue": "Tip factual error: glosses the root 'putus' as 'decide'. Putus means broken/severed/cut off; the verb 'decide' is memutuskan. As written the tip teaches a wrong word meaning. Sentence itself is excellent.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": "ke-...-an also makes nouns from verbs: memutuskan decide, keputusan decision; sempat manage to, kesempatan chance."
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3842",
+    "rating": 5,
+    "issue": "Collocation: friendships 'berawal dari', not 'mulai dari'. 'Persahabatan kami mulai dari kos yang sama' is clipped and off-collocation — mulai dari is the 'starting from/ranging from' frame, not 'originated in'.",
+    "fix": {
+      "target": "Persahabatan kami berawal dari kos yang sama lima belas tahun lalu.",
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": ["berawal"]
+  },
+  {
+    "id": "id-3843",
+    "rating": 6,
+    "issue": "Loose topic-comment pivot: 'Kebiasaan kecil ... lama-lama terasa hasilnya' switches subject midstream (the habit ... its results are felt). Genuinely conversational Indonesian does this, so it passes — but it is at the edge.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3862",
+    "rating": 6,
+    "issue": "Elliptical 'kalau' doing 'in case' duty: the full spoken chunk is 'untuk jaga-jaga kalau mati lampu'. Also 'mati lampu di jalan' is a slightly odd frame (mati lampu prototypically = building/neighborhood outage). Understandable, mildly compressed.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3866",
+    "rating": 5,
+    "issue": "Site vocabulary: workers say 'lokasi proyek' (or 'proyek' alone) for a construction site; 'lokasi pembangunan' is planning-document language. Tool/PPE vocab (helm, sarung tangan) is otherwise precise; wajib register fits a safety rule.",
+    "fix": {
+      "target": "Helm dan sarung tangan wajib dipakai semua pekerja di lokasi proyek ini.",
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3869",
+    "rating": 6,
+    "issue": "'hilang arah' — standard form is 'kehilangan arah' (or plain 'tersesat'); bare 'hilang arah' is attested colloquially/poetically but is the marked choice.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3873",
+    "rating": 6,
+    "issue": "Weather-vocab precision: 'surut' prototypically describes tides/floods receding; a well running low is usually 'mengering' or 'airnya menyusut/berkurang'. 'Air sumur surut' is attested and understood — minor precision ding.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3880",
+    "rating": 5,
+    "issue": "Set idiom clipped: 'dibahas panjang' — the fixed collocation is 'dibahas panjang lebar' (discussed at length). Bare 'panjang' reads as truncated.",
+    "fix": {
+      "target": "Usul yang kamu tulis kemarin dibahas panjang lebar dalam rapat direksi tadi pagi.",
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3887",
+    "rating": 5,
+    "issue": "Orthography: 'lebaran' lowercase. Lebaran is a proper noun (the holiday) and is capitalized — the deck itself writes 'Lebaran' in its three other occurrences, so this card breaks internal consistency too. Sentence and perantauan tip are otherwise excellent.",
+    "fix": {
+      "target": "Setiap Lebaran, rumah kami penuh dengan saudara yang pulang dari perantauan.",
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3896",
+    "rating": 5,
+    "issue": "Dictionary-example-ese: 'sinyal telepon hilang' — nobody says sinyal telepon; it's 'sinyal HP' or just 'tidak ada sinyal'. The bare-sinyal version is the natural remote-area complaint.",
+    "fix": {
+      "target": "Peta kertas tetap berguna kalau tidak ada sinyal di daerah terpencil.",
+      "english": "A paper map is still useful if there is no signal in a remote area.",
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3898",
+    "rating": 6,
+    "issue": "'rambu peringatan' — rambu is prototypically road signage; beach warning boards are 'papan peringatan'. Rambu-rambu is used loosely enough that this passes, but papan would be the precise pick.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3910",
+    "rating": 6,
+    "issue": "'gelombang tinggi akan berlangsung sampai' — berlangsung suits events; forecast-speak (BMKG) is 'berpotensi terjadi hingga' or plain 'masih tinggi sampai'. Acceptable news register for a forecast sentence.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3918",
+    "rating": 6,
+    "issue": "'kini' is written/reflective register; neutral speech uses 'sekarang'. In a capstone dulu-vs-kini contrast sentence it is defensible (rule 4 latitude), but it is the only baku-flavored word in the card.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3920",
+    "rating": 6,
+    "issue": "The tail 'kalau kamu masih berminat' logically conditions the telling, not the opening — an FYI frame. Spoken Indonesian genuinely does this and the English mirrors it, so it passes, but strictly the kalau-clause dangles.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3927",
+    "rating": 6,
+    "issue": "Proverb variant check: card gives 'Sekali mendayung, dua tiga pulau terlampaui' — the dominant modern/textbook form. Classical peribahasa dictionaries have 'Sekali merengkuh dayung, dua tiga pulau terlampaui'. The short form is what Indonesians actually quote, so it stands as canonical-in-use; noting the variant for the record. Usage sentence and tip are clean.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3933",
+    "rating": 4,
+    "issue": "Proverb wording off: canonical form is 'Buah jatuh tak jauh dari pohonnya' — the fixed proverb uses 'tak', and normalizing it to 'tidak' breaks the quoted wording (severe under proverb-exactness rule; a learner who repeats the card's version will sound off). 'tak' is already deck vocabulary via id-3930 'Tak kenal maka tak sayang'. Application clause and tip are good.",
+    "fix": {
+      "target": "Buah jatuh tak jauh dari pohonnya; anak itu rajin persis seperti ibunya.",
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-3912",
+    "rating": 5,
+    "issue": "English gloss calques 'melahirkan': 'every answer gives birth to a new question' is translationese. Indonesian melahirkan = 'generate/spark' in this frame; the Indonesian sentence itself is natural and vivid.",
+    "fix": {
+      "target": null,
+      "english": "That child's curiosity never runs out; every answer sparks a new question.",
+      "grammar": null
+    },
+    "newTokens": []
+  }
+]

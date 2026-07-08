@@ -1,0 +1,112 @@
+[
+  {
+    "id": "id-3302",
+    "rating": 6,
+    "issue": "Collocation: 'meminta KTP baru' reads like asking a person for a favor; the fixed verb for documents is 'mengurus' (which id-3301's own tip calls THE bureaucracy verb). Process itself (police loss report first) is accurate.",
+    "fix": {
+      "target": "Sebelum mengurus KTP baru, saya harus melaporkan kehilangannya ke kantor polisi.",
+      "english": "Before sorting out a new ID card, I have to report the loss to the police station.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-3308",
+    "rating": 4,
+    "issue": "Process error: the stated order (akta kelahiran first, THEN name enters KK) is backwards. Adding a newborn to the KK needs the hospital's surat keterangan lahir, not the akta; under Dukcapil's integrated service the akta, updated KK, and KIA are issued together in one visit. The card teaches a wrong bureaucratic sequence in the node whose whole point is sequence accuracy.",
+    "fix": {
+      "target": "Nama anak dimasukkan ke kartu keluarga bersamaan dengan pengurusan akta kelahirannya.",
+      "english": "The child's name is added to the family card at the same time as the birth certificate is processed.",
+      "grammar": "Bersamaan dengan = at the same time as: diurus bersamaan = processed together — one Dukcapil visit."
+    }
+  },
+  {
+    "id": "id-3312",
+    "rating": 6,
+    "issue": "Process pairing slightly off: a blurry photo on the card is fixed by cetak ulang (reprint); rekam ulang (biometric re-capture) is triggered by failed fingerprint/iris data. The classic rekam-ulang cause makes the sentence process-true.",
+    "fix": {
+      "target": "Data e-KTP saya harus direkam ulang karena sidik jari saya gagal terbaca.",
+      "english": "My e-KTP data has to be recorded again because my fingerprints failed to be read.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-3322",
+    "rating": 6,
+    "issue": "Tip imprecision: 'Doubling adds repetition' implies bolak-balik is plain reduplication, but 'bolak' never occurs alone — it is an ablaut (sound-flipped) double of balik. A learner following the tip might coin *pergi-pergi for 'back and forth'.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": "Bolak-balik = back and forth — a sound-flipped double of balik. Same family: mondar-mandir, warna-warni."
+    }
+  },
+  {
+    "id": "id-3341",
+    "rating": 6,
+    "issue": "Gloss calque (English side): 'to make a passport' mirrors membuat paspor literally; natural English is 'apply for a passport'. Target sentence and the parental-consent requirement itself are accurate.",
+    "fix": {
+      "target": null,
+      "english": "A minor needs a parental permission letter to apply for a passport.",
+      "grammar": null
+    }
+  },
+  {
+    "id": "id-3370",
+    "rating": 6,
+    "issue": "Terminology: 'tempat berobat pertama' is a paraphrase nobody at a BPJS counter uses — the universal word is 'faskes pertama' (faskes tingkat satu). It appears on every form and in every queue conversation; the card should teach it.",
+    "fix": {
+      "target": "Pilih dulu klinik terdekat sebagai faskes pertama kamu.",
+      "english": "First choose the nearest clinic as your first-level care facility.",
+      "grammar": "Faskes (fasilitas kesehatan) pertama = your first-stop BPJS clinic — the word on every form."
+    }
+  },
+  {
+    "id": "id-3373",
+    "rating": 5,
+    "issue": "Currency: the kelas 1-2-3 room system is being phased out — Perpres 59/2024 mandated the standard inpatient class (KRIS) in place of class-based rooms from mid-2025, so 'kelas rawat menentukan kamar' is stale-to-wrong for a 2026 learner walking into a hospital.",
+    "fix": {
+      "target": "Kamar pasien BPJS sekarang mulai disamakan lewat kelas rawat inap standar.",
+      "english": "BPJS patient rooms are now starting to be standardized through the standard inpatient class.",
+      "grammar": "KRIS (kelas rawat inap standar) is replacing the old kelas 1–3 — one standard room class for all."
+    }
+  },
+  {
+    "id": "id-3388",
+    "rating": 6,
+    "issue": "Factual ambiguity: Rp2.500 is specifically the BI-Fast rate; the traditional realtime-online interbank channel still charges Rp6.500. Stated bare, the card sets up a surprise at the ATM. A one-line tip disambiguates.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": "Rp2.500 is the BI-Fast rate; the older 'online' transfer channel still costs Rp6.500."
+    }
+  },
+  {
+    "id": "id-3404",
+    "rating": 5,
+    "issue": "Stale terminology: from the 2025/2026 intake, PPDB was rebranded SPMB and 'jalur zonasi' was renamed 'jalur domisili' (placement by home address). Parents still say zonasi colloquially, but a card teaching the official track name should teach the current one.",
+    "fix": {
+      "target": "Kami mendaftarkan anak ke sekolah dekat rumah lewat jalur domisili.",
+      "english": "We registered our child at a school near home through the residence track.",
+      "grammar": "Jalur domisili = placement by home address — the 2025 rename of the old jalur zonasi."
+    }
+  },
+  {
+    "id": "id-3470",
+    "rating": 6,
+    "issue": "Tip overclaims: 'one month's salary, required by law' is only true for employees with 12+ months' service; shorter tenure gets a prorated THR. The H-7 payment deadline in the sentence itself is accurate.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": "THR = Tunjangan Hari Raya, the holiday bonus: a full month's pay after a year's service, by law."
+    }
+  },
+  {
+    "id": "id-3503",
+    "rating": 4,
+    "issue": "Logic/custom error: Imlek is a one-day national holiday — falling on a Monday cannot by itself close an office for two days. The real two-day closure comes from cuti bersama (a government joint-leave day) attached to the holiday; the card misses the chance to teach that essential calendar word.",
+    "fix": {
+      "target": "Kantor teman saya libur dua hari karena ada cuti bersama setelah hari raya Imlek.",
+      "english": "My friend's office is off for two days because there is a joint leave day after Imlek.",
+      "grammar": "Cuti bersama = government-set joint leave glued onto holidays — Indonesia's long-weekend maker."
+    }
+  }
+]

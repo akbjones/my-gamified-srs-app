@@ -3676,6 +3676,14 @@ const DICT: Record<string, DictEntry> = {
   'zakat': { en: 'alms (obligatory Islamic giving)', ipa: 'ˈzakat', pos: 'n' },
   'ziarah': { en: 'grave visit, pilgrimage (root of berziarah)', ipa: 'ziˈarah', pos: 'n' },
   'zonasi': { en: 'zoning (school placement by home distance)', ipa: 'zoˈnasi', pos: 'n' },
+  // ── Wave-5 audit-fix entries
+  'dikonfirmasi': { en: 'to be confirmed (passive of konfirmasi)', ipa: 'dikonfirˈmasi', pos: 'v', lemma: 'konfirmasi' },
+  'sabtu-minggu': { en: 'Saturday-Sunday, the weekend', ipa: 'ˈsabtu ˈmiŋɡu', pos: 'n' },
+  'bersamaan': { en: 'at the same time, simultaneous', ipa: 'bersaˈmaʔan', pos: 'adj', lemma: 'sama' },
+  'disamakan': { en: 'to be treated as the same, equated', ipa: 'disamaˈkan', pos: 'v', lemma: 'sama' },
+  'standar': { en: 'standard', ipa: 'ˈstandar', pos: 'n' },
+  'berawal': { en: 'to begin, to originate (berawal dari = to start from)', ipa: 'berˈawal', pos: 'v', lemma: 'awal' },
+  'penarikan': { en: 'withdrawal (penarikan tunai = cash withdrawal)', ipa: 'penaˈrikan', pos: 'n', lemma: 'tarik' },
 };
 
 const clean = (w: string) => w.toLowerCase().replace(/[^a-z-]/g, '');

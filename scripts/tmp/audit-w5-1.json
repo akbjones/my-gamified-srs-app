@@ -1,0 +1,90 @@
+[
+ {
+  "id": "id-2833",
+  "rating": 5,
+  "issue": "Register wobble: 'aku' is the only non-saya first-person pronoun in nodes 33-34 (all sibling anecdote cards use saya; aku is otherwise clustered in the later intimate-register block from id-3180 on). Mixing 'aku' with formal conjunction 'tetapi' in the same clause is also incongruous.",
+  "fix": {
+   "target": "Ceritanya saya mau berhemat bulan ini, tetapi ada diskon besar di mana-mana.",
+   "english": null,
+   "grammar": null
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "id-2835",
+  "rating": 5,
+  "issue": "Gloss garbled: 'what happened isn't necessarily true' asserts the event occurred and questions its truth, which is backwards — 'belum tentu benar kejadiannya' means it is not certain the thing actually happened at all. Target sentence itself is natural.",
+  "fix": {
+   "target": null,
+   "english": "All that is just what people say; it's not necessarily what really happened.",
+   "grammar": null
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "id-2853",
+  "rating": 5,
+  "issue": "Gloss tense clash: 'before we knew it, he has now become famous' mixes past 'knew' with present perfect + 'now' — unnatural English that will read as a translation error. Target sentence is a good tahu-tahu use.",
+  "fix": {
+   "target": null,
+   "english": "He used to come to this food stall often; before we knew it, he'd become a famous person.",
+   "grammar": null
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "id-2860",
+  "rating": 5,
+  "issue": "Sequencing: 'cuma' makes its deck-wide debut here (node-33), 91 cards before its register tip at id-2951 where the hanya/cuma contrast is actually taught. An untipped colloquialism debut violates the heard-vs-modeled discipline the slice otherwise keeps; hanya preserves the sentence and defers cuma to its tipped card.",
+  "fix": {
+   "target": "Katanya dia hanya mau melihat-lihat, ujung-ujungnya dia pulang membawa tiga kantong belanja.",
+   "english": null,
+   "grammar": null
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "id-2882",
+  "rating": 4,
+  "issue": "'Sudah diberi jalan lebih dekat' misfires: 'diberi jalan' is the fixed expression 'given way / let through', so the clause reads 'having been yielded to closer' — an English calque of 'given a shorter route'. Indonesian shows someone a route (ditunjukkan jalan), it doesn't give one.",
+  "fix": {
+   "target": "Sudah ditunjukkan jalan yang lebih dekat, dia malah memilih jalan memutar.",
+   "english": "He'd already been shown a shorter route; instead he chose the long way around.",
+   "grammar": null
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "id-2908",
+  "rating": 5,
+  "issue": "Dangling connective: the card opens with 'Sampai-sampai' but sampai-sampai is a consequence clause that needs an antecedent in the same sentence; as a standalone SRS card it is a fragment ('So much so that...' with no 'so much' stated). Restructure to carry its own cause.",
+  "fix": {
+   "target": "Kami tertawa terlalu keras, sampai-sampai tetangga ikut keluar.",
+   "english": "We laughed too loudly, so much so that the neighbors came out too.",
+   "grammar": null
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "id-2911",
+  "rating": 4,
+  "issue": "'salah memakai kacamata orang lain' double-marks the mistake and comes out wrong: salah memakai = put on the WRONG one, so adding 'orang lain' yields 'wrongly wore someone else's glasses'. Natural phrasing is either 'salah memakai kacamata' or 'tidak sengaja memakai kacamata orang lain'.",
+  "fix": {
+   "target": "Dia menahan tawa waktu bos tidak sengaja memakai kacamata orang lain.",
+   "english": "He held back laughter when the boss accidentally put on someone else's glasses.",
+   "grammar": null
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "id-3032",
+  "rating": 4,
+  "issue": "Heard-particle policy breach: 'sih' is modeled in the learner's own first-person voice, while the sibling particles lho (id-2891) and kok (id-2892) are correctly quarantined inside quoted speech. Policy rule 3: heard language, not modeled language. Quote it and make the tip say recognize-don't-copy, matching the lho card.",
+  "fix": {
+   "target": "Teman saya bilang, \"Filmnya bagus sih, cuma terlalu panjang.\"",
+   "english": "My friend said, \"The movie's good, I admit — it's just too long.\"",
+   "grammar": "Sih = spoken particle you'll hear everywhere: bagus sih = it's good, I admit. Recognize it — no need to use it."
+  },
+  "newTokens": {}
+ }
+]

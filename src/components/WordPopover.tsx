@@ -15,6 +15,7 @@ import { lookupWord as lookupHi } from '../data/dictionary/hi';
 import { lookupWord as lookupTr } from '../data/dictionary/tr';
 import { lookupWord as lookupRu } from '../data/dictionary/ru';
 import { lookupWord as lookupId } from '../data/dictionary/id';
+import { lookupWord as lookupEl } from '../data/dictionary/el';
 import { conjugate as conjugateEs } from '../data/conjugation/es';
 import { conjugate as conjugateIt } from '../data/conjugation/it';
 import { conjugate as conjugateFr } from '../data/conjugation/fr';
@@ -27,6 +28,7 @@ import { conjugateHindi } from '../data/conjugation/hi';
 import { conjugate as conjugateTr } from '../data/conjugation/tr';
 import { conjugate as conjugateRu } from '../data/conjugation/ru';
 import { conjugate as conjugateId } from '../data/conjugation/id';
+import { conjugate as conjugateEl } from '../data/conjugation/el';
 import { Language, ConjugationTable } from '../types';
 
 // Dynamic lookup per language – gracefully returns null for languages without a dictionary
@@ -43,6 +45,7 @@ const LOOKUP_FNS: Partial<Record<Language, (w: string) => DictEntry | null>> = {
   turkish: lookupTr,
   russian: lookupRu,
   indonesian: lookupId,
+  greek: lookupEl,
 };
 
 const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable | null>> = {
@@ -58,6 +61,7 @@ const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable 
   turkish: conjugateTr,
   russian: conjugateRu,
   indonesian: conjugateId,
+  greek: conjugateEl,
 };
 
 const PERSON_LABELS: Record<string, string[]> = {
@@ -74,6 +78,7 @@ const PERSON_LABELS: Record<string, string[]> = {
   russian: ['я', 'ты', 'он/она', 'мы', 'вы', 'они'],
   // Indonesian rows are affix forms, not persons — no row labels
   indonesian: ['', '', '', '', '', ''],
+  greek: ['εγώ', 'εσύ', 'αυτός/αυτή', 'εμείς', 'εσείς', 'αυτοί'],
 };
 
 // Pronoun → person index. Used to disambiguate ambiguous form matches
@@ -97,6 +102,7 @@ const PRONOUN_INDEX: Record<string, Record<string, number>> = {
   hindi: { 'मैं': 0, 'तू': 1, 'वह': 2, 'यह': 2, 'हम': 3, 'तुम': 4, 'आप': 5, 'वे': 5 },
   turkish: { ben: 0, sen: 1, o: 2, biz: 3, siz: 4, onlar: 5 },
   russian: { 'я': 0, 'ты': 1, 'он': 2, 'она': 2, 'мы': 3, 'вы': 4, 'они': 5 },
+  greek: { 'εγώ': 0, 'εσύ': 1, 'αυτός': 2, 'αυτή': 2, 'αυτό': 2, 'εμείς': 3, 'εσείς': 4, 'αυτοί': 5, 'αυτές': 5 },
 };
 
 // Tie-break order when multiple form rows match and no pronoun in context

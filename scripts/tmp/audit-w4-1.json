@@ -1,0 +1,90 @@
+[
+  {
+    "id": "id-1887",
+    "rating": 5,
+    "issue": "Collocation: 'melihat film' is off — Indonesian watches movies with 'menonton'. 'Tidak sanggup menonton film sedih' is the natural phrasing; sanggup usage itself is correct.",
+    "fix": {
+      "target": "Ibu tidak sanggup menonton film sedih, pasti langsung menangis.",
+      "english": "Mom can't handle sad movies; she always cries right away.",
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-1953",
+    "rating": 5,
+    "issue": "Collocation mismatch: 'rasa sup ini kurang garam' mixes frames — the TASTE lacks salt. Natives say 'supnya kurang garam' (soup lacks salt) or 'rasanya kurang asin' (taste not salty enough).",
+    "fix": {
+      "target": "Sepertinya sup ini kurang garam, coba cicipi dulu.",
+      "english": "It seems this soup lacks salt — try tasting it first.",
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-1957",
+    "rating": 5,
+    "issue": "Register placement: card MODELS colloquial 'kayaknya' in Q3. Policy rule 3: colloquialisms are offenders in Q1-Q3; Q4 may introduce a tagged set as heard language, not modeled. The tip mitigates (it names sepertinya as neutral) but the target sentence still teaches the learner to produce kayaknya. Least bad of the five-card block.",
+    "fix": {
+      "target": "Sepertinya saya salah turun halte, ini bukan daerah yang saya cari.",
+      "english": "It seems I got off at the wrong stop; this is not the area I am looking for.",
+      "grammar": "Sepertinya = it seems. In Jakarta speech you'll hear kayaknya for this everywhere — recognize it, model sepertinya."
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-1958",
+    "rating": 4,
+    "issue": "Register: models Q4-tier colloquial 'kayaknya' in Q3 with NO register tip at all — the learner gets colloquialism as unmarked production language, violating policy rule 3 ('heard language, not modeled').",
+    "fix": {
+      "target": "Sepertinya dia lupa dengan janji yang kita buat kemarin.",
+      "english": "It seems he forgot the promise we made yesterday.",
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-1959",
+    "rating": 4,
+    "issue": "Register: models colloquial 'kayaknya' in Q3, untipped, and mixes registers — colloquial opener with full-form 'membawa' body. Same policy-rule-3 violation as id-1958.",
+    "fix": {
+      "target": "Sepertinya akhir film ini sedih, saya sudah membawa tisu.",
+      "english": "It seems the ending of this movie is sad; I have already brought tissues.",
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-1960",
+    "rating": 4,
+    "issue": "Register: models colloquial 'kayaknya' in Q3; the tip teaches 'kayaknya enak' as a chunk to produce, cementing the colloquialism instead of flagging it as heard-only. The floating-a-food-idea chunk works identically with sepertinya.",
+    "fix": {
+      "target": "Sepertinya enak kalau kita makan bakso hangat saat hujan begini.",
+      "english": "Seems like it would be nice to have warm meatball soup in rain like this.",
+      "grammar": "Sepertinya enak = 'that sounds nice' — a common way to float a food idea."
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-1961",
+    "rating": 4,
+    "issue": "Register: models colloquial 'kayaknya' in Q3, untipped. For a visual judgment (a hairstyle you can see), 'kelihatannya' is the register-safe evidential and adds variety next to the sepertinya fixes.",
+    "fix": {
+      "target": "Kelihatannya kamu cocok dengan gaya rambut yang baru itu.",
+      "english": "It looks like that new hairstyle suits you.",
+      "grammar": null
+    },
+    "newTokens": []
+  },
+  {
+    "id": "id-1983",
+    "rating": 5,
+    "issue": "Mild calque: 'khawatir tentang' maps English 'worried about'. Conversational Indonesian prefers 'khawatir dengan/soal' or 'mengkhawatirkan'. 'Soal' matches the deck's register (cf. id-2024 'berbeda pendapat soal').",
+    "fix": {
+      "target": "Dia khawatir soal biaya rumah sakit ayahnya.",
+      "english": "She is worried about her father's hospital costs.",
+      "grammar": null
+    },
+    "newTokens": []
+  }
+]

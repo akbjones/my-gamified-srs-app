@@ -58,6 +58,7 @@ export const KNOWN_ROOTS = new Set<string>([
   // wave-3 roots
   'aju', 'alam', 'alas', 'aman', 'antre', 'asal', 'atur', 'bagi', 'bahagia', 'baik', 'beda', 'berangkat', 'beres', 'besar', 'biasa', 'bimbing', 'buang', 'bungkus', 'capai', 'catat', 'celaka', 'cepat', 'cetak', 'cium', 'curi', 'daftar', 'dagang', 'darat', 'dingin', 'ganggu', 'gilir', 'goreng', 'habis', 'hadir', 'hangat', 'hias', 'hibur', 'hitung', 'kata', 'kebun', 'kejar', 'kejut', 'keliling', 'kemudi', 'kering', 'ketuk', 'kosong', 'kuliah', 'kurang', 'lahir', 'lamar', 'lampir', 'lanjut', 'lapor', 'layan', 'lebih', 'lelah', 'lembur', 'luka', 'lukis', 'lulus', 'macet', 'maju', 'menang', 'milik', 'mohon', 'muat', 'mudik', 'mundur', 'nikmat', 'obrol', 'pajang', 'paksa', 'pamer', 'pamit', 'panas', 'pandang', 'pandu', 'panjang', 'pasar', 'pecah', 'percaya', 'pimpin', 'potong', 'puji', 'putar', 'putus', 'ramai', 'rapi', 'repot', 'rindu', 'saji', 'salah', 'sambut', 'sampai', 'saran', 'sayur', 'sebar', 'seberang', 'sehat', 'sempat', 'senang', 'sentuh', 'serah', 'setir', 'setrika', 'setuju', 'sewa', 'siram', 'sulit', 'sumbang', 'suruh', 'susun', 'tabung', 'tandatangan', 'tanding', 'tangkap', 'tani', 'tarik', 'teman', 'tempuh', 'teriak', 'tetes', 'timbang', 'titip', 'tolak', 'traktir', 'transfer', 'tugas', 'tuju', 'tumpang', 'tumpuk', 'tunang', 'tunjuk', 'turut', 'ucap', 'ukur', 'ulang', 'umum', 'undur', 'usaha',
   // wave-4 roots
+  'ungkep', 'resap', 'pedas',
   'absen', 'aduk', 'akhir', 'aneh', 'anggap', 'arti', 'asin', 'bangga', 'benci', 'berhasil', 'betah', 'bosan', 'cabut', 'campur', 'canggung', 'cas', 'cemar', 'darah', 'daur', 'denda', 'doyan', 'dukung', 'gagal', 'geprek', 'gerak', 'geser', 'gigit', 'goda', 'gonggong', 'gugup', 'hapus', 'harga', 'haru', 'hemat', 'indah', 'jahit', 'jebak', 'jelang', 'jujur', 'kaget', 'kagum', 'kalah', 'kecewa', 'kecil', 'kelok', 'kemas', 'kembang', 'kena', 'kendara', 'ketik', 'khawatir', 'kira', 'kokok', 'kukus', 'larang', 'lega', 'lempem', 'lepas', 'libat', 'lipat', 'lomba', 'luap', 'luncur', 'malu', 'nyaman', 'oles', 'padam', 'panen', 'peduli', 'pegang', 'pelihara', 'pendam', 'peras', 'pisah', 'puas', 'pulih', 'pungut', 'ragu', 'rantau', 'rebus', 'rebut', 'reda', 'rokok', 'rusak', 'sabar', 'sadar', 'salin', 'sambung', 'sanggup', 'sebut', 'sedia', 'sedih', 'segar', 'sejuk', 'semangat', 'sembunyi', 'sepi', 'sesat', 'siang', 'suap', 'tagih', 'tahan', 'takut', 'tambah', 'tampung', 'tawa', 'tebang', 'tenang', 'tengkar', 'tengok', 'tentu', 'terjun', 'tumbang', 'tumbuh', 'tumis', 'ulas', 'ulek', 'unduh', 'unggah', 'urus', 'usir', 'usul', 'yakin',
   // batch-2 roots
   'begadang',
@@ -122,6 +123,7 @@ const KE_FORMS: Record<string, string[]> = {
   temu: ['ketemu'],
   tinggal: ['ketinggalan'],
   lihat: ['kelihatan'], // "visible; looks (like)"
+  pedas: ['kepedasan'], // overwhelmed by spice
 };
 
 /** Lexicalized ber-…-an habituals/reciprocals worth a row. */

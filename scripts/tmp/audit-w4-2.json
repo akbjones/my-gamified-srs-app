@@ -1,0 +1,123 @@
+[
+  {
+    "id": "id-2087",
+    "rating": 5,
+    "issue": "Marginal collocation: 'harganya naik jauh' — 'naik jauh' is not how price rises are phrased ('naik drastis', 'naik banyak', or comparative). Simplest natural recast uses jauh lebih mahal, already taught at id-2082.",
+    "fix": {
+      "target": "Model tahun ini sedikit berbeda dengan model tahun lalu, tetapi harganya jauh lebih mahal.",
+      "english": "This year's model is slightly different from last year's model, but the price is much higher.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-2107",
+    "rating": 5,
+    "issue": "Gloss/tip inconsistency: gloss says 'like a broken ship' but the tip itself correctly says 'wrecked ship'. 'Broken ship' is also unidiomatic English — kapal pecah is a shipwreck image. Target is perfect; fix the gloss.",
+    "fix": {
+      "target": "Kamar anak saya berantakan seperti kapal pecah.",
+      "english": "My child's room is a mess, like a shipwreck.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-2119",
+    "rating": 5,
+    "issue": "Invented simile: 'seperti perangko dan amplop' is not an established Indonesian image. The real inseparability image is sticking like a stamp (nempel/lengket kayak perangko). Recast around the genuine idiom and tag it.",
+    "fix": {
+      "target": "Dua sahabat itu ke mana-mana selalu bersama, lengket seperti perangko.",
+      "english": "Those two best friends go everywhere together, stuck to each other like a stamp.",
+      "grammar": "Lengket kayak perangko (stuck like a stamp) is the image for two people who are never apart."
+    },
+    "newTokens": { "lengket": "sticky; stuck (to something)" }
+  },
+  {
+    "id": "id-2122",
+    "rating": 5,
+    "issue": "Head-noun mismatch: 'tempat paling indah yang pernah kami daki' — mendaki takes a mountain, not a 'tempat'; you climb a gunung, you don't climb a place. Same oddity leaks into the English gloss ('place we have ever climbed').",
+    "fix": {
+      "target": "Itu gunung paling indah yang pernah kami daki.",
+      "english": "That is the most beautiful mountain we have ever climbed.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-2130",
+    "rating": 5,
+    "issue": "Gloss infidelity: 'the hardest decision I have ever made while working' is stilted English — 'selama bekerja' here means over one's working life, not simultaneous action. Target is fine.",
+    "fix": {
+      "target": "Ini keputusan paling sulit yang pernah saya ambil selama bekerja.",
+      "english": "This is the hardest decision I have ever made in my working life.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-2164",
+    "rating": 5,
+    "issue": "Padahal gloss error: 'even though the weather turned out sunny' implies they knew it was sunny and still almost canceled — contradictory. Padahal here is retrospective 'when in fact'. Target is correct; the English must carry the hindsight reading.",
+    "fix": {
+      "target": "Kami hampir membatalkan piknik, padahal sore itu cuaca akhirnya cerah.",
+      "english": "We almost canceled the picnic, when in fact the weather that afternoon finally turned out sunny.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-2166",
+    "rating": 5,
+    "issue": "Gloss infidelity (same class as wave-3 finding on id-1111): 'kepala saya semakin pusing' is the standard headache idiom, not a 'dizzier head'. English should say the headache got worse.",
+    "fix": {
+      "target": "Obat warung itu justru membuat kepala saya semakin pusing.",
+      "english": "That corner-store medicine actually made my headache even worse.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-2185",
+    "rating": 4,
+    "issue": "Sejak tense logic: gloss 'is open from six in the morning' describes daily opening hours, which Indonesian expresses with mulai/dari, not sejak. Sejak marks a start point running up to now. Card sits in the sejak block, so keep sejak and align both sides on the 'has been open since six (this morning)' reading; sudah makes it unambiguous.",
+    "fix": {
+      "target": "Toko roti di ujung jalan itu sudah buka sejak jam enam pagi.",
+      "english": "That bakery at the end of the street has been open since six this morning.",
+      "grammar": "Sejak marks a running start point: sudah buka sejak jam enam = open since six. Daily hours use mulai."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-2216",
+    "rating": 4,
+    "issue": "Temporal deixis clash: 'malam sebelumnya' (the night before some reference day) combined with 'hari ini' (today) — relative to today the natural word is semalam/tadi malam. Since the card teaches sebelumnya, shift the second clause to a past reference ('pagi itu') so the relative time word is licensed. English gloss has the same clash.",
+    "fix": {
+      "target": "Malam sebelumnya dia tidur larut, jadi pagi itu dia bangun kesiangan.",
+      "english": "The night before, he had gone to sleep late, so that morning he overslept.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-2295",
+    "rating": 5,
+    "issue": "Calque: 'mobil terasa tenang' attributes calm to the car itself, mirroring English 'the car felt calm'. Indonesian puts the calm on the suasana (atmosphere) in the car. suasana is already in the dictionary (id-2079, id-2088).",
+    "fix": {
+      "target": "Selama perjalanan pulang, anak-anak tidur, jadi suasana di mobil tenang sampai kami tiba.",
+      "english": "During the trip home, the kids slept, so the mood in the car stayed calm until we arrived.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "id-2300",
+    "rating": 5,
+    "issue": "Awkward frame: 'menulis hanya ketika ada hari penting' — 'ada hari penting' (there is an important day) is odd, and habitual open conditions take kalau, not ketika (the deck's own id-2228 tip restricts ketika to written when-clauses). kejadian is already in the dictionary.",
+    "fix": {
+      "target": "Dulu saya menulis catatan harian setiap malam; sekarang saya menulis hanya kalau ada kejadian penting.",
+      "english": "I used to write a diary every night; now I write only when something important happens.",
+      "grammar": null
+    },
+    "newTokens": {}
+  }
+]

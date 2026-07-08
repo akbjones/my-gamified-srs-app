@@ -1,0 +1,130 @@
+[
+ {
+  "id": "ko-0018",
+  "rating": 5,
+  "issue": "Register mismatch: 이분 (honorific 'this esteemed person') used to introduce one's OWN friend. Koreans elevate teachers/elders with 이분 but introduce friends/juniors with neutral 이쪽 (Sogang/Yonsei convention: 이쪽은 제 친구예요). Honoring your own friend to a third party sounds off.",
+  "fix": {
+   "target": "수진 씨, 이쪽은 제 친구예요.",
+   "english": "Sujin, this is my friend.",
+   "grammar": "이쪽 (ijjok = this side) politely introduces a friend or equal: 이쪽은 제 친구예요."
+  },
+  "newTokens": {
+   "이쪽": {
+    "en": "this side; this person (neutral introduction)",
+    "ipa": "[i.t͈ɕok̚]",
+    "pos": "pronoun"
+   }
+  }
+ },
+ {
+  "id": "ko-0019",
+  "rating": 5,
+  "issue": "Honorific inconsistency: subject is honored with 이분 AND is a teacher, yet the copula is plain 이에요. A Seoul speaker introducing 박 선생님 says 이세요 (subject-honorific -시- within 해요체, still -요 ending, present tense). NOTE: engine gap — haeyo('이시다') would derive 이셔요; '이시다': '이세요' must be added to IRREGULARS in src/data/conjugation/ko.ts.",
+  "fix": {
+   "target": "이분은 박 선생님이세요.",
+   "english": "This is Teacher Park.",
+   "grammar": "-세요 respects the person you talk about: 선생님이세요 (seonsaengnim-iseyo = is [my] teacher)."
+  },
+  "newTokens": {
+   "이세요": {
+    "en": "is (honorific copula, respecting the subject)",
+    "ipa": "[i.se.jo]",
+    "pos": "verb",
+    "lemma": "이시다"
+   }
+  }
+ },
+ {
+  "id": "ko-0031",
+  "rating": 5,
+  "issue": "Stiff phrasing: 직업이 뭐예요? is form-filling/interview language; asked face-to-face it sounds blunt, like 'State your occupation.' Seoul speakers ask 무슨 일 해요? (politer still: 무슨 일 하세요?). 하다 is engine-derivable, stays 해요체 present.",
+  "fix": {
+   "target": "무슨 일 해요?",
+   "english": "What do you do for work?",
+   "grammar": "무슨 일 해요? (museun il haeyo) — literally 'what work do you do?' — the natural way to ask a job."
+  },
+  "newTokens": {
+   "무슨": {
+    "en": "what, what kind of",
+    "ipa": "[mu.sɯn]",
+    "pos": "determiner"
+   },
+   "일": {
+    "en": "work, job; matter",
+    "ipa": "[il]",
+    "pos": "noun"
+   }
+  }
+ },
+ {
+  "id": "ko-0034",
+  "rating": 5,
+  "issue": "Self-honorific: 선생님 contains the honorific suffix -님, so 저는 선생님이에요 honors ONESELF — same violation class as attaching 씨 to one's own name (register policy rule 4). The humble job-title word is 교사. (Heard colloquially, but a strict register model shouldn't canonize it; NIKL flags it.)",
+  "fix": {
+   "target": "저는 교사예요.",
+   "english": "I'm a teacher.",
+   "grammar": "교사 (gyosa) = teacher as a job title; 선생님 honors OTHERS — never use it for yourself."
+  },
+  "newTokens": {
+   "교사": {
+    "en": "teacher (neutral job title)",
+    "ipa": "[kjo.sa]",
+    "pos": "noun"
+   }
+  }
+ },
+ {
+  "id": "ko-0044",
+  "rating": 5,
+  "issue": "Policy rule 2 violation: 합니다체 form (감사합니다) modeled with NO tip naming the speech level — policy requires 'always with a tip naming the level.' ko-0043's tip does not attach to this card. Sentence itself is natural; fix adds the required tip only.",
+  "fix": {
+   "target": "정말 감사합니다.",
+   "english": "Thank you very much.",
+   "grammar": "감사합니다 (gamsahamnida) is formal 합니다체 (hamnida-che) — thanks to strangers stays formal."
+  }
+ },
+ {
+  "id": "ko-0051",
+  "rating": 5,
+  "issue": "Stilted pairing: 저기요 (attention-getter) + bare 죄송해요 (apology) don't combine in real speech. Hailing someone you'd follow with a request (죄송한데요…); squeezing past you'd say 잠시만요. As modeled it reads as an English 'Excuse me, sorry' calque.",
+  "fix": {
+   "target": "저기요, 잠시만요.",
+   "english": "Excuse me, just a moment.",
+   "grammar": "저기요 (jeogiyo) hails a stranger or waiter; 잠시만요 (jamsimanyo) = 'just a moment, please.'"
+  },
+  "newTokens": {
+   "잠시만요": {
+    "en": "just a moment, please",
+    "ipa": "[tɕam.ɕi.man.ɲo]",
+    "pos": "interjection"
+   }
+  }
+ },
+ {
+  "id": "ko-0136",
+  "rating": 4,
+  "issue": "Missing subject honorific: an adult describing their own father's actions uses -시- (아버지는 신문을 보세요); plain 봐요 about one's father sounds childish/rude to natives. Engine can't derive 보세요 (would give 보셔요), so the safe in-constraint fix swaps to a junior family member — 동생 takes plain form and keeps the family tag and the 봐요-reading tip intact.",
+  "fix": {
+   "target": "동생은 신문을 봐요.",
+   "english": "My younger sibling reads the newspaper.",
+   "grammar": "봐요 covers watching and casual reading: 신문을 봐요 (sinmun-eul bwayo = I read the paper)."
+  }
+ },
+ {
+  "id": "ko-0137",
+  "rating": 4,
+  "issue": "Missing subject honorific: 어머니는 요리를 좋아해요 — plain 좋아해요 about one's own mother; natives say 좋아하세요. Engine can't derive -세요 forms, so swap to a sibling: older siblings take optional/no -시- in modern speech, so 언니 + plain form is fully natural and keeps the family tag.",
+  "fix": {
+   "target": "언니는 요리를 좋아해요.",
+   "english": "My older sister likes cooking.",
+   "grammar": "언니 (eonni) = a woman's older sister; men say 누나 (nuna)."
+  },
+  "newTokens": {
+   "언니": {
+    "en": "older sister (used by a female speaker)",
+    "ipa": "[ʌn.ni]",
+    "pos": "noun"
+   }
+  }
+ }
+]

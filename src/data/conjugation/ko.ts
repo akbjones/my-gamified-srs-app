@@ -40,6 +40,7 @@ const V = { a: 0, eo: 4, o: 8, wa: 9, u: 13, wo: 14, eu: 18, i: 20 };
 // Full 해요체 forms for stems the algebra can't derive (irregulars).
 const IRREGULARS: Record<string, string> = {
   '이다': '이에요',   // copula "to be" (X이에요/예요)
+  '이시다': '이세요', // honorific copula (박 선생님이세요)
   '아니다': '아니에요', // negative copula
   '하다': '해요',
   '가깝다': '가까워요',
@@ -129,7 +130,7 @@ let REVERSE: Map<string, string> | null = null;
 
 /** Dictionary forms the reverse map is seeded from — grows with the deck. */
 export const KNOWN_VERBS = [
-  '이다', '아니다', '있다', '없다',
+  '이다', '이시다', '아니다', '있다', '없다',
   '걸리다', '괜찮다', '끝나다', '만나다', '맛있다', '맞다', '비싸다', '사다', '산책하다', '샤워하다', '쇼핑하다', '숙제하다', '싸다', '웃다', '일어나다', '자다', '작다', '좋다', '죄송하다', '청소하다', '타다', '필요하다',
   '가다', '오다', '보다', '주다', '되다', '하다', '먹다', '읽다', '앉다',
   '입다', '찾다', '받다', '살다', '알다', '만들다', '듣다', '걷다',

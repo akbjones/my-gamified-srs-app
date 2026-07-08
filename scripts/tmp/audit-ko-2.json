@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ko-0227",
+    "rating": 3,
+    "issue": "Deixis error: 오다 means motion toward where the speaker is, so first-person '집에 와요' cannot mean 'I'm coming home' — a Korean heading home says 집에 가요 (already ko-0223). As glossed it is an English 'come' calque, and it directly contradicts the deck's own tip on ko-0229 (와요 = toward the speaker).",
+    "fix": {
+      "target": "동생이 집에 와요.",
+      "english": "My younger sibling is coming home.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0290",
+    "rating": 5,
+    "issue": "Target is idiomatic Korean (식당이 맛있어요 = the restaurant's food is good), but the gloss 'This restaurant is really delicious' is a calque — English speakers don't call restaurants delicious. Gloss should convey the real meaning.",
+    "fix": {
+      "target": "이 식당은 정말 맛있어요.",
+      "english": "The food at this restaurant is really good.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0165",
+    "rating": 5,
+    "issue": "와/과 is the written/formal comitative; in 해요체 speech natives say 누구랑 (or 누구하고). The deck itself teaches 랑 as the spoken 'with' (ko-0234), so 누구와 here mixes registers against the policy's one-canonical-level rule.",
+    "fix": {
+      "target": "누구랑 살아요?",
+      "english": "Who do you live with?",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0242",
+    "rating": 5,
+    "issue": "Gloss mismatch: 밥을 먹어요 is 'eat (a meal)', not 'eat dinner' — 'eat dinner' is 저녁을 먹어요, which the deck already models on ko-0207. As glossed, learners will map 밥 = dinner.",
+    "fix": {
+      "target": "저녁에 식당에서 밥을 먹어요.",
+      "english": "In the evening I eat at a restaurant.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0231",
+    "rating": 5,
+    "issue": "First-person 학교에 와요 is only correct if the speaker is AT school when speaking (오다 = toward speaker's location). Placed right after ko-0226 (아침에 학교에 가요) with a near-identical gloss, the contrast is deliberate but unexplained — without a deixis tip it teaches that 가요/와요 are interchangeable. The current tip (에 = time) repeats node-03 material.",
+    "fix": {
+      "target": "아침에 학교에 와요.",
+      "english": "I come to school in the morning.",
+      "grammar": "Say 와요 (wayo) only while you're at school — 오다 (oda) means coming to where the speaker is now."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0154",
+    "rating": 5,
+    "issue": "Korean is fine, but the gloss 'What is that one?' is stilted English — 그거 is just 'that (thing)'. Prior-audit standard treats word-for-word calque glosses as flaggable.",
+    "fix": {
+      "target": "그거는 뭐예요?",
+      "english": "What is that?",
+      "grammar": null
+    },
+    "newTokens": {}
+  }
+]

@@ -1,10 +1,14 @@
 # Netlify config — version-controlled so SPA routing + caching don't depend on
 # dashboard-only settings. The app is a Vite SPA with a vite-plugin-pwa service
 # worker; audio is served separately from Cloudflare R2 (not from Netlify).
-
-[build]
-  command = "npm run build:pages"
-  publish = "dist"
+#
+# NOTE: prod deploys are done from a LOCAL build (`npm run build:pages`) via
+# `netlify deploy --prod --dir=dist`, which uploads the prebuilt dist and does
+# NOT run a server-side build. No [build] command is declared here on purpose —
+# the required env vars (VITE_AUDIO_BASE_URL, VITE_POSTHOG_KEY) live in the
+# gitignored .env.production.local, so a Netlify server build would ship a
+# broken bundle. If git-based CI deploys are ever enabled, set those env vars
+# in the Netlify dashboard first, then add a [build] block.
 
 # SPA fallback: unknown paths render the app (client-side "routing"). Real
 # files (hashed assets, sw.js, manifest) are served directly and take

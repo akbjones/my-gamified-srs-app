@@ -113,7 +113,8 @@ export default defineConfig({
               // v12 = 2026-07-09 EL+KO wave-5 capstone (633 ea) + Hindi naturalness (153)
               // v13 = 2026-07-09 Russian naturalness rewrite (250 cards)
               // v14 = 2026-07-09 Hindi naturalness pass 2 — shorten early + word order (94 cards)
-              cacheName: 'audio-cache-v14',
+              // v15 = 2026-07-09 Hindi naturalness pass 3 — intermediate+advanced word order + gender (86 cards)
+              cacheName: 'audio-cache-v15',
               expiration: {
                 maxEntries: 500,
                 maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days

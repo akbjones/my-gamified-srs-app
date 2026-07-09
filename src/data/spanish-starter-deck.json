@@ -1,0 +1,5069 @@
+[
+  {
+    "id": "es-3936",
+    "target": "Buenas noches.",
+    "english": "Good evening / Good night.",
+    "audio": "es-es-3936.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-01",
+    "priority": 27,
+    "grammar": "",
+    "starterSeq": 1,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-3938",
+    "target": "De nada.",
+    "english": "You're welcome.",
+    "audio": "es-es-3938.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-01",
+    "priority": 1,
+    "grammar": "",
+    "starterSeq": 2,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3939",
+    "target": "¿Habla inglés?",
+    "english": "Do you speak English?",
+    "audio": "es-es-3939.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-01",
+    "priority": 18,
+    "starterSeq": 3,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3941",
+    "target": "¿Cuánto cuesta?",
+    "english": "How much does it cost?",
+    "audio": "es-es-3941.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-01",
+    "priority": 7,
+    "grammar": "",
+    "starterSeq": 4,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0166",
+    "target": "¿Sabes cocinar paella?",
+    "english": "Do you know how to cook paella?",
+    "audio": "es-es-0166.mp3",
+    "grammar": "Saber: 2nd person = sabes. Saber + infinitive = to know how to.",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 104,
+    "starterSeq": 5,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-0001",
+    "target": "Se me hace tarde.",
+    "english": "I'm running late.",
+    "audio": "es-es-0001.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-01",
+    "grammar": "'Hacerse' in impersonal expressions: 'se me hace tarde' = it's getting late for me. The indirect object pronoun shows who is affected.",
+    "priority": 2500,
+    "starterSeq": 6,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-0003",
+    "target": "Escribo un correo electrónico.",
+    "english": "I write an email.",
+    "audio": "es-es-0003.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-01",
+    "priority": 221,
+    "starterSeq": 7,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-0006",
+    "target": "El bebé tiene hambre.",
+    "english": "The baby is hungry.",
+    "audio": "es-es-0006.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 153,
+    "starterSeq": 8,
+    "themes": [
+      "food",
+      "family"
+    ]
+  },
+  {
+    "id": "es-0014",
+    "target": "Me hace ilusión verte.",
+    "english": "I'm excited to see you.",
+    "audio": "es-es-0014.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-01",
+    "priority": 299,
+    "starterSeq": 9,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-0020",
+    "target": "Creo que tienes razón.",
+    "english": "I think you are right.",
+    "audio": "es-es-0020.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-01",
+    "grammar": "Many common Spanish verbs are irregular in the 'yo' form – memorize these first as they're the most frequent.",
+    "priority": 257,
+    "starterSeq": 10,
+    "themes": [
+      "directions",
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-0021",
+    "target": "Vamos para el aeropuerto.",
+    "english": "We're heading to the airport.",
+    "audio": "es-es-0021.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-01",
+    "priority": 53,
+    "grammar": "para = destination / purpose (for him, in order TO eat). por = reason / exchange (because of him, for ten euros). Ask \"why?\" → por, \"what for?\" → para.",
+    "starterSeq": 11,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-0027",
+    "target": "¿Puede llamar un taxi?",
+    "english": "Can you call a taxi?",
+    "audio": "es-es-0027.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-01",
+    "priority": 99,
+    "starterSeq": 12,
+    "themes": [
+      "travel",
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0106",
+    "target": "Mi hermana trabaja en un hospital.",
+    "english": "My sister works in a hospital.",
+    "audio": "es-es-0106.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-01",
+    "grammar": "'Trabajar en' = to work at/in a place. 'En' before an indefinite article: 'en un hospital' = at a hospital.",
+    "priority": 507,
+    "starterSeq": 13,
+    "themes": [
+      "family",
+      "work"
+    ]
+  },
+  {
+    "id": "es-0227",
+    "target": "Me alegra saber que estás bien.",
+    "english": "I'm glad to know you're well.",
+    "audio": "es-es-0227.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-01",
+    "priority": 721,
+    "starterSeq": 14,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-0320",
+    "target": "Estoy bien, gracias.",
+    "english": "I am fine, thanks.",
+    "audio": "es-es-0320.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-02",
+    "grammar": "Estar for temporary states: how you feel right now.",
+    "priority": 22,
+    "starterSeq": 15,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0321",
+    "target": "¿Tiene usted reserva?",
+    "english": "Do you have a reservation?",
+    "audio": "es-es-0321.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammar": "Usted – formal you, used in service contexts and with strangers.",
+    "grammarNode": "node-02",
+    "priority": 65,
+    "starterSeq": 16,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-0322",
+    "target": "La cena está lista.",
+    "english": "Dinner is ready.",
+    "audio": "es-es-0322.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammar": "Estar for temporary states/results: la cena está lista (it's ready now).",
+    "grammarNode": "node-02",
+    "priority": 56,
+    "starterSeq": 17,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-0325",
+    "target": "Extraño a mi familia.",
+    "english": "I miss my family.",
+    "audio": "es-es-0325.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-02",
+    "priority": 348,
+    "starterSeq": 18,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-0337",
+    "target": "Creo que tengo fiebre.",
+    "english": "I think I have a fever.",
+    "audio": "es-es-0337.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-02",
+    "priority": 314,
+    "starterSeq": 19,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-0387",
+    "target": "¿Tiene disponibilidad para mañana?",
+    "english": "Do you have availability for tomorrow?",
+    "audio": "es-es-0387.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-02",
+    "priority": 191,
+    "starterSeq": 20,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-0365",
+    "target": "¿Dónde está la oficina del jefe?",
+    "english": "Where is the boss's office?",
+    "audio": "es-es-0365.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-02",
+    "priority": 234,
+    "starterSeq": 21,
+    "themes": [
+      "directions",
+      "work"
+    ]
+  },
+  {
+    "id": "es-0374",
+    "target": "Yo pienso mucho antes de decidir.",
+    "english": "I think a lot before I decide.",
+    "audio": "es-es-0374.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammar": "\"Pensar\" has a e→ie stem change: the \"e\" in the stem becomes \"ie\" when stressed (all singular + 3rd plural). Nosotros/vosotros keep the original stem.",
+    "grammarNode": "node-02",
+    "priority": 728,
+    "starterSeq": 22,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-0435",
+    "target": "¿Cuántos años tienes?",
+    "english": "How old are you?",
+    "audio": "es-es-0435.mp3",
+    "grammar": "Age uses \"tener\" (to have), not \"ser\" (to be). Literally: \"How many years do you have?\" Tengo 25 años = I am 25 years old.",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-03",
+    "priority": 63,
+    "starterSeq": 23,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0436",
+    "target": "¿Qué quieres hacer?",
+    "english": "What do you want to do?",
+    "audio": "es-es-0436.mp3",
+    "grammar": "\"Querer\" (to want) + infinitive: quiero comer (I want to eat), quieres hacer (you want to do). Querer is stem-changing: e→ie.",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-03",
+    "priority": 40,
+    "starterSeq": 24,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0439",
+    "target": "¿El desayuno está incluido?",
+    "english": "Is breakfast included?",
+    "audio": "es-es-0439.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-03",
+    "grammar": "",
+    "priority": 163,
+    "starterSeq": 25,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-0440",
+    "target": "Estoy un poco cansado.",
+    "english": "I'm a little tired.",
+    "audio": "es-es-0440.mp3",
+    "grammar": "Adjectives agree with the subject: cansado (m), cansada (f). A woman would say \"estoy cansada.\" Estar is used because tiredness is temporary.",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-03",
+    "priority": 103,
+    "starterSeq": 26,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-0445",
+    "target": "Mi prima está embarazada.",
+    "english": "My cousin is pregnant.",
+    "audio": "es-es-0445.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammar": "Estar for states/conditions: está embarazada. Never use ser here.",
+    "grammarNode": "node-03",
+    "priority": 326,
+    "starterSeq": 27,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-0446",
+    "target": "El vuelo es directo.",
+    "english": "The flight is direct.",
+    "audio": "es-es-0446.mp3",
+    "grammar": "\"Ser\" is used for inherent characteristics. The flight IS direct – it's a defining feature of this flight.",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-03",
+    "priority": 85,
+    "starterSeq": 28,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-0460",
+    "target": "Estoy aquí por una reunión.",
+    "english": "I'm here for a meeting.",
+    "audio": "es-es-0460.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammar": "Por for reason / cause.",
+    "grammarNode": "node-03",
+    "priority": 123,
+    "starterSeq": 29,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-0466",
+    "target": "Hoy es un buen día.",
+    "english": "Today is a good day.",
+    "audio": "es-es-0466.mp3",
+    "grammar": "\"Bueno\" shortens to \"buen\" before a masculine singular noun. Similarly: malo → mal, primero → primer, tercero → tercer.",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-03",
+    "priority": 94,
+    "starterSeq": 30,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-0566",
+    "target": "¿De dónde eres tú?",
+    "english": "Where are you from?",
+    "audio": "es-es-0566.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-04",
+    "priority": 86,
+    "starterSeq": 31,
+    "themes": [
+      "directions"
+    ]
+  },
+  {
+    "id": "es-0569",
+    "target": "Ella es mi amiga.",
+    "english": "She is my friend.",
+    "audio": "es-es-0569.mp3",
+    "grammar": "Gender agreement: amigo (male friend) → amiga (female friend). Most nouns ending in -o are masculine, -a are feminine.",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-04",
+    "priority": 67,
+    "starterSeq": 32,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0570",
+    "target": "Esto es un libro.",
+    "english": "This is a book.",
+    "audio": "es-es-0570.mp3",
+    "grammar": "\"Un\" is the indefinite article for masculine nouns (a/an). Un libro (a book), una mesa (a table). \"El/la\" are the definite articles (the).",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-04",
+    "priority": 43,
+    "starterSeq": 33,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0573",
+    "target": "Buenos días, ¿cómo estás?",
+    "english": "Good morning, how are you?",
+    "audio": "es-es-0573.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-04",
+    "priority": 180,
+    "grammar": "Use `estar` when the answer could change tomorrow: location, feelings, ongoing actions. `estar + adjective` = it's a state, not a label.",
+    "starterSeq": 34,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-0581",
+    "target": "No llegues tarde otra vez.",
+    "english": "Don't be late again.",
+    "audio": "es-es-0581.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-04",
+    "grammar": "'Otro/a' never takes an indefinite article: 'otro día' (another day), never 'un otro día.'",
+    "priority": 199,
+    "starterSeq": 35,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-0632",
+    "target": "¿Prefieres la ciudad o el campo?",
+    "english": "Do you prefer the city or the countryside?",
+    "audio": "es-es-0632.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-04",
+    "priority": 788,
+    "starterSeq": 36,
+    "themes": [
+      "travel",
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-0669",
+    "target": "Me duele la cabeza.",
+    "english": "My head hurts.",
+    "audio": "es-es-0669.mp3",
+    "grammar": "'Doler' works like 'gustar': the body part is the subject. 'Me duele la cabeza' = My head hurts (lit. the head hurts to me). Plural: 'me duelen los pies.'",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-05",
+    "priority": 69,
+    "starterSeq": 37,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0670",
+    "target": "Me duele la espalda.",
+    "english": "My back hurts.",
+    "audio": "es-es-0670.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammar": "\"Doler\" uses the gustar pattern: the thing causing the feeling is the subject. \"Me doler...\" = \"... is [feeling] to me.\" Use singular for one thing, plural for multiple.",
+    "grammarNode": "node-05",
+    "priority": 185,
+    "starterSeq": 38,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0673",
+    "target": "La radio no funciona.",
+    "english": "The radio doesn't work.",
+    "audio": "es-es-0673.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammar": "\"La radio\" – feminine because it's short for \"la radioemisora.\" Gender follows the full word.",
+    "grammarNode": "node-05",
+    "priority": 110,
+    "starterSeq": 39,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-0684",
+    "target": "Me hacen gracia sus chistes.",
+    "english": "His jokes make me laugh.",
+    "audio": "es-es-0684.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammar": "\"Hacer gracia\" uses the gustar pattern: the thing causing the feeling is the subject. \"Me hacer...\" = \"... is [feeling] to me.\" Use singular for one thing, plural for multiple.",
+    "grammarNode": "node-05",
+    "priority": 523,
+    "starterSeq": 40,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-0784",
+    "target": "La empresa es grande.",
+    "english": "The company is big.",
+    "audio": "es-es-0784.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-06",
+    "grammar": "Size adjectives typically follow the noun: 'una casa grande,' 'un perro pequeño.'",
+    "priority": 25,
+    "starterSeq": 41,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-0789",
+    "target": "Hace buen tiempo hoy.",
+    "english": "The weather is nice today.",
+    "audio": "es-es-0789.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammar": "\"Hacer\" is used for weather: \"hace calor\" (it's hot), \"hace frío\" (it's cold).",
+    "grammarNode": "node-06",
+    "priority": 49,
+    "starterSeq": 42,
+    "themes": [
+      "time",
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0799",
+    "target": "Mi padre es muy alto.",
+    "english": "My father is very tall.",
+    "audio": "es-es-0799.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-06",
+    "priority": 167,
+    "starterSeq": 43,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-0810",
+    "target": "Tenemos comida para tres días.",
+    "english": "We have food for three days.",
+    "audio": "es-es-0810.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-06",
+    "priority": 171,
+    "starterSeq": 44,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-0867",
+    "target": "No hay problema.",
+    "english": "No problem.",
+    "audio": "es-es-0867.mp3",
+    "grammar": "\"Hay\" means \"there is\" or \"there are\" – it's the same for singular and plural. Hay un gato. Hay tres gatos.",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-07",
+    "priority": 6,
+    "starterSeq": 45,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0882",
+    "target": "Voy por agua.",
+    "english": "I'm going for water.",
+    "audio": "es-es-0882.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammar": "\"Por\" = to get/fetch: \"Fui por pan.\" Going somewhere to pick something up.",
+    "grammarNode": "node-07",
+    "priority": 8,
+    "starterSeq": 46,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-0935",
+    "target": "Es importante llegar a tiempo.",
+    "english": "It's important to arrive on time.",
+    "audio": "es-es-0935.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-07",
+    "priority": 477,
+    "starterSeq": 47,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-1015",
+    "target": "Ella está embarazada.",
+    "english": "She's pregnant.",
+    "audio": "es-es-1015.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammar": "Estar for conditions: \"Está roto.\" Use estar for the current state/condition of something.",
+    "grammarNode": "node-08",
+    "priority": 131,
+    "starterSeq": 48,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-1016",
+    "target": "Ella es soltera.",
+    "english": "She's single.",
+    "audio": "es-es-1016.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammar": "Ser for civil status: \"Es casada.\" Marital status uses ser – it defines identity, not a passing state.",
+    "grammarNode": "node-08",
+    "priority": 77,
+    "starterSeq": 49,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-1032",
+    "target": "Te quiero mucho.",
+    "english": "I love you very much.",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "audio": "es-es-1032.mp3",
+    "grammarNode": "node-08",
+    "priority": 3,
+    "starterSeq": 50,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-0571",
+    "target": "Estudio en la universidad.",
+    "english": "I study at the university.",
+    "audio": "es-es-0571.mp3",
+    "grammar": "'Estudiar' is regular -ar. 'En' before institutions means 'at': 'estudio en la universidad' = I study at the university.",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-04",
+    "priority": 117,
+    "starterSeq": 51,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0574",
+    "target": "¿Cuánto tiempo llevas aquí?",
+    "english": "How long have you been here?",
+    "audio": "es-es-0574.mp3",
+    "grammar": "\"Llevar\" + time = to have been (doing something) for (duration). Llevo dos años aquí = I've been here for two years. Very common construction.",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-04",
+    "priority": 136,
+    "starterSeq": 52,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0578",
+    "target": "¿Cómo llego al museo?",
+    "english": "How do I get to the museum?",
+    "audio": "es-es-0578.mp3",
+    "grammar": "\"Llego\" from \"llegar\" (to arrive). \"¿Cómo llego a...?\" is the standard way to ask for directions.",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-04",
+    "priority": 95,
+    "starterSeq": 53,
+    "themes": [
+      "directions",
+      "travel"
+    ]
+  },
+  {
+    "id": "es-0583",
+    "target": "¿Cómo se llama tu sobrina?",
+    "english": "What is your niece's name?",
+    "audio": "es-es-0583.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-04",
+    "grammar": "'¿Cómo?' means 'how?' with accent. Without accent, 'como' means 'like/as' or 'I eat.'",
+    "priority": 294,
+    "starterSeq": 54,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-0671",
+    "target": "El día está nublado.",
+    "english": "The sky is cloudy.",
+    "audio": "es-es-0671.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammar": "\"El día\" is masculine – an exception. \"Buenos días\" (good days) shows the masculine adjective form.",
+    "grammarNode": "node-05",
+    "priority": 133,
+    "starterSeq": 55,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0672",
+    "target": "El poema es precioso.",
+    "english": "The poem is beautiful.",
+    "audio": "es-es-0672.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammar": "\"El poema\" is masculine. Greek-origin -ma words: poema, tema, problema, sistema – all masculine.",
+    "grammarNode": "node-05",
+    "priority": 137,
+    "starterSeq": 56,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0685",
+    "target": "Me encantó la comida local.",
+    "english": "I loved the local food.",
+    "audio": "es-es-0685.mp3",
+    "grammar": "\"Encantar\" works like \"gustar\": the thing loved is the subject. \"Me encantó\" = it enchanted me.",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-05",
+    "priority": 341,
+    "starterSeq": 57,
+    "themes": [
+      "food",
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-0723",
+    "target": "Ellos vuelven del viaje el lunes.",
+    "english": "They come back from the trip on Monday.",
+    "audio": "es-es-0723.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammar": "\"Volver\" has a o→ue stem change: the \"o\" in the stem becomes \"ue\" when stressed (all singular + 3rd plural). Nosotros/vosotros keep the original stem.",
+    "grammarNode": "node-05",
+    "priority": 683,
+    "starterSeq": 58,
+    "themes": [
+      "travel",
+      "time"
+    ]
+  },
+  {
+    "id": "es-0785",
+    "target": "El proyecto es interesante.",
+    "english": "The project is interesting.",
+    "audio": "es-es-0785.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-06",
+    "priority": 102,
+    "starterSeq": 59,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-0791",
+    "target": "Hoy hay mucho tráfico.",
+    "english": "There's a lot of traffic today.",
+    "audio": "es-es-0791.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-06",
+    "priority": 165,
+    "grammar": "Don't confuse `hay` (there is) with `ahí` (over there) or `ay` (ouch). `Hay` is the impersonal form of `haber` and never gets a subject.",
+    "starterSeq": 60,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-0794",
+    "target": "Me gusta mucho esta ciudad.",
+    "english": "I really like this city.",
+    "audio": "es-es-0794.mp3",
+    "grammar": "\"Gustar\" works backwards from English: the thing you like is the subject. \"Me gusta la ciudad\" = the city pleases me. \"Me gustan los gatos\" = cats please me (plural).",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-06",
+    "priority": 183,
+    "starterSeq": 61,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-0801",
+    "target": "Mi madre es muy cariñosa.",
+    "english": "My mother is very caring.",
+    "audio": "es-es-0801.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-06",
+    "priority": 316,
+    "starterSeq": 62,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-0897",
+    "target": "La reunión es importante.",
+    "english": "The meeting is important.",
+    "audio": "es-es-0897.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammar": "Ser for characteristics: traits that define what something IS use ser, not estar.",
+    "grammarNode": "node-07",
+    "priority": 13,
+    "starterSeq": 63,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-0898",
+    "target": "Mi carro es azul.",
+    "english": "My car is blue.",
+    "audio": "es-es-0898.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammar": "Ser for inherent color: \"El cielo es azul.\" Use ser for colors seen as defining traits.",
+    "grammarNode": "node-07",
+    "priority": 98,
+    "starterSeq": 64,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0946",
+    "target": "La plaza está llena de gente.",
+    "english": "The square is full of people.",
+    "audio": "es-es-0946.mp3",
+    "grammar": "\"Estar\" for temporary states. The square is full now, but it won't always be.",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-07",
+    "priority": 483,
+    "starterSeq": 65,
+    "themes": [
+      "directions"
+    ]
+  },
+  {
+    "id": "es-0947",
+    "target": "Ella es alta pero está cansada.",
+    "english": "She is tall but she's tired.",
+    "audio": "es-es-0947.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-07",
+    "priority": 774,
+    "starterSeq": 66,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-1033",
+    "target": "Estamos a veinte de marzo.",
+    "english": "It is March twentieth.",
+    "audio": "es-es-1033.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-08",
+    "priority": 596,
+    "starterSeq": 67,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-1036",
+    "target": "La cena costó cuarenta euros.",
+    "english": "Dinner cost forty euros.",
+    "audio": "es-es-1036.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-08",
+    "priority": 364,
+    "starterSeq": 68,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-1042",
+    "target": "Compré los billetes por internet.",
+    "english": "I bought the tickets online.",
+    "audio": "es-es-1042.mp3",
+    "grammar": "\"Por internet\" – \"por\" indicates the means/medium through which something is done.",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-08",
+    "priority": 421,
+    "starterSeq": 69,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-1048",
+    "target": "Vivimos en un departamento pequeño.",
+    "english": "We live in a small apartment.",
+    "audio": "es-es-1048.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammar": "Piso = apartment (Spain). In Latin America: departamento or apartamento.",
+    "grammarNode": "node-08",
+    "priority": 247,
+    "starterSeq": 70,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0572",
+    "target": "La foto salió borrosa.",
+    "english": "The photo came out blurry.",
+    "audio": "es-es-0572.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammar": "\"La foto\" – feminine because it's short for \"la fotografía.\" Shortened words keep the gender of the full word.",
+    "grammarNode": "node-09",
+    "priority": 286,
+    "starterSeq": 71,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0576",
+    "target": "¿Cuánto tiempo trabajaste allí?",
+    "english": "How long did you work there?",
+    "audio": "es-es-0576.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-09",
+    "priority": 335,
+    "starterSeq": 72,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-1173",
+    "target": "Te llamo por teléfono.",
+    "english": "I'll call you by phone.",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammar": "\"Por\" = via: \"Lo dije por teléfono.\" Por for the method of communication.",
+    "audio": "es-es-1173.mp3",
+    "grammarNode": "node-09",
+    "priority": 699,
+    "starterSeq": 73,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-1223",
+    "target": "Quiero visitar la catedral.",
+    "english": "I want to visit the cathedral.",
+    "audio": "es-es-1223.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-09",
+    "priority": 690,
+    "starterSeq": 74,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-0931",
+    "target": "Ayer llovió todo el día.",
+    "english": "Yesterday it rained all day.",
+    "audio": "es-es-0931.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-09",
+    "priority": 355,
+    "starterSeq": 75,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-1176",
+    "target": "Se nos acabó la leche.",
+    "english": "We ran out of milk.",
+    "audio": "es-es-1176.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammar": "\"Se nos acabó\" – \"se\" construction for unplanned events.",
+    "grammarNode": "node-09",
+    "priority": 1031,
+    "starterSeq": 76,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-1179",
+    "target": "Ellos decidieron cancelar la reunión.",
+    "english": "They decided to cancel the meeting.",
+    "audio": "es-es-1179.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-09",
+    "priority": 1150,
+    "starterSeq": 77,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-1059",
+    "target": "Ellos se mudaron a otra ciudad.",
+    "english": "They moved to another city.",
+    "audio": "es-es-1059.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-09",
+    "priority": 887,
+    "starterSeq": 78,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-1232",
+    "target": "Él trajo flores para su madre.",
+    "english": "He brought flowers for his mother.",
+    "audio": "es-es-1232.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-09",
+    "priority": 1221,
+    "starterSeq": 79,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-1233",
+    "target": "Mi abuela cocinaba los mejores postres.",
+    "english": "My grandmother used to cook the best desserts.",
+    "audio": "es-es-1233.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-09",
+    "priority": 1371,
+    "starterSeq": 80,
+    "themes": [
+      "food",
+      "family",
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-1242",
+    "target": "Lo hizo a propósito para molestarme.",
+    "english": "He did it on purpose to annoy me.",
+    "audio": "es-es-1242.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-09",
+    "priority": 1510,
+    "starterSeq": 81,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-1202",
+    "target": "Me equivoqué de dirección y me perdí.",
+    "english": "I got the address wrong and got lost.",
+    "audio": "es-es-1202.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-09",
+    "priority": 1670,
+    "starterSeq": 82,
+    "themes": [
+      "directions"
+    ]
+  },
+  {
+    "id": "es-1094",
+    "target": "Se rompió mi computadora en la peor semana.",
+    "english": "My computer broke during the worst week.",
+    "audio": "es-es-1094.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-09",
+    "priority": 1090,
+    "starterSeq": 83,
+    "themes": [
+      "time",
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-1272",
+    "target": "Él se puso contento al oír la noticia.",
+    "english": "He became happy when he heard the news.",
+    "audio": "es-es-1272.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-09",
+    "priority": 1784,
+    "starterSeq": 84,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-0568",
+    "target": "¿Por qué no viniste?",
+    "english": "Why didn't you come?",
+    "tags": [
+      "general"
+    ],
+    "grammar": "\"¿Por qué?\" (two words, with accent) = Why? \"Porque\" (one word, no accent) = Because. The accent and spacing matter.",
+    "audio": "es-es-0568.mp3",
+    "grammarNode": "node-10",
+    "priority": 87,
+    "starterSeq": 85,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0790",
+    "target": "Ayer hice tres entrevistas.",
+    "english": "Yesterday I did three interviews.",
+    "audio": "es-es-0790.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammar": "\"Hacer\" has an irregular preterite stem (hice...). These irregular preterites share the same endings: -e, -iste, -o, -imos, -isteis, -ieron. No accents needed.",
+    "grammarNode": "node-10",
+    "priority": 208,
+    "starterSeq": 86,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-1311",
+    "target": "La entrevista fue muy bien.",
+    "english": "The interview went very well.",
+    "audio": "es-es-1311.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-10",
+    "priority": 813,
+    "starterSeq": 87,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-1312",
+    "target": "Una copa de vino tinto.",
+    "english": "A glass of red wine.",
+    "audio": "es-es-1312.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-10",
+    "priority": 1223,
+    "starterSeq": 88,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-1356",
+    "target": "Mientras llovía, llegamos al hotel.",
+    "english": "While it was raining, we arrived at the hotel.",
+    "audio": "es-es-1356.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-10",
+    "priority": 1135,
+    "starterSeq": 89,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-1417",
+    "target": "De pequeño quería ser astronauta.",
+    "english": "As a kid, I wanted to be an astronaut.",
+    "audio": "es-es-1417.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-10",
+    "priority": 1544,
+    "starterSeq": 90,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-0814",
+    "target": "Ella se fue sin decir adiós.",
+    "english": "She left without saying goodbye.",
+    "audio": "es-es-0814.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-10",
+    "priority": 622,
+    "starterSeq": 91,
+    "themes": [
+      "directions"
+    ]
+  },
+  {
+    "id": "es-1070",
+    "target": "El tren que tomamos fue puntual.",
+    "english": "The train we took was on time.",
+    "audio": "es-es-1070.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-10",
+    "priority": 678,
+    "starterSeq": 92,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-1362",
+    "target": "Mi abuelo pescaba en el río.",
+    "english": "My grandfather fished in the river.",
+    "audio": "es-es-1362.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-10",
+    "priority": 1264,
+    "starterSeq": 93,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-1373",
+    "target": "Me puse nerviosa antes de la presentación.",
+    "english": "I got nervous before the presentation.",
+    "audio": "es-es-1373.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-10",
+    "priority": 1438,
+    "starterSeq": 94,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-1425",
+    "target": "Tu presentación fue mejor que la mía.",
+    "english": "Your presentation was better than mine.",
+    "audio": "es-es-1425.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-10",
+    "priority": 1663,
+    "starterSeq": 95,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-1406",
+    "target": "Desde mi punto de vista, la negociación fue un éxito.",
+    "english": "From my point of view, the negotiation was a success.",
+    "audio": "es-es-1406.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-10",
+    "priority": 2122,
+    "starterSeq": 96,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-1451",
+    "target": "Te lo dije ayer.",
+    "english": "I told you yesterday.",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammar": "Double object pronouns: te (you) + lo (it).",
+    "audio": "es-es-1451.mp3",
+    "grammarNode": "node-11",
+    "priority": 599,
+    "starterSeq": 97,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-1452",
+    "target": "Se lo dije ayer.",
+    "english": "I told him yesterday.",
+    "audio": "es-es-1452.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammar": "Double object pronouns: indirect (le/les) + direct (lo/la) → \"se lo.\" Le becomes se before lo/la to avoid \"le lo.\" \"Se lo dije\" = I told it to him.",
+    "grammarNode": "node-11",
+    "priority": 567,
+    "starterSeq": 98,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-1453",
+    "target": "Yo siempre olvido las contraseñas.",
+    "english": "I always forget passwords.",
+    "audio": "es-es-1453.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-11",
+    "priority": 1253,
+    "starterSeq": 99,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-1502",
+    "target": "Antes trabajaba en una fábrica.",
+    "english": "I used to work in a factory.",
+    "audio": "es-es-1502.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-11",
+    "priority": 1176,
+    "starterSeq": 100,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-1555",
+    "target": "De pequeño odiaba las verduras.",
+    "english": "As a kid, I hated vegetables.",
+    "audio": "es-es-1555.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-11",
+    "priority": 1213,
+    "starterSeq": 101,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-1505",
+    "target": "Mi antiguo jefe era muy estricto.",
+    "english": "My former boss was very strict.",
+    "audio": "es-es-1505.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-11",
+    "priority": 1351,
+    "starterSeq": 102,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-1506",
+    "target": "Me quedé dormido en el autobús.",
+    "english": "I fell asleep on the bus.",
+    "audio": "es-es-1506.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-11",
+    "priority": 1205,
+    "starterSeq": 103,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-1512",
+    "target": "Mientras cocino suelo escuchar un pódcast.",
+    "english": "While I cook I usually listen to a podcast.",
+    "audio": "es-es-1512.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-11",
+    "priority": 1656,
+    "starterSeq": 104,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-1557",
+    "target": "Mientras cruzábamos la frontera, llovía mucho.",
+    "english": "While we crossed the border, it rained a lot.",
+    "audio": "es-es-1557.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-11",
+    "priority": 1471,
+    "starterSeq": 105,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-0965",
+    "target": "El restaurante donde cenamos estaba muy lleno.",
+    "english": "The restaurant where we had dinner was very crowded.",
+    "audio": "es-es-0965.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-11",
+    "priority": 951,
+    "starterSeq": 106,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-1529",
+    "target": "El barrio donde nos perdimos era muy pintoresco.",
+    "english": "The neighborhood where we got lost was very picturesque.",
+    "audio": "es-es-1529.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-11",
+    "priority": 1860,
+    "starterSeq": 107,
+    "themes": [
+      "directions"
+    ]
+  },
+  {
+    "id": "es-1530",
+    "target": "Me siento frustrado porque nada sale como quiero.",
+    "english": "I feel frustrated because nothing goes the way I want.",
+    "audio": "es-es-1530.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-11",
+    "priority": 1960,
+    "starterSeq": 108,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-1568",
+    "target": "Ellos se ayudan mutuamente.",
+    "english": "They help each other.",
+    "audio": "es-es-1568.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-12",
+    "priority": 1149,
+    "starterSeq": 109,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-1569",
+    "target": "Gracias por tu ayuda.",
+    "english": "Thanks for your help.",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammar": "\"Por\" = because of: \"Llegué tarde por el tráfico.\" Expresses the cause behind something.",
+    "audio": "es-es-1569.mp3",
+    "grammarNode": "node-12",
+    "priority": 714,
+    "starterSeq": 110,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-1570",
+    "target": "Hace mucho viento hoy.",
+    "english": "It is very windy today.",
+    "audio": "es-es-1570.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-12",
+    "priority": 845,
+    "starterSeq": 111,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-1572",
+    "target": "Lo cambié por otro.",
+    "english": "I exchanged it for another.",
+    "tags": [
+      "general"
+    ],
+    "grammar": "\"Por\" = in exchange for: \"Lo compré por diez euros.\" Por marks what you give to get something.",
+    "audio": "es-es-1572.mp3",
+    "grammarNode": "node-12",
+    "priority": 751,
+    "starterSeq": 112,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-1670",
+    "target": "Ella trabajaba mientras estudiaba.",
+    "english": "She worked while she studied.",
+    "audio": "es-es-1670.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-12",
+    "priority": 1106,
+    "starterSeq": 113,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-1578",
+    "target": "Cuando llegues al hotel, avísame.",
+    "english": "When you arrive at the hotel, let me know.",
+    "audio": "es-es-1578.mp3",
+    "grammar": "\"Cuando\" + future action uses subjunctive: \"cuando llegues\" (not \"cuando llegas\").",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-12",
+    "priority": 1115,
+    "starterSeq": 114,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-1582",
+    "target": "Es importante que bebas suficiente agua.",
+    "english": "It's important that you drink enough water.",
+    "audio": "es-es-1582.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-12",
+    "priority": 1453,
+    "starterSeq": 115,
+    "themes": [
+      "food",
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-1587",
+    "target": "Sin que nadie se dé cuenta, salimos.",
+    "english": "Without anyone noticing, we left.",
+    "audio": "es-es-1587.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-12",
+    "priority": 1660,
+    "starterSeq": 116,
+    "themes": [
+      "directions"
+    ]
+  },
+  {
+    "id": "es-1588",
+    "target": "Mi primo se rompió el brazo jugando.",
+    "english": "My cousin broke his arm playing.",
+    "audio": "es-es-1588.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-12",
+    "priority": 1512,
+    "starterSeq": 117,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-1631",
+    "target": "Mi madre me aconseja que ahorre más.",
+    "english": "My mother advises me to save more.",
+    "audio": "es-es-1631.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-12",
+    "priority": 1589,
+    "starterSeq": 118,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-1676",
+    "target": "Nos reunimos cada lunes.",
+    "english": "We meet every Monday.",
+    "audio": "es-es-1676.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-13",
+    "priority": 841,
+    "starterSeq": 119,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-1677",
+    "target": "Nos echamos de menos.",
+    "english": "We miss each other.",
+    "audio": "es-es-1677.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammar": "\"Echarse de menos\" = to miss each other. \"Nos echamos de menos\" = We miss each other.",
+    "grammarNode": "node-13",
+    "priority": 826,
+    "starterSeq": 120,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-1680",
+    "target": "Te lo explico ahora.",
+    "english": "I'll explain it to you now.",
+    "audio": "es-es-1680.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammar": "Double pronouns: indirect + direct. \"Te lo dije\" = I told it to you. Indirect pronoun (te) goes first, then direct (lo).",
+    "grammarNode": "node-13",
+    "priority": 907,
+    "starterSeq": 121,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-1694",
+    "target": "Se me olvidó enviar el correo.",
+    "english": "I forgot to send the email.",
+    "audio": "es-es-1694.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammar": "Se me olvidó: accidental se construction – 'it slipped my mind'.",
+    "grammarNode": "node-13",
+    "priority": 1161,
+    "starterSeq": 122,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-1696",
+    "target": "Me bajé en la parada equivocada.",
+    "english": "I got off at the wrong stop.",
+    "audio": "es-es-1696.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-13",
+    "priority": 1380,
+    "starterSeq": 123,
+    "themes": [
+      "directions"
+    ]
+  },
+  {
+    "id": "es-1731",
+    "target": "Me alegra que hayamos llegado a tiempo.",
+    "english": "I'm glad we arrived on time.",
+    "audio": "es-es-1731.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-13",
+    "priority": 1805,
+    "starterSeq": 124,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-1735",
+    "target": "Se me olvidó recoger a los niños.",
+    "english": "I forgot to pick up the kids.",
+    "audio": "es-es-1735.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammar": "Se me olvidó = it slipped my mind (accidental se construction).",
+    "grammarNode": "node-13",
+    "priority": 1595,
+    "starterSeq": 125,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-1738",
+    "target": "La receta necesita trescientos gramos de harina.",
+    "english": "The recipe needs three hundred grams of flour.",
+    "audio": "es-es-1738.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-13",
+    "priority": 1689,
+    "starterSeq": 126,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-1707",
+    "target": "Para ser honesto, no me gustó el hotel.",
+    "english": "To be honest, I didn't like the hotel.",
+    "audio": "es-es-1707.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-13",
+    "priority": 1681,
+    "starterSeq": 127,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-1764",
+    "target": "Es importante tener un fondo de emergencia para gastos imprevistos.",
+    "english": "It's important to have an emergency fund for unexpected expenses.",
+    "audio": "es-es-1764.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-13",
+    "priority": 2325,
+    "starterSeq": 128,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-1766",
+    "target": "Hago ejercicio por salud.",
+    "english": "I exercise for health.",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "audio": "es-es-1766.mp3",
+    "grammarNode": "node-14",
+    "priority": 1014,
+    "starterSeq": 129,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-1767",
+    "target": "Te lo devuelvo mañana.",
+    "english": "I'll return it to you tomorrow.",
+    "audio": "es-es-1767.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammar": "Double object pronouns: \"te lo\" – to you + it.",
+    "grammarNode": "node-14",
+    "priority": 914,
+    "starterSeq": 130,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-1768",
+    "target": "Le cuesta levantarse temprano.",
+    "english": "He has a hard time getting up early.",
+    "audio": "es-es-1768.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-14",
+    "priority": 1041,
+    "starterSeq": 131,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-1771",
+    "target": "Creo que es por aquí.",
+    "english": "I think it's this way.",
+    "audio": "es-es-1771.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-14",
+    "priority": 838,
+    "starterSeq": 132,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-1772",
+    "target": "Este regalo es para ti.",
+    "english": "This gift is for you.",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammar": "\"Para\" = for (recipient): \"Es para ti.\" Para marks who receives something.",
+    "audio": "es-es-1772.mp3",
+    "grammarNode": "node-14",
+    "priority": 955,
+    "starterSeq": 133,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-1774",
+    "target": "Mi hermano toca la guitarra.",
+    "english": "My brother plays the guitar.",
+    "audio": "es-es-1774.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-14",
+    "priority": 1159,
+    "starterSeq": 134,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-1780",
+    "target": "Me sorprende que no lo sepas.",
+    "english": "I'm surprised you don't know.",
+    "audio": "es-es-1780.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-14",
+    "priority": 1299,
+    "starterSeq": 135,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-1781",
+    "target": "No puedo ir por el trabajo.",
+    "english": "I can't go because of work.",
+    "audio": "es-es-1781.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammar": "\"Por\" = because of. Expresses the cause or obstacle: \"No salimos por la lluvia\" (We didn't go out because of the rain).",
+    "grammarNode": "node-14",
+    "priority": 1052,
+    "starterSeq": 136,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-1784",
+    "target": "Me iría de vacaciones ahora mismo.",
+    "english": "I'd go on vacation right now.",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "audio": "es-es-1784.mp3",
+    "grammarNode": "node-14",
+    "priority": 1592,
+    "starterSeq": 137,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-1864",
+    "target": "Debería habérselo dicho antes en lugar de esperar.",
+    "english": "You should have told them sooner instead of waiting.",
+    "audio": "es-es-1864.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-14",
+    "priority": 2114,
+    "starterSeq": 138,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-1897",
+    "target": "Me gusta la música.",
+    "english": "I like music.",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammar": "\"Me\" is indirect object – music pleases me.",
+    "audio": "es-es-1897.mp3",
+    "grammarNode": "node-15",
+    "priority": 574,
+    "starterSeq": 139,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-1898",
+    "target": "Lo solucioné yo solo.",
+    "english": "I solved it by myself.",
+    "audio": "es-es-1898.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-15",
+    "priority": 954,
+    "starterSeq": 140,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-1899",
+    "target": "¿Les mandaste el correo?",
+    "english": "Did you send them the email?",
+    "audio": "es-es-1899.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammar": "\"Les\" = to them (indirect object): \"Les dije la verdad\" = I told them the truth. Plural of le.",
+    "grammarNode": "node-15",
+    "priority": 915,
+    "starterSeq": 141,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-1901",
+    "target": "La primavera empieza en marzo.",
+    "english": "Spring starts in March.",
+    "audio": "es-es-1901.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-15",
+    "priority": 1157,
+    "starterSeq": 142,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-1972",
+    "target": "La ciudad tiene mucha historia.",
+    "english": "The city has a lot of history.",
+    "audio": "es-es-1972.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-15",
+    "priority": 969,
+    "starterSeq": 143,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-1913",
+    "target": "Se lo prometí a mi hijo.",
+    "english": "I promised it to my son.",
+    "audio": "es-es-1913.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-15",
+    "priority": 1339,
+    "starterSeq": 144,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-1917",
+    "target": "Espero que tengas un buen día.",
+    "english": "I hope you have a good day.",
+    "audio": "es-es-1917.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-15",
+    "priority": 1354,
+    "starterSeq": 145,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-1984",
+    "target": "Le di mi opinión al director.",
+    "english": "I gave my opinion to the director.",
+    "audio": "es-es-1984.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-15",
+    "priority": 1243,
+    "starterSeq": 146,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-1991",
+    "target": "Ojalá consigamos entradas para el parque.",
+    "english": "I hope we get tickets to the park.",
+    "audio": "es-es-1991.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-15",
+    "priority": 1383,
+    "starterSeq": 147,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-1936",
+    "target": "Me perdí en las callejuelas del centro.",
+    "english": "I got lost in the narrow streets of the center.",
+    "audio": "es-es-1936.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-15",
+    "priority": 1473,
+    "starterSeq": 148,
+    "themes": [
+      "directions"
+    ]
+  },
+  {
+    "id": "es-1949",
+    "target": "El suelo de la cocina es de baldosas blancas.",
+    "english": "The kitchen floor is made of white tiles.",
+    "audio": "es-es-1949.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-15",
+    "priority": 1967,
+    "starterSeq": 149,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-1952",
+    "target": "¿Me pasas la sal y la pimienta, por favor?",
+    "english": "Can you pass me the salt and pepper, please?",
+    "audio": "es-es-1952.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-15",
+    "priority": 2045,
+    "starterSeq": 150,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-0717",
+    "target": "La moto está aparcada fuera.",
+    "english": "The motorcycle is parked outside.",
+    "audio": "es-es-0717.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammar": "\"La moto\" – feminine because it's short for \"la motocicleta.\" Keeps gender of the full word.",
+    "grammarNode": "node-16",
+    "priority": 631,
+    "starterSeq": 151,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-2103",
+    "target": "Espero que llegues a tiempo.",
+    "english": "I hope you arrive on time.",
+    "audio": "es-es-2103.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammar": "Espero que + subjunctive: hoping about someone else's action triggers subjunctive. \"Espero que vengas\" (I hope you come).",
+    "grammarNode": "node-16",
+    "priority": 1948,
+    "starterSeq": 152,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-0550",
+    "target": "No hay ningún taxi que pueda llevarme ahora.",
+    "english": "There's no taxi that can take me now.",
+    "audio": "es-es-0550.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-16",
+    "priority": 1318,
+    "grammar": "hay = there is / there are. Doesn't change for plural: hay un libro and hay tres libros. Different verb from tener (to have).",
+    "starterSeq": 153,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-2141",
+    "target": "A menos que llueva, vamos a la playa.",
+    "english": "Unless it rains, we're going to the beach.",
+    "audio": "es-es-2141.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammar": "A menos que always takes subjunctive.",
+    "grammarNode": "node-16",
+    "priority": 2527,
+    "starterSeq": 154,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-2144",
+    "target": "Creo que es importante que hablemos de esto.",
+    "english": "I think it's important that we talk about this.",
+    "audio": "es-es-2144.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-16",
+    "priority": 2360,
+    "starterSeq": 155,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-2145",
+    "target": "Aun cuando no estemos de acuerdo, nos respetamos.",
+    "english": "Even when we don't agree, we respect each other.",
+    "audio": "es-es-2145.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-16",
+    "priority": 2453,
+    "starterSeq": 156,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-2148",
+    "target": "Lo que pasó ayer no puede volver a pasar.",
+    "english": "What happened yesterday cannot happen again.",
+    "audio": "es-es-2148.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-16",
+    "priority": 2720,
+    "starterSeq": 157,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-2221",
+    "target": "Haga lo que haga, siempre encuentra algo que criticar.",
+    "english": "Whatever he does, he always finds something to criticize.",
+    "audio": "es-es-2221.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammar": "\"Haga lo que haga\" = whatever I do. Subjunctive repeated: verb + lo que + same verb. Universal concession pattern.",
+    "grammarNode": "node-16",
+    "priority": 2700,
+    "starterSeq": 158,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-2200",
+    "target": "Ponme una caña y una ración de croquetas de jamón.",
+    "english": "Give me a small beer and a portion of ham croquettes.",
+    "audio": "es-es-2200.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-16",
+    "priority": 2877,
+    "starterSeq": 159,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-2223",
+    "target": "La directora anuncio que habria cambios importantes en la empresa.",
+    "english": "The director announced there would be important changes in the company.",
+    "audio": "es-es-2223.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-16",
+    "priority": 2883,
+    "starterSeq": 160,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-2157",
+    "target": "En caso de que el bebé se despierte, dale el biberón.",
+    "english": "In case the baby wakes up, give him the bottle.",
+    "audio": "es-es-2157.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammar": "En caso de que + subjunctive = in case.",
+    "grammarNode": "node-16",
+    "priority": 3020,
+    "starterSeq": 161,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-2203",
+    "target": "Puse las flores en un jarrón en la mesa del salón.",
+    "english": "I put the flowers in a vase on the living room table.",
+    "audio": "es-es-2203.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-16",
+    "priority": 2826,
+    "starterSeq": 162,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-2204",
+    "target": "El edificio no tiene ascensor y vivimos en el quinto piso.",
+    "english": "The building has no elevator and we live on the fifth floor.",
+    "audio": "es-es-2204.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-16",
+    "priority": 3003,
+    "starterSeq": 163,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-2205",
+    "target": "El turismo rural es una forma estupenda de conocer la cultura local.",
+    "english": "Rural tourism is a wonderful way to get to know the local culture.",
+    "audio": "es-es-2205.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-16",
+    "priority": 3130,
+    "starterSeq": 164,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-2229",
+    "target": "Ten cuidado con el escalón.",
+    "english": "Be careful with the step.",
+    "audio": "es-es-2229.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammar": "Irregular tú command: \"Ten\" (have/hold). One of eight irregular tú commands: haz, di, sal, ven, ten, pon, sé, ve.",
+    "grammarNode": "node-17",
+    "priority": 1813,
+    "starterSeq": 165,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-2234",
+    "target": "Di la verdad, ¿fuiste tú?",
+    "english": "Tell the truth, was it you?",
+    "audio": "es-es-2234.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammar": "\"Di\" = Say/Tell (command). Irregular tú command of decir. \"Dime la verdad\" = Tell me the truth.",
+    "grammarNode": "node-17",
+    "priority": 1745,
+    "starterSeq": 166,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-2247",
+    "target": "Me da pena que se vaya.",
+    "english": "It makes me sad that she's leaving.",
+    "audio": "es-es-2247.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-17",
+    "priority": 2023,
+    "starterSeq": 167,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-2255",
+    "target": "Si termino pronto, ayudaré con tu parte.",
+    "english": "If I finish early, I'll help with your part.",
+    "audio": "es-es-2255.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-17",
+    "priority": 2251,
+    "starterSeq": 168,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-2257",
+    "target": "El guía nos explicó la historia del monumento.",
+    "english": "The guide explained the monument's history to us.",
+    "audio": "es-es-2257.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-17",
+    "priority": 2291,
+    "starterSeq": 169,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-2258",
+    "target": "Habría que tener en cuenta la diferencia horaria.",
+    "english": "One should take the time difference into account.",
+    "audio": "es-es-2258.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-17",
+    "priority": 2785,
+    "starterSeq": 170,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-2261",
+    "target": "Dile que venga a la reunión a las cuatro.",
+    "english": "Tell him to come to the meeting at four.",
+    "audio": "es-es-2261.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-17",
+    "priority": 2760,
+    "starterSeq": 171,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-2266",
+    "target": "Me desperté a medianoche porque oí un ruido fuerte.",
+    "english": "I woke up at midnight because I heard a loud noise.",
+    "audio": "es-es-2266.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-17",
+    "priority": 2837,
+    "starterSeq": 172,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-2303",
+    "target": "Los colegas con quienes almuerzo son de otro departamento.",
+    "english": "The colleagues I have lunch with are from another department.",
+    "audio": "es-es-2303.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammar": "\"Con quienes\" = with whom (plural): preposition + quienes for people in formal relative clauses.",
+    "grammarNode": "node-17",
+    "priority": 2614,
+    "starterSeq": 173,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-2269",
+    "target": "Si no fuera por mi familia, no habría seguido adelante.",
+    "english": "If it weren't for my family, I wouldn't have kept going.",
+    "audio": "es-es-2269.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-17",
+    "priority": 3045,
+    "starterSeq": 174,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-2324",
+    "target": "¿Le importaría esperar un momento?",
+    "english": "Would you mind waiting a moment?",
+    "audio": "es-es-2324.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammar": "\"¿Le importaría...?\" = Would you mind...? Very formal polite request using conditional of importar.",
+    "grammarNode": "node-18",
+    "priority": 1947,
+    "starterSeq": 175,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-2328",
+    "target": "Quería que supieras la verdad.",
+    "english": "I wanted you to know the truth.",
+    "audio": "es-es-2328.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammar": "Quería que + imperfect subjunctive: \"Quería que lo supieras\" (I wanted you to know). Past main clause + que → imperfect subjunctive.",
+    "grammarNode": "node-18",
+    "priority": 2150,
+    "starterSeq": 176,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-2347",
+    "target": "Me encantaría volver a este lugar algún día.",
+    "english": "I'd love to come back to this place someday.",
+    "audio": "es-es-2347.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-18",
+    "priority": 2747,
+    "starterSeq": 177,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-2400",
+    "target": "Nos aconsejaron que no bebiéramos agua del grifo.",
+    "english": "They advised us not to drink tap water.",
+    "audio": "es-es-2400.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-18",
+    "priority": 2530,
+    "starterSeq": 178,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-2361",
+    "target": "¿Le importaría indicarme cómo llegar a la plaza mayor?",
+    "english": "Would you mind telling me how to get to the main square?",
+    "audio": "es-es-2361.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-18",
+    "priority": 2931,
+    "starterSeq": 179,
+    "themes": [
+      "directions"
+    ]
+  },
+  {
+    "id": "es-2407",
+    "target": "El equipo con el que trabajo es muy profesional.",
+    "english": "The team I work with is very professional.",
+    "audio": "es-es-2407.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-18",
+    "priority": 2495,
+    "starterSeq": 180,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-2420",
+    "target": "El norte de España es más verde que el sur.",
+    "english": "The north of Spain is greener than the south.",
+    "audio": "es-es-2420.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-18",
+    "priority": 2695,
+    "starterSeq": 181,
+    "themes": [
+      "directions"
+    ]
+  },
+  {
+    "id": "es-2423",
+    "target": "La isla a la que queremos ir está muy lejos.",
+    "english": "The island we want to go to is very far.",
+    "audio": "es-es-2423.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-18",
+    "priority": 2852,
+    "starterSeq": 182,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-2365",
+    "target": "De tal palo, tal astilla; el hijo es identico al padre.",
+    "english": "Like father, like son – the son is identical to the father.",
+    "audio": "es-es-2365.mp3",
+    "grammar": "De tal palo, tal astilla = the apple doesn't fall far from the tree.",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-18",
+    "priority": 2946,
+    "starterSeq": 183,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-2427",
+    "target": "Prefiero ir en carro compartido porque es más barato y más sostenible.",
+    "english": "I prefer ride-sharing because it's cheaper and more sustainable.",
+    "audio": "es-es-2427.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-18",
+    "priority": 3272,
+    "starterSeq": 184,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-2454",
+    "target": "No sé qué habrá pasado.",
+    "english": "I don't know what could have happened.",
+    "audio": "es-es-2454.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammar": "Future perfect for past speculation: \"¿Qué habrá pasado?\" (What could have happened?). Guessing about past events.",
+    "grammarNode": "node-19",
+    "priority": 1514,
+    "starterSeq": 185,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-0202",
+    "target": "¿A qué hora volveremos al hotel?",
+    "english": "What time will we return to the hotel?",
+    "audio": "es-es-0202.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-19",
+    "grammar": "'¿A qué hora...?' = At what time...? The preposition 'a' is required with clock times.",
+    "priority": 848,
+    "starterSeq": 186,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-2485",
+    "target": "Lo que me preocupa es que no tenemos suficiente tiempo.",
+    "english": "What worries me is that we don't have enough time.",
+    "audio": "es-es-2485.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-19",
+    "priority": 2712,
+    "starterSeq": 187,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-2529",
+    "target": "La razón por la que llegué tarde fue el tráfico.",
+    "english": "The reason I arrived late was the traffic.",
+    "audio": "es-es-2529.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammar": "\"Por la que\" = for which: \"La razón por la que vine\" = The reason for which I came.",
+    "grammarNode": "node-19",
+    "priority": 2728,
+    "starterSeq": 188,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-2537",
+    "target": "Si hubiera aprendido inglés de pequeño, ahora lo hablaría perfectamente.",
+    "english": "If I had learned English as a child, I would speak it perfectly now.",
+    "audio": "es-es-2537.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-19",
+    "priority": 3172,
+    "starterSeq": 189,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-2539",
+    "target": "Mi compañera de trabajo se ha convertido en una buena amiga.",
+    "english": "My coworker has become a good friend.",
+    "audio": "es-es-2539.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-19",
+    "priority": 2933,
+    "starterSeq": 190,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-2541",
+    "target": "El comercio electrónico ha cambiado la forma en que compramos casi todo.",
+    "english": "E-commerce has changed the way we buy almost everything.",
+    "audio": "es-es-2541.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-19",
+    "priority": 3175,
+    "starterSeq": 191,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-2542",
+    "target": "Hice una copia de seguridad de todos mis archivos en la nube.",
+    "english": "I made a backup of all my files in the cloud.",
+    "audio": "es-es-2542.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-19",
+    "priority": 3098,
+    "starterSeq": 192,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-2543",
+    "target": "Esta semana he cambiado mi rutina para hacer ejercicio por la mañana.",
+    "english": "This week I've changed my routine to exercise in the morning.",
+    "audio": "es-es-2543.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-19",
+    "priority": 3034,
+    "starterSeq": 193,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-2544",
+    "target": "Necesito una tabla de cortar, un cuchillo afilado y una olla grande.",
+    "english": "I need a cutting board, a sharp knife, and a large pot.",
+    "audio": "es-es-2544.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-19",
+    "priority": 3236,
+    "starterSeq": 194,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-2612",
+    "target": "Ya habían cerrado cuando llegamos.",
+    "english": "They had already closed when we arrived.",
+    "audio": "es-es-2612.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammar": "Past perfect: \"Cuando llegamos, ya había empezado.\" The pluperfect shows one past action was already done before another.",
+    "grammarNode": "node-20",
+    "priority": 1774,
+    "starterSeq": 195,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-2573",
+    "target": "He comido demasiado, no puedo más.",
+    "english": "I've eaten too much, I can't take any more.",
+    "audio": "es-es-2573.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-20",
+    "grammar": "'He + past participle' = present perfect. In Spain, it's used for recent past: 'he comido hoy.'",
+    "priority": 1757,
+    "starterSeq": 196,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-2581",
+    "target": "Agua que no has de beber, déjala correr.",
+    "english": "If you can't drink it, let it flow.",
+    "audio": "es-es-2581.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-20",
+    "priority": 2485,
+    "starterSeq": 197,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-2625",
+    "target": "La realidad es peor de lo que imaginaba.",
+    "english": "Reality is worse than what I imagined.",
+    "audio": "es-es-2625.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-20",
+    "priority": 2426,
+    "starterSeq": 198,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-2594",
+    "target": "Ella está muy enfadada conmigo por lo que pasó.",
+    "english": "She is very angry with me about what happened.",
+    "audio": "es-es-2594.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-20",
+    "priority": 2653,
+    "starterSeq": 199,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-2604",
+    "target": "La profesora pidió que los padres asistieran a la reunión.",
+    "english": "The teacher asked that the parents attend the meeting.",
+    "audio": "es-es-2604.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-20",
+    "priority": 2906,
+    "starterSeq": 200,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-2650",
+    "target": "El parque al que llevamos a los niños tiene columpios.",
+    "english": "The park we take the kids to has swings.",
+    "audio": "es-es-2650.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-20",
+    "priority": 2892,
+    "starterSeq": 201,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-2652",
+    "target": "El país del que vengo tiene una cultura muy rica.",
+    "english": "The country I come from has a very rich culture.",
+    "audio": "es-es-2652.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-20",
+    "priority": 2766,
+    "starterSeq": 202,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-2668",
+    "target": "No en vano ha sido el departamento con mejores resultados este trimestre.",
+    "english": "Not for nothing has it been the department with the best results this quarter.",
+    "audio": "es-es-2668.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-20",
+    "priority": 3105,
+    "starterSeq": 203,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-2672",
+    "target": "Para las seis, habré terminado.",
+    "english": "By six, I will have finished.",
+    "tags": [
+      "general"
+    ],
+    "grammar": "Future perfect: habré + past participle.",
+    "audio": "es-es-2672.mp3",
+    "grammarNode": "node-21",
+    "priority": 1620,
+    "starterSeq": 204,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-2675",
+    "target": "He perdido las llaves otra vez.",
+    "english": "I've lost my keys again.",
+    "audio": "es-es-2675.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammar": "Present perfect: he perdido (perder) – haber + past participle.",
+    "grammarNode": "node-21",
+    "priority": 1825,
+    "starterSeq": 205,
+    "themes": [
+      "directions"
+    ]
+  },
+  {
+    "id": "es-2770",
+    "target": "El campeonato mundial de atletismo se celebra cada dos años.",
+    "english": "The world athletics championship is held every two years.",
+    "audio": "es-es-2770.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-21",
+    "priority": 2816,
+    "starterSeq": 206,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-2772",
+    "target": "El restaurante es pequeño; no obstante, la comida es excelente.",
+    "english": "The restaurant is small – nevertheless, the food is excellent.",
+    "audio": "es-es-2772.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-21",
+    "priority": 2841,
+    "starterSeq": 207,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-2795",
+    "target": "Cabe señalar que esta medida beneficiará a miles de personas.",
+    "english": "It should be pointed out that this measure will benefit thousands of people.",
+    "audio": "es-es-2795.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-21",
+    "priority": 3006,
+    "starterSeq": 208,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-2779",
+    "target": "No solo subieron los precios, sino que también redujeron la calidad.",
+    "english": "Not only did they raise prices, but they also reduced quality.",
+    "audio": "es-es-2779.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammar": "No solo... sino que también: correlative connectors.",
+    "grammarNode": "node-21",
+    "priority": 3075,
+    "starterSeq": 209,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-2796",
+    "target": "Es fundamental mantener un tono profesional en los correos de trabajo.",
+    "english": "It is essential to maintain a professional tone in work emails.",
+    "audio": "es-es-2796.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-21",
+    "priority": 2951,
+    "starterSeq": 210,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-2780",
+    "target": "En la aduana me pidieron que abriera la maleta para una inspección.",
+    "english": "At customs they asked me to open my suitcase for an inspection.",
+    "audio": "es-es-2780.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-21",
+    "priority": 3225,
+    "starterSeq": 211,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-2797",
+    "target": "Es como si mi madre tuviera un sexto sentido con los niños.",
+    "english": "It's as if my mother had a sixth sense with kids.",
+    "audio": "es-es-2797.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-21",
+    "priority": 3072,
+    "starterSeq": 212,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-2805",
+    "target": "Quienquiera que haya dicho eso, se equivoca.",
+    "english": "Whoever said that is wrong.",
+    "audio": "es-es-2805.mp3",
+    "grammar": "Quienquiera que + subjunctive = whoever.",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-22",
+    "priority": 3044,
+    "starterSeq": 213,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-2811",
+    "target": "Si pudiera elegir, viviría cerca del mar.",
+    "english": "If I could choose, I would live near the sea.",
+    "audio": "es-es-2811.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-22",
+    "priority": 2922,
+    "starterSeq": 214,
+    "themes": [
+      "directions"
+    ]
+  },
+  {
+    "id": "es-2812",
+    "target": "Ellos se hablan por teléfono cada noche.",
+    "english": "They talk to each other on the phone every night.",
+    "audio": "es-es-2812.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammar": "Hablarse (reciprocal): se hablan – they talk to each other.",
+    "grammarNode": "node-22",
+    "priority": 2644,
+    "starterSeq": 215,
+    "themes": [
+      "time",
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-2848",
+    "target": "El hecho de que no respondiera me preocupó.",
+    "english": "The fact that he didn't respond worried me.",
+    "audio": "es-es-2848.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-22",
+    "priority": 2955,
+    "starterSeq": 216,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-2851",
+    "target": "Si pudiera cocinar mejor, invitaría a más gente.",
+    "english": "If I could cook better, I would invite more people.",
+    "audio": "es-es-2851.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-22",
+    "priority": 3237,
+    "starterSeq": 217,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-2857",
+    "target": "En el supuesto de que cancelen el vuelo, nos reembolsarán.",
+    "english": "In the event that they cancel the flight, they will reimburse us.",
+    "audio": "es-es-2857.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-22",
+    "priority": 3287,
+    "starterSeq": 218,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-2876",
+    "target": "Quienquiera que haya diseñado este itinerario hizo un trabajo increíble.",
+    "english": "Whoever designed this itinerary did an incredible job.",
+    "audio": "es-es-2876.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-22",
+    "priority": 3448,
+    "starterSeq": 219,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-2863",
+    "target": "Si hubiera hecho caso a mi padre, no tendría estas deudas.",
+    "english": "If I had listened to my father, I wouldn't be in debt.",
+    "audio": "es-es-2863.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-22",
+    "priority": 3571,
+    "starterSeq": 220,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-2884",
+    "target": "Estas camisetas se venden muy bien.",
+    "english": "These shirts sell very well.",
+    "audio": "es-es-2884.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammar": "Passive se: the verb agrees with the grammatical subject. \"Se venden camisetas\" (camisetas = subject, plural → venden).",
+    "grammarNode": "node-23",
+    "priority": 2584,
+    "starterSeq": 221,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-2888",
+    "target": "Se vive bien en esta ciudad.",
+    "english": "You live well in this city.",
+    "audio": "es-es-2888.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammar": "\"Se vive\" = one lives / people live. Impersonal se with intransitive verbs: \"Se vive bien aquí\" = People live well here.",
+    "grammarNode": "node-23",
+    "priority": 2245,
+    "starterSeq": 222,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-2906",
+    "target": "No solo llegó tarde, sino que además no pidió disculpas.",
+    "english": "Not only did he arrive late, but he also didn't apologize.",
+    "audio": "es-es-2906.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-23",
+    "priority": 3285,
+    "starterSeq": 223,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-2959",
+    "target": "Habríamos ganado el contrato si la presentación hubiera sido mejor.",
+    "english": "We would have won the contract if the presentation had been better.",
+    "audio": "es-es-2959.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-23",
+    "priority": 3262,
+    "starterSeq": 224,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-2911",
+    "target": "Por un lado quiero ir; por otro lado, estoy muy cansado.",
+    "english": "On the one hand I want to go – on the other hand, I'm very tired.",
+    "audio": "es-es-2911.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-23",
+    "priority": 3362,
+    "starterSeq": 225,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-2913",
+    "target": "Mi madre me dijo que mi hermano había llamado mientras estaba fuera.",
+    "english": "My mother told me my brother had called while I was out.",
+    "audio": "es-es-2913.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-23",
+    "priority": 3488,
+    "starterSeq": 226,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-2966",
+    "target": "El libro es interesante; sin embargo, el final me decepcionó un poco.",
+    "english": "The book is interesting – however, the ending disappointed me a little.",
+    "audio": "es-es-2966.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-23",
+    "priority": 3485,
+    "starterSeq": 227,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-2981",
+    "target": "Acaba de llamar tu madre.",
+    "english": "Your mother just called.",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "audio": "es-es-2981.mp3",
+    "grammarNode": "node-24",
+    "priority": 2250,
+    "grammar": "`acabar de + infinitive` = 'to have just done X'. `Acabo de comer` = 'I've just eaten'. Despite the English perfect tense, Spanish uses present.",
+    "starterSeq": 228,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-2985",
+    "target": "Llevo viajando por España tres semanas.",
+    "english": "I've been traveling around Spain for three weeks.",
+    "audio": "es-es-2985.mp3",
+    "grammar": "\"Llevar\" + gerund expresses duration: \"I've been doing something for X time.\"",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-24",
+    "priority": 2654,
+    "starterSeq": 229,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-3014",
+    "target": "Se pusieron a discutir en medio del restaurante.",
+    "english": "They started arguing in the middle of the restaurant.",
+    "audio": "es-es-3014.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-24",
+    "priority": 2988,
+    "starterSeq": 230,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-3016",
+    "target": "Se nota a la legua que está enamorado.",
+    "english": "You can tell from a mile off that he's in love.",
+    "audio": "es-es-3016.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-24",
+    "priority": 3047,
+    "starterSeq": 231,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-3057",
+    "target": "En cuanto al tema que mencionaste, estoy de acuerdo.",
+    "english": "Regarding the topic you mentioned, I agree.",
+    "audio": "es-es-3057.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-24",
+    "priority": 3142,
+    "starterSeq": 232,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-3062",
+    "target": "Por mucho que me cueste admitirlo, ese hotel era un desastre.",
+    "english": "As much as it pains me to admit it, that hotel was a disaster.",
+    "audio": "es-es-3062.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-24",
+    "priority": 3408,
+    "starterSeq": 233,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-2999",
+    "target": "Al fin y al cabo, lo importante es que estamos todos bien.",
+    "english": "At the end of the day, the important thing is that we're all okay.",
+    "audio": "es-es-2999.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-24",
+    "priority": 3493,
+    "starterSeq": 234,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3041",
+    "target": "Por mucho que lo intentes, no conseguirás cambiar su forma de pensar.",
+    "english": "No matter how much you try, you won't manage to change their way of thinking.",
+    "audio": "es-es-3041.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-24",
+    "priority": 3483,
+    "starterSeq": 235,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3064",
+    "target": "Sigue lloviendo desde esta mañana.",
+    "english": "It's been raining since this morning.",
+    "audio": "es-es-3064.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-25",
+    "grammar": "'Seguir + gerund' = to keep/continue doing. 'Sigue lloviendo' = It keeps raining.",
+    "priority": 2286,
+    "starterSeq": 236,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-3101",
+    "target": "Llevo tres años estudiando español.",
+    "english": "I've been studying Spanish for three years.",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammar": "\"Llevar\" + time + gerund – ongoing duration.",
+    "audio": "es-es-3101.mp3",
+    "grammarNode": "node-25",
+    "priority": 2378,
+    "starterSeq": 237,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-3084",
+    "target": "No dejo de pensar en lo que me dijiste.",
+    "english": "I can't stop thinking about what you told me.",
+    "audio": "es-es-3084.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-25",
+    "priority": 3024,
+    "starterSeq": 238,
+    "themes": [
+      "directions"
+    ]
+  },
+  {
+    "id": "es-3086",
+    "target": "De haber sabido que vendríais, habría preparado más comida.",
+    "english": "Had I known you were coming, I would have prepared more food.",
+    "audio": "es-es-3086.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-25",
+    "priority": 3343,
+    "starterSeq": 239,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-3138",
+    "target": "De hecho, es más complicado de lo que parece.",
+    "english": "In fact, it's more complicated than it seems.",
+    "audio": "es-es-3138.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-25",
+    "priority": 3063,
+    "starterSeq": 240,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-3095",
+    "target": "Me resulta difícil concentrarme cuando hay mucho ruido en la oficina.",
+    "english": "I find it hard to concentrate when there's a lot of noise in the office.",
+    "audio": "es-es-3095.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-25",
+    "priority": 3320,
+    "starterSeq": 241,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-3161",
+    "target": "La doctora me dijo que el dolor de estómago podría ser estrés.",
+    "english": "The doctor told me the stomachache could be stress.",
+    "audio": "es-es-3161.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-25",
+    "priority": 3602,
+    "starterSeq": 242,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-3164",
+    "target": "De haber sabido que era niña, habríamos decorado la habitación de rosa.",
+    "english": "Had we known it was a girl, we would have decorated the room in pink.",
+    "audio": "es-es-3164.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-25",
+    "priority": 3516,
+    "starterSeq": 243,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3186",
+    "target": "No nos avisaron del cambio.",
+    "english": "They didn't tell us about the change.",
+    "audio": "es-es-3186.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammar": "\"Nos\" = to us (indirect object): \"Nos dijo la verdad\" = He told us the truth.",
+    "grammarNode": "node-26",
+    "priority": 2218,
+    "starterSeq": 244,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3219",
+    "target": "El camarero preguntó si queríamos postre.",
+    "english": "The waiter asked if we wanted dessert.",
+    "audio": "es-es-3219.mp3",
+    "grammar": "Reported question with \"si\": \"¿Quieren postre?\" → \"si queríamos postre.\"",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-26",
+    "priority": 2630,
+    "starterSeq": 245,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-3230",
+    "target": "Heredé los ojos azules de mi abuela materna.",
+    "english": "I inherited my blue eyes from my maternal grandmother.",
+    "audio": "es-es-3230.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-26",
+    "priority": 2992,
+    "starterSeq": 246,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-3235",
+    "target": "Dejo de responder correos a las seis para desconectar.",
+    "english": "I stop answering emails at six to disconnect.",
+    "audio": "es-es-3235.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-26",
+    "priority": 3177,
+    "starterSeq": 247,
+    "themes": [
+      "directions"
+    ]
+  },
+  {
+    "id": "es-3256",
+    "target": "El cliente nos dijo que no estaba satisfecho con el servicio.",
+    "english": "The client told us he wasn't satisfied with the service.",
+    "audio": "es-es-3256.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-26",
+    "priority": 3394,
+    "starterSeq": 248,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-3261",
+    "target": "Me dijo que aquella había sido la mejor decisión de su vida.",
+    "english": "She told me that had been the best decision of her life.",
+    "audio": "es-es-3261.mp3",
+    "grammar": "'Esa/esta' becomes 'aquella' in reported speech (distal demonstrative).",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-26",
+    "priority": 3401,
+    "starterSeq": 249,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-3262",
+    "target": "Por más que busqué, no encontré un vuelo directo a esa isla.",
+    "english": "No matter how much I searched, I couldn't find a direct flight to that island.",
+    "audio": "es-es-3262.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-26",
+    "priority": 3517,
+    "starterSeq": 250,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-3287",
+    "target": "El jardín está más bonito que el año pasado.",
+    "english": "The garden looks nicer than last year.",
+    "audio": "es-es-3287.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-27",
+    "priority": 2978,
+    "grammar": "`más X que Y` = 'more X than Y', `menos X que Y` = 'less X than Y'. Use `que` (not `de`) before the thing you're comparing to.",
+    "starterSeq": 251,
+    "themes": [
+      "time",
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3293",
+    "target": "Puesto que no hay tren directo, tomaremos el autobús.",
+    "english": "Since there's no direct train, we'll take the bus.",
+    "audio": "es-es-3293.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-27",
+    "priority": 3086,
+    "starterSeq": 252,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-3331",
+    "target": "El entrenador explicó que debíamos calentar antes de correr.",
+    "english": "The coach explained that we had to warm up before running.",
+    "audio": "es-es-3331.mp3",
+    "grammar": "Reported speech: \"deben\" → \"debíamos\" (present → imperfect) after \"explicó que.\"",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-27",
+    "priority": 3210,
+    "starterSeq": 253,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3304",
+    "target": "No es que no me guste viajar, sino que prefiero planificarlo bien.",
+    "english": "It's not that I don't like traveling, but I prefer to plan it well.",
+    "audio": "es-es-3304.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-27",
+    "priority": 3478,
+    "starterSeq": 254,
+    "themes": [
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-3357",
+    "target": "De no ser por el apoyo de mi familia, no lo habría conseguido.",
+    "english": "Were it not for my family's support, I wouldn't have made it.",
+    "audio": "es-es-3357.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-27",
+    "priority": 3579,
+    "starterSeq": 255,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-3341",
+    "target": "El arrepentimiento me persigue desde que tomé aquella decisión sin pensar en las consecuencias.",
+    "english": "Regret has haunted me since I made that decision without thinking about the consequences.",
+    "audio": "es-es-3341.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-27",
+    "priority": 3678,
+    "starterSeq": 256,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-3417",
+    "target": "Huelga decir que su contribución fue fundamental.",
+    "english": "Needless to say, his contribution was fundamental.",
+    "audio": "es-es-3417.mp3",
+    "grammar": "Huelga decir que = needless to say (very formal register).",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-28",
+    "priority": 3316,
+    "starterSeq": 257,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3363",
+    "target": "Mis padres están casados desde hace treinta años.",
+    "english": "My parents have been married for thirty years.",
+    "audio": "es-es-3363.mp3",
+    "grammar": "\"ser\" for personality traits and inherent qualities. \"Están cariñosos\" would mean they're being affectionate right now (unusual behavior).",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-28",
+    "priority": 3356,
+    "starterSeq": 258,
+    "themes": [
+      "family",
+      "time"
+    ]
+  },
+  {
+    "id": "es-3394",
+    "target": "Dejamos de vernos cuando ella se mudó al extranjero.",
+    "english": "We stopped seeing each other when she moved abroad.",
+    "audio": "es-es-3394.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-28",
+    "priority": 3402,
+    "starterSeq": 259,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-3414",
+    "target": "De no haber sido por el plazo, habríamos hecho un mejor trabajo.",
+    "english": "If it hadn't been for the deadline, we would have done a better job.",
+    "audio": "es-es-3414.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-28",
+    "priority": 3567,
+    "starterSeq": 260,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-3415",
+    "target": "Me arrepentí de no haber dicho lo que sentía cuando tuve la oportunidad.",
+    "english": "I regretted not saying what I felt when I had the chance.",
+    "audio": "es-es-3415.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-28",
+    "priority": 3774,
+    "starterSeq": 261,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-3442",
+    "target": "La verdadera riqueza no se mide en dinero, sino en experiencias y relaciones.",
+    "english": "True wealth is not measured in money, but in experiences and relationships.",
+    "audio": "es-es-3442.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-28",
+    "priority": 3795,
+    "starterSeq": 262,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3463",
+    "target": "Los fines de semana me levanto tarde.",
+    "english": "On weekends I get up late.",
+    "audio": "es-es-3463.mp3",
+    "grammar": "\"Los fines de semana\" – using \"los\" with a time expression means \"every\" or \"on.\" Los lunes = on Mondays. Without \"los\" it's a specific one.",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-29",
+    "priority": 3068,
+    "starterSeq": 263,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-3466",
+    "target": "Huelga decir que la puntualidad es fundamental.",
+    "english": "It goes without saying that punctuality is essential.",
+    "audio": "es-es-3466.mp3",
+    "grammar": "Huelga decir que = it goes without saying that (very formal).",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-29",
+    "priority": 3273,
+    "starterSeq": 264,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3458",
+    "target": "De no ser por el mapa, nos habríamos perdido completamente.",
+    "english": "If it weren't for the map, we would have gotten completely lost.",
+    "audio": "es-es-3458.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-29",
+    "priority": 3492,
+    "starterSeq": 265,
+    "themes": [
+      "directions"
+    ]
+  },
+  {
+    "id": "es-3520",
+    "target": "Eso es harina de otro costal; no tiene nada que ver.",
+    "english": "That's a different kettle of fish (lit. that's flour from another sack) – it has nothing to do with it.",
+    "audio": "es-es-3520.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-29",
+    "priority": 3618,
+    "grammar": "When a negative word comes after the verb, `no` goes before it. `No vi a nadie`, `nunca lo hago`. Two negatives don't cancel – they reinforce.",
+    "starterSeq": 266,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-3560",
+    "target": "Dicho esto, el viaje superó con creces mis expectativas.",
+    "english": "That said, the trip far exceeded my expectations.",
+    "audio": "es-es-3560.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-30",
+    "priority": 3476,
+    "starterSeq": 267,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-3563",
+    "target": "Terminada la reunión, todos se dirigieron a la salida.",
+    "english": "Once the meeting was over, everyone headed for the exit.",
+    "audio": "es-es-3563.mp3",
+    "grammar": "Absolute participial clause: participle + noun = 'once X was done'.",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-30",
+    "priority": 3467,
+    "starterSeq": 268,
+    "themes": [
+      "directions",
+      "work"
+    ]
+  },
+  {
+    "id": "es-3535",
+    "target": "Cada vez más personas se informan a través de internet.",
+    "english": "More and more people get their information through the internet.",
+    "audio": "es-es-3535.mp3",
+    "grammar": "\"resultar\" (like gustar). \"Expresarse\" = to express oneself (reflexive). \"En otro idioma\" = in another language.",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-30",
+    "priority": 3550,
+    "starterSeq": 269,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3602",
+    "target": "Me pilló por sorpresa; no me lo esperaba para nada.",
+    "english": "It caught me by surprise (lit. it caught/grabbed me) – i didn't expect it at all.",
+    "audio": "es-es-3602.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-30",
+    "priority": 3490,
+    "starterSeq": 270,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-3587",
+    "target": "La nómina de este mes incluye las horas extra que hice en febrero.",
+    "english": "This month's paycheck includes the overtime I did in February.",
+    "audio": "es-es-3587.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-30",
+    "priority": 3755,
+    "starterSeq": 271,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-3607",
+    "target": "La crianza de los hijos es el mayor reto y la mayor recompensa.",
+    "english": "Raising children is the greatest challenge and the greatest reward.",
+    "audio": "es-es-3607.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-30",
+    "priority": 3743,
+    "starterSeq": 272,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-3611",
+    "target": "Es lamentable que no se valore lo suficiente el trabajo de los profesores.",
+    "english": "It is regrettable that the work of teachers is not valued enough.",
+    "audio": "es-es-3611.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-30",
+    "priority": 3779,
+    "starterSeq": 273,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-3544",
+    "target": "Cuanto más viajo, más me doy cuenta de lo grande que es el mundo.",
+    "english": "The more I travel, the more I realize how big the world is.",
+    "audio": "es-es-3544.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-30",
+    "priority": 3842,
+    "starterSeq": 274,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-3592",
+    "target": "Hice una lista de la compra para no olvidarme de nada en el supermercado.",
+    "english": "I made a shopping list so I wouldn't forget anything at the supermarket.",
+    "audio": "es-es-3592.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-30",
+    "priority": 3807,
+    "starterSeq": 275,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3642",
+    "target": "Cuanto más practico, mejor me siento con el idioma.",
+    "english": "The more I practice, the better I feel with the language.",
+    "audio": "es-es-3642.mp3",
+    "grammar": "Cuanto más...mejor = the more...the better, comparative correlation.",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-31",
+    "priority": 3413,
+    "starterSeq": 276,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-3654",
+    "target": "Le diagnosticaron diabetes y ahora tiene que controlar el azúcar.",
+    "english": "They diagnosed him with diabetes and now he has to monitor his sugar.",
+    "audio": "es-es-3654.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-31",
+    "priority": 3616,
+    "starterSeq": 277,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-3657",
+    "target": "No es sino trabajando todos juntos como lograremos superar esta crisis.",
+    "english": "It is only by working together that we will overcome this crisis.",
+    "audio": "es-es-3657.mp3",
+    "grammar": "No es sino + gerund + como = it is only by... that (emphatic cleft).",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-31",
+    "priority": 3591,
+    "starterSeq": 278,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-3669",
+    "target": "Después de la mudanza tardamos una semana entera en deshacer todas las cajas.",
+    "english": "After the move it took us a whole week to unpack all the boxes.",
+    "audio": "es-es-3669.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-31",
+    "priority": 3773,
+    "starterSeq": 279,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-3625",
+    "target": "En la carta hay platos sin gluten y sin lactosa para personas con intolerancias.",
+    "english": "The menu has gluten-free and lactose-free dishes for people with intolerances.",
+    "audio": "es-es-3625.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-31",
+    "priority": 3869,
+    "starterSeq": 280,
+    "themes": [
+      "food"
+    ]
+  },
+  {
+    "id": "es-3672",
+    "target": "Lo realmente preocupante no es el problema en sí, sino la falta de respuesta.",
+    "english": "What is truly worrying is not the problem itself, but the lack of response.",
+    "audio": "es-es-3672.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-31",
+    "priority": 3820,
+    "starterSeq": 281,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3710",
+    "target": "Pasamos el control de seguridad del aeropuerto sin problemas.",
+    "english": "We passed through airport security without any problems.",
+    "audio": "es-es-3710.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-32",
+    "priority": 3661,
+    "starterSeq": 282,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-3708",
+    "target": "No me llamó; es más, ni siquiera me mandó un mensaje.",
+    "english": "He didn't call me – what's more, he didn't even send me a message.",
+    "audio": "es-es-3708.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammar": "\"Es más\" = what's more / moreover. Escalates or adds to a previous point.",
+    "grammarNode": "node-32",
+    "priority": 3799,
+    "starterSeq": 283,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3741",
+    "target": "Mi sobrina me dibujó un retrato y me lo regaló por mi cumpleaños.",
+    "english": "My niece drew a portrait of me and gave it to me for my birthday.",
+    "audio": "es-es-3741.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-32",
+    "priority": 3925,
+    "starterSeq": 284,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-3769",
+    "target": "Habiendo recorrido toda la costa, puedo decir que el sur es lo mejor.",
+    "english": "Having traveled the whole coast, I can say the south is the best.",
+    "audio": "es-es-3769.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-32",
+    "priority": 3933,
+    "starterSeq": 285,
+    "themes": [
+      "directions",
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-3790",
+    "target": "A diferencia de otros turistas, preferimos la comida local.",
+    "english": "Unlike other tourists, we prefer local food.",
+    "audio": "es-es-3790.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-33",
+    "priority": 3702,
+    "starterSeq": 286,
+    "themes": [
+      "food",
+      "opinions"
+    ]
+  },
+  {
+    "id": "es-3807",
+    "target": "No solo habla español, sino que también domina el francés.",
+    "english": "Not only does he speak Spanish, but he also masters French.",
+    "audio": "es-es-3807.mp3",
+    "grammar": "No solo...sino que también = not only...but also.",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-33",
+    "priority": 3783,
+    "starterSeq": 287,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3820",
+    "target": "Hago pesas y abdominales tres días a la semana en el gimnasio.",
+    "english": "I do weights and sit-ups three days a week at the gym.",
+    "audio": "es-es-3820.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-33",
+    "priority": 3906,
+    "starterSeq": 288,
+    "themes": [
+      "time"
+    ]
+  },
+  {
+    "id": "es-3834",
+    "target": "Las cataratas del Iguazú están en la frontera entre Argentina y Brasil.",
+    "english": "Iguazu Falls are on the border between Argentina and Brazil.",
+    "audio": "es-es-3834.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-33",
+    "priority": 3911,
+    "starterSeq": 289,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-3854",
+    "target": "Si mi hermana hubiera venido, la fiesta habría sido mejor.",
+    "english": "If my sister had come, the party would have been better.",
+    "audio": "es-es-3854.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-34",
+    "priority": 3819,
+    "starterSeq": 290,
+    "themes": [
+      "family"
+    ]
+  },
+  {
+    "id": "es-3860",
+    "target": "Sea cual sea el destino, lo importante es disfrutar del camino.",
+    "english": "Whatever the destination, the important thing is to enjoy the journey.",
+    "audio": "es-es-3860.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-34",
+    "priority": 3817,
+    "starterSeq": 291,
+    "themes": [
+      "emotions"
+    ]
+  },
+  {
+    "id": "es-3861",
+    "target": "Lo cierto es que viajar en temporada baja tiene muchas ventajas.",
+    "english": "The truth is that traveling in the off-season has many advantages.",
+    "audio": "es-es-3861.mp3",
+    "tags": [
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-34",
+    "priority": 3866,
+    "starterSeq": 292,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3863",
+    "target": "Perdimos la conexión del vuelo por un retraso en la escala.",
+    "english": "We missed the connecting flight because of a delay at the layover.",
+    "audio": "es-es-3863.mp3",
+    "tags": [
+      "family",
+      "general",
+      "travel"
+    ],
+    "grammarNode": "node-34",
+    "priority": 3853,
+    "starterSeq": 293,
+    "themes": [
+      "travel"
+    ]
+  },
+  {
+    "id": "es-3869",
+    "target": "Si el proyecto hubiera ido bien, me habrían dado una promoción.",
+    "english": "If the project had gone well, they would have given me a promotion.",
+    "audio": "es-es-3869.mp3",
+    "tags": [
+      "family",
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-34",
+    "priority": 3878,
+    "starterSeq": 294,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-3872",
+    "target": "Si alguna vez tienes la oportunidad, no te lo pienses dos veces.",
+    "english": "If you ever have the opportunity, don't think twice.",
+    "audio": "es-es-3872.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-34",
+    "priority": 3886,
+    "starterSeq": 295,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3911",
+    "target": "Habría sido mejor si nos hubiéramos quedado en casa.",
+    "english": "It would have been better if we had stayed home.",
+    "audio": "es-es-3911.mp3",
+    "tags": [
+      "family",
+      "general"
+    ],
+    "grammarNode": "node-35",
+    "priority": 3665,
+    "starterSeq": 296,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3925",
+    "target": "A menos que encontremos financiación, el proyecto se cancelará.",
+    "english": "Unless we find funding, the project will be cancelled.",
+    "audio": "es-es-3925.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-35",
+    "priority": 3735,
+    "starterSeq": 297,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-3930",
+    "target": "Habría aceptado la oferta si las condiciones hubieran sido mejores.",
+    "english": "I would have accepted the offer if the conditions had been better.",
+    "audio": "es-es-3930.mp3",
+    "tags": [
+      "general"
+    ],
+    "grammarNode": "node-35",
+    "priority": 3804,
+    "starterSeq": 298,
+    "themes": [
+      "daily life"
+    ]
+  },
+  {
+    "id": "es-3933",
+    "target": "Habría aceptado el trabajo si me hubieran ofrecido mejor sueldo.",
+    "english": "I would have accepted the job if they had offered me a better salary.",
+    "audio": "es-es-3933.mp3",
+    "tags": [
+      "general",
+      "work"
+    ],
+    "grammarNode": "node-35",
+    "priority": 3823,
+    "starterSeq": 299,
+    "themes": [
+      "work"
+    ]
+  },
+  {
+    "id": "es-3921",
+    "target": "Aunque hubiera tenido más tiempo, el resultado habría sido el mismo.",
+    "english": "Even if I had had more time, the result would have been the same.",
+    "audio": "es-es-3921.mp3",
+    "tags": [
+      "general",
+      "travel",
+      "work"
+    ],
+    "grammarNode": "node-35",
+    "priority": 3918,
+    "starterSeq": 300,
+    "themes": [
+      "daily life"
+    ]
+  }
+]

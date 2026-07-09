@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Star, X as CloseIcon, BookText } from 'lucide-react';
 import { toggleFavorite, isFavorited, toggleEtymologyFavorite, isEtymologyFavorited } from '../services/storageService';
 import { lookupEtymology } from '../services/etymologyService';
+import { trackDictionaryOpened, trackEtymologyOpened, trackFeedbackSubmitted } from '../services/analyticsService';
 import { lookupWord as lookupEs, DictEntry } from '../data/dictionary/es';
 import { lookupWord as lookupIt } from '../data/dictionary/it';
 import { lookupWord as lookupFr } from '../data/dictionary/fr';
@@ -234,6 +235,10 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
     if (wordEl) {
       setPopoverRect(wordEl.getBoundingClientRect());
     }
+
+    // Analytics: a definition popover is OPENING (not toggling closed).
+    // Language only — the tapped word is never sent.
+    if (activeIndex !== index) trackDictionaryOpened(language);
 
     setActiveIndex(activeIndex === index ? null : index);
   };
@@ -838,7 +843,7 @@ const PopoverPortal: React.FC<{
           centered violet overlay (mirroring the amber grammar tip). */}
       {lookupEtymology(rawToken, language) && (
         <button
-          onClick={(e) => { e.stopPropagation(); setEtymologyExpanded(true); }}
+          onClick={(e) => { e.stopPropagation(); trackEtymologyOpened(language); setEtymologyExpanded(true); }}
           className="mt-3 w-full flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider text-violet-600 dark:text-violet-300 bg-violet-500/10 border border-violet-500/40 hover:bg-violet-500/15 transition-all active:scale-95"
         >
           <BookText size={14} />
@@ -879,6 +884,10 @@ const PopoverPortal: React.FC<{
               flags.push(flagEntry);
               localStorage.setItem('quest_flagged_words', JSON.stringify(flags));
             }
+
+            // Analytics: feedback submitted. Only the language and feedback
+            // type are sent — the word/translation/sentence stay local.
+            trackFeedbackSubmitted(language, 'word_flag');
 
             // 2) Fire-and-forget Netlify form submission with a 4-second hard
             //    timeout via AbortSignal. Earlier code awaited fetch('/') with

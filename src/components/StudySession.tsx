@@ -9,6 +9,7 @@ import {
   loadFavorites,
 } from '../services/storageService';
 import type { AudioSpeed } from '../services/storageService';
+import { trackAudioPlayed, trackEtymologyOpened } from '../services/analyticsService';
 import WordPopover from './WordPopover';
 import WordTileChallenge from './WordTileChallenge';
 import FirstTimeIntro from './FirstTimeIntro';
@@ -252,12 +253,14 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
 
   const handlePlayAudio = (e: React.MouseEvent) => {
     e.stopPropagation();
+    trackAudioPlayed(session.language); // analytics: language only, no text
     setIsPlaying(true);
     playCardAudio(card!.audio, card!.target, session.language, audioSpeed, googleTtsApiKey, { allowBrowserTts: false }).finally(() => setIsPlaying(false));
   };
 
   const handleSlowReplay = (e: React.MouseEvent) => {
     e.stopPropagation();
+    trackAudioPlayed(session.language); // analytics: language only, no text
     setIsPlaying(true);
     playCardAudio(card!.audio, card!.target, session.language, 0.6, googleTtsApiKey, { allowBrowserTts: false }).finally(() => setIsPlaying(false));
   };
@@ -430,7 +433,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               )}
               {cardEty && (
                 <button
-                  onClick={(e) => { e.stopPropagation(); setShowEtymology(true); }}
+                  onClick={(e) => { e.stopPropagation(); trackEtymologyOpened(session.language); setShowEtymology(true); }}
                   className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-violet-600 dark:text-violet-300 bg-violet-500/10 border border-violet-500/40 hover:bg-violet-500/15 transition-all active:scale-95"
                 >
                   <BookText size={14} />

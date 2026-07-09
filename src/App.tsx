@@ -50,6 +50,11 @@ import {
   shouldShowNotificationPrompt, dismissPrompt, cancelScheduledNotifications,
   type NotificationPrefs,
 } from './services/notificationService';
+import {
+  trackAppOpened, maybeSendExistingProgressSnapshot,
+  trackLanguageSelected, trackDeckSelected,
+  trackReviewSessionStarted, trackReviewSessionCompleted, recordSessionAnswer,
+} from './services/analyticsService';
 
 const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
   spanish: lookupEs,
@@ -309,6 +314,21 @@ const App: React.FC = () => {
     }
   }, [masteryMap]);
 
+  // ─── Analytics: app_opened + one-time retroactive snapshot ──
+  // Both are no-ops when VITE_POSTHOG_KEY is unset or the user opted out.
+  useEffect(() => {
+    trackAppOpened();
+    maybeSendExistingProgressSnapshot();
+  }, []);
+
+  // Analytics: fire review_session_completed once the queue is exhausted
+  // (the "Session Complete!" screen). Aborting mid-session never emits it.
+  useEffect(() => {
+    if (view === 'STUDY' && session.queue.length > 0 && session.currentIndex >= session.queue.length) {
+      trackReviewSessionCompleted();
+    }
+  }, [view, session.currentIndex, session.queue.length]);
+
   // Dark mode: useLayoutEffect runs synchronously before browser paint,
   // preventing the flash that useEffect causes on initial load / restore.
   useLayoutEffect(() => {
@@ -392,6 +412,10 @@ const App: React.FC = () => {
 
     if (reviews.length === 0 && newCards.length === 0) return;
 
+    // Analytics: session start (also fires first_review_started once per
+    // device). Aggregate counters reset here; no card content is sent.
+    trackReviewSessionStarted(lang, goal);
+
     // Update streak on session start
     const updatedStats = updateStreak(userStats);
     setUserStats(updatedStats);
@@ -431,6 +455,9 @@ const App: React.FC = () => {
 
     const currentCard = session.queue[session.currentIndex];
     const isNewCard = currentCard.mastery === 0;
+
+    // Analytics: feed the session aggregates (counts only, no card text).
+    recordSessionAnswer(isNewCard, rating !== 'AGAIN');
 
     const { sessionUpdates: updates, updatedCard } = handleAnswerLogic(rating, currentCard, session, (card) => {
       const newMap = saveCardProgress(card, lang);
@@ -559,10 +586,12 @@ const App: React.FC = () => {
   };
 
   const handleLanguageChange = (newLang: Language) => {
+    trackLanguageSelected(newLang); // analytics: language name only
     handleUpdateSettings({ ...settings, selectedLanguage: newLang });
   };
 
   const handleGoalChange = (newGoal: LearningGoal) => {
+    trackDeckSelected(lang, newGoal); // analytics: deck = language + goal slug
     handleUpdateSettings(setGoalFor(settings, lang, newGoal));
   };
 

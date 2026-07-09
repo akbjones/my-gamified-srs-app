@@ -321,6 +321,12 @@ const IRREGULARS: Record<string, IrregularData> = {
     aorist: ['θυμήθηκα', 'θυμήθηκες', 'θυμήθηκε', 'θυμηθήκαμε', 'θυμηθήκατε', 'θυμήθηκαν'],
     futureStem: 'θυμηθ',
   },
+  'ζω': {
+    present: ['ζω', 'ζεις', 'ζει', 'ζούμε', 'ζείτε', 'ζουν'],
+    imperfect: ['ζούσα', 'ζούσες', 'ζούσε', 'ζούσαμε', 'ζούσατε', 'ζούσαν'],
+    aorist: ['έζησα', 'έζησες', 'έζησε', 'ζήσαμε', 'ζήσατε', 'έζησαν'],
+    futureStem: 'ζησ',
+  },
   'φοβάμαι': {
     present: ['φοβάμαι', 'φοβάσαι', 'φοβάται', 'φοβόμαστε', 'φοβάστε', 'φοβούνται'],
     imperfect: ['φοβόμουν', 'φοβόσουν', 'φοβόταν', 'φοβόμασταν', 'φοβόσασταν', 'φοβόνταν'],
@@ -329,6 +335,8 @@ const IRREGULARS: Record<string, IrregularData> = {
   },
 };
 
+// (ζω is too short for the mechanical B-contract path — it produces
+// garbage stems — so it lives here with full rows.)
 // Suppletive/monosyllabic θα-futures that don't follow stem+present-endings
 const FUTURE_ROWS: Record<string, Row> = {
   'λέω': ['θα πω', 'θα πεις', 'θα πει', 'θα πούμε', 'θα πείτε', 'θα πουν'],

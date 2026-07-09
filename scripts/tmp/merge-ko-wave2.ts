@@ -14,7 +14,7 @@ const write = process.argv.includes('--write');
 
 interface Card { id: string; target: string; english: string; audio: string; tags: string[]; grammarNode: string; priority: number; grammar?: string }
 interface DictEntry { en: string; ipa?: string; pos?: string; lemma?: string }
-type VerbSpec = string | { dict: string; haeyo: string };
+type VerbSpec = string | { dict: string; haeyo: string } | [string, string];
 
 const existing: Card[] = JSON.parse(readFileSync(`${ROOT}src/data/korean/deck.json`, 'utf8'));
 const newCards: Card[] = [];
@@ -29,6 +29,7 @@ for (const b of ['A', 'B', 'C', 'D']) {
     const vs: VerbSpec[] = JSON.parse(readFileSync(`${ROOT}scripts/tmp/wave2-ko-verbs-${b}.json`, 'utf8'));
     for (const v of vs) {
       if (typeof v === 'string') regulars.add(v);
+      else if (Array.isArray(v)) { if (!irregulars.has(v[0])) irregulars.set(v[0], v[1]); }
       else if (!irregulars.has(v.dict)) irregulars.set(v.dict, v.haeyo);
     }
   } catch { /* verbs file optional */ }

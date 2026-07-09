@@ -373,3 +373,38 @@ export const resetAll = (): void => {
   safeRemove('quest_achievements');
   safeRemove(SETTINGS_KEY);
 };
+
+// ─── Backup / restore ───────────────────────────────────────
+// Progress lives only in this browser (no account / no sync), so give users a
+// way to back it up and move it. Export dumps every `quest_*` key; import
+// writes them back (overwrite). Keeps the app usable across devices/wipes
+// without a backend.
+const BACKUP_PREFIX = 'quest_';
+
+export const exportAllProgress = (): string => {
+  const data: Record<string, unknown> = {};
+  try {
+    const n = _ls ? _ls.length : 0;
+    for (let i = 0; i < n; i++) {
+      const key = _ls!.key(i);
+      if (key && key.startsWith(BACKUP_PREFIX)) data[key] = safeParse<unknown>(safeGet(key), null);
+    }
+  } catch { /* storage unreadable — export whatever we got */ }
+  return JSON.stringify({ app: 'langlab', schema: 1, exportedAt: new Date().toISOString(), data }, null, 2);
+};
+
+export const importAllProgress = (json: string): { ok: boolean; imported: number; error?: string } => {
+  let parsed: unknown;
+  try { parsed = JSON.parse(json); } catch { return { ok: false, imported: 0, error: 'That file is not valid JSON.' }; }
+  const data = (parsed && typeof parsed === 'object') ? (parsed as { data?: unknown }).data : null;
+  if (!data || typeof data !== 'object') return { ok: false, imported: 0, error: 'This does not look like a LangLab backup (no progress data).' };
+  let imported = 0;
+  for (const [key, value] of Object.entries(data as Record<string, unknown>)) {
+    if (!key.startsWith(BACKUP_PREFIX)) continue; // never write foreign keys
+    safeSet(key, JSON.stringify(value));
+    imported++;
+  }
+  return imported > 0
+    ? { ok: true, imported }
+    : { ok: false, imported: 0, error: 'No LangLab progress found in that file.' };
+};

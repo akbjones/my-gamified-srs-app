@@ -12,6 +12,7 @@ import { handleAnswerLogic, saveCardProgress, getRetention, burySiblings, interl
 import {
   migrateStorageKeys, loadMasteryMap, saveMasteryMap, loadUserStats, saveUserStats,
   loadDailyStats, saveDailyStats, resetAll,
+  exportAllProgress, importAllProgress,
   loadSettings, saveSettings,
   isPlacementComplete, setPlacementComplete, resetPlacement,
   loadProgressState, saveProgressState,
@@ -253,6 +254,7 @@ const App: React.FC = () => {
   // many new cards to add (or reviews only) instead of silently getting ~10.
   const [showStudyPrompt, setShowStudyPrompt] = useState(false);
   const langDropdownRef = useRef<HTMLDivElement>(null);
+  const backupInputRef = useRef<HTMLInputElement>(null);
   // Undo stack for going back to previous cards
   const [answerHistory, setAnswerHistory] = useState<Array<{
     session: SessionState;
@@ -609,6 +611,42 @@ const App: React.FC = () => {
   const handleUpdateSettings = (newSettings: StudySettings) => {
     setSettings(newSettings);
     saveSettings(newSettings);
+  };
+
+  // Progress is device-only (no account), so let users back it up / move it.
+  const handleExportProgress = () => {
+    try {
+      const blob = new Blob([exportAllProgress()], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `langlab-progress-${new Date().toISOString().slice(0, 10)}.json`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    } catch {
+      alert('Could not export your progress.');
+    }
+  };
+
+  const handleImportProgress = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    e.target.value = ''; // let the same file be picked again later
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      if (!confirm('Import this backup? It overwrites your current progress on this device.')) return;
+      const res = importAllProgress(String(reader.result || ''));
+      if (res.ok) {
+        alert(`Restored ${res.imported} progress records. Reloading…`);
+        window.location.reload();
+      } else {
+        alert(res.error || 'Could not import that file.');
+      }
+    };
+    reader.onerror = () => alert('Could not read that file.');
+    reader.readAsText(file);
   };
 
   const handleLanguageChange = (newLang: Language) => {
@@ -1364,6 +1402,36 @@ const App: React.FC = () => {
                     </>
                   );
                 })()}
+              </div>
+
+              {/* Backup — progress is stored on this device only (no account),
+                  so let users export a JSON backup and restore it elsewhere. */}
+              <div className="pt-4 border-t border-[var(--border-color)] space-y-2">
+                <div className="text-xs font-bold text-[var(--text-muted)] uppercase tracking-wide">Back up your progress</div>
+                <p className="text-[11px] text-[var(--text-muted)] leading-snug">
+                  Your progress is saved only on this device. Export a backup before clearing your browser data or switching devices.
+                </p>
+                <div className="flex gap-2">
+                  <button
+                    onClick={handleExportProgress}
+                    className="flex-1 px-3 py-2.5 text-sm font-bold text-[var(--accent)] border border-[var(--accent)]/30 rounded-lg hover:bg-[var(--accent)]/10 active:scale-95 transition-all"
+                  >
+                    Export
+                  </button>
+                  <button
+                    onClick={() => backupInputRef.current?.click()}
+                    className="flex-1 px-3 py-2.5 text-sm font-bold text-[var(--accent)] border border-[var(--accent)]/30 rounded-lg hover:bg-[var(--accent)]/10 active:scale-95 transition-all"
+                  >
+                    Import
+                  </button>
+                  <input
+                    ref={backupInputRef}
+                    type="file"
+                    accept="application/json,.json"
+                    className="hidden"
+                    onChange={handleImportProgress}
+                  />
+                </div>
               </div>
 
               {/* Danger zone – reset actions. Confirms required so the user

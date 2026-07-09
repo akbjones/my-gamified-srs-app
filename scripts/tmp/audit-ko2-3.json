@@ -1,0 +1,371 @@
+[
+  {
+    "id": "ko-1001",
+    "rating": 4,
+    "issue": "Honorific violation: 할아버지는 나이가 많아요 — about one's own grandfather natives must say 연세가 많으세요 (honorific noun 연세 + -세요). The deck itself honors grandparents two cards away (계세요 ko-0940, 드세요 ko-0942), so plain 나이가 많아요 is an internal contradiction. Engine can't derive 많으세요, so swap to a non-honored subject.",
+    "fix": {
+      "target": "우리 강아지는 나이가 많아요.",
+      "english": "Our dog is old.",
+      "grammar": "나이가 많아요 (nai-ga manayo) = 'is old' — literally 'age is many'."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-1027",
+    "rating": 4,
+    "issue": "Honorific mismatch: 이분 (honorific 'this person') paired with plain copula 예요 about one's own mother. The deck's own ko-0019 models the correct pattern (이분은 박 선생님이세요) — once you elevate with 이분, the predicate must be -세요. Dict already lexicalizes 선생님이세요, so 어머니세요 follows the same engine-safe pattern.",
+    "fix": {
+      "target": "이분은 우리 어머니세요.",
+      "english": "This is my mother.",
+      "grammar": "이분 takes polite 세요: 어머니세요 (eomeoni-seyo = is my mother); the plain form is 어머니예요."
+    },
+    "newTokens": {
+      "어머니세요": {
+        "en": "is (my) mother (polite -세요 copula, pairs with 이분/그분)",
+        "ipa": "[ʌ.mʌ.ni.se.jo]",
+        "pos": "phrase"
+      }
+    }
+  },
+  {
+    "id": "ko-0898",
+    "rating": 4,
+    "issue": "Gloss/target modality mismatch: 다른 사이즈로 바꿔요? cannot mean 'Can I exchange...?' — plain -어요? asks a factual question ('are you exchanging?'), not permission/ability. The natural customer line uses V-어 주세요, already taught at ko-0828 (깎아 주세요) and ko-0893.",
+    "fix": {
+      "target": "이 바지를 다른 사이즈로 바꿔 주세요.",
+      "english": "Please exchange these pants for a different size.",
+      "grammar": "V-어 주세요 = 'please do it for me': 바꿔 주세요 (bakkwo juseyo = please exchange it)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0928",
+    "rating": 4,
+    "issue": "Missing subject honorific: plain 살아요 about one's own parents; natives say 사세요 (precedent: ko-0137 audit fix). Engine can't derive -세요 forms, but the suppletive honorific 계세요 is already in the deck/dict and gives a natural equivalent. This also makes 계세요's first family use tipped here.",
+    "fix": {
+      "target": "부모님은 서울에 계세요.",
+      "english": "My parents are in Seoul.",
+      "grammar": "계세요 (gyeseyo) = honorific 'are (there)' for parents and elders; the plain form is 있어요 (isseoyo)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0929",
+    "rating": 4,
+    "issue": "Missing subject honorific: 아버지는 ... 일해요 — plain verb about one's own father; natives say 일하세요. Engine can't derive -세요, so per the ko-0137 precedent swap to a sibling subject, which takes plain forms naturally.",
+    "fix": {
+      "target": "오빠는 회사에서 일해요.",
+      "english": "My older brother works at a company.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0930",
+    "rating": 4,
+    "issue": "Missing subject honorific: 어머니는 요리를 잘해요 — the exact defect class the ko-0137 audit fixed (plain verb about one's own mother; natives say 잘하세요). Swap to spouse, who takes plain forms; keeps the 잘 + verb teaching point intact.",
+    "fix": {
+      "target": "남편은 요리를 잘해요.",
+      "english": "My husband cooks well.",
+      "grammar": "잘 + verb = do well: 요리를 잘해요 (yori-reul jalhaeyo = cooks well)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0976",
+    "rating": 4,
+    "issue": "Missing subject honorific: 할머니는 마음이 따뜻해요 — plain descriptive about one's own grandmother; natives say 따뜻하세요. Directly inconsistent with the deck honoring the same grandmother with 계세요 (ko-0939) and 드세요 (ko-0941). Engine can't derive -세요; swap subject.",
+    "fix": {
+      "target": "제 친구는 마음이 따뜻해요.",
+      "english": "My friend is warm-hearted.",
+      "grammar": "마음이 따뜻해요 (maeum-i ttatteuthaeyo) = warm-hearted — 마음 = heart, mind."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0982",
+    "rating": 4,
+    "issue": "Honorific mismatch: 그분 (respectful 'that person') with plain 나이가 많아요. Elevating with 그분 requires honorific predicates (연세가 많으세요) — cf. deck's own 이분은 박 선생님이세요 (ko-0019). Engine-safe fix reuses taught suppletive 계세요 and keeps the 그분 teaching point.",
+    "fix": {
+      "target": "그분은 지금 어디에 계세요?",
+      "english": "Where is that person right now?",
+      "grammar": "그분 (geubun) = respectful 'that person' — pair it with polite verbs like 계세요 (gyeseyo)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-1014",
+    "rating": 4,
+    "issue": "Missing subject honorific: 엄마가 케이크를 만들었어요 — plain past about one's own mom; careful speech uses 만드셨어요, which the engine can't derive. Swap subject per ko-0137 precedent.",
+    "fix": {
+      "target": "친구가 케이크를 만들었어요.",
+      "english": "My friend made the cake.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0802",
+    "rating": 5,
+    "issue": "Register mix: 과 is the written/formal connector; deck canon for speech is 랑/이랑 (랑 tipped on ko-0801 immediately before, 이랑 already modeled at ko-0384/0469). Precedent: ko-0165 audit replaced 와 with 랑. The tip even teaches the formal particle as the default spoken 'and'. Same-class offenders outside this fix: ko-0654, ko-1081, ko-1129, ko-1168, ko-1279, ko-1294 (other slices).",
+    "fix": {
+      "target": "시장에서 과일이랑 야채를 사요.",
+      "english": "I buy fruit and vegetables at the market.",
+      "grammar": "이랑 (irang) = 'and/with' after a consonant: 과일이랑 야채 (gwail-irang yachae); after a vowel it's 랑 (rang)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0814",
+    "rating": 5,
+    "issue": "Register mix: 라면과 김밥 — written/formal 과 in a spoken convenience-store sentence; deck canon is 이랑 (see ko-0802 fix, ko-0165 precedent).",
+    "fix": {
+      "target": "편의점에서 라면이랑 김밥을 사요.",
+      "english": "I buy ramyeon and gimbap at the convenience store.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0850",
+    "rating": 5,
+    "issue": "Register mix: 치마와 바지 — formal 와 for spoken 'and'; deck canon is 랑 after vowels (tipped ko-0801).",
+    "fix": {
+      "target": "치마랑 바지를 사요.",
+      "english": "I'm buying a skirt and pants.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0955",
+    "rating": 5,
+    "issue": "Register mix plus tip conflict: 부모님과 with a tip teaching 과/와 = 'with' — but the deck already models the spoken form 부모님이랑 (ko-0469) and fixed 누구와 to 누구랑 (ko-0165 audit). Teaching 과/와 as the spoken comitative contradicts deck canon; dict even has a 부모님이랑 entry.",
+    "fix": {
+      "target": "부모님이랑 같이 살아요.",
+      "english": "I live with my parents.",
+      "grammar": "이랑 (irang) = 'with' after a consonant: 부모님이랑 (bumonim-irang = with my parents)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0958",
+    "rating": 5,
+    "issue": "Register mix: 여동생과 — formal comitative in a spoken sentence; deck canon is 이랑.",
+    "fix": {
+      "target": "여동생이랑 매일 전화해요.",
+      "english": "I talk on the phone with my younger sister every day.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0981",
+    "rating": 5,
+    "issue": "Register mix: 형과 저는 — formal 과 in speech; deck canon is 이랑. (Speaker-gender note: 형 implies a male speaker; rule gets tipped at the ko-0953 fix.)",
+    "fix": {
+      "target": "형이랑 저는 정말 닮았어요.",
+      "english": "My older brother and I look really alike.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0992",
+    "rating": 5,
+    "issue": "Register mix: 저와 — formal 와 in a spoken sentence; canon is 저랑 (cf. 누구랑, ko-0165 precedent).",
+    "fix": {
+      "target": "사촌은 저랑 나이가 같아요.",
+      "english": "My cousin is the same age as me.",
+      "grammar": "같아요 (gatayo) = is the same: 나이가 같아요 (nai-ga gatayo = same age)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0953",
+    "rating": 5,
+    "issue": "Speaker-gender ambiguity: first FIRST-PERSON use of 형 (ko-0934 was third-person Junho), untipped, one card after a female-speaker card (ko-0952 우리 언니) — the deck silently flips speaker gender between adjacent 'my older brother/sister' cards. First first-person use of each gendered term needs its own tip.",
+    "fix": {
+      "target": "형은 아직 학생이에요.",
+      "english": "My older brother is still a student.",
+      "grammar": "형 (hyeong) = a man's older brother, so this speaker is male. Women say 오빠 (oppa)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0954",
+    "rating": 5,
+    "issue": "Speaker-gender ambiguity: first first-person use of 오빠 (ko-0935 was third-person Sujin), untipped, directly after a male-speaker 형 card — 'my older brother' glosses to two different words on adjacent cards with no explanation.",
+    "fix": {
+      "target": "오빠는 지난주에 결혼했어요.",
+      "english": "My older brother got married last week.",
+      "grammar": "오빠 (oppa) = a woman's older brother, so this speaker is female. Men say 형 (hyeong)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0956",
+    "rating": 5,
+    "issue": "Speaker-gender ambiguity: first first-person use of 누나 (ko-0933 was third-person Minsu), untipped; the surrounding cards alternate female (언니/오빠) and male (형/누나) speakers card-by-card.",
+    "fix": {
+      "target": "누나는 병원에서 일해요.",
+      "english": "My older sister works at a hospital.",
+      "grammar": "누나 (nuna) = a man's older sister, so this speaker is male. Women say 언니 (eonni)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0942",
+    "rating": 5,
+    "issue": "Tip gap on honorific: ko-0941 tips 드세요 as imperative 'please eat', then this card uses the identical form declaratively ('grandfather is eating') with no tip — as taught, the learner reads 'Grandfather, please eat breakfast'. The dual statement/request reading of -세요 must be tipped here.",
+    "fix": {
+      "target": "할아버지는 아침을 드세요.",
+      "english": "My grandfather is eating breakfast.",
+      "grammar": "드세요 also STATES what an elder does: 아침을 드세요 (achim-eul deuseyo = he's eating breakfast)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-1025",
+    "rating": 5,
+    "issue": "Register mismatch: 이분 (honorific 'this person') to introduce one's OWN friend — the exact defect the ko-0018 audit fixed (friends/equals take neutral 이쪽). Repeating the ko-0018 fix verbatim would duplicate that sentence, so pivot to spouse; this also debuts 이쪽 with a tip before ko-1029 reinforces it.",
+    "fix": {
+      "target": "이쪽은 우리 남편이에요.",
+      "english": "This is my husband.",
+      "grammar": "이쪽은 (ijjog-eun) = 'this side is…' — the polite-neutral way to introduce family and friends."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-1026",
+    "rating": 5,
+    "issue": "Gloss/target mismatch: plain present 소개해요 is not performative — 'Let me introduce...' is 소개할게요, which the engine can't derive. Keep a plain declarative and gloss it honestly by adding a recipient.",
+    "fix": {
+      "target": "친구를 가족한테 소개해요.",
+      "english": "I'm introducing my friend to my family.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-1028",
+    "rating": 5,
+    "issue": "Gloss/target mismatch: same performative-'Let me introduce' problem as ko-1026; plain 소개해요 needs a plain declarative gloss and a recipient to sound natural.",
+    "fix": {
+      "target": "오늘 친구한테 우리 아버지를 소개해요.",
+      "english": "Today I'm introducing my father to my friend.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0870",
+    "rating": 5,
+    "issue": "Unnatural question word: sizes are numbers, so Koreans ask 몇 사이즈 (or 사이즈가 어떻게 돼요?), not 무슨 사이즈. 몇 is already taught (ko-0183), so no ordering problem.",
+    "fix": {
+      "target": "몇 사이즈를 입어요?",
+      "english": "What size do you wear?",
+      "grammar": "몇 (myeot) asks 'what number': 몇 사이즈 (myeot saijeu = what size)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0912",
+    "rating": 5,
+    "issue": "Calque: 세일에서 샀어요 treats the sale as a place ('at the sale') — English-shaped. Natives say 세일 때 샀어요 (during the sale). 때 already taught (ko-0798 휴가 때) and in dict.",
+    "fix": {
+      "target": "그 시계는 세일 때 샀어요.",
+      "english": "I bought that watch on sale.",
+      "grammar": "때 (ttae) = 'the time of': 세일 때 (seil ttae = during the sale)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0923",
+    "rating": 5,
+    "issue": "Calque: 세일에서 — same 'at the sale' Anglicism as ko-0912; use 세일 때.",
+    "fix": {
+      "target": "세일 때 운동화를 살 거예요.",
+      "english": "I'll buy sneakers in the sale.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0963",
+    "rating": 5,
+    "issue": "Missing indirect honorific: 아버지는 머리가 짧아요 — careful speech about one's father's features uses 짧으세요 (indirect honorific); engine can't derive it, so swap to a sibling. Keeps the 머리 = head/hair teaching point.",
+    "fix": {
+      "target": "남동생은 머리가 짧아요.",
+      "english": "My younger brother has short hair.",
+      "grammar": "머리 (meori) = head AND hair: 머리가 짧아요 (meori-ga jjalbayo = has short hair)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0964",
+    "rating": 5,
+    "issue": "Missing indirect honorific: 어머니는 머리가 길어요 → 길으세요/기세요 territory in careful speech; swap to sibling like ko-0963.",
+    "fix": {
+      "target": "여동생은 머리가 길어요.",
+      "english": "My younger sister has long hair.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0978",
+    "rating": 5,
+    "issue": "Missing indirect honorific: 아빠는 목소리가 커요 — careful speech uses 크세요 about one's father; engine-safe swap to a non-honored family member.",
+    "fix": {
+      "target": "아들은 목소리가 커요.",
+      "english": "My son has a loud voice.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0803",
+    "rating": 5,
+    "issue": "Gloss calque: 'the mart' is Konglish, not natural English — 마트 is a (big-box) supermarket. Same gloss defect on ko-0808, ko-0813, ko-0916 (fixed below) and ko-0342 (outside this slice).",
+    "fix": {
+      "target": "마트는 집에서 가까워요.",
+      "english": "The supermarket is close to my house.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0808",
+    "rating": 5,
+    "issue": "Gloss calque: 'the mart' (see ko-0803).",
+    "fix": {
+      "target": "시장이 마트보다 싸요.",
+      "english": "The market is cheaper than the supermarket.",
+      "grammar": "N보다 (boda) = 'than N': 마트보다 싸요 (mateu-boda ssayo = cheaper than the supermarket)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0813",
+    "rating": 5,
+    "issue": "Gloss calque: 'the mart' (see ko-0803).",
+    "fix": {
+      "target": "마트는 밤 열 시에 닫아요.",
+      "english": "The supermarket closes at ten at night.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0916",
+    "rating": 5,
+    "issue": "Gloss calque: 'the mart' (see ko-0803).",
+    "fix": {
+      "target": "내일 마트에 갈 거예요.",
+      "english": "Tomorrow I'll go to the supermarket.",
+      "grammar": "Future = stem + ㄹ 거예요: 가다 → 갈 거예요 (gal geoyeyo = will go)."
+    },
+    "newTokens": {}
+  }
+]

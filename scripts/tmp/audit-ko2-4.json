@@ -1,0 +1,83 @@
+[
+  {
+    "id": "ko-1080",
+    "rating": 4,
+    "issue": "Honorific inconsistency in the core workplace pattern: 부장님은 출장 중이에요 gives the department head no subject honorific, while ko-1082 (two cards later) models 사장님은 회의 중이세요 and its tip explicitly teaches '-세요 adds respect for the boss'. Talking to a colleague about your own 부장님, standard usage is 출장 중이세요; modeling the plain form right before the -세요 card teaches that honoring superiors is optional/random.",
+    "fix": {
+      "target": "부장님은 지금 출장 중이세요.",
+      "english": "The department head is on a business trip now.",
+      "grammar": "부장님 (bujangnim) = department head; add -세요 for respect: 출장 중이세요 (chuljang jungiseyo = is away on a trip)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-1089",
+    "rating": 5,
+    "issue": "Register mismatch the node exists to teach: 한테 is the plain dative, but with a 님-titled superior standard workplace Korean uses honorific 께 — 부장님께 보고서를 보냈어요 (or 보내 드렸어요). Colloquially 부장님한테 is heard, but the tip actively teaches boss+한테 as the model pair, which is exactly the wrong example to canonize; use a peer for 한테 or switch to 께 here.",
+    "fix": {
+      "target": "부장님께 보고서를 보냈어요.",
+      "english": "I sent the report to the department head.",
+      "grammar": "께 (kke) = honorific 'to' for superiors/elders: 부장님께 (bujangnimkke); 한테 is the plain everyday form."
+    },
+    "newTokens": {
+      "께": "to (honorific dative particle, for superiors and elders)"
+    }
+  },
+  {
+    "id": "ko-1133",
+    "rating": 5,
+    "issue": "Learner trap left unexplained: the deck has only taught 마셔요 for drinks, then this card makes 맥주 the direct object of 먹어요 ('eat beer') with no tip coverage — the tip only glosses 치맥. 치킨에 맥주 + 먹다 is genuinely natural (the combo is 'eaten', and casual Korean says 술 먹다), but without explaining the N에 N pairing pattern and the 먹다-covers-the-meal usage, the card reads as a particle/verb error.",
+    "fix": {
+      "target": "금요일에는 치킨에 맥주를 먹어요.",
+      "english": "On Fridays we have chicken and beer.",
+      "grammar": "치킨에 맥주 = chicken paired with beer (에 links food combos); the whole set takes 먹어요, hence 치맥 (chimaek)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-1151",
+    "rating": 5,
+    "issue": "Tip romanization breaks the deck's phonetic convention: 월급날 is pronounced [월금날] (ㅂ nasalizes to ㅁ before ㄴ), so the romanization should be wolgeumnal, not wolgeupnal. Other tips in this slice romanize phonetically (동료 = dongnyo ko-1078, 많아서 = manaseo ko-1143, 십오 = sibo ko-1177), so this one will teach a wrong pronunciation.",
+    "fix": {
+      "target": "내일이 월급날이에요!",
+      "english": "Tomorrow is payday!",
+      "grammar": "월급 (wolgeup) = monthly salary; 월급날 (wolgeumnal — ㅂ+ㄴ sounds like ㅁㄴ) = payday."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-1188",
+    "rating": 4,
+    "issue": "Near-duplicate of ko-0803 (마트는 집에서 가까워요, 'The mart is close to my house') — only the topic/subject particle differs, and ko-1067 already reuses the same 집에서 가까워요 frame in this very node. Violates the unique-sentence standard in spirit and spends a card teaching nothing new; glosses also drift (0803 'mart' vs here 'supermarket').",
+    "fix": {
+      "target": "마트가 지하철역 바로 옆에 있어요.",
+      "english": "The mart is right next to the subway station.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-1227",
+    "rating": 5,
+    "issue": "잊었어요 with a to-do object is stiff, written-register Korean: bare 잊다 in speech is mostly for facts/memories, and for forgetting to do a chore natives say 깜빡했어요 or 잊어버렸어요. '어제 분리수거를 잊었어요' sounds like translated English in an otherwise colloquial home-life node.",
+    "fix": {
+      "target": "어제 분리수거를 깜빡했어요.",
+      "english": "I forgot the recycling yesterday.",
+      "grammar": "깜빡했어요 (kkamppakaesseoyo) = 'it slipped my mind' — the spoken way to say you forgot to do something."
+    },
+    "newTokens": {
+      "깜빡했어요": "forgot, it slipped my mind (깜빡하다)"
+    }
+  },
+  {
+    "id": "ko-1294",
+    "rating": 5,
+    "issue": "Gloss fidelity: 강아지와 매일 아침 산책해요 means 'I take a walk WITH the dog' (comitative 와), while the gloss 'I walk the dog' is the causative 강아지를 산책시켜요. Learners will back-translate 'walk the dog' as N와 산책하다 and mis-map the particle. Same activity in practice, but the gloss should match the Korean structure.",
+    "fix": {
+      "target": "강아지와 매일 아침 산책해요.",
+      "english": "I take a walk with my dog every morning.",
+      "grammar": null
+    },
+    "newTokens": {}
+  }
+]

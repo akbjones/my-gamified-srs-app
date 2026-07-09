@@ -1,0 +1,89 @@
+[
+  {
+    "id": "ko-0311",
+    "rating": 5,
+    "issue": "Stacked time particles: 오늘 아침에 여섯 시에 doubles 에. Natives drop 에 on the larger time unit: 오늘 아침 여섯 시에.",
+    "fix": {
+      "target": "오늘 아침 여섯 시에 일어났어요.",
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0317",
+    "rating": 5,
+    "issue": "Deixis: recounting having left home (speaker now elsewhere) uses 나오다, not 나가다. 집에서 나갔어요 narrates from inside the house; 집에서 나왔어요 is what people actually say when telling someone about their morning.",
+    "fix": {
+      "target": "일곱 시에 집에서 나왔어요.",
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": {
+      "나왔어요": { "en": "came out, left (a place)", "ipa": "nawas͈ʌjo", "pos": "verb" }
+    }
+  },
+  {
+    "id": "ko-0360",
+    "rating": 5,
+    "issue": "Gloss mismatch: 손님 is a guest/visitor/customer, not a 'client' (that would be 고객/거래처). English should match the target.",
+    "fix": {
+      "target": null,
+      "english": "I met a visitor at the office.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-0383",
+    "rating": 4,
+    "issue": "Missing subject honorific: with 할머니 as subject, plain 만들었어요 reads rude/childish in polite speech. Grandparents take -(으)시-: 만드셨어요.",
+    "fix": {
+      "target": "할머니가 저녁을 만드셨어요.",
+      "english": null,
+      "grammar": "Honor elders with -(으)시-: 할머니가 만드셨어요 (mandeusyeosseoyo = made, honorific)."
+    },
+    "newTokens": {
+      "만드셨어요": { "en": "made (subject-honorific past)", "ipa": "mandɯɕjʌs͈ʌjo", "pos": "verb" }
+    }
+  },
+  {
+    "id": "ko-0387",
+    "rating": 5,
+    "issue": "Missing subject honorific: 아빠 as subject normally takes -(으)시- in polite speech: 사셨어요, not 샀어요.",
+    "fix": {
+      "target": "아빠가 케이크를 사셨어요.",
+      "english": null,
+      "grammar": "Parents get -(으)시- too: 사셨어요 (sasyeosseoyo = bought, honorific)."
+    },
+    "newTokens": {
+      "사셨어요": { "en": "bought (subject-honorific past)", "ipa": "saɕjʌs͈ʌjo", "pos": "verb" }
+    }
+  },
+  {
+    "id": "ko-0483",
+    "rating": 4,
+    "issue": "Honorific agreement failure: the tip teaches that 님 honors 사장님, yet the verb stays plain (올 거예요). A boss as subject requires -(으)시-: 오실 거예요. Tip contradicts the modeled sentence.",
+    "fix": {
+      "target": "사장님이 내일 오실 거예요.",
+      "english": null,
+      "grammar": "님 (nim) honors titles, and the verb takes 시: 사장님이 오실 거예요 (osil geoyeyo)."
+    },
+    "newTokens": {
+      "오실": { "en": "will come (subject-honorific)", "ipa": "oɕil", "pos": "verb" }
+    }
+  },
+  {
+    "id": "ko-0509",
+    "rating": 5,
+    "issue": "Missing subject honorific: 엄마 as subject in polite speech takes -(으)시-: 만드실 거예요, not 만들 거예요.",
+    "fix": {
+      "target": "엄마가 갈비를 만드실 거예요.",
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": {
+      "만드실": { "en": "will make (subject-honorific)", "ipa": "mandɯɕil", "pos": "verb" }
+    }
+  }
+]

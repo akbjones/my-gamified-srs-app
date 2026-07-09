@@ -3677,7 +3677,7 @@
  },
  {
   "id": "ko-0311",
-  "target": "오늘 아침에 여섯 시에 일어났어요.",
+  "target": "오늘 아침 여섯 시에 일어났어요.",
   "english": "This morning I got up at six.",
   "audio": "ko-ko-0311.mp3",
   "tags": [
@@ -3751,7 +3751,7 @@
  },
  {
   "id": "ko-0317",
-  "target": "일곱 시에 집에서 나갔어요.",
+  "target": "일곱 시에 집에서 나왔어요.",
   "english": "I left home at seven.",
   "audio": "ko-ko-0317.mp3",
   "tags": [
@@ -4278,7 +4278,7 @@
  {
   "id": "ko-0360",
   "target": "사무실에서 손님을 만났어요.",
-  "english": "I met a client at the office.",
+  "english": "I met a visitor at the office.",
   "audio": "ko-ko-0360.mp3",
   "tags": [
    "general",
@@ -4562,7 +4562,7 @@
  },
  {
   "id": "ko-0383",
-  "target": "할머니가 저녁을 만들었어요.",
+  "target": "할머니가 저녁을 만드셨어요.",
   "english": "Grandma made dinner.",
   "audio": "ko-ko-0383.mp3",
   "tags": [
@@ -4570,7 +4570,8 @@
    "family"
   ],
   "grammarNode": "node-05",
-  "priority": 383
+  "priority": 383,
+  "grammar": "Honor elders with -(으)시-: 할머니가 만드셨어요 (mandeusyeosseoyo = made, honorific)."
  },
  {
   "id": "ko-0384",
@@ -4611,7 +4612,7 @@
  },
  {
   "id": "ko-0387",
-  "target": "아빠가 케이크를 샀어요.",
+  "target": "아빠가 케이크를 사셨어요.",
   "english": "Dad bought a cake.",
   "audio": "ko-ko-0387.mp3",
   "tags": [
@@ -4619,7 +4620,8 @@
    "family"
   ],
   "grammarNode": "node-05",
-  "priority": 387
+  "priority": 387,
+  "grammar": "Parents get -(으)시- too: 사셨어요 (sasyeosseoyo = bought, honorific)."
  },
  {
   "id": "ko-0388",
@@ -5768,7 +5770,7 @@
  },
  {
   "id": "ko-0483",
-  "target": "사장님이 내일 올 거예요.",
+  "target": "사장님이 내일 오실 거예요.",
   "english": "The boss will come tomorrow.",
   "audio": "ko-ko-0483.mp3",
   "tags": [
@@ -5777,7 +5779,7 @@
   ],
   "grammarNode": "node-06",
   "priority": 483,
-  "grammar": "님 (nim) honors titles: 사장님 (sajangnim = the boss), 선생님 = teacher."
+  "grammar": "님 (nim) honors titles, and the verb takes 시: 사장님이 오실 거예요 (osil geoyeyo)."
  },
  {
   "id": "ko-0484",
@@ -6083,7 +6085,7 @@
  },
  {
   "id": "ko-0509",
-  "target": "엄마가 갈비를 만들 거예요.",
+  "target": "엄마가 갈비를 만드실 거예요.",
   "english": "Mom is going to make galbi.",
   "audio": "ko-ko-0509.mp3",
   "tags": [
@@ -7669,7 +7671,7 @@
  },
  {
   "id": "ko-0640",
-  "target": "제가 계산할 거예요.",
+  "target": "제가 계산할게요.",
   "english": "I'll get the bill.",
   "audio": "ko-ko-0640.mp3",
   "tags": [
@@ -7678,12 +7680,12 @@
   ],
   "grammarNode": "node-07",
   "priority": 640,
-  "grammar": "계산하다 (gyesanhada = to pay the bill) — Koreans often insist on paying for the table."
+  "grammar": "계산할게요 (gyesanhalgeyo) — volunteer with -(으)ㄹ게요: 제가 계산할게요 = I've got this."
  },
  {
   "id": "ko-0641",
-  "target": "아니에요, 제가 살 거예요.",
-  "english": "No no, I'm buying.",
+  "target": "아니에요, 제가 살게요.",
+  "english": "No no, my treat.",
   "audio": "ko-ko-0641.mp3",
   "tags": [
    "general",
@@ -7691,7 +7693,7 @@
   ],
   "grammarNode": "node-07",
   "priority": 641,
-  "grammar": "사다 (sada = to buy) also means \"to treat\": 제가 살 거예요 = my treat!"
+  "grammar": "살게요 (salgeyo) — -(으)ㄹ게요 is the offering form: 제가 살게요 = my treat!"
  },
  {
   "id": "ko-0642",
@@ -7842,7 +7844,7 @@
  },
  {
   "id": "ko-0654",
-  "target": "금요일에 가족과 외식했어요.",
+  "target": "금요일에 가족이랑 외식했어요.",
   "english": "On Friday we ate out as a family.",
   "audio": "ko-ko-0654.mp3",
   "tags": [
@@ -7903,7 +7905,7 @@
  },
  {
   "id": "ko-0659",
-  "target": "처음 순두부찌개를 먹었어요.",
+  "target": "순두부찌개를 처음 먹었어요.",
   "english": "I tried soft-tofu stew for the first time.",
   "audio": "ko-ko-0659.mp3",
   "tags": [
@@ -8637,7 +8639,7 @@
  },
  {
   "id": "ko-0719",
-  "target": "기사님, 여기에서 내릴 거예요.",
+  "target": "기사님, 여기에서 내릴게요.",
   "english": "Driver, I'll get out here.",
   "audio": "ko-ko-0719.mp3",
   "tags": [
@@ -8646,7 +8648,7 @@
   ],
   "grammarNode": "node-08",
   "priority": 719,
-  "grammar": "기사님 (gisanim) — 기사 (driver) + honorific 님; the polite address for drivers."
+  "grammar": "내릴게요 (naerilgeyo) — -(으)ㄹ게요 signals an action for the listener: 여기서 내릴게요 = I'll get off here."
  },
  {
   "id": "ko-0720",
@@ -9667,7 +9669,7 @@
  },
  {
   "id": "ko-0802",
-  "target": "시장에서 과일과 야채를 사요.",
+  "target": "시장에서 과일이랑 야채를 사요.",
   "english": "I buy fruit and vegetables at the market.",
   "audio": "ko-ko-0802.mp3",
   "tags": [
@@ -9676,12 +9678,12 @@
   ],
   "grammarNode": "node-09",
   "priority": 802,
-  "grammar": "과 (gwa) = 'and' after a consonant: 과일과 야채 (gwail-gwa yachae = fruit and vegetables)."
+  "grammar": "이랑 (irang) = 'and/with' after a consonant: 과일이랑 야채 (gwail-irang yachae); after a vowel it's 랑 (rang)."
  },
  {
   "id": "ko-0803",
   "target": "마트는 집에서 가까워요.",
-  "english": "The mart is close to my house.",
+  "english": "The supermarket is close to my house.",
   "audio": "ko-ko-0803.mp3",
   "tags": [
    "general"
@@ -9743,7 +9745,7 @@
  {
   "id": "ko-0808",
   "target": "시장이 마트보다 싸요.",
-  "english": "The market is cheaper than the mart.",
+  "english": "The market is cheaper than the supermarket.",
   "audio": "ko-ko-0808.mp3",
   "tags": [
    "general",
@@ -9751,7 +9753,7 @@
   ],
   "grammarNode": "node-09",
   "priority": 808,
-  "grammar": "N보다 (boda) = 'than N': 마트보다 싸요 (mateu-boda ssayo = cheaper than the mart)."
+  "grammar": "N보다 (boda) = 'than N': 마트보다 싸요 (mateu-boda ssayo = cheaper than the supermarket)."
  },
  {
   "id": "ko-0809",
@@ -9805,7 +9807,7 @@
  {
   "id": "ko-0813",
   "target": "마트는 밤 열 시에 닫아요.",
-  "english": "The mart closes at ten at night.",
+  "english": "The supermarket closes at ten at night.",
   "audio": "ko-ko-0813.mp3",
   "tags": [
    "general",
@@ -9816,7 +9818,7 @@
  },
  {
   "id": "ko-0814",
-  "target": "편의점에서 라면과 김밥을 사요.",
+  "target": "편의점에서 라면이랑 김밥을 사요.",
   "english": "I buy ramyeon and gimbap at the convenience store.",
   "audio": "ko-ko-0814.mp3",
   "tags": [
@@ -10256,7 +10258,7 @@
  },
  {
   "id": "ko-0850",
-  "target": "치마와 바지를 사요.",
+  "target": "치마랑 바지를 사요.",
   "english": "I'm buying a skirt and pants.",
   "audio": "ko-ko-0850.mp3",
   "tags": [
@@ -10494,7 +10496,7 @@
  },
  {
   "id": "ko-0870",
-  "target": "무슨 사이즈를 입어요?",
+  "target": "몇 사이즈를 입어요?",
   "english": "What size do you wear?",
   "audio": "ko-ko-0870.mp3",
   "tags": [
@@ -10502,7 +10504,8 @@
    "work"
   ],
   "grammarNode": "node-09",
-  "priority": 870
+  "priority": 870,
+  "grammar": "몇 (myeot) asks 'what number': 몇 사이즈 (myeot saijeu = what size)."
  },
  {
   "id": "ko-0871",
@@ -10837,15 +10840,16 @@
  },
  {
   "id": "ko-0898",
-  "target": "이 바지를 다른 사이즈로 바꿔요?",
-  "english": "Can I exchange these pants for a different size?",
+  "target": "이 바지를 다른 사이즈로 바꿔 주세요.",
+  "english": "Please exchange these pants for a different size.",
   "audio": "ko-ko-0898.mp3",
   "tags": [
    "general",
    "work"
   ],
   "grammarNode": "node-09",
-  "priority": 898
+  "priority": 898,
+  "grammar": "V-어 주세요 = 'please do it for me': 바꿔 주세요 (bakkwo juseyo = please exchange it)."
  },
  {
   "id": "ko-0899",
@@ -11013,7 +11017,7 @@
  },
  {
   "id": "ko-0912",
-  "target": "그 시계는 세일에서 샀어요.",
+  "target": "그 시계는 세일 때 샀어요.",
   "english": "I bought that watch on sale.",
   "audio": "ko-ko-0912.mp3",
   "tags": [
@@ -11021,7 +11025,8 @@
    "travel"
   ],
   "grammarNode": "node-09",
-  "priority": 912
+  "priority": 912,
+  "grammar": "때 (ttae) = 'the time of': 세일 때 (seil ttae = during the sale)."
  },
  {
   "id": "ko-0913",
@@ -11063,7 +11068,7 @@
  {
   "id": "ko-0916",
   "target": "내일 마트에 갈 거예요.",
-  "english": "Tomorrow I'll go to the mart.",
+  "english": "Tomorrow I'll go to the supermarket.",
   "audio": "ko-ko-0916.mp3",
   "tags": [
    "general",
@@ -11148,7 +11153,7 @@
  },
  {
   "id": "ko-0923",
-  "target": "세일에서 운동화를 살 거예요.",
+  "target": "세일 때 운동화를 살 거예요.",
   "english": "I'll buy sneakers in the sale.",
   "audio": "ko-ko-0923.mp3",
   "tags": [
@@ -11210,8 +11215,8 @@
  },
  {
   "id": "ko-0928",
-  "target": "부모님은 서울에 살아요.",
-  "english": "My parents live in Seoul.",
+  "target": "부모님은 서울에 계세요.",
+  "english": "My parents are in Seoul.",
   "audio": "ko-ko-0928.mp3",
   "tags": [
    "general",
@@ -11219,12 +11224,12 @@
   ],
   "grammarNode": "node-10",
   "priority": 928,
-  "grammar": "부모님 (bumonim) = parents; the -님 (nim) adds respect."
+  "grammar": "계세요 (gyeseyo) = honorific 'are (there)' for parents and elders; the plain form is 있어요 (isseoyo)."
  },
  {
   "id": "ko-0929",
-  "target": "아버지는 회사에서 일해요.",
-  "english": "My father works at a company.",
+  "target": "오빠는 회사에서 일해요.",
+  "english": "My older brother works at a company.",
   "audio": "ko-ko-0929.mp3",
   "tags": [
    "general",
@@ -11236,8 +11241,8 @@
  },
  {
   "id": "ko-0930",
-  "target": "어머니는 요리를 잘해요.",
-  "english": "My mother cooks well.",
+  "target": "남편은 요리를 잘해요.",
+  "english": "My husband cooks well.",
   "audio": "ko-ko-0930.mp3",
   "tags": [
    "general",
@@ -11396,7 +11401,8 @@
    "family"
   ],
   "grammarNode": "node-10",
-  "priority": 942
+  "priority": 942,
+  "grammar": "드세요 also STATES what an elder does: 아침을 드세요 (achim-eul deuseyo = he's eating breakfast)."
  },
  {
   "id": "ko-0943",
@@ -11535,7 +11541,8 @@
    "family"
   ],
   "grammarNode": "node-10",
-  "priority": 953
+  "priority": 953,
+  "grammar": "형 (hyeong) = a man's older brother, so this speaker is male. Women say 오빠 (oppa)."
  },
  {
   "id": "ko-0954",
@@ -11547,11 +11554,12 @@
    "family"
   ],
   "grammarNode": "node-10",
-  "priority": 954
+  "priority": 954,
+  "grammar": "오빠 (oppa) = a woman's older brother, so this speaker is female. Men say 형 (hyeong)."
  },
  {
   "id": "ko-0955",
-  "target": "부모님과 같이 살아요.",
+  "target": "부모님이랑 같이 살아요.",
   "english": "I live with my parents.",
   "audio": "ko-ko-0955.mp3",
   "tags": [
@@ -11560,7 +11568,7 @@
   ],
   "grammarNode": "node-10",
   "priority": 955,
-  "grammar": "과/와 (gwa/wa) = 'with, and': 부모님과 (bumonim-gwa = with my parents)."
+  "grammar": "이랑 (irang) = 'with' after a consonant: 부모님이랑 (bumonim-irang = with my parents)."
  },
  {
   "id": "ko-0956",
@@ -11573,7 +11581,8 @@
    "work"
   ],
   "grammarNode": "node-10",
-  "priority": 956
+  "priority": 956,
+  "grammar": "누나 (nuna) = a man's older sister, so this speaker is male. Women say 언니 (eonni)."
  },
  {
   "id": "ko-0957",
@@ -11589,7 +11598,7 @@
  },
  {
   "id": "ko-0958",
-  "target": "여동생과 매일 전화해요.",
+  "target": "여동생이랑 매일 전화해요.",
   "english": "I talk on the phone with my younger sister every day.",
   "audio": "ko-ko-0958.mp3",
   "tags": [
@@ -11650,8 +11659,8 @@
  },
  {
   "id": "ko-0963",
-  "target": "아버지는 머리가 짧아요.",
-  "english": "My father has short hair.",
+  "target": "남동생은 머리가 짧아요.",
+  "english": "My younger brother has short hair.",
   "audio": "ko-ko-0963.mp3",
   "tags": [
    "general",
@@ -11663,8 +11672,8 @@
  },
  {
   "id": "ko-0964",
-  "target": "어머니는 머리가 길어요.",
-  "english": "My mother has long hair.",
+  "target": "여동생은 머리가 길어요.",
+  "english": "My younger sister has long hair.",
   "audio": "ko-ko-0964.mp3",
   "tags": [
    "general",
@@ -11806,8 +11815,8 @@
  },
  {
   "id": "ko-0976",
-  "target": "할머니는 마음이 따뜻해요.",
-  "english": "My grandmother is warm-hearted.",
+  "target": "제 친구는 마음이 따뜻해요.",
+  "english": "My friend is warm-hearted.",
   "audio": "ko-ko-0976.mp3",
   "tags": [
    "general",
@@ -11831,8 +11840,8 @@
  },
  {
   "id": "ko-0978",
-  "target": "아빠는 목소리가 커요.",
-  "english": "Dad has a loud voice.",
+  "target": "아들은 목소리가 커요.",
+  "english": "My son has a loud voice.",
   "audio": "ko-ko-0978.mp3",
   "tags": [
    "general",
@@ -11868,7 +11877,7 @@
  },
  {
   "id": "ko-0981",
-  "target": "형과 저는 정말 닮았어요.",
+  "target": "형이랑 저는 정말 닮았어요.",
   "english": "My older brother and I look really alike.",
   "audio": "ko-ko-0981.mp3",
   "tags": [
@@ -11880,15 +11889,15 @@
  },
  {
   "id": "ko-0982",
-  "target": "그분은 나이가 많아요.",
-  "english": "That person is old.",
+  "target": "그분은 지금 어디에 계세요?",
+  "english": "Where is that person right now?",
   "audio": "ko-ko-0982.mp3",
   "tags": [
    "general"
   ],
   "grammarNode": "node-10",
   "priority": 982,
-  "grammar": "그분 (geubun) = respectful 'that person' — politer than 그 사람 (geu saram)."
+  "grammar": "그분 (geubun) = respectful 'that person' — pair it with polite verbs like 계세요 (gyeseyo)."
  },
  {
   "id": "ko-0983",
@@ -12001,7 +12010,7 @@
  },
  {
   "id": "ko-0992",
-  "target": "사촌은 저와 나이가 같아요.",
+  "target": "사촌은 저랑 나이가 같아요.",
   "english": "My cousin is the same age as me.",
   "audio": "ko-ko-0992.mp3",
   "tags": [
@@ -12109,15 +12118,16 @@
  },
  {
   "id": "ko-1001",
-  "target": "할아버지는 나이가 많아요.",
-  "english": "My grandfather is old.",
+  "target": "우리 강아지는 나이가 많아요.",
+  "english": "Our dog is old.",
   "audio": "ko-ko-1001.mp3",
   "tags": [
    "general",
    "family"
   ],
   "grammarNode": "node-10",
-  "priority": 1001
+  "priority": 1001,
+  "grammar": "나이가 많아요 (nai-ga manayo) = 'is old' — literally 'age is many'."
  },
  {
   "id": "ko-1002",
@@ -12266,8 +12276,8 @@
  },
  {
   "id": "ko-1014",
-  "target": "엄마가 케이크를 만들었어요.",
-  "english": "Mom made the cake.",
+  "target": "친구가 케이크를 만들었어요.",
+  "english": "My friend made the cake.",
   "audio": "ko-ko-1014.mp3",
   "tags": [
    "general",
@@ -12397,8 +12407,8 @@
  },
  {
   "id": "ko-1025",
-  "target": "이분은 제 친구예요.",
-  "english": "This is my friend.",
+  "target": "이쪽은 우리 남편이에요.",
+  "english": "This is my husband.",
   "audio": "ko-ko-1025.mp3",
   "tags": [
    "general",
@@ -12406,12 +12416,12 @@
   ],
   "grammarNode": "node-10",
   "priority": 1025,
-  "grammar": "이분 (ibun) = polite 'this person' — use it to introduce someone respectfully."
+  "grammar": "이쪽은 (ijjog-eun) = 'this side is…' — the polite-neutral way to introduce family and friends."
  },
  {
   "id": "ko-1026",
-  "target": "친구를 소개해요.",
-  "english": "Let me introduce my friend.",
+  "target": "친구를 가족한테 소개해요.",
+  "english": "I'm introducing my friend to my family.",
   "audio": "ko-ko-1026.mp3",
   "tags": [
    "general",
@@ -12422,7 +12432,7 @@
  },
  {
   "id": "ko-1027",
-  "target": "이분은 우리 어머니예요.",
+  "target": "이분은 우리 어머니세요.",
   "english": "This is my mother.",
   "audio": "ko-ko-1027.mp3",
   "tags": [
@@ -12430,12 +12440,13 @@
    "family"
   ],
   "grammarNode": "node-10",
-  "priority": 1027
+  "priority": 1027,
+  "grammar": "이분 takes polite 세요: 어머니세요 (eomeoni-seyo = is my mother); the plain form is 어머니예요."
  },
  {
   "id": "ko-1028",
-  "target": "우리 아버지를 소개해요.",
-  "english": "Let me introduce my father.",
+  "target": "오늘 친구한테 우리 아버지를 소개해요.",
+  "english": "Today I'm introducing my father to my friend.",
   "audio": "ko-ko-1028.mp3",
   "tags": [
    "general",
@@ -13077,7 +13088,7 @@
  },
  {
   "id": "ko-1080",
-  "target": "부장님은 지금 출장 중이에요.",
+  "target": "부장님은 지금 출장 중이세요.",
   "english": "The department head is on a business trip now.",
   "audio": "ko-ko-1080.mp3",
   "tags": [
@@ -13087,11 +13098,11 @@
   ],
   "grammarNode": "node-11",
   "priority": 1080,
-  "grammar": "부장님 (bujangnim) = department head; 중이에요 (jungieyo) = in the middle of."
+  "grammar": "부장님 (bujangnim) = department head; add -세요 for respect: 출장 중이세요 (chuljang jungiseyo = is away on a trip)."
  },
  {
   "id": "ko-1081",
-  "target": "팀장님과 점심을 먹었어요.",
+  "target": "팀장님이랑 점심을 먹었어요.",
   "english": "I had lunch with the team leader.",
   "audio": "ko-ko-1081.mp3",
   "tags": [
@@ -13191,7 +13202,7 @@
  },
  {
   "id": "ko-1089",
-  "target": "부장님한테 보고서를 보냈어요.",
+  "target": "부장님께 보고서를 보냈어요.",
   "english": "I sent the report to the department head.",
   "audio": "ko-ko-1089.mp3",
   "tags": [
@@ -13200,7 +13211,7 @@
   ],
   "grammarNode": "node-11",
   "priority": 1089,
-  "grammar": "한테 (hante) = to a person: 부장님한테 = to the department head."
+  "grammar": "께 (kke) = honorific 'to' for superiors/elders: 부장님께 (bujangnimkke); 한테 is the plain everyday form."
  },
  {
   "id": "ko-1090",
@@ -13690,7 +13701,7 @@
  },
  {
   "id": "ko-1129",
-  "target": "동료들과 김치찌개를 먹었어요.",
+  "target": "동료들이랑 김치찌개를 먹었어요.",
   "english": "I ate kimchi stew with my colleagues.",
   "audio": "ko-ko-1129.mp3",
   "tags": [
@@ -13752,7 +13763,7 @@
   ],
   "grammarNode": "node-11",
   "priority": 1133,
-  "grammar": "치맥 (chimaek) = 치킨 + 맥주, Korea's beloved chicken-and-beer combo."
+  "grammar": "치킨에 맥주 = chicken paired with beer (에 links food combos); the whole set takes 먹어요, hence 치맥 (chimaek)."
  },
  {
   "id": "ko-1134",
@@ -13976,7 +13987,7 @@
   ],
   "grammarNode": "node-11",
   "priority": 1151,
-  "grammar": "월급 (wolgeup) = monthly salary; 월급날 (wolgeupnal) = payday."
+  "grammar": "월급 (wolgeup) = monthly salary; 월급날 (wolgeumnal — ㅂ+ㄴ sounds like ㅁㄴ) = payday."
  },
  {
   "id": "ko-1152",
@@ -14171,7 +14182,7 @@
  },
  {
   "id": "ko-1168",
-  "target": "저녁에는 가족과 밥을 먹어요.",
+  "target": "저녁에는 가족이랑 밥을 먹어요.",
   "english": "In the evening I eat with my family.",
   "audio": "ko-ko-1168.mp3",
   "tags": [
@@ -14418,8 +14429,8 @@
  },
  {
   "id": "ko-1188",
-  "target": "마트가 집에서 가까워요.",
-  "english": "The supermarket is close to home.",
+  "target": "마트가 지하철역 바로 옆에 있어요.",
+  "english": "The mart is right next to the subway station.",
   "audio": "ko-ko-1188.mp3",
   "tags": [
    "general",
@@ -14893,14 +14904,15 @@
  },
  {
   "id": "ko-1227",
-  "target": "어제 분리수거를 잊었어요.",
+  "target": "어제 분리수거를 깜빡했어요.",
   "english": "I forgot the recycling yesterday.",
   "audio": "ko-ko-1227.mp3",
   "tags": [
    "general"
   ],
   "grammarNode": "node-12",
-  "priority": 1227
+  "priority": 1227,
+  "grammar": "깜빡했어요 (kkamppakaesseoyo) = 'it slipped my mind' — the spoken way to say you forgot to do something."
  },
  {
   "id": "ko-1228",
@@ -15531,7 +15543,7 @@
  },
  {
   "id": "ko-1279",
-  "target": "할머니와 영상통화를 자주 해요.",
+  "target": "할머니랑 영상통화를 자주 해요.",
   "english": "I often video-call my grandmother.",
   "audio": "ko-ko-1279.mp3",
   "tags": [
@@ -15714,7 +15726,7 @@
  {
   "id": "ko-1294",
   "target": "강아지와 매일 아침 산책해요.",
-  "english": "I walk the dog every morning.",
+  "english": "I take a walk with my dog every morning.",
   "audio": "ko-ko-1294.mp3",
   "tags": [
    "general",

@@ -1,0 +1,84 @@
+[
+  {
+    "id": "ko-0719",
+    "rating": 4,
+    "issue": "Pragmatics: announcing 내릴 거예요 (detached future plan) to a taxi driver is not how you ask to stop — Koreans say 여기서 내릴게요 or 세워 주세요. -(으)ㄹ 거예요 reports a plan; -(으)ㄹ게요 commits an action for the listener's benefit, which is exactly what this functional travel phrase needs. As written, learners will deploy a line no driver hears from natives.",
+    "fix": {
+      "target": "기사님, 여기에서 내릴게요.",
+      "english": "Driver, I'll get out here.",
+      "grammar": "내릴게요 (naerilgeyo) — -(으)ㄹ게요 signals an action for the listener: 여기서 내릴게요 = I'll get off here."
+    },
+    "newTokens": {
+      "내릴게요": {
+        "en": "I'll get off (informing/volunteering to the listener)",
+        "ipa": "[nɛ.ɾil.k͈e.jo]",
+        "pos": "verb",
+        "lemma": "내리다"
+      }
+    }
+  },
+  {
+    "id": "ko-0641",
+    "rating": 5,
+    "issue": "Offer pragmatics: the tip itself glosses 제가 살 거예요 as 'my treat!', but when treating someone Koreans say 제가 살게요 / 제가 낼게요 — the -(으)ㄹ게요 offering form. Plain -(으)ㄹ 거예요 is a plan statement and sounds oddly flat in this bill-fight exchange; every textbook contrasts exactly these two endings here.",
+    "fix": {
+      "target": "아니에요, 제가 살게요.",
+      "english": "No no, my treat.",
+      "grammar": "살게요 (salgeyo) — -(으)ㄹ게요 is the offering form: 제가 살게요 = my treat!"
+    },
+    "newTokens": {
+      "살게요": {
+        "en": "I'll buy, my treat (offering)",
+        "ipa": "[sal.k͈e.jo]",
+        "pos": "verb",
+        "lemma": "사다"
+      }
+    }
+  },
+  {
+    "id": "ko-0640",
+    "rating": 5,
+    "issue": "Same -(으)ㄹ 거예요 / -(으)ㄹ게요 confusion as ko-0641: claiming the bill is a speaker-commitment offer, so natives say 제가 계산할게요. 제가 계산할 거예요 reads as reporting a decision to a third party rather than volunteering at the table.",
+    "fix": {
+      "target": "제가 계산할게요.",
+      "english": "I'll get the bill.",
+      "grammar": "계산할게요 (gyesanhalgeyo) — volunteer with -(으)ㄹ게요: 제가 계산할게요 = I've got this."
+    },
+    "newTokens": {
+      "계산할게요": {
+        "en": "I'll pay, I'll get the bill (offering)",
+        "ipa": "[kje.san.hal.k͈e.jo]",
+        "pos": "verb",
+        "lemma": "계산하다"
+      }
+    }
+  },
+  {
+    "id": "ko-0654",
+    "rating": 5,
+    "issue": "Register mix: 와/과 is the written/formal comitative; this deck's canonical spoken 'with' is (이)랑 (친구랑 on ko-0666, ko-0789). 가족과 in a 해요체 diary sentence breaks the one-canonical-level rule — the same offender class already flagged on ko-0165 in the wave-1 audit.",
+    "fix": {
+      "target": "금요일에 가족이랑 외식했어요.",
+      "english": "On Friday we ate out as a family.",
+      "grammar": null
+    },
+    "newTokens": {
+      "가족이랑": {
+        "en": "with (one's) family",
+        "ipa": "[ka.dʑo.ɡi.ɾaŋ]",
+        "pos": "noun"
+      }
+    }
+  },
+  {
+    "id": "ko-0659",
+    "rating": 5,
+    "issue": "Word-order calque: sentence-initial bare 처음 ('처음 순두부찌개를 먹었어요') mirrors English 'For the first time, I ate...'. Natural Korean puts 처음 directly before the verb (순두부찌개를 처음 먹었어요) or uses 처음으로. Reorder only — no new vocabulary needed.",
+    "fix": {
+      "target": "순두부찌개를 처음 먹었어요.",
+      "english": "I tried soft-tofu stew for the first time.",
+      "grammar": null
+    },
+    "newTokens": {}
+  }
+]

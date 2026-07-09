@@ -16,18 +16,17 @@
  *       emotions, time, opinions, travel, family, work). These are richer
  *       than the goal-audience `tags` field and are NOT LearningGoal values.
  *
- * The deck lives in src/data/spanish-starter-deck.json and was curated by
- * grammar-node progression + sentence length + theme balancing (see
+ * The curation lives in src/data/spanish-starter-manifest.json (ids + graded
+ * order + themes; content is hydrated from the live main deck below) and was
+ * built by grammar-node progression + sentence length + theme balancing (see
  * docs/spanish-starter-deck-qa.md for the full methodology and QA report).
  *
- * INTEGRATION HOOK (future work — the app currently has one deck per
- * language): a "starter deck" toggle would hook into App.tsx where
- * `DECK_MAP[lang]` is read inside the deck-loading useEffect (~line 261).
- * When the toggle is on for Spanish, pass SPANISH_STARTER (already ordered
- * by starterSeq) to `buildDeck(...)` instead of DECK_MAP['spanish'].
- * buildDeck accepts raw card arrays, so no other change is needed; card ids
- * match the main deck, so SRS mastery/progress carries over in both
- * directions.
+ * INTEGRATION (shipped): opening the app with `?starter=es` boots the
+ * locked Spanish starter (App.tsx: STARTER_LOCK). The deck-loading
+ * useEffect passes SPANISH_STARTER to `buildDeck(...)` instead of
+ * DECK_MAP['spanish'], forces the 'general' goal, and disables the
+ * language switcher so a shared link can ONLY use this deck. Card ids
+ * match the main deck, so SRS mastery/progress carries over both ways.
  */
 import type { LearningGoal } from '../types';
 import rawSpanishDeck from './spanish/deck.json';

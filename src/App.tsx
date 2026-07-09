@@ -88,6 +88,7 @@ import rawRussianDeck from './data/russian/deck.json';
 import rawIndonesianDeck from './data/indonesian/deck.json';
 import rawGreekDeck from './data/greek/deck.json';
 import rawKoreanDeck from './data/korean/deck.json';
+import { SPANISH_STARTER } from './data/starterDecks';
 
 const DECK_MAP: Partial<Record<Language, any[]>> = {
   spanish: rawSpanishDeck,
@@ -105,6 +106,20 @@ const DECK_MAP: Partial<Record<Language, any[]>> = {
   greek: rawGreekDeck,
   korean: rawKoreanDeck,
 };
+
+// ── Locked shareable starter mode ────────────────────────────────
+// Opening the app with ?starter=es boots straight into the curated
+// 300-card Spanish starter deck and locks the app to it — the language
+// switcher is disabled so a visitor can ONLY use the Spanish starter.
+// Same deploy, auto-updates via the starter manifest. Add more starters
+// here by mapping their code → deck.
+const STARTER_PARAM = typeof window !== 'undefined'
+  ? new URLSearchParams(window.location.search).get('starter')
+  : null;
+const STARTER_DECKS: Partial<Record<Language, any[]>> = { spanish: SPANISH_STARTER };
+const STARTER_LANG_BY_CODE: Record<string, Language> = { es: 'spanish' };
+const STARTER_LOCK: Language | null =
+  STARTER_PARAM && STARTER_LANG_BY_CODE[STARTER_PARAM] ? STARTER_LANG_BY_CODE[STARTER_PARAM] : null;
 
 // Transform raw deck.json cards into QuestCards mapped to linear path nodes
 // Now with dynamic slicing based on filtered card count
@@ -220,7 +235,9 @@ const App: React.FC = () => {
   const [placementToast, setPlacementToast] = useState<string | null>(null);
   const [settings, setSettings] = useState<StudySettings>(() => {
     migrateStorageKeys(); // one-time migration of old keys
-    return loadSettings();
+    const loaded = loadSettings();
+    // Locked starter link forces the language regardless of saved settings.
+    return STARTER_LOCK ? { ...loaded, selectedLanguage: STARTER_LOCK } : loaded;
   });
   const [userStats, setUserStats] = useState<UserStats>(() => loadUserStats(settings.selectedLanguage));
   const [dailyStats, setDailyStats] = useState<DailyStats>(() => loadDailyStats(settings.selectedLanguage));
@@ -234,7 +251,7 @@ const App: React.FC = () => {
   const [showLangDropdown, setShowLangDropdown] = useState(false);
   const [showGoalMenu, setShowGoalMenu] = useState(false);
   const [showLibraryMenu, setShowLibraryMenu] = useState(false);
-  const [showLangPicker, setShowLangPicker] = useState(() => !localStorage.getItem('quest_first_launch_done'));
+  const [showLangPicker, setShowLangPicker] = useState(() => !STARTER_LOCK && !localStorage.getItem('quest_first_launch_done'));
   const [showOnboarding, setShowOnboarding] = useState(() => !localStorage.getItem('onboarding_complete'));
   const [notifPrefs, setNotifPrefs] = useState<NotificationPrefs>(() => loadNotificationPrefs());
   const [showNotifPrompt, setShowNotifPrompt] = useState(false);
@@ -262,11 +279,14 @@ const App: React.FC = () => {
   });
 
   const lang = settings.selectedLanguage;
-  const goal = getGoalFor(settings, lang);
+  // In locked starter mode force the 'general' goal so all 300 curated
+  // cards show (they all carry the 'general' tag) and the goal switcher
+  // can't strand the learner on an empty filtered deck.
+  const goal = STARTER_LOCK ? 'general' : getGoalFor(settings, lang);
 
   // Load deck when language or goal changes
   useEffect(() => {
-    const rawDeck = DECK_MAP[lang];
+    const rawDeck = STARTER_LOCK ? STARTER_DECKS[lang] : DECK_MAP[lang];
     if (!rawDeck) return;
     const map = loadMasteryMap(lang);
     setMasteryMap(map);
@@ -594,11 +614,13 @@ const App: React.FC = () => {
   };
 
   const handleLanguageChange = (newLang: Language) => {
+    if (STARTER_LOCK) return; // locked starter link — no switching languages
     trackLanguageSelected(newLang); // analytics: language name only
     handleUpdateSettings({ ...settings, selectedLanguage: newLang });
   };
 
   const handleGoalChange = (newGoal: LearningGoal) => {
+    if (STARTER_LOCK) return; // goal is pinned to 'general' in starter mode
     trackDeckSelected(lang, newGoal); // analytics: deck = language + goal slug
     handleUpdateSettings(setGoalFor(settings, lang, newGoal));
   };
@@ -641,7 +663,7 @@ const App: React.FC = () => {
     : 0;
   const hasCards = reviewsDue > 0 || newAvailable > 0;
 
-  const availableLanguages: Language[] = Object.keys(DECK_MAP) as Language[];
+  const availableLanguages: Language[] = STARTER_LOCK ? [STARTER_LOCK] : (Object.keys(DECK_MAP) as Language[]);
 
   // Close language dropdown when clicking outside
   useEffect(() => {
@@ -754,13 +776,15 @@ const App: React.FC = () => {
             <div className="flex items-center gap-1.5">
               <div className="relative" ref={langDropdownRef}>
                 <button
-                  onClick={() => setShowLangDropdown(prev => !prev)}
-                  className="flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-bold border border-violet-500/40 bg-violet-500/15 text-violet-600 dark:text-violet-300 hover:bg-violet-500/25 active:scale-95 transition-all"
+                  onClick={() => { if (!STARTER_LOCK) setShowLangDropdown(prev => !prev); }}
+                  disabled={!!STARTER_LOCK}
+                  title={STARTER_LOCK ? 'Spanish starter deck' : undefined}
+                  className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-bold border border-violet-500/40 bg-violet-500/15 text-violet-600 dark:text-violet-300 transition-all ${STARTER_LOCK ? 'opacity-90 cursor-default' : 'hover:bg-violet-500/25 active:scale-95'}`}
                 >
-                  <span>{LANGUAGE_CONFIG[lang].name}</span>
-                  <ChevronDown size={14} className={`transition-transform ${showLangDropdown ? 'rotate-180' : ''}`} />
+                  <span>{LANGUAGE_CONFIG[lang].name}{STARTER_LOCK && ' · Starter'}</span>
+                  {!STARTER_LOCK && <ChevronDown size={14} className={`transition-transform ${showLangDropdown ? 'rotate-180' : ''}`} />}
                 </button>
-                {showLangDropdown && (
+                {showLangDropdown && !STARTER_LOCK && (
                   <div className="absolute right-0 top-full mt-1.5 w-56 stat-card p-2 z-40 animate-fade-in shadow-lg">
                     {availableLanguages.map(l => (
                       <button

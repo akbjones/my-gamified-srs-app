@@ -58,28 +58,34 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
   const playCurrent = useCallback(async () => {
     if (!card) return;
     playingForCardId.current = card.id;
-    // Preload the next 2 cards so playback is instant after the 1.8s dwell.
+    const shownAt = Date.now();
+    // Preload the next 2 cards so playback is instant after the dwell.
     for (let lookahead = 1; lookahead <= 2; lookahead++) {
       const next = playList[(idx + lookahead) % playList.length];
       if (next?.audio) preloadCardAudio(next.audio);
     }
+    // Advance to the next card, but ALWAYS keep it on screen long enough to
+    // read. When audio genuinely can't play (missing device TTS voice for a
+    // language, a stale cache, a network blip), playback resolves/​rejects
+    // almost instantly — without a floor the deck would zip past silently
+    // (the reported Hindi bug). MIN_CARD_MS guarantees a readable dwell.
+    const MIN_CARD_MS = 3500;
+    const advance = (extraPause: number) => {
+      if (playingForCardId.current !== card.id || !isPlaying) return;
+      const wait = Math.max(extraPause, MIN_CARD_MS - (Date.now() - shownAt));
+      clearTimer();
+      timerRef.current = window.setTimeout(() => {
+        setShowTranslation(false);
+        setIdx(i => (i + 1) % playList.length);
+      }, wait);
+    };
     try {
+      // Resolves when audio FINISHES (real files dwell for their duration).
       await playCardAudio(card.audio, card.target, language, audioSpeed, googleTtsApiKey);
-      // playCardAudio resolves when audio finishes. Move to the next card
-      // after a short pause so the user can absorb it.
-      if (playingForCardId.current === card.id && isPlaying) {
-        clearTimer();
-        timerRef.current = window.setTimeout(() => {
-          setShowTranslation(false);
-          setIdx(i => (i + 1) % playList.length);
-        }, 1800);
-      }
+      advance(1200);
     } catch {
-      // Audio failed – skip to next so we don't get stuck.
-      if (playingForCardId.current === card.id && isPlaying) {
-        clearTimer();
-        timerRef.current = window.setTimeout(() => setIdx(i => (i + 1) % playList.length), 800);
-      }
+      // Audio failed — don't zip past; hold for the readable minimum.
+      advance(0);
     }
   }, [card, language, audioSpeed, googleTtsApiKey, isPlaying, cards.length]);
 

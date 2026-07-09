@@ -1,0 +1,57 @@
+[
+  {
+    "id": "el-2568",
+    "rating": 5,
+    "issue": "Romanization defect: καθόλου is romanized 'kaθólu' — it leaves the Greek letter θ inside the Latin transcription and uses 'u' for ου. Policy requires a full Latin romanization.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": "καθόλου strengthens a negative: δεν... καθόλου = not at all (kathólou)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-2569",
+    "rating": 5,
+    "issue": "Tip says 'the possessive follows the noun', but in the modeled phrase (το αγαπημένο μου μάθημα) the clitic μου follows the ADJECTIVE and precedes the noun — the stated rule contradicts its own sentence. Also 'mu' should be 'mou'.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": "αγαπημένο μου = my favorite (agapiméno mou); μου clips onto the adjective, before the noun."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-2690",
+    "rating": 5,
+    "issue": "Unnatural collocation: 'Έσβησε η μπαταρία' (the battery went out) — σβήνω fits a phone/light turning off, but a battery τελειώνει/αδειάζει. Natural: μου τελείωσε/άδειασε η μπαταρία (cf. sibling el-2761 'δεν κρατούσε μπαταρία').",
+    "fix": {
+      "target": "Μου τελείωσε η μπαταρία στη χειρότερη στιγμή.",
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-2717",
+    "rating": 2,
+    "issue": "Content bug: the Greek reads 'Έβαλα την ΠΤΗΣΗ μου σε λειτουργία πτήσης' = 'I put my FLIGHT in airplane mode' — nonsensical. The object should be το κινητό/τηλέφωνό μου. The English gloss ('my phone') is correct; the target noun is simply wrong.",
+    "fix": {
+      "target": "Έβαλα το κινητό μου σε λειτουργία πτήσης.",
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-2778",
+    "rating": 4,
+    "issue": "English calque: 'Έπεσε η κλήση' = 'the call dropped' word-for-word. Greeks blame the line, not the call: κόπηκε/έπεσε η γραμμή. This is the same calque flagged at el-1192 in an earlier slice.",
+    "fix": {
+      "target": "Κόπηκε η γραμμή δύο φορές.",
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": {}
+  }
+]

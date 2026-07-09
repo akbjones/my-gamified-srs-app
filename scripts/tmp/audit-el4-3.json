@@ -1,0 +1,46 @@
+[
+  {
+    "id": "el-2917",
+    "rating": 4,
+    "issue": "Two tip errors. (1) ντρέπομαι is a plain -ομαι mediopassive, NOT a present-only deponent: its aorist ντράπηκα is extremely common ('Ντράπηκα πολύ'), and the engine's present-only class is only -ιέμαι, which ντρέπομαι is not. Calling it 'present-only' teaches a false rule. (2) The tip then attaches 'that I was shouting uses the imperfect' to ντρέπομαι, but that imperfect (φώναζα) belongs to φωνάζω, not ντρέπομαι — it conflates two verbs. Card sentence itself (present ντρέπομαι + imperfect φώναζα) is correct.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": "ντρέπομαι (drépome) = feel ashamed — present here; φώναζα (fónaza) is the imperfect of φωνάζω."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-2809",
+    "rating": 5,
+    "issue": "Tip/card construction mismatch. The card uses the DITRANSITIVE pattern: 'Της (genitive, = to her) εμπιστεύομαι τα πάντα (accusative thing)' = I entrust everything to her. But the tip teaches the MONOTRANSITIVE 'εμπιστεύομαι κάποιον ... takes a direct object' (accusative person). A learner sees της and is told the verb takes a direct-object person — leaving unexplained why it is της (genitive) and not τη(ν). Cf. el-2865 which uses the same ditransitive frame correctly with no tip.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": "εμπιστεύομαι κάτι σε κάποιον (embistévome) = entrust something to someone; 'της' = to her here."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-2810",
+    "rating": 5,
+    "issue": "'φίλοι με νόημα' is not an idiomatic Greek collocation for 'real/true friends'; it reads literally as 'friends with meaning' and leans calque-ish. Native register uses πραγματικοί/αληθινοί φίλοι (cf. el-2804 'οι αληθινοί φίλοι'). The English gloss 'real friends' also does not correspond to the literal Greek, so gloss fidelity is loose.",
+    "fix": {
+      "target": "Είναι πραγματικοί φίλοι, όχι απλώς γνωστοί.",
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-2892",
+    "rating": 5,
+    "issue": "Tip overstates: 'no simple past form in speech' is factually wrong. στενοχωριέμαι has the aorist στενοχωρήθηκα, one of the most common past-tense feelings in everyday speech ('Στενοχωρήθηκα πολύ'). The '-ιέμαι deponent, present-only' claim is true only of THIS engine/course, not of the language. Card content (present στενοχωριέμαι) is correct; only the tip misinforms.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": "στενοχωριέμαι (stenochorjéme) = feel upset — a -ιέμαι deponent, used here in the present."
+    },
+    "newTokens": {}
+  }
+]

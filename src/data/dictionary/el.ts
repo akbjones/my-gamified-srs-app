@@ -3478,6 +3478,15 @@ const DICT: Record<string, DictEntry> = {
   'χειροκροτώ': { en: 'to applaud; clap', ipa: '', pos: 'v' },
   'χρεώνω': { en: 'to charge (money)', ipa: '', pos: 'v' },
   'λυπήθηκα': { en: 'I was sorry; I felt sad (aorist of λυπάμαι)', ipa: '', pos: 'v', lemma: 'λυπάμαι' },
+  // ── Wave-4 audit-fix entries ──
+  'πραγματικοί': { en: 'real, genuine (masc. pl.)', ipa: 'praɣmatiˈci', pos: 'adj', lemma: 'πραγματικός' },
+  'πραγματικός': { en: 'real, genuine', ipa: 'praɣmatiˈkos', pos: 'adj' },
+  'τοπικό': { en: 'local (neut.)', ipa: 'topiˈko', pos: 'adj', lemma: 'τοπικός' },
+  'τοπικός': { en: 'local', ipa: 'topiˈkos', pos: 'adj' },
+  'καλών': { en: 'good (gen. pl.)', ipa: 'kaˈlon', pos: 'adj', lemma: 'καλός' },
+  'φίλων': { en: 'of friends (gen. pl.)', ipa: 'ˈfilon', pos: 'n', lemma: 'φίλος' },
+  'μυαλό': { en: 'mind, brain', ipa: 'mjaˈlo', pos: 'n' },
+  'τέλει': { en: 'end (in the phrase εν τέλει = in the end)', ipa: 'ˈteli', pos: 'n', lemma: 'τέλος' },
 };
 
 export function lookupWord(word: string): DictEntry | null {

@@ -1,0 +1,57 @@
+[
+  {
+    "id": "ko-2554",
+    "rating": 5,
+    "issue": "English gloss only. The Korean 교수님께서 강의를 아주 재미있게 하세요 is fully natural and the subject honorific (께서 + 하세요) is correct. But 'The professor gives lectures very interestingly' is stilted, non-idiomatic English — the manner adverb 'interestingly' reads awkwardly, and 강의를 재미있게 하다 means the professor delivers/makes lectures in an interesting way (praising skill), which English renders more naturally with 'makes ... interesting'. No error in target, tip, or register.",
+    "fix": {
+      "target": "교수님께서 강의를 아주 재미있게 하세요.",
+      "english": "The professor makes their lectures really interesting.",
+      "grammar": "께서 (kkeseo) marks an honored subject and pairs with -세요: 교수님께서 하세요 (gyosunimkkeseo haseyo)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-2631",
+    "rating": 5,
+    "issue": "English gloss is a literal calque of 까지. 리포트 마감이 내일까지예요 means the report is due by tomorrow, but 'The report deadline is until tomorrow' is not idiomatic English — a deadline is a point, not a span, so 'is until tomorrow' reads wrong and would not reverse-translate cleanly. Korean sentence and the 까지 tip are correct; only the English needs smoothing.",
+    "fix": {
+      "target": "리포트 마감이 내일까지예요.",
+      "english": "The report is due tomorrow.",
+      "grammar": "까지 (kkaji = until) marks a limit: 내일까지 (naeilkkaji = until tomorrow)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-2734",
+    "rating": 5,
+    "issue": "Fronted English 'Paid webtoons you can view in advance' is awkward word order, and the framing is loose: in Korean webtoon apps you pay (유료로 결제) to unlock episodes ahead of the free schedule, rather than 'paid webtoons' being a category one can preview. Grammar (-(으)ㄹ 수 있다) and 해요체 register are fine; smoothing the English improves reverse-translatability.",
+    "fix": {
+      "target": "유료 웹툰은 미리 볼 수 있어요.",
+      "english": "With paid webtoons, you can read ahead.",
+      "grammar": "-(으)ㄹ 수 있다 = 'can': 볼 수 있어요 (bol su isseoyo = can view)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-2774",
+    "rating": 5,
+    "issue": "English is ungrammatical: 'Way too much spam texts come' pairs the mass quantifier 'much' with the count plural 'texts', and 'spam texts come' is unidiomatic. The Korean 스팸 문자가 너무 많이 와요 is perfectly natural. Fix the count agreement in the gloss.",
+    "fix": {
+      "target": "스팸 문자가 너무 많이 와요.",
+      "english": "I get way too many spam texts.",
+      "grammar": ""
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-2793",
+    "rating": 5,
+    "issue": "English 'prettifies their face' uses a rare, awkward verb; natural English is 'makes their face look pretty' (or 'touches up'). The Korean 얼굴을 예쁘게 꾸미다 for a photo app is also slightly loose — the standard verb for face-editing is 보정하다 (retouch), while 꾸미다 fits sticker/filter decoration. Keeping 꾸며요 as acceptable colloquial and fixing the gloss; register and structure are fine.",
+    "fix": {
+      "target": "동생은 사진 앱으로 얼굴을 예쁘게 꾸며요.",
+      "english": "My younger sibling makes their face look pretty with a photo app.",
+      "grammar": ""
+    },
+    "newTokens": {}
+  }
+]

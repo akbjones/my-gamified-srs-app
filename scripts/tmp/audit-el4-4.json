@@ -1,0 +1,90 @@
+[
+  {
+    "id": "el-3158",
+    "rating": 4,
+    "issue": "Collocation error: 'Οι μέρες ήταν τόσο κοντές' calques English 'short days'. In Greek a day is μικρή/μεγάλη, never κοντή — κοντός is physical length/height. A native says 'Οι μέρες ήταν τόσο μικρές'. The winter-abroad content and the 'νύχτωνε στις τέσσερις' clause are excellent, but κοντές μέρες is exactly the word-choice slip a native ear flags instantly.",
+    "fix": {
+      "target": "Οι μέρες ήταν τόσο μικρές που νύχτωνε στις τέσσερις.",
+      "english": "The days were so short that it got dark at four.",
+      "grammar": "μικρή μέρα (mikrí méra) = short day — a day is μικρή/μεγάλη, never κοντή."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-3241",
+    "rating": 4,
+    "issue": "Hard romanization error in the tip: φταίω is transcribed 'fténo', which inserts a ν that isn't there and spells a non-word (*φτένω). φταίω = /ˈfte.o/ → ftéo. Since accent/romanization pairs are load-bearing for this deck, a wrong romanization is a hard error. The sentence itself (φταίνε) is correct.",
+    "fix": {
+      "target": "Δεν είμαι σίγουρος ότι τα αυτοκίνητα φταίνε για όλα.",
+      "english": "I'm not sure cars are to blame for everything.",
+      "grammar": "φταίω (ftéo) = to be at fault: εγώ φταίω (egó ftéo) = it's my fault."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-3142",
+    "rating": 4,
+    "issue": "Unnatural literal: 'Χάθηκα στον χάρτη' (lit. 'I got lost in the map') is not idiomatic — you get lost in the streets/city, not 'in the map'. The English gloss inherits the oddness ('got lost on the map'). A native who is disoriented despite a map says 'Μπερδεύτηκα με τον χάρτη' or simply 'Χάθηκα και ρώτησα...'. As written the card teaches a confused collocation in a Q1 travel scene.",
+    "fix": {
+      "target": "Μπερδεύτηκα με τον χάρτη και ρώτησα έναν περαστικό.",
+      "english": "I got confused with the map and asked a passerby.",
+      "grammar": "μπερδεύομαι με (berdévome me) = to get mixed up with — you don't 'χάνεσαι στον χάρτη' in Greek."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-3280",
+    "rating": 4,
+    "issue": "Anglicism + internal redundancy: 'Στο τέλος της ημέρας' used as a discourse marker for 'ultimately' is a direct calque of English 'at the end of the day' (literally it means at the end of the actual day). Native equivalents are εν τέλει / στο κάτω κάτω / τελικά. Worse, el-3235 already teaches 'στο κάτω κάτω' glossed as the native way to say exactly 'at the end of the day', so this card models the calque the deck itself just warned against.",
+    "fix": {
+      "target": "Εν τέλει, μετράει το αποτέλεσμα.",
+      "english": "In the end, the result is what counts.",
+      "grammar": "εν τέλει (en téli) = in the end/ultimately — native for the calque 'στο τέλος της ημέρας'."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-3079",
+    "rating": 5,
+    "issue": "Noun+noun calque: 'τη φόρμα ίντερνετ' ('the internet form') stacks two nouns the way English does; Greek says 'τη φόρμα στο ίντερνετ', 'online', or 'την ηλεκτρονική φόρμα'. The rest of the card is strong — παράβολο is exactly the right administrative word for the state fee — so only the φόρμα-ίντερνετ phrasing reads learner-ish in this abroad/paperwork card.",
+    "fix": {
+      "target": "Συμπλήρωσα τη φόρμα στο ίντερνετ και πλήρωσα το παράβολο.",
+      "english": "I filled in the form online and paid the fee.",
+      "grammar": "το παράβολο (to parávolo) = the official fee you pay for a permit or application."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-3144",
+    "rating": 5,
+    "issue": "'μετρητά του τόπου' ('cash of the place') is not an established collocation for 'local cash/currency'. Natives say 'μετρητά σε τοπικό νόμισμα' or 'δεν είχα ρευστό/μετρητά'. Note el-3146 correctly uses 'τοπική κάρτα', so 'του τόπου' here reads inconsistent with the deck's own way of saying 'local'.",
+    "fix": {
+      "target": "Πλήρωσα με κάρτα γιατί δεν είχα μετρητά σε τοπικό νόμισμα.",
+      "english": "I paid by card because I didn't have cash in the local currency.",
+      "grammar": "τοπικό νόμισμα (topikó nómisma) = local currency — not 'μετρητά του τόπου'."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-3111",
+    "rating": 5,
+    "issue": "Collocation slip: 'έναν κύκλο από καλούς φίλους' calques 'a circle made up of friends'. The fixed Greek collocation is the genitive 'κύκλος (καλών) φίλων' — 'έφτιαξα έναν κύκλο καλών φίλων'. Understandable but the από-construction reads a touch translated for an otherwise natural sentence.",
+    "fix": {
+      "target": "Σιγά σιγά έφτιαξα έναν κύκλο καλών φίλων.",
+      "english": "Little by little I built a circle of good friends.",
+      "grammar": "κύκλος φίλων (kíklos fílon) = circle of friends — genitive, not 'κύκλος από φίλους'."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-3249",
+    "rating": 5,
+    "issue": "Mild calque: 'τα ταξίδια σε ανοίγουν σαν άνθρωπο' shadows English 'travel opens you up as a person'. The idiomatic Greek collocation is 'σου ανοίγουν το μυαλό' (broaden your mind) or 'σε κάνουν πιο ανοιχτό άνθρωπο'; also σαν ('like') should be ως ('as/in the capacity of') for 'as a person'. Meaning lands, but the phrasing is translated rather than heard.",
+    "fix": {
+      "target": "Κατά τη γνώμη μου, τα ταξίδια σού ανοίγουν το μυαλό.",
+      "english": "In my opinion, traveling broadens your mind.",
+      "grammar": "μου ανοίγει το μυαλό (mou aníyi to mialó) = it broadens my mind; natural for travel and reading."
+    },
+    "newTokens": {}
+  }
+]

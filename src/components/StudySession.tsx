@@ -225,13 +225,12 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               </div>
             </button>
           )}
-          {/* Add more cards – always shown at session end, even after the
-              daily allowance is exhausted, because the user typing a count
-              here is an explicit override of the daily cap. */}
-          {onStudyMore && <AddMoreCardsPanel onStart={onStudyMore} />}
+          {/* Session done → straight back home. Choosing how many cards to
+              study now happens on the pre-study screen, so completion is a
+              clean exit rather than another "add more cards" prompt. */}
           <button
             onClick={onAbort}
-            className="px-8 py-3 rounded-xl w-full bg-[var(--bg-card)] border border-[var(--border-color)] text-[var(--text-secondary)] font-bold hover:bg-[var(--bg-card-hover)] active:bg-[var(--bg-inset)] transition-colors"
+            className="px-8 py-3 rounded-xl w-full btn-primary font-bold"
           >
             Back to Home
           </button>
@@ -248,6 +247,15 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   const countNew = remainingQueue.filter(c => c.mastery === 0).length;
   const countLearn = remainingQueue.filter(c => c.mastery === 1).length;
   const countReview = remainingQueue.filter(c => c.mastery === 2).length;
+
+  // The state of the card currently on screen — new (never seen), learning
+  // (in the short-term steps), or review (graduated to spaced repetition).
+  // Colour-matched to the new/learn/review counters in the top bar.
+  const cardState = card!.mastery === 0
+    ? { label: 'New', cls: 'text-sky-400 border-sky-500/40 bg-sky-500/10' }
+    : card!.mastery === 1
+      ? { label: 'Learning', cls: 'text-rose-400 border-rose-500/40 bg-rose-500/10' }
+      : { label: 'Review', cls: 'text-teal-400 border-teal-500/40 bg-teal-500/10' };
 
   const handleFlip = () => setIsFlipped(true);
 
@@ -355,6 +363,14 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
           onClick={!isFlipped ? handleFlip : undefined}
           className="study-card flex-1 min-h-0 flex flex-col cursor-pointer my-1 relative"
         >
+          {/* Card state badge – top-left, always visible so the learner knows
+              whether this card is new, still being learned, or a review. */}
+          <div className="absolute top-2 left-2 z-10">
+            <span className={`px-2.5 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider border ${cardState.cls}`}>
+              {cardState.label}
+            </span>
+          </div>
+
           {/* Grammar overlay – centered modal with backdrop. Same layout
               pattern as the etymology overlay in WordPopover, just amber
               instead of violet so the two surfaces are visually parallel. */}
@@ -420,7 +436,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               Both pinned to the top-right corner of the card so they're
               always within thumb reach in the same spot. Absolute positioning
               so they don't affect the card content's vertical layout. */}
-          {((SHOW_GRAMMAR_TIPS && card!.grammar) || cardEty) && (
+          {((SHOW_GRAMMAR_TIPS && card!.grammar) || (isFlipped && cardEty)) && (
             <div className="absolute top-2 right-2 z-10 flex flex-col items-end gap-2">
               {SHOW_GRAMMAR_TIPS && card!.grammar && (
                 <button
@@ -431,7 +447,9 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                   <span>Grammar</span>
                 </button>
               )}
-              {cardEty && (
+              {/* Etymology only on the reverse — the front is for recall, so
+                  the word-origin hint appears once the card is flipped. */}
+              {isFlipped && cardEty && (
                 <button
                   onClick={(e) => { e.stopPropagation(); trackEtymologyOpened(session.language); setShowEtymology(true); }}
                   className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-violet-600 dark:text-violet-300 bg-violet-500/10 border border-violet-500/40 hover:bg-violet-500/15 transition-all active:scale-95"

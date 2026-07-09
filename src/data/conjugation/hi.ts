@@ -25,7 +25,7 @@ type TenseKey =
   | 'present' | 'continuous' | 'past' | 'habitual_past' | 'future' | 'subjunctive' | 'imperative'
   | 'present_fem' | 'continuous_fem' | 'past_fem' | 'habitual_past_fem' | 'future_fem'
   | 'perfect' | 'perfect_fem' | 'past_perfect' | 'past_perfect_fem'
-  | 'oblique_infinitive';
+  | 'oblique_infinitive' | 'conjunctive';
 
 const TENSES: TenseKey[] = [
   'present', 'present_fem',
@@ -37,6 +37,7 @@ const TENSES: TenseKey[] = [
   'future', 'future_fem',
   'subjunctive',
   'imperative',
+  'conjunctive',
   'oblique_infinitive',
 ];
 
@@ -57,6 +58,7 @@ const TENSE_LABELS: Record<TenseKey, string> = {
   past_perfect_fem: 'पूर्ण भूत (Past Perfect, f.)',
   subjunctive: 'संभावना (Subjunctive)',
   imperative: 'आज्ञार्थक (Imperative)',
+  conjunctive: 'पूर्वकालिक (Conjunctive: having done)',
   oblique_infinitive: 'तिर्यक (Oblique Infinitive)',
 };
 
@@ -571,6 +573,15 @@ function conjugateRegular(stem: string, tense: TenseKey): Forms {
       const ob = `${stem}ने`;
       return [ob, ob, ob, ob, ob, ob];
     }
+    case 'conjunctive': {
+      // Conjunctive participle / absolutive (पूर्वकालिक): "having done X".
+      // Invariant across person and gender, so the single form fills all slots.
+      // Regular verbs take stem + कर (खा→खाकर, देख→देखकर, बोल→बोलकर).
+      // करना and its compounds (X करना) take कर + के → करके / "बंद करके",
+      // since कर+कर is not used.
+      const cp = (stem === 'कर' || stem.endsWith(' कर')) ? `${stem}के` : `${stem}कर`;
+      return [cp, cp, cp, cp, cp, cp];
+    }
     case 'perfect':
     case 'perfect_fem':
     case 'past_perfect':
@@ -670,6 +681,9 @@ export function conjugateHindi(infinitive: string): ConjugationTable | null {
         [TENSE_LABELS.imperative]: [
           '-', 'हो', '-',
           '-', 'हो', 'होइए',
+        ],
+        [TENSE_LABELS.conjunctive]: [
+          'होकर', 'होकर', 'होकर', 'होकर', 'होकर', 'होकर',
         ],
       },
     };
@@ -834,6 +848,30 @@ export function findInfinitive(form: string): string | null {
     }
   }
 
+  // Conjunctive participle / absolutive (पूर्वकालिक): "having done X".
+  //   stem + कर  → खाकर→खाना, देखकर→देखना, जाकर→जाना, उठकर→उठना, होकर→होना
+  //   कर  + के  → करना's own form: करके→करना (compound "बंद करके"→"बंद करना")
+  // Handled BEFORE the subjunctive strip because करके ends in the subjunctive
+  // matra े and would otherwise mis-resolve to a bogus "करकना".
+  if (mainWord.endsWith('कर') && mainWord.length >= 3) {
+    const stem = mainWord.slice(0, -2);
+    for (const [inf, data] of Object.entries(IRREGULARS)) {
+      if (data.presentStem === stem || getStem(inf) === stem) return inf;
+    }
+    if (stem.length > 0) return stem + 'ना';
+  }
+  // The -के variant is ambiguous with the genitive/postposition के (उसके, के)
+  // and regular past-plural participles (ढके, सके, लटके). Strip it ONLY when the
+  // residue is a KNOWN verb stem, so it catches करके→करना (and colloquial
+  // जाके→जाना, लेके→लेना) without stealing those other forms — which still
+  // resolve correctly via the past/subjunctive strips below.
+  if (mainWord.endsWith('के') && mainWord.length >= 3) {
+    const stem = mainWord.slice(0, -2);
+    for (const [inf, data] of Object.entries(IRREGULARS)) {
+      if (data.presentStem === stem || getStem(inf) === stem) return inf;
+    }
+  }
+
   // Check subjunctive suffixes
   for (const s of SUBJUNCTIVE_LIST) {
     if (mainWord.endsWith(s)) {
@@ -845,15 +883,6 @@ export function findInfinitive(form: string): string | null {
         return stem + 'ना';
       }
     }
-  }
-
-  // -कर compound non-finite (बैठकर "having sat" → बैठना, आकर → आना)
-  if (mainWord.endsWith('कर') && mainWord.length >= 3) {
-    const stem = mainWord.slice(0, -2);
-    for (const [inf, data] of Object.entries(IRREGULARS)) {
-      if (data.presentStem === stem || getStem(inf) === stem) return inf;
-    }
-    if (stem.length > 0) return stem + 'ना';
   }
 
   // Imperative familiar -ो (करो, रखो, लो, खाओ)

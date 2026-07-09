@@ -1,0 +1,90 @@
+[
+ {
+  "id": "el-0819",
+  "rating": 4,
+  "issue": "Sentence is fine, but the tip teaches a false meaning: γραμμή does NOT mean a queue of people — that is η ουρά. 'metro lines, phone lines, queues' imports the English 'line' polysemy; a learner who says 'μπαίνω στη γραμμή' for queueing will be misunderstood.",
+  "fix": {
+   "target": "Αυτή η γραμμή πάει στο αεροδρόμιο;",
+   "english": "Does this line go to the airport?",
+   "grammar": "η γραμμή (i gramí) = line — metro and phone lines; a queue of people is η ουρά (i ourá)."
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "el-0861",
+  "rating": 5,
+  "issue": "'πάμε γύρω από το νησί' is a calque of 'go around the island' — γύρω από marks static position (around/near), not a tour. A native says κάνουμε τον γύρο του νησιού or γυρίζουμε όλο το νησί.",
+  "fix": {
+   "target": "Νοικιάζουμε ποδήλατα και γυρίζουμε όλο το νησί.",
+   "english": "We rent bikes and tour the whole island.",
+   "grammar": "γυρίζω (yirízo) = turn, return AND tour: γυρίζω όλο το νησί = I go all around the island."
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "el-0902",
+  "rating": 5,
+  "issue": "English inversion calque: 'Είναι αυτή η σωστή αποβάθρα...' garden-paths as 'this correct platform' (demonstrative + adjective inside one noun phrase). Greek yes/no questions keep statement order: Αυτή είναι η σωστή αποβάθρα;",
+  "fix": {
+   "target": "Αυτή είναι η σωστή αποβάθρα για τον Πειραιά;",
+   "english": "Is this the right platform for Piraeus?",
+   "grammar": "Yes/no questions keep statement word order — only the voice rises: Αυτή είναι...; (aftí íne) = Is this...?"
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "el-0905",
+  "rating": 4,
+  "issue": "'Παίρνουμε τις σκάλες' is an English 'take the stairs' calque; established Greek is πάμε/ανεβαίνουμε από τις σκάλες (or με τις σκάλες). παίρνω works for vehicles (παίρνω το μετρό), not for stairs.",
+  "fix": {
+   "target": "Πάμε από τις σκάλες. Το ασανσέρ είναι γεμάτο.",
+   "english": "We'll take the stairs. The elevator is full.",
+   "grammar": "Greek 'goes by' the stairs: πάμε από τις σκάλες (páme apó tis skáles) = we take the stairs."
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "el-0913",
+  "rating": 4,
+  "issue": "Grammar error on a deponent showcase card: duration takes the bare accusative — κοιμήθηκα όλο το ταξίδι. 'σε όλο το ταξίδι' ('in all the trip') is an English-preposition calque no native produces. Also 'ταξίδι με το ΚΤΕΛ' is clunkier than στο ΚΤΕΛ.",
+  "fix": {
+   "target": "Κοιμήθηκα όλο το ταξίδι στο ΚΤΕΛ.",
+   "english": "I slept the whole trip on the KTEL bus.",
+   "grammar": "κοιμάμαι → κοιμήθηκα (kimíthika) = I slept — duration is bare: κοιμήθηκα όλο το ταξίδι."
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "el-1009",
+  "rating": 4,
+  "issue": "'ακούει λίγο δύσκολα' is not a Greek collocation — δύσκολα doesn't combine with ακούω this way. Natives say δεν ακούει καλά (or βαριακούει). As written it sounds like machine translation of 'hears with a little difficulty'.",
+  "fix": {
+   "target": "Ο παππούς δεν ακούει καλά τώρα πια.",
+   "english": "Grandpa doesn't hear well these days.",
+   "grammar": "τώρα πια (tóra pia) = these days / not anymore — signals that things have changed."
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "el-1017",
+  "rating": 5,
+  "issue": "'χρειάζεται χρόνο μαζί' reads like a translated parenting-blog headline — 'needs time together' with no verb for the together part. Natural Greek spells it out: χρειάζεται να περνάει χρόνο μαζί.",
+  "fix": {
+   "target": "Η οικογένεια χρειάζεται να περνάει χρόνο μαζί.",
+   "english": "A family needs to spend time together.",
+   "grammar": "χρειάζομαι (chriázome) = I need — a deponent you'll use daily: χρειάζεται να... = it needs to..."
+  },
+  "newTokens": {}
+ },
+ {
+  "id": "el-1020",
+  "rating": 5,
+  "issue": "ονομάζεται is officialese (forms, ID checks) — nobody introduces their daughter with it. The tip even admits everyday Greek says τη λένε; the modeled sentence should model that, not the register the policy flags for everyday content.",
+  "fix": {
+   "target": "Την κόρη μας τη λένε Ελένη, όπως τη γιαγιά της.",
+   "english": "Our daughter is called Eleni, like her grandmother.",
+   "grammar": "Naming is τη λένε: Την κόρη μας τη λένε Ελένη (ti léne) — the object is doubled with τη."
+  },
+  "newTokens": {}
+ }
+]

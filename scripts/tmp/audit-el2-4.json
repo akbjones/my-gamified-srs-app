@@ -1,0 +1,90 @@
+[
+  {
+    "id": "el-1192",
+    "rating": 4,
+    "issue": "English calque: 'Η κλήση έπεσε' is 'the call dropped' translated word-for-word. Greeks blame the line, not the call: κόπηκε/έπεσε η γραμμή. As modeled it reads as learner Greek in a Q1 everyday-work card. Card also has no tip, and the idiom deserves one.",
+    "fix": {
+      "target": "Έπεσε η γραμμή τρεις φορές σήμερα.",
+      "english": "The line dropped three times today.",
+      "grammar": "έπεσε η γραμμή (épese i ghramí) = the line dropped — how Greeks say a call cut out."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-1241",
+    "rating": 4,
+    "issue": "English calque: 'Παίρνω μισή ώρα για μεσημεριανό' transplants 'I take half an hour for lunch'. παίρνω pairs with ρεπό/άδεια, not with a stretch of time spent on a break — natives say κάνω (μισή ώρα) διάλειμμα or έχω μισή ώρα για φαγητό. διάλειμμα is already deck vocabulary (el-1186), so the fix costs nothing.",
+    "fix": {
+      "target": "Κάνω μισή ώρα διάλειμμα για μεσημεριανό.",
+      "english": "I take a half-hour break for lunch.",
+      "grammar": "κάνω διάλειμμα (káno dhiálima) = I take a break — Greek 'makes' a break, never 'takes' it."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-1278",
+    "rating": 4,
+    "issue": "Sentence-gloss mismatch on a real ambiguity: 'κλείνω τραπέζι για οχτώ' means a table for eight PEOPLE. The time reading in the English gloss ('for eight in the evening') requires the article: για τις οχτώ. As written the card teaches learners to produce exactly the booking mix-up the article exists to prevent. Tip should teach τις with clock times instead of repeating κλείνω τραπέζι (already clear from the card).",
+    "fix": {
+      "target": "Θα κλείσω τραπέζι για τις οχτώ το βράδυ.",
+      "english": "I will book a table for eight in the evening.",
+      "grammar": "Clock times take τις: για τις οχτώ (ya tis ohtó) = for 8 o'clock — without τις it means 8 people."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-1091",
+    "rating": 5,
+    "issue": "Internal contradiction three cards after el-1088 taught 'τσάντα is a handbag, σακούλα is for shopping', this card puts fruit in a μεγάλη τσάντα. A market tote can be a τσάντα in real life, but modeling it right after the deck drew the line undoes the distinction. Use σακούλα here.",
+    "fix": {
+      "target": "Βάζω τα φρούτα σε μια μεγάλη σακούλα.",
+      "english": "I put the fruit in a big bag.",
+      "grammar": "Shopping goes in a σακούλα (sakúla) — τσάντα is the handbag you carry."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-1107",
+    "rating": 5,
+    "issue": "Sentence fine, tip romanization wrong: θα ψήσω is romanized 'tha píso' — ψ = ps, so this transcribes a non-word *πήσω. Since accent/romanization pairs are load-bearing for this deck, a wrong romanization is a hard error. Should be tha psíso.",
+    "fix": {
+      "target": "Θα ψήσω ψωμί στο σπίτι το Σάββατο.",
+      "english": "I will bake bread at home on Saturday.",
+      "grammar": "ψήνω → θα ψήσω (tha psíso) = I will bake — ν becomes σ before the future ending."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-1169",
+    "rating": 5,
+    "issue": "'Κάνει διανομή στο σπίτι' is signage Greek half-translated — the sign says ΔΙΑΝΟΜΗ ΚΑΤ' ΟΙΚΟΝ, the mouth says 'φέρνει τα ψώνια στο σπίτι' or 'κάνει και ντελίβερι'. In a Q1 neighborhood-shops card the spoken form should be modeled; φέρνω and ψώνια are both already in the dictionary.",
+    "fix": {
+      "target": "Το μανάβικο φέρνει τα ψώνια στο σπίτι.",
+      "english": "The greengrocer's brings the shopping to your home.",
+      "grammar": "φέρνει στο σπίτι (férni sto spíti) = they deliver — spoken Greek says 'brings it home'."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-1187",
+    "rating": 5,
+    "issue": "Gender inconsistency in the deck's own coffee lexicon: coffees are masculine (ο φρέντο εσπρέσο, cf. el-1284 'έναν διπλό ελληνικό', el-1285 'ο μέτριος'), so the order should be 'Έναν φρέντο εσπρέσο'. Bare 'ένα φρέντο' is heard colloquially but modeling neuter here while el-1284/1285 model masculine teaches a contradiction. No tip on the card — add the ordering-gender rule.",
+    "fix": {
+      "target": "Έναν φρέντο εσπρέσο χωρίς ζάχαρη, παρακαλώ.",
+      "english": "One freddo espresso without sugar, please.",
+      "grammar": "Coffees are masculine: έναν φρέντο (énan frédo), έναν μέτριο — έναν, not ένα, when you order."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-1246",
+    "rating": 5,
+    "issue": "'Κατεβάζω τα μέιλ' is dated POP3-era phrasing shadowing English 'download my mail' — today people τσεκάρουν/βλέπουν τα μέιλ; κατεβάζω belongs with apps, music, photos (the deck itself uses it correctly in el-1266 'Κατέβασα μια εφαρμογή'). Keep the good κατεβάζω tip but give it a natural object; μουσική is already deck vocabulary (el-1207).",
+    "fix": {
+      "target": "Κατεβάζω μουσική στο κινητό μου.",
+      "english": "I download music on my phone.",
+      "grammar": "κατεβάζω (katevázo) = I download — literally 'I bring down'."
+    },
+    "newTokens": {}
+  }
+]

@@ -72,39 +72,26 @@ const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
 
 type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB' | 'FAVORITES' | 'LISTEN';
 
-// Deck loaders – static imports for available languages
-// (dynamic import would be cleaner but static is simpler for Vite bundling)
-import rawSpanishDeck from './data/spanish/deck.json';
-import rawItalianDeck from './data/italian/deck.json';
-import rawFrenchDeck from './data/french/deck.json';
-import rawPortugueseDeck from './data/portuguese/deck.json';
-import rawGermanDeck from './data/german/deck.json';
-import rawDutchDeck from './data/dutch/deck.json';
-import rawSwedishDeck from './data/swedish/deck.json';
-import rawWelshDeck from './data/welsh/deck.json';
-import rawHindiDeck from './data/hindi/deck.json';
-import rawTurkishDeck from './data/turkish/deck.json';
-import rawRussianDeck from './data/russian/deck.json';
-import rawIndonesianDeck from './data/indonesian/deck.json';
-import rawGreekDeck from './data/greek/deck.json';
-import rawKoreanDeck from './data/korean/deck.json';
-import { SPANISH_STARTER } from './data/starterDecks';
-
-const DECK_MAP: Partial<Record<Language, any[]>> = {
-  spanish: rawSpanishDeck,
-  italian: rawItalianDeck,
-  french: rawFrenchDeck,
-  portuguese: rawPortugueseDeck,
-  german: rawGermanDeck,
-  dutch: rawDutchDeck,
-  swedish: rawSwedishDeck,
-  welsh: rawWelshDeck,
-  hindi: rawHindiDeck,
-  turkish: rawTurkishDeck,
-  russian: rawRussianDeck,
-  indonesian: rawIndonesianDeck,
-  greek: rawGreekDeck,
-  korean: rawKoreanDeck,
+// Deck loaders — DYNAMIC imports so each language's deck.json is its own chunk,
+// fetched on demand. Keeps the main bundle small (~1 MB vs ~5 MB) and only pulls
+// the deck a visitor actually studies — a big first-load + per-visit egress win.
+// Chunks are named `deck-<lang>` (see vite.config.ts manualChunks) and are
+// runtime-cached by the service worker, not precached.
+const DECK_LOADERS: Record<Language, () => Promise<any[]>> = {
+  spanish: () => import('./data/spanish/deck.json').then(m => m.default),
+  italian: () => import('./data/italian/deck.json').then(m => m.default),
+  french: () => import('./data/french/deck.json').then(m => m.default),
+  portuguese: () => import('./data/portuguese/deck.json').then(m => m.default),
+  german: () => import('./data/german/deck.json').then(m => m.default),
+  dutch: () => import('./data/dutch/deck.json').then(m => m.default),
+  swedish: () => import('./data/swedish/deck.json').then(m => m.default),
+  welsh: () => import('./data/welsh/deck.json').then(m => m.default),
+  hindi: () => import('./data/hindi/deck.json').then(m => m.default),
+  turkish: () => import('./data/turkish/deck.json').then(m => m.default),
+  russian: () => import('./data/russian/deck.json').then(m => m.default),
+  indonesian: () => import('./data/indonesian/deck.json').then(m => m.default),
+  greek: () => import('./data/greek/deck.json').then(m => m.default),
+  korean: () => import('./data/korean/deck.json').then(m => m.default),
 };
 
 // ── Locked shareable starter mode ────────────────────────────────
@@ -116,7 +103,11 @@ const DECK_MAP: Partial<Record<Language, any[]>> = {
 const STARTER_PARAM = typeof window !== 'undefined'
   ? new URLSearchParams(window.location.search).get('starter')
   : null;
-const STARTER_DECKS: Partial<Record<Language, any[]>> = { spanish: SPANISH_STARTER };
+// Starter decks are lazy too — the curated Spanish starter (and the Spanish
+// deck it hydrates from) only load when the app is in ?starter= mode.
+const STARTER_LOADERS: Partial<Record<Language, () => Promise<any[]>>> = {
+  spanish: () => import('./data/starterDecks').then(m => m.SPANISH_STARTER),
+};
 const STARTER_LANG_BY_CODE: Record<string, Language> = { es: 'spanish' };
 const STARTER_LOCK: Language | null =
   STARTER_PARAM && STARTER_LANG_BY_CODE[STARTER_PARAM] ? STARTER_LANG_BY_CODE[STARTER_PARAM] : null;
@@ -284,18 +275,25 @@ const App: React.FC = () => {
   // can't strand the learner on an empty filtered deck.
   const goal = STARTER_LOCK ? 'general' : getGoalFor(settings, lang);
 
-  // Load deck when language or goal changes
+  // Load deck when language or goal changes. Decks are code-split, so the load
+  // is async; a `cancelled` guard drops a stale result if the user switches
+  // language before the previous deck chunk resolves.
   useEffect(() => {
-    const rawDeck = STARTER_LOCK ? STARTER_DECKS[lang] : DECK_MAP[lang];
-    if (!rawDeck) return;
-    const map = loadMasteryMap(lang);
-    setMasteryMap(map);
-    setDeck(buildDeck(rawDeck, map, goal));
-    setUserStats(loadUserStats(lang));
-    setDailyStats(loadDailyStats(lang));
-    setProgressState(loadProgressState(lang));
-    setVocabMap(loadVocabMap(lang));
-    setFavoritesMap(loadFavorites(lang));
+    let cancelled = false;
+    const loadRaw = STARTER_LOCK ? STARTER_LOADERS[lang] : DECK_LOADERS[lang];
+    if (!loadRaw) return;
+    loadRaw().then(rawDeck => {
+      if (cancelled || !rawDeck) return;
+      const map = loadMasteryMap(lang);
+      setMasteryMap(map);
+      setDeck(buildDeck(rawDeck, map, goal));
+      setUserStats(loadUserStats(lang));
+      setDailyStats(loadDailyStats(lang));
+      setProgressState(loadProgressState(lang));
+      setVocabMap(loadVocabMap(lang));
+      setFavoritesMap(loadFavorites(lang));
+    }).catch(() => { /* deck chunk failed to load — leave deck empty; UI stays on home */ });
+    return () => { cancelled = true; };
   }, [lang, goal]);
 
   // Auto-dismiss the placement toast after 6s. Click to dismiss earlier.
@@ -663,7 +661,7 @@ const App: React.FC = () => {
     : 0;
   const hasCards = reviewsDue > 0 || newAvailable > 0;
 
-  const availableLanguages: Language[] = STARTER_LOCK ? [STARTER_LOCK] : (Object.keys(DECK_MAP) as Language[]);
+  const availableLanguages: Language[] = STARTER_LOCK ? [STARTER_LOCK] : (Object.keys(DECK_LOADERS) as Language[]);
 
   // Close language dropdown when clicking outside
   useEffect(() => {

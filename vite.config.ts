@@ -37,6 +37,21 @@ export default defineConfig({
     // Allow tunneling services so we can share the preview build externally.
     allowedHosts: ['.trycloudflare.com', '.ngrok.io', 'langlab-srs.netlify.app', 'localhost'],
   },
+  build: {
+    rollupOptions: {
+      output: {
+        // Give each language's deck.json its own predictably-named chunk
+        // (assets/deck-<lang>-[hash].js) so it's code-split + loaded on demand,
+        // never bundled into the main chunk. The SW globIgnores + runtime-caches
+        // these (see workbox below), keeping the precache to the app shell only.
+        manualChunks(id: string) {
+          const m = id.match(/[/\\]data[/\\]([a-z]+)[/\\]deck\.json$/);
+          if (m) return `deck-${m[1]}`;
+          return undefined;
+        },
+      },
+    },
+  },
   plugins: [
     react(),
     tailwindcss(),
@@ -81,10 +96,17 @@ export default defineConfig({
         cleanupOutdatedCaches: true,
         // Import our custom notification handler into the generated SW
         importScripts: ['sw-notifications.js'],
-        // Only precache the app shell — NOT the 9000+ audio files
+        // Precache the app shell only — NOT the audio files and NOT the
+        // per-language deck chunks (those are runtime-cached on demand below,
+        // so a visitor only downloads the deck they actually study).
         globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
-        globIgnores: ['quest-audio/**', 'sw-notifications.js'],
-        maximumFileSizeToCacheInBytes: 20 * 1024 * 1024, // 20 MB — bundle includes 11 language deck/dictionary/conjugation data
+        globIgnores: ['quest-audio/**', 'sw-notifications.js', 'assets/deck-*.js'],
+        // Decks are code-split now (14 chunks runtime-cached separately), so the
+        // main app-shell chunk dropped ~19.9 MB -> ~6.7 MB. Cap gives headroom
+        // for the shell (still holds all 14 dictionaries + conjugation engines —
+        // splitting those is the next optimization). Was pinned at 20 MB to fit
+        // the old monolith.
+        maximumFileSizeToCacheInBytes: 8 * 1024 * 1024, // 8 MB
         // Runtime cache audio files on demand
         runtimeCaching: [
           {
@@ -120,6 +142,21 @@ export default defineConfig({
                 maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days
               },
               rangeRequests: true,
+            },
+          },
+          {
+            // Code-split language deck chunks. Hashed filenames are immutable,
+            // so CacheFirst is safe (a deck edit = new hash = new URL = miss →
+            // fetch). This gives offline access to any language loaded once,
+            // without precaching all 14 decks at install.
+            urlPattern: /\/assets\/deck-[^/]+\.js$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'deck-cache-v1',
+              expiration: {
+                maxEntries: 20,
+                maxAgeSeconds: 60 * 24 * 60 * 60, // 60 days
+              },
             },
           },
           {

@@ -152,7 +152,7 @@ const IRREGULAR_PAST: Record<string, string> = {
 // ㄷ-irregulars (듣 → 들 + 을 → 들을 거예요).
 const IRREGULAR_FUTURE_STEM: Record<string, string> = {
   '돕다': '도우', '춥다': '추우', '덥다': '더우', '어렵다': '어려우',
-  '쉽다': '쉬우', '고맙다': '고마우', '가깝다': '가까우', '반갑다': '반가우',
+  '쉽다': '쉬우', '고맙다': '고마우', '가깝다': '가까우', '반갑다': '반가우', '부드럽다': '부드러우',
 };
 
 // ㄷ-irregulars mutate ㄷ→ㄹ but still take 을 (들을 거예요), so the

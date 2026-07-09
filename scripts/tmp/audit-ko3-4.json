@@ -1,0 +1,35 @@
+[
+  {
+    "id": "ko-2112",
+    "rating": 5,
+    "issue": "Romanization teaches a wrong pronunciation: 월급날 is pronounced [월금날] — ㅂ nasalizes to ㅁ before ㄴ — so it should romanize as wolgeumnal, not wolgeupnal. The deck romanizes phonetically elsewhere (넣다=neota, 넓어요=neolbeoyo, 깨끗하다=kkaekkeutada), so 'wolgeupnal' is inconsistent. This exact error was already flagged at ko-1151 in a prior wave, so it should be fixed here too.",
+    "fix": {
+      "target": "한 달 중에서 월급날이 제일 좋아요.",
+      "english": "Payday is the best day of the month.",
+      "grammar": "월급날 (wolgeumnal — ㅂ before ㄴ sounds like ㅁ) = payday: 월급 (salary) + 날 (day)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-2165",
+    "rating": 5,
+    "issue": "Under-honors a titled workplace superior. 팀장님 (team lead) is a 님-titled superior, and the deck's own workplace material teaches indirect honorifics for bosses (사장님 …이세요, 부장님께). Describing the team lead's voice with plain 부드러워요 makes them sound like a peer; standard workplace-polite Korean uses the indirect honorific 부드러우세요. Note the neighboring 씨-addressed colleagues (수진 씨, 지은 씨) correctly stay plain, which makes the 님 case stand out.",
+    "fix": {
+      "target": "우리 팀장님은 목소리가 부드러우세요.",
+      "english": "Our team lead has a gentle voice.",
+      "grammar": "Honor a 님-titled boss's trait with -(으)세요: 목소리가 부드러우세요 (budeureouseyo) = has a gentle voice."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-2249",
+    "rating": 5,
+    "issue": "Logic/realism problem. '왕복표가 편도보다 싸요' ('a round trip is cheaper than one way') is misleading: a round-trip ticket is two legs and is always pricier than a single one-way, and KTX currently offers no round-trip discount, so as a standalone true statement it doesn't hold. The Korean is grammatically fine and the 왕복/편도 + 보다 teaching is good, but the claim itself is false.",
+    "fix": {
+      "target": "편도표보다 왕복표가 편해요.",
+      "english": "A round-trip ticket is more convenient than a one-way.",
+      "grammar": "왕복 (wangbok) = round trip; 편도 (pyeondo) = one way. 편도보다 = than one-way."
+    },
+    "newTokens": {}
+  }
+]

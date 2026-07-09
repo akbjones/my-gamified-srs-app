@@ -17743,14 +17743,15 @@
  {
   "id": "ko-1458",
   "target": "내일 태풍이 올 거예요. 조심하세요.",
-  "english": "A typhoon comes tomorrow. Please be careful.",
+  "english": "A typhoon is coming tomorrow. Please be careful.",
   "audio": "ko-ko-1458.mp3",
   "tags": [
    "general",
    "travel"
   ],
   "grammarNode": "node-14",
-  "priority": 1458
+  "priority": 1458,
+  "grammar": "-(으)ㄹ 거예요 (-l geoyeyo) = will / is going to: 올 거예요 = it will come."
  },
  {
   "id": "ko-1459",
@@ -19684,7 +19685,7 @@
   ],
   "grammarNode": "node-15",
   "priority": 1618,
-  "grammar": "-는 before a noun = that ...s: 재미있는 책 (jaemiinneun chaek) = an interesting book."
+  "grammar": "있다·없다 adjectives take -는: 재미있는 책 (jaemiinneun chaek) = an interesting book; other adjectives take -(으)ㄴ (예쁜)."
  },
  {
   "id": "ko-1619",
@@ -20114,7 +20115,7 @@
  },
  {
   "id": "ko-1654",
-  "target": "카메라보다 핸드폰으로 자주 찍어요.",
+  "target": "카메라보다 핸드폰으로 더 자주 찍어요.",
   "english": "I shoot with my phone more than my camera.",
   "audio": "ko-ko-1654.mp3",
   "tags": [
@@ -20122,7 +20123,7 @@
   ],
   "grammarNode": "node-15",
   "priority": 1654,
-  "grammar": "(으)로 marks the tool: 핸드폰으로 찍어요 (haendeuponeuro) = shoot with a phone."
+  "grammar": "더 (deo) = more: 카메라보다 더 자주 = more often than the camera; (으)로 marks the tool (핸드폰으로)."
  },
  {
   "id": "ko-1655",
@@ -20501,14 +20502,14 @@
  {
   "id": "ko-1685",
   "target": "이모티콘을 자주 써요.",
-  "english": "I use emoticons a lot.",
+  "english": "I use stickers a lot.",
   "audio": "ko-ko-1685.mp3",
   "tags": [
    "general"
   ],
   "grammarNode": "node-16",
   "priority": 1685,
-  "grammar": "쓰다 (sseuda) = use (and write): 이모티콘을 써요 = I use emoticons."
+  "grammar": "쓰다 (sseuda) = use (also 'write'): 이모티콘을 써요 = I use (KakaoTalk) stickers."
  },
  {
   "id": "ko-1686",
@@ -20583,7 +20584,7 @@
  },
  {
   "id": "ko-1692",
-  "target": "회의 중에는 휴대폰을 무음으로 해요.",
+  "target": "회의 중에는 휴대폰을 무음으로 해 놓아요.",
   "english": "I keep my phone on silent in meetings.",
   "audio": "ko-ko-1692.mp3",
   "tags": [
@@ -20592,7 +20593,7 @@
   ],
   "grammarNode": "node-16",
   "priority": 1692,
-  "grammar": "N 중에 (jung-e) = during: 회의 중에 = during a meeting."
+  "grammar": "무음으로 해 놓아요 (hae noayo) — -아/어 놓다 marks a kept state: leave it on silent; N 중에 = during."
  },
  {
   "id": "ko-1693",
@@ -21849,7 +21850,7 @@
  {
   "id": "ko-1796",
   "target": "밥 먹을 때는 휴대폰을 내려놓아요.",
-  "english": "Phones down while we eat.",
+  "english": "I put my phone down when I eat.",
   "audio": "ko-ko-1796.mp3",
   "tags": [
    "general",
@@ -22073,7 +22074,7 @@
  },
  {
   "id": "ko-1814",
-  "target": "아이들이 세뱃돈을 받고 정말 기뻐요.",
+  "target": "아이들이 세뱃돈을 받고 정말 기뻐해요.",
   "english": "The kids are really happy to get their New Year money.",
   "audio": "ko-ko-1814.mp3",
   "tags": [
@@ -22082,7 +22083,7 @@
   ],
   "grammarNode": "node-17",
   "priority": 1814,
-  "grammar": "기쁘다 → 기뻐요 (gippeoyo): the ㅡ drops before -어요."
+  "grammar": "3rd-person feelings take -어하다: 아이들이 기뻐해요 (gippeohaeyo = they're happy)."
  },
  {
   "id": "ko-1815",
@@ -23343,7 +23344,7 @@
  },
  {
   "id": "ko-1917",
-  "target": "아기가 첫돌을 맞아서 온 가족이 기뻐요.",
+  "target": "아기가 첫돌을 맞아서 온 가족이 기뻐해요.",
   "english": "The whole family is glad the baby has reached its first birthday.",
   "audio": "ko-ko-1917.mp3",
   "tags": [
@@ -23351,7 +23352,8 @@
    "family"
   ],
   "grammarNode": "node-17",
-  "priority": 1917
+  "priority": 1917,
+  "grammar": "3rd-person feelings take -어하다: 온 가족이 기뻐해요 (gippeohaeyo = the family is happy)."
  },
  {
   "id": "ko-1918",
@@ -25679,7 +25681,7 @@
   ],
   "grammarNode": "node-19",
   "priority": 2112,
-  "grammar": "월급날 (wolgeupnal) = payday: 월급 (salary) + 날 (day)."
+  "grammar": "월급날 (wolgeumnal — ㅂ before ㄴ sounds like ㅁ) = payday: 월급 (salary) + 날 (day)."
  },
  {
   "id": "ko-2113",
@@ -26294,7 +26296,7 @@
  },
  {
   "id": "ko-2165",
-  "target": "우리 팀장님은 목소리가 부드러워요.",
+  "target": "우리 팀장님은 목소리가 부드러우세요.",
   "english": "Our team lead has a gentle voice.",
   "audio": "ko-ko-2165.mp3",
   "tags": [
@@ -26302,7 +26304,8 @@
    "work"
   ],
   "grammarNode": "node-19",
-  "priority": 2165
+  "priority": 2165,
+  "grammar": "Honor a 님-titled boss's trait with -(으)세요: 목소리가 부드러우세요 (budeureouseyo) = has a gentle voice."
  },
  {
   "id": "ko-2166",
@@ -27354,8 +27357,8 @@
  },
  {
   "id": "ko-2249",
-  "target": "왕복표가 편도보다 싸요.",
-  "english": "A round trip is cheaper than one way.",
+  "target": "편도표보다 왕복표가 편해요.",
+  "english": "A round-trip ticket is more convenient than a one-way.",
   "audio": "ko-ko-2249.mp3",
   "tags": [
    "general",
@@ -27364,7 +27367,7 @@
   ],
   "grammarNode": "node-20",
   "priority": 2249,
-  "grammar": "왕복 (wangbok) = round trip; 편도 (pyeondo) = one way."
+  "grammar": "왕복 (wangbok) = round trip; 편도 (pyeondo) = one way. 편도보다 = than one-way."
  },
  {
   "id": "ko-2250",

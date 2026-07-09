@@ -1,0 +1,57 @@
+[
+  {
+    "id": "el-2245",
+    "rating": 4,
+    "issue": "'Το κράνος είναι υποχρεωτικό για δύο άτομα' reads literally as 'the helmet is mandatory for two people' — an odd claim (one helmet, two heads). The English gloss silently upgrades it to 'both riders', papering over the awkward Greek. A rental clerk states the helmet is compulsory for driver and passenger alike: υποχρεωτικό και για τους δύο. Node-20 island-rental realism card, so the phrasing should be what the agency actually says.",
+    "fix": {
+      "target": "Το κράνος είναι υποχρεωτικό και για τους δύο.",
+      "english": "The helmet is mandatory for both riders.",
+      "grammar": "και για τους δύο (ke ya tus dío) = for both — δύο takes the article to mean 'both of them'."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-2066",
+    "rating": 5,
+    "issue": "'μαγειρεύει πιο νόστιμα' uses νόστιμα as a bare manner-adverb, which is forced — νόστιμος lives overwhelmingly as an adjective, and the resulting gloss 'cooks more deliciously than everyone' is clunky English. The card's teaching point (πιο + adverb) lands cleaner with a natural adverb like ωραία, which Greeks actually pair with μαγειρεύω.",
+    "fix": {
+      "target": "Η γιαγιά μαγειρεύει πιο ωραία από όλους.",
+      "english": "Grandma cooks better than everyone.",
+      "grammar": "πιο works with adverbs too: πιο ωραία (pio oréa) = more nicely / better."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-2179",
+    "rating": 5,
+    "issue": "'Η τιμή είναι με το πρωινό;' with the definite article is marginal. Asking whether breakfast is included, Greeks drop the article (με πρωινό) or ask αν περιλαμβάνεται. The article makes 'the breakfast' specific and reads a touch learner-ish for a Q1 hotel exchange.",
+    "fix": {
+      "target": "Η τιμή είναι με πρωινό;",
+      "english": "Is breakfast included in the price?",
+      "grammar": "με πρωινό (me proinó) = with breakfast — no article when you ask if it's included."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-2238",
+    "rating": 5,
+    "issue": "The Greek is idiomatic, but the English gloss 'They recommended us a taverna' is ungrammatical — 'recommend' does not take a bare indirect object in English (unlike Greek συστήνω + genitive). Should be 'recommended a taverna to us'. Gloss-fidelity slip on an otherwise strong card.",
+    "fix": {
+      "target": "Μας σύστησαν μια ταβέρνα δίπλα στο κύμα.",
+      "english": "They recommended a taverna to us, right by the water.",
+      "grammar": "δίπλα στο κύμα (dípla sto kíma) = right on the water — literally 'next to the wave'."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-2272",
+    "rating": 5,
+    "issue": "Aspect clash with the rule the deck itself just taught. el-2256's tip states 'ένα βράδυ + aorist = one specific evening, one event' (φάγαμε), yet 16 cards later 'ένα βράδυ' pairs with the imperfect χορεύαμε with no tip to reconcile it. The imperfect is genuinely correct here (durative — 'we were dancing till dawn'), but a learner who internalized el-2256 will read it as an error. Since node-20's core teaching point IS narrative aspect, the durative override needs an explicit tip.",
+    "fix": {
+      "target": "Ένα βράδυ χορεύαμε μέχρι τα ξημερώματα.",
+      "english": "One night we danced until dawn.",
+      "grammar": "Imperfect χορεύαμε (horévame) stresses it went on for hours — durative wins over 'ένα βράδυ'."
+    },
+    "newTokens": {}
+  }
+]

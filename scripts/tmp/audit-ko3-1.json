@@ -1,0 +1,13 @@
+[
+  {
+    "id": "ko-1458",
+    "rating": 5,
+    "issue": "Gloss tense mismatch. Korean 올 거예요 is future, but English 'A typhoon comes tomorrow' uses present simple, which is unnatural for a one-off future weather event (cf. sibling card ko-1457 '오고 있어요 / A typhoon is coming'). Korean is correct; only the English needs fixing. Card also has no tip while the future -(으)ㄹ 거예요 it models is untaught here.",
+    "fix": {
+      "target": "내일 태풍이 올 거예요. 조심하세요.",
+      "english": "A typhoon is coming tomorrow. Please be careful.",
+      "grammar": "-(으)ㄹ 거예요 (-l geoyeyo) = will / is going to: 올 거예요 = it will come."
+    },
+    "newTokens": {}
+  }
+]

@@ -1,0 +1,70 @@
+[
+  {
+    "id": "ko-1618",
+    "rating": 5,
+    "issue": "Tip over-generalizes the noun-modifier ending. '재미있는 책' is correct, but the tip's rule '-는 before a noun = that ...s' treats 재미있다 as an action verb. Only 있다/없다-type adjectives take -는 (재미있는, 맛있는); ordinary adjectives take -(으)ㄴ (예쁜, 높은 — as ko-1573 itself teaches). A learner reading this tip could wrongly produce 예쁘는/높는. The modeled sentence is fine; only the rule statement needs tightening.",
+    "fix": {
+      "target": "요즘 재미있는 책을 읽어요.",
+      "english": "I'm reading an interesting book these days.",
+      "grammar": "있다·없다 adjectives take -는: 재미있는 책 (jaemiinneun chaek) = an interesting book; other adjectives take -(으)ㄴ (예쁜)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-1654",
+    "rating": 5,
+    "issue": "Comparative reads slightly incomplete for the intended 'more than'. 카메라보다 핸드폰으로 자주 찍어요 is grammatical, but with an explicit N보다 comparison natives usually add 더: 카메라보다 핸드폰으로 더 자주 찍어요. Given the English literally says 'more than', the missing 더 hurts reverse-translatability. The tip also only explains (으)로 and never the 보다 comparison the card is built on.",
+    "fix": {
+      "target": "카메라보다 핸드폰으로 더 자주 찍어요.",
+      "english": "I shoot with my phone more than my camera.",
+      "grammar": "더 (deo) = more: 카메라보다 더 자주 = more often than the camera; (으)로 marks the tool (핸드폰으로)."
+    },
+    "newTokens": {
+      "더": {
+        "en": "more",
+        "ipa": "[tʌ]",
+        "pos": "adverb"
+      }
+    }
+  },
+  {
+    "id": "ko-1685",
+    "rating": 5,
+    "issue": "Gloss precision: 이모티콘 in a KakaoTalk/texting context means the paid animated stickers Koreans send in chat, not the text-face 'emoticons' the English word denotes to most learners. The Korean sentence is perfectly natural; the English 'emoticons' mildly misrepresents what 카톡 이모티콘 actually are. 'Stickers' is the accurate rendering. The tip's '(and write)' aside for 쓰다 is also more confusing than helpful here.",
+    "fix": {
+      "target": "이모티콘을 자주 써요.",
+      "english": "I use stickers a lot.",
+      "grammar": "쓰다 (sseuda) = use (also 'write'): 이모티콘을 써요 = I use (KakaoTalk) stickers."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "ko-1692",
+    "rating": 5,
+    "issue": "Naturalness/aspect: the English 'I keep my phone on silent' describes a maintained state, but 무음으로 해요 is a bare present-habitual ('I set it to silent'). For the 'keep/leave it in a state' sense natives use the resultative -아/어 놓다: 무음으로 해 놓아요. As written it reads flat for the intended nuance and doesn't map back cleanly from the English.",
+    "fix": {
+      "target": "회의 중에는 휴대폰을 무음으로 해 놓아요.",
+      "english": "I keep my phone on silent in meetings.",
+      "grammar": "무음으로 해 놓아요 (hae noayo) — -아/어 놓다 marks a kept state: leave it on silent; N 중에 = during."
+    },
+    "newTokens": {
+      "해 놓아요": {
+        "en": "keep/leave (it) in a done state",
+        "ipa": "[hɛ.no.a.jo]",
+        "pos": "verb",
+        "lemma": "해 놓다"
+      }
+    }
+  },
+  {
+    "id": "ko-1796",
+    "rating": 5,
+    "issue": "Gloss mood mismatch. The Korean 휴대폰을 내려놓아요 is a first-person present-habitual statement of a household norm, but the English 'Phones down while we eat' reads as an imperative fragment. A learner shown that English would not reconstruct the habitual 내려놓아요. The Korean is natural; only the gloss should match its declarative mood.",
+    "fix": {
+      "target": "밥 먹을 때는 휴대폰을 내려놓아요.",
+      "english": "I put my phone down when I eat.",
+      "grammar": "-(으)ㄹ 때 = when: 먹을 때 (meogeul ttae) = when eating."
+    },
+    "newTokens": {}
+  }
+]

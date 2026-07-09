@@ -1,0 +1,57 @@
+[
+  {
+    "id": "el-1810",
+    "rating": 5,
+    "issue": "Calque: 'θα σε πάρω πίσω' mirrors English 'call back' and collides with παίρνω πίσω = take back / retract. Common in casual Athens speech but an anglicism; the native-cleaner verb is ξαναπαίρνω. Tip normalizes the calque by teaching 'take back'.",
+    "fix": {
+      "target": "Θα σε ξαναπάρω σε πέντε λεπτά.",
+      "english": null,
+      "grammar": "ξαναπαίρνω κάποιον (ksanapérno) = call someone back — cleaner than the anglicism 'παίρνω πίσω'."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-1811",
+    "rating": 5,
+    "issue": "Same 'παίρνω πίσω' = call-back calque in the imperative ('Πάρε με πίσω'); ambiguous with 'take me back'. Native-cleaner: ξαναπάρε με / πάρε με.",
+    "fix": {
+      "target": "Ξαναπάρε με όταν μπορέσεις.",
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-1833",
+    "rating": 5,
+    "issue": "Romanization drops the γχ nasal: ελέγχω is /eˈleɲço/ and the deck's own convention keeps the nasal (cf. el-1950 αγχώνομαι → 'anchónome'). 'elécho' is inconsistent and under-phonetic; should be 'eléncho'.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": "ελέγχω (eléncho) = to check."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-2020",
+    "rating": 4,
+    "issue": "Tip misidentifies the referent: 'σίγουρος/σίγουρη matches the speaker's gender' is wrong. On this 2nd-person card the adjective agrees with the SUBJECT — the person addressed (a woman), not the speaker. As written it tells a learner σίγουρη marks the speaker's gender, contradicting the card itself.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": "σίγουρος/σίγουρη (síguros/síguri) agrees with the person it describes — here 'you'."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-2047",
+    "rating": 5,
+    "issue": "'βοηθάει με το άγχος' reads as an English calque ('helps with'). Idiomatic Greek governs this with σε: βοηθάει στο άγχος (or κάνει καλό στο άγχος). The 'με' pattern is natural only with a person object (με βοηθάει με τα μαθηματικά).",
+    "fix": {
+      "target": "Ο ύπνος βοηθάει στο άγχος.",
+      "english": null,
+      "grammar": null
+    },
+    "newTokens": {}
+  }
+]

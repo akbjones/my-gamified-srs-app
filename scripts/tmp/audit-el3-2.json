@@ -1,0 +1,57 @@
+[
+  {
+    "id": "el-1556",
+    "rating": 5,
+    "issue": "Aspect tip mislabels the form. It calls θα βρέξει 'one-off future, perfective', but the sentence frames it with the durative 'όλο το Σαββατοκύριακο' (all weekend). A 'one-off' label sitting next to 'all weekend' contradicts itself; a weekend-long spell leans to imperfective θα βρέχει. The sentence itself is fine — the tip's generalization misleads on aspect.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": "θα βρέξει (tha vréksi) = it'll rain, a predicted spell; θα βρέχει (tha vréçi) stresses it keeps raining."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-1592",
+    "rating": 5,
+    "issue": "Romanization phonetic error: χ is palatal [ç] only before front vowels (e, i); before the consonant λ it is velar [x]. ομίχλη is [oˈmixli], so it must be romanized 'omíxli', not 'omíçli'. The deck otherwise keeps this distinction (Pásxa vs vroçí), so ç here teaches a wrong sound.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": "η ομίχλη (i omíxli) = the fog."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-1603",
+    "rating": 5,
+    "issue": "Romanization inconsistency: this deck spells ξ as 'ks' everywhere (tókso, vréksi, ríksi, ksaplóstra) and reserves 'x' for χ (Pásxa, efxómaste). Here άνοιξα is romanized 'ánixa' with x, which reads as άνιχα in the deck's own scheme. Should be 'ániksa'.",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": "Two finished events, two aorists: άνοιξα... άρχισε (ániksa... árçise)."
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-1729",
+    "rating": 4,
+    "issue": "Celebration-custom error. «Καλό Πάσχα» is a pre-Easter wish ('have a good Easter'), extended in the run-up and during Holy Week. Once Easter has come/passed, Greeks greet with «Χριστός Ανέστη» and «Χρόνια πολλά», never «Καλό Πάσχα» — teaching it as an after-Easter greeting is like saying 'Merry Christmas' on Dec 27. (el-1728 already correctly places «Καλή Ανάσταση» before Easter.)",
+    "fix": {
+      "target": "Το Πάσχα λέμε «Χριστός Ανέστη» και «Χρόνια πολλά».",
+      "english": "At Easter we say 'Christos Anesti' and 'chronia polla'.",
+      "grammar": null
+    },
+    "newTokens": {}
+  },
+  {
+    "id": "el-1773",
+    "rating": 5,
+    "issue": "Romanization missing the accent: εύχομαι is stressed on the first syllable [ˈefxome], so it must be 'éfxome'. The tip writes 'efxome' with no accent mark — accent position is phonemic (cf. el-1728, which correctly shows efxómaste).",
+    "fix": {
+      "target": null,
+      "english": null,
+      "grammar": "εύχομαι (éfxome) = I wish — takes σου for 'to you'."
+    },
+    "newTokens": {}
+  }
+]

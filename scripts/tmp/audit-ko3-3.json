@@ -1,0 +1,28 @@
+[
+  {
+    "id": "ko-1814",
+    "rating": 5,
+    "issue": "Psych-predicate: 아이들이 (3rd-person experiencer) + bare adjective 기뻐요 is nonstandard. Emotion adjectives (기쁘다/슬프다/무섭다) describe the speaker's own feeling; a 3rd-person subject's visible emotion takes the -아/어하다 verb: 기뻐해요. Heard colloquially, but prescriptively wrong for a teaching deck.",
+    "fix": {
+      "target": "아이들이 세뱃돈을 받고 정말 기뻐해요.",
+      "english": null,
+      "grammar": "3rd-person feelings take -어하다: 아이들이 기뻐해요 (gippeohaeyo = they're happy)."
+    },
+    "newTokens": {
+      "기뻐해요": { "en": "is happy, shows happiness (3rd person)", "ipa": "kip͈ʌhɛjo", "pos": "verb" }
+    }
+  },
+  {
+    "id": "ko-1917",
+    "rating": 5,
+    "issue": "Psych-predicate: 온 가족이 (3rd-person experiencer) + bare 기뻐요 is nonstandard. A 3rd-person subject's emotion should use the -어하다 verb 기뻐해요, not the plain adjective. Same issue as ko-1814.",
+    "fix": {
+      "target": "아기가 첫돌을 맞아서 온 가족이 기뻐해요.",
+      "english": null,
+      "grammar": "3rd-person feelings take -어하다: 온 가족이 기뻐해요 (gippeohaeyo = the family is happy)."
+    },
+    "newTokens": {
+      "기뻐해요": { "en": "is happy, shows happiness (3rd person)", "ipa": "kip͈ʌhɛjo", "pos": "verb" }
+    }
+  }
+]

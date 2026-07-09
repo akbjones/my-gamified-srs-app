@@ -30,7 +30,8 @@
  * directions.
  */
 import type { LearningGoal } from '../types';
-import rawSpanishStarter from './spanish-starter-deck.json';
+import rawSpanishDeck from './spanish/deck.json';
+import starterManifest from './spanish-starter-manifest.json';
 
 /** Theme tags used by starter decks (content themes, not goal audiences). */
 export type StarterTheme =
@@ -73,8 +74,32 @@ export interface StarterCard extends RawDeckCard {
   themes: StarterTheme[];
 }
 
+/** Curation manifest entry: which main-deck card, at what graded position. */
+interface StarterManifestEntry {
+  id: string;
+  starterSeq: number;
+  themes: StarterTheme[];
+}
+
 /**
  * The Spanish starter deck: 300 graded sentence cards bridging beginner
  * apps to native content, ordered easiest (starterSeq 1) to hardest (300).
+ *
+ * HYDRATED FROM THE LIVE MAIN DECK. The manifest (spanish-starter-manifest.json)
+ * stores only the curation — which main-deck card ids, their graded order, and
+ * themes. Card CONTENT (target, english, audio, tags, grammar) is read from the
+ * current main deck at load time, so any edit you make to a main-deck card flows
+ * into the starter deck automatically — no re-curation needed. A card removed
+ * from the main deck is dropped here rather than shown stale.
  */
-export const SPANISH_STARTER: StarterCard[] = rawSpanishStarter as StarterCard[];
+const _mainById = new Map<string, RawDeckCard>(
+  (rawSpanishDeck as RawDeckCard[]).map(c => [c.id, c]),
+);
+
+export const SPANISH_STARTER: StarterCard[] = (starterManifest as StarterManifestEntry[])
+  .map(m => {
+    const card = _mainById.get(m.id);
+    return card ? { ...card, starterSeq: m.starterSeq, themes: m.themes } : null;
+  })
+  .filter((c): c is StarterCard => c !== null)
+  .sort((a, b) => a.starterSeq - b.starterSeq);

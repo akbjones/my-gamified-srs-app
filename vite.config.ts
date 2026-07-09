@@ -111,7 +111,8 @@ export default defineConfig({
               // v10 = 2026-07-08 RU+TR full quality batch (652 cards)
               // v11 = 2026-07-09 Greek+Korean waves 2-4 (2,300→3,300 cards)
               // v12 = 2026-07-09 EL+KO wave-5 capstone (633 ea) + Hindi naturalness (153)
-              cacheName: 'audio-cache-v12',
+              // v13 = 2026-07-09 Russian naturalness rewrite (250 cards)
+              cacheName: 'audio-cache-v13',
               expiration: {
                 maxEntries: 500,
                 maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days

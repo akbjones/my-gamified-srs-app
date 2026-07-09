@@ -1,0 +1,38 @@
+# Netlify config — version-controlled so SPA routing + caching don't depend on
+# dashboard-only settings. The app is a Vite SPA with a vite-plugin-pwa service
+# worker; audio is served separately from Cloudflare R2 (not from Netlify).
+
+[build]
+  command = "npm run build:pages"
+  publish = "dist"
+
+# SPA fallback: unknown paths render the app (client-side "routing"). Real
+# files (hashed assets, sw.js, manifest) are served directly and take
+# precedence over this catch-all, so nothing is shadowed. force is left off.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Hashed build assets are content-addressed and immutable — cache hard.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# The service worker and HTML entry must always revalidate so PWA updates
+# reach users promptly (never hard-cache these).
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/manifest.webmanifest"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

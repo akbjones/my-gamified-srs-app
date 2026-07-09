@@ -23,10 +23,10 @@ export const migrateStorageKeys = (): void => {
     ['quest_achievements', achievementsKey('spanish')],
   ];
   for (const [oldKey, newKey] of oldKeys) {
-    const old = localStorage.getItem(oldKey);
-    if (old && !localStorage.getItem(newKey)) {
-      localStorage.setItem(newKey, old);
-      localStorage.removeItem(oldKey);
+    const old = safeGet(oldKey);
+    if (old && !safeGet(newKey)) {
+      safeSet(newKey, old);
+      safeRemove(oldKey);
     }
   }
 };
@@ -37,13 +37,31 @@ function safeParse<T>(json: string | null, fallback: T): T {
   try { return JSON.parse(json); } catch { return fallback; }
 }
 
+// Guarded localStorage. Storage APIs can THROW — disabled storage, private
+// mode (older Safari), or QuotaExceededError under heavy use. A storage
+// failure must never crash the app: reads degrade to null (callers fall back
+// to defaults), writes are silently dropped. This is why the whole app can
+// still run in a storage-blocked browser (just without persistence).
+const _ls: Storage | null = (() => {
+  try { return typeof window !== 'undefined' ? window.localStorage : null; } catch { return null; }
+})();
+function safeGet(key: string): string | null {
+  try { return _ls ? _ls.getItem(key) : null; } catch { return null; }
+}
+function safeSet(key: string, value: string): void {
+  try { if (_ls) _ls.setItem(key, value); } catch { /* quota / disabled — drop write */ }
+}
+function safeRemove(key: string): void {
+  try { if (_ls) _ls.removeItem(key); } catch { /* ignore */ }
+}
+
 // ─── Mastery ────────────────────────────────────────────────
 export const loadMasteryMap = (lang: Language): MasteryMap => {
-  return safeParse(localStorage.getItem(masteryKey(lang)), {});
+  return safeParse(safeGet(masteryKey(lang)), {});
 };
 
 export const saveMasteryMap = (map: MasteryMap, lang: Language): void => {
-  localStorage.setItem(masteryKey(lang), JSON.stringify(map));
+  safeSet(masteryKey(lang), JSON.stringify(map));
 };
 
 // ─── User Stats ─────────────────────────────────────────────
@@ -53,7 +71,7 @@ const DEFAULT_USER_STATS: UserStats = {
 };
 
 export const loadUserStats = (lang: Language): UserStats => {
-  const parsed = safeParse<Partial<UserStats> | null>(localStorage.getItem(statsKey(lang)), null);
+  const parsed = safeParse<Partial<UserStats> | null>(safeGet(statsKey(lang)), null);
   if (parsed) {
     return {
       streak: parsed.streak ?? 0,
@@ -69,12 +87,12 @@ export const loadUserStats = (lang: Language): UserStats => {
 };
 
 export const saveUserStats = (stats: UserStats, lang: Language): void => {
-  localStorage.setItem(statsKey(lang), JSON.stringify(stats));
+  safeSet(statsKey(lang), JSON.stringify(stats));
 };
 
 // ─── Daily Stats ────────────────────────────────────────────
 export const loadDailyStats = (lang: Language): DailyStats => {
-  const parsed = safeParse<DailyStats | null>(localStorage.getItem(dailyKey(lang)), null);
+  const parsed = safeParse<DailyStats | null>(safeGet(dailyKey(lang)), null);
   if (parsed && parsed.date === new Date().toDateString()) {
     return parsed;
   }
@@ -82,16 +100,16 @@ export const loadDailyStats = (lang: Language): DailyStats => {
 };
 
 export const saveDailyStats = (stats: DailyStats, lang: Language): void => {
-  localStorage.setItem(dailyKey(lang), JSON.stringify(stats));
+  safeSet(dailyKey(lang), JSON.stringify(stats));
 };
 
 // ─── Achievements ───────────────────────────────────────────
 export const loadUnlockedAchievements = (lang: Language): string[] => {
-  return safeParse(localStorage.getItem(achievementsKey(lang)), []);
+  return safeParse(safeGet(achievementsKey(lang)), []);
 };
 
 export const saveUnlockedAchievements = (ids: string[], lang: Language): void => {
-  localStorage.setItem(achievementsKey(lang), JSON.stringify(ids));
+  safeSet(achievementsKey(lang), JSON.stringify(ids));
 };
 
 // ─── Settings (global + per-language) ──────────────────────
@@ -137,7 +155,7 @@ const DEFAULT_SETTINGS: StudySettings = {
 };
 
 export const loadSettings = (): StudySettings => {
-  const parsed = safeParse<Partial<StudySettings> | null>(localStorage.getItem(SETTINGS_KEY), null);
+  const parsed = safeParse<Partial<StudySettings> | null>(safeGet(SETTINGS_KEY), null);
   if (parsed) {
     const settings = { ...DEFAULT_SETTINGS, ...parsed };
     // Migrate the legacy global goal: seed only the currently-selected
@@ -151,7 +169,7 @@ export const loadSettings = (): StudySettings => {
 };
 
 export const saveSettings = (settings: StudySettings): void => {
-  localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
+  safeSet(SETTINGS_KEY, JSON.stringify(settings));
 };
 
 /** Get the effective daily new-card limit for `lang`, falling back to the global default. */
@@ -194,15 +212,15 @@ export const setGoalFor = (settings: StudySettings, lang: Language, goal: Learni
 
 // ─── Placement ──────────────────────────────────────────────
 export const isPlacementComplete = (lang: Language): boolean => {
-  return localStorage.getItem(placementKey(lang)) === 'true';
+  return safeGet(placementKey(lang)) === 'true';
 };
 
 export const setPlacementComplete = (lang: Language): void => {
-  localStorage.setItem(placementKey(lang), 'true');
+  safeSet(placementKey(lang), 'true');
 };
 
 export const resetPlacement = (lang: Language): void => {
-  localStorage.removeItem(placementKey(lang));
+  safeRemove(placementKey(lang));
 };
 
 // ─── Progress State ─────────────────────────────────────────
@@ -212,31 +230,31 @@ const DEFAULT_PROGRESS: ProgressState = {
 };
 
 export const loadProgressState = (lang: Language): ProgressState => {
-  const parsed = safeParse<Partial<ProgressState> | null>(localStorage.getItem(progressKey(lang)), null);
+  const parsed = safeParse<Partial<ProgressState> | null>(safeGet(progressKey(lang)), null);
   if (parsed) return { ...DEFAULT_PROGRESS, ...parsed };
   return { ...DEFAULT_PROGRESS };
 };
 
 export const saveProgressState = (state: ProgressState, lang: Language): void => {
-  localStorage.setItem(progressKey(lang), JSON.stringify(state));
+  safeSet(progressKey(lang), JSON.stringify(state));
 };
 
 // ─── Vocabulary ────────────────────────────────────────────
 export const loadVocabMap = (lang: Language): VocabMap => {
-  return safeParse(localStorage.getItem(vocabKey(lang)), {});
+  return safeParse(safeGet(vocabKey(lang)), {});
 };
 
 export const saveVocabMap = (map: VocabMap, lang: Language): void => {
-  localStorage.setItem(vocabKey(lang), JSON.stringify(map));
+  safeSet(vocabKey(lang), JSON.stringify(map));
 };
 
 // ─── Favorites ─────────────────────────────────────────────
 export const loadFavorites = (lang: Language): FavoriteMap => {
-  return safeParse(localStorage.getItem(favoritesKey(lang)), {});
+  return safeParse(safeGet(favoritesKey(lang)), {});
 };
 
 export const saveFavorites = (map: FavoriteMap, lang: Language): void => {
-  localStorage.setItem(favoritesKey(lang), JSON.stringify(map));
+  safeSet(favoritesKey(lang), JSON.stringify(map));
 };
 
 /** Toggle whether `word` is favorited in `lang`. Returns the updated map. */
@@ -336,21 +354,22 @@ export const isEtymologyFavorited = (word: string, lang: Language): boolean => {
 // ─── Reset ──────────────────────────────────────────────────
 export const resetAll = (): void => {
   // Clear all language-specific keys
-  const langs: Language[] = ['spanish', 'italian', 'german', 'french', 'portuguese', 'dutch', 'swedish', 'welsh'];
+  // All supported languages — keep in sync with the Language union / DECK_MAP.
+  const langs: Language[] = ['spanish', 'italian', 'german', 'french', 'portuguese', 'dutch', 'swedish', 'welsh', 'hindi', 'turkish', 'russian', 'indonesian', 'greek', 'korean'];
   for (const lang of langs) {
-    localStorage.removeItem(masteryKey(lang));
-    localStorage.removeItem(statsKey(lang));
-    localStorage.removeItem(dailyKey(lang));
-    localStorage.removeItem(achievementsKey(lang));
-    localStorage.removeItem(placementKey(lang));
-    localStorage.removeItem(progressKey(lang));
-    localStorage.removeItem(vocabKey(lang));
-    localStorage.removeItem(favoritesKey(lang));
+    safeRemove(masteryKey(lang));
+    safeRemove(statsKey(lang));
+    safeRemove(dailyKey(lang));
+    safeRemove(achievementsKey(lang));
+    safeRemove(placementKey(lang));
+    safeRemove(progressKey(lang));
+    safeRemove(vocabKey(lang));
+    safeRemove(favoritesKey(lang));
   }
   // Clear old non-namespaced keys too (for migration)
-  localStorage.removeItem('quest_mastery');
-  localStorage.removeItem('quest_stats');
-  localStorage.removeItem('quest_daily');
-  localStorage.removeItem('quest_achievements');
-  localStorage.removeItem(SETTINGS_KEY);
+  safeRemove('quest_mastery');
+  safeRemove('quest_stats');
+  safeRemove('quest_daily');
+  safeRemove('quest_achievements');
+  safeRemove(SETTINGS_KEY);
 };

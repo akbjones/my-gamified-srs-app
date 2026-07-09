@@ -112,6 +112,8 @@ interface IrregularData {
   aorist?: Row;
   /** Perfective stem for θα-future (present endings). */
   futureStem?: string;
+  /** Aorist imperative [2sg, 2pl] (πάρε/πάρτε). */
+  imperative?: [string, string];
 }
 
 // Citation form (1sg) → rows [εγώ, εσύ, αυτός, εμείς, εσείς, αυτοί]
@@ -135,12 +137,14 @@ const IRREGULARS: Record<string, IrregularData> = {
     imperfect: ['έλεγα', 'έλεγες', 'έλεγε', 'λέγαμε', 'λέγατε', 'έλεγαν'],
     aorist: ['είπα', 'είπες', 'είπε', 'είπαμε', 'είπατε', 'είπαν'],
     futureStem: 'πω', // θα πω
+    imperative: ['πες', 'πείτε'],
   },
   'τρώω': {
     present: ['τρώω', 'τρως', 'τρώει', 'τρώμε', 'τρώτε', 'τρώνε'],
     imperfect: ['έτρωγα', 'έτρωγες', 'έτρωγε', 'τρώγαμε', 'τρώγατε', 'έτρωγαν'],
     aorist: ['έφαγα', 'έφαγες', 'έφαγε', 'φάγαμε', 'φάγατε', 'έφαγαν'],
     futureStem: 'φα', // θα φάω class — handled as explicit row below
+    imperative: ['φάε', 'φάτε'],
   },
   'ακούω': {
     present: ['ακούω', 'ακούς', 'ακούει', 'ακούμε', 'ακούτε', 'ακούνε'],
@@ -153,6 +157,7 @@ const IRREGULARS: Record<string, IrregularData> = {
     imperfect: ['έβλεπα', 'έβλεπες', 'έβλεπε', 'βλέπαμε', 'βλέπατε', 'έβλεπαν'],
     aorist: ['είδα', 'είδες', 'είδε', 'είδαμε', 'είδατε', 'είδαν'],
     futureStem: 'δ', // θα δω — explicit row below
+    imperative: ['δες', 'δείτε'],
   },
   'πίνω': {
     present: ['πίνω', 'πίνεις', 'πίνει', 'πίνουμε', 'πίνετε', 'πίνουν'],
@@ -171,12 +176,14 @@ const IRREGULARS: Record<string, IrregularData> = {
     imperfect: ['έπαιρνα', 'έπαιρνες', 'έπαιρνε', 'παίρναμε', 'παίρνατε', 'έπαιρναν'],
     aorist: ['πήρα', 'πήρες', 'πήρε', 'πήραμε', 'πήρατε', 'πήραν'],
     futureStem: 'παρ', // θα πάρω
+    imperative: ['πάρε', 'πάρτε'],
   },
   'έρχομαι': {
     present: ['έρχομαι', 'έρχεσαι', 'έρχεται', 'ερχόμαστε', 'έρχεστε', 'έρχονται'],
     imperfect: ['ερχόμουν', 'ερχόσουν', 'ερχόταν', 'ερχόμασταν', 'ερχόσασταν', 'έρχονταν'],
     aorist: ['ήρθα', 'ήρθες', 'ήρθε', 'ήρθαμε', 'ήρθατε', 'ήρθαν'],
     futureStem: 'ερθ', // θα έρθω
+    imperative: ['έλα', 'ελάτε'],
   },
   'φεύγω': {
     present: ['φεύγω', 'φεύγεις', 'φεύγει', 'φεύγουμε', 'φεύγετε', 'φεύγουν'],
@@ -236,6 +243,7 @@ const IRREGULARS: Record<string, IrregularData> = {
     imperfect: ['πήγαινα', 'πήγαινες', 'πήγαινε', 'πηγαίναμε', 'πηγαίνατε', 'πήγαιναν'],
     aorist: ['πήγα', 'πήγες', 'πήγε', 'πήγαμε', 'πήγατε', 'πήγαν'],
     futureStem: 'πάω',
+    imperative: ['πήγαινε', 'πηγαίνετε'],
   },
   'περιμένω': {
     present: ['περιμένω', 'περιμένεις', 'περιμένει', 'περιμένουμε', 'περιμένετε', 'περιμένουν'],
@@ -353,6 +361,11 @@ const FUTURE_ROWS: Record<string, Row> = {
 /** Present-tense endings on a perfective stem, with penult accent (γράψω). */
 function futureRow(stem: string): string[] {
   const bare = stripAccents(stem);
+  // Passive perfective stems (-θ/-στ) follow the B-contract pattern with
+  // final-syllable stress: θα κοιμηθώ, θα χρειαστώ — not θα κοιμήθω.
+  if (/(ηθ|στ)$/.test(bare)) {
+    return [`θα ${bare}ώ`, `θα ${bare}είς`, `θα ${bare}εί`, `θα ${bare}ούμε`, `θα ${bare}είτε`, `θα ${bare}ούν`];
+  }
   const forms = [`${bare}ω`, `${bare}εισ`, `${bare}ει`, `${bare}ουμε`, `${bare}ετε`, `${bare}ουν`];
   return forms.map((f, i) => {
     // 1sg-3sg/3pl: accent on the stem's last vowel (penult overall);
@@ -368,7 +381,14 @@ const TENSE = {
   imperfect: 'Παρατατικός (Imperfect)',
   aorist: 'Αόριστος (Past)',
   future: 'Μέλλοντας (Future)',
+  imperative: 'Προστακτική (Imperative)',
 } as const;
+
+/** Aorist imperative [2sg, 2pl]: γράψε/γράψτε, μίλησε/μιλήστε. */
+function imperativeRow(perfStem: string): string[] {
+  const bare = stripAccents(perfStem);
+  return [accentAt(`${bare}ε`, 2), accentAt(`${bare}τε`, 1)];
+}
 
 export function conjugate(lemma: string): ConjugationTable | null {
   if (!lemma) return null;
@@ -382,6 +402,7 @@ export function conjugate(lemma: string): ConjugationTable | null {
     const fr = FUTURE_ROWS[w];
     if (fr) tenses[TENSE.future] = [...fr];
     else if (irr.futureStem) tenses[TENSE.future] = futureRow(irr.futureStem);
+    if (irr.imperative) tenses[TENSE.imperative] = [...irr.imperative];
     return { infinitive: w, isReflexive: false, tenses };
   }
 
@@ -400,6 +421,7 @@ export function conjugate(lemma: string): ConjugationTable | null {
           [`${bare}ούσα`, `${bare}ούσες`, `${bare}ούσε`, `${bare}ούσαμε`, `${bare}ούσατε`, `${bare}ούσαν`][i]),
         [TENSE.aorist]: pastRow(perf),
         [TENSE.future]: futureRow(perf),
+        [TENSE.imperative]: imperativeRow(perf),
       },
     };
   }
@@ -418,6 +440,7 @@ export function conjugate(lemma: string): ConjugationTable | null {
         [TENSE.imperfect]: [`${bare}ούσα`, `${bare}ούσες`, `${bare}ούσε`, `${bare}ούσαμε`, `${bare}ούσατε`, `${bare}ούσαν`],
         [TENSE.aorist]: pastRow(perf),
         [TENSE.future]: futureRow(perf),
+        [TENSE.imperative]: imperativeRow(perf),
       },
     };
   }
@@ -436,6 +459,7 @@ export function conjugate(lemma: string): ConjugationTable | null {
     if (perf) {
       tenses[TENSE.aorist] = pastRow(perf);
       tenses[TENSE.future] = futureRow(perf);
+      tenses[TENSE.imperative] = imperativeRow(perf);
     }
     return { infinitive: w, isReflexive: false, tenses };
   }
@@ -499,6 +523,8 @@ const KNOWN_VERBS: string[] = [
   'ευχαριστώ', 'παρακαλώ', 'οδηγώ', 'τηλεφωνώ', 'συνεχίζω', 'αργώ',
   // deponent
   'ονομάζομαι', 'σκέφτομαι', 'χρειάζομαι', 'εργάζομαι', 'ετοιμάζομαι',
+  // wave-2 verbs
+  'ακριβαίνω', 'αξίζω', 'απλώνω', 'βαφτίζω', 'βιάζομαι', 'βρέχω', 'γεμίζω', 'γιορτάζω', 'γνωρίζω', 'διαλέγω', 'διαφωνώ', 'εφημερεύω', 'ζυγίζω', 'κανονίζω', 'καπνίζω', 'κατεβάζω', 'κερδίζω', 'κερνάω', 'κολυμπάω', 'κουράζομαι', 'κόβω', 'λείπω', 'λιώνω', 'μαλώνω', 'μεγαλώνω', 'μετακομίζω', 'μετανιώνω', 'μοιάζω', 'μοιράζομαι', 'μυρίζω', 'νευριάζω', 'νικάω', 'νοικιάζω', 'ξεκουράζομαι', 'ονειρεύομαι', 'παζαρεύω', 'περπατάω', 'πλένω', 'πονάω', 'ποτίζω', 'προλαβαίνω', 'προσπαθώ', 'σερβίρω', 'σηκώνω', 'σιδερώνω', 'σπουδάζω', 'στρίβω', 'συγχωρώ', 'συζητάω', 'συμφωνώ', 'συναντάω', 'συστήνω', 'σχολάω', 'φωνάζω', 'χάνω', 'χτυπάω', 'χωρίζω', 'ψήνω', 'ψαρεύω',
 ];
 
 let KNOWN_MAP: Map<string, string> | null = null;
@@ -537,15 +563,19 @@ function buildReverse(): Map<string, string> {
   return m;
 }
 
-/** Forward-verify: does `lemma` actually produce `form` somewhere? */
+/** Forward-verify: does `lemma` actually produce `form` somewhere?
+ * Accent-exact when the input carries accents (κανείς must NOT match
+ * κάνεις); accent-stripped only for unaccented learner input. */
 function produces(lemma: string, form: string): boolean {
   const t = conjugate(lemma);
   if (!t) return false;
-  const want = stripAccents(normalizeGreek(form));
+  const wantExact = normalizeGreek(form);
+  const accented = stripAccents(wantExact) !== wantExact;
+  const want = stripAccents(wantExact);
   for (const forms of Object.values(t.tenses)) {
     for (const f of forms) {
-      const got = stripAccents(normalizeGreek(f.replace(/^θα /, '')));
-      if (got === want) return true;
+      const gotExact = normalizeGreek(f.replace(/^θα /, ''));
+      if (accented ? gotExact === wantExact : stripAccents(gotExact) === want) return true;
     }
   }
   return false;
@@ -619,7 +649,9 @@ export function findInfinitive(form: string): string | null {
   const w = normalizeGreek(form.trim().replace(/^θα\s+/, ''));
   if (!REVERSE) REVERSE = buildReverse();
 
-  const hit = REVERSE.get(w) ?? REVERSE.get(stripAccents(w));
+  // stripped-index fallback only for unaccented learner input — an
+  // accented token must match accent-exactly (κανείς is not κάνεις)
+  const hit = REVERSE.get(w) ?? (stripAccents(w) === w ? REVERSE.get(stripAccents(w)) : undefined);
   if (hit) return hit;
 
   // Citation forms: known lemmas pass through (accent-tolerant)

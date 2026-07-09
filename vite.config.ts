@@ -109,7 +109,9 @@ export default defineConfig({
               // v8 = 2026-07-07 Hindi greetings register fix (5 cards)
               // v9 = 2026-07-08 RU+TR quality pilot (28 cards)
               // v10 = 2026-07-08 RU+TR full quality batch (652 cards)
-              cacheName: 'audio-cache-v11',
+              // v11 = 2026-07-09 Greek+Korean waves 2-4 (2,300→3,300 cards)
+              // v12 = 2026-07-09 EL+KO wave-5 capstone (633 ea) + Hindi naturalness (153)
+              cacheName: 'audio-cache-v12',
               expiration: {
                 maxEntries: 500,
                 maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days

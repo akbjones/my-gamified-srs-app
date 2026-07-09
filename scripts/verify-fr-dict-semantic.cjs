@@ -18,7 +18,7 @@ const { postProcess, PostProcessStats } = require('./post-process-google.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const DICT_PATH = path.join(ROOT, 'src', 'data', 'dictionary', 'fr.ts');
-const API_KEY = 'AIzaSyBImkCNYcI1m9mloUNcYcDN2L5dQZwADzI';
+const API_KEY = process.env.GOOGLE_TTS_KEY;
 
 // ── French function words to skip ──────────────────────────────
 const FR_FUNCTION_WORDS = new Set([

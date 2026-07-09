@@ -8,7 +8,7 @@
  */
 
 const https = require('https');
-const API_KEY = 'AIzaSyBImkCNYcI1m9mloUNcYcDN2L5dQZwADzI';
+const API_KEY = process.env.GOOGLE_TTS_KEY;
 
 // Common English words – if Google returns something NOT in this set
 // and it's short (<6 chars), it might be truncated

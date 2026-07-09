@@ -19,7 +19,7 @@ const { postProcess, PostProcessStats } = require('./post-process-google.cjs');
 
 const ROOT = path.join(__dirname, '..');
 const OUTPUT_DIR = path.join(ROOT, 'scripts', 'output');
-const API_KEY = 'AIzaSyBImkCNYcI1m9mloUNcYcDN2L5dQZwADzI';
+const API_KEY = process.env.GOOGLE_TTS_KEY;
 
 // ─── Function word table (common Hindi → English) ─────────────────────────
 

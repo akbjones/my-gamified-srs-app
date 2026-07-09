@@ -20,7 +20,7 @@ const https = require('https');
 const { translateBatch, tokenize, validateAndEnrich } = require('./rebuild-utils.cjs');
 const { postProcess, PostProcessStats } = require('./post-process-google.cjs');
 
-const API_KEY = 'AIzaSyBImkCNYcI1m9mloUNcYcDN2L5dQZwADzI';
+const API_KEY = process.env.GOOGLE_TTS_KEY;
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 

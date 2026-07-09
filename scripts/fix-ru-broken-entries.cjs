@@ -11,7 +11,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const API_KEY = 'AIzaSyBImkCNYcI1m9mloUNcYcDN2L5dQZwADzI';
+const API_KEY = process.env.GOOGLE_TTS_KEY;
 const DICT_PATH = path.join(__dirname, '..', 'src', 'data', 'dictionary', 'ru.ts');
 
 let content = fs.readFileSync(DICT_PATH, 'utf-8');

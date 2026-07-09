@@ -10,7 +10,7 @@ const https = require('https');
 
 const ROOT = path.join(__dirname, '..');
 const DICT_PATH = path.join(ROOT, 'src', 'data', 'dictionary', 'pt.ts');
-const API_KEY = 'AIzaSyBImkCNYcI1m9mloUNcYcDN2L5dQZwADzI';
+const API_KEY = process.env.GOOGLE_TTS_KEY;
 
 // ── Function words to skip (hand-verified pronouns, articles, prepositions, conjunctions, etc.) ──
 const FUNCTION_WORDS = new Set([

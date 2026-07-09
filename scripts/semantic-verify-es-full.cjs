@@ -11,7 +11,7 @@ const https = require('https');
 
 const ROOT = path.join(__dirname, '..');
 const DICT_PATH = path.join(ROOT, 'src', 'data', 'dictionary', 'es.ts');
-const API_KEY = 'AIzaSyBImkCNYcI1m9mloUNcYcDN2L5dQZwADzI';
+const API_KEY = process.env.GOOGLE_TTS_KEY;
 const BATCH_SIZE = 80;
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }

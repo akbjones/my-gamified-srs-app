@@ -13,7 +13,7 @@ const ROOT = path.resolve(__dirname, '..');
 const DICT_PATH = path.join(ROOT, 'src/data/dictionary/hi.ts');
 const DECK_PATH = path.join(ROOT, 'src/data/hindi/deck.json');
 const OUT_DIR = path.join(ROOT, 'scripts/output');
-const API_KEY = 'AIzaSyBImkCNYcI1m9mloUNcYcDN2L5dQZwADzI';
+const API_KEY = process.env.GOOGLE_TTS_KEY;
 
 // ── Step 1: Hand-verified function words ─────────────────────
 const FUNCTION_WORDS = {

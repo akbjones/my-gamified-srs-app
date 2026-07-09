@@ -16,7 +16,7 @@ const DICT_DIR = path.join(BASE, 'src/data/dictionary');
 const OUT_DIR = path.join(BASE, 'scripts/output');
 const { lemmatize: extLemmatize } = require('./english-lemmatizer.cjs');
 
-const API_KEY = 'AIzaSyBImkCNYcI1m9mloUNcYcDN2L5dQZwADzI';
+const API_KEY = process.env.GOOGLE_TTS_KEY;
 
 const LANGUAGES = ['es', 'it', 'fr', 'pt', 'de', 'nl', 'sv', 'cy', 'hi', 'tr', 'ru'];
 const LANG_CODES = {

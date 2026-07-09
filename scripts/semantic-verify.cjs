@@ -10,7 +10,7 @@ const path = require('path');
 const https = require('https');
 
 const DICT_PATH = path.join(__dirname, '..', 'src', 'data', 'dictionary', 'pt.ts');
-const API_KEY = 'AIzaSyBImkCNYcI1m9mloUNcYcDN2L5dQZwADzI';
+const API_KEY = process.env.GOOGLE_TTS_KEY;
 const BATCH_SIZE = 80;
 const DRY_RUN = process.argv.includes('--dry-run');
 

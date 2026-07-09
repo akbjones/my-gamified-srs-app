@@ -16,7 +16,7 @@ const BASE = path.resolve(__dirname, '..');
 const DICT_DIR = path.join(BASE, 'src/data/dictionary');
 const OUT_DIR = path.join(BASE, 'scripts/output');
 
-const API_KEY = 'AIzaSyBImkCNYcI1m9mloUNcYcDN2L5dQZwADzI';
+const API_KEY = process.env.GOOGLE_TTS_KEY;
 const DRY_RUN = process.argv.includes('--dry-run');
 const BATCH_SIZE = 80;
 

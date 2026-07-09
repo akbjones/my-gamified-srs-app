@@ -5,7 +5,7 @@ const https = require('https');
 const { postProcess, PostProcessStats } = require('./post-process-google.cjs');
 
 const ROOT = path.join(__dirname, '..');
-const API_KEY = 'AIzaSyBImkCNYcI1m9mloUNcYcDN2L5dQZwADzI';
+const API_KEY = process.env.GOOGLE_TTS_KEY;
 const DICT_PATH = path.join(ROOT, 'src/data/dictionary/es.ts');
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }

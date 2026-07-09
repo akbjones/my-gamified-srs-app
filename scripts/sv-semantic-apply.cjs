@@ -7,7 +7,7 @@ const fs = require('fs');
 const https = require('https');
 
 const DICT_PATH = '/Users/antoinevj/Documents/GitHub/my-gamified-srs-app/.claude/worktrees/agitated-boyd/src/data/dictionary/sv.ts';
-const API_KEY = 'AIzaSyBImkCNYcI1m9mloUNcYcDN2L5dQZwADzI';
+const API_KEY = process.env.GOOGLE_TTS_KEY;
 
 function translateBatch(words, sourceLang, targetLang) {
   return new Promise((resolve, reject) => {

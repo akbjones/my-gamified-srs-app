@@ -24,7 +24,7 @@ const { postProcess, PostProcessStats } = require('./post-process-google.cjs');
 const ROOT = path.resolve(__dirname, '..');
 const DICT_PATH = path.join(ROOT, 'src/data/dictionary/tr.ts');
 const DECK_PATH = path.join(ROOT, 'src/data/turkish/deck.json');
-const API_KEY = 'AIzaSyBImkCNYcI1m9mloUNcYcDN2L5dQZwADzI';
+const API_KEY = process.env.GOOGLE_TTS_KEY;
 
 // ── Turkish function word table (~100 entries) ──────────────────
 const FUNCTION_WORDS = {

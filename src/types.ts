@@ -18,6 +18,13 @@ export interface QuestCard {
   failCount?: number;    // number of AGAIN ratings (for leech detection)
   isLeech?: boolean;     // flagged when failCount >= 5
   isSuspended?: boolean; // user can suspend leeches
+  // ── FSRS memory state (persisted; supersedes the legacy SM-2 ease/step) ──
+  stability?: number;    // FSRS: memory half-life, in days
+  difficulty?: number;   // FSRS: intrinsic difficulty, 1..10
+  fsrsState?: number;    // FSRS State enum: 0=New 1=Learning 2=Review 3=Relearning
+  reps?: number;         // total reviews
+  lapses?: number;       // total AGAIN lapses (drives the leech flag)
+  lastReview?: number;   // ms timestamp of the last review
   priority?: 1 | 2 | 3;  // 1=practical (show first), 2=useful, 3=specialized
 }
 

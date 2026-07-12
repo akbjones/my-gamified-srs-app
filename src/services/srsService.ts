@@ -1,11 +1,66 @@
 import { QuestCard, SessionState, MasteryMap, Language } from '../types';
 import { saveMasteryMap } from './storageService';
+import { fsrs, generatorParameters, createEmptyCard, Rating, State, type Card as FsrsCard, type Grade } from 'ts-fsrs';
 
 const MINUTE = 60 * 1000;
 const DAY = 24 * 60 * 60 * 1000;
 const MAX_INTERVAL = 365 * DAY; // Cap at 1 year
 const RETENTION_THRESHOLD = 21 * DAY; // 21 days = "retained"
 const LEECH_THRESHOLD = 5; // AGAIN count to flag as leech
+
+// ── FSRS scheduler ───────────────────────────────────────────
+// Modern spaced repetition (Anki's current default). Models each card's memory
+// as stability + difficulty and schedules the next review for when predicted
+// recall drops to `request_retention`. Replaces the old SM-2 ease math; the
+// existing 4-button UI (Again/Hard/Good/Easy) maps straight onto FSRS ratings.
+const scheduler = fsrs(generatorParameters({ request_retention: 0.9, enable_fuzz: true }));
+
+const RATING_MAP: Record<'AGAIN' | 'HARD' | 'GOOD' | 'EASY', Grade> = {
+  AGAIN: Rating.Again, HARD: Rating.Hard, GOOD: Rating.Good, EASY: Rating.Easy,
+};
+
+// Seed FSRS difficulty from a legacy SM-2 ease (2.5 → mid 5; lower ease = harder).
+function easeToDifficulty(ease: number | undefined): number {
+  return Math.min(10, Math.max(1, 5 + (2.5 - (ease ?? 2.5)) * 4));
+}
+
+// Reconstruct the FSRS memory card from stored state. Migrates legacy SM-2 users
+// so their existing interval is preserved (no schedule jump on first FSRS review).
+function toFsrsCard(card: QuestCard, now: Date): FsrsCard {
+  const base = createEmptyCard(now); // supplies all required fields (incl. learning_steps)
+  // Already on FSRS — restore the saved memory state.
+  if (card.stability != null && card.difficulty != null && card.fsrsState != null) {
+    return {
+      ...base,
+      due: new Date(card.dueDate ?? now.getTime()),
+      stability: card.stability,
+      difficulty: card.difficulty,
+      scheduled_days: Math.max(0, Math.round((card.interval ?? 0) / DAY)),
+      reps: card.reps ?? 0,
+      lapses: card.lapses ?? card.failCount ?? 0,
+      state: card.fsrsState as State,
+      last_review: card.lastReview ? new Date(card.lastReview) : base.last_review,
+    };
+  }
+  // Migrate a graduated SM-2 card: its current interval ≈ memory stability.
+  if ((card.mastery ?? 0) === 2 && (card.interval ?? 0) >= DAY) {
+    const days = Math.max(1, Math.round((card.interval as number) / DAY));
+    return {
+      ...base,
+      due: new Date(card.dueDate ?? now.getTime()),
+      stability: days,
+      difficulty: easeToDifficulty(card.ease),
+      elapsed_days: days,
+      scheduled_days: days,
+      reps: Math.max(1, card.reps ?? 1),
+      lapses: card.failCount ?? 0,
+      state: State.Review,
+      last_review: new Date(now.getTime() - days * DAY),
+    };
+  }
+  // New / early-learning card → a fresh FSRS card.
+  return base;
+}
 
 /** Retention: % of cards with interval >= 21 days (truly known) */
 export const getRetention = (cards: QuestCard[]): number => {
@@ -39,6 +94,13 @@ export const saveCardProgress = (card: QuestCard, lang: Language): MasteryMap =>
       failCount: card.failCount,
       isLeech: card.isLeech,
       isSuspended: card.isSuspended,
+      // FSRS memory state — the real scheduling source of truth.
+      stability: card.stability,
+      difficulty: card.difficulty,
+      fsrsState: card.fsrsState,
+      reps: card.reps,
+      lapses: card.lapses,
+      lastReview: card.lastReview,
     },
   };
   saveMasteryMap(newMap, lang);
@@ -151,89 +213,41 @@ export const handleAnswerLogic = (
 ): AnswerResult => {
   const newQueue = [...session.queue];
   let { currentIndex, newCardsSeen } = session;
-  const now = Date.now();
+  const nowMs = Date.now();
+  const now = new Date(nowMs);
   const updatedCard = { ...currentCard };
+  const wasNew = (updatedCard.mastery ?? 0) === 0;
 
-  if (updatedCard.step === undefined) updatedCard.step = 0;
-  if (updatedCard.interval == null) updatedCard.interval = 0;
-  if (updatedCard.ease == null || updatedCard.ease === 0) updatedCard.ease = 2.5;
+  // FSRS: compute the next memory state + due date for this rating.
+  const { card: next } = scheduler.next(toFsrsCard(updatedCard, now), now, RATING_MAP[rating]);
 
-  const wasNew = updatedCard.mastery === 0;
+  updatedCard.stability = next.stability;
+  updatedCard.difficulty = next.difficulty;
+  updatedCard.fsrsState = next.state;
+  updatedCard.reps = next.reps;
+  updatedCard.lapses = next.lapses;
+  updatedCard.lastReview = nowMs;
+  updatedCard.dueDate = next.due.getTime();
+  updatedCard.interval = Math.min(MAX_INTERVAL, Math.max(0, next.due.getTime() - nowMs));
+  // Keep the app-level fields the UI + queue read, derived from FSRS state.
+  updatedCard.mastery = next.state === State.Review ? 2 : next.state === State.New ? 0 : 1;
+  updatedCard.step = next.state === State.Review ? 0 : 1;
+  updatedCard.failCount = next.lapses;
+  if (next.lapses >= LEECH_THRESHOLD) updatedCard.isLeech = true;
 
-  if (rating === 'AGAIN') {
-    // Leech detection: increment fail count
-    updatedCard.failCount = (updatedCard.failCount || 0) + 1;
-    if (updatedCard.failCount >= LEECH_THRESHOLD) {
-      updatedCard.isLeech = true;
-    }
+  if (wasNew) newCardsSeen = (newCardsSeen || 0) + 1;
 
-    if (wasNew) newCardsSeen = (newCardsSeen || 0) + 1;
-    updatedCard.mastery = 1;
-    updatedCard.step = 0;
-    updatedCard.interval = 1 * MINUTE;
-    updatedCard.dueDate = now + updatedCard.interval;
-    // SM-2: reduce ease on failure (min 1.3)
-    updatedCard.ease = Math.max(1.3, updatedCard.ease - 0.20);
-    reinsertCard(newQueue, currentIndex, updatedCard, REINSERT_OFFSETS.AGAIN);
-    saveProgress(updatedCard);
-    currentIndex++;
-  } else if (rating === 'HARD') {
-    if (updatedCard.mastery < 2) {
-      if (wasNew) newCardsSeen = (newCardsSeen || 0) + 1;
-      updatedCard.mastery = 1; // promote new → learning
-      updatedCard.interval = 6 * MINUTE;
-      updatedCard.dueDate = now + updatedCard.interval;
-      reinsertCard(newQueue, currentIndex, updatedCard, REINSERT_OFFSETS.LEARNING_HARD);
-    } else {
-      updatedCard.interval = Math.min(MAX_INTERVAL, Math.max(1 * DAY, Math.round((updatedCard.interval || 0) * 1.2)));
-      updatedCard.dueDate = now + updatedCard.interval;
-      updatedCard.ease = Math.max(1.3, updatedCard.ease - 0.15);
-    }
-    saveProgress(updatedCard);
-    currentIndex++;
-  } else if (rating === 'GOOD') {
-    if (updatedCard.mastery === 0) {
-      updatedCard.mastery = 1;
-      updatedCard.step = 1;
-      updatedCard.interval = 10 * MINUTE;
-      updatedCard.dueDate = now + updatedCard.interval;
-      reinsertCard(newQueue, currentIndex, updatedCard, REINSERT_OFFSETS.LEARNING_GOOD);
-      newCardsSeen = (newCardsSeen || 0) + 1;
-    } else if (updatedCard.mastery === 1) {
-      if (updatedCard.step === 0) {
-        updatedCard.step = 1;
-        updatedCard.interval = 10 * MINUTE;
-        updatedCard.dueDate = now + updatedCard.interval;
-        reinsertCard(newQueue, currentIndex, updatedCard, REINSERT_OFFSETS.LEARNING_GOOD);
-      } else {
-        // Graduate
-        updatedCard.mastery = 2;
-        updatedCard.step = 0;
-        updatedCard.interval = 1 * DAY;
-        updatedCard.dueDate = now + updatedCard.interval;
-      }
-    } else {
-      // Review – cap at MAX_INTERVAL
-      updatedCard.interval = Math.min(MAX_INTERVAL, Math.round((updatedCard.interval || 1 * DAY) * updatedCard.ease));
-      updatedCard.dueDate = now + updatedCard.interval;
-    }
-    saveProgress(updatedCard);
-    currentIndex++;
-  } else if (rating === 'EASY') {
-    if (wasNew) newCardsSeen = (newCardsSeen || 0) + 1;
-    // For graduated cards: multiply interval by ease * 1.3 easy-bonus (don't regress to 4d)
-    if (updatedCard.mastery === 2) {
-      updatedCard.interval = Math.min(MAX_INTERVAL, Math.round((updatedCard.interval || 1 * DAY) * updatedCard.ease * 1.3));
-    } else {
-      updatedCard.interval = 4 * DAY;
-    }
-    updatedCard.mastery = 2;
-    updatedCard.step = 0;
-    updatedCard.dueDate = now + updatedCard.interval;
-    updatedCard.ease = updatedCard.ease + 0.15;
-    saveProgress(updatedCard);
-    currentIndex++;
+  // In-session re-show: a sub-day learning/relearning step gets drilled again
+  // within this session (same feel as before, now driven by FSRS short steps).
+  if (updatedCard.interval < DAY && next.state !== State.Review) {
+    const offsets = rating === 'AGAIN' ? REINSERT_OFFSETS.AGAIN
+      : rating === 'HARD' ? REINSERT_OFFSETS.LEARNING_HARD
+        : REINSERT_OFFSETS.LEARNING_GOOD;
+    reinsertCard(newQueue, currentIndex, updatedCard, offsets);
   }
+
+  saveProgress(updatedCard);
+  currentIndex++;
 
   return {
     sessionUpdates: {

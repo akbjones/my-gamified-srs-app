@@ -182,6 +182,14 @@ const buildDeck = (
       failCount: (saved?.failCount as number) ?? 0,
       isLeech: (saved?.isLeech as boolean) ?? false,
       isSuspended: (saved?.isSuspended as boolean) ?? false,
+      // FSRS memory state (undefined for cards not yet reviewed under FSRS —
+      // the engine then migrates them from interval/ease on first review).
+      stability: (saved?.stability as number) ?? undefined,
+      difficulty: (saved?.difficulty as number) ?? undefined,
+      fsrsState: (saved?.fsrsState as number) ?? undefined,
+      reps: (saved?.reps as number) ?? undefined,
+      lapses: (saved?.lapses as number) ?? undefined,
+      lastReview: (saved?.lastReview as number) ?? undefined,
       priority: rawCard.priority ?? 999999,
     });
   }

@@ -258,9 +258,6 @@ const App: React.FC = () => {
   // Placement test offer – shown as a modal interstitial the first time
   // the user taps Study in a language they haven't placed in yet.
   const [showPlacementPrompt, setShowPlacementPrompt] = useState(false);
-  // Pre-study confirmation: tapping Study opens this so the user chooses how
-  // many new cards to add (or reviews only) instead of silently getting ~10.
-  const [showStudyPrompt, setShowStudyPrompt] = useState(false);
   const langDropdownRef = useRef<HTMLDivElement>(null);
   const backupInputRef = useRef<HTMLInputElement>(null);
   // Undo stack for going back to previous cards
@@ -418,24 +415,16 @@ const App: React.FC = () => {
       c => c.mastery > 0 && (c.dueDate ? c.dueDate <= now : true)
     );
 
-    // New cards: from the current frontier node, excluding suspended
-    // When "Study More" is clicked, use the session card limit setting
-    const sessionLimit = getSessionLimitFor(settings, lang);
+    // New cards come from the current frontier node (graded progression).
+    // Model A: a normal Study press = due reviews + the WHOLE remaining daily
+    // new-card allowance in one go (no per-session sub-cap, no prompt). An
+    // explicit numeric count (the "add more" panels) means EXACTLY that many —
+    // including 0 — and is allowed to exceed the daily allowance.
     const dailyLimitRemaining = getDailyLimitFor(settings, lang) - dailyStats.newCardsCount;
     const explicitCount = typeof studyMore === 'number';
-    const studyMoreCount = explicitCount ? (studyMore as number) : (studyMore ? sessionLimit : 0);
-    const baseNewLimit = studyMore ? Math.max(studyMoreCount, dailyLimitRemaining) : Math.max(0, dailyLimitRemaining);
-    // Cap new cards at session limit when no reviews exist – UNLESS the user
-    // explicitly typed a count in the "Want more? Study X extra cards" input.
-    // Previous bug: typing 20 was clipped to 10 because the cap fired anyway.
-    // An explicit numeric count (pre-study screen or the "add N" panels)
-    // means EXACTLY that many new cards — including 0 for a reviews-only
-    // session. Non-explicit starts keep the auto-session heuristics.
     const newLimit = explicitCount
-      ? studyMoreCount
-      : reviews.length === 0
-        ? Math.min(baseNewLimit, sessionLimit)
-        : baseNewLimit;
+      ? (studyMore as number)
+      : Math.max(0, dailyLimitRemaining);
     // Source pool for new cards: stay inside the current topic for normal
     // sessions, but expand to every unlocked card when the user explicitly
     // typed a bonus count. Otherwise typing 40 only returns whatever's left
@@ -904,52 +893,15 @@ const App: React.FC = () => {
             </div>
           )}
 
-          {/* Pre-study screen – tapping Study opens this so adding new cards is
-              a deliberate choice, and due reviews can be done on their own. */}
-          {showStudyPrompt && (
-            <div
-              className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-[var(--overlay)] backdrop-blur-sm animate-fade-in"
-              onClick={() => setShowStudyPrompt(false)}
-            >
-              <div
-                className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-6 max-w-sm w-full shadow-2xl"
-                onClick={e => e.stopPropagation()}
-              >
-                <h3 className="text-lg font-bold text-[var(--text-primary)] text-center mb-1.5">Ready to study?</h3>
-                <p className="text-sm text-[var(--text-muted)] text-center mb-4">
-                  {reviewsDue > 0
-                    ? `${reviewsDue} card${reviewsDue === 1 ? '' : 's'} due for review — choose how many new cards to add too.`
-                    : 'Choose how many new cards to add to today’s session.'}
-                </p>
-                <AddMoreCardsPanel
-                  variant="home"
-                  onStart={(count) => { setShowStudyPrompt(false); handleStartSession(count); }}
-                />
-                {reviewsDue > 0 && (
-                  <button
-                    onClick={() => { setShowStudyPrompt(false); handleStartSession(0); }}
-                    className="w-full mt-2 py-2.5 rounded-xl text-sm font-bold bg-[var(--bg-inset)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] active:scale-95 transition"
-                  >
-                    Review only (no new cards)
-                  </button>
-                )}
-                <button
-                  onClick={() => setShowStudyPrompt(false)}
-                  className="w-full mt-2 py-2 text-xs font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
-                >
-                  Cancel
-                </button>
-              </div>
-            </div>
-          )}
-
           {/* Study button – primary action, generous size so it dominates the home view */}
           <button
             onClick={() => {
               if (!isPlacementComplete(lang)) {
                 setShowPlacementPrompt(true);
               } else {
-                setShowStudyPrompt(true);
+                // Model A: go straight into studying — due reviews + today's
+                // remaining new-card allowance. No pre-study prompt.
+                handleStartSession();
               }
             }}
             disabled={!hasCards}
@@ -975,10 +927,16 @@ const App: React.FC = () => {
               of a study session — bringing it up-front so the user isn't
               stuck at "All caught up" when they still want to learn. */}
           {!hasCards && isPlacementComplete(lang) && (
-            <AddMoreCardsPanel
-              variant="home"
-              onStart={(count) => handleStartSession(count)}
-            />
+            <>
+              <AddMoreCardsPanel
+                variant="home"
+                defaultCount={getDailyLimitFor(settings, lang)}
+                onStart={(count) => handleStartSession(count)}
+              />
+              <p className="text-[11px] text-center text-[var(--text-muted)] -mt-1 mb-2">
+                That’s today’s {getDailyLimitFor(settings, lang)} new cards done — add more above, or change the daily amount in Settings.
+              </p>
+            </>
           )}
 
           {/* Bonus session – explicit "study N extra" affordance. Always visible

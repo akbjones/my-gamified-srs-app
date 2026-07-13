@@ -110,7 +110,11 @@ export default defineConfig({
         // Runtime cache audio files on demand
         runtimeCaching: [
           {
-            urlPattern: /\/quest-audio\/.*\.mp3$/,
+            // NOTE the (\?.*)?$ — audio URLs carry a ?v=N cache-buster, so a
+            // bare `.mp3$` never matched and audio was never SW-cached (every
+            // card depended on one live request; a blip = silence). Now a
+            // once-heard card is served from the SW cache through a later blip.
+            urlPattern: /\/quest-audio\/.*\.mp3(\?.*)?$/,
             // StaleWhileRevalidate: serve cached audio instantly, then refresh
             // from network in the background. Two reasons we switched off
             // CacheFirst: (1) when a user studies on multiple devices, a PC

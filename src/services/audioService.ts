@@ -15,7 +15,10 @@ const ttsCache = new Map<string, string>(); // key → objectURL
 // instantly on card change instead of waiting for a fresh fetch.
 // Key: audio filename (e.g. "es-37.mp3"); value: { blob URL, mtime touch }.
 // LRU-ish bounded — when full, drop the oldest non-pending entry.
-const MP3_CACHE_MAX = 24;
+// Bigger than the preload pressure (session warms 12 + current&plus;2 per card)
+// so we don't churn — the old 24 evicted after ~8 cards, sometimes revoking a
+// blob URL that was still playing (a cause of audio "disappearing" mid-session).
+const MP3_CACHE_MAX = 64;
 type Mp3CacheEntry = { url: string; touched: number };
 const mp3Cache = new Map<string, Mp3CacheEntry>();
 // In-flight fetches to dedupe concurrent preload+play requests
@@ -45,11 +48,16 @@ function fetchAndCacheMp3(audioFile: string): Promise<string> {
     if (!r.ok) throw new Error(`fetch ${r.status} for ${audioFile}`);
     const blob = await r.blob();
     const objectUrl = URL.createObjectURL(blob);
-    // Evict oldest if full
+    // Evict the oldest IDLE entry when full. Never revoke the URL that's
+    // currently playing (currentAudio.src) or one being fetched right now —
+    // revoking an in-use blob URL is what made audio cut out mid-session.
     if (mp3Cache.size >= MP3_CACHE_MAX) {
+      const playingUrl = currentAudio?.src;
       let oldestKey: string | null = null;
       let oldestTime = Infinity;
       for (const [k, v] of mp3Cache) {
+        if (v.url === playingUrl) continue;   // in use — do not evict
+        if (mp3InFlight.has(k)) continue;      // being fetched — do not evict
         if (v.touched < oldestTime) {
           oldestTime = v.touched;
           oldestKey = k;
@@ -60,6 +68,8 @@ function fetchAndCacheMp3(audioFile: string): Promise<string> {
         if (dropped) URL.revokeObjectURL(dropped.url);
         mp3Cache.delete(oldestKey);
       }
+      // If every entry was pinned, we simply skip eviction this round and the
+      // cache grows slightly past MP3_CACHE_MAX until an entry frees up.
     }
     mp3Cache.set(audioFile, { url: objectUrl, touched: Date.now() });
     return objectUrl;
@@ -249,7 +259,9 @@ export const playCardAudio = async (
   googleApiKey?: string,
   opts?: { allowBrowserTts?: boolean },
 ): Promise<void> => {
-  const allowBrowserTts = opts?.allowBrowserTts ?? true;
+  // opts.allowBrowserTts is retained for API compat but no longer suppresses
+  // the audible fallback — see step 3. Silence during study was the bug.
+  void opts;
   stopAudio();
 
   // 1. Try pre-recorded MP3 first.
@@ -351,14 +363,13 @@ export const playCardAudio = async (
     }
   }
 
-  // 3. Browser TTS fallback. ListenMode wants it (silence would zip past
-  // cards); study surfaces do NOT — the system voice differs from the
-  // canonical one, which users experience as "several voices". For them
-  // we stay silent, warm the cache in the background, and the next tap
-  // or appearance plays the real recording.
-  if (allowBrowserTts) {
-    await playBrowserTts(targetText, lang, speed);
-  } else if (audioFile) {
-    setTimeout(() => preloadCardAudio(audioFile), 2000);
-  }
+  // 3. Audible fallback. The pre-recorded MP3 genuinely failed (now rare: the
+  // cache no longer revokes in-use URLs and the service worker caches audio).
+  // Speak the sentence with the system voice rather than leaving the learner
+  // in silence — hearing the sentence matters more than voice consistency,
+  // and this only fires on a real failure, not a slow-but-successful load.
+  // Warm the real recording in the background so the canonical voice returns
+  // on the next play of this card.
+  if (audioFile) setTimeout(() => preloadCardAudio(audioFile), 1500);
+  await playBrowserTts(targetText, lang, speed);
 };

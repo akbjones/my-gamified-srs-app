@@ -41,9 +41,11 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
   const [idx, setIdx] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [showTranslation, setShowTranslation] = useState(false);
-  // Avoid re-triggering playback on every render – only fire when the
-  // playback state actually changes.
-  const playingForCardId = useRef<string | null>(null);
+  // Monotonic generation, bumped on every playCurrent start and on every
+  // card/pause change. A superseded run checks its captured generation before
+  // advancing or replaying, so a pause/play/skip during a slow fetch can't
+  // leave two runs racing on the same card (the stuck-loop on hi-0014).
+  const genRef = useRef(0);
   const timerRef = useRef<number | null>(null);
 
   const card = playList[idx];
@@ -57,7 +59,7 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
 
   const playCurrent = useCallback(async () => {
     if (!card) return;
-    playingForCardId.current = card.id;
+    const myGen = ++genRef.current;   // this run's generation
     const shownAt = Date.now();
     // Preload the next 2 cards so playback is instant after the dwell.
     for (let lookahead = 1; lookahead <= 2; lookahead++) {
@@ -65,16 +67,17 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
       if (next?.audio) preloadCardAudio(next.audio);
     }
     // Advance to the next card, but ALWAYS keep it on screen long enough to
-    // read. When audio genuinely can't play (missing device TTS voice for a
-    // language, a stale cache, a network blip), playback resolves/​rejects
-    // almost instantly — without a floor the deck would zip past silently
-    // (the reported Hindi bug). MIN_CARD_MS guarantees a readable dwell.
+    // read. When audio genuinely can't play, playback resolves/rejects almost
+    // instantly — without a floor the deck would zip past silently. MIN_CARD_MS
+    // guarantees a readable dwell. Both the guard here AND the timer body check
+    // the generation, so a superseded run neither advances nor replays.
     const MIN_CARD_MS = 3500;
     const advance = (extraPause: number) => {
-      if (playingForCardId.current !== card.id || !isPlaying) return;
+      if (myGen !== genRef.current || !isPlaying) return;
       const wait = Math.max(extraPause, MIN_CARD_MS - (Date.now() - shownAt));
       clearTimer();
       timerRef.current = window.setTimeout(() => {
+        if (myGen !== genRef.current) return;   // generation changed while waiting
         setShowTranslation(false);
         setIdx(i => (i + 1) % playList.length);
       }, wait);
@@ -99,7 +102,11 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
       clearTimer();
     }
     return () => {
+      // Invalidate the run this effect started (bump the generation) and stop
+      // its audio, so a card change / pause can't leave a stale run replaying.
+      genRef.current++;
       clearTimer();
+      stopAudio();
     };
     // playCurrent intentionally NOT in deps to avoid loop – it depends on
     // card.id which is already a dep.

@@ -141,7 +141,8 @@ export default defineConfig({
               // v14 = 2026-07-09 Hindi naturalness pass 2 — shorten early + word order (94 cards)
               // v15 = 2026-07-09 Hindi naturalness pass 3 — intermediate+advanced word order + gender (86 cards)
               // v16 = 2026-07-14 Hindi usefulness pass — 545 decorative/trivia/preachy cards replaced with useful everyday sentences
-              cacheName: 'audio-cache-v16',
+              // v17 = 2026-07-14 Welsh correctness pass — 93 garbled word-salad cards rewritten (semantics-first + mutations), audio via Edge TTS NiaNeural
+              cacheName: 'audio-cache-v17',
               expiration: {
                 maxEntries: 500,
                 maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days

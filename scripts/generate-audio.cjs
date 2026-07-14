@@ -52,7 +52,7 @@ const LANG_DEFAULTS = {
   nl: { voice: 'nl-NL-Wavenet-F', prefix: 'nl', deckDir: 'dutch' },     // no Neural2 for Dutch
   sv: { voice: 'sv-SE-Wavenet-A', prefix: 'sv', deckDir: 'swedish' },   // no Neural2 for Swedish
   cy: { voice: 'cy-GB-Standard-A', prefix: 'cy', deckDir: 'welsh' },    // not used — Welsh via Azure NiaNeural
-  hi: { voice: 'hi-IN-Neural2-A', prefix: 'hi', deckDir: 'hindi' },
+  hi: { voice: 'hi-IN-Chirp3-HD-Aoede', prefix: 'hi', deckDir: 'hindi' }, // canonical per CANONICAL-VOICES.md (was Neural2-A — caused voice mismatch)
   tr: { voice: 'tr-TR-Wavenet-A', prefix: 'tr', deckDir: 'turkish' },   // no Neural2 for Turkish
   ru: { voice: 'ru-RU-Wavenet-A', prefix: 'ru', deckDir: 'russian' },   // no Neural2 for Russian
   id: { voice: 'id-ID-Chirp3-HD-Aoede', prefix: 'id', deckDir: 'indonesian' }, // canonical per CANONICAL-VOICES.md

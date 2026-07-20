@@ -1,4 +1,5 @@
 import { MasteryMap, UserStats, DailyStats, Language, LearningGoal, ProgressState, VocabMap, FavoriteMap, FavoriteEntry } from '../types';
+import { markDirty } from './syncService';
 
 // Per-language keys (namespaced)
 const masteryKey = (lang: Language) => `quest_mastery_${lang}`;
@@ -50,6 +51,10 @@ function safeGet(key: string): string | null {
 }
 function safeSet(key: string, value: string): void {
   try { if (_ls) _ls.setItem(key, value); } catch { /* quota / disabled — drop write */ }
+  // Mark this key for cross-device sync. No-op unless sync is enabled and the
+  // key is a synced progress key, so it's free to call on every write. Never
+  // fires for the sync service's own bookkeeping keys (different writer).
+  markDirty(key);
 }
 function safeRemove(key: string): void {
   try { if (_ls) _ls.removeItem(key); } catch { /* ignore */ }

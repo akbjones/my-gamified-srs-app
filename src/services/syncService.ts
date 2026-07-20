@@ -113,6 +113,11 @@ function setStatus(s: SyncStatus): void { status = s; listeners.forEach(fn => fn
 export const getStatus = (): SyncStatus => status;
 export const getLastSyncedAt = (): number => parse<number>(get(K_LAST), 0);
 
+// Fired after each sync with the storage keys whose local value actually
+// changed (empty on an idempotent re-pull). The app uses this to rehydrate.
+const syncedListeners = new Set<(changed: string[]) => void>();
+export function onSynced(fn: (changed: string[]) => void): () => void { syncedListeners.add(fn); return () => syncedListeners.delete(fn); }
+
 // ── pull: merge every cloud row into local; return the keys that changed ──────
 async function pullInto(code: string): Promise<string[]> {
   const sb = await client();
@@ -133,12 +138,23 @@ async function pullInto(code: string): Promise<string[]> {
   const changed: string[] = [];
   const mergedMastery: Record<string, MasteryMap> = {}; // lang → merged (for stats)
 
+  // Apply a merged value; record the key as *changed* only if it actually
+  // differs from what's on disk. sync_pull returns ALL rows every time, so
+  // without this every pull would look like a change and a rehydrate-on-change
+  // would loop. Idempotent re-pulls now report nothing changed.
+  const apply = (k: string, merged: unknown, version: number): void => {
+    const before = get(k);
+    const after = keyKind(k) === 'placement' ? 'true' : JSON.stringify(merged);
+    v[k] = version;
+    if (after !== before) { writeValue(k, merged); changed.push(k); }
+  };
+
   // Pass 1: mastery first (stats depend on it to recompute cardsLearned).
   for (const row of rows) {
     if (keyKind(row.k) !== 'mastery') continue;
     const merged = mergeMastery(readValue(row.k) as MasteryMap, row.v as MasteryMap);
-    writeValue(row.k, merged); v[row.k] = row.version; changed.push(row.k);
     mergedMastery[langOf(row.k)] = merged;
+    apply(row.k, merged, row.version);
   }
   // Pass 2: everything else.
   for (const row of rows) {
@@ -148,7 +164,7 @@ async function pullInto(code: string): Promise<string[]> {
     if (kind === 'stats') merged = reconcileStats(readValue(row.k) as never, row.v as never, mergedMastery[langOf(row.k)]);
     else if (kind === 'settings') merged = mergeSettings(readValue(row.k) as StudySettings, row.v as Partial<StudySettings>);
     else merged = mergeIndependent(row.k, readValue(row.k), row.v);
-    writeValue(row.k, merged); v[row.k] = row.version; changed.push(row.k);
+    apply(row.k, merged, row.version);
   }
   saveVersions(v);
   return changed;
@@ -193,6 +209,7 @@ export async function syncNow(): Promise<string[]> {
       await pushDirty(code);
       set(K_LAST, String(nowMs()));
       setStatus('synced');
+      if (changed.length) syncedListeners.forEach(fn => fn(changed));
       return changed;
     } catch (e) {
       setStatus(navigator.onLine ? 'error' : 'offline');

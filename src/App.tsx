@@ -6,6 +6,7 @@ import GamificationHub from './components/GamificationHub';
 import PlacementTest from './components/PlacementTest';
 import ChallengeScreen from './components/ChallengeScreen';
 import StreakFlame from './components/StreakFlame';
+import SyncSettings from './components/SyncSettings';
 import { QuestCard, MasteryMap, SessionState, UserStats, DailyStats, Language, LearningGoal, LANGUAGE_CONFIG, GOAL_CONFIG, ProgressState, ChallengeMode, ChallengeQuestion, BossRing } from './types';
 import { MAIN_PATH, isNodeUnlocked, getNodeName, getChapterForNode, chapterIndex } from './data/topicConfig';
 import { handleAnswerLogic, saveCardProgress, getRetention, burySiblings, interleaveQueue } from './services/srsService';
@@ -22,6 +23,7 @@ import {
   getGoalFor, setGoalFor,
 } from './services/storageService';
 import type { StudySettings, AudioSpeed } from './services/storageService';
+import { initSync, onSynced, onReset as syncOnReset } from './services/syncService';
 import {
   recordAnswer, updateStreak, checkAchievements, getAchievementsWithStatus,
 } from './services/gamificationService';
@@ -281,6 +283,22 @@ const App: React.FC = () => {
   // cards show (they all carry the 'general' tag) and the goal switcher
   // can't strand the learner on an empty filtered deck.
   const goal = STARTER_LOCK ? 'general' : getGoalFor(settings, lang);
+
+  // Cross-device sync: wire background pull/push to the app lifecycle. When a
+  // background pull brings in newer progress from another device, rehydrate by
+  // reloading — but never mid-session (the guard reads the view via a ref so it
+  // stays fresh inside the once-registered listener). No-ops unless sync is on.
+  const viewRef = useRef(view);
+  viewRef.current = view;
+  useEffect(() => {
+    initSync();
+    return onSynced(() => {
+      const v = viewRef.current;
+      if (v === 'STUDY' || v === 'CHALLENGE' || v === 'PLACEMENT' || v === 'LISTEN') return;
+      window.location.reload();
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   // Load deck when language or goal changes. Decks are code-split, so the load
   // is async; a `cancelled` guard drops a stale result if the user switches
@@ -1370,8 +1388,12 @@ const App: React.FC = () => {
                 })()}
               </div>
 
-              {/* Backup — progress is stored on this device only (no account),
-                  so let users export a JSON backup and restore it elsewhere. */}
+              {/* Cross-device sync (opt-in, accountless sync code). Renders
+                  nothing unless the Supabase env is configured. */}
+              <SyncSettings />
+
+              {/* Backup — a device-local JSON backup, and the durable recovery
+                  path if a sync code is lost. */}
               <div className="pt-4 border-t border-[var(--border-color)] space-y-2">
                 <div className="text-xs font-bold text-[var(--text-muted)] uppercase tracking-wide">Back up your progress</div>
                 <p className="text-[11px] text-[var(--text-muted)] leading-snug">
@@ -1419,8 +1441,9 @@ const App: React.FC = () => {
                   </button>
                 )}
                 <button
-                  onClick={() => {
+                  onClick={async () => {
                     if (confirm('Reset ALL data across every language? This wipes streaks, progress, mastery, favorites, vocab – everything. Cannot be undone.')) {
+                      await syncOnReset(); // wipe cloud + bump epoch so a synced device drops its copy too
                       resetAll();
                       window.location.reload();
                     }

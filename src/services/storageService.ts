@@ -160,6 +160,9 @@ export interface StudySettings {
   autoPlayAudio: boolean;
   audioSpeed: AudioSpeed;
   googleTtsApiKey?: string; // optional – falls back to browser TTS if not set
+  /** Script-teacher home banner: per-language "not now" collapses the full
+   *  card to the compact pill (never removes the entry point entirely). */
+  scriptIntroDismissed?: Partial<Record<Language, boolean>>;
 }
 
 const DEFAULT_SETTINGS: StudySettings = {

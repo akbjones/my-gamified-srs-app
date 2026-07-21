@@ -8,12 +8,13 @@ import ChallengeScreen from './components/ChallengeScreen';
 import StreakFlame from './components/StreakFlame';
 import SyncSettings from './components/SyncSettings';
 import CheckInScreen from './components/CheckInScreen';
+import ScriptTeacher from './components/ScriptTeacher';
 import { QuestCard, MasteryMap, SessionState, UserStats, DailyStats, Language, LearningGoal, LANGUAGE_CONFIG, GOAL_CONFIG, ProgressState, ChallengeMode, ChallengeQuestion, BossRing } from './types';
 import { MAIN_PATH, isNodeUnlocked, getNodeName, getChapterForNode, chapterIndex } from './data/topicConfig';
 import { handleAnswerLogic, saveCardProgress, getRetention, burySiblings, interleaveQueue } from './services/srsService';
 import {
   migrateStorageKeys, loadMasteryMap, saveMasteryMap, loadUserStats, saveUserStats,
-  loadDailyStats, saveDailyStats, resetAll,
+  loadDailyStats, saveDailyStats, resetAll, loadScriptMap,
   exportAllProgress, importAllProgress,
   loadSettings, saveSettings,
   isPlacementComplete, setPlacementComplete,
@@ -26,6 +27,9 @@ import {
 } from './services/storageService';
 import type { StudySettings, AudioSpeed } from './services/storageService';
 import { initSync, onSynced, onReset as syncOnReset, isSyncConfigured, getCode as getSyncCode } from './services/syncService';
+import { scriptPackFor } from './data/scripts';
+import type { ScriptPack } from './data/scripts/types';
+import { scriptSummary } from './services/scriptSrsService';
 import {
   recordAnswer, updateStreak, checkAchievements, getAchievementsWithStatus,
 } from './services/gamificationService';
@@ -75,7 +79,7 @@ const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
   russian: lookupRu,
 };
 
-type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB' | 'FAVORITES' | 'LISTEN' | 'CHECKIN';
+type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB' | 'FAVORITES' | 'LISTEN' | 'CHECKIN' | 'SCRIPT';
 
 // Deck loaders – DYNAMIC imports so each language's deck.json is its own chunk,
 // fetched on demand. Keeps the main bundle small (~1 MB vs ~5 MB) and only pulls
@@ -267,6 +271,10 @@ const App: React.FC = () => {
   // Rating tally for the session in progress – evidence for the one-shot
   // difficulty check-in screen (CHECKIN view).
   const [sessionTally, setSessionTally] = useState({ noIdea: 0, hard: 0, good: 0, easy: 0 });
+  // Script teacher (alphabet mode) – the pack lazy-loads for languages that
+  // have one; progress is its own storage track (quest_script_<lang>).
+  const [scriptPack, setScriptPack] = useState<ScriptPack | null>(null);
+  const [scriptProgress, setScriptProgress] = useState<MasteryMap>({});
   const langDropdownRef = useRef<HTMLDivElement>(null);
   const backupInputRef = useRef<HTMLInputElement>(null);
   // Undo stack for going back to previous cards
@@ -301,7 +309,7 @@ const App: React.FC = () => {
     initSync();
     return onSynced(() => {
       const v = viewRef.current;
-      if (v === 'STUDY' || v === 'CHALLENGE' || v === 'PLACEMENT' || v === 'LISTEN') return;
+      if (v === 'STUDY' || v === 'CHALLENGE' || v === 'PLACEMENT' || v === 'LISTEN' || v === 'SCRIPT') return;
       window.location.reload();
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -327,6 +335,20 @@ const App: React.FC = () => {
     }).catch(() => { /* deck chunk failed to load – leave deck empty; UI stays on home */ });
     return () => { cancelled = true; };
   }, [lang, goal]);
+
+  // Script teacher: load this language's pack (tiny lazy chunk) + progress.
+  // Languages without a pack simply never render the banner or SCRIPT view.
+  useEffect(() => {
+    let cancelled = false;
+    setScriptPack(null);
+    setScriptProgress(loadScriptMap(lang));
+    const ref = STARTER_LOCK ? undefined : scriptPackFor(lang);
+    if (!ref) return;
+    ref.loader()
+      .then(p => { if (!cancelled) setScriptPack(p); })
+      .catch(() => { /* pack chunk failed – entry points just don't render */ });
+    return () => { cancelled = true; };
+  }, [lang]);
 
   // Auto-dismiss the placement toast after 6s. Click to dismiss earlier.
   useEffect(() => {
@@ -766,7 +788,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className={`mx-auto min-h-screen ${view === 'STUDY' || view === 'PLACEMENT' || view === 'CHALLENGE' ? 'max-w-lg px-0 pt-0 pb-0' : 'max-w-md px-5 pt-[max(0.5rem,env(safe-area-inset-top))] pb-[max(0.75rem,env(safe-area-inset-bottom))]'}`}>
+    <div className={`mx-auto min-h-screen ${view === 'STUDY' || view === 'PLACEMENT' || view === 'CHALLENGE' || view === 'SCRIPT' ? 'max-w-lg px-0 pt-0 pb-0' : 'max-w-md px-5 pt-[max(0.5rem,env(safe-area-inset-top))] pb-[max(0.75rem,env(safe-area-inset-bottom))]'}`}>
       {/* First-time onboarding carousel */}
       {showOnboarding && (
         <Onboarding onComplete={() => {
@@ -894,6 +916,57 @@ const App: React.FC = () => {
               </div>
             </div>
           </header>
+
+          {/* Script-teacher entry – languages with a non-Latin script get a
+              "learn the alphabet" track. Full card for fresh starters, then a
+              compact pill once started/dismissed; gone when mastered. Soft
+              gate only – never blocks Study or placement. */}
+          {scriptPack && (() => {
+            const s = scriptSummary(scriptPack, scriptProgress);
+            if (s.mastered) return null;
+            const started = s.seen > 0;
+            const dismissed = !!settings.scriptIntroDismissed?.[lang];
+            if (!started && !dismissed && userStats.totalReviews < 20) {
+              return (
+                <div className="stat-card p-4 mb-2.5 border-[var(--accent)]/30">
+                  <div className="flex items-start justify-between mb-1">
+                    <div className="flex items-center gap-2">
+                      <BookOpen size={16} className="text-[var(--accent)]" />
+                      <span className="text-sm font-black text-[var(--text-primary)]">Learn {scriptPack.name} first</span>
+                    </div>
+                    <button
+                      onClick={() => handleUpdateSettings({ ...settings, scriptIntroDismissed: { ...settings.scriptIntroDismissed, [lang]: true } })}
+                      className="text-[var(--text-faint)] hover:text-[var(--text-secondary)] transition-colors -mt-1 -mr-1 p-1"
+                      aria-label="Not now"
+                    >
+                      <X size={14} />
+                    </button>
+                  </div>
+                  <p className="text-xs text-[var(--text-secondary)] leading-relaxed mb-3">
+                    {scriptPack.tagline} – short lessons with memory hooks for every character,
+                    so the cards below stop looking like squiggles.
+                  </p>
+                  <button
+                    onClick={() => setView('SCRIPT')}
+                    className="w-full py-2.5 rounded-xl text-sm font-bold bg-[var(--accent)] text-white hover:bg-[var(--accent)]/90 active:scale-[0.98] transition"
+                  >
+                    Start with the alphabet
+                  </button>
+                </div>
+              );
+            }
+            return (
+              <button
+                onClick={() => setView('SCRIPT')}
+                className="w-full flex items-center gap-2 px-3.5 py-2.5 mb-2.5 rounded-xl border border-[var(--border-color)] bg-[var(--bg-card)] hover:bg-[var(--bg-card-hover)] active:scale-[0.99] transition text-left"
+              >
+                <BookOpen size={14} className="text-[var(--accent)] shrink-0" />
+                <span className="text-xs font-bold text-[var(--text-primary)]">{scriptPack.name}</span>
+                <span className="text-[11px] text-[var(--text-muted)]">{s.graduated}/{s.total} mastered{s.dueCount > 0 && ` · ${s.dueCount} due`}</span>
+                <ChevronRight size={14} className="ml-auto text-[var(--text-faint)]" />
+              </button>
+            );
+          })()}
 
           {/* Study button – primary action, generous size so it dominates the home view */}
           <button
@@ -1673,6 +1746,28 @@ const App: React.FC = () => {
             setPlacementComplete(lang);
             setDeck(prev => [...prev]);
             handleStartSession();
+          }}
+          onExit={() => setView('HOME')}
+          onLearnScript={scriptPack && !scriptSummary(scriptPack, scriptProgress).mastered ? () => setView('SCRIPT') : undefined}
+          scriptName={scriptPack?.name}
+          autoPlayAudio={settings.autoPlayAudio}
+          audioSpeed={settings.audioSpeed}
+          googleTtsApiKey={settings.googleTtsApiKey}
+        />
+      )}
+
+      {view === 'SCRIPT' && scriptPack && (
+        <ScriptTeacher
+          pack={scriptPack}
+          lang={lang}
+          progress={scriptProgress}
+          onProgressChange={setScriptProgress}
+          onSessionStart={() => {
+            // A study day is a study day: script sessions feed the streak but
+            // never cardsLearned/totalReviews (fully separate track).
+            const updated = updateStreak(loadUserStats(lang));
+            setUserStats(updated);
+            saveUserStats(updated, lang);
           }}
           onExit={() => setView('HOME')}
           autoPlayAudio={settings.autoPlayAudio}

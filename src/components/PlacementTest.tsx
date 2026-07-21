@@ -22,6 +22,11 @@ interface PlacementTestProps {
   /** Leave without deciding (back/exit). Placement stays incomplete – the fork
    *  screen reappears on the next Study tap. Nothing is permanent. */
   onExit: () => void;
+  /** Third fork option for languages with a script pack: "Learn the alphabet
+   *  first". Leaves placement incomplete (the fork returns after) – learning
+   *  the script is a detour, not a placement decision. */
+  onLearnScript?: () => void;
+  scriptName?: string;
   autoPlayAudio: boolean;
   audioSpeed: AudioSpeed;
   googleTtsApiKey?: string;
@@ -51,6 +56,8 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   onComplete,
   onSkip,
   onExit,
+  onLearnScript,
+  scriptName,
   autoPlayAudio,
   audioSpeed,
   googleTtsApiKey,
@@ -241,6 +248,14 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
         >
           Find my level
         </button>
+        {onLearnScript && (
+          <button
+            onClick={onLearnScript}
+            className="w-full py-2.5 rounded-xl text-sm font-bold border border-[var(--accent)]/40 bg-[var(--bg-card)] text-[var(--accent)] hover:bg-[var(--accent)]/10 active:scale-95 transition mb-2"
+          >
+            Learn the alphabet first{scriptName ? ` – ${scriptName}` : ''}
+          </button>
+        )}
         <button
           onClick={onSkip}
           className="w-full py-2.5 rounded-xl text-sm font-bold bg-[var(--bg-inset)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] active:scale-95 transition"

@@ -161,10 +161,14 @@ const shuffle = <T>(arr: T[], rng: () => number): T[] => {
 /** Distractors, best-first: learned/co-batch confusables from the item's
  *  similar set, then same-level batch-mates, then anything already seen.
  *  NEVER glyphs from unseen future levels — a choice the learner has no way
- *  to recognize teaches nothing and leaks upcoming content. */
+ *  to recognize teaches nothing and leaks upcoming content. Also never an
+ *  item sharing the target's romanization (hiragana か vs katakana カ are
+ *  both "ka" — either would be a second correct answer). */
 const distractorsFor = (item: ScriptItem, pack: ScriptPack, progress: MasteryMap, rng: () => number, n = 3): ScriptItem[] => {
   const seen = (id: string) => !!progress[id];
-  const eligible = (i: ScriptItem) => i.id !== item.id && i.kind !== 'word' && (seen(i.id) || i.level <= item.level);
+  const eligible = (i: ScriptItem) =>
+    i.id !== item.id && i.kind !== 'word' && i.romanization !== item.romanization &&
+    (seen(i.id) || i.level <= item.level);
   const pool = pack.items.filter(eligible);
   const similarSet = new Set(item.similar ?? []);
   const rank = (i: ScriptItem): number =>
@@ -188,11 +192,18 @@ export const selectDrill = (
   const byId = itemById(pack);
 
   // Composed items drill as composition once in review (tap the component
-  // tiles in order); while learning they behave like recognition.
+  // tiles in order); while learning they behave like recognition. Decoy tiles
+  // are picked from letters/modifiers directly — the generic ranker prefers
+  // same-kind items, i.e. other composed blocks, which can't be tiles.
   if (item.kind === 'composed' && item.components?.length && inReview) {
     const components = item.components.map(id => byId.get(id)!).filter(Boolean);
-    const decoys = distractorsFor(item, pack, progress, rng, 2)
-      .filter(d => !item.components!.includes(d.id) && d.kind !== 'composed');
+    const decoys = shuffle(
+      pack.items.filter(i =>
+        (i.kind === 'letter' || i.kind === 'modifier') &&
+        !item.components!.includes(i.id) &&
+        (!!progress[i.id] || i.level <= item.level)),
+      rng,
+    ).slice(0, 2);
     return { kind: 'composition', item, prompt: 'audio', choices: shuffle([...components, ...decoys], rng) };
   }
 

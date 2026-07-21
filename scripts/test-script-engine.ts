@@ -152,6 +152,7 @@ const seqRng = (...vals: number[]) => { let i = 0; return () => vals[Math.min(i+
   ok('drill: composed in review → composition', d5.kind === 'composition');
   ok('drill: composition has all component tiles', item('sc-ko-0012').components!.every(id => d5.choices.some(c => c.id === id)));
   ok('drill: composition decoys are not composed items', d5.choices.every(c => c.kind !== 'composed' || item('sc-ko-0012').components!.includes(c.id)));
+  ok('drill: composition HAS decoy tiles beyond the components', d5.choices.length > item('sc-ko-0012').components!.length);
   // Composed but still learning → falls back to recognition/recall.
   const d6 = selectDrill(item('sc-ko-0012'), pack, { 'sc-ko-0012': { mastery: 1, lastReview: 1 } }, seqRng(0.1, 0.5, 0.5, 0.5, 0.5));
   ok('drill: composed while learning → not composition', d6.kind !== 'composition');

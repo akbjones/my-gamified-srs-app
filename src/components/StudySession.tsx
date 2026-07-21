@@ -14,7 +14,7 @@ import WordPopover from './WordPopover';
 import WordTileChallenge from './WordTileChallenge';
 import FirstTimeIntro from './FirstTimeIntro';
 import AddMoreCardsPanel from './AddMoreCardsPanel';
-import { SHOW_GRAMMAR_TIPS } from '../config/featureFlags';
+import { grammarTipsEnabled } from '../config/featureFlags';
 
 /** Find the first word in a target sentence that has a verified etymology
  *  entry. Returns both the cleaned word (no punctuation) and the entry.
@@ -374,7 +374,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
           {/* Grammar overlay – centered modal with backdrop. Same layout
               pattern as the etymology overlay in WordPopover, just amber
               instead of violet so the two surfaces are visually parallel. */}
-          {SHOW_GRAMMAR_TIPS && showGrammar && card!.grammar && (
+          {grammarTipsEnabled(session.language) && showGrammar && card!.grammar && (
             <div
               className="fixed inset-0 z-[10001] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in cursor-pointer"
               onClick={(e) => { e.stopPropagation(); setShowGrammar(false); }}
@@ -436,15 +436,15 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               Both pinned to the top-right corner of the card so they're
               always within thumb reach in the same spot. Absolute positioning
               so they don't affect the card content's vertical layout. */}
-          {((SHOW_GRAMMAR_TIPS && card!.grammar) || (isFlipped && cardEty)) && (
+          {((grammarTipsEnabled(session.language) && card!.grammar) || (isFlipped && cardEty)) && (
             <div className="absolute top-2 right-2 z-10 flex flex-col items-end gap-2">
-              {SHOW_GRAMMAR_TIPS && card!.grammar && (
+              {grammarTipsEnabled(session.language) && card!.grammar && (
                 <button
                   onClick={(e) => { e.stopPropagation(); setShowGrammar(true); }}
                   className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-300 bg-amber-500/10 border border-amber-500/40 hover:bg-amber-500/15 transition-all active:scale-95"
                 >
                   <BookOpen size={14} />
-                  <span>Grammar</span>
+                  <span>Why?</span>
                 </button>
               )}
               {/* Etymology only on the reverse — the front is for recall, so

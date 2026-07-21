@@ -3,7 +3,7 @@ import { QuestCard, MasteryMap, UserStats, Language, LANGUAGE_CONFIG } from '../
 import type { AudioSpeed } from '../services/storageService';
 import { MAIN_PATH, getNodeName } from '../data/topicConfig';
 import { getGrammarNudge } from '../data/grammarDescriptions';
-import { SHOW_GRAMMAR_TIPS } from '../config/featureFlags';
+import { grammarTipsEnabled } from '../config/featureFlags';
 import { selectPlacementCards, applyPlacementResults, ConfidenceRating } from '../services/placementService';
 import { playCardAudio, stopAudio } from '../services/audioService';
 import { ChevronLeft, ArrowRight, BookOpen, Volume2 } from 'lucide-react';
@@ -473,7 +473,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           )}
 
           {/* Per-card grammar detail (if available) */}
-          {SHOW_GRAMMAR_TIPS && currentCard.grammar && (
+          {grammarTipsEnabled(lang) && currentCard.grammar && (
             <div className="mb-3">
               <button
                 onClick={() => setShowGrammarDetail(!showGrammarDetail)}

@@ -79,6 +79,13 @@ the language's deck path, STOP-word list, and script adaptations.
 | **C** | tr, ru, cy | Script-stamped worst: mostly drop-everything + author ~560–700 fresh per language (decks 3,117–3,512). Romanization mandatory (tr Latin but ru/cy need care). | ~2 sessions each |
 | **D** | hi | LAST — waits for the native-speaker naturalness review (task #87): no point writing tips against sentences that may be rewritten. | ~2 sessions, after #87 |
 
+**ORDER OVERRIDE (user, 2026-07-21): HINDI RUNS NEXT** — immediately after the
+Hangul script-teacher ships, before the remaining waves. The Wave-D blocker is
+considered lifted (the 153-card Hindi naturalness rewrite shipped 2026-07-14;
+task #87 closed). Sequence now: hi → (ko/el/id, classify already done in the
+background) → legacy six → tr/ru/cy. Hindi runs the full 6-stage pipeline with
+the Devanagari matra-tolerant quote matcher + mandatory romanization.
+
 **Gate per language:** linter green + adversarial verify green + coverage in
 band → add to `GRAMMAR_TIPS_LANGS` → tips go live for that language only.
 

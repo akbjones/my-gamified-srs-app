@@ -4,11 +4,13 @@
 --      depth against code enumeration / hammering; codes are ~100-bit so
 --      enumeration is already infeasible, this bounds abuse traffic).
 --   2. A per-code key-count cap in sync_push (a code can hold at most 150
---      rows; the real app writes ~113 max = 8 keys x 14 languages + settings)
---      so junk data can't be parked in the table.
+--      rows; the real app writes ~127 max = 9 keys x 14 languages + settings —
+--      quest_script_ became the 9th per-language family 2026-07-21) so junk
+--      data can't be parked in the table. NOTE: a 10th key family would push
+--      the max to 141 of 150 — raise the cap alongside any new family.
 --
 -- Limit: 200 calls/min per IP. A worst-case legitimate burst (first enable on
--- a 14-language account = ~113 pushes + pull) fits inside one window.
+-- a 14-language account = ~127 pushes + pull) fits inside one window.
 
 create table if not exists public.sync_ratelimit (
   bucket       text        primary key,   -- caller IP (first hop of x-forwarded-for)

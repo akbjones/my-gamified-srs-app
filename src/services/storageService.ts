@@ -10,6 +10,7 @@ const placementKey = (lang: Language) => `quest_placement_${lang}`;
 const progressKey = (lang: Language) => `quest_progress_${lang}`;
 const vocabKey = (lang: Language) => `quest_vocab_${lang}`;
 const favoritesKey = (lang: Language) => `quest_favorites_${lang}`;
+const scriptKey = (lang: Language) => `quest_script_${lang}`;
 
 // Global keys (shared across languages)
 const SETTINGS_KEY = 'quest_settings';
@@ -67,6 +68,19 @@ export const loadMasteryMap = (lang: Language): MasteryMap => {
 
 export const saveMasteryMap = (map: MasteryMap, lang: Language): void => {
   safeSet(masteryKey(lang), JSON.stringify(map));
+};
+
+// ─── Script-teacher progress ────────────────────────────────
+// Same value shape as the mastery map but a fully separate track (alphabet
+// items, not deck cards — shares only the streak with deck study). Lives HERE,
+// not in scriptSrsService: safeSet is module-private and is the sole path that
+// fires markDirty, so any write outside this file would silently never sync.
+export const loadScriptMap = (lang: Language): MasteryMap => {
+  return safeParse(safeGet(scriptKey(lang)), {});
+};
+
+export const saveScriptMap = (map: MasteryMap, lang: Language): void => {
+  safeSet(scriptKey(lang), JSON.stringify(map));
 };
 
 // ─── User Stats ─────────────────────────────────────────────
@@ -391,6 +405,7 @@ export const resetAll = (): void => {
     safeRemove(progressKey(lang));
     safeRemove(vocabKey(lang));
     safeRemove(favoritesKey(lang));
+    safeRemove(scriptKey(lang));
   }
   // Clear old non-namespaced keys too (for migration)
   safeRemove('quest_mastery');

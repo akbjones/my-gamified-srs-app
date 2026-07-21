@@ -19,7 +19,7 @@ import type { StudySettings } from './storageService';
 // ── key classification ──────────────────────────────────────────────────────
 export type MergeKind =
   | 'mastery' | 'stats' | 'daily' | 'progress' | 'vocab'
-  | 'favorites' | 'achievements' | 'placement' | 'settings' | 'unknown';
+  | 'favorites' | 'achievements' | 'placement' | 'script' | 'settings' | 'unknown';
 
 export function keyKind(key: string): MergeKind {
   if (key === 'quest_settings') return 'settings';
@@ -31,6 +31,7 @@ export function keyKind(key: string): MergeKind {
   if (key.startsWith('quest_favorites_')) return 'favorites';
   if (key.startsWith('quest_achievements_')) return 'achievements';
   if (key.startsWith('quest_placement_')) return 'placement';
+  if (key.startsWith('quest_script_')) return 'script'; // script-teacher progress (value = MasteryMap)
   return 'unknown';
 }
 
@@ -212,6 +213,10 @@ export function mergeIndependent(key: string, local: unknown, remote: unknown): 
     case 'favorites': return mergeFavorites(local as FavoriteMap, remote as FavoriteMap);
     case 'achievements': return mergeAchievements(local as string[], remote as string[]);
     case 'placement': return mergePlacement(local, remote);
+    // Script-teacher progress is literally a MasteryMap (same per-card value
+    // subset), so union-of-ids / newest-lastReview-wins applies as-is. It must
+    // NOT feed reconcileStats — cardsLearned derives from quest_mastery_ only.
+    case 'script': return mergeMastery(local as MasteryMap, remote as MasteryMap);
     // stats + settings need cross-key / newer-wins context → handled by orchestrator
     default: return remote ?? local;
   }

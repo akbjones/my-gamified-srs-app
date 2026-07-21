@@ -15,8 +15,15 @@ import type { MasteryMap } from '../types';
 import type { StudySettings } from './storageService';
 
 // ── config ───────────────────────────────────────────────────────────────────
-const URL = import.meta.env.VITE_SUPABASE_URL as string | undefined;
-const ANON = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
+// Guarded read: Vite statically replaces these exact expressions in builds, but
+// non-Vite runtimes (unit tests importing the service chain under tsx/node)
+// have no import.meta.env and would throw at import time — there, sync simply
+// reports unconfigured.
+let URL: string | undefined, ANON: string | undefined;
+try {
+  URL = import.meta.env.VITE_SUPABASE_URL as string | undefined;
+  ANON = import.meta.env.VITE_SUPABASE_ANON_KEY as string | undefined;
+} catch { /* non-Vite runtime */ }
 export const isSyncConfigured = (): boolean => !!URL && !!ANON;
 
 // Internal localStorage keys (NOT synced — filtered out of the synced keyspace).

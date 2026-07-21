@@ -1,0 +1,177 @@
+{
+  "scriptId": "hangul",
+  "language": "korean",
+  "name": "Hangul",
+  "tagline": "Read Korean in about 3 days",
+  "drill": {
+    "recallPrompts": ["audio", "romanization"],
+    "discriminationPrompt": "audio"
+  },
+  "items": [
+    {
+      "id": "sc-ko-0001",
+      "kind": "letter",
+      "glyph": "ㄱ",
+      "sound": "g/k",
+      "romanization": "g",
+      "mnemonic": "The tongue's back rising to block the throat – g (as in go). At the end of a word it tightens to k.",
+      "level": 1,
+      "similar": ["sc-ko-0002"],
+      "audio": "sc-ko-0001.mp3"
+    },
+    {
+      "id": "sc-ko-0002",
+      "kind": "letter",
+      "glyph": "ㄴ",
+      "sound": "n",
+      "romanization": "n",
+      "mnemonic": "The tongue's tip touching the ridge behind the teeth – n. Faces the opposite way to ㄱ (g).",
+      "level": 1,
+      "similar": ["sc-ko-0001", "sc-ko-0003"],
+      "audio": "sc-ko-0002.mp3"
+    },
+    {
+      "id": "sc-ko-0003",
+      "kind": "letter",
+      "glyph": "ㄷ",
+      "sound": "d/t",
+      "romanization": "d",
+      "mnemonic": "ㄴ (n) with a lid on top – the tongue taps the same ridge, just harder: d (t at word end).",
+      "level": 1,
+      "similar": ["sc-ko-0002", "sc-ko-0004"],
+      "audio": "sc-ko-0003.mp3"
+    },
+    {
+      "id": "sc-ko-0004",
+      "kind": "letter",
+      "glyph": "ㄹ",
+      "sound": "r/l",
+      "romanization": "r",
+      "mnemonic": "A winding path – the tongue flicks along it: Korean r/l, one sound between the two.",
+      "level": 1,
+      "similar": ["sc-ko-0003"],
+      "audio": "sc-ko-0004.mp3"
+    },
+    {
+      "id": "sc-ko-0005",
+      "kind": "letter",
+      "glyph": "ㅁ",
+      "sound": "m",
+      "romanization": "m",
+      "mnemonic": "A closed mouth, lips sealed in a square – m.",
+      "level": 1,
+      "audio": "sc-ko-0005.mp3"
+    },
+    {
+      "id": "sc-ko-0006",
+      "kind": "letter",
+      "glyph": "ㅏ",
+      "sound": "a",
+      "romanization": "a",
+      "mnemonic": "A standing line with its stroke pointing right, toward the sunrise – bright a (father).",
+      "level": 1,
+      "similar": ["sc-ko-0007"],
+      "audio": "sc-ko-0006.mp3"
+    },
+    {
+      "id": "sc-ko-0007",
+      "kind": "letter",
+      "glyph": "ㅓ",
+      "sound": "eo",
+      "romanization": "eo",
+      "mnemonic": "The stroke points left, away from the sun – darker eo (the u in fun).",
+      "level": 1,
+      "similar": ["sc-ko-0006"],
+      "audio": "sc-ko-0007.mp3"
+    },
+    {
+      "id": "sc-ko-0008",
+      "kind": "letter",
+      "glyph": "ㅗ",
+      "sound": "o",
+      "romanization": "o",
+      "mnemonic": "A flat ground with a stroke pointing up at the sky – o (go).",
+      "level": 1,
+      "similar": ["sc-ko-0009"],
+      "audio": "sc-ko-0008.mp3"
+    },
+    {
+      "id": "sc-ko-0009",
+      "kind": "letter",
+      "glyph": "ㅜ",
+      "sound": "u",
+      "romanization": "u",
+      "mnemonic": "The stroke hangs below the ground line, like a root going down – u (moon).",
+      "level": 1,
+      "similar": ["sc-ko-0008"],
+      "audio": "sc-ko-0009.mp3"
+    },
+    {
+      "id": "sc-ko-0010",
+      "kind": "letter",
+      "glyph": "ㅡ",
+      "sound": "eu",
+      "romanization": "eu",
+      "mnemonic": "A flat horizon – say it with flat, spread lips: eu (a grunted uh).",
+      "level": 1,
+      "audio": "sc-ko-0010.mp3"
+    },
+    {
+      "id": "sc-ko-0011",
+      "kind": "letter",
+      "glyph": "ㅣ",
+      "sound": "i",
+      "romanization": "i",
+      "mnemonic": "A person standing tall – ee (see).",
+      "level": 1,
+      "audio": "sc-ko-0011.mp3"
+    },
+    {
+      "id": "sc-ko-0012",
+      "kind": "composed",
+      "glyph": "가",
+      "sound": "ga",
+      "romanization": "ga",
+      "mnemonic": "",
+      "level": 2,
+      "components": ["sc-ko-0001", "sc-ko-0006"],
+      "audio": "sc-ko-0012.mp3"
+    },
+    {
+      "id": "sc-ko-0013",
+      "kind": "composed",
+      "glyph": "나",
+      "sound": "na",
+      "romanization": "na",
+      "mnemonic": "",
+      "level": 2,
+      "components": ["sc-ko-0002", "sc-ko-0006"],
+      "audio": "sc-ko-0013.mp3"
+    },
+    {
+      "id": "sc-ko-0014",
+      "kind": "composed",
+      "glyph": "무",
+      "sound": "mu",
+      "romanization": "mu",
+      "mnemonic": "",
+      "level": 2,
+      "components": ["sc-ko-0005", "sc-ko-0009"],
+      "audio": "sc-ko-0014.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "title": "First consonants and vowels",
+      "itemIds": ["sc-ko-0001", "sc-ko-0002", "sc-ko-0003", "sc-ko-0004", "sc-ko-0005", "sc-ko-0006", "sc-ko-0007", "sc-ko-0008", "sc-ko-0009", "sc-ko-0010", "sc-ko-0011"],
+      "readableWordCount": 0
+    },
+    {
+      "level": 2,
+      "title": "Your first syllable blocks",
+      "itemIds": ["sc-ko-0012", "sc-ko-0013", "sc-ko-0014"],
+      "readableWordCount": 0
+    }
+  ]
+}

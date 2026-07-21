@@ -2,6 +2,7 @@
 import {
   keyKind, mergeMastery, countLearned, reconcileStats, mergeDaily, mergeProgress,
   mergeVocab, mergeFavorites, mergeAchievements, mergePlacement, mergeSettings, stripSecret,
+  mergeIndependent,
 } from '../src/services/syncMerge';
 import type { StudySettings } from '../src/services/storageService';
 
@@ -102,6 +103,20 @@ ok('placement always true', mergePlacement('true', undefined) === 'true');
   const s = mergeSettings(null, remote);
   ok('null-local settings takes remote', s.dailyNewLimit === 30 && s.theme === 'dark');
   ok('null-local settings has no api key', s.googleTtsApiKey === undefined);
+}
+
+// script-teacher progress: quest_script_* must classify AND merge like a
+// mastery map — the failure mode if either half is missing is "silently never
+// syncs" (keyKind → 'unknown' → isSyncedKey rejects it).
+eq('keyKind script', keyKind('quest_script_korean'), 'script');
+eq('keyKind script does not shadow settings', keyKind('quest_settings'), 'settings');
+{
+  const phone = { 'sc-ko-0001': { mastery: 2, reps: 4, lastReview: 2000 }, 'sc-ko-0002': { mastery: 1, reps: 1, lastReview: 100 } };
+  const laptop = { 'sc-ko-0001': { mastery: 1, reps: 2, lastReview: 1000 }, 'sc-ko-0003': { mastery: 2, reps: 3, lastReview: 500 } };
+  const m = mergeIndependent('quest_script_korean', phone, laptop) as Record<string, { mastery?: number }>;
+  eq('script merge keeps newer side', m['sc-ko-0001'], phone['sc-ko-0001']);
+  ok('script merge unions ids', !!m['sc-ko-0002'] && !!m['sc-ko-0003']);
+  eq('script merge on new device takes remote', mergeIndependent('quest_script_korean', null, laptop), laptop);
 }
 
 // stripSecret removes the key entirely

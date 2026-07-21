@@ -95,6 +95,15 @@ ok('placement always true', mergePlacement('true', undefined) === 'true');
   ok('settings unions goalByLanguage', s.goalByLanguage?.hindi === 'travel' && s.goalByLanguage?.spanish === 'work');
   ok('settings KEEPS local api key, ignores cloud', s.googleTtsApiKey === 'SECRET-LOCAL-KEY');
 }
+// mergeSettings with NULL local (brand-new device pairing) must not throw —
+// regression: this crashed the whole first pull mid-way (found in click-through)
+{
+  const remote = { dailyNewLimit: 30, theme: 'dark' as const, perLanguageLimits: { spanish: { dailyNewLimit: 25 } } } as Partial<StudySettings>;
+  const s = mergeSettings(null, remote);
+  ok('null-local settings takes remote', s.dailyNewLimit === 30 && s.theme === 'dark');
+  ok('null-local settings has no api key', s.googleTtsApiKey === undefined);
+}
+
 // stripSecret removes the key entirely
 {
   const s: StudySettings = { dailyNewLimit: 20, sessionCardLimit: 10, selectedLanguage: 'hindi', learningGoal: 'general', theme: 'light', autoPlayAudio: true, audioSpeed: 1.0, googleTtsApiKey: 'SECRET' };

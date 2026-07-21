@@ -25,6 +25,10 @@ export interface QuestCard {
   reps?: number;         // total reviews
   lapses?: number;       // total AGAIN lapses (drives the leech flag)
   lastReview?: number;   // ms timestamp of the last review
+  learningStep?: number; // FSRS learning_steps index — WITHOUT persisting this,
+                         // every reconstruct restarts at step 0 and a GOOD-rated
+                         // card loops on the 10-minute step forever (never
+                         // graduates); see toFsrsCard in srsService.
   priority?: 1 | 2 | 3;  // 1=practical (show first), 2=useful, 3=specialized
 }
 

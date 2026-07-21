@@ -192,6 +192,7 @@ const buildDeck = (
       reps: (saved?.reps as number) ?? undefined,
       lapses: (saved?.lapses as number) ?? undefined,
       lastReview: (saved?.lastReview as number) ?? undefined,
+      learningStep: (saved?.learningStep as number) ?? undefined,
       priority: rawCard.priority ?? 999999,
     });
   }

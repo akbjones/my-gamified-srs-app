@@ -30,6 +30,15 @@ function toFsrsCard(card: QuestCard, now: Date): FsrsCard {
   const base = createEmptyCard(now); // supplies all required fields (incl. learning_steps)
   // Already on FSRS — restore the saved memory state.
   if (card.stability != null && card.difficulty != null && card.fsrsState != null) {
+    // Restore the learning-step index. This MUST round-trip: without it every
+    // reconstruct restarts at step 0, so GOOD can only ever advance 0→1 (+10m)
+    // and a learning card loops in-session forever instead of graduating after
+    // the second GOOD. Cards saved before this field existed (learningStep
+    // undefined) are healed to min(reps, last step): they've already been
+    // drilled at least that many times, so their next GOOD graduates them
+    // instead of restarting the ladder.
+    const lastStep = 1; // default learning_steps ['1m','10m'] → last index 1
+    const learningStep = card.learningStep ?? Math.min(card.reps ?? 0, lastStep);
     return {
       ...base,
       due: new Date(card.dueDate ?? now.getTime()),
@@ -40,6 +49,7 @@ function toFsrsCard(card: QuestCard, now: Date): FsrsCard {
       lapses: card.lapses ?? card.failCount ?? 0,
       state: card.fsrsState as State,
       last_review: card.lastReview ? new Date(card.lastReview) : base.last_review,
+      learning_steps: learningStep,
     };
   }
   // Migrate a graduated SM-2 card: its current interval ≈ memory stability.
@@ -101,6 +111,7 @@ export const saveCardProgress = (card: QuestCard, lang: Language): MasteryMap =>
       reps: card.reps,
       lapses: card.lapses,
       lastReview: card.lastReview,
+      learningStep: card.learningStep,
     },
   };
   saveMasteryMap(newMap, lang);
@@ -227,6 +238,7 @@ export const handleAnswerLogic = (
   updatedCard.reps = next.reps;
   updatedCard.lapses = next.lapses;
   updatedCard.lastReview = nowMs;
+  updatedCard.learningStep = next.learning_steps;
   updatedCard.dueDate = next.due.getTime();
   updatedCard.interval = Math.min(MAX_INTERVAL, Math.max(0, next.due.getTime() - nowMs));
   // Keep the app-level fields the UI + queue read, derived from FSRS state.

@@ -180,14 +180,17 @@ export function placementDone(v: unknown): boolean {
 // local (transport decides by updated_at). Per-language limits and goals UNION
 // (never lose a language's config); the local googleTtsApiKey is always kept
 // (it is stripped before upload, so the cloud never has it anyway).
-export function mergeSettings(local: StudySettings, remote: Partial<StudySettings>): StudySettings {
+// `local` is null on a BRAND-NEW device pairing (the settings key doesn't exist
+// in localStorage yet) — must not throw, or the whole first pull dies mid-way.
+export function mergeSettings(local: StudySettings | null | undefined, remote: Partial<StudySettings>): StudySettings {
+  const L = (local || {}) as Partial<StudySettings>;
   return {
-    ...local,
+    ...L,
     ...remote,
-    perLanguageLimits: { ...(local.perLanguageLimits || {}), ...(remote.perLanguageLimits || {}) } as StudySettings['perLanguageLimits'],
-    goalByLanguage: { ...(local.goalByLanguage || {}), ...(remote.goalByLanguage || {}) } as Partial<Record<Language, import('../types').LearningGoal>>,
-    googleTtsApiKey: local.googleTtsApiKey, // never accept a key from the cloud
-  };
+    perLanguageLimits: { ...(L.perLanguageLimits || {}), ...(remote.perLanguageLimits || {}) } as StudySettings['perLanguageLimits'],
+    goalByLanguage: { ...(L.goalByLanguage || {}), ...(remote.goalByLanguage || {}) } as Partial<Record<Language, import('../types').LearningGoal>>,
+    googleTtsApiKey: L.googleTtsApiKey, // never accept a key from the cloud
+  } as StudySettings;
 }
 
 /** Remove the API key before a settings value is uploaded. Hard requirement:

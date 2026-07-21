@@ -6,6 +6,82 @@
 
 Adversarial re-verification against the repo confirms the design's core thesis and every coverage statistic to the decimal, but surfaces five errors and two missing work items, now fixed inline. Errors: the tier-band mapping didn't match grammarDescriptions.ts (actual: A1 01–08, A2 09–15, B1 16–21, B2 22–27, C1 28–31, C2 32–35); the 160-char hard cap would fail the design's own 187-char gold-standard tip (now 200 hard/90–160 target); de-0414 — cited as a GOOD exemplar — is itself a wrong-card mismatch; MIGRATE_TO_ETYMOLOGY is not viable cheaply (no ko/el/id etymology files, static 11-language imports, verified-sources contract with a frozen source list lacking Korean/Greek references) so glosses default to DROP; and the flag has 4 usages, not 3. Missing work: ~800 tips render literal backticks in the plain-text UI (ru 245/274, cy 167/197), and a .cjs linter cannot import the TS registry — the linter now lives inside scripts/audit-lang.ts, inheriting tsx, baseline-regression semantics, and free CI wiring via language-audit.yml. Scale corrections sharpen the plan: the German compound-noun template is stamped on 82 cards (not ~5), making Wave C a verify-everything pass, and tier-2 decks are 3,117–3,512 cards so Wave D authors ~560–700 tips per language.
 
+## ROLLOUT PLAYBOOK v2 — post-pilot (2026-07-21, Spanish SHIPPED + flipped)
+
+The Spanish pilot ran the full pipeline end-to-end and calibrated every stage.
+This is the DEFINED process for the remaining 13 languages. Reusable scripts
+from the pilot live in the session scratchpad pattern (classify wf → rewrite
+wf → fill wf → tone wf → apply_es_tips.py); per-language runs clone them with
+the language's deck path, STOP-word list, and script adaptations.
+
+### The proven 6-stage pipeline (per language)
+
+1. **CLASSIFY** every existing tip against the taxonomy (keep / rewrite / drop
+   + EARN or BANNED category). Feed each item its `dupGroupSize` from the
+   deterministic near-dup clustering (token-Jaccard 0.7, computed inline
+   first). ~14 slices, effort=high. *Pilot yield: 41% keep / 20% rewrite /
+   37% drop — expect FAR worse keep-rates in tr/ru/cy/hi (script-stamped).*
+2. **REWRITE** the salvageables around the classifier's `focus` insight +
+   adversarial verify. *Pilot: 143/143 usable, 0 over-length.*
+3. **FILL to tier bands** — compute per-node quotas from the band targets
+   (A1 35% · A2/B1 22% · B2 12% · C1/C2 10% of each node's card count, minus
+   survivors), then per-node agents SELECT worthy cards (genuine trap only —
+   "a card whose target works like English gets NO tip") and write to spec;
+   adversarial verify per node. *Pilot: 443/443, landed 22.3%.*
+4. **TONE SWEEP** the full merged set against the locked voice rule (chill +
+   factual; hook = the fact; no wordplay/metaphor/zingers). *Pilot: 61 of 881
+   flattened — the authoring prompts now carry the voice rule, so later
+   languages should need fewer.*
+5. **QUOTE-ANCHOR** stragglers: the apply-linter's token/stem floor flags tips
+   that don't visibly cite their card; a small agent pass edits them to quote
+   an exact target word. *Pilot: 88 flagged → 71 were linter-matcher gaps
+   (fixed in the matcher) → 17 real, all anchored. Do NOT loosen the matcher
+   further — touch up the tips instead.*
+6. **APPLY + LINT** (hard gates, refuse-on-fail): ≤200 chars, no backticks,
+   no markdown, quote-rule floor, exact-dup detection. Then the STRAY SWEEP:
+   diff deck-tips-present vs classification coverage — the pilot found 2 tips
+   the classifiers missed (one garbled, one backticked+wrong-card). Always
+   run it.
+
+### Pilot learnings now baked into the process
+
+- **Voice rule in the authoring prompt** (not just the sweep) — saves a stage's
+  worth of flattening.
+- **Fill collisions**: parallel authors converge on obvious sentences. Dedup
+  fills against (existing + siblings) at apply; re-author collisions against
+  an explicit AVOID list. *Pilot: 4.6% collision rate on Hindi usefulness, ~0
+  on tips fill thanks to per-node existing_tips context — keep providing it.*
+- **The linter's stem matcher cannot bridge stem changes** (quiero↔querer,
+  diphthongs) — expect ~2% flagged-but-fine; anchor them, don't loosen.
+- **Classify misses ~0.3%** of items (2/706) — the stray sweep is mandatory.
+- **Never let a fill overwrite a keep/rewrite** (guard exists in the apply
+  script).
+
+### Script adaptations for non-Latin languages (ko/el/ru/hi + cy diacritics)
+
+- **Romanization required** in every tip that cites target-script text:
+  parenthetical per the historical convention — 안녕하세요 (annyeonghaseyo).
+  The format spec's char budget INCLUDES the romanization; the 200 hard cap
+  stands (target 90–160 gets tight — audit p90 per language before fill).
+- **Quote-rule matcher**: tokenize the target in ITS script (exact token match
+  works for Hangul words / Cyrillic / Greek; Devanagari needs the same
+  matra-tolerant matching the register linter used) AND accept the tip citing
+  the romanization of a target word. Per-language STOP lists.
+- **Korean vocab-glosses DROP** (locked decision 5) — ko/el/id classify will
+  drop-heavy; their fill quotas are correspondingly larger.
+
+### Wave order + per-language prognosis
+
+| Wave | Languages | Shape of the work | Est. |
+|---|---|---|---|
+| **A** | ko, el, id | New-wave corpora: decent tips but vocab-gloss-heavy (ko 1,515 / el 1,629 / id 1,379 tips). Classify → heavy gloss-drops → moderate fill. Non-Latin matcher debuts (ko, el). | ~1 focused session each |
+| **B** | fr, it, pt, de, nl, sv | Legacy six: mixed quality; kill conjugation restatements + the **82-card German compound-noun template** + known mismatches (de-0158, de-0414); ~250 backticked tips across them; selective fill to band. | ~1–2 sessions each |
+| **C** | tr, ru, cy | Script-stamped worst: mostly drop-everything + author ~560–700 fresh per language (decks 3,117–3,512). Romanization mandatory (tr Latin but ru/cy need care). | ~2 sessions each |
+| **D** | hi | LAST — waits for the native-speaker naturalness review (task #87): no point writing tips against sentences that may be rewritten. | ~2 sessions, after #87 |
+
+**Gate per language:** linter green + adversarial verify green + coverage in
+band → add to `GRAMMAR_TIPS_LANGS` → tips go live for that language only.
+
 ## DECISIONS — LOCKED 2026-07-21
 
 **VOICE CALIBRATION (user, 2026-07-21, from pilot samples):** chill and factual. The hook must come from the surprising FACT itself (a literal gloss, a real contrast, a consequence) — never from wordplay, cutesy metaphor, or aphoristic zingers. "Desde hace años is literally 'since it makes years'" = good. "Ser judges the brand; estar savors the sip" = cringe, banned. Applies to all languages' tip authoring.

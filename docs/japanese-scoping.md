@@ -6,7 +6,17 @@
 
 Feasibility review verified the design's core mechanics against the repo — the doubled-prefix audio convention, starter hydration/lock machinery, ko-precedent dictionary/conjugation shapes, manualChunks, and cache-bump pairs all check out — but found the tokenization work surface understated roughly 2x: it is ~16 whitespace-split sites across 5 files plus a class of length-threshold heuristics (dud filter <3 chars, vocab key skip <2 chars, tile bands, font sizing) that silently break CJK even after splits are fixed, including a zero-duds tile bug and a whole-sentence-as-one-vocab-entry bug. Three claims were corrected: STARTER_LOCK is already a map (two one-line additions, not a refactor), the placement prompt is verifiably NOT gated in starter mode today (a required one-line fix that also fixes the live Spanish starter), and the Supabase-sync-strips-tokens risk is moot (sync moves progress rows, never deck content). Two missing registration items were added — NODE_NAMES.japanese (the fallback shows Romance-flavored node names in TopicMap) and CHALLENGE_NAMES/CONJUGATE_FNS entries — and ja-JP-Chirp3-HD-Aoede availability is flagged as unverifiable from this environment, requiring a 1-card smoke test before the batch. Corrected total: ~5-7 working days to the ?starter=ja milestone, ~$0.20-0.25 TTS, parity as a later XL phase with zero rework.
 
-## Decisions needed before building
+## DECISIONS — LOCKED 2026-07-21
+
+1. **Pre-tokenized `tokens` field** (Intl.Segmenter fallback only) — per reco.
+2. **Furigana: user-facing ON/OFF toggle from day 1, and it must be VISIBLE** (not buried) — CHANGED from reco (always-on). P1 gains a furigana toggle in the study surface (e.g. a small ふ/A pill on the card header) + persisted in settings; default ON.
+3. **No romaji field/toggle** — Korean precedent (romanization in dictionary + tips only) — per reco.
+4. **?starter=ja link only; Japanese hidden from the picker until parity** — per reco.
+5. **NODE_NAMES + all 35 GRAMMAR_NUDGES written now** — per reco.
+6. **TTS approved** (~$0.20–0.25 for the 300 batch) — 1-card smoke test of ja-JP-Chirp3-HD-Aoede first, per the standing cost-confirmation rule.
+7. **Register: polite です/ます starter-wide, plain form deferred to node 19+** — per reco. User adds: the politeness system SHOULD be explained in the Japanese grammar tips — but sparingly, per the tips doctrine's repetition budget (a handful of well-placed tips, not a stamp).
+
+## Decisions (original list, for reference)
 
 1. Tokenization source of truth: pre-tokenized tokens field on Japanese cards with Intl.Segmenter only as fallback (RECOMMENDED) vs pure runtime Intl.Segmenter — pre-tokens buy determinism, browser independence, and the every-token-has-a-dictionary-entry lint guarantee for near-zero authoring cost.
 2. Furigana model: kana-only seq 1-50, then always-on ruby furigana on all kanji (RECOMMENDED for v1; add a hide-furigana setting later) vs a furigana toggle from day 1 vs a kanji-free starter (rejected — not real Japanese).

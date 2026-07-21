@@ -6,7 +6,16 @@
 
 Add a mnemonic-driven, FSRS-scheduled "Learn the script" mode for the four alphabet/syllabary scripts LangLab serves — explicitly not kanji. The engine is a thin generic layer over verified-existing machinery: script items are wrapped as QuestCard-shaped objects so handleAnswerLogic (which already takes an injected saveProgress callback), mini-loop reinsertion, and the mergeMastery sync rule are reused verbatim; the UI follows the PlacementTest/ChallengeScreen phase-machine pattern. Feasibility review against the repo confirmed nearly all cited line numbers and APIs, and corrected four things: script storage MUST live in storageService.ts (safeSet/markDirty are module-private — a standalone service would silently never sync), the audio-cache double-bump is unnecessary and harmful for net-new files, the vite manualChunks change is optional (dynamic imports auto-chunk), and the kana pack has a hard compile-time dependency on a 'japanese' Language union entry that forces the teaser-vs-launch decision. V1 = engine + Hangul end-to-end, roughly 4-6 focused sessions; TTS cost for all four packs is ~$0.03-0.10, gated on a 10-clip pilot.
 
-## Decisions needed before building
+## DECISIONS — LOCKED 2026-07-21
+
+1. **V1 = Hangul end-to-end** — per reco.
+2. **Input is PER-SCRIPT, not one-size-fits-all** (user insight: typed romanization is wrong wherever the sound distinction is itself the hard part). Hangul v1: 4-choice tap both directions. Kana: 4-choice + optional typed romaji later (unambiguous mapping). **Devanagari + confusable Cyrillic: audio-led minimal-pair discrimination** — hear the sound, choose among the similar-set (ट vs त, क vs ख) — never romanization production, because typing "t" cannot express the retroflex/dental or aspiration contrast that is the actual learning goal. This makes per-character audio a hard requirement for the Devanagari pack and shapes the review-screen engine: the answer prompt is (audio | glyph | romanization) per script config.
+3. **Soft-gate only** (home banner + third placement-interstitial option) — per reco.
+4. **Streak: yes; deck counters: never.** Confirmed for the user: script progress is a fully separate track (own quest_script_<lang> storage, own FSRS state); it shares ONLY the streak with deck study.
+5. **Kana bundles with the Japanese launch** — per reco.
+6. **TTS approved** (~$0.03–0.10 all packs) after the 10-clip pilot — per reco.
+
+## Decisions (original list, for reference)
 
 1. V1 script: Hangul (recommended — biggest audience, best Reddit demo, and block composition must shape the engine from day 1) vs Cyrillic (simpler but proves a core Hangul would later break)
 2. Review input mode: 4-choice tap for v1 (recommended — mobile-first, no romanization-normalizer work, matches existing tap idioms); typed romanization deferred to v2

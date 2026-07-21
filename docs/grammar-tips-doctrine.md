@@ -6,7 +6,17 @@
 
 Adversarial re-verification against the repo confirms the design's core thesis and every coverage statistic to the decimal, but surfaces five errors and two missing work items, now fixed inline. Errors: the tier-band mapping didn't match grammarDescriptions.ts (actual: A1 01–08, A2 09–15, B1 16–21, B2 22–27, C1 28–31, C2 32–35); the 160-char hard cap would fail the design's own 187-char gold-standard tip (now 200 hard/90–160 target); de-0414 — cited as a GOOD exemplar — is itself a wrong-card mismatch; MIGRATE_TO_ETYMOLOGY is not viable cheaply (no ko/el/id etymology files, static 11-language imports, verified-sources contract with a frozen source list lacking Korean/Greek references) so glosses default to DROP; and the flag has 4 usages, not 3. Missing work: ~800 tips render literal backticks in the plain-text UI (ru 245/274, cy 167/197), and a .cjs linter cannot import the TS registry — the linter now lives inside scripts/audit-lang.ts, inheriting tsx, baseline-regression semantics, and free CI wiring via language-audit.yml. Scale corrections sharpen the plan: the German compound-noun template is stamped on 82 cards (not ~5), making Wave C a verify-everything pass, and tier-2 decks are 3,117–3,512 cards so Wave D authors ~560–700 tips per language.
 
-## Decisions needed before building
+## DECISIONS — LOCKED 2026-07-21
+
+1. **Per-language allowlist** (`GRAMMAR_TIPS_LANGS` Set + global kill switch) — per reco.
+2. **Spanish pilots first** — per reco.
+3. **Launch posture: ALL tips stay hidden at the Reddit launch** (user chose the safer alternative over unhiding es/ko/el/id). The allowlist mechanism is still built; languages are added to it only after passing their wave, and the unhide moment is a later explicit call.
+4. **Length: 200 hard / 90–160 target** — per reco.
+5. **ko/el/id vocab-glosses: DROP** (no etymology migration) — per reco.
+6. **Linter lives inside scripts/audit-lang.ts** (tsx + CI for free) — per reco.
+7. **Chip renamed "Grammar" → "Why?"** — approved.
+
+## Decisions (original list, for reference)
 
 1. Per-language allowlist vs global boolean flag — RECOMMEND per-language GRAMMAR_TIPS_LANGS Set (4 SHOW_GRAMMAR_TIPS usages across 2 files, enables per-wave unhiding; keep a global kill switch). Global-only forces all-14-or-nothing and blocks the launch posture.
 2. Pilot language — RECOMMEND Spanish (Reddit showcase + ?starter=es starter deck + 97% unique tips = fastest calibration). Alternative: Korean first if you want the non-Latin linter path proven earlier.

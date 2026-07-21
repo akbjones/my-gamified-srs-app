@@ -1398,7 +1398,7 @@ const App: React.FC = () => {
               <div className="pt-4 border-t border-[var(--border-color)] space-y-2">
                 <div className="text-xs font-bold text-[var(--text-muted)] uppercase tracking-wide">Back up your progress</div>
                 <p className="text-[11px] text-[var(--text-muted)] leading-snug">
-                  Your progress is saved only on this device. Export a backup before clearing your browser data or switching devices.
+                  Download all progress on this device as a file. Useful before clearing browser data — and it's your recovery path if you ever lose your sync code.
                 </p>
                 <div className="flex gap-2">
                   <button

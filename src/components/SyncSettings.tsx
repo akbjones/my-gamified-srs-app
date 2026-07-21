@@ -55,8 +55,8 @@ export const SyncSettings: React.FC = () => {
       idle: { t: 'Ready', c: 'text-[var(--text-faint)]' },
       syncing: { t: 'Syncing…', c: 'text-[var(--accent)]' },
       synced: { t: 'Synced ✓', c: 'text-emerald-500' },
-      offline: { t: 'Offline — will sync later', c: 'text-amber-500' },
-      error: { t: 'Sync error — retries automatically', c: 'text-red-500' },
+      offline: { t: 'Offline – will sync later', c: 'text-amber-500' },
+      error: { t: 'Sync error – retries automatically', c: 'text-red-500' },
     };
     const s = map[status];
     return <span className={`text-[11px] font-bold ${s.c}`}>{s.t}</span>;
@@ -73,7 +73,7 @@ export const SyncSettings: React.FC = () => {
       {!code && (
         <>
           <p className="text-[11px] text-[var(--text-muted)] leading-snug">
-            Study on your phone and computer with one shared progress. No account or email — you get a private sync code to link your devices.
+            Study on your phone and computer with one shared progress. No account or email – you get a private sync code to link your devices.
           </p>
           {err && <p className="text-[11px] text-red-500">{err}</p>}
           <div className="flex gap-2">

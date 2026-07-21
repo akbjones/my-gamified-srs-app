@@ -81,7 +81,7 @@ const PERSON_LABELS: Record<string, string[]> = {
   hindi: ['मैं', 'तू', 'वह/यह', 'हम', 'तुम', 'आप/वे'],
   turkish: ['ben', 'sen', 'o', 'biz', 'siz', 'onlar'],
   russian: ['я', 'ты', 'он/она', 'мы', 'вы', 'они'],
-  // Indonesian rows are affix forms, not persons — no row labels
+  // Indonesian rows are affix forms, not persons – no row labels
   indonesian: ['', '', '', '', '', ''],
   greek: ['εγώ', 'εσύ', 'αυτός/αυτή', 'εμείς', 'εσείς', 'αυτοί'],
   // Korean rows are speech-level forms, not persons
@@ -90,12 +90,12 @@ const PERSON_LABELS: Record<string, string[]> = {
 
 // Pronoun → person index. Used to disambiguate ambiguous form matches
 // using sentence context. E.g. German "spielen" matches both wir (3) and
-// sie (5) — finding "wir" in the sentence picks 3; finding nothing picks
+// sie (5) – finding "wir" in the sentence picks 3; finding nothing picks
 // 3rd person by default (since "die Kinder spielen" without an explicit
 // "sie" is still 3pl, not 1pl).
 //
 // Ambiguous pronouns (German "sie" = she/they/Sie-formal, Dutch "ze"
-// = she/they) are deliberately omitted — better to fall back to the
+// = she/they) are deliberately omitted – better to fall back to the
 // 3rd-person default than to guess wrong.
 const PRONOUN_INDEX: Record<string, Record<string, number>> = {
   spanish: { yo: 0, 'tú': 1, tu: 1, 'él': 2, ella: 2, usted: 2, ud: 2, nosotros: 3, nosotras: 3, vosotros: 4, vosotras: 4, ellos: 5, ellas: 5, ustedes: 5, uds: 5 },
@@ -115,7 +115,7 @@ const PRONOUN_INDEX: Record<string, Record<string, number>> = {
 // Tie-break order when multiple form rows match and no pronoun in context
 // resolves it. 3rd-person first because cards typically describe others
 // ("die Kinder spielen", "ele tem") without an explicit pronoun. 1st/2nd
-// person always require an explicit pronoun in most languages — if no
+// person always require an explicit pronoun in most languages – if no
 // pronoun is present, those persons are unlikely intent.
 const PERSON_TIEBREAK = [2, 5, 3, 0, 1, 4];
 
@@ -237,7 +237,7 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
     }
 
     // Analytics: a definition popover is OPENING (not toggling closed).
-    // Language only — the tapped word is never sent.
+    // Language only – the tapped word is never sent.
     if (activeIndex !== index) trackDictionaryOpened(language);
 
     setActiveIndex(activeIndex === index ? null : index);
@@ -373,7 +373,7 @@ const PopoverPortal: React.FC<{
     const conjugateFn = CONJUGATE_FNS[language];
     if (!conjugateFn) return null;
 
-    // Aspect-pair swap takes precedence — when the user clicks the pair link
+    // Aspect-pair swap takes precedence – when the user clicks the pair link
     // we just conjugate the target verb directly, no fallback chain.
     if (swappedTo) return conjugateFn(swappedTo);
 
@@ -385,7 +385,7 @@ const PopoverPortal: React.FC<{
 
     // Lemma FIRST when the dict entry is inflected. A `lemma` field on a
     // dict entry means "this is an inflected form; the real infinitive is
-    // X" — so we MUST go to X to get the correct table. Without this we
+    // X" – so we MUST go to X to get the correct table. Without this we
     // hit the bug where conjugatePt("quer") happily returns a fake -er
     // verb on stem "qu" (forms: quo, ques, que, ...) instead of resolving
     // to "querer". The fake table title showed "quer", the row matcher
@@ -396,7 +396,7 @@ const PopoverPortal: React.FC<{
       if (result) return result;
     }
 
-    // No lemma in the entry (or the lemma engine call failed) — try the
+    // No lemma in the entry (or the lemma engine call failed) – try the
     // raw token itself. Works when tapping a real infinitive like "parler"
     // that has no `lemma` field of its own.
     const direct = conjugateFn(clean);
@@ -478,10 +478,10 @@ const PopoverPortal: React.FC<{
   // word like "entendo," (with a comma from the sentence) still matches the
   // form "entendo" in the table. Strict preserves diacritics so we can
   // distinguish "tem" (3sg, no accent) from "têm" (3pl, circumflex) in
-  // Portuguese — same letters, different forms. Loose strips accents as a
+  // Portuguese – same letters, different forms. Loose strips accents as a
   // tolerant fallback for cases like a user tapping "ecris" when the table
   // has "j'écris".
-  const stripPunct = (s: string) => s.replace(/[.,!?;:""''«»()¿¡—–\-।॥]/g, '');
+  const stripPunct = (s: string) => s.replace(/[.,!?;:""''«»()¿¡––\-।॥]/g, '');
   // French elision: tokens like "j'aurais", "m'avais", "n'est", "qu'on" carry
   // a contraction prefix that the conjugation engine never emits. Strip it
   // for matching purposes so the verb form alone matches the table row.
@@ -496,23 +496,23 @@ const PopoverPortal: React.FC<{
   const looseToken  = loose(rawToken);
   const normalizedToken = looseToken;
 
-  // For each tense, the exact form-row index the user tapped — -1 if no match.
+  // For each tense, the exact form-row index the user tapped – -1 if no match.
   //
   //   1. Strict pass collects ALL rows whose form equals the tapped token
-  //      (case-folded, accents preserved — so "tem" doesn't match "têm").
+  //      (case-folded, accents preserved – so "tem" doesn't match "têm").
   //   2. If only one strict match, use it.
   //   3. If multiple (e.g. German "spielen" = wir/sie/Sie share the form),
   //      look for a pronoun in the sentence that points at one of them.
   //   4. Otherwise tie-break by PERSON_TIEBREAK (3sg/3pl preferred over 1/2
   //      person, because cards without an explicit pronoun usually describe
-  //      a 3rd-person subject — "die Kinder spielen", not "we play").
+  //      a 3rd-person subject – "die Kinder spielen", not "we play").
   //   5. If no strict match at all, repeat with loose (accent-stripped) match
   //      as a tolerant fallback.
   const matchedIndexPerTense = React.useMemo(() => {
     const out: Record<string, number> = {};
     if (!conjTable) return out;
 
-    // Detect pronouns nearby in the sentence — these break ties when the form
+    // Detect pronouns nearby in the sentence – these break ties when the form
     // matches multiple person rows.
     const pronouns = PRONOUN_INDEX[language] || {};
     const tokens = sentence
@@ -534,13 +534,13 @@ const PopoverPortal: React.FC<{
       return matches[0];
     };
 
-    // Word-level helpers — needed because compound conjugation forms span
+    // Word-level helpers – needed because compound conjugation forms span
     // multiple words ("देता हूँ", "ho mangiato", "j'ai mangé", "ich habe
     // gegessen"). The user taps ONE word, but the whole-string comparison
     // never matches. Splitting the form on whitespace and matching the
     // tapped token against any of its words resolves this for every
     // compound-tense language at once.
-    const stripPunctLocal = (s: string) => s.replace(/[.,!?;:""''«»()¿¡—–\-।॥]/g, '');
+    const stripPunctLocal = (s: string) => s.replace(/[.,!?;:""''«»()¿¡––\-।॥]/g, '');
     // Split on whitespace AND slash. Engines emit slash-joined alternates for
     // gender (Russian past "встречался/встречалась") and stress-variant
     // imperatives (Russian "позволи/позволь", "позволите/позвольте"). Both
@@ -551,7 +551,7 @@ const PopoverPortal: React.FC<{
       wordsOf(form).some(w => normFn(w) === target);
 
     for (const [tense, forms] of Object.entries(conjTable.tenses)) {
-      // Pass 1 — strict full-string match (preserves accents).
+      // Pass 1 – strict full-string match (preserves accents).
       const strictMatches: number[] = [];
       forms.forEach((f, i) => {
         if (f && f !== '-' && strict(f) === strictToken) strictMatches.push(i);
@@ -560,7 +560,7 @@ const PopoverPortal: React.FC<{
         out[tense] = pickBest(strictMatches);
         continue;
       }
-      // Pass 2 — loose full-string match (accent-stripped).
+      // Pass 2 – loose full-string match (accent-stripped).
       const looseMatches: number[] = [];
       forms.forEach((f, i) => {
         if (f && f !== '-' && loose(f) === looseToken) looseMatches.push(i);
@@ -569,7 +569,7 @@ const PopoverPortal: React.FC<{
         out[tense] = pickBest(looseMatches);
         continue;
       }
-      // Pass 3 — word-level strict match. Splits the form on whitespace and
+      // Pass 3 – word-level strict match. Splits the form on whitespace and
       // checks if any word matches the tapped token. Catches Hindi "देता हूँ",
       // Italian "ho mangiato", French "j'ai mangé", German "habe gegessen".
       const wordStrictMatches: number[] = [];
@@ -580,7 +580,7 @@ const PopoverPortal: React.FC<{
         out[tense] = pickBest(wordStrictMatches);
         continue;
       }
-      // Pass 4 — word-level loose match.
+      // Pass 4 – word-level loose match.
       const wordLooseMatches: number[] = [];
       forms.forEach((f, i) => {
         if (f && f !== '-' && formContainsWord(f, s => loose(s), looseToken)) wordLooseMatches.push(i);
@@ -589,7 +589,7 @@ const PopoverPortal: React.FC<{
         out[tense] = pickBest(wordLooseMatches);
         continue;
       }
-      // Pass 5 — German colloquial -e drop. Speakers commonly drop the final
+      // Pass 5 – German colloquial -e drop. Speakers commonly drop the final
       // -e from 1sg present ("ich hab" instead of "ich habe", "ich sag"
       // instead of "ich sage"). The engine emits the formal -e form, so add
       // an "e" to the tapped token and retry.
@@ -611,13 +611,13 @@ const PopoverPortal: React.FC<{
         out[tense] = pickBest(augLooseMatches);
         continue;
       }
-      // Pass 5 — Welsh consonant mutations. The engine emits the radical (base)
+      // Pass 5 – Welsh consonant mutations. The engine emits the radical (base)
       // form (e.g. "clywed", "rhedeg", "gallu") but on cards the form may be
       // soft-mutated by a triggering preposition or particle:
       //   c → g    (clywed → glywed)
       //   p → b    (pen → ben)
       //   t → d    (tad → dad)
-      //   g → Ø    (gallu → allu — the G is dropped entirely)
+      //   g → Ø    (gallu → allu – the G is dropped entirely)
       //   b → f    (bod → fod)
       //   d → dd   (dod → ddod)
       //   m → f    (mam → fam)
@@ -683,7 +683,7 @@ const PopoverPortal: React.FC<{
       }
     }
     // No row matched. Detect the "user tapped the infinitive itself" case so
-    // we can show a friendly badge instead of a blank header — saves the
+    // we can show a friendly badge instead of a blank header – saves the
     // table looking broken when it's just the dictionary form.
     if (conjTable.infinitive) {
       const infNorm = strict(conjTable.infinitive);
@@ -713,7 +713,7 @@ const PopoverPortal: React.FC<{
 
   // Scroll the active tense tab into view in the horizontally-scrolling tab
   // bar. Critical for Turkish/Hindi/Russian where 15+ tenses don't all fit
-  // on screen — without this the active tab can be off-screen and the user
+  // on screen – without this the active tab can be off-screen and the user
   // doesn't know which tense the conjugation matches.
   useEffect(() => {
     if (!showConj || !tenseTabBarRef.current) return;
@@ -870,7 +870,7 @@ const PopoverPortal: React.FC<{
       <div className="mt-2 flex justify-end">
         <button
           onClick={() => {
-            // 1) Persist the flag to localStorage synchronously — this is the
+            // 1) Persist the flag to localStorage synchronously – this is the
             //    real "save" path. Anything below is best-effort telemetry.
             const flagEntry = {
               language,
@@ -886,7 +886,7 @@ const PopoverPortal: React.FC<{
             }
 
             // Analytics: feedback submitted. Only the language and feedback
-            // type are sent — the word/translation/sentence stay local.
+            // type are sent – the word/translation/sentence stay local.
             trackFeedbackSubmitted(language, 'word_flag');
 
             // 2) Fire-and-forget Netlify form submission with a 4-second hard
@@ -909,7 +909,7 @@ const PopoverPortal: React.FC<{
               headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
               body: formData.toString(),
               signal: ctrl.signal,
-            }).catch(() => { /* silently ignore — localStorage already has it */ });
+            }).catch(() => { /* silently ignore – localStorage already has it */ });
 
             // 3) Dismiss the popover immediately so the user sees feedback,
             //    not a stuck "Sending..." button.
@@ -962,7 +962,7 @@ const PopoverPortal: React.FC<{
                   </span>
                 )}
               </div>
-              {/* Russian aspect indicator — shows imperfective/perfective/bi-aspectual
+              {/* Russian aspect indicator – shows imperfective/perfective/bi-aspectual
                   badge + pair link + (where present) a user-friendly explainer for
                   suppletive pairs, motion verbs, and semantic shifts. */}
               {(() => {
@@ -1014,7 +1014,7 @@ const PopoverPortal: React.FC<{
               })()}
             </div>
 
-            {/* "On this card" banner — spells out the matched form + tense + person
+            {/* "On this card" banner – spells out the matched form + tense + person
                 before the user has to scan the table. Branches: matched form (amber)
                 vs infinitive-tapped (blue informational). The latter prevents the
                 overlay looking broken when the user tapped the dictionary form. */}
@@ -1050,7 +1050,7 @@ const PopoverPortal: React.FC<{
               </div>
             )}
 
-            {/* Tense tabs — single-row horizontal scroll. Languages like Turkish
+            {/* Tense tabs – single-row horizontal scroll. Languages like Turkish
                 have 17 tenses; wrapping them onto multiple rows ate all the
                 vertical real estate and left a tiny window for the actual
                 conjugation forms. Horizontal scroll keeps the tab strip a

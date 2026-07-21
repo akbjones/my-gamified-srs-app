@@ -77,9 +77,9 @@ const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
 
 type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB' | 'FAVORITES' | 'LISTEN' | 'CHECKIN';
 
-// Deck loaders — DYNAMIC imports so each language's deck.json is its own chunk,
+// Deck loaders – DYNAMIC imports so each language's deck.json is its own chunk,
 // fetched on demand. Keeps the main bundle small (~1 MB vs ~5 MB) and only pulls
-// the deck a visitor actually studies — a big first-load + per-visit egress win.
+// the deck a visitor actually studies – a big first-load + per-visit egress win.
 // Chunks are named `deck-<lang>` (see vite.config.ts manualChunks) and are
 // runtime-cached by the service worker, not precached.
 const DECK_LOADERS: Record<Language, () => Promise<any[]>> = {
@@ -101,14 +101,14 @@ const DECK_LOADERS: Record<Language, () => Promise<any[]>> = {
 
 // ── Locked shareable starter mode ────────────────────────────────
 // Opening the app with ?starter=es boots straight into the curated
-// 300-card Spanish starter deck and locks the app to it — the language
+// 300-card Spanish starter deck and locks the app to it – the language
 // switcher is disabled so a visitor can ONLY use the Spanish starter.
 // Same deploy, auto-updates via the starter manifest. Add more starters
 // here by mapping their code → deck.
 const STARTER_PARAM = typeof window !== 'undefined'
   ? new URLSearchParams(window.location.search).get('starter')
   : null;
-// Starter decks are lazy too — the curated Spanish starter (and the Spanish
+// Starter decks are lazy too – the curated Spanish starter (and the Spanish
 // deck it hydrates from) only load when the app is in ?starter= mode.
 const STARTER_LOADERS: Partial<Record<Language, () => Promise<any[]>>> = {
   spanish: () => import('./data/starterDecks').then(m => m.SPANISH_STARTER),
@@ -186,7 +186,7 @@ const buildDeck = (
       failCount: (saved?.failCount as number) ?? 0,
       isLeech: (saved?.isLeech as boolean) ?? false,
       isSuspended: (saved?.isSuspended as boolean) ?? false,
-      // FSRS memory state (undefined for cards not yet reviewed under FSRS —
+      // FSRS memory state (undefined for cards not yet reviewed under FSRS –
       // the engine then migrates them from interval/ease on first review).
       stability: (saved?.stability as number) ?? undefined,
       difficulty: (saved?.difficulty as number) ?? undefined,
@@ -264,7 +264,7 @@ const App: React.FC = () => {
   // user wanders into Settings). Shown once, only to users with meaningful
   // progress to protect; 'Later' dismisses forever (device-local flag).
   const [showSyncNudge, setShowSyncNudge] = useState(false);
-  // Rating tally for the session in progress — evidence for the one-shot
+  // Rating tally for the session in progress – evidence for the one-shot
   // difficulty check-in screen (CHECKIN view).
   const [sessionTally, setSessionTally] = useState({ noIdea: 0, hard: 0, good: 0, easy: 0 });
   const langDropdownRef = useRef<HTMLDivElement>(null);
@@ -293,7 +293,7 @@ const App: React.FC = () => {
 
   // Cross-device sync: wire background pull/push to the app lifecycle. When a
   // background pull brings in newer progress from another device, rehydrate by
-  // reloading — but never mid-session (the guard reads the view via a ref so it
+  // reloading – but never mid-session (the guard reads the view via a ref so it
   // stays fresh inside the once-registered listener). No-ops unless sync is on.
   const viewRef = useRef(view);
   viewRef.current = view;
@@ -324,7 +324,7 @@ const App: React.FC = () => {
       setProgressState(loadProgressState(lang));
       setVocabMap(loadVocabMap(lang));
       setFavoritesMap(loadFavorites(lang));
-    }).catch(() => { /* deck chunk failed to load — leave deck empty; UI stays on home */ });
+    }).catch(() => { /* deck chunk failed to load – leave deck empty; UI stays on home */ });
     return () => { cancelled = true; };
   }, [lang, goal]);
 
@@ -459,8 +459,8 @@ const App: React.FC = () => {
     // New cards come from the current frontier node (graded progression).
     // Model A: a normal Study press = due reviews + the WHOLE remaining daily
     // new-card allowance in one go (no per-session sub-cap, no prompt). An
-    // explicit numeric count (the "add more" panels) means EXACTLY that many —
-    // including 0 — and is allowed to exceed the daily allowance.
+    // explicit numeric count (the "add more" panels) means EXACTLY that many –
+    // including 0 – and is allowed to exceed the daily allowance.
     const dailyLimitRemaining = getDailyLimitFor(settings, lang) - dailyStats.newCardsCount;
     const explicitCount = typeof studyMore === 'number';
     const newLimit = explicitCount
@@ -695,7 +695,7 @@ const App: React.FC = () => {
   };
 
   const handleLanguageChange = (newLang: Language) => {
-    if (STARTER_LOCK) return; // locked starter link — no switching languages
+    if (STARTER_LOCK) return; // locked starter link – no switching languages
     trackLanguageSelected(newLang); // analytics: language name only
     handleUpdateSettings({ ...settings, selectedLanguage: newLang });
   };
@@ -899,11 +899,11 @@ const App: React.FC = () => {
           <button
             onClick={() => {
               if (!STARTER_LOCK && !isPlacementComplete(lang)) {
-                // Full-screen fork (PlacementTest intro) — no dismissible modal.
+                // Full-screen fork (PlacementTest intro) – no dismissible modal.
                 // Locked starter links skip placement entirely.
                 setView('PLACEMENT');
               } else {
-                // Model A: go straight into studying — due reviews + today's
+                // Model A: go straight into studying – due reviews + today's
                 // remaining new-card allowance. No pre-study prompt.
                 handleStartSession();
               }
@@ -928,7 +928,7 @@ const App: React.FC = () => {
 
           {/* When all reviews are done, offer an inline way to pull more
               cards into today's queue. Same panel that appears at the end
-              of a study session — bringing it up-front so the user isn't
+              of a study session – bringing it up-front so the user isn't
               stuck at "All caught up" when they still want to learn. */}
           {!hasCards && isPlacementComplete(lang) && (
             <>
@@ -938,7 +938,7 @@ const App: React.FC = () => {
                 onStart={(count) => handleStartSession(count)}
               />
               <p className="text-[11px] text-center text-[var(--text-muted)] -mt-1 mb-2">
-                That’s today’s {getDailyLimitFor(settings, lang)} new cards done — add more above, or change the daily amount in Settings.
+                That’s today’s {getDailyLimitFor(settings, lang)} new cards done – add more above, or change the daily amount in Settings.
               </p>
             </>
           )}
@@ -1146,7 +1146,7 @@ const App: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-bold text-[var(--text-primary)] text-center mb-1.5">New: sync across devices</h3>
                 <p className="text-sm text-[var(--text-muted)] text-center mb-5">
-                  Study on your phone and computer with one shared progress. No account — just a private code that links your devices.
+                  Study on your phone and computer with one shared progress. No account – just a private code that links your devices.
                 </p>
                 <div className="flex gap-2">
                   <button
@@ -1418,12 +1418,12 @@ const App: React.FC = () => {
                   nothing unless the Supabase env is configured. */}
               <SyncSettings />
 
-              {/* Backup — a device-local JSON backup, and the durable recovery
+              {/* Backup – a device-local JSON backup, and the durable recovery
                   path if a sync code is lost. */}
               <div className="pt-4 border-t border-[var(--border-color)] space-y-2">
                 <div className="text-xs font-bold text-[var(--text-muted)] uppercase tracking-wide">Back up your progress</div>
                 <p className="text-[11px] text-[var(--text-muted)] leading-snug">
-                  Download all progress on this device as a file. Useful before clearing browser data — and it's your recovery path if you ever lose your sync code.
+                  Download all progress on this device as a file. Useful before clearing browser data – and it's your recovery path if you ever lose your sync code.
                 </p>
                 <div className="flex gap-2">
                   <button
@@ -1448,7 +1448,7 @@ const App: React.FC = () => {
                 </div>
               </div>
 
-              {/* Placement — framed as the benefit, always recoverable. */}
+              {/* Placement – framed as the benefit, always recoverable. */}
               <div className="pt-4 border-t border-[var(--border-color)] space-y-2">
                 <div className="text-xs font-bold text-[var(--text-muted)] uppercase tracking-wide">Your level</div>
                 {!STARTER_LOCK && (
@@ -1461,7 +1461,7 @@ const App: React.FC = () => {
                   >
                     {isPlacementTaken(lang)
                       ? 'Retake placement test'
-                      : 'Skip ahead — take the placement test'}
+                      : 'Skip ahead – take the placement test'}
                   </button>
                 )}
               </div>
@@ -1515,7 +1515,7 @@ const App: React.FC = () => {
           onAbort={() => {
             setPendingChallenge(null);
             // One-shot difficulty check-in: a full screen (not a popup), once
-            // per language, after there's real evidence — >=25 lifetime reviews
+            // per language, after there's real evidence – >=25 lifetime reviews
             // and >=8 answers in the session that just ended.
             const answered = sessionTally.noIdea + sessionTally.hard + sessionTally.good + sessionTally.easy;
             if (!STARTER_LOCK && !isCheckinDone(lang) && userStats.totalReviews >= 25 && answered >= 8) {
@@ -1658,17 +1658,17 @@ const App: React.FC = () => {
             }
             // Concrete signal that placement actually moved their progress.
             // Without this users complained "did anything happen?" because the
-            // graduated cards' due dates are 4-10 days out — they don't show
+            // graduated cards' due dates are 4-10 days out – they don't show
             // up in TODAY's queue.
             setPlacementToast(
               fastTrackedCount > 0
-                ? `Placement saved — ${fastTrackedCount.toLocaleString()} cards marked as known`
-                : `Placement complete — starting from the beginning`
+                ? `Placement saved – ${fastTrackedCount.toLocaleString()} cards marked as known`
+                : `Placement complete – starting from the beginning`
             );
             setView('HOME');
           }}
           onSkip={() => {
-            // "I'm new — start from zero": decline placement and go straight
+            // "I'm new – start from zero": decline placement and go straight
             // into the first session (what the user was trying to do).
             setPlacementComplete(lang);
             setDeck(prev => [...prev]);

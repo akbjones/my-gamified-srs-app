@@ -17,9 +17,9 @@ interface PlacementTestProps {
   userStats: UserStats;
   masteryMap: MasteryMap;
   onComplete: (newMasteryMap: MasteryMap, newUserStats: UserStats, fastTrackedCount: number) => void;
-  /** Decline: "I'm new — start from zero". Marks placement complete and starts studying. */
+  /** Decline: "I'm new – start from zero". Marks placement complete and starts studying. */
   onSkip: () => void;
-  /** Leave without deciding (back/exit). Placement stays incomplete — the fork
+  /** Leave without deciding (back/exit). Placement stays incomplete – the fork
    *  screen reappears on the next Study tap. Nothing is permanent. */
   onExit: () => void;
   autoPlayAudio: boolean;
@@ -30,10 +30,10 @@ interface PlacementTestProps {
 type Phase = 'intro' | 'question' | 'reveal' | 'results';
 
 /** Scoring (2 cards per node, points no_idea=0 hard=1 knew=2 easy=3, max 6):
- *   total ≤ 2  → FAIL the node (includes no_idea+knew_it — previously a pass)
+ *   total ≤ 2  → FAIL the node (includes no_idea+knew_it – previously a pass)
  *   total = 3  → WOBBLE: passes, but two wobbles in a row fail the second
  *   total ≥ 4  → pass ('strong' when ≥ 5)
- *  Every rule is reachable with n=2 — the old "3 mostly → fail" branch never
+ *  Every rule is reachable with n=2 – the old "3 mostly → fail" branch never
  *  could fire. There is no per-card Skip anymore: "No idea" IS the honest
  *  skip, and it scores. */
 function nodeVerdict(points: number[]): { fail: boolean; wobble: boolean; strength: NodeStrength } {
@@ -78,7 +78,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   // Pre-select 2 cards per node (35 nodes × 2 = 70 total cards)
   const placementCards = useMemo(() => selectPlacementCards(deck), [deck]);
 
-  // Card-based progress (single scale — the header shows the same count)
+  // Card-based progress (single scale – the header shows the same count)
   const totalTestCards = placementCards.reduce((sum, arr) => sum + arr.length, 0);
   const completedCards = placementCards
     .slice(0, nodeIndex)
@@ -116,7 +116,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
 
   /** Advance after the current card has a rating recorded in `points`.
    *  Called with the FRESH points map (state updates are async). Confident
-   *  ratings skip the reveal screen entirely — half the taps for the users
+   *  ratings skip the reveal screen entirely – half the taps for the users
    *  the test exists for. */
   function advance(points: Record<number, number[]>) {
     const nodeCards = placementCards[nodeIndex] || [];
@@ -129,7 +129,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
       return;
     }
 
-    // Node complete — verdict
+    // Node complete – verdict
     const v = nodeVerdict(points[nodeIndex] || []);
     if (v.fail || (v.wobble && prevWobbleRef.current)) {
       setCeilingNode(nodeIndex);
@@ -219,14 +219,14 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           </div>
           <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
             Know some {LANGUAGE_CONFIG[lang].name}? A quick check finds your level and marks
-            everything below it as learned — that can be hundreds of cards you'll
+            everything below it as learned – that can be hundreds of cards you'll
             never have to grind through.
           </p>
           <div className="stat-card p-3.5 mb-6">
             <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
               <span className="font-bold text-[var(--text-primary)]">How it works:</span>
               {' '}you'll see sentences from easy to advanced and rate each one with the
-              same buttons you'll use when studying. Rate before revealing the English —
+              same buttons you'll use when studying. Rate before revealing the English –
               "Knew it" means you understood it on your own.
             </p>
           </div>
@@ -245,7 +245,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           onClick={onSkip}
           className="w-full py-2.5 rounded-xl text-sm font-bold bg-[var(--bg-inset)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] active:scale-95 transition"
         >
-          I'm new — start from zero
+          I'm new – start from zero
         </button>
       </div>
     );
@@ -269,7 +269,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           </span>
         </div>
 
-        {/* Progress bar — same card-based scale as the header count */}
+        {/* Progress bar – same card-based scale as the header count */}
         <div className="h-1 bg-[var(--progress-bg)] rounded-full mb-6 overflow-hidden">
           <div
             className="h-full rounded-full transition-all duration-300"
@@ -308,7 +308,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           </div>
         </div>
 
-        {/* Rating buttons — the SAME four you use when studying, low → high.
+        {/* Rating buttons – the SAME four you use when studying, low → high.
             After peeking at the English, "Very easy" is off the table: you
             can't claim a sentence was trivially easy if you needed the answer. */}
         <div className="grid grid-cols-4 gap-1.5 mt-4 mb-2 shrink-0">
@@ -344,14 +344,14 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
         </div>
         {peeked && (
           <p className="text-center text-[10px] text-[var(--text-faint)] mb-2 shrink-0">
-            You peeked — "Very easy" is for sentences you didn't need the translation for.
+            You peeked – "Very easy" is for sentences you didn't need the translation for.
           </p>
         )}
       </div>
     );
   }
 
-  // ── Reveal screen (only after uncertain ratings — No idea / Hard) ──
+  // ── Reveal screen (only after uncertain ratings – No idea / Hard) ──
 
   if (phase === 'reveal' && currentCard) {
     return (
@@ -486,7 +486,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
               <div className="stat-card p-4 mb-4 text-center">
                 <p className="text-3xl font-black text-[var(--accent)] mb-1">{projected.toLocaleString()}</p>
                 <p className="text-xs text-[var(--text-secondary)]">
-                  cards marked as known — you skip straight past them
+                  cards marked as known – you skip straight past them
                 </p>
               </div>
               <p className="text-xs text-[var(--text-muted)] mb-1 flex items-center justify-center gap-2">
@@ -495,7 +495,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
                 <span className="font-bold text-[var(--text-secondary)]">{ceilingNodeObj ? getNodeName(ceilingNodeObj.id, lang) : ''}</span>
               </p>
               <p className="text-[10px] text-[var(--text-faint)] text-center mt-2">
-                Skipped cards come back as spaced reviews over the next days — nothing is lost.
+                Skipped cards come back as spaced reviews over the next days – nothing is lost.
               </p>
             </>
           ) : ceilingNode === 0 ? (

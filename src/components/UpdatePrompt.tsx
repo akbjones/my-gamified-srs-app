@@ -6,7 +6,7 @@ import { RefreshCw, X } from 'lucide-react';
  * to reload. Necessary because our audio pipeline occasionally
  * reshuffles which MP3 file corresponds to which card. When that
  * happens, users on a stale bundle end up hearing audio from the WRONG
- * card — the visible sentence and the audio no longer match. Once a
+ * card – the visible sentence and the audio no longer match. Once a
  * new SW takes control we cannot un-poison in-memory state; only a
  * page reload fixes it.
  *
@@ -21,7 +21,7 @@ const UpdatePrompt: React.FC = () => {
   useEffect(() => {
     if (!('serviceWorker' in navigator)) return;
 
-    // Fires exactly once — when a new SW takes over from an old one.
+    // Fires exactly once – when a new SW takes over from an old one.
     // The initial page load doesn't fire this because no controller was
     // previously in place. That means we only bother the user on genuine
     // updates, not first-run.
@@ -50,7 +50,7 @@ const UpdatePrompt: React.FC = () => {
             New version ready
           </div>
           <div className="text-xs text-[var(--text-secondary)] leading-snug">
-            Reload to apply — cards and audio will resync.
+            Reload to apply – cards and audio will resync.
           </div>
         </div>
         <button

@@ -4,8 +4,8 @@ interface Props { children: React.ReactNode }
 interface State { hasError: boolean }
 
 /**
- * Top-level crash guard. Anything that throws during render — corrupt
- * localStorage, a bad deck field, a component bug — shows a recoverable
+ * Top-level crash guard. Anything that throws during render – corrupt
+ * localStorage, a bad deck field, a component bug – shows a recoverable
  * fallback instead of a blank white screen. Styles are inline so the
  * fallback renders even if the stylesheet failed to load.
  *
@@ -38,7 +38,7 @@ export default class ErrorBoundary extends React.Component<Props, State> {
         <div style={{ fontSize: '2rem' }}>😵‍💫</div>
         <h1 style={{ fontSize: '1.25rem', fontWeight: 800, margin: 0 }}>Something went wrong</h1>
         <p style={{ fontSize: '0.9rem', color: '#6b7280', maxWidth: '20rem', margin: 0 }}>
-          The app hit an unexpected error. Your progress is saved on this device — a reload usually fixes it.
+          The app hit an unexpected error. Your progress is saved on this device – a reload usually fixes it.
         </p>
         <button
           onClick={() => { try { window.location.reload(); } catch { /* noop */ } }}

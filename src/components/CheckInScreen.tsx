@@ -2,7 +2,7 @@ import React from 'react';
 import { Language, LANGUAGE_CONFIG } from '../types';
 import { Gauge, FastForward, Check, Feather } from 'lucide-react';
 
-/** Tally of the ratings from the session that just ended — the evidence line. */
+/** Tally of the ratings from the session that just ended – the evidence line. */
 export interface SessionTally { noIdea: number; hard: number; good: number; easy: number }
 
 interface CheckInScreenProps {
@@ -19,7 +19,7 @@ interface CheckInScreenProps {
 }
 
 /**
- * One-shot difficulty check-in — a full SCREEN in the view FSM, deliberately
+ * One-shot difficulty check-in – a full SCREEN in the view FSM, deliberately
  * not a dismissible popup (popups get clicked away unnoticed). Shown once per
  * language, at the end of an early session, once there's real evidence to
  * show. Every answer has a concrete consequence, stated on the button.
@@ -32,11 +32,11 @@ const CheckInScreen: React.FC<CheckInScreenProps> = ({ lang, tally, onTooEasy, o
         <div className="flex items-center gap-2 mb-3">
           <Gauge size={20} className="text-[var(--accent)]" />
           <h1 className="text-2xl font-black text-[var(--text-primary)]">
-            Quick check — how's the difficulty?
+            Quick check – how's the difficulty?
           </h1>
         </div>
         <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
-          You've studied {LANGUAGE_CONFIG[lang].name} a few times now. One question, once —
+          You've studied {LANGUAGE_CONFIG[lang].name} a few times now. One question, once –
           so your starting level isn't quietly wrong for weeks.
         </p>
         {total > 0 && (
@@ -77,7 +77,7 @@ const CheckInScreen: React.FC<CheckInScreenProps> = ({ lang, tally, onTooEasy, o
               <span className="text-sm font-black text-emerald-500">About right</span>
             </div>
             <p className="text-xs text-[var(--text-muted)]">
-              Great — nothing changes, and we won't ask again.
+              Great – nothing changes, and we won't ask again.
             </p>
           </button>
 

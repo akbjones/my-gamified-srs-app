@@ -68,7 +68,7 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
     }
     // Advance to the next card, but ALWAYS keep it on screen long enough to
     // read. When audio genuinely can't play, playback resolves/rejects almost
-    // instantly — without a floor the deck would zip past silently. MIN_CARD_MS
+    // instantly – without a floor the deck would zip past silently. MIN_CARD_MS
     // guarantees a readable dwell. Both the guard here AND the timer body check
     // the generation, so a superseded run neither advances nor replays.
     const MIN_CARD_MS = 3500;
@@ -87,7 +87,7 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
       await playCardAudio(card.audio, card.target, language, audioSpeed, googleTtsApiKey);
       advance(1200);
     } catch {
-      // Audio failed — don't zip past; hold for the readable minimum.
+      // Audio failed – don't zip past; hold for the readable minimum.
       advance(0);
     }
   }, [card, language, audioSpeed, googleTtsApiKey, isPlaying, cards.length]);

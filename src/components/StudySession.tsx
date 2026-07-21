@@ -101,7 +101,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   // "Has the user discovered the word popover feature?" gate for the
   // recurring tap-hint below the card. True as soon as EITHER (a) they've
   // saved a word in this language, or (b) they've opened any word popover
-  // at least once — because if they've seen a definition come up, they
+  // at least once – because if they've seen a definition come up, they
   // already know the feature exists.
   const [hasDiscoveredWords, setHasDiscoveredWords] = useState(
     () =>
@@ -112,7 +112,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   // All hooks MUST be above any early return
 
   // Warm the audio cache for the session's opening cards as soon as the
-  // session starts — cold-start fetch flakiness on a card's first
+  // session starts – cold-start fetch flakiness on a card's first
   // appearance was the "no audio / different voice" bug.
   useEffect(() => {
     preloadSessionAudio(session.queue.map(c => c.audio));
@@ -248,7 +248,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   const countLearn = remainingQueue.filter(c => c.mastery === 1).length;
   const countReview = remainingQueue.filter(c => c.mastery === 2).length;
 
-  // The state of the card currently on screen — new (never seen), learning
+  // The state of the card currently on screen – new (never seen), learning
   // (in the short-term steps), or review (graduated to spaced repetition).
   // Colour-matched to the new/learn/review counters in the top bar.
   const cardState = card!.mastery === 0
@@ -283,7 +283,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
 
   return (
     <>
-      {/* First-time intro — only on first study session, persisted via
+      {/* First-time intro – only on first study session, persisted via
           localStorage key FIRST_WOW_KEY. */}
       {showFirstWowHint && (
         <FirstTimeIntro onDismiss={dismissFirstWowHint} />
@@ -447,7 +447,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                   <span>Why?</span>
                 </button>
               )}
-              {/* Etymology only on the reverse — the front is for recall, so
+              {/* Etymology only on the reverse – the front is for recall, so
                   the word-origin hint appears once the card is flipped. */}
               {isFlipped && cardEty && (
                 <button
@@ -558,7 +558,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                     <p className={`${engSizeClass} text-[var(--text-secondary)] font-bold italic leading-relaxed`}>
                       {card!.english}
                     </p>
-                    {/* Tap-hint now lives here — words only become tappable
+                    {/* Tap-hint now lives here – words only become tappable
                         once the card is flipped, so the hint is honest.
                         Disappears the moment the user opens any popover. */}
                     {!hasDiscoveredWords && (
@@ -630,7 +630,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                 <button
                   onClick={() => {
                     // Back from a flipped card should undo the last answer
-                    // and take the user to the previous card entirely —
+                    // and take the user to the previous card entirely –
                     // not just flip this one over. Matches expected
                     // behaviour of a "Back" affordance.
                     setIsFlipped(false);

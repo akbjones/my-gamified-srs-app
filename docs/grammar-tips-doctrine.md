@@ -84,7 +84,7 @@ band → add to `GRAMMAR_TIPS_LANGS` → tips go live for that language only.
 
 ## DECISIONS — LOCKED 2026-07-21
 
-**VOICE CALIBRATION (user, 2026-07-21, from pilot samples):** chill and factual. The hook must come from the surprising FACT itself (a literal gloss, a real contrast, a consequence) — never from wordplay, cutesy metaphor, or aphoristic zingers. "Desde hace años is literally 'since it makes years'" = good. "Ser judges the brand; estar savors the sip" = cringe, banned. Applies to all languages' tip authoring.
+**VOICE CALIBRATION (user, 2026-07-21, from pilot samples):** **PUNCTUATION: no em dashes (—) anywhere user-visible – use en dashes (–). Applies to tips, UI copy, and all future authoring prompts.** chill and factual. The hook must come from the surprising FACT itself (a literal gloss, a real contrast, a consequence) — never from wordplay, cutesy metaphor, or aphoristic zingers. "Desde hace años is literally 'since it makes years'" = good. "Ser judges the brand; estar savors the sip" = cringe, banned. Applies to all languages' tip authoring.
 
 1. **Per-language allowlist** (`GRAMMAR_TIPS_LANGS` Set + global kill switch) — per reco.
 2. **Spanish pilots first** — per reco.

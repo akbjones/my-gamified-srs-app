@@ -63,7 +63,7 @@ export const SyncSettings: React.FC = () => {
   };
 
   return (
-    <div className="pt-4 border-t border-[var(--border-color)] space-y-2">
+    <div id="sync-settings" className="pt-4 border-t border-[var(--border-color)] space-y-2">
       <div className="flex items-center gap-2">
         <Cloud size={14} className="text-[var(--accent)]" />
         <span className={label}>Sync across devices</span>

@@ -23,7 +23,7 @@ import {
   getGoalFor, setGoalFor,
 } from './services/storageService';
 import type { StudySettings, AudioSpeed } from './services/storageService';
-import { initSync, onSynced, onReset as syncOnReset } from './services/syncService';
+import { initSync, onSynced, onReset as syncOnReset, isSyncConfigured, getCode as getSyncCode } from './services/syncService';
 import {
   recordAnswer, updateStreak, checkAchievements, getAchievementsWithStatus,
 } from './services/gamificationService';
@@ -46,7 +46,7 @@ import VocabList from './components/VocabList';
 import FavoritesList from './components/FavoritesList';
 import ListenMode from './components/ListenMode';
 import Onboarding from './components/Onboarding';
-import { Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff, Star, PenTool, Flame, BarChart3, CheckCheck, CalendarDays, Volume2, Library as LibraryIcon, Milestone } from 'lucide-react';
+import { Cloud, Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff, Star, PenTool, Flame, BarChart3, CheckCheck, CalendarDays, Volume2, Library as LibraryIcon, Milestone } from 'lucide-react';
 import {
   loadNotificationPrefs, saveNotificationPrefs, requestNotificationPermission,
   isNotificationSupported, onSessionComplete, initNotifications,
@@ -258,6 +258,10 @@ const App: React.FC = () => {
   const [showOnboarding, setShowOnboarding] = useState(() => !localStorage.getItem('onboarding_complete'));
   const [notifPrefs, setNotifPrefs] = useState<NotificationPrefs>(() => loadNotificationPrefs());
   const [showNotifPrompt, setShowNotifPrompt] = useState(false);
+  // One-time sync-discoverability nudge (task: sync is invisible unless the
+  // user wanders into Settings). Shown once, only to users with meaningful
+  // progress to protect; 'Later' dismisses forever (device-local flag).
+  const [showSyncNudge, setShowSyncNudge] = useState(false);
   // Placement test offer – shown as a modal interstitial the first time
   // the user taps Study in a language they haven't placed in yet.
   const [showPlacementPrompt, setShowPlacementPrompt] = useState(false);
@@ -392,6 +396,21 @@ const App: React.FC = () => {
       setShowNotifPrompt(true);
     }
   }, [deck.length]); // re-run once deck is loaded
+
+  // Sync nudge trigger: sync backend configured, not already paired, never
+  // dismissed, real progress on this device (>=20 reviews), not a locked
+  // starter demo. Delay a beat so it never slams the first paint, and skip
+  // the session entirely if the notification prompt already claimed it.
+  const notifClaimedSessionRef = useRef(false);
+  if (showNotifPrompt) notifClaimedSessionRef.current = true;
+  useEffect(() => {
+    if (STARTER_LOCK || !isSyncConfigured() || getSyncCode()) return;
+    if (localStorage.getItem('quest_sync_nudge_done')) return;
+    if (userStats.totalReviews < 20) return;
+    if (notifClaimedSessionRef.current) return; // notif prompt owns this session; nudge waits for the next visit
+    const t = window.setTimeout(() => setShowSyncNudge(true), 1500);
+    return () => window.clearTimeout(t);
+  }, [userStats.totalReviews, showNotifPrompt]);
 
   const handleToggleNotifications = async (enable: boolean) => {
     if (enable) {
@@ -1145,6 +1164,46 @@ const App: React.FC = () => {
               a bottom-of-screen panel. Triggers after the 3rd session. Tap
               backdrop or Later to dismiss; "Enable" fires the permission
               flow. */}
+          {showSyncNudge && (
+            <div
+              className="fixed inset-0 z-[10000] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in"
+              onClick={() => { setShowSyncNudge(false); localStorage.setItem('quest_sync_nudge_done', '1'); }}
+            >
+              <div
+                className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-6 max-w-sm w-full shadow-2xl"
+                onClick={e => e.stopPropagation()}
+              >
+                <div className="flex justify-center mb-3">
+                  <div className="w-12 h-12 rounded-full bg-[var(--accent)]/10 border border-[var(--accent)]/30 flex items-center justify-center">
+                    <Cloud size={22} className="text-[var(--accent)]" />
+                  </div>
+                </div>
+                <h3 className="text-lg font-bold text-[var(--text-primary)] text-center mb-1.5">New: sync across devices</h3>
+                <p className="text-sm text-[var(--text-muted)] text-center mb-5">
+                  Study on your phone and computer with one shared progress. No account — just a private code that links your devices.
+                </p>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => { setShowSyncNudge(false); localStorage.setItem('quest_sync_nudge_done', '1'); }}
+                    className="flex-1 py-2.5 rounded-xl text-sm font-bold bg-[var(--bg-inset)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] active:scale-95 transition"
+                  >
+                    Later
+                  </button>
+                  <button
+                    onClick={() => {
+                      setShowSyncNudge(false);
+                      localStorage.setItem('quest_sync_nudge_done', '1');
+                      setShowTools(true); // Settings is the tools panel on HOME (there is no SETTINGS view)
+                      setTimeout(() => document.getElementById('sync-settings')?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 250);
+                    }}
+                    className="flex-1 py-2.5 rounded-xl text-sm font-bold bg-[var(--accent)] text-white active:scale-95 transition"
+                  >
+                    Set up
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
           {showNotifPrompt && (
             <div
               className="fixed inset-0 z-[10000] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in"

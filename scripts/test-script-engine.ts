@@ -81,14 +81,15 @@ const seqRng = (...vals: number[]) => { let i = 0; return () => vals[Math.min(i+
   ok('gate: level 2 locked from zero', !isLevelUnlocked(pack, 2, progress));
 
   const l1 = pack.levels[0].itemIds;
-  // Graduate 8 of 11 (72%) → still locked; 9 of 11 (81%) → open.
-  l1.slice(0, 8).forEach(id => { progress[id] = { mastery: 2, lastReview: 1 }; });
-  ok('gate: 72% graduated still locked', !isLevelUnlocked(pack, 2, progress));
-  progress[l1[8]] = { mastery: 2, lastReview: 1 };
-  ok('gate: 81% graduated unlocks level 2', isLevelUnlocked(pack, 2, progress));
+  // Graduate just under 80% → still locked; crossing 80% → open.
+  const need = Math.ceil(l1.length * 0.8);
+  l1.slice(0, need - 1).forEach(id => { progress[id] = { mastery: 2, lastReview: 1 }; });
+  ok('gate: just under 80% still locked', !isLevelUnlocked(pack, 2, progress));
+  progress[l1[need - 1]] = { mastery: 2, lastReview: 1 };
+  ok('gate: crossing 80% unlocks level 2', isLevelUnlocked(pack, 2, progress));
 
   const stats = levelStats(pack, 1, progress);
-  eq('levelStats counts', { total: stats.total, seen: stats.seen, graduated: stats.graduated }, { total: 11, seen: 9, graduated: 9 });
+  eq('levelStats counts', { total: stats.total, seen: stats.seen, graduated: stats.graduated }, { total: l1.length, seen: need, graduated: need });
 }
 
 // ── lesson batches: unseen items from the lowest unlocked level, capped ──────
@@ -103,7 +104,7 @@ const seqRng = (...vals: number[]) => { let i = 0; return () => vals[Math.min(i+
   pack.levels[0].itemIds.forEach(id => { progress[id] = { mastery: 1, lastReview: 1 }; });
   eq('batch: empty while next level locked', nextLessonBatch(pack, progress, 6).length, 0);
   pack.levels[0].itemIds.forEach(id => { progress[id] = { mastery: 2, lastReview: 1 }; });
-  eq('batch: level 2 items once unlocked', nextLessonBatch(pack, progress, 6).map(i => i.id), pack.levels[1].itemIds);
+  eq('batch: level 2 items once unlocked', nextLessonBatch(pack, progress, 6).map(i => i.id), pack.levels[1].itemIds.slice(0, 6));
 }
 
 // ── queue: due-only, suspended excluded, sorted, new interleaved ─────────────
@@ -135,42 +136,43 @@ const seqRng = (...vals: number[]) => { let i = 0; return () => vals[Math.min(i+
   ok('drill: learning rng≥0.8 → recall', d2.kind === 'recall');
 
   // Review with ≥2 learned similars → discrimination at rng<0.4; choices favor the similar set.
-  const review: MasteryMap = {
-    'sc-ko-0002': { mastery: 2, lastReview: 1 },
-    'sc-ko-0001': { mastery: 2, lastReview: 1 },
-    'sc-ko-0003': { mastery: 2, lastReview: 1 },
-  };
-  const d3 = selectDrill(item('sc-ko-0002'), pack, review, seqRng(0.1, 0.5, 0.5, 0.5, 0.5));
+  const simTarget = pack.items.find(i => (i.similar?.length ?? 0) >= 2)!;
+  const review: MasteryMap = { [simTarget.id]: { mastery: 2, lastReview: 1 } };
+  simTarget.similar!.forEach(id => { review[id] = { mastery: 2, lastReview: 1 }; });
+  const d3 = selectDrill(simTarget, pack, review, seqRng(0.1, 0.5, 0.5, 0.5, 0.5));
   ok('drill: review + 2 learned similars → discrimination', d3.kind === 'discrimination');
-  ok('drill: discrimination includes both confusables', ['sc-ko-0001', 'sc-ko-0003'].every(id => d3.choices.some(c => c.id === id)));
-  const d4 = selectDrill(item('sc-ko-0002'), pack, review, seqRng(0.9, 0.5, 0.5, 0.5, 0.5));
+  ok('drill: discrimination includes confusables', d3.choices.filter(c => simTarget.similar!.includes(c.id)).length >= 2);
+  const d4 = selectDrill(simTarget, pack, review, seqRng(0.9, 0.5, 0.5, 0.5, 0.5));
   ok('drill: review rng≥0.4 → recall', d4.kind === 'recall');
 
   // Composed item in review → composition with its component tiles present.
-  const revComposed: MasteryMap = { ...review, 'sc-ko-0006': { mastery: 2, lastReview: 1 }, 'sc-ko-0012': { mastery: 2, lastReview: 1 } };
-  const d5 = selectDrill(item('sc-ko-0012'), pack, revComposed, seqRng(0.5));
+  const composed = pack.items.find(i => i.kind === 'composed' && i.components?.length)!;
+  const revComposed: MasteryMap = { [composed.id]: { mastery: 2, lastReview: 1 } };
+  composed.components!.forEach(id => { revComposed[id] = { mastery: 2, lastReview: 1 }; });
+  const d5 = selectDrill(composed, pack, revComposed, seqRng(0.5));
   ok('drill: composed in review → composition', d5.kind === 'composition');
-  ok('drill: composition has all component tiles', item('sc-ko-0012').components!.every(id => d5.choices.some(c => c.id === id)));
-  ok('drill: composition decoys are not composed items', d5.choices.every(c => c.kind !== 'composed' || item('sc-ko-0012').components!.includes(c.id)));
-  ok('drill: composition HAS decoy tiles beyond the components', d5.choices.length > item('sc-ko-0012').components!.length);
+  ok('drill: composition has all component tiles', composed.components!.every(id => d5.choices.some(c => c.id === id)));
+  ok('drill: composition decoys are not composed items', d5.choices.every(c => c.kind !== 'composed' || composed.components!.includes(c.id)));
+  ok('drill: composition HAS decoy tiles beyond the components', d5.choices.length > composed.components!.length);
   // Composed but still learning → falls back to recognition/recall.
-  const d6 = selectDrill(item('sc-ko-0012'), pack, { 'sc-ko-0012': { mastery: 1, lastReview: 1 } }, seqRng(0.1, 0.5, 0.5, 0.5, 0.5));
+  const d6 = selectDrill(composed, pack, { [composed.id]: { mastery: 1, lastReview: 1 } }, seqRng(0.1, 0.5, 0.5, 0.5, 0.5));
   ok('drill: composed while learning → not composition', d6.kind !== 'composition');
 }
 
 // ── mastered + summary ───────────────────────────────────────────────────────
 {
   const progress: MasteryMap = {};
-  const letters = pack.items.filter(i => i.kind === 'letter');
+  const letters = pack.items.filter(i => i.kind === 'letter' || i.kind === 'modifier');
   ok('mastered: false at zero', !isScriptMastered(pack, progress));
-  // 9 of 11 letters (81%) < 90% → not mastered; 10 of 11 (90.9%) → mastered.
-  letters.slice(0, 9).forEach(i => { progress[i.id] = { mastery: 2, lastReview: 1 }; });
-  ok('mastered: 81% not yet', !isScriptMastered(pack, progress));
-  progress[letters[9].id] = { mastery: 2, lastReview: 1 };
-  ok('mastered: 90.9% crosses the line', isScriptMastered(pack, progress));
+  // Just under 90% → not mastered; crossing 90% → mastered.
+  const needM = Math.ceil(letters.length * 0.9);
+  letters.slice(0, needM - 1).forEach(i => { progress[i.id] = { mastery: 2, lastReview: 1 }; });
+  ok('mastered: just under 90% not yet', !isScriptMastered(pack, progress));
+  progress[letters[needM - 1].id] = { mastery: 2, lastReview: 1 };
+  ok('mastered: crossing 90% flips it', isScriptMastered(pack, progress));
 
   const s = scriptSummary(pack, progress, 1);
-  ok('summary: counts core items only', s.total === letters.length && s.graduated === 10);
+  ok('summary: counts core items only', s.total === letters.length && s.graduated === needM);
   ok('summary: mastered flag matches', s.mastered);
 }
 

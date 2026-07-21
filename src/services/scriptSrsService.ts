@@ -166,8 +166,13 @@ const shuffle = <T>(arr: T[], rng: () => number): T[] => {
  *  both "ka" — either would be a second correct answer). */
 const distractorsFor = (item: ScriptItem, pack: ScriptPack, progress: MasteryMap, rng: () => number, n = 3): ScriptItem[] => {
   const seen = (id: string) => !!progress[id];
+  // Same-family only: letters/modifiers vs composed vs words never mix in one
+  // choice set. Letter audio is synthesized as a CV syllable (ㄱ plays "ga"),
+  // so a composed 가 next to letter ㄱ under an audio prompt would be a second
+  // correct answer.
+  const family = (i: ScriptItem) => (i.kind === 'letter' || i.kind === 'modifier') ? 'letter' : i.kind;
   const eligible = (i: ScriptItem) =>
-    i.id !== item.id && i.kind !== 'word' && i.romanization !== item.romanization &&
+    i.id !== item.id && family(i) === family(item) && i.romanization !== item.romanization &&
     (seen(i.id) || i.level <= item.level);
   const pool = pack.items.filter(eligible);
   const similarSet = new Set(item.similar ?? []);

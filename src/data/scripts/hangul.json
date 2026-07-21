@@ -4,7 +4,10 @@
   "name": "Hangul",
   "tagline": "Read Korean in about 3 days",
   "drill": {
-    "recallPrompts": ["audio", "romanization"],
+    "recallPrompts": [
+      "audio",
+      "romanization"
+    ],
     "discriminationPrompt": "audio"
   },
   "items": [
@@ -14,9 +17,17 @@
       "glyph": "ㄱ",
       "sound": "g/k",
       "romanization": "g",
-      "mnemonic": "The tongue's back rising to block the throat – g (as in go). At the end of a word it tightens to k.",
+      "mnemonic": "The tongue's back rising to block the throat – g (as in go). At the end of a syllable it tightens to k.",
       "level": 1,
-      "similar": ["sc-ko-0002"],
+      "similar": [
+        "sc-ko-0033",
+        "sc-ko-0039"
+      ],
+      "exampleWord": {
+        "target": "미국",
+        "english": "I'm American.",
+        "deckCardId": "ko-0024"
+      },
       "audio": "sc-ko-0001.mp3"
     },
     {
@@ -25,9 +36,17 @@
       "glyph": "ㄴ",
       "sound": "n",
       "romanization": "n",
-      "mnemonic": "The tongue's tip touching the ridge behind the teeth – n. Faces the opposite way to ㄱ (g).",
+      "mnemonic": "The tongue's tip touching the ridge behind the teeth – n. The corner opens the opposite way to ㄱ (g).",
       "level": 1,
-      "similar": ["sc-ko-0001", "sc-ko-0003"],
+      "similar": [
+        "sc-ko-0003",
+        "sc-ko-0004"
+      ],
+      "exampleWord": {
+        "target": "나라",
+        "english": "What country are you from?",
+        "deckCardId": "ko-0021"
+      },
       "audio": "sc-ko-0002.mp3"
     },
     {
@@ -36,9 +55,18 @@
       "glyph": "ㄷ",
       "sound": "d/t",
       "romanization": "d",
-      "mnemonic": "ㄴ (n) with a lid on top – the tongue taps the same ridge, just harder: d (t at word end).",
+      "mnemonic": "ㄴ (n) with a lid on top – the tongue taps the same ridge, just harder: d (t at the end of a syllable).",
       "level": 1,
-      "similar": ["sc-ko-0002", "sc-ko-0004"],
+      "similar": [
+        "sc-ko-0002",
+        "sc-ko-0034",
+        "sc-ko-0040"
+      ],
+      "exampleWord": {
+        "target": "두",
+        "english": "I buy two pieces of bread.",
+        "deckCardId": "ko-0180"
+      },
       "audio": "sc-ko-0003.mp3"
     },
     {
@@ -49,7 +77,15 @@
       "romanization": "r",
       "mnemonic": "A winding path – the tongue flicks along it: Korean r/l, one sound between the two.",
       "level": 1,
-      "similar": ["sc-ko-0003"],
+      "similar": [
+        "sc-ko-0002",
+        "sc-ko-0003"
+      ],
+      "exampleWord": {
+        "target": "나라",
+        "english": "What country are you from?",
+        "deckCardId": "ko-0021"
+      },
       "audio": "sc-ko-0004.mp3"
     },
     {
@@ -60,6 +96,15 @@
       "romanization": "m",
       "mnemonic": "A closed mouth, lips sealed in a square – m.",
       "level": 1,
+      "similar": [
+        "sc-ko-0020",
+        "sc-ko-0022"
+      ],
+      "exampleWord": {
+        "target": "미국",
+        "english": "I'm American.",
+        "deckCardId": "ko-0024"
+      },
       "audio": "sc-ko-0005.mp3"
     },
     {
@@ -70,7 +115,14 @@
       "romanization": "a",
       "mnemonic": "A standing line with its stroke pointing right, toward the sunrise – bright a (father).",
       "level": 1,
-      "similar": ["sc-ko-0007"],
+      "similar": [
+        "sc-ko-0007"
+      ],
+      "exampleWord": {
+        "target": "나라",
+        "english": "What country are you from?",
+        "deckCardId": "ko-0021"
+      },
       "audio": "sc-ko-0006.mp3"
     },
     {
@@ -81,7 +133,14 @@
       "romanization": "eo",
       "mnemonic": "The stroke points left, away from the sun – darker eo (the u in fun).",
       "level": 1,
-      "similar": ["sc-ko-0006"],
+      "similar": [
+        "sc-ko-0006"
+      ],
+      "exampleWord": {
+        "target": "그거",
+        "english": "What's that (by you)?",
+        "deckCardId": "ko-0062"
+      },
       "audio": "sc-ko-0007.mp3"
     },
     {
@@ -92,7 +151,14 @@
       "romanization": "o",
       "mnemonic": "A flat ground with a stroke pointing up at the sky – o (go).",
       "level": 1,
-      "similar": ["sc-ko-0009"],
+      "similar": [
+        "sc-ko-0009"
+      ],
+      "exampleWord": {
+        "target": "고기를",
+        "english": "I don't eat meat.",
+        "deckCardId": "ko-0110"
+      },
       "audio": "sc-ko-0008.mp3"
     },
     {
@@ -103,7 +169,14 @@
       "romanization": "u",
       "mnemonic": "The stroke hangs below the ground line, like a root going down – u (moon).",
       "level": 1,
-      "similar": ["sc-ko-0008"],
+      "similar": [
+        "sc-ko-0008"
+      ],
+      "exampleWord": {
+        "target": "미국",
+        "english": "I'm American.",
+        "deckCardId": "ko-0024"
+      },
       "audio": "sc-ko-0009.mp3"
     },
     {
@@ -114,6 +187,11 @@
       "romanization": "eu",
       "mnemonic": "A flat horizon – say it with flat, spread lips: eu (a grunted uh).",
       "level": 1,
+      "exampleWord": {
+        "target": "그거",
+        "english": "What's that (by you)?",
+        "deckCardId": "ko-0062"
+      },
       "audio": "sc-ko-0010.mp3"
     },
     {
@@ -124,6 +202,11 @@
       "romanization": "i",
       "mnemonic": "A person standing tall – ee (see).",
       "level": 1,
+      "exampleWord": {
+        "target": "미국",
+        "english": "I'm American.",
+        "deckCardId": "ko-0024"
+      },
       "audio": "sc-ko-0011.mp3"
     },
     {
@@ -134,44 +217,1039 @@
       "romanization": "ga",
       "mnemonic": "",
       "level": 2,
-      "components": ["sc-ko-0001", "sc-ko-0006"],
+      "components": [
+        "sc-ko-0001",
+        "sc-ko-0006"
+      ],
       "audio": "sc-ko-0012.mp3"
     },
     {
       "id": "sc-ko-0013",
       "kind": "composed",
-      "glyph": "나",
-      "sound": "na",
-      "romanization": "na",
+      "glyph": "너",
+      "sound": "neo",
+      "romanization": "neo",
       "mnemonic": "",
       "level": 2,
-      "components": ["sc-ko-0002", "sc-ko-0006"],
+      "components": [
+        "sc-ko-0002",
+        "sc-ko-0007"
+      ],
       "audio": "sc-ko-0013.mp3"
     },
     {
       "id": "sc-ko-0014",
+      "kind": "composed",
+      "glyph": "도",
+      "sound": "do",
+      "romanization": "do",
+      "mnemonic": "",
+      "level": 2,
+      "components": [
+        "sc-ko-0003",
+        "sc-ko-0008"
+      ],
+      "audio": "sc-ko-0014.mp3"
+    },
+    {
+      "id": "sc-ko-0015",
+      "kind": "composed",
+      "glyph": "리",
+      "sound": "ri",
+      "romanization": "ri",
+      "mnemonic": "",
+      "level": 2,
+      "components": [
+        "sc-ko-0004",
+        "sc-ko-0011"
+      ],
+      "audio": "sc-ko-0015.mp3"
+    },
+    {
+      "id": "sc-ko-0016",
       "kind": "composed",
       "glyph": "무",
       "sound": "mu",
       "romanization": "mu",
       "mnemonic": "",
       "level": 2,
-      "components": ["sc-ko-0005", "sc-ko-0009"],
-      "audio": "sc-ko-0014.mp3"
+      "components": [
+        "sc-ko-0005",
+        "sc-ko-0009"
+      ],
+      "audio": "sc-ko-0016.mp3"
+    },
+    {
+      "id": "sc-ko-0017",
+      "kind": "composed",
+      "glyph": "나",
+      "sound": "na",
+      "romanization": "na",
+      "mnemonic": "",
+      "level": 2,
+      "components": [
+        "sc-ko-0002",
+        "sc-ko-0006"
+      ],
+      "audio": "sc-ko-0017.mp3"
+    },
+    {
+      "id": "sc-ko-0018",
+      "kind": "composed",
+      "glyph": "고",
+      "sound": "go",
+      "romanization": "go",
+      "mnemonic": "",
+      "level": 2,
+      "components": [
+        "sc-ko-0001",
+        "sc-ko-0008"
+      ],
+      "audio": "sc-ko-0018.mp3"
+    },
+    {
+      "id": "sc-ko-0019",
+      "kind": "composed",
+      "glyph": "미",
+      "sound": "mi",
+      "romanization": "mi",
+      "mnemonic": "",
+      "level": 2,
+      "components": [
+        "sc-ko-0005",
+        "sc-ko-0011"
+      ],
+      "audio": "sc-ko-0019.mp3"
+    },
+    {
+      "id": "sc-ko-0020",
+      "kind": "letter",
+      "glyph": "ㅂ",
+      "sound": "b/p",
+      "romanization": "b",
+      "mnemonic": "A pot with two handles sticking up – lips press together for b (p at the end of a syllable).",
+      "level": 3,
+      "similar": [
+        "sc-ko-0005",
+        "sc-ko-0035",
+        "sc-ko-0041"
+      ],
+      "exampleWord": {
+        "target": "이분은",
+        "english": "This is Teacher Park.",
+        "deckCardId": "ko-0019"
+      },
+      "audio": "sc-ko-0020.mp3"
+    },
+    {
+      "id": "sc-ko-0021",
+      "kind": "letter",
+      "glyph": "ㅅ",
+      "sound": "s",
+      "romanization": "s",
+      "mnemonic": "A little tent – air hisses out through the gap at the bottom, between the two legs: s.",
+      "level": 3,
+      "similar": [
+        "sc-ko-0023",
+        "sc-ko-0042"
+      ],
+      "exampleWord": {
+        "target": "민수",
+        "english": "Hello, Minsu.",
+        "deckCardId": "ko-0001"
+      },
+      "audio": "sc-ko-0021.mp3"
+    },
+    {
+      "id": "sc-ko-0022",
+      "kind": "letter",
+      "glyph": "ㅇ",
+      "sound": "silent / ng",
+      "romanization": "ng",
+      "mnemonic": "A circle: an empty placeholder at the START of a block, the sound ng (sing) at the END.",
+      "level": 3,
+      "similar": [
+        "sc-ko-0005"
+      ],
+      "exampleWord": {
+        "target": "이름이",
+        "english": "What's your name?",
+        "deckCardId": "ko-0011"
+      },
+      "audio": "sc-ko-0022.mp3"
+    },
+    {
+      "id": "sc-ko-0023",
+      "kind": "letter",
+      "glyph": "ㅈ",
+      "sound": "j",
+      "romanization": "j",
+      "mnemonic": "The ㅅ tent with a roof beam across the top – the hiss hardens into j.",
+      "level": 3,
+      "similar": [
+        "sc-ko-0021",
+        "sc-ko-0036",
+        "sc-ko-0043"
+      ],
+      "exampleWord": {
+        "target": "저는",
+        "english": "Hello! I'm Jieun.",
+        "deckCardId": "ko-0002"
+      },
+      "audio": "sc-ko-0023.mp3"
+    },
+    {
+      "id": "sc-ko-0024",
+      "kind": "letter",
+      "glyph": "ㅎ",
+      "sound": "h",
+      "romanization": "h",
+      "mnemonic": "A hat on a round head (the ㅇ circle) – breathe out: h is just a puff of air.",
+      "level": 3,
+      "similar": [
+        "sc-ko-0022"
+      ],
+      "exampleWord": {
+        "target": "준호",
+        "english": "Nice to meet you, Junho.",
+        "deckCardId": "ko-0007"
+      },
+      "audio": "sc-ko-0024.mp3"
+    },
+    {
+      "id": "sc-ko-0025",
+      "kind": "letter",
+      "glyph": "ㅑ",
+      "sound": "ya",
+      "romanization": "ya",
+      "mnemonic": "ㅏ (a) with a second tick – the extra tick adds a y: ya.",
+      "level": 4,
+      "similar": [
+        "sc-ko-0026",
+        "sc-ko-0006"
+      ],
+      "exampleWord": {
+        "target": "고양이가",
+        "english": "The cat is at home.",
+        "deckCardId": "ko-0288"
+      },
+      "audio": "sc-ko-0025.mp3"
+    },
+    {
+      "id": "sc-ko-0026",
+      "kind": "letter",
+      "glyph": "ㅕ",
+      "sound": "yeo",
+      "romanization": "yeo",
+      "mnemonic": "ㅓ (eo) with a second tick – add a y: yeo.",
+      "level": 4,
+      "similar": [
+        "sc-ko-0025",
+        "sc-ko-0007"
+      ],
+      "exampleWord": {
+        "target": "여러분",
+        "english": "Hello, everyone!",
+        "deckCardId": "ko-0004"
+      },
+      "audio": "sc-ko-0026.mp3"
+    },
+    {
+      "id": "sc-ko-0027",
+      "kind": "letter",
+      "glyph": "ㅛ",
+      "sound": "yo",
+      "romanization": "yo",
+      "mnemonic": "ㅗ (o) with a second stroke up – add a y: yo.",
+      "level": 4,
+      "similar": [
+        "sc-ko-0028",
+        "sc-ko-0008"
+      ],
+      "exampleWord": {
+        "target": "아니요",
+        "english": "No, I'm not Minsu.",
+        "deckCardId": "ko-0015"
+      },
+      "audio": "sc-ko-0027.mp3"
+    },
+    {
+      "id": "sc-ko-0028",
+      "kind": "letter",
+      "glyph": "ㅠ",
+      "sound": "yu",
+      "romanization": "yu",
+      "mnemonic": "ㅜ (u) with a second stroke down – add a y: yu.",
+      "level": 4,
+      "similar": [
+        "sc-ko-0027",
+        "sc-ko-0009"
+      ],
+      "exampleWord": {
+        "target": "우유를",
+        "english": "I drink milk.",
+        "deckCardId": "ko-0083"
+      },
+      "audio": "sc-ko-0028.mp3"
+    },
+    {
+      "id": "sc-ko-0029",
+      "kind": "composed",
+      "glyph": "바",
+      "sound": "ba",
+      "romanization": "ba",
+      "mnemonic": "",
+      "level": 4,
+      "components": [
+        "sc-ko-0020",
+        "sc-ko-0006"
+      ],
+      "audio": "sc-ko-0029.mp3"
+    },
+    {
+      "id": "sc-ko-0030",
+      "kind": "composed",
+      "glyph": "서",
+      "sound": "seo",
+      "romanization": "seo",
+      "mnemonic": "",
+      "level": 4,
+      "components": [
+        "sc-ko-0021",
+        "sc-ko-0007"
+      ],
+      "audio": "sc-ko-0030.mp3"
+    },
+    {
+      "id": "sc-ko-0031",
+      "kind": "composed",
+      "glyph": "지",
+      "sound": "ji",
+      "romanization": "ji",
+      "mnemonic": "",
+      "level": 4,
+      "components": [
+        "sc-ko-0023",
+        "sc-ko-0011"
+      ],
+      "audio": "sc-ko-0031.mp3"
+    },
+    {
+      "id": "sc-ko-0032",
+      "kind": "composed",
+      "glyph": "호",
+      "sound": "ho",
+      "romanization": "ho",
+      "mnemonic": "",
+      "level": 4,
+      "components": [
+        "sc-ko-0024",
+        "sc-ko-0008"
+      ],
+      "audio": "sc-ko-0032.mp3"
+    },
+    {
+      "id": "sc-ko-0033",
+      "kind": "letter",
+      "glyph": "ㅋ",
+      "sound": "k",
+      "romanization": "k",
+      "mnemonic": "ㄱ (g) with one extra stroke – the extra stroke is a puff of breath: k.",
+      "level": 5,
+      "similar": [
+        "sc-ko-0001",
+        "sc-ko-0039"
+      ],
+      "exampleWord": {
+        "target": "마이클",
+        "english": "Nice to meet you, Michael.",
+        "deckCardId": "ko-0053"
+      },
+      "audio": "sc-ko-0033.mp3"
+    },
+    {
+      "id": "sc-ko-0034",
+      "kind": "letter",
+      "glyph": "ㅌ",
+      "sound": "t",
+      "romanization": "t",
+      "mnemonic": "ㄷ (d) with one extra stroke – add breath: t.",
+      "level": 5,
+      "similar": [
+        "sc-ko-0003",
+        "sc-ko-0040"
+      ],
+      "exampleWord": {
+        "target": "타요",
+        "english": "I take the bus.",
+        "deckCardId": "ko-0132"
+      },
+      "audio": "sc-ko-0034.mp3"
+    },
+    {
+      "id": "sc-ko-0035",
+      "kind": "letter",
+      "glyph": "ㅍ",
+      "sound": "p",
+      "romanization": "p",
+      "mnemonic": "ㅂ (b) tipped on its side – two bars top and bottom, two legs between. Same lips as ㅂ, plus a puff of breath: p.",
+      "level": 5,
+      "similar": [
+        "sc-ko-0020",
+        "sc-ko-0041"
+      ],
+      "exampleWord": {
+        "target": "커피를",
+        "english": "I drink coffee.",
+        "deckCardId": "ko-0077"
+      },
+      "audio": "sc-ko-0035.mp3"
+    },
+    {
+      "id": "sc-ko-0036",
+      "kind": "letter",
+      "glyph": "ㅊ",
+      "sound": "ch",
+      "romanization": "ch",
+      "mnemonic": "ㅈ (j) with one extra stroke on top – add breath: ch.",
+      "level": 5,
+      "similar": [
+        "sc-ko-0023",
+        "sc-ko-0043"
+      ],
+      "exampleWord": {
+        "target": "김치를",
+        "english": "I like kimchi.",
+        "deckCardId": "ko-0084"
+      },
+      "audio": "sc-ko-0036.mp3"
+    },
+    {
+      "id": "sc-ko-0037",
+      "kind": "composed",
+      "glyph": "카",
+      "sound": "ka",
+      "romanization": "ka",
+      "mnemonic": "",
+      "level": 5,
+      "components": [
+        "sc-ko-0033",
+        "sc-ko-0006"
+      ],
+      "audio": "sc-ko-0037.mp3"
+    },
+    {
+      "id": "sc-ko-0038",
+      "kind": "composed",
+      "glyph": "처",
+      "sound": "cheo",
+      "romanization": "cheo",
+      "mnemonic": "",
+      "level": 5,
+      "components": [
+        "sc-ko-0036",
+        "sc-ko-0007"
+      ],
+      "audio": "sc-ko-0038.mp3"
+    },
+    {
+      "id": "sc-ko-0039",
+      "kind": "letter",
+      "glyph": "ㄲ",
+      "sound": "kk",
+      "romanization": "kk",
+      "mnemonic": "Two ㄱ side by side – squeeze the g tight, no breath: kk (a stiff, clipped g).",
+      "level": 6,
+      "similar": [
+        "sc-ko-0001",
+        "sc-ko-0033"
+      ],
+      "exampleWord": {
+        "target": "끝나요",
+        "english": "It ends at five o'clock.",
+        "deckCardId": "ko-0203"
+      },
+      "audio": "sc-ko-0039.mp3"
+    },
+    {
+      "id": "sc-ko-0040",
+      "kind": "letter",
+      "glyph": "ㄸ",
+      "sound": "tt",
+      "romanization": "tt",
+      "mnemonic": "Two ㄷ – squeeze the d tight: tt.",
+      "level": 6,
+      "similar": [
+        "sc-ko-0003",
+        "sc-ko-0034"
+      ],
+      "exampleWord": {
+        "target": "어떨",
+        "english": "What will the weather be like tomorrow?",
+        "deckCardId": "ko-0486"
+      },
+      "audio": "sc-ko-0040.mp3"
+    },
+    {
+      "id": "sc-ko-0041",
+      "kind": "letter",
+      "glyph": "ㅃ",
+      "sound": "pp",
+      "romanization": "pp",
+      "mnemonic": "Two ㅂ – press the lips tight: pp.",
+      "level": 6,
+      "similar": [
+        "sc-ko-0020",
+        "sc-ko-0035"
+      ],
+      "exampleWord": {
+        "target": "빵을",
+        "english": "I eat bread.",
+        "deckCardId": "ko-0079"
+      },
+      "audio": "sc-ko-0041.mp3"
+    },
+    {
+      "id": "sc-ko-0042",
+      "kind": "letter",
+      "glyph": "ㅆ",
+      "sound": "ss",
+      "romanization": "ss",
+      "mnemonic": "Two ㅅ tents – a sharper, tenser hiss: ss.",
+      "level": 6,
+      "similar": [
+        "sc-ko-0021"
+      ],
+      "exampleWord": {
+        "target": "씨",
+        "english": "Hello, Minsu.",
+        "deckCardId": "ko-0001"
+      },
+      "audio": "sc-ko-0042.mp3"
+    },
+    {
+      "id": "sc-ko-0043",
+      "kind": "letter",
+      "glyph": "ㅉ",
+      "sound": "jj",
+      "romanization": "jj",
+      "mnemonic": "Two ㅈ – squeeze the j tight: jj.",
+      "level": 6,
+      "similar": [
+        "sc-ko-0023",
+        "sc-ko-0036"
+      ],
+      "exampleWord": {
+        "target": "이쪽은",
+        "english": "Sujin, this is my friend.",
+        "deckCardId": "ko-0018"
+      },
+      "audio": "sc-ko-0043.mp3"
+    },
+    {
+      "id": "sc-ko-0044",
+      "kind": "composed",
+      "glyph": "까",
+      "sound": "kka",
+      "romanization": "kka",
+      "mnemonic": "",
+      "level": 6,
+      "components": [
+        "sc-ko-0039",
+        "sc-ko-0006"
+      ],
+      "audio": "sc-ko-0044.mp3"
+    },
+    {
+      "id": "sc-ko-0045",
+      "kind": "composed",
+      "glyph": "싸",
+      "sound": "ssa",
+      "romanization": "ssa",
+      "mnemonic": "",
+      "level": 6,
+      "components": [
+        "sc-ko-0042",
+        "sc-ko-0006"
+      ],
+      "audio": "sc-ko-0045.mp3"
+    },
+    {
+      "id": "sc-ko-0046",
+      "kind": "letter",
+      "glyph": "ㅐ",
+      "sound": "ae",
+      "romanization": "ae",
+      "mnemonic": "ㅏ with an ㅣ leaning on it – a brightened a: ae (the e in bed, mouth a bit wider).",
+      "level": 7,
+      "similar": [
+        "sc-ko-0047"
+      ],
+      "exampleWord": {
+        "target": "선생님",
+        "english": "Goodbye, teacher.",
+        "deckCardId": "ko-0006"
+      },
+      "audio": "sc-ko-0046.mp3"
+    },
+    {
+      "id": "sc-ko-0047",
+      "kind": "letter",
+      "glyph": "ㅔ",
+      "sound": "e",
+      "romanization": "e",
+      "mnemonic": "ㅓ with an ㅣ against it – e (the e in bed). Today ㅐ and ㅔ sound nearly the same – spelling tells them apart.",
+      "level": 7,
+      "similar": [
+        "sc-ko-0046"
+      ],
+      "exampleWord": {
+        "target": "안녕하세요",
+        "english": "Hello, Minsu.",
+        "deckCardId": "ko-0001"
+      },
+      "audio": "sc-ko-0047.mp3"
+    },
+    {
+      "id": "sc-ko-0048",
+      "kind": "letter",
+      "glyph": "ㅒ",
+      "sound": "yae",
+      "romanization": "yae",
+      "mnemonic": "ㅑ + ㅣ – ya brightened to yae. Rare; mostly in 얘 (this kid).",
+      "level": 7,
+      "similar": [
+        "sc-ko-0049"
+      ],
+      "exampleWord": {
+        "target": "얘기를",
+        "english": "Speak of the tiger and it appears—the moment we brought him up, he walked in the door.",
+        "deckCardId": "ko-3440"
+      },
+      "audio": "sc-ko-0048.mp3"
+    },
+    {
+      "id": "sc-ko-0049",
+      "kind": "letter",
+      "glyph": "ㅖ",
+      "sound": "ye",
+      "romanization": "ye",
+      "mnemonic": "ㅕ + ㅣ – ye. You'll see it in 예 (ye = yes, formal) and 시계 (sigye = clock).",
+      "level": 7,
+      "similar": [
+        "sc-ko-0048"
+      ],
+      "exampleWord": {
+        "target": "계세요",
+        "english": "Goodbye, teacher.",
+        "deckCardId": "ko-0006"
+      },
+      "audio": "sc-ko-0049.mp3"
+    },
+    {
+      "id": "sc-ko-0050",
+      "kind": "letter",
+      "glyph": "ㅘ",
+      "sound": "wa",
+      "romanization": "wa",
+      "mnemonic": "ㅗ (o) sliding into ㅏ (a) – say them fast together: wa.",
+      "level": 8,
+      "similar": [
+        "sc-ko-0051"
+      ],
+      "exampleWord": {
+        "target": "사과를",
+        "english": "I buy apples.",
+        "deckCardId": "ko-0081"
+      },
+      "audio": "sc-ko-0050.mp3"
+    },
+    {
+      "id": "sc-ko-0051",
+      "kind": "letter",
+      "glyph": "ㅝ",
+      "sound": "wo",
+      "romanization": "wo",
+      "mnemonic": "ㅜ (u) sliding into ㅓ (eo) – wo (as in won).",
+      "level": 8,
+      "similar": [
+        "sc-ko-0050"
+      ],
+      "exampleWord": {
+        "target": "반가워요",
+        "english": "Nice to meet you, Junho.",
+        "deckCardId": "ko-0007"
+      },
+      "audio": "sc-ko-0051.mp3"
+    },
+    {
+      "id": "sc-ko-0052",
+      "kind": "letter",
+      "glyph": "ㅚ",
+      "sound": "oe",
+      "romanization": "oe",
+      "mnemonic": "ㅗ + ㅣ – said weh in modern Korean, like the we- in wet.",
+      "level": 8,
+      "similar": [
+        "sc-ko-0053"
+      ],
+      "exampleWord": {
+        "target": "회사원이에요",
+        "english": "I'm an office worker.",
+        "deckCardId": "ko-0035"
+      },
+      "audio": "sc-ko-0052.mp3"
+    },
+    {
+      "id": "sc-ko-0053",
+      "kind": "letter",
+      "glyph": "ㅟ",
+      "sound": "wi",
+      "romanization": "wi",
+      "mnemonic": "ㅜ + ㅣ – wi (as in we).",
+      "level": 8,
+      "similar": [
+        "sc-ko-0052"
+      ],
+      "exampleWord": {
+        "target": "쉬었어요",
+        "english": "I rested well at home on the weekend.",
+        "deckCardId": "ko-0322"
+      },
+      "audio": "sc-ko-0053.mp3"
+    },
+    {
+      "id": "sc-ko-0054",
+      "kind": "letter",
+      "glyph": "ㅢ",
+      "sound": "ui",
+      "romanization": "ui",
+      "mnemonic": "ㅡ + ㅣ – a quick eu-i glide: ui. In 의 (ui = of).",
+      "level": 8,
+      "exampleWord": {
+        "target": "의사예요",
+        "english": "Sujin is a doctor.",
+        "deckCardId": "ko-0036"
+      },
+      "audio": "sc-ko-0054.mp3"
+    },
+    {
+      "id": "sc-ko-0055",
+      "kind": "composed",
+      "glyph": "한",
+      "sound": "han",
+      "romanization": "han",
+      "mnemonic": "",
+      "level": 9,
+      "components": [
+        "sc-ko-0024",
+        "sc-ko-0006",
+        "sc-ko-0002"
+      ],
+      "audio": "sc-ko-0055.mp3"
+    },
+    {
+      "id": "sc-ko-0056",
+      "kind": "composed",
+      "glyph": "밥",
+      "sound": "bap",
+      "romanization": "bap",
+      "mnemonic": "",
+      "level": 9,
+      "components": [
+        "sc-ko-0020",
+        "sc-ko-0006",
+        "sc-ko-0020"
+      ],
+      "audio": "sc-ko-0056.mp3"
+    },
+    {
+      "id": "sc-ko-0057",
+      "kind": "composed",
+      "glyph": "물",
+      "sound": "mul",
+      "romanization": "mul",
+      "mnemonic": "",
+      "level": 9,
+      "components": [
+        "sc-ko-0005",
+        "sc-ko-0009",
+        "sc-ko-0004"
+      ],
+      "audio": "sc-ko-0057.mp3"
+    },
+    {
+      "id": "sc-ko-0058",
+      "kind": "composed",
+      "glyph": "곰",
+      "sound": "gom",
+      "romanization": "gom",
+      "mnemonic": "",
+      "level": 9,
+      "components": [
+        "sc-ko-0001",
+        "sc-ko-0008",
+        "sc-ko-0005"
+      ],
+      "audio": "sc-ko-0058.mp3"
+    },
+    {
+      "id": "sc-ko-0059",
+      "kind": "composed",
+      "glyph": "강",
+      "sound": "gang",
+      "romanization": "gang",
+      "mnemonic": "",
+      "level": 9,
+      "components": [
+        "sc-ko-0001",
+        "sc-ko-0006",
+        "sc-ko-0022"
+      ],
+      "audio": "sc-ko-0059.mp3"
+    },
+    {
+      "id": "sc-ko-0060",
+      "kind": "composed",
+      "glyph": "집",
+      "sound": "jip",
+      "romanization": "jip",
+      "mnemonic": "",
+      "level": 9,
+      "components": [
+        "sc-ko-0023",
+        "sc-ko-0011",
+        "sc-ko-0020"
+      ],
+      "audio": "sc-ko-0060.mp3"
+    },
+    {
+      "id": "sc-ko-0061",
+      "kind": "word",
+      "glyph": "민수",
+      "sound": "minsu",
+      "romanization": "minsu",
+      "mnemonic": "",
+      "level": 10,
+      "exampleWord": {
+        "target": "민수",
+        "english": "Hello, Minsu.",
+        "deckCardId": "ko-0001"
+      },
+      "audio": "sc-ko-0061.mp3"
+    },
+    {
+      "id": "sc-ko-0062",
+      "kind": "word",
+      "glyph": "저는",
+      "sound": "jeoneun",
+      "romanization": "jeoneun",
+      "mnemonic": "",
+      "level": 10,
+      "exampleWord": {
+        "target": "저는",
+        "english": "Hello! I'm Jieun.",
+        "deckCardId": "ko-0002"
+      },
+      "audio": "sc-ko-0062.mp3"
+    },
+    {
+      "id": "sc-ko-0063",
+      "kind": "word",
+      "glyph": "수진",
+      "sound": "sujin",
+      "romanization": "sujin",
+      "mnemonic": "",
+      "level": 10,
+      "exampleWord": {
+        "target": "수진",
+        "english": "Sujin, hello!",
+        "deckCardId": "ko-0003"
+      },
+      "audio": "sc-ko-0063.mp3"
+    },
+    {
+      "id": "sc-ko-0064",
+      "kind": "word",
+      "glyph": "여러분",
+      "sound": "yeoreobun",
+      "romanization": "yeoreobun",
+      "mnemonic": "",
+      "level": 10,
+      "exampleWord": {
+        "target": "여러분",
+        "english": "Hello, everyone!",
+        "deckCardId": "ko-0004"
+      },
+      "audio": "sc-ko-0064.mp3"
+    },
+    {
+      "id": "sc-ko-0065",
+      "kind": "word",
+      "glyph": "안녕히",
+      "sound": "annyeonghi",
+      "romanization": "annyeonghi",
+      "mnemonic": "",
+      "level": 10,
+      "exampleWord": {
+        "target": "안녕히",
+        "english": "Goodbye, Minsu.",
+        "deckCardId": "ko-0005"
+      },
+      "audio": "sc-ko-0065.mp3"
+    },
+    {
+      "id": "sc-ko-0066",
+      "kind": "word",
+      "glyph": "가세요",
+      "sound": "gaseyo",
+      "romanization": "gaseyo",
+      "mnemonic": "",
+      "level": 10,
+      "exampleWord": {
+        "target": "가세요",
+        "english": "Goodbye, Minsu.",
+        "deckCardId": "ko-0005"
+      },
+      "audio": "sc-ko-0066.mp3"
     }
   ],
   "levels": [
     {
       "level": 1,
       "title": "First consonants and vowels",
-      "itemIds": ["sc-ko-0001", "sc-ko-0002", "sc-ko-0003", "sc-ko-0004", "sc-ko-0005", "sc-ko-0006", "sc-ko-0007", "sc-ko-0008", "sc-ko-0009", "sc-ko-0010", "sc-ko-0011"],
-      "readableWordCount": 0
+      "itemIds": [
+        "sc-ko-0001",
+        "sc-ko-0002",
+        "sc-ko-0003",
+        "sc-ko-0004",
+        "sc-ko-0005",
+        "sc-ko-0006",
+        "sc-ko-0007",
+        "sc-ko-0008",
+        "sc-ko-0009",
+        "sc-ko-0010",
+        "sc-ko-0011"
+      ],
+      "readableWordCount": 268
     },
     {
       "level": 2,
       "title": "Your first syllable blocks",
-      "itemIds": ["sc-ko-0012", "sc-ko-0013", "sc-ko-0014"],
-      "readableWordCount": 0
+      "itemIds": [
+        "sc-ko-0012",
+        "sc-ko-0013",
+        "sc-ko-0014",
+        "sc-ko-0015",
+        "sc-ko-0016",
+        "sc-ko-0017",
+        "sc-ko-0018",
+        "sc-ko-0019"
+      ],
+      "readableWordCount": 268
+    },
+    {
+      "level": 3,
+      "title": "The rest of the basics",
+      "itemIds": [
+        "sc-ko-0020",
+        "sc-ko-0021",
+        "sc-ko-0022",
+        "sc-ko-0023",
+        "sc-ko-0024"
+      ],
+      "readableWordCount": 2494
+    },
+    {
+      "level": 4,
+      "title": "Y-vowels and new blocks",
+      "itemIds": [
+        "sc-ko-0025",
+        "sc-ko-0026",
+        "sc-ko-0027",
+        "sc-ko-0028",
+        "sc-ko-0029",
+        "sc-ko-0030",
+        "sc-ko-0031",
+        "sc-ko-0032"
+      ],
+      "readableWordCount": 3310
+    },
+    {
+      "level": 5,
+      "title": "The breathy four",
+      "itemIds": [
+        "sc-ko-0033",
+        "sc-ko-0034",
+        "sc-ko-0035",
+        "sc-ko-0036",
+        "sc-ko-0037",
+        "sc-ko-0038"
+      ],
+      "readableWordCount": 4151
+    },
+    {
+      "level": 6,
+      "title": "The tense twins",
+      "itemIds": [
+        "sc-ko-0039",
+        "sc-ko-0040",
+        "sc-ko-0041",
+        "sc-ko-0042",
+        "sc-ko-0043",
+        "sc-ko-0044",
+        "sc-ko-0045"
+      ],
+      "readableWordCount": 4878
+    },
+    {
+      "level": 7,
+      "title": "Bright pairs",
+      "itemIds": [
+        "sc-ko-0046",
+        "sc-ko-0047",
+        "sc-ko-0048",
+        "sc-ko-0049"
+      ],
+      "readableWordCount": 7180
+    },
+    {
+      "level": 8,
+      "title": "Gliding vowels",
+      "itemIds": [
+        "sc-ko-0050",
+        "sc-ko-0051",
+        "sc-ko-0052",
+        "sc-ko-0053",
+        "sc-ko-0054"
+      ],
+      "readableWordCount": 8449
+    },
+    {
+      "level": 9,
+      "title": "Blocks with a floor",
+      "itemIds": [
+        "sc-ko-0055",
+        "sc-ko-0056",
+        "sc-ko-0057",
+        "sc-ko-0058",
+        "sc-ko-0059",
+        "sc-ko-0060"
+      ],
+      "readableWordCount": 8449
+    },
+    {
+      "level": 10,
+      "title": "Real words from your deck",
+      "itemIds": [
+        "sc-ko-0061",
+        "sc-ko-0062",
+        "sc-ko-0063",
+        "sc-ko-0064",
+        "sc-ko-0065",
+        "sc-ko-0066"
+      ],
+      "readableWordCount": 8449
     }
   ]
 }

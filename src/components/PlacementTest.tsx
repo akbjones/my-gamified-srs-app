@@ -4,9 +4,12 @@ import type { AudioSpeed } from '../services/storageService';
 import { MAIN_PATH, getNodeName } from '../data/topicConfig';
 import { getGrammarNudge } from '../data/grammarDescriptions';
 import { grammarTipsEnabled } from '../config/featureFlags';
-import { selectPlacementCards, applyPlacementResults, ConfidenceRating } from '../services/placementService';
+import {
+  selectPlacementCards, applyPlacementResults, countFastTrackable,
+  ConfidenceRating, RATING_POINTS, NodeStrength,
+} from '../services/placementService';
 import { playCardAudio, stopAudio } from '../services/audioService';
-import { ChevronLeft, ArrowRight, BookOpen, Volume2 } from 'lucide-react';
+import { ChevronLeft, ArrowRight, BookOpen, Volume2, FastForward } from 'lucide-react';
 
 interface PlacementTestProps {
   deck: QuestCard[];
@@ -14,13 +17,31 @@ interface PlacementTestProps {
   userStats: UserStats;
   masteryMap: MasteryMap;
   onComplete: (newMasteryMap: MasteryMap, newUserStats: UserStats, fastTrackedCount: number) => void;
+  /** Decline: "I'm new — start from zero". Marks placement complete and starts studying. */
   onSkip: () => void;
+  /** Leave without deciding (back/exit). Placement stays incomplete — the fork
+   *  screen reappears on the next Study tap. Nothing is permanent. */
+  onExit: () => void;
   autoPlayAudio: boolean;
   audioSpeed: AudioSpeed;
   googleTtsApiKey?: string;
 }
 
 type Phase = 'intro' | 'question' | 'reveal' | 'results';
+
+/** Scoring (2 cards per node, points no_idea=0 hard=1 knew=2 easy=3, max 6):
+ *   total ≤ 2  → FAIL the node (includes no_idea+knew_it — previously a pass)
+ *   total = 3  → WOBBLE: passes, but two wobbles in a row fail the second
+ *   total ≥ 4  → pass ('strong' when ≥ 5)
+ *  Every rule is reachable with n=2 — the old "3 mostly → fail" branch never
+ *  could fire. There is no per-card Skip anymore: "No idea" IS the honest
+ *  skip, and it scores. */
+function nodeVerdict(points: number[]): { fail: boolean; wobble: boolean; strength: NodeStrength } {
+  const total = points.reduce((a, b) => a + b, 0);
+  if (total <= 2) return { fail: true, wobble: false, strength: 'wobble' };
+  if (total === 3) return { fail: false, wobble: true, strength: 'wobble' };
+  return { fail: false, wobble: false, strength: total >= 5 ? 'strong' : 'normal' };
+}
 
 const PlacementTest: React.FC<PlacementTestProps> = ({
   deck,
@@ -29,6 +50,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   masteryMap,
   onComplete,
   onSkip,
+  onExit,
   autoPlayAudio,
   audioSpeed,
   googleTtsApiKey,
@@ -36,27 +58,27 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   const [phase, setPhase] = useState<Phase>('intro');
   const [nodeIndex, setNodeIndex] = useState(0);
   const [cardIndex, setCardIndex] = useState(0);
-  // Per-node tracking: count of "mostly" and "no_idea" per node index
-  const [nodeScores, setNodeScores] = useState<Record<number, { mostly: number; noIdea: number }>>({});
+  // Points per rated card, per node index.
+  const [nodePoints, setNodePoints] = useState<Record<number, number[]>>({});
+  // Strength of each PASSED node (feeds FSRS seeding on apply).
+  const [nodeStrengths, setNodeStrengths] = useState<Record<number, NodeStrength>>({});
   const [lastRating, setLastRating] = useState<ConfidenceRating | null>(null);
   const [ceilingNode, setCeilingNode] = useState<number | null>(null);
-  // Cap on per-card "Skip" — users can't game the test by skipping every card.
-  // Forced to rate at least 1/3 of the cards. After cap, the Skip button hides.
-  const [skipCount, setSkipCount] = useState(0);
   const [showGrammarDetail, setShowGrammarDetail] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  // Per-question state: whether the user has peeked at the English translation.
-  // Resets whenever the current card changes.
+  // Whether the user peeked at the English for the current question. Peeking
+  // is fine (it's how you verify you understood) but it caps the claim: you
+  // can't rate "Very easy" on a sentence you needed the translation for.
   const [translationRevealed, setTranslationRevealed] = useState(false);
-  // Tracks which card we've already triggered autoplay for. Prevents
-  // re-firing on phase changes (question → reveal → question via rerate)
-  // which used to interrupt and restart audio mid-listen.
+  // Tracks whether the previous completed node was a wobble (two consecutive
+  // wobbles fail the second one).
+  const prevWobbleRef = useRef(false);
   const lastAutoplayedCardId = useRef<string | null>(null);
 
   // Pre-select 2 cards per node (35 nodes × 2 = 70 total cards)
   const placementCards = useMemo(() => selectPlacementCards(deck), [deck]);
 
-  // Total cards across all nodes (for progress bar)
+  // Card-based progress (single scale — the header shows the same count)
   const totalTestCards = placementCards.reduce((sum, arr) => sum + arr.length, 0);
   const completedCards = placementCards
     .slice(0, nodeIndex)
@@ -67,32 +89,23 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   const nudge = currentNode ? getGrammarNudge(currentNode.id, lang) : '';
 
   // Auto-play audio – fires AT MOST ONCE per card (tracked by card id).
-  // This is the bug fix for "audio randomly stops and restarts during the test":
-  // the previous version put `phase` in the deps + a cleanup that always called
-  // stopAudio(), so EVERY phase transition (question → reveal, reveal → question
-  // via rerate) interrupted and restarted the audio. Now the ref guard ensures
-  // we never auto-trigger the same card's audio twice, and the cleanup only
-  // fires when the actual card changes (nodeIndex/cardIndex).
   useEffect(() => {
     if (phase !== 'question' || !currentCard || !autoPlayAudio) return;
     if (lastAutoplayedCardId.current === currentCard.id) return;
     lastAutoplayedCardId.current = currentCard.id;
     playCardAudio(currentCard.audio, currentCard.target, lang, audioSpeed, googleTtsApiKey);
-    // No cleanup here – audio is allowed to keep playing while the user reads
-    // the translation in the reveal phase.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase, nodeIndex, cardIndex]);
 
-  // Stop audio when leaving the card entirely (new card or component unmount).
-  // Separate effect so phase changes within the same card don't trigger stop.
+  // Stop audio when leaving the card entirely (new card or unmount).
   useEffect(() => {
     return () => { stopAudio(); };
   }, [nodeIndex, cardIndex]);
 
-  // Reset the "translation peeked" state whenever a new question loads
+  // Reset the peek state whenever a new question loads
   useEffect(() => {
     setTranslationRevealed(false);
-  }, [phase, nodeIndex, cardIndex]);
+  }, [nodeIndex, cardIndex]);
 
   const handlePlayAudio = () => {
     if (!currentCard || isPlaying) return;
@@ -101,36 +114,40 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
       .finally(() => setIsPlaying(false));
   };
 
-  // Strict placement scoring:
-  // - 1 "no idea" in a node → fail that node
-  // - 2 "mostly" in a single node → fail that node
-  // - 2 "mostly" across two adjacent nodes → fail the later node
-
-  // Cap = ⌊2/3 × totalTestCards⌋. Once skipCount hits this, the Skip button
-  // is hidden — user has to commit to a rating for the rest of the test.
-  const skipCap = Math.floor(totalTestCards * 2 / 3);
-  const canSkip = skipCount < skipCap;
-
-  function handleSkip() {
-    setSkipCount(c => c + 1);
-    // Advance to next card without recording a rating. Mirrors handleNext's
-    // navigation logic — fall through to next card in node, next node, or
-    // results — but never trips shouldFailNode because nothing was scored.
-    const nextCardIndex = cardIndex + 1;
+  /** Advance after the current card has a rating recorded in `points`.
+   *  Called with the FRESH points map (state updates are async). Confident
+   *  ratings skip the reveal screen entirely — half the taps for the users
+   *  the test exists for. */
+  function advance(points: Record<number, number[]>) {
     const nodeCards = placementCards[nodeIndex] || [];
-    if (nextCardIndex < nodeCards.length) {
-      setCardIndex(nextCardIndex);
+    const ratedAll = (points[nodeIndex]?.length || 0) >= nodeCards.length;
+
+    if (!ratedAll) {
+      setCardIndex(cardIndex + 1);
+      setPhase('question');
       setLastRating(null);
       return;
     }
+
+    // Node complete — verdict
+    const v = nodeVerdict(points[nodeIndex] || []);
+    if (v.fail || (v.wobble && prevWobbleRef.current)) {
+      setCeilingNode(nodeIndex);
+      setPhase('results');
+      return;
+    }
+    prevWobbleRef.current = v.wobble;
+    setNodeStrengths(prev => ({ ...prev, [nodeIndex]: v.strength }));
+
     const nextNode = nodeIndex + 1;
     if (nextNode >= MAIN_PATH.length) {
-      setCeilingNode(null);
+      setCeilingNode(null); // passed everything
       setPhase('results');
       return;
     }
     setNodeIndex(nextNode);
     setCardIndex(0);
+    setPhase('question');
     setLastRating(null);
   }
 
@@ -138,104 +155,39 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
     setLastRating(rating);
     setShowGrammarDetail(false);
 
-    // Update per-node score
-    setNodeScores(prev => {
-      const current = prev[nodeIndex] || { mostly: 0, noIdea: 0 };
-      return {
-        ...prev,
-        [nodeIndex]: {
-          mostly: current.mostly + (rating === 'mostly' ? 1 : 0),
-          noIdea: current.noIdea + (rating === 'no_idea' ? 1 : 0),
-        },
-      };
-    });
+    const pts = RATING_POINTS[rating];
+    const fresh: Record<number, number[]> = {
+      ...nodePoints,
+      [nodeIndex]: [...(nodePoints[nodeIndex] || []), pts],
+    };
+    setNodePoints(fresh);
 
-    setPhase('reveal');
+    // Confident answers go straight on; uncertain ones get the reveal screen
+    // (that's where seeing the answer actually helps).
+    if (rating === 'knew_it' || rating === 'very_easy') {
+      advance(fresh);
+    } else {
+      setPhase('reveal');
+    }
   }
 
   function handleRerate() {
-    // Undo the last rating and go back to question
-    if (lastRating) {
-      setNodeScores(prev => {
-        const current = prev[nodeIndex] || { mostly: 0, noIdea: 0 };
-        return {
-          ...prev,
-          [nodeIndex]: {
-            mostly: current.mostly - (lastRating === 'mostly' ? 1 : 0),
-            noIdea: current.noIdea - (lastRating === 'no_idea' ? 1 : 0),
-          },
-        };
-      });
-    }
+    // Undo the last rating and go back to the question
+    setNodePoints(prev => {
+      const arr = [...(prev[nodeIndex] || [])];
+      arr.pop();
+      return { ...prev, [nodeIndex]: arr };
+    });
     setLastRating(null);
     setPhase('question');
-  }
-
-  /** Check if a node should be failed based on scores so far.
-   *  More forgiving than the original (which failed on the first miss) –
-   *  a single wobble shouldn't decide your starting point.
-   */
-  function shouldFailNode(ni: number, scores: Record<number, { mostly: number; noIdea: number }>): boolean {
-    const s = scores[ni] || { mostly: 0, noIdea: 0 };
-    // 2 "no idea" in the same node → fail
-    if (s.noIdea >= 2) return true;
-    // 3 "mostly" in same node → fail
-    if (s.mostly >= 3) return true;
-    // 1 "no idea" + 1 "mostly" in same node → fail
-    if (s.noIdea >= 1 && s.mostly >= 1) return true;
-    // Adjacent spillover: 2 "mostly" in previous node + 1 "mostly" in this node → fail
-    if (ni > 0 && s.mostly >= 1) {
-      const prev = scores[ni - 1] || { mostly: 0, noIdea: 0 };
-      if (prev.mostly >= 2) return true;
-    }
-    return false;
   }
 
   function handleNext() {
-    const nextCardIndex = cardIndex + 1;
-    const nodeCards = placementCards[nodeIndex] || [];
-
-    // Check the now-stricter fail conditions – only bail out of the test
-    // when the node has *clearly* maxed out.
-    const currentNodeScore = nodeScores[nodeIndex] || { mostly: 0, noIdea: 0 };
-    if (shouldFailNode(nodeIndex, nodeScores)) {
-      setCeilingNode(nodeIndex);
-      setPhase('results');
-      return;
-    }
-
-    if (nextCardIndex < nodeCards.length) {
-      // More cards in this node
-      setCardIndex(nextCardIndex);
-      setPhase('question');
-      setLastRating(null);
-      return;
-    }
-
-    // Finished all cards for this node – check stop conditions
-    if (shouldFailNode(nodeIndex, nodeScores)) {
-      setCeilingNode(nodeIndex);
-      setPhase('results');
-      return;
-    }
-
-    // Advance to next node
-    const nextNode = nodeIndex + 1;
-    if (nextNode >= MAIN_PATH.length) {
-      // Passed everything
-      setCeilingNode(null);
-      setPhase('results');
-      return;
-    }
-
-    setNodeIndex(nextNode);
-    setCardIndex(0);
-    setPhase('question');
-    setLastRating(null);
+    advance(nodePoints);
   }
 
   function handleApply() {
-    const results = { ceilingNodeIndex: ceilingNode };
+    const results = { ceilingNodeIndex: ceilingNode, nodeStrengths };
     const { newMasteryMap, newUserStats, fastTrackedCount } = applyPlacementResults(
       results,
       deck,
@@ -246,35 +198,40 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
     onComplete(newMasteryMap, newUserStats, fastTrackedCount);
   }
 
-  // ── Intro screen ──────────────────────────────────────────
+  // ── Intro: the fork. Full screen, benefit-first, nothing dismissible. ──
 
   if (phase === 'intro') {
     return (
       <div className="flex flex-col h-dvh px-5 pt-[max(1.5rem,env(safe-area-inset-top))] pb-[max(1.5rem,env(safe-area-inset-bottom))]">
         <button
-          onClick={onSkip}
+          onClick={onExit}
           className="btn-ghost self-start text-[10px] font-bold uppercase tracking-wider mb-8"
         >
-          <ChevronLeft size={14} /> Skip
+          <ChevronLeft size={14} /> Back
         </button>
 
         <div className="flex-1 flex flex-col justify-center">
-          <h1 className="text-2xl font-black text-[var(--text-primary)] mb-3">
-            What do you already know?
-          </h1>
+          <div className="flex items-center gap-2 mb-3">
+            <FastForward size={20} className="text-[var(--accent)]" />
+            <h1 className="text-2xl font-black text-[var(--text-primary)]">
+              Skip what you already know
+            </h1>
+          </div>
           <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">
-            We'll show you {LANGUAGE_CONFIG[lang].name} sentences from easy to advanced.
-            Rate how well you understand each one.
+            Know some {LANGUAGE_CONFIG[lang].name}? A quick check finds your level and marks
+            everything below it as learned — that can be hundreds of cards you'll
+            never have to grind through.
           </p>
           <div className="stat-card p-3.5 mb-6">
             <p className="text-xs text-[var(--text-secondary)] leading-relaxed">
-              <span className="font-bold text-[var(--text-primary)]">Be strict with yourself.</span>
-              {' '}Only mark "Know it" if you could reproduce the sentence from memory when prompted.
-              Focus on grammar and structure, not just vocabulary.
+              <span className="font-bold text-[var(--text-primary)]">How it works:</span>
+              {' '}you'll see sentences from easy to advanced and rate each one with the
+              same buttons you'll use when studying. Rate before revealing the English —
+              "Knew it" means you understood it on your own.
             </p>
           </div>
           <p className="text-[10px] text-[var(--text-muted)] uppercase tracking-wider font-semibold mb-8">
-            About 2 minutes
+            2 minutes if you're new · up to 10 if you know a lot
           </p>
         </div>
 
@@ -282,13 +239,13 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           onClick={() => setPhase('question')}
           className="w-full py-2.5 rounded-xl text-sm font-bold bg-[var(--accent)] text-white hover:bg-[var(--accent)]/90 active:scale-95 transition mb-2"
         >
-          Start
+          Find my level
         </button>
         <button
           onClick={onSkip}
           className="w-full py-2.5 rounded-xl text-sm font-bold bg-[var(--bg-inset)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] active:scale-95 transition"
         >
-          Start from the beginning instead
+          I'm new — start from zero
         </button>
       </div>
     );
@@ -297,24 +254,22 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   // ── Question screen ───────────────────────────────────────
 
   if (phase === 'question' && currentCard) {
+    const peeked = translationRevealed;
     return (
       <div className="flex flex-col h-dvh px-5 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1rem,env(safe-area-inset-bottom))]">
-        {/* Header: just exit + progress count. The node name was telling
-            the user which curriculum section they were being tested on,
-            which isn't actionable info during the test – removed for focus. */}
         <div className="flex items-center justify-between mb-2">
           <button
-            onClick={onSkip}
+            onClick={onExit}
             className="text-xs font-bold text-[var(--text-muted)] uppercase tracking-wider hover:text-[var(--text-secondary)] transition-colors"
           >
             &larr; Exit
           </button>
           <span className="text-xs font-bold text-[var(--text-muted)] tabular-nums">
-            {nodeIndex + 1}/{MAIN_PATH.length}
+            {completedCards + 1}/{totalTestCards}
           </span>
         </div>
 
-        {/* Progress bar */}
+        {/* Progress bar — same card-based scale as the header count */}
         <div className="h-1 bg-[var(--progress-bg)] rounded-full mb-6 overflow-hidden">
           <div
             className="h-full rounded-full transition-all duration-300"
@@ -338,8 +293,6 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
             >
               <Volume2 size={20} className={isPlaying ? 'text-blue-500 animate-pulse' : 'text-[var(--text-muted)]'} />
             </button>
-            {/* Translation peek – hidden until tapped. Use it to confirm
-                what the sentence means before committing to a confidence rating. */}
             {translationRevealed ? (
               <p className="mt-4 pt-4 border-t border-[var(--border-color)] text-sm text-[var(--text-secondary)] italic text-center leading-relaxed animate-fade-in">
                 {currentCard.english}
@@ -355,48 +308,50 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           </div>
         </div>
 
-        {/* Confidence buttons – ordered low→high (no idea on left, know it on right) */}
-        <div className="grid grid-cols-3 gap-2 mt-4 mb-2 shrink-0">
+        {/* Rating buttons — the SAME four you use when studying, low → high.
+            After peeking at the English, "Very easy" is off the table: you
+            can't claim a sentence was trivially easy if you needed the answer. */}
+        <div className="grid grid-cols-4 gap-1.5 mt-4 mb-2 shrink-0">
           <button
             onClick={() => handleConfidence('no_idea')}
             className="py-3.5 rounded-xl border border-red-500/30 bg-[var(--bg-card)] hover:bg-red-500/10 active:bg-red-500/20 transition-all"
           >
-            <div className="text-xs font-black text-red-500 uppercase">No idea</div>
+            <div className="text-[11px] font-black text-red-500 uppercase">No idea</div>
           </button>
           <button
-            onClick={() => handleConfidence('mostly')}
+            onClick={() => handleConfidence('hard')}
             className="py-3.5 rounded-xl border border-amber-500/30 bg-[var(--bg-card)] hover:bg-amber-500/10 active:bg-amber-500/20 transition-all"
           >
-            <div className="text-xs font-black text-amber-500 uppercase">Mostly</div>
+            <div className="text-[11px] font-black text-amber-500 uppercase">Hard</div>
           </button>
           <button
-            onClick={() => handleConfidence('know_it')}
+            onClick={() => handleConfidence('knew_it')}
             className="py-3.5 rounded-xl border border-emerald-500/30 bg-[var(--bg-card)] hover:bg-emerald-500/10 active:bg-emerald-500/20 transition-all"
           >
-            <div className="text-xs font-black text-emerald-500 uppercase">Know it</div>
+            <div className="text-[11px] font-black text-emerald-500 uppercase">Knew it</div>
+          </button>
+          <button
+            onClick={() => handleConfidence('very_easy')}
+            disabled={peeked}
+            className={`py-3.5 rounded-xl border transition-all ${
+              peeked
+                ? 'border-[var(--border-color)] bg-[var(--bg-inset)] opacity-40'
+                : 'border-sky-500/30 bg-[var(--bg-card)] hover:bg-sky-500/10 active:bg-sky-500/20'
+            }`}
+          >
+            <div className={`text-[11px] font-black uppercase ${peeked ? 'text-[var(--text-faint)]' : 'text-sky-500'}`}>Very easy</div>
           </button>
         </div>
-        {/* Per-card Skip — bypasses scoring for the current card. Capped at
-            ⌊2/3 × totalTestCards⌋ so the test still gets a real signal. */}
-        <div className="flex justify-center mb-2 shrink-0">
-          {canSkip ? (
-            <button
-              onClick={handleSkip}
-              className="text-xs font-bold uppercase tracking-wider text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors px-3 py-1.5"
-            >
-              Skip this card · {skipCap - skipCount} left
-            </button>
-          ) : (
-            <span className="text-xs font-bold uppercase tracking-wider text-[var(--text-faint)] px-3 py-1.5">
-              No skips left — please rate
-            </span>
-          )}
-        </div>
+        {peeked && (
+          <p className="text-center text-[10px] text-[var(--text-faint)] mb-2 shrink-0">
+            You peeked — "Very easy" is for sentences you didn't need the translation for.
+          </p>
+        )}
       </div>
     );
   }
 
-  // ── Reveal screen ─────────────────────────────────────────
+  // ── Reveal screen (only after uncertain ratings — No idea / Hard) ──
 
   if (phase === 'reveal' && currentCard) {
     return (
@@ -405,7 +360,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
             <button
-              onClick={onSkip}
+              onClick={onExit}
               className="text-[10px] font-bold text-[var(--text-muted)] uppercase tracking-wider hover:text-[var(--text-secondary)] transition-colors mr-1"
             >
               &larr; Exit
@@ -420,11 +375,9 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
             </span>
           </div>
           <span className={`text-[10px] font-black uppercase tracking-wider ${
-            lastRating === 'know_it' ? 'text-emerald-500' :
-            lastRating === 'mostly' ? 'text-amber-500' : 'text-red-500'
+            lastRating === 'hard' ? 'text-amber-500' : 'text-red-500'
           }`}>
-            {lastRating === 'know_it' ? 'Know it' :
-             lastRating === 'mostly' ? 'Mostly' : 'No idea'}
+            {lastRating === 'hard' ? 'Hard' : 'No idea'}
           </span>
         </div>
 
@@ -492,7 +445,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
           )}
         </div>
 
-        {/* Bottom buttons – right below content */}
+        {/* Bottom buttons */}
         <div className="flex gap-2 shrink-0 mt-2 mb-2">
           <button
             onClick={handleRerate}
@@ -517,27 +470,36 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
     const passedNodes = ceilingNode !== null ? ceilingNode : MAIN_PATH.length;
     const lastPassedNode = passedNodes > 0 ? MAIN_PATH[passedNodes - 1] : null;
     const ceilingNodeObj = ceilingNode !== null ? MAIN_PATH[ceilingNode] : null;
+    // The payoff, concretely, BEFORE the user commits.
+    const projected = countFastTrackable({ ceilingNodeIndex: ceilingNode, nodeStrengths }, deck);
     return (
       <div className="flex flex-col h-dvh px-5 pt-[max(1.5rem,env(safe-area-inset-top))] pb-[max(1.5rem,env(safe-area-inset-bottom))]">
         <div className="flex-1 flex flex-col justify-center">
           {ceilingNode !== null && ceilingNode > 0 ? (
             <>
-              {/* Found a ceiling with some passed nodes */}
               <h1 className="text-2xl font-black text-[var(--text-primary)] mb-2">
                 You're ready to roll
               </h1>
               <p className="text-sm text-[var(--text-secondary)] mb-4">
                 Comfortable through <span className="font-bold">{lastPassedNode ? getNodeName(lastPassedNode.id, lang) : ''}</span>
               </p>
+              <div className="stat-card p-4 mb-4 text-center">
+                <p className="text-3xl font-black text-[var(--accent)] mb-1">{projected.toLocaleString()}</p>
+                <p className="text-xs text-[var(--text-secondary)]">
+                  cards marked as known — you skip straight past them
+                </p>
+              </div>
               <p className="text-xs text-[var(--text-muted)] mb-1 flex items-center justify-center gap-2">
                 Starting from
                 <span className="inline-block w-2 h-2 rounded-full" style={{ backgroundColor: ceilingNodeObj?.color }} aria-hidden="true" />
                 <span className="font-bold text-[var(--text-secondary)]">{ceilingNodeObj ? getNodeName(ceilingNodeObj.id, lang) : ''}</span>
               </p>
+              <p className="text-[10px] text-[var(--text-faint)] text-center mt-2">
+                Skipped cards come back as spaced reviews over the next days — nothing is lost.
+              </p>
             </>
           ) : ceilingNode === 0 ? (
             <>
-              {/* Hit ceiling on first node */}
               <h1 className="text-2xl font-black text-[var(--text-primary)] mb-2">
                 Starting fresh
               </h1>
@@ -547,18 +509,20 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
             </>
           ) : (
             <>
-              {/* Passed everything */}
               <h1 className="text-2xl font-black text-[var(--text-primary)] mb-2">
                 Impressive!
               </h1>
-              <p className="text-sm text-[var(--text-secondary)] mb-6">
-                You passed all {MAIN_PATH.length} levels. All cards will be marked as known.
+              <p className="text-sm text-[var(--text-secondary)] mb-2">
+                You passed all {MAIN_PATH.length} levels.
               </p>
+              <div className="stat-card p-4 mb-4 text-center">
+                <p className="text-3xl font-black text-[var(--accent)] mb-1">{projected.toLocaleString()}</p>
+                <p className="text-xs text-[var(--text-secondary)]">cards marked as known</p>
+              </div>
             </>
           )}
         </div>
 
-        {/* Apply button */}
         {ceilingNode !== 0 ? (
           <button
             onClick={handleApply}

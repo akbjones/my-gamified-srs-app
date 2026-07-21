@@ -7,6 +7,7 @@ import PlacementTest from './components/PlacementTest';
 import ChallengeScreen from './components/ChallengeScreen';
 import StreakFlame from './components/StreakFlame';
 import SyncSettings from './components/SyncSettings';
+import CheckInScreen from './components/CheckInScreen';
 import { QuestCard, MasteryMap, SessionState, UserStats, DailyStats, Language, LearningGoal, LANGUAGE_CONFIG, GOAL_CONFIG, ProgressState, ChallengeMode, ChallengeQuestion, BossRing } from './types';
 import { MAIN_PATH, isNodeUnlocked, getNodeName, getChapterForNode, chapterIndex } from './data/topicConfig';
 import { handleAnswerLogic, saveCardProgress, getRetention, burySiblings, interleaveQueue } from './services/srsService';
@@ -15,7 +16,8 @@ import {
   loadDailyStats, saveDailyStats, resetAll,
   exportAllProgress, importAllProgress,
   loadSettings, saveSettings,
-  isPlacementComplete, setPlacementComplete, resetPlacement,
+  isPlacementComplete, setPlacementComplete,
+  isPlacementTaken, isCheckinDone, setCheckinDone,
   loadProgressState, saveProgressState,
   loadVocabMap, saveVocabMap,
   loadFavorites, saveFavorites,
@@ -73,7 +75,7 @@ const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
   russian: lookupRu,
 };
 
-type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB' | 'FAVORITES' | 'LISTEN';
+type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB' | 'FAVORITES' | 'LISTEN' | 'CHECKIN';
 
 // Deck loaders — DYNAMIC imports so each language's deck.json is its own chunk,
 // fetched on demand. Keeps the main bundle small (~1 MB vs ~5 MB) and only pulls
@@ -262,9 +264,9 @@ const App: React.FC = () => {
   // user wanders into Settings). Shown once, only to users with meaningful
   // progress to protect; 'Later' dismisses forever (device-local flag).
   const [showSyncNudge, setShowSyncNudge] = useState(false);
-  // Placement test offer – shown as a modal interstitial the first time
-  // the user taps Study in a language they haven't placed in yet.
-  const [showPlacementPrompt, setShowPlacementPrompt] = useState(false);
+  // Rating tally for the session in progress — evidence for the one-shot
+  // difficulty check-in screen (CHECKIN view).
+  const [sessionTally, setSessionTally] = useState({ noIdea: 0, hard: 0, good: 0, easy: 0 });
   const langDropdownRef = useRef<HTMLDivElement>(null);
   const backupInputRef = useRef<HTMLInputElement>(null);
   // Undo stack for going back to previous cards
@@ -440,6 +442,7 @@ const App: React.FC = () => {
   };
 
   const handleStartSession = (studyMore: boolean | number = false) => {
+    setSessionTally({ noIdea: 0, hard: 0, good: 0, easy: 0 });
     const now = Date.now();
     const currentNode = getCurrentNode(deck);
 
@@ -521,6 +524,13 @@ const App: React.FC = () => {
 
     // Analytics: feed the session aggregates (counts only, no card text).
     recordSessionAnswer(isNewCard, rating !== 'AGAIN');
+    // Difficulty check-in evidence
+    setSessionTally(t => ({
+      noIdea: t.noIdea + (rating === 'AGAIN' ? 1 : 0),
+      hard: t.hard + (rating === 'HARD' ? 1 : 0),
+      good: t.good + (rating === 'GOOD' ? 1 : 0),
+      easy: t.easy + (rating === 'EASY' ? 1 : 0),
+    }));
 
     const { sessionUpdates: updates, updatedCard } = handleAnswerLogic(rating, currentCard, session, (card) => {
       const newMap = saveCardProgress(card, lang);
@@ -885,57 +895,13 @@ const App: React.FC = () => {
             </div>
           </header>
 
-          {/* Placement test interstitial – appears once when the user taps
-              Study for a language they haven't placed in. Two choices: take
-              the 2-min test, or skip and start at level 0. Either dismisses
-              the prompt for good (setPlacementComplete is also called on
-              skip so it never re-appears). */}
-          {showPlacementPrompt && (
-            <div
-              className="fixed inset-0 z-[10000] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in"
-              onClick={() => setShowPlacementPrompt(false)}
-            >
-              <div
-                className="bg-[var(--bg-card)] border border-[var(--border-color)] rounded-2xl p-6 max-w-sm w-full shadow-2xl"
-                onClick={e => e.stopPropagation()}
-              >
-                <h3 className="text-lg font-bold text-[var(--text-primary)] text-center mb-1.5">
-                  Know some {LANGUAGE_CONFIG[lang].name} already?
-                </h3>
-                <p className="text-sm text-[var(--text-muted)] text-center mb-5">
-                  Take a quick 2-minute test to skip ahead, or just start from the beginning.
-                </p>
-                <div className="flex flex-col gap-2">
-                  <button
-                    onClick={() => {
-                      setShowPlacementPrompt(false);
-                      setView('PLACEMENT');
-                    }}
-                    className="w-full py-2.5 rounded-xl text-sm font-bold bg-[var(--accent)] text-white hover:bg-[var(--accent)]/90 active:scale-95 transition"
-                  >
-                    Take the 2-min test
-                  </button>
-                  <button
-                    onClick={() => {
-                      setShowPlacementPrompt(false);
-                      setPlacementComplete(lang);
-                      setDeck(prev => [...prev]);
-                      handleStartSession();
-                    }}
-                    className="w-full py-2.5 rounded-xl text-sm font-bold bg-[var(--bg-inset)] border border-[var(--border-color)] text-[var(--text-secondary)] hover:bg-[var(--bg-card-hover)] active:scale-95 transition"
-                  >
-                    Skip, start from the beginning
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
-
           {/* Study button – primary action, generous size so it dominates the home view */}
           <button
             onClick={() => {
-              if (!isPlacementComplete(lang)) {
-                setShowPlacementPrompt(true);
+              if (!STARTER_LOCK && !isPlacementComplete(lang)) {
+                // Full-screen fork (PlacementTest intro) — no dismissible modal.
+                // Locked starter links skip placement entirely.
+                setView('PLACEMENT');
               } else {
                 // Model A: go straight into studying — due reviews + today's
                 // remaining new-card allowance. No pre-study prompt.
@@ -1482,24 +1448,29 @@ const App: React.FC = () => {
                 </div>
               </div>
 
+              {/* Placement — framed as the benefit, always recoverable. */}
+              <div className="pt-4 border-t border-[var(--border-color)] space-y-2">
+                <div className="text-xs font-bold text-[var(--text-muted)] uppercase tracking-wide">Your level</div>
+                {!STARTER_LOCK && (
+                  <button
+                    onClick={() => {
+                      setShowTools(false);
+                      setView('PLACEMENT');
+                    }}
+                    className="w-full px-3 py-2.5 text-sm font-bold text-[var(--accent)] border border-[var(--accent)]/30 rounded-lg hover:bg-[var(--accent)]/10 active:scale-95 transition-all"
+                  >
+                    {isPlacementTaken(lang)
+                      ? 'Retake placement test'
+                      : 'Skip ahead — take the placement test'}
+                  </button>
+                )}
+              </div>
+
               {/* Danger zone – reset actions. Confirms required so the user
                   can't accidentally wipe progress. Styled in muted red so it
                   reads as serious but doesn't draw the eye like a CTA. */}
               <div className="pt-4 border-t border-[var(--border-color)] space-y-3">
                 <div className="text-xs font-bold text-red-500/80 uppercase tracking-wide">Danger zone</div>
-                {isPlacementComplete(lang) && (
-                  <button
-                    onClick={() => {
-                      if (confirm(`Reset the placement test for ${LANGUAGE_CONFIG[lang].name}? You'll start from level 0.`)) {
-                        resetPlacement(lang);
-                        setDeck(prev => [...prev]); // force re-render
-                      }
-                    }}
-                    className="w-full px-3 py-2.5 text-sm font-bold text-amber-600 dark:text-amber-400 border border-amber-500/30 rounded-lg hover:bg-amber-500/10 active:scale-95 transition-all"
-                  >
-                    Reset placement test
-                  </button>
-                )}
                 <button
                   onClick={async () => {
                     if (confirm('Reset ALL data across every language? This wipes streaks, progress, mastery, favorites, vocab – everything. Cannot be undone.')) {
@@ -1543,7 +1514,15 @@ const App: React.FC = () => {
           onUndoAnswer={handleUndoAnswer}
           onAbort={() => {
             setPendingChallenge(null);
-            setView('HOME');
+            // One-shot difficulty check-in: a full screen (not a popup), once
+            // per language, after there's real evidence — >=25 lifetime reviews
+            // and >=8 answers in the session that just ended.
+            const answered = sessionTally.noIdea + sessionTally.hard + sessionTally.good + sessionTally.easy;
+            if (!STARTER_LOCK && !isCheckinDone(lang) && userStats.totalReviews >= 25 && answered >= 8) {
+              setView('CHECKIN');
+            } else {
+              setView('HOME');
+            }
             // Schedule notification after session ends
             const dueCount = deck.filter(c => c.mastery > 0 && c.dueDate && c.dueDate <= Date.now()).length;
             onSessionComplete(dueCount, userStats.streak);
@@ -1636,6 +1615,32 @@ const App: React.FC = () => {
         />
       )}
 
+      {view === 'CHECKIN' && (
+        <CheckInScreen
+          lang={lang}
+          tally={sessionTally}
+          easedLimitPreview={{
+            from: getDailyLimitFor(settings, lang),
+            to: Math.max(5, Math.floor(getDailyLimitFor(settings, lang) / 2)),
+          }}
+          onTooEasy={() => {
+            setCheckinDone(lang);
+            setView('PLACEMENT'); // level check → skip ahead properly
+          }}
+          onAboutRight={() => {
+            setCheckinDone(lang);
+            setView('HOME');
+          }}
+          onTooHard={() => {
+            setCheckinDone(lang);
+            const from = getDailyLimitFor(settings, lang);
+            const to = Math.max(5, Math.floor(from / 2));
+            handleUpdateSettings(setDailyLimitFor(settings, lang, to));
+            setView('HOME');
+          }}
+        />
+      )}
+
       {view === 'PLACEMENT' && (
         <PlacementTest
           deck={deck}
@@ -1663,9 +1668,13 @@ const App: React.FC = () => {
             setView('HOME');
           }}
           onSkip={() => {
+            // "I'm new — start from zero": decline placement and go straight
+            // into the first session (what the user was trying to do).
             setPlacementComplete(lang);
-            setView('HOME');
+            setDeck(prev => [...prev]);
+            handleStartSession();
           }}
+          onExit={() => setView('HOME')}
           autoPlayAudio={settings.autoPlayAudio}
           audioSpeed={settings.audioSpeed}
           googleTtsApiKey={settings.googleTtsApiKey}

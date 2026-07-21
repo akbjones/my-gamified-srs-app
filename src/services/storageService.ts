@@ -224,6 +224,27 @@ export const setPlacementComplete = (lang: Language): void => {
   safeSet(placementKey(lang), 'true');
 };
 
+/** Whether the user actually TOOK the test (vs declined it) — drives the
+ *  Settings label ("Retake placement test" vs "Skip ahead — take the test").
+ *  Key starts with quest_placement_ so it rides the placement sync rule
+ *  (monotonic: taken on either device = taken). */
+export const isPlacementTaken = (lang: Language): boolean => {
+  return !!safeGet(`quest_placement_taken_${lang}`);
+};
+
+export const setPlacementTaken = (lang: Language): void => {
+  safeSet(`quest_placement_taken_${lang}`, 'true');
+};
+
+// ─── Difficulty check-in (one-shot per language, at session end) ───
+export const isCheckinDone = (lang: Language): boolean => {
+  return !!safeGet(`quest_checkin_${lang}`);
+};
+
+export const setCheckinDone = (lang: Language): void => {
+  safeSet(`quest_checkin_${lang}`, 'true');
+};
+
 export const resetPlacement = (lang: Language): void => {
   safeRemove(placementKey(lang));
 };

@@ -44,10 +44,15 @@ const JUNG = ['ㅏ','ㅐ','ㅑ','ㅒ','ㅓ','ㅔ','ㅕ','ㅖ','ㅗ','ㅘ','ㅙ',
 const compose = (cho, jung) => String.fromCodePoint(0xAC00 + (CHO.indexOf(cho) * 21 + JUNG.indexOf(jung)) * 28);
 function synthText(item) {
   if (packName !== 'hangul' || item.kind === 'composed' || item.kind === 'word') return item.glyph;
-  if (item.glyph === 'ㅇ') return '응';
-  if (CHO.includes(item.glyph)) return compose(item.glyph, 'ㅏ');
-  if (JUNG.includes(item.glyph)) return compose('ㅇ', item.glyph);
-  return item.glyph;
+  // Letters say their demo syllable TWICE ("아, 아"): Chirp3-HD collapses on
+  // ultra-short single-syllable inputs (pilot: ㅏ and ㅋ came back as 0.31s
+  // near-silence), and hearing a new letter twice is better drill audio anyway.
+  const syllable =
+    item.glyph === 'ㅇ' ? '응'
+    : CHO.includes(item.glyph) ? compose(item.glyph, 'ㅏ')
+    : JUNG.includes(item.glyph) ? compose('ㅇ', item.glyph)
+    : item.glyph;
+  return `${syllable}, ${syllable}`;
 }
 
 // ── Google TTS (same call shape as generate-audio.cjs) ───────────────────────

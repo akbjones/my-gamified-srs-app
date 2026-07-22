@@ -228,6 +228,30 @@ async function playGoogleTts(
 }
 
 // ─── Browser TTS (fallback) ─────────────────────────────────────
+// Pick the best system voice for a bcp47 tag. Without an explicit voice the
+// OS default speaks — for Welsh (cy-GB) that is typically a jarring robotic
+// MALE voice, the "old robotic Welsh voice" users reported when a recording
+// failed to load. Prefer an exact-locale voice, then a base-language voice,
+// and among matches prefer a female one to stay close to the recorded voices
+// (all our decks use female TTS). speechSynthesis.getVoices() is empty until
+// the async 'voiceschanged' fires, so we cache and refresh.
+let cachedVoices: SpeechSynthesisVoice[] = [];
+function refreshVoices() { try { cachedVoices = window.speechSynthesis.getVoices() || []; } catch { /* ignore */ } }
+if (typeof window !== 'undefined' && 'speechSynthesis' in window) {
+  refreshVoices();
+  try { window.speechSynthesis.addEventListener('voiceschanged', refreshVoices); } catch { /* ignore */ }
+}
+const FEMALE_HINT = /female|woman|nia|siwan|aled|-a$|zira|susan|samantha|karen|serena|amelie|anna|nora/i;
+function pickVoice(bcp47: string): SpeechSynthesisVoice | undefined {
+  if (!cachedVoices.length) refreshVoices();
+  const base = bcp47.split('-')[0].toLowerCase();
+  const exact = cachedVoices.filter(v => v.lang.toLowerCase() === bcp47.toLowerCase());
+  const byBase = cachedVoices.filter(v => v.lang.toLowerCase().startsWith(base));
+  const pool = exact.length ? exact : byBase;
+  if (!pool.length) return undefined; // no matching voice — let the OS decide
+  return pool.find(v => FEMALE_HINT.test(v.name)) ?? pool[0];
+}
+
 // Returns a Promise that resolves when the utterance finishes (or is
 // cancelled by stopAudio). Without this, callers like ListenMode's auto-
 // advance would race ahead while the speech was still mid-sentence and
@@ -240,6 +264,8 @@ function playBrowserTts(text: string, lang: Language, speed: AudioSpeed): Promis
     }
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = LANGUAGE_CONFIG[lang].bcp47;
+    const voice = pickVoice(LANGUAGE_CONFIG[lang].bcp47);
+    if (voice) utterance.voice = voice;
     utterance.rate = speed;
     // Resolve on both end and error – cancel via speechSynthesis.cancel()
     // also fires onend. We don't reject on error because the caller treats
@@ -343,10 +369,13 @@ export const playCardAudio = async (
       if (msg.includes('interrupted by a call to pause')) return;
       // Surface real failures so they're visible in DevTools.
       console.warn('[audioService] pre-recorded audio failed (after retry):', msg);
-      // We do NOT fall through to browser TTS when an audioFile was set –
-      // see the audioFile check at the end of this function. Falling through
-      // would play the robot voice and then the next card would play the real
-      // voice, which was disorienting.
+      // NOTE: execution DOES fall through to the browser-TTS fallback at the
+      // end of this function (step 3) — better a system voice than silence
+      // when a recording genuinely fails (e.g. an r2.dev throttle on an
+      // uncached card). pickVoice() keeps that fallback close to the recorded
+      // voice instead of the OS default (which was the robotic male Welsh
+      // voice users reported). The real recording is warmed in the background
+      // so the canonical voice returns on the next play.
     }
   }
 

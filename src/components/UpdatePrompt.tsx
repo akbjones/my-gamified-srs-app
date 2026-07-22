@@ -14,6 +14,16 @@ import { RefreshCw, X } from 'lucide-react';
  * downloads and swaps the SW as soon as a new one is available. This
  * component watches the `controllerchange` event to know when to show
  * the banner.
+ *
+ * CRITICAL (2026-07-22): autoUpdate only swaps the SW once the browser
+ * RE-FETCHES sw.js and sees new bytes. Nothing was triggering that check,
+ * so a controlled client could serve the old precached shell for weeks –
+ * users got stuck on a build that predated the R2 audio migration (→ Welsh
+ * fell back to robotic browser TTS) and the sync/report-errors UI. The fix:
+ * actively call registration.update() on load, on tab focus, and on an
+ * interval, so a new deploy is detected within a minute of the app being
+ * looked at. We do NOT force a reload (that can 404 lazy-loaded deck chunks
+ * mid-session) – detection flows into the existing reload banner below.
  */
 const UpdatePrompt: React.FC = () => {
   const [visible, setVisible] = useState(false);
@@ -32,7 +42,25 @@ const UpdatePrompt: React.FC = () => {
       setVisible(true);
     };
     navigator.serviceWorker.addEventListener('controllerchange', onControllerChange);
-    return () => navigator.serviceWorker.removeEventListener('controllerchange', onControllerChange);
+
+    // Actively poll for a new SW. registration.update() re-fetches sw.js;
+    // if the bytes changed, vite-pwa's skipWaiting/clientsClaim installs +
+    // activates it → controllerchange → the reload banner. Poll on focus and
+    // every 30 min so an installed PWA (which rarely does full navigations)
+    // still notices deploys promptly instead of freezing for weeks.
+    const checkForUpdate = () => {
+      navigator.serviceWorker.getRegistration().then(reg => { reg?.update().catch(() => {}); }).catch(() => {});
+    };
+    checkForUpdate();
+    const onVisible = () => { if (document.visibilityState === 'visible') checkForUpdate(); };
+    document.addEventListener('visibilitychange', onVisible);
+    const interval = window.setInterval(checkForUpdate, 30 * 60 * 1000);
+
+    return () => {
+      navigator.serviceWorker.removeEventListener('controllerchange', onControllerChange);
+      document.removeEventListener('visibilitychange', onVisible);
+      window.clearInterval(interval);
+    };
   }, []);
 
   if (!visible) return null;

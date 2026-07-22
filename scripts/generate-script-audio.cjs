@@ -44,24 +44,25 @@ const JUNG = ['ㅏ','ㅐ','ㅑ','ㅒ','ㅓ','ㅔ','ㅕ','ㅖ','ㅗ','ㅘ','ㅙ',
 const compose = (cho, jung) => String.fromCodePoint(0xAC00 + (CHO.indexOf(cho) * 21 + JUNG.indexOf(jung)) * 28);
 function synthText(item) {
   if (packName !== 'hangul' || item.kind === 'composed' || item.kind === 'word') return item.glyph;
-  // Letters say their demo syllable TWICE ("아, 아"): Chirp3-HD collapses on
-  // ultra-short single-syllable inputs (pilot: ㅏ and ㅋ came back as 0.31s
-  // near-silence), and hearing a new letter twice is better drill audio anyway.
+  // Letters say their demo syllable TWICE with a SENTENCE boundary between:
+  // "아. 아." – Chirp3-HD collapses ultra-short single-syllable inputs (pilot:
+  // ㅏ came back 0.4s at -26dB), and comma-doubles run together ("kkakka" –
+  // user's ear + measured 0ms gap). Period-doubles measure 600-825ms gaps.
   const syllable =
     item.glyph === 'ㅇ' ? '응'
     : CHO.includes(item.glyph) ? compose(item.glyph, 'ㅏ')
     : JUNG.includes(item.glyph) ? compose('ㅇ', item.glyph)
     : item.glyph;
-  return `${syllable}, ${syllable}`;
+  return `${syllable}. ${syllable}.`;
 }
 
 // ── Google TTS (same call shape as generate-audio.cjs) ───────────────────────
-function callGoogleTTS(text) {
+function callGoogleTTS(text, rate, volumeGainDb = 0) {
   return new Promise((resolve, reject) => {
     const body = JSON.stringify({
       input: { text },
       voice: { languageCode: voiceName.split('-').slice(0, 2).join('-'), name: voiceName },
-      audioConfig: { audioEncoding: 'MP3', speakingRate: 0.9, pitch: 0, sampleRateHertz: 24000 },
+      audioConfig: { audioEncoding: 'MP3', speakingRate: rate, pitch: 0, sampleRateHertz: 24000, volumeGainDb },
     });
     const req = https.request({
       hostname: 'texttospeech.googleapis.com',
@@ -83,6 +84,30 @@ function callGoogleTTS(text) {
   });
 }
 
+// Windowed-RMS QC via afconvert→WAV (macOS; returns null elsewhere). Sample
+// peak is NOT enough – a collapsed clip can still contain one loud click
+// (물 regen: 0.35s, -27dB RMS, but -2dB sample peak). We gate on RMS peak
+// AND total voiced time.
+const { execSync } = require('child_process');
+function qcAnalyze(mp3Path) {
+  try {
+    const wav = mp3Path + '.qc.wav';
+    execSync(`afconvert -f WAVE -d LEI16@24000 -c 1 "${mp3Path}" "${wav}"`, { stdio: 'pipe' });
+    const data = fs.readFileSync(wav).subarray(44);
+    fs.unlinkSync(wav);
+    const samples = data.length / 2, win = Math.floor(24000 * 0.025), rms = [];
+    for (let i = 0; i + win < samples; i += win) {
+      let acc = 0;
+      for (let j = 0; j < win; j++) { const v = data.readInt16LE((i + j) * 2) / 32768; acc += v * v; }
+      rms.push(Math.sqrt(acc / win));
+    }
+    const peak = Math.max(...rms);
+    const thresh = Math.max(0.02, peak * 0.12);
+    const voicedSec = rms.filter(r => r > thresh).length * 0.025;
+    return { rmsPeakDb: Math.round(20 * Math.log10(peak || 1e-9)), voicedSec: +voicedSec.toFixed(2) };
+  } catch { return null; }
+}
+
 async function main() {
   // Pilot: a representative slice — bare-vowel carrier, plain/aspirated/tense
   // consonants, the ㅇ special case, a 2-jamo block, a 3-jamo batchim block,
@@ -91,18 +116,37 @@ async function main() {
   const items = pilot ? pack.items.filter(i => PILOT_GLYPHS.includes(i.glyph)) : pack.items;
   console.log(`${pilot ? 'PILOT' : 'FULL'} — ${items.length} clips, voice ${voiceName}`);
   let done = 0, skipped = 0;
+  const failed = [];
   for (const item of items) {
     const name = pilot ? `pilot-${item.id}.mp3` : `${item.id}.mp3`;
     const out = path.join(AUDIO_DIR, name);
     if (resume && fs.existsSync(out)) { skipped++; continue; }
     const text = synthText(item);
-    const buf = await callGoogleTTS(text);
-    fs.writeFileSync(out, buf);
+    // Letters: rate 1.0 (0.9 doubles drag – "the a is reaaally long"); blocks/words: 0.9.
+    const rate = item.kind === 'letter' || item.kind === 'modifier' ? 1.0 : 0.9;
+    // Chirp3-HD collapses short inputs STOCHASTICALLY (same text can succeed
+    // or come back as 0.3s near-silence on different calls) – retry up to 3x,
+    // adding volume gain on later attempts for genuinely quiet syntheses.
+    let qc = null;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      const gain = attempt === 0 ? 0 : Math.min(16, 8 * attempt);
+      const buf = await callGoogleTTS(text, rate, gain);
+      fs.writeFileSync(out, buf);
+      qc = qcAnalyze(out);
+      if (!qc || (qc.rmsPeakDb >= -18 && qc.voicedSec >= 0.15)) break;
+      console.log(`    retry ${attempt + 1} for ${name} (rms ${qc.rmsPeakDb}dB, voiced ${qc.voicedSec}s)`);
+      await new Promise(r => setTimeout(r, 400));
+    }
+    if (qc && (qc.rmsPeakDb < -18 || qc.voicedSec < 0.15)) {
+      console.error(`  ✗ ${name} STILL BAD after retries – needs ears/manual fix`);
+      failed.push(name);
+    }
     done++;
-    console.log(`  ${name}  "${text}"  ${buf.length}b`);
+    console.log(`  ${name}  "${text}"  rms ${qc ? qc.rmsPeakDb + 'dB' : 'n/a'}  voiced ${qc ? qc.voicedSec + 's' : 'n/a'}`);
     await new Promise(r => setTimeout(r, 300)); // gentle on quota
   }
-  console.log(`done: ${done} written, ${skipped} skipped`);
+  console.log(`done: ${done} written, ${skipped} skipped${failed.length ? `, ${failed.length} FAILED QC: ${failed.join(' ')}` : ''}`);
+  if (failed.length) process.exit(1);
 }
 
 main().catch(e => { console.error(e.message); process.exit(1); });

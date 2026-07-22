@@ -2450,7 +2450,7 @@ const dictionary: Record<string, DictEntry> =                 {
   'नाई': { en: 'barber', ipa: 'naːiː', pos: 'n' },
   'नागपुर': { en: 'Nagpur', ipa: 'naːɡəpʊr', pos: 'n' },
   'नागरिक': { en: 'citizen', ipa: 'naːɡərɪk', pos: 'n' },
-  'नागा': { en: 'Naga; a mythological serpent deity', ipa: 'naːɡaː', pos: 'n' },
+  'नागा': { en: 'a miss, a skipped day (बिना नागा = without missing a day, without fail)', ipa: 'naːɡaː', pos: 'n' },
   'नाचता': { en: 'to dance', ipa: 'naːtʃətaː', pos: 'v', lemma: 'नाचना' },
   'नाचता-गाता': { en: 'dancing and singing; merrily dancing and singing', ipa: '', pos: 'adj' },
   'नाचती': { en: 'to dance', ipa: '', pos: 'v', lemma: 'नाचना' },

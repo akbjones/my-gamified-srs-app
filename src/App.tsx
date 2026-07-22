@@ -101,7 +101,13 @@ const DECK_LOADERS: Record<Language, () => Promise<any[]>> = {
   indonesian: () => import('./data/indonesian/deck.json').then(m => m.default),
   greek: () => import('./data/greek/deck.json').then(m => m.default),
   korean: () => import('./data/korean/deck.json').then(m => m.default),
+  japanese: () => import('./data/japanese/deck.json').then(m => m.default),
 };
+
+// Languages registered in the platform (Language union, registry, audio)
+// but deliberately absent from the picker until they reach 3,933-card
+// parity. Japanese is reachable only via its ?starter=ja link.
+const HIDDEN_UNTIL_PARITY: readonly Language[] = ['japanese'];
 
 // ── Locked shareable starter mode ────────────────────────────────
 // Opening the app with ?starter=es boots straight into the curated
@@ -222,6 +228,7 @@ const CHALLENGE_NAMES: Record<Language, string> = {
   indonesian: 'Level',
   greek: 'Level',
   korean: 'Level',
+  japanese: 'Level',
 };
 
 // Find the current frontier node (first incomplete unlocked node)
@@ -767,7 +774,9 @@ const App: React.FC = () => {
     : 0;
   const hasCards = reviewsDue > 0 || newAvailable > 0;
 
-  const availableLanguages: Language[] = STARTER_LOCK ? [STARTER_LOCK] : (Object.keys(DECK_LOADERS) as Language[]);
+  const availableLanguages: Language[] = STARTER_LOCK
+    ? [STARTER_LOCK]
+    : (Object.keys(DECK_LOADERS) as Language[]).filter(l => !HIDDEN_UNTIL_PARITY.includes(l));
 
   // Close language dropdown when clicking outside
   useEffect(() => {

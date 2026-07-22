@@ -21,6 +21,7 @@ a different script or voice.
 | Indonesian  | `id-ID-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=id --voice=id-ID-Chirp3-HD-Aoede` (staged) |
 | Greek       | `el-GR-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=el --voice=el-GR-Chirp3-HD-Aoede` (staged) |
 | Korean      | `ko-KR-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=ko --voice=ko-KR-Chirp3-HD-Aoede` (staged) |
+| Japanese    | `ja-JP-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=ja --voice=ja-JP-Chirp3-HD-Aoede` (staged — 1-card smoke test required before the first batch; availability unverified) |
 | Arabic MSA  | `ar-XA-Chirp3-HD-Aoede`            | Google   | `generate-audio.cjs --lang=ar --voice=ar-XA-Chirp3-HD-Aoede` (staged) |
 
 All voices are **female**. As of 2026-06-28 we migrated 10 non-Welsh

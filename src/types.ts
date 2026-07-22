@@ -1,4 +1,4 @@
-export type Language = 'spanish' | 'italian' | 'german' | 'french' | 'portuguese' | 'dutch' | 'swedish' | 'welsh' | 'hindi' | 'turkish' | 'russian' | 'indonesian' | 'greek' | 'korean';
+export type Language = 'spanish' | 'italian' | 'german' | 'french' | 'portuguese' | 'dutch' | 'swedish' | 'welsh' | 'hindi' | 'turkish' | 'russian' | 'indonesian' | 'greek' | 'korean' | 'japanese';
 export type LearningGoal = 'general' | 'travel' | 'work' | 'family';
 
 export interface QuestCard {
@@ -9,6 +9,11 @@ export interface QuestCard {
   topic: string;    // node ID: "node-01", "node-02", etc.
   audio: string;
   grammar?: string; // optional grammar note shown on answer side
+  // Pre-tokenized target for unspaced scripts (Japanese): t = surface
+  // token, r = kana reading for ruby/furigana on kanji-bearing tokens.
+  // Card rendering must prefer this over any whitespace split — lint
+  // guarantees tokens.map(x => x.t).join('') === target exactly.
+  tokens?: { t: string; r?: string }[];
   tags?: LearningGoal[]; // which learning goals this card is relevant to
   mastery: number; // 0=New, 1=Learning, 2=Graduated
   step?: number;
@@ -144,6 +149,7 @@ export const LANGUAGE_CONFIG: Record<Language, { name: string; code: string; bcp
   indonesian: { name: 'Indonesian', code: 'ID', bcp47: 'id-ID' },
   greek: { name: 'Greek', code: 'EL', bcp47: 'el-GR' },
   korean: { name: 'Korean', code: 'KO', bcp47: 'ko-KR' },
+  japanese: { name: 'Japanese', code: 'JA', bcp47: 'ja-JP' },
 };
 
 export const GOAL_CONFIG: Record<LearningGoal, { name: string; description: string }> = {

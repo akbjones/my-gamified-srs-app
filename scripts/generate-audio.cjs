@@ -58,6 +58,7 @@ const LANG_DEFAULTS = {
   id: { voice: 'id-ID-Chirp3-HD-Aoede', prefix: 'id', deckDir: 'indonesian' }, // canonical per CANONICAL-VOICES.md
   el: { voice: 'el-GR-Chirp3-HD-Aoede', prefix: 'el', deckDir: 'greek' },      // canonical per CANONICAL-VOICES.md
   ko: { voice: 'ko-KR-Chirp3-HD-Aoede', prefix: 'ko', deckDir: 'korean' },     // canonical per CANONICAL-VOICES.md
+  ja: { voice: 'ja-JP-Chirp3-HD-Aoede', prefix: 'ja', deckDir: 'japanese' },   // canonical per CANONICAL-VOICES.md — 1-card smoke test before any batch (voice availability unverified)
 };
 const langConfig = LANG_DEFAULTS[lang];
 if (!langConfig) {

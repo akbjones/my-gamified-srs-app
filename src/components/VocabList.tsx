@@ -15,6 +15,7 @@ import { conjugate as conjugateCy } from '../data/conjugation/cy';
 import { conjugateHindi } from '../data/conjugation/hi';
 import { conjugate as conjugateTr } from '../data/conjugation/tr';
 import { conjugate as conjugateRu } from '../data/conjugation/ru';
+import { conjugate as conjugateJa } from '../data/conjugation/ja';
 
 type SortMode = 'recent' | 'tricky';
 
@@ -37,6 +38,7 @@ const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable 
   hindi: conjugateHindi,
   turkish: conjugateTr,
   russian: conjugateRu,
+  japanese: conjugateJa,
 };
 
 const PERSON_LABELS: Record<string, string[]> = {
@@ -51,6 +53,8 @@ const PERSON_LABELS: Record<string, string[]> = {
   hindi: ['मैं', 'तू', 'वह/यह', 'हम', 'तुम', 'आप/वे'],
   turkish: ['ben', 'sen', 'o', 'biz', 'siz', 'onlar'],
   russian: ['я', 'ты', 'он/она', 'мы', 'вы', 'они'],
+  // Japanese rows are polite/plain form labels, not persons
+  japanese: ['', '', '', '', '', ''],
 };
 
 // Fallback tense labels for legacy keys. Each conjugation engine now provides

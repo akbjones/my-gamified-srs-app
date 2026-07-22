@@ -147,6 +147,7 @@ const GOOGLE_VOICE_MAP: Record<Language | 'msa', { languageCode: string; name: s
   indonesian: { languageCode: 'id-ID', name: 'id-ID-Chirp3-HD-Aoede' },
   greek: { languageCode: 'el-GR', name: 'el-GR-Chirp3-HD-Aoede' },
   korean: { languageCode: 'ko-KR', name: 'ko-KR-Chirp3-HD-Aoede' },
+  japanese: { languageCode: 'ja-JP', name: 'ja-JP-Chirp3-HD-Aoede' },
   msa: { languageCode: 'ar-XA', name: 'ar-XA-Chirp3-HD-Aoede' },
 };
 

@@ -1,0 +1,22 @@
+{
+  "language": "japanese",
+  "policy": "docs/japanese-register-policy.md",
+  "note": "Seed lexicon (Stage-1 scaffold). severity: high = fails the lint gate; medium = review. The main register control for Japanese is STRUCTURAL (sentence-final です/ます system — see policy rule 1); this lexicon covers vocabulary-level offenders.",
+  "offenders": [
+    { "word": "お前", "severity": "high", "reason": "confrontational 'you' — real Japanese uses name+さん or omits" },
+    { "word": "君", "severity": "high", "reason": "marked 'you' (superior-to-junior) — use name+さん or omit" },
+    { "word": "あんた", "severity": "high", "reason": "brusque casual 'you'" },
+    { "word": "俺", "severity": "high", "reason": "rough casual male 'I' — starter register is 私" },
+    { "word": "僕", "severity": "medium", "reason": "casual/male 'I' — starter models 私; acceptable only if a later node teaches pronoun range" },
+    { "word": "あなた", "severity": "medium", "reason": "textbook 'you' that natives avoid — omit or use name+さん; never model as conversational address" },
+    { "word": "本日", "severity": "high", "reason": "officialese 'today' — use 今日" },
+    { "word": "貴殿", "severity": "high", "reason": "business-letter 'you'" },
+    { "word": "貴社", "severity": "high", "reason": "business-letter 'your company'" },
+    { "word": "じゃん", "severity": "high", "reason": "casual contraction — deferred to the casual-speech node" },
+    { "word": "っす", "severity": "high", "reason": "casual です contraction (jock register)" },
+    { "word": "ぜ", "severity": "high", "reason": "rough sentence-final particle" },
+    { "word": "ぞ", "severity": "high", "reason": "rough sentence-final particle" },
+    { "word": "やばい", "severity": "medium", "reason": "slang — fine at the casual-speech node, not before" },
+    { "word": "飯", "severity": "medium", "reason": "casual 'meal' (めし) — use ご飯" }
+  ]
+}

@@ -470,6 +470,47 @@ export const GRAMMAR_NUDGES: Partial<Record<Language, Record<string, string>>> =
     'node-34': 'This sentence reflects Russian culture – "душа" (soul), hospitality customs, cultural references showing deep familiarity.',
     'node-35': 'This sentence combines multiple advanced structures – aspect, case system, participles, and idiomatic usage at near-native level.',
   },
+  japanese: {
+    // ── A1 – foundations ──────────────────────────────────────────
+    'node-01': 'This sentence uses a set phrase – greetings and fixed politeness formulas (こんにちは, ありがとうございます) used as-is.',
+    'node-02': 'This sentence uses the XはYです pattern – は marks the topic, and です is the polite "is/am/are".',
+    'node-03': 'This sentence is a question – the particle か at the end turns a statement into a question, with no word-order change.',
+    'node-04': 'This sentence uses a demonstrative – これ (near me), それ (near you), あれ (over there), or この/その/あの before a noun.',
+    'node-05': 'This sentence talks about existence – が marks the subject; います is for people and animals, あります for things.',
+    'node-06': 'This sentence uses を with a polite verb – を marks the object, and the verb ends in ます.',
+    'node-07': 'This sentence uses に or へ – direction of movement, a point in time, or the place where something exists.',
+    'node-08': 'This sentence uses で – the place where an action happens, or the means used (電車で = by train).',
+    'node-09': 'This sentence uses ません or ませんか – the polite negative, or an invitation ("won\'t you…?").',
+    'node-10': 'This sentence is in the polite past – ました for "did", ませんでした for "didn\'t".',
+    'node-11': 'This sentence uses an i-adjective – adjectives like 高い that conjugate themselves (高くない, 高かった).',
+    'node-12': 'This sentence uses a na-adjective – adjectives like 静か that take な before a noun and です at the end.',
+    // ── A2 – particles & patterns ─────────────────────────────────
+    'node-13': 'This sentence links nouns with の – possession or description (私の本 = my book).',
+    'node-14': 'This sentence uses numbers, counters, or time – Japanese counts with counter words (一人, 二つ, 三時).',
+    'node-15': 'This sentence uses も, と, or や – "also", "and/with" (a complete list), or "and so on" (an open list).',
+    'node-16': 'This sentence makes a request – て-form + ください ("please do…").',
+    'node-17': 'This sentence chains actions with the て-form or uses ています – an ongoing action or a current state.',
+    'node-18': 'This sentence expresses wanting or liking – たいです ("want to do") or が好きです ("like").',
+    // ── B1 – plain form & building blocks ─────────────────────────
+    'node-19': 'This sentence uses plain form or んです – the dictionary form inside a sentence, or んです when explaining.',
+    'node-20': 'This sentence talks about experience – たことがあります ("have done it before").',
+    'node-21': 'This sentence uses the plain negative ない – the plain counterpart of ません.',
+    'node-22': 'This sentence uses the potential form – "can do" (食べられます, 行けます).',
+    'node-23': 'This sentence compares – AよりB ("B more than A"), Aのほうが ("A is more…").',
+    'node-24': 'This sentence gives a reason or contrast – から/ので ("because") or けど ("but/though").',
+    'node-25': 'This sentence suggests or offers – ましょう ("let\'s") or ましょうか ("shall I?").',
+    'node-26': 'This sentence uses giving/receiving verbs – あげる (give), くれる (give to me), もらう (receive).',
+    'node-27': 'This sentence uses a conditional – と (an automatic "whenever" result) or たら ("if/when").',
+    // ── B2/C1 – complex sentences ─────────────────────────────────
+    'node-28': 'This sentence modifies a noun with a clause – a whole clause before the noun (昨日買った本 = the book I bought yesterday).',
+    'node-29': 'This sentence expresses obligation – なければなりません ("must do").',
+    'node-30': 'This sentence gives permission or prohibits – てもいいです ("may") or てはいけません ("must not").',
+    'node-31': 'This sentence reports appearance – そうです ("looks like"), ようです/みたいです ("seems").',
+    'node-32': 'This sentence uses keigo – honorific (いらっしゃいます) or humble (まいります) forms showing respect.',
+    'node-33': 'This sentence is casual speech – contractions and plain forms used between friends (じゃ, ちゃう, dropped particles).',
+    'node-34': 'This sentence quotes thought or speech – と思います ("I think that…") or と言いました ("said that…").',
+    'node-35': 'This sentence combines advanced patterns – keigo, casual nuance, and idiom at near-native level.',
+  },
 };
 
 /** Get a grammar nudge for a node in the given language. Falls back to Spanish, then empty string. */

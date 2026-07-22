@@ -48,6 +48,8 @@ import { conjugate as conjId, findInfinitive as findInfId } from '../data/conjug
 import { conjugate as conjEl, findInfinitive as findInfEl } from '../data/conjugation/el';
 import { conjugate as conjKo, findInfinitive as findInfKo } from '../data/conjugation/ko';
 import { conjugate as conjAr, findInfinitive as findInfAr } from '../data/conjugation/ar';
+import { lookupWord as lookupJa } from '../data/dictionary/ja';
+import { conjugate as conjJa, findInfinitive as findInfJa } from '../data/conjugation/ja';
 
 // ── Script descriptors ──────────────────────────────────────────
 
@@ -129,6 +131,29 @@ const arabic: ScriptDescriptor = {
   combiningNotes:
     'No harakat on cards (deck policy) — pronunciation via per-card transliteration. ' +
     'Proclitics و/ف/ب/ل/س/ال attach to the written word; lookup strips them.',
+};
+
+/** Japanese: no inter-word spacing — card rendering must read the
+ *  pre-tokenized card.tokens field; this tokenize() (Intl.Segmenter,
+ *  word granularity) serves only free text (audit CLI). Segmenter
+ *  morpheme boundaries vary by ICU release, which is exactly why cards
+ *  never depend on it. Caseless. ー (chōonpu) and 々 are word chars. */
+const japaneseScript: ScriptDescriptor = {
+  direction: 'ltr',
+  tokenize: (s) => {
+    const Seg: any = (Intl as any).Segmenter;
+    if (Seg) {
+      const segments: Array<{ segment: string; isWordLike?: boolean }> =
+        Array.from(new Seg('ja', { granularity: 'word' }).segment(s));
+      return segments.map((x) => x.segment.trim()).filter((t) => t && /[々぀-ヿ㐀-䶿一-鿿]/.test(t));
+    }
+    return s.split(/[\s。、！？「」『』（）]+/).filter(Boolean);
+  },
+  lowercase: (t) => t, // caseless script
+  isWordChar: (c) => /[々぀-ヿ㐀-䶿一-鿿]/.test(c),
+  combiningNotes:
+    'No spaces between words — every consumer must use card.tokens, never a whitespace split. ' +
+    'Han-unified codepoints render Chinese glyph variants unless the surface carries lang="ja".',
 };
 
 /** Devanagari: caseless; matra composition rules constrain suffixing. */
@@ -289,6 +314,17 @@ export const REGISTRY: Record<string, RegistryEntry> = {
     registerPolicy: {
       policyDoc: 'docs/korean-register-policy.md',
       offenderLexicon: 'docs/korean-register-offenders.json',
+    },
+  },
+  // ── Starter-gated: registered app-side but hidden from the picker
+  //    until 3,933 parity (?starter=ja is the only entry point) ────
+  japanese: {
+    key: 'japanese', code: 'ja', deckPath: 'src/data/japanese/deck.json',
+    lookup: lookupJa, conjugate: conjJa, findInfinitive: findInfJa,
+    script: japaneseScript, voice: google('ja-JP', 'ja-JP-Chirp3-HD-Aoede'),
+    registerPolicy: {
+      policyDoc: 'docs/japanese-register-policy.md',
+      offenderLexicon: 'docs/japanese-register-offenders.json',
     },
   },
   // ── Staged (Stage-1 scaffold; not yet in the app UI) ──────────

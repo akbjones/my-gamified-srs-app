@@ -124,9 +124,9 @@ const STARTER_PARAM = typeof window !== 'undefined'
 // deck it hydrates from) only load when the app is in ?starter= mode.
 const STARTER_LOADERS: Partial<Record<Language, () => Promise<any[]>>> = {
   spanish: () => import('./data/starterDecks').then(m => m.SPANISH_STARTER),
-  // Japanese: the whole deck IS the starter (300 graded cards at launch) —
-  // no manifest selection needed until parity expansion.
-  japanese: () => import('./data/japanese/deck.json').then(m => m.default),
+  // Japanese: the whole deck IS the starter (300 graded cards at launch);
+  // manifest-hydrated so parity expansion needs zero rework.
+  japanese: () => import('./data/japaneseStarter').then(m => m.JAPANESE_STARTER),
 };
 const STARTER_LANG_BY_CODE: Record<string, Language> = { es: 'spanish', ja: 'japanese' };
 const STARTER_LOCK: Language | null =

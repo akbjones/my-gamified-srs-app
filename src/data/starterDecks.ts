@@ -53,6 +53,8 @@ export interface RawDeckCard {
   /** TTS-ready target-language sentence (audio was generated from this). */
   target: string;
   english: string;
+  /** Pre-tokenized target for unspaced scripts (Japanese) — see QuestCard.tokens. */
+  tokens?: { t: string; r?: string }[];
   /** mp3 filename, e.g. "es-es-0001.mp3" — unchanged from the main deck. */
   audio: string;
   /** Goal-audience tags from the main deck (general/travel/work/family). */
@@ -74,10 +76,28 @@ export interface StarterCard extends RawDeckCard {
 }
 
 /** Curation manifest entry: which main-deck card, at what graded position. */
-interface StarterManifestEntry {
+export interface StarterManifestEntry {
   id: string;
   starterSeq: number;
   themes: StarterTheme[];
+}
+
+/**
+ * Hydrate a starter deck from its main deck + curation manifest. Cards
+ * removed from the main deck are dropped rather than shown stale. Keep
+ * each language's starter in its OWN module (this file imports the
+ * Spanish deck statically) so one starter's chunk never drags in another
+ * language's deck — see japaneseStarter.ts.
+ */
+export function buildStarter(mainDeck: RawDeckCard[], manifest: StarterManifestEntry[]): StarterCard[] {
+  const byId = new Map(mainDeck.map(c => [c.id, c]));
+  return manifest
+    .map(m => {
+      const card = byId.get(m.id);
+      return card ? { ...card, starterSeq: m.starterSeq, themes: m.themes } : null;
+    })
+    .filter((c): c is StarterCard => c !== null)
+    .sort((a, b) => a.starterSeq - b.starterSeq);
 }
 
 /**
@@ -91,14 +111,7 @@ interface StarterManifestEntry {
  * into the starter deck automatically — no re-curation needed. A card removed
  * from the main deck is dropped here rather than shown stale.
  */
-const _mainById = new Map<string, RawDeckCard>(
-  (rawSpanishDeck as RawDeckCard[]).map(c => [c.id, c]),
+export const SPANISH_STARTER: StarterCard[] = buildStarter(
+  rawSpanishDeck as RawDeckCard[],
+  starterManifest as StarterManifestEntry[],
 );
-
-export const SPANISH_STARTER: StarterCard[] = (starterManifest as StarterManifestEntry[])
-  .map(m => {
-    const card = _mainById.get(m.id);
-    return card ? { ...card, starterSeq: m.starterSeq, themes: m.themes } : null;
-  })
-  .filter((c): c is StarterCard => c !== null)
-  .sort((a, b) => a.starterSeq - b.starterSeq);

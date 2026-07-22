@@ -1,0 +1,928 @@
+{
+  "cards": [
+    {
+      "id": "ja-0151",
+      "seq": 151,
+      "target": "今日は暑いですね。",
+      "english": "It's hot today, isn't it?",
+      "tokens": [
+        { "t": "今日", "r": "きょう" },
+        { "t": "は" },
+        { "t": "暑い", "r": "あつい" },
+        { "t": "です" },
+        { "t": "ね" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-11",
+      "grammar": "An i-adjective goes straight before です – 暑いです (atsui desu = it's hot)."
+    },
+    {
+      "id": "ja-0152",
+      "seq": 152,
+      "target": "この水は冷たいです。",
+      "english": "This water is cold.",
+      "tokens": [
+        { "t": "この" },
+        { "t": "水", "r": "みず" },
+        { "t": "は" },
+        { "t": "冷たい", "r": "つめたい" },
+        { "t": "です" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-11"
+    },
+    {
+      "id": "ja-0153",
+      "seq": 153,
+      "target": "このラーメンはおいしいです。",
+      "english": "This ramen is delicious.",
+      "tokens": [
+        { "t": "この" },
+        { "t": "ラーメン" },
+        { "t": "は" },
+        { "t": "おいしい" },
+        { "t": "です" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-11"
+    },
+    {
+      "id": "ja-0154",
+      "seq": 154,
+      "target": "その時計は高いですね。",
+      "english": "That watch is expensive, isn't it?",
+      "tokens": [
+        { "t": "その" },
+        { "t": "時計", "r": "とけい" },
+        { "t": "は" },
+        { "t": "高い", "r": "たかい" },
+        { "t": "です" },
+        { "t": "ね" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-11"
+    },
+    {
+      "id": "ja-0155",
+      "seq": 155,
+      "target": "あの店は安いですよ。",
+      "english": "That shop is cheap, you know.",
+      "tokens": [
+        { "t": "あの" },
+        { "t": "店", "r": "みせ" },
+        { "t": "は" },
+        { "t": "安い", "r": "やすい" },
+        { "t": "です" },
+        { "t": "よ" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-11"
+    },
+    {
+      "id": "ja-0156",
+      "seq": 156,
+      "target": "駅は近いですか。",
+      "english": "Is the station close?",
+      "tokens": [
+        { "t": "駅", "r": "えき" },
+        { "t": "は" },
+        { "t": "近い", "r": "ちかい" },
+        { "t": "です" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel", "work"],
+      "grammarNode": "node-11"
+    },
+    {
+      "id": "ja-0157",
+      "seq": 157,
+      "target": "会社は遠くないです。",
+      "english": "The office isn't far.",
+      "tokens": [
+        { "t": "会社", "r": "かいしゃ" },
+        { "t": "は" },
+        { "t": "遠くないです", "r": "とおくないです" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work"],
+      "grammarNode": "node-11"
+    },
+    {
+      "id": "ja-0158",
+      "seq": 158,
+      "target": "この本は面白いですよ。",
+      "english": "This book is interesting, you know.",
+      "tokens": [
+        { "t": "この" },
+        { "t": "本", "r": "ほん" },
+        { "t": "は" },
+        { "t": "面白い", "r": "おもしろい" },
+        { "t": "です" },
+        { "t": "よ" },
+        { "t": "。" }
+      ],
+      "tags": ["general"],
+      "grammarNode": "node-11"
+    },
+    {
+      "id": "ja-0159",
+      "seq": 159,
+      "target": "今日は寒くないです。",
+      "english": "It's not cold today.",
+      "tokens": [
+        { "t": "今日", "r": "きょう" },
+        { "t": "は" },
+        { "t": "寒くないです", "r": "さむくないです" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-11",
+      "grammar": "Negative i-adjective: drop the final い, add くないです – 寒くないです (samuku nai desu = not cold)."
+    },
+    {
+      "id": "ja-0160",
+      "seq": 160,
+      "target": "このスープは熱いですよ。",
+      "english": "This soup is hot, you know.",
+      "tokens": [
+        { "t": "この" },
+        { "t": "スープ" },
+        { "t": "は" },
+        { "t": "熱い", "r": "あつい" },
+        { "t": "です" },
+        { "t": "よ" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-11",
+      "grammar": "熱い is hot to the touch; hot weather is 暑い – 熱いスープ (atsui suupu = hot soup)."
+    },
+    {
+      "id": "ja-0161",
+      "seq": 161,
+      "target": "昨日は暑かったです。",
+      "english": "It was hot yesterday.",
+      "tokens": [
+        { "t": "昨日", "r": "きのう" },
+        { "t": "は" },
+        { "t": "暑かったです", "r": "あつかったです" },
+        { "t": "。" }
+      ],
+      "tags": ["general"],
+      "grammarNode": "node-11",
+      "grammar": "Past i-adjective: drop い, add かったです – 暑かったです (atsukatta desu = it was hot)."
+    },
+    {
+      "id": "ja-0162",
+      "seq": 162,
+      "target": "映画は楽しかったです。",
+      "english": "The movie was fun.",
+      "tokens": [
+        { "t": "映画", "r": "えいが" },
+        { "t": "は" },
+        { "t": "楽しかったです", "r": "たのしかったです" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-11"
+    },
+    {
+      "id": "ja-0163",
+      "seq": 163,
+      "target": "テストは難しくなかったです。",
+      "english": "The test wasn't hard.",
+      "tokens": [
+        { "t": "テスト" },
+        { "t": "は" },
+        { "t": "難しくなかったです", "r": "むずかしくなかったです" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work"],
+      "grammarNode": "node-11",
+      "grammar": "Past negative i-adjective: くなかったです – 難しくなかったです (muzukashiku nakatta desu = wasn't hard)."
+    },
+    {
+      "id": "ja-0164",
+      "seq": 164,
+      "target": "この部屋は広いですね。",
+      "english": "This room is spacious, isn't it?",
+      "tokens": [
+        { "t": "この" },
+        { "t": "部屋", "r": "へや" },
+        { "t": "は" },
+        { "t": "広い", "r": "ひろい" },
+        { "t": "です" },
+        { "t": "ね" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-11"
+    },
+    {
+      "id": "ja-0165",
+      "seq": 165,
+      "target": "仕事は忙しいですか。",
+      "english": "Is work busy?",
+      "tokens": [
+        { "t": "仕事", "r": "しごと" },
+        { "t": "は" },
+        { "t": "忙しい", "r": "いそがしい" },
+        { "t": "です" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work"],
+      "grammarNode": "node-11"
+    },
+    {
+      "id": "ja-0166",
+      "seq": 166,
+      "target": "天気がいいですね。",
+      "english": "The weather is nice, isn't it?",
+      "tokens": [
+        { "t": "天気", "r": "てんき" },
+        { "t": "が" },
+        { "t": "いい" },
+        { "t": "です" },
+        { "t": "ね" },
+        { "t": "。" }
+      ],
+      "tags": ["general"],
+      "grammarNode": "node-11",
+      "grammar": "Weather talk marks 天気 with が – 天気がいいですね (tenki ga ii desu ne = nice weather, isn't it?)."
+    },
+    {
+      "id": "ja-0167",
+      "seq": 167,
+      "target": "新しいかばんですね。",
+      "english": "That's a new bag, isn't it?",
+      "tokens": [
+        { "t": "新しい", "r": "あたらしい" },
+        { "t": "かばん" },
+        { "t": "です" },
+        { "t": "ね" },
+        { "t": "。" }
+      ],
+      "tags": ["general"],
+      "grammarNode": "node-11",
+      "grammar": "An i-adjective sits right before its noun – 新しいかばん (atarashii kaban = a new bag)."
+    },
+    {
+      "id": "ja-0168",
+      "seq": 168,
+      "target": "この町は静かです。",
+      "english": "This town is quiet.",
+      "tokens": [
+        { "t": "この" },
+        { "t": "町", "r": "まち" },
+        { "t": "は" },
+        { "t": "静か", "r": "しずか" },
+        { "t": "です" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-12"
+    },
+    {
+      "id": "ja-0169",
+      "seq": 169,
+      "target": "静かな部屋ですね。",
+      "english": "It's a quiet room, isn't it?",
+      "tokens": [
+        { "t": "静か", "r": "しずか" },
+        { "t": "な" },
+        { "t": "部屋", "r": "へや" },
+        { "t": "です" },
+        { "t": "ね" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-12",
+      "grammar": "A na-adjective needs な before a noun – 静かな部屋 (shizuka na heya = a quiet room)."
+    },
+    {
+      "id": "ja-0170",
+      "seq": 170,
+      "target": "きれいな花ですね。",
+      "english": "Pretty flowers, aren't they?",
+      "tokens": [
+        { "t": "きれい" },
+        { "t": "な" },
+        { "t": "花", "r": "はな" },
+        { "t": "です" },
+        { "t": "ね" },
+        { "t": "。" }
+      ],
+      "tags": ["general"],
+      "grammarNode": "node-12",
+      "grammar": "きれい ends in い but is a na-adjective – きれいな花 (kirei na hana = pretty flowers)."
+    },
+    {
+      "id": "ja-0171",
+      "seq": 171,
+      "target": "この駅はきれいです。",
+      "english": "This station is clean.",
+      "tokens": [
+        { "t": "この" },
+        { "t": "駅", "r": "えき" },
+        { "t": "は" },
+        { "t": "きれい" },
+        { "t": "です" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-12"
+    },
+    {
+      "id": "ja-0172",
+      "seq": 172,
+      "target": "電車は便利ですね。",
+      "english": "Trains are convenient, aren't they?",
+      "tokens": [
+        { "t": "電車", "r": "でんしゃ" },
+        { "t": "は" },
+        { "t": "便利", "r": "べんり" },
+        { "t": "です" },
+        { "t": "ね" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel", "work"],
+      "grammarNode": "node-12"
+    },
+    {
+      "id": "ja-0173",
+      "seq": 173,
+      "target": "お元気ですか。",
+      "english": "How are you?",
+      "tokens": [
+        { "t": "お元気", "r": "おげんき" },
+        { "t": "です" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family", "work"],
+      "grammarNode": "node-12"
+    },
+    {
+      "id": "ja-0174",
+      "seq": 174,
+      "target": "はい、元気です。",
+      "english": "Yes, I'm well.",
+      "tokens": [
+        { "t": "はい" },
+        { "t": "、" },
+        { "t": "元気", "r": "げんき" },
+        { "t": "です" },
+        { "t": "。" }
+      ],
+      "tags": ["general"],
+      "grammarNode": "node-12"
+    },
+    {
+      "id": "ja-0175",
+      "seq": 175,
+      "target": "母は元気です。",
+      "english": "My mother is doing well.",
+      "tokens": [
+        { "t": "母", "r": "はは" },
+        { "t": "は" },
+        { "t": "元気", "r": "げんき" },
+        { "t": "です" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-12"
+    },
+    {
+      "id": "ja-0176",
+      "seq": 176,
+      "target": "今日はひまです。",
+      "english": "I'm free today.",
+      "tokens": [
+        { "t": "今日", "r": "きょう" },
+        { "t": "は" },
+        { "t": "ひま" },
+        { "t": "です" },
+        { "t": "。" }
+      ],
+      "tags": ["general"],
+      "grammarNode": "node-12"
+    },
+    {
+      "id": "ja-0177",
+      "seq": 177,
+      "target": "明日はひまじゃないです。",
+      "english": "I'm not free tomorrow.",
+      "tokens": [
+        { "t": "明日", "r": "あした" },
+        { "t": "は" },
+        { "t": "ひま" },
+        { "t": "じゃないです" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work"],
+      "grammarNode": "node-12",
+      "grammar": "Negate a na-adjective like a noun – ひまじゃないです (hima ja nai desu = not free)."
+    },
+    {
+      "id": "ja-0178",
+      "seq": 178,
+      "target": "あのホテルは有名です。",
+      "english": "That hotel is famous.",
+      "tokens": [
+        { "t": "あの" },
+        { "t": "ホテル" },
+        { "t": "は" },
+        { "t": "有名", "r": "ゆうめい" },
+        { "t": "です" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-12"
+    },
+    {
+      "id": "ja-0179",
+      "seq": 179,
+      "target": "有名なレストランですね。",
+      "english": "It's a famous restaurant, isn't it?",
+      "tokens": [
+        { "t": "有名", "r": "ゆうめい" },
+        { "t": "な" },
+        { "t": "レストラン" },
+        { "t": "です" },
+        { "t": "ね" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-12"
+    },
+    {
+      "id": "ja-0180",
+      "seq": 180,
+      "target": "ここはにぎやかですね。",
+      "english": "It's lively here, isn't it?",
+      "tokens": [
+        { "t": "ここ" },
+        { "t": "は" },
+        { "t": "にぎやか" },
+        { "t": "です" },
+        { "t": "ね" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-12"
+    },
+    {
+      "id": "ja-0181",
+      "seq": 181,
+      "target": "大丈夫ですか。",
+      "english": "Are you okay?",
+      "tokens": [
+        { "t": "大丈夫", "r": "だいじょうぶ" },
+        { "t": "です" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work"],
+      "grammarNode": "node-12"
+    },
+    {
+      "id": "ja-0182",
+      "seq": 182,
+      "target": "はい、大丈夫ですよ。",
+      "english": "Yes, I'm fine.",
+      "tokens": [
+        { "t": "はい" },
+        { "t": "、" },
+        { "t": "大丈夫", "r": "だいじょうぶ" },
+        { "t": "です" },
+        { "t": "よ" },
+        { "t": "。" }
+      ],
+      "tags": ["general"],
+      "grammarNode": "node-12"
+    },
+    {
+      "id": "ja-0183",
+      "seq": 183,
+      "target": "親切な人ですね。",
+      "english": "What a kind person.",
+      "tokens": [
+        { "t": "親切", "r": "しんせつ" },
+        { "t": "な" },
+        { "t": "人", "r": "ひと" },
+        { "t": "です" },
+        { "t": "ね" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work"],
+      "grammarNode": "node-12"
+    },
+    {
+      "id": "ja-0184",
+      "seq": 184,
+      "target": "昨日、海はきれいでした。",
+      "english": "The sea was beautiful yesterday.",
+      "tokens": [
+        { "t": "昨日", "r": "きのう" },
+        { "t": "、" },
+        { "t": "海", "r": "うみ" },
+        { "t": "は" },
+        { "t": "きれい" },
+        { "t": "でした" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-12",
+      "grammar": "Past of a na-adjective: です turns into でした – きれいでした (kirei deshita = was beautiful)."
+    },
+    {
+      "id": "ja-0185",
+      "seq": 185,
+      "target": "これは私のかばんです。",
+      "english": "This is my bag.",
+      "tokens": [
+        { "t": "これ" },
+        { "t": "は" },
+        { "t": "私", "r": "わたし" },
+        { "t": "の" },
+        { "t": "かばん" },
+        { "t": "です" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-13",
+      "grammar": "の links owner and thing – 私のかばん (watashi no kaban = my bag)."
+    },
+    {
+      "id": "ja-0186",
+      "seq": 186,
+      "target": "それは父の時計です。",
+      "english": "That's my father's watch.",
+      "tokens": [
+        { "t": "それ" },
+        { "t": "は" },
+        { "t": "父", "r": "ちち" },
+        { "t": "の" },
+        { "t": "時計", "r": "とけい" },
+        { "t": "です" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-13"
+    },
+    {
+      "id": "ja-0187",
+      "seq": 187,
+      "target": "母の料理はおいしいです。",
+      "english": "My mother's cooking is delicious.",
+      "tokens": [
+        { "t": "母", "r": "はは" },
+        { "t": "の" },
+        { "t": "料理", "r": "りょうり" },
+        { "t": "は" },
+        { "t": "おいしい" },
+        { "t": "です" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-13"
+    },
+    {
+      "id": "ja-0188",
+      "seq": 188,
+      "target": "このかさはだれのですか。",
+      "english": "Whose umbrella is this?",
+      "tokens": [
+        { "t": "この" },
+        { "t": "かさ" },
+        { "t": "は" },
+        { "t": "だれ" },
+        { "t": "の" },
+        { "t": "です" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-13",
+      "grammar": "の can stand alone for someone's thing – だれの (dare no = whose?)."
+    },
+    {
+      "id": "ja-0189",
+      "seq": 189,
+      "target": "それは私のです。",
+      "english": "That's mine.",
+      "tokens": [
+        { "t": "それ" },
+        { "t": "は" },
+        { "t": "私", "r": "わたし" },
+        { "t": "の" },
+        { "t": "です" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-13"
+    },
+    {
+      "id": "ja-0190",
+      "seq": 190,
+      "target": "兄の車は古いです。",
+      "english": "My brother's car is old.",
+      "tokens": [
+        { "t": "兄", "r": "あに" },
+        { "t": "の" },
+        { "t": "車", "r": "くるま" },
+        { "t": "は" },
+        { "t": "古い", "r": "ふるい" },
+        { "t": "です" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-13"
+    },
+    {
+      "id": "ja-0191",
+      "seq": 191,
+      "target": "これは姉の電話です。",
+      "english": "This is my sister's phone.",
+      "tokens": [
+        { "t": "これ" },
+        { "t": "は" },
+        { "t": "姉", "r": "あね" },
+        { "t": "の" },
+        { "t": "電話", "r": "でんわ" },
+        { "t": "です" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-13"
+    },
+    {
+      "id": "ja-0192",
+      "seq": 192,
+      "target": "日本の車は高いですか。",
+      "english": "Are Japanese cars expensive?",
+      "tokens": [
+        { "t": "日本", "r": "にほん" },
+        { "t": "の" },
+        { "t": "車", "r": "くるま" },
+        { "t": "は" },
+        { "t": "高い", "r": "たかい" },
+        { "t": "です" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general"],
+      "grammarNode": "node-13",
+      "grammar": "の also marks origin – 日本の車 (nihon no kuruma = a Japanese car)."
+    },
+    {
+      "id": "ja-0193",
+      "seq": 193,
+      "target": "東京のホテルは安くなかったです。",
+      "english": "The hotel in Tokyo wasn't cheap.",
+      "tokens": [
+        { "t": "東京", "r": "とうきょう" },
+        { "t": "の" },
+        { "t": "ホテル" },
+        { "t": "は" },
+        { "t": "安くなかったです", "r": "やすくなかったです" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-13"
+    },
+    {
+      "id": "ja-0194",
+      "seq": 194,
+      "target": "学校の先生は親切です。",
+      "english": "The teachers at school are kind.",
+      "tokens": [
+        { "t": "学校", "r": "がっこう" },
+        { "t": "の" },
+        { "t": "先生", "r": "せんせい" },
+        { "t": "は" },
+        { "t": "親切", "r": "しんせつ" },
+        { "t": "です" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work", "family"],
+      "grammarNode": "node-13"
+    },
+    {
+      "id": "ja-0195",
+      "seq": 195,
+      "target": "私は英語の本を読みます。",
+      "english": "I read English books.",
+      "tokens": [
+        { "t": "私", "r": "わたし" },
+        { "t": "は" },
+        { "t": "英語", "r": "えいご" },
+        { "t": "の" },
+        { "t": "本", "r": "ほん" },
+        { "t": "を" },
+        { "t": "読みます", "r": "よみます" },
+        { "t": "。" }
+      ],
+      "tags": ["general"],
+      "grammarNode": "node-13",
+      "grammar": "の can name a type or category – 英語の本 (eigo no hon = an English book)."
+    },
+    {
+      "id": "ja-0196",
+      "seq": 196,
+      "target": "友だちの家に行きました。",
+      "english": "I went to my friend's house.",
+      "tokens": [
+        { "t": "友だち", "r": "ともだち" },
+        { "t": "の" },
+        { "t": "家", "r": "いえ" },
+        { "t": "に" },
+        { "t": "行きました", "r": "いきました" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-13"
+    },
+    {
+      "id": "ja-0197",
+      "seq": 197,
+      "target": "会社の車で行きます。",
+      "english": "I'll go by company car.",
+      "tokens": [
+        { "t": "会社", "r": "かいしゃ" },
+        { "t": "の" },
+        { "t": "車", "r": "くるま" },
+        { "t": "で" },
+        { "t": "行きます", "r": "いきます" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work", "travel"],
+      "grammarNode": "node-13"
+    },
+    {
+      "id": "ja-0198",
+      "seq": 198,
+      "target": "私の部屋は広くないです。",
+      "english": "My room isn't big.",
+      "tokens": [
+        { "t": "私", "r": "わたし" },
+        { "t": "の" },
+        { "t": "部屋", "r": "へや" },
+        { "t": "は" },
+        { "t": "広くないです", "r": "ひろくないです" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-13"
+    },
+    {
+      "id": "ja-0199",
+      "seq": 199,
+      "target": "この店のコーヒーは安いですよ。",
+      "english": "This shop's coffee is cheap, you know.",
+      "tokens": [
+        { "t": "この" },
+        { "t": "店", "r": "みせ" },
+        { "t": "の" },
+        { "t": "コーヒー" },
+        { "t": "は" },
+        { "t": "安い", "r": "やすい" },
+        { "t": "です" },
+        { "t": "よ" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-13"
+    },
+    {
+      "id": "ja-0200",
+      "seq": 200,
+      "target": "日本語のメニューはありますか。",
+      "english": "Do you have a Japanese menu?",
+      "tokens": [
+        { "t": "日本語", "r": "にほんご" },
+        { "t": "の" },
+        { "t": "メニュー" },
+        { "t": "は" },
+        { "t": "あります" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-13"
+    }
+  ],
+  "dict": [
+    { "key": "この", "en": "this ... (before a noun)", "romaji": "kono", "pos": "adj" },
+    { "key": "その", "en": "that ... (before a noun, near you)", "romaji": "sono", "pos": "adj" },
+    { "key": "あの", "en": "that ... over there (before a noun)", "romaji": "ano", "pos": "adj" },
+    { "key": "ここ", "en": "here; this place", "romaji": "koko", "pos": "pron" },
+    { "key": "な", "en": "links a na-adjective to its noun", "romaji": "na", "pos": "part" },
+    { "key": "ラーメン", "en": "ramen", "romaji": "raamen", "pos": "n" },
+    { "key": "スープ", "en": "soup", "romaji": "suupu", "pos": "n" },
+    { "key": "テスト", "en": "test; exam", "romaji": "tesuto", "pos": "n" },
+    { "key": "レストラン", "en": "restaurant", "romaji": "resutoran", "pos": "n" },
+    { "key": "ホテル", "en": "hotel", "romaji": "hoteru", "pos": "n" },
+    { "key": "メニュー", "en": "menu", "romaji": "menyuu", "pos": "n" },
+    { "key": "かばん", "en": "bag", "romaji": "kaban", "pos": "n" },
+    { "key": "かさ", "en": "umbrella", "romaji": "kasa", "pos": "n" },
+    { "key": "だれ", "en": "who", "romaji": "dare", "pos": "pron" },
+    { "key": "時計", "en": "watch; clock", "romaji": "tokei", "pos": "n" },
+    { "key": "とけい", "en": "watch; clock", "romaji": "tokei", "pos": "n", "lemma": "時計" },
+    { "key": "店", "en": "shop; store", "romaji": "mise", "pos": "n" },
+    { "key": "みせ", "en": "shop; store", "romaji": "mise", "pos": "n", "lemma": "店" },
+    { "key": "駅", "en": "station", "romaji": "eki", "pos": "n" },
+    { "key": "えき", "en": "station", "romaji": "eki", "pos": "n", "lemma": "駅" },
+    { "key": "会社", "en": "company; office", "romaji": "kaisha", "pos": "n" },
+    { "key": "かいしゃ", "en": "company; office", "romaji": "kaisha", "pos": "n", "lemma": "会社" },
+    { "key": "映画", "en": "movie", "romaji": "eiga", "pos": "n" },
+    { "key": "えいが", "en": "movie", "romaji": "eiga", "pos": "n", "lemma": "映画" },
+    { "key": "部屋", "en": "room", "romaji": "heya", "pos": "n" },
+    { "key": "へや", "en": "room", "romaji": "heya", "pos": "n", "lemma": "部屋" },
+    { "key": "仕事", "en": "work; job", "romaji": "shigoto", "pos": "n" },
+    { "key": "しごと", "en": "work; job", "romaji": "shigoto", "pos": "n", "lemma": "仕事" },
+    { "key": "天気", "en": "weather", "romaji": "tenki", "pos": "n" },
+    { "key": "てんき", "en": "weather", "romaji": "tenki", "pos": "n", "lemma": "天気" },
+    { "key": "花", "en": "flower", "romaji": "hana", "pos": "n" },
+    { "key": "はな", "en": "flower", "romaji": "hana", "pos": "n", "lemma": "花" },
+    { "key": "海", "en": "sea; ocean", "romaji": "umi", "pos": "n" },
+    { "key": "うみ", "en": "sea; ocean", "romaji": "umi", "pos": "n", "lemma": "海" },
+    { "key": "父", "en": "(my) father", "romaji": "chichi", "pos": "n" },
+    { "key": "ちち", "en": "(my) father", "romaji": "chichi", "pos": "n", "lemma": "父" },
+    { "key": "母", "en": "(my) mother", "romaji": "haha", "pos": "n" },
+    { "key": "はは", "en": "(my) mother", "romaji": "haha", "pos": "n", "lemma": "母" },
+    { "key": "兄", "en": "(my) older brother", "romaji": "ani", "pos": "n" },
+    { "key": "あに", "en": "(my) older brother", "romaji": "ani", "pos": "n", "lemma": "兄" },
+    { "key": "姉", "en": "(my) older sister", "romaji": "ane", "pos": "n" },
+    { "key": "あね", "en": "(my) older sister", "romaji": "ane", "pos": "n", "lemma": "姉" },
+    { "key": "車", "en": "car", "romaji": "kuruma", "pos": "n" },
+    { "key": "くるま", "en": "car", "romaji": "kuruma", "pos": "n", "lemma": "車" },
+    { "key": "電話", "en": "telephone; phone call", "romaji": "denwa", "pos": "n" },
+    { "key": "でんわ", "en": "telephone; phone call", "romaji": "denwa", "pos": "n", "lemma": "電話" },
+    { "key": "東京", "en": "Tokyo", "romaji": "toukyou", "pos": "n" },
+    { "key": "とうきょう", "en": "Tokyo", "romaji": "toukyou", "pos": "n", "lemma": "東京" },
+    { "key": "英語", "en": "English (language)", "romaji": "eigo", "pos": "n" },
+    { "key": "えいご", "en": "English (language)", "romaji": "eigo", "pos": "n", "lemma": "英語" },
+    { "key": "家", "en": "house; home", "romaji": "ie", "pos": "n" },
+    { "key": "いえ", "en": "house; home", "romaji": "ie", "pos": "n", "lemma": "家" },
+    { "key": "料理", "en": "cooking; dish", "romaji": "ryouri", "pos": "n" },
+    { "key": "りょうり", "en": "cooking; dish", "romaji": "ryouri", "pos": "n", "lemma": "料理" },
+    { "key": "暑い", "en": "hot (weather)", "romaji": "atsui", "pos": "adj", "lemma": "暑い" },
+    { "key": "冷たい", "en": "cold (to the touch)", "romaji": "tsumetai", "pos": "adj", "lemma": "冷たい" },
+    { "key": "安い", "en": "cheap", "romaji": "yasui", "pos": "adj", "lemma": "安い" },
+    { "key": "近い", "en": "close; nearby", "romaji": "chikai", "pos": "adj", "lemma": "近い" },
+    { "key": "遠い", "en": "far", "romaji": "tooi", "pos": "adj", "lemma": "遠い" },
+    { "key": "面白い", "en": "interesting; fun", "romaji": "omoshiroi", "pos": "adj", "lemma": "面白い" },
+    { "key": "寒い", "en": "cold (weather)", "romaji": "samui", "pos": "adj", "lemma": "寒い" },
+    { "key": "熱い", "en": "hot (to the touch)", "romaji": "atsui", "pos": "adj", "lemma": "熱い" },
+    { "key": "楽しい", "en": "fun; enjoyable", "romaji": "tanoshii", "pos": "adj", "lemma": "楽しい" },
+    { "key": "難しい", "en": "difficult", "romaji": "muzukashii", "pos": "adj", "lemma": "難しい" },
+    { "key": "広い", "en": "spacious; wide", "romaji": "hiroi", "pos": "adj", "lemma": "広い" },
+    { "key": "忙しい", "en": "busy", "romaji": "isogashii", "pos": "adj", "lemma": "忙しい" },
+    { "key": "いい", "en": "good; nice", "romaji": "ii", "pos": "adj", "lemma": "いい" },
+    { "key": "新しい", "en": "new", "romaji": "atarashii", "pos": "adj", "lemma": "新しい" },
+    { "key": "古い", "en": "old (things, not people)", "romaji": "furui", "pos": "adj", "lemma": "古い" },
+    { "key": "きれい", "en": "pretty; clean (na-adjective)", "romaji": "kirei", "pos": "adj" },
+    { "key": "便利", "en": "convenient; handy (na-adjective)", "romaji": "benri", "pos": "adj" },
+    { "key": "元気", "en": "well; healthy; energetic (na-adjective)", "romaji": "genki", "pos": "adj" },
+    { "key": "げんき", "en": "well; healthy; energetic (na-adjective)", "romaji": "genki", "pos": "adj", "lemma": "元気" },
+    { "key": "お元気", "en": "well (polite, as in お元気ですか = how are you?)", "romaji": "ogenki", "pos": "adj", "lemma": "元気" },
+    { "key": "ひま", "en": "free; not busy (na-adjective)", "romaji": "hima", "pos": "adj" },
+    { "key": "有名", "en": "famous (na-adjective)", "romaji": "yuumei", "pos": "adj" },
+    { "key": "にぎやか", "en": "lively; bustling (na-adjective)", "romaji": "nigiyaka", "pos": "adj" },
+    { "key": "大丈夫", "en": "all right; okay (na-adjective)", "romaji": "daijoubu", "pos": "adj" },
+    { "key": "だいじょうぶ", "en": "all right; okay (na-adjective)", "romaji": "daijoubu", "pos": "adj", "lemma": "大丈夫" },
+    { "key": "親切", "en": "kind (na-adjective)", "romaji": "shinsetsu", "pos": "adj" },
+    { "key": "読む", "en": "to read", "romaji": "yomu", "pos": "v", "lemma": "読む" },
+    { "key": "よむ", "en": "to read", "romaji": "yomu", "pos": "v", "lemma": "読む" }
+  ],
+  "verbs": [
+    { "lemma": "行く", "cls": "godan", "kana": "いく" },
+    { "lemma": "読む", "cls": "godan", "kana": "よむ" },
+    { "lemma": "ある", "cls": "godan", "kana": "ある" },
+    { "lemma": "高い", "cls": "iadj", "kana": "たかい" },
+    { "lemma": "安い", "cls": "iadj", "kana": "やすい" },
+    { "lemma": "暑い", "cls": "iadj", "kana": "あつい" },
+    { "lemma": "寒い", "cls": "iadj", "kana": "さむい" },
+    { "lemma": "熱い", "cls": "iadj", "kana": "あつい" },
+    { "lemma": "冷たい", "cls": "iadj", "kana": "つめたい" },
+    { "lemma": "おいしい", "cls": "iadj", "kana": "おいしい" },
+    { "lemma": "近い", "cls": "iadj", "kana": "ちかい" },
+    { "lemma": "遠い", "cls": "iadj", "kana": "とおい" },
+    { "lemma": "面白い", "cls": "iadj", "kana": "おもしろい" },
+    { "lemma": "楽しい", "cls": "iadj", "kana": "たのしい" },
+    { "lemma": "難しい", "cls": "iadj", "kana": "むずかしい" },
+    { "lemma": "広い", "cls": "iadj", "kana": "ひろい" },
+    { "lemma": "忙しい", "cls": "iadj", "kana": "いそがしい" },
+    { "lemma": "いい", "cls": "iadj", "kana": "いい" },
+    { "lemma": "新しい", "cls": "iadj", "kana": "あたらしい" },
+    { "lemma": "古い", "cls": "iadj", "kana": "ふるい" }
+  ]
+}

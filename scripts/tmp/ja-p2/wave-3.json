@@ -1,0 +1,922 @@
+{
+  "cards": [
+    {
+      "id": "ja-0101",
+      "seq": 101,
+      "target": "電車で会社に行きます。",
+      "english": "I go to the office by train.",
+      "tokens": [
+        { "t": "電車", "r": "でんしゃ" },
+        { "t": "で" },
+        { "t": "会社", "r": "かいしゃ" },
+        { "t": "に" },
+        { "t": "行きます", "r": "いきます" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work", "travel"],
+      "grammarNode": "node-08",
+      "grammar": "で marks how you travel – 電車で (densha de = by train). The destination still takes に."
+    },
+    {
+      "id": "ja-0102",
+      "seq": 102,
+      "target": "バスで駅に行きますか。",
+      "english": "Are you going to the station by bus?",
+      "tokens": [
+        { "t": "バス" },
+        { "t": "で" },
+        { "t": "駅", "r": "えき" },
+        { "t": "に" },
+        { "t": "行きます", "r": "いきます" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-08"
+    },
+    {
+      "id": "ja-0103",
+      "seq": 103,
+      "target": "明日、タクシーで空港に行きます。",
+      "english": "Tomorrow I'm going to the airport by taxi.",
+      "tokens": [
+        { "t": "明日", "r": "あした" },
+        { "t": "、" },
+        { "t": "タクシー" },
+        { "t": "で" },
+        { "t": "空港", "r": "くうこう" },
+        { "t": "に" },
+        { "t": "行きます", "r": "いきます" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work", "travel"],
+      "grammarNode": "node-08"
+    },
+    {
+      "id": "ja-0104",
+      "seq": 104,
+      "target": "電車で家に帰ります。",
+      "english": "I go home by train.",
+      "tokens": [
+        { "t": "電車", "r": "でんしゃ" },
+        { "t": "で" },
+        { "t": "家", "r": "いえ" },
+        { "t": "に" },
+        { "t": "帰ります", "r": "かえります" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work"],
+      "grammarNode": "node-08",
+      "grammar": "帰ります (kaerimasu = go back) is for returning to your own place – home or your home country."
+    },
+    {
+      "id": "ja-0105",
+      "seq": 105,
+      "target": "毎日、自転車で来ますか。",
+      "english": "Do you come by bike every day?",
+      "tokens": [
+        { "t": "毎日", "r": "まいにち" },
+        { "t": "、" },
+        { "t": "自転車", "r": "じてんしゃ" },
+        { "t": "で" },
+        { "t": "来ます", "r": "きます" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work"],
+      "grammarNode": "node-08"
+    },
+    {
+      "id": "ja-0106",
+      "seq": 106,
+      "target": "駅で友だちを待ちます。",
+      "english": "I wait for my friend at the station.",
+      "tokens": [
+        { "t": "駅", "r": "えき" },
+        { "t": "で" },
+        { "t": "友だち", "r": "ともだち" },
+        { "t": "を" },
+        { "t": "待ちます", "r": "まちます" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-08"
+    },
+    {
+      "id": "ja-0107",
+      "seq": 107,
+      "target": "明日、カフェで友だちに会います。",
+      "english": "I'm meeting a friend at a cafe tomorrow.",
+      "tokens": [
+        { "t": "明日", "r": "あした" },
+        { "t": "、" },
+        { "t": "カフェ" },
+        { "t": "で" },
+        { "t": "友だち", "r": "ともだち" },
+        { "t": "に" },
+        { "t": "会います", "r": "あいます" },
+        { "t": "。" }
+      ],
+      "tags": ["general"],
+      "grammarNode": "node-08"
+    },
+    {
+      "id": "ja-0108",
+      "seq": 108,
+      "target": "母は家で仕事をします。",
+      "english": "My mother works at home.",
+      "tokens": [
+        { "t": "母", "r": "はは" },
+        { "t": "は" },
+        { "t": "家", "r": "いえ" },
+        { "t": "で" },
+        { "t": "仕事", "r": "しごと" },
+        { "t": "を" },
+        { "t": "します" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family", "work"],
+      "grammarNode": "node-08",
+      "grammar": "母 (haha = my mother) is only for your own mother – someone else's is お母さん (okaasan)."
+    },
+    {
+      "id": "ja-0109",
+      "seq": 109,
+      "target": "カフェでコーヒーを飲みます。",
+      "english": "I drink coffee at the cafe.",
+      "tokens": [
+        { "t": "カフェ" },
+        { "t": "で" },
+        { "t": "コーヒー" },
+        { "t": "を" },
+        { "t": "飲みます", "r": "のみます" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-08",
+      "grammar": "で marks where an action happens – カフェで飲みます (kafe de nomimasu = drink at the cafe)."
+    },
+    {
+      "id": "ja-0110",
+      "seq": 110,
+      "target": "図書館で日本語を勉強します。",
+      "english": "I study Japanese at the library.",
+      "tokens": [
+        { "t": "図書館", "r": "としょかん" },
+        { "t": "で" },
+        { "t": "日本語", "r": "にほんご" },
+        { "t": "を" },
+        { "t": "勉強します", "r": "べんきょうします" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work"],
+      "grammarNode": "node-08"
+    },
+    {
+      "id": "ja-0111",
+      "seq": 111,
+      "target": "スーパーでパンを買います。",
+      "english": "I buy bread at the supermarket.",
+      "tokens": [
+        { "t": "スーパー" },
+        { "t": "で" },
+        { "t": "パン" },
+        { "t": "を" },
+        { "t": "買います", "r": "かいます" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-08"
+    },
+    {
+      "id": "ja-0112",
+      "seq": 112,
+      "target": "はしでラーメンを食べます。",
+      "english": "I eat ramen with chopsticks.",
+      "tokens": [
+        { "t": "はし" },
+        { "t": "で" },
+        { "t": "ラーメン" },
+        { "t": "を" },
+        { "t": "食べます", "r": "たべます" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-08",
+      "grammar": "で also marks the tool you use – はしで (hashi de = with chopsticks)."
+    },
+    {
+      "id": "ja-0113",
+      "seq": 113,
+      "target": "ペンで名前を書きます。",
+      "english": "I write my name with a pen.",
+      "tokens": [
+        { "t": "ペン" },
+        { "t": "で" },
+        { "t": "名前", "r": "なまえ" },
+        { "t": "を" },
+        { "t": "書きます", "r": "かきます" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work", "travel"],
+      "grammarNode": "node-08"
+    },
+    {
+      "id": "ja-0114",
+      "seq": 114,
+      "target": "よく電話で話しますか。",
+      "english": "Do you often talk on the phone?",
+      "tokens": [
+        { "t": "よく" },
+        { "t": "電話", "r": "でんわ" },
+        { "t": "で" },
+        { "t": "話します", "r": "はなします" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work", "family"],
+      "grammarNode": "node-08"
+    },
+    {
+      "id": "ja-0115",
+      "seq": 115,
+      "target": "テレビでニュースを見ます。",
+      "english": "I watch the news on TV.",
+      "tokens": [
+        { "t": "テレビ" },
+        { "t": "で" },
+        { "t": "ニュース" },
+        { "t": "を" },
+        { "t": "見ます", "r": "みます" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-08"
+    },
+    {
+      "id": "ja-0116",
+      "seq": 116,
+      "target": "会社で昼ご飯を食べます。",
+      "english": "I eat lunch at the office.",
+      "tokens": [
+        { "t": "会社", "r": "かいしゃ" },
+        { "t": "で" },
+        { "t": "昼ご飯", "r": "ひるごはん" },
+        { "t": "を" },
+        { "t": "食べます", "r": "たべます" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work"],
+      "grammarNode": "node-08"
+    },
+    {
+      "id": "ja-0117",
+      "seq": 117,
+      "target": "ここで写真をとります。",
+      "english": "I'll take a picture here.",
+      "tokens": [
+        { "t": "ここ" },
+        { "t": "で" },
+        { "t": "写真", "r": "しゃしん" },
+        { "t": "を" },
+        { "t": "とります" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-08"
+    },
+    {
+      "id": "ja-0118",
+      "seq": 118,
+      "target": "私はお酒を飲みません。",
+      "english": "I don't drink alcohol.",
+      "tokens": [
+        { "t": "私", "r": "わたし" },
+        { "t": "は" },
+        { "t": "お酒", "r": "おさけ" },
+        { "t": "を" },
+        { "t": "飲みません", "r": "のみません" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work", "travel"],
+      "grammarNode": "node-09",
+      "grammar": "ません turns a verb negative – 飲みます becomes 飲みません (nomimasen = I don't drink)."
+    },
+    {
+      "id": "ja-0119",
+      "seq": 119,
+      "target": "肉を食べません。",
+      "english": "I don't eat meat.",
+      "tokens": [
+        { "t": "肉", "r": "にく" },
+        { "t": "を" },
+        { "t": "食べません", "r": "たべません" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel", "family"],
+      "grammarNode": "node-09"
+    },
+    {
+      "id": "ja-0120",
+      "seq": 120,
+      "target": "今日は行きません。",
+      "english": "I'm not going today.",
+      "tokens": [
+        { "t": "今日", "r": "きょう" },
+        { "t": "は" },
+        { "t": "行きません", "r": "いきません" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work"],
+      "grammarNode": "node-09"
+    },
+    {
+      "id": "ja-0121",
+      "seq": 121,
+      "target": "バスが来ません。",
+      "english": "The bus isn't coming.",
+      "tokens": [
+        { "t": "バス" },
+        { "t": "が" },
+        { "t": "来ません", "r": "きません" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel", "work"],
+      "grammarNode": "node-09"
+    },
+    {
+      "id": "ja-0122",
+      "seq": 122,
+      "target": "時間がありません。",
+      "english": "I don't have time.",
+      "tokens": [
+        { "t": "時間", "r": "じかん" },
+        { "t": "が" },
+        { "t": "ありません" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work"],
+      "grammarNode": "node-09",
+      "grammar": "あります flips to ありません – 時間がありません (jikan ga arimasen = there is no time)."
+    },
+    {
+      "id": "ja-0123",
+      "seq": 123,
+      "target": "あまりテレビを見ません。",
+      "english": "I don't watch TV much.",
+      "tokens": [
+        { "t": "あまり" },
+        { "t": "テレビ" },
+        { "t": "を" },
+        { "t": "見ません", "r": "みません" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-09",
+      "grammar": "あまり (amari = not much) needs a negative verb – あまり見ません = I don't watch much."
+    },
+    {
+      "id": "ja-0124",
+      "seq": 124,
+      "target": "まだ分かりません。",
+      "english": "I don't understand yet.",
+      "tokens": [
+        { "t": "まだ" },
+        { "t": "分かりません", "r": "わかりません" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-09",
+      "grammar": "まだ (mada = yet) plus a negative means not yet – まだ分かりません = I don't get it yet."
+    },
+    {
+      "id": "ja-0125",
+      "seq": 125,
+      "target": "日曜日は仕事をしません。",
+      "english": "I don't work on Sundays.",
+      "tokens": [
+        { "t": "日曜日", "r": "にちようび" },
+        { "t": "は" },
+        { "t": "仕事", "r": "しごと" },
+        { "t": "を" },
+        { "t": "しません" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work"],
+      "grammarNode": "node-09"
+    },
+    {
+      "id": "ja-0126",
+      "seq": 126,
+      "target": "夜はコーヒーを飲みません。",
+      "english": "I don't drink coffee at night.",
+      "tokens": [
+        { "t": "夜", "r": "よる" },
+        { "t": "は" },
+        { "t": "コーヒー" },
+        { "t": "を" },
+        { "t": "飲みません", "r": "のみません" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-09"
+    },
+    {
+      "id": "ja-0127",
+      "seq": 127,
+      "target": "いっしょに映画を見ませんか。",
+      "english": "Won't you watch a movie together?",
+      "tokens": [
+        { "t": "いっしょに" },
+        { "t": "映画", "r": "えいが" },
+        { "t": "を" },
+        { "t": "見ません", "r": "みません" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general"],
+      "grammarNode": "node-09",
+      "grammar": "ませんか turns a negative into an invitation – 見ませんか (mimasen ka = shall we watch?)."
+    },
+    {
+      "id": "ja-0128",
+      "seq": 128,
+      "target": "明日、公園に行きませんか。",
+      "english": "Would you like to go to the park tomorrow?",
+      "tokens": [
+        { "t": "明日", "r": "あした" },
+        { "t": "、" },
+        { "t": "公園", "r": "こうえん" },
+        { "t": "に" },
+        { "t": "行きません", "r": "いきません" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-09"
+    },
+    {
+      "id": "ja-0129",
+      "seq": 129,
+      "target": "お茶を飲みませんか。",
+      "english": "Would you like to have some tea?",
+      "tokens": [
+        { "t": "お茶", "r": "おちゃ" },
+        { "t": "を" },
+        { "t": "飲みません", "r": "のみません" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work"],
+      "grammarNode": "node-09"
+    },
+    {
+      "id": "ja-0130",
+      "seq": 130,
+      "target": "いっしょに買い物をしませんか。",
+      "english": "Shall we go shopping together?",
+      "tokens": [
+        { "t": "いっしょに" },
+        { "t": "買い物", "r": "かいもの" },
+        { "t": "を" },
+        { "t": "しません" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-09"
+    },
+    {
+      "id": "ja-0131",
+      "seq": 131,
+      "target": "駅で会いませんか。",
+      "english": "Shall we meet at the station?",
+      "tokens": [
+        { "t": "駅", "r": "えき" },
+        { "t": "で" },
+        { "t": "会いません", "r": "あいません" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel", "work"],
+      "grammarNode": "node-09"
+    },
+    {
+      "id": "ja-0132",
+      "seq": 132,
+      "target": "今晩、レストランで食べませんか。",
+      "english": "Would you like to eat at a restaurant tonight?",
+      "tokens": [
+        { "t": "今晩", "r": "こんばん" },
+        { "t": "、" },
+        { "t": "レストラン" },
+        { "t": "で" },
+        { "t": "食べません", "r": "たべません" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel", "work"],
+      "grammarNode": "node-09"
+    },
+    {
+      "id": "ja-0133",
+      "seq": 133,
+      "target": "日曜日にテニスをしませんか。",
+      "english": "Won't you play tennis on Sunday?",
+      "tokens": [
+        { "t": "日曜日", "r": "にちようび" },
+        { "t": "に" },
+        { "t": "テニス" },
+        { "t": "を" },
+        { "t": "しません" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work"],
+      "grammarNode": "node-09"
+    },
+    {
+      "id": "ja-0134",
+      "seq": 134,
+      "target": "うちに来ませんか。",
+      "english": "Won't you come over to my place?",
+      "tokens": [
+        { "t": "うち" },
+        { "t": "に" },
+        { "t": "来ません", "r": "きません" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-09"
+    },
+    {
+      "id": "ja-0135",
+      "seq": 135,
+      "target": "昨日、映画を見ました。",
+      "english": "I watched a movie yesterday.",
+      "tokens": [
+        { "t": "昨日", "r": "きのう" },
+        { "t": "、" },
+        { "t": "映画", "r": "えいが" },
+        { "t": "を" },
+        { "t": "見ました", "r": "みました" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-10",
+      "grammar": "ました marks a finished action – 見ました (mimashita = watched)."
+    },
+    {
+      "id": "ja-0136",
+      "seq": 136,
+      "target": "先週、東京に行きました。",
+      "english": "I went to Tokyo last week.",
+      "tokens": [
+        { "t": "先週", "r": "せんしゅう" },
+        { "t": "、" },
+        { "t": "東京", "r": "とうきょう" },
+        { "t": "に" },
+        { "t": "行きました", "r": "いきました" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-10"
+    },
+    {
+      "id": "ja-0137",
+      "seq": 137,
+      "target": "週末に何をしましたか。",
+      "english": "What did you do on the weekend?",
+      "tokens": [
+        { "t": "週末", "r": "しゅうまつ" },
+        { "t": "に" },
+        { "t": "何", "r": "なに" },
+        { "t": "を" },
+        { "t": "しました" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work", "family"],
+      "grammarNode": "node-10"
+    },
+    {
+      "id": "ja-0138",
+      "seq": 138,
+      "target": "昨日、友だちに会いました。",
+      "english": "I met a friend yesterday.",
+      "tokens": [
+        { "t": "昨日", "r": "きのう" },
+        { "t": "、" },
+        { "t": "友だち", "r": "ともだち" },
+        { "t": "に" },
+        { "t": "会いました", "r": "あいました" },
+        { "t": "。" }
+      ],
+      "tags": ["general"],
+      "grammarNode": "node-10",
+      "grammar": "会います takes に – 友だちに会います (tomodachi ni aimasu = meet a friend), never を."
+    },
+    {
+      "id": "ja-0139",
+      "seq": 139,
+      "target": "土曜日にサッカーをしました。",
+      "english": "I played soccer on Saturday.",
+      "tokens": [
+        { "t": "土曜日", "r": "どようび" },
+        { "t": "に" },
+        { "t": "サッカー" },
+        { "t": "を" },
+        { "t": "しました" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-10"
+    },
+    {
+      "id": "ja-0140",
+      "seq": 140,
+      "target": "日曜日にどこに行きましたか。",
+      "english": "Where did you go on Sunday?",
+      "tokens": [
+        { "t": "日曜日", "r": "にちようび" },
+        { "t": "に" },
+        { "t": "どこ" },
+        { "t": "に" },
+        { "t": "行きました", "r": "いきました" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-10"
+    },
+    {
+      "id": "ja-0141",
+      "seq": 141,
+      "target": "昨日、タクシーに乗りました。",
+      "english": "I took a taxi yesterday.",
+      "tokens": [
+        { "t": "昨日", "r": "きのう" },
+        { "t": "、" },
+        { "t": "タクシー" },
+        { "t": "に" },
+        { "t": "乗りました", "r": "のりました" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-10",
+      "grammar": "乗ります takes に – タクシーに乗ります (takushii ni norimasu = take a taxi), not を."
+    },
+    {
+      "id": "ja-0142",
+      "seq": 142,
+      "target": "週末、家にいました。",
+      "english": "I stayed home over the weekend.",
+      "tokens": [
+        { "t": "週末", "r": "しゅうまつ" },
+        { "t": "、" },
+        { "t": "家", "r": "いえ" },
+        { "t": "に" },
+        { "t": "いました" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-10"
+    },
+    {
+      "id": "ja-0143",
+      "seq": 143,
+      "target": "何時に起きましたか。",
+      "english": "What time did you get up?",
+      "tokens": [
+        { "t": "何時", "r": "なんじ" },
+        { "t": "に" },
+        { "t": "起きました", "r": "おきました" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-10"
+    },
+    {
+      "id": "ja-0144",
+      "seq": 144,
+      "target": "昨日、よく寝ました。",
+      "english": "I slept well yesterday.",
+      "tokens": [
+        { "t": "昨日", "r": "きのう" },
+        { "t": "、" },
+        { "t": "よく" },
+        { "t": "寝ました", "r": "ねました" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-10"
+    },
+    {
+      "id": "ja-0145",
+      "seq": 145,
+      "target": "京都に行きましたか。",
+      "english": "Did you go to Kyoto?",
+      "tokens": [
+        { "t": "京都", "r": "きょうと" },
+        { "t": "に" },
+        { "t": "行きました", "r": "いきました" },
+        { "t": "か" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel"],
+      "grammarNode": "node-10"
+    },
+    {
+      "id": "ja-0146",
+      "seq": 146,
+      "target": "京都でおみやげを買いました。",
+      "english": "I bought souvenirs in Kyoto.",
+      "tokens": [
+        { "t": "京都", "r": "きょうと" },
+        { "t": "で" },
+        { "t": "おみやげ" },
+        { "t": "を" },
+        { "t": "買いました", "r": "かいました" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel", "family"],
+      "grammarNode": "node-10"
+    },
+    {
+      "id": "ja-0147",
+      "seq": 147,
+      "target": "昨日、テレビを見ませんでした。",
+      "english": "I didn't watch TV yesterday.",
+      "tokens": [
+        { "t": "昨日", "r": "きのう" },
+        { "t": "、" },
+        { "t": "テレビ" },
+        { "t": "を" },
+        { "t": "見ませんでした", "r": "みませんでした" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-10",
+      "grammar": "ませんでした is past + negative – 見ませんでした (mimasen deshita = didn't watch)."
+    },
+    {
+      "id": "ja-0148",
+      "seq": 148,
+      "target": "朝ご飯を食べませんでした。",
+      "english": "I didn't eat breakfast.",
+      "tokens": [
+        { "t": "朝ご飯", "r": "あさごはん" },
+        { "t": "を" },
+        { "t": "食べませんでした", "r": "たべませんでした" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "travel", "family"],
+      "grammarNode": "node-10"
+    },
+    {
+      "id": "ja-0149",
+      "seq": 149,
+      "target": "先週は勉強しませんでした。",
+      "english": "I didn't study last week.",
+      "tokens": [
+        { "t": "先週", "r": "せんしゅう" },
+        { "t": "は" },
+        { "t": "勉強しませんでした", "r": "べんきょうしませんでした" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "work"],
+      "grammarNode": "node-10"
+    },
+    {
+      "id": "ja-0150",
+      "seq": 150,
+      "target": "昨日、母に電話をしました。",
+      "english": "I called my mother yesterday.",
+      "tokens": [
+        { "t": "昨日", "r": "きのう" },
+        { "t": "、" },
+        { "t": "母", "r": "はは" },
+        { "t": "に" },
+        { "t": "電話", "r": "でんわ" },
+        { "t": "を" },
+        { "t": "しました" },
+        { "t": "。" }
+      ],
+      "tags": ["general", "family"],
+      "grammarNode": "node-10",
+      "grammar": "に marks who you call – 母に電話をします (haha ni denwa o shimasu = phone my mother)."
+    }
+  ],
+  "dict": [
+    { "key": "電車", "en": "train", "romaji": "densha", "pos": "n" },
+    { "key": "会社", "en": "company; office", "romaji": "kaisha", "pos": "n" },
+    { "key": "バス", "en": "bus", "romaji": "basu", "pos": "n" },
+    { "key": "駅", "en": "station", "romaji": "eki", "pos": "n" },
+    { "key": "明日", "en": "tomorrow", "romaji": "ashita", "pos": "n" },
+    { "key": "タクシー", "en": "taxi", "romaji": "takushii", "pos": "n" },
+    { "key": "空港", "en": "airport", "romaji": "kuukou", "pos": "n" },
+    { "key": "家", "en": "house; home", "romaji": "ie", "pos": "n" },
+    { "key": "毎日", "en": "every day", "romaji": "mainichi", "pos": "n" },
+    { "key": "自転車", "en": "bicycle", "romaji": "jitensha", "pos": "n" },
+    { "key": "友だち", "en": "friend", "romaji": "tomodachi", "pos": "n" },
+    { "key": "カフェ", "en": "cafe", "romaji": "kafe", "pos": "n" },
+    { "key": "母", "en": "(my) mother", "romaji": "haha", "pos": "n" },
+    { "key": "仕事", "en": "work; job", "romaji": "shigoto", "pos": "n" },
+    { "key": "コーヒー", "en": "coffee", "romaji": "koohii", "pos": "n" },
+    { "key": "図書館", "en": "library", "romaji": "toshokan", "pos": "n" },
+    { "key": "日本語", "en": "Japanese language", "romaji": "nihongo", "pos": "n" },
+    { "key": "スーパー", "en": "supermarket", "romaji": "suupaa", "pos": "n" },
+    { "key": "パン", "en": "bread", "romaji": "pan", "pos": "n" },
+    { "key": "はし", "en": "chopsticks", "romaji": "hashi", "pos": "n" },
+    { "key": "ラーメン", "en": "ramen", "romaji": "raamen", "pos": "n" },
+    { "key": "ペン", "en": "pen", "romaji": "pen", "pos": "n" },
+    { "key": "名前", "en": "name", "romaji": "namae", "pos": "n" },
+    { "key": "よく", "en": "often; well", "romaji": "yoku", "pos": "adv" },
+    { "key": "電話", "en": "telephone; phone call", "romaji": "denwa", "pos": "n" },
+    { "key": "テレビ", "en": "TV", "romaji": "terebi", "pos": "n" },
+    { "key": "ニュース", "en": "news", "romaji": "nyuusu", "pos": "n" },
+    { "key": "昼ご飯", "en": "lunch", "romaji": "hirugohan", "pos": "n" },
+    { "key": "ここ", "en": "here", "romaji": "koko", "pos": "pron" },
+    { "key": "写真", "en": "photo", "romaji": "shashin", "pos": "n" },
+    { "key": "私", "en": "I; me", "romaji": "watashi", "pos": "pron" },
+    { "key": "お酒", "en": "alcohol; sake", "romaji": "osake", "pos": "n" },
+    { "key": "肉", "en": "meat", "romaji": "niku", "pos": "n" },
+    { "key": "今日", "en": "today", "romaji": "kyou", "pos": "n" },
+    { "key": "時間", "en": "time", "romaji": "jikan", "pos": "n" },
+    { "key": "あまり", "en": "not much (with a negative)", "romaji": "amari", "pos": "adv" },
+    { "key": "まだ", "en": "still; not yet", "romaji": "mada", "pos": "adv" },
+    { "key": "日曜日", "en": "Sunday", "romaji": "nichiyoubi", "pos": "n" },
+    { "key": "夜", "en": "night", "romaji": "yoru", "pos": "n" },
+    { "key": "いっしょに", "en": "together", "romaji": "issho ni", "pos": "adv" },
+    { "key": "映画", "en": "movie", "romaji": "eiga", "pos": "n" },
+    { "key": "公園", "en": "park", "romaji": "kouen", "pos": "n" },
+    { "key": "お茶", "en": "tea", "romaji": "ocha", "pos": "n" },
+    { "key": "買い物", "en": "shopping", "romaji": "kaimono", "pos": "n" },
+    { "key": "今晩", "en": "tonight", "romaji": "konban", "pos": "n" },
+    { "key": "レストラン", "en": "restaurant", "romaji": "resutoran", "pos": "n" },
+    { "key": "テニス", "en": "tennis", "romaji": "tenisu", "pos": "n" },
+    { "key": "うち", "en": "home; my place", "romaji": "uchi", "pos": "n" },
+    { "key": "昨日", "en": "yesterday", "romaji": "kinou", "pos": "n" },
+    { "key": "先週", "en": "last week", "romaji": "senshuu", "pos": "n" },
+    { "key": "東京", "en": "Tokyo", "romaji": "toukyou", "pos": "n" },
+    { "key": "週末", "en": "weekend", "romaji": "shuumatsu", "pos": "n" },
+    { "key": "何", "en": "what", "romaji": "nani", "pos": "pron" },
+    { "key": "土曜日", "en": "Saturday", "romaji": "doyoubi", "pos": "n" },
+    { "key": "サッカー", "en": "soccer", "romaji": "sakkaa", "pos": "n" },
+    { "key": "どこ", "en": "where", "romaji": "doko", "pos": "pron" },
+    { "key": "何時", "en": "what time", "romaji": "nanji", "pos": "n" },
+    { "key": "京都", "en": "Kyoto", "romaji": "kyouto", "pos": "n" },
+    { "key": "おみやげ", "en": "souvenir", "romaji": "omiyage", "pos": "n" },
+    { "key": "朝ご飯", "en": "breakfast", "romaji": "asagohan", "pos": "n" },
+    { "key": "で", "en": "at; by (place of action, means)", "romaji": "de", "pos": "part" },
+    { "key": "に", "en": "to; at (direction, time, place of existence)", "romaji": "ni", "pos": "part" },
+    { "key": "を", "en": "object marker", "romaji": "o", "pos": "part" },
+    { "key": "は", "en": "topic marker (\"as for ...\")", "romaji": "wa", "pos": "part" },
+    { "key": "が", "en": "subject marker", "romaji": "ga", "pos": "part" },
+    { "key": "か", "en": "question marker", "romaji": "ka", "pos": "part" },
+    { "key": "行く", "en": "to go", "romaji": "iku", "pos": "v", "lemma": "行く" },
+    { "key": "帰る", "en": "to go home; to return", "romaji": "kaeru", "pos": "v", "lemma": "帰る" },
+    { "key": "来る", "en": "to come", "romaji": "kuru", "pos": "v", "lemma": "来る" },
+    { "key": "待つ", "en": "to wait", "romaji": "matsu", "pos": "v", "lemma": "待つ" },
+    { "key": "会う", "en": "to meet", "romaji": "au", "pos": "v", "lemma": "会う" },
+    { "key": "する", "en": "to do", "romaji": "suru", "pos": "v", "lemma": "する" },
+    { "key": "勉強する", "en": "to study", "romaji": "benkyou suru", "pos": "v", "lemma": "勉強する" },
+    { "key": "飲む", "en": "to drink", "romaji": "nomu", "pos": "v", "lemma": "飲む" },
+    { "key": "買う", "en": "to buy", "romaji": "kau", "pos": "v", "lemma": "買う" },
+    { "key": "食べる", "en": "to eat", "romaji": "taberu", "pos": "v", "lemma": "食べる" },
+    { "key": "書く", "en": "to write", "romaji": "kaku", "pos": "v", "lemma": "書く" },
+    { "key": "話す", "en": "to speak; to talk", "romaji": "hanasu", "pos": "v", "lemma": "話す" },
+    { "key": "見る", "en": "to see; to watch", "romaji": "miru", "pos": "v", "lemma": "見る" },
+    { "key": "とる", "en": "to take (a photo)", "romaji": "toru", "pos": "v", "lemma": "とる" },
+    { "key": "分かる", "en": "to understand", "romaji": "wakaru", "pos": "v", "lemma": "分かる" },
+    { "key": "ある", "en": "to exist; there is (things)", "romaji": "aru", "pos": "v", "lemma": "ある" },
+    { "key": "いる", "en": "to exist; to be (people, animals)", "romaji": "iru", "pos": "v", "lemma": "いる" },
+    { "key": "乗る", "en": "to ride; to take (transport)", "romaji": "noru", "pos": "v", "lemma": "乗る" },
+    { "key": "起きる", "en": "to get up; to wake up", "romaji": "okiru", "pos": "v", "lemma": "起きる" },
+    { "key": "寝る", "en": "to sleep; to go to bed", "romaji": "neru", "pos": "v", "lemma": "寝る" }
+  ],
+  "verbs": [
+    { "lemma": "行く", "cls": "godan", "kana": "いく" },
+    { "lemma": "帰る", "cls": "godan", "kana": "かえる" },
+    { "lemma": "来る", "cls": "kuru", "kana": "くる" },
+    { "lemma": "待つ", "cls": "godan", "kana": "まつ" },
+    { "lemma": "会う", "cls": "godan", "kana": "あう" },
+    { "lemma": "する", "cls": "suru", "kana": "する" },
+    { "lemma": "勉強する", "cls": "suru", "kana": "べんきょうする" },
+    { "lemma": "飲む", "cls": "godan", "kana": "のむ" },
+    { "lemma": "買う", "cls": "godan", "kana": "かう" },
+    { "lemma": "食べる", "cls": "ichidan", "kana": "たべる" },
+    { "lemma": "書く", "cls": "godan", "kana": "かく" },
+    { "lemma": "話す", "cls": "godan", "kana": "はなす" },
+    { "lemma": "見る", "cls": "ichidan", "kana": "みる" },
+    { "lemma": "とる", "cls": "godan", "kana": "とる" },
+    { "lemma": "分かる", "cls": "godan", "kana": "わかる" },
+    { "lemma": "ある", "cls": "godan", "kana": "ある" },
+    { "lemma": "いる", "cls": "ichidan", "kana": "いる" },
+    { "lemma": "乗る", "cls": "godan", "kana": "のる" },
+    { "lemma": "起きる", "cls": "ichidan", "kana": "おきる" },
+    { "lemma": "寝る", "cls": "ichidan", "kana": "ねる" }
+  ]
+}

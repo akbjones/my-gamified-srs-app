@@ -1,0 +1,1806 @@
+{
+  "cards": [
+    {
+      "id": "ja-0001",
+      "seq": 1,
+      "target": "こんにちは。",
+      "english": "Hello.",
+      "tokens": [
+        {
+          "t": "こんにちは"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel"
+      ],
+      "grammarNode": "node-01",
+      "grammar": "こんにちは (konnichiwa) is the daytime greeting – from late morning until sunset."
+    },
+    {
+      "id": "ja-0002",
+      "seq": 2,
+      "target": "おはようございます。",
+      "english": "Good morning.",
+      "tokens": [
+        {
+          "t": "おはようございます"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "work",
+        "travel"
+      ],
+      "grammarNode": "node-01"
+    },
+    {
+      "id": "ja-0003",
+      "seq": 3,
+      "target": "こんばんは。",
+      "english": "Good evening.",
+      "tokens": [
+        {
+          "t": "こんばんは"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel"
+      ],
+      "grammarNode": "node-01"
+    },
+    {
+      "id": "ja-0004",
+      "seq": 4,
+      "target": "ありがとうございます。",
+      "english": "Thank you very much.",
+      "tokens": [
+        {
+          "t": "ありがとうございます"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel",
+        "work"
+      ],
+      "grammarNode": "node-01"
+    },
+    {
+      "id": "ja-0005",
+      "seq": 5,
+      "target": "すみません。",
+      "english": "Excuse me.",
+      "tokens": [
+        {
+          "t": "すみません"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel",
+        "work"
+      ],
+      "grammarNode": "node-01",
+      "grammar": "すみません (sumimasen) covers both excuse me and sorry – the all-purpose way to get attention."
+    },
+    {
+      "id": "ja-0006",
+      "seq": 6,
+      "target": "おねがいします。",
+      "english": "Please.",
+      "tokens": [
+        {
+          "t": "おねがいします"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel",
+        "work"
+      ],
+      "grammarNode": "node-01"
+    },
+    {
+      "id": "ja-0007",
+      "seq": 7,
+      "target": "はじめまして。",
+      "english": "Nice to meet you.",
+      "tokens": [
+        {
+          "t": "はじめまして"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "work",
+        "travel"
+      ],
+      "grammarNode": "node-01"
+    },
+    {
+      "id": "ja-0008",
+      "seq": 8,
+      "target": "よろしくおねがいします。",
+      "english": "I look forward to working with you.",
+      "tokens": [
+        {
+          "t": "よろしく"
+        },
+        {
+          "t": "おねがいします"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "work"
+      ],
+      "grammarNode": "node-01"
+    },
+    {
+      "id": "ja-0009",
+      "seq": 9,
+      "target": "いってきます。",
+      "english": "I'm heading out.",
+      "tokens": [
+        {
+          "t": "いってきます"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "family"
+      ],
+      "grammarNode": "node-01"
+    },
+    {
+      "id": "ja-0010",
+      "seq": 10,
+      "target": "いってらっしゃい。",
+      "english": "Have a good day.",
+      "tokens": [
+        {
+          "t": "いってらっしゃい"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "family"
+      ],
+      "grammarNode": "node-01"
+    },
+    {
+      "id": "ja-0011",
+      "seq": 11,
+      "target": "ただいま。",
+      "english": "I'm home.",
+      "tokens": [
+        {
+          "t": "ただいま"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "family"
+      ],
+      "grammarNode": "node-01"
+    },
+    {
+      "id": "ja-0012",
+      "seq": 12,
+      "target": "おかえりなさい。",
+      "english": "Welcome home.",
+      "tokens": [
+        {
+          "t": "おかえりなさい"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "family"
+      ],
+      "grammarNode": "node-01"
+    },
+    {
+      "id": "ja-0013",
+      "seq": 13,
+      "target": "いただきます。",
+      "english": "Thank you for the food.",
+      "tokens": [
+        {
+          "t": "いただきます"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "family"
+      ],
+      "grammarNode": "node-01"
+    },
+    {
+      "id": "ja-0014",
+      "seq": 14,
+      "target": "ごちそうさまでした。",
+      "english": "That was a delicious meal, thank you.",
+      "tokens": [
+        {
+          "t": "ごちそうさまでした"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "family",
+        "travel"
+      ],
+      "grammarNode": "node-01"
+    },
+    {
+      "id": "ja-0015",
+      "seq": 15,
+      "target": "わたしはがくせいです。",
+      "english": "I am a student.",
+      "tokens": [
+        {
+          "t": "わたし"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "がくせい"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general"
+      ],
+      "grammarNode": "node-02",
+      "grammar": "は marks the topic – わたしは (watashi wa = as for me). Written は, but pronounced wa."
+    },
+    {
+      "id": "ja-0016",
+      "seq": 16,
+      "target": "こちらはともだちです。",
+      "english": "This is my friend.",
+      "tokens": [
+        {
+          "t": "こちら"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "ともだち"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general"
+      ],
+      "grammarNode": "node-02",
+      "grammar": "こちら (kochira) politely means this person – the standard way to introduce someone face to face."
+    },
+    {
+      "id": "ja-0017",
+      "seq": 17,
+      "target": "ちちはかいしゃいんです。",
+      "english": "My father is an office worker.",
+      "tokens": [
+        {
+          "t": "ちち"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "かいしゃいん"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "family",
+        "work"
+      ],
+      "grammarNode": "node-02",
+      "grammar": "ちち (chichi) is only for your own father – someone else's father is おとうさん (otōsan)."
+    },
+    {
+      "id": "ja-0018",
+      "seq": 18,
+      "target": "ははもかいしゃいんです。",
+      "english": "My mother is an office worker too.",
+      "tokens": [
+        {
+          "t": "はは"
+        },
+        {
+          "t": "も"
+        },
+        {
+          "t": "かいしゃいん"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "family",
+        "work"
+      ],
+      "grammarNode": "node-02",
+      "grammar": "も replaces は and means too – ははも (haha mo = my mother too)."
+    },
+    {
+      "id": "ja-0019",
+      "seq": 19,
+      "target": "あねはせんせいです。",
+      "english": "My older sister is a teacher.",
+      "tokens": [
+        {
+          "t": "あね"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "せんせい"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "family",
+        "work"
+      ],
+      "grammarNode": "node-02"
+    },
+    {
+      "id": "ja-0020",
+      "seq": 20,
+      "target": "ともだちはカフェのてんいんです。",
+      "english": "My friend is a clerk at a cafe.",
+      "tokens": [
+        {
+          "t": "ともだち"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "カフェ"
+        },
+        {
+          "t": "の"
+        },
+        {
+          "t": "てんいん"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "work"
+      ],
+      "grammarNode": "node-02",
+      "grammar": "の links two nouns, owner or type first – カフェのてんいん (kafe no ten'in = cafe clerk)."
+    },
+    {
+      "id": "ja-0021",
+      "seq": 21,
+      "target": "わたしはにほんごのがくせいです。",
+      "english": "I am a student of Japanese.",
+      "tokens": [
+        {
+          "t": "わたし"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "にほんご"
+        },
+        {
+          "t": "の"
+        },
+        {
+          "t": "がくせい"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general"
+      ],
+      "grammarNode": "node-02"
+    },
+    {
+      "id": "ja-0022",
+      "seq": 22,
+      "target": "わたしはコーヒーです。",
+      "english": "I'll have coffee.",
+      "tokens": [
+        {
+          "t": "わたし"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "コーヒー"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel"
+      ],
+      "grammarNode": "node-02",
+      "grammar": "は sets the topic, not equals – わたしはコーヒーです (watashi wa kōhī desu) can mean as for me, coffee: I'll have coffee."
+    },
+    {
+      "id": "ja-0023",
+      "seq": 23,
+      "target": "しゅっしんはとうきょうです。",
+      "english": "I'm from Tokyo.",
+      "tokens": [
+        {
+          "t": "しゅっしん"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "とうきょう"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "work",
+        "travel"
+      ],
+      "grammarNode": "node-02"
+    },
+    {
+      "id": "ja-0024",
+      "seq": 24,
+      "target": "あしたはしごとです。",
+      "english": "Tomorrow is a work day.",
+      "tokens": [
+        {
+          "t": "あした"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "しごと"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "work"
+      ],
+      "grammarNode": "node-02"
+    },
+    {
+      "id": "ja-0025",
+      "seq": 25,
+      "target": "おとうとはこうこうせいです。",
+      "english": "My younger brother is a high school student.",
+      "tokens": [
+        {
+          "t": "おとうと"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "こうこうせい"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "family"
+      ],
+      "grammarNode": "node-02"
+    },
+    {
+      "id": "ja-0026",
+      "seq": 26,
+      "target": "つまはぎんこういんです。",
+      "english": "My wife is a bank employee.",
+      "tokens": [
+        {
+          "t": "つま"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "ぎんこういん"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "family",
+        "work"
+      ],
+      "grammarNode": "node-02"
+    },
+    {
+      "id": "ja-0027",
+      "seq": 27,
+      "target": "いもうとはだいがくせいです。",
+      "english": "My younger sister is a university student.",
+      "tokens": [
+        {
+          "t": "いもうと"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "だいがくせい"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "family"
+      ],
+      "grammarNode": "node-02"
+    },
+    {
+      "id": "ja-0028",
+      "seq": 28,
+      "target": "みせはきょうやすみです。",
+      "english": "The shop is closed today.",
+      "tokens": [
+        {
+          "t": "みせ"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "きょう"
+        },
+        {
+          "t": "やすみ"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel"
+      ],
+      "grammarNode": "node-02"
+    },
+    {
+      "id": "ja-0029",
+      "seq": 29,
+      "target": "がくせいですか。",
+      "english": "Are you a student?",
+      "tokens": [
+        {
+          "t": "がくせい"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "か"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "work"
+      ],
+      "grammarNode": "node-03",
+      "grammar": "か at the end turns a statement into a question – がくせいですか (gakusei desu ka = are you a student?). Word order stays put."
+    },
+    {
+      "id": "ja-0030",
+      "seq": 30,
+      "target": "はい、そうです。",
+      "english": "Yes, that's right.",
+      "tokens": [
+        {
+          "t": "はい"
+        },
+        {
+          "t": "、"
+        },
+        {
+          "t": "そう"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "work"
+      ],
+      "grammarNode": "node-03",
+      "grammar": "はい、そうです (hai, sō desu = yes, that's right) answers almost any ですか question."
+    },
+    {
+      "id": "ja-0031",
+      "seq": 31,
+      "target": "いいえ、がくせいじゃないです。かいしゃいんです。",
+      "english": "No, I'm not a student. I'm an office worker.",
+      "tokens": [
+        {
+          "t": "いいえ"
+        },
+        {
+          "t": "、"
+        },
+        {
+          "t": "がくせい"
+        },
+        {
+          "t": "じゃないです"
+        },
+        {
+          "t": "。"
+        },
+        {
+          "t": "かいしゃいん"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "work"
+      ],
+      "grammarNode": "node-03",
+      "grammar": "じゃないです (ja nai desu = is not) is the everyday polite negative of です."
+    },
+    {
+      "id": "ja-0032",
+      "seq": 32,
+      "target": "ともだちもがくせいですか。",
+      "english": "Is your friend a student too?",
+      "tokens": [
+        {
+          "t": "ともだち"
+        },
+        {
+          "t": "も"
+        },
+        {
+          "t": "がくせい"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "か"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general"
+      ],
+      "grammarNode": "node-03"
+    },
+    {
+      "id": "ja-0033",
+      "seq": 33,
+      "target": "かいしゃはとうきょうですか。",
+      "english": "Is your company in Tokyo?",
+      "tokens": [
+        {
+          "t": "かいしゃ"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "とうきょう"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "か"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "work"
+      ],
+      "grammarNode": "node-03"
+    },
+    {
+      "id": "ja-0034",
+      "seq": 34,
+      "target": "もちかえりですか。",
+      "english": "Is that to go?",
+      "tokens": [
+        {
+          "t": "もちかえり"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "か"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel"
+      ],
+      "grammarNode": "node-03"
+    },
+    {
+      "id": "ja-0035",
+      "seq": 35,
+      "target": "はい、もちかえりです。",
+      "english": "Yes, it's to go.",
+      "tokens": [
+        {
+          "t": "はい"
+        },
+        {
+          "t": "、"
+        },
+        {
+          "t": "もちかえり"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel"
+      ],
+      "grammarNode": "node-03"
+    },
+    {
+      "id": "ja-0036",
+      "seq": 36,
+      "target": "いいえ、ちょっとちがいます。",
+      "english": "No, that's not quite right.",
+      "tokens": [
+        {
+          "t": "いいえ"
+        },
+        {
+          "t": "、"
+        },
+        {
+          "t": "ちょっと"
+        },
+        {
+          "t": "ちがいます"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general"
+      ],
+      "grammarNode": "node-03"
+    },
+    {
+      "id": "ja-0037",
+      "seq": 37,
+      "target": "おとうさんはかいしゃいんですか。",
+      "english": "Is your father an office worker?",
+      "tokens": [
+        {
+          "t": "おとうさん"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "かいしゃいん"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "か"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "family",
+        "work"
+      ],
+      "grammarNode": "node-03"
+    },
+    {
+      "id": "ja-0038",
+      "seq": 38,
+      "target": "いいえ、ちちはかいしゃいんじゃないです。",
+      "english": "No, my father is not an office worker.",
+      "tokens": [
+        {
+          "t": "いいえ"
+        },
+        {
+          "t": "、"
+        },
+        {
+          "t": "ちち"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "かいしゃいん"
+        },
+        {
+          "t": "じゃないです"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "family",
+        "work"
+      ],
+      "grammarNode": "node-03"
+    },
+    {
+      "id": "ja-0039",
+      "seq": 39,
+      "target": "ほんとうですか。",
+      "english": "Really?",
+      "tokens": [
+        {
+          "t": "ほんとう"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "か"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general"
+      ],
+      "grammarNode": "node-03"
+    },
+    {
+      "id": "ja-0040",
+      "seq": 40,
+      "target": "これはコーヒーです。",
+      "english": "This is coffee.",
+      "tokens": [
+        {
+          "t": "これ"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "コーヒー"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel"
+      ],
+      "grammarNode": "node-04",
+      "grammar": "これ (kore) = this one near me, それ (sore) = that one near you, あれ (are) = far from both."
+    },
+    {
+      "id": "ja-0041",
+      "seq": 41,
+      "target": "それはわたしのかばんです。",
+      "english": "That is my bag.",
+      "tokens": [
+        {
+          "t": "それ"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "わたし"
+        },
+        {
+          "t": "の"
+        },
+        {
+          "t": "かばん"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel"
+      ],
+      "grammarNode": "node-04"
+    },
+    {
+      "id": "ja-0042",
+      "seq": 42,
+      "target": "あれはえきです。",
+      "english": "That over there is the station.",
+      "tokens": [
+        {
+          "t": "あれ"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "えき"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel"
+      ],
+      "grammarNode": "node-04"
+    },
+    {
+      "id": "ja-0043",
+      "seq": 43,
+      "target": "これはなんですか。",
+      "english": "What is this?",
+      "tokens": [
+        {
+          "t": "これ"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "なん"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "か"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel"
+      ],
+      "grammarNode": "node-04",
+      "grammar": "Question words stay in place – これはなんですか (kore wa nan desu ka = this is what?). なん never moves to the front."
+    },
+    {
+      "id": "ja-0044",
+      "seq": 44,
+      "target": "それはおちゃですか。",
+      "english": "Is that tea?",
+      "tokens": [
+        {
+          "t": "それ"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "おちゃ"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "か"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel"
+      ],
+      "grammarNode": "node-04"
+    },
+    {
+      "id": "ja-0045",
+      "seq": 45,
+      "target": "いいえ、これはおちゃじゃないです。",
+      "english": "No, this isn't tea.",
+      "tokens": [
+        {
+          "t": "いいえ"
+        },
+        {
+          "t": "、"
+        },
+        {
+          "t": "これ"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "おちゃ"
+        },
+        {
+          "t": "じゃないです"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel"
+      ],
+      "grammarNode": "node-04",
+      "grammar": "Perspective flips in the answer – your それ (sore = that) is my これ (kore = this)."
+    },
+    {
+      "id": "ja-0046",
+      "seq": 46,
+      "target": "このケーキはいくらですか。",
+      "english": "How much is this cake?",
+      "tokens": [
+        {
+          "t": "この"
+        },
+        {
+          "t": "ケーキ"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "いくら"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "か"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel"
+      ],
+      "grammarNode": "node-04",
+      "grammar": "この (kono) always needs a noun right after it – このケーキ (kono kēki = this cake). これ stands alone."
+    },
+    {
+      "id": "ja-0047",
+      "seq": 47,
+      "target": "そのかさはわたしのです。",
+      "english": "That umbrella is mine.",
+      "tokens": [
+        {
+          "t": "その"
+        },
+        {
+          "t": "かさ"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "わたし"
+        },
+        {
+          "t": "の"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel"
+      ],
+      "grammarNode": "node-04",
+      "grammar": "の can stand in for an obvious noun – わたしの (watashi no = mine)."
+    },
+    {
+      "id": "ja-0048",
+      "seq": 48,
+      "target": "あのひとはせんせいです。",
+      "english": "That person is a teacher.",
+      "tokens": [
+        {
+          "t": "あの"
+        },
+        {
+          "t": "ひと"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "せんせい"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "work"
+      ],
+      "grammarNode": "node-04"
+    },
+    {
+      "id": "ja-0049",
+      "seq": 49,
+      "target": "あのたてものはぎんこうですか。",
+      "english": "Is that building a bank?",
+      "tokens": [
+        {
+          "t": "あの"
+        },
+        {
+          "t": "たてもの"
+        },
+        {
+          "t": "は"
+        },
+        {
+          "t": "ぎんこう"
+        },
+        {
+          "t": "です"
+        },
+        {
+          "t": "か"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel"
+      ],
+      "grammarNode": "node-04"
+    },
+    {
+      "id": "ja-0050",
+      "seq": 50,
+      "target": "これもおねがいします。",
+      "english": "This one too, please.",
+      "tokens": [
+        {
+          "t": "これ"
+        },
+        {
+          "t": "も"
+        },
+        {
+          "t": "おねがいします"
+        },
+        {
+          "t": "。"
+        }
+      ],
+      "tags": [
+        "general",
+        "travel"
+      ],
+      "grammarNode": "node-04"
+    }
+  ],
+  "dict": [
+    {
+      "key": "こんにちは",
+      "en": "hello / good afternoon",
+      "romaji": "konnichiwa",
+      "pos": "phrase"
+    },
+    {
+      "key": "おはようございます",
+      "en": "good morning",
+      "romaji": "ohayō gozaimasu",
+      "pos": "phrase"
+    },
+    {
+      "key": "こんばんは",
+      "en": "good evening",
+      "romaji": "konbanwa",
+      "pos": "phrase"
+    },
+    {
+      "key": "ありがとうございます",
+      "en": "thank you",
+      "romaji": "arigatō gozaimasu",
+      "pos": "phrase"
+    },
+    {
+      "key": "すみません",
+      "en": "excuse me / sorry",
+      "romaji": "sumimasen",
+      "pos": "phrase"
+    },
+    {
+      "key": "おねがいします",
+      "en": "please (I request it)",
+      "romaji": "onegai shimasu",
+      "pos": "phrase"
+    },
+    {
+      "key": "はじめまして",
+      "en": "nice to meet you",
+      "romaji": "hajimemashite",
+      "pos": "phrase"
+    },
+    {
+      "key": "いってきます",
+      "en": "I'm off (I'll go and come back)",
+      "romaji": "ittekimasu",
+      "pos": "phrase"
+    },
+    {
+      "key": "いってらっしゃい",
+      "en": "have a good day (to someone leaving)",
+      "romaji": "itterasshai",
+      "pos": "phrase"
+    },
+    {
+      "key": "ただいま",
+      "en": "I'm home",
+      "romaji": "tadaima",
+      "pos": "phrase"
+    },
+    {
+      "key": "おかえりなさい",
+      "en": "welcome home",
+      "romaji": "okaerinasai",
+      "pos": "phrase"
+    },
+    {
+      "key": "いただきます",
+      "en": "thanks for the food (said before eating)",
+      "romaji": "itadakimasu",
+      "pos": "phrase"
+    },
+    {
+      "key": "ごちそうさまでした",
+      "en": "thank you for the meal (said after eating)",
+      "romaji": "gochisōsama deshita",
+      "pos": "phrase"
+    },
+    {
+      "key": "です",
+      "en": "is / am / are (polite)",
+      "romaji": "desu",
+      "pos": "phrase"
+    },
+    {
+      "key": "じゃないです",
+      "en": "is not (polite)",
+      "romaji": "ja nai desu",
+      "pos": "phrase"
+    },
+    {
+      "key": "は",
+      "en": "topic marker (as for ...)",
+      "romaji": "wa",
+      "pos": "part"
+    },
+    {
+      "key": "も",
+      "en": "too / also",
+      "romaji": "mo",
+      "pos": "part"
+    },
+    {
+      "key": "の",
+      "en": "of / 's (links nouns)",
+      "romaji": "no",
+      "pos": "part"
+    },
+    {
+      "key": "か",
+      "en": "question marker",
+      "romaji": "ka",
+      "pos": "part"
+    },
+    {
+      "key": "わたし",
+      "en": "I / me",
+      "romaji": "watashi",
+      "pos": "pron"
+    },
+    {
+      "key": "こちら",
+      "en": "this person / this way (polite)",
+      "romaji": "kochira",
+      "pos": "pron"
+    },
+    {
+      "key": "これ",
+      "en": "this one (near me)",
+      "romaji": "kore",
+      "pos": "pron"
+    },
+    {
+      "key": "それ",
+      "en": "that one (near you)",
+      "romaji": "sore",
+      "pos": "pron"
+    },
+    {
+      "key": "あれ",
+      "en": "that one over there",
+      "romaji": "are",
+      "pos": "pron"
+    },
+    {
+      "key": "なん",
+      "en": "what",
+      "romaji": "nan",
+      "pos": "pron"
+    },
+    {
+      "key": "この",
+      "en": "this ~ (before a noun)",
+      "romaji": "kono",
+      "pos": "adj"
+    },
+    {
+      "key": "その",
+      "en": "that ~ (before a noun)",
+      "romaji": "sono",
+      "pos": "adj"
+    },
+    {
+      "key": "あの",
+      "en": "that ~ over there (before a noun)",
+      "romaji": "ano",
+      "pos": "adj"
+    },
+    {
+      "key": "よろしく",
+      "en": "well / kindly (as a request)",
+      "romaji": "yoroshiku",
+      "pos": "adv"
+    },
+    {
+      "key": "そう",
+      "en": "so / like that",
+      "romaji": "sō",
+      "pos": "adv"
+    },
+    {
+      "key": "ちょっと",
+      "en": "a little / a bit",
+      "romaji": "chotto",
+      "pos": "adv"
+    },
+    {
+      "key": "いくら",
+      "en": "how much",
+      "romaji": "ikura",
+      "pos": "adv"
+    },
+    {
+      "key": "はい",
+      "en": "yes",
+      "romaji": "hai",
+      "pos": "intj"
+    },
+    {
+      "key": "いいえ",
+      "en": "no",
+      "romaji": "iie",
+      "pos": "intj"
+    },
+    {
+      "key": "ちがう",
+      "en": "to be different / to be wrong",
+      "romaji": "chigau",
+      "pos": "v",
+      "lemma": "ちがう"
+    },
+    {
+      "key": "がくせい",
+      "en": "student",
+      "romaji": "gakusei",
+      "pos": "n"
+    },
+    {
+      "key": "ともだち",
+      "en": "friend",
+      "romaji": "tomodachi",
+      "pos": "n"
+    },
+    {
+      "key": "ちち",
+      "en": "father (one's own)",
+      "romaji": "chichi",
+      "pos": "n"
+    },
+    {
+      "key": "おとうさん",
+      "en": "father (someone else's)",
+      "romaji": "otōsan",
+      "pos": "n"
+    },
+    {
+      "key": "はは",
+      "en": "mother (one's own)",
+      "romaji": "haha",
+      "pos": "n"
+    },
+    {
+      "key": "あね",
+      "en": "older sister (one's own)",
+      "romaji": "ane",
+      "pos": "n"
+    },
+    {
+      "key": "おとうと",
+      "en": "younger brother (one's own)",
+      "romaji": "otōto",
+      "pos": "n"
+    },
+    {
+      "key": "いもうと",
+      "en": "younger sister (one's own)",
+      "romaji": "imōto",
+      "pos": "n"
+    },
+    {
+      "key": "つま",
+      "en": "wife (one's own)",
+      "romaji": "tsuma",
+      "pos": "n"
+    },
+    {
+      "key": "かいしゃいん",
+      "en": "office worker / company employee",
+      "romaji": "kaishain",
+      "pos": "n"
+    },
+    {
+      "key": "ぎんこういん",
+      "en": "bank employee",
+      "romaji": "ginkōin",
+      "pos": "n"
+    },
+    {
+      "key": "せんせい",
+      "en": "teacher",
+      "romaji": "sensei",
+      "pos": "n"
+    },
+    {
+      "key": "てんいん",
+      "en": "shop clerk",
+      "romaji": "ten'in",
+      "pos": "n"
+    },
+    {
+      "key": "こうこうせい",
+      "en": "high school student",
+      "romaji": "kōkōsei",
+      "pos": "n"
+    },
+    {
+      "key": "だいがくせい",
+      "en": "university student",
+      "romaji": "daigakusei",
+      "pos": "n"
+    },
+    {
+      "key": "カフェ",
+      "en": "cafe",
+      "romaji": "kafe",
+      "pos": "n"
+    },
+    {
+      "key": "コーヒー",
+      "en": "coffee",
+      "romaji": "kōhī",
+      "pos": "n"
+    },
+    {
+      "key": "おちゃ",
+      "en": "tea (green tea)",
+      "romaji": "ocha",
+      "pos": "n"
+    },
+    {
+      "key": "ケーキ",
+      "en": "cake",
+      "romaji": "kēki",
+      "pos": "n"
+    },
+    {
+      "key": "もちかえり",
+      "en": "takeout / to go",
+      "romaji": "mochikaeri",
+      "pos": "n"
+    },
+    {
+      "key": "みせ",
+      "en": "shop / store",
+      "romaji": "mise",
+      "pos": "n"
+    },
+    {
+      "key": "かいしゃ",
+      "en": "company / office",
+      "romaji": "kaisha",
+      "pos": "n"
+    },
+    {
+      "key": "しごと",
+      "en": "work / job",
+      "romaji": "shigoto",
+      "pos": "n"
+    },
+    {
+      "key": "やすみ",
+      "en": "day off / holiday",
+      "romaji": "yasumi",
+      "pos": "n"
+    },
+    {
+      "key": "しゅっしん",
+      "en": "hometown / where one is from",
+      "romaji": "shusshin",
+      "pos": "n"
+    },
+    {
+      "key": "とうきょう",
+      "en": "Tokyo",
+      "romaji": "Tōkyō",
+      "pos": "n"
+    },
+    {
+      "key": "にほんご",
+      "en": "Japanese language",
+      "romaji": "nihongo",
+      "pos": "n"
+    },
+    {
+      "key": "きょう",
+      "en": "today",
+      "romaji": "kyō",
+      "pos": "n"
+    },
+    {
+      "key": "あした",
+      "en": "tomorrow",
+      "romaji": "ashita",
+      "pos": "n"
+    },
+    {
+      "key": "ほんとう",
+      "en": "truth / really",
+      "romaji": "hontō",
+      "pos": "n"
+    },
+    {
+      "key": "かばん",
+      "en": "bag",
+      "romaji": "kaban",
+      "pos": "n"
+    },
+    {
+      "key": "かさ",
+      "en": "umbrella",
+      "romaji": "kasa",
+      "pos": "n"
+    },
+    {
+      "key": "えき",
+      "en": "station",
+      "romaji": "eki",
+      "pos": "n"
+    },
+    {
+      "key": "ひと",
+      "en": "person",
+      "romaji": "hito",
+      "pos": "n"
+    },
+    {
+      "key": "たてもの",
+      "en": "building",
+      "romaji": "tatemono",
+      "pos": "n"
+    },
+    {
+      "key": "ぎんこう",
+      "en": "bank",
+      "romaji": "ginkō",
+      "pos": "n"
+    }
+  ],
+  "verbs": [
+    {
+      "lemma": "ちがう",
+      "cls": "godan",
+      "kana": "ちがう"
+    }
+  ]
+}

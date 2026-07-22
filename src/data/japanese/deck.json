@@ -3,100 +3,10275 @@
   "id": "ja-0001",
   "target": "こんにちは。",
   "english": "Hello.",
-  "tokens": [{"t": "こんにちは"}, {"t": "。"}],
+  "tokens": [
+   {
+    "t": "こんにちは"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "こんにちは (konnichiwa) is the daytime greeting – from late morning until sunset.",
   "audio": "ja-ja-0001.mp3",
-  "tags": ["general"],
+  "tags": [
+   "general",
+   "travel"
+  ],
   "grammarNode": "node-01",
   "priority": 1
  },
  {
   "id": "ja-0002",
-  "target": "ありがとうございます。",
-  "english": "Thank you.",
-  "tokens": [{"t": "ありがとうございます"}, {"t": "。"}],
+  "target": "おはようございます。",
+  "english": "Good morning.",
+  "tokens": [
+   {
+    "t": "おはようございます"
+   },
+   {
+    "t": "。"
+   }
+  ],
   "audio": "ja-ja-0002.mp3",
-  "tags": ["general"],
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
   "grammarNode": "node-01",
   "priority": 2
  },
  {
   "id": "ja-0003",
-  "target": "はい、そうです。",
-  "english": "Yes, that's right.",
-  "tokens": [{"t": "はい"}, {"t": "、"}, {"t": "そう"}, {"t": "です"}, {"t": "。"}],
+  "target": "こんばんは。",
+  "english": "Good evening.",
+  "tokens": [
+   {
+    "t": "こんばんは"
+   },
+   {
+    "t": "。"
+   }
+  ],
   "audio": "ja-ja-0003.mp3",
-  "tags": ["general"],
-  "grammarNode": "node-02",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-01",
   "priority": 3
  },
  {
   "id": "ja-0004",
-  "target": "わたしはがくせいです。",
-  "english": "I am a student.",
-  "tokens": [{"t": "わたし"}, {"t": "は"}, {"t": "がくせい"}, {"t": "です"}, {"t": "。"}],
+  "target": "ありがとうございます。",
+  "english": "Thank you very much.",
+  "tokens": [
+   {
+    "t": "ありがとうございます"
+   },
+   {
+    "t": "。"
+   }
+  ],
   "audio": "ja-ja-0004.mp3",
-  "tags": ["general"],
-  "grammarNode": "node-02",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-01",
   "priority": 4
  },
  {
   "id": "ja-0005",
-  "target": "これはみずです。",
-  "english": "This is water.",
-  "tokens": [{"t": "これ"}, {"t": "は"}, {"t": "みず"}, {"t": "です"}, {"t": "。"}],
+  "target": "すみません。",
+  "english": "Excuse me.",
+  "tokens": [
+   {
+    "t": "すみません"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "すみません (sumimasen) covers both excuse me and sorry – the all-purpose way to get attention.",
   "audio": "ja-ja-0005.mp3",
-  "tags": ["general"],
-  "grammarNode": "node-04",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-01",
   "priority": 5
  },
  {
   "id": "ja-0006",
-  "target": "私は学生です。",
-  "english": "I am a student.",
-  "tokens": [{"t": "私", "r": "わたし"}, {"t": "は"}, {"t": "学生", "r": "がくせい"}, {"t": "です"}, {"t": "。"}],
+  "target": "おねがいします。",
+  "english": "Please.",
+  "tokens": [
+   {
+    "t": "おねがいします"
+   },
+   {
+    "t": "。"
+   }
+  ],
   "audio": "ja-ja-0006.mp3",
-  "tags": ["general"],
-  "grammarNode": "node-02",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-01",
   "priority": 6
  },
  {
   "id": "ja-0007",
-  "target": "先生は日本人です。",
-  "english": "The teacher is Japanese.",
-  "tokens": [{"t": "先生", "r": "せんせい"}, {"t": "は"}, {"t": "日本人", "r": "にほんじん"}, {"t": "です"}, {"t": "。"}],
+  "target": "はじめまして。",
+  "english": "Nice to meet you.",
+  "tokens": [
+   {
+    "t": "はじめまして"
+   },
+   {
+    "t": "。"
+   }
+  ],
   "audio": "ja-ja-0007.mp3",
-  "tags": ["general"],
-  "grammarNode": "node-02",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-01",
   "priority": 7
  },
  {
   "id": "ja-0008",
-  "target": "ねこがいます。",
-  "english": "There is a cat.",
-  "tokens": [{"t": "ねこ"}, {"t": "が"}, {"t": "います"}, {"t": "。"}],
+  "target": "よろしくおねがいします。",
+  "english": "I look forward to working with you.",
+  "tokens": [
+   {
+    "t": "よろしく"
+   },
+   {
+    "t": "おねがいします"
+   },
+   {
+    "t": "。"
+   }
+  ],
   "audio": "ja-ja-0008.mp3",
-  "tags": ["general"],
-  "grammarNode": "node-05",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-01",
   "priority": 8
  },
  {
   "id": "ja-0009",
-  "target": "水を飲みます。",
-  "english": "I drink water.",
-  "tokens": [{"t": "水", "r": "みず"}, {"t": "を"}, {"t": "飲みます", "r": "のみます"}, {"t": "。"}],
+  "target": "いってきます。",
+  "english": "I'm heading out.",
+  "tokens": [
+   {
+    "t": "いってきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
   "audio": "ja-ja-0009.mp3",
-  "tags": ["general"],
-  "grammarNode": "node-06",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-01",
   "priority": 9
  },
  {
   "id": "ja-0010",
-  "target": "電車で学校に行きます。",
-  "english": "I go to school by train.",
-  "tokens": [{"t": "電車", "r": "でんしゃ"}, {"t": "で"}, {"t": "学校", "r": "がっこう"}, {"t": "に"}, {"t": "行きます", "r": "いきます"}, {"t": "。"}],
+  "target": "いってらっしゃい。",
+  "english": "Have a good day.",
+  "tokens": [
+   {
+    "t": "いってらっしゃい"
+   },
+   {
+    "t": "。"
+   }
+  ],
   "audio": "ja-ja-0010.mp3",
-  "tags": ["general"],
-  "grammarNode": "node-08",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-01",
   "priority": 10
+ },
+ {
+  "id": "ja-0011",
+  "target": "ただいま。",
+  "english": "I'm home.",
+  "tokens": [
+   {
+    "t": "ただいま"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0011.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 11
+ },
+ {
+  "id": "ja-0012",
+  "target": "おかえりなさい。",
+  "english": "Welcome home.",
+  "tokens": [
+   {
+    "t": "おかえりなさい"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0012.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 12
+ },
+ {
+  "id": "ja-0013",
+  "target": "いただきます。",
+  "english": "Thank you for the food.",
+  "tokens": [
+   {
+    "t": "いただきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0013.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-01",
+  "priority": 13
+ },
+ {
+  "id": "ja-0014",
+  "target": "ごちそうさまでした。",
+  "english": "That was a delicious meal, thank you.",
+  "tokens": [
+   {
+    "t": "ごちそうさまでした"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0014.mp3",
+  "tags": [
+   "general",
+   "family",
+   "travel"
+  ],
+  "grammarNode": "node-01",
+  "priority": 14
+ },
+ {
+  "id": "ja-0015",
+  "target": "わたしはがくせいです。",
+  "english": "I am a student.",
+  "tokens": [
+   {
+    "t": "わたし"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "がくせい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "は marks the topic – わたしは (watashi wa = as for me). Written は, but pronounced wa.",
+  "audio": "ja-ja-0015.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 15
+ },
+ {
+  "id": "ja-0016",
+  "target": "こちらはともだちです。",
+  "english": "This is my friend.",
+  "tokens": [
+   {
+    "t": "こちら"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "ともだち"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "こちら (kochira) politely means this person – the standard way to introduce someone face to face.",
+  "audio": "ja-ja-0016.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 16
+ },
+ {
+  "id": "ja-0017",
+  "target": "ちちはかいしゃいんです。",
+  "english": "My father is an office worker.",
+  "tokens": [
+   {
+    "t": "ちち"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "かいしゃいん"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "ちち (chichi) is only for your own father – someone else's father is おとうさん (otōsan).",
+  "audio": "ja-ja-0017.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 17
+ },
+ {
+  "id": "ja-0018",
+  "target": "ははもかいしゃいんです。",
+  "english": "My mother is an office worker too.",
+  "tokens": [
+   {
+    "t": "はは"
+   },
+   {
+    "t": "も"
+   },
+   {
+    "t": "かいしゃいん"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "も replaces は and means too – ははも (haha mo = my mother too).",
+  "audio": "ja-ja-0018.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 18
+ },
+ {
+  "id": "ja-0019",
+  "target": "あねはせんせいです。",
+  "english": "My older sister is a teacher.",
+  "tokens": [
+   {
+    "t": "あね"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "せんせい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0019.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 19
+ },
+ {
+  "id": "ja-0020",
+  "target": "ともだちはカフェのてんいんです。",
+  "english": "My friend is a clerk at a cafe.",
+  "tokens": [
+   {
+    "t": "ともだち"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "カフェ"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "てんいん"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "の links two nouns, owner or type first – カフェのてんいん (kafe no ten'in = cafe clerk).",
+  "audio": "ja-ja-0020.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 20
+ },
+ {
+  "id": "ja-0021",
+  "target": "わたしはにほんごのがくせいです。",
+  "english": "I am a student of Japanese.",
+  "tokens": [
+   {
+    "t": "わたし"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "にほんご"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "がくせい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0021.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-02",
+  "priority": 21
+ },
+ {
+  "id": "ja-0022",
+  "target": "わたしはコーヒーです。",
+  "english": "I'll have coffee.",
+  "tokens": [
+   {
+    "t": "わたし"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "コーヒー"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "は sets the topic, not equals – わたしはコーヒーです (watashi wa kōhī desu) can mean as for me, coffee: I'll have coffee.",
+  "audio": "ja-ja-0022.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 22
+ },
+ {
+  "id": "ja-0023",
+  "target": "しゅっしんはとうきょうです。",
+  "english": "I'm from Tokyo.",
+  "tokens": [
+   {
+    "t": "しゅっしん"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "とうきょう"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0023.mp3",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 23
+ },
+ {
+  "id": "ja-0024",
+  "target": "あしたはしごとです。",
+  "english": "Tomorrow is a work day.",
+  "tokens": [
+   {
+    "t": "あした"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "しごと"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0024.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 24
+ },
+ {
+  "id": "ja-0025",
+  "target": "おとうとはこうこうせいです。",
+  "english": "My younger brother is a high school student.",
+  "tokens": [
+   {
+    "t": "おとうと"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "こうこうせい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0025.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 25
+ },
+ {
+  "id": "ja-0026",
+  "target": "つまはぎんこういんです。",
+  "english": "My wife is a bank employee.",
+  "tokens": [
+   {
+    "t": "つま"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "ぎんこういん"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0026.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 26
+ },
+ {
+  "id": "ja-0027",
+  "target": "いもうとはだいがくせいです。",
+  "english": "My younger sister is a university student.",
+  "tokens": [
+   {
+    "t": "いもうと"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "だいがくせい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0027.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-02",
+  "priority": 27
+ },
+ {
+  "id": "ja-0028",
+  "target": "みせはきょうやすみです。",
+  "english": "The shop is closed today.",
+  "tokens": [
+   {
+    "t": "みせ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "きょう"
+   },
+   {
+    "t": "やすみ"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0028.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-02",
+  "priority": 28
+ },
+ {
+  "id": "ja-0029",
+  "target": "がくせいですか。",
+  "english": "Are you a student?",
+  "tokens": [
+   {
+    "t": "がくせい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "か at the end turns a statement into a question – がくせいですか (gakusei desu ka = are you a student?). Word order stays put.",
+  "audio": "ja-ja-0029.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 29
+ },
+ {
+  "id": "ja-0030",
+  "target": "はい、そうです。",
+  "english": "Yes, that's right.",
+  "tokens": [
+   {
+    "t": "はい"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "そう"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "はい、そうです (hai, sō desu = yes, that's right) answers almost any ですか question.",
+  "audio": "ja-ja-0030.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 30
+ },
+ {
+  "id": "ja-0031",
+  "target": "いいえ、がくせいじゃないです。かいしゃいんです。",
+  "english": "No, I'm not a student. I'm an office worker.",
+  "tokens": [
+   {
+    "t": "いいえ"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "がくせい"
+   },
+   {
+    "t": "じゃないです"
+   },
+   {
+    "t": "。"
+   },
+   {
+    "t": "かいしゃいん"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "じゃないです (ja nai desu = is not) is the everyday polite negative of です.",
+  "audio": "ja-ja-0031.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 31
+ },
+ {
+  "id": "ja-0032",
+  "target": "ともだちもがくせいですか。",
+  "english": "Is your friend a student too?",
+  "tokens": [
+   {
+    "t": "ともだち"
+   },
+   {
+    "t": "も"
+   },
+   {
+    "t": "がくせい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0032.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 32
+ },
+ {
+  "id": "ja-0033",
+  "target": "かいしゃはとうきょうですか。",
+  "english": "Is your company in Tokyo?",
+  "tokens": [
+   {
+    "t": "かいしゃ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "とうきょう"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0033.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 33
+ },
+ {
+  "id": "ja-0034",
+  "target": "もちかえりですか。",
+  "english": "Is that to go?",
+  "tokens": [
+   {
+    "t": "もちかえり"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0034.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 34
+ },
+ {
+  "id": "ja-0035",
+  "target": "はい、もちかえりです。",
+  "english": "Yes, it's to go.",
+  "tokens": [
+   {
+    "t": "はい"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "もちかえり"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0035.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-03",
+  "priority": 35
+ },
+ {
+  "id": "ja-0036",
+  "target": "いいえ、ちょっとちがいます。",
+  "english": "No, that's not quite right.",
+  "tokens": [
+   {
+    "t": "いいえ"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "ちょっと"
+   },
+   {
+    "t": "ちがいます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0036.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 36
+ },
+ {
+  "id": "ja-0037",
+  "target": "おとうさんはかいしゃいんですか。",
+  "english": "Is your father an office worker?",
+  "tokens": [
+   {
+    "t": "おとうさん"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "かいしゃいん"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0037.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 37
+ },
+ {
+  "id": "ja-0038",
+  "target": "いいえ、ちちはかいしゃいんじゃないです。",
+  "english": "No, my father is not an office worker.",
+  "tokens": [
+   {
+    "t": "いいえ"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "ちち"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "かいしゃいん"
+   },
+   {
+    "t": "じゃないです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0038.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 38
+ },
+ {
+  "id": "ja-0039",
+  "target": "ほんとうですか。",
+  "english": "Really?",
+  "tokens": [
+   {
+    "t": "ほんとう"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0039.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-03",
+  "priority": 39
+ },
+ {
+  "id": "ja-0040",
+  "target": "これはコーヒーです。",
+  "english": "This is coffee.",
+  "tokens": [
+   {
+    "t": "これ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "コーヒー"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "これ (kore) = this one near me, それ (sore) = that one near you, あれ (are) = far from both.",
+  "audio": "ja-ja-0040.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 40
+ },
+ {
+  "id": "ja-0041",
+  "target": "それはわたしのかばんです。",
+  "english": "That is my bag.",
+  "tokens": [
+   {
+    "t": "それ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "わたし"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "かばん"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0041.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 41
+ },
+ {
+  "id": "ja-0042",
+  "target": "あれはえきです。",
+  "english": "That over there is the station.",
+  "tokens": [
+   {
+    "t": "あれ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "えき"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0042.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 42
+ },
+ {
+  "id": "ja-0043",
+  "target": "これはなんですか。",
+  "english": "What is this?",
+  "tokens": [
+   {
+    "t": "これ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "なん"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Question words stay in place – これはなんですか (kore wa nan desu ka = this is what?). なん never moves to the front.",
+  "audio": "ja-ja-0043.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 43
+ },
+ {
+  "id": "ja-0044",
+  "target": "それはおちゃですか。",
+  "english": "Is that tea?",
+  "tokens": [
+   {
+    "t": "それ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "おちゃ"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0044.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 44
+ },
+ {
+  "id": "ja-0045",
+  "target": "いいえ、これはおちゃじゃないです。",
+  "english": "No, this isn't tea.",
+  "tokens": [
+   {
+    "t": "いいえ"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "これ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "おちゃ"
+   },
+   {
+    "t": "じゃないです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Perspective flips in the answer – your それ (sore = that) is my これ (kore = this).",
+  "audio": "ja-ja-0045.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 45
+ },
+ {
+  "id": "ja-0046",
+  "target": "このケーキはいくらですか。",
+  "english": "How much is this cake?",
+  "tokens": [
+   {
+    "t": "この"
+   },
+   {
+    "t": "ケーキ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "いくら"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "この (kono) always needs a noun right after it – このケーキ (kono kēki = this cake). これ stands alone.",
+  "audio": "ja-ja-0046.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 46
+ },
+ {
+  "id": "ja-0047",
+  "target": "そのかさはわたしのです。",
+  "english": "That umbrella is mine.",
+  "tokens": [
+   {
+    "t": "その"
+   },
+   {
+    "t": "かさ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "わたし"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "の can stand in for an obvious noun – わたしの (watashi no = mine).",
+  "audio": "ja-ja-0047.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 47
+ },
+ {
+  "id": "ja-0048",
+  "target": "あのひとはせんせいです。",
+  "english": "That person is a teacher.",
+  "tokens": [
+   {
+    "t": "あの"
+   },
+   {
+    "t": "ひと"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "せんせい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0048.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-04",
+  "priority": 48
+ },
+ {
+  "id": "ja-0049",
+  "target": "あのたてものはぎんこうですか。",
+  "english": "Is that building a bank?",
+  "tokens": [
+   {
+    "t": "あの"
+   },
+   {
+    "t": "たてもの"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "ぎんこう"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0049.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 49
+ },
+ {
+  "id": "ja-0050",
+  "target": "これもおねがいします。",
+  "english": "This one too, please.",
+  "tokens": [
+   {
+    "t": "これ"
+   },
+   {
+    "t": "も"
+   },
+   {
+    "t": "おねがいします"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0050.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 50
+ },
+ {
+  "id": "ja-0051",
+  "target": "兄がいます。",
+  "english": "I have an older brother.",
+  "tokens": [
+   {
+    "t": "兄",
+    "r": "あに"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "が marks who exists – 兄がいます (ani ga imasu = I have an older brother).",
+  "audio": "ja-ja-0051.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 51
+ },
+ {
+  "id": "ja-0052",
+  "target": "姉が二人います。",
+  "english": "I have two older sisters.",
+  "tokens": [
+   {
+    "t": "姉",
+    "r": "あね"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "二人",
+    "r": "ふたり"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0052.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 52
+ },
+ {
+  "id": "ja-0053",
+  "target": "犬と猫がいます。",
+  "english": "I have a dog and a cat.",
+  "tokens": [
+   {
+    "t": "犬",
+    "r": "いぬ"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "猫",
+    "r": "ねこ"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0053.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 53
+ },
+ {
+  "id": "ja-0054",
+  "target": "部屋にテレビがあります。",
+  "english": "There is a TV in my room.",
+  "tokens": [
+   {
+    "t": "部屋",
+    "r": "へや"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "テレビ"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "あります"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Things take あります – テレビがあります (terebi ga arimasu = there is a TV). Living things take います.",
+  "audio": "ja-ja-0054.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 54
+ },
+ {
+  "id": "ja-0055",
+  "target": "台所に母がいます。",
+  "english": "My mother is in the kitchen.",
+  "tokens": [
+   {
+    "t": "台所",
+    "r": "だいどころ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "母",
+    "r": "はは"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "に marks where someone or something is – 台所に (daidokoro ni = in the kitchen). Place comes first.",
+  "audio": "ja-ja-0055.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 55
+ },
+ {
+  "id": "ja-0056",
+  "target": "家に子どもが三人います。",
+  "english": "There are three children at home.",
+  "tokens": [
+   {
+    "t": "家",
+    "r": "いえ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "子ども",
+    "r": "こども"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "三人",
+    "r": "さんにん"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0056.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 56
+ },
+ {
+  "id": "ja-0057",
+  "target": "駅の前に銀行があります。",
+  "english": "There is a bank in front of the station.",
+  "tokens": [
+   {
+    "t": "駅",
+    "r": "えき"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "前",
+    "r": "まえ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "銀行",
+    "r": "ぎんこう"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "あります"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "の links nouns, the first describes the second – 駅の前 (eki no mae = the front of the station).",
+  "audio": "ja-ja-0057.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-05",
+  "priority": 57
+ },
+ {
+  "id": "ja-0058",
+  "target": "町に図書館がありますか。",
+  "english": "Is there a library in town?",
+  "tokens": [
+   {
+    "t": "町",
+    "r": "まち"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "図書館",
+    "r": "としょかん"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "あります"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0058.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-05",
+  "priority": 58
+ },
+ {
+  "id": "ja-0059",
+  "target": "近くにスーパーがあります。",
+  "english": "There is a supermarket nearby.",
+  "tokens": [
+   {
+    "t": "近く",
+    "r": "ちかく"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "スーパー"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "あります"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0059.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-05",
+  "priority": 59
+ },
+ {
+  "id": "ja-0060",
+  "target": "公園に犬がいますね。",
+  "english": "There is a dog in the park, isn't there?",
+  "tokens": [
+   {
+    "t": "公園",
+    "r": "こうえん"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "犬",
+    "r": "いぬ"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "ね"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0060.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-05",
+  "priority": 60
+ },
+ {
+  "id": "ja-0061",
+  "target": "妹さんがいますか。",
+  "english": "Do you have a younger sister?",
+  "tokens": [
+   {
+    "t": "妹さん",
+    "r": "いもうとさん"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Family words take さん for someone else's – 妹さん (imouto-san = your younger sister). Plain 妹 is my own.",
+  "audio": "ja-ja-0061.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 61
+ },
+ {
+  "id": "ja-0062",
+  "target": "弟は今、家にいます。",
+  "english": "My younger brother is at home now.",
+  "tokens": [
+   {
+    "t": "弟",
+    "r": "おとうと"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "今",
+    "r": "いま"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "家",
+    "r": "いえ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0062.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 62
+ },
+ {
+  "id": "ja-0063",
+  "target": "今、時間がありますか。",
+  "english": "Do you have time right now?",
+  "tokens": [
+   {
+    "t": "今",
+    "r": "いま"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "時間",
+    "r": "じかん"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "あります"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0063.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-05",
+  "priority": 63
+ },
+ {
+  "id": "ja-0064",
+  "target": "父は今日、会社にいます。",
+  "english": "My father is at the office today.",
+  "tokens": [
+   {
+    "t": "父",
+    "r": "ちち"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "今日",
+    "r": "きょう"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "会社",
+    "r": "かいしゃ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0064.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-05",
+  "priority": 64
+ },
+ {
+  "id": "ja-0065",
+  "target": "明日、仕事があります。",
+  "english": "I have work tomorrow.",
+  "tokens": [
+   {
+    "t": "明日",
+    "r": "あした"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "仕事",
+    "r": "しごと"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "あります"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0065.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-05",
+  "priority": 65
+ },
+ {
+  "id": "ja-0066",
+  "target": "質問があります。",
+  "english": "I have a question.",
+  "tokens": [
+   {
+    "t": "質問",
+    "r": "しつもん"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "あります"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "があります also means 'I have' – 質問があります (shitsumon ga arimasu = I have a question).",
+  "audio": "ja-ja-0066.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-05",
+  "priority": 66
+ },
+ {
+  "id": "ja-0067",
+  "target": "テーブルの上にパンがあります。",
+  "english": "There is bread on the table.",
+  "tokens": [
+   {
+    "t": "テーブル"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "上",
+    "r": "うえ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "パン"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "あります"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0067.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-05",
+  "priority": 67
+ },
+ {
+  "id": "ja-0068",
+  "target": "朝、パンを食べます。",
+  "english": "I eat bread in the morning.",
+  "tokens": [
+   {
+    "t": "朝",
+    "r": "あさ"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "パン"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "食べます",
+    "r": "たべます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "を marks the object of the verb – パンを食べます (pan o tabemasu = I eat bread). It's pronounced 'o'.",
+  "audio": "ja-ja-0068.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-06",
+  "priority": 68
+ },
+ {
+  "id": "ja-0069",
+  "target": "コーヒーを飲みますか。",
+  "english": "Do you drink coffee?",
+  "tokens": [
+   {
+    "t": "コーヒー"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "飲みます",
+    "r": "のみます"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0069.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-06",
+  "priority": 69
+ },
+ {
+  "id": "ja-0070",
+  "target": "毎日、新聞を読みます。",
+  "english": "I read the newspaper every day.",
+  "tokens": [
+   {
+    "t": "毎日",
+    "r": "まいにち"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "新聞",
+    "r": "しんぶん"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "読みます",
+    "r": "よみます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0070.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-06",
+  "priority": 70
+ },
+ {
+  "id": "ja-0071",
+  "target": "夜、テレビを見ます。",
+  "english": "I watch TV at night.",
+  "tokens": [
+   {
+    "t": "夜",
+    "r": "よる"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "テレビ"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "見ます",
+    "r": "みます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0071.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-06",
+  "priority": 71
+ },
+ {
+  "id": "ja-0072",
+  "target": "野菜と果物を買います。",
+  "english": "I buy vegetables and fruit.",
+  "tokens": [
+   {
+    "t": "野菜",
+    "r": "やさい"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "果物",
+    "r": "くだもの"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "買います",
+    "r": "かいます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0072.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 72
+ },
+ {
+  "id": "ja-0073",
+  "target": "音楽を聞きます。",
+  "english": "I listen to music.",
+  "tokens": [
+   {
+    "t": "音楽",
+    "r": "おんがく"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "聞きます",
+    "r": "ききます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0073.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-06",
+  "priority": 73
+ },
+ {
+  "id": "ja-0074",
+  "target": "毎晩、日本語を勉強します。",
+  "english": "I study Japanese every night.",
+  "tokens": [
+   {
+    "t": "毎晩",
+    "r": "まいばん"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "日本語",
+    "r": "にほんご"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "勉強します",
+    "r": "べんきょうします"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0074.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-06",
+  "priority": 74
+ },
+ {
+  "id": "ja-0075",
+  "target": "母は晩ご飯を作ります。",
+  "english": "My mother makes dinner.",
+  "tokens": [
+   {
+    "t": "母",
+    "r": "はは"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "晩ご飯",
+    "r": "ばんごはん"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "作ります",
+    "r": "つくります"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0075.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-06",
+  "priority": 75
+ },
+ {
+  "id": "ja-0076",
+  "target": "毎日、お茶を飲みます。",
+  "english": "I drink tea every day.",
+  "tokens": [
+   {
+    "t": "毎日",
+    "r": "まいにち"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "お茶",
+    "r": "おちゃ"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "飲みます",
+    "r": "のみます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0076.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-06",
+  "priority": 76
+ },
+ {
+  "id": "ja-0077",
+  "target": "友だちと映画を見ます。",
+  "english": "I watch movies with a friend.",
+  "tokens": [
+   {
+    "t": "友だち",
+    "r": "ともだち"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "映画",
+    "r": "えいが"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "見ます",
+    "r": "みます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0077.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-06",
+  "priority": 77
+ },
+ {
+  "id": "ja-0078",
+  "target": "毎朝、何を食べますか。",
+  "english": "What do you eat every morning?",
+  "tokens": [
+   {
+    "t": "毎朝",
+    "r": "まいあさ"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "何",
+    "r": "なに"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "食べます",
+    "r": "たべます"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0078.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-06",
+  "priority": 78
+ },
+ {
+  "id": "ja-0079",
+  "target": "毎週、買い物をします。",
+  "english": "I do the shopping every week.",
+  "tokens": [
+   {
+    "t": "毎週",
+    "r": "まいしゅう"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "買い物",
+    "r": "かいもの"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "します"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "します turns a noun into an action – 買い物をします (kaimono o shimasu = I do the shopping).",
+  "audio": "ja-ja-0079.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 79
+ },
+ {
+  "id": "ja-0080",
+  "target": "手紙を書きます。",
+  "english": "I'm going to write a letter.",
+  "tokens": [
+   {
+    "t": "手紙",
+    "r": "てがみ"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "書きます",
+    "r": "かきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0080.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-06",
+  "priority": 80
+ },
+ {
+  "id": "ja-0081",
+  "target": "兄は魚を食べます。",
+  "english": "My older brother eats fish.",
+  "tokens": [
+   {
+    "t": "兄",
+    "r": "あに"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "魚",
+    "r": "さかな"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "食べます",
+    "r": "たべます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0081.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-06",
+  "priority": 81
+ },
+ {
+  "id": "ja-0082",
+  "target": "牛乳を買いますか。",
+  "english": "Are you buying milk?",
+  "tokens": [
+   {
+    "t": "牛乳",
+    "r": "ぎゅうにゅう"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "買います",
+    "r": "かいます"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0082.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-06",
+  "priority": 82
+ },
+ {
+  "id": "ja-0083",
+  "target": "父は毎朝、コーヒーを飲みます。",
+  "english": "My father drinks coffee every morning.",
+  "tokens": [
+   {
+    "t": "父",
+    "r": "ちち"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "毎朝",
+    "r": "まいあさ"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "コーヒー"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "飲みます",
+    "r": "のみます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0083.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-06",
+  "priority": 83
+ },
+ {
+  "id": "ja-0084",
+  "target": "日本の映画を見ますか。",
+  "english": "Do you watch Japanese movies?",
+  "tokens": [
+   {
+    "t": "日本",
+    "r": "にほん"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "映画",
+    "r": "えいが"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "見ます",
+    "r": "みます"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0084.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-06",
+  "priority": 84
+ },
+ {
+  "id": "ja-0085",
+  "target": "明日、東京へ行きます。",
+  "english": "I'm going to Tokyo tomorrow.",
+  "tokens": [
+   {
+    "t": "明日",
+    "r": "あした"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "東京",
+    "r": "とうきょう"
+   },
+   {
+    "t": "へ"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "へ marks direction – 東京へ (toukyou e = toward Tokyo). As a particle へ is read 'e', not 'he'.",
+  "audio": "ja-ja-0085.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-07",
+  "priority": 85
+ },
+ {
+  "id": "ja-0086",
+  "target": "毎日、学校に行きます。",
+  "english": "I go to school every day.",
+  "tokens": [
+   {
+    "t": "毎日",
+    "r": "まいにち"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "学校",
+    "r": "がっこう"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "に marks the destination of motion – 学校に行きます (gakkou ni ikimasu = I go to school). へ also works.",
+  "audio": "ja-ja-0086.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-07",
+  "priority": 86
+ },
+ {
+  "id": "ja-0087",
+  "target": "七時に起きます。",
+  "english": "I get up at seven.",
+  "tokens": [
+   {
+    "t": "七時",
+    "r": "しちじ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "起きます",
+    "r": "おきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Clock times take に – 七時に起きます (shichiji ni okimasu = I get up at seven).",
+  "audio": "ja-ja-0087.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-07",
+  "priority": 87
+ },
+ {
+  "id": "ja-0088",
+  "target": "十一時に寝ます。",
+  "english": "I go to bed at eleven.",
+  "tokens": [
+   {
+    "t": "十一時",
+    "r": "じゅういちじ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "寝ます",
+    "r": "ねます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0088.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 88
+ },
+ {
+  "id": "ja-0089",
+  "target": "何時に帰りますか。",
+  "english": "What time are you going home?",
+  "tokens": [
+   {
+    "t": "何時",
+    "r": "なんじ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "帰ります",
+    "r": "かえります"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0089.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-07",
+  "priority": 89
+ },
+ {
+  "id": "ja-0090",
+  "target": "父は八時に会社へ行きます。",
+  "english": "My father goes to the office at eight.",
+  "tokens": [
+   {
+    "t": "父",
+    "r": "ちち"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "八時",
+    "r": "はちじ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "会社",
+    "r": "かいしゃ"
+   },
+   {
+    "t": "へ"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0090.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-07",
+  "priority": 90
+ },
+ {
+  "id": "ja-0091",
+  "target": "日曜日に公園へ行きます。",
+  "english": "On Sundays I go to the park.",
+  "tokens": [
+   {
+    "t": "日曜日",
+    "r": "にちようび"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "公園",
+    "r": "こうえん"
+   },
+   {
+    "t": "へ"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Days take に too – 日曜日に (nichiyoubi ni = on Sunday). 今日 and 明日 take no particle.",
+  "audio": "ja-ja-0091.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-07",
+  "priority": 91
+ },
+ {
+  "id": "ja-0092",
+  "target": "今日、銀行に行きますか。",
+  "english": "Are you going to the bank today?",
+  "tokens": [
+   {
+    "t": "今日",
+    "r": "きょう"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "銀行",
+    "r": "ぎんこう"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0092.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-07",
+  "priority": 92
+ },
+ {
+  "id": "ja-0093",
+  "target": "友だちがうちに来ます。",
+  "english": "A friend is coming to my house.",
+  "tokens": [
+   {
+    "t": "友だち",
+    "r": "ともだち"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "うち"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "来ます",
+    "r": "きます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0093.mp3",
+  "tags": [
+   "general",
+   "family",
+   "travel"
+  ],
+  "grammarNode": "node-07",
+  "priority": 93
+ },
+ {
+  "id": "ja-0094",
+  "target": "午後、郵便局へ行きます。",
+  "english": "I'm going to the post office in the afternoon.",
+  "tokens": [
+   {
+    "t": "午後",
+    "r": "ごご"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "郵便局",
+    "r": "ゆうびんきょく"
+   },
+   {
+    "t": "へ"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0094.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-07",
+  "priority": 94
+ },
+ {
+  "id": "ja-0095",
+  "target": "母は病院に行きます。",
+  "english": "My mother is going to the hospital.",
+  "tokens": [
+   {
+    "t": "母",
+    "r": "はは"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "病院",
+    "r": "びょういん"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0095.mp3",
+  "tags": [
+   "general",
+   "family",
+   "travel"
+  ],
+  "grammarNode": "node-07",
+  "priority": 95
+ },
+ {
+  "id": "ja-0096",
+  "target": "電車は九時に来ます。",
+  "english": "The train comes at nine.",
+  "tokens": [
+   {
+    "t": "電車",
+    "r": "でんしゃ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "九時",
+    "r": "くじ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "来ます",
+    "r": "きます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "九時 (kuji = nine o'clock) – nine is きゅう, but 9:00 reads くじ.",
+  "audio": "ja-ja-0096.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-07",
+  "priority": 96
+ },
+ {
+  "id": "ja-0097",
+  "target": "土曜日にレストランへ行きましょう。",
+  "english": "Let's go to a restaurant on Saturday.",
+  "tokens": [
+   {
+    "t": "土曜日",
+    "r": "どようび"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "レストラン"
+   },
+   {
+    "t": "へ"
+   },
+   {
+    "t": "行きましょう",
+    "r": "いきましょう"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "ましょう means 'let's' – 行きましょう (ikimashou = let's go).",
+  "audio": "ja-ja-0097.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-07",
+  "priority": 97
+ },
+ {
+  "id": "ja-0098",
+  "target": "今日、どこに行きますか。",
+  "english": "Where are you going today?",
+  "tokens": [
+   {
+    "t": "今日",
+    "r": "きょう"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "どこ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0098.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-07",
+  "priority": 98
+ },
+ {
+  "id": "ja-0099",
+  "target": "弟は明日、学校に行きます。",
+  "english": "My younger brother is going to school tomorrow.",
+  "tokens": [
+   {
+    "t": "弟",
+    "r": "おとうと"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "明日",
+    "r": "あした"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "学校",
+    "r": "がっこう"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0099.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-07",
+  "priority": 99
+ },
+ {
+  "id": "ja-0100",
+  "target": "日曜日に家族と町へ行きます。",
+  "english": "On Sunday I'm going to town with my family.",
+  "tokens": [
+   {
+    "t": "日曜日",
+    "r": "にちようび"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "家族",
+    "r": "かぞく"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "町",
+    "r": "まち"
+   },
+   {
+    "t": "へ"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0100.mp3",
+  "tags": [
+   "general",
+   "family",
+   "travel"
+  ],
+  "grammarNode": "node-07",
+  "priority": 100
+ },
+ {
+  "id": "ja-0101",
+  "target": "電車で会社に行きます。",
+  "english": "I go to the office by train.",
+  "tokens": [
+   {
+    "t": "電車",
+    "r": "でんしゃ"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "会社",
+    "r": "かいしゃ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "で marks how you travel – 電車で (densha de = by train). The destination still takes に.",
+  "audio": "ja-ja-0101.mp3",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 101
+ },
+ {
+  "id": "ja-0102",
+  "target": "バスで駅に行きますか。",
+  "english": "Are you going to the station by bus?",
+  "tokens": [
+   {
+    "t": "バス"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "駅",
+    "r": "えき"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0102.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 102
+ },
+ {
+  "id": "ja-0103",
+  "target": "明日、タクシーで空港に行きます。",
+  "english": "Tomorrow I'm going to the airport by taxi.",
+  "tokens": [
+   {
+    "t": "明日",
+    "r": "あした"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "タクシー"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "空港",
+    "r": "くうこう"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0103.mp3",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 103
+ },
+ {
+  "id": "ja-0104",
+  "target": "電車で家に帰ります。",
+  "english": "I go home by train.",
+  "tokens": [
+   {
+    "t": "電車",
+    "r": "でんしゃ"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "家",
+    "r": "いえ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "帰ります",
+    "r": "かえります"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "帰ります (kaerimasu = go back) is for returning to your own place – home or your home country.",
+  "audio": "ja-ja-0104.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 104
+ },
+ {
+  "id": "ja-0105",
+  "target": "毎日、自転車で来ますか。",
+  "english": "Do you come by bike every day?",
+  "tokens": [
+   {
+    "t": "毎日",
+    "r": "まいにち"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "自転車",
+    "r": "じてんしゃ"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "来ます",
+    "r": "きます"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0105.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 105
+ },
+ {
+  "id": "ja-0106",
+  "target": "駅で友だちを待ちます。",
+  "english": "I wait for my friend at the station.",
+  "tokens": [
+   {
+    "t": "駅",
+    "r": "えき"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "友だち",
+    "r": "ともだち"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "待ちます",
+    "r": "まちます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0106.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 106
+ },
+ {
+  "id": "ja-0107",
+  "target": "明日、カフェで友だちに会います。",
+  "english": "I'm meeting a friend at a cafe tomorrow.",
+  "tokens": [
+   {
+    "t": "明日",
+    "r": "あした"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "カフェ"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "友だち",
+    "r": "ともだち"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "会います",
+    "r": "あいます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0107.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-08",
+  "priority": 107
+ },
+ {
+  "id": "ja-0108",
+  "target": "母は家で仕事をします。",
+  "english": "My mother works at home.",
+  "tokens": [
+   {
+    "t": "母",
+    "r": "はは"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "家",
+    "r": "いえ"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "仕事",
+    "r": "しごと"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "します"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "母 (haha = my mother) is only for your own mother – someone else's is お母さん (okaasan).",
+  "audio": "ja-ja-0108.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 108
+ },
+ {
+  "id": "ja-0109",
+  "target": "カフェでコーヒーを飲みます。",
+  "english": "I drink coffee at the cafe.",
+  "tokens": [
+   {
+    "t": "カフェ"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "コーヒー"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "飲みます",
+    "r": "のみます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "で marks where an action happens – カフェで飲みます (kafe de nomimasu = drink at the cafe).",
+  "audio": "ja-ja-0109.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 109
+ },
+ {
+  "id": "ja-0110",
+  "target": "図書館で日本語を勉強します。",
+  "english": "I study Japanese at the library.",
+  "tokens": [
+   {
+    "t": "図書館",
+    "r": "としょかん"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "日本語",
+    "r": "にほんご"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "勉強します",
+    "r": "べんきょうします"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0110.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 110
+ },
+ {
+  "id": "ja-0111",
+  "target": "スーパーでパンを買います。",
+  "english": "I buy bread at the supermarket.",
+  "tokens": [
+   {
+    "t": "スーパー"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "パン"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "買います",
+    "r": "かいます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0111.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-08",
+  "priority": 111
+ },
+ {
+  "id": "ja-0112",
+  "target": "はしでラーメンを食べます。",
+  "english": "I eat ramen with chopsticks.",
+  "tokens": [
+   {
+    "t": "はし"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "ラーメン"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "食べます",
+    "r": "たべます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "で also marks the tool you use – はしで (hashi de = with chopsticks).",
+  "audio": "ja-ja-0112.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 112
+ },
+ {
+  "id": "ja-0113",
+  "target": "ペンで名前を書きます。",
+  "english": "I write my name with a pen.",
+  "tokens": [
+   {
+    "t": "ペン"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "名前",
+    "r": "なまえ"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "書きます",
+    "r": "かきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0113.mp3",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 113
+ },
+ {
+  "id": "ja-0114",
+  "target": "よく電話で話しますか。",
+  "english": "Do you often talk on the phone?",
+  "tokens": [
+   {
+    "t": "よく"
+   },
+   {
+    "t": "電話",
+    "r": "でんわ"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "話します",
+    "r": "はなします"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0114.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-08",
+  "priority": 114
+ },
+ {
+  "id": "ja-0115",
+  "target": "テレビでニュースを見ます。",
+  "english": "I watch the news on TV.",
+  "tokens": [
+   {
+    "t": "テレビ"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "ニュース"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "見ます",
+    "r": "みます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0115.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-08",
+  "priority": 115
+ },
+ {
+  "id": "ja-0116",
+  "target": "会社で昼ご飯を食べます。",
+  "english": "I eat lunch at the office.",
+  "tokens": [
+   {
+    "t": "会社",
+    "r": "かいしゃ"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "昼ご飯",
+    "r": "ひるごはん"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "食べます",
+    "r": "たべます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0116.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 116
+ },
+ {
+  "id": "ja-0117",
+  "target": "ここで写真をとります。",
+  "english": "I'll take a picture here.",
+  "tokens": [
+   {
+    "t": "ここ"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "写真",
+    "r": "しゃしん"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "とります"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0117.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-08",
+  "priority": 117
+ },
+ {
+  "id": "ja-0118",
+  "target": "私はお酒を飲みません。",
+  "english": "I don't drink alcohol.",
+  "tokens": [
+   {
+    "t": "私",
+    "r": "わたし"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "お酒",
+    "r": "おさけ"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "飲みません",
+    "r": "のみません"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "ません turns a verb negative – 飲みます becomes 飲みません (nomimasen = I don't drink).",
+  "audio": "ja-ja-0118.mp3",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-09",
+  "priority": 118
+ },
+ {
+  "id": "ja-0119",
+  "target": "肉を食べません。",
+  "english": "I don't eat meat.",
+  "tokens": [
+   {
+    "t": "肉",
+    "r": "にく"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "食べません",
+    "r": "たべません"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0119.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-09",
+  "priority": 119
+ },
+ {
+  "id": "ja-0120",
+  "target": "今日は行きません。",
+  "english": "I'm not going today.",
+  "tokens": [
+   {
+    "t": "今日",
+    "r": "きょう"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "行きません",
+    "r": "いきません"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0120.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-09",
+  "priority": 120
+ },
+ {
+  "id": "ja-0121",
+  "target": "バスが来ません。",
+  "english": "The bus isn't coming.",
+  "tokens": [
+   {
+    "t": "バス"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "来ません",
+    "r": "きません"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0121.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-09",
+  "priority": 121
+ },
+ {
+  "id": "ja-0122",
+  "target": "時間がありません。",
+  "english": "I don't have time.",
+  "tokens": [
+   {
+    "t": "時間",
+    "r": "じかん"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "ありません"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "あります flips to ありません – 時間がありません (jikan ga arimasen = there is no time).",
+  "audio": "ja-ja-0122.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-09",
+  "priority": 122
+ },
+ {
+  "id": "ja-0123",
+  "target": "あまりテレビを見ません。",
+  "english": "I don't watch TV much.",
+  "tokens": [
+   {
+    "t": "あまり"
+   },
+   {
+    "t": "テレビ"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "見ません",
+    "r": "みません"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "あまり (amari = not much) needs a negative verb – あまり見ません = I don't watch much.",
+  "audio": "ja-ja-0123.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-09",
+  "priority": 123
+ },
+ {
+  "id": "ja-0124",
+  "target": "まだ分かりません。",
+  "english": "I don't understand yet.",
+  "tokens": [
+   {
+    "t": "まだ"
+   },
+   {
+    "t": "分かりません",
+    "r": "わかりません"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "まだ (mada = yet) plus a negative means not yet – まだ分かりません = I don't get it yet.",
+  "audio": "ja-ja-0124.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-09",
+  "priority": 124
+ },
+ {
+  "id": "ja-0125",
+  "target": "日曜日は仕事をしません。",
+  "english": "I don't work on Sundays.",
+  "tokens": [
+   {
+    "t": "日曜日",
+    "r": "にちようび"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "仕事",
+    "r": "しごと"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "しません"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0125.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-09",
+  "priority": 125
+ },
+ {
+  "id": "ja-0126",
+  "target": "夜はコーヒーを飲みません。",
+  "english": "I don't drink coffee at night.",
+  "tokens": [
+   {
+    "t": "夜",
+    "r": "よる"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "コーヒー"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "飲みません",
+    "r": "のみません"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0126.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-09",
+  "priority": 126
+ },
+ {
+  "id": "ja-0127",
+  "target": "いっしょに映画を見ませんか。",
+  "english": "Won't you watch a movie together?",
+  "tokens": [
+   {
+    "t": "いっしょに"
+   },
+   {
+    "t": "映画",
+    "r": "えいが"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "見ません",
+    "r": "みません"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "ませんか turns a negative into an invitation – 見ませんか (mimasen ka = shall we watch?).",
+  "audio": "ja-ja-0127.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-09",
+  "priority": 127
+ },
+ {
+  "id": "ja-0128",
+  "target": "明日、公園に行きませんか。",
+  "english": "Would you like to go to the park tomorrow?",
+  "tokens": [
+   {
+    "t": "明日",
+    "r": "あした"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "公園",
+    "r": "こうえん"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "行きません",
+    "r": "いきません"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0128.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-09",
+  "priority": 128
+ },
+ {
+  "id": "ja-0129",
+  "target": "お茶を飲みませんか。",
+  "english": "Would you like to have some tea?",
+  "tokens": [
+   {
+    "t": "お茶",
+    "r": "おちゃ"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "飲みません",
+    "r": "のみません"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0129.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-09",
+  "priority": 129
+ },
+ {
+  "id": "ja-0130",
+  "target": "いっしょに買い物をしませんか。",
+  "english": "Shall we go shopping together?",
+  "tokens": [
+   {
+    "t": "いっしょに"
+   },
+   {
+    "t": "買い物",
+    "r": "かいもの"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "しません"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0130.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-09",
+  "priority": 130
+ },
+ {
+  "id": "ja-0131",
+  "target": "駅で会いませんか。",
+  "english": "Shall we meet at the station?",
+  "tokens": [
+   {
+    "t": "駅",
+    "r": "えき"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "会いません",
+    "r": "あいません"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0131.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-09",
+  "priority": 131
+ },
+ {
+  "id": "ja-0132",
+  "target": "今晩、レストランで食べませんか。",
+  "english": "Would you like to eat at a restaurant tonight?",
+  "tokens": [
+   {
+    "t": "今晩",
+    "r": "こんばん"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "レストラン"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "食べません",
+    "r": "たべません"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0132.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-09",
+  "priority": 132
+ },
+ {
+  "id": "ja-0133",
+  "target": "日曜日にテニスをしませんか。",
+  "english": "Won't you play tennis on Sunday?",
+  "tokens": [
+   {
+    "t": "日曜日",
+    "r": "にちようび"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "テニス"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "しません"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0133.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-09",
+  "priority": 133
+ },
+ {
+  "id": "ja-0134",
+  "target": "うちに来ませんか。",
+  "english": "Won't you come over to my place?",
+  "tokens": [
+   {
+    "t": "うち"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "来ません",
+    "r": "きません"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0134.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-09",
+  "priority": 134
+ },
+ {
+  "id": "ja-0135",
+  "target": "昨日、映画を見ました。",
+  "english": "I watched a movie yesterday.",
+  "tokens": [
+   {
+    "t": "昨日",
+    "r": "きのう"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "映画",
+    "r": "えいが"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "見ました",
+    "r": "みました"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "ました marks a finished action – 見ました (mimashita = watched).",
+  "audio": "ja-ja-0135.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-10",
+  "priority": 135
+ },
+ {
+  "id": "ja-0136",
+  "target": "先週、東京に行きました。",
+  "english": "I went to Tokyo last week.",
+  "tokens": [
+   {
+    "t": "先週",
+    "r": "せんしゅう"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "東京",
+    "r": "とうきょう"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "行きました",
+    "r": "いきました"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0136.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-10",
+  "priority": 136
+ },
+ {
+  "id": "ja-0137",
+  "target": "週末に何をしましたか。",
+  "english": "What did you do on the weekend?",
+  "tokens": [
+   {
+    "t": "週末",
+    "r": "しゅうまつ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "何",
+    "r": "なに"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "しました"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0137.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-10",
+  "priority": 137
+ },
+ {
+  "id": "ja-0138",
+  "target": "昨日、友だちに会いました。",
+  "english": "I met a friend yesterday.",
+  "tokens": [
+   {
+    "t": "昨日",
+    "r": "きのう"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "友だち",
+    "r": "ともだち"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "会いました",
+    "r": "あいました"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "会います takes に – 友だちに会います (tomodachi ni aimasu = meet a friend), never を.",
+  "audio": "ja-ja-0138.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-10",
+  "priority": 138
+ },
+ {
+  "id": "ja-0139",
+  "target": "土曜日にサッカーをしました。",
+  "english": "I played soccer on Saturday.",
+  "tokens": [
+   {
+    "t": "土曜日",
+    "r": "どようび"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "サッカー"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "しました"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0139.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-10",
+  "priority": 139
+ },
+ {
+  "id": "ja-0140",
+  "target": "日曜日にどこに行きましたか。",
+  "english": "Where did you go on Sunday?",
+  "tokens": [
+   {
+    "t": "日曜日",
+    "r": "にちようび"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "どこ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "行きました",
+    "r": "いきました"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0140.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-10",
+  "priority": 140
+ },
+ {
+  "id": "ja-0141",
+  "target": "昨日、タクシーに乗りました。",
+  "english": "I took a taxi yesterday.",
+  "tokens": [
+   {
+    "t": "昨日",
+    "r": "きのう"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "タクシー"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "乗りました",
+    "r": "のりました"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "乗ります takes に – タクシーに乗ります (takushii ni norimasu = take a taxi), not を.",
+  "audio": "ja-ja-0141.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-10",
+  "priority": 141
+ },
+ {
+  "id": "ja-0142",
+  "target": "週末、家にいました。",
+  "english": "I stayed home over the weekend.",
+  "tokens": [
+   {
+    "t": "週末",
+    "r": "しゅうまつ"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "家",
+    "r": "いえ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "いました"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0142.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-10",
+  "priority": 142
+ },
+ {
+  "id": "ja-0143",
+  "target": "何時に起きましたか。",
+  "english": "What time did you get up?",
+  "tokens": [
+   {
+    "t": "何時",
+    "r": "なんじ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "起きました",
+    "r": "おきました"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0143.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-10",
+  "priority": 143
+ },
+ {
+  "id": "ja-0144",
+  "target": "昨日、よく寝ました。",
+  "english": "I slept well yesterday.",
+  "tokens": [
+   {
+    "t": "昨日",
+    "r": "きのう"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "よく"
+   },
+   {
+    "t": "寝ました",
+    "r": "ねました"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0144.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-10",
+  "priority": 144
+ },
+ {
+  "id": "ja-0145",
+  "target": "京都に行きましたか。",
+  "english": "Did you go to Kyoto?",
+  "tokens": [
+   {
+    "t": "京都",
+    "r": "きょうと"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "行きました",
+    "r": "いきました"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0145.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-10",
+  "priority": 145
+ },
+ {
+  "id": "ja-0146",
+  "target": "京都でおみやげを買いました。",
+  "english": "I bought souvenirs in Kyoto.",
+  "tokens": [
+   {
+    "t": "京都",
+    "r": "きょうと"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "おみやげ"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "買いました",
+    "r": "かいました"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0146.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-10",
+  "priority": 146
+ },
+ {
+  "id": "ja-0147",
+  "target": "昨日、テレビを見ませんでした。",
+  "english": "I didn't watch TV yesterday.",
+  "tokens": [
+   {
+    "t": "昨日",
+    "r": "きのう"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "テレビ"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "見ませんでした",
+    "r": "みませんでした"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "ませんでした is past + negative – 見ませんでした (mimasen deshita = didn't watch).",
+  "audio": "ja-ja-0147.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-10",
+  "priority": 147
+ },
+ {
+  "id": "ja-0148",
+  "target": "朝ご飯を食べませんでした。",
+  "english": "I didn't eat breakfast.",
+  "tokens": [
+   {
+    "t": "朝ご飯",
+    "r": "あさごはん"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "食べませんでした",
+    "r": "たべませんでした"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0148.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-10",
+  "priority": 148
+ },
+ {
+  "id": "ja-0149",
+  "target": "先週は勉強しませんでした。",
+  "english": "I didn't study last week.",
+  "tokens": [
+   {
+    "t": "先週",
+    "r": "せんしゅう"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "勉強しませんでした",
+    "r": "べんきょうしませんでした"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0149.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-10",
+  "priority": 149
+ },
+ {
+  "id": "ja-0150",
+  "target": "昨日、母に電話をしました。",
+  "english": "I called my mother yesterday.",
+  "tokens": [
+   {
+    "t": "昨日",
+    "r": "きのう"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "母",
+    "r": "はは"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "電話",
+    "r": "でんわ"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "しました"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "に marks who you call – 母に電話をします (haha ni denwa o shimasu = phone my mother).",
+  "audio": "ja-ja-0150.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-10",
+  "priority": 150
+ },
+ {
+  "id": "ja-0151",
+  "target": "今日は暑いですね。",
+  "english": "It's hot today, isn't it?",
+  "tokens": [
+   {
+    "t": "今日",
+    "r": "きょう"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "暑い",
+    "r": "あつい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "ね"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "An i-adjective goes straight before です – 暑いです (atsui desu = it's hot).",
+  "audio": "ja-ja-0151.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-11",
+  "priority": 151
+ },
+ {
+  "id": "ja-0152",
+  "target": "この水は冷たいです。",
+  "english": "This water is cold.",
+  "tokens": [
+   {
+    "t": "この"
+   },
+   {
+    "t": "水",
+    "r": "みず"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "冷たい",
+    "r": "つめたい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0152.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-11",
+  "priority": 152
+ },
+ {
+  "id": "ja-0153",
+  "target": "このラーメンはおいしいです。",
+  "english": "This ramen is delicious.",
+  "tokens": [
+   {
+    "t": "この"
+   },
+   {
+    "t": "ラーメン"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "おいしい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0153.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-11",
+  "priority": 153
+ },
+ {
+  "id": "ja-0154",
+  "target": "その時計は高いですね。",
+  "english": "That watch is expensive, isn't it?",
+  "tokens": [
+   {
+    "t": "その"
+   },
+   {
+    "t": "時計",
+    "r": "とけい"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "高い",
+    "r": "たかい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "ね"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0154.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-11",
+  "priority": 154
+ },
+ {
+  "id": "ja-0155",
+  "target": "あの店は安いですよ。",
+  "english": "That shop is cheap, you know.",
+  "tokens": [
+   {
+    "t": "あの"
+   },
+   {
+    "t": "店",
+    "r": "みせ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "安い",
+    "r": "やすい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "よ"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0155.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-11",
+  "priority": 155
+ },
+ {
+  "id": "ja-0156",
+  "target": "駅は近いですか。",
+  "english": "Is the station close?",
+  "tokens": [
+   {
+    "t": "駅",
+    "r": "えき"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "近い",
+    "r": "ちかい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0156.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-11",
+  "priority": 156
+ },
+ {
+  "id": "ja-0157",
+  "target": "会社は遠くないです。",
+  "english": "The office isn't far.",
+  "tokens": [
+   {
+    "t": "会社",
+    "r": "かいしゃ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "遠くないです",
+    "r": "とおくないです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0157.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-11",
+  "priority": 157
+ },
+ {
+  "id": "ja-0158",
+  "target": "この本は面白いですよ。",
+  "english": "This book is interesting, you know.",
+  "tokens": [
+   {
+    "t": "この"
+   },
+   {
+    "t": "本",
+    "r": "ほん"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "面白い",
+    "r": "おもしろい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "よ"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0158.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-11",
+  "priority": 158
+ },
+ {
+  "id": "ja-0159",
+  "target": "今日は寒くないです。",
+  "english": "It's not cold today.",
+  "tokens": [
+   {
+    "t": "今日",
+    "r": "きょう"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "寒くないです",
+    "r": "さむくないです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Negative i-adjective: drop the final い, add くないです – 寒くないです (samuku nai desu = not cold).",
+  "audio": "ja-ja-0159.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-11",
+  "priority": 159
+ },
+ {
+  "id": "ja-0160",
+  "target": "このスープは熱いですよ。",
+  "english": "This soup is hot, you know.",
+  "tokens": [
+   {
+    "t": "この"
+   },
+   {
+    "t": "スープ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "熱い",
+    "r": "あつい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "よ"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "熱い is hot to the touch; hot weather is 暑い – 熱いスープ (atsui suupu = hot soup).",
+  "audio": "ja-ja-0160.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-11",
+  "priority": 160
+ },
+ {
+  "id": "ja-0161",
+  "target": "昨日は暑かったです。",
+  "english": "It was hot yesterday.",
+  "tokens": [
+   {
+    "t": "昨日",
+    "r": "きのう"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "暑かったです",
+    "r": "あつかったです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Past i-adjective: drop い, add かったです – 暑かったです (atsukatta desu = it was hot).",
+  "audio": "ja-ja-0161.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-11",
+  "priority": 161
+ },
+ {
+  "id": "ja-0162",
+  "target": "映画は楽しかったです。",
+  "english": "The movie was fun.",
+  "tokens": [
+   {
+    "t": "映画",
+    "r": "えいが"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "楽しかったです",
+    "r": "たのしかったです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0162.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-11",
+  "priority": 162
+ },
+ {
+  "id": "ja-0163",
+  "target": "テストは難しくなかったです。",
+  "english": "The test wasn't hard.",
+  "tokens": [
+   {
+    "t": "テスト"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "難しくなかったです",
+    "r": "むずかしくなかったです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Past negative i-adjective: くなかったです – 難しくなかったです (muzukashiku nakatta desu = wasn't hard).",
+  "audio": "ja-ja-0163.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-11",
+  "priority": 163
+ },
+ {
+  "id": "ja-0164",
+  "target": "この部屋は広いですね。",
+  "english": "This room is spacious, isn't it?",
+  "tokens": [
+   {
+    "t": "この"
+   },
+   {
+    "t": "部屋",
+    "r": "へや"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "広い",
+    "r": "ひろい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "ね"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0164.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-11",
+  "priority": 164
+ },
+ {
+  "id": "ja-0165",
+  "target": "仕事は忙しいですか。",
+  "english": "Is work busy?",
+  "tokens": [
+   {
+    "t": "仕事",
+    "r": "しごと"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "忙しい",
+    "r": "いそがしい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0165.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-11",
+  "priority": 165
+ },
+ {
+  "id": "ja-0166",
+  "target": "天気がいいですね。",
+  "english": "The weather is nice, isn't it?",
+  "tokens": [
+   {
+    "t": "天気",
+    "r": "てんき"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "いい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "ね"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Weather talk marks 天気 with が – 天気がいいですね (tenki ga ii desu ne = nice weather, isn't it?).",
+  "audio": "ja-ja-0166.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-11",
+  "priority": 166
+ },
+ {
+  "id": "ja-0167",
+  "target": "新しいかばんですね。",
+  "english": "That's a new bag, isn't it?",
+  "tokens": [
+   {
+    "t": "新しい",
+    "r": "あたらしい"
+   },
+   {
+    "t": "かばん"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "ね"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "An i-adjective sits right before its noun – 新しいかばん (atarashii kaban = a new bag).",
+  "audio": "ja-ja-0167.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-11",
+  "priority": 167
+ },
+ {
+  "id": "ja-0168",
+  "target": "この町は静かです。",
+  "english": "This town is quiet.",
+  "tokens": [
+   {
+    "t": "この"
+   },
+   {
+    "t": "町",
+    "r": "まち"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "静か",
+    "r": "しずか"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0168.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-12",
+  "priority": 168
+ },
+ {
+  "id": "ja-0169",
+  "target": "静かな部屋ですね。",
+  "english": "It's a quiet room, isn't it?",
+  "tokens": [
+   {
+    "t": "静か",
+    "r": "しずか"
+   },
+   {
+    "t": "な"
+   },
+   {
+    "t": "部屋",
+    "r": "へや"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "ね"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "A na-adjective needs な before a noun – 静かな部屋 (shizuka na heya = a quiet room).",
+  "audio": "ja-ja-0169.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-12",
+  "priority": 169
+ },
+ {
+  "id": "ja-0170",
+  "target": "きれいな花ですね。",
+  "english": "Pretty flowers, aren't they?",
+  "tokens": [
+   {
+    "t": "きれい"
+   },
+   {
+    "t": "な"
+   },
+   {
+    "t": "花",
+    "r": "はな"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "ね"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "きれい ends in い but is a na-adjective – きれいな花 (kirei na hana = pretty flowers).",
+  "audio": "ja-ja-0170.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-12",
+  "priority": 170
+ },
+ {
+  "id": "ja-0171",
+  "target": "この駅はきれいです。",
+  "english": "This station is clean.",
+  "tokens": [
+   {
+    "t": "この"
+   },
+   {
+    "t": "駅",
+    "r": "えき"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "きれい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0171.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-12",
+  "priority": 171
+ },
+ {
+  "id": "ja-0172",
+  "target": "電車は便利ですね。",
+  "english": "Trains are convenient, aren't they?",
+  "tokens": [
+   {
+    "t": "電車",
+    "r": "でんしゃ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "便利",
+    "r": "べんり"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "ね"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0172.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-12",
+  "priority": 172
+ },
+ {
+  "id": "ja-0173",
+  "target": "お元気ですか。",
+  "english": "How are you?",
+  "tokens": [
+   {
+    "t": "お元気",
+    "r": "おげんき"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0173.mp3",
+  "tags": [
+   "general",
+   "family",
+   "work"
+  ],
+  "grammarNode": "node-12",
+  "priority": 173
+ },
+ {
+  "id": "ja-0174",
+  "target": "はい、元気です。",
+  "english": "Yes, I'm well.",
+  "tokens": [
+   {
+    "t": "はい"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "元気",
+    "r": "げんき"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0174.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-12",
+  "priority": 174
+ },
+ {
+  "id": "ja-0175",
+  "target": "母は元気です。",
+  "english": "My mother is doing well.",
+  "tokens": [
+   {
+    "t": "母",
+    "r": "はは"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "元気",
+    "r": "げんき"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0175.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-12",
+  "priority": 175
+ },
+ {
+  "id": "ja-0176",
+  "target": "今日はひまです。",
+  "english": "I'm free today.",
+  "tokens": [
+   {
+    "t": "今日",
+    "r": "きょう"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "ひま"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0176.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-12",
+  "priority": 176
+ },
+ {
+  "id": "ja-0177",
+  "target": "明日はひまじゃないです。",
+  "english": "I'm not free tomorrow.",
+  "tokens": [
+   {
+    "t": "明日",
+    "r": "あした"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "ひま"
+   },
+   {
+    "t": "じゃないです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Negate a na-adjective like a noun – ひまじゃないです (hima ja nai desu = not free).",
+  "audio": "ja-ja-0177.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-12",
+  "priority": 177
+ },
+ {
+  "id": "ja-0178",
+  "target": "あのホテルは有名です。",
+  "english": "That hotel is famous.",
+  "tokens": [
+   {
+    "t": "あの"
+   },
+   {
+    "t": "ホテル"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "有名",
+    "r": "ゆうめい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0178.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-12",
+  "priority": 178
+ },
+ {
+  "id": "ja-0179",
+  "target": "有名なレストランですね。",
+  "english": "It's a famous restaurant, isn't it?",
+  "tokens": [
+   {
+    "t": "有名",
+    "r": "ゆうめい"
+   },
+   {
+    "t": "な"
+   },
+   {
+    "t": "レストラン"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "ね"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0179.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-12",
+  "priority": 179
+ },
+ {
+  "id": "ja-0180",
+  "target": "ここはにぎやかですね。",
+  "english": "It's lively here, isn't it?",
+  "tokens": [
+   {
+    "t": "ここ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "にぎやか"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "ね"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0180.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-12",
+  "priority": 180
+ },
+ {
+  "id": "ja-0181",
+  "target": "大丈夫ですか。",
+  "english": "Are you okay?",
+  "tokens": [
+   {
+    "t": "大丈夫",
+    "r": "だいじょうぶ"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0181.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-12",
+  "priority": 181
+ },
+ {
+  "id": "ja-0182",
+  "target": "はい、大丈夫ですよ。",
+  "english": "Yes, I'm fine.",
+  "tokens": [
+   {
+    "t": "はい"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "大丈夫",
+    "r": "だいじょうぶ"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "よ"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0182.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-12",
+  "priority": 182
+ },
+ {
+  "id": "ja-0183",
+  "target": "親切な人ですね。",
+  "english": "What a kind person.",
+  "tokens": [
+   {
+    "t": "親切",
+    "r": "しんせつ"
+   },
+   {
+    "t": "な"
+   },
+   {
+    "t": "人",
+    "r": "ひと"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "ね"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0183.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-12",
+  "priority": 183
+ },
+ {
+  "id": "ja-0184",
+  "target": "昨日、海はきれいでした。",
+  "english": "The sea was beautiful yesterday.",
+  "tokens": [
+   {
+    "t": "昨日",
+    "r": "きのう"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "海",
+    "r": "うみ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "きれい"
+   },
+   {
+    "t": "でした"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Past of a na-adjective: です turns into でした – きれいでした (kirei deshita = was beautiful).",
+  "audio": "ja-ja-0184.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-12",
+  "priority": 184
+ },
+ {
+  "id": "ja-0185",
+  "target": "これは私のかばんです。",
+  "english": "This is my bag.",
+  "tokens": [
+   {
+    "t": "これ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "私",
+    "r": "わたし"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "かばん"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "の links owner and thing – 私のかばん (watashi no kaban = my bag).",
+  "audio": "ja-ja-0185.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-13",
+  "priority": 185
+ },
+ {
+  "id": "ja-0186",
+  "target": "それは父の時計です。",
+  "english": "That's my father's watch.",
+  "tokens": [
+   {
+    "t": "それ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "父",
+    "r": "ちち"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "時計",
+    "r": "とけい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0186.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-13",
+  "priority": 186
+ },
+ {
+  "id": "ja-0187",
+  "target": "母の料理はおいしいです。",
+  "english": "My mother's cooking is delicious.",
+  "tokens": [
+   {
+    "t": "母",
+    "r": "はは"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "料理",
+    "r": "りょうり"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "おいしい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0187.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-13",
+  "priority": 187
+ },
+ {
+  "id": "ja-0188",
+  "target": "このかさはだれのですか。",
+  "english": "Whose umbrella is this?",
+  "tokens": [
+   {
+    "t": "この"
+   },
+   {
+    "t": "かさ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "だれ"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "の can stand alone for someone's thing – だれの (dare no = whose?).",
+  "audio": "ja-ja-0188.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-13",
+  "priority": 188
+ },
+ {
+  "id": "ja-0189",
+  "target": "それは私のです。",
+  "english": "That's mine.",
+  "tokens": [
+   {
+    "t": "それ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "私",
+    "r": "わたし"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0189.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-13",
+  "priority": 189
+ },
+ {
+  "id": "ja-0190",
+  "target": "兄の車は古いです。",
+  "english": "My brother's car is old.",
+  "tokens": [
+   {
+    "t": "兄",
+    "r": "あに"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "車",
+    "r": "くるま"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "古い",
+    "r": "ふるい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0190.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-13",
+  "priority": 190
+ },
+ {
+  "id": "ja-0191",
+  "target": "これは姉の電話です。",
+  "english": "This is my sister's phone.",
+  "tokens": [
+   {
+    "t": "これ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "姉",
+    "r": "あね"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "電話",
+    "r": "でんわ"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0191.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-13",
+  "priority": 191
+ },
+ {
+  "id": "ja-0192",
+  "target": "日本の車は高いですか。",
+  "english": "Are Japanese cars expensive?",
+  "tokens": [
+   {
+    "t": "日本",
+    "r": "にほん"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "車",
+    "r": "くるま"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "高い",
+    "r": "たかい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "の also marks origin – 日本の車 (nihon no kuruma = a Japanese car).",
+  "audio": "ja-ja-0192.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-13",
+  "priority": 192
+ },
+ {
+  "id": "ja-0193",
+  "target": "東京のホテルは安くなかったです。",
+  "english": "The hotel in Tokyo wasn't cheap.",
+  "tokens": [
+   {
+    "t": "東京",
+    "r": "とうきょう"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "ホテル"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "安くなかったです",
+    "r": "やすくなかったです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0193.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-13",
+  "priority": 193
+ },
+ {
+  "id": "ja-0194",
+  "target": "学校の先生は親切です。",
+  "english": "The teachers at school are kind.",
+  "tokens": [
+   {
+    "t": "学校",
+    "r": "がっこう"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "先生",
+    "r": "せんせい"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "親切",
+    "r": "しんせつ"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0194.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-13",
+  "priority": 194
+ },
+ {
+  "id": "ja-0195",
+  "target": "私は英語の本を読みます。",
+  "english": "I read English books.",
+  "tokens": [
+   {
+    "t": "私",
+    "r": "わたし"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "英語",
+    "r": "えいご"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "本",
+    "r": "ほん"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "読みます",
+    "r": "よみます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "の can name a type or category – 英語の本 (eigo no hon = an English book).",
+  "audio": "ja-ja-0195.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-13",
+  "priority": 195
+ },
+ {
+  "id": "ja-0196",
+  "target": "友だちの家に行きました。",
+  "english": "I went to my friend's house.",
+  "tokens": [
+   {
+    "t": "友だち",
+    "r": "ともだち"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "家",
+    "r": "いえ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "行きました",
+    "r": "いきました"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0196.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-13",
+  "priority": 196
+ },
+ {
+  "id": "ja-0197",
+  "target": "会社の車で行きます。",
+  "english": "I'll go by company car.",
+  "tokens": [
+   {
+    "t": "会社",
+    "r": "かいしゃ"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "車",
+    "r": "くるま"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0197.mp3",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-13",
+  "priority": 197
+ },
+ {
+  "id": "ja-0198",
+  "target": "私の部屋は広くないです。",
+  "english": "My room isn't big.",
+  "tokens": [
+   {
+    "t": "私",
+    "r": "わたし"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "部屋",
+    "r": "へや"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "広くないです",
+    "r": "ひろくないです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0198.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-13",
+  "priority": 198
+ },
+ {
+  "id": "ja-0199",
+  "target": "この店のコーヒーは安いですよ。",
+  "english": "This shop's coffee is cheap, you know.",
+  "tokens": [
+   {
+    "t": "この"
+   },
+   {
+    "t": "店",
+    "r": "みせ"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "コーヒー"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "安い",
+    "r": "やすい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "よ"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0199.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-13",
+  "priority": 199
+ },
+ {
+  "id": "ja-0200",
+  "target": "日本語のメニューはありますか。",
+  "english": "Do you have a Japanese menu?",
+  "tokens": [
+   {
+    "t": "日本語",
+    "r": "にほんご"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "メニュー"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "あります"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0200.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-13",
+  "priority": 200
+ },
+ {
+  "id": "ja-0201",
+  "target": "今、三時です。",
+  "english": "It is three o'clock now.",
+  "tokens": [
+   {
+    "t": "今",
+    "r": "いま"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "三時",
+    "r": "さんじ"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "〜時 (ji) counts hours – 三時 (sanji = three o'clock).",
+  "audio": "ja-ja-0201.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-14",
+  "priority": 201
+ },
+ {
+  "id": "ja-0202",
+  "target": "すみません、今何時ですか。",
+  "english": "Excuse me, what time is it?",
+  "tokens": [
+   {
+    "t": "すみません"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "今",
+    "r": "いま"
+   },
+   {
+    "t": "何時",
+    "r": "なんじ"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0202.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-14",
+  "priority": 202
+ },
+ {
+  "id": "ja-0203",
+  "target": "これはいくらですか。",
+  "english": "How much is this?",
+  "tokens": [
+   {
+    "t": "これ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "いくら"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0203.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-14",
+  "priority": 203
+ },
+ {
+  "id": "ja-0204",
+  "target": "このりんごは三つで二百円です。",
+  "english": "These apples are 200 yen for three.",
+  "tokens": [
+   {
+    "t": "この"
+   },
+   {
+    "t": "りんご"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "三つ",
+    "r": "みっつ"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "二百円",
+    "r": "にひゃくえん"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "で prices a set – 三つで二百円 (mittsu de nihyakuen = 200 yen for three).",
+  "audio": "ja-ja-0204.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-14",
+  "priority": 204
+ },
+ {
+  "id": "ja-0205",
+  "target": "このシャツは千円です。",
+  "english": "This shirt is 1,000 yen.",
+  "tokens": [
+   {
+    "t": "この"
+   },
+   {
+    "t": "シャツ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "千円",
+    "r": "せんえん"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0205.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-14",
+  "priority": 205
+ },
+ {
+  "id": "ja-0206",
+  "target": "コーヒーを二つお願いします。",
+  "english": "Two coffees, please.",
+  "tokens": [
+   {
+    "t": "コーヒー"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "二つ",
+    "r": "ふたつ"
+   },
+   {
+    "t": "お願いします",
+    "r": "おねがいします"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "The amount comes after を and its noun – コーヒーを二つ (koohii o futatsu = two coffees).",
+  "audio": "ja-ja-0206.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-14",
+  "priority": 206
+ },
+ {
+  "id": "ja-0207",
+  "target": "家族は四人です。",
+  "english": "There are four people in my family.",
+  "tokens": [
+   {
+    "t": "家族",
+    "r": "かぞく"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "四人",
+    "r": "よにん"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "〜人 counts people – 四人 (yonin = four people). But 一人 (hitori) and 二人 (futari) are irregular.",
+  "audio": "ja-ja-0207.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-14",
+  "priority": 207
+ },
+ {
+  "id": "ja-0208",
+  "target": "レストランに二人で行きます。",
+  "english": "The two of us go to the restaurant.",
+  "tokens": [
+   {
+    "t": "レストラン"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "二人",
+    "r": "ふたり"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0208.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-14",
+  "priority": 208
+ },
+ {
+  "id": "ja-0209",
+  "target": "会社は九時からです。",
+  "english": "Work starts at nine.",
+  "tokens": [
+   {
+    "t": "会社",
+    "r": "かいしゃ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "九時",
+    "r": "くじ"
+   },
+   {
+    "t": "から"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0209.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-14",
+  "priority": 209
+ },
+ {
+  "id": "ja-0210",
+  "target": "お店は十時から六時までです。",
+  "english": "The shop is open from ten to six.",
+  "tokens": [
+   {
+    "t": "お店",
+    "r": "おみせ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "十時",
+    "r": "じゅうじ"
+   },
+   {
+    "t": "から"
+   },
+   {
+    "t": "六時",
+    "r": "ろくじ"
+   },
+   {
+    "t": "まで"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "から…まで (kara…made = from…until) brackets opening hours – 十時から六時まで.",
+  "audio": "ja-ja-0210.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-14",
+  "priority": 210
+ },
+ {
+  "id": "ja-0211",
+  "target": "約束は金曜日の三時です。",
+  "english": "The appointment is Friday at three.",
+  "tokens": [
+   {
+    "t": "約束",
+    "r": "やくそく"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "金曜日",
+    "r": "きんようび"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "三時",
+    "r": "さんじ"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0211.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-14",
+  "priority": 211
+ },
+ {
+  "id": "ja-0212",
+  "target": "土曜日に買い物します。",
+  "english": "I go shopping on Saturday.",
+  "tokens": [
+   {
+    "t": "土曜日",
+    "r": "どようび"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "買い物します",
+    "r": "かいものします"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Days take に – 土曜日に (doyoubi ni = on Saturday).",
+  "audio": "ja-ja-0212.mp3",
+  "tags": [
+   "general",
+   "family",
+   "travel"
+  ],
+  "grammarNode": "node-14",
+  "priority": 212
+ },
+ {
+  "id": "ja-0213",
+  "target": "誕生日は七月八日です。",
+  "english": "My birthday is July 8th.",
+  "tokens": [
+   {
+    "t": "誕生日",
+    "r": "たんじょうび"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "七月",
+    "r": "しちがつ"
+   },
+   {
+    "t": "八日",
+    "r": "ようか"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0213.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-14",
+  "priority": 213
+ },
+ {
+  "id": "ja-0214",
+  "target": "東京まで二時間かかります。",
+  "english": "It takes two hours to Tokyo.",
+  "tokens": [
+   {
+    "t": "東京",
+    "r": "とうきょう"
+   },
+   {
+    "t": "まで"
+   },
+   {
+    "t": "二時間",
+    "r": "にじかん"
+   },
+   {
+    "t": "かかります"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "〜時間 counts duration – 二時間 (nijikan = two hours). 二時 (niji) is two o'clock.",
+  "audio": "ja-ja-0214.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-14",
+  "priority": 214
+ },
+ {
+  "id": "ja-0215",
+  "target": "昼ごはんは十二時半です。",
+  "english": "Lunch is at twelve thirty.",
+  "tokens": [
+   {
+    "t": "昼ごはん",
+    "r": "ひるごはん"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "十二時半",
+    "r": "じゅうにじはん"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0215.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-14",
+  "priority": 215
+ },
+ {
+  "id": "ja-0216",
+  "target": "切符を二枚買います。",
+  "english": "I buy two tickets.",
+  "tokens": [
+   {
+    "t": "切符",
+    "r": "きっぷ"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "二枚",
+    "r": "にまい"
+   },
+   {
+    "t": "買います",
+    "r": "かいます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0216.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-14",
+  "priority": 216
+ },
+ {
+  "id": "ja-0217",
+  "target": "水曜日の午後はひまです。",
+  "english": "I am free on Wednesday afternoon.",
+  "tokens": [
+   {
+    "t": "水曜日",
+    "r": "すいようび"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "午後",
+    "r": "ごご"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "ひま"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0217.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-14",
+  "priority": 217
+ },
+ {
+  "id": "ja-0218",
+  "target": "私もコーヒーをお願いします。",
+  "english": "I will have coffee too.",
+  "tokens": [
+   {
+    "t": "私",
+    "r": "わたし"
+   },
+   {
+    "t": "も"
+   },
+   {
+    "t": "コーヒー"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "お願いします",
+    "r": "おねがいします"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "も (mo = also) replaces は or が – 私も (watashi mo = me too).",
+  "audio": "ja-ja-0218.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-15",
+  "priority": 218
+ },
+ {
+  "id": "ja-0219",
+  "target": "友だちと喫茶店に行きます。",
+  "english": "I go to a coffee shop with a friend.",
+  "tokens": [
+   {
+    "t": "友だち",
+    "r": "ともだち"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "喫茶店",
+    "r": "きっさてん"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "と (to = with) marks your companion – 友だちと (tomodachi to = with a friend).",
+  "audio": "ja-ja-0219.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-15",
+  "priority": 219
+ },
+ {
+  "id": "ja-0220",
+  "target": "パンと牛乳を買います。",
+  "english": "I buy bread and milk.",
+  "tokens": [
+   {
+    "t": "パン"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "牛乳",
+    "r": "ぎゅうにゅう"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "買います",
+    "r": "かいます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "と (to = and) joins a complete list – パンと牛乳 (pan to gyuunyuu = bread and milk).",
+  "audio": "ja-ja-0220.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-15",
+  "priority": 220
+ },
+ {
+  "id": "ja-0221",
+  "target": "机の上に本やペンがあります。",
+  "english": "There are books, pens, and such on the desk.",
+  "tokens": [
+   {
+    "t": "机",
+    "r": "つくえ"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "上",
+    "r": "うえ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "本",
+    "r": "ほん"
+   },
+   {
+    "t": "や"
+   },
+   {
+    "t": "ペン"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "あります"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "や (ya = and so on) lists examples – 本やペン (hon ya pen = books, pens, etc.). と names them all.",
+  "audio": "ja-ja-0221.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-15",
+  "priority": 221
+ },
+ {
+  "id": "ja-0222",
+  "target": "妹も学生です。",
+  "english": "My little sister is a student too.",
+  "tokens": [
+   {
+    "t": "妹",
+    "r": "いもうと"
+   },
+   {
+    "t": "も"
+   },
+   {
+    "t": "学生",
+    "r": "がくせい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0222.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-15",
+  "priority": 222
+ },
+ {
+  "id": "ja-0223",
+  "target": "日曜日に母とデパートに行きます。",
+  "english": "On Sunday I go to the department store with my mother.",
+  "tokens": [
+   {
+    "t": "日曜日",
+    "r": "にちようび"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "母",
+    "r": "はは"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "デパート"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0223.mp3",
+  "tags": [
+   "general",
+   "family",
+   "travel"
+  ],
+  "grammarNode": "node-15",
+  "priority": 223
+ },
+ {
+  "id": "ja-0224",
+  "target": "メニューにコーヒーやジュースがあります。",
+  "english": "There is coffee, juice, and more on the menu.",
+  "tokens": [
+   {
+    "t": "メニュー"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "コーヒー"
+   },
+   {
+    "t": "や"
+   },
+   {
+    "t": "ジュース"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "あります"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0224.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-15",
+  "priority": 224
+ },
+ {
+  "id": "ja-0225",
+  "target": "デザートもお願いします。",
+  "english": "Dessert too, please.",
+  "tokens": [
+   {
+    "t": "デザート"
+   },
+   {
+    "t": "も"
+   },
+   {
+    "t": "お願いします",
+    "r": "おねがいします"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0225.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-15",
+  "priority": 225
+ },
+ {
+  "id": "ja-0226",
+  "target": "兄と姉がいます。",
+  "english": "I have an older brother and an older sister.",
+  "tokens": [
+   {
+    "t": "兄",
+    "r": "あに"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "姉",
+    "r": "あね"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0226.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-15",
+  "priority": 226
+ },
+ {
+  "id": "ja-0227",
+  "target": "月曜日も火曜日も働きます。",
+  "english": "I work on both Monday and Tuesday.",
+  "tokens": [
+   {
+    "t": "月曜日",
+    "r": "げつようび"
+   },
+   {
+    "t": "も"
+   },
+   {
+    "t": "火曜日",
+    "r": "かようび"
+   },
+   {
+    "t": "も"
+   },
+   {
+    "t": "働きます",
+    "r": "はたらきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0227.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-15",
+  "priority": 227
+ },
+ {
+  "id": "ja-0228",
+  "target": "弟は肉も魚も食べません。",
+  "english": "My little brother eats neither meat nor fish.",
+  "tokens": [
+   {
+    "t": "弟",
+    "r": "おとうと"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "肉",
+    "r": "にく"
+   },
+   {
+    "t": "も"
+   },
+   {
+    "t": "魚",
+    "r": "さかな"
+   },
+   {
+    "t": "も"
+   },
+   {
+    "t": "食べません",
+    "r": "たべません"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0228.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-15",
+  "priority": 228
+ },
+ {
+  "id": "ja-0229",
+  "target": "デパートで靴やかばんを見ます。",
+  "english": "I look at shoes, bags, and so on at the department store.",
+  "tokens": [
+   {
+    "t": "デパート"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "靴",
+    "r": "くつ"
+   },
+   {
+    "t": "や"
+   },
+   {
+    "t": "かばん"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "見ます",
+    "r": "みます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0229.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-15",
+  "priority": 229
+ },
+ {
+  "id": "ja-0230",
+  "target": "会社の人と昼ごはんを食べます。",
+  "english": "I eat lunch with people from work.",
+  "tokens": [
+   {
+    "t": "会社",
+    "r": "かいしゃ"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "人",
+    "r": "ひと"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "昼ごはん",
+    "r": "ひるごはん"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "食べます",
+    "r": "たべます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0230.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-15",
+  "priority": 230
+ },
+ {
+  "id": "ja-0231",
+  "target": "姉とケーキを作ります。",
+  "english": "I make a cake with my older sister.",
+  "tokens": [
+   {
+    "t": "姉",
+    "r": "あね"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "ケーキ"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "作ります",
+    "r": "つくります"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0231.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-15",
+  "priority": 231
+ },
+ {
+  "id": "ja-0232",
+  "target": "会社まで電車とバスで来ます。",
+  "english": "I come to the office by train and bus.",
+  "tokens": [
+   {
+    "t": "会社",
+    "r": "かいしゃ"
+   },
+   {
+    "t": "まで"
+   },
+   {
+    "t": "電車",
+    "r": "でんしゃ"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "バス"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "来ます",
+    "r": "きます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0232.mp3",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-15",
+  "priority": 232
+ },
+ {
+  "id": "ja-0233",
+  "target": "父も母も元気です。",
+  "english": "Both my father and mother are doing well.",
+  "tokens": [
+   {
+    "t": "父",
+    "r": "ちち"
+   },
+   {
+    "t": "も"
+   },
+   {
+    "t": "母",
+    "r": "はは"
+   },
+   {
+    "t": "も"
+   },
+   {
+    "t": "元気",
+    "r": "げんき"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0233.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-15",
+  "priority": 233
+ },
+ {
+  "id": "ja-0234",
+  "target": "明日、友だちとレストランで晩ごはんを食べます。",
+  "english": "Tomorrow I eat dinner at a restaurant with friends.",
+  "tokens": [
+   {
+    "t": "明日",
+    "r": "あした"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "友だち",
+    "r": "ともだち"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "レストラン"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "晩ごはん",
+    "r": "ばんごはん"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "食べます",
+    "r": "たべます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0234.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-15",
+  "priority": 234
+ },
+ {
+  "id": "ja-0235",
+  "target": "すみません、メニューを見せてください。",
+  "english": "Excuse me, please show me the menu.",
+  "tokens": [
+   {
+    "t": "すみません"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "メニュー"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "見せて",
+    "r": "みせて"
+   },
+   {
+    "t": "ください"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Requests use て-form + ください – 見せてください (misete kudasai = please show me).",
+  "audio": "ja-ja-0235.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-16",
+  "priority": 235
+ },
+ {
+  "id": "ja-0236",
+  "target": "ちょっと待ってください。",
+  "english": "Please wait a moment.",
+  "tokens": [
+   {
+    "t": "ちょっと"
+   },
+   {
+    "t": "待って",
+    "r": "まって"
+   },
+   {
+    "t": "ください"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0236.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-16",
+  "priority": 236
+ },
+ {
+  "id": "ja-0237",
+  "target": "もう一度言ってください。",
+  "english": "Please say that one more time.",
+  "tokens": [
+   {
+    "t": "もう"
+   },
+   {
+    "t": "一度",
+    "r": "いちど"
+   },
+   {
+    "t": "言って",
+    "r": "いって"
+   },
+   {
+    "t": "ください"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0237.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-16",
+  "priority": 237
+ },
+ {
+  "id": "ja-0238",
+  "target": "もう少しゆっくり話してください。",
+  "english": "Please speak a little more slowly.",
+  "tokens": [
+   {
+    "t": "もう"
+   },
+   {
+    "t": "少し",
+    "r": "すこし"
+   },
+   {
+    "t": "ゆっくり"
+   },
+   {
+    "t": "話して",
+    "r": "はなして"
+   },
+   {
+    "t": "ください"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0238.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-16",
+  "priority": 238
+ },
+ {
+  "id": "ja-0239",
+  "target": "ここに名前を書いてください。",
+  "english": "Please write your name here.",
+  "tokens": [
+   {
+    "t": "ここ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "名前",
+    "r": "なまえ"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "書いて",
+    "r": "かいて"
+   },
+   {
+    "t": "ください"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "く-verbs make て with いて – 書く → 書いて (kaku → kaite = write).",
+  "audio": "ja-ja-0239.mp3",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-16",
+  "priority": 239
+ },
+ {
+  "id": "ja-0240",
+  "target": "窓を開けてください。",
+  "english": "Please open the window.",
+  "tokens": [
+   {
+    "t": "窓",
+    "r": "まど"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "開けて",
+    "r": "あけて"
+   },
+   {
+    "t": "ください"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0240.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-16",
+  "priority": 240
+ },
+ {
+  "id": "ja-0241",
+  "target": "ドアを閉めてください。",
+  "english": "Please close the door.",
+  "tokens": [
+   {
+    "t": "ドア"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "閉めて",
+    "r": "しめて"
+   },
+   {
+    "t": "ください"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0241.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-16",
+  "priority": 241
+ },
+ {
+  "id": "ja-0242",
+  "target": "すみません、水をください。",
+  "english": "Excuse me, some water please.",
+  "tokens": [
+   {
+    "t": "すみません"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "水",
+    "r": "みず"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "ください"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Thing requests: noun + をください (o kudasai = please give me) – no て-form needed.",
+  "audio": "ja-ja-0242.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-16",
+  "priority": 242
+ },
+ {
+  "id": "ja-0243",
+  "target": "カードでお願いします。",
+  "english": "By card, please.",
+  "tokens": [
+   {
+    "t": "カード"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "お願いします",
+    "r": "おねがいします"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Paying: で marks the method – カードで (kaado de = by card).",
+  "audio": "ja-ja-0243.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-16",
+  "priority": 243
+ },
+ {
+  "id": "ja-0244",
+  "target": "また電話してください。",
+  "english": "Please call again.",
+  "tokens": [
+   {
+    "t": "また"
+   },
+   {
+    "t": "電話して",
+    "r": "でんわして"
+   },
+   {
+    "t": "ください"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0244.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-16",
+  "priority": 244
+ },
+ {
+  "id": "ja-0245",
+  "target": "三時に来てください。",
+  "english": "Please come at three.",
+  "tokens": [
+   {
+    "t": "三時",
+    "r": "さんじ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "来て",
+    "r": "きて"
+   },
+   {
+    "t": "ください"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0245.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-16",
+  "priority": 245
+ },
+ {
+  "id": "ja-0246",
+  "target": "この漢字を教えてください。",
+  "english": "Please teach me this kanji.",
+  "tokens": [
+   {
+    "t": "この"
+   },
+   {
+    "t": "漢字",
+    "r": "かんじ"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "教えて",
+    "r": "おしえて"
+   },
+   {
+    "t": "ください"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0246.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-16",
+  "priority": 246
+ },
+ {
+  "id": "ja-0247",
+  "target": "駅の前で止まってください。",
+  "english": "Please stop in front of the station.",
+  "tokens": [
+   {
+    "t": "駅",
+    "r": "えき"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "前",
+    "r": "まえ"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "止まって",
+    "r": "とまって"
+   },
+   {
+    "t": "ください"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0247.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-16",
+  "priority": 247
+ },
+ {
+  "id": "ja-0248",
+  "target": "この仕事を手伝ってください。",
+  "english": "Please help me with this task.",
+  "tokens": [
+   {
+    "t": "この"
+   },
+   {
+    "t": "仕事",
+    "r": "しごと"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "手伝って",
+    "r": "てつだって"
+   },
+   {
+    "t": "ください"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0248.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-16",
+  "priority": 248
+ },
+ {
+  "id": "ja-0249",
+  "target": "ゆっくり休んでください。",
+  "english": "Please rest well.",
+  "tokens": [
+   {
+    "t": "ゆっくり"
+   },
+   {
+    "t": "休んで",
+    "r": "やすんで"
+   },
+   {
+    "t": "ください"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "む-verbs make て with んで – 休む → 休んで (yasumu → yasunde = rest).",
+  "audio": "ja-ja-0249.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-16",
+  "priority": 249
+ },
+ {
+  "id": "ja-0250",
+  "target": "塩を取ってください。",
+  "english": "Please pass the salt.",
+  "tokens": [
+   {
+    "t": "塩",
+    "r": "しお"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "取って",
+    "r": "とって"
+   },
+   {
+    "t": "ください"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0250.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-16",
+  "priority": 250
+ },
+ {
+  "id": "ja-0251",
+  "target": "今、何をしていますか。",
+  "english": "What are you doing right now?",
+  "tokens": [
+   {
+    "t": "今",
+    "r": "いま"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "何",
+    "r": "なに"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "して"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "ています = happening right now – しています (shite imasu = am doing). Split as て-form + います.",
+  "audio": "ja-ja-0251.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-17",
+  "priority": 251
+ },
+ {
+  "id": "ja-0252",
+  "target": "今、昼ご飯を食べています。",
+  "english": "I am eating lunch right now.",
+  "tokens": [
+   {
+    "t": "今",
+    "r": "いま"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "昼ご飯",
+    "r": "ひるごはん"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "食べて",
+    "r": "たべて"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0252.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-17",
+  "priority": 252
+ },
+ {
+  "id": "ja-0253",
+  "target": "母は今、電話で話しています。",
+  "english": "My mother is on the phone right now.",
+  "tokens": [
+   {
+    "t": "母",
+    "r": "はは"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "今",
+    "r": "いま"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "電話",
+    "r": "でんわ"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "話して",
+    "r": "はなして"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0253.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-17",
+  "priority": 253
+ },
+ {
+  "id": "ja-0254",
+  "target": "父は銀行で働いています。",
+  "english": "My father works at a bank.",
+  "tokens": [
+   {
+    "t": "父",
+    "r": "ちち"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "銀行",
+    "r": "ぎんこう"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "働いて",
+    "r": "はたらいて"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "ています also describes ongoing states – 働いています (hataraite imasu = works there / is employed).",
+  "audio": "ja-ja-0254.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-17",
+  "priority": 254
+ },
+ {
+  "id": "ja-0255",
+  "target": "東京に住んでいます。",
+  "english": "I live in Tokyo.",
+  "tokens": [
+   {
+    "t": "東京",
+    "r": "とうきょう"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "住んで",
+    "r": "すんで"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0255.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-17",
+  "priority": 255
+ },
+ {
+  "id": "ja-0256",
+  "target": "兄は車を持っています。",
+  "english": "My older brother has a car.",
+  "tokens": [
+   {
+    "t": "兄",
+    "r": "あに"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "車",
+    "r": "くるま"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "持って",
+    "r": "もって"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0256.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-17",
+  "priority": 256
+ },
+ {
+  "id": "ja-0257",
+  "target": "朝起きて、コーヒーを飲みます。",
+  "english": "I get up in the morning and drink coffee.",
+  "tokens": [
+   {
+    "t": "朝",
+    "r": "あさ"
+   },
+   {
+    "t": "起きて",
+    "r": "おきて"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "コーヒー"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "飲みます",
+    "r": "のみます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "て-form links actions in order – 起きて、飲みます (okite, nomimasu = get up, then drink).",
+  "audio": "ja-ja-0257.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-17",
+  "priority": 257
+ },
+ {
+  "id": "ja-0258",
+  "target": "週末は友だちに会って、映画を見ます。",
+  "english": "On weekends I meet my friends and watch a movie.",
+  "tokens": [
+   {
+    "t": "週末",
+    "r": "しゅうまつ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "友だち",
+    "r": "ともだち"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "会って",
+    "r": "あって"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "映画",
+    "r": "えいが"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "見ます",
+    "r": "みます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Meeting someone takes に – 友だちに会います (tomodachi ni aimasu = meet a friend), never を.",
+  "audio": "ja-ja-0258.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-17",
+  "priority": 258
+ },
+ {
+  "id": "ja-0259",
+  "target": "家に帰って、晩ご飯を作ります。",
+  "english": "I go home and make dinner.",
+  "tokens": [
+   {
+    "t": "家",
+    "r": "いえ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "帰って",
+    "r": "かえって"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "晩ご飯",
+    "r": "ばんごはん"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "作ります",
+    "r": "つくります"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0259.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-17",
+  "priority": 259
+ },
+ {
+  "id": "ja-0260",
+  "target": "電車に乗って、会社へ行きます。",
+  "english": "I get on the train and go to the office.",
+  "tokens": [
+   {
+    "t": "電車",
+    "r": "でんしゃ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "乗って",
+    "r": "のって"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "会社",
+    "r": "かいしゃ"
+   },
+   {
+    "t": "へ"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Vehicles take に with 乗る – 電車に乗って (densha ni notte = get on the train).",
+  "audio": "ja-ja-0260.mp3",
+  "tags": [
+   "general",
+   "work",
+   "travel"
+  ],
+  "grammarNode": "node-17",
+  "priority": 260
+ },
+ {
+  "id": "ja-0261",
+  "target": "妹は部屋で音楽を聞いています。",
+  "english": "My little sister is listening to music in her room.",
+  "tokens": [
+   {
+    "t": "妹",
+    "r": "いもうと"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "部屋",
+    "r": "へや"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "音楽",
+    "r": "おんがく"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "聞いて",
+    "r": "きいて"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0261.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-17",
+  "priority": 261
+ },
+ {
+  "id": "ja-0262",
+  "target": "外は雪が降っています。",
+  "english": "It is snowing outside.",
+  "tokens": [
+   {
+    "t": "外",
+    "r": "そと"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "雪",
+    "r": "ゆき"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "降って",
+    "r": "ふって"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0262.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-17",
+  "priority": 262
+ },
+ {
+  "id": "ja-0263",
+  "target": "子どもは公園で遊んでいます。",
+  "english": "The children are playing in the park.",
+  "tokens": [
+   {
+    "t": "子ども",
+    "r": "こども"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "公園",
+    "r": "こうえん"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "遊んで",
+    "r": "あそんで"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0263.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-17",
+  "priority": 263
+ },
+ {
+  "id": "ja-0264",
+  "target": "少し休んで、また仕事をします。",
+  "english": "I will rest a little and then get back to work.",
+  "tokens": [
+   {
+    "t": "少し",
+    "r": "すこし"
+   },
+   {
+    "t": "休んで",
+    "r": "やすんで"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "また"
+   },
+   {
+    "t": "仕事",
+    "r": "しごと"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "します"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0264.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-17",
+  "priority": 264
+ },
+ {
+  "id": "ja-0265",
+  "target": "毎朝走っていますか。",
+  "english": "Do you run every morning?",
+  "tokens": [
+   {
+    "t": "毎朝",
+    "r": "まいあさ"
+   },
+   {
+    "t": "走って",
+    "r": "はしって"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "ています also covers habits – 毎朝走っています (maiasa hashitte imasu = I run every morning).",
+  "audio": "ja-ja-0265.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-17",
+  "priority": 265
+ },
+ {
+  "id": "ja-0266",
+  "target": "駅の前で待っています。",
+  "english": "I am waiting in front of the station.",
+  "tokens": [
+   {
+    "t": "駅",
+    "r": "えき"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "前",
+    "r": "まえ"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "待って",
+    "r": "まって"
+   },
+   {
+    "t": "います"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0266.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-17",
+  "priority": 266
+ },
+ {
+  "id": "ja-0267",
+  "target": "窓を開けて、少し休みませんか。",
+  "english": "Shall we open the window and take a little break?",
+  "tokens": [
+   {
+    "t": "窓",
+    "r": "まど"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "開けて",
+    "r": "あけて"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "少し",
+    "r": "すこし"
+   },
+   {
+    "t": "休みません",
+    "r": "やすみません"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0267.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-17",
+  "priority": 267
+ },
+ {
+  "id": "ja-0268",
+  "target": "週末は何をしたいですか。",
+  "english": "What do you want to do this weekend?",
+  "tokens": [
+   {
+    "t": "週末",
+    "r": "しゅうまつ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "何",
+    "r": "なに"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "したいです"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "たいです = want to – したいです (shitai desu = want to do). It attaches to the verb's ます stem.",
+  "audio": "ja-ja-0268.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-18",
+  "priority": 268
+ },
+ {
+  "id": "ja-0269",
+  "target": "日曜日は家族と海に行きたいです。",
+  "english": "On Sunday I want to go to the sea with my family.",
+  "tokens": [
+   {
+    "t": "日曜日",
+    "r": "にちようび"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "家族",
+    "r": "かぞく"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "海",
+    "r": "うみ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "行きたいです",
+    "r": "いきたいです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0269.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "family"
+  ],
+  "grammarNode": "node-18",
+  "priority": 269
+ },
+ {
+  "id": "ja-0270",
+  "target": "冷たい水が飲みたいです。",
+  "english": "I want to drink some cold water.",
+  "tokens": [
+   {
+    "t": "冷たい",
+    "r": "つめたい"
+   },
+   {
+    "t": "水",
+    "r": "みず"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "飲みたいです",
+    "r": "のみたいです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "What you want takes が with たいです – 水が飲みたいです (mizu ga nomitai desu = I want to drink water).",
+  "audio": "ja-ja-0270.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-18",
+  "priority": 270
+ },
+ {
+  "id": "ja-0271",
+  "target": "今日は早く家に帰りたいです。",
+  "english": "Today I want to go home early.",
+  "tokens": [
+   {
+    "t": "今日",
+    "r": "きょう"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "早く",
+    "r": "はやく"
+   },
+   {
+    "t": "家",
+    "r": "いえ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "帰りたいです",
+    "r": "かえりたいです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0271.mp3",
+  "tags": [
+   "general",
+   "work",
+   "family"
+  ],
+  "grammarNode": "node-18",
+  "priority": 271
+ },
+ {
+  "id": "ja-0272",
+  "target": "私は日本の音楽が好きです。",
+  "english": "I like Japanese music.",
+  "tokens": [
+   {
+    "t": "私",
+    "r": "わたし"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "日本",
+    "r": "にほん"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "音楽",
+    "r": "おんがく"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "好き",
+    "r": "すき"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "Likes take が, not を – 音楽が好きです (ongaku ga suki desu = I like music).",
+  "audio": "ja-ja-0272.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-18",
+  "priority": 272
+ },
+ {
+  "id": "ja-0273",
+  "target": "兄はサッカーが好きです。",
+  "english": "My older brother likes soccer.",
+  "tokens": [
+   {
+    "t": "兄",
+    "r": "あに"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "サッカー"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "好き",
+    "r": "すき"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0273.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-18",
+  "priority": 273
+ },
+ {
+  "id": "ja-0274",
+  "target": "どんな映画が好きですか。",
+  "english": "What kind of movies do you like?",
+  "tokens": [
+   {
+    "t": "どんな"
+   },
+   {
+    "t": "映画",
+    "r": "えいが"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "好き",
+    "r": "すき"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0274.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-18",
+  "priority": 274
+ },
+ {
+  "id": "ja-0275",
+  "target": "甘い物はあまり好きじゃないです。",
+  "english": "I don't really like sweet things.",
+  "tokens": [
+   {
+    "t": "甘い",
+    "r": "あまい"
+   },
+   {
+    "t": "物",
+    "r": "もの"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "あまり"
+   },
+   {
+    "t": "好き",
+    "r": "すき"
+   },
+   {
+    "t": "じゃないです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "あまり + negative = not much – あまり好きじゃないです (amari suki ja nai desu = don't really like it).",
+  "audio": "ja-ja-0275.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-18",
+  "priority": 275
+ },
+ {
+  "id": "ja-0276",
+  "target": "休みの日は買い物がしたいです。",
+  "english": "On my days off I want to go shopping.",
+  "tokens": [
+   {
+    "t": "休み",
+    "r": "やすみ"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "日",
+    "r": "ひ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "買い物",
+    "r": "かいもの"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "したいです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0276.mp3",
+  "tags": [
+   "general"
+  ],
+  "grammarNode": "node-18",
+  "priority": 276
+ },
+ {
+  "id": "ja-0277",
+  "target": "日本ですしを食べたいです。",
+  "english": "I want to eat sushi in Japan.",
+  "tokens": [
+   {
+    "t": "日本",
+    "r": "にほん"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "すし"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "食べたいです",
+    "r": "たべたいです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0277.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-18",
+  "priority": 277
+ },
+ {
+  "id": "ja-0278",
+  "target": "新しいパソコンが買いたいです。",
+  "english": "I want to buy a new computer.",
+  "tokens": [
+   {
+    "t": "新しい",
+    "r": "あたらしい"
+   },
+   {
+    "t": "パソコン"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "買いたいです",
+    "r": "かいたいです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0278.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-18",
+  "priority": 278
+ },
+ {
+  "id": "ja-0279",
+  "target": "犬と猫と、どちらが好きですか。",
+  "english": "Which do you like better, dogs or cats?",
+  "tokens": [
+   {
+    "t": "犬",
+    "r": "いぬ"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "猫",
+    "r": "ねこ"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "どちら"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "好き",
+    "r": "すき"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0279.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-18",
+  "priority": 279
+ },
+ {
+  "id": "ja-0280",
+  "target": "家族と旅行がしたいです。",
+  "english": "I want to take a trip with my family.",
+  "tokens": [
+   {
+    "t": "家族",
+    "r": "かぞく"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "旅行",
+    "r": "りょこう"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "したいです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0280.mp3",
+  "tags": [
+   "general",
+   "family",
+   "travel"
+  ],
+  "grammarNode": "node-18",
+  "priority": 280
+ },
+ {
+  "id": "ja-0281",
+  "target": "父は古い車が好きです。",
+  "english": "My father likes old cars.",
+  "tokens": [
+   {
+    "t": "父",
+    "r": "ちち"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "古い",
+    "r": "ふるい"
+   },
+   {
+    "t": "車",
+    "r": "くるま"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "好き",
+    "r": "すき"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0281.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-18",
+  "priority": 281
+ },
+ {
+  "id": "ja-0282",
+  "target": "もっと日本語が話したいです。",
+  "english": "I want to speak more Japanese.",
+  "tokens": [
+   {
+    "t": "もっと"
+   },
+   {
+    "t": "日本語",
+    "r": "にほんご"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "話したいです",
+    "r": "はなしたいです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0282.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-18",
+  "priority": 282
+ },
+ {
+  "id": "ja-0283",
+  "target": "山で写真が撮りたいです。",
+  "english": "I want to take photos in the mountains.",
+  "tokens": [
+   {
+    "t": "山",
+    "r": "やま"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "写真",
+    "r": "しゃしん"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "撮りたいです",
+    "r": "とりたいです"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0283.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-18",
+  "priority": 283
+ },
+ {
+  "id": "ja-0284",
+  "target": "今晩は何が食べたいですか。",
+  "english": "What do you want to eat tonight?",
+  "tokens": [
+   {
+    "t": "今晩",
+    "r": "こんばん"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "何",
+    "r": "なに"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "食べたいです",
+    "r": "たべたいです"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0284.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-18",
+  "priority": 284
+ },
+ {
+  "id": "ja-0285",
+  "target": "土曜日の朝、九時に起きました。",
+  "english": "On Saturday morning I got up at nine.",
+  "tokens": [
+   {
+    "t": "土曜日",
+    "r": "どようび"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "朝",
+    "r": "あさ"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "九時",
+    "r": "くじ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "起きました",
+    "r": "おきました"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0285.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-14",
+  "priority": 285
+ },
+ {
+  "id": "ja-0286",
+  "target": "すみません、写真を撮ってください。",
+  "english": "Excuse me, please take a photo.",
+  "tokens": [
+   {
+    "t": "すみません"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "写真",
+    "r": "しゃしん"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "撮って",
+    "r": "とって"
+   },
+   {
+    "t": "ください"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "てください makes a polite request – 撮ってください (totte kudasai = please take a photo).",
+  "audio": "ja-ja-0286.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-16",
+  "priority": 286
+ },
+ {
+  "id": "ja-0287",
+  "target": "駅の近くにいいレストランがあります。",
+  "english": "There is a good restaurant near the station.",
+  "tokens": [
+   {
+    "t": "駅",
+    "r": "えき"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "近く",
+    "r": "ちかく"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "いい"
+   },
+   {
+    "t": "レストラン"
+   },
+   {
+    "t": "が"
+   },
+   {
+    "t": "あります"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0287.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-05",
+  "priority": 287
+ },
+ {
+  "id": "ja-0288",
+  "target": "一緒に昼ご飯を食べませんか。",
+  "english": "Won't you have lunch together?",
+  "tokens": [
+   {
+    "t": "一緒に",
+    "r": "いっしょに"
+   },
+   {
+    "t": "昼ご飯",
+    "r": "ひるごはん"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "食べません",
+    "r": "たべません"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "ませんか invites – 食べませんか (tabemasen ka = won't you eat with me?).",
+  "audio": "ja-ja-0288.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-09",
+  "priority": 288
+ },
+ {
+  "id": "ja-0289",
+  "target": "今日はいい天気ですね。",
+  "english": "Nice weather today, isn't it?",
+  "tokens": [
+   {
+    "t": "今日",
+    "r": "きょう"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "いい"
+   },
+   {
+    "t": "天気",
+    "r": "てんき"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "ね"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0289.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-11",
+  "priority": 289
+ },
+ {
+  "id": "ja-0290",
+  "target": "妹も一緒に来ます。",
+  "english": "My little sister is coming along too.",
+  "tokens": [
+   {
+    "t": "妹",
+    "r": "いもうと"
+   },
+   {
+    "t": "も"
+   },
+   {
+    "t": "一緒に",
+    "r": "いっしょに"
+   },
+   {
+    "t": "来ます",
+    "r": "きます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0290.mp3",
+  "tags": [
+   "general",
+   "family",
+   "travel"
+  ],
+  "grammarNode": "node-15",
+  "priority": 290
+ },
+ {
+  "id": "ja-0291",
+  "target": "すみません、これを二つください。",
+  "english": "Excuse me, two of these, please.",
+  "tokens": [
+   {
+    "t": "すみません"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "これ"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "二つ",
+    "r": "ふたつ"
+   },
+   {
+    "t": "ください"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "〜つ counts objects – 二つください (futatsu kudasai = two, please).",
+  "audio": "ja-ja-0291.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-14",
+  "priority": 291
+ },
+ {
+  "id": "ja-0292",
+  "target": "先週、家族と京都に行きました。",
+  "english": "Last week I went to Kyoto with my family.",
+  "tokens": [
+   {
+    "t": "先週",
+    "r": "せんしゅう"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "家族",
+    "r": "かぞく"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "京都",
+    "r": "きょうと"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "行きました",
+    "r": "いきました"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0292.mp3",
+  "tags": [
+   "general",
+   "family",
+   "travel"
+  ],
+  "grammarNode": "node-10",
+  "priority": 292
+ },
+ {
+  "id": "ja-0293",
+  "target": "バスで駅まで行きます。",
+  "english": "I take the bus as far as the station.",
+  "tokens": [
+   {
+    "t": "バス"
+   },
+   {
+    "t": "で"
+   },
+   {
+    "t": "駅",
+    "r": "えき"
+   },
+   {
+    "t": "まで"
+   },
+   {
+    "t": "行きます",
+    "r": "いきます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "まで marks the end point – 駅まで行きます (eki made ikimasu = I go as far as the station).",
+  "audio": "ja-ja-0293.mp3",
+  "tags": [
+   "general",
+   "travel",
+   "work"
+  ],
+  "grammarNode": "node-08",
+  "priority": 293
+ },
+ {
+  "id": "ja-0294",
+  "target": "この町は夜も静かです。",
+  "english": "This town is quiet at night too.",
+  "tokens": [
+   {
+    "t": "この"
+   },
+   {
+    "t": "町",
+    "r": "まち"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "夜",
+    "r": "よる"
+   },
+   {
+    "t": "も"
+   },
+   {
+    "t": "静か",
+    "r": "しずか"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0294.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-12",
+  "priority": 294
+ },
+ {
+  "id": "ja-0295",
+  "target": "毎晩、母とテレビを見ます。",
+  "english": "Every evening I watch TV with my mother.",
+  "tokens": [
+   {
+    "t": "毎晩",
+    "r": "まいばん"
+   },
+   {
+    "t": "、"
+   },
+   {
+    "t": "母",
+    "r": "はは"
+   },
+   {
+    "t": "と"
+   },
+   {
+    "t": "テレビ"
+   },
+   {
+    "t": "を"
+   },
+   {
+    "t": "見ます",
+    "r": "みます"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0295.mp3",
+  "tags": [
+   "general",
+   "family"
+  ],
+  "grammarNode": "node-06",
+  "priority": 295
+ },
+ {
+  "id": "ja-0296",
+  "target": "それは兄の自転車です。",
+  "english": "That is my older brother's bicycle.",
+  "tokens": [
+   {
+    "t": "それ"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "兄",
+    "r": "あに"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "自転車",
+    "r": "じてんしゃ"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "grammar": "の shows possession – 兄の自転車 (ani no jitensha = my brother's bicycle).",
+  "audio": "ja-ja-0296.mp3",
+  "tags": [
+   "general",
+   "family",
+   "travel"
+  ],
+  "grammarNode": "node-13",
+  "priority": 296
+ },
+ {
+  "id": "ja-0297",
+  "target": "お仕事は何ですか。",
+  "english": "What is your job?",
+  "tokens": [
+   {
+    "t": "お仕事",
+    "r": "おしごと"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "何",
+    "r": "なん"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "か"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0297.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-03",
+  "priority": 297
+ },
+ {
+  "id": "ja-0298",
+  "target": "仕事は八時に始まります。",
+  "english": "Work starts at eight.",
+  "tokens": [
+   {
+    "t": "仕事",
+    "r": "しごと"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "八時",
+    "r": "はちじ"
+   },
+   {
+    "t": "に"
+   },
+   {
+    "t": "始まります",
+    "r": "はじまります"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0298.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-07",
+  "priority": 298
+ },
+ {
+  "id": "ja-0299",
+  "target": "あの店のパンはおいしいですよ。",
+  "english": "The bread at that shop is delicious, you know.",
+  "tokens": [
+   {
+    "t": "あの"
+   },
+   {
+    "t": "店",
+    "r": "みせ"
+   },
+   {
+    "t": "の"
+   },
+   {
+    "t": "パン"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "おいしい"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "よ"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0299.mp3",
+  "tags": [
+   "general",
+   "travel"
+  ],
+  "grammarNode": "node-04",
+  "priority": 299
+ },
+ {
+  "id": "ja-0300",
+  "target": "明日は休みです。",
+  "english": "Tomorrow is a day off.",
+  "tokens": [
+   {
+    "t": "明日",
+    "r": "あした"
+   },
+   {
+    "t": "は"
+   },
+   {
+    "t": "休み",
+    "r": "やすみ"
+   },
+   {
+    "t": "です"
+   },
+   {
+    "t": "。"
+   }
+  ],
+  "audio": "ja-ja-0300.mp3",
+  "tags": [
+   "general",
+   "work"
+  ],
+  "grammarNode": "node-02",
+  "priority": 300
  }
 ]

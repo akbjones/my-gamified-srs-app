@@ -60,6 +60,8 @@ const GODAN_ROWS: Record<string, { i: string; a: string; te: string; ta: string 
  *  through conjugate() (audit gate). Grows with the deck; the P2 lint
  *  refuses deck verbs missing from this map (kanji-る verbs are otherwise
  *  unclassifiable — the class is not derivable from orthography). */
+// ── GENERATED-VERBS-START (scripts/tmp/ja-p2/merge.ts splices between
+//    these markers — keep lexical overrides (te/nai) when re-merging) ──
 export const KNOWN_VERBS: Record<string, VerbInfo> = {
   // ── godan ──────────────────────────────────────────────────────
   '行く': { cls: 'godan', kana: 'いく' }, // te 行って/いって is lexical, in stems()
@@ -141,7 +143,24 @@ export const KNOWN_VERBS: Record<string, VerbInfo> = {
   '少ない': { cls: 'iadj', kana: 'すくない' },
   'いい': { cls: 'iadj' }, // stem よ — special-cased in adjTable
   '良い': { cls: 'iadj', kana: 'よい' },
+  // ── P2 wave-authored verbs (merged) ──
+  'ちがう': { cls: 'godan' },
+  'とる': { cls: 'godan' },
+  '分かる': { cls: 'godan', kana: 'わかる' },
+  '熱い': { cls: 'iadj', kana: 'あつい' },
+  '冷たい': { cls: 'iadj', kana: 'つめたい' },
+  '広い': { cls: 'iadj', kana: 'ひろい' },
+  'かかる': { cls: 'godan' },
+  '言う': { cls: 'godan', kana: 'いう' },
+  '止まる': { cls: 'godan', kana: 'とまる' },
+  '手伝う': { cls: 'godan', kana: 'てつだう' },
+  '取る': { cls: 'godan', kana: 'とる' },
+  '住む': { cls: 'godan', kana: 'すむ' },
+  '降る': { cls: 'godan', kana: 'ふる' },
+  '始まる': { cls: 'godan', kana: 'はじまる' },
+  '甘い': { cls: 'iadj', kana: 'あまい' },
 };
+// ── GENERATED-VERBS-END ──
 
 // ── Copula: its own table (not a KNOWN_VERBS class) ──────────────
 const COPULA_TABLE: ConjugationTable = {

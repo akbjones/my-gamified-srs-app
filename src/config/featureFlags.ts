@@ -17,6 +17,9 @@ export const GRAMMAR_TIPS_KILL_SWITCH = false; // set true to hide tips everywhe
 export const GRAMMAR_TIPS_LANGS: ReadonlySet<Language> = new Set<Language>([
   'spanish', // pilot passed all gates 2026-07-21: 882 tips, 22.4%, linter-clean (user flipped)
   'hindi',   // wave passed all gates 2026-07-22: 582 tips, 18.3%, verified + linter-clean (user flipped)
+  'korean',     // Wave A 2026-07-22: 1,024 tips, 26.0%, verified + linter-clean
+  'greek',      // Wave A 2026-07-22: 1,055 tips, 26.8%, verified + linter-clean
+  'indonesian', // Wave A 2026-07-22: 1,021 tips, 26.0%, verified + linter-clean
 ]);
 
 /** Should the UI surface grammar tips for this language? */

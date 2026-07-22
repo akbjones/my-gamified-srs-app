@@ -185,8 +185,10 @@ async function makeClip(text, rate, trim) {
     last = { buf, qc };
     // One-utterance check by DURATION: a stop+vowel syllable legitimately
     // shows 2 RMS spans (burst + vowel), but a leftover double runs ~2s+
-    // while a trimmed single is ~1s.
-    const singleOk = !trim || qc.durSec <= 1.4;
+    // while a trimmed single is ~1s. Also cap the utterance itself at 0.6s –
+    // Chirp3 sometimes streeetches a bare vowel ("aaaa"); a shorter take is
+    // always one retry away.
+    const singleOk = !trim || (qc.durSec <= 1.4 && qc.voicedSec <= 0.6);
     if (qc.rmsPeakDb >= -18 && qc.voicedSec >= 0.15 && singleOk) {
       clipCache.set(key, buf);
       return { buf, qc };

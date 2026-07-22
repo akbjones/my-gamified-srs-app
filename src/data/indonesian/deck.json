@@ -11,7 +11,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 1,
-    "grammar": "Apa kabar? is literally 'what news?' — the everyday 'how are you?'. Reply: Kabar baik."
+    "grammar": "Apa kabar? is literally 'what news?' – the everyday 'how are you?'. The stock reply: Kabar baik (good news = I'm fine)."
   },
   {
     "id": "id-0002",
@@ -127,7 +127,8 @@
       "family"
     ],
     "grammarNode": "node-01",
-    "priority": 10
+    "priority": 10,
+    "grammar": "The owner comes after the thing owned: keluarga kamu is literally 'family you' = your family. Reverse of English order."
   },
   {
     "id": "id-0011",
@@ -154,7 +155,8 @@
       "family"
     ],
     "grammarNode": "node-01",
-    "priority": 12
+    "priority": 12,
+    "grammar": "Names take siapa (who), not apa: Siapa nama kamu? is literally 'Who is your name?' – asking with apa sounds off."
   },
   {
     "id": "id-0013",
@@ -206,8 +208,7 @@
       "work"
     ],
     "grammarNode": "node-01",
-    "priority": 16,
-    "grammar": "Perkenalkan opens an introduction: Perkenalkan, ini istri saya = meet my wife."
+    "priority": 16
   },
   {
     "id": "id-0017",
@@ -220,7 +221,8 @@
       "travel"
     ],
     "grammarNode": "node-01",
-    "priority": 17
+    "priority": 17,
+    "grammar": "Anda is the formal 'you', always capitalized, safe with strangers – kamu is for friends. Senang berkenalan dengan Anda keeps it polite."
   },
   {
     "id": "id-0018",
@@ -232,8 +234,7 @@
       "work"
     ],
     "grammarNode": "node-01",
-    "priority": 18,
-    "grammar": "bekerja = ber- + kerja (work): Saya bekerja di rumah sakit = I work at a hospital."
+    "priority": 18
   },
   {
     "id": "id-0019",
@@ -271,8 +272,7 @@
       "work"
     ],
     "grammarNode": "node-01",
-    "priority": 21,
-    "grammar": "No word for 'am/is' before nouns: Saya guru = I am a teacher."
+    "priority": 21
   },
   {
     "id": "id-0022",
@@ -460,7 +460,8 @@
       "family"
     ],
     "grammarNode": "node-01",
-    "priority": 36
+    "priority": 36,
+    "grammar": "Doubling a noun makes it plural: anak = child, anak-anak = children. No plural ending exists – repetition does the job."
   },
   {
     "id": "id-0037",
@@ -601,7 +602,8 @@
       "travel"
     ],
     "grammarNode": "node-02",
-    "priority": 47
+    "priority": 47,
+    "grammar": "No separate word for 'Japanese' – nationality is orang + country name: orang Jepang = Japan person. Works for any country: orang Inggris = English person."
   },
   {
     "id": "id-0048",
@@ -614,7 +616,8 @@
       "family"
     ],
     "grammarNode": "node-02",
-    "priority": 48
+    "priority": 48,
+    "grammar": "One verb form covers it all: tidak bekerja = 'are not working' – no 'are', no -ing. Bekerja never changes for person or tense."
   },
   {
     "id": "id-0049",
@@ -713,8 +716,7 @@
       "family"
     ],
     "grammarNode": "node-02",
-    "priority": 56,
-    "grammar": "bisa = can: Saya tidak bisa datang = I cannot come."
+    "priority": 56
   },
   {
     "id": "id-0057",
@@ -765,7 +767,8 @@
       "family"
     ],
     "grammarNode": "node-02",
-    "priority": 60
+    "priority": 60,
+    "grammar": "dia means he or she – Indonesian pronouns skip gender. kakak too: an older sibling, brother or sister. English forces a choice this sentence never makes."
   },
   {
     "id": "id-0061",
@@ -829,7 +832,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 65,
-    "grammar": "sudah = already: Apakah kamu sudah makan? = Have you eaten (yet)?"
+    "grammar": "Answer with the question's own word: sudah (already) or belum (not yet) – not ya/tidak. Belum is the natural 'no' to sudah makan."
   },
   {
     "id": "id-0066",
@@ -892,7 +895,8 @@
       "work"
     ],
     "grammarNode": "node-02",
-    "priority": 70
+    "priority": 70,
+    "grammar": "Pak (short for bapak, father) is the normal polite address for any adult man – Apa itu, Pak? sounds friendly, not stiff. For women it's Bu."
   },
   {
     "id": "id-0071",
@@ -968,7 +972,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 76,
-    "grammar": "sudah marks completion — no past tense needed: Saya sudah makan. (I already ate.)"
+    "grammar": "Indonesian verbs never change for past tense – sudah does the work: Saya sudah makan siang = I already ate lunch. It's a completion marker, not a verb form."
   },
   {
     "id": "id-0077",
@@ -980,7 +984,8 @@
       "travel"
     ],
     "grammarNode": "node-03",
-    "priority": 77
+    "priority": 77,
+    "grammar": "No perfect tense needed – sudah before a plain verb does it all: sudah tiba = have arrived. The verb tiba never changes form."
   },
   {
     "id": "id-0078",
@@ -1028,7 +1033,8 @@
       "family"
     ],
     "grammarNode": "node-03",
-    "priority": 81
+    "priority": 81,
+    "grammar": "Sudah tidur here means the state now – already asleep, not 'already slept'. With verbs like tidur, sudah often marks a result that still holds."
   },
   {
     "id": "id-0082",
@@ -1053,7 +1059,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 83,
-    "grammar": "belum = not yet — expected to happen later: Saya belum makan. (I have not eaten yet.)"
+    "grammar": "belum means 'not yet' and implies it will still happen: Saya belum sarapan = I haven't had breakfast yet. Even 'are you married?' is answered with belum, not tidak."
   },
   {
     "id": "id-0084",
@@ -1066,7 +1072,8 @@
       "work"
     ],
     "grammarNode": "node-03",
-    "priority": 84
+    "priority": 84,
+    "grammar": "Belum, not tidak: belum pulang = not home yet, still expected. Tidak pulang would mean he isn't coming home at all."
   },
   {
     "id": "id-0085",
@@ -1163,8 +1170,7 @@
       "family"
     ],
     "grammarNode": "node-03",
-    "priority": 92,
-    "grammar": "untuk = for (purpose): belajar untuk ujian (study for the exam)"
+    "priority": 92
   },
   {
     "id": "id-0093",
@@ -1201,7 +1207,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 95,
-    "grammar": "akan marks the future — the verb never changes: Saya akan pergi. (I will go.)"
+    "grammar": "akan puts a sentence in the future without touching the verb: Saya akan pergi = I will go. pergi keeps the same form in past, present, and future."
   },
   {
     "id": "id-0096",
@@ -1225,7 +1231,8 @@
       "work"
     ],
     "grammarNode": "node-03",
-    "priority": 97
+    "priority": 97,
+    "grammar": "Akan is optional once a time word sets the future – with bulan depan in the sentence, Dia mulai pekerjaan baru bulan depan works fine too."
   },
   {
     "id": "id-0098",
@@ -1238,7 +1245,8 @@
       "work"
     ],
     "grammarNode": "node-03",
-    "priority": 98
+    "priority": 98,
+    "grammar": "Sebentar lagi is literally 'a moment more' – lagi after a time span means that far from now: seminggu lagi = in a week."
   },
   {
     "id": "id-0099",
@@ -1274,7 +1282,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 101,
-    "grammar": "baru saja = just now: Saya baru saja bangun. (I just woke up.)"
+    "grammar": "Baru literally means new – baru saja bangun is 'newly woke up', so baru (saja) before a verb = just did it."
   },
   {
     "id": "id-0102",
@@ -1459,8 +1467,7 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 116,
-    "grammar": "di mana asks where something is: Di mana kamar mandi? (Where is the bathroom?)"
+    "priority": 116
   },
   {
     "id": "id-0117",
@@ -1472,7 +1479,8 @@
       "family"
     ],
     "grammarNode": "node-04",
-    "priority": 117
+    "priority": 117,
+    "grammar": "Question words can stay in place: Kamu tinggal di mana? is literally 'You live where?' – unlike English, di mana doesn't have to move to the front."
   },
   {
     "id": "id-0118",
@@ -1533,8 +1541,7 @@
       "family"
     ],
     "grammarNode": "node-04",
-    "priority": 122,
-    "grammar": "kapan = when: Kapan kamu pulang? (When are you going home?)"
+    "priority": 122
   },
   {
     "id": "id-0123",
@@ -1582,8 +1589,7 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 126,
-    "grammar": "berapa asks how much or how many: Berapa harga tiket ini? (How much is this ticket?)"
+    "priority": 126
   },
   {
     "id": "id-0127",
@@ -1608,7 +1614,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 128
+    "priority": 128,
+    "grammar": "harganya = harga + -nya ('its price'): Kopi ini harganya... is literally 'This coffee, its price 25 thousand' – no verb needed."
   },
   {
     "id": "id-0129",
@@ -1658,8 +1665,7 @@
       "family"
     ],
     "grammarNode": "node-04",
-    "priority": 132,
-    "grammar": "berapa umur = how old: Berapa umur anak kamu? (How old is your child?)"
+    "priority": 132
   },
   {
     "id": "id-0133",
@@ -1709,7 +1715,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 136,
-    "grammar": "jam berapa = what time: Jam berapa sekarang? (What time is it now?)"
+    "grammar": "Order matters: jam berapa = what time, berapa jam = how many hours. Jam berapa sekarang? asks for the clock time, not a duration."
   },
   {
     "id": "id-0137",
@@ -1806,8 +1812,7 @@
       "family"
     ],
     "grammarNode": "node-04",
-    "priority": 144,
-    "grammar": "bagaimana = how: Bagaimana kabar kamu? (How are you?)"
+    "priority": 144
   },
   {
     "id": "id-0145",
@@ -2059,7 +2064,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 165,
-    "grammar": "sedang marks an action happening right now: sedang membaca = is reading."
+    "grammar": "Indonesian verbs never change for -ing – sedang does the job: sedang membaca = in the middle of reading. Drop sedang and it just means 'read'."
   },
   {
     "id": "id-0166",
@@ -2106,7 +2111,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 169,
-    "grammar": "sudah marks a finished action: sudah bangun = already woke up."
+    "grammar": "No past tense here – sudah bangun is literally 'already wake'. sudah marks the action as finished; the verb bangun itself never changes."
   },
   {
     "id": "id-0170",
@@ -2156,7 +2161,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 173,
-    "grammar": "langsung means straight away: langsung pulang = go straight home."
+    "grammar": "pulang packs 'go home' into one word – langsung pulang = head straight home. There is no separate word for 'home' in the sentence."
   },
   {
     "id": "id-0174",
@@ -2312,7 +2317,8 @@
       "general"
     ],
     "grammarNode": "node-05",
-    "priority": 186
+    "priority": 186,
+    "grammar": "sarapan is a verb all by itself – Saya sarapan roti is literally 'I breakfast bread'. No word for 'have' or 'eat' needed."
   },
   {
     "id": "id-0187",
@@ -2371,7 +2377,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 191,
-    "grammar": "mau + verb = want to: mau pesan = want to order."
+    "grammar": "When ordering, the number usually follows the dish: nasi goreng satu – literally 'fried rice, one'."
   },
   {
     "id": "id-0192",
@@ -2383,7 +2389,8 @@
       "travel"
     ],
     "grammarNode": "node-06",
-    "priority": 192
+    "priority": 192,
+    "grammar": "Sekali means very but comes after the adjective: enak sekali = very tasty, literally 'tasty very'."
   },
   {
     "id": "id-0193",
@@ -2419,8 +2426,7 @@
       "travel"
     ],
     "grammarNode": "node-06",
-    "priority": 195,
-    "grammar": "saja means just/only: es teh saja = just iced tea."
+    "priority": 195
   },
   {
     "id": "id-0196",
@@ -2432,8 +2438,7 @@
       "travel"
     ],
     "grammarNode": "node-06",
-    "priority": 196,
-    "grammar": "Berapa harga ...? asks a price: Berapa harga kopi ini? = How much is this coffee?"
+    "priority": 196
   },
   {
     "id": "id-0197",
@@ -2529,7 +2534,8 @@
       "travel"
     ],
     "grammarNode": "node-06",
-    "priority": 204
+    "priority": 204,
+    "grammar": "Kami means we/our but excludes the person you're talking to: pesanan kami = our order, not yours. Kita would include them."
   },
   {
     "id": "id-0205",
@@ -2579,8 +2585,7 @@
       "travel"
     ],
     "grammarNode": "node-06",
-    "priority": 208,
-    "grammar": "terlalu = too (more than you want): terlalu mahal = too expensive."
+    "priority": 208
   },
   {
     "id": "id-0209",
@@ -2604,8 +2609,7 @@
       "travel"
     ],
     "grammarNode": "node-06",
-    "priority": 210,
-    "grammar": "kalau means if: kalau beli dua = if (you) buy two."
+    "priority": 210
   },
   {
     "id": "id-0211",
@@ -2673,7 +2677,8 @@
       "general"
     ],
     "grammarNode": "node-06",
-    "priority": 216
+    "priority": 216,
+    "grammar": "Itu comes after its noun: toko itu = that shop, literally 'shop that'. Ini (this) follows its noun the same way."
   },
   {
     "id": "id-0217",
@@ -2755,7 +2760,8 @@
       "general"
     ],
     "grammarNode": "node-06",
-    "priority": 223
+    "priority": 223,
+    "grammar": "Belum means not yet: pesanan saya belum datang. Use belum, not tidak, for anything that could still happen."
   },
   {
     "id": "id-0224",
@@ -2793,7 +2799,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 226,
-    "grammar": "punya = have: Saya punya adik = I have a younger sibling."
+    "grammar": "Indonesian sorts siblings by age, not gender: kakak = older sibling, adik = younger. Dua kakak never tells you brother or sister."
   },
   {
     "id": "id-0227",
@@ -2877,7 +2883,8 @@
       "family"
     ],
     "grammarNode": "node-07",
-    "priority": 233
+    "priority": 233,
+    "grammar": "Adjectives follow their noun: kopi hitam is literally 'coffee black'. Noun first, adjective second – the reverse of English."
   },
   {
     "id": "id-0234",
@@ -3031,8 +3038,7 @@
       "family"
     ],
     "grammarNode": "node-07",
-    "priority": 246,
-    "grammar": "anak perempuan = daughter (lit. child female); anak laki-laki = son."
+    "priority": 246
   },
   {
     "id": "id-0247",
@@ -3044,7 +3050,8 @@
       "family"
     ],
     "grammarNode": "node-07",
-    "priority": 247
+    "priority": 247,
+    "grammar": "itu (that) comes after its noun: anak laki-laki itu = literally 'child male that'. ini (this) works the same way."
   },
   {
     "id": "id-0248",
@@ -3057,7 +3064,7 @@
     ],
     "grammarNode": "node-07",
     "priority": 248,
-    "grammar": "lebih + adjective + dari = more ... than: lebih muda dari = younger than."
+    "grammar": "Comparisons borrow dari (from) for 'than': lebih muda dari ayah saya = more young from my father."
   },
   {
     "id": "id-0249",
@@ -3069,7 +3076,8 @@
       "family"
     ],
     "grammarNode": "node-07",
-    "priority": 249
+    "priority": 249,
+    "grammar": "Verbs never change for past time: menikah stays the same. Tahun lalu (last year) alone signals it already happened."
   },
   {
     "id": "id-0250",
@@ -3116,7 +3124,8 @@
       "general"
     ],
     "grammarNode": "node-07",
-    "priority": 253
+    "priority": 253,
+    "grammar": "Berapa (how much) asks age: Berapa umur kamu = literally 'how-much age you'. No verb, no word order flip."
   },
   {
     "id": "id-0254",
@@ -3209,8 +3218,7 @@
       "family"
     ],
     "grammarNode": "node-07",
-    "priority": 261,
-    "grammar": "No word for is: Istri saya guru = My wife (is) a teacher."
+    "priority": 261
   },
   {
     "id": "id-0262",
@@ -3234,8 +3242,7 @@
       "family"
     ],
     "grammarNode": "node-07",
-    "priority": 263,
-    "grammar": "keluarga besar = extended family (lit. big family)."
+    "priority": 263
   },
   {
     "id": "id-0264",
@@ -3247,8 +3254,7 @@
       "travel"
     ],
     "grammarNode": "node-08",
-    "priority": 264,
-    "grammar": "belok kiri = turn left; belok kanan = turn right."
+    "priority": 264
   },
   {
     "id": "id-0265",
@@ -3260,7 +3266,8 @@
       "travel"
     ],
     "grammarNode": "node-08",
-    "priority": 265
+    "priority": 265,
+    "grammar": "ada isn't 'have' here – it marks that something is somewhere: kantor pos ada di sebelah kanan = the post office is (exists) on the right. Indonesian drops 'is', but location keeps ada."
   },
   {
     "id": "id-0266",
@@ -3369,7 +3376,8 @@
       "general"
     ],
     "grammarNode": "node-08",
-    "priority": 274
+    "priority": 274,
+    "grammar": "Descriptions follow the noun and 'that' comes last: tas hitam itu = bag-black-that. English order is reversed – itu always closes the phrase."
   },
   {
     "id": "id-0275",
@@ -3382,7 +3390,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 275,
-    "grammar": "di depan = in front of; di belakang = behind."
+    "grammar": "The owner follows the thing owned: mobil saya = car-my. No 's and no 'of' – just put the possessor right after the noun it belongs to."
   },
   {
     "id": "id-0276",
@@ -3418,7 +3426,8 @@
       "work"
     ],
     "grammarNode": "node-08",
-    "priority": 278
+    "priority": 278,
+    "grammar": "jam goes before the number for clock time: jam sembilan = nine o'clock. Flip it to sembilan jam and it means nine hours – the order decides which."
   },
   {
     "id": "id-0279",
@@ -3455,7 +3464,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 281,
-    "grammar": "dari ... ke ... = from ... to: dari sini ke bandara = from here to the airport."
+    "grammar": "No do/does shuffle in questions: berapa lama (how long) just sits where the answer would – Dari sini ke bandara berapa lama? The word order never moves."
   },
   {
     "id": "id-0282",
@@ -3504,8 +3513,7 @@
       "travel"
     ],
     "grammarNode": "node-08",
-    "priority": 285,
-    "grammar": "naik = get on, turun = get off: turun di halte = get off at the stop."
+    "priority": 285
   },
   {
     "id": "id-0286",
@@ -3541,7 +3549,8 @@
       "work"
     ],
     "grammarNode": "node-08",
-    "priority": 288
+    "priority": 288,
+    "grammar": "kami means 'we, not including you': kantor kami = our office, but not yours. If the listener is part of the group, Indonesian switches to kita."
   },
   {
     "id": "id-0289",
@@ -3553,7 +3562,8 @@
       "work"
     ],
     "grammarNode": "node-08",
-    "priority": 289
+    "priority": 289,
+    "grammar": "Verbs never change for tense – sudah does the work: sudah mengirim = have already sent. Drop sudah and the same sentence could be present or future."
   },
   {
     "id": "id-0290",
@@ -3578,7 +3588,8 @@
       "work"
     ],
     "grammarNode": "node-08",
-    "priority": 291
+    "priority": 291,
+    "grammar": "dia is both 'he' and 'she' – Indonesian pronouns ignore gender. Dia sedang bekerja could describe anyone; only context tells you who."
   },
   {
     "id": "id-0292",
@@ -3614,8 +3625,7 @@
       "travel"
     ],
     "grammarNode": "node-08",
-    "priority": 294,
-    "grammar": "jalan kaki = go on foot: Saya jalan kaki ke pasar = I walk to the market."
+    "priority": 294
   },
   {
     "id": "id-0295",
@@ -3821,7 +3831,8 @@
       "travel"
     ],
     "grammarNode": "node-09",
-    "priority": 311
+    "priority": 311,
+    "grammar": "No verb for 'goes' here – yang ke is enough: bus yang ke bandara = the bus that goes to the airport."
   },
   {
     "id": "id-0312",
@@ -3856,8 +3867,7 @@
       "general"
     ],
     "grammarNode": "node-09",
-    "priority": 314,
-    "grammar": "yang + adjective works like 'the ... one': yang hitam = the black one."
+    "priority": 314
   },
   {
     "id": "id-0315",
@@ -3894,8 +3904,7 @@
       "travel"
     ],
     "grammarNode": "node-09",
-    "priority": 317,
-    "grammar": "yang bisa = who can: orang yang bisa berbicara = a person who can speak."
+    "priority": 317
   },
   {
     "id": "id-0318",
@@ -3930,8 +3939,7 @@
       "general"
     ],
     "grammarNode": "node-09",
-    "priority": 320,
-    "grammar": "yang tidak = 'that is not': kopi yang tidak manis = coffee that isn't sweet."
+    "priority": 320
   },
   {
     "id": "id-0321",
@@ -4001,8 +4009,7 @@
       "work"
     ],
     "grammarNode": "node-09",
-    "priority": 326,
-    "grammar": "lebih ... daripada compares two things: lebih enak daripada = tastier than."
+    "priority": 326
   },
   {
     "id": "id-0327",
@@ -4172,7 +4179,8 @@
       "travel"
     ],
     "grammarNode": "node-09",
-    "priority": 340
+    "priority": 340,
+    "grammar": "yang here means 'the one': Kamar ini yang paling murah = this room is the one that's cheapest. Without yang it's just 'this room is cheapest'."
   },
   {
     "id": "id-0341",
@@ -4430,7 +4438,7 @@
     ],
     "grammarNode": "node-10",
     "priority": 361,
-    "grammar": "silakan invites someone to do something: silakan duduk = please have a seat."
+    "grammar": "silakan invites someone to do something for their own benefit: Silakan duduk = please have a seat. tolong is the other 'please' – it asks someone to help you."
   },
   {
     "id": "id-0362",
@@ -4515,8 +4523,7 @@
       "family"
     ],
     "grammarNode": "node-10",
-    "priority": 368,
-    "grammar": "jangan lupa = don't forget: jangan lupa bawa payung = don't forget the umbrella."
+    "priority": 368
   },
   {
     "id": "id-0369",
@@ -4529,7 +4536,7 @@
     ],
     "grammarNode": "node-10",
     "priority": 369,
-    "grammar": "jangan + verb = don't: jangan pergi = don't go."
+    "grammar": "Commands are negated with jangan, not tidak: jangan pergi = don't go. tidak only states facts (dia tidak pergi = he doesn't go) – it can't forbid anything."
   },
   {
     "id": "id-0370",
@@ -4590,8 +4597,7 @@
       "travel"
     ],
     "grammarNode": "node-10",
-    "priority": 374,
-    "grammar": "jangan khawatir = don't worry — a set phrase you will hear every day."
+    "priority": 374
   },
   {
     "id": "id-0375",
@@ -4603,8 +4609,7 @@
       "travel"
     ],
     "grammarNode": "node-10",
-    "priority": 375,
-    "grammar": "boleh saya minta = 'may I have': boleh saya minta air? = may I have water?"
+    "priority": 375
   },
   {
     "id": "id-0376",
@@ -4653,7 +4658,7 @@
     ],
     "grammarNode": "node-10",
     "priority": 379,
-    "grammar": "boleh saya + verb asks permission: boleh saya pinjam = may I borrow."
+    "grammar": "Boleh saya pinjam? asks permission (may I). bisa is ability (can): saya bisa berenang = I can swim. English 'can' covers both jobs; Indonesian splits them."
   },
   {
     "id": "id-0380",
@@ -4762,7 +4767,7 @@
     ],
     "grammarNode": "node-10",
     "priority": 388,
-    "grammar": "mari kita + verb = 'let's': mari kita mulai = let's begin."
+    "grammar": "mari kita + verb = 'let's': mari kita mulai = let's begin. mari is the polite version – among friends you'll hear ayo instead: Ayo mulai!"
   },
   {
     "id": "id-0389",
@@ -4909,8 +4914,7 @@
       "work"
     ],
     "grammarNode": "node-10",
-    "priority": 400,
-    "grammar": "terlalu = too (excessively): terlalu keras = too hard."
+    "priority": 400
   },
   {
     "id": "id-0401",
@@ -4982,8 +4986,7 @@
       "work"
     ],
     "grammarNode": "node-11",
-    "priority": 406,
-    "grammar": "langsung = straight away: langsung berangkat = leave right away."
+    "priority": 406
   },
   {
     "id": "id-0407",
@@ -5043,8 +5046,7 @@
       "family"
     ],
     "grammarNode": "node-11",
-    "priority": 411,
-    "grammar": "dulu after a verb means 'first': mandi dulu = shower first, before anything else."
+    "priority": 411
   },
   {
     "id": "id-0412",
@@ -5114,8 +5116,7 @@
       "family"
     ],
     "grammarNode": "node-11",
-    "priority": 417,
-    "grammar": "menginap = stay overnight: menginap di rumah nenek = sleep over at grandma's."
+    "priority": 417
   },
   {
     "id": "id-0418",
@@ -5128,7 +5129,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 418,
-    "grammar": "sudah inside a story = already: sudah tutup = was already closed."
+    "grammar": "tutup never changes for tense – sudah alone tells you the shop 'was already closed': sudah tutup. Time in Indonesian lives in the markers, not in verb endings."
   },
   {
     "id": "id-0419",
@@ -5190,7 +5191,8 @@
       "travel"
     ],
     "grammarNode": "node-11",
-    "priority": 423
+    "priority": 423,
+    "grammar": "dulu after a verb means first, not long ago: membeli tiket dulu = buy a ticket first. At the start of a sentence, dulu means back in the day."
   },
   {
     "id": "id-0424",
@@ -5236,8 +5238,7 @@
       "family"
     ],
     "grammarNode": "node-11",
-    "priority": 427,
-    "grammar": "jangan lupa = don't forget: Jangan lupa kunci pintu. = Don't forget to lock the door."
+    "priority": 427
   },
   {
     "id": "id-0428",
@@ -5333,8 +5334,7 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "priority": 435,
-    "grammar": "mampir = drop by: mampir ke rumah teman = stop by a friend's place."
+    "priority": 435
   },
   {
     "id": "id-0436",
@@ -5358,8 +5358,7 @@
       "work"
     ],
     "grammarNode": "node-11",
-    "priority": 437,
-    "grammar": "begadang = stay up late into the night — one everyday word, no extra phrase needed."
+    "priority": 437
   },
   {
     "id": "id-0438",
@@ -5384,8 +5383,7 @@
       "family"
     ],
     "grammarNode": "node-11",
-    "priority": 439,
-    "grammar": "berlibur = go on holiday, from libur (day off): berlibur ke Lombok."
+    "priority": 439
   },
   {
     "id": "id-0440",
@@ -5397,8 +5395,7 @@
       "travel"
     ],
     "grammarNode": "node-11",
-    "priority": 440,
-    "grammar": "Setelah itu = after that — the glue between story sentences."
+    "priority": 440
   },
   {
     "id": "id-0441",
@@ -5516,7 +5513,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 450,
-    "grammar": "selama = for (a duration): selama dua jam = for two hours."
+    "grammar": "Duration 'for' is selama, not untuk: mati selama dua jam = out for two hours. untuk is 'for' as purpose or recipient (untuk kamu = for you)."
   },
   {
     "id": "id-0451",
@@ -5554,7 +5551,7 @@
     ],
     "grammarNode": "node-12",
     "priority": 453,
-    "grammar": "sejak = since: sejak kemarin malam = since last night."
+    "grammar": "English needs 'has had a fever since' – Indonesian states it flat: demam sejak kemarin malam, no tense change. Sejak alone signals it started then and still holds."
   },
   {
     "id": "id-0454",
@@ -5578,7 +5575,7 @@
     ],
     "grammarNode": "node-12",
     "priority": 455,
-    "grammar": "minum obat = take medicine — literally 'drink medicine', even for pills."
+    "grammar": "You drink medicine in Indonesian, even pills: minum obat is literally 'drink medicine'. There's no separate 'take' verb for it."
   },
   {
     "id": "id-0456",
@@ -5614,8 +5611,7 @@
       "work"
     ],
     "grammarNode": "node-12",
-    "priority": 458,
-    "grammar": "Cepat sembuh! = Get well soon — the standard sympathy phrase."
+    "priority": 458
   },
   {
     "id": "id-0459",
@@ -5651,7 +5647,7 @@
     ],
     "grammarNode": "node-12",
     "priority": 461,
-    "grammar": "capek = tired (everyday speech); lelah is its slightly dressier twin."
+    "grammar": "capek is the everyday spoken 'tired': Badan saya capek. The formal counterpart is lelah – same meaning, but capek is what you'll actually hear in conversation."
   },
   {
     "id": "id-0462",
@@ -5686,7 +5682,7 @@
     ],
     "grammarNode": "node-12",
     "priority": 464,
-    "grammar": "bilang = say, the conversational verb: Dokter bilang... = The doctor said..."
+    "grammar": "bilang is the conversational 'say': Dokter bilang saya harus istirahat = the doctor said. Formal writing prefers berkata or mengatakan – bilang is for speech."
   },
   {
     "id": "id-0465",
@@ -5722,8 +5718,7 @@
       "family"
     ],
     "grammarNode": "node-12",
-    "priority": 467,
-    "grammar": "kali = times: tiga kali sehari = three times a day."
+    "priority": 467
   },
   {
     "id": "id-0468",
@@ -5854,8 +5849,7 @@
       "general"
     ],
     "grammarNode": "node-12",
-    "priority": 478,
-    "grammar": "membuat janji = make an appointment: membuat janji dengan dokter gigi."
+    "priority": 478
   },
   {
     "id": "id-0479",
@@ -5867,7 +5861,8 @@
       "family"
     ],
     "grammarNode": "node-12",
-    "priority": 479
+    "priority": 479,
+    "grammar": "-nya stuck on a noun means his or her: giginya = his tooth (gigi + -nya). No separate word for 'his' – the owner hangs off the end of the noun."
   },
   {
     "id": "id-0480",
@@ -5879,8 +5874,7 @@
       "family"
     ],
     "grammarNode": "node-12",
-    "priority": 480,
-    "grammar": "supaya = so that: supaya cepat sembuh = so you recover fast."
+    "priority": 480
   },
   {
     "id": "id-0481",
@@ -5925,8 +5919,7 @@
       "general"
     ],
     "grammarNode": "node-12",
-    "priority": 484,
-    "grammar": "mungkin = maybe: Mungkin saya demam. = Maybe I have a fever."
+    "priority": 484
   },
   {
     "id": "id-0485",
@@ -5938,7 +5931,8 @@
       "family"
     ],
     "grammarNode": "node-12",
-    "priority": 485
+    "priority": 485,
+    "grammar": "Rumah sakit, literally 'sick house', is the word for hospital. Indonesian compounds put the main noun first – rumah (house) is the thing, sakit just describes it."
   },
   {
     "id": "id-0486",
@@ -5950,8 +5944,7 @@
       "work"
     ],
     "grammarNode": "node-12",
-    "priority": 486,
-    "grammar": "minta izin = ask permission: minta izin pulang = ask to leave early."
+    "priority": 486
   },
   {
     "id": "id-0487",
@@ -5998,8 +5991,7 @@
       "work"
     ],
     "grammarNode": "node-12",
-    "priority": 490,
-    "grammar": "Semoga = I hope: Semoga cepat sembuh. = Hope you get better soon."
+    "priority": 490
   },
   {
     "id": "id-0491",
@@ -6129,7 +6121,8 @@
       "travel"
     ],
     "grammarNode": "node-13",
-    "priority": 501
+    "priority": 501,
+    "grammar": "The -nya on cuacanya isn't 'its' here – it marks the weather as the known topic, like English 'the': cuacanya cerah = the weather is clear."
   },
   {
     "id": "id-0502",
@@ -6154,7 +6147,8 @@
       "general"
     ],
     "grammarNode": "node-13",
-    "priority": 503
+    "priority": 503,
+    "grammar": "Indonesian skips the 'it' in 'it's raining' – hujan is a verb on its own. Sedang marks in progress: sedang hujan deras = raining hard right now."
   },
   {
     "id": "id-0504",
@@ -6166,8 +6160,7 @@
       "travel"
     ],
     "grammarNode": "node-13",
-    "priority": 504,
-    "grammar": "Jangan lupa + verb = don't forget to: Jangan lupa bawa payung."
+    "priority": 504
   },
   {
     "id": "id-0505",
@@ -6358,7 +6351,8 @@
       "general"
     ],
     "grammarNode": "node-13",
-    "priority": 520
+    "priority": 520,
+    "grammar": "No perfect tense needed – sudah plus a time span covers 'has been': Sudah tiga hari hujan tidak berhenti = it's been three days of nonstop rain."
   },
   {
     "id": "id-0521",
@@ -6451,8 +6445,7 @@
       "general"
     ],
     "grammarNode": "node-13",
-    "priority": 528,
-    "grammar": "begini = 'like this': panas begini = hot like this."
+    "priority": 528
   },
   {
     "id": "id-0529",
@@ -6572,7 +6565,7 @@
     ],
     "grammarNode": "node-13",
     "priority": 538,
-    "grammar": "tidak apa-apa = 'it's okay, no problem' — the everyday reassurance phrase."
+    "grammar": "tidak apa-apa is literally 'not anything' – doubling apa (what) turns it into 'anything', so the whole phrase means 'it's nothing, no problem'."
   },
   {
     "id": "id-0539",
@@ -6668,8 +6661,7 @@
       "general"
     ],
     "grammarNode": "node-13",
-    "priority": 546,
-    "grammar": "hujan es = hail, literally 'ice rain': Kemarin hujan es turun."
+    "priority": 546
   },
   {
     "id": "id-0547",
@@ -6726,8 +6718,7 @@
       "general"
     ],
     "grammarNode": "node-14",
-    "priority": 551,
-    "grammar": "waktu luang = free time: di waktu luang = in your free time."
+    "priority": 551
   },
   {
     "id": "id-0552",
@@ -6738,8 +6729,7 @@
       "general"
     ],
     "grammarNode": "node-14",
-    "priority": 552,
-    "grammar": "suka + verb = like doing something: suka membaca = like reading."
+    "priority": 552
   },
   {
     "id": "id-0553",
@@ -6750,8 +6740,7 @@
       "general"
     ],
     "grammarNode": "node-14",
-    "priority": 553,
-    "grammar": "akhir pekan = weekend ('end of week'): setiap akhir pekan = every weekend."
+    "priority": 553
   },
   {
     "id": "id-0554",
@@ -6763,8 +6752,7 @@
       "family"
     ],
     "grammarNode": "node-14",
-    "priority": 554,
-    "grammar": "biasanya (usually) sits before the verb: Dia biasanya berenang hari Minggu."
+    "priority": 554
   },
   {
     "id": "id-0555",
@@ -6775,8 +6763,7 @@
       "general"
     ],
     "grammarNode": "node-14",
-    "priority": 555,
-    "grammar": "kadang-kadang = sometimes: Kadang-kadang saya menonton film."
+    "priority": 555
   },
   {
     "id": "id-0556",
@@ -6893,8 +6880,7 @@
       "family"
     ],
     "grammarNode": "node-14",
-    "priority": 565,
-    "grammar": "sejak = since: sejak kecil = since childhood, sejak tadi = for a while now."
+    "priority": 565
   },
   {
     "id": "id-0566",
@@ -6907,7 +6893,8 @@
       "travel"
     ],
     "grammarNode": "node-14",
-    "priority": 566
+    "priority": 566,
+    "grammar": "Doubling a verb makes it leisurely: jalan = walk, jalan-jalan = stroll around for fun. It's not walking twice – it's the casual version."
   },
   {
     "id": "id-0567",
@@ -6955,8 +6942,7 @@
       "family"
     ],
     "grammarNode": "node-14",
-    "priority": 570,
-    "grammar": "menyanyikan = sing something: menyanyikan lagu = to sing a song."
+    "priority": 570
   },
   {
     "id": "id-0571",
@@ -6992,7 +6978,7 @@
     ],
     "grammarNode": "node-14",
     "priority": 573,
-    "grammar": "paling = the most: paling suka = like most, paling bagus = the best."
+    "grammar": "paling = 'the most' and never changes the word after it: paling kamu suka = you like the most. English swaps to -est or 'most'; Indonesian just drops in paling."
   },
   {
     "id": "id-0574",
@@ -7050,8 +7036,7 @@
       "family"
     ],
     "grammarNode": "node-14",
-    "priority": 578,
-    "grammar": "menarikan = dance a specific dance: menarikan tarian Bali."
+    "priority": 578
   },
   {
     "id": "id-0579",
@@ -7074,8 +7059,7 @@
       "general"
     ],
     "grammarNode": "node-14",
-    "priority": 580,
-    "grammar": "lebih suka X daripada Y = prefer X to Y: lebih suka membaca daripada menonton."
+    "priority": 580
   },
   {
     "id": "id-0581",
@@ -7156,8 +7140,7 @@
       "general"
     ],
     "grammarNode": "node-14",
-    "priority": 587,
-    "grammar": "kali counts times: dua kali seminggu = twice a week, sekali = once."
+    "priority": 587
   },
   {
     "id": "id-0588",
@@ -7264,8 +7247,7 @@
       "general"
     ],
     "grammarNode": "node-14",
-    "priority": 596,
-    "grammar": "jarang = rarely, before the verb: Dia jarang menonton televisi."
+    "priority": 596
   },
   {
     "id": "id-0597",
@@ -7276,7 +7258,8 @@
       "general"
     ],
     "grammarNode": "node-14",
-    "priority": 597
+    "priority": 597,
+    "grammar": "itu here isn't 'that' – it marks where a long subject ends: Bermain game di ponsel itu = as for playing phone games. No word for 'is' needed after."
   },
   {
     "id": "id-0598",
@@ -7300,8 +7283,7 @@
       "family"
     ],
     "grammarNode": "node-14",
-    "priority": 599,
-    "grammar": "membakar = to grill or burn: membakar sate = to grill satay."
+    "priority": 599
   },
   {
     "id": "id-0600",
@@ -7325,7 +7307,7 @@
     ],
     "grammarNode": "node-15",
     "priority": 601,
-    "grammar": "jam + number tells the time: jam tujuh = seven o'clock; jam berapa? = what time?"
+    "grammar": "Order decides the meaning: jam tujuh = seven o'clock, but tujuh jam = seven hours. jam first reads the clock; the number first counts a duration."
   },
   {
     "id": "id-0602",
@@ -7446,8 +7428,7 @@
       "travel"
     ],
     "grammarNode": "node-15",
-    "priority": 611,
-    "grammar": "boleh = may (permission): Boleh saya minta nomornya? = may I have the number?"
+    "priority": 611
   },
   {
     "id": "id-0612",
@@ -7494,8 +7475,7 @@
       "family"
     ],
     "grammarNode": "node-15",
-    "priority": 615,
-    "grammar": "ayo = come on, let's: Ayo kita makan = let's eat."
+    "priority": 615
   },
   {
     "id": "id-0616",
@@ -7518,8 +7498,7 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 617,
-    "grammar": "sampai nanti = see you later (lit. until later); sampai jumpa = see you."
+    "priority": 617
   },
   {
     "id": "id-0618",
@@ -7581,7 +7560,8 @@
       "work"
     ],
     "grammarNode": "node-15",
-    "priority": 622
+    "priority": 622,
+    "grammar": "Word order flips the meaning: jam dua = two o'clock, but dua jam = two hours. Here janji kita jam dua = our appointment at two."
   },
   {
     "id": "id-0623",
@@ -7604,7 +7584,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 624
+    "priority": 624,
+    "grammar": "tadi = earlier, in the recent past: tadi malam = last night. It pairs with nanti – nanti looks ahead, tadi looks back."
   },
   {
     "id": "id-0625",
@@ -7641,7 +7622,8 @@
       "family"
     ],
     "grammarNode": "node-15",
-    "priority": 627
+    "priority": 627,
+    "grammar": "minggu means week, but Minggu with a capital M is Sunday: hari Minggu = on Sunday, minggu depan = next week. Case decides."
   },
   {
     "id": "id-0628",
@@ -7714,8 +7696,7 @@
       "work"
     ],
     "grammarNode": "node-15",
-    "priority": 633,
-    "grammar": "jangan = do not: Jangan terlambat! = don't be late!"
+    "priority": 633
   },
   {
     "id": "id-0634",
@@ -7797,8 +7778,7 @@
       "work"
     ],
     "grammarNode": "node-15",
-    "priority": 640,
-    "grammar": "membatalkan = to cancel (root batal): membatalkan janji = cancel an appointment."
+    "priority": 640
   },
   {
     "id": "id-0641",
@@ -7859,7 +7839,7 @@
     ],
     "grammarNode": "node-15",
     "priority": 645,
-    "grammar": "di- makes a verb passive: ditelepon = to be called; ditunggu = to be waited for."
+    "grammar": "susah + a di- verb = 'hard to get X-ed': susah ditelepon = hard to reach, literally 'hard to be phoned'. Same pattern with other verbs: susah dicari = hard to find."
   },
   {
     "id": "id-0646",
@@ -7907,8 +7887,7 @@
       "travel"
     ],
     "grammarNode": "node-15",
-    "priority": 649,
-    "grammar": "ketemu is the spoken form of bertemu: kita ketemu jam lima = we meet at five."
+    "priority": 649
   },
   {
     "id": "id-0650",
@@ -7981,8 +7960,7 @@
       "work"
     ],
     "grammarNode": "node-16",
-    "priority": 655,
-    "grammar": "memakai = to wear or use: memakai baju biru = wear a blue shirt."
+    "priority": 655
   },
   {
     "id": "id-0656",
@@ -8075,8 +8053,7 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 663,
-    "grammar": "paling = the most: paling suka = like best; paling besar = the biggest."
+    "priority": 663
   },
   {
     "id": "id-0664",
@@ -8100,7 +8077,8 @@
       "family"
     ],
     "grammarNode": "node-16",
-    "priority": 665
+    "priority": 665,
+    "grammar": "English needs 'has been broken since' – Indonesian just states the fact: rusak sejak kemarin sore = broken since yesterday afternoon. No perfect tense exists."
   },
   {
     "id": "id-0666",
@@ -8173,8 +8151,7 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 671,
-    "grammar": "terlalu = too (excessive): terlalu panjang = too long; terlalu mahal = too expensive."
+    "priority": 671
   },
   {
     "id": "id-0672",
@@ -8222,8 +8199,7 @@
       "work"
     ],
     "grammarNode": "node-16",
-    "priority": 675,
-    "grammar": "cocok = to match or suit: cocok dengan = goes well with."
+    "priority": 675
   },
   {
     "id": "id-0676",
@@ -8367,8 +8343,7 @@
       "family"
     ],
     "grammarNode": "node-16",
-    "priority": 687,
-    "grammar": "ada = there is/are: Di garasi ada sepeda = there is a bicycle in the garage."
+    "priority": 687
   },
   {
     "id": "id-0688",
@@ -8379,8 +8354,7 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 688,
-    "grammar": "lebih ... daripada = more ... than: lebih suka biru daripada merah = prefer blue to red."
+    "priority": 688
   },
   {
     "id": "id-0689",
@@ -8451,8 +8425,7 @@
       "family"
     ],
     "grammarNode": "node-16",
-    "priority": 694,
-    "grammar": "setiap = every: setiap pagi = every morning; setiap hari = every day."
+    "priority": 694
   },
   {
     "id": "id-0695",
@@ -8571,8 +8544,7 @@
       "travel"
     ],
     "grammarNode": "node-10",
-    "priority": 704,
-    "grammar": "paling = the most: paling murah = the cheapest."
+    "priority": 704
   },
   {
     "id": "id-0705",
@@ -8597,7 +8569,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 706,
-    "grammar": "boleh = may (permission): Boleh saya lihat? = May I see?"
+    "grammar": "Boleh saya lihat kamarnya? asks permission – and boleh alone is also the answer: Boleh! = sure, go ahead. One word for both the asking and the granting."
   },
   {
     "id": "id-0707",
@@ -8610,7 +8582,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 707,
-    "grammar": "minta = ask for a thing: Bisa minta peta? = Can I get a map?"
+    "grammar": "Bisa minta peta? is the complete everyday request – no subject, no 'give me' verb. minta = ask for a thing; bisa softens it into 'can I get...?'"
   },
   {
     "id": "id-0708",
@@ -8647,8 +8619,7 @@
       "travel"
     ],
     "grammarNode": "node-13",
-    "priority": 710,
-    "grammar": "setelah = after: setelah makan siang = after lunch."
+    "priority": 710
   },
   {
     "id": "id-0711",
@@ -8660,8 +8631,7 @@
       "travel"
     ],
     "grammarNode": "node-14",
-    "priority": 711,
-    "grammar": "kalau = if: kalau hujan = if it rains. No extra word for 'then'."
+    "priority": 711
   },
   {
     "id": "id-0712",
@@ -8686,7 +8656,7 @@
     ],
     "grammarNode": "node-16",
     "priority": 713,
-    "grammar": "jangan lupa = don't forget: jangan lupa bawa paspor = don't forget your passport."
+    "grammar": "jangan lupa = don't forget, the go-to reminder opener: jangan lupa bawa paspor. jangan negates commands; tidak lupa would just describe someone who doesn't forget."
   },
   {
     "id": "id-0714",
@@ -8736,7 +8706,7 @@
     ],
     "grammarNode": "node-12",
     "priority": 717,
-    "grammar": "menginap = meN- + inap: kami menginap di hotel = we stayed overnight at a hotel."
+    "grammar": "The me- prefix turns a root into an active verb: inap (stay over) becomes menginap = to stay overnight. Kami menginap di hotel = we stayed at a hotel."
   },
   {
     "id": "id-0718",
@@ -8784,8 +8754,7 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "priority": 721,
-    "grammar": "semoga = hopefully: semoga cuaca bagus = hope the weather is good."
+    "priority": 721
   },
   {
     "id": "id-0722",
@@ -8845,8 +8814,7 @@
       "travel"
     ],
     "grammarNode": "node-13",
-    "priority": 726,
-    "grammar": "langsung = straight away: kami langsung tidur = we went straight to sleep."
+    "priority": 726
   },
   {
     "id": "id-0727",
@@ -8858,7 +8826,8 @@
       "travel"
     ],
     "grammarNode": "node-14",
-    "priority": 727
+    "priority": 727,
+    "grammar": "kita includes the person you're talking to, kami leaves them out – kita istirahat works because the listener is invited to rest too."
   },
   {
     "id": "id-0728",
@@ -8882,8 +8851,7 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "priority": 729,
-    "grammar": "sebaiknya = had better: sebaiknya pesan sekarang = better book now."
+    "priority": 729
   },
   {
     "id": "id-0730",
@@ -9040,7 +9008,8 @@
       "work"
     ],
     "grammarNode": "node-11",
-    "priority": 742
+    "priority": 742,
+    "grammar": "English can does double duty; Indonesian splits it: boleh = allowed to, bisa = able to. Boleh saya pulang? asks permission, not ability."
   },
   {
     "id": "id-0743",
@@ -9101,7 +9070,7 @@
     ],
     "grammarNode": "node-10",
     "priority": 747,
-    "grammar": "paling lambat = at the latest: paling lambat hari Jumat = by Friday at the latest."
+    "grammar": "paling lambat is literally 'slowest' – Indonesian deadlines are superlatives: paling lambat hari Jumat = by Friday at the latest."
   },
   {
     "id": "id-0748",
@@ -9163,7 +9132,7 @@
     ],
     "grammarNode": "node-15",
     "priority": 752,
-    "grammar": "akan marks the future: kami akan rapat = we will have a meeting."
+    "grammar": "akan marks the future, but a time word can carry it alone: with besok in the sentence, kami akan rapat could drop the akan. It just makes 'will' explicit."
   },
   {
     "id": "id-0753",
@@ -9441,8 +9410,7 @@
       "family"
     ],
     "grammarNode": "node-09",
-    "priority": 775,
-    "grammar": "dari tadi = since earlier: sudah tidur dari tadi = has been asleep for a while."
+    "priority": 775
   },
   {
     "id": "id-0776",
@@ -9503,7 +9471,7 @@
     ],
     "grammarNode": "node-16",
     "priority": 780,
-    "grammar": "matikan = mati (off) + -kan: matikan lampu = turn off the light."
+    "grammar": "mati means dead or off, so matikan lampu is literally 'deaden the lamp' – the -kan ending turns the state into something you do to an object."
   },
   {
     "id": "id-0781",
@@ -9515,8 +9483,7 @@
       "family"
     ],
     "grammarNode": "node-15",
-    "priority": 781,
-    "grammar": "mengunjungi = meN- + kunjung + -i: mengunjungi kakek = to visit grandpa."
+    "priority": 781
   },
   {
     "id": "id-0782",
@@ -9577,8 +9544,7 @@
       "family"
     ],
     "grammarNode": "node-13",
-    "priority": 786,
-    "grammar": "bersama-sama = together: bersihkan rumah bersama-sama = clean the house together."
+    "priority": 786
   },
   {
     "id": "id-0787",
@@ -9783,7 +9749,8 @@
       "family"
     ],
     "grammarNode": "node-17",
-    "priority": 803
+    "priority": 803,
+    "grammar": "Watch the space: diparkir (one word) = is parked, but di depan (two words) = in front. Glued di- makes a passive verb; free-standing di just marks a place."
   },
   {
     "id": "id-0804",
@@ -10044,8 +10011,7 @@
       "family"
     ],
     "grammarNode": "node-17",
-    "priority": 825,
-    "grammar": "supaya = so that: dijemur supaya tidak lembap = dried so it doesn't get damp."
+    "priority": 825
   },
   {
     "id": "id-0826",
@@ -10114,8 +10080,7 @@
       "travel"
     ],
     "grammarNode": "node-17",
-    "priority": 831,
-    "grammar": "lewat = via/through: dibeli lewat aplikasi = bought through the app."
+    "priority": 831
   },
   {
     "id": "id-0832",
@@ -10127,8 +10092,7 @@
       "travel"
     ],
     "grammarNode": "node-17",
-    "priority": 832,
-    "grammar": "titip = leave something in someone's care: dititip di resepsionis = left at the front desk."
+    "priority": 832
   },
   {
     "id": "id-0833",
@@ -10153,7 +10117,7 @@
     ],
     "grammarNode": "node-17",
     "priority": 834,
-    "grammar": "harus + di- = must be X-ed: harus dibawa = must be brought along."
+    "grammar": "Modals sit straight on the passive verb: harus dibawa = must be carried – no 'be' anywhere. bisa and perlu work the same way."
   },
   {
     "id": "id-0835",
@@ -10227,8 +10191,7 @@
       "travel"
     ],
     "grammarNode": "node-17",
-    "priority": 840,
-    "grammar": "atas nama = under the name of: dipesan atas nama saya = booked under my name."
+    "priority": 840
   },
   {
     "id": "id-0841",
@@ -10265,8 +10228,7 @@
       "work"
     ],
     "grammarNode": "node-17",
-    "priority": 843,
-    "grammar": "akan + di- = will be X-ed: akan disiapkan = will be prepared."
+    "priority": 843
   },
   {
     "id": "id-0844",
@@ -10290,8 +10252,7 @@
       "travel"
     ],
     "grammarNode": "node-17",
-    "priority": 845,
-    "grammar": "sewa = to rent: motornya disewa = the motorbike is rented (from someone)."
+    "priority": 845
   },
   {
     "id": "id-0846",
@@ -10315,8 +10276,7 @@
       "travel"
     ],
     "grammarNode": "node-17",
-    "priority": 847,
-    "grammar": "kosong = empty, dikosongkan = to be emptied out: harus dikosongkan = must be vacated."
+    "priority": 847
   },
   {
     "id": "id-0848",
@@ -10340,8 +10300,7 @@
       "work"
     ],
     "grammarNode": "node-17",
-    "priority": 849,
-    "grammar": "tunda = postpone: rapatnya ditunda = the meeting got pushed back."
+    "priority": 849
   },
   {
     "id": "id-0850",
@@ -10573,8 +10532,7 @@
       "family"
     ],
     "grammarNode": "node-17",
-    "priority": 868,
-    "grammar": "hangat = warm, dihangatkan = warmed up: susunya dihangatkan = the milk is warmed."
+    "priority": 868
   },
   {
     "id": "id-0869",
@@ -10698,7 +10656,7 @@
     ],
     "grammarNode": "node-17",
     "priority": 878,
-    "grammar": "diadakan (from ada) = is held: diadakan di rumah nenek = held at grandma's house."
+    "grammar": "diadakan comes from ada (exist) – literally 'made to exist', the standard way to say an event 'is held': diadakan di rumah nenek = held at grandma's house."
   },
   {
     "id": "id-0879",
@@ -10818,8 +10776,7 @@
       "family"
     ],
     "grammarNode": "node-17",
-    "priority": 888,
-    "grammar": "Tolong + di-verb + object-nya is the everyday polite request: tolong dibuang sampahnya."
+    "priority": 888
   },
   {
     "id": "id-0889",
@@ -11091,8 +11048,7 @@
       "general"
     ],
     "grammarNode": "node-17",
-    "priority": 911,
-    "grammar": "perlu + di- = needs to be X-ed: perlu dinyalakan = needs to be switched on."
+    "priority": 911
   },
   {
     "id": "id-0912",
@@ -11198,8 +11154,7 @@
       "general"
     ],
     "grammarNode": "node-17",
-    "priority": 920,
-    "grammar": "dari tadi = this whole time (since earlier): dicari dari tadi = looked for all this while."
+    "priority": 920
   },
   {
     "id": "id-0921",
@@ -11258,8 +11213,7 @@
       "travel"
     ],
     "grammarNode": "node-17",
-    "priority": 925,
-    "grammar": "bisa + di- = can be X-ed: bisa dibeli = can be bought."
+    "priority": 925
   },
   {
     "id": "id-0926",
@@ -11282,8 +11236,7 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "priority": 927,
-    "grammar": "pe- + beli = pembeli, the one who buys — the same pattern gives penjual and pekerja."
+    "priority": 927
   },
   {
     "id": "id-0928",
@@ -11309,7 +11262,8 @@
       "work"
     ],
     "grammarNode": "node-18",
-    "priority": 929
+    "priority": 929,
+    "grammar": "Indonesian rarely marks plurals, but para does it for people: para pekerja = the workers, as a group. It never goes on things."
   },
   {
     "id": "id-0930",
@@ -11366,8 +11320,7 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "priority": 934,
-    "grammar": "r-roots take pe- without n: renang → perenang (swimmer), like berenang."
+    "priority": 934
   },
   {
     "id": "id-0935",
@@ -11378,7 +11331,8 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "priority": 935
+    "priority": 935,
+    "grammar": "One root ajar, two people: pengajar is the teacher (from mengajar, to teach), pelajar the student (from belajar, to study)."
   },
   {
     "id": "id-0936",
@@ -11390,7 +11344,7 @@
     ],
     "grammarNode": "node-18",
     "priority": 936,
-    "grammar": "One root, two people: pengajar teaches, pelajar learns — both from ajar."
+    "grammar": "One root, two people: pelajar learns, pengajar teaches – both from ajar. The pe- prefix builds 'the person who does X' nouns."
   },
   {
     "id": "id-0937",
@@ -11436,8 +11390,7 @@
       "travel"
     ],
     "grammarNode": "node-18",
-    "priority": 940,
-    "grammar": "tumpang (ride along) → penumpang: the passenger, the one who rides."
+    "priority": 940
   },
   {
     "id": "id-0941",
@@ -11449,7 +11402,8 @@
       "travel"
     ],
     "grammarNode": "node-18",
-    "priority": 941
+    "priority": 941,
+    "grammar": "pe- also builds doers from nouns: kemudi is the steering wheel, so pengemudi is the driver – the person at the kemudi."
   },
   {
     "id": "id-0942",
@@ -11495,7 +11449,8 @@
       "travel"
     ],
     "grammarNode": "node-18",
-    "priority": 945
+    "priority": 945,
+    "grammar": "Compound nouns run head first: pemandu wisata is literally 'guide tourism' – the reverse of English 'tour guide'."
   },
   {
     "id": "id-0946",
@@ -11540,7 +11495,7 @@
     ],
     "grammarNode": "node-18",
     "priority": 949,
-    "grammar": "A few jobs take plain pe- with no sound change: petani (farmer), petugas (officer)."
+    "grammar": "A few doer nouns take bare pe- with no sound change: tani gives petani (farmer), not penani – kerja gives pekerja the same way."
   },
   {
     "id": "id-0950",
@@ -11642,8 +11597,7 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "priority": 958,
-    "grammar": "-an from pakai (wear) gives pakaian — clothing, the things worn."
+    "priority": 958
   },
   {
     "id": "id-0959",
@@ -11656,7 +11610,7 @@
     ],
     "grammarNode": "node-18",
     "priority": 959,
-    "grammar": "bangun (build) → bangunan: the built thing, a building."
+    "grammar": "bangun means both 'wake up' and 'build'. bangunan comes from the second: a thing built, a building."
   },
   {
     "id": "id-0960",
@@ -11726,8 +11680,7 @@
       "family"
     ],
     "grammarNode": "node-18",
-    "priority": 965,
-    "grammar": "kirim (send) → kiriman: the thing sent, like a parcel from family."
+    "priority": 965
   },
   {
     "id": "id-0966",
@@ -11795,8 +11748,7 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "priority": 971,
-    "grammar": "cuci (wash) → cucian: the washing, the pile of clothes to wash."
+    "priority": 971
   },
   {
     "id": "id-0972",
@@ -11818,8 +11770,7 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "priority": 973,
-    "grammar": "tabung (save up) → tabungan (savings): the money set aside."
+    "priority": 973
   },
   {
     "id": "id-0974",
@@ -11841,8 +11792,7 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "priority": 975,
-    "grammar": "tonton (watch) → tontonan: the show, the thing watched."
+    "priority": 975
   },
   {
     "id": "id-0976",
@@ -11864,7 +11814,8 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "priority": 977
+    "priority": 977,
+    "grammar": "Before a verb, baru is not 'new' – it means 'only just / only then': baru datang setelah tiga puluh menit = only came after thirty minutes."
   },
   {
     "id": "id-0978",
@@ -11887,7 +11838,7 @@
     ],
     "grammarNode": "node-18",
     "priority": 979,
-    "grammar": "kenal (know someone) → kenalan: an acquaintance, someone you know."
+    "grammar": "-an usually makes things, but kenalan is a person: someone you know. kenalan lama = an old acquaintance, not old knowledge."
   },
   {
     "id": "id-0980",
@@ -11899,8 +11850,7 @@
       "travel"
     ],
     "grammarNode": "node-18",
-    "priority": 980,
-    "grammar": "pandang (gaze) → pemandangan: the view, everything your eyes take in."
+    "priority": 980
   },
   {
     "id": "id-0981",
@@ -11923,8 +11873,7 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "priority": 982,
-    "grammar": "potong (cut) → potongan: a cut — potongan harga is a price cut."
+    "priority": 982
   },
   {
     "id": "id-0983",
@@ -11947,7 +11896,8 @@
       "travel"
     ],
     "grammarNode": "node-18",
-    "priority": 984
+    "priority": 984,
+    "grammar": "oleh-oleh, souvenirs you bring back, is a fixed doubled word – don't read it as the preposition oleh (by) said twice."
   },
   {
     "id": "id-0985",
@@ -11980,8 +11930,7 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "priority": 987,
-    "grammar": "bantu (help, verb) → bantuan (help, noun): the aid that is given."
+    "priority": 987
   },
   {
     "id": "id-0988",
@@ -12052,7 +12001,8 @@
       "work"
     ],
     "grammarNode": "node-18",
-    "priority": 993
+    "priority": 993,
+    "grammar": "per-…-an nouns pair with ber- verbs: bertemu (meet) gives pertemuan (a meeting), just as berjalan gives perjalanan."
   },
   {
     "id": "id-0994",
@@ -12076,8 +12026,7 @@
       "travel"
     ],
     "grammarNode": "node-18",
-    "priority": 995,
-    "grammar": "baik (good) → perbaikan: the act of making good — a repair."
+    "priority": 995
   },
   {
     "id": "id-0996",
@@ -12124,8 +12073,7 @@
       "work"
     ],
     "grammarNode": "node-18",
-    "priority": 999,
-    "grammar": "usaha (effort, business) → perusahaan: a company, where business happens."
+    "priority": 999
   },
   {
     "id": "id-1000",
@@ -12158,8 +12106,7 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "priority": 1002,
-    "grammar": "daftar (a list; register) → pendaftaran: the registration process."
+    "priority": 1002
   },
   {
     "id": "id-1003",
@@ -12206,7 +12153,8 @@
       "travel"
     ],
     "grammarNode": "node-18",
-    "priority": 1006
+    "priority": 1006,
+    "grammar": "To name an action, take the meN- verb and swap me- for pe-, then add -an: memeriksa (check) becomes pemeriksaan (a check)."
   },
   {
     "id": "id-1007",
@@ -12306,7 +12254,8 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "priority": 1015
+    "priority": 1015,
+    "grammar": "Time gets eaten in Indonesian: memakan waktu satu jam = takes an hour, literally 'eats one hour'."
   },
   {
     "id": "id-1016",
@@ -12317,7 +12266,8 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "priority": 1016
+    "priority": 1016,
+    "grammar": "penjualan is the selling, penjual the seller – one -an apart. Penjualan tiket konser = concert ticket sales, an activity, not a person."
   },
   {
     "id": "id-1017",
@@ -12364,8 +12314,7 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "priority": 1020,
-    "grammar": "bersih (clean) → kebersihan (cleanliness): the state of being clean."
+    "priority": 1020
   },
   {
     "id": "id-1021",
@@ -12389,8 +12338,7 @@
       "work"
     ],
     "grammarNode": "node-18",
-    "priority": 1022,
-    "grammar": "salah (wrong) → kesalahan: a mistake, the wrong thing done."
+    "priority": 1022
   },
   {
     "id": "id-1023",
@@ -12414,8 +12362,7 @@
       "work"
     ],
     "grammarNode": "node-18",
-    "priority": 1024,
-    "grammar": "macet (stuck) → kemacetan: a traffic jam, the state of being stuck."
+    "priority": 1024
   },
   {
     "id": "id-1025",
@@ -12439,8 +12386,7 @@
       "family"
     ],
     "grammarNode": "node-18",
-    "priority": 1026,
-    "grammar": "biasa (usual) → kebiasaan: a habit, what is usually done."
+    "priority": 1026
   },
   {
     "id": "id-1027",
@@ -12477,7 +12423,7 @@
     ],
     "grammarNode": "node-18",
     "priority": 1029,
-    "grammar": "berangkat (depart) → keberangkatan (departure); datang → kedatangan (arrival)."
+    "grammar": "ke-…-an also names events, and the verb stays whole inside: berangkat (depart) sits intact in keberangkatan (departure)."
   },
   {
     "id": "id-1030",
@@ -12524,7 +12470,7 @@
     ],
     "grammarNode": "node-18",
     "priority": 1033,
-    "grammar": "hilang (lost) → kehilangan: the loss, or the experience of losing."
+    "grammar": "kehilangan takes its object directly: kehilangan dompet = losing the wallet – no word for 'of' in between."
   },
   {
     "id": "id-1034",
@@ -12559,8 +12505,7 @@
       "work"
     ],
     "grammarNode": "node-18",
-    "priority": 1036,
-    "grammar": "sempat (have the chance) → kesempatan: an opportunity."
+    "priority": 1036
   },
   {
     "id": "id-1037",
@@ -12595,8 +12540,7 @@
       "travel"
     ],
     "grammarNode": "node-18",
-    "priority": 1039,
-    "grammar": "lebih (more) → kelebihan: a plus point; kekurangan is the weak point."
+    "priority": 1039
   },
   {
     "id": "id-1040",
@@ -12664,8 +12608,7 @@
       "travel"
     ],
     "grammarNode": "node-18",
-    "priority": 1045,
-    "grammar": "pamer (show off) → pameran: an exhibition, things put on show."
+    "priority": 1045
   },
   {
     "id": "id-1046",
@@ -12712,8 +12655,7 @@
       "travel"
     ],
     "grammarNode": "node-18",
-    "priority": 1049,
-    "grammar": "alas (base) → alasan: a reason, what an opinion stands on."
+    "priority": 1049
   },
   {
     "id": "id-1050",
@@ -12737,7 +12679,8 @@
       "family"
     ],
     "grammarNode": "node-19",
-    "priority": 1051
+    "priority": 1051,
+    "grammar": "sekali = 'very', and it follows its word: deras sekali = very hard. In front, it means 'once' instead (sekali seminggu = once a week) – position decides."
   },
   {
     "id": "id-1052",
@@ -12809,8 +12752,7 @@
       "work"
     ],
     "grammarNode": "node-19",
-    "priority": 1057,
-    "grammar": "karena = because; the reason clause can come first: Karena hujan, kami pulang = Because it rained, we went home."
+    "priority": 1057
   },
   {
     "id": "id-1058",
@@ -12869,7 +12811,7 @@
     ],
     "grammarNode": "node-19",
     "priority": 1062,
-    "grammar": "Clock times use jam + number: jam lima = five o'clock, jam lima pagi = five in the morning."
+    "grammar": "jam lima = five o'clock, but flip it and lima jam = five hours. Dad leaves at jam lima – word order alone separates clock time from duration."
   },
   {
     "id": "id-1063",
@@ -12938,7 +12880,7 @@
     ],
     "grammarNode": "node-19",
     "priority": 1068,
-    "grammar": "ketinggalan = got left behind by accident: dompetku ketinggalan = my wallet got left behind."
+    "grammar": "ke-...-an can mark something that happened by accident: dompetku ketinggalan = my wallet got left behind, no one did it on purpose. Also kehujanan = got rained on."
   },
   {
     "id": "id-1069",
@@ -12962,8 +12904,7 @@
       "family"
     ],
     "grammarNode": "node-19",
-    "priority": 1070,
-    "grammar": "soalnya gives the excuse after the fact: Dia tidak masuk, soalnya anaknya sakit = ..., because her child is sick."
+    "priority": 1070
   },
   {
     "id": "id-1071",
@@ -13034,7 +12975,8 @@
       "general"
     ],
     "grammarNode": "node-19",
-    "priority": 1076
+    "priority": 1076,
+    "grammar": "-nya can do the job of 'the': kopinya sudah habis = the coffee is gone – the one you both know about. Indonesian has no separate word for 'the'."
   },
   {
     "id": "id-1077",
@@ -13233,8 +13175,7 @@
       "general"
     ],
     "grammarNode": "node-19",
-    "priority": 1093,
-    "grammar": "supaya tidak = so that ... not: supaya nyamuk tidak masuk = so the mosquitoes don't get in."
+    "priority": 1093
   },
   {
     "id": "id-1094",
@@ -13332,7 +13273,7 @@
     ],
     "grammarNode": "node-19",
     "priority": 1101,
-    "grammar": "masih = still (ongoing now): masih buka = still open, masih hujan = still raining."
+    "grammar": "masih = still ongoing: masih buka = still open. tetap also translates 'still' but means 'anyway, regardless' – tetap buka = stays open no matter what."
   },
   {
     "id": "id-1102",
@@ -13403,8 +13344,7 @@
       "family"
     ],
     "grammarNode": "node-19",
-    "priority": 1107,
-    "grammar": "buatan = made by: kue buatan ibunya = a cake made by her mother, buatan tangan = handmade."
+    "priority": 1107
   },
   {
     "id": "id-1108",
@@ -13488,7 +13428,7 @@
     ],
     "grammarNode": "node-19",
     "priority": 1114,
-    "grammar": "menghabiskan = to finish off: menghabiskannya = finished it (-nya = it)."
+    "grammar": "-nya glued to the end of a verb means 'it': menghabiskannya = finished it. The object attaches straight onto the verb – no separate word for 'it' needed."
   },
   {
     "id": "id-1115",
@@ -13547,8 +13487,7 @@
       "travel"
     ],
     "grammarNode": "node-19",
-    "priority": 1119,
-    "grammar": "termasuk = included: sarapan tidak termasuk = breakfast not included — check this when booking."
+    "priority": 1119
   },
   {
     "id": "id-1120",
@@ -13560,7 +13499,8 @@
       "travel"
     ],
     "grammarNode": "node-19",
-    "priority": 1120
+    "priority": 1120,
+    "grammar": "ter- means it just happened, no doer in view: tertunda = got delayed. di- points at a doer: ditunda = was postponed by someone."
   },
   {
     "id": "id-1121",
@@ -13583,8 +13523,7 @@
       "general"
     ],
     "grammarNode": "node-19",
-    "priority": 1122,
-    "grammar": "tapi is the everyday 'but' — fine in conversation: mau ikut, tapi ada ujian = want to come, but there's an exam."
+    "priority": 1122
   },
   {
     "id": "id-1123",
@@ -13831,8 +13770,7 @@
       "family"
     ],
     "grammarNode": "node-19",
-    "priority": 1143,
-    "grammar": "sebelum can front a whole clause: Sebelum tamu datang, kami membersihkan = Before guests arrive, we clean."
+    "priority": 1143
   },
   {
     "id": "id-1144",
@@ -14038,8 +13976,7 @@
       "family"
     ],
     "grammarNode": "node-19",
-    "priority": 1160,
-    "grammar": "gajian = payday (from gaji, salary): sesudah gajian = after payday."
+    "priority": 1160
   },
   {
     "id": "id-1161",
@@ -14192,8 +14129,7 @@
       "travel"
     ],
     "grammarNode": "node-19",
-    "priority": 1173,
-    "grammar": "walaupun can sit mid-sentence: bisa membaca walaupun tidak ada gambar = can read even though no pictures."
+    "priority": 1173
   },
   {
     "id": "id-1174",
@@ -14230,7 +14166,7 @@
     ],
     "grammarNode": "node-20",
     "priority": 1176,
-    "grammar": "bilang is the everyday 'say/tell': Dia bilang dia sibuk. = He said he's busy."
+    "grammar": "Dia bilang dia akan datang – bilang connects straight to what was said, no word for 'that' required. Indonesian happily skips the connector English leans on."
   },
   {
     "id": "id-1177",
@@ -14242,7 +14178,8 @@
       "family"
     ],
     "grammarNode": "node-20",
-    "priority": 1177
+    "priority": 1177,
+    "grammar": "After bilang, keep the original tense: Ibu bilang makan malam sudah siap – 'dinner is ready', not 'was ready'. Indonesian reports the words as they were spoken."
   },
   {
     "id": "id-1178",
@@ -14511,7 +14448,7 @@
     ],
     "grammarNode": "node-20",
     "priority": 1200,
-    "grammar": "belum tentu = not necessarily: Katanya begitu, tapi belum tentu benar."
+    "grammar": "belum tentu is literally 'not yet certain' – the Indonesian 'not necessarily': kabar itu belum tentu benar = that news isn't necessarily true."
   },
   {
     "id": "id-1201",
@@ -14556,8 +14493,7 @@
       "family"
     ],
     "grammarNode": "node-20",
-    "priority": 1204,
-    "grammar": "tolong bilang ke X = please tell X: Tolong bilang ke ibu, ya."
+    "priority": 1204
   },
   {
     "id": "id-1205",
@@ -14606,8 +14542,7 @@
       "general"
     ],
     "grammarNode": "node-20",
-    "priority": 1208,
-    "grammar": "sampaikan salam = pass on greetings: Sampaikan salam saya ke ibu kamu."
+    "priority": 1208
   },
   {
     "id": "id-1209",
@@ -14781,7 +14716,7 @@
     ],
     "grammarNode": "node-20",
     "priority": 1223,
-    "grammar": "sejak dulu = since long ago: Mereka di sini sejak dulu. = They've been here forever."
+    "grammar": "dulu has two jobs: after sejak it means long ago (sejak dulu = since way back), but after a verb it means 'first' (makan dulu = eat first). Position decides."
   },
   {
     "id": "id-1224",
@@ -14872,7 +14807,7 @@
     ],
     "grammarNode": "node-20",
     "priority": 1231,
-    "grammar": "menurut saya = in my opinion: Menurut saya, itu ide bagus."
+    "grammar": "Menurut saya is literally 'according to me' – menurut means 'following'. Indonesian frames opinions like citing a source, even when the source is you."
   },
   {
     "id": "id-1232",
@@ -14942,8 +14877,7 @@
       "general"
     ],
     "grammarNode": "node-20",
-    "priority": 1237,
-    "grammar": "Menurut kamu…? asks someone's opinion: Menurut kamu, yang mana lebih bagus?"
+    "priority": 1237
   },
   {
     "id": "id-1238",
@@ -15012,8 +14946,7 @@
       "general"
     ],
     "grammarNode": "node-20",
-    "priority": 1243,
-    "grammar": "sebaiknya = it'd be better to: Sebaiknya kita pulang sekarang."
+    "priority": 1243
   },
   {
     "id": "id-1244",
@@ -15082,8 +15015,7 @@
       "general"
     ],
     "grammarNode": "node-20",
-    "priority": 1249,
-    "grammar": "saya pikir = I think: Saya pikir dia benar. = I think he's right."
+    "priority": 1249
   },
   {
     "id": "id-1250",
@@ -15155,8 +15087,7 @@
       "travel"
     ],
     "grammarNode": "node-20",
-    "priority": 1255,
-    "grammar": "soalnya = everyday 'because': Kami di rumah, soalnya hujan."
+    "priority": 1255
   },
   {
     "id": "id-1256",
@@ -15168,7 +15099,7 @@
     ],
     "grammarNode": "node-20",
     "priority": 1256,
-    "grammar": "pernah = have ever / once: Saya pernah ke Bali. = I've been to Bali."
+    "grammar": "pernah packs 'have ever, at least once' into one word: kita pernah bertemu = we have met before. The negative is belum pernah = never (so far)."
   },
   {
     "id": "id-1257",
@@ -15225,7 +15156,7 @@
     ],
     "grammarNode": "node-20",
     "priority": 1261,
-    "grammar": "ternyata = it turns out: Saya pikir mahal, ternyata murah."
+    "grammar": "saya pikir X, ternyata Y is the stock reversal frame: saya pikir ini mudah, ternyata sulit = I thought it was easy – turns out it's hard. ternyata = it turns out."
   },
   {
     "id": "id-1262",
@@ -15248,8 +15179,7 @@
       "work"
     ],
     "grammarNode": "node-20",
-    "priority": 1263,
-    "grammar": "menolak = to turn down: Dia menolak tawaran itu. = He turned down that offer."
+    "priority": 1263
   },
   {
     "id": "id-1264",
@@ -15294,8 +15224,7 @@
       "general"
     ],
     "grammarNode": "node-20",
-    "priority": 1267,
-    "grammar": "setuju = agree; the opposite is simply tidak setuju: Saya tidak setuju."
+    "priority": 1267
   },
   {
     "id": "id-1268",
@@ -15481,8 +15410,7 @@
       "travel"
     ],
     "grammarNode": "node-20",
-    "priority": 1283,
-    "grammar": "berapa lama = how long: Berapa lama kamu tinggal di sini?"
+    "priority": 1283
   },
   {
     "id": "id-1284",
@@ -15564,7 +15492,7 @@
     ],
     "grammarNode": "node-20",
     "priority": 1290,
-    "grammar": "menanyakan X = to ask about X: menanyakan harga = to ask the price."
+    "grammar": "The -kan ending changes what tanya points at: plain tanya takes the person you ask, menanyakan takes the topic – menanyakan harga = ask about the price."
   },
   {
     "id": "id-1291",
@@ -15613,7 +15541,8 @@
       "family"
     ],
     "grammarNode": "node-20",
-    "priority": 1294
+    "priority": 1294,
+    "grammar": "terus after a verb means 'keep on': tanya terus = keeps asking. The order flips English – 'keep' comes after the verb, not before it."
   },
   {
     "id": "id-1295",
@@ -15671,8 +15600,7 @@
       "general"
     ],
     "grammarNode": "node-20",
-    "priority": 1299,
-    "grammar": "jangan malu = don't be shy: Jangan malu bertanya di kelas."
+    "priority": 1299
   },
   {
     "id": "id-1300",
@@ -15685,7 +15613,7 @@
     ],
     "grammarNode": "node-20",
     "priority": 1300,
-    "grammar": "sempat = found a moment to: Saya sempat mampir tadi."
+    "grammar": "sempat = had a spare moment and used it: sempat tanya kabar = found a moment to ask after your family. No single English word covers it."
   },
   {
     "id": "id-1301",
@@ -15745,7 +15673,8 @@
       "travel"
     ],
     "grammarNode": "node-21",
-    "priority": 1305
+    "priority": 1305,
+    "grammar": "se- means one: semalam = one night, so empat ratus ribu semalam = 400,000 per night. Same trick for sehari = per day, seminggu = per week."
   },
   {
     "id": "id-1306",
@@ -15864,7 +15793,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1315,
-    "grammar": "biaya = cost, fee: biaya kirim = shipping cost. You will also hear ongkir (ongkos kirim)."
+    "grammar": "biaya kirim = shipping cost, but shops and apps nearly always shorten it to ongkir (from ongkos kirim). Gratis ongkir = free shipping – you'll see it everywhere."
   },
   {
     "id": "id-1316",
@@ -16156,8 +16085,7 @@
       "travel"
     ],
     "grammarNode": "node-21",
-    "priority": 1339,
-    "grammar": "saldo = account balance: saldonya kurang = the balance is not enough."
+    "priority": 1339
   },
   {
     "id": "id-1340",
@@ -16169,8 +16097,7 @@
       "travel"
     ],
     "grammarNode": "node-21",
-    "priority": 1340,
-    "grammar": "uang pas = exact change: bayar dengan uang pas = pay with the exact amount."
+    "priority": 1340
   },
   {
     "id": "id-1341",
@@ -16254,7 +16181,8 @@
       "general"
     ],
     "grammarNode": "node-21",
-    "priority": 1347
+    "priority": 1347,
+    "grammar": "-nya works like 'the': kembalian = change, kembaliannya = the change we both know about. Simpan kembaliannya = keep the change."
   },
   {
     "id": "id-1348",
@@ -16312,8 +16240,7 @@
       "travel"
     ],
     "grammarNode": "node-21",
-    "priority": 1352,
-    "grammar": "uang receh = coins, loose change: tidak ada receh = no coins."
+    "priority": 1352
   },
   {
     "id": "id-1353",
@@ -16325,8 +16252,7 @@
       "travel"
     ],
     "grammarNode": "node-21",
-    "priority": 1353,
-    "grammar": "tarik = pull; menarik uang = withdraw money: menarik uang di ATM."
+    "priority": 1353
   },
   {
     "id": "id-1354",
@@ -16350,8 +16276,7 @@
       "travel"
     ],
     "grammarNode": "node-21",
-    "priority": 1355,
-    "grammar": "antre = to queue; antrean = the queue: antreannya panjang = the line is long."
+    "priority": 1355
   },
   {
     "id": "id-1356",
@@ -16411,8 +16336,7 @@
       "general"
     ],
     "grammarNode": "node-21",
-    "priority": 1360,
-    "grammar": "juta = million: satu juta rupiah = 1,000,000 rupiah."
+    "priority": 1360
   },
   {
     "id": "id-1361",
@@ -16424,8 +16348,7 @@
       "travel"
     ],
     "grammarNode": "node-21",
-    "priority": 1361,
-    "grammar": "pecahan = note size: pecahan seratus ribu = 100,000 notes."
+    "priority": 1361
   },
   {
     "id": "id-1362",
@@ -16462,7 +16385,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1364,
-    "grammar": "gajian = payday, from gaji (salary): sampai gajian = until payday."
+    "grammar": "tinggal usually means live, but with amounts it means left: saldo saya tinggal dua ratus ribu = my balance is down to 200,000."
   },
   {
     "id": "id-1365",
@@ -16474,8 +16397,7 @@
       "travel"
     ],
     "grammarNode": "node-21",
-    "priority": 1365,
-    "grammar": "pulsa = prepaid phone credit: mengisi pulsa = to top up your phone."
+    "priority": 1365
   },
   {
     "id": "id-1366",
@@ -16487,7 +16409,8 @@
       "travel"
     ],
     "grammarNode": "node-21",
-    "priority": 1366
+    "priority": 1366,
+    "grammar": "habis = used up, and it stands alone as the whole statement: pulsa saya habis = my credit ran out. No extra verb needed."
   },
   {
     "id": "id-1367",
@@ -16499,8 +16422,7 @@
       "travel"
     ],
     "grammarNode": "node-21",
-    "priority": 1367,
-    "grammar": "konter = small phone-credit shop; konter pulsa signs are on every street."
+    "priority": 1367
   },
   {
     "id": "id-1368",
@@ -16555,8 +16477,7 @@
       "general"
     ],
     "grammarNode": "node-21",
-    "priority": 1372,
-    "grammar": "token listrik = prepaid electricity code: beli token listrik = buy power credit."
+    "priority": 1372
   },
   {
     "id": "id-1373",
@@ -16650,8 +16571,7 @@
       "general"
     ],
     "grammarNode": "node-21",
-    "priority": 1380,
-    "grammar": "resi = tracking number: nomor resi = the code to trace your package."
+    "priority": 1380
   },
   {
     "id": "id-1381",
@@ -16662,8 +16582,7 @@
       "general"
     ],
     "grammarNode": "node-21",
-    "priority": 1381,
-    "grammar": "pos satpam = the guard post; couriers often leave packages there."
+    "priority": 1381
   },
   {
     "id": "id-1382",
@@ -16709,7 +16628,8 @@
       "family"
     ],
     "grammarNode": "node-21",
-    "priority": 1385
+    "priority": 1385,
+    "grammar": "Pending things take belum, not tidak: belum sampai = hasn't arrived yet. Tidak sampai would mean it's not coming at all – belum says you still expect it."
   },
   {
     "id": "id-1386",
@@ -16731,8 +16651,7 @@
       "general"
     ],
     "grammarNode": "node-21",
-    "priority": 1387,
-    "grammar": "loket = service window: loket pengambilan paket = package pickup counter."
+    "priority": 1387
   },
   {
     "id": "id-1388",
@@ -16778,7 +16697,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1391,
-    "grammar": "pinjam = borrow: Boleh saya pinjam...? = May I borrow...? — the polite ask."
+    "grammar": "Boleh asks permission, bisa is ability. Boleh saya pinjam uang? = may I borrow money? Use boleh when you need a yes from someone."
   },
   {
     "id": "id-1392",
@@ -16801,8 +16720,7 @@
       "family"
     ],
     "grammarNode": "node-21",
-    "priority": 1393,
-    "grammar": "kos = rented room near campus or work: membayar kos = pay the room rent."
+    "priority": 1393
   },
   {
     "id": "id-1394",
@@ -16859,8 +16777,7 @@
       "general"
     ],
     "grammarNode": "node-21",
-    "priority": 1398,
-    "grammar": "utang = debt: punya utang = to owe, bayar utang = pay it back."
+    "priority": 1398
   },
   {
     "id": "id-1399",
@@ -16919,7 +16836,7 @@
     ],
     "grammarNode": "node-21",
     "priority": 1403,
-    "grammar": "struk = printed receipt. Cashiers ask: Struknya mau dibawa? = Want the receipt?"
+    "grammar": "Struknya mau dibawa? is the stock checkout question – cashiers ask it at nearly every register. struk = receipt; answer Mau (yes please) or Tidak usah (no need)."
   },
   {
     "id": "id-1404",
@@ -17047,8 +16964,7 @@
       "travel"
     ],
     "grammarNode": "node-21",
-    "priority": 1414,
-    "grammar": "kurs = exchange rate: kurs dolar hari ini = today's dollar rate."
+    "priority": 1414
   },
   {
     "id": "id-1415",
@@ -17059,8 +16975,7 @@
       "general"
     ],
     "grammarNode": "node-21",
-    "priority": 1415,
-    "grammar": "dompet = wallet; dompet digital = e-wallet apps like GoPay or Dana."
+    "priority": 1415
   },
   {
     "id": "id-1416",
@@ -17203,7 +17118,7 @@
     ],
     "grammarNode": "node-22",
     "priority": 1427,
-    "grammar": "maju = moved earlier: rapat maju jadi jam delapan = the meeting moved up to eight."
+    "grammar": "maju means go forward, and on a schedule forward = earlier: rapat maju jadi jam delapan = the meeting moved up to eight. The opposite, postponed, is diundur."
   },
   {
     "id": "id-1428",
@@ -17298,8 +17213,7 @@
       "work"
     ],
     "grammarNode": "node-22",
-    "priority": 1435,
-    "grammar": "hadir = to attend, be present: hadir di rapat = attend the meeting."
+    "priority": 1435
   },
   {
     "id": "id-1436",
@@ -17334,8 +17248,7 @@
       "work"
     ],
     "grammarNode": "node-22",
-    "priority": 1438,
-    "grammar": "memimpin = to lead (root: pimpin): memimpin rapat = lead the meeting."
+    "priority": 1438
   },
   {
     "id": "id-1439",
@@ -17431,7 +17344,7 @@
     ],
     "grammarNode": "node-22",
     "priority": 1446,
-    "grammar": "paling lambat = at the latest: kirim paling lambat besok siang = send by tomorrow noon at the latest."
+    "grammar": "paling lambat besok siang = by tomorrow noon at the latest. Its partner is paling cepat (at the earliest) – the pair brackets any deadline window."
   },
   {
     "id": "id-1447",
@@ -17466,8 +17379,7 @@
       "work"
     ],
     "grammarNode": "node-22",
-    "priority": 1449,
-    "grammar": "kejar deadline = race the deadline: kami sedang mengejar deadline."
+    "priority": 1449
   },
   {
     "id": "id-1450",
@@ -17538,7 +17450,7 @@
     ],
     "grammarNode": "node-22",
     "priority": 1455,
-    "grammar": "tinggal = left: waktu kita tinggal dua hari = we only have two days left."
+    "grammar": "tinggal usually means live or stay, but here it means 'remaining': waktu kita tinggal dua hari = we only have two days left. Context decides which tinggal you've met."
   },
   {
     "id": "id-1456",
@@ -17622,8 +17534,7 @@
       "work"
     ],
     "grammarNode": "node-22",
-    "priority": 1462,
-    "grammar": "mengajukan cuti = to put in for leave: saya mengajukan cuti tiga hari."
+    "priority": 1462
   },
   {
     "id": "id-1463",
@@ -17661,8 +17572,7 @@
       "family"
     ],
     "grammarNode": "node-22",
-    "priority": 1465,
-    "grammar": "cuti melahirkan = maternity leave (melahirkan = give birth): dia sedang cuti melahirkan."
+    "priority": 1465
   },
   {
     "id": "id-1466",
@@ -17699,7 +17609,7 @@
     ],
     "grammarNode": "node-22",
     "priority": 1468,
-    "grammar": "jauh-jauh hari = well in advance: ajukan jauh-jauh hari."
+    "grammar": "jauh-jauh hari is literally 'far-far days' – doubling jauh stretches the distance in time, giving 'well in advance': ajukan jauh-jauh hari."
   },
   {
     "id": "id-1469",
@@ -17822,7 +17732,7 @@
     ],
     "grammarNode": "node-22",
     "priority": 1478,
-    "grammar": "tidak masuk = not coming in (to work): saya tidak bisa masuk = I can't come in."
+    "grammar": "masuk literally means enter, but by itself it means coming in to work or school: saya tidak bisa masuk = I can't come in. tidak masuk is the standard 'absent'."
   },
   {
     "id": "id-1479",
@@ -17892,8 +17802,7 @@
       "work"
     ],
     "grammarNode": "node-22",
-    "priority": 1484,
-    "grammar": "surat keterangan sakit = doctor's note: kirim surat keterangan sakit ke kantor."
+    "priority": 1484
   },
   {
     "id": "id-1485",
@@ -17962,8 +17871,7 @@
       "work"
     ],
     "grammarNode": "node-22",
-    "priority": 1490,
-    "grammar": "sampaikan ke = pass the word to: tolong sampaikan ke bos = please tell the boss."
+    "priority": 1490
   },
   {
     "id": "id-1491",
@@ -18093,7 +18001,7 @@
     ],
     "grammarNode": "node-22",
     "priority": 1501,
-    "grammar": "kerjanya berat = the work is heavy — -nya makes kerja 'the work here'."
+    "grammar": "Bare kerja is any work; add -nya and it's this specific one: kerjanya juga berat = the work is also heavy. -nya often does the job of English 'the'."
   },
   {
     "id": "id-1502",
@@ -18104,8 +18012,7 @@
       "general"
     ],
     "grammarNode": "node-22",
-    "priority": 1502,
-    "grammar": "diterima = accepted: dia diterima kerja = he got the job."
+    "priority": 1502
   },
   {
     "id": "id-1503",
@@ -18304,7 +18211,7 @@
     ],
     "grammarNode": "node-22",
     "priority": 1519,
-    "grammar": "sungkan = shy to impose: jangan sungkan bertanya = don't hesitate to ask."
+    "grammar": "Sungkan isn't plain hesitation – it's the feeling of not wanting to impose on someone. Jangan sungkan bertanya = don't hold back out of politeness, just ask."
   },
   {
     "id": "id-1520",
@@ -18317,7 +18224,7 @@
     ],
     "grammarNode": "node-22",
     "priority": 1520,
-    "grammar": "saling = each other: saling membantu = help each other."
+    "grammar": "Saling before a verb makes it mutual: membantu = help, saling membantu = help each other. No extra 'each other' word needed after the verb."
   },
   {
     "id": "id-1521",
@@ -18460,8 +18367,7 @@
       "work"
     ],
     "grammarNode": "node-22",
-    "priority": 1532,
-    "grammar": "lampirkan = attach: tolong lampirkan file itu = please attach that file."
+    "priority": 1532
   },
   {
     "id": "id-1533",
@@ -18534,8 +18440,7 @@
       "work"
     ],
     "grammarNode": "node-22",
-    "priority": 1538,
-    "grammar": "dua rangkap = in duplicate: cetak dua rangkap = print two copies."
+    "priority": 1538
   },
   {
     "id": "id-1539",
@@ -18581,8 +18486,7 @@
       "general"
     ],
     "grammarNode": "node-22",
-    "priority": 1542,
-    "grammar": "menumpuk = to pile up: email menumpuk = emails piled up."
+    "priority": 1542
   },
   {
     "id": "id-1543",
@@ -18594,8 +18498,7 @@
       "work"
     ],
     "grammarNode": "node-22",
-    "priority": 1543,
-    "grammar": "lembur = (work) overtime: saya lembur malam ini = I'm working late tonight."
+    "priority": 1543
   },
   {
     "id": "id-1544",
@@ -18743,8 +18646,7 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1555,
-    "grammar": "melebihi = to go over: melebihi batas dua puluh kilo = over the twenty-kilo limit."
+    "priority": 1555
   },
   {
     "id": "id-1556",
@@ -18768,7 +18670,8 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1557
+    "priority": 1557,
+    "grammar": "Indonesian often puts the object first: Tas kecil ini saya bawa = this small bag I'll take. The doer comes right after it, with no extra words needed."
   },
   {
     "id": "id-1558",
@@ -18792,7 +18695,8 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1559
+    "priority": 1559,
+    "grammar": "tolong literally means help, and it turns any command into a polite request: Tolong taruh koper Anda = please put your suitcase."
   },
   {
     "id": "id-1560",
@@ -18804,8 +18708,7 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1560,
-    "grammar": "berlaku = valid: paspor masih berlaku = the passport is still valid."
+    "priority": 1560
   },
   {
     "id": "id-1561",
@@ -18818,7 +18721,7 @@
     ],
     "grammarNode": "node-23",
     "priority": 1561,
-    "grammar": "ketinggalan = left behind by accident: paspor ketinggalan di taksi = the passport got left in the taxi."
+    "grammar": "Ke-...-an marks accidents: tinggal = stay behind, ketinggalan = got left behind – nobody did it on purpose. Same move in ketiduran (accidentally fell asleep)."
   },
   {
     "id": "id-1562",
@@ -18915,8 +18818,7 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1569,
-    "grammar": "formulir kedatangan = arrival form; mengisi formulir = fill in a form."
+    "priority": 1569
   },
   {
     "id": "id-1570",
@@ -18929,7 +18831,7 @@
     ],
     "grammarNode": "node-23",
     "priority": 1570,
-    "grammar": "antre = queue up; antrean = the line itself: antrean panjang = a long line."
+    "grammar": "The -an ending turns an action into its thing: antre = to queue up, antrean = the line itself. Same trick in makan – makanan (food), minum – minuman (drink)."
   },
   {
     "id": "id-1571",
@@ -18977,8 +18879,7 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1574,
-    "grammar": "pengambilan bagasi = baggage claim, from ambil (take)."
+    "priority": 1574
   },
   {
     "id": "id-1575",
@@ -19062,8 +18963,7 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1581,
-    "grammar": "diminta kembali = asked back: uang bisa diminta kembali = the money can be refunded."
+    "priority": 1581
   },
   {
     "id": "id-1582",
@@ -19135,7 +19035,7 @@
     ],
     "grammarNode": "node-23",
     "priority": 1587,
-    "grammar": "pengganti = replacement, from ganti (change): penerbangan pengganti = replacement flight."
+    "grammar": "baru means new, but before a verb it means only just or not until: penerbangan pengganti baru ada besok = the replacement flight isn't there until tomorrow."
   },
   {
     "id": "id-1588",
@@ -19147,7 +19047,8 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1588
+    "priority": 1588,
+    "grammar": "English says you missed the plane; Indonesian says the plane left you behind: ketinggalan pesawat = got left behind by the plane."
   },
   {
     "id": "id-1589",
@@ -19170,8 +19071,7 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1590,
-    "grammar": "menginap = stay overnight: kami menginap di dekat stasiun = we stay the night near the station."
+    "priority": 1590
   },
   {
     "id": "id-1591",
@@ -19195,8 +19095,7 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1592,
-    "grammar": "Untung saja = luckily: Untung saja tidak dibatalkan = luckily it was not canceled."
+    "priority": 1592
   },
   {
     "id": "id-1593",
@@ -19268,8 +19167,7 @@
       "general"
     ],
     "grammarNode": "node-23",
-    "priority": 1598,
-    "grammar": "bocor = leaking: keran bocor = the tap leaks."
+    "priority": 1598
   },
   {
     "id": "id-1599",
@@ -19281,8 +19179,7 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1599,
-    "grammar": "minta = ask for something: minta kamar lain = ask for another room."
+    "priority": 1599
   },
   {
     "id": "id-1600",
@@ -19293,7 +19190,8 @@
       "general"
     ],
     "grammarNode": "node-23",
-    "priority": 1600
+    "priority": 1600,
+    "grammar": "sampai usually means until, but after a description it means so much that: berisik sekali sampai kami tidak bisa tidur = so noisy we couldn't sleep."
   },
   {
     "id": "id-1601",
@@ -19349,8 +19247,7 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1605,
-    "grammar": "diganti = replaced (by staff): handuk belum diganti = the towels have not been replaced."
+    "priority": 1605
   },
   {
     "id": "id-1606",
@@ -19373,8 +19270,7 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1607,
-    "grammar": "bebas = free of: kamar bebas rokok = non-smoking room."
+    "priority": 1607
   },
   {
     "id": "id-1608",
@@ -19477,7 +19373,8 @@
       "general"
     ],
     "grammarNode": "node-23",
-    "priority": 1616
+    "priority": 1616,
+    "grammar": "belum = not yet, and it's the negative for anything still pending: belum ada yang datang = no one has come yet. Tidak would state it flatly, as if no one will."
   },
   {
     "id": "id-1617",
@@ -19538,8 +19435,7 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1621,
-    "grammar": "menyewa = to rent: kami menyewa motor = we rent a motorbike."
+    "priority": 1621
   },
   {
     "id": "id-1622",
@@ -19586,8 +19482,7 @@
       "general"
     ],
     "grammarNode": "node-23",
-    "priority": 1625,
-    "grammar": "dikembalikan = returned (by someone): motornya dikembalikan = the bike gets returned."
+    "priority": 1625
   },
   {
     "id": "id-1626",
@@ -19655,8 +19550,7 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1631,
-    "grammar": "sebagai = as: paspor sebagai jaminan = a passport as the deposit."
+    "priority": 1631
   },
   {
     "id": "id-1632",
@@ -19667,8 +19561,7 @@
       "general"
     ],
     "grammarNode": "node-23",
-    "priority": 1632,
-    "grammar": "kempis = flat (tire): ban kempis = a flat tire."
+    "priority": 1632
   },
   {
     "id": "id-1633",
@@ -19691,7 +19584,7 @@
     ],
     "grammarNode": "node-23",
     "priority": 1634,
-    "grammar": "harian = daily, from hari: sewa harian = daily rental."
+    "grammar": "Stick -an on a time word to get a 'per' word: hari – harian (daily), minggu – mingguan (weekly), bulan – bulanan (monthly). Sewa harian = daily rental."
   },
   {
     "id": "id-1635",
@@ -19821,7 +19714,7 @@
     ],
     "grammarNode": "node-23",
     "priority": 1645,
-    "grammar": "pulang pergi = round trip: tiket pulang pergi = a return ticket."
+    "grammar": "Pulang pergi is literally 'go-home go' – the trip home gets named first. Tiket pulang pergi = a round-trip ticket, often shortened to PP on booking sites."
   },
   {
     "id": "id-1646",
@@ -19833,7 +19726,8 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1646
+    "priority": 1646,
+    "grammar": "The everyday way to say per is se- (one): dua kali sehari = twice a day, literally two times one-day."
   },
   {
     "id": "id-1647",
@@ -19913,7 +19807,7 @@
     ],
     "grammarNode": "node-23",
     "priority": 1653,
-    "grammar": "salah + verb = do it wrong: salah beli = bought the wrong one."
+    "grammar": "Salah slots before almost any verb to mean doing it wrong: salah beli = bought the wrong one, salah paham = misunderstood, salah sambung = dialed the wrong number."
   },
   {
     "id": "id-1654",
@@ -19972,8 +19866,7 @@
       "general"
     ],
     "grammarNode": "node-23",
-    "priority": 1658,
-    "grammar": "Maaf mengganggu = sorry to bother you — softens a question to a stranger."
+    "priority": 1658
   },
   {
     "id": "id-1659",
@@ -20029,8 +19922,7 @@
       "general"
     ],
     "grammarNode": "node-23",
-    "priority": 1663,
-    "grammar": "menunjukkan = show, point out: menunjukkan jalan = show the way."
+    "priority": 1663
   },
   {
     "id": "id-1664",
@@ -20066,7 +19958,8 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1666
+    "priority": 1666,
+    "grammar": "sama normally means same, but in everyday speech it also means with: sama keluarga = with family. Dengan is the formal version."
   },
   {
     "id": "id-1667",
@@ -20137,8 +20030,7 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1672,
-    "grammar": "kampung halaman = hometown, the place you are from."
+    "priority": 1672
   },
   {
     "id": "id-1673",
@@ -20173,8 +20065,7 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 1675,
-    "grammar": "menyenangkan = enjoyable, from senang (happy): liburan menyenangkan = an enjoyable holiday."
+    "priority": 1675
   },
   {
     "id": "id-1676",
@@ -20694,8 +20585,7 @@
       "family"
     ],
     "grammarNode": "node-24",
-    "priority": 1719,
-    "grammar": "harapan = a hope/wish, from harap: ucapkan harapanmu = say your wish."
+    "priority": 1719
   },
   {
     "id": "id-1720",
@@ -20899,8 +20789,7 @@
       "travel"
     ],
     "grammarNode": "node-24",
-    "priority": 1736,
-    "grammar": "Mampir = drop by briefly on the way somewhere: mampir ke rumah bibi = stop by auntie's."
+    "priority": 1736
   },
   {
     "id": "id-1737",
@@ -21051,7 +20940,7 @@
     ],
     "grammarNode": "node-24",
     "priority": 1748,
-    "grammar": "-kan can mean 'for someone': membuatkan kami teh = made tea for us."
+    "grammar": "Adding -kan aims the action at a beneficiary: membuat teh = made tea, membuatkan kami teh = made tea for us. The person served comes right after the verb."
   },
   {
     "id": "id-1749",
@@ -21287,7 +21176,7 @@
     ],
     "grammarNode": "node-24",
     "priority": 1767,
-    "grammar": "Kabari (from kabar, news) = let me know: kabari kalau sudah sampai = tell us when you arrive."
+    "grammar": "Kabar is the noun 'news'; the -i ending turns it into a verb: kabari kami = send us word. Indonesian builds verbs straight from nouns this way all the time."
   },
   {
     "id": "id-1768",
@@ -21360,8 +21249,7 @@
       "general"
     ],
     "grammarNode": "node-24",
-    "priority": 1773,
-    "grammar": "Tuan rumah = the host, literally 'master of the house': kue untuk tuan rumah = cakes for the host."
+    "priority": 1773
   },
   {
     "id": "id-1774",
@@ -21420,8 +21308,7 @@
       "family"
     ],
     "grammarNode": "node-24",
-    "priority": 1778,
-    "grammar": "Martabak manis = a thick sweet stuffed pancake, the classic treat to bring home at night."
+    "priority": 1778
   },
   {
     "id": "id-1779",
@@ -21518,8 +21405,7 @@
       "family"
     ],
     "grammarNode": "node-24",
-    "priority": 1786,
-    "grammar": "Lauk = the dishes eaten with rice; nasi dan lauk is the shape of every Indonesian meal."
+    "priority": 1786
   },
   {
     "id": "id-1787",
@@ -21617,8 +21503,7 @@
       "family"
     ],
     "grammarNode": "node-24",
-    "priority": 1794,
-    "grammar": "Grup keluarga = the extended-family chat group — every family has one, and it is never quiet."
+    "priority": 1794
   },
   {
     "id": "id-1795",
@@ -21691,7 +21576,7 @@
     ],
     "grammarNode": "node-24",
     "priority": 1800,
-    "grammar": "Masing-masing = each/their own: kota masing-masing = their own cities."
+    "grammar": "Masing-masing sits after the noun and covers 'their own' by itself: kota masing-masing = their own cities – no separate word for 'their' needed."
   },
   {
     "id": "id-1801",
@@ -21773,8 +21658,7 @@
       "travel"
     ],
     "grammarNode": "node-25",
-    "priority": 1807,
-    "grammar": "Bisa also = possible: kita bisa sampai = we can (it is possible to) get there."
+    "priority": 1807
   },
   {
     "id": "id-1808",
@@ -21894,8 +21778,7 @@
       "family"
     ],
     "grammarNode": "node-25",
-    "priority": 1817,
-    "grammar": "Minta izin = ask permission: minta izin datang siang = ask to come in late."
+    "priority": 1817
   },
   {
     "id": "id-1818",
@@ -22182,7 +22065,7 @@
     ],
     "grammarNode": "node-25",
     "priority": 1841,
-    "grammar": "Paling lambat = at the latest: paling lambat tanggal lima = by the fifth at the latest."
+    "grammar": "Deadlines use superlatives: paling lambat, literally 'most late', means at the latest – paling lambat tanggal lima = by the fifth. Paling cepat works for 'at the earliest'."
   },
   {
     "id": "id-1842",
@@ -22251,8 +22134,7 @@
       "work"
     ],
     "grammarNode": "node-25",
-    "priority": 1847,
-    "grammar": "Harus = must, bisa = can: harus dicetak, tidak bisa lewat email = must be printed, can't go by email."
+    "priority": 1847
   },
   {
     "id": "id-1848",
@@ -22495,8 +22377,7 @@
       "general"
     ],
     "grammarNode": "node-25",
-    "priority": 1868,
-    "grammar": "Berarti = that means: berarti kita mesti keluar jam enam = so we've got to leave at six."
+    "priority": 1868
   },
   {
     "id": "id-1869",
@@ -22627,8 +22508,7 @@
       "travel"
     ],
     "grammarNode": "node-25",
-    "priority": 1879,
-    "grammar": "Sempat + feeling = briefly felt: sempat bingung = was confused for a moment."
+    "priority": 1879
   },
   {
     "id": "id-1880",
@@ -22709,8 +22589,7 @@
       "general"
     ],
     "grammarNode": "node-25",
-    "priority": 1886,
-    "grammar": "Demi = for the sake of: demi tiket konser = for the sake of concert tickets."
+    "priority": 1886
   },
   {
     "id": "id-1887",
@@ -23042,8 +22921,7 @@
       "travel"
     ],
     "grammarNode": "node-25",
-    "priority": 1914,
-    "grammar": "Announcements use formal wajib: penumpang wajib memakai = passengers are required to wear."
+    "priority": 1914
   },
   {
     "id": "id-1915",
@@ -23122,8 +23000,7 @@
       "general"
     ],
     "grammarNode": "node-25",
-    "priority": 1921,
-    "grammar": "Memotret = to photograph (from potret): dilarang memotret = no photography."
+    "priority": 1921
   },
   {
     "id": "id-1922",
@@ -23168,8 +23045,7 @@
       "general"
     ],
     "grammarNode": "node-25",
-    "priority": 1925,
-    "grammar": "Wajib = a rule that binds; saran = a suggestion. Signs with wajib are not optional."
+    "priority": 1925
   },
   {
     "id": "id-1926",
@@ -23181,8 +23057,7 @@
       "work"
     ],
     "grammarNode": "node-26",
-    "priority": 1926,
-    "grammar": "Merasa + a feeling word = to feel: saya merasa lelah = I feel tired."
+    "priority": 1926
   },
   {
     "id": "id-1927",
@@ -23216,8 +23091,7 @@
       "general"
     ],
     "grammarNode": "node-26",
-    "priority": 1929,
-    "grammar": "Bersalah = guilty, from salah (wrong): merasa bersalah = to feel guilty."
+    "priority": 1929
   },
   {
     "id": "id-1930",
@@ -23647,7 +23521,7 @@
     ],
     "grammarNode": "node-26",
     "priority": 1966,
-    "grammar": "Saling + verb = each other: saling membantu = help each other."
+    "grammar": "Saling makes almost any verb mutual: saling membantu = help each other, saling kenal = know each other, saling percaya = trust each other."
   },
   {
     "id": "id-1967",
@@ -23658,8 +23532,7 @@
       "general"
     ],
     "grammarNode": "node-26",
-    "priority": 1967,
-    "grammar": "Kesayangan = beloved/favorite, from sayang: motor kesayangannya = his beloved motorbike."
+    "priority": 1967
   },
   {
     "id": "id-1968",
@@ -23728,8 +23601,7 @@
       "travel"
     ],
     "grammarNode": "node-26",
-    "priority": 1973,
-    "grammar": "Kecewa dengan = disappointed with: kecewa dengan pelayanan = disappointed with the service."
+    "priority": 1973
   },
   {
     "id": "id-1974",
@@ -23861,8 +23733,7 @@
       "work"
     ],
     "grammarNode": "node-26",
-    "priority": 1984,
-    "grammar": "Tidak usah = no need to: tidak usah khawatir = no need to worry."
+    "priority": 1984
   },
   {
     "id": "id-1985",
@@ -23931,8 +23802,7 @@
       "work"
     ],
     "grammarNode": "node-26",
-    "priority": 1990,
-    "grammar": "Betah = to feel at home somewhere: betah bekerja di sini = happy staying here."
+    "priority": 1990
   },
   {
     "id": "id-1991",
@@ -24015,8 +23885,7 @@
       "work"
     ],
     "grammarNode": "node-26",
-    "priority": 1997,
-    "grammar": "Semakin = more and more: semakin berkembang = growing more and more."
+    "priority": 1997
   },
   {
     "id": "id-1998",
@@ -24136,8 +24005,7 @@
       "family"
     ],
     "grammarNode": "node-26",
-    "priority": 2007,
-    "grammar": "Sedangkan contrasts two people or things: kakak suka komedi, sedangkan saya suka sejarah."
+    "priority": 2007
   },
   {
     "id": "id-2008",
@@ -24339,8 +24207,7 @@
       "work"
     ],
     "grammarNode": "node-26",
-    "priority": 2024,
-    "grammar": "Berbeda pendapat = to disagree — literally 'to differ in opinion'."
+    "priority": 2024
   },
   {
     "id": "id-2025",
@@ -24401,7 +24268,7 @@
     ],
     "grammarNode": "node-26",
     "priority": 2029,
-    "grammar": "Menyampaikan pendapat = to voice an opinion, from sampai (reach)."
+    "grammar": "Menyampaikan comes from sampai (arrive, reach): to voice something is to make it reach people. Menyampaikan pendapat = get your opinion across."
   },
   {
     "id": "id-2030",
@@ -24470,8 +24337,7 @@
       "work"
     ],
     "grammarNode": "node-26",
-    "priority": 2035,
-    "grammar": "Masukan = feedback/input, from masuk (enter): terima kasih atas masukan kalian."
+    "priority": 2035
   },
   {
     "id": "id-2036",
@@ -24482,8 +24348,7 @@
       "general"
     ],
     "grammarNode": "node-26",
-    "priority": 2036,
-    "grammar": "Membuat + person + feeling = to make someone feel: membuat kami lega = made us relieved."
+    "priority": 2036
   },
   {
     "id": "id-2037",
@@ -24516,8 +24381,7 @@
       "general"
     ],
     "grammarNode": "node-26",
-    "priority": 2039,
-    "grammar": "Awalnya = at first, from awal (beginning): awalnya saya ragu = at first I was unsure."
+    "priority": 2039
   },
   {
     "id": "id-2040",
@@ -24553,7 +24417,7 @@
     ],
     "grammarNode": "node-26",
     "priority": 2042,
-    "grammar": "Dua kali lipat = double: naik dua kali lipat = doubled."
+    "grammar": "Lipat means fold, so dua kali lipat = 'two times folded', like English twofold. It scales: tiga kali lipat = tripled. Naik dua kali lipat = doubled."
   },
   {
     "id": "id-2043",
@@ -24576,8 +24440,7 @@
       "work"
     ],
     "grammarNode": "node-26",
-    "priority": 2044,
-    "grammar": "Campur aduk = all mixed up: perasaan campur aduk = mixed feelings."
+    "priority": 2044
   },
   {
     "id": "id-2045",
@@ -24624,7 +24487,7 @@
     ],
     "grammarNode": "node-26",
     "priority": 2048,
-    "grammar": "Pelan-pelan = little by little: pelan-pelan rasa takutnya hilang."
+    "grammar": "Doubling an adjective softens it into a gradual manner: pelan = slow, pelan-pelan = little by little. Pelan-pelan rasa takutnya hilang = the fear slowly faded."
   },
   {
     "id": "id-2049",
@@ -24705,8 +24568,7 @@
       "general"
     ],
     "grammarNode": "node-27",
-    "priority": 2055,
-    "grammar": "Menjelang = approaching (a time): menjelang akhir musim = toward the end of the season."
+    "priority": 2055
   },
   {
     "id": "id-2056",
@@ -24822,8 +24684,7 @@
       "general"
     ],
     "grammarNode": "node-27",
-    "priority": 2065,
-    "grammar": "Begadang = to stay up very late: sering begadang = often stays up late."
+    "priority": 2065
   },
   {
     "id": "id-2066",
@@ -24917,8 +24778,7 @@
       "travel"
     ],
     "grammarNode": "node-27",
-    "priority": 2073,
-    "grammar": "Sama dengan = the same as: harga A sama dengan harga B = price A equals price B."
+    "priority": 2073
   },
   {
     "id": "id-2074",
@@ -25025,8 +24885,7 @@
       "work"
     ],
     "grammarNode": "node-27",
-    "priority": 2082,
-    "grammar": "Jauh lebih = much more: jauh lebih murah = much cheaper."
+    "priority": 2082
   },
   {
     "id": "id-2083",
@@ -25038,8 +24897,7 @@
       "family"
     ],
     "grammarNode": "node-27",
-    "priority": 2083,
-    "grammar": "Persis = exactly: sama persis = exactly the same."
+    "priority": 2083
   },
   {
     "id": "id-2084",
@@ -25052,7 +24910,7 @@
     ],
     "grammarNode": "node-27",
     "priority": 2084,
-    "grammar": "Berbeda dengan = different from: berbeda dengan iklim Jakarta = different from Jakarta's climate."
+    "grammar": "Indonesian pairs 'different' with 'with', not 'from': berbeda dengan iklim di Jakarta. Berbeda dari isn't wrong, but dengan is what you'll hear."
   },
   {
     "id": "id-2085",
@@ -25191,8 +25049,7 @@
       "family"
     ],
     "grammarNode": "node-27",
-    "priority": 2096,
-    "grammar": "Mirip (dengan) = similar to, looks like: mirip ibunya = looks like his mother."
+    "priority": 2096
   },
   {
     "id": "id-2097",
@@ -25250,8 +25107,7 @@
       "family"
     ],
     "grammarNode": "node-27",
-    "priority": 2101,
-    "grammar": "Subuh = dawn, the hours before sunrise: bangun sebelum subuh = up before dawn."
+    "priority": 2101
   },
   {
     "id": "id-2102",
@@ -25307,8 +25163,7 @@
       "general"
     ],
     "grammarNode": "node-27",
-    "priority": 2106,
-    "grammar": "Seperti = like, for comparisons: licin seperti kaca = slippery like glass."
+    "priority": 2106
   },
   {
     "id": "id-2107",
@@ -25416,7 +25271,7 @@
     ],
     "grammarNode": "node-27",
     "priority": 2115,
-    "grammar": "Kayak is casual speech; in writing use seperti: pahit kayak obat = bitter like medicine."
+    "grammar": "Pahitnya kayak obat sounds like family chat – kayak lives in relaxed speech. The moment you write anything formal (an email, a report), it becomes seperti."
   },
   {
     "id": "id-2116",
@@ -25451,8 +25306,7 @@
       "general"
     ],
     "grammarNode": "node-27",
-    "priority": 2118,
-    "grammar": "Kelihatan = visible, can be seen: hampir tidak kelihatan = barely visible."
+    "priority": 2118
   },
   {
     "id": "id-2119",
@@ -25464,7 +25318,7 @@
     ],
     "grammarNode": "node-27",
     "priority": 2119,
-    "grammar": "Lengket kayak perangko (stuck like a stamp) is the image for two people who are never apart."
+    "grammar": "Lengket seperti perangko – stuck like a stamp – is the set image for two people who are never apart. Lengket alone is the sticky feel of rice or glue."
   },
   {
     "id": "id-2120",
@@ -25476,8 +25330,7 @@
       "work"
     ],
     "grammarNode": "node-27",
-    "priority": 2120,
-    "grammar": "Gajian = payday, having just been paid: baru gajian = fresh off payday."
+    "priority": 2120
   },
   {
     "id": "id-2121",
@@ -25691,8 +25544,7 @@
       "general"
     ],
     "grammarNode": "node-27",
-    "priority": 2138,
-    "grammar": "Menurut = according to: menurut siswa = according to the students."
+    "priority": 2138
   },
   {
     "id": "id-2139",
@@ -25772,8 +25624,7 @@
       "general"
     ],
     "grammarNode": "node-27",
-    "priority": 2145,
-    "grammar": "Awet = long-lasting, durable: lebih awet = lasts longer."
+    "priority": 2145
   },
   {
     "id": "id-2146",
@@ -25808,7 +25659,7 @@
     ],
     "grammarNode": "node-27",
     "priority": 2148,
-    "grammar": "Tertinggal = left behind by accident: paket ternyata tertinggal = the package got left behind."
+    "grammar": "Ter- marks what happens with nobody intending it: tertinggal = got left behind by accident. The package ternyata tertinggal – it turned out left behind, no one chose that."
   },
   {
     "id": "id-2149",
@@ -25853,8 +25704,7 @@
       "general"
     ],
     "grammarNode": "node-27",
-    "priority": 2152,
-    "grammar": "Sejak tadi = since earlier, all along: ada di sini sejak tadi = has been here all along."
+    "priority": 2152
   },
   {
     "id": "id-2153",
@@ -26389,8 +26239,7 @@
       "general"
     ],
     "grammarNode": "node-28",
-    "priority": 2198,
-    "grammar": "Sampai sekarang = up to now: belum datang sampai sekarang = still hasn't come."
+    "priority": 2198
   },
   {
     "id": "id-2199",
@@ -26449,7 +26298,7 @@
     ],
     "grammarNode": "node-28",
     "priority": 2203,
-    "grammar": "Ketemu = everyday 'found/turn up': kuncinya belum ketemu = the key hasn't turned up."
+    "grammar": "Everyday speech puts the lost item in charge: kunci gudang itu belum ketemu = the warehouse key hasn't turned up. Ketemu is casual – formal writing uses ditemukan."
   },
   {
     "id": "id-2204",
@@ -26613,8 +26462,7 @@
       "travel"
     ],
     "grammarNode": "node-28",
-    "priority": 2217,
-    "grammar": "Sesudahnya = after that, linking two events: makan dulu, sesudahnya berangkat = eat first, then leave."
+    "priority": 2217
   },
   {
     "id": "id-2218",
@@ -27010,8 +26858,7 @@
       "travel"
     ],
     "grammarNode": "node-28",
-    "priority": 2250,
-    "grammar": "Ternyata = it turns out: ternyata sudah habis = turns out they were sold out."
+    "priority": 2250
   },
   {
     "id": "id-2251",
@@ -27035,8 +26882,7 @@
       "work"
     ],
     "grammarNode": "node-28",
-    "priority": 2252,
-    "grammar": "Gajian = payday (from gaji, salary): pas gajian = right when the pay comes in."
+    "priority": 2252
   },
   {
     "id": "id-2253",
@@ -27084,8 +26930,7 @@
       "family"
     ],
     "grammarNode": "node-28",
-    "priority": 2256,
-    "grammar": "Akhirnya = finally, after effort or waiting: akhirnya selesai juga! = it's finally done!"
+    "priority": 2256
   },
   {
     "id": "id-2257",
@@ -27121,8 +26966,7 @@
       "work"
     ],
     "grammarNode": "node-28",
-    "priority": 2259,
-    "grammar": "Mengajukan = put forward/request: mengajukan kenaikan gaji = ask for a raise."
+    "priority": 2259
   },
   {
     "id": "id-2260",
@@ -27146,7 +26990,7 @@
     ],
     "grammarNode": "node-28",
     "priority": 2261,
-    "grammar": "Antrean = the queue (antre + -an): antrean panjang = a long line."
+    "grammar": "Once antre (queue up) takes -an it's a full noun: antrean panjang itu – it takes an adjective, takes itu, and stands as the subject of the sentence."
   },
   {
     "id": "id-2262",
@@ -27277,7 +27121,7 @@
     ],
     "grammarNode": "node-28",
     "priority": 2272,
-    "grammar": "Melihat-lihat = browse/look around: hanya mau melihat-lihat = just looking."
+    "grammar": "Doubling a verb makes it aimless and unhurried: melihat = look at, melihat-lihat = browse with no target. Hanya mau melihat-lihat = just looking, the shop answer."
   },
   {
     "id": "id-2273",
@@ -27335,8 +27179,7 @@
       "general"
     ],
     "grammarNode": "node-28",
-    "priority": 2277,
-    "grammar": "Lewat = via/through: lewat aplikasi = through an app."
+    "priority": 2277
   },
   {
     "id": "id-2278",
@@ -27349,7 +27192,7 @@
     ],
     "grammarNode": "node-28",
     "priority": 2278,
-    "grammar": "Berjualan = to sell as one's trade: berjualan kue = sell cakes (for a living)."
+    "grammar": "Berjualan is selling as your trade, not one transaction: nenek dulu berjualan kue = grandma used to sell cakes for a living. To sell one specific thing, use menjual."
   },
   {
     "id": "id-2279",
@@ -27466,7 +27309,7 @@
     ],
     "grammarNode": "node-28",
     "priority": 2288,
-    "grammar": "Lama-lama = over time/gradually: lama-lama dia belajar = over time she learned."
+    "grammar": "Double a time word and it stretches into a process: lama = a long while, lama-lama = over time, bit by bit. Lama-lama dia belajar memasak = over time she learned to cook."
   },
   {
     "id": "id-2289",
@@ -27514,8 +27357,7 @@
       "work"
     ],
     "grammarNode": "node-28",
-    "priority": 2292,
-    "grammar": "Sampai = until: menunggu sampai jam lima = wait until five."
+    "priority": 2292
   },
   {
     "id": "id-2293",
@@ -27562,8 +27404,7 @@
       "work"
     ],
     "grammarNode": "node-28",
-    "priority": 2296,
-    "grammar": "Tertinggal = accidentally left behind: dompet saya tertinggal = my wallet got left behind."
+    "priority": 2296
   },
   {
     "id": "id-2297",
@@ -27660,7 +27501,7 @@
     ],
     "grammarNode": "node-29",
     "priority": 2304,
-    "grammar": "Gurih = savory-rich (coconut milk, broth, fried things) — a core taste word with no exact English match."
+    "grammar": "Gurih is the savory richness of coconut milk, broth, and fried things – a core taste word English has no exact match for. Bumbu kacang yang gurih = savory peanut sauce."
   },
   {
     "id": "id-2305",
@@ -27673,7 +27514,7 @@
     ],
     "grammarNode": "node-29",
     "priority": 2305,
-    "grammar": "Kenyal = springy-bouncy — the prized bakso texture; lembek bakso is a failed bakso."
+    "grammar": "Kenyal is the prized springy-bouncy bite: baksonya kenyal is a compliment. The opposite, lembek (mushy), is a failed bakso."
   },
   {
     "id": "id-2306",
@@ -27722,7 +27563,7 @@
     ],
     "grammarNode": "node-29",
     "priority": 2309,
-    "grammar": "Kecap = soy sauce (kecap manis = sweet), not ketchup — English borrowed the word from Malay."
+    "grammar": "Kecap is soy sauce, not ketchup – kecap manis is the sweet, syrupy kind brushed on grilled chicken. English actually borrowed 'ketchup' from this Malay word."
   },
   {
     "id": "id-2310",
@@ -27901,8 +27742,7 @@
       "general"
     ],
     "grammarNode": "node-29",
-    "priority": 2324,
-    "grammar": "Ter- + biasa = terbiasa (used to it): sudah terbiasa = already used to it."
+    "priority": 2324
   },
   {
     "id": "id-2325",
@@ -27936,8 +27776,7 @@
       "general"
     ],
     "grammarNode": "node-29",
-    "priority": 2327,
-    "grammar": "Hambar = bland. The fix is garam (salt): kurang garam = not enough salt."
+    "priority": 2327
   },
   {
     "id": "id-2328",
@@ -28018,8 +27857,7 @@
       "general"
     ],
     "grammarNode": "node-29",
-    "priority": 2334,
-    "grammar": "Empuk = tender, soft to the bite: dagingnya empuk = the meat is tender."
+    "priority": 2334
   },
   {
     "id": "id-2335",
@@ -28041,8 +27879,7 @@
       "general"
     ],
     "grammarNode": "node-29",
-    "priority": 2336,
-    "grammar": "Alot = tough, chewy meat — the word for overcooked satay or cheap beef."
+    "priority": 2336
   },
   {
     "id": "id-2337",
@@ -28189,7 +28026,7 @@
     ],
     "grammarNode": "node-29",
     "priority": 2348,
-    "grammar": "Ayam kampung (lit. village chicken) = free-range chicken — pricier and tastier than broiler."
+    "grammar": "Ayam kampung is literally 'village chicken' – free-range birds that roam the kampung, pricier but lebih gurih. Ordinary farmed chicken is ayam negeri or broiler."
   },
   {
     "id": "id-2349",
@@ -28224,7 +28061,7 @@
     ],
     "grammarNode": "node-29",
     "priority": 2351,
-    "grammar": "Diungkep = simmered in the spice paste before frying/grilling — the step direbus doesn't capture."
+    "grammar": "Diungkep is a specific kitchen step: simmered slowly in the spice paste so bumbunya meresap. Direbus is just boiling in water – it wouldn't get the seasoning in."
   },
   {
     "id": "id-2352",
@@ -28237,7 +28074,7 @@
     ],
     "grammarNode": "node-29",
     "priority": 2352,
-    "grammar": "Beras = uncooked rice, nasi = cooked rice on the plate — lontong starts from beras."
+    "grammar": "English 'rice' splits in two: beras is the raw grain you buy, nasi is cooked rice on the plate. Lontong starts from beras, then cooks inside the banana leaf."
   },
   {
     "id": "id-2353",
@@ -28313,7 +28150,7 @@
     ],
     "grammarNode": "node-29",
     "priority": 2358,
-    "grammar": "Pun after a word = even: level lima pun masih kurang = even level five is not enough."
+    "grammar": "Pun attaches after the word it stresses: level lima pun = even level five. Paired with masih kurang it builds the common 'even X still isn't enough' shape."
   },
   {
     "id": "id-2359",
@@ -28461,7 +28298,7 @@
     ],
     "grammarNode": "node-29",
     "priority": 2370,
-    "grammar": "Warung habit: eat first, pay after — bayarnya nanti saja = just pay later."
+    "grammar": "Warung custom: you eat first and settle up after. Bayarnya nanti saja di kasir = just pay later at the register – no one expects payment before the food."
   },
   {
     "id": "id-2371",
@@ -28521,8 +28358,7 @@
       "travel"
     ],
     "grammarNode": "node-29",
-    "priority": 2375,
-    "grammar": "Gorengan = the family of street fried snacks: tempe, tahu, bakwan, pisang goreng."
+    "priority": 2375
   },
   {
     "id": "id-2376",
@@ -28863,8 +28699,7 @@
       "general"
     ],
     "grammarNode": "node-29",
-    "priority": 2403,
-    "grammar": "Traktir = treat someone (pay for them): aku traktir, ya = my treat."
+    "priority": 2403
   },
   {
     "id": "id-2404",
@@ -28875,8 +28710,7 @@
       "general"
     ],
     "grammarNode": "node-29",
-    "priority": 2404,
-    "grammar": "Bagi rata = split evenly (rata = flat, even): kita bagi rata = we split it equally."
+    "priority": 2404
   },
   {
     "id": "id-2405",
@@ -28934,8 +28768,7 @@
       "work"
     ],
     "grammarNode": "node-29",
-    "priority": 2409,
-    "grammar": "Patungan = pool money / chip in — the everyday word: patungan, yuk! = let's split it!"
+    "priority": 2409
   },
   {
     "id": "id-2410",
@@ -29030,8 +28863,7 @@
       "family"
     ],
     "grammarNode": "node-29",
-    "priority": 2417,
-    "grammar": "Doyan = really into a food (casual): doyan pedas = loves spicy food."
+    "priority": 2417
   },
   {
     "id": "id-2418",
@@ -29081,8 +28913,7 @@
       "travel"
     ],
     "grammarNode": "node-29",
-    "priority": 2421,
-    "grammar": "Diulek = ground on a stone mortar (ulekan) — what gives sambal its rough texture."
+    "priority": 2421
   },
   {
     "id": "id-2422",
@@ -29245,8 +29076,7 @@
       "general"
     ],
     "grammarNode": "node-30",
-    "priority": 2435,
-    "grammar": "Nada dering = ringtone, literally 'ring tone': mengganti nada dering = change the ringtone."
+    "priority": 2435
   },
   {
     "id": "id-2436",
@@ -29280,8 +29110,7 @@
       "general"
     ],
     "grammarNode": "node-30",
-    "priority": 2438,
-    "grammar": "Colloquially a slow phone or connection is lemot: HP saya lemot = my phone is laggy."
+    "priority": 2438
   },
   {
     "id": "id-2439",
@@ -29316,7 +29145,7 @@
     ],
     "grammarNode": "node-30",
     "priority": 2441,
-    "grammar": "The standard cafe question: minta password wifi-nya = may I have the wifi password."
+    "grammar": "Boleh minta + the thing is the all-purpose polite request – no 'may I have' verb chain needed: boleh minta password wifi-nya. The closing ya softens it further."
   },
   {
     "id": "id-2442",
@@ -29455,7 +29284,7 @@
     ],
     "grammarNode": "node-30",
     "priority": 2453,
-    "grammar": "Ngecas (root cas) = to charge; colloquial but universal — all ages say ngecas HP."
+    "grammar": "Ngecas puts the casual nge- prefix on the borrowed root cas (from 'charge'). Loanwords take Indonesian prefixes freely – and every generation says ngecas HP."
   },
   {
     "id": "id-2454",
@@ -29492,7 +29321,7 @@
     ],
     "grammarNode": "node-30",
     "priority": 2456,
-    "grammar": "Di- + cas = passive: dicas semalaman = charged overnight. Semalaman = all night long."
+    "grammar": "Even a borrowed root takes the passive di-: cas (charge) becomes dicas = gets charged. HP saya dicas = my phone was charged – no 'was' word needed."
   },
   {
     "id": "id-2457",
@@ -29503,8 +29332,7 @@
       "general"
     ],
     "grammarNode": "node-30",
-    "priority": 2457,
-    "grammar": "Awet = long-lasting: baterainya awet = the battery lasts. Also used for food and clothes."
+    "priority": 2457
   },
   {
     "id": "id-2458",
@@ -29516,8 +29344,7 @@
       "travel"
     ],
     "grammarNode": "node-30",
-    "priority": 2458,
-    "grammar": "Powerbank is used as-is; bepergian = to travel, from pergi (to go)."
+    "priority": 2458
   },
   {
     "id": "id-2459",
@@ -29553,7 +29380,7 @@
     ],
     "grammarNode": "node-30",
     "priority": 2461,
-    "grammar": "Tinggal = remaining: tinggal sepuluh persen = only ten percent left."
+    "grammar": "Tinggal usually means 'live, stay', but before an amount it means what's left: tinggal sepuluh persen = only ten percent remaining. Context picks the meaning."
   },
   {
     "id": "id-2462",
@@ -29691,8 +29518,7 @@
       "family"
     ],
     "grammarNode": "node-30",
-    "priority": 2473,
-    "grammar": "Chat is used as-is: aplikasi chat, chat saya belum dibalas = my message hasn't been replied to."
+    "priority": 2473
   },
   {
     "id": "id-2474",
@@ -29740,7 +29566,7 @@
     ],
     "grammarNode": "node-30",
     "priority": 2477,
-    "grammar": "Pengeluaran = expenses/spending, from keluar (go out) — money going out."
+    "grammar": "Pengeluaran is built on keluar (go out): expenses are literally 'the going-out' of money. Its mirror is pemasukan, income – money coming in (masuk)."
   },
   {
     "id": "id-2478",
@@ -29773,8 +29599,7 @@
       "general"
     ],
     "grammarNode": "node-30",
-    "priority": 2480,
-    "grammar": "Tampilan = the look/display: tampilannya berubah = the interface changed."
+    "priority": 2480
   },
   {
     "id": "id-2481",
@@ -29858,8 +29683,7 @@
       "travel"
     ],
     "grammarNode": "node-30",
-    "priority": 2487,
-    "grammar": "In ride-hailing the rider is just driver: drivernya sudah dekat = the driver is nearby."
+    "priority": 2487
   },
   {
     "id": "id-2488",
@@ -29895,8 +29719,7 @@
       "travel"
     ],
     "grammarNode": "node-30",
-    "priority": 2490,
-    "grammar": "Beri bintang lima = give five stars — the app rating; drivers really depend on it."
+    "priority": 2490
   },
   {
     "id": "id-2491",
@@ -29920,8 +29743,7 @@
       "travel"
     ],
     "grammarNode": "node-30",
-    "priority": 2492,
-    "grammar": "Kirim lokasi (or share lokasi) = share your location — standard in chat and ride apps."
+    "priority": 2492
   },
   {
     "id": "id-2493",
@@ -30006,8 +29828,7 @@
       "travel"
     ],
     "grammarNode": "node-30",
-    "priority": 2499,
-    "grammar": "Titik jemput = pickup point in ride apps; jemput = to pick someone up."
+    "priority": 2499
   },
   {
     "id": "id-2500",
@@ -30055,8 +29876,7 @@
       "family"
     ],
     "grammarNode": "node-30",
-    "priority": 2503,
-    "grammar": "Video call is used as-is, noun or verb: video call dengan nenek = video-call grandma."
+    "priority": 2503
   },
   {
     "id": "id-2504",
@@ -30069,7 +29889,7 @@
     ],
     "grammarNode": "node-30",
     "priority": 2504,
-    "grammar": "Putus-putus = keeps cutting out; putus alone = cut off, disconnected."
+    "grammar": "Doubling turns a one-off into an on-and-off: putus = cut off, putus-putus = keeps cutting out. Sering putus-putus (often cutting out) is the classic bad-connection complaint."
   },
   {
     "id": "id-2505",
@@ -30106,7 +29926,7 @@
     ],
     "grammarNode": "node-30",
     "priority": 2507,
-    "grammar": "Video call is its own verb — no melakukan needed: kami video call setiap Senin."
+    "grammar": "English loans work as verbs with nothing added: kami video call – no melakukan, no verb ending. Same with meeting, chat, and upload in office talk."
   },
   {
     "id": "id-2508",
@@ -30190,7 +30010,7 @@
     ],
     "grammarNode": "node-30",
     "priority": 2514,
-    "grammar": "Mematikan = turn off, menyalakan = turn on — from mati (dead) and nyala (lit)."
+    "grammar": "Mematikan is literally 'make dead': mati (dead) + me-...-kan. Turning off the mikrofon means killing it – the same logic English uses in 'kill the lights'."
   },
   {
     "id": "id-2515",
@@ -30201,8 +30021,7 @@
       "general"
     ],
     "grammarNode": "node-30",
-    "priority": 2515,
-    "grammar": "Memori penuh = storage full — the standard phone complaint; memori = phone storage."
+    "priority": 2515
   },
   {
     "id": "id-2516",
@@ -30307,8 +30126,7 @@
       "work"
     ],
     "grammarNode": "node-30",
-    "priority": 2524,
-    "grammar": "To mute a chat: matikan notifikasi grupnya = turn off the group's notifications."
+    "priority": 2524
   },
   {
     "id": "id-2525",
@@ -30333,7 +30151,7 @@
     ],
     "grammarNode": "node-30",
     "priority": 2526,
-    "grammar": "Gambar selamat pagi — the flowery good-morning images older relatives send daily."
+    "grammar": "Gambar selamat pagi – flowery good-morning images – are a daily ritual in Indonesian family chat groups, sent most faithfully by om dan tante."
   },
   {
     "id": "id-2527",
@@ -30380,7 +30198,7 @@
     ],
     "grammarNode": "node-30",
     "priority": 2530,
-    "grammar": "Belum tentu = not necessarily: belum tentu benar = not necessarily true."
+    "grammar": "Belum tentu is literally 'not yet certain': belum tentu benar = not necessarily true. Indonesian prefers belum (not yet) where English says a flat 'not'."
   },
   {
     "id": "id-2531",
@@ -30392,8 +30210,7 @@
       "family"
     ],
     "grammarNode": "node-30",
-    "priority": 2531,
-    "grammar": "Hoaks = hoax/fake news — an everyday Indonesian word for group-chat misinformation."
+    "priority": 2531
   },
   {
     "id": "id-2532",
@@ -30465,8 +30282,7 @@
       "work"
     ],
     "grammarNode": "node-30",
-    "priority": 2537,
-    "grammar": "KTP = the Indonesian ID card; kirim foto KTP is a routine request."
+    "priority": 2537
   },
   {
     "id": "id-2538",
@@ -30500,8 +30316,7 @@
       "general"
     ],
     "grammarNode": "node-30",
-    "priority": 2540,
-    "grammar": "Paket data = mobile data plan; kuota = your data allowance for the month."
+    "priority": 2540
   },
   {
     "id": "id-2541",
@@ -30526,7 +30341,7 @@
     ],
     "grammarNode": "node-30",
     "priority": 2542,
-    "grammar": "Kampung halaman = hometown, where your family is from — not just any kampung."
+    "grammar": "Kampung halaman is a fixed pair meaning your family's hometown – where you're from, not just any village. Plain kampung can be any village or neighborhood."
   },
   {
     "id": "id-2543",
@@ -30606,7 +30421,7 @@
     ],
     "grammarNode": "node-30",
     "priority": 2549,
-    "grammar": "Mengunggah = upload, mengunduh = download; upload and download are also said as-is."
+    "grammar": "Mengunggah = upload and mengunduh = download are near-twins that are easy to swap. Casual speech dodges the problem: people say upload and download as-is."
   },
   {
     "id": "id-2550",
@@ -30630,7 +30445,7 @@
     ],
     "grammarNode": "node-31",
     "priority": 2551,
-    "grammar": "Dari Sabang sampai Merauke = 'all across Indonesia' — Sabang and Merauke are its far western and eastern ends."
+    "grammar": "Dari Sabang sampai Merauke = 'all across Indonesia' – Sabang is the country's far western tip, Merauke its far eastern one. The set phrase for the whole nation."
   },
   {
     "id": "id-2552",
@@ -30642,8 +30457,7 @@
       "travel"
     ],
     "grammarNode": "node-31",
-    "priority": 2552,
-    "grammar": "Sawah = a flooded rice field; a dry field is ladang. Pemandangan sawah = rice-field scenery."
+    "priority": 2552
   },
   {
     "id": "id-2553",
@@ -30704,7 +30518,7 @@
     ],
     "grammarNode": "node-31",
     "priority": 2557,
-    "grammar": "Melaut = to go out to sea (fishermen's verb): nelayan berangkat melaut. Matahari terbit = sunrise, terbenam = sunset."
+    "grammar": "The me- prefix can turn a noun into a verb: laut (sea) becomes melaut, to head out to sea – which is what nelayan (fishermen) do every morning."
   },
   {
     "id": "id-2558",
@@ -30753,7 +30567,7 @@
     ],
     "grammarNode": "node-31",
     "priority": 2561,
-    "grammar": "Gunung berapi = volcano, literally 'mountain with fire' (api = fire)."
+    "grammar": "Ber- can mean 'having': gunung berapi is literally a mountain having api (fire) – a volcano. The fire is built right into the word."
   },
   {
     "id": "id-2562",
@@ -30909,8 +30723,7 @@
       "travel"
     ],
     "grammarNode": "node-31",
-    "priority": 2574,
-    "grammar": "Keramat = sacred, spiritually charged — said of old trees, graves, and forests people leave undisturbed."
+    "priority": 2574
   },
   {
     "id": "id-2575",
@@ -31002,8 +30815,7 @@
       "general"
     ],
     "grammarNode": "node-31",
-    "priority": 2582,
-    "grammar": "Umum = public/shared: transportasi umum = public transport, toilet umum = public toilet."
+    "priority": 2582
   },
   {
     "id": "id-2583",
@@ -31050,8 +30862,7 @@
       "travel"
     ],
     "grammarNode": "node-31",
-    "priority": 2586,
-    "grammar": "Jam sibuk = rush hour ('busy hours'): berangkat sebelum jam sibuk = leave before rush hour."
+    "priority": 2586
   },
   {
     "id": "id-2587",
@@ -31213,7 +31024,7 @@
     ],
     "grammarNode": "node-31",
     "priority": 2600,
-    "grammar": "Pasar kaget = pop-up market, literally 'startled market' — it appears out of nowhere and vanishes within hours."
+    "grammar": "Pasar kaget is literally a 'startled market' – it appears in a lapangan or street out of nowhere and is gone again within hours."
   },
   {
     "id": "id-2601",
@@ -31326,8 +31137,7 @@
       "general"
     ],
     "grammarNode": "node-31",
-    "priority": 2610,
-    "grammar": "Daur ulang = recycle ('re-cycle'): bisa didaur ulang = can be recycled."
+    "priority": 2610
   },
   {
     "id": "id-2611",
@@ -31405,8 +31215,7 @@
       "general"
     ],
     "grammarNode": "node-31",
-    "priority": 2617,
-    "grammar": "Hemat = economical, to save on: hemat listrik = save electricity, hemat air = save water."
+    "priority": 2617
   },
   {
     "id": "id-2618",
@@ -31428,8 +31237,7 @@
       "general"
     ],
     "grammarNode": "node-31",
-    "priority": 2619,
-    "grammar": "Hulu = upstream, hilir = downstream: pabrik di hulu = a factory upstream."
+    "priority": 2619
   },
   {
     "id": "id-2620",
@@ -31509,7 +31317,7 @@
     ],
     "grammarNode": "node-31",
     "priority": 2626,
-    "grammar": "Nyamuk (mosquito) complaints are national small talk: Nyamuknya banyak, ya! = so many mosquitoes, huh!"
+    "grammar": "A complaint like this shrinks in speech to noun + -nya + a comment: Nyamuknya banyak, ya! = so many mosquitoes, huh. The pattern works with any noun."
   },
   {
     "id": "id-2627",
@@ -31579,8 +31387,7 @@
       "travel"
     ],
     "grammarNode": "node-31",
-    "priority": 2632,
-    "grammar": "Cicak = the little house gecko on every Indonesian wall — a welcome guest, it eats mosquitoes."
+    "priority": 2632
   },
   {
     "id": "id-2633",
@@ -31650,7 +31457,7 @@
     ],
     "grammarNode": "node-31",
     "priority": 2638,
-    "grammar": "Pak RT = head of the smallest neighborhood unit (Rukun Tetangga) — the person everyone knows."
+    "grammar": "Pak RT is the elected head of the Rukun Tetangga, the smallest neighborhood unit – a real official, and the person everyone in the kompleks knows."
   },
   {
     "id": "id-2639",
@@ -31752,7 +31559,7 @@
     ],
     "grammarNode": "node-31",
     "priority": 2647,
-    "grammar": "Padahal = even though / when in fact — it flags a surprising contrast between two facts."
+    "grammar": "Padahal flags a surprising contrast – 'even though / when in fact': takut kecoak, padahal berani memegang ular. Scared of the small thing, brave with the big one."
   },
   {
     "id": "id-2648",
@@ -31787,8 +31594,7 @@
       "travel"
     ],
     "grammarNode": "node-31",
-    "priority": 2650,
-    "grammar": "Demam berdarah (DBD) = dengue fever, literally 'bleeding fever' — a rainy-season worry."
+    "priority": 2650
   },
   {
     "id": "id-2651",
@@ -31849,8 +31655,7 @@
       "travel"
     ],
     "grammarNode": "node-31",
-    "priority": 2655,
-    "grammar": "Musim pancaroba = the unstable switch between wet and dry seasons: sunny mornings, stormy afternoons."
+    "priority": 2655
   },
   {
     "id": "id-2656",
@@ -31987,7 +31792,7 @@
     ],
     "grammarNode": "node-31",
     "priority": 2667,
-    "grammar": "Pasang = high tide: air laut pasang = the tide is in. The opposite is surut = the tide is out."
+    "grammar": "Pasang here means high tide: air laut pasang = the tide is in. It's the same word as pasang 'install/set up' – context tells you which one you've got."
   },
   {
     "id": "id-2668",
@@ -32207,7 +32012,7 @@
     ],
     "grammarNode": "node-32",
     "priority": 2685,
-    "grammar": "Kami mohon pengertian... = the apology formula of airport announcements — language you hear, not speak."
+    "grammar": "Kami mohon pengertian... is the fixed apology formula of announcements – airports and stations use it word for word. Language you'll hear far more than speak."
   },
   {
     "id": "id-2686",
@@ -32356,7 +32161,7 @@
     ],
     "grammarNode": "node-32",
     "priority": 2697,
-    "grammar": "Turun tangan = to step in personally: manajer turun tangan = the manager steps in himself."
+    "grammar": "Turun tangan is literally 'lower a hand' – to step in personally. The manajer turun tangan when he finally comes down and handles it himself."
   },
   {
     "id": "id-2698",
@@ -32469,7 +32274,7 @@
     ],
     "grammarNode": "node-32",
     "priority": 2706,
-    "grammar": "Buah tangan ('hand fruit') = a small trip gift — the polite word; in everyday speech you will mostly hear oleh-oleh."
+    "grammar": "Buah tangan is literally 'hand fruit' – a small gift you bring back from a trip. It's the polite word; in everyday speech you'll mostly hear oleh-oleh."
   },
   {
     "id": "id-2707",
@@ -32493,8 +32298,7 @@
       "travel"
     ],
     "grammarNode": "node-32",
-    "priority": 2708,
-    "grammar": "Siapa tahu = who knows, maybe: siapa tahu kami bisa kembali = who knows, we might come back."
+    "priority": 2708
   },
   {
     "id": "id-2709",
@@ -32506,8 +32310,7 @@
       "travel"
     ],
     "grammarNode": "node-32",
-    "priority": 2709,
-    "grammar": "Jam karet = rubber time, the famously stretchy attitude to schedules across Indonesia."
+    "priority": 2709
   },
   {
     "id": "id-2710",
@@ -32617,7 +32420,7 @@
     ],
     "grammarNode": "node-32",
     "priority": 2718,
-    "grammar": "Menurut saya = in my opinion: menurut saya terlalu cepat = in my view it's too fast."
+    "grammar": "Indonesian gives opinions with 'according to me': menurut saya = in my opinion. Menurut works for any source – menurut dia, menurut berita."
   },
   {
     "id": "id-2719",
@@ -33110,8 +32913,7 @@
       "work"
     ],
     "grammarNode": "node-32",
-    "priority": 2758,
-    "grammar": "Tangan kanan = right hand, the most trusted helper: tangan kanan kepala bagian = the boss's right-hand person."
+    "priority": 2758
   },
   {
     "id": "id-2759",
@@ -33244,8 +33046,7 @@
       "family"
     ],
     "grammarNode": "node-32",
-    "priority": 2769,
-    "grammar": "Besar kepala = big-headed, arrogant: jadi besar kepala setelah menang = got cocky after winning."
+    "priority": 2769
   },
   {
     "id": "id-2770",
@@ -33550,8 +33351,7 @@
       "family"
     ],
     "grammarNode": "node-32",
-    "priority": 2794,
-    "grammar": "Banjir used figuratively = flooded with: grup banjir ucapan = the group is flooded with greetings."
+    "priority": 2794
   },
   {
     "id": "id-2795",
@@ -33575,8 +33375,7 @@
       "family"
     ],
     "grammarNode": "node-32",
-    "priority": 2796,
-    "grammar": "Atas nama = on behalf of: atas nama keluarga besar = on behalf of the extended family."
+    "priority": 2796
   },
   {
     "id": "id-2797",
@@ -34036,8 +33835,7 @@
       "general"
     ],
     "grammarNode": "node-33",
-    "priority": 2835,
-    "grammar": "Kata orang = 'people say', hearsay: baru kata orang = it's only hearsay, not confirmed."
+    "priority": 2835
   },
   {
     "id": "id-2836",
@@ -34201,8 +33999,7 @@
       "work"
     ],
     "grammarNode": "node-33",
-    "priority": 2849,
-    "grammar": "Beliau = respectful 'he/she' for elders and bosses: Beliau sudah datang = He (respected) has arrived."
+    "priority": 2849
   },
   {
     "id": "id-2850",
@@ -34402,7 +34199,7 @@
     ],
     "grammarNode": "node-33",
     "priority": 2866,
-    "grammar": "Sempat + feeling = briefly felt it: sempat bingung = was confused for a moment (then it passed)."
+    "grammar": "Sempat before a feeling marks it as momentary: sempat bingung = got confused for a bit. The feeling came and then passed."
   },
   {
     "id": "id-2867",
@@ -34837,8 +34634,7 @@
       "travel"
     ],
     "grammarNode": "node-33",
-    "priority": 2903,
-    "grammar": "Untungnya = 'luckily' — introduces the rescue: Untungnya ada yang menolong = Luckily someone helped."
+    "priority": 2903
   },
   {
     "id": "id-2904",
@@ -34860,8 +34656,7 @@
       "general"
     ],
     "grammarNode": "node-33",
-    "priority": 2905,
-    "grammar": "Membalas = return/reply: membalas lambaian = wave back, membalas pesan = reply to a message."
+    "priority": 2905
   },
   {
     "id": "id-2906",
@@ -34980,8 +34775,7 @@
       "work"
     ],
     "grammarNode": "node-33",
-    "priority": 2915,
-    "grammar": "Pura-pura = to pretend: pura-pura tenang = pretend to be calm, pura-pura tidur = pretend to sleep."
+    "priority": 2915
   },
   {
     "id": "id-2916",
@@ -35053,8 +34847,7 @@
       "general"
     ],
     "grammarNode": "node-33",
-    "priority": 2921,
-    "grammar": "Tidak menyangka = never expected: Saya tidak menyangka dia datang = I didn't expect him to come."
+    "priority": 2921
   },
   {
     "id": "id-2922",
@@ -35150,8 +34943,7 @@
       "family"
     ],
     "grammarNode": "node-34",
-    "priority": 2929,
-    "grammar": "Di mana pun = wherever: di mana pun kami makan = wherever we eat."
+    "priority": 2929
   },
   {
     "id": "id-2930",
@@ -35246,8 +35038,7 @@
       "family"
     ],
     "grammarNode": "node-34",
-    "priority": 2937,
-    "grammar": "Tanpa ... siapa pun = without anyone at all: tanpa pamit kepada siapa pun."
+    "priority": 2937
   },
   {
     "id": "id-2938",
@@ -35423,8 +35214,7 @@
       "general"
     ],
     "grammarNode": "node-34",
-    "priority": 2952,
-    "grammar": "Cuma X, bukan Y contrasts: cuma latihan, bukan gempa = just a drill, not an earthquake."
+    "priority": 2952
   },
   {
     "id": "id-2953",
@@ -35595,8 +35385,7 @@
       "general"
     ],
     "grammarNode": "node-34",
-    "priority": 2967,
-    "grammar": "Begitu saja = just like that: pergi begitu saja = left just like that, no explanation."
+    "priority": 2967
   },
   {
     "id": "id-2968",
@@ -36051,8 +35840,7 @@
       "work"
     ],
     "grammarNode": "node-34",
-    "priority": 3006,
-    "grammar": "Masing-masing = each/respective: ruangan masing-masing = each person's own room."
+    "priority": 3006
   },
   {
     "id": "id-3007",
@@ -36424,8 +36212,7 @@
       "general"
     ],
     "grammarNode": "node-34",
-    "priority": 3038,
-    "grammar": "Pronoun + sendiri = myself/himself (emphasis): saya sendiri = I myself."
+    "priority": 3038
   },
   {
     "id": "id-3039",
@@ -36471,8 +36258,7 @@
       "travel"
     ],
     "grammarNode": "node-34",
-    "priority": 3042,
-    "grammar": "Berdua saja = just the two (of you/us): kalian berdua saja = just you two."
+    "priority": 3042
   },
   {
     "id": "id-3043",
@@ -36495,7 +36281,7 @@
     ],
     "grammarNode": "node-34",
     "priority": 3044,
-    "grammar": "Number + saja = just/only that much: lima menit saja = in a mere five minutes."
+    "grammar": "Saja comes after the phrase it limits – lima menit saja, not saja lima menit. The reverse of English 'just five minutes'."
   },
   {
     "id": "id-3045",
@@ -36643,8 +36429,7 @@
       "travel"
     ],
     "grammarNode": "node-35",
-    "priority": 3056,
-    "grammar": "Platform announcement register: dimohon berdiri — a friend would simply say tolong berdiri."
+    "priority": 3056
   },
   {
     "id": "id-3057",
@@ -36669,8 +36454,7 @@
       "travel"
     ],
     "grammarNode": "node-35",
-    "priority": 3058,
-    "grammar": "Cabin formula: kencangkan sabuk pengaman = 'fasten your seatbelt'; mohon works like 'please'."
+    "priority": 3058
   },
   {
     "id": "id-3059",
@@ -36748,7 +36532,7 @@
     ],
     "grammarNode": "node-35",
     "priority": 3064,
-    "grammar": "demi keselamatan bersama = 'for our shared safety' — a fixed announcement opener."
+    "grammar": "Demi is a formal 'for the sake of': demi keselamatan bersama = for our shared safety. Announcements and oaths use it; casual speech just says untuk."
   },
   {
     "id": "id-3065",
@@ -36825,8 +36609,7 @@
       "travel"
     ],
     "grammarNode": "node-35",
-    "priority": 3070,
-    "grammar": "peron = 'platform', a station word; mohon jaga jarak = official 'keep your distance'."
+    "priority": 3070
   },
   {
     "id": "id-3071",
@@ -36982,7 +36765,7 @@
     ],
     "grammarNode": "node-35",
     "priority": 3082,
-    "grammar": "paling lambat = 'at the latest' — the deadline phrase of letters and forms."
+    "grammar": "Paling lambat is literally 'at the slowest', and it means 'at the latest': konfirmasi paling lambat hari Jumat – the deadline phrase of letters and forms."
   },
   {
     "id": "id-3083",
@@ -37085,8 +36868,7 @@
       "work"
     ],
     "grammarNode": "node-35",
-    "priority": 3090,
-    "grammar": "hari kerja = 'working days' — the official way offices count deadlines."
+    "priority": 3090
   },
   {
     "id": "id-3091",
@@ -37235,7 +37017,7 @@
     ],
     "grammarNode": "node-35",
     "priority": 3102,
-    "grammar": "Form verb: lampirkan = 'attach (as an enclosure)' — you meet it on every application."
+    "grammar": "Commands drop the me- prefix: forms say lampirkan (attach), not melampirkan. Any me-...-kan verb loses me- when it becomes an instruction."
   },
   {
     "id": "id-3103",
@@ -37247,7 +37029,7 @@
     ],
     "grammarNode": "node-35",
     "priority": 3103,
-    "grammar": "Street-sign pattern: dilarang + verb = 'no ...-ing'; berjualan = to sell as a trade."
+    "grammar": "Dilarang + verb is the sign formula for 'No ...-ing': dilarang berjualan = no selling. Swap in another verb and you can read most street signs."
   },
   {
     "id": "id-3104",
@@ -37270,8 +37052,7 @@
       "general"
     ],
     "grammarNode": "node-35",
-    "priority": 3105,
-    "grammar": "demi = 'for the sake of' — slogan word on public signs and campaigns."
+    "priority": 3105
   },
   {
     "id": "id-3106",
@@ -37284,7 +37065,7 @@
     ],
     "grammarNode": "node-35",
     "priority": 3106,
-    "grammar": "Signs pair formal nouns with dilarang: pengunjung = visitors — spoken: tidak boleh bawa makanan."
+    "grammar": "Signs speak formally: pengunjung dilarang membawa makanan. Said aloud, the same rule is just tidak boleh bawa makanan – the formal noun dropped, membawa clipped to bawa."
   },
   {
     "id": "id-3107",
@@ -37319,8 +37100,7 @@
       "general"
     ],
     "grammarNode": "node-35",
-    "priority": 3109,
-    "grammar": "darurat = 'emergency' — pintu darurat, keadaan darurat; a word from signs and news."
+    "priority": 3109
   },
   {
     "id": "id-3110",
@@ -37560,8 +37340,7 @@
       "general"
     ],
     "grammarNode": "node-35",
-    "priority": 3129,
-    "grammar": "rumah sakit umum = 'public hospital' — umum marks public services in official language."
+    "priority": 3129
   },
   {
     "id": "id-3130",
@@ -37572,8 +37351,7 @@
       "general"
     ],
     "grammarNode": "node-35",
-    "priority": 3130,
-    "grammar": "Headline word order: topic first — Harga cabai turun; spoken: harga cabainya sudah turun."
+    "priority": 3130
   },
   {
     "id": "id-3131",
@@ -37704,8 +37482,7 @@
       "general"
     ],
     "grammarNode": "node-35",
-    "priority": 3141,
-    "grammar": "mengeluh = 'to complain', root keluh — the news standard for quoting unhappy groups."
+    "priority": 3141
   },
   {
     "id": "id-3142",
@@ -37728,8 +37505,7 @@
       "general"
     ],
     "grammarNode": "node-35",
-    "priority": 3143,
-    "grammar": "untuk umum = 'for the public' — notice and news phrase; umum also means 'general'."
+    "priority": 3143
   },
   {
     "id": "id-3144",
@@ -37740,8 +37516,7 @@
       "general"
     ],
     "grammarNode": "node-35",
-    "priority": 3144,
-    "grammar": "angka = 'figure, number' in statistics news: angka kecelakaan = accident numbers."
+    "priority": 3144
   },
   {
     "id": "id-3145",
@@ -37883,8 +37658,7 @@
       "family"
     ],
     "grammarNode": "node-35",
-    "priority": 3155,
-    "grammar": "dilanjutkan dengan = 'followed by' — programme wording on invitations."
+    "priority": 3155
   },
   {
     "id": "id-3156",
@@ -37923,7 +37697,7 @@
     ],
     "grammarNode": "node-35",
     "priority": 3158,
-    "grammar": "termasuk = 'including' — the ter- form of masuk; common in rules and invitations."
+    "grammar": "Termasuk is literally 'entered (into the group)' – masuk with ter-. Termasuk anak-anak means the children are counted in: 'including'."
   },
   {
     "id": "id-3159",
@@ -37975,8 +37749,7 @@
       "work"
     ],
     "grammarNode": "node-35",
-    "priority": 3162,
-    "grammar": "kantor cabang = 'branch office' — cabang is the branch of a tree, a bank, a company."
+    "priority": 3162
   },
   {
     "id": "id-3163",
@@ -38079,8 +37852,7 @@
       "work"
     ],
     "grammarNode": "node-35",
-    "priority": 3170,
-    "grammar": "sah = 'valid, legal' — stamp-and-signature word: tanda terima yang sah = a valid receipt."
+    "priority": 3170
   },
   {
     "id": "id-3171",
@@ -38169,8 +37941,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3177,
-    "grammar": "Nggak is spoken tidak: nggak suka = tidak suka (doesn't like)."
+    "priority": 3177
   },
   {
     "id": "id-3178",
@@ -38181,8 +37952,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3178,
-    "grammar": "Nggak bilang = tidak bilang. Nggak is how 'not' sounds in everyday talk."
+    "priority": 3178
   },
   {
     "id": "id-3179",
@@ -38194,8 +37964,7 @@
       "travel"
     ],
     "grammarNode": "node-36",
-    "priority": 3179,
-    "grammar": "Nggak jauh = tidak jauh (not far) — nggak is the everyday spoken 'not'."
+    "priority": 3179
   },
   {
     "id": "id-3180",
@@ -38206,8 +37975,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3180,
-    "grammar": "Nggak sempat = tidak sempat (didn't get a chance). Spoken form of tidak."
+    "priority": 3180
   },
   {
     "id": "id-3181",
@@ -38219,8 +37987,7 @@
       "family"
     ],
     "grammarNode": "node-36",
-    "priority": 3181,
-    "grammar": "Nggak mau = tidak mau (doesn't want to) — you'll hear nggak far more than tidak."
+    "priority": 3181
   },
   {
     "id": "id-3182",
@@ -38232,8 +37999,7 @@
       "travel"
     ],
     "grammarNode": "node-36",
-    "priority": 3182,
-    "grammar": "Nggak terlalu pedas = tidak terlalu pedas. Nggak is casual speech only."
+    "priority": 3182
   },
   {
     "id": "id-3183",
@@ -38245,8 +38011,7 @@
       "work"
     ],
     "grammarNode": "node-36",
-    "priority": 3183,
-    "grammar": "Nggak capek? = tidak capai? (not tired?) — everyday spoken register."
+    "priority": 3183
   },
   {
     "id": "id-3184",
@@ -38259,7 +38024,7 @@
     ],
     "grammarNode": "node-36",
     "priority": 3184,
-    "grammar": "Nggak jadi = tidak jadi: 'ended up not happening'. Nggak = spoken tidak."
+    "grammar": "Nggak jadi = 'ended up not happening': jadi means 'materialize', so nggak jadi pindah says the move was planned and then fell through."
   },
   {
     "id": "id-3185",
@@ -38295,8 +38060,7 @@
       "travel"
     ],
     "grammarNode": "node-36",
-    "priority": 3187,
-    "grammar": "Udah aku bayar = sudah saya bayar. Udah is how sudah sounds in conversation."
+    "priority": 3187
   },
   {
     "id": "id-3188",
@@ -38321,8 +38085,7 @@
       "work"
     ],
     "grammarNode": "node-36",
-    "priority": 3189,
-    "grammar": "Udah aku kirim = sudah saya kirim (already sent). Everyday spoken sudah."
+    "priority": 3189
   },
   {
     "id": "id-3190",
@@ -38333,8 +38096,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3190,
-    "grammar": "Udah malam = sudah malam ('it's late already'). Udah = spoken sudah."
+    "priority": 3190
   },
   {
     "id": "id-3191",
@@ -38346,8 +38108,7 @@
       "family"
     ],
     "grammarNode": "node-36",
-    "priority": 3191,
-    "grammar": "Anak-anak udah tidur = sudah tidur. Udah is heard everywhere; sudah is written."
+    "priority": 3191
   },
   {
     "id": "id-3192",
@@ -38358,8 +38119,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3192,
-    "grammar": "Udah mulai = sudah mulai (already started) — spoken sudah."
+    "priority": 3192
   },
   {
     "id": "id-3193",
@@ -38370,8 +38130,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3193,
-    "grammar": "Udah tiga kali = sudah tiga kali (three times already). Casual speech."
+    "priority": 3193
   },
   {
     "id": "id-3194",
@@ -38395,8 +38154,7 @@
       "travel"
     ],
     "grammarNode": "node-36",
-    "priority": 3195,
-    "grammar": "Yang biasa aja = yang biasa saja — 'just the usual'. Aja is spoken saja."
+    "priority": 3195
   },
   {
     "id": "id-3196",
@@ -38421,8 +38179,7 @@
       "work"
     ],
     "grammarNode": "node-36",
-    "priority": 3197,
-    "grammar": "Santai aja = santai saja ('just relax'). Spoken form of saja."
+    "priority": 3197
   },
   {
     "id": "id-3198",
@@ -38434,8 +38191,7 @@
       "family"
     ],
     "grammarNode": "node-36",
-    "priority": 3198,
-    "grammar": "Bilang aja = bilang saja ('just tell her'). Everyday speech; write saja."
+    "priority": 3198
   },
   {
     "id": "id-3199",
@@ -38447,8 +38203,7 @@
       "travel"
     ],
     "grammarNode": "node-36",
-    "priority": 3199,
-    "grammar": "Naik ojek aja = naik ojek saja ('just take an ojek'). Aja = spoken saja."
+    "priority": 3199
   },
   {
     "id": "id-3200",
@@ -38460,8 +38215,7 @@
       "family"
     ],
     "grammarNode": "node-36",
-    "priority": 3200,
-    "grammar": "Ambil aja = ambil saja ('go ahead, take it')."
+    "priority": 3200
   },
   {
     "id": "id-3201",
@@ -38472,8 +38226,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3201,
-    "grammar": "Di depan mal aja = di depan mal saja ('let's just meet at the mall')."
+    "priority": 3201
   },
   {
     "id": "id-3202",
@@ -38510,8 +38263,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3204,
-    "grammar": "Panas banget = panas sekali. Banget is everyday Jakarta-flavored speech."
+    "priority": 3204
   },
   {
     "id": "id-3205",
@@ -38523,8 +38275,7 @@
       "travel"
     ],
     "grammarNode": "node-36",
-    "priority": 3205,
-    "grammar": "Senang banget = senang sekali (so happy). In writing use sangat/sekali."
+    "priority": 3205
   },
   {
     "id": "id-3206",
@@ -38536,8 +38287,7 @@
       "travel"
     ],
     "grammarNode": "node-36",
-    "priority": 3206,
-    "grammar": "Mahal banget = mahal sekali (so expensive) — heard everywhere in speech."
+    "priority": 3206
   },
   {
     "id": "id-3207",
@@ -38549,8 +38299,7 @@
       "family"
     ],
     "grammarNode": "node-36",
-    "priority": 3207,
-    "grammar": "Pintar banget = pintar sekali. Banget = spoken 'very'."
+    "priority": 3207
   },
   {
     "id": "id-3208",
@@ -38561,8 +38310,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3208,
-    "grammar": "Seru banget = seru sekali (so much fun). Casual intensifier."
+    "priority": 3208
   },
   {
     "id": "id-3209",
@@ -38573,8 +38321,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3209,
-    "grammar": "Pahit banget = pahit sekali. In writing use sekali or sangat."
+    "priority": 3209
   },
   {
     "id": "id-3210",
@@ -38612,8 +38359,7 @@
       "work"
     ],
     "grammarNode": "node-36",
-    "priority": 3212,
-    "grammar": "Gimana hasilnya? = bagaimana hasilnya? Everyday spoken 'how'."
+    "priority": 3212
   },
   {
     "id": "id-3213",
@@ -38625,8 +38371,7 @@
       "travel"
     ],
     "grammarNode": "node-36",
-    "priority": 3213,
-    "grammar": "Gimana caranya? = bagaimana caranya? ('how do I…?'). Casual speech."
+    "priority": 3213
   },
   {
     "id": "id-3214",
@@ -38637,8 +38382,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3214,
-    "grammar": "Gimana pulangnya? = bagaimana pulangnya? — spoken register."
+    "priority": 3214
   },
   {
     "id": "id-3215",
@@ -38650,8 +38394,7 @@
       "family"
     ],
     "grammarNode": "node-36",
-    "priority": 3215,
-    "grammar": "Gimana rasanya? = bagaimana rasanya? ('what's it like?')."
+    "priority": 3215
   },
   {
     "id": "id-3216",
@@ -38687,8 +38430,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3218,
-    "grammar": "Gini = begini (like this): cuacanya gini = the weather's like this."
+    "priority": 3218
   },
   {
     "id": "id-3219",
@@ -38736,8 +38478,7 @@
       "travel"
     ],
     "grammarNode": "node-36",
-    "priority": 3222,
-    "grammar": "Macet gini = macet begini (jammed like this). Gini/gitu = spoken begini/begitu."
+    "priority": 3222
   },
   {
     "id": "id-3223",
@@ -38833,8 +38574,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3230,
-    "grammar": "Lagi ngapain = 'up to what': spoken for sedang melakukan apa."
+    "priority": 3230
   },
   {
     "id": "id-3231",
@@ -38845,8 +38585,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3231,
-    "grammar": "Ngapain beli…? = 'why on earth buy…?' — casual why-bother question."
+    "priority": 3231
   },
   {
     "id": "id-3232",
@@ -38858,8 +38597,7 @@
       "family"
     ],
     "grammarNode": "node-36",
-    "priority": 3232,
-    "grammar": "Anak-anak ngapain? = what are the kids doing? Spoken 'sedang apa'."
+    "priority": 3232
   },
   {
     "id": "id-3233",
@@ -38871,8 +38609,7 @@
       "travel"
     ],
     "grammarNode": "node-36",
-    "priority": 3233,
-    "grammar": "Ngapain menunggu? = why bother waiting? Ngapain questions the point."
+    "priority": 3233
   },
   {
     "id": "id-3234",
@@ -38895,8 +38632,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3235,
-    "grammar": "Dong adds friendly pressure: pelan-pelan dong = 'slow down, will you'."
+    "priority": 3235
   },
   {
     "id": "id-3236",
@@ -38908,8 +38644,7 @@
       "travel"
     ],
     "grammarNode": "node-36",
-    "priority": 3236,
-    "grammar": "Dong invites: cerita dong = 'come on, tell me'."
+    "priority": 3236
   },
   {
     "id": "id-3237",
@@ -38982,8 +38717,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3242,
-    "grammar": "Kok = puzzled 'how come': kok mati? = how come it went out?"
+    "priority": 3242
   },
   {
     "id": "id-3243",
@@ -39019,8 +38753,7 @@
       "family"
     ],
     "grammarNode": "node-36",
-    "priority": 3245,
-    "grammar": "Siapa sih…? = 'who on earth…?' — sih adds exasperation."
+    "priority": 3245
   },
   {
     "id": "id-3246",
@@ -39191,8 +38924,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3259,
-    "grammar": "Gue/lo (I/you) are Jakarta street pronouns — fine among close friends, rude to strangers."
+    "priority": 3259
   },
   {
     "id": "id-3260",
@@ -39433,7 +39165,7 @@
     ],
     "grammarNode": "node-36",
     "priority": 3279,
-    "grammar": "Mendingan = spoken 'better (to)': mendingan pulang = better just go home."
+    "grammar": "Mendingan is spoken 'better (to)': mendingan kita ke pantai = better we hit the beach. Casual only – in writing you'd see lebih baik."
   },
   {
     "id": "id-3280",
@@ -39491,8 +39223,7 @@
       "general"
     ],
     "grammarNode": "node-36",
-    "priority": 3284,
-    "grammar": "Pakem = slangy 'grippy/sharp' for brakes: remnya pakem = the brakes bite well."
+    "priority": 3284
   },
   {
     "id": "id-3285",
@@ -39578,7 +39309,7 @@
     ],
     "grammarNode": "node-36",
     "priority": 3291,
-    "grammar": "Kapan-kapan = vague 'sometime': kapan-kapan kita ketemu = let's meet up sometime."
+    "grammar": "Doubling kapan (when) blurs it: kapan-kapan = 'sometime', no date attached. Kapan-kapan kita coba kafe baru = we should try that new cafe sometime."
   },
   {
     "id": "id-3292",
@@ -39625,8 +39356,7 @@
       "travel"
     ],
     "grammarNode": "node-36",
-    "priority": 3295,
-    "grammar": "Tembus = 'cuts through to': bisa tembus ke stasiun = comes out at the station."
+    "priority": 3295
   },
   {
     "id": "id-3296",
@@ -39674,7 +39404,7 @@
     ],
     "grammarNode": "node-36",
     "priority": 3299,
-    "grammar": "Gara-gara = 'because of' (with blame): gara-gara macet = all because of the jam."
+    "grammar": "Gara-gara means 'because of' with blame attached: gara-gara hujan deras, the rain gets the fault for the soaked shoes. Neutral cause is karena."
   },
   {
     "id": "id-3300",
@@ -39697,8 +39427,7 @@
       "general"
     ],
     "grammarNode": "node-37",
-    "priority": 3301,
-    "grammar": "Mengurus = to take care of (paperwork): mengurus KTP baru = sort out a new ID card. THE bureaucracy verb."
+    "priority": 3301
   },
   {
     "id": "id-3302",
@@ -39780,8 +39509,7 @@
       "family"
     ],
     "grammarNode": "node-37",
-    "priority": 3308,
-    "grammar": "Bersamaan dengan = at the same time as: diurus bersamaan = processed together — one Dukcapil visit."
+    "priority": 3308
   },
   {
     "id": "id-3309",
@@ -39837,7 +39565,7 @@
     ],
     "grammarNode": "node-37",
     "priority": 3313,
-    "grammar": "Seumur hidup = for life: berlaku seumur hidup = valid for life. Umur = age, lifetime."
+    "grammar": "Seumur hidup = se- (one) + umur (age) + hidup (life): 'one lifetime'. Berlaku seumur hidup means the KTP never expires."
   },
   {
     "id": "id-3314",
@@ -39995,8 +39723,7 @@
       "general"
     ],
     "grammarNode": "node-37",
-    "priority": 3327,
-    "grammar": "Hari kerja = working day: tiga hari kerja = three working days — weekends don't count."
+    "priority": 3327
   },
   {
     "id": "id-3328",
@@ -40008,7 +39735,7 @@
     ],
     "grammarNode": "node-37",
     "priority": 3328,
-    "grammar": "Beliau = respectful he/she for elders and officials: beliau sedang rapat = he/she is in a meeting."
+    "grammar": "Beliau is the respectful he/she for elders and officials: beliau sedang dinas luar. Using dia for a lurah would sound too casual."
   },
   {
     "id": "id-3329",
@@ -40105,8 +39832,7 @@
       "travel"
     ],
     "grammarNode": "node-37",
-    "priority": 3336,
-    "grammar": "Sidik jari = fingerprint (lit. finger trace): diambil sidik jarinya = had their fingerprints taken."
+    "priority": 3336
   },
   {
     "id": "id-3337",
@@ -40142,8 +39868,7 @@
       "travel"
     ],
     "grammarNode": "node-37",
-    "priority": 3339,
-    "grammar": "Persis = exactly: sama persis = exactly the same. Stronger than plain sama."
+    "priority": 3339
   },
   {
     "id": "id-3340",
@@ -40316,8 +40041,7 @@
       "general"
     ],
     "grammarNode": "node-37",
-    "priority": 3354,
-    "grammar": "SIM A = car license, SIM C = motorbike. Letters, not numbers, mark the classes."
+    "priority": 3354
   },
   {
     "id": "id-3355",
@@ -40408,7 +40132,7 @@
     ],
     "grammarNode": "node-37",
     "priority": 3362,
-    "grammar": "Dilegalisir = certified as a true copy: ijazah dilegalisir kampus = diploma certified by the campus."
+    "grammar": "Dilegalisir names a real ritual: getting official stamps on copies of your ijazah so they count as true copies. Job and school applications demand it."
   },
   {
     "id": "id-3363",
@@ -40499,7 +40223,7 @@
     ],
     "grammarNode": "node-37",
     "priority": 3370,
-    "grammar": "Berobat = to seek treatment: berobat ke klinik = go to the clinic for treatment. Obat = medicine."
+    "grammar": "Ber- + a noun can mean going to get it: obat (medicine) gives berobat, to seek treatment. Tempat berobat = the place you go to get treated."
   },
   {
     "id": "id-3371",
@@ -40510,8 +40234,7 @@
       "general"
     ],
     "grammarNode": "node-37",
-    "priority": 3371,
-    "grammar": "Rujukan = referral: meminta rujukan = ask for a referral. Clinic first, hospital second."
+    "priority": 3371
   },
   {
     "id": "id-3372",
@@ -40579,8 +40302,7 @@
       "general"
     ],
     "grammarNode": "node-37",
-    "priority": 3377,
-    "grammar": "Syarat = requirement: syaratnya apa saja? = what are the requirements? Ask this before any queue."
+    "priority": 3377
   },
   {
     "id": "id-3378",
@@ -40777,8 +40499,7 @@
       "work"
     ],
     "grammarNode": "node-37",
-    "priority": 3394,
-    "grammar": "KITAS = temporary stay permit card for foreigners who work or live in Indonesia. Visa turis won't do."
+    "priority": 3394
   },
   {
     "id": "id-3395",
@@ -40899,8 +40620,7 @@
       "family"
     ],
     "grammarNode": "node-37",
-    "priority": 3404,
-    "grammar": "Jalur domisili = placement by home address — the 2025 rename of the old jalur zonasi."
+    "priority": 3404
   },
   {
     "id": "id-3405",
@@ -40913,7 +40633,7 @@
     ],
     "grammarNode": "node-37",
     "priority": 3405,
-    "grammar": "Antara lain = among others: syaratnya antara lain KTP = the requirements include an ID card."
+    "grammar": "Antara lain introduces a partial list – 'among others': syarat antara lain akta kelahiran dan kartu keluarga means those plus more not named."
   },
   {
     "id": "id-3406",
@@ -41067,8 +40787,7 @@
       "general"
     ],
     "grammarNode": "node-37",
-    "priority": 3418,
-    "grammar": "Terlewat = accidentally passed, missed: nomormu terlewat = your number got skipped."
+    "priority": 3418
   },
   {
     "id": "id-3419",
@@ -41112,8 +40831,7 @@
       "general"
     ],
     "grammarNode": "node-37",
-    "priority": 3422,
-    "grammar": "Calo = tout who 'helps' with tickets or paperwork for a fee: pakai jasa calo = use a fixer."
+    "priority": 3422
   },
   {
     "id": "id-3423",
@@ -41158,8 +40876,7 @@
       "family"
     ],
     "grammarNode": "node-38",
-    "priority": 3426,
-    "grammar": "Independence Day is 17 Agustus; the whole festive season is called tujuh belasan."
+    "priority": 3426
   },
   {
     "id": "id-3427",
@@ -41171,8 +40888,7 @@
       "family"
     ],
     "grammarNode": "node-38",
-    "priority": 3427,
-    "grammar": "Lomba makan kerupuk: eat a cracker hung on a string, hands behind your back — the classic race."
+    "priority": 3427
   },
   {
     "id": "id-3428",
@@ -41183,8 +40899,7 @@
       "general"
     ],
     "grammarNode": "node-38",
-    "priority": 3428,
-    "grammar": "Panjat pinang: teams climb a greased palm trunk for prizes tied at the top."
+    "priority": 3428
   },
   {
     "id": "id-3429",
@@ -41298,8 +41013,7 @@
       "general"
     ],
     "grammarNode": "node-38",
-    "priority": 3438,
-    "grammar": "Malam tirakatan: neighbors gather on the eve of the 17th for prayers, speeches, and snacks."
+    "priority": 3438
   },
   {
     "id": "id-3439",
@@ -41345,7 +41059,8 @@
       "family"
     ],
     "grammarNode": "node-38",
-    "priority": 3442
+    "priority": 3442,
+    "grammar": "Tujuh belasan is tujuh belas (17) plus -an – the suffix turns the date into the whole event: any August 17 festivity is acara tujuh belasan."
   },
   {
     "id": "id-3443",
@@ -41438,8 +41153,7 @@
       "work"
     ],
     "grammarNode": "node-38",
-    "priority": 3450,
-    "grammar": "Sahur = the pre-dawn meal before a fasting day; the set phrase is makan sahur."
+    "priority": 3450
   },
   {
     "id": "id-3451",
@@ -41451,8 +41165,7 @@
       "family"
     ],
     "grammarNode": "node-38",
-    "priority": 3451,
-    "grammar": "Imsak = the cut-off a few minutes before dawn prayer — stop eating then."
+    "priority": 3451
   },
   {
     "id": "id-3452",
@@ -41463,8 +41176,7 @@
       "general"
     ],
     "grammarNode": "node-38",
-    "priority": 3452,
-    "grammar": "Ngabuburit (Sundanese) = pleasantly killing time before buka puasa: strolling, hunting snacks."
+    "priority": 3452
   },
   {
     "id": "id-3453",
@@ -41476,8 +41188,7 @@
       "family"
     ],
     "grammarNode": "node-38",
-    "priority": 3453,
-    "grammar": "Buka puasa = breaking the fast at sunset; berbuka is the everyday verb."
+    "priority": 3453
   },
   {
     "id": "id-3454",
@@ -41488,8 +41199,7 @@
       "general"
     ],
     "grammarNode": "node-38",
-    "priority": 3454,
-    "grammar": "Takjil = small sweets and snacks for breaking the fast, sold roadside every afternoon."
+    "priority": 3454
   },
   {
     "id": "id-3455",
@@ -41501,7 +41211,8 @@
       "family"
     ],
     "grammarNode": "node-38",
-    "priority": 3455
+    "priority": 3455,
+    "grammar": "Before a verb, baru means 'only just', not 'new': baru belajar puasa = is only just learning to fast. As 'new', baru follows its noun instead."
   },
   {
     "id": "id-3456",
@@ -41513,8 +41224,7 @@
       "family"
     ],
     "grammarNode": "node-38",
-    "priority": 3456,
-    "grammar": "Tarawih = the extra evening prayers at the mosque on Ramadan nights."
+    "priority": 3456
   },
   {
     "id": "id-3457",
@@ -41630,8 +41340,7 @@
       "general"
     ],
     "grammarNode": "node-38",
-    "priority": 3466,
-    "grammar": "Malam takbiran = the eve of Lebaran; takbir chants echo from mosques all night."
+    "priority": 3466
   },
   {
     "id": "id-3467",
@@ -41679,8 +41388,7 @@
       "work"
     ],
     "grammarNode": "node-38",
-    "priority": 3470,
-    "grammar": "THR = Tunjangan Hari Raya, the holiday bonus: one month's salary, required by law."
+    "priority": 3470
   },
   {
     "id": "id-3471",
@@ -41693,7 +41401,7 @@
     ],
     "grammarNode": "node-38",
     "priority": 3471,
-    "grammar": "Cair (lit. 'liquid') = paid out: THR cair — the money has landed."
+    "grammar": "Cair is literally 'liquid'; for money it means paid out: THR ayah cair = Dad's bonus came through. Salaries and funds cair when they land."
   },
   {
     "id": "id-3472",
@@ -41717,8 +41425,7 @@
       "family"
     ],
     "grammarNode": "node-38",
-    "priority": 3473,
-    "grammar": "Sungkeman: kneeling before elders to ask forgiveness — the tearjerker of Lebaran morning."
+    "priority": 3473
   },
   {
     "id": "id-3474",
@@ -41742,8 +41449,7 @@
       "family"
     ],
     "grammarNode": "node-38",
-    "priority": 3475,
-    "grammar": "Ketupat: rice cakes boiled in woven palm-leaf pouches — Lebaran's signature food."
+    "priority": 3475
   },
   {
     "id": "id-3476",
@@ -41755,8 +41461,7 @@
       "family"
     ],
     "grammarNode": "node-38",
-    "priority": 3476,
-    "grammar": "Silaturahmi = keeping ties warm; bersilaturahmi is what all the visiting is called."
+    "priority": 3476
   },
   {
     "id": "id-3477",
@@ -41805,7 +41510,7 @@
     ],
     "grammarNode": "node-38",
     "priority": 3480,
-    "grammar": "Mohon maaf lahir dan batin ≈ 'forgive my wrongs, outward and inner' — the Lebaran formula."
+    "grammar": "Mohon maaf lahir dan batin is the fixed Lebaran formula: 'forgive my wrongs, outward and inner' – lahir is the outward side, batin the inner."
   },
   {
     "id": "id-3481",
@@ -41817,8 +41522,7 @@
       "work"
     ],
     "grammarNode": "node-38",
-    "priority": 3481,
-    "grammar": "Halal bihalal: a post-Lebaran gathering for mutual forgiveness, beloved by offices."
+    "priority": 3481
   },
   {
     "id": "id-3482",
@@ -41855,7 +41559,8 @@
       "travel"
     ],
     "grammarNode": "node-38",
-    "priority": 3484
+    "priority": 3484,
+    "grammar": "The ter- in terjual means it happened with no doer named: habis terjual is literally 'used up, got sold' – sold out."
   },
   {
     "id": "id-3485",
@@ -41988,8 +41693,7 @@
       "family"
     ],
     "grammarNode": "node-38",
-    "priority": 3495,
-    "grammar": "Imlek = Chinese New Year — a public holiday in Indonesia since 2003."
+    "priority": 3495
   },
   {
     "id": "id-3496",
@@ -42002,7 +41706,7 @@
     ],
     "grammarNode": "node-38",
     "priority": 3496,
-    "grammar": "Angpao: red envelopes of cash at Imlek — married adults give, unmarried receive."
+    "grammar": "The angpao rule: married adults give the red envelopes, the unmarried receive – which is why the card says belum menikah. Marriage flips your role."
   },
   {
     "id": "id-3497",
@@ -42014,8 +41718,7 @@
       "family"
     ],
     "grammarNode": "node-38",
-    "priority": 3497,
-    "grammar": "Barongsai = the Chinese lion dance; malls book troupes all through Imlek."
+    "priority": 3497
   },
   {
     "id": "id-3498",
@@ -42038,8 +41741,7 @@
       "family"
     ],
     "grammarNode": "node-38",
-    "priority": 3499,
-    "grammar": "Kue keranjang: sticky sweet rice cake — Imlek's must-have, like ketupat at Lebaran."
+    "priority": 3499
   },
   {
     "id": "id-3500",
@@ -42086,7 +41788,7 @@
     ],
     "grammarNode": "node-38",
     "priority": 3503,
-    "grammar": "Cuti bersama = government-set joint leave glued onto holidays — Indonesia's long-weekend maker."
+    "grammar": "Cuti bersama is government-set shared leave glued onto a holiday – the whole kantor closes on those dates whether you asked for leave or not."
   },
   {
     "id": "id-3504",
@@ -42168,8 +41870,7 @@
       "family"
     ],
     "grammarNode": "node-38",
-    "priority": 3510,
-    "grammar": "Bakar jagung — grilling corn with the neighbors — is the default New Year's Eve plan."
+    "priority": 3510
   },
   {
     "id": "id-3511",
@@ -42215,8 +41916,7 @@
       "travel"
     ],
     "grammarNode": "node-38",
-    "priority": 3514,
-    "grammar": "Puncak = the mountain resort area south of Jakarta; macet total every long weekend."
+    "priority": 3514
   },
   {
     "id": "id-3515",
@@ -42286,8 +41986,7 @@
       "travel"
     ],
     "grammarNode": "node-38",
-    "priority": 3520,
-    "grammar": "Nyepi = Bali's Day of Silence: no lights, no travel, no work, for a full day."
+    "priority": 3520
   },
   {
     "id": "id-3521",
@@ -42299,8 +41998,7 @@
       "travel"
     ],
     "grammarNode": "node-38",
-    "priority": 3521,
-    "grammar": "For Nyepi even the airport shuts — Bali's is the only one in the world that does."
+    "priority": 3521
   },
   {
     "id": "id-3522",
@@ -42324,8 +42022,7 @@
       "travel"
     ],
     "grammarNode": "node-38",
-    "priority": 3523,
-    "grammar": "Ogoh-ogoh: giant demon figures paraded on Nyepi eve, then usually burned."
+    "priority": 3523
   },
   {
     "id": "id-3524",
@@ -42371,8 +42068,7 @@
       "travel"
     ],
     "grammarNode": "node-38",
-    "priority": 3527,
-    "grammar": "Since 2018 even mobile internet is off during Nyepi — download your maps early."
+    "priority": 3527
   },
   {
     "id": "id-3528",
@@ -42383,7 +42079,8 @@
       "general"
     ],
     "grammarNode": "node-38",
-    "priority": 3528
+    "priority": 3528,
+    "grammar": "Doubling inside ber-...-an makes it mutual: bermaaf-maafan = forgive one another. Saling berkunjung uses saling = each other for the same job."
   },
   {
     "id": "id-3529",
@@ -42467,8 +42164,7 @@
       "family"
     ],
     "grammarNode": "node-38",
-    "priority": 3535,
-    "grammar": "The tiup lilin ritual: close your eyes, make a wish, blow — and never tell the wish."
+    "priority": 3535
   },
   {
     "id": "id-3536",
@@ -42493,7 +42189,7 @@
     ],
     "grammarNode": "node-38",
     "priority": 3537,
-    "grammar": "Birthday rule reversed: the birthday person treats everyone — dia yang mentraktir!"
+    "grammar": "The birthday custom runs in reverse: yang berulang tahun wajib mentraktir – the birthday person treats everyone else, not the other way around."
   },
   {
     "id": "id-3538",
@@ -42504,8 +42200,7 @@
       "general"
     ],
     "grammarNode": "node-38",
-    "priority": 3538,
-    "grammar": "Getting doused with flour (and eggs) on your birthday is an affectionate prank."
+    "priority": 3538
   },
   {
     "id": "id-3539",
@@ -42517,8 +42212,7 @@
       "work"
     ],
     "grammarNode": "node-38",
-    "priority": 3539,
-    "grammar": "Tumpeng: a yellow rice cone for milestones; the first slice goes to the most honored guest."
+    "priority": 3539
   },
   {
     "id": "id-3540",
@@ -42578,8 +42272,7 @@
       "family"
     ],
     "grammarNode": "node-38",
-    "priority": 3544,
-    "grammar": "Syukuran: a small thanksgiving meal for any good news — a degree, a house, a baby."
+    "priority": 3544
   },
   {
     "id": "id-3545",
@@ -42615,8 +42308,7 @@
       "family"
     ],
     "grammarNode": "node-38",
-    "priority": 3547,
-    "grammar": "Tujuh bulanan: the blessing ceremony held in the seventh month of a pregnancy."
+    "priority": 3547
   },
   {
     "id": "id-3548",
@@ -42639,8 +42331,7 @@
       "general"
     ],
     "grammarNode": "node-38",
-    "priority": 3549,
-    "grammar": "Indonesia's calendar marks the holidays of six religions — everyone shares the days off."
+    "priority": 3549
   },
   {
     "id": "id-3550",
@@ -42663,8 +42354,7 @@
       "general"
     ],
     "grammarNode": "node-39",
-    "priority": 3551,
-    "grammar": "Obat resep = prescription medicine: ditebus dengan resep = bought only against a prescription."
+    "priority": 3551
   },
   {
     "id": "id-3552",
@@ -42675,8 +42365,7 @@
       "general"
     ],
     "grammarNode": "node-39",
-    "priority": 3552,
-    "grammar": "Obat warung = cheap over-the-counter meds from corner stalls, sold per strip — no resep needed."
+    "priority": 3552
   },
   {
     "id": "id-3553",
@@ -42793,7 +42482,7 @@
     ],
     "grammarNode": "node-39",
     "priority": 3562,
-    "grammar": "Periksakan = have it checked: periksakan ke dokter = get a doctor to look at it."
+    "grammar": "-kan can mean 'have it done': periksa = examine, periksakan ke dokter = have it examined by a doctor. You arrange the action, someone else performs it."
   },
   {
     "id": "id-3563",
@@ -42804,8 +42493,7 @@
       "general"
     ],
     "grammarNode": "node-39",
-    "priority": 3563,
-    "grammar": "Obat generik = generic medicine, same content but cheaper: minta obat generik = ask for the generic."
+    "priority": 3563
   },
   {
     "id": "id-3564",
@@ -42886,8 +42574,7 @@
       "general"
     ],
     "grammarNode": "node-39",
-    "priority": 3570,
-    "grammar": "UGD (Unit Gawat Darurat) = the ER; many hospitals label it IGD instead. Ke UGD = to the ER."
+    "priority": 3570
   },
   {
     "id": "id-3571",
@@ -43096,8 +42783,7 @@
       "family"
     ],
     "grammarNode": "node-39",
-    "priority": 3588,
-    "grammar": "Mengeluh = to complain (of): mengeluh sesak napas = complains of shortness of breath."
+    "priority": 3588
   },
   {
     "id": "id-3589",
@@ -43175,8 +42861,7 @@
       "general"
     ],
     "grammarNode": "node-39",
-    "priority": 3595,
-    "grammar": "Kembung = bloated, full of gas: perut kembung = a bloated belly."
+    "priority": 3595
   },
   {
     "id": "id-3596",
@@ -43255,8 +42940,7 @@
       "general"
     ],
     "grammarNode": "node-39",
-    "priority": 3602,
-    "grammar": "Kambuh = (an illness) flares up again: asmanya kambuh = his asthma is back."
+    "priority": 3602
   },
   {
     "id": "id-3603",
@@ -43289,8 +42973,7 @@
       "general"
     ],
     "grammarNode": "node-39",
-    "priority": 3605,
-    "grammar": "BPJS = Indonesia's national health insurance; nearly everyone carries the kartu BPJS = BPJS card."
+    "priority": 3605
   },
   {
     "id": "id-3606",
@@ -43301,8 +42984,7 @@
       "general"
     ],
     "grammarNode": "node-39",
-    "priority": 3606,
-    "grammar": "Puskesmas (pusat kesehatan masyarakat) = community health center, the cheap first stop for care."
+    "priority": 3606
   },
   {
     "id": "id-3607",
@@ -43324,8 +43006,7 @@
       "general"
     ],
     "grammarNode": "node-39",
-    "priority": 3608,
-    "grammar": "BPJS is tiered: you need a surat rujukan (referral letter) from the puskesmas before the hospital."
+    "priority": 3608
   },
   {
     "id": "id-3609",
@@ -43349,8 +43030,7 @@
       "family"
     ],
     "grammarNode": "node-39",
-    "priority": 3610,
-    "grammar": "Iuran = a regular membership fee: iuran BPJS = the monthly BPJS premium."
+    "priority": 3610
   },
   {
     "id": "id-3611",
@@ -43396,8 +43076,7 @@
       "family"
     ],
     "grammarNode": "node-39",
-    "priority": 3614,
-    "grammar": "Posyandu = neighborhood health post: monthly weigh-ins and shots for kids. Di posyandu = at the post."
+    "priority": 3614
   },
   {
     "id": "id-3615",
@@ -43463,8 +43142,7 @@
       "general"
     ],
     "grammarNode": "node-39",
-    "priority": 3620,
-    "grammar": "Menjalar = (pain) spreads, creeps: sakitnya menjalar ke telinga = the pain spreads to the ear."
+    "priority": 3620
   },
   {
     "id": "id-3621",
@@ -43705,8 +43383,7 @@
       "family"
     ],
     "grammarNode": "node-39",
-    "priority": 3641,
-    "grammar": "Kerokan: rubbing a coin down the back until it stripes red — the beloved home cure for masuk angin."
+    "priority": 3641
   },
   {
     "id": "id-3642",
@@ -43730,8 +43407,7 @@
       "family"
     ],
     "grammarNode": "node-39",
-    "priority": 3643,
-    "grammar": "Jamu = traditional herbal tonic (turmeric, ginger...): minum jamu = drink jamu, for health not taste."
+    "priority": 3643
   },
   {
     "id": "id-3644",
@@ -43767,8 +43443,7 @@
       "family"
     ],
     "grammarNode": "node-39",
-    "priority": 3646,
-    "grammar": "Minyak kayu putih = cajuput oil, the warm-smelling cure-all rubbed on every Indonesian child's belly."
+    "priority": 3646
   },
   {
     "id": "id-3647",
@@ -43898,8 +43573,7 @@
       "general"
     ],
     "grammarNode": "node-39",
-    "priority": 3657,
-    "grammar": "Kuitansi = official receipt (from Dutch 'kwitantie'): minta kuitansi = ask for a receipt."
+    "priority": 3657
   },
   {
     "id": "id-3658",
@@ -43956,8 +43630,7 @@
       "general"
     ],
     "grammarNode": "node-39",
-    "priority": 3662,
-    "grammar": "Mencicil = pay in installments: mencicil tagihan = pay the bill bit by bit."
+    "priority": 3662
   },
   {
     "id": "id-3663",
@@ -43992,8 +43665,7 @@
       "family"
     ],
     "grammarNode": "node-39",
-    "priority": 3665,
-    "grammar": "Menjenguk = visit someone sick or a new baby — a real social duty: menjenguk paman = visit uncle."
+    "priority": 3665
   },
   {
     "id": "id-3666",
@@ -44005,8 +43677,7 @@
       "work"
     ],
     "grammarNode": "node-39",
-    "priority": 3666,
-    "grammar": "Patungan = chip in together: patungan membeli parsel = pool money to buy a gift basket."
+    "priority": 3666
   },
   {
     "id": "id-3667",
@@ -44031,7 +43702,7 @@
     ],
     "grammarNode": "node-39",
     "priority": 3668,
-    "grammar": "Semoga cepat sembuh = get well soon, literally 'hopefully quickly recover' — the standard sick wish."
+    "grammar": "Semoga cepat sembuh is the standard get-well line, literally 'hopefully quickly recover'. Semoga starts most wishes: semoga sukses, semoga lancar."
   },
   {
     "id": "id-3669",
@@ -44079,8 +43750,7 @@
       "family"
     ],
     "grammarNode": "node-39",
-    "priority": 3672,
-    "grammar": "Opname (from Dutch) = being admitted to hospital: kabar opname kakek = news of Grandpa's hospital stay."
+    "priority": 3672
   },
   {
     "id": "id-3673",
@@ -44093,7 +43763,7 @@
     ],
     "grammarNode": "node-39",
     "priority": 3673,
-    "grammar": "Demam berdarah (DBD) = dengue fever, literally 'bleeding fever' — the rainy-season worry."
+    "grammar": "News and clinics shorten demam berdarah to DBD – three-letter abbreviations are everywhere in Indonesian, from KTP to SD."
   },
   {
     "id": "id-3674",
@@ -44129,8 +43799,7 @@
       "family"
     ],
     "grammarNode": "node-40",
-    "priority": 3676,
-    "grammar": "Kos = a rented room in a shared house, classic student housing: kamar kos = boarding room."
+    "priority": 3676
   },
   {
     "id": "id-3677",
@@ -44166,8 +43835,7 @@
       "general"
     ],
     "grammarNode": "node-40",
-    "priority": 3679,
-    "grammar": "Ibu kos = the landlady who runs a boarding house: bayar ke ibu kos = pay the landlady."
+    "priority": 3679
   },
   {
     "id": "id-3680",
@@ -44212,8 +43880,7 @@
       "general"
     ],
     "grammarNode": "node-40",
-    "priority": 3683,
-    "grammar": "Iuran = a regular fee everyone pays into: iuran kebersihan = the cleaning dues."
+    "priority": 3683
   },
   {
     "id": "id-3684",
@@ -44225,7 +43892,7 @@
     ],
     "grammarNode": "node-40",
     "priority": 3684,
-    "grammar": "Anak kos = someone living in a kos — shorthand for a tight budget: masakan anak kos = cheap cooking."
+    "grammar": "Anak kos means a boarding-house renter, and it connotes a tight budget: masakan anak kos = cheap cooking. Hence memasak sendiri at the end of the month."
   },
   {
     "id": "id-3685",
@@ -44433,8 +44100,7 @@
       "family"
     ],
     "grammarNode": "node-40",
-    "priority": 3702,
-    "grammar": "PAM = the city water utility: air PAM = tap water, used for washing rather than drinking."
+    "priority": 3702
   },
   {
     "id": "id-3703",
@@ -44457,8 +44123,7 @@
       "family"
     ],
     "grammarNode": "node-40",
-    "priority": 3704,
-    "grammar": "Galon = the big 19-liter water bottle at home: air galon = drinking water from the dispenser."
+    "priority": 3704
   },
   {
     "id": "id-3705",
@@ -44480,8 +44145,7 @@
       "general"
     ],
     "grammarNode": "node-40",
-    "priority": 3706,
-    "grammar": "Isi ulang = refill: galon isi ulang = a refilled gallon from the water depot, cheaper than branded."
+    "priority": 3706
   },
   {
     "id": "id-3707",
@@ -44550,8 +44214,7 @@
       "general"
     ],
     "grammarNode": "node-40",
-    "priority": 3712,
-    "grammar": "Cicilan = an installment; mencicil = pay bit by bit: cicilan dua tahun = two years of installments."
+    "priority": 3712
   },
   {
     "id": "id-3713",
@@ -44586,8 +44249,7 @@
       "family"
     ],
     "grammarNode": "node-40",
-    "priority": 3715,
-    "grammar": "Lunas = fully paid off: cicilannya sudah lunas = the installments are all paid."
+    "priority": 3715
   },
   {
     "id": "id-3716",
@@ -44610,8 +44272,7 @@
       "general"
     ],
     "grammarNode": "node-40",
-    "priority": 3717,
-    "grammar": "Menunggak = to fall behind on payments: menunggak cicilan = to miss installments."
+    "priority": 3717
   },
   {
     "id": "id-3718",
@@ -44670,7 +44331,7 @@
     ],
     "grammarNode": "node-40",
     "priority": 3722,
-    "grammar": "Arisan = a rotating savings club — all pay in, one takes the pot: ikut arisan = join one."
+    "grammar": "An arisan is a rotating savings club: everyone pays in each round, one member takes the whole pot, and the rotation runs until all have had a turn."
   },
   {
     "id": "id-3723",
@@ -44729,8 +44390,7 @@
       "general"
     ],
     "grammarNode": "node-40",
-    "priority": 3727,
-    "grammar": "Giliran = your turn in a rotation: dapat giliran pertama = get the first turn."
+    "priority": 3727
   },
   {
     "id": "id-3728",
@@ -44743,7 +44403,7 @@
     ],
     "grammarNode": "node-40",
     "priority": 3728,
-    "grammar": "Sembako = the nine basic goods (rice, oil, sugar, and so on): harga sembako = staple prices."
+    "grammar": "Sembako is short for sembilan bahan pokok – the nine staple goods (rice, oil, sugar and so on). Harga sembako = the price of the basics everyone tracks."
   },
   {
     "id": "id-3729",
@@ -44755,8 +44415,7 @@
       "work"
     ],
     "grammarNode": "node-40",
-    "priority": 3729,
-    "grammar": "UMR = the regional minimum wage: di bawah UMR = below minimum wage."
+    "priority": 3729
   },
   {
     "id": "id-3730",
@@ -44829,8 +44488,7 @@
       "work"
     ],
     "grammarNode": "node-40",
-    "priority": 3735,
-    "grammar": "Gaji pokok = base salary, before the extras: selain gaji pokok = on top of base salary."
+    "priority": 3735
   },
   {
     "id": "id-3736",
@@ -44878,8 +44536,7 @@
       "family"
     ],
     "grammarNode": "node-40",
-    "priority": 3739,
-    "grammar": "Pos = a budget category: pos tabungan = the savings slot in the family budget."
+    "priority": 3739
   },
   {
     "id": "id-3740",
@@ -44891,8 +44548,7 @@
       "family"
     ],
     "grammarNode": "node-40",
-    "priority": 3740,
-    "grammar": "Hemat = careful with money, boros = wasteful — everyday opposites: dia hemat sekali = very frugal."
+    "priority": 3740
   },
   {
     "id": "id-3741",
@@ -44950,8 +44606,7 @@
       "family"
     ],
     "grammarNode": "node-40",
-    "priority": 3745,
-    "grammar": "Pelit = stingy; hemat = sensibly careful: hemat itu bukan pelit = frugal is not stingy."
+    "priority": 3745
   },
   {
     "id": "id-3746",
@@ -44997,8 +44652,7 @@
       "family"
     ],
     "grammarNode": "node-40",
-    "priority": 3749,
-    "grammar": "Belanja bulanan = the big monthly shop: uang belanja = the household shopping money."
+    "priority": 3749
   },
   {
     "id": "id-3750",
@@ -45034,7 +44688,7 @@
     ],
     "grammarNode": "node-40",
     "priority": 3752,
-    "grammar": "Ujung-ujungnya = it always ends up: ujung-ujungnya boros = in the end you overspend."
+    "grammar": "Ujung means 'end'; doubled, ujung-ujungnya is literally 'at its very ends' = 'it always ends up': ujung-ujungnya penuh barang yang tidak penting."
   },
   {
     "id": "id-3753",
@@ -45104,7 +44758,7 @@
     ],
     "grammarNode": "node-40",
     "priority": 3758,
-    "grammar": "Chili prices are national small talk — they jump constantly: harga cabai naik lagi = up again."
+    "grammar": "Chili prices swing constantly and everyone tracks them – harga cabai naik lagi? is genuine national small talk at any market stall."
   },
   {
     "id": "id-3759",
@@ -45182,8 +44836,7 @@
       "general"
     ],
     "grammarNode": "node-40",
-    "priority": 3765,
-    "grammar": "BBM = bahan bakar minyak, fuel: harga BBM naik = fuel prices went up — everything follows."
+    "priority": 3765
   },
   {
     "id": "id-3766",
@@ -45207,8 +44860,7 @@
       "travel"
     ],
     "grammarNode": "node-40",
-    "priority": 3767,
-    "grammar": "Ongkos = fare, the cost of getting somewhere: ongkos angkot = the minibus fare."
+    "priority": 3767
   },
   {
     "id": "id-3768",
@@ -45254,8 +44906,7 @@
       "travel"
     ],
     "grammarNode": "node-40",
-    "priority": 3771,
-    "grammar": "Dua kali lipat = double: hampir dua kali lipat = almost twice as much."
+    "priority": 3771
   },
   {
     "id": "id-3772",
@@ -45313,8 +44964,7 @@
       "work"
     ],
     "grammarNode": "node-40",
-    "priority": 3776,
-    "grammar": "Patungan = to chip in together: kami patungan = we split the cost."
+    "priority": 3776
   },
   {
     "id": "id-3777",
@@ -45409,8 +45059,7 @@
       "family"
     ],
     "grammarNode": "node-40",
-    "priority": 3784,
-    "grammar": "Celengan = a piggy bank: menyisihkan uang ke celengan = set money aside in the piggy bank."
+    "priority": 3784
   },
   {
     "id": "id-3785",
@@ -45434,7 +45083,7 @@
     ],
     "grammarNode": "node-40",
     "priority": 3786,
-    "grammar": "Sedikit demi sedikit = little by little: menabung sedikit demi sedikit = save bit by bit."
+    "grammar": "Demi builds 'X by X' phrases: sedikit demi sedikit = little by little, satu demi satu = one by one. The doubling marks slow, steady progress."
   },
   {
     "id": "id-3787",
@@ -45503,8 +45152,7 @@
       "general"
     ],
     "grammarNode": "node-40",
-    "priority": 3792,
-    "grammar": "Isi saldo = top up a balance: saya isi di minimarket = I will top it up at the minimart."
+    "priority": 3792
   },
   {
     "id": "id-3793",
@@ -45596,7 +45244,7 @@
     ],
     "grammarNode": "node-40",
     "priority": 3800,
-    "grammar": "Kena biaya = get charged a fee: kena biaya seribu = charged one thousand."
+    "grammar": "Kena means 'get hit by' something unwelcome: kena biaya = get charged a fee, kena hujan = get rained on, kena macet = get stuck in traffic."
   },
   {
     "id": "id-3801",
@@ -45609,7 +45257,7 @@
     ],
     "grammarNode": "node-41",
     "priority": 3801,
-    "grammar": "Tukang + a trade names the worker: tukang kayu = carpenter, tukang ledeng = plumber."
+    "grammar": "On its own, tukang means a handyman – the tukang with his palu and gergaji. Add a trade and it names the specialist: tukang kayu = carpenter."
   },
   {
     "id": "id-3802",
@@ -45708,7 +45356,7 @@
     ],
     "grammarNode": "node-41",
     "priority": 3809,
-    "grammar": "Kunci inggris — literally 'English key' — is the everyday Indonesian word for a wrench."
+    "grammar": "Kunci inggris, literally 'English key', is the everyday Indonesian word for a wrench – kunci alone just means key or lock."
   },
   {
     "id": "id-3810",
@@ -45732,8 +45380,7 @@
       "family"
     ],
     "grammarNode": "node-41",
-    "priority": 3811,
-    "grammar": "terbuat dari + material = 'made of': terbuat dari kayu jati = made of teak wood."
+    "priority": 3811
   },
   {
     "id": "id-3812",
@@ -45745,8 +45392,7 @@
       "work"
     ],
     "grammarNode": "node-41",
-    "priority": 3812,
-    "grammar": "sekali pakai = single-use, literally 'once use': botol plastik sekali pakai."
+    "priority": 3812
   },
   {
     "id": "id-3813",
@@ -45880,8 +45526,7 @@
       "travel"
     ],
     "grammarNode": "node-41",
-    "priority": 3823,
-    "grammar": "berteduh = to take shelter, from teduh (shade): berteduh di warung = shelter at a stall."
+    "priority": 3823
   },
   {
     "id": "id-3824",
@@ -46126,7 +45771,7 @@
     ],
     "grammarNode": "node-41",
     "priority": 3843,
-    "grammar": "lama-lama = 'eventually, over time': lama-lama terasa hasilnya = in time you feel the results."
+    "grammar": "Lama means 'a long time'; doubled, lama-lama means 'eventually, given enough time': lama-lama terasa hasilnya – in time you feel the results."
   },
   {
     "id": "id-3844",
@@ -46199,8 +45844,7 @@
       "work"
     ],
     "grammarNode": "node-41",
-    "priority": 3849,
-    "grammar": "Structures stack: kalau + passive di- + semakin — Kalau tidak dikirim, masalahnya semakin rumit."
+    "priority": 3849
   },
   {
     "id": "id-3850",
@@ -46287,7 +45931,7 @@
     ],
     "grammarNode": "node-41",
     "priority": 3856,
-    "grammar": "buah tangan = the small gift you bring when visiting — literally 'fruit of the hand'."
+    "grammar": "Buah tangan – literally 'fruit of the hand' – is the small gift you bring when visiting someone's home. Arriving empty-handed reads as impolite."
   },
   {
     "id": "id-3857",
@@ -46520,7 +46164,7 @@
     ],
     "grammarNode": "node-41",
     "priority": 3875,
-    "grammar": "Gotong royong — neighbors pitching in together unpaid — is a named core value of village life."
+    "grammar": "Bergotong royong comes from gotong royong – neighbors pitching in together unpaid – a named core value of Indonesian village life."
   },
   {
     "id": "id-3876",
@@ -47028,8 +46672,7 @@
       "travel"
     ],
     "grammarNode": "node-41",
-    "priority": 3917,
-    "grammar": "Capstone combo: kalau + semakin + passive di- — Kalau cuaca semakin buruk, jadwal bisa diubah."
+    "priority": 3917
   },
   {
     "id": "id-3918",
@@ -47065,8 +46708,7 @@
       "work"
     ],
     "grammarNode": "node-41",
-    "priority": 3920,
-    "grammar": "berminat = 'to be interested': masih berminat = still interested. The noun is minat."
+    "priority": 3920
   },
   {
     "id": "id-3921",
@@ -47115,7 +46757,7 @@
     ],
     "grammarNode": "node-41",
     "priority": 3924,
-    "grammar": "Proverb: 'where there's sugar, there are ants' — people gather wherever there's money or good fortune."
+    "grammar": "Ada gula ada semut – 'where there's sugar there are ants': people gather wherever there's money or good fortune. A stock comment on crowds."
   },
   {
     "id": "id-3925",
@@ -47128,7 +46770,7 @@
     ],
     "grammarNode": "node-41",
     "priority": 3925,
-    "grammar": "Proverb: little by little it becomes a hill — small steady savings grow. The Indonesian 'slow and steady'."
+    "grammar": "Sedikit demi sedikit, lama-lama menjadi bukit – little by little it becomes a hill. The standard Indonesian proverb for slow, steady saving."
   },
   {
     "id": "id-3926",
@@ -47141,7 +46783,7 @@
     ],
     "grammarNode": "node-41",
     "priority": 3926,
-    "grammar": "Bagai pinang dibelah dua = 'like a betel nut split in two' — two people identical in looks."
+    "grammar": "Bagai pinang dibelah dua – 'like a betel nut split in two': two people identical in looks. Said of twins or striking lookalikes."
   },
   {
     "id": "id-3927",
@@ -47154,7 +46796,7 @@
     ],
     "grammarNode": "node-41",
     "priority": 3927,
-    "grammar": "Proverb: one paddle stroke, two or three islands passed — one effort, many goals. 'Two birds, one stone.'"
+    "grammar": "Sekali mendayung, dua tiga pulau terlampaui – one paddle stroke passes two or three islands: one effort, several goals. The Indonesian 'two birds, one stone'."
   },
   {
     "id": "id-3928",
@@ -47167,7 +46809,7 @@
     ],
     "grammarNode": "node-41",
     "priority": 3928,
-    "grammar": "Proverb: calm water can sweep you away — the quiet ones may be the strongest. 'Still waters run deep.'"
+    "grammar": "Air tenang menghanyutkan – calm water sweeps you away: quiet people can be the most formidable. The Indonesian take on 'still waters run deep'."
   },
   {
     "id": "id-3929",
@@ -47180,7 +46822,7 @@
     ],
     "grammarNode": "node-41",
     "priority": 3929,
-    "grammar": "A classic pantun every Indonesian knows: suffer first, enjoy later — hard work pays off in the end."
+    "grammar": "A classic pantun every Indonesian knows: bersakit-sakit dahulu, bersenang-senang kemudian – suffer first, enjoy later. Hard work pays off in the end."
   },
   {
     "id": "id-3930",
@@ -47193,7 +46835,7 @@
     ],
     "grammarNode": "node-41",
     "priority": 3930,
-    "grammar": "Tak kenal maka tak sayang: 'unknown, unloved' — quoted whenever Indonesians introduce something new."
+    "grammar": "Tak kenal maka tak sayang – 'unknown means unloved'. Indonesians quote it when introducing something new: get to know it and you'll come to like it."
   },
   {
     "id": "id-3931",
@@ -47206,7 +46848,7 @@
     ],
     "grammarNode": "node-41",
     "priority": 3931,
-    "grammar": "Proverb: where you stand, hold up that sky — follow local customs wherever you go. Core travel etiquette."
+    "grammar": "Di mana bumi dipijak, di situ langit dijunjung – where you stand, hold up that sky: follow local customs wherever you are. The Indonesian 'when in Rome'."
   },
   {
     "id": "id-3932",
@@ -47219,7 +46861,7 @@
     ],
     "grammarNode": "node-41",
     "priority": 3932,
-    "grammar": "Nasi sudah menjadi bubur: the rice is already porridge — done is done; no crying over spilled milk."
+    "grammar": "Nasi sudah menjadi bubur – the rice has already become porridge: it can't be undone, so deal with what's next. The Indonesian 'no crying over spilled milk'."
   },
   {
     "id": "id-3933",
@@ -47232,6 +46874,6 @@
     ],
     "grammarNode": "node-41",
     "priority": 3933,
-    "grammar": "Proverb: fruit falls near its tree — children take after their parents. A 'chip off the old block.'"
+    "grammar": "Buah jatuh tak jauh dari pohonnya – the fruit doesn't fall far from its tree: children take after their parents. Same image as 'a chip off the old block'."
   }
 ]

@@ -240,7 +240,11 @@ const pack = {
   language: 'korean',
   name: 'Hangul',
   tagline: 'Read Korean in about 3 days',
-  drill: { recallPrompts: ['audio', 'romanization'], discriminationPrompt: 'audio' },
+  // Discrimination is a VISUAL drill for Hangul ("which one is kk?" – pick the
+  // glyph): the k-family contrast is near-inaudible to beginners and the TTS
+  // clips overlap, so an audio prompt would be guesswork. Audio-led
+  // discrimination stays the plan for Devanagari/Cyrillic (locked decision 2).
+  drill: { recallPrompts: ['audio', 'romanization'], discriminationPrompt: 'romanization' },
   items: items.map(it => ({
     id: it.id, kind: it.kind, glyph: it.glyph, sound: it.sound, romanization: it.romanization,
     mnemonic: it.mnemonic, level: it.level,

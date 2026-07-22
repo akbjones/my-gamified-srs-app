@@ -164,7 +164,7 @@ const shuffle = <T>(arr: T[], rng: () => number): T[] => {
  *  to recognize teaches nothing and leaks upcoming content. Also never an
  *  item sharing the target's romanization (hiragana か vs katakana カ are
  *  both "ka" — either would be a second correct answer). */
-const distractorsFor = (item: ScriptItem, pack: ScriptPack, progress: MasteryMap, rng: () => number, n = 3): ScriptItem[] => {
+const distractorsFor = (item: ScriptItem, pack: ScriptPack, progress: MasteryMap, rng: () => number, n = 3, avoidSimilar = false): ScriptItem[] => {
   const seen = (id: string) => !!progress[id];
   // Same-family only: letters/modifiers vs composed vs words never mix in one
   // choice set. Letter audio is synthesized as a CV syllable (ㄱ plays "ga"),
@@ -174,10 +174,14 @@ const distractorsFor = (item: ScriptItem, pack: ScriptPack, progress: MasteryMap
   const eligible = (i: ScriptItem) =>
     i.id !== item.id && family(i) === family(item) && i.romanization !== item.romanization &&
     (seen(i.id) || i.level <= item.level);
-  const pool = pack.items.filter(eligible);
   const similarSet = new Set(item.similar ?? []);
+  // avoidSimilar: audio prompts must NOT offer near-homophones – the plain/
+  // aspirated/tense family (가/카/까) all read as "k"-ish to a beginner and the
+  // TTS clips genuinely overlap. Visual confusables belong to DISCRIMINATION
+  // drills, which use the per-script discrimination prompt instead.
+  const pool = pack.items.filter(i => eligible(i) && !(avoidSimilar && similarSet.has(i.id)));
   const rank = (i: ScriptItem): number =>
-    similarSet.has(i.id) ? 0 :
+    !avoidSimilar && similarSet.has(i.id) ? 0 :
     i.kind === item.kind && i.level === item.level ? 1 :
     i.kind === item.kind ? 2 : 3;
   // Shuffle first so ties break randomly, then stable-sort by preference rank.
@@ -216,11 +220,13 @@ export const selectDrill = (
     kind: 'recognition', item, prompt: 'glyph',
     choices: shuffle([item, ...distractorsFor(item, pack, progress, rng)], rng),
   });
-  const recall = (): Drill => ({
-    kind: 'recall', item,
-    prompt: cfg.recallPrompts[Math.floor(rng() * cfg.recallPrompts.length)] ?? 'audio',
-    choices: shuffle([item, ...distractorsFor(item, pack, progress, rng)], rng),
-  });
+  const recall = (): Drill => {
+    const prompt = cfg.recallPrompts[Math.floor(rng() * cfg.recallPrompts.length)] ?? 'audio';
+    return {
+      kind: 'recall', item, prompt,
+      choices: shuffle([item, ...distractorsFor(item, pack, progress, rng, 3, prompt === 'audio')], rng),
+    };
+  };
 
   if (!inReview) {
     // Learning: 80% recognition (glyph → sound), 20% recall (sound → glyph).

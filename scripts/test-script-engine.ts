@@ -145,6 +145,14 @@ const seqRng = (...vals: number[]) => { let i = 0; return () => vals[Math.min(i+
   const d4 = selectDrill(simTarget, pack, review, seqRng(0.9, 0.5, 0.5, 0.5, 0.5));
   ok('drill: review rng≥0.4 → recall', d4.kind === 'recall');
 
+  // Audio-prompt recalls must not offer near-homophone confusables (가/카/까
+  // all read "k"-ish to a beginner); romanization prompts may (visual drill).
+  const dAudio = selectDrill(simTarget, pack, review, seqRng(0.9, 0.0, 0.5, 0.5, 0.5));
+  ok('drill: audio recall has audio prompt', dAudio.kind === 'recall' && dAudio.prompt === 'audio');
+  ok('drill: audio recall excludes similar-set', dAudio.choices.every(c => c.id === simTarget.id || !simTarget.similar!.includes(c.id)));
+  const dRoman = selectDrill(simTarget, pack, review, seqRng(0.9, 0.99, 0.5, 0.5, 0.5));
+  ok('drill: romanization recall keeps confusables', dRoman.prompt === 'romanization' && dRoman.choices.some(c => simTarget.similar!.includes(c.id)));
+
   // Composed item in review → composition with its component tiles present.
   const composed = pack.items.find(i => i.kind === 'composed' && i.components?.length)!;
   const revComposed: MasteryMap = { [composed.id]: { mastery: 2, lastReview: 1 } };

@@ -43,7 +43,13 @@ const CHO = ['ㄱ','ㄲ','ㄴ','ㄷ','ㄸ','ㄹ','ㅁ','ㅂ','ㅃ','ㅅ','ㅆ','
 const JUNG = ['ㅏ','ㅐ','ㅑ','ㅒ','ㅓ','ㅔ','ㅕ','ㅖ','ㅗ','ㅘ','ㅙ','ㅚ','ㅛ','ㅜ','ㅝ','ㅞ','ㅟ','ㅠ','ㅡ','ㅢ','ㅣ'];
 const compose = (cho, jung) => String.fromCodePoint(0xAC00 + (CHO.indexOf(cho) * 21 + JUNG.indexOf(jung)) * 28);
 function synthText(item) {
-  if (packName !== 'hangul' || item.kind === 'composed' || item.kind === 'word') return item.glyph;
+  if (packName !== 'hangul' || item.kind === 'word') return item.glyph;
+  // Single-syllable BLOCKS get the same doubled treatment as letters so a
+  // block and its letter sound identical (user: "the two ga's sound different
+  // which will be confusing") – multi-syllable words stay single takes.
+  if (item.kind === 'composed') {
+    return [...item.glyph].length === 1 ? `${item.glyph}. ${item.glyph}.` : item.glyph;
+  }
   // Letters say their demo syllable TWICE with a SENTENCE boundary between:
   // "아. 아." – Chirp3-HD collapses ultra-short single-syllable inputs (pilot:
   // ㅏ came back 0.4s at -26dB), and comma-doubles run together ("kkakka" –
@@ -117,25 +123,34 @@ async function main() {
   console.log(`${pilot ? 'PILOT' : 'FULL'} — ${items.length} clips, voice ${voiceName}`);
   let done = 0, skipped = 0;
   const failed = [];
+  const clipCache = new Map(); // synthText+rate -> approved buffer: identical sounds are byte-identical
   for (const item of items) {
     const name = pilot ? `pilot-${item.id}.mp3` : `${item.id}.mp3`;
     const out = path.join(AUDIO_DIR, name);
     if (resume && fs.existsSync(out)) { skipped++; continue; }
     const text = synthText(item);
-    // Letters: rate 1.0 (0.9 doubles drag – "the a is reaaally long"); blocks/words: 0.9.
-    const rate = item.kind === 'letter' || item.kind === 'modifier' ? 1.0 : 0.9;
+    // Doubled clips: rate 1.0 (0.9 drags – "the a is reaaally long"); singles: 0.9.
+    const rate = text.includes('. ') ? 1.0 : 0.9;
     // Chirp3-HD collapses short inputs STOCHASTICALLY (same text can succeed
     // or come back as 0.3s near-silence on different calls) – retry up to 3x,
     // adding volume gain on later attempts for genuinely quiet syntheses.
+    // Identical synth text reuses the SAME approved take (letter ㄱ and block
+    // 가 must not sound like two different speakers saying ga).
+    const cacheKey = `${text}@${rate}`;
     let qc = null;
-    for (let attempt = 0; attempt < 3; attempt++) {
-      const gain = attempt === 0 ? 0 : Math.min(16, 8 * attempt);
-      const buf = await callGoogleTTS(text, rate, gain);
-      fs.writeFileSync(out, buf);
+    if (clipCache.has(cacheKey)) {
+      fs.writeFileSync(out, clipCache.get(cacheKey));
       qc = qcAnalyze(out);
-      if (!qc || (qc.rmsPeakDb >= -18 && qc.voicedSec >= 0.15)) break;
-      console.log(`    retry ${attempt + 1} for ${name} (rms ${qc.rmsPeakDb}dB, voiced ${qc.voicedSec}s)`);
-      await new Promise(r => setTimeout(r, 400));
+    } else {
+      for (let attempt = 0; attempt < 3; attempt++) {
+        const gain = attempt === 0 ? 0 : Math.min(16, 8 * attempt);
+        const buf = await callGoogleTTS(text, rate, gain);
+        fs.writeFileSync(out, buf);
+        qc = qcAnalyze(out);
+        if (!qc || (qc.rmsPeakDb >= -18 && qc.voicedSec >= 0.15)) { clipCache.set(cacheKey, buf); break; }
+        console.log(`    retry ${attempt + 1} for ${name} (rms ${qc.rmsPeakDb}dB, voiced ${qc.voicedSec}s)`);
+        await new Promise(r => setTimeout(r, 400));
+      }
     }
     if (qc && (qc.rmsPeakDb < -18 || qc.voicedSec < 0.15)) {
       console.error(`  ✗ ${name} STILL BAD after retries – needs ears/manual fix`);

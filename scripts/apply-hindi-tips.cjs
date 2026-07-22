@@ -42,15 +42,26 @@ for (const f of glob(path.join(TIPS_DIR, 'fill-node-*.json')))
 // ── matra-tolerant Devanagari matcher ────────────────────────────────────────
 // Skeleton = Devanagari with combining vowel signs / nukta / virama / accents
 // removed, so inflected forms still match their stem (किताब ↔ किताबें).
+// Tokens are LETTERS only: the Devanagari block also contains punctuation
+// (danda । ॥, U+0964-5) and digits (U+0966-6F), which must not glue onto a
+// word — else किताब। ≠ किताब. Matching accepts either a RAW exact token
+// (catches short words like तू / जी / पी that skeleton-collapse to one glyph)
+// or a shared ≥3-char skeleton prefix (catches inflection).
+const DEV_LETTERS = /[ऀ-ॣ॰-ॿ]+/g; // Devanagari minus danda/digits
 const skeleton = s => s.replace(/[ऺ-ॏ॑-ॗॢॣ़ँ-ः]/g, '');
-const devTokens = s => (s.match(/[ऀ-ॿ]+/g) || []).map(skeleton).filter(t => t.length >= 2);
+function rawTokens(s) { return (s.match(DEV_LETTERS) || []).filter(t => t.length >= 2); }
+function skelTokens(s) { return rawTokens(s).map(skeleton).filter(t => t.length >= 2); }
+const digitRuns = s => s.match(/[०-९]{2,}/g) || []; // Devanagari numerals, kept OUT of word tokens
 function quotesOwnCard(tip, target) {
-  const targetToks = devTokens(target);
-  for (const t of devTokens(tip)) {
-    for (const tt of targetToks) {
+  const rawT = new Set(rawTokens(target));
+  for (const t of rawTokens(tip)) if (rawT.has(t)) return true; // exact form (short words)
+  const numT = new Set(digitRuns(target)); // a tip ABOUT a number cites that number
+  for (const n of digitRuns(tip)) if (numT.has(n)) return true;
+  const skelT = skelTokens(target);
+  for (const t of skelTokens(tip)) {
+    for (const tt of skelT) {
       if (t === tt) return true;
-      const n = Math.min(t.length, tt.length);
-      if (n >= 3 && t.slice(0, 3) === tt.slice(0, 3)) return true; // stem prefix
+      if (Math.min(t.length, tt.length) >= 3 && t.slice(0, 3) === tt.slice(0, 3)) return true; // stem prefix
     }
   }
   return false;

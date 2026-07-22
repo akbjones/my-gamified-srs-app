@@ -10,6 +10,7 @@ import {
 } from '../services/storageService';
 import type { AudioSpeed } from '../services/storageService';
 import { trackAudioPlayed, trackEtymologyOpened } from '../services/analyticsService';
+import { displayLengthFor } from '../services/textService';
 import WordPopover from './WordPopover';
 import WordTileChallenge from './WordTileChallenge';
 import FirstTimeIntro from './FirstTimeIntro';
@@ -69,6 +70,9 @@ const GRADE_CONFIG = {
 } as const;
 
 const FIRST_WOW_KEY = 'first-session-wow-shown';
+// Furigana toggle persistence (ruby decks only – key stores the OFF state
+// so the default for everyone is readings ON).
+const FURIGANA_HIDDEN_KEY = 'quest_furigana_hidden';
 
 const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAnswer, onAbort, onStudyMore, hasMoreCards, topicCards = [], autoPlayAudio, audioSpeed, googleTtsApiKey, tileCardIds = new Set(), pendingChallenge, onStartChallenge }) => {
   const [showInfo, setShowInfo] = useState(false);
@@ -76,6 +80,9 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
   const [isPlaying, setIsPlaying] = useState(false);
   const [showGrammar, setShowGrammar] = useState(false);
   const [showEtymology, setShowEtymology] = useState(false);
+  const [showReadings, setShowReadings] = useState(() => {
+    try { return localStorage.getItem(FURIGANA_HIDDEN_KEY) !== 'true'; } catch { return true; }
+  });
   // Local mirrors of favorite state so the Save button in each overlay flips
   // immediately on tap. Recomputed when the relevant overlay opens.
   const [grammarFavd, setGrammarFavd] = useState(false);
@@ -530,9 +537,10 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             </div>
           )}
 
-          {/* Card content – dynamic font size based on sentence length */}
+          {/* Card content – dynamic font size based on sentence length
+              (token count for pre-tokenized decks, word count otherwise) */}
           {(() => {
-            const wordCount = card!.target.split(/\s+/).length;
+            const wordCount = displayLengthFor(card!);
             const sizeClass = wordCount <= 6
               ? 'text-2xl md:text-3xl'
               : wordCount <= 10
@@ -543,13 +551,37 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             const engSizeClass = wordCount <= 10
               ? 'text-base md:text-lg'
               : 'text-sm md:text-base';
+            const hasRubyCard = !!card!.tokens?.some(t => t.r);
             return (
               <div
                 className="flex-1 flex flex-col items-center justify-center px-3 sm:px-5 min-h-0 overflow-y-auto"
               >
+                {/* Furigana toggle – visible whenever the card carries kana
+                    readings; persists across sessions. */}
+                {hasRubyCard && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setShowReadings(prev => {
+                        try { localStorage.setItem(FURIGANA_HIDDEN_KEY, prev ? 'true' : 'false'); } catch {}
+                        return !prev;
+                      });
+                    }}
+                    className={`self-end mb-2 px-2 py-0.5 rounded-md border text-[10px] font-bold tracking-wider transition-all active:scale-95 ${
+                      showReadings
+                        ? 'border-[var(--accent)] text-[var(--accent)] bg-[var(--accent)]/10'
+                        : 'border-[var(--border-color)] text-[var(--text-muted)]'
+                    }`}
+                    aria-label="Toggle furigana readings"
+                  >
+                    <span lang="ja">ふ</span> {showReadings ? 'ON' : 'OFF'}
+                  </button>
+                )}
                 <WordPopover
                   sentence={card!.target}
                   language={session.language}
+                  tokens={card!.tokens}
+                  showReadings={showReadings}
                   interactive={isFlipped}
                   className={`${sizeClass} font-black tracking-tight text-[var(--text-primary)] leading-snug max-w-sm mx-auto`}
                 />

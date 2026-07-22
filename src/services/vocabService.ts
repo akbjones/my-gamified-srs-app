@@ -1,5 +1,6 @@
 import { VocabEntry, VocabMap, Language } from '../types';
 import { DictEntry } from '../data/dictionary/es';
+import { hasCjk, PUNCT_TOKEN, type CardText } from './textService';
 
 // ── Tokenization ────────────────────────────────────────────
 export function tokenizeSentence(sentence: string): string[] {
@@ -313,6 +314,21 @@ const COMMON_WORDS: Record<string, Set<string>> = {
     // Particles
     'бы', 'ли', 'же', 'ведь', 'вот', 'вон',
   ]),
+  japanese: new Set([
+    // Particles (their own tokens on pre-tokenized cards)
+    'は', 'が', 'を', 'に', 'で', 'へ', 'と', 'も', 'の', 'か', 'ね', 'よ',
+    'から', 'まで', 'より', 'や',
+    // Copula & polite machinery
+    'です', 'でした', 'じゃない', 'ではありません', 'だ',
+    'ます', 'ません', 'ました', 'ませんでした',
+    // Pronouns & demonstratives
+    '私', 'わたし', 'これ', 'それ', 'あれ', 'ここ', 'そこ', 'あそこ',
+    'この', 'その', 'あの',
+    // Yes/no & fillers
+    'はい', 'いいえ', 'ええ', 'そう',
+    // Question words
+    '何', 'なに', 'なん', 'だれ', '誰', 'どこ', 'いつ', 'どう', 'どれ',
+  ]),
 };
 
 export function isCommonWord(word: string, lang: Language): boolean {
@@ -321,18 +337,26 @@ export function isCommonWord(word: string, lang: Language): boolean {
 }
 
 // ── Record words from a studied card ────────────────────────
+// Takes the card (not a bare sentence): pre-tokenized (ja) cards key vocab
+// by their surface tokens — the whitespace path would record the ENTIRE
+// sentence as one garbage entry, and the <2-char skip would drop every
+// single-kanji word (水, 本, 私).
 export function recordWordsFromCard(
-  sentence: string,
+  card: CardText,
   vocabMap: VocabMap,
   lookupFn: (w: string) => DictEntry | null,
   wasFailure: boolean,
 ): VocabMap {
-  const tokens = tokenizeSentenceWithCase(sentence);
+  const tokens: [string, string][] = card.tokens?.length
+    ? card.tokens
+        .map((t): [string, string] => [t.t, t.t]) // caseless script — key = surface
+        .filter(([k]) => !PUNCT_TOKEN.test(k))
+    : tokenizeSentenceWithCase(card.target);
   const now = Date.now();
   const updated = { ...vocabMap };
 
   for (const [key, display] of tokens) {
-    if (key.length < 2) continue; // skip single chars
+    if (key.length < 2 && !hasCjk(key)) continue; // skip single chars (single kanji/kana are real words)
 
     const existing = updated[key];
     if (existing) {

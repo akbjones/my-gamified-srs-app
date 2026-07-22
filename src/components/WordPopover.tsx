@@ -34,7 +34,7 @@ import { conjugate as conjugateId } from '../data/conjugation/id';
 import { conjugate as conjugateEl } from '../data/conjugation/el';
 import { conjugate as conjugateKo } from '../data/conjugation/ko';
 import { conjugate as conjugateJa } from '../data/conjugation/ja';
-import { Language, ConjugationTable } from '../types';
+import { Language, ConjugationTable, LANGUAGE_CONFIG } from '../types';
 
 // Dynamic lookup per language – gracefully returns null for languages without a dictionary
 const LOOKUP_FNS: Partial<Record<Language, (w: string) => DictEntry | null>> = {
@@ -145,6 +145,11 @@ interface WordPopoverProps {
    *  clicks are ignored. Used on the front of the card so users can't
    *  cheat by tapping words before recalling the sentence. */
   interactive?: boolean;
+  /** Pre-tokenized target (Japanese): renders token-by-token with ruby
+   *  furigana from `r`. When absent, falls back to the whitespace split. */
+  tokens?: { t: string; r?: string }[];
+  /** Furigana visibility (ruby decks only). Default true. */
+  showReadings?: boolean;
 }
 
 const POS_LABELS: Record<string, string> = {
@@ -194,7 +199,7 @@ function sanitizeDefinition(en: string, lemmaEn?: string): string | null {
   return cleaned;
 }
 
-const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className = '', interactive = true }) => {
+const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className = '', interactive = true, tokens: cardTokens, showReadings = true }) => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [popoverRect, setPopoverRect] = useState<DOMRect | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -205,8 +210,14 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
     [language],
   );
 
-  // Tokenize: split on spaces, keeping punctuation attached to words
-  const tokens = sentence.split(/(\s+)/).filter(Boolean);
+  // Pre-tokenized cards (Japanese — no spaces to split on) render their
+  // authored tokens; everything else splits on spaces, keeping punctuation
+  // attached to words.
+  const tokenized = !!cardTokens?.length;
+  const tokens = tokenized
+    ? cardTokens!.map(x => x.t)
+    : sentence.split(/(\s+)/).filter(Boolean);
+  const hasRuby = tokenized && showReadings && cardTokens!.some(x => x.r);
 
   useEffect(() => {
     if (activeIndex === null) return;
@@ -254,7 +265,9 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
   const activeToken = activeIndex !== null ? tokens[activeIndex] : '';
 
   return (
-    <div ref={containerRef} className={`inline ${className}`}>
+    // lang is load-bearing, not cosmetic: Han-unified codepoints render
+    // Chinese glyph variants on some systems without lang="ja".
+    <div ref={containerRef} className={`inline ${hasRuby ? 'has-ruby' : ''} ${className}`} lang={LANGUAGE_CONFIG[language].bcp47}>
       {tokens.map((token, i) => {
         // Whitespace tokens
         if (token.trim() === '') return <span key={i}>{token}</span>;
@@ -262,6 +275,9 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
         const entry = lookup(token);
         const isActive = activeIndex === i;
         const hasEntry = entry !== null;
+        // Furigana: ruby annotation from the authored reading. Hidden
+        // (not unmounted) when the toggle is off so layout math stays put.
+        const reading = tokenized ? cardTokens![i]?.r : undefined;
 
         return (
           <span key={i} className="relative inline-block">
@@ -275,7 +291,11 @@ const WordPopover: React.FC<WordPopoverProps> = ({ sentence, language, className
                 ${isActive ? 'bg-blue-500/15 text-blue-500' : ''}
               `}
             >
-              {token}
+              {reading ? (
+                <ruby>{token}<rt className={showReadings ? '' : 'invisible'}>{reading}</rt></ruby>
+              ) : (
+                token
+              )}
             </span>
           </span>
         );

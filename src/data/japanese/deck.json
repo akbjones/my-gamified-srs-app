@@ -1,1 +1,102 @@
-[]
+[
+ {
+  "id": "ja-0001",
+  "target": "こんにちは。",
+  "english": "Hello.",
+  "tokens": [{"t": "こんにちは"}, {"t": "。"}],
+  "audio": "ja-ja-0001.mp3",
+  "tags": ["general"],
+  "grammarNode": "node-01",
+  "priority": 1
+ },
+ {
+  "id": "ja-0002",
+  "target": "ありがとうございます。",
+  "english": "Thank you.",
+  "tokens": [{"t": "ありがとうございます"}, {"t": "。"}],
+  "audio": "ja-ja-0002.mp3",
+  "tags": ["general"],
+  "grammarNode": "node-01",
+  "priority": 2
+ },
+ {
+  "id": "ja-0003",
+  "target": "はい、そうです。",
+  "english": "Yes, that's right.",
+  "tokens": [{"t": "はい"}, {"t": "、"}, {"t": "そう"}, {"t": "です"}, {"t": "。"}],
+  "audio": "ja-ja-0003.mp3",
+  "tags": ["general"],
+  "grammarNode": "node-02",
+  "priority": 3
+ },
+ {
+  "id": "ja-0004",
+  "target": "わたしはがくせいです。",
+  "english": "I am a student.",
+  "tokens": [{"t": "わたし"}, {"t": "は"}, {"t": "がくせい"}, {"t": "です"}, {"t": "。"}],
+  "audio": "ja-ja-0004.mp3",
+  "tags": ["general"],
+  "grammarNode": "node-02",
+  "priority": 4
+ },
+ {
+  "id": "ja-0005",
+  "target": "これはみずです。",
+  "english": "This is water.",
+  "tokens": [{"t": "これ"}, {"t": "は"}, {"t": "みず"}, {"t": "です"}, {"t": "。"}],
+  "audio": "ja-ja-0005.mp3",
+  "tags": ["general"],
+  "grammarNode": "node-04",
+  "priority": 5
+ },
+ {
+  "id": "ja-0006",
+  "target": "私は学生です。",
+  "english": "I am a student.",
+  "tokens": [{"t": "私", "r": "わたし"}, {"t": "は"}, {"t": "学生", "r": "がくせい"}, {"t": "です"}, {"t": "。"}],
+  "audio": "ja-ja-0006.mp3",
+  "tags": ["general"],
+  "grammarNode": "node-02",
+  "priority": 6
+ },
+ {
+  "id": "ja-0007",
+  "target": "先生は日本人です。",
+  "english": "The teacher is Japanese.",
+  "tokens": [{"t": "先生", "r": "せんせい"}, {"t": "は"}, {"t": "日本人", "r": "にほんじん"}, {"t": "です"}, {"t": "。"}],
+  "audio": "ja-ja-0007.mp3",
+  "tags": ["general"],
+  "grammarNode": "node-02",
+  "priority": 7
+ },
+ {
+  "id": "ja-0008",
+  "target": "ねこがいます。",
+  "english": "There is a cat.",
+  "tokens": [{"t": "ねこ"}, {"t": "が"}, {"t": "います"}, {"t": "。"}],
+  "audio": "ja-ja-0008.mp3",
+  "tags": ["general"],
+  "grammarNode": "node-05",
+  "priority": 8
+ },
+ {
+  "id": "ja-0009",
+  "target": "水を飲みます。",
+  "english": "I drink water.",
+  "tokens": [{"t": "水", "r": "みず"}, {"t": "を"}, {"t": "飲みます", "r": "のみます"}, {"t": "。"}],
+  "audio": "ja-ja-0009.mp3",
+  "tags": ["general"],
+  "grammarNode": "node-06",
+  "priority": 9
+ },
+ {
+  "id": "ja-0010",
+  "target": "電車で学校に行きます。",
+  "english": "I go to school by train.",
+  "tokens": [{"t": "電車", "r": "でんしゃ"}, {"t": "で"}, {"t": "学校", "r": "がっこう"}, {"t": "に"}, {"t": "行きます", "r": "いきます"}, {"t": "。"}],
+  "audio": "ja-ja-0010.mp3",
+  "tags": ["general"],
+  "grammarNode": "node-08",
+  "priority": 10
+ }
+]

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { QuestCard, Language } from '../types';
+import { QuestCard, Language, LANGUAGE_CONFIG } from '../types';
 import { Volume2 } from 'lucide-react';
 import { playCardAudio } from '../services/audioService';
 import { buildTiles, checkTileAnswer, TileCheckResult } from '../services/challengeService';
@@ -24,7 +24,7 @@ const WordTileChallenge: React.FC<WordTileChallengeProps> = ({
   googleTtsApiKey,
   language,
 }) => {
-  const { correct, tiles } = useMemo(() => buildTiles(card.target, siblingCards), [card.id]);
+  const { correct, tiles } = useMemo(() => buildTiles(card, siblingCards), [card.id]);
 
   const [placedWords, setPlacedWords] = useState<string[]>([]);
   const [availableIndices, setAvailableIndices] = useState<Set<number>>(
@@ -103,7 +103,8 @@ const WordTileChallenge: React.FC<WordTileChallengeProps> = ({
   }, [checkResult]);
 
   return (
-    <div className="flex flex-col h-full px-4">
+    // lang covers every tile + the build area (Han-unification correctness)
+    <div className="flex flex-col h-full px-4" lang={LANGUAGE_CONFIG[language].bcp47}>
       {/* Prompt */}
       <div className="pt-5 pb-4 text-center">
         <div className="flex items-center justify-center gap-2 mb-2">

@@ -87,6 +87,7 @@ const DICT: Record<string, DictEntry> = {
   'すみません': { en: 'excuse me; I’m sorry', ipa: 'sumimasen', pos: 'phrase' },
   'はい': { en: 'yes', ipa: 'hai', pos: 'intj' },
   'いいえ': { en: 'no', ipa: 'iie', pos: 'intj' },
+  'そう': { en: 'so; that way (そうです = that’s right)', ipa: 'sou', pos: 'adv' },
   // ── verbs (dictionary-form headwords; taps on conjugated forms
   //    resolve via findInfinitive) ─────────────────────────────────
   '行く': { en: 'to go', ipa: 'iku', pos: 'v', lemma: '行く' },

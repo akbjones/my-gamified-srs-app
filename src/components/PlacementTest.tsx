@@ -298,7 +298,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
         {/* Card */}
         <div className="flex-1 flex items-center justify-center">
           <div className="study-card w-full max-h-[50dvh] flex flex-col items-center justify-center p-6">
-            <p className="text-lg font-extrabold text-[var(--text-primary)] text-center leading-relaxed mb-3">
+            <p className="text-lg font-extrabold text-[var(--text-primary)] text-center leading-relaxed mb-3" lang={LANGUAGE_CONFIG[lang].bcp47}>
               {currentCard.target}
             </p>
             <button
@@ -410,7 +410,7 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
         {/* Card + translation centered */}
         <div className="flex-1 flex flex-col justify-center overflow-y-auto">
           <div className="study-card w-full p-6 mb-4">
-            <p className="text-lg font-extrabold text-[var(--text-primary)] text-center leading-relaxed mb-1">
+            <p className="text-lg font-extrabold text-[var(--text-primary)] text-center leading-relaxed mb-1" lang={LANGUAGE_CONFIG[lang].bcp47}>
               {currentCard.target}
             </p>
             <div className="flex justify-center mb-3">

@@ -67,6 +67,26 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Japanese: system CJK fonts (no webfont – Noto Sans JP subsets are 1.5MB+).
+   The lang="ja" attribute on target-text surfaces is what routes here AND
+   prevents Han-unified codepoints falling back to Chinese glyph variants. */
+:lang(ja) {
+  font-family: 'Inter', -apple-system, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN',
+    'Yu Gothic Medium', 'Yu Gothic', 'Meiryo', 'Noto Sans JP', sans-serif;
+}
+
+/* Furigana: ruby needs vertical headroom or the kana clips against the
+   line above. .has-ruby is set by WordPopover when readings render. */
+.has-ruby {
+  line-height: 1.9 !important;
+}
+.has-ruby rt {
+  font-size: 0.45em;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0;
+}
+
 /* Mono for numbers, codes, stats. Cutive Mono is a typewriter-style
    font with an unambiguously plain oval zero – no slash, no dot, no
    internal mark of any kind. Previous attempts (JetBrains Mono = dot,

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Play, Pause, SkipForward, SkipBack, X, Volume2 } from 'lucide-react';
 import { QuestCard, Language, LANGUAGE_CONFIG } from '../types';
 import { playCardAudio, stopAudio, preloadCardAudio } from '../services/audioService';
+import { displayLengthFor } from '../services/textService';
 import type { AudioSpeed } from '../services/storageService';
 
 interface ListenModeProps {
@@ -130,7 +131,7 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
     );
   }
 
-  const wordCount = card.target.split(/\s+/).length;
+  const wordCount = displayLengthFor(card);
   const sizeClass = wordCount <= 6 ? 'text-3xl md:text-4xl'
     : wordCount <= 10 ? 'text-2xl md:text-3xl'
     : wordCount <= 14 ? 'text-xl md:text-2xl'
@@ -160,7 +161,7 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
 
       {/* Card */}
       <div className="flex-1 flex flex-col items-center justify-center text-center min-h-0">
-        <p className={`${sizeClass} font-black text-[var(--text-primary)] leading-snug max-w-md mx-auto mb-6`}>
+        <p className={`${sizeClass} font-black text-[var(--text-primary)] leading-snug max-w-md mx-auto mb-6`} lang={LANGUAGE_CONFIG[language].bcp47}>
           {card.target}
         </p>
         {showTranslation ? (

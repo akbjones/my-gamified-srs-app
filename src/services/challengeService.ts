@@ -1,13 +1,27 @@
 import { QuestCard, ChallengeQuestion, BossRing, ProgressState, ChallengeMode } from '../types';
+import { contentTokens } from './textService';
 
 // ── Tile Word Normalization ─────────────────────────────────
 // Strip leading ¿/¡ and trailing punctuation, then lowercase.
 // Keeps accents (cómo ≠ como). Removes clues (capital = first word, period = last).
+// Fullwidth punctuation (。、！？「」) included as defense-in-depth: ja
+// punctuation is its own token by lint, but an author error must not
+// leave a 。 glued to です.
 function normalizeTileWord(word: string): string {
   return word
-    .replace(/^[¿¡«"]+/, '')
-    .replace(/[.!?,;:…»"]+$/, '')
+    .replace(/^[¿¡«"「『（]+/, '')
+    .replace(/[.!?,;:…»"。、！？」』）]+$/, '')
     .toLowerCase();
+}
+
+// Dud/tile length gates are per-script: nearly every Japanese word is 1-3
+// chars (水, 学生, 行く), so the Latin "<3 chars is filler" rule would
+// produce ZERO duds for ja. For CJK only single-char kana (particles,
+// too-obvious grammar glue) are filtered.
+const CJK_RE = /[々぀-ヿ㐀-䶿一-鿿]/;
+function isTooObviousDud(w: string): boolean {
+  if (CJK_RE.test(w)) return w.length === 1 && /^[぀-ゟ]$/.test(w);
+  return w.length < 3;
 }
 
 // ── Word Scrambling ─────────────────────────────────────────
@@ -20,9 +34,11 @@ function fisherYatesShuffle<T>(arr: T[]): T[] {
   return result;
 }
 
-export function scrambleWords(sentence: string): { correct: string[]; scrambled: string[] } {
-  // Normalize: strip punctuation + lowercase so tiles don't give away order
-  const correct = sentence.split(/\s+/).map(normalizeTileWord);
+export function scrambleWords(card: Pick<QuestCard, 'target' | 'tokens'>): { correct: string[]; scrambled: string[] } {
+  // Normalize: strip punctuation + lowercase so tiles don't give away order.
+  // contentTokens = pre-tokenized tokens for ja (punctuation tokens already
+  // excluded), whitespace split for everyone else.
+  const correct = contentTokens(card).map(normalizeTileWord);
   let scrambled = fisherYatesShuffle(correct);
   // Ensure scrambled differs from correct (reshuffle up to 5 times)
   let attempts = 0;
@@ -42,9 +58,9 @@ function generateDuds(correctWords: string[], siblingCards: QuestCard[], count: 
   const candidates: string[] = [];
 
   for (const card of siblingCards) {
-    for (const raw of card.target.split(/\s+/)) {
+    for (const raw of contentTokens(card)) {
       const w = normalizeTileWord(raw);
-      if (w.length < 3) continue;          // skip "y", "a", "de", etc. – too obvious
+      if (isTooObviousDud(w)) continue;     // "y"/"de" (Latin), single kana (ja)
       if (correctSet.has(w)) continue;      // already in the sentence
       if (seen.has(w)) continue;            // dedupe
       seen.add(w);
@@ -68,11 +84,11 @@ function dudCountForLength(wordCount: number): number {
 // Build the full tile set: normalized correct words + duds, all shuffled together.
 // siblingCards should be other cards from the same grammar node.
 export function buildTiles(
-  sentence: string,
+  card: Pick<QuestCard, 'target' | 'tokens'>,
   siblingCards: QuestCard[],
   dudCountOverride?: number,
 ): { correct: string[]; tiles: string[] } {
-  const correct = sentence.split(/\s+/).map(normalizeTileWord);
+  const correct = contentTokens(card).map(normalizeTileWord);
   const duds = generateDuds(correct, siblingCards, dudCountOverride ?? dudCountForLength(correct.length));
   const tiles = fisherYatesShuffle([...correct, ...duds]);
   return { correct, tiles };
@@ -87,11 +103,14 @@ export function selectTileCandidates(queue: QuestCard[]): number[] {
   const candidates = queue
     .map((card, idx) => ({ card, idx }))
     .filter(({ card }) => {
-      const wordCount = card.target.split(/\s+/).length;
+      const wordCount = contentTokens(card).length;
+      // Tokenized (ja) sentences run 4-7 content tokens at N5 — the
+      // 5-word floor would disqualify most of the deck, so it drops to 4.
+      const minLen = card.tokens?.length ? 4 : 5;
       return (
         card.mastery >= 2 &&              // must be graduated (not still learning)
         (card.interval || 0) >= fourteenDaysMs && // approaching retention (21d)
-        wordCount >= 5 &&
+        wordCount >= minLen &&
         wordCount <= 12
       );
     });
@@ -103,8 +122,8 @@ export function selectTileCandidates(queue: QuestCard[]): number[] {
   candidates.sort((a, b) => {
     const nodeA = parseInt((a.card as any).grammarNode?.replace('node-', '') || '99');
     const nodeB = parseInt((b.card as any).grammarNode?.replace('node-', '') || '99');
-    const wordsA = a.card.target.split(/\s+/).length;
-    const wordsB = b.card.target.split(/\s+/).length;
+    const wordsA = contentTokens(a.card).length;
+    const wordsB = contentTokens(b.card).length;
     // Early nodes (01-10): strongly prefer shorter cards
     if (nodeA <= 10 && nodeB <= 10) return wordsA - wordsB;
     // Mixed: early node cards first
@@ -121,16 +140,17 @@ export function selectTileCandidates(queue: QuestCard[]): number[] {
 
 // ── Challenge Question Building ─────────────────────────────
 export function buildChallengeQuestions(cards: QuestCard[], count: number): ChallengeQuestion[] {
-  // Filter eligible cards (prefer 5-12 words, fallback to 3-14)
+  // Filter eligible cards (prefer 5-12 words, fallback to 3-14).
+  // Tokenized (ja) cards use a floor of 4 — see selectTileCandidates.
   let eligible = cards.filter(c => {
-    const wc = c.target.split(/\s+/).length;
-    return wc >= 5 && wc <= 12;
+    const wc = contentTokens(c).length;
+    return wc >= (c.tokens?.length ? 4 : 5) && wc <= 12;
   });
 
   // Fallback: include shorter/longer sentences if not enough
   if (eligible.length < count) {
     eligible = cards.filter(c => {
-      const wc = c.target.split(/\s+/).length;
+      const wc = contentTokens(c).length;
       return wc >= 3 && wc <= 14;
     });
   }
@@ -139,7 +159,7 @@ export function buildChallengeQuestions(cards: QuestCard[], count: number): Chal
   const selected = shuffled.slice(0, count);
 
   return selected.map(card => {
-    const { correct, scrambled } = scrambleWords(card.target);
+    const { correct, scrambled } = scrambleWords(card);
     return { card, correctWords: correct, scrambledWords: scrambled };
   });
 }

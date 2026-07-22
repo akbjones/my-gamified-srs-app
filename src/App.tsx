@@ -48,6 +48,7 @@ import { lookupWord as lookupCy } from './data/dictionary/cy';
 import { lookupWord as lookupHi } from './data/dictionary/hi';
 import { lookupWord as lookupTr } from './data/dictionary/tr';
 import { lookupWord as lookupRu } from './data/dictionary/ru';
+import { lookupWord as lookupJa } from './data/dictionary/ja';
 import VocabList from './components/VocabList';
 import FavoritesList from './components/FavoritesList';
 import ListenMode from './components/ListenMode';
@@ -77,6 +78,7 @@ const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
   hindi: lookupHi,
   turkish: lookupTr,
   russian: lookupRu,
+  japanese: lookupJa,
 };
 
 type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB' | 'FAVORITES' | 'LISTEN' | 'CHECKIN' | 'SCRIPT';
@@ -122,8 +124,11 @@ const STARTER_PARAM = typeof window !== 'undefined'
 // deck it hydrates from) only load when the app is in ?starter= mode.
 const STARTER_LOADERS: Partial<Record<Language, () => Promise<any[]>>> = {
   spanish: () => import('./data/starterDecks').then(m => m.SPANISH_STARTER),
+  // Japanese: the whole deck IS the starter (300 graded cards at launch) —
+  // no manifest selection needed until parity expansion.
+  japanese: () => import('./data/japanese/deck.json').then(m => m.default),
 };
-const STARTER_LANG_BY_CODE: Record<string, Language> = { es: 'spanish' };
+const STARTER_LANG_BY_CODE: Record<string, Language> = { es: 'spanish', ja: 'japanese' };
 const STARTER_LOCK: Language | null =
   STARTER_PARAM && STARTER_LANG_BY_CODE[STARTER_PARAM] ? STARTER_LANG_BY_CODE[STARTER_PARAM] : null;
 
@@ -187,6 +192,7 @@ const buildDeck = (
       topic: rawCard._nodeId,
       audio: rawCard.audio || '',
       grammar: rawCard.grammar || undefined,
+      tokens: rawCard.tokens || undefined,
       tags: rawCard.tags || ['general'],
       mastery: (saved?.mastery as number) ?? 0,
       step: (saved?.step as number) ?? 0,
@@ -602,7 +608,7 @@ const App: React.FC = () => {
     // Track vocabulary (also fresh-load so we don't lose words from rapid answers)
     const lookupFn = DICT_LOOKUP[lang] ?? (() => null);
     const freshVocab = loadVocabMap(lang);
-    const newVocab = recordWordsFromCard(currentCard.target, freshVocab, lookupFn, rating === 'AGAIN');
+    const newVocab = recordWordsFromCard(currentCard, freshVocab, lookupFn, rating === 'AGAIN');
     setVocabMap(newVocab);
     saveVocabMap(newVocab, lang);
 

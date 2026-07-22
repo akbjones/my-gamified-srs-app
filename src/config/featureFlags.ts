@@ -16,6 +16,7 @@ import type { Language } from '../types';
 export const GRAMMAR_TIPS_KILL_SWITCH = false; // set true to hide tips everywhere regardless of the allowlist
 export const GRAMMAR_TIPS_LANGS: ReadonlySet<Language> = new Set<Language>([
   'spanish', // pilot passed all gates 2026-07-21: 882 tips, 22.4%, linter-clean (user flipped)
+  'hindi',   // wave passed all gates 2026-07-22: 582 tips, 18.3%, verified + linter-clean (user flipped)
 ]);
 
 /** Should the UI surface grammar tips for this language? */

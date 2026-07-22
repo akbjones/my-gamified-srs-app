@@ -34,7 +34,7 @@ import {
   recordAnswer, updateStreak, checkAchievements, getAchievementsWithStatus,
 } from './services/gamificationService';
 import {
-  selectTileCandidates, buildChallengeQuestions, shouldTriggerChallenge, isRingBetter, calculateBossRing, TOTAL_BOSSES,
+  buildChallengeQuestions, shouldTriggerChallenge, isRingBetter, calculateBossRing, TOTAL_BOSSES,
 } from './services/challengeService';
 import { recordWordsFromCard } from './services/vocabService';
 import { lookupWord as lookupEs } from './data/dictionary/es';
@@ -515,9 +515,10 @@ const App: React.FC = () => {
       interleaved.map(c => ({ ...c, step: c.step || 0 }))
     );
 
-    // Select tile challenge cards by ID (indices shift during mini-loops)
-    const tileIndices = selectTileCandidates(queue);
-    setTileCardIds(new Set(tileIndices.map(i => queue[i].id)));
+    // Tile-rearrange challenge removed (2026-07-22): no cards are promoted to
+    // the tile game any more, so study is pure flashcards. tileCardIds stays
+    // empty → StudySession never renders WordTileChallenge.
+    setTileCardIds(new Set());
     setPendingChallenge(null);
 
     setSession({

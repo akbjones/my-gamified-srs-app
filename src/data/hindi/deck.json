@@ -9,7 +9,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 7,
-    "grammar": "Hindi ends sentences with है (hai = is) or हैं (hain = are/respect). Example: मेरी बहन डॉक्टर है (My sister is a doctor)."
+    "grammar": "Hindi puts is/are at the very end: है (hai) or हैं (hain). मेरी बहन डॉक्टर है (meri behen doctor hai) – literally 'my sister doctor is'."
   },
   {
     "id": "hi-0002",
@@ -20,8 +20,7 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "priority": 72,
-    "grammar": "Verbs change with the speaker's gender. Men: मैं करता हूँ (main karta hun). Women: मैं करती हूँ (main karti hun). The -ता/-ती ending switches."
+    "priority": 72
   },
   {
     "id": "hi-0003",
@@ -56,14 +55,13 @@
     ],
     "grammarNode": "node-01",
     "priority": 71,
-    "grammar": "Question words go where the answer would go, not at the start. `तुम कहाँ जा रहे हो?` (You where going?) – `कहाँ` sits where the place answer would."
+    "grammar": "Question words sit in the answer's slot: in कैसे हो (kaise ho = how are you), कैसे (kaise) fills the spot the answer ठीक (theek = fine) would take – no flipping to the front like English."
   },
   {
     "id": "hi-0006",
     "target": "तुम्हें डॉक्टर को दिखाना चाहिए।",
     "english": "You should see a doctor.",
     "audio": "hi-hi-0006.mp3",
-    "grammar": "Common position words: में (in), पर (on), से (from), को (to), तक (until). Each makes the noun before it change form slightly.",
     "tags": [
       "family",
       "general"
@@ -95,7 +93,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 37,
-    "grammar": "Possessives by pronoun: `मेरा` (my), `तुम्हारा` (your), `उसका` (his/her). They gender-agree with the thing owned, not the owner. `मेरा घर` (m), `मेरी किताब` (f)."
+    "grammar": "Possessives match the thing owned, not the owner: तुम्हारे बच्चे (tumhare bachche = your children) – तुम्हारे (tumhare) is plural because बच्चे is, whoever you are."
   },
   {
     "id": "hi-0009",
@@ -107,14 +105,14 @@
     ],
     "grammarNode": "node-08",
     "priority": 126,
-    "grammar": "Pick auxiliary by subject: मैं → हूँ (main hun), वह/यह → है (hai), हम/वे/आप → हैं (hain), तुम → हो (ho)."
+    "grammar": "Hunger strikes you in Hindi: भूख लगी है (bhookh lagi hai = hunger has struck). Thirst and cold too: प्यास लगी है (pyaas lagi hai). You're the target, not the doer."
   },
   {
     "id": "hi-0010",
     "target": "मैं रोज़ सुबह दूध पीता हूँ।",
     "english": "I drink milk every morning.",
     "audio": "hi-hi-0010.mp3",
-    "grammar": "Verbs change with the speaker's gender. Men: मैं करता हूँ (main karta hun). Women: मैं करती हूँ (main karti hun). The -ता/-ती ending switches.",
+    "grammar": "The verb ending shows the speaker's own gender: a man says पीता हूँ (peeta hun = I drink), a woman says पीती हूँ (peeti hun). Same I, different ending.",
     "tags": [
       "general"
     ],
@@ -132,7 +130,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 102,
-    "grammar": "Three present endings: -ता (-ta, m sg), -ती (-ti, f sg), -ते (-te, m pl / respect). जाता / जाती / जाते = he goes / she goes / they go."
+    "grammar": "जी (ji) glued to a name or relative adds respect: चाचाजी (chachaji = uncle-ji). You'll hear it everywhere – पापाजी (papaji), even हाँ जी (haan ji) for a polite yes."
   },
   {
     "id": "hi-0012",
@@ -255,7 +253,8 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "priority": 306
+    "priority": 306,
+    "grammar": "पसंद आया (pasand aaya = liking came) is one-time – they liked it that day. For a standing taste, Hindi switches to पसंद है (pasand hai)."
   },
   {
     "id": "hi-0022",
@@ -274,7 +273,6 @@
     "target": "क्या आप मुझे सही रास्ता दिखा सकते हैं?",
     "english": "Can you show me the right way?",
     "audio": "hi-hi-0023.mp3",
-    "grammar": "For polite आप or plural, use -ते: आप क्या करते हैं? (aap kya karte hain = What do you do?). Plural ending also signals respect.",
     "tags": [
       "general",
       "travel"
@@ -317,7 +315,8 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "priority": 191
+    "priority": 191,
+    "grammar": "No word for 'than' – Hindi uses से (se = from): चीनी से ज़्यादा (chini se zyada = from sugar more) means 'more than sugar'."
   },
   {
     "id": "hi-0027",
@@ -371,7 +370,6 @@
     "target": "यह किताब भी उतनी ही दिलचस्प है।",
     "english": "This book is just as interesting.",
     "audio": "hi-hi-0031.mp3",
-    "grammar": "Pick auxiliary by subject: मैं → हूँ (main hun), वह/यह → है (hai), हम/वे/आप → हैं (hain), तुम → हो (ho).",
     "tags": [
       "general",
       "work"
@@ -401,7 +399,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 288,
-    "grammar": "Third-person verbs still mark gender: राम जाता है (Ram goes, m) vs सीता जाती है (Sita goes, f). Subject's gender drives the ending."
+    "grammar": "Love is something you do in Hindi: प्यार करते हैं (pyaar karte hain = do love). And the loved one takes से: मुझसे (mujhse = literally 'from me')."
   },
   {
     "id": "hi-0034",
@@ -463,7 +461,8 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "priority": 324
+    "priority": 324,
+    "grammar": "Hindi chains actions with -कर (-kar = having done): नहाकर (nahakar = having bathed) means 'after bathing' – no 'and' needed between bathing and getting ready."
   },
   {
     "id": "hi-0039",
@@ -499,7 +498,8 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "priority": 515
+    "priority": 515,
+    "grammar": "English 'takes time' flips in Hindi: समय लगता है (samay lagta hai = time attaches). The time attaches to the task – the task doesn't take it."
   },
   {
     "id": "hi-0042",
@@ -559,7 +559,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 422,
-    "grammar": "भी (also/even) sits after the word it emphasises. मैं भी जाऊँगा (I'll go too). मैं कल भी जाऊँगा (I'll go tomorrow too)."
+    "grammar": "English drops 'then' but Hindi keeps it: अगर (agar = if) pairs with तो (to = then). Skipping the तो sounds unfinished to Hindi ears."
   },
   {
     "id": "hi-0047",
@@ -694,7 +694,8 @@
       "travel"
     ],
     "grammarNode": "node-02",
-    "priority": 33
+    "priority": 33,
+    "grammar": "दौड़ता है (daudta hai) = runs, as a routine – not 'is running'. Right-now actions use रहा है (raha hai); the -ता (-ta) form is for habits."
   },
   {
     "id": "hi-0059",
@@ -707,7 +708,8 @@
       "travel"
     ],
     "grammarNode": "node-02",
-    "priority": 65
+    "priority": 65,
+    "grammar": "There's no verb 'brush' here – Hindi makes teeth clean: दाँत साफ़ करता हूँ (daant saaf karta hoon). साफ़ (saaf = clean) + करना (karna = do) does the job."
   },
   {
     "id": "hi-0060",
@@ -718,7 +720,8 @@
       "general"
     ],
     "grammarNode": "node-02",
-    "priority": 29
+    "priority": 29,
+    "grammar": "English 'tells' the truth – Hindi speaks it: सच बोलता है (sach bolta hai). Truth and lies both pair with बोलना (bolna = speak), and there's no 'the'."
   },
   {
     "id": "hi-0061",
@@ -729,7 +732,8 @@
       "general"
     ],
     "grammarNode": "node-02",
-    "priority": 128
+    "priority": 128,
+    "grammar": "ये गाड़ियाँ चलती हैं (chalti hain) – literally 'walk'. चलना (chalna) is the verb for machines moving or working: cars, phones and fans all चलते (chalte)."
   },
   {
     "id": "hi-0062",
@@ -793,7 +797,8 @@
       "work"
     ],
     "grammarNode": "node-02",
-    "priority": 117
+    "priority": 117,
+    "grammar": "Doubling a word tightens its meaning: सुबह (subah) = morning, सुबह-सुबह (subah-subah) = early in the morning, right at daybreak."
   },
   {
     "id": "hi-0068",
@@ -806,7 +811,8 @@
       "travel"
     ],
     "grammarNode": "node-02",
-    "priority": 56
+    "priority": 56,
+    "grammar": "One grandmother, plural verb: दादी जाती हैं (daadi jaati hain), not है (hai). Elders take plural forms as respect – singular would sound rude."
   },
   {
     "id": "hi-0069",
@@ -818,7 +824,8 @@
       "work"
     ],
     "grammarNode": "node-02",
-    "priority": 110
+    "priority": 110,
+    "grammar": "'Studies' is noun + do: पढ़ाई करती है (padhaai karti hai = does studying). Hindi builds many verbs this way – काम करना (kaam karna = to work)."
   },
   {
     "id": "hi-0070",
@@ -855,7 +862,8 @@
       "work"
     ],
     "grammarNode": "node-02",
-    "priority": 189
+    "priority": 189,
+    "grammar": "-कर (-kar) chains actions: स्कूल से आकर (school se aakar = having come from school). One small ending replaces the whole phrase 'after coming'."
   },
   {
     "id": "hi-0073",
@@ -881,7 +889,8 @@
       "work"
     ],
     "grammarNode": "node-02",
-    "priority": 345
+    "priority": 345,
+    "grammar": "You arrive 'on' work: काम पर (kaam par) पहुँचता है. पर is literally 'on', but it's the standard word for being at or heading to work."
   },
   {
     "id": "hi-0075",
@@ -893,7 +902,8 @@
       "general"
     ],
     "grammarNode": "node-02",
-    "priority": 377
+    "priority": 377,
+    "grammar": "भी (bhi = also) sits right after the word it highlights: तुम्हारी बहन भी (tumhaari bahan bhi) = your sister too. Move भी and the emphasis moves with it."
   },
   {
     "id": "hi-0076",
@@ -907,7 +917,8 @@
       "work"
     ],
     "grammarNode": "node-02",
-    "priority": 398
+    "priority": 398,
+    "grammar": "Hindi pairs opposites with a hyphen and skips 'and': दिन-रात (din-raat = day and night). Same pattern in माता-पिता (maata-pita = parents)."
   },
   {
     "id": "hi-0077",
@@ -932,7 +943,8 @@
       "travel"
     ],
     "grammarNode": "node-02",
-    "priority": 632
+    "priority": 632,
+    "grammar": "वाली (vaali) tags what something comes with: अदरक वाली चाय (adrak vaali chai) = ginger tea, roughly 'the ginger one'. Masculine nouns take वाला (vaala)."
   },
   {
     "id": "hi-0079",
@@ -944,7 +956,8 @@
       "travel"
     ],
     "grammarNode": "node-02",
-    "priority": 47
+    "priority": 47,
+    "grammar": "'Twice a day' is 'in a day two times': दिन में दो बार (din mein do baar). Everyday Hindi skips 'per' – में (mein = in) plus the time span covers it."
   },
   {
     "id": "hi-0080",
@@ -1018,7 +1031,8 @@
       "general"
     ],
     "grammarNode": "node-02",
-    "priority": 293
+    "priority": 293,
+    "grammar": "English shops just 'close' – Hindi shops become closed: बंद होती है (band hoti hai = gets closed). A person closing it would be बंद करना (band karna)."
   },
   {
     "id": "hi-0086",
@@ -1044,7 +1058,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 390,
-    "grammar": "Third-person verbs still mark gender: राम जाता है (Ram goes, m) vs सीता जाती है (Sita goes, f). Subject's gender drives the ending."
+    "grammar": "Third-person verbs mark gender too: वह जाती है (vah jaati hai = she goes) has -ती because she's female; a boy would be जाता है (jaata hai)."
   },
   {
     "id": "hi-0088",
@@ -1070,7 +1084,8 @@
       "travel"
     ],
     "grammarNode": "node-02",
-    "priority": 555
+    "priority": 555,
+    "grammar": "'Wear' depends on the item: हेडफ़ोन लगाकर (headphone lagaakar) uses लगाना (lagaana = attach); clothes take पहनना (pahenna). Each item picks its verb."
   },
   {
     "id": "hi-0090",
@@ -1108,7 +1123,8 @@
       "travel"
     ],
     "grammarNode": "node-02",
-    "priority": 455
+    "priority": 455,
+    "grammar": "ठीक (theek) usually means 'fine, okay' – but before a time it means sharp: ठीक छह बजे (theek chhah baje) = at exactly six."
   },
   {
     "id": "hi-0093",
@@ -1133,7 +1149,8 @@
       "travel"
     ],
     "grammarNode": "node-02",
-    "priority": 578
+    "priority": 578,
+    "grammar": "Going somewhere to do something uses the -ने (-ne) verb form: टहलने जाते हैं (tahalne jaate hain) = go for a stroll, literally 'go to stroll'. No 'for' needed."
   },
   {
     "id": "hi-0095",
@@ -1221,7 +1238,8 @@
       "work"
     ],
     "grammarNode": "node-02",
-    "priority": 575
+    "priority": 575,
+    "grammar": "Hindi has no '-est'. सबसे पहले (sabse pehle) = first of all, literally 'than all, earlier'. सबसे (sabse) + any quality word means 'the most'."
   },
   {
     "id": "hi-0102",
@@ -1235,7 +1253,8 @@
       "work"
     ],
     "grammarNode": "node-02",
-    "priority": 586
+    "priority": 586,
+    "grammar": "से (se) means 'from' – and also 'by': बस से (bas se) = by bus. Every means of transport takes से; context tells you which sense is meant."
   },
   {
     "id": "hi-0103",
@@ -1299,7 +1318,8 @@
       "travel"
     ],
     "grammarNode": "node-02",
-    "priority": 531
+    "priority": 531,
+    "grammar": "In an 'X और Y' list, दोनों (donon = both) comes at the end: योग और ध्यान दोनों (yog aur dhyaan donon) = both yoga and meditation."
   },
   {
     "id": "hi-0108",
@@ -1324,7 +1344,8 @@
       "general"
     ],
     "grammarNode": "node-02",
-    "priority": 824
+    "priority": 824,
+    "grammar": "One vowel makes it 'make someone laugh': हँसना (hansna = laugh) → हँसाता (hansaata = makes laugh). No extra 'make' verb – the -आ- (-aa-) does it."
   },
   {
     "id": "hi-0110",
@@ -1337,7 +1358,8 @@
       "travel"
     ],
     "grammarNode": "node-02",
-    "priority": 707
+    "priority": 707,
+    "grammar": "Skills 'come to you': खाना बनाना आता है (khaana banaana aata hai) = literally 'does making food come to you'. Knowing how = the skill + आना (aana = come)."
   },
   {
     "id": "hi-0111",
@@ -1350,7 +1372,8 @@
       "travel"
     ],
     "grammarNode": "node-02",
-    "priority": 631
+    "priority": 631,
+    "grammar": "ननिहाल (nanihaal) is one word for 'mother's parents' home' – a classic summer-holiday destination. Hindi has exact words for each side of the family."
   },
   {
     "id": "hi-0112",
@@ -1489,7 +1512,8 @@
       "general"
     ],
     "grammarNode": "node-02",
-    "priority": 1382
+    "priority": 1382,
+    "grammar": "रहती (rahti) after another verb means 'keeps on': घूमती रहती है (ghoomti rahti hai) = keeps wandering. रहना (rahna = stay) makes an action ongoing."
   },
   {
     "id": "hi-0123",
@@ -1502,7 +1526,8 @@
       "travel"
     ],
     "grammarNode": "node-02",
-    "priority": 1276
+    "priority": 1276,
+    "grammar": "सो जाता हूँ (so jaata hoon) = literally 'I go off to sleep'. Adding जाना (jaana = go) marks the change as complete – सोना (sona) alone is just 'sleep'."
   },
   {
     "id": "hi-0124",
@@ -1527,7 +1552,8 @@
       "general"
     ],
     "grammarNode": "node-02",
-    "priority": 1371
+    "priority": 1371,
+    "grammar": "'After' comes after: खाने के तुरंत बाद (khaane ke turant baad) = literally 'of eating immediately after'. Time words like बाद (baad) follow their noun."
   },
   {
     "id": "hi-0126",
@@ -1566,7 +1592,7 @@
     ],
     "grammarNode": "node-02",
     "priority": 1359,
-    "grammar": "For long sentences, pile everything before the verb: time, place, object. `कल मेरा भाई स्कूल में पढ़ाई करेगा` (Yesterday my brother at-school study will-do)."
+    "grammar": "No matter how long the sentence, the verb comes last: time, place and object all pile up before साथ देते हैं (saath dete hain = stand by), which waits at the end."
   },
   {
     "id": "hi-0129",
@@ -1579,7 +1605,8 @@
       "travel"
     ],
     "grammarNode": "node-02",
-    "priority": 1366
+    "priority": 1366,
+    "grammar": "कम से कम (kam se kam) = at least, literally 'less than less'. Hindi builds it by comparing कम (kam = less) with itself."
   },
   {
     "id": "hi-0130",
@@ -1742,7 +1769,8 @@
       "general"
     ],
     "grammarNode": "node-02",
-    "priority": 59
+    "priority": 59,
+    "grammar": "देर से आती है (der se aati hai) = comes late, literally 'comes with delay'. देर (der) is a noun – Hindi says 'with delay' where English says 'late'."
   },
   {
     "id": "hi-0143",
@@ -1788,7 +1816,8 @@
       "work"
     ],
     "grammarNode": "node-03",
-    "priority": 34
+    "priority": 34,
+    "grammar": "Hindi has no 'the' or 'a' – सब्ज़ी मंडी बंद है (sabzi mandi band hai) is just 'vegetable market closed is'. Context alone tells you which market."
   },
   {
     "id": "hi-0147",
@@ -1801,7 +1830,8 @@
       "work"
     ],
     "grammarNode": "node-03",
-    "priority": 167
+    "priority": 167,
+    "grammar": "होते हैं (hote hain) marks a general truth: ज़रूरी होते हैं (zaroori hote hain = are, as a rule, necessary). Plain हैं (hain) would pin it to right now."
   },
   {
     "id": "hi-0148",
@@ -1827,7 +1857,7 @@
     ],
     "grammarNode": "node-03",
     "priority": 152,
-    "grammar": "Auxiliaries (`है/हैं/था/थी/हो`) come at the very end, after the main verb. `राम घर जा रहा है` (Ram home going is) = Ram is going home."
+    "grammar": "English says 'has been raining'; Hindi keeps plain 'is raining': बारिश हो रही है (barish ho rahi hai = rain is happening) + सुबह से (subah se = since morning)."
   },
   {
     "id": "hi-0150",
@@ -1838,7 +1868,8 @@
       "general"
     ],
     "grammarNode": "node-03",
-    "priority": 602
+    "priority": 602,
+    "grammar": "क्या (kya) up front is a spoken question mark: क्या यह सच है (kya yeh sach hai) = is this true? Without it, यह सच है (yeh sach hai) states 'this is true'."
   },
   {
     "id": "hi-0151",
@@ -1896,7 +1927,8 @@
       "general"
     ],
     "grammarNode": "node-03",
-    "priority": 162
+    "priority": 162,
+    "grammar": "Things 'come into' a space when they fit: ज़्यादा सामान नहीं आता (zyada saman nahin aata = more stuff doesn't come) = no more fits. Rooms, boxes, clothes all work this way."
   },
   {
     "id": "hi-0156",
@@ -1909,7 +1941,8 @@
       "travel"
     ],
     "grammarNode": "node-03",
-    "priority": 222
+    "priority": 222,
+    "grammar": "-कर (-kar) glued to a verb means 'after doing it': उठकर (uthkar = having gotten up). One ending does the work of English 'after waking up'."
   },
   {
     "id": "hi-0157",
@@ -1932,7 +1965,8 @@
       "general"
     ],
     "grammarNode": "node-03",
-    "priority": 295
+    "priority": 295,
+    "grammar": "के लिए (ke liye = for) comes after its noun, not before: बुखार के लिए (bukhar ke liye = fever for). Hindi's little linking words all trail the noun."
   },
   {
     "id": "hi-0159",
@@ -1944,7 +1978,8 @@
       "travel"
     ],
     "grammarNode": "node-03",
-    "priority": 444
+    "priority": 444,
+    "grammar": "मुझे ... करना है (mujhe ... karna hai) is literally 'to me it is to-do' – Hindi's 'I have to'. फ़ोन करना है (phone karna hai) = I have to make a call."
   },
   {
     "id": "hi-0160",
@@ -1957,7 +1992,8 @@
       "work"
     ],
     "grammarNode": "node-04",
-    "priority": 353
+    "priority": 353,
+    "grammar": "Liking lands on you in Hindi – मुझे पसंद है (mujhe pasand hai) is literally 'to me it is pleasing'. The liker takes मुझे, never मैं."
   },
   {
     "id": "hi-0161",
@@ -2091,7 +2127,8 @@
       "travel"
     ],
     "grammarNode": "node-03",
-    "priority": 248
+    "priority": 248,
+    "grammar": "भी (bhi) normally means 'also', but next to नहीं (nahin) it means 'at all': बिलकुल भी अच्छा नहीं (bilkul bhi achha nahin) = not good at all."
   },
   {
     "id": "hi-0172",
@@ -2103,8 +2140,7 @@
       "general"
     ],
     "grammarNode": "node-03",
-    "priority": 512,
-    "grammar": "`के + word` makes compound postpositions: `के लिए` (ke liye = for), `के पास` (ke paas = near), `के साथ` (ke saath = with). Learn each as one chunk."
+    "priority": 512
   },
   {
     "id": "hi-0173",
@@ -2130,7 +2166,8 @@
       "travel"
     ],
     "grammarNode": "node-03",
-    "priority": 501
+    "priority": 501,
+    "grammar": "The battery 'became finished': ख़त्म हो गई है (khatm ho gayi hai). Hindi frames new states as becoming – phones die, tanks fill, trains run late by 'becoming'."
   },
   {
     "id": "hi-0175",
@@ -2254,7 +2291,8 @@
       "work"
     ],
     "grammarNode": "node-03",
-    "priority": 662
+    "priority": 662,
+    "grammar": "You don't spend a childhood in Hindi – it passes on its own: बीता था (beeta tha = passed). बचपन (bachpan = childhood) is the subject; the village is just where it happened."
   },
   {
     "id": "hi-0185",
@@ -2353,7 +2391,8 @@
       "travel"
     ],
     "grammarNode": "node-03",
-    "priority": 937
+    "priority": 937,
+    "grammar": "Liking lands on you: तुम्हें (tumhein = to you) plus अच्छा लगता है (achha lagta hai = strikes as good) = you like it. The person liking is the target, not the doer."
   },
   {
     "id": "hi-0193",
@@ -2378,7 +2417,8 @@
       "travel"
     ],
     "grammarNode": "node-03",
-    "priority": 948
+    "priority": 948,
+    "grammar": "The plain present doubles as 'let's': कल बात करते हैं (kal baat karte hain = we talk tomorrow) actually offers 'let's talk tomorrow'. No extra word needed."
   },
   {
     "id": "hi-0195",
@@ -2396,7 +2436,7 @@
     "target": "मेरी छोटी बेटी को रंगीन चित्र बनाना बहुत पसंद है।",
     "english": "My little daughter loves to draw colorful pictures.",
     "audio": "hi-hi-0196.mp3",
-    "grammar": "को marks two things: specific direct objects (राम को बुलाओ = call Ram) and indirect objects (बच्चे को खाना दो = give the child food).",
+    "grammar": "With पसंद है (pasand hai = is pleasing), the liker takes को (ko): बेटी को पसंद है (beti ko pasand hai) is literally 'to the daughter it is pleasing', not 'daughter likes'.",
     "tags": [
       "family",
       "general"
@@ -2450,7 +2490,8 @@
       "work"
     ],
     "grammarNode": "node-03",
-    "priority": 1176
+    "priority": 1176,
+    "grammar": "Superlatives are 'from all': सबसे तेज़ (sabse tez = fast beyond all) = fastest. No -est ending in Hindi – सबसे (sabse) before any adjective does it."
   },
   {
     "id": "hi-0201",
@@ -2486,7 +2527,8 @@
       "work"
     ],
     "grammarNode": "node-03",
-    "priority": 1427
+    "priority": 1427,
+    "grammar": "English can drop 'that' – 'I'm sure you can'. Hindi never drops कि: मुझे यक़ीन है कि (mujhe yaqeen hai ki = I'm sure that). The कि (ki) always stays."
   },
   {
     "id": "hi-0204",
@@ -2498,8 +2540,7 @@
       "general"
     ],
     "grammarNode": "node-03",
-    "priority": 1272,
-    "grammar": "Hindi doesn't have 'have' as a verb. To say 'I have a car', say `मेरे पास कार है` (mere paas kar hai) = 'near me a car is'. The thing owned is the subject; you're 'near' it."
+    "priority": 1272
   },
   {
     "id": "hi-0205",
@@ -2558,7 +2599,8 @@
       "general"
     ],
     "grammarNode": "node-03",
-    "priority": 202
+    "priority": 202,
+    "grammar": "वाला (wala) picks out a specific one: यह वाला (yeh wala) = this one. It works with colors, sizes, and prices in any shop."
   },
   {
     "id": "hi-0210",
@@ -2569,8 +2611,7 @@
       "general"
     ],
     "grammarNode": "node-03",
-    "priority": 203,
-    "grammar": "In past tense for action verbs, add ने (ne) after the subject. मैंने खाना खाया (mainne khana khaya = I ate food). The verb then agrees with the object, not the subject."
+    "priority": 203
   },
   {
     "id": "hi-0211",
@@ -2592,7 +2633,8 @@
       "general"
     ],
     "grammarNode": "node-03",
-    "priority": 319
+    "priority": 319,
+    "grammar": "चार बजे (char baje = at four) is literally 'four struck' – Hindi counts clock time in bell strikes, so there is no separate word for 'o'clock'."
   },
   {
     "id": "hi-0213",
@@ -2603,7 +2645,8 @@
       "general"
     ],
     "grammarNode": "node-03",
-    "priority": 323
+    "priority": 323,
+    "grammar": "दो (do = give) added to a verb aims the action at someone else: ठीक कर दो (theek kar do) = fix it for me. The 'give' points the favor toward the asker."
   },
   {
     "id": "hi-0214",
@@ -2646,7 +2689,6 @@
     "target": "कमरे में एसी काम नहीं कर रहा है।",
     "english": "The AC in the room isn't working.",
     "audio": "hi-hi-0217.mp3",
-    "grammar": "काम करना (kaam karna) = to work/function. नल काम कर रहा है (nal kaam kar raha hai = the tap is working).",
     "tags": [
       "general"
     ],
@@ -2709,7 +2751,8 @@
       "general"
     ],
     "grammarNode": "node-03",
-    "priority": 771
+    "priority": 771,
+    "grammar": "Hindi has no verb 'to have' – things sit near you: मेरे पास (mere paas = near me) + समय नहीं है (samay nahin hai = there's no time) = I don't have time."
   },
   {
     "id": "hi-0223",
@@ -2742,7 +2785,8 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "priority": 35
+    "priority": 35,
+    "grammar": "आपसे मिलकर खुशी हुई (aapse milkar khushi hui) is literally 'having met you, happiness happened' – joy is an event that occurs, not something you are."
   },
   {
     "id": "hi-0226",
@@ -2754,7 +2798,8 @@
       "work"
     ],
     "grammarNode": "node-04",
-    "priority": 6
+    "priority": 6,
+    "grammar": "Prices use 'of': यह कितने का है? (yah kitne ka hai) = 'this is of how much?'. The answer keeps का too – सौ का है (sau ka hai) = it's a hundred."
   },
   {
     "id": "hi-0227",
@@ -2818,7 +2863,8 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "priority": 88
+    "priority": 88,
+    "grammar": "ठीक-ठाक (theek-thaak) doubles ठीक with a rhyming echo to soften it – 'more or less fine'. Hindi loves these pairs: चाय-वाय (chai-vai) = tea and such."
   },
   {
     "id": "hi-0234",
@@ -2829,8 +2875,7 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "priority": 221,
-    "grammar": "Subject forms with `ने` fuse with pronouns: `मैंने` (I), `तुमने` (you), `आपने` (you-resp), `उसने` (he/she), `उन्होंने` (they). Used only with action-past verbs."
+    "priority": 221
   },
   {
     "id": "hi-0235",
@@ -2842,7 +2887,8 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "priority": 136
+    "priority": 136,
+    "grammar": "Respect makes one person plural: पिताजी ... हैं (pitaji ... hain), not है – father gets the 'they' verb even though he is one man."
   },
   {
     "id": "hi-0236",
@@ -2854,7 +2900,8 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "priority": 511
+    "priority": 511,
+    "grammar": "You don't miss someone – their memory comes to you: तुम्हारी याद आ रही थी (tumhari yaad aa rahi thi) = 'your memory was coming'."
   },
   {
     "id": "hi-0237",
@@ -2867,7 +2914,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 750
+    "priority": 750,
+    "grammar": "Weddings happen rather than being gotten: शादी हुई थी (shaadi hui thi) = 'the wedding happened'. Hindi treats marrying as an event, with होना (hona = happen)."
   },
   {
     "id": "hi-0238",
@@ -2879,7 +2927,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 1250
+    "priority": 1250,
+    "grammar": "मिली (mili) is 'met' doing duty for 'found': the shop met you – दुकान मिली (dukaan mili). Things you find, get, or receive all 'meet' you in Hindi."
   },
   {
     "id": "hi-0239",
@@ -2916,7 +2965,8 @@
       "work"
     ],
     "grammarNode": "node-04",
-    "priority": 27
+    "priority": 27,
+    "grammar": "Hindi says how things got there: किताबें रखी हैं (kitaaben rakhi hain) = 'the books are kept'. Where English uses plain 'are', Hindi adds the placing verb."
   },
   {
     "id": "hi-0242",
@@ -2928,7 +2978,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 68
+    "priority": 68,
+    "grammar": "Question words don't jump to the front: कितनी दूर (kitni door = how far) sits right where the answer would – स्टेशन कितनी दूर है, no flipping around."
   },
   {
     "id": "hi-0243",
@@ -2939,7 +2990,8 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "priority": 46
+    "priority": 46,
+    "grammar": "Hindi's 'across' follows its noun: नदी के उस पार (nadi ke us paar) = 'the river's far side'. Position words come after the noun, not before it."
   },
   {
     "id": "hi-0245",
@@ -2951,7 +3003,8 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "priority": 132
+    "priority": 132,
+    "grammar": "Age is something you are 'of': पचहत्तर साल के हैं (pachhattar saal ke hain) = 'is of seventy-five years'. No word for 'old' anywhere – के carries it."
   },
   {
     "id": "hi-0246",
@@ -2962,7 +3015,8 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "priority": 156
+    "priority": 156,
+    "grammar": "No 'a' or 'an' in Hindi: इंजीनियर बनना (engineer banna) = 'to become engineer'. Articles don't exist – context does that work."
   },
   {
     "id": "hi-0247",
@@ -2974,7 +3028,8 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "priority": 116
+    "priority": 116,
+    "grammar": "बैठी है (baithi hai) = 'is seated', a settled state. बैठ रही है would mean she is in the middle of sitting down. English '-ing' misleads here."
   },
   {
     "id": "hi-0248",
@@ -2998,7 +3053,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 91
+    "priority": 91,
+    "grammar": "'By car' is 'having sat in the car': गाड़ी में बैठकर (gaadi mein baithkar). The -कर (-kar) ending chains actions – sit, then go, in one sentence."
   },
   {
     "id": "hi-0250",
@@ -3035,7 +3091,7 @@
     ],
     "grammarNode": "node-04",
     "priority": 299,
-    "grammar": "`ही` (exactly/only) narrows: `मैं ही जाऊँगा` = 'only I will go'. `यही किताब` = 'this very book'. It's pointier than English 'just'."
+    "grammar": "भी (bhi = even, also) follows the word it highlights: तूफ़ान में भी (toofan mein bhi) = 'even in the storm'. English puts 'even' first; Hindi tags it after."
   },
   {
     "id": "hi-0253",
@@ -3072,7 +3128,8 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "priority": 164
+    "priority": 164,
+    "grammar": "का matches the thing owned, not the owner: भाई का कमरा (bhai ka kamra) – का is masculine because कमरा is. Own a गाड़ी instead and it flips to की."
   },
   {
     "id": "hi-0256",
@@ -3095,7 +3152,8 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "priority": 236
+    "priority": 236,
+    "grammar": "'Bring' is built from 'take' plus 'come': बाज़ार से ले आना (bazaar se le aana) = take from the market and come. ले जाना (le jaana = take plus go) is 'take away' – the second verb sets the direction."
   },
   {
     "id": "hi-0258",
@@ -3107,7 +3165,8 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "priority": 330
+    "priority": 330,
+    "grammar": "Pills are eaten in Hindi: गोली खाने से (goli khaane se) = 'from eating the pill'. खाना stretches past food – even betrayal gets eaten: धोखा खाना (dhokha khaana) = to be betrayed."
   },
   {
     "id": "hi-0259",
@@ -3144,7 +3203,8 @@
       "work"
     ],
     "grammarNode": "node-04",
-    "priority": 197
+    "priority": 197,
+    "grammar": "गिर गई (gir gayi) adds जाना (jaana = go) to the fall – it marks the action as complete and final. Tacking जाना onto a verb means fully done."
   },
   {
     "id": "hi-0262",
@@ -3281,7 +3341,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 321
+    "priority": 321,
+    "grammar": "'Have to' is built with 'to me': मुझे ... मिलना है (mujhe milna hai) = 'to me is to-meet'. Obligation sits on you as मुझे + verb + है."
   },
   {
     "id": "hi-0273",
@@ -3355,7 +3416,8 @@
       "work"
     ],
     "grammarNode": "node-04",
-    "priority": 358
+    "priority": 358,
+    "grammar": "कराई (karai) is causative – having it done, not doing it: रिपोर्ट दर्ज कराई = got the report registered, via the police. करना (karna) = do, कराना (karana) = have done."
   },
   {
     "id": "hi-0279",
@@ -3416,7 +3478,8 @@
       "work"
     ],
     "grammarNode": "node-04",
-    "priority": 406
+    "priority": 406,
+    "grammar": "साढ़े (saadhe) = 'plus a half': साढ़े तीन सौ (saadhe teen sau) = three and a half hundreds = 350 – not 'three hundred fifty'."
   },
   {
     "id": "hi-0284",
@@ -3587,7 +3650,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 336
+    "priority": 336,
+    "grammar": "Useful things 'come to work': छाता बहुत काम आता है (kaam aata hai) = 'the umbrella comes to use'. काम आना is the everyday way to say something helps."
   },
   {
     "id": "hi-0298",
@@ -3600,7 +3664,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 282
+    "priority": 282,
+    "grammar": "Rain is a thing that happens, not a verb: बारिश हो रही है (baarish ho rahi hai) = 'rain is happening'. There is no verb 'to rain' – बारिश is a noun and होना (hona) does the work."
   },
   {
     "id": "hi-0299",
@@ -3612,7 +3677,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 513
+    "priority": 513,
+    "grammar": "के पास (ke paas) here is 'near': घर के पास = near the house. With a person it means having – मेरे पास किताब है (mere paas kitaab hai) = I have a book."
   },
   {
     "id": "hi-0300",
@@ -3625,7 +3691,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 487
+    "priority": 487,
+    "grammar": "The plain -ना form makes a gentle, do-it-later request: भेज देना (bhej dena) = 'send it (when you get to it)'. Softer and less immediate than भेजो (bhejo)."
   },
   {
     "id": "hi-0301",
@@ -3637,7 +3704,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 413
+    "priority": 413,
+    "grammar": "Visibility is given in Hindi: दिखाई देता है (dikhai deta hai) = 'gives being-seen'. The city is the giver and you receive the view."
   },
   {
     "id": "hi-0302",
@@ -3661,7 +3729,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 635
+    "priority": 635,
+    "grammar": "रख दो (rakh do) adds देना (dena = give) to the putting – the दो marks it as fully done, often for someone else's benefit. Plain रखो (rakho) is just 'put'."
   },
   {
     "id": "hi-0304",
@@ -3673,7 +3742,8 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "priority": 726
+    "priority": 726,
+    "grammar": "Every number up to 100 is its own word: छत्तीस (chhattis = 36) is not built from 'thirty' plus 'six'. All hundred get memorized one by one."
   },
   {
     "id": "hi-0305",
@@ -3710,7 +3780,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 459
+    "priority": 459,
+    "grammar": "पाँच बजे (paanch baje) = 'five having rung' – clock time counts bell strikes. बजना (bajna) means to ring, so 'at five' is literally five chimes."
   },
   {
     "id": "hi-0308",
@@ -3747,7 +3818,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 820
+    "priority": 820,
+    "grammar": "You do someone's waiting: मेरा इंतज़ार करना (mera intezaar karna) = 'do my waiting'. The person waited for becomes a possessive, not 'for me'."
   },
   {
     "id": "hi-0311",
@@ -3760,7 +3832,8 @@
       "work"
     ],
     "grammarNode": "node-04",
-    "priority": 941
+    "priority": 941,
+    "grammar": "भीगते हुए (bheegte hue) = 'while getting soaked' – the -ते हुए ending runs one action in the background while the main one happens."
   },
   {
     "id": "hi-0312",
@@ -3785,7 +3858,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 603
+    "priority": 603,
+    "grammar": "The minutes do the taking: दस मिनट लगते हैं (das minute lagte hain) = 'ten minutes attach'. With लगना (lagna), time is the subject – nobody takes it."
   },
   {
     "id": "hi-0314",
@@ -3910,7 +3984,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 715
+    "priority": 715,
+    "grammar": "होने वाली है (hone wali hai) = 'is about to happen'. वाला after a verb means on-the-verge – closer and more certain than plain future tense."
   },
   {
     "id": "hi-0324",
@@ -3961,7 +4036,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 959
+    "priority": 959,
+    "grammar": "There's no 'there is' – just है at the end: सड़क पर बहुत ट्रैफ़िक है (sadak par bahut traffic hai) = 'on the road much traffic is'."
   },
   {
     "id": "hi-0328",
@@ -4035,7 +4111,8 @@
       "work"
     ],
     "grammarNode": "node-04",
-    "priority": 787
+    "priority": 787,
+    "grammar": "बिना (bina = without) wraps its phrase from both ends: बिना किसी की मदद के (bina kisi ki madad ke) – बिना opens, के closes. Don't drop the closing के."
   },
   {
     "id": "hi-0334",
@@ -4096,7 +4173,8 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "priority": 38
+    "priority": 38,
+    "grammar": "जी (ji) after a name adds warm respect: गौरव जी (Gaurav ji). It even works alone – a plain जी is a polite 'yes?'."
   },
   {
     "id": "hi-0339",
@@ -4108,7 +4186,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 218
+    "priority": 218,
+    "grammar": "You talk 'from' a person: डॉक्टर से (doctor se) = with the doctor. से stretches across English 'with', 'from', and 'by' – the verb decides which."
   },
   {
     "id": "hi-0340",
@@ -4144,7 +4223,8 @@
       "general"
     ],
     "grammarNode": "node-04",
-    "priority": 564
+    "priority": 564,
+    "grammar": "Hindi has no word for cousin – cousins are siblings with a tag: मौसेरे भाई-बहन (mausere bhai-behen) = brothers and sisters via your mother's sister."
   },
   {
     "id": "hi-0343",
@@ -4200,7 +4280,8 @@
       "travel"
     ],
     "grammarNode": "node-04",
-    "priority": 791
+    "priority": 791,
+    "grammar": "Grandfathers split by side: दादाजी (dadaji) is your father's father, नानाजी (nanaji) your mother's father. One English word, two Hindi people."
   },
   {
     "id": "hi-0348",
@@ -4234,7 +4315,8 @@
       "work"
     ],
     "grammarNode": "node-05",
-    "priority": 163
+    "priority": 163,
+    "grammar": "पास here is the English loan 'pass': पास हुए (paas hue = became pass) means passed. It sounds like के पास (ke paas = near/have) – context separates them."
   },
   {
     "id": "hi-0351",
@@ -4246,7 +4328,8 @@
       "general"
     ],
     "grammarNode": "node-05",
-    "priority": 44
+    "priority": 44,
+    "grammar": "English says 'I am thirty' – Hindi states age as something you have: मेरी उम्र तीस साल है (meri umra tees saal hai = my age is thirty years)."
   },
   {
     "id": "hi-0353",
@@ -4283,7 +4366,8 @@
       "travel"
     ],
     "grammarNode": "node-05",
-    "priority": 150
+    "priority": 150,
+    "grammar": "साढ़े (saadhe) before an hour adds a half: साढ़े तीन (saadhe teen) = 3:30. Only 1:30 and 2:30 use special words instead: डेढ़ (dedh) and ढाई (dhaai)."
   },
   {
     "id": "hi-0356",
@@ -4331,7 +4415,8 @@
       "work"
     ],
     "grammarNode": "node-05",
-    "priority": 50
+    "priority": 50,
+    "grammar": "Where English says the book 'is' on the table, Hindi says its state: रखी है (rakhi hai = is placed/kept). Things sit, lie or are kept – not just 'are'."
   },
   {
     "id": "hi-0360",
@@ -4355,7 +4440,8 @@
       "travel"
     ],
     "grammarNode": "node-05",
-    "priority": 216
+    "priority": 216,
+    "grammar": "होता है (hota hai) marks a general truth: बारह महीने का एक साल होता है (baarah maheene ka ek saal hota hai). Plain है (hai) = right now; होता है = always the case."
   },
   {
     "id": "hi-0362",
@@ -4380,7 +4466,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 460,
-    "grammar": "Before a position word, a -ा masculine noun shifts to -े. लड़का (ladka = boy) → लड़के को (ladke ko = to the boy)."
+    "grammar": "Masculine -ा words shift to -े before a position word: बजा (baja) becomes बजे (baje) before तक (tak = by) – ढाई बजे तक (dhai baje tak = by two-thirty)."
   },
   {
     "id": "hi-0364",
@@ -4429,7 +4515,8 @@
       "travel"
     ],
     "grammarNode": "node-05",
-    "priority": 51
+    "priority": 51,
+    "grammar": "Dates commonly use plain numbers: तारीख़ बीस मार्च है (taareekh bees march hai = the date is twenty March). Hindi says 'twenty March' – no 'of' before the month."
   },
   {
     "id": "hi-0368",
@@ -4442,7 +4529,8 @@
       "travel"
     ],
     "grammarNode": "node-05",
-    "priority": 125
+    "priority": 125,
+    "grammar": "No word for 'at' with times: नौ बजे खुलती है (nau baje khulti hai = opens at nine). The bare time expression carries 'at' by itself."
   },
   {
     "id": "hi-0369",
@@ -4467,7 +4555,8 @@
       "work"
     ],
     "grammarNode": "node-05",
-    "priority": 268
+    "priority": 268,
+    "grammar": "सवा (sava) before an hour adds a quarter: सवा चार बजे (sava chaar baje) = 4:15. A single word for 'quarter past'."
   },
   {
     "id": "hi-0371",
@@ -4479,7 +4568,8 @@
       "general"
     ],
     "grammarNode": "node-05",
-    "priority": 124
+    "priority": 124,
+    "grammar": "Respect makes one person grammatically plural: पिताजी (pitaji = father) takes plural हैं (hain = are), not है. Elders and respected people always get plural agreement."
   },
   {
     "id": "hi-0372",
@@ -4491,7 +4581,8 @@
       "travel"
     ],
     "grammarNode": "node-05",
-    "priority": 185
+    "priority": 185,
+    "grammar": "With ने (ne), the past verb matches the thing acted on: लिखे (likhe) is plural to agree with पाँच पत्र (paanch patra = five letters), not with 'I'."
   },
   {
     "id": "hi-0373",
@@ -4589,7 +4680,8 @@
       "travel"
     ],
     "grammarNode": "node-05",
-    "priority": 69
+    "priority": 69,
+    "grammar": "O'clock is plural: नौ बजे हैं (nau baje hain = nine have struck), with हैं not है. Only one o'clock is singular – एक बजा है (ek baja hai)."
   },
   {
     "id": "hi-0381",
@@ -4724,7 +4816,8 @@
       "travel"
     ],
     "grammarNode": "node-05",
-    "priority": 344
+    "priority": 344,
+    "grammar": "Minutes past the hour use बजकर (bajkar = having struck): बारह बजकर चालीस मिनट (baarah bajkar chaalees minute) = 12:40."
   },
   {
     "id": "hi-0392",
@@ -4761,7 +4854,8 @@
       "travel"
     ],
     "grammarNode": "node-05",
-    "priority": 286
+    "priority": 286,
+    "grammar": "तक (tak) covers both 'by' and 'until': आठ बजे तक (aath baje tak) = by eight here. With deadlines it's 'by'; with ongoing actions it's 'until'."
   },
   {
     "id": "hi-0395",
@@ -4785,7 +4879,8 @@
       "general"
     ],
     "grammarNode": "node-05",
-    "priority": 233
+    "priority": 233,
+    "grammar": "Hindi has no verb 'have'. Family is stated as simply yours: मेरे दो बेटे और एक बेटी है (mere do bete aur ek beti hai = my two sons and one daughter are)."
   },
   {
     "id": "hi-0397",
@@ -4798,7 +4893,8 @@
       "work"
     ],
     "grammarNode": "node-05",
-    "priority": 382
+    "priority": 382,
+    "grammar": "Hindi counts big money in लाख (laakh = 100,000): दो लाख रुपये (do laakh rupaye) = 200,000 rupees. After thousand, the everyday unit is lakh, not 'hundred thousand'."
   },
   {
     "id": "hi-0398",
@@ -4881,7 +4977,8 @@
       "travel"
     ],
     "grammarNode": "node-05",
-    "priority": 335
+    "priority": 335,
+    "grammar": "वाली (vali) turns a noun into 'the one with': बारह डिब्बों वाली (baarah dibbon vali) = the twelve-coach one. Hindi builds adjectives from nouns this way."
   },
   {
     "id": "hi-0405",
@@ -4928,7 +5025,8 @@
       "work"
     ],
     "grammarNode": "node-05",
-    "priority": 433
+    "priority": 433,
+    "grammar": "पौने (paune) subtracts a quarter from the hour named: पौने दो बजे (paune do baje) = 1:45, not 2:45. Hindi points at the hour that's coming."
   },
   {
     "id": "hi-0409",
@@ -4953,7 +5051,8 @@
       "travel"
     ],
     "grammarNode": "node-05",
-    "priority": 678
+    "priority": 678,
+    "grammar": "Owned things take पास: मेरे पास सिर्फ़ पचास रुपये हैं (mere paas sirf pachaas rupaye hain = by me are only fifty rupees). Family skips पास – bare मेरे (mere) for relatives."
   },
   {
     "id": "hi-0411",
@@ -4966,7 +5065,8 @@
       "work"
     ],
     "grammarNode": "node-05",
-    "priority": 434
+    "priority": 434,
+    "grammar": "Prices take में (mein = in): बारह हज़ार रुपये में ख़रीदा (baarah hazaar rupaye mein khareeda = bought in 12,000 rupees). Hindi says 'in' where English says 'for'."
   },
   {
     "id": "hi-0412",
@@ -4977,8 +5077,7 @@
       "general"
     ],
     "grammarNode": "node-05",
-    "priority": 663,
-    "grammar": "Before a position word, a -ा masculine noun shifts to -े. लड़का (ladka = boy) → लड़के को (ladke ko = to the boy)."
+    "priority": 663
   },
   {
     "id": "hi-0413",
@@ -5051,7 +5150,8 @@
       "general"
     ],
     "grammarNode": "node-05",
-    "priority": 403
+    "priority": 403,
+    "grammar": "'Three times a day' is said with में (mein = in): दिन में तीन बार (din mein teen baar). बार (baar) is the word for 'times'."
   },
   {
     "id": "hi-0419",
@@ -5099,7 +5199,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 471,
-    "grammar": "Comparative in Hindi: `X Y से बड़ा है` literally = 'X is bigger from Y' = 'X is bigger than Y'. The `से` (se) does double duty as 'from' and 'than'."
+    "grammar": "से (se) means 'from' but also handles 'than': सौ से अधिक (sau se adhik = more than a hundred) is literally 'from a hundred, more'."
   },
   {
     "id": "hi-0423",
@@ -5171,7 +5271,8 @@
       "general"
     ],
     "grammarNode": "node-05",
-    "priority": 825
+    "priority": 825,
+    "grammar": "Measures attach directly, no 'of': दो सौ ग्राम चीनी (do sau gram cheeni = two hundred grams sugar). Nothing sits between the amount and the noun."
   },
   {
     "id": "hi-0430",
@@ -5221,7 +5322,7 @@
     ],
     "grammarNode": "node-05",
     "priority": 881,
-    "grammar": "`तो` is a connector with attitude: 'well', 'as for', 'then'. `मैं तो नहीं जाऊँगा` = 'well, I won't go (whatever others do)'. Adds contrast or assertion."
+    "grammar": "The tiny word ही (hi) means 'as early as / right from': पाँच बजे से ही (paanch baje se hi = from five itself). Without ही it's just neutral 'from five'."
   },
   {
     "id": "hi-0434",
@@ -5233,7 +5334,8 @@
       "travel"
     ],
     "grammarNode": "node-05",
-    "priority": 1211
+    "priority": 1211,
+    "grammar": "दिन (din = day) looks the same in singular and plural: तीन सौ पैंसठ दिन (teen sau painsath din = 365 days). Masculine nouns ending in a consonant do not change in the direct plural."
   },
   {
     "id": "hi-0435",
@@ -5245,7 +5347,8 @@
       "travel"
     ],
     "grammarNode": "node-05",
-    "priority": 1209
+    "priority": 1209,
+    "grammar": "Time acts on you: हमें एक घंटा लग गया (hamein ek ghanta lag gaya = to us one hour attached). The hour is the subject; you are the target of the delay."
   },
   {
     "id": "hi-0436",
@@ -5257,7 +5360,8 @@
       "work"
     ],
     "grammarNode": "node-05",
-    "priority": 1282
+    "priority": 1282,
+    "grammar": "Devanagari has its own digits: १९५० (1950). Indian signs, dates and prices switch between १२३ and 123 freely, so both sets are worth knowing."
   },
   {
     "id": "hi-0437",
@@ -5318,7 +5422,8 @@
       "travel"
     ],
     "grammarNode": "node-05",
-    "priority": 1325
+    "priority": 1325,
+    "grammar": "Ordinals agree in gender: तारीख़ (taareekh = date) is feminine, so 'twenty-fifth' is पच्चीसवीं (pachchisvin) with -वीं, not पच्चीसवाँ."
   },
   {
     "id": "hi-0443",
@@ -5340,7 +5445,8 @@
       "general"
     ],
     "grammarNode": "node-05",
-    "priority": 366
+    "priority": 366,
+    "grammar": "Hindi keeps 'hundred' audible in years: उन्नीस सौ सैंतालीस (unnees sau saintalees = nineteen hundred forty-seven). English drops it – 'nineteen forty-seven'."
   },
   {
     "id": "hi-0445",
@@ -5359,7 +5465,7 @@
     "target": "इस तालाब की गहराई कम से कम बीस फ़ीट है।",
     "english": "The depth of this pond is at least twenty feet.",
     "audio": "hi-hi-0446.mp3",
-    "grammar": "Comparative in Hindi: `X Y से बड़ा है` literally = 'X is bigger from Y' = 'X is bigger than Y'. The `से` (se) does double duty as 'from' and 'than'.",
+    "grammar": "कम से कम (kam se kam = less than less) means 'at least': कम से कम बीस फ़ीट (kam se kam bees feet) = at least twenty feet. The doubling sets a floor.",
     "tags": [
       "general"
     ],
@@ -5425,8 +5531,7 @@
       "work"
     ],
     "grammarNode": "node-06",
-    "priority": 262,
-    "grammar": "को marks two things: specific direct objects (राम को बुलाओ = call Ram) and indirect objects (बच्चे को खाना दो = give the child food)."
+    "priority": 262
   },
   {
     "id": "hi-0452",
@@ -5438,7 +5543,8 @@
       "general"
     ],
     "grammarNode": "node-06",
-    "priority": 389
+    "priority": 389,
+    "grammar": "Liking flips in Hindi: fruits come pleasing TO the kids – बच्चों को (bachchon ko) पसंद आते हैं (pasand aate hain). The verb agrees with the fruits, not the likers."
   },
   {
     "id": "hi-0453",
@@ -5452,7 +5558,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 468,
-    "grammar": "Specific? Add को. एक किताब लाओ (bring a book) vs इस किताब को लाओ (bring this book). Absence vs को marks specificity."
+    "grammar": "'It took five years' has no 'took': बनने में पाँच साल लगे (banne mein paanch saal lage) = 'in being built, five years attached'. Time spent uses लगना (lagna = attach)."
   },
   {
     "id": "hi-0454",
@@ -5465,8 +5571,7 @@
       "travel"
     ],
     "grammarNode": "node-06",
-    "priority": 342,
-    "grammar": "Use `को` for people, named animals, and definite things: `मुझे राम को देखना है` (I need to see Ram). Skipping it would sound generic, like 'see some Ram'."
+    "priority": 342
   },
   {
     "id": "hi-0455",
@@ -5554,7 +5659,8 @@
       "travel"
     ],
     "grammarNode": "node-06",
-    "priority": 85
+    "priority": 85,
+    "grammar": "Days take को (ko) where English says 'on': शनिवार को (shanivaar ko) = on Saturday. Hindi has no separate word for 'on' with days – को does that job."
   },
   {
     "id": "hi-0462",
@@ -5577,15 +5683,14 @@
       "general"
     ],
     "grammarNode": "node-06",
-    "priority": 135,
-    "grammar": "`को` (ko) doubles as the dative case: 'to me / to you / to him'. `मुझको / तुझको / उसको` are full forms; the contracted `मुझे / तुझे / उसे` are more common in speech."
+    "priority": 135
   },
   {
     "id": "hi-0464",
     "target": "शिक्षिका ने बच्चों को कविता सुनाई।",
     "english": "The teacher recited a poem to the children.",
     "audio": "hi-hi-0464.mp3",
-    "grammar": "If the object has its own `को` (ko) marker, the verb defaults to masculine singular: `मैंने राम को देखा`. The `को` blocks the object from triggering agreement, so the verb sits in neutral.",
+    "grammar": "When the receiver has को (ko), the verb tracks the thing given: सुनाई (sunaai) is feminine to match कविता (kavita = poem) – not the teacher, not the children.",
     "tags": [
       "family",
       "general",
@@ -5603,8 +5708,7 @@
       "general"
     ],
     "grammarNode": "node-06",
-    "priority": 173,
-    "grammar": "को marks two things: specific direct objects (राम को बुलाओ = call Ram) and indirect objects (बच्चे को खाना दो = give the child food)."
+    "priority": 173
   },
   {
     "id": "hi-0466",
@@ -5639,7 +5743,8 @@
       "travel"
     ],
     "grammarNode": "node-06",
-    "priority": 284
+    "priority": 284,
+    "grammar": "-ते ही (te hi) = the instant it happens: पहुँचते ही (pahunchte hi) = the moment you arrive. English needs 'as soon as'; Hindi bolts ही onto the verb."
   },
   {
     "id": "hi-0469",
@@ -5651,7 +5756,8 @@
       "general"
     ],
     "grammarNode": "node-06",
-    "priority": 374
+    "priority": 374,
+    "grammar": "One respected elder, plural pronoun: उनको (unko = to them) for बड़े भैया (bade bhaiya = elder brother). Singular उसको (usko) here would sound disrespectful."
   },
   {
     "id": "hi-0470",
@@ -5670,7 +5776,7 @@
     "target": "किताब छपेगी तो लेखक को रॉयल्टी मिलेगी।",
     "english": "The author will get royalty when the book is printed.",
     "audio": "hi-hi-0471.mp3",
-    "grammar": "Specific? Add को. एक किताब लाओ (bring a book) vs इस किताब को लाओ (bring this book). Absence vs को marks specificity.",
+    "grammar": "'Will get' flips: the royalty is the subject – रॉयल्टी मिलेगी (royalty milegi = will be received) – and the receiver takes को: लेखक को (lekhak ko = to the author).",
     "tags": [
       "general",
       "work"
@@ -5700,7 +5806,8 @@
       "general"
     ],
     "grammarNode": "node-06",
-    "priority": 529
+    "priority": 529,
+    "grammar": "-कर (kar) chains actions into one word: अजनबियों को देखकर (ajnabiyon ko dekhkar) = 'having seen strangers' – where English needs a whole 'when he sees' clause."
   },
   {
     "id": "hi-0474",
@@ -5712,8 +5819,7 @@
       "work"
     ],
     "grammarNode": "node-06",
-    "priority": 532,
-    "grammar": "को marks two things: specific direct objects (राम को बुलाओ = call Ram) and indirect objects (बच्चे को खाना दो = give the child food)."
+    "priority": 532
   },
   {
     "id": "hi-0475",
@@ -5726,7 +5832,7 @@
     ],
     "grammarNode": "node-06",
     "priority": 689,
-    "grammar": "Specific? Add को. एक किताब लाओ (bring a book) vs इस किताब को लाओ (bring this book). Absence vs को marks specificity."
+    "grammar": "'I need to' is 'to me': मुझे कल छुट्टी लेनी है (mujhe kal chhutti leni hai) = to-me tomorrow leave to-take is. Needs land on you via मुझे (mujhe), not a verb like 'must'."
   },
   {
     "id": "hi-0476",
@@ -5738,8 +5844,7 @@
       "general"
     ],
     "grammarNode": "node-06",
-    "priority": 495,
-    "grammar": "Use `को` for people, named animals, and definite things: `मुझे राम को देखना है` (I need to see Ram). Skipping it would sound generic, like 'see some Ram'."
+    "priority": 495
   },
   {
     "id": "hi-0477",
@@ -5802,7 +5907,8 @@
       "travel"
     ],
     "grammarNode": "node-06",
-    "priority": 778
+    "priority": 778,
+    "grammar": "The plain -ना (naa) verb form works as a gentle command between close people: याद दिला देना (yaad dila dena) = do remind me. Softer than an order, common in families."
   },
   {
     "id": "hi-0482",
@@ -5847,7 +5953,7 @@
     "target": "भारी बक्से को ऊपर ले जाना बहुत मुश्किल था।",
     "english": "It was very difficult to take the heavy box upstairs.",
     "audio": "hi-hi-0485.mp3",
-    "grammar": "Use `को` for people, named animals, and definite things: `मुझे राम को देखना है` (I need to see Ram). Skipping it would sound generic, like 'see some Ram'.",
+    "grammar": "को (ko) marks a definite object: बक्से को (bakse ko) means that specific heavy box. Drop को and it reads like some box or other.",
     "tags": [
       "general",
       "work"
@@ -5976,7 +6082,6 @@
     "target": "अगले सोमवार को मैं दिल्ली जा रहा हूँ।",
     "english": "I am going to Delhi next Monday.",
     "audio": "hi-hi-0495.mp3",
-    "grammar": "`को` (ko) doubles as the dative case: 'to me / to you / to him'. `मुझको / तुझको / उसको` are full forms; the contracted `मुझे / तुझे / उसे` are more common in speech.",
     "tags": [
       "general",
       "travel"
@@ -6019,8 +6124,7 @@
       "work"
     ],
     "grammarNode": "node-06",
-    "priority": 1340,
-    "grammar": "`को` (ko) doubles as the dative case: 'to me / to you / to him'. `मुझको / तुझको / उसको` are full forms; the contracted `मुझे / तुझे / उसे` are more common in speech."
+    "priority": 1340
   },
   {
     "id": "hi-0499",
@@ -6182,8 +6286,7 @@
       "general"
     ],
     "grammarNode": "node-06",
-    "priority": 201,
-    "grammar": "Specific? Add को. एक किताब लाओ (bring a book) vs इस किताब को लाओ (bring this book). Absence vs को marks specificity."
+    "priority": 201
   },
   {
     "id": "hi-0512",
@@ -6217,7 +6320,8 @@
       "general"
     ],
     "grammarNode": "node-06",
-    "priority": 332
+    "priority": 332,
+    "grammar": "को (ko) can single out a specific object: ट्रक को (truck ko) = that particular truck. Drop it and ट्रक रोका (truck roka) reads as stopping some truck, not this one."
   },
   {
     "id": "hi-0515",
@@ -6285,7 +6389,8 @@
       "work"
     ],
     "grammarNode": "node-07",
-    "priority": 90
+    "priority": 90,
+    "grammar": "You don't 'like' things in Hindi – they strike you as good: अच्छा लगा (achchha laga = felt good) means 'I liked it'. The liker takes मुझे (mujhe = to me)."
   },
   {
     "id": "hi-0521",
@@ -6298,7 +6403,8 @@
       "travel"
     ],
     "grammarNode": "node-07",
-    "priority": 219
+    "priority": 219,
+    "grammar": "बड़े दिनों बाद (bade dinon baad) is literally 'after big days' – Hindi's way of saying 'after ages'. बड़ा (bada = big) stretches to mean 'long' with time."
   },
   {
     "id": "hi-0522",
@@ -6310,7 +6416,8 @@
       "travel"
     ],
     "grammarNode": "node-07",
-    "priority": 113
+    "priority": 113,
+    "grammar": "अच्छा (achchha) at the start of speech isn't 'good' – it's 'alright, OK'. अच्छा, फिर मिलते हैं (phir milte hain) = 'alright, see you again'."
   },
   {
     "id": "hi-0523",
@@ -6358,7 +6465,8 @@
       "general"
     ],
     "grammarNode": "node-07",
-    "priority": 265
+    "priority": 265,
+    "grammar": "Dark colors are deep in Hindi: गहरा नीला (gahra neela = deep blue) is 'dark blue'. Light shades use हल्का (halka = light)."
   },
   {
     "id": "hi-0527",
@@ -6507,7 +6615,8 @@
       "work"
     ],
     "grammarNode": "node-07",
-    "priority": 579
+    "priority": 579,
+    "grammar": "Doubling an adjective adds 'all sorts of': नई-नई किताबें (nayi-nayi kitaben) = various brand-new books. Hindi repeats the word where English reaches for 'all kinds of'."
   },
   {
     "id": "hi-0539",
@@ -6532,7 +6641,8 @@
       "work"
     ],
     "grammarNode": "node-07",
-    "priority": 489
+    "priority": 489,
+    "grammar": "-ी adjectives never change for number or respect: अच्छी (achchhi = good) fits one woman or many. Only the verb हैं (hain) shows the respect here."
   },
   {
     "id": "hi-0541",
@@ -6544,7 +6654,8 @@
       "general"
     ],
     "grammarNode": "node-07",
-    "priority": 458
+    "priority": 458,
+    "grammar": "इतना बड़ा (itna bada) is literally 'this much big' – Hindi measures with इतना where English says 'such a'. इतना बड़ा घर (itna bada ghar) = such a big house."
   },
   {
     "id": "hi-0542",
@@ -6556,7 +6667,8 @@
       "travel"
     ],
     "grammarNode": "node-07",
-    "priority": 636
+    "priority": 636,
+    "grammar": "Sizes are possessed: चालीस किलोमीटर की (chalees kilometre ki) = 'of forty kilometers'. The road isn't 40 km long – it's OF 40 km."
   },
   {
     "id": "hi-0543",
@@ -6582,7 +6694,8 @@
       "work"
     ],
     "grammarNode": "node-07",
-    "priority": 58
+    "priority": 58,
+    "grammar": "मोटा (mota) means thick AND fat: मोटी किताब (moti kitab) = thick book, but said of a person it's 'fat'. English splits the two words, Hindi doesn't."
   },
   {
     "id": "hi-0545",
@@ -6666,7 +6779,8 @@
       "travel"
     ],
     "grammarNode": "node-07",
-    "priority": 165
+    "priority": 165,
+    "grammar": "मिलना (milna = to be gotten) does the work of 'find': अस्पताल नहीं मिलता (aspatal nahin milta) = a hospital isn't found. No 'you' in the Hindi at all."
   },
   {
     "id": "hi-0552",
@@ -6678,7 +6792,8 @@
       "general"
     ],
     "grammarNode": "node-07",
-    "priority": 208
+    "priority": 208,
+    "grammar": "बड़े भाई (bade bhai) is 'elder brother', not a big one – बड़ा (bada) marks age in family words. Younger siblings are छोटा (chhota = small)."
   },
   {
     "id": "hi-0553",
@@ -6701,7 +6816,8 @@
       "general"
     ],
     "grammarNode": "node-07",
-    "priority": 261
+    "priority": 261,
+    "grammar": "Hindi says sour-sweet where English says sweet-sour: खट्टी-मीठी (khatti-mithi). Paired-taste adjectives run in the opposite order."
   },
   {
     "id": "hi-0555",
@@ -6724,7 +6840,8 @@
       "general"
     ],
     "grammarNode": "node-07",
-    "priority": 285
+    "priority": 285,
+    "grammar": "The superlative is 'from all': सबसे अच्छी (sabse achchhi = good from all) = the best. सब (sab = all) + से (se = from) replaces any '-est' ending."
   },
   {
     "id": "hi-0557",
@@ -6748,7 +6865,8 @@
       "travel"
     ],
     "grammarNode": "node-07",
-    "priority": 245
+    "priority": 245,
+    "grammar": "और (aur) before an adjective means 'even more', not 'and': और अच्छी (aur achchhi) = even better. Placement flips the meaning."
   },
   {
     "id": "hi-0559",
@@ -6782,7 +6900,8 @@
       "general"
     ],
     "grammarNode": "node-07",
-    "priority": 488
+    "priority": 488,
+    "grammar": "'-er than' is just से (se = from): तुम्हारे कमरे से बड़ा (tumhare kamre se bada) = 'big from your room' = bigger than it. The adjective itself never changes."
   },
   {
     "id": "hi-0562",
@@ -6805,7 +6924,8 @@
       "travel"
     ],
     "grammarNode": "node-07",
-    "priority": 357
+    "priority": 357,
+    "grammar": "'A bit' agrees in Hindi: थोड़ी कड़वी (thodi kadvi = a bit bitter) is feminine to match दवा (dava = medicine). English 'a bit' never changes – थोड़ा does."
   },
   {
     "id": "hi-0564",
@@ -6818,7 +6938,8 @@
       "work"
     ],
     "grammarNode": "node-07",
-    "priority": 509
+    "priority": 509,
+    "grammar": "One respected man, everything plural: मेरे बहनोई (mere bahnoi), अच्छे (achchhe), हैं (hain) – possessive, adjective and verb all take plural for respect."
   },
   {
     "id": "hi-0565",
@@ -6903,7 +7024,8 @@
       "general"
     ],
     "grammarNode": "node-07",
-    "priority": 813
+    "priority": 813,
+    "grammar": "Sleep comes to you in Hindi: नींद नहीं आई (neend nahin aayi = sleep didn't come) = I couldn't sleep. You're the destination, not the sleeper."
   },
   {
     "id": "hi-0572",
@@ -6929,7 +7051,8 @@
       "travel"
     ],
     "grammarNode": "node-07",
-    "priority": 763
+    "priority": 763,
+    "grammar": "Things fit by arriving: सामान आ जाएगा (saman aa jayega = the stuff will come) means it will fit. No separate word for 'fit' needed."
   },
   {
     "id": "hi-0574",
@@ -6954,7 +7077,8 @@
       "travel"
     ],
     "grammarNode": "node-07",
-    "priority": 868
+    "priority": 868,
+    "grammar": "General truths take होती है (hoti hai): here अलग होती है (alag hoti hai) = is different, as a rule. Plain है (hai) would mean just right now."
   },
   {
     "id": "hi-0576",
@@ -7015,7 +7139,8 @@
       "travel"
     ],
     "grammarNode": "node-07",
-    "priority": 1016
+    "priority": 1016,
+    "grammar": "English tea 'has gone' cold; Hindi tea became it: ठंडी हो गई है (thandi ho gayi hai = has become cold). हो जाना (ho jana) covers every change of state."
   },
   {
     "id": "hi-0581",
@@ -7063,7 +7188,8 @@
       "travel"
     ],
     "grammarNode": "node-07",
-    "priority": 1025
+    "priority": 1025,
+    "grammar": "Fit points at you: मुझे थोड़े तंग हैं (mujhe thode tang hain) = 'a bit tight TO me'. English says 'for me'; Hindi uses मुझे (mujhe = to me)."
   },
   {
     "id": "hi-0585",
@@ -7077,7 +7203,8 @@
       "work"
     ],
     "grammarNode": "node-07",
-    "priority": 1285
+    "priority": 1285,
+    "grammar": "Even one office bends the adjective: बड़े दफ्तर में (bade daftar mein = in a big office). Before में, बड़ा (bada) becomes बड़े – no plural involved."
   },
   {
     "id": "hi-0586",
@@ -7101,7 +7228,8 @@
       "travel"
     ],
     "grammarNode": "node-07",
-    "priority": 1576
+    "priority": 1576,
+    "grammar": "पकौड़े और चाय का मज़ा है (pakaude aur chai ka maza hai) is literally 'is the fun of pakoras and tea' – Hindi names what the delight is OF, with no 'they are'."
   },
   {
     "id": "hi-0588",
@@ -7138,7 +7266,8 @@
       "travel"
     ],
     "grammarNode": "node-07",
-    "priority": 247
+    "priority": 247,
+    "grammar": "से (se = than) makes '-er': मूली से ज़्यादा मीठी (muli se zyada mithi) = sweeter than radish. ज़्यादा (zyada = more) just adds emphasis – Hindi can drop it."
   },
   {
     "id": "hi-0591",
@@ -7193,7 +7322,8 @@
       "general"
     ],
     "grammarNode": "node-07",
-    "priority": 777
+    "priority": 777,
+    "grammar": "बड़ा (bada) before feelings means 'great', not big: बड़ा शौक (bada shauk) = a strong hobby. Same trick as बड़ी खुशी (badi khushi = great joy)."
   },
   {
     "id": "hi-0596",
@@ -7204,7 +7334,8 @@
       "general"
     ],
     "grammarNode": "node-08",
-    "priority": 120
+    "priority": 120,
+    "grammar": "आदाब अर्ज़ है (aadaab arz hai) is literally 'respects are presented' – a courtly Urdu-style greeting you'll hear among Urdu speakers and in formal, old-school settings."
   },
   {
     "id": "hi-0597",
@@ -7216,7 +7347,8 @@
       "work"
     ],
     "grammarNode": "node-08",
-    "priority": 31
+    "priority": 31,
+    "grammar": "होने वाली है (hone vaali hai) = 'is about to happen'. Verb + वाला (vaala) marks something on the verge – the same वाला (vaala) that usually means 'the one who'."
   },
   {
     "id": "hi-0598",
@@ -7272,7 +7404,8 @@
       "general"
     ],
     "grammarNode": "node-08",
-    "priority": 114
+    "priority": 114,
+    "grammar": "-कर (-kar) on a verb means 'having done it': ताला लगाकर (taala lagaakar = having locked). Hindi links actions this way where English says 'and then'."
   },
   {
     "id": "hi-0603",
@@ -7358,7 +7491,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 277,
-    "grammar": "Hindi position words come after the noun. घर में (ghar mein) = 'house in' = 'in the house'. Flip the English order."
+    "grammar": "Position words follow their noun: कल तक (kal tak) is literally 'tomorrow by' = 'by tomorrow'. Flip the English order every time."
   },
   {
     "id": "hi-0611",
@@ -7461,14 +7594,14 @@
       "general"
     ],
     "grammarNode": "node-08",
-    "priority": 176
+    "priority": 176,
+    "grammar": "तो (to) after a word isn't 'then' – it stresses that word: उसे तो (use to = as for him) – he, of all people, already knew."
   },
   {
     "id": "hi-0620",
     "target": "वह तो बहुत पहले ही चला गया।",
     "english": "He left a very long time ago.",
     "audio": "hi-hi-0620.mp3",
-    "grammar": "भी (also/even) sits after the word it emphasises. मैं भी जाऊँगा (I'll go too). मैं कल भी जाऊँगा (I'll go tomorrow too).",
     "tags": [
       "general",
       "travel"
@@ -7519,7 +7652,7 @@
     ],
     "grammarNode": "node-08",
     "priority": 297,
-    "grammar": "Position is critical: `मैं भी कल जाऊँगा` (I'll go tomorrow too – same as others) vs `मैं कल भी जाऊँगा` (I'll go tomorrow again, in addition to today). Move the particle, change the emphasis."
+    "grammar": "कम से कम (kam se kam) is literally 'less than less' – Hindi's way of saying 'at least'. The mirror phrase ज़्यादा से ज़्यादा (zyaada se zyaada) = at most."
   },
   {
     "id": "hi-0625",
@@ -7567,7 +7700,8 @@
       "general"
     ],
     "grammarNode": "node-08",
-    "priority": 80
+    "priority": 80,
+    "grammar": "काश (kaash) = 'if only'. काश मुझे पहले पता होता (kaash mujhe pehle pataa hotaa = if only I'd known earlier) – the bare -ता (-taa) form marks a wish that didn't come true."
   },
   {
     "id": "hi-0629",
@@ -7597,7 +7731,7 @@
     "target": "यह काम मुझसे ही होगा।",
     "english": "Only I can do this work.",
     "audio": "hi-hi-0631.mp3",
-    "grammar": "`ही` (exactly/only) narrows: `मैं ही जाऊँगा` = 'only I will go'. `यही किताब` = 'this very book'. It's pointier than English 'just'.",
+    "grammar": "ही (hi) narrows to 'only/exactly': मुझसे ही होगा (mujhse hi hoga) = it will get done only by me. It's sharper than English 'just'.",
     "tags": [
       "general",
       "work"
@@ -7677,7 +7811,6 @@
     "target": "सरला अपने भाई के साथ बैठी है।",
     "english": "Sarla is sitting with her brother.",
     "audio": "hi-hi-0638.mp3",
-    "grammar": "Hindi doesn't have 'have' as a verb. To say 'I have a car', say `मेरे पास कार है` (mere paas kar hai) = 'near me a car is'. The thing owned is the subject; you're 'near' it.",
     "tags": [
       "family",
       "general"
@@ -7707,7 +7840,8 @@
       "travel"
     ],
     "grammarNode": "node-08",
-    "priority": 225
+    "priority": 225,
+    "grammar": "अच्छा (achchhaa) literally means 'good', but opening a sentence it works as 'okay / oh / I see' – here it's just moving the conversation along, not praising anything."
   },
   {
     "id": "hi-0641",
@@ -7739,7 +7873,7 @@
     "target": "अरे वाह, तुमने तो कमाल कर दिया!",
     "english": "Wow, you did an amazing job!",
     "audio": "hi-hi-0643.mp3",
-    "grammar": "`तो` is a connector with attitude: 'well', 'as for', 'then'. `मैं तो नहीं जाऊँगा` = 'well, I won't go (whatever others do)'. Adds contrast or assertion.",
+    "grammar": "तो (to) adds attitude – contrast or emphasis, like 'well' or 'really': तुमने तो कमाल कर दिया (tumne to kamaal kar diya) = you really pulled it off.",
     "tags": [
       "general",
       "work"
@@ -7804,7 +7938,8 @@
       "general"
     ],
     "grammarNode": "node-08",
-    "priority": 318
+    "priority": 318,
+    "grammar": "Hindi adds 'went' to say something is fully over: ख़त्म हो गई (khatm ho gayi = became finished, went). That little गई (gayi = went) marks the change as complete."
   },
   {
     "id": "hi-0649",
@@ -7823,7 +7958,7 @@
     "target": "तुम भी चलो, अकेले मज़ा नहीं आता।",
     "english": "You also come, it's no fun alone.",
     "audio": "hi-hi-0650.mp3",
-    "grammar": "Position is critical: `मैं भी कल जाऊँगा` (I'll go tomorrow too – same as others) vs `मैं कल भी जाऊँगा` (I'll go tomorrow again, in addition to today). Move the particle, change the emphasis.",
+    "grammar": "भी (bhi = also/too) sits right after the word it stresses: तुम भी चलो (tum bhi chalo) = you come too. Move भी and the emphasis moves with it.",
     "tags": [
       "general"
     ],
@@ -7972,7 +8107,8 @@
       "work"
     ],
     "grammarNode": "node-08",
-    "priority": 597
+    "priority": 597,
+    "grammar": "करता हूँ (kartaa hoon) is present tense – literally 'I call' – but it means 'I'll call'. Hindi uses the plain present for things you're about to do."
   },
   {
     "id": "hi-0665",
@@ -8082,7 +8218,8 @@
       "general"
     ],
     "grammarNode": "node-08",
-    "priority": 752
+    "priority": 752,
+    "grammar": "You don't find things in Hindi – they 'meet' you: चाबी कहीं मिल नहीं रही (chaabi kaheen mil nahin rahi = the key isn't turning up anywhere). The same verb मिल (mil) is used for meeting people."
   },
   {
     "id": "hi-0674",
@@ -8137,7 +8274,8 @@
       "general"
     ],
     "grammarNode": "node-08",
-    "priority": 138
+    "priority": 138,
+    "grammar": "जी (ji) after a name adds respect: सरला जी (Sarla ji) works like a built-in 'ma'am'. It also makes yes and no politer: हाँ जी (haan ji), ना जी (naa ji)."
   },
   {
     "id": "hi-0680",
@@ -8160,7 +8298,8 @@
       "general"
     ],
     "grammarNode": "node-08",
-    "priority": 140
+    "priority": 140,
+    "grammar": "बस (bas) here isn't the vehicle – it means 'enough, no more'. The same word also means 'just/only', so context decides which बस (bas) you're hearing."
   },
   {
     "id": "hi-0682",
@@ -8386,7 +8525,8 @@
       "travel"
     ],
     "grammarNode": "node-09",
-    "priority": 158
+    "priority": 158,
+    "grammar": "No ने (ne) on the doer here: विकास (Vikas) just गया (gayaa = went). Going acts on nothing, so the doer stays plain. Ne appears only when the action lands on a thing."
   },
   {
     "id": "hi-0702",
@@ -8410,7 +8550,8 @@
       "travel"
     ],
     "grammarNode": "node-09",
-    "priority": 508
+    "priority": 508,
+    "grammar": "Doubling intensifies: सुबह-सुबह (subah-subah = morning-morning) means very early, at the crack of dawn. Repeating a word is a normal grammar move in Hindi."
   },
   {
     "id": "hi-0704",
@@ -8433,7 +8574,8 @@
       "work"
     ],
     "grammarNode": "node-09",
-    "priority": 465
+    "priority": 465,
+    "grammar": "Past-tense doers take ने (ne): श्याम ने नई नौकरी शुरू की (Shyam ne naee naukree shuru kee = Shyam started a new job). Ne appears only when the action lands on something."
   },
   {
     "id": "hi-0706",
@@ -8458,7 +8600,8 @@
       "work"
     ],
     "grammarNode": "node-09",
-    "priority": 786
+    "priority": 786,
+    "grammar": "बेच दीं (bech deen = sold off) ends in a nasal sound because किताबें (kitaaben = books) is feminine plural – the verb tracks the books, and the tiny dot is its only plural clue."
   },
   {
     "id": "hi-0708",
@@ -8517,7 +8660,8 @@
       "general"
     ],
     "grammarNode": "node-09",
-    "priority": 1030
+    "priority": 1030,
+    "grammar": "Joy happens TO you in Hindi: ख़ुशी हुई (khushee huee = happiness occurred). You aren't glad – gladness arrived. The set phrase for being pleased to meet someone."
   },
   {
     "id": "hi-0714",
@@ -8529,7 +8673,8 @@
       "travel"
     ],
     "grammarNode": "node-09",
-    "priority": 867
+    "priority": 867,
+    "grammar": "No 'was inspected' – Hindi says the check happened: जाँच हुई (jaanch huee = inspection happened). When the doer doesn't matter, things simply occur."
   },
   {
     "id": "hi-0715",
@@ -8565,7 +8710,8 @@
       "travel"
     ],
     "grammarNode": "node-09",
-    "priority": 1263
+    "priority": 1263,
+    "grammar": "English words become verbs with किया (kiyaa = did): बुक किया (buk kiyaa) = booked. The loanword stays a noun; करना (karnaa = to do) does the verb work – recharge kiyaa, cancel kiyaa."
   },
   {
     "id": "hi-0719",
@@ -8601,7 +8747,8 @@
       "general"
     ],
     "grammarNode": "node-09",
-    "priority": 1269
+    "priority": 1269,
+    "grammar": "'Without' wraps its noun from both sides: बिना किसी मदद के (binaa kisee madad ke) – binaa before, ke after. English says 'without' once; Hindi closes the bracket."
   },
   {
     "id": "hi-0722",
@@ -8625,7 +8772,8 @@
       "travel"
     ],
     "grammarNode": "node-09",
-    "priority": 438
+    "priority": 438,
+    "grammar": "Hindi has no verb 'drive' – you make the vehicle go: गाड़ी तेज़ चलाई (gaadee tez chalaaee = drove the car fast). चलाना (chalaanaa = make move) also runs shops and machines."
   },
   {
     "id": "hi-0724",
@@ -8648,8 +8796,7 @@
       "travel"
     ],
     "grammarNode": "node-09",
-    "priority": 765,
-    "grammar": "Pick का / की / के by the gender of the thing owned, not the owner. राम का घर (m), राम की किताब (f), राम के बच्चे (m pl)."
+    "priority": 765
   },
   {
     "id": "hi-0726",
@@ -8672,7 +8819,8 @@
       "general"
     ],
     "grammarNode": "node-09",
-    "priority": 806
+    "priority": 806,
+    "grammar": "जी (jee) after a name adds warmth and respect: सुनीता जी (Suneetaa jee). It attaches to any name – and even to yes and no: haan jee, nahin jee."
   },
   {
     "id": "hi-0728",
@@ -8683,7 +8831,8 @@
       "general"
     ],
     "grammarNode": "node-09",
-    "priority": 759
+    "priority": 759,
+    "grammar": "'Told me to rest' = आराम करने को कहा (aaraam karne ko kahaa) – literally 'said for doing rest'. Orders and requests use karne ko, not a plain to-verb."
   },
   {
     "id": "hi-0729",
@@ -8708,7 +8857,8 @@
       "travel"
     ],
     "grammarNode": "node-09",
-    "priority": 591
+    "priority": 591,
+    "grammar": "खा लिया (khaa liyaa) adds लेना (lenaa = take) to eating – it signals the food is finished, gone. Plain खाया (khaayaa) just says eating happened, with no sense of completion."
   },
   {
     "id": "hi-0731",
@@ -8777,7 +8927,8 @@
       "general"
     ],
     "grammarNode": "node-09",
-    "priority": 757
+    "priority": 757,
+    "grammar": "'Reached Shimla' sounds like it acts on Shimla, but पहुँच गए (pahunch gaye) takes no ने (ne) – arriving counts as pure motion in Hindi, like going and coming."
   },
   {
     "id": "hi-0737",
@@ -8789,7 +8940,8 @@
       "general"
     ],
     "grammarNode": "node-09",
-    "priority": 775
+    "priority": 775,
+    "grammar": "दवाई खिलाई (davaaee khilaaee) is literally 'fed the medicine' – खिलाना (khilaanaa) means making someone eat. In Hindi, patients are fed medicine, not given it."
   },
   {
     "id": "hi-0738",
@@ -8834,7 +8986,8 @@
       "general"
     ],
     "grammarNode": "node-09",
-    "priority": 708
+    "priority": 708,
+    "grammar": "The ending -कर (-kar) means 'having done it': ढोल बजाकर (dhol bajaakar = having beaten the drum). One small ending does the work of English 'by ...ing'."
   },
   {
     "id": "hi-0742",
@@ -9018,7 +9171,8 @@
       "work"
     ],
     "grammarNode": "node-09",
-    "priority": 884
+    "priority": 884,
+    "grammar": "ख़रीदी (khareedee) ends in -ee because मछली (machhlee = fish) is feminine – with ne the verb matches the thing bought, not the buyer. Anil's own gender never touches it."
   },
   {
     "id": "hi-0758",
@@ -9219,7 +9373,8 @@
       "work"
     ],
     "grammarNode": "node-09",
-    "priority": 1331
+    "priority": 1331,
+    "grammar": "One respected man, plural verb: वे रिटायर हो गए (ve retire ho gaye = they retired) said of a single person. Respect turns he into they, and the verb agrees."
   },
   {
     "id": "hi-0774",
@@ -9232,7 +9387,8 @@
       "work"
     ],
     "grammarNode": "node-09",
-    "priority": 1234
+    "priority": 1234,
+    "grammar": "नाना-नानी (naanaa-naanee) means specifically your mother's parents – your father's are दादा-दादी (daadaa-daadee). Hindi has no plain 'grandparents'; the side always shows."
   },
   {
     "id": "hi-0775",
@@ -9244,7 +9400,8 @@
       "travel"
     ],
     "grammarNode": "node-09",
-    "priority": 1261
+    "priority": 1261,
+    "grammar": "-ते हुए (-te hue) = 'while doing': नाव खेते हुए (naav khete hue = while rowing the boat). Two actions in one sentence, no word for 'while' needed."
   },
   {
     "id": "hi-0776",
@@ -9368,7 +9525,8 @@
       "work"
     ],
     "grammarNode": "node-09",
-    "priority": 1643
+    "priority": 1643,
+    "grammar": "You ask FROM someone: वेटर से बिल माँगा (vetar se bil maangaa = asked the bill from the waiter). माँगना (maangnaa = ask for) always takes se, never ko."
   },
   {
     "id": "hi-0786",
@@ -9392,7 +9550,8 @@
       "general"
     ],
     "grammarNode": "node-09",
-    "priority": 1409
+    "priority": 1409,
+    "grammar": "Hindi pairs its linking words: जिस किसान ने (jis kisaan ne = the farmer who) opens, उसकी (uskee = that one's) answers. English drops the second half – Hindi says both."
   },
   {
     "id": "hi-0788",
@@ -9468,7 +9627,8 @@
       "travel"
     ],
     "grammarNode": "node-09",
-    "priority": 1968
+    "priority": 1968,
+    "grammar": "You don't 'like' things in Hindi – they come to your liking: पसंद आया (pasand aayaa = came to liking). The dosa does the arriving; you just receive it."
   },
   {
     "id": "hi-0794",
@@ -9559,7 +9719,8 @@
       "travel"
     ],
     "grammarNode": "node-09",
-    "priority": 947
+    "priority": 947,
+    "grammar": "कराया (karaayaa) = got it done by someone else: रिचार्ज कराया (recharge karaayaa) – the shop recharged it, I arranged it. किया (kiyaa) would mean I did it myself."
   },
   {
     "id": "hi-0802",
@@ -9571,7 +9732,8 @@
       "travel"
     ],
     "grammarNode": "node-09",
-    "priority": 650
+    "priority": 650,
+    "grammar": "भेज दिया (bhej diyaa) adds देना (denaa = give) to 'sent' – the give part marks the job fully done, aimed at someone else. A bare भेजा (bhejaa) feels unfinished."
   },
   {
     "id": "hi-0803",
@@ -9651,7 +9813,7 @@
     ],
     "grammarNode": "node-09",
     "priority": 917,
-    "grammar": "`के + word` makes compound postpositions: `के लिए` (ke liye = for), `के पास` (ke paas = near), `के साथ` (ke saath = with). Learn each as one chunk."
+    "grammar": "के (ke) + a word builds two-part position words: के लिए (ke liye = for), as in मेहमानों के लिए (mehmaanon ke liye = for the guests). Learn each pair as one chunk."
   },
   {
     "id": "hi-0810",
@@ -9789,7 +9951,8 @@
       "general"
     ],
     "grammarNode": "node-09",
-    "priority": 1491
+    "priority": 1491,
+    "grammar": "वाला (vaalaa) turns any noun into 'the one with it': ऑटो वाले (auto vaale) = the auto guy. Chai vaalaa, rickshaw vaalaa – it names people by what they run."
   },
   {
     "id": "hi-0823",
@@ -9834,7 +9997,8 @@
       "general"
     ],
     "grammarNode": "node-10",
-    "priority": 577
+    "priority": 577,
+    "grammar": "करवाओ (karvao) = have it done by someone else: जाँच नियमित करवाओ (jaanch niyamit karvao) = get the check-up done regularly. Doing it yourself would be करो (karo)."
   },
   {
     "id": "hi-0827",
@@ -9857,7 +10021,8 @@
       "general"
     ],
     "grammarNode": "node-10",
-    "priority": 538
+    "priority": 538,
+    "grammar": "A number plus -ों makes 'all of them': चारों बच्चे (chaaron bachche) = all four children, दोनों (donon) = both. English needs the extra word 'all'."
   },
   {
     "id": "hi-0829",
@@ -9881,7 +10046,8 @@
       "general"
     ],
     "grammarNode": "node-10",
-    "priority": 600
+    "priority": 600,
+    "grammar": "वाला (vala) turns a noun into 'the one with it': ऑटो वाले ने (auto vale ne) = the auto guy did. Same trick everywhere – चाय वाला (chai vala) = the tea seller."
   },
   {
     "id": "hi-0832",
@@ -9966,7 +10132,7 @@
     ],
     "grammarNode": "node-10",
     "priority": 1287,
-    "grammar": "`के + postposition` is everywhere: `के पास` (near), `के लिए` (for). The `के` form here is the oblique – it joins to the next postposition."
+    "grammar": "No verb 'to need' – the needed thing is the subject: बक्सा चाहिए (baksa chahiye = a box is needed). The person who needs it takes को (ko)."
   },
   {
     "id": "hi-0839",
@@ -9978,7 +10144,8 @@
       "travel"
     ],
     "grammarNode": "node-10",
-    "priority": 1182
+    "priority": 1182,
+    "grammar": "छाता ले लो (chhata le lo): the extra लो (lo) marks doing it for yourself. दे दो (de do) would mark doing it for someone else. Hindi tags who benefits."
   },
   {
     "id": "hi-0840",
@@ -10024,7 +10191,8 @@
       "general"
     ],
     "grammarNode": "node-10",
-    "priority": 498
+    "priority": 498,
+    "grammar": "Hindi chains actions with -कर (kar = having done): बिछाकर बैठो (bichhakar baitho) = having spread it, sit. English says 'lay it out AND sit' – Hindi drops the 'and'."
   },
   {
     "id": "hi-0844",
@@ -10047,7 +10215,8 @@
       "general"
     ],
     "grammarNode": "node-10",
-    "priority": 552
+    "priority": 552,
+    "grammar": "One little ना (na) does all of English's tag questions: सब ठीक है ना? (sab theek hai na?) covers 'isn't it', 'right?', 'aren't you' – no matching verb needed."
   },
   {
     "id": "hi-0846",
@@ -10059,7 +10228,8 @@
       "travel"
     ],
     "grammarNode": "node-10",
-    "priority": 385
+    "priority": 385,
+    "grammar": "English -ing never changes, but रही (rahi) does: Shobha gets दौड़ रही है (daud rahi hai) because she's female – a man would be दौड़ रहा है (daud raha hai)."
   },
   {
     "id": "hi-0847",
@@ -10132,7 +10302,8 @@
       "general"
     ],
     "grammarNode": "node-10",
-    "priority": 1008
+    "priority": 1008,
+    "grammar": "Phone Hindi skips 'this is' – you say who you are directly: मैं डॉक्टर शर्मा बोल रहा हूँ (main Doctor Sharma bol raha hoon = I am Doctor Sharma speaking)."
   },
   {
     "id": "hi-0854",
@@ -10192,7 +10363,8 @@
       "travel"
     ],
     "grammarNode": "node-10",
-    "priority": 1149
+    "priority": 1149,
+    "grammar": "One doctor, plural verb: respect turns देख रहा है (dekh raha hai) into देख रहे हैं (dekh rahe hain). Elders, doctors and bosses get the plural form even when they're one person."
   },
   {
     "id": "hi-0859",
@@ -10216,7 +10388,8 @@
       "travel"
     ],
     "grammarNode": "node-10",
-    "priority": 807
+    "priority": 807,
+    "grammar": "उड़ाना (udana) means 'make fly': kids are पतंग उड़ा रहे हैं (patang uda rahe hain), making the kite fly. Plain उड़ना (udna) is what the kite itself does."
   },
   {
     "id": "hi-0862",
@@ -10373,8 +10546,7 @@
       "general"
     ],
     "grammarNode": "node-10",
-    "priority": 826,
-    "grammar": "Use `को` for people, named animals, and definite things: `मुझे राम को देखना है` (I need to see Ram). Skipping it would sound generic, like 'see some Ram'."
+    "priority": 826
   },
   {
     "id": "hi-0877",
@@ -10460,8 +10632,7 @@
       "general"
     ],
     "grammarNode": "node-10",
-    "priority": 945,
-    "grammar": "Family and inherent traits use `का/की/के`: `मेरे दो भाई हैं` (I have two brothers – possession), not `मेरे पास दो भाई हैं` (that would mean 'I'm near my brothers'). Different have."
+    "priority": 945
   },
   {
     "id": "hi-0884",
@@ -10473,7 +10644,8 @@
       "work"
     ],
     "grammarNode": "node-10",
-    "priority": 1374
+    "priority": 1374,
+    "grammar": "-इए is the respectful command: धीरे बोलिए (dheere boliye = please speak slowly). बोलो (bolo) is the plain version you'd use with friends."
   },
   {
     "id": "hi-0885",
@@ -10485,7 +10657,8 @@
       "work"
     ],
     "grammarNode": "node-10",
-    "priority": 1254
+    "priority": 1254,
+    "grammar": "मिलना (milna) means both 'meet' and 'get'. Here मिल रहे हैं (mil rahe hain) = we're meeting; but पानी मिल रहा है (paani mil raha hai) would mean water is available."
   },
   {
     "id": "hi-0886",
@@ -10534,7 +10707,8 @@
       "work"
     ],
     "grammarNode": "node-10",
-    "priority": 1056
+    "priority": 1056,
+    "grammar": "For 'I have been studying', Hindi uses the present continuous plus से (se = since): तीन महीने से हिंदी पढ़ रहा हूँ (teen mahine se hindi parh raha hoon)."
   },
   {
     "id": "hi-0890",
@@ -10668,7 +10842,8 @@
       "work"
     ],
     "grammarNode": "node-10",
-    "priority": 1784
+    "priority": 1784,
+    "grammar": "'Is sitting' is NOT बैठ रहे (baith rahe) – that means in the act of sitting down. The seated state uses बैठे (baithe): बैठे अख़बार पढ़ रहे हैं (baithe akhbaar parh rahe hain) = seated, reading."
   },
   {
     "id": "hi-0902",
@@ -10707,7 +10882,8 @@
       "work"
     ],
     "grammarNode": "node-10",
-    "priority": 2668
+    "priority": 2668,
+    "grammar": "Doubling जैसे-जैसे (jaise-jaise) means 'as... steadily': जैसे-जैसे शहर बढ़ रहा है (jaise-jaise shahar barh raha hai) = as the city keeps growing."
   },
   {
     "id": "hi-0905",
@@ -10730,7 +10906,8 @@
       "general"
     ],
     "grammarNode": "node-10",
-    "priority": 361
+    "priority": 361,
+    "grammar": "No dummy 'it' for weather – rain and drizzle just happen: बूँदा-बाँदी हो रही है (boonda-baandi ho rahi hai = drizzle is happening)."
   },
   {
     "id": "hi-0907",
@@ -10842,7 +11019,8 @@
       "general"
     ],
     "grammarNode": "node-10",
-    "priority": 973
+    "priority": 973,
+    "grammar": "चार्ज हो रहा है (charge ho raha hai) = 'is getting charged' – हो (ho) for things happening on their own. If YOU charge it, that's चार्ज कर रहा हूँ (charge kar raha hoon)."
   },
   {
     "id": "hi-0917",
@@ -10888,7 +11066,8 @@
       "general"
     ],
     "grammarNode": "node-10",
-    "priority": 1010
+    "priority": 1010,
+    "grammar": "You wait OF the bus, not for it: बस का इंतज़ार कर रहा हूँ (bus ka intezaar kar raha hoon = doing the bus's wait). इंतज़ार (intezaar) always takes का."
   },
   {
     "id": "hi-0921",
@@ -10922,7 +11101,8 @@
       "general"
     ],
     "grammarNode": "node-10",
-    "priority": 1155
+    "priority": 1155,
+    "grammar": "फ़ोन करता हूँ (phone karta hoon) looks like 'I call' but means 'I'll call' – the simple present works as a right-away promise in Hindi."
   },
   {
     "id": "hi-0924",
@@ -11011,7 +11191,8 @@
       "general"
     ],
     "grammarNode": "node-10",
-    "priority": 1291
+    "priority": 1291,
+    "grammar": "'Can you understand' uses पाना: समझ पा रहे हैं (samajh paa rahe hain = managing to understand). पाना (paana) after a verb means 'manage to, succeed in'."
   },
   {
     "id": "hi-0932",
@@ -11136,7 +11317,8 @@
       "general"
     ],
     "grammarNode": "node-10",
-    "priority": 1558
+    "priority": 1558,
+    "grammar": "लग रहा है (lag raha hai) = 'is looking, seeming': चेहरा उतरा लग रहा है (chehra utra lag raha hai) = your face seems drawn. लगना (lagna) covers impressions."
   },
   {
     "id": "hi-0943",
@@ -11214,7 +11396,8 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "priority": 310
+    "priority": 310,
+    "grammar": "'You should' starts with तुम्हें (tumhein = to you), not तुम – with चाहिए (chahiye), advice points at the person, so they take the to-form."
   },
   {
     "id": "hi-0951",
@@ -11225,7 +11408,8 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "priority": 534
+    "priority": 534,
+    "grammar": "'Is prohibited' is just मना है (mana hai = is forbidden) after the plain verb: फ़ोटो खींचना मना है – no 'it', no passive, nothing else needed."
   },
   {
     "id": "hi-0952",
@@ -11236,7 +11420,8 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "priority": 315
+    "priority": 315,
+    "grammar": "Skills come to you in Hindi: तैरना आता है (tairna aata hai = swimming comes) means 'knows how to swim'. Learned abilities use आना (aana = to come), not सकना."
   },
   {
     "id": "hi-0954",
@@ -11259,7 +11444,8 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "priority": 399
+    "priority": 399,
+    "grammar": "'Should have' just adds था: बोलना चाहिए था (bolna chahiye tha = should have spoken). The past marker sits after चाहिए, nothing else changes."
   },
   {
     "id": "hi-0956",
@@ -11353,7 +11539,8 @@
       "work"
     ],
     "grammarNode": "node-11",
-    "priority": 569
+    "priority": 569,
+    "grammar": "सक (sak) never stands alone – it glues onto the bare verb: बोल सकती है (bol sakti hai = can speak). English puts 'can' before the verb; Hindi attaches it after."
   },
   {
     "id": "hi-0964",
@@ -11388,7 +11575,8 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "priority": 411
+    "priority": 411,
+    "grammar": "और (aur) usually means 'and', but after an amount it means 'more': दो सौ रुपये और (do sau rupaye aur) = two hundred rupees more."
   },
   {
     "id": "hi-0967",
@@ -11521,7 +11709,8 @@
       "work"
     ],
     "grammarNode": "node-11",
-    "priority": 1117
+    "priority": 1117,
+    "grammar": "No extra 'have to' word – करना है (karna hai = is to do) alone means must. The -ना (-na) verb form plus है (hai) carries the whole obligation."
   },
   {
     "id": "hi-0978",
@@ -11582,7 +11771,7 @@
     ],
     "grammarNode": "node-11",
     "priority": 1560,
-    "grammar": "\"For the boy\" needs three Hindi words: `लड़के के लिए` (ladke ke liye). Owner-in-oblique + linker `के` + relation word."
+    "grammar": "Verb + के लिए (ke liye) means 'in order to': जाना (jaana = to go) shifts to जाने in जाने के लिए (jaane ke liye = in order to go)."
   },
   {
     "id": "hi-0984",
@@ -11602,7 +11791,6 @@
     "target": "हमें रोज़ कम से कम छह घंटे सोना चाहिए।",
     "english": "We should sleep at least six hours every day.",
     "audio": "hi-hi-0985.mp3",
-    "grammar": "Order matters: thing being compared TO comes first with `से` (se), then the adjective. `मोबाइल लैपटॉप से छोटा है` = 'mobile is smaller than laptop'.",
     "tags": [
       "family",
       "general",
@@ -11620,7 +11808,8 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "priority": 424
+    "priority": 424,
+    "grammar": "पड़ेगा (padega) comes from पड़ना (padna = to fall): the duty falls on Nikhil, no choice in it. चाहिए (chahiye) suggests, पड़ना forces."
   },
   {
     "id": "hi-0987",
@@ -11679,7 +11868,8 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "priority": 396
+    "priority": 396,
+    "grammar": "There is no verb 'need' here – चीनी चाहिए (cheeni chahiye) is literally 'sugar is wanted'. Noun + चाहिए = need; a verb before चाहिए means 'should'."
   },
   {
     "id": "hi-0992",
@@ -11726,7 +11916,8 @@
       "travel"
     ],
     "grammarNode": "node-11",
-    "priority": 651
+    "priority": 651,
+    "grammar": "लेनी (leni), not लेना – the verb before चाहिए matches its object's gender: दवा (dava = medicine) is feminine, so 'to take' becomes लेनी."
   },
   {
     "id": "hi-0997",
@@ -11750,7 +11941,8 @@
       "travel"
     ],
     "grammarNode": "node-11",
-    "priority": 877
+    "priority": 877,
+    "grammar": "After शायद (shayad = maybe), the verb shifts to the maybe-form: आ सके (aa sake), not आ सकता है. Uncertainty changes the verb ending itself."
   },
   {
     "id": "hi-0999",
@@ -11887,7 +12079,8 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "priority": 1088
+    "priority": 1088,
+    "grammar": "'Wants us to go' needs a full clause: चाहता है कि (chahta hai ki = wants that) + हम लखनऊ चलें (ham Lakhnau chalen = we go to Lucknow) – never an infinitive like English."
   },
   {
     "id": "hi-1011",
@@ -11996,7 +12189,8 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "priority": 1085
+    "priority": 1085,
+    "grammar": "Impossibility is phrased 'from me': मुझसे (mujhse) + नहीं उठ पाएगा (nahin uth paega = won't get lifted) – the failure comes from your side, and the box बक्सा (baksa) is the subject."
   },
   {
     "id": "hi-1021",
@@ -12032,15 +12226,13 @@
       "work"
     ],
     "grammarNode": "node-11",
-    "priority": 1035,
-    "grammar": "भी (also/even) sits after the word it emphasises. मैं भी जाऊँगा (I'll go too). मैं कल भी जाऊँगा (I'll go tomorrow too)."
+    "priority": 1035
   },
   {
     "id": "hi-1025",
     "target": "अनिल को यह काम आज ही करना चाहिए।",
     "english": "Anil should do this work today itself.",
     "audio": "hi-hi-1025.mp3",
-    "grammar": "भी (also/even) sits after the word it emphasises. मैं भी जाऊँगा (I'll go too). मैं कल भी जाऊँगा (I'll go tomorrow too).",
     "tags": [
       "general",
       "travel",
@@ -12059,8 +12251,7 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "priority": 1153,
-    "grammar": "`के साथ` = 'with' (alongside): `मेरे साथ आओ` = 'come with me'. Often confused with `के पास` (near, in possession). साथ = physical 'with'; पास = ownership-style 'have'."
+    "priority": 1153
   },
   {
     "id": "hi-1028",
@@ -12121,8 +12312,7 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "priority": 1292,
-    "grammar": "When `को` marks the object, the verb sits in the default masculine-singular form: `राम ने सीता को देखा` (Ram saw Sita) – verb stays `देखा`, not `देखी`."
+    "priority": 1292
   },
   {
     "id": "hi-1033",
@@ -12177,7 +12367,6 @@
     "target": "न तो उसने खाना खाया, न ही पानी पिया।",
     "english": "Neither did he eat food, nor did he drink water.",
     "audio": "hi-hi-1037.mp3",
-    "grammar": "Four imperative levels matching the four 'you' forms: `कर` (तू, intimate), `करो` (तुम, casual), `कीजिए` (आप, polite), `किया कीजिएगा` (extra polite request). Match to the 'you' you're using.",
     "tags": [
       "family",
       "general",
@@ -12256,8 +12445,7 @@
       "travel"
     ],
     "grammarNode": "node-11",
-    "priority": 1761,
-    "grammar": "Order matters: thing being compared TO comes first with `से` (se), then the adjective. `मोबाइल लैपटॉप से छोटा है` = 'mobile is smaller than laptop'."
+    "priority": 1761
   },
   {
     "id": "hi-1045",
@@ -12447,7 +12635,8 @@
       "general"
     ],
     "grammarNode": "node-11",
-    "priority": 1395
+    "priority": 1395,
+    "grammar": "करवाना (karvana) = get it done by someone else: एसी ठीक करवाना (AC theek karvana) is having it repaired, not repairing it yourself – that would be करना (karna)."
   },
   {
     "id": "hi-1063",
@@ -12459,7 +12648,8 @@
       "work"
     ],
     "grammarNode": "node-11",
-    "priority": 1444
+    "priority": 1444,
+    "grammar": "'Try on' is wear-and-see: पहनकर देख (pahankar dekh = having worn, see). Hindi tests things by doing the action, then देखना (dekhna = to see)."
   },
   {
     "id": "hi-1064",
@@ -12471,7 +12661,8 @@
       "travel"
     ],
     "grammarNode": "node-11",
-    "priority": 1286
+    "priority": 1286,
+    "grammar": "सकना also covers 'might': बारिश हो सकती है (barish ho sakti hai = rain can happen) means it might rain – possibility, not anyone's ability."
   },
   {
     "id": "hi-1065",
@@ -12553,7 +12744,8 @@
       "general"
     ],
     "grammarNode": "node-12",
-    "priority": 620
+    "priority": 620,
+    "grammar": "ख़ुदा हाफ़िज़ (khuda haafiz) – literally 'God (is your) protector', a goodbye from Urdu, common in everyday Hindi alongside नमस्ते (namaste)."
   },
   {
     "id": "hi-1072",
@@ -12577,7 +12769,8 @@
       "work"
     ],
     "grammarNode": "node-12",
-    "priority": 457
+    "priority": 457,
+    "grammar": "Rekha is the subject, so 'her' homework is अपना (apna), not उसका (uska) – उसका would mean someone ELSE's homework, not her own."
   },
   {
     "id": "hi-1074",
@@ -12600,7 +12793,8 @@
       "general"
     ],
     "grammarNode": "node-12",
-    "priority": 723
+    "priority": 723,
+    "grammar": "In commands 'your' is अपना too: अपना पूरा नाम बताइए (apna poora naam bataiye) = tell your full name – the doer is 'you', so अपना points back at you."
   },
   {
     "id": "hi-1076",
@@ -12613,7 +12807,8 @@
       "travel"
     ],
     "grammarNode": "node-12",
-    "priority": 533
+    "priority": 533,
+    "grammar": "अपना खाना ख़ुद बनाया (apna khaana khud banaya) – two self-words: अपना = his own (the food), ख़ुद = himself (did the cooking)."
   },
   {
     "id": "hi-1077",
@@ -12649,7 +12844,8 @@
       "general"
     ],
     "grammarNode": "node-12",
-    "priority": 742
+    "priority": 742,
+    "grammar": "आपका अपना घर (aapka apna ghar) – अपना stacked after आपका means 'your very own'. A warm host formula: this house is yours too, not just ours."
   },
   {
     "id": "hi-1080",
@@ -12810,7 +13006,8 @@
       "general"
     ],
     "grammarNode": "node-12",
-    "priority": 593
+    "priority": 593,
+    "grammar": "अपनी-अपनी जगह (apni-apni jagah) – doubling अपना spreads it over everyone: each to their OWN place. Hindi repeats a word to mean each/respective."
   },
   {
     "id": "hi-1094",
@@ -12833,7 +13030,8 @@
       "general"
     ],
     "grammarNode": "node-12",
-    "priority": 965
+    "priority": 965,
+    "grammar": "अपनी माँ (apni maa) – अपना (apna) matches the thing owned, not the owner: माँ (maa) is feminine, so it's अपनी whether Lakshmi or her brother writes."
   },
   {
     "id": "hi-1096",
@@ -12852,7 +13050,6 @@
     "target": "शिल्पा अपनी बहन के साथ बाज़ार गई।",
     "english": "Shilpa went to the market with her sister.",
     "audio": "hi-hi-1097.mp3",
-    "grammar": "Family and inherent traits use `का/की/के`: `मेरे दो भाई हैं` (I have two brothers – possession), not `मेरे पास दो भाई हैं` (that would mean 'I'm near my brothers'). Different have.",
     "tags": [
       "family",
       "general",
@@ -12884,7 +13081,8 @@
       "general"
     ],
     "grammarNode": "node-12",
-    "priority": 1174
+    "priority": 1174,
+    "grammar": "You don't miss things in Hindi – the memory comes to you: मुझे (mujhe = to me) + याद आती है (yaad aati hai = memory comes) = I miss my country."
   },
   {
     "id": "hi-1102",
@@ -12926,7 +13124,7 @@
     "target": "पंकज अपने परिवार के साथ लखनऊ घूमने गया।",
     "english": "Pankaj went to visit Lucknow with his family.",
     "audio": "hi-hi-1105.mp3",
-    "grammar": "`के साथ` = 'with' (alongside): `मेरे साथ आओ` = 'come with me'. Often confused with `के पास` (near, in possession). साथ = physical 'with'; पास = ownership-style 'have'.",
+    "grammar": "के साथ (ke saath) = physically 'with': परिवार के साथ (parivaar ke saath = with his family). Don't mix it up with के पास (ke paas), which means 'near' or 'have'.",
     "tags": [
       "family",
       "general"
@@ -12968,7 +13166,8 @@
       "work"
     ],
     "grammarNode": "node-12",
-    "priority": 1283
+    "priority": 1283,
+    "grammar": "अपने आप (apne aap) = by oneself: Kavita finished सारा काम (saara kaam = all the work) with no help. For things, the same phrase means 'on its own'."
   },
   {
     "id": "hi-1109",
@@ -13196,7 +13395,8 @@
       "general"
     ],
     "grammarNode": "node-12",
-    "priority": 1317
+    "priority": 1317,
+    "grammar": "मनवा ही ली (manva hi li) – मानना (maanna = accept) plus -वा means getting OTHERS to accept: Vikas didn't just state अपनी बात (apni baat = his point), he made them agree."
   },
   {
     "id": "hi-1128",
@@ -13220,7 +13420,8 @@
       "travel"
     ],
     "grammarNode": "node-13",
-    "priority": 527
+    "priority": 527,
+    "grammar": "ना (na) tacked onto a command doesn't negate – it softens it into a plea: मत जाओ ना (mat jao na) = 'please don't go'."
   },
   {
     "id": "hi-1130",
@@ -13231,7 +13432,8 @@
       "general"
     ],
     "grammarNode": "node-13",
-    "priority": 549
+    "priority": 549,
+    "grammar": "Hindi often drops है (hai) after a negative: पसंद नहीं (pasand nahin) alone means 'doesn't like it' – no 'is' needed at the end."
   },
   {
     "id": "hi-1131",
@@ -13288,7 +13490,8 @@
       "travel"
     ],
     "grammarNode": "node-13",
-    "priority": 1169
+    "priority": 1169,
+    "grammar": "जाना (jaana = go) glued onto a verb marks completion: रुक जाओ (ruk jao) = come to a full stop. Plain रुको (ruko) is just 'stop'."
   },
   {
     "id": "hi-1136",
@@ -13347,7 +13550,8 @@
       "travel"
     ],
     "grammarNode": "node-13",
-    "priority": 1144
+    "priority": 1144,
+    "grammar": "'Not as...as' is a matched pair in Hindi: उतना साफ़ नहीं जितना (utna saaf nahin jitna) = literally 'not that-much clean, as-much-as'. Two words where English repeats 'as'."
   },
   {
     "id": "hi-1141",
@@ -13402,7 +13606,7 @@
     "target": "कमला को कहीं भी शांति नहीं मिलती।",
     "english": "Kamala does not find peace anywhere.",
     "audio": "hi-hi-1145.mp3",
-    "grammar": "`ही` (exactly/only) narrows: `मैं ही जाऊँगा` = 'only I will go'. `यही किताब` = 'this very book'. It's pointier than English 'just'.",
+    "grammar": "Hindi says 'anywhere + not' where English says 'nowhere': कहीं भी शांति नहीं मिलती (kahin bhi shanti nahin milti) = literally 'anywhere peace is not found'.",
     "tags": [
       "general"
     ],
@@ -13460,7 +13664,7 @@
     "target": "न प्रिया आई, न कोई संदेश भेजा।",
     "english": "Neither did Priya come, nor did she send any message.",
     "audio": "hi-hi-1150.mp3",
-    "grammar": "Polite request adds -इए / -इये: `सुनिए` (please listen), `बैठिए` (please sit). Used with strangers and elders. Without it, you sound abrupt.",
+    "grammar": "न...न (na...na) means 'neither...nor' – a third negator besides नहीं (nahin) and मत (mat): न प्रिया आई, न कोई संदेश (na Priya aayi, na koi sandesh).",
     "tags": [
       "general"
     ],
@@ -13536,7 +13740,8 @@
       "general"
     ],
     "grammarNode": "node-13",
-    "priority": 1029
+    "priority": 1029,
+    "grammar": "Skills 'come' to you in Hindi: तैरना आता ही नहीं (tairna aata hi nahin) = literally 'swimming just doesn't come (to me)' = I can't swim. आना (aana = to come) covers know-how."
   },
   {
     "id": "hi-1158",
@@ -13640,7 +13845,8 @@
       "general"
     ],
     "grammarNode": "node-13",
-    "priority": 1230
+    "priority": 1230,
+    "grammar": "Cars 'stand' in Hindi: खड़ी की (khari ki) = parked, literally 'made it stand'. गाड़ी खड़ी करना (gaadi khari karna) = to park a car."
   },
   {
     "id": "hi-1167",
@@ -13703,7 +13909,8 @@
       "travel"
     ],
     "grammarNode": "node-13",
-    "priority": 1452
+    "priority": 1452,
+    "grammar": "'Not yet' = अभी तक...नहीं (abhi tak...nahin), literally 'until now not': मैंने अभी तक वह फ़िल्म नहीं देखी (maine abhi tak vah film nahin dekhi) = I haven't seen that film yet."
   },
   {
     "id": "hi-1172",
@@ -13819,7 +14026,8 @@
       "general"
     ],
     "grammarNode": "node-13",
-    "priority": 1062
+    "priority": 1062,
+    "grammar": "You 'drink' a cigarette in Hindi: सिगरेट मत पियो (cigarette mat piyo) = don't smoke, literally 'don't drink a cigarette'. पीना (peena) covers smoking too."
   },
   {
     "id": "hi-1182",
@@ -13864,8 +14072,7 @@
       "general"
     ],
     "grammarNode": "node-13",
-    "priority": 1353,
-    "grammar": "`तो` is a connector with attitude: 'well', 'as for', 'then'. `मैं तो नहीं जाऊँगा` = 'well, I won't go (whatever others do)'. Adds contrast or assertion."
+    "priority": 1353
   },
   {
     "id": "hi-1187",
@@ -13911,7 +14118,8 @@
       "travel"
     ],
     "grammarNode": "node-13",
-    "priority": 1334
+    "priority": 1334,
+    "grammar": "A command built on the infinitive is for later or gentler: देर मत करना (der mat karna) = 'don't be late (when the time comes)'. मत करो (mat karo) orders it right now."
   },
   {
     "id": "hi-1191",
@@ -13980,7 +14188,8 @@
       "travel"
     ],
     "grammarNode": "node-14",
-    "priority": 584
+    "priority": 584,
+    "grammar": "English fills the bottle – Hindi flips it: बोतल में ठंडा पानी भरा है (botal mein thanda paani bhara hai = in the bottle cold water is filled). The container gets में (mein), the water is the subject."
   },
   {
     "id": "hi-1197",
@@ -14018,7 +14227,8 @@
       "travel"
     ],
     "grammarNode": "node-14",
-    "priority": 537
+    "priority": 537,
+    "grammar": "Hindi position words come after their word, not before: यहाँ से (yahaan se = here from) = from here. Every from, on, in trails its word – mez par, subah se."
   },
   {
     "id": "hi-1200",
@@ -14031,7 +14241,8 @@
       "travel"
     ],
     "grammarNode": "node-14",
-    "priority": 699
+    "priority": 699,
+    "grammar": "For breakfast is नाश्ते में (naashte mein = in breakfast), not ke liye. Meals take में (mein): you make things in breakfast, in lunch."
   },
   {
     "id": "hi-1201",
@@ -14056,7 +14267,8 @@
       "travel"
     ],
     "grammarNode": "node-14",
-    "priority": 782
+    "priority": 782,
+    "grammar": "No word for to with going: हवाई अड्डा कैसे जाएँ (hawai adda kaise jaaen = how to go airport). Destinations of jaana usually take nothing – ghar jao, school jao."
   },
   {
     "id": "hi-1203",
@@ -14115,7 +14327,8 @@
       "general"
     ],
     "grammarNode": "node-14",
-    "priority": 1827
+    "priority": 1827,
+    "grammar": "Hindi says where things are placed, not that they exist: फ्रिज में दूध रखा है (fridge mein doodh rakha hai = milk is kept in the fridge) is the everyday way to say there is milk."
   },
   {
     "id": "hi-1208",
@@ -14152,7 +14365,8 @@
       "travel"
     ],
     "grammarNode": "node-14",
-    "priority": 658
+    "priority": 658,
+    "grammar": "तक (tak) means both until and by: शाम तक (shaam tak) here is by evening – a deadline. Shaam tak kaam kiya would be until evening. Context picks the reading."
   },
   {
     "id": "hi-1212",
@@ -14189,7 +14403,8 @@
       "general"
     ],
     "grammarNode": "node-14",
-    "priority": 878
+    "priority": 878,
+    "grammar": "Trains walk in Hindi: चलती है (chalti hai = moves) is how the train departs from the platform. चलना (chalna) covers vehicles and machines – a working watch chalti hai too."
   },
   {
     "id": "hi-1215",
@@ -14225,7 +14440,8 @@
       "general"
     ],
     "grammarNode": "node-14",
-    "priority": 751
+    "priority": 751,
+    "grammar": "English lumps all uncles together – Hindi is precise: फूफाजी (phoophaji) is specifically your father's sister's husband. The जी (ji) on the end adds respect."
   },
   {
     "id": "hi-1218",
@@ -14250,7 +14466,8 @@
       "travel"
     ],
     "grammarNode": "node-14",
-    "priority": 911
+    "priority": 911,
+    "grammar": "Doubling stretches a word: दूर-दूर तक (door-door tak = up to far-far) = far and wide. Hindi repeats words for spread – kabhi-kabhi is sometimes, dheere-dheere is slowly."
   },
   {
     "id": "hi-1220",
@@ -14262,7 +14479,8 @@
       "general"
     ],
     "grammarNode": "node-14",
-    "priority": 1105
+    "priority": 1105,
+    "grammar": "Hindi meets from people: रूपा से मिलिए (Roopa se miliye = meet Roopa). मिलना (milna) always takes से (se), never a plain object like English meet."
   },
   {
     "id": "hi-1221",
@@ -14286,7 +14504,8 @@
       "travel"
     ],
     "grammarNode": "node-14",
-    "priority": 738
+    "priority": 738,
+    "grammar": "से (se) doubles as by for any means: बस से (bus se) = by bus. Card se, haath se (by hand) – transport, payment, and tools all take से."
   },
   {
     "id": "hi-1224",
@@ -14347,7 +14566,8 @@
       "work"
     ],
     "grammarNode": "node-14",
-    "priority": 644
+    "priority": 644,
+    "grammar": "की (ki) agrees with the thing owned, not the owner: सुषमा की किताब (Sushma ki kitaab) uses feminine की because kitaab is feminine – Sushma's own gender is irrelevant."
   },
   {
     "id": "hi-1230",
@@ -14397,7 +14617,8 @@
       "work"
     ],
     "grammarNode": "node-14",
-    "priority": 1028
+    "priority": 1028,
+    "grammar": "Hindi has no verb for to have – people just exist in your space: मेरे ऑफिस में बहुत अच्छे साथी हैं (mere office mein bahut achche saathi hain = in my office are very good colleagues)."
   },
   {
     "id": "hi-1234",
@@ -14507,7 +14728,8 @@
       "work"
     ],
     "grammarNode": "node-14",
-    "priority": 1299
+    "priority": 1299,
+    "grammar": "से (se) also marks causes: दर्द होने से (dard hone se = from pain happening) = because of the pain. Verb + hone se is the everyday due to."
   },
   {
     "id": "hi-1243",
@@ -14578,7 +14800,8 @@
       "travel"
     ],
     "grammarNode": "node-14",
-    "priority": 1257
+    "priority": 1257,
+    "grammar": "Phones close in Hindi: फ़ोन बंद हो गया (phone band ho gaya = the phone became closed) = it died or switched off. बंद (band) covers closed and off – shops, lights, phones."
   },
   {
     "id": "hi-1249",
@@ -14652,7 +14875,8 @@
       "travel"
     ],
     "grammarNode": "node-14",
-    "priority": 1275
+    "priority": 1275,
+    "grammar": "पर (par) means on, but it is also Hindi's at: बस स्टॉप पर (bus stop par) = at the bus stop. There is no separate word – station par, ghar par."
   },
   {
     "id": "hi-1255",
@@ -14701,7 +14925,8 @@
       "travel"
     ],
     "grammarNode": "node-14",
-    "priority": 1450
+    "priority": 1450,
+    "grammar": "Times of day take को (ko), not में: शाम को (shaam ko = to evening) means in the evening. Subah ko, raat ko – no equivalent of the English in appears."
   },
   {
     "id": "hi-1259",
@@ -14774,7 +14999,8 @@
       "general"
     ],
     "grammarNode": "node-14",
-    "priority": 1639
+    "priority": 1639,
+    "grammar": "Next to is a body word: सुरेश के बगल में (Suresh ke bagal mein = in Suresh's side) – bagal is your side or flank. Many Hindi place phrases sit inside a noun like this."
   },
   {
     "id": "hi-1266",
@@ -14853,7 +15079,8 @@
       "general"
     ],
     "grammarNode": "node-14",
-    "priority": 1219
+    "priority": 1219,
+    "grammar": "Hindi builds before as from + earlier: दशहरे से पहले (Dashahre se pahle = from Dussehra earlier) = before Dussehra. After works the same way – ke baad."
   },
   {
     "id": "hi-1274",
@@ -14875,7 +15102,8 @@
       "general"
     ],
     "grammarNode": "node-14",
-    "priority": 1179
+    "priority": 1179,
+    "grammar": "पर (par) usually means on or at, but after a verb form it means upon: छींक आने पर (chheenk aane par = on a sneeze coming) = when you sneeze."
   },
   {
     "id": "hi-1276",
@@ -15034,7 +15262,8 @@
       "work"
     ],
     "grammarNode": "node-14",
-    "priority": 1492
+    "priority": 1492,
+    "grammar": "Seeing the doctor is showing: डॉक्टर को दिखाना है (doctor ko dikhaana hai = have to show to the doctor). You show yourself to doctors in Hindi – dikhaana, not dekhna."
   },
   {
     "id": "hi-1290",
@@ -15127,7 +15356,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 558
+    "priority": 558,
+    "grammar": "Hindi has no '-er': the adjective stays plain and से (se) marks 'than' – सोने से सस्ती (sone se sasti) = cheaper than gold, literally 'from gold cheap'."
   },
   {
     "id": "hi-1298",
@@ -15150,7 +15380,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 617
+    "priority": 617,
+    "grammar": "कहीं (kahin) normally means 'somewhere' – dropped into a comparison it means 'far': कहीं सस्ती (kahin sasti) = far cheaper."
   },
   {
     "id": "hi-1300",
@@ -15161,7 +15392,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 570
+    "priority": 570,
+    "grammar": "चलता हूँ (chalta hoon = I move) is the standard 'I'm off' – present tense, no future needed. फिर मिलते हैं (phir milte hain) = 'we'll meet again' = see you."
   },
   {
     "id": "hi-1301",
@@ -15172,7 +15404,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 637
+    "priority": 637,
+    "grammar": "'As sweet as that' comes out as 'sweet like that': उस जैसी मीठी नहीं (us jaisi meethi nahin) = not as sweet as that one. जैसा (jaisa) = like."
   },
   {
     "id": "hi-1302",
@@ -15184,7 +15417,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 705
+    "priority": 705,
+    "grammar": "होते हैं (hote hain) signals a general truth: सेब से सस्ते होते हैं (seb se saste hote hain) = are cheaper than apples, as a rule. Plain हैं would mean these bananas, today."
   },
   {
     "id": "hi-1303",
@@ -15196,7 +15430,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 627
+    "priority": 627,
+    "grammar": "मिलता है (milta hai) is literally 'is gotten': सस्ता मिलता है = you get it cheaper. Hindi says where things are found cheap, not where you buy them."
   },
   {
     "id": "hi-1304",
@@ -15231,7 +15466,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 902
+    "priority": 902,
+    "grammar": "सुनाना (sunana = make hear) is सुनना (sunna = hear) with 'cause' built in: बातें सुनाते हैं (baatein sunate hain) = tells us stories, literally 'makes us hear' them."
   },
   {
     "id": "hi-1307",
@@ -15243,7 +15479,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 879
+    "priority": 879,
+    "grammar": "Time and measure words stay singular after a number: हर दस साल में (har das saal mein) = every ten years, with साल (saal = year) unchanged, never सालों."
   },
   {
     "id": "hi-1308",
@@ -15297,7 +15534,7 @@
     "target": "आज कल से ज़्यादा गर्म है।",
     "english": "Today is hotter than yesterday.",
     "audio": "hi-hi-1312.mp3",
-    "grammar": "Superlative uses `सबसे + adjective`: `सबसे बड़ा` (the biggest). Literally 'from-all big'. No 'the' needed; the structure makes it superlative.",
+    "grammar": "ज़्यादा (zyada = more) is optional here – कल से गर्म (kal se garam) alone already means 'hotter than yesterday'. से does the comparing by itself.",
     "tags": [
       "general",
       "travel"
@@ -15339,7 +15576,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 1186
+    "priority": 1186,
+    "grammar": "पड़ता है (padta hai) is literally 'falls' – for prices it means 'works out': टैक्सी से सस्ता पड़ता है = works out cheaper than a taxi."
   },
   {
     "id": "hi-1316",
@@ -15352,7 +15590,8 @@
       "travel"
     ],
     "grammarNode": "node-15",
-    "priority": 1535
+    "priority": 1535,
+    "grammar": "बुआ (bua) is specifically your father's sister – there is no generic 'aunt'. Your mother's sister is मौसी (mausi); each side of the family gets its own word."
   },
   {
     "id": "hi-1317",
@@ -15427,7 +15666,8 @@
       "work"
     ],
     "grammarNode": "node-15",
-    "priority": 580
+    "priority": 580,
+    "grammar": "पैर छूता हूँ (pair chhoota hoon = I touch your feet) – bending to touch an elder's feet is the deepest respect greeting, and the phrase alone works as one, even on the phone."
   },
   {
     "id": "hi-1323",
@@ -15474,7 +15714,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 661
+    "priority": 661,
+    "grammar": "गाढ़ा (gaadha) is 'thick' for liquids: दही दूध से गाढ़ा (dahi doodh se gaadha) = curd is thicker than milk. A thick book or arm is मोटा (mota) instead."
   },
   {
     "id": "hi-1327",
@@ -15505,7 +15746,6 @@
     "target": "दूध चाय से ज़्यादा फ़ायदेमंद है।",
     "english": "Milk is more beneficial than tea.",
     "audio": "hi-hi-1329.mp3",
-    "grammar": "Equal comparison: `X Y के बराबर है` (X is equal to Y) or `X Y जितना बड़ा है` (X is as big as Y). Multiple constructions for 'as...as'.",
     "tags": [
       "general",
       "travel"
@@ -15523,7 +15763,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 337
+    "priority": 337,
+    "grammar": "अपनी (apni = one's own) always points back to the subject: प्रिया अपनी बहन से लंबी (Priya apni behen se lambi) = taller than her OWN sister. उसकी would mean another person's."
   },
   {
     "id": "hi-1332",
@@ -15584,7 +15825,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 698
+    "priority": 698,
+    "grammar": "कूकर (cooker) in India means the pressure cooker – the whistling pot in every kitchen – not a stove or rice cooker."
   },
   {
     "id": "hi-1337",
@@ -15608,7 +15850,8 @@
       "travel"
     ],
     "grammarNode": "node-15",
-    "priority": 587
+    "priority": 587,
+    "grammar": "Renting is 'taking on rent': किराए पर लेना (kiraye par lena). The thing sits 'on rent' with पर (par = on) – and renting out is किराए पर देना (dena = give)."
   },
   {
     "id": "hi-1339",
@@ -15667,7 +15910,8 @@
       "travel"
     ],
     "grammarNode": "node-15",
-    "priority": 781
+    "priority": 781,
+    "grammar": "वाला stands in for the noun: दूसरे वाले से (doosre vale se) = than the other one – no need to say होटल (hotel) twice."
   },
   {
     "id": "hi-1344",
@@ -15679,8 +15923,7 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 734,
-    "grammar": "Equal comparison: `X Y के बराबर है` (X is equal to Y) or `X Y जितना बड़ा है` (X is as big as Y). Multiple constructions for 'as...as'."
+    "priority": 734
   },
   {
     "id": "hi-1345",
@@ -15790,7 +16033,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 851
+    "priority": 851,
+    "grammar": "Holi is played, not celebrated: होली खेलते हैं (holi khelte hain) = we play Holi. खेलना (khelna = play) is the verb for the colors and water fights."
   },
   {
     "id": "hi-1354",
@@ -15826,7 +16070,8 @@
       "travel"
     ],
     "grammarNode": "node-15",
-    "priority": 1023
+    "priority": 1023,
+    "grammar": "आजकल (aajkal) means 'these days' in one word, no 'in' needed: आजकल इंटरनेट पहले से धीमा है = these days the internet is slower than before."
   },
   {
     "id": "hi-1357",
@@ -15839,7 +16084,8 @@
       "travel"
     ],
     "grammarNode": "node-15",
-    "priority": 626
+    "priority": 626,
+    "grammar": "Elders take a plural verb out of respect: माँ stays one person but gets हैं, not है – मेरी माँ ... बनाती हैं (meri maa ... banati hain). Honorific plural marks respect, not number."
   },
   {
     "id": "hi-1358",
@@ -15922,7 +16168,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 927
+    "priority": 927,
+    "grammar": "जितना (jitna = as much as) comes AFTER its noun: मिर्च जितनी तीखी नहीं (mirch jitni teekhi nahin) = not as spicy as chili – literally 'chili as-much spicy not'."
   },
   {
     "id": "hi-1365",
@@ -15945,7 +16192,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 998
+    "priority": 998,
+    "grammar": "माना जाता है (mana jata hai) = 'is considered' – Hindi builds 'is done' with जाना (jana = to go): the action 'goes'. Any English 'is ...-ed' works this way."
   },
   {
     "id": "hi-1367",
@@ -15982,7 +16230,8 @@
       "travel"
     ],
     "grammarNode": "node-15",
-    "priority": 900
+    "priority": 900,
+    "grammar": "Strong tea is कड़क (kadak = sharp, crisp) – कड़क चाय is the phrase at every stall. मज़बूत (mazboot = strong) is for walls and people, never for tea."
   },
   {
     "id": "hi-1370",
@@ -16006,7 +16255,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 865
+    "priority": 865,
+    "grammar": "People are 'long', not tall: सबसे लंबा आदमी (sabse lamba aadmi) = the tallest man, using लंबा (lamba = long). ऊँचा (ooncha = high) is for buildings and hills."
   },
   {
     "id": "hi-1372",
@@ -16042,7 +16292,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 665
+    "priority": 665,
+    "grammar": "से glues onto pronouns: उस + से = उससे (usse = than that one). यह कमरा उससे ठंडा है – the 'than that' is one small fused word."
   },
   {
     "id": "hi-1375",
@@ -16078,7 +16329,8 @@
       "travel"
     ],
     "grammarNode": "node-15",
-    "priority": 912
+    "priority": 912,
+    "grammar": "बेहतर (behtar = better), from Persian, is one of Hindi's few true comparative words: पुराने वाले से बेहतर = better than the old one. Most adjectives rely on से alone."
   },
   {
     "id": "hi-1378",
@@ -16137,7 +16389,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 746
+    "priority": 746,
+    "grammar": "For people, बड़ा (bada = big) means older: मुझसे दो साल बड़ा (mujhse do saal bada) = two years older than me. छोटा (chhota = small) likewise means younger."
   },
   {
     "id": "hi-1383",
@@ -16228,7 +16481,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 1196
+    "priority": 1196,
+    "grammar": "'As well as' uses a pair: उतना ही अच्छा... जितना (utna hi achchha... jitna) = 'that much good... as much as'. Hindi spells out both halves of the match."
   },
   {
     "id": "hi-1391",
@@ -16251,7 +16505,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 1216
+    "priority": 1216,
+    "grammar": "तेज़ (tez) covers fast, sharp, and strong: याददाश्त तेज़ (yaaddaasht tez) = a sharp memory, तेज़ चाकू = a sharp knife, तेज़ धूप = strong sun."
   },
   {
     "id": "hi-1393",
@@ -16262,7 +16517,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 1433
+    "priority": 1433,
+    "grammar": "Verb + ने वाला makes 'the ...-ing kind': भरने वाला (bharne vala) = filling, literally 'the one that fills'. Works on nearly any verb."
   },
   {
     "id": "hi-1394",
@@ -16274,7 +16530,8 @@
       "work"
     ],
     "grammarNode": "node-15",
-    "priority": 1255
+    "priority": 1255,
+    "grammar": "This से is 'from', not 'than': छठी कक्षा से (chhathi kaksha se) = from sixth grade onward. से does both jobs; हो जाता है (ho jata hai = becomes) signals a starting point here."
   },
   {
     "id": "hi-1395",
@@ -16309,7 +16566,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 1381
+    "priority": 1381,
+    "grammar": "Verb stem + कर = 'after ...ing': खाना खाकर (khana khakar) = after eating. Two syllables replace a whole English clause – 'having eaten, she washes up'."
   },
   {
     "id": "hi-1398",
@@ -16321,7 +16579,8 @@
       "travel"
     ],
     "grammarNode": "node-15",
-    "priority": 1425
+    "priority": 1425,
+    "grammar": "Liking flips: मुझे चाय पसंद है (mujhe chai pasand hai) = 'to me tea is pleasing'. The liker takes मुझे/को (mujhe/ko = to me/to); the tea is the subject."
   },
   {
     "id": "hi-1399",
@@ -16404,7 +16663,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 1243
+    "priority": 1243,
+    "grammar": "के हिसाब से (ke hisaab se) = 'by the account of' = according to: राजेश के हिसाब से = according to Rajesh. हिसाब (hisaab) means account or calculation."
   },
   {
     "id": "hi-1406",
@@ -16512,7 +16772,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 1315
+    "priority": 1315,
+    "grammar": "Vehicles drink fuel: कम पेट्रोल पीती है (kam petrol peeti hai) = uses less petrol, literally 'drinks less'. पीना (peena) also covers smoking – सिगरेट पीना."
   },
   {
     "id": "hi-1418",
@@ -16548,7 +16809,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 1522
+    "priority": 1522,
+    "grammar": "साबूदाने की खिचड़ी (sabudane ki khichdi = sago khichdi) is the classic व्रत (vrat = fast) meal – grains are avoided on fasting days, and sago isn't a grain."
   },
   {
     "id": "hi-1421",
@@ -16609,7 +16871,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 1504
+    "priority": 1504,
+    "grammar": "Doubling a word spreads it out: अलग-अलग (alag-alag = different-different) = all kinds of. Hindi repeats where English says 'various' or 'each'."
   },
   {
     "id": "hi-1426",
@@ -16707,7 +16970,8 @@
       "travel"
     ],
     "grammarNode": "node-15",
-    "priority": 1595
+    "priority": 1595,
+    "grammar": "With हमने (humne = we), the verb agrees with the thing made: बनाई (banai) is feminine because रोटी (roti) is – 'made' matches the roti, not us."
   },
   {
     "id": "hi-1434",
@@ -16815,7 +17079,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 1608
+    "priority": 1608,
+    "grammar": "There is no word for cousin – you describe the route: मामा का बेटा (mama ka beta) = mother's brother's son. Cousins are often simply called भाई (bhai = brother)."
   },
   {
     "id": "hi-1443",
@@ -16840,7 +17105,8 @@
       "travel"
     ],
     "grammarNode": "node-15",
-    "priority": 1782
+    "priority": 1782,
+    "grammar": "करोड़ों (karodon = crores of): Hindi counts big numbers as लाख (lakh = 100,000) and करोड़ (crore = 10 million) – 'million' barely exists in daily speech."
   },
   {
     "id": "hi-1445",
@@ -16889,7 +17155,8 @@
       "work"
     ],
     "grammarNode": "node-15",
-    "priority": 1659
+    "priority": 1659,
+    "grammar": "मेहनत रंग लाई (mehnat rang layi) = 'the hard work brought color' – the set idiom for effort paying off. In Hindi, success shows up as color."
   },
   {
     "id": "hi-1449",
@@ -17035,7 +17302,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 647
+    "priority": 647,
+    "grammar": "ही (hi) stresses the word before it: होती ही हैं (hoti hi hain) = simply ARE longer. This tiny word does what English does with voice stress or 'indeed'."
   },
   {
     "id": "hi-1462",
@@ -17509,7 +17777,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 930
+    "priority": 930,
+    "grammar": "'Best in the area' becomes 'the area's best': इलाके का सबसे अच्छा डॉक्टर (ilake ka sabse achchha doctor) – Hindi reaches for का (ka = of) where English says 'in'."
   },
   {
     "id": "hi-1504",
@@ -17577,7 +17846,8 @@
       "general"
     ],
     "grammarNode": "node-15",
-    "priority": 1369
+    "priority": 1369,
+    "grammar": "बनते हैं (bante hain) = 'get made': बनना (banna) is a verb meaning 'to be made', so लड्डू बनते हैं says laddoos get made with no doer mentioned."
   },
   {
     "id": "hi-1510",
@@ -17645,7 +17915,8 @@
       "travel"
     ],
     "grammarNode": "node-15",
-    "priority": 1277
+    "priority": 1277,
+    "grammar": "से can compare against an idea: उम्मीद से ज़्यादा (ummeed se zyada) = 'more than hope' = more than expected. Any noun can serve as the measuring stick."
   },
   {
     "id": "hi-1516",
@@ -17725,7 +17996,8 @@
       "work"
     ],
     "grammarNode": "node-16",
-    "priority": 1671
+    "priority": 1671,
+    "grammar": "किया करते थे (kiya karte the) adds 'made a habit of it' – the verb's -या (-ya) form + करना (karna) is a step more nostalgic than plain करते थे (karte the). Common when reminiscing."
   },
   {
     "id": "hi-1523",
@@ -17738,7 +18010,8 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "priority": 1690
+    "priority": 1690,
+    "grammar": "One respected grandmother, plural verb: दादी (dadi) takes सुनाती थीं (sunati theen), not थी (thi). Elders and parents get grammatical plural as respect."
   },
   {
     "id": "hi-1524",
@@ -17803,7 +18076,8 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 1742
+    "priority": 1742,
+    "grammar": "गाकर (gaakar = having sung) – adding -कर (-kar) to a verb means 'by/after doing it', chaining actions with no word for 'and': sang, and so put us to sleep."
   },
   {
     "id": "hi-1529",
@@ -17815,7 +18089,8 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 1768
+    "priority": 1768,
+    "grammar": "'Played chess well' – well is the adjective अच्छी (achchhi), agreeing with feminine शतरंज (shatranj). Manner words often match the object's gender."
   },
   {
     "id": "hi-1530",
@@ -17828,7 +18103,8 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "priority": 1692
+    "priority": 1692,
+    "grammar": "English 'play' splits in Hindi: instruments take बजाना (bajana = make sound) – बाँसुरी बजाता था (bansuri bajata tha). Games take खेलना (khelna). Never swap them."
   },
   {
     "id": "hi-1531",
@@ -17840,7 +18116,8 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "priority": 1638
+    "priority": 1638,
+    "grammar": "मीठा होता था (meetha hota tha) = 'used to be sweet, as a rule'. Plain था (tha) would pin it to one occasion – होता था signals a general truth back then."
   },
   {
     "id": "hi-1532",
@@ -17879,7 +18156,8 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "priority": 1630
+    "priority": 1630,
+    "grammar": "जाता था (jata tha), the -ता (-ta) form + था (tha), is Hindi's plain 'used to' – no extra word needed. पहले (pahle = earlier) just sets the scene."
   },
   {
     "id": "hi-1535",
@@ -17892,7 +18170,8 @@
       "work"
     ],
     "grammarNode": "node-16",
-    "priority": 1641
+    "priority": 1641,
+    "grammar": "साइकिल से (cycle se) = by bike – से (se) is the all-purpose 'by/with/from': vehicles, tools, and starting points all use the same little word."
   },
   {
     "id": "hi-1536",
@@ -17955,7 +18234,8 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "priority": 1994
+    "priority": 1994,
+    "grammar": "काग़ज़ की नावें (kagaz ki naavein) = boats of paper – की/का (ki/ka) marks material, and it agrees with the thing made: feminine की for the boats, not the paper."
   },
   {
     "id": "hi-1542",
@@ -17979,7 +18259,8 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "priority": 2041
+    "priority": 2041,
+    "grammar": "'Take us to the park' = ले जाते थे (le jate the), literally take-go. Bringing back is ले आना (le aana = take-come). Direction lives in the second verb."
   },
   {
     "id": "hi-1544",
@@ -18019,7 +18300,8 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "priority": 1930
+    "priority": 1930,
+    "grammar": "नानी के घर जाते थे (nani ke ghar jate the) = went to grandma's – घर (ghar) needs no word for 'to': 'grandma's home' alone is the destination."
   },
   {
     "id": "hi-1547",
@@ -18058,7 +18340,8 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "priority": 2282
+    "priority": 2282,
+    "grammar": "The passive is built on 'go': सुनाई जाती थीं (sunai jati theen) = used to be told, literally 'went being told'. Verb + जाना (jana) = passive."
   },
   {
     "id": "hi-1550",
@@ -18070,7 +18353,8 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 2469
+    "priority": 2469,
+    "grammar": "Hindi flips relative clauses: जिस मकान में हम रहते थे, वह (jis makaan mein hum rahte the, vah) = 'in which house we lived, THAT one'. The closing वह (vah) is required."
   },
   {
     "id": "hi-1551",
@@ -18107,7 +18391,8 @@
       "work"
     ],
     "grammarNode": "node-16",
-    "priority": 1592
+    "priority": 1592,
+    "grammar": "No subject at all: पूछते थे (poochhte the) alone means 'people used to ask'. Hindi drops a generic 'people/one' – the verb ending carries it."
   },
   {
     "id": "hi-1554",
@@ -18155,7 +18440,8 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 1487
+    "priority": 1487,
+    "grammar": "'Telling' stories = making them heard: सुनाती थीं (sunati theen) comes from सुनाना (sunana) – सुनना (sunna = hear) + make. Grandma made the stories heard."
   },
   {
     "id": "hi-1558",
@@ -18167,7 +18453,8 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "priority": 1548
+    "priority": 1548,
+    "grammar": "Trains walk in Hindi: ट्रेन चलती है (train chalti hai = the train walks). चलना (chalna) covers run, move, work – buses, machines, even watches चलते हैं (chalte hain)."
   },
   {
     "id": "hi-1559",
@@ -18191,7 +18478,8 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "priority": 1706
+    "priority": 1706,
+    "grammar": "जलेबी मिलती थी (jalebi milti thi) – jalebis 'were gotten', not sold: मिलना (milna) means to be available or received. The same verb also means 'to meet'."
   },
   {
     "id": "hi-1561",
@@ -18253,7 +18541,8 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "priority": 1581
+    "priority": 1581,
+    "grammar": "दूधवाला (doodhvala) = the milk one – वाला (vala) sticks to any noun and means 'the one with/of it': सब्ज़ीवाला (sabzivala), रिक्शावाला (rickshavala)."
   },
   {
     "id": "hi-1566",
@@ -18303,7 +18592,8 @@
       "work"
     ],
     "grammarNode": "node-16",
-    "priority": 1589
+    "priority": 1589,
+    "grammar": "'Came to buy' = ख़रीदने आता था (kharidne aata tha) – purpose takes the -ने (-ne) form of the verb, with no word for 'to' at all."
   },
   {
     "id": "hi-1570",
@@ -18352,7 +18642,8 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 1675
+    "priority": 1675,
+    "grammar": "Villages don't 'have' electricity – Hindi says it 'is in' them: गाँवों में बिजली नहीं होती थी (gaanvon mein bijli nahin hoti thi). There is no verb for 'have'."
   },
   {
     "id": "hi-1574",
@@ -18559,7 +18850,8 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 1667
+    "priority": 1667,
+    "grammar": "उन दिनों (un dinon) = in those days – no में (mein = in) needed. Time phrases in the -ों form work as 'in/during' on their own."
   },
   {
     "id": "hi-1594",
@@ -18672,7 +18964,8 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "priority": 1704
+    "priority": 1704,
+    "grammar": "मामा (mama) is only your mother's brother – dad's younger brother is चाचा (chacha), his elder ताऊ (tau). Hindi kinship always names the side."
   },
   {
     "id": "hi-1604",
@@ -18696,7 +18989,8 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 1890
+    "priority": 1890,
+    "grammar": "Quilts aren't worn, they're draped: रज़ाई ओढ़कर (razai odhkar). ओढ़ना (odhna) covers blankets and shawls; पहनना (pahnna) is for clothes on the body."
   },
   {
     "id": "hi-1606",
@@ -18707,7 +19001,8 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 1780
+    "priority": 1780,
+    "grammar": "गली-गली (gali-gali) = in every single lane – doubling a noun means 'each and every': घर-घर (ghar-ghar) = every house."
   },
   {
     "id": "hi-1607",
@@ -18732,7 +19027,8 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 1892
+    "priority": 1892,
+    "grammar": "Hindi drinks cigarettes: सिगरेट पीते थे (cigarette peete the). पीना (peena) covers both drinking and smoking – there is no separate verb."
   },
   {
     "id": "hi-1609",
@@ -18819,7 +19115,8 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "priority": 2023
+    "priority": 2023,
+    "grammar": "खाना खाते थे (khana khate the) = 'ate food' – खाना (khana) is both 'food' and 'to eat', so having a meal doubles it. Perfectly normal Hindi."
   },
   {
     "id": "hi-1616",
@@ -18855,7 +19152,8 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 1946
+    "priority": 1946,
+    "grammar": "हम (hum = we) lands after the verb: पकड़ते थे हम (pakadte the hum) – spoken Hindi tosses known info behind the verb. Neutral order keeps the verb last."
   },
   {
     "id": "hi-1619",
@@ -18878,7 +19176,8 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 2056
+    "priority": 2056,
+    "grammar": "You take fun in Hindi, not have it: तैरने का मज़ा लेते थे (tairne ka maza lete the) = took the fun of swimming. Enjoying = मज़ा लेना (maza lena)."
   },
   {
     "id": "hi-1622",
@@ -19148,7 +19447,8 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 2204
+    "priority": 2204,
+    "grammar": "जब हम छोटे थे, तो (jab hum chhote the, to) = 'when we were small, then' – a जब (jab) clause usually opens its main clause with तो (to), which English never translates."
   },
   {
     "id": "hi-1644",
@@ -19221,7 +19521,8 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "priority": 2613
+    "priority": 2613,
+    "grammar": "आ जाती तो (aa jaati to) = 'had she come' – the unreal past drops था (tha) entirely. A bare -ती/-ता (-ti/-ta) verb signals 'if only it had happened'."
   },
   {
     "id": "hi-1651",
@@ -19339,7 +19640,8 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 1757
+    "priority": 1757,
+    "grammar": "खा लिया (kha liya) = ate it UP – adding लेना (lena = take) marks an action as fully done. The दीमक (deemak = termites) didn't just eat, they finished the job."
   },
   {
     "id": "hi-1661",
@@ -19384,7 +19686,8 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 1816
+    "priority": 1816,
+    "grammar": "भोर होते ही (bhor hote hi) = the instant dawn broke – verb in -ते (-te) + ही (hi) means 'as soon as'. Works anywhere: आते ही (aate hi) = right on arriving."
   },
   {
     "id": "hi-1665",
@@ -19451,7 +19754,8 @@
       "general"
     ],
     "grammarNode": "node-16",
-    "priority": 1825
+    "priority": 1825,
+    "grammar": "Superlatives compare against everyone: सबसे आगे (sabse aage) = 'ahead of all' = furthest ahead. सबसे (sabse) + adjective is how Hindi says '-est'."
   },
   {
     "id": "hi-1671",
@@ -19565,7 +19869,8 @@
       "travel"
     ],
     "grammarNode": "node-16",
-    "priority": 2220
+    "priority": 2220,
+    "grammar": "कच्चे आम (kachche aam) = raw mangoes – कच्चा (kachcha) is one word for unripe, uncooked, unpaved, half-done. Its opposite पक्का (pakka) covers ripe, cooked, solid."
   },
   {
     "id": "hi-1681",
@@ -19591,7 +19896,8 @@
       "travel"
     ],
     "grammarNode": "node-17",
-    "priority": 1426
+    "priority": 1426,
+    "grammar": "Position words follow the noun in Hindi: दीवार के पीछे (deewaar ke peechhe) is 'the wall behind' – the reverse of English 'behind the wall'."
   },
   {
     "id": "hi-1683",
@@ -19617,7 +19923,8 @@
       "travel"
     ],
     "grammarNode": "node-17",
-    "priority": 1520
+    "priority": 1520,
+    "grammar": "बीचोबीच (beechobeech) is बीच (beech = middle) doubled: पुणे के बीचोबीच (Pune ke beechobeech) = right in the center of Pune. Doubling adds the 'exactly'."
   },
   {
     "id": "hi-1685",
@@ -19641,7 +19948,8 @@
       "general"
     ],
     "grammarNode": "node-17",
-    "priority": 1451
+    "priority": 1451,
+    "grammar": "Hindi has no verb for 'have'. नरेश के पास (Naresh ke paas) is literally 'near Naresh' – so 'Naresh has 500 rupees' comes out as 'near Naresh are 500 rupees'."
   },
   {
     "id": "hi-1688",
@@ -19653,7 +19961,8 @@
       "travel"
     ],
     "grammarNode": "node-17",
-    "priority": 1627
+    "priority": 1627,
+    "grammar": "के ऊपर (ke oopar) alone means sitting on top. Motion across adds से (se): पुल के ऊपर से गुज़रती है (pul ke oopar se guzarti hai) = passes over the bridge."
   },
   {
     "id": "hi-1689",
@@ -19676,7 +19985,8 @@
       "general"
     ],
     "grammarNode": "node-17",
-    "priority": 1773
+    "priority": 1773,
+    "grammar": "With pronouns, के fuses in: आपके पास (aapke paas) = 'you have' – one word आपके (aapke), never आप के (aap ke). Same fusion in मेरे (mere) and उसके (uske)."
   },
   {
     "id": "hi-1691",
@@ -19962,7 +20272,8 @@
       "general"
     ],
     "grammarNode": "node-17",
-    "priority": 1347
+    "priority": 1347,
+    "grammar": "Nouns ending in -आ shift to -ए before position words: दरवाज़ा (darvaaza = door) becomes दरवाज़े के अंदर (darvaaze ke andar = inside the doorway)."
   },
   {
     "id": "hi-1714",
@@ -19999,7 +20310,8 @@
       "travel"
     ],
     "grammarNode": "node-17",
-    "priority": 1495
+    "priority": 1495,
+    "grammar": "कौन (kaun = who) and क्या (kya = what) both become किस (kis) before a position word: किस गली में (kis galee mein = in which lane)."
   },
   {
     "id": "hi-1717",
@@ -20023,7 +20335,8 @@
       "general"
     ],
     "grammarNode": "node-17",
-    "priority": 1745
+    "priority": 1745,
+    "grammar": "'Wait for me' is मेरा इंतज़ार करना (mera intazaar karna) – literally 'do my waiting'. Hindi says whose waiting it is, not who you wait for."
   },
   {
     "id": "hi-1719",
@@ -20096,7 +20409,8 @@
       "travel"
     ],
     "grammarNode": "node-17",
-    "priority": 1665
+    "priority": 1665,
+    "grammar": "के हिसाब से (ke hisaab se) = 'according to', literally 'by the account of': नक्शे के हिसाब से (nakshe ke hisaab se) = going by the map."
   },
   {
     "id": "hi-1726",
@@ -20156,7 +20470,8 @@
       "travel"
     ],
     "grammarNode": "node-17",
-    "priority": 1986
+    "priority": 1986,
+    "grammar": "A verb before के लिए (ke lie = for) takes the -ने form: जाना (jaana = to go) becomes जाने (jaane): स्टेशन जाने के लिए (station jaane ke lie) = to get to the station."
   },
   {
     "id": "hi-1731",
@@ -20181,7 +20496,8 @@
       "travel"
     ],
     "grammarNode": "node-17",
-    "priority": 2118
+    "priority": 2118,
+    "grammar": "बिना (bina = without) wraps its noun: बिना छाते के (bina chhaate ke = without an umbrella) – bina goes before the noun, ke comes after."
   },
   {
     "id": "hi-1733",
@@ -20219,7 +20535,8 @@
       "work"
     ],
     "grammarNode": "node-17",
-    "priority": 2289
+    "priority": 2289,
+    "grammar": "'Instead of' is की जगह (kee jagah), literally 'at the place of': बिरयानी की जगह पुलाव (biryaanee kee jagah pulaav) = pulao in biryani's place."
   },
   {
     "id": "hi-1736",
@@ -20266,7 +20583,8 @@
       "general"
     ],
     "grammarNode": "node-17",
-    "priority": 2385
+    "priority": 2385,
+    "grammar": "Tiny ही (hee) means 'right/exactly': ऑफ़िस के सामने ही (office ke saamne hee) = right in front of the office, that exact spot."
   },
   {
     "id": "hi-1740",
@@ -20373,7 +20691,8 @@
       "general"
     ],
     "grammarNode": "node-17",
-    "priority": 1802
+    "priority": 1802,
+    "grammar": "से (se) usually means 'from', but with motion it can be 'through': दरवाज़े से गुज़रकर (darvaaze se guzarkar) = passing through the doorway."
   },
   {
     "id": "hi-1749",
@@ -20408,7 +20727,8 @@
       "general"
     ],
     "grammarNode": "node-17",
-    "priority": 1977
+    "priority": 1977,
+    "grammar": "An instruction can be just the -ना form: मुड़ जाना (mud jaana) = 'turn' as a gentle command, softer than the direct मुड़ो (mudo). Common in directions."
   },
   {
     "id": "hi-1752",
@@ -20419,7 +20739,8 @@
       "general"
     ],
     "grammarNode": "node-17",
-    "priority": 2115
+    "priority": 2115,
+    "grammar": "'About' is three words: के बारे में (ke baare mein), literally 'in the matter of': पैसे के बारे में (paise ke baare mein) = about money."
   },
   {
     "id": "hi-1753",
@@ -20467,14 +20788,15 @@
       "travel"
     ],
     "grammarNode": "node-18",
-    "priority": 1944
+    "priority": 1944,
+    "grammar": "Hindi 'until' carries a built-in not: जब तक अंजलि नहीं आती (jab tak Anjali nahin aati) is literally 'as long as Anjali doesn't come'. English has no negative there – Hindi requires the नहीं."
   },
   {
     "id": "hi-1757",
     "target": "अगर तबीयत ठीक रही तो कल ऑफिस जाऊँगा।",
     "english": "If I feel well, I'll go to the office tomorrow.",
     "audio": "hi-hi-1757.mp3",
-    "grammar": "Position is critical: `मैं भी कल जाऊँगा` (I'll go tomorrow too – same as others) vs `मैं कल भी जाऊँगा` (I'll go tomorrow again, in addition to today). Move the particle, change the emphasis.",
+    "grammar": "The if-clause looks past: ठीक रही (theek rahi = stayed fine) even though it's about tomorrow. Hindi often uses a past form after अगर (agar = if) for future conditions.",
     "tags": [
       "general"
     ],
@@ -20550,7 +20872,8 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "priority": 1575
+    "priority": 1575,
+    "grammar": "दूध ले आना (doodh le aana) looks like 'to bring milk' but works as a command for later: bring it when you go. The -ना form is Hindi's gentle do-it-later imperative."
   },
   {
     "id": "hi-1765",
@@ -20586,7 +20909,8 @@
       "travel"
     ],
     "grammarNode": "node-18",
-    "priority": 1538
+    "priority": 1538,
+    "grammar": "Hindi relatives lead: जो चाबी मेज़ पर है, वह (jo chaabi mez par hai, vah) = 'which key is on the table, that one'. The जो clause comes first, then वह picks it up – reversed from English."
   },
   {
     "id": "hi-1768",
@@ -20645,7 +20969,8 @@
       "general"
     ],
     "grammarNode": "node-18",
-    "priority": 1669
+    "priority": 1669,
+    "grammar": "No tense shift in reported speech: कहा कि वह जल्दी आएगी (kaha ki vah jaldi aayegi) = 'said that she WILL come soon'. Hindi keeps the original future where English backshifts to 'would'."
   },
   {
     "id": "hi-1773",
@@ -20738,7 +21063,8 @@
       "travel"
     ],
     "grammarNode": "node-18",
-    "priority": 1763
+    "priority": 1763,
+    "grammar": "जैसे ही ट्रेन आए (jaise hi train aae): the short आए signals the train hasn't come yet. Awaited events in time clauses take this form – not आती है (aati hai = comes) or आएगी (aayegi = will come)."
   },
   {
     "id": "hi-1781",
@@ -20891,7 +21217,8 @@
       "work"
     ],
     "grammarNode": "node-18",
-    "priority": 2036
+    "priority": 2036,
+    "grammar": "चाहे कुछ भी हो (chaahe kuchh bhi ho) = 'no matter what', literally 'whether anything even be'. चाहे plus the bare हो covers every possibility at once."
   },
   {
     "id": "hi-1796",
@@ -21269,7 +21596,8 @@
       "general"
     ],
     "grammarNode": "node-19",
-    "priority": 898
+    "priority": 898,
+    "grammar": "बंद कर दो (band kar do) – the added दो (do = give) marks the action as done for someone else. Plain बंद करो (band karo) is the bare order; कर दो adds 'for me'."
   },
   {
     "id": "hi-1829",
@@ -21304,7 +21632,8 @@
       "general"
     ],
     "grammarNode": "node-19",
-    "priority": 891
+    "priority": 891,
+    "grammar": "तैयार हो जा (taiyar ho ja) uses the bare stem – the तू (tu) command kept for kids and very close friends. With anyone else it sounds harsh: use हो जाओ (ho jao)."
   },
   {
     "id": "hi-1832",
@@ -21339,7 +21668,8 @@
       "general"
     ],
     "grammarNode": "node-19",
-    "priority": 1054
+    "priority": 1054,
+    "grammar": "A final ना (na) turns an order into coaxing: चाय बना दो ना (chai bana do na) = 'come on, make some tea, won't you'. Here ना pleads – it doesn't negate."
   },
   {
     "id": "hi-1835",
@@ -21480,7 +21810,8 @@
       "general"
     ],
     "grammarNode": "node-19",
-    "priority": 1047
+    "priority": 1047,
+    "grammar": "The -इए (-iye) ending marks a polite command: बंद कर दीजिए (band kar dijiye) is for people you call आप (aap) – with friends it drops to बंद कर दो (band kar do)."
   },
   {
     "id": "hi-1847",
@@ -21491,7 +21822,8 @@
       "general"
     ],
     "grammarNode": "node-19",
-    "priority": 1134
+    "priority": 1134,
+    "grammar": "For states, Hindi commands the change with हो जाना (ho jana = become): शांत हो जाइए (shaant ho jaiye) is literally 'become quiet', not 'be quiet'."
   },
   {
     "id": "hi-1848",
@@ -21502,7 +21834,8 @@
       "general"
     ],
     "grammarNode": "node-19",
-    "priority": 926
+    "priority": 926,
+    "grammar": "करना (karna) has an irregular polite command – कीजिए (kijiye), not kariye: मदद कीजिए (madad kijiye = please help). देना and लेना match: दीजिए (dijiye), लीजिए (lijiye)."
   },
   {
     "id": "hi-1849",
@@ -21597,7 +21930,8 @@
       "general"
     ],
     "grammarNode": "node-19",
-    "priority": 1043
+    "priority": 1043,
+    "grammar": "Commands say no with मत (mat), not नहीं (nahin): ऐसा मत करो (aisa mat karo = don't do that). नहीं belongs to statements; मत is the don't-word."
   },
   {
     "id": "hi-1858",
@@ -21621,7 +21955,8 @@
       "general"
     ],
     "grammarNode": "node-19",
-    "priority": 1270
+    "priority": 1270,
+    "grammar": "Hindi chains steps with -कर (-kar = having done): हाथ धोकर खाना खाओ (haath dhokar khana khao) = 'having washed hands, eat'. One sentence, no 'and then'."
   },
   {
     "id": "hi-1860",
@@ -21719,7 +22054,8 @@
       "travel"
     ],
     "grammarNode": "node-19",
-    "priority": 1363
+    "priority": 1363,
+    "grammar": "A command for later uses the -ना form: दवाई समय पर लेना (davai samay par lena) = take your medicine when the time comes. लो (lo) would mean do it right now."
   },
   {
     "id": "hi-1868",
@@ -21842,7 +22178,8 @@
       "work"
     ],
     "grammarNode": "node-19",
-    "priority": 2032
+    "priority": 2032,
+    "grammar": "Relaying an order: नरेश से कहिए कि (Naresh se kahiye ki = tell Naresh that) + आ जाए (aa jae = he should come). The relayed verb shifts to the should-form, not आओ (aao)."
   },
   {
     "id": "hi-1878",
@@ -22069,7 +22406,8 @@
       "general"
     ],
     "grammarNode": "node-19",
-    "priority": 1574
+    "priority": 1574,
+    "grammar": "रहिए (rahiye) after बैठे keeps a state going: बैठे रहिए (baithe rahiye) = remain seated. बैठिए (baithiye) alone would invite them to sit down."
   },
   {
     "id": "hi-1898",
@@ -22200,7 +22538,8 @@
       "general"
     ],
     "grammarNode": "node-19",
-    "priority": 1652
+    "priority": 1652,
+    "grammar": "जी (ji) after a name adds respect: सुनील जी (Sunil ji) is like 'Mr Sunil' but warmer – used for elders, customers, anyone you'd call आप (aap)."
   },
   {
     "id": "hi-1909",
@@ -22246,7 +22585,8 @@
       "work"
     ],
     "grammarNode": "node-19",
-    "priority": 1790
+    "priority": 1790,
+    "grammar": "ज़रा (zara = just a little) softens a command the way English 'just' does: ज़रा एक टैक्सी बुक कर दो (zara ek taxi book kar do) sounds friendly, not bossy."
   },
   {
     "id": "hi-1913",
@@ -22258,7 +22598,8 @@
       "general"
     ],
     "grammarNode": "node-19",
-    "priority": 1864
+    "priority": 1864,
+    "grammar": "Being heard is phrased with देना (dena = give): सुनाई नहीं दे रहा (sunai nahin de raha) = literally 'not giving to hearing' = can't be heard. Seeing works the same: दिखाई देना (dikhai dena)."
   },
   {
     "id": "hi-1914",
@@ -22305,7 +22646,8 @@
       "work"
     ],
     "grammarNode": "node-19",
-    "priority": 1969
+    "priority": 1969,
+    "grammar": "भैया (bhaiya = brother) is the normal way to address a shopkeeper you don't know – Hindi uses family words for friendly strangers, so no name needed."
   },
   {
     "id": "hi-1918",
@@ -22352,7 +22694,8 @@
       "general"
     ],
     "grammarNode": "node-19",
-    "priority": 1866
+    "priority": 1866,
+    "grammar": "चलो (chalo = let's go) opens a 'let's' suggestion, then the verb stays plain: ताज़ी हवा लेते हैं (taazi hawa lete hain) = 'we take fresh air', meaning let's."
   },
   {
     "id": "hi-1923",
@@ -22436,7 +22779,8 @@
       "travel"
     ],
     "grammarNode": "node-19",
-    "priority": 2139
+    "priority": 2139,
+    "grammar": "A helper लो (lo, from लेना = take) marks the action as for your own benefit: छाता साथ ले लो (chhata saath le lo) = take the umbrella along, for yourself. Acting for others uses दो (do) instead."
   },
   {
     "id": "hi-1931",
@@ -22552,7 +22896,8 @@
       "travel"
     ],
     "grammarNode": "node-19",
-    "priority": 1503
+    "priority": 1503,
+    "grammar": "करा (kara) means someone else does it: पासबुक अपडेट करा लो (passbook update kara lo) = get it updated – the clerk does the work, not you."
   },
   {
     "id": "hi-1941",
@@ -22956,7 +23301,8 @@
       "general"
     ],
     "grammarNode": "node-20",
-    "priority": 1380
+    "priority": 1380,
+    "grammar": "चुकना (chukna) is a whole verb meaning 'already done': हो चुकी है (ho chuki hai) = has already happened. Hindi needs no separate word for 'already'."
   },
   {
     "id": "hi-1976",
@@ -23005,7 +23351,8 @@
       "travel"
     ],
     "grammarNode": "node-20",
-    "priority": 1260
+    "priority": 1260,
+    "grammar": "उठा ले गया (utha le gaya) stacks three verbs – picked-took-went. ले जाना (le jaana = take-go) is carrying something away; ले आना (le aana) is bringing it."
   },
   {
     "id": "hi-1980",
@@ -23053,7 +23400,8 @@
       "work"
     ],
     "grammarNode": "node-20",
-    "priority": 1983
+    "priority": 1983,
+    "grammar": "खा लिया (kha liya) adds लेना (lena = take) to 'eat' – the action lands on yourself, fully finished. Plain खाया (khaya) = ate; खा लिया = ate it all up."
   },
   {
     "id": "hi-1984",
@@ -23123,7 +23471,8 @@
       "general"
     ],
     "grammarNode": "node-20",
-    "priority": 1565
+    "priority": 1565,
+    "grammar": "ठंडी हो गई (thandi ho gayi) = 'became cold, gone' – जाना (jaana = go) after a verb stamps the change as complete. The tea isn't cooling; it's already cold."
   },
   {
     "id": "hi-1990",
@@ -23147,7 +23496,8 @@
       "general"
     ],
     "grammarNode": "node-20",
-    "priority": 1513
+    "priority": 1513,
+    "grammar": "Doubling a word tightens it in Hindi: अभी (abhi) = now, अभी-अभी (abhi-abhi) = just this instant. The bus is barely out of sight."
   },
   {
     "id": "hi-1992",
@@ -23450,7 +23800,8 @@
       "general"
     ],
     "grammarNode": "node-20",
-    "priority": 2091
+    "priority": 2091,
+    "grammar": "ट्रेन छूट गई (train chhoot gayi) = 'the train slipped away' – the train is the subject, not you. Hindi reports the mishap with no 'I' taking the blame."
   },
   {
     "id": "hi-2019",
@@ -23475,7 +23826,8 @@
       "work"
     ],
     "grammarNode": "node-20",
-    "priority": 1953
+    "priority": 1953,
+    "grammar": "पढ़ डाली (padh daali) tacks डालना (daalna = throw) onto 'read' – the flavor is doing it in one intense sweep. A whole book in one night earns डाली."
   },
   {
     "id": "hi-2021",
@@ -23524,7 +23876,8 @@
       "general"
     ],
     "grammarNode": "node-20",
-    "priority": 1059
+    "priority": 1059,
+    "grammar": "रो पड़ा (ro pada) puts पड़ना (padna = fall) after 'cry' – it marks a sudden, uncontrolled burst. Suresh didn't decide to cry; the tears just came."
   },
   {
     "id": "hi-2025",
@@ -23670,7 +24023,8 @@
       "general"
     ],
     "grammarNode": "node-20",
-    "priority": 1713
+    "priority": 1713,
+    "grammar": "भेज दिया (bhej diya) ends in देना (dena = give) – the action moves away from you, toward someone else. Its mirror is लेना (lena) for actions done for yourself."
   },
   {
     "id": "hi-2039",
@@ -23843,7 +24197,8 @@
       "work"
     ],
     "grammarNode": "node-21",
-    "priority": 1432
+    "priority": 1432,
+    "grammar": "English says 'one who studies'; Hindi puts the future in both halves: जो पढ़ेगा, वो आगे बढ़ेगा (jo parhega, vo aage barhega = who will study, he will move ahead)."
   },
   {
     "id": "hi-2054",
@@ -23867,7 +24222,8 @@
       "travel"
     ],
     "grammarNode": "node-21",
-    "priority": 1442
+    "priority": 1442,
+    "grammar": "Doubling spreads the meaning: जहाँ-जहाँ... वहाँ-वहाँ (jahaan-jahaan... vahaan-vahaan = in each place... in each such place). Single जहाँ (jahaan) = where; doubled = every single place."
   },
   {
     "id": "hi-2056",
@@ -23903,7 +24259,8 @@
       "work"
     ],
     "grammarNode": "node-21",
-    "priority": 1898
+    "priority": 1898,
+    "grammar": "Hindi doesn't embed 'that you gave' – it leads with it: जो किताब तुमने दी (jo kitaab tumne di = which book you gave), then वह (vah = that) restarts the sentence."
   },
   {
     "id": "hi-2059",
@@ -23916,7 +24273,8 @@
       "travel"
     ],
     "grammarNode": "node-21",
-    "priority": 1922
+    "priority": 1922,
+    "grammar": "वही (vahi) is वह + ही: जो मेहनत करता है वही (jo mehnat karta hai vahi = who works hard, that one exactly) succeeds – the ही adds 'and nobody else'."
   },
   {
     "id": "hi-2060",
@@ -23986,7 +24344,8 @@
       "travel"
     ],
     "grammarNode": "node-21",
-    "priority": 1875
+    "priority": 1875,
+    "grammar": "Hindi names the noun twice: जिस दिन... उस दिन (jis din... us din = which day... that day). English says 'the day it rained' once – Hindi echoes it in both halves."
   },
   {
     "id": "hi-2066",
@@ -24035,7 +24394,8 @@
       "work"
     ],
     "grammarNode": "node-21",
-    "priority": 2216
+    "priority": 2216,
+    "grammar": "जो (jo = which) bends before a position word, like who–whom: जिस कमरे में (jis kamre mein = in which room). When में, से or पर follows, singular jo becomes jis."
   },
   {
     "id": "hi-2071",
@@ -24119,7 +24479,8 @@
       "general"
     ],
     "grammarNode": "node-21",
-    "priority": 2210
+    "priority": 2210,
+    "grammar": "Add भी (bhi = even) to जो and 'who' becomes 'whoever': जो भी यहाँ आता है (jo bhi yahaan aata hai = whoever comes here). The same trick works on where and when words."
   },
   {
     "id": "hi-2080",
@@ -24180,7 +24541,8 @@
       "general"
     ],
     "grammarNode": "node-21",
-    "priority": 1693
+    "priority": 1693,
+    "grammar": "जैसा अमित ने बताया, वैसा ही हुआ (jaisa Amit ne bataya, vaisa hi hua = the way Amit said, exactly that way it happened) – English drops the 'that way' half; Hindi keeps it."
   },
   {
     "id": "hi-2085",
@@ -24319,7 +24681,8 @@
       "work"
     ],
     "grammarNode": "node-21",
-    "priority": 1911
+    "priority": 1911,
+    "grammar": "Hindi has no verb 'have' – owning sits near you: जिसके पास ज्ञान है (jiske paas gyaan hai = near whom knowledge is) means 'whoever has knowledge'."
   },
   {
     "id": "hi-2097",
@@ -24505,7 +24868,8 @@
       "work"
     ],
     "grammarNode": "node-21",
-    "priority": 2294
+    "priority": 2294,
+    "grammar": "पूरा हो ही गया (poora ho hi gaya = did finally get done): slipping ही (hi) inside the verb adds 'at last, despite everything'. Without it, the work just got done – no relief."
   },
   {
     "id": "hi-2114",
@@ -24797,7 +25161,8 @@
       "work"
     ],
     "grammarNode": "node-22",
-    "priority": 1869
+    "priority": 1869,
+    "grammar": "One English word, three Hindi verbs: रद्द कर दी गई (radd kar di gai = was cancelled) stacks do + give + go. The compound कर देना (kar dena) survives inside the passive."
   },
   {
     "id": "hi-2142",
@@ -24809,7 +25174,8 @@
       "travel"
     ],
     "grammarNode": "node-22",
-    "priority": 1750
+    "priority": 1750,
+    "grammar": "बनाई जा रही है (banai ja rahi hai = is being built) is feminine throughout to match सड़क (sadak = road) – both parts of a Hindi passive agree with the subject."
   },
   {
     "id": "hi-2143",
@@ -24833,7 +25199,8 @@
       "travel"
     ],
     "grammarNode": "node-22",
-    "priority": 2159
+    "priority": 2159,
+    "grammar": "Hindi builds the passive with जाना (jana = to go): बनाया गया था (banaya gaya tha = was built) is literally 'built went was'. The 'go' verb, not 'be', is what makes it passive."
   },
   {
     "id": "hi-2145",
@@ -24894,7 +25261,8 @@
       "general"
     ],
     "grammarNode": "node-22",
-    "priority": 1925
+    "priority": 1925,
+    "grammar": "द्वारा (dwara = by) marks who did it: पुलिस द्वारा (pulis dwara = by the police). It's formal, news-report Hindi – everyday speech usually just doesn't name the doer."
   },
   {
     "id": "hi-2150",
@@ -24930,7 +25298,8 @@
       "general"
     ],
     "grammarNode": "node-22",
-    "priority": 2001
+    "priority": 2001,
+    "grammar": "There's no word for 'as': सर्वश्रेष्ठ खिलाड़ी चुना गया (sarvashreshth khiladi chuna gaya) is just 'best player was chosen' – the role sits bare next to the verb."
   },
   {
     "id": "hi-2154",
@@ -24988,7 +25357,8 @@
       "work"
     ],
     "grammarNode": "node-22",
-    "priority": 2147
+    "priority": 2147,
+    "grammar": "English makes 'students' the subject of 'were given'. Hindi doesn't: छात्रों को (chhatron ko = to the students) stays, and दी गई (di gai) agrees with वर्दी (vardi = uniform)."
   },
   {
     "id": "hi-2160",
@@ -25254,7 +25624,8 @@
       "work"
     ],
     "grammarNode": "node-22",
-    "priority": 2300
+    "priority": 2300,
+    "grammar": "बनी है (bani hai) is not a passive – it's बनना (banna = to get made). Hindi often says 'the library became' where English needs 'was built', no जाना (jana) involved."
   },
   {
     "id": "hi-2182",
@@ -25338,7 +25709,8 @@
       "travel"
     ],
     "grammarNode": "node-22",
-    "priority": 2557
+    "priority": 2557,
+    "grammar": "No one says who considers: मानते हैं (maante hain = [people] consider) has no subject at all. Where English says 'is considered', Hindi often just drops the 'they'."
   },
   {
     "id": "hi-2189",
@@ -25582,7 +25954,8 @@
       "general"
     ],
     "grammarNode": "node-22",
-    "priority": 2254
+    "priority": 2254,
+    "grammar": "A sentence is announced aloud in Hindi: सज़ा सुनाई गई (saza sunai gai) is literally 'the punishment was made heard' – सुनाना (sunana) means to make someone hear."
   },
   {
     "id": "hi-2210",
@@ -25684,7 +26057,8 @@
       "general"
     ],
     "grammarNode": "node-22",
-    "priority": 2412
+    "priority": 2412,
+    "grammar": "बनवाया (banvaya) is not plain 'built' – the -वा- (-va-) means the Mughals had it built by others. बनाया (banaya) = built it yourself; बनवाया = got it built."
   },
   {
     "id": "hi-2219",
@@ -25823,7 +26197,8 @@
       "travel"
     ],
     "grammarNode": "node-22",
-    "priority": 2720
+    "priority": 2720,
+    "grammar": "जाने से मना है (jane se mana hai) is literally 'there is refusal from going' – the banned action takes से (se = from). That's the standard 'not allowed' pattern on signs."
   },
   {
     "id": "hi-2231",
@@ -25958,7 +26333,8 @@
       "general"
     ],
     "grammarNode": "node-23",
-    "priority": 2060
+    "priority": 2060,
+    "grammar": "Completed actions mark the doer with ने: मैंने (maine = I). The verb then agrees with the object – निकाले (nikaale) is plural for पैसे (paise = money), not for 'I'."
   },
   {
     "id": "hi-2242",
@@ -26030,7 +26406,8 @@
       "general"
     ],
     "grammarNode": "node-23",
-    "priority": 2297
+    "priority": 2297,
+    "grammar": "Hugging is neck-based: गले लगाया (gale lagaya) is literally 'attached to the neck'. गला (gala) means the neck-throat area – that's where the hug happens."
   },
   {
     "id": "hi-2249",
@@ -26054,7 +26431,8 @@
       "work"
     ],
     "grammarNode": "node-23",
-    "priority": 2169
+    "priority": 2169,
+    "grammar": "You give an exam in Hindi to take it: परीक्षा दी (pariksha di = gave the exam). The examiner is the one who takes it – परीक्षा ली (pariksha li). Reversed from English."
   },
   {
     "id": "hi-2251",
@@ -26079,7 +26457,7 @@
     ],
     "grammarNode": "node-23",
     "priority": 2280,
-    "grammar": "Adding `जी` shows respect or warmth. Family elders get it baked in: `पिताजी` (father), `माताजी` (mother), `दादीजी` (granny). Names too: `रामजी`, `सरकारजी`."
+    "grammar": "Adding जी (ji) shows respect or warmth: दादाजी (dadaji = respected grandfather). Elders often get it built in – पिताजी (pitaji), माताजी (mataji)."
   },
   {
     "id": "hi-2253",
@@ -26277,7 +26655,8 @@
       "general"
     ],
     "grammarNode": "node-23",
-    "priority": 2272
+    "priority": 2272,
+    "grammar": "No ने (ne) here – बचाती है (bachati hai = saves) is a habit, and ने only marks completed past actions. Present-tense doers stay plain: गीता (Geeta), not गीता ने."
   },
   {
     "id": "hi-2270",
@@ -26338,7 +26717,8 @@
       "general"
     ],
     "grammarNode": "node-23",
-    "priority": 2491
+    "priority": 2491,
+    "grammar": "Even in the past, ने (ne) skips motion verbs: चली गई (chali gayi = went off) takes no ने. Only verbs that act on an object use it."
   },
   {
     "id": "hi-2275",
@@ -26388,7 +26768,8 @@
       "travel"
     ],
     "grammarNode": "node-23",
-    "priority": 2718
+    "priority": 2718,
+    "grammar": "English words become Hindi verbs through किया (kiya = did): बुक किया (book kiya) = booked. Same pattern for फ़ोन किया (phone kiya) and ऑर्डर किया (order kiya)."
   },
   {
     "id": "hi-2279",
@@ -26565,7 +26946,8 @@
       "general"
     ],
     "grammarNode": "node-23",
-    "priority": 2273
+    "priority": 2273,
+    "grammar": "Bills get filled, not paid: बिल भर दिया (bill bhar diya = filled the bill). भरना (bharna = to fill) covers paying bills, fees and fines."
   },
   {
     "id": "hi-2294",
@@ -26680,7 +27062,8 @@
       "general"
     ],
     "grammarNode": "node-23",
-    "priority": 2549
+    "priority": 2549,
+    "grammar": "Adding दिया (diya = gave) to a verb means done for someone else: गरम कर दिया (garam kar diya) – heated it for me. With लिया (liya = took) it would be for herself."
   },
   {
     "id": "hi-2304",
@@ -26728,7 +27111,8 @@
       "travel"
     ],
     "grammarNode": "node-24",
-    "priority": 1524
+    "priority": 1524,
+    "grammar": "Hindi skips 'get' – things turn up instead: मिलेगा (milega = will be found). You ask where the ticket will be found, not where you can get it."
   },
   {
     "id": "hi-2308",
@@ -26752,7 +27136,8 @@
       "travel"
     ],
     "grammarNode": "node-24",
-    "priority": 1886
+    "priority": 1886,
+    "grammar": "रुक जाएगी (ruk jaayegi) adds जाना (jaana = to go) to 'stop' – the go-verb marks a complete change: the rain won't just pause, it will stop for good."
   },
   {
     "id": "hi-2310",
@@ -26764,7 +27149,8 @@
       "travel"
     ],
     "grammarNode": "node-24",
-    "priority": 1927
+    "priority": 1927,
+    "grammar": "Future verbs carry gender: दुकान (dukaan = shop) is feminine, so it खुलेगी (khulegi), ending in -egi. A masculine subject would take खुलेगा (khulega)."
   },
   {
     "id": "hi-2311",
@@ -26812,7 +27198,8 @@
       "travel"
     ],
     "grammarNode": "node-24",
-    "priority": 1902
+    "priority": 1902,
+    "grammar": "चलोगे (chaloge) is an invite: चलना (chalna) means going along together, so this asks 'coming to the market with me?' Going on your own is जाना (jaana)."
   },
   {
     "id": "hi-2315",
@@ -26851,7 +27238,8 @@
       "travel"
     ],
     "grammarNode": "node-24",
-    "priority": 2028
+    "priority": 2028,
+    "grammar": "Polite offers use 'take', not 'have': चाय लेंगे? (chaay lenge? = will you take tea?). Future + लेना (lena) is the standard courteous way to offer."
   },
   {
     "id": "hi-2318",
@@ -26938,7 +27326,8 @@
       "travel"
     ],
     "grammarNode": "node-24",
-    "priority": 2006
+    "priority": 2006,
+    "grammar": "डेढ़ (dedh) is one word meaning exactly 'one and a half' – Hindi gives 1.5 and 2.5 their own words (ढाई / dhaai = 2.5) rather than phrases."
   },
   {
     "id": "hi-2325",
@@ -27035,7 +27424,8 @@
       "travel"
     ],
     "grammarNode": "node-24",
-    "priority": 2372
+    "priority": 2372,
+    "grammar": "One doctor, plural verb: देखेंगे (dekhenge) is the respectful plural. Singular देखेगा (dekhega) here would sound rude – respect makes one person grammatically plural."
   },
   {
     "id": "hi-2333",
@@ -27108,7 +27498,8 @@
       "travel"
     ],
     "grammarNode": "node-24",
-    "priority": 2380
+    "priority": 2380,
+    "grammar": "In Hindi directions, landmarks come to you: अस्पताल आएगा (aspataal aayega = the hospital will come). You don't find it – after the turn, it shows up."
   },
   {
     "id": "hi-2339",
@@ -27336,7 +27727,8 @@
       "work"
     ],
     "grammarNode": "node-24",
-    "priority": 2114
+    "priority": 2114,
+    "grammar": "'The more... the more' needs a matched pair: जितनी मेहनत करोगे (jitni mehnat karoge), उतना फल मिलेगा (utna phal milega) – jitni sets it up, utna answers it."
   },
   {
     "id": "hi-2360",
@@ -27552,7 +27944,8 @@
       "travel"
     ],
     "grammarNode": "node-24",
-    "priority": 2473
+    "priority": 2473,
+    "grammar": "The if-half of a future condition uses a past form: अगर मौसम अच्छा रहा (agar mausam achchha raha = if the weather stayed good). Only चलेंगे (chalenge) is future."
   },
   {
     "id": "hi-2379",
@@ -27764,7 +28157,8 @@
       "general"
     ],
     "grammarNode": "node-24",
-    "priority": 2451
+    "priority": 2451,
+    "grammar": "भेज दूँगा (bhej doonga) adds देना (dena = to give) to 'send' – the give-helper marks doing it for someone else, a favor tone plain भेजूँगा (bhejoonga) lacks."
   },
   {
     "id": "hi-2399",
@@ -27824,7 +28218,8 @@
       "work"
     ],
     "grammarNode": "node-25",
-    "priority": 2269
+    "priority": 2269,
+    "grammar": "You ask FROM someone in Hindi – शिक्षक से सवाल पूछा (shikshak se sawaal poochha): से (se = from) marks the person asked, not को (ko)."
   },
   {
     "id": "hi-2404",
@@ -27897,7 +28292,8 @@
       "work"
     ],
     "grammarNode": "node-25",
-    "priority": 2858
+    "priority": 2858,
+    "grammar": "In न सिर्फ़...बल्कि (na sirf...balki = not only...but rather), the 'also' splits off – भी (bhi) lands after the new item: पहला नंबर भी (pahla number bhi)."
   },
   {
     "id": "hi-2410",
@@ -27920,7 +28316,8 @@
       "general"
     ],
     "grammarNode": "node-25",
-    "priority": 2085
+    "priority": 2085,
+    "grammar": "To lead with the reason, use चूँकि (choonki = since), answered by इसलिए (isliye = so): चूँकि बारिश हो रही थी, इसलिए... क्योंकि (kyonki = because) usually follows the main clause instead."
   },
   {
     "id": "hi-2412",
@@ -28001,7 +28398,8 @@
       "general"
     ],
     "grammarNode": "node-25",
-    "priority": 2211
+    "priority": 2211,
+    "grammar": "After ताकि (taaki = so that), the verb takes its wish form – उठ सकूँ (uth sakoon), not the plain future उठूँगा (uthoonga)."
   },
   {
     "id": "hi-2419",
@@ -28049,7 +28447,8 @@
       "work"
     ],
     "grammarNode": "node-25",
-    "priority": 2179
+    "priority": 2179,
+    "grammar": "तो (to) after a whole clause means 'so': बीमार थी तो (beemaar thi to = she was sick, so...). No separate word for 'so' is needed."
   },
   {
     "id": "hi-2424",
@@ -28231,7 +28630,8 @@
       "travel"
     ],
     "grammarNode": "node-25",
-    "priority": 2552
+    "priority": 2552,
+    "grammar": "तो (to) right after a word concedes it: मौसम तो ख़राब था (mausam to kharaab tha) = 'the weather WAS bad, sure' – and a पर (par = but) is coming."
   },
   {
     "id": "hi-2439",
@@ -28267,7 +28667,8 @@
       "work"
     ],
     "grammarNode": "node-25",
-    "priority": 2529
+    "priority": 2529,
+    "grammar": "इसीलिए (isiliye) packs ही (hi = exactly) inside इसलिए (isliye = that's why): 'that's precisely why'. उसी को (usi ko) does the same – to her and no one else."
   },
   {
     "id": "hi-2442",
@@ -28521,7 +28922,8 @@
       "general"
     ],
     "grammarNode": "node-25",
-    "priority": 1961
+    "priority": 1961,
+    "grammar": "वरना (varna = otherwise) flips to would-have mode: हो जाता (ho jaata) = would have happened. The bare -ता form carries the whole 'would have'."
   },
   {
     "id": "hi-2466",
@@ -28587,7 +28989,8 @@
       "general"
     ],
     "grammarNode": "node-25",
-    "priority": 2426
+    "priority": 2426,
+    "grammar": "हालाँकि (haalaanki = although) demands an answer in clause two: फिर भी (phir bhi = even so). Dropping the फिर भी sounds unfinished to Hindi ears."
   },
   {
     "id": "hi-2472",
@@ -28759,7 +29162,8 @@
       "general"
     ],
     "grammarNode": "node-26",
-    "priority": 2074
+    "priority": 2074,
+    "grammar": "Hindi meets 'from' people: डॉक्टर से मिलने (doctor se milne) = to meet the doctor. मिलना (milna = meet) takes से (se = from), never a word for 'with'."
   },
   {
     "id": "hi-2489",
@@ -28807,7 +29211,8 @@
       "general"
     ],
     "grammarNode": "node-26",
-    "priority": 2077
+    "priority": 2077,
+    "grammar": "बहुत दिन हो गए (bahut din ho gaye) is literally 'many days have become' – Hindi states elapsed time as days happening, with no 'it's been' or 'since'."
   },
   {
     "id": "hi-2493",
@@ -28914,7 +29319,8 @@
       "general"
     ],
     "grammarNode": "node-26",
-    "priority": 2111
+    "priority": 2111,
+    "grammar": "Hindi does someone's help: दूसरों की मदद (doosron ki madad = help of others). मदद करना (madad karna) takes की (ki) – you do the help OF a person, not 'help' them directly."
   },
   {
     "id": "hi-2502",
@@ -28925,7 +29331,8 @@
       "general"
     ],
     "grammarNode": "node-26",
-    "priority": 2020
+    "priority": 2020,
+    "grammar": "Liking flips in Hindi: प्रिया को (Priya ko = to Priya) plus अच्छा लगता है (achchha lagta hai = feels good). The liker takes को; the thing liked – helping others – is the subject."
   },
   {
     "id": "hi-2505",
@@ -28971,7 +29378,8 @@
       "work"
     ],
     "grammarNode": "node-26",
-    "priority": 2248
+    "priority": 2248,
+    "grammar": "कर लो (kar lo) is more than plain 'do': लो from लेना (lena = take) adds 'for your own benefit, get it done' – recharge the phone for yourself before leaving."
   },
   {
     "id": "hi-2510",
@@ -28982,7 +29390,8 @@
       "general"
     ],
     "grammarNode": "node-26",
-    "priority": 2256
+    "priority": 2256,
+    "grammar": "इंतज़ार करना पड़ा (intazaar karna pada) = 'waiting fell on us'. 'Had to' uses पड़ना (padna = fall) – obligation drops on you, so the person takes हमें (hamen = to us)."
   },
   {
     "id": "hi-2511",
@@ -29209,7 +29618,8 @@
       "general"
     ],
     "grammarNode": "node-26",
-    "priority": 2397
+    "priority": 2397,
+    "grammar": "The shop 'goes closed': बंद हो जाती है (band ho jaati hai). जाना (jaana = go) marks a change of state – हो जाना means 'becomes', not just 'is'."
   },
   {
     "id": "hi-2530",
@@ -29401,7 +29811,8 @@
       "work"
     ],
     "grammarNode": "node-27",
-    "priority": 2143
+    "priority": 2143,
+    "grammar": "Hindi keeps कि (ki = that) even before reported questions: पूछा कि बच्चे कहाँ गए (poochha ki bachche kahaan gaye) – literally 'asked that where the children went'."
   },
   {
     "id": "hi-2548",
@@ -29464,7 +29875,8 @@
       "general"
     ],
     "grammarNode": "node-27",
-    "priority": 2410
+    "priority": 2410,
+    "grammar": "English shifts to 'he would come' when reporting – Hindi keeps the speaker's original tense: कि कल आएगा (ki kal aayega = that he'll come tomorrow), exactly as Suresh said it."
   },
   {
     "id": "hi-2554",
@@ -29499,7 +29911,8 @@
       "work"
     ],
     "grammarNode": "node-27",
-    "priority": 2573
+    "priority": 2573,
+    "grammar": "क्या (kya) usually asks 'what', but right after कि it means 'whether': पूछा कि क्या मीटिंग रद्द हुई है (poochha ki kya meeting radd hui hai = asked whether the meeting was cancelled)."
   },
   {
     "id": "hi-2557",
@@ -29556,7 +29969,8 @@
       "general"
     ],
     "grammarNode": "node-27",
-    "priority": 1937
+    "priority": 1937,
+    "grammar": "बोलना (bolna = to say) takes no ने (ne) in the past: विजय बोला (Vijay bola). With its synonym कहना (kahna) you'd need ने: विजय ने कहा (Vijay ne kaha) – same meaning, opposite rule."
   },
   {
     "id": "hi-2562",
@@ -29687,7 +30101,8 @@
       "general"
     ],
     "grammarNode": "node-27",
-    "priority": 2365
+    "priority": 2365,
+    "grammar": "Thoughts land on you in Hindi: सुनीता को लगा (Sunita ko laga = it struck Sunita). She's the receiver of the thought, not the doer – को लगा (ko laga) covers hunches and impressions."
   },
   {
     "id": "hi-2573",
@@ -29795,7 +30210,8 @@
       "work"
     ],
     "grammarNode": "node-27",
-    "priority": 2499
+    "priority": 2499,
+    "grammar": "Hindi phrases believing as possession: कविता का मानना है (Kavita ka maanna hai) = literally 'Kavita's believing is'. का (ka = 's) marks the opinion as something she owns."
   },
   {
     "id": "hi-2582",
@@ -29957,7 +30373,8 @@
       "work"
     ],
     "grammarNode": "node-27",
-    "priority": 2208
+    "priority": 2208,
+    "grammar": "'According to' is literally 'by the calculation of': दिव्या के हिसाब से (Divya ke hisaab se = by Divya's reckoning). के हिसाब से (ke hisaab se) works for anyone's opinion or estimate."
   },
   {
     "id": "hi-2598",
@@ -30118,7 +30535,8 @@
       "general"
     ],
     "grammarNode": "node-27",
-    "priority": 2545
+    "priority": 2545,
+    "grammar": "'Remind' is याद दिलाना (yaad dilana = cause to get the memory): मैंने उसे याद दिलाया (maine use yaad dilaya = I made him remember). Plain remembering is याद आना (yaad aana = memory comes)."
   },
   {
     "id": "hi-2612",
@@ -30477,7 +30895,8 @@
       "general"
     ],
     "grammarNode": "node-28",
-    "priority": 2719
+    "priority": 2719,
+    "grammar": "पेट में चूहे कूद रहे हैं (pet mein choohe kood rahe hain) = 'mice are jumping in my stomach'. English stomachs growl with hunger – Hindi ones fill with jumping mice."
   },
   {
     "id": "hi-2643",
@@ -30545,7 +30964,8 @@
       "general"
     ],
     "grammarNode": "node-28",
-    "priority": 2459
+    "priority": 2459,
+    "grammar": "सातवें आसमान पर (saatven aasmaan par) = 'on the seventh sky'. Hindi puts extreme happiness up in the sky too – but counts to seven where English's cloud nine counts to nine."
   },
   {
     "id": "hi-2649",
@@ -30627,7 +31047,8 @@
       "general"
     ],
     "grammarNode": "node-28",
-    "priority": 2865
+    "priority": 2865,
+    "grammar": "नौ दो ग्यारह हो गया (nau do gyaarah ho gaya) = literally 'became nine-two-eleven', Hindi's stock idiom for bolting. The चोर (chor = thief) vanishes as the police arrive."
   },
   {
     "id": "hi-2657",
@@ -30764,7 +31185,8 @@
       "general"
     ],
     "grammarNode": "node-28",
-    "priority": 2617
+    "priority": 2617,
+    "grammar": "आँखों का तारा (aankhon ka taara) = 'the star of the eyes'. English treasures the apple of the eye – Hindi makes the loved one a तारा (taara = star) instead."
   },
   {
     "id": "hi-2670",
@@ -30787,7 +31209,8 @@
       "general"
     ],
     "grammarNode": "node-28",
-    "priority": 2707
+    "priority": 2707,
+    "grammar": "दाल में कुछ काला (daal mein kuchh kaala) = 'something black in the dal'. Where English smells something fishy, Hindi spots a dark speck in the lentils – the matter looks suspicious."
   },
   {
     "id": "hi-2672",
@@ -30854,7 +31277,8 @@
       "general"
     ],
     "grammarNode": "node-28",
-    "priority": 2928
+    "priority": 2928,
+    "grammar": "हाथ तंग है (haath tang hai) = 'the hand is tight'. When money runs short in Hindi, it's your हाथ (haath = hand) that tightens, not your budget."
   },
   {
     "id": "hi-2678",
@@ -30866,7 +31290,8 @@
       "general"
     ],
     "grammarNode": "node-29",
-    "priority": 2176
+    "priority": 2176,
+    "grammar": "चरणस्पर्श (charan-sparsh) is literally 'foot-touch' – a greeting for elders. You can say it without bending down, even on the phone: the word alone carries the respect."
   },
   {
     "id": "hi-2679",
@@ -30877,7 +31302,8 @@
       "general"
     ],
     "grammarNode": "node-29",
-    "priority": 2378
+    "priority": 2378,
+    "grammar": "तशरीफ़ रखिए (tashreef rakhiye) is literally 'place your honor' – ultra-courteous Urdu-flavored 'please sit'. The guest's honor takes the seat, not the guest."
   },
   {
     "id": "hi-2680",
@@ -30888,7 +31314,8 @@
       "general"
     ],
     "grammarNode": "node-29",
-    "priority": 2043
+    "priority": 2043,
+    "grammar": "Hindi has no verb for 'have'. आपके भाई-बहन हैं (aapke bhai-behen hain) is literally 'your brothers-sisters are?' – what you 'have' simply exists as yours."
   },
   {
     "id": "hi-2681",
@@ -30984,7 +31411,8 @@
       "travel"
     ],
     "grammarNode": "node-29",
-    "priority": 2526
+    "priority": 2526,
+    "grammar": "खाना खाया आपने? (khana khaya aapne = did you eat?) works as a warm hello, like 'how are you?' – it signals care, not curiosity about your actual meal."
   },
   {
     "id": "hi-2690",
@@ -31020,7 +31448,8 @@
       "general"
     ],
     "grammarNode": "node-29",
-    "priority": 2561
+    "priority": 2561,
+    "grammar": "भाई (bhai = brother) attaches to any man's name as friendly respect – कमल भाई (Kamal bhai) is not your sibling. Hindi lends family words to everyone."
   },
   {
     "id": "hi-2693",
@@ -31145,7 +31574,8 @@
       "general"
     ],
     "grammarNode": "node-29",
-    "priority": 2477
+    "priority": 2477,
+    "grammar": "आना (aana) is just the infinitive 'to come', used here as a soft, friendly request – 'do come over'. It lands gentler than the bare command आ (aa)."
   },
   {
     "id": "hi-2704",
@@ -31250,7 +31680,8 @@
       "general"
     ],
     "grammarNode": "node-29",
-    "priority": 2597
+    "priority": 2597,
+    "grammar": "तू (tu) is the most intimate of Hindi's three words for 'you' – close friends, kids, God. With a stranger it can insult. The safe default is आप (aap)."
   },
   {
     "id": "hi-2714",
@@ -31679,7 +32110,8 @@
       "general"
     ],
     "grammarNode": "node-29",
-    "priority": 2716
+    "priority": 2716,
+    "grammar": "जी (ji) alone at the start of a reply means 'yes' or 'sure' – the same syllable that adds respect after a name. One tiny word, two polite jobs."
   },
   {
     "id": "hi-2752",
@@ -31736,7 +32168,8 @@
       "general"
     ],
     "grammarNode": "node-30",
-    "priority": 2285
+    "priority": 2285,
+    "grammar": "With ने (ne), the verb agrees with what was written, not the writer: रामचरितमानस (Ramcharitmanas) is treated as feminine, so लिखी (likhi) – even though Tulsidas is a man."
   },
   {
     "id": "hi-2757",
@@ -31773,7 +32206,8 @@
       "work"
     ],
     "grammarNode": "node-30",
-    "priority": 2705
+    "priority": 2705,
+    "grammar": "English makes a decision; Hindi takes one: फ़ैसला लिया (faisla liya = took a decision), with लेना (lena = to take) as the partner verb."
   },
   {
     "id": "hi-2760",
@@ -31892,7 +32326,8 @@
       "general"
     ],
     "grammarNode": "node-30",
-    "priority": 2564
+    "priority": 2564,
+    "grammar": "तक (tak) covers both 'by' and 'until'. शुक्रवार तक (shukravaar tak) is a deadline here – by Friday – but with an ongoing action the same तक reads as until. Context decides."
   },
   {
     "id": "hi-2770",
@@ -31987,7 +32422,8 @@
       "general"
     ],
     "grammarNode": "node-30",
-    "priority": 2726
+    "priority": 2726,
+    "grammar": "Hindi pairs its relatives: जिसने (jisne = whoever) must be answered by उसने (usne) in the second half. English drops the second pronoun – Hindi keeps both."
   },
   {
     "id": "hi-2778",
@@ -32045,7 +32481,8 @@
       "general"
     ],
     "grammarNode": "node-30",
-    "priority": 2591
+    "priority": 2591,
+    "grammar": "Hindi runs two word stocks side by side: ज़िंदगी (zindagi) is the Persian-side word, जीवन (jeevan) the Sanskrit-side one. Same meaning – zindagi sounds everyday, jeevan formal or literary."
   },
   {
     "id": "hi-2783",
@@ -32452,7 +32889,8 @@
       "general"
     ],
     "grammarNode": "node-30",
-    "priority": 2793
+    "priority": 2793,
+    "grammar": "No 'would have' word here – the -ती (-ti) ending alone marks the unreal past: न होती... बर्बाद हो जाती (na hoti... barbaad ho jaati) = hadn't rained... would have been ruined."
   },
   {
     "id": "hi-2824",
@@ -32674,7 +33112,8 @@
       "general"
     ],
     "grammarNode": "node-31",
-    "priority": 2872
+    "priority": 2872,
+    "grammar": "'The more... the more' is a matched pair in Hindi: जितना (jitna = as much) opens, उतना ही (utna hi = that much) closes. One without the other sounds unfinished."
   },
   {
     "id": "hi-2844",
@@ -32708,7 +33147,8 @@
       "general"
     ],
     "grammarNode": "node-31",
-    "priority": 2878
+    "priority": 2878,
+    "grammar": "थूककर चाटना (thook-kar chaatna) is literally 'to spit, then lick it back up' – Hindi's image for breaking your word: reclaiming something you already put out."
   },
   {
     "id": "hi-2847",
@@ -32804,7 +33244,8 @@
       "general"
     ],
     "grammarNode": "node-31",
-    "priority": 2512
+    "priority": 2512,
+    "grammar": "सूचित किया जाता है (soochit kiya jaata hai = it is informed) never names who is informing. This doer-less passive is the standard opener of official Hindi notices."
   },
   {
     "id": "hi-2857",
@@ -32862,7 +33303,8 @@
       "general"
     ],
     "grammarNode": "node-31",
-    "priority": 2661
+    "priority": 2661,
+    "grammar": "पर्दा उठते ही (parda uthte hi) = 'the instant the curtain rose'. Verb + ते ही (te hi) squeezes a whole 'as soon as' clause into the verb plus one tiny word."
   },
   {
     "id": "hi-2862",
@@ -32987,7 +33429,8 @@
       "travel"
     ],
     "grammarNode": "node-32",
-    "priority": 2667
+    "priority": 2667,
+    "grammar": "The ना (na) after मत जाओ (mat jao = don't go) is not a 'no' – tacked onto a request it softens it, like 'come on, don't go'. मत (mat) alone does the forbidding."
   },
   {
     "id": "hi-2873",
@@ -33000,7 +33443,8 @@
       "travel"
     ],
     "grammarNode": "node-32",
-    "priority": 2780
+    "priority": 2780,
+    "grammar": "पकाया जाता है (pakaya jata hai = is cooked) is built on जाना (jaana = to go): literally 'goes cooked'. Hindi's passive runs on 'go', not on 'is' like English."
   },
   {
     "id": "hi-2874",
@@ -33037,7 +33481,8 @@
       "travel"
     ],
     "grammarNode": "node-32",
-    "priority": 2766
+    "priority": 2766,
+    "grammar": "यात्रियों से अनुरोध है (yatriyon se anurodh hai) is literally 'from passengers a request is' – Hindi requests point से (se = from) at the person being asked, not 'to' them."
   },
   {
     "id": "hi-2877",
@@ -33197,7 +33642,8 @@
       "travel"
     ],
     "grammarNode": "node-32",
-    "priority": 2868
+    "priority": 2868,
+    "grammar": "टिकट काटा (tikat kaata) is literally 'cut a ticket' – काटना (kaatna = to cut) is the standard verb for issuing tickets, receipts, and fines, from tearing them off a pad."
   },
   {
     "id": "hi-2891",
@@ -33219,7 +33665,8 @@
       "general"
     ],
     "grammarNode": "node-32",
-    "priority": 2882
+    "priority": 2882,
+    "grammar": "पधारें (padharein) is an honorific 'come', used on invitations to mean 'grace us with a visit'. In everyday speech you would say आएँ (aayein) – पधारें signals ceremony."
   },
   {
     "id": "hi-2893",
@@ -33385,7 +33832,8 @@
       "travel"
     ],
     "grammarNode": "node-32",
-    "priority": 3026
+    "priority": 3026,
+    "grammar": "घड़ी (ghadi) usually means watch or clock, but दुख की घड़ी (dukh ki ghadi) is 'hour of grief' – घड़ी also names a moment in time, like English 'hour' in 'darkest hour'."
   },
   {
     "id": "hi-2907",
@@ -33515,7 +33963,8 @@
       "travel"
     ],
     "grammarNode": "node-32",
-    "priority": 3073
+    "priority": 3073,
+    "grammar": "बंद रहेगा (band rahega) is 'will stay closed', not 'will be closed' – for a state holding through the day, Hindi prefers रहना (rahna = to stay) over होना (hona = to be)."
   },
   {
     "id": "hi-2918",
@@ -33826,7 +34275,8 @@
       "travel"
     ],
     "grammarNode": "node-33",
-    "priority": 2916
+    "priority": 2916,
+    "grammar": "बैठकर (baithkar) = 'having sat' – where English says 'sitting on the swing', Hindi adds -कर (kar) to the first action: sit-then-want, all in one word."
   },
   {
     "id": "hi-2947",
@@ -33837,7 +34287,8 @@
       "general"
     ],
     "grammarNode": "node-33",
-    "priority": 3083
+    "priority": 3083,
+    "grammar": "देखा जा सकता है (dekha ja sakta hai) = 'it can be seen' – literally 'seen go can'. Hindi builds 'can be X-ed' with जाना (jana = go) after the main verb."
   },
   {
     "id": "hi-2948",
@@ -33848,7 +34299,8 @@
       "general"
     ],
     "grammarNode": "node-33",
-    "priority": 2732
+    "priority": 2732,
+    "grammar": "करवाए गए (karvaye gaye) = 'were gotten done' – the -वा- (va) inside the verb means someone else did it. करना (karna) = do, करवाना (karvana) = have someone do."
   },
   {
     "id": "hi-2949",
@@ -33871,7 +34323,8 @@
       "general"
     ],
     "grammarNode": "node-33",
-    "priority": 2755
+    "priority": 2755,
+    "grammar": "Requests come FROM people in Hindi: कर्मचारियों से अनुरोध है (karmchariyon se anurodh hai) = 'from the employees is a request' – से (se = from), not 'to'."
   },
   {
     "id": "hi-2951",
@@ -33920,7 +34373,8 @@
       "travel"
     ],
     "grammarNode": "node-33",
-    "priority": 2840
+    "priority": 2840,
+    "grammar": "'Because of' follows its noun: त्योहार के कारण (tyohar ke kaaran) = 'festival because-of'. के कारण (ke kaaran) always comes after the reason, never before."
   },
   {
     "id": "hi-2955",
@@ -33990,7 +34444,8 @@
       "general"
     ],
     "grammarNode": "node-33",
-    "priority": 2908
+    "priority": 2908,
+    "grammar": "English needs 'It is expected that' – Hindi just says उम्मीद है कि (ummeed hai ki = hope is that). No dummy 'it': the noun उम्मीद (ummeed = hope) leads."
   },
   {
     "id": "hi-2961",
@@ -34401,7 +34856,8 @@
       "general"
     ],
     "grammarNode": "node-33",
-    "priority": 2950
+    "priority": 2950,
+    "grammar": "चोर की दाढ़ी में तिनका (chor ki daadhi mein tinka) = 'a straw in the thief's beard' – guilt betrays itself. The nervous thief checks his own beard first."
   },
   {
     "id": "hi-2998",
@@ -34709,7 +35165,8 @@
       "general"
     ],
     "grammarNode": "node-34",
-    "priority": 2778
+    "priority": 2778,
+    "grammar": "पी गई (pee gayi) is drink + go, but the cat didn't go anywhere – the added 'go' marks the milk as completely finished. Hindi pairs verbs like this to show an action is done."
   },
   {
     "id": "hi-3024",
@@ -34746,7 +35203,8 @@
       "travel"
     ],
     "grammarNode": "node-34",
-    "priority": 2906
+    "priority": 2906,
+    "grammar": "जिसकी लाठी उसकी भैंस (jiski laathi uski bhains) is literally 'whose stick, his buffalo' – whoever holds the stick keeps the buffalo. That is Hindi's image for might is right."
   },
   {
     "id": "hi-3027",
@@ -34758,7 +35216,8 @@
       "general"
     ],
     "grammarNode": "node-34",
-    "priority": 2828
+    "priority": 2828,
+    "grammar": "मिलना (milna = to meet) takes से (se): पूजा से मिलिए (Pooja se miliye) is literally 'meet from Pooja'. Hindi never meets a person directly – always through से (se)."
   },
   {
     "id": "hi-3028",
@@ -34780,7 +35239,8 @@
       "general"
     ],
     "grammarNode": "node-34",
-    "priority": 2899
+    "priority": 2899,
+    "grammar": "You don't just hear in Hindi – hearing comes to you: सुनाई देने लगा (sunai dene laga) is literally 'hearing began to give'. Seeing works the same way: दिखाई देना (dikhai dena)."
   },
   {
     "id": "hi-3030",
@@ -34805,7 +35265,8 @@
       "travel"
     ],
     "grammarNode": "node-34",
-    "priority": 2853
+    "priority": 2853,
+    "grammar": "पूछना (poochhna) usually means 'ask', but with food it means offer: चाय-नाश्ता पूछते हैं (chai-nashta poochhte hain) = we offer tea and snacks, not ask about them."
   },
   {
     "id": "hi-3032",
@@ -35036,7 +35497,8 @@
       "general"
     ],
     "grammarNode": "node-34",
-    "priority": 3024
+    "priority": 3024,
+    "grammar": "जुगाड़ (jugaad) has no single English equivalent – a clever, improvised fix using whatever is at hand. The word covers the fix, the skill, and the mindset all at once."
   },
   {
     "id": "hi-3052",
@@ -35139,7 +35601,8 @@
       "general"
     ],
     "grammarNode": "node-34",
-    "priority": 2789
+    "priority": 2789,
+    "grammar": "English took 'thug' from Hindi ठग (thag) and 'loot' from लूट (loot) – both entered English in the colonial era. In this sentence they still mean robbers and robbing."
   },
   {
     "id": "hi-3063",
@@ -35498,7 +35961,8 @@
       "work"
     ],
     "grammarNode": "node-35",
-    "priority": 2831
+    "priority": 2831,
+    "grammar": "Hindi doubles a word with a v- echo to mean 'and such': चाय-वाय (chai-vai) = tea and whatnot. The echo वाय (vai) has no meaning of its own – it just loosens the noun."
   },
   {
     "id": "hi-3095",
@@ -35533,7 +35997,8 @@
       "general"
     ],
     "grammarNode": "node-35",
-    "priority": 2880
+    "priority": 2880,
+    "grammar": "बताना (bataana) here is not 'to tell' – a bare infinitive works as a gentle command for later: 'do let us know'. It is softer than the direct order बताओ (batao)."
   },
   {
     "id": "hi-3098",
@@ -35578,7 +36043,8 @@
       "general"
     ],
     "grammarNode": "node-35",
-    "priority": 3006
+    "priority": 3006,
+    "grammar": "दोनों (donon = both) follows the pair instead of leading it: शरीर और मन दोनों (sharir aur man donon) – literally 'body and mind both'. Putting it first sounds off in Hindi."
   },
   {
     "id": "hi-3102",
@@ -35624,7 +36090,8 @@
       "travel"
     ],
     "grammarNode": "node-35",
-    "priority": 2739
+    "priority": 2739,
+    "grammar": "No passive 'is called' here – subjectless कहते हैं (kahte hain) means 'people call it'. जयपुर को (Jaipur ko) marks the thing being named: people call Jaipur the Pink City."
   },
   {
     "id": "hi-3106",
@@ -35890,7 +36357,8 @@
       "general"
     ],
     "grammarNode": "node-35",
-    "priority": 2902
+    "priority": 2902,
+    "grammar": "English says ups and downs; Hindi flips the order: उतार-चढ़ाव (utaar-chadhaav) is literally 'descent-climb'. Paired opposites like this behave as a single noun."
   },
   {
     "id": "hi-3129",
@@ -36004,7 +36472,8 @@
       "travel"
     ],
     "grammarNode": "node-35",
-    "priority": 3017
+    "priority": 3017,
+    "grammar": "तिल का ताड़ बनाना (til ka taad banaana) is literally 'turning a sesame seed into a palm tree' – Hindi's version of making a mountain out of a molehill."
   },
   {
     "id": "hi-3139",
@@ -36063,7 +36532,8 @@
       "general"
     ],
     "grammarNode": "node-35",
-    "priority": 2839
+    "priority": 2839,
+    "grammar": "दिल खोलकर (dil kholkar) is literally 'having opened the heart'. Hindi often uses this -कर (-kar = having done) form where English wants an adverb: wholeheartedly."
   },
   {
     "id": "hi-3145",
@@ -36297,7 +36767,8 @@
       "general"
     ],
     "grammarNode": "node-35",
-    "priority": 3029
+    "priority": 3029,
+    "grammar": "कहने को तो (kahne ko to) is literally 'for the saying' – it flags that what follows is only true on the surface, setting up the पर (par = but) that undercuts it."
   },
   {
     "id": "hi-3166",
@@ -36496,7 +36967,8 @@
     ],
     "grammarNode": "node-01",
     "priority": 82,
-    "category": "body"
+    "category": "body",
+    "grammar": "रहा है (raha hai) = happening right now, like -ing: दुख रहा है (dukh raha hai = is hurting). Without रहा it reads as a habit, not this moment."
   },
   {
     "id": "hi-S-009",
@@ -36614,7 +37086,8 @@
     ],
     "grammarNode": "node-08",
     "priority": 11,
-    "category": "time"
+    "category": "time",
+    "grammar": "पौने (paune) = 'a quarter less': पौने सात (paune saat) = 6:45, quarter to seven. Hindi has one word per clock fraction – सवा (savaa = quarter past), साढ़े (saadhe = half past)."
   },
   {
     "id": "hi-S-018",
@@ -36705,7 +37178,8 @@
     ],
     "grammarNode": "node-07",
     "priority": 28,
-    "category": "clothes"
+    "category": "clothes",
+    "grammar": "सी (si) after an adjective softens it: सुंदर सी ड्रेस (sundar si dress) = a rather pretty dress. It agrees too – सा (sa) with masculine nouns."
   },
   {
     "id": "hi-S-025",
@@ -36757,7 +37231,8 @@
     ],
     "grammarNode": "node-07",
     "priority": 25,
-    "category": "months"
+    "category": "months",
+    "grammar": "Adjectives not ending in -ा never change: गरम (garam = hot) stays the same with जून (June), चाय (chai = tea), पानी (pani = water). Only -ा adjectives shift."
   },
   {
     "id": "hi-S-029",
@@ -36794,8 +37269,7 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "priority": 45,
-    "grammar": "मैं → हूँ (main hun). The auxiliary changes by subject: मैं → हूँ, वह → है, हम/आप → हैं."
+    "priority": 45
   },
   {
     "id": "hi-3201",
@@ -36922,8 +37396,7 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "priority": 56,
-    "grammar": "महँगा (mahnga = expensive, m), सस्ता (sasta = cheap). For f: महँगी / सस्ती. Useful at every market."
+    "priority": 56
   },
   {
     "id": "hi-3212",
@@ -36979,8 +37452,7 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "priority": 61,
-    "grammar": "धीरे (dheere = slowly). बोलिए (bolie = please speak, polite imperative). Lifesaver when natives speak too fast."
+    "priority": 61
   },
   {
     "id": "hi-3217",
@@ -37014,8 +37486,7 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "priority": 65,
-    "grammar": "एक बार (ek baar = once), फिर (phir = again). Combined: एक बार फिर = once more. Perfect when you didn't catch what someone said."
+    "priority": 65
   },
   {
     "id": "hi-3220",
@@ -37116,8 +37587,7 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "priority": 21,
-    "grammar": "अलविदा (alvida) = formal goodbye. For \"see you again\" use फिर मिलेंगे (phir milenge)."
+    "priority": 21
   },
   {
     "id": "hi-3229",
@@ -37400,8 +37870,7 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "priority": 74,
-    "grammar": "बस (bas = just/enough) + इतना ही (itna hi = just this much). Perfect at the end of an order at a shop or restaurant."
+    "priority": 74
   },
   {
     "id": "hi-3254",
@@ -37513,8 +37982,7 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "priority": 84,
-    "grammar": "तीखा (tikha = spicy, m), तीखी (tikhi, f). Indian food essential: यह बहुत तीखा है = this is very spicy."
+    "priority": 84
   },
   {
     "id": "hi-3264",
@@ -37582,8 +38050,7 @@
       "general"
     ],
     "grammarNode": "node-01",
-    "priority": 90,
-    "grammar": "For plural subjects use हैं (hain). बच्चे (bachche = children, m pl) → हैं."
+    "priority": 90
   },
   {
     "id": "hi-3270",
@@ -37685,7 +38152,7 @@
     ],
     "grammarNode": "node-01",
     "priority": 99,
-    "grammar": "पता (pata) = known/aware. नहीं पता (nahin pata) = don't know. Used as: मुझे पता नहीं or मुझे X नहीं पता."
+    "grammar": "There's no verb 'to know' here – knowledge sits on you: मुझे नहीं पता (mujhe nahin pata) is literally 'to me it is not known'. मुझे (mujhe = to me) does the work."
   },
   {
     "id": "hi-3279",

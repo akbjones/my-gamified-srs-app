@@ -56,6 +56,7 @@ export const saveScriptCardProgress = (card: QuestCard, lang: Language): Mastery
       failCount: card.failCount,
       isLeech: card.isLeech,
       isSuspended: card.isSuspended,
+      recallOk: card.recallOk,
       stability: card.stability,
       difficulty: card.difficulty,
       fsrsState: card.fsrsState,
@@ -75,6 +76,23 @@ const itemById = (pack: ScriptPack): Map<string, ScriptItem> => {
   const m = new Map<string, ScriptItem>();
   for (const it of pack.items) m.set(it.id, it);
   return m;
+};
+
+/** Graduation gate: an item may not reach mastery 2 until the learner has
+ *  succeeded at least once on a drill whose ANSWER is the glyph (recall,
+ *  discrimination, or composition — sound→glyph). Recognition-only streaks
+ *  can look mastered while the learner cannot retrieve the shape. Call in
+ *  the save path with the post-SRS card; clamping mastery (not FSRS state)
+ *  keeps the item in the learning mix, where selectDrill serves recall 50%
+ *  of the time until the flag is earned. */
+export const applyRecallGate = (
+  card: QuestCard,
+  prior: Partial<QuestCard> | undefined,
+  provedRecallNow: boolean,
+): QuestCard => {
+  const recallOk = !!prior?.recallOk || provedRecallNow;
+  const gated = !recallOk && card.mastery >= 2;
+  return { ...card, recallOk, ...(gated ? { mastery: 1 as const } : {}) };
 };
 
 export const levelStats = (pack: ScriptPack, level: number, progress: MasteryMap): { total: number; seen: number; graduated: number } => {
@@ -229,8 +247,11 @@ export const selectDrill = (
   };
 
   if (!inReview) {
-    // Learning: 80% recognition (glyph → sound), 20% recall (sound → glyph).
-    return rng() < 0.8 ? recognition() : recall();
+    // Learning: recognition-first — but an item that hasn't yet proven
+    // sound→glyph gets recall HALF the time: it cannot graduate without one
+    // recall success (applyRecallGate), so the rep must not be starved.
+    const needsRecall = !p?.recallOk;
+    return rng() < (needsRecall ? 0.5 : 0.8) ? recognition() : recall();
   }
 
   // Review: recall by default; discrimination when ≥2 of the similar set are

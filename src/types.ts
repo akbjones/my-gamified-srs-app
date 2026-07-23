@@ -35,6 +35,11 @@ export interface QuestCard {
                          // card loops on the 10-minute step forever (never
                          // graduates); see toFsrsCard in srsService.
   priority?: 1 | 2 | 3;  // 1=practical (show first), 2=useful, 3=specialized
+  // Script-teacher only: the learner has succeeded at least once on a drill
+  // whose ANSWER is the glyph (sound→glyph). Items may not graduate to
+  // mastery 2 without it — recognition alone can look mastered while the
+  // learner cannot retrieve the shape. See applyRecallGate.
+  recallOk?: boolean;
 }
 
 export interface SessionState {

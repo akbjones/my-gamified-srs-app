@@ -4,7 +4,7 @@ import type { ScriptPack, ScriptItem } from '../data/scripts/types';
 import type { AudioSpeed } from '../services/storageService';
 import {
   toScriptCard, saveScriptCardProgress, levelStats, isLevelUnlocked,
-  nextLessonBatch, buildScriptQueue, selectDrill, scriptSummary,
+  nextLessonBatch, buildScriptQueue, selectDrill, scriptSummary, applyRecallGate,
   type Drill,
 } from '../services/scriptSrsService';
 import { handleAnswerLogic } from '../services/srsService';
@@ -146,11 +146,15 @@ const ScriptTeacher: React.FC<ScriptTeacherProps> = ({
   };
 
   /** Rate the current card through the real FSRS pipeline and move on. */
-  const rate = (rating: 'AGAIN' | 'HARD' | 'GOOD') => {
+  const rate = (rating: 'AGAIN' | 'HARD' | 'GOOD', provedRecall = false) => {
     if (!currentCard) return;
     const session = { queue, currentIndex, newCardsSeen: 0 } as unknown as SessionState;
     const { sessionUpdates } = handleAnswerLogic(rating, currentCard, session, (card) => {
-      const map = saveScriptCardProgress(card, lang);
+      // Sound→glyph graduation gate: only a CORRECT glyph-answer drill
+      // (recall/discrimination/composition) sets recallOk; without it,
+      // mastery is clamped below graduated.
+      const gatedCard = applyRecallGate(card, progressRef.current[card.id], provedRecall && rating !== 'AGAIN');
+      const map = saveScriptCardProgress(gatedCard, lang);
       progressRef.current = map;
       onProgressChange(map);
     });
@@ -165,7 +169,7 @@ const ScriptTeacher: React.FC<ScriptTeacherProps> = ({
     setAnswered(n => n + 1);
     if (correct) {
       setCorrectCount(n => n + 1);
-      const updates = rate(elapsed > SLOW_MS ? 'HARD' : 'GOOD');
+      const updates = rate(elapsed > SLOW_MS ? 'HARD' : 'GOOD', drill.kind !== 'recognition');
       setTimeout(() => updates && advance(updates), 450);
     } else {
       // Wrong: rating applies now (AGAIN → reinserted a few cards out), the
@@ -198,7 +202,8 @@ const ScriptTeacher: React.FC<ScriptTeacherProps> = ({
         setFeedback({ correct: true, chosenId: tile.id });
         setAnswered(n => n + 1);
         setCorrectCount(n => n + 1);
-        const updates = rate(elapsed > SLOW_MS ? 'HARD' : 'GOOD');
+        // building the glyph from parts is the strongest recall proof
+        const updates = rate(elapsed > SLOW_MS ? 'HARD' : 'GOOD', true);
         setTimeout(() => updates && advance(updates), 450);
       }
     } else {

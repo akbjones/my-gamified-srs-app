@@ -11,7 +11,7 @@ import type { QuestCard, MasteryMap } from '../src/types';
 import type { ScriptPack, ScriptItem } from '../src/data/scripts/types';
 import {
   toScriptCard, levelStats, isLevelUnlocked, nextLessonBatch,
-  dueScriptItems, buildScriptQueue, selectDrill, isScriptMastered, scriptSummary,
+  dueScriptItems, buildScriptQueue, selectDrill, isScriptMastered, scriptSummary, applyRecallGate,
 } from '../src/services/scriptSrsService';
 import { handleAnswerLogic } from '../src/services/srsService';
 import type { SessionState } from '../src/types';
@@ -182,6 +182,26 @@ const seqRng = (...vals: number[]) => { let i = 0; return () => vals[Math.min(i+
   const s = scriptSummary(pack, progress, 1);
   ok('summary: counts core items only', s.total === letters.length && s.graduated === needM);
   ok('summary: mastered flag matches', s.mastered);
+}
+
+
+// ── sound→glyph graduation gate (applyRecallGate) ────────────────────────────
+{
+  const base = { id: 'sc-x-0001', target: 'X', english: 'x', category: 'Script', topic: 'script', audio: 'x.mp3' } as any;
+  const g1 = applyRecallGate({ ...base, mastery: 2 }, undefined, false);
+  ok('gate clamps mastery 2→1 without recall proof', g1.mastery === 1 && g1.recallOk === false);
+  const g2 = applyRecallGate({ ...base, mastery: 2 }, undefined, true);
+  ok('recall proof this turn allows graduation', g2.mastery === 2 && g2.recallOk === true);
+  const g3 = applyRecallGate({ ...base, mastery: 2 }, { recallOk: true }, false);
+  ok('prior recallOk carries forward', g3.mastery === 2 && g3.recallOk === true);
+  const g4 = applyRecallGate({ ...base, mastery: 1 }, undefined, false);
+  ok('learning items pass through unchanged', g4.mastery === 1);
+  // drill-mix bias: an item without recallOk gets recall at rng 0.6 (<0.5 → recognition threshold moved)
+  const anyLetter = pack.items.find(i => i.kind === 'letter')!;
+  const dNeeds = selectDrill(anyLetter, pack, { [anyLetter.id]: { mastery: 1 } }, seqRng(0.6, 0.1, 0.1));
+  ok('needs-recall item at rng .6 gets a recall drill', dNeeds.kind === 'recall');
+  const dOk = selectDrill(anyLetter, pack, { [anyLetter.id]: { mastery: 1, recallOk: true } }, seqRng(0.6, 0.1, 0.1));
+  ok('recallOk item at rng .6 stays recognition', dOk.kind === 'recognition');
 }
 
 console.log(`\n${fail === 0 ? '✓ ALL PASS' : '✗ FAILURES'} — ${pass} passed, ${fail} failed`);

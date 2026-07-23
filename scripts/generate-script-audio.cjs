@@ -83,8 +83,20 @@ function synthPlan(item) {
       'े': 'के', 'ै': 'कै', 'ो': 'को', 'ौ': 'कौ',
       'ं': 'अं', 'ँ': 'हाँ', 'ः': 'अः', '्': 'क्या',
     };
+    // Vowel-LENGTH control (the ट-vs-त contrast is audio-led, and so is
+    // short-vs-long vowels). Chirp3-HD does NOT preserve Hindi vowel length
+    // in isolated citation form, so we force it: long vowels synthesize
+    // slower (lower rate → audibly longer). Rates are calibrated so every
+    // long vowel's voiced span exceeds its short partner's (scripts/tmp/
+    // regen-deva-vowels.cjs has the calibration loop + pair-check).
+    const DEVA_RATE = {
+      'आ': 0.36, 'ई': 0.72, 'ऊ': 0.60, 'ी': 0.72, 'ू': 0.72,        // long, paired
+      'ए': 0.72, 'ऐ': 0.72, 'ओ': 0.72, 'औ': 0.72, 'ऋ': 0.72,        // long, unpaired
+      'ा': 0.72, 'े': 0.72, 'ै': 0.72, 'ो': 0.72, 'ौ': 0.72, 'ृ': 0.72,
+    };
     const speak = DEVA_SPEAK[item.glyph] ?? item.glyph;
-    return { text: `${speak}। ${speak}।`, trim: true };
+    // long-vowel voiced spans run past the 0.6s single-clip cap — raise it.
+    return { text: `${speak}। ${speak}।`, trim: true, rate: DEVA_RATE[item.glyph] ?? 1.0, voicedCap: 1.2 };
   }
   if (packName !== 'hangul' || item.kind === 'word') return { text: item.glyph, trim: false };
   let syllable = item.glyph;
@@ -202,7 +214,7 @@ function trimFirstUtterance(mp3Buf) {
 // ── clip production with QC + retries + text-level cache ─────────────────────
 const clipCache = new Map(); // text@rate -> approved buffer (ㄱ ≡ 가, byte-identical)
 
-async function makeClip(text, rate, trim) {
+async function makeClip(text, rate, trim, voicedCap = 0.6) {
   const key = `${text}@${rate}`;
   if (clipCache.has(key)) {
     const buf = clipCache.get(key);
@@ -223,7 +235,7 @@ async function makeClip(text, rate, trim) {
     // while a trimmed single is ~1s. Also cap the utterance itself at 0.6s –
     // Chirp3 sometimes streeetches a bare vowel ("aaaa"); a shorter take is
     // always one retry away.
-    const singleOk = !trim || (qc.durSec <= 1.4 && qc.voicedSec <= 0.6);
+    const singleOk = !trim || (qc.durSec <= Math.max(1.4, voicedCap + 0.9) && qc.voicedSec <= voicedCap);
     if (qc.rmsPeakDb >= -18 && qc.voicedSec >= 0.15 && singleOk) {
       clipCache.set(key, buf);
       return { buf, qc };
@@ -247,9 +259,9 @@ async function main() {
     const name = pilot ? `pilot-${item.id}.mp3` : `${item.id}.mp3`;
     const out = path.join(AUDIO_DIR, name);
     if (resume && fs.existsSync(out)) { skipped++; continue; }
-    const { text, trim } = synthPlan(item);
-    const rate = trim ? 1.0 : 0.9; // doubles at natural speed; single takes at deck pace
-    const { buf, qc, failed: bad, cached } = await makeClip(text, rate, trim);
+    const { text, trim, rate: planRate, voicedCap } = synthPlan(item);
+    const rate = planRate ?? (trim ? 1.0 : 0.9); // doubles at natural speed; single takes at deck pace
+    const { buf, qc, failed: bad, cached } = await makeClip(text, rate, trim, voicedCap ?? 0.6);
     fs.writeFileSync(out, buf);
     if (bad) { console.error(`  ✗ ${name} FAILED QC after retries`); failed.push(name); }
     done++;

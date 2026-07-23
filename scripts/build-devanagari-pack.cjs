@@ -174,7 +174,7 @@ const pack = {
   scriptId: 'devanagari',
   language: 'hindi',
   name: 'Devanagari',
-  tagline: 'Read Hindi in about a week',
+  tagline: 'Learn to read Hindi',
   // AUDIO-led discrimination (locked decision 2): retroflex/dental and
   // aspiration contrasts are ear lessons — a romanization prompt cannot
   // express what ट vs त is asking. Both rows share ascii "ta" on purpose.

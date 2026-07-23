@@ -191,7 +191,7 @@ const pack = {
   scriptId: 'kana',
   language: 'japanese',
   name: 'Kana',
-  tagline: 'Read Japanese kana in about a week',
+  tagline: 'Learn to read Japanese kana',
   // Kana confusables (シ/ツ, ソ/ン) are a VISUAL contrast — same reasoning as
   // Hangul's tense consonants: discrimination prompts by romanization.
   drill: { recallPrompts: ['audio', 'romanization'], discriminationPrompt: 'romanization' },

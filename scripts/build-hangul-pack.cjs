@@ -239,7 +239,7 @@ const pack = {
   scriptId: 'hangul',
   language: 'korean',
   name: 'Hangul',
-  tagline: 'Read Korean in about 3 days',
+  tagline: 'Learn to read Korean',
   // Discrimination is a VISUAL drill for Hangul ("which one is kk?" – pick the
   // glyph): the k-family contrast is near-inaudible to beginners and the TTS
   // clips overlap, so an audio prompt would be guesswork. Audio-led

@@ -355,7 +355,10 @@ const App: React.FC = () => {
     let cancelled = false;
     setScriptPack(null);
     setScriptProgress(loadScriptMap(lang));
-    const ref = STARTER_LOCK ? undefined : scriptPackFor(lang);
+    // Starter-lock no longer suppresses packs: the Japanese starter SHIPS
+    // with the kana teacher ("learn the script first" is the point of the
+    // link). Languages without a pack (Spanish starter) are unaffected.
+    const ref = scriptPackFor(lang);
     if (!ref) return;
     ref.loader()
       .then(p => { if (!cancelled) setScriptPack(p); })

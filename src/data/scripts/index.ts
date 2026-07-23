@@ -20,8 +20,11 @@ export const SCRIPT_PACKS: Partial<Record<Language, ScriptPackRef>> = {
     scriptId: 'hangul',
     loader: () => import('./hangul.json').then(m => m.default as unknown as ScriptPack),
   },
-  // russian → cyrillic (P3), hindi → devanagari (P3); kana is gated on the
-  // Japanese launch decision (docs/script-teacher-scoping.md, locked decision 5).
+  japanese: {
+    scriptId: 'kana',
+    loader: () => import('./kana.json').then(m => m.default as unknown as ScriptPack),
+  },
+  // russian → cyrillic (P3), hindi → devanagari (P3).
 };
 
 export const scriptPackFor = (lang: Language): ScriptPackRef | undefined => SCRIPT_PACKS[lang];

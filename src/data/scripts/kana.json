@@ -1,0 +1,2082 @@
+{
+  "scriptId": "kana",
+  "language": "japanese",
+  "name": "Kana",
+  "tagline": "Read Japanese kana in about a week",
+  "drill": {
+    "recallPrompts": [
+      "audio",
+      "romanization"
+    ],
+    "discriminationPrompt": "romanization"
+  },
+  "items": [
+    {
+      "id": "sc-ja-0001",
+      "kind": "letter",
+      "glyph": "あ",
+      "sound": "a",
+      "romanization": "a",
+      "mnemonic": "A crossed stem with a swirl below – hiding in the swirl is a lowercase a: a (father).",
+      "level": 1,
+      "similar": [
+        "sc-ja-0005",
+        "sc-ja-0034"
+      ],
+      "exampleWord": {
+        "target": "ありがとうございます",
+        "english": "Thank you very much.",
+        "deckCardId": "ja-0004"
+      },
+      "audio": "sc-ja-0001.mp3"
+    },
+    {
+      "id": "sc-ja-0002",
+      "kind": "letter",
+      "glyph": "い",
+      "sound": "i",
+      "romanization": "i",
+      "mnemonic": "Two little strokes standing side by side – like the double i in Hawaii: i (ee, as in see).",
+      "level": 1,
+      "similar": [
+        "sc-ja-0040"
+      ],
+      "exampleWord": {
+        "target": "いいえ",
+        "english": "No, I'm not a student. I'm an office worker.",
+        "deckCardId": "ja-0031"
+      },
+      "audio": "sc-ja-0002.mp3"
+    },
+    {
+      "id": "sc-ja-0003",
+      "kind": "letter",
+      "glyph": "う",
+      "sound": "u",
+      "romanization": "u",
+      "mnemonic": "A face in profile, lips pushing out to say oo – u (food).",
+      "level": 1,
+      "similar": [
+        "sc-ja-0018",
+        "sc-ja-0039"
+      ],
+      "exampleWord": {
+        "target": "上",
+        "english": "There is bread on the table.",
+        "deckCardId": "ja-0067"
+      },
+      "audio": "sc-ja-0003.mp3"
+    },
+    {
+      "id": "sc-ja-0004",
+      "kind": "letter",
+      "glyph": "え",
+      "sound": "e",
+      "romanization": "e",
+      "mnemonic": "A short flick above an energetic figure that twists and kicks out mid-exercise – e (end).",
+      "level": 1,
+      "exampleWord": {
+        "target": "いいえ",
+        "english": "No, I'm not a student. I'm an office worker.",
+        "deckCardId": "ja-0031"
+      },
+      "audio": "sc-ja-0004.mp3"
+    },
+    {
+      "id": "sc-ja-0005",
+      "kind": "letter",
+      "glyph": "お",
+      "sound": "o",
+      "romanization": "o",
+      "mnemonic": "Like あ (a), but the swirl closes into a round o, with a small splash off the top right – o (go). The splash is the giveaway.",
+      "level": 1,
+      "similar": [
+        "sc-ja-0001"
+      ],
+      "exampleWord": {
+        "target": "おはようございます",
+        "english": "Good morning.",
+        "deckCardId": "ja-0002"
+      },
+      "audio": "sc-ja-0005.mp3"
+    },
+    {
+      "id": "sc-ja-0006",
+      "kind": "letter",
+      "glyph": "か",
+      "sound": "ka",
+      "romanization": "ka",
+      "mnemonic": "A leg mid-karate-kick, with a flick of motion beside it – ka.",
+      "level": 1,
+      "exampleWord": {
+        "target": "か",
+        "english": "Are you a student?",
+        "deckCardId": "ja-0029"
+      },
+      "audio": "sc-ja-0006.mp3"
+    },
+    {
+      "id": "sc-ja-0007",
+      "kind": "letter",
+      "glyph": "き",
+      "sound": "ki",
+      "romanization": "ki",
+      "mnemonic": "An old key – two crossbars on a stem with a little curl below: ki (key).",
+      "level": 1,
+      "similar": [
+        "sc-ja-0011"
+      ],
+      "exampleWord": {
+        "target": "えき",
+        "english": "That over there is the station.",
+        "deckCardId": "ja-0042"
+      },
+      "audio": "sc-ja-0007.mp3"
+    },
+    {
+      "id": "sc-ja-0008",
+      "kind": "letter",
+      "glyph": "く",
+      "sound": "ku",
+      "romanization": "ku",
+      "mnemonic": "An open beak pointing left – a cuckoo mid-call: ku (coo).",
+      "level": 1,
+      "similar": [
+        "sc-ja-0029"
+      ],
+      "exampleWord": {
+        "target": "空港",
+        "english": "Tomorrow I'm going to the airport by taxi.",
+        "deckCardId": "ja-0103"
+      },
+      "audio": "sc-ja-0008.mp3"
+    },
+    {
+      "id": "sc-ja-0009",
+      "kind": "letter",
+      "glyph": "け",
+      "sound": "ke",
+      "romanization": "ke",
+      "mnemonic": "A barrel strapped to a post – a keg: ke.",
+      "level": 1,
+      "similar": [
+        "sc-ja-0026"
+      ],
+      "exampleWord": {
+        "target": "お酒",
+        "english": "I don't drink alcohol.",
+        "deckCardId": "ja-0118"
+      },
+      "audio": "sc-ja-0009.mp3"
+    },
+    {
+      "id": "sc-ja-0010",
+      "kind": "letter",
+      "glyph": "こ",
+      "sound": "ko",
+      "romanization": "ko",
+      "mnemonic": "Two short strokes stacked – two coins: ko.",
+      "level": 1,
+      "similar": [
+        "sc-ja-0022"
+      ],
+      "exampleWord": {
+        "target": "空港",
+        "english": "Tomorrow I'm going to the airport by taxi.",
+        "deckCardId": "ja-0103"
+      },
+      "audio": "sc-ja-0010.mp3"
+    },
+    {
+      "id": "sc-ja-0011",
+      "kind": "letter",
+      "glyph": "さ",
+      "sound": "sa",
+      "romanization": "sa",
+      "mnemonic": "き (ki) with one crossbar missing – count the bars: one for sa, two for ki.",
+      "level": 2,
+      "similar": [
+        "sc-ja-0007",
+        "sc-ja-0017"
+      ],
+      "exampleWord": {
+        "target": "かさ",
+        "english": "That umbrella is mine.",
+        "deckCardId": "ja-0047"
+      },
+      "audio": "sc-ja-0011.mp3"
+    },
+    {
+      "id": "sc-ja-0012",
+      "kind": "letter",
+      "glyph": "し",
+      "sound": "shi",
+      "romanization": "shi",
+      "mnemonic": "A long lock of hair with a flick at the end – she has long hair: shi. Heads-up: the S row bends here, si becomes shi.",
+      "level": 2,
+      "exampleWord": {
+        "target": "あした",
+        "english": "Tomorrow is a work day.",
+        "deckCardId": "ja-0024"
+      },
+      "audio": "sc-ja-0012.mp3"
+    },
+    {
+      "id": "sc-ja-0013",
+      "kind": "letter",
+      "glyph": "す",
+      "sound": "su",
+      "romanization": "su",
+      "mnemonic": "A vertical stem with a curl swirling round it – a straw stirring a drink: su (soo).",
+      "level": 2,
+      "similar": [
+        "sc-ja-0033"
+      ],
+      "exampleWord": {
+        "target": "少し",
+        "english": "Please speak a little more slowly.",
+        "deckCardId": "ja-0238"
+      },
+      "audio": "sc-ja-0013.mp3"
+    },
+    {
+      "id": "sc-ja-0014",
+      "kind": "letter",
+      "glyph": "せ",
+      "sound": "se",
+      "romanization": "se",
+      "mnemonic": "A wide mouth with a fang bending down at the right – it says se (set).",
+      "level": 2,
+      "exampleWord": {
+        "target": "こうこうせい",
+        "english": "My younger brother is a high school student.",
+        "deckCardId": "ja-0025"
+      },
+      "audio": "sc-ja-0014.mp3"
+    },
+    {
+      "id": "sc-ja-0015",
+      "kind": "letter",
+      "glyph": "そ",
+      "sound": "so",
+      "romanization": "so",
+      "mnemonic": "A single thread zigzagging down – sewing stitches: so (sew).",
+      "level": 2,
+      "exampleWord": {
+        "target": "そう",
+        "english": "Yes, that's right.",
+        "deckCardId": "ja-0030"
+      },
+      "audio": "sc-ja-0015.mp3"
+    },
+    {
+      "id": "sc-ja-0016",
+      "kind": "letter",
+      "glyph": "た",
+      "sound": "ta",
+      "romanization": "ta",
+      "mnemonic": "Squint: a lowercase t on the left, a broken a on the right – it spells ta.",
+      "level": 2,
+      "similar": [
+        "sc-ja-0021"
+      ],
+      "exampleWord": {
+        "target": "あした",
+        "english": "Tomorrow is a work day.",
+        "deckCardId": "ja-0024"
+      },
+      "audio": "sc-ja-0016.mp3"
+    },
+    {
+      "id": "sc-ja-0017",
+      "kind": "letter",
+      "glyph": "ち",
+      "sound": "chi",
+      "romanization": "chi",
+      "mnemonic": "さ (sa)'s mirror image – and the T row bends here: not ti but chi (cheese).",
+      "level": 2,
+      "similar": [
+        "sc-ja-0011",
+        "sc-ja-0039"
+      ],
+      "exampleWord": {
+        "target": "ちち",
+        "english": "My father is an office worker.",
+        "deckCardId": "ja-0017"
+      },
+      "audio": "sc-ja-0017.mp3"
+    },
+    {
+      "id": "sc-ja-0018",
+      "kind": "letter",
+      "glyph": "つ",
+      "sound": "tsu",
+      "romanization": "tsu",
+      "mnemonic": "A low curling wave – tsunami: tsu. Another bend in the row: not tu but tsu (the ts in cats, plus u).",
+      "level": 2,
+      "similar": [
+        "sc-ja-0003"
+      ],
+      "exampleWord": {
+        "target": "暑い",
+        "english": "It's hot today, isn't it?",
+        "deckCardId": "ja-0151"
+      },
+      "audio": "sc-ja-0018.mp3"
+    },
+    {
+      "id": "sc-ja-0019",
+      "kind": "letter",
+      "glyph": "て",
+      "sound": "te",
+      "romanization": "te",
+      "mnemonic": "A tabletop with one curving leg – te (table).",
+      "level": 2,
+      "exampleWord": {
+        "target": "書いて",
+        "english": "Please write your name here.",
+        "deckCardId": "ja-0239"
+      },
+      "audio": "sc-ja-0019.mp3"
+    },
+    {
+      "id": "sc-ja-0020",
+      "kind": "letter",
+      "glyph": "と",
+      "sound": "to",
+      "romanization": "to",
+      "mnemonic": "A stubbed toe with a splinter sticking in – to (toe).",
+      "level": 2,
+      "exampleWord": {
+        "target": "おとうと",
+        "english": "My younger brother is a high school student.",
+        "deckCardId": "ja-0025"
+      },
+      "audio": "sc-ja-0020.mp3"
+    },
+    {
+      "id": "sc-ja-0021",
+      "kind": "letter",
+      "glyph": "な",
+      "sound": "na",
+      "romanization": "na",
+      "mnemonic": "A cross above, a kneeling figure below – a nun at prayer: na.",
+      "level": 3,
+      "similar": [
+        "sc-ja-0016"
+      ],
+      "exampleWord": {
+        "target": "何",
+        "english": "What do you eat every morning?",
+        "deckCardId": "ja-0078"
+      },
+      "audio": "sc-ja-0021.mp3"
+    },
+    {
+      "id": "sc-ja-0022",
+      "kind": "letter",
+      "glyph": "に",
+      "sound": "ni",
+      "romanization": "ni",
+      "mnemonic": "A needle standing beside two stitches (こ) – ni (needle).",
+      "level": 3,
+      "similar": [
+        "sc-ja-0010"
+      ],
+      "exampleWord": {
+        "target": "兄",
+        "english": "I have an older brother.",
+        "deckCardId": "ja-0051"
+      },
+      "audio": "sc-ja-0022.mp3"
+    },
+    {
+      "id": "sc-ja-0023",
+      "kind": "letter",
+      "glyph": "ぬ",
+      "sound": "nu",
+      "romanization": "nu",
+      "mnemonic": "A tangle of noodles with a loop caught at the end – nu (noodle).",
+      "level": 3,
+      "similar": [
+        "sc-ja-0034",
+        "sc-ja-0024"
+      ],
+      "exampleWord": {
+        "target": "犬",
+        "english": "I have a dog and a cat.",
+        "deckCardId": "ja-0053"
+      },
+      "audio": "sc-ja-0023.mp3"
+    },
+    {
+      "id": "sc-ja-0024",
+      "kind": "letter",
+      "glyph": "ね",
+      "sound": "ne",
+      "romanization": "ne",
+      "mnemonic": "A cat sitting by a post, tail curled into a loop – ne, the first sound of neko (cat).",
+      "level": 3,
+      "similar": [
+        "sc-ja-0042",
+        "sc-ja-0044",
+        "sc-ja-0023"
+      ],
+      "exampleWord": {
+        "target": "あね",
+        "english": "My older sister is a teacher.",
+        "deckCardId": "ja-0019"
+      },
+      "audio": "sc-ja-0024.mp3"
+    },
+    {
+      "id": "sc-ja-0025",
+      "kind": "letter",
+      "glyph": "の",
+      "sound": "no",
+      "romanization": "no",
+      "mnemonic": "One smooth loop with a slash through it – a NO sign: no.",
+      "level": 3,
+      "exampleWord": {
+        "target": "の",
+        "english": "My friend is a clerk at a cafe.",
+        "deckCardId": "ja-0020"
+      },
+      "audio": "sc-ja-0025.mp3"
+    },
+    {
+      "id": "sc-ja-0026",
+      "kind": "letter",
+      "glyph": "は",
+      "sound": "ha",
+      "romanization": "ha",
+      "mnemonic": "A capital H with a little a curled at its foot – ha. As the topic particle it reads wa (kore wa – as for this).",
+      "level": 3,
+      "similar": [
+        "sc-ja-0030",
+        "sc-ja-0031",
+        "sc-ja-0009"
+      ],
+      "exampleWord": {
+        "target": "は",
+        "english": "I am a student.",
+        "deckCardId": "ja-0015"
+      },
+      "audio": "sc-ja-0026.mp3"
+    },
+    {
+      "id": "sc-ja-0027",
+      "kind": "letter",
+      "glyph": "ひ",
+      "sound": "hi",
+      "romanization": "hi",
+      "mnemonic": "A single stroke swinging down and back up like a wide grin – hee!: hi.",
+      "level": 3,
+      "exampleWord": {
+        "target": "ひと",
+        "english": "That person is a teacher.",
+        "deckCardId": "ja-0048"
+      },
+      "audio": "sc-ja-0027.mp3"
+    },
+    {
+      "id": "sc-ja-0028",
+      "kind": "letter",
+      "glyph": "ふ",
+      "sound": "fu",
+      "romanization": "fu",
+      "mnemonic": "Loose strokes drifting like puffs of air – the H row softens here: fu, a soft f blown between the lips, halfway to hu.",
+      "level": 3,
+      "exampleWord": {
+        "target": "二つ",
+        "english": "Two coffees, please.",
+        "deckCardId": "ja-0206"
+      },
+      "audio": "sc-ja-0028.mp3"
+    },
+    {
+      "id": "sc-ja-0029",
+      "kind": "letter",
+      "glyph": "へ",
+      "sound": "he",
+      "romanization": "he",
+      "mnemonic": "A low hill – you head up and over it: he (hen). As the direction particle it reads e.",
+      "level": 3,
+      "similar": [
+        "sc-ja-0008"
+      ],
+      "exampleWord": {
+        "target": "へ",
+        "english": "I'm going to Tokyo tomorrow.",
+        "deckCardId": "ja-0085"
+      },
+      "audio": "sc-ja-0029.mp3"
+    },
+    {
+      "id": "sc-ja-0030",
+      "kind": "letter",
+      "glyph": "ほ",
+      "sound": "ho",
+      "romanization": "ho",
+      "mnemonic": "は (ha) wearing an extra bar on top – ho.",
+      "level": 3,
+      "similar": [
+        "sc-ja-0026",
+        "sc-ja-0031"
+      ],
+      "exampleWord": {
+        "target": "にほんご",
+        "english": "I am a student of Japanese.",
+        "deckCardId": "ja-0021"
+      },
+      "audio": "sc-ja-0030.mp3"
+    },
+    {
+      "id": "sc-ja-0031",
+      "kind": "letter",
+      "glyph": "ま",
+      "sound": "ma",
+      "romanization": "ma",
+      "mnemonic": "Two bars crossing a stem that ties off in a loop – ma (mama). It's は (ha)'s right half with an extra bar.",
+      "level": 4,
+      "similar": [
+        "sc-ja-0026",
+        "sc-ja-0030",
+        "sc-ja-0035"
+      ],
+      "exampleWord": {
+        "target": "つま",
+        "english": "My wife is a bank employee.",
+        "deckCardId": "ja-0026"
+      },
+      "audio": "sc-ja-0031.mp3"
+    },
+    {
+      "id": "sc-ja-0032",
+      "kind": "letter",
+      "glyph": "み",
+      "sound": "mi",
+      "romanization": "mi",
+      "mnemonic": "A curling music note – a loop for the note head, a tail for the stem. Sing it: mi, as in do-re-mi.",
+      "level": 4,
+      "exampleWord": {
+        "target": "みせ",
+        "english": "The shop is closed today.",
+        "deckCardId": "ja-0028"
+      },
+      "audio": "sc-ja-0032.mp3"
+    },
+    {
+      "id": "sc-ja-0033",
+      "kind": "letter",
+      "glyph": "む",
+      "sound": "mu",
+      "romanization": "mu",
+      "mnemonic": "A stem with a curled loop like a cow's nose ring – moo: mu.",
+      "level": 4,
+      "similar": [
+        "sc-ja-0013"
+      ],
+      "exampleWord": {
+        "target": "寒くないです",
+        "english": "It's not cold today.",
+        "deckCardId": "ja-0159"
+      },
+      "audio": "sc-ja-0033.mp3"
+    },
+    {
+      "id": "sc-ja-0034",
+      "kind": "letter",
+      "glyph": "め",
+      "sound": "me",
+      "romanization": "me",
+      "mnemonic": "Two curves crossing to make an almond shape – an eye: me (handily, me is Japanese for eye).",
+      "level": 4,
+      "similar": [
+        "sc-ja-0023",
+        "sc-ja-0001"
+      ],
+      "exampleWord": {
+        "target": "冷たい",
+        "english": "This water is cold.",
+        "deckCardId": "ja-0152"
+      },
+      "audio": "sc-ja-0034.mp3"
+    },
+    {
+      "id": "sc-ja-0035",
+      "kind": "letter",
+      "glyph": "も",
+      "sound": "mo",
+      "romanization": "mo",
+      "mnemonic": "A hook with two crossbars – catch more with two barbs: mo (more).",
+      "level": 4,
+      "similar": [
+        "sc-ja-0031"
+      ],
+      "exampleWord": {
+        "target": "も",
+        "english": "My mother is an office worker too.",
+        "deckCardId": "ja-0018"
+      },
+      "audio": "sc-ja-0035.mp3"
+    },
+    {
+      "id": "sc-ja-0036",
+      "kind": "letter",
+      "glyph": "や",
+      "sound": "ya",
+      "romanization": "ya",
+      "mnemonic": "A yacht heeling in the wind – a slanted sail with a pennant flying: ya (yacht).",
+      "level": 4,
+      "exampleWord": {
+        "target": "やすみ",
+        "english": "The shop is closed today.",
+        "deckCardId": "ja-0028"
+      },
+      "audio": "sc-ja-0036.mp3"
+    },
+    {
+      "id": "sc-ja-0037",
+      "kind": "letter",
+      "glyph": "ゆ",
+      "sound": "yu",
+      "romanization": "yu",
+      "mnemonic": "A loop swinging right around a stem – a U-turn: yu (you).",
+      "level": 4,
+      "exampleWord": {
+        "target": "有名",
+        "english": "That hotel is famous.",
+        "deckCardId": "ja-0178"
+      },
+      "audio": "sc-ja-0037.mp3"
+    },
+    {
+      "id": "sc-ja-0038",
+      "kind": "letter",
+      "glyph": "よ",
+      "sound": "yo",
+      "romanization": "yo",
+      "mnemonic": "A string with a yo-yo spinning at the end – yo.",
+      "level": 4,
+      "exampleWord": {
+        "target": "よろしく",
+        "english": "I look forward to working with you.",
+        "deckCardId": "ja-0008"
+      },
+      "audio": "sc-ja-0038.mp3"
+    },
+    {
+      "id": "sc-ja-0039",
+      "kind": "letter",
+      "glyph": "ら",
+      "sound": "ra",
+      "romanization": "ra",
+      "mnemonic": "A signal dash above a curled radio dish – ra (radio). The Japanese r is a light tongue-tap, halfway to l (like the quick d in buddy).",
+      "level": 4,
+      "similar": [
+        "sc-ja-0017",
+        "sc-ja-0003"
+      ],
+      "exampleWord": {
+        "target": "こちら",
+        "english": "This is my friend.",
+        "deckCardId": "ja-0016"
+      },
+      "audio": "sc-ja-0039.mp3"
+    },
+    {
+      "id": "sc-ja-0040",
+      "kind": "letter",
+      "glyph": "り",
+      "sound": "ri",
+      "romanization": "ri",
+      "mnemonic": "Two strokes side by side, the right one trailing long – a river between its banks: ri (river).",
+      "level": 4,
+      "similar": [
+        "sc-ja-0002"
+      ],
+      "exampleWord": {
+        "target": "おかえりなさい",
+        "english": "Welcome home.",
+        "deckCardId": "ja-0012"
+      },
+      "audio": "sc-ja-0040.mp3"
+    },
+    {
+      "id": "sc-ja-0041",
+      "kind": "letter",
+      "glyph": "る",
+      "sound": "ru",
+      "romanization": "ru",
+      "mnemonic": "A zigzag road ending in a tight loop – a roundabout: ru (route).",
+      "level": 4,
+      "similar": [
+        "sc-ja-0043"
+      ],
+      "exampleWord": {
+        "target": "夜",
+        "english": "I watch TV at night.",
+        "deckCardId": "ja-0071"
+      },
+      "audio": "sc-ja-0041.mp3"
+    },
+    {
+      "id": "sc-ja-0042",
+      "kind": "letter",
+      "glyph": "れ",
+      "sound": "re",
+      "romanization": "re",
+      "mnemonic": "ね (ne)'s twin without the loop – the tail just kicks up at the end: re (red).",
+      "level": 4,
+      "similar": [
+        "sc-ja-0024",
+        "sc-ja-0044"
+      ],
+      "exampleWord": {
+        "target": "これ",
+        "english": "This is coffee.",
+        "deckCardId": "ja-0040"
+      },
+      "audio": "sc-ja-0042.mp3"
+    },
+    {
+      "id": "sc-ja-0043",
+      "kind": "letter",
+      "glyph": "ろ",
+      "sound": "ro",
+      "romanization": "ro",
+      "mnemonic": "る (ru) minus its end loop – ro. Loop = ru, no loop = ro.",
+      "level": 4,
+      "similar": [
+        "sc-ja-0041"
+      ],
+      "exampleWord": {
+        "target": "よろしく",
+        "english": "I look forward to working with you.",
+        "deckCardId": "ja-0008"
+      },
+      "audio": "sc-ja-0043.mp3"
+    },
+    {
+      "id": "sc-ja-0044",
+      "kind": "letter",
+      "glyph": "わ",
+      "sound": "wa",
+      "romanization": "wa",
+      "mnemonic": "Same post as ね (ne) and れ (re), but the tail rounds into one wide open curve – wa (wide).",
+      "level": 5,
+      "similar": [
+        "sc-ja-0024",
+        "sc-ja-0042"
+      ],
+      "exampleWord": {
+        "target": "わたし",
+        "english": "I am a student.",
+        "deckCardId": "ja-0015"
+      },
+      "audio": "sc-ja-0044.mp3"
+    },
+    {
+      "id": "sc-ja-0045",
+      "kind": "letter",
+      "glyph": "を",
+      "sound": "o (particle)",
+      "romanization": "o",
+      "mnemonic": "A twisting figure mid-cartwheel – を. Said as plain o, and used only as the object particle (hon o yomu – read a book).",
+      "level": 5,
+      "exampleWord": {
+        "target": "を",
+        "english": "I eat bread in the morning.",
+        "deckCardId": "ja-0068"
+      },
+      "audio": "sc-ja-0045.mp3"
+    },
+    {
+      "id": "sc-ja-0046",
+      "kind": "letter",
+      "glyph": "ん",
+      "sound": "n",
+      "romanization": "n",
+      "mnemonic": "One swooping stroke like a cursive n – n. The only kana with no vowel; before b, m or p it drifts toward m (senpai sounds like sempai).",
+      "level": 5,
+      "exampleWord": {
+        "target": "こんにちは",
+        "english": "Hello.",
+        "deckCardId": "ja-0001"
+      },
+      "audio": "sc-ja-0046.mp3"
+    },
+    {
+      "id": "sc-ja-0047",
+      "kind": "modifier",
+      "glyph": "゛",
+      "sound": "voicing mark",
+      "romanization": "dakuten",
+      "mnemonic": "Two small ticks at a kana's shoulder – switch your voice on: k to g, s to z, t to d, h to b. Two ticks = vocal cords buzzing.",
+      "level": 5,
+      "audio": "sc-ja-0047.mp3"
+    },
+    {
+      "id": "sc-ja-0048",
+      "kind": "modifier",
+      "glyph": "゜",
+      "sound": "half-voicing mark",
+      "romanization": "handakuten",
+      "mnemonic": "A small circle at the shoulder – only the H row takes it, popping h into p. Think of the circle as a little bubble popping: p.",
+      "level": 5,
+      "audio": "sc-ja-0048.mp3"
+    },
+    {
+      "id": "sc-ja-0049",
+      "kind": "composed",
+      "glyph": "が",
+      "sound": "ga",
+      "romanization": "ga",
+      "mnemonic": "",
+      "level": 5,
+      "components": [
+        "sc-ja-0006",
+        "sc-ja-0047"
+      ],
+      "audio": "sc-ja-0049.mp3"
+    },
+    {
+      "id": "sc-ja-0050",
+      "kind": "composed",
+      "glyph": "ざ",
+      "sound": "za",
+      "romanization": "za",
+      "mnemonic": "",
+      "level": 5,
+      "components": [
+        "sc-ja-0011",
+        "sc-ja-0047"
+      ],
+      "audio": "sc-ja-0050.mp3"
+    },
+    {
+      "id": "sc-ja-0051",
+      "kind": "composed",
+      "glyph": "だ",
+      "sound": "da",
+      "romanization": "da",
+      "mnemonic": "",
+      "level": 5,
+      "components": [
+        "sc-ja-0016",
+        "sc-ja-0047"
+      ],
+      "audio": "sc-ja-0051.mp3"
+    },
+    {
+      "id": "sc-ja-0052",
+      "kind": "composed",
+      "glyph": "ば",
+      "sound": "ba",
+      "romanization": "ba",
+      "mnemonic": "",
+      "level": 5,
+      "components": [
+        "sc-ja-0026",
+        "sc-ja-0047"
+      ],
+      "audio": "sc-ja-0052.mp3"
+    },
+    {
+      "id": "sc-ja-0053",
+      "kind": "composed",
+      "glyph": "ぱ",
+      "sound": "pa",
+      "romanization": "pa",
+      "mnemonic": "",
+      "level": 5,
+      "components": [
+        "sc-ja-0026",
+        "sc-ja-0048"
+      ],
+      "audio": "sc-ja-0053.mp3"
+    },
+    {
+      "id": "sc-ja-0054",
+      "kind": "modifier",
+      "glyph": "ゃ",
+      "sound": "small ya",
+      "romanization": "small ya",
+      "mnemonic": "A shrunken や (ya) tucked at another kana's foot – the i drops and ya glues on: き + ゃ melts ki-ya into kya, one beat.",
+      "level": 6,
+      "audio": "sc-ja-0054.mp3"
+    },
+    {
+      "id": "sc-ja-0055",
+      "kind": "modifier",
+      "glyph": "ゅ",
+      "sound": "small yu",
+      "romanization": "small yu",
+      "mnemonic": "A small ゆ (yu) hanging low – same glue: the i drops and yu slides in, so し + ゅ is shu, one syllable.",
+      "level": 6,
+      "audio": "sc-ja-0055.mp3"
+    },
+    {
+      "id": "sc-ja-0056",
+      "kind": "modifier",
+      "glyph": "ょ",
+      "sound": "small yo",
+      "romanization": "small yo",
+      "mnemonic": "A small よ (yo) at the foot – the i drops and yo takes over in a single beat: cho, kyo, sho.",
+      "level": 6,
+      "audio": "sc-ja-0056.mp3"
+    },
+    {
+      "id": "sc-ja-0057",
+      "kind": "modifier",
+      "glyph": "っ",
+      "sound": "small tsu",
+      "romanization": "small tsu",
+      "mnemonic": "A half-size つ (tsu) with no sound of its own – a tiny catch that doubles the NEXT consonant: き っ て = kitte, with a held beat before the t.",
+      "level": 6,
+      "audio": "sc-ja-0057.mp3"
+    },
+    {
+      "id": "sc-ja-0058",
+      "kind": "composed",
+      "glyph": "きゃ",
+      "sound": "kya",
+      "romanization": "kya",
+      "mnemonic": "",
+      "level": 6,
+      "components": [
+        "sc-ja-0007",
+        "sc-ja-0054"
+      ],
+      "audio": "sc-ja-0058.mp3"
+    },
+    {
+      "id": "sc-ja-0059",
+      "kind": "composed",
+      "glyph": "しゅ",
+      "sound": "shu",
+      "romanization": "shu",
+      "mnemonic": "",
+      "level": 6,
+      "components": [
+        "sc-ja-0012",
+        "sc-ja-0055"
+      ],
+      "audio": "sc-ja-0059.mp3"
+    },
+    {
+      "id": "sc-ja-0060",
+      "kind": "composed",
+      "glyph": "ちょ",
+      "sound": "cho",
+      "romanization": "cho",
+      "mnemonic": "",
+      "level": 6,
+      "components": [
+        "sc-ja-0017",
+        "sc-ja-0056"
+      ],
+      "audio": "sc-ja-0060.mp3"
+    },
+    {
+      "id": "sc-ja-0061",
+      "kind": "letter",
+      "glyph": "ア",
+      "sound": "a",
+      "romanization": "a",
+      "mnemonic": "An axe – the top bar is the blade, the long stroke sweeps down as the handle: a for axe.",
+      "level": 8,
+      "similar": [
+        "sc-ja-0091"
+      ],
+      "exampleWord": {
+        "target": "ドア",
+        "english": "Please close the door.",
+        "deckCardId": "ja-0241"
+      },
+      "audio": "sc-ja-0061.mp3"
+    },
+    {
+      "id": "sc-ja-0062",
+      "kind": "letter",
+      "glyph": "イ",
+      "sound": "i",
+      "romanization": "i",
+      "mnemonic": "An easel standing on one straight leg – ee: i. Just two strokes.",
+      "level": 8,
+      "audio": "sc-ja-0062.mp3"
+    },
+    {
+      "id": "sc-ja-0063",
+      "kind": "letter",
+      "glyph": "ウ",
+      "sound": "u",
+      "romanization": "u",
+      "mnemonic": "A roof with a chimney tick on top – u. It's hiragana う squared off, same sound.",
+      "level": 8,
+      "similar": [
+        "sc-ja-0104",
+        "sc-ja-0088"
+      ],
+      "audio": "sc-ja-0063.mp3"
+    },
+    {
+      "id": "sc-ja-0064",
+      "kind": "letter",
+      "glyph": "エ",
+      "sound": "e",
+      "romanization": "e",
+      "mnemonic": "An elevator between two floors – top bar, bottom bar, and the shaft between: e.",
+      "level": 8,
+      "audio": "sc-ja-0064.mp3"
+    },
+    {
+      "id": "sc-ja-0065",
+      "kind": "letter",
+      "glyph": "オ",
+      "sound": "o",
+      "romanization": "o",
+      "mnemonic": "A pole with a crossbar and one kicked-out leg – it's hiragana お stripped to straight lines: same o.",
+      "level": 8,
+      "similar": [
+        "sc-ja-0090"
+      ],
+      "audio": "sc-ja-0065.mp3"
+    },
+    {
+      "id": "sc-ja-0066",
+      "kind": "letter",
+      "glyph": "カ",
+      "sound": "ka",
+      "romanization": "ka",
+      "mnemonic": "A karate kick frozen mid-air, the knee bent sharp at the hook – ka. (It's hiragana か minus the small tick.)",
+      "level": 8,
+      "exampleWord": {
+        "target": "カフェ",
+        "english": "My friend is a clerk at a cafe.",
+        "deckCardId": "ja-0020"
+      },
+      "audio": "sc-ja-0066.mp3"
+    },
+    {
+      "id": "sc-ja-0067",
+      "kind": "letter",
+      "glyph": "キ",
+      "sound": "ki",
+      "romanization": "ki",
+      "mnemonic": "A key's shaft with two teeth cut across it – ki: key.",
+      "level": 8,
+      "exampleWord": {
+        "target": "ケーキ",
+        "english": "How much is this cake?",
+        "deckCardId": "ja-0046"
+      },
+      "audio": "sc-ja-0067.mp3"
+    },
+    {
+      "id": "sc-ja-0068",
+      "kind": "letter",
+      "glyph": "ク",
+      "sound": "ku",
+      "romanization": "ku",
+      "mnemonic": "A cuckoo poking out of its clock, beak open – ku.",
+      "level": 8,
+      "similar": [
+        "sc-ja-0076",
+        "sc-ja-0069",
+        "sc-ja-0104"
+      ],
+      "exampleWord": {
+        "target": "タクシー",
+        "english": "Tomorrow I'm going to the airport by taxi.",
+        "deckCardId": "ja-0103"
+      },
+      "audio": "sc-ja-0068.mp3"
+    },
+    {
+      "id": "sc-ja-0069",
+      "kind": "letter",
+      "glyph": "ケ",
+      "sound": "ke",
+      "romanization": "ke",
+      "mnemonic": "A slanted capital K missing its lower leg – ke. The long flat bar keeps it from collapsing into ク (ku).",
+      "level": 8,
+      "similar": [
+        "sc-ja-0068",
+        "sc-ja-0076"
+      ],
+      "exampleWord": {
+        "target": "ケーキ",
+        "english": "How much is this cake?",
+        "deckCardId": "ja-0046"
+      },
+      "audio": "sc-ja-0069.mp3"
+    },
+    {
+      "id": "sc-ja-0070",
+      "kind": "letter",
+      "glyph": "コ",
+      "sound": "ko",
+      "romanization": "ko",
+      "mnemonic": "A box missing its left wall – sharp corners: ko.",
+      "level": 8,
+      "similar": [
+        "sc-ja-0097",
+        "sc-ja-0103"
+      ],
+      "exampleWord": {
+        "target": "コーヒー",
+        "english": "I'll have coffee.",
+        "deckCardId": "ja-0022"
+      },
+      "audio": "sc-ja-0070.mp3"
+    },
+    {
+      "id": "sc-ja-0071",
+      "kind": "letter",
+      "glyph": "サ",
+      "sound": "sa",
+      "romanization": "sa",
+      "mnemonic": "Two saplings sprouting up through the soil line – sa.",
+      "level": 8,
+      "exampleWord": {
+        "target": "サッカー",
+        "english": "I played soccer on Saturday.",
+        "deckCardId": "ja-0139"
+      },
+      "audio": "sc-ja-0071.mp3"
+    },
+    {
+      "id": "sc-ja-0072",
+      "kind": "letter",
+      "glyph": "シ",
+      "sound": "shi",
+      "romanization": "shi",
+      "mnemonic": "Two flat drops and a long stroke drawn UP from the bottom – the upswing of a smile: she, shi. Its lookalike ツ (tsu, next level) is drawn top-down instead.",
+      "level": 8,
+      "similar": [
+        "sc-ja-0078"
+      ],
+      "exampleWord": {
+        "target": "タクシー",
+        "english": "Tomorrow I'm going to the airport by taxi.",
+        "deckCardId": "ja-0103"
+      },
+      "audio": "sc-ja-0072.mp3"
+    },
+    {
+      "id": "sc-ja-0073",
+      "kind": "letter",
+      "glyph": "ス",
+      "sound": "su",
+      "romanization": "su",
+      "mnemonic": "A slide seen from the side, with a kickstand leg – swoosh down it: su.",
+      "level": 8,
+      "similar": [
+        "sc-ja-0083"
+      ],
+      "exampleWord": {
+        "target": "スーパー",
+        "english": "There is a supermarket nearby.",
+        "deckCardId": "ja-0059"
+      },
+      "audio": "sc-ja-0073.mp3"
+    },
+    {
+      "id": "sc-ja-0074",
+      "kind": "letter",
+      "glyph": "セ",
+      "sound": "se",
+      "romanization": "se",
+      "mnemonic": "A tab pulled sideways through a slot – se. It's hiragana せ minus one stroke, gone angular.",
+      "level": 8,
+      "audio": "sc-ja-0074.mp3"
+    },
+    {
+      "id": "sc-ja-0075",
+      "kind": "letter",
+      "glyph": "ソ",
+      "sound": "so",
+      "romanization": "so",
+      "mnemonic": "One drop, then the long stroke falls from the top – sewing a stitch downward: so. Its twin ン (n, later) rises instead; stroke direction tells them apart.",
+      "level": 8,
+      "similar": [
+        "sc-ja-0106"
+      ],
+      "exampleWord": {
+        "target": "パソコン",
+        "english": "I want to buy a new computer.",
+        "deckCardId": "ja-0278"
+      },
+      "audio": "sc-ja-0075.mp3"
+    },
+    {
+      "id": "sc-ja-0076",
+      "kind": "letter",
+      "glyph": "タ",
+      "sound": "ta",
+      "romanization": "ta",
+      "mnemonic": "ク (ku) with a tongue tucked inside the beak – ta.",
+      "level": 9,
+      "similar": [
+        "sc-ja-0068",
+        "sc-ja-0069"
+      ],
+      "exampleWord": {
+        "target": "タクシー",
+        "english": "Tomorrow I'm going to the airport by taxi.",
+        "deckCardId": "ja-0103"
+      },
+      "audio": "sc-ja-0076.mp3"
+    },
+    {
+      "id": "sc-ja-0077",
+      "kind": "letter",
+      "glyph": "チ",
+      "sound": "chi",
+      "romanization": "chi",
+      "mnemonic": "A lowercase t with a slanted cap – but Japanese has no ti, so it reads chi. Same chi as hiragana ち.",
+      "level": 9,
+      "similar": [
+        "sc-ja-0079"
+      ],
+      "audio": "sc-ja-0077.mp3"
+    },
+    {
+      "id": "sc-ja-0078",
+      "kind": "letter",
+      "glyph": "ツ",
+      "sound": "tsu",
+      "romanization": "tsu",
+      "mnemonic": "Two drops falling and the long stroke crashing DOWN from the top – a tsunami: tsu. シ (shi) smiles upward; ツ crashes down.",
+      "level": 9,
+      "similar": [
+        "sc-ja-0072",
+        "sc-ja-0075"
+      ],
+      "exampleWord": {
+        "target": "シャツ",
+        "english": "This shirt is 1,000 yen.",
+        "deckCardId": "ja-0205"
+      },
+      "audio": "sc-ja-0078.mp3"
+    },
+    {
+      "id": "sc-ja-0079",
+      "kind": "letter",
+      "glyph": "テ",
+      "sound": "te",
+      "romanization": "te",
+      "mnemonic": "A telephone pole with two crossbars – te.",
+      "level": 9,
+      "similar": [
+        "sc-ja-0077"
+      ],
+      "exampleWord": {
+        "target": "テニス",
+        "english": "Won't you play tennis on Sunday?",
+        "deckCardId": "ja-0133"
+      },
+      "audio": "sc-ja-0079.mp3"
+    },
+    {
+      "id": "sc-ja-0080",
+      "kind": "letter",
+      "glyph": "ト",
+      "sound": "to",
+      "romanization": "to",
+      "mnemonic": "A post with one wedge jutting out – a totem pole: to.",
+      "level": 9,
+      "exampleWord": {
+        "target": "テスト",
+        "english": "The test wasn't hard.",
+        "deckCardId": "ja-0163"
+      },
+      "audio": "sc-ja-0080.mp3"
+    },
+    {
+      "id": "sc-ja-0081",
+      "kind": "letter",
+      "glyph": "ナ",
+      "sound": "na",
+      "romanization": "na",
+      "mnemonic": "A plus sign with its leg swept out to the left – na. It's literally the first two strokes of hiragana な.",
+      "level": 9,
+      "similar": [
+        "sc-ja-0094"
+      ],
+      "audio": "sc-ja-0081.mp3"
+    },
+    {
+      "id": "sc-ja-0082",
+      "kind": "letter",
+      "glyph": "ニ",
+      "sound": "ni",
+      "romanization": "ni",
+      "mnemonic": "Two flat strokes – and ni is Japanese for two (二). The kana IS the kanji.",
+      "level": 9,
+      "similar": [
+        "sc-ja-0092"
+      ],
+      "exampleWord": {
+        "target": "テニス",
+        "english": "Won't you play tennis on Sunday?",
+        "deckCardId": "ja-0133"
+      },
+      "audio": "sc-ja-0082.mp3"
+    },
+    {
+      "id": "sc-ja-0083",
+      "kind": "letter",
+      "glyph": "ヌ",
+      "sound": "nu",
+      "romanization": "nu",
+      "mnemonic": "ス (su) with its leg lashed through the body – noodles caught crosswise on a chopstick: nu.",
+      "level": 9,
+      "similar": [
+        "sc-ja-0073"
+      ],
+      "audio": "sc-ja-0083.mp3"
+    },
+    {
+      "id": "sc-ja-0084",
+      "kind": "letter",
+      "glyph": "ネ",
+      "sound": "ne",
+      "romanization": "ne",
+      "mnemonic": "A signpost with a little nest tucked against its trunk – ne: nest.",
+      "level": 9,
+      "audio": "sc-ja-0084.mp3"
+    },
+    {
+      "id": "sc-ja-0085",
+      "kind": "letter",
+      "glyph": "ノ",
+      "sound": "no",
+      "romanization": "no",
+      "mnemonic": "One single slash – no more, no less: no.",
+      "level": 9,
+      "similar": [
+        "sc-ja-0075"
+      ],
+      "audio": "sc-ja-0085.mp3"
+    },
+    {
+      "id": "sc-ja-0086",
+      "kind": "letter",
+      "glyph": "ハ",
+      "sound": "ha",
+      "romanization": "ha",
+      "mnemonic": "Two strokes parting like wings – ha. It doubles as the kanji for eight (八, hachi).",
+      "level": 9,
+      "exampleWord": {
+        "target": "バス",
+        "english": "Are you going to the station by bus?",
+        "deckCardId": "ja-0102"
+      },
+      "audio": "sc-ja-0086.mp3"
+    },
+    {
+      "id": "sc-ja-0087",
+      "kind": "letter",
+      "glyph": "ヒ",
+      "sound": "hi",
+      "romanization": "hi",
+      "mnemonic": "A hockey stick mid-hit, the blade kicking up at the bottom – hi. Same hi as hiragana ひ.",
+      "level": 9,
+      "exampleWord": {
+        "target": "コーヒー",
+        "english": "I'll have coffee.",
+        "deckCardId": "ja-0022"
+      },
+      "audio": "sc-ja-0087.mp3"
+    },
+    {
+      "id": "sc-ja-0088",
+      "kind": "letter",
+      "glyph": "フ",
+      "sound": "fu",
+      "romanization": "fu",
+      "mnemonic": "A flag rippling with no pole – fu. Blow the f softly between your lips, like hiragana ふ.",
+      "level": 9,
+      "similar": [
+        "sc-ja-0104",
+        "sc-ja-0063",
+        "sc-ja-0068"
+      ],
+      "exampleWord": {
+        "target": "カフェ",
+        "english": "My friend is a clerk at a cafe.",
+        "deckCardId": "ja-0020"
+      },
+      "audio": "sc-ja-0088.mp3"
+    },
+    {
+      "id": "sc-ja-0089",
+      "kind": "letter",
+      "glyph": "ヘ",
+      "sound": "he",
+      "romanization": "he",
+      "mnemonic": "A low hill – hiragana and katakana share this one glyph: he. Nothing new to learn.",
+      "level": 9,
+      "exampleWord": {
+        "target": "ペン",
+        "english": "I write my name with a pen.",
+        "deckCardId": "ja-0113"
+      },
+      "audio": "sc-ja-0089.mp3"
+    },
+    {
+      "id": "sc-ja-0090",
+      "kind": "letter",
+      "glyph": "ホ",
+      "sound": "ho",
+      "romanization": "ho",
+      "mnemonic": "A pole propped up on both sides – it holds: ho.",
+      "level": 9,
+      "similar": [
+        "sc-ja-0065"
+      ],
+      "exampleWord": {
+        "target": "ホテル",
+        "english": "That hotel is famous.",
+        "deckCardId": "ja-0178"
+      },
+      "audio": "sc-ja-0090.mp3"
+    },
+    {
+      "id": "sc-ja-0091",
+      "kind": "letter",
+      "glyph": "マ",
+      "sound": "ma",
+      "romanization": "ma",
+      "mnemonic": "A map pin dropped at a slant, with one tick of a shadow – ma.",
+      "level": 10,
+      "similar": [
+        "sc-ja-0061",
+        "sc-ja-0093"
+      ],
+      "audio": "sc-ja-0091.mp3"
+    },
+    {
+      "id": "sc-ja-0092",
+      "kind": "letter",
+      "glyph": "ミ",
+      "sound": "mi",
+      "romanization": "mi",
+      "mnemonic": "Three quick strokes – three is mittsu in Japanese: mi. (It comes from the kanji 三.)",
+      "level": 10,
+      "similar": [
+        "sc-ja-0082"
+      ],
+      "audio": "sc-ja-0092.mp3"
+    },
+    {
+      "id": "sc-ja-0093",
+      "kind": "letter",
+      "glyph": "ム",
+      "sound": "mu",
+      "romanization": "mu",
+      "mnemonic": "A cow's face in three lines – two cheeks and a chin tick: moo, mu.",
+      "level": 10,
+      "similar": [
+        "sc-ja-0091"
+      ],
+      "audio": "sc-ja-0093.mp3"
+    },
+    {
+      "id": "sc-ja-0094",
+      "kind": "letter",
+      "glyph": "メ",
+      "sound": "me",
+      "romanization": "me",
+      "mnemonic": "Two lashes crossing over a winked-shut eye – me. (Me also means eye in Japanese.)",
+      "level": 10,
+      "similar": [
+        "sc-ja-0081"
+      ],
+      "exampleWord": {
+        "target": "ラーメン",
+        "english": "I eat ramen with chopsticks.",
+        "deckCardId": "ja-0112"
+      },
+      "audio": "sc-ja-0094.mp3"
+    },
+    {
+      "id": "sc-ja-0095",
+      "kind": "letter",
+      "glyph": "モ",
+      "sound": "mo",
+      "romanization": "mo",
+      "mnemonic": "A hook catching two rungs – it's hiragana も with the curls ironed flat: same mo.",
+      "level": 10,
+      "audio": "sc-ja-0095.mp3"
+    },
+    {
+      "id": "sc-ja-0096",
+      "kind": "letter",
+      "glyph": "ヤ",
+      "sound": "ya",
+      "romanization": "ya",
+      "mnemonic": "A slingshot tilted sideways – ya. (It's hiragana や minus the small tick.)",
+      "level": 10,
+      "audio": "sc-ja-0096.mp3"
+    },
+    {
+      "id": "sc-ja-0097",
+      "kind": "letter",
+      "glyph": "ユ",
+      "sound": "yu",
+      "romanization": "yu",
+      "mnemonic": "A capital U drawn with a ruler, standing on its own baseline – yu.",
+      "level": 10,
+      "similar": [
+        "sc-ja-0070"
+      ],
+      "audio": "sc-ja-0097.mp3"
+    },
+    {
+      "id": "sc-ja-0098",
+      "kind": "letter",
+      "glyph": "ヨ",
+      "sound": "yo",
+      "romanization": "yo",
+      "mnemonic": "A capital E looking the wrong way – you shout yo! to turn it around: yo.",
+      "level": 10,
+      "similar": [
+        "sc-ja-0097"
+      ],
+      "audio": "sc-ja-0098.mp3"
+    },
+    {
+      "id": "sc-ja-0099",
+      "kind": "letter",
+      "glyph": "ラ",
+      "sound": "ra",
+      "romanization": "ra",
+      "mnemonic": "フ (fu) wearing a flat lid – ra, the lid on a ramen bowl.",
+      "level": 10,
+      "similar": [
+        "sc-ja-0088"
+      ],
+      "exampleWord": {
+        "target": "レストラン",
+        "english": "Let's go to a restaurant on Saturday.",
+        "deckCardId": "ja-0097"
+      },
+      "audio": "sc-ja-0099.mp3"
+    },
+    {
+      "id": "sc-ja-0100",
+      "kind": "letter",
+      "glyph": "リ",
+      "sound": "ri",
+      "romanization": "ri",
+      "mnemonic": "Two reeds side by side, the right one longer – ri. Hiragana り minus the curve.",
+      "level": 10,
+      "audio": "sc-ja-0100.mp3"
+    },
+    {
+      "id": "sc-ja-0101",
+      "kind": "letter",
+      "glyph": "ル",
+      "sound": "ru",
+      "romanization": "ru",
+      "mnemonic": "Two strokes, and the right one curls up at the end – a root turning at a river bend: ru.",
+      "level": 10,
+      "similar": [
+        "sc-ja-0102"
+      ],
+      "exampleWord": {
+        "target": "テーブル",
+        "english": "There is bread on the table.",
+        "deckCardId": "ja-0067"
+      },
+      "audio": "sc-ja-0101.mp3"
+    },
+    {
+      "id": "sc-ja-0102",
+      "kind": "letter",
+      "glyph": "レ",
+      "sound": "re",
+      "romanization": "re",
+      "mnemonic": "A single stroke that drops, then kicks up onto a ledge – re.",
+      "level": 10,
+      "similar": [
+        "sc-ja-0101"
+      ],
+      "exampleWord": {
+        "target": "テレビ",
+        "english": "There is a TV in my room.",
+        "deckCardId": "ja-0054"
+      },
+      "audio": "sc-ja-0102.mp3"
+    },
+    {
+      "id": "sc-ja-0103",
+      "kind": "letter",
+      "glyph": "ロ",
+      "sound": "ro",
+      "romanization": "ro",
+      "mnemonic": "A square box – a robot's mouth: ro.",
+      "level": 10,
+      "similar": [
+        "sc-ja-0070"
+      ],
+      "audio": "sc-ja-0103.mp3"
+    },
+    {
+      "id": "sc-ja-0104",
+      "kind": "letter",
+      "glyph": "ワ",
+      "sound": "wa",
+      "romanization": "wa",
+      "mnemonic": "フ (fu) grown a wall on its left side – wider now: wa.",
+      "level": 10,
+      "similar": [
+        "sc-ja-0088",
+        "sc-ja-0063",
+        "sc-ja-0068"
+      ],
+      "audio": "sc-ja-0104.mp3"
+    },
+    {
+      "id": "sc-ja-0105",
+      "kind": "letter",
+      "glyph": "ヲ",
+      "sound": "o (particle)",
+      "romanization": "o",
+      "mnemonic": "フ with a bar through its middle – wo, read as plain o. Rare: it only turns up when the particle o is written in katakana.",
+      "level": 10,
+      "similar": [
+        "sc-ja-0088",
+        "sc-ja-0099"
+      ],
+      "audio": "sc-ja-0105.mp3"
+    },
+    {
+      "id": "sc-ja-0106",
+      "kind": "letter",
+      "glyph": "ン",
+      "sound": "n",
+      "romanization": "n",
+      "mnemonic": "One flat drop and the long stroke swept UP from the bottom – ン rises: n. ソ (so) falls from the top; that stroke direction is the whole difference.",
+      "level": 10,
+      "similar": [
+        "sc-ja-0075"
+      ],
+      "exampleWord": {
+        "target": "パン",
+        "english": "There is bread on the table.",
+        "deckCardId": "ja-0067"
+      },
+      "audio": "sc-ja-0106.mp3"
+    },
+    {
+      "id": "sc-ja-0107",
+      "kind": "modifier",
+      "glyph": "ー",
+      "sound": "long vowel mark",
+      "romanization": "choonpu",
+      "mnemonic": "A dash that stretches the vowel before it to double length – コ ko + ー = koo. Katakana's long-vowel mark, everywhere in loanwords: コーヒー (koohii, coffee).",
+      "level": 10,
+      "audio": "sc-ja-0107.mp3"
+    },
+    {
+      "id": "sc-ja-0108",
+      "kind": "composed",
+      "glyph": "コーヒー",
+      "sound": "kōhī",
+      "romanization": "koohii",
+      "mnemonic": "",
+      "level": 10,
+      "components": [
+        "sc-ja-0070",
+        "sc-ja-0107",
+        "sc-ja-0087",
+        "sc-ja-0107"
+      ],
+      "audio": "sc-ja-0108.mp3"
+    },
+    {
+      "id": "sc-ja-0109",
+      "kind": "composed",
+      "glyph": "ケーキ",
+      "sound": "kēki",
+      "romanization": "keeki",
+      "mnemonic": "",
+      "level": 10,
+      "components": [
+        "sc-ja-0069",
+        "sc-ja-0107",
+        "sc-ja-0067"
+      ],
+      "audio": "sc-ja-0109.mp3"
+    },
+    {
+      "id": "sc-ja-0110",
+      "kind": "word",
+      "glyph": "こんにちは",
+      "sound": "konnichiwa",
+      "romanization": "konnichiwa",
+      "mnemonic": "",
+      "level": 7,
+      "exampleWord": {
+        "target": "こんにちは",
+        "english": "Hello.",
+        "deckCardId": "ja-0001"
+      },
+      "audio": "sc-ja-0110.mp3"
+    },
+    {
+      "id": "sc-ja-0111",
+      "kind": "word",
+      "glyph": "こんばんは",
+      "sound": "konbanwa",
+      "romanization": "konbanwa",
+      "mnemonic": "",
+      "level": 7,
+      "exampleWord": {
+        "target": "こんばんは",
+        "english": "Good evening.",
+        "deckCardId": "ja-0003"
+      },
+      "audio": "sc-ja-0111.mp3"
+    },
+    {
+      "id": "sc-ja-0112",
+      "kind": "word",
+      "glyph": "すみません",
+      "sound": "sumimasen",
+      "romanization": "sumimasen",
+      "mnemonic": "",
+      "level": 7,
+      "exampleWord": {
+        "target": "すみません",
+        "english": "Excuse me.",
+        "deckCardId": "ja-0005"
+      },
+      "audio": "sc-ja-0112.mp3"
+    },
+    {
+      "id": "sc-ja-0113",
+      "kind": "word",
+      "glyph": "よろしく",
+      "sound": "yoroshiku",
+      "romanization": "yoroshiku",
+      "mnemonic": "",
+      "level": 7,
+      "exampleWord": {
+        "target": "よろしく",
+        "english": "I look forward to working with you.",
+        "deckCardId": "ja-0008"
+      },
+      "audio": "sc-ja-0113.mp3"
+    },
+    {
+      "id": "sc-ja-0114",
+      "kind": "word",
+      "glyph": "ただいま",
+      "sound": "tadaima",
+      "romanization": "tadaima",
+      "mnemonic": "",
+      "level": 7,
+      "exampleWord": {
+        "target": "ただいま",
+        "english": "I'm home.",
+        "deckCardId": "ja-0011"
+      },
+      "audio": "sc-ja-0114.mp3"
+    },
+    {
+      "id": "sc-ja-0115",
+      "kind": "word",
+      "glyph": "わたし",
+      "sound": "watashi",
+      "romanization": "watashi",
+      "mnemonic": "",
+      "level": 7,
+      "exampleWord": {
+        "target": "わたし",
+        "english": "I am a student.",
+        "deckCardId": "ja-0015"
+      },
+      "audio": "sc-ja-0115.mp3"
+    },
+    {
+      "id": "sc-ja-0116",
+      "kind": "word",
+      "glyph": "テレビ",
+      "sound": "terebi",
+      "romanization": "terebi",
+      "mnemonic": "",
+      "level": 11,
+      "exampleWord": {
+        "target": "テレビ",
+        "english": "There is a TV in my room.",
+        "deckCardId": "ja-0054"
+      },
+      "audio": "sc-ja-0116.mp3"
+    },
+    {
+      "id": "sc-ja-0117",
+      "kind": "word",
+      "glyph": "スーパー",
+      "sound": "suupaa",
+      "romanization": "suupaa",
+      "mnemonic": "",
+      "level": 11,
+      "exampleWord": {
+        "target": "スーパー",
+        "english": "There is a supermarket nearby.",
+        "deckCardId": "ja-0059"
+      },
+      "audio": "sc-ja-0117.mp3"
+    },
+    {
+      "id": "sc-ja-0118",
+      "kind": "word",
+      "glyph": "テーブル",
+      "sound": "teeburu",
+      "romanization": "teeburu",
+      "mnemonic": "",
+      "level": 11,
+      "exampleWord": {
+        "target": "テーブル",
+        "english": "There is bread on the table.",
+        "deckCardId": "ja-0067"
+      },
+      "audio": "sc-ja-0118.mp3"
+    },
+    {
+      "id": "sc-ja-0119",
+      "kind": "word",
+      "glyph": "パン",
+      "sound": "pan",
+      "romanization": "pan",
+      "mnemonic": "",
+      "level": 11,
+      "exampleWord": {
+        "target": "パン",
+        "english": "There is bread on the table.",
+        "deckCardId": "ja-0067"
+      },
+      "audio": "sc-ja-0119.mp3"
+    },
+    {
+      "id": "sc-ja-0120",
+      "kind": "word",
+      "glyph": "レストラン",
+      "sound": "resutoran",
+      "romanization": "resutoran",
+      "mnemonic": "",
+      "level": 11,
+      "exampleWord": {
+        "target": "レストラン",
+        "english": "Let's go to a restaurant on Saturday.",
+        "deckCardId": "ja-0097"
+      },
+      "audio": "sc-ja-0120.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "title": "First vowels and the K row",
+      "itemIds": [
+        "sc-ja-0001",
+        "sc-ja-0002",
+        "sc-ja-0003",
+        "sc-ja-0004",
+        "sc-ja-0005",
+        "sc-ja-0006",
+        "sc-ja-0007",
+        "sc-ja-0008",
+        "sc-ja-0009",
+        "sc-ja-0010"
+      ],
+      "readableWordCount": 8
+    },
+    {
+      "level": 2,
+      "title": "S and T rows",
+      "itemIds": [
+        "sc-ja-0011",
+        "sc-ja-0012",
+        "sc-ja-0013",
+        "sc-ja-0014",
+        "sc-ja-0015",
+        "sc-ja-0016",
+        "sc-ja-0017",
+        "sc-ja-0018",
+        "sc-ja-0019",
+        "sc-ja-0020"
+      ],
+      "readableWordCount": 38
+    },
+    {
+      "level": 3,
+      "title": "N and H rows",
+      "itemIds": [
+        "sc-ja-0021",
+        "sc-ja-0022",
+        "sc-ja-0023",
+        "sc-ja-0024",
+        "sc-ja-0025",
+        "sc-ja-0026",
+        "sc-ja-0027",
+        "sc-ja-0028",
+        "sc-ja-0029",
+        "sc-ja-0030"
+      ],
+      "readableWordCount": 63
+    },
+    {
+      "level": 4,
+      "title": "M, Y and R rows",
+      "itemIds": [
+        "sc-ja-0031",
+        "sc-ja-0032",
+        "sc-ja-0033",
+        "sc-ja-0034",
+        "sc-ja-0035",
+        "sc-ja-0036",
+        "sc-ja-0037",
+        "sc-ja-0038",
+        "sc-ja-0039",
+        "sc-ja-0040",
+        "sc-ja-0041",
+        "sc-ja-0042",
+        "sc-ja-0043"
+      ],
+      "readableWordCount": 149
+    },
+    {
+      "level": 5,
+      "title": "W row, ん, and the voicing marks",
+      "itemIds": [
+        "sc-ja-0044",
+        "sc-ja-0045",
+        "sc-ja-0046",
+        "sc-ja-0047",
+        "sc-ja-0048",
+        "sc-ja-0049",
+        "sc-ja-0050",
+        "sc-ja-0051",
+        "sc-ja-0052",
+        "sc-ja-0053"
+      ],
+      "readableWordCount": 270
+    },
+    {
+      "level": 6,
+      "title": "Small kana",
+      "itemIds": [
+        "sc-ja-0054",
+        "sc-ja-0055",
+        "sc-ja-0056",
+        "sc-ja-0057",
+        "sc-ja-0058",
+        "sc-ja-0059",
+        "sc-ja-0060"
+      ],
+      "readableWordCount": 324
+    },
+    {
+      "level": 7,
+      "title": "Real words from your deck",
+      "itemIds": [
+        "sc-ja-0110",
+        "sc-ja-0111",
+        "sc-ja-0112",
+        "sc-ja-0113",
+        "sc-ja-0114",
+        "sc-ja-0115"
+      ],
+      "readableWordCount": 324
+    },
+    {
+      "level": 8,
+      "title": "Katakana vowels, K and S rows",
+      "itemIds": [
+        "sc-ja-0061",
+        "sc-ja-0062",
+        "sc-ja-0063",
+        "sc-ja-0064",
+        "sc-ja-0065",
+        "sc-ja-0066",
+        "sc-ja-0067",
+        "sc-ja-0068",
+        "sc-ja-0069",
+        "sc-ja-0070",
+        "sc-ja-0071",
+        "sc-ja-0072",
+        "sc-ja-0073",
+        "sc-ja-0074",
+        "sc-ja-0075"
+      ],
+      "readableWordCount": 324
+    },
+    {
+      "level": 9,
+      "title": "T, N and H rows",
+      "itemIds": [
+        "sc-ja-0076",
+        "sc-ja-0077",
+        "sc-ja-0078",
+        "sc-ja-0079",
+        "sc-ja-0080",
+        "sc-ja-0081",
+        "sc-ja-0082",
+        "sc-ja-0083",
+        "sc-ja-0084",
+        "sc-ja-0085",
+        "sc-ja-0086",
+        "sc-ja-0087",
+        "sc-ja-0088",
+        "sc-ja-0089",
+        "sc-ja-0090"
+      ],
+      "readableWordCount": 329
+    },
+    {
+      "level": 10,
+      "title": "M, Y, R, W rows and ー",
+      "itemIds": [
+        "sc-ja-0091",
+        "sc-ja-0092",
+        "sc-ja-0093",
+        "sc-ja-0094",
+        "sc-ja-0095",
+        "sc-ja-0096",
+        "sc-ja-0097",
+        "sc-ja-0098",
+        "sc-ja-0099",
+        "sc-ja-0100",
+        "sc-ja-0101",
+        "sc-ja-0102",
+        "sc-ja-0103",
+        "sc-ja-0104",
+        "sc-ja-0105",
+        "sc-ja-0106",
+        "sc-ja-0107",
+        "sc-ja-0108",
+        "sc-ja-0109"
+      ],
+      "readableWordCount": 349
+    },
+    {
+      "level": 11,
+      "title": "Katakana words from your deck",
+      "itemIds": [
+        "sc-ja-0116",
+        "sc-ja-0117",
+        "sc-ja-0118",
+        "sc-ja-0119",
+        "sc-ja-0120"
+      ],
+      "readableWordCount": 349
+    }
+  ]
+}

@@ -84,6 +84,7 @@ const ScriptTeacher: React.FC<ScriptTeacherProps> = ({
   useEffect(() => {
     if ((phase !== 'lessonQuiz' && phase !== 'review') || !currentItem) return;
     const d = selectDrill(currentItem, pack, progressRef.current);
+    stopAudio(); // a lingering clip from the previous card must not overlap a visual prompt
     setDrill(d);
     setFeedback(null);
     setRevealWrong(false);
@@ -287,7 +288,10 @@ const ScriptTeacher: React.FC<ScriptTeacherProps> = ({
                         onClick={() => seen && setPopoverItem(item)}
                         disabled={!seen}
                         lang={bcp47}
-                        className={`w-11 h-11 rounded-lg border flex items-center justify-center text-xl font-bold transition ${masteryColor(id)} ${seen ? 'active:scale-95' : 'cursor-default'}`}
+                        // Multi-char glyphs (kana word items: こんにちは) become
+                        // auto-width pills — the fixed square overflows into
+                        // neighboring level headers otherwise.
+                        className={`${[...item.glyph].length > 1 ? 'px-2.5 h-11 text-base' : 'w-11 h-11 text-xl'} whitespace-nowrap rounded-lg border flex items-center justify-center font-bold transition ${masteryColor(id)} ${seen ? 'active:scale-95' : 'cursor-default'}`}
                       >
                         {item.glyph}
                       </button>
@@ -307,7 +311,7 @@ const ScriptTeacher: React.FC<ScriptTeacherProps> = ({
               onClick={e => e.stopPropagation()}
             >
               <div className="flex items-center gap-4 mb-3">
-                <span lang={bcp47} className="text-6xl font-bold text-[var(--text-primary)]">{popoverItem.glyph}</span>
+                <span lang={bcp47} className={`${[...popoverItem.glyph].length > 2 ? 'text-3xl' : 'text-6xl'} font-bold text-[var(--text-primary)]`}>{popoverItem.glyph}</span>
                 <div>
                   <p className="text-lg font-black text-[var(--text-primary)]">{popoverItem.sound}</p>
                   <p className="text-xs text-[var(--text-muted)]">{popoverItem.romanization}</p>
@@ -349,7 +353,7 @@ const ScriptTeacher: React.FC<ScriptTeacherProps> = ({
         </div>
 
         <div className="flex-1 flex flex-col items-center justify-center text-center">
-          <span lang={bcp47} className="text-[7rem] leading-none font-bold text-[var(--text-primary)] mb-4">{item.glyph}</span>
+          <span lang={bcp47} className={`${[...item.glyph].length > 2 ? 'text-5xl' : 'text-[7rem]'} leading-none font-bold text-[var(--text-primary)] mb-4`}>{item.glyph}</span>
           <div className="flex items-center gap-3 mb-4">
             <span className="text-2xl font-black text-[var(--accent)]">{item.sound}</span>
             <button
@@ -411,7 +415,9 @@ const ScriptTeacher: React.FC<ScriptTeacherProps> = ({
         {/* Prompt */}
         <div className="flex-1 flex flex-col items-center justify-center text-center min-h-0">
           {drill.kind === 'discrimination' && (
-            <p className="text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-3">Look-alikes – listen closely</p>
+            <p className="text-[10px] font-bold uppercase tracking-widest text-amber-500 mb-3">
+              Look-alikes – {drill.prompt === 'audio' ? 'listen' : 'look'} closely
+            </p>
           )}
           {drill.prompt === 'glyph' && (
             <span lang={bcp47} className="text-[6rem] leading-none font-bold text-[var(--text-primary)] mb-6">{drill.item.glyph}</span>
@@ -428,8 +434,13 @@ const ScriptTeacher: React.FC<ScriptTeacherProps> = ({
             </button>
           )}
           <p className="text-xs text-[var(--text-muted)] mb-5">
-            {isComposition ? `Build it: tap the parts of ${drill.item.romanization} in order`
+            {/* An audio prompt IS the question — never print the romanization
+                next to it or the sound becomes a redundant answer-spoiler. */}
+            {isComposition ? (drill.prompt === 'audio'
+                ? 'Build what you hear – tap the parts in order'
+                : `Build it: tap the parts of ${drill.item.romanization} in order`)
               : drill.kind === 'recognition' ? 'What sound is this?'
+              : drill.prompt === 'audio' ? 'Pick what you hear'
               : 'Pick the right character'}
           </p>
 
@@ -474,7 +485,7 @@ const ScriptTeacher: React.FC<ScriptTeacherProps> = ({
                     key={c.id}
                     onClick={() => handleChoice(c)}
                     disabled={!!feedback}
-                    className={`py-4 rounded-xl border font-bold transition active:scale-95 ${answerIsGlyph ? 'text-3xl' : 'text-lg'} ${
+                    className={`py-4 rounded-xl border font-bold transition active:scale-95 ${answerIsGlyph ? ([...c.glyph].length > 2 ? 'text-lg' : 'text-3xl') : 'text-lg'} ${
                       feedback
                         ? isAnswer
                           ? 'border-emerald-500/60 bg-emerald-500/10 text-emerald-600 dark:text-emerald-400'
@@ -496,7 +507,7 @@ const ScriptTeacher: React.FC<ScriptTeacherProps> = ({
         {revealWrong && (
           <div className="stat-card p-4 mb-3 animate-fade-in">
             <div className="flex items-center gap-3 mb-1.5">
-              <span lang={bcp47} className="text-4xl font-bold text-[var(--text-primary)]">{drill.item.glyph}</span>
+              <span lang={bcp47} className={`${[...drill.item.glyph].length > 2 ? 'text-2xl' : 'text-4xl'} font-bold text-[var(--text-primary)]`}>{drill.item.glyph}</span>
               <div>
                 <p className="text-sm font-black text-[var(--text-primary)]">{drill.item.sound}</p>
                 <p className="text-[11px] text-[var(--text-muted)]">{drill.item.romanization}</p>

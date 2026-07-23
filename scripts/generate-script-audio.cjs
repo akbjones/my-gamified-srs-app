@@ -36,7 +36,7 @@ const packName = (args.find(a => a.startsWith('--pack=')) || '').split('=')[1] |
 const pilot = args.includes('--pilot');
 const resume = args.includes('--resume');
 
-const PACK_VOICE = { hangul: 'ko-KR-Chirp3-HD-Aoede', cyrillic: 'ru-RU-Wavenet-A', devanagari: 'hi-IN-Chirp3-HD-Aoede' };
+const PACK_VOICE = { hangul: 'ko-KR-Chirp3-HD-Aoede', kana: 'ja-JP-Chirp3-HD-Aoede', cyrillic: 'ru-RU-Wavenet-A', devanagari: 'hi-IN-Chirp3-HD-Aoede' };
 const voiceName = PACK_VOICE[packName];
 if (!voiceName) { console.error(`No voice mapping for pack ${packName}`); process.exit(1); }
 
@@ -51,6 +51,22 @@ const compose = (cho, jung) => String.fromCodePoint(0xAC00 + (CHO.indexOf(cho) *
 
 /** Returns { text, trim } — trim=true means "synthesize doubled, keep first utterance". */
 function synthPlan(item) {
+  if (packName === 'kana') {
+    if (item.kind === 'word') return { text: item.glyph, trim: false };
+    // Marks with no isolated pronunciation get a demonstration sound:
+    // small kana speak their full-size sound; ゛/゜ speak their worked
+    // example; っ and ー are audible only inside a 2-mora carrier (which
+    // is also collapse-proof, so no doubling needed).
+    const KANA_SPEAK = { 'ゃ': 'や', 'ゅ': 'ゆ', 'ょ': 'よ' };
+    if (item.glyph === 'っ') return { text: 'あっ', trim: false };
+    if (item.glyph === 'ー') return { text: 'アー', trim: false };
+    if (item.glyph === '゛') return { text: 'が。が。', trim: true };
+    if (item.glyph === '゜') return { text: 'ぱ。ぱ。', trim: true };
+    const speak = KANA_SPEAK[item.glyph] ?? item.glyph;
+    // Single kana collapse to silence exactly like Hangul syllables —
+    // synthesize doubled with the ja full stop, trim to the first take.
+    return { text: `${speak}。${speak}。`, trim: true };
+  }
   if (packName !== 'hangul' || item.kind === 'word') return { text: item.glyph, trim: false };
   let syllable = item.glyph;
   if (item.kind !== 'composed') {

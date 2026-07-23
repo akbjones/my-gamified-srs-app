@@ -143,7 +143,7 @@ export default defineConfig({
               // v16 = 2026-07-14 Hindi usefulness pass — 545 decorative/trivia/preachy cards replaced with useful everyday sentences
               // v17 = 2026-07-14 Welsh correctness pass — 93 garbled word-salad cards rewritten (semantics-first + mutations), audio via Edge TTS NiaNeural
               // v18 = 2026-07-14 Hindi voice harmonisation — 848 Neural2 stragglers regenerated on Chirp3-HD-Aoede so the whole deck is one voice
-              cacheName: 'audio-cache-v18',
+              cacheName: 'audio-cache-v19',
               expiration: {
                 maxEntries: 500,
                 maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days

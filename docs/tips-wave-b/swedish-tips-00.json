@@ -1,0 +1,482 @@
+[
+ {
+  "id": "sv-0001",
+  "target": "Jag förstår dig.",
+  "english": "I understand you.",
+  "node": "node-01",
+  "tip": "This verb takes -er in present tense (group 2), not -ar. Group 2 verbs are also very common in Swedish.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0002",
+  "target": "Jag gillar kaffe.",
+  "english": "I like coffee.",
+  "node": "node-01",
+  "tip": "Group 1 verbs (-ar) are the largest and most regular group: 'talar, talade, talat'. New loan words almost always join this group.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0004",
+  "target": "Jag heter Erik.",
+  "english": "My name is Erik.",
+  "node": "node-01",
+  "tip": "This verb takes -er in present (group 2). Past tense adds -de or -te depending on the stem consonant.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0005",
+  "target": "Han läser tidningen.",
+  "english": "He reads the newspaper.",
+  "node": "node-01",
+  "tip": "'Läsa' → 'läser' (read): Group 2 verb with -er present ending.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0006",
+  "target": "Hon somnar direkt.",
+  "english": "She falls asleep right away.",
+  "node": "node-01",
+  "tip": "Swedish present tense is the same for all persons: `jag talar`, `du talar`, `han talar`. The verb form never changes by person. Easy compared to most European languages.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0007",
+  "target": "Vi bor i närheten.",
+  "english": "We live nearby.",
+  "node": "node-01",
+  "tip": "Swedish word order: the verb is always in second position in declarative main clauses (V2 rule).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0008",
+  "target": "Hon undervisar i matematik.",
+  "english": "She teaches mathematics.",
+  "node": "node-01",
+  "tip": "Swedish verbs don't change with person: 'jag talar', 'du talar', 'han talar' – same form for everyone.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0010",
+  "target": "Vi njöt av solnedgången.",
+  "english": "We enjoyed the sunset.",
+  "node": "node-01",
+  "tip": "Swedish glues \"the\" onto the end of the noun. hund (a dog) → hunden (the dog). hus (a house) → huset (the house). No separate word.",
+  "dupGroupSize": 2
+ },
+ {
+  "id": "sv-0011",
+  "target": "Jag bor i Stockholm.",
+  "english": "I live in Stockholm.",
+  "node": "node-01",
+  "tip": "'Bo' → 'bor' (live): Group 3 verb – short infinitive, add -r for present.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0012",
+  "target": "Jag kommer från Sverige.",
+  "english": "I am from Sweden.",
+  "node": "node-01",
+  "tip": "'Komma' → 'kommer' (come): Group 4 irregular – the doubled -m- marks it.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0013",
+  "target": "Vi lagar middag tillsammans.",
+  "english": "We cook dinner together.",
+  "node": "node-01",
+  "tip": "This is a group 1 (-ar) verb – the largest and most regular verb group in Swedish.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0014",
+  "target": "Det kostar tjugofem kronor.",
+  "english": "It costs twenty-five kronor.",
+  "node": "node-01",
+  "tip": "Swedish numbers 21-99 put the tens first: tjugofem = twenty-five. No hyphen needed.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0016",
+  "target": "Jag dricker hellre te.",
+  "english": "I'd rather drink tea.",
+  "node": "node-01",
+  "tip": "Endings tell you the verb group: -ar (group 1, regular), -er (group 2), -r on stems ending in vowel (group 3), zero (group 4 irregular). But the present form stays the same for every subject.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0022",
+  "target": "Han kör till kontoret.",
+  "english": "He drives to the office.",
+  "node": "node-01",
+  "tip": "Swedish glues \"the\" onto the end of the noun. hund (a dog) → hunden (the dog). hus (a house) → huset (the house). No separate word.",
+  "dupGroupSize": 2
+ },
+ {
+  "id": "sv-0023",
+  "target": "De pratar svenska hemma.",
+  "english": "They speak Swedish at home.",
+  "node": "node-01",
+  "tip": "'Prata' → 'pratar' (talk/chat): Group 1, more informal than 'tala'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0024",
+  "target": "Butiken öppnar klockan tio.",
+  "english": "The store opens at ten.",
+  "node": "node-01",
+  "tip": "Two genders – common (suffix -n) and neuter (suffix -t). bilen (the car, common) vs huset (the house, neuter). The ending reveals the gender.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0034",
+  "target": "Det är min första dag.",
+  "english": "It is my first day.",
+  "node": "node-01",
+  "tip": "\"Första\" = first. Ordinals 1-3 are irregular: första, andra, tredje.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0038",
+  "target": "Vi handlar mat varje vecka.",
+  "english": "We buy food every week.",
+  "node": "node-01",
+  "tip": "Swedish present tense is formed by adding -r to the infinitive stem. It stays the same for all persons.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0039",
+  "target": "Jag äter frukost klockan sju.",
+  "english": "I eat breakfast at seven.",
+  "node": "node-01",
+  "tip": "Swedish present tense: regular verbs simply add -r. The form is the same for all subjects.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0040",
+  "target": "De äter köttbullar till lunch.",
+  "english": "They eat meatballs for lunch.",
+  "node": "node-01",
+  "tip": "Strong verbs (group 4) are common in everyday Swedish: 'gå/gick' (go/went), 'se/såg' (see/saw), 'ta/tog' (take/took).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0041",
+  "target": "Jag dricker kaffe varje morgon.",
+  "english": "I drink coffee every morning.",
+  "node": "node-01",
+  "tip": "If you're unsure of a verb's group, the infinitive ending helps: -a with present -ar = group 1; -a with present -er = group 2.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0042",
+  "target": "Han jobbar på ett sjukhus.",
+  "english": "He works at a hospital.",
+  "node": "node-01",
+  "tip": "'Jobba' → 'jobbar' (work): Group 1 verb (-ar ending). 'Arbeta' → 'arbetar' is more formal.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0054",
+  "target": "Jag tvättar kläder varannan dag.",
+  "english": "I do laundry every other day.",
+  "node": "node-01",
+  "tip": "Swedish object pronouns: 'mig' (me), 'dig' (you), 'honom' (him), 'henne' (her), 'oss' (us), 'dem' (them).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0055",
+  "target": "Jag tar bussen till skolan.",
+  "english": "I take the bus to school.",
+  "node": "node-01",
+  "tip": "Swedish present tense: add -r to the stem. Group 1 gives -ar, groups 2-3 give -er/-r.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0059",
+  "target": "Vi dricker lättöl till maten.",
+  "english": "We drink light beer with the food.",
+  "node": "node-01",
+  "tip": "\"Lättöl\" (light beer under 2.25%) can be sold in supermarkets, unlike stronger beers.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0061",
+  "target": "Jag arbetar på ett stort kontor.",
+  "english": "I work at a large office.",
+  "node": "node-01",
+  "tip": "Swedish present tense adds \"-r\" to the infinitive: \"talar\" (speak/speaks).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0064",
+  "target": "Vi tycker att filmen var bra.",
+  "english": "We think the movie was good.",
+  "node": "node-09",
+  "tip": "Irregular verbs like 'vara' (be), 'ha' (have), and 'göra' (do) don't fit neatly into groups – memorize their forms individually.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0065",
+  "target": "Jag sover åtta timmar varje natt.",
+  "english": "I sleep eight hours every night.",
+  "node": "node-01",
+  "tip": "Winter tires are legally required in Sweden from December 1 to March 31.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0066",
+  "target": "Vi möter våra vänner på lördag.",
+  "english": "We meet our friends on Saturday.",
+  "node": "node-01",
+  "tip": "Group 2 verbs split into 2a (-er, past -de) and 2b (-er, past -te). The consonant before the ending determines which subgroup.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0067",
+  "target": "Jag dricker alltid kaffe till frukosten.",
+  "english": "I always drink coffee with breakfast.",
+  "node": "node-01",
+  "tip": "This is a strong (group 4) verb – it changes its stem vowel in past tense rather than adding a suffix.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0069",
+  "target": "Han ringde henne igår i affären.",
+  "english": "He called her yesterday in the store.",
+  "node": "node-09",
+  "tip": "Object pronouns: mig, dig, honom, henne, oss, er, dem. \"Henne\" = her (object).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0072",
+  "target": "Vi äter frukost klockan halv åtta.",
+  "english": "We eat breakfast at half past seven.",
+  "node": "node-01",
+  "tip": "\"Halv åtta\" = 7:30 (half TO eight). \"Frukost\" = breakfast.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0073",
+  "target": "Vi behöver byta tåg i Nässjö.",
+  "english": "We need to change trains in Nässjö.",
+  "node": "node-01",
+  "tip": "\"Byta tåg\" = change trains. Nässjö is a major rail junction.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0074",
+  "target": "Vi äter lunch klockan halv ett.",
+  "english": "We eat lunch at half past twelve.",
+  "node": "node-01",
+  "tip": "\"Vem\" = who, \"Vad\" = what, \"Var\" = where, \"När\" = when, \"Hur\" = how.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0075",
+  "target": "Hon är duktig på att laga mat.",
+  "english": "She is good at cooking.",
+  "node": "node-01",
+  "tip": "\"Duktig på\" = good at – very common in Swedish.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0076",
+  "target": "Javisst, det kan jag hjälpa dig med.",
+  "english": "Certainly, I can help you with that.",
+  "node": "node-01",
+  "tip": "\"Javisst\" combines \"ja\" and \"visst\" (certainly). Very emphatic agreement.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0077",
+  "target": "De bor i ett stort hus här.",
+  "english": "They live in a big house here.",
+  "node": "node-01",
+  "tip": "\"Bo\" is Group 3: bor (present), bodde (past), bott (supine). Short and common.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0079",
+  "target": "Jag har en bror och en syster.",
+  "english": "I have a brother and a sister.",
+  "node": "node-01",
+  "tip": "'Har' (have/has) – same form for all persons. Used for possession and as perfect tense auxiliary.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0080",
+  "target": "Det borde gå bra just nu också.",
+  "english": "It should be fine right now too.",
+  "node": "node-09",
+  "tip": "Past endings: -ade (group 1, most regular), -de or -te (group 2). tittade (looked), läste (read), köpte (bought). Same form for every subject.",
+  "dupGroupSize": 2
+ },
+ {
+  "id": "sv-0081",
+  "target": "Bussen stannar vid torget.",
+  "english": "The bus stops at the square.",
+  "node": "node-01",
+  "tip": "\"Torget\" = the square/marketplace. \"Vid\" = at/by (for locations near something).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0085",
+  "target": "Det är den femtonde mars.",
+  "english": "It is the fifteenth of March.",
+  "node": "node-09",
+  "tip": "Ordinal dates use -e or -te endings: femtonde = fifteenth. Swedish dates go day-month.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0086",
+  "target": "Vi äter middag klockan sex.",
+  "english": "We eat dinner at six o'clock.",
+  "node": "node-01",
+  "tip": "\"Middag\" = dinner (evening meal). Lunch is the midday meal.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0091",
+  "target": "Han lämnar barnen på dagis.",
+  "english": "He drops the children off at daycare.",
+  "node": "node-01",
+  "tip": "Dagis (daycare) is widely available and affordable in Sweden.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0092",
+  "target": "Jag åker Öresundståget till Köpenhamn.",
+  "english": "I take the Öresund train to Copenhagen.",
+  "node": "node-01",
+  "tip": "The Öresund Bridge connects Sweden to Denmark – a twenty-minute train ride.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0094",
+  "target": "Jag vill lära mig mer svenska.",
+  "english": "I want to learn more Swedish.",
+  "node": "node-01",
+  "tip": "'Vill' (want) – modal verbs in Swedish don't change form: 'jag vill', 'du vill', 'han vill'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0097",
+  "target": "I morse åt vi frukost tidigt.",
+  "english": "This morning we ate breakfast early.",
+  "node": "node-09",
+  "tip": "\"I morse\" = this morning. Past tense because the morning has passed.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0102",
+  "target": "Han skriver långa mejl till sin chef.",
+  "english": "He writes long emails to his boss.",
+  "node": "node-01",
+  "tip": "'Skriva' → 'skriver' (write): Group 4 strong verb – the -er ending is typical.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0103",
+  "target": "Mannen som bor här är min granne.",
+  "english": "The man who lives here is my neighbor.",
+  "node": "node-01",
+  "tip": "\"Som\" is the all-purpose relative pronoun – it replaces who, which, that.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0104",
+  "target": "Flickan som sjunger har en fin röst.",
+  "english": "The girl who sings has a beautiful voice.",
+  "node": "node-01",
+  "tip": "\"Som\" is the universal relative pronoun in spoken Swedish – works for who, which, that.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0105",
+  "target": "Barnet som leker i parken är glatt.",
+  "english": "The child playing in the park is happy.",
+  "node": "node-01",
+  "tip": "\"Som\" never changes form – same for subjects, objects, en/ett/plural. Universal relative pronoun.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0110",
+  "target": "Jag heter Erik och jag lär mig svenska.",
+  "english": "My name is Erik and I'm learning Swedish.",
+  "node": "node-01",
+  "tip": "'Jag är' (I am) – Swedish present tense of 'vara' (to be) is 'är' for all persons.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0112",
+  "target": "Han springer fem kilometer varje morgon innan frukost.",
+  "english": "He runs five kilometers every morning before breakfast.",
+  "node": "node-01",
+  "tip": "This is a strong (group 4) verb – it changes its stem vowel in past tense: present -er, past has vowel change.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0115",
+  "target": "I Sverige äter man ofta middag vid sex.",
+  "english": "In Sweden one often eats dinner at six.",
+  "node": "node-01",
+  "tip": "Swedish is V2: the verb is always the second element. `Idag äter jag pizza` (today I eat pizza), not `idag jag äter`. Subject jumps after the verb.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0117",
+  "target": "Jag arbetar hemifrån tre dagar i veckan numera.",
+  "english": "I work from home three days a week nowadays.",
+  "node": "node-01",
+  "tip": "Swedish present tense adds -r. Group 1 verbs add -ar, group 2 add -er.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0119",
+  "target": "De studerar ekonomi vid Lunds universitet sedan hösten.",
+  "english": "They have been studying economics at Lund University since autumn.",
+  "node": "node-01",
+  "tip": "'Studera' → 'studerar' (study): Group 1 verb with -ar present ending.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0130",
+  "target": "Jag har precis börjat lära mig svenska på kvällskurs.",
+  "english": "I have just started learning Swedish in evening class.",
+  "node": "node-01",
+  "tip": "'Har' (have) is the same for all persons in Swedish: 'jag har', 'du har', 'vi har'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0143",
+  "target": "Vi planterar blommor och grönsaker i trädgården varje vår.",
+  "english": "We plant flowers and vegetables in the garden every spring.",
+  "node": "node-01",
+  "tip": "'Vi' (we) – Swedish pronouns: jag, du, han/hon/den/det, vi, ni, de (pronounced 'dom').",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0146",
+  "target": "Jag förstår inte vad du menar med den frågan.",
+  "english": "I do not understand what you mean with that question.",
+  "node": "node-01",
+  "tip": "Swedish present tense: add -r to the infinitive stem. Same form for all persons: jag/du/han/vi all use '-r'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0147",
+  "target": "Hej, jag heter Anna och jag kommer från Stockholm.",
+  "english": "Hello, my name is Anna and I come from Stockholm.",
+  "node": "node-01",
+  "tip": "Swedish present tense: all persons share the same verb form ending in -r.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "sv-0153",
+  "target": "Hon bakar bröd varje helg och delar med grannarna.",
+  "english": "She bakes bread every weekend and shares with the neighbors.",
+  "node": "node-01",
+  "tip": "Most verbs you'll encounter daily are group 1 (-ar) – recognizing this pattern speeds up comprehension significantly.",
+  "dupGroupSize": 1
+ }
+]

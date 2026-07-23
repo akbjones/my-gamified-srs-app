@@ -1,0 +1,370 @@
+[
+ {
+  "id": "fr-0693",
+  "target": "Nous avons des voisins sympas.",
+  "english": "We have nice neighbors.",
+  "node": "node-05",
+  "old": "Adjectives agree in gender and number. 'Sympa' is invariable informally, but standard form: sympathique/sympathiques.",
+  "focus": "Keep the register point that sympa is the casual clip of sympathique; drop the invariability claim, which the card's own 'sympas' contradicts."
+ },
+ {
+  "id": "fr-0696",
+  "target": "Les chaussures marron sont jolies.",
+  "english": "The brown shoes are pretty.",
+  "node": "node-21",
+  "old": "Some color adjectives are invariable (never change form): marron, orange, rose (when used for specific shades). Exception: rose does agree.",
+  "focus": "Marron never agrees, which is why 'les chaussures marron' has no -s; cut the self-contradicting rose/orange tangent."
+ },
+ {
+  "id": "fr-0704",
+  "target": "Le jardin de mon voisin est joli.",
+  "english": "My neighbor's garden is pretty.",
+  "node": "node-21",
+  "old": "Possession uses 'de': le livre de Marie (Marie's book), la voiture de mon père (my father's car). No apostrophe-s in French.",
+  "focus": "Keep the no-apostrophe-s contrast but anchor the worked example in this card's own 'le jardin de mon voisin' instead of sibling-only examples."
+ },
+ {
+  "id": "fr-0747",
+  "target": "Il fait froid dehors.",
+  "english": "It's cold outside.",
+  "node": "node-06",
+  "old": "Wrong: `il est froid` would mean 'he is cold' (about a person). For weather, always `il fait`.",
+  "focus": "Excellent il-fait-not-il-est weather trap; strip the backticks and keep the wrong-vs-right contrast anchored to 'il fait froid'."
+ },
+ {
+  "id": "fr-0781",
+  "target": "Ça te plaît ici ?",
+  "english": "Do you like it here?",
+  "node": "node-06",
+  "old": "Three question forms: intonation ('Tu viens?'), 'est-ce que', or inversion ('Viens-tu?').",
+  "focus": "Anchor to THIS card: an intonation question keeps statement word order plus rising tone, the default in speech – quote 'Ca te plait ici ?' and drop the off-card est-ce que/inversion examples."
+ },
+ {
+  "id": "fr-0797",
+  "target": "Elle est brune aux yeux verts.",
+  "english": "She is brunette with green eyes.",
+  "node": "node-06",
+  "old": "'Brun/brune' changes form for gender. 'Vert/verte' also changes. The final consonant is pronounced in feminine.",
+  "focus": "One rule: the feminine ending makes the silent final consonant audible – brun ends silent, brune sounds the n. Quote 'brune' from this card; cut the second vert/verte rule."
+ },
+ {
+  "id": "fr-0896",
+  "target": "Elle est petite et mince.",
+  "english": "She is short and slim.",
+  "node": "node-07",
+  "old": "Adjectives agree in gender: petit/petite, mince stays the same (ends in -e already). Two adjectives joined by 'et'.",
+  "focus": "petite shows feminine agreement (petit/petite); cut the 'two adjectives joined by et' filler – one rule only"
+ },
+ {
+  "id": "fr-0910",
+  "target": "Vingt et un, trente, quarante, cinquante.",
+  "english": "Twenty-one, thirty, forty, fifty.",
+  "node": "node-07",
+  "old": "Numbers 21-69 follow a pattern: vingt et un (21), trente-deux (32). After 70, French uses base-20: soixante-dix (70), quatre-vingts (80).",
+  "focus": "vingt et un takes 'et' for 21 (also 31, 41…); drop the 70+/base-20 preview – fr-0906 already covers it"
+ },
+ {
+  "id": "fr-0915",
+  "target": "Elle est fière de son travail.",
+  "english": "She is proud of her work.",
+  "node": "node-07",
+  "old": "'Fier' (m.) → 'fière' (f.) = proud. The accent changes: fier/fière. 'Fier de' = proud of.",
+  "focus": "fier gains a grave accent in the feminine – fière, like premier/première; cut the 'fier de = proud of' gloss"
+ },
+ {
+  "id": "fr-0918",
+  "target": "Il est sorti acheter du pain.",
+  "english": "He went out to buy bread.",
+  "node": "node-21",
+  "old": "Sortir uses être when intransitive: il est sorti.",
+  "focus": "sortir takes être not avoir – 'il est sorti'; say it in plain words, not 'intransitive'"
+ },
+ {
+  "id": "fr-0926",
+  "target": "Nous sommes restés à l'hôtel ce jour-là.",
+  "english": "We stayed at the hotel that day.",
+  "node": "node-21",
+  "old": "Rester uses être. Masculine plural subject: restes.",
+  "focus": "rester takes être even though nothing moves – the edge case; fix the wrong example 'restes' to 'restés' (agrees with nous)"
+ },
+ {
+  "id": "fr-0941",
+  "target": "Regarde le beau coucher de soleil sur la mer.",
+  "english": "Look at the beautiful sunset over the sea.",
+  "node": "node-07",
+  "old": "'Regarde' is the tu-form imperative. 'Regardez' for vous-form. Both can be used to draw attention.",
+  "focus": "tu-imperative drops the -s: tu regardes but 'Regarde !' – that trap, not the tu/vous form list"
+ },
+ {
+  "id": "fr-0952",
+  "target": "Je me lève à sept heures.",
+  "english": "I get up at seven o'clock.",
+  "node": "node-07",
+  "old": "Reflexive verbs use reflexive pronouns: je me lève, tu te lèves, il se lève, nous nous levons. The pronoun matches the subject.",
+  "focus": "French says 'I raise myself' – 'je me lève'; the pronoun is mandatory. Cut the tu/il/nous paradigm list"
+ },
+ {
+  "id": "fr-0956",
+  "target": "J'ai mangé au restaurant hier soir.",
+  "english": "I ate at the restaurant last night.",
+  "node": "node-21",
+  "old": "'Au restaurant' uses 'au' (à + le). Time markers like 'hier soir' confirm passé composé.",
+  "focus": "au = à + le, mandatory contraction ('au restaurant'); drop the time-marker second rule"
+ },
+ {
+  "id": "fr-0977",
+  "target": "Je préparais toujours le thé à cinq heures de l'après-midi.",
+  "english": "I always used to make tea at five in the afternoon.",
+  "node": "node-11",
+  "old": "le / la → l' before a vowel: l'homme, l'eau. Possessives flip too: ma → mon before a vowel, so \"mon amie\" even though amie is feminine.",
+  "focus": "elision is in the card: l'après-midi (le → l' before a vowel); quote it and drop the ma/mon amie second rule"
+ },
+ {
+  "id": "fr-0978",
+  "target": "Tu connaissais déjà la réponse quand le professeur a posé la question ?",
+  "english": "Did you already know the answer when the teacher asked the question?",
+  "node": "node-11",
+  "old": "'Toujours' or 'souvent' in past context → imparfait (habitual). 'Un jour' or 'soudain' → passé composé (specific event).",
+  "focus": "the card itself contrasts connaissais (ongoing state) with a posé (one event) – anchor there; the toujours/soudain signal words aren't in this sentence"
+ },
+ {
+  "id": "fr-0997",
+  "target": "Nous sommes lundi.",
+  "english": "It's Monday.",
+  "node": "node-21",
+  "old": "Days of the week: lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche. No capitals. 'Le lundi' = on Mondays (habitual).",
+  "focus": "'Nous sommes lundi' – French says 'we are Monday' for dates; keep the no-capitals nugget, cut the seven-day vocab list"
+ },
+ {
+  "id": "fr-1012",
+  "target": "Je vais bientôt partir.",
+  "english": "I'm going to leave soon.",
+  "node": "node-08",
+  "old": "Near future: aller + infinitive. Je vais manger = I'm going to eat. Very common at A1, often preferred over future tense.",
+  "focus": "aller + infinitive = going-to future, anchored in 'je vais bientôt partir'; cut the 'very common at A1' meta-commentary"
+ },
+ {
+  "id": "fr-1015",
+  "target": "Il y a du soleil.",
+  "english": "It's sunny.",
+  "node": "node-21",
+  "old": "Don't confuse `il y a` (there is) with `il a` (he has) or `il a y` (doesn't exist). The `y` is mandatory.",
+  "focus": "il y a vs il a confusable pair, anchored in 'il y a du soleil'; strip the backticks and cut the \"il a y (doesn't exist)\" filler"
+ },
+ {
+  "id": "fr-1017",
+  "target": "Nous sommes le quinze mars.",
+  "english": "It's March fifteenth.",
+  "node": "node-08",
+  "old": "Dates: le + number + month. 'Le premier' for the 1st, then cardinal numbers: le deux, le trois. Months are lowercase.",
+  "focus": "dates use plain numbers – 'le quinze mars' where English says 'fifteenth'; only le premier is ordinal. Quote the card's quinze"
+ },
+ {
+  "id": "fr-1091",
+  "target": "En fait, je préfère rester ici.",
+  "english": "Actually, I prefer to stay here.",
+  "node": "node-08",
+  "old": "'En fait' = actually / in fact. Very useful connector for correcting or clarifying what you just said.",
+  "focus": "Anchor 'En fait' as the real word for 'actually' – the false friend 'actuellement' means 'currently'; cut the 'very useful connector' filler."
+ },
+ {
+  "id": "fr-1130",
+  "target": "Ils dinaient au restaurant quand la lumière s'est eteinte.",
+  "english": "They were having dinner at the restaurant when the light went out.",
+  "node": "node-11",
+  "old": "Dining (ongoing activity) vs lights going out (sudden event). The tense contrast tells the story.",
+  "focus": "Good ongoing-vs-sudden insight but it never quotes the French – anchor on 'dinaient' (ongoing backdrop) vs 's'est éteinte' (the interrupting event)."
+ },
+ {
+  "id": "fr-1141",
+  "target": "Je voulais acheter un gâteau mais la boulangerie a fermé.",
+  "english": "I wanted to buy a cake but the bakery closed.",
+  "node": "node-11",
+  "old": "Voulais (imparfait) = ongoing desire. A ferme (PC) = completed event that changed things.",
+  "focus": "Keep the voulais = ongoing want vs a fermé = event-that-ended-it contrast; fix the missing accent ('a fermé', not 'A ferme') and spell out passé composé instead of 'PC'."
+ },
+ {
+  "id": "fr-1185",
+  "target": "Elle est montée au troisième étage.",
+  "english": "She went up to the third floor.",
+  "node": "node-09",
+  "old": "With `être`, agreement matters: a woman writes `je suis allée`, men `je suis allé`. Plural feminine `nous sommes allées`. Sounds the same; spelling changes.",
+  "focus": "Strip the backticks and anchor on this card's 'est montée' – keep the strong hook that être-agreement changes spelling only, the ending is silent in speech."
+ },
+ {
+  "id": "fr-1201",
+  "target": "Il a été malade pendant une semaine.",
+  "english": "He was sick for a week.",
+  "node": "node-09",
+  "old": "'Être' → 'été'. The past participle is invariable: il a été, elle a été (no agreement with 'avoir').",
+  "focus": "Lead with the real surprise: être's own passé composé takes avoir – 'il a été', never 'il est été'; drop the invariable-participle aside."
+ },
+ {
+  "id": "fr-1233",
+  "target": "Tu as fait attention en traversant la rue ?",
+  "english": "Did you pay attention while crossing the street?",
+  "node": "node-09",
+  "old": "Faire attention = to pay attention or to be careful. Past participle: fait.",
+  "focus": "One rule only: French 'makes' attention – 'faire attention' = pay attention / be careful; cut the tacked-on participle note."
+ },
+ {
+  "id": "fr-1235",
+  "target": "Il y avait toujours du monde dans ce restaurant.",
+  "english": "There were always people in this restaurant.",
+  "node": "node-09",
+  "old": "`y` = 'there' or 'to it' – replaces a place or `à + thing`. `Tu vas au cinéma? Oui, j'y vais` (Yes, I'm going there). Saves you repeating the location.",
+  "focus": "Retarget to this card's fixed expression: 'il y avait' = 'there was/were', the past of 'il y a'; strip backticks and drop the j'y vais examples that aren't this usage."
+ },
+ {
+  "id": "fr-1245",
+  "target": "Nous sommes passés par le centre-ville.",
+  "english": "We went through the city center.",
+  "node": "node-09",
+  "old": "Passer uses être when meaning to pass by or through (intransitive).",
+  "focus": "Drop the 'intransitive' jargon: passer takes être for passing by ('nous sommes passés') but avoir for spending time (j'ai passé une semaine)."
+ },
+ {
+  "id": "fr-1277",
+  "target": "Ils sont morts dans un accident de voiture.",
+  "english": "They died in a car accident.",
+  "node": "node-09",
+  "old": "Mourir uses être: ils sont morts. This is part of the DR MRS VANDERTRAMP verbs.",
+  "focus": "'Ils sont morts' looks like 'they are dead' but it is passe compose 'they died' - mourir takes etre; cut the VANDERTRAMP mnemonic"
+ },
+ {
+  "id": "fr-1296",
+  "target": "Elle travaillait dans une librairie à cette époque.",
+  "english": "She worked in a bookstore at that time.",
+  "node": "node-09",
+  "old": "'À cette époque' (at that time) sets a past context for describing how things were.",
+  "focus": "name the payoff - 'a cette epoque' is a signal to choose imparfait (travaillait); say the tense outright instead of 'sets a past context'"
+ },
+ {
+  "id": "fr-1298",
+  "target": "Ils devaient prendre le train de sept heures.",
+  "english": "They had to take the seven o'clock train.",
+  "node": "node-09",
+  "old": "Devoir in imparfait expresses past obligation or necessity: ils devaient = they had to.",
+  "focus": "ils devaient = were supposed to / had to with the outcome left open - contrast ils ont du (had to and did); not just 'devaient = they had to'"
+ },
+ {
+  "id": "fr-1307",
+  "target": "Nous sommes allés à la plage le week-end dernier.",
+  "english": "We went to the beach last weekend.",
+  "node": "node-09",
+  "old": "Motion/state-change verbs (`aller`, `venir`, `partir`, `mourir`, `naître`, all reflexives) take `être`. The rest take `avoir`.",
+  "focus": "strip backticks; anchor in this card's 'nous sommes alles' - motion/state-change verbs take etre, the rest avoir"
+ },
+ {
+  "id": "fr-1311",
+  "target": "Il pleuvait depuis deux heures quand le soleil est apparu.",
+  "english": "It had been raining for two hours when the sun appeared.",
+  "node": "node-09",
+  "old": "Imparfait + depuis expresses duration in the past. PC marks when the situation changed.",
+  "focus": "English 'had been raining' = plain imparfait + depuis in French (il pleuvait depuis deux heures); spell out passe compose, no 'PC' abbreviation"
+ },
+ {
+  "id": "fr-1407",
+  "target": "J'ai eu envie de partir en voyagé.",
+  "english": "I felt like taking a trip.",
+  "node": "node-10",
+  "old": "Avoir envie de = to feel like or to want to. Past: j'ai eu envie de.",
+  "focus": "avoir envie de = to feel like, NOT envy - French 'has' the urge; hook the false friend and quote j'ai eu envie"
+ },
+ {
+  "id": "fr-1429",
+  "target": "Nous avions l'habitude de dîner à vingt heures.",
+  "english": "We used to have dinner at eight PM.",
+  "node": "node-10",
+  "old": "Avoir l'habitude de + infinitive = to be in the habit of. Imparfait for past habits.",
+  "focus": "one rule only - avoir l'habitude de = 'used to', literally 'had the habit of'; cut the generic imparfait-habits second sentence"
+ },
+ {
+  "id": "fr-1495",
+  "target": "Il pouvait courir très vite à cette époque.",
+  "english": "He used to be able to run very fast at that time.",
+  "node": "node-11",
+  "old": "Pouvoir in imparfait describes a past ability or possibility: il pouvait = he could.",
+  "focus": "il pouvait = ongoing past ability; sharpen with the classic contrast il a pu = managed to (one occasion), quoting pouvait courir"
+ },
+ {
+  "id": "fr-1510",
+  "target": "Tu avais faim quand tu es rentré du travail ?",
+  "english": "Were you hungry when you came home from work?",
+  "node": "node-11",
+  "old": "States and feelings use imparfait (avais faim). Completed actions use PC (es rentre).",
+  "focus": "states and feelings take imparfait (avais faim) vs the completed event (es rentré) – spell out passé composé, fix the missing accents"
+ },
+ {
+  "id": "fr-1514",
+  "target": "Tu avais dix ans quand tu as déménagé en France ?",
+  "english": "Were you ten years old when you moved to France?",
+  "node": "node-11",
+  "old": "Age in the past uses imparfait (avais). Moving is a completed event: PC (as demenage).",
+  "focus": "age in the past is always imparfait (tu avais dix ans); the move is the event (as déménagé) – expand the PC abbreviation, fix accents"
+ },
+ {
+  "id": "fr-1542",
+  "target": "Elle faisait la cuisine quand elle s'est coupé le doigt.",
+  "english": "She was cooking when she cut her finger.",
+  "node": "node-11",
+  "old": "Reflexive verbs in PC: elle s'est coupé. Imparfait for the background action.",
+  "focus": "the gem is no agreement on s'est coupé because le doigt is the direct object (body-part rule) – drop the imparfait aside, one rule only"
+ },
+ {
+  "id": "fr-1562",
+  "target": "Je me suis trompé de route.",
+  "english": "I took the wrong road.",
+  "node": "node-12",
+  "old": "Se tromper = to make a mistake. Je me suis trompé: agreement with masculine subject.",
+  "focus": "se tromper de + noun = get the wrong one (trompé de route = took the wrong road) – lead with the idiom, cut the agreement aside"
+ },
+ {
+  "id": "fr-1570",
+  "target": "Il pleuvait quand nous sommes sortis.",
+  "english": "It was raining when we went out.",
+  "node": "node-12",
+  "old": "Background weather (imparfait) vs completed action (passé composé).",
+  "focus": "anchor in this card: il pleuvait is the weather backdrop, nous sommes sortis the event – quote both, keep it one line"
+ },
+ {
+  "id": "fr-1585",
+  "target": "Tu te souviens de notre première rencontre ?",
+  "english": "Do you remember our first meeting?",
+  "node": "node-12",
+  "old": "Se souvenir de = to remember. The reflexive pronoun is essential for meaning.",
+  "focus": "remembering is reflexive in French and drags de along: tu te souviens de – hook on the English mismatch, cut the vague 'essential for meaning'"
+ },
+ {
+  "id": "fr-1598",
+  "target": "Il faut que l'on prenne le train de six heures.",
+  "english": "We need to take the six o'clock train.",
+  "node": "node-12",
+  "old": "After expressions of will/necessity/emotion + `que`, French switches to subjunctive. `Je veux que tu viennes` (not viens) = 'I want you to come'.",
+  "focus": "il faut que flips the verb to subjunctive: prenne, not prend – quote this card, strip backticks and the off-card viennes example"
+ },
+ {
+  "id": "fr-1626",
+  "target": "Nous cherchons un hôtel qui ait une piscine.",
+  "english": "We're looking for a hotel that has a pool.",
+  "node": "node-12",
+  "old": "Subjunctive in relative clauses when the antecedent is not yet identified or uncertain.",
+  "focus": "ait, not a: the hotel is still hypothetical (being searched for) – drop 'antecedent'/'relative clause' jargon, quote qui ait une piscine"
+ },
+ {
+  "id": "fr-1638",
+  "target": "Il faut que tout le monde soit prêt à huit heures.",
+  "english": "Everyone needs to be ready at eight o'clock.",
+  "node": "node-12",
+  "old": "After expressions of will/necessity/emotion + `que`, French switches to subjunctive. `Je veux que tu viennes` (not viens) = 'I want you to come'.",
+  "focus": "second telling, different angle from fr-1598: être goes irregular in subjunctive – il faut que ... soit, not est; strip backticks"
+ },
+ {
+  "id": "fr-1648",
+  "target": "Je ne le sais pas.",
+  "english": "I don't know it.",
+  "node": "node-13",
+  "old": "In negation, the pronoun stays before the verb: ne + pronoun + verb + pas.",
+  "focus": "the pronoun sits inside the ne...pas sandwich: Je ne le sais pas – quote this card's own words"
+ }
+]

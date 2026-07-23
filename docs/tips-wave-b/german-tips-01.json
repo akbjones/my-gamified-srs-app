@@ -1,0 +1,482 @@
+[
+ {
+  "id": "de-0121",
+  "target": "Ich lese gerade einen spannenden Kriminalroman.",
+  "english": "I am currently reading an exciting crime novel.",
+  "node": "node-01",
+  "tip": "'Kriminalroman' – compound noun. The last component determines gender; earlier components modify meaning.",
+  "dupGroupSize": 82
+ },
+ {
+  "id": "de-0122",
+  "target": "Ich habe starke Kopfschmerzen seit gestern.",
+  "english": "I've had a severe headache since yesterday.",
+  "node": "node-01",
+  "tip": "'Kopfschmerzen' – compound noun. The last component determines gender; earlier components modify meaning.",
+  "dupGroupSize": 82
+ },
+ {
+  "id": "de-0125",
+  "target": "Ich bin zum ersten Mal in Wien.",
+  "english": "I am in Vienna for the first time.",
+  "node": "node-01",
+  "tip": "'Ich bin' means 'I am' – 'sein' (to be) is irregular: ich bin, du bist, er/sie ist.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0131",
+  "target": "Sie verkauft handgemachten Schmuck auf dem Flohmarkt.",
+  "english": "She sells handmade jewelry at the flea market.",
+  "node": "node-01",
+  "tip": "'Machen' (to make/do) is fully regular: ich mache, du machst, er macht – a reliable pattern to learn.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0132",
+  "target": "Sie erzählt gern Geschichten aus ihrer Kindheit.",
+  "english": "She likes to tell stories from her childhood.",
+  "node": "node-01",
+  "tip": "'Gern(e)' after a verb means 'like to' – 'Ich lese gern' = 'I like to read'. It is an adverb, not a verb.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0133",
+  "target": "Die U-Bahn-Station ist gleich um die Ecke.",
+  "english": "The subway station is right around the corner.",
+  "node": "node-01",
+  "tip": "After für / durch / gegen / ohne / um / bis / wider, the article goes to den (m), die (f), das (n). Memo: für, durch, gegen, ohne, um.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0136",
+  "target": "Guten Tag, ich hätte gern ein Einzelzimmer.",
+  "english": "Good day, I would like a single room.",
+  "node": "node-16",
+  "tip": "Quick gender hints from endings: `-ung`, `-heit`, `-keit`, `-schaft`, `-tät` → fem (die Zeitung). `-chen`, `-lein` → neut (das Mädchen). `-er`, `-ling` → masc. But only ~60% reliable.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0137",
+  "target": "Das Fenster ist wegen der Kälte geschlossen.",
+  "english": "The window is closed because of the cold.",
+  "node": "node-01",
+  "tip": "Perfekt with 'sein' + 'geschlossen' – motion/change-of-state verbs use 'sein' as the auxiliary.",
+  "dupGroupSize": 7
+ },
+ {
+  "id": "de-0138",
+  "target": "Die Heizung in meinem Zimmer funktioniert nicht.",
+  "english": "The heating in my room does not work.",
+  "node": "node-01",
+  "tip": "'Die Heizung' – feminine. '-ung' ending is always feminine.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0139",
+  "target": "Darf ich mich vorstellen? Ich bin Herr Müller.",
+  "english": "May I introduce myself? I am Mr. Müller.",
+  "node": "node-01",
+  "tip": "'Darf ich' is a polite way to ask permission – literally 'may I'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0140",
+  "target": "Du landest morgen um acht Uhr in Frankfurt.",
+  "english": "You land tomorrow at eight o'clock in Frankfurt.",
+  "node": "node-01",
+  "tip": "Verbs with stem ending in -d: landen → du landest (extra -e-).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0141",
+  "target": "Er schreibt einen langen Brief an seine Mutter.",
+  "english": "He writes a long letter to his mother.",
+  "node": "node-01",
+  "tip": "Adjective 'langen' – its ending depends on the article type, case, and noun gender. After definite articles, usually -e or -en.",
+  "dupGroupSize": 56
+ },
+ {
+  "id": "de-0146",
+  "target": "Ihr seid die besten Freunde, die man haben kann.",
+  "english": "You are the best friends one can have.",
+  "node": "node-01",
+  "tip": "Adjective 'besten' – its ending depends on the article type, case, and noun gender. After definite articles, usually -e or -en.",
+  "dupGroupSize": 56
+ },
+ {
+  "id": "de-0147",
+  "target": "Entschuldigung, gibt es hier in der Nähe eine U-Bahn-Station?",
+  "english": "Excuse me, is there a subway station nearby?",
+  "node": "node-01",
+  "tip": "German has three genders: `der` (m), `die` (f), `das` (n). Object gender is arbitrary – `der Tisch`, `die Lampe`, `das Buch`. Always memorize the noun with its article.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0149",
+  "target": "Angenehm! Ich bin Ihr neuer Nachbar.",
+  "english": "Pleased to meet you! I am your new neighbor.",
+  "node": "node-01",
+  "tip": "'Angenehm!' is short for 'angenehm, Sie kennenzulernen' – a formal greeting.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0152",
+  "target": "Darf ich fragen, was Sie beruflich machen?",
+  "english": "May I ask what you do for a living?",
+  "node": "node-01",
+  "tip": "'Darf' (modal) pushes 'machen' to the infinitive at the sentence end – the modal verb frame is fundamental to German.",
+  "dupGroupSize": 80
+ },
+ {
+  "id": "de-0153",
+  "target": "Mein Mann ist Koch in einem Fünf-Sterne-Hotel.",
+  "english": "My husband is a chef in a five-star hotel.",
+  "node": "node-01",
+  "tip": "'in' (in) + dative = location. Accusative would indicate direction/movement toward.",
+  "dupGroupSize": 11
+ },
+ {
+  "id": "de-0154",
+  "target": "Der Bahnhof ist nur zehn Gehminuten entfernt.",
+  "english": "The train station is only ten minutes' walk away.",
+  "node": "node-01",
+  "tip": "Perfekt with 'sein' + 'Gehminuten' – motion/change-of-state verbs use 'sein' as the auxiliary.",
+  "dupGroupSize": 7
+ },
+ {
+  "id": "de-0155",
+  "target": "Wahrscheinlich kommt der Zug heute etwas später.",
+  "english": "The train will probably be a bit late today.",
+  "node": "node-01",
+  "tip": "'Wahrscheinlich' – compound noun. The last component determines gender; earlier components modify meaning.",
+  "dupGroupSize": 82
+ },
+ {
+  "id": "de-0156",
+  "target": "Ich bin Vegetarierin, gibt es etwas ohne Fleisch?",
+  "english": "I am a vegetarian, is there something without meat?",
+  "node": "node-01",
+  "tip": "'Vegetarierin' – compound noun. The last component determines gender; earlier components modify meaning.",
+  "dupGroupSize": 82
+ },
+ {
+  "id": "de-0158",
+  "target": "Ich mache in der Mittagspause einen kurzen Spaziergang.",
+  "english": "I take a short walk during my lunch break.",
+  "node": "node-01",
+  "tip": "'wohl' with future often expresses assumption, not certainty.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0161",
+  "target": "Die frischen Erdbeeren vom Markt sind viel süßer.",
+  "english": "The fresh strawberries from the market are much sweeter.",
+  "node": "node-01",
+  "tip": "'war/waren' = was/were; 'hatte/hatten' = had – most common past.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0166",
+  "target": "Wir haben leider keinen Platz mehr im Restaurant.",
+  "english": "Unfortunately we have no more room in the restaurant.",
+  "node": "node-01",
+  "tip": "'keinen' negates nouns directly – replaces the indefinite article with matching endings.",
+  "dupGroupSize": 3
+ },
+ {
+  "id": "de-0169",
+  "target": "Jeden Morgen liest er die Tageszeitung beim Frühstück.",
+  "english": "Every morning he reads the daily newspaper at breakfast.",
+  "node": "node-01",
+  "tip": "'Tageszeitung' – compound noun. The last component determines gender; earlier components modify meaning.",
+  "dupGroupSize": 82
+ },
+ {
+  "id": "de-0173",
+  "target": "Ich öffne das Fenster, weil es sehr warm ist.",
+  "english": "I open the window because it is very warm.",
+  "node": "node-01",
+  "tip": "Verbs with stem ending in -n: öffnen → ich öffne, du öffnest, er öffnet.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0179",
+  "target": "In einem solchen Fall rufen Sie bitte sofort die Polizei.",
+  "english": "In such a case please call the police immediately.",
+  "node": "node-01",
+  "tip": "If something other than the subject opens the sentence, the verb stays in slot 2. Heute gehe ich ins Kino (not Heute ich gehe).",
+  "dupGroupSize": 3
+ },
+ {
+  "id": "de-0181",
+  "target": "Er sucht seit Wochen eine neue Arbeitsstelle.",
+  "english": "He has been looking for a new job for weeks.",
+  "node": "node-01",
+  "tip": "'Arbeitsstelle' – compound noun. The last component determines gender; earlier components modify meaning.",
+  "dupGroupSize": 82
+ },
+ {
+  "id": "de-0182",
+  "target": "Ich dusche morgens kalt, das macht mich wach.",
+  "english": "I take a cold shower in the morning; it wakes me up.",
+  "node": "node-01",
+  "tip": "Relative pronouns match the noun's gender, but their case comes from their role in the relative clause. Der Mann, der dort steht (m, subject).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0185",
+  "target": "Meistens koche ich abends für die ganze Familie.",
+  "english": "Usually I cook in the evening for the whole family.",
+  "node": "node-01",
+  "tip": "Adjective 'ganze' – its ending depends on the article type, case, and noun gender. After definite articles, usually -e or -en.",
+  "dupGroupSize": 56
+ },
+ {
+  "id": "de-0186",
+  "target": "Er wartet schon seit einer Stunde auf den Bus.",
+  "english": "He has been waiting for the bus for an hour.",
+  "node": "node-01",
+  "tip": "'Schon' (already) is a modal particle that adds emphasis – 'Wie lange wohnst du schon hier?' implies ongoing duration.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0188",
+  "target": "Du singst unter der Dusche, das höre ich genau.",
+  "english": "You sing in the shower, I can hear it clearly.",
+  "node": "node-01",
+  "tip": "'das' (nom./acc. neut.) introduces a relative clause – its case depends on its role within that clause.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0191",
+  "target": "Um drei Uhr nachmittags gibt es Kaffee und Kuchen.",
+  "english": "At three in the afternoon there is coffee and cake.",
+  "node": "node-01",
+  "tip": "German is V2: the conjugated verb is always the second element. `Heute gehe ich ins Kino` (today go I to-the cinema) – nOT `Heute ich gehe`. Whatever comes first, the verb is right after.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0199",
+  "target": "In letzter Zeit schlafe ich schlecht wegen der Hitze.",
+  "english": "Lately I have been sleeping poorly because of the heat.",
+  "node": "node-01",
+  "tip": "German is strict about V2: the conjugated verb is the second element, no matter what. Count: [1: Heute] [2: gehe] [3: ich ins Kino].",
+  "dupGroupSize": 3
+ },
+ {
+  "id": "de-0205",
+  "target": "Meine Tante liest jeden Abend ihren Enkelkindern eine lange Geschichte vor.",
+  "english": "My aunt reads her grandchildren a long story every evening.",
+  "node": "node-01",
+  "tip": "'lesen' stem-vowel change: e→ie: 'liest'; separable: 'vorlesen'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0206",
+  "target": "Ich empfehle Ihnen, ein Tagesticket für den gesamten Nahverkehr zu kaufen.",
+  "english": "I recommend buying a day ticket for all local transport.",
+  "node": "node-01",
+  "tip": "für always takes the direct-object form: für mich (for me), für dich (for you), für den Mann (for the man). No extra preposition needed.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0207",
+  "target": "Wir frühstücken sonntags immer ausgiebig mit der Familie.",
+  "english": "On Sundays we always have a lavish breakfast with the family.",
+  "node": "node-01",
+  "tip": "'Ausgiebig frühstücken' – having a long, generous breakfast is a German Sunday tradition.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0208",
+  "target": "Sie macht samstags einen großen Wocheneinkauf im Supermarkt.",
+  "english": "She does a big weekly shop at the supermarket on Saturdays.",
+  "node": "node-01",
+  "tip": "German has two 'you's: `du` (informal – family, friends, kids, peers) and `Sie` (formal – strangers, work, anyone you don't know well). Capital-S `Sie` is required.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0213",
+  "target": "Das gemütliche Wohnzimmer meiner Großeltern ist voller schöner Familienfotos.",
+  "english": "My grandparents' cozy living room is full of beautiful family photos.",
+  "node": "node-01",
+  "tip": "'das Wohnzimmer' = neuter; '-zimmer' compounds are always neuter.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0215",
+  "target": "Heute Nachmittag holt mein Vater uns vom Bahnhof ab.",
+  "english": "This afternoon my father is picking us up from the train station.",
+  "node": "node-01",
+  "tip": "Starting with 'heute' (today) triggers inversion: 'Heute gehe ich...' – the verb must remain in second position.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0217",
+  "target": "Er spricht fließend vier Sprachen und lernt gerade die fünfte.",
+  "english": "He speaks four languages fluently and is currently learning the fifth.",
+  "node": "node-10",
+  "tip": "'sprechen' stem-vowel change: e→i: 'spricht'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0218",
+  "target": "Die Portion Pommes ist riesig, das schaffe ich nicht allein.",
+  "english": "The portion of fries is huge, I can't finish it alone.",
+  "node": "node-01",
+  "tip": "Comma rule: every relative clause needs a comma before and after. Then the conjugated verb goes to the end of the relative clause.",
+  "dupGroupSize": 5
+ },
+ {
+  "id": "de-0223",
+  "target": "Er nimmt das Taxi, weil der letzte Bus schon abgefahren ist.",
+  "english": "He takes a taxi because the last bus has already left.",
+  "node": "node-01",
+  "tip": "Subordinating conjunctions (`dass`, `weil`, `wenn`, `ob`, `obwohl`) send the verb to the end of the clause: `Ich weiß, dass er morgen kommt`.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0235",
+  "target": "Der neue Chef ist echt locker drauf und hat immer ein offenes Ohr.",
+  "english": "The new boss is really laid-back and always has an open ear.",
+  "node": "node-01",
+  "tip": "'locker drauf sein' = to be relaxed/laid-back.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0239",
+  "target": "Jeden Morgen fährt sie mit der Straßenbahn zur Universität im Stadtzentrum.",
+  "english": "Every morning she takes the tram to the university in the city center.",
+  "node": "node-01",
+  "tip": "'Fahren' has an umlaut change: ich fahre, du fährst, er fährt – only in 2nd/3rd person singular.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0241",
+  "target": "Der Bäcker öffnet seinen Laden schon um fünf Uhr in der Frühe.",
+  "english": "The baker opens his shop as early as five o'clock in the morning.",
+  "node": "node-01",
+  "tip": "'öffnen' – stem-final '-n' adds '-et': 'öffnet'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0243",
+  "target": "Am Wochenende fahren die Busse nur alle dreißig Minuten statt alle zehn.",
+  "english": "On weekends the buses only run every thirty minutes instead of every ten.",
+  "node": "node-01",
+  "tip": "Inversion required: if anything other than the subject opens a sentence, swap the verb and subject. `Morgen kommt er` – never `Morgen er kommt`.",
+  "dupGroupSize": 3
+ },
+ {
+  "id": "de-0244",
+  "target": "Warme Suppe mit frischem Brot ist an kalten Wintertagen das perfekte Essen.",
+  "english": "Warm soup with fresh bread is the perfect meal on cold winter days.",
+  "node": "node-01",
+  "tip": "No article: adj. takes strong endings showing gender and case.",
+  "dupGroupSize": 2
+ },
+ {
+  "id": "de-0245",
+  "target": "Wir möchten bitte bestellen, wir haben es etwas eilig.",
+  "english": "We would like to order please, we are in a bit of a hurry.",
+  "node": "node-16",
+  "tip": "möchte (would like) is polite. ich will einen Kaffee sounds blunt (literally \"I want\"). Say ich möchte einen Kaffee instead.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0250",
+  "target": "Hast du Geschwister?",
+  "english": "Do you have siblings?",
+  "node": "node-02",
+  "tip": "Yes/no question – verb takes V1 position. German doesn't need a 'do' auxiliary.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0252",
+  "target": "Wir sind gerade erst angekommen.",
+  "english": "We have just arrived.",
+  "node": "node-02",
+  "tip": "'Gerade' means 'just now/right now' – German uses present tense + 'gerade' where English uses present continuous.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0257",
+  "target": "Wir besuchen unsere Großeltern oft.",
+  "english": "We visit our grandparents often.",
+  "node": "node-02",
+  "tip": "Frequency words like 'immer' (always), 'oft' (often), 'jeden Tag' (every day) signal habitual present tense.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0261",
+  "target": "Sie wird ihre Schwester anrufen.",
+  "english": "She will call her sister.",
+  "node": "node-02",
+  "tip": "Possessive pronouns (mein, dein, sein, ihr) take the same endings as 'ein/eine' – they follow the gender of the noun.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0265",
+  "target": "Es freut mich, hier zu sein.",
+  "english": "I'm pleased to be here.",
+  "node": "node-02",
+  "tip": "'mich' – reflexive pronoun for 'freut'. German requires it even when English doesn't (e.g., 'sich freuen' = 'to be happy').",
+  "dupGroupSize": 21
+ },
+ {
+  "id": "de-0270",
+  "target": "Sie arbeitet in einem großen Büro.",
+  "english": "She works in a large office.",
+  "node": "node-02",
+  "tip": "'Arbeiten' inserts an extra -e- before endings with -st/-t: du arbeitest, er arbeitet – for easier pronunciation.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0277",
+  "target": "Meine Hobbys sind Wandern und Fotografieren.",
+  "english": "My hobbies are hiking and photographing.",
+  "node": "node-02",
+  "tip": "'Fotografieren' – compound noun. The last component determines gender; earlier components modify meaning.",
+  "dupGroupSize": 82
+ },
+ {
+  "id": "de-0280",
+  "target": "Wir sind für jede Hilfe dankbar.",
+  "english": "We are grateful for any help.",
+  "node": "node-02",
+  "tip": "'für' (for) always takes accusative – no exceptions.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0281",
+  "target": "Ich habe morgen einen freien Tag.",
+  "english": "I have a day off tomorrow.",
+  "node": "node-02",
+  "tip": "Adjective 'freien' – its ending depends on the article type, case, and noun gender. After definite articles, usually -e or -en.",
+  "dupGroupSize": 56
+ },
+ {
+  "id": "de-0287",
+  "target": "Ich bringe meinen Laptop zur Arbeit mit.",
+  "english": "I bring my laptop to work.",
+  "node": "node-02",
+  "tip": "Prefix 'mit' at the end – the separable verb splits in main clauses, with the prefix jumping to the sentence end.",
+  "dupGroupSize": 13
+ },
+ {
+  "id": "de-0289",
+  "target": "Wir haben Glück mit dem Wetter gehabt.",
+  "english": "We were lucky with the weather.",
+  "node": "node-02",
+  "tip": "Perfekt: 'haben' + 'gehabt' – standard spoken past tense. The participle goes to the clause end.",
+  "dupGroupSize": 28
+ },
+ {
+  "id": "de-0290",
+  "target": "Sie zeigt mir die schönsten Sehenswürdigkeiten.",
+  "english": "She shows me the most beautiful sights.",
+  "node": "node-02",
+  "tip": "'Sehen' has a stem change: ich sehe, du siehst, er sieht – e becomes ie in 2nd/3rd singular.",
+  "dupGroupSize": 1
+ }
+]

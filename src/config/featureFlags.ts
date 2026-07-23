@@ -20,6 +20,7 @@ export const GRAMMAR_TIPS_LANGS: ReadonlySet<Language> = new Set<Language>([
   'korean',     // Wave A 2026-07-22: 1,024 tips, 26.0%, verified + linter-clean
   'greek',      // Wave A 2026-07-22: 1,055 tips, 26.8%, verified + linter-clean
   'indonesian', // Wave A 2026-07-22: 1,021 tips, 26.0%, verified + linter-clean
+  'french',     // Wave B 2026-07-23: 877 tips, 22.3%, classify→rewrite→fill→verify, linter-clean
 ]);
 
 /** Should the UI surface grammar tips for this language? */

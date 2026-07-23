@@ -1,0 +1,482 @@
+[
+ {
+  "id": "fr-0441",
+  "target": "Est-ce qu'il fait beau ?",
+  "english": "Is the weather nice?",
+  "node": "node-03",
+  "tip": "French says 'it makes' for weather: `il fait beau` (the weather's nice), `il fait froid`. Same pattern with `du soleil`, `du vent`. English uses 'be' or 'is sunny/windy'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0443",
+  "target": "Est-ce que tu as fini ?",
+  "english": "Have you finished?",
+  "node": "node-21",
+  "tip": "Passé composé = avoir or être + past participle. Most verbs take avoir: j'ai mangé, il a vu, nous avons fini. Usually no participle agreement.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0444",
+  "target": "Elle a mal à la tête.",
+  "english": "She has a headache.",
+  "node": "node-03",
+  "tip": "'Avoir mal à' = to have pain in: j'ai mal au dos (my back hurts), j'ai mal aux dents (I have a toothache).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0446",
+  "target": "Est-ce que tu parles français ?",
+  "english": "Do you speak French?",
+  "node": "node-03",
+  "tip": "'Est-ce que' placed before a statement turns it into a yes/no question. It's the most common question form in spoken French.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0447",
+  "target": "Est-ce que tu travailles demain ?",
+  "english": "Do you work tomorrow?",
+  "node": "node-03",
+  "tip": "'Demain' (tomorrow) is a time marker that doesn't change verb tense in questions – present tense works fine.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0448",
+  "target": "Quelle est la date aujourd'hui ?",
+  "english": "What is today's date?",
+  "node": "node-03",
+  "tip": "In inversion with 'il/elle', add -t- between two vowels: 'Parle-t-il ?' The -t- is just for pronunciation.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0450",
+  "target": "Pourquoi tu ne manges pas ?",
+  "english": "Why aren't you eating?",
+  "node": "node-03",
+  "tip": "French negation wraps the verb: `je ne sais pas`. In speech the `ne` often drops (`je sais pas`) but it stays in writing. `Pas` alone after the verb is colloquial.",
+  "dupGroupSize": 2
+ },
+ {
+  "id": "fr-0451",
+  "target": "De quoi tu as besoin ?",
+  "english": "What do you need?",
+  "node": "node-03",
+  "tip": "'De quoi' = What...of/about. Use after verbs that take 'de': avoir besoin de, parler de, avoir envie de.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0454",
+  "target": "Il n'y a pas de pain.",
+  "english": "There is no bread.",
+  "node": "node-03",
+  "tip": "After negation, 'du/de la/des' become 'de/d'': 'il y a du pain' → 'il n'y a pas de pain'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0455",
+  "target": "Est-ce que nous sommes en retard ?",
+  "english": "Are we late?",
+  "node": "node-03",
+  "tip": "In questions, 'est-ce que nous' sounds natural. The inverted form 'sommes-nous' is more formal.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0459",
+  "target": "Est-ce que je peux payer par carte ?",
+  "english": "Can I pay by card?",
+  "node": "node-03",
+  "tip": "'Payer par carte' = to pay by card. 'Par' indicates the means of payment.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0462",
+  "target": "J'ai hâte de partir.",
+  "english": "I can't wait to leave.",
+  "node": "node-03",
+  "tip": "'Avoir hâte de' = to be eager to / can't wait to. Literally 'to have haste to'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0463",
+  "target": "Combien ça coûte ?",
+  "english": "How much does it cost?",
+  "node": "node-03",
+  "tip": "'Combien' = How much / How many. 'Combien ça coûte ?' is essential for shopping and travel.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0465",
+  "target": "A-t-il un frère ?",
+  "english": "Does he have a brother?",
+  "node": "node-03",
+  "tip": "When inverting with il/elle/on, add '-t-' between two vowels for pronunciation: A-t-il ? Va-t-elle ? Mange-t-on ?",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0466",
+  "target": "Lequel tu préfères ?",
+  "english": "Which one do you prefer?",
+  "node": "node-03",
+  "tip": "'Lequel/laquelle' = Which one. Agrees with the noun: lequel (m.), laquelle (f.), lesquels (m. pl.), lesquelles (f. pl.).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0468",
+  "target": "J'ai peur du chien.",
+  "english": "I am afraid of the dog.",
+  "node": "node-03",
+  "tip": "'Avoir peur de' = to be afraid of. Another 'avoir' expression where English uses 'to be'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0469",
+  "target": "Il a du talent.",
+  "english": "He has talent.",
+  "node": "node-21",
+  "tip": "Regular past participles: -er → -é, -ir → -i, -re → -u. Irregulars (fait, dit, pris, lu, vu, eu, été) need separate memory.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0470",
+  "target": "Il a envie de sortir.",
+  "english": "He feels like going out.",
+  "node": "node-21",
+  "tip": "'Avoir envie de' = to feel like / to want. J'ai envie d'un café = I feel like having a coffee.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0472",
+  "target": "Quand arrive le train ?",
+  "english": "When does the train arrive?",
+  "node": "node-03",
+  "tip": "'Arriver' uses 'être' in passé composé: 'je suis arrivé(e)'. 'En retard' = late. Regular -er in present.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0478",
+  "target": "Elle n'a pas d'amis ici.",
+  "english": "She has no friends here.",
+  "node": "node-03",
+  "tip": "After negation, 'des' becomes 'd'' before a vowel: 'pas d'amis'. The partitive article disappears.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0479",
+  "target": "Un vieil homme marche lentement.",
+  "english": "An old man walks slowly.",
+  "node": "node-03",
+  "tip": "'Vieux' has special forms: vieux (m. before consonant), vieil (m. before vowel), vieille (f.), vieux (m. pl.), vieilles (f. pl.).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0482",
+  "target": "Je suis fatigué après le travail.",
+  "english": "I am tired after work.",
+  "node": "node-03",
+  "tip": "Use 'être' for states and conditions: je suis fatigué (I am tired), je suis content (I am happy).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0489",
+  "target": "Une vieille dame lit le journal.",
+  "english": "An old lady reads the newspaper.",
+  "node": "node-03",
+  "tip": "'Le/la/les' for general statements: 'J'aime le chocolat' = I like chocolate (in general).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0494",
+  "target": "Les magasins ferment à vingt heures.",
+  "english": "The stores close at eight pm.",
+  "node": "node-03",
+  "tip": "'Les magasins' – use 'les' for all/general plural nouns. 'Des' would mean 'some' stores.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0495",
+  "target": "Est-ce qu'il y a un parking ?",
+  "english": "Is there a parking lot?",
+  "node": "node-03",
+  "tip": "'Est-ce qu'il y a' = Is there / Are there. 'Il y a' means 'there is/are' and is very common.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0498",
+  "target": "À quelle heure tu te lèves ?",
+  "english": "What time do you get up?",
+  "node": "node-03",
+  "tip": "Reflexive verbs use a pronoun (me/te/se/nous/vous/se) before the verb. `Je m'appelle` = 'I call myself' = 'My name is'. The pronoun must match the subject.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0500",
+  "target": "Ils ont un chien et un chat.",
+  "english": "They have a dog and a cat.",
+  "node": "node-03",
+  "tip": "'Être pressé' = to be in a hurry. The adjective agrees: pressé/pressée.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0502",
+  "target": "Comment on va à la gare ?",
+  "english": "How do we get to the station?",
+  "node": "node-03",
+  "tip": "`on` also = English 'one' or 'they' (impersonal): `on dit que...` = 'they say that...'. Two meanings, one word. Context decides.",
+  "dupGroupSize": 2
+ },
+ {
+  "id": "fr-0504",
+  "target": "Un café et un croissant, s'il vous plaît.",
+  "english": "A coffee and a croissant, please.",
+  "node": "node-03",
+  "tip": "'Un café et un croissant' – 'un/une' are indefinite articles. Use them when ordering one of something.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0507",
+  "target": "Comment tu t'appelles ?",
+  "english": "What's your name?",
+  "node": "node-04",
+  "tip": "'Comment' = How/What. 'Comment tu t'appelles ?' is informal. Formal: 'Comment vous appelez-vous ?'",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0509",
+  "target": "Pourquoi tu ris ?",
+  "english": "Why are you laughing?",
+  "node": "node-04",
+  "tip": "'Pourquoi' = Why. Can be followed by subject+verb directly or by 'est-ce que': Pourquoi est-ce que tu ris ?",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0512",
+  "target": "Tu viens d'où ?",
+  "english": "Where are you from?",
+  "node": "node-04",
+  "tip": "In casual French, you can put the question word at the end: Tu viens d'où ? Tu fais quoi ? C'est qui ?",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0515",
+  "target": "La maison est grande.",
+  "english": "The house is big.",
+  "node": "node-04",
+  "tip": "'La' is the feminine singular definite article. Use 'la' before feminine nouns starting with a consonant: la maison, la table, la rue.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0516",
+  "target": "Les enfants jouent dehors.",
+  "english": "The children play outside.",
+  "node": "node-04",
+  "tip": "'Les' is the plural definite article for both masculine and feminine nouns: les garçons, les filles, les maisons.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0517",
+  "target": "C'est une bonne idée.",
+  "english": "It's a good idea.",
+  "node": "node-04",
+  "tip": "'Bon' (m.) → 'bonne' (f.) = good. Most adjectives add -e for feminine: petit → petite, grand → grande.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0520",
+  "target": "Ton frère est gentil.",
+  "english": "Your brother is kind.",
+  "node": "node-04",
+  "tip": "Possessives: ton/ta/tes (your, informal). Before feminine nouns starting with a vowel, use 'mon/ton/son' instead of 'ma/ta/sa': mon amie.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0522",
+  "target": "J'ai besoin d'un stylo.",
+  "english": "I need a pen.",
+  "node": "node-04",
+  "tip": "More elisions: ne → n', me → m', te → t', se → s', le/la → l', de → d', que → qu'. Any vowel collision triggers it.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0526",
+  "target": "La soupe est chaude.",
+  "english": "The soup is hot.",
+  "node": "node-04",
+  "tip": "'Chaud' (m.) → 'chaude' (f.) = hot. 'Froid' → 'froide' = cold. Regular feminine form: just add -e.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0527",
+  "target": "Un gros chien noir.",
+  "english": "A big black dog.",
+  "node": "node-04",
+  "tip": "'Gros' (m.) → 'grosse' (f.) = big/fat. Multiple adjectives: size before noun + color after: un gros chien noir.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0533",
+  "target": "Ce restaurant leur plaît.",
+  "english": "They like this restaurant.",
+  "node": "node-04",
+  "tip": "'Leur' is the indirect object pronoun for 'them': 'ce restaurant leur plaît' = this restaurant pleases them.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0534",
+  "target": "Qu'est-ce qui se passe ?",
+  "english": "What's happening?",
+  "node": "node-04",
+  "tip": "'Qu'est-ce qui' = What (as subject). Use when 'what' is doing the action: Qu'est-ce qui fait ce bruit ? (What's making that noise?)",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0536",
+  "target": "Une bière, s'il vous plaît.",
+  "english": "A beer, please.",
+  "node": "node-04",
+  "tip": "'Une bière' is feminine. Most drinks ending in -ère are feminine: une bière, une rivière.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0538",
+  "target": "Qu'est-ce que tu fais ?",
+  "english": "What are you doing?",
+  "node": "node-04",
+  "tip": "'Qu'est-ce que' = What (as object of verb). Use for 'what' questions: Qu'est-ce que tu veux ? (What do you want?)",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0541",
+  "target": "Où sont les toilettes ?",
+  "english": "Where are the toilets?",
+  "node": "node-04",
+  "tip": "The inverted question form 'parlez-vous' is more formal than 'est-ce que vous parlez'. Both are correct.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0543",
+  "target": "Quels sont tes loisirs ?",
+  "english": "What are your hobbies?",
+  "node": "node-04",
+  "tip": "'Lequel/laquelle' = which one. Agrees in gender and number: lequel, laquelle, lesquels, lesquelles.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0547",
+  "target": "Quand est ton anniversaire ?",
+  "english": "When is your birthday?",
+  "node": "node-04",
+  "tip": "'À qui' = to whom / whose: 'À qui est ce livre ?' = Whose book is this?",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0552",
+  "target": "Elle mange de la salade.",
+  "english": "She eats some salad.",
+  "node": "node-04",
+  "tip": "'De la' is the feminine partitive article meaning 'some'. Use for feminine uncountable nouns: de la salade, de la soupe, de la viande.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0556",
+  "target": "Elle préfère la musique classique.",
+  "english": "She prefers classical music.",
+  "node": "node-04",
+  "tip": "'De' replaces partitives after negation, but not after 'ne...que' (only): 'Je ne bois que du café'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0557",
+  "target": "Un long voyage en train.",
+  "english": "A long train journey.",
+  "node": "node-04",
+  "tip": "'Long' (m.) → 'longue' (f.) = long. Irregular feminine form. Some adjectives change more than just adding -e.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0558",
+  "target": "Il me faut un passeport.",
+  "english": "I need a passport.",
+  "node": "node-04",
+  "tip": "'Il me faut' = I need (literally: it is necessary to me). Reverse construction: il me faut, il te faut, il lui faut, il nous faut.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0561",
+  "target": "Il vous faut une réservation.",
+  "english": "You need a reservation.",
+  "node": "node-04",
+  "tip": "'Suffire' (to be enough) is impersonal like falloir: 'il suffit de' = it's enough to.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0562",
+  "target": "Qu'est-ce qui ne va pas ?",
+  "english": "What's wrong?",
+  "node": "node-04",
+  "tip": "Negative pairs: ne … jamais (never), ne … plus (no longer), ne … rien (nothing), ne … personne (no one). Always two parts around the verb.",
+  "dupGroupSize": 4
+ },
+ {
+  "id": "fr-0564",
+  "target": "Il y a du vent aujourd'hui.",
+  "english": "It's windy today.",
+  "node": "node-21",
+  "tip": "'Du/de la/des' for partial quantities: 'Je mange du pain' = I eat some bread (not all bread).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0565",
+  "target": "Qu'est-ce que ça veut dire ?",
+  "english": "What does that mean?",
+  "node": "node-04",
+  "tip": "'Où' (where) with accent distinguishes it from 'ou' (or) without accent. The accent matters in writing.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0566",
+  "target": "Pourquoi il ne vient pas ?",
+  "english": "Why isn't he coming?",
+  "node": "node-04",
+  "tip": "After a negation, the article switches: `j'ai un chien` → `je n'ai pas de chien`. The `un/une/des` becomes `de`. Very easy to forget for English speakers.",
+  "dupGroupSize": 3
+ },
+ {
+  "id": "fr-0567",
+  "target": "Quand est-ce que tu pars ?",
+  "english": "When are you leaving?",
+  "node": "node-04",
+  "tip": "'Quand' = When. Use with 'est-ce que' or inversion: Quand pars-tu ? / Quand est-ce que tu pars ?",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0575",
+  "target": "Je ne mange jamais de viande.",
+  "english": "I never eat meat.",
+  "node": "node-04",
+  "tip": "'Ne...jamais de' = never any. Same rule: un/une/du/de la become 'de' in negative: Je ne bois jamais de café.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0576",
+  "target": "Parlez plus lentement, s'il vous plaît.",
+  "english": "Speak more slowly, please.",
+  "node": "node-04",
+  "tip": "'C'est gentil' = that's kind. A common way to thank someone for their thoughtfulness.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0578",
+  "target": "Combien de temps ça prend ?",
+  "english": "How long does it take?",
+  "node": "node-04",
+  "tip": "'Quel/quelle' (which/what) agrees with the noun: quel livre (m.), quelle heure (f.), quels jours (m.pl.).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0586",
+  "target": "Il y a trop de bruit.",
+  "english": "There is too much noise.",
+  "node": "node-04",
+  "tip": "`il y a` = 'there is / there are' – singular and plural. `Il y a une pomme`, `il y a trois pommes`. The form doesn't change. Past: `il y avait`.",
+  "dupGroupSize": 1
+ }
+]

@@ -1,0 +1,482 @@
+[
+ {
+  "id": "de-2140",
+  "target": "Sie fährt nach Hause.",
+  "english": "She drives home.",
+  "node": "node-16",
+  "tip": "Comparative adverbs work the same way: 'schneller laufen' (run faster), 'lauter sprechen' (speak louder).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2152",
+  "target": "Ich spreche über meine Pläne.",
+  "english": "I talk about my plans.",
+  "node": "node-16",
+  "tip": "'Über' + accusative for topic.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2155",
+  "target": "Ich habe Angst vor Spinnen.",
+  "english": "I am afraid of spiders.",
+  "node": "node-16",
+  "tip": "'Angst haben vor' + dative.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2170",
+  "target": "Sie geht ins Schwimmbad.",
+  "english": "She goes to the swimming pool.",
+  "node": "node-16",
+  "tip": "'Ins' = 'in das'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2192",
+  "target": "Die Alpen sind höher als die Pyrenäen.",
+  "english": "The Alps are higher than the Pyrenees.",
+  "node": "node-16",
+  "tip": "'höher als' – comparative. Some adjectives also umlaut: groß→größer, alt→älter, lang→länger, jung→jünger.",
+  "dupGroupSize": 8
+ },
+ {
+  "id": "de-2199",
+  "target": "Wir essen an Feiertagen immer etwas Besonderes.",
+  "english": "We always eat something special on holidays.",
+  "node": "node-16",
+  "tip": "'Feiertag' – public holiday. Germany has many regional holidays.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2204",
+  "target": "Die klügste Lösung wäre, einfach nachzufragen.",
+  "english": "The smartest solution would be to simply ask.",
+  "node": "node-16",
+  "tip": "Superlative with umlaut: 'klug' → 'klügst-'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2207",
+  "target": "Ihr Garten ist viel gepflegter als unserer.",
+  "english": "Her garden is much more well-maintained than ours.",
+  "node": "node-16",
+  "tip": "'gepflegter als' – comparative. Some adjectives also umlaut: groß→größer, alt→älter, lang→länger, jung→jünger.",
+  "dupGroupSize": 8
+ },
+ {
+  "id": "de-2217",
+  "target": "Guten Morgen! Ich hätte gern ein weiches Brötchen.",
+  "english": "Good morning! I'd like a soft bread roll.",
+  "node": "node-16",
+  "tip": "'Guten Morgen' – accusative in a greeting: 'ein guter Morgen' → '(ich wünsche) einen guten Morgen'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2228",
+  "target": "Der Gletscher schmilzt schneller als die Wissenschaftler erwartet.",
+  "english": "The glacier is melting faster than the scientists had expected.",
+  "node": "node-16",
+  "tip": "'Wissenschaftler' – compound noun. The last component determines gender; earlier components modify meaning.",
+  "dupGroupSize": 82
+ },
+ {
+  "id": "de-2231",
+  "target": "Sie hat den höchsten Abschluss in der gesamten Abteilung.",
+  "english": "She has the highest degree in the entire department.",
+  "node": "node-16",
+  "tip": "Watch where the participle lands: `Ich habe gestern Pizza gegessen.` Sandwich structure – auxiliary near the front, participle at the very end.",
+  "dupGroupSize": 2
+ },
+ {
+  "id": "de-2245",
+  "target": "Wir haben uns gefreut, als wir die gute Nachricht erhalten haben.",
+  "english": "We were happy when we received the good news.",
+  "node": "node-16",
+  "tip": "'Als' (when, for single past events) is subordinating – verb goes to the end: 'Als ich Kind war, ...'",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2254",
+  "target": "Das ist das schönste Geschenk, das ich je bekommen habe.",
+  "english": "That is the most beautiful gift I have ever received.",
+  "node": "node-16",
+  "tip": "Comma rule: every relative clause needs a comma before and after. Then the conjugated verb goes to the end of the relative clause.",
+  "dupGroupSize": 5
+ },
+ {
+  "id": "de-2258",
+  "target": "Am wärmsten ist es in Deutschland meistens im Juli oder August.",
+  "english": "It is usually warmest in Germany in July or August.",
+  "node": "node-16",
+  "tip": "Subordinate clauses break the rule: after `weil`, `dass`, `wenn`, `obwohl`, the verb goes to the end. `Ich weiß, dass er kommt`. Two different word orders in one language.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2267",
+  "target": "Anstelle eines teuren Hotels haben wir eine gemütliche Ferienwohnung gemietet.",
+  "english": "Instead of an expensive hotel, we rented a cozy vacation apartment.",
+  "node": "node-16",
+  "tip": "'Anstelle' + genitive: 'eines teuren Hotels'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2277",
+  "target": "Solange die Kinder wach sind, können wir nicht in Ruhe essen.",
+  "english": "As long as the children are awake, we can't eat in peace.",
+  "node": "node-16",
+  "tip": "'können' (modal) pushes 'essen' to the infinitive at the sentence end – the modal verb frame is fundamental to German.",
+  "dupGroupSize": 80
+ },
+ {
+  "id": "de-2283",
+  "target": "Ich lese das Buch zu Ende, auch wenn es sehr lang ist.",
+  "english": "I finish reading the book even if it is very long.",
+  "node": "node-16",
+  "tip": "'Auch wenn' – 'even if/even though' – verb final.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2297",
+  "target": "Die Restauratorin erneuerte das verblasste Deckengemälde.",
+  "english": "The restorer restored the faded ceiling painting.",
+  "node": "node-17",
+  "tip": "'Restauratorin' – compound noun. The last component determines gender; earlier components modify meaning.",
+  "dupGroupSize": 82
+ },
+ {
+  "id": "de-2304",
+  "target": "Die Schneeflocken tanzen über den gefrorenen Teich.",
+  "english": "The snowflakes dance over the frozen pond.",
+  "node": "node-17",
+  "tip": "'Schneeflocken' – compound noun. The last component determines gender; earlier components modify meaning.",
+  "dupGroupSize": 82
+ },
+ {
+  "id": "de-2312",
+  "target": "Gestern Abend beobachtete der Astronom eine Sternschnuppe.",
+  "english": "Yesterday evening the astronomer observed a shooting star.",
+  "node": "node-17",
+  "tip": "'Sternschnuppe' – compound noun. The last component determines gender; earlier components modify meaning.",
+  "dupGroupSize": 82
+ },
+ {
+  "id": "de-2328",
+  "target": "Räum dein Zimmer auf, bevor du dich mit Freunden triffst.",
+  "english": "Tidy your room before you meet with friends.",
+  "node": "node-17",
+  "tip": "German reflexive: pronouns mich/dich/sich/uns/euch/sich. `Ich freue mich` = 'I'm happy / I look forward to'. The `mich` is mandatory – without it the verb means something else.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2332",
+  "target": "Seid pünktlich, der Bus wartet nicht auf Nachzügler.",
+  "english": "Be on time, the bus doesn't wait for latecomers.",
+  "node": "node-17",
+  "tip": "'der' (nom. masc.) introduces a relative clause – its case depends on its role within that clause.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2340",
+  "target": "Die Lehrerin, deren Unterricht mir am besten gefällt, unterrichtet Biologie.",
+  "english": "The teacher whose lessons I like best teaches biology.",
+  "node": "node-17",
+  "tip": "'deren' (gen. fem./pl.) introduces a relative clause – its case depends on its role within that clause.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2350",
+  "target": "Das Auto muss dringend repariert werden, bevor wir losfahren.",
+  "english": "The car urgently needs to be repaired before we leave.",
+  "node": "node-17",
+  "tip": "'muss' (modal) pushes 'losfahren' to the infinitive at the sentence end – the modal verb frame is fundamental to German.",
+  "dupGroupSize": 80
+ },
+ {
+  "id": "de-2359",
+  "target": "Fahr vorsichtig, die Straßen sind bei diesem Wetter sehr glatt.",
+  "english": "Drive carefully, the roads are very slippery in this weather.",
+  "node": "node-17",
+  "tip": "The 'wir' imperative (let's): 'Gehen wir!' (Let's go!), 'Fangen wir an!' (Let's begin!) – verb first, then 'wir'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2368",
+  "target": "Unweit des Bahnhofs gibt es ein gemütliches Café.",
+  "english": "Not far from the train station there is a cozy café.",
+  "node": "node-17",
+  "tip": "'Unweit' + genitive – 'not far from'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2374",
+  "target": "Wir können nicht losfahren, solange das Auto nicht repariert ist.",
+  "english": "We cannot leave as long as the car is not repaired.",
+  "node": "node-17",
+  "tip": "'Solange' (as long as) – verb final: '... nicht repariert ist'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2392",
+  "target": "Wegen eines Wasserrohrbruchs musste die Straße für zwei Tage gesperrt werden.",
+  "english": "Due to a burst water pipe the street had to be closed for two days.",
+  "node": "node-17",
+  "tip": "'eines Wasserrohrbruchs' – genitive case showing possession. Masculine/neuter nouns add -s or -es.",
+  "dupGroupSize": 2
+ },
+ {
+  "id": "de-2396",
+  "target": "Schön, dass du kommen konntest!",
+  "english": "Nice that you could come!",
+  "node": "node-18",
+  "tip": "In 'dass' clauses, the conjugated verb moves to the very end: 'Ich weiß, dass er morgen kommt'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2404",
+  "target": "Der Tischler schleift die Holzoberfläche.",
+  "english": "The carpenter sands the wooden surface.",
+  "node": "node-18",
+  "tip": "All subordinating conjunctions (dass, weil, wenn, ob, als, obwohl, während, bevor, nachdem) push the verb to the clause end.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2414",
+  "target": "Er hat nicht gesagt, wohin er gefahren ist.",
+  "english": "He didn't say where he went.",
+  "node": "node-18",
+  "tip": "Perfekt: 'haben' + 'gesagt' – standard spoken past tense. The participle goes to the clause end.",
+  "dupGroupSize": 28
+ },
+ {
+  "id": "de-2421",
+  "target": "Der Dieb wurde von der Polizei gefasst.",
+  "english": "The thief was caught by the police.",
+  "node": "node-18",
+  "tip": "Passive construction: 'werden + gefasst' – focus shifts from the doer to the action. Agent can be added with 'von + dative'.",
+  "dupGroupSize": 10
+ },
+ {
+  "id": "de-2432",
+  "target": "Statt des Autos nehmen wir den Zug.",
+  "english": "Instead of the car, we take the train.",
+  "node": "node-18",
+  "tip": "'des Autos' – genitive case showing possession. Masculine/neuter nouns add -s or -es.",
+  "dupGroupSize": 17
+ },
+ {
+  "id": "de-2442",
+  "target": "Schicken Sie den unterschriebenen Vertrag bitte per Post zurück.",
+  "english": "Please send the signed contract back by mail.",
+  "node": "node-18",
+  "tip": "'zu' + infinitive: verb at end; 'um...zu' for purpose clauses.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2455",
+  "target": "Wir verbringen einen entspannten ruhigen Nachmittag am Flussufer.",
+  "english": "We spend a relaxed quiet afternoon on the riverbank.",
+  "node": "node-18",
+  "tip": "Without any article, the adjective carries the full case/gender signal: 'kaltes Wasser' (cold water), 'guter Wein' (good wine).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2459",
+  "target": "Wir können erst anfangen, nachdem der Chef eingetroffen ist.",
+  "english": "We can only start after the boss has arrived.",
+  "node": "node-18",
+  "tip": "'dessen' (masc./neut.) and 'deren' (fem./pl.) = whose.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2476",
+  "target": "Wir gehen spazieren, obwohl es draußen regnet.",
+  "english": "We go for a walk although it is raining outside.",
+  "node": "node-18",
+  "tip": "'Obwohl' (although) – verb final: '... es draußen regnet'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2483",
+  "target": "Sie hat mir erklärt, wie man einen deutschen Lebenslauf schreibt.",
+  "english": "She explained to me how to write a German résumé.",
+  "node": "node-18",
+  "tip": "Adjective 'deutschen' – its ending depends on the article type, case, and noun gender. After definite articles, usually -e or -en.",
+  "dupGroupSize": 56
+ },
+ {
+  "id": "de-2491",
+  "target": "Sie hat mir geschrieben, dass sie nächsten Monat heiratet.",
+  "english": "She wrote to me that she is getting married next month.",
+  "node": "node-18",
+  "tip": "Preposition + relative pronoun: 'in dem', 'mit der', 'auf das'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2501",
+  "target": "Die Nachbarn, die erst kürzlich eingezogen sind, haben uns zum Grillen eingeladen.",
+  "english": "The neighbors who moved in recently invited us to a barbecue.",
+  "node": "node-18",
+  "tip": "Comma rule: every relative clause needs a comma before and after. Then the conjugated verb goes to the end of the relative clause.",
+  "dupGroupSize": 5
+ },
+ {
+  "id": "de-2510",
+  "target": "Komm gut nach Hause!",
+  "english": "Safe travels home!",
+  "node": "node-19",
+  "tip": "A common farewell phrase in German.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2522",
+  "target": "Die Fenster werden jeden Freitag geputzt.",
+  "english": "The windows are cleaned every Friday.",
+  "node": "node-19",
+  "tip": "Passive construction: 'werden + geputzt' – focus shifts from the doer to the action. Agent can be added with 'von + dative'.",
+  "dupGroupSize": 10
+ },
+ {
+  "id": "de-2526",
+  "target": "Mein Bruder ist älter als ich.",
+  "english": "My brother is older than me.",
+  "node": "node-19",
+  "tip": "'Alt/älter/am ältesten' – gets umlaut.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2533",
+  "target": "Die Schule wird nächstes Jahr gebaut.",
+  "english": "The school will be built next year.",
+  "node": "node-19",
+  "tip": "Passive construction: 'werden + gebaut' – focus shifts from the doer to the action. Agent can be added with 'von + dative'.",
+  "dupGroupSize": 10
+ },
+ {
+  "id": "de-2541",
+  "target": "Wir verbringen einen ruhigen Abend zu Hause.",
+  "english": "We spend a quiet evening at home.",
+  "node": "node-19",
+  "tip": "Multiple adjectives before a noun all take the same ending: 'ein großes, altes, rotes Haus' – they agree with each other.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2546",
+  "target": "Probier das Eis mit Pistaziengeschmack, es ist fantastisch.",
+  "english": "Try the pistachio-flavored ice cream, it's fantastic.",
+  "node": "node-19",
+  "tip": "'Pistaziengeschmack' – compound noun. The last component determines gender; earlier components modify meaning.",
+  "dupGroupSize": 82
+ },
+ {
+  "id": "de-2550",
+  "target": "Das Dach des alten Hauses ist kaputt.",
+  "english": "The roof of the old house is broken.",
+  "node": "node-19",
+  "tip": "Masculine/neuter genitive: 'des' + noun gets '-s' or '-es'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2562",
+  "target": "In diesem Restaurant wird das Essen frisch zubereitet.",
+  "english": "In this restaurant, the food is prepared fresh.",
+  "node": "node-19",
+  "tip": "Present passive: 'wird' + Partizip II.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2572",
+  "target": "Wir mieten ein helles Apartment mit großem Balkon.",
+  "english": "We rent a bright apartment with a large balcony.",
+  "node": "node-19",
+  "tip": "After 'ein' (acc. neut): '-es'. After 'großem' (dat. masc no article): '-em'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2583",
+  "target": "Wir besuchen eine alte Burg in der bayerischen Landschaft.",
+  "english": "We visit an old castle in the Bavarian landscape.",
+  "node": "node-19",
+  "tip": "After 'eine' (acc. fem): '-e'. After 'der' (dat. fem): '-en'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2601",
+  "target": "Wegen des Staus bin ich eine Stunde zu spät gekommen.",
+  "english": "Because of the traffic jam I arrived an hour late.",
+  "node": "node-19",
+  "tip": "'Wegen' + genitive – 'wegen des Staus'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2606",
+  "target": "Natürlich kannst du gerne zum Abendessen bei uns bleiben.",
+  "english": "Of course, you are welcome to stay for dinner with us.",
+  "node": "node-19",
+  "tip": "'kannst' (modal) pushes 'bleiben' to the infinitive at the sentence end – the modal verb frame is fundamental to German.",
+  "dupGroupSize": 80
+ },
+ {
+  "id": "de-2610",
+  "target": "Zunächst müssen wir das Budget für das nächste Quartal besprechen.",
+  "english": "First, we need to discuss the budget for the next quarter.",
+  "node": "node-19",
+  "tip": "'müssen' (modal) pushes 'besprechen' to the infinitive at the sentence end – the modal verb frame is fundamental to German.",
+  "dupGroupSize": 80
+ },
+ {
+  "id": "de-2616",
+  "target": "Wir wohnen am Rand des Waldes in einem kleinen Dorf.",
+  "english": "We live on the edge of the forest in a small village.",
+  "node": "node-19",
+  "tip": "Genitive: 'der Wald' → 'des Waldes'. Masculine one-syllable nouns add '-es'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2620",
+  "target": "Wegen der Renovierung des Theaters finden die Aufführungen im Freien statt.",
+  "english": "Due to the renovation of the theater, the performances take place outdoors.",
+  "node": "node-19",
+  "tip": "'des Theaters' – genitive case showing possession. Masculine/neuter nouns add -s or -es.",
+  "dupGroupSize": 17
+ },
+ {
+  "id": "de-2624",
+  "target": "Berlin ist größer als München.",
+  "english": "Berlin is bigger than Munich.",
+  "node": "node-20",
+  "tip": "'Als' is used for comparisons (never 'wie').",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2630",
+  "target": "Die junge Frau trägt einen eleganten Mantel.",
+  "english": "The young woman wears an elegant coat.",
+  "node": "node-20",
+  "tip": "After 'einen' (acc. masc): '-en'. After 'die' (nom. fem): '-e'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2638",
+  "target": "Die warmen bunten Herbstfarben verwandeln die Landschaft.",
+  "english": "The warm colorful autumn colors transform the landscape.",
+  "node": "node-20",
+  "tip": "The accusative masculine is the key exception: 'den großen Mann', 'einen großen Mann' – the -en ending signals accusative masculine.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2642",
+  "target": "Sie ist die klügste Schülerin der Klasse.",
+  "english": "She is the smartest student in the class.",
+  "node": "node-20",
+  "tip": "Two-word genitive: 'das Ende des Films' (the end of the film) – the genitive noun follows the noun it modifies.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-2651",
+  "target": "Der Geruch des frischen Brotes lockt viele Kunden an.",
+  "english": "The smell of fresh bread attracts many customers.",
+  "node": "node-20",
+  "tip": "Adjective 'frischen' – its ending depends on the article type, case, and noun gender. After definite articles, usually -e or -en.",
+  "dupGroupSize": 56
+ }
+]

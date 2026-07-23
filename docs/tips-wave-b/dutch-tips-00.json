@@ -1,0 +1,482 @@
+[
+ {
+  "id": "nl-0004",
+  "target": "Ik kom uit Nederland.",
+  "english": "I come from the Netherlands.",
+  "node": "node-01",
+  "tip": "'Komen' (to come): 'ik kom' uses just the stem – Dutch drops -t for first person.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0005",
+  "target": "Hallo, mag ik binnenkomen?",
+  "english": "Hello, may I come in?",
+  "node": "node-01",
+  "tip": "Modal verb sits second; the main verb jumps to the end. Ik moet morgen vroeg opstaan (I have to get up early tomorrow). Brackets the sentence.",
+  "dupGroupSize": 2
+ },
+ {
+  "id": "nl-0007",
+  "target": "Hoi, ik ben er weer!",
+  "english": "Hi, I'm back!",
+  "node": "node-01",
+  "tip": "'Ik ben' (I am) uses 'zijn' – the most irregular Dutch verb.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0009",
+  "target": "Goedemorgen, ik heb goed geslapen.",
+  "english": "Good morning, I slept well.",
+  "node": "node-01",
+  "tip": "'Hebben' (to have) drops its -t ending with 'ik': 'ik heb', not 'ik hebt'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0012",
+  "target": "Ik zal je morgen bellen.",
+  "english": "I will call you tomorrow.",
+  "node": "node-01",
+  "tip": "Modal verb sits second; the main verb jumps to the end. Ik moet morgen vroeg opstaan (I have to get up early tomorrow). Brackets the sentence.",
+  "dupGroupSize": 2
+ },
+ {
+  "id": "nl-0014",
+  "target": "Goedenavond, het eten is klaar.",
+  "english": "Good evening, dinner is ready.",
+  "node": "node-01",
+  "tip": "'Zijn' (to be) is fully irregular: 'ik ben', 'jij bent', 'hij is', 'wij zijn'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0015",
+  "target": "Ik drink elke morgen koffie.",
+  "english": "I drink coffee every morning.",
+  "node": "node-01",
+  "tip": "Dutch verb stems: remove -en, apply spelling rules (double vowels in closed syllables, devoice z→s, v→f).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0016",
+  "target": "Wij lopen door het bos.",
+  "english": "We walk through the forest.",
+  "node": "node-01",
+  "tip": "'Lopen' (to walk): 'ik loop', 'jij loopt' – vowel doubles in the stem.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0018",
+  "target": "Hallo, mijn naam is Jan.",
+  "english": "Hello, my name is Jan.",
+  "node": "node-01",
+  "tip": "'Is' comes from 'zijn' – used for identity, location, and as a perfect tense auxiliary.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0022",
+  "target": "Leuk je weer te spreken.",
+  "english": "Nice to speak to you again.",
+  "node": "node-01",
+  "tip": "Dutch present tense: remove -en from the infinitive for the stem, then add endings.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0023",
+  "target": "Dag, ik moet nu gaan.",
+  "english": "Bye, I have to go now.",
+  "node": "node-01",
+  "tip": "In Dutch, 'ik' always takes the bare verb stem – no -t or -en ending.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0024",
+  "target": "Hallo, ik zoek het station.",
+  "english": "Hello, I am looking for the station.",
+  "node": "node-01",
+  "tip": "'Zoeken' (to search): stem is 'zoek' – with 'ik', just use the stem.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0025",
+  "target": "Hallo, ik kom je ophalen.",
+  "english": "Hello, I'm coming to pick you up.",
+  "node": "node-01",
+  "tip": "Dutch has two 'you's: `je/jij` (informal – friends, family, peers) and `u` (formal – strangers, elders, business). They use different verb forms: `jij hebt` vs `u hebt` (or `u heeft`).",
+  "dupGroupSize": 3
+ },
+ {
+  "id": "nl-0027",
+  "target": "Hij gaat zijn ouders bezoeken.",
+  "english": "He is going to visit his parents.",
+  "node": "node-01",
+  "tip": "\"Er\" has multiple uses: existential, locative, and prepositional.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0029",
+  "target": "Prettig kennis met u te maken.",
+  "english": "Pleased to make your acquaintance.",
+  "node": "node-01",
+  "tip": "`Je` (unstressed) vs `jij` (stressed/contrastive) – same word, just emphasis. Possessive: `je/jouw boek` (your book, informal) vs `uw boek` (formal).",
+  "dupGroupSize": 3
+ },
+ {
+  "id": "nl-0031",
+  "target": "Doei, ik zie je morgen weer!",
+  "english": "Bye, I'll see you again tomorrow!",
+  "node": "node-01",
+  "tip": "Modern Dutch trends toward `je` even with strangers. But in customer service, with older people, or in writing – default to `u`.",
+  "dupGroupSize": 3
+ },
+ {
+  "id": "nl-0032",
+  "target": "Ik wens je een fijne dag.",
+  "english": "I wish you a nice day.",
+  "node": "node-01",
+  "tip": "Plural is always `jullie` (you guys) – no formal plural. Even when addressing a group formally, `jullie` works. For very formal writing only, `u` covers both singular and plural.",
+  "dupGroupSize": 3
+ },
+ {
+  "id": "nl-0034",
+  "target": "Ik bel mijn moeder elke zondag.",
+  "english": "I call my mother every Sunday.",
+  "node": "node-01",
+  "tip": "'Mijn' (my) is a possessive pronoun – it doesn't change for de/het words.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0035",
+  "target": "Ik geloof dat hij gelijk heeft.",
+  "english": "I believe that he is right.",
+  "node": "node-01",
+  "tip": "Subordinating conjunctions (`dat`, `omdat`, `als`, `terwijl`, `nadat`) send the verb to the end of the clause: `Ik weet dat hij komt`.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0036",
+  "target": "Hij rent elke ochtend vijf kilometer.",
+  "english": "He runs five kilometers every morning.",
+  "node": "node-01",
+  "tip": "Third person (hij/ze) adds -t to the verb stem: 'hij werkt', 'ze woont'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0037",
+  "target": "Ik reis vaak voor mijn werk.",
+  "english": "I travel often for my work.",
+  "node": "node-01",
+  "tip": "In Dutch, 'ik' takes the verb stem: 'ik werk', while 'jij werkt' adds -t.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0039",
+  "target": "Ik bel mijn ouders elke week.",
+  "english": "I call my parents every week.",
+  "node": "node-01",
+  "tip": "Possessives: mijn (my), jouw / je (your), zijn (his), haar (her), onze / ons (our), jullie (your pl), hun (their).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0041",
+  "target": "Wij brengen de kinderen naar school.",
+  "english": "We bring the children to school.",
+  "node": "node-01",
+  "tip": "Plural subjects (wij/zij/ze) always take the infinitive form: 'wij werken', 'zij lopen'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0043",
+  "target": "Wij eten samen in de keuken.",
+  "english": "We eat together in the kitchen.",
+  "node": "node-01",
+  "tip": "'Eten' (to eat): 'ik eet' – one-syllable stem needs double vowel for the long sound.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0045",
+  "target": "Zij leert elke dag nieuwe woorden.",
+  "english": "She learns new words every day.",
+  "node": "node-09",
+  "tip": "When \"jij\" follows the verb in questions, the -t drops: \"werk jij?\" not \"werkt jij?\"",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0046",
+  "target": "Zij heeft geen broers of zussen.",
+  "english": "She has no brothers or sisters.",
+  "node": "node-01",
+  "tip": "`geen` negates a noun without article: `ik heb geen geld` (I have no money). `Niet` negates everything else: `ik kom niet` (I'm not coming).",
+  "dupGroupSize": 2
+ },
+ {
+  "id": "nl-0050",
+  "target": "Ik werk elke dag op kantoor.",
+  "english": "I work every day at the office.",
+  "node": "node-01",
+  "tip": "Stem-final -z becomes -s: lezen -> ik lees, hij leest.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0053",
+  "target": "Het is tien over half vier nu.",
+  "english": "It's ten minutes past three-thirty now.",
+  "node": "node-01",
+  "tip": "'Tien over half vier' = 3:40 – ten past the half-hour mark before four.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0055",
+  "target": "Ik ben zo blij je te zien!",
+  "english": "I am so happy to see you!",
+  "node": "node-01",
+  "tip": "Dutch has two 'you's: `je/jij` (informal – friends, family, peers) and `u` (formal – strangers, elders, business). They use different verb forms: `jij hebt` vs `u hebt` (or `u heeft`).",
+  "dupGroupSize": 3
+ },
+ {
+  "id": "nl-0072",
+  "target": "Mijn schoonmoeder komt vanavond eten.",
+  "english": "My mother-in-law is coming for dinner tonight.",
+  "node": "node-01",
+  "tip": "\"Schoonmoeder\" – 'schoon' in family terms means 'in-law'.",
+  "dupGroupSize": 2
+ },
+ {
+  "id": "nl-0077",
+  "target": "Hij kookt vanavond pasta voor ons.",
+  "english": "He cooks pasta for us tonight.",
+  "node": "node-01",
+  "tip": "'Koken' (to cook): 'ik kook' – vowel doubles in the closed stem syllable.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0081",
+  "target": "De bus stopt bij elk station.",
+  "english": "The bus stops at every station.",
+  "node": "node-01",
+  "tip": "Plural is always de: het kind (the child) → de kinderen (the children). Singular is where you need to remember the gender.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0084",
+  "target": "De kat slaapt op de bank.",
+  "english": "The cat sleeps on the couch.",
+  "node": "node-01",
+  "tip": "Stem-final -v becomes -f in conjugation: leven -> ik leef, hij leeft.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0090",
+  "target": "Gisteren kocht zij een nieuwe fiets.",
+  "english": "Yesterday she bought a new bicycle.",
+  "node": "node-01",
+  "tip": "Dutch follows V2 like German: the verb stays in second position. `Vandaag ga ik` (today I go), not `vandaag ik ga`. Subject jumps after the verb when something else opens the sentence.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0091",
+  "target": "De kinderen hebben geen honger meer.",
+  "english": "The children are no longer hungry.",
+  "node": "node-01",
+  "tip": "`geen` negates a noun without article: `ik heb geen geld` (I have no money). `Niet` negates everything else: `ik kom niet` (I'm not coming).",
+  "dupGroupSize": 2
+ },
+ {
+  "id": "nl-0092",
+  "target": "Ik wil graag mijn excuses aanbieden.",
+  "english": "I would like to offer my apologies.",
+  "node": "node-09",
+  "tip": "'Willen' (to want) is irregular: 'ik wil', 'jij wilt', 'hij wil'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0095",
+  "target": "Wij wonen dicht bij het centrum.",
+  "english": "We live close to the city center.",
+  "node": "node-01",
+  "tip": "'Wonen' (to live): stem is 'woon' – the vowel doubles to stay long in a closed syllable.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0102",
+  "target": "Ik ben net verhuisd naar Den Haag.",
+  "english": "I just moved to The Hague.",
+  "node": "node-01",
+  "tip": "\"Den Haag\" is the Dutch name for The Hague – officially 's-Gravenhage.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0103",
+  "target": "Dag schat, ik heb je gemist vandaag.",
+  "english": "Hi darling, I missed you today.",
+  "node": "node-01",
+  "tip": "Perfect = `hebben/zijn` + past participle. Most verbs use `hebben`: `ik heb gegeten`, `wij hebben gezien`. Participle to the end of the sentence.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0111",
+  "target": "Tot straks, ik ga even boodschappen doen.",
+  "english": "See you later, I'm going grocery shopping.",
+  "node": "node-01",
+  "tip": "'Gaan' (to go) is irregular: 'ik ga', 'jij gaat'. Used to express near future.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0112",
+  "target": "Hij bestelt een broodje haring met uitjes.",
+  "english": "He orders a herring sandwich with onions.",
+  "node": "node-01",
+  "tip": "\"Broodje haring\" – raw herring with onions, a Dutch delicacy.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0116",
+  "target": "De kat slaapt altijd op de bank.",
+  "english": "The cat always sleeps on the couch.",
+  "node": "node-01",
+  "tip": "Present tense: 'slapen' → 'slaapt' – long vowel 'aa' shortens to 'a' in open syllable.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0120",
+  "target": "De zon schijnt helder aan de hemel.",
+  "english": "The sun shines brightly in the sky.",
+  "node": "node-01",
+  "tip": "Dutch present tense: stem + t for \"jij/hij/zij\": \"hij werkt\" (he works).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0122",
+  "target": "Zij leest graag boeken in de tuin.",
+  "english": "She likes reading books in the garden.",
+  "node": "node-01",
+  "tip": "'Lezen' (to read): stem is 'lees' – z devoices to s, vowel doubles to stay long.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0123",
+  "target": "Hij fietst elke ochtend naar zijn werk.",
+  "english": "He cycles every morning to his work.",
+  "node": "node-01",
+  "tip": "Regular -en verbs: 'werken' → stem 'werk' + endings. 'Wij werken' keeps the infinitive form.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0130",
+  "target": "De stad is bekend om haar grachten.",
+  "english": "The city is known for its canals.",
+  "node": "node-01",
+  "tip": "'Zijn' + 'bekend om' = to be known for – describes a characteristic.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0134",
+  "target": "Ik woon al drie jaar in Rotterdam.",
+  "english": "I have lived in Rotterdam for three years.",
+  "node": "node-01",
+  "tip": "With 'ik', the verb loses its -t ending: 'ik woon' (I live), but 'hij woont'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0135",
+  "target": "Ik reis graag en ontmoet nieuwe mensen.",
+  "english": "I like to travel and meet new people.",
+  "node": "node-01",
+  "tip": "'Reizen' (to travel): 'ik reis' – the z becomes s in the stem due to Dutch spelling rules.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0142",
+  "target": "De supermarkt sluit om half tien vanavond.",
+  "english": "The supermarket closes at half past nine tonight.",
+  "node": "node-01",
+  "tip": "Dutch 'half tien' = half TO ten = 9:30, not 10:30!",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0157",
+  "target": "Mijn neef en nicht komen morgen op bezoek.",
+  "english": "My nephew and niece are visiting tomorrow.",
+  "node": "node-01",
+  "tip": "'Komen' is semi-regular: 'ik kom', 'jij komt', 'wij komen' – stem stays short.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0161",
+  "target": "Hallo, ik ben blij je weer te zien.",
+  "english": "Hello, I am happy to see you again.",
+  "node": "node-01",
+  "tip": "`Je` (unstressed) vs `jij` (stressed/contrastive) – same word, just emphasis. Possessive: `je/jouw boek` (your book, informal) vs `uw boek` (formal).",
+  "dupGroupSize": 3
+ },
+ {
+  "id": "nl-0162",
+  "target": "Hij eet een uitsmijter met drie gebakken eieren.",
+  "english": "He eats an uitsmijter with three fried eggs.",
+  "node": "node-01",
+  "tip": "\"Uitsmijter\" – open sandwich with fried eggs, ham, and cheese.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0191",
+  "target": "Hij eet drie boterhammen met pindakaas als lunch.",
+  "english": "He eats three sandwiches with peanut butter for lunch.",
+  "node": "node-01",
+  "tip": "Adjectives before \"het\" nouns without \"het\" get no -e: \"een groot huis\" (a big house).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0196",
+  "target": "Hij neemt de waterbus over de Nieuwe Maas.",
+  "english": "He takes the water bus across the Nieuwe Maas.",
+  "node": "node-01",
+  "tip": "'Waterbus' = water bus/taxi – rotterdam public transport on water.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0197",
+  "target": "Ons gezin woont in een rijtjeshuis in Eindhoven.",
+  "english": "Our family lives in a terraced house in Eindhoven.",
+  "node": "node-01",
+  "tip": "\"Rijtjeshuis\" – a row house, very typical Dutch housing.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0199",
+  "target": "Zij eet elke ochtend een boterham met hagelslag.",
+  "english": "She eats a sandwich with chocolate sprinkles every morning.",
+  "node": "node-01",
+  "tip": "\"Hagelslag\" – chocolate sprinkles on bread, a Dutch breakfast staple.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0202",
+  "target": "Ik ben verkouden en moet in bed blijven.",
+  "english": "I have a cold and must stay in bed.",
+  "node": "node-09",
+  "tip": "'Zijn' for illness: 'verkouden zijn' = to have a cold – Dutch uses 'be' here.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0205",
+  "target": "Tot straks, ik ben over een uurtje terug.",
+  "english": "See you later, I'll be back in about an hour.",
+  "node": "node-01",
+  "tip": "\"Tot straks\" means 'see you shortly' – implies a brief departure.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0220",
+  "target": "De fooi is vijftien procent van de totale rekening.",
+  "english": "The tip is fifteen percent of the total bill.",
+  "node": "node-01",
+  "tip": "Tipping in the Netherlands: 5-15% is customary but not obligatory.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "nl-0239",
+  "target": "Ik stap over op een andere lijn bij station Sloterdijk.",
+  "english": "I transfer to another line at station Sloterdijk.",
+  "node": "node-01",
+  "tip": "'Overstappen' = to transfer – essential Dutch transit verb.",
+  "dupGroupSize": 1
+ }
+]

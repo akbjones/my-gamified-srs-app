@@ -1,0 +1,370 @@
+[
+ {
+  "id": "fr-1653",
+  "target": "Tu en as assez ?",
+  "english": "Do you have enough of it?",
+  "node": "node-13",
+  "old": "`en` = 'of it / of them / some' – replaces `de + noun` or a quantity. `Tu veux du café? Oui, j'en veux` (Yes, I want some).",
+  "focus": "en = 'of it', required where English drops it: Tu en as assez = do you have enough (of it) – strip backticks, anchor in this card"
+ },
+ {
+  "id": "fr-1667",
+  "target": "Elle lui parle souvent au téléphone.",
+  "english": "She often talks to him/her on the phone.",
+  "node": "node-13",
+  "old": "Lui is an indirect object pronoun meaning to him or to her. Placed before the verb.",
+  "focus": "lui means to him OR to her – one word, both genders, parked before the verb: lui parle; drop the jargon-led opening"
+ },
+ {
+  "id": "fr-1677",
+  "target": "Tu en as combien chez toi ?",
+  "english": "How many do you have at home?",
+  "node": "node-13",
+  "old": "After numbers and `beaucoup/peu/assez`, `en` is required: `j'en ai trois` (I have three [of them]). English drops the 'of them'; French keeps `en`.",
+  "focus": "counting requires en: Tu en as combien – English says 'how many do you have', French must keep the 'of them'; strip backticks, quote this card"
+ },
+ {
+  "id": "fr-1683",
+  "target": "La maison a été construite par mon grand-père.",
+  "english": "The house was built by my grandfather.",
+  "node": "node-13",
+  "old": "'Par' with passive construction: 'construite par mon grand-père'. Note agreement: construite (feminine for 'maison').",
+  "focus": "one rule: the passive participle agrees – construite takes -e because la maison is feminine; cut the par half"
+ },
+ {
+  "id": "fr-1706",
+  "target": "Elle s'est habillée rapidement pour partir au travail.",
+  "english": "She got dressed quickly to leave for work.",
+  "node": "node-13",
+  "old": "In passé composé, reflexive verbs use être: elle s'est habillee. The participle agrees with the subject.",
+  "focus": "reflexive passé composé takes être and the participle agrees with the subject: s'est habillée – fix the missing accent in the quote"
+ },
+ {
+  "id": "fr-1722",
+  "target": "Tu lui ressembles beaucoup.",
+  "english": "You look a lot like him/her.",
+  "node": "node-14",
+  "old": "Ressembler a quelqu'un: lui replaces a + person.",
+  "focus": "French resembles TO someone: ressembler à, so the pronoun is lui, not le – tu lui ressembles; add the missing accent on à"
+ },
+ {
+  "id": "fr-1761",
+  "target": "Tu pars pour combien de temps ?",
+  "english": "How long are you leaving for?",
+  "node": "node-14",
+  "old": "Pour combien de temps = for how long (planned duration).",
+  "focus": "pour = planned future duration (vs pendant for elapsed time) - the English 'for' split is the trap; anchor with 'pour combien de temps'"
+ },
+ {
+  "id": "fr-1897",
+  "target": "Tu y crois vraiment ?",
+  "english": "Do you really believe in it?",
+  "node": "node-15",
+  "old": "Y replaces a + thing: croire a becomes y croire.",
+  "focus": "y replaces a-plus-thing with croire - correct but the accent is missing twice ('croire a' must be 'croire à'); restore accents, keep the rule"
+ },
+ {
+  "id": "fr-1920",
+  "target": "Je saurai la réponse demain matin.",
+  "english": "I'll know the answer tomorrow morning.",
+  "node": "node-15",
+  "old": "'Tu sauras bientôt' = You'll know soon. 'Savoir' in future often implies finding out or learning.",
+  "focus": "future savoir = 'will find out', not 'will know' - good insight but the example quotes a different sentence; anchor with this card's 'je saurai'"
+ },
+ {
+  "id": "fr-1974",
+  "target": "Nous voulons que vous veniez à notre mariage.",
+  "english": "We want you to come to our wedding.",
+  "node": "node-15",
+  "old": "Subjunctive of venir: vienne, viennes, vienne, venions, veniez, viennent.",
+  "focus": "English 'want you to come' has no French infinitive equivalent - vouloir que + subjunctive is mandatory; anchor with 'que vous veniez', drop the conjugation table"
+ },
+ {
+  "id": "fr-1979",
+  "target": "On va essayer un nouveau restaurant ce soir.",
+  "english": "We're going to try a new restaurant tonight.",
+  "node": "node-15",
+  "old": "`aller + infinitive` = the everyday future, like English 'going to': `je vais manger` = 'I'm going to eat'. Way more common in speech than the textbook future tense (`je mangerai`).",
+  "focus": "aller + infinitive as the everyday spoken future vs textbook future - strip the backticks, keep the anchor 'on va essayer'"
+ },
+ {
+  "id": "fr-2007",
+  "target": "Je lui ai prêté ma voiture.",
+  "english": "I lent him/her my car.",
+  "node": "node-15",
+  "old": "Passé composé: auxiliary 'avoir' + past participle. Most verbs use 'avoir'. The participle normally doesn't agree.",
+  "focus": "generic passe-compose restatement now, but this card pairs with fr-2004: no participle agreement with INDIRECT lui ('prêté' stays bare) - make that the rule"
+ },
+ {
+  "id": "fr-2081",
+  "target": "L'auteur dont j'ai lu tous les livres vient de publier un nouveau roman.",
+  "english": "The author whose books I've read has just published a new novel.",
+  "node": "node-15",
+  "old": "'Dont' with possession: 'l'homme dont le fils est médecin' = the man whose son is a doctor.",
+  "focus": "dont = 'whose/of which' is the right insight but the worked example is a foreign sentence; anchor with this card's 'dont j'ai lu tous les livres'"
+ },
+ {
+  "id": "fr-2088",
+  "target": "Je doute qu'il vienne ce soir.",
+  "english": "I doubt he'll come tonight.",
+  "node": "node-16",
+  "old": "\"Douter que\" expresses uncertainty and triggers the subjunctive.",
+  "focus": "douter que + subjunctive is correct and anchored ('je doute qu'il vienne') but near-dups another card (dupGroupSize 2) - retell distinctly, e.g. doubt flips certainty the way negative penser does"
+ },
+ {
+  "id": "fr-2116",
+  "target": "Si j'avais su, je ne serais pas venu.",
+  "english": "If I had known, I wouldn't have come.",
+  "node": "node-16",
+  "old": "Si + plus-que-parfait → conditionnel passé: this expresses an unreal past condition.",
+  "focus": "Quote the card's own 'Si j'avais su, je ne serais pas venu' and give the unreal-past pairing in plain words, not tense-name jargon."
+ },
+ {
+  "id": "fr-2155",
+  "target": "Tu devrais lire ce livre, il est passionnant.",
+  "english": "You should read this book, it's fascinating.",
+  "node": "node-16",
+  "old": "Conditional `-rais/-rait/-rions/-riez/-raient` = 'would'. `J'aimerais` = 'I would like' (polite). `Je voudrais un café` is way more polite than `je veux un café`.",
+  "focus": "Salvage only 'Tu devrais' = 'you should' – devoir in conditional gives advice; kill the backticked endings table and the off-card voudrais bit."
+ },
+ {
+  "id": "fr-2171",
+  "target": "C'est la plus belle ville que j'aie jamais visitée.",
+  "english": "It's the most beautiful city I've ever visited.",
+  "node": "node-16",
+  "old": "Superlatives trigger the subjunctive in relative clauses.",
+  "focus": "Quote 'la plus belle ville que j'aie jamais visitée' – superlative + que triggers subjunctive aie, not ai."
+ },
+ {
+  "id": "fr-2199",
+  "target": "Explique-lui la situation calmement.",
+  "english": "Explain the situation to him calmly.",
+  "node": "node-17",
+  "old": "In positive imperatives with two pronouns, the indirect object comes second: Explique-lui.",
+  "focus": "Card has ONE pronoun, not two – the real point: positive imperative puts the pronoun after the verb with a hyphen: Explique-lui."
+ },
+ {
+  "id": "fr-2201",
+  "target": "Réfléchis bien avant de répondre.",
+  "english": "Think carefully before answering.",
+  "node": "node-17",
+  "old": "The tu-form of '-ir' verbs keeps the final '-s' in imperatives: 'Finis tes devoirs !' (Finish your homework!). Only '-er' verbs drop it.",
+  "focus": "Anchor on the card's 'Réfléchis' keeping its -s (only -er verbs drop it); drop the off-card 'Finis tes devoirs' example."
+ },
+ {
+  "id": "fr-2244",
+  "target": "Ils vont repeindre leur appartement pendant les vacances.",
+  "english": "They're going to repaint their apartment during the vacation.",
+  "node": "node-17",
+  "old": "`aller + infinitive` = the everyday future, like English 'going to': `je vais manger` = 'I'm going to eat'. Way more common in speech than the textbook future tense (`je mangerai`).",
+  "focus": "Keep the register fact (aller + infinitive is the everyday spoken future) but quote the card's 'vont repeindre', strip backticks and off-card examples."
+ },
+ {
+  "id": "fr-2252",
+  "target": "Si tu lui parlais, je suis sûr qu'il comprendrait.",
+  "english": "If you talked to him, I'm sure he would understand.",
+  "node": "node-17",
+  "old": "'Il comprendrait si tu lui expliquais' – note: si + imparfait, main clause + conditionnel. The tense pairing is fixed.",
+  "focus": "Use the card's exact 'Si tu lui parlais... il comprendrait' for the fixed si + imparfait / conditional pairing; drop the paraphrased example."
+ },
+ {
+  "id": "fr-2256",
+  "target": "On va commander une pizza, ça te va ?",
+  "english": "We're going to order a pizza, is that okay with you?",
+  "node": "node-17",
+  "old": "Three parts: form of `aller`, then directly the infinitive. No `à` or `de` between them.",
+  "focus": "Real trap: no a or de between aller and the infinitive, unlike English 'going TO'. Quote 'va commander'; strip backticks and fix 'three parts'."
+ },
+ {
+  "id": "fr-2280",
+  "target": "Elle aimerait vivre à Paris un jour.",
+  "english": "She would like to live in Paris someday.",
+  "node": "node-17",
+  "old": "The conditional makes requests polite: 'Je voudrais' (I would like) instead of 'Je veux' (I want). Essential for ordering in cafés and shops.",
+  "focus": "Anchor on 'aimerait' = would like – conditional softens a wish; drop the off-card cafe-ordering voudrais material."
+ },
+ {
+  "id": "fr-2373",
+  "target": "Le livre que j'ai lu est passionnant.",
+  "english": "The book I read is fascinating.",
+  "node": "node-18",
+  "old": "\"Que\" replaces the direct object. In passé composé, the past participle agrees with \"que\" (masculine singular here).",
+  "focus": "Pick one rule: 'que' replaces the object (j'ai lu le livre becomes le livre que j'ai lu); the agreement note is invisible on masculine 'lu' – cut it."
+ },
+ {
+  "id": "fr-2404",
+  "target": "Si j'avais le permis, je conduirais pour aller au travail.",
+  "english": "If I had my license, I would drive to work.",
+  "node": "node-18",
+  "old": "'Je conduirais si je n'avais pas bu' = I would drive if I hadn't drunk. Conditional for unreal present situations.",
+  "focus": "Use the card's own 'Si j'avais le permis, je conduirais' for conditional-as-unreal-present; drop the off-card drinking example."
+ },
+ {
+  "id": "fr-2460",
+  "target": "Le cadeau que j'ai reçu m'a fait très plaisir.",
+  "english": "The gift I received made me very happy.",
+  "node": "node-19",
+  "old": "With \"que\" + passé composé, the past participle agrees with the antecedent: reçu (masculine singular).",
+  "focus": "Make the agreement visible: recu stays bare after 'le cadeau', but a feminine noun would force recue – show that contrast, anchored in the card."
+ },
+ {
+  "id": "fr-2479",
+  "target": "Tu verras, tout ira bien.",
+  "english": "You'll see, everything will be fine.",
+  "node": "node-19",
+  "old": "'On verra' = We'll see. One of the most common French expressions, used to defer a decision.",
+  "focus": "Anchor on the card's 'Tu verras' = you'll see (reassurance); 'on verra' may stay only as a one-line sibling example."
+ },
+ {
+  "id": "fr-2510",
+  "target": "Si tu étudies bien, tu réussiras ton examen.",
+  "english": "If you study well, you'll pass your exam.",
+  "node": "node-19",
+  "old": "Si + présent → futur simple. Note: never use futur after \"si\" (if).",
+  "focus": "Quote 'Si tu etudies... tu reussiras' – present after si, future in the main clause; contrast with quand/des que, which DO take the future."
+ },
+ {
+  "id": "fr-2544",
+  "target": "Si elle avait pris le bus, elle ne serait pas arrivée en retard.",
+  "english": "If she had taken the bus, she wouldn't have arrived late.",
+  "node": "node-19",
+  "old": "\"Serait arrivée\" uses être in conditionnel passé because arriver uses être as auxiliary.",
+  "focus": "arriver takes etre – 'serait arrivee', not 'aurait arrive'; say it without the banned word 'auxiliary'"
+ },
+ {
+  "id": "fr-2549",
+  "target": "Il aurait fallu réserver à l'avance.",
+  "english": "We should have booked in advance.",
+  "node": "node-20",
+  "old": "\"Il aurait fallu\" = conditionnel passé of falloir. Expresses something that should have been done.",
+  "focus": "il aurait fallu = 'we should have' with no person named – falloir is always impersonal; lead with that, not the tense label"
+ },
+ {
+  "id": "fr-2553",
+  "target": "Quand tu auras fini tes devoirs, appelle-moi.",
+  "english": "When you finish your homework, call me.",
+  "node": "node-20",
+  "old": "Futur antérieur: auras (future of avoir) + past participle. Expresses a future action completed before another.",
+  "focus": "English says 'when you finish' (present); French demands the future after quand – quote 'tu auras fini'"
+ },
+ {
+  "id": "fr-2560",
+  "target": "La chanson que tu chantes est très belle.",
+  "english": "The song you're singing is very beautiful.",
+  "node": "node-20",
+  "old": "'Que' for direct objects: 'la chanson que tu chantes'. The thing being sung is the direct object.",
+  "focus": "English can drop 'that' (the song you're singing); French can never drop que – la chanson que tu chantes"
+ },
+ {
+  "id": "fr-2642",
+  "target": "Je craignais qu'elle ne mourût de froid.",
+  "english": "I feared she might die of cold.",
+  "node": "node-20",
+  "old": "Imperfect subjunctive of mourir: mourût. Note the expletive 'ne' after craindre.",
+  "focus": "one rule only: the ne after craindre isn't negative – 'qu'elle ne mourut' = fearing she WOULD die; cut the formation lesson"
+ },
+ {
+  "id": "fr-2693",
+  "target": "Il fallait que chacun fît sa part.",
+  "english": "Everyone had to do their part.",
+  "node": "node-21",
+  "old": "In modern French, the imperfect subjunctive is replaced by the present subjunctive in all but the most formal writing.",
+  "focus": "good register insight but it never quotes the card: 'fit' is literary imperfect subjunctive; everyday French says fasse"
+ },
+ {
+  "id": "fr-2739",
+  "target": "Dès que le colis sera arrivé, je vous enverrai un courriel.",
+  "english": "As soon as the package has arrived, I'll send you an email.",
+  "node": "node-21",
+  "old": "Futur antérieur with être: sera arrivé. Arriver takes être.",
+  "focus": "aux fact duplicates fr-2544; the real trap: English says 'as soon as it has arrived', French uses the future – 'sera arrive' after des que"
+ },
+ {
+  "id": "fr-2766",
+  "target": "Quand bien même il aurait raison, je refuserais.",
+  "english": "Even if he were right, I would refuse.",
+  "node": "node-22",
+  "old": "Quand bien même + conditionnel: emphatic hypothetical concession.",
+  "focus": "quand bien meme = 'even if' and, unlike si, takes the conditional – quote 'il aurait raison'; drop the jargon string"
+ },
+ {
+  "id": "fr-2812",
+  "target": "Même si tu me suppliais, je ne changerais pas d'avis.",
+  "english": "Even if you begged me, I wouldn't change my mind.",
+  "node": "node-22",
+  "old": "Même si + imparfait, conditionnel: emphatic unreal condition.",
+  "focus": "meme si takes plain imparfait ('tu me suppliais'), never the subjunctive – unlike bien que; ditch the formula shorthand"
+ },
+ {
+  "id": "fr-2846",
+  "target": "Elle a voulu savoir où j'habitais.",
+  "english": "She wanted to know where I lived.",
+  "node": "node-23",
+  "old": "Indirect question keeps declarative word order: 'où j'habitais' (not *'où habitais-je').",
+  "focus": "remove the linguistics asterisk; keep: indirect questions keep normal word order – 'ou j'habitais', no inversion"
+ },
+ {
+  "id": "fr-2862",
+  "target": "Le professeur a fait travailler les élèves toute la matinée.",
+  "english": "The teacher made the students work all morning.",
+  "node": "node-23",
+  "old": "Faire + infinitive: 'to make someone do something'.",
+  "focus": "faire + infinitive = make someone do it, and the doer FOLLOWS the verb – 'a fait travailler les eleves', literally 'made work the students'"
+ },
+ {
+  "id": "fr-2920",
+  "target": "Ces tableaux ont été peints par un artiste local.",
+  "english": "These paintings were painted by a local artist.",
+  "node": "node-23",
+  "old": "Passive: être + past participle. 'Peints' agrees with 'tableaux' (masculine plural).",
+  "focus": "lead with the invisible-in-English agreement – 'peints' matches 'ces tableaux' – not the passive formation label"
+ },
+ {
+  "id": "fr-2937",
+  "target": "Je me suis fait voler mon téléphone.",
+  "english": "I had my phone stolen.",
+  "node": "node-24",
+  "old": "Se faire + infinitive can express involuntary events (something done to you).",
+  "focus": "'je me suis fait voler' is NOT 'I made someone steal' – se faire + infinitive marks something done TO you; quote the card's own words"
+ },
+ {
+  "id": "fr-2943",
+  "target": "Il m'a été impossible de la joindre.",
+  "english": "It was impossible for me to reach her.",
+  "node": "node-24",
+  "old": "Il m'a été + adjective + de: impersonal with indirect object.",
+  "focus": "quote 'il m'a ete impossible' – literally 'it to-me was impossible'; the m' names who couldn't, no formula shorthand"
+ },
+ {
+  "id": "fr-3056",
+  "target": "Le médecin m'a conseillé de me reposer.",
+  "english": "The doctor advised me to rest.",
+  "node": "node-25",
+  "old": "'Conseiller de' + infinitive in reported speech: the original imperative becomes an infinitive.",
+  "focus": "The real trap is the linking 'de' (conseiller DE + infinitive – English 'advised me to rest' has no equivalent word); drop the reported-speech jargon framing"
+ },
+ {
+  "id": "fr-3137",
+  "target": "Elle m'a demandé si j'avais faim.",
+  "english": "She asked me if I was hungry.",
+  "node": "node-26",
+  "old": "'Si' replaces 'est-ce que' in reported questions: 'elle m'a demandé si j'avais faim' (not *'si est-ce que').",
+  "focus": "Keep the si-replaces-est-ce-que insight quoting 'elle m'a demandé si'; strip the linguistics asterisk (*'si est-ce que') – asterisks are banned markup in the plain-text UI"
+ },
+ {
+  "id": "fr-3220",
+  "target": "Il s'est fait la malle sans prévenir personne.",
+  "english": "He ran off without telling anyone.",
+  "node": "node-27",
+  "old": "Familier: 'se faire la malle' = 'to run away/leave suddenly'.",
+  "focus": "Add the literal image – 'se faire la malle' = pack your trunk (and vanish); keep the familier register note"
+ },
+ {
+  "id": "fr-3242",
+  "target": "Il a insisté pour que nous partions immédiatement.",
+  "english": "He insisted that we leave immediately.",
+  "node": "node-27",
+  "old": "Insister pour que + subjunctive in reported speech.",
+  "focus": "The trap is 'insister POUR que' + subjunctive (English speakers expect plain 'que'); cut the wrong 'in reported speech' framing – the subjunctive isn't about reporting"
+ }
+]

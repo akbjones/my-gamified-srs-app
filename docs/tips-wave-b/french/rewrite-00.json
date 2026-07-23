@@ -1,0 +1,370 @@
+[
+ {
+  "id": "fr-0016",
+  "target": "Il veut partir.",
+  "english": "He wants to leave.",
+  "node": "node-01",
+  "old": "Modals (vouloir, pouvoir, devoir) take the infinitive directly. je veux manger (I want to eat), il peut aider (he can help). No preposition between them.",
+  "focus": "vouloir/pouvoir take the bare infinitive with no preposition – anchor to 'veut partir' itself, drop the verb-list lead"
+ },
+ {
+  "id": "fr-0019",
+  "target": "J'ouvre la fenêtre.",
+  "english": "I open the window.",
+  "node": "node-01",
+  "old": "Ouvrir (to open) is irregular: j'ouvre, tu ouvres, il ouvre, nous ouvrons. Despite being -ir, it uses -er endings in present.",
+  "focus": "ouvrir looks like an -ir verb but takes -er endings in the present – keep that surprise, cut the paradigm list, anchor 'j'ouvre'"
+ },
+ {
+  "id": "fr-0022",
+  "target": "Vous regardez la télévision.",
+  "english": "You watch television.",
+  "node": "node-01",
+  "old": "'Regarder' means 'to watch/look at' – the 'at' is built in. No preposition needed: je regarde la télé, not *je regarde à la télé.",
+  "focus": "regarder has 'at' built in, no preposition – remove the asterisk ungrammaticality marker, anchor 'regardez la télévision'"
+ },
+ {
+  "id": "fr-0025",
+  "target": "Ils adorent le chocolat.",
+  "english": "They love chocolate.",
+  "node": "node-01",
+  "old": "'Adorer' = to love/adore. Stronger than 'aimer'. With general nouns, use the article: 'adorent le chocolat'.",
+  "focus": "adorer = love vs aimer = like for things – one rule only, cut the article clause (covered on fr-0027), anchor 'adorent le chocolat'"
+ },
+ {
+  "id": "fr-0026",
+  "target": "Il passe ses vacances à Nice.",
+  "english": "He spends his holidays in Nice.",
+  "node": "node-01",
+  "old": "'Passer' = to spend (time). With places, use `à` for cities: 'à Paris', 'à Nice'.",
+  "focus": "passer = to spend time ('passe ses vacances') – remove backticks, cut the à-for-cities second rule (covered on fr-0042)"
+ },
+ {
+  "id": "fr-0027",
+  "target": "Vous aimez le café.",
+  "english": "You like coffee.",
+  "node": "node-01",
+  "old": "Aimer is a regular -er verb. Use aimer + definite article for general likes: J'aime le café (I like coffee in general).",
+  "focus": "definite article for general likes ('aimez le café') where English uses bare noun – cut the 'regular -er verb' filler clause"
+ },
+ {
+  "id": "fr-0036",
+  "target": "Elle prend des photos.",
+  "english": "She takes photos.",
+  "node": "node-01",
+  "old": "Partitive articles `du/de la/des` = 'some' (unspecified quantity). `Je mange du pain` = 'I eat some bread'. English often drops 'some'; French keeps the article.",
+  "focus": "des = 'some' that English drops – remove backticks, replace the du pain example with this card's 'prend des photos'"
+ },
+ {
+  "id": "fr-0122",
+  "target": "Nous avons deux enfants.",
+  "english": "We have two children.",
+  "node": "node-01",
+  "old": "With numbers, no article before the noun: 'deux enfants', not *'deux des enfants'. The number replaces the article.",
+  "focus": "a number replaces the article ('deux enfants', never 'deux des enfants') – remove the asterisk marker, keep it one rule"
+ },
+ {
+  "id": "fr-0124",
+  "target": "Vous pouvez répéter ?",
+  "english": "Can you repeat that?",
+  "node": "node-01",
+  "old": "`vous` is both 'you (plural)' and 'you (formal singular)'. Context decides. With strangers, in business, or with older people → vous. With friends, family, kids → tu.",
+  "focus": "tu vs vous stakes, anchored to 'Vous pouvez répéter ?' as the safe-with-strangers form – remove backticks, trim"
+ },
+ {
+  "id": "fr-0125",
+  "target": "Je veux un café.",
+  "english": "I want a coffee.",
+  "node": "node-01",
+  "old": "Vouloir (to want) is irregular: je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent. 'Je voudrais' is more polite.",
+  "focus": "'je veux un café' is blunt when ordering – 'je voudrais' is the polite ask; cut the vouloir paradigm entirely"
+ },
+ {
+  "id": "fr-0127",
+  "target": "Je connais cette chanson.",
+  "english": "I know this song.",
+  "node": "node-11",
+  "old": "Connaître (to know/be familiar with) is irregular: je connais, tu connais, il connaît, nous connaissons. Use for people/places/things.",
+  "focus": "connaître = familiarity-knowing (people, places, songs) vs savoir = facts/how-to – cut the paradigm, anchor 'connais cette chanson'"
+ },
+ {
+  "id": "fr-0148",
+  "target": "Il obéit à ses parents.",
+  "english": "He obeys his parents.",
+  "node": "node-01",
+  "old": "'Obéir à' = to obey. Regular -ir verb with -iss- in plural. Requires 'à': 'il obéit à ses parents'.",
+  "focus": "obéir needs à where English takes a direct object ('obéit à ses parents') – cut the -iss-plural conjugation clause"
+ },
+ {
+  "id": "fr-0149",
+  "target": "Vous entrez dans le magasin.",
+  "english": "You enter the store.",
+  "node": "node-19",
+  "old": "'Entrer dans' = to enter. Requires 'dans': 'vous entrez dans le magasin'. Uses 'être' in passé composé.",
+  "focus": "entrer needs dans where English enters the store directly ('entrez dans le magasin') – cut the passé-composé être clause"
+ },
+ {
+  "id": "fr-0152",
+  "target": "Tu peux venir demain ?",
+  "english": "Can you come tomorrow?",
+  "node": "node-01",
+  "old": "'Pouvoir' + infinitive = can/able to. 'Tu peux venir?' = Can you come? Informal question via intonation.",
+  "focus": "Questions by intonation alone – 'Tu peux venir ?' keeps statement word order, no inversion needed in speech; cut the pouvoir+infinitive gloss."
+ },
+ {
+  "id": "fr-0163",
+  "target": "Vous avez une réservation ?",
+  "english": "Do you have a reservation?",
+  "node": "node-01",
+  "old": "Vouvoyer = use `vous`. Tutoyer = use `tu`. Wrong tu can be rude; wrong vous is just safe. When unsure, start formal and let them say `on peut se tutoyer`.",
+  "focus": "tu/vous register stakes are real and anchored in this card's 'vous' – strip the backticks and keep the 'when unsure go formal' advice."
+ },
+ {
+  "id": "fr-0200",
+  "target": "Vous allez au marché.",
+  "english": "You go to the market.",
+  "node": "node-01",
+  "old": "'Aller à' = to go to. 'Au' = à+le: 'vous allez au marché' = you go to the market.",
+  "focus": "au = à + le contraction, anchored in 'au marché' – cut the 'aller à' gloss and the full-sentence re-translation."
+ },
+ {
+  "id": "fr-0205",
+  "target": "On va au supermarché.",
+  "english": "We go to the supermarket.",
+  "node": "node-01",
+  "old": "`on` is the all-purpose informal 'we' in spoken French: `on va au cinéma` = 'we're going to the movies' (not `nous`). Verbs conjugate as 3rd singular even though it means 'we'.",
+  "focus": "on = spoken French's everyday 'we' taking a 3rd-singular verb – anchor to this card's 'On va', strip backticks, trim to target length."
+ },
+ {
+  "id": "fr-0208",
+  "target": "Je cherche la gare.",
+  "english": "I'm looking for the train station.",
+  "node": "node-01",
+  "old": "'Chercher' means 'to look for' – the 'for' is built in. Say 'je cherche la gare', not *je cherche pour la gare.",
+  "focus": "chercher has 'for' built in – never 'chercher pour'; keep the trap, remove the asterisk ungrammaticality notation."
+ },
+ {
+  "id": "fr-0229",
+  "target": "Je réfléchis à la question.",
+  "english": "I think about the question.",
+  "node": "node-01",
+  "old": "'Réfléchir à' = to think about. Regular -ir with -iss-. Requires 'à': 'je réfléchis à la question'.",
+  "focus": "réfléchir à = think ABOUT – the à is required and anchored in 'à la question'; drop the -iss- conjugation note."
+ },
+ {
+  "id": "fr-0254",
+  "target": "On fait les courses le samedi.",
+  "english": "We do the shopping on Saturdays.",
+  "node": "node-01",
+  "old": "`on` also = English 'one' or 'they' (impersonal): `on dit que...` = 'they say that...'. Two meanings, one word. Context decides.",
+  "focus": "on's second life as impersonal 'one/they' (on dit que) – a two-meanings landmine; strip backticks and anchor to this card's 'On fait'."
+ },
+ {
+  "id": "fr-0304",
+  "target": "Nous venons de finir.",
+  "english": "We just finished.",
+  "node": "node-02",
+  "old": "'Venir de + infinitive' means 'to have just done something': je viens de manger = I just ate.",
+  "focus": "venir de + infinitive = 'just did' – anchor in THIS card's 'venons de finir' (we just finished), not a sibling example"
+ },
+ {
+  "id": "fr-0323",
+  "target": "Je viens de Lyon.",
+  "english": "I come from Lyon.",
+  "node": "node-02",
+  "old": "Venir (to come) is irregular: je viens, tu viens, il vient, nous venons, vous venez, ils viennent. 'Venir de' = to come from.",
+  "focus": "venir de Lyon = origin, but venir de + verb = 'just did' – same phrase, two meanings, context decides; cut the conjugation table"
+ },
+ {
+  "id": "fr-0329",
+  "target": "Je sors ce soir.",
+  "english": "I go out tonight.",
+  "node": "node-02",
+  "old": "Sortir (to go out) is irregular like partir: je sors, tu sors, il sort, nous sortons. Don't confuse with 'quitter' (to leave a place).",
+  "focus": "English 'leave/go out' splits: sortir (je sors ce soir) vs quitter (leave a place) – lead with the split, drop the conjugation list"
+ },
+ {
+  "id": "fr-0336",
+  "target": "Elle a les yeux bleus.",
+  "english": "She has blue eyes.",
+  "node": "node-02",
+  "old": "Use 'avoir' for physical features: avoir les cheveux bruns (to have brown hair), avoir les yeux verts (to have green eyes).",
+  "focus": "the real trap is the definite article: elle a LES yeux bleus (the blue eyes), never 'des' – avoir itself matches English 'has' and needs no tip"
+ },
+ {
+  "id": "fr-0350",
+  "target": "J'ai vingt-cinq ans.",
+  "english": "I am twenty-five years old.",
+  "node": "node-02",
+  "old": "je → j' before a vowel or silent h: j'aime (I love), j'habite (I live). Elision is mandatory – je aime is wrong.",
+  "focus": "refocus on this card's real trap: age uses avoir – j'ai vingt-cinq ans = literally 'I have twenty-five years'; the generic elision rule isn't anchored here"
+ },
+ {
+  "id": "fr-0351",
+  "target": "Je vais au cinéma.",
+  "english": "I go to the cinema.",
+  "node": "node-02",
+  "old": "Aller (to go) is irregular: je vais, tu vas, il/elle va, nous allons, vous allez, ils/elles vont. 'Au' = à + le (contraction).",
+  "focus": "keep only the contraction: au = à + le (je vais au cinéma) – 'à le' never exists; cut the aller conjugation table"
+ },
+ {
+  "id": "fr-0359",
+  "target": "Tu as une belle maison.",
+  "english": "You have a beautiful house.",
+  "node": "node-02",
+  "old": "'Beau/belle' is one of the BANGS adjectives that go before the noun: 'une belle maison', not *'une maison belle'.",
+  "focus": "belle goes BEFORE the noun (une belle maison) – short common adjectives precede; remove the literal asterisk and the unexplained BANGS acronym"
+ },
+ {
+  "id": "fr-0365",
+  "target": "Je suis la leçon attentivement.",
+  "english": "I follow the lesson attentively.",
+  "node": "node-02",
+  "old": "Suivre (to follow) is irregular: je suis, tu suis, il suit, nous suivons, vous suivez, ils suivent. Same 'je suis' as être – context decides.",
+  "focus": "je suis = 'I am' (être) AND 'I follow' (suivre) – here it's following the lesson; keep only this landmine, cut the conjugation table"
+ },
+ {
+  "id": "fr-0373",
+  "target": "Il me suffit d'une heure.",
+  "english": "An hour is enough for me.",
+  "node": "node-02",
+  "old": "'Il me suffit de' = it suffices for me / is enough for me. Same reverse pattern: il te suffit de, il lui suffit de.",
+  "focus": "il me suffit d'une heure = 'it suffices me an hour' – the enough-thing is the subject, you're the object; fix the dangling 'Same reverse pattern' opener"
+ },
+ {
+  "id": "fr-0379",
+  "target": "Ils ont soif après le match.",
+  "english": "They are thirsty after the game.",
+  "node": "node-02",
+  "old": "French says 'I have hunger' (`j'ai faim`), not 'I am hungry'. Same with `j'ai soif`, `j'ai froid`, `j'ai peur`, `j'ai 30 ans`. Sensations and age use `avoir`, not `être`.",
+  "focus": "strip backticks; sensations take avoir – anchor with this card's 'ont soif' (they have thirst), keep the family list short"
+ },
+ {
+  "id": "fr-0385",
+  "target": "Nous avons faim après la randonnée.",
+  "english": "We are hungry after the hike.",
+  "node": "node-02",
+  "old": "Watch these: faim, soif, chaud, froid, sommeil, peur, raison, tort, honte, de la chance. All take `avoir`. Saying `je suis faim` would mean you are hunger.",
+  "focus": "strip backticks; keep the hook 'je suis faim would mean you ARE hunger', anchor with this card's 'avons faim', trim the ten-item list"
+ },
+ {
+  "id": "fr-0387",
+  "target": "Avez-vous un menu en anglais ?",
+  "english": "Do you have a menu in English?",
+  "node": "node-02",
+  "old": "'Avoir' in inversion: 'avez-vous des enfants?' Formal question form. 'Des' = some (partitive).",
+  "focus": "inversion Avez-vous = the formal question form – use this card's 'Avez-vous un menu'; cut the 'des = partitive' bit (no des in this sentence)"
+ },
+ {
+  "id": "fr-0388",
+  "target": "Elle sort du bureau à cinq heures.",
+  "english": "She leaves the office at five.",
+  "node": "node-02",
+  "old": "'Sortir' = to go out/leave. Irregular -ir: je sors, il sort. 'Du' = de+le: 'sort du bureau' = leaves the office.",
+  "focus": "keep only du = de + le: 'sort du bureau' = leaves the office – drop the sortir conjugation listing"
+ },
+ {
+  "id": "fr-0437",
+  "target": "Quand est-ce qu'on mange ?",
+  "english": "When do we eat?",
+  "node": "node-03",
+  "old": "`on` is the all-purpose informal 'we' in spoken French: `on va au cinéma` = 'we're going to the movies' (not `nous`). Verbs conjugate as 3rd singular even though it means 'we'.",
+  "focus": "strip backticks; keep on = spoken-French 'we' with 3rd-singular verb – anchor with this card's 'on mange'"
+ },
+ {
+  "id": "fr-0441",
+  "target": "Est-ce qu'il fait beau ?",
+  "english": "Is the weather nice?",
+  "node": "node-03",
+  "old": "French says 'it makes' for weather: `il fait beau` (the weather's nice), `il fait froid`. Same pattern with `du soleil`, `du vent`. English uses 'be' or 'is sunny/windy'.",
+  "focus": "Weather uses faire – 'il fait beau' is literally 'it makes nice'; quote this card, strip backticks, trim the extra examples."
+ },
+ {
+  "id": "fr-0450",
+  "target": "Pourquoi tu ne manges pas ?",
+  "english": "Why aren't you eating?",
+  "node": "node-03",
+  "old": "French negation wraps the verb: `je ne sais pas`. In speech the `ne` often drops (`je sais pas`) but it stays in writing. `Pas` alone after the verb is colloquial.",
+  "focus": "ne...pas wraps the verb, and spoken French often drops the ne – anchor to 'tu ne manges pas', strip backticks and the off-card example."
+ },
+ {
+  "id": "fr-0479",
+  "target": "Un vieil homme marche lentement.",
+  "english": "An old man walks slowly.",
+  "node": "node-03",
+  "old": "'Vieux' has special forms: vieux (m. before consonant), vieil (m. before vowel), vieille (f.), vieux (m. pl.), vieilles (f. pl.).",
+  "focus": "vieil is the special masculine form before a vowel – anchor to 'vieil homme', cut the five-form paradigm list."
+ },
+ {
+  "id": "fr-0498",
+  "target": "À quelle heure tu te lèves ?",
+  "english": "What time do you get up?",
+  "node": "node-03",
+  "old": "Reflexive verbs use a pronoun (me/te/se/nous/vous/se) before the verb. `Je m'appelle` = 'I call myself' = 'My name is'. The pronoun must match the subject.",
+  "focus": "te lèves is literally 'you raise yourself' – reflexive pronoun must match the subject; quote this card, strip backticks and the m'appelle example."
+ },
+ {
+  "id": "fr-0502",
+  "target": "Comment on va à la gare ?",
+  "english": "How do we get to the station?",
+  "node": "node-03",
+  "old": "`on` also = English 'one' or 'they' (impersonal): `on dit que...` = 'they say that...'. Two meanings, one word. Context decides.",
+  "focus": "on here is casual 'we' (on va) but also means 'one/they' – anchor to 'on va', strip backticks."
+ },
+ {
+  "id": "fr-0520",
+  "target": "Ton frère est gentil.",
+  "english": "Your brother is kind.",
+  "node": "node-04",
+  "old": "Possessives: ton/ta/tes (your, informal). Before feminine nouns starting with a vowel, use 'mon/ton/son' instead of 'ma/ta/sa': mon amie.",
+  "focus": "ton matches frère's gender, not the owner's – French possessives track the noun; drop the off-card 'mon amie' exception."
+ },
+ {
+  "id": "fr-0522",
+  "target": "J'ai besoin d'un stylo.",
+  "english": "I need a pen.",
+  "node": "node-04",
+  "old": "More elisions: ne → n', me → m', te → t', se → s', le/la → l', de → d', que → qu'. Any vowel collision triggers it.",
+  "focus": "One rule: de shrinks to d' before a vowel – quote 'besoin d'un stylo', cut the seven-item elision list."
+ },
+ {
+  "id": "fr-0527",
+  "target": "Un gros chien noir.",
+  "english": "A big black dog.",
+  "node": "node-04",
+  "old": "'Gros' (m.) → 'grosse' (f.) = big/fat. Multiple adjectives: size before noun + color after: un gros chien noir.",
+  "focus": "Adjective placement is the insight – gros (size) before the noun, noir (color) after; one rule, drop the grosse form note."
+ },
+ {
+  "id": "fr-0564",
+  "target": "Il y a du vent aujourd'hui.",
+  "english": "It's windy today.",
+  "node": "node-21",
+  "old": "'Du/de la/des' for partial quantities: 'Je mange du pain' = I eat some bread (not all bread).",
+  "focus": "Weather takes the partitive – 'du vent' is literally 'some wind'; anchor to this card, drop the 'je mange du pain' example."
+ },
+ {
+  "id": "fr-0586",
+  "target": "Il y a trop de bruit.",
+  "english": "There is too much noise.",
+  "node": "node-04",
+  "old": "`il y a` = 'there is / there are' – singular and plural. `Il y a une pomme`, `il y a trois pommes`. The form doesn't change. Past: `il y avait`.",
+  "focus": "'il y a' never changes for singular or plural – anchor to 'trop de bruit', strip backticks, cut the past-tense aside."
+ },
+ {
+  "id": "fr-0671",
+  "target": "C'est un beau pays.",
+  "english": "It's a beautiful country.",
+  "node": "node-05",
+  "old": "'Beau' has special forms: beau (m. before consonant), bel (m. before vowel), belle (f.), beaux (m. pl.), belles (f. pl.).",
+  "focus": "Cut the five-form list; hook the surprise that beau becomes bel before a vowel (un bel homme), anchored to 'un beau pays'."
+ },
+ {
+  "id": "fr-0684",
+  "target": "Un joli petit village.",
+  "english": "A pretty little village.",
+  "node": "node-05",
+  "old": "When two BANGS adjectives are before a noun, the order is generally: size + other quality: un joli petit village, un grand beau jardin.",
+  "focus": "Keep the both-adjectives-before-the-noun insight for 'un joli petit village'; drop the self-contradicting size-first claim and the unexplained BANGS jargon."
+ }
+]

@@ -1,0 +1,482 @@
+[
+ {
+  "id": "fr-0896",
+  "target": "Elle est petite et mince.",
+  "english": "She is short and slim.",
+  "node": "node-07",
+  "tip": "Adjectives agree in gender: petit/petite, mince stays the same (ends in -e already). Two adjectives joined by 'et'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0897",
+  "target": "Il est jeune et dynamique.",
+  "english": "He is young and dynamic.",
+  "node": "node-07",
+  "tip": "'Jeune' doesn't change in feminine (already ends in -e). Most adjectives ending in -e are invariable for gender.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0898",
+  "target": "La voiture est bleue foncé.",
+  "english": "The car is dark blue.",
+  "node": "node-21",
+  "tip": "Compound color adjectives are invariable (no agreement): bleu foncé, vert clair, bleu marine. They stay the same regardless of gender/number.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0906",
+  "target": "Soixante, soixante-dix, quatre-vingts, quatre-vingt-dix, cent.",
+  "english": "Sixty, seventy, eighty, ninety, one hundred.",
+  "node": "node-07",
+  "tip": "70 = soixante-dix (60+10), 80 = quatre-vingts (4×20), 90 = quatre-vingt-dix (4×20+10). Unique to French counting.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0910",
+  "target": "Vingt et un, trente, quarante, cinquante.",
+  "english": "Twenty-one, thirty, forty, fifty.",
+  "node": "node-07",
+  "tip": "Numbers 21-69 follow a pattern: vingt et un (21), trente-deux (32). After 70, French uses base-20: soixante-dix (70), quatre-vingts (80).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0912",
+  "target": "Nous avons signé le contrat hier.",
+  "english": "We signed the contract yesterday.",
+  "node": "node-21",
+  "tip": "Passé composé expresses completed actions in the past.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0913",
+  "target": "J'ai fini de manger à midi.",
+  "english": "I finished eating at noon.",
+  "node": "node-21",
+  "tip": "The past participle of finir is fini. Regular -ir verbs drop -r: finir to fini.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0915",
+  "target": "Elle est fière de son travail.",
+  "english": "She is proud of her work.",
+  "node": "node-07",
+  "tip": "'Fier' (m.) → 'fière' (f.) = proud. The accent changes: fier/fière. 'Fier de' = proud of.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0916",
+  "target": "À mon avis, c'est trop cher.",
+  "english": "In my opinion, it's too expensive.",
+  "node": "node-07",
+  "tip": "'À mon avis' = in my opinion. Useful for expressing opinions: À mon avis, à ton avis, à votre avis.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0918",
+  "target": "Il est sorti acheter du pain.",
+  "english": "He went out to buy bread.",
+  "node": "node-21",
+  "tip": "Sortir uses être when intransitive: il est sorti.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0922",
+  "target": "Tu as regardé le film hier ?",
+  "english": "Did you watch the movie yesterday?",
+  "node": "node-21",
+  "tip": "Passé composé for 'regarder': j'ai regardé, tu as regardé. Regular -er verbs form past participle with -é.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0925",
+  "target": "Il est revenu de son voyagé hier.",
+  "english": "He came back from his trip yesterday.",
+  "node": "node-21",
+  "tip": "Revenir uses être: il est revenu. Past participle agrees with subject.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0926",
+  "target": "Nous sommes restés à l'hôtel ce jour-là.",
+  "english": "We stayed at the hotel that day.",
+  "node": "node-21",
+  "tip": "Rester uses être. Masculine plural subject: restes.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0928",
+  "target": "J'ai attendu le train pendant trente minutes.",
+  "english": "I waited for the train for thirty minutes.",
+  "node": "node-21",
+  "tip": "Attendre uses avoir: j'ai attendu. The -u ending is typical for -re verbs.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0930",
+  "target": "Nous discutions pendant des heures au téléphone.",
+  "english": "We talked for hours on the phone.",
+  "node": "node-11",
+  "tip": "The imparfait of 'être' (j'étais) is one of the most useful forms. 'J'étais fatigué' = I was tired. States in the past = imparfait.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0933",
+  "target": "Bravo, tu as réussi ton examen avec brio!",
+  "english": "Well done, you passed your exam brilliantly!",
+  "node": "node-21",
+  "tip": "'Bravo' is borrowed from Italian and is invariable. 'Avec brio' = brilliantly, also from Italian.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0936",
+  "target": "Écoute, je dois te dire quelque chose d'important.",
+  "english": "Listen, I need to tell you something important.",
+  "node": "node-07",
+  "tip": "'Écoute' is the informal imperative (tu form) of 'écouter'. Used as an interjection to get attention.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0940",
+  "target": "Il est descendu du bus au bon arrêt.",
+  "english": "He got off the bus at the right stop.",
+  "node": "node-21",
+  "tip": "Descendre uses être when there is no direct object: il est descendu.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0941",
+  "target": "Regarde le beau coucher de soleil sur la mer.",
+  "english": "Look at the beautiful sunset over the sea.",
+  "node": "node-07",
+  "tip": "'Regarde' is the tu-form imperative. 'Regardez' for vous-form. Both can be used to draw attention.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0944",
+  "target": "Il porte une barbe.",
+  "english": "He has a beard.",
+  "node": "node-07",
+  "tip": "'Porter une barbe' = to wear/have a beard. French uses 'porter' (to wear) for facial hair.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0949",
+  "target": "Elle est intelligente et ambitieuse.",
+  "english": "She is intelligent and ambitious.",
+  "node": "node-07",
+  "tip": "BANGS adjectives go before the noun: Beauty, Age, Number, Goodness, Size. 'Une belle femme', not *'une femme belle'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0952",
+  "target": "Je me lève à sept heures.",
+  "english": "I get up at seven o'clock.",
+  "node": "node-07",
+  "tip": "Reflexive verbs use reflexive pronouns: je me lève, tu te lèves, il se lève, nous nous levons. The pronoun matches the subject.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0956",
+  "target": "J'ai mangé au restaurant hier soir.",
+  "english": "I ate at the restaurant last night.",
+  "node": "node-21",
+  "tip": "'Au restaurant' uses 'au' (à + le). Time markers like 'hier soir' confirm passé composé.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0957",
+  "target": "Elle a les cheveux longs et bouclés.",
+  "english": "She has long curly hair.",
+  "node": "node-07",
+  "tip": "'Long/longue' has an irregular feminine. The 'g' becomes 'gu' to keep the hard [g] sound.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0960",
+  "target": "Tu as acheté un billet aller-retour ?",
+  "english": "Did you buy a round-trip ticket?",
+  "node": "node-21",
+  "tip": "In questions, the structure stays the same: tu as + past participle. Intonation rises.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0963",
+  "target": "Elle a compté l'argent dans son portefeuille.",
+  "english": "She counted the money in her wallet.",
+  "node": "node-21",
+  "tip": "In passé composé with avoir, the past participle of -er verbs ends in -e.",
+  "dupGroupSize": 2
+ },
+ {
+  "id": "fr-0969",
+  "target": "Il est entré dans la pièce sans frapper.",
+  "english": "He entered the room without knocking.",
+  "node": "node-21",
+  "tip": "Entrer uses être: il est entre. DR MRS VANDERTRAMP verbs all use être.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0974",
+  "target": "Tu savais déjà parler anglais à dix ans ?",
+  "english": "Did you already know how to speak English at ten?",
+  "node": "node-11",
+  "tip": "'Déjà' + imparfait describes a state that was already true: 'tu savais déjà' = you already knew.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0977",
+  "target": "Je préparais toujours le thé à cinq heures de l'après-midi.",
+  "english": "I always used to make tea at five in the afternoon.",
+  "node": "node-11",
+  "tip": "le / la → l' before a vowel: l'homme, l'eau. Possessives flip too: ma → mon before a vowel, so \"mon amie\" even though amie is feminine.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0978",
+  "target": "Tu connaissais déjà la réponse quand le professeur a posé la question ?",
+  "english": "Did you already know the answer when the teacher asked the question?",
+  "node": "node-11",
+  "tip": "'Toujours' or 'souvent' in past context → imparfait (habitual). 'Un jour' or 'soudain' → passé composé (specific event).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0979",
+  "target": "Elle est impatiente.",
+  "english": "She is impatient.",
+  "node": "node-07",
+  "tip": "'Nouveau/nouvelle' has a special form before masculine vowels: 'un nouvel ami' (not *un nouveau ami).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0982",
+  "target": "Elle est jalouse.",
+  "english": "She is jealous.",
+  "node": "node-07",
+  "tip": "'Jaloux' (m.) → 'jalouse' (f.) = jealous. Adjectives ending in -oux change to -ouse in feminine: doux → douce (exception).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0988",
+  "target": "Elle est mignonne.",
+  "english": "She is cute.",
+  "node": "node-07",
+  "tip": "'Mignon' (m.) → 'mignonne' (f.) = cute. Adjectives ending in -on double the 'n' in feminine: bon → bonne, mignon → mignonne.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0994",
+  "target": "Elle est âgée mais active.",
+  "english": "She is elderly but active.",
+  "node": "node-21",
+  "tip": "'Âgé/âgée' – the circumflex accent on 'â' is part of the spelling, not just pronunciation.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-0997",
+  "target": "Nous sommes lundi.",
+  "english": "It's Monday.",
+  "node": "node-21",
+  "tip": "Days of the week: lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche. No capitals. 'Le lundi' = on Mondays (habitual).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1003",
+  "target": "C'est pour emporter.",
+  "english": "It's to go / takeaway.",
+  "node": "node-08",
+  "tip": "'Pour emporter' = to go / takeaway. 'Sur place' = to eat in. Common at restaurants and cafés.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1004",
+  "target": "Ça ne fait rien.",
+  "english": "It doesn't matter.",
+  "node": "node-08",
+  "tip": "Negative pairs: ne … jamais (never), ne … plus (no longer), ne … rien (nothing), ne … personne (no one). Always two parts around the verb.",
+  "dupGroupSize": 4
+ },
+ {
+  "id": "fr-1005",
+  "target": "J'ai horreur de ça.",
+  "english": "I hate that.",
+  "node": "node-08",
+  "tip": "'Avoir horreur de' = to hate/detest something. An avoir expression: J'ai horreur du lundi = I hate Mondays.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1006",
+  "target": "On y va ?",
+  "english": "Shall we go?",
+  "node": "node-08",
+  "tip": "'Aller' is irregular: je vais, tu vas, il va, nous allons, vous allez, ils vont.",
+  "dupGroupSize": 2
+ },
+ {
+  "id": "fr-1008",
+  "target": "Salut, ça va ?",
+  "english": "Hi, how's it going?",
+  "node": "node-08",
+  "tip": "'Salut' is informal for both 'hi' and 'bye'. 'Ça va ?' is the casual way to ask 'how are you?'",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1012",
+  "target": "Je vais bientôt partir.",
+  "english": "I'm going to leave soon.",
+  "node": "node-08",
+  "tip": "Near future: aller + infinitive. Je vais manger = I'm going to eat. Very common at A1, often preferred over future tense.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1014",
+  "target": "Ça fait longtemps !",
+  "english": "It's been a long time!",
+  "node": "node-08",
+  "tip": "'Ça fait longtemps' = It's been a while. 'Ça fait + time' expresses duration: Ça fait deux ans = It's been two years.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1015",
+  "target": "Il y a du soleil.",
+  "english": "It's sunny.",
+  "node": "node-21",
+  "tip": "Don't confuse `il y a` (there is) with `il a` (he has) or `il a y` (doesn't exist). The `y` is mandatory.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1017",
+  "target": "Nous sommes le quinze mars.",
+  "english": "It's March fifteenth.",
+  "node": "node-08",
+  "tip": "Dates: le + number + month. 'Le premier' for the 1st, then cardinal numbers: le deux, le trois. Months are lowercase.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1018",
+  "target": "Nous sommes arrivés en avance.",
+  "english": "We arrived early.",
+  "node": "node-21",
+  "tip": "Arriver uses être in passé composé. Masculine plural: arrives.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1019",
+  "target": "Elle est partie en courant.",
+  "english": "She left running.",
+  "node": "node-21",
+  "tip": "Partir uses être: elle est partie. The participle agrees with the feminine subject.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1022",
+  "target": "Elle est morte très âgée.",
+  "english": "She died at a very old age.",
+  "node": "node-08",
+  "tip": "Mourir uses être: elle est morte. Feminine agreement.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1028",
+  "target": "J'ai passé un bon week-end.",
+  "english": "I had a good weekend.",
+  "node": "node-21",
+  "tip": "With avoir, the past participle does not agree with the subject.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1038",
+  "target": "Il a vendu sa vieille voiture.",
+  "english": "He sold his old car.",
+  "node": "node-21",
+  "tip": "Verbs ending in -re form their past participle with -u: vendre to vendu.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1039",
+  "target": "Elle est montée dans le taxi.",
+  "english": "She got into the taxi.",
+  "node": "node-21",
+  "tip": "Monter uses être when intransitive (no direct object): elle est montee.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1044",
+  "target": "Parfait, nous pouvons commencer la réunion.",
+  "english": "Perfect, we can start the meeting.",
+  "node": "node-11",
+  "tip": "'Parfait' is used as an interjection meaning 'perfect/great'. It agrees when used as an adjective: une réponse parfaite.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1045",
+  "target": "Il y a beaucoup de monde.",
+  "english": "There are a lot of people.",
+  "node": "node-08",
+  "tip": "'Il y a' = there is / there are. Works for both singular and plural. 'Il y a du monde' = there are people / it's crowded.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1048",
+  "target": "Tu es rentré tard hier soir.",
+  "english": "You came home late last night.",
+  "node": "node-21",
+  "tip": "The past participle agrees with the subject when using être.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1052",
+  "target": "Nous avons choisi le menu du jour.",
+  "english": "We chose the menu of the day.",
+  "node": "node-21",
+  "tip": "Verbs ending in -ir form their past participle with -i: choisir to choisi.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1053",
+  "target": "Nous avons préparé un gâteau au chocolat.",
+  "english": "We prepared a chocolate cake.",
+  "node": "node-21",
+  "tip": "Passé composé for a finished project: the chocolate cake was prepared from start to finish, and now it's done.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1063",
+  "target": "Elles sont descendues à la station suivante.",
+  "english": "They got off at the next station.",
+  "node": "node-21",
+  "tip": "Use passé composé for movement events with a clear endpoint – they got off at that specific station.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1064",
+  "target": "J'ai partagé mon déjeuner avec un collègue.",
+  "english": "I shared my lunch with a colleague.",
+  "node": "node-21",
+  "tip": "With avoir, there is no agreement unless preceded by a direct object pronoun.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1065",
+  "target": "Ils ont dit la vérité au professeur.",
+  "english": "They told the truth to the teacher.",
+  "node": "node-08",
+  "tip": "'Dire' → 'dit'. Note: 'vous dites' (not *vous disez) is also irregular in present tense.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1067",
+  "target": "Arrête de te plaindre et commence à travailler.",
+  "english": "Stop complaining and start working.",
+  "node": "node-08",
+  "tip": "'Arrête de' + infinitive = stop doing something. 'Commence à' + infinitive = start doing something.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "fr-1068",
+  "target": "Malheureusement, je ne peux pas venir ce soir.",
+  "english": "Unfortunately, I can't come tonight.",
+  "node": "node-08",
+  "tip": "'Bon courage' is said to someone facing a challenge. There's no exact English equivalent – it shows empathy.",
+  "dupGroupSize": 1
+ }
+]

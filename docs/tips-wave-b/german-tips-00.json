@@ -1,0 +1,482 @@
+[
+ {
+  "id": "de-0001",
+  "target": "Ich komme aus Deutschland.",
+  "english": "I come from Germany.",
+  "node": "node-01",
+  "tip": "'Kommen' is regular: ich komme, du kommst, er kommt. The verb stays second in the sentence.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0002",
+  "target": "Ich grüße Sie herzlich.",
+  "english": "Warm greetings.",
+  "node": "node-01",
+  "tip": "In German present tense, the verb always takes second position in statements – this is the V2 rule.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0003",
+  "target": "Prost, auf unsere Freundschaft!",
+  "english": "Cheers, to our friendship!",
+  "node": "node-01",
+  "tip": "'Prost' is the standard toast in German.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0004",
+  "target": "Hallo, wie geht es Ihnen?",
+  "english": "Hello, how are you?",
+  "node": "node-01",
+  "tip": "'Wie geht es Ihnen?' is formal; 'Wie geht es dir?' or 'Wie geht's?' is informal.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0005",
+  "target": "Hallo, ich komme gerade an.",
+  "english": "Hello, I'm just arriving.",
+  "node": "node-01",
+  "tip": "Prefix 'an' at the end – the separable verb splits in main clauses, with the prefix jumping to the sentence end.",
+  "dupGroupSize": 13
+ },
+ {
+  "id": "de-0006",
+  "target": "Du siehst heute müde aus.",
+  "english": "You look tired today.",
+  "node": "node-01",
+  "tip": "Prefix 'aus' at the end – the separable verb splits in main clauses, with the prefix jumping to the sentence end.",
+  "dupGroupSize": 13
+ },
+ {
+  "id": "de-0008",
+  "target": "Auf Wiedersehen, es war schön.",
+  "english": "Goodbye, it was nice.",
+  "node": "node-10",
+  "tip": "'Auf Wiedersehen' is the formal goodbye.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0009",
+  "target": "Wir essen zusammen zu Mittag.",
+  "english": "We eat lunch together.",
+  "node": "node-01",
+  "tip": "'Zu Mittag essen' = to have lunch.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0011",
+  "target": "Woher kommen Sie?",
+  "english": "Where do you come from?",
+  "node": "node-01",
+  "tip": "'Woher' (from where) asks about origin; 'wo' asks about location; 'wohin' asks about destination.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0014",
+  "target": "Ich spreche ein bisschen Deutsch.",
+  "english": "I speak a little German.",
+  "node": "node-01",
+  "tip": "'Ein bisschen' means 'a little bit' – very useful phrase for travelers.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0020",
+  "target": "Sie sagt immer die Wahrheit.",
+  "english": "She always tells the truth.",
+  "node": "node-01",
+  "tip": "German has 3 \"the\" words: der (m), die (f), das (n). Each one shifts when the noun's role changes. das Mädchen (girl) is neutral – meaning doesn't predict gender. Learn each noun with its article.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0022",
+  "target": "Wir kochen heute Abend zusammen.",
+  "english": "We cook together this evening.",
+  "node": "node-01",
+  "tip": "Prefix 'zusammen' at the end – the separable verb splits in main clauses, with the prefix jumping to the sentence end.",
+  "dupGroupSize": 13
+ },
+ {
+  "id": "de-0026",
+  "target": "Sie studiert Wirtschaftswissenschaften in Hamburg.",
+  "english": "She studies economics in Hamburg.",
+  "node": "node-01",
+  "tip": "'Wissen' (to know facts) is irregular: ich weiß, du weißt. Don't confuse with 'kennen' (to know/be familiar with).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0027",
+  "target": "Er spricht drei Sprachen fließend.",
+  "english": "He speaks three languages fluently.",
+  "node": "node-10",
+  "tip": "'Sprechen' changes stem: ich spreche but du sprichst, er spricht – e to i in 2nd/3rd singular.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0028",
+  "target": "Wie alt sind Ihre Kinder?",
+  "english": "How old are your children?",
+  "node": "node-01",
+  "tip": "'Wie' starts a W-question – verb follows in V2 position, just like in statements.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0029",
+  "target": "Wir haben kein Geld mehr.",
+  "english": "We have no more money.",
+  "node": "node-01",
+  "tip": "'kein' negates nouns directly – replaces the indefinite article with matching endings.",
+  "dupGroupSize": 3
+ },
+ {
+  "id": "de-0033",
+  "target": "Hey, was machst du hier?",
+  "english": "Hey, what are you doing here?",
+  "node": "node-01",
+  "tip": "Default to `Sie` with anyone you would address as Mr/Mrs in English. Wait for them to suggest `wir können uns duzen` (let us switch to du).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0038",
+  "target": "Die Kinder spielen im Garten.",
+  "english": "The children play in the garden.",
+  "node": "node-01",
+  "tip": "Regular verbs in German present tense follow a predictable pattern: stem + -e, -st, -t, -en, -t, -en.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0040",
+  "target": "Die Kinder haben morgen schulfrei.",
+  "english": "The children don't have school tomorrow.",
+  "node": "node-01",
+  "tip": "'Schulfrei haben' – 'to have a school holiday' – a common compound adjective.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0041",
+  "target": "Ich bin gerade in einer Besprechung.",
+  "english": "I am currently in a meeting.",
+  "node": "node-01",
+  "tip": "Germans often add 'bitte' or 'gern' to soften requests.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0043",
+  "target": "Hallo, ich bin Ihr neuer Nachbar.",
+  "english": "Hello, I am your new neighbor.",
+  "node": "node-01",
+  "tip": "'Nachbar' is masculine; feminine is 'Nachbarin'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0044",
+  "target": "Wir freuen uns auf Ihren Besuch.",
+  "english": "We look forward to your visit.",
+  "node": "node-01",
+  "tip": "'uns' – reflexive pronoun for 'freuen'. German requires it even when English doesn't (e.g., 'sich freuen' = 'to be happy').",
+  "dupGroupSize": 21
+ },
+ {
+  "id": "de-0045",
+  "target": "Guten Morgen, ich habe eine Frage.",
+  "english": "Good morning, I have a question.",
+  "node": "node-01",
+  "tip": "'Haben' (to have) is irregular: ich habe, du hast, er hat – one of the most common verbs.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0046",
+  "target": "Wir wohnen in einer kleinen Wohnung.",
+  "english": "We live in a small apartment.",
+  "node": "node-01",
+  "tip": "Adjective 'kleinen' – its ending depends on the article type, case, and noun gender. After definite articles, usually -e or -en.",
+  "dupGroupSize": 56
+ },
+ {
+  "id": "de-0051",
+  "target": "Guten Tag! Mein Name ist Thomas.",
+  "english": "Good day! My name is Thomas.",
+  "node": "node-01",
+  "tip": "'Guten Tag' is the standard daytime greeting in formal situations.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0052",
+  "target": "Guten Tag, mein Name ist Müller.",
+  "english": "Good day, my name is Müller.",
+  "node": "node-01",
+  "tip": "'Guten' is accusative masculine – greetings use accusative: 'Guten Tag' = '[I wish you a] good day'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0053",
+  "target": "Danke schön, das ist sehr nett.",
+  "english": "Thank you, that is very nice.",
+  "node": "node-01",
+  "tip": "'Sehr' (very) is an adverb that intensifies – 'sehr gut' (very good), 'sehr gern' (very gladly).",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0055",
+  "target": "Ich lerne jeden Tag neue Vokabeln.",
+  "english": "I learn new vocabulary every day.",
+  "node": "node-01",
+  "tip": "Regular verbs in present tense: ich -e, du -st, er/sie -t, wir -en, ihr -t, sie -en.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0059",
+  "target": "Könnten wir die Rechnung getrennt bekommen?",
+  "english": "Could we get the bill separately?",
+  "node": "node-16",
+  "tip": "Splitting bills is normal in Germany – 'getrennte Rechnung' or 'getrennt zahlen'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0062",
+  "target": "Sie hat Heimweh nach ihrer Familie.",
+  "english": "She misses her family.",
+  "node": "node-01",
+  "tip": "'Heimweh haben' – 'to be homesick' – germans 'have homesickness'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0063",
+  "target": "Das Wetter ist heute besonders schön.",
+  "english": "The weather is particularly nice today.",
+  "node": "node-01",
+  "tip": "'Sein' (to be) is fully irregular: ich bin, du bist, er ist, wir sind, ihr seid, sie sind.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0064",
+  "target": "Können wir bitte die Speisekarte haben?",
+  "english": "Can we please have the menu?",
+  "node": "node-01",
+  "tip": "Modal verb in position 2, main verb at the end. Ich muss morgen früh aufstehen (I have to get up early tomorrow). Brackets the sentence.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0065",
+  "target": "Das Kind liest ein spannendes Buch.",
+  "english": "The child is reading an exciting book.",
+  "node": "node-01",
+  "tip": "Adjective 'spannendes' – its ending depends on the article type, case, and noun gender. After definite articles, usually -e or -en.",
+  "dupGroupSize": 56
+ },
+ {
+  "id": "de-0066",
+  "target": "Meine Tochter geht in die vierte Klasse.",
+  "english": "My daughter is in fourth grade.",
+  "node": "node-01",
+  "tip": "Adjective 'vierte' – its ending depends on the article type, case, and noun gender. After definite articles, usually -e or -en.",
+  "dupGroupSize": 56
+ },
+ {
+  "id": "de-0067",
+  "target": "Wir gehen jeden Sonntag in die Kirche.",
+  "english": "We go to church every Sunday.",
+  "node": "node-01",
+  "tip": "'in' (in) + accusative = direction/movement. Dative would indicate static location.",
+  "dupGroupSize": 11
+ },
+ {
+  "id": "de-0068",
+  "target": "Ich räume mein Zimmer jede Woche auf.",
+  "english": "I tidy my room every week.",
+  "node": "node-01",
+  "tip": "Prefix 'auf' at the end – the separable verb splits in main clauses, with the prefix jumping to the sentence end.",
+  "dupGroupSize": 13
+ },
+ {
+  "id": "de-0069",
+  "target": "Sie fährt mit dem Bus zur Arbeit.",
+  "english": "She takes the bus to work.",
+  "node": "node-01",
+  "tip": "'Fahren' has a vowel change: du fährst, er/sie fährt.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0070",
+  "target": "Sie schickt regelmäßig Postkarten aus dem Urlaub.",
+  "english": "She regularly sends postcards from vacation.",
+  "node": "node-01",
+  "tip": "After mit / aus / bei / nach / von / zu / seit / gegenüber, the article shifts to dem (m/n), der (f), den (plural). Always – no exceptions.",
+  "dupGroupSize": 2
+ },
+ {
+  "id": "de-0071",
+  "target": "Sie ist nach der Arbeit sofort eingeschlafen.",
+  "english": "She fell asleep immediately after work.",
+  "node": "node-01",
+  "tip": "Separable with 'sein': ein·schlafen → ist ein·ge·schlafen.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0072",
+  "target": "Schönen guten Morgen! Haben Sie gut geschlafen?",
+  "english": "Good morning! Did you sleep well?",
+  "node": "node-01",
+  "tip": "Perfekt: 'haben' + 'geschlafen' – standard spoken past tense. The participle goes to the clause end.",
+  "dupGroupSize": 28
+ },
+ {
+  "id": "de-0073",
+  "target": "Offensichtlich hat jemand das Fenster offen gelassen.",
+  "english": "Obviously someone left the window open.",
+  "node": "node-01",
+  "tip": "'Offensichtlich' – compound noun. The last component determines gender; earlier components modify meaning.",
+  "dupGroupSize": 82
+ },
+ {
+  "id": "de-0074",
+  "target": "Mein Vater ist vor fünf Jahren in Rente gegangen.",
+  "english": "My father retired five years ago.",
+  "node": "node-01",
+  "tip": "Perfekt with 'sein' + 'gegangen' – motion/change-of-state verbs use 'sein' as the auxiliary.",
+  "dupGroupSize": 7
+ },
+ {
+  "id": "de-0079",
+  "target": "Seit gestern regnet es ununterbrochen.",
+  "english": "Since yesterday it has been raining nonstop.",
+  "node": "node-01",
+  "tip": "V2 rule: 'Seit gestern' is position 1, verb 'regnet' in position 2.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0080",
+  "target": "Ich arbeite als Ingenieur bei Siemens.",
+  "english": "I work as an engineer at Siemens.",
+  "node": "node-01",
+  "tip": "'bei' (at/near) always governs the dative case – no exceptions.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0081",
+  "target": "Ich bin Ärztin in einem Krankenhaus.",
+  "english": "I am a doctor in a hospital.",
+  "node": "node-01",
+  "tip": "Female professions often add '-in': Arzt → Ärztin, Lehrer → Lehrerin.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0083",
+  "target": "Meine Familie kommt ursprünglich aus Norddeutschland.",
+  "english": "My family originally comes from northern Germany.",
+  "node": "node-01",
+  "tip": "'Norddeutschland' – compound noun. The last component determines gender; earlier components modify meaning.",
+  "dupGroupSize": 82
+ },
+ {
+  "id": "de-0085",
+  "target": "Wir reisen nächsten Sommer nach Griechenland.",
+  "english": "We are traveling to Greece next summer.",
+  "node": "node-01",
+  "tip": "'Griechenland' – compound noun. The last component determines gender; earlier components modify meaning.",
+  "dupGroupSize": 82
+ },
+ {
+  "id": "de-0086",
+  "target": "Er spart für ein neues Motorrad.",
+  "english": "He is saving for a new motorcycle.",
+  "node": "node-01",
+  "tip": "Adjective 'neues' – its ending depends on the article type, case, and noun gender. After definite articles, usually -e or -en.",
+  "dupGroupSize": 56
+ },
+ {
+  "id": "de-0092",
+  "target": "Guten Abend, haben Sie eine Reservierung?",
+  "english": "Good evening, do you have a reservation?",
+  "node": "node-01",
+  "tip": "'Reservierung' – compound noun. The last component determines gender; earlier components modify meaning.",
+  "dupGroupSize": 82
+ },
+ {
+  "id": "de-0094",
+  "target": "Hallo zusammen, ich bin der neue Kollege.",
+  "english": "Hello everyone, I am the new colleague.",
+  "node": "node-01",
+  "tip": "Adjective 'neue' – its ending depends on the article type, case, and noun gender. After definite articles, usually -e or -en.",
+  "dupGroupSize": 56
+ },
+ {
+  "id": "de-0097",
+  "target": "Ich schreibe einen Brief an meine Oma.",
+  "english": "I write a letter to my grandma.",
+  "node": "node-01",
+  "tip": "'an' (at/on) + accusative = direction/movement. Dative would indicate static location.",
+  "dupGroupSize": 11
+ },
+ {
+  "id": "de-0099",
+  "target": "Er kauft frisches Obst auf dem Markt.",
+  "english": "He buys fresh fruit at the market.",
+  "node": "node-01",
+  "tip": "'auf' (on) + dative = location. Accusative would indicate direction/movement toward.",
+  "dupGroupSize": 11
+ },
+ {
+  "id": "de-0100",
+  "target": "Ich glaube, das ist eine gute Idee.",
+  "english": "I believe that is a good idea.",
+  "node": "node-01",
+  "tip": "Adjective 'gute' – its ending depends on the article type, case, and noun gender. After definite articles, usually -e or -en.",
+  "dupGroupSize": 56
+ },
+ {
+  "id": "de-0107",
+  "target": "Guten Tag, ich hätte gern einen Kaffee.",
+  "english": "Good day, I would like a coffee.",
+  "node": "node-16",
+  "tip": "'Hätte gern' is the polite way to order.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0112",
+  "target": "Ich habe Hunger, lass uns etwas essen gehen.",
+  "english": "I am hungry, let's go eat something.",
+  "node": "node-01",
+  "tip": "'Hunger haben' – germans 'have hunger' rather than 'being hungry'.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0113",
+  "target": "Die Preise sind in den letzten Jahren gestiegen.",
+  "english": "The prices have risen in recent years.",
+  "node": "node-01",
+  "tip": "Perfekt with 'sein' + 'gestiegen' – motion/change-of-state verbs use 'sein' as the auxiliary.",
+  "dupGroupSize": 7
+ },
+ {
+  "id": "de-0116",
+  "target": "Ich bereite das Frühstück für die ganze Familie vor.",
+  "english": "I prepare breakfast for the whole family.",
+  "node": "node-01",
+  "tip": "Prefix 'vor' at the end – the separable verb splits in main clauses, with the prefix jumping to the sentence end.",
+  "dupGroupSize": 13
+ },
+ {
+  "id": "de-0117",
+  "target": "Wir sind auf der Suche nach einem neuen Mitarbeiter.",
+  "english": "We are looking for a new employee.",
+  "node": "node-01",
+  "tip": "After mit/aus/bei/nach/von/zu/seit/gegenüber expect dem / der / dem (definite) or einem / einer / einem (indefinite). Writing \"den\" here is the classic mistake.",
+  "dupGroupSize": 1
+ },
+ {
+  "id": "de-0118",
+  "target": "Ich lerne seit einem Jahr Deutsch.",
+  "english": "I have been learning German for a year.",
+  "node": "node-01",
+  "tip": "After mit / aus / bei / nach / von / zu / seit / gegenüber, the article shifts to dem (m/n), der (f), den (plural). Always – no exceptions.",
+  "dupGroupSize": 2
+ },
+ {
+  "id": "de-0120",
+  "target": "Sie arbeitet als Krankenschwester im Krankenhaus.",
+  "english": "She works as a nurse in the hospital.",
+  "node": "node-01",
+  "tip": "Third person singular adds -t: arbeiten → sie arbeitet.",
+  "dupGroupSize": 1
+ }
+]

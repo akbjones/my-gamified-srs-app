@@ -13,7 +13,7 @@
  */
 import rawJapaneseDeck from './japanese/deck.json';
 import starterManifest from './japanese-starter-manifest.json';
-import { buildStarter, type RawDeckCard, type StarterCard, type StarterManifestEntry } from './starterDecks';
+import { buildStarter, type RawDeckCard, type StarterCard, type StarterManifestEntry } from './starterCore';
 
 export const JAPANESE_STARTER: StarterCard[] = buildStarter(
   rawJapaneseDeck as unknown as RawDeckCard[],

@@ -1,0 +1,1817 @@
+{
+  "scriptId": "devanagari",
+  "language": "hindi",
+  "name": "Devanagari",
+  "tagline": "Read Hindi in about a week",
+  "drill": {
+    "recallPrompts": [
+      "audio",
+      "romanization"
+    ],
+    "discriminationPrompt": "audio"
+  },
+  "items": [
+    {
+      "id": "sc-hi-0001",
+      "kind": "letter",
+      "glyph": "अ",
+      "sound": "a (the u in fun)",
+      "romanization": "a",
+      "mnemonic": "A curly 3 hitched to a tall post – the default vowel a (the u in fun). Devanagari's most common sound: every plain consonant secretly ends in it.",
+      "level": 1,
+      "similar": [
+        "sc-hi-0002"
+      ],
+      "exampleWord": {
+        "target": "अंग्रेज़ी",
+        "english": "Do you speak English?",
+        "deckCardId": "hi-0002"
+      },
+      "audio": "sc-hi-0001.mp3"
+    },
+    {
+      "id": "sc-hi-0002",
+      "kind": "letter",
+      "glyph": "आ",
+      "sound": "aa (father)",
+      "romanization": "aa",
+      "mnemonic": "अ (a) with one extra post on the right – the extra stroke stretches the sound long: aa (father).",
+      "level": 1,
+      "similar": [
+        "sc-hi-0001"
+      ],
+      "exampleWord": {
+        "target": "आ",
+        "english": "Can you come again next week?",
+        "deckCardId": "hi-0022"
+      },
+      "audio": "sc-hi-0002.mp3"
+    },
+    {
+      "id": "sc-hi-0003",
+      "kind": "letter",
+      "glyph": "इ",
+      "sound": "i (sit)",
+      "romanization": "i",
+      "mnemonic": "A flag with a wavy tail hanging off the bar – short i (the i in sit).",
+      "level": 1,
+      "similar": [
+        "sc-hi-0004"
+      ],
+      "exampleWord": {
+        "target": "इस",
+        "english": "Going by this route takes less time.",
+        "deckCardId": "hi-0024"
+      },
+      "audio": "sc-hi-0003.mp3"
+    },
+    {
+      "id": "sc-hi-0004",
+      "kind": "letter",
+      "glyph": "ई",
+      "sound": "ee (see)",
+      "romanization": "ee",
+      "mnemonic": "इ (i) with a small loop added on top – the loop stretches it long: ee (see).",
+      "level": 1,
+      "similar": [
+        "sc-hi-0003"
+      ],
+      "exampleWord": {
+        "target": "आई",
+        "english": "Neither did Priya come, nor did she send any message.",
+        "deckCardId": "hi-1150"
+      },
+      "audio": "sc-hi-0004.mp3"
+    },
+    {
+      "id": "sc-hi-0005",
+      "kind": "letter",
+      "glyph": "उ",
+      "sound": "u (put)",
+      "romanization": "u",
+      "mnemonic": "A plump hook curling in on itself under the bar – short u (the u in put).",
+      "level": 1,
+      "similar": [
+        "sc-hi-0006"
+      ],
+      "exampleWord": {
+        "target": "उतनी",
+        "english": "This book is just as interesting.",
+        "deckCardId": "hi-0031"
+      },
+      "audio": "sc-hi-0005.mp3"
+    },
+    {
+      "id": "sc-hi-0006",
+      "kind": "letter",
+      "glyph": "ऊ",
+      "sound": "oo (moon)",
+      "romanization": "oo",
+      "mnemonic": "उ (u) with an extra tail swinging up behind it – stretch it long: oo (moon).",
+      "level": 1,
+      "similar": [
+        "sc-hi-0005"
+      ],
+      "exampleWord": {
+        "target": "ऊँचे",
+        "english": "We go to the high mountains during summer holidays.",
+        "deckCardId": "hi-0120"
+      },
+      "audio": "sc-hi-0006.mp3"
+    },
+    {
+      "id": "sc-hi-0007",
+      "kind": "letter",
+      "glyph": "क",
+      "sound": "ka",
+      "romanization": "ka",
+      "mnemonic": "A loop knotted onto a post – ka. The big secret: every consonant carries a built-in a, so क alone already reads ka, no vowel letter needed.",
+      "level": 2,
+      "similar": [
+        "sc-hi-0059"
+      ],
+      "exampleWord": {
+        "target": "कई",
+        "english": "Many people consider the number thirteen unlucky.",
+        "deckCardId": "hi-0455"
+      },
+      "audio": "sc-hi-0007.mp3"
+    },
+    {
+      "id": "sc-hi-0008",
+      "kind": "letter",
+      "glyph": "ख",
+      "sound": "kha (ka + breath)",
+      "romanization": "kha",
+      "mnemonic": "Two little loops hanging side by side from the bar – ka with one extra puff of breath: kha.",
+      "level": 2,
+      "similar": [
+        "sc-hi-0007"
+      ],
+      "exampleWord": {
+        "target": "दिखाना",
+        "english": "You should see a doctor.",
+        "deckCardId": "hi-0006"
+      },
+      "audio": "sc-hi-0008.mp3"
+    },
+    {
+      "id": "sc-hi-0009",
+      "kind": "letter",
+      "glyph": "ग",
+      "sound": "ga (as in go)",
+      "romanization": "ga",
+      "mnemonic": "A smooth hook on a post, nothing fancy – ga (as in go), the voiced one: your throat buzzes.",
+      "level": 2,
+      "similar": [
+        "sc-hi-0010"
+      ],
+      "exampleWord": {
+        "target": "गई",
+        "english": "The water tank on the roof is full.",
+        "deckCardId": "hi-0173"
+      },
+      "audio": "sc-hi-0009.mp3"
+    },
+    {
+      "id": "sc-hi-0010",
+      "kind": "letter",
+      "glyph": "घ",
+      "sound": "gha (ga + breath)",
+      "romanization": "gha",
+      "mnemonic": "A loop that stays open at the top – ga plus one extra puff of breath: gha. Later you'll meet ध (dha), its near-twin – घ is the one with the open loop.",
+      "level": 2,
+      "similar": [
+        "sc-hi-0009",
+        "sc-hi-0053"
+      ],
+      "exampleWord": {
+        "target": "घंटे",
+        "english": "This bus comes every half hour.",
+        "deckCardId": "hi-0063"
+      },
+      "audio": "sc-hi-0010.mp3"
+    },
+    {
+      "id": "sc-hi-0011",
+      "kind": "letter",
+      "glyph": "ङ",
+      "sound": "nga (the ng in sing)",
+      "romanization": "nga",
+      "mnemonic": "A curl balancing a dot on its back – nga (the ng in sing). Rare on its own – it mostly hums inside words before its ka-family siblings.",
+      "level": 2,
+      "similar": [
+        "sc-hi-0044"
+      ],
+      "audio": "sc-hi-0011.mp3"
+    },
+    {
+      "id": "sc-hi-0012",
+      "kind": "modifier",
+      "glyph": "ा",
+      "sound": "aa sign",
+      "romanization": "aa",
+      "mnemonic": "Matras are vowel signs that ride on consonants. One extra post after the letter stretches the built-in a to aa: क → का (kaa).",
+      "level": 3,
+      "audio": "sc-hi-0012.mp3"
+    },
+    {
+      "id": "sc-hi-0013",
+      "kind": "modifier",
+      "glyph": "ि",
+      "sound": "i sign",
+      "romanization": "i",
+      "mnemonic": "A hooked post written BEFORE the consonant but spoken AFTER it – कि reads ki, never ik. Short i (sit).",
+      "level": 3,
+      "similar": [
+        "sc-hi-0014"
+      ],
+      "audio": "sc-hi-0013.mp3"
+    },
+    {
+      "id": "sc-hi-0014",
+      "kind": "modifier",
+      "glyph": "ी",
+      "sound": "ee sign",
+      "romanization": "ee",
+      "mnemonic": "The hooked post AFTER the consonant – long ee (see): की = kee. Before the letter = short ि, after = long ी.",
+      "level": 3,
+      "similar": [
+        "sc-hi-0013"
+      ],
+      "audio": "sc-hi-0014.mp3"
+    },
+    {
+      "id": "sc-hi-0015",
+      "kind": "modifier",
+      "glyph": "ु",
+      "sound": "u sign",
+      "romanization": "u",
+      "mnemonic": "A little hook tucked UNDER the consonant – short u (put): कु = ku.",
+      "level": 3,
+      "similar": [
+        "sc-hi-0016"
+      ],
+      "audio": "sc-hi-0015.mp3"
+    },
+    {
+      "id": "sc-hi-0016",
+      "kind": "modifier",
+      "glyph": "ू",
+      "sound": "oo sign",
+      "romanization": "oo",
+      "mnemonic": "The under-hook flipped to curl the other way – long oo (moon): कू = koo.",
+      "level": 3,
+      "similar": [
+        "sc-hi-0015"
+      ],
+      "audio": "sc-hi-0016.mp3"
+    },
+    {
+      "id": "sc-hi-0017",
+      "kind": "composed",
+      "glyph": "का",
+      "sound": "kaa",
+      "romanization": "kaa",
+      "mnemonic": "",
+      "level": 3,
+      "components": [
+        "sc-hi-0007",
+        "sc-hi-0012"
+      ],
+      "audio": "sc-hi-0017.mp3"
+    },
+    {
+      "id": "sc-hi-0018",
+      "kind": "composed",
+      "glyph": "कि",
+      "sound": "ki",
+      "romanization": "ki",
+      "mnemonic": "",
+      "level": 3,
+      "components": [
+        "sc-hi-0007",
+        "sc-hi-0013"
+      ],
+      "audio": "sc-hi-0018.mp3"
+    },
+    {
+      "id": "sc-hi-0019",
+      "kind": "composed",
+      "glyph": "की",
+      "sound": "kee",
+      "romanization": "kee",
+      "mnemonic": "",
+      "level": 3,
+      "components": [
+        "sc-hi-0007",
+        "sc-hi-0014"
+      ],
+      "audio": "sc-hi-0019.mp3"
+    },
+    {
+      "id": "sc-hi-0020",
+      "kind": "composed",
+      "glyph": "कु",
+      "sound": "ku",
+      "romanization": "ku",
+      "mnemonic": "",
+      "level": 3,
+      "components": [
+        "sc-hi-0007",
+        "sc-hi-0015"
+      ],
+      "audio": "sc-hi-0020.mp3"
+    },
+    {
+      "id": "sc-hi-0021",
+      "kind": "composed",
+      "glyph": "कू",
+      "sound": "koo",
+      "romanization": "koo",
+      "mnemonic": "",
+      "level": 3,
+      "components": [
+        "sc-hi-0007",
+        "sc-hi-0016"
+      ],
+      "audio": "sc-hi-0021.mp3"
+    },
+    {
+      "id": "sc-hi-0022",
+      "kind": "letter",
+      "glyph": "ए",
+      "sound": "e (they, no glide)",
+      "romanization": "e",
+      "mnemonic": "A streamer with a sharp kink hanging straight off the bar – no post underneath – e (as in they, but clean, no y-glide at the end).",
+      "level": 4,
+      "similar": [
+        "sc-hi-0023"
+      ],
+      "exampleWord": {
+        "target": "एक",
+        "english": "In our family everyone takes care of each other.",
+        "deckCardId": "hi-0055"
+      },
+      "audio": "sc-hi-0022.mp3"
+    },
+    {
+      "id": "sc-hi-0023",
+      "kind": "letter",
+      "glyph": "ऐ",
+      "sound": "ai (the a in bat, held long)",
+      "romanization": "ai",
+      "mnemonic": "ए (e) with a tick above the bar – the mouth opens wider: ai (the a in bat, held long).",
+      "level": 4,
+      "similar": [
+        "sc-hi-0022"
+      ],
+      "exampleWord": {
+        "target": "ऐसा",
+        "english": "No no, it is absolutely not so.",
+        "deckCardId": "hi-0616"
+      },
+      "audio": "sc-hi-0023.mp3"
+    },
+    {
+      "id": "sc-hi-0024",
+      "kind": "letter",
+      "glyph": "ओ",
+      "sound": "o (go)",
+      "romanization": "o",
+      "mnemonic": "आ (aa) wearing a small tick above its post – round your lips: o (go).",
+      "level": 4,
+      "similar": [
+        "sc-hi-0025"
+      ],
+      "exampleWord": {
+        "target": "आओ",
+        "english": "Come, come, sit down, have some water.",
+        "deckCardId": "hi-1849"
+      },
+      "audio": "sc-hi-0024.mp3"
+    },
+    {
+      "id": "sc-hi-0025",
+      "kind": "letter",
+      "glyph": "औ",
+      "sound": "au (the au in caught)",
+      "romanization": "au",
+      "mnemonic": "ओ (o) with a second tick above – au (the au in caught).",
+      "level": 4,
+      "similar": [
+        "sc-hi-0024"
+      ],
+      "exampleWord": {
+        "target": "और",
+        "english": "My brother and I study together.",
+        "deckCardId": "hi-0035"
+      },
+      "audio": "sc-hi-0025.mp3"
+    },
+    {
+      "id": "sc-hi-0026",
+      "kind": "modifier",
+      "glyph": "े",
+      "sound": "e sign",
+      "romanization": "e",
+      "mnemonic": "A single tick above the bar – adds e: के = ke. The e-family signs live on TOP of the letter.",
+      "level": 4,
+      "similar": [
+        "sc-hi-0027"
+      ],
+      "audio": "sc-hi-0026.mp3"
+    },
+    {
+      "id": "sc-hi-0027",
+      "kind": "modifier",
+      "glyph": "ै",
+      "sound": "ai sign",
+      "romanization": "ai",
+      "mnemonic": "Two ticks above the bar – ai: कै = kai. One tick = e, two ticks = ai.",
+      "level": 4,
+      "similar": [
+        "sc-hi-0026"
+      ],
+      "audio": "sc-hi-0027.mp3"
+    },
+    {
+      "id": "sc-hi-0028",
+      "kind": "modifier",
+      "glyph": "ो",
+      "sound": "o sign",
+      "romanization": "o",
+      "mnemonic": "The aa post with a tick on top – o: को = ko.",
+      "level": 4,
+      "similar": [
+        "sc-hi-0029",
+        "sc-hi-0012"
+      ],
+      "audio": "sc-hi-0028.mp3"
+    },
+    {
+      "id": "sc-hi-0029",
+      "kind": "modifier",
+      "glyph": "ौ",
+      "sound": "au sign",
+      "romanization": "au",
+      "mnemonic": "The post with two ticks on top – au: कौ = kau.",
+      "level": 4,
+      "similar": [
+        "sc-hi-0028"
+      ],
+      "audio": "sc-hi-0029.mp3"
+    },
+    {
+      "id": "sc-hi-0030",
+      "kind": "composed",
+      "glyph": "के",
+      "sound": "ke",
+      "romanization": "ke",
+      "mnemonic": "",
+      "level": 4,
+      "components": [
+        "sc-hi-0007",
+        "sc-hi-0026"
+      ],
+      "audio": "sc-hi-0030.mp3"
+    },
+    {
+      "id": "sc-hi-0031",
+      "kind": "composed",
+      "glyph": "गै",
+      "sound": "gai",
+      "romanization": "gai",
+      "mnemonic": "",
+      "level": 4,
+      "components": [
+        "sc-hi-0009",
+        "sc-hi-0027"
+      ],
+      "audio": "sc-hi-0031.mp3"
+    },
+    {
+      "id": "sc-hi-0032",
+      "kind": "composed",
+      "glyph": "खो",
+      "sound": "kho",
+      "romanization": "kho",
+      "mnemonic": "",
+      "level": 4,
+      "components": [
+        "sc-hi-0008",
+        "sc-hi-0028"
+      ],
+      "audio": "sc-hi-0032.mp3"
+    },
+    {
+      "id": "sc-hi-0033",
+      "kind": "composed",
+      "glyph": "घौ",
+      "sound": "ghau",
+      "romanization": "ghau",
+      "mnemonic": "",
+      "level": 4,
+      "components": [
+        "sc-hi-0010",
+        "sc-hi-0029"
+      ],
+      "audio": "sc-hi-0033.mp3"
+    },
+    {
+      "id": "sc-hi-0034",
+      "kind": "letter",
+      "glyph": "च",
+      "sound": "cha (as in chat)",
+      "romanization": "cha",
+      "mnemonic": "A rolled-up scroll on a post – cha (as in chat), crisp and with no breath behind it.",
+      "level": 5,
+      "similar": [
+        "sc-hi-0035"
+      ],
+      "exampleWord": {
+        "target": "चाचाजी",
+        "english": "My uncle lives in Delhi.",
+        "deckCardId": "hi-0011"
+      },
+      "audio": "sc-hi-0034.mp3"
+    },
+    {
+      "id": "sc-hi-0035",
+      "kind": "letter",
+      "glyph": "छ",
+      "sound": "chha (cha + breath)",
+      "romanization": "chha",
+      "mnemonic": "A balloon with a ribbon tail under the bar – cha plus one extra puff of breath: chha.",
+      "level": 5,
+      "similar": [
+        "sc-hi-0034"
+      ],
+      "exampleWord": {
+        "target": "कुछ",
+        "english": "I have some important questions to ask you.",
+        "deckCardId": "hi-0039"
+      },
+      "audio": "sc-hi-0035.mp3"
+    },
+    {
+      "id": "sc-hi-0036",
+      "kind": "letter",
+      "glyph": "ज",
+      "sound": "ja (as in jug)",
+      "romanization": "ja",
+      "mnemonic": "A hook with a stroke through its waist – voiced ja (as in jug).",
+      "level": 5,
+      "similar": [
+        "sc-hi-0037",
+        "sc-hi-0079"
+      ],
+      "exampleWord": {
+        "target": "चाचाजी",
+        "english": "My uncle lives in Delhi.",
+        "deckCardId": "hi-0011"
+      },
+      "audio": "sc-hi-0036.mp3"
+    },
+    {
+      "id": "sc-hi-0037",
+      "kind": "letter",
+      "glyph": "झ",
+      "sound": "jha (ja + breath)",
+      "romanization": "jha",
+      "mnemonic": "A hook with an extra zigzag bend in it – ja plus one extra puff of breath: jha.",
+      "level": 5,
+      "similar": [
+        "sc-hi-0036"
+      ],
+      "exampleWord": {
+        "target": "झुका",
+        "english": "Priya bowed her head out of respect for her teacher.",
+        "deckCardId": "hi-2634"
+      },
+      "audio": "sc-hi-0037.mp3"
+    },
+    {
+      "id": "sc-hi-0038",
+      "kind": "letter",
+      "glyph": "ञ",
+      "sound": "nya (the ny in canyon)",
+      "romanization": "nya",
+      "mnemonic": "A flat roof over a little wave – nya (the ny in canyon). Rarely stands alone – it mostly hides inside joined letters.",
+      "level": 5,
+      "exampleWord": {
+        "target": "वैज्ञानिक",
+        "english": "The scientist made a new invention.",
+        "deckCardId": "hi-0724"
+      },
+      "audio": "sc-hi-0038.mp3"
+    },
+    {
+      "id": "sc-hi-0039",
+      "kind": "composed",
+      "glyph": "चा",
+      "sound": "chaa",
+      "romanization": "chaa",
+      "mnemonic": "",
+      "level": 5,
+      "components": [
+        "sc-hi-0034",
+        "sc-hi-0012"
+      ],
+      "audio": "sc-hi-0039.mp3"
+    },
+    {
+      "id": "sc-hi-0040",
+      "kind": "composed",
+      "glyph": "जी",
+      "sound": "jee",
+      "romanization": "jee",
+      "mnemonic": "",
+      "level": 5,
+      "components": [
+        "sc-hi-0036",
+        "sc-hi-0014"
+      ],
+      "audio": "sc-hi-0040.mp3"
+    },
+    {
+      "id": "sc-hi-0041",
+      "kind": "composed",
+      "glyph": "छे",
+      "sound": "chhe",
+      "romanization": "chhe",
+      "mnemonic": "",
+      "level": 5,
+      "components": [
+        "sc-hi-0035",
+        "sc-hi-0026"
+      ],
+      "audio": "sc-hi-0041.mp3"
+    },
+    {
+      "id": "sc-hi-0042",
+      "kind": "letter",
+      "glyph": "ट",
+      "sound": "ṭa (retroflex – tongue curled back)",
+      "romanization": "ta",
+      "mnemonic": "A hook curling back on itself – your tongue copies it: curl the tip back and tap the roof of the mouth: ṭa. Hindi's heavy t – the soft on-the-teeth त comes later.",
+      "level": 6,
+      "similar": [
+        "sc-hi-0043",
+        "sc-hi-0050"
+      ],
+      "exampleWord": {
+        "target": "छोटी",
+        "english": "The little girl plays with a doll.",
+        "deckCardId": "hi-0030"
+      },
+      "audio": "sc-hi-0042.mp3"
+    },
+    {
+      "id": "sc-hi-0043",
+      "kind": "letter",
+      "glyph": "ठ",
+      "sound": "ṭha (retroflex + breath)",
+      "romanization": "tha",
+      "mnemonic": "A full circle hanging from the bar – same curled-back tongue as ट, plus one extra puff of breath: ṭha.",
+      "level": 6,
+      "similar": [
+        "sc-hi-0042"
+      ],
+      "exampleWord": {
+        "target": "ठीक",
+        "english": "Hello Aunty, everything is fine right?",
+        "deckCardId": "hi-0029"
+      },
+      "audio": "sc-hi-0043.mp3"
+    },
+    {
+      "id": "sc-hi-0044",
+      "kind": "letter",
+      "glyph": "ड",
+      "sound": "ḍa (retroflex – tongue curled back)",
+      "romanization": "da",
+      "mnemonic": "A big-bellied curl – tongue curled back and voiced: ḍa, a heavy d. English d is actually closer to this than to the soft dental द.",
+      "level": 6,
+      "similar": [
+        "sc-hi-0045",
+        "sc-hi-0011"
+      ],
+      "exampleWord": {
+        "target": "डाकिए",
+        "english": "The postman delivered the letter early in the morning.",
+        "deckCardId": "hi-0703"
+      },
+      "audio": "sc-hi-0044.mp3"
+    },
+    {
+      "id": "sc-hi-0045",
+      "kind": "letter",
+      "glyph": "ढ",
+      "sound": "ḍha (retroflex + breath)",
+      "romanization": "dha",
+      "mnemonic": "ड (ḍa) with a little tail curled inside its belly – add one puff of breath: ḍha.",
+      "level": 6,
+      "similar": [
+        "sc-hi-0044"
+      ],
+      "exampleWord": {
+        "target": "ढाई",
+        "english": "Finish all work by two-thirty.",
+        "deckCardId": "hi-0363"
+      },
+      "audio": "sc-hi-0045.mp3"
+    },
+    {
+      "id": "sc-hi-0046",
+      "kind": "letter",
+      "glyph": "ण",
+      "sound": "ṇa (retroflex n – tongue curled back)",
+      "romanization": "na",
+      "mnemonic": "A curl with a loop tucked beneath it – an n said with the tongue curled back: ṇa. Its flat-tongue twin न arrives with the dental row.",
+      "level": 6,
+      "similar": [
+        "sc-hi-0054"
+      ],
+      "exampleWord": {
+        "target": "गुण",
+        "english": "Basil has more medicinal properties than coriander.",
+        "deckCardId": "hi-1469"
+      },
+      "audio": "sc-hi-0046.mp3"
+    },
+    {
+      "id": "sc-hi-0047",
+      "kind": "composed",
+      "glyph": "टी",
+      "sound": "ṭee",
+      "romanization": "tee",
+      "mnemonic": "",
+      "level": 6,
+      "components": [
+        "sc-hi-0042",
+        "sc-hi-0014"
+      ],
+      "audio": "sc-hi-0047.mp3"
+    },
+    {
+      "id": "sc-hi-0048",
+      "kind": "composed",
+      "glyph": "डा",
+      "sound": "ḍaa",
+      "romanization": "daa",
+      "mnemonic": "",
+      "level": 6,
+      "components": [
+        "sc-hi-0044",
+        "sc-hi-0012"
+      ],
+      "audio": "sc-hi-0048.mp3"
+    },
+    {
+      "id": "sc-hi-0049",
+      "kind": "composed",
+      "glyph": "ठो",
+      "sound": "ṭho",
+      "romanization": "tho",
+      "mnemonic": "",
+      "level": 6,
+      "components": [
+        "sc-hi-0043",
+        "sc-hi-0028"
+      ],
+      "audio": "sc-hi-0049.mp3"
+    },
+    {
+      "id": "sc-hi-0050",
+      "kind": "letter",
+      "glyph": "त",
+      "sound": "ta (dental – tongue on teeth)",
+      "romanization": "ta",
+      "mnemonic": "Tongue tip flat on the back of your teeth – dental ta. A soft low curl resting on its stem – relaxed, while retroflex ट curls the tongue back to the roof of the mouth.",
+      "level": 7,
+      "similar": [
+        "sc-hi-0054",
+        "sc-hi-0042"
+      ],
+      "exampleWord": {
+        "target": "अनीता",
+        "english": "Anita, how are your children?",
+        "deckCardId": "hi-0008"
+      },
+      "audio": "sc-hi-0050.mp3"
+    },
+    {
+      "id": "sc-hi-0051",
+      "kind": "letter",
+      "glyph": "थ",
+      "sound": "tha (dental ta + breath)",
+      "romanization": "tha",
+      "mnemonic": "त (ta)'s breathy partner – tongue on the teeth plus one extra puff of breath: tha. The closed loop under the bar is a puffed cheek holding the extra air.",
+      "level": 7,
+      "similar": [
+        "sc-hi-0066",
+        "sc-hi-0043"
+      ],
+      "exampleWord": {
+        "target": "थे",
+        "english": "After a long time we met again; where were you?",
+        "deckCardId": "hi-0032"
+      },
+      "audio": "sc-hi-0051.mp3"
+    },
+    {
+      "id": "sc-hi-0052",
+      "kind": "letter",
+      "glyph": "द",
+      "sound": "da (dental – tongue on teeth)",
+      "romanization": "da",
+      "mnemonic": "Dental da – tongue on the teeth, soft as the th in 'this'. A round belly with a small pointed elbow jutting left. Its curled-back cousin is ड (retroflex da).",
+      "level": 7,
+      "similar": [
+        "sc-hi-0044"
+      ],
+      "exampleWord": {
+        "target": "दिखाना",
+        "english": "You should see a doctor.",
+        "deckCardId": "hi-0006"
+      },
+      "audio": "sc-hi-0052.mp3"
+    },
+    {
+      "id": "sc-hi-0053",
+      "kind": "letter",
+      "glyph": "ध",
+      "sound": "dha (dental da + breath)",
+      "romanization": "dha",
+      "mnemonic": "द (da) + one puff of breath – dental dha. Watch out for घ (gha): ध leaves a small gap in its top bar and its loop narrows to a point; घ keeps a solid bar and a round curl.",
+      "level": 7,
+      "similar": [
+        "sc-hi-0010",
+        "sc-hi-0045"
+      ],
+      "exampleWord": {
+        "target": "दूध",
+        "english": "I drink milk every morning.",
+        "deckCardId": "hi-0010"
+      },
+      "audio": "sc-hi-0053.mp3"
+    },
+    {
+      "id": "sc-hi-0054",
+      "kind": "letter",
+      "glyph": "न",
+      "sound": "na (dental)",
+      "romanization": "na",
+      "mnemonic": "Everyday na, tongue tip on the teeth like English n. Under the bar just one short kick onto the stem – त (ta) swings a big open curl, न stays minimal. Retroflex ण is the curled-back cousin.",
+      "level": 7,
+      "similar": [
+        "sc-hi-0050",
+        "sc-hi-0046"
+      ],
+      "exampleWord": {
+        "target": "दिखाना",
+        "english": "You should see a doctor.",
+        "deckCardId": "hi-0006"
+      },
+      "audio": "sc-hi-0054.mp3"
+    },
+    {
+      "id": "sc-hi-0055",
+      "kind": "composed",
+      "glyph": "ता",
+      "sound": "taa",
+      "romanization": "taa",
+      "mnemonic": "",
+      "level": 7,
+      "components": [
+        "sc-hi-0050",
+        "sc-hi-0012"
+      ],
+      "audio": "sc-hi-0055.mp3"
+    },
+    {
+      "id": "sc-hi-0056",
+      "kind": "composed",
+      "glyph": "दी",
+      "sound": "dee",
+      "romanization": "dee",
+      "mnemonic": "",
+      "level": 7,
+      "components": [
+        "sc-hi-0052",
+        "sc-hi-0014"
+      ],
+      "audio": "sc-hi-0056.mp3"
+    },
+    {
+      "id": "sc-hi-0057",
+      "kind": "composed",
+      "glyph": "थे",
+      "sound": "the",
+      "romanization": "the",
+      "mnemonic": "",
+      "level": 7,
+      "components": [
+        "sc-hi-0051",
+        "sc-hi-0026"
+      ],
+      "audio": "sc-hi-0057.mp3"
+    },
+    {
+      "id": "sc-hi-0058",
+      "kind": "letter",
+      "glyph": "प",
+      "sound": "pa",
+      "romanization": "pa",
+      "mnemonic": "Lips press together and pop open – pa. One clean open bowl hanging on the stem, nothing extra – the plainest of the lip letters.",
+      "level": 8,
+      "similar": [
+        "sc-hi-0059",
+        "sc-hi-0071"
+      ],
+      "exampleWord": {
+        "target": "आप",
+        "english": "Do you speak English?",
+        "deckCardId": "hi-0002"
+      },
+      "audio": "sc-hi-0058.mp3"
+    },
+    {
+      "id": "sc-hi-0059",
+      "kind": "letter",
+      "glyph": "फ",
+      "sound": "pha (pa + breath)",
+      "romanization": "pha",
+      "mnemonic": "प (pa) + one puff of breath – pha. The curl swinging off the right side of the stem is the puff of air escaping.",
+      "level": 8,
+      "similar": [
+        "sc-hi-0058",
+        "sc-hi-0080"
+      ],
+      "exampleWord": {
+        "target": "फोन",
+        "english": "My phone number is very easy to remember.",
+        "deckCardId": "hi-0280"
+      },
+      "audio": "sc-hi-0059.mp3"
+    },
+    {
+      "id": "sc-hi-0060",
+      "kind": "letter",
+      "glyph": "ब",
+      "sound": "ba",
+      "romanization": "ba",
+      "mnemonic": "Lips together, voice buzzing – ba. A bowl on the stem with a short slash tucked inside the bowl – the slash is the buzz of the voice.",
+      "level": 8,
+      "similar": [
+        "sc-hi-0069",
+        "sc-hi-0061"
+      ],
+      "exampleWord": {
+        "target": "किताब",
+        "english": "This book is very interesting.",
+        "deckCardId": "hi-0004"
+      },
+      "audio": "sc-hi-0060.mp3"
+    },
+    {
+      "id": "sc-hi-0061",
+      "kind": "letter",
+      "glyph": "भ",
+      "sound": "bha (ba + breath)",
+      "romanization": "bha",
+      "mnemonic": "ब (ba) + one extra puff of breath – bha. No closed bowl here: a wing sweeps down to a point before the stem, and the top bar leaves a small gap – the gap lets the extra breath escape.",
+      "level": 8,
+      "similar": [
+        "sc-hi-0062",
+        "sc-hi-0060"
+      ],
+      "exampleWord": {
+        "target": "भूख",
+        "english": "I'm very hungry.",
+        "deckCardId": "hi-0009"
+      },
+      "audio": "sc-hi-0061.mp3"
+    },
+    {
+      "id": "sc-hi-0062",
+      "kind": "letter",
+      "glyph": "म",
+      "sound": "ma",
+      "romanization": "ma",
+      "mnemonic": "Humming ma – lips sealed, like m anywhere. The left stroke ties a small knot before the bowl and the top bar runs solid – भ (bha) skips the knot and breaks its bar.",
+      "level": 8,
+      "similar": [
+        "sc-hi-0061"
+      ],
+      "exampleWord": {
+        "target": "नाम",
+        "english": "Hello, my name is Amit.",
+        "deckCardId": "hi-0003"
+      },
+      "audio": "sc-hi-0062.mp3"
+    },
+    {
+      "id": "sc-hi-0063",
+      "kind": "composed",
+      "glyph": "पा",
+      "sound": "paa",
+      "romanization": "paa",
+      "mnemonic": "",
+      "level": 8,
+      "components": [
+        "sc-hi-0058",
+        "sc-hi-0012"
+      ],
+      "audio": "sc-hi-0063.mp3"
+    },
+    {
+      "id": "sc-hi-0064",
+      "kind": "composed",
+      "glyph": "बी",
+      "sound": "bee",
+      "romanization": "bee",
+      "mnemonic": "",
+      "level": 8,
+      "components": [
+        "sc-hi-0060",
+        "sc-hi-0014"
+      ],
+      "audio": "sc-hi-0064.mp3"
+    },
+    {
+      "id": "sc-hi-0065",
+      "kind": "composed",
+      "glyph": "मो",
+      "sound": "mo",
+      "romanization": "mo",
+      "mnemonic": "",
+      "level": 8,
+      "components": [
+        "sc-hi-0062",
+        "sc-hi-0028"
+      ],
+      "audio": "sc-hi-0065.mp3"
+    },
+    {
+      "id": "sc-hi-0066",
+      "kind": "letter",
+      "glyph": "य",
+      "sound": "ya",
+      "romanization": "ya",
+      "mnemonic": "ya as in yes. A smooth open swing into the stem – थ (tha)'s look-alike, but य leaves its loop open at the bottom; थ closes the circle.",
+      "level": 9,
+      "similar": [
+        "sc-hi-0051"
+      ],
+      "exampleWord": {
+        "target": "यह",
+        "english": "This book is very interesting.",
+        "deckCardId": "hi-0004"
+      },
+      "audio": "sc-hi-0066.mp3"
+    },
+    {
+      "id": "sc-hi-0067",
+      "kind": "letter",
+      "glyph": "र",
+      "sound": "ra (lightly rolled)",
+      "romanization": "ra",
+      "mnemonic": "ra – one quick tap of the tongue, lightly rolled. The smallest letter: a stem dropping from the bar with one leg kicking down-left.",
+      "level": 9,
+      "similar": [
+        "sc-hi-0081"
+      ],
+      "exampleWord": {
+        "target": "मेरी",
+        "english": "My sister is a doctor.",
+        "deckCardId": "hi-0001"
+      },
+      "audio": "sc-hi-0067.mp3"
+    },
+    {
+      "id": "sc-hi-0068",
+      "kind": "letter",
+      "glyph": "ल",
+      "sound": "la",
+      "romanization": "la",
+      "mnemonic": "la – tongue tip up, like English l. The tail dives under and curls back up, a ladle scooping to the left.",
+      "level": 9,
+      "exampleWord": {
+        "target": "बोलते",
+        "english": "Do you speak English?",
+        "deckCardId": "hi-0002"
+      },
+      "audio": "sc-hi-0068.mp3"
+    },
+    {
+      "id": "sc-hi-0069",
+      "kind": "letter",
+      "glyph": "व",
+      "sound": "va (between v and w)",
+      "romanization": "va",
+      "mnemonic": "Halfway between v and w – soft va, lips barely touching. An empty bowl on the stem: ब (ba) minus the slash, and minus the buzz.",
+      "level": 9,
+      "similar": [
+        "sc-hi-0060"
+      ],
+      "exampleWord": {
+        "target": "सुहावना",
+        "english": "Hello, the weather is very pleasant today.",
+        "deckCardId": "hi-0015"
+      },
+      "audio": "sc-hi-0069.mp3"
+    },
+    {
+      "id": "sc-hi-0070",
+      "kind": "letter",
+      "glyph": "श",
+      "sound": "sha (as in shoe)",
+      "romanization": "sha",
+      "mnemonic": "sha as in shoe – the everyday sh. A curled ribbon under the bar with a small slash through its tail.",
+      "level": 9,
+      "similar": [
+        "sc-hi-0071",
+        "sc-hi-0072"
+      ],
+      "exampleWord": {
+        "target": "शुभ",
+        "english": "Good night, see you tomorrow.",
+        "deckCardId": "hi-0020"
+      },
+      "audio": "sc-hi-0070.mp3"
+    },
+    {
+      "id": "sc-hi-0071",
+      "kind": "letter",
+      "glyph": "ष",
+      "sound": "sha (same as श in Hindi)",
+      "romanization": "sha",
+      "mnemonic": "प (pa) with a slash across its bowl – but it hisses: sha. In Hindi it sounds exactly like श; Sanskrit spelling decides which one a word uses.",
+      "level": 9,
+      "similar": [
+        "sc-hi-0070",
+        "sc-hi-0058"
+      ],
+      "exampleWord": {
+        "target": "दुभाषिया",
+        "english": "The interpreter explained the matter in both languages.",
+        "deckCardId": "hi-0214"
+      },
+      "audio": "sc-hi-0071.mp3"
+    },
+    {
+      "id": "sc-hi-0072",
+      "kind": "letter",
+      "glyph": "स",
+      "sound": "sa",
+      "romanization": "sa",
+      "mnemonic": "sa as in sun. A little rollercoaster under the bar – curl, dip, stem – hissing as it slides.",
+      "level": 9,
+      "similar": [
+        "sc-hi-0070"
+      ],
+      "exampleWord": {
+        "target": "कैसे",
+        "english": "Hello, how are you all?",
+        "deckCardId": "hi-0005"
+      },
+      "audio": "sc-hi-0072.mp3"
+    },
+    {
+      "id": "sc-hi-0073",
+      "kind": "letter",
+      "glyph": "ह",
+      "sound": "ha",
+      "romanization": "ha",
+      "mnemonic": "ha – pure breath, as in hat. A curly hook with a small tail tucked under its chin, air spiraling out.",
+      "level": 9,
+      "exampleWord": {
+        "target": "बहन",
+        "english": "My sister is a doctor.",
+        "deckCardId": "hi-0001"
+      },
+      "audio": "sc-hi-0073.mp3"
+    },
+    {
+      "id": "sc-hi-0074",
+      "kind": "composed",
+      "glyph": "या",
+      "sound": "yaa",
+      "romanization": "yaa",
+      "mnemonic": "",
+      "level": 9,
+      "components": [
+        "sc-hi-0066",
+        "sc-hi-0012"
+      ],
+      "audio": "sc-hi-0074.mp3"
+    },
+    {
+      "id": "sc-hi-0075",
+      "kind": "composed",
+      "glyph": "री",
+      "sound": "ree",
+      "romanization": "ree",
+      "mnemonic": "",
+      "level": 9,
+      "components": [
+        "sc-hi-0067",
+        "sc-hi-0014"
+      ],
+      "audio": "sc-hi-0075.mp3"
+    },
+    {
+      "id": "sc-hi-0076",
+      "kind": "composed",
+      "glyph": "शा",
+      "sound": "shaa",
+      "romanization": "shaa",
+      "mnemonic": "",
+      "level": 9,
+      "components": [
+        "sc-hi-0070",
+        "sc-hi-0012"
+      ],
+      "audio": "sc-hi-0076.mp3"
+    },
+    {
+      "id": "sc-hi-0077",
+      "kind": "composed",
+      "glyph": "हू",
+      "sound": "hoo",
+      "romanization": "hoo",
+      "mnemonic": "",
+      "level": 9,
+      "components": [
+        "sc-hi-0073",
+        "sc-hi-0016"
+      ],
+      "audio": "sc-hi-0077.mp3"
+    },
+    {
+      "id": "sc-hi-0078",
+      "kind": "letter",
+      "glyph": "ऋ",
+      "sound": "ri (as in ring)",
+      "romanization": "ri",
+      "mnemonic": "A vowel that simply sounds ri, as in ऋषि (rishi = sage). Body like र (ra) with an extra tail kicking out at the bottom left – a leftover from Sanskrit.",
+      "level": 10,
+      "similar": [
+        "sc-hi-0083"
+      ],
+      "exampleWord": {
+        "target": "ऋतु",
+        "english": "Hot winds blow in the summer season.",
+        "deckCardId": "hi-1003"
+      },
+      "audio": "sc-hi-0078.mp3"
+    },
+    {
+      "id": "sc-hi-0079",
+      "kind": "letter",
+      "glyph": "ज़",
+      "sound": "za (as in zoo)",
+      "romanization": "za",
+      "mnemonic": "ज (ja) with a dot tucked underneath – the nukta. The dot loosens ja into a buzz: za as in zoo, for loanwords like ज़रूर (zaroor = definitely).",
+      "level": 10,
+      "similar": [
+        "sc-hi-0036"
+      ],
+      "exampleWord": {
+        "target": "ज़ोरों",
+        "english": "I'm very hungry.",
+        "deckCardId": "hi-0009"
+      },
+      "audio": "sc-hi-0079.mp3"
+    },
+    {
+      "id": "sc-hi-0080",
+      "kind": "letter",
+      "glyph": "फ़",
+      "sound": "fa (as in fan)",
+      "romanization": "fa",
+      "mnemonic": "फ (pha) with a dot below – the nukta relaxes the lips into an English f: fa, as in फ़िल्म (film).",
+      "level": 10,
+      "similar": [
+        "sc-hi-0059"
+      ],
+      "exampleWord": {
+        "target": "सफ़र",
+        "english": "We travel by train.",
+        "deckCardId": "hi-0016"
+      },
+      "audio": "sc-hi-0080.mp3"
+    },
+    {
+      "id": "sc-hi-0081",
+      "kind": "letter",
+      "glyph": "ड़",
+      "sound": "Ra (flapped – tongue flicks forward)",
+      "romanization": "ra",
+      "mnemonic": "ड (retroflex da) with a dot below – start curled back, then flick the tongue tip forward as it lands: the flapped Ra of सड़क (saRak = road).",
+      "level": 10,
+      "similar": [
+        "sc-hi-0044",
+        "sc-hi-0067"
+      ],
+      "exampleWord": {
+        "target": "लड़की",
+        "english": "The little girl plays with a doll.",
+        "deckCardId": "hi-0030"
+      },
+      "audio": "sc-hi-0081.mp3"
+    },
+    {
+      "id": "sc-hi-0082",
+      "kind": "letter",
+      "glyph": "ढ़",
+      "sound": "Rha (flap + breath)",
+      "romanization": "rha",
+      "mnemonic": "ढ (retroflex dha) with a dot – the same tongue-flick as ड़ plus one puff of breath: Rha, as in बूढ़ा (booRhaa = old).",
+      "level": 10,
+      "similar": [
+        "sc-hi-0045",
+        "sc-hi-0081"
+      ],
+      "exampleWord": {
+        "target": "पढ़ते",
+        "english": "My brother and I study together.",
+        "deckCardId": "hi-0035"
+      },
+      "audio": "sc-hi-0082.mp3"
+    },
+    {
+      "id": "sc-hi-0083",
+      "kind": "modifier",
+      "glyph": "ृ",
+      "sound": "ri sign",
+      "romanization": "ri",
+      "mnemonic": "ऋ's attached form – a tiny kinked hook under the letter: क + ृ = कृ (kri), as in कृपया (kripayaa = please). Don't confuse it with ु (u), a smoother curl.",
+      "level": 10,
+      "similar": [
+        "sc-hi-0015"
+      ],
+      "audio": "sc-hi-0083.mp3"
+    },
+    {
+      "id": "sc-hi-0084",
+      "kind": "modifier",
+      "glyph": "ं",
+      "sound": "n (anusvara dot)",
+      "romanization": "n",
+      "mnemonic": "One dot floating above the bar – the anusvara. Hum through the nose before the next consonant: हिंदी (hindee = Hindi) gets its n from this dot.",
+      "level": 10,
+      "similar": [
+        "sc-hi-0085"
+      ],
+      "audio": "sc-hi-0084.mp3"
+    },
+    {
+      "id": "sc-hi-0085",
+      "kind": "modifier",
+      "glyph": "ँ",
+      "sound": "n (chandrabindu)",
+      "romanization": "n",
+      "mnemonic": "A tiny moon cradling a dot – the chandrabindu. It sends the whole vowel through your nose: हाँ (haan = yes). Moon + dot = a fuller nasal than the plain dot ं.",
+      "level": 10,
+      "similar": [
+        "sc-hi-0084"
+      ],
+      "audio": "sc-hi-0085.mp3"
+    },
+    {
+      "id": "sc-hi-0086",
+      "kind": "modifier",
+      "glyph": "ः",
+      "sound": "h (visarga)",
+      "romanization": "h",
+      "mnemonic": "Two stacked dots after the letter – the visarga, a soft trailing puff of h. Rare outside Sanskrit loans like अतः (atah = therefore).",
+      "level": 10,
+      "audio": "sc-hi-0086.mp3"
+    },
+    {
+      "id": "sc-hi-0087",
+      "kind": "composed",
+      "glyph": "कृ",
+      "sound": "kri",
+      "romanization": "kri",
+      "mnemonic": "",
+      "level": 10,
+      "components": [
+        "sc-hi-0007",
+        "sc-hi-0083"
+      ],
+      "audio": "sc-hi-0087.mp3"
+    },
+    {
+      "id": "sc-hi-0088",
+      "kind": "composed",
+      "glyph": "हाँ",
+      "sound": "haan",
+      "romanization": "haan",
+      "mnemonic": "",
+      "level": 10,
+      "components": [
+        "sc-hi-0073",
+        "sc-hi-0012",
+        "sc-hi-0085"
+      ],
+      "audio": "sc-hi-0088.mp3"
+    },
+    {
+      "id": "sc-hi-0089",
+      "kind": "composed",
+      "glyph": "मां",
+      "sound": "maan",
+      "romanization": "maan",
+      "mnemonic": "",
+      "level": 10,
+      "components": [
+        "sc-hi-0062",
+        "sc-hi-0012",
+        "sc-hi-0084"
+      ],
+      "audio": "sc-hi-0089.mp3"
+    },
+    {
+      "id": "sc-hi-0090",
+      "kind": "modifier",
+      "glyph": "्",
+      "sound": "silent (halant)",
+      "romanization": "",
+      "mnemonic": "A small slash below – the halant. It deletes the consonant's built-in a: क says ka, क् is a bare k, ready to weld straight onto the next letter.",
+      "level": 11,
+      "audio": "sc-hi-0090.mp3"
+    },
+    {
+      "id": "sc-hi-0091",
+      "kind": "composed",
+      "glyph": "क्ष",
+      "sound": "ksha",
+      "romanization": "ksha",
+      "mnemonic": "",
+      "level": 11,
+      "components": [
+        "sc-hi-0007",
+        "sc-hi-0090",
+        "sc-hi-0071"
+      ],
+      "audio": "sc-hi-0091.mp3"
+    },
+    {
+      "id": "sc-hi-0092",
+      "kind": "composed",
+      "glyph": "त्र",
+      "sound": "tra",
+      "romanization": "tra",
+      "mnemonic": "",
+      "level": 11,
+      "components": [
+        "sc-hi-0050",
+        "sc-hi-0090",
+        "sc-hi-0067"
+      ],
+      "audio": "sc-hi-0092.mp3"
+    },
+    {
+      "id": "sc-hi-0093",
+      "kind": "composed",
+      "glyph": "ज्ञ",
+      "sound": "gya",
+      "romanization": "gya",
+      "mnemonic": "",
+      "level": 11,
+      "components": [
+        "sc-hi-0036",
+        "sc-hi-0090",
+        "sc-hi-0038"
+      ],
+      "audio": "sc-hi-0093.mp3"
+    },
+    {
+      "id": "sc-hi-0094",
+      "kind": "composed",
+      "glyph": "श्र",
+      "sound": "shra",
+      "romanization": "shra",
+      "mnemonic": "",
+      "level": 11,
+      "components": [
+        "sc-hi-0070",
+        "sc-hi-0090",
+        "sc-hi-0067"
+      ],
+      "audio": "sc-hi-0094.mp3"
+    },
+    {
+      "id": "sc-hi-0095",
+      "kind": "word",
+      "glyph": "मेरी",
+      "sound": "meree",
+      "romanization": "meree",
+      "mnemonic": "",
+      "level": 12,
+      "exampleWord": {
+        "target": "मेरी",
+        "english": "My sister is a doctor.",
+        "deckCardId": "hi-0001"
+      },
+      "audio": "sc-hi-0095.mp3"
+    },
+    {
+      "id": "sc-hi-0096",
+      "kind": "word",
+      "glyph": "क्या",
+      "sound": "kyaa",
+      "romanization": "kyaa",
+      "mnemonic": "",
+      "level": 12,
+      "exampleWord": {
+        "target": "क्या",
+        "english": "Do you speak English?",
+        "deckCardId": "hi-0002"
+      },
+      "audio": "sc-hi-0096.mp3"
+    },
+    {
+      "id": "sc-hi-0097",
+      "kind": "word",
+      "glyph": "आप",
+      "sound": "aap",
+      "romanization": "aap",
+      "mnemonic": "",
+      "level": 12,
+      "exampleWord": {
+        "target": "आप",
+        "english": "Do you speak English?",
+        "deckCardId": "hi-0002"
+      },
+      "audio": "sc-hi-0097.mp3"
+    },
+    {
+      "id": "sc-hi-0098",
+      "kind": "word",
+      "glyph": "हैं",
+      "sound": "hain",
+      "romanization": "hain",
+      "mnemonic": "",
+      "level": 12,
+      "exampleWord": {
+        "target": "हैं",
+        "english": "Do you speak English?",
+        "deckCardId": "hi-0002"
+      },
+      "audio": "sc-hi-0098.mp3"
+    },
+    {
+      "id": "sc-hi-0099",
+      "kind": "word",
+      "glyph": "मेरा",
+      "sound": "meraa",
+      "romanization": "meraa",
+      "mnemonic": "",
+      "level": 12,
+      "exampleWord": {
+        "target": "मेरा",
+        "english": "Hello, my name is Amit.",
+        "deckCardId": "hi-0003"
+      },
+      "audio": "sc-hi-0099.mp3"
+    },
+    {
+      "id": "sc-hi-0100",
+      "kind": "word",
+      "glyph": "नाम",
+      "sound": "naam",
+      "romanization": "naam",
+      "mnemonic": "",
+      "level": 12,
+      "exampleWord": {
+        "target": "नाम",
+        "english": "Hello, my name is Amit.",
+        "deckCardId": "hi-0003"
+      },
+      "audio": "sc-hi-0100.mp3"
+    },
+    {
+      "id": "sc-hi-0101",
+      "kind": "word",
+      "glyph": "अमित",
+      "sound": "amit",
+      "romanization": "amit",
+      "mnemonic": "",
+      "level": 12,
+      "exampleWord": {
+        "target": "अमित",
+        "english": "Hello, my name is Amit.",
+        "deckCardId": "hi-0003"
+      },
+      "audio": "sc-hi-0101.mp3"
+    },
+    {
+      "id": "sc-hi-0102",
+      "kind": "word",
+      "glyph": "किताब",
+      "sound": "kitaab",
+      "romanization": "kitaab",
+      "mnemonic": "",
+      "level": 12,
+      "exampleWord": {
+        "target": "किताब",
+        "english": "This book is very interesting.",
+        "deckCardId": "hi-0004"
+      },
+      "audio": "sc-hi-0102.mp3"
+    }
+  ],
+  "levels": [
+    {
+      "level": 1,
+      "title": "First vowels",
+      "itemIds": [
+        "sc-hi-0001",
+        "sc-hi-0002",
+        "sc-hi-0003",
+        "sc-hi-0004",
+        "sc-hi-0005",
+        "sc-hi-0006"
+      ],
+      "readableWordCount": 2
+    },
+    {
+      "level": 2,
+      "title": "First consonants – the ka family",
+      "itemIds": [
+        "sc-hi-0007",
+        "sc-hi-0008",
+        "sc-hi-0009",
+        "sc-hi-0010",
+        "sc-hi-0011"
+      ],
+      "readableWordCount": 5
+    },
+    {
+      "level": 3,
+      "title": "Vowel signs (matras)",
+      "itemIds": [
+        "sc-hi-0012",
+        "sc-hi-0013",
+        "sc-hi-0014",
+        "sc-hi-0015",
+        "sc-hi-0016",
+        "sc-hi-0017",
+        "sc-hi-0018",
+        "sc-hi-0019",
+        "sc-hi-0020",
+        "sc-hi-0021"
+      ],
+      "readableWordCount": 12
+    },
+    {
+      "level": 4,
+      "title": "E and O vowels + their signs",
+      "itemIds": [
+        "sc-hi-0022",
+        "sc-hi-0023",
+        "sc-hi-0024",
+        "sc-hi-0025",
+        "sc-hi-0026",
+        "sc-hi-0027",
+        "sc-hi-0028",
+        "sc-hi-0029",
+        "sc-hi-0030",
+        "sc-hi-0031",
+        "sc-hi-0032",
+        "sc-hi-0033"
+      ],
+      "readableWordCount": 27
+    },
+    {
+      "level": 5,
+      "title": "The cha family",
+      "itemIds": [
+        "sc-hi-0034",
+        "sc-hi-0035",
+        "sc-hi-0036",
+        "sc-hi-0037",
+        "sc-hi-0038",
+        "sc-hi-0039",
+        "sc-hi-0040",
+        "sc-hi-0041"
+      ],
+      "readableWordCount": 52
+    },
+    {
+      "level": 6,
+      "title": "Retroflex – the Ta family",
+      "itemIds": [
+        "sc-hi-0042",
+        "sc-hi-0043",
+        "sc-hi-0044",
+        "sc-hi-0045",
+        "sc-hi-0046",
+        "sc-hi-0047",
+        "sc-hi-0048",
+        "sc-hi-0049"
+      ],
+      "readableWordCount": 99
+    },
+    {
+      "level": 7,
+      "title": "Dental – the ta family",
+      "itemIds": [
+        "sc-hi-0050",
+        "sc-hi-0051",
+        "sc-hi-0052",
+        "sc-hi-0053",
+        "sc-hi-0054",
+        "sc-hi-0055",
+        "sc-hi-0056",
+        "sc-hi-0057"
+      ],
+      "readableWordCount": 320
+    },
+    {
+      "level": 8,
+      "title": "The pa family",
+      "itemIds": [
+        "sc-hi-0058",
+        "sc-hi-0059",
+        "sc-hi-0060",
+        "sc-hi-0061",
+        "sc-hi-0062",
+        "sc-hi-0063",
+        "sc-hi-0064",
+        "sc-hi-0065"
+      ],
+      "readableWordCount": 632
+    },
+    {
+      "level": 9,
+      "title": "Semivowels and sibilants",
+      "itemIds": [
+        "sc-hi-0066",
+        "sc-hi-0067",
+        "sc-hi-0068",
+        "sc-hi-0069",
+        "sc-hi-0070",
+        "sc-hi-0071",
+        "sc-hi-0072",
+        "sc-hi-0073",
+        "sc-hi-0074",
+        "sc-hi-0075",
+        "sc-hi-0076",
+        "sc-hi-0077"
+      ],
+      "readableWordCount": 2151
+    },
+    {
+      "level": 10,
+      "title": "Dots, breath and flaps",
+      "itemIds": [
+        "sc-hi-0078",
+        "sc-hi-0079",
+        "sc-hi-0080",
+        "sc-hi-0081",
+        "sc-hi-0082",
+        "sc-hi-0083",
+        "sc-hi-0084",
+        "sc-hi-0085",
+        "sc-hi-0086",
+        "sc-hi-0087",
+        "sc-hi-0088",
+        "sc-hi-0089"
+      ],
+      "readableWordCount": 2953
+    },
+    {
+      "level": 11,
+      "title": "Joining letters (conjuncts)",
+      "itemIds": [
+        "sc-hi-0090",
+        "sc-hi-0091",
+        "sc-hi-0092",
+        "sc-hi-0093",
+        "sc-hi-0094"
+      ],
+      "readableWordCount": 3720
+    },
+    {
+      "level": 12,
+      "title": "Real words from your deck",
+      "itemIds": [
+        "sc-hi-0095",
+        "sc-hi-0096",
+        "sc-hi-0097",
+        "sc-hi-0098",
+        "sc-hi-0099",
+        "sc-hi-0100",
+        "sc-hi-0101",
+        "sc-hi-0102"
+      ],
+      "readableWordCount": 3720
+    }
+  ]
+}

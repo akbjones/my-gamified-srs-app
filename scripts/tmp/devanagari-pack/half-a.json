@@ -1,0 +1,410 @@
+{
+  "levels": [
+    {
+      "title": "First vowels",
+      "items": [
+        {
+          "kind": "letter",
+          "glyph": "अ",
+          "sound": "a (the u in fun)",
+          "romanization": "a",
+          "mnemonic": "A curly 3 hitched to a tall post – the default vowel a (the u in fun). Devanagari's most common sound: every plain consonant secretly ends in it.",
+          "similar": ["आ"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "आ",
+          "sound": "aa (father)",
+          "romanization": "aa",
+          "mnemonic": "अ (a) with one extra post on the right – the extra stroke stretches the sound long: aa (father).",
+          "similar": ["अ"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "इ",
+          "sound": "i (sit)",
+          "romanization": "i",
+          "mnemonic": "A flag with a wavy tail hanging off the bar – short i (the i in sit).",
+          "similar": ["ई"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "ई",
+          "sound": "ee (see)",
+          "romanization": "ee",
+          "mnemonic": "इ (i) with a small loop added on top – the loop stretches it long: ee (see).",
+          "similar": ["इ"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "उ",
+          "sound": "u (put)",
+          "romanization": "u",
+          "mnemonic": "A plump hook curling in on itself under the bar – short u (the u in put).",
+          "similar": ["ऊ"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "ऊ",
+          "sound": "oo (moon)",
+          "romanization": "oo",
+          "mnemonic": "उ (u) with an extra tail swinging up behind it – stretch it long: oo (moon).",
+          "similar": ["उ"]
+        }
+      ]
+    },
+    {
+      "title": "First consonants – the ka family",
+      "items": [
+        {
+          "kind": "letter",
+          "glyph": "क",
+          "sound": "ka",
+          "romanization": "ka",
+          "mnemonic": "A loop knotted onto a post – ka. The big secret: every consonant carries a built-in a, so क alone already reads ka, no vowel letter needed.",
+          "similar": ["फ"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "ख",
+          "sound": "kha (ka + breath)",
+          "romanization": "kha",
+          "mnemonic": "Two little loops hanging side by side from the bar – ka with one extra puff of breath: kha.",
+          "similar": ["क"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "ग",
+          "sound": "ga (as in go)",
+          "romanization": "ga",
+          "mnemonic": "A smooth hook on a post, nothing fancy – ga (as in go), the voiced one: your throat buzzes.",
+          "similar": ["घ"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "घ",
+          "sound": "gha (ga + breath)",
+          "romanization": "gha",
+          "mnemonic": "A loop that stays open at the top – ga plus one extra puff of breath: gha. Later you'll meet ध (dha), its near-twin – घ is the one with the open loop.",
+          "similar": ["ग", "ध"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "ङ",
+          "sound": "nga (the ng in sing)",
+          "romanization": "nga",
+          "mnemonic": "A curl balancing a dot on its back – nga (the ng in sing). Rare on its own – it mostly hums inside words before its ka-family siblings.",
+          "similar": ["ड"]
+        }
+      ]
+    },
+    {
+      "title": "Vowel signs (matras)",
+      "items": [
+        {
+          "kind": "modifier",
+          "glyph": "ा",
+          "sound": "aa sign",
+          "romanization": "aa",
+          "mnemonic": "Matras are vowel signs that ride on consonants. One extra post after the letter stretches the built-in a to aa: क → का (kaa)."
+        },
+        {
+          "kind": "modifier",
+          "glyph": "ि",
+          "sound": "i sign",
+          "romanization": "i",
+          "mnemonic": "A hooked post written BEFORE the consonant but spoken AFTER it – कि reads ki, never ik. Short i (sit).",
+          "similar": ["ी"]
+        },
+        {
+          "kind": "modifier",
+          "glyph": "ी",
+          "sound": "ee sign",
+          "romanization": "ee",
+          "mnemonic": "The hooked post AFTER the consonant – long ee (see): की = kee. Before the letter = short ि, after = long ी.",
+          "similar": ["ि"]
+        },
+        {
+          "kind": "modifier",
+          "glyph": "ु",
+          "sound": "u sign",
+          "romanization": "u",
+          "mnemonic": "A little hook tucked UNDER the consonant – short u (put): कु = ku.",
+          "similar": ["ू"]
+        },
+        {
+          "kind": "modifier",
+          "glyph": "ू",
+          "sound": "oo sign",
+          "romanization": "oo",
+          "mnemonic": "The under-hook flipped to curl the other way – long oo (moon): कू = koo.",
+          "similar": ["ु"]
+        },
+        {
+          "kind": "composed",
+          "glyph": "का",
+          "sound": "kaa",
+          "romanization": "kaa",
+          "components": ["क", "ा"]
+        },
+        {
+          "kind": "composed",
+          "glyph": "कि",
+          "sound": "ki",
+          "romanization": "ki",
+          "components": ["क", "ि"]
+        },
+        {
+          "kind": "composed",
+          "glyph": "की",
+          "sound": "kee",
+          "romanization": "kee",
+          "components": ["क", "ी"]
+        },
+        {
+          "kind": "composed",
+          "glyph": "कु",
+          "sound": "ku",
+          "romanization": "ku",
+          "components": ["क", "ु"]
+        },
+        {
+          "kind": "composed",
+          "glyph": "कू",
+          "sound": "koo",
+          "romanization": "koo",
+          "components": ["क", "ू"]
+        }
+      ]
+    },
+    {
+      "title": "E and O vowels + their signs",
+      "items": [
+        {
+          "kind": "letter",
+          "glyph": "ए",
+          "sound": "e (they, no glide)",
+          "romanization": "e",
+          "mnemonic": "A streamer with a sharp kink hanging straight off the bar – no post underneath – e (as in they, but clean, no y-glide at the end).",
+          "similar": ["ऐ"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "ऐ",
+          "sound": "ai (the a in bat, held long)",
+          "romanization": "ai",
+          "mnemonic": "ए (e) with a tick above the bar – the mouth opens wider: ai (the a in bat, held long).",
+          "similar": ["ए"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "ओ",
+          "sound": "o (go)",
+          "romanization": "o",
+          "mnemonic": "आ (aa) wearing a small tick above its post – round your lips: o (go).",
+          "similar": ["औ"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "औ",
+          "sound": "au (the au in caught)",
+          "romanization": "au",
+          "mnemonic": "ओ (o) with a second tick above – au (the au in caught).",
+          "similar": ["ओ"]
+        },
+        {
+          "kind": "modifier",
+          "glyph": "े",
+          "sound": "e sign",
+          "romanization": "e",
+          "mnemonic": "A single tick above the bar – adds e: के = ke. The e-family signs live on TOP of the letter.",
+          "similar": ["ै"]
+        },
+        {
+          "kind": "modifier",
+          "glyph": "ै",
+          "sound": "ai sign",
+          "romanization": "ai",
+          "mnemonic": "Two ticks above the bar – ai: कै = kai. One tick = e, two ticks = ai.",
+          "similar": ["े"]
+        },
+        {
+          "kind": "modifier",
+          "glyph": "ो",
+          "sound": "o sign",
+          "romanization": "o",
+          "mnemonic": "The aa post with a tick on top – o: को = ko.",
+          "similar": ["ौ", "ा"]
+        },
+        {
+          "kind": "modifier",
+          "glyph": "ौ",
+          "sound": "au sign",
+          "romanization": "au",
+          "mnemonic": "The post with two ticks on top – au: कौ = kau.",
+          "similar": ["ो"]
+        },
+        {
+          "kind": "composed",
+          "glyph": "के",
+          "sound": "ke",
+          "romanization": "ke",
+          "components": ["क", "े"]
+        },
+        {
+          "kind": "composed",
+          "glyph": "गै",
+          "sound": "gai",
+          "romanization": "gai",
+          "components": ["ग", "ै"]
+        },
+        {
+          "kind": "composed",
+          "glyph": "खो",
+          "sound": "kho",
+          "romanization": "kho",
+          "components": ["ख", "ो"]
+        },
+        {
+          "kind": "composed",
+          "glyph": "घौ",
+          "sound": "ghau",
+          "romanization": "ghau",
+          "components": ["घ", "ौ"]
+        }
+      ]
+    },
+    {
+      "title": "The cha family",
+      "items": [
+        {
+          "kind": "letter",
+          "glyph": "च",
+          "sound": "cha (as in chat)",
+          "romanization": "cha",
+          "mnemonic": "A rolled-up scroll on a post – cha (as in chat), crisp and with no breath behind it.",
+          "similar": ["छ"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "छ",
+          "sound": "chha (cha + breath)",
+          "romanization": "chha",
+          "mnemonic": "A balloon with a ribbon tail under the bar – cha plus one extra puff of breath: chha.",
+          "similar": ["च"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "ज",
+          "sound": "ja (as in jug)",
+          "romanization": "ja",
+          "mnemonic": "A hook with a stroke through its waist – voiced ja (as in jug).",
+          "similar": ["झ", "ज़"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "झ",
+          "sound": "jha (ja + breath)",
+          "romanization": "jha",
+          "mnemonic": "A hook with an extra zigzag bend in it – ja plus one extra puff of breath: jha.",
+          "similar": ["ज"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "ञ",
+          "sound": "nya (the ny in canyon)",
+          "romanization": "nya",
+          "mnemonic": "A flat roof over a little wave – nya (the ny in canyon). Rarely stands alone – it mostly hides inside joined letters.",
+          "similar": []
+        },
+        {
+          "kind": "composed",
+          "glyph": "चा",
+          "sound": "chaa",
+          "romanization": "chaa",
+          "components": ["च", "ा"]
+        },
+        {
+          "kind": "composed",
+          "glyph": "जी",
+          "sound": "jee",
+          "romanization": "jee",
+          "components": ["ज", "ी"]
+        },
+        {
+          "kind": "composed",
+          "glyph": "छे",
+          "sound": "chhe",
+          "romanization": "chhe",
+          "components": ["छ", "े"]
+        }
+      ]
+    },
+    {
+      "title": "Retroflex – the Ta family",
+      "items": [
+        {
+          "kind": "letter",
+          "glyph": "ट",
+          "sound": "ṭa (retroflex – tongue curled back)",
+          "romanization": "ta",
+          "mnemonic": "A hook curling back on itself – your tongue copies it: curl the tip back and tap the roof of the mouth: ṭa. Hindi's heavy t – the soft on-the-teeth त comes later.",
+          "similar": ["ठ", "त"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "ठ",
+          "sound": "ṭha (retroflex + breath)",
+          "romanization": "tha",
+          "mnemonic": "A full circle hanging from the bar – same curled-back tongue as ट, plus one extra puff of breath: ṭha.",
+          "similar": ["ट"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "ड",
+          "sound": "ḍa (retroflex – tongue curled back)",
+          "romanization": "da",
+          "mnemonic": "A big-bellied curl – tongue curled back and voiced: ḍa, a heavy d. English d is actually closer to this than to the soft dental द.",
+          "similar": ["ढ", "ङ"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "ढ",
+          "sound": "ḍha (retroflex + breath)",
+          "romanization": "dha",
+          "mnemonic": "ड (ḍa) with a little tail curled inside its belly – add one puff of breath: ḍha.",
+          "similar": ["ड"]
+        },
+        {
+          "kind": "letter",
+          "glyph": "ण",
+          "sound": "ṇa (retroflex n – tongue curled back)",
+          "romanization": "na",
+          "mnemonic": "A curl with a loop tucked beneath it – an n said with the tongue curled back: ṇa. Its flat-tongue twin न arrives with the dental row.",
+          "similar": ["न"]
+        },
+        {
+          "kind": "composed",
+          "glyph": "टी",
+          "sound": "ṭee",
+          "romanization": "tee",
+          "components": ["ट", "ी"]
+        },
+        {
+          "kind": "composed",
+          "glyph": "डा",
+          "sound": "ḍaa",
+          "romanization": "daa",
+          "components": ["ड", "ा"]
+        },
+        {
+          "kind": "composed",
+          "glyph": "ठो",
+          "sound": "ṭho",
+          "romanization": "tho",
+          "components": ["ठ", "ो"]
+        }
+      ]
+    }
+  ]
+}

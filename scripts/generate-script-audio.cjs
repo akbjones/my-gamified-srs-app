@@ -67,6 +67,25 @@ function synthPlan(item) {
     // synthesize doubled with the ja full stop, trim to the first take.
     return { text: `${speak}。${speak}。`, trim: true };
   }
+  if (packName === 'devanagari') {
+    // Short one/two-syllable words (क्या, हैं) collapse to silence exactly
+    // like bare syllables — synthesize doubled and trim to the first take.
+    if (item.kind === 'word') {
+      const short = [...item.glyph].length <= 4;
+      return short ? { text: `${item.glyph}। ${item.glyph}।`, trim: true } : { text: item.glyph, trim: false };
+    }
+    // Matras/signs have no isolated pronunciation — demonstrate on a carrier
+    // (क for matras; the sign's conventional carrier otherwise). The halant
+    // speaks a real conjunct word. Carriers reuse composed items' synth text
+    // where possible (identical text = byte-identical clip, Hangul principle).
+    const DEVA_SPEAK = {
+      'ा': 'का', 'ि': 'कि', 'ी': 'की', 'ु': 'कु', 'ू': 'कू', 'ृ': 'कृ',
+      'े': 'के', 'ै': 'कै', 'ो': 'को', 'ौ': 'कौ',
+      'ं': 'अं', 'ँ': 'हाँ', 'ः': 'अः', '्': 'क्या',
+    };
+    const speak = DEVA_SPEAK[item.glyph] ?? item.glyph;
+    return { text: `${speak}। ${speak}।`, trim: true };
+  }
   if (packName !== 'hangul' || item.kind === 'word') return { text: item.glyph, trim: false };
   let syllable = item.glyph;
   if (item.kind !== 'composed') {

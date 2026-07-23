@@ -24,7 +24,11 @@ export const SCRIPT_PACKS: Partial<Record<Language, ScriptPackRef>> = {
     scriptId: 'kana',
     loader: () => import('./kana.json').then(m => m.default as unknown as ScriptPack),
   },
-  // russian → cyrillic (P3), hindi → devanagari (P3).
+  hindi: {
+    scriptId: 'devanagari',
+    loader: () => import('./devanagari.json').then(m => m.default as unknown as ScriptPack),
+  },
+  // russian → cyrillic (next in the script-teacher queue).
 };
 
 export const scriptPackFor = (lang: Language): ScriptPackRef | undefined => SCRIPT_PACKS[lang];

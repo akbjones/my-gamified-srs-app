@@ -213,6 +213,11 @@ async function main() {
 
   // Filter cards to process
   let toProcess = deck;
+  const only = (args.find(a => a.startsWith('--only=')) || '').split('=')[1];
+  if (only) {
+    toProcess = deck.filter(c => String(c.id) === only);
+    console.log(`--only=${only}: ${toProcess.length} card(s) selected`);
+  }
   if (resume) {
     const existing = new Set(fs.readdirSync(AUDIO_DIR));
     toProcess = deck.filter(card => !existing.has(audioFilename(card.id)));

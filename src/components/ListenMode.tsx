@@ -75,6 +75,17 @@ const ListenMode: React.FC<ListenModeProps> = ({ cards, language, audioSpeed, go
     const MIN_CARD_MS = 3500;
     const advance = (extraPause: number) => {
       if (myGen !== genRef.current || !isPlaying) return;
+      // Screen locked / app backgrounded: browsers throttle or fully suspend
+      // setTimeout, so a timer-based advance never fires and playback freezes
+      // after the current clip. Nobody can read the card anyway – chain to the
+      // next clip immediately, inside the audio 'ended' turn, so the pipeline
+      // never sits in a silent gap waiting on a timer that won't run.
+      if (document.hidden) {
+        clearTimer();
+        setShowTranslation(false);
+        setIdx(i => (i + 1) % playList.length);
+        return;
+      }
       const wait = Math.max(extraPause, MIN_CARD_MS - (Date.now() - shownAt));
       clearTimer();
       timerRef.current = window.setTimeout(() => {

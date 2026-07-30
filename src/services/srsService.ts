@@ -5,6 +5,24 @@ import { fsrs, generatorParameters, createEmptyCard, Rating, State, type Card as
 const MINUTE = 60 * 1000;
 const DAY = 24 * 60 * 60 * 1000;
 const MAX_INTERVAL = 365 * DAY; // Cap at 1 year
+
+// ── Anki-style day rollover ──────────────────────────────────
+// Graduated cards (interval >= 1 day) become due at the START of their due
+// DAY, not at the per-card timestamp – so "today's cards" all arrive together
+// at the 4am rollover instead of trickling in at the hour each was last
+// reviewed. Sub-day learning steps keep exact timestamps (minutes matter there).
+const ROLLOVER_HOUR = 4; // 4am local, same default as Anki
+export function endOfSrsDay(now: number): number {
+  const boundary = new Date(now);
+  boundary.setHours(ROLLOVER_HOUR, 0, 0, 0);
+  if (now >= boundary.getTime()) boundary.setDate(boundary.getDate() + 1);
+  return boundary.getTime();
+}
+export function isCardDue(card: Pick<QuestCard, 'dueDate' | 'interval'>, now: number): boolean {
+  if (!card.dueDate) return true;
+  if ((card.interval ?? 0) < DAY) return card.dueDate <= now;
+  return card.dueDate < endOfSrsDay(now);
+}
 const RETENTION_THRESHOLD = 21 * DAY; // 21 days = "retained"
 const LEECH_THRESHOLD = 5; // AGAIN count to flag as leech
 

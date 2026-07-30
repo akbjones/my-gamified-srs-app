@@ -145,7 +145,7 @@ export default defineConfig({
               // v18 = 2026-07-14 Hindi voice harmonisation — 848 Neural2 stragglers regenerated on Chirp3-HD-Aoede so the whole deck is one voice
               // v19 = 2026-07-23 Japanese starter (300 deck clips) + kana teacher (120) + Devanagari teacher (102)
               // v20 = 2026-07-23 Devanagari vowel-length fix — 21 vowel/matra clips recalibrated so long vowels are audibly longer than short
-              cacheName: 'audio-cache-v20',
+              cacheName: 'audio-cache-v22',
               expiration: {
                 maxEntries: 500,
                 maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days

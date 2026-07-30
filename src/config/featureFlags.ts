@@ -21,6 +21,14 @@ export const GRAMMAR_TIPS_LANGS: ReadonlySet<Language> = new Set<Language>([
   'greek',      // Wave A 2026-07-22: 1,055 tips, 26.8%, verified + linter-clean
   'indonesian', // Wave A 2026-07-22: 1,021 tips, 26.0%, verified + linter-clean
   'french',     // Wave B 2026-07-23: 877 tips, 22.3%, classify→rewrite→fill→verify, linter-clean
+  'italian',    // Wave B 2026-07-24: 923 tips, 23.4%, author→adversarial-verify, gates green + spot-checked
+  'portuguese', // Wave B 2026-07-24: 883 tips, 22.3%, author→adversarial-verify, gates green + spot-checked
+  'german',     // Wave B 2026-07-24: 912 tips, 23.1%, author→adversarial-verify, gates green + spot-checked
+  'dutch',      // Wave B 2026-07-24: 901 tips, 22.9%, author→adversarial-verify, gates green + spot-checked
+  'swedish',    // Wave B 2026-07-24: 878 tips, 22.4%, author→adversarial-verify, gates green + spot-checked
+  'turkish',    // Wave C 2026-07-24: 691 tips, 22.2%, + Tip Clarity format pass + adversarial judgment critic
+  'russian',    // Wave C 2026-07-24: 704 tips, 22.2%, + Tip Clarity format pass + adversarial judgment critic
+  'welsh',      // Wave C 2026-07-24: 774 tips, 22.0%, + Tip Clarity format pass + adversarial judgment critic
 ]);
 
 /** Should the UI surface grammar tips for this language? */

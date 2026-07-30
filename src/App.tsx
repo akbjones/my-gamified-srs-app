@@ -11,7 +11,8 @@ import CheckInScreen from './components/CheckInScreen';
 import ScriptTeacher from './components/ScriptTeacher';
 import { QuestCard, MasteryMap, SessionState, UserStats, DailyStats, Language, LearningGoal, LANGUAGE_CONFIG, GOAL_CONFIG, ProgressState, ChallengeMode, ChallengeQuestion, BossRing } from './types';
 import { MAIN_PATH, isNodeUnlocked, getNodeName, getChapterForNode, chapterIndex } from './data/topicConfig';
-import { handleAnswerLogic, saveCardProgress, getRetention, burySiblings, interleaveQueue } from './services/srsService';
+import { handleAnswerLogic, saveCardProgress, getRetention, burySiblings, isCardDue } from './services/srsService';
+import { preloadCardAudio } from './services/audioService';
 import {
   migrateStorageKeys, loadMasteryMap, saveMasteryMap, loadUserStats, saveUserStats,
   loadDailyStats, saveDailyStats, resetAll, loadScriptMap,
@@ -335,6 +336,13 @@ const App: React.FC = () => {
     let cancelled = false;
     const loadRaw = STARTER_LOCK ? STARTER_LOADERS[lang] : DECK_LOADERS[lang];
     if (!loadRaw) return;
+    // Drop the previous language's cards immediately. If the new deck chunk
+    // can't load (offline + never downloaded), the old language's sentences
+    // must not keep rendering under the new language's label.
+    setDeck([]);
+    setSession(prev => prev.language === lang && prev.queue.length === 0 ? prev : {
+      language: lang, topic: '', queue: [], currentIndex: 0, isFlipped: false, finishedCount: 0, newCardsSeen: 0,
+    });
     loadRaw().then(rawDeck => {
       if (cancelled || !rawDeck) return;
       const map = loadMasteryMap(lang);
@@ -491,7 +499,7 @@ const App: React.FC = () => {
       return nodeIdx >= 0 && isNodeUnlocked(nodeIdx, deck);
     });
     const reviews = allUnlockedCards.filter(
-      c => c.mastery > 0 && (c.dueDate ? c.dueDate <= now : true)
+      c => c.mastery > 0 && isCardDue(c, now)
     );
 
     // New cards come from the current frontier node (graded progression).
@@ -525,11 +533,18 @@ const App: React.FC = () => {
     setUserStats(updatedStats);
     saveUserStats(updatedStats, lang);
 
-    // Interleave new cards among reviews, then bury siblings
-    const interleaved = interleaveQueue(reviews, newCards);
+    // Anki-style order: clear today's due reviews first, then meet the new
+    // cards at the end of the session (no interleaving).
+    const ordered = [...reviews, ...newCards];
     const queue = burySiblings(
-      interleaved.map(c => ({ ...c, step: c.step || 0 }))
+      ordered.map(c => ({ ...c, step: c.step || 0 }))
     );
+
+    // Warm the audio cache for this session's queue while we're (probably)
+    // online. The service worker caches every fetched clip, so once warmed
+    // the whole session keeps audio through a mid-session disconnection —
+    // previously a never-played card had no cached clip and went silent.
+    queue.slice(0, 60).forEach(c => preloadCardAudio(c.audio));
 
     // Tile-rearrange challenge removed (2026-07-22): no cards are promoted to
     // the tile game any more, so study is pure flashcards. tileCardIds stays
@@ -775,7 +790,7 @@ const App: React.FC = () => {
     return nodeIdx >= 0 && isNodeUnlocked(nodeIdx, deck);
   });
   const reviewsDue = allUnlockedCards.filter(
-    c => c.mastery > 0 && (c.dueDate ? c.dueDate <= now : true)
+    c => c.mastery > 0 && isCardDue(c, now)
   ).length;
   const dailyLeft = Math.max(0, getDailyLimitFor(settings, lang) - dailyStats.newCardsCount);
   const newAvailable = currentNode
@@ -1582,8 +1597,6 @@ const App: React.FC = () => {
           {/* Version log – build info pinned to the very bottom of the home
               view so users can quote the exact build when reporting issues. */}
           <div className="mt-3 pt-3 border-t border-[var(--border-color)] flex items-center justify-center gap-2 text-xs font-semibold text-[var(--text-muted)] tabular-nums">
-            <span>v{__APP_VERSION__}</span>
-            <span>·</span>
             <span>{__APP_SHA__}</span>
             <span>·</span>
             <span>{__APP_BUILD_DATE__}</span>

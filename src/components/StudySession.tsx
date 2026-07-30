@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { QuestCard, SessionState, Language, ChallengeMode } from '../types';
-import { Volume2, BookOpen, BookText, AlertTriangle, Swords, Zap, Star, Hand } from 'lucide-react';
+import { Volume2, BookOpen, BookText, AlertTriangle, Swords, Zap, Star, Hand, Copy, Check } from 'lucide-react';
 import { playCardAudio, stopAudio, preloadCardAudio, preloadSessionAudio } from '../services/audioService';
 import { lookupEtymology } from '../services/etymologyService';
 import {
@@ -77,6 +77,7 @@ const FURIGANA_HIDDEN_KEY = 'quest_furigana_hidden';
 const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAnswer, onAbort, onStudyMore, hasMoreCards, topicCards = [], autoPlayAudio, audioSpeed, googleTtsApiKey, tileCardIds = new Set(), pendingChallenge, onStartChallenge }) => {
   const [showInfo, setShowInfo] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [copiedTarget, setCopiedTarget] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showGrammar, setShowGrammar] = useState(false);
   const [showEtymology, setShowEtymology] = useState(false);
@@ -373,7 +374,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
           {/* Card state badge – top-left, always visible so the learner knows
               whether this card is new, still being learned, or a review. */}
           <div className="absolute top-2 left-2 z-10">
-            <span className={`px-2.5 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider border ${cardState.cls}`}>
+            <span className={`px-2.5 py-1 rounded-lg text-sm font-bold uppercase tracking-wider border ${cardState.cls}`}>
               {cardState.label}
             </span>
           </div>
@@ -443,7 +444,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               Both pinned to the top-right corner of the card so they're
               always within thumb reach in the same spot. Absolute positioning
               so they don't affect the card content's vertical layout. */}
-          {((grammarTipsEnabled(session.language) && card!.grammar) || (isFlipped && cardEty)) && (
+          {isFlipped && ((grammarTipsEnabled(session.language) && card!.grammar) || cardEty) && (
             <div className="absolute top-2 right-2 z-10 flex flex-col items-end gap-2">
               {grammarTipsEnabled(session.language) && card!.grammar && (
                 <button
@@ -542,12 +543,12 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
           {(() => {
             const wordCount = displayLengthFor(card!);
             const sizeClass = wordCount <= 6
-              ? 'text-2xl md:text-3xl'
+              ? 'text-3xl md:text-4xl'
               : wordCount <= 10
-              ? 'text-xl md:text-2xl'
+              ? 'text-2xl md:text-3xl'
               : wordCount <= 14
-              ? 'text-lg md:text-xl'
-              : 'text-base md:text-lg';
+              ? 'text-xl md:text-2xl'
+              : 'text-lg md:text-xl';
             const engSizeClass = wordCount <= 10
               ? 'text-base md:text-lg'
               : 'text-sm md:text-base';
@@ -585,6 +586,25 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                   interactive={isFlipped}
                   className={`${sizeClass} font-black tracking-tight text-[var(--text-primary)] leading-snug max-w-sm mx-auto`}
                 />
+                {/* Copy the target sentence (not the English) – handy for
+                    dropping into an LLM to translate or break down. Shown only
+                    once revealed so it doesn't distract from recall. */}
+                {isFlipped && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      navigator.clipboard?.writeText(card!.target).then(() => {
+                        setCopiedTarget(true);
+                        window.setTimeout(() => setCopiedTarget(false), 1500);
+                      }).catch(() => {});
+                    }}
+                    className="mt-2 flex items-center gap-1 text-[11px] font-semibold text-[var(--text-faint)] hover:text-[var(--accent)] transition-colors active:scale-95"
+                    title="Copy the sentence"
+                  >
+                    {copiedTarget ? <Check size={12} /> : <Copy size={12} />}
+                    <span>{copiedTarget ? 'Copied' : 'Copy'}</span>
+                  </button>
+                )}
                 {isFlipped ? (
                   <div className="mt-4 pt-4 border-t border-[var(--border-color)] w-full animate-fade-in">
                     <p className={`${engSizeClass} text-[var(--text-secondary)] font-bold italic leading-relaxed`}>
@@ -601,7 +621,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                     )}
                   </div>
                 ) : (
-                  <div className="mt-6 text-xs text-[var(--text-muted)] font-bold uppercase tracking-widest">
+                  <div className="mt-6 text-sm text-[var(--text-muted)] font-bold uppercase tracking-widest">
                     Tap to reveal
                   </div>
                 )}
@@ -616,7 +636,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             {isFlipped && (
               <button
                 onClick={handleSlowReplay}
-                className={`px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border active:scale-95 ${
+                className={`px-4 py-2.5 rounded-xl text-sm font-bold uppercase tracking-wider transition-all border active:scale-95 ${
                   isPlaying
                     ? 'bg-[var(--accent)]/10 border-[var(--accent)]/40 text-[var(--accent)]'
                     : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40'
@@ -627,7 +647,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             )}
             <button
               onClick={handlePlayAudio}
-              className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border active:scale-95 ${
+              className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-sm font-bold uppercase tracking-wider transition-all border active:scale-95 ${
                 isPlaying
                   ? 'bg-[var(--accent)]/10 border-[var(--accent)]/40 text-[var(--accent)] animate-pulse'
                   : 'border-[var(--border-color)] text-[var(--text-muted)] hover:text-[var(--accent)] hover:border-[var(--accent)]/40'

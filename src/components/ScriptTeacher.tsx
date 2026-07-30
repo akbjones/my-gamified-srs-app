@@ -228,9 +228,11 @@ const ScriptTeacher: React.FC<ScriptTeacherProps> = ({
 
   // ── MAP ────────────────────────────────────────────────────────────────────
   if (phase === 'map') {
+    // Review is the hero action once there's nothing new left to learn.
+    const reviewIsPrimary = batchPreview.length === 0 && dueCount > 0;
     return (
       <div className="flex flex-col min-h-dvh px-5 pt-[max(1rem,env(safe-area-inset-top))] pb-[max(1.5rem,env(safe-area-inset-bottom))]">
-        <button onClick={onExit} className="btn-ghost self-start text-[10px] font-bold uppercase tracking-wider mb-4">
+        <button onClick={onExit} className="btn-ghost inline-flex items-center gap-1 self-start text-[10px] font-bold uppercase tracking-wider mb-4">
           <ChevronLeft size={14} /> Back
         </button>
 
@@ -258,10 +260,12 @@ const ScriptTeacher: React.FC<ScriptTeacherProps> = ({
           <button
             onClick={startReview}
             disabled={dueCount === 0}
-            className={`w-full py-3 rounded-xl text-sm font-bold border transition active:scale-[0.98] ${
-              dueCount > 0
-                ? 'border-[var(--accent)]/40 bg-[var(--bg-card)] text-[var(--accent)] hover:bg-[var(--accent)]/10'
-                : 'border-[var(--border-color)] bg-[var(--bg-inset)] text-[var(--text-faint)] cursor-default'
+            className={`w-full rounded-xl font-black transition active:scale-[0.98] ${
+              dueCount === 0
+                ? 'py-2.5 text-xs text-[var(--text-faint)] cursor-default'
+                : reviewIsPrimary
+                  ? 'py-3.5 text-sm btn-primary'
+                  : 'py-3 text-sm border-2 border-[var(--accent)]/50 bg-[var(--accent)]/10 text-[var(--accent)] hover:bg-[var(--accent)]/20'
             }`}
           >
             {dueCount > 0 ? `Review · ${dueCount} due` : 'No reviews due'}

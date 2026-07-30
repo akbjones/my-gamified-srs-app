@@ -1,0 +1,370 @@
+[
+ {
+  "id": "it-0005",
+  "target": "L'acqua è fredda.",
+  "english": "The water is cold.",
+  "node": "node-01",
+  "old": "L' is the elided article (il/la → l') before a vowel: l'uomo, l'amica. Gender is hidden by elision.",
+  "focus": "Elision hides gender – anchor on l'acqua itself (is it il or la?); keep at most one sibling example"
+ },
+ {
+  "id": "it-0013",
+  "target": "Io abito in centro.",
+  "english": "I live downtown.",
+  "node": "node-01",
+  "old": "'Abitare' = to live (somewhere). 'In centro' = downtown/in the center. 'In' without article before general areas.",
+  "focus": "One rule only: 'in centro' takes no article – English says 'in the center'; cut the abitare gloss"
+ },
+ {
+  "id": "it-0015",
+  "target": "Io amo la musica.",
+  "english": "I love music.",
+  "node": "node-01",
+  "old": "'Amare' = to love (stronger than 'piacere'). 'La musica' uses the article – Italian uses definite articles with abstract nouns.",
+  "focus": "Definite article with things loved in general – 'amo la musica' where English drops 'the'; cut the amare-vs-piacere aside"
+ },
+ {
+  "id": "it-0017",
+  "target": "Io gioco a tennis.",
+  "english": "I play tennis.",
+  "node": "node-01",
+  "old": "'Giocare a' + sport: 'gioco a tennis'. Use 'a' before sports. 'Giocare' has a soft g before -o: 'gioco'.",
+  "focus": "'Giocare a' + sport ('gioco a tennis') – English 'play tennis' has no preposition; cut the soft-g spelling aside"
+ },
+ {
+  "id": "it-0053",
+  "target": "Tu ti alzi tardi.",
+  "english": "You get up late.",
+  "node": "node-01",
+  "old": "Reflexive verbs need a pronoun: `mi chiamo` (I call myself = my name is), `si lava` (he washes himself). The pronoun matches the subject – mi/ti/si/ci/vi/si.",
+  "focus": "Anchor on 'ti alzi' – alzarsi is literally 'raise yourself' = get up; pronoun matches subject; strip backticks and off-card examples"
+ },
+ {
+  "id": "it-0086",
+  "target": "La pasta è pronta.",
+  "english": "The pasta is ready.",
+  "node": "node-01",
+  "old": "Endings hint at gender: -o usually m, -a usually f. But la mano is f, il problema is m. The article is the real signal.",
+  "focus": "Good insight (the article, not the ending, is the real gender signal) – anchor it on 'la pasta è pronta' with its double -a agreement"
+ },
+ {
+  "id": "it-0107",
+  "target": "Tu sai la risposta.",
+  "english": "You know the answer.",
+  "node": "node-01",
+  "old": "Sapere (to know facts) is irregular: so, sai, sa, sappiamo, sapete, sanno. Compare with conoscere (to know people/places).",
+  "focus": "Keep only sapere = know facts vs conoscere = know people/places, anchored on 'sai la risposta'; drop the paradigm list"
+ },
+ {
+  "id": "it-0119",
+  "target": "Tu non stai attento.",
+  "english": "You're not paying attention.",
+  "node": "node-01",
+  "old": "`stare` for how you are right now: `come stai?` (how are you?), `sto bene` (I'm fine). With permanent traits switch to `essere`.",
+  "focus": "Stare for current states/attention – anchor on 'non stai attento'; strip backticks"
+ },
+ {
+  "id": "it-0120",
+  "target": "Puoi ripetere, per favore?",
+  "english": "Can you repeat, please?",
+  "node": "node-01",
+  "old": "Yes/no questions in Italian mainly use rising intonation. Word order can stay the same, though subject-verb inversion is also possible for emphasis.",
+  "focus": "Anchor on 'Puoi ripetere?' – statement word order + rising intonation makes the yes/no question; cut the hedgy inversion aside"
+ },
+ {
+  "id": "it-0121",
+  "target": "Lui sta cucinando la cena.",
+  "english": "He's cooking dinner.",
+  "node": "node-01",
+  "old": "\"Stare + gerundio\" forms the Italian progressive: \"sto parlando\" (I am speaking right now).",
+  "focus": "Progressive = stare + -ndo; anchor on this card's 'sta cucinando' instead of sto parlando"
+ },
+ {
+  "id": "it-0129",
+  "target": "Io mi lavo i denti.",
+  "english": "I brush my teeth.",
+  "node": "node-01",
+  "old": "Reflexive isn't always literal in English: `ricordarsi` = to remember, `arrabbiarsi` = to get angry. If the dictionary form ends in -si, you need the matching pronoun.",
+  "focus": "Second reflexive telling, new angle: 'mi lavo i denti' – reflexive + article replaces the possessive (i denti, not 'my' teeth); strip backticks and off-card examples"
+ },
+ {
+  "id": "it-0151",
+  "target": "Credo che Maria sia partita.",
+  "english": "I think Maria left.",
+  "node": "node-16",
+  "old": "After expressions of wish/doubt/opinion + `che`, Italian uses subjunctive (congiuntivo). `Voglio che tu venga` (not vieni) = 'I want you to come'.",
+  "focus": "Doubt/opinion + che triggers subjunctive – anchor on 'Credo che... sia partita'; strip backticks and the off-card venga example"
+ },
+ {
+  "id": "it-0163",
+  "target": "Dove posso cambiare i soldi?",
+  "english": "Where can I exchange money?",
+  "node": "node-01",
+  "old": "Modal verbs (dovere, potere, volere) attach directly to the infinitive: `devo studiare`, `posso aiutare`, `voglio mangiare`. No preposition needed – unlike English's clunkier 'have to' / 'be able to'.",
+  "focus": "Modal + bare infinitive is the right insight – anchor on 'posso cambiare'; strip backticks; trim example pile"
+ },
+ {
+  "id": "it-0175",
+  "target": "Noi camminiamo al parco.",
+  "english": "We walk to the park.",
+  "node": "node-01",
+  "old": "'Camminare al parco' = to walk to the park. 'Al' = a+il (contraction). All -are 'noi' forms: -iamo.",
+  "focus": "One rule only: al = a + il contraction, anchored on 'al parco'; cut the gloss and the -iamo conjugation aside"
+ },
+ {
+  "id": "it-0207",
+  "target": "Dicono che pioverebbe domani.",
+  "english": "They say it would rain tomorrow.",
+  "node": "node-18",
+  "old": "Conditional used for reported/unconfirmed info.",
+  "focus": "Reportative conditional is a real surprise – anchor on 'pioverebbe': 'they say it would rain' = unconfirmed report; add a hook, it's currently a bare label"
+ },
+ {
+  "id": "it-0223",
+  "target": "Sarebbe meglio partire presto.",
+  "english": "It would be better to leave early.",
+  "node": "node-01",
+  "old": "Conditional of essere + meglio for giving advice.",
+  "focus": "'Sarebbe meglio' + infinitive is the polite-advice softener ('it would be better to') – quote the card's phrase and add a hook; current tip is a bare label."
+ },
+ {
+  "id": "it-0225",
+  "target": "Io cammino lungo il fiume.",
+  "english": "I walk along the river.",
+  "node": "node-01",
+  "old": "'Lungo' as preposition means 'along': 'cammino lungo il fiume' = I walk along the river.",
+  "focus": "lungo = 'long' as adjective but 'along' as preposition – lead with the two-meanings landmine, cut the sentence re-translation."
+ },
+ {
+  "id": "it-0227",
+  "target": "Noi abitiamo vicino al parco.",
+  "english": "We live near the park.",
+  "node": "node-01",
+  "old": "'Vicino a' = near/close to: 'abitiamo vicino al parco'. Note 'a+il' contracts to 'al'. Opposite: 'lontano da'.",
+  "focus": "English 'near the park' takes no preposition but Italian needs vicino A ('vicino al parco') – one rule; drop the lontano da add-on."
+ },
+ {
+  "id": "it-0231",
+  "target": "Lei si prepara per uscire.",
+  "english": "She gets ready to go out.",
+  "node": "node-01",
+  "old": "Reflexive verbs use 'si' for third person: 'si prepara' = she gets (herself) ready. Full pattern: mi, ti, si, ci, vi, si.",
+  "focus": "'si prepara' = she prepares HERSELF – Italian makes daily-routine verbs reflexive where English doesn't; cut the mi/ti/si/ci/vi/si paradigm list."
+ },
+ {
+  "id": "it-0242",
+  "target": "La sera guardo un film.",
+  "english": "In the evening I watch a movie.",
+  "node": "node-01",
+  "old": "Definite article with days/times for habits: 'il lunedì lavoro' = on Mondays I work. No article = one specific day.",
+  "focus": "The article on time phrases means habitual: 'La sera guardo un film' = in the evenings, every evening – anchor in THIS card's 'La sera', not the sibling 'il lunedì' example."
+ },
+ {
+  "id": "it-0260",
+  "target": "La metro passa ogni cinque minuti.",
+  "english": "The metro comes every five minutes.",
+  "node": "node-01",
+  "old": "'Ogni' (every/each) is always singular: 'ogni cinque minuti' = every five minutes. Never changes form.",
+  "focus": "ogni never changes form, and with a numeral it takes a plural noun: 'ogni cinque minuti' – fix the misleading 'always singular' claim that contradicts the card's own plural 'minuti'."
+ },
+ {
+  "id": "it-0270",
+  "target": "Noi passiamo le vacanze al mare.",
+  "english": "We spend the holidays at the beach.",
+  "node": "node-01",
+  "old": "'Passare le vacanze' = to spend holidays. 'Al mare' = at the seaside. 'Al' = a+il (contraction).",
+  "focus": "'Spending' time is passare, never spendere (money only): 'passiamo le vacanze' – lead with that trap, cut the al-contraction and seaside glosses."
+ },
+ {
+  "id": "it-0278",
+  "target": "Lei sta peggio di ieri.",
+  "english": "She's feeling worse than yesterday.",
+  "node": "node-01",
+  "old": "\"Stare\" describes temporary states and conditions: \"sta bene\" (is well), \"sta attento\" (is paying attention).",
+  "focus": "stare for how you're doing/feeling – anchor with this card's 'sta peggio' (she's doing worse) instead of the sibling sta bene/sta attento examples."
+ },
+ {
+  "id": "it-0288",
+  "target": "Mi puoi aiutare?",
+  "english": "Can you help me?",
+  "node": "node-02",
+  "old": "If a reflexive verb follows a modal, the pronoun can sit before the modal OR attach to the infinitive: `mi devo alzare` = `devo alzarmi`. Both valid; sound the same.",
+  "focus": "The pronoun can sit before the modal or attach to the infinitive: 'Mi puoi aiutare' = 'Puoi aiutarmi', both fine – fix the wrong 'reflexive' label (aiutare isn't reflexive here), use this card, no backticks."
+ },
+ {
+  "id": "it-0290",
+  "target": "Cos'hai fatto ieri?",
+  "english": "What did you do yesterday?",
+  "node": "node-02",
+  "old": "WH-question with 'cosa/che cosa' (what): Cos'hai = cosa + hai (elision). Past tense question.",
+  "focus": "Decode the contraction: Cos'hai = cosa + hai, elision before a vowel – drop the 'WH-question' and 'past tense question' labels."
+ },
+ {
+  "id": "it-0322",
+  "target": "Io sto cercando lavoro.",
+  "english": "I'm looking for a job.",
+  "node": "node-02",
+  "old": "`stare + gerundio` = English '-ing now': `sto mangiando` = 'I'm eating (right now)'. Italian uses it less than English – bare present often does the job.",
+  "focus": "'sto cercando' = I'm looking right now (stare + gerund), but Italian uses it far less than English -ing – keep that usage note, anchor in this card's phrase, remove backticks."
+ },
+ {
+  "id": "it-0331",
+  "target": "Tu stai leggendo un romanzo.",
+  "english": "You're reading a novel.",
+  "node": "node-02",
+  "old": "Only use `stare + -ando/-endo` for emphasis on 'this very moment'. `Mangio adesso` and `sto mangiando adesso` both work; the gerundio adds 'in progress'.",
+  "focus": "Progressive is optional emphasis in Italian – 'stai leggendo' stresses in-progress, bare present would also work – anchor in this card's phrase, remove backticks and the sibling mangiando example."
+ },
+ {
+  "id": "it-0388",
+  "target": "Io sto attento a quello che mangio.",
+  "english": "I'm careful about what I eat.",
+  "node": "node-02",
+  "old": "Health, mood, brief states → `stare`. `Sto male` = I'm not feeling well (today). `Sono malato` = I'm ill (a condition).",
+  "focus": "stare for states you're in vs essere for what you are – keep the sto male/sono malato contrast but anchor in this card's 'sto attento' first, remove backticks."
+ },
+ {
+  "id": "it-0451",
+  "target": "Io sono nato a Torino.",
+  "english": "I was born in Turin.",
+  "node": "node-03",
+  "old": "Past tense with movement/change verbs uses `essere`: `sono andato` (I went), `è arrivata` (she arrived). The participle agrees with the subject: -o/-a/-i/-e.",
+  "focus": "'sono nato' is literally 'I am born' – nascere takes essere in the past and the participle agrees – quote this card's nato, remove backticks and sibling examples."
+ },
+ {
+  "id": "it-0452",
+  "target": "Tu sei nata in agosto.",
+  "english": "You were born in August.",
+  "node": "node-03",
+  "old": "Auxiliary `essere` triggers agreement: a woman says `sono andata`, men say `sono andato`. With `avere` no agreement (almost ever).",
+  "focus": "'sei nata' ends in -a because 'you' is a woman – essere participles agree with the subject – use this card's nata as the example, remove backticks."
+ },
+ {
+  "id": "it-0466",
+  "target": "A che ora ti svegli?",
+  "english": "What time do you wake up?",
+  "node": "node-03",
+  "old": "Reflexive isn't always literal in English: `ricordarsi` = to remember, `arrabbiarsi` = to get angry. If the dictionary form ends in -si, you need the matching pronoun.",
+  "focus": "svegliarsi ends in -si, so it needs the matching pronoun: 'ti svegli' – reflexives aren't literal 'self' actions in English – anchor in this card, remove backticks and sibling verbs."
+ },
+ {
+  "id": "it-0505",
+  "target": "Ti piace l'Italia?",
+  "english": "Do you like Italy?",
+  "node": "node-04",
+  "old": "`piacere` works backwards from English: the thing that pleases is the subject. `Mi piace la pizza` literally = 'pizza is pleasing to me'. Plural thing? Use `piacciono`: `mi piacciono i libri`.",
+  "focus": "piacere works backwards – 'Ti piace l'Italia' = Italy pleases you – re-anchor in THIS card (not mi piace la pizza), remove backticks; this is telling 1 of the piacere budget (intro angle)."
+ },
+ {
+  "id": "it-0506",
+  "target": "Perché sei triste?",
+  "english": "Why are you sad?",
+  "node": "node-10",
+  "old": "WH-question with 'perché' (why): Perché sei triste? = Why are you sad? 'Perché' also means 'because' in answers.",
+  "focus": "perché is both 'why' and 'because' – the same word asks the question and starts the answer – cut the re-translation padding."
+ },
+ {
+  "id": "it-0527",
+  "target": "Ti piace la pizza?",
+  "english": "Do you like pizza?",
+  "node": "node-04",
+  "old": "Don't say `io piaccio la pizza` – that means 'I'm pleasing to pizza'. The Italian flips: pizza does the pleasing. Match the verb to the thing, not to you.",
+  "focus": "Content is strong – the 'io piaccio la pizza' warning already anchors to this card's pizza – only remove backticks and tighten; telling 2 of the piacere budget (error-warning angle)."
+ },
+ {
+  "id": "it-0530",
+  "target": "Lo specchio è rotto.",
+  "english": "The mirror is broken.",
+  "node": "node-04",
+  "old": "\"Lo\" is used before masculine nouns starting with s+consonant, z, gn, ps, x: lo studente, lo zaino.",
+  "focus": "The s+consonant rule is correct for this card – make 'lo specchio' the worked example instead of the sibling lo studente/lo zaino."
+ },
+ {
+  "id": "it-0678",
+  "target": "Ti piacciono i miei quadri?",
+  "english": "Do you like my paintings?",
+  "node": "node-05",
+  "old": "Same trap as Spanish `gustar`. `Piace` for singular, `piacciono` for plural. The 'liker' becomes the indirect object (mi/ti/gli/le/ci/vi).",
+  "focus": "piacciono for plural things – anchor in 'ti piacciono i miei quadri' (the paintings do the pleasing); drop the Spanish gustar reference and backticks"
+ },
+ {
+  "id": "it-0687",
+  "target": "Ci sono due camere da letto.",
+  "english": "There are two bedrooms.",
+  "node": "node-05",
+  "old": "C'è = there is (singular), ci sono = there are (plural). \"Ci\" is a locative pronoun meaning \"there\".",
+  "focus": "c'e vs ci sono, anchored in 'ci sono due camere' – say ci literally means 'there' in plain words, no 'locative pronoun' jargon"
+ },
+ {
+  "id": "it-0689",
+  "target": "Ci sono tanti ristoranti in centro.",
+  "english": "There are many restaurants downtown.",
+  "node": "node-05",
+  "old": "Quantity adjectives (molto, poco, troppo, tanto, quanto) agree in gender and number with the noun.",
+  "focus": "quantity words inflect – use the card's 'tanti ristoranti' as the worked example instead of the bare molto/poco list"
+ },
+ {
+  "id": "it-0713",
+  "target": "Mi piace fare colazione al bar.",
+  "english": "I like having breakfast at the cafe.",
+  "node": "node-05",
+  "old": "`piacere` works backwards from English: the thing that pleases is the subject. `Mi piace la pizza` literally = 'pizza is pleasing to me'. Plural thing? Use `piacciono`: `mi piacciono i libri`.",
+  "focus": "piace + infinitive stays singular: 'mi piace fare colazione' – the activity is the subject; strip backticks and the generic pizza stamp"
+ },
+ {
+  "id": "it-0759",
+  "target": "Lei ha freddo.",
+  "english": "She's cold.",
+  "node": "node-06",
+  "old": "These all take `avere`: fame, sete, sonno, freddo, caldo, paura, fretta, ragione, torto, voglia, anni. Saying `sono fame` is wrong – you'd be hunger itself.",
+  "focus": "she HAS cold, not is cold – anchor 'ha freddo', keep the sono-freddo warning, trim the eleven-noun list, no backticks"
+ },
+ {
+  "id": "it-0803",
+  "target": "Ci sono molte persone al mercato.",
+  "english": "There are many people at the market.",
+  "node": "node-06",
+  "old": "Don't say `c'è due mele` – once you go plural, you need `ci sono`. Past tense: `c'era / c'erano`. Future: `ci sarà / ci saranno`.",
+  "focus": "once plural you need ci sono – anchor 'ci sono molte persone'; cut the past/future tense inventory and backticks, one rule only"
+ },
+ {
+  "id": "it-0872",
+  "target": "La ragazza è alta.",
+  "english": "The girl is tall.",
+  "node": "node-07",
+  "old": "Physical description adjectives agree in gender/number with the noun they describe and usually follow it.",
+  "focus": "adjective agrees with its noun: la ragazza e alta (fem -a) – drop the 'usually follows the noun' clause, which this predicative sentence does not show"
+ },
+ {
+  "id": "it-0885",
+  "target": "Siamo caduti sulla neve.",
+  "english": "We fell on the snow.",
+  "node": "node-07",
+  "old": "Passato prossimo with essere: the past participle agrees in gender/number with the subject. Sono andata (f).",
+  "focus": "essere-verbs make the participle agree – anchor 'siamo caduti' (-i for we) instead of the off-card sono andata example"
+ },
+ {
+  "id": "it-0887",
+  "target": "Hai chiamato il dottore?",
+  "english": "Did you call the doctor?",
+  "node": "node-07",
+  "old": "Passato prossimo: auxiliary 'avere' + past participle (-ato, -uto, -ito). Most transitive verbs use 'avere'.",
+  "focus": "avere + participle = simple past, anchored in 'hai chiamato' – say helper verb, not 'auxiliary'"
+ },
+ {
+  "id": "it-0944",
+  "target": "Nevicava molto e abbiamo chiuso le scuole.",
+  "english": "It was snowing a lot and we closed the schools.",
+  "node": "node-11",
+  "old": "Imperfetto vs passato prossimo: imperfetto for ongoing/background actions, passato prossimo for completed/sudden events. \"Dormivo (background) quando è suonato (sudden event).\"",
+  "focus": "background vs event is IN this card – anchor 'nevicava' (background) + 'abbiamo chiuso' (event), replace the off-card dormivo example"
+ },
+ {
+  "id": "it-1082",
+  "target": "La settimana scorsa ho lavorato tanto.",
+  "english": "Last week I worked a lot.",
+  "node": "node-08",
+  "old": "Most verbs use 'avere' as auxiliary: 'Ho mangiato' (I ate). Movement verbs use 'essere': 'Sono andato'.",
+  "focus": "avere vs essere choice anchored in 'ho lavorato' (avere), keep sono andato as the movement contrast – say helper verb, not 'auxiliary'"
+ }
+]

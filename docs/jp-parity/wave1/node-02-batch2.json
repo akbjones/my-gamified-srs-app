@@ -1,0 +1,289 @@
+[
+  {
+    "target": "わたしはアメリカ人です。",
+    "tokens": [
+      { "t": "わたし" },
+      { "t": "は" },
+      { "t": "アメリカ人", "r": "あめりかじん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "I am American.",
+    "grammar": "は (wa) marks the topic, the person or thing the sentence is about. Here わたし (watashi = I) is the topic, so the rest describes you.",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "かれはイギリス人です。",
+    "tokens": [
+      { "t": "かれ" },
+      { "t": "は" },
+      { "t": "イギリス人", "r": "いぎりすじん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "He is British.",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "これはわたしのかばんです。",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "は" },
+      { "t": "わたし" },
+      { "t": "の" },
+      { "t": "かばん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "This is my bag.",
+    "grammar": "の (no) links two nouns as owner and thing: わたしのかばん (watashi no kaban = my bag).",
+    "grammarNode": "node-02",
+    "tags": ["general", "shopping"]
+  },
+  {
+    "target": "かのじょはかんごしです。",
+    "tokens": [
+      { "t": "かのじょ" },
+      { "t": "は" },
+      { "t": "かんごし" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "She is a nurse.",
+    "grammarNode": "node-02",
+    "tags": ["work", "health"]
+  },
+  {
+    "target": "あねのしごとはいしゃです。",
+    "tokens": [
+      { "t": "あね" },
+      { "t": "の" },
+      { "t": "しごと" },
+      { "t": "は" },
+      { "t": "いしゃ" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My older sister's job is a doctor.",
+    "grammarNode": "node-02",
+    "tags": ["work", "family"]
+  },
+  {
+    "target": "これは日本のおちゃです。",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "は" },
+      { "t": "日本", "r": "にほん" },
+      { "t": "の" },
+      { "t": "おちゃ" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "This is Japanese tea.",
+    "grammarNode": "node-02",
+    "tags": ["food"]
+  },
+  {
+    "target": "わたしのなまえはリンです。",
+    "tokens": [
+      { "t": "わたし" },
+      { "t": "の" },
+      { "t": "なまえ" },
+      { "t": "は" },
+      { "t": "リン" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My name is Rin.",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "あなたは学生ですか？",
+    "tokens": [
+      { "t": "あなた" },
+      { "t": "は" },
+      { "t": "学生", "r": "がくせい" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Are you a student?",
+    "grammar": "か (ka) at the end turns a statement into a yes/no question: です (desu) becomes ですか (desu ka = is it?).",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "わたしも日本人です。",
+    "tokens": [
+      { "t": "わたし" },
+      { "t": "も" },
+      { "t": "日本人", "r": "にほんじん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "I am Japanese too.",
+    "grammar": "も (mo) replaces は to mean also or too: わたしも (watashi mo = me too) says you match the previous person.",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "あのひとはゆうめいなはいゆうです。",
+    "tokens": [
+      { "t": "あの" },
+      { "t": "ひと" },
+      { "t": "は" },
+      { "t": "ゆうめいな" },
+      { "t": "はいゆう" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "That person is a famous actor.",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "ちちはりょうりにんです。",
+    "tokens": [
+      { "t": "ちち" },
+      { "t": "は" },
+      { "t": "りょうりにん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My father is a cook.",
+    "grammarNode": "node-02",
+    "tags": ["work", "family", "food"]
+  },
+  {
+    "target": "きょうは月曜日です。",
+    "tokens": [
+      { "t": "きょう" },
+      { "t": "は" },
+      { "t": "月曜日", "r": "げつようび" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "Today is Monday.",
+    "grammar": "X は Y です states X is Y. 月曜日 (getsuyoubi = Monday) is the Y here, so today equals Monday.",
+    "grammarNode": "node-02",
+    "tags": ["time"]
+  },
+  {
+    "target": "あれはびょういんです。",
+    "tokens": [
+      { "t": "あれ" },
+      { "t": "は" },
+      { "t": "びょういん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "That over there is a hospital.",
+    "grammarNode": "node-02",
+    "tags": ["health", "travel"]
+  },
+  {
+    "target": "それはなんですか？",
+    "tokens": [
+      { "t": "それ" },
+      { "t": "は" },
+      { "t": "なん" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "What is that?",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "ははのくにはカナダです。",
+    "tokens": [
+      { "t": "はは" },
+      { "t": "の" },
+      { "t": "くに" },
+      { "t": "は" },
+      { "t": "カナダ" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My mother's home country is Canada.",
+    "grammarNode": "node-02",
+    "tags": ["family", "travel"]
+  },
+  {
+    "target": "おじはけいさつかんです。",
+    "tokens": [
+      { "t": "おじ" },
+      { "t": "は" },
+      { "t": "けいさつかん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My uncle is a police officer.",
+    "grammarNode": "node-02",
+    "tags": ["work", "family"]
+  },
+  {
+    "target": "わたしのしゅみはりょこうです。",
+    "tokens": [
+      { "t": "わたし" },
+      { "t": "の" },
+      { "t": "しゅみ" },
+      { "t": "は" },
+      { "t": "りょこう" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My hobby is traveling.",
+    "grammarNode": "node-02",
+    "tags": ["travel", "general"]
+  },
+  {
+    "target": "かれはフランス人のシェフです。",
+    "tokens": [
+      { "t": "かれ" },
+      { "t": "は" },
+      { "t": "フランス人", "r": "ふらんすじん" },
+      { "t": "の" },
+      { "t": "シェフ" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "He is a French chef.",
+    "grammarNode": "node-02",
+    "tags": ["work", "food"]
+  },
+  {
+    "target": "これはえきのちずです。",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "は" },
+      { "t": "えき" },
+      { "t": "の" },
+      { "t": "ちず" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "This is a map of the station.",
+    "grammarNode": "node-02",
+    "tags": ["travel"]
+  },
+  {
+    "target": "きょうのてんきははれです。",
+    "tokens": [
+      { "t": "きょう" },
+      { "t": "の" },
+      { "t": "てんき" },
+      { "t": "は" },
+      { "t": "はれ" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "Today's weather is sunny.",
+    "grammarNode": "node-02",
+    "tags": ["weather", "time"]
+  }
+]

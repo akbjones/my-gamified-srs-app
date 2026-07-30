@@ -1,0 +1,370 @@
+[
+ {
+  "id": "pt-0002",
+  "target": "Eu estou com calor.",
+  "english": "I'm hot.",
+  "node": "node-09",
+  "old": "Portuguese says 'I am with hunger' (`estou com fome`) – different from Spanish (`tengo`) and French (`j'ai faim`). Same structure for `estou com sede` (thirsty), `estou com pressa` (in a hurry).",
+  "focus": "Body states use estar com + noun; anchor on this card's 'estou com calor', keep the Spanish tengo / French j'ai contrast, strip backticks"
+ },
+ {
+  "id": "pt-0008",
+  "target": "Eu tenho muito sono.",
+  "english": "I'm very sleepy.",
+  "node": "node-01",
+  "old": "'Ter sono' means 'to be sleepy.' Portuguese uses 'ter' (to have) for many physical and emotional states: ter fome, ter sede, ter sono, ter pressa.",
+  "focus": "'tenho muito sono' is literally 'I have much sleep'; keep the ter-state insight but drop the ter fome/sede list, which clashes with the deck's estar-com guidance"
+ },
+ {
+  "id": "pt-0014",
+  "target": "Ela cozinha muito bem.",
+  "english": "She cooks very well.",
+  "node": "node-01",
+  "old": "'Cozinhar' follows regular -ar patterns. 'Cozinha' means both 'cooks' (verb) and 'kitchen' (noun).",
+  "focus": "cozinha = both 'she cooks' and 'kitchen'; drop the regular -ar-pattern clause"
+ },
+ {
+  "id": "pt-0019",
+  "target": "Eles têm três filhos.",
+  "english": "They have three children.",
+  "node": "node-01",
+  "old": "'Têm' (with circumflex) is the eles/elas form of 'ter.' The accent distinguishes it from 'tem' (ele/ela form). This is an important spelling distinction.",
+  "focus": "têm (eles/elas) vs tem (ele/ela) circumflex; cut the 'this is an important spelling distinction' filler clause"
+ },
+ {
+  "id": "pt-0027",
+  "target": "Eu sei que ele está ocupado.",
+  "english": "I know he's busy.",
+  "node": "node-01",
+  "old": "`estar` for how you are right now – mood, health, location, temporary state. Wrong: `sou cansado` (I'm a tired *person*). Right: `estou cansado` (I'm tired *today*).",
+  "focus": "estar for right-now states; re-anchor the example on this card's 'está ocupado' (busy now, not a busy person) and strip backticks"
+ },
+ {
+  "id": "pt-0030",
+  "target": "Ele faz exercício todo dia de manhã.",
+  "english": "He exercises every morning.",
+  "node": "node-01",
+  "old": "'Fazer' is irregular: eu faço, ele faz. 'Todo dia' = every day – 'todo' + singular = every.",
+  "focus": "'todo dia': todo + singular = every; drop the fazer conjugation list"
+ },
+ {
+  "id": "pt-0031",
+  "target": "Eu estou com saudade dos meus amigos.",
+  "english": "I miss my friends.",
+  "node": "node-09",
+  "old": "Watch: fome, sede, sono, frio, calor, medo, pressa, raiva, saudade – all take `estar com` in BR. Direct translation 'I am hungry' (`sou faminto`) sounds bizarre.",
+  "focus": "estar com saudade = missing someone; keep the estar-com family point but anchor on saudade, trim the nine-noun list, strip backticks"
+ },
+ {
+  "id": "pt-0032",
+  "target": "Você gosta de cozinhar?",
+  "english": "Do you like to cook?",
+  "node": "node-01",
+  "old": "'Gostar de' always requires the preposition 'de' – never drop it. You'll learn more in node-06.",
+  "focus": "gostar always needs de before its object (English 'like' takes none); remove the 'node-06' meta reference"
+ },
+ {
+  "id": "pt-0041",
+  "target": "Vocês comem fora com frequência?",
+  "english": "Do you eat out often?",
+  "node": "node-01",
+  "old": "Portuguese has two `you`s: `tu` (informal, PT/southern BR) and `você` (universal in BR). Different verb forms: `tu falas` vs `você fala`.",
+  "focus": "sole surviving tu/você telling: anchor on 'vocês' as the universal you-plural in Brazil, tu regional; strip backticks"
+ },
+ {
+  "id": "pt-0050",
+  "target": "Ele está no escritório agora.",
+  "english": "He's at the office now.",
+  "node": "node-01",
+  "old": "'Estar' for temporary location: 'ele está no escritório.' 'No' = em + o. Location uses estar, not ser.",
+  "focus": "one rule only: estar (not ser) for where someone is right now, anchored on 'está no escritório'; drop the no=em+o aside"
+ },
+ {
+  "id": "pt-0054",
+  "target": "Eu posso trazer um amigo?",
+  "english": "Can I bring a friend?",
+  "node": "node-01",
+  "old": "'Trazer' means to bring and is irregular: trago, traz, trazemos, trazem. Don't confuse with 'levar' (to take away from here).",
+  "focus": "trazer (bring here) vs levar (take away), anchored on 'posso trazer'; drop the conjugation list"
+ },
+ {
+  "id": "pt-0069",
+  "target": "Eu quero um café, por favor.",
+  "english": "I want a coffee, please.",
+  "node": "node-01",
+  "old": "'Querer' is irregular: quero, quer, queremos, querem. It's less blunt in Portuguese than 'I want' in English – perfectly polite with 'por favor.'",
+  "focus": "'quero um café, por favor' is perfectly polite, none of English 'I want' bluntness; drop the conjugation list"
+ },
+ {
+  "id": "pt-0071",
+  "target": "Ela está trabalhando de casa hoje.",
+  "english": "She's working from home today.",
+  "node": "node-01",
+  "old": "`estar + gerúndio` = English '-ing right now': `estou comendo` = 'I'm eating'. Brazilians use this way more than Spanish/Italian use their gerundios.",
+  "focus": "estar + -ndo = English -ing in progress, anchored on 'está trabalhando'; strip backticks"
+ },
+ {
+  "id": "pt-0107",
+  "target": "Você trabalha de segunda a sexta?",
+  "english": "Do you work Monday through Friday?",
+  "node": "node-01",
+  "old": "Yes/no questions in Portuguese often have the same word order as statements – intonation does the work.",
+  "focus": "Anchor in this card: 'Você trabalha...?' keeps plain statement order – no 'do', rising intonation alone makes it a question."
+ },
+ {
+  "id": "pt-0113",
+  "target": "Nós voltamos para casa às seis.",
+  "english": "We go back home at six.",
+  "node": "node-01",
+  "old": "'Em casa' = at home (no article). 'Na casa dele' = at his house (article needed with possessive).",
+  "focus": "Card says 'para casa', not 'em casa' – anchor on 'para casa': casa meaning 'home' takes no article; with an article it's someone's house."
+ },
+ {
+  "id": "pt-0125",
+  "target": "Nós gostamos de caminhar à noite.",
+  "english": "We like to walk at night.",
+  "node": "node-01",
+  "old": "Portuguese `gostar` always takes `de`: `gosto de pizza`, `gosto de você`. Drop the `de` and the sentence breaks. English `like` has no preposition; Portuguese needs one.",
+  "focus": "Strip backticks and tighten: gostar always takes de – quote 'gostamos de caminhar' from this card as the worked example."
+ },
+ {
+  "id": "pt-0132",
+  "target": "Eu sei onde fica o restaurante.",
+  "english": "I know where the restaurant is.",
+  "node": "node-01",
+  "old": "'Saber' means to know facts or how to do something. 'Sei' is the irregular eu form. 'Ficar' meaning 'to be located' is very Brazilian.",
+  "focus": "One rule only: 'fica' = 'is located' – ficar for where things sit is very Brazilian; drop the saber conjugation notes."
+ },
+ {
+  "id": "pt-0133",
+  "target": "Eu vou fazer compras no shopping.",
+  "english": "I'm going shopping at the mall.",
+  "node": "node-01",
+  "old": "'Ir + infinitive' forms the immediate future in Brazilian Portuguese. It's used much more often than the simple future tense in everyday speech.",
+  "focus": "Good insight, not anchored: quote 'vou fazer' from this card as the worked example of ir + infinitive as the everyday future."
+ },
+ {
+  "id": "pt-0134",
+  "target": "Vocês podem vir para o jantar?",
+  "english": "Can you come over for dinner?",
+  "node": "node-01",
+  "old": "'Vir' means to come and is irregular: venho, vem, vimos, vêm. Don't confuse 'vir' (to come) with 'ver' (to see).",
+  "focus": "Keep only the vir vs ver landmine, anchored on 'vir' in this card; drop the conjugation list."
+ },
+ {
+  "id": "pt-0139",
+  "target": "O hotel é perto da praia.",
+  "english": "The hotel is near the beach.",
+  "node": "node-11",
+  "old": "'Ser' is used for permanent location of buildings and landmarks – use 'estar' for people and movable things.",
+  "focus": "Quote 'é perto da praia'; ser for the fixed location of buildings and landmarks – the surprise is that location is not automatically estar."
+ },
+ {
+  "id": "pt-0143",
+  "target": "Onde tem um bom restaurante japonês?",
+  "english": "Where can I find a good Japanese restaurant?",
+  "node": "node-01",
+  "old": "Brazilians use `tem` for 'there is/are' instead of `há`: `tem uma farmácia aqui` = 'there's a pharmacy here'. Same `ter` (to have) doing double duty.",
+  "focus": "Strip backticks; anchor on 'Onde tem' – Brazilians use tem for 'there is/are' where textbooks say há."
+ },
+ {
+  "id": "pt-0158",
+  "target": "Ele é o mais velho dos irmãos.",
+  "english": "He's the oldest of the siblings.",
+  "node": "node-01",
+  "old": "Prepositions and articles fuse: de + o → do, de + a → da, em + o → no, em + a → na. Gender info still shows: na casa is feminine.",
+  "focus": "One rule, anchored: 'dos' = de + os from this card; cut the full fusion table and the off-card 'na casa' example."
+ },
+ {
+  "id": "pt-0160",
+  "target": "Eu sou casado e tenho dois filhos.",
+  "english": "I'm married and have two children.",
+  "node": "node-01",
+  "old": "Marital status uses 'ser' in Portuguese because it's seen as a defining characteristic, not a temporary state.",
+  "focus": "Quote 'sou casado'; marital status takes ser in Portuguese – keep it to that one fact."
+ },
+ {
+  "id": "pt-0169",
+  "target": "Eu estou com fome, vamos comer alguma coisa?",
+  "english": "I'm hungry, shall we eat something?",
+  "node": "node-09",
+  "old": "'Estar' expresses temporary states, conditions, and locations – things that could be different tomorrow.",
+  "focus": "The real hook is in the card: 'estou com fome' is literally 'I'm with hunger' – estar com + noun for body states; drop the generic estar rule."
+ },
+ {
+  "id": "pt-0211",
+  "target": "Ela mora num apartamento perto do centro.",
+  "english": "She lives in an apartment near downtown.",
+  "node": "node-01",
+  "old": "Regular -ar verbs: morar → eu moro, ela mora. 'Num' is the contraction of 'em + um' (in a).",
+  "focus": "Drop the morar conjugation; keep only num = em + um, quoting 'num apartamento' from this card."
+ },
+ {
+  "id": "pt-0238",
+  "target": "Ela está ocupada agora, pode ligar depois.",
+  "english": "She's busy now, you can call later.",
+  "node": "node-01",
+  "old": "'Estar' is used for temporary states and emotions – how someone feels right now, not permanently.",
+  "focus": "Estar for right-now states of people is worth keeping – anchor it by quoting 'está ocupada agora' instead of the generic statement."
+ },
+ {
+  "id": "pt-0269",
+  "target": "Nós aproveitamos o feriado para descansar.",
+  "english": "We take advantage of the holiday to rest.",
+  "node": "node-01",
+  "old": "'Aproveitar' means 'to take advantage of' or 'to make the most of.' Brazilians use it constantly: 'aproveita!' means 'enjoy!'",
+  "focus": "Cut the double gloss of the english field; the earner is the everyday imperative 'aproveita!' = enjoy!, anchored to 'aproveitamos o feriado'."
+ },
+ {
+  "id": "pt-0300",
+  "target": "Vocês usam o metrô para ir ao trabalho?",
+  "english": "Do you take the subway to get to work?",
+  "node": "node-01",
+  "old": "Regular -ar verbs: usar → vocês usam. Question formed purely by intonation, no word order change.",
+  "focus": "Drop the usar conjugation; keep the real insight: yes/no questions are just statement word order + rising intonation, quoting 'Vocês usam o metrô?'."
+ },
+ {
+  "id": "pt-0306",
+  "target": "Ele vai começar um curso novo mês que vem.",
+  "english": "He's going to start a new course next month.",
+  "node": "node-01",
+  "old": "'Ir' + infinitive is the everyday way to express future plans in Brazilian Portuguese – much more common than the simple future.",
+  "focus": "Insight is right (ir + infinitive beats simple future in speech) but the tip never quotes this card – anchor with 'vai começar'."
+ },
+ {
+  "id": "pt-0323",
+  "target": "Eu estou aprendendo português.",
+  "english": "I'm learning Portuguese.",
+  "node": "node-09",
+  "old": "'Estar' + gerund (-ando/-endo/-indo) forms the present continuous. Brazilians use this tense much more than the simple present for ongoing actions.",
+  "focus": "Keep the estar + -ndo continuous point but quote 'estou aprendendo' from this card; the current tip only cites the abstract endings."
+ },
+ {
+  "id": "pt-0330",
+  "target": "A água do mar é salgada.",
+  "english": "Seawater is salty.",
+  "node": "node-02",
+  "old": "Inherent, defining characteristics use 'ser.' Seawater is always salty – it's in its nature.",
+  "focus": "Ser for inherent traits is right, but the tip never quotes the card ('ser' can't match 'é') – anchor with 'a água do mar é salgada'."
+ },
+ {
+  "id": "pt-0338",
+  "target": "Onde fica o banheiro?",
+  "english": "Where is the bathroom?",
+  "node": "node-02",
+  "old": "'Onde' means 'where.' In Brazil, 'ficar' is more natural than 'ser' or 'estar' when asking for locations.",
+  "focus": "Cut ''onde' means where'; the earner is that Brazilians use ficar for locations – anchor with 'Onde fica o banheiro?'."
+ },
+ {
+  "id": "pt-0340",
+  "target": "Eu dou aulas de português.",
+  "english": "I give Portuguese lessons.",
+  "node": "node-02",
+  "old": "'Dar' is irregular: dou, dá, damos, dão. 'Dar aulas' means to teach/give classes – a very common expression.",
+  "focus": "Drop the dou/da/damos/dao listing; keep 'dar aulas' = to teach, quoting 'dou aulas' from this card."
+ },
+ {
+  "id": "pt-0347",
+  "target": "Nós estamos planejando uma viagem.",
+  "english": "We're planning a trip.",
+  "node": "node-02",
+  "old": "`estar + gerúndio` = English '-ing right now': `estou comendo` = 'I'm eating'. Brazilians use this way more than Spanish/Italian use their gerundios.",
+  "focus": "Strip backticks and anchor in this card: 'estamos planejando' = estar + gerund is English '-ing right now', and Brazilians use it constantly."
+ },
+ {
+  "id": "pt-0356",
+  "target": "Qual é o seu número de telefone?",
+  "english": "What's your phone number?",
+  "node": "node-02",
+  "old": "'Qual é' = what is (choosing/identifying). 'Número de telefone' = phone number.",
+  "focus": "The real trap: Portuguese asks 'Qual é' (which is), not 'o que', for phone numbers and names – cut the 'número de telefone' vocab gloss."
+ },
+ {
+  "id": "pt-0372",
+  "target": "Onde tem uma farmácia por perto?",
+  "english": "Where is there a pharmacy nearby?",
+  "node": "node-02",
+  "old": "`Há` exists in PT but sounds formal/written. `Tem` is what you'll hear in speech. Same word as the verb 'to have' – context tells you which.",
+  "focus": "Strip backticks, quote 'tem uma farmácia' from this card: spoken Brazilian uses tem for 'there is'; há sounds formal/written."
+ },
+ {
+  "id": "pt-0400",
+  "target": "Nós vamos ao cinema hoje à noite.",
+  "english": "We're going to the movies tonight.",
+  "node": "node-02",
+  "old": "'Ir' is highly irregular: eu vou, nós vamos, vocês vão. 'Ir a' = to go to (with article: 'ao cinema').",
+  "focus": "Keep only the contraction: 'ao cinema' = a + o fused; cut the vou/vamos/vão irregular-forms listing (the conjugation table covers it)."
+ },
+ {
+  "id": "pt-0415",
+  "target": "Eu tenho certeza de que vai dar certo.",
+  "english": "I'm sure it's going to work out.",
+  "node": "node-02",
+  "old": "'Ter certeza' means 'to be sure' – literally 'to have certainty.' 'Dar certo' means 'to work out' and is one of the most useful Brazilian expressions.",
+  "focus": "One rule only: 'dar certo' is literally 'to give right' = to work out; drop the ter certeza half (pt-0343 already owns the ter-for-be pattern)."
+ },
+ {
+  "id": "pt-0428",
+  "target": "Ela é advogada, mas está trabalhando como professora.",
+  "english": "She's a lawyer, but she's working as a teacher.",
+  "node": "node-02",
+  "old": "'Ser' for profession (permanent identity) vs 'estar' for current activity (temporary). She IS a lawyer but she's currently working as a teacher.",
+  "focus": "Insight is perfect for this card but quotes nothing from it: anchor with 'é advogada' (identity) vs 'está trabalhando' (what she's doing right now)."
+ },
+ {
+  "id": "pt-0434",
+  "target": "Quem ligou para você?",
+  "english": "Who called you?",
+  "node": "node-09",
+  "old": "'Quem ligou' = who called. 'Ligar para' = to call (someone). 'Para' is required with 'ligar.'",
+  "focus": "The earn is 'ligar para': you call TO someone in Portuguese ('ligou para você'), no direct object like English – cut the who-called re-translation."
+ },
+ {
+  "id": "pt-0452",
+  "target": "Estou animado para a viagem.",
+  "english": "I'm looking forward to the trip.",
+  "node": "node-09",
+  "old": "por = reason / exchange / route. para = destination / purpose / recipient. trabalho por dinheiro (for money) vs trabalho para o futuro (for the future).",
+  "focus": "Anchor por-vs-para in this card's 'para a viagem' (para = toward a goal/destination); cut the generic trabalho por/para job examples."
+ },
+ {
+  "id": "pt-0486",
+  "target": "Ela trabalha na recepção do hotel.",
+  "english": "She works at the hotel reception.",
+  "node": "node-03",
+  "old": "'Na recepção' = em + a = at/in the. 'Recepção' is feminine – nouns ending in -ção are always feminine.",
+  "focus": "One rule: nouns in -ção are always feminine ('a recepção'); cut the em + a contraction half (pt-0480 covers contractions)."
+ },
+ {
+  "id": "pt-0506",
+  "target": "O mapa da cidade está no celular.",
+  "english": "The city map is on the phone.",
+  "node": "node-03",
+  "old": "'Mapa' is masculine despite ending in -a: o mapa. Other exceptions: o dia, o cinema, o problema, o tema, o sistema.",
+  "focus": "Keep 'o mapa' masculine-despite--a as the trap; trim the exception list to one or two siblings (the -ma pattern: o problema, o sistema)"
+ },
+ {
+  "id": "pt-0510",
+  "target": "A estação do metrô fica a dois quarteirões.",
+  "english": "The subway station is two blocks away.",
+  "node": "node-03",
+  "old": "'Ficar' for permanent locations: 'o hotel fica perto' = the hotel is (located) near. More specific than 'estar.'",
+  "focus": "ficar = fixed location (vs estar) is the insight – use this card's own 'a estação fica a dois quarteirões' as the example, not the hotel sentence"
+ },
+ {
+  "id": "pt-0535",
+  "target": "Qual é o seu nome?",
+  "english": "What's your name?",
+  "node": "node-04",
+  "old": "'Qual' means 'which/what' when choosing from options or asking for specific information. 'Qual é o seu nome?' is the standard way to ask someone's name.",
+  "focus": "The trap is that it's 'Qual é o seu nome?' not 'O que' – lead with that English-default mistake, cut the definition padding"
+ },
+ {
+  "id": "pt-0558",
+  "target": "O que você está lendo?",
+  "english": "What are you reading?",
+  "node": "node-04",
+  "old": "`estar + gerúndio` = English '-ing right now': `estou comendo` = 'I'm eating'. Brazilians use this way more than Spanish/Italian use their gerundios.",
+  "focus": "estar + gerund = right-now '-ing' (and Brazilians use it constantly) – strip the backticks and anchor with this card's 'está lendo', not 'estou comendo'"
+ }
+]

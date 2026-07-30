@@ -1,0 +1,283 @@
+[
+  {
+    "target": "わたしはアメリカじんです。",
+    "tokens": [
+      { "t": "わたし" },
+      { "t": "は" },
+      { "t": "アメリカじん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "I am American.",
+    "grammar": "は here is the topic marker, read wa not ha. わたしは (watashi wa = as for me) marks who the sentence is about.",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "かれはイギリスじんです。",
+    "tokens": [
+      { "t": "かれ" },
+      { "t": "は" },
+      { "t": "イギリスじん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "He is British.",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "かのじょはフランスじんです。",
+    "tokens": [
+      { "t": "かのじょ" },
+      { "t": "は" },
+      { "t": "フランスじん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "She is French.",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "わたしはエンジニアです。",
+    "tokens": [
+      { "t": "わたし" },
+      { "t": "は" },
+      { "t": "エンジニア" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "I am an engineer.",
+    "grammarNode": "node-02",
+    "tags": ["work"]
+  },
+  {
+    "target": "兄は医者です。",
+    "tokens": [
+      { "t": "兄", "r": "あに" },
+      { "t": "は" },
+      { "t": "医者", "r": "いしゃ" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My older brother is a doctor.",
+    "grammarNode": "node-02",
+    "tags": ["family", "health"]
+  },
+  {
+    "target": "これはわたしのかばんです。",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "は" },
+      { "t": "わたし" },
+      { "t": "の" },
+      { "t": "かばん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "This is my bag.",
+    "grammar": "の links two nouns to show possession. わたしのかばん (watashi no kaban = my bag) means the bag is mine.",
+    "grammarNode": "node-02",
+    "tags": ["shopping", "general"]
+  },
+  {
+    "target": "それは日本のくるまです。",
+    "tokens": [
+      { "t": "それ" },
+      { "t": "は" },
+      { "t": "日本", "r": "にほん" },
+      { "t": "の" },
+      { "t": "くるま" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "That is a Japanese car.",
+    "grammarNode": "node-02",
+    "tags": ["general", "travel"]
+  },
+  {
+    "target": "わたしのなまえはたなかです。",
+    "tokens": [
+      { "t": "わたし" },
+      { "t": "の" },
+      { "t": "なまえ" },
+      { "t": "は" },
+      { "t": "たなか" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My name is Tanaka.",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "かのじょはかんごしです。",
+    "tokens": [
+      { "t": "かのじょ" },
+      { "t": "は" },
+      { "t": "かんごし" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "She is a nurse.",
+    "grammarNode": "node-02",
+    "tags": ["work", "health"]
+  },
+  {
+    "target": "今日はいい天気です。",
+    "tokens": [
+      { "t": "今日", "r": "きょう" },
+      { "t": "は" },
+      { "t": "いい" },
+      { "t": "天気", "r": "てんき" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "It's nice weather today.",
+    "grammarNode": "node-02",
+    "tags": ["weather", "time"]
+  },
+  {
+    "target": "わたしのしゅみはりょうりです。",
+    "tokens": [
+      { "t": "わたし" },
+      { "t": "の" },
+      { "t": "しゅみ" },
+      { "t": "は" },
+      { "t": "りょうり" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My hobby is cooking.",
+    "grammarNode": "node-02",
+    "tags": ["food", "general"]
+  },
+  {
+    "target": "わたしは日本人です。",
+    "tokens": [
+      { "t": "わたし" },
+      { "t": "は" },
+      { "t": "日本人", "r": "にほんじん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "I am Japanese.",
+    "grammar": "Add 人 (jin) to a country name to give a nationality, as in 日本人 (nihonjin = Japanese person).",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "これは駅です。",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "は" },
+      { "t": "駅", "r": "えき" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "This is the station.",
+    "grammarNode": "node-02",
+    "tags": ["travel"]
+  },
+  {
+    "target": "そふはこうむいんです。",
+    "tokens": [
+      { "t": "そふ" },
+      { "t": "は" },
+      { "t": "こうむいん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My grandfather is a civil servant.",
+    "grammarNode": "node-02",
+    "tags": ["family", "work"]
+  },
+  {
+    "target": "わたしの国はカナダです。",
+    "tokens": [
+      { "t": "わたし" },
+      { "t": "の" },
+      { "t": "国", "r": "くに" },
+      { "t": "は" },
+      { "t": "カナダ" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My country is Canada.",
+    "grammarNode": "node-02",
+    "tags": ["general", "travel"]
+  },
+  {
+    "target": "かちょうはやまもとさんです。",
+    "tokens": [
+      { "t": "かちょう" },
+      { "t": "は" },
+      { "t": "やまもと" },
+      { "t": "さん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "The section chief is Mr. Yamamoto.",
+    "grammar": "さん (san) is a polite title placed after someone else's name. Do not attach it to your own name.",
+    "grammarNode": "node-02",
+    "tags": ["work"]
+  },
+  {
+    "target": "ここはとしょかんです。",
+    "tokens": [
+      { "t": "ここ" },
+      { "t": "は" },
+      { "t": "としょかん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "This place is a library.",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "あなたはがくせいですか？",
+    "tokens": [
+      { "t": "あなた" },
+      { "t": "は" },
+      { "t": "がくせい" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Are you a student?",
+    "grammar": "Put か (ka) at the end to turn a statement into a question, as in がくせいですか (gakusei desu ka = are you a student?).",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "おなまえはなんですか？",
+    "tokens": [
+      { "t": "おなまえ" },
+      { "t": "は" },
+      { "t": "なん" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "What is your name?",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "わたしはかいしゃのしゃちょうです。",
+    "tokens": [
+      { "t": "わたし" },
+      { "t": "は" },
+      { "t": "かいしゃ" },
+      { "t": "の" },
+      { "t": "しゃちょう" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "I am the company president.",
+    "grammarNode": "node-02",
+    "tags": ["work"]
+  }
+]

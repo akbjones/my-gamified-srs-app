@@ -1,0 +1,295 @@
+[
+  {
+    "target": "これはお茶ですか？",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "は" },
+      { "t": "お茶", "r": "おちゃ" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is this tea?",
+    "grammar": "Add か (ka) to the end of a statement to make a yes/no question, as in お茶ですか (ocha desu ka = is it tea?).",
+    "grammarNode": "node-03",
+    "tags": ["food"]
+  },
+  {
+    "target": "いいえ、お茶じゃないです。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "お茶", "r": "おちゃ" },
+      { "t": "じゃない" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "No, it's not tea.",
+    "grammar": "じゃないです (ja nai desu) is the polite negative of です. お茶じゃないです (ocha ja nai desu = it is not tea).",
+    "grammarNode": "node-03",
+    "tags": ["food"]
+  },
+  {
+    "target": "あの人は先生ですか？",
+    "tokens": [
+      { "t": "あの" },
+      { "t": "人", "r": "ひと" },
+      { "t": "は" },
+      { "t": "先生", "r": "せんせい" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is that person a teacher?",
+    "grammarNode": "node-03",
+    "tags": ["general", "work"]
+  },
+  {
+    "target": "はい、先生です。",
+    "tokens": [
+      { "t": "はい" },
+      { "t": "、" },
+      { "t": "先生", "r": "せんせい" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "Yes, he is a teacher.",
+    "grammarNode": "node-03",
+    "tags": ["work"]
+  },
+  {
+    "target": "田中さんはお医者さんですか？",
+    "tokens": [
+      { "t": "田中", "r": "たなか" },
+      { "t": "さん" },
+      { "t": "は" },
+      { "t": "お医者さん", "r": "おいしゃさん" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is Mr. Tanaka a doctor?",
+    "grammarNode": "node-03",
+    "tags": ["health", "work"]
+  },
+  {
+    "target": "いいえ、医者ではありません。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "医者", "r": "いしゃ" },
+      { "t": "では" },
+      { "t": "ありません" },
+      { "t": "。" }
+    ],
+    "english": "No, he is not a doctor.",
+    "grammar": "ではありません (de wa arimasen) is the formal negative of です. Here では is read de wa, not de ha.",
+    "grammarNode": "node-03",
+    "tags": ["health"]
+  },
+  {
+    "target": "これはあなたのかさですか？",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "は" },
+      { "t": "あなた" },
+      { "t": "の" },
+      { "t": "かさ" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is this your umbrella?",
+    "grammarNode": "node-03",
+    "tags": ["weather", "general"]
+  },
+  {
+    "target": "いいえ、わたしのじゃないです。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "わたし" },
+      { "t": "の" },
+      { "t": "じゃない" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "No, it's not mine.",
+    "grammar": "の (no) can stand in for a noun and mean mine. わたしの (watashi no = mine) drops the thing being talked about.",
+    "grammarNode": "node-03",
+    "tags": ["general"]
+  },
+  {
+    "target": "きょうは休みですか？",
+    "tokens": [
+      { "t": "きょう" },
+      { "t": "は" },
+      { "t": "休み", "r": "やすみ" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is today a day off?",
+    "grammarNode": "node-03",
+    "tags": ["time", "work"]
+  },
+  {
+    "target": "はい、休みです。",
+    "tokens": [
+      { "t": "はい" },
+      { "t": "、" },
+      { "t": "休み", "r": "やすみ" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "Yes, it's a day off.",
+    "grammarNode": "node-03",
+    "tags": ["time"]
+  },
+  {
+    "target": "トイレはあそこですか？",
+    "tokens": [
+      { "t": "トイレ" },
+      { "t": "は" },
+      { "t": "あそこ" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is the toilet over there?",
+    "grammarNode": "node-03",
+    "tags": ["travel"]
+  },
+  {
+    "target": "すみません、ここは出口ですか？",
+    "tokens": [
+      { "t": "すみません" },
+      { "t": "、" },
+      { "t": "ここ" },
+      { "t": "は" },
+      { "t": "出口", "r": "でぐち" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Excuse me, is this the exit?",
+    "grammarNode": "node-03",
+    "tags": ["travel"]
+  },
+  {
+    "target": "これは無料ですか？",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "は" },
+      { "t": "無料", "r": "むりょう" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is this free?",
+    "grammarNode": "node-03",
+    "tags": ["shopping"]
+  },
+  {
+    "target": "いいえ、無料じゃないです。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "無料", "r": "むりょう" },
+      { "t": "じゃない" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "No, it's not free.",
+    "grammarNode": "node-03",
+    "tags": ["shopping"]
+  },
+  {
+    "target": "お姉さんは学生ですか？",
+    "tokens": [
+      { "t": "お姉さん", "r": "おねえさん" },
+      { "t": "は" },
+      { "t": "学生", "r": "がくせい" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is your older sister a student?",
+    "grammarNode": "node-03",
+    "tags": ["family"]
+  },
+  {
+    "target": "いいえ、姉は学生じゃないです。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "姉", "r": "あね" },
+      { "t": "は" },
+      { "t": "学生", "r": "がくせい" },
+      { "t": "じゃない" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "No, my older sister is not a student.",
+    "grammar": "For your own family use the plain word 姉 (ane = my older sister), not お姉さん which is for someone else's sister.",
+    "grammarNode": "node-03",
+    "tags": ["family"]
+  },
+  {
+    "target": "あれは病院ですか？",
+    "tokens": [
+      { "t": "あれ" },
+      { "t": "は" },
+      { "t": "病院", "r": "びょういん" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is that a hospital?",
+    "grammarNode": "node-03",
+    "tags": ["health", "travel"]
+  },
+  {
+    "target": "はい、あれは病院です。",
+    "tokens": [
+      { "t": "はい" },
+      { "t": "、" },
+      { "t": "あれ" },
+      { "t": "は" },
+      { "t": "病院", "r": "びょういん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "Yes, that is a hospital.",
+    "grammarNode": "node-03",
+    "tags": ["health"]
+  },
+  {
+    "target": "かれは中国人ですか？",
+    "tokens": [
+      { "t": "かれ" },
+      { "t": "は" },
+      { "t": "中国人", "r": "ちゅうごくじん" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is he Chinese?",
+    "grammarNode": "node-03",
+    "tags": ["general"]
+  },
+  {
+    "target": "いいえ、中国人じゃないです。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "中国人", "r": "ちゅうごくじん" },
+      { "t": "じゃない" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "No, he is not Chinese.",
+    "grammarNode": "node-03",
+    "tags": ["general"]
+  }
+]

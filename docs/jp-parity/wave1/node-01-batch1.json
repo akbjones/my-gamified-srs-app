@@ -1,0 +1,274 @@
+[
+  {
+    "target": "お元気ですか？",
+    "tokens": [
+      { "t": "お元気", "r": "おげんき" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "How are you?",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "おかげさまで元気です。",
+    "tokens": [
+      { "t": "おかげさまで" },
+      { "t": "元気", "r": "げんき" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "I'm doing well, thanks to you.",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "お久しぶりですね。",
+    "tokens": [
+      { "t": "お久しぶり", "r": "おひさしぶり" },
+      { "t": "です" },
+      { "t": "ね" },
+      { "t": "。" }
+    ],
+    "english": "It's been a while, hasn't it?",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "お名前は何ですか？",
+    "tokens": [
+      { "t": "お名前", "r": "おなまえ" },
+      { "t": "は" },
+      { "t": "何", "r": "なん" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "What is your name?",
+    "grammar": "The final か (ka) turns a です statement into a polite question, so 何ですか (nan desu ka) means 'what is it?'",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "私は田中と申します。",
+    "tokens": [
+      { "t": "私", "r": "わたし" },
+      { "t": "は" },
+      { "t": "田中", "r": "たなか" },
+      { "t": "と" },
+      { "t": "申します", "r": "もうします" },
+      { "t": "。" }
+    ],
+    "english": "My name is Tanaka.",
+    "grammar": "申します (moushimasu = humbly say / am called) is a polite way to give your own name when introducing yourself.",
+    "grammarNode": "node-01",
+    "tags": ["general", "work"]
+  },
+  {
+    "target": "すみません、ちょっといいですか？",
+    "tokens": [
+      { "t": "すみません" },
+      { "t": "、" },
+      { "t": "ちょっと" },
+      { "t": "いい" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Excuse me, do you have a moment?",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "今日もお疲れさまでした。",
+    "tokens": [
+      { "t": "今日", "r": "きょう" },
+      { "t": "も" },
+      { "t": "お疲れさま", "r": "おつかれさま" },
+      { "t": "でした" },
+      { "t": "。" }
+    ],
+    "english": "Good work again today.",
+    "grammarNode": "node-01",
+    "tags": ["work"]
+  },
+  {
+    "target": "そろそろ、お先に失礼します。",
+    "tokens": [
+      { "t": "そろそろ" },
+      { "t": "、" },
+      { "t": "お先に", "r": "おさきに" },
+      { "t": "失礼します", "r": "しつれいします" },
+      { "t": "。" }
+    ],
+    "english": "It's about that time, so I'll head off first.",
+    "grammarNode": "node-01",
+    "tags": ["work"]
+  },
+  {
+    "target": "おやすみなさい、また明日。",
+    "tokens": [
+      { "t": "おやすみなさい" },
+      { "t": "、" },
+      { "t": "また" },
+      { "t": "明日", "r": "あした" },
+      { "t": "。" }
+    ],
+    "english": "Good night, see you tomorrow.",
+    "grammarNode": "node-01",
+    "tags": ["time"]
+  },
+  {
+    "target": "気をつけて帰ってください。",
+    "tokens": [
+      { "t": "気", "r": "き" },
+      { "t": "を" },
+      { "t": "つけて" },
+      { "t": "帰って", "r": "かえって" },
+      { "t": "ください" },
+      { "t": "。" }
+    ],
+    "english": "Please get home safely.",
+    "grammar": "気をつけて (ki o tsukete = be careful) is a set phrase; add ください (kudasai) to turn it into a polite request.",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "お大事にしてください。",
+    "tokens": [
+      { "t": "お大事", "r": "おだいじ" },
+      { "t": "に" },
+      { "t": "して" },
+      { "t": "ください" },
+      { "t": "。" }
+    ],
+    "english": "Please take care of yourself.",
+    "grammar": "お大事に (odaiji ni = take care / get well) is said to someone who is ill; the fuller お大事にしてください sounds more caring.",
+    "grammarNode": "node-01",
+    "tags": ["health"]
+  },
+  {
+    "target": "お誕生日、本当におめでとうございます。",
+    "tokens": [
+      { "t": "お誕生日", "r": "おたんじょうび" },
+      { "t": "、" },
+      { "t": "本当に", "r": "ほんとうに" },
+      { "t": "おめでとうございます" },
+      { "t": "。" }
+    ],
+    "english": "Happy birthday, truly!",
+    "grammarNode": "node-01",
+    "tags": ["family"]
+  },
+  {
+    "target": "皆さん、明けましておめでとうございます。",
+    "tokens": [
+      { "t": "皆さん", "r": "みなさん" },
+      { "t": "、" },
+      { "t": "明けまして", "r": "あけまして" },
+      { "t": "おめでとうございます" },
+      { "t": "。" }
+    ],
+    "english": "Happy New Year, everyone.",
+    "grammarNode": "node-01",
+    "tags": ["time", "general"]
+  },
+  {
+    "target": "いらっしゃいませ、どうぞこちらへ。",
+    "tokens": [
+      { "t": "いらっしゃいませ" },
+      { "t": "、" },
+      { "t": "どうぞ" },
+      { "t": "こちら" },
+      { "t": "へ" },
+      { "t": "。" }
+    ],
+    "english": "Welcome, right this way please.",
+    "grammarNode": "node-01",
+    "tags": ["shopping"]
+  },
+  {
+    "target": "お世話になっております。",
+    "tokens": [
+      { "t": "お世話", "r": "おせわ" },
+      { "t": "に" },
+      { "t": "なって" },
+      { "t": "おります" },
+      { "t": "。" }
+    ],
+    "english": "Thank you for your continued support.",
+    "grammarNode": "node-01",
+    "tags": ["work"]
+  },
+  {
+    "target": "今日は来てくれてありがとうございます。",
+    "tokens": [
+      { "t": "今日", "r": "きょう" },
+      { "t": "は" },
+      { "t": "来て", "r": "きて" },
+      { "t": "くれて" },
+      { "t": "ありがとうございます" },
+      { "t": "。" }
+    ],
+    "english": "Thank you for coming today.",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "すみません、道を教えてください。",
+    "tokens": [
+      { "t": "すみません" },
+      { "t": "、" },
+      { "t": "道", "r": "みち" },
+      { "t": "を" },
+      { "t": "教えて", "r": "おしえて" },
+      { "t": "ください" },
+      { "t": "。" }
+    ],
+    "english": "Excuse me, could you tell me the way?",
+    "grammarNode": "node-01",
+    "tags": ["travel"]
+  },
+  {
+    "target": "すみません、写真をお願いします。",
+    "tokens": [
+      { "t": "すみません" },
+      { "t": "、" },
+      { "t": "写真", "r": "しゃしん" },
+      { "t": "を" },
+      { "t": "お願いします", "r": "おねがいします" },
+      { "t": "。" }
+    ],
+    "english": "Excuse me, could you take a photo, please?",
+    "grammar": "お願いします (onegai shimasu = please) politely requests something after を; here you're asking for a photo.",
+    "grammarNode": "node-01",
+    "tags": ["travel"]
+  },
+  {
+    "target": "ごめんなさい、遅くなりました。",
+    "tokens": [
+      { "t": "ごめんなさい" },
+      { "t": "、" },
+      { "t": "遅く", "r": "おそく" },
+      { "t": "なりました" },
+      { "t": "。" }
+    ],
+    "english": "I'm sorry I'm late.",
+    "grammarNode": "node-01",
+    "tags": ["time"]
+  },
+  {
+    "target": "さようなら、また来週。",
+    "tokens": [
+      { "t": "さようなら" },
+      { "t": "、" },
+      { "t": "また" },
+      { "t": "来週", "r": "らいしゅう" },
+      { "t": "。" }
+    ],
+    "english": "Goodbye, see you next week.",
+    "grammarNode": "node-01",
+    "tags": ["time"]
+  }
+]

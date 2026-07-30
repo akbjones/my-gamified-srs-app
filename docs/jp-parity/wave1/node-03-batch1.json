@@ -1,0 +1,292 @@
+[
+  {
+    "target": "これはコーヒーですか？",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "は" },
+      { "t": "コーヒー" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is this coffee?",
+    "grammar": "か at the end turns a statement into a yes/no question. ですか (desu ka = is it?) keeps the same word order, so only your voice rises.",
+    "grammarNode": "node-03",
+    "tags": ["food", "general"]
+  },
+  {
+    "target": "はい、コーヒーです。",
+    "tokens": [
+      { "t": "はい" },
+      { "t": "、" },
+      { "t": "コーヒー" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "Yes, it's coffee.",
+    "grammarNode": "node-03",
+    "tags": ["food"]
+  },
+  {
+    "target": "いいえ、おちゃじゃないです。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "おちゃ" },
+      { "t": "じゃない" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "No, it's not tea.",
+    "grammar": "Answer no with いいえ (iie = no), then the negative copula. じゃないです (ja nai desu = is not) politely denies it.",
+    "grammarNode": "node-03",
+    "tags": ["food"]
+  },
+  {
+    "target": "あのかたは先生ですか？",
+    "tokens": [
+      { "t": "あの" },
+      { "t": "かた" },
+      { "t": "は" },
+      { "t": "先生", "r": "せんせい" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is that person a teacher?",
+    "grammarNode": "node-03",
+    "tags": ["work", "general"]
+  },
+  {
+    "target": "いいえ、先生ではありません。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "先生", "r": "せんせい" },
+      { "t": "では" },
+      { "t": "ありません" },
+      { "t": "。" }
+    ],
+    "english": "No, that person isn't a teacher.",
+    "grammar": "ではありません (dewa arimasen = is not) means the same as じゃないです but sounds more formal, common in polite or written speech.",
+    "grammarNode": "node-03",
+    "tags": ["work"]
+  },
+  {
+    "target": "トイレはあそこですか？",
+    "tokens": [
+      { "t": "トイレ" },
+      { "t": "は" },
+      { "t": "あそこ" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is the restroom over there?",
+    "grammarNode": "node-03",
+    "tags": ["travel"]
+  },
+  {
+    "target": "はい、あそこです。",
+    "tokens": [
+      { "t": "はい" },
+      { "t": "、" },
+      { "t": "あそこ" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "Yes, it's over there.",
+    "grammar": "あそこ (asoko = over there) is a spot far from you and the listener. ここ (koko) is near you, そこ (soko) near them.",
+    "grammarNode": "node-03",
+    "tags": ["travel"]
+  },
+  {
+    "target": "これはむりょうですか？",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "は" },
+      { "t": "むりょう" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is this free of charge?",
+    "grammarNode": "node-03",
+    "tags": ["shopping"]
+  },
+  {
+    "target": "いいえ、むりょうじゃないです。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "むりょう" },
+      { "t": "じゃない" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "No, it's not free.",
+    "grammarNode": "node-03",
+    "tags": ["shopping"]
+  },
+  {
+    "target": "今日はやすみですか？",
+    "tokens": [
+      { "t": "今日", "r": "きょう" },
+      { "t": "は" },
+      { "t": "やすみ" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is today a day off?",
+    "grammarNode": "node-03",
+    "tags": ["time", "work"]
+  },
+  {
+    "target": "いいえ、やすみではありません。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "やすみ" },
+      { "t": "では" },
+      { "t": "ありません" },
+      { "t": "。" }
+    ],
+    "english": "No, it's not a day off.",
+    "grammarNode": "node-03",
+    "tags": ["time", "work"]
+  },
+  {
+    "target": "明日はあめですか？",
+    "tokens": [
+      { "t": "明日", "r": "あした" },
+      { "t": "は" },
+      { "t": "あめ" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is it rainy tomorrow?",
+    "grammarNode": "node-03",
+    "tags": ["weather", "time"]
+  },
+  {
+    "target": "はい、たぶんあめです。",
+    "tokens": [
+      { "t": "はい" },
+      { "t": "、" },
+      { "t": "たぶん" },
+      { "t": "あめ" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "Yes, probably rain.",
+    "grammarNode": "node-03",
+    "tags": ["weather"]
+  },
+  {
+    "target": "これは肉ですか？",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "は" },
+      { "t": "肉", "r": "にく" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is this meat?",
+    "grammarNode": "node-03",
+    "tags": ["food", "shopping"]
+  },
+  {
+    "target": "いいえ、肉じゃないです。魚です。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "肉", "r": "にく" },
+      { "t": "じゃない" },
+      { "t": "です" },
+      { "t": "。" },
+      { "t": "魚", "r": "さかな" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "No, it's not meat. It's fish.",
+    "grammar": "You can drop the topic once it is clear. 魚です (sakana desu = it is fish) stands alone as a full reply.",
+    "grammarNode": "node-03",
+    "tags": ["food"]
+  },
+  {
+    "target": "あのビルは病院ですか？",
+    "tokens": [
+      { "t": "あの" },
+      { "t": "ビル" },
+      { "t": "は" },
+      { "t": "病院", "r": "びょういん" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is that building a hospital?",
+    "grammarNode": "node-03",
+    "tags": ["health", "travel"]
+  },
+  {
+    "target": "いいえ、病院じゃないです。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "病院", "r": "びょういん" },
+      { "t": "じゃない" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "No, it's not a hospital.",
+    "grammarNode": "node-03",
+    "tags": ["health"]
+  },
+  {
+    "target": "すずきさんはべんごしですか？",
+    "tokens": [
+      { "t": "すずき" },
+      { "t": "さん" },
+      { "t": "は" },
+      { "t": "べんごし" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is Mr. Suzuki a lawyer?",
+    "grammarNode": "node-03",
+    "tags": ["work"]
+  },
+  {
+    "target": "はい、べんごしです。",
+    "tokens": [
+      { "t": "はい" },
+      { "t": "、" },
+      { "t": "べんごし" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "Yes, he's a lawyer.",
+    "grammarNode": "node-03",
+    "tags": ["work"]
+  },
+  {
+    "target": "これはあなたのかさですか？",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "は" },
+      { "t": "あなた" },
+      { "t": "の" },
+      { "t": "かさ" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is this your umbrella?",
+    "grammarNode": "node-03",
+    "tags": ["shopping", "weather"]
+  }
+]

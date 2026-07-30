@@ -1,0 +1,262 @@
+[
+  {
+    "target": "先生、おはようございます。",
+    "tokens": [
+      { "t": "先生", "r": "せんせい" },
+      { "t": "、" },
+      { "t": "おはよう" },
+      { "t": "ございます" },
+      { "t": "。" }
+    ],
+    "english": "Good morning, teacher.",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "こんにちは、いい天気ですね。",
+    "tokens": [
+      { "t": "こんにちは" },
+      { "t": "、" },
+      { "t": "いい" },
+      { "t": "天気", "r": "てんき" },
+      { "t": "です" },
+      { "t": "ね" },
+      { "t": "。" }
+    ],
+    "english": "Hello, nice weather, isn't it?",
+    "grammar": "Ending with ね (ne) invites agreement, like 'right?' in English. 天気ですね (tenki desu ne = nice weather, isn't it) turns a remark into shared small talk.",
+    "grammarNode": "node-01",
+    "tags": ["weather", "general"]
+  },
+  {
+    "target": "部長、お疲れさまです。",
+    "tokens": [
+      { "t": "部長", "r": "ぶちょう" },
+      { "t": "、" },
+      { "t": "お疲れさま", "r": "おつかれさま" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "Good work, manager.",
+    "grammar": "お疲れさまです (otsukaresama desu) is the standard greeting between coworkers, used any time of day to acknowledge each other's effort.",
+    "grammarNode": "node-01",
+    "tags": ["work"]
+  },
+  {
+    "target": "お先に失礼します。",
+    "tokens": [
+      { "t": "お先に", "r": "おさきに" },
+      { "t": "失礼", "r": "しつれい" },
+      { "t": "します" },
+      { "t": "。" }
+    ],
+    "english": "Excuse me for leaving before you.",
+    "grammarNode": "node-01",
+    "tags": ["work"]
+  },
+  {
+    "target": "お世話になっております。",
+    "tokens": [
+      { "t": "お世話", "r": "おせわ" },
+      { "t": "に" },
+      { "t": "なって" },
+      { "t": "おります" },
+      { "t": "。" }
+    ],
+    "english": "Thank you for your continued support.",
+    "grammar": "お世話になっております (osewa ni natte orimasu = thank you for your support) is the set phrase that opens most business calls and emails in Japan.",
+    "grammarNode": "node-01",
+    "tags": ["work"]
+  },
+  {
+    "target": "こちらこそよろしくお願いします。",
+    "tokens": [
+      { "t": "こちらこそ" },
+      { "t": "よろしく" },
+      { "t": "お願い", "r": "おねがい" },
+      { "t": "します" },
+      { "t": "。" }
+    ],
+    "english": "The pleasure is mine.",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "本当にありがとうございました。",
+    "tokens": [
+      { "t": "本当に", "r": "ほんとうに" },
+      { "t": "ありがとう" },
+      { "t": "ございました" },
+      { "t": "。" }
+    ],
+    "english": "Thank you so much.",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "すみません、ちょっといいですか。",
+    "tokens": [
+      { "t": "すみません" },
+      { "t": "、" },
+      { "t": "ちょっと" },
+      { "t": "いい" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "Excuse me, do you have a moment?",
+    "grammarNode": "node-01",
+    "tags": ["general", "work"]
+  },
+  {
+    "target": "すみません、遅れました。",
+    "tokens": [
+      { "t": "すみません" },
+      { "t": "、" },
+      { "t": "遅れました", "r": "おくれました" },
+      { "t": "。" }
+    ],
+    "english": "Sorry, I'm late.",
+    "grammarNode": "node-01",
+    "tags": ["work", "time"]
+  },
+  {
+    "target": "ご迷惑をおかけしました。",
+    "tokens": [
+      { "t": "ご迷惑", "r": "ごめいわく" },
+      { "t": "を" },
+      { "t": "おかけしました" },
+      { "t": "。" }
+    ],
+    "english": "I'm sorry for the trouble.",
+    "grammarNode": "node-01",
+    "tags": ["work", "general"]
+  },
+  {
+    "target": "お誕生日おめでとうございます。",
+    "tokens": [
+      { "t": "お誕生日", "r": "おたんじょうび" },
+      { "t": "おめでとう" },
+      { "t": "ございます" },
+      { "t": "。" }
+    ],
+    "english": "Happy birthday.",
+    "grammarNode": "node-01",
+    "tags": ["family", "general"]
+  },
+  {
+    "target": "あけましておめでとうございます。",
+    "tokens": [
+      { "t": "あけまして" },
+      { "t": "おめでとう" },
+      { "t": "ございます" },
+      { "t": "。" }
+    ],
+    "english": "Happy New Year.",
+    "grammarNode": "node-01",
+    "tags": ["general", "time"]
+  },
+  {
+    "target": "本当にお久しぶりです。",
+    "tokens": [
+      { "t": "本当に", "r": "ほんとうに" },
+      { "t": "お久しぶり", "r": "おひさしぶり" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "It's really been a while.",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "お元気ですか。",
+    "tokens": [
+      { "t": "お元気", "r": "おげんき" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "How are you?",
+    "grammar": "Adding か (ka) to the end makes a sentence a question, so お元気ですか (o-genki desu ka) = are you well? No change in word order needed.",
+    "grammarNode": "node-01",
+    "tags": ["general", "health"]
+  },
+  {
+    "target": "はい、元気です。",
+    "tokens": [
+      { "t": "はい" },
+      { "t": "、" },
+      { "t": "元気", "r": "げんき" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "Yes, I'm fine.",
+    "grammarNode": "node-01",
+    "tags": ["general", "health"]
+  },
+  {
+    "target": "では、また明日。",
+    "tokens": [
+      { "t": "では" },
+      { "t": "、" },
+      { "t": "また" },
+      { "t": "明日", "r": "あした" },
+      { "t": "。" }
+    ],
+    "english": "Well then, see you tomorrow.",
+    "grammarNode": "node-01",
+    "tags": ["general", "time"]
+  },
+  {
+    "target": "日本へようこそ。",
+    "tokens": [
+      { "t": "日本", "r": "にほん" },
+      { "t": "へ" },
+      { "t": "ようこそ" },
+      { "t": "。" }
+    ],
+    "english": "Welcome to Japan.",
+    "grammar": "へ marks the destination you move toward, like 'to' a place, as in 日本へ (nihon e = to Japan).",
+    "grammarNode": "node-01",
+    "tags": ["travel"]
+  },
+  {
+    "target": "さようなら、また来週。",
+    "tokens": [
+      { "t": "さようなら" },
+      { "t": "、" },
+      { "t": "また" },
+      { "t": "来週", "r": "らいしゅう" },
+      { "t": "。" }
+    ],
+    "english": "Goodbye, see you next week.",
+    "grammarNode": "node-01",
+    "tags": ["general", "time"]
+  },
+  {
+    "target": "すみません、お邪魔します。",
+    "tokens": [
+      { "t": "すみません" },
+      { "t": "、" },
+      { "t": "お邪魔", "r": "おじゃま" },
+      { "t": "します" },
+      { "t": "。" }
+    ],
+    "english": "Excuse me, I'm coming in.",
+    "grammarNode": "node-01",
+    "tags": ["home"]
+  },
+  {
+    "target": "では、どうぞお大事に。",
+    "tokens": [
+      { "t": "では" },
+      { "t": "、" },
+      { "t": "どうぞ" },
+      { "t": "お大事に", "r": "おだいじに" },
+      { "t": "。" }
+    ],
+    "english": "Well then, please take care.",
+    "grammarNode": "node-01",
+    "tags": ["health"]
+  }
+]

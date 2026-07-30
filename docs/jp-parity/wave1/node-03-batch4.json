@@ -1,0 +1,47 @@
+[
+  {
+    "target": "あなたは先生ですか。",
+    "tokens": [
+      { "t": "あなた" },
+      { "t": "は" },
+      { "t": "先生", "r": "せんせい" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "Are you a teacher?",
+    "grammarNode": "node-03",
+    "tags": ["work"]
+  },
+  {
+    "target": "いいえ、日本人ではありません。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "日本人", "r": "にほんじん" },
+      { "t": "では" },
+      { "t": "ありません" },
+      { "t": "。" }
+    ],
+    "english": "No, I'm not Japanese.",
+    "grammar": "ではありません (dewa arimasen) is the formal negative of です (desu = is). じゃないです (janai desu) means the same but sounds softer in everyday speech.",
+    "grammarNode": "node-03",
+    "tags": ["general"]
+  },
+  {
+    "target": "これはあなたの傘ですか。",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "は" },
+      { "t": "あなた" },
+      { "t": "の" },
+      { "t": "傘", "r": "かさ" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "Is this your umbrella?",
+    "grammarNode": "node-03",
+    "tags": ["travel"]
+  }
+]

@@ -1,0 +1,304 @@
+[
+  {
+    "target": "それは何ですか。",
+    "tokens": [
+      { "t": "それ" },
+      { "t": "は" },
+      { "t": "何", "r": "なん" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "What is that?",
+    "grammarNode": "node-04",
+    "tags": ["general"]
+  },
+  {
+    "target": "あれは何ですか。",
+    "tokens": [
+      { "t": "あれ" },
+      { "t": "は" },
+      { "t": "何", "r": "なん" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "What is that over there?",
+    "grammarNode": "node-04",
+    "tags": ["general"]
+  },
+  {
+    "target": "どれがあなたの本ですか。",
+    "tokens": [
+      { "t": "どれ" },
+      { "t": "が" },
+      { "t": "あなた" },
+      { "t": "の" },
+      { "t": "本", "r": "ほん" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "Which one is your book?",
+    "grammarNode": "node-04",
+    "tags": ["general"]
+  },
+  {
+    "target": "どのペンがあなたのですか。",
+    "tokens": [
+      { "t": "どの" },
+      { "t": "ペン" },
+      { "t": "が" },
+      { "t": "あなた" },
+      { "t": "の" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "Which pen is yours?",
+    "grammar": "どの (dono) always attaches to a noun, like どのペン (dono pen = which pen). Use どれ (dore = which one) when no noun follows.",
+    "grammarNode": "node-04",
+    "tags": ["work"]
+  },
+  {
+    "target": "その本はおもしろいですか。",
+    "tokens": [
+      { "t": "その" },
+      { "t": "本", "r": "ほん" },
+      { "t": "は" },
+      { "t": "おもしろい" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "Is that book interesting?",
+    "grammar": "その (sono) sits before a noun, as in その本 (sono hon = that book). それ (sore = that one) stands alone with no noun after it.",
+    "grammarNode": "node-04",
+    "tags": ["general"]
+  },
+  {
+    "target": "あのレストランは高いです。",
+    "tokens": [
+      { "t": "あの" },
+      { "t": "レストラン" },
+      { "t": "は" },
+      { "t": "高い", "r": "たかい" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "That restaurant is expensive.",
+    "grammarNode": "node-04",
+    "tags": ["food"]
+  },
+  {
+    "target": "これは日本語で何ですか。",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "は" },
+      { "t": "日本語", "r": "にほんご" },
+      { "t": "で" },
+      { "t": "何", "r": "なん" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "What is this in Japanese?",
+    "grammar": "で (de) here marks the language: 日本語で (nihongo de = in Japanese). Use it to ask how to say something in another tongue.",
+    "grammarNode": "node-04",
+    "tags": ["general"]
+  },
+  {
+    "target": "それはあなたのめがねですか。",
+    "tokens": [
+      { "t": "それ" },
+      { "t": "は" },
+      { "t": "あなた" },
+      { "t": "の" },
+      { "t": "めがね" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "Are those your glasses?",
+    "grammarNode": "node-04",
+    "tags": ["shopping"]
+  },
+  {
+    "target": "あれはだれのかばんですか。",
+    "tokens": [
+      { "t": "あれ" },
+      { "t": "は" },
+      { "t": "だれ" },
+      { "t": "の" },
+      { "t": "かばん" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "Whose bag is that over there?",
+    "grammar": "だれの (dare no = whose) joins だれ (dare = who) with の (no), which links an owner to a thing, like だれのかばん (whose bag).",
+    "grammarNode": "node-04",
+    "tags": ["general"]
+  },
+  {
+    "target": "この店は安いです。",
+    "tokens": [
+      { "t": "この" },
+      { "t": "店", "r": "みせ" },
+      { "t": "は" },
+      { "t": "安い", "r": "やすい" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "This shop is cheap.",
+    "grammarNode": "node-04",
+    "tags": ["shopping"]
+  },
+  {
+    "target": "そのくつはいくらですか。",
+    "tokens": [
+      { "t": "その" },
+      { "t": "くつ" },
+      { "t": "は" },
+      { "t": "いくら" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "How much are those shoes?",
+    "grammarNode": "node-04",
+    "tags": ["shopping"]
+  },
+  {
+    "target": "これをください。",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "を" },
+      { "t": "ください" },
+      { "t": "。" }
+    ],
+    "english": "I'll take this one, please.",
+    "grammar": "を (o) marks the thing you want and ください (kudasai = please give me) makes the request, so これをください means please give me this.",
+    "grammarNode": "node-04",
+    "tags": ["shopping"]
+  },
+  {
+    "target": "どれがおすすめですか。",
+    "tokens": [
+      { "t": "どれ" },
+      { "t": "が" },
+      { "t": "おすすめ" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "Which one do you recommend?",
+    "grammarNode": "node-04",
+    "tags": ["food"]
+  },
+  {
+    "target": "あのビルは病院です。",
+    "tokens": [
+      { "t": "あの" },
+      { "t": "ビル" },
+      { "t": "は" },
+      { "t": "病院", "r": "びょういん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "That building is a hospital.",
+    "grammarNode": "node-04",
+    "tags": ["health"]
+  },
+  {
+    "target": "この水は冷たいです。",
+    "tokens": [
+      { "t": "この" },
+      { "t": "水", "r": "みず" },
+      { "t": "は" },
+      { "t": "冷たい", "r": "つめたい" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "This water is cold.",
+    "grammarNode": "node-04",
+    "tags": ["home"]
+  },
+  {
+    "target": "それはだれのですか。",
+    "tokens": [
+      { "t": "それ" },
+      { "t": "は" },
+      { "t": "だれ" },
+      { "t": "の" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "Whose is that?",
+    "grammarNode": "node-04",
+    "tags": ["general"]
+  },
+  {
+    "target": "あの白い建物は何ですか。",
+    "tokens": [
+      { "t": "あの" },
+      { "t": "白い", "r": "しろい" },
+      { "t": "建物", "r": "たてもの" },
+      { "t": "は" },
+      { "t": "何", "r": "なん" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "What is that white building?",
+    "grammarNode": "node-04",
+    "tags": ["general"]
+  },
+  {
+    "target": "この部屋は明るいです。",
+    "tokens": [
+      { "t": "この" },
+      { "t": "部屋", "r": "へや" },
+      { "t": "は" },
+      { "t": "明るい", "r": "あかるい" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "This room is bright.",
+    "grammarNode": "node-04",
+    "tags": ["home"]
+  },
+  {
+    "target": "それは英語の本ですか。",
+    "tokens": [
+      { "t": "それ" },
+      { "t": "は" },
+      { "t": "英語", "r": "えいご" },
+      { "t": "の" },
+      { "t": "本", "r": "ほん" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "Is that an English book?",
+    "grammarNode": "node-04",
+    "tags": ["general"]
+  },
+  {
+    "target": "あれはあなたのスーツケースですか。",
+    "tokens": [
+      { "t": "あれ" },
+      { "t": "は" },
+      { "t": "あなた" },
+      { "t": "の" },
+      { "t": "スーツケース" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "Is that over there your suitcase?",
+    "grammarNode": "node-04",
+    "tags": ["travel"]
+  }
+]

@@ -1,0 +1,280 @@
+[
+  {
+    "target": "わたしはアメリカじんです。",
+    "tokens": [
+      { "t": "わたし" },
+      { "t": "は" },
+      { "t": "アメリカじん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "I am American.",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "かれはフランスじんです。",
+    "tokens": [
+      { "t": "かれ" },
+      { "t": "は" },
+      { "t": "フランスじん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "He is French.",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "リーさんはちゅうごくじんです。",
+    "tokens": [
+      { "t": "リーさん" },
+      { "t": "は" },
+      { "t": "ちゅうごくじん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "Mr. Lee is Chinese.",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "せんせいはイギリスじんです。",
+    "tokens": [
+      { "t": "せんせい" },
+      { "t": "は" },
+      { "t": "イギリスじん" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "The teacher is British.",
+    "grammar": "Add じん (jin = person) to a country name to make a nationality: イギリス (igirisu = Britain) + じん = イギリスじん.",
+    "grammarNode": "node-02",
+    "tags": ["general", "work"]
+  },
+  {
+    "target": "わたしのなまえはケンです。",
+    "tokens": [
+      { "t": "わたし" },
+      { "t": "の" },
+      { "t": "なまえ" },
+      { "t": "は" },
+      { "t": "ケン" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My name is Ken.",
+    "grammar": "の (no) links two nouns to show belonging, like 's in English: わたしのなまえ (watashi no namae = my name).",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "あには医者です。",
+    "tokens": [
+      { "t": "あに" },
+      { "t": "は" },
+      { "t": "医者", "r": "いしゃ" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My older brother is a doctor.",
+    "grammarNode": "node-02",
+    "tags": ["family", "health"]
+  },
+  {
+    "target": "かのじょはかんごしです。",
+    "tokens": [
+      { "t": "かのじょ" },
+      { "t": "は" },
+      { "t": "かんごし" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "She is a nurse.",
+    "grammarNode": "node-02",
+    "tags": ["health", "general"]
+  },
+  {
+    "target": "わたしはエンジニアです。",
+    "tokens": [
+      { "t": "わたし" },
+      { "t": "は" },
+      { "t": "エンジニア" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "I am an engineer.",
+    "grammarNode": "node-02",
+    "tags": ["work"]
+  },
+  {
+    "target": "そふはのうかです。",
+    "tokens": [
+      { "t": "そふ" },
+      { "t": "は" },
+      { "t": "のうか" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My grandfather is a farmer.",
+    "grammarNode": "node-02",
+    "tags": ["family", "work"]
+  },
+  {
+    "target": "これはわたしのかさです。",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "は" },
+      { "t": "わたし" },
+      { "t": "の" },
+      { "t": "かさ" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "This is my umbrella.",
+    "grammar": "これ (kore = this) is for things near you, それ (sore = that) near the listener, あれ (are) far from both.",
+    "grammarNode": "node-02",
+    "tags": ["general", "weather"]
+  },
+  {
+    "target": "それはにほんのくるまです。",
+    "tokens": [
+      { "t": "それ" },
+      { "t": "は" },
+      { "t": "にほん" },
+      { "t": "の" },
+      { "t": "くるま" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "That is a Japanese car.",
+    "grammarNode": "node-02",
+    "tags": ["general", "travel"]
+  },
+  {
+    "target": "あれは駅です。",
+    "tokens": [
+      { "t": "あれ" },
+      { "t": "は" },
+      { "t": "駅", "r": "えき" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "That over there is the station.",
+    "grammarNode": "node-02",
+    "tags": ["travel"]
+  },
+  {
+    "target": "今日は日曜日です。",
+    "tokens": [
+      { "t": "今日", "r": "きょう" },
+      { "t": "は" },
+      { "t": "日曜日", "r": "にちようび" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "Today is Sunday.",
+    "grammarNode": "node-02",
+    "tags": ["time"]
+  },
+  {
+    "target": "たんじょうびはらいしゅうです。",
+    "tokens": [
+      { "t": "たんじょうび" },
+      { "t": "は" },
+      { "t": "らいしゅう" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My birthday is next week.",
+    "grammarNode": "node-02",
+    "tags": ["time"]
+  },
+  {
+    "target": "ここはわたしのへやです。",
+    "tokens": [
+      { "t": "ここ" },
+      { "t": "は" },
+      { "t": "わたし" },
+      { "t": "の" },
+      { "t": "へや" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "This is my room.",
+    "grammarNode": "node-02",
+    "tags": ["home"]
+  },
+  {
+    "target": "あのひとはかしゅです。",
+    "tokens": [
+      { "t": "あの" },
+      { "t": "ひと" },
+      { "t": "は" },
+      { "t": "かしゅ" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "That person is a singer.",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "おっとはコックです。",
+    "tokens": [
+      { "t": "おっと" },
+      { "t": "は" },
+      { "t": "コック" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My husband is a cook.",
+    "grammarNode": "node-02",
+    "tags": ["family", "food"]
+  },
+  {
+    "target": "そぼはげんきです。",
+    "tokens": [
+      { "t": "そぼ" },
+      { "t": "は" },
+      { "t": "げんき" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My grandmother is well.",
+    "grammar": "げんき (genki = healthy) is a na-adjective, so it takes です with nothing extra: げんきです (genki desu = am well).",
+    "grammarNode": "node-02",
+    "tags": ["family", "health"]
+  },
+  {
+    "target": "このひとはゆうめいなはいゆうです。",
+    "tokens": [
+      { "t": "この" },
+      { "t": "ひと" },
+      { "t": "は" },
+      { "t": "ゆうめいな" },
+      { "t": "はいゆう" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "This person is a famous actor.",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  },
+  {
+    "target": "わたしのしゅみはおんがくです。",
+    "tokens": [
+      { "t": "わたし" },
+      { "t": "の" },
+      { "t": "しゅみ" },
+      { "t": "は" },
+      { "t": "おんがく" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "My hobby is music.",
+    "grammar": "は here is the topic marker and is pronounced wa, not ha: しゅみは (shumi wa = as for the hobby).",
+    "grammarNode": "node-02",
+    "tags": ["general"]
+  }
+]

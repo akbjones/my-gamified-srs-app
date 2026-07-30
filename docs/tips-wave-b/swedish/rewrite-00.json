@@ -1,0 +1,370 @@
+[
+ {
+  "id": "sv-0006",
+  "target": "Hon somnar direkt.",
+  "english": "She falls asleep right away.",
+  "node": "node-01",
+  "old": "Swedish present tense is the same for all persons: `jag talar`, `du talar`, `han talar`. The verb form never changes by person. Easy compared to most European languages.",
+  "focus": "Anchor on 'somnar': Swedish uses one verb form for every subject – hon somnar, jag somnar, du somnar – unlike English's 3rd-person -s. No backticks."
+ },
+ {
+  "id": "sv-0010",
+  "target": "Vi njöt av solnedgången.",
+  "english": "We enjoyed the sunset.",
+  "node": "node-01",
+  "old": "Swedish glues \"the\" onto the end of the noun. hund (a dog) → hunden (the dog). hus (a house) → huset (the house). No separate word.",
+  "focus": "Anchor on 'solnedgången': Swedish tacks 'the' onto the noun's end (solnedgång to solnedgången = the sunset). Drop the hund/hus filler."
+ },
+ {
+  "id": "sv-0023",
+  "target": "De pratar svenska hemma.",
+  "english": "They speak Swedish at home.",
+  "node": "node-01",
+  "old": "'Prata' → 'pratar' (talk/chat): Group 1, more informal than 'tala'.",
+  "focus": "Register: prata is the everyday word for 'talk/chat'; tala sounds more formal. Quote pratar; drop the group-1 conjugation framing."
+ },
+ {
+  "id": "sv-0024",
+  "target": "Butiken öppnar klockan tio.",
+  "english": "The store opens at ten.",
+  "node": "node-01",
+  "old": "Two genders – common (suffix -n) and neuter (suffix -t). bilen (the car, common) vs huset (the house, neuter). The ending reveals the gender.",
+  "focus": "Anchor on 'butiken': two genders – common nouns take -en (butiken = the shop), neuter take -et (huset). Drop the abstract bilen/huset table framing."
+ },
+ {
+  "id": "sv-0042",
+  "target": "Han jobbar på ett sjukhus.",
+  "english": "He works at a hospital.",
+  "node": "node-01",
+  "old": "'Jobba' → 'jobbar' (work): Group 1 verb (-ar ending). 'Arbeta' → 'arbetar' is more formal.",
+  "focus": "Register: jobba is casual 'work', arbeta is more formal. Quote jobbar; drop the group-1 conjugation label."
+ },
+ {
+  "id": "sv-0072",
+  "target": "Vi äter frukost klockan halv åtta.",
+  "english": "We eat breakfast at half past seven.",
+  "node": "node-01",
+  "old": "\"Halv åtta\" = 7:30 (half TO eight). \"Frukost\" = breakfast.",
+  "focus": "Time trap: halv atta = 7:30, not 8:30 – Swedish counts to the next hour (half TO eight). Quote halv atta; drop the frukost gloss."
+ },
+ {
+  "id": "sv-0086",
+  "target": "Vi äter middag klockan sex.",
+  "english": "We eat dinner at six o'clock.",
+  "node": "node-01",
+  "old": "\"Middag\" = dinner (evening meal). Lunch is the midday meal.",
+  "focus": "False-friend: middag looks like 'midday' but means dinner, the evening meal. Quote middag; drop the lunch aside."
+ },
+ {
+  "id": "sv-0094",
+  "target": "Jag vill lära mig mer svenska.",
+  "english": "I want to learn more Swedish.",
+  "node": "node-01",
+  "old": "'Vill' (want) – modal verbs in Swedish don't change form: 'jag vill', 'du vill', 'han vill'.",
+  "focus": "False-friend: vill means 'want', not English 'will'. Quote vill; keep it to that one point."
+ },
+ {
+  "id": "sv-0115",
+  "target": "I Sverige äter man ofta middag vid sex.",
+  "english": "In Sweden one often eats dinner at six.",
+  "node": "node-01",
+  "old": "Swedish is V2: the verb is always the second element. `Idag äter jag pizza` (today I eat pizza), not `idag jag äter`. Subject jumps after the verb.",
+  "focus": "V2 word order: fronting 'I Sverige' pushes the verb ahead of the subject – I Sverige ater man (in Sweden eats one). Remove backticks; anchor on this card's own inversion."
+ },
+ {
+  "id": "sv-0264",
+  "target": "Du skämtar väl inte med mig om det här?",
+  "english": "You are surely not joking with me about this?",
+  "node": "node-01",
+  "old": "Subordinating conjunctions don't push the verb to the very end (that's German). But they DO flip the inte/verb order. Main: `verb + inte`. Sub: `inte + verb`.",
+  "focus": "Strip the backticks. Anchor on this main clause: 'du skämtar inte' = verb + inte. State the real trap: in a subordinate clause (att-, om-, som-) it flips to inte + verb, unlike English which never moves 'not'."
+ },
+ {
+  "id": "sv-0398",
+  "target": "Det är varmt ute.",
+  "english": "It is warm outside.",
+  "node": "node-03",
+  "old": "`Det är` doesn't care about gender or number of what follows: `det är en bok`, `det är böcker`. Always `det är` in front, regardless.",
+  "focus": "Strip the backticks. Keep the point: dummy subject stays 'det är' regardless of the gender/number of what follows – learners wrongly reach for 'den är' with en-words. Quote 'Det är varmt'."
+ },
+ {
+  "id": "sv-0437",
+  "target": "Det finns bröd på hyllan.",
+  "english": "There is bread on the shelf.",
+  "node": "node-03",
+  "old": "`det är` = 'it is / there is'. `Det finns` = 'there is/are' for existence. `Det är en bil` (it is a car) vs `det finns en bil` (there is a car).",
+  "focus": "Contrast det är (it is) vs det finns (there is/exists), anchored to 'Det finns bröd pa hyllan'; strip backticks; one contrast only."
+ },
+ {
+  "id": "sv-0439",
+  "target": "Hittills har allt gått bra.",
+  "english": "So far everything has gone well.",
+  "node": "node-03",
+  "old": "Perfect tense uses `har + supinum`: `jag har talat`, `vi har sett`. The supinum is the form ending -at / -t / -tt / -it – distinct from past tense.",
+  "focus": "Perfect = har + supinum, anchored to 'har allt gatt'; note supinum (gatt) differs from the past-tense form; strip backticks; trim the table."
+ },
+ {
+  "id": "sv-0457",
+  "target": "God kväll, hoppas du har haft en bra dag.",
+  "english": "Good evening, I hope you've had a good day.",
+  "node": "node-03",
+  "old": "'Bra' (good) never changes form – it's the same in all positions. Comparative: 'bättre', superlative: 'bäst'.",
+  "focus": "'Bra' never inflects, unlike stor/stort - anchor to 'en bra dag'; one rule only, drop the comparative list."
+ },
+ {
+  "id": "sv-0523",
+  "target": "Året då allt förändrades.",
+  "english": "The year when everything changed.",
+  "node": "node-04",
+  "old": "The V2 rule doesn't apply in subordinate clauses (after att, som, när, etc.) – there the subject comes before the verb.",
+  "focus": "Anchor to 'da allt forandrades': in a subordinate clause the subject stays before the verb (no V2); plain words."
+ },
+ {
+  "id": "sv-0583",
+  "target": "Hur vi löser problemet vet jag inte.",
+  "english": "How we solve the problem I don't know.",
+  "node": "node-04",
+  "old": "Fronted indirect question as topic: \"Hur vi löser\" + inverted main: \"vet jag inte.\"",
+  "focus": "Anchor to the card: the whole clause 'Hur vi loser problemet' fills the first slot, so the main verb inverts - 'vet jag inte'; plain words, no jargon."
+ },
+ {
+  "id": "sv-0659",
+  "target": "Hur gammal är du?",
+  "english": "How old are you?",
+  "node": "node-05",
+  "old": "Swedish only has one 'you' in modern use: `du`. Use it with strangers, your boss, the king – everyone. The formal `Ni` is essentially extinct outside very formal letters.",
+  "focus": "Modern Swedish uses 'du' for everyone; strip backticks; anchor to 'du'; keep it to the one du-universal point."
+ },
+ {
+  "id": "sv-0666",
+  "target": "I princip är vi överens.",
+  "english": "In principle, we agree.",
+  "node": "node-05",
+  "old": "If anything but the subject opens the sentence, the subject inverts after the verb – V2 rule. `Idag äter jag pizza` (today eat I pizza). Same rule as German/Dutch.",
+  "focus": "Anchor to 'I princip ar vi': a non-subject first element forces verb-second, subject third; keep the German/Dutch parallel; strip backticks."
+ },
+ {
+  "id": "sv-0733",
+  "target": "Min familj bor i en liten stad i södern.",
+  "english": "My family lives in a small town in the south.",
+  "node": "node-05",
+  "old": "'Liten' is highly irregular: en→liten, ett→litet, definite→lilla, plural→små.",
+  "focus": "liten is suppletive — its definite/plural forms look nothing like it; quote 'en liten stad', note the plural is 'små'. Drop the full paradigm table."
+ },
+ {
+  "id": "sv-0737",
+  "target": "Skynda dig så att vi inte missar bussen dit!",
+  "english": "Hurry up so we don't miss the bus!",
+  "node": "node-05",
+  "old": "In subordinate clauses, `inte` moves before the verb: `att jag inte äter pizza` (that I don't eat pizza). Compare to the main-clause order `jag äter inte pizza`.",
+  "focus": "Strip backticks. Anchor to the card's 'så att vi inte missar' — in a subordinate clause inte comes before the verb."
+ },
+ {
+  "id": "sv-0774",
+  "target": "Snart kommer sommaren under sommaren till slut.",
+  "english": "Soon summer will come during the summer in the end.",
+  "node": "node-05",
+  "old": "\"Snart\" = soon. Fronted adverb triggers V2 inversion.",
+  "focus": "Lead with the inversion, not the gloss; quote 'Snart kommer sommaren' — a fronted adverb pushes the verb ahead of the subject."
+ },
+ {
+  "id": "sv-0786",
+  "target": "Det kan inte stämma.",
+  "english": "That can't be right.",
+  "node": "node-06",
+  "old": "`inte` (not) goes after the verb in main clauses: `jag äter inte pizza` (I don't eat pizza). Watch the position – putting `inte` first is wrong.",
+  "focus": "Strip backticks. Anchor to 'Det kan inte stämma' — in a main clause inte follows the verb."
+ },
+ {
+  "id": "sv-0789",
+  "target": "Sex, sju, åtta, nio, tio.",
+  "english": "Six, seven, eight, nine, ten.",
+  "node": "node-06",
+  "old": "\"Sju\" (7) contains the tricky sj-sound [ɧ]. \"Åtta\" has double-t making the å short.",
+  "focus": "One rule only — keep the sju [ɧ] sj-sound note (the hardest Swedish sound), drop the åtta clause. Quote 'sju'."
+ },
+ {
+  "id": "sv-0794",
+  "target": "Hon undrade var vi bodde.",
+  "english": "She wondered where we lived.",
+  "node": "node-09",
+  "old": "Reported questions with wh-words keep the question word: var, när, hur, etc.",
+  "focus": "Highlight the word-order trap — a reported wh-question keeps subject before verb: 'var vi bodde', not 'var bodde vi'."
+ },
+ {
+  "id": "sv-0848",
+  "target": "Vad synd att du inte kunde komma med oss idag!",
+  "english": "What a shame that you could not come with us today!",
+  "node": "node-09",
+  "old": "After att, när, om, eftersom: inte (not) goes before the verb. Jag vet att han inte kommer (I know that he isn't coming).",
+  "focus": "Strip the generic example; anchor to the card's 'att du inte kunde komma' — after att, inte sits before the verb."
+ },
+ {
+  "id": "sv-0882",
+  "target": "De vackra blommorna doftar gott.",
+  "english": "The beautiful flowers smell nice.",
+  "node": "node-07",
+  "old": "\"Dofta\" = smell (emit scent). \"Gott\" (neuter) here because it's an adverb, not adjective.",
+  "focus": "Drop the dofta gloss; focus on why 'gott' takes neuter -t after the verb (it's an adverb, not an adjective). Quote 'doftar gott'."
+ },
+ {
+  "id": "sv-0930",
+  "target": "Skit samma, vi gör det på vårt sätt istället.",
+  "english": "Whatever, we will do it our way instead.",
+  "node": "node-07",
+  "old": "Mildly vulgar but extremely common in casual Swedish.",
+  "focus": "Quote 'Skit samma'; note it's a crude/slangy 'whatever', casual speech only."
+ },
+ {
+  "id": "sv-1060",
+  "target": "Det var som fan efter jobbet egentligen!",
+  "english": "That was unbelievable after work actually!",
+  "node": "node-09",
+  "old": "Mildly vulgar exclamation expressing astonishment.",
+  "focus": "Quote 'som fan'; note it's a vulgar intensifier (roughly 'as hell'), casual/vulgar register only."
+ },
+ {
+  "id": "sv-1111",
+  "target": "Skorstensfejarens uniform var svart av sot och aska.",
+  "english": "The chimney sweep's uniform was black from soot and ash.",
+  "node": "node-09",
+  "old": "Swedish loves compound nouns – long words made of smaller ones. `Tandborste` = tooth + brush. Break them apart to read: `tand` + `borste`. The last piece carries the gender.",
+  "focus": "Anchor on the card's own compound Skorstensfejarens (skorsten + fejare = chimney sweeper); drop backticks and the Tandborste example; last piece sets the gender."
+ },
+ {
+  "id": "sv-1164",
+  "target": "Hon kan prata tre språk.",
+  "english": "She can speak three languages.",
+  "node": "node-09",
+  "old": "\"Kan\" means both 'can' and 'know how to.' No 'att' before the infinitive after modals.",
+  "focus": "Keep only kan = can AND know how to, anchored on Hon kan prata (she knows how to speak); drop the generic no-att clause."
+ },
+ {
+  "id": "sv-1266",
+  "target": "Vi vet inte var han bor med familjen.",
+  "english": "We don't know where he lives with the family.",
+  "node": "node-09",
+  "old": "In subordinate clauses after \"var/att/om\": subject + inte + verb.",
+  "focus": "Sentence has no inte in its subclause; retarget to the real phenomenon: after var the subclause keeps subject-verb order (var han bor, not var bor han)."
+ },
+ {
+  "id": "sv-1334",
+  "target": "Jag vill ha en öl.",
+  "english": "I want a beer.",
+  "node": "node-10",
+  "old": "Direct \"jag vill ha\" is casual but common among friends.",
+  "focus": "Make the register stake explicit: jag vill ha en öl is blunt for ordering; kan jag få en öl is politer. Quote vill ha from the card."
+ },
+ {
+  "id": "sv-1339",
+  "target": "Kan jag betala med kort under sommaren?",
+  "english": "Can I pay by card during the summer?",
+  "node": "node-10",
+  "old": "\"Kort\" = card. Sweden is nearly cashless – cards accepted everywhere.",
+  "focus": "Drop the kort = card gloss; keep the genuine note that Sweden is nearly cashless so card pays everywhere. Quote kort/betala med kort."
+ },
+ {
+  "id": "sv-1557",
+  "target": "Kanske kommer han imorgon.",
+  "english": "Maybe he will come tomorrow.",
+  "node": "node-12",
+  "old": "\"Inte\" goes after the verb in main clauses: \"Jag förstår inte\" = I don't understand.",
+  "focus": "Sentence has no inte; retarget to the real feature: kanske triggers V2 inversion (Kanske kommer han = maybe comes he), verb before subject."
+ },
+ {
+  "id": "sv-1639",
+  "target": "Jag kan inte simma.",
+  "english": "I can't swim.",
+  "node": "node-13",
+  "old": "\"Kan inte\" = can't. Negation always after the modal verb in main clauses.",
+  "focus": "Drop the 'can't' re-translation; hook the rule that inte follows the finite/modal verb in main clauses – quote 'kan inte simma'."
+ },
+ {
+  "id": "sv-1655",
+  "target": "Jag tycker inte om det.",
+  "english": "I don't like it.",
+  "node": "node-13",
+  "old": "\"Tycker inte om\" = don't like. \"Inte\" splits \"tycker\" and \"om\" (particle).",
+  "focus": "Lead with the surprise that inte splits the particle verb tycka...om: 'tycker inte om' – the om belongs to the verb, not a preposition."
+ },
+ {
+  "id": "sv-1689",
+  "target": "Hur vill du betala just nu snart?",
+  "english": "How do you want to pay right now soon?",
+  "node": "node-13",
+  "old": "Swedish dropped formal `you` in the 1960s-70s (`du-reformen`). Unlike French/German/Russian, there is no formal pronoun – `du` works for everyone.",
+  "focus": "Strip the backticks (plain text). Keep the point: Swedish scrapped formal 'you' in the du-reform, so 'du' works for everyone – quote 'du'."
+ },
+ {
+  "id": "sv-1703",
+  "target": "Det är alltid roligt att lära känna nya människor här.",
+  "english": "It is always fun to get to know new people here.",
+  "node": "node-13",
+  "old": "'Alltid' (always) – goes after the verb in main clauses: 'Jag äter alltid frukost'.",
+  "focus": "Drop the 'always' gloss lead; hook that a frequency adverb sits right after the verb in main clauses – quote 'är alltid roligt'."
+ },
+ {
+  "id": "sv-1827",
+  "target": "Jag har alltid älskat svensk natur nu.",
+  "english": "I have always loved Swedish nature.",
+  "node": "node-14",
+  "old": "\"Älska\" → \"älskat\" (Group 1 supine: -at). Time adverbs go between har and supine.",
+  "focus": "One rule only: cut the supine-formation half; keep that a time/frequency adverb goes between har and the supine – quote 'har alltid älskat'."
+ },
+ {
+  "id": "sv-1932",
+  "target": "Redan klockan sex vaknade jag ibland också.",
+  "english": "Sometimes I even woke up as early as six o'clock.",
+  "node": "node-15",
+  "old": "\"Redan\" = already. When fronted, V2 rule applies.",
+  "focus": "Drop the 'already' gloss lead; hook that fronting anything forces the verb before the subject – quote 'Redan klockan sex vaknade jag'."
+ },
+ {
+  "id": "sv-2119",
+  "target": "Huset är stort som vi såg i den gamla butiken igår.",
+  "english": "The house is as big as the one we saw in the old shop yesterday.",
+  "node": "node-16",
+  "old": "Simple definite: \"Huset\" = the house. Suffix -et for ett-words.",
+  "focus": "Hook the English trap: Swedish glues 'the' onto the noun as a suffix -et – 'huset' = the house, no separate article."
+ },
+ {
+  "id": "sv-2211",
+  "target": "Dessutom regnar det.",
+  "english": "Moreover, it's raining.",
+  "node": "node-17",
+  "old": "\"Dessutom\" = moreover. Sentence adverb – triggers V2.",
+  "focus": "Drop the 'moreover' gloss lead; hook that a fronted sentence adverb forces verb-second – quote 'Dessutom regnar det'."
+ },
+ {
+  "id": "sv-2253",
+  "target": "Vi hoppas att vädret blir bra verkligen.",
+  "english": "We really hope the weather will be nice.",
+  "node": "node-17",
+  "old": "\"Hoppas\" is a deponent verb (s-form but active meaning). It takes an att-clause.",
+  "focus": "De-jargon 'deponent': hoppas ends in -s so it looks passive, but it means active 'we hope' – quote 'hoppas'."
+ },
+ {
+  "id": "sv-2489",
+  "target": "I och med att han slutade fick hon jobbet.",
+  "english": "Since he quit, she got the job.",
+  "node": "node-18",
+  "old": "\"I och med att\" = since/given that.",
+  "focus": "Hook the literal breakdown: 'i och med att' reads word-for-word as 'in and with that' but means given/since that. Quote the phrase."
+ },
+ {
+  "id": "sv-2666",
+  "target": "Maten lagas av kocken.",
+  "english": "The food is cooked by the chef.",
+  "node": "node-20",
+  "old": "S-passive is more common than bli-passive for habitual/general statements.",
+  "focus": "Anchor to 'lagas': s-passive (verb + -s) beats bli-passive for habitual/general statements. Quote maten lagas av kocken."
+ },
+ {
+  "id": "sv-2697",
+  "target": "Platsen dit vi reste på kvällen förra året.",
+  "english": "The place we traveled to in the evening last year.",
+  "node": "node-20",
+  "old": "\"Dit\" = to where. \"Platsen dit\" = the place to which.",
+  "focus": "Make it the dit-vs-där trap: 'dit' = to-where (motion), 'där' = where (static). Quote 'platsen dit'."
+ }
+]

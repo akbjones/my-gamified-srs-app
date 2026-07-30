@@ -1,0 +1,47 @@
+[
+  {
+    "target": "どれがおすすめですか。",
+    "tokens": [
+      {"t": "どれ"},
+      {"t": "が"},
+      {"t": "おすすめ"},
+      {"t": "です"},
+      {"t": "か"},
+      {"t": "。"}
+    ],
+    "english": "Which one do you recommend?",
+    "grammar": "どれ (dore = which one) stands alone; どの (dono = which) needs a noun after it, like どの店 (dono mise = which store).",
+    "grammarNode": "node-04",
+    "tags": ["shopping", "food"]
+  },
+  {
+    "target": "この魚はしんせんですか。",
+    "tokens": [
+      {"t": "この"},
+      {"t": "魚", "r": "さかな"},
+      {"t": "は"},
+      {"t": "しんせん"},
+      {"t": "です"},
+      {"t": "か"},
+      {"t": "。"}
+    ],
+    "english": "Is this fish fresh?",
+    "grammarNode": "node-04",
+    "tags": ["food", "shopping"]
+  },
+  {
+    "target": "あれは私の車です。",
+    "tokens": [
+      {"t": "あれ"},
+      {"t": "は"},
+      {"t": "私", "r": "わたし"},
+      {"t": "の"},
+      {"t": "車", "r": "くるま"},
+      {"t": "です"},
+      {"t": "。"}
+    ],
+    "english": "That is my car.",
+    "grammarNode": "node-04",
+    "tags": ["general", "travel"]
+  }
+]

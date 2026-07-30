@@ -1,0 +1,246 @@
+[
+  {
+    "target": "こんにちは、田中です。",
+    "tokens": [
+      { "t": "こんにちは" },
+      { "t": "、" },
+      { "t": "田中", "r": "たなか" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "Hello, I'm Tanaka.",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "すみません、駅はどこですか。",
+    "tokens": [
+      { "t": "すみません" },
+      { "t": "、" },
+      { "t": "駅", "r": "えき" },
+      { "t": "は" },
+      { "t": "どこ" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "Excuse me, where is the station?",
+    "grammar": "か (ka) at the end turns a statement into a question. 駅はどこですか (eki wa doko desu ka = where is the station?).",
+    "grammarNode": "node-01",
+    "tags": ["travel"]
+  },
+  {
+    "target": "本当にありがとうございました。",
+    "tokens": [
+      { "t": "本当に", "r": "ほんとうに" },
+      { "t": "ありがとうございました" },
+      { "t": "。" }
+    ],
+    "english": "Thank you very much.",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "お先に失礼します。",
+    "tokens": [
+      { "t": "お先に", "r": "おさきに" },
+      { "t": "失礼します", "r": "しつれいします" },
+      { "t": "。" }
+    ],
+    "english": "Excuse me for leaving before you.",
+    "grammarNode": "node-01",
+    "tags": ["work"]
+  },
+  {
+    "target": "お疲れ様でした。",
+    "tokens": [
+      { "t": "お疲れ様", "r": "おつかれさま" },
+      { "t": "でした" },
+      { "t": "。" }
+    ],
+    "english": "Thank you for your hard work.",
+    "grammarNode": "node-01",
+    "tags": ["work"]
+  },
+  {
+    "target": "お世話になっております。",
+    "tokens": [
+      { "t": "お世話", "r": "おせわ" },
+      { "t": "に" },
+      { "t": "なっております" },
+      { "t": "。" }
+    ],
+    "english": "Thank you for your continued support.",
+    "grammarNode": "node-01",
+    "tags": ["work"]
+  },
+  {
+    "target": "お久しぶりです。",
+    "tokens": [
+      { "t": "お久しぶり", "r": "おひさしぶり" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "It's been a long time.",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "お元気ですか。",
+    "tokens": [
+      { "t": "お元気", "r": "おげんき" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "。" }
+    ],
+    "english": "How are you?",
+    "grammar": "The お (o) prefix adds politeness to 元気 (genki = well). お元気ですか (ogenki desu ka = how are you?).",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "こちらこそよろしくお願いします。",
+    "tokens": [
+      { "t": "こちらこそ" },
+      { "t": "よろしく" },
+      { "t": "お願いします", "r": "おねがいします" },
+      { "t": "。" }
+    ],
+    "english": "The pleasure is mine.",
+    "grammar": "こちらこそ (kochira koso = likewise) sends a greeting back to the other person; it replies to よろしくお願いします.",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "さようなら、また来週。",
+    "tokens": [
+      { "t": "さようなら" },
+      { "t": "、" },
+      { "t": "また" },
+      { "t": "来週", "r": "らいしゅう" },
+      { "t": "。" }
+    ],
+    "english": "Goodbye, see you next week.",
+    "grammarNode": "node-01",
+    "tags": ["general", "time"]
+  },
+  {
+    "target": "また明日会いましょう。",
+    "tokens": [
+      { "t": "また" },
+      { "t": "明日", "r": "あした" },
+      { "t": "会いましょう", "r": "あいましょう" },
+      { "t": "。" }
+    ],
+    "english": "Let's meet again tomorrow.",
+    "grammar": "The ～ましょう (mashou) ending means let's do something. 会いましょう (aimashou = let's meet).",
+    "grammarNode": "node-01",
+    "tags": ["general", "time"]
+  },
+  {
+    "target": "それでは、失礼します。",
+    "tokens": [
+      { "t": "それでは" },
+      { "t": "、" },
+      { "t": "失礼します", "r": "しつれいします" },
+      { "t": "。" }
+    ],
+    "english": "Well then, I'll excuse myself.",
+    "grammarNode": "node-01",
+    "tags": ["work"]
+  },
+  {
+    "target": "すみません、お邪魔します。",
+    "tokens": [
+      { "t": "すみません" },
+      { "t": "、" },
+      { "t": "お邪魔します", "r": "おじゃまします" },
+      { "t": "。" }
+    ],
+    "english": "Excuse me, sorry to intrude.",
+    "grammarNode": "node-01",
+    "tags": ["home"]
+  },
+  {
+    "target": "いいえ、どういたしまして。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "どういたしまして" },
+      { "t": "。" }
+    ],
+    "english": "No, you're welcome.",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "どうも、お待たせしました。",
+    "tokens": [
+      { "t": "どうも" },
+      { "t": "、" },
+      { "t": "お待たせしました", "r": "おまたせしました" },
+      { "t": "。" }
+    ],
+    "english": "Sorry to keep you waiting.",
+    "grammarNode": "node-01",
+    "tags": ["general"]
+  },
+  {
+    "target": "いらっしゃいませ、どうぞ。",
+    "tokens": [
+      { "t": "いらっしゃいませ" },
+      { "t": "、" },
+      { "t": "どうぞ" },
+      { "t": "。" }
+    ],
+    "english": "Welcome, please come in.",
+    "grammarNode": "node-01",
+    "tags": ["shopping"]
+  },
+  {
+    "target": "どうぞお大事に。",
+    "tokens": [
+      { "t": "どうぞ" },
+      { "t": "お大事に", "r": "おだいじに" },
+      { "t": "。" }
+    ],
+    "english": "Please take care of yourself.",
+    "grammarNode": "node-01",
+    "tags": ["health"]
+  },
+  {
+    "target": "ご結婚おめでとうございます。",
+    "tokens": [
+      { "t": "ご結婚", "r": "ごけっこん" },
+      { "t": "おめでとうございます" },
+      { "t": "。" }
+    ],
+    "english": "Congratulations on your marriage.",
+    "grammarNode": "node-01",
+    "tags": ["family"]
+  },
+  {
+    "target": "お誕生日おめでとうございます。",
+    "tokens": [
+      { "t": "お誕生日", "r": "おたんじょうび" },
+      { "t": "おめでとうございます" },
+      { "t": "。" }
+    ],
+    "english": "Happy birthday.",
+    "grammarNode": "node-01",
+    "tags": ["family", "time"]
+  },
+  {
+    "target": "はい、かしこまりました。",
+    "tokens": [
+      { "t": "はい" },
+      { "t": "、" },
+      { "t": "かしこまりました" },
+      { "t": "。" }
+    ],
+    "english": "Yes, certainly.",
+    "grammar": "かしこまりました (kashikomarimashita = certainly) is a very polite way to say understood, used by staff toward customers.",
+    "grammarNode": "node-01",
+    "tags": ["work", "shopping"]
+  }
+]

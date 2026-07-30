@@ -1,0 +1,292 @@
+[
+  {
+    "target": "先生ですか？",
+    "tokens": [
+      { "t": "先生", "r": "せんせい" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Are you a teacher?",
+    "grammar": "か (ka) at the end turns a statement into a yes or no question, as in 先生ですか (sensei desu ka = are you a teacher?).",
+    "grammarNode": "node-03",
+    "tags": ["work"]
+  },
+  {
+    "target": "はい、先生です。",
+    "tokens": [
+      { "t": "はい" },
+      { "t": "、" },
+      { "t": "先生", "r": "せんせい" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "Yes, I am a teacher.",
+    "grammar": "After はい (hai = yes), just repeat the noun plus です. There is no separate word for is; です carries it.",
+    "grammarNode": "node-03",
+    "tags": ["work"]
+  },
+  {
+    "target": "いいえ、医者ではありません。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "医者", "r": "いしゃ" },
+      { "t": "で" },
+      { "t": "は" },
+      { "t": "ありません" },
+      { "t": "。" }
+    ],
+    "english": "No, I am not a doctor.",
+    "grammar": "ではありません (dewa arimasen = is not) is the formal negative of です. The は inside it is read wa, not ha.",
+    "grammarNode": "node-03",
+    "tags": ["health", "work"]
+  },
+  {
+    "target": "これはコーヒーですか？",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "は" },
+      { "t": "コーヒー" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is this coffee?",
+    "grammarNode": "node-03",
+    "tags": ["food"]
+  },
+  {
+    "target": "いいえ、コーヒーじゃないです。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "コーヒー" },
+      { "t": "じゃない" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "No, it is not coffee.",
+    "grammar": "じゃないです (ja nai desu = is not) is the everyday polite negative of です. じゃ is a shortened form of では.",
+    "grammarNode": "node-03",
+    "tags": ["food"]
+  },
+  {
+    "target": "トイレはこちらですか？",
+    "tokens": [
+      { "t": "トイレ" },
+      { "t": "は" },
+      { "t": "こちら" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is the restroom this way?",
+    "grammarNode": "node-03",
+    "tags": ["travel"]
+  },
+  {
+    "target": "はい、こちらです。",
+    "tokens": [
+      { "t": "はい" },
+      { "t": "、" },
+      { "t": "こちら" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "Yes, it is this way.",
+    "grammarNode": "node-03",
+    "tags": ["travel"]
+  },
+  {
+    "target": "あの人は田中さんですか？",
+    "tokens": [
+      { "t": "あの" },
+      { "t": "人", "r": "ひと" },
+      { "t": "は" },
+      { "t": "田中", "r": "たなか" },
+      { "t": "さん" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is that person Mr. Tanaka?",
+    "grammarNode": "node-03",
+    "tags": ["general"]
+  },
+  {
+    "target": "いいえ、田中さんではありません。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "田中", "r": "たなか" },
+      { "t": "さん" },
+      { "t": "で" },
+      { "t": "は" },
+      { "t": "ありません" },
+      { "t": "。" }
+    ],
+    "english": "No, it is not Mr. Tanaka.",
+    "grammarNode": "node-03",
+    "tags": ["general"]
+  },
+  {
+    "target": "今日は休みですか？",
+    "tokens": [
+      { "t": "今日", "r": "きょう" },
+      { "t": "は" },
+      { "t": "休み", "r": "やすみ" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is today a day off?",
+    "grammarNode": "node-03",
+    "tags": ["time", "work"]
+  },
+  {
+    "target": "はい、休みです。",
+    "tokens": [
+      { "t": "はい" },
+      { "t": "、" },
+      { "t": "休み", "r": "やすみ" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "Yes, it is a day off.",
+    "grammarNode": "node-03",
+    "tags": ["time"]
+  },
+  {
+    "target": "これはあなたのかさですか？",
+    "tokens": [
+      { "t": "これ" },
+      { "t": "は" },
+      { "t": "あなた" },
+      { "t": "の" },
+      { "t": "かさ" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is this your umbrella?",
+    "grammarNode": "node-03",
+    "tags": ["weather", "general"]
+  },
+  {
+    "target": "いいえ、わたしのじゃないです。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "わたし" },
+      { "t": "の" },
+      { "t": "じゃない" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "No, it is not mine.",
+    "grammar": "You can drop the noun after の and let it mean one's own, so わたしの (watashi no = mine) stands alone before じゃないです.",
+    "grammarNode": "node-03",
+    "tags": ["general"]
+  },
+  {
+    "target": "会議は今日ですか？",
+    "tokens": [
+      { "t": "会議", "r": "かいぎ" },
+      { "t": "は" },
+      { "t": "今日", "r": "きょう" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is the meeting today?",
+    "grammarNode": "node-03",
+    "tags": ["work", "time"]
+  },
+  {
+    "target": "いいえ、今日ではありません。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "今日", "r": "きょう" },
+      { "t": "で" },
+      { "t": "は" },
+      { "t": "ありません" },
+      { "t": "。" }
+    ],
+    "english": "No, it is not today.",
+    "grammarNode": "node-03",
+    "tags": ["work", "time"]
+  },
+  {
+    "target": "お客さんですか？",
+    "tokens": [
+      { "t": "お客", "r": "おきゃく" },
+      { "t": "さん" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Are you a customer?",
+    "grammarNode": "node-03",
+    "tags": ["shopping", "work"]
+  },
+  {
+    "target": "あなたはベジタリアンですか？",
+    "tokens": [
+      { "t": "あなた" },
+      { "t": "は" },
+      { "t": "ベジタリアン" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Are you a vegetarian?",
+    "grammarNode": "node-03",
+    "tags": ["food", "health"]
+  },
+  {
+    "target": "いいえ、ベジタリアンじゃないです。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "ベジタリアン" },
+      { "t": "じゃない" },
+      { "t": "です" },
+      { "t": "。" }
+    ],
+    "english": "No, I am not a vegetarian.",
+    "grammarNode": "node-03",
+    "tags": ["food"]
+  },
+  {
+    "target": "山田さんは独身ですか？",
+    "tokens": [
+      { "t": "山田", "r": "やまだ" },
+      { "t": "さん" },
+      { "t": "は" },
+      { "t": "独身", "r": "どくしん" },
+      { "t": "です" },
+      { "t": "か" },
+      { "t": "？" }
+    ],
+    "english": "Is Ms. Yamada single?",
+    "grammarNode": "node-03",
+    "tags": ["family"]
+  },
+  {
+    "target": "いいえ、独身ではありません。",
+    "tokens": [
+      { "t": "いいえ" },
+      { "t": "、" },
+      { "t": "独身", "r": "どくしん" },
+      { "t": "で" },
+      { "t": "は" },
+      { "t": "ありません" },
+      { "t": "。" }
+    ],
+    "english": "No, she is not single.",
+    "grammarNode": "node-03",
+    "tags": ["family"]
+  }
+]

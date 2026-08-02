@@ -8,6 +8,11 @@ export interface QuestCard {
   category: string; // tier name for theming: "Novice", "Beginner", etc.
   topic: string;    // node ID: "node-01", "node-02", etc.
   audio: string;
+  /** Text fed to TTS instead of `target`, when the voice mispronounces the
+   *  written form. The card always DISPLAYS `target`; this only changes what
+   *  the speech engine reads. e.g. एसी (AC) is read as a word, so the audio
+   *  is generated from ए.सी. so the letters are spoken. */
+  ttsText?: string;
   grammar?: string; // optional grammar note shown on answer side
   // Pre-tokenized target for unspaced scripts (Japanese): t = surface
   // token, r = kana reading for ruby/furigana on kanji-bearing tokens.

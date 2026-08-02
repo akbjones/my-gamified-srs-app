@@ -248,7 +248,10 @@ async function main() {
       const filepath = path.join(AUDIO_DIR, filename);
 
       try {
-        const mp3Buffer = await callWithRetry(card.target);
+        // ttsText overrides what the voice reads when the written form is
+        // mispronounced (एसी read as a word instead of the letters A-C).
+        // The card still displays `target`.
+        const mp3Buffer = await callWithRetry(card.ttsText || card.target);
         fs.writeFileSync(filepath, mp3Buffer);
         done++;
 

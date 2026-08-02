@@ -31,7 +31,7 @@ function getAudioBase(): string {
 // Bump whenever audio content changes — appended as ?v=N to every audio
 // URL so CDN edge nodes serving stale bytes for unversioned URLs can't hit.
 // Pair with audio-cache-vN bump in vite.config.ts.
-const AUDIO_VERSION = '23';
+const AUDIO_VERSION = '24';
 
 function fetchAndCacheMp3(audioFile: string): Promise<string> {
   const cached = mp3Cache.get(audioFile);

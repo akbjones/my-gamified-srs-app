@@ -1,74 +1,80 @@
 [
   {
     "id": "hi-2348",
-    "target": "रोहन इस बार ज़रूर पास होगा।",
-    "english": "Rohan will definitely pass this time.",
-    "reason": "Gender mismatch: रूबी is a woman's name but the verb is masculine होगा, so the model sentence is grammatically wrong. Swapped in a male name to keep the same ज़रूर + future pattern."
+    "target": "इस बार रूबी ज़रूर समय पर पहुँच जाएगी।",
+    "english": "This time Ruby will definitely arrive on time.",
+    "reason": "UNNATURAL – gender agreement error: रूबी is a woman's name but the verb is masculine (पास होगा). Replacement fixes agreement, keeps the node-24 ज़रूर + future pattern, and avoids triplicating the two other 'will definitely pass' cards in this batch (hi-2349, hi-2352)."
+  },
+  {
+    "id": "hi-2041",
+    "target": "डॉक्टर ने रिपोर्ट देखकर दवा बदल दी।",
+    "english": "The doctor changed the medicine after looking at the report.",
+    "reason": "NICHE – astrologer/horoscope narrative; ज्योतिषी and कुंडली are low-yield nouns a learner will almost never need. Replacement keeps the same देखकर + perfective pattern with everyday vocabulary."
   },
   {
     "id": "hi-2499",
-    "target": "डॉक्टर ने मुझे नई दवा दी है।",
-    "english": "The doctor has given me a new medicine.",
-    "reason": "Officialese/literary register: औषधि and परीक्षण करना belong to formal written Hindi, not the everyday speech being taught (दवा is the spoken word)."
+    "target": "डॉक्टर ने उसे बुख़ार की नई दवा दी।",
+    "english": "The doctor gave him new medicine for the fever.",
+    "reason": "OFFICIALESE – औषधि and परीक्षण करना are formal written/news register; spoken Hindi says दवा. Replacement keeps ने + perfective transitive in ordinary register."
   },
   {
     "id": "hi-2156",
     "target": "कचरा हर सुबह गाड़ी में उठाया जाता है।",
     "english": "The garbage is picked up by the truck every morning.",
-    "reason": "Reads like a recycling PSA with no subject; vacuous as a spoken line. Replacement keeps the impersonal passive but describes something a learner actually says about their street."
+    "reason": "VACUOUS – subjectless civics-textbook line about recycling that nobody says aloud, and it is not even passive though the node teaches passive. Replacement is a true impersonal passive about something a learner really discusses."
   },
   {
     "id": "hi-1952",
     "target": "तेज़ बारिश ने हमारी फ़सल को नुक़सान पहुँचाया।",
     "english": "The heavy rain damaged our crops.",
-    "reason": "Niche vocabulary: जंगली सूअर (wild boar) is content a learner will essentially never use. Same ने + नुक़सान पहुँचाना structure with an everyday cause."
+    "reason": "NICHE – wild boars raiding crops is content a learner will never use. Replacement keeps the same ने + नुक़सान पहुँचाना structure with an everyday cause."
   },
   {
     "id": "hi-2107",
     "target": "वह कंधे पर बैग रखकर स्कूल चला गया।",
     "english": "He put the bag on his shoulder and left for school.",
-    "reason": "Novelistic narration (सोच में डूबा था) plus the rare word ठोढ़ी; nobody speaks like this. Replacement keeps the body-part + कर-participle pattern in ordinary speech."
+    "reason": "UNNATURAL for speech – novelistic narration (सोच में डूबा था) plus the rare noun ठोढ़ी. Replacement keeps the body-part + रखकर participle pattern in plain spoken Hindi."
   },
   {
     "id": "hi-2359",
     "target": "जितनी जल्दी निकलोगे, उतनी जल्दी पहुँच जाओगे।",
     "english": "The earlier you leave, the earlier you'll get there.",
-    "reason": "Proverb/moralising motto ('the more you work, the more reward you get'). Replacement teaches the same जितना...उतना correlative with a practical everyday statement."
+    "reason": "PREACHY – 'the more you work, the more reward you get' is a proverb/motto. Replacement teaches the same जितना…उतना correlative with future tense in a practical situation."
   },
   {
     "id": "hi-1810",
-    "target": "रोज़ सुबह टहलना मेरी आदत है।",
-    "english": "Walking every morning is my habit.",
-    "reason": "Preachy civic slogan about tax being everyone's duty. Replacement keeps the infinitive-as-subject + possessive + है pattern with a natural personal statement."
+    "target": "रोज़ सुबह जल्दी उठना मेरे लिए मुश्किल है।",
+    "english": "Getting up early every morning is hard for me.",
+    "reason": "PREACHY – civic slogan about tax being everyone's duty. Replacement keeps the infinitive-as-subject + है structure with an ordinary personal statement."
   },
   {
     "id": "hi-2443",
-    "target": "विजय आज नहीं आएगा, यानी काम कल ही होगा।",
-    "english": "Vijay won't come today, which means the work will only happen tomorrow.",
-    "reason": "Padded tautology: the second clause just restates the first ('his effort succeeded, that is his hard work paid off'). Replacement uses यानी for a real inference."
+    "target": "कल छुट्टी है, यानी हमें दफ़्तर नहीं जाना।",
+    "english": "Tomorrow is a holiday, which means we don't have to go to the office.",
+    "reason": "VACUOUS / padded – the clause after यानी only restates the first one ('his effort succeeded, that is his hard work paid off'). Replacement keeps यानी but draws a real inference."
   },
   {
     "id": "hi-2446",
     "target": "दुकान बंद है, यानी हमें कल आना पड़ेगा।",
     "english": "The shop is closed, which means we'll have to come tomorrow.",
-    "reason": "Same circular padding as hi-2443, with the two clauses swapped. Replacement keeps यानी but draws an actual consequence."
+    "reason": "VACUOUS / padded – same tautology as hi-2443 with the clauses swapped. Replacement keeps the यानी connector with an actual consequence."
   },
   {
     "id": "hi-2505",
     "target": "रश्मि ने अपने फ़ैसले के बारे में माँ को बताया।",
     "english": "Rashmi told her mother about her decision.",
-    "reason": "फ़ैसले पर अमल करना is news/bureaucratic register, not everyday speech. Replacement keeps ने + past transitive with the same फ़ैसला vocabulary."
-  },
-  {
-    "id": "hi-2164",
-    "target": "प्रतियोगिता में उसे पहला इनाम मिला।",
-    "english": "He got first prize in the competition.",
-    "reason": "Niche content plus stilted wording: spoken Hindi says गोल्ड मेडल, not सोने का तमग़ा. Replacement keeps the मिलना (experiencer) pattern with common words."
+    "reason": "OFFICIALESE – फ़ैसले पर अमल करना is administrative/news register, never everyday speech. Replacement keeps ने + perfective with the same फ़ैसला vocabulary in oblique form."
   },
   {
     "id": "hi-1655",
     "target": "मंदिर में सबको प्रसाद बाँटा गया।",
     "english": "Prasad was distributed to everyone at the temple.",
-    "reason": "Mixes भंडारा (Hindu community meal) with लंगर (Sikh community meal) in one sentence, which no native speaker would do, and the English gloss is redundant. Replacement keeps the passive + community-event context."
+    "reason": "NICHE + UNNATURAL – conflates भंडारा (Hindu community feast) with लंगर (Sikh community meal) in one sentence, which no native speaker would do. Replacement keeps the passive + community-event context with common vocabulary."
+  },
+  {
+    "id": "hi-2164",
+    "target": "तैराकी प्रतियोगिता में उसे मेडल दिया गया।",
+    "english": "He was given a medal in the swimming competition.",
+    "reason": "UNNATURAL vocabulary – सोने का तमग़ा is rare journalese; spoken Hindi says मेडल. Replacement keeps the node-22 passive pattern with everyday words."
   }
 ]

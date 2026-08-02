@@ -425,20 +425,10 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             </div>
           )}
 
-          {/* "Tough" badge – replaces the cryptic "Leech" jargon. Cards that
-              fail 5+ times become flagged so the user knows to focus extra
-              attention. The title attribute provides hover/tap clarification. */}
-          {card!.isLeech && (
-            <div className="flex justify-center pt-2 shrink-0">
-              <div
-                className="flex items-center gap-1 bg-orange-500/10 border border-orange-500/40 rounded-lg px-2 py-0.5"
-                title="You've struggled with this one – take a moment to re-read it"
-              >
-                <AlertTriangle size={13} className="text-orange-500" />
-                <span className="text-sm font-bold uppercase tracking-wider text-orange-500">Tricky – keep going</span>
-              </div>
-            </div>
-          )}
+          {/* No leech badge. `isLeech` is still tracked in the SRS data, but
+              labelling a card "tough" told the user something they already
+              knew and offered no action (there is no suspend UI), so it was
+              pure clutter. Reinstate only alongside a real action. */}
 
           {/* Top-right chip stack – Grammar always on top, Etymology below.
               Both pinned to the top-right corner of the card so they're

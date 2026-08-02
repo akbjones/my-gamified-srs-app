@@ -46,6 +46,26 @@ const MATCHERS = {
     }
     return false;
   },
+  greek(tip, target) { // Greek tokens, accent-stripped; exact or >=4-char stem
+    const norm = s => stripAccents(String(s).toLowerCase());
+    const toks = s => (norm(s).match(/[α-ωϊϋς]+/g) || []).filter(t => t.length >= 2);
+    const tgt = toks(target);
+    for (const t of toks(tip)) for (const g of tgt) {
+      if (g === t) return true;
+      if (Math.min(t.length, g.length) >= 4 && t.slice(0, 4) === g.slice(0, 4)) return true;
+    }
+    return false;
+  },
+  korean(tip, target) { // Hangul; particles attach directly, so stem-prefix counts
+    const toks = s => (String(s).match(/[가-힣]+/g) || []);
+    const tgt = toks(target);
+    for (const t of toks(tip)) for (const g of tgt) {
+      if (g === t) return true;
+      const [a, b] = t.length <= g.length ? [t, g] : [g, t];
+      if (a.length >= 1 && b.startsWith(a) && a.length >= Math.min(2, b.length)) return true;
+    }
+    return false;
+  },
   hindi(tip, target) { // full Devanagari tokens (keep matras — stripping them nukes 2-char words like है/हूँ); exact or inflection-prefix
     const toks = s => (String(s).normalize('NFC').match(/[ऀ-ॿ]+/g) || []);
     const tgt = toks(target);

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "hi-0364",
+    "target": "हम सात लोग एक साथ रहते हैं।",
+    "english": "The seven of us live together.",
+    "reason": "\"मेरे परिवार के सात लोग\" is translationese – nobody uses a genitive to count their household; Hindi says \"हम सात लोग\" or \"परिवार में सात लोग हैं\". Same node-05 counting pattern, same length, same vocabulary, and phrased the way it is actually said."
+  },
+  {
+    "id": "hi-0367",
+    "target": "आज बीस मार्च है।",
+    "english": "Today is the twentieth of March.",
+    "reason": "\"आज तारीख़ बीस मार्च है\" is ungrammatical-sounding – it needs \"आज की तारीख़\" or, far more commonly, no तारीख़ at all. Spoken Hindi just states the date. Same node-05 date pattern, same vocabulary."
+  },
+  {
+    "id": "hi-0167",
+    "target": "क्या यह पानी पीने लायक़ है?",
+    "english": "Is this water safe to drink?",
+    "reason": "\"पीने योग्य\" is bureaucratic/signboard register (everyday speech uses \"पीने लायक़\"), and \"और साफ़\" is padding that adds nothing. Same node-03 yes/no question about water, same length, natural spoken wording."
+  },
+  {
+    "id": "hi-0528",
+    "target": "मेरा नया बैग बहुत हल्का है।",
+    "english": "My new bag is very light.",
+    "reason": "Padded and tautological – \"अच्छा और सुहावना\" says the same thing twice, and the card is a near-duplicate of hi-0529 (\"नमस्ते, आज मौसम बहुत अच्छा है\"). Replacement keeps the node-07 possessive + adjective + है pattern with everyday vocabulary."
+  },
+  {
+    "id": "hi-0450",
+    "target": "खाने को थोड़ा और गरम कर दो।",
+    "english": "Heat the food up a bit more.",
+    "reason": "\"हरी मिर्च खाने को तीखा बनाती है\" is a textbook fact a learner would never say, and the verb is off (natural Hindi would be \"तीखा कर देती है\"). Replacement keeps the node-06 \"खाने को\" object-marker pattern in a sentence people actually use at the table."
+  },
+  {
+    "id": "hi-0035",
+    "target": "मैं और मेरा भाई साथ पढ़ते हैं।",
+    "english": "My brother and I study together.",
+    "reason": "\"भाई और मैं\" copies English word order and drops the possessive – Hindi says \"मैं और मेरा भाई\"; \"साथ मिलकर\" is also redundant. Same node-01 family + habitual pattern, same length and vocabulary."
+  },
+  {
+    "id": "hi-0060",
+    "target": "वह हमेशा देर से आता है।",
+    "english": "He is always late.",
+    "reason": "\"वह हमेशा सच बोलता है\" is a moral-education copybook line, not something a learner will ever need. Replacement keeps the node-02 habitual present with हमेशा but says something people genuinely complain about."
+  }
+]

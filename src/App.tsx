@@ -272,6 +272,9 @@ const App: React.FC = () => {
   const [challengeQuestions, setChallengeQuestions] = useState<ChallengeQuestion[]>([]);
   const [showTools, setShowTools] = useState(false);
   const [showLangDropdown, setShowLangDropdown] = useState(false);
+  // Pressing Study when new cards would join the queue asks first — a session
+  // should never silently grow by the whole remaining daily allowance.
+  const [studyConfirm, setStudyConfirm] = useState(false);
   const [showGoalMenu, setShowGoalMenu] = useState(false);
   const [showLibraryMenu, setShowLibraryMenu] = useState(false);
   const [showLangPicker, setShowLangPicker] = useState(() => !STARTER_LOCK && !localStorage.getItem('quest_first_launch_done'));
@@ -487,7 +490,10 @@ const App: React.FC = () => {
     }
   };
 
-  const handleStartSession = (studyMore: boolean | number = false) => {
+  // `newFromNode` keeps an explicit count sourced from the CURRENT node (the
+  // graded progression) instead of the whole unlocked pool — that pool is only
+  // for the "add bonus cards" panels.
+  const handleStartSession = (studyMore: boolean | number = false, newFromNode = false) => {
     setSessionTally({ noIdea: 0, hard: 0, good: 0, easy: 0 });
     const now = Date.now();
     const currentNode = getCurrentNode(deck);
@@ -517,7 +523,7 @@ const App: React.FC = () => {
     // typed a bonus count. Otherwise typing 40 only returns whatever's left
     // in the current node (often 10 or fewer late in a topic).
     const nodeCards = deck.filter(c => c.topic === currentNode.id && !c.isSuspended);
-    const sourceForNew = explicitCount ? allUnlockedCards : nodeCards;
+    const sourceForNew = (explicitCount && !newFromNode) ? allUnlockedCards : nodeCards;
     const newCards = sourceForNew
       .filter(c => c.mastery === 0)
       .slice(0, newLimit);
@@ -1002,17 +1008,51 @@ const App: React.FC = () => {
             );
           })()}
 
-          {/* Study button – primary action, generous size so it dominates the home view */}
+          {/* Pre-study confirm – shown instead of the Study button when new
+              cards would join the queue, so the size of the session is always
+              the user's choice. */}
+          {studyConfirm ? (
+            <div className="stat-card px-4 py-4 mb-2 animate-fade-in">
+              <p className="text-sm text-[var(--text-secondary)] text-center mb-3">
+                {reviewsDue > 0
+                  ? `${reviewsDue} ${reviewsDue === 1 ? 'review' : 'reviews'} due. How many new cards today?`
+                  : 'How many new cards today?'}
+              </p>
+              <AddMoreCardsPanel
+                defaultCount={newAvailable}
+                onStart={(count) => { setStudyConfirm(false); handleStartSession(count, true); }}
+              />
+              <div className="flex gap-2 mt-2">
+                {reviewsDue > 0 && (
+                  <button
+                    onClick={() => { setStudyConfirm(false); handleStartSession(0, true); }}
+                    className="flex-1 py-2.5 rounded-xl border border-[var(--border-color)] text-sm font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] active:scale-95 transition"
+                  >
+                    Reviews only
+                  </button>
+                )}
+                <button
+                  onClick={() => setStudyConfirm(false)}
+                  className="flex-1 py-2.5 rounded-xl text-sm font-bold text-[var(--text-muted)] hover:text-[var(--text-primary)] active:scale-95 transition"
+                >
+                  Cancel
+                </button>
+              </div>
+            </div>
+          ) : (
+          /* Study button – primary action, generous size so it dominates the home view */
           <button
             onClick={() => {
               if (!STARTER_LOCK && !isPlacementComplete(lang)) {
                 // Full-screen fork (PlacementTest intro) – no dismissible modal.
                 // Locked starter links skip placement entirely.
                 setView('PLACEMENT');
+              } else if (newAvailable > 0) {
+                // New cards would join this session – ask how many first
+                // rather than silently adding the whole daily allowance.
+                setStudyConfirm(true);
               } else {
-                // Model A: go straight into studying – due reviews + today's
-                // remaining new-card allowance. No pre-study prompt.
-                handleStartSession();
+                handleStartSession(0, true); // reviews only
               }
             }}
             disabled={!hasCards}
@@ -1032,6 +1072,7 @@ const App: React.FC = () => {
               </div>
             )}
           </button>
+          )}
 
           {/* When all reviews are done, offer an inline way to pull more
               cards into today's queue. Same panel that appears at the end

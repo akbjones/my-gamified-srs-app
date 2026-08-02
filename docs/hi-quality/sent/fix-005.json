@@ -1,0 +1,32 @@
+[
+  {
+    "id": "hi-0525",
+    "target": "मेरा छोटा भाई बहुत शरारती है।",
+    "english": "My little brother is very naughty.",
+    "reason": "VACUOUS – \"My family is very large and happy\" is padded filler nobody says; replacement keeps node-07 adjective agreement (छोटा agreeing with masculine भाई) in a sentence a learner would actually use."
+  },
+  {
+    "id": "hi-0123",
+    "target": "मैं हर रात ठीक दस बजे सो जाता हूँ।",
+    "english": "I go to sleep at exactly ten o'clock every night.",
+    "reason": "UNNATURAL – \"बिस्तर पर सो जाता हूँ\" is translationese from English \"go to bed\"; सो जाना already means to go off to sleep, so बिस्तर पर is redundant. Same node-02 habitual + compound verb, matching the existing grammar tip."
+  },
+  {
+    "id": "hi-0227",
+    "target": "नमस्ते, घर में सब ठीक है?",
+    "english": "Hello, is everyone at home doing well?",
+    "reason": "UNNATURAL register clash – literary/written सुप्रभात next to the very colloquial \"सब बढ़िया?\" is not how anyone greets in speech (नमस्ते / गुड मॉर्निंग). Replacement is an everyday greeting and adds the node-04 postposition में."
+  },
+  {
+    "id": "hi-0354",
+    "target": "आज बाहर चालीस डिग्री है, बहुत गर्मी है।",
+    "english": "It's forty degrees outside today, it's very hot.",
+    "reason": "OFFICIALESE – \"आज का तापमान चालीस डिग्री है\" is weather-bulletin register; a learner needs how people actually complain about heat. Keeps the node-05 numeral चालीस."
+  },
+  {
+    "id": "hi-0622",
+    "target": "अरे, कितने दिनों बाद मिले हो!",
+    "english": "Hey, we're meeting after such a long time!",
+    "reason": "POINTLESS duplicate – identical to hi-0621 (\"अरे, अजय तुम यहाँ कैसे आ गए?\") with only the name swapped; teaches the learner nothing new. Replacement is a different high-frequency node-08 expression with the same अरे opener."
+  }
+]

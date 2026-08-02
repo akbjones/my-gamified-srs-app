@@ -434,8 +434,8 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                 className="flex items-center gap-1 bg-orange-500/10 border border-orange-500/40 rounded-lg px-2 py-0.5"
                 title="You've struggled with this one – take a moment to re-read it"
               >
-                <AlertTriangle size={10} className="text-orange-500" />
-                <span className="text-[10px] font-bold uppercase tracking-wider text-orange-500">Tough one</span>
+                <AlertTriangle size={13} className="text-orange-500" />
+                <span className="text-sm font-bold uppercase tracking-wider text-orange-500">Tricky – keep going</span>
               </div>
             </div>
           )}
@@ -542,13 +542,13 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               (token count for pre-tokenized decks, word count otherwise) */}
           {(() => {
             const wordCount = displayLengthFor(card!);
-            const sizeClass = wordCount <= 6
+            // ONE size for virtually every card – jumping between four buckets
+            // made consecutive cards visibly resize, which reads as a glitch.
+            // Only genuinely long sentences (>14 words, ~4% of cards) step down
+            // once so they still fit without scrolling.
+            const sizeClass = wordCount <= 14
               ? 'text-3xl md:text-4xl'
-              : wordCount <= 10
-              ? 'text-2xl md:text-3xl'
-              : wordCount <= 14
-              ? 'text-xl md:text-2xl'
-              : 'text-lg md:text-xl';
+              : 'text-2xl md:text-3xl';
             const engSizeClass = wordCount <= 10
               ? 'text-base md:text-lg'
               : 'text-sm md:text-base';

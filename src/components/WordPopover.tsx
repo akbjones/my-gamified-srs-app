@@ -196,6 +196,19 @@ function sanitizeDefinition(en: string, lemmaEn?: string): string | null {
   // If empty after cleaning, use lemma
   if (!cleaned || cleaned.length < 2) return lemmaEn || null;
 
+  // Inflected forms were authored with terser glosses than their dictionary
+  // form (घूमते "to roam, to wander" vs घूमना "to roam; to wander; to travel
+  // around; to visit (a place); to go sightseeing"), so tapping a conjugated
+  // word showed a reductive definition. When the lemma covers everything this
+  // form says AND adds senses, show the lemma's fuller gloss instead.
+  if (lemmaEn) {
+    const senses = (s: string) => s.split(/[;,]/).map(x => x.trim().toLowerCase()).filter(Boolean);
+    const mine = senses(cleaned);
+    const theirs = senses(lemmaEn);
+    const lemmaCoversAll = mine.every(s => theirs.some(t => t === s || t.includes(s)));
+    if (lemmaCoversAll && theirs.length > mine.length) return lemmaEn;
+  }
+
   return cleaned;
 }
 

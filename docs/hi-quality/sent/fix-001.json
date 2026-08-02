@@ -1,0 +1,26 @@
+[
+  {
+    "id": "hi-0050",
+    "target": "मैं जयपुर में एक दफ़्तर में काम करता हूँ।",
+    "english": "I work in an office in Jaipur.",
+    "reason": "Padded: the trailing 'बस इतना ही' ('that's basically it') is filler a learner would never need and reads as translationese tacked onto an otherwise fine sentence. Replacement keeps the same node-01 habitual-present pattern (मैं … में काम करता हूँ) and adds useful vocabulary instead of filler."
+  },
+  {
+    "id": "hi-3216",
+    "target": "कृपया ज़रा धीरे बोलिए।",
+    "english": "Please speak a little more slowly.",
+    "reason": "Unnatural word order: 'धीरे बोलिए, कृपया।' is a calque of English 'please' at the end of the sentence. In Hindi कृपया goes before the verb phrase. Same polite imperative, same vocabulary, natural order."
+  },
+  {
+    "id": "hi-3219",
+    "target": "कृपया एक बार फिर से कहिए।",
+    "english": "Please say that once more.",
+    "reason": "Unnatural: 'एक बार फिर, कृपया।' is a word-for-word calque of 'Once more, please' – a bare noun phrase with trailing कृपया is not how the request is made in Hindi. Replacement is the everyday way to ask for a repeat, same polite imperative pattern."
+  },
+  {
+    "id": "hi-3218",
+    "target": "आप कहाँ से हैं?",
+    "english": "Where are you from?",
+    "reason": "Verbatim duplicate of hi-0002 ('क्या आप अंग्रेज़ी बोलते हैं?') in the same node, so the card teaches nothing new. Replacement is an equally common node-01 question using the same आप + हैं present-tense frame."
+  }
+]

@@ -21,14 +21,18 @@ type Forms = [string, string, string, string, string, string];
 type TenseKey =
   | 'present_cont' | 'aorist' | 'past' | 'reported' | 'future' | 'conditional'
   | 'imperative' | 'necessitative'
+  | 'past_cont' | 'habitual_past' | 'past_prospective'
   | 'present_cont_neg' | 'aorist_neg' | 'past_neg' | 'reported_neg' | 'future_neg' | 'conditional_neg' | 'necessitative_neg'
+  | 'past_cont_neg'
   | 'temporal_converb' | 'manner_converb';
 
 const TENSES: TenseKey[] = [
   'present_cont', 'aorist', 'past', 'reported', 'future', 'conditional',
   'imperative', 'necessitative',
+  'past_cont', 'habitual_past', 'past_prospective',
   'temporal_converb', 'manner_converb',
   'present_cont_neg', 'aorist_neg', 'past_neg', 'reported_neg', 'future_neg', 'conditional_neg', 'necessitative_neg',
+  'past_cont_neg',
 ];
 
 const TENSE_LABELS: Record<TenseKey, string> = {
@@ -40,6 +44,10 @@ const TENSE_LABELS: Record<TenseKey, string> = {
   conditional: 'Şart (Conditional)',
   imperative: 'Emir Kipi (Imperative)',
   necessitative: 'Gereklilik Kipi (Necessitative)',
+  past_cont: 'Şimdiki Zamanın Hikâyesi (Was doing)',
+  habitual_past: 'Geniş Zamanın Hikâyesi (Used to do)',
+  past_prospective: 'Gelecek Zamanın Hikâyesi (Was going to do)',
+  past_cont_neg: 'Şimdiki Zamanın Hikâyesi Olumsuz (Wasn’t doing)',
   temporal_converb: '-ınca/-ince (When X)',
   manner_converb: '-arak/-erek (By X-ing)',
   present_cont_neg: 'Şimdiki Zaman Olumsuz (Present Cont. Neg.)',
@@ -134,9 +142,23 @@ interface IrregularData {
   aoristStem?: string;      // aorist stem if irregular
   presentStem?: string;     // -yor stem if different
   pastStem?: string;
-  wideAorist?: boolean;     // uses -r instead of -er/-ir for aorist
+  wideAorist?: boolean;     // one of the thirteen -ır/-ir/-ur/-ür monosyllables
+  aeAorist?: boolean;       // force -ar/-er despite the stem being polysyllabic
+  presentDirect?: boolean;  // -yor attaches to presentStem unchanged (yi+yor)
 }
 
+/** Syllable count, approximated by vowel count — enough to pick the aorist
+ *  suffix, which splits on monosyllabic vs longer. */
+function countVowels(word: string): number {
+  let n = 0;
+  for (const ch of word) if (BACK_VOWELS.has(ch) || FRONT_VOWELS.has(ch)) n++;
+  return n;
+}
+
+// Monosyllabic consonant-final stems normally take the -ar/-er aorist (at→atar).
+// Exactly thirteen take -ır/-ir/-ur/-ür instead; that closed class is what
+// `wideAorist` marks. Leaving one out produces a confidently wrong form the
+// matcher then accepts (kalmak → "kalar" instead of kalır).
 const IRREGULARS: Record<string, IrregularData> = {
   'olmak': { aoristStem: 'ol', wideAorist: true },       // to be/become
   'gelmek': { aoristStem: 'gel', wideAorist: true },     // to come
@@ -146,12 +168,49 @@ const IRREGULARS: Record<string, IrregularData> = {
   'bilmek': { aoristStem: 'bil', wideAorist: true },     // to know
   'bulmak': { aoristStem: 'bul', wideAorist: true },     // to find
   'durmak': { aoristStem: 'dur', wideAorist: true },     // to stop
+  'kalmak': { aoristStem: 'kal', wideAorist: true },     // to stay → kalır
+  'ölmek': { aoristStem: 'öl', wideAorist: true },       // to die → ölür
+  'vurmak': { aoristStem: 'vur', wideAorist: true },     // to hit → vurur
+  'sanmak': { aoristStem: 'san', wideAorist: true },     // to suppose → sanır
+  'varmak': { aoristStem: 'var', wideAorist: true },     // to arrive → varır
+  // Compounds inherit the base verb's aorist: kaybolmak → kaybolur, not
+  // "kaybolar". Listed explicitly rather than matched by suffix, because
+  // dolmak ends in -olmak too and is a plain regular (dolar, not "dolur").
+  'kaybolmak': { aoristStem: 'kaybol', wideAorist: true }, // to get lost
   'gitmek': { pastStem: 'git', presentStem: 'gid' },     // to go (t→d before vowel)
   'etmek': { pastStem: 'et', presentStem: 'ed' },        // to do
   'tatmak': { pastStem: 'tat', presentStem: 'tad' },     // to taste
-  'yemek': { presentStem: 'yi', pastStem: 'ye', aoristStem: 'ye', wideAorist: true }, // to eat
-  'demek': { presentStem: 'di', pastStem: 'de', aoristStem: 'de', wideAorist: true }, // to say
+  'gütmek': { pastStem: 'güt', presentStem: 'güd' },     // to herd//pursue
+  // Compounds of etmek voice their -t the same way (hissetmek → hissediyor).
+  // Also enumerated by hand: öğretmek and yönetmek end in "etmek" but are plain
+  // stems that keep their t (öğretiyor, yönetiyor), so a suffix test would
+  // silently corrupt them.
+  'bahsetmek': { pastStem: 'bahset', presentStem: 'bahsed', aeAorist: true },   // to mention
+  'hissetmek': { pastStem: 'hisset', presentStem: 'hissed', aeAorist: true },   // to feel
+  'kaybetmek': { pastStem: 'kaybet', presentStem: 'kaybed', aeAorist: true },   // to lose
+  'keşfetmek': { pastStem: 'keşfet', presentStem: 'keşfed', aeAorist: true },   // to discover
+  'reddetmek': { pastStem: 'reddet', presentStem: 'redded', aeAorist: true },   // to refuse
+  'affetmek': { pastStem: 'affet', presentStem: 'affed', aeAorist: true },      // to forgive
+  'zannetmek': { pastStem: 'zannet', presentStem: 'zanned', aeAorist: true },   // to presume
+  'seyretmek': { pastStem: 'seyret', presentStem: 'seyred', aeAorist: true },   // to watch
+  'yemek': { presentStem: 'yi', pastStem: 'ye', aoristStem: 'ye', wideAorist: true, presentDirect: true }, // to eat
+  'demek': { presentStem: 'di', pastStem: 'de', aoristStem: 'de', wideAorist: true, presentDirect: true }, // to say
 };
+
+/** Two-word auxiliary verbs ("dans etmek", "kabul olmak") behave like the
+ *  auxiliary alone, so they can be derived instead of listed — a space is an
+ *  unambiguous signal no single-word stem can produce. */
+function auxiliaryIrregular(infinitive: string): IrregularData | undefined {
+  const m = infinitive.match(/^(.+) (etmek|olmak)$/);
+  if (!m) return undefined;
+  const [, prefix, aux] = m;
+  if (aux === 'etmek') return { pastStem: `${prefix} et`, presentStem: `${prefix} ed`, aeAorist: true };
+  return { aoristStem: `${prefix} ol`, wideAorist: true };
+}
+
+function irregularFor(infinitive: string): IrregularData | undefined {
+  return IRREGULARS[infinitive] || auxiliaryIrregular(infinitive);
+}
 
 // ── Conjugation functions ───────────────────────────────────
 
@@ -160,6 +219,13 @@ function conjugatePresentCont(stem: string, _inf: string): Forms {
   // - If stem ends in vowel, drop it (e.g. bekle → bekl + iyor)
   // - If stem ends in consonant, insert buffer vowel via 4-way harmony
   let s = stem;
+  // yemek/demek supply a ready-made present stem (yi-, di-) whose vowel IS the
+  // buffer, so the drop-and-reharmonise path must not run — it produced the
+  // non-word "yıyorum" instead of yiyorum.
+  if (irregularFor(_inf)?.presentDirect) return [
+    `${s}yorum`, `${s}yorsun`, `${s}yor`,
+    `${s}yoruz`, `${s}yorsunuz`, `${s}yor${pluralLE(s + 'yor')}`,
+  ];
   if (endsWithVowel(s)) {
     s = s.slice(0, -1);
   }
@@ -177,7 +243,7 @@ function conjugatePresentCont(stem: string, _inf: string): Forms {
 }
 
 function conjugateAorist(stem: string, inf: string): Forms {
-  const irr = IRREGULARS[inf];
+  const irr = irregularFor(inf);
   let aoristBase: string;
 
   if (irr?.wideAorist) {
@@ -185,14 +251,18 @@ function conjugateAorist(stem: string, inf: string): Forms {
     const s = irr.aoristStem || stem;
     aoristBase = s + (endsWithVowel(s) ? 'r' : `${harmony4(s)}r`);
   } else {
-    // Regular: stem + er/ar (2-way harmony) for consonant-ending
-    // stem + r for vowel-ending. Voicing irregulars (etmek→ed, gitmek→gid)
-    // use their present stem before the vowel-initial suffix: ed+er → eder.
+    // Vowel-final stems just take -r (bekle→bekler, oku→okur). Consonant-final
+    // splits by length: monosyllables take -ar/-er (yap→yapar, kes→keser) but
+    // anything longer takes -ır/-ir/-ur/-ür (çalış→çalışır, öğret→öğretir).
+    // Treating every consonant-final stem as -ar/-er gave "çalışar"/"oturar".
+    // Voicing irregulars (etmek→ed, gitmek→gid) use their present stem before
+    // the vowel-initial suffix: ed+er → eder.
     const s0 = irr?.presentStem || stem;
     if (endsWithVowel(s0)) {
       aoristBase = s0 + 'r';
     } else {
-      aoristBase = s0 + harmonyAE(s0) + 'r';
+      const useAE = irr?.aeAorist ?? countVowels(s0) <= 1;
+      aoristBase = s0 + (useAE ? harmonyAE(s0) : harmony4(s0)) + 'r';
     }
   }
 
@@ -240,10 +310,14 @@ function conjugateReported(stem: string, _inf: string): Forms {
 function conjugateFuture(stem: string, _inf: string): Forms {
   // Voicing irregulars (etmek→ed, gitmek→gid) surface before the
   // vowel-initial future suffix: ed+ecek → edecek (not etecek).
-  const irrF = IRREGULARS[_inf];
+  const irrF = irregularFor(_inf);
   const stemF = irrF?.presentStem || stem;
-  const a = harmonyAE(stemF);
-  let s = endsWithVowel(stemF) ? stemF.slice(0, -1) + 'y' : stemF;
+  // A vowel-final stem KEEPS its vowel and takes a -y- buffer before the
+  // vowel-initial suffix (bekle+y+ecek → bekleyecek). Dropping it, as the -yor
+  // rule does, gave the unpronounceable "beklyecek" / "okyacak" for every
+  // vowel-final verb in the deck.
+  let s = endsWithVowel(stemF) ? stemF + 'y' : stemF;
+  const a = harmonyAE(s);
   const base = `${s}${a}c${a}k`;
   const h = harmony4(base);
   return [
@@ -318,6 +392,48 @@ function conjugateMannerConverb(stem: string, _inf: string): Forms {
   const a = harmonyAE(stem);
   const form = `${stem}${a}r${a}k`;
   return [form, form, form, form, form, form];
+}
+
+// ── Compound ("hikâye") pasts ─────────────────────────────
+// Turkish stacks the past copula idi onto an already-tensed form, cliticised as
+// -dı/-di/-du/-dü: geliyor + idi = geliyordu ("was coming"). The person endings
+// are the same -m/-n/-k/-nız set the simple past uses, and 3pl puts the plural
+// marker BEFORE the copula (geliyorlardı, not "geliyordular").
+function withPastCopula(base: string): Forms {
+  const voiceless = new Set('çfhkpsşt');
+  const cop = (ctx: string) => (voiceless.has(ctx.slice(-1)) ? 't' : 'd');
+  const d = cop(base);
+  const h = harmony4(base);
+  const plural = `${base}${pluralLE(base)}`;
+  return [
+    `${base}${d}${h}m`,
+    `${base}${d}${h}n`,
+    `${base}${d}${h}`,
+    `${base}${d}${h}k`,
+    `${base}${d}${h}n${h}z`,
+    `${plural}${cop(plural)}${harmony4(plural)}`,
+  ];
+}
+
+/** Past continuous — "was doing": geliyordum. */
+function conjugatePastCont(stem: string, inf: string): Forms {
+  return withPastCopula(conjugatePresentCont(stem, inf)[2]);
+}
+
+/** Negative past continuous — "wasn't doing": gelmiyordum. */
+function conjugatePastContNeg(stem: string, inf: string): Forms {
+  return withPastCopula(conjugatePresentContNeg(stem, inf)[2]);
+}
+
+/** Habitual past — "used to do": gelirdim. Aorist carrying the past copula. */
+function conjugateHabitualPast(stem: string, inf: string): Forms {
+  return withPastCopula(conjugateAorist(stem, inf)[2]);
+}
+
+/** Past prospective — "was going to do": gelecektim. Future + past copula, so
+ *  the copula devoices after the -k of -ecek. */
+function conjugatePastProspective(stem: string, inf: string): Forms {
+  return withPastCopula(conjugateFuture(stem, inf)[2]);
 }
 
 // ── Negation helpers ──────────────────────────────────────
@@ -455,7 +571,7 @@ export function conjugate(infinitive: string): ConjugationTable | null {
   if (!infinitive.endsWith('mek') && !infinitive.endsWith('mak')) return null;
 
   const rawStem = getStem(infinitive);
-  const irr = IRREGULARS[infinitive];
+  const irr = irregularFor(infinitive);
 
   const tenses: Record<string, string[]> = {};
 
@@ -463,8 +579,9 @@ export function conjugate(infinitive: string): ConjugationTable | null {
     const label = TENSE_LABELS[tense];
     let stem = rawStem;
 
-    // Use irregular stems where applicable
-    if (tense === 'present_cont' && irr?.presentStem) stem = irr.presentStem;
+    // Use irregular stems where applicable. The compound pasts are built on top
+    // of the present-continuous form, so they need its stem too (gidiyordum).
+    if ((tense === 'present_cont' || tense === 'past_cont') && irr?.presentStem) stem = irr.presentStem;
     if (tense === 'past' && irr?.pastStem) stem = irr.pastStem;
 
     switch (tense) {
@@ -491,6 +608,18 @@ export function conjugate(infinitive: string): ConjugationTable | null {
         break;
       case 'necessitative':
         tenses[label] = conjugateNecessitative(rawStem, infinitive);
+        break;
+      case 'past_cont':
+        tenses[label] = conjugatePastCont(stem, infinitive);
+        break;
+      case 'habitual_past':
+        tenses[label] = conjugateHabitualPast(rawStem, infinitive);
+        break;
+      case 'past_prospective':
+        tenses[label] = conjugatePastProspective(rawStem, infinitive);
+        break;
+      case 'past_cont_neg':
+        tenses[label] = conjugatePastContNeg(rawStem, infinitive);
         break;
       case 'temporal_converb':
         tenses[label] = conjugateTemporalConverb(rawStem, infinitive);
@@ -594,23 +723,83 @@ const TENSE_SUFFIXES = [
   'sem', 'sen', 'se', 'sek', 'seniz', 'seler',
 ];
 
-export function findInfinitive(form: string): string | null {
+/** Irregular surface stems back to their infinitive, so the prefix scan in
+ *  findInfinitive can recover verbs whose stem changes shape (gid → gitmek). */
+const IRREGULAR_STEM_INDEX: Record<string, string> = (() => {
+  const idx: Record<string, string> = {};
+  for (const [inf, data] of Object.entries(IRREGULARS))
+    for (const stem of [data.presentStem, data.pastStem, data.aoristStem])
+      if (stem && !idx[stem]) idx[stem] = inf;
+  return idx;
+})();
+
+/**
+ * Recover the infinitive behind an inflected form.
+ *
+ * `isKnownVerb` lets a caller supply its lexicon (the dictionary passes its own
+ * membership test). Without it the engine can only check that a candidate
+ * regenerates the form, and that alone is ambiguous: "bekliyoruz" round-trips
+ * from both "beklemek" (real) and "beklmek" (invented), because dropping the
+ * stem-final vowel before -yor is exactly what the real verb does.
+ */
+export function findInfinitive(form: string, isKnownVerb?: (w: string) => boolean): string | null {
   // Direct infinitive
   if (form.endsWith('mek') || form.endsWith('mak')) return form;
 
-  // Try stripping suffixes
-  for (const suffix of TENSE_SUFFIXES) {
-    if (form.endsWith(suffix)) {
-      const stem = form.slice(0, -suffix.length);
-      if (stem.length >= 2) {
-        // Determine -mak or -mek based on vowel harmony
-        const ending = isBackVowel(lastVowel(stem)) ? 'mak' : 'mek';
-        return stem + ending;
-      }
+  // Suffix stripping is the cheap path, but the suffix list can't enumerate
+  // every stacked combination (geliyordu = -iyor + -du), and stripping alone is
+  // credulous: "geliyordu" minus "du" is "geliyor", which becomes the invented
+  // "geliyormak" and renders a whole table of forms no Turk would use. So build
+  // candidates from several angles and let conjugate() adjudicate.
+  const candidates: string[] = [];
+  const add = (inf: string) => { if (inf.length > 3 && !candidates.includes(inf)) candidates.push(inf); };
+  const asInfinitive = (stem: string) => stem + (isBackVowel(lastVowel(stem)) ? 'mak' : 'mek');
+
+  const strip = (s: string, depth: number) => {
+    for (const suffix of TENSE_SUFFIXES) {
+      if (!s.endsWith(suffix)) continue;
+      const stem = s.slice(0, -suffix.length);
+      if (stem.length < 2) continue;
+      add(asInfinitive(stem));
+      if (depth > 0) strip(stem, depth - 1);
     }
+  };
+  const stripCandidates = (strip(form, 1), [...candidates]);
+
+  // Every prefix is a possible stem — including the whole token, since the 2sg
+  // imperative is the bare stem (al → almak). Cheap, and it catches suffix
+  // combinations the list above misses entirely.
+  for (let i = 2; i <= form.length; i++) {
+    const prefix = form.slice(0, i);
+    add(asInfinitive(prefix));
+    // A stem whose final vowel was dropped before -yor is not a prefix of its
+    // own inflected form (bekle- surfaces as bekli-yor), so put a vowel back.
+    for (const v of 'aeıioöuü') add(asInfinitive(prefix + v));
+    // Voicing/suppletive stems aren't prefixes of their own infinitive
+    // (gidiyor's "gid" never appears in "gitmek"), so map them back explicitly.
+    const irr = IRREGULAR_STEM_INDEX[prefix];
+    if (irr) add(irr);
   }
 
-  return null;
+  // Keep only candidates that actually regenerate this exact form.
+  const verified = candidates.filter(inf => {
+    const table = conjugate(inf);
+    return !!table && Object.values(table.tenses).some(forms => forms.includes(form));
+  });
+
+  // A real verb beats a coincidence: "geliyordu" round-trips from the invented
+  // "geliyormak" too, whose simple past happens to spell the same string.
+  const known = verified.find(inf => isKnownVerb?.(inf));
+  if (known) return known;
+
+  // No lexicon to consult. Shortest wins, since a longer "stem" is nearly
+  // always an inflected form mis-read as one (geliyor- rather than gel-).
+  if (verified.length) return verified.reduce((a, b) => (b.length < a.length ? b : a));
+
+  // Nothing verified — likely a participle or case-marked form the engine
+  // doesn't generate. Fall back to the old suffix-strip guess so the word still
+  // reaches a dictionary lookup, the matcher's other job.
+  return stripCandidates[0] ?? null;
 }
 
 export default conjugate;

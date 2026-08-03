@@ -9987,8 +9987,10 @@ export function lookupWord(word: string): DictEntry | null {
     }
   }
 
-  // Try using the conjugation engine's findInfinitive for verb forms
-  const inf = findInfinitive(clean);
+  // Try using the conjugation engine's findInfinitive for verb forms. Passing
+  // the dictionary as the lexicon lets it reject invented infinitives that
+  // happen to regenerate the form (see findInfinitive's note on "beklmek").
+  const inf = findInfinitive(clean, w => w in dictionary);
   if (inf && dictionary[inf]) return dictionary[inf];
 
   // Try multi-word lookups (for compound verbs like "yardım etmek")
@@ -9999,7 +10001,7 @@ export function lookupWord(word: string): DictEntry | null {
     }
     // Try verb forms in compound
     for (const part of parts) {
-      const partInf = findInfinitive(part);
+      const partInf = findInfinitive(part, w => w in dictionary);
       if (partInf && dictionary[partInf]) return dictionary[partInf];
     }
   }

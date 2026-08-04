@@ -55,6 +55,11 @@ export interface SessionState {
   isFlipped: boolean;
   finishedCount: number;
   newCardsSeen: number;
+  /** How many times each card has been shown in THIS session. Caps the
+   *  in-session re-drill so a card the user keeps rating Hard can't be
+   *  re-queued forever – without it the queue grows exactly as fast as the
+   *  index advances and the session never reaches its end. */
+  sessionShows?: Record<string, number>;
 }
 
 export type MasteryMap = Record<string, Partial<QuestCard>>;

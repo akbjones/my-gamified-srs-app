@@ -109,29 +109,43 @@ export const getRetention = (cards: QuestCard[]): number => {
  */
 import { loadMasteryMap } from './storageService';
 
+/**
+ * The per-card fields that are scheduling state, not card content.
+ *
+ * This is the single source of truth for what gets persisted AND what gets
+ * rehydrated onto the deck. Keeping the two lists separate is how the FSRS
+ * memory block (stability/difficulty/reps/…) went missing on re-merge: the
+ * saver wrote 15 fields and the merger copied 8, so a graduated card silently
+ * re-derived its difficulty from the legacy `ease` on every session.
+ *
+ * Deliberately an explicit allowlist rather than a spread: MasteryMap is
+ * Partial<QuestCard> and syncService merges blobs from other devices, so a
+ * blind spread would let stored keys overwrite card CONTENT (target/audio).
+ */
+export const PERSISTED_SRS_FIELDS = [
+  'mastery', 'step', 'dueDate', 'interval', 'ease', 'failCount',
+  'isLeech', 'isSuspended',
+  // FSRS memory state — the real scheduling source of truth.
+  'stability', 'difficulty', 'fsrsState', 'reps', 'lapses', 'lastReview', 'learningStep',
+] as const satisfies readonly (keyof QuestCard)[];
+
+/** Overlay a saved MasteryMap entry onto a deck card. Uses key PRESENCE, not
+ *  `??`, so an entry that deliberately stores `undefined` (placement clearing
+ *  stale FSRS memory) actually clears it instead of falling through. */
+export const applySavedProgress = (card: QuestCard, saved: Partial<QuestCard> | undefined): QuestCard => {
+  if (!saved) return card;
+  const merged = { ...card };
+  for (const k of PERSISTED_SRS_FIELDS) {
+    if (k in saved) (merged as Record<string, unknown>)[k] = saved[k];
+  }
+  return merged;
+};
+
 export const saveCardProgress = (card: QuestCard, lang: Language): MasteryMap => {
   const existing = loadMasteryMap(lang);
-  const newMap = {
-    ...existing,
-    [card.id]: {
-      mastery: card.mastery,
-      step: card.step,
-      dueDate: card.dueDate,
-      interval: card.interval,
-      ease: card.ease,
-      failCount: card.failCount,
-      isLeech: card.isLeech,
-      isSuspended: card.isSuspended,
-      // FSRS memory state — the real scheduling source of truth.
-      stability: card.stability,
-      difficulty: card.difficulty,
-      fsrsState: card.fsrsState,
-      reps: card.reps,
-      lapses: card.lapses,
-      lastReview: card.lastReview,
-      learningStep: card.learningStep,
-    },
-  };
+  const entry: Partial<QuestCard> = {};
+  for (const k of PERSISTED_SRS_FIELDS) (entry as Record<string, unknown>)[k] = card[k];
+  const newMap = { ...existing, [card.id]: entry };
   saveMasteryMap(newMap, lang);
   return newMap;
 };
@@ -190,6 +204,11 @@ export interface AnswerResult {
   updatedCard: QuestCard;
 }
 
+/** Most times one card may be shown inside a single session. Anki bounds the
+ *  same runaway with its learn-ahead limit; we bound it by presentation count.
+ *  4 = a fresh card can fail, retry, fail, retry before the session moves on. */
+const MAX_SESSION_SHOWS = 4;
+
 // ── Mini-loop reinsertion: instead of pushing to end, insert nearby ──
 const REINSERT_OFFSETS = {
   AGAIN:         { min: 5, max: 8 },   // failed → see again soon
@@ -242,6 +261,9 @@ export const handleAnswerLogic = (
 ): AnswerResult => {
   const newQueue = [...session.queue];
   let { currentIndex, newCardsSeen } = session;
+  const sessionShows = { ...(session.sessionShows || {}) };
+  const showsSoFar = (sessionShows[currentCard.id] || 0) + 1;
+  sessionShows[currentCard.id] = showsSoFar;
   const nowMs = Date.now();
   const now = new Date(nowMs);
   const updatedCard = { ...currentCard };
@@ -269,7 +291,20 @@ export const handleAnswerLogic = (
 
   // In-session re-show: a sub-day learning/relearning step gets drilled again
   // within this session (same feel as before, now driven by FSRS short steps).
-  if (updatedCard.interval < DAY && next.state !== State.Review) {
+  //
+  // Capped at MAX_SESSION_SHOWS. HARD deliberately repeats the current learning
+  // step (that is correct Anki/FSRS semantics), so without a cap a card the user
+  // keeps rating Hard is re-queued forever. Worse, each re-insert grows the
+  // queue by one while currentIndex advances by one, leaving
+  // `queue.length - currentIndex` unchanged — so the session could never reach
+  // its end and the progress bar crept toward 100% without arriving.
+  // Past the cap we simply stop re-queueing: the card keeps its real FSRS due
+  // date (minutes away) and comes back via isCardDue in the next session.
+  if (
+    updatedCard.interval < DAY
+    && next.state !== State.Review
+    && showsSoFar < MAX_SESSION_SHOWS
+  ) {
     const offsets = rating === 'AGAIN' ? REINSERT_OFFSETS.AGAIN
       : rating === 'HARD' ? REINSERT_OFFSETS.LEARNING_HARD
         : REINSERT_OFFSETS.LEARNING_GOOD;
@@ -286,6 +321,7 @@ export const handleAnswerLogic = (
       isFlipped: false,
       newCardsSeen,
       finishedCount: currentIndex,
+      sessionShows,
     },
     updatedCard,
   };

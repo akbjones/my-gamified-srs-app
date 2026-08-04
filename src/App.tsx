@@ -7,11 +7,12 @@ import PlacementTest from './components/PlacementTest';
 import ChallengeScreen from './components/ChallengeScreen';
 import StreakFlame from './components/StreakFlame';
 import SyncSettings from './components/SyncSettings';
+import FirstTimeIntro from './components/FirstTimeIntro';
 import CheckInScreen from './components/CheckInScreen';
 import ScriptTeacher from './components/ScriptTeacher';
 import { QuestCard, MasteryMap, SessionState, UserStats, DailyStats, Language, LearningGoal, LANGUAGE_CONFIG, GOAL_CONFIG, ProgressState, ChallengeMode, ChallengeQuestion, BossRing } from './types';
-import { MAIN_PATH, isNodeUnlocked, getNodeName, getChapterForNode, chapterIndex } from './data/topicConfig';
-import { handleAnswerLogic, saveCardProgress, getRetention, burySiblings, isCardDue } from './services/srsService';
+import { MAIN_PATH, isNodeUnlocked, getNodeName, getChapterForNode, chapterIndex, UNLOCK_THRESHOLD } from './data/topicConfig';
+import { handleAnswerLogic, saveCardProgress, getRetention, burySiblings, isCardDue, applySavedProgress } from './services/srsService';
 import { preloadCardAudio } from './services/audioService';
 import {
   migrateStorageKeys, loadMasteryMap, saveMasteryMap, loadUserStats, saveUserStats,
@@ -238,14 +239,22 @@ const CHALLENGE_NAMES: Record<Language, string> = {
   japanese: 'Level',
 };
 
-// Find the current frontier node (first incomplete unlocked node)
+// Find the current frontier node (first incomplete unlocked node).
+// "Incomplete" uses the SAME threshold as unlocking (UNLOCK_THRESHOLD, 70%).
+// Requiring 100% here meant the next node unlocked at 70% while new cards kept
+// coming from the old one, and a single card the user could never graduate
+// pinned the frontier forever — the user just kept seeing that node's material.
 const getCurrentNode = (deck: QuestCard[]) => {
   for (let i = 0; i < MAIN_PATH.length; i++) {
     if (!isNodeUnlocked(i, deck)) continue;
     const node = MAIN_PATH[i];
     const nodeCards = deck.filter(c => c.topic === node.id);
+    if (nodeCards.length === 0) return node;
     const graduated = nodeCards.filter(c => c.mastery === 2).length;
-    if (nodeCards.length === 0 || graduated < nodeCards.length) return node;
+    const unseen = nodeCards.filter(c => (c.mastery ?? 0) === 0).length;
+    // Move on once the node is 70% graduated, but never skip past a node that
+    // still has cards the user has not been shown at all.
+    if (graduated / nodeCards.length < UNLOCK_THRESHOLD || unseen > 0) return node;
   }
   return MAIN_PATH[MAIN_PATH.length - 1];
 };
@@ -275,6 +284,14 @@ const App: React.FC = () => {
   // Pressing Study when new cards would join the queue asks first — a session
   // should never silently grow by the whole remaining daily allowance.
   const [studyConfirm, setStudyConfirm] = useState(false);
+  // "Study more" – shown once today's new-card allowance is spent. Collapsed to
+  // a button; expanding asks how many extra cards to pull.
+  const [studyMoreOpen, setStudyMoreOpen] = useState(false);
+  // One-time explainer that the cards-per-day number is adjustable. Initialised
+  // to false on purpose: reading localStorage here (the pattern used by the
+  // language picker below) would fire it on first app open, stacked under the
+  // onboarding overlay, before the user has seen a single card.
+  const [showLimitIntro, setShowLimitIntro] = useState(false);
   const [showGoalMenu, setShowGoalMenu] = useState(false);
   const [showLibraryMenu, setShowLibraryMenu] = useState(false);
   const [showLangPicker, setShowLangPicker] = useState(() => !STARTER_LOCK && !localStorage.getItem('quest_first_launch_done'));
@@ -299,6 +316,8 @@ const App: React.FC = () => {
     session: SessionState;
     masteryMap: MasteryMap;
     userStats: UserStats;
+    dailyStats: DailyStats;
+    progressState: ProgressState;
   }>>([]);
   const [session, setSession] = useState<SessionState>({
     language: settings.selectedLanguage,
@@ -392,27 +411,14 @@ const App: React.FC = () => {
     }
   }, [view, lang]);
 
-  // Re-merge deck when masteryMap changes
+  // Re-merge deck when masteryMap changes.
+  // Driven by the same PERSISTED_SRS_FIELDS list saveCardProgress writes: this
+  // block used to hand-copy 8 of the 15 saved fields, so every session after
+  // the first in a page load fed the scheduler a card with no FSRS memory and
+  // difficulty silently re-derived from the legacy `ease` (pinned at 2.5).
   useEffect(() => {
     if (deck.length > 0) {
-      setDeck(prev =>
-        prev.map(c => {
-          const saved = masteryMap[c.id];
-          return saved
-            ? {
-                ...c,
-                mastery: (saved.mastery as number) ?? c.mastery,
-                step: (saved.step as number) ?? c.step,
-                dueDate: (saved.dueDate as number) ?? c.dueDate,
-                interval: (saved.interval as number) ?? c.interval,
-                ease: (saved.ease as number) ?? c.ease,
-                failCount: (saved.failCount as number) ?? c.failCount,
-                isLeech: (saved.isLeech as boolean) ?? c.isLeech,
-                isSuspended: (saved.isSuspended as boolean) ?? c.isSuspended,
-              }
-            : c;
-        })
-      );
+      setDeck(prev => prev.map(c => applySavedProgress(c, masteryMap[c.id])));
     }
   }, [masteryMap]);
 
@@ -577,6 +583,10 @@ const App: React.FC = () => {
       session: { ...session },
       masteryMap: { ...masteryMap },
       userStats: { ...userStats },
+      // Undo used to restore only the three above, so undoing a new card left
+      // the daily allowance and the cumulative counter permanently spent.
+      dailyStats: { ...dailyStats },
+      progressState: { ...progressState },
     }]);
 
     const currentCard = session.queue[session.currentIndex];
@@ -603,14 +613,21 @@ const App: React.FC = () => {
     // the stale closure value, and the second would silently erase the first's
     // increment. This is the bug behind the "morning progress disappeared" reports.
 
-    // Daily new card tracking
-    if (isNewCard && rating !== 'AGAIN') {
+    // Daily new card tracking. A first answer counts against today's allowance
+    // WHATEVER the rating: gating on `rating !== 'AGAIN'` meant failing a new
+    // card cost nothing, and since the re-shown card is no longer mastery 0 it
+    // was never counted at all — so a user who struggled could quietly pull far
+    // more than their daily limit of new material.
+    if (isNewCard) {
       const freshDaily = loadDailyStats(lang);
       const newDaily = { ...freshDaily, newCardsCount: freshDaily.newCardsCount + 1 };
       setDailyStats(newDaily);
       saveDailyStats(newDaily, lang);
+    }
 
-      // Track cumulative new cards
+    // Cumulative new cards keeps the stricter gate: it drives boss/checkpoint
+    // cadence, where "met and got it" is the meaningful event.
+    if (isNewCard && rating !== 'AGAIN') {
       const freshProgress = loadProgressState(lang);
       const newProgress = { ...freshProgress, cumulativeNewCards: freshProgress.cumulativeNewCards + 1 };
       setProgressState(newProgress);
@@ -651,6 +668,12 @@ const App: React.FC = () => {
     saveMasteryMap(prev.masteryMap, lang);
     setUserStats(prev.userStats);
     saveUserStats(prev.userStats, lang);
+    // Roll back the daily allowance and cumulative counter too, otherwise
+    // undoing a new card gives the card back but keeps the quota spent.
+    setDailyStats(prev.dailyStats);
+    saveDailyStats(prev.dailyStats, lang);
+    setProgressState(prev.progressState);
+    saveProgressState(prev.progressState, lang);
     setAnswerHistory(h => h.slice(0, -1));
   };
 
@@ -779,6 +802,17 @@ const App: React.FC = () => {
     handleUpdateSettings(setSessionLimitFor(settings, lang, next));
   };
 
+  /** Open Settings and scroll to the New Cards / Day stepper. Mirrors the
+   *  sync-settings deep link – Settings is the tools panel on HOME, there is
+   *  no separate SETTINGS view. */
+  const goToDailyLimitSetting = () => {
+    setShowTools(true);
+    setTimeout(
+      () => document.getElementById('daily-limit-setting')?.scrollIntoView({ behavior: 'smooth', block: 'center' }),
+      250
+    );
+  };
+
   // Computed stats
   const getTotalProgress = () => {
     if (deck.length === 0) return 0;
@@ -803,6 +837,25 @@ const App: React.FC = () => {
     ? Math.min(deck.filter(c => c.topic === currentNode.id && c.mastery === 0 && !c.isSuspended).length, dailyLeft)
     : 0;
   const hasCards = reviewsDue > 0 || newAvailable > 0;
+  /** Unseen cards anywhere in the unlocked deck, ignoring the daily allowance.
+   *  This is what "Study more" can actually draw from – gating that button on
+   *  the quota alone would leave it inert whenever the pool is genuinely empty,
+   *  because handleStartSession returns silently with nothing to queue. */
+  const bonusAvailable = allUnlockedCards.some(c => (c.mastery ?? 0) === 0);
+  /** Today's new-card allowance is spent, but there is still material to draw. */
+  const canStudyMore = dailyLeft === 0 && bonusAvailable;
+
+  // One-shot explainer: the first time a user actually finishes a day's worth
+  // of new cards, tell them the number is theirs to change. Fired here rather
+  // than on first launch so it lands when it means something – the user has
+  // just hit the limit and is deciding whether 20 is the right number.
+  useEffect(() => {
+    if (view !== 'HOME' || STARTER_LOCK) return;
+    if (dailyLeft > 0 || dailyStats.newCardsCount === 0) return;
+    if (localStorage.getItem('quest_daily_limit_intro_done')) return;
+    localStorage.setItem('quest_daily_limit_intro_done', '1');
+    setShowLimitIntro(true);
+  }, [view, dailyLeft, dailyStats.newCardsCount]);
 
   const availableLanguages: Language[] = STARTER_LOCK
     ? [STARTER_LOCK]
@@ -1074,27 +1127,61 @@ const App: React.FC = () => {
           </button>
           )}
 
-          {/* When all reviews are done, offer an inline way to pull more
-              cards into today's queue. Same panel that appears at the end
-              of a study session – bringing it up-front so the user isn't
-              stuck at "All caught up" when they still want to learn. */}
-          {!hasCards && isPlacementComplete(lang) && (
-            <>
-              <AddMoreCardsPanel
-                variant="home"
-                defaultCount={getDailyLimitFor(settings, lang)}
-                onStart={(count) => handleStartSession(count)}
-              />
-              <p className="text-[11px] text-center text-[var(--text-muted)] -mt-1 mb-2">
-                That’s today’s {getDailyLimitFor(settings, lang)} new cards done – add more above, or change the daily amount in Settings.
-              </p>
-            </>
+          {/* Today's quota is spent but there's still material. This is the
+              "Study more" affordance: it asks HOW MANY rather than silently
+              adding a batch, and it stays available even while reviews are
+              still due (the old panel below required nothing at all to do,
+              so a user with reviews outstanding had no way to add cards). */}
+          {canStudyMore && isPlacementComplete(lang) && !studyConfirm && (
+            studyMoreOpen ? (
+              <>
+                <AddMoreCardsPanel
+                  key={lang}
+                  variant="home"
+                  defaultCount={getDailyLimitFor(settings, lang)}
+                  onStart={(count) => { setStudyMoreOpen(false); handleStartSession(count); }}
+                />
+                <button
+                  onClick={() => setStudyMoreOpen(false)}
+                  className="w-full mb-2 py-2 text-xs font-bold text-[var(--text-muted)] hover:text-[var(--text-secondary)] transition-colors"
+                >
+                  Cancel
+                </button>
+              </>
+            ) : (
+              <>
+                <button
+                  onClick={() => setStudyMoreOpen(true)}
+                  className="w-full mb-2 px-3 py-3 flex items-center justify-center gap-2 text-sm font-bold text-[var(--text-secondary)] bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl hover:border-[var(--accent)]/40 hover:text-[var(--accent)] hover:bg-[var(--accent)]/5 active:scale-[0.99] transition-all"
+                >
+                  <Plus size={15} />
+                  <span>Study more</span>
+                </button>
+                <p className="text-[11px] text-center text-[var(--text-muted)] -mt-1 mb-2">
+                  That’s today’s {getDailyLimitFor(settings, lang)} new cards done.{' '}
+                  <button onClick={goToDailyLimitSetting} className="underline underline-offset-2 hover:text-[var(--text-secondary)]">
+                    Change the daily amount
+                  </button>
+                </p>
+              </>
+            )
           )}
 
-          {/* Bonus session – explicit "study N extra" affordance. Always visible
-              when there are unseen cards left in the current topic so the user
-              can push past the daily limit deliberately. Sized for thumb access
-              and prominent enough not to get missed. */}
+          {/* Nothing to do right now for a reason OTHER than the daily quota –
+              e.g. the current topic has no unseen cards left while the day's
+              allowance is untouched. Distinct from the block above: that one
+              is "you've hit your limit", this one is "there's nothing here". */}
+          {!hasCards && dailyLeft > 0 && isPlacementComplete(lang) && (
+            <AddMoreCardsPanel
+              key={lang}
+              variant="home"
+              defaultCount={getDailyLimitFor(settings, lang)}
+              onStart={(count) => handleStartSession(count)}
+            />
+          )}
+
+          {/* Listen – secondary, passive listening mode. Only shown when the
+              user has at least a handful of seen cards to play through. */}
           {/* Listen – secondary, passive listening mode. Only shown when the
               user has at least a handful of seen cards to play through. */}
           {(() => {
@@ -1204,6 +1291,12 @@ const App: React.FC = () => {
               <div className="text-sm font-bold text-[var(--text-primary)] leading-tight">
                 Settings
               </div>
+              {/* Surface the daily amount on the tile itself – it's the setting
+                  people look for, and it was invisible until the panel opened.
+                  Second line, not appended, so the row still fits 375px. */}
+              <div className="text-[11px] font-semibold text-[var(--text-muted)] leading-none">
+                {getDailyLimitFor(settings, lang)}/day
+              </div>
             </button>
 
             {showGoalMenu && (
@@ -1278,6 +1371,28 @@ const App: React.FC = () => {
               a bottom-of-screen panel. Triggers after the 3rd session. Tap
               backdrop or Later to dismiss; "Enable" fires the permission
               flow. */}
+          {showLimitIntro && (
+            <FirstTimeIntro
+              title="That’s today’s new cards"
+              subtitle="You set the pace – here’s how."
+              cta="Got it"
+              items={[
+                {
+                  icon: <CalendarDays size={18} />,
+                  tone: 'bg-[var(--accent)]/15 text-[var(--accent)]',
+                  title: `${getDailyLimitFor(settings, lang)} new cards a day`,
+                  body: 'Reviews of cards you already know keep coming regardless – this number only caps how much brand-new material you meet each day.',
+                },
+                {
+                  icon: <Settings2 size={18} />,
+                  tone: 'bg-slate-500/15 text-slate-500',
+                  title: 'Change it whenever',
+                  body: <>Settings on the home screen, under <span className="font-bold">New Cards / Day</span>. It’s set per language. Want more just for today? Use <span className="font-bold">Study more</span>.</>,
+                },
+              ]}
+              onDismiss={() => setShowLimitIntro(false)}
+            />
+          )}
           {showSyncNudge && (
             <div
               className="fixed inset-0 z-[10000] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in"
@@ -1367,7 +1482,7 @@ const App: React.FC = () => {
                 </button>
               </div>
 
-              <div>
+              <div id="daily-limit-setting" className="scroll-mt-4">
                 <div className="flex items-baseline justify-between mb-3">
                   <div className="text-xs font-bold text-[var(--text-secondary)] uppercase tracking-wide">New Cards / Day</div>
                   <div className="text-[11px] font-semibold text-[var(--text-muted)] tracking-wide">for {LANGUAGE_CONFIG[lang].name}</div>
@@ -1673,23 +1788,6 @@ const App: React.FC = () => {
             const dueCount = deck.filter(c => c.mastery > 0 && c.dueDate && c.dueDate <= Date.now()).length;
             onSessionComplete(dueCount, userStats.streak);
           }}
-          onStudyMore={(count: number) => handleStartSession(count)}
-          hasMoreCards={(() => {
-            const now = Date.now();
-            const currentNode = getCurrentNode(deck);
-            const allUnlockedCards = deck.filter(c => {
-              if (c.isSuspended) return false;
-              const nodeIdx = MAIN_PATH.findIndex(n => n.id === c.topic);
-              return nodeIdx >= 0 && isNodeUnlocked(nodeIdx, deck);
-            });
-            const reviews = allUnlockedCards.filter(
-              c => c.mastery > 0 && (c.dueDate ? c.dueDate <= now : true)
-            );
-            const dailyLimitRemaining = settings.dailyNewLimit - dailyStats.newCardsCount;
-            const nodeCards = deck.filter(c => c.topic === currentNode.id && !c.isSuspended);
-            const newCards = nodeCards.filter(c => c.mastery === 0).slice(0, Math.max(0, dailyLimitRemaining));
-            return reviews.length > 0 || newCards.length > 0;
-          })()}
           topicCards={deck.filter(c => c.topic === session.topic)}
           autoPlayAudio={settings.autoPlayAudio}
           audioSpeed={settings.audioSpeed}
@@ -1793,6 +1891,7 @@ const App: React.FC = () => {
           lang={lang}
           userStats={userStats}
           masteryMap={masteryMap}
+          dailyNewLimit={getDailyLimitFor(settings, lang)}
           onComplete={(newMasteryMap, newUserStats, fastTrackedCount) => {
             setMasteryMap(newMasteryMap);
             setUserStats(newUserStats);

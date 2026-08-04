@@ -5,7 +5,7 @@ import { MAIN_PATH, getNodeName } from '../data/topicConfig';
 import { getGrammarNudge } from '../data/grammarDescriptions';
 import { grammarTipsEnabled } from '../config/featureFlags';
 import {
-  selectPlacementCards, applyPlacementResults, countFastTrackable,
+  selectPlacementCards, probeableNodeIndices, applyPlacementResults, countFastTrackable,
   ConfidenceRating, RATING_POINTS, NodeStrength,
 } from '../services/placementService';
 import { playCardAudio, stopAudio } from '../services/audioService';
@@ -30,22 +30,44 @@ interface PlacementTestProps {
   autoPlayAudio: boolean;
   audioSpeed: AudioSpeed;
   googleTtsApiKey?: string;
+  /** Sizes the placement due-date stagger to the user's own daily appetite. */
+  dailyNewLimit?: number;
 }
 
 type Phase = 'intro' | 'question' | 'reveal' | 'results';
 
-/** Scoring (2 cards per node, points no_idea=0 hard=1 knew=2 easy=3, max 6):
- *   total ≤ 2  → FAIL the node (includes no_idea+knew_it – previously a pass)
- *   total = 3  → WOBBLE: passes, but two wobbles in a row fail the second
- *   total ≥ 4  → pass ('strong' when ≥ 5)
- *  Every rule is reachable with n=2 – the old "3 mostly → fail" branch never
- *  could fire. There is no per-card Skip anymore: "No idea" IS the honest
- *  skip, and it scores. */
+/** Where to start probing: roughly A2. Starting the search in the middle of the
+ *  whole path would make a true beginner rate a dozen B2 sentences "No idea"
+ *  before landing at zero, which is a miserable first experience. Starting low
+ *  and climbing costs an advanced user only a couple of extra taps. */
+const FIRST_PROBE_NODE = 6;
+
+/** Hard cap on probes so the test always ends. log2(35) ≈ 6 to close the
+ *  bracket, plus slack for wobbles and skipped empty nodes. */
+const MAX_PROBES = 8;
+
+/** Scoring: points are no_idea=0, hard=1, knew_it=2, very_easy=3 per card, and
+ *  a node is probed with up to CARDS_PER_NODE (3) cards — but thin nodes serve
+ *  fewer, so the bar SCALES with what was actually asked rather than being a
+ *  constant. Per card the ceiling is 3, so:
+ *    ratio = total / (3 × cards served)
+ *    < 0.45  → FAIL           (e.g. 4/9 fails, 0+1+2 = "mostly lost")
+ *    < 0.60  → WOBBLE: passes, but a wobble bounds the search from above too
+ *    ≥ 0.60  → pass ('strong' at ≥ 0.80)
+ *  "knew_it + knew_it + no_idea" = 4/9 = 0.44 fails, which is the intent: one
+ *  blank on three tries means the level isn't solid. Note very_easy is
+ *  unavailable to anyone who peeked at the translation, so the top of the scale
+ *  is not always reachable — hence a 0.60 pass mark rather than something
+ *  stricter. There is no per-card Skip: "No idea" IS the honest skip, and it
+ *  scores 0. */
 function nodeVerdict(points: number[]): { fail: boolean; wobble: boolean; strength: NodeStrength } {
+  const served = points.length;
+  if (served === 0) return { fail: true, wobble: false, strength: 'wobble' };
   const total = points.reduce((a, b) => a + b, 0);
-  if (total <= 2) return { fail: true, wobble: false, strength: 'wobble' };
-  if (total === 3) return { fail: false, wobble: true, strength: 'wobble' };
-  return { fail: false, wobble: false, strength: total >= 5 ? 'strong' : 'normal' };
+  const ratio = total / (3 * served);
+  if (ratio < 0.45) return { fail: true, wobble: false, strength: 'wobble' };
+  if (ratio < 0.60) return { fail: false, wobble: true, strength: 'wobble' };
+  return { fail: false, wobble: false, strength: ratio >= 0.80 ? 'strong' : 'normal' };
 }
 
 const PlacementTest: React.FC<PlacementTestProps> = ({
@@ -61,9 +83,10 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   autoPlayAudio,
   audioSpeed,
   googleTtsApiKey,
+  dailyNewLimit = 20,
 }) => {
   const [phase, setPhase] = useState<Phase>('intro');
-  const [nodeIndex, setNodeIndex] = useState(0);
+  const [nodeIndex, setNodeIndex] = useState(FIRST_PROBE_NODE);
   const [cardIndex, setCardIndex] = useState(0);
   // Points per rated card, per node index.
   const [nodePoints, setNodePoints] = useState<Record<number, number[]>>({});
@@ -77,19 +100,24 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
   // is fine (it's how you verify you understood) but it caps the claim: you
   // can't rate "Very easy" on a sentence you needed the translation for.
   const [translationRevealed, setTranslationRevealed] = useState(false);
-  // Tracks whether the previous completed node was a wobble (two consecutive
-  // wobbles fail the second one).
-  const prevWobbleRef = useRef(false);
   const lastAutoplayedCardId = useRef<string | null>(null);
 
-  // Pre-select 2 cards per node (35 nodes × 2 = 70 total cards)
+  // Pre-select up to CARDS_PER_NODE cards per node.
   const placementCards = useMemo(() => selectPlacementCards(deck), [deck]);
+  // Nodes that actually have enough cards to judge. Several shipped decks have
+  // empty nodes for a given goal, and the search probes the middle first.
+  const probeable = useMemo(() => probeableNodeIndices(placementCards), [placementCards]);
 
-  // Card-based progress (single scale – the header shows the same count)
-  const totalTestCards = placementCards.reduce((sum, arr) => sum + arr.length, 0);
-  const completedCards = placementCards
-    .slice(0, nodeIndex)
-    .reduce((sum, arr) => sum + arr.length, 0) + cardIndex;
+  // Search bracket: ceiling is in [lo, hi). lo = highest passed + 1.
+  const searchLo = useRef(0);
+  const searchHi = useRef(MAIN_PATH.length);
+  const probesUsed = useRef(1);
+
+  // Progress is now "probe N of at most MAX_PROBES" – with an adaptive search
+  // the total card count isn't known in advance, so the old card-based bar
+  // would have jumped around.
+  const totalTestCards = MAX_PROBES;
+  const completedCards = probesUsed.current - 1;
 
   const currentNode = MAIN_PATH[nodeIndex];
   const currentCard = placementCards[nodeIndex]?.[cardIndex];
@@ -127,7 +155,9 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
    *  the test exists for. */
   function advance(points: Record<number, number[]>) {
     const nodeCards = placementCards[nodeIndex] || [];
-    const ratedAll = (points[nodeIndex]?.length || 0) >= nodeCards.length;
+    // Defensive: a node with no cards can't be rated. Treat it as done rather
+    // than rendering a card that doesn't exist (blank screen, no way out).
+    const ratedAll = nodeCards.length === 0 || (points[nodeIndex]?.length || 0) >= nodeCards.length;
 
     if (!ratedAll) {
       setCardIndex(cardIndex + 1);
@@ -136,23 +166,39 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
       return;
     }
 
-    // Node complete – verdict
+    // Node complete – verdict, then narrow the bracket.
+    //
+    // This is a search, not a walk. The old version stopped dead at the first
+    // node that scored badly, so ONE unlucky pair of cards near the bottom
+    // capped the whole result – which is how a competent Spanish speaker ended
+    // up skipping 86 cards. Now a fail only says "your ceiling is below here";
+    // we keep probing lower, and a pass pushes the floor up, until the bracket
+    // closes on the real boundary.
     const v = nodeVerdict(points[nodeIndex] || []);
-    if (v.fail || (v.wobble && prevWobbleRef.current)) {
-      setCeilingNode(nodeIndex);
-      setPhase('results');
-      return;
-    }
-    prevWobbleRef.current = v.wobble;
-    setNodeStrengths(prev => ({ ...prev, [nodeIndex]: v.strength }));
+    let lo = searchLo.current;   // highest index known PASSED, +1 = floor
+    let hi = searchHi.current;   // lowest index known FAILED
 
-    const nextNode = nodeIndex + 1;
-    if (nextNode >= MAIN_PATH.length) {
-      setCeilingNode(null); // passed everything
+    if (v.fail) {
+      hi = Math.min(hi, nodeIndex);
+    } else {
+      lo = Math.max(lo, nodeIndex + 1);
+      setNodeStrengths(prev => ({ ...prev, [nodeIndex]: v.strength }));
+      // A wobble passes but marks the top of comfort: don't reach far above it.
+      if (v.wobble) hi = Math.min(hi, nodeIndex + 2);
+    }
+    searchLo.current = lo;
+    searchHi.current = hi;
+
+    const remaining = probeable.filter((i: number) => i >= lo && i < hi);
+    if (remaining.length === 0 || probesUsed.current >= MAX_PROBES) {
+      // Bracket closed. `lo` is the first node NOT passed = the ceiling.
+      setCeilingNode(lo >= MAIN_PATH.length ? null : lo);
       setPhase('results');
       return;
     }
-    setNodeIndex(nextNode);
+
+    probesUsed.current += 1;
+    setNodeIndex(remaining[Math.floor(remaining.length / 2)]);
     setCardIndex(0);
     setPhase('question');
     setLastRating(null);
@@ -200,7 +246,8 @@ const PlacementTest: React.FC<PlacementTestProps> = ({
       deck,
       masteryMap,
       userStats,
-      lang
+      lang,
+      dailyNewLimit
     );
     onComplete(newMasteryMap, newUserStats, fastTrackedCount);
   }

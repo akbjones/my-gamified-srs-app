@@ -3,8 +3,9 @@ import { MAIN_PATH } from '../data/topicConfig';
 import { saveMasteryMap, setPlacementComplete, setPlacementTaken } from './storageService';
 
 /**
- * Pick 2 representative cards per node for the placement test.
- * With 35 nodes this gives 70 cards total (manageable test length).
+ * Pick CARDS_PER_NODE representative cards per node. The test does NOT ask all
+ * of them — an adaptive search probes a handful of nodes — but every node needs
+ * its candidates ready because the search can jump anywhere.
  *
  * Sampling is stratified-random: the node's cards are split into
  * CARDS_PER_NODE equal buckets and one card is drawn at random from each.
@@ -14,7 +15,7 @@ import { saveMasteryMap, setPlacementComplete, setPlacementTaken } from './stora
  * preferred grammar-annotated cards, a small unrepresentative slice in
  * some decks.
  */
-const CARDS_PER_NODE = 2;
+const CARDS_PER_NODE = 3;
 
 export function selectPlacementCards(deck: QuestCard[]): QuestCard[][] {
   const result: QuestCard[][] = [];
@@ -35,6 +36,25 @@ export function selectPlacementCards(deck: QuestCard[]): QuestCard[][] {
   }
 
   return result;
+}
+
+/**
+ * Node indices the test can actually probe.
+ *
+ * Several shipped decks have nodes with no cards for a given goal filter
+ * (japanese/general 18-34, greek+korean general 34-35, indonesian/travel 4 and
+ * 6, …). The old linear scan almost never reached them; an adaptive search
+ * probes the middle of the range FIRST, so an empty node would render a card
+ * that doesn't exist – a blank screen with no way out. A node also needs at
+ * least 2 cards to be judged fairly, since a single card caps the score too low
+ * to ever pass cleanly.
+ */
+export function probeableNodeIndices(cardsByNode: QuestCard[][]): number[] {
+  const out: number[] = [];
+  for (let i = 0; i < cardsByNode.length; i++) {
+    if ((cardsByNode[i]?.length ?? 0) >= 2) out.push(i);
+  }
+  return out;
 }
 
 /** Placement ratings mirror the study buttons — one rating vocabulary
@@ -71,20 +91,25 @@ export function countFastTrackable(results: PlacementResults, deck: QuestCard[])
  * Apply placement results: graduate cards below ceiling, save everything.
  * No XP awarded – placement just sets your starting point.
  *
- * The seed a card gets depends on how confidently its node was passed:
- *   strong (both cards easy/known cold) → 7-day interval, due 7–14 days out
- *   normal                              → 4-day interval, due 4–10 days out
- *   wobble (scraped past)               → 2-day interval, due 2–5 days out
- * FSRS's legacy migration turns interval into initial stability, so a
- * scraped-past B1 card genuinely comes back sooner than a cold-known one —
- * the graded ratings finally DO something mechanical.
+ * How soon a card comes back depends on how confidently its node was passed:
+ * 'strong' gets the full stagger, 'normal' 70% of it, 'wobble' 40%, on top of
+ * a 7/4/2-day floor. FSRS's legacy migration turns interval into initial
+ * stability, so a scraped-past B1 card genuinely returns sooner than one known
+ * cold — the graded ratings DO something mechanical.
+ *
+ * The stagger width itself scales with how many cards are being seeded and the
+ * user's daily appetite, so placing someone at 2,000 cards spreads their return
+ * over months rather than dumping 300 reviews on day four.
  */
 export function applyPlacementResults(
   results: PlacementResults,
   deck: QuestCard[],
   masteryMap: MasteryMap,
   userStats: UserStats,
-  lang: Language
+  lang: Language,
+  /** The user's own new-cards-per-day setting, used to size the due-date
+   *  stagger so a big fast-track doesn't land as one huge review day. */
+  dailyNewLimit = 20
 ): { newMasteryMap: MasteryMap; newUserStats: UserStats; fastTrackedCount: number } {
   const now = Date.now();
   const DAY = 24 * 60 * 60 * 1000;
@@ -99,10 +124,24 @@ export function applyPlacementResults(
     strengthByNodeId.set(n.id, results.nodeStrengths?.[i] ?? 'normal');
   });
 
-  const SEED: Record<NodeStrength, { interval: number; minDays: number; spreadDays: number }> = {
-    strong: { interval: 7 * DAY, minDays: 7, spreadDays: 7 },
-    normal: { interval: 4 * DAY, minDays: 4, spreadDays: 6 },
-    wobble: { interval: 2 * DAY, minDays: 2, spreadDays: 3 },
+  // How many cards this is about to seed, so the stagger can be sized to it.
+  const toSeed = deck.filter(c => strengthByNodeId.has(c.topic) && c.mastery !== 2).length;
+
+  // Spread the due dates over enough days that the daily review load stays
+  // near the user's own daily appetite. The old fixed 3-6 day stagger was fine
+  // for the ~500 cards the linear test could fast-track, but the adaptive
+  // search can place someone at 2,000+ — which over 6 days is 300+ reviews a
+  // day against an uncapped pile. Sizing it here is what keeps a more generous
+  // placement from turning into a worse complaint than the one it fixes.
+  const spreadDays = Math.max(6, Math.min(90, Math.ceil(toSeed / Math.max(1, dailyNewLimit * 2))));
+
+  // A card due N days out must carry roughly N days of stability, or FSRS's
+  // legacy migration reads a 4-day memory for a 45-day gap and the card comes
+  // back "overdue" the moment it surfaces.
+  const SEED: Record<NodeStrength, { minDays: number; spreadFactor: number }> = {
+    strong: { minDays: 7, spreadFactor: 1.0 },
+    normal: { minDays: 4, spreadFactor: 0.7 },
+    wobble: { minDays: 2, spreadFactor: 0.4 },
   };
 
   const newMap = { ...masteryMap };
@@ -115,16 +154,35 @@ export function applyPlacementResults(
 
     const s = SEED[strength];
     // Stagger due dates to prevent a review avalanche
-    const staggerDays = Math.floor(Math.random() * s.spreadDays);
+    const spread = Math.max(1, Math.round(spreadDays * s.spreadFactor));
+    const staggerDays = Math.floor(Math.random() * spread);
+    const dueInDays = s.minDays + staggerDays;
     newMap[card.id] = {
+      // Spread the existing entry so a card that HAS been genuinely reviewed
+      // keeps anything not explicitly overwritten below.
+      ...masteryMap[card.id],
       mastery: 2,
       step: 0,
-      interval: s.interval,
-      dueDate: now + (s.minDays + staggerDays) * DAY,
+      interval: dueInDays * DAY,
+      dueDate: now + dueInDays * DAY,
       ease: 2.5,
       failCount: 0,
       isLeech: false,
       isSuspended: false,
+      // Placement is a fresh assertion about this card, so any FSRS memory from
+      // a half-finished learning run must be cleared — otherwise the card keeps
+      // fsrsState: Learning while claiming mastery 2, and toFsrsCard's restore
+      // branch runs on inconsistent state. These are explicit undefineds, which
+      // is why the deck merge tests key PRESENCE rather than using `??`.
+      stability: undefined,
+      difficulty: undefined,
+      fsrsState: undefined,
+      reps: undefined,
+      lapses: undefined,
+      learningStep: undefined,
+      // Stamp the seed so cross-device merge treats it as recent news instead
+      // of always losing to whatever the other device has.
+      lastReview: now,
     };
     fastTrackedCount++;
   }

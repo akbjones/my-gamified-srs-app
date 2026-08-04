@@ -46,8 +46,6 @@ interface StudySessionProps {
   onAnswer: (rating: 'AGAIN' | 'HARD' | 'GOOD' | 'EASY') => void;
   onUndoAnswer?: () => void;
   onAbort: () => void;
-  onStudyMore?: (count: number) => void;
-  hasMoreCards?: boolean;
   topicCards: QuestCard[];
   autoPlayAudio: boolean;
   audioSpeed: AudioSpeed;
@@ -74,7 +72,7 @@ const FIRST_WOW_KEY = 'first-session-wow-shown';
 // so the default for everyone is readings ON).
 const FURIGANA_HIDDEN_KEY = 'quest_furigana_hidden';
 
-const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAnswer, onAbort, onStudyMore, hasMoreCards, topicCards = [], autoPlayAudio, audioSpeed, googleTtsApiKey, tileCardIds = new Set(), pendingChallenge, onStartChallenge }) => {
+const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAnswer, onAbort, topicCards = [], autoPlayAudio, audioSpeed, googleTtsApiKey, tileCardIds = new Set(), pendingChallenge, onStartChallenge }) => {
   const [showInfo, setShowInfo] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
   const [copiedTarget, setCopiedTarget] = useState(false);

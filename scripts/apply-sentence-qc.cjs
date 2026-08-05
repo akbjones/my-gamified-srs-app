@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-// Apply verified Hindi sentence replacements (docs/hi-quality/verify/out-*.json).
+// Apply verified sentence replacements for any deck.
 // ONLY `target` and `english` change — id, grammarNode, priority, audio filename
 // and every learner's SRS state are untouched, so progress survives intact.
 // Refuses to write if anything looks unsafe (unknown id, empty text, duplicate
 // sentence, or a replacement that collides with another card).
-// Usage: node scripts/apply-sentence-qc.cjs [--check] [--max-rank=N] [--dir=docs/hi-quality/overuse-verify]
+// Usage: node scripts/apply-sentence-qc.cjs [--check] [--max-rank=N] [--deck=hindi] [--dir=docs/hi-quality/overuse-verify]
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.join(__dirname, '..');
@@ -12,7 +12,8 @@ const check = process.argv.includes('--check');
 const maxRankArg = (process.argv.find(a => a.startsWith('--max-rank=')) || '').split('=')[1];
 const MAX_RANK = maxRankArg ? parseInt(maxRankArg, 10) : Infinity;
 
-const DECK = path.join(ROOT, 'src/data/hindi/deck.json');
+const deckArg = (process.argv.find(a => a.startsWith('--deck=')) || '').split('=')[1] || 'hindi';
+const DECK = path.join(ROOT, `src/data/${deckArg}/deck.json`);
 const dirArg = (process.argv.find(a => a.startsWith('--dir=')) || '').split('=')[1];
 const DIR = path.join(ROOT, dirArg || 'docs/hi-quality/verify');
 const deck = JSON.parse(fs.readFileSync(DECK, 'utf8'));
@@ -64,7 +65,7 @@ for (const [id, r] of reps) {
   applied++;
 }
 
-console.log(`hindi: ${reps.size} verified replacements | ${applied} in scope${MAX_RANK !== Infinity ? ` (rank <= ${MAX_RANK}, ${skippedRank} skipped)` : ''}`);
+console.log(`${deckArg}: ${reps.size} verified replacements | ${applied} in scope${MAX_RANK !== Infinity ? ` (rank <= ${MAX_RANK}, ${skippedRank} skipped)` : ''}`);
 if (fails.length) {
   console.error(`\n✗ ${fails.length} GATE FAILURES — refusing to write:`);
   for (const f of fails.slice(0, 30)) console.error(`  ${f.id}: ${f.why}`);
@@ -85,6 +86,8 @@ for (const c of deck) {
   changed.push({ id, audio: c.audio });
 }
 fs.writeFileSync(DECK, JSON.stringify(deck, null, 2) + '\n');
-fs.writeFileSync(path.join(ROOT, 'docs/hi-quality/regen-list.json'), JSON.stringify(changed, null, 1));
+const regenPath = deckArg === 'hindi' ? 'docs/hi-quality/regen-list.json' : `docs/declump/${deckArg}/regen-list.json`;
+fs.mkdirSync(path.dirname(path.join(ROOT, regenPath)), { recursive: true });
+fs.writeFileSync(path.join(ROOT, regenPath), JSON.stringify(changed, null, 1));
 console.log(`wrote ${DECK}`);
-console.log(`${changed.length} cards changed → audio regen list at docs/hi-quality/regen-list.json`);
+console.log(`${changed.length} cards changed → audio regen list at ${regenPath}`);

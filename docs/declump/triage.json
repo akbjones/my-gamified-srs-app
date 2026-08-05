@@ -1,0 +1,1402 @@
+[
+ {
+  "lang": "swedish",
+  "grade": "severe",
+  "estRewrites": 165,
+  "realFamilies": [
+   {
+    "token": "frukost",
+    "meaning": "breakfast",
+    "judgment": "scenario",
+    "realExcess": 4,
+    "evidence": "'Jag äter frukost klockan sju.' (sv-0039) vs 'Vi äter frukost klockan sju.' (sv-0087) vs 'Vi äter frukost klockan sju varje vardag utan undantag.' (sv-0140) vs 'Vi äter frukost klockan halv åtta.' (sv-0072); plus twins 'Vi äter frukost tillsammans varje morgon innan vi går.' (sv-0141) / 'Vi brukar äta frukost tillsammans varje morgon hemma hos oss.' (sv-0193). Same family-breakfast-at-seven scene recycled in node-01, all in beginner ranks p242-1465."
+   },
+   {
+    "token": "kaff",
+    "meaning": "coffee",
+    "judgment": "scenario",
+    "realExcess": 4,
+    "evidence": "Node-01 morning-coffee routine x8: 'Jag dricker kaffe varje morgon.' (sv-0041), 'Jag dricker alltid kaffe till frukosten.' (sv-0067), 'På morgonen dricker jag alltid en stor kopp starkt kaffe.' (sv-0247), 'Han dricker kaffe utan mjölk och socker varje morgon tidigt.' (sv-0215). The other ~27 coffee cards (ordering, brewing, adjectives, fika culture) are well spread and fine - only the node-01 routine variants are excess."
+   },
+   {
+    "token": "hur",
+    "meaning": "how",
+    "judgment": "scenario",
+    "realExcess": 6,
+    "evidence": "Template clump x6 across nodes 03/04/06: 'Akta dig, jag förstår hur du känner dig just nu!' (sv-0469), 'Detsamma, jag förstår hur du känner dig just nu!' (sv-0605), 'Vilken dag, jag förstår hur du känner dig just nu!' (sv-0614), plus sv-0611/0842/0817 - interjection cards with an identical lazy tail. Also 'God morgon, hur mår du' x3 (sv-0299/0364/0365). The bare question-word uses are carrier; huruvida cards are a folding artifact."
+   },
+   {
+    "token": "äter",
+    "meaning": "eats",
+    "judgment": "vocab",
+    "realExcess": 2,
+    "evidence": "Node-01 is the daily-routine node so meals are its subject matter, but clock-time twins repeat: 'Vi äter middag klockan sex.' (sv-0086) / 'Normalt sett äter vi klockan sex.' (sv-0427) / 'I Sverige äter man ofta middag vid sex.' (sv-0115). NOTE folding artifact: family also absorbed åter- verbs (återstår sv-1015, återvinner sv-1543, återvända sv-3706) which are unrelated."
+   },
+   {
+    "token": "drick",
+    "meaning": "drinks",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "'Jag dricker ett glas vatten.' (sv-0056), 'Vi dricker glögg på vintern.' (sv-1962), 'Vi drinker snaps till sillen.' (sv-3753) - honest beverage spread; its only clumped cards ARE the kaff morning-routine cards already counted there. One broken card 'Drick ditt vatten förra veckan alltid!' (sv-2235) belongs to the stuffing defect, not clumping."
+   },
+   {
+    "token": "ligg",
+    "meaning": "lies / is located",
+    "judgment": "vocab",
+    "realExcess": 3,
+    "evidence": "ligger is THE Swedish positional verb, spread across location nodes - carrier-adjacent. Small repeats: 'Var ligger biblioteket' x3 (sv-0317/0231/0590, and sv-0590 'Var ligger biblioteket på kontoret varje morgon?' is broken); house-by-the-lake x5: 'Huset som ligger vid sjön är gammalt.' (sv-2653) / 'Huset som ligger vid sjön har en vacker trädgård.' (sv-2831) / 'Den röda stugan ligger vid sjön.' (sv-2679)."
+   },
+   {
+    "token": "hem",
+    "meaning": "home",
+    "judgment": "vocab",
+    "realExcess": 3,
+    "evidence": "Core vocab spread over 91 cards, but exact scene dups across nodes: 'Jag har precis kommit hem från en väldigt lång resa.' (sv-0471, node-03) vs 'Jag har precis kommit hem från en lång resa utomlands.' (sv-3732, node-33); 'Så fort jag kom hem somnade jag.' (sv-0588) vs 'Så fort jag kom hem från jobbet somnade jag direkt.' (sv-3564); 'Hemma hos oss firar vi alltid jul.' (sv-0712) vs same + 'med hela familjen' (sv-0616)."
+   },
+   {
+    "token": "kom",
+    "meaning": "come/came",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "'Jag kommer från Sverige.' (sv-0012), 'Bussen kommer var femtonde minut.' (sv-0057), 'Tomten kommer på julafton.' (sv-2296) - 170 cards across 30+ nodes, all different scenes; also folds in kompis/komet/komplex (artifact). No shared scenario."
+   },
+   {
+    "token": "henn",
+    "meaning": "her (obj./poss.)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'Jag såg henne.' (sv-1281), 'Jag beundrar henne.' (sv-1283), 'De bjöd henne på fika.' (sv-1401) - object-pronoun teaching material dense in the pronoun nodes 09/10/11 by design; varied verbs and scenes."
+   },
+   {
+    "token": "honom",
+    "meaning": "him (object)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'Vi stödde honom.' (sv-1397), 'Hon lyssnade på honom.' (sv-1414), 'Enligt honom var det en bra idé.' (sv-3247) - same object-pronoun node material, varied scenes."
+   },
+   {
+    "token": "dem",
+    "meaning": "them (object)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'Vi hjälpte dem.' (sv-1119), 'Ge dem tid.' (sv-1280), 'Jag visade dem vägen.' (sv-1300) - object-pronoun carrier in nodes 09/10, varied verbs."
+   },
+   {
+    "token": "gick",
+    "meaning": "went",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "'Jag gick till affären igår.' (sv-0679), 'Hon gick rakt på sak.' (sv-3371), 'Campingturen gick åt skogen...' (sv-3343) - past-tense core verb plus idiom cards, well spread, no shared scene."
+   }
+  ],
+  "realDupPairs": 9,
+  "notes": "SCENARIO CLUMPING ITSELF IS MILD (~25-30 excess cards): worst offenders are the node-01 breakfast-at-seven + morning-coffee routines (beginner-visible, p138-1500) and the 6-card 'jag förstår hur du känner dig just nu!' template. Real dup pairs (9): cook-dinner sv-0013/0070; sleep-eight-hours triple sv-0047/0065/0211 (2 pairs); gym-x-times-a-week sv-0120/0332; expensive-bag sv-0456/2677; känner-dig pairs sv-0469/0605 + 0469/0614; come-home-from-trip sv-0471/3732; hur-mår-du sv-0299/0579. NOT dups: sv-0086/0115 (generic 'man' + culture fact), sv-0393/1939 (causal clause), sv-0088/0247 (different elaboration). Openings are all carrier: vi/jag/hon/han/de har concentrate in perfect-tense nodes 14/15/16; det är is existential/weather practice. Folding artifacts confirmed: äter<-åter- verbs, hur<-huruvida, kom<-kompis/komet/komplex. Spot-checks at ranks 100-130 and 400-430: clean, varied, no hidden actor. THE DOMINANT DEFECT IS NOT CLUMPING: a systemic filler-adverbial stuffing disease - random time/company tails ('förra veckan också', 'till slut', 'med familjen/vänner', 'just nu nog', 'väldigt ofta nu', 'hemma hos oss') appended to otherwise-finished sentences, producing ~140 genuinely broken cards of 173 strict-pattern hits, e.g. sv-2235 'Drick ditt vatten förra veckan alltid!' (Drink your water last week always!), sv-3902 'Julgranen pyntas med ljus förra veckan också.', sv-0774 'Snart kommer sommaren under sommaren till slut.', sv-3715 'Implikationerna för framtida forskning i helgen med familjen.' (fragment). Distribution: only ~8 in first 600 ranks; concentrated p600-3900 across nodes 04-35 - smells like wave-author engine contamination (see feedback_wave_author_engine_contamination.md). CRITICAL QC TRAP: many glosses silently clean the broken Swedish (sv-2582 'Vi lyckades äntligen just nu till slut' -> 'We finally succeeded.'; sv-3475 'Vi emotser ert svar förra veckan också' -> 'We await your reply soon.'), so English-side review will NOT catch it - scan the TARGET text. Two outright grammar errors: sv-1900 'Jag har brunnit maten' (should be bränt/bränt vid) and sv-1977 'Vi hyrer' (should be hyr). estRewrites 165 = ~25 clump excess + ~140 broken stuffed cards; grade severe is driven by the stuffing defect, not clumping - if this triage strictly ranks scenario de-clump work, treat the clump component as mild and schedule the stuffing cleanup as its own pass with its own scanner (filler-tail regex on target text). Deck: src/data/swedish/deck.json, 3925 cards."
+ },
+ {
+  "lang": "turkish",
+  "grade": "severe",
+  "estRewrites": 135,
+  "realDupPairs": 9,
+  "realFamilies": [
+   {
+    "token": "lütfe",
+    "meaning": "lütfen – please",
+    "judgment": "vocab",
+    "realExcess": 3,
+    "evidence": "Honest politeness word, but contains verbatim dups: 'Hesap, lütfen.' (tr-S-019 p66) = 'Hesap, lütfen.' (tr-3052 p103); 'Kapıyı kapat lütfen, soğuk giriyor' (tr-0380) vs 'Lütfen kapıyı kapat, soğuk giriyor' (tr-1665) vs 'Lütfen kapıyı kapatın, içerisi çok soğuk' (tr-1667); 4x speak-slowly-please variants."
+   },
+   {
+    "token": "fotoğ",
+    "meaning": "fotoğraf/fotoğrafçı – photo/photographer",
+    "judgment": "scenario",
+    "realExcess": 15,
+    "evidence": "Photographer is a recurring wave-author actor doing random things: 'Fotoğrafçı her pazar ince atkı çarşıda boyadı' (dyed a scarf at the bazaar?!), 'şimdi Fotoğrafçı koyda neşeyle bekliyor' (broken caps), plus a '[profession] takes photos at [place] [adverb]' frame ~15x: 'Diş hekimi tiyatroda fotoğraf çekiyor', 'Terzi şaşkınlıkla fotoğraf çekiyor', 'Başkan havuz kenarında fotoğraf çekiyor'."
+   },
+   {
+    "token": "okuyo",
+    "meaning": "okuyor – is reading",
+    "judgment": "carrier",
+    "realExcess": 4,
+    "evidence": "Node-15 (present continuous) drills are the lesson, but 'Ben şu anda rapor okuyorum' (tr-1456) vs 'Ben şu anda raporu okuyorum' (tr-1457) is a real dup, and '[profession] was reading a book in the school yard' repeats: tr-2551 fisherman, tr-2190 pharmacist, tr-2326 pharmacist again, tr-2317 butcher in mosque courtyard."
+   },
+   {
+    "token": "yürüy",
+    "meaning": "yürüyüş/yürümek – walk",
+    "judgment": "vocab",
+    "realExcess": 2,
+    "evidence": "Genuinely diverse contexts; only real issue is the adjacent pair 'Dayım her gün yürüyüşe çıkar' (tr-0049 p519) vs 'Ablam her gün yürüyüşe çıkar' (tr-0055 p524) – same sentence, uncle swapped for sister, 5 ranks apart."
+   },
+   {
+    "token": "geldi",
+    "meaning": "geldi/hoş geldiniz/idiomatic geldi",
+    "judgment": "folding-artifact",
+    "realExcess": 2,
+    "evidence": "Folding conflates 'came', the greeting 'hoş geldiniz', and idioms ('kolay geldi', 'küçük geldi', 'üç yüz lira geldi'). Scenes diverse. Real excess only in the welcome cluster: 'Hoş geldiniz, buyurun içeri' (tr-2532) vs 'Hoş geldiniz, lütfen içeri buyurun' (tr-2541) vs 'İyi akşamlar, buyurun içeri lütfen' (tr-2414)."
+   },
+   {
+    "token": "mi",
+    "meaning": "mi – question particle",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "Node-04 is the question/choice node; 'Çay mı istersiniz kahve mi?', 'Yarın tatil mi, okul mu?' – the particle IS the lesson. 8 exact hits, all distinct scenes."
+   },
+   {
+    "token": "ileri",
+    "meaning": "ileride – in the future (drill filler)",
+    "judgment": "scenario",
+    "realExcess": 10,
+    "evidence": "16 of 17 are one empty slot-frame '[pronoun] ileride [place] [verb-future]' with object-less verbs: 'Ben ileride parkta biteceğim' || 'I will finish in the park in the future', 'Onlar ileride okulda yapacaklar' || 'They will do at school in the future', 'Biz ileride plajda biteceğiz'. Semantically broken in both languages, 9 in one node."
+   },
+   {
+    "token": "gidec",
+    "meaning": "gidecek – will go",
+    "judgment": "carrier",
+    "realExcess": 3,
+    "evidence": "Future-tense nodes naturally drill 'go'; scenes mostly distinct. Excess: 'Hafta sonu ailecek pikniğe gideceğiz' (tr-0181) reused verbatim as tr-2193 with a conditional tail bolted on, plus template fillers 'Siz ileride mutfağa gideceksiniz', 'Sen yakında otele gideceksin'."
+   },
+   {
+    "token": "yardi",
+    "meaning": "yardım – help",
+    "judgment": "vocab",
+    "realExcess": 2,
+    "evidence": "Spread across polite requests, conditionals, earthquake relief – honest frequency. Near-dups: 'Yeni komşumuz çok nazik ve yardımsever bir kişi' (tr-0572) vs 'Yeni komşularımız çok kibar ve yardımsever' (tr-1220), plus 'Komşularımız çok yardımsever insanlar' (tr-0845)."
+   },
+   {
+    "token": "mahal",
+    "meaning": "mahalle – neighborhood",
+    "judgment": "scenario",
+    "realExcess": 6,
+    "evidence": "'Bu mahallede X' stage-setting opens 14 cards and hosts clone-template instances: 'Bu mahallede sessiz bir atmosfer var, çok huzurlu' (tr-2329) vs 'Sessiz bir mahallede yaşıyoruz, çok huzurlu' (tr-1558) vs 'Yeni taşındığımız mahalle çok sessiz ve huzurlu' (tr-2779); also 'Bu mahallede eski bir çeşme var, yüzyıllardır akıyor' cloned to seaside/city-center."
+   },
+   {
+    "token": "oynuy",
+    "meaning": "oynuyor – playing",
+    "judgment": "scenario",
+    "realExcess": 9,
+    "evidence": "Worst single clump: '[location]-de çocuklar neşeyle oynuyor, kahkahalar yükseliyor' appears 10x verbatim with only the location swapped – park (tr-1557), orman (tr-1555), meydan (tr-1554), köy (tr-1556), mahalle (tr-1578), deniz kenarı (tr-1577), dağ başı (tr-1583), şehir merkezi (tr-1582), sokak köşesi (tr-1029), sahil (tr-2031)."
+   },
+   {
+    "token": "yemeğ",
+    "meaning": "yemek – food/meal",
+    "judgment": "vocab",
+    "realExcess": 3,
+    "evidence": "Cooking/dinner across genuinely different scenes (Ramazan, mantı, lunch break). Minor excess: 'Mehmet öğleden sonra mutfakta sebze yemeği yaptı' (tr-1603) vs 'Psikolog öğleden sonra sebze yemeği pişirdi' (tr-2312) template reuse; node-09 'X yemeği [adverb] pişirdi' x3 is adverb-node carrier."
+   }
+  ],
+  "notes": "Deck: src/data/turkish/deck.json (3,117 cards). The token families understate the problem; three systemic diseases found. (1) NINE location-slot clone templates, 72 cards total, each a verbatim sentence with only the location swapped: children-laughing x10, elderly-on-benches-chatting x10 (tr-0219 family), quiet-atmosphere x10, old-fountain x9, big-tree-everyone-sits x8, fresh-air-clean-water x8 ('In the city center you can find fresh air and clean water' – absurd), seasons-beauty x7, sunset x5, birds-sing x5. Keep 1 each = ~63 excess. (2) An object-less conjugation-drill frame '[pronoun] [time] [place] [yap/bit/yaz/oku/başla-tense]' – 45+ cards, broken in both languages ('They will do at school next year', 'I will finish in the park'); ~25 sit in ranks 260-730, and the rank-400-430 spot-check window contained 8 of them in 30 cards – beginner-visible. (3) Absurd profession slot-fills: dentist appears 21x (repaired the mosque door, cooked dolma at a restaurant), captain 19x ('Kaptan stadyumda şevkle ağlıyor' || 'The captain is crying enthusiastically at the stadium'), fisherman 18x, farmer 18x, director 17x; 19 cards also start lowercase with a mid-sentence capitalized subject ('sabahleyin Eczacı bankada dikkatsizce fotoğraf çekiyor') – template paste artifacts. Dup pairs: 9 of the 12 flagged are real (shop-hours, menu, tea/coffee, picnic+conditional, speak-slowly, neighbor's-cat verbatim, and 3 bench-chatting clones); the 3 tr-0216 pairs are false (different objects, conjugation carrier). Scanner's 281 near-dup pairs are largely real because each 10-clone family alone generates 45 pairs. Rank-100-130 window is healthy survival-phrase material except two verbatim dups inside the first 105 ranks: 'Hesap, lütfen' (p66=p103) and 'Menüyü görebilir miyim' (p47~p102). English gloss issues: 'in the future' calque x12, 'You read a poem usually', 'You are fond of poetry these days' (mistranslates 'şiir seviyorsunuz'), 'He/She will do in the museum in a moment', 'arrived in the wrong condition' (tr-1788, means wrong item). estRewrites 135 = 63 template clones + ~30 worst empty drills + ~20 absurd-profession/broken-caps + ~8 dups + ~14 family-specific excess (deduped). Severe: beginner-visible dups <110 ranks and drill clumps dense inside the first 600, plus 135 total. Node-15 is by far the worst single node (children-clones, broken-caps cards, rapor/raporu dup all live there)."
+ },
+ {
+  "estRewrites": 95,
+  "grade": "severe",
+  "lang": "russian",
+  "notes": "Priority is a clean 1..3174 permutation = deck rank. ROOT CAUSE: nodes 03-16 are a wave-authored template grid — [occupation/family member] x [time adverb] x [stock activity] x [stock place]. The scanner's token-folding under-represents the worst offenders because they live mid-deck (low 'early' weight): танцует вальс x20, помогает другу x26, стирает одежду x16, приготовил ужин x20 never surfaced in topFamilies. Grade is severe on the beginner-visibility criterion, not raw count: first 600 ranks contain 13 dishwashing cards, 12 helping-a-friend (incl. near-identical pair at ranks 15 and 20), 9 bread-buying, plus adjacent near-dup pairs at ranks 105/107, 108/109 ('Привет, Олег! Как дела?' / 'Привет, Наташа! Как дела?'), 221/222 ('Какое тихое утро!' / 'Какое тихое, прекрасное утро!'), and 26/92 ('Сейчас три часа.' / 'Сейчас три часа дня.'). DUPS: 8 of 12 flagged are real — the pharmacy trio (0026/0126/0437, same utterance at 3 politeness levels, keep 2 of 4 counting ru-0130), 0090/S-001, 0090/2265, 0221/1342 (j=1), 0198/2587, 0052-0120-0310 bedtime-reading; NOT real: 0065/3095 (number practice, different numbers), 0176/0697 (opposite meanings). 5 more real dups the scanner missed: ru-S-001 vs ru-2265 EXACT same text 'Сейчас три часа.', 0698/0701 adjacent, 2634/2646 ('Время быстро летит'/'Время летит очень быстро'), 0254/0453 adjacent, 0517/0856 (director waltzes after lunch, party vs park). OPENINGS: если бы/он бы/она бы/мы бы = pure conditional carrier (nodes 15-19), fine; на прошлой неделе/сегодня утром/по выходным = tense-frame carrier, but their payload is the occupation grid already counted. FOLDING ARTIFACTS: считал (thought) folded into читал; Победы and послеобеденном folded into обед. LANGUAGE BUGS found in spot-check: 'строил урок'/'built the lesson' x5 is broken collocation in BOTH languages (ru-1389..1393, ranks 435-688, must rewrite regardless); habitual 'sealed the letter' x5 (ru-1275..1290) is a bizarre recurring scene; 'Друг помогает другу сегодня утром' ('The friend helps a friend this morning') is template salad; 'Утром они купили ужин' ('In the morning they bought dinner') is an odd scene. English glosses otherwise mostly natural — no systematic calques like Hindi's 'today itself'. estRewrites 95 = sum of per-family excess (~104) minus cross-family overlaps (bread cards counted once, not again under недавно/купил). Per Hindi lesson: any rewrite pass must end with whole-set uniqueness check — the mirror grids (Он сразу X / Она быстро X six exact mirror pairs in node-15) show the authors already self-clump.",
+  "realDupPairs": 8,
+  "realFamilies": [
+   {
+    "token": "посуд",
+    "meaning": "dishes (washing dishes)",
+    "judgment": "scenario",
+    "realExcess": 14,
+    "evidence": "'Продавец моет посуду дома сейчас.' (rank 80) / 'Студент моет посуду после обеда.' (rank 105) / 'Архитектор моет посуду перед сном.' (rank 107) — 26 dishwashing cards total, 13 in the first 600, same frame with rotating occupations; ranks 105 and 107 are two apart."
+   },
+   {
+    "token": "вальс (scanner-missed)",
+    "meaning": "waltz (dances a waltz at a party)",
+    "judgment": "scenario",
+    "realExcess": 15,
+    "evidence": "'Директор танцует вальс на вечеринке после обеда.' / 'Директор танцует вальс в парке после обеда.' / 'Сегодня утром водитель танцует вальс на вечеринке.' — 20 waltz cards, an absurd recycled scene across 8 nodes; not in scanner top-12 because it starts at rank 580."
+   },
+   {
+    "token": "помога* другу (scanner-missed)",
+    "meaning": "helps a friend",
+    "judgment": "scenario",
+    "realExcess": 15,
+    "evidence": "'Повар обычно помогает другу.' (rank 15) / 'Музыкант обычно помогает другу.' (rank 20) / 'Друг помогает другу сегодня утром.' — 26 cards, 12 in first 600, vague scene with rotating occupations; the rank-15/20 pair is the learner's 3rd-4th new sentence."
+   },
+   {
+    "token": "стира* одежду (scanner-missed)",
+    "meaning": "does laundry",
+    "judgment": "scenario",
+    "realExcess": 9,
+    "evidence": "'Скоро учитель постирает одежду дома.' (rank 606) / 'Скоро повар постирает одежду дома.' (rank 616) / 'Завтра писатель постирает одежду дома.' (rank 651) — 16 cards, three near-identical within 45 ranks."
+   },
+   {
+    "token": "готови* ужин (scanner-missed)",
+    "meaning": "cooks dinner",
+    "judgment": "scenario",
+    "realExcess": 8,
+    "evidence": "'Мы наконец приготовили ужин.' (rank 406) / 'Мы утром приготовили ужин.' (rank 419) / 'Она утром приготовила ужин.' (rank 491) — 20 cooked-dinner cards, 11 in first 600, two 'Мы ... приготовили ужин' 13 ranks apart."
+   },
+   {
+    "token": "хлеб",
+    "meaning": "bread (buying bread)",
+    "judgment": "scenario",
+    "realExcess": 6,
+    "evidence": "'Отец недавно купил хлеб.' / 'Сестра недавно купила хлеб.' / 'Мы утром купили хлеб.' — 10 near-identical bread-buying cards, 9 in the first 600 ranks; the other bread cards (borscht, bakery, хлеб-соль) are honest and fine."
+   },
+   {
+    "token": "сразу",
+    "meaning": "immediately (perfective-aspect adverb)",
+    "judgment": "carrier",
+    "realExcess": 6,
+    "evidence": "'Он сразу объяснил правило.' vs 'Она быстро объяснила правило.'; 'Он сразу показал дом.' vs 'Она быстро показала дом.' — legit aspect carrier in nodes 14-15, but subject frozen to 'Он' in 13 of 14 cards and six exact mirror pairs against the 'Она быстро' set; drop one of each mirror."
+   },
+   {
+    "token": "читал",
+    "meaning": "read (past tense)",
+    "judgment": "vocab",
+    "realExcess": 5,
+    "evidence": "'Мама читала книгу в больнице на прошлой неделе.' / 'На прошлой неделе дедушка читал книгу дома.' / 'Девочка читала книгу на прошлой неделе.' — honest core verb, but ~10 'X read a book [time]' template cards in nodes 08-10; note считал (thought) is falsely folded in (ru-2750, ru-2754)."
+   },
+   {
+    "token": "обед",
+    "meaning": "lunch",
+    "judgment": "vocab",
+    "realExcess": 5,
+    "evidence": "'Продавец часто готовит обед.' (rank 18) / 'Папа готовит обед каждый день.' (rank 66) / 'Сегодня утром ребёнок готовит обед дома.' — lunch itself is honest frequency; the excess is the '[occupation] готовит обед' grid x13; scanner count also inflated by folding Победы and послеобеденном into обед."
+   },
+   {
+    "token": "недавн",
+    "meaning": "recently (past-tense adverb)",
+    "judgment": "carrier",
+    "realExcess": 3,
+    "evidence": "'Я недавно написала письмо.' / 'Сестра недавно написала письмо.' / 'Она недавно написала письмо.' plus 'Студент недавно закрыл окно.' vs 'Девочка недавно закрыла окно.' — the adverb is the past-tense nodes' carrier; residual excess is these wrote-a-letter/closed-window triples (its bread cards are counted under хлеб)."
+   },
+   {
+    "token": "быстр",
+    "meaning": "fast/quickly",
+    "judgment": "carrier",
+    "realExcess": 2,
+    "evidence": "'Время быстро летит.' (rank 1467) vs 'Время летит очень быстро.' (rank 1300) near-dup; comparatives ('Он бегает быстрее всех в классе.') are node-20/21 teaching material; the 'Она быстро X' mirrors are counted under сразу."
+   },
+   {
+    "token": "где",
+    "meaning": "where",
+    "judgment": "carrier",
+    "realExcess": 2,
+    "evidence": "'Где находится ближайшая аптека?' (rank 86) / 'Вы не подскажете, где ближайшая аптека?' (rank 316) / 'Извините, вы не подскажете, где находится ближайшая аптека?' (rank 867) — question word/relative-clause carrier across nodes; only real clump is the 4-card nearest-pharmacy family (incl. ru-0130), keep 2."
+   },
+   {
+    "token": "русский",
+    "meaning": "Russian (language)",
+    "judgment": "vocab",
+    "realExcess": 2,
+    "evidence": "'Студенты вчера учили русский язык.' / 'Дети вечером учили русский язык.' / 'Я утром учил русский язык.' — 4 same-frame 'studied Russian [time]' drills in nodes 11-12; the late cultural cards (Пушкин, квас, Масленица) are varied and fine."
+   },
+   {
+    "token": "утро",
+    "meaning": "morning",
+    "judgment": "vocab",
+    "realExcess": 2,
+    "evidence": "'Какое тихое утро!' (rank 221) vs 'Какое тихое, прекрасное утро!' (rank 222) — consecutive near-dups; otherwise 84 hits are honest time-expression frequency spread over all 35 nodes, with the 'Сегодня утром [occupation]...' payload counted under the grid families."
+   },
+   {
+    "token": "сейчас",
+    "meaning": "now",
+    "judgment": "vocab",
+    "realExcess": 1,
+    "evidence": "'Сейчас три часа.' (ru-S-001, rank 26) vs 'Сейчас три часа.' (ru-2265, rank 1652) — EXACT duplicate text in two nodes; plus 'Сейчас три часа дня.' at rank 92. Otherwise honest present-tense adverb in varied scenes."
+   },
+   {
+    "token": "купил",
+    "meaning": "bought",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "'Я купил два билета.' / 'Машина, которую он купил, красная.' / 'Если бы я выиграл лотерею, я бы купил дом.' — honest high-frequency verb across varied scenes; its clumped uses are the bread cards, already counted under хлеб."
+   },
+   {
+    "token": "строи* урок (spot-check find)",
+    "meaning": "'built the lesson' — broken collocation",
+    "judgment": "scenario",
+    "realExcess": 5,
+    "evidence": "'Мы наконец построили урок.' / 'Он сразу построил урок.' / 'Она часто строила урок.' — 5 cards (ru-1389..1393, ranks 435-688) with a collocation that is wrong in Russian and glossed as unnatural English ('We usually built the lesson.'); must be rewritten regardless of clumping."
+   },
+   {
+    "token": "запечат* письмо (spot-check find)",
+    "meaning": "sealed the letter",
+    "judgment": "scenario",
+    "realExcess": 4,
+    "evidence": "'Мы обычно запечатывали письмо.' / 'Она часто запечатывала письмо.' / 'Они долго запечатывали письмо.' — 5 cards in node-14 (ranks 434-635) about habitually sealing a letter, a bizarre recurring scene; keep at most one."
+   }
+  ]
+ },
+ {
+  "estRewrites": 42,
+  "grade": "moderate",
+  "lang": "spanish",
+  "notes": "Deck is fundamentally healthier than Hindi was: no single actor near parosi-level (15x), both 30-card rank windows (100-130, 400-430) are varied with natural English and no calques. Three real problems: (1) an authoring tic of elaboration dup pairs - \"X\" then \"X + one extra noun\" - at beginner-visible ranks (entrada/entrada al museo r121/560; autobus/autobus turistico r120/543; listos para empezar/+la presentacion r198/696; gerente/director at pri 237/193); (2) within-node scene recycling inside grammar-frame carriers (mientras nodes 10-12: madre-cocinaba-poner-la-mesa x3, esperaba-y-leia x4, mientras-tanto-preparando x2, trabajaba/estudiaba adjacent ids; node-12 \"alguien que hable tres idiomas\" x3; \"speaks three languages\" x7 deck-wide); (3) two scanner-missed scenario actors: storytelling grandfather (9 cards, fisherman/sailor near-dups) and la-empresa stat-sheet (oficinas-en-N x4, \"empresa donde trabajo\" x6, es-2531/2532 adjacent). Also flipped-clause late dups (es-3865/3866 identical reversed; 1540/1541 person-swap) and repeated jokes (hijo brocoli/verduras 1664/3038; vuelos/hotel barato 3017/3030 same node). realDupPairs=14: 7 of scanner's 12 topDups confirmed (0053/0241, 0122/0135, 3135/3231, 0336/0526, 0444/0532, 0478/0538, 0807/2005+1479 coat x3) plus 7 found in family reads (0187/0188, 1277/1393, 1294/1371, 1092/1174, 1540/1541, 1664/3038, 3865/3866). Not-real topDups: 0084/3479, 0063/0081, 0233/0319, 0603/2595 (shared vocab, different scenes/grammar). estRewrites 42 = 21 from top families + 16 from opening families (abuelo 4, empresa 3, hermano 2, padre 2, si-hubiera 2, por-mucho 3) + 5 standalone dups. Incidental (separate pass, not clumping): missing accents/enye in targets - es-2274 \"habria\", es-3648 \"cambio\", es-3706 \"ninos...jardin\", es-1661 \"opinion\".",
+  "realDupPairs": 14,
+  "realFamilies": [
+   {
+    "token": "mientra",
+    "meaning": "mientras = while/meanwhile; simultaneity frame of imperfect nodes 10-12",
+    "judgment": "carrier",
+    "realExcess": 6,
+    "evidence": "\"Mientras mi madre cocinaba, mi padre puso la mesa.\" (es-1157) / \"Mientras mi madre cocinaba, yo ponía la mesa.\" (es-1389) / \"Mientras ella cocinaba, yo ponía la mesa.\" (es-1515); also \"Mientras esperaba, leía un libro.\" (es-1354) vs \"Mientras esperaba el avión, leía un libro.\" (es-1381)"
+   },
+   {
+    "token": "he",
+    "meaning": "yo he + participle, present perfect auxiliary",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "\"Nunca he comido comida tailandesa.\" (es-2450) / \"El desayuno del hotel es el mejor que he probado.\" (es-2309) - dense in perfect nodes 17/19 because it IS the lesson; scenes fully varied"
+   },
+   {
+    "token": "haber",
+    "meaning": "De haber + participle = third-conditional frame",
+    "judgment": "carrier",
+    "realExcess": 1,
+    "evidence": "\"De haber sabido las consecuencias, no habría aceptado.\" (es-2553) vs \"De haber sabido, no habría aceptado el puesto.\" (es-2789) - one near-dup; rest varied (\"De haber tenido más hijos, habríamos necesitado una casa más grande.\")"
+   },
+   {
+    "token": "tren",
+    "meaning": "train - travel vocabulary",
+    "judgment": "vocab",
+    "realExcess": 2,
+    "evidence": "\"¿Cuánto cuesta el billete de tren?\" (es-0122) vs \"¿Cuánto costará el billete de tren?\" (es-0135); \"Habría llegado a tiempo si el tren no se hubiera retrasado.\" (es-3865) vs \"Si el tren no se hubiera retrasado, habríamos llegado a tiempo.\" (es-3866) - same sentence flipped, same node-34. Station-location repeats are actually embedded-question frames (carrier)"
+   },
+   {
+    "token": "habl",
+    "meaning": "hablar = to speak; core verb for a language app",
+    "judgment": "vocab",
+    "realExcess": 5,
+    "evidence": "\"Necesito a alguien que hable tres idiomas.\" (es-1632) / \"Buscan a alguien que hable tres idiomas.\" (es-1637) / \"Busco a alguien que sepa hablar tres idiomas.\" (es-1649) - all node-12; \"tres idiomas\" predicate x7 deck-wide; plus \"Necesito hablar con el gerente.\"/\"...con el director.\" (es-0187/0188, adjacent, pri 237/193)"
+   },
+   {
+    "token": "sido",
+    "meaning": "past participle of ser in perfects/passives",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "\"Me complace informarle que su solicitud ha sido aprobada.\" (es-2663) / \"Le informaron de que su vuelo había sido cancelado.\" (es-2705) - perfect/passive machinery, varied scenes"
+   },
+   {
+    "token": "habitacion",
+    "meaning": "room - hotel/home vocabulary",
+    "judgment": "vocab",
+    "realExcess": 3,
+    "evidence": "\"El salón es la habitación más grande.\" (es-0282) / \"La cocina es la habitación más grande.\" (es-0753) / \"La sala es la habitación más grande de la casa.\" (es-1757); \"Mi hermana y yo compartíamos habitación.\" (es-1189) vs \"Nosotros compartíamos habitación de niños.\" (es-1355)"
+   },
+   {
+    "token": "grand",
+    "meaning": "grande = big; high-frequency adjective",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "\"Tengo una familia grande.\" (es-0019) / \"El hotel tiene una piscina grande.\" (es-0214) / \"La casa tiene un garaje grande.\" (es-0216) - different scene every time"
+   },
+   {
+    "token": "ahor",
+    "meaning": "ahora = now; time adverb",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "\"Estoy ocupado ahora mismo.\" (es-0012) / \"Ahora entiendo por qué estabas tan contento ayer.\" (es-0644) - spread thin across nodes, no shared scene"
+   },
+   {
+    "token": "pasad",
+    "meaning": "el año/mes/la semana pasada = last X, time anchor for past-tense nodes (also folds pasar participle)",
+    "judgment": "carrier",
+    "realExcess": 1,
+    "evidence": "\"Nos mudamos a otra ciudad el año pasado.\" (es-1092) vs \"Nos mudamos el mes pasado.\" (es-1174) - one dup; otherwise the phrase is the preterite node's dating device (\"Fui al médico la semana pasada.\")"
+   },
+   {
+    "token": "dijo",
+    "meaning": "dijo que = said that; reported-speech node-23 frame",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "\"Dijo que vendría mañana por la tarde.\" (es-2891) / \"El recepcionista dijo que no quedaban habitaciones.\" (es-2928) - 9-in-one-node because node-23 IS reported speech; speakers and content vary"
+   },
+   {
+    "token": "fuer",
+    "meaning": "folds 4 unrelated words: fuera (outside), fuera/fuéramos (imperf. subjunctive), fueron (passive preterite), fuerte (strong)",
+    "judgment": "folding-artifact",
+    "realExcess": 3,
+    "evidence": "\"La moto está aparcada fuera.\" vs \"Ojalá el clima fuera más cálido.\" vs \"Siento un dolor fuerte...\" - unrelated; but inside it a corporate-passive clump: \"Los resultados fueron publicados esta mañana.\" (es-1294) vs \"...la semana pasada.\" (es-1371); \"Las metas fueron establecidas...\" (es-1390) vs \"Las normas... fueron establecidas...\" (es-1405)"
+   },
+   {
+    "token": "abuelo-cuenta-historias",
+    "meaning": "storytelling grandparent - scanner saw only the 'mi abuel' opening; 9 cards of grandpa/grandma telling stories",
+    "judgment": "scenario",
+    "realExcess": 4,
+    "evidence": "\"Mi abuelo, que fue pescador, nos contaba historias del mar.\" (es-1289) / \"Mi abuelo contaba historias de cuando era marinero.\" (es-1533) / \"Mi abuelo nos cuenta historias de cuando era joven.\" (es-1399) / \"Mi abuelo cuenta historias increíbles.\" (es-0584)"
+   },
+   {
+    "token": "la-empresa",
+    "meaning": "generic company-where-I-work actor with stat-sheet predicates, 20 cards opening with it",
+    "judgment": "scenario",
+    "realExcess": 3,
+    "evidence": "\"La empresa tiene oficinas en tres ciudades.\" (es-0280) / \"La empresa donde trabajo tiene oficinas en Madrid.\" (es-3596) / \"La empresa tiene oficinas en cinco países y más de dos mil empleados.\" (es-3667) / \"La empresa en la cual trabajo tiene oficinas en cinco países.\" (es-3814); es-2531/2532 adjacent ids both \"La empresa para la que trabajo/trabajaba...\""
+   }
+  ]
+ },
+ {
+  "lang": "german",
+  "grade": "mild",
+  "estRewrites": 28,
+  "realFamilies": [
+   {
+    "token": "möcht",
+    "meaning": "möchte(n) – would like (polite modal)",
+    "judgment": "carrier",
+    "realExcess": 1,
+    "evidence": "Node-16's own grammar field teaches it: \"'Möchte' is the polite would like\". Cards are the node's material: 'Sie möchte eine Tasse Tee bestellen.' / 'Wir möchten bitte bezahlen, können Sie uns die Rechnung bringen?' Only real excess: 'Wir möchten bitte bestellen, wir haben es etwas eilig.' (de-0245) vs 'Dürfte ich bitte die Speisekarte sehen, wir möchten gern bestellen?' (de-0998) in the same node."
+   },
+   {
+    "token": "seit",
+    "meaning": "since/for (temporal) – but folded with Seite/Seiten (page/side)",
+    "judgment": "folding-artifact",
+    "realExcess": 1,
+    "evidence": "Count mixes two lexemes: 'Ich lerne seit einem Jahr Deutsch.' vs 'Ich lese vor dem Einschlafen mindestens zwanzig Seiten.' (pages). The true seit cards are a core grammar point (seit+present) with varied scenes. One real excess in node-18: 'Sie lernt Deutsch, seit sie in München wohnt.' vs 'Ich lerne Deutsch, seit ich in Österreich angekommen bin.' (de-2502/de-2481, same node, same scene)."
+   },
+   {
+    "token": "darf",
+    "meaning": "dürfen – may/be allowed (modal)",
+    "judgment": "carrier",
+    "realExcess": 3,
+    "evidence": "Dense in the modal nodes 09/10 where permission IS the lesson. But node-10 has a drinks-offering triple: 'Darf ich Ihnen eine Tasse Tee anbieten?' (de-1442) / 'Darf ich Ihnen etwas zu trinken anbieten?' (de-1421) / 'Darf ich Ihnen schon etwas zu trinken bringen?' (de-1451); and node-11 repeats the factory-premises scene: 'Du darfst das Betriebsgelände nur mit Sicherheitsschuhen betreten.' vs 'Ich darf das Betriebsgelände nur mit einer Besucherkarte betreten.' (de-1588/de-1602)."
+   },
+   {
+    "token": "guten",
+    "meaning": "Guten Tag/Morgen/Abend – greetings",
+    "judgment": "carrier",
+    "realExcess": 2,
+    "evidence": "19 early hits are the greeting curriculum itself. Two real dups inside node-01: 'Guten Tag! Mein Name ist Thomas.' (de-0051, rank 380) vs 'Guten Tag, mein Name ist Müller.' (de-0052, rank 381 – adjacent!); 'Guten Morgen, haben Sie gut geschlafen?' (de-0054) vs 'Schönen guten Morgen! Haben Sie gut geschlafen?' (de-0072, identical English gloss)."
+   },
+   {
+    "token": "hätte",
+    "meaning": "hätte (Konjunktiv II) folded with hatte/hatten (preterite of haben)",
+    "judgment": "folding-artifact",
+    "realExcess": 2,
+    "evidence": "Two different lessons conflated: 'Hätte ich doch bloß meinen Regenschirm mitgenommen!' (KII node-33, carrier) vs 'Kaum hatten wir das Museum betreten, begann schon die Führung.' (preterite). Real excess: 'Wenn ich mehr Zeit hätte, würde ich öfter ins Museum gehen.' (de-3076) vs 'Wenn ich mehr Zeit hätte, würde ich jeden Tag im Park joggen.' (de-3077) in the same node-24; and 'Wenn wir früher losgefahren wären, hätten wir den Zug nicht verpasst.' (de-2895) vs '...hätten wir den Zug noch erreicht.' (de-1932) cross-node."
+   },
+   {
+    "token": "geht",
+    "meaning": "geht – goes / wie geht es (greeting)",
+    "judgment": "vocab",
+    "realExcess": 1,
+    "evidence": "Honest frequency across greetings, motion, idioms – varied scenes. One same-node near-verbatim pair in node-31: 'Das geht mir auf die Nerven, wenn er ständig zu spät kommt.' (de-3636) vs 'Das geht mir wirklich auf die Nerven, wenn er ständig zu spät kommt.' (de-3656 – differs by one word)."
+   },
+   {
+    "token": "würde",
+    "meaning": "würde (conditional) folded with wurde/wurden (passive preterite)",
+    "judgment": "folding-artifact",
+    "realExcess": 2,
+    "evidence": "60 of ~108 folded hits are passive 'wurde' – the passive nodes' own material: 'Der Vertrag wurde unterschrieben.' (node-19 teaches exactly this). The würde cards are KII-node carriers. Real excess: 'Wenn ich fließend Japanisch spräche, würde ich nach Tokio ziehen.' (de-2969) vs 'Wenn ich fließend Deutsch spräche, würde ich in Wien leben.' (de-2970, same node-23, same template); 'Das Auto wurde in der Werkstatt repariert.' (de-2422) vs 'Das Auto wurde letzte Woche in der Werkstatt repariert.' (de-2854)."
+   },
+   {
+    "token": "besuch",
+    "meaning": "besuchen/Besuch/Besucher – visit(or)",
+    "judgment": "scenario",
+    "realExcess": 4,
+    "evidence": "The deck's only real recurring scene: visiting grandparents/relatives ~10x, incl. node-06 triple with near-twins 'Wir besuchen unsere Großeltern jeden zweiten Sonntag.' (de-0839) vs 'Ich besuche meine Großeltern jeden zweiten Sonntag.' (de-0838). Plus a 'visitors' template ×5 with verbatim repeat: 'Das riesige gläserne Dach des neuen Bahnhofs beeindruckt jeden Besucher.' (de-2617) vs 'Die Sehenswürdigkeiten der Landeshauptstadt beeindrucken jeden Besucher.' (de-3379). Mild vs Hindi's neighbour – spread across many nodes."
+   },
+   {
+    "token": "will",
+    "meaning": "will/willst (wollen) folded with willkommen (welcome)",
+    "judgment": "folding-artifact",
+    "realExcess": 1,
+    "evidence": "8 of 40 hits are 'willkommen', a different word. The wollen cards are modal-node carrier with varied actors. One real same-node dup: 'Willkommen zurück! Wie war der Flug?' (de-0276, rank 238) vs 'Willkommen zurück, wie war die Reise?' (de-0278, rank 260)."
+   },
+   {
+    "token": "hier",
+    "meaning": "hier – here (adverb)",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "39 uses spread over 20+ nodes with unrelated scenes: 'Wir kennen hier niemanden.' / 'Unterschreiben Sie bitte hier unten auf der gestrichelten Linie.' / 'Boah ey, die Pizza hier schmeckt ja mal richtig geil.' No shared scenario, nothing to fix."
+   },
+   {
+    "token": "klein",
+    "meaning": "klein – small (adjective, declension-drill workhorse)",
+    "judgment": "vocab",
+    "realExcess": 3,
+    "evidence": "Dense in adjective-ending nodes where declension is the lesson ('Die kleinen bunten Laternen schmücken den gesamten Garten.'). Real excess: 'Der kleine Junge spielt mit einem roten Ball.' (de-2552) vs 'Der kleine Junge spielt mit seinem neuen roten Ball im Garten.' (de-0899); 'Am häufigsten besuche ich das kleine gemütliche Café direkt um die Ecke.' (de-0798) vs 'Das kleine gemütliche Café an der Ecke hat ausgezeichneten Cappuccino.' (de-2486); scanner pair 'Wir wohnen in einer kleinen Wohnung.' (de-0046) vs 'Sie wohnt in einer kleinen Wohnung.' (de-1988)."
+   },
+   {
+    "token": "könn",
+    "meaning": "können (modal) folded with könnte (KII) and konnte (preterite)",
+    "judgment": "folding-artifact",
+    "realExcess": 1,
+    "evidence": "Three different lessons conflated; each is dense in its own teaching node ('Könnten Sie mir vielleicht einen Gefallen tun?' in the KII-politeness node). One real cross-node dup: 'Die Hypothese konnte durch die empirischen Befunde eindeutig bestätigt werden.' (de-3786, node-33) vs 'Die Hypothese konnte durch die empirischen Daten bestätigt werden.' (de-3848, node-34)."
+   }
+  ],
+  "realDupPairs": 7,
+  "notes": "German is in far better shape than Hindi was: no dominant recurring actor, and most mechanical signal is umlaut-folding conflating different grammar lessons (würde/wurde, hätte/hatte, könnte/konnte, will/willkommen, seit/Seite) or carrier density in the node that teaches that very form (node-16 möchte/hätte-gern ordering, node-19/22/23 passive, node-23/24 Konjunktiv II). Of the 12 flagged dup pairs, 7 are real (de-0010/0109 sorry-late; de-0043/0149 new-neighbour, both same node and early; de-0046/1988 small apartment; de-0089/1812 stamp collecting; de-0148/1065 reading kids a story, part of a 4-card bedtime-story scene with de-0219/de-2898; de-0323/3164 Sommerfest invitation; de-0337/0357 tram-at-seven same node; de-0367/2550 roof-of-the-old-house, part of a 4-card roof scene). Not real: de-0107/0136 (carrier hätte-gern frame, different scenes), de-0118/2481 (seit-NP vs seit-clause progression), de-0328/3146 (deliberate scheinen+zu transform of a known base sentence), de-0364/2841 (active→passive transform, though road-construction closure occurs 3x deck-wide). Openings (sie hat/er hat/ich bin/wir haben/ich habe) carry no shared scenario – they are perfect-tense and possession curriculum; no action. Scanner-missed finds from the spot-check: an EXACT duplicate at beginner-visible ranks 129/130 ('Vielen Dank für die Einladung!' de-0439 vs de-0440, same node, differ only in punctuation – delete/replace one); 'Du vergisst immer deinen Schlüssel/Regenschirm' at ranks 116/127 same node-02; plus ~12 same-scene near-dup pairs listed in the family evidence (drinks-offering triple in node-10 is the worst). Ranks 400-430 show the deck's profession-diversity house style (Weberin/Gobelin, Imker/Honig, Astronaut/Raumanzug) – that is anti-clumping, fine. English glosses are largely natural; fix without TTS: 'She informed that she... could not keep the appointment' / 'He informed that he... couldn't participate' (mitteilen calque, de-3050/de-3054), 'It rained admittedly, but...' (de-3323), 'Until now nobody has complained' (de-0416), 'The work of the whole team is good' (de-0754), 'We regularly exchange our experiences' (de-0032) – roughly 6 gloss-only polish cards not counted in estRewrites. estRewrites 28 = target-side rewrites: the exact dup (1), early node-01/02/03 dups (7), node-10/11 modal-scene dups (4), besuch scenario (4), cross-node near-verbatim scene twins (12). Grade mild: real repetition exists but as scattered pairs, not learner-visible scenario clumps; the only first-600 issues are isolated pairs (worst: ranks 129/130 exact dup and 380/381 name-introduction twins)."
+ },
+ {
+  "estRewrites": 28,
+  "grade": "mild",
+  "lang": "dutch",
+  "notes": "Dutch is far healthier than Hindi was. Node structure explains most flags: node-17 is the voordat/subclause node (11 in-node = lesson), node-08 separable verbs ('af' density), nodes 09-10 object pronouns ('hem'), node-07 fronted-adverb inversion ('Graag wil ik...'). Deliberate tense-contrast recycling (vogels zingen/zongen, danst/danste op feestjes, active-passive brood pair nl-0398/nl-2286) should NOT be rewritten. Real work: (1) the scanner-missed umbrella scenario (8x 'neem een paraplu mee' incl. same-node pair nl-3356/nl-3383 with inconsistent pijpestelen/pijpenstelen spelling); (2) ~14 real near-dup pairs, mostly cross-node scene recycling (garage, gestolen auto+politie, glad+rijd voorzichtig, roads-salted same-node, einde-van-de-straat trio, kat-op-de-bank pair at beginner ranks 97/281, dune-path pair); (3) mild early clumps: 3 'dinner tonight' cards at ranks 110-122, 'leest graag boeken park/tuin' at ranks 277/280. Estimated 28 rewrites = one excess card per real dup pair + trimming the umbrella and morning-routine scenes; each is a single-sentence replacement, no node restructuring needed. Side findings for a QC pass (not de-clump): typo 'gestreoid' (nl-2842), gender error 'een mooie horloge' (nl-2769), 'Het wegenwerkzaamheden' (nl-3535), and a handful of adverb-placement calques in English glosses ('We cycle every morning to school' nl-0076, 'He cycles every morning to his work' nl-0123, 'The school begins at half past eight' nl-0612).",
+  "realDupPairs": 14,
+  "realFamilies": [
+   {
+    "token": "vanavond",
+    "meaning": "tonight",
+    "judgment": "vocab",
+    "realExcess": 2,
+    "evidence": "'Vanavond eten wij bij mijn ouders' (r110) / 'Mijn schoonmoeder komt vanavond eten' (r121) / 'Wij bestellen pizza voor vanavond' (r122) – three dinner-tonight cards within 12 ranks in the beginner window; rest of the 35 are varied (concert, sunset, film, stars)."
+   },
+   {
+    "token": "ochtend",
+    "meaning": "morning",
+    "judgment": "scenario",
+    "realExcess": 4,
+    "evidence": "'Elke ochtend drink ik een kop koffie' (nl-0146) vs 'Ik drink elke ochtend twee koppen sterke koffie' (nl-0190, same node-01); 'Hij scheert zich elke ochtend voor het werk' / 'Wij scheren ons elke ochtend in de badkamer' / 'Hij scheert zich elke ochtend zorgvuldig voordat...' – morning-routine scenes recycled across nodes."
+   },
+   {
+    "token": "voordat",
+    "meaning": "before (conjunction)",
+    "judgment": "carrier",
+    "realExcess": 1,
+    "evidence": "Node-17 holds 11 of 28 – it is the subclause-order lesson, scenes vary (soup, contract, laundry, luggage). One real dup: 'Voordat je naar bed gaat, moet je je tanden poetsen' (nl-2450) vs 'Voordat je naar bed gaat, moet je eerst je tanden poetsen en je pyjama aantrekken' (nl-2358)."
+   },
+   {
+    "token": "auto",
+    "meaning": "car",
+    "judgment": "vocab",
+    "realExcess": 3,
+    "evidence": "'Hij heeft de auto in de garage geparkeerd' (nl-1327, r1589) and 'Ik heb mijn auto naar de garage gebracht' (nl-1328, r1693) sit in the same node; garage scene appears 5x total; 'De man/buurman wiens auto gestolen is/was ... politie' twice in adjacent nodes (nl-2565/nl-2676)."
+   },
+   {
+    "token": "weg",
+    "meaning": "road / away / wegens (folded)",
+    "judgment": "folding-artifact",
+    "realExcess": 3,
+    "evidence": "Folds weg(road), weggaan, wegens, wegdek. Real dups inside: 'De wegen zijn glad door ijzel, rijd voorzichtig' vs 'Rijd voorzichtig, de wegen zijn glad' (nl-0411/nl-2362); 'De wegen zijn gestreoid met zout' vs 'De wegen worden elke winter gestrooid met zout' both in node-22."
+   },
+   {
+    "token": "graag",
+    "meaning": "gladly / would like",
+    "judgment": "vocab",
+    "realExcess": 3,
+    "evidence": "'Zij leest graag boeken in het park' (r277) and 'Zij leest graag boeken in de tuin' (r280) – same node, three ranks apart; 'Wij willen graag een tafel reserveren' (nl-1302) vs '...een tafel reserveren voor vanavond' (nl-1487)."
+   },
+   {
+    "token": "mooi",
+    "meaning": "beautiful/nice",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "'Zij draagt een mooie jurk' / 'Het restaurant heeft een mooie wijnkaart' / 'Dit is het mooiste uitzicht van de hele reis' – honest adjective across varied scenes; the strand conditional pair (nl-2339/nl-2857) is a deliberate real-vs-counterfactual grammar contrast."
+   },
+   {
+    "token": "hier",
+    "meaning": "here",
+    "judgment": "vocab",
+    "realExcess": 1,
+    "evidence": "'Hij mag hier niet parkeren' (nl-1287) vs 'Hij mag hier niet parkeren vanwege de regels' (nl-1488) – real dup; otherwise varied ('Hier in Nederland regent het vaak', 'Draai hier linksaf')."
+   },
+   {
+    "token": "af",
+    "meaning": "separable prefix + afspraak/afwas/afval (folded)",
+    "judgment": "folding-artifact",
+    "realExcess": 0,
+    "evidence": "Folds unrelated lexemes: 'Ik heb een afspraak met meneer Jansen', 'Af en toe neem ik een dag vrij', 'Hij wijst het voorstel van de directie af' – node-08 density is the separable-verb lesson itself."
+   },
+   {
+    "token": "koud",
+    "meaning": "cold",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "'Het koude bier smaakt goed in de zomer' / 'Ik was de sla onder koud stromend water' / 'De jenever wordt traditioneel koud gedronken' – honest Dutch-weather/food frequency, scenes vary widely."
+   },
+   {
+    "token": "ga",
+    "meaning": "go (1sg/imperative of gaan)",
+    "judgment": "vocab",
+    "realExcess": 1,
+    "evidence": "Core verb, varied destinations; only near-repeat is 'Ik ga niet akkoord met dit plan' (nl-0621) vs 'Ik ga niet akkoord met die voorwaarden' (nl-1782)."
+   },
+   {
+    "token": "hem",
+    "meaning": "him (object pronoun)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "8-in-node density is the object-pronoun lesson (nodes 09-10): 'Zij leent hem haar fiets', 'De manager bedankt hem voor zijn inzet', 'Zij geeft hem een kus op zijn wang' – varied two-person scenes, which pronoun drills require."
+   },
+   {
+    "token": "paraplu",
+    "meaning": "umbrella (scanner-missed scenario)",
+    "judgment": "scenario",
+    "realExcess": 4,
+    "evidence": "8 of 11 cards are the take-an-umbrella-it-will-rain scene: 'Neem een paraplu mee, het gaat regenen' (nl-2477), 'Het regent pijpestelen buiten, neem een paraplu mee' (nl-3356) vs 'Het regent pijpenstelen buiten, dus neem een paraplu mee als je weggaat' (nl-3383) – the last two in the SAME node-28."
+   },
+   {
+    "token": "einde van de straat",
+    "meaning": "end-of-the-street frame (scanner-missed)",
+    "judgment": "scenario",
+    "realExcess": 1,
+    "evidence": "'Aan het einde van de straat staat een molen' (r1008), 'Een groot huis staat aan het einde van de straat' (r1113), 'Een mooi huis staat aan het einde van de straat' (r1145) – three near-identical frames within 140 ranks."
+   },
+   {
+    "token": "bank",
+    "meaning": "couch (scanner-missed pair)",
+    "judgment": "scenario",
+    "realExcess": 1,
+    "evidence": "'De kat slaapt op de bank' (r97) vs 'De kat slaapt altijd op de bank' (r281) – same node-01, both in the first 300 ranks; the node-16 'zit naast/tussen ... op de bank' pair is preposition carrier."
+   }
+  ]
+ },
+ {
+  "lang": "french",
+  "grade": "mild",
+  "estRewrites": 26,
+  "realFamilies": [
+   {
+    "token": "cafe",
+    "meaning": "café / coffee",
+    "judgment": "vocab",
+    "realExcess": 2,
+    "evidence": "\"Je bois trop de café.\" / \"Elles ont ouvert un café ensemble.\" / \"Ils se retrouvaient au meme café chaque midi.\" – 30 cards over 12 nodes, varied scenes (ordering, sugar, meeting friends); only the 'we met at the café' micro-scene recurs ~5x across nodes."
+   },
+   {
+    "token": "vu",
+    "meaning": "past participle of voir (to see)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "\"Il a vu son ami dans la rue.\" / \"Elle a vu un renard dans le jardin.\" / \"Ils ont vu un arc-en-ciel après la pluie.\" – dense in the passé composé nodes 09/10 because it IS the irregular-participle lesson; scenes fully varied (doctor, film, fox, sunset, accident)."
+   },
+   {
+    "token": "eu",
+    "meaning": "past participle of avoir (to have)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "\"Nous avons eu une panne de courant.\" / \"J'ai eu la grippe le mois dernier.\" / \"Tu as eu peur pendant l'orage ?\" – 11 in node-10 is the avoir-participle lesson itself; every card is a different everyday event."
+   },
+   {
+    "token": "demand",
+    "meaning": "demander (to ask) – reporting verb",
+    "judgment": "carrier",
+    "realExcess": 2,
+    "evidence": "\"Le policier m'a demandé où j'allais.\" / \"Elle a demandé ce qui s'était passé.\" / \"Le serveur a demandé si nous avions terminé.\" – nodes 26/27 are indirect-question nodes and demander is their natural matrix verb; askers vary (waiter, mother, cop, colleague). Only nit: 7 of node-27's 9 open with 'Elle (m')a demandé' – swap 2 for 'voulait savoir' etc."
+   },
+   {
+    "token": "ecrit",
+    "meaning": "past participle/forms of écrire (to write)",
+    "judgment": "carrier",
+    "realExcess": 1,
+    "evidence": "\"Tu as écrit un courriel au directeur ?\" / \"J'ai écrit un poème pour ma femme.\" / \"J'ai écrit l'adresse sur l'enveloppe.\" – node-10 participle drilling with varied objects; mild sameness in the 'wrote name/address/date on a document' micro-frame (5 cards in node-10)."
+   },
+   {
+    "token": "es",
+    "meaning": "tu es – 2sg of être (copula/auxiliary)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "\"Tu es en retard.\" / \"Tu es libre ce soir ?\" / \"Tu es descendu par l'escalier ?\" – pure function word; the scanner flagged the core copula/auxiliary. Predicates fully varied."
+   },
+   {
+    "token": "chaqu",
+    "meaning": "chaque (every) – habitual time tag",
+    "judgment": "carrier",
+    "realExcess": 3,
+    "evidence": "\"Ils faisaient du camping chaque été.\" / \"Je le fais chaque matin.\" / \"Elle le lit chaque matin.\" – legit carrier in the habitual-imparfait node-11, but in nodes 14/15 it is the author's default filler: three near-adjacent node-14 cards all end 'chaque matin', and 6 node-15 pronoun cards all carry a 'chaque X' tag. Vary a few tags."
+   },
+   {
+    "token": "comment",
+    "meaning": "comment (how) – question word",
+    "judgment": "carrier",
+    "realExcess": 1,
+    "evidence": "\"Comment tu fais ?\" / \"Comment on dit ça en français ?\" / \"Comment ça va ?\" – node-04 is the question node. Only excess: three 'how are you' greetings (Comment ça va / Comment allez-vous x2) across nodes 01/03/06."
+   },
+   {
+    "token": "ouvert",
+    "meaning": "past participle of ouvrir / adjective 'open'",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "\"Il a ouvert une bouteille de champagne.\" / \"Il a ouvert son parachute a temps.\" / \"Le marché où j'achète mes légumes est ouvert le samedi.\" – irregular participle drilled in node-09 with wildly varied objects; the adjective uses are spread thin across 12 other nodes."
+   },
+   {
+    "token": "ces",
+    "meaning": "ces (these) – but really node-33's recycled academic-research scene",
+    "judgment": "scenario",
+    "realExcess": 8,
+    "evidence": "\"Ces résultats semblent infirmer l'hypothèse de départ.\" / \"Ces données viennent corroborer les résultats de l'étude précédente.\" / \"À la lumière de ces résultats, notre hypothèse se confirme.\" – the token is a determiner, but it exposes a real clump: 23 of node-33's 101 formal-register cards are set in ONE scene (a study's results/data/hypothesis), many at consecutive priorities 3745-3926. The impersonal frames (Il convient de, Il y a lieu de) are the lesson; the lab-report props are a wave-author default. Rewrite ~8 into other academic domains (history, law, economics). Late-deck, so not beginner-visible."
+   },
+   {
+    "token": "diner",
+    "meaning": "dîner (dinner / to dine)",
+    "judgment": "vocab",
+    "realExcess": 3,
+    "evidence": "\"J'ai brûlé le dîner par accident.\" / \"Nous avons commandé des pizzas pour le dîner.\" / \"J'ai préparé le dîner pour toute la famille.\" – 9 in node-21 but that node has 300 cards (3%); actions vary. Real excess is 'préparer le dîner' x4 across the deck and 'mis la table + dîner' x2."
+   },
+   {
+    "token": "restaurant",
+    "meaning": "restaurant",
+    "judgment": "vocab",
+    "realExcess": 3,
+    "evidence": "\"Nous connaissons un bon restaurant.\" / \"Est-ce que tu connais un bon restaurant ?\" / \"Nous avons trouvé un bon restaurant près de l'hôtel.\" – 30 cards over 16 nodes, max 5/node, mostly fine traveler vocab; the 'good restaurant' near-dup cluster (~5 cards, some in the first 650 ranks) and 'new restaurant' x4 are the genuine excess."
+   },
+   {
+    "token": "reunion",
+    "meaning": "réunion (meeting) – scanner-missed, found in global re-scan",
+    "judgment": "vocab",
+    "realExcess": 2,
+    "evidence": "\"Il serait préférable de reporter la réunion.\" / \"Il a été décidé de reporter la réunion.\" / \"Mon patron m'a informé que la réunion était reportée.\" – 29 occurrences but max 4/node and actions vary; only 'postpone the meeting' recurs 4x across nodes 15/17/23/25 – vary two of them."
+   }
+  ],
+  "realDupPairs": 3,
+  "notes": "Scanner over-flags confirmed for French: 9 of 12 top families are carriers (irregular participles vu/eu/écrit/ouvert dense in the passé composé nodes, function words es/ces/chaque/comment, reporting verb demander in the indirect-question nodes). The ONE genuine scenario clump is node-33's academic register defaulting to a single lab-report scene (results/data/hypothesis, 23 of 101 cards, consecutive priorities) – late-deck, advanced learners only. Real dup pairs 3 of 12 flagged: fr-0808/fr-1946 (breakfast at the hotel, tense flip only), fr-0956/fr-3351 (ate at the restaurant last night), fr-1106/fr-1219 (consulted/saw the doctor last week); fr-0083/fr-1357 (see/saw a beautiful sunset) is a borderline tense-recycle. The rest are prop-sharing across different grammar lessons (e.g. fr-1091/fr-3068 reuse 'je préfère rester ici' under different discourse markers – the marker is the lesson). Openings are all subject-clitic grammar frames (il est x157, nous avons, tu as) – inevitable in French, no scenario carried. Spot-checks ranks 100-130 and 400-430: clean, varied scenes, natural English, no Hindi-style calques. estRewrites 26 = family excess (~23) + one side of 3 real dup pairs. SEPARATE FINDING (spawned as its own task): ~18 confirmed French-side orthography errors (missing accents: noté/porté/compté/serre/meme/repose/brosse/amuse/Noel/detail/profondement/dinaient; a/à confusion: 'il y à deux ans', 'du mal a trouver'; one wrong word order fr-0975 'Toujours elle arrive en retard') – looks systematic, deck-wide spellcheck pass warranted before any audio regen."
+ },
+ {
+  "lang": "welsh",
+  "grade": "mild",
+  "estRewrites": 25,
+  "realFamilies": [
+   {
+    "token": "gwelodd",
+    "meaning": "saw (3sg preterite)",
+    "judgment": "scenario",
+    "realExcess": 7,
+    "evidence": "'Gwelodd Gwenllian y ser yn glir neithiwr' vs 'Gwelodd Gwenllian y ser yn glir o ben y bryn'; 'Gwelodd Siân y ffilm newydd nos Sadwrn diwethaf' vs 'Gwelodd Siân y ffilm newydd yn y sinema nos Sadwrn' (both node-13); 'Gwelodd Heledd y barcud coch yn hedfan dros y cwm' vs 'Gwelodd Ieuan y barcud coch yn hedfan uwchben y dyffryn'. 28 'Gwelodd NAME [picturesque sight]' postcard sentences; the preterite frame is carrier but the recycled sights (sunset x2 by the same Huw, stars x2, rainbow x2, film x2, red kite x2, boat-sailing x2) are real scene reuse."
+   },
+   {
+    "token": "fawr (dw i'n hoffi X yn fawr)",
+    "meaning": "really / very much",
+    "judgment": "carrier",
+    "realExcess": 5,
+    "evidence": "'Dw i'n hoffi pysgod yn fawr.' (r234), 'Dw i'n hoffi caws yn fawr.' (r236), 'Dw i'n hoffi siocled yn fawr.' (r243) - 10 identical 'I really like [food]' clones in node-01 at ranks 234-536, part of 19 'Dw i'n hoffi' openers in the first ~550 ranks. The likes-frame is node-01's lesson, but 10 clones is a beginner-visible drill block; thin to 4-5 with varied structures."
+   },
+   {
+    "token": "ble",
+    "meaning": "where",
+    "judgment": "carrier",
+    "realExcess": 2,
+    "evidence": "cy-0105 'Ble mae'r orsaf drenau agosaf, os gwelwch yn dda?' vs cy-0106 'Ble mae'r orsaf drenau agosaf os gwelwch yn dda?' - literally identical except a comma, adjacent at ranks 1126/1127. Also 'Ble alla i barcio'r car?' vs 'Ble gallaf i barcio fy nghar yn y dref?' in the same node-03. Question-word carrier otherwise."
+   },
+   {
+    "token": "ga",
+    "meaning": "Ga i...? (may I have)",
+    "judgment": "carrier",
+    "realExcess": 3,
+    "evidence": "'Ga i baned o de?' (r166) duplicates 'Ga i baned o de a theisen os gwelwch yn dda?'; 'Ga i botel o ddŵr?' duplicates 'Ga i botel o ddŵr a sudd oren...'; plus te/potel/gwydraid/cwpanaid all within ranks 166-228 of node-10. Useful request frame, small excess."
+   },
+   {
+    "token": "ddoe",
+    "meaning": "yesterday",
+    "judgment": "carrier",
+    "realExcess": 2,
+    "evidence": "'Darganfyddodd Huw hen ffotograff yn yr atig ddoe' vs 'Darganfyddodd Owain hen lyfr yn y llyfrgell ddoe'; also 'Ffeindiodd Aled hen gôt yn y wardrob ddoe' - three found-old-thing-in-storage scenes. Otherwise the natural time anchor of the preterite node (19 in node-10) with varied actors and events."
+   },
+   {
+    "token": "delyn (scanner miss)",
+    "meaning": "harp / learn-the-harp hypothetical",
+    "judgment": "scenario",
+    "realExcess": 2,
+    "evidence": "'Pe bai gen i fwy o amser rhydd, byddwn yn dysgu chwarae'r delyn' (cy-1732) vs 'Pe bai mwy o amser gyda fi, byddwn i'n dysgu chwarae'r delyn' (cy-1790) - near-identical in the SAME node-15; plus 'Pe bai ganddo amser, byddai'n dysgu chwarae'r delyn' (node-24) and 'Roeddwn i bob amser eisiau dysgu chwarae'r delyn' (node-09). The perpetual harp dream x4."
+   },
+   {
+    "token": "dywedodd",
+    "meaning": "said (3sg preterite)",
+    "judgment": "carrier",
+    "realExcess": 1,
+    "evidence": "31 hits but concentrated in reported-speech nodes 22-26 where 'X said that...' IS the lesson; speakers vary widely (meddyg, tywysydd, pennaeth, gyrwr, cogydd, darlithydd, swyddog). Only real dup: 'Dywedodd e am i fi beidio â phoeni' vs 'Dywedodd hi wrtha i am beidio â phoeni amdano' in the same node-24."
+   },
+   {
+    "token": "does",
+    "meaning": "Does dim (there is no)",
+    "judgment": "carrier",
+    "realExcess": 1,
+    "evidence": "'Does dim digon o gadeiriau.', 'Does dim llaeth yn yr oergell.', 'Does dim bysiau ar ddydd Sul.' - negative existential is node-06's lesson (18 there) and scenes vary honestly. Only excess: 'Does dim pwynt cwyno.' (r279) next to 'Does dim pwynt dadlau.' (r283)."
+   },
+   {
+    "token": "nghymru",
+    "meaning": "yng Nghymru (in Wales, nasal mutation)",
+    "judgment": "carrier",
+    "realExcess": 1,
+    "evidence": "Node-17 is the mutations node - 'yng Nghymru' is the textbook nasal-mutation example, and the 12 sentences are varied Wales facts (recycling rates, Kate Roberts, choral tradition). One dup: 'Mae rygbi yn boblogaidd iawn yng Nghymru' vs 'Mae rygbi'n gamp genedlaethol yng Nghymru'."
+   },
+   {
+    "token": "mwy",
+    "meaning": "more",
+    "judgment": "carrier",
+    "realExcess": 1,
+    "evidence": "Dense in comparative/necessity/conditional nodes where 'more' is the point. One near-dup: 'Mae angen mwy o gyllid ar gyfer y prosiect' vs 'Mae angen mwy o gyllid ar wasanaethau iechyd meddwl' in the same node-14."
+   },
+   {
+    "token": "beth",
+    "meaning": "what",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'Beth ydy ystyr y gair hwn?', 'Beth mae dy rieni'n wneud?', 'Beth am damaid o gaws?' - question-word density in the questions node (10 in node-03) with genuinely varied questions."
+   },
+   {
+    "token": "roeddwn",
+    "meaning": "I was (imperfect 1sg)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'Roeddwn i'n gwneud te pan gnociodd rhywun.', 'Roeddwn i'n darllen llyfr pan aeth y trydan.', 'Roeddwn i'n poeni am ragolygon y tywydd.' - the imperfect paradigm in past-tense nodes 09-11, scenes all distinct."
+   },
+   {
+    "token": "da",
+    "meaning": "good / well",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "'Bore da, sut dych chi heddiw?', 'Mae gen i gydweithwyr da.', 'Mae'r cwmni'n cynnig buddion da.' - honest high-frequency adjective spread across greetings, work, and compliment contexts in 10+ nodes."
+   }
+  ],
+  "realDupPairs": 13,
+  "notes": "Deck: src/data/welsh/deck.json, 3,512 cards. The scanner's top signals are mostly carriers - the node map explains them: node-06 negation (Does dim), node-09/10/11 past tenses (ddoe, gwelodd, roeddwn), node-15 conditionals (pe bai, mwy), node-17 mutations (yng Nghymru), nodes 22-26 reported speech (dywedodd). Openings 'mae hi/mae fy/mae angen/os bydd/pe bai/rydyn ni' are all grammar frames with varied content - carrier. Real problems are small and mostly deep-deck: (1) the one true beginner-visible repetition is the node-01 block of 10 'Dw i'n hoffi [food] yn fawr' clones at ranks 234-536 (thin to ~4); (2) the 'Gwelodd NAME [postcard sight]' template with recycled sights (stars, sunset-by-Huw, new-film-by-Siân, red kite, rainbow each x2); (3) cy-0105/cy-0106 are identical except a comma at adjacent ranks 1126/1127 - delete/replace one; (4) scanner-missed harp hypothetical x4 incl. a same-node near-dup (cy-1732/cy-1790), and 'weather better -> beach' x2 adjacent in node-23 (cy-2535/cy-2536). Confirmed real dups also include Snowdon-highest-mountain (cy-0236/cy-1745), prize-at-the-show (cy-0461/cy-0612), concert-at-7:30 (cy-0513/cy-0633). Spot-checks at ranks 100-130 and 400-430 were healthy: varied scenes, no hidden recurring actor, natural British English glosses ('cuppa', 'Well done for finishing the course'); only mildly stiff glosses noticed ('She has married', 'May I give a helping hand?') - no calque disease. Names are spread evenly (max Siân/Megan x11 across 3,512 - fine). Grade mild: ~25 genuine rewrites, dups mostly at ranks >1000; the hoffi block is the only first-600 visibility issue and it is the node's own teaching frame, so it is drill excess rather than scenario disease - if the user wants it broken up it is already counted in the 25."
+ },
+ {
+  "estRewrites": 19,
+  "grade": "mild",
+  "lang": "greek",
+  "notes": "Scanner over-flags confirmed for Greek: nearly all top families are carrier density (grammar-node teaching words), not scenarios. Real problems are (1) node-20 vacation node recycling earlier sentences near-verbatim - 4 of 7 real dup pairs have their b-side in node-20, incl. one literally identical card pair el-0331/el-2254 differing only in spelling variant persi/perysi; (2) node-10 vs node-16 both teach name days with ~5 near-identical sentence pairs (0944~1677, 1039~1678, 0946~1691, 0949~1692, 0947~1693); (3) scattered template recycling (kids play ... all afternoon x3: el-0585/el-1882/el-2261; deleted-photos-by-accident el-1889/el-2763; photographing-every-moment essay point el-3657/el-3917; inflated-bill-arrived x3: el-1468/el-2466/el-2468). Spot checks at ranks 100-130 (negation/thelo node, carrier) and 400-430 (past tense, varied scenes) are clean with natural English - no today-itself-style calques found. Mild deck-wide motif: grandpa-telling-stories ~4x (p88, p428, p2875, p3683), widely spaced, at most 1 rewrite. No beginner-visible scenario clumps in the first 600 ranks. estRewrites 19 = 7 dup-pair fixes + 5 name-day dedupes + ~4 template fixes + ~3 allowance for the 8 unlisted nearDupPairs (20 total flagged, 12 inspected, 58% real rate). realDupPairs counts confirmed pairs among the 12 inspected only.",
+  "realDupPairs": 7,
+  "realFamilies": [
+   {
+    "token": "σαν",
+    "meaning": "like / as if (simile particle)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "Node-32 is the literary as-if node where the particle is the lesson: \"Ο μουσικός έπαιζε σαν να μην υπήρχε αύριο...\" / \"...ένιωθε πάντα ξένος, σαν επισκέπτης που ξέχασε να φύγει.\" Folding also swept in unrelated σάντουιτς/Σαντορίνη/σανδάλια (\"Το πλοίο για τη Σαντορίνη φεύγει από τον Πειραιά\") - partial folding artifact inflating the count."
+   },
+   {
+    "token": "λογαριασμ",
+    "meaning": "bill / account",
+    "judgment": "carrier",
+    "realExcess": 1,
+    "evidence": "Node-22 is the banking/bills node (22 of 41): \"Θέλω να ανοίξω έναν λογαριασμό ταμιευτηρίου\", \"Μπήκε ο μισθός μου στον λογαριασμό σήμερα\" - the word is the topic. Only excess: the shocked-utility-bill scene x3 (\"Ο λογαριασμός του ρεύματος ήρθε φουσκωμένος\" el-1468 / \"ήρθε πιο τσουχτερός φέτος\" el-2466 / \"ήρθε ... και δεν το πίστευα\" el-2468)."
+   },
+   {
+    "token": "γιορτ",
+    "meaning": "name day / celebration",
+    "judgment": "carrier",
+    "realExcess": 5,
+    "evidence": "Node-16 (27x) is the name-day culture node, legitimately dense. But node-10 already taught the same scenes and node-16 re-authors them near-identically: \"Σήμερα γιορτάζει ο Γιάννης. Χρόνια πολλά!\" (el-0944) vs \"Σήμερα γιορτάζει ο Γιώργος, χρόνια πολλά!\" (el-1677); \"Η γιορτή είναι συχνά πιο σημαντική από τα γενέθλια\" (el-1039) vs \"η γιορτή μετράει πιο πολύ από τα γενέθλια\" (el-1678); sweets-at-the-office pair el-0946/el-1691; forgot-to-call pair el-0949/el-1692. ~5 of the node-16 cards are re-runs."
+   },
+   {
+    "token": "αυριο",
+    "meaning": "tomorrow",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "Future-tense adverb, densest in future node-07: \"Αύριο θα ξυπνήσω στις έξι\", \"Θα ετοιμάσω την παρουσίαση αύριο το πρωί\" - every card a different scene (raise, plumber, exam, band). Honest carrier of the future nodes."
+   },
+   {
+    "token": "ευρω",
+    "meaning": "euro (prices)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "Node-03 numbers/prices node: \"Ο καφές κάνει τρία ευρώ\", \"Το δωμάτιο κοστίζει πενήντα ευρώ\" - prices are the lesson; later uses are varied real contexts (rent, ATM, salary cut)."
+   },
+   {
+    "token": "αρεσ",
+    "meaning": "μου αρέσει - to like",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "Dative-experiencer verb taught in node-04 and node-18: \"Μου αρέσει ο ελληνικός καφές\", \"Της αρέσουν πολύ τα λουλούδια\", \"Άρεσε σε όλους το φαγητό σου\" - conjugation/clitic drilling, all different objects."
+   },
+   {
+    "token": "θελω",
+    "meaning": "I want",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "Node-02 requests/negation node: \"Θέλω έναν καφέ, παρακαλώ\", \"Δεν θέλω να δουλεύω το Σάββατο\", \"Θέλω να πάω σπίτι\" - the θέλω/θέλω να pattern is the lesson."
+   },
+   {
+    "token": "εν",
+    "meaning": "formal εν-phrases (εν κατακλείδι, εν ολίγοις...)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "Node-33 essay-register node where these connectors are the teaching point: \"Εν κατακλείδι, τα ευρήματα της έρευνας...\", \"Εν ολίγοις, η επιχειρηματολογία του συγγραφέα...\" - each sentence argues a different topic. Εν κατακλείδι opens 7 cards, slightly monotone but content-distinct."
+   },
+   {
+    "token": "δωματι",
+    "meaning": "room",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "Node-20 hotel node (12x) where the room is the setting being taught: \"Πόσο κοστίζει το δωμάτιο τη βραδιά;\", \"Το κλιματιστικό στο δωμάτιο δεν δουλεύει\", \"Το δωμάτιο μύριζε υγρασία\" - standard hotel situations, all distinct."
+   },
+   {
+    "token": "πολλα",
+    "meaning": "many / Χρόνια πολλά greeting",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "Node-16 density is the fixed greeting: \"Χρόνια πολλά για τη γιορτή σου!\", \"Το «χρόνια πολλά» ταιριάζει σχεδόν σε κάθε γιορτή\" - the greeting is the cultural lesson; elsewhere plain quantifier."
+   },
+   {
+    "token": "φωτογραφι",
+    "meaning": "photo / photograph",
+    "judgment": "vocab",
+    "realExcess": 2,
+    "evidence": "Node-17 phone node - honest tech vocab (\"Ανέβασα τις φωτογραφίες από τη βόλτα μας\"). Two genuine repeats: \"Έσβησα τη φωτογραφία κατά λάθος!\" (el-1889) vs \"Έσβησα κατά λάθος όλες τις φωτογραφίες\" (el-2763), and the same essay thesis twice: \"Το γεγονός ότι φωτογραφίζουμε πλέον κάθε στιγμή του ταξιδιού δεν σημαίνει ότι τη ζούμε πιο έντονα\" (el-3657) vs \"η φωτογράφιση κάθε στιγμής μας αποξενώνει ... από την ίδια την εμπειρία του ταξιδιού\" (el-3917)."
+   },
+   {
+    "token": "εισιτηρι",
+    "meaning": "ticket",
+    "judgment": "carrier",
+    "realExcess": 1,
+    "evidence": "Node-09 public-transport node: \"Πού αγοράζω εισιτήριο για το λεωφορείο;\", \"Ο ελεγκτής ζήτησε τα εισιτήριά μας\" - the ticket workflow is the lesson. One real recycle: \"Πήραμε τα εισιτήρια του πλοίου από το πρακτορείο\" (el-0865) vs \"Πήραμε τα εισιτήρια από το πρακτορείο\" (el-2221)."
+   }
+  ]
+ },
+ {
+  "estRewrites": 19,
+  "grade": "mild",
+  "lang": "indonesian",
+  "notes": "Indonesian is NOT a Hindi-style case. All 12 top families resolve to carrier/vocab: bilang=node-20 reported-speech verb (36 cards, but actors/scenes all differ: mom/manager/doctor/driver/teacher), menurut=opinion frames, akhirnya=node-28 'awalnya...akhirnya' narrative pattern, sama=node-27 equative comparisons, juga=node-34 particle node, aku=node-36 colloquial-register pronoun, ribu/uang=money-node currency vocab (rupiah prices require 'ribu'), hp/aplikasi=node-30 tech topic. Folding artifacts confirmed: 'ribu' family absorbed ribut(noisy)/ribuan/seribu; 'lalu' conflates lalu/selalu/terlalu and time-phrase 'minggu lalu'. The REAL disease is cross-node near-verbatim recycling (~15 pairs): nodes 34/36 recast earlier deck sentences with a particle added (id-2263 vs id-2979 driving test; id-0784 vs id-3292 laundry-before-rain; id-1371 vs id-2540 data plan), plus twin scenes (id-3670 grandma vs id-3890 grandpa hospital vigil, id-0549/1956/3831 rainy-season-early x3, id-1859/3237 satay stall near the station). Minor motif repeats a learner might notice: wallet-left-at-home x3, overslept-no-breakfast x3. Spot-checks at ranks 100-130 (aspect/question nodes) and 400-430 (past-time node) are clean and varied, no recurring actor. English glosses natural, no 'today itself'-class calques; only mild stiffness ('dinner is already ready', 8x 'indeed' for memang). Rewrites = ~15 dup-pair fixes (one side each) + ~4 node-30 micro-repeats (storage-full x4, battery-drain x4 → keep 2 each). Several dups sit in the first 600 ranks (0099/0214, 0199/0375, 0368/0504) but are spread across nodes days apart, so mild, not severe.",
+  "realDupPairs": 15,
+  "realFamilies": [
+   {
+    "token": "bilang",
+    "meaning": "to say/tell (colloquial)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'Ibu bilang makan malam sudah siap di meja.' / 'Manajer bilang rapat dimulai jam sepuluh pagi.' / 'Sopir bilang jalan ke bandara sedang macet.' - node-20 is the reported-speech node; 36 cards but every card has a different speaker and scene."
+   },
+   {
+    "token": "hp",
+    "meaning": "mobile phone",
+    "judgment": "vocab",
+    "realExcess": 4,
+    "evidence": "'Memori HP penuh, jadi saya menghapus beberapa aplikasi lama.' / 'Memori HP saya penuh karena terlalu banyak foto dan video.' / 'HP-nya sering mati sendiri karena memorinya hampir penuh.' - node-30 is the technology topic node so HP density is honest, but storage-full appears 4x and battery-drain 4x within the node; trim to 2 each."
+   },
+   {
+    "token": "ribu",
+    "meaning": "thousand (rupiah prices)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'Harga tas ini dua ratus lima puluh ribu rupiah.' / 'Ongkos ojek ke stasiun biasanya dua puluh ribu.' - node-21 money/prices node; every rupiah price contains 'ribu'. Fold also absorbed unrelated 'ribut' (noisy) and 'ribuan/seribu'."
+   },
+   {
+    "token": "aku",
+    "meaning": "I (informal)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'Aku nggak bisa datang ke acara kantor besok malam.' / 'Nih, aku bawakan mangga dari kebun tetangga.' - node-36 is the colloquial-register node; aku IS the register being taught. Fold also caught berlaku/pelaku/paku."
+   },
+   {
+    "token": "sakit",
+    "meaning": "sick/hurt; rumah sakit = hospital",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "'Saya sakit kepala sejak tadi pagi.' (node-12 health node) / 'Tanpa surat rujukan dari puskesmas, BPJS tidak menanggung biaya rumah sakit.' (node-39 healthcare node) - honest topic density plus the compound 'rumah sakit' inflating counts elsewhere."
+   },
+   {
+    "token": "akhirnya",
+    "meaning": "finally / in the end",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'Awalnya saya gugup, tapi akhirnya wawancaranya berjalan lancar.' / 'Awalnya dia menolak, akhirnya dia ikut juga ke acara itu.' - node-28 explicitly teaches the awalnya...akhirnya narrative frame; content varies."
+   },
+   {
+    "token": "uang",
+    "meaning": "money",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "'Maaf, warung ini hanya menerima uang tunai.' / 'Ibu memakai uang arisan untuk membayar DP kulkas baru.' - spread across money node-21 and household-finance node-40 with distinct scenes (change, ATM, lending, arisan, allowances)."
+   },
+   {
+    "token": "aplikasi",
+    "meaning": "app",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "'Aplikasi bank saya minta update sebelum bisa dibuka.' / 'Nenek belajar memakai aplikasi chat supaya bisa membalas cucunya.' - node-30 tech node; each card is a different app/use (map, chat, banking, ordering, BPJS)."
+   },
+   {
+    "token": "lalu",
+    "meaning": "then / last (week, year)",
+    "judgment": "folding-artifact",
+    "realExcess": 0,
+    "evidence": "'Waktu rapat penting, HP saya selalu dalam mode getar.' [selalu=always] / 'Mata saya sakit karena terlalu lama melihat layar HP.' [terlalu=too] - the fold conflates lalu/selalu/terlalu plus time phrases like 'tahun lalu'; the genuine 'lalu' uses are ordinary function-word frequency."
+   },
+   {
+    "token": "menurut",
+    "meaning": "according to / in the opinion of",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'Menurut dokter, ayah tidak boleh makan terlalu banyak gula.' / 'Menurut berita, sore ini akan turun hujan deras.' - node-20/26 teach the opinion/report frame; sources vary (doctor, news, map, mom, schedule)."
+   },
+   {
+    "token": "juga",
+    "meaning": "also / after all (particle)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'Ditunggu sampai sore, tukang ledengnya tidak datang juga.' / 'Harga bensin naik, jadi ongkos ojek naik juga.' - node-34 is the particle node teaching juga's 'finally/after all' senses."
+   },
+   {
+    "token": "sama",
+    "meaning": "same / as...as (equative)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'Tas ini sama mahalnya dengan tas yang kamu beli kemarin.' / 'Adik saya sekarang sama tingginya dengan ayah kami.' - node-27 comparatives node; 'sama ...nya dengan' is the lesson itself. Fold also caught bersama."
+   },
+   {
+    "token": "bangun telat / tanpa sarapan",
+    "meaning": "overslept-and-skipped-breakfast motif",
+    "judgment": "scenario",
+    "realExcess": 2,
+    "evidence": "'This morning I didn't have time for breakfast because I woke up too late.' (id-1870) / 'This morning I woke up late, so I left without breakfast.' (id-2286) / 'I overslept, so I ran to the bus stop without breakfast.' (id-3273) - same micro-scene three times across nodes 25/28/36."
+   }
+  ]
+ },
+ {
+  "estRewrites": 15,
+  "grade": "mild",
+  "lang": "portuguese",
+  "notes": "Scanner over-flags as expected: all 12 top families are carrier/vocab, none is a Hindi-style scenario actor. Real problems are (a) ~6 near-dup pairs, mostly cross-node tense-shift recycling of one scene: pt-0194/pt-0241 (haircut once a month, SAME node-01), pt-0763/pt-0831 (told a joke and everyone laughed), pt-1266/pt-3090 (came/ran out running when she heard the news), pt-0291/pt-2513 (sunscreen before going out, verbatim tense shift), pt-0206/pt-1232 (doctor on Tuesday), plus pt-3033/pt-3354 (Desde que (eu) me lembro, sempre foi assim - content-token j=1.0, MISSED by scan.json; my lower-threshold rescan also found pt-2518/pt-2566 \"Se eu tivesse (mais) paciencia, ensinaria criancas (pequenas)\" j=0.8); and (b) mild frame monotony: \"antes de sair\" pre-departure ritual x12, \"Espero que X\" x10 in node-16, \"a noite/tarde inteira\" x10 in node-09. Openings are all grammar-frame carriers: \"se eu\" x94 = conditional node, \"eu te/ele me/ela me/eu me\" = clitic-pronoun nodes with varied scenes, \"eu vou\" = ir-future. Spot-checks ranks 100-130 and 400-430 (ascending priority): clean, varied, no recurring actor/prop; nothing beginner-visible in the first 600 ranks. English glosses natural overall; nits: pt-2373 \"The program we attended\" (assistir = watched, wrong collocation), pt-1237 \"She worked out in the new job\" (awkward), pt-1482 and pt-3361 use unspaced dashes in glosses (house style is spaced en dash). Suggested action: fix the ~6 dups + thin the three monotone frames (~15 rewrites total); no full de-clump pass needed.",
+  "realDupPairs": 6,
+  "realFamilies": [
+   {
+    "token": "gost",
+    "meaning": "gostar (to like) / gostoso",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "node-06 is the likes/dislikes node and contexts genuinely vary: \"Eu nao gosto de transito.\" / \"Ela gosta de filmes de suspense.\" / \"Eu gosto de tomar banho de chuva.\""
+   },
+   {
+    "token": "esper",
+    "meaning": "esperar (wait) / Espero que (I hope that)",
+    "judgment": "carrier",
+    "realExcess": 2,
+    "evidence": "\"Espero que\" is THE subjunctive trigger; node-16 stacks ~10 of them with different scenes: \"Espero que o dentista nao demore.\" / \"Espero que a prova nao seja dificil.\" / \"Espero que a encomenda chegue ate sexta.\" - could diversify 2 to other triggers (tomara que, duvido que)"
+   },
+   {
+    "token": "manh",
+    "meaning": "manha (morning) / cafe da manha (breakfast)",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "honest time expression across unrelated scenes: \"Ele rega as plantas de manha.\" / \"Eu respondo os e-mails logo de manha.\" / \"Ela tinha aberto a loja as oito da manha.\""
+   },
+   {
+    "token": "enquant",
+    "meaning": "enquanto (while) - imperfect-vs-preterite frame",
+    "judgment": "carrier",
+    "realExcess": 1,
+    "evidence": "the simultaneity frame IS nodes 10-11's lesson, but the cook-while-someone-sets-the-table scene recurs: \"Enquanto ele cozinhava, eu arrumei a mesa.\" (pt-1512) vs \"Enquanto eu cozinho, voce arruma a mesa.\" (pt-2988) plus \"Prepara o almoco enquanto eu arrumo a casa.\" (pt-2172)"
+   },
+   {
+    "token": "to",
+    "meaning": "to (colloquial estou) - informal register node",
+    "judgment": "carrier",
+    "realExcess": 1,
+    "evidence": "colloquial contraction is node-07/08's own material (\"To morrendo de fome!\", \"Eu to nem ai.\"), but two idioms recur verbatim cross-node: \"Eu to de saco cheio disso.\" (pt-1048) vs \"Que coisa mais chata! To de saco cheio.\" (pt-3303); \"Eu to na correria hoje.\" vs \"To na correria, nao posso parar agora.\""
+   },
+   {
+    "token": "sair",
+    "meaning": "sair (leave/go out) - \"antes de sair\" pre-departure ritual",
+    "judgment": "scenario",
+    "realExcess": 3,
+    "evidence": "12 cards ride the same before-leaving routine, twice with identical props: \"Eu passo protetor solar antes de sair de casa.\" (pt-0291) vs \"Eu vou passar protetor solar antes de sair.\" (pt-2513); \"Paga a conta antes de sair.\" (pt-1901) vs \"Nos tinhamos pagado a conta antes de sair.\" (pt-2584)"
+   },
+   {
+    "token": "ia",
+    "meaning": "ia (imperfect of ir: used to go / was going to)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "the imperfect/reported-speech nodes' own machinery, scenes vary: \"Eu ia sair quando ela ligou.\" / \"A gente ia pescar no rio aos domingos.\" / \"O diretor anunciou que a empresa ia expandir.\""
+   },
+   {
+    "token": "inteir",
+    "meaning": "inteiro/a (whole/entire) - \"a noite inteira\" duration frame",
+    "judgment": "vocab",
+    "realExcess": 2,
+    "evidence": "10 node-09 preterite cards reuse \"did X all day/night\": \"A gente pescou a tarde inteira.\" / \"A gente nadou no rio a tarde inteira.\" / \"A gente dancou forro a noite inteira.\"; also \"Ela limpou a casa inteira no sabado.\" (pt-1240) vs \"Eu vou limpar a casa inteira no sabado.\" (pt-2509)"
+   },
+   {
+    "token": "deu",
+    "meaning": "deu (preterite of dar) incl. dar-idioms node",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "node-30's dar-idioms are the lesson itself: \"Ele me deu um bolo ontem a noite.\" / \"Ela deu com a lingua nos dentes.\" / \"Ele deu no pe quando viu a confusao.\" - elsewhere honest light-verb uses"
+   },
+   {
+    "token": "ontem",
+    "meaning": "ontem (yesterday)",
+    "judgment": "vocab",
+    "realExcess": 1,
+    "evidence": "natural preterite-node anchor across varied scenes, but node-22 passive repeats one prop: \"Os documentos foram entregues ontem.\" (pt-2758) vs \"Os documentos foram enviados por e-mail ontem.\" (pt-2769)"
+   },
+   {
+    "token": "seja",
+    "meaning": "seja (present subjunctive of ser)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "pure subjunctive/concessive carrier with varied frames: \"Embora o preco seja alto, a qualidade e boa.\" / \"Por pior que seja, temos que encarar.\" / \"Quem quer que seja, diga que nao estou.\""
+   },
+   {
+    "token": "vao",
+    "meaning": "vao (they go / ir-future)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "ir-future nodes 17-19's own conjugation; scenes vary: \"Eles vao pintar a casa de azul.\" / \"Voces vao precisar de passaporte.\" / \"Voces vao trazer alguma coisa para o churrasco?\""
+   }
+  ]
+ },
+ {
+  "estRewrites": 10,
+  "grade": "mild",
+  "lang": "korean",
+  "notes": "Korean is largely clean; the scanner's score (686) is dominated by carriers. Node-29 (formal notices), node-33 (expository connectives 요컨대/다시 말해), node-18 (제 생각에는 opinion frame), node-20 (-어 보세요), node-01 (nationalities + stock names 민수/지은/수진) are all their nodes' own teaching material. Openings 다음 주에/다음 달에 are future-tense carriers; 다시 말해 is node-33 carrier. Folding artifacts confirmed: 원이에요 merges 회사원이에요 (office worker) with prices; 보세요 merges -어 보세요 (try) with honorific 보다 (watch). The one genuine soft clump: a filial-piety sentiment cluster across nodes 29/31 (부모) — 4 cards repeat \"I understood my parents' love/heart only too late\" (ko-3423 vs ko-3622 are near-echoes; ko-3400/3586/3636/3672 same sentiment); trim ~4. Real dups needing 1 rewrite each: ko-1820/1853 (relatives gather at head family's house, SAME node), ko-1731/2790 (music-app listening, subject swapped), ko-1997/3201 + ko-2005/3186 (identical agreement stock phrases duplicated between node-18 and node-28), plus two the scanner missed: ko-0629/1234 (delivery fee 3,000 won, particle-only difference) and ko-1718/2278 (give this app a try / travel app). Spot-checks at ranks 100-130 (node-02 present-tense drill) and 400-430 (node-05 past-tense day narrative) are healthy — varied objects, deliberate mini-continuity, no hidden actor. English glosses are natural, even idiomatic (no \"today itself\"-style calques found); one house-style issue spotted and spawned as a separate task: 51 glosses (mostly node-30 proverbs) use em dashes, violating the no-em-dash rule — English-only fix, no TTS cost. Estimated rewrites: 6 dup halves + ~4 parents-sentiment trims = 10.",
+  "realDupPairs": 6,
+  "realFamilies": [
+   {
+    "token": "주시기",
+    "meaning": "-어 주시기 바랍니다 (formal 'please...' announcement formula)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "\"본 열차는 잠시 후 종착역인 부산역에 도착하겠습니다... 확인하여 주시기 바랍니다\" (train announcement); \"하객 여러분께서는 큰 박수로 맞아 주시기 바랍니다\" (wedding); \"하단에 서명하여 주시기 바랍니다\" (contract). All 20 in node-29, the formal-register node — the formula IS the lesson, and every card is a different scene (train, wedding, museum, HR, temple)."
+   },
+   {
+    "token": "마셔요",
+    "meaning": "drink (basic -어요 present)",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "\"물을 마셔요\" (I drink water); \"커피를 안 마셔요\" (I don't drink coffee); \"운동 후에 물을 많이 마셔요\" (water after working out). Classic node-02 conjugation drill with varied objects/negation/질문, then honest everyday reuse later."
+   },
+   {
+    "token": "보세요",
+    "meaning": "-어 보세요 'try doing' (node-20) + honorific 보다 'watch' (node-24)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "\"부산에 꼭 가 보세요\" (go to Busan); \"한복을 한번 입어 보세요\" (try on a hanbok); but also \"아버지께서 아침마다 뉴스를 보세요\" (father watches the news) — the fold conflates the 'try' construction with honorific 'watch'. Node-20 recommendations are the taught pattern, scenes all differ. One real dup (ko-1718/2278 'give this app a try') counted under dups."
+   },
+   {
+    "token": "원이에요",
+    "meaning": "'it is X won' (prices) — fold also swallows 회사원이에요 'office worker'",
+    "judgment": "folding-artifact",
+    "realExcess": 0,
+    "evidence": "\"오천 원이에요\" (It is 5,000 won) vs \"저는 회사원이에요\" (I'm an office worker) — unrelated words merged by the fold. The price cards themselves are the numbers/shopping nodes' carrier drill with varied items. ko-0629/ko-1234 delivery-fee dup counted under dups."
+   },
+   {
+    "token": "사람이에요",
+    "meaning": "'is a [country] person' (nationality)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "\"어느 나라 사람이에요?\" (What country are you from?); \"저는 영국 사람이에요\" (I'm British); \"아니요, 캐나다 사람이에요\" (No, I'm Canadian). All 11 in node-01 — the textbook lesson-one nationality pattern."
+   },
+   {
+    "token": "사요",
+    "meaning": "buy",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "\"마트에서 야채를 사요\" (vegetables at the supermarket); \"선물로 목도리를 사요\" (a scarf as a present); \"오늘 점심은 제가 사요\" (lunch is on me). Spread over 8 nodes, always a different shop/object; honest frequency."
+   },
+   {
+    "token": "부모",
+    "meaning": "parents — everyday vocab, but the advanced nodes repeat a filial-piety sentiment",
+    "judgment": "scenario",
+    "realExcess": 4,
+    "evidence": "ko-3423: \"자식이 부모의 마음을 온전히 헤아리기란 결코 쉬운 일이 아닙니다\" (For a child to fully fathom a parent's heart is by no means easy) vs ko-3622: \"자식이 부모의 마음을 온전히 이해하게 될 무렵이면 이미 부모는 곁에 없는 경우가 많다\" — near-echo. Plus ko-3586/3636/3672 all say 'only now do I grasp my parents' sacrifice'. 69 cards total is fine as vocab; the excess is this repeated sentiment in nodes 29/31."
+   },
+   {
+    "token": "생각에",
+    "meaning": "제 생각에는 'in my opinion' frame",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "\"제 생각에는 이게 더 좋아요\" (In my opinion this one is better); \"제 생각에는 조금 비싼 것 같아요\" (seems a bit pricey); \"제 생각에는 그 말도 일리가 있어요\" (that has a point too). 12x in node-18, the opinions node — the frame is the taught pattern, topics all differ."
+   },
+   {
+    "token": "오히려",
+    "meaning": "'rather / actually / on the contrary' discourse adverb",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "\"우회로가 오히려 빠를 때가 있다\" (the detour can be faster); \"침묵은 체념의 다른 이름일 때가 많다\" context; \"창의적 판단이 요구되는 직무의 가치는 오히려 높아진다\" (value of creative work rises). Advanced connective drilled across wholly different scenes in nodes 30/31/33 — function word, not a scenario."
+   },
+   {
+    "token": "정작",
+    "meaning": "'when it actually comes to it / in fact' contrastive adverb",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "\"정작 말만 앞세우던 사람이 성과는 가장 초라했다\" (the all-talk one had the shabbiest results); \"정작 짐을 싸는 순간이 되자...\" (by the moment of actually packing); \"정작 위기를 불러온 이들은 책임에서 비켜서 있곤 했다\" (those who caused the crisis sidestepped blame). 13x in node-31 literary sentences — the adverb is the lesson; every scene differs."
+   },
+   {
+    "token": "요컨대",
+    "meaning": "'in short' expository connective",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "\"요컨대 규제와 혁신은 대립하는 것이 아니라 균형을 이루어야 할 대상이다\" (regulation vs innovation); \"요컨대, 다양성은 비용이 아니라 자산이다\" (diversity); \"요컨대 진정한 리더십은...\" (leadership). All 13 in node-33, the formal-writing connectives node — same connective, completely different essay topics."
+   },
+   {
+    "token": "민수",
+    "meaning": "Minsu — stock textbook character name",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "\"안녕하세요, 민수 씨\" (Hello, Minsu); \"민수 씨는 한국 사람이에요\" (Minsu is Korean); later \"민수 씨는 손이 커요\" (Minsu is a generous host). 11 of 21 uses are in node-01 where names are needed to teach greetings/introductions; the rest are scattered generic-person slots in varied roles — a deliberate textbook device, not a recurring scene."
+   }
+  ]
+ },
+ {
+  "lang": "italian",
+  "grade": "none",
+  "estRewrites": 8,
+  "realFamilies": [
+   {
+    "token": "piac",
+    "meaning": "piacere (to like)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "node-06 is the piacere node; objects all differ: 'Ci piace il vino bianco.' / 'Non mi piacciono i ragni.' / 'A Marco piace la chitarra.'"
+   },
+   {
+    "token": "prossim",
+    "meaning": "prossimo (next week/month/year)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "Natural time adverbial of the future node-19: 'L'anno prossimo viaggeremo in Giappone.' / 'La prossima settimana avrò un colloquio di lavoro.' / 'Sabato prossimo organizzeremo un barbecue in giardino.' Scenes all differ."
+   },
+   {
+    "token": "sembr",
+    "meaning": "sembrare che (it seems that)",
+    "judgment": "carrier",
+    "realExcess": 1,
+    "evidence": "Subjunctive trigger in node-15, varied scenes – but one real dup: 'Sembra che la primavera stia arrivando in anticipo.' (it-1975, p1977) vs 'Sembra che la primavera arrivi in anticipo quest'anno.' (it-1981, p2039), same node."
+   },
+   {
+    "token": "poss",
+    "meaning": "possibile / possa-possiamo (folds 'è possibile che' + potere subjunctive)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "Mild folding conflation but both halves are the subjunctive node's own lesson: 'È possibile che il concerto venga cancellato.' / 'Dubito che lui possa correre una maratona.'"
+   },
+   {
+    "token": "mentr",
+    "meaning": "mentre (while) – imperfetto-interrupted frame",
+    "judgment": "carrier",
+    "realExcess": 2,
+    "evidence": "The canonical node-11 frame, but: 'Mentre dormivo, è suonato il telefono.' (it-1096) vs 'Mentre mangiavo, è suonato il telefono.' (it-1114) are 36 priority apart, and 'Mentre dormivo, è arrivato un temporale.' (it-1536) is a third mentre-dormivo in the same node."
+   },
+   {
+    "token": "ora",
+    "meaning": "ora (now) in third-conditional apodosis",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'Se avessimo investito allora, ora saremmo ricchi.' / 'Se avessi accettato quel lavoro, ora vivrei a Londra.' Same regret THEME (money/study) but distinct scenes; frame is the node-21 lesson."
+   },
+   {
+    "token": "dubit",
+    "meaning": "dubitare che (I doubt that) – subjunctive trigger",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "31x 'Dubito che...' spread over 5+ subjunctive nodes with unrelated content: 'Dubito che ci sia un treno dopo mezzanotte.' / 'Dubito che il negozio faccia sconti su quei prodotti.'"
+   },
+   {
+    "token": "va",
+    "meaning": "va + past participle (must-be-done construction, node-24)",
+    "judgment": "carrier",
+    "realExcess": 1,
+    "evidence": "Construction is the node's lesson, but one real dup: 'Il problema va affrontato con calma e determinazione.' (it-3071) vs 'La questione va affrontata con serietà e determinazione adesso.' (it-3078), same node."
+   },
+   {
+    "token": "sara",
+    "meaning": "sarà/saranno (future of essere) – NOT the name Sara (0 occurrences)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'Sarà stanco dopo un viaggio così lungo.' / 'Fra poco ci sarà un temporale, meglio rientrare a casa.' Future/epistemic-future node material, varied scenes."
+   },
+   {
+    "token": "arriv",
+    "meaning": "arrivare (to arrive)",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "88 uses spread across ~all nodes and unrelated scenes: 'Il treno arriva in ritardo.' / 'L'ambulanza arriva subito.' / 'La pagella arriva a fine anno.' Honest everyday frequency."
+   },
+   {
+    "token": "finit",
+    "meaning": "finito, esp. 'avrò finito' (future perfect)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "Textbook future-perfect content of node-20: 'Entro domani avrò finito il rapporto.' / 'Tra un'ora avrò finito di studiare.' Rest spread thinly over 5 other nodes."
+   },
+   {
+    "token": "avro",
+    "meaning": "avrò (future-perfect auxiliary)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "11 of 21 in node-20, the future-perfect node itself: 'Appena avrò ottenuto il visto, prenoterò il volo.' / 'Fra tre anni avrò pagato tutto il mutuo.' Varied scenes."
+   }
+  ],
+  "realDupPairs": 8,
+  "notes": "Italian is in good shape – the mechanical score (769, 399 families, 44 dup pairs) is almost entirely subjunctive pedagogy read as clumping. All 8 topOpenings are subjunctive/conditional trigger frames (Penso/Spero/Credo/Dubito/Voglio/È possibile/È meglio che, se non) with varied downstream scenes = carrier. No Hindi-parosi-style scenario actor exists: Marco (14x) and the doctor scene (24x) are spread across 10-14 nodes and p49-p3857 with distinct scenes each time – benign course staples. Dup verdict: 5 of the 12 flagged pairs are real (it-0357/it-2377 'dovresti accettare (quella proposta)'; it-1096/it-1114 'Mentre dormivo/mangiavo, è suonato il telefono'; it-0702/it-0912 'Magari fossi/potessimo... in vacanza adesso'; it-0374/it-1695 'Benché piova/faccia freddo, usciamo lo stesso'; it-0248/it-0589 'Il gatto/La gatta dorme sul divano/letto'), the other 7 are register/tense contrasts or different scenes sharing vocab (e.g. it-0929/it-3461 informal vs formal apology is deliberate pedagogy; it-0384/it-2428 present-for-future vs future). Cross-batch inspection found 3 more real pairs the top list missed: it-1975/it-1981 (spring early, same node), it-3071/it-3078 (va affrontato/a con... determinazione, same node), it-2033/it-2037 (meglio che tu/io vada dal dottore, 11 priority apart – possibly an intentional same-form demo). estRewrites=8: one card from each real pair, keeping the better one. Spot-checks at ranks 100-130 and 400-430: varied scenes, no recurring actor, English glosses natural (no translationese/calques found). Recommend: skip this deck in the de-clump wave; just patch the 8 dup cards whenever another Italian text+TTS batch runs, to amortize the audio cost."
+ },
+ {
+  "lang": "japanese",
+  "grade": "none",
+  "estRewrites": 2,
+  "realFamilies": [
+   {
+    "token": "食べません",
+    "meaning": "don't eat / won't you eat",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "node-09 is the negative+invitation node: '肉を食べません。(I don't eat meat.)' / '今晩、レストランで食べませんか。(Would you like to eat at a restaurant tonight?)' / node-15's '弟は肉も魚も食べません。' teaches も…も. Most-common verb in the -masen lesson; scenes differ."
+   },
+   {
+    "token": "飲みません",
+    "meaning": "don't drink",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'私はお酒を飲みません。(I don't drink alcohol.)' / '夜はコーヒーを飲みません。(I don't drink coffee at night.)' / 'お茶を飲みませんか。(Would you like some tea?)' — all node-09, the node's own material, three different scenes."
+   },
+   {
+    "token": "しません",
+    "meaning": "don't do / shall we",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'日曜日は仕事をしません。(I don't work on Sundays.)' / 'いっしょに買い物をしませんか。(Shall we go shopping together?)' / '日曜日にテニスをしませんか。' — suru-verb negation/invitation in the node that teaches it."
+   },
+   {
+    "token": "先週",
+    "meaning": "last week",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "All in node-10 (past tense): '先週、東京に行きました。' / '先週は勉強しませんでした。' — 'last week' is the natural time adverb for the past-tense node."
+   },
+   {
+    "token": "しました",
+    "meaning": "did (past of suru)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'週末に何をしましたか。(What did you do on the weekend?)' / '土曜日にサッカーをしました。' / '昨日、母に電話をしました。' — the past-tense node conjugating its own core verb, distinct scenes."
+   },
+   {
+    "token": "京都",
+    "meaning": "Kyoto",
+    "judgment": "scenario",
+    "realExcess": 1,
+    "evidence": "Three in node-10: '京都に行きましたか。(Did you go to Kyoto?)' / '京都でおみやげを買いました。' / ja-0292 '先週、家族と京都に行きました。(Last week I went to Kyoto with my family.)' — ja-0292 (a tail review card) recombines ja-0136's 先週+行きました with ja-0145's Kyoto trip almost verbatim; the third Kyoto trip in one node is the only mild 'again?!' moment. Re-scene ja-0292."
+   },
+   {
+    "token": "静か",
+    "meaning": "quiet (na-adjective)",
+    "judgment": "carrier",
+    "realExcess": 1,
+    "evidence": "Canonical na-adjective in node-12, but ja-0294 'この町は夜も静かです。(This town is quiet at night too.)' near-duplicates ja-0168 'この町は静かです。(This town is quiet.)' — same node, same subject+predicate, one word added. Rewrite ja-0294."
+   },
+   {
+    "token": "きれい",
+    "meaning": "pretty/clean (na-adjective)",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "'きれいな花ですね。(Pretty flowers, aren't they?)' / 'この駅はきれいです。(This station is clean.)' / '昨日、海はきれいでした。(The sea was beautiful yesterday.)' — the textbook na-adjective across three different scenes, incl. its past form."
+   },
+   {
+    "token": "したいです",
+    "meaning": "want to do",
+    "judgment": "carrier",
+    "realExcess": 0,
+    "evidence": "All node-18 (desire/-tai node): '週末は何をしたいですか。' / '休みの日は買い物がしたいです。' / '家族と旅行がしたいです。' — the node's target form on the core verb, varied activities."
+   },
+   {
+    "token": "毎日",
+    "meaning": "every day",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "Spread across nodes 06/07/08: '毎日、新聞を読みます。' / '毎日、学校に行きます。' / '毎日、自転車で来ますか。' — honest high-frequency adverb, different actions each time."
+   },
+   {
+    "token": "日本",
+    "meaning": "Japan / Japanese (things)",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "Spread across 4 nodes: '日本の映画を見ますか。' / '日本の車は高いですか。' / '日本ですしを食べたいです。' — Japan-themed content in a Japanese deck, all distinct topics."
+   },
+   {
+    "token": "土曜日",
+    "meaning": "Saturday",
+    "judgment": "vocab",
+    "realExcess": 0,
+    "evidence": "Across nodes 07/10/14: '土曜日にレストランへ行きましょう。' / '土曜日にサッカーをしました。' / '土曜日の朝、九時に起きました。' — day-of-week vocab in unrelated scenes."
+   }
+  ],
+  "realDupPairs": 1,
+  "notes": "300-card starter deck; scanner score 93.3 is almost entirely carrier-density noise (family counts of 3-4 in a small deck, concentrated in the very nodes that teach those forms). Scanner reported 0 near-dups but missed one real pair: ja-0168/ja-0294 (この町は静かです / この町は夜も静かです, same node). The one repeated opening (います x4) is the node-05 existence lesson - carrier. Spot-checks: ranks 100-130 = node-08 de-instrument/location then node-09 negatives, all varied scenes; deck has only 300 cards so the second window was taken at 260-290 (node-17 te-form, node-18 tai/suki) plus tail 291-300 - the tail p285-300 is a deliberate mixed-node review sweep, which explains the recombined cards; no recurring actor/scene beyond textbook-normal mother/coffee/station (deck-wide counts checked: mother x11, coffee x11 - every occurrence a distinct scene and node). English glosses are standard textbook register (\"Won't you...\" for -masenka, \"..., you know\" for yo), no calques. Suggested rewrites: ja-0294 (break the near-dup) and ja-0292 (re-scene the third Kyoto trip). Minor non-clump note: orthography inconsistency iisshoni written いっしょに (ja-0127/0130) vs 一緒に (ja-0288)."
+ }
+]

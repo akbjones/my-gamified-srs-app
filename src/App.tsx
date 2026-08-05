@@ -281,9 +281,6 @@ const App: React.FC = () => {
   const [challengeQuestions, setChallengeQuestions] = useState<ChallengeQuestion[]>([]);
   const [showTools, setShowTools] = useState(false);
   const [showLangDropdown, setShowLangDropdown] = useState(false);
-  // Pressing Study when new cards would join the queue asks first — a session
-  // should never silently grow by the whole remaining daily allowance.
-  const [studyConfirm, setStudyConfirm] = useState(false);
   // "Study more" – shown once today's new-card allowance is spent. Collapsed to
   // a button; expanding asks how many extra cards to pull.
   const [studyMoreOpen, setStudyMoreOpen] = useState(false);
@@ -1061,51 +1058,20 @@ const App: React.FC = () => {
             );
           })()}
 
-          {/* Pre-study confirm – shown instead of the Study button when new
-              cards would join the queue, so the size of the session is always
-              the user's choice. */}
-          {studyConfirm ? (
-            <div className="stat-card px-4 py-4 mb-2 animate-fade-in">
-              <p className="text-sm text-[var(--text-secondary)] text-center mb-3">
-                {reviewsDue > 0
-                  ? `${reviewsDue} ${reviewsDue === 1 ? 'review' : 'reviews'} due. How many new cards today?`
-                  : 'How many new cards today?'}
-              </p>
-              <AddMoreCardsPanel
-                defaultCount={newAvailable}
-                onStart={(count) => { setStudyConfirm(false); handleStartSession(count, true); }}
-              />
-              <div className="flex gap-2 mt-2">
-                {reviewsDue > 0 && (
-                  <button
-                    onClick={() => { setStudyConfirm(false); handleStartSession(0, true); }}
-                    className="flex-1 py-2.5 rounded-xl border border-[var(--border-color)] text-sm font-bold text-[var(--text-secondary)] hover:text-[var(--text-primary)] active:scale-95 transition"
-                  >
-                    Reviews only
-                  </button>
-                )}
-                <button
-                  onClick={() => setStudyConfirm(false)}
-                  className="flex-1 py-2.5 rounded-xl text-sm font-bold text-[var(--text-muted)] hover:text-[var(--text-primary)] active:scale-95 transition"
-                >
-                  Cancel
-                </button>
-              </div>
-            </div>
-          ) : (
-          /* Study button – primary action, generous size so it dominates the home view */
+          {/* Study – primary action. Starts immediately with due reviews plus
+              today's REMAINING new-card allowance (default 20/day, set in
+              Settings). No interstitial: the daily number IS the answer to
+              "how many?", and asking on every press made the default feel
+              unset. The how-many question only exists where it means
+              something – the post-quota "Study more" flow below. */}
           <button
             onClick={() => {
               if (!STARTER_LOCK && !isPlacementComplete(lang)) {
                 // Full-screen fork (PlacementTest intro) – no dismissible modal.
                 // Locked starter links skip placement entirely.
                 setView('PLACEMENT');
-              } else if (newAvailable > 0) {
-                // New cards would join this session – ask how many first
-                // rather than silently adding the whole daily allowance.
-                setStudyConfirm(true);
               } else {
-                handleStartSession(0, true); // reviews only
+                handleStartSession(); // reviews + remaining daily allowance
               }
             }}
             disabled={!hasCards}
@@ -1116,15 +1082,31 @@ const App: React.FC = () => {
             ) : (
               <div className="flex items-baseline justify-center gap-2.5">
                 <span className="font-extrabold text-xl">Study</span>
-                {reviewsDue > 0 && (
+                {(reviewsDue > 0 || newAvailable > 0) && (
                   <>
                     <span className="text-white/40">·</span>
-                    <span className="text-sm font-bold opacity-85">{reviewsDue} to review</span>
+                    <span className="text-sm font-bold opacity-85">
+                      {[
+                        reviewsDue > 0 ? `${reviewsDue} to review` : null,
+                        newAvailable > 0 ? `${newAvailable} new` : null,
+                      ].filter(Boolean).join(' + ')}
+                    </span>
                   </>
                 )}
               </div>
             )}
           </button>
+
+          {/* Reviews only – a real button, not a buried link. Only meaningful
+              when BOTH kinds are on offer; otherwise Study already is one. */}
+          {reviewsDue > 0 && newAvailable > 0 && (
+            <button
+              onClick={() => handleStartSession(0, true)}
+              className="w-full mb-2 px-3 py-3 flex items-center justify-center gap-2 text-sm font-bold text-[var(--text-secondary)] bg-[var(--bg-card)] border border-[var(--border-color)] rounded-xl hover:border-[var(--accent)]/40 hover:text-[var(--accent)] hover:bg-[var(--accent)]/5 active:scale-[0.99] transition-all"
+            >
+              <CheckCheck size={15} />
+              <span>Reviews only · skip new cards today</span>
+            </button>
           )}
 
           {/* Today's quota is spent but there's still material. This is the
@@ -1132,7 +1114,7 @@ const App: React.FC = () => {
               adding a batch, and it stays available even while reviews are
               still due (the old panel below required nothing at all to do,
               so a user with reviews outstanding had no way to add cards). */}
-          {canStudyMore && isPlacementComplete(lang) && !studyConfirm && (
+          {canStudyMore && isPlacementComplete(lang) && (
             studyMoreOpen ? (
               <>
                 <AddMoreCardsPanel

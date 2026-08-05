@@ -2,6 +2,11 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Landscape phones: viewport height under ~500px. Used to compact the study
+   screen's vertical chrome (nav, buttons, paddings) so the sentence and the
+   four rating buttons still fit without clipping. */
+@custom-variant short (@media (max-height: 500px));
+
 /* === THEME TOKENS === */
 :root {
   --bg-primary: #f8fafc;

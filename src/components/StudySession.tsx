@@ -542,9 +542,16 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               : 'text-sm md:text-base';
             const hasRubyCard = !!card!.tokens?.some(t => t.r);
             return (
+              // NOTE: justify-start + an inner my-auto wrapper, NOT
+              // justify-center. Centering an overflowing flex container clips
+              // the TOP of the content and no amount of scrolling can reach it
+              // – exactly what happened to flipped cards in phone landscape.
+              // Auto margins centre when there is room and degrade to a normal
+              // scroll when there is not.
               <div
-                className="flex-1 flex flex-col items-center justify-center px-3 sm:px-5 min-h-0 overflow-y-auto"
+                className="flex-1 flex flex-col items-center justify-start px-3 sm:px-5 min-h-0 overflow-y-auto"
               >
+               <div className="my-auto w-full flex flex-col items-center py-1">
                 {/* Furigana toggle – visible whenever the card carries kana
                     readings; persists across sessions. */}
                 {hasRubyCard && (
@@ -594,7 +601,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                   </button>
                 )}
                 {isFlipped ? (
-                  <div className="mt-4 pt-4 border-t border-[var(--border-color)] w-full animate-fade-in">
+                  <div className="mt-4 pt-4 short:mt-2 short:pt-2 border-t border-[var(--border-color)] w-full animate-fade-in">
                     <p className={`${engSizeClass} text-[var(--text-secondary)] font-bold italic leading-relaxed`}>
                       {card!.english}
                     </p>
@@ -609,10 +616,11 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                     )}
                   </div>
                 ) : (
-                  <div className="mt-6 text-sm text-[var(--text-muted)] font-bold uppercase tracking-widest">
+                  <div className="mt-6 short:mt-3 text-sm text-[var(--text-muted)] font-bold uppercase tracking-widest">
                     Tap to reveal
                   </div>
                 )}
+               </div>
               </div>
             );
           })()}
@@ -620,7 +628,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
           {/* Toolbar – bottom of card, audio actions only. Grammar Tip and
               Etymology moved to the top chip row so they're discoverable
               before flipping. */}
-          <div className="flex items-center justify-center gap-2.5 px-4 py-2.5 shrink-0">
+          <div className="flex items-center justify-center gap-2.5 px-4 py-2.5 short:py-1 shrink-0">
             {isFlipped && (
               <button
                 onClick={handleSlowReplay}
@@ -658,14 +666,14 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
                   <button
                     key={rating}
                     onClick={() => submitAnswer(rating)}
-                    className={`py-6 rounded-xl bg-[var(--bg-card)] border ${cfg.border} ${cfg.bg} ${cfg.color} active:scale-95 transition-all`}
+                    className={`py-6 short:py-2.5 rounded-xl bg-[var(--bg-card)] border ${cfg.border} ${cfg.bg} ${cfg.color} active:scale-95 transition-all`}
                   >
                     <div className="text-sm sm:text-base font-black tracking-wide leading-tight">{cfg.label}</div>
                   </button>
                 );
               })}
             </div>
-            <div className="flex justify-center mt-2 gap-4">
+            <div className="flex justify-center mt-2 short:mt-0 gap-4">
               {onUndoAnswer && session.currentIndex > 0 && (
                 <button
                   onClick={() => {
@@ -693,7 +701,7 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
         )}
 
         {!isFlipped && !tileCardIds.has(card!.id) && (
-          <div className="h-[60px] shrink-0 flex items-center justify-center">
+          <div className="h-[60px] short:h-[36px] shrink-0 flex items-center justify-center">
             {onUndoAnswer && session.currentIndex > 0 && (
               <button
                 onClick={() => { setShowGrammar(false); onUndoAnswer(); }}

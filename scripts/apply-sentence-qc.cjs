@@ -4,7 +4,7 @@
 // and every learner's SRS state are untouched, so progress survives intact.
 // Refuses to write if anything looks unsafe (unknown id, empty text, duplicate
 // sentence, or a replacement that collides with another card).
-// Usage: node scripts/apply-sentence-qc.cjs [--check] [--max-rank=N]
+// Usage: node scripts/apply-sentence-qc.cjs [--check] [--max-rank=N] [--dir=docs/hi-quality/overuse-verify]
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.join(__dirname, '..');
@@ -13,7 +13,8 @@ const maxRankArg = (process.argv.find(a => a.startsWith('--max-rank=')) || '').s
 const MAX_RANK = maxRankArg ? parseInt(maxRankArg, 10) : Infinity;
 
 const DECK = path.join(ROOT, 'src/data/hindi/deck.json');
-const DIR = path.join(ROOT, 'docs/hi-quality/verify');
+const dirArg = (process.argv.find(a => a.startsWith('--dir=')) || '').split('=')[1];
+const DIR = path.join(ROOT, dirArg || 'docs/hi-quality/verify');
 const deck = JSON.parse(fs.readFileSync(DECK, 'utf8'));
 const byId = new Map(deck.map(c => [String(c.id), c]));
 const sorted = [...deck].sort((a, b) => (a.priority ?? 9e9) - (b.priority ?? 9e9));

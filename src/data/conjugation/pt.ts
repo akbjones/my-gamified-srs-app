@@ -36,10 +36,50 @@ const PT_IRREGULAR_PARTICIPLES: Record<string, string> = {
   dispor: 'disposto', opor: 'oposto', impor: 'imposto', depor: 'deposto',
   refazer: 'refeito', desfazer: 'desfeito',
 };
+// ── Compound verbs (explicitly enumerated — never suffix-matched) ──
+// Each compound conjugates as prefix + base. Enumeration matters: "bater"
+// ends in -ter but is NOT a ter compound, and "requerer" must NOT derive
+// from querer (its preterite is the regular "requeri", never "requis").
+const COMPOUNDS: Record<string, string> = {
+  // ter
+  manter: 'ter', obter: 'ter', conter: 'ter', deter: 'ter', reter: 'ter',
+  suster: 'ter', entreter: 'ter', abster: 'ter',
+  // vir
+  intervir: 'vir', convir: 'vir', provir: 'vir', advir: 'vir',
+  // ver
+  prever: 'ver', rever: 'ver', antever: 'ver',
+  // fazer
+  satisfazer: 'fazer', desfazer: 'fazer', refazer: 'fazer',
+  // dizer
+  predizer: 'dizer', contradizer: 'dizer', desdizer: 'dizer',
+  // pedir (impeço / despeço / expeço)
+  impedir: 'pedir', despedir: 'pedir', expedir: 'pedir',
+  // seguir
+  prosseguir: 'seguir',
+  // pôr — every -por verb is a pôr compound (also derived generically below)
+  compor: 'pôr', propor: 'pôr', supor: 'pôr', dispor: 'pôr', impor: 'pôr',
+  opor: 'pôr', repor: 'pôr', expor: 'pôr', depor: 'pôr', pressupor: 'pôr',
+};
+
+// Junction accents: prefixed monosyllabic forms gain a written accent
+// (ter: tens→manténs, tem→mantém; vir: vens→intervéns, vem→intervém).
+const COMPOUND_ACCENT: Record<string, Record<string, string>> = {
+  ter: { tens: 'téns', tem: 'tém' },
+  vir: { vens: 'véns', vem: 'vém' },
+};
+
 function ptPastParticiple(inf: string): string {
   if (PT_IRREGULAR_PARTICIPLES[inf]) return PT_IRREGULAR_PARTICIPLES[inf];
+  const base = COMPOUNDS[inf];
+  if (base) return inf.slice(0, inf.length - base.length) + ptPastParticiple(base);
+  if (inf !== 'pôr' && inf.endsWith('por')) return inf.slice(0, -3) + 'posto';
   if (inf.endsWith('ar')) return inf.slice(0, -2) + 'ado';
-  if (inf.endsWith('er') || inf.endsWith('ir')) return inf.slice(0, -2) + 'ido';
+  if (inf.endsWith('er') || inf.endsWith('ir')) {
+    // Vowel-final stems take an accented participle (saído, moído,
+    // contribuído) — gu/qu digraphs don't count (seguido, not *seguído).
+    const hiatus = /[aeiou][ei]r$/.test(inf) && !/[gq]u[ei]r$/.test(inf);
+    return inf.slice(0, -2) + (hiatus ? 'ído' : 'ido');
+  }
   return inf;
 }
 const REFLEXIVE_PRONOUNS: Forms = ['me', 'te', 'se', 'nos', 'vos', 'se'];
@@ -140,106 +180,47 @@ function regularAll(inf: string): Record<TenseKey, Forms> {
   return result;
 }
 
-// ── Spelling-change helpers ─────────────────────────────────
-// Portuguese orthographic rules to preserve consonant sounds
+// ── Orthography (pattern-based) ─────────────────────────────
+// Portuguese spelling changes are exceptionless orthography, not lexical
+// quirks: EVERY -car/-gar/-çar verb changes before e (fiquei/cheguei/
+// comecei) and EVERY -cer/-ger/-gir/-guer/-guir verb changes before a/o
+// (venço/protejo/surjo/ergo/sigo). The old per-verb table here silently
+// produced "pegei"/"venco" for any verb it didn't list — the root cause of
+// the "certain verbs" bug reports. Pattern-matching is safe for pure
+// orthography (unlike stem changes, which stay enumerated below).
 
-interface SpellingSpec {
-  from: string;
-  to: string;
-  /** Contexts where the change applies: 'e' = before e, 'ao' = before a/o */
-  context: 'e' | 'ao';
-}
-
-/**
- * Apply spelling changes.
- * For context 'e': affects preterite eu (pos 0) and all subjunctive forms (-ar verbs)
- * For context 'ao': affects present eu (pos 0) and all subjunctive forms (-er/-ir verbs)
- */
-function applySpellingChange(inf: string, spec: SpellingSpec): PartialTenses {
-  const s = stem(inf);
-  const override: PartialTenses = {};
-
-  if (spec.context === 'e') {
-    // -car, -gar, -car verbs: change before e (preterite 1st person, subjunctive)
-    // Preterite: only eu form
-    const pret = [...regular(inf, 'preterite')] as Forms;
-    const idx = s.lastIndexOf(spec.from);
-    if (idx >= 0) {
-      const newStem = s.slice(0, idx) + spec.to + s.slice(idx + spec.from.length);
-      pret[0] = newStem + REG.ar.preterite[0];
-    }
-    override.preterite = pret;
-
-    // Subjunctive: all forms
-    const subjEndings = REG.ar.subjunctive;
-    const newStemAll = s.slice(0, s.lastIndexOf(spec.from)) + spec.to + s.slice(s.lastIndexOf(spec.from) + spec.from.length);
-    override.subjunctive = subjEndings.map(e => newStemAll + e) as unknown as Forms;
+/** Fix a stem-final consonant for an ending starting with the given vowel
+ *  class ('e' = front vowel, 'ao' = back vowel). Returns stem unchanged
+ *  when no rule applies. */
+function orthoFix(stemStr: string, context: 'e' | 'ao'): string {
+  if (context === 'e') {
+    if (stemStr.endsWith('ç')) return stemStr.slice(0, -1) + 'c';  // começ → comec(ei)
+    if (stemStr.endsWith('c')) return stemStr.slice(0, -1) + 'qu'; // fic → fiqu(ei)
+    if (stemStr.endsWith('g')) return stemStr + 'u';               // cheg → chegu(ei)
   } else {
-    // -ger, -gir, -cer, -guir verbs: change before a/o (present 1st person, subjunctive)
-    // Present: only eu form
-    const vc = verbClass(inf)!;
-    const pres = [...regular(inf, 'present')] as Forms;
-    const idx = s.lastIndexOf(spec.from);
-    if (idx >= 0) {
-      const newStem = s.slice(0, idx) + spec.to + s.slice(idx + spec.from.length);
-      pres[0] = newStem + REG[vc].present[0];
-    }
-    override.present = pres;
-
-    // Subjunctive: all forms (subjunctive endings for -er/-ir start with a)
-    const subjEndings = REG[vc].subjunctive;
-    const newStemAll = s.slice(0, s.lastIndexOf(spec.from)) + spec.to + s.slice(s.lastIndexOf(spec.from) + spec.from.length);
-    override.subjunctive = subjEndings.map(e => newStemAll + e) as unknown as Forms;
+    if (stemStr.endsWith('gu')) return stemStr.slice(0, -1);       // ergu → erg(o), distingu → disting(o)
+    if (stemStr.endsWith('qu')) return stemStr.slice(0, -2) + 'c'; // delinqu → delinc(o)
+    if (stemStr.endsWith('ç')) return stemStr;                     // already back-vowel spelling
+    if (stemStr.endsWith('c')) return stemStr.slice(0, -1) + 'ç';  // venc → venç(o)
+    if (stemStr.endsWith('g')) return stemStr.slice(0, -1) + 'j';  // proteg → protej(o)
   }
-
-  return override;
+  return stemStr;
 }
 
-// Verbs with spelling changes
-const SPELLING_RULES: Record<string, SpellingSpec> = {
-  // -car verbs: c -> qu before e
-  ficar:      { from: 'c', to: 'qu', context: 'e' },
-  tocar:      { from: 'c', to: 'qu', context: 'e' },
-  buscar:     { from: 'c', to: 'qu', context: 'e' },
-  explicar:   { from: 'c', to: 'qu', context: 'e' },
-  comunicar:  { from: 'c', to: 'qu', context: 'e' },
-  indicar:    { from: 'c', to: 'qu', context: 'e' },
-  praticar:   { from: 'c', to: 'qu', context: 'e' },
-  publicar:   { from: 'c', to: 'qu', context: 'e' },
-  // -gar verbs: g -> gu before e
-  pagar:      { from: 'g', to: 'gu', context: 'e' },
-  chegar:     { from: 'g', to: 'gu', context: 'e' },
-  jogar:      { from: 'g', to: 'gu', context: 'e' },
-  entregar:   { from: 'g', to: 'gu', context: 'e' },
-  // -çar verbs: ç -> c before e
-  começar:    { from: 'ç', to: 'c', context: 'e' },
-  dançar:     { from: 'ç', to: 'c', context: 'e' },
-  almoçar:    { from: 'ç', to: 'c', context: 'e' },
-  abraçar:    { from: 'ç', to: 'c', context: 'e' },
-  // -ger/-gir verbs: g -> j before a/o
-  proteger:   { from: 'g', to: 'j', context: 'ao' },
-  eleger:     { from: 'g', to: 'j', context: 'ao' },
-  fugir:      { from: 'g', to: 'j', context: 'ao' },
-  dirigir:    { from: 'g', to: 'j', context: 'ao' },
-  exigir:     { from: 'g', to: 'j', context: 'ao' },
-  // -cer verbs: c -> ç before a/o
-  conhecer:   { from: 'c', to: 'ç', context: 'ao' },
-  parecer:    { from: 'c', to: 'ç', context: 'ao' },
-  esquecer:   { from: 'c', to: 'ç', context: 'ao' },
-  oferecer:   { from: 'c', to: 'ç', context: 'ao' },
-  acontecer:  { from: 'c', to: 'ç', context: 'ao' },
-  agradecer:  { from: 'c', to: 'ç', context: 'ao' },
-  crescer:    { from: 'c', to: 'ç', context: 'ao' },
-  merecer:    { from: 'c', to: 'ç', context: 'ao' },
-  pertencer:  { from: 'c', to: 'ç', context: 'ao' },
-  reconhecer: { from: 'c', to: 'ç', context: 'ao' },
-  // -guir verbs: gu -> g before a/o
-  seguir:     { from: 'gu', to: 'g', context: 'ao' },
-  conseguir:  { from: 'gu', to: 'g', context: 'ao' },
-  perseguir:  { from: 'gu', to: 'g', context: 'ao' },
-  distinguir: { from: 'gu', to: 'g', context: 'ao' },
-  extinguir:  { from: 'gu', to: 'g', context: 'ao' },
-};
+// Common orthography-changing lemmas, kept only to seed the reverse map so
+// forms like "fiquei" / "sigo" hit the precomputed lookup directly.
+const ORTHO_SEED_LEMMAS = [
+  'ficar', 'tocar', 'buscar', 'explicar', 'comunicar', 'indicar', 'praticar',
+  'publicar', 'marcar', 'trocar', 'secar', 'significar', 'verificar',
+  'pagar', 'chegar', 'jogar', 'entregar', 'pegar', 'ligar',
+  'começar', 'dançar', 'almoçar', 'abraçar',
+  'proteger', 'eleger', 'fugir', 'dirigir', 'exigir', 'surgir', 'atingir',
+  'fingir', 'agir', 'reagir', 'corrigir', 'erguer',
+  'conhecer', 'parecer', 'esquecer', 'oferecer', 'acontecer', 'agradecer',
+  'crescer', 'merecer', 'pertencer', 'reconhecer', 'vencer', 'descer',
+  'nascer', 'aquecer',
+  'seguir', 'conseguir', 'perseguir', 'distinguir', 'extinguir',
+];
 
 // ── -ear verb handling ──────────────────────────────────────
 // -ear verbs: insert 'i' before stressed endings in present (eu, tu, ele, eles)
@@ -247,32 +228,38 @@ const SPELLING_RULES: Record<string, SpellingSpec> = {
 const EAR_VERBS = new Set([
   'passear', 'recear', 'nomear', 'chatear', 'bloquear',
   'golpear', 'frear', 'semear', 'estrear',
+  // dictionary lemmas the old set missed
+  'barbear', 'basear', 'cachear', 'nortear',
 ]);
 
 function applyEarChange(inf: string): PartialTenses {
   const s = stem(inf); // e.g., 'passe' for 'passear'
-  const override: PartialTenses = {};
-
-  // Present: insert i before stressed a/e/o endings in boot positions [0,1,2,5]
+  // Present: insert i before stressed endings in boot positions [0,1,2,5].
+  // Subjunctive (passeie / passeemos) now derives from the 1sg present in
+  // the shared derivation step, so only the present is overridden here.
   const pres = [...regular(inf, 'present')] as Forms;
-  // eu: passeio, tu: passeias, ele: passeia, eles: passeiam
-  pres[0] = s + 'io';
-  pres[1] = s + 'ias';
-  pres[2] = s + 'ia';
-  pres[5] = s + 'iam';
-  override.present = pres;
+  pres[0] = s + 'io';   // passeio
+  pres[1] = s + 'ias';  // passeias
+  pres[2] = s + 'ia';   // passeia
+  pres[5] = s + 'iam';  // passeiam
+  return { present: pres };
+}
 
-  // Subjunctive: all forms get 'i' inserted: passeie, passeies, passeie, passeiemos, passeeis, passeiem
-  // Actually: passeie, passeies, passeie, passeemos, passeeis, passeiem
-  const subj = [...regular(inf, 'subjunctive')] as Forms;
-  subj[0] = s + 'ie';
-  subj[1] = s + 'ies';
-  subj[2] = s + 'ie';
-  // nos/vos keep regular: passeemos, passeeis
-  subj[5] = s + 'iem';
-  override.subjunctive = subj;
+// -iar verbs that conjugate like -ear in the boot (the "MARIO" set:
+// Mediar, Ansiar, Remediar, Incendiar, Odiar → odeio/odeias/odeia/odeiam).
+// Every other -iar verb is regular (anuncio, copio, envio...) — this is a
+// closed lexical class, so it is enumerated, never suffix-matched.
+const ODIAR_VERBS = new Set(['odiar', 'mediar', 'ansiar', 'remediar', 'incendiar']);
 
-  return override;
+function applyOdiarChange(inf: string): PartialTenses {
+  const s = stem(inf);                 // odi
+  const boot = s.slice(0, -1) + 'ei';  // odei
+  const pres = [...regular(inf, 'present')] as Forms;
+  pres[0] = boot + 'o';   // odeio
+  pres[1] = boot + 'as';  // odeias
+  pres[2] = boot + 'a';   // odeia
+  pres[5] = boot + 'am';  // odeiam
+  return { present: pres };
 }
 
 // ── Stem-change helpers ─────────────────────────────────────
@@ -328,33 +315,34 @@ const STEM_CHANGERS: Record<string, StemChangeSpec> = {
   ferir:     { from: 'e', to: 'i', positions: [0] },
   aderir:    { from: 'e', to: 'i', positions: [0] },
   inserir:   { from: 'e', to: 'i', positions: [0] },
+  // -ferir family (confiro / refiro / transfiro ...)
+  aferir:     { from: 'e', to: 'i', positions: [0] },
+  conferir:   { from: 'e', to: 'i', positions: [0] },
+  referir:    { from: 'e', to: 'i', positions: [0] },
+  inferir:    { from: 'e', to: 'i', positions: [0] },
+  indeferir:  { from: 'e', to: 'i', positions: [0] },
+  interferir: { from: 'e', to: 'i', positions: [0] },
+  transferir: { from: 'e', to: 'i', positions: [0] },
   // o -> u (present: eu only)
   dormir:    { from: 'o', to: 'u', positions: [0] },
   cobrir:    { from: 'o', to: 'u', positions: [0] },
   descobrir: { from: 'o', to: 'u', positions: [0] },
   engolir:   { from: 'o', to: 'u', positions: [0] },
   tossir:    { from: 'o', to: 'u', positions: [0] },
+  demolir:   { from: 'o', to: 'u', positions: [0] },
   // u -> o (present: boot pattern -- eu stays u, others get o)
+  // NOTE: enumerated, never matched on -umir/-ubir: assumir/presumir/resumir
+  // are fully regular — the Turkish lookalike trap all over again.
   subir:     { from: 'u', to: 'o', positions: [1, 2, 5] },
   acudir:    { from: 'u', to: 'o', positions: [1, 2, 5] },
   sacudir:   { from: 'u', to: 'o', positions: [1, 2, 5] },
+  consumir:  { from: 'u', to: 'o', positions: [1, 2, 5] },
+  sumir:     { from: 'u', to: 'o', positions: [1, 2, 5] },
   // e -> i for -eguir verbs (handled via spelling + stem change interaction)
   seguir:    { from: 'e', to: 'i', positions: [0] },
   conseguir: { from: 'e', to: 'i', positions: [0] },
   perseguir: { from: 'e', to: 'i', positions: [0] },
 };
-
-function applyStemChanges(inf: string, spec: StemChangeSpec): PartialTenses {
-  const s = stem(inf);
-  const override: PartialTenses = {};
-
-  // Present: apply to specified positions
-  override.present = applyStemChangePositions(
-    regular(inf, 'present'), spec.from, spec.to, spec.positions, s
-  );
-
-  return override;
-}
 
 // ── Irregular future/conditional stems ───────────────────────
 function futCond(s: string): Pick<PartialTenses, 'future' | 'conditional'> {
@@ -501,7 +489,7 @@ const IRREGULARS: Record<string, PartialTenses> = {
     subjunctive: f('traga,tragas,traga,tragamos,tragais,tragam'),
     ...futCond('trar'),
   },
-  // ─── por (and derivatives) ───
+  // ─── pôr (compounds — compor/propor/… — derive via COMPOUNDS) ───
   'pôr': {
     present:     f('ponho,pões,põe,pomos,pondes,põem'),
     preterite:   f('pus,puseste,pôs,pusemos,pusestes,puseram'),
@@ -509,61 +497,12 @@ const IRREGULARS: Record<string, PartialTenses> = {
     subjunctive: f('ponha,ponhas,ponha,ponhamos,ponhais,ponham'),
     ...futCond('por'),
   },
-  compor: {
-    present:     f('componho,compões,compõe,compomos,compondes,compõem'),
-    preterite:   f('compus,compuseste,compôs,compusemos,compusestes,compuseram'),
-    imperfect:   f('compunha,compunhas,compunha,compúnhamos,compúnheis,compunham'),
-    subjunctive: f('componha,componhas,componha,componhamos,componhais,componham'),
-    ...futCond('compor'),
-  },
-  propor: {
-    present:     f('proponho,propões,propõe,propomos,propondes,propõem'),
-    preterite:   f('propus,propuseste,propôs,propusemos,propusestes,propuseram'),
-    imperfect:   f('propunha,propunhas,propunha,propúnhamos,propúnheis,propunham'),
-    subjunctive: f('proponha,proponhas,proponha,proponhamos,proponhais,proponham'),
-    ...futCond('propor'),
-  },
-  supor: {
-    present:     f('suponho,supões,supõe,supomos,supondes,supõem'),
-    preterite:   f('supus,supuseste,supôs,supusemos,supusestes,supuseram'),
-    imperfect:   f('supunha,supunhas,supunha,supúnhamos,supúnheis,supunham'),
-    subjunctive: f('suponha,suponhas,suponha,suponhamos,suponhais,suponham'),
-    ...futCond('supor'),
-  },
-  dispor: {
-    present:     f('disponho,dispões,dispõe,dispomos,dispondes,dispõem'),
-    preterite:   f('dispus,dispuseste,dispôs,dispusemos,dispusestes,dispuseram'),
-    imperfect:   f('dispunha,dispunhas,dispunha,dispúnhamos,dispúnheis,dispunham'),
-    subjunctive: f('disponha,disponhas,disponha,disponhamos,disponhais,disponham'),
-    ...futCond('dispor'),
-  },
-  impor: {
-    present:     f('imponho,impões,impõe,impomos,impondes,impõem'),
-    preterite:   f('impus,impuseste,impôs,impusemos,impusestes,impuseram'),
-    imperfect:   f('impunha,impunhas,impunha,impúnhamos,impúnheis,impunham'),
-    subjunctive: f('imponha,imponhas,imponha,imponhamos,imponhais,imponham'),
-    ...futCond('impor'),
-  },
-  opor: {
-    present:     f('oponho,opões,opõe,opomos,opondes,opõem'),
-    preterite:   f('opus,opuseste,opôs,opusemos,opusestes,opuseram'),
-    imperfect:   f('opunha,opunhas,opunha,opúnhamos,opúnheis,opunham'),
-    subjunctive: f('oponha,oponhas,oponha,oponhamos,oponhais,oponham'),
-    ...futCond('opor'),
-  },
-  repor: {
-    present:     f('reponho,repões,repõe,repomos,repondes,repõem'),
-    preterite:   f('repus,repuseste,repôs,repusemos,repusestes,repuseram'),
-    imperfect:   f('repunha,repunhas,repunha,repúnhamos,repúnheis,repunham'),
-    subjunctive: f('reponha,reponhas,reponha,reponhamos,reponhais,reponham'),
-    ...futCond('repor'),
-  },
-  expor: {
-    present:     f('exponho,expões,expõe,expomos,expondes,expõem'),
-    preterite:   f('expus,expuseste,expôs,expusemos,expusestes,expuseram'),
-    imperfect:   f('expunha,expunhas,expunha,expúnhamos,expúnheis,expunham'),
-    subjunctive: f('exponha,exponhas,exponha,exponhamos,exponhais,exponham'),
-    ...futCond('expor'),
+  // ─── requerer ───
+  // NOT a querer compound: preterite is the regular "requeri" (never
+  // "requis"), future is "requererei". Only present eu + subjunctive shift.
+  requerer: {
+    present:     f('requeiro,requeres,requer,requeremos,requereis,requerem'),
+    subjunctive: f('requeira,requeiras,requeira,requeiramos,requeirais,requeiram'),
   },
   // ─── caber ───
   caber: {
@@ -781,6 +720,164 @@ const IRREGULARS: Record<string, PartialTenses> = {
 };
 
 // ── Main conjugation function ────────────────────────────────
+
+/** Conjugate a compound as prefix + base forms, with junction accents
+ *  (manter → mantém, intervir → intervém, compor → compõe). */
+function buildCompound(inf: string, base: string): Record<TenseKey, Forms> | null {
+  const prefix = inf.slice(0, inf.length - base.length);
+  if (!prefix) return null;
+  const baseTenses = buildTenses(base);
+  if (!baseTenses) return null;
+  const accent = COMPOUND_ACCENT[base] ?? {};
+  const out = {} as Record<TenseKey, Forms>;
+  for (const t of TENSES) {
+    out[t] = baseTenses[t].map(raw =>
+      raw
+        .split('/')
+        .map(p => (!p || p === '-') ? p : prefix + (accent[p] ?? p))
+        .join('/')
+    ) as unknown as Forms;
+  }
+  return out;
+}
+
+/** Build the full (unlabeled, non-reflexive) tense table for an infinitive. */
+function buildTenses(inf: string): Record<TenseKey, Forms> | null {
+  const vc = verbClass(inf);
+  if (!vc) return null;
+
+  // pôr itself is enumerated; every other -or verb is a pôr compound
+  // (compor, propor, pressupor, ...) and derives from it with a prefix.
+  if (vc === 'or') {
+    if (inf !== 'pôr') return buildCompound(inf, 'pôr');
+    const irr = IRREGULARS['pôr'];
+    const subj = irr.subjunctive!;
+    return {
+      present:     irr.present!,
+      preterite:   irr.preterite!,
+      imperfect:   irr.imperfect!,
+      future:      irr.future!,
+      conditional: irr.conditional!,
+      subjunctive: subj,
+      imperative:  ['-', IRREGULAR_TU_IMPERATIVE['pôr'], subj[2], subj[3], IRREGULAR_VOS_IMPERATIVE['pôr'], subj[5]] as unknown as Forms,
+      past_participle: ['-', '-', ptPastParticiple('pôr'), '-', '-', '-'] as unknown as Forms,
+    };
+  }
+
+  // Enumerated compounds (manter, intervir, prever, satisfazer, ...)
+  if (COMPOUNDS[inf]) return buildCompound(inf, COMPOUNDS[inf]);
+
+  // Start with regular conjugation
+  let tenses = regularAll(inf);
+  const s = stem(inf);
+
+  // Orthography, pattern-based (see orthoFix):
+  // -ar verbs adjust before the e of the preterite-eu (fiquei/cheguei/comecei);
+  // -er/-ir verbs adjust before the o of the present-eu (venço/protejo/sigo→ ergo).
+  // The subjunctive inherits both automatically via the 1sg derivation below.
+  if (vc === 'ar') {
+    const fixed = orthoFix(s, 'e');
+    if (fixed !== s) {
+      const pret = [...tenses.preterite] as Forms;
+      pret[0] = fixed + 'ei';
+      tenses.preterite = pret;
+    }
+  } else {
+    const fixed = orthoFix(s, 'ao');
+    if (fixed !== s) {
+      const pres = [...tenses.present] as Forms;
+      pres[0] = fixed + 'o';
+      tenses.present = pres;
+    }
+  }
+
+  // Hiatus -ir verbs (-air/-uir, but never -guir/-quir): the stem ends in a
+  // vowel, so the theme vowel i takes a written accent when stressed
+  // (saio/saímos/saí/saía, contribuo/contribuis/contribuí/contribuía).
+  // Class-wide phonological rule — every such verb behaves this way.
+  const isHiatus = vc === 'ir' && /[au]ir$/.test(inf) && !/[gq]uir$/.test(inf);
+  if (isHiatus) {
+    tenses.present   = apply(s, inf.endsWith('air') ? f('io,is,i,ímos,ís,em') : f('o,is,i,ímos,ís,em'));
+    tenses.preterite = apply(s, f('í,íste,iu,ímos,ístes,íram'));
+    tenses.imperfect = apply(s, f('ía,ías,ía,íamos,íeis,íam'));
+    const imp = [...tenses.imperative] as Forms;
+    imp[4] = s + 'í'; // vós imperative: saí, contribuí
+    tenses.imperative = imp;
+  }
+
+  // Hiatus -oer verbs (doer, moer, roer, corroer): mói/móis take an acute,
+  // í appears when stressed (moí, moía). Same closed class-wide rule.
+  if (vc === 'er' && inf.endsWith('oer')) {
+    const b = s.slice(0, -1); // d / m / r
+    tenses.present   = apply(b, f('oo,óis,ói,oemos,oeis,oem'));
+    tenses.preterite = apply(b, f('oí,oeste,oeu,oemos,oestes,oeram'));
+    tenses.imperfect = apply(b, f('oía,oías,oía,oíamos,oíeis,oíam'));
+  }
+
+  // -uzir verbs drop the final e in the 3sg present (produz, traduz, aduz) —
+  // also class-wide.
+  if (inf.endsWith('uzir')) {
+    const pres = [...tenses.present] as Forms;
+    pres[2] = s; // stem of aduzir is "aduz"
+    tenses.present = pres;
+  }
+
+  // -ear boot i-insertion (passeio) and the enumerated odiar class (odeio)
+  if (EAR_VERBS.has(inf)) tenses = merge(tenses, applyEarChange(inf));
+  if (ODIAR_VERBS.has(inf)) tenses = merge(tenses, applyOdiarChange(inf));
+
+  // Apply stem changes (enumerated -ir verbs without full irregular override)
+  if (STEM_CHANGERS[inf] && !IRREGULARS[inf]) {
+    const spec = STEM_CHANGERS[inf];
+    tenses = merge(tenses, {
+      present: applyStemChangePositions(tenses.present, spec.from, spec.to, spec.positions, s),
+    });
+  }
+
+  // Apply full irregular overrides (highest priority)
+  if (IRREGULARS[inf]) {
+    tenses = merge(tenses, IRREGULARS[inf]);
+  }
+
+  // Derive the present subjunctive from the FINAL 1sg present unless an
+  // irregular table provides it explicitly. This is the actual Portuguese
+  // rule (venço→vença, prefiro→prefira, contribuo→contribua, fico→fique)
+  // and is what the old per-verb subjunctive overrides kept getting wrong
+  // for anything not enumerated. -ar keeps its regular stem in nós/vós
+  // (passeemos, not *passeiemos), with e-context orthography at the seam.
+  if (!IRREGULARS[inf]?.subjunctive) {
+    const p1 = tenses.present[0];
+    if (p1 && p1 !== '-' && p1.endsWith('o')) {
+      const st1 = p1.slice(0, -1);
+      if (vc === 'ar') {
+        const boot = orthoFix(st1, 'e');
+        const nv = orthoFix(s, 'e');
+        tenses.subjunctive = [
+          boot + 'e', boot + 'es', boot + 'e', nv + 'emos', nv + 'eis', boot + 'em',
+        ] as unknown as Forms;
+      } else {
+        tenses.subjunctive = apply(st1, REG[vc].subjunctive);
+      }
+    }
+  }
+
+  // Imperative: tu (slot 1) = 3sg present (fala/come/sai/produz) unless an
+  // irregular tu form is mapped (sê/vai/faz); você/nós/vocês (2/3/5) come
+  // from the FINAL subjunctive so every irregular subjunctive flows through.
+  const imp = [...tenses.imperative] as Forms;
+  imp[1] = IRREGULAR_TU_IMPERATIVE[inf] ?? tenses.present[2];
+  imp[2] = tenses.subjunctive[2];
+  imp[3] = tenses.subjunctive[3];
+  imp[5] = tenses.subjunctive[5];
+  if (IRREGULAR_VOS_IMPERATIVE[inf]) imp[4] = IRREGULAR_VOS_IMPERATIVE[inf];
+  tenses.imperative = imp;
+
+  // Past participle as a standalone tense row, single form in slot 2.
+  tenses.past_participle = ['-', '-', ptPastParticiple(inf), '-', '-', '-'] as Forms;
+
+  return tenses;
+}
+
 export function conjugate(infinitive: string): ConjugationTable | null {
   if (!infinitive) return null;
   const raw = infinitive.trim().toLowerCase();
@@ -796,87 +893,11 @@ export function conjugate(infinitive: string): ConjugationTable | null {
     isReflexive = true;
   }
 
-  // Validate verb class
-  const vc = verbClass(inf);
-  if (!vc) return null;
-
-  // Handle -or verbs (por and derivatives): they are fully irregular
-  if (vc === 'or') {
-    const irrData = IRREGULARS[inf];
-    if (!irrData) return null; // unknown -or verb
-
-    // Build a base from the irregular data. -or verbs need full overrides.
-    // Use pôr regular pattern as fallback (future/conditional use 'por' stem)
-    const subj = irrData.subjunctive || f(',,,,, ');
-    const base: Record<TenseKey, Forms> = {
-      present:     irrData.present || f(',,,,, '),
-      preterite:   irrData.preterite || f(',,,,, '),
-      imperfect:   irrData.imperfect || f(',,,,, '),
-      future:      irrData.future || f(',,,,, '),
-      conditional: irrData.conditional || f(',,,,, '),
-      subjunctive: subj,
-      // Build imperative from subjunctive (slots 2/3/5) + irregular tu (slot 1)
-      // + vosotros-style slot 4 (pôr → ponde).
-      imperative: ['-', IRREGULAR_TU_IMPERATIVE[inf] || subj[2], subj[2], subj[3], 'ponde', subj[5]] as unknown as Forms,
-      past_participle: ['-', '-', ptPastParticiple(inf), '-', '-', '-'] as unknown as Forms,
-    };
-
-    // Prepend reflexive pronouns if needed
-    const tenses = applyReflexive(base, isReflexive);
-
-    // Remap tense keys to localized labels
-    const labeledTenses: Record<string, string[]> = {};
-    for (const t of TENSES) {
-      labeledTenses[TENSE_LABELS[t]] = [...tenses[t]];
-    }
-
-    return {
-      infinitive: raw,
-      isReflexive,
-      tenses: labeledTenses,
-    };
-  }
-
-  // Start with regular conjugation
-  let tenses = regularAll(inf);
-
-  // Apply spelling changes (if any)
-  if (SPELLING_RULES[inf]) {
-    tenses = merge(tenses, applySpellingChange(inf, SPELLING_RULES[inf]));
-  }
-
-  // Apply -ear verb changes
-  if (EAR_VERBS.has(inf)) {
-    tenses = merge(tenses, applyEarChange(inf));
-  }
-
-  // Apply stem changes (if any, for -ir verbs without full irregular override)
-  if (STEM_CHANGERS[inf] && !IRREGULARS[inf]) {
-    tenses = merge(tenses, applyStemChanges(inf, STEM_CHANGERS[inf]));
-  }
-
-  // Apply full irregular overrides (highest priority)
-  if (IRREGULARS[inf]) {
-    tenses = merge(tenses, IRREGULARS[inf]);
-  }
-
-  // Derive imperative slots 2/3/5 from the FINAL subjunctive — every
-  // irregular subjunctive (sea/tenha/vá/...) flows through automatically.
-  // Slot 1 (tu) keeps the regular stem-changed form unless we have an
-  // irregular tu form mapped.
-  const imp = [...tenses.imperative] as Forms;
-  imp[2] = tenses.subjunctive[2];
-  imp[3] = tenses.subjunctive[3];
-  imp[5] = tenses.subjunctive[5];
-  if (IRREGULAR_TU_IMPERATIVE[inf]) imp[1] = IRREGULAR_TU_IMPERATIVE[inf];
-  if (IRREGULAR_VOS_IMPERATIVE[inf]) imp[4] = IRREGULAR_VOS_IMPERATIVE[inf];
-  tenses.imperative = imp;
-
-  // Past participle as a standalone tense row, single form in slot 2.
-  tenses.past_participle = ['-', '-', ptPastParticiple(inf), '-', '-', '-'] as Forms;
+  const built = buildTenses(inf);
+  if (!built) return null;
 
   // Prepend reflexive pronouns if needed
-  const finalTenses = applyReflexive(tenses, isReflexive);
+  const finalTenses = applyReflexive(built, isReflexive);
 
   // Remap tense keys to localized labels
   const labeledTenses: Record<string, string[]> = {};
@@ -909,8 +930,8 @@ function gerundOf(inf: string): string {
 
 // Common REGULAR verbs used to disambiguate ambiguous person endings
 // (-a/-e/-o/-am/-em/... can belong to -ar, -er or -ir paradigms).
-// Verbs already present in IRREGULARS / SPELLING_RULES / STEM_CHANGERS /
-// EAR_VERBS do not need to be listed here.
+// Verbs already present in IRREGULARS / COMPOUNDS / STEM_CHANGERS /
+// EAR_VERBS / ORTHO_SEED_LEMMAS do not need to be listed here.
 const KNOWN_REGULAR_VERBS = new Set([
   // -er
   'comer', 'beber', 'viver', 'escrever', 'aprender', 'entender', 'compreender',
@@ -930,7 +951,15 @@ const KNOWN_REGULAR_VERBS = new Set([
   'agir', 'reagir', 'corrigir', 'proibir', 'contribuir', 'distribuir',
   'atribuir', 'evoluir', 'diminuir', 'substituir', 'assumir', 'consumir',
   'presumir', 'resumir', 'investir', 'aplaudir', 'expandir', 'refletir',
-  'adquirir', 'interferir', 'transferir', 'sorrir', 'confundir',
+  'adquirir', 'sorrir', 'confundir',
+  'demitir', 'latir', 'incumbir', 'iludir',
+  // hiatus -air / -uir (tables come from the class-wide rule; listed here so
+  // findInfinitive resolves their ambiguous person endings)
+  'cair', 'atrair', 'trair', 'extrair', 'distrair', 'contrair',
+  'concluir', 'constituir', 'destituir', 'reconstruir', 'excluir',
+  'instruir', 'influir', 'fluir', 'retribuir',
+  // -uzir (aduz/introduz/reluz come from the class-wide 3sg rule)
+  'aduzir', 'introduzir', 'reluzir', 'deduzir', 'seduzir',
   // -iar (present: anuncio/anuncia — the 'ia' ending is NOT imperfect here)
   'anunciar', 'pronunciar', 'denunciar', 'copiar', 'negociar', 'premiar',
   'adiar', 'confiar', 'desconfiar', 'variar', 'criar', 'guiar', 'enviar',
@@ -960,9 +989,11 @@ const KNOWN_REGULAR_VERBS = new Set([
 
 const KNOWN_VERBS = new Set<string>([
   ...Object.keys(IRREGULARS),
-  ...Object.keys(SPELLING_RULES),
+  ...Object.keys(COMPOUNDS),
+  ...ORTHO_SEED_LEMMAS,
   ...Object.keys(STEM_CHANGERS),
   ...EAR_VERBS,
+  ...ODIAR_VERBS,
   ...Object.keys(PT_IRREGULAR_PARTICIPLES),
   ...KNOWN_REGULAR_VERBS,
 ]);
@@ -982,9 +1013,11 @@ function addReverse(form: string, inf: string): void {
 (function buildReverseMap(): void {
   const lemmas = [
     ...Object.keys(IRREGULARS),
-    ...Object.keys(SPELLING_RULES),
+    ...Object.keys(COMPOUNDS),
+    ...ORTHO_SEED_LEMMAS,
     ...Object.keys(STEM_CHANGERS),
     ...EAR_VERBS,
+    ...ODIAR_VERBS,
     ...Object.keys(PT_IRREGULAR_PARTICIPLES),
   ];
   const seen = new Set<string>();
@@ -1044,35 +1077,48 @@ function erIrStems(s: string): string[] {
   return out;
 }
 
-/** First candidate present in KNOWN_VERBS, else the given default */
-function pickKnown(candidates: string[], fallback: string): string {
-  for (const c of candidates) {
-    if (KNOWN_VERBS.has(c)) return c;
-  }
-  return fallback;
-}
-
-/** Candidates for endings shared by -ar / -er / -ir paradigms */
-function ambiguous(s: string, order: ('ar' | 'er' | 'ir')[], fallback: string): string {
-  const cands: string[] = [];
-  for (const cls of order) {
-    if (cls === 'ar') {
-      cands.push(s + 'ar');
-    } else {
-      for (const st of erIrStems(s)) cands.push(st + cls);
+/** True when the engine itself regenerates `form` from `inf` — table rows
+ *  plus the derived rows the table doesn't store (gerund, participle
+ *  agreement, personal infinitive, preterite-stem subjunctives). */
+function regenerates(inf: string, form: string): boolean {
+  const t = buildTenses(inf);
+  if (!t) return false;
+  for (const tk of TENSES) {
+    for (const raw of t[tk]) {
+      for (const p of raw.split('/')) if (p === form) return true;
     }
   }
-  return pickKnown(cands, fallback);
+  if (gerundOf(inf) === form) return true;
+  const pp = ptPastParticiple(inf);
+  if (pp === form) return true;
+  if (pp.endsWith('o') &&
+      (form === pp + 's' || form === pp.slice(0, -1) + 'a' || form === pp.slice(0, -1) + 'as')) {
+    return true;
+  }
+  const pret3pl = t.preterite[5];
+  if (pret3pl.endsWith('ram')) {
+    const b = pret3pl.slice(0, -3);
+    for (const sfx of ['sse', 'sses', 'ssem', 'r', 'res', 'rmos', 'rem', 'rdes']) {
+      if (b + sfx === form) return true;
+    }
+  }
+  for (const sfx of ['mos', 'es', 'em', 'des']) {
+    if (inf + sfx === form) return true;
+  }
+  return false;
 }
 
 /**
  * Resolve a conjugated Portuguese form to its infinitive.
- * Irregular forms hit the precomputed reverse map; regular forms are
- * unwound with ordered suffix rules (longest / most specific first).
- * Returns null only for empty input — a best-guess lemma is always
- * preferable to nothing for unknown verb-looking tokens.
+ * Irregular forms hit the precomputed reverse map. Regular forms gather
+ * candidates from ordered suffix rules (longest / most specific first),
+ * then adjudicate the way tr.ts does: a candidate the lexicon knows beats
+ * everything (pass `isKnownVerb` — the dictionary does), a candidate whose
+ * own conjugation regenerates the form beats a blind suffix guess, and the
+ * first (most specific) guess is the last resort — a best-guess lemma is
+ * always preferable to nothing for unknown verb-looking tokens.
  */
-export function findInfinitive(form: string): string | null {
+export function findInfinitive(form: string, isKnownVerb?: (w: string) => boolean): string | null {
   if (!form) return null;
   let f = form.toLowerCase().trim();
   if (!f) return null;
@@ -1085,7 +1131,7 @@ export function findInfinitive(form: string): string | null {
     const CLITIC_WORDS = new Set(['se', 'me', 'te', 'nos', 'vos', 'lhe', 'lhes', 'não', 'o', 'a', 'os', 'as']);
     const words = f.split(/\s+/).filter(w => !CLITIC_WORDS.has(w));
     if (words.length === 0) return null;
-    return findInfinitive(words[words.length - 1]);
+    return findInfinitive(words[words.length - 1], isKnownVerb);
   }
 
   // Clitic-attached forms: levanta-se, buscá-lo, vendê-la, ouvi-lo,
@@ -1096,7 +1142,7 @@ export function findInfinitive(form: string): string | null {
       'o', 'a', 'os', 'as', 'lo', 'la', 'los', 'las', 'no', 'na', 'nas']);
     // Mesoclisis: far-se-á → fará, dir-me-ia → diria
     if (parts.length === 3 && CLITICS_SET.has(parts[1])) {
-      return findInfinitive(parts[0] + parts[2]);
+      return findInfinitive(parts[0] + parts[2], isKnownVerb);
     }
     let base = parts[0];
     // Nós form drops its -s before the clitic "nos": reservamo-nos → reservamos
@@ -1115,108 +1161,177 @@ export function findInfinitive(form: string): string | null {
   // Already an infinitive (falar, comer, partir)
   if (/(ar|er|ir)$/.test(f) && f.length >= 4) return f;
 
-  // Personal infinitive / future subjunctive of regulars:
-  // falarmos → falar, comerem → comer, partires → partir
-  let m = f.match(/^(.{2,}[aei]r)(mos|em|es|des)$/);
-  if (m) return m[1];
+  const known = (w: string): boolean => KNOWN_VERBS.has(w) || !!(isKnownVerb && isKnownVerb(w));
 
-  // Gerunds (unambiguous: -ando/-endo/-indo map 1:1 to class)
-  if (f.endsWith('ando') && f.length >= 6) return f.slice(0, -4) + 'ar';
-  if (f.endsWith('endo') && f.length >= 6) return f.slice(0, -4) + 'er';
-  if (f.endsWith('indo') && f.length >= 6) return f.slice(0, -4) + 'ir';
+  // ── Candidate generation (ordered, most specific first) ──
+  const candidates: string[] = [];
+  const add = (...cs: string[]): void => {
+    for (const c of cs) {
+      if (c && c.length >= 4 && !candidates.includes(c)) candidates.push(c);
+    }
+  };
+  /** -er/-ir candidates with a/o-context orthography reversed (conheç→conhec) */
+  const addClass = (s: string, cls: 'er' | 'ir'): void => {
+    for (const st of erIrStems(s)) add(st + cls);
+    // Hiatus stems keep their i as part of a diphthong (atrai-o, sai-a):
+    // the infinitive is stem + r, not stem + ir.
+    if (cls === 'ir' && /[aeou]i$/.test(s)) add(s + 'r');
+  };
+
+  // Personal infinitive / future subjunctive: falarmos → falar,
+  // comerem → comer, saíres → sair (accented hiatus stem loses its accent)
+  let m = f.match(/^(.{2,}[aeií]r)(mos|em|es|des)$/);
+  if (m) add(m[1].replace(/ír$/, 'ir'), m[1]);
+
+  // Gerunds — plus the "final -o is a 1sg present" reading ("acendo" is
+  // acender's present, not the gerund of a fake "acer")
+  if (f.length >= 6) {
+    const s4 = f.slice(0, -4), s1 = f.slice(0, -1);
+    if (f.endsWith('ando')) add(s4 + 'ar', s1 + 'ar', s1 + 'er', s1 + 'ir');
+    if (f.endsWith('endo')) add(s4 + 'er', s1 + 'er', s1 + 'ar', s1 + 'ir');
+    if (f.endsWith('indo')) add(s4 + 'ir', s1 + 'ar', s1 + 'er', s1 + 'ir');
+  }
 
   // Participles (incl. feminine/plural agreement)
   m = f.match(/^(.{2,})ad[oa]s?$/);
-  if (m) return m[1] + 'ar';
+  if (m) add(m[1] + 'ar');
   m = f.match(/^(.{2,})id[oa]s?$/);
-  if (m) return ambiguous(m[1], ['er', 'ir'], m[1] + 'er');
+  if (m) { addClass(m[1], 'er'); addClass(m[1], 'ir'); }
+  m = f.match(/^(.{2,})íd[oa]s?$/);
+  if (m) add(m[1] + 'ir', m[1] + 'er');  // atraído → atrair, moído → moer
 
   // Future / conditional: the stem IS the infinitive (falarei → falar,
   // comeria → comer, abriria → abrir, comporá → compor)
   m = f.match(/^(.{2,}[aeio]r)(ei|ás|á|emos|eis|ão)$/);
-  if (m) return m[1];
+  if (m) add(m[1]);
   m = f.match(/^(.{2,}[aeio]r)(ia|ias|íamos|íeis|iam)$/);
-  if (m) return m[1];
+  if (m) add(m[1]);
 
   // Imperfect -ar (unambiguous)
   m = f.match(/^(.{2,})(ávamos|áveis|avas|avam|ava)$/);
-  if (m) return m[1] + 'ar';
+  if (m) add(m[1] + 'ar');
+
+  // Accented imperfect (saía, contribuíamos): only hiatus -air/-uir verbs
+  // put an í here, so the stem ends in a vowel.
+  m = f.match(/^(.{2,}[aeiou])(íamos|íeis|ías|íam|ía)$/);
+  if (m) add(m[1] + 'ir', m[1] + 'er');
 
   // Imperfect -er/-ir — also matches -iar presents (anuncia → anunciar),
-  // so try the -iar reading against known verbs first.
+  // so the -iar reading goes first.
   m = f.match(/^(.{2,})(íamos|íeis|ias|iam|ia)$/);
-  if (m) {
-    const s = m[1];
-    return pickKnown([s + 'iar', s + 'er', s + 'ir'], s + 'er');
-  }
+  if (m) add(m[1] + 'iar', m[1] + 'er', m[1] + 'ir');
 
   // Preterite (mostly unambiguous)
-  if (f.endsWith('aram') && f.length >= 6) return f.slice(0, -4) + 'ar';
-  if (f.endsWith('eram') && f.length >= 6) return f.slice(0, -4) + 'er';
-  if (f.endsWith('iram') && f.length >= 6) return f.slice(0, -4) + 'ir';
-  if (f.endsWith('astes') && f.length >= 7) return f.slice(0, -5) + 'ar';
-  if (f.endsWith('estes') && f.length >= 7) return f.slice(0, -5) + 'er';
-  if (f.endsWith('istes') && f.length >= 7) return f.slice(0, -5) + 'ir';
-  if (f.endsWith('aste') && f.length >= 6) return f.slice(0, -4) + 'ar';
-  if (f.endsWith('este') && f.length >= 6) return f.slice(0, -4) + 'er';
-  if (f.endsWith('iste') && f.length >= 6) return f.slice(0, -4) + 'ir';
-  if (f.endsWith('ou') && f.length >= 4) return f.slice(0, -2) + 'ar';
-  if (f.endsWith('ei') && f.length >= 4) return arCandidate(f.slice(0, -2));
-  if (f.endsWith('eu') && f.length >= 4) return f.slice(0, -2) + 'er';
-  if (f.endsWith('iu') && f.length >= 4) return f.slice(0, -2) + 'ir';
+  if (f.endsWith('aram') && f.length >= 6) add(f.slice(0, -4) + 'ar');
+  if (f.endsWith('eram') && f.length >= 6) add(f.slice(0, -4) + 'er');
+  if (f.endsWith('iram') && f.length >= 6) add(f.slice(0, -4) + 'ir');
+  if (f.endsWith('íram') && f.length >= 6) add(f.slice(0, -4) + 'ir');   // saíram
+  if (f.endsWith('astes') && f.length >= 7) add(f.slice(0, -5) + 'ar');
+  if (f.endsWith('estes') && f.length >= 7) add(f.slice(0, -5) + 'er');
+  if (f.endsWith('istes') && f.length >= 7) add(f.slice(0, -5) + 'ir');
+  if (f.endsWith('ístes') && f.length >= 6) add(f.slice(0, -5) + 'ir');  // saístes
+  if (f.endsWith('aste') && f.length >= 6) add(f.slice(0, -4) + 'ar');
+  if (f.endsWith('este') && f.length >= 6) add(f.slice(0, -4) + 'er');
+  if (f.endsWith('iste') && f.length >= 6) add(f.slice(0, -4) + 'ir');
+  if (f.endsWith('íste') && f.length >= 5) add(f.slice(0, -4) + 'ir');   // saíste
+  if (f.endsWith('ou') && f.length >= 4) add(f.slice(0, -2) + 'ar');
+  if (f.endsWith('ei') && f.length >= 4) {
+    const s = f.slice(0, -2);
+    add(arCandidate(s), s + 'ar', s + 'er'); // falei / minguei / comei (vós imperative)
+  }
+  if (f.endsWith('eu') && f.length >= 4) add(f.slice(0, -2) + 'er');
+  if (f.endsWith('iu') && f.length >= 4) add(f.slice(0, -2) + 'ir');
+  if (f.endsWith('í') && f.length >= 3) add(f.slice(0, -1) + 'ir');      // saí / contribuí
 
   // Imperfect subjunctive (class-specific theme vowel)
   m = f.match(/^(.{2,})(ássemos|asses|assem|asse)$/);
-  if (m) return m[1] + 'ar';
+  if (m) add(m[1] + 'ar');
   m = f.match(/^(.{2,})(êssemos|esses|essem|esse)$/);
-  if (m) return m[1] + 'er';
+  if (m) add(m[1] + 'er');
   m = f.match(/^(.{2,})(íssemos|isses|issem|isse)$/);
-  if (m) return m[1] + 'ir';
+  if (m) add(m[1] + 'ir');
+  m = f.match(/^(.{2,})(ísses|íssem|ísse)$/);
+  if (m) add(m[1] + 'ir');                                               // saísse
 
-  // Unknown -ear verbs in the present (passeia-pattern)
+  // -ear / odiar-class presents (passeia → passear, odeia → odiar)
   m = f.match(/^(.{2,})ei([oa]s?|am)$/);
-  if (m && KNOWN_VERBS.has(m[1] + 'ear')) return m[1] + 'ear';
+  if (m) add(m[1] + 'ear', m[1] + 'iar');
 
-  // Person endings shared across classes — resolve via known-verb set,
-  // then fall back to the statistically likeliest class.
+  // -uzir 3sg present drops its e entirely (aduz → aduzir)
+  if (f.endsWith('uz') && f.length >= 4) add(f + 'ir');
+
+  // Vós forms
+  if (f.endsWith('ais') && f.length >= 5) {
+    const s = f.slice(0, -3);
+    add(s + 'ar'); addClass(s, 'er'); addClass(s, 'ir'); // falais / comais / partais
+  }
+  if (f.endsWith('eis') && f.length >= 5) {
+    const s = f.slice(0, -3);
+    add(s + 'er', arCandidate(s), s + 'ar');             // comeis / faleis / fiqueis / mingueis
+  }
+  if (f.endsWith('ís') && f.length >= 4) add(f.slice(0, -2) + 'ir');  // saís / contribuís
+  if (f.endsWith('ai') && f.length >= 4) add(f.slice(0, -2) + 'ar');  // falai (imperative)
+
+  // Person endings shared across classes
   if (f.endsWith('amos') && f.length >= 6) {
-    return ambiguous(f.slice(0, -4), ['ar', 'er', 'ir'], f.slice(0, -4) + 'ar');
+    const s = f.slice(0, -4);
+    add(s + 'ar'); addClass(s, 'er'); addClass(s, 'ir');
   }
   if (f.endsWith('emos') && f.length >= 6) {
     const s = f.slice(0, -4);
-    return pickKnown([s + 'er', arCandidate(s), ...erIrStems(s).map(st => st + 'ir')], s + 'er');
+    add(s + 'er', arCandidate(s), s + 'ar'); addClass(s, 'ir');
   }
-  if (f.endsWith('imos') && f.length >= 6) return f.slice(0, -4) + 'ir';
+  if (f.endsWith('imos') && f.length >= 6) add(f.slice(0, -4) + 'ir');
+  if (f.endsWith('ímos') && f.length >= 5) add(f.slice(0, -4) + 'ir'); // saímos
   if (f.endsWith('am') && f.length >= 4) {
-    return ambiguous(f.slice(0, -2), ['ar', 'er', 'ir'], f.slice(0, -2) + 'ar');
+    const s = f.slice(0, -2);
+    add(s + 'ar'); addClass(s, 'er'); addClass(s, 'ir');
   }
   if (f.endsWith('em') && f.length >= 4) {
     const s = f.slice(0, -2);
-    return pickKnown([s + 'er', s + 'ir', arCandidate(s)], s + 'er');
+    addClass(s, 'er'); addClass(s, 'ir'); add(arCandidate(s), s + 'ar');
   }
   if (f.endsWith('es') && f.length >= 4) {
     const s = f.slice(0, -2);
-    return pickKnown([s + 'er', s + 'ir', arCandidate(s)], s + 'er');
+    addClass(s, 'er'); addClass(s, 'ir'); add(arCandidate(s), s + 'ar');
   }
   if (f.endsWith('as') && f.length >= 4) {
-    return ambiguous(f.slice(0, -2), ['ar', 'er', 'ir'], f.slice(0, -2) + 'ar');
+    const s = f.slice(0, -2);
+    add(s + 'ar'); addClass(s, 'er'); addClass(s, 'ir');
   }
-  if (f.endsWith('i') && f.length >= 4) {
+  if (f.endsWith('is') && f.length >= 4) add(f.slice(0, -2) + 'ir');  // partis / unis / contribuis
+  if (f.endsWith('i') && f.length >= 3) {
     const s = f.slice(0, -1);
-    return pickKnown([s + 'er', s + 'ir'], s + 'ir');
+    add(s + 'er', s + 'ir', s + 'ar');
   }
   if (f.endsWith('o') && f.length >= 3) {
-    return ambiguous(f.slice(0, -1), ['ar', 'er', 'ir'], f.slice(0, -1) + 'ar');
+    const s = f.slice(0, -1);
+    add(s + 'ar'); addClass(s, 'er'); addClass(s, 'ir');
   }
   if (f.endsWith('a') && f.length >= 3) {
-    return ambiguous(f.slice(0, -1), ['ar', 'er', 'ir'], f.slice(0, -1) + 'ar');
+    const s = f.slice(0, -1);
+    add(s + 'ar'); addClass(s, 'er'); addClass(s, 'ir');
   }
   if (f.endsWith('e') && f.length >= 3) {
     const s = f.slice(0, -1);
-    return pickKnown([s + 'er', s + 'ir', arCandidate(s)], s + 'er');
+    addClass(s, 'er'); addClass(s, 'ir'); add(arCandidate(s), s + 'ar');
   }
 
-  return null;
+  // ── Adjudication (tr.ts pattern) ──
+  // 1. A known verb that actually regenerates the form ("conte" belongs to
+  //    contar, not conter — conter never produces "conte").
+  // 2. A known verb even without regeneration (covers derived rows the
+  //    engine doesn't model).
+  // 3. An unknown candidate that regenerates the form.
+  // 4. The first (most specific) suffix guess as a last resort.
+  const target = f;
+  const knownVerified = candidates.find(c => known(c) && regenerates(c, target));
+  if (knownVerified) return knownVerified;
+  const kHit = candidates.find(known);
+  if (kHit) return kHit;
+  const verified = candidates.find(c => regenerates(c, target));
+  if (verified) return verified;
+  return candidates[0] ?? null;
 }
 
 /** Prepend reflexive pronouns to all forms */

@@ -43,6 +43,17 @@ The "easier said than done" pair is intentional on the English side; the
 Spanish deliberately differs (más fácil decirlo que hacerlo vs the proverb
 del dicho al hecho hay mucho trecho) so the pair teaches two idioms.
 
+## Authoring boundary (user rule, 2026-08-09)
+
+Claude does NOT invent sentences by extrapolating from the personal material
+(no extra whale/Ken/church cards riffed from the ledger). The ONLY themes
+Claude builds sentences around are the six originally identified (horseriding,
+sea swims, painting, translator, tiles, Sussex-Brittany) - and only AFTER the
+user finishes the personal ledger. Explicitly-requested mini-sets (Bolivia,
+Brexit, learning-Spanish, the app, mum-isms, the reassurance riffs) were
+user-commissioned and are fine. Everyday-slice authoring also waits for the
+ledger. Node-gap fills come from asking the user, not inventing.
+
 ## Grammar curriculum (20 nodes, ~70 cards each)
 
 mum-n01 Rich description (ser/estar/tener in full clauses)

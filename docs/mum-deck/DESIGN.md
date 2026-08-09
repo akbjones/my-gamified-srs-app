@@ -32,9 +32,16 @@ Themes (recurring, NOT overdone): horseriding · morning sea swims · painting �
 working as a translator · tile-making · living between West Sussex and Brittany.
 
 **Sanctioned running gags** – deliberate repetition, exempt from the clump lint
-at their authored counts: Antoine's bidet (3, escalating), Scout's opinions
-(6), Brannagh (4), Papylou's rituals (3), Twig (3). Anything else repeating 3+
+at their authored counts (ledger as of batch 2): bidet 3 (escalating), scout 6,
+brannagh 3, papylou 3, twig 4, frog 2, political-dishes 2 (the naming rule +
+Berlusconi-the-green-bean-dish), pierre-civic 3 (his three civic-work cards),
+reassurance 6 (the 'not to worry' card + the five-riff run, which stays
+CONSECUTIVE in the final ordering – it's a bit). Anything else repeating 3+
 times is a defect.
+
+The "easier said than done" pair is intentional on the English side; the
+Spanish deliberately differs (más fácil decirlo que hacerlo vs the proverb
+del dicho al hecho hay mucho trecho) so the pair teaches two idioms.
 
 ## Grammar curriculum (20 nodes, ~70 cards each)
 

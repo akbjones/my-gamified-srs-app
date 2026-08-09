@@ -1,66 +1,1382 @@
 [
- {"id":"mum-0001","en":"Beni comes for a walk with me every morning.","es":"Beni sale a caminar conmigo todas las mañanas.","node":"mum-n02","themes":["dogs"],"gag":null,"status":"seed"},
- {"id":"mum-0002","en":"Brannagh the horse has a really kind nature.","es":"Brannagh la yegua tiene un carácter muy noble.","node":"mum-n01","themes":["horseriding"],"gag":"brannagh","status":"seed"},
- {"id":"mum-0003","en":"Whenever something goes wrong, my husband just says 'not to worry'.","es":"Cuando algo sale mal, mi esposo solo dice 'not to worry'.","node":"mum-n17","themes":["family"],"gag":null,"status":"seed","note":"the English phrase stays verbatim in both languages – that IS the joke"},
- {"id":"mum-0004","en":"In this house we name our dishes after politicians.","es":"En esta casa les ponemos nombres de políticos a los platos.","node":"mum-n16","themes":["food"],"gag":null,"status":"seed"},
- {"id":"mum-0005","en":"The interview to become British was quite intrusive.","es":"La entrevista para hacerse británica fue bastante invasiva.","node":"mum-n04","themes":["admin"],"gag":null,"status":"seed"},
- {"id":"mum-0006","en":"I had a really weird interview with the Irish government.","es":"Tuve una entrevista rarísima con el gobierno irlandés.","node":"mum-n04","themes":["admin"],"gag":null,"status":"seed"},
- {"id":"mum-0007","en":"People with boring political opinions can ruin a dinner party.","es":"La gente con opiniones políticas aburridas puede arruinar una cena.","node":"mum-n01","themes":["dinner"],"gag":null,"status":"seed"},
- {"id":"mum-0008","en":"Charles de Gaulle really was pretty great for France.","es":"La verdad es que Charles de Gaulle hizo mucho por Francia.","node":"mum-n15","themes":["france"],"gag":null,"status":"seed"},
- {"id":"mum-0009","en":"Papylou reads every sign in detail.","es":"Papylou lee todos los letreros con todo detalle.","node":"mum-n01","themes":["family"],"gag":"papylou","status":"seed"},
- {"id":"mum-0010","en":"Papylou picks up every bit of rubbish he finds on the floor.","es":"Papylou recoge toda la basura que encuentra en el suelo.","node":"mum-n19","themes":["family"],"gag":"papylou","status":"seed"},
- {"id":"mum-0011","en":"Papylou takes his time when he's stacking the logs.","es":"Papylou se toma su tiempo cuando apila la leña.","node":"mum-n02","themes":["family"],"gag":"papylou","status":"seed"},
- {"id":"mum-0012","en":"Magali lives in Lyon, which is quite far away.","es":"Magali vive en Lyon, que queda bastante lejos.","node":"mum-n19","themes":["family","france"],"gag":null,"status":"seed"},
- {"id":"mum-0013","en":"Véro lives nearby in Brittany, and it's wonderful to be able to see her.","es":"Véro vive cerca, aquí en Bretaña, y es una maravilla poder verla.","node":"mum-n03","themes":["family","france"],"gag":null,"status":"seed"},
- {"id":"mum-0014","en":"Brexit used to keep coming up at the dinner table, but it comes up less these days.","es":"El Brexit siempre salía en la sobremesa, pero ya sale menos.","node":"mum-n05","themes":["dinner"],"gag":null,"status":"seed"},
- {"id":"mum-0015","en":"Reading the book is an important part of being in a book club.","es":"Leer el libro es una parte importante de estar en un club de lectura.","node":"mum-n03","themes":["hobbies"],"gag":null,"status":"seed"},
- {"id":"mum-0016","en":"Gasping when you see a whale surface is perfectly normal.","es":"Quedarse sin aliento al ver salir una ballena es de lo más normal.","node":"mum-n03","themes":["sea"],"gag":null,"status":"seed"},
- {"id":"mum-0017","en":"Driving in Georgia is tricky, with so many cows on the road.","es":"Manejar en Georgia tiene su truco, con tantas vacas en la carretera.","node":"mum-n03","themes":["travel"],"gag":null,"status":"seed"},
- {"id":"mum-0018","en":"Brannagh the horse has a fine moustache.","es":"Brannagh la yegua tiene un bigote espléndido.","node":"mum-n01","themes":["horseriding"],"gag":"brannagh","status":"seed"},
- {"id":"mum-0019","en":"Pierre and Anna moved into a new house.","es":"Pierre y Anna se mudaron a una casa nueva.","node":"mum-n04","themes":["family"],"gag":null,"status":"seed"},
- {"id":"mum-0020","en":"Twig the dog certainly has a lot of energy.","es":"No cabe duda de que Twig tiene muchísima energía.","node":"mum-n20","themes":["dogs"],"gag":"twig","status":"seed"},
- {"id":"mum-0021","en":"It's important to walk Twig early so he doesn't burn his paws.","es":"Es importante pasear a Twig temprano para que no se queme las patas.","node":"mum-n12","themes":["dogs"],"gag":"twig","status":"seed"},
- {"id":"mum-0022","en":"Béa is getting really good at binding books.","es":"A Béa se le está dando muy bien encuadernar libros.","node":"mum-n02","themes":["family","hobbies"],"gag":null,"status":"seed"},
- {"id":"mum-0023","en":"I have very international nieces – one lives on Réunion Island and one in Angola.","es":"Tengo sobrinas muy internacionales: una vive en la isla de Reunión y otra en Angola.","node":"mum-n01","themes":["family"],"gag":null,"status":"seed"},
- {"id":"mum-0024","en":"Twig likes to perch right by Pierre's head on the sofa.","es":"A Twig le gusta acomodarse junto a la cabeza de Pierre en el sofá.","node":"mum-n03","themes":["dogs"],"gag":"twig","status":"seed"},
- {"id":"mum-0025","en":"Antoine still hasn't installed his bidet.","es":"Antoine todavía no ha instalado su bidé.","node":"mum-n07","themes":["family"],"gag":"bidet","status":"seed"},
- {"id":"mum-0026","en":"I wonder when Antoine will install his bidet.","es":"Me pregunto cuándo instalará Antoine su bidé.","node":"mum-n09","themes":["family"],"gag":"bidet","status":"seed"},
- {"id":"mum-0027","en":"It's been a long time since I heard anything about Antoine's bidet.","es":"Hace mucho que no oigo hablar del bidé de Antoine.","node":"mum-n18","themes":["family"],"gag":"bidet","status":"seed"},
- {"id":"mum-0028","en":"They grow wine in the south of England because of global warming.","es":"En el sur de Inglaterra ya cultivan vino por el calentamiento global.","node":"mum-n15","themes":["england"],"gag":null,"status":"seed"},
- {"id":"mum-0029","en":"Going to London is only a short train ride.","es":"Ir a Londres es solo un viaje corto en tren.","node":"mum-n03","themes":["england","travel"],"gag":null,"status":"seed"},
- {"id":"mum-0030","en":"Angela doesn't like the idea of air conditioning because of its climate implications.","es":"A Angela no le convence el aire acondicionado por lo que implica para el clima.","node":"mum-n15","themes":["friends"],"gag":null,"status":"seed"},
- {"id":"mum-0031","en":"Sean and John can be slightly unreliable and perhaps a little self-centred.","es":"Sean y John pueden ser poco confiables y quizás un poco egocéntricos.","node":"mum-n01","themes":["friends"],"gag":null,"status":"seed"},
- {"id":"mum-0032","en":"Renting out a wing of the house at Josselin to guests makes sense.","es":"Tiene sentido alquilarles un ala de la casa de Josselin a los huéspedes.","node":"mum-n16","themes":["france","house"],"gag":null,"status":"seed"},
- {"id":"mum-0033","en":"When is Antoine going to buy a house already?","es":"¿Cuándo se va a comprar una casa Antoine de una vez?","node":"mum-n09","themes":["family"],"gag":null,"status":"seed"},
- {"id":"mum-0034","en":"Antoine isn't a fan of paperwork or administrative tasks.","es":"A Antoine no le gustan nada los trámites ni el papeleo.","node":"mum-n03","themes":["family","admin"],"gag":null,"status":"seed"},
- {"id":"mum-0035","en":"Some would call it procrastination when Antoine puts things off, but he would disagree.","es":"Algunos dirían que Antoine procrastina, pero él no estaría de acuerdo.","node":"mum-n10","themes":["family"],"gag":null,"status":"seed"},
- {"id":"mum-0036","en":"We used to go to Latour-de-France on holiday.","es":"Antes íbamos de vacaciones a Latour-de-France.","node":"mum-n05","themes":["france","travel"],"gag":null,"status":"seed"},
- {"id":"mum-0037","en":"Scout was a silly dog with a fondness for poo.","es":"Scout era una perra tontita con cierta debilidad por la caca.","node":"mum-n05","themes":["dogs"],"gag":"scout","status":"seed"},
- {"id":"mum-0038","en":"Scout thought she could take on a horse.","es":"Scout creía que podía ganarle a un caballo.","node":"mum-n05","themes":["dogs"],"gag":"scout","status":"seed"},
- {"id":"mum-0039","en":"Scout wasn't the most observant of dogs.","es":"Scout no era la perra más observadora del mundo.","node":"mum-n05","themes":["dogs"],"gag":"scout","status":"seed"},
- {"id":"mum-0040","en":"Brannagh, even though she's a horse, reminds me of Scout.","es":"Brannagh, aunque sea una yegua, me recuerda a Scout.","node":"mum-n12","themes":["horseriding","dogs"],"gag":"brannagh","status":"seed"},
- {"id":"mum-0041","en":"When I moved to the UK, people called me 'my duck'.","es":"Cuando me mudé al Reino Unido, la gente me decía 'my duck'.","node":"mum-n04","themes":["england"],"gag":null,"status":"seed","note":"'my duck' stays in English in both languages"},
- {"id":"mum-0042","en":"I went on a lovely sailing trip, and this time that annoying woman wasn't there.","es":"Fui a un paseo en velero precioso, y esta vez no estaba esa señora tan pesada.","node":"mum-n06","themes":["sea"],"gag":null,"status":"seed"},
- {"id":"mum-0043","en":"I believe it's important for my kids to receive a religious education at primary school.","es":"Creo que es importante que mis hijos reciban educación religiosa en la primaria.","node":"mum-n11","themes":["family"],"gag":null,"status":"seed"},
- {"id":"mum-0044","en":"The Ukrainians won the table tennis competition and we weren't too happy about it.","es":"Los ucranianos ganaron el torneo de tenis de mesa y no nos hizo mucha gracia.","node":"mum-n04","themes":["hobbies"],"gag":null,"status":"seed"},
- {"id":"mum-0045","en":"Gary enjoys reading the Daily Mail when he really should know better.","es":"A Gary le encanta leer el Daily Mail, aunque ya debería saber que no le conviene.","node":"mum-n10","themes":["friends"],"gag":null,"status":"seed"},
- {"id":"mum-0046","en":"Playing in a band was fun, even though the Streeter family was quite strange.","es":"Tocar en una banda era divertido, aunque la familia Streeter era bastante rara.","node":"mum-n05","themes":["hobbies"],"gag":null,"status":"seed"},
- {"id":"mum-0047","en":"Scout had some strong political opinions.","es":"Scout tenía opiniones políticas bastante firmes.","node":"mum-n05","themes":["dogs"],"gag":"scout","status":"seed"},
- {"id":"mum-0048","en":"Scout's views on Brexit were not exactly nuanced.","es":"Las opiniones de Scout sobre el Brexit no eran precisamente matizadas.","node":"mum-n20","themes":["dogs"],"gag":"scout","status":"seed"},
- {"id":"mum-0049","en":"My husband talks a big game about liking kippers, but he never really eats them – what's that about?","es":"Mi esposo habla mucho de lo que le gustan los arenques ahumados, pero en realidad nunca los come. ¿Cómo se explica eso?","node":"mum-n16","themes":["family","food"],"gag":null,"status":"seed"},
- {"id":"mum-0050","en":"Pierre's haircut reminds his brother of Margaret Thatcher.","es":"El corte de pelo de Pierre le recuerda a su hermano a Margaret Thatcher.","node":"mum-n16","themes":["family"],"gag":null,"status":"seed"},
- {"id":"mum-0051","en":"Pierre is aware of the risks and weighs them carefully.","es":"Pierre es consciente de los riesgos y los sopesa con cuidado.","node":"mum-n16","themes":["family"],"gag":null,"status":"seed"},
- {"id":"mum-0052","en":"Anna knits with great skill.","es":"Anna teje con muchísima destreza.","node":"mum-n01","themes":["family","hobbies"],"gag":null,"status":"seed"},
- {"id":"mum-0053","en":"Anna looks after Newbury's parks.","es":"Anna se ocupa de los parques de Newbury.","node":"mum-n02","themes":["family"],"gag":null,"status":"seed"},
- {"id":"mum-0054","en":"Pierre and Anna have an allotment, and Antoine was impressed by it.","es":"Pierre y Anna tienen un huerto, y a Antoine le impresionó bastante.","node":"mum-n04","themes":["family"],"gag":null,"status":"seed"},
- {"id":"mum-0055","en":"Antoine always walks the wrong way after leaving the shop.","es":"Antoine siempre camina en el sentido contrario al salir de la tienda.","node":"mum-n03","themes":["family"],"gag":null,"status":"seed"},
- {"id":"mum-0056","en":"Oh look, a whale – wow!","es":"¡Mira, una ballena! ¡Guau!","node":"mum-n14","themes":["sea"],"gag":null,"status":"seed"},
- {"id":"mum-0057","en":"The Romans used to live in Pulborough.","es":"Los romanos vivían en Pulborough hace siglos.","node":"mum-n05","themes":["england","history"],"gag":null,"status":"seed"},
- {"id":"mum-0058","en":"There's so much history in the local area.","es":"Hay muchísima historia en esta zona.","node":"mum-n01","themes":["england","history"],"gag":null,"status":"seed"},
- {"id":"mum-0059","en":"I ride twice a week, rain or shine.","es":"Monto a caballo dos veces por semana, llueva o truene.","node":"mum-n12","themes":["horseriding"],"gag":null,"status":"seed"},
- {"id":"mum-0060","en":"Swimming in the sea in the morning wakes me up better than coffee.","es":"Nadar en el mar por la mañana me despierta mejor que el café.","node":"mum-n03","themes":["sea"],"gag":null,"status":"seed"},
- {"id":"mum-0061","en":"I'm painting a landscape of the Breton coast.","es":"Estoy pintando un paisaje de la costa bretona.","node":"mum-n01","themes":["painting","france"],"gag":null,"status":"seed"},
- {"id":"mum-0062","en":"I worked as a translator for many years, so I choose every word with care.","es":"Trabajé muchos años como traductora, así que elijo cada palabra con cuidado.","node":"mum-n04","themes":["translator"],"gag":null,"status":"seed"},
- {"id":"mum-0063","en":"Making tiles is harder than it looks.","es":"Hacer azulejos es más difícil de lo que parece.","node":"mum-n03","themes":["tiles"],"gag":null,"status":"seed"},
- {"id":"mum-0064","en":"We live between West Sussex and Brittany, with the Channel in between.","es":"Vivimos entre West Sussex y Bretaña, con el canal de por medio.","node":"mum-n01","themes":["england","france"],"gag":null,"status":"seed"}
+ {
+  "id": "mum-0001",
+  "en": "Beni comes for a walk with me every morning.",
+  "es": "Beni sale a caminar conmigo todas las mañanas.",
+  "node": "mum-n02",
+  "themes": [
+   "dogs"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0002",
+  "en": "Brannagh the horse has a really kind nature.",
+  "es": "Brannagh la yegua tiene un carácter muy noble.",
+  "node": "mum-n01",
+  "themes": [
+   "horseriding"
+  ],
+  "gag": "brannagh",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0003",
+  "en": "Whenever something goes wrong, my husband just says 'not to worry'.",
+  "es": "Cuando algo sale mal, mi esposo solo dice 'not to worry'.",
+  "node": "mum-n17",
+  "themes": [
+   "family"
+  ],
+  "gag": null,
+  "status": "seed",
+  "note": "the English phrase stays verbatim in both languages – that IS the joke"
+ },
+ {
+  "id": "mum-0004",
+  "en": "In this house we name our dishes after politicians.",
+  "es": "En esta casa les ponemos nombres de políticos a los platos.",
+  "node": "mum-n16",
+  "themes": [
+   "food"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0005",
+  "en": "The interview to become British was quite intrusive.",
+  "es": "La entrevista para hacerse británica fue bastante invasiva.",
+  "node": "mum-n04",
+  "themes": [
+   "admin"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0006",
+  "en": "I had a really weird interview with the Irish government.",
+  "es": "Tuve una entrevista rarísima con el gobierno irlandés.",
+  "node": "mum-n04",
+  "themes": [
+   "admin"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0007",
+  "en": "People with boring political opinions can ruin a dinner party.",
+  "es": "La gente con opiniones políticas aburridas puede arruinar una cena.",
+  "node": "mum-n01",
+  "themes": [
+   "dinner"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0008",
+  "en": "Charles de Gaulle really was pretty great for France.",
+  "es": "La verdad es que Charles de Gaulle hizo mucho por Francia.",
+  "node": "mum-n15",
+  "themes": [
+   "france"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0009",
+  "en": "Papylou reads every sign in detail.",
+  "es": "Papylou lee todos los letreros con todo detalle.",
+  "node": "mum-n01",
+  "themes": [
+   "family"
+  ],
+  "gag": "papylou",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0010",
+  "en": "Papylou picks up every bit of rubbish he finds on the floor.",
+  "es": "Papylou recoge toda la basura que encuentra en el suelo.",
+  "node": "mum-n19",
+  "themes": [
+   "family"
+  ],
+  "gag": "papylou",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0011",
+  "en": "Papylou takes his time when he's stacking the logs.",
+  "es": "Papylou se toma su tiempo cuando apila la leña.",
+  "node": "mum-n02",
+  "themes": [
+   "family"
+  ],
+  "gag": "papylou",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0012",
+  "en": "Magali lives in Lyon, which is quite far away.",
+  "es": "Magali vive en Lyon, que queda bastante lejos.",
+  "node": "mum-n19",
+  "themes": [
+   "family",
+   "france"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0013",
+  "en": "Véro lives nearby in Brittany, and it's wonderful to be able to see her.",
+  "es": "Véro vive cerca, aquí en Bretaña, y es una maravilla poder verla.",
+  "node": "mum-n03",
+  "themes": [
+   "family",
+   "france"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0014",
+  "en": "Brexit used to keep coming up at the dinner table, but it comes up less these days.",
+  "es": "El Brexit siempre salía en la sobremesa, pero ya sale menos.",
+  "node": "mum-n05",
+  "themes": [
+   "dinner"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0015",
+  "en": "Reading the book is an important part of being in a book club.",
+  "es": "Leer el libro es una parte importante de estar en un club de lectura.",
+  "node": "mum-n03",
+  "themes": [
+   "hobbies"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0016",
+  "en": "Gasping when you see a whale surface is perfectly normal.",
+  "es": "Quedarse sin aliento al ver salir una ballena es de lo más normal.",
+  "node": "mum-n03",
+  "themes": [
+   "sea"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0017",
+  "en": "Driving in Georgia is tricky, with so many cows on the road.",
+  "es": "Manejar en Georgia tiene su truco, con tantas vacas en la carretera.",
+  "node": "mum-n03",
+  "themes": [
+   "travel"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0018",
+  "en": "Brannagh the horse has a fine moustache.",
+  "es": "Brannagh la yegua tiene un bigote espléndido.",
+  "node": "mum-n01",
+  "themes": [
+   "horseriding"
+  ],
+  "gag": "brannagh",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0019",
+  "en": "Pierre and Anna moved into a new house.",
+  "es": "Pierre y Anna se mudaron a una casa nueva.",
+  "node": "mum-n04",
+  "themes": [
+   "family"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0020",
+  "en": "Twig the dog certainly has a lot of energy.",
+  "es": "No cabe duda de que Twig tiene muchísima energía.",
+  "node": "mum-n20",
+  "themes": [
+   "dogs"
+  ],
+  "gag": "twig",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0021",
+  "en": "It's important to walk Twig early so he doesn't burn his paws.",
+  "es": "Es importante pasear a Twig temprano para que no se queme las patas.",
+  "node": "mum-n12",
+  "themes": [
+   "dogs"
+  ],
+  "gag": "twig",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0022",
+  "en": "Béa is getting really good at binding books.",
+  "es": "A Béa se le está dando muy bien encuadernar libros.",
+  "node": "mum-n02",
+  "themes": [
+   "family",
+   "hobbies"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0023",
+  "en": "I have very international nieces – one lives on Réunion Island and one in Angola.",
+  "es": "Tengo sobrinas muy internacionales: una vive en la isla de Reunión y otra en Angola.",
+  "node": "mum-n01",
+  "themes": [
+   "family"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0024",
+  "en": "Twig likes to perch right by Pierre's head on the sofa.",
+  "es": "A Twig le gusta acomodarse junto a la cabeza de Pierre en el sofá.",
+  "node": "mum-n03",
+  "themes": [
+   "dogs"
+  ],
+  "gag": "twig",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0025",
+  "en": "Antoine still hasn't installed his bidet.",
+  "es": "Antoine todavía no ha instalado su bidé.",
+  "node": "mum-n07",
+  "themes": [
+   "family"
+  ],
+  "gag": "bidet",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0026",
+  "en": "I wonder when Antoine will install his bidet.",
+  "es": "Me pregunto cuándo instalará Antoine su bidé.",
+  "node": "mum-n09",
+  "themes": [
+   "family"
+  ],
+  "gag": "bidet",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0027",
+  "en": "It's been a long time since I heard anything about Antoine's bidet.",
+  "es": "Hace mucho que no oigo hablar del bidé de Antoine.",
+  "node": "mum-n18",
+  "themes": [
+   "family"
+  ],
+  "gag": "bidet",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0028",
+  "en": "They grow wine in the south of England because of global warming.",
+  "es": "En el sur de Inglaterra ya cultivan vino por el calentamiento global.",
+  "node": "mum-n15",
+  "themes": [
+   "england"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0029",
+  "en": "Going to London is only a short train ride.",
+  "es": "Ir a Londres es solo un viaje corto en tren.",
+  "node": "mum-n03",
+  "themes": [
+   "england",
+   "travel"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0030",
+  "en": "Angela doesn't like the idea of air conditioning because of its climate implications.",
+  "es": "A Angela no le convence el aire acondicionado por lo que implica para el clima.",
+  "node": "mum-n15",
+  "themes": [
+   "friends"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0031",
+  "en": "Sean and John can be slightly unreliable and perhaps a little self-centred.",
+  "es": "Sean y John pueden ser poco confiables y quizás un poco egocéntricos.",
+  "node": "mum-n01",
+  "themes": [
+   "friends"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0032",
+  "en": "Renting out a wing of the house at Josselin to guests makes sense.",
+  "es": "Tiene sentido alquilarles un ala de la casa de Josselin a los huéspedes.",
+  "node": "mum-n16",
+  "themes": [
+   "france",
+   "house"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0033",
+  "en": "When is Antoine going to buy a house already?",
+  "es": "¿Cuándo se va a comprar una casa Antoine de una vez?",
+  "node": "mum-n09",
+  "themes": [
+   "family"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0034",
+  "en": "Antoine isn't a fan of paperwork or administrative tasks.",
+  "es": "A Antoine no le gustan nada los trámites ni el papeleo.",
+  "node": "mum-n03",
+  "themes": [
+   "family",
+   "admin"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0035",
+  "en": "Some would call it procrastination when Antoine puts things off, but he would disagree.",
+  "es": "Algunos dirían que Antoine procrastina, pero él no estaría de acuerdo.",
+  "node": "mum-n10",
+  "themes": [
+   "family"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0036",
+  "en": "We used to go to Latour-de-France on holiday.",
+  "es": "Antes íbamos de vacaciones a Latour-de-France.",
+  "node": "mum-n05",
+  "themes": [
+   "france",
+   "travel"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0037",
+  "en": "Scout was a silly dog with a fondness for poo.",
+  "es": "Scout era una perra tontita con cierta debilidad por la caca.",
+  "node": "mum-n05",
+  "themes": [
+   "dogs"
+  ],
+  "gag": "scout",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0038",
+  "en": "Scout thought she could take on a horse.",
+  "es": "Scout creía que podía ganarle a un caballo.",
+  "node": "mum-n05",
+  "themes": [
+   "dogs"
+  ],
+  "gag": "scout",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0039",
+  "en": "Scout wasn't the most observant of dogs.",
+  "es": "Scout no era la perra más observadora del mundo.",
+  "node": "mum-n05",
+  "themes": [
+   "dogs"
+  ],
+  "gag": "scout",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0040",
+  "en": "Brannagh, even though she's a horse, reminds me of Scout.",
+  "es": "Brannagh, aunque sea una yegua, me recuerda a Scout.",
+  "node": "mum-n12",
+  "themes": [
+   "horseriding",
+   "dogs"
+  ],
+  "gag": "brannagh",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0041",
+  "en": "When I moved to the UK, people called me 'my duck'.",
+  "es": "Cuando me mudé al Reino Unido, la gente me decía 'my duck'.",
+  "node": "mum-n04",
+  "themes": [
+   "england"
+  ],
+  "gag": null,
+  "status": "seed",
+  "note": "'my duck' stays in English in both languages"
+ },
+ {
+  "id": "mum-0042",
+  "en": "I went on a lovely sailing trip, and this time that annoying woman wasn't there.",
+  "es": "Fui a un paseo en velero precioso, y esta vez no estaba esa señora tan pesada.",
+  "node": "mum-n06",
+  "themes": [
+   "sea"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0043",
+  "en": "I believe it's important for my kids to receive a religious education at primary school.",
+  "es": "Creo que es importante que mis hijos reciban educación religiosa en la primaria.",
+  "node": "mum-n11",
+  "themes": [
+   "family"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0044",
+  "en": "The Ukrainians won the table tennis competition and we weren't too happy about it.",
+  "es": "Los ucranianos ganaron el torneo de tenis de mesa y no nos hizo mucha gracia.",
+  "node": "mum-n04",
+  "themes": [
+   "hobbies"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0045",
+  "en": "Gary enjoys reading the Daily Mail when he really should know better.",
+  "es": "A Gary le encanta leer el Daily Mail, aunque ya debería saber que no le conviene.",
+  "node": "mum-n10",
+  "themes": [
+   "friends"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0046",
+  "en": "Playing in a band was fun, even though the Streeter family was quite strange.",
+  "es": "Tocar en una banda era divertido, aunque la familia Streeter era bastante rara.",
+  "node": "mum-n05",
+  "themes": [
+   "hobbies"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0047",
+  "en": "Scout had some strong political opinions.",
+  "es": "Scout tenía opiniones políticas bastante firmes.",
+  "node": "mum-n05",
+  "themes": [
+   "dogs"
+  ],
+  "gag": "scout",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0048",
+  "en": "Scout's views on Brexit were not exactly nuanced.",
+  "es": "Las opiniones de Scout sobre el Brexit no eran precisamente matizadas.",
+  "node": "mum-n20",
+  "themes": [
+   "dogs"
+  ],
+  "gag": "scout",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0049",
+  "en": "My husband talks a big game about liking kippers, but he never really eats them – what's that about?",
+  "es": "Mi esposo habla mucho de lo que le gustan los arenques ahumados, pero en realidad nunca los come. ¿Cómo se explica eso?",
+  "node": "mum-n16",
+  "themes": [
+   "family",
+   "food"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0050",
+  "en": "Pierre's haircut reminds his brother of Margaret Thatcher.",
+  "es": "El corte de pelo de Pierre le recuerda a su hermano a Margaret Thatcher.",
+  "node": "mum-n16",
+  "themes": [
+   "family"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0051",
+  "en": "Pierre is aware of the risks and weighs them carefully.",
+  "es": "Pierre es consciente de los riesgos y los sopesa con cuidado.",
+  "node": "mum-n16",
+  "themes": [
+   "family"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0052",
+  "en": "Anna knits with great skill.",
+  "es": "Anna teje con muchísima destreza.",
+  "node": "mum-n01",
+  "themes": [
+   "family",
+   "hobbies"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0053",
+  "en": "Anna looks after Newbury's parks.",
+  "es": "Anna se ocupa de los parques de Newbury.",
+  "node": "mum-n02",
+  "themes": [
+   "family"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0054",
+  "en": "Pierre and Anna have an allotment, and Antoine was impressed by it.",
+  "es": "Pierre y Anna tienen un huerto, y a Antoine le impresionó bastante.",
+  "node": "mum-n04",
+  "themes": [
+   "family"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0055",
+  "en": "Antoine always walks the wrong way after leaving the shop.",
+  "es": "Antoine siempre camina en el sentido contrario al salir de la tienda.",
+  "node": "mum-n03",
+  "themes": [
+   "family"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0056",
+  "en": "Oh look, a whale – wow!",
+  "es": "¡Mira, una ballena! ¡Guau!",
+  "node": "mum-n14",
+  "themes": [
+   "sea"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0057",
+  "en": "The Romans used to live in Pulborough.",
+  "es": "Los romanos vivían en Pulborough hace siglos.",
+  "node": "mum-n05",
+  "themes": [
+   "england",
+   "history"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0058",
+  "en": "There's so much history in the local area.",
+  "es": "Hay muchísima historia en esta zona.",
+  "node": "mum-n01",
+  "themes": [
+   "england",
+   "history"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0059",
+  "en": "I ride twice a week, rain or shine.",
+  "es": "Monto a caballo dos veces por semana, llueva o truene.",
+  "node": "mum-n12",
+  "themes": [
+   "horseriding"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0060",
+  "en": "Swimming in the sea in the morning wakes me up better than coffee.",
+  "es": "Nadar en el mar por la mañana me despierta mejor que el café.",
+  "node": "mum-n03",
+  "themes": [
+   "sea"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0061",
+  "en": "I'm painting a landscape of the Breton coast.",
+  "es": "Estoy pintando un paisaje de la costa bretona.",
+  "node": "mum-n01",
+  "themes": [
+   "painting",
+   "france"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0062",
+  "en": "I worked as a translator for many years, so I choose every word with care.",
+  "es": "Trabajé muchos años como traductora, así que elijo cada palabra con cuidado.",
+  "node": "mum-n04",
+  "themes": [
+   "translator"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0063",
+  "en": "Making tiles is harder than it looks.",
+  "es": "Hacer azulejos es más difícil de lo que parece.",
+  "node": "mum-n03",
+  "themes": [
+   "tiles"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0064",
+  "en": "We live between West Sussex and Brittany, with the Channel in between.",
+  "es": "Vivimos entre West Sussex y Bretaña, con el canal de por medio.",
+  "node": "mum-n01",
+  "themes": [
+   "england",
+   "france"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0065",
+  "en": "Latour-de-France was a very long drive away.",
+  "es": "Latour-de-France quedaba lejísimos en carro.",
+  "node": "mum-n05",
+  "themes": [
+   "france",
+   "travel"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0066",
+  "en": "Being in Brittany makes it easy to see family.",
+  "es": "Estar en Bretaña nos facilita mucho ver a la familia.",
+  "node": "mum-n16",
+  "themes": [
+   "france",
+   "family"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0067",
+  "en": "We have lots of friends in both Pulborough and Josselin.",
+  "es": "Tenemos muchos amigos tanto en Pulborough como en Josselin.",
+  "node": "mum-n20",
+  "themes": [
+   "england",
+   "france",
+   "friends"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0068",
+  "en": "The weather can be unpredictable when you're hiking in the Lake District.",
+  "es": "El clima puede ser impredecible cuando haces senderismo en el Lake District.",
+  "node": "mum-n01",
+  "themes": [
+   "england",
+   "travel"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0069",
+  "en": "Learning Spanish takes a little while.",
+  "es": "Aprender español lleva su tiempo.",
+  "node": "mum-n18",
+  "themes": [
+   "spanish"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0070",
+  "en": "Travelling through Chile was incredible – we even saw penguins.",
+  "es": "Viajar por Chile fue increíble: hasta vimos pingüinos.",
+  "node": "mum-n04",
+  "themes": [
+   "travel"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0071",
+  "en": "Scout looked very noble from certain angles.",
+  "es": "Desde ciertos ángulos, Scout se veía muy noble.",
+  "node": "mum-n05",
+  "themes": [
+   "dogs"
+  ],
+  "gag": "scout",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0072",
+  "en": "Getting everyone to follow the rules in book club is no small feat.",
+  "es": "Lograr que todos sigan las reglas del club de lectura no es poca cosa.",
+  "node": "mum-n11",
+  "themes": [
+   "hobbies"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0073",
+  "en": "Pierre wore a yellow outfit to go skiing.",
+  "es": "Pierre se puso un conjunto amarillo para ir a esquiar.",
+  "node": "mum-n04",
+  "themes": [
+   "family"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0074",
+  "en": "I've lost my contact lenses again and I can't see a thing.",
+  "es": "Otra vez perdí los lentes de contacto y no veo nada.",
+  "node": "mum-n04",
+  "themes": [
+   "everyday"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0075",
+  "en": "I've built up my translation business bit by bit.",
+  "es": "He ido construyendo mi negocio de traducción poco a poco.",
+  "node": "mum-n07",
+  "themes": [
+   "translator"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0076",
+  "en": "I'm excited to speak Spanish in Bolivia.",
+  "es": "Me emociona la idea de hablar español en Bolivia.",
+  "node": "mum-n03",
+  "themes": [
+   "bolivia",
+   "spanish"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0077",
+  "en": "I've heard Bolivians are extremely friendly.",
+  "es": "Dicen que los bolivianos son sumamente amables.",
+  "node": "mum-n17",
+  "themes": [
+   "bolivia"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0078",
+  "en": "Antoine and I are going to take a trip to Bolivia together.",
+  "es": "Antoine y yo vamos a hacer un viaje juntos a Bolivia.",
+  "node": "mum-n09",
+  "themes": [
+   "bolivia",
+   "family"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0079",
+  "en": "In Bolivia they speak Spanish, Quechua and Aymara.",
+  "es": "En Bolivia se habla español, quechua y aimara.",
+  "node": "mum-n02",
+  "themes": [
+   "bolivia"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0080",
+  "en": "The Salar de Uyuni is the largest salt flat in the world.",
+  "es": "El salar de Uyuni es el desierto de sal más grande del mundo.",
+  "node": "mum-n01",
+  "themes": [
+   "bolivia"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0081",
+  "en": "In La Paz it's hard to breathe at first because of the altitude.",
+  "es": "En La Paz cuesta respirar al principio por la altura.",
+  "node": "mum-n15",
+  "themes": [
+   "bolivia"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0082",
+  "en": "Coca tea helps with altitude sickness, or so they say.",
+  "es": "El mate de coca ayuda con el soroche, o eso dicen.",
+  "node": "mum-n17",
+  "themes": [
+   "bolivia"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0083",
+  "en": "In Bolivian markets it's best to carry cash.",
+  "es": "En los mercados bolivianos conviene llevar efectivo.",
+  "node": "mum-n03",
+  "themes": [
+   "bolivia"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0084",
+  "en": "I tell a very funny joke about a frog with a big mouth.",
+  "es": "Cuento un chiste buenísimo sobre una rana de boca grande.",
+  "node": "mum-n01",
+  "themes": [
+   "jokes"
+  ],
+  "gag": "frog",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0085",
+  "en": "The frog with the big mouth has strong opinions about marmalade.",
+  "es": "La rana de la boca grande tiene opiniones firmes sobre la mermelada.",
+  "node": "mum-n01",
+  "themes": [
+   "jokes"
+  ],
+  "gag": "frog",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0086",
+  "en": "Brexit made the paperwork for living between two countries a lot more complicated.",
+  "es": "El Brexit complicó bastante los trámites para vivir entre dos países.",
+  "node": "mum-n04",
+  "themes": [
+   "admin",
+   "england",
+   "france"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0087",
+  "en": "Since Brexit, there's more paperwork at customs.",
+  "es": "Desde el Brexit, hay más papeleo en la aduana.",
+  "node": "mum-n18",
+  "themes": [
+   "admin"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0088",
+  "en": "Because of Brexit, we now need visas for longer stays.",
+  "es": "Por culpa del Brexit, ahora necesitamos visados para las estadías largas.",
+  "node": "mum-n15",
+  "themes": [
+   "admin"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0089",
+  "en": "Brexit had more consequences than people expected.",
+  "es": "El Brexit tuvo más consecuencias de las que la gente esperaba.",
+  "node": "mum-n19",
+  "themes": [
+   "england"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0090",
+  "en": "The Pérez family have some really interesting political opinions.",
+  "es": "Los Pérez tienen unas opiniones políticas de lo más interesantes.",
+  "node": "mum-n20",
+  "themes": [
+   "friends",
+   "dinner"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0091",
+  "en": "Talking to Gilles Darmont can be tiring.",
+  "es": "Puede ser agotador conversar con Gilles Darmont.",
+  "node": "mum-n03",
+  "themes": [
+   "friends",
+   "france"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0092",
+  "en": "Walking through the Pulborough Wild Brooks with Beni is a lovely morning routine.",
+  "es": "Caminar por los Wild Brooks de Pulborough con Beni es una rutina matutina encantadora.",
+  "node": "mum-n03",
+  "themes": [
+   "dogs",
+   "england"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0093",
+  "en": "Spanish is my third language, after French and English.",
+  "es": "El español es mi tercer idioma, después del francés y el inglés.",
+  "node": "mum-n01",
+  "themes": [
+   "spanish"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0094",
+  "en": "I'd been wanting to learn Spanish for years.",
+  "es": "Llevaba años queriendo aprender español.",
+  "node": "mum-n18",
+  "themes": [
+   "spanish"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0095",
+  "en": "Knowing French helps a lot with Spanish vocabulary.",
+  "es": "Saber francés ayuda mucho con el vocabulario del español.",
+  "node": "mum-n03",
+  "themes": [
+   "spanish"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0096",
+  "en": "Sometimes I mix up French and Spanish without realising.",
+  "es": "A veces mezclo el francés y el español sin darme cuenta.",
+  "node": "mum-n02",
+  "themes": [
+   "spanish"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0097",
+  "en": "My son's app helps me revise every day.",
+  "es": "La aplicación de mi hijo me ayuda a repasar todos los días.",
+  "node": "mum-n16",
+  "themes": [
+   "family",
+   "spanish"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0098",
+  "en": "I'm very proud of the app Antoine built.",
+  "es": "Estoy muy orgullosa de la aplicación que creó Antoine.",
+  "node": "mum-n19",
+  "themes": [
+   "family"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0099",
+  "en": "The sentences in this app sound suspiciously familiar.",
+  "es": "Las oraciones de esta aplicación me suenan sospechosamente familiares.",
+  "node": "mum-n03",
+  "themes": [
+   "family",
+   "jokes"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0100",
+  "en": "From Marescot you can see the South Downs in the distance.",
+  "es": "Desde Marescot se ven los South Downs a lo lejos.",
+  "node": "mum-n02",
+  "themes": [
+   "england",
+   "house"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0101",
+  "en": "As a child, Pierre used to ask a lot of questions.",
+  "es": "De niño, Pierre hacía muchísimas preguntas.",
+  "node": "mum-n05",
+  "themes": [
+   "family"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0102",
+  "en": "Twig's paws are a little too warm after his walk.",
+  "es": "Twig tiene las patas un poco calientes después del paseo.",
+  "node": "mum-n01",
+  "themes": [
+   "dogs"
+  ],
+  "gag": "twig",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0103",
+  "en": "Ken is learning Welsh in a small village in the valleys.",
+  "es": "Ken está aprendiendo galés en un pueblito de los valles.",
+  "node": "mum-n01",
+  "themes": [
+   "friends"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0104",
+  "en": "If the pandemic had one upside, it was all the quality time we spent as a family.",
+  "es": "Si algo bueno tuvo la pandemia, fue todo el tiempo que pasamos en familia.",
+  "node": "mum-n19",
+  "themes": [
+   "family"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0105",
+  "en": "In our house, Berlusconi isn't a politician – he's a dish involving green beans.",
+  "es": "En nuestra casa, Berlusconi no es un político: es un plato con vainitas.",
+  "node": "mum-n01",
+  "themes": [
+   "food",
+   "jokes"
+  ],
+  "gag": "political-dishes",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0106",
+  "en": "Going on courses keeps my translation skills sharp.",
+  "es": "Hago cursos cada tanto para mantener al día mis habilidades de traducción.",
+  "node": "mum-n15",
+  "themes": [
+   "translator"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0107",
+  "en": "Québécois speakers use all kinds of different expressions in French.",
+  "es": "Los quebequenses usan todo tipo de expresiones distintas en francés.",
+  "node": "mum-n01",
+  "themes": [
+   "france",
+   "translator"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0108",
+  "en": "Networking with translators is easier said than done.",
+  "es": "Hacer contactos con otros traductores es más fácil decirlo que hacerlo.",
+  "node": "mum-n03",
+  "themes": [
+   "translator"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0109",
+  "en": "We're excited to go and visit Antoine again in New York.",
+  "es": "Estamos emocionados de ir a visitar a Antoine otra vez a Nueva York.",
+  "node": "mum-n03",
+  "themes": [
+   "family",
+   "travel"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0110",
+  "en": "Translating fiction doesn't bring in much money.",
+  "es": "Traducir ficción no deja mucha plata.",
+  "node": "mum-n01",
+  "themes": [
+   "translator"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0111",
+  "en": "My husband assures me there is nothing to be concerned about.",
+  "es": "Mi esposo me asegura que no hay nada de qué preocuparse.",
+  "node": "mum-n17",
+  "themes": [
+   "family"
+  ],
+  "gag": "reassurance",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0112",
+  "en": "According to my husband, everything is absolutely under control.",
+  "es": "Según mi esposo, todo está absolutamente bajo control.",
+  "node": "mum-n20",
+  "themes": [
+   "family"
+  ],
+  "gag": "reassurance",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0113",
+  "en": "My husband insists there is no problem whatsoever.",
+  "es": "Mi esposo insiste en que no hay ningún problema.",
+  "node": "mum-n17",
+  "themes": [
+   "family"
+  ],
+  "gag": "reassurance",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0114",
+  "en": "If there really were nothing to worry about, my husband wouldn't repeat it so often.",
+  "es": "Si de verdad no hubiera nada de qué preocuparse, mi esposo no lo repetiría tanto.",
+  "node": "mum-n13",
+  "themes": [
+   "family"
+  ],
+  "gag": "reassurance",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0115",
+  "en": "'Not to worry', says my husband, for the umpteenth time.",
+  "es": "'Not to worry', dice mi esposo, por enésima vez.",
+  "node": "mum-n17",
+  "themes": [
+   "family"
+  ],
+  "gag": "reassurance",
+  "status": "seed",
+  "note": "'not to worry' verbatim, as always"
+ },
+ {
+  "id": "mum-0116",
+  "en": "Explaining Antoine's job is easier said than done.",
+  "es": "Explicar el trabajo de Antoine: del dicho al hecho hay mucho trecho.",
+  "node": "mum-n20",
+  "themes": [
+   "family"
+  ],
+  "gag": null,
+  "status": "seed",
+  "note": "same English idiom as the networking card on purpose; the Spanish teaches the proverb instead"
+ },
+ {
+  "id": "mum-0117",
+  "en": "Pierre helps house homeless people.",
+  "es": "Pierre ayuda a conseguirles vivienda a las personas sin hogar.",
+  "node": "mum-n16",
+  "themes": [
+   "family"
+  ],
+  "gag": "pierre-civic",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0118",
+  "en": "Pierre negotiates with the gypsy matriarch.",
+  "es": "Pierre negocia con la matriarca gitana.",
+  "node": "mum-n01",
+  "themes": [
+   "family"
+  ],
+  "gag": "pierre-civic",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0119",
+  "en": "Pierre houses asylum seekers in hotels.",
+  "es": "Pierre aloja a solicitantes de asilo en hoteles.",
+  "node": "mum-n01",
+  "themes": [
+   "family"
+  ],
+  "gag": "pierre-civic",
+  "status": "seed"
+ },
+ {
+  "id": "mum-0120",
+  "en": "Anna makes sure the Newbury flower contest runs smoothly.",
+  "es": "Anna se encarga de que el concurso de flores de Newbury salga bien.",
+  "node": "mum-n11",
+  "themes": [
+   "family"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0121",
+  "en": "Pierre enjoys drinking abundant quantities of milk.",
+  "es": "A Pierre le encanta tomar leche en cantidades abundantes.",
+  "node": "mum-n03",
+  "themes": [
+   "family",
+   "food"
+  ],
+  "gag": null,
+  "status": "seed"
+ },
+ {
+  "id": "mum-0122",
+  "en": "As a family, we eat fairly quickly.",
+  "es": "En esta familia comemos bastante rápido.",
+  "node": "mum-n01",
+  "themes": [
+   "family",
+   "food"
+  ],
+  "gag": null,
+  "status": "seed"
+ }
 ]

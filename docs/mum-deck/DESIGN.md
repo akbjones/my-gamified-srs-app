@@ -16,6 +16,9 @@ sentences about her actual life (Beni, Brannagh, Papylou, the bidet saga…).
   parece"). Every node keeps reinforcing core vocab this way.
 - Proper nouns stay as they are: Beni, Brannagh, Papylou, Magali, Véro, Twig,
   Scout, Pierre, Anna, Béa, Josselin, Latour-de-France, Pulborough, Newbury.
+- **Ken is her husband** (the 'not to worry' one). Main household characters
+  (Ken, Pierre, Anna, Antoine) are UNCAPPED – caps apply to repeated scenes,
+  not people. Scene-bits still ledgered (pierre-boardgames, pierre-civic…).
 - Quoted English stays English where that's the joke: her husband's
   **'not to worry'** appears verbatim inside the Spanish sentence, as does
   **'my duck'**. Do not translate or paraphrase these.

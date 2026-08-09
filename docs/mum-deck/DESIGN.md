@@ -25,14 +25,12 @@ sentences about her actual life (Beni, Brannagh, Papylou, the bidet saga…).
 
 ## Composition (target 1,400)
 
-| Slice | ~Cards | Notes |
-|---|---|---|
-| Personal sentences (her list + the ~300 she's adding) | ~700 | the point of the gift |
-| Theme sentences (6 recurring themes below) | ~120 | ~20 each, spread thin – never clumped |
-| Everyday useful intermediate Spanish | ~580 | markets, travel, health, opinions, small talk |
-
-Themes (recurring, NOT overdone): horseriding · morning sea swims · painting ·
-working as a translator · tile-making · living between West Sussex and Brittany.
+ONE single deck – no theme taxonomy, no goal filters. Roughly half personal
+sentences (her list + additions), half everyday useful intermediate Spanish
+(markets, travel, health, opinions, small talk). Her recurring interests
+(horseriding, morning sea swims, painting, translation work, tile-making,
+the Sussex–Brittany life) appear here and there like anything else – the
+clump lint is what keeps any of them from being overdone, not a quota.
 
 **Sanctioned running gags** – deliberate repetition, exempt from the clump lint
 at their authored counts (ledger as of batch 3): bidet 3 (escalating), scout 6,
@@ -98,7 +96,6 @@ the implementation skeleton.
 - scenario families: any non-sanctioned actor/scene 3+ times fails
 - near-dup pairs: token-set Jaccard ≥ 0.6 fails
 - opening frames: same first-two-words 4+ times fails
-- theme budget: each of the 6 themes capped at ~25 cards
 - register: vosotros/os/vais forms fail; en-dash only; English glosses natural
 - node balance: no node beyond ±25% of target after each merge
 
@@ -107,7 +104,7 @@ the implementation skeleton.
 1. `docs/mum-deck/inbox.md` – she-facing intake: one English line per idea,
    optional notes in parens. The user pastes new items here.
 2. `docs/mum-deck/seed-cards.json` – structured cards
-   `{id, en, es, node, themes, gag, status}` (status: seed → verified).
+   `{id, en, es, node, gag, status}` (status: seed → verified).
 3. Build step turns verified cards into `src/data/mum/deck.json` in QuestCard
    shape (`id: mum-NNNN`, target, english, grammarNode, tokens, priority)
    once ordering is decided.

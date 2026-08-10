@@ -15,7 +15,7 @@ sentences about her actual life (Beni, Brannagh, Papylou, the bidet saga…).
   richer clauses ("La casa que alquilamos en Bretaña es más grande de lo que
   parece"). Every node keeps reinforcing core vocab this way.
 - Proper nouns stay as they are: Beni, Brannagh, Papylou, Magali, Véro, Twig,
-  Scout, Pierre, Anna, Béa, Josselin, Latour-de-France, Pulborough, Newbury.
+  Scout, Pierre, Anna, Béa, Josselin, Latour de France, Pulborough, Newbury.
 - **Ken is her husband** (the 'not to worry' one). Main household characters
   (Ken, Pierre, Anna, Antoine) are UNCAPPED – caps apply to repeated scenes,
   not people. Scene-bits still ledgered (pierre-boardgames, pierre-civic…).
@@ -40,9 +40,14 @@ CONSECUTIVE in the final ordering – it's a bit), ken 5, whales 4, latour 4,
 georgia 3, easter 2, egremont 3, ancestors 2, pierre-boardgames 3,
 videogames 5, swansea 5 (deadpan civic worship, Egremont-adjacent), benoit 5
 (cheats at board games), floppy 5 (the hamster's Easter parallels), bear 3
-(zigzag dog), bea-techno 3, reunion 3. Scout grows to 11 (diplomatic-history
-arc) and twig to 9 (last-hope-of-democracy arc) - user-commissioned counts
-ARE the cap. Anything else repeating 3+ times is a defect.
+(zigzag dog), bea-techno 3, reunion 3, pokemon 5, gta 3, coordination 5, sports 5, henri 5
+(the beekeeper), gilles 6 (0091 + the chatting-rubbish five), latour-elders 5,
+gameboy 5, bookclub 7 (0015 + 0072 + the is-everyone-reading five),
+antoine-admin 7 (0034 + 0035 + five), pierre-finances 5, ken-sweet 5.
+Scout grows to 11 (diplomatic-history arc) and twig to 9
+(last-hope-of-democracy arc) - user-commissioned counts ARE the cap.
+Place name: Latour de France, NO hyphens (user preference). Anything else
+repeating 3+ times is a defect.
 
 The "easier said than done" pair is intentional on the English side; the
 Spanish deliberately differs (más fácil decirlo que hacerlo vs the proverb

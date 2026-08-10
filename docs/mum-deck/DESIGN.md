@@ -37,7 +37,12 @@ at their authored counts (ledger as of batch 3): bidet 3 (escalating), scout 6,
 brannagh 3, papylou 4, twig 4, frog 2, political-dishes 2, pierre-civic 3,
 reassurance 6 (the 'not to worry' card + the five-riff run, which stays
 CONSECUTIVE in the final ordering – it's a bit), ken 5, whales 4, latour 4,
-georgia 3, easter 2. Anything else repeating 3+ times is a defect.
+georgia 3, easter 2, egremont 3, ancestors 2, pierre-boardgames 3,
+videogames 5, swansea 5 (deadpan civic worship, Egremont-adjacent), benoit 5
+(cheats at board games), floppy 5 (the hamster's Easter parallels), bear 3
+(zigzag dog), bea-techno 3, reunion 3. Scout grows to 11 (diplomatic-history
+arc) and twig to 9 (last-hope-of-democracy arc) - user-commissioned counts
+ARE the cap. Anything else repeating 3+ times is a defect.
 
 The "easier said than done" pair is intentional on the English side; the
 Spanish deliberately differs (más fácil decirlo que hacerlo vs the proverb

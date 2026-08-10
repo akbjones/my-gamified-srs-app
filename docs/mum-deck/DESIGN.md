@@ -113,6 +113,10 @@ the implementation skeleton.
 - near-dup pairs: token-set Jaccard ≥ 0.6 fails
 - opening frames: same first-two-words 4+ times fails
 - register: vosotros/os/vais forms fail; en-dash only; English glosses natural
+- NO SEMICOLONS in the Spanish (user rule 2026-08-10): the punto y coma is
+  written-register and rare in Spanish - these are SPOKEN sentences. Use a
+  comma + connector (pero, así que, total...), a colon, or two sentences.
+  TTS reads ; as a full stop anyway.
 - node balance: no node beyond ±25% of target after each merge
 
 ## Data flow

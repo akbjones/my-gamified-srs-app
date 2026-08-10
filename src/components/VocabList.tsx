@@ -260,6 +260,9 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
   const renderEntry = (entry: VocabEntry) => {
     const isExpanded = expandedWord === entry.word;
     const pos = getPos(entry);
+    // Verb-ish enough to advertise the tap: explicit pos, or a "to …"
+    // translation when no pos was ever recorded for the entry.
+    const verbish = pos === 'v' || (!pos && /^to /.test(getTranslation(entry) || ''));
     const conjTable = isExpanded ? getConjugation({ ...entry, pos }) : null;
     const personLabels = PERSON_LABELS[language] || PERSON_LABELS.spanish;
 
@@ -291,7 +294,7 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
                 </div>
               ) : null;
             })()}
-            {pos === 'v' && !isExpanded && (
+            {verbish && !isExpanded && (
               <div className="text-[9px] text-emerald-500/60 font-semibold mt-0.5">
                 Tap to conjugate
               </div>
@@ -330,12 +333,20 @@ const VocabList: React.FC<VocabListProps> = ({ vocabMap, language, onBack, looku
               {entry.timesFailed > 0 && (
                 <span className="text-red-500 font-bold">{entry.timesFailed}F</span>
               )}
-              {pos === 'v' && (
+              {verbish && (
                 <ChevronDown size={12} className={`text-emerald-500 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
               )}
             </div>
           </div>
         </div>
+
+        {/* An advertised verb tap must never be a silent no-op: if we can't
+            build a table (missing dictionary lemma, engine gap), say so. */}
+        {isExpanded && verbish && !conjTable && (
+          <div className="px-3 pb-3 text-xs text-[var(--text-muted)] animate-fade-in">
+            No conjugation table for this form yet – it's on the list.
+          </div>
+        )}
 
         {/* Conjugation table (verbs only, when expanded) */}
         {isExpanded && conjTable && (

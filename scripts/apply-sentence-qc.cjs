@@ -61,7 +61,10 @@ for (const [id, r] of reps) {
   if ((rank.get(id) ?? 9e9) > MAX_RANK) { skippedRank++; continue; }
   gate(id, !!r.target && r.target.trim().length > 2, 'empty/short target');
   gate(id, !!r.english && r.english.trim().length > 2, 'empty/short english');
-  gate(id, /[ऀ-ॿ]/.test(r.target), 'target has no Devanagari');
+  // Script check per deck: the target must be written in the language's script.
+  const SCRIPTS = { hindi: /[ऀ-ॿ]/, russian: /[Ѐ-ӿ]/, greek: /[Ͱ-Ͽἀ-῿]/, korean: /[가-힣]/, japanese: /[ぁ-ヿ一-龯]/ };
+  const scriptRe = SCRIPTS[deckArg];
+  if (scriptRe) gate(id, scriptRe.test(r.target), `target not in ${deckArg} script`);
   applied++;
 }
 

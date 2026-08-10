@@ -40,11 +40,13 @@ CONSECUTIVE in the final ordering – it's a bit), ken 5, whales 4, latour 4,
 georgia 3, easter 2, egremont 3, ancestors 2, pierre-boardgames 3,
 videogames 5, swansea 5 (deadpan civic worship, Egremont-adjacent), benoit 5
 (cheats at board games), floppy 5 (the hamster's Easter parallels), bear 3
-(zigzag dog), bea-techno 3, reunion 3, pokemon 5, gta 3, coordination 5, sports 5, henri 5
+(zigzag dog), bea-techno 3, reunion 3, pokemon 5, gta 3, coordination 4, sports 5, henri 4
 (the beekeeper), gilles 6 (0091 + the chatting-rubbish five), latour-elders 5,
-gameboy 5, bookclub 7 (0015 + 0072 + the is-everyone-reading five),
+gameboy 3, bookclub 7 (0015 + 0072 + the is-everyone-reading five),
 antoine-admin 7 (0034 + 0035 + five), pierre-finances 5, ken-sweet 5.
-Scout grows to 11 (diplomatic-history arc) and twig to 9
+west-sussex 10, london-culture 10.
+Scout grows to 11 (diplomatic-history arc), twig to 9, brannagh to 13
+(greatest-horse arc: Aztec/Chinese legends + Saudi offers, user's beats)
 (last-hope-of-democracy arc) - user-commissioned counts ARE the cap.
 Place name: Latour de France, NO hyphens (user preference). Anything else
 repeating 3+ times is a defect.
@@ -52,6 +54,14 @@ repeating 3+ times is a defect.
 The "easier said than done" pair is intentional on the English side; the
 Spanish deliberately differs (más fácil decirlo que hacerlo vs the proverb
 del dicho al hecho hay mucho trecho) so the pair teaches two idioms.
+
+## Humour rule (user rule, 2026-08-10)
+
+NO inventive humour from Claude. The comedy comes from the USER's beats -
+Claude executes them faithfully and does not add comic angles, similes or
+punchlines of its own ("como si fueran colegas", "cinéticamente creativos"
+were cut for this). When a commissioned run names its beats (Aztec legends,
+Saudi buyers), stay inside them. Plain and faithful beats clever.
 
 ## Authoring boundary (user rule, 2026-08-09)
 

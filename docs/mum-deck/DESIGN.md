@@ -16,7 +16,8 @@ sentences about her actual life (Beni, Brannagh, Papylou, the bidet saga…).
   parece"). Every node keeps reinforcing core vocab this way.
 - Proper nouns stay as they are: Beni, Brannagh, Papylou, Magali, Véro, Twig,
   Scout, Pierre, Anna, Béa, Josselin, Latour de France, Pulborough, Newbury,
-  Marescot, Storrington, Lyon, Swonky, Papy Bey.
+  Marescot, Storrington, Lyon, Swonky, Papy Bey, Dave, Lassie (the dog),
+  Nara, Kioto, Nagano.
 - **Ken is her husband** (the 'not to worry' one). Main household characters
   (Ken, Pierre, Anna, Antoine) are UNCAPPED – caps apply to repeated scenes,
   not people. Scene-bits still ledgered (pierre-boardgames, pierre-civic…).
@@ -56,6 +57,15 @@ snails, not very good), pierre-plush 3 (Alavanille, Courtpartout,
 Sautepartout), timer 2 (kids' eating), hedgehog 1 (pegs on Pierre),
 imaginary-worlds 2 (trampoline), tower-audioguide 4 (3 + the Antoine-ill
 research one).
+Batch 2026-08-12b (mum-0411..0463): airbnb 5 (renting part of Josselin),
+dave-lassie 2 (Dave walks Lassie), georgia-hills 2 (engine nearly blew),
+beni-seaweed 3 (pressed + framed on white, Antoine's gift), japan-trip 5
+(Antoine + Nara/Kioto + Nagano ryokan + Papylou), birdfeeder 5 (Marescot +
+Pulborough species, blue tits in the birdhouse), moles 5 (Ken's enemy),
+fox-presents 3 (vixens burning the grass), antoine-films 5 (strange
+Soviet/Japanese cinema), ken-vintage-car 5 (another one, she's not sure),
+jaguar 3 (do we look like assholes), ken-fixing 5, ken-motorbike 5 (not
+quite a Hell's Angel).
 Scout grows to 11 (diplomatic-history arc), twig to 9, brannagh to 13
 (greatest-horse arc: Aztec/Chinese legends + Saudi offers, user's beats)
 (last-hope-of-democracy arc) - user-commissioned counts ARE the cap.

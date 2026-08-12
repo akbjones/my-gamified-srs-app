@@ -398,7 +398,7 @@ export const isEtymologyFavorited = (word: string, lang: Language): boolean => {
 export const resetAll = (): void => {
   // Clear all language-specific keys
   // All supported languages — keep in sync with the Language union / DECK_MAP.
-  const langs: Language[] = ['spanish', 'italian', 'german', 'french', 'portuguese', 'dutch', 'swedish', 'welsh', 'hindi', 'turkish', 'russian', 'indonesian', 'greek', 'korean', 'japanese'];
+  const langs: Language[] = ['spanish', 'italian', 'german', 'french', 'portuguese', 'dutch', 'swedish', 'welsh', 'hindi', 'turkish', 'russian', 'indonesian', 'greek', 'korean', 'japanese', 'mum'];
   for (const lang of langs) {
     safeRemove(masteryKey(lang));
     safeRemove(statsKey(lang));

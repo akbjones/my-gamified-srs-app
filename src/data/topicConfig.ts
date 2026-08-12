@@ -81,6 +81,30 @@ export const SIDE_BRANCHES: SideBranch[] = [
 // ── Per-language node names ────────────────────────────────────
 // Keys not listed fall back to MAIN_PATH[].name (the English default).
 export const NODE_NAMES: Partial<Record<Language, Record<string, string>>> = {
+  // Mum's Deck follows its own 20-node curriculum (docs/mum-deck/DESIGN.md);
+  // nodes 21-35 hold no cards for this deck.
+  mum: {
+    'node-01': 'Rich description',
+    'node-02': 'Reflexives & routines',
+    'node-03': 'Likes & opinions',
+    'node-04': 'Preterite',
+    'node-05': 'Imperfect',
+    'node-06': 'Preterite vs imperfect',
+    'node-07': 'Present perfect',
+    'node-08': 'Past perfect & sequencing',
+    'node-09': 'Future & conjecture',
+    'node-10': 'Conditional',
+    'node-11': 'Present subjunctive',
+    'node-12': 'Subjunctive after connectors',
+    'node-13': 'Si-clauses & hypotheticals',
+    'node-14': 'Commands & exclamations',
+    'node-15': 'Por vs para',
+    'node-16': 'Object pronouns',
+    'node-17': 'Reported speech',
+    'node-18': 'Time structures',
+    'node-19': 'Relative clauses',
+    'node-20': 'Discourse & nuance',
+  },
   spanish: {
     'node-01': 'Regular present tense',
     'node-02': 'Irregular present verbs',

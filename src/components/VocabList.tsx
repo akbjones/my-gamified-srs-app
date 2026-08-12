@@ -39,10 +39,12 @@ const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable 
   turkish: conjugateTr,
   russian: conjugateRu,
   japanese: conjugateJa,
+  mum: conjugateEs, // Spanish variant
 };
 
 const PERSON_LABELS: Record<string, string[]> = {
   spanish: ['yo', 'tú', 'él', 'nosotros', 'vosotros', 'ellos'],
+  mum: ['yo', 'tú', 'él', 'nosotros', 'vosotros', 'ellos'],
   italian: ['io', 'tu', 'lui', 'noi', 'voi', 'loro'],
   french: ['je', 'tu', 'il', 'nous', 'vous', 'ils'],
   portuguese: ['eu', 'tu', 'ele', 'nós', 'vós', 'eles'],

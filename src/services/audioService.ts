@@ -149,6 +149,7 @@ const GOOGLE_VOICE_MAP: Record<Language | 'msa', { languageCode: string; name: s
   korean: { languageCode: 'ko-KR', name: 'ko-KR-Chirp3-HD-Aoede' },
   japanese: { languageCode: 'ja-JP', name: 'ja-JP-Chirp3-HD-Aoede' },
   msa: { languageCode: 'ar-XA', name: 'ar-XA-Chirp3-HD-Aoede' },
+  mum: { languageCode: 'es-US', name: 'es-US-Chirp3-HD-Aoede' }, // Spanish variant – same canonical voice
 };
 
 // Speed maps to Google TTS speakingRate (0.25–4.0, 1.0 = normal)

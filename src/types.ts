@@ -1,4 +1,4 @@
-export type Language = 'spanish' | 'italian' | 'german' | 'french' | 'portuguese' | 'dutch' | 'swedish' | 'welsh' | 'hindi' | 'turkish' | 'russian' | 'indonesian' | 'greek' | 'korean' | 'japanese';
+export type Language = 'spanish' | 'italian' | 'german' | 'french' | 'portuguese' | 'dutch' | 'swedish' | 'welsh' | 'hindi' | 'turkish' | 'russian' | 'indonesian' | 'greek' | 'korean' | 'japanese' | 'mum';
 export type LearningGoal = 'general' | 'travel' | 'work' | 'family';
 
 export interface QuestCard {
@@ -165,6 +165,8 @@ export const LANGUAGE_CONFIG: Record<Language, { name: string; code: string; bcp
   greek: { name: 'Greek', code: 'EL', bcp47: 'el-GR' },
   korean: { name: 'Korean', code: 'KO', bcp47: 'ko-KR' },
   japanese: { name: 'Japanese', code: 'JA', bcp47: 'ja-JP' },
+  // Private gift deck – Spanish variant, hidden unless unlocked (see App.tsx GIFT_*).
+  mum: { name: "Mum's Deck", code: 'ES', bcp47: 'es-MX', variety: 'Latin American' },
 };
 
 export const GOAL_CONFIG: Record<LearningGoal, { name: string; description: string }> = {

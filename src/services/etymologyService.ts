@@ -32,6 +32,7 @@ const TABLES: Partial<Record<Language, Record<string, EtymologyEntry>>> = {
   turkish: TURKISH_ETYMOLOGY,
   hindi: HINDI_ETYMOLOGY,
   russian: RUSSIAN_ETYMOLOGY,
+  mum: SPANISH_ETYMOLOGY, // Spanish variant – shares the word-keyed table
 };
 
 /** Normalize a word for lookup: strip punctuation, lowercase, keep

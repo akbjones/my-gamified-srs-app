@@ -55,6 +55,7 @@ import VocabList from './components/VocabList';
 import FavoritesList from './components/FavoritesList';
 import ListenMode from './components/ListenMode';
 import Onboarding from './components/Onboarding';
+import BirthdayScroll from './components/BirthdayScroll';
 import { Cloud, Settings2, Minus, Plus, X, Sun, Moon, BookOpen, Globe, Plane, Briefcase, Heart, ChevronRight, ChevronDown, Bell, BellOff, Star, PenTool, Flame, BarChart3, CheckCheck, CalendarDays, Volume2, Library as LibraryIcon, Milestone } from 'lucide-react';
 import {
   loadNotificationPrefs, saveNotificationPrefs, requestNotificationPermission,
@@ -81,6 +82,7 @@ const DICT_LOOKUP: Partial<Record<Language, (w: string) => any>> = {
   turkish: lookupTr,
   russian: lookupRu,
   japanese: lookupJa,
+  mum: lookupEs, // Spanish variant
 };
 
 type View = 'HOME' | 'TOPICS' | 'STUDY' | 'GAMIFICATION' | 'SETTINGS' | 'PLACEMENT' | 'CHALLENGE' | 'VOCAB' | 'FAVORITES' | 'LISTEN' | 'CHECKIN' | 'SCRIPT';
@@ -106,12 +108,34 @@ const DECK_LOADERS: Record<Language, () => Promise<any[]>> = {
   greek: () => import('./data/greek/deck.json').then(m => m.default),
   korean: () => import('./data/korean/deck.json').then(m => m.default),
   japanese: () => import('./data/japanese/deck.json').then(m => m.default),
+  mum: () => import('./data/mum/deck.json').then(m => m.default),
 };
 
 // Languages registered in the platform (Language union, registry, audio)
 // but deliberately absent from the picker until they reach 3,933-card
 // parity. Japanese is reachable only via its ?starter=ja link.
-const HIDDEN_UNTIL_PARITY: readonly Language[] = ['japanese'];
+const HIDDEN_UNTIL_PARITY: readonly Language[] = ['japanese', 'mum'];
+
+// ── Private gift deck ─────────────────────────────────────────────
+// Opening the app with ?gift=mum permanently unlocks "Mum's Deck" on this
+// device: the flag persists, the deck joins the picker alongside her other
+// languages (no starter-style lock), placement is skipped (the deck IS her
+// placement), and a one-time birthday scroll plays. Not a secret – just a
+// door only one person is handed the key to.
+const GIFT_UNLOCK_KEY = 'quest_mum_unlocked';
+const GIFT_SCROLL_KEY = 'quest_mum_scroll_seen';
+const GIFT_PARAM = typeof window !== 'undefined'
+  ? new URLSearchParams(window.location.search).get('gift')
+  : null;
+if (GIFT_PARAM === 'mum' && typeof window !== 'undefined') {
+  localStorage.setItem(GIFT_UNLOCK_KEY, '1');
+  // The deck is her placement – never show the placement fork for it.
+  // quest_placement_mum gates the fork (isPlacementComplete); the _taken
+  // key only drives the Settings label. Set both, values match safeSet's.
+  localStorage.setItem('quest_placement_mum', 'true');
+  localStorage.setItem('quest_placement_taken_mum', 'true');
+}
+const MUM_UNLOCKED = typeof window !== 'undefined' && localStorage.getItem(GIFT_UNLOCK_KEY) === '1';
 
 // ── Locked shareable starter mode ────────────────────────────────
 // Opening the app with ?starter=es boots straight into the curated
@@ -237,6 +261,7 @@ const CHALLENGE_NAMES: Record<Language, string> = {
   greek: 'Level',
   korean: 'Level',
   japanese: 'Level',
+  mum: 'Level',
 };
 
 // Find the current frontier node (first incomplete unlocked node).
@@ -269,7 +294,11 @@ const App: React.FC = () => {
     migrateStorageKeys(); // one-time migration of old keys
     const loaded = loadSettings();
     // Locked starter link forces the language regardless of saved settings.
-    return STARTER_LOCK ? { ...loaded, selectedLanguage: STARTER_LOCK } : loaded;
+    if (STARTER_LOCK) return { ...loaded, selectedLanguage: STARTER_LOCK };
+    // The gift link opens straight onto Mum's Deck (a plain switch, not a lock –
+    // she can go back to her other languages from the picker afterwards).
+    if (GIFT_PARAM === 'mum') return { ...loaded, selectedLanguage: 'mum' as Language };
+    return loaded;
   });
   const [userStats, setUserStats] = useState<UserStats>(() => loadUserStats(settings.selectedLanguage));
   const [dailyStats, setDailyStats] = useState<DailyStats>(() => loadDailyStats(settings.selectedLanguage));
@@ -291,7 +320,9 @@ const App: React.FC = () => {
   const [showLimitIntro, setShowLimitIntro] = useState(false);
   const [showGoalMenu, setShowGoalMenu] = useState(false);
   const [showLibraryMenu, setShowLibraryMenu] = useState(false);
-  const [showLangPicker, setShowLangPicker] = useState(() => !STARTER_LOCK && !localStorage.getItem('quest_first_launch_done'));
+  const [showLangPicker, setShowLangPicker] = useState(() => !STARTER_LOCK && GIFT_PARAM !== 'mum' && !localStorage.getItem('quest_first_launch_done'));
+  // Birthday scroll: unfurls once, the first time the gift link opens the deck.
+  const [showBirthdayScroll, setShowBirthdayScroll] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(() => !localStorage.getItem('onboarding_complete'));
   const [notifPrefs, setNotifPrefs] = useState<NotificationPrefs>(() => loadNotificationPrefs());
   const [showNotifPrompt, setShowNotifPrompt] = useState(false);
@@ -856,7 +887,17 @@ const App: React.FC = () => {
 
   const availableLanguages: Language[] = STARTER_LOCK
     ? [STARTER_LOCK]
-    : (Object.keys(DECK_LOADERS) as Language[]).filter(l => !HIDDEN_UNTIL_PARITY.includes(l));
+    : (Object.keys(DECK_LOADERS) as Language[]).filter(l =>
+        l === 'mum' ? MUM_UNLOCKED : !HIDDEN_UNTIL_PARITY.includes(l));
+
+  // Birthday scroll – once, the first time the gift link lands. Flag written at
+  // trigger time (the canonical idiom above) so a reload can't replay it.
+  useEffect(() => {
+    if (GIFT_PARAM !== 'mum') return;
+    if (localStorage.getItem(GIFT_SCROLL_KEY)) return;
+    localStorage.setItem(GIFT_SCROLL_KEY, '1');
+    setShowBirthdayScroll(true);
+  }, []);
 
   // Close language dropdown when clicking outside
   useEffect(() => {
@@ -879,8 +920,13 @@ const App: React.FC = () => {
 
   return (
     <div className={`mx-auto min-h-screen ${view === 'STUDY' || view === 'PLACEMENT' || view === 'CHALLENGE' || view === 'SCRIPT' ? 'max-w-lg px-0 pt-0 pb-0' : 'max-w-md px-5 pt-[max(0.5rem,env(safe-area-inset-top))] pb-[max(0.75rem,env(safe-area-inset-bottom))]'}`}>
+      {/* Birthday scroll – sits above everything, including onboarding */}
+      {showBirthdayScroll && (
+        <BirthdayScroll onClose={() => setShowBirthdayScroll(false)} />
+      )}
+
       {/* First-time onboarding carousel */}
-      {showOnboarding && (
+      {showOnboarding && !showBirthdayScroll && (
         <Onboarding onComplete={() => {
           localStorage.setItem('onboarding_complete', 'true');
           setShowOnboarding(false);

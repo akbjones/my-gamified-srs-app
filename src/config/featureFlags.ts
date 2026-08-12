@@ -29,6 +29,7 @@ export const GRAMMAR_TIPS_LANGS: ReadonlySet<Language> = new Set<Language>([
   'turkish',    // Wave C 2026-07-24: 691 tips, 22.2%, + Tip Clarity format pass + adversarial judgment critic
   'russian',    // Wave C 2026-07-24: 704 tips, 22.2%, + Tip Clarity format pass + adversarial judgment critic
   'welsh',      // Wave C 2026-07-24: 774 tips, 22.0%, + Tip Clarity format pass + adversarial judgment critic
+  'mum',        // 2026-08-12: private gift deck – tips authored to the Tip Clarity Standard + adversarial verify
 ]);
 
 /** Should the UI surface grammar tips for this language? */

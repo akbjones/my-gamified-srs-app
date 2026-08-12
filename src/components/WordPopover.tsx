@@ -53,6 +53,7 @@ const LOOKUP_FNS: Partial<Record<Language, (w: string) => DictEntry | null>> = {
   greek: lookupEl,
   korean: lookupKo,
   japanese: lookupJa,
+  mum: lookupEs, // Spanish variant – full Spanish machinery
 };
 
 const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable | null>> = {
@@ -71,10 +72,12 @@ const CONJUGATE_FNS: Partial<Record<Language, (inf: string) => ConjugationTable 
   greek: conjugateEl,
   korean: conjugateKo,
   japanese: conjugateJa,
+  mum: conjugateEs,
 };
 
 const PERSON_LABELS: Record<string, string[]> = {
   spanish: ['yo', 'tú', 'él', 'nosotros', 'vosotros', 'ellos'],
+  mum: ['yo', 'tú', 'él', 'nosotros', 'vosotros', 'ellos'],
   italian: ['io', 'tu', 'lui', 'noi', 'voi', 'loro'],
   french: ['je', 'tu', 'il', 'nous', 'vous', 'ils'],
   portuguese: ['eu', 'tu', 'ele', 'nós', 'vós', 'eles'],

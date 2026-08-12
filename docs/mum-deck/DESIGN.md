@@ -15,7 +15,8 @@ sentences about her actual life (Beni, Brannagh, Papylou, the bidet saga…).
   richer clauses ("La casa que alquilamos en Bretaña es más grande de lo que
   parece"). Every node keeps reinforcing core vocab this way.
 - Proper nouns stay as they are: Beni, Brannagh, Papylou, Magali, Véro, Twig,
-  Scout, Pierre, Anna, Béa, Josselin, Latour de France, Pulborough, Newbury.
+  Scout, Pierre, Anna, Béa, Josselin, Latour de France, Pulborough, Newbury,
+  Marescot, Storrington, Lyon, Swonky, Papy Bey.
 - **Ken is her husband** (the 'not to worry' one). Main household characters
   (Ken, Pierre, Anna, Antoine) are UNCAPPED – caps apply to repeated scenes,
   not people. Scene-bits still ledgered (pierre-boardgames, pierre-civic…).
@@ -45,6 +46,16 @@ videogames 5, swansea 5 (deadpan civic worship, Egremont-adjacent), benoit 5
 gameboy 3, bookclub 7 (0015 + 0072 + the is-everyone-reading five),
 antoine-admin 7 (0034 + 0035 + five), pierre-finances 5, ken-sweet 5.
 west-sussex 10, london-culture 10.
+Batch 2026-08-12 (mum-0373..0410): swonky 3 (the Newbury swan, car-bent
+neck), pilgrims 3 (unannounced at Josselin dinnertime), ballooning 2
+(Antoine + Papylou), apple-tree 2 (Marescot, last legs), house-renovation 3
+(her + Ken doing up Marescot/Josselin, first person), judo 5 (family, Lyon
+then Storrington), lyon 3, midnight-mass 2 (with Papylou, nobody wants to),
+papylou-singing 2 (off key, great enthusiasm), cargolade 1 (Papy Bey's
+snails, not very good), pierre-plush 3 (Alavanille, Courtpartout,
+Sautepartout), timer 2 (kids' eating), hedgehog 1 (pegs on Pierre),
+imaginary-worlds 2 (trampoline), tower-audioguide 4 (3 + the Antoine-ill
+research one).
 Scout grows to 11 (diplomatic-history arc), twig to 9, brannagh to 13
 (greatest-horse arc: Aztec/Chinese legends + Saudi offers, user's beats)
 (last-hope-of-democracy arc) - user-commissioned counts ARE the cap.

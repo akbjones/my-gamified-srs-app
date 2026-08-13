@@ -146,7 +146,8 @@ export default defineConfig({
               // v19 = 2026-07-23 Japanese starter (300 deck clips) + kana teacher (120) + Devanagari teacher (102)
               // v20 = 2026-07-23 Devanagari vowel-length fix — 21 vowel/matra clips recalibrated so long vowels are audibly longer than short
               // v26 = 2026-08-10 Russian de-clump — 132 occupation-chore/waltz template cards rewritten + regenerated
-              cacheName: 'audio-cache-v26',
+              // v27 = 2026-08-12 mum deck regens — 5 Benoît accent + 5 Béa/Véro TTS respellings + 1 Downs riding fix
+              cacheName: 'audio-cache-v27',
               expiration: {
                 maxEntries: 500,
                 maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days

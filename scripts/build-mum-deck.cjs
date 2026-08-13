@@ -27,26 +27,41 @@ for (const set of sets) for (const c of set) {
   cards.push({ srcId: c.rid, mumId, es: c.es, en: c.en, node: c.node, grammar: tips[c.rid] });
 }
 
-// Deterministic per-node interleave: stable string hash of the mum id.
-const hash = s => { let h = 0; for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0; return h; };
+// Deterministic per-node shuffle: FNV-1a + murmur finalizer. The old
+// h*31+c hash mapped sequential ids to near-sequential values, so "sorted
+// by hash" was secretly "sorted by id" and each node ran personal-block ->
+// theme-block -> everyday-block. The avalanche mixes sources properly
+// while staying stable across rebuilds.
+const hash = s => {
+  let h = 2166136261 >>> 0;
+  for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; }
+  h ^= h >>> 15; h = Math.imul(h, 2246822507) >>> 0;
+  h ^= h >>> 13; h = Math.imul(h, 3266489909) >>> 0;
+  h ^= h >>> 16;
+  return h >>> 0;
+};
+// The five-riff reassurance run (DESIGN.md: "stays CONSECUTIVE - it's a
+// bit") spans three nodes, so it is pulled out wholesale and re-inserted
+// as one block, in its authored escalation order, inside n17 (its majority
+// node). The standalone 'not to worry' card (mum-0003) shuffles normally.
+const RIFF = ['mum-0111', 'mum-0112', 'mum-0113', 'mum-0114', 'mum-0115'];
+const riffCards = RIFF.map(id => cards.find(c => c.mumId === id)).filter(Boolean);
 const byNode = new Map();
 for (let n = 1; n <= 20; n++) byNode.set(n, []);
 for (const c of cards) {
+  if (RIFF.includes(c.mumId)) continue;
   const n = parseInt(String(c.node).replace('mum-n', ''), 10);
   if (!byNode.has(n)) { console.error('bad node', c.node, 'on', c.srcId); process.exit(1); }
   byNode.get(n).push(c);
 }
 const ordered = [];
 for (let n = 1; n <= 20; n++) {
-  const group = byNode.get(n);
-  const reassurance = group.filter(c => c.gag === 'reassurance');
-  const rest = group.filter(c => c.gag !== 'reassurance').sort((a, b) => hash(a.mumId) - hash(b.mumId));
-  if (reassurance.length) {
-    // keep the run consecutive at the position of its (hash-ordered) first member
-    const anchor = Math.min(rest.length, Math.abs(hash(reassurance[0].mumId)) % (rest.length + 1));
-    rest.splice(anchor, 0, ...reassurance);
+  const group = byNode.get(n).sort((a, b) => hash(a.mumId) - hash(b.mumId));
+  if (n === 17 && riffCards.length) {
+    const anchor = Math.min(group.length, hash('reassurance-riff') % (group.length + 1));
+    group.splice(anchor, 0, ...riffCards);
   }
-  ordered.push(...rest);
+  ordered.push(...group);
 }
 
 const out = ordered.map((c, i) => {
@@ -60,6 +75,10 @@ const out = ordered.map((c, i) => {
     priority: (i + 1) * 10,
   };
   if (c.grammar) card.grammar = c.grammar;
+  // TTS reads the accented short names Béa/Véro as initialisms and spells
+  // them out; the unaccented forms say the same thing naturally. Display
+  // keeps the accents, only the synthesis text differs.
+  if (/Béa|Véro/.test(c.es)) card.ttsText = c.es.replace(/Béa/g, 'Bea').replace(/Véro/g, 'Vero');
   return card;
 });
 

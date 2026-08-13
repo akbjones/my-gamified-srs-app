@@ -204,6 +204,20 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
     }
   }, [showEtymology, cardEty, session.language]);
 
+  // Escape closes whichever tip overlay is open (desktop keyboard users).
+  useEffect(() => {
+    if (!showGrammar && !showEtymology) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.stopPropagation();
+        setShowGrammar(false);
+        setShowEtymology(false);
+      }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [showGrammar, showEtymology]);
+
   if (isComplete) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-6 animate-fade-in">
@@ -535,11 +549,16 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
             const wordCount = displayLengthFor(card!);
             // ONE size for virtually every card – jumping between four buckets
             // made consecutive cards visibly resize, which reads as a glitch.
-            // Only genuinely long sentences (>14 words, ~4% of cards) step down
-            // once so they still fit without scrolling.
-            const sizeClass = wordCount <= 14
+            // Longer sentences step down so the flipped card (sentence + gloss
+            // + tip chips + controls) fits without clipping – intermediate
+            // decks run 12-16 words routinely, and at the old 14-word boundary
+            // a five-line 4xl sentence pushed the English gloss off a shorter
+            // desktop window.
+            const sizeClass = wordCount <= 11
               ? 'text-3xl md:text-4xl'
-              : 'text-2xl md:text-3xl';
+              : wordCount <= 17
+                ? 'text-2xl md:text-3xl'
+                : 'text-xl md:text-2xl';
             const engSizeClass = wordCount <= 10
               ? 'text-base md:text-lg'
               : 'text-sm md:text-base';

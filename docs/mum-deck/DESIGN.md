@@ -65,7 +65,8 @@ Pulborough species, blue tits in the birdhouse), moles 5 (Ken's enemy),
 fox-presents 3 (vixens burning the grass), antoine-films 5 (strange
 Soviet/Japanese cinema), ken-vintage-car 5 (another one, she's not sure),
 jaguar 3 (do we look like assholes), ken-fixing 5, ken-motorbike 5 (not
-quite a Hell's Angel).
+quite a Hell's Angel), christmas-cake 3 (Pierre + Antoine decorating it
+weirdly, mum-1318..1320).
 Scout grows to 11 (diplomatic-history arc), twig to 9, brannagh to 13
 (greatest-horse arc: Aztec/Chinese legends + Saudi offers, user's beats)
 (last-hope-of-democracy arc) - user-commissioned counts ARE the cap.

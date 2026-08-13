@@ -101,6 +101,11 @@ export default defineConfig({
         // so a visitor only downloads the deck they actually study).
         globPatterns: ['**/*.{js,css,html,svg,png,woff2}'],
         globIgnores: ['quest-audio/**', 'sw-notifications.js', 'assets/deck-*.js'],
+        // Gift links must never be answered with the cached app shell: a
+        // stale shell predates the gift code and silently eats the param.
+        // Denylisted navigations fall through to the network, so a ?gift=
+        // tap always gets the freshest index.html.
+        navigateFallbackDenylist: [/[?&]gift=/],
         // Decks are code-split now (14 chunks runtime-cached separately), so the
         // main app-shell chunk dropped ~19.9 MB -> ~6.7 MB. Cap gives headroom
         // for the shell (still holds all 14 dictionaries + conjugation engines —

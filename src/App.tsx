@@ -137,6 +137,11 @@ if (GIFT_PARAM === 'mum' && typeof window !== 'undefined') {
   // key only drives the Settings label. Set both, values match safeSet's.
   localStorage.setItem('quest_placement_mum', 'true');
   localStorage.setItem('quest_placement_taken_mum', 'true');
+  // seen=1: the standalone reveal page (separate origin, no SW) already
+  // played the scroll – don't replay it in-app.
+  if (new URLSearchParams(window.location.search).get('seen') === '1') {
+    localStorage.setItem(GIFT_SCROLL_KEY, '1');
+  }
 }
 // Checked at render time, not module load: a stale-PWA first visit can eat
 // the ?gift param (old bundle, no unlock code), and the module constant

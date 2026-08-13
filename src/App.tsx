@@ -130,7 +130,15 @@ const GIFT_PARAM_RAW = typeof window !== 'undefined'
   ? new URLSearchParams(window.location.search).get('gift')
   : null;
 const GIFT_PARAM = GIFT_PARAM_RAW === 'maman' ? 'mum' : GIFT_PARAM_RAW;
+// The gift link LOCKS the app to Pour Maman on this device – her copy of
+// the app is the deck, nothing else. ?gift=off releases the lock (for the
+// giver's own devices) while the deck stays available in the picker.
+const GIFT_LOCK_KEY = 'quest_mum_locked';
+if (typeof window !== 'undefined' && GIFT_PARAM === 'off') {
+  localStorage.removeItem(GIFT_LOCK_KEY);
+}
 if (GIFT_PARAM === 'mum' && typeof window !== 'undefined') {
+  localStorage.setItem(GIFT_LOCK_KEY, '1');
   localStorage.setItem(GIFT_UNLOCK_KEY, '1');
   // The deck is her placement – never show the placement fork for it.
   // quest_placement_mum gates the fork (isPlacementComplete); the _taken
@@ -169,10 +177,18 @@ const STARTER_LOADERS: Partial<Record<Language, () => Promise<any[]>>> = {
   // Japanese: the whole deck IS the starter (300 graded cards at launch);
   // manifest-hydrated so parity expansion needs zero rework.
   japanese: () => import('./data/japaneseStarter').then(m => m.JAPANESE_STARTER),
+  // Pour Maman: the gift lock loads the full deck – there is no cut-down
+  // starter variant, the deck IS her whole app.
+  mum: () => import('./data/mum/deck.json').then(m => m.default),
 };
 const STARTER_LANG_BY_CODE: Record<string, Language> = { es: 'spanish', ja: 'japanese' };
+// The gift lock rides the starter-lock machinery: same forced language,
+// disabled switching, skipped placement. Unlike URL-scoped starter locks it
+// persists via localStorage, so her installed app stays locked to the deck.
+const GIFT_LOCK: Language | null =
+  typeof window !== 'undefined' && localStorage.getItem(GIFT_LOCK_KEY) === '1' ? 'mum' : null;
 const STARTER_LOCK: Language | null =
-  STARTER_PARAM && STARTER_LANG_BY_CODE[STARTER_PARAM] ? STARTER_LANG_BY_CODE[STARTER_PARAM] : null;
+  STARTER_PARAM && STARTER_LANG_BY_CODE[STARTER_PARAM] ? STARTER_LANG_BY_CODE[STARTER_PARAM] : GIFT_LOCK;
 
 // Transform raw deck.json cards into QuestCards mapped to linear path nodes
 // Now with dynamic slicing based on filtered card count
@@ -1033,10 +1049,10 @@ const App: React.FC = () => {
                 <button
                   onClick={() => { if (!STARTER_LOCK) setShowLangDropdown(prev => !prev); }}
                   disabled={!!STARTER_LOCK}
-                  title={STARTER_LOCK ? 'Spanish starter deck' : undefined}
+                  title={STARTER_LOCK === 'mum' ? 'Pour Maman' : STARTER_LOCK ? 'Starter deck' : undefined}
                   className={`flex items-center gap-1.5 px-3.5 py-2 rounded-lg text-sm font-bold border border-violet-500/40 bg-violet-500/15 text-violet-600 dark:text-violet-300 transition-all ${STARTER_LOCK ? 'opacity-90 cursor-default' : 'hover:bg-violet-500/25 active:scale-95'}`}
                 >
-                  <span>{LANGUAGE_CONFIG[lang].name}{STARTER_LOCK && ' · Starter'}</span>
+                  <span>{LANGUAGE_CONFIG[lang].name}{STARTER_LOCK && STARTER_LOCK !== 'mum' && ' · Starter'}</span>
                   {!STARTER_LOCK && <ChevronDown size={14} className={`transition-transform ${showLangDropdown ? 'rotate-180' : ''}`} />}
                 </button>
                 {showLangDropdown && !STARTER_LOCK && (

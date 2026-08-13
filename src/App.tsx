@@ -138,7 +138,10 @@ if (GIFT_PARAM === 'mum' && typeof window !== 'undefined') {
   localStorage.setItem('quest_placement_mum', 'true');
   localStorage.setItem('quest_placement_taken_mum', 'true');
 }
-const MUM_UNLOCKED = typeof window !== 'undefined' && localStorage.getItem(GIFT_UNLOCK_KEY) === '1';
+// Checked at render time, not module load: a stale-PWA first visit can eat
+// the ?gift param (old bundle, no unlock code), and the module constant
+// would then stay false for the whole session even after the flag lands.
+const isMumUnlocked = () => typeof window !== 'undefined' && localStorage.getItem(GIFT_UNLOCK_KEY) === '1';
 
 // ── Locked shareable starter mode ────────────────────────────────
 // Opening the app with ?starter=es boots straight into the curated
@@ -891,7 +894,7 @@ const App: React.FC = () => {
   const availableLanguages: Language[] = STARTER_LOCK
     ? [STARTER_LOCK]
     : (Object.keys(DECK_LOADERS) as Language[]).filter(l =>
-        l === 'mum' ? MUM_UNLOCKED : !HIDDEN_UNTIL_PARITY.includes(l));
+        l === 'mum' ? isMumUnlocked() : !HIDDEN_UNTIL_PARITY.includes(l));
 
   // Birthday scroll – once, the first time the gift link lands. Flag written at
   // trigger time (the canonical idiom above) so a reload can't replay it.

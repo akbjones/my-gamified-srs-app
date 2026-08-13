@@ -428,12 +428,15 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               knew and offered no action (there is no suspend UI), so it was
               pure clutter. Reinstate only alongside a real action. */}
 
-          {/* Top-right chip stack – Grammar always on top, Etymology below.
-              Both pinned to the top-right corner of the card so they're
-              always within thumb reach in the same spot. Absolute positioning
-              so they don't affect the card content's vertical layout. */}
+          {/* Top-right chip row – Grammar innermost (closest to the corner),
+              Etymology beside it. Pinned to the top-right corner of the card
+              so they're always within thumb reach in the same spot. A single
+              row keeps the reserved height small; the card content below
+              clears it via conditional top padding (decks where every card
+              carries both chips made the old two-high stack overlap the
+              first line of the sentence on desktop). */}
           {isFlipped && ((grammarTipsEnabled(session.language) && card!.grammar) || cardEty) && (
-            <div className="absolute top-2 right-2 z-10 flex flex-col items-end gap-2">
+            <div className="absolute top-2 right-2 z-10 flex flex-row-reverse items-center gap-2">
               {grammarTipsEnabled(session.language) && card!.grammar && (
                 <button
                   onClick={(e) => { e.stopPropagation(); setShowGrammar(true); }}
@@ -549,7 +552,9 @@ const StudySession: React.FC<StudySessionProps> = ({ session, onAnswer, onUndoAn
               // Auto margins centre when there is room and degrade to a normal
               // scroll when there is not.
               <div
-                className="flex-1 flex flex-col items-center justify-start px-3 sm:px-5 min-h-0 overflow-y-auto"
+                className={`flex-1 flex flex-col items-center justify-start px-3 sm:px-5 min-h-0 overflow-y-auto ${
+                  isFlipped && ((grammarTipsEnabled(session.language) && card!.grammar) || cardEty) ? 'pt-12' : ''
+                }`}
               >
                <div className="my-auto w-full flex flex-col items-center py-1">
                 {/* Furigana toggle – visible whenever the card carries kana

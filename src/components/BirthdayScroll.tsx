@@ -59,7 +59,7 @@ const BirthdayScroll: React.FC<Props> = ({ onClose }) => {
                 nous servir en Bolivie.
               </p>
               <p>
-                Je t'aime énormément, vous me manquez et j'ai trop hâte de vous revoir
+                Je t'aime énormément, tu me manques et j'ai trop hâte de vous revoir
                 en octobre.
               </p>
               <p>

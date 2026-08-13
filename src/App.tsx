@@ -117,16 +117,19 @@ const DECK_LOADERS: Record<Language, () => Promise<any[]>> = {
 const HIDDEN_UNTIL_PARITY: readonly Language[] = ['japanese', 'mum'];
 
 // ── Private gift deck ─────────────────────────────────────────────
-// Opening the app with ?gift=mum permanently unlocks "Mum's Deck" on this
-// device: the flag persists, the deck joins the picker alongside her other
-// languages (no starter-style lock), placement is skipped (the deck IS her
-// placement), and a one-time birthday scroll plays. Not a secret – just a
-// door only one person is handed the key to.
+// Opening the app with ?gift=maman permanently unlocks "Maman's Deck" on
+// this device: the flag persists, the deck joins the picker alongside her
+// other languages (no starter-style lock), placement is skipped (the deck
+// IS her placement), and a one-time birthday scroll plays. Not a secret –
+// just a door only one person is handed the key to. The internal language
+// key stays 'mum' (storage, deck path); 'mum' is also accepted in the URL
+// so any earlier test links keep working.
 const GIFT_UNLOCK_KEY = 'quest_mum_unlocked';
 const GIFT_SCROLL_KEY = 'quest_mum_scroll_seen';
-const GIFT_PARAM = typeof window !== 'undefined'
+const GIFT_PARAM_RAW = typeof window !== 'undefined'
   ? new URLSearchParams(window.location.search).get('gift')
   : null;
+const GIFT_PARAM = GIFT_PARAM_RAW === 'maman' ? 'mum' : GIFT_PARAM_RAW;
 if (GIFT_PARAM === 'mum' && typeof window !== 'undefined') {
   localStorage.setItem(GIFT_UNLOCK_KEY, '1');
   // The deck is her placement – never show the placement fork for it.

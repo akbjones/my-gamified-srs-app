@@ -146,7 +146,12 @@ if (GIFT_PARAM === 'mum' && typeof window !== 'undefined') {
 // Checked at render time, not module load: a stale-PWA first visit can eat
 // the ?gift param (old bundle, no unlock code), and the module constant
 // would then stay false for the whole session even after the flag lands.
-const isMumUnlocked = () => typeof window !== 'undefined' && localStorage.getItem(GIFT_UNLOCK_KEY) === '1';
+// quest_placement_mum also counts as unlocked: unlike the private flag it
+// rides the placement sync rule (monotonic across devices), so a browser
+// unlock reaches an installed PWA container through the user's sync code
+// (iOS home-screen apps do not share storage with Safari).
+const isMumUnlocked = () => typeof window !== 'undefined' &&
+  (localStorage.getItem(GIFT_UNLOCK_KEY) === '1' || localStorage.getItem('quest_placement_mum') === 'true');
 
 // ── Locked shareable starter mode ────────────────────────────────
 // Opening the app with ?starter=es boots straight into the curated

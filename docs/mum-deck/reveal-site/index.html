@@ -66,9 +66,23 @@
   <iframe src="https://langlab-srs.netlify.app/" title="" aria-hidden="true" tabindex="-1"></iframe>
 
   <script>
+    // One-shot ceremony: once she has been through the scroll and into the
+    // app, tapping the same link again skips straight to her deck. The flag
+    // is set when she taps through (an interrupted first visit replays).
+    // ?replay=1 forces the scroll again for testing.
+    var APP = 'https://langlab-srs.netlify.app/?gift=maman&seen=1';
+    var replay = window.location.search.indexOf('replay=1') !== -1;
+    try {
+      if (!replay && localStorage.getItem('reveal_seen') === '1') {
+        window.location.replace(APP);
+      }
+    } catch (e) { /* storage blocked: always play the scroll */ }
     document.getElementById('sealBtn').addEventListener('click', function () {
       document.getElementById('sealed').style.display = 'none';
       document.getElementById('opened').style.display = 'flex';
+    });
+    document.querySelector('.open').addEventListener('click', function () {
+      try { localStorage.setItem('reveal_seen', '1'); } catch (e) {}
     });
   </script>
 </body>

@@ -152,7 +152,8 @@ export default defineConfig({
               // v20 = 2026-07-23 Devanagari vowel-length fix — 21 vowel/matra clips recalibrated so long vowels are audibly longer than short
               // v26 = 2026-08-10 Russian de-clump — 132 occupation-chore/waltz template cards rewritten + regenerated
               // v27 = 2026-08-12 mum deck regens — 5 Benoît accent + 5 Béa/Véro TTS respellings + 1 Downs riding fix
-              cacheName: 'audio-cache-v27',
+              // v28 = 2026-08-14 Hindi curriculum rebuild — 412 spec-authored cards (new files only)
+              cacheName: 'audio-cache-v28',
               expiration: {
                 maxEntries: 500,
                 maxAgeSeconds: 30 * 24 * 60 * 60, // 30 days

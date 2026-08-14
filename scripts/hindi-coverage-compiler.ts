@@ -89,12 +89,50 @@ const isNotation = (hi: string) => /[-+]/.test(hi);
 const results = new Map<string, Hit>();
 for (const t of syllabus) {
   const hit: Hit = { firstPos: null, firstId: null, count: 0 };
+  // A multiword verb chunk ("बंद करना", "अच्छा लगना") never appears in its
+  // citation form - cards say "बंद करो", "अच्छा लग रहा है". Match the fixed
+  // part plus any inflection of the final verb.
+  const verbChunk = /\s\S+ना$/.test(norm(t.hi).trim()) && !/\.{2,}|…|\//.test(t.hi);
+  // Paradigm items listing comma-separated examples ("शर्मा जी, माता जी") are
+  // notation, not a phrase: matching ANY example proves the pattern is taught.
+  const exampleList = t.type === 'paradigm' && /,/.test(t.hi);
+
+  if (verbChunk) {
+    const words = norm(t.hi).trim().split(/\s+/);
+    const inf = words.pop()!;
+    const prefix = flatten(words.join(' '));
+    const stem = inf.slice(0, -2);
+    const forms = [inf, ...V_SUFFIX.map(s => stem + s), ...(IRREGULAR[inf] || [])];
+    for (const c of cards) {
+      const at = c.text.indexOf(prefix);
+      if (at === -1) continue;
+      const rest = c.text.slice(at + prefix.length);
+      if (!forms.some(f => rest.includes(f))) continue;
+      hit.count++;
+      if (hit.firstPos === null) { hit.firstPos = c.pos; hit.firstId = c.id; }
+    }
+    results.set(t.id, hit);
+    continue;
+  }
+  if (exampleList) {
+    const examples = norm(t.hi).split(',').map(s => flatten(s)).filter(Boolean);
+    for (const c of cards) {
+      if (!examples.some(e => c.text.includes(e))) continue;
+      hit.count++;
+      if (hit.firstPos === null) { hit.firstPos = c.pos; hit.firstId = c.id; }
+    }
+    results.set(t.id, hit);
+    continue;
+  }
+
   const literalPhrase = (t.type === 'chunk' || t.type === 'paradigm' || /\s/.test(t.hi)) && !isNotation(t.hi) && !/\//.test(t.hi);
   if (literalPhrase) {
     // A frame like "मेरा नाम ... है" is a slot pattern: its fixed parts must
-    // appear in order, with anything in the gap. Matching the raw string would
-    // report every frame as missing.
-    const parts = flatten(t.hi).split(/\.{2,}|…/).map(s => s.trim()).filter(Boolean);
+    // appear in order, with anything in the gap. Split on the ellipsis BEFORE
+    // flattening - flatten() strips dots, so flattening first silently fuses
+    // "मेरा नाम" and "है" into one unmatchable string and reports every frame
+    // as missing.
+    const parts = norm(t.hi).split(/\.{2,}|…/).map(s => flatten(s)).filter(Boolean);
     const partsDn = parts.map(denukta);
     const inOrder = (hay: string, needles: string[]) => {
       let from = 0;

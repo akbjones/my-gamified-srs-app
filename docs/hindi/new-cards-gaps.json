@@ -1,0 +1,2693 @@
+[
+ {
+  "hi": "सॉरी, मैं अभी बात नहीं कर सकता।",
+  "en": "Sorry, I can't talk right now.",
+  "teaches": [
+   "hs-0091"
+  ],
+  "node": "node-08",
+  "note": "सॉरी leads the utterance, which is how the loan is actually used. Phone context suits the learner's in-law calls. node-08 carries other pre-sequence grammar in the deck (hi-0640 has a ने clause), so the सकना is acceptable here."
+ },
+ {
+  "hi": "एक मिनट रुकिए, प्लीज़।",
+  "en": "Wait a minute, please.",
+  "teaches": [
+   "hs-0092"
+  ],
+  "node": "node-19",
+  "note": "प्लीज़ tacked on the end is the authentic Hinglish placement. Avoided a 'speak slowly' frame because the deck already has four of those. Distinct from hi-0383, which uses रुको."
+ },
+ {
+  "hi": "जी हाँ, माँ घर पर हैं।",
+  "en": "Yes, Mum's at home.",
+  "teaches": [
+   "hs-0094"
+  ],
+  "node": "node-03",
+  "note": "Honorific हैं with माँ, which is the normal register for a parent."
+ },
+ {
+  "hi": "मैं ठीक हूँ, और आप?",
+  "en": "I'm fine, and you?",
+  "teaches": [
+   "hs-0098"
+  ],
+  "node": "node-08",
+  "note": "The deck has मैं ठीक हूँ alone (hi-3223) but never the और आप? turn-back, which is the star here."
+ },
+ {
+  "hi": "अरे, क्या हुआ? तुम ठीक हो?",
+  "en": "Oh, what's happened? Are you all right?",
+  "teaches": [
+   "hs-0099"
+  ],
+  "node": "node-08",
+  "note": "Used तुम ठीक हो rather than the tier-2 सब ठीक है? to stay inside tier 1."
+ },
+ {
+  "hi": "ये क्या है? मीठा है या तीखा?",
+  "en": "What's this? Is it sweet or spicy?",
+  "teaches": [
+   "hs-0100"
+  ],
+  "node": "node-01",
+  "note": "Deliberately not 'यह क्या है?' (hi-3242) or 'यह बहुत तीखा है।' (hi-3263). The follow-up was changed from 'तीखा है क्या?' so the sentence-final क्या marker is taught once only, on the phone card, and node-01 stays free of it. मीठा is tier 2 but the या contrast is the natural thing to say at a table."
+ },
+ {
+  "hi": "मेरा नाम टॉम है, मैं इंग्लैंड से हूँ।",
+  "en": "My name's Tom, I'm from England.",
+  "teaches": [
+   "hs-0101",
+   "hs-0192"
+  ],
+  "node": "node-01",
+  "note": "Merged because a British learner says these two in one breath. Both existing मेरा नाम cards are the bare formula, so this is not a duplicate."
+ },
+ {
+  "hi": "चलो, अब मुझे जाना है।",
+  "en": "Right, I have to go now.",
+  "teaches": [
+   "hs-0104"
+  ],
+  "node": "node-06",
+  "note": "Distinct from hi-0970, which uses जाना चाहिए. Opener changed from अच्छा to चलो so this is not a twin of the समझ गया card, which is 'अच्छा, अब ...' too."
+ },
+ {
+  "hi": "आज मैं नहीं आ रहा हूँ क्योंकि मुझे काम है।",
+  "en": "I'm not coming today because I've got work.",
+  "teaches": [
+   "hs-0107"
+  ],
+  "node": "node-18",
+  "note": "node-18 is the honest node for a क्योंकि clause even though the vocabulary is all tier 1. Auxiliary हूँ restored: the aux-drop is real in speech but a learner card should show the full continuous."
+ },
+ {
+  "hi": "मुझे थोड़ी हिंदी आती है, ज़्यादा नहीं।",
+  "en": "I speak a little Hindi, not much.",
+  "teaches": [
+   "hs-0128"
+  ],
+  "node": "node-06",
+  "note": "Avoided pairing it with सीख रहा हूँ because hi-0884 already opens that way."
+ },
+ {
+  "hi": "अच्छा, अब समझ गया।",
+  "en": "Ah, now I've got it.",
+  "teaches": [
+   "hs-0131"
+  ],
+  "node": "node-08",
+  "note": "समझ जाना is technically a compound verb (node-20), but at tier 1 it is learned as a fixed reply, so node-08."
+ },
+ {
+  "hi": "माफ़ कीजिए, मुझे समझ में नहीं आया।",
+  "en": "Sorry, I didn't catch that.",
+  "teaches": [
+   "hs-0132"
+  ],
+  "node": "node-13"
+ },
+ {
+  "hi": "अंकल, इसे हिंदी में क्या कहते हैं?",
+  "en": "Uncle, what do you call this in Hindi?",
+  "teaches": [
+   "hs-0133"
+  ],
+  "node": "node-01"
+ },
+ {
+  "hi": "वो औरत यहाँ काम करती है।",
+  "en": "That woman works here.",
+  "teaches": [
+   "hs-0148"
+  ],
+  "node": "node-01",
+  "note": "औरत is new to the deck (zero existing cards). Rewritten from 'वो औरत कौन है? आपकी बहन?': referring to the addressee's own sister as वो औरत is blunt to the point of rude, so the card would have taught a face-threatening move. Neutral third-person description instead, and the present habitual is exactly node-01's grammar. Distinct from hi-1966."
+ },
+ {
+  "hi": "फ़ोन बंद करो, अब खाना खाओ।",
+  "en": "Switch the phone off and eat your dinner.",
+  "teaches": [
+   "hs-0151"
+  ],
+  "node": "node-19",
+  "note": "दरवाज़ा, खिड़की, लाइट and गैस are all tier 2 or above and already used by existing बंद कर cards, so फ़ोन is the only tier-1 object that works."
+ },
+ {
+  "hi": "थोड़ा और लो बेटा, एक रोटी और।",
+  "en": "Have a bit more, beta, one more roti.",
+  "teaches": [
+   "hs-0164"
+  ],
+  "node": "node-19",
+  "note": "Untranslated 'beta' matches house style (hi-1845)."
+ },
+ {
+  "hi": "आंटी, खाना बहुत अच्छा बना है।",
+  "en": "Aunty, the food's turned out lovely.",
+  "teaches": [
+   "hs-0165"
+  ],
+  "node": "node-08",
+  "note": "hi-0660 uses वाह plus स्वादिष्ट. This keeps the syllabus's अच्छा wording and a vocative instead. Pairs with the चाय card as a masculine/feminine agreement contrast."
+ },
+ {
+  "hi": "मुझे बहुत प्यास लगी है, थोड़ा पानी दीजिए।",
+  "en": "I'm really thirsty, could I have some water?",
+  "teaches": [
+   "hs-0166"
+  ],
+  "node": "node-06",
+  "note": "मुझे restored: without it the dative experiencer that node-06 exists to teach is invisible, and the card was silently a node-19 imperative card."
+ },
+ {
+  "hi": "मुझे यहाँ बहुत अच्छा लग रहा है।",
+  "en": "I'm really enjoying it here.",
+  "teaches": [
+   "hs-0176"
+  ],
+  "node": "node-10",
+  "note": "The deck's fourteen अच्छा लग cards are all लगता है or लगा, none in the continuous, and none about being on a visit."
+ },
+ {
+  "hi": "थैंक यू दीदी, चाय बहुत अच्छी है।",
+  "en": "Thanks didi, the tea's really good.",
+  "teaches": [
+   "hs-0183"
+  ],
+  "node": "node-07",
+  "note": "चाय अच्छी against खाना अच्छा on the आंटी card is the node-07 agreement contrast. Gloss reworded off 'lovely' so the two English sentences do not read as one template."
+ },
+ {
+  "hi": "मुझे आपकी मदद चाहिए।",
+  "en": "I need your help.",
+  "teaches": [
+   "hs-0185",
+   "hs-0784"
+  ],
+  "node": "node-06",
+  "note": "The deck's 69 चाहिए cards are almost all the 'should' sense with an infinitive. This is the noun-need sense, which no card teaches."
+ },
+ {
+  "hi": "आप कहाँ से हैं? दिल्ली से?",
+  "en": "Where are you from? Delhi?",
+  "teaches": [
+   "hs-0191"
+  ],
+  "node": "node-01"
+ },
+ {
+  "hi": "भैया, बाथरूम कहाँ है?",
+  "en": "Bhaiya, where's the bathroom?",
+  "teaches": [
+   "hs-0193"
+  ],
+  "node": "node-01",
+  "note": "hi-3171 uses टॉयलेट; बाथरूम is the syllabus headword and the commoner word in a home."
+ },
+ {
+  "hi": "हैलो, मैं टॉम बोल रहा हूँ, प्रिया है क्या?",
+  "en": "Hello, it's Tom speaking, is Priya there?",
+  "teaches": [
+   "hs-0195"
+  ],
+  "node": "node-10",
+  "note": "hi-0853 is the same frame with a doctor announcing himself. This adds the follow-up question a caller actually asks, and is now the batch's only sentence-final क्या marker."
+ },
+ {
+  "hi": "अच्छा, बाय, अपना ध्यान रखिए।",
+  "en": "Right, bye, take care.",
+  "teaches": [
+   "hs-0199"
+  ],
+  "node": "node-19",
+  "note": "अपना restored: bare ध्यान रखिए reads as 'pay attention / keep an eye on it', not 'take care of yourself'. Still clear of hi-1071 (रखना, ख़ुदा हाफ़िज़) and hi-1072 (ख़याल), which are the two existing farewells."
+ },
+ {
+  "hi": "चाय पियोगे? मैं अभी बनाती हूँ।",
+  "en": "Will you have some tea? I'll make it now.",
+  "teaches": [
+   "hs-0200"
+  ],
+  "node": "node-08",
+  "note": "पियोगे is a future form, but at tier 1 it is learned as the hospitality offer, so node-08 rather than node-24. मैं restored so the feminine बनाती हूँ has a visible subject. Avoided the आओ बैठो frame because hi-1849 already uses it."
+ },
+ {
+  "hi": "आंटी, मैं कम तीखा खाता हूँ।",
+  "en": "Aunty, I don't eat very spicy food.",
+  "teaches": [
+   "hs-0208"
+  ],
+  "node": "node-02",
+  "note": "Framed as a habitual statement rather than an imperative so the tier-1 card stays in a low node and uses only tier-1 vocabulary."
+ },
+ {
+  "hi": "शर्मा जी, आपकी माता जी कैसी हैं?",
+  "en": "Mr Sharma, how's your mother?",
+  "teaches": [
+   "hs-0212"
+  ],
+  "node": "node-01",
+  "note": "जी appears twice in one breath, once after a surname and once after a kin term, which is exactly the paradigm. The plural हैं for one person also previews the respect plural."
+ },
+ {
+  "hi": "ये वाला बड़ा है, वो वाला छोटा।",
+  "en": "This one's big, that one's small.",
+  "teaches": [
+   "hs-0216"
+  ],
+  "node": "node-07",
+  "note": "Contrasting ये वाला with वो वाला makes the 'one' sense unmissable. Avoids the deck's existing यह वाला कितने का है? (hi-0209)."
+ },
+ {
+  "hi": "मुझे आम बहुत पसंद है।",
+  "en": "I really like mangoes.",
+  "teaches": [
+   "hs-0239"
+  ],
+  "node": "node-06"
+ },
+ {
+  "hi": "अच्छा, मतलब आप कल आ रहे हैं?",
+  "en": "Right, so you're coming tomorrow?",
+  "teaches": [
+   "hs-0241"
+  ],
+  "node": "node-10",
+  "note": "Teaches the everyday filler sense of मतलब ('so, you mean'), not the dictionary sense, which is what a phone call actually needs."
+ },
+ {
+  "hi": "मेरे ससुर बहुत अच्छे हैं।",
+  "en": "My father-in-law is a lovely man.",
+  "teaches": [
+   "hs-0245"
+  ],
+  "node": "node-07",
+  "note": "One person, three plural markers (मेरे, अच्छे, हैं). The respect plural is easier to see in adjective agreement than in a verb alone."
+ },
+ {
+  "hi": "हम कल आपसे मिलने आएँगे।",
+  "en": "We'll come and see you tomorrow.",
+  "teaches": [
+   "hs-0250"
+  ],
+  "node": "node-24"
+ },
+ {
+  "hi": "बच्चे को दूध दे दो।",
+  "en": "Give the child some milk.",
+  "teaches": [
+   "hs-0251"
+  ],
+  "node": "node-04",
+  "note": "बच्चा shifts to बच्चे before को, the same shift as the syllabus example लड़का to लड़के को. The oblique singular बच्चे also looks exactly like the direct plural बच्चे, which is the trap worth meeting early."
+ },
+ {
+  "hi": "मैं आपका सामान अंदर रख दूँ?",
+  "en": "Shall I put your things inside?",
+  "teaches": [
+   "hs-0252"
+  ],
+  "node": "node-11",
+  "note": "The Hindi node map has no dedicated subjunctive node. node-11 (modal expressions) is the closest honest fit for a 'shall I' offer, and the deck already scatters चलें? offers across node-01/07/11."
+ },
+ {
+  "hi": "भैया, थोड़ा पानी मिलेगा?",
+  "en": "Could I have some water, please?",
+  "teaches": [
+   "hs-0259"
+  ],
+  "node": "node-24"
+ },
+ {
+  "hi": "दीदी कभी-कभी हमारे घर आती हैं।",
+  "en": "My big sister comes round to our place sometimes.",
+  "teaches": [
+   "hs-0265"
+  ],
+  "node": "node-02"
+ },
+ {
+  "hi": "रुकिए, मैं आपकी मदद करता हूँ।",
+  "en": "Hang on, I'll give you a hand.",
+  "teaches": [
+   "hs-0300"
+  ],
+  "node": "node-02",
+  "note": "Keeps आपकी so the X की मदद करना genitive pattern is visible, which is the part learners get wrong."
+ },
+ {
+  "hi": "मैं हिंदी बोलने की कोशिश कर रहा हूँ।",
+  "en": "I'm trying to speak Hindi.",
+  "teaches": [
+   "hs-0301"
+  ],
+  "node": "node-10"
+ },
+ {
+  "hi": "बच्चों की छुट्टियाँ कब शुरू होती हैं?",
+  "en": "When do the children's holidays start?",
+  "teaches": [
+   "hs-0302"
+  ],
+  "node": "node-02"
+ },
+ {
+  "hi": "हैलो? आपकी आवाज़ नहीं आ रही।",
+  "en": "Hello? I can't hear you.",
+  "teaches": [
+   "hs-0305"
+  ],
+  "node": "node-10"
+ },
+ {
+  "hi": "माँ, मुझे आपकी बहुत याद आती है।",
+  "en": "Mum, I miss you so much.",
+  "teaches": [
+   "hs-0307"
+  ],
+  "node": "node-06"
+ },
+ {
+  "hi": "भाभी, बस! पेट भर गया।",
+  "en": "That's plenty, Bhabhi, I'm full.",
+  "teaches": [
+   "hs-0311"
+  ],
+  "node": "node-08",
+  "note": "बस sits right next to पेट भर गया so the learner meets the syllabus chunk as one unit, and the exclamation carries the 'stop serving me' force that the vocative was blurring."
+ },
+ {
+  "hi": "क्या ये बस बाज़ार तक जाती है?",
+  "en": "Does this bus go to the market?",
+  "teaches": [
+   "hs-0314"
+  ],
+  "node": "node-02",
+  "note": "Deliberately sits near the बस = 'enough' card above so the learner meets both senses of बस, which the syllabus keeps as two separate items."
+ },
+ {
+  "hi": "अरे क्यों नहीं, ज़रूर आइए।",
+  "en": "Of course, please do come.",
+  "teaches": [
+   "hs-0341"
+  ],
+  "node": "node-08"
+ },
+ {
+  "hi": "शादी में बहुत मज़ा आया।",
+  "en": "I had a great time at the wedding.",
+  "teaches": [
+   "hs-0343"
+  ],
+  "node": "node-09"
+ },
+ {
+  "hi": "आपको इंडिया कैसा लगा?",
+  "en": "How did you find India?",
+  "teaches": [
+   "hs-0344"
+  ],
+  "node": "node-06"
+ },
+ {
+  "hi": "बधाई हो! हम सब बहुत ख़ुश हैं।",
+  "en": "Congratulations! We're all so pleased.",
+  "teaches": [
+   "hs-0345"
+  ],
+  "node": "node-08"
+ },
+ {
+  "hi": "उसको मेरा नंबर दे देना।",
+  "en": "Give him my number.",
+  "teaches": [
+   "hs-0367"
+  ],
+  "node": "node-06"
+ },
+ {
+  "hi": "मेरे दादा-दादी दिल्ली में हैं, नाना-नानी पटना में।",
+  "en": "My dad's parents are in Delhi, my mum's parents are in Patna.",
+  "teaches": [
+   "hs-0377"
+  ],
+  "node": "node-03",
+  "note": "The paternal/maternal split only lands if both pairs appear in the same sentence, so this one is a contrast card rather than a single-term card."
+ },
+ {
+  "hi": "मम्मी अभी किचन में हैं।",
+  "en": "Mum's in the kitchen at the moment.",
+  "teaches": [
+   "hs-0384"
+  ],
+  "node": "node-03",
+  "note": "Uses the loanword किचन rather than रसोई, which is what the deck already has and what the learner will actually hear at home."
+ },
+ {
+  "hi": "ये वेज है या नॉन-वेज?",
+  "en": "Is this veg or non-veg?",
+  "teaches": [
+   "hs-0385"
+  ],
+  "node": "node-03"
+ },
+ {
+  "hi": "मैं आज बहुत थक गया हूँ।",
+  "en": "I'm really tired today.",
+  "teaches": [
+   "hs-0390"
+  ],
+  "node": "node-08"
+ },
+ {
+  "hi": "अब तो दादी भी व्हाट्सएप चलाती हैं।",
+  "en": "Even Grandma's on WhatsApp now.",
+  "teaches": [
+   "hs-0398"
+  ],
+  "node": "node-02",
+  "note": "The deck's one existing WhatsApp card has it as a passenger (send the address on it). Here the app is the topic. Spelt व्हाट्सएप to match hi-0336 and the dictionary entry."
+ },
+ {
+  "hi": "अरे कोई नहीं, कल भेज देना।",
+  "en": "Oh, no worries, send it tomorrow.",
+  "teaches": [
+   "hs-0402"
+  ],
+  "node": "node-08",
+  "note": "Stars the colloquial 'no worries' sense rather than the transparent 'no one' sense, which a learner can already assemble from कोई + नहीं. अरे plus the follow-up clause blocks the 'nobody' reading."
+ },
+ {
+  "hi": "बहुत ज़्यादा है, कुछ कम करो ना।",
+  "en": "That's way too much, come on, bring it down a bit.",
+  "teaches": [
+   "hs-0404"
+  ],
+  "node": "node-19",
+  "note": "Bargaining opener carrying the तुम imperative the syllabus chunk itself specifies. No vocative, so there is no आप/तुम register clash, and ज़्यादा is invariable so no floating gender agreement. Stays clear of hi-1914 (भैया, थोड़ा दाम कम कर दीजिए)."
+ },
+ {
+  "hi": "मुझे कल से गले में दर्द है।",
+  "en": "I've had a sore throat since yesterday.",
+  "teaches": [
+   "hs-0409"
+  ],
+  "node": "node-06",
+  "note": "The मुझे … है frame with a body part rather than बुख़ार, which the deck already covers heavily."
+ },
+ {
+  "hi": "भैया, सब्ज़ी और दूध का कितना हुआ?",
+  "en": "How much for the veg and the milk?",
+  "teaches": [
+   "hs-0411"
+  ],
+  "node": "node-08"
+ },
+ {
+  "hi": "ज़रा देखो, टाइम क्या हुआ है?",
+  "en": "Have a look, what's the time?",
+  "teaches": [
+   "hs-0412"
+  ],
+  "node": "node-08",
+  "note": "टाइम, not समय, is the spoken form and is what the syllabus item specifies."
+ },
+ {
+  "hi": "भैया, बस यहाँ रोक दीजिए।",
+  "en": "Just stop here, please.",
+  "teaches": [
+   "hs-0413"
+  ],
+  "node": "node-19"
+ },
+ {
+  "hi": "दोनों कमरे साफ़ हैं, लेकिन खिड़कियाँ गंदी हैं।",
+  "en": "Both rooms are clean, but the windows are dirty.",
+  "teaches": [
+   "hs-0416"
+  ],
+  "node": "node-07",
+  "note": "Masculine कमरा to कमरे next to feminine खिड़की to खिड़कियाँ in one breath, with गंदी agreeing, so the paradigm is visible without being an exercise."
+ },
+ {
+  "hi": "अच्छा, तो आप क्या काम करते हैं?",
+  "en": "So, what do you do for a living?",
+  "teaches": [
+   "hs-0420"
+  ],
+  "node": "node-02"
+ },
+ {
+  "hi": "आप भारत में कहाँ रहते हैं?",
+  "en": "Whereabouts in India do you live?",
+  "teaches": [
+   "hs-0421"
+  ],
+  "node": "node-02",
+  "note": "भारत, not इंडिया: the deck uses भारत 15 times and इंडिया never, and only भारत has a dictionary entry."
+ },
+ {
+  "hi": "मैं लंदन में रहता हूँ, हर साल भारत आता हूँ।",
+  "en": "I live in London and come to India every year.",
+  "teaches": [
+   "hs-0422"
+  ],
+  "node": "node-02",
+  "note": "Authored as the natural answer to the previous card, so the pair works as a real exchange."
+ },
+ {
+  "hi": "आज बहुत गर्मी है, ज़रा ठंडा पानी दीजिए।",
+  "en": "It's really hot today, could I have some cold water?",
+  "teaches": [
+   "hs-0423"
+  ],
+  "node": "node-08",
+  "note": "Kept away from hi-1919 (एसी चला दो, बहुत गर्मी है) and hi-0680 by fronting the chunk and changing the follow-up entirely."
+ },
+ {
+  "hi": "आज खाने में सिर्फ़ दाल-चावल है, चलेगा?",
+  "en": "It's just dal and rice today, will that do?",
+  "teaches": [
+   "hs-0424"
+  ],
+  "node": "node-08"
+ },
+ {
+  "hi": "स्टेशन तक कितना टाइम लगेगा?",
+  "en": "How long will it take to get to the station?",
+  "teaches": [
+   "hs-0431"
+  ],
+  "node": "node-24"
+ },
+ {
+  "hi": "एक किलो टमाटर देना, और थोड़ा धनिया भी।",
+  "en": "A kilo of tomatoes, please, and a bit of coriander.",
+  "teaches": [
+   "hs-0437"
+  ],
+  "node": "node-19",
+  "note": "Bare infinitive देना as the everyday soft imperative at a stall. Vocative dropped and a second item added so it is not a third copy of the [भैया + N किलो + vegetable + देना] frame already in hi-1917 and hi-2702."
+ },
+ {
+  "hi": "भाई साहब, छुट्टे हैं क्या?",
+  "en": "Have you got any change, mate?",
+  "teaches": [
+   "hs-0440"
+  ],
+  "node": "node-03",
+  "note": "Short on purpose. The deck's existing change cards bury it inside a longer note-and-change sentence. भाई साहब sits with the हैं (आप) verb, so the register is consistent."
+ },
+ {
+  "hi": "क्या यहाँ कार्ड चलेगा?",
+  "en": "Do you take card here?",
+  "teaches": [
+   "hs-0441"
+  ],
+  "node": "node-24"
+ },
+ {
+  "hi": "आपका काम कितने बजे ख़त्म होता है?",
+  "en": "What time do you finish work?",
+  "teaches": [
+   "hs-0445"
+  ],
+  "node": "node-02",
+  "note": "Deliberately the 'be over' sense. All 21 existing ख़त्म cards are 'run out' (milk, petrol, battery, sugar, gas)."
+ },
+ {
+  "hi": "मेरा सामान खो गया है, अब क्या करूँ?",
+  "en": "My luggage has gone missing, what do I do now?",
+  "teaches": [
+   "hs-0446"
+  ],
+  "node": "node-09",
+  "note": "Masculine खो गया, since the deck's existing loss card (hi-2042) is feminine खो गई and teaches the wrong shape for this item."
+ },
+ {
+  "hi": "शाम को वीडियो कॉल पर बात करेंगे।",
+  "en": "We'll talk on a video call this evening.",
+  "teaches": [
+   "hs-0448"
+  ],
+  "node": "node-24",
+  "note": "वीडियो has no Hindi dictionary entry yet (कॉल does), so one needs adding before this ships."
+ },
+ {
+  "hi": "मेरा पेट ख़राब है, आज कुछ नहीं खाऊँगा।",
+  "en": "I've got an upset stomach, I'm not eating anything today.",
+  "teaches": [
+   "hs-0451"
+  ],
+  "node": "node-03"
+ },
+ {
+  "hi": "अगर टाइम हो तो चाय पर आ जाइए।",
+  "en": "If you've got time, do come round for a cup of tea.",
+  "teaches": [
+   "hs-0468"
+  ],
+  "node": "node-18",
+  "note": "The 27 existing अगर cards are all weather, transport or battery. Recast as a tea invitation, which is where an in-law actually meets अगर … तो, and which keeps it clear of hi-1792 (अगर तुम आज नहीं आ सकते तो कल आ जाना)."
+ },
+ {
+  "hi": "मम्मी ने मुझसे आपके बारे में पूछा।",
+  "en": "Mum asked me about you.",
+  "teaches": [
+   "hs-0469"
+  ],
+  "node": "node-09",
+  "note": "मैं shifts to मुझ- before a postposition, the same shift that gives उसमें and किसके लिए. Clean ने with a transitive perfective."
+ },
+ {
+  "hi": "मेरे पास आपका नंबर नहीं है, मुझे मैसेज कर दीजिए।",
+  "en": "I haven't got your number, message me.",
+  "teaches": [
+   "hs-0470"
+  ],
+  "node": "node-04",
+  "note": "All four existing मेरे पास cards are money or time. This one has मेरे पास hold an actual thing, which is what the syllabus item specifies."
+ },
+ {
+  "hi": "क्या मैं आपसे कुछ पूछ सकता हूँ?",
+  "en": "Can I ask you something?",
+  "teaches": [
+   "hs-0472"
+  ],
+  "node": "node-11",
+  "note": "hi-0960 already has क्या मैं अंदर आ सकता हूँ, so this uses a different verb and adds आपसे."
+ },
+ {
+  "hi": "और भाई, क्या कर रहे हो?",
+  "en": "So what are you up to, then?",
+  "teaches": [
+   "hs-0474"
+  ],
+  "node": "node-10"
+ },
+ {
+  "hi": "बस आंटी, मुझे और नहीं चाहिए, सच में।",
+  "en": "That's plenty, Auntie, I really don't want any more.",
+  "teaches": [
+   "hs-0475"
+  ],
+  "node": "node-06",
+  "note": "Refusing a third helping is the only place this chunk really lives, so the card puts it at the table. मुझे makes the dative experiencer explicit, which is what node-06 is for."
+ },
+ {
+  "hi": "समझ में नहीं आया, इसका मतलब क्या है?",
+  "en": "I didn't quite get that – what does it mean?",
+  "teaches": [
+   "hs-0477"
+  ],
+  "node": "node-08",
+  "note": "Pairs the tier-1 chunk समझ में नहीं आया with the target question, which is exactly how the learner will use it in the wild."
+ },
+ {
+  "hi": "सब्ज़ी ठंडी हो गई है, गरम कर दूँ?",
+  "en": "The vegetables have gone cold, shall I heat them up?",
+  "teaches": [
+   "hs-0479",
+   "hs-0551"
+  ],
+  "node": "node-03",
+  "note": "ठंडा हो जाना and गरम करना are the two halves of one kitchen moment, and node-03 (होना/करना) is the honest home for both. सब्ज़ी rather than खाना because the deck already carries four खाना/गरम cards; the feminine ठंडी हो गई है also drills agreement."
+ },
+ {
+  "hi": "बस थोड़ा सा चावल दीजिए, ज़्यादा नहीं।",
+  "en": "Just a little rice please, not too much.",
+  "teaches": [
+   "hs-0481"
+  ],
+  "node": "node-19"
+ },
+ {
+  "hi": "मेरा नंबर ज़ीरो सात से शुरू होता है।",
+  "en": "My number starts with zero seven.",
+  "teaches": [
+   "hs-0487"
+  ],
+  "node": "node-05",
+  "note": "ज़ीरो is almost only heard when reading out digits, and a British mobile starting 07 is the learner's own real number."
+ },
+ {
+  "hi": "मेरी बेटी सोलह साल की है।",
+  "en": "My daughter is sixteen.",
+  "teaches": [
+   "hs-0493"
+  ],
+  "node": "node-05"
+ },
+ {
+  "hi": "अठारह नंबर की बस बाज़ार जाती है।",
+  "en": "The number eighteen bus goes to the market.",
+  "teaches": [
+   "hs-0495"
+  ],
+  "node": "node-05"
+ },
+ {
+  "hi": "ऑटो का किराया साठ रुपये है।",
+  "en": "The auto fare is sixty rupees.",
+  "teaches": [
+   "hs-0499"
+  ],
+  "node": "node-05"
+ },
+ {
+  "hi": "आम नब्बे रुपये किलो हैं।",
+  "en": "Mangoes are ninety rupees a kilo.",
+  "teaches": [
+   "hs-0502"
+  ],
+  "node": "node-05"
+ },
+ {
+  "hi": "अभी एक ही बजा है, इतनी जल्दी क्या है?",
+  "en": "It's only one o'clock, what's the rush?",
+  "teaches": [
+   "hs-0503"
+  ],
+  "node": "node-05"
+ },
+ {
+  "hi": "यहाँ दो बजे हैं, आपके वहाँ कितने बजे हैं?",
+  "en": "It's two o'clock here, what time is it there?",
+  "teaches": [
+   "hs-0504"
+  ],
+  "node": "node-05",
+  "note": "Time-zone talk is the everyday setting for this form on a call from Britain to India. आपके वहाँ is the idiomatic 'at your end'."
+ },
+ {
+  "hi": "पिता जी अभी सो रहे हैं, बाद में फ़ोन कीजिए।",
+  "en": "Dad's asleep at the moment, please ring back later.",
+  "teaches": [
+   "hs-0509"
+  ],
+  "node": "node-10",
+  "note": "Spelt पिता जी with the space, as the syllabus headword has it. सो रहे हैं is the respect plural, not a real plural."
+ },
+ {
+  "hi": "अपने माँ-बाप को फ़ोन कर लिया?",
+  "en": "Have you rung your parents?",
+  "teaches": [
+   "hs-0511"
+  ],
+  "node": "node-06",
+  "note": "अपने ties the parents to the dropped तुम, which is what makes this read as 'your parents' rather than parents in general."
+ },
+ {
+  "hi": "मेरे सारे भाई-बहन लंदन में रहते हैं।",
+  "en": "All my brothers and sisters live in London.",
+  "teaches": [
+   "hs-0512"
+  ],
+  "node": "node-02"
+ },
+ {
+  "hi": "मम्मी जी, आपकी दवाई का टाइम हो गया है।",
+  "en": "Mummy ji, it's time for your medicine.",
+  "teaches": [
+   "hs-0520"
+  ],
+  "node": "node-08",
+  "note": "मम्मी जी as a vocative to the mother-in-law is the whole point of the item, so the card is built around addressing her. टाइम, not समय, is what is actually said at home."
+ },
+ {
+  "hi": "पापा जी, अब तबीयत कैसी है?",
+  "en": "Papa ji, how are you feeling now?",
+  "teaches": [
+   "hs-0521"
+  ],
+  "node": "node-07"
+ },
+ {
+  "hi": "हाँ जी, यहाँ सब ठीक हैं।",
+  "en": "Yes, everyone here is fine.",
+  "teaches": [
+   "hs-0525",
+   "hs-0527"
+  ],
+  "node": "node-03",
+  "note": "हाँ जी and सब ठीक हैं travel together in real phone talk, so one card carries both. हैं because सब here is people."
+ },
+ {
+  "hi": "और बताइए, घर पर सब कैसे हैं?",
+  "en": "So tell me, how is everyone at home?",
+  "teaches": [
+   "hs-0526"
+  ],
+  "node": "node-04",
+  "note": "Framed with और बताइए to keep it clear of the deck's existing नमस्ते आंटी जी, घर में सब कैसे हैं?"
+ },
+ {
+  "hi": "भाई साहब, एक किलो मटन देना।",
+  "en": "Excuse me, could I have a kilo of mutton?",
+  "teaches": [
+   "hs-0528"
+  ],
+  "node": "node-19",
+  "note": "देना as a bare-infinitive request is the shop register, and a different imperative from the दीजिए card."
+ },
+ {
+  "hi": "मेरी सास मांस नहीं खातीं।",
+  "en": "My mother-in-law doesn't eat meat.",
+  "teaches": [
+   "hs-0529"
+  ],
+  "node": "node-02",
+  "note": "Also quietly models the respect plural खातीं and the auxiliary drop after नहीं."
+ },
+ {
+  "hi": "आज बाहर ही डिनर करते हैं।",
+  "en": "Let's just go out for dinner tonight.",
+  "teaches": [
+   "hs-0536"
+  ],
+  "node": "node-02"
+ },
+ {
+  "hi": "नाश्ते में आलू का पराठा बना है।",
+  "en": "There's aloo paratha for breakfast.",
+  "teaches": [
+   "hs-0537"
+  ],
+  "node": "node-04"
+ },
+ {
+  "hi": "आपकी बिरयानी बहुत टेस्टी बनी है।",
+  "en": "Your biryani has turned out really tasty.",
+  "teaches": [
+   "hs-0547"
+  ],
+  "node": "node-07",
+  "note": "टेस्टी is an invariable loan adjective while बनी agrees with बिरयानी, which is what node-07 is for."
+ },
+ {
+  "hi": "क्या यहाँ नॉन-वेज मिलता है?",
+  "en": "Do they do non-veg here?",
+  "teaches": [
+   "hs-0548"
+  ],
+  "node": "node-02"
+ },
+ {
+  "hi": "इस गर्मी में मुझे बहुत प्यास लगती है।",
+  "en": "I get really thirsty in this heat.",
+  "teaches": [
+   "hs-0549"
+  ],
+  "node": "node-06"
+ },
+ {
+  "hi": "आप खाइए, मैंने तो खा लिया।",
+  "en": "You go ahead and eat, I've already eaten.",
+  "teaches": [
+   "hs-0552"
+  ],
+  "node": "node-09",
+  "note": "Set at the table where the phrase actually earns its keep, turning down a second helping."
+ },
+ {
+  "hi": "मम्मी जी, चाय बना दूँ?",
+  "en": "Mum, shall I make you a cup of tea?",
+  "teaches": [
+   "hs-0554"
+  ],
+  "node": "node-11",
+  "note": "Subjunctive offer (बना दूँ). The deck files subjunctive under node-11 (e.g. 'विजय चाहता है कि हम लखनऊ चलें')."
+ },
+ {
+  "hi": "खाने में क्या बना है? बहुत भूख लगी है।",
+  "en": "What's for dinner? I'm really hungry.",
+  "teaches": [
+   "hs-0556"
+  ],
+  "node": "node-08",
+  "note": "Second clause reinforces hs-0103 (भूख लगी है)."
+ },
+ {
+  "hi": "कटोरियाँ किचन की अलमारी में हैं।",
+  "en": "The bowls are in the kitchen cupboard.",
+  "teaches": [
+   "hs-0560"
+  ],
+  "node": "node-04",
+  "note": "किचन is the syllabus headword (hs-0384) even though the older deck only ever uses रसोई; की agreeing with feminine अलमारी carries the node-04 point."
+ },
+ {
+  "hi": "एसी कैसे चालू करते हैं?",
+  "en": "How do you switch the air con on?",
+  "teaches": [
+   "hs-0578"
+  ],
+  "node": "node-02",
+  "note": "Made a habitual-present question rather than another imperative, and to avoid colliding with the existing card 'ज़रा एसी चला दो, बहुत गर्मी है।'"
+ },
+ {
+  "hi": "मेरे लिए भी थोड़ा खाना निकाल दो।",
+  "en": "Serve me a bit of food too.",
+  "teaches": [
+   "hs-0584"
+  ],
+  "node": "node-20",
+  "note": "मेरे लिए makes the benefactive force of V+दो explicit, which is the point of the paradigm. Avoided बना दो / चला दो / रख दो because the deck already has cards for all three. Doubles as a use of निकालना (hs-0579)."
+ },
+ {
+  "hi": "जल्दी से नहा लो, नाश्ता तैयार है।",
+  "en": "Have a quick shower, breakfast is ready.",
+  "teaches": [
+   "hs-0585"
+  ],
+  "node": "node-20",
+  "note": "Used नहा लो rather than खा लो, which the deck already teaches three times. Reframed off 'पहले X, फिर Y' so it no longer shares a frame with the उसके बाद card."
+ },
+ {
+  "hi": "मुझे कल से बुख़ार है।",
+  "en": "I've had a fever since yesterday.",
+  "teaches": [
+   "hs-0591"
+  ],
+  "node": "node-06"
+ },
+ {
+  "hi": "आज मेरे सिर में बहुत दर्द है।",
+  "en": "I've got a terrible headache today.",
+  "teaches": [
+   "hs-0592"
+  ],
+  "node": "node-14",
+  "note": "Kept off the 'TIME से AILMENT है' frame, which the बुख़ार card already owns."
+ },
+ {
+  "hi": "डॉक्टर जी, यहाँ दर्द है।",
+  "en": "Doctor, it hurts here.",
+  "teaches": [
+   "hs-0593"
+  ],
+  "node": "node-03"
+ },
+ {
+  "hi": "दो दिन मेरी तबीयत ख़राब थी, पर अब मैं ठीक हूँ।",
+  "en": "I was unwell for a couple of days, but I'm fine now.",
+  "teaches": [
+   "hs-0594"
+  ],
+  "node": "node-01"
+ },
+ {
+  "hi": "मुझे पेट दर्द की दवाई चाहिए।",
+  "en": "I need some medicine for stomach ache.",
+  "teaches": [
+   "hs-0595"
+  ],
+  "node": "node-11",
+  "note": "Ailment chosen to avoid near-duplicating the existing deck card hi-1250 'मुझे खाँसी के लिए दवा चाहिए।'"
+ },
+ {
+  "hi": "वो पीली गाड़ी हमारी है।",
+  "en": "That yellow car is ours.",
+  "teaches": [
+   "hs-0598"
+  ],
+  "node": "node-07",
+  "note": "Plain attributive पीली agreeing with feminine गाड़ी. वाली dropped – वाला is its own teachable (hs-0973) and is starred by the लाल वाला card."
+ },
+ {
+  "hi": "तुम किसको फ़ोन कर रहे हो?",
+  "en": "Who are you ringing?",
+  "teaches": [
+   "hs-0600"
+  ],
+  "node": "node-06"
+ },
+ {
+  "hi": "पहले बाज़ार चलते हैं, उसके बाद घर जाएँगे।",
+  "en": "Let's go to the market first, then we'll head home.",
+  "teaches": [
+   "hs-0610"
+  ],
+  "node": "node-17",
+  "note": "उसके बाद is lexeme-neutral, so the frame was moved off चाय to keep tea to two cards in the batch. चलते हैं here is the colloquial hortative."
+ },
+ {
+  "hi": "तुम लोग इंडिया कब आ रहे हो?",
+  "en": "When are you coming to India?",
+  "teaches": [
+   "hs-0619"
+  ],
+  "node": "node-10",
+  "note": "इंडिया is the spoken-first headword in hs-0178; the older deck only uses भारत."
+ },
+ {
+  "hi": "चार बज गए, चाय का टाइम हो गया।",
+  "en": "It's four o'clock, time for a cup of tea.",
+  "teaches": [
+   "hs-0620"
+  ],
+  "node": "node-20",
+  "note": "टाइम per hs-0065 (tier 1 loan); समय is marked formal in the syllabus."
+ },
+ {
+  "hi": "यहाँ पास में अच्छा नाश्ता कहाँ मिलेगा?",
+  "en": "Where can I get a decent breakfast round here?",
+  "teaches": [
+   "hs-0621"
+  ],
+  "node": "node-24"
+ },
+ {
+  "hi": "भैया, स्टेशन तक कितना लोगे?",
+  "en": "Mate, how much to the station?",
+  "teaches": [
+   "hs-0624"
+  ],
+  "node": "node-24"
+ },
+ {
+  "hi": "वो लाल वाला ज़रा दिखाना।",
+  "en": "Could you show me that red one?",
+  "teaches": [
+   "hs-0627"
+  ],
+  "node": "node-19",
+  "note": "Double-serves hs-0973 (लाल वाला)."
+ },
+ {
+  "hi": "बेटा, टीवी ऑन करो ना।",
+  "en": "Put the telly on, love.",
+  "teaches": [
+   "hs-0633"
+  ],
+  "node": "node-19",
+  "note": "ना softener instead of ज़रा, which is the starred word of the ज़रा दिखाना card."
+ },
+ {
+  "hi": "पंखा ऑफ़ करो, मुझे ठंड लग रही है।",
+  "en": "Turn the fan off, I'm getting cold.",
+  "teaches": [
+   "hs-0634"
+  ],
+  "node": "node-19"
+ },
+ {
+  "hi": "हाँ बोलो, क्या बात है?",
+  "en": "Yes, go on, what is it?",
+  "teaches": [
+   "hs-0635"
+  ],
+  "node": "node-19"
+ },
+ {
+  "hi": "हैलो, मेरी आवाज़ आ रही है?",
+  "en": "Hello, can you hear me?",
+  "teaches": [
+   "hs-0636"
+  ],
+  "node": "node-10"
+ },
+ {
+  "hi": "दिल्ली में आज मौसम कैसा है?",
+  "en": "What's the weather like in Delhi today?",
+  "teaches": [
+   "hs-0637"
+  ],
+  "node": "node-03"
+ },
+ {
+  "hi": "हैप्पी बर्थडे, बेटी! ये तुम्हारे लिए है।",
+  "en": "Happy birthday, sweetheart! This is for you.",
+  "teaches": [
+   "hs-0691"
+  ],
+  "node": "node-04"
+ },
+ {
+  "hi": "मिल गया, मेरा फ़ोन बैग में था।",
+  "en": "Found it, my phone was in my bag.",
+  "teaches": [
+   "hs-1062"
+  ],
+  "node": "node-20"
+ },
+ {
+  "hi": "गुड मॉर्निंग! नींद अच्छी आई?",
+  "en": "Morning! Did you sleep well?",
+  "teaches": [
+   "hs-1121"
+  ],
+  "node": "node-09",
+  "note": "नींद is feminine, so आई. No ने – आना is intransitive."
+ },
+ {
+  "hi": "गुड नाइट मम्मी जी, सुबह बात करते हैं।",
+  "en": "Night, Mum. We'll speak in the morning.",
+  "teaches": [
+   "hs-1122"
+  ],
+  "node": "node-08"
+ },
+ {
+  "hi": "आप क्या लेंगे, चाय या कॉफ़ी?",
+  "en": "What can I get you, tea or coffee?",
+  "teaches": [
+   "hs-1123"
+  ],
+  "node": "node-24",
+  "note": "The generic host's offer rather than the tea-specific one already in the deck."
+ },
+ {
+  "hi": "जन्मदिन मुबारक हो दीदी! शाम को फ़ोन करूँगा।",
+  "en": "Happy birthday, Didi! I'll ring you this evening.",
+  "teaches": [
+   "hs-0427"
+  ],
+  "node": "node-08"
+ },
+ {
+  "hi": "मुझे उनका नाम याद है, पर नंबर याद नहीं।",
+  "en": "I remember their name, but not their number.",
+  "teaches": [
+   "hs-0649"
+  ],
+  "node": "node-06",
+  "note": "Carries both halves of the teachable in one natural utterance."
+ },
+ {
+  "hi": "सॉरी, फ़ोन कट गया। अब मेरी आवाज़ आ रही है?",
+  "en": "Sorry, we got cut off. Can you hear me now?",
+  "teaches": [
+   "hs-0650"
+  ],
+  "node": "node-20"
+ },
+ {
+  "hi": "और बताइए, इस बार कब आ रहे हैं?",
+  "en": "So tell me, when are you coming over this time?",
+  "teaches": [
+   "hs-0651"
+  ],
+  "node": "node-19",
+  "note": "Follow-up question changed away from 'ghar mein sab kaise hain', which hi-0013 already carries verbatim."
+ },
+ {
+  "hi": "वाह, क्या बात है! आपका नया घर बहुत सुंदर है।",
+  "en": "Wow, brilliant! Your new house is lovely.",
+  "teaches": [
+   "hs-0662"
+  ],
+  "node": "node-08",
+  "note": "वाह fixes the praise reading of क्या बात है (it can otherwise mean 'what's the matter?')."
+ },
+ {
+  "hi": "पहले हम हर साल भारत जाते थे।",
+  "en": "We used to go to India every year.",
+  "teaches": [
+   "hs-0666"
+  ],
+  "node": "node-16"
+ },
+ {
+  "hi": "मैं खाना बना रही थी, इसलिए मैंने फ़ोन नहीं उठाया।",
+  "en": "I was cooking, so I didn't answer the phone.",
+  "teaches": [
+   "hs-0667"
+  ],
+  "node": "node-10",
+  "note": "No node is assigned to past continuous, so node-10 (the रहा continuous morphology) is the honest fit."
+ },
+ {
+  "hi": "मम्मी ने आपके लिए मिठाई भेजी है।",
+  "en": "Mum has sent some sweets over for you.",
+  "teaches": [
+   "hs-0668"
+  ],
+  "node": "node-23",
+  "note": "Perfect participle + है is the star; ने with object agreement puts it in node-23."
+ },
+ {
+  "hi": "चाय पीकर जाइए, अभी तो आप आए हैं।",
+  "en": "Have a cup of tea before you go, you've only just arrived.",
+  "teaches": [
+   "hs-0670"
+  ],
+  "node": "node-19"
+ },
+ {
+  "hi": "मामा-मामी कल आ रहे हैं और चाचा-चाची परसों।",
+  "en": "Mum's brother and his wife are coming tomorrow, Dad's brother and his wife the day after.",
+  "teaches": [
+   "hs-0688"
+  ],
+  "node": "node-10",
+  "note": "Teaches the paradigm two ways at once: which parent's sibling, and the paired spouse term. The gloss spells out what each Hindi word encodes, because 'maternal aunt' would wrongly suggest मौसी."
+ },
+ {
+  "hi": "मुझे बहुत नींद आ रही है, मैं सोने जा रहा हूँ।",
+  "en": "I'm really sleepy, I'm off to bed.",
+  "teaches": [
+   "hs-0697"
+  ],
+  "node": "node-10"
+ },
+ {
+  "hi": "अच्छा, अब रखता हूँ, बच्चे स्कूल से आ गए हैं।",
+  "en": "Right, I'll let you go, the kids are back from school.",
+  "teaches": [
+   "hs-0713"
+  ],
+  "node": "node-08"
+ },
+ {
+  "hi": "कोई बात नहीं, धीरे-धीरे सीख जाओगे।",
+  "en": "Don't worry, you'll pick it up bit by bit.",
+  "teaches": [
+   "hs-0717"
+  ],
+  "node": "node-20",
+  "note": "The deck's existing धीरे-धीरे cards all mean 'slowly' (speed). This one delivers the 'bit by bit' sense, which is the gap."
+ },
+ {
+  "hi": "ठीक है फिर, हम आठ बजे निकलते हैं।",
+  "en": "Right then, we'll set off at eight.",
+  "teaches": [
+   "hs-0722"
+  ],
+  "node": "node-08"
+ },
+ {
+  "hi": "ऐसा है कि आज मेरी तबीयत ठीक नहीं है, तो कल आऊँगा।",
+  "en": "The thing is, I'm not well today, so I'll come tomorrow.",
+  "teaches": [
+   "hs-0723"
+  ],
+  "node": "node-18"
+ },
+ {
+  "hi": "अरे, लाइट चली गई! पंखा भी बंद हो गया।",
+  "en": "Oh no, the power's gone! The fan's off as well.",
+  "teaches": [
+   "hs-0726"
+  ],
+  "node": "node-20"
+ },
+ {
+  "hi": "भैया, थोड़ा धीरे चलाओ, कोई जल्दी नहीं है।",
+  "en": "Bhaiya, drive a bit slower, there's no rush.",
+  "teaches": [
+   "hs-0736"
+  ],
+  "node": "node-19"
+ },
+ {
+  "hi": "मुझे यहीं उतरना है, आगे बहुत भीड़ है।",
+  "en": "I'll get off right here, it's too crowded further on.",
+  "teaches": [
+   "hs-0738"
+  ],
+  "node": "node-06"
+ },
+ {
+  "hi": "यहाँ नेटवर्क नहीं है, मैं बाहर से फ़ोन करता हूँ।",
+  "en": "There's no signal here, I'll ring you from outside.",
+  "teaches": [
+   "hs-0743"
+  ],
+  "node": "node-13"
+ },
+ {
+  "hi": "ये आम अस्सी रुपये किलो हैं, पिछले हफ़्ते पैंसठ के थे।",
+  "en": "These mangoes are eighty rupees a kilo, they were sixty-five last week.",
+  "teaches": [
+   "hs-0748"
+  ],
+  "node": "node-05",
+  "note": "Two numbers from different decade rows in one everyday market line, which is what the fused 21–99 pattern needs."
+ },
+ {
+  "hi": "जब बच्चे सो जाते हैं, तब मैं आराम से चाय पीती हूँ।",
+  "en": "When the kids are asleep, I have my tea in peace.",
+  "teaches": [
+   "hs-0749"
+  ],
+  "node": "node-18",
+  "note": "Present-tense jab…tab, to avoid the deck's cluster of past-habitual and future jab cards."
+ },
+ {
+  "hi": "मेरी बहन मुझसे बड़ी है और भाई सबसे छोटा है।",
+  "en": "My sister is older than me and my brother is the youngest.",
+  "teaches": [
+   "hs-0750"
+  ],
+  "node": "node-15",
+  "note": "से and सबसे side by side: Hindi adds no -er/-est ending, only the marker changes. The adjective still agrees for gender (बड़ी / छोटा)."
+ },
+ {
+  "hi": "ट्रेन का रिज़र्वेशन हो गया है, सीट भी मिल गई।",
+  "en": "The train's booked and we've got seats too.",
+  "teaches": [
+   "hs-0754"
+  ],
+  "node": "node-20"
+ },
+ {
+  "hi": "जूते बाहर ही उतारिए, अंदर चप्पल रखी हैं।",
+  "en": "Do take your shoes off outside, there are slippers indoors.",
+  "teaches": [
+   "hs-0761"
+  ],
+  "node": "node-19"
+ },
+ {
+  "hi": "दिवाली मुबारक! अगली दिवाली हम भारत में होंगे।",
+  "en": "Happy Diwali! Next Diwali we'll be in India.",
+  "teaches": [
+   "hs-0762"
+  ],
+  "node": "node-24"
+ },
+ {
+  "hi": "दादी ने मेरे सिर पर हाथ रखा और कहा, 'खुश रहो।'",
+  "en": "Grandma put her hand on my head and said, 'Stay happy.'",
+  "teaches": [
+   "hs-0763"
+  ],
+  "node": "node-08",
+  "note": "खुश रहो is only ever heard as an elder's blessing, so the card gives it the gesture that goes with it. Node-08 (set expression) rather than node-23, because the ने-perfectives are just the frame."
+ },
+ {
+  "hi": "दो दिन से गला ख़राब है और खाँसी भी है।",
+  "en": "I've had a sore throat for two days and a cough as well.",
+  "teaches": [
+   "hs-0764"
+  ],
+  "node": "node-14",
+  "note": "No possessive on गला – that omission is the point, so the sentence keeps it bare. से for duration is the postposition being exercised."
+ },
+ {
+  "hi": "अरे, बच्चे को चोट कैसे लगी?",
+  "en": "Oh no, how did the little one get hurt?",
+  "teaches": [
+   "hs-0765"
+  ],
+  "node": "node-06",
+  "note": "Existing deck cards all use चोट लग गई in statements, so this one is the plain लगी in a question, with the dative को as the grammar."
+ },
+ {
+  "hi": "दादाजी को रोज़ बीपी की दवा लेनी पड़ती है।",
+  "en": "Grandad has to take his blood pressure tablets every day.",
+  "teaches": [
+   "hs-0768"
+  ],
+  "node": "node-11"
+ },
+ {
+  "hi": "मेन्यू लाइए, हम देखकर बताते हैं।",
+  "en": "Bring the menu over, we'll have a look and let you know.",
+  "teaches": [
+   "hs-0770"
+  ],
+  "node": "node-19"
+ },
+ {
+  "hi": "ये दोनों कुर्ते पैक कर दीजिए।",
+  "en": "Could you pack both these kurtas up, please?",
+  "teaches": [
+   "hs-0771"
+  ],
+  "node": "node-19"
+ },
+ {
+  "hi": "फ़ोटो व्हाट्सएप पर भेज दो, सब देखना चाहते हैं।",
+  "en": "Send the photos over on WhatsApp, everyone wants to see them.",
+  "teaches": [
+   "hs-0772"
+  ],
+  "node": "node-20",
+  "note": "Deck already has one व्हाट्सएप sentence (address), so this is photos plus a reason clause to keep it distinct. Spelling follows the deck and dictionary (व्हाट्सएप), not the syllabus headword's व्हाट्सऐप."
+ },
+ {
+  "hi": "आंटी, वाई-फ़ाई का पासवर्ड क्या है?",
+  "en": "Auntie, what's the wifi password?",
+  "teaches": [
+   "hs-0775"
+  ],
+  "node": "node-04"
+ },
+ {
+  "hi": "फिर आइएगा और अगली बार बच्चों को भी लाइएगा।",
+  "en": "Do come again, and next time bring the children too.",
+  "teaches": [
+   "hs-0777"
+  ],
+  "node": "node-19",
+  "note": "Two -इएगा forms in the host's own voice, which is where the learner will actually hear फिर आइएगा."
+ },
+ {
+  "hi": "मैंने कल ही मैसेज किया था, आपने देखा नहीं?",
+  "en": "I did message you yesterday, didn't you see it?",
+  "teaches": [
+   "hs-0782"
+  ],
+  "node": "node-23",
+  "note": "किया था with ने. Gloss uses emphatic 'did' rather than the Indian-English 'yesterday itself' for ही."
+ },
+ {
+  "hi": "सुनकर बुरा लगा, जल्दी ठीक हो जाइए।",
+  "en": "Sorry to hear that, get well soon.",
+  "teaches": [
+   "hs-0785"
+  ],
+  "node": "node-19"
+ },
+ {
+  "hi": "हमारा बेटा बिल्कुल अपने पापा की तरह बोलता है।",
+  "en": "Our son talks exactly like his dad.",
+  "teaches": [
+   "hs-0793"
+  ],
+  "node": "node-17"
+ },
+ {
+  "hi": "काम कैसा चल रहा है? बस ठीक-ठाक।",
+  "en": "How's work going? Oh, so-so.",
+  "teaches": [
+   "hs-0795"
+  ],
+  "node": "node-08",
+  "note": "The one existing ठीक-ठाक card asks it as a question, so this one uses it as the answer, which is the commoner use."
+ },
+ {
+  "hi": "हैलो, माफ़ कीजिए, कौन बोल रहा है?",
+  "en": "Hello, sorry, who's speaking?",
+  "teaches": [
+   "hs-0797"
+  ],
+  "node": "node-10"
+ },
+ {
+  "hi": "मेरी बेटी अब इक्कीस साल की हो गई।",
+  "en": "My daughter's turned twenty-one now.",
+  "teaches": [
+   "hs-0803"
+  ],
+  "node": "node-05"
+ },
+ {
+  "hi": "ट्रेन डेढ़ बजे की है, अभी निकलना पड़ेगा।",
+  "en": "The train's at half past one, we need to set off now.",
+  "teaches": [
+   "hs-0807"
+  ],
+  "node": "node-05"
+ },
+ {
+  "hi": "भारत में अभी रात के दस बजे हैं।",
+  "en": "It's ten at night in India right now.",
+  "teaches": [
+   "hs-0812"
+  ],
+  "node": "node-05",
+  "note": "Written for a Brit working out the time difference before ringing the in-laws, which is exactly when रात के दस बजे is needed."
+ },
+ {
+  "hi": "आज क्या तारीख़ है? मैं तो भूल ही गया।",
+  "en": "What's the date today? I've completely forgotten.",
+  "teaches": [
+   "hs-0814"
+  ],
+  "node": "node-08"
+ },
+ {
+  "hi": "आजकल के बच्चे माता-पिता की बात नहीं सुनते।",
+  "en": "Kids these days don't listen to their parents.",
+  "teaches": [
+   "hs-0822"
+  ],
+  "node": "node-13",
+  "note": "माता-पिता appears in the deck only as a passenger. The general-complaint frame is where the neutral-formal word actually turns up in speech."
+ },
+ {
+  "hi": "आपका बड़ा बेटा शादीशुदा है क्या?",
+  "en": "Is your eldest son married?",
+  "teaches": [
+   "hs-0823"
+  ],
+  "node": "node-07",
+  "note": "शादीशुदा is invariable, which is the adjective-agreement point. Sentence-final क्या is the spoken question tag."
+ },
+ {
+  "hi": "मामा-मामी दोनों कल शाम को आ रहे हैं।",
+  "en": "My uncle and auntie are both coming tomorrow evening.",
+  "teaches": [
+   "hs-0826"
+  ],
+  "node": "node-10",
+  "note": "Pairing मामी with मामा is what fixes which aunt she is."
+ },
+ {
+  "hi": "मेरी कज़न भी लंदन में रहती है।",
+  "en": "My cousin lives in London as well.",
+  "teaches": [
+   "hs-0828"
+  ],
+  "node": "node-02"
+ },
+ {
+  "hi": "सास-ससुर से हफ़्ते में एक बार वीडियो कॉल होती है।",
+  "en": "We have a video call with my in-laws once a week.",
+  "teaches": [
+   "hs-0829"
+  ],
+  "node": "node-14"
+ },
+ {
+  "hi": "उनकी बहू बहुत अच्छी हिंदी बोलती है।",
+  "en": "Their daughter-in-law speaks really good Hindi.",
+  "teaches": [
+   "hs-0831"
+  ],
+  "node": "node-02"
+ },
+ {
+  "hi": "आपके दामाद क्या काम करते हैं?",
+  "en": "What does your son-in-law do for a living?",
+  "teaches": [
+   "hs-0832"
+  ],
+  "node": "node-29",
+  "note": "Honorific plural करते हैं for a relative being asked about politely, which is the register lesson as much as the word."
+ },
+ {
+  "hi": "जीजा जी दीदी से दो साल बड़े हैं।",
+  "en": "My brother-in-law is two years older than my sister.",
+  "teaches": [
+   "hs-0833"
+  ],
+  "node": "node-15",
+  "note": "Anchoring जीजा to दीदी is what distinguishes him from the other brothers-in-law."
+ },
+ {
+  "hi": "मेरा भाई तुम्हारा साला है, और तुम्हारा छोटा भाई मेरा देवर।",
+  "en": "My brother is your brother-in-law, and your younger brother is mine.",
+  "teaches": [
+   "hs-0835"
+  ],
+  "node": "node-03",
+  "note": "A wife explaining the split to her husband. Two terms rather than all five keeps it a real sentence: साला covers the wife's side, देवर the husband's, which is exactly the distinction the item names. देवर is specifically the younger brother, so छोटा is there on purpose. Verified: both terms are used from the correct perspective, and the gapped second clause (है dropped under contrast) is natural spoken Hindi."
+ },
+ {
+  "hi": "उनसे हमारा क्या रिश्ता है?",
+  "en": "How are we related to them?",
+  "teaches": [
+   "hs-0836"
+  ],
+  "node": "node-14",
+  "note": "क्या sits before the noun in the standard spoken frame (उनसे आपका क्या रिश्ता है?), not after it."
+ },
+ {
+  "hi": "घरवाले आपको बहुत याद करते हैं।",
+  "en": "Everyone at home misses you a lot.",
+  "teaches": [
+   "hs-0837"
+  ],
+  "node": "node-02"
+ },
+ {
+  "hi": "ये महिला हमारे साथ काम करती हैं।",
+  "en": "This lady works with us.",
+  "teaches": [
+   "hs-0838"
+  ],
+  "node": "node-02",
+  "note": "Honorific plural करती हैं with a singular referent is what makes महिला the polite word rather than औरत."
+ },
+ {
+  "hi": "मैडम, हमारा कमरा तैयार है?",
+  "en": "Madam, is our room ready?",
+  "teaches": [
+   "hs-0840"
+  ],
+  "node": "node-03"
+ },
+ {
+  "hi": "बहन जी, ये रास्ता स्टेशन जाता है?",
+  "en": "Excuse me, does this road go to the station?",
+  "teaches": [
+   "hs-0841"
+  ],
+  "node": "node-02",
+  "note": "British English has no equivalent of बहन जी, so the gloss uses the phrase a Brit would actually open with. Glossing it as 'sister' would be an Indian-English calque."
+ },
+ {
+  "hi": "आपके कितने बच्चे हैं?",
+  "en": "How many children do you have?",
+  "teaches": [
+   "hs-0844"
+  ],
+  "node": "node-04"
+ },
+ {
+  "hi": "मैं एक चपाती और लूँगा।",
+  "en": "I'll have another chapati.",
+  "teaches": [
+   "hs-0848"
+  ],
+  "node": "node-24",
+  "note": "और after the noun is the 'one more' pattern; लूँगा agrees with मैं, not with the feminine चपाती."
+ },
+ {
+  "hi": "यहाँ के छोले बहुत अच्छे हैं।",
+  "en": "The chickpea curry here is really good.",
+  "teaches": [
+   "hs-0853"
+  ],
+  "node": "node-07",
+  "note": "Glossed as the dish, not left as 'chhole', so the learner actually gets the meaning and the contrast with the चना card holds: चना is the raw pulse, छोले the cooked dish."
+ },
+ {
+  "hi": "चने कितने रुपये किलो हैं?",
+  "en": "How much are the chickpeas a kilo?",
+  "teaches": [
+   "hs-0854"
+  ],
+  "node": "node-05",
+  "note": "Market frame so चना lands as the raw pulse, keeping it clear of the छोले card, which is the cooked dish."
+ },
+ {
+  "hi": "मुझे राजमा-चावल बहुत पसंद है।",
+  "en": "I love kidney-bean curry with rice.",
+  "teaches": [
+   "hs-0855"
+  ],
+  "node": "node-06",
+  "note": "Gloss translates राजमा rather than transliterating it, matching the syllabus gloss."
+ },
+ {
+  "hi": "सलाद के लिए प्याज़ और टमाटर काट लो।",
+  "en": "Chop some onion and tomato for the salad.",
+  "teaches": [
+   "hs-0859"
+  ],
+  "node": "node-20"
+ },
+ {
+  "hi": "गर्मी में बच्चों को रोज़ आइसक्रीम चाहिए।",
+  "en": "In summer the kids want ice cream every day.",
+  "teaches": [
+   "hs-0863"
+  ],
+  "node": "node-11",
+  "note": "गर्मी में is the season, not 'this heat' – इस would be needed for that."
+ },
+ {
+  "hi": "मेरी सास लहसुन-प्याज़ नहीं खातीं।",
+  "en": "My mother-in-law doesn't eat garlic or onion.",
+  "teaches": [
+   "hs-0865"
+  ],
+  "node": "node-13",
+  "note": "खातीं with the auxiliary dropped is the normal negative honorific-feminine habitual."
+ },
+ {
+  "hi": "आज गोभी की सब्ज़ी बनी है।",
+  "en": "There's cauliflower curry today.",
+  "teaches": [
+   "hs-0867"
+  ],
+  "node": "node-09"
+ },
+ {
+  "hi": "चावल में मटर भी डाल देना।",
+  "en": "Put some peas in the rice as well.",
+  "teaches": [
+   "hs-0870"
+  ],
+  "node": "node-19"
+ },
+ {
+  "hi": "पालक ताज़ा है, आज पालक पनीर बनाऊँगी।",
+  "en": "The spinach is fresh, I'll make palak paneer today.",
+  "teaches": [
+   "hs-0872"
+  ],
+  "node": "node-24",
+  "note": "The old card had पालक only inside the dish name, glossed 'palak paneer', so the learner never met the word 'spinach'. The first clause stars पालक as the vegetable; बनाऊँगी keeps the future node."
+ },
+ {
+  "hi": "गरम मसाले के बिना स्वाद नहीं आता।",
+  "en": "It doesn't taste right without garam masala.",
+  "teaches": [
+   "hs-0879"
+  ],
+  "node": "node-17"
+ },
+ {
+  "hi": "इस दुकान पर ताज़ा जूस मिलता है।",
+  "en": "You can get fresh juice at this shop.",
+  "teaches": [
+   "hs-0881"
+  ],
+  "node": "node-02"
+ },
+ {
+  "hi": "आप कोल्ड ड्रिंक लेंगे या चाय?",
+  "en": "Would you like a fizzy drink or tea?",
+  "teaches": [
+   "hs-0884"
+  ],
+  "node": "node-24"
+ },
+ {
+  "hi": "खाना लग गया है, सब जल्दी आइए।",
+  "en": "Food's on the table, hurry along everyone.",
+  "teaches": [
+   "hs-0896"
+  ],
+  "node": "node-20",
+  "note": "खाना is any meal, so 'dinner' over-specified it."
+ },
+ {
+  "hi": "बाहर से आए हो, पहले हाथ धो लो।",
+  "en": "You've just come in from outside, wash your hands first.",
+  "teaches": [
+   "hs-0897"
+  ],
+  "node": "node-20"
+ },
+ {
+  "hi": "चाय ठंडी हो गई है, गरम कर दूँ?",
+  "en": "Your tea's gone cold, shall I heat it up?",
+  "teaches": [
+   "hs-0898"
+  ],
+  "node": "node-20",
+  "note": "Was खाना ठंडा हो गया है, which repeated the खाना …गया है, frame of the खाना लग गया card and sat close to the deck's existing खाना गरम कर दो। चाय ठंडी हो गई है is just as everyday and keeps the feminine agreement visible."
+ },
+ {
+  "hi": "नल का पानी मत पीना, फ़िल्टर का पानी पीना।",
+  "en": "Don't drink the tap water, drink the filtered water.",
+  "teaches": [
+   "hs-0899"
+  ],
+  "node": "node-13"
+ },
+ {
+  "hi": "मेज़ पर काँटा-चम्मच लगा दो।",
+  "en": "Put the forks and spoons out on the table.",
+  "teaches": [
+   "hs-0900"
+  ],
+  "node": "node-20",
+  "note": "काँटा-चम्मच is the everyday way to say cutlery, so the word appears in the pairing a learner will actually hear – but the gloss now says 'forks and spoons' so काँटा maps to 'fork' rather than disappearing into 'cutlery'."
+ },
+ {
+  "hi": "मैंने आपका सामान बेडरूम में रख दिया है।",
+  "en": "I've put your bags in the bedroom.",
+  "teaches": [
+   "hs-0904"
+  ],
+  "node": "node-09",
+  "note": "रख देना is transitive and perfective, so the subject needs ने. The verb agrees with सामान (masc sg): रख दिया है."
+ },
+ {
+  "hi": "मेहमान ड्राइंग रूम में बैठे हैं।",
+  "en": "The guests are sitting in the living room.",
+  "teaches": [
+   "hs-0905"
+  ],
+  "node": "node-14"
+ },
+ {
+  "hi": "अंकल जी, सीढ़ियाँ किधर हैं?",
+  "en": "Uncle, which way are the stairs?",
+  "teaches": [
+   "hs-0908"
+  ],
+  "node": "node-03",
+  "note": "The deck's six existing stair cards all use the oblique सीढ़ियों, four of them inside the same 'lift is broken' frame. This gives the learner the nominative plural सीढ़ियाँ in a fresh situation, and किधर (hs-0984) appears nowhere else in the deck."
+ },
+ {
+  "hi": "ज़रा शीशे में देख लो।",
+  "en": "Have a quick look in the mirror.",
+  "teaches": [
+   "hs-0919"
+  ],
+  "node": "node-14"
+ },
+ {
+  "hi": "चाय कप में लोगे या मग में?",
+  "en": "Do you want your tea in a cup or a mug?",
+  "teaches": [
+   "hs-0921"
+  ],
+  "node": "node-24"
+ },
+ {
+  "hi": "सोने से पहले ब्रश कर लो।",
+  "en": "Brush your teeth before bed.",
+  "teaches": [
+   "hs-0923"
+  ],
+  "node": "node-19"
+ },
+ {
+  "hi": "ये सब डस्टबिन में डाल दो।",
+  "en": "Put all this in the bin.",
+  "teaches": [
+   "hs-0925"
+  ],
+  "node": "node-20"
+ },
+ {
+  "hi": "मेरे कमरे में वाईफ़ाई नहीं चलता।",
+  "en": "The wifi doesn't work in my room.",
+  "teaches": [
+   "hs-0932"
+  ],
+  "node": "node-13"
+ },
+ {
+  "hi": "पंखे का स्विच कहाँ है?",
+  "en": "Where's the switch for the fan?",
+  "teaches": [
+   "hs-0933"
+  ],
+  "node": "node-04"
+ },
+ {
+  "hi": "ध्यान से पकड़ो, यह टूट जाएगा।",
+  "en": "Hold it carefully, it'll break.",
+  "teaches": [
+   "hs-0935"
+  ],
+  "node": "node-20"
+ },
+ {
+  "hi": "मुझे नहाना है, ज़रा गीज़र चला दो।",
+  "en": "I want a shower, could you put the geyser on?",
+  "teaches": [
+   "hs-0936"
+  ],
+  "node": "node-20",
+  "note": "Kept the loanword 'geyser' in the gloss because that is the word the learner will hear in the house, and the syllabus glosses it that way."
+ },
+ {
+  "hi": "खाना बनाने के बाद गैस बंद कर दी?",
+  "en": "Did you turn the gas off after cooking?",
+  "teaches": [
+   "hs-0938"
+  ],
+  "node": "node-09",
+  "note": "Existing gas cards are all imperatives (गैस बंद करो / कर दो). This one delivers the perfective question with feminine object agreement (गैस is feminine, so कर दी)."
+ },
+ {
+  "hi": "तुम्हारे हाथ से ख़ून निकल रहा है।",
+  "en": "Your hand's bleeding.",
+  "teaches": [
+   "hs-0946"
+  ],
+  "node": "node-10"
+ },
+ {
+  "hi": "इतना मत सोचो, दिमाग़ ख़राब हो जाएगा।",
+  "en": "Don't think about it so much, you'll drive yourself mad.",
+  "teaches": [
+   "hs-0947"
+  ],
+  "node": "node-13"
+ },
+ {
+  "hi": "बच्चे को कल से दस्त लगे हैं।",
+  "en": "The baby's had diarrhoea since yesterday.",
+  "teaches": [
+   "hs-0949"
+  ],
+  "node": "node-06"
+ },
+ {
+  "hi": "इतनी गर्मी में चक्कर आ जाते हैं।",
+  "en": "You get dizzy in heat like this.",
+  "teaches": [
+   "hs-0950"
+  ],
+  "node": "node-02"
+ },
+ {
+  "hi": "अगर ज़्यादा तकलीफ़ हो तो मुझे बता देना।",
+  "en": "If it gets too uncomfortable, let me know.",
+  "teaches": [
+   "hs-0953"
+  ],
+  "node": "node-18"
+ },
+ {
+  "hi": "मुझे ज़ुकाम है और गला ख़राब है।",
+  "en": "I've got a cold and a sore throat.",
+  "teaches": [
+   "hs-0956"
+  ],
+  "node": "node-06"
+ },
+ {
+  "hi": "लगता है मुझे सर्दी लग गई है।",
+  "en": "I think I've caught a cold.",
+  "teaches": [
+   "hs-0957"
+  ],
+  "node": "node-20"
+ },
+ {
+  "hi": "बताइए, दर्द कहाँ हो रहा है?",
+  "en": "Tell me, where does it hurt?",
+  "teaches": [
+   "hs-0959"
+  ],
+  "node": "node-10"
+ },
+ {
+  "hi": "तबीयत ख़राब है? कब से?",
+  "en": "You're not well? Since when?",
+  "teaches": [
+   "hs-0960"
+  ],
+  "node": "node-14",
+  "note": "Paired with the दो दिन से card below as a question-and-answer set."
+ },
+ {
+  "hi": "दो दिन से बुख़ार है।",
+  "en": "I've had a fever for two days.",
+  "teaches": [
+   "hs-0961"
+  ],
+  "node": "node-14",
+  "note": "The natural reply to कब से? Kept short so the से-for-duration pattern is the only thing on show."
+ },
+ {
+  "hi": "मुझे चक्कर आ रहे हैं, थोड़ा पानी दीजिए।",
+  "en": "I feel dizzy, could I have some water?",
+  "teaches": [
+   "hs-0962"
+  ],
+  "node": "node-10"
+ },
+ {
+  "hi": "गाड़ी रोको, मुझे उल्टी हो रही है।",
+  "en": "Stop the car, I'm going to be sick.",
+  "teaches": [
+   "hs-0963"
+  ],
+  "node": "node-10"
+ },
+ {
+  "hi": "मुझे दूध से एलर्जी है।",
+  "en": "I'm allergic to milk.",
+  "teaches": [
+   "hs-0964"
+  ],
+  "node": "node-06"
+ },
+ {
+  "hi": "खाँसी ठीक नहीं हो रही, डॉक्टर को दिखा लो।",
+  "en": "That cough isn't getting any better, go and see a doctor.",
+  "teaches": [
+   "hs-0968"
+  ],
+  "node": "node-19",
+  "note": "The deck's three existing 'see a doctor' cards use दिखाना चाहिए, दिखा लेना and दिखाओ. This one delivers the exact spoken chunk दिखा लो."
+ },
+ {
+  "hi": "पापा, आपने दवाई खा ली?",
+  "en": "Dad, have you taken your medicine?",
+  "teaches": [
+   "hs-0969"
+  ],
+  "node": "node-23"
+ },
+ {
+  "hi": "भाई साहब, बुख़ार की दवा चाहिए।",
+  "en": "Excuse me, I need something for a fever.",
+  "teaches": [
+   "hs-0971"
+  ],
+  "node": "node-11",
+  "note": "Chemist-counter framing. Node moved from node-06 to node-11: the sentence has no को/dative at all, and the deck's noun + चाहिए cards (मुझे दो सौ रुपये और चाहिए, हमें आधा किलो चीनी चाहिए) all sit in node-11."
+ },
+ {
+  "hi": "यहाँ पास में मेडिकल स्टोर कहाँ है?",
+  "en": "Where's the nearest chemist?",
+  "teaches": [
+   "hs-0972"
+  ],
+  "node": "node-04"
+ },
+ {
+  "hi": "नीला नहीं, मुझे लाल वाला चाहिए।",
+  "en": "Not the blue one, I want the red one.",
+  "teaches": [
+   "hs-0973"
+  ],
+  "node": "node-07",
+  "note": "वाला nominalising a colour adjective is the star, so it sits with descriptions/adjectives rather than with the चाहिए frame the learner already has from tier 1."
+ },
+ {
+  "hi": "मुझे बहुत गर्मी लग रही है, चलो छाँव में बैठते हैं।",
+  "en": "I'm really hot, let's sit in the shade.",
+  "teaches": [
+   "hs-0974"
+  ],
+  "node": "node-10",
+  "note": "Second clause moved off windows: the deck already has सविता, खिड़की खोल दो (hi-1843) and the exact mirror अगर तुम्हें ठंड लग रही है तो खिड़की बंद कर दो (hi-1812), plus ज़रा एसी चला दो, बहुत गर्मी है (hi-1919). छाँव is unused in the deck."
+ },
+ {
+  "hi": "तुम इतनी सुबह किधर जा रहे हो?",
+  "en": "Where are you off to so early?",
+  "teaches": [
+   "hs-0984"
+  ],
+  "node": "node-10",
+  "note": "किधर is most alive in the 'where are you headed' sense, which needs the continuous, hence node-10 rather than node-04."
+ },
+ {
+  "hi": "यह ख़बर तुम्हें किससे मिली?",
+  "en": "Who did you hear that from?",
+  "teaches": [
+   "hs-0985"
+  ],
+  "node": "node-09"
+ },
+ {
+  "hi": "तुम दिल्ली में किसके साथ रहोगे?",
+  "en": "Who will you be staying with in Delhi?",
+  "teaches": [
+   "hs-0986"
+  ],
+  "node": "node-24"
+ },
+ {
+  "hi": "तुम कब तक पहुँच जाओगे?",
+  "en": "What time will you be there by?",
+  "teaches": [
+   "hs-0987"
+  ],
+  "node": "node-24"
+ },
+ {
+  "hi": "खाना आने में अभी और कितनी देर लगेगी?",
+  "en": "How much longer is the food going to be?",
+  "teaches": [
+   "hs-0988"
+  ],
+  "node": "node-24",
+  "note": "Pinned to a restaurant so it stops sharing an arrival scenario with the कब तक card. देर लगना has zero deck cards, so the collocation is genuinely new."
+ },
+ {
+  "hi": "क्या मतलब? तुम कल नहीं आ रहे?",
+  "en": "What do you mean? You're not coming tomorrow?",
+  "teaches": [
+   "hs-0989"
+  ],
+  "node": "node-08"
+ },
+ {
+  "hi": "मुझको यह जगह बहुत पसंद आई।",
+  "en": "I really liked this place.",
+  "teaches": [
+   "hs-0991"
+  ],
+  "node": "node-06",
+  "note": "Avoided the obvious मुझको + समझ नहीं आया frame because the deck already has मुझे समझ नहीं आया – a near-identical pair would teach nothing but the spelling."
+ },
+ {
+  "hi": "इसको मत छुओ, अभी गरम है।",
+  "en": "Don't touch it, it's still hot.",
+  "teaches": [
+   "hs-0993"
+  ],
+  "node": "node-19"
+ },
+ {
+  "hi": "मम्मी को फ़ोन दो, मुझे उनसे बात करनी है।",
+  "en": "Put mum on, I need to speak to her.",
+  "teaches": [
+   "hs-0994"
+  ],
+  "node": "node-11",
+  "note": "उनसे here is honorific singular (mum), which is the sense the learner will actually meet on family calls."
+ },
+ {
+  "hi": "इसमें कोई और रंग है क्या?",
+  "en": "Have you got this in another colour?",
+  "teaches": [
+   "hs-0995"
+  ],
+  "node": "node-04"
+ },
+ {
+  "hi": "खाना एकदम वैसा ही बना है जैसा माँ बनाती हैं।",
+  "en": "The food's come out exactly the way mum makes it.",
+  "teaches": [
+   "hs-0998"
+  ],
+  "node": "node-21",
+  "note": "Grid card uses the जैसा–वैसा row: the deck's five existing correlatives are all जहाँ–वहाँ or जो–वह, so this fills the untaught row rather than repeating a taught one."
+ },
+ {
+  "hi": "यह रास्ता स्टेशन की तरफ़ जाता है।",
+  "en": "This road goes towards the station.",
+  "teaches": [
+   "hs-1001"
+  ],
+  "node": "node-14"
+ },
+ {
+  "hi": "बिल्कुल नहीं, आप कभी भी आ सकते हैं।",
+  "en": "Not at all, you can come round any time.",
+  "teaches": [
+   "hs-1005"
+  ],
+  "node": "node-11",
+  "note": "Waving away an apology for dropping in, which is बिल्कुल नहीं's other everyday job alongside the deck's ना ना, ऐसा बिलकुल नहीं है. Switched off फ़ोन to keep the batch from carrying four phone cards."
+ },
+ {
+  "hi": "आपने हमारा इतना ख़याल रखा, बहुत-बहुत शुक्रिया।",
+  "en": "You've taken such good care of us, thank you so much.",
+  "teaches": [
+   "hs-1008"
+  ],
+  "node": "node-09"
+ },
+ {
+  "hi": "माफ़ करना यार, मैं तुम्हारा जन्मदिन भूल गया।",
+  "en": "Sorry mate, I forgot your birthday.",
+  "teaches": [
+   "hs-1009"
+  ],
+  "node": "node-08",
+  "note": "माफ़ करना needs an informal context to contrast with the deck's existing माफ़ कीजिए cards, hence यार and तुम्हारा."
+ },
+ {
+  "hi": "देखिए, अभी टिकट मिलना मुश्किल है।",
+  "en": "Look, tickets are hard to come by right now.",
+  "teaches": [
+   "hs-1010"
+  ],
+  "node": "node-08",
+  "note": "Deck's discourse openers are all देखो / सुनो / सुनिए, so the आप-form देखिए is new."
+ },
+ {
+  "hi": "अच्छा, अब मुझे जाना पड़ेगा, मेहमान आ रहे हैं।",
+  "en": "Right, I'll have to go now, we've got guests coming.",
+  "teaches": [
+   "hs-1015"
+  ],
+  "node": "node-11",
+  "note": "Reason changed off waiting kids so it doesn't repeat the बच्चों को लेने जाना card later in the batch."
+ },
+ {
+  "hi": "ऐसा लगता है कि उन्होंने मेरा मैसेज नहीं देखा।",
+  "en": "Looks like they haven't seen my message.",
+  "teaches": [
+   "hs-1016"
+  ],
+  "node": "node-18",
+  "note": "Kept off rain, late trains and power cuts – the deck already has मुझे लगता है कि आज बारिश ज़रूर होगी, two train-is-late cards and 23 बिजली cards including आधे घंटे में बिजली वापस आ जाएगी."
+ },
+ {
+  "hi": "मैं तैयार हो रही हूँ, तुम गाड़ी निकालो।",
+  "en": "I'm getting ready, you get the car out.",
+  "teaches": [
+   "hs-1018"
+  ],
+  "node": "node-10"
+ },
+ {
+  "hi": "ठीक है, फिर बात करेंगे, अभी मैं थोड़ा बिज़ी हूँ।",
+  "en": "Right, we'll speak later, I'm a bit busy at the moment.",
+  "teaches": [
+   "hs-1019"
+  ],
+  "node": "node-24"
+ },
+ {
+  "hi": "बस, अभी निकल रहा हूँ, रास्ते में फ़ोन करता हूँ।",
+  "en": "I'm just leaving now, I'll ring you on the way.",
+  "teaches": [
+   "hs-1020"
+  ],
+  "node": "node-10"
+ },
+ {
+  "hi": "जल्दी वापस आना, तुम्हारे बिना घर ख़ाली लगता है।",
+  "en": "Come back soon, the house feels empty without you.",
+  "teaches": [
+   "hs-1021"
+  ],
+  "node": "node-19",
+  "note": "The deck's three वापस आना cards are all future declaratives, so this uses the -ना imperative, which is where the phrase actually lives in family speech."
+ },
+ {
+  "hi": "शाम को हम बच्चों को लेने जाएँगे।",
+  "en": "We'll go and pick the kids up this evening.",
+  "teaches": [
+   "hs-1022"
+  ],
+  "node": "node-24",
+  "note": "Chose लेने over घूमने/खाने because the deck already has घूमने जाना and खाने चलना examples – a fresh verb makes the paradigm visible rather than the phrase."
+ },
+ {
+  "hi": "मैं नहा रहा हूँ, ज़रा फ़ोन उठा लो।",
+  "en": "I'm in the shower, could you get the phone?",
+  "teaches": [
+   "hs-1025"
+  ],
+  "node": "node-19",
+  "note": "Deck covers the negative (उसने नहीं उठाया), so this teaches the phrase as a request. Reason changed off wet hands because hi-1878 already runs the hands-occupied + ज़रा request frame."
+ },
+ {
+  "hi": "मम्मी जी, ज़रा पापा जी से बात कराइए।",
+  "en": "Mum, could you put Dad on the phone?",
+  "teaches": [
+   "hs-1026"
+  ],
+  "node": "node-19",
+  "note": "कराइए is the causative imperative (कराना, not करना) – exactly the form the phrase needs, and the आप imperative in -इए is node-19's rule."
+ },
+ {
+  "hi": "स्टेशन के लिए कैब बुक कर लो।",
+  "en": "Book a cab to the station.",
+  "teaches": [
+   "hs-1027"
+  ],
+  "node": "node-20"
+ },
+ {
+  "hi": "हमारी ट्रेन कौन से प्लेटफ़ॉर्म पर आएगी?",
+  "en": "Which platform is our train coming in on?",
+  "teaches": [
+   "hs-1037"
+  ],
+  "node": "node-04",
+  "note": "कौन सा goes oblique to कौन से before पर – that oblique-before-postposition shift is the point of the card."
+ },
+ {
+  "hi": "हाँ आंटी, मैं रास्ते में हूँ।",
+  "en": "Yes Aunty, I'm on my way.",
+  "teaches": [
+   "hs-1039"
+  ],
+  "node": "node-04"
+ },
+ {
+  "hi": "भैया, आज टमाटर का क्या रेट है?",
+  "en": "What are tomatoes going for today?",
+  "teaches": [
+   "hs-1040"
+  ],
+  "node": "node-04"
+ },
+ {
+  "hi": "ऑटो वाले को कैश ही देना पड़ेगा।",
+  "en": "You'll have to pay the auto driver in cash.",
+  "teaches": [
+   "hs-1041"
+  ],
+  "node": "node-11"
+ },
+ {
+  "hi": "क्या यहाँ यूपीआई चलेगा?",
+  "en": "Do you take UPI here?",
+  "teaches": [
+   "hs-1042"
+  ],
+  "node": "node-24",
+  "note": "चलेगा is the everyday 'will that work / do you accept it' future, which is how UPI actually gets asked about."
+ },
+ {
+  "hi": "ये चप्पलें कितने में दोगे?",
+  "en": "How much will you take for these sandals?",
+  "teaches": [
+   "hs-1044"
+  ],
+  "node": "node-24"
+ },
+ {
+  "hi": "इतना महँगा क्यों? ठीक दाम लगाओ ना।",
+  "en": "Why so expensive? Come on, give me a fair price.",
+  "teaches": [
+   "hs-1045"
+  ],
+  "node": "node-19"
+ },
+ {
+  "hi": "माफ़ कीजिए, मेरे पास छुट्टे नहीं हैं।",
+  "en": "Sorry, I haven't got any change.",
+  "teaches": [
+   "hs-1046"
+  ],
+  "node": "node-04",
+  "note": "Deck already has the asking-for-change side (क्या आप सौ के छुट्टे दे सकते हैं?), so this card takes the other side of the exchange."
+ },
+ {
+  "hi": "ये फ़ोटो व्हाट्सएप ग्रुप में डाल दो।",
+  "en": "Put these photos in the WhatsApp group.",
+  "teaches": [
+   "hs-1048"
+  ],
+  "node": "node-20"
+ },
+ {
+  "hi": "अभी बच्चों का वीडियो भेजता हूँ।",
+  "en": "I'll send you a video of the kids in a minute.",
+  "teaches": [
+   "hs-1049"
+  ],
+  "node": "node-02"
+ },
+ {
+  "hi": "यहाँ नेटवर्क नहीं आ रहा है।",
+  "en": "There's no reception here.",
+  "teaches": [
+   "hs-1051"
+  ],
+  "node": "node-10",
+  "note": "Reception 'comes' in Hindi (नेटवर्क आना), which is why the verb is आना and not होना."
+ },
+ {
+  "hi": "आप दिख नहीं रहे हैं, सिर्फ़ आवाज़ आ रही है।",
+  "en": "I can't see you, I can only hear you.",
+  "teaches": [
+   "hs-1054"
+  ],
+  "node": "node-10"
+ },
+ {
+  "hi": "अच्छा, आप आराम कीजिए, बाद में बात करते हैं।",
+  "en": "Right, you get some rest, we'll talk later.",
+  "teaches": [
+   "hs-1055"
+  ],
+  "node": "node-19"
+ },
+ {
+  "hi": "बाप रे, यहाँ इतनी भीड़ है!",
+  "en": "Blimey, it's so crowded here!",
+  "teaches": [
+   "hs-1057"
+  ],
+  "node": "node-08"
+ },
+ {
+  "hi": "कमाल है, इतनी जल्दी काम हो गया!",
+  "en": "Amazing, it got done so quickly!",
+  "teaches": [
+   "hs-1058"
+  ],
+  "node": "node-08"
+ },
+ {
+  "hi": "अंदर जाकर दादी जी के पैर छू लेना।",
+  "en": "Touch Grandma's feet when you go in.",
+  "teaches": [
+   "hs-1064"
+  ],
+  "node": "node-20",
+  "note": "The deck's only पैर छूना card is a narrated past one, so this gives the learner the instruction they'll actually be given on a visit."
+ },
+ {
+  "hi": "मुझे बहुत जल्दी गुस्सा आ जाता है।",
+  "en": "I lose my temper very easily.",
+  "teaches": [
+   "hs-1066"
+  ],
+  "node": "node-06",
+  "note": "गुस्सा आना takes a dative subject (मुझे, not मैं), which is the node-06 pattern."
+ },
+ {
+  "hi": "जल्दी एम्बुलेंस बुलाओ!",
+  "en": "Call an ambulance, quick!",
+  "teaches": [
+   "hs-1079"
+  ],
+  "node": "node-19"
+ },
+ {
+  "hi": "मैं यह ऐप रोज़ इस्तेमाल करता हूँ।",
+  "en": "I use this app every day.",
+  "teaches": [
+   "hs-1085"
+  ],
+  "node": "node-02"
+ },
+ {
+  "hi": "इतना टेंशन मत लो, सब ठीक हो जाएगा।",
+  "en": "Don't stress so much, it'll all be fine.",
+  "teaches": [
+   "hs-1125"
+  ],
+  "node": "node-13"
+ },
+ {
+  "hi": "बच्चे आपको बहुत मिस करते हैं।",
+  "en": "The children miss you a lot.",
+  "teaches": [
+   "hs-1126"
+  ],
+  "node": "node-02"
+ },
+ {
+  "hi": "आप बिज़ी तो नहीं हैं? बाद में फ़ोन करूँ?",
+  "en": "You're not busy, are you? Shall I ring back later?",
+  "teaches": [
+   "hs-1127"
+  ],
+  "node": "node-13",
+  "note": "तो नहीं is the softening negative tag – it checks rather than asserts, and it's the standard way this call opener is phrased."
+ },
+ {
+  "hi": "नहीं नहीं, मैं अभी फ्री हूँ, बताइए।",
+  "en": "No no, I'm free right now, go ahead.",
+  "teaches": [
+   "hs-1128"
+  ],
+  "node": "node-03",
+  "note": "Written as the natural answer to the बिज़ी card so the pair drills as a real exchange."
+ },
+ {
+  "hi": "मम्मी अभी अपना सीरियल देख रही हैं।",
+  "en": "Mum's watching her soap at the moment.",
+  "teaches": [
+   "hs-1132"
+  ],
+  "node": "node-10"
+ },
+ {
+  "hi": "पापा रोज़ रात नौ बजे न्यूज़ देखते हैं।",
+  "en": "Dad watches the nine o'clock news every night.",
+  "teaches": [
+   "hs-1134"
+  ],
+  "node": "node-02"
+ },
+ {
+  "hi": "हमें पापा को हॉस्पिटल ले जाना है।",
+  "en": "We need to take Dad to hospital.",
+  "teaches": [
+   "hs-1135"
+  ],
+  "node": "node-11",
+  "note": "हॉस्पिटल is what families actually say on the phone. अस्पताल (already in the deck 11 times) is the shuddh word. हमें is explicit because without it, पापा को … जाना है reads as 'Dad has to go'."
+ },
+ {
+  "hi": "मैं अभी निकलने वाला हूँ, एक घंटे में पहुँच जाऊँगा।",
+  "en": "I'm about to head off, I'll be there in an hour.",
+  "teaches": [
+   "hs-1142"
+  ],
+  "node": "node-24",
+  "note": "Deck has होने वाली है but no first-person V-ने वाला हूँ. Node-24 because the near-future वाला हूँ is paired with a real future पहुँच जाऊँगा."
+ },
+ {
+  "hi": "अरे, खाना खाकर जाओ, इतनी जल्दी क्या है?",
+  "en": "Come on, have something to eat before you go, what's the rush?",
+  "teaches": [
+   "hs-1144"
+  ],
+  "node": "node-19",
+  "note": "Deck's hi-2729 is the आप version (खाकर ही जाइएगा). This is the तुम imperative a mother-in-law would actually use, hence node-19."
+ },
+ {
+  "hi": "एयरपोर्ट पहुँचकर एक फ़ोन कर देना।",
+  "en": "Give me a ring when you get to the airport.",
+  "teaches": [
+   "hs-1145"
+  ],
+  "node": "node-20",
+  "note": "Deck already has hi-1945 पहुँचकर मुझे मैसेज कर देना, so this one carries a place noun and the idiomatic एक फ़ोन कर देना to stay clearly distinct. Node-20 for the कर देना compound, since the V-कर half is carried by the खाना खाकर card."
+ },
+ {
+  "hi": "यह ऐप बहुत आसान है, मैं इसे रोज़ यूज़ करता हूँ।",
+  "en": "This app's really easy, I use it every day.",
+  "teaches": [
+   "hs-1151"
+  ],
+  "node": "node-26",
+  "note": "Deck only has इस्तेमाल करना (5 cards). यूज़ करना is the spoken default and is a noun+करना conjunct verb, so node-26."
+ },
+ {
+  "hi": "मुझे रात को अकेले बाहर जाने से डर लगता है।",
+  "en": "I'm scared of going out on my own at night.",
+  "teaches": [
+   "hs-1067"
+  ],
+  "node": "node-06"
+ },
+ {
+  "hi": "रहने दो, मैं बाद में ख़ुद कर लूँगा।",
+  "en": "Leave it, I'll do it myself later.",
+  "teaches": [
+   "hs-1071"
+  ],
+  "node": "node-20"
+ },
+ {
+  "hi": "क्या पता वो कब वापस आएगा।",
+  "en": "Who knows when he'll be back.",
+  "teaches": [
+   "hs-1074"
+  ],
+  "node": "node-08"
+ },
+ {
+  "hi": "मेरा नंबर आठवाँ है, अभी टाइम लगेगा।",
+  "en": "I'm eighth in the queue, it'll be a while yet.",
+  "teaches": [
+   "hs-1076"
+  ],
+  "node": "node-05",
+  "note": "Shows the regular number+वाँ pattern (सात > सातवाँ, आठ > आठवाँ). छह is the one irregular: छठा, not छहवाँ."
+ },
+ {
+  "hi": "मेन्यू देख लो, मैं ऑर्डर कर देता हूँ।",
+  "en": "Have a look at the menu, I'll order.",
+  "teaches": [
+   "hs-1080"
+  ],
+  "node": "node-26",
+  "note": "Restaurant frame, deliberately not takeaway, because the deck already has three बाहर से मँगवाना/ऑर्डर किया cards."
+ },
+ {
+  "hi": "क्या करें, बच्चे हैं, अभी समझते नहीं।",
+  "en": "What can you do, they're kids, they don't understand yet.",
+  "teaches": [
+   "hs-1084"
+  ],
+  "node": "node-08",
+  "note": "The second clause supplies the resignation, otherwise क्या करें reads as a genuine question."
+ },
+ {
+  "hi": "मैच में वो शून्य पर आउट हो गया।",
+  "en": "He was out for a duck in the match.",
+  "teaches": [
+   "hs-1086"
+  ],
+  "node": "node-09",
+  "note": "Everyday zero is ज़ीरो. शून्य survives in maths and cricket scores, and cricket is where the learner will actually meet it."
+ },
+ {
+  "hi": "आम डेढ़ सौ रुपये किलो हैं, बहुत महँगे हो गए हैं।",
+  "en": "Mangoes are a hundred and fifty rupees a kilo, they've got really expensive.",
+  "teaches": [
+   "hs-1087"
+  ],
+  "node": "node-05"
+ },
+ {
+  "hi": "मैं पाँचवीं बार यह फ़िल्म देख रहा हूँ।",
+  "en": "I'm watching this film for the fifth time.",
+  "teaches": [
+   "hs-1089"
+  ],
+  "node": "node-10",
+  "note": "The headword is पाँचवाँ. It agrees like any -ा adjective, so before the feminine बार it becomes पाँचवीं."
+ },
+ {
+  "hi": "चाचा जी पहली जून को आ रहे हैं और पंद्रह जून को वापस जाएँगे।",
+  "en": "Uncle's coming on the first of June and going back on the fifteenth.",
+  "teaches": [
+   "hs-1092"
+  ],
+  "node": "node-14",
+  "note": "Both halves in one sentence so the contrast is visible: पहली for the 1st, then plain cardinals (पंद्रह, not पंद्रहवीं). Node-14 for the date को."
+ },
+ {
+  "hi": "मई में इतनी गर्मी थी कि हम दोपहर में बाहर ही नहीं निकले।",
+  "en": "It was so hot in May that we didn't go out in the afternoon at all.",
+  "teaches": [
+   "hs-1097"
+  ],
+  "node": "node-18"
+ },
+ {
+  "hi": "बच्चों के स्कूल जुलाई में खुलते हैं।",
+  "en": "The children's schools open again in July.",
+  "teaches": [
+   "hs-1099"
+  ],
+  "node": "node-02"
+ },
+ {
+  "hi": "सितंबर में दीदी का जन्मदिन है, याद है ना?",
+  "en": "My sister's birthday is in September, you remember, don't you?",
+  "teaches": [
+   "hs-1101"
+  ],
+  "node": "node-01",
+  "note": "Month fronted so सितंबर stars, and so the card does not repeat the deck's existing X का जन्मदिन … है frame (hi-0463, hi-1874)."
+ },
+ {
+  "hi": "इस साल दिवाली अक्टूबर में है।",
+  "en": "Diwali is in October this year.",
+  "teaches": [
+   "hs-1102"
+  ],
+  "node": "node-01"
+ },
+ {
+  "hi": "कामवाली आज नहीं आई, तो मुझे बर्तन धोने पड़ेंगे।",
+  "en": "The cleaner hasn't come today, so I'll have to do the washing-up.",
+  "teaches": [
+   "hs-1110"
+  ],
+  "node": "node-11",
+  "note": "कामवाली (or कामवाली बाई) is the everyday household word. British gloss is 'cleaner', not the Indian-English 'maid' or 'servant'. पड़ना takes the dative मुझे and the verb agrees with बर्तन (m.pl), hence धोने पड़ेंगे."
+ },
+ {
+  "hi": "भैया, एक पाव हरी मिर्च दे दीजिए।",
+  "en": "Bhaiya, a quarter kilo of green chillies, please.",
+  "teaches": [
+   "hs-1114"
+  ],
+  "node": "node-19",
+  "note": "पाव = 250 g, the standard sabziwala unit. Glossed to match the deck's existing hi-1917 shop line."
+ },
+ {
+  "hi": "ज़रा स्पीकर पर डाल दो, मम्मी भी सुन लें।",
+  "en": "Put it on speaker a second, so Mum can hear too.",
+  "teaches": [
+   "hs-1152"
+  ],
+  "node": "node-20"
+ },
+ {
+  "hi": "अगले हफ़्ते हमारी एनिवर्सरी है, कहीं बाहर चलेंगे।",
+  "en": "It's our anniversary next week, we'll go out somewhere.",
+  "teaches": [
+   "hs-1153"
+  ],
+  "node": "node-24",
+  "note": "सालगिरह is in the deck twice already. एनिवर्सरी is what families say for a wedding anniversary."
+ }
+]

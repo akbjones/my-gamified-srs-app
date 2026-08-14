@@ -1,0 +1,9284 @@
+{
+ "generated": "2026-08-13",
+ "notes": "Union of 3 ranker + 7 inventory drafts (3,132 raw entries -> 1,628 unique -> 1,120 kept). Dedupe key: Devanagari normalized for nukta (फ/फ़), chandrabindu/anusvara, spacing, hyphens and punctuation, plus a hand-built alias map that merged spelling/wording variants (e.g. यह=यह/ये, वह/वो, पैसा->पैसे, रुपया->रुपये, हेलो->हैलो, तबियत->तबीयत, दवा->दवाई, हॉस्पिटल->अस्पताल, खुले पैसे/खुल्ले->छुट्टे, पेट भर गया->बस पेट भर गया, खाना खा लिया?->खाना खाया?, and all duplicate tense/imperative/compound-verb paradigm write-ups). बस kept twice deliberately: bas 'enough' (t1) vs bus the vehicle, shown as बस (वाहन) (t2). Tiers: median of the drafts containing the item, with inventory agents' tiers overriding rankers inside their own domain; .5 medians rounded down. Order: tier, then r1's pedagogical order, then inventory domain order (numbers/time -> family -> food/home -> health -> function words -> verbs -> transport/phone/weather). Counts: t1 217, t2 421, t3 423, t4 59. Over-cap resolution: enumerated-set paradigms redundant with the inventories' individual entries were merged away; all tier-6 and tier-5 items plus single-source tier-4 tail were dropped and are listed verbatim in dropped. Per-item annotation notes from the drafts were pruned for size; the fully annotated build (with per-item merged-variant notes) is at scratchpad/final.json. Learner-profile choices preserved: spoken forms as headwords, assimilated loans (टाइम, थैंक यू, वेज/नॉन-वेज, बीपी, शुगर) ranked as the drafts placed them, in-law/kinship and phone-call chunks retained at high tiers.",
+ "adversaryVerdict": "This is a strong, genuinely colloquial syllabus: the loan-first register is handled well (टाइम tier 1 with समय marked formal, वेज/टेस्टी, ज़ीरो over शून्य), the kinship and in-law coverage is excellent, and the compound-verb paradigms (कर दो / खा लो, hs-0584/0585) are exactly the spoken backbone most courses miss. The weaknesses are concentrated in four places. First, small-talk domains for precisely this learner are thin: asking after relatives' jobs/studies (नौकरी, पढ़ाई, कॉलेज), evening TV (सीरियल, मैच, न्यूज़), morning/night greetings, phone-availability loans (बिज़ी/फ्री), and hospitality staples (क्या लेंगे?, खाना खाकर जाओ) – hence most of the additions. Second, several tier inversions: words lagging their own chunk or paradigm (ने, छुट्टे, मिल गया) and loan/shuddh pairs tiered backwards (हैप्पी बर्थडे vs जन्मदिन मुबारक, स्वादिष्ट vs टेस्टी). Third, romanisation style drifts that will confuse an SRS learner (dhire/dheere, keejiye/kijiye, accha/achchha, minat/minute, ham/hum, nahi/nahin), plus one outright error: गीज़र as \"geezer\" (an old man) instead of \"geyser\". Fourth, housekeeping the schema can't express: hs-0205 (यह क्या है?) duplicates hs-0100 (ये क्या है?) and one should be deleted; hs-0765 (चोट लगी) and hs-0965 (चोट लग गई) are near-duplicates worth merging; साठ romanised \"saath\" collides exactly with साथ (hs-0136) and सात is \"saat\" one letter away – consider \"saathh\" or a disambiguating note; and kahan/kahaan spelling varies across ~10 items and deserves one standard.",
+ "dropped": [
+  "merged redundant paradigms: clock-system; colours; days-of-week; decades; months; numbers 1-10; numbers 11-20 (each covered by individually enumerated entries)",
+  "tail dropped: शौहर, तलाक़, विधवा, विधुर, नंदोई, साढ़ू, औलाद, अतिथि, अजनबी, हींग, केसर, अजवाइन, तेजपत्ता, गूंधना, बेलना, करछी, छलनी, चिमटा, बेलन, सिलबट्टा, जनरेटर, टख़ना, एड़ी, पैर की उँगली, ठोड़ी, भौंहें, ज़ख़्म, बदसूरत, के अनुसार, केवल, मुस्कुराना, उड़ना, तैरना, कूदना, सुलाना, आँधी, डिग्री, तूफ़ान, कोहरा, बरसात, गूगल करो, ईमेल, फॉरवर्ड, सेल्फ़ी, मिस्ड कॉल, उधार, मंडी, महँगाई, भाव, पासपोर्ट, perfective + जाना, -आना / -वाना, V चुकना, गले लगाना, पता करना, कितना बड़ा हो गया!, एडजस्ट कर लेंगे, याद करना, शरमाओ मत, घबराइए मत, परेशान होना, झूठ बोलना, मज़ाक करना, खर्च करना, सुनाई देना",
+  "tail dropped: लौटना, मिलवाना, मँगवाना, बचना, बचाना, जलना, छूना, जागना, कमाना, तोड़ना, फेंकना, दौड़ना, भागना, लेटना, पिलाना, संभालना, ठहरना, बजाना, नाचना, हारना, जीतना, मरना, जीना, वग़ैरह, ज़्यादा से ज़्यादा, कृपया, भर, इसके अलावा, जैसे कि, बल्कि, चाहे, ताकि, हालाँकि, जबकि, इसीलिए, के बावजूद, के ज़रिए, के दौरान, के बदले, के कारण, आमतौर पर, किसलिए, सख़्त, नीचा, आसमानी, सुनहरा, स्लेटी, नज़र लग गई, गहरी साँस लीजिए, मुँह खोलिए, साँस लेने में तकलीफ़ है, जी मिचला रहा है, गैस बन रही है, ओआरएस, क्रोसिन, एक्स-रे, सिरप, पट्टी, सुई, बेहोश, कब्ज़, एसिडिटी, मरीज़, डेंगू, कैंसर",
+  "tail dropped: हार्ट अटैक, फ्रैक्चर, मोच, दाने, जलन, कमज़ोरी, छींक, लीवर, किडनी, त्वचा, गोद, दाढ़ी, मूँछें, आँसू, नस, जोड़, कूल्हा, फेफड़े, नाख़ून, अँगूठा, कलाई, कोहनी, बाँह, जीभ, होंठ, गाल, माथा, दूधवाला, गमला, अगरबत्ती, दीया, मोमबत्ती, लाइटर, इंडक्शन, केतली, मोटर, ओवन, सुखाना, पन्नी, हैंगर, कंघी, फ्लश, कालीन, मच्छरदानी, गद्दा, चारपाई, स्टोर रूम, चिमनी, स्लैब, लोटा, जग, ढक्कन, पतीला, सीटी, छीलना, सेंकना, मटका, शरबत, छाछ, इमली, मेथी, सरसों, लौंग, दालचीनी, स्ट्रॉबेरी",
+  "tail dropped: लीची, खरबूजा, अमरूद, भुट्टा, मशरूम, बीन्स, कद्दू, करेला, लौकी, मूली, जैम, किशमिश, रसगुल्ला, बर्फी, तड़का, कबाब, उपमा, मोमो, भुर्जी, कढ़ी, दलिया, सूजी, बीफ़, पोर्क, झींगा, जान-पहचान, व्यक्ति, पड़ोसन, जुड़वाँ, सौतेला, सगा, संयुक्त परिवार, ख़ानदान, समधन, समधी, जेठानी, देवरानी, नातिन, नाती, बारात, मंगेतर, मियाँ-बीवी, बच्ची, आधी रात, चार बजकर दस मिनट, सेकंड, पर्ची, लू, दर्जन, बासी, करोड़, बेचना, सुनाना, भरना, उम्मीद है कि, ओके, हद है, शाबाश, उफ़, छाता, उमस, मानसून, बादल, मशीन, फ़ोन काट दिया",
+  "tail dropped: उठा नहीं रहे, स्पीकर पर डालो, नंबर सेव कर लो, यूट्यूब, कंप्यूटर, लैपटॉप, लिंक, सिम, रिचार्ज, डेटा, इंटरनेट, नंबर आना, फ्री में, फिक्स रेट, नोट, स्कैन करो, ट्रेन छूट गई, पेट्रोल, हवाई जहाज़, स्कूटी, साइकिल, खुलना/खोलना, टूटना/तोड़ना, V-ने देना, V-ने लगना, V-ने वाला होना, खड़ा होना, कभी घर आइए, दवाई लेना, पता चला कि, क्या चल रहा है?, जाने दो, जल्दी कीजिए, नमस्ते करना, फ़ोन रखना, ज़ुकाम हो गया, बुखार है, बुरा लगना, मन करना, प्यार करना, शादी होना, साफ़ करना, पाना, बजना, रोकना, पहुँचाना, उतारना, गिरना, पकड़ना, खोना, मनाना, मानना, दिखना, कम से कम, लगभग, कई, ज़रा सा, नमस्कार, मालूम नहीं, वरना, वैसे भी, यानी, न... न..., या तो... या..., जब भी, जब से",
+  "tail dropped: जब तक, मगर, के हिसाब से, की जगह, के अलावा, उससे पहले, में से, जितना, उतना, जैसा, वैसा, अक्सर, अभी-अभी, कभी भी, कहीं नहीं, वहीं, यहीं, जो भी, हर कोई, सभी, एक-दूसरे, अपने आप, इनका, बेहतर, जवान, बिज़ी, शांत, ख़तरनाक, एक जैसा, ग़रीब, अमीर, मज़बूत, नरम, भरा, उदास, ख़ूबसूरत, ऊँचा, धीमा, गहरा, बैंगनी, ग्रे, भूरा, पहले से बेहतर, क्या तकलीफ़ है?, एम्बुलेंस बुलाओ, नींद नहीं आई, खाने से पहले, पूरे बदन में दर्द है, ख़ून निकल रहा है, गले में ख़राश है, खाँसी आ रही है, लूज़ मोशन हो रहे हैं, इमरजेंसी, अपॉइंटमेंट, ब्लड टेस्ट, क्रीम, इंजेक्शन, ऑपरेशन, इलाज, सेहत, इंफ़ेक्शन, वायरल, खुजली, सूजन, लूज़ मोशन",
+  "tail dropped: बीमारी, पेशाब, घुटना, टाँग, पीठ, छाती, उँगली, कंधा, गर्दन, शरीर, चाय-वाय, पानी-वानी, सब्ज़ीवाला, बगीचा, पौधा, माचिस, बल्ब, हीटर, फ़िल्टर, टंकी, इन्वर्टर, माइक्रोवेव, मिक्सी, रस्सी, इस्त्री, सर्फ़, टूथपेस्ट, शैम्पू, पोछा, तस्वीर, पर्दा, रज़ाई, पलंग, लिफ़्ट, फ़र्श, दीवार, मकान, आंगन, सिंक, सिलेंडर, चूल्हा, ट्रे, टिफ़िन, तवा, कड़ाही, गरम-गरम, जल गया, परोसना, फ्राई करना, भूनना, तलना, उबालना, जूठा, पका हुआ, फीका, बीयर, शराब, सौंफ, इलायची, काली मिर्च, नारियल, तरबूज़, पपीता, अनार, पुदीना, शिमला मिर्च",
+  "tail dropped: खीरा, पत्तागोभी, शहद, ड्राई फ्रूट्स, बादाम, काजू, मूंगफली, चिप्स, लड्डू, जलेबी, गुलाब जामुन, हलवा, खीर, बचा हुआ खाना, सॉस, ग्रेवी, सूप, टिक्का, तंदूरी, पोहा, इडली, डोसा, गोलगप्पा, चाट, ऑमलेट, साग, बेसन, मैदा, मुर्गी, कीमा, बंदा, पड़ोस, सहेली, मायका, ननद, जेठ, देवर, साली, भांजी, भांजा, भतीजी, भतीजा, चचेरा / ममेरा / मौसेरा / फुफेरा, चचेरा भाई, मौसा, फूफा, ताई, ताऊ, पोती, पोता, बॉयफ्रेंड, गर्लफ्रेंड, दुल्हन"
+ ],
+ "items": [
+  {
+   "id": "hs-0001",
+   "hi": "है",
+   "roman": "hai",
+   "en": "is",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0002",
+   "hi": "नहीं",
+   "roman": "nahin",
+   "en": "no; not",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0003",
+   "hi": "हाँ",
+   "roman": "haan",
+   "en": "yes",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0004",
+   "hi": "मैं",
+   "roman": "main",
+   "en": "I",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0005",
+   "hi": "आप",
+   "roman": "aap",
+   "en": "you (polite)",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0006",
+   "hi": "क्या",
+   "roman": "kya",
+   "en": "what",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0007",
+   "hi": "हैं",
+   "roman": "hain",
+   "en": "are; is (polite)",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0008",
+   "hi": "हूँ",
+   "roman": "hoon",
+   "en": "am",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0009",
+   "hi": "यह / ये",
+   "roman": "ye",
+   "en": "this; he/she (near)",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0010",
+   "hi": "वह / वो",
+   "roman": "vo",
+   "en": "that; he/she; they",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0011",
+   "hi": "का / की / के",
+   "roman": "ka / ki / ke",
+   "en": "of; 's",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0012",
+   "hi": "में",
+   "roman": "mein",
+   "en": "in",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0013",
+   "hi": "को",
+   "roman": "ko",
+   "en": "to; marks the person/thing acted on",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0014",
+   "hi": "से",
+   "roman": "se",
+   "en": "from; with; by",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0015",
+   "hi": "पर",
+   "roman": "par",
+   "en": "on; at; (colloquial) but",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0016",
+   "hi": "और",
+   "roman": "aur",
+   "en": "and; more",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0017",
+   "hi": "तो",
+   "roman": "to",
+   "en": "so; then; as-for particle",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0018",
+   "hi": "हम",
+   "roman": "hum",
+   "en": "we",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0019",
+   "hi": "तुम",
+   "roman": "tum",
+   "en": "you (familiar)",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0020",
+   "hi": "हो",
+   "roman": "ho",
+   "en": "are (with tum)",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0021",
+   "hi": "जी",
+   "roman": "ji",
+   "en": "politeness particle; yes?",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0022",
+   "hi": "नमस्ते",
+   "roman": "namaste",
+   "en": "hello; goodbye",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0023",
+   "hi": "ठीक है",
+   "roman": "theek hai",
+   "en": "OK; fine; alright",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0024",
+   "hi": "अच्छा",
+   "roman": "achchha",
+   "en": "good; oh I see",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0025",
+   "hi": "भी",
+   "roman": "bhi",
+   "en": "also; even",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0026",
+   "hi": "करना",
+   "roman": "karna",
+   "en": "to do",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0027",
+   "hi": "होना",
+   "roman": "hona",
+   "en": "to be; to happen",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0028",
+   "hi": "जाना",
+   "roman": "jana",
+   "en": "to go",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0029",
+   "hi": "आना",
+   "roman": "aana",
+   "en": "to come",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0030",
+   "hi": "-ता / -ती / -ते + हूँ/है/हैं",
+   "roman": "-ta / -ti / -te + hoon/hai/hain",
+   "en": "habitual present: मैं करता हूँ = I do",
+   "type": "paradigm",
+   "tier": 1
+  },
+  {
+   "id": "hs-0031",
+   "hi": "मेरा",
+   "roman": "mera",
+   "en": "my",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0032",
+   "hi": "आपका",
+   "roman": "aapka",
+   "en": "your (polite)",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0033",
+   "hi": "मुझे",
+   "roman": "mujhe",
+   "en": "to me; I (with like/need/feel)",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0034",
+   "hi": "आपको",
+   "roman": "aapko",
+   "en": "to you",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0035",
+   "hi": "कौन",
+   "roman": "kaun",
+   "en": "who",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0036",
+   "hi": "कहाँ",
+   "roman": "kahan",
+   "en": "where",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0037",
+   "hi": "कब",
+   "roman": "kab",
+   "en": "when",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0038",
+   "hi": "क्यों",
+   "roman": "kyon",
+   "en": "why",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0039",
+   "hi": "कैसे",
+   "roman": "kaise",
+   "en": "how",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0040",
+   "hi": "कितना",
+   "roman": "kitna",
+   "en": "how much / how many",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0041",
+   "hi": "यहाँ",
+   "roman": "yahan",
+   "en": "here",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0042",
+   "hi": "वहाँ",
+   "roman": "vahan",
+   "en": "there",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0043",
+   "hi": "अब",
+   "roman": "ab",
+   "en": "now",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0044",
+   "hi": "अभी",
+   "roman": "abhi",
+   "en": "right now; just now",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0045",
+   "hi": "आज",
+   "roman": "aaj",
+   "en": "today",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0046",
+   "hi": "कल",
+   "roman": "kal",
+   "en": "tomorrow; yesterday",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0047",
+   "hi": "फिर",
+   "roman": "phir",
+   "en": "then; again",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0048",
+   "hi": "बहुत",
+   "roman": "bahut",
+   "en": "very; a lot",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0049",
+   "hi": "थोड़ा",
+   "roman": "thoda",
+   "en": "a little",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0050",
+   "hi": "ज़्यादा",
+   "roman": "zyada",
+   "en": "more; too much",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0051",
+   "hi": "कम",
+   "roman": "kam",
+   "en": "less; few",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0052",
+   "hi": "बस",
+   "roman": "bas",
+   "en": "enough; just; that's all",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0053",
+   "hi": "सब",
+   "roman": "sab",
+   "en": "all; everyone",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0054",
+   "hi": "कुछ",
+   "roman": "kuchh",
+   "en": "some; something",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0055",
+   "hi": "कोई",
+   "roman": "koi",
+   "en": "someone; any",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0056",
+   "hi": "लोग",
+   "roman": "log",
+   "en": "people",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0057",
+   "hi": "बात",
+   "roman": "baat",
+   "en": "talk; matter; thing said",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0058",
+   "hi": "काम",
+   "roman": "kaam",
+   "en": "work; job; task",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0059",
+   "hi": "घर",
+   "roman": "ghar",
+   "en": "house; home",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0060",
+   "hi": "नाम",
+   "roman": "naam",
+   "en": "name",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0061",
+   "hi": "पानी",
+   "roman": "pani",
+   "en": "water",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0062",
+   "hi": "चाय",
+   "roman": "chai",
+   "en": "tea",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0063",
+   "hi": "खाना",
+   "roman": "khana",
+   "en": "food; to eat",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0064",
+   "hi": "पैसे",
+   "roman": "paise",
+   "en": "money",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0065",
+   "hi": "टाइम",
+   "roman": "time",
+   "en": "time (loan)",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0066",
+   "hi": "चीज़",
+   "roman": "cheez",
+   "en": "thing",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0067",
+   "hi": "जगह",
+   "roman": "jagah",
+   "en": "place",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0068",
+   "hi": "देना",
+   "roman": "dena",
+   "en": "to give",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0069",
+   "hi": "लेना",
+   "roman": "lena",
+   "en": "to take",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0070",
+   "hi": "देखना",
+   "roman": "dekhna",
+   "en": "to see; to watch",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0071",
+   "hi": "सुनना",
+   "roman": "sunna",
+   "en": "to hear; to listen",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0072",
+   "hi": "बोलना",
+   "roman": "bolna",
+   "en": "to speak",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0073",
+   "hi": "कहना",
+   "roman": "kahna",
+   "en": "to say",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0074",
+   "hi": "मिलना",
+   "roman": "milna",
+   "en": "to meet; to get",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0075",
+   "hi": "जानना",
+   "roman": "janna",
+   "en": "to know",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0076",
+   "hi": "पता",
+   "roman": "pata",
+   "en": "known; whereabouts",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0077",
+   "hi": "समझना",
+   "roman": "samajhna",
+   "en": "to understand",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0078",
+   "hi": "रहना",
+   "roman": "rahna",
+   "en": "to stay; to live",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0079",
+   "hi": "चाहिए",
+   "roman": "chahiye",
+   "en": "need; want; should",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0080",
+   "hi": "पीना",
+   "roman": "peena",
+   "en": "to drink",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0081",
+   "hi": "चलना",
+   "roman": "chalna",
+   "en": "to move; to go along",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0082",
+   "hi": "बनाना",
+   "roman": "banana",
+   "en": "to make",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0083",
+   "hi": "रखना",
+   "roman": "rakhna",
+   "en": "to put; to keep",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0084",
+   "hi": "करो / कीजिए",
+   "roman": "karo / kijiye",
+   "en": "imperative politeness levels: stem+o informal, stem+iye polite",
+   "type": "paradigm",
+   "tier": 1
+  },
+  {
+   "id": "hs-0085",
+   "hi": "चलो",
+   "roman": "chalo",
+   "en": "let's go; come on; OK then",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0086",
+   "hi": "आइए",
+   "roman": "aaiye",
+   "en": "please come (in)",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0087",
+   "hi": "बैठिए",
+   "roman": "baithiye",
+   "en": "please sit down",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0088",
+   "hi": "लीजिए",
+   "roman": "lijiye",
+   "en": "please take; here you are",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0089",
+   "hi": "बोलिए",
+   "roman": "boliye",
+   "en": "yes, go ahead / tell me",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0090",
+   "hi": "माफ़ कीजिए",
+   "roman": "maaf kijiye",
+   "en": "sorry; excuse me",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0091",
+   "hi": "सॉरी",
+   "roman": "sorry",
+   "en": "sorry (loan)",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0092",
+   "hi": "प्लीज़",
+   "roman": "please",
+   "en": "please (loan)",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0093",
+   "hi": "कोई बात नहीं",
+   "roman": "koi baat nahin",
+   "en": "no problem; don't mention it",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0094",
+   "hi": "जी हाँ",
+   "roman": "ji haan",
+   "en": "yes (polite)",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0095",
+   "hi": "जी नहीं",
+   "roman": "ji nahin",
+   "en": "no (polite)",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0096",
+   "hi": "आप कैसे हैं?",
+   "roman": "aap kaise hain?",
+   "en": "how are you?",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0097",
+   "hi": "मैं ठीक हूँ",
+   "roman": "main theek hoon",
+   "en": "I'm fine",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0098",
+   "hi": "और आप?",
+   "roman": "aur aap?",
+   "en": "and you?",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0099",
+   "hi": "क्या हुआ?",
+   "roman": "kya hua?",
+   "en": "what happened?",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0100",
+   "hi": "ये क्या है?",
+   "roman": "ye kya hai?",
+   "en": "what is this?",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0101",
+   "hi": "मेरा नाम ... है",
+   "roman": "mera naam ... hai",
+   "en": "my name is ...",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0102",
+   "hi": "आपका नाम क्या है?",
+   "roman": "aapka naam kya hai?",
+   "en": "what's your name?",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0103",
+   "hi": "भूख लगी है",
+   "roman": "bhookh lagi hai",
+   "en": "I'm hungry",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0104",
+   "hi": "मुझे जाना है",
+   "roman": "mujhe jana hai",
+   "en": "I have to / want to go",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0105",
+   "hi": "लेकिन",
+   "roman": "lekin",
+   "en": "but",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0106",
+   "hi": "या",
+   "roman": "ya",
+   "en": "or",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0107",
+   "hi": "क्योंकि",
+   "roman": "kyonki",
+   "en": "because",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0108",
+   "hi": "अरे",
+   "roman": "are",
+   "en": "hey; oh!",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0109",
+   "hi": "एक",
+   "roman": "ek",
+   "en": "one; a",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0110",
+   "hi": "दो",
+   "roman": "do",
+   "en": "two",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0111",
+   "hi": "तीन",
+   "roman": "teen",
+   "en": "three",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0112",
+   "hi": "चार",
+   "roman": "chaar",
+   "en": "four",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0113",
+   "hi": "पाँच",
+   "roman": "paanch",
+   "en": "five",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0114",
+   "hi": "छह",
+   "roman": "chhah",
+   "en": "six",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0115",
+   "hi": "सात",
+   "roman": "saat",
+   "en": "seven",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0116",
+   "hi": "आठ",
+   "roman": "aath",
+   "en": "eight",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0117",
+   "hi": "नौ",
+   "roman": "nau",
+   "en": "nine",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0118",
+   "hi": "दस",
+   "roman": "das",
+   "en": "ten",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0119",
+   "hi": "माँ",
+   "roman": "maa",
+   "en": "mother",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0120",
+   "hi": "पापा",
+   "roman": "papa",
+   "en": "dad",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0121",
+   "hi": "भाई",
+   "roman": "bhai",
+   "en": "brother",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0122",
+   "hi": "बहन",
+   "roman": "behen",
+   "en": "sister",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0123",
+   "hi": "बेटा",
+   "roman": "beta",
+   "en": "son; dear",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0124",
+   "hi": "बेटी",
+   "roman": "beti",
+   "en": "daughter",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0125",
+   "hi": "दीदी",
+   "roman": "didi",
+   "en": "older sister (address)",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0126",
+   "hi": "भैया",
+   "roman": "bhaiya",
+   "en": "older brother (address)",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0127",
+   "hi": "खाना खाया?",
+   "roman": "khana khaya?",
+   "en": "have you eaten?",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0128",
+   "hi": "मुझे थोड़ी हिंदी आती है",
+   "roman": "mujhe thodi hindi aati hai",
+   "en": "I speak a little Hindi",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0129",
+   "hi": "धीरे बोलिए",
+   "roman": "dheere boliye",
+   "en": "please speak slowly",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0130",
+   "hi": "फिर से कहिए",
+   "roman": "phir se kahiye",
+   "en": "please say that again",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0131",
+   "hi": "समझ गया",
+   "roman": "samajh gaya",
+   "en": "got it; understood",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0132",
+   "hi": "समझ में नहीं आया",
+   "roman": "samajh mein nahin aaya",
+   "en": "I didn't understand",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0133",
+   "hi": "इसे हिंदी में क्या कहते हैं?",
+   "roman": "ise hindi mein kya kehte hain?",
+   "en": "how do you say this in Hindi?",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0134",
+   "hi": "हिंदी",
+   "roman": "hindi",
+   "en": "Hindi",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0135",
+   "hi": "के लिए",
+   "roman": "ke liye",
+   "en": "for",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0136",
+   "hi": "के साथ",
+   "roman": "ke saath",
+   "en": "with (someone)",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0137",
+   "hi": "के पास",
+   "roman": "ke paas",
+   "en": "near; have",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0138",
+   "hi": "सकना",
+   "roman": "sakna",
+   "en": "can; be able",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0139",
+   "hi": "जल्दी",
+   "roman": "jaldi",
+   "en": "quickly; early; soon",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0140",
+   "hi": "बजे",
+   "roman": "baje",
+   "en": "o'clock",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0141",
+   "hi": "दोस्त",
+   "roman": "dost",
+   "en": "friend",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0142",
+   "hi": "आंटी",
+   "roman": "aunty",
+   "en": "aunty (any older woman)",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0143",
+   "hi": "अंकल",
+   "roman": "uncle",
+   "en": "uncle (any older man)",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0144",
+   "hi": "परिवार",
+   "roman": "parivar",
+   "en": "family",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0145",
+   "hi": "लड़का",
+   "roman": "ladka",
+   "en": "boy",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0146",
+   "hi": "लड़की",
+   "roman": "ladki",
+   "en": "girl",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0147",
+   "hi": "आदमी",
+   "roman": "aadmi",
+   "en": "man",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0148",
+   "hi": "औरत",
+   "roman": "aurat",
+   "en": "woman",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0149",
+   "hi": "लाना",
+   "roman": "lana",
+   "en": "to bring",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0150",
+   "hi": "खोलना",
+   "roman": "kholna",
+   "en": "to open",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0151",
+   "hi": "बंद करना",
+   "roman": "band karna",
+   "en": "to close; to switch off",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0152",
+   "hi": "फ़ोन",
+   "roman": "phone",
+   "en": "phone",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0153",
+   "hi": "हैलो",
+   "roman": "hello",
+   "en": "hello (answering the phone)",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0154",
+   "hi": "फ़ोन करना",
+   "roman": "phone karna",
+   "en": "to ring; to call",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0155",
+   "hi": "बात करना",
+   "roman": "baat karna",
+   "en": "to talk",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0156",
+   "hi": "रोटी",
+   "roman": "roti",
+   "en": "roti; bread",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0157",
+   "hi": "चावल",
+   "roman": "chawal",
+   "en": "rice",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0158",
+   "hi": "दाल",
+   "roman": "daal",
+   "en": "dal; lentils",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0159",
+   "hi": "सब्ज़ी",
+   "roman": "sabzi",
+   "en": "vegetables; veg curry",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0160",
+   "hi": "दूध",
+   "roman": "doodh",
+   "en": "milk",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0161",
+   "hi": "नमक",
+   "roman": "namak",
+   "en": "salt",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0162",
+   "hi": "तीखा",
+   "roman": "teekha",
+   "en": "spicy hot",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0163",
+   "hi": "नाश्ता",
+   "roman": "nashta",
+   "en": "breakfast; snacks",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0164",
+   "hi": "थोड़ा और लो",
+   "roman": "thoda aur lo",
+   "en": "have a bit more",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0165",
+   "hi": "खाना बहुत अच्छा बना है",
+   "roman": "khana bahut achchha bana hai",
+   "en": "the food is delicious",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0166",
+   "hi": "प्यास लगी है",
+   "roman": "pyaas lagi hai",
+   "en": "(I'm) thirsty",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0167",
+   "hi": "गाड़ी",
+   "roman": "gaadi",
+   "en": "car; vehicle",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0168",
+   "hi": "कमरा",
+   "roman": "kamra",
+   "en": "room",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0169",
+   "hi": "बाथरूम",
+   "roman": "bathroom",
+   "en": "bathroom; toilet",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0170",
+   "hi": "रुपये",
+   "roman": "rupaye",
+   "en": "rupees",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0171",
+   "hi": "कितने का है?",
+   "roman": "kitne ka hai?",
+   "en": "how much is it?",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0172",
+   "hi": "रुकिए",
+   "roman": "rukiye",
+   "en": "please stop / wait",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0173",
+   "hi": "बड़ा",
+   "roman": "bada",
+   "en": "big",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0174",
+   "hi": "छोटा",
+   "roman": "chhota",
+   "en": "small",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0175",
+   "hi": "शायद",
+   "roman": "shayad",
+   "en": "maybe",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0176",
+   "hi": "अच्छा लगना",
+   "roman": "achchha lagna",
+   "en": "to like, find nice (मुझे अच्छा लगा)",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0177",
+   "hi": "ज़रा",
+   "roman": "zara",
+   "en": "just; a moment (softener)",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0178",
+   "hi": "इंडिया / भारत",
+   "roman": "India / Bharat",
+   "en": "India",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0179",
+   "hi": "अंग्रेज़ी",
+   "roman": "angrezi",
+   "en": "English",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0180",
+   "hi": "सामान",
+   "roman": "saamaan",
+   "en": "stuff; luggage",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0181",
+   "hi": "हूँ / हो / है / हैं",
+   "roman": "hoon / ho / hai / hain",
+   "en": "present of hona: am, are, is",
+   "type": "paradigm",
+   "tier": 1
+  },
+  {
+   "id": "hs-0182",
+   "hi": "ठीक",
+   "roman": "theek",
+   "en": "fine, okay",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0183",
+   "hi": "थैंक यू",
+   "roman": "thank you",
+   "en": "thank you (loan – the everyday default)",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0184",
+   "hi": "खाइए",
+   "roman": "khaiye",
+   "en": "please eat",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0185",
+   "hi": "मुझे ... चाहिए",
+   "roman": "mujhe ... chahiye",
+   "en": "I want / I need ...",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0186",
+   "hi": "पसंद",
+   "roman": "pasand",
+   "en": "liking",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0187",
+   "hi": "पता है",
+   "roman": "pata hai",
+   "en": "I know",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0188",
+   "hi": "पता नहीं",
+   "roman": "pata nahin",
+   "en": "no idea, who knows",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0189",
+   "hi": "मैं हिंदी सीख रहा हूँ",
+   "roman": "main hindi seekh raha hoon",
+   "en": "I'm learning Hindi",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0190",
+   "hi": "क्या आप अंग्रेज़ी बोलते हैं?",
+   "roman": "kya aap angrezi bolte hain?",
+   "en": "do you speak English?",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0191",
+   "hi": "आप कहाँ से हैं?",
+   "roman": "aap kahaan se hain?",
+   "en": "where are you from?",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0192",
+   "hi": "मैं इंग्लैंड से हूँ",
+   "roman": "main England se hoon",
+   "en": "I'm from England",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0193",
+   "hi": "बाथरूम कहाँ है?",
+   "roman": "bathroom kahaan hai?",
+   "en": "where's the bathroom?",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0194",
+   "hi": "... कहाँ है?",
+   "roman": "... kahan hai?",
+   "en": "where is ...?",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0195",
+   "hi": "मैं ... बोल रहा हूँ",
+   "roman": "main ... bol raha hoon",
+   "en": "it's ... speaking",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0196",
+   "hi": "एक मिनट",
+   "roman": "ek minat",
+   "en": "one minute – hold on",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0197",
+   "hi": "मदद कीजिए",
+   "roman": "madad kijiye",
+   "en": "please help",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0198",
+   "hi": "बाय",
+   "roman": "bye",
+   "en": "bye",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0199",
+   "hi": "ध्यान रखिए",
+   "roman": "dhyaan rakhiye",
+   "en": "take care",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0200",
+   "hi": "चाय पियोगे?",
+   "roman": "chai piyoge?",
+   "en": "will you have tea?",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0201",
+   "hi": "बच्चा",
+   "roman": "bachcha",
+   "en": "child",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0202",
+   "hi": "आलू",
+   "roman": "aloo",
+   "en": "potato",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0203",
+   "hi": "आप / तुम / तू",
+   "roman": "aap / tum / tu",
+   "en": "three-level politeness ladder for 'you'; verbs agree with the level chosen",
+   "type": "paradigm",
+   "tier": 1
+  },
+  {
+   "id": "hs-0204",
+   "hi": "शुक्रिया",
+   "roman": "shukriya",
+   "en": "thanks",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0205",
+   "hi": "यह क्या है?",
+   "roman": "yeh kya hai?",
+   "en": "what is this?",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0206",
+   "hi": "फिर से",
+   "roman": "phir se",
+   "en": "again",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0207",
+   "hi": "है ना?",
+   "roman": "hai na",
+   "en": "right?, isn't it?",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0208",
+   "hi": "कम तीखा",
+   "roman": "kam teekha",
+   "en": "not too spicy",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0209",
+   "hi": "मदद",
+   "roman": "madad",
+   "en": "help",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0210",
+   "hi": "कितने बजे हैं?",
+   "roman": "kitne baje hain?",
+   "en": "what time is it?",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0211",
+   "hi": "मम्मी",
+   "roman": "mummy",
+   "en": "mum",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0212",
+   "hi": "शर्मा जी, माता जी",
+   "roman": "Sharma ji, mata ji",
+   "en": "ji attaches after any name or kin term to add respect",
+   "type": "paradigm",
+   "tier": 1
+  },
+  {
+   "id": "hs-0213",
+   "hi": "भूख",
+   "roman": "bhookh",
+   "en": "hunger",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0214",
+   "hi": "मेरे पास",
+   "roman": "mere paas",
+   "en": "I have (on/with me)",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0215",
+   "hi": "नहीं है",
+   "roman": "nahin hai",
+   "en": "isn't; there isn't any",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0216",
+   "hi": "ये वाला",
+   "roman": "ye waala",
+   "en": "this one",
+   "type": "chunk",
+   "tier": 1
+  },
+  {
+   "id": "hs-0217",
+   "hi": "सुनो",
+   "roman": "suno",
+   "en": "listen; hey (attention-getter)",
+   "type": "word",
+   "tier": 1
+  },
+  {
+   "id": "hs-0218",
+   "hi": "कि",
+   "roman": "ki",
+   "en": "that (clause linker)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0219",
+   "hi": "ना",
+   "roman": "na",
+   "en": "tag: right?; softener on requests",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0220",
+   "hi": "रहा / रही / रहे + हूँ/है/हैं",
+   "roman": "raha / rahi / rahe + hoon/hai/hain",
+   "en": "present continuous: कर रहा हूँ = I'm doing",
+   "type": "paradigm",
+   "tier": 2
+  },
+  {
+   "id": "hs-0221",
+   "hi": "था / थी / थे / थीं",
+   "roman": "tha / thi / the / theen",
+   "en": "past of hona: was, were",
+   "type": "paradigm",
+   "tier": 2
+  },
+  {
+   "id": "hs-0222",
+   "hi": "उसका",
+   "roman": "uska",
+   "en": "his / her / its",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0223",
+   "hi": "हमारा",
+   "roman": "hamara",
+   "en": "our",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0224",
+   "hi": "कैसा",
+   "roman": "kaisa",
+   "en": "how; what kind of (agrees)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0225",
+   "hi": "कौन सा",
+   "roman": "kaun sa",
+   "en": "which",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0226",
+   "hi": "दिन",
+   "roman": "din",
+   "en": "day",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0227",
+   "hi": "बताना",
+   "roman": "batana",
+   "en": "to tell",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0228",
+   "hi": "पूछना",
+   "roman": "puchhna",
+   "en": "to ask",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0229",
+   "hi": "लगना",
+   "roman": "lagna",
+   "en": "to seem; feel; take (time)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0230",
+   "hi": "सोना",
+   "roman": "sona",
+   "en": "to sleep",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0231",
+   "hi": "बैठना",
+   "roman": "baithna",
+   "en": "to sit",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0232",
+   "hi": "उठना",
+   "roman": "uthna",
+   "en": "to get up",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0233",
+   "hi": "मत",
+   "roman": "mat",
+   "en": "don't (with commands)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0234",
+   "hi": "दीजिए",
+   "roman": "dijiye",
+   "en": "please give",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0235",
+   "hi": "सुनिए",
+   "roman": "suniye",
+   "en": "excuse me; listen",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0236",
+   "hi": "धन्यवाद",
+   "roman": "dhanyavad",
+   "en": "thank you",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0237",
+   "hi": "सब ठीक है?",
+   "roman": "sab theek hai?",
+   "en": "everything alright?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0238",
+   "hi": "क्या हाल है?",
+   "roman": "kya haal hai?",
+   "en": "how's it going?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0239",
+   "hi": "मुझे ... पसंद है",
+   "roman": "mujhe ... pasand hai",
+   "en": "I like ...",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0240",
+   "hi": "अगर",
+   "roman": "agar",
+   "en": "if",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0241",
+   "hi": "मतलब",
+   "roman": "matlab",
+   "en": "meaning; I mean (filler)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0242",
+   "hi": "ही",
+   "roman": "hi",
+   "en": "only; exactly (emphasis)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0243",
+   "hi": "अपना",
+   "roman": "apna",
+   "en": "one's own",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0244",
+   "hi": "अच्छा / अच्छी / अच्छे",
+   "roman": "achchha / achchhi / achchhe",
+   "en": "adjective gender/number agreement",
+   "type": "paradigm",
+   "tier": 2
+  },
+  {
+   "id": "hs-0245",
+   "hi": "पापा कहते हैं",
+   "roman": "papa kehte hain",
+   "en": "respect plural: elders take plural verbs and pronouns even as individuals",
+   "type": "paradigm",
+   "tier": 2
+  },
+  {
+   "id": "hs-0246",
+   "hi": "फिर मिलेंगे",
+   "roman": "phir milenge",
+   "en": "see you again",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0247",
+   "hi": "अपना ख़याल रखिए",
+   "roman": "apna khayaal rakhiye",
+   "en": "take care of yourself",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0248",
+   "hi": "तक",
+   "roman": "tak",
+   "en": "until; up to",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0249",
+   "hi": "-आ / -ई / -ए (+ ने)",
+   "roman": "-aa / -ee / -e (+ ne)",
+   "en": "simple past; transitives take ने and agree with the object",
+   "type": "paradigm",
+   "tier": 2
+  },
+  {
+   "id": "hs-0250",
+   "hi": "-ऊँगा / -एगा / -एँगे",
+   "roman": "-oonga / -ega / -enge",
+   "en": "future: करूँगा, करेगा, करेंगे",
+   "type": "paradigm",
+   "tier": 2
+  },
+  {
+   "id": "hs-0251",
+   "hi": "लड़का → लड़के को",
+   "roman": "ladka → ladke ko",
+   "en": "oblique: nouns shift before postpositions",
+   "type": "paradigm",
+   "tier": 2
+  },
+  {
+   "id": "hs-0252",
+   "hi": "चलें? / मैं करूँ?",
+   "roman": "chalen? / main karoon?",
+   "en": "subjunctive: offers and permission",
+   "type": "paradigm",
+   "tier": 2
+  },
+  {
+   "id": "hs-0253",
+   "hi": "वाला",
+   "roman": "wala",
+   "en": "the one with / -er",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0254",
+   "hi": "से ज़्यादा",
+   "roman": "se zyada",
+   "en": "more than (comparison)",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0255",
+   "hi": "सबसे",
+   "roman": "sabse",
+   "en": "the most (superlative)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0256",
+   "hi": "हो गया",
+   "roman": "ho gaya",
+   "en": "done; it happened",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0257",
+   "hi": "मुझे लगता है कि...",
+   "roman": "mujhe lagta hai ki...",
+   "en": "I think that...",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0258",
+   "hi": "मुझे जाना चाहिए",
+   "roman": "mujhe jaana chahiye",
+   "en": "I should go",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0259",
+   "hi": "पानी मिलेगा?",
+   "roman": "paani milega?",
+   "en": "could I get some water?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0260",
+   "hi": "पहले",
+   "roman": "pahle",
+   "en": "first; before; earlier",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0261",
+   "hi": "बाद में",
+   "roman": "baad mein",
+   "en": "later",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0262",
+   "hi": "के बाद",
+   "roman": "ke baad",
+   "en": "after",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0263",
+   "hi": "से पहले",
+   "roman": "se pahle",
+   "en": "before",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0264",
+   "hi": "हमेशा",
+   "roman": "hamesha",
+   "en": "always",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0265",
+   "hi": "कभी-कभी",
+   "roman": "kabhi-kabhi",
+   "en": "sometimes",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0266",
+   "hi": "कभी नहीं",
+   "roman": "kabhi nahin",
+   "en": "never",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0267",
+   "hi": "रोज़",
+   "roman": "roz",
+   "en": "every day",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0268",
+   "hi": "हर",
+   "roman": "har",
+   "en": "every",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0269",
+   "hi": "दूसरा",
+   "roman": "doosra",
+   "en": "second; other",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0270",
+   "hi": "कुछ नहीं",
+   "roman": "kuchh nahin",
+   "en": "nothing",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0271",
+   "hi": "सब कुछ",
+   "roman": "sab kuchh",
+   "en": "everything",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0272",
+   "hi": "कितने बजे?",
+   "roman": "kitne baje?",
+   "en": "at what time? / what time is it?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0273",
+   "hi": "घंटा",
+   "roman": "ghanta",
+   "en": "hour",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0274",
+   "hi": "मिनट",
+   "roman": "minat",
+   "en": "minute (loan)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0275",
+   "hi": "साल",
+   "roman": "saal",
+   "en": "year",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0276",
+   "hi": "सुबह",
+   "roman": "subah",
+   "en": "morning",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0277",
+   "hi": "शाम",
+   "roman": "shaam",
+   "en": "evening",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0278",
+   "hi": "रात",
+   "roman": "raat",
+   "en": "night",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0279",
+   "hi": "परसों",
+   "roman": "parson",
+   "en": "day after tomorrow / before yesterday",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0280",
+   "hi": "सौ",
+   "roman": "sau",
+   "en": "hundred",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0281",
+   "hi": "हज़ार",
+   "roman": "hazaar",
+   "en": "thousand",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0282",
+   "hi": "आधा",
+   "roman": "aadha",
+   "en": "half",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0283",
+   "hi": "पहला",
+   "roman": "pahla",
+   "en": "first",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0284",
+   "hi": "पति",
+   "roman": "pati",
+   "en": "husband",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0285",
+   "hi": "पत्नी",
+   "roman": "patni",
+   "en": "wife",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0286",
+   "hi": "सास",
+   "roman": "saas",
+   "en": "mother-in-law",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0287",
+   "hi": "ससुर",
+   "roman": "sasur",
+   "en": "father-in-law",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0288",
+   "hi": "भाभी",
+   "roman": "bhabhi",
+   "en": "brother's wife (warm address)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0289",
+   "hi": "रिश्तेदार",
+   "roman": "rishtedar",
+   "en": "relatives",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0290",
+   "hi": "बच्चे",
+   "roman": "bachche",
+   "en": "children",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0291",
+   "hi": "शादी",
+   "roman": "shaadi",
+   "en": "wedding; marriage",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0292",
+   "hi": "सोचना",
+   "roman": "sochna",
+   "en": "to think",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0293",
+   "hi": "सीखना",
+   "roman": "seekhna",
+   "en": "to learn",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0294",
+   "hi": "ख़रीदना",
+   "roman": "kharidna",
+   "en": "to buy",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0295",
+   "hi": "पढ़ना",
+   "roman": "padhna",
+   "en": "to read; to study",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0296",
+   "hi": "लिखना",
+   "roman": "likhna",
+   "en": "to write",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0297",
+   "hi": "भेजना",
+   "roman": "bhejna",
+   "en": "to send",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0298",
+   "hi": "निकलना",
+   "roman": "nikalna",
+   "en": "to set out; to leave",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0299",
+   "hi": "पहुँचना",
+   "roman": "pahunchna",
+   "en": "to arrive",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0300",
+   "hi": "मदद करना",
+   "roman": "madad karna",
+   "en": "to help",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0301",
+   "hi": "कोशिश करना",
+   "roman": "koshish karna",
+   "en": "to try",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0302",
+   "hi": "शुरू होना",
+   "roman": "shuru hona",
+   "en": "to start, begin",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0303",
+   "hi": "ख़त्म",
+   "roman": "khatam",
+   "en": "finished; over",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0304",
+   "hi": "भूल गया",
+   "roman": "bhool gaya",
+   "en": "I forgot",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0305",
+   "hi": "आवाज़ नहीं आ रही",
+   "roman": "awaaz nahin aa rahi",
+   "en": "I can't hear you (bad line)",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0306",
+   "hi": "बाद में फ़ोन करता हूँ",
+   "roman": "baad mein phone karta hoon",
+   "en": "I'll call back later",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0307",
+   "hi": "आपकी याद आती है",
+   "roman": "aapki yaad aati hai",
+   "en": "I miss you",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0308",
+   "hi": "चीनी",
+   "roman": "cheeni",
+   "en": "sugar",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0309",
+   "hi": "मीठा",
+   "roman": "meetha",
+   "en": "sweet",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0310",
+   "hi": "पेट",
+   "roman": "pet",
+   "en": "stomach",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0311",
+   "hi": "बस, पेट भर गया",
+   "roman": "bas, pet bhar gaya",
+   "en": "I'm full, honestly",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0312",
+   "hi": "थोड़ा और",
+   "roman": "thoda aur",
+   "en": "a little more",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0313",
+   "hi": "ट्रेन",
+   "roman": "train",
+   "en": "train",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0314",
+   "hi": "बस (वाहन)",
+   "roman": "bus",
+   "en": "bus",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0315",
+   "hi": "ऑटो",
+   "roman": "auto",
+   "en": "auto-rickshaw",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0316",
+   "hi": "टिकट",
+   "roman": "ticket",
+   "en": "ticket",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0317",
+   "hi": "स्टेशन",
+   "roman": "station",
+   "en": "station",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0318",
+   "hi": "दुकान",
+   "roman": "dukaan",
+   "en": "shop",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0319",
+   "hi": "बाज़ार",
+   "roman": "bazaar",
+   "en": "market",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0320",
+   "hi": "रास्ता",
+   "roman": "rasta",
+   "en": "way; road",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0321",
+   "hi": "सीधे",
+   "roman": "seedhe",
+   "en": "straight ahead",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0322",
+   "hi": "महँगा",
+   "roman": "mahanga",
+   "en": "expensive",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0323",
+   "hi": "सस्ता",
+   "roman": "sasta",
+   "en": "cheap",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0324",
+   "hi": "नया",
+   "roman": "naya",
+   "en": "new",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0325",
+   "hi": "पुराना",
+   "roman": "purana",
+   "en": "old (things)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0326",
+   "hi": "गरम",
+   "roman": "garam",
+   "en": "hot; warm",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0327",
+   "hi": "ठंडा",
+   "roman": "thanda",
+   "en": "cold",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0328",
+   "hi": "ख़राब",
+   "roman": "kharab",
+   "en": "bad; broken",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0329",
+   "hi": "सही",
+   "roman": "sahi",
+   "en": "right; correct; nice",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0330",
+   "hi": "ख़ुश",
+   "roman": "khush",
+   "en": "happy",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0331",
+   "hi": "साफ़",
+   "roman": "saaf",
+   "en": "clean; clear",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0332",
+   "hi": "तैयार",
+   "roman": "taiyaar",
+   "en": "ready",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0333",
+   "hi": "ज़रूरी",
+   "roman": "zaroori",
+   "en": "necessary; important",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0334",
+   "hi": "ज़रूर",
+   "roman": "zaroor",
+   "en": "definitely; of course",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0335",
+   "hi": "बिल्कुल",
+   "roman": "bilkul",
+   "en": "absolutely; exactly",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0336",
+   "hi": "सच में?",
+   "roman": "sach mein?",
+   "en": "really?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0337",
+   "hi": "काफ़ी",
+   "roman": "kaafi",
+   "en": "quite; plenty",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0338",
+   "hi": "इतना",
+   "roman": "itna",
+   "en": "this much; so",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0339",
+   "hi": "सिर्फ़",
+   "roman": "sirf",
+   "en": "only",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0340",
+   "hi": "वाह",
+   "roman": "wah",
+   "en": "wow; lovely",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0341",
+   "hi": "क्यों नहीं",
+   "roman": "kyon nahin",
+   "en": "why not; of course",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0342",
+   "hi": "चिंता मत कीजिए",
+   "roman": "chinta mat kijiye",
+   "en": "don't worry",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0343",
+   "hi": "बहुत मज़ा आया",
+   "roman": "bahut mazaa aaya",
+   "en": "I had a great time",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0344",
+   "hi": "कैसा लगा?",
+   "roman": "kaisa laga?",
+   "en": "how did you like it?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0345",
+   "hi": "बधाई हो",
+   "roman": "badhai ho",
+   "en": "congratulations",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0346",
+   "hi": "यार",
+   "roman": "yaar",
+   "en": "mate; man",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0347",
+   "hi": "तबीयत",
+   "roman": "tabiyat",
+   "en": "health, how one is feeling",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0348",
+   "hi": "तबीयत कैसी है?",
+   "roman": "tabiyat kaisi hai?",
+   "en": "how are you feeling?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0349",
+   "hi": "डॉक्टर",
+   "roman": "doctor",
+   "en": "doctor",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0350",
+   "hi": "दवाई",
+   "roman": "dawai",
+   "en": "medicine",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0351",
+   "hi": "दर्द",
+   "roman": "dard",
+   "en": "pain",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0352",
+   "hi": "आराम",
+   "roman": "aaram",
+   "en": "rest",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0353",
+   "hi": "मौसम",
+   "roman": "mausam",
+   "en": "weather",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0354",
+   "hi": "गर्मी",
+   "roman": "garmi",
+   "en": "heat; summer",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0355",
+   "hi": "सर्दी",
+   "roman": "sardi",
+   "en": "cold; winter",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0356",
+   "hi": "बारिश",
+   "roman": "baarish",
+   "en": "rain",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0357",
+   "hi": "ऑफ़िस",
+   "roman": "office",
+   "en": "office; work",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0358",
+   "hi": "शहर",
+   "roman": "shahar",
+   "en": "city; town",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0359",
+   "hi": "गाँव",
+   "roman": "gaon",
+   "en": "village",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0360",
+   "hi": "देश",
+   "roman": "desh",
+   "en": "country",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0361",
+   "hi": "छुट्टी",
+   "roman": "chhutti",
+   "en": "day off; holiday",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0362",
+   "hi": "फ़ोटो",
+   "roman": "photo",
+   "en": "photo",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0363",
+   "hi": "कपड़े",
+   "roman": "kapde",
+   "en": "clothes",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0364",
+   "hi": "तुम्हारा",
+   "roman": "tumhara",
+   "en": "your (familiar)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0365",
+   "hi": "उनका",
+   "roman": "unka",
+   "en": "their; his/her (respectful)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0366",
+   "hi": "तुम्हें",
+   "roman": "tumhen",
+   "en": "to you (familiar)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0367",
+   "hi": "उसको",
+   "roman": "usko",
+   "en": "to him/her/it (written उसे)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0368",
+   "hi": "जब",
+   "roman": "jab",
+   "en": "when (relative)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0369",
+   "hi": "इसलिए",
+   "roman": "isliye",
+   "en": "that's why; so",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0370",
+   "hi": "अंदर",
+   "roman": "andar",
+   "en": "inside",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0371",
+   "hi": "बाहर",
+   "roman": "bahar",
+   "en": "outside",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0372",
+   "hi": "ऊपर",
+   "roman": "upar",
+   "en": "up; upstairs",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0373",
+   "hi": "नीचे",
+   "roman": "neeche",
+   "en": "down; downstairs",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0374",
+   "hi": "सामने",
+   "roman": "saamne",
+   "en": "opposite; in front",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0375",
+   "hi": "पीछे",
+   "roman": "peechhe",
+   "en": "behind",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0376",
+   "hi": "दूर",
+   "roman": "door",
+   "en": "far",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0377",
+   "hi": "दादा-दादी / नाना-नानी",
+   "roman": "dada-dadi / nana-nani",
+   "en": "grandparents split by side: father's parents vs mother's parents",
+   "type": "paradigm",
+   "tier": 2
+  },
+  {
+   "id": "hs-0378",
+   "hi": "मेहमान",
+   "roman": "mehmaan",
+   "en": "guest",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0379",
+   "hi": "मिठाई",
+   "roman": "mithai",
+   "en": "Indian sweets",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0380",
+   "hi": "फल",
+   "roman": "phal",
+   "en": "fruit",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0381",
+   "hi": "आम",
+   "roman": "aam",
+   "en": "mango",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0382",
+   "hi": "मसाला",
+   "roman": "masala",
+   "en": "spices; masala",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0383",
+   "hi": "गिलास",
+   "roman": "gilas",
+   "en": "glass; tumbler",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0384",
+   "hi": "किचन",
+   "roman": "kitchen",
+   "en": "kitchen",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0385",
+   "hi": "वेज",
+   "roman": "veg",
+   "en": "veg, vegetarian",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0386",
+   "hi": "सिर",
+   "roman": "sir",
+   "en": "head",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0387",
+   "hi": "हाथ",
+   "roman": "haath",
+   "en": "hand; arm",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0388",
+   "hi": "पैर",
+   "roman": "pair",
+   "en": "foot; leg",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0389",
+   "hi": "बुख़ार",
+   "roman": "bukhaar",
+   "en": "fever",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0390",
+   "hi": "थक गया हूँ",
+   "roman": "thak gaya hoon",
+   "en": "I'm tired",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0391",
+   "hi": "तबीयत ठीक नहीं है",
+   "roman": "tabiyat theek nahin hai",
+   "en": "I'm not feeling well",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0392",
+   "hi": "आपसे मिलकर खुशी हुई",
+   "roman": "aapse milkar khushi hui",
+   "en": "pleased to meet you",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0393",
+   "hi": "दिखाना",
+   "roman": "dikhana",
+   "en": "to show",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0394",
+   "hi": "धोना",
+   "roman": "dhona",
+   "en": "to wash",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0395",
+   "hi": "चलाना",
+   "roman": "chalana",
+   "en": "to drive; to operate",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0396",
+   "hi": "छोड़ो",
+   "roman": "chhodo",
+   "en": "forget it; drop it",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0397",
+   "hi": "टीवी",
+   "roman": "TV",
+   "en": "TV",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0398",
+   "hi": "व्हाट्सऐप",
+   "roman": "WhatsApp",
+   "en": "WhatsApp",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0399",
+   "hi": "मैसेज",
+   "roman": "message",
+   "en": "message; text",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0400",
+   "hi": "पूरा",
+   "roman": "poora",
+   "en": "whole; complete",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0401",
+   "hi": "गंदा",
+   "roman": "ganda",
+   "en": "dirty",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0402",
+   "hi": "कोई नहीं",
+   "roman": "koi nahin",
+   "en": "no one; (colloq.) no worries",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0403",
+   "hi": "ऐसा",
+   "roman": "aisa",
+   "en": "like this; such",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0404",
+   "hi": "कुछ कम करो",
+   "roman": "kuchh kam karo",
+   "en": "bring it down a bit",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0405",
+   "hi": "दरवाज़ा",
+   "roman": "darwaza",
+   "en": "door",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0406",
+   "hi": "खिड़की",
+   "roman": "khidki",
+   "en": "window",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0407",
+   "hi": "चाबी",
+   "roman": "chaabi",
+   "en": "key",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0408",
+   "hi": "चलिए",
+   "roman": "chaliye",
+   "en": "let's go; right then, okay",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0409",
+   "hi": "मुझे … है",
+   "roman": "mujhe ... hai",
+   "en": "'I have [symptom/state]' frame: मुझे बुख़ार है, मुझे दर्द है",
+   "type": "paradigm",
+   "tier": 2
+  },
+  {
+   "id": "hs-0410",
+   "hi": "बढ़िया",
+   "roman": "badhiya",
+   "en": "excellent, great",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0411",
+   "hi": "कितना हुआ?",
+   "roman": "kitna hua?",
+   "en": "how much does it come to?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0412",
+   "hi": "टाइम क्या हुआ है?",
+   "roman": "time kya hua hai?",
+   "en": "what's the time?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0413",
+   "hi": "यहाँ रोक दीजिए",
+   "roman": "yahan rok dijiye",
+   "en": "stop here, please",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0414",
+   "hi": "आगे",
+   "roman": "aage",
+   "en": "ahead, further on",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0415",
+   "hi": "पास",
+   "roman": "paas",
+   "en": "near",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0416",
+   "hi": "लिंग-वचन",
+   "roman": "ling-vachan",
+   "en": "noun endings: -a m to -e pl; -i f to -iyaan",
+   "type": "paradigm",
+   "tier": 2
+  },
+  {
+   "id": "hs-0417",
+   "hi": "बीस",
+   "roman": "bees",
+   "en": "twenty",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0418",
+   "hi": "पचास",
+   "roman": "pachaas",
+   "en": "fifty",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0419",
+   "hi": "अंदर आइए",
+   "roman": "andar aaiye",
+   "en": "come in",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0420",
+   "hi": "आप क्या काम करते हैं?",
+   "roman": "aap kya kaam karte hain?",
+   "en": "what do you do?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0421",
+   "hi": "आप कहाँ रहते हैं?",
+   "roman": "aap kahaan rahte hain?",
+   "en": "where do you live?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0422",
+   "hi": "मैं लंदन में रहता हूँ",
+   "roman": "main London mein rahta hoon",
+   "en": "I live in London",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0423",
+   "hi": "आज बहुत गर्मी है",
+   "roman": "aaj bahut garmi hai",
+   "en": "it's really hot today",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0424",
+   "hi": "चलेगा",
+   "roman": "chalega",
+   "en": "that'll do, works for me",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0425",
+   "hi": "सच",
+   "roman": "sach",
+   "en": "true, truth",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0426",
+   "hi": "मिलते हैं",
+   "roman": "milte hain",
+   "en": "see you",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0427",
+   "hi": "जन्मदिन मुबारक",
+   "roman": "janmdin mubaarak",
+   "en": "happy birthday",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0428",
+   "hi": "याद",
+   "roman": "yaad",
+   "en": "memory",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0429",
+   "hi": "के बारे में",
+   "roman": "ke baare mein",
+   "en": "about, concerning",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0430",
+   "hi": "धीरे",
+   "roman": "dheere",
+   "en": "slowly",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0431",
+   "hi": "कितना टाइम लगेगा?",
+   "roman": "kitna time lagega?",
+   "en": "how long will it take?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0432",
+   "hi": "सीट",
+   "roman": "seat",
+   "en": "seat",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0433",
+   "hi": "ट्रेन कितने बजे है?",
+   "roman": "train kitne baje hai?",
+   "en": "what time is the train?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0434",
+   "hi": "लेट",
+   "roman": "late",
+   "en": "late (loan)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0435",
+   "hi": "बंद",
+   "roman": "band",
+   "en": "closed, off",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0436",
+   "hi": "किलो",
+   "roman": "kilo",
+   "en": "kilo",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0437",
+   "hi": "एक किलो देना",
+   "roman": "ek kilo dena",
+   "en": "give me a kilo (ordering frame)",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0438",
+   "hi": "टमाटर",
+   "roman": "tamaatar",
+   "en": "tomato",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0439",
+   "hi": "प्याज़",
+   "roman": "pyaaz",
+   "en": "onion",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0440",
+   "hi": "छुट्टे हैं क्या?",
+   "roman": "chhutte hain kya?",
+   "en": "do you have change?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0441",
+   "hi": "कार्ड चलेगा?",
+   "roman": "card chalega?",
+   "en": "do you take card?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0442",
+   "hi": "खाना बनाना",
+   "roman": "khaana banaana",
+   "en": "to cook",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0443",
+   "hi": "बताइए",
+   "roman": "bataiye",
+   "en": "tell me; yes, go ahead?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0444",
+   "hi": "रुकना",
+   "roman": "rukna",
+   "en": "to stop, wait",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0445",
+   "hi": "खत्म होना",
+   "roman": "khatam hona",
+   "en": "to finish, be over, run out",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0446",
+   "hi": "खो गया",
+   "roman": "kho gaya",
+   "en": "it's lost",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0447",
+   "hi": "नंबर",
+   "roman": "nambar",
+   "en": "number",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0448",
+   "hi": "वीडियो कॉल",
+   "roman": "video call",
+   "en": "video call",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0449",
+   "hi": "बोतल",
+   "roman": "botal",
+   "en": "bottle",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0450",
+   "hi": "सिर दर्द",
+   "roman": "sir dard",
+   "en": "headache",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0451",
+   "hi": "पेट ख़राब है",
+   "roman": "pet kharaab hai",
+   "en": "my stomach is upset",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0452",
+   "hi": "बार",
+   "roman": "baar",
+   "en": "time, occurrence",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0453",
+   "hi": "लाल",
+   "roman": "laal",
+   "en": "red",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0454",
+   "hi": "सफ़ेद",
+   "roman": "safed",
+   "en": "white",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0455",
+   "hi": "काला",
+   "roman": "kaala",
+   "en": "black",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0456",
+   "hi": "किराया",
+   "roman": "kiraya",
+   "en": "fare; also rent",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0457",
+   "hi": "सड़क",
+   "roman": "sadak",
+   "en": "road",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0458",
+   "hi": "बिजली चली गई",
+   "roman": "bijli chali gayi",
+   "en": "the power's gone",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0459",
+   "hi": "पंखा",
+   "roman": "pankha",
+   "en": "fan",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0460",
+   "hi": "एसी",
+   "roman": "AC",
+   "en": "air conditioner",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0461",
+   "hi": "बर्तन",
+   "roman": "bartan",
+   "en": "dishes, utensils",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0462",
+   "hi": "पनीर",
+   "roman": "paneer",
+   "en": "paneer, Indian cheese",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0463",
+   "hi": "अंडा",
+   "roman": "anda",
+   "en": "egg",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0464",
+   "hi": "चिकन",
+   "roman": "chicken",
+   "en": "chicken (the meat)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0465",
+   "hi": "दही",
+   "roman": "dahi",
+   "en": "yoghurt, curd",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0466",
+   "hi": "भूलना",
+   "roman": "bhoolna",
+   "en": "to forget",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0467",
+   "hi": "कुछ और",
+   "roman": "kuchh aur",
+   "en": "something else; some more",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0468",
+   "hi": "अगर ... तो",
+   "roman": "agar ... to",
+   "en": "if ... then",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0469",
+   "hi": "मुझ-/उस-/किस- oblique stems + postposition",
+   "roman": "mujh-/us-/kis- + postposition",
+   "en": "pronoun oblique stems: postpositions attach to these (मुझसे, उसमें, किसके लिए)",
+   "type": "paradigm",
+   "tier": 2
+  },
+  {
+   "id": "hs-0470",
+   "hi": "मेरे पास ... है",
+   "roman": "mere paas ... hai",
+   "en": "I have ... (things)",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0471",
+   "hi": "कभी",
+   "roman": "kabhi",
+   "en": "ever, at some time",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0472",
+   "hi": "क्या मैं ... कर सकता हूँ?",
+   "roman": "kya main ... kar sakta hoon?",
+   "en": "can/may I ...?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0473",
+   "hi": "यह कितने का है?",
+   "roman": "ye kitne ka hai?",
+   "en": "how much is this?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0474",
+   "hi": "क्या कर रहे हो?",
+   "roman": "kya kar rahe ho?",
+   "en": "what are you up to?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0475",
+   "hi": "और नहीं चाहिए",
+   "roman": "aur nahin chahiye",
+   "en": "I don't want any more",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0476",
+   "hi": "मेरी मदद कीजिए",
+   "roman": "meri madad kijiye",
+   "en": "please help me",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0477",
+   "hi": "इसका मतलब क्या है?",
+   "roman": "iska matlab kya hai?",
+   "en": "what does this mean?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0478",
+   "hi": "किसका",
+   "roman": "kiska",
+   "en": "whose",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0479",
+   "hi": "हो जाना",
+   "roman": "ho jaana",
+   "en": "to become, to happen",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0480",
+   "hi": "बीमार",
+   "roman": "bimaar",
+   "en": "ill, sick",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0481",
+   "hi": "थोड़ा सा",
+   "roman": "thoda sa",
+   "en": "just a little",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0482",
+   "hi": "के ऊपर",
+   "roman": "ke oopar",
+   "en": "above, on top of",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0483",
+   "hi": "के नीचे",
+   "roman": "ke neeche",
+   "en": "under, below",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0484",
+   "hi": "के सामने",
+   "roman": "ke saamne",
+   "en": "opposite, facing, in front of",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0485",
+   "hi": "के अंदर",
+   "roman": "ke andar",
+   "en": "inside",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0486",
+   "hi": "हम लोग",
+   "roman": "hum log",
+   "en": "we, us lot",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0487",
+   "hi": "ज़ीरो",
+   "roman": "zero",
+   "en": "zero",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0488",
+   "hi": "ग्यारह",
+   "roman": "gyaarah",
+   "en": "eleven",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0489",
+   "hi": "बारह",
+   "roman": "baarah",
+   "en": "twelve",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0490",
+   "hi": "तेरह",
+   "roman": "terah",
+   "en": "thirteen",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0491",
+   "hi": "चौदह",
+   "roman": "chaudah",
+   "en": "fourteen",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0492",
+   "hi": "पंद्रह",
+   "roman": "pandrah",
+   "en": "fifteen",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0493",
+   "hi": "सोलह",
+   "roman": "solah",
+   "en": "sixteen",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0494",
+   "hi": "सत्रह",
+   "roman": "satrah",
+   "en": "seventeen",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0495",
+   "hi": "अठारह",
+   "roman": "athaarah",
+   "en": "eighteen",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0496",
+   "hi": "उन्नीस",
+   "roman": "unnees",
+   "en": "nineteen",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0497",
+   "hi": "तीस",
+   "roman": "tees",
+   "en": "thirty",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0498",
+   "hi": "चालीस",
+   "roman": "chaalees",
+   "en": "forty",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0499",
+   "hi": "साठ",
+   "roman": "saath",
+   "en": "sixty",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0500",
+   "hi": "सत्तर",
+   "roman": "sattar",
+   "en": "seventy",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0501",
+   "hi": "अस्सी",
+   "roman": "assee",
+   "en": "eighty",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0502",
+   "hi": "नब्बे",
+   "roman": "nabbe",
+   "en": "ninety",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0503",
+   "hi": "एक बजा है",
+   "roman": "ek bajaa hai",
+   "en": "it's one o'clock",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0504",
+   "hi": "दो बजे हैं",
+   "roman": "do baje hain",
+   "en": "it's two o'clock",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0505",
+   "hi": "पाँच बजे",
+   "roman": "paanch baje",
+   "en": "at five o'clock",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0506",
+   "hi": "साढ़े चार बजे",
+   "roman": "saadhe chaar baje",
+   "en": "(at) half past four",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0507",
+   "hi": "शाम को",
+   "roman": "shaam ko",
+   "en": "in the evening",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0508",
+   "hi": "फैमिली",
+   "roman": "family",
+   "en": "family (English loan)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0509",
+   "hi": "पिता जी",
+   "roman": "pita ji",
+   "en": "father (respectful)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0510",
+   "hi": "माता जी",
+   "roman": "mata ji",
+   "en": "mother (respectful)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0511",
+   "hi": "माँ-बाप",
+   "roman": "maa-baap",
+   "en": "parents (colloquial)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0512",
+   "hi": "भाई-बहन",
+   "roman": "bhai-behen",
+   "en": "siblings, brothers and sisters",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0513",
+   "hi": "बड़ा भाई",
+   "roman": "bada bhai",
+   "en": "elder brother",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0514",
+   "hi": "छोटी बहन",
+   "roman": "chhoti behen",
+   "en": "younger sister",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0515",
+   "hi": "बड़ा / छोटा + रिश्ता",
+   "roman": "bada / chhota",
+   "en": "elder/younger marked by bada/chhota before any kin term",
+   "type": "paradigm",
+   "tier": 2
+  },
+  {
+   "id": "hs-0516",
+   "hi": "दादा",
+   "roman": "dada",
+   "en": "grandfather (father's side)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0517",
+   "hi": "दादी",
+   "roman": "dadi",
+   "en": "grandmother (father's side)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0518",
+   "hi": "नाना",
+   "roman": "nana",
+   "en": "grandfather (mother's side)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0519",
+   "hi": "नानी",
+   "roman": "nani",
+   "en": "grandmother (mother's side)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0520",
+   "hi": "मम्मी जी",
+   "roman": "mummy ji",
+   "en": "address form for mother-in-law",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0521",
+   "hi": "पापा जी",
+   "roman": "papa ji",
+   "en": "address form for father-in-law",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0522",
+   "hi": "भाई साहब",
+   "roman": "bhai sahab",
+   "en": "polite address to a male stranger",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0523",
+   "hi": "आप लोग",
+   "roman": "aap log",
+   "en": "you all",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0524",
+   "hi": "सब लोग",
+   "roman": "sab log",
+   "en": "everyone",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0525",
+   "hi": "हाँ जी",
+   "roman": "haan ji",
+   "en": "yes (warm, everyday)",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0526",
+   "hi": "घर पर सब कैसे हैं?",
+   "roman": "ghar par sab kaise hain?",
+   "en": "how is everyone at home?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0527",
+   "hi": "सब ठीक हैं",
+   "roman": "sab theek hain",
+   "en": "everyone is fine",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0528",
+   "hi": "मटन",
+   "roman": "mutton",
+   "en": "mutton",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0529",
+   "hi": "मांस",
+   "roman": "maans",
+   "en": "meat",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0530",
+   "hi": "मछली",
+   "roman": "machhli",
+   "en": "fish",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0531",
+   "hi": "घी",
+   "roman": "ghee",
+   "en": "ghee, clarified butter",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0532",
+   "hi": "तेल",
+   "roman": "tel",
+   "en": "oil",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0533",
+   "hi": "आटा",
+   "roman": "aata",
+   "en": "flour (wholewheat)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0534",
+   "hi": "ब्रेड",
+   "roman": "bread",
+   "en": "sliced bread",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0535",
+   "hi": "लंच",
+   "roman": "lunch",
+   "en": "lunch",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0536",
+   "hi": "डिनर",
+   "roman": "dinner",
+   "en": "dinner",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0537",
+   "hi": "पराठा",
+   "roman": "paratha",
+   "en": "paratha",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0538",
+   "hi": "बिरयानी",
+   "roman": "biryani",
+   "en": "biryani",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0539",
+   "hi": "समोसा",
+   "roman": "samosa",
+   "en": "samosa",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0540",
+   "hi": "अचार",
+   "roman": "achaar",
+   "en": "pickle",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0541",
+   "hi": "चटनी",
+   "roman": "chutney",
+   "en": "chutney",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0542",
+   "hi": "बिस्कुट",
+   "roman": "biscuit",
+   "en": "biscuit",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0543",
+   "hi": "मिर्च",
+   "roman": "mirch",
+   "en": "chilli",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0544",
+   "hi": "केला",
+   "roman": "kela",
+   "en": "banana",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0545",
+   "hi": "सेब",
+   "roman": "seb",
+   "en": "apple",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0546",
+   "hi": "कॉफ़ी",
+   "roman": "coffee",
+   "en": "coffee",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0547",
+   "hi": "टेस्टी",
+   "roman": "tasty",
+   "en": "tasty",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0548",
+   "hi": "नॉन-वेज",
+   "roman": "non-veg",
+   "en": "non-vegetarian",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0549",
+   "hi": "प्यास",
+   "roman": "pyaas",
+   "en": "thirst",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0550",
+   "hi": "डालना",
+   "roman": "daalna",
+   "en": "to put in, add, pour",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0551",
+   "hi": "गरम करना",
+   "roman": "garam karna",
+   "en": "to heat up",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0552",
+   "hi": "मैंने खा लिया",
+   "roman": "maine kha liya",
+   "en": "I've eaten",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0553",
+   "hi": "और चाहिए?",
+   "roman": "aur chahiye?",
+   "en": "want some more?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0554",
+   "hi": "चाय बना दूँ?",
+   "roman": "chai bana doon?",
+   "en": "shall I make (you) tea?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0555",
+   "hi": "खाना तैयार है",
+   "roman": "khana taiyaar hai",
+   "en": "food is ready",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0556",
+   "hi": "खाने में क्या बना है?",
+   "roman": "khaane mein kya bana hai?",
+   "en": "what's cooking / what's for dinner?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0557",
+   "hi": "गरम पानी",
+   "roman": "garam paani",
+   "en": "hot water",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0558",
+   "hi": "थाली",
+   "roman": "thaali",
+   "en": "plate; thali meal",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0559",
+   "hi": "प्लेट",
+   "roman": "plate",
+   "en": "plate",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0560",
+   "hi": "कटोरी",
+   "roman": "katori",
+   "en": "small bowl",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0561",
+   "hi": "कप",
+   "roman": "cup",
+   "en": "cup",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0562",
+   "hi": "चम्मच",
+   "roman": "chammach",
+   "en": "spoon",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0563",
+   "hi": "रसोई",
+   "roman": "rasoi",
+   "en": "kitchen",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0564",
+   "hi": "टॉयलेट",
+   "roman": "toilet",
+   "en": "toilet",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0565",
+   "hi": "बिस्तर",
+   "roman": "bistar",
+   "en": "bed, bedding",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0566",
+   "hi": "कुर्सी",
+   "roman": "kursi",
+   "en": "chair",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0567",
+   "hi": "मेज़",
+   "roman": "mez",
+   "en": "table",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0568",
+   "hi": "टेबल",
+   "roman": "table",
+   "en": "table",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0569",
+   "hi": "अलमारी",
+   "roman": "almaari",
+   "en": "cupboard, wardrobe",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0570",
+   "hi": "घड़ी",
+   "roman": "ghadi",
+   "en": "clock, watch",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0571",
+   "hi": "बाल्टी",
+   "roman": "baalti",
+   "en": "bucket",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0572",
+   "hi": "साबुन",
+   "roman": "saabun",
+   "en": "soap",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0573",
+   "hi": "तौलिया",
+   "roman": "tauliya",
+   "en": "towel",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0574",
+   "hi": "नहाना",
+   "roman": "nahaana",
+   "en": "to bathe",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0575",
+   "hi": "बिजली",
+   "roman": "bijli",
+   "en": "electricity, power",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0576",
+   "hi": "लाइट",
+   "roman": "light",
+   "en": "light; the power supply",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0577",
+   "hi": "फ्रिज",
+   "roman": "fridge",
+   "en": "fridge",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0578",
+   "hi": "चालू करना",
+   "roman": "chaalu karna",
+   "en": "to switch on",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0579",
+   "hi": "निकालना",
+   "roman": "nikaalna",
+   "en": "to take out",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0580",
+   "hi": "पंखा चला दो",
+   "roman": "pankha chala do",
+   "en": "turn on the fan",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0581",
+   "hi": "लाइट बंद कर दो",
+   "roman": "light band kar do",
+   "en": "turn off the light",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0582",
+   "hi": "फ्रिज में रख दो",
+   "roman": "fridge mein rakh do",
+   "en": "put it in the fridge",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0583",
+   "hi": "दरवाज़ा बंद कर दो",
+   "roman": "darwaaza band kar do",
+   "en": "shut the door",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0584",
+   "hi": "चला दो / कर दो / बना दो",
+   "roman": "chala do / kar do / bana do",
+   "en": "V + dena: 'do it (for me/them)' - the default household request imperative",
+   "type": "paradigm",
+   "tier": 2
+  },
+  {
+   "id": "hs-0585",
+   "hi": "खा लो / पी लो / नहा लो",
+   "roman": "kha lo / pee lo / nahaa lo",
+   "en": "V + lena: 'do it (for yourself)' - the default family nudge",
+   "type": "paradigm",
+   "tier": 2
+  },
+  {
+   "id": "hs-0586",
+   "hi": "आँख",
+   "roman": "aankh",
+   "en": "eye",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0587",
+   "hi": "मुँह",
+   "roman": "munh",
+   "en": "mouth",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0588",
+   "hi": "गला",
+   "roman": "gala",
+   "en": "throat",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0589",
+   "hi": "नींद",
+   "roman": "neend",
+   "en": "sleep",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0590",
+   "hi": "ठंड",
+   "roman": "thand",
+   "en": "cold (the feeling)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0591",
+   "hi": "मुझे बुख़ार है",
+   "roman": "mujhe bukhaar hai",
+   "en": "I have a fever",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0592",
+   "hi": "सिर में दर्द है",
+   "roman": "sir mein dard hai",
+   "en": "I have a headache",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0593",
+   "hi": "यहाँ दर्द है",
+   "roman": "yahaan dard hai",
+   "en": "it hurts here",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0594",
+   "hi": "अब ठीक हूँ",
+   "roman": "ab theek hoon",
+   "en": "I'm fine now",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0595",
+   "hi": "मुझे दवाई चाहिए",
+   "roman": "mujhe davaai chahiye",
+   "en": "I need medicine",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0596",
+   "hi": "रंग",
+   "roman": "rang",
+   "en": "colour",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0597",
+   "hi": "नीला",
+   "roman": "neela",
+   "en": "blue",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0598",
+   "hi": "पीला",
+   "roman": "peela",
+   "en": "yellow",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0599",
+   "hi": "हरा",
+   "roman": "hara",
+   "en": "green",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0600",
+   "hi": "किसको",
+   "roman": "kisko",
+   "en": "whom, to whom (written किसे)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0601",
+   "hi": "कहाँ से",
+   "roman": "kahaan se",
+   "en": "from where",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0602",
+   "hi": "मुझसे",
+   "roman": "mujhse",
+   "en": "from/with/by me",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0603",
+   "hi": "मेरे लिए",
+   "roman": "mere liye",
+   "en": "for me",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0604",
+   "hi": "मेरे साथ",
+   "roman": "mere saath",
+   "en": "with me",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0605",
+   "hi": "आपसे",
+   "roman": "aapse",
+   "en": "from/with you (polite)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0606",
+   "hi": "आपके पास",
+   "roman": "aapke paas",
+   "en": "you have",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0607",
+   "hi": "उसके पास",
+   "roman": "uske paas",
+   "en": "he/she has",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0608",
+   "hi": "अभी नहीं",
+   "roman": "abhi nahin",
+   "en": "not now",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0609",
+   "hi": "तब",
+   "roman": "tab",
+   "en": "then, at that time",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0610",
+   "hi": "उसके बाद",
+   "roman": "uske baad",
+   "en": "after that, then",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0611",
+   "hi": "न",
+   "roman": "na",
+   "en": "not (softer negation; with subjunctive)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0612",
+   "hi": "मत करो",
+   "roman": "mat karo",
+   "en": "don't do it (polite: मत कीजिए)",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0613",
+   "hi": "नहीं चाहिए",
+   "roman": "nahin chahiye",
+   "en": "(I) don't want/need any",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0614",
+   "hi": "दोनों",
+   "roman": "donon",
+   "en": "both",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0615",
+   "hi": "एकदम",
+   "roman": "ekdam",
+   "en": "totally, completely (colloquial)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0616",
+   "hi": "ले जाना",
+   "roman": "le jaana",
+   "en": "to take (away, along)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0617",
+   "hi": "काम करना",
+   "roman": "kaam karna",
+   "en": "to work",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0618",
+   "hi": "पसंद आया",
+   "roman": "pasand aaya",
+   "en": "I liked it (first reaction)",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0619",
+   "hi": "कब आ रहे हो?",
+   "roman": "kab aa rahe ho?",
+   "en": "when are you coming?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0620",
+   "hi": "चार बज गए",
+   "roman": "chaar baj gaye",
+   "en": "it's four o'clock",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0621",
+   "hi": "कहाँ मिलेगा?",
+   "roman": "kahan milega?",
+   "en": "where can I get ...?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0622",
+   "hi": "रिक्शा",
+   "roman": "rickshaw",
+   "en": "rickshaw (cycle or auto)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0623",
+   "hi": "... चलोगे?",
+   "roman": "... chaloge?",
+   "en": "will you go to ...? (hailing an auto)",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0624",
+   "hi": "कितना लोगे?",
+   "roman": "kitna loge?",
+   "en": "how much will you take? (fare)",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0625",
+   "hi": "दाम",
+   "roman": "daam",
+   "en": "price",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0626",
+   "hi": "बहुत महँगा है",
+   "roman": "bahut mahanga hai",
+   "en": "that's too expensive",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0627",
+   "hi": "ज़रा दिखाना",
+   "roman": "zara dikhana",
+   "en": "could you show me (that)?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0628",
+   "hi": "और कुछ?",
+   "roman": "aur kuchh?",
+   "en": "anything else?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0629",
+   "hi": "बस इतना ही",
+   "roman": "bas itna hi",
+   "en": "that's all",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0630",
+   "hi": "पक्का",
+   "roman": "pakka",
+   "en": "definite, for sure",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0631",
+   "hi": "कॉल",
+   "roman": "call",
+   "en": "call",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0632",
+   "hi": "चार्ज",
+   "roman": "charge",
+   "en": "charge (battery)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0633",
+   "hi": "ऑन करो",
+   "roman": "on karo",
+   "en": "turn it on",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0634",
+   "hi": "ऑफ़ करो",
+   "roman": "off karo",
+   "en": "turn it off",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0635",
+   "hi": "हाँ, बोलो",
+   "roman": "haan, bolo",
+   "en": "yes, go ahead - tell me",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0636",
+   "hi": "मेरी आवाज़ आ रही है?",
+   "roman": "meri aawaaz aa rahi hai?",
+   "en": "can you hear me?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0637",
+   "hi": "मौसम कैसा है?",
+   "roman": "mausam kaisa hai?",
+   "en": "how's the weather?",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0638",
+   "hi": "देखो",
+   "roman": "dekho",
+   "en": "look, ... (discourse opener)",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0639",
+   "hi": "ने",
+   "roman": "ne",
+   "en": "past-tense doer marker",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0640",
+   "hi": "हो जाएगा",
+   "roman": "ho jayega",
+   "en": "it'll get done",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0641",
+   "hi": "हो सकता है",
+   "roman": "ho sakta hai",
+   "en": "maybe; it's possible",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0642",
+   "hi": "देखते हैं",
+   "roman": "dekhte hain",
+   "en": "we'll see",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0643",
+   "hi": "हफ़्ता",
+   "roman": "hafta",
+   "en": "week",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0644",
+   "hi": "महीना",
+   "roman": "mahina",
+   "en": "month",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0645",
+   "hi": "दोपहर",
+   "roman": "dopahar",
+   "en": "afternoon",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0646",
+   "hi": "आजकल",
+   "roman": "aajkal",
+   "en": "these days",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0647",
+   "hi": "ससुराल",
+   "roman": "sasural",
+   "en": "in-laws' home/family",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0648",
+   "hi": "इंतज़ार करना",
+   "roman": "intezaar karna",
+   "en": "to wait",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0649",
+   "hi": "मुझे याद है / याद नहीं",
+   "roman": "mujhe yaad hai / yaad nahin",
+   "en": "I remember / I don't recall",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0650",
+   "hi": "कट गया",
+   "roman": "kat gaya",
+   "en": "the call dropped",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0651",
+   "hi": "और बताइए",
+   "roman": "aur bataiye",
+   "en": "so, what else? tell me more (phone-call staple)",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0652",
+   "hi": "अच्छा, चलता हूँ",
+   "roman": "achchha, chalta hoon",
+   "en": "right, I'll be off / I'll hang up now",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0653",
+   "hi": "एयरपोर्ट",
+   "roman": "airport",
+   "en": "airport",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0654",
+   "hi": "होटल",
+   "roman": "hotel",
+   "en": "hotel; restaurant",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0655",
+   "hi": "दाएँ",
+   "roman": "dayen",
+   "en": "right (direction)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0656",
+   "hi": "बाएँ",
+   "roman": "bayen",
+   "en": "left (direction)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0657",
+   "hi": "ग़लत",
+   "roman": "galat",
+   "en": "wrong",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0658",
+   "hi": "आसान",
+   "roman": "aasaan",
+   "en": "easy",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0659",
+   "hi": "मुश्किल",
+   "roman": "mushkil",
+   "en": "difficult",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0660",
+   "hi": "सुंदर",
+   "roman": "sundar",
+   "en": "beautiful",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0661",
+   "hi": "वैसे",
+   "roman": "vaise",
+   "en": "by the way; anyway",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0662",
+   "hi": "क्या बात है!",
+   "roman": "kya baat hai!",
+   "en": "brilliant! / wonderful!",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0663",
+   "hi": "स्कूल",
+   "roman": "school",
+   "en": "school",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0664",
+   "hi": "हमें",
+   "roman": "hamen",
+   "en": "to us",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0665",
+   "hi": "उन्हें",
+   "roman": "unhen",
+   "en": "to them",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0666",
+   "hi": "-ता था (करता था)",
+   "roman": "-ta tha (karta tha)",
+   "en": "past habitual: used to do",
+   "type": "paradigm",
+   "tier": 3
+  },
+  {
+   "id": "hs-0667",
+   "hi": "रहा था (कर रहा था)",
+   "roman": "raha tha (kar raha tha)",
+   "en": "past continuous: was doing",
+   "type": "paradigm",
+   "tier": 3
+  },
+  {
+   "id": "hs-0668",
+   "hi": "-आ है (खाया है)",
+   "roman": "-a hai (khaya hai)",
+   "en": "present perfect: have done",
+   "type": "paradigm",
+   "tier": 3
+  },
+  {
+   "id": "hs-0669",
+   "hi": "V + जाना / लेना / देना",
+   "roman": "V + jaana / lena / dena",
+   "en": "compound verbs: completion and who-benefits colouring",
+   "type": "paradigm",
+   "tier": 3
+  },
+  {
+   "id": "hs-0670",
+   "hi": "V-कर",
+   "roman": "V-kar",
+   "en": "having done V, connector: खाकर, मिलकर",
+   "type": "paradigm",
+   "tier": 3
+  },
+  {
+   "id": "hs-0671",
+   "hi": "पड़ना",
+   "roman": "padna",
+   "en": "to have to (compulsion)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0672",
+   "hi": "जो",
+   "roman": "jo",
+   "en": "who; which (relative)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0673",
+   "hi": "ख़ुद",
+   "roman": "khud",
+   "en": "oneself",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0674",
+   "hi": "अभी तक",
+   "roman": "abhi tak",
+   "en": "still; yet",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0675",
+   "hi": "फिर भी",
+   "roman": "phir bhi",
+   "en": "even so; still",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0676",
+   "hi": "रविवार",
+   "roman": "ravivaar",
+   "en": "Sunday",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0677",
+   "hi": "डेढ़",
+   "roman": "dedh",
+   "en": "one and a half",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0678",
+   "hi": "करीब",
+   "roman": "kareeb",
+   "en": "about; nearly",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0679",
+   "hi": "अगला",
+   "roman": "agla",
+   "en": "next",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0680",
+   "hi": "पिछला",
+   "roman": "pichhla",
+   "en": "last; previous",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0681",
+   "hi": "अगले हफ़्ते",
+   "roman": "agle hafte",
+   "en": "next week",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0682",
+   "hi": "देर हो रही है",
+   "roman": "der ho rahi hai",
+   "en": "(I'm) running late",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0683",
+   "hi": "पास में",
+   "roman": "paas mein",
+   "en": "nearby",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0684",
+   "hi": "इधर",
+   "roman": "idhar",
+   "en": "over here",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0685",
+   "hi": "उधर",
+   "roman": "udhar",
+   "en": "over there",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0686",
+   "hi": "चाचा",
+   "roman": "chacha",
+   "en": "uncle (father's brother)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0687",
+   "hi": "मामा",
+   "roman": "mama",
+   "en": "uncle (mother's brother)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0688",
+   "hi": "चाचा, ताऊ, मामा, बुआ, मौसी…",
+   "roman": "chacha, tau, mama, bua, mausi",
+   "en": "uncle/aunt terms encode which parent's sibling it is; each spouse gets a paired term",
+   "type": "paradigm",
+   "tier": 3
+  },
+  {
+   "id": "hs-0689",
+   "hi": "पड़ोसी",
+   "roman": "padosi",
+   "en": "neighbour",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0690",
+   "hi": "आशीर्वाद",
+   "roman": "aashirvaad",
+   "en": "blessing (from elders)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0691",
+   "hi": "हैप्पी बर्थडे",
+   "roman": "happy birthday",
+   "en": "happy birthday",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-0692",
+   "hi": "त्योहार",
+   "roman": "tyohaar",
+   "en": "festival",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0693",
+   "hi": "दिवाली",
+   "roman": "diwali",
+   "en": "Diwali",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0694",
+   "hi": "पूजा",
+   "roman": "pooja",
+   "en": "prayer ritual; worship",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0695",
+   "hi": "ताज़ा",
+   "roman": "taaza",
+   "en": "fresh",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0696",
+   "hi": "ज़ुकाम",
+   "roman": "zukaam",
+   "en": "a cold",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0697",
+   "hi": "नींद आ रही है",
+   "roman": "neend aa rahi hai",
+   "en": "(I'm) sleepy",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0698",
+   "hi": "अस्पताल",
+   "roman": "aspataal",
+   "en": "hospital",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0699",
+   "hi": "नाराज़",
+   "roman": "naraaz",
+   "en": "upset; cross (with someone)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0700",
+   "hi": "प्यार",
+   "roman": "pyaar",
+   "en": "love",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0701",
+   "hi": "अच्छा हुआ",
+   "roman": "achchha hua",
+   "en": "good thing (that happened); just as well",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0702",
+   "hi": "घूमना",
+   "roman": "ghoomna",
+   "en": "to go out; to roam; to tour",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0703",
+   "hi": "खेलना",
+   "roman": "khelna",
+   "en": "to play",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0704",
+   "hi": "छोड़ना",
+   "roman": "chhodna",
+   "en": "to leave; to drop (someone) off",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0705",
+   "hi": "उठाना",
+   "roman": "uthana",
+   "en": "to pick up (incl. the phone)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0706",
+   "hi": "बुलाना",
+   "roman": "bulana",
+   "en": "to call over; to invite",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0707",
+   "hi": "सिखाना",
+   "roman": "sikhana",
+   "en": "to teach",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0708",
+   "hi": "समझाना",
+   "roman": "samjhana",
+   "en": "to explain",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0709",
+   "hi": "लगाना",
+   "roman": "lagana",
+   "en": "to put on; apply; set",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0710",
+   "hi": "पहनना",
+   "roman": "pahanna",
+   "en": "to wear",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0711",
+   "hi": "उतरना",
+   "roman": "utarna",
+   "en": "to get down / off (transport)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0712",
+   "hi": "ढूँढना",
+   "roman": "dhundhna",
+   "en": "to look for",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0713",
+   "hi": "अच्छा, रखता हूँ",
+   "roman": "achchha, rakhta hoon",
+   "en": "okay, I'll hang up now",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0714",
+   "hi": "फ़िल्म",
+   "roman": "film",
+   "en": "film; movie",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0715",
+   "hi": "क्रिकेट",
+   "roman": "cricket",
+   "en": "cricket",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0716",
+   "hi": "ख़बर",
+   "roman": "khabar",
+   "en": "news",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0717",
+   "hi": "धीरे-धीरे",
+   "roman": "dheere-dheere",
+   "en": "slowly; bit by bit",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0718",
+   "hi": "आराम से",
+   "roman": "aaram se",
+   "en": "comfortably; take it easy",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0719",
+   "hi": "ध्यान से",
+   "roman": "dhyaan se",
+   "en": "carefully",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0720",
+   "hi": "अलग",
+   "roman": "alag",
+   "en": "different; separate",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0721",
+   "hi": "ख़ाली",
+   "roman": "khaali",
+   "en": "empty; free",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0722",
+   "hi": "ठीक है फिर",
+   "roman": "theek hai phir",
+   "en": "right then (wrapping up)",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0723",
+   "hi": "ऐसा है कि...",
+   "roman": "aisa hai ki...",
+   "en": "the thing is...",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0724",
+   "hi": "ऐसे",
+   "roman": "aise",
+   "en": "this way",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0725",
+   "hi": "छुट्टे",
+   "roman": "chhutte",
+   "en": "change, small notes",
+   "type": "word",
+   "tier": 2
+  },
+  {
+   "id": "hs-0726",
+   "hi": "लाइट चली गई",
+   "roman": "light chali gayi",
+   "en": "the power's gone",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0727",
+   "hi": "किताब",
+   "roman": "kitaab",
+   "en": "book",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0728",
+   "hi": "धूप",
+   "roman": "dhoop",
+   "en": "sunshine",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0729",
+   "hi": "हवा",
+   "roman": "hawa",
+   "en": "air; wind",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0730",
+   "hi": "टैक्सी",
+   "roman": "taxi",
+   "en": "taxi",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0731",
+   "hi": "चाहना",
+   "roman": "chaahna",
+   "en": "to want; to love",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0732",
+   "hi": "साढ़े",
+   "roman": "saadhe",
+   "en": "...and a half (from 3 upward)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0733",
+   "hi": "प्रणाम",
+   "roman": "pranaam",
+   "en": "respectful greeting to elders",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0734",
+   "hi": "ठंड लग रही है",
+   "roman": "thand lag rahi hai",
+   "en": "I'm feeling cold",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0735",
+   "hi": "देर",
+   "roman": "der",
+   "en": "delay, lateness",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0736",
+   "hi": "धीरे चलाओ",
+   "roman": "dheere chalao",
+   "en": "drive slowly",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0737",
+   "hi": "ट्रैफ़िक",
+   "roman": "traffic",
+   "en": "traffic",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0738",
+   "hi": "मुझे यहीं उतरना है",
+   "roman": "mujhe yahin utarna hai",
+   "en": "I get off right here",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0739",
+   "hi": "पहुँच गए",
+   "roman": "pahunch gaye",
+   "en": "arrived safely",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0740",
+   "hi": "प्लेटफ़ॉर्म",
+   "roman": "platform",
+   "en": "platform",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0741",
+   "hi": "खुला",
+   "roman": "khula",
+   "en": "open",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0742",
+   "hi": "बिल",
+   "roman": "bill",
+   "en": "bill",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0743",
+   "hi": "नेटवर्क नहीं है",
+   "roman": "network nahin hai",
+   "en": "there's no signal",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0744",
+   "hi": "फ्लाइट",
+   "roman": "flight",
+   "en": "flight",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0745",
+   "hi": "गोली",
+   "roman": "goli",
+   "en": "pill, tablet",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0746",
+   "hi": "खाँसी",
+   "roman": "khaansi",
+   "en": "cough",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0747",
+   "hi": "दिन में दो बार",
+   "roman": "din mein do baar",
+   "en": "twice a day",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0748",
+   "hi": "इक्कीस…निन्यानवे (21–99)",
+   "roman": "ikkees...ninyaanve",
+   "en": "21–99: each number is one fused word, learned by decade row",
+   "type": "paradigm",
+   "tier": 3
+  },
+  {
+   "id": "hs-0749",
+   "hi": "जब... तब/तो...",
+   "roman": "jab ... tab",
+   "en": "when ... then",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0750",
+   "hi": "… से बड़ा / सबसे बड़ा",
+   "roman": "... se bada / sabse bada",
+   "en": "comparative and superlative: से / सबसे, no word changes",
+   "type": "paradigm",
+   "tier": 3
+  },
+  {
+   "id": "hs-0751",
+   "hi": "ढाई",
+   "roman": "dhaai",
+   "en": "two and a half",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0752",
+   "hi": "सवा",
+   "roman": "savaa",
+   "en": "...and a quarter; quarter past",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0753",
+   "hi": "एटीएम",
+   "roman": "ATM",
+   "en": "ATM",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0754",
+   "hi": "रिज़र्वेशन",
+   "roman": "reservation",
+   "en": "reservation",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0755",
+   "hi": "गली",
+   "roman": "gali",
+   "en": "lane, alley",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0756",
+   "hi": "भीड़",
+   "roman": "bheed",
+   "en": "crowd",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0757",
+   "hi": "पुलिस",
+   "roman": "police",
+   "en": "police",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0758",
+   "hi": "साड़ी",
+   "roman": "saari",
+   "en": "sari",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0759",
+   "hi": "कुर्ता",
+   "roman": "kurta",
+   "en": "kurta",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0760",
+   "hi": "जूते",
+   "roman": "joote",
+   "en": "shoes",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0761",
+   "hi": "जूते बाहर उतारिए",
+   "roman": "joote baahar utaariye",
+   "en": "take shoes off outside",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0762",
+   "hi": "दिवाली मुबारक",
+   "roman": "diwali mubaarak",
+   "en": "happy Diwali",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0763",
+   "hi": "खुश रहो",
+   "roman": "khush raho",
+   "en": "be happy (blessing)",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0764",
+   "hi": "गला ख़राब है",
+   "roman": "gala kharaab hai",
+   "en": "I have a sore throat",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0765",
+   "hi": "चोट लगी",
+   "roman": "chot lagi",
+   "en": "got hurt",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0766",
+   "hi": "उल्टी",
+   "roman": "ulti",
+   "en": "vomiting",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0767",
+   "hi": "एलर्जी",
+   "roman": "allergy",
+   "en": "allergy",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0768",
+   "hi": "बीपी",
+   "roman": "BP",
+   "en": "blood pressure",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0769",
+   "hi": "शुगर",
+   "roman": "sugar",
+   "en": "diabetes",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0770",
+   "hi": "मेन्यू",
+   "roman": "menu",
+   "en": "menu",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0771",
+   "hi": "पैक कर दीजिए",
+   "roman": "pack kar dijiye",
+   "en": "pack it up, please",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0772",
+   "hi": "व्हाट्सऐप पर भेज दो",
+   "roman": "whatsapp par bhej do",
+   "en": "send it on WhatsApp",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0773",
+   "hi": "फ़ोटो खींचना",
+   "roman": "photo kheenchna",
+   "en": "to take a photo",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0774",
+   "hi": "बैटरी ख़त्म हो गई",
+   "roman": "battery khatm ho gayi",
+   "en": "the battery's dead",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0775",
+   "hi": "वाई-फ़ाई का पासवर्ड क्या है?",
+   "roman": "wifi ka password kya hai?",
+   "en": "what's the wifi password?",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0776",
+   "hi": "हे भगवान",
+   "roman": "he bhagwaan",
+   "en": "oh god",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0777",
+   "hi": "फिर आइएगा",
+   "roman": "phir aaiega",
+   "en": "do come again",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0778",
+   "hi": "अकेले",
+   "roman": "akele",
+   "en": "alone",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0779",
+   "hi": "सर / मैडम",
+   "roman": "sir / madam",
+   "en": "sir / madam (service address)",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0780",
+   "hi": "वे",
+   "roman": "ve",
+   "en": "they (written); honorific he/she",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0781",
+   "hi": "वापस",
+   "roman": "waapas",
+   "en": "back, returned",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0782",
+   "hi": "किया था / आया था",
+   "roman": "kiya tha / aaya tha",
+   "en": "past perfect (had done)",
+   "type": "paradigm",
+   "tier": 3
+  },
+  {
+   "id": "hs-0783",
+   "hi": "चलें?",
+   "roman": "chalein?",
+   "en": "shall we go?",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0784",
+   "hi": "मुझे ... की ज़रूरत है",
+   "roman": "mujhe ... ki zaroorat hai",
+   "en": "I need ...",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0785",
+   "hi": "जल्दी ठीक हो जाइए",
+   "roman": "jaldi theek ho jaiye",
+   "en": "get well soon",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0786",
+   "hi": "सफ़र",
+   "roman": "safar",
+   "en": "journey",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0787",
+   "hi": "कार्ड",
+   "roman": "card",
+   "en": "card (payment)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0788",
+   "hi": "अगली बार",
+   "roman": "agli baar",
+   "en": "next time",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0789",
+   "hi": "पहली बार",
+   "roman": "pahlee baar",
+   "en": "for the first time",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0790",
+   "hi": "के पीछे",
+   "roman": "ke peechhe",
+   "en": "behind",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0791",
+   "hi": "के बाहर",
+   "roman": "ke baahar",
+   "en": "outside",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0792",
+   "hi": "के बिना",
+   "roman": "ke bina",
+   "en": "without",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0793",
+   "hi": "की तरह",
+   "roman": "ki tarah",
+   "en": "like, similar to",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0794",
+   "hi": "की वजह से",
+   "roman": "ki vajah se",
+   "en": "because of",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0795",
+   "hi": "ठीक-ठाक",
+   "roman": "theek-thaak",
+   "en": "so-so / okay-ish",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0796",
+   "hi": "कहीं",
+   "roman": "kaheen",
+   "en": "somewhere, anywhere",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0797",
+   "hi": "कौन बोल रहा है?",
+   "roman": "kaun bol raha hai?",
+   "en": "who's speaking? (phone)",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0798",
+   "hi": "आवाज़",
+   "roman": "aawaaz",
+   "en": "voice; sound; volume",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0799",
+   "hi": "ज़ोर से",
+   "roman": "zor se",
+   "en": "loudly",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0800",
+   "hi": "मज़ा",
+   "roman": "maza",
+   "en": "fun / enjoyment",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0801",
+   "hi": "शुरू",
+   "roman": "shuru",
+   "en": "start",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0802",
+   "hi": "मन",
+   "roman": "mann",
+   "en": "mind / heart",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0803",
+   "hi": "इक्कीस",
+   "roman": "ikkees",
+   "en": "twenty-one",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0804",
+   "hi": "पच्चीस",
+   "roman": "pachchees",
+   "en": "twenty-five",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0805",
+   "hi": "तीसरा",
+   "roman": "teesraa",
+   "en": "third",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0806",
+   "hi": "समय",
+   "roman": "samay",
+   "en": "time (formal)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0807",
+   "hi": "डेढ़ बजे",
+   "roman": "dedh baje",
+   "en": "(at) half past one",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0808",
+   "hi": "ढाई बजे",
+   "roman": "dhaai baje",
+   "en": "(at) half past two",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0809",
+   "hi": "सवा पाँच बजे",
+   "roman": "savaa paanch baje",
+   "en": "(at) quarter past five",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0810",
+   "hi": "आधा घंटा",
+   "roman": "aadhaa ghantaa",
+   "en": "half an hour",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0811",
+   "hi": "दस मिनट में",
+   "roman": "das minat mein",
+   "en": "in ten minutes",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0812",
+   "hi": "रात के दस बजे",
+   "roman": "raat ke das baje",
+   "en": "at ten at night",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0813",
+   "hi": "तारीख़",
+   "roman": "taareekh",
+   "en": "date (of the month)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0814",
+   "hi": "आज क्या तारीख़ है?",
+   "roman": "aaj kyaa taareekh hai?",
+   "en": "what's the date today?",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0815",
+   "hi": "सोमवार",
+   "roman": "somvaar",
+   "en": "Monday",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0816",
+   "hi": "मंगलवार",
+   "roman": "mangalvaar",
+   "en": "Tuesday",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0817",
+   "hi": "बुधवार",
+   "roman": "budhvaar",
+   "en": "Wednesday",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0818",
+   "hi": "गुरुवार",
+   "roman": "guruvaar",
+   "en": "Thursday",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0819",
+   "hi": "शुक्रवार",
+   "roman": "shukravaar",
+   "en": "Friday",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0820",
+   "hi": "शनिवार",
+   "roman": "shanivaar",
+   "en": "Saturday",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0821",
+   "hi": "इतवार",
+   "roman": "itvaar",
+   "en": "Sunday (colloquial)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0822",
+   "hi": "माता-पिता",
+   "roman": "mata-pita",
+   "en": "parents (neutral-formal)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0823",
+   "hi": "शादीशुदा",
+   "roman": "shaadishuda",
+   "en": "married",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0824",
+   "hi": "चाची",
+   "roman": "chachi",
+   "en": "aunt (chacha's wife)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0825",
+   "hi": "बुआ",
+   "roman": "bua",
+   "en": "aunt (father's sister)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0826",
+   "hi": "मामी",
+   "roman": "mami",
+   "en": "aunt (mama's wife)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0827",
+   "hi": "मौसी",
+   "roman": "mausi",
+   "en": "aunt (mother's sister)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0828",
+   "hi": "कज़न",
+   "roman": "cousin",
+   "en": "cousin (English loan)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0829",
+   "hi": "सास-ससुर",
+   "roman": "saas-sasur",
+   "en": "parents-in-law",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0830",
+   "hi": "ससुराल वाले",
+   "roman": "sasural wale",
+   "en": "the in-laws (as people)",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0831",
+   "hi": "बहू",
+   "roman": "bahu",
+   "en": "daughter-in-law",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0832",
+   "hi": "दामाद",
+   "roman": "damad",
+   "en": "son-in-law",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0833",
+   "hi": "जीजा",
+   "roman": "jija",
+   "en": "brother-in-law (sister's husband)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0834",
+   "hi": "साला",
+   "roman": "sala",
+   "en": "brother-in-law (wife's brother); also a common swearword – use with care",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0835",
+   "hi": "देवर-जेठ-ननद / साला-साली",
+   "roman": "devar-jeth-nanad / sala-sali",
+   "en": "in-law terms split by whose sibling: husband's side vs wife's side",
+   "type": "paradigm",
+   "tier": 3
+  },
+  {
+   "id": "hs-0836",
+   "hi": "रिश्ता",
+   "roman": "rishta",
+   "en": "relationship, family tie",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0837",
+   "hi": "घरवाले",
+   "roman": "gharwale",
+   "en": "family, the folks at home",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0838",
+   "hi": "महिला",
+   "roman": "mahila",
+   "en": "woman (polite/formal)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0839",
+   "hi": "साहब",
+   "roman": "sahab",
+   "en": "sir",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0840",
+   "hi": "मैडम",
+   "roman": "madam",
+   "en": "madam (English loan)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0841",
+   "hi": "बहन जी",
+   "roman": "behen ji",
+   "en": "polite address to a woman",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0842",
+   "hi": "तू",
+   "roman": "tu",
+   "en": "you (intimate)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0843",
+   "hi": "बच्चे कैसे हैं?",
+   "roman": "bachche kaise hain?",
+   "en": "how are the kids?",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0844",
+   "hi": "आपके कितने बच्चे हैं?",
+   "roman": "aapke kitne bachche hain?",
+   "en": "how many children do you have?",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0845",
+   "hi": "मक्खन",
+   "roman": "makkhan",
+   "en": "butter",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0846",
+   "hi": "बर्फ़",
+   "roman": "barf",
+   "en": "ice",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0847",
+   "hi": "रात का खाना",
+   "roman": "raat ka khana",
+   "en": "evening meal, dinner",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0848",
+   "hi": "चपाती",
+   "roman": "chapati",
+   "en": "chapati",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0849",
+   "hi": "नान",
+   "roman": "naan",
+   "en": "naan",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0850",
+   "hi": "पूरी",
+   "roman": "poori",
+   "en": "poori, fried bread",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0851",
+   "hi": "खिचड़ी",
+   "roman": "khichdi",
+   "en": "khichdi, rice-and-dal",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0852",
+   "hi": "पुलाव",
+   "roman": "pulao",
+   "en": "pulao",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0853",
+   "hi": "छोले",
+   "roman": "chhole",
+   "en": "chickpea curry",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0854",
+   "hi": "चना",
+   "roman": "chana",
+   "en": "chickpeas",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0855",
+   "hi": "राजमा",
+   "roman": "rajma",
+   "en": "kidney beans / kidney-bean curry",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0856",
+   "hi": "पकौड़ा",
+   "roman": "pakora",
+   "en": "pakora, fritter",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0857",
+   "hi": "रायता",
+   "roman": "raita",
+   "en": "raita",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0858",
+   "hi": "पापड़",
+   "roman": "papad",
+   "en": "papad, poppadom",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0859",
+   "hi": "सलाद",
+   "roman": "salaad",
+   "en": "salad",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0860",
+   "hi": "नमकीन",
+   "roman": "namkeen",
+   "en": "salty, savoury; savoury snack mix",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0861",
+   "hi": "केक",
+   "roman": "cake",
+   "en": "cake",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0862",
+   "hi": "चॉकलेट",
+   "roman": "chocolate",
+   "en": "chocolate",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0863",
+   "hi": "आइसक्रीम",
+   "roman": "ice cream",
+   "en": "ice cream",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0864",
+   "hi": "हरी मिर्च",
+   "roman": "hari mirch",
+   "en": "green chilli",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0865",
+   "hi": "लहसुन",
+   "roman": "lahsun",
+   "en": "garlic",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0866",
+   "hi": "अदरक",
+   "roman": "adrak",
+   "en": "ginger",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0867",
+   "hi": "गोभी",
+   "roman": "gobhi",
+   "en": "cauliflower",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0868",
+   "hi": "भिंडी",
+   "roman": "bhindi",
+   "en": "okra",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0869",
+   "hi": "बैंगन",
+   "roman": "baingan",
+   "en": "aubergine",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0870",
+   "hi": "मटर",
+   "roman": "matar",
+   "en": "peas",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0871",
+   "hi": "गाजर",
+   "roman": "gaajar",
+   "en": "carrot",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0872",
+   "hi": "पालक",
+   "roman": "paalak",
+   "en": "spinach",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0873",
+   "hi": "धनिया",
+   "roman": "dhaniya",
+   "en": "coriander",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0874",
+   "hi": "नींबू",
+   "roman": "nimbu",
+   "en": "lemon, lime",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0875",
+   "hi": "संतरा",
+   "roman": "santara",
+   "en": "orange",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0876",
+   "hi": "अंगूर",
+   "roman": "angoor",
+   "en": "grapes",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0877",
+   "hi": "हल्दी",
+   "roman": "haldi",
+   "en": "turmeric",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0878",
+   "hi": "जीरा",
+   "roman": "jeera",
+   "en": "cumin",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0879",
+   "hi": "गरम मसाला",
+   "roman": "garam masala",
+   "en": "garam masala",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0880",
+   "hi": "लाल मिर्च",
+   "roman": "laal mirch",
+   "en": "red chilli powder",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0881",
+   "hi": "जूस",
+   "roman": "juice",
+   "en": "juice",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0882",
+   "hi": "लस्सी",
+   "roman": "lassi",
+   "en": "lassi",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0883",
+   "hi": "नींबू पानी",
+   "roman": "nimbu paani",
+   "en": "fresh lime water",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0884",
+   "hi": "कोल्ड ड्रिंक",
+   "roman": "cold drink",
+   "en": "fizzy drink",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0885",
+   "hi": "खट्टा",
+   "roman": "khatta",
+   "en": "sour",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0886",
+   "hi": "मसालेदार",
+   "roman": "masaledaar",
+   "en": "spicy, well-seasoned",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0887",
+   "hi": "स्वादिष्ट",
+   "roman": "swadisht",
+   "en": "delicious",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-0888",
+   "hi": "स्वाद",
+   "roman": "swaad",
+   "en": "taste, flavour",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0889",
+   "hi": "कच्चा",
+   "roman": "kachcha",
+   "en": "raw, undercooked; unripe",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0890",
+   "hi": "शाकाहारी",
+   "roman": "shaakaahaari",
+   "en": "vegetarian",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0891",
+   "hi": "पकाना",
+   "roman": "pakaana",
+   "en": "to cook",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0892",
+   "hi": "काटना",
+   "roman": "kaatna",
+   "en": "to cut, chop",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0893",
+   "hi": "मिलाना",
+   "roman": "milaana",
+   "en": "to mix",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0894",
+   "hi": "खिलाना",
+   "roman": "khilaana",
+   "en": "to feed, serve someone food",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0895",
+   "hi": "कितनी चीनी?",
+   "roman": "kitni cheeni?",
+   "en": "how much sugar?",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0896",
+   "hi": "खाना लग गया",
+   "roman": "khana lag gaya",
+   "en": "food is on the table",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0897",
+   "hi": "हाथ धो लो",
+   "roman": "haath dho lo",
+   "en": "wash your hands",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0898",
+   "hi": "गरम कर दूँ?",
+   "roman": "garam kar doon?",
+   "en": "shall I heat it up?",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0899",
+   "hi": "फ़िल्टर का पानी",
+   "roman": "filter ka paani",
+   "en": "filtered water",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0900",
+   "hi": "काँटा",
+   "roman": "kaanta",
+   "en": "fork",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0901",
+   "hi": "चाकू",
+   "roman": "chaaku",
+   "en": "knife",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0902",
+   "hi": "कुकर",
+   "roman": "cooker",
+   "en": "pressure cooker",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0903",
+   "hi": "डिब्बा",
+   "roman": "dibba",
+   "en": "container, tin, box",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0904",
+   "hi": "बेडरूम",
+   "roman": "bedroom",
+   "en": "bedroom",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0905",
+   "hi": "ड्राइंग रूम",
+   "roman": "drawing room",
+   "en": "living room",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0906",
+   "hi": "बालकनी",
+   "roman": "balcony",
+   "en": "balcony",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0907",
+   "hi": "छत",
+   "roman": "chhat",
+   "en": "roof, terrace; ceiling",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0908",
+   "hi": "सीढ़ियाँ",
+   "roman": "seedhiyaan",
+   "en": "stairs",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0909",
+   "hi": "फ्लैट",
+   "roman": "flat",
+   "en": "flat, apartment",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0910",
+   "hi": "ज़मीन",
+   "roman": "zameen",
+   "en": "ground, floor",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0911",
+   "hi": "गेट",
+   "roman": "gate",
+   "en": "gate",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0912",
+   "hi": "ताला",
+   "roman": "taala",
+   "en": "lock",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0913",
+   "hi": "घंटी",
+   "roman": "ghanti",
+   "en": "doorbell; bell",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0914",
+   "hi": "सोफ़ा",
+   "roman": "sofa",
+   "en": "sofa",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0915",
+   "hi": "तकिया",
+   "roman": "takiya",
+   "en": "pillow",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0916",
+   "hi": "कंबल",
+   "roman": "kambal",
+   "en": "blanket",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0917",
+   "hi": "चादर",
+   "roman": "chaadar",
+   "en": "sheet",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0918",
+   "hi": "मच्छर",
+   "roman": "machhar",
+   "en": "mosquito",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0919",
+   "hi": "शीशा",
+   "roman": "sheesha",
+   "en": "mirror; glass (material)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0920",
+   "hi": "झाड़ू",
+   "roman": "jhaadu",
+   "en": "broom",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0921",
+   "hi": "मग",
+   "roman": "mug",
+   "en": "mug",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0922",
+   "hi": "नल",
+   "roman": "nal",
+   "en": "tap",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0923",
+   "hi": "ब्रश",
+   "roman": "brush",
+   "en": "toothbrush; brush",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0924",
+   "hi": "कचरा",
+   "roman": "kachra",
+   "en": "rubbish",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0925",
+   "hi": "डस्टबिन",
+   "roman": "dustbin",
+   "en": "bin",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0926",
+   "hi": "सफ़ाई",
+   "roman": "safaai",
+   "en": "cleaning",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0927",
+   "hi": "सूखा",
+   "roman": "sookha",
+   "en": "dry",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0928",
+   "hi": "गीला",
+   "roman": "geela",
+   "en": "wet",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0929",
+   "hi": "वॉशिंग मशीन",
+   "roman": "washing machine",
+   "en": "washing machine",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0930",
+   "hi": "रिमोट",
+   "roman": "remote",
+   "en": "remote control",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0931",
+   "hi": "चार्जर",
+   "roman": "charger",
+   "en": "charger",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0932",
+   "hi": "वाईफ़ाई",
+   "roman": "wifi",
+   "en": "wifi",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0933",
+   "hi": "स्विच",
+   "roman": "switch",
+   "en": "switch",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0934",
+   "hi": "जलाना",
+   "roman": "jalaana",
+   "en": "to light; to turn on (a light)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0935",
+   "hi": "टूटना",
+   "roman": "tootna",
+   "en": "to break",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0936",
+   "hi": "गीज़र चला दो",
+   "roman": "geyser chala do",
+   "en": "put the geyser on",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0937",
+   "hi": "पानी नहीं आ रहा",
+   "roman": "paani nahin aa raha",
+   "en": "the water's not coming",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0938",
+   "hi": "गैस बंद कर दी?",
+   "roman": "gas band kar di?",
+   "en": "did you turn the gas off?",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0939",
+   "hi": "बाल",
+   "roman": "baal",
+   "en": "hair",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0940",
+   "hi": "चेहरा",
+   "roman": "chehra",
+   "en": "face",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0941",
+   "hi": "कान",
+   "roman": "kaan",
+   "en": "ear",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0942",
+   "hi": "नाक",
+   "roman": "naak",
+   "en": "nose",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0943",
+   "hi": "दाँत",
+   "roman": "daant",
+   "en": "tooth",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0944",
+   "hi": "दिल",
+   "roman": "dil",
+   "en": "heart",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0945",
+   "hi": "कमर",
+   "roman": "kamar",
+   "en": "lower back, waist",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0946",
+   "hi": "ख़ून",
+   "roman": "khoon",
+   "en": "blood",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0947",
+   "hi": "दिमाग़",
+   "roman": "dimaag",
+   "en": "brain, mind",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0948",
+   "hi": "साँस",
+   "roman": "saans",
+   "en": "breath",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0949",
+   "hi": "दस्त",
+   "roman": "dast",
+   "en": "diarrhoea",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0950",
+   "hi": "चक्कर",
+   "roman": "chakkar",
+   "en": "dizziness",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0951",
+   "hi": "कमज़ोर",
+   "roman": "kamzor",
+   "en": "weak",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0952",
+   "hi": "चोट",
+   "roman": "chot",
+   "en": "injury",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0953",
+   "hi": "तकलीफ़",
+   "roman": "takleef",
+   "en": "trouble, discomfort",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0954",
+   "hi": "दुखना",
+   "roman": "dukhna",
+   "en": "to hurt, ache",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0955",
+   "hi": "मेडिकल स्टोर",
+   "roman": "medical store",
+   "en": "pharmacy",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0956",
+   "hi": "मुझे ज़ुकाम है",
+   "roman": "mujhe zukaam hai",
+   "en": "I have a cold",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0957",
+   "hi": "सर्दी लग गई",
+   "roman": "sardi lag gayi",
+   "en": "I've caught a cold",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0958",
+   "hi": "दर्द हो रहा है",
+   "roman": "dard ho raha hai",
+   "en": "it's hurting",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0959",
+   "hi": "दर्द कहाँ हो रहा है?",
+   "roman": "dard kahaan ho raha hai?",
+   "en": "where does it hurt?",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0960",
+   "hi": "कब से?",
+   "roman": "kab se?",
+   "en": "since when?",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0961",
+   "hi": "दो दिन से",
+   "roman": "do din se",
+   "en": "for two days",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0962",
+   "hi": "चक्कर आ रहे हैं",
+   "roman": "chakkar aa rahe hain",
+   "en": "I feel dizzy",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0963",
+   "hi": "उल्टी हो रही है",
+   "roman": "ulti ho rahi hai",
+   "en": "I'm vomiting / feel like vomiting",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0964",
+   "hi": "मुझे … से एलर्जी है",
+   "roman": "mujhe ... se allergy hai",
+   "en": "I'm allergic to ...",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0965",
+   "hi": "चोट लग गई",
+   "roman": "chot lag gayi",
+   "en": "(I/he/she) got hurt",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0966",
+   "hi": "ठीक हो गया",
+   "roman": "theek ho gaya",
+   "en": "it's better / it's fixed",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0967",
+   "hi": "आराम कीजिए",
+   "roman": "aaraam kijiye",
+   "en": "please rest",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0968",
+   "hi": "डॉक्टर को दिखा लो",
+   "roman": "doctor ko dikha lo",
+   "en": "go see a doctor",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0969",
+   "hi": "दवाई खा ली?",
+   "roman": "davaai kha li?",
+   "en": "did you take your medicine?",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0970",
+   "hi": "खाने के बाद",
+   "roman": "khaane ke baad",
+   "en": "after food",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0971",
+   "hi": "बुख़ार की दवा चाहिए",
+   "roman": "bukhaar ki davaa chahiye",
+   "en": "I need fever medicine",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0972",
+   "hi": "मेडिकल स्टोर कहाँ है?",
+   "roman": "medical store kahaan hai?",
+   "en": "where is the pharmacy?",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0973",
+   "hi": "लाल वाला",
+   "roman": "laal vaala",
+   "en": "the red one",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0974",
+   "hi": "गर्मी लग रही है",
+   "roman": "garmi lag rahi hai",
+   "en": "I'm feeling hot",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0975",
+   "hi": "गुलाबी",
+   "roman": "gulaabi",
+   "en": "pink",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0976",
+   "hi": "नारंगी",
+   "roman": "naarangi",
+   "en": "orange (colour)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0977",
+   "hi": "बुरा",
+   "roman": "bura",
+   "en": "bad (morally, of people/feelings)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0978",
+   "hi": "लंबा",
+   "roman": "lamba",
+   "en": "long, tall",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0979",
+   "hi": "मोटा",
+   "roman": "mota",
+   "en": "fat, thick",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0980",
+   "hi": "पतला",
+   "roman": "patla",
+   "en": "thin",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0981",
+   "hi": "तेज़",
+   "roman": "tez",
+   "en": "fast; sharp; strong",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0982",
+   "hi": "भारी",
+   "roman": "bhaari",
+   "en": "heavy",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0983",
+   "hi": "हल्का",
+   "roman": "halka",
+   "en": "light (weight); light (colour); mild",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0984",
+   "hi": "किधर",
+   "roman": "kidhar",
+   "en": "which way, where (colloquial)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0985",
+   "hi": "किससे",
+   "roman": "kisse",
+   "en": "from/with whom",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0986",
+   "hi": "किसके साथ",
+   "roman": "kiske saath",
+   "en": "with whom",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0987",
+   "hi": "कब तक",
+   "roman": "kab tak",
+   "en": "until when, by when",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0988",
+   "hi": "कितनी देर",
+   "roman": "kitni der",
+   "en": "how long",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0989",
+   "hi": "क्या मतलब?",
+   "roman": "kya matlab",
+   "en": "what do you mean?",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0990",
+   "hi": "इसका",
+   "roman": "iska",
+   "en": "of this, its",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0991",
+   "hi": "मुझको",
+   "roman": "mujhko",
+   "en": "to me (colloquial variant of मुझे)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0992",
+   "hi": "उससे",
+   "roman": "usse",
+   "en": "from/with him/her",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0993",
+   "hi": "इसको",
+   "roman": "isko",
+   "en": "to this/it (written इसे)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0994",
+   "hi": "उनसे",
+   "roman": "unse",
+   "en": "from/with them (or elder, honorific)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0995",
+   "hi": "कोई और",
+   "roman": "koi aur",
+   "en": "someone else, some other",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0996",
+   "hi": "अभी भी",
+   "roman": "abhi bhi",
+   "en": "still, even now",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-0997",
+   "hi": "जैसे",
+   "roman": "jaise",
+   "en": "like, as; for example",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-0998",
+   "hi": "क-/ज-/य-/व- correlative grid",
+   "roman": "k-/j-/y-/v- grid",
+   "en": "the four-way grid: कहाँ-जहाँ-यहाँ-वहाँ, कब-जब-अब-तब, कैसा-जैसा-ऐसा-वैसा, कौन-जो-यह-वह",
+   "type": "paradigm",
+   "tier": 3
+  },
+  {
+   "id": "hs-0999",
+   "hi": "के आगे",
+   "roman": "ke aage",
+   "en": "in front of, ahead of",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1000",
+   "hi": "के बीच में",
+   "roman": "ke beech mein",
+   "en": "between, in the middle of",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1001",
+   "hi": "की तरफ़",
+   "roman": "ki taraf",
+   "en": "towards, in the direction of",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1002",
+   "hi": "के यहाँ",
+   "roman": "ke yahaan",
+   "en": "at (someone)'s place",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1003",
+   "hi": "से कम",
+   "roman": "se kam",
+   "en": "less than",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1004",
+   "hi": "नहीं तो",
+   "roman": "nahin to",
+   "en": "otherwise, or else",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1005",
+   "hi": "बिल्कुल नहीं",
+   "roman": "bilkul nahin",
+   "en": "not at all, absolutely not",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1006",
+   "hi": "लगता है",
+   "roman": "lagta hai",
+   "en": "it seems, looks like",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1007",
+   "hi": "अरे वाह",
+   "roman": "are vaah",
+   "en": "oh wow!",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1008",
+   "hi": "बहुत-बहुत शुक्रिया",
+   "roman": "bahut-bahut shukriya",
+   "en": "thank you so much",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1009",
+   "hi": "माफ़ करना",
+   "roman": "maaf karna",
+   "en": "sorry (informal)",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1010",
+   "hi": "देखिए",
+   "roman": "dekhiye",
+   "en": "look, see here (discourse opener)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1011",
+   "hi": "बहुत ज़्यादा",
+   "roman": "bahut zyaada",
+   "en": "far too much",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1012",
+   "hi": "सारा",
+   "roman": "saara",
+   "en": "the whole, all of",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1013",
+   "hi": "बहुत सारे",
+   "roman": "bahut saare",
+   "en": "lots of (बहुत सारा sg)",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1014",
+   "hi": "बनना",
+   "roman": "banna",
+   "en": "to become; be made",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1015",
+   "hi": "मुझे जाना पड़ेगा",
+   "roman": "mujhe jaana padega",
+   "en": "I'll have to go",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1016",
+   "hi": "ऐसा लगता है कि",
+   "roman": "aisa lagta hai ki",
+   "en": "it seems that",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1017",
+   "hi": "आराम करना",
+   "roman": "aaraam karna",
+   "en": "to rest",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1018",
+   "hi": "तैयार होना",
+   "roman": "taiyaar hona",
+   "en": "to get ready; be ready",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1019",
+   "hi": "फिर बात करेंगे",
+   "roman": "phir baat karenge",
+   "en": "we'll talk again soon",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1020",
+   "hi": "अभी निकल रहा हूँ",
+   "roman": "abhi nikal raha hoon",
+   "en": "I'm just leaving",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1021",
+   "hi": "वापस आना",
+   "roman": "waapas aana",
+   "en": "to come back",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1022",
+   "hi": "V-ने जाना",
+   "roman": "V-ne jaana",
+   "en": "go (in order) to do: घूमने जाना, खाने चलें",
+   "type": "paradigm",
+   "tier": 3
+  },
+  {
+   "id": "hs-1023",
+   "hi": "बारिश हो रही है",
+   "roman": "baarish ho rahi hai",
+   "en": "it's raining",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1024",
+   "hi": "बुक करना",
+   "roman": "book karna",
+   "en": "to book (ticket, hotel, cab)",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1025",
+   "hi": "फ़ोन उठाना",
+   "roman": "phone uthaana",
+   "en": "to answer the phone",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1026",
+   "hi": "... से बात कराइए",
+   "roman": "... se baat karaiye",
+   "en": "put ... on (the phone)",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1027",
+   "hi": "कैब",
+   "roman": "cab",
+   "en": "app cab (Ola/Uber)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1028",
+   "hi": "मेट्रो",
+   "roman": "metro",
+   "en": "metro",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1029",
+   "hi": "मीटर",
+   "roman": "meter",
+   "en": "meter (in an auto or taxi)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1030",
+   "hi": "ड्राइवर",
+   "roman": "driver",
+   "en": "driver",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1031",
+   "hi": "बैग",
+   "roman": "bag",
+   "en": "bag",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1032",
+   "hi": "जाम",
+   "roman": "jam",
+   "en": "traffic jam",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1033",
+   "hi": "लाइन",
+   "roman": "line",
+   "en": "queue",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1034",
+   "hi": "पैदल",
+   "roman": "paidal",
+   "en": "on foot",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1035",
+   "hi": "कितनी दूर है?",
+   "roman": "kitni duur hai?",
+   "en": "how far is it?",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1036",
+   "hi": "ट्रेन लेट है",
+   "roman": "train late hai",
+   "en": "the train is late",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1037",
+   "hi": "कौन सा प्लेटफ़ॉर्म?",
+   "roman": "kaun sa platform?",
+   "en": "which platform?",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1038",
+   "hi": "सीट खाली है?",
+   "roman": "seat khaali hai?",
+   "en": "is this seat free?",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1039",
+   "hi": "रास्ते में हूँ",
+   "roman": "raaste mein hoon",
+   "en": "I'm on the way",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1040",
+   "hi": "रेट",
+   "roman": "rate",
+   "en": "rate, price",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1041",
+   "hi": "कैश",
+   "roman": "cash",
+   "en": "cash",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1042",
+   "hi": "यूपीआई",
+   "roman": "UPI",
+   "en": "UPI (phone payment)",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1043",
+   "hi": "बैंक",
+   "roman": "bank",
+   "en": "bank",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1044",
+   "hi": "कितने में दोगे?",
+   "roman": "kitne mein doge?",
+   "en": "how much will you let it go for?",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1045",
+   "hi": "ठीक दाम लगाओ",
+   "roman": "theek daam lagao",
+   "en": "give me a fair price",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1046",
+   "hi": "छुट्टे नहीं हैं",
+   "roman": "chhutte nahin hain",
+   "en": "I don't have change",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1047",
+   "hi": "मोबाइल",
+   "roman": "mobile",
+   "en": "mobile phone",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1048",
+   "hi": "ग्रुप",
+   "roman": "group",
+   "en": "(WhatsApp) group",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1049",
+   "hi": "वीडियो",
+   "roman": "video",
+   "en": "video",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1050",
+   "hi": "बैटरी",
+   "roman": "battery",
+   "en": "battery",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1051",
+   "hi": "नेटवर्क",
+   "roman": "network",
+   "en": "network, reception",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1052",
+   "hi": "ऐप",
+   "roman": "app",
+   "en": "app",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1053",
+   "hi": "ऑनलाइन",
+   "roman": "online",
+   "en": "online",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1054",
+   "hi": "दिख नहीं रहा",
+   "roman": "dikh nahin raha",
+   "en": "I can't see (you) - video frozen",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1055",
+   "hi": "बाद में बात करते हैं",
+   "roman": "baad mein baat karte hain",
+   "en": "let's talk later",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1056",
+   "hi": "एसी चला दो",
+   "roman": "AC chala do",
+   "en": "turn on the AC",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1057",
+   "hi": "बाप रे",
+   "roman": "baap re",
+   "en": "oh my god, yikes",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1058",
+   "hi": "कमाल है",
+   "roman": "kamaal hai",
+   "en": "amazing; can you believe it",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1059",
+   "hi": "होता है",
+   "roman": "hota hai",
+   "en": "it happens (consoling)",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1060",
+   "hi": "ऐसे ही",
+   "roman": "aise hi",
+   "en": "just like that, no reason",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1061",
+   "hi": "सही है",
+   "roman": "sahi hai",
+   "en": "nice, fair enough",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1062",
+   "hi": "मिल गया",
+   "roman": "mil gaya",
+   "en": "found it; got it",
+   "type": "chunk",
+   "tier": 2
+  },
+  {
+   "id": "hs-1063",
+   "hi": "लाख",
+   "roman": "lakh",
+   "en": "hundred thousand",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1064",
+   "hi": "पैर छूना",
+   "roman": "pair chhoona",
+   "en": "to touch (an elder's) feet",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1065",
+   "hi": "मंदिर",
+   "roman": "mandir",
+   "en": "temple",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1066",
+   "hi": "गुस्सा आना",
+   "roman": "gussa aana",
+   "en": "to get angry",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1067",
+   "hi": "डर लगना",
+   "roman": "dar lagna",
+   "en": "to be scared (मुझे डर लगता है)",
+   "type": "chunk",
+   "tier": 4
+  },
+  {
+   "id": "hs-1068",
+   "hi": "हँसना",
+   "roman": "hansna",
+   "en": "to laugh",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1069",
+   "hi": "रोना",
+   "roman": "rona",
+   "en": "to cry",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1070",
+   "hi": "बदलना",
+   "roman": "badalna",
+   "en": "to change",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1071",
+   "hi": "रहने दो",
+   "roman": "rahne do",
+   "en": "let it be; never mind",
+   "type": "chunk",
+   "tier": 4
+  },
+  {
+   "id": "hs-1072",
+   "hi": "गाना",
+   "roman": "gaana",
+   "en": "song; to sing",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1073",
+   "hi": "अकेला",
+   "roman": "akela",
+   "en": "alone",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1074",
+   "hi": "क्या पता",
+   "roman": "kya pata",
+   "en": "who knows",
+   "type": "chunk",
+   "tier": 4
+  },
+  {
+   "id": "hs-1075",
+   "hi": "मीटर से चलो",
+   "roman": "meter se chalo",
+   "en": "go by the meter",
+   "type": "chunk",
+   "tier": 4
+  },
+  {
+   "id": "hs-1076",
+   "hi": "छठा, सातवाँ, आठवाँ… (-वाँ)",
+   "roman": "-vaan",
+   "en": "ordinals from 6th onward: number + -vaan",
+   "type": "paradigm",
+   "tier": 4
+  },
+  {
+   "id": "hs-1077",
+   "hi": "पौने",
+   "roman": "paune",
+   "en": "quarter to; minus a quarter",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1078",
+   "hi": "सिग्नल",
+   "roman": "signal",
+   "en": "traffic light; phone signal",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1079",
+   "hi": "एम्बुलेंस",
+   "roman": "ambulance",
+   "en": "ambulance",
+   "type": "word",
+   "tier": 3
+  },
+  {
+   "id": "hs-1080",
+   "hi": "ऑर्डर करना",
+   "roman": "order karna",
+   "en": "to order (food)",
+   "type": "chunk",
+   "tier": 4
+  },
+  {
+   "id": "hs-1081",
+   "hi": "मुड़ना",
+   "roman": "mudna",
+   "en": "to turn (directions)",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1082",
+   "hi": "जहाँ",
+   "roman": "jahaan",
+   "en": "where (relative)",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1083",
+   "hi": "चलता है",
+   "roman": "chalta hai",
+   "en": "it's fine, that'll do",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1084",
+   "hi": "क्या करें?",
+   "roman": "kya karen?",
+   "en": "what can you do? (resigned)",
+   "type": "chunk",
+   "tier": 4
+  },
+  {
+   "id": "hs-1085",
+   "hi": "इस्तेमाल करना",
+   "roman": "istemaal karna",
+   "en": "to use",
+   "type": "chunk",
+   "tier": 3
+  },
+  {
+   "id": "hs-1086",
+   "hi": "शून्य",
+   "roman": "shoonya",
+   "en": "zero (formal)",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1087",
+   "hi": "डेढ़ सौ",
+   "roman": "dedh sau",
+   "en": "one hundred and fifty",
+   "type": "chunk",
+   "tier": 4
+  },
+  {
+   "id": "hs-1088",
+   "hi": "चौथा",
+   "roman": "chauthaa",
+   "en": "fourth",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1089",
+   "hi": "पाँचवाँ",
+   "roman": "paanchvaan",
+   "en": "fifth",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1090",
+   "hi": "पौने छह बजे",
+   "roman": "paune chhah baje",
+   "en": "(at) quarter to six",
+   "type": "chunk",
+   "tier": 4
+  },
+  {
+   "id": "hs-1091",
+   "hi": "वीकेंड",
+   "roman": "weekend",
+   "en": "weekend",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1092",
+   "hi": "पहली मई, दो मई, पंद्रह अगस्त…",
+   "roman": "pahlee maee, do maee, pandrah agast",
+   "en": "dates: ordinal only for the 1st, plain cardinals after",
+   "type": "paradigm",
+   "tier": 4
+  },
+  {
+   "id": "hs-1093",
+   "hi": "जनवरी",
+   "roman": "janvaree",
+   "en": "January",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1094",
+   "hi": "फ़रवरी",
+   "roman": "farvaree",
+   "en": "February",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1095",
+   "hi": "मार्च",
+   "roman": "march",
+   "en": "March",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1096",
+   "hi": "अप्रैल",
+   "roman": "aprail",
+   "en": "April",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1097",
+   "hi": "मई",
+   "roman": "maee",
+   "en": "May",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1098",
+   "hi": "जून",
+   "roman": "joon",
+   "en": "June",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1099",
+   "hi": "जुलाई",
+   "roman": "julaaee",
+   "en": "July",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1100",
+   "hi": "अगस्त",
+   "roman": "agast",
+   "en": "August",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1101",
+   "hi": "सितंबर",
+   "roman": "sitambar",
+   "en": "September",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1102",
+   "hi": "अक्टूबर",
+   "roman": "aktoobar",
+   "en": "October",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1103",
+   "hi": "नवंबर",
+   "roman": "navambar",
+   "en": "November",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1104",
+   "hi": "दिसंबर",
+   "roman": "disambar",
+   "en": "December",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1105",
+   "hi": "बीवी",
+   "roman": "biwi",
+   "en": "wife (colloquial)",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1106",
+   "hi": "सगाई",
+   "roman": "sagai",
+   "en": "engagement",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1107",
+   "hi": "दूल्हा",
+   "roman": "dulha",
+   "en": "groom",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1108",
+   "hi": "बुज़ुर्ग",
+   "roman": "buzurg",
+   "en": "elderly person (respectful)",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1109",
+   "hi": "बूढ़ा",
+   "roman": "boodha",
+   "en": "old (of a person)",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1110",
+   "hi": "कामवाली",
+   "roman": "kaamwali",
+   "en": "domestic help (female)",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1111",
+   "hi": "हड्डी",
+   "roman": "haddi",
+   "en": "bone",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1112",
+   "hi": "कड़वा",
+   "roman": "kadva",
+   "en": "bitter",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1113",
+   "hi": "चखना",
+   "roman": "chakhna",
+   "en": "to taste, try",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1114",
+   "hi": "पाव",
+   "roman": "paav",
+   "en": "quarter kilo",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1115",
+   "hi": "गैस",
+   "roman": "gas",
+   "en": "the hob, gas stove",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1116",
+   "hi": "थैला",
+   "roman": "thaila",
+   "en": "cloth bag, shopping bag",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1117",
+   "hi": "कूलर",
+   "roman": "cooler",
+   "en": "air cooler",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1118",
+   "hi": "गीज़र",
+   "roman": "geyser",
+   "en": "water heater",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1119",
+   "hi": "पसीना",
+   "roman": "pasina",
+   "en": "sweat",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1120",
+   "hi": "चढ़ना",
+   "roman": "chadhna",
+   "en": "to climb, get on",
+   "type": "word",
+   "tier": 4
+  },
+  {
+   "id": "hs-1121",
+   "hi": "गुड मॉर्निंग",
+   "roman": "good morning",
+   "en": "good morning (loan – the everyday default in Indian homes)",
+   "type": "chunk",
+   "tier": 2,
+   "note": "Daily first exchange when staying with in-laws; namaste covers formal greeting but not this"
+  },
+  {
+   "id": "hs-1122",
+   "hi": "गुड नाइट",
+   "roman": "good night",
+   "en": "good night (loan)",
+   "type": "chunk",
+   "tier": 2,
+   "note": "Pairs with good morning; said nightly in the household"
+  },
+  {
+   "id": "hs-1123",
+   "hi": "क्या लेंगे?",
+   "roman": "kya lenge?",
+   "en": "what will you have? (host's offer)",
+   "type": "chunk",
+   "tier": 2,
+   "note": "The generic hospitality offer; chai piyoge covers only the tea-specific case"
+  },
+  {
+   "id": "hs-1124",
+   "hi": "बहुत दिन हो गए",
+   "roman": "bahut din ho gaye",
+   "en": "it's been ages (phone/visit opener)",
+   "type": "chunk",
+   "tier": 3,
+   "note": "Standard opener on every catch-up call with relatives"
+  },
+  {
+   "id": "hs-1125",
+   "hi": "टेंशन मत लो",
+   "roman": "tension mat lo",
+   "en": "don't stress, don't worry (loan, extremely common)",
+   "type": "chunk",
+   "tier": 3,
+   "note": "Spoken Hindi's default comfort line alongside chinta mat kijiye"
+  },
+  {
+   "id": "hs-1126",
+   "hi": "मिस करना",
+   "roman": "miss karna",
+   "en": "to miss (someone) – हम आपको मिस करते हैं",
+   "type": "chunk",
+   "tier": 3,
+   "note": "The loan verb is at least as common as aapki yaad aati hai in family calls"
+  },
+  {
+   "id": "hs-1127",
+   "hi": "बिज़ी",
+   "roman": "busy",
+   "en": "busy (loan)",
+   "type": "word",
+   "tier": 3,
+   "note": "Phone-call staple: aap busy to nahin?"
+  },
+  {
+   "id": "hs-1128",
+   "hi": "फ्री",
+   "roman": "free",
+   "en": "free, not busy (loan)",
+   "type": "word",
+   "tier": 3,
+   "note": "main abhi free hoon – pairs with busy"
+  },
+  {
+   "id": "hs-1129",
+   "hi": "नौकरी",
+   "roman": "naukri",
+   "en": "job",
+   "type": "word",
+   "tier": 3,
+   "note": "Core in-law small talk (naukri kaisi chal rahi hai?); kaam alone doesn't cover it"
+  },
+  {
+   "id": "hs-1130",
+   "hi": "पढ़ाई",
+   "roman": "padhai",
+   "en": "studies, schoolwork",
+   "type": "word",
+   "tier": 3,
+   "note": "padhai kaisi chal rahi hai? is asked of every young relative"
+  },
+  {
+   "id": "hs-1131",
+   "hi": "कॉलेज",
+   "roman": "college",
+   "en": "college, university",
+   "type": "word",
+   "tier": 3,
+   "note": "School exists but college does not; family talk needs both"
+  },
+  {
+   "id": "hs-1132",
+   "hi": "सीरियल",
+   "roman": "serial",
+   "en": "TV serial, soap",
+   "type": "word",
+   "tier": 3,
+   "note": "The evening-TV word in Indian households; the syllabus has TV and film but not this"
+  },
+  {
+   "id": "hs-1133",
+   "hi": "मैच",
+   "roman": "match",
+   "en": "match (cricket etc.)",
+   "type": "word",
+   "tier": 3,
+   "note": "Cricket is listed but you watch a match; match dekh rahe hain"
+  },
+  {
+   "id": "hs-1134",
+   "hi": "न्यूज़",
+   "roman": "news",
+   "en": "the news (loan – spoken default alongside ख़बर)",
+   "type": "word",
+   "tier": 3,
+   "note": "news dekh rahe hain is what people actually say about the TV"
+  },
+  {
+   "id": "hs-1135",
+   "hi": "हॉस्पिटल",
+   "roman": "hospital",
+   "en": "hospital (loan – at least as common as अस्पताल)",
+   "type": "word",
+   "tier": 3,
+   "note": "Category-3 gap: only shuddh aspataal is listed"
+  },
+  {
+   "id": "hs-1136",
+   "hi": "घुटना",
+   "roman": "ghutna",
+   "en": "knee",
+   "type": "word",
+   "tier": 3,
+   "note": "Elders' knee pain (ghutnon mein dard) is a stock topic; body list skips it"
+  },
+  {
+   "id": "hs-1137",
+   "hi": "पकड़ना",
+   "roman": "pakadna",
+   "en": "to hold, catch – ये पकड़ो = hold this",
+   "type": "word",
+   "tier": 3,
+   "note": "High-frequency household verb missing from the verb set"
+  },
+  {
+   "id": "hs-1138",
+   "hi": "गिरना",
+   "roman": "girna",
+   "en": "to fall – फ़ोन गिर गया, बच्चा गिर गया",
+   "type": "word",
+   "tier": 3,
+   "note": "Basic verb absent; needed for everyday mishap talk"
+  },
+  {
+   "id": "hs-1139",
+   "hi": "पिलाना",
+   "roman": "pilana",
+   "en": "to give (someone) a drink – चाय पिलाओ",
+   "type": "word",
+   "tier": 3,
+   "note": "khilana (feed) is listed; its everyday pair pilana is not"
+  },
+  {
+   "id": "hs-1140",
+   "hi": "किसी",
+   "roman": "kisi",
+   "en": "oblique of कोई: किसी को, किसी से",
+   "type": "word",
+   "tier": 3,
+   "note": "Grammar gap: koi is tier 1 but its oblique form never appears"
+  },
+  {
+   "id": "hs-1141",
+   "hi": "होगा",
+   "roman": "hoga",
+   "en": "will be; must be, probably (presumptive guess)",
+   "type": "chunk",
+   "tier": 3,
+   "note": "vo ghar par hoga / theek hoga – the guessing use is everywhere in speech and not derivable from the future paradigm gloss"
+  },
+  {
+   "id": "hs-1142",
+   "hi": "करने वाला हूँ",
+   "roman": "karne wala hoon",
+   "en": "about to / just going to: V-ne wala + hona",
+   "type": "paradigm",
+   "tier": 3,
+   "note": "nikalne wala hoon (I'm about to leave) is core phone talk; wala is listed but not this construction"
+  },
+  {
+   "id": "hs-1143",
+   "hi": "अच्छे से",
+   "roman": "achchhe se",
+   "en": "properly, well – अच्छे से खाओ, अच्छे से रहना",
+   "type": "chunk",
+   "tier": 3,
+   "note": "The default spoken adverb for doing something properly; parents-in-law say it constantly"
+  },
+  {
+   "id": "hs-1144",
+   "hi": "खाना खाकर जाओ",
+   "roman": "khana khakar jao",
+   "en": "eat before you go (hospitality staple)",
+   "type": "chunk",
+   "tier": 3,
+   "note": "The classic Indian host line; learner will hear it on every visit"
+  },
+  {
+   "id": "hs-1145",
+   "hi": "पहुँचकर फ़ोन कर देना",
+   "roman": "pahunchkar phone kar dena",
+   "en": "ring me when you get there",
+   "type": "chunk",
+   "tier": 3,
+   "note": "Standard family send-off; exercises both V-kar and kar dena"
+  },
+  {
+   "id": "hs-1146",
+   "hi": "शाबाश",
+   "roman": "shabash",
+   "en": "well done!",
+   "type": "word",
+   "tier": 3,
+   "note": "For the family's kids; no praise word exists in the set"
+  },
+  {
+   "id": "hs-1147",
+   "hi": "प्यारा",
+   "roman": "pyara",
+   "en": "sweet, cute, lovely",
+   "type": "word",
+   "tier": 3,
+   "note": "kitna pyara bachcha hai – the default compliment for children and gifts"
+  },
+  {
+   "id": "hs-1148",
+   "hi": "चप्पल",
+   "roman": "chappal",
+   "en": "flip-flops, house slippers",
+   "type": "word",
+   "tier": 3,
+   "note": "Ubiquitous household item; joote is listed, chappal is arguably more used at home"
+  },
+  {
+   "id": "hs-1149",
+   "hi": "होली",
+   "roman": "holi",
+   "en": "Holi",
+   "type": "word",
+   "tier": 3,
+   "note": "Diwali is in; the other pan-India festival the learner will be wished on is not"
+  },
+  {
+   "id": "hs-1150",
+   "hi": "पासपोर्ट",
+   "roman": "passport",
+   "en": "passport",
+   "type": "word",
+   "tier": 3,
+   "note": "India-trip essential noun; airport and flight are in but this is not"
+  },
+  {
+   "id": "hs-1151",
+   "hi": "यूज़ करना",
+   "roman": "use karna",
+   "en": "to use (spoken default; इस्तेमाल करना is the formal one)",
+   "type": "chunk",
+   "tier": 3,
+   "note": "Category-3: spoken Hindi overwhelmingly prefers the loan verb here"
+  },
+  {
+   "id": "hs-1152",
+   "hi": "स्पीकर पर डाल दो",
+   "roman": "speaker par daal do",
+   "en": "put it on speaker",
+   "type": "chunk",
+   "tier": 4,
+   "note": "Family video/phone call staple; exercises daalna + de dena"
+  },
+  {
+   "id": "hs-1153",
+   "hi": "एनिवर्सरी",
+   "roman": "anniversary",
+   "en": "(wedding) anniversary",
+   "type": "word",
+   "tier": 4,
+   "note": "In-law family occasion; spoken default over saalgirah, which is worth a mention in a note"
+  },
+  {
+   "id": "hs-1154",
+   "hi": "चश्मा",
+   "roman": "chashma",
+   "en": "glasses, specs",
+   "type": "word",
+   "tier": 4,
+   "note": "mera chashma kahan hai – classic household line with elders"
+  }
+ ]
+}
